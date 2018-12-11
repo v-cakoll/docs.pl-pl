@@ -3,11 +3,11 @@ title: Listy (F#)
 description: Dowiedz się więcej o F# listy uporządkowanej, niezmienne szeregu elementów tego samego typu.
 ms.date: 05/16/2016
 ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297507"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152750"
 ---
 # <a name="lists"></a>Listy
 
@@ -96,7 +96,7 @@ Funkcja `RemoveAllMultiples` jest funkcją cykliczne, która przyjmuje dwie list
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1308.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 Primes Up To 100:
@@ -117,7 +117,7 @@ Poniższy przykład demonstruje użycie `List.exists`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet1.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 For list [0; 1; 2; 3], contains zero is true
@@ -127,7 +127,7 @@ W poniższym przykładzie pokazano użycie `List.exists2`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet2.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the same position.
@@ -137,7 +137,7 @@ Możesz użyć [List.forall](https://msdn.microsoft.com/library/e11a5233-d612-40
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet3.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 true
@@ -148,7 +148,7 @@ Podobnie [List.forall2](https://msdn.microsoft.com/library/bb611f02-8277-48f5-9a
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet4.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 true
@@ -165,7 +165,7 @@ W poniższym przykładzie pokazano użycie `List.sort`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet5.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 [-2; 1; 4; 5; 8]
@@ -175,7 +175,7 @@ W poniższym przykładzie pokazano użycie `List.sortBy`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet6.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 [1; -2; 4; 5; 8]
@@ -185,7 +185,7 @@ Następny przykład demonstruje użycie `List.sortWith`. W tym przykładzie nies
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet7.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 [{ID = 92;
@@ -210,7 +210,7 @@ Jeśli najpierw musi zostać przekształcone elementy, wywołaj [List.pick](http
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet9.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 "b"
@@ -220,7 +220,7 @@ Inna grupa operacji wyszukiwania [List.tryFind](https://msdn.microsoft.com/libra
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet10.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 The first even value is 22.
@@ -249,7 +249,7 @@ List, które zawierają krotek mogą być zmieniane według kodu pocztowego i Ro
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet13.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 [(1, -1); (2, -2); (3; -3)]
@@ -259,7 +259,7 @@ Poniższy przykład kodu demonstruje użycie `List.zip3`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet14.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
@@ -271,7 +271,7 @@ Poniższy przykład kodu demonstruje użycie [List.unzip](https://msdn.microsoft
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet15.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 ([1; 3], [2; 4])
@@ -282,7 +282,7 @@ Poniższy przykład kodu demonstruje użycie [List.unzip3](https://msdn.microsof
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet16.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 ([1; 4], [2; 5], [3; 6])
@@ -294,7 +294,7 @@ F#obsługuje wiele różnych operacji na elementy listy. To najprostszy [List.it
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet17.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 List.iter: element is 1
@@ -315,7 +315,7 @@ Innym często używanych funkcji, która przekształca elementów listy jest [Li
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet18.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 [2; 3; 4]
@@ -325,7 +325,7 @@ Poniższy przykład pokazuje użycie `List.map2`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet19.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 [5; 7; 9]
@@ -335,7 +335,7 @@ Poniższy przykład pokazuje użycie `List.map3`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet20.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 [7; 10; 13]
@@ -345,7 +345,7 @@ Poniższy przykład pokazuje użycie `List.mapi`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet21.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 [1; 3; 5]
@@ -355,7 +355,7 @@ Poniższy przykład pokazuje użycie `List.mapi2`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet22.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 [0; 7; 18]
@@ -365,7 +365,7 @@ Dane wyjściowe wyglądają następująco:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet23.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 [1; 2; 3; 2; 4; 6; 3; 6; 9]
@@ -383,7 +383,7 @@ Poniższy przykład demonstruje użycie `List.choose` wybrać wyrazy wielkimi li
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet25.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 ["Rome's"; "Bob's"]

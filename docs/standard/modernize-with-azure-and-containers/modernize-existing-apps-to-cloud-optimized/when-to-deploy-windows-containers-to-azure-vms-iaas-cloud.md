@@ -1,26 +1,26 @@
 ---
-title: Kiedy należy wdrożyć kontenery systemu Windows na maszynach wirtualnych platformy Azure (IaaS w chmurze)
-description: Modernizacji istniejących aplikacji .NET z kontenerami chmury Azure i systemu Windows | Kiedy należy wdrożyć kontenery systemu Windows na maszynach wirtualnych platformy Azure (IaaS w chmurze)
+title: Kiedy należy wdrażać kontenery Windows na maszynach wirtualnych platformy Azure (IaaS w chmurze)
+description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Kiedy należy wdrażać kontenery Windows na maszynach wirtualnych platformy Azure (IaaS w chmurze)
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 7472745577f414062b460fd71ab45bae85d7a62e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 51217e2c94fd9727c8f7907e791cdebaec98f14f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958246"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152152"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>Kiedy należy wdrożyć kontenery systemu Windows na maszynach wirtualnych platformy Azure (IaaS w chmurze)
+# <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>Kiedy należy wdrażać kontenery Windows na maszynach wirtualnych platformy Azure (IaaS w chmurze)
 
-Jeśli organizacja używa maszynach wirtualnych platformy Azure, nawet jeśli używana jest również kontenery systemu Windows, to nadal zajmowanie IaaS. Oznacza to tej obsłudze operacje infrastruktury, poprawek systemu operacyjnego maszyny Wirtualnej i złożoności infrastruktury dla aplikacji o wysokiej skalowalności gdy należy wdrożyć na wiele maszyn wirtualnych w infrastrukturze równoważeniem obciążenia. Główne scenariusze przy użyciu kontenery systemu Windows w maszynie Wirtualnej platformy Azure są:
+Jeśli Twoja organizacja używa w przypadku maszyn wirtualnych platformy Azure, nawet wtedy, gdy używana jest również kontenery Windows, wciąż się radzenia sobie z rozwiązania IaaS. Oznacza to, że zajmowanie się operacji infrastruktury, poprawek systemu operacyjnego maszyny Wirtualnej i złożoność infrastruktury dla aplikacji o wysokim stopniu skalowalności gdy należy wdrożyć wiele maszyn wirtualnych w infrastrukturze równoważenia obciążenia. Główne scenariusze dotyczące korzystania z kontenerów Windows w Maszynie wirtualnej platformy Azure są następujące:
 
--   **Tworzenie/testowanie środowiska**: A maszyna wirtualna w chmurze jest idealne w przypadku projektowania i testowania w chmurze. Można szybko utworzyć lub Zatrzymaj środowisko, w zależności od potrzeb.
+-   **Środowisko programistyczne/testowe**: Maszynę wirtualną w chmurze jest doskonała do tworzenia i testowania w chmurze. Można szybko utworzyć lub Zatrzymaj środowisko, w zależności od potrzeb.
 
--   **Skalowalność małych i średnich musi**: W scenariuszach, w którym mogą być wymagane kilka maszyn wirtualnych do środowiska produkcyjnego, zarządzanie niewielkiej liczby maszyn wirtualnych może być ekonomiczny dopóki nie można przenieść do bardziej zaawansowanych środowisk PaaS, takich jak orchestrators.
+-   **Skalowalność w małych i średnich musi**: W scenariuszach, w których możesz potrzebować kilka maszyn wirtualnych w środowisku produkcyjnym zarządzanie niewielką liczbę maszyn wirtualnych może być przystępne cenowo, dopóki nie można przenieść do bardziej zaawansowanych środowisk PaaS, takich jak koordynatorów.
 
--   **Środowisku produkcyjnym z użyciem istniejących narzędzi wdrażania**: użytkownik może przenoszenie ze środowiska lokalnego, w którym zainwestowały w menu Narzędzia, aby złożone wdrożenia maszyn wirtualnych i serwery bez systemu operacyjnego (na przykład Puppet lub podobne narzędzia). Można przenieść do chmury przy minimalnych zmianach do procedur wdrażania środowiska produkcyjnego, można nadal używać tych narzędzi do wdrażania na maszynach wirtualnych platformy Azure. Jednak należy używanie kontenerów Windows jednostką wdrożenia celu usprawnienie obsługi wdrożenia.
+-   **Środowiska produkcyjnego z istniejącymi narzędziami wdrażania**: Użytkownik może będziemy przenosić ze środowiska lokalnego, w którym zainwestowali w menu Narzędzia, aby złożonych wdrożeń maszyn wirtualnych i serwerów bez systemu operacyjnego (takich jak Puppet lub podobnego narzędzia). Aby przenieść do chmury przy minimalnych zmianach do procedur wdrażania środowiska produkcyjnego, można nadal używać tych narzędzi do wdrażania na maszynach wirtualnych platformy Azure. Jednak będziesz chciał użyć kontenery Windows jednostką wdrażania, aby poprawić środowisko wdrażania.
 
 >[!div class="step-by-step"]
-[Poprzednie](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
-[dalej](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
+>[Poprzednie](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
+>[dalej](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)

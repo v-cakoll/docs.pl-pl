@@ -1,6 +1,6 @@
 ---
 title: Wytyczne dotyczące projektowania dla wyjątków
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - exceptions [.NET Framework], design guidelines
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+author: KrzysztofCwalina
+ms.openlocfilehash: 60c3d25138c224f5eabf44d06b6c9a8373eb5f96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030658"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153201"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Wytyczne dotyczące projektowania dla wyjątków
 Obsługa wyjątków ma wiele zalet za pośrednictwem raportowania błędów na podstawie wartości powrotu. Dobre framework projektu pomaga Deweloper aplikacji korzystać z zalet wyjątków. W tej sekcji omówiono korzyści wynikające z wyjątków i przedstawiono wskazówki dotyczące skutecznego korzystania z nich.  
@@ -26,7 +25,7 @@ Obsługa wyjątków ma wiele zalet za pośrednictwem raportowania błędów na p
  [Wyjątki i wydajność](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
+ *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz także
 

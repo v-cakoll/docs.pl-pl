@@ -4,7 +4,7 @@
 |---|---|
 |Szczegóły|W niektórych przypadkach wielowątkowych <xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=name> może zwrócić wartość true, ale wypełnić parametr out o wartości null (a nie wartość poprawny, podejrzeć).|
 |Sugestia|Ten problem został rozwiązany w .NET Framework 4.5.1. Uaktualnienie do tej struktury rozwiąże problem.|
-|Zakres|Główne|
+|Zakres|Duży|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|

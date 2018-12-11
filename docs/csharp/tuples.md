@@ -3,12 +3,12 @@ title: Typy krotki — Przewodnik po języku C#
 description: Dowiedz się więcej o krotki nazwane i nienazwane typy w języku C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186034"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155135"
 ---
 # <a name="c-tuple-types"></a>Typy krotek języka C# #
 
@@ -88,7 +88,7 @@ Tych sytuacji nie powodują błędy kompilatora, ponieważ byłoby istotną zmia
 
 ## <a name="equality-and-tuples"></a>Równości i krotki
 
-Począwszy od języka C# 7.3 krotki typy obsługi `==` i `!=` operatorów. Te operatory działają przez porównanie każdy element członkowski argument po lewej stronie do każdego członka prawy argument w kolejności. Zwarcie tych porównań. `==` Operator zatrzymuje oceny członków, jak tylko jedną parę nie jest równa. `!=` Operator zatrzymuje oceny członków, jak tylko jedna para jest taki sam. Poniższy kod przykłady użycia `==`, ale dotyczą wszystkich reguł porównania `!=`. Poniższy przykład kodu pokazuje porównania dla dwóch par liczb całkowitych:
+Począwszy od języka C# 7.3 krotki typy obsługi `==` i `!=` operatorów. Te operatory działają przez porównanie każdy element członkowski argument po lewej stronie do każdego członka prawy argument w kolejności. Zwarcie tych porównań. Przestaną one oceny członków, jak tylko jedną parę nie jest równa. Poniższy kod przykłady użycia `==`, ale dotyczą wszystkich reguł porównania `!=`. Poniższy przykład kodu pokazuje porównania dla dwóch par liczb całkowitych:
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
@@ -146,7 +146,7 @@ Jednym z najbardziej typowych zastosowań krotek jest jako wartość zwracaną m
 > Te przykłady obliczeń odchylenie standardowe Niepoprawione próbki.
 > Wzór odchylenia standardowego poprawione próbki podzieleniu suma kwadratów różnic od średniej przez (n-1) zamiast N, jako `Average` metody rozszerzenia. Zapoznaj się tekst statystyki, aby uzyskać więcej informacji na temat różnic między te formuły odchylenie standardowe.
 
-Powyższy kod poniżej Podręcznikowy formułę odchylenia standardowego. Tworzy poprawną odpowiedź, ale jest nieefektywną implementację. Ta metoda wylicza kolejność dwa razy: jeden raz, aby wygenerować średnią i jeden raz, aby wygenerować średnia kwadratu różnicy średniej.
+Powyższy kod poniżej Podręcznikowy formułę odchylenia standardowego. Tworzy poprawną odpowiedź, ale jest nieefektywną implementację. Ta metoda wylicza kolejność dwa razy: Jeden raz, aby wygenerować średnią i jeden raz, aby wygenerować średnia kwadratu różnicy średniej.
 (Pamiętaj, że zapytania LINQ są obliczane z opóźnieniem, więc obliczania różnic od wartości średniej oraz średnią różnic sprawia, że tylko jedno wyliczenie).
 
 Istnieje alternatywny formuły, które oblicza odchylenie standardowe przy użyciu funkcji wyliczania tylko jednej sekwencji.  To obliczenie tworzy dwie wartości, jak wylicza kolejność: Suma wszystkich elementów w sekwencji, a sumę każdej wartości kwadrat:

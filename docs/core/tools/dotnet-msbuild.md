@@ -1,15 +1,13 @@
 ---
-title: polecenie msbuild DotNet — interfejs wiersza polecenia platformy .NET Core
+title: polecenie msbuild DotNet
 description: Polecenie msbuild dotnet zapewnia dostęp do wiersza polecenia programu MSBuild.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 76165590478b0e76d19d546c87e012da4716b6db
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.date: 12/03/2018
+ms.openlocfilehash: f025b5b92e57c7b804b9bdd59c8b4a4a806796da
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583724"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169082"
 ---
 # <a name="dotnet-msbuild"></a>Program msbuild DotNet
 
@@ -27,22 +25,32 @@ ms.locfileid: "48583724"
 
 `dotnet msbuild` Polecenia umożliwia dostęp do pełnej funkcjonalności programu MSBuild.
 
-Polecenie ma dokładnie te same możliwości co istniejący klient wiersza polecenia programu MSBuild. Opcje są takie same. Aby uzyskać więcej informacji o dostępnych opcjach, zobacz [odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+Polecenie ma dokładnie te same możliwości co istniejący klient wiersza polecenia MSBuild tylko projekt w stylu zestawu SDK. Opcje są takie same. Aby uzyskać więcej informacji o dostępnych opcjach, zobacz [odwołanie do wiersza polecenia MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+
+[Kompilacji dotnet](dotnet-build.md) polecenie jest odpowiednikiem `dotnet msbuild -restore -target:Build`. `dotnet build` jest częściej używany do tworzenia projektów, ale `dotnet msbuild` daje większą kontrolę. Na przykład, jeśli określony element docelowy ma zostać uruchomiony (bez konieczności uruchamiania docelowej kompilacji), prawdopodobnie chcesz użyć `dotnet msbuild`.
 
 ## <a name="examples"></a>Przykłady
 
-Tworzenie projektu i jego zależności:
+* Tworzenie projektu i jego zależności:
 
-`dotnet msbuild`
+  ```console
+  dotnet msbuild
+  ```
 
-Tworzenie projektu i jego zależności za pomocą wersji konfiguracji:
+* Tworzenie projektu i jego zależności za pomocą wersji konfiguracji:
 
-`dotnet msbuild -p:Configuration=Release`
+  ```console
+  dotnet msbuild -p:Configuration=Release
+  ```
 
-Uruchom docelową lokalizację publikacji i publikowania dla `osx.10.11-x64` identyfikatorów RID:
+* Uruchom docelową lokalizację publikacji i publikowania dla `osx.10.11-x64` identyfikatorów RID:
 
-`dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64`
+  ```console
+  dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64
+  ```
 
-Zobacz całego projektu za pomocą wszystkie elementy docelowe uwzględniony przez zestaw SDK:
+* Zobacz całego projektu za pomocą wszystkie elementy docelowe uwzględniony przez zestaw SDK:
 
-`dotnet msbuild -pp`
+  ```console
+  dotnet msbuild -pp
+  ```

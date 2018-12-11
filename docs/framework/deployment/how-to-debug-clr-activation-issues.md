@@ -1,5 +1,5 @@
 ---
-title: 'Porady: debugowanie problemów aktywacji środowiska CLR'
+title: 'Instrukcje: Debugowanie problemów aktywacji środowiska CLR'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR activation, debugging issues
@@ -7,13 +7,13 @@ ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 89724e9a322f2f28dbe5d18ae697acbdd0a32d8e
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296727"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149734"
 ---
-# <a name="how-to-debug-clr-activation-issues"></a>Porady: debugowanie problemów aktywacji środowiska CLR
+# <a name="how-to-debug-clr-activation-issues"></a>Instrukcje: Debugowanie problemów aktywacji środowiska CLR
 Jeśli wystąpią problemy podczas uzyskiwania aplikację do uruchamiania w odpowiedniej wersji środowiska uruchomieniowego języka wspólnego (CLR), można wyświetlać i debugowania dzienniki aktywacji środowiska CLR. Te dzienniki może być bardzo przydatne podczas ustalania głównej przyczyny problemu aktywacji, kiedy aplikacja różnych wersji środowiska CLR ładuje, niż oczekiwano lub w ogóle nie jest ładowana środowiska CLR. [Błędy inicjowania programu .NET Framework: Zarządzanie środowiska użytkownika](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) tym artykule omówiono środowisko CLR nie został znaleziony dla aplikacji.  
   
  Rejestrowanie aktywacji środowiska CLR może być włączone całego systemu za pomocą klucza rejestru HKEY_LOCAL_MACHINE lub zmienną środowiskową systemu. Dziennik zostanie wygenerowany, aż do wpisu rejestru lub zmiennej środowiskowej zostanie usunięty. Alternatywnie można użyć użytkownika lub zmiennej środowiskowej proces lokalny Aby włączyć rejestrowanie za pomocą innego zakresu i czasu trwania.  
@@ -118,4 +118,4 @@ Jeśli wystąpią problemy podczas uzyskiwania aplikację do uruchamiania w odpo
   
 ## <a name="see-also"></a>Zobacz też  
 - [Wdrażanie](../../../docs/framework/deployment/index.md)  
-- [Instrukcje: Konfiguracja aplikacji do obsługi w programie .NET Framework 4 lub 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Jak: Konfigurowanie aplikacji do obsługi w programie .NET Framework 4 lub 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

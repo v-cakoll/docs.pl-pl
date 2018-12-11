@@ -4,12 +4,13 @@ description: Pojęcia dotyczące jednostek testów w języku C# i .NET Core za p
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 1c2b0bdd4bf76a17217db0c98b8f951f7d58f2ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: d0da8640393e298c3a6e367433eaa68ebb88fad7
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183779"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170295"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Jednostki testowania C# przy użyciu MSTest i .NET Core
 
@@ -142,7 +143,7 @@ W *jednostki — testowanie-przy użyciu mstest* katalogu, uruchom `dotnet test`
 
 ## <a name="adding-more-features"></a>Dodawanie większej liczby funkcji
 
-Teraz, gdy wprowadzono jeden przebieg testu, nadszedł czas na zapis więcej. Istnieje kilka innych przypadkach proste dla liczb pierwszych: 0, -1. Można dodać nowe testy za pomocą `[TestMethod]` atrybut, ale który szybko staje się uciążliwe. Istnieją inne atrybuty MSTest, które umożliwiają pisanie zestaw testów podobne.  A `[DataTestMethod]`atrybut reprezentuje zestaw testów, które wykonania tego samego kodu, ale mają różne argumenty wejściowe. Możesz użyć `[DataRow]` atrybutu, aby określić wartości dla tych danych wejściowych.
+Teraz, gdy wprowadzono jeden przebieg testu, nadszedł czas na zapis więcej. Istnieje kilka innych przypadkach proste dla liczby pierwsze: 0, -1. Można dodać nowe testy za pomocą `[TestMethod]` atrybut, ale który szybko staje się uciążliwe. Istnieją inne atrybuty MSTest, które umożliwiają pisanie zestaw testów podobne.  A `[DataTestMethod]`atrybut reprezentuje zestaw testów, które wykonania tego samego kodu, ale mają różne argumenty wejściowe. Możesz użyć `[DataRow]` atrybutu, aby określić wartości dla tych danych wejściowych.
 
 Zamiast tworzyć nowe testy, należy zastosować te atrybuty do utworzenia pojedynczego testu opartego na danych. Opartych na test danych to metoda, która sprawdza kilka wartości mniejszej niż dwa, czyli najniższy numer prime:
 

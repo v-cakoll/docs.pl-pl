@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2f2104768144da244679e5d0be884d70a3ba6b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df3e14b14078a4d484dd18f3bb59f5fcfee55411
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386655"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129237"
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall MDA
-`virtualCERCall` Zarządzany Asystent debugowania (MDA) została aktywowana jako ostrzeżenie informujące, że witryny wywołania wykresu wywołań (CER) region ograniczonego wykonania odwołuje się do wirtualnego docelowych, oznacza to, wirtualnych wywołanie metody wirtualnej innej niż końcowa lub przy użyciu wywołania interfejs. Środowisko uruchomieniowe języka wspólnego (CLR) nie można przewidzieć metody docelowej telefonów z pośredniego wyłącznie analizy metadanych i języka. W związku z tym nie można przygotować drzewo wywołań jako część wykresu CER i przerwań wątku, w tym poddrzewie nie mogą zostać automatycznie zablokowane. To zdarzenie MDA ostrzega o przypadkach, gdy CER może być konieczne można rozszerzyć za pomocą jawnego wywołania <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> metody po dodatkowe informacje wymagane do obliczenia w celu wywołania jest znany w czasie wykonywania.  
+`virtualCERCall` Zarządzanego Asystenta debugowania (MDA) jest uaktywniony jako ostrzeżenie informujące, że witryny wywołania, w ramach wykresu wywołań ograniczonego wykonania region (CER) odwołuje się do docelowego wirtualnego, oznacza to, wywołanie wirtualne metodą wirtualną innego niż końcowa lub za pomocą wywołania interfejs. Środowisko uruchomieniowe języka wspólnego (CLR) nie można przewidzieć metoda przeznaczenia tych wywołań z pośrednich analizy języka i metadanych, które są wyłącznie. W rezultacie drzewo wywołań nie można przygotować jako część wykresu CER i przerwań wątku, w tym poddrzewie nie mogą zostać automatycznie zablokowane. To zdarzenie MDA ostrzega o przypadkach, gdzie CER może być konieczne można rozszerzyć za pomocą jawnych wywołań <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> metoda po dodatkowe informacje wymagane do obliczenia cel wywołania jest znany w czasie wykonywania.  
   
 ## <a name="symptoms"></a>Symptomy  
- CERs, które nie działają, gdy wątek został przerwany lub domena aplikacji nie jest załadowany.  
+ CERs, których nie jest uruchomiony, gdy wątek został przerwany lub domeny aplikacji jest zwalniana.  
   
 ## <a name="cause"></a>Przyczyna  
- CER zawiera wywołanie metody wirtualnej, która nie może zostać przygotowana automatycznie.  
+ CER zawiera wywołanie metody wirtualnej, którego nie można przygotować automatycznie.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Wywołanie <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> dla metody wirtualnej.  
+ Wywołaj <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> dla metody wirtualnej.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
@@ -58,7 +58,7 @@ declaringType name="VirtualCERCall+MyClass"
   
 ## <a name="example"></a>Przykład  
   
-```  
+```csharp
 class MyClass  
 {  
     [ReliabilityContract(Consistency.MayCorruptProcess, CER.None)]  

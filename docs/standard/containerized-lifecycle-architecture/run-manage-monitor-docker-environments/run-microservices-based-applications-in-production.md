@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 18e6cb1fb5f496b66c89cb8e009a67894b8a76ad
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 003bf794f5427e7b2f10d1e04fd27605b980cdfe
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123153"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126305"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Uruchamianie aplikacji złożonych i opartych na mikrousługach w środowiskach produkcyjnych
 
@@ -33,7 +33,6 @@ Aplikacje są skalowanych w poziomie w wielu systemach hosta, możliwość zarz�
 
 Możliwości zapewniane przez orkiestratory i transfery danych są bardzo skomplikowane, do tworzenia i utworzyć od podstaw, a w związku z tym zazwyczaj chcesz wprowadzić użytkowania aranżacji rozwiązań oferowanych przez dostawców.
 
-
 >[!div class="step-by-step"]
-[Poprzednie](index.md)
-[dalej](manage-production-docker-environments.md)
+>[Poprzednie](index.md)
+>[dalej](manage-production-docker-environments.md)

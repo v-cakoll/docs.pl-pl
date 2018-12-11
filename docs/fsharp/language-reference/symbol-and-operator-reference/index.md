@@ -2,12 +2,12 @@
 title: Odwołanie do symbolu i operatora (F#)
 description: Dowiedz się więcej o symboli i operatorów, które są używane w F# języka programowania.
 ms.date: 04/04/2018
-ms.openlocfilehash: f6f99f8fa563b71c935122c6f8597599c59b5c7f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: a382400213aa288bb134faefd8ce747a7319a76f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297336"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169875"
 ---
 # <a name="symbol-and-operator-reference"></a>Odwołanie do symbolu i operatora
 
@@ -50,8 +50,8 @@ W poniższej tabeli przedstawiono symbole używane w F# język zawiera łącza d
 |`-`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Odejmuje po prawej stronie z lewej strony, gdy po prawej stronie jest typ dopuszczający wartość null.<br /></li></ul>|
 |`->`|[Funkcje](../functions/index.md)<br /><br />[Wyrażenia dopasowania](../match-expressions.md)|<ul><li>W funkcji typy rozgranicza argumenty i zwracać wartości.<br /></li><li>Daje w wyniku wyrażenia (wyrażenia sekwencji); odpowiednikiem `yield` — słowo kluczowe.<br /></li><li>Używać w wyrażeniach dopasowania<br /></li></ul>|
 |`.`|[Elementy członkowskie](../members/index.md)<br /><br />[Typy pierwotne](../primitive-types.md)|<ul><li>Uzyskuje dostęp do elementu członkowskiego, a oddziela poszczególne nazwy w pełni kwalifikowanej nazwy.<br /></li><li>Określa separator dziesiętny liczb zmiennoprzecinkowych.<br /></li></ul>|
-|`..`|[Pętle: `for...in` wyrażenia](../loops-for-in-expression.md)|<ul><li>Określa zakres.<br /></li></ul>|
-|`.. ..`|[Pętle: `for...in` wyrażenia](../loops-for-in-expression.md)|<ul><li>Określa zakres wraz z przyrostem.<br /></li></ul>|
+|`..`|[Pętle: `for...in` Wyrażenie](../loops-for-in-expression.md)|<ul><li>Określa zakres.<br /></li></ul>|
+|`.. ..`|[Pętle: `for...in` Wyrażenie](../loops-for-in-expression.md)|<ul><li>Określa zakres wraz z przyrostem.<br /></li></ul>|
 |`.[...]`|[Tablice](../arrays.md)|<ul><li>Uzyskuje dostęp do elementu tablicy.<br /></li></ul>|
 |`/`|[Operatory arytmetyczne](arithmetic-operators.md)<br /><br />[Jednostki miary](../units-of-measure.md)|<ul><li>Dzieli po lewej stronie (licznik), po prawej stronie (dzielnik).<br /></li><li>Używane w jednostkach miary typów.<br /></li></ul>|
 |`/?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Dzieli po lewej stronie przez po prawej stronie, gdy po prawej stronie jest typ dopuszczający wartość null.<br /></li></ul>|
@@ -61,7 +61,7 @@ W poniższej tabeli przedstawiono symbole używane w F# język zawiera łącza d
 |`::`|[Listy](../lists.md)<br /><br />[Wyrażenia dopasowania](../match-expressions.md)|<ul><li>Tworzy listę. Element po lewej stronie jest dołączony do listy po prawej stronie.<br /></li><li>Używane w dopasowywania do wzorca, aby oddzielić części listy.<br /></li></ul>|
 |`:=`|[Komórki odwołań](../reference-cells.md)|<ul><li>Przypisuje wartości do komórki odwołania.<br /></li></ul>|
 |`:>`|[Rzutowanie i konwersje](../casting-and-conversions.md)|<ul><li>Konwertuje typu do typu, który znajduje się wyżej w hierarchii.<br /></li></ul>|
-|`:?`|[Wyrażenia dopasowania](../match-expressions.md)|<ul><li>Zwraca `true` Jeśli wartość jest zgodny z określonym typem; w przeciwnym razie zwraca `false` (operator typu testu).<br /></li></ul>|
+|`:?`|[Wyrażenia dopasowania](../match-expressions.md)|<ul><li>Zwraca `true` Jeśli wartość pasuje do określonego typu (w tym przypadku jest podtypem); w przeciwnym razie zwraca `false` (operator typu testu).<br /></li></ul>|
 |`:?>`|[Rzutowanie i konwersje](../casting-and-conversions.md)|<ul><li>Konwertuje typu do typu, który jest niżej w hierarchii.<br /></li></ul>|
 |`;`|[Pełna składnia](../verbose-syntax.md)<br /><br />[Listy](../lists.md)<br /><br />[Rekordy](../records.md)|<ul><li>Oddziela wyrażenia (używane głównie w Pełna składnia).<br /></li><li>Oddziela elementy listy.<br /></li><li>Oddziela pola rekordu.<br /></li></ul>|
 |`<`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Oblicza mniej-niż operacji.<br /></li></ul>|
@@ -146,6 +146,7 @@ W poniższej tabeli przedstawiono kolejność pierwszeństwa operatorów i innyc
 |`.`|Lewe|
 |`f(x)`|Lewe|
 |`f<`*Typy*`>`|Lewe|
+
 F#obsługuje niestandardowe przeciążenia operatora. Oznacza to, czy można zdefiniować własne operatorów. W poprzedniej tabeli *op* może być dowolną prawidłową sekwencją (prawdopodobnie puste), znaków operatora, wbudowany lub zdefiniowany przez użytkownika. W związku z tym można użyć tej tabeli można określić, jakie sekwencji znaków, które mają używać dla niestandardowy operator, aby osiągnąć żądany poziom priorytetu. Początkowe `.` znaki są ignorowane, gdy kompilator określa priorytet.
 
 ## <a name="see-also"></a>Zobacz także

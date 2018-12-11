@@ -10,11 +10,11 @@ helpviewer_keywords:
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
 ms.openlocfilehash: 94a64efcd7b4f354eaa22d1b646f36212f9c8fbb
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672296"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152265"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretowanie śledzenia sieci
 Po włączeniu funkcji śledzenia sieci umożliwia śledzenie przechwytywania wywołania aplikacji sprawia, że do różnych <xref:System.Net> składowych klasy. Dane wyjściowe z tych wywołań może być podobne do poniższych przykładach.  
@@ -26,7 +26,7 @@ Po włączeniu funkcji śledzenia sieci umożliwia śledzenie przechwytywania wy
   
  W powyższym przykładzie [588] to unikatowy identyfikator bieżącego wątku. (4357) i (4387) są sygnatury czasowe oznaczający liczbę milisekund, które upłynęły od czasu uruchomienia aplikacji. Dane zgodnie z sygnaturą czasową przedstawiono aplikację i wychodzą z metody **Socket.Send**. Wykonywanie obiektu **wysyłania** metoda ma 33574638 jako unikatowego identyfikatora. Śledzenia zakończenia metody zawiera wartość zwracaną (61 w powyższym przykładzie).  
   
- Danych śledzenia sieci można przechwytywać ruch sieciowy, który jest wysłanych lub odebranych przez aplikację za pomocą protokoły poziomu aplikacji, takich jak protokół HTTP (Hypertext Transfer). Te dane mogą być przechwytywane jako tekst i, opcjonalnie, dane szesnastkowe. Dane szesnastkowe jest dostępna po określeniu **includehex** jako wartość **tryb_śledzenia** atrybutu. (Aby uzyskać szczegółowe informacje dotyczące tego atrybutu, zobacz [porady: Konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) Poniższy przykład śledzenia został wygenerowany za pomocą **includehex**.  
+ Danych śledzenia sieci można przechwytywać ruch sieciowy, który jest wysłanych lub odebranych przez aplikację za pomocą protokoły poziomu aplikacji, takich jak protokół HTTP (Hypertext Transfer). Te dane mogą być przechwytywane jako tekst i, opcjonalnie, dane szesnastkowe. Dane szesnastkowe jest dostępna po określeniu **includehex** jako wartość **tryb_śledzenia** atrybutu. (Aby uzyskać szczegółowe informacje dotyczące tego atrybutu, zobacz [jak: Konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) Poniższy przykład śledzenia został wygenerowany za pomocą **includehex**.  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -46,5 +46,5 @@ Po włączeniu funkcji śledzenia sieci umożliwia śledzenie przechwytywania wy
   
 ## <a name="see-also"></a>Zobacz też  
  [Włączanie śledzenia sieci](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Instrukcje: konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
+ [Jak: Konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
  [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)

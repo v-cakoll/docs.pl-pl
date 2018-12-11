@@ -4,12 +4,12 @@ description: Badań różnych architektur oraz aplikacje, które są obsługiwan
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ea944a172154a1cff2b8f830cb8fc3fa24a15028
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404963"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150306"
 ---
 # <a name="serverless-architecture"></a>Architektura bezserwerowa
 
@@ -42,9 +42,9 @@ Typowe wyzwania jest migracja istniejącej aplikacji monolitycznych w chmurze. C
 
 ![Migracja monolitu bez użycia serwera](./media/serverless-monolith-migration.png)
 
-Aby dowiedzieć się więcej na temat tego podejścia, Obejrzyj klip wideo: [przenoszenie aplikacji do chmury przy użyciu bezserwerowej usługi Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102).
+Aby dowiedzieć się więcej na temat tego podejścia, Obejrzyj klip wideo: [Udostępnij swoją aplikację w chmurze przy użyciu bezserwerowej usługi Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102).
 
-## <a name="web-apps"></a>Aplikacje sieci Web
+## <a name="web-apps"></a>Aplikacje internetowe
 
 Aplikacje sieci Web są doskonałymi kandydatami do aplikacji bez użycia serwera. Istnieją dwie metody wspólne aplikacje sieci web już dzisiaj: opartych na serwerze i opartych na klienta (na przykład aplikacja jednostronicowa lub SPA). Aplikacje oparte na serwerze sieci web zazwyczaj korzystają warstwa oprogramowania pośredniczącego do wysyłania wywołania interfejsu API do renderowania interfejsu użytkownika sieci web. SPA aplikacji wykonywanie wywołań interfejsu API REST bezpośrednio z przeglądarki. W obu przypadkach bez użycia serwera może obsłużyć żądania interfejsu API REST lub oprogramowanie pośredniczące, udostępniając logikę biznesową niezbędne. Architektura jest do wdrożenia serwera uproszczone statyczną sieci web. Jednej strony aplikacji (SPA) służy HTML, CSS, JavaScript i inne zasoby przeglądarki. Aplikacja internetowa łączy się następnie z zapleczem mikrousług.
 
@@ -74,5 +74,5 @@ Znaczne zmniejszenie ilości urządzeń i informacji często mówią, architektu
 Wszechobecność IoT spowodowało kilka produktów bez użycia serwera koncentrujących się szczególnie na obaw IoT, takich jak [usługi Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub). Aplikacje niewymagające użycia serwera automatyzuje zadania, takie jak rejestracji urządzeń, wymuszanie zasad zostaje wyłączone, śledzenia i nawet wdrożenie kodu do urządzeń *krawędzi*. Krawędź odnosi się do urządzenia, na przykład czujniki i elementy wykonawcze, które są podłączone do, ale active część z Internetu.
 
 >[!div class="step-by-step"]
-[Poprzednie](architecture-approaches.md)
-[dalej](serverless-architecture-considerations.md)
+>[Poprzednie](architecture-approaches.md)
+>[dalej](serverless-architecture-considerations.md)

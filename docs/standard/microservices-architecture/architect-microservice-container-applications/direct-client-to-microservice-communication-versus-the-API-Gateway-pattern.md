@@ -4,12 +4,12 @@ description: Dowiedz się, różnice i wykorzystuje wzorzec bramy interfejsu API
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 36b95f8b6308773dbb49cc68e4f8e2099bdd1ff0
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297318"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152646"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą
 
@@ -55,13 +55,13 @@ W architekturze mikrousług aplikacje klienckie zwykle konieczne używanie funkc
 
 W związku z tym poziom pośredni lub warstwy pośredni (brama) może być wygodna dla aplikacji opartych na mikrousługach. Jeśli nie masz bramy interfejsu API, aplikacje klienckie musi wysyłać żądania bezpośrednio do mikrousług i która zgłasza problemy, takie jak następujące problemy:
 
-- **Sprzężenia**: bez wzorzec bramy interfejsu API, aplikacje klienckie są ściśle do wewnętrznego mikrousług. Aplikacje klienckie, trzeba wiedzieć, jak wiele obszarów aplikacji są rozłożone w mikrousługach. Gdy ewoluują i refaktoryzacji wewnętrznego mikrousług, wpływ na te akcje konserwacji wygląda niewłaściwie ponieważ powodują one przełomowe zmiany w aplikacjach klienta z powodu bezpośrednie odwołanie do wewnętrznego mikrousług z klienta aplikacji. Aplikacje klienckie muszą zostać zaktualizowane, co rozwiązanie trudniejsze ciągły rozwój.
+- **Sprzężenia**: Bez wzorzec bramy interfejsu API aplikacje klienckie są połączone do wewnętrznego mikrousług. Aplikacje klienckie, trzeba wiedzieć, jak wiele obszarów aplikacji są rozłożone w mikrousługach. Gdy ewoluują i refaktoryzacji wewnętrznego mikrousług, wpływ na te akcje konserwacji wygląda niewłaściwie ponieważ powodują one przełomowe zmiany w aplikacjach klienta z powodu bezpośrednie odwołanie do wewnętrznego mikrousług z klienta aplikacji. Aplikacje klienckie muszą zostać zaktualizowane, co rozwiązanie trudniejsze ciągły rozwój.
 
-- **Zbyt wiele rund**: pojedynczej strony/ekranu w aplikacji klienckiej może wymagać kilka wywołań do wielu usług. Czy można wynik na liście sieci wielu rund między klientem i serwerem oraz dodawanie znaczne opóźnienie. Obsługiwane w poziom pośredni agregacji może poprawić wydajność i środowisko użytkownika dla aplikacji klienckich.
+- **Zbyt wiele rund**: Strony/jednoekranowej w aplikacji klienckiej może wymagać kilka wywołań do wielu usług. Czy można wynik na liście sieci wielu rund między klientem i serwerem oraz dodawanie znaczne opóźnienie. Obsługiwane w poziom pośredni agregacji może poprawić wydajność i środowisko użytkownika dla aplikacji klienckich.
 
-- **Problemy z zabezpieczeniami**: bez bramy, muszą być widoczne wszystkie mikrousługi "zewnętrznych world", dzięki czemu obszar narażony na ataki większy niż ukryjesz bezpośrednio nie są używane przez aplikacje klienckie wewnętrznej mikrousług. Jest mniejszy obszar narażony na ataki, bezpieczniejsze może być aplikacji.
+- **Problemy z zabezpieczeniami**: Bez bramy muszą być widoczne wszystkie mikrousługi "zewnętrznych world", dzięki czemu obszar narażony na ataki większy niż ukryjesz bezpośrednio nie są używane przez aplikacje klienckie wewnętrznej mikrousług. Jest mniejszy obszar narażony na ataki, bezpieczniejsze może być aplikacji.
 
-- **Odciąż przekrojowe zagadnienia**: każdego publikowanego publicznie mikrousług musi obsługiwać problemy takie jak uwierzytelnianie, protokół SSL, itp. W wielu sytuacjach te problemy można obsługiwane w pojedynczej warstwie, więc wewnętrznego mikrousługi są uproszczone.
+- **Odciąż przekrojowe zagadnienia**: Każda mikrousługa publikowanego publicznie musi obsługiwać problemy takie jak uwierzytelnianie, protokół SSL, itp. W wielu sytuacjach te problemy można obsługiwane w pojedynczej warstwie, więc wewnętrznego mikrousługi są uproszczone.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>Co to jest wzorzec bramy interfejsu API?
 
@@ -194,5 +194,5 @@ Po początkowej architektura i wzorce wyjaśnienie sekcje, w kolejnych sekcjach 
   [*https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
 
 >[!div class="step-by-step"]
-[Poprzednie](identify-microservice-domain-model-boundaries.md)
-[dalej](communication-in-microservice-architecture.md)
+>[Poprzednie](identify-microservice-domain-model-boundaries.md)
+>[dalej](communication-in-microservice-architecture.md)

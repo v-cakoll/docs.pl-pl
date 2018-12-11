@@ -1,34 +1,30 @@
 ---
-title: Omówienie zestawu SDK .NET core
-description: Dowiedz się o .NET Core SDK, czyli zestawowi bibliotek i narzędzi służących do tworzenia projektów .NET Core.
-author: blackdwarf
-ms.author: mairaw
+title: Omówienie zestawu SDK programu .NET core
+description: Dowiedz się o .NET Core SDK, która stanowi zestaw bibliotek i narzędzi służących do tworzenia projektów .NET Core.
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: 5fc04c3ef5a1502251a9caf0b6a5f5809faad5b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f23140166ada0c39d4267a4fd2ba5187b6c13c83
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210905"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169322"
 ---
-# <a name="net-core-sdk-overview"></a>Omówienie zestawu SDK .NET core 
+# <a name="net-core-sdk-overview"></a>Omówienie zestawu SDK programu .NET core
 
-## <a name="introduction"></a>Wprowadzenie
-.NET core Software Development Kit (SDK) to zestaw bibliotek i narzędzia, które umożliwiają deweloperom tworzenie aplikacji platformy .NET Core i bibliotek. To jest pakiet, który najprawdopodobniej uzyska dostęp do deweloperów. 
+.NET core Software Development Kit (SDK) to zbiór bibliotek i narzędzi, które umożliwiają deweloperom tworzenie aplikacji .NET Core oraz bibliotek. To jest pakiet, który najprawdopodobniej uzyska dostęp do deweloperów. 
 
-Ten przewodnik zawiera następujące składniki:
+Zawiera następujące składniki:
 
-1. Podstawowe narzędzia wiersza polecenia .NET są używane do tworzenia aplikacji
-2. Oprogramowanie .NET core (bibliotek i środowiska uruchomieniowego), które umożliwiają aplikacjom zarówno być zbudowany i uruchom
-3. `dotnet` Sterownik do uruchomienia [polecenia interfejsu wiersza polecenia](tools/index.md) oraz uruchamiania aplikacji
+1. Podstawowe narzędzia wiersza polecenia platformy .NET są używane do tworzenia aplikacji
+2. .NET core (biblioteki i środowisko uruchomieniowe), dzięki czemu aplikacje, które zarówno można skompilować i uruchomić
+3. `dotnet` Sterownik do uruchomienia [poleceń interfejsu wiersza polecenia](tools/index.md) oraz uruchamiania aplikacji
 
+## <a name="acquiring-the-net-core-sdk"></a>Pobieranie zestawu .NET Core SDK
+Podobnie jak w przypadku dowolnych narzędzi, najpierw jest Pobierz narzędzia do komputera. Zależnie od scenariusza możesz użyć natywnych instalatorów do zainstalowania zestawu SDK lub użyj skryptu powłoki instalacji.
 
-## <a name="acquiring-the-net-core-sdk"></a>Uzyskiwanie .NET Core SDK
-Podobnie jak w przypadku dowolnego narzędzia, najpierw jest aby uzyskać narzędzia do komputera. W zależności od scenariusza możesz użyć natywnych instalatorów Instalacja zestawu SDK lub użyć skryptu powłoki instalacji.
+Natywnych instalatorów przede wszystkim są przeznaczone dla dewelopera maszyn. Zestaw SDK jest dystrybuowane przy użyciu mechanizmu natywnych instalacji każdej z obsługiwanych platform, na przykład DEB pakiety na pakiety MSI lub Ubuntu na Windows. Te pliki instalacyjne spowoduje Instalowanie i konfigurowanie środowiska odpowiednio do potrzeb użytkownikowi korzystanie z zestawu SDK natychmiast po zakończeniu instalacji. Jednak również wymagają uprawnień administracyjnych na komputerze. Instrukcje dotyczące instalacji można wyświetlić na [Przewodnik instalacji platformy .NET Core](https://aka.ms/dotnetcoregs).
 
-Natywny instalatorów głównie są przeznaczone dla dewelopera maszyny. Zestaw SDK jest dystrybuowane przy użyciu mechanizmu instalacji natywnych każdej z obsługiwanych platform, na przykład DEB pakietów na funkcji MSI lub Ubuntu pakietów w systemie Windows. Te pliki instalacyjne będzie zainstalować i skonfigurować środowisko, zgodnie z potrzebami dla użytkownika korzystanie z zestawu SDK natychmiast po zakończeniu instalacji. Jednak również potrzebują uprawnień administracyjnych na komputerze. Instrukcje instalacji można wyświetlić w [Przewodnik instalacji platformy .NET Core](https://aka.ms/dotnetcoregs).
+Z drugiej strony, skryptów instalacji nie wymagają uprawnień administracyjnych. Jednak są również nie zainstaluje wszystkie wstępnie wymagane składniki na komputerze; należy ręcznie zainstalować wszystkie wymagania wstępne. Skrypty są przeznaczone głównie na potrzeby konfigurowania serwerów kompilacji lub gdy chcesz zainstalować narzędzia bez uprawnień administratora (Uwaga zastrzeżenie: wymagania wstępne powyżej). Więcej informacji można znaleźć na [zainstalować temat referencyjny skryptu](tools/dotnet-install-script.md). Jeśli interesują Cię sposobu konfigurowania zestawu SDK na serwerze kompilacji ciągłej integracji, możesz wykonać przyjrzeć się [zestawu SDK z serwerami CI](tools/using-ci-with-cli.md) dokumentu.
 
-Instalowanie skryptów, z drugiej strony, nie wymaga uprawnień administracyjnych. Jednak one również nie zostaną zainstalowane wszystkie wstępnie wymagane składniki na komputerze; należy ręcznie zainstalować wszystkie wymagania wstępne. Skrypty są przeznaczone głównie dla ustawienie serwery kompilacji lub gdy chcesz zainstalować narzędzia bez uprawnień administratora (Uwaga zastrzeżenie: wymagania wstępne powyżej). Więcej informacji można znaleźć na [zainstalować temat referencyjny skryptu](tools/dotnet-install-script.md). Jeśli interesuje Cię sposobu konfigurowania zestawu SDK na serwerze kompilacji elementu konfiguracji może potrwać przyjrzeć się [zestawu SDK z serwerami CI](tools/using-ci-with-cli.md) dokumentu. 
-
-Domyślnie zestaw SDK zainstaluje w sposób "side-by-side" (SxS). Oznacza to, że wiele wersji narzędzi interfejsu wiersza polecenia mogą współistnieć na jednym komputerze w danym momencie. Pobiera używania poprawnej wersji to co omówiono bardziej szczegółowo w [sekcji sterowników](tools/index.md#driver) tematu narzędzi wiersza polecenia programu .NET Core.
+Domyślnie zestaw SDK zainstaluje się w sposób "side-by-side" (SxS). Oznacza to, że wiele wersji narzędzi interfejsu wiersza polecenia mogą współistnieć na jednym komputerze w danym momencie. Sposobu poprawna wersja zostanie wykorzystany zostało wyjaśnione bardziej szczegółowo w [sekcji sterownika](tools/index.md#driver) tematu narzędzia wiersza polecenia programu .NET Core.

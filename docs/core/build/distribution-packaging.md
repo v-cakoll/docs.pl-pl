@@ -2,14 +2,14 @@
 title: Tworzenie pakietów dystrybucji platformy .NET core
 description: Dowiedz się, jak spakować, nazwa i wersja platformy .NET Core w celu dystrybucji.
 author: bleroy
-ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.custom: seodec18
+ms.openlocfilehash: be5767351ad1cdac15c73f718f67a0d120cf65b0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297221"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170421"
 ---
 # <a name="net-core-distribution-packaging"></a>Tworzenie pakietów dystrybucji platformy .NET core
 
@@ -68,7 +68,7 @@ W trakcie jednego hosta większości innych składników znajdują się w okreś
 
 Przechowywanie wersji platformy .NET core opiera się na składnika środowiska wykonawczego `[major].[minor]` numerów wersji.
 Wersja zestawu SDK używa tych samych `[major].[minor]` i ma niezależny `[patch]` której łączy semantykę funkcji i poprawek dla zestawu SDK.
-Na przykład: zestaw SDK w wersji 2.2.302 2nd wydaniu poprawek w wersji 3 funkcji zestawu SDK, który obsługuje środowisko wykonawcze 2,2.
+Na przykład: Zestaw SDK w wersji 2.2.302 2nd wydaniu poprawek w wersji 3 funkcji zestawu SDK, który obsługuje środowisko wykonawcze 2,2.
 
 Pakiety między innymi część numeru wersji w ich imieniu. Dzięki temu użytkownik końcowy zainstalować określoną wersję.
 W pozostałej części wersji nie są objęte nazwą wersji. Dzięki temu pakietu systemu operacyjnego Menedżer aktualizację pakietów (np. automatyczne instalowanie zabezpieczeń poprawki).

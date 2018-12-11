@@ -1,15 +1,15 @@
 ---
-title: Wskazówki dotyczące biblioteki typu open-source
+title: Wskazówki dotyczące biblioteki .NET typu open-source
 description: Zalecenia dotyczące najlepszych rozwiązań dla deweloperów do tworzenia bibliotek platformy .NET o wysokiej jakości.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188628"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128073"
 ---
 # <a name="open-source-library-guidance"></a>Wskazówki dotyczące biblioteki typu open-source
 
@@ -29,7 +29,7 @@ Aspekty bibliotek .NET typu open-source wysokiej jakości:
 
 ## <a name="types-of-recommendations"></a>Rodzajów zaleceń
 
-Każdy artykuł przedstawia cztery rodzaje zalecenia: **czy**, **rozważ**, **należy unikać**, i **nie**. Typu zalecenie ma do nich wskazuje, jak silnie powinna występować.
+Każdy artykuł przedstawia cztery rodzaje zalecenia: **Czy**, **należy wziąć pod uwagę**, **uniknąć**, i **nie**. Typu zalecenie ma do nich wskazuje, jak silnie powinna występować.
 
 Należy wykonać prawie zawsze **czy** zalecenia. Na przykład:
 
@@ -48,4 +48,4 @@ I wreszcie **nie** zalecenia wskazuje coś prawie nigdy nie należy wykonać:
 **❌ NIE** publikowanie o silnych nazwach i innych niż-o silnej nazwie wersji biblioteki. Na przykład `Contoso.Api` i `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
-[Next](./get-started.md)
+>[Next](get-started.md)

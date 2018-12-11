@@ -3,19 +3,19 @@ title: Biblioteki i przechowywania wersji platformy .NET
 description: Zalecenia dotyczące najlepszych rozwiązań dla wersji bibliotek platformy .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: f95c8ade1f91af5c13184b839b327c9397c6fe5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/10/2018
+ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187861"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169602"
 ---
-# <a name="versioning"></a>Przechowywanie wersji
+# <a name="versioning"></a>Obsługa wersji
 
 Biblioteka oprogramowania rzadko zakończeniu w wersji 1.0. Dobre bibliotek z czasem ewoluować, dodawanie funkcji, naprawianie błędów i poprawę wydajności. Należy pamiętać, że można zwolnić nowe wersje biblioteki .NET, zapewniając dodatkową wartość z każdą wersją, bez przerywania istniejących użytkowników.
 
-## <a name="breaking-changes"></a>Fundamentalne zmiany
+## <a name="breaking-changes"></a>Zmiany powodujące niezgodność
 
 Aby uzyskać informacje na temat przełomowych zmian między wersjami obsługi, zobacz [istotne zmiany w](./breaking-changes.md).
 
@@ -77,12 +77,13 @@ Wersja pliku zestawu jest używana do wyświetlania wersji pliku w Windows i nie
 
 ![Eksplorator Windows](./media/versioning/win-properties.png "Eksplorator Windows")
 
-> [!NOTE]
-> Ostrzeżenie dotyczące kompilacji nieszkodliwe jest wywoływane, jeśli ta wersja nie jest zgodna z formatem `Major.Minor.Build.Revision`. Można bezpiecznie zignorować to ostrzeżenie.
-
 **ROZWAŻ ✔️** tym ciągłej integracji kompilacji numer poprawki AssemblyFileVersion.
 
 > Na przykład tworzysz projekt w wersji 1.0.0 i numer kompilacji ciągłej integracji jest 99, więc Twoja AssemblyFileVersion jest 1.0.0.99.
+
+**CZY ✔️** używają formatu `Major.Minor.Build.Revision` wersji pliku.
+
+> Gdy wersja pliku nigdy nie jest używany przez platformy .NET, [Windows oczekuje, że wersja pliku](/windows/desktop/menurc/versioninfo-resource) w `Major.Minor.Build.Revision` formatu. Ostrzeżenie jest zgłaszane w przypadku wersji on skorzystać z tego formatu.
 
 ### <a name="assembly-informational-version"></a>Informacje o wersji zestawu
 
@@ -92,10 +93,13 @@ Informacje o wersji zestawu jest używana do rejestrowania dodatkowe informacje 
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
 
+> [!NOTE]
+> Starsze wersje programu Visual Studio Zgłoś ostrzeżenia kompilacji, jeśli ta wersja nie postępuj zgodnie z formatu `Major.Minor.Build.Revision`. Można bezpiecznie zignorować to ostrzeżenie.
+
 **Należy UNIKAĆ ❌** samodzielnie ustawienie informacje o wersji zestawu.
 
 > Zezwalaj na SourceLink do automatycznego generowania wersji zawierający metadane kontroli źródła i NuGet.
 
 >[!div class="step-by-step"]
-[Poprzednie](./publish-nuget-package.md)
-[dalej](./breaking-changes.md)
+>[Poprzednie](publish-nuget-package.md)
+>[dalej](breaking-changes.md)

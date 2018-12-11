@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: b6c881a445f5848829ab5ccc6ce8547a390d89f3
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 96a004cc49773346eeb8f88e2ba99beebf8598bf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404622"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154206"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testowanie platformy ASP.NET Core MVC aplikacji
 
@@ -28,7 +28,7 @@ Test jednostkowy testy pojedynczą częścią Twojej aplikacji logiki. Jeden mo�
 
 Testy jednostkowe, ze względu na fakt, przetestować pojedynczą jednostkę kodu, bez zewnętrznych zależności mają być wykonywane bardzo szybko. W związku z tym można uruchomić zestawy testów z setek testów jednostkowych w ciągu kilku sekund. Uruchom je często, najlepiej przed każdym wypychania do repozytorium kontroli źródła udostępnionego, a także bez obaw z każdą kompilacją automatycznych na serwerze kompilacji.
 
-### <a name="integration-tests"></a>Testy integracji
+### <a name="integration-tests"></a>Testy integracyjne
 
 Chociaż jest to dobry pomysł, aby hermetyzować swój kod, który współdziała z infrastrukturą, takich jak bazy danych i systemy plików, będą nadal mieć część kodu, i prawdopodobnie warto go przetestować. Ponadto należy sprawdzić, czy warstwy kodu wchodzić w interakcje w oczekiwany sposób w przypadku w pełni rozpoznać zależności aplikacji. Jest to odpowiedzialność testów integracji. Testy integracji zwykle być wolniejszy i trudniejsze do skonfigurowania niż testy jednostkowe, ponieważ są one często są zależne od zależności zewnętrzne i infrastruktury. W związku z tym należy unikać różne rzeczy, które mogłyby zostać testów przy użyciu testów jednostkowych w testów integracji. Jeśli danego scenariusza można przetestować za pomocą testu jednostkowego, należy go przetestować, za pomocą testu jednostkowego. Jeśli nie jest możliwe, rozważ użycie wiąże się test integracji.
 
@@ -66,7 +66,7 @@ Testy integracji są zapisywane z perspektywy deweloperów, aby sprawdzić, czy 
 
 > "Wiele razy rozwój systemu przyrównać do budowania domu. Chociaż w ten sposób analogiczny, nie jest jeszcze prawidłowy, firma Microsoft można rozszerzyć na potrzeby rozróżnienie między jednostkowych i testów funkcjonalnych. Testy jednostkowe jest analogiczne do Inspektora budynku, odwiedzając witrynę konstrukcji domu. Koncentruje się na różnych systemów wewnętrznych domu podstawę formułowanie, elektryczny, wodociągów i tak dalej. Zapewnia on (testy), czy części domu będą działać poprawnie i bezpiecznie, oznacza to, że spełniają kod tworzenia. Testy funkcjonalne w tym scenariuszu są analogiczne do właściciel tej samej witrynie konstrukcji. Zakłada on, systemami wewnętrznymi działają prawidłowo, czy inspektor budynku działa jego zadań. Właściciel koncentruje się na co będzie podobnie jak w tym dom na żywo. On dotyczy wygląd domu, różnych pomieszczeniach komfortowo, jednocześnie rozmiar, jest domu potrzeb rodziny, są okna w dobre miejsce, gdzie możesz przechwytywać sun rano. Właściciel wykonuje testy funkcjonalne w domu. Ma on perspektywy użytkownika. Inspektor budynku wykonuje testy jednostkowe w domu. Ma on konstruktora perspektywy."
 
-Źródło: [Unit Testing i testy funkcjonalne](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
+Źródło: [Testowanie i testów funkcjonalnych jednostek](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
 
 Jestem fond z informacją o tym "jako programiści, firma Microsoft nie na dwa sposoby: wbudowana niewłaściwej kolejności lub wbudowana nic złego." Testy jednostkowe upewnij się, że tworzysz rzecz po prawej stronie; testy funkcjonalne upewnij się, że tworzysz właściwe.
 
@@ -219,7 +219,7 @@ public class LocalFileImageServiceGetImageBytesById
 
 W przypadku aplikacji platformy ASP.NET Core klasy elementu TestServer sprawia, że testy funkcjonalne stosunkowo łatwa do zapisania. Konfigurowanie elementu TestServer bezpośrednio za pomocą WebHostBuilder (tak jak zwykle dla aplikacji), lub z typem WebApplicationFactory (dostępne w 2.1). Należy starać jako najdokładniej dopasować hosta testów do hosta produkcji, aby testy wykonują zachowanie podobne do aplikacji wykona w środowisku produkcyjnym. Klasa WebApplicationFactory jest przydatne w przypadku konfigurowania elementu TestServer ContentRoot, który jest używany przez platformy ASP.NET Core można zlokalizować statycznych zasobów, takich jak widoki.
 
-Można utworzyć proste testy funkcjonalne, tworząc klasy testowej, który implementuje IClassFixture < WebApplicationFactory<TEntry>> gdzie TEntry jest klasa uruchamiania aplikacji sieci web. Dzięki temu w miejscu Twoje warunki początkowe testu można utworzyć klienta przy użyciu metody CreateClient fabryka jest:
+Można utworzyć proste testy funkcjonalne, tworząc klasy testowej, który implementuje IClassFixture\<WebApplicationFactory\<TEntry >> gdzie TEntry jest klasa uruchamiania aplikacji sieci web. Dzięki temu w miejscu Twoje warunki początkowe testu można utworzyć klienta przy użyciu metody CreateClient fabryka jest:
 
 ```cs
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
@@ -347,5 +347,5 @@ namespace FunctionalTests.WebRazorPages
 Ten test funkcjonalny wykonuje pełne ASP.NET Core MVC / stosu aplikacji stron Razor, w tym wszystkie oprogramowania pośredniczącego, filtry, wiążących, itp., które mogą być w miejscu. Sprawdza, czy daną trasą ("/") zwraca Powodzenie oczekiwany kod stanu i danych wyjściowych HTML. Odbywa się to bez konfigurowania serwera sieci web rzeczywiste, a więc eliminuje większość kruchości, który za pomocą rzeczywistych sieci web serwera do testowania mogą występować (na przykład problemy z ustawieniami zapory). Testy funkcjonalne, które są uruchamiane względem elementu TestServer są zwykle wolniejsze niż integracji i testów jednostkowych, ale jest znacznie szybsze niż testy, które może działać przez sieć do serwera sieci web test. Aby upewnić się, że stos fronton aplikacji działa zgodnie z oczekiwaniami, należy użyć testów funkcjonalnych. Te testy są szczególnie przydatne podczas duplikowania możesz znaleźć w kontrolerach lub strony i adresów powielania, dodając filtry. W idealnym przypadku tej refaktoryzacji nie spowoduje zmiany zachowania aplikacji, a zestaw testów funkcjonalnych sprawdzi, czy jest to możliwe.
 
 >[!div class="step-by-step"]
-[Poprzednie](work-with-data-in-asp-net-core-apps.md)
-[dalej](development-process-for-azure.md)
+>[Poprzednie](work-with-data-in-asp-net-core-apps.md)
+>[dalej](development-process-for-azure.md)

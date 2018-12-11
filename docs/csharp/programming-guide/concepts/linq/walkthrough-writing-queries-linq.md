@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: pisanie zapytań w C# (LINQ)'
+title: 'Przewodnik: Pisanie zapytań w języku C# (LINQ)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 2cac07c8eb02465334af47fd46702b60f1371c68
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ffff8317e6524acc877b7d0851e5a1b37967b1f0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745326"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154086"
 ---
-# <a name="walkthrough-writing-queries-in-c-linq"></a>Wskazówki: pisanie zapytań w C# (LINQ)
+# <a name="walkthrough-writing-queries-in-c-linq"></a>Przewodnik: Pisanie zapytań w języku C# (LINQ)
 W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywania wyrażenia zapytań LINQ.  
   
 ## <a name="create-a-c-project"></a>Utwórz projekt C#  
@@ -87,7 +87,7 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
 1.  Można połączyć wiele warunków logicznych w `where` klauzulę, aby dalej zawęzić zapytanie. Poniższy kod dodaje warunek, dlatego, że zapytanie zwraca tych studentów, którego wynik pierwszego był ponad 90 i którego ostatni wynik był mniejszy niż 80. `where` Klauzuli powinien przypominać następujący kod.  
   
-    ```  
+    ```csharp
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
@@ -99,19 +99,19 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
 1.  Będzie można ją łatwiej wyników skanowania, jeśli są one w określonej kolejności. Może zamówić łączność obejmującą zwracanej sekwencji według dowolnego pola dostępne w elementy źródłowe. Na przykład następująca `orderby` klauzuli zamówienia wyniki w kolejności alfabetycznej od A do Z, zgodnie z ostatnio nazwę każdego ucznia. Dodaj następujący kod `orderby` klauzuli do kwerendy, zaraz po `where` instrukcji i przed `select` instrukcji:  
   
-    ```  
+    ```csharp
     orderby student.Last ascending  
     ```  
   
 2.  Teraz Zmień `orderby` klauzuli, tak że porządkuje wyniki w odwrotnej kolejności według oceny pierwszego testu z najwyższym wynikiem do najmniejszej liczby punktów.  
   
-    ```  
+    ```csharp
     orderby student.Scores[0] descending  
     ```  
   
 3.  Zmiana `WriteLine` ciąg formatu, dzięki czemu można zobaczyć wyniki:  
   
-    ```  
+    ```csharp
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
@@ -157,7 +157,7 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>Aby użyć metody składni w wyrażeniu zapytania  
   
-1.  Zgodnie z opisem w [składnia zapytania a składnia metody w technologii LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), niektórych operacji zapytań może być wyrażone tylko przy użyciu składni metody. Poniższy kod oblicza łączny wynik dla każdego `Student` w sekwencji źródłowej, a następnie wywołania `Average()` metody wyników tej kwerendy, aby obliczyć średnią ocenę klasy. Należy pamiętać, umieszczania nawiasów wokół wyrażenia zapytania.  
+1.  Zgodnie z opisem w [składnia zapytania a składnia metody w technologii LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), niektórych operacji zapytań może być wyrażone tylko przy użyciu składni metody. Poniższy kod oblicza łączny wynik dla każdego `Student` w sekwencji źródłowej, a następnie wywołania `Average()` metody wyników tej kwerendy, aby obliczyć średnią ocenę klasy.
   
      [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   

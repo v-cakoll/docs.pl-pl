@@ -2,12 +2,12 @@
 title: Przepływ sterowania w programach Async (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: c4f1213eb9162985170c8eb1176fe01d8c721d2e
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 45d349fa131daf3fdf39d29d53d8ec236c79f81f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347958"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150605"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Przepływ sterowania w programach async (C#)
 
@@ -39,7 +39,7 @@ public partial class MainWindow : Window
 
         // SIX
         resultsTextBox.Text +=
-            String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
+            $"\r\nLength of the downloaded string: {contentLength}.\r\n";
     }
 
     async Task<int> AccessTheWebAsync()
@@ -97,7 +97,7 @@ Kod, który używa tego tematu możesz pobrać z witryny MSDN lub tworzyć je sa
 
 ### <a name="download-the-program"></a>Pobierz program
 
-Możesz pobrać aplikację dotyczącą tego tematu z [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Poniższe kroki, Otwórz i uruchom program.
+Możesz pobrać aplikację dotyczącą tego tematu z [próbka asynchroniczna: Kontrolowanie Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Poniższe kroki, Otwórz i uruchom program.
 
 1.  Rozpakuj pobrany plik, a następnie uruchom program Visual Studio.
 
@@ -199,7 +199,7 @@ Aby uruchomić projekt, należy wykonać następujące czynności:
                     "           About to display contentLength and exit.\r\n";
 
                 resultsTextBox.Text +=
-                    String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);
+                    $"\r\nLength of the downloaded string: {contentLength}.\r\n";
             }
 
             async Task<int> AccessTheWebAsync()
@@ -390,4 +390,4 @@ int contentLength = await getLengthTask;
 - [Programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Asynchroniczne typy zwracane (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
 - [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Próbka asynchroniczna: Przepływ sterowania w programach Async (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Próbka asynchroniczna: Kontrolowanie Flow in Async Programs (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

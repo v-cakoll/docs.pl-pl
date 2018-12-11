@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Pr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/05/2018
-ms.openlocfilehash: 00cffde7e7eb548f755b60f64aa596210b570d07
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: bc6b1796ed7b12a04affc521ac2efee515c48ae2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297520"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150553"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
@@ -161,7 +161,7 @@ Jednak i to jest nowy od połowy 2017 r. w przypadku określenia taką samą naz
 
 Dzięki temu podczas ściągnąć obraz z hosta Windows go każda będzie ściągać wariant Windows i ściągania taką samą nazwę obrazu na hoście z systemem Linux każda będzie ściągać wariantów systemu Linux.
 
-### <a name="option-b-creating-your-base-image-from-scratch"></a>Opcja B: tworzenia obrazu podstawowego od podstaw
+### <a name="option-b-creating-your-base-image-from-scratch"></a>Opcja B: Tworzenie obrazu podstawowego od podstaw
 
 Można utworzyć własny obraz podstawowy platformy Docker, od podstaw. W tym scenariuszu nie jest zalecane w przypadku osobą, która jest uruchamiana przy użyciu rozwiązania Docker, ale jeśli chcesz ustawić bity określonego obrazu podstawowego, możesz to zrobić.
 
@@ -300,7 +300,7 @@ Można wdrożyć aplikację obsługującą wiele kontenerów za pomocą pliku do
 
 Jeśli aplikacja ma tylko jeden kontener, możesz uruchomić go przez wdrożenie jej do hosta platformy Docker (maszyny Wirtualnej lub serwera fizycznego). Jednak jeśli aplikacja zawiera wiele usług, możesz go wdrożyć jako złożone aplikacji, za pomocą jednego polecenia interfejsu wiersza polecenia (docker-compose się), lub za pomocą programu Visual Studio, które korzystają z tego polecenia w sposób niewidoczny. Przyjrzyjmy się różne opcje.
 
-### <a name="option-a-run-a-single-container-app"></a>Opcja odpowiedź: uruchamianie aplikacji jednego kontenera
+### <a name="option-a-run-a-single-container-app"></a>Opcja A: Uruchamianie aplikacji jednego kontenera
 
 #### <a name="docker-cli"></a>Interfejs CLI platformy docker
 
@@ -447,5 +447,5 @@ RUN powershell add-windowsfeature web-asp-net45
    [*https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
 
 >[!div class="step-by-step"]
-[Poprzednie](index.md)
-[dalej](../net-core-single-containers-linux-windows-server-hosts/index.md)
+>[Poprzednie](index.md)
+>[dalej](../multi-container-microservice-net-applications/index.md)

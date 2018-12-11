@@ -4,12 +4,12 @@ description: Dowiedz się bez użycia serwera, praktyczne podejście przez uzysk
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c38d1c6c4e04f3fa38946c97af5d94758b3ed6f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404964"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153790"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Scenariusze biznesowe bez użycia serwera i przypadki użycia
 
@@ -55,7 +55,7 @@ Aplikacja korzysta z funkcji serwery proxy usługi Azure functions, Włącz refa
 
 Serwer proxy zapewnia jeden punkt końcowy interfejsu API, która jest aktualizowana w celu przekierowywania poszczególnych żądań, ponieważ są one przenoszone do funkcje niewymagające użycia serwera.
 
-Może wyświetlać film wideo, który przeprowadzi migrację całej: [Lift- and -shift przy użyciu bezserwerowej usługi Azure functions](https://channel9.msdn.com/Events/Connect/2017/E102). Dostęp do przykładowego kodu: [Przynieś własną aplikację](https://github.com/JeremyLikness/bring-own-app-connect-17).
+Możesz wyświetlić film wideo, który przeprowadzi migrację całej: [Lift- and -shift przy użyciu bezserwerowej usługi Azure functions](https://channel9.msdn.com/Events/Connect/2017/E102). Dostęp do przykładowego kodu: [Przenieś swoją własną aplikację](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Analizowanie pliku CSV i wstawić do bazy danych
 
@@ -77,7 +77,7 @@ Następnie możesz utworzyć pulpit nawigacyjny usługi Power BI w celu zbierani
 
 ![Usługa Power BI przykład](./media/power-bi-example.png)
 
-Repozytorium skracania adresów pełna konsolidacja, korzystając z instrukcji jest dostępny tutaj: [skracanie adresów URL bez użycia serwera](https://github.com/jeremylikness/serverless-url-shortener). Informacje o uproszczonej wersji: [usługi Azure Storage dla aplikacji .NET bez użycia serwera w ciągu kilku minut](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
+Repozytorium skracania adresów pełna konsolidacja, korzystając z instrukcji jest dostępna tutaj: [Skracanie adresów URL bez użycia serwera](https://github.com/jeremylikness/serverless-url-shortener). Możesz przeczytać o uproszczonej wersji: [Usługa Azure Storage dla aplikacji .NET bez użycia serwera w ciągu kilku minut](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Sprawdź łączność urządzeń za pomocą polecenia ping
 
@@ -98,5 +98,5 @@ Aby uzyskać więcej informacji, zobacz [ping usługi Azure IoT Hub](https://azu
 * [Skracanie adresów URL bez użycia serwera](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
-[Poprzednie](orchestration-patterns.md)
-[dalej](serverless-conclusion.md)
+>[Poprzednie](orchestration-patterns.md)
+>[dalej](serverless-conclusion.md)

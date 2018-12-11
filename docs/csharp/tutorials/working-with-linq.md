@@ -1,22 +1,22 @@
 ---
 title: Praca z technologią LINQ
 description: Ten samouczek omawia sposób generowania sekwencji za pomocą LINQ, pisanie metody używane w kwerendach LINQ i rozróżnienie między eager i leniwa ocena.
-ms.date: 03/28/2017
+ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: dc5f6cc4fd38b32f54a576a3947187cbed4e70e8
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086755"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170811"
 ---
 # <a name="working-with-linq"></a>Praca z technologią LINQ
 
 ## <a name="introduction"></a>Wprowadzenie
 
-W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core i języka C#. Dowiesz się:
+W tym samouczku pokazano funkcje programu .NET Core i C# języka. Dowiesz się:
 
-*   Sposób generowania sekwencji za pomocą LINQ
+*   Jak można wygenerować sekwencji za pomocą LINQ.
 *   Jak napisać metody, które mogą być łatwo używane w kwerendach LINQ.
 *   Jak rozróżnianie między eager i leniwa ocena.
 
@@ -24,7 +24,7 @@ Te techniki dowiesz się, tworząc aplikację, która przedstawia jedną z podst
 
 Magicians Użyj tej techniki, ponieważ wszystkie karty w znanej lokalizacji po każdym losowa, a kolejność jest wzorzec powtarzające się. 
 
-Dla naszych potrzeb jest światła hearted przyjrzeć manipulowanie sekwencji danych. Aplikację, którą utworzysz konstruowania talii kart, a następnie wykonać sekwencję przesuwa, zapisywanie sekwencji zawsze wtedy. Zostanie również porównać zaktualizowane kolejność oryginalnej kolejności.
+Do własnych celów jest światła hearted przyjrzeć manipulowanie sekwencji danych. Aplikację, którą utworzysz konstruowania talii kart, a następnie wykonać sekwencję przesuwa, zapisywanie sekwencji zawsze wtedy. Zostanie również porównać zaktualizowane kolejność oryginalnej kolejności.
 
 W tym samouczku składa się z wielu kroków. Po każdym kroku możesz uruchomić aplikację i wyświetlić postęp. Można również wyświetlić [ukończone przykładowe](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) w repozytorium dotnet/samples w witrynie GitHub. Aby uzyskać instrukcje pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
@@ -40,26 +40,23 @@ Jeśli nie znasz języka C#, [w tym samouczku](console-teleprompter.md) wyjaśni
 
 ## <a name="creating-the-data-set"></a>Tworzenie zestawu danych
 
-Zacznijmy od utworzenia talii kart. Należy to zrobić tego przy użyciu zapytania LINQ, która ma dwa źródła (jedną dla czterech odpowiada, jeden dla trzynaście wartości). Tych źródeł będzie łączyć w talii kart 52. A `Console.WriteLine` instrukcji wewnątrz `foreach` pętli Wyświetla karty.
-
-Oto zapytanie:
+Przed rozpoczęciem upewnij się, że następujące wiersze na początku `Program.cs` pliku wygenerowanego przez `dotnet new console`:
 
 ```csharp
-var startingDeck = from s in Suits()
-                   from r in Ranks()
-                   select new { Suit = s, Rank = r };
-
-foreach (var c in startingDeck)
-{
-    Console.WriteLine(c);
-}
+// Program.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
 ```
 
-Wielokrotność `from` generuje klauzule `SelectMany`, co powoduje utworzenie pojedynczego ciągu z łączenia każdego elementu w pierwszej kolejności, przy czym każdy element w drugiej sekwencji. Kolejność jest ważna dla naszych potrzeb. Pierwszy element w pierwszej sekwencji źródłowej (kolory) w połączeniu z każdego elementu w drugiej sekwencji (wartości). To zapewnia wszystkie karty trzynaście pierwszy koloru. Ten proces jest powtarzany, przy czym każdy element w pierwszej kolejności (kolory). Wynik końcowy jest talii kart uporządkowane według kolory, a następnie według wartości.
+Jeśli te trzy wiersze (`using` instrukcji) nie są w górnej części pliku nasz program nie zostanie skompilowany.
 
-Następnie należy tworzyć metody Suits() i Ranks(). Zacznijmy od bardzo prosty zestaw *metody iteracyjne* , którzy generują sekwencja jako wyliczalny element z ciągami:
+Teraz, gdy wszystkie odwołania, które należy rozważyć, co stanowi talii kart. Często talii kart gry zawiera cztery kolory, a każdy sposób ma trzynaście wartości. Normalnie, należy rozważyć utworzenie `Card` klasy bezpośrednio off bat i wypełnianie zbiór `Card` obiekty ręcznie. Za pomocą LINQ może być bardziej zwięzłe niż zwykły sposób radzenia sobie z tworzeniem talii kart. Zamiast tworzyć `Card` klasy, można utworzyć dwie sekwencje do reprezentowania zestawów i rangi texeli, odpowiednio. Utworzysz naprawdę proste parę [ *metody iteracyjne* ](../iterators.md#enumeration-sources-with-iterator-methods) wygeneruje rangę i kolory jako <xref:System.Collections.Generic.IEnumerable%601>s ciągów:
 
 ```csharp
+// Program.cs
+// The Main() method
+
 static IEnumerable<string> Suits()
 {
     yield return "clubs";
@@ -85,64 +82,96 @@ static IEnumerable<string> Ranks()
     yield return "ace";
 }
 ```
+Umieść je poniżej `Main` method in Class metoda swoje `Program.cs` pliku. Korzystanie z tych dwóch metod zarówno `yield return` składni, aby utworzyć sekwencję podczas ich działania. Kompilator tworzy obiekt, który implementuje <xref:System.Collections.Generic.IEnumerable%601> i generuje sekwencję ciągów, ponieważ są one wymagane.
 
-Korzystanie z tych dwóch metod zarówno `yield return` składni, aby utworzyć sekwencję podczas ich działania. Kompilator tworzy obiekt, który implementuje `IEnumerable<T>` i generuje sekwencję ciągów, ponieważ są one wymagane.
-
-W tym można skompilować należy dodać następujące dwa wiersze na początku pliku:
+Teraz Użyj te metody iteratora, aby utworzyć zbiór kart. Będzie umieścić zapytania LINQ w naszym `Main` metody. Poniżej znajduje się ona:
 
 ```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
+// Program.cs
+static void Main(string[] args)
+{
+    var startingDeck = from s in Suits()
+                       from r in Ranks()
+                       select new { Suit = s, Rank = r };
+
+    // Display each card that we've generated and placed in startingDeck in the console
+    foreach (var card in startingDeck)
+    {
+        Console.WriteLine(card);
+    } 
+}
 ```
 
-Przejdź dalej i uruchom aplikację przykładową na tym etapie konstruowania. Wszystkie karty 52 będzie wyświetlany w talii kart. Może okazać się bardzo pomocne uruchomić ten przykład w debugerze, aby obserwować sposób, w jaki `Suits()` i `Values()` wykonywania metody. Wyraźnie widać, że każdego ciągu w każdej sekwencji jest generowany tylko wtedy, gdy jest to konieczne.
+Wielokrotność `from` generuje klauzule <xref:System.Linq.Enumerable.SelectMany%2A>, co powoduje utworzenie pojedynczego ciągu z łączenia każdego elementu w pierwszej kolejności, przy czym każdy element w drugiej sekwencji. Kolejność jest ważna dla naszych potrzeb. Pierwszy element w pierwszej sekwencji źródłowej (kolory) w połączeniu z każdego elementu w drugiej sekwencji (Klasyfikacja). To zapewnia wszystkie karty trzynaście pierwszy koloru. Ten proces jest powtarzany, przy czym każdy element w pierwszej kolejności (kolory). Wynik końcowy jest talii kart uporządkowane według kolory, a następnie według wartości.
+
+Ważne jest, aby pamiętać, że możliwość zapisu LINQ w składni zapytań powyżej czy należy użyć składni metody zamiast tego, zawsze jest możliwe przejść z jednej formy składnia do innego. Zapytanie powyżej napisanych w składni zapytania mogą być napisane w składni metody jako:
+```csharp
+var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit = suit, Rank = rank }));
+```
+Kompilator tłumaczy instrukcji LINQ, zapisane ze składnią kwerendy w składni wywołania metody równoważne. W związku z tym niezależnie od wybranego składni, dwie wersje zapytanie generuje ten sam wynik. Wybierz, które składni działa najlepiej w danej sytuacji: na przykład, jeśli pracujesz w zespole, w których niektóre elementy członkowskie mają trudności przy użyciu składni metody, spróbuj preferowanie za pomocą składni zapytania.
+
+Przejdź dalej i uruchom aplikację przykładową na tym etapie konstruowania. Wszystkie karty 52 będzie wyświetlany w talii kart. Może okazać się bardzo pomocne uruchomić ten przykład w debugerze, aby obserwować sposób, w jaki `Suits()` i `Ranks()` wykonywania metody. Wyraźnie widać, że każdego ciągu w każdej sekwencji jest generowany tylko wtedy, gdy jest to konieczne.
 
 ![Okno konsoli aplikacji wypisywanie 52 kart](./media/working-with-linq/console.png)
 
 ## <a name="manipulating-the-order"></a>Manipulowanie kolejności
 
-Następnie utworzymy metody narzędzie, które może wykonywać losowa. Pierwszym krokiem jest podzielenie slajdów w dwóch. `Take()` i `Skip()` metody, które są częścią interfejsów API LINQ zapewnia tę funkcję dla nas:
+Następnie skoncentrować się na sposób ma zostać losowo zmieniona kolejność kart w talii. Pierwszym krokiem w dowolnej dobre shuffle jest podzielenie slajdów w dwóch. <xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A> metody, które są częścią interfejsów API LINQ zapewnia tę funkcję dla Ciebie. Umieść je poniżej `foreach` Pętla:
 
 ```csharp
-var top = startingDeck.Take(26);
-var bottom = startingDeck.Skip(26);
+// Program.cs
+public static void Main(string[] args)
+{
+    var startingDeck = from s in Suits()
+                       from r in Ranks()
+                       select new { Suit = s, Rank = r };
+
+    foreach (var c in startingDeck)
+    {
+        Console.WriteLine(c);
+    }
+
+    // 52 cards in a deck, so 52 / 2 = 26    
+    var top = startingDeck.Take(26);
+    var bottom = startingDeck.Skip(26);
+}
 ```
 
-Metoda shuffle nie istnieje w standardowej bibliotece, dzięki czemu będzie trzeba napisać własny. Ta nowa metoda przedstawiono kilka technik, które ma być używany do programów opartych na LINQ, więc opisano każdej części metody w krokach.
+Jednakże nie istnieje metoda shuffle z zalet w standardowej bibliotece, dzięki czemu będzie trzeba napisać własny. Metoda losowa, który zostanie utworzony przedstawiono kilka technik, które ma być używany do programów opartych na LINQ, dzięki czemu każda część tego procesu zostaną wyjaśnione w krokach.
 
-Podpis metody tworzy *— metoda rozszerzenia*:
+Aby dodać funkcjonalność do interakcji z <xref:System.Collections.Generic.IEnumerable%601> wrócisz z zapytań LINQ, musisz zapisać niektórych specjalnymi rodzajami metody o nazwie [metody rozszerzenia](../../csharp/programming-guide/classes-and-structs/extension-methods.md). Krótko mówiąc, metody rozszerzenia jest specjalnego przeznaczenia *statycznej metody* , dodaje nowe funkcje do już istniejącego typu bez konieczności modyfikowania oryginalnego typu, aby dodać funkcje.
 
-```csharp
-public static IEnumerable<T> InterleaveSequenceWith<T>
-    (this IEnumerable<T> first, IEnumerable<T> second)
-```
-
-Metoda rozszerzenia jest specjalnego przeznaczenia *metody statycznej.* Możesz zobaczyć dodanie `this` modyfikator na pierwszy argument do metody. Oznacza to, że należy wywołać metodę, tak jakby był metodą elementu członkowskiego typu pierwszego argumentu.
-
-Metody rozszerzenia mogą być deklarowane tylko w `static` klasy, więc Utwórz nową klasę statycznego o nazwie `extensions` dla tej funkcji. Kontynuuj w tym samouczku, a te zostaną umieszczone w tej samej klasy należy dodać więcej metod rozszerzenia.
-
-Tej deklaracji metody również następujące standardowe idiom gdzie typy wejściowe i wyjściowe są `IEnumerable<T>`. Czy rozwiązanie umożliwia metody LINQ zezwalającym ze sobą, aby wykonywać bardziej złożone zapytania.
+Nadaj nową stronę główną Twoje rozszerzenia metody, dodając nową *statyczne* plik klasy do programu o nazwie `Extensions.cs`, a następnie uruchom kompilowania z pierwszą metodą rozszerzenia: 
 
 ```csharp
+// Extensions.cs
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LinqFaroShuffle
 {
     public static class Extensions
     {
-        public static IEnumerable<T> InterleaveSequenceWith<T>
-            (this IEnumerable<T> first, IEnumerable<T> second)
+        public static IEnumerable<T> InterleaveSequenceWith<T>(this IEnumerable<T> first, IEnumerable<T> second)
         {
-            // implementation coming.
+            // Your implementation will go here soon enough
         }
     }
 }
 ```
 
-Będziesz wyliczanie zarówno sekwencje jednocześnie, z przeplotem elementy i utworzenie jednego obiektu.  Zapisywanie LINQ metodę, która współdziała z dwóch sekwencji wymaga zrozumienia sposobu `IEnumerable` działa.
+Wyszukaj w podpisie metody moment, w szczególności parametry:
 
-`IEnumerable` Interfejs ma jedną z metod: `GetEnumerator()`. Obiekt zwrócony przez `GetEnumerator()` ma metodę, aby przejść do następnego elementu i właściwości, która pobiera bieżącego elementu w sekwencji. Te dwa elementy członkowskie użyje do wyliczania kolekcji i zwracają elementy. Ta metoda przeplotu będzie metody iteratora, więc zamiast tworzenia kolekcji i zwraca kolekcję, użyjesz `yield return` składni pokazanych powyżej. 
+```csharp
+public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> first, IEnumerable<T> second)
+```
+
+Możesz zobaczyć dodanie `this` modyfikator na pierwszy argument do metody. Oznacza to, że należy wywołać metodę, tak jakby był metodą elementu członkowskiego typu pierwszego argumentu. Tej deklaracji metody również następujące standardowe idiom gdzie typy wejściowe i wyjściowe są `IEnumerable<T>`. Czy rozwiązanie umożliwia metody LINQ zezwalającym ze sobą, aby wykonywać bardziej złożone zapytania.
+
+Naturalnie ponieważ talii podzielić połowami, należy dołączyć te połowami ze sobą. W kodzie, oznacza to, użytkownik będzie można wyliczanie zarówno sekwencji zakupione w ramach <xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A> jednocześnie, *`interleaving`* elementy i tworzenia jednej sekwencji: Twoje przekazanych teraz talii kart. Zapisywanie LINQ metodę, która współdziała z dwóch sekwencji wymaga zrozumienia sposobu <xref:System.Collections.Generic.IEnumerable%601> działa.
+
+<xref:System.Collections.Generic.IEnumerable%601> Interfejs ma jedną z metod: <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>. Obiekt zwrócony przez <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> ma metodę, aby przejść do następnego elementu i właściwości, która pobiera bieżącego elementu w sekwencji. Te dwa elementy członkowskie użyje do wyliczania kolekcji i zwracają elementy. Ta metoda przeplotu będzie metody iteratora, więc zamiast tworzenia kolekcji i zwraca kolekcję, użyjesz `yield return` składni pokazanych powyżej.
 
 Oto implementacja tej metody:
 
@@ -151,6 +180,7 @@ Oto implementacja tej metody:
 Teraz, gdy ta metoda jest napisanych, wróć do `Main` metody i shuffle slajdów, gdy:
 
 ```csharp
+// Program.cs
 public static void Main(string[] args)
 {
     var startingDeck = from s in Suits()
@@ -175,41 +205,49 @@ public static void Main(string[] args)
 
 ## <a name="comparisons"></a>Porównania
 
-Zobaczmy, ile przesuwa zajmuje można ustawić na pokład z powrotem do jego oryginalnej kolejności. Będzie konieczne napisanie metody, która określa, czy dwie sekwencje mają taki sam. Po utworzeniu tej metody, należy umieścić kod, który rozmieszcza slajdów w pętli i sprawdź, gdy jest użyta w kolejności.
+Przesuwa ile zajmuje można ustawić na pokład z powrotem do jego oryginalnej kolejności? Aby dowiedzieć się, będzie konieczne napisanie metody, która określa, czy dwie sekwencje mają taki sam. Po utworzeniu tej metody, należy umieścić kod, który rozmieszcza slajdów w pętli i sprawdź, gdy jest użyta w kolejności.
 
-Zapisywanie metodę, aby określić, czy dwie sekwencje są równe powinno być proste. Jest podobną strukturę z metodą, którą zapisano mieszania slajdów. Tylko tym razem zamiast wydajności zwracanie każdego elementu, można będzie porównywać zgodnych elementów w każdej sekwencji. Sekwencje całą sekwencję zostać wyliczone, jeśli pasuje do każdego elementu, są takie same:
+Zapisywanie metodę, aby określić, czy dwie sekwencje są równe powinno być proste. Jest podobną strukturę z metodą, którą zapisano mieszania slajdów. Tylko to czas, zamiast `yield return`ing każdego elementu, będzie można porównać zgodnych elementów w każdej sekwencji. Sekwencje całą sekwencję zostać wyliczone, jeśli pasuje do każdego elementu, są takie same:
 
 [!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
-Spowoduje to pokazanie drugi idiom Linq: metody terminala. Wykonaj sekwencję jako dane wejściowe (lub w tym przypadku dwie sekwencje) i zwraca pojedynczą wartość skalarną. Te metody, gdy są one używane, są zawsze ostatnią metodę zapytania. (Stąd nazwa). 
+Spowoduje to pokazanie drugi idiom LINQ: metody terminala. Wykonaj sekwencję jako dane wejściowe (lub w tym przypadku dwie sekwencje) i zwraca pojedynczą wartość skalarną. Korzystając z metody terminala, są one zawsze końcowe metody w łańcuchu metody LINQ, dlatego nazwa zapytania "terminalu". 
 
 Można to zobaczyć w działaniu używanej do określania, kiedy talii jest w jego oryginalnej kolejności. Umieść kod shuffle wewnątrz pętli, a następnie Zatrzymaj, gdy sekwencja jest ponownie w jego oryginalnej kolejności, stosując `SequenceEquals()` metody. Widać, że zawsze będzie ostatnią metodę w każdym zapytaniu, ponieważ zwraca pojedynczą wartość zamiast sekwencji:
 
 ```csharp
-var times = 0;
-var shuffle = startingDeck;
-
-do
+// Program.cs
+static void Main(string[] args)
 {
-    shuffle = shuffle.Take(26).InterleaveSequenceWith(shuffle.Skip(26));
+    // Query for building the deck
 
-    foreach (var c in shuffle)
+    // Shuffling using InterleaveSequenceWith<T>();
+
+    var times = 0;
+    // We can re-use the shuffle variable from earlier, or you can make a new one
+    shuffle = startingDeck;
+    do
     {
-        Console.WriteLine(c);
-    }
+        shuffle = shuffle.Take(26).InterleaveSequenceWith(shuffle.Skip(26));
 
-    Console.WriteLine();
-    times++;
-} while (!startingDeck.SequenceEquals(shuffle));
+        foreach (var card in shuffle)
+        {
+            Console.WriteLine(card);
+        }
+        Console.WriteLine();
+        times++;
 
-Console.WriteLine(times);
+    } while (!startingDeck.SequenceEquals(shuffle));
+
+    Console.WriteLine(times);
+}
 ```
 
-Uruchamianie aplikacji przykładowej i zobacz, jak talii Reorganizuje na każdym shuffle aż powraca do oryginalnej konfiguracji po 8 iteracjach.
+Uruchom kod coś do tej pory i zwróć uwagę na sposób talii zmienia się na każdym shuffle. Po 8 przesuwa (iteracji nie-pętli while), talii powraca do oryginalnej konfiguracji została, podczas pierwszego utworzenia początkowego zapytania LINQ.
 
 ## <a name="optimizations"></a>Optymalizacje
 
-Wykonuje przykładowe dołączeniu do tej pory *się shuffle*, gdzie kart górny i dolny pozostają takie same, przy każdym uruchomieniu. Upewnijmy się zmienić, i uruchom *w losowo*, gdzie wszystkie karty 52 zmiana położenia. Dla w losowo możesz przeplot slajdów, aby pierwszy karty w dolnej połowie staje się pierwszej karty w talii kart. Oznacza to, że ostatnią kartę w górnej połowie staje się karta dolnej. Który różni się tylko jeden wiersz. Zaktualizuj mieszania, aby zmienić kolejność górnej i dolnej części talii wywołanie:
+Wykonuje przykładowe dołączeniu do tej pory *się shuffle*, gdzie kart górny i dolny pozostają takie same, przy każdym uruchomieniu. Upewnijmy się, co zmiany: użyjemy *w losowo* zamiast tego, gdzie wszystkie karty 52 zmiana położenia. Dla w losowo możesz przeplot slajdów, aby pierwszy karty w dolnej połowie staje się pierwszej karty w talii kart. Oznacza to, że ostatnią kartę w górnej połowie staje się karta dolnej. Jest to prostą zmianę pojedynczej linii kodu. Aktualizacja bieżącego zapytania losowa, przełączając położenie <xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A>. Spowoduje to zmianę kolejności górnej i dolnej części talii:
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -217,19 +255,20 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 Ponownie uruchom program, a zobaczysz, że zajmuje 52 iteracji dla slajdów zmienić kolejność sam. Będzie również uruchomić, należy zwrócić uwagę spadku wydajności niektórych obniżyć wydajność, ponieważ program kontynuuje działanie.
 
-Istnieje kilka przyczyn. Udzielmy jedną z głównych przyczyn: nieefektywne użycie *obliczanie leniwe*.
+Istnieje kilka przyczyn. Rozwiązano problem z jednym z głównych powodów tego spadku wydajności: nieefektywne użycie [ *obliczanie leniwe*](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
-Zapytania LINQ są oceniane opóźnieniem. Sekwencji są generowane tylko wtedy, gdy elementy są wymagane. Zazwyczaj, który jest główną zaletą LINQ. Jednak użycie takich jak ten program, powoduje to wykładniczy wzrost w czasie wykonywania.
+Krótko mówiąc obliczanie leniwe stanów obliczania instrukcji nie jest wykonywana do czasu jej wartość jest potrzebna. Zapytania LINQ są instrukcje, które są oceniane opóźnieniem. Sekwencji są generowane tylko wtedy, gdy elementy są wymagane. Zazwyczaj, który jest główną zaletą LINQ. Jednak użycie takich jak ten program, powoduje to wykładniczy wzrost w czasie wykonywania.
 
-Oryginalny slajdów został wygenerowany przy użyciu zapytania LINQ. Każdy losowa jest generowany, wykonując trzy zapytań LINQ w poprzednim slajdów. Wszystkie te są wykonywane opóźnieniem. Oznacza to również, że te procedury są wykonywane ponownie każdorazowo, gdy wymagane są sekwencji. Przez razem, gdy można uzyskać dostęp do 52nd iteracji możesz teraz trwa ponowne generowanie oryginalnego slajdów many, wiele razy. Napiszmy dziennika, aby zademonstrować to zachowanie. Następnie możesz go ma naprawić.
+Należy pamiętać, firma Microsoft wygenerowania oryginalnego slajdów, za pomocą zapytań LINQ. Każdy losowa jest generowany, wykonując trzy zapytań LINQ w poprzednim slajdów. Wszystkie te są wykonywane opóźnieniem. Oznacza to również, że te procedury są wykonywane ponownie każdorazowo, gdy wymagane są sekwencji. Przez razem, gdy można uzyskać dostęp do 52nd iteracji możesz teraz trwa ponowne generowanie oryginalnego slajdów many, wiele razy. Napiszmy dziennika, aby zademonstrować to zachowanie. Następnie możesz go ma naprawić.
 
-Oto metoda dziennika, który można dołączyć do dowolnego zapytania, aby oznaczyć, że zapytanie jest wykonywane.
+W swojej `Extensions.cs` pliku, wpisz lub skopiuj poniższe metody. Ta metoda rozszerzenia tworzy nowy plik o nazwie `debug.log` w ramach katalogu projektu i rejestruje zapytania, które obecnie jest wykonywana w pliku dziennika. Ta metoda rozszerzenia można dołączyć do dowolnego zapytania, aby oznaczyć, że zapytanie jest wykonywane.
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 Następnie przygotuj Instrumentację definicję każdego zapytania za pomocą komunikatu dziennika:
 
 ```csharp
+// Program.cs
 public static void Main(string[] args)
 {
     var startingDeck = (from s in Suits().LogQuery("Suit Generation")
@@ -247,6 +286,7 @@ public static void Main(string[] args)
 
     do
     {
+        // Out shuffle
         /*
         shuffle = shuffle.Take(26)
             .LogQuery("Top Half")
@@ -255,10 +295,10 @@ public static void Main(string[] args)
             .LogQuery("Shuffle");
         */
 
-        shuffle = shuffle.Skip(26)
-            .LogQuery("Bottom Half")
-            .InterleaveSequenceWith(shuffle.Take(26).LogQuery("Top Half"))
-            .LogQuery("Shuffle");
+        // In shuffle
+        shuffle = shuffle.Skip(26).LogQuery("Bottom Half")
+                .InterleaveSequenceWith(shuffle.Take(26).LogQuery("Top Half"))
+                .LogQuery("Shuffle");
 
         foreach (var c in shuffle)
         {
@@ -273,64 +313,33 @@ public static void Main(string[] args)
 }
 ```
 
-Należy zauważyć, że nie logujesz się za każdym razem, gdy możesz uzyskać dostęp do kwerendy. Zaloguj się tylko wtedy, gdy tworzysz oryginalnego zapytania. Program nadal zajmuje dużo czasu do uruchomienia, ale spowoduje to wyświetlenie dlaczego. Po uruchomieniu o cierpliwość systemem wewnętrzny mieszania za pomocą funkcji rejestrowania włączona, przejdź z powrotem do zewnętrznego losowa. Nadal zobaczysz efekty obliczanie z opóźnieniem. W jednym przebiegu wykonuje kwerendy 2592, w tym wszystkich wartości i sposób generowania.
+Należy zauważyć, że nie logujesz się za każdym razem, gdy możesz uzyskać dostęp do kwerendy. Zaloguj się tylko wtedy, gdy tworzysz oryginalnego zapytania. Program nadal zajmuje dużo czasu do uruchomienia, ale spowoduje to wyświetlenie dlaczego. Gdy wyczerpią się z rejestrowania włączony, przełącznik shuffle poza systemem shuffle w cierpliwość. Nadal zobaczysz efekty obliczanie z opóźnieniem. W jednym przebiegu wykonuje kwerendy 2592, w tym wszystkich wartości i sposób generowania.
 
-Istnieje łatwy sposób zaktualizować ten program, aby uniknąć tych operacji wykonywania. Istnieją metody LINQ `ToArray()` i `ToList()` spowodować, że zapytanie, aby uruchomić i zapisać wyniki w tablicy lub listy, odpowiednio. Metody te służy do danych wyników zapytania w pamięci podręcznej, zamiast ponownie wykonaj zapytanie źródła.  Dołącz zapytania, które generują talii kart z wywołaniem `ToArray()` i ponownie uruchom zapytanie:
+Można zwiększyć wydajność kod do zmniejszenia liczby wykonań, które wprowadzasz w tym miejscu. Proste rozwiązanie, możesz wprowadzić polega na *pamięci podręcznej* wyniki oryginalnego zapytania LINQ, który konstruuje talii kart. Obecnie wykonujesz zapytania ponownie i ponownie każdym razem, gdy nie — gdy pętla przechodzi przez iteracji, ponownie konstruowanie talii kart i resshuffling go zawsze. W pamięci podręcznej talii kart, można korzystać z metody LINQ <xref:System.Linq.Enumerable.ToArray%2A> i <xref:System.Linq.Enumerable.ToList%2A>; gdy Dołącz je do zapytania, będzie wykonują te same akcje Informujesz im, ale teraz będzie przechowują wyniki w tablicy lub listy, w zależności od tego, w jakiej metody Możesz wybrać do wywołania. Append — metoda LINQ <xref:System.Linq.Enumerable.ToArray%2A> do zapytania i ponownie uruchom program:
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
-Uruchom ponownie i zewnętrzne losowa jest poniżej 30 zapytania. Ponownie uruchom za pomocą wewnętrznego losowa i zostaną wyświetlone podobne ulepszenia. (Obecnie wykonuje zapytania 162).
+Poza losowa jest teraz do 30 zapytania. Ponownie uruchom za pomocą w losowo i zostaną wyświetlone podobne ulepszenia: teraz wykonuje 162 zapytania.
 
-Nie błędnie interpretuje planowanie, który eagerly uruchamiać wszystkie zapytania w tym przykładzie. W tym przykładzie jest przeznaczony do wyróżnienia przypadki użycia, w którym leniwa ocena może spowodować problemy z wydajnością. Wynika to z każdej z umów nowy zbiór kart składa się z poprzednich rozmieszczenia. Przy użyciu leniwa ocena oznacza, że każda nowa konfiguracja slajdów składa się z oryginalnego slajdów, nawet wykonywania kodu, który skompilowany `startingDeck`. Dzięki któremu dużą ilość dodatkowej pracy. 
+Należy pamiętać, że w tym przykładzie jest **zaprojektowane** do wyróżnienia przypadki użycia, w którym leniwa ocena może spowodować problemy z wydajnością. Chociaż jest to ważne zobaczyć, gdzie leniwa ocena może wpłynąć na wydajność kodu jest równie ważne dowiedzieć się, że nie wszystkie kwerendy należy uruchamiać eagerly. Wydajności trafień, możesz pociągnąć za sobą bez użycia <xref:System.Linq.Enumerable.ToArray%2A> jest, ponieważ każdy nowy układ talii kart składa się z poprzednich rozmieszczenia. Przy użyciu leniwa ocena oznacza, że każda nowa konfiguracja slajdów składa się z oryginalnego slajdów, nawet wykonywania kodu, który skompilowany `startingDeck`. Dzięki któremu dużą ilość dodatkowej pracy. 
 
-W praktyce niektóre algorytmy Uruchom znacznie lepsze, za pomocą eager oceny, a pozostałe — znacznie lepsze, za pomocą obliczanie z opóźnieniem. (Ogólnie rzecz biorąc, obliczanie z opóźnieniem jest dużo lepszym rozwiązaniem, gdy źródło danych jest oddzielnym procesie, takich jak aparat bazy danych. W takich przypadkach opóźnieniem umożliwia bardziej złożone zapytania, które można wykonać tylko jeden komunikację dwustronną proces bazy danych.) LINQ umożliwia zarówno z opóźnieniem i chętnie Zapoznamy oceny. Zmierz i wybrać najlepszy wybór.
-
-## <a name="preparing-for-new-features"></a>Przygotowanie do nowych funkcji
-
-Kod napisany w tym przykładzie to przykład tworzenia prostego prototypu, który wykonuje zadania. Jest to doskonały sposób eksplorowania obszar problemu, a dla wielu funkcji, może być najlepszym rozwiązaniem stałe. Już wykorzystywane *typy anonimowe* dla karty, a każda karta jest reprezentowany przez parametry.
-
-*Typy anonimowe* mają wiele zalet produktywności. Nie trzeba zdefiniować klasę sobie, aby reprezentować pamięć masową. Kompilator generuje typ dla Ciebie. Typ wygenerowanego przez kompilator korzysta z wielu najlepszych rozwiązań dla obiektów danych proste. Ma ona *niezmienne*, co oznacza, że żaden z jej właściwości można zmienić po został skonstruowany. Typy anonimowe są wewnętrzne dla zestawu, więc nie są widoczne jako część publicznego interfejsu API dla tego zestawu. Typy anonimowe zawierają również przesłonięcia z `ToString()` metodę, która zwraca sformatowany ciąg z każdej wartości.
-
-Typy anonimowe ma również wady. Nie mają nazw dostępnych, więc nie można go użyć jako wartości zwracane lub argumentów Można zauważyć, że używanym żadnych metod powyżej w te typy anonimowe są metody rodzajowe. Zastępowania metody `ToString()` może nie być ma więcej funkcji wzrostem aplikacji. 
-
-W przykładzie użyto również ciągi, kolor i rangi każdej karty. Który jest dość Otwórz zakończone. System typów języka C# mogą pomóc nam w ulepszaniu lepszego kodu, wykorzystując `enum` typów w przypadku tych wartości.
-
-Zacznij od kolory. Jest to idealny moment, aby użyć `enum`:
-
-[!CODE-csharp[Suit enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet2)]
-
-`Suits()` Metoda zmienia się również typ i implementację:
-
-[!CODE-csharp[Suit IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet4)]
-
-Następnie wykonaj tę samą zmianę o randze kart:
-
-[!CODE-csharp[Rank enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet3)]
-
-I metoda, która generuje je:
-
-[!CODE-csharp[Rank IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet5)]
-
-Jako jeden końcowy oczyszczania stwórzmy typu reprezentującego karty, zamiast polegania na typ anonimowy. Typy anonimowe to idealne rozwiązanie dla typów lokalna, lekki, ale w tym przykładzie karty gry jest jednym z głównych pojęć. Powinna ona konkretnego typu.
-
-[!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
-
-Ten typ korzysta *automatycznie implementowane właściwości tylko do odczytu* które są ustawiane w konstruktorze, a następnie nie może być modyfikowany. On również sprawia, że użycie [Interpolacja ciągów](../language-reference/tokens/interpolated.md) funkcja, która ułatwia formatowanie ciągów w danych wyjściowych.
-
-Zaktualizuj zapytanie, które generuje początkowy slajdów, aby użyć nowego typu:
-
-```csharp
-var startingDeck = (from s in Suits().LogQuery("Suit Generation")
-                    from r in Ranks().LogQuery("Value Generation")
-                    select new PlayingCard(s, r))
-                    .LogQuery("Starting Deck")
-                    .ToArray();
-```
-
-Skompiluj i uruchom ponownie. Dane wyjściowe są nieco bardziej przejrzyste i kod jest nieco bardziej oczywiste i można rozszerzyć, aby łatwiej.
+W praktyce niektóre algorytmy uruchamiania, również przy użyciu eager oceny, a pozostałe, również korzystając z opóźnieniem. Dzienne użycie opóźnieniem zwykle jest lepszym rozwiązaniem, gdy źródło danych jest oddzielnym procesie, takich jak aparat bazy danych. W przypadku baz danych z opóźnieniem pozwala bardziej złożone zapytania, które można wykonać tylko jeden obiegu do procesu bazy danych i z powrotem do pozostałej części kodu. LINQ jest elastyczny, czy chcesz korzystać z opóźnieniem lub eager oceny, więc mierzenia procesów i wybrać, niezależnie od rodzaju oceny zapewnia najlepszą wydajność.
 
 ## <a name="conclusion"></a>Wniosek
 
-Ten przykład pokazuje niektórych metod LINQ, jak utworzyć swoje własne metody, które będą używane łatwo za pomocą LINQ włączone kodu. On również pokazuje różnice między obliczanie z opóźnieniem i chętnie Zapoznamy oraz wpływ, jaki decyzja może mieć na wydajność.
+W tym projekcie omówione są:
+* do istotnych sekwencji za pomocą zapytań LINQ do agregowania danych
+* Zapisywanie metody rozszerzenia umożliwiające dodawanie własnych niestandardowych funkcji do zapytań LINQ
+* Znajdowanie obszarów w naszym kodzie, w którym nasze zapytań LINQ napotkać problemy z wydajnością, takie jak uszkodzenie szybkości
+* Obliczanie z opóźnieniem i chętnie Zapoznamy w odniesieniu do zapytań LINQ oraz skutków tego procesu, mogą pojawić się na wydajności zapytań
 
-Omówiono nieco jeden magician techniki. Magicians Użyj faro shuffle, ponieważ może kontrolować, gdzie wszystkie karty przemieszcza się w talii kart. W niektórych wskazówki magician ma zachować karty na pokład członka grupy odbiorców i rozmieszcza kilka razy, wiedząc, gdzie przejdzie tej karty. Inne Iluzje wymagają talii ustawić w określony sposób. Magician ustawi slajdów, przed wykonaniem lewy. Następnie zostanie ona mieszania slajdów 5 razy przy użyciu zewnętrznego losowa. Na etapie ona pokazują, jak wygląda losowe slajdów, mieszania go 3 razy więcej i slajdów, ustaw dokładnie tak jak chce mieć.
+Oprócz LINQ przedstawiono nieco dotyczących używania magicians techniki, aby uzyskać wskazówki karty. Magicians Użyj Faro shuffle, ponieważ może kontrolować, gdzie wszystkie karty przemieszcza się w talii kart. Teraz gdy wiesz, nie zepsucia go wszystkim innym użytkownikom!
+
+Aby uzyskać więcej informacji na temat LINQ zobacz:
+* [Language Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
+    * [Wprowadzenie do LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
+    * [Wprowadzenie do LINQ wC#](../programming-guide/concepts/linq/getting-started-with-linq.md)
+        - [Podstawowe operacje zapytań LINQ (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+        - [Przekształcanie danych za pomocą LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+        - [Składnia zapytania i metody w technologii LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+        - [Funkcje C# obsługujące LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)

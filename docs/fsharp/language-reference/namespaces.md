@@ -1,31 +1,33 @@
 ---
 title: Przestrzenie nazw (F#)
-description: Dowiedz się, jak przestrzeń nazw F# umożliwia organizowanie kodu w obszarach powiązane funkcje, dzięki któremu można dołączyć nazwę do grupowania elementów programu.
-ms.date: 04/24/2017
-ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+description: Dowiedz się, jak F# przestrzeń nazw umożliwia organizowanie kodu w obszarach powiązane funkcje, dzięki któremu można dołączyć nazwę do grupowania elementów programu.
+ms.date: 12/08/2018
+ms.openlocfilehash: ad5cca8947d09d8480bfa418b003c84546edc29b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44178261"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169037"
 ---
 # <a name="namespaces"></a>Namespaces
 
-Przestrzeń nazw umożliwia organizowanie kodu w obszarach powiązane funkcje, dzięki któremu można dołączyć nazwę do grupowania elementów programu.
+Przestrzeń nazw umożliwia organizowanie kodu w obszarach powiązane funkcje, dzięki któremu można dołączyć nazwę grupie F# program elementów. Przestrzenie nazw są zazwyczaj najwyższego poziomu elementów w F# plików.
 
 ## <a name="syntax"></a>Składnia
 
 ```fsharp
-namespace [parent-namespaces.]identifier
+namespace [rec] [parent-namespaces.]identifier
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli chcesz umieścić kod w przestrzeni nazw, w pierwszej deklaracji w pliku musi deklarować przestrzeń nazw. Zawartość cały plik stanie się częścią przestrzeni nazw.
+Jeśli chcesz umieścić kod w przestrzeni nazw, w pierwszej deklaracji w pliku musi deklarować przestrzeń nazw. Zawartość cały plik stają się częścią przestrzeni nazw, pod warunkiem istnieje żadna deklaracja przestrzeni nazw bardziej szczegółowo w pliku. Jeśli tak jest rzeczywiście, cały kod, aż do następnego deklaracji przestrzeni nazw jest traktowany jako mieścić się w pierwszej przestrzeni nazw.
 
 Przestrzenie nazw nie może bezpośrednio zawierać wartości i funkcje. Zamiast tego wartości i funkcje, które muszą być zawarte w modułach i moduły są uwzględnione w przestrzeni nazw. Przestrzenie nazw może zawierać typy i moduły.
 
-Przestrzenie nazw mogą być deklarowane jawnie za pomocą słowa kluczowego przestrzeni nazw lub niejawnie podczas deklarowania modułu. Aby jawnie deklarować przestrzeń nazw, należy użyć słowo kluczowe przestrzeni nazw, a następnie według nazwy przestrzeni nazw. Poniższy przykład pokazuje plik kodu, który deklaruje przestrzeni nazw elementów widget o typie i moduł zawarty w tej przestrzeni nazw.
+Komentarze dokumentacji XML mogą być deklarowane powyżej przestrzeni nazw, ale są one ignorowane. Dyrektywy kompilatora mogą być także zadeklarowane powyżej przestrzeni nazw.
+
+Przestrzenie nazw mogą być deklarowane jawnie za pomocą słowa kluczowego przestrzeni nazw lub niejawnie podczas deklarowania modułu. Aby jawnie deklarować przestrzeń nazw, należy użyć słowo kluczowe przestrzeni nazw, a następnie według nazwy przestrzeni nazw. W poniższym przykładzie pokazano plik kodu, który deklaruje przestrzeni nazw `Widgets` o typie i moduł zawarty w tej przestrzeni nazw.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
@@ -74,7 +76,7 @@ Umożliwia także globalne k odkazu .NET przestrzeń nazw najwyższego poziomu, 
 
 ## <a name="recursive-namespaces"></a>Przestrzenie nazw cykliczne
 
-F# 4.1 wprowadzono pojęcie przestrzenie nazw, która zezwala na wszystkie zawarte kodu wzajemnie się być typem rekursywnym.  Odbywa się za pośrednictwem `namespace rec`.  Korzystanie z `namespace rec` mogą złagodzić ich niektóre problemy, które nie jest możliwość pisania kodu wzajemnie referencyjne typy i moduły.  Oto przykład:
+Przestrzenie nazw mogą być także zadeklarowane jako cykliczne do obsługi całego kodu zawarte jako wzajemnie cykliczne.  Odbywa się za pośrednictwem `namespace rec`. Korzystanie z `namespace rec` mogą złagodzić ich niektóre problemy, które nie jest możliwość pisania kodu wzajemnie referencyjne typy i moduły. Oto przykład:
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Należy pamiętać, że wyjątek `DontSqueezeTheBananaException` i klasa `Banana` odnoszą się do siebie nawzajem.  Ponadto moduł `BananaHelpers` i klasa `Banana` także odwoływać się do siebie.  To nie jest możliwe do wyrażenia w języku F#, jeśli usunięto `rec` słowo kluczowe z `MutualReferences` przestrzeni nazw.
+Należy pamiętać, że wyjątek `DontSqueezeTheBananaException` i klasa `Banana` odnoszą się do siebie nawzajem.  Ponadto moduł `BananaHelpers` i klasa `Banana` także odwoływać się do siebie. W takich sytuacjach przydałaby to wyrazić w F# usunięto `rec` słowo kluczowe z `MutualReferences` przestrzeni nazw.
 
-Ta funkcja jest również dostępna dla najwyższego poziomu [modułów](modules.md) w F# 4.1 lub nowszej.
+Ta funkcja jest również dostępna dla najwyższego poziomu [modułów](modules.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
 - [Moduły](modules.md)
-- [F# RFC FS-1009 — Zezwalaj na wzajemnie referencyjne typy i moduły za pośrednictwem szerszego zakresu w plikach](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009 — Zezwalaj na wzajemnie referencyjne typy i moduły za pośrednictwem szerszego zakresu w plikach](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

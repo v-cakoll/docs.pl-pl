@@ -10,14 +10,14 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297169"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153387"
 ---
-# <a name="walkthrough-handling-events-visual-basic"></a>Wskazówki: obsługa zdarzeń (Visual Basic)
-Jest to drugi dwa tematy, które pokazują sposób pracy ze zdarzeniami. Pierwszy temat [Instruktaż: deklaracyjny i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), pokazuje, jak deklarować i wywoływać zdarzenia. Ta sekcja używa formularza i klasy z tego przewodnika, aby pokazują, jak obsługiwać zdarzenia w przypadku mogą mieć miejsce.  
+# <a name="walkthrough-handling-events-visual-basic"></a>Przewodnik: Obsługa zdarzeń (Visual Basic)
+Jest to drugi dwa tematy, które pokazują sposób pracy ze zdarzeniami. Pierwszy temat [instruktażu: Deklarujący i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), pokazuje, jak deklarować i wywoływać zdarzenia. Ta sekcja używa formularza i klasy z tego przewodnika, aby pokazują, jak obsługiwać zdarzenia w przypadku mogą mieć miejsce.  
   
  `Widget` Przykład klasy korzysta z tradycyjnych instrukcji obsługi zdarzeń. Visual Basic umożliwia innych technik do pracy ze zdarzeniami. W charakterze ćwiczenia, można zmodyfikować ten przykład, aby używał `AddHandler` i `Handles` instrukcji.  
   
@@ -117,5 +117,5 @@ Jest to drugi dwa tematy, które pokazują sposób pracy ze zdarzeniami. Pierwsz
 >  Można zadeklarować dowolną liczbę `WithEvents` zmiennych, jak należy, ale tablic `WithEvents` zmienne nie są obsługiwane.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przewodnik: deklarowanie i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
+ [Wskazówki: Deklarowanie i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
  [Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)

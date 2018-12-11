@@ -6,5 +6,5 @@
 |Sugestia|Ponowna kompilacja elementu istniejący kod źródłowy, który używa <xref:System.ObsoleteAttribute?displayProperty=name> atrybut może generować ostrzeżenia podczas korzystania z tego kodu w języku C + +/ CX lub JavaScript.We nie zaleca się stosowanie zarówno <xref:System.ObsoleteAttribute?displayProperty=name> i [ Windows.Foundation.DeprecatedAttribute](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.deprecatedattribute) kodem w zarządzanych zestawów; może to spowodować ostrzeżenia kompilacji.|
 |Zakres|Krawędź|
 |Wersja|4.5.1|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 

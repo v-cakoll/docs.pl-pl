@@ -1,19 +1,19 @@
 ---
-title: Eksportowanie do programu .NET Core — bibliotek
+title: Port bibliotek platformy .NET Core
 description: Dowiedz się, jak przenieść projekty bibliotek z programu .NET Framework i .NET Core.
 author: cartermp
-ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: eb6b8506d8df218a053242cd0b8d3097fa6d9fd3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 4002f7d0f98398163df1c4d02ff0e157584c2655
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199854"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169701"
 ---
-# <a name="porting-to-net-core---libraries"></a>Eksportowanie do programu .NET Core — bibliotek
+# <a name="port-net-framework-libraries-to-net-core"></a>Port biblioteki .NET Framework i .NET Core
 
-W tym artykule omówiono przenoszenia kodu biblioteki .NET Core, aby była uruchamiana dla wielu platform.
+Dowiedz się, jak przenieść kod biblioteki .NET Framework i .NET Core, aby uruchomić dla wielu platform i Rozszerz zasięg aplikacji, które go używają.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -59,7 +59,7 @@ Wywołaniem funkcji zdalnych .NET została zidentyfikowana jako architektura pro
 
 Do komunikacji między procesami, należy wziąć pod uwagę mechanizmy komunikacji międzyprocesowej (IPC) jako alternatywę do komunikacji zdalnej, takich jak <xref:System.IO.Pipes> lub <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> klasy.
 
-Na maszynach przy użyciu rozwiązania opartego na sieci jako alternatywa. Najlepiej używać protokołu małym obciążeniem zwykłego tekstu, takich jak HTTP. [Serwera sieci web Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), serwer sieci web używane przez platformy ASP.NET Core jest opcją w tym miejscu. Ponadto należy wziąć pod uwagę przy użyciu <xref:System.Net.Sockets> do scenariuszy opartych na sieci, między komputerami. Aby uzyskać więcej opcji, zobacz [Otwórz projekty źródła dla deweloperów platformy .NET: Messaging](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
+Na maszynach przy użyciu rozwiązania opartego na sieci jako alternatywa. Najlepiej używać protokołu małym obciążeniem zwykłego tekstu, takich jak HTTP. [Serwera sieci web Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), serwer sieci web używane przez platformy ASP.NET Core jest opcją w tym miejscu. Ponadto należy wziąć pod uwagę przy użyciu <xref:System.Net.Sockets> do scenariuszy opartych na sieci, między komputerami. Aby uzyskać więcej opcji, zobacz [otwartych projektów źródła dla deweloperów platformy .NET: Komunikaty](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
 
 ### <a name="code-access-security-cas"></a>Zabezpieczenia dostępu kodu (CAS)
 
@@ -73,34 +73,17 @@ Podobnie jak urzędy certyfikacji, przezroczystości zabezpieczeń umożliwia od
 
 Użyj granic zabezpieczeń dostarczone przez system operacyjny, np. konta wirtualizacji, kontenerów lub użytkownika do uruchomionego procesu za pomocą najmniejszej zestaw uprawnień.
 
-## <a name="converting-a-pcl-project"></a>Konwertowanie projektów PCL
+## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Trwa przekierowywanie do .NET Framework 4.7.2 kodu .NET Framework
 
-Możesz przekształcić cele projektu PCL .NET Standard, ładowanie biblioteki w programie Visual Studio 2017, a następnie wykonać następujące czynności:
-
-1. Kliknij prawym przyciskiem myszy plik projektu, a następnie wybierz pozycję **właściwości**.
-1. W obszarze **biblioteki**, wybierz opcję **docelowej platformy .NET Standard**.
-
-Jeśli pakiety obsługi pakietów NuGet 3.0, projekt przekierowuje .NET Standard.
-
-Jeśli pakiety nie obsługują pakietów NuGet 3.0, pojawi się okno dialogowe z informacją o odinstalowanie bieżącej pakietów z programu Visual Studio. Jeśli zostanie wyświetlony ten komunikat, należy wykonać następujące czynności:
-
-1. Kliknij prawym przyciskiem myszy projekt, wybierz **Zarządzaj pakietami NuGet**.
-1. Zanotuj pakietów projektu.
-1. Odinstalowywanie pakietów jeden po drugim.
-1. Może być konieczne ponowne uruchomienie programu Visual Studio, aby ukończyć proces dezinstalacji. Jeśli tak, **ponowne uruchomienie** przycisk są prezentowane w **Menedżera pakietów NuGet** okna.
-1. Gdy ponowne załadowanie projektu, jest ono przeznaczone dla .NET Standard. Dodaj pakiety, które należy odinstalować.
-
-## <a name="retargeting-your-net-framework-code-to-net-framework-462"></a>Trwa przekierowywanie kodzie .NET Framework, .NET Framework 4.6.2
-
-Jeśli kod nie jest przeznaczony dla .NET Framework 4.6.2, zalecane jest przekierowanie do .NET Framework 4.6.2. Zapewnia to dostępność najnowszych alternatywy interfejsu API w sytuacjach, w którym .NET Standard nie obsługuje istniejących interfejsów API.
+Jeśli Twój kod nie jest przeznaczony dla .NET Framework 4.7.2, zalecane jest przekierowanie do .NET Framework 4.7.2. Zapewnia to dostępność najnowszych alternatywy interfejsu API w sytuacjach, w którym .NET Standard nie obsługuje istniejących interfejsów API.
 
 Dla każdego z projektów w programie Visual Studio, dla których chcesz port, wykonaj następujące czynności:
 
-1. Kliknij prawym przyciskiem myszy nad projektem i wybierz polecenie Właściwości.
-1. W **platformę docelową** listy rozwijanej wybierz **platformy .NET Framework 4.6.2**.
+1. Kliknij prawym przyciskiem myszy projekt i wybierz pozycję **właściwości**.
+1. W **platformę docelową** listy rozwijanej wybierz **.NET Framework 4.7.2**.
 1. Ponowna kompilacja projektów.
 
-Ponieważ teraz Twoje projekty ukierunkowane na .NET Framework 4.6.2, korzystać z tej wersji programu .NET Framework jako podstawa dla przenoszenie kodu.
+Ponieważ teraz Twoje projekty ukierunkowane na .NET Framework 4.7.2, korzystać z tej wersji programu .NET Framework jako podstawa dla przenoszenie kodu.
 
 ## <a name="determining-the-portability-of-your-code"></a>Określanie przenośność kodu
 
@@ -151,7 +134,7 @@ Takie podejście może być najlepszym rozwiązaniem dla większych i bardziej z
  
 Faza analizy może zająć trochę czasu, w zależności od rozmiaru bazy kodu. W perspektywie długoterminowej poświęcania czasu na tym etapie, aby dokładnie zrozumieć, w zakresie zmian i aby opracować plan zwykle oszczędza czas, szczególnie w przypadku złożonych bazy kodu.
 
-Plan może obejmować wprowadzeniu istotnych zmian do Twojej bazy kodu podczas nadal przeznaczonych dla platformy .NET Framework 4.6.2, dzięki czemu to nieco bardziej ustrukturyzowane podejście poprzedniego. Jak obniżyć dotyczące wykonywania planu zależy od kodu.
+Plan może obejmować wprowadzeniu istotnych zmian do Twojej bazy kodu podczas nadal przeznaczone dla .NET Framework 4.7.2, dzięki czemu to nieco bardziej ustrukturyzowane podejście poprzedniego. Jak obniżyć dotyczące wykonywania planu zależy od kodu.
 
 ### <a name="mixing-approaches"></a>Mieszanie metod
 

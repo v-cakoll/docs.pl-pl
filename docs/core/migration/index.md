@@ -1,23 +1,25 @@
 ---
-title: Migracja platformy .NET core do formatu csproj
-description: .NET core project.json do csproj migracji
+title: Migracja platformy .NET core z pliku project.json
+description: Dowiedz się, jak przeprowadzić migrację starszych projektu .NET Core przy użyciu pliku project.json
 author: blackdwarf
-ms.author: mairaw
 ms.date: 07/19/2017
-ms.openlocfilehash: da1995ed3b77cb802d1f3d04e6d741809de20927
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.custom: seodec18
+ms.openlocfilehash: 40a0aaf9d687a580b83e11811effad458f708a85
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584341"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170694"
 ---
-# <a name="migrating-net-core-projects-to-the-csproj-format"></a>Migrowanie projektów .NET Core do formatu csproj
+# <a name="migrating-net-core-projects-from-projectjson"></a>Migrowanie projektów .NET Core z pliku project.json
 
 W tym dokumencie opisano scenariusze migracji dla projektów .NET Core i przechodzą przez następujące scenariusze migracji trzy:
 
 1. [Migracja z prawidłowym schematem najnowsze z *project.json* do *csproj*](#migration-from-projectjson-to-csproj)
 2. [Migracja ze środowiska DNX do pliku csproj](#migration-from-dnx-to-csproj)
 3. [Migracja z RC3 i poprzedniej projektów csproj programu .NET Core do końcowego formatu](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
+
+Ten dokument ma zastosowanie tylko do starszych projektów .NET Core, które nadal korzystać z pliku project.json. Nie ma on zastosowania do migracji z .NET Framework i .NET Core.
 
 ## <a name="migration-from-projectjson-to-csproj"></a>Migracja z pliku project.json do csproj
 
@@ -58,7 +60,7 @@ Zobacz [mapowanie między formatami project.json i csproj właściwości](../too
 
 ### <a name="common-issues"></a>Typowe problemy
 
-- Jeśli zostanie wyświetlony komunikat o błędzie: "nie pliku wykonywalnego znaleziono pasującego polecenia dotnet-migracji":
+- Jeśli wystąpi błąd: "Nie pliku wykonywalnego znaleziono pasującego polecenia dotnet-migracji":
 
 Uruchom `dotnet --version` aby zobaczyć, której wersji używasz. [`dotnet migrate`](../tools/dotnet-migrate.md) wymaga platformy .NET Core interfejsu wiersza polecenia RC3 lub nowszej.
 Jeśli istnieje, zostanie wyświetlony ten błąd *global.json* plik w bieżącym lub katalog nadrzędny i `sdk` wersja została ustawiona na starszą wersję.

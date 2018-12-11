@@ -1,15 +1,13 @@
 ---
-title: polecenia DotNet — interfejs wiersza polecenia platformy .NET Core
+title: polecenia DotNet
 description: Więcej informacji na temat polecenia dotnet (ogólny sterownik dla narzędzi interfejsu wiersza polecenia platformy .NET Core) i sposób jej użycia.
-author: mairaw
-ms.author: mairaw
 ms.date: 06/04/2018
-ms.openlocfilehash: 53e8f8bab1cbaabaa7926aa68197c18843b0b637
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615580"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170856"
 ---
 # <a name="dotnet-command"></a>polecenia DotNet
 
@@ -176,7 +174,7 @@ Drukuje wersję zestawu .NET Core SDK w użyciu.
 | [dotnet help](dotnet-help.md)                 | Zawiera bardziej szczegółowe dokumentację online dla polecenia.           |
 | [dotnet migrate](dotnet-migrate.md)           | Prawidłowy projekt w wersji 2 jest migrowana do projektu .NET Core SDK 1.0.  |
 | [dotnet msbuild](dotnet-msbuild.md)           | Zapewnia dostęp do wiersza polecenia programu MSBuild.                        |
-| [dotnet new](dotnet-new.md)                   | Inicjuje projekt C# lub F # dla danego szablonu.                |
+| [dotnet new](dotnet-new.md)                   | Inicjuje C# lub F# projektu dla danego szablonu.                |
 | [dotnet pack](dotnet-pack.md)                 | Tworzy pakiet NuGet kodu.                               |
 | [dotnet publish](dotnet-publish.md)           | Publikuje aplikacji autonomicznej .NET framework-zależnych od ustawień lokalnych lub niezależna. |
 | [dotnet restore](dotnet-restore.md)           | Przywraca zależności dla danej aplikacji.                  |
@@ -194,7 +192,7 @@ Drukuje wersję zestawu .NET Core SDK w użyciu.
 | [dotnet help](dotnet-help.md)       | Zawiera bardziej szczegółowe dokumentację online dla polecenia.           |
 | [dotnet migrate](dotnet-migrate.md) | Prawidłowy projekt w wersji 2 jest migrowana do projektu .NET Core SDK 1.0.  |
 | [dotnet msbuild](dotnet-msbuild.md) | Zapewnia dostęp do wiersza polecenia programu MSBuild.                        |
-| [dotnet new](dotnet-new.md)         | Inicjuje projekt C# lub F # dla danego szablonu.                |
+| [dotnet new](dotnet-new.md)         | Inicjuje C# lub F# projektu dla danego szablonu.                |
 | [dotnet pack](dotnet-pack.md)       | Tworzy pakiet NuGet kodu.                               |
 | [dotnet publish](dotnet-publish.md) | Publikuje aplikacji autonomicznej .NET framework-zależnych od ustawień lokalnych lub niezależna. |
 | [dotnet restore](dotnet-restore.md) | Przywraca zależności dla danej aplikacji.                  |
@@ -211,7 +209,7 @@ Drukuje wersję zestawu .NET Core SDK w użyciu.
 | [dotnet clean](dotnet-clean.md)     | Czysta kompilacja danych wyjściowych.                                              |
 | [dotnet migrate](dotnet-migrate.md) | Prawidłowy projekt w wersji 2 jest migrowana do projektu .NET Core SDK 1.0.  |
 | [dotnet msbuild](dotnet-msbuild.md) | Zapewnia dostęp do wiersza polecenia programu MSBuild.                        |
-| [dotnet new](dotnet-new.md)         | Inicjuje projekt C# lub F # dla danego szablonu.                |
+| [dotnet new](dotnet-new.md)         | Inicjuje C# lub F# projektu dla danego szablonu.                |
 | [dotnet pack](dotnet-pack.md)       | Tworzy pakiet NuGet kodu.                               |
 | [dotnet publish](dotnet-publish.md) | Publikuje aplikacji autonomicznej .NET framework-zależnych od ustawień lokalnych lub niezależna. |
 | [dotnet restore](dotnet-restore.md) | Przywraca zależności dla danej aplikacji.                  |

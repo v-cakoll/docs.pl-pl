@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 056fb613c078cc407380060dc11890406ac8cffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 360a404e38651b78acc3a52d8102a4dae71f3e30
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197681"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152725"
 ---
 # <a name="what-is-docker"></a>Co to jest Docker?
 
@@ -17,7 +17,7 @@ ms.locfileid: "50197681"
 
 ![](./media/image2.png)
 
-Rysunek 1 – 2: platformy Docker służy do wdrażania kontenerów we wszystkich warstwach chmury hybrydowej
+Rysunek 1 – 2: Docker służy do wdrażania kontenerów we wszystkich warstwach chmury hybrydowej
 
 Kontenery obrazu platformy docker można uruchomić natywnie w systemie Linux i Windows. Jednak obrazów Windows można uruchamiać tylko na hostach Windows i obrazów systemu Linux można uruchamiać tylko na hostach systemu Linux, co oznacza serwera hosta lub maszyny Wirtualnej.
 
@@ -49,9 +49,8 @@ Korzystając z platformy Docker, nie otrzymasz od deweloperów powiedzieć, "dzi
 
 ![](./media/image3.png)
 
-Rysunek 1-3: porównanie tradycyjne maszyny wirtualne dostępne w kontenerach platformy Docker
-
+Rysunek 1-3: Porównanie tradycyjne maszyny wirtualne dostępne w kontenerach platformy Docker
 
 >[!div class="step-by-step"]
-[Poprzednie](index.md)
-[dalej](docker-terminology.md)
+>[Poprzednie](index.md)
+>[dalej](docker-terminology.md)

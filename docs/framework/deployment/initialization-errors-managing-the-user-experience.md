@@ -1,5 +1,5 @@
 ---
-title: 'Błędy inicjowania programu .NET Framework: zarządzanie wrażeniami użytkownika'
+title: 'Błędy inicjowania programu .NET framework: Zarządzanie wrażeniami użytkownika'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - no framework found experience
@@ -9,16 +9,16 @@ ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21dd9926684f51412384235d7b3af1aac280957a
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50035751"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155174"
 ---
-# <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Błędy inicjowania programu .NET Framework: zarządzanie wrażeniami użytkownika
+# <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Błędy inicjowania programu .NET framework: Zarządzanie wrażeniami użytkownika
 Wspólny system aktywacji języka wspólnego (CLR) określa wersję środowiska CLR, która będzie służyć do uruchamiania kodu aplikacji zarządzanej. W niektórych przypadkach system aktywacji nie można odnaleźć wersji środowiska CLR do załadowania. Ta sytuacja występuje zwykle w przypadku, gdy aplikacja wymaga wersji środowiska CLR, która jest nieprawidłowa lub nie została zainstalowana na danym komputerze. Jeśli żądana wersja nie zostanie znaleziony, system aktywacji środowiska CLR zwraca kod błędu HRESULT z funkcji lub interfejs, który został wywołany i może być wyświetlany komunikat o błędzie do użytkownika, który uruchomił aplikację. Ten artykuł zawiera listę kodów HRESULT i wyjaśniono, jak można zapobiec komunikat o błędzie są wyświetlane.  
   
- Środowisko CLR oferuje infrastrukturę rejestrowania, aby ułatwić debugowanie problemów aktywacji środowiska CLR, zgodnie z opisem w [porady: debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md). Ta infrastruktura nie należy mylić z [dzienniki powiązań zestawów](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), które są zupełnie innego.  
+ Środowisko CLR oferuje infrastrukturę rejestrowania, aby ułatwić debugowanie problemów aktywacji środowiska CLR, zgodnie z opisem w [jak: Debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md). Ta infrastruktura nie należy mylić z [dzienniki powiązań zestawów](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), które są zupełnie innego.  
   
 ## <a name="clr-activation-hresult-codes"></a>Kody HRESULT aktywacji środowiska CLR  
  Aktywacja CLR interfejsów API zwraca wartość HRESULT kody do zgłaszania wynik operacji aktywacji do hosta. Hosty środowiska CLR zawsze powinni konsultować się te wartości zwracane, przed wykonaniem dodatkowych operacji.  
@@ -46,7 +46,7 @@ Komunikat o błędzie typowe błędy inicjowania
   
  Aby rozwiązać podstawowe problemy i zapewniają najlepsze środowisko użytkownika (mniej komunikaty o błędach), zalecamy wykonanie poniższych czynności:  
   
--   Dla aplikacji .NET Framework 3.5 (i starszych): Konfigurowanie aplikacji do obsługi programu .NET Framework 4 lub 4.5 (patrz [instrukcje](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)).  
+-   W przypadku środowiska .NET Framework 3.5 (i starszych) aplikacji: Konfigurowanie aplikacji do obsługi programu .NET Framework 4 lub 4.5 (patrz [instrukcje](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)).  
   
 -   W przypadku aplikacji .NET Framework 4: Zainstaluj pakiet redystrybucyjny programu .NET Framework 4, jako część ustawień aplikacji. Zobacz [przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md).  
   
@@ -84,10 +84,10 @@ Wyślij monit o zainstalowanie programu .NET Framework 3.5 na żądanie
   
  Po zainstalowaniu programu .NET Framework 3.5, użytkownicy mogą uruchamiać aplikacje zależne od programu .NET Framework 2.0, 3.0 lub 3.5 ich [!INCLUDE[win8](../../../includes/win8-md.md)] komputerów. Zadania mogą także uruchamiane .NET Framework 1.0 i 1.1 aplikacji, pod warunkiem, że te aplikacje nie są jawnie skonfigurowane do uruchamiania tylko na .NET Framework 1.0 i 1.1. Zobacz [migracji z programu .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).  
   
- Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], rejestrowanie aktywacji środowiska CLR został ulepszony, aby dołączyć wpisy dziennika, służące do rejestrowania, kiedy i dlaczego jest wyświetlany komunikat o błędzie inicjowania. Aby uzyskać więcej informacji, zobacz [porady: debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).  
+ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], rejestrowanie aktywacji środowiska CLR został ulepszony, aby dołączyć wpisy dziennika, służące do rejestrowania, kiedy i dlaczego jest wyświetlany komunikat o błędzie inicjowania. Aby uzyskać więcej informacji, zobacz [jak: Debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).  
   
 ## <a name="see-also"></a>Zobacz też  
 - [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
-- [Instrukcje: Konfiguracja aplikacji do obsługi w programie .NET Framework 4 lub 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
-- [Instrukcje: Debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
+- [Jak: Konfigurowanie aplikacji do obsługi w programie .NET Framework 4 lub 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
+- [Jak: Debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
 - [Instalowanie programu .NET Framework 3.5 w systemie Windows 10, Windows 8.1 lub Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md)

@@ -1,18 +1,18 @@
 ---
-title: Tworzenie biblioteki .NET Standard klasy w języku C# i .NET Core w programie Visual Studio 2017
+title: Tworzenie C# biblioteki klas .NET Standard za pomocą programu Visual Studio 2017
 description: Dowiedz się, jak utworzyć bibliotekę klas .NET Standard, napisany w języku C# za pomocą programu Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 101cb8b9134f7e64e5489f5bc7abb6a9570d2131
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 0c98f8c8fc4847570964d8d4ea8deb221164441d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638824"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168939"
 ---
-# <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Tworzenie biblioteki klas w języku C# i .NET Core w programie Visual Studio 2017
+# <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie biblioteki klas .NET Standard z C# i .NET Core SDK w programie Visual Studio 2017
 
 A *biblioteki klas* Określa typy i metody, które są wywoływane przez aplikację. Biblioteka klas, który jest przeznaczony dla .NET Standard 2.0 umożliwia biblioteki można wywoływać za pomocą dowolnego implementacji .NET, która obsługuje daną wersję .NET Standard. Po zakończeniu biblioteki klas, można zdecydować, czy chcesz rozprowadzić go jako składników innych firm lub tego, czy chcesz dołączyć go jako składnik powiązane z jedną lub więcej aplikacji.
 
@@ -29,7 +29,7 @@ Rozpocznij od utworzenia rozwiązania dla Twojego projektu biblioteki klas i jej
 
 1. W **nowy projekt** okna dialogowego, rozwiń węzeł **inne typy projektów** , a następnie wybierz węzeł **Visual Studio Solutions**. Nazwij rozwiązanie "ClassLibraryProjects", a następnie wybierz pozycję **OK** przycisku.
 
-   ![Okno dialogowe nowego projektu](./media/library-with-visual-studio/newproject.png)
+   ![Okno dialogowe nowego projektu za pomocą nowe puste rozwiązanie wyróżniony](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>Tworzenie projektu biblioteki klas
 
@@ -39,15 +39,15 @@ Utwórz projekt biblioteki klas:
 
 1. W **Dodaj nowy projekt** okna dialogowego, rozwiń węzeł **Visual C#** węzła, następnie wybierz pozycję **.NET Standard** węzła następuje **biblioteki klas (.NET Standard)** szablonu projektu. W **nazwa** tekstu wprowadź "StringLibrary" jako nazwę projektu. Wybierz **OK** Aby utworzyć projekt biblioteki klas.
 
-   ![Dodaj okno dialogowe Nowy projekt](./media/library-with-visual-studio/libproject.png)
+   ![Dodawanie okna dialogowego Nowy projekt biblioteki](./media/library-with-visual-studio/add-new-library-project.png)
 
    W oknie kodu, a następnie zostanie otwarta w środowisku programowania Visual Studio.
 
-   ![Visual Studio okna aplikacji, przedstawiający kod szablonu domyślnego klasy biblioteki](./media/library-with-visual-studio/stringlibrary.png)
+   ![Visual Studio okna aplikacji, przedstawiający kod szablonu domyślnego klasy biblioteki](./media/library-with-visual-studio/string-library-project.png)
 
 1. Sprawdź, czy nasza biblioteka jest przeznaczony dla prawidłowej wersji programu .NET Standard. Kliknij prawym przyciskiem myszy na projekt biblioteki w **Eksploratora rozwiązań** systemu windows, następnie wybierz pozycję **właściwości**. **Platformę docelową** pole tekstowe pokazuje, że firma Microsoft objęci .NET Standard 2.0.
 
-   ![Właściwości projektu biblioteki klas](./media/library-with-visual-studio/properties.png)
+   ![Właściwości projektu biblioteki klas](./media/library-with-visual-studio/library-project-properties.png)
 
 1. Zastąp kod w oknie Kod następującym kodem, a następnie zapisz plik:
 
@@ -57,7 +57,7 @@ Utwórz projekt biblioteki klas:
 
 1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**. Projekt powinien być skompilowana bez błędów.
 
-   ![Okienko danych wyjściowych, pokazujący, że kompilacja zakończyła się pomyślnie](./media/library-with-visual-studio/buildsucceeds.png)
+   ![Okienko danych wyjściowych, pokazujący, że kompilacja zakończyła się pomyślnie](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 ## <a name="next-step"></a>Następny krok
 

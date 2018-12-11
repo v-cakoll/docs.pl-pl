@@ -1,15 +1,15 @@
 ---
-title: Pakiety, metapakiety i struktury
+title: Pakiety, metapakiety i struktury — .NET Core
 description: Dowiedz się, terminologia dotycząca pakiety, metapakiety i struktury.
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: e69e9707d3984f37ebc2c1103f9d89f3cbdf5cbd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 25247972346fb181279414a762d73d2f3218f0e0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195284"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168822"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakiety, metapakiety i struktury
 
@@ -108,7 +108,7 @@ Są dwa podstawowe opartej na pakiecie struktury używane z platformą .NET Core
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>.NET standard
+### <a name="net-standard"></a>.NET Standard
 
 .NET Standard ([Moniker platformy docelowej](../standard/frameworks.md): `netstandard`) framework reprezentuje interfejsy API zdefiniowany przez i wbudowane w górnej części [.NET Standard](../standard/net-standard.md). Bibliotek, które są przeznaczone do uruchamiania na wielu modułów wykonawczych powinien dotyczyć ten framework. Będą one obsługiwane, w dowolnym .NET Standard zgodne środowiska uruchomieniowego, takich jak .NET Core, .NET Framework i Mono/Xamarin. Każda z tych środowisk uruchomieniowych obsługuje zestaw .NET Standard wersji, w zależności od tego, w których interfejsy API implementują.
 

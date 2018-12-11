@@ -4,12 +4,12 @@ description: Aplikacje niewymagające użycia serwera oferuje wiele korzyści i 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 055facf7ef46c18f8cda518da9a9f3e114dec1a2
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6f4951dc85f739b92e56e84d0bd0262166181bd4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404922"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128846"
 ---
 # <a name="conclusion"></a>Wniosek
 
@@ -30,4 +30,4 @@ Następujące najważniejsze wnioski są najważniejsze wnioski z tego przewodni
 **Aplikacje niewymagające użycia serwera jako narzędzie nie przybornika.** Bez użycia serwera jest nie wyłączne rozwiązania architektury aplikacji. Jest to narzędzie, które może być wykorzystywana jako część aplikacji hybrydowych, która może zawierać tradycyjnych warstw, monolitu zaplecza i kontenery. Aplikacje niewymagające użycia serwera może służyć do rozszerzenia istniejących rozwiązań i nie jest sztywnego podejścia do tworzenia aplikacji.
 
 >[!div class="step-by-step"]
-[Poprzednie](serverless-business-scenarios.md)
+>[Poprzednie](serverless-business-scenarios.md)

@@ -5,23 +5,23 @@ helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
 ms.openlocfilehash: 333baa68f4bd80b98e8bb03929ab41dc9cbed7a1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088705"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150956"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 <xref:System.Net.NetworkInformation> Przestrzeń nazw umożliwia zbieranie informacji na temat zdarzeń w sieci, zmiany, statystyk i właściwości. Możesz również określić, czy zdalny host jest osiągalny, za pomocą <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> klasy.  
   
 ## <a name="network-availability-and-events"></a>Dostępność sieci i zdarzenia  
- <xref:System.Net.NetworkInformation.NetworkChange?displayProperty=nameWithType> Klasy umożliwia określenie, czy adres sieciowy lub dostępności został zmieniony. Aby użyć tej klasy, należy utworzyć program obsługi zdarzeń, aby przetworzyć zmiany i powiąż ją z <xref:System.Net.NetworkInformation.NetworkAddressChangedEventHandler> lub <xref:System.Net.NetworkInformation.NetworkAvailabilityChangedEventHandler>. Aby uzyskać więcej informacji, zobacz [instrukcje: wykrywanie dostępności sieci i zmiany adresu](../../../docs/framework/network-programming/how-to-detect-network-availability-and-address-changes.md).  
+ <xref:System.Net.NetworkInformation.NetworkChange?displayProperty=nameWithType> Klasy umożliwia określenie, czy adres sieciowy lub dostępności został zmieniony. Aby użyć tej klasy, należy utworzyć program obsługi zdarzeń, aby przetworzyć zmiany i powiąż ją z <xref:System.Net.NetworkInformation.NetworkAddressChangedEventHandler> lub <xref:System.Net.NetworkInformation.NetworkAvailabilityChangedEventHandler>. Aby uzyskać więcej informacji, zobacz [jak: Wykrywanie dostępności sieci i zmian adresów](../../../docs/framework/network-programming/how-to-detect-network-availability-and-address-changes.md).  
   
 ## <a name="network-statistics-and-properties"></a>Właściwości i statystyki sieci  
- Będzie możliwe dalsze zbieranie statystyk sieciowych i właściwości na podstawie interfejsu lub protokołu. <xref:System.Net.NetworkInformation.NetworkInterface>, <xref:System.Net.NetworkInformation.NetworkInterfaceType>, I <xref:System.Net.NetworkInformation.PhysicalAddress> klasy podać informacje dotyczące konkretnego interfejsu sieciowego, podczas gdy <xref:System.Net.NetworkInformation.IPInterfaceProperties>, <xref:System.Net.NetworkInformation.IPGlobalProperties>, <xref:System.Net.NetworkInformation.IPGlobalStatistics>, <xref:System.Net.NetworkInformation.TcpStatistics>, i <xref:System.Net.NetworkInformation.UdpStatistics> klasy podają informacje temat warstwy 3 i 4 pakietów w warstwie. Aby uzyskać więcej informacji, zobacz [porady: pobieranie interfejsu i informacji o protokole](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md).  
+ Będzie możliwe dalsze zbieranie statystyk sieciowych i właściwości na podstawie interfejsu lub protokołu. <xref:System.Net.NetworkInformation.NetworkInterface>, <xref:System.Net.NetworkInformation.NetworkInterfaceType>, I <xref:System.Net.NetworkInformation.PhysicalAddress> klasy podać informacje dotyczące konkretnego interfejsu sieciowego, podczas gdy <xref:System.Net.NetworkInformation.IPInterfaceProperties>, <xref:System.Net.NetworkInformation.IPGlobalProperties>, <xref:System.Net.NetworkInformation.IPGlobalStatistics>, <xref:System.Net.NetworkInformation.TcpStatistics>, i <xref:System.Net.NetworkInformation.UdpStatistics> klasy podają informacje temat warstwy 3 i 4 pakietów w warstwie. Aby uzyskać więcej informacji, zobacz [jak: Interfejs i informacji o protokole](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md).  
   
 ## <a name="determine-if-a-remote-host-is-reachable"></a>Określa, czy zdalny Host jest osiągalne  
- Możesz użyć <xref:System.Net.NetworkInformation.Ping> klasę, aby określić, czy zdalny Host jest w górę, w sieci i jest dostępny. Aby uzyskać więcej informacji, zobacz [jak: polecenie Ping do hosta](../../../docs/framework/network-programming/how-to-ping-a-host.md).  
+ Możesz użyć <xref:System.Net.NetworkInformation.Ping> klasę, aby określić, czy zdalny Host jest w górę, w sieci i jest dostępny. Aby uzyskać więcej informacji, zobacz [jak: Polecenie ping do hosta](../../../docs/framework/network-programming/how-to-ping-a-host.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  

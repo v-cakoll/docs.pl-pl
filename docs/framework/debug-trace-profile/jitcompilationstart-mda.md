@@ -9,37 +9,37 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9643a2d2ea0967b8cf6d8e18ce2e9073ae583f71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d73c299231a588a5ae0b252dd2b5a0a834685f2d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387039"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150670"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
-`jitCompilationStart` Zarządzany Asystent debugowania (MDA) został aktywowany do raportu podczas uruchamiania kompilatora just-in-time (JIT) skompilować funkcję.  
+`jitCompilationStart` Zarządzanego Asystenta debugowania (MDA) jest aktywowany do raportu, gdy kompilator just-in-time (JIT) zaczyna kompilować funkcję.  
   
 ## <a name="symptoms"></a>Symptomy  
- Zestaw roboczy zwiększania rozmiaru dla programu, który jest już w formacie obrazu macierzystego, ponieważ mscorjit.dll jest ładowany do procesu.  
+ Zestaw roboczy zwiększania rozmiaru dla programu, który jest już w formacie obrazu natywnego, ponieważ mscorjit.dll jest ładowany do procesu.  
   
 ## <a name="cause"></a>Przyczyna  
- Nie wszystkie zestawy, których program jest zależny od zostały wygenerowane do formatu macierzystego lub te, które mają nie zostały poprawnie zarejestrowane.  
+ Nie wszystkie zestawy, których program jest zależny od zostały wygenerowane w formacie natywnym lub tych, które mają nie zostały poprawnie zarejestrowane.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Włączanie to zdarzenie MDA pozwala określić, funkcji, które są kompilowane JIT. Określ, czy zestaw zawierający funkcję jest generowane w celu formatu macierzystego i poprawnie zarejestrowany.  
+ Włączanie to zdarzenie MDA pozwala określić, która funkcja jest kompilowany dokładnie na czas. Ustalić, czy zestaw, który zawiera funkcję jest generowany w celu natywnego formatu oraz poprawnie zarejestrowany.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA rejestruje komunikat tuż przed metodą jest kompilacji JIT, dlatego włączenie tego MDA ma znaczący wpływ na wydajność. Należy pamiętać, że jeśli metoda jest wbudowany, to zdarzenie MDA nie wygeneruje osobnej wiadomości.  
+ To zdarzenie MDA rejestruje wiadomość, przed metodą jest kompilowany dokładnie na czas, dlatego włączenie to zdarzenie MDA ma znaczący wpływ na wydajność. Należy pamiętać, że jeśli metoda jest wbudowany, to zdarzenie MDA nie wygeneruje oddzielną wiadomość.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Poniższy przykład kodu pokazuje przykładowe dane wyjściowe. W takim przypadku pokazuje dane wyjściowe, które w zestawie testów metody "m" w klasie "ns2.CO" został skompilowany JIT.  
+ Poniższy przykładowy kod przedstawia przykładowe dane wyjściowe. W tym przypadku pokazano w danych wyjściowych, które w zestawie testów metody "m" w klasie "ns2.CO" jest kompilowany dokładnie na czas.  
   
 ```  
 method name="Test!ns2.C0::m"  
 ```  
   
 ## <a name="configuration"></a>Konfiguracja  
- Następujący plik konfiguracji zawiera szereg filtry, które można zastosować do odfiltrowywania które metody są zgłaszane, gdy są one najpierw kompilacji JIT. Można określić, że wszystkie metody zgłoszone przez ustawienie wartości atrybutu nazwy *.  
+ Następujący plik konfiguracji zawiera szereg filtry, które można zastosować, aby odfiltrować metody, które są zgłaszane, gdy są one najpierw kompilowanego dokładnie na czas. Można określić, że wszystkie metody należy podać, ustawiając wartość atrybutu nazwy \*.  
   
 ```xml  
 <mdaConfig>  
@@ -62,7 +62,7 @@ method name="Test!ns2.C0::m"
 ## <a name="example"></a>Przykład  
  Poniższy przykładowy kod jest przeznaczony do użycia z poprzedniego pliku konfiguracji.  
   
-```  
+```csharp
 using System;  
 using System.Reflection;  
 using System.Runtime.CompilerServices;  

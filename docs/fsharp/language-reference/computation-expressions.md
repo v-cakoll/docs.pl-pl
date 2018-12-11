@@ -1,28 +1,28 @@
 ---
 title: Wyrażenia obliczeń (F#)
-description: Dowiedz się, jak utworzyć wygodnej składni do pisania obliczeń w F#, który może być sekwencjonowania i łączyć, używając konstrukcji przepływów sterowania i powiązania.
+description: Dowiedz się, jak utworzyć wygodnej składni do pisania obliczeń w F# , można sekwencyjna i połączone przy użyciu kontrolowania konstrukcje przepływów i powiązania.
 ms.date: 07/27/2018
-ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b1fee11f68e99e53d19b47bef9eca6298cce2f45
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839872"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169849"
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 
-Wyrażenia obliczeń w języku F# Obejmij wygodnej składni pisania obliczeń, które mogą być sekwencjonowania i łączyć, używając konstrukcji przepływów sterowania i powiązania. W zależności od rodzaju wyrażenia obliczeń one można traktować jako sposób express monads, monoids, transformatory monad i applicative funktory. Jednak w przeciwieństwie do innych języków (takie jak *zapisu czy* w Haskell), nie są powiązane z jednym pozyskiwania i nie należy polegać na makr lub innych form metaprogramowanie wykonywania wygodne i kontekstowym składni.
+Wyrażenia obliczeń w F# zapewnienia wygodnej składni pisania obliczeń, które mogą być sekwencjonowania i łączyć, używając konstrukcji przepływów sterowania i powiązania. W zależności od rodzaju wyrażenia obliczeń one można traktować jako sposób express monads, monoids, transformatory monad i applicative funktory. Jednak w przeciwieństwie do innych języków (takie jak *zapisu czy* w Haskell), nie są powiązane z jednym pozyskiwania i nie należy polegać na makr lub innych form metaprogramowanie wykonywania wygodne i kontekstowym składni.
 
 ## <a name="overview"></a>Omówienie
 
-Obliczenia może mieć wiele form. Najczęściej używany typ wyliczenia jest jednowątkowym wykonywania, który jest łatwy do zrozumienia i modyfikować. Jednak nie wszystkie rodzaje obliczeń są tak proste jak jednowątkowe wykonywania. Niektóre przykłady:
+Obliczenia może mieć wiele form. Najczęściej używany typ wyliczenia jest jednowątkowym wykonywania, który jest łatwy do zrozumienia i modyfikować. Jednak nie wszystkie rodzaje obliczeń są tak proste jak jednowątkowe wykonywania. Oto niektóre przykłady:
 
 * Nie deterministyczne obliczeń
 * Asynchroniczne obliczenia
 * Effectful obliczeń
 * Generatywną obliczeń
 
-Ogólnie rzecz biorąc, istnieją *kontekstową* obliczenia, które należy wykonać w niektórych części aplikacji. Pisanie kodu kontekstową może stanowić wyzwanie, ponieważ jest łatwy do obliczenia "przeciek" poza podanym kontekście bez abstrakcji, aby zapobiec temu. Te elementy abstrakcji często wyzwaniem napisać samodzielnie, dlatego F# został uogólniony sposób przeprowadzenia tak zwane **wyrażenia obliczeń**.
+Ogólnie rzecz biorąc, istnieją *kontekstową* obliczenia, które należy wykonać w niektórych części aplikacji. Pisanie kodu kontekstową może stanowić wyzwanie, ponieważ jest łatwy do obliczenia "przeciek" poza podanym kontekście bez abstrakcji, aby zapobiec temu. Te elementy abstrakcji są często trudne do zapisu przez siebie, co jest dlaczego F# został uogólniony sposób przeprowadzenia tak zwane **wyrażenia obliczeń**.
 
 Wyrażenia obliczeń oferuje jednolite składni i abstrakcji model dla kodowania kontekstową obliczeń.
 
@@ -61,9 +61,9 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Każda z tych słów kluczowych i innych standardowych F# słowa kluczowe są dostępne tylko w wyrażeniu obliczeń jeśli zostały zdefiniowane w zapasowy typ konstruktora. Jedynym wyjątkiem jest `match!`, która sama jest sugar składni do użycia z `let!` następuje dopasowania do wzorca w wyniku.
+Każda z tych słów kluczowych i innymi standard F# słowa kluczowe są dostępne tylko w wyrażeniu obliczeń, jeśli zostały zdefiniowane w zapasowy typ konstruktora. Jedynym wyjątkiem jest `match!`, która sama jest sugar składni do użycia z `let!` następuje dopasowania do wzorca w wyniku.
 
-Typ konstruktora jest obiektem, który definiuje specjalne metody, które określają sposób, w jaki fragmenty wyrażenia obliczeń są łączone; oznacza to, że jego metod kontroli zachowania wyrażenia obliczeń. Inny sposób w celu opisania klasy, Konstruktor jest powiedzieć, pozwala dostosować działanie wielu konstrukcje F#, takie jak pętle i powiązania.
+Typ konstruktora jest obiektem, który definiuje specjalne metody, które określają sposób, w jaki fragmenty wyrażenia obliczeń są łączone; oznacza to, że jego metod kontroli zachowania wyrażenia obliczeń. Inny sposób w celu opisania klasy, Konstruktor jest powiedzieć, umożliwia dostosowywanie operacji wielu F# konstrukcje, takie jak pętle i powiązania.
 
 ### `let!`
 
@@ -194,7 +194,7 @@ Podczas wywoływania wyrażeniu obliczeń z `match!`, będzie weź pod uwagę wy
 
 ## <a name="built-in-computation-expressions"></a>Wyrażenia obliczeń wbudowane
 
-Biblioteka core F# definiuje trzy wyrażenia obliczeń wbudowane: [wyrażenia sekwencji](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażenia zapytań](query-expressions.md).
+F# Podstawowej biblioteki definiuje trzy wyrażenia obliczeń wbudowane: [Wyrażenia sekwencji](sequences.md), [Asynchroniczne przepływy pracy](asynchronous-workflows.md), i [wyrażeniach zapytań](query-expressions.md).
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>Tworzenie nowego typu wyrażenia obliczeń
 
@@ -227,7 +227,7 @@ Zagnieżdżone wyrażenie ma następującą postać:
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-W kodzie powyżej wywołania `Run` i `Delay` są pomijane, jeśli nie są zdefiniowane w klasie Konstruktor wyrażeń obliczeń. Treść wyrażenia obliczeń, w tym miejscu są oznaczone jako `{| cexpr |}`, przetłumaczyć obejmujące metod klasy konstruktora połączeń przez tłumaczenia opisane w poniższej tabeli. Wyrażenia obliczeń `{| cexpr |}` jest zdefiniowanego cyklicznie zgodnie z ich gdzie `expr` jest wyrażeniem F# i `cexpr` jest wyrażenia obliczeń.
+W kodzie powyżej wywołania `Run` i `Delay` są pomijane, jeśli nie są zdefiniowane w klasie Konstruktor wyrażeń obliczeń. Treść wyrażenia obliczeń, w tym miejscu są oznaczone jako `{| cexpr |}`, przetłumaczyć obejmujące metod klasy konstruktora połączeń przez tłumaczenia opisane w poniższej tabeli. Wyrażenia obliczeń `{| cexpr |}` jest zdefiniowanego cyklicznie zgodnie z ich gdzie `expr` jest F# wyrażenia i `cexpr` jest wyrażenia obliczeń.
 
 |Wyrażenie|{1&gt;Translacja&lt;1}|
 |----------|-----------|
@@ -251,6 +251,7 @@ W kodzie powyżej wywołania `Run` i `Delay` są pomijane, jeśli nie są zdefin
 |<code>{&#124; cexpr1; cexpr2 &#124;}</code>|<code>builder.Combine({&#124;cexpr1 &#124;}, {&#124; cexpr2 &#124;})</code>|
 |<code>{&#124; other-expr; cexpr &#124;}</code>|<code>expr; {&#124; cexpr &#124;}</code>|
 |<code>{&#124; other-expr &#124;}</code>|`expr; builder.Zero()`|
+
 W poprzedniej tabeli `other-expr` opisuje wyrażenie, które w przeciwnym razie nie został wymieniony w tabeli. Klasa konstruktora nie trzeba implementować wszystkie metody i obsługiwać wszystkich tłumaczeń wymienionych w powyższej tabeli. Te konstrukcje, które nie są implementowane nie są dostępne w wyrażenia obliczeń tego typu. Na przykład, jeśli nie chcesz obsługiwać `use` słowa kluczowego w Twojej wyrażenia obliczeń, można pominąć definicji `Use` w klasie konstruktora.
 
 Poniższy przykład kodu pokazuje wyrażenie obliczeń hermetyzujący obliczeń serię kroków, które mogą być obliczane jeden krok w danym momencie. A Suma rozłączna typ union `OkOrException`, koduje stanu błędu wyrażenia obliczonego do tej pory. Ten przykład demonstruje kilka typowych wzorców, które można używać w swojej wyrażenia obliczeń, takich jak standardowy implementacje niektórych metod konstruktora.
@@ -266,7 +267,7 @@ module Eventually =
     // computation.
     let rec bind func expr =
         match expr with
-        | Done value -> NotYetDone (fun () -> func value)
+        | Done value -> func value
         | NotYetDone work -> NotYetDone (fun () -> bind func (work()))
 
     // Return the final value wrapped in the Eventually type.
@@ -372,13 +373,8 @@ comp |> step |> step
 
 // prints "x = 1"
 // prints "x = 2"
-// returns "NotYetDone <closure>"
-comp |> step |> step |> step |> step |> step |> step
-
-// prints "x = 1"
-// prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step |> step |> step |> step |> step
+comp |> step |> step |> step |> step 
 ```
 
 Wyrażenia obliczeń ma typu podstawowego, który zwraca wartość wyrażenia. Typ podstawowy może reprezentować obliczony wynik lub opóźnione obliczenie, które mogą być wykonywane lub może ona dostarczać sposób do iteracji przez kolekcję określonego typu. W poprzednim przykładzie był typem podstawowym **ostatecznie**. To wyrażenie sekwencji jest typem podstawowym <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Wyrażenie zapytania, typ podstawowy jest <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Dla asynchronicznego przepływu pracy jest typem podstawowym [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). `Async` Obiekt reprezentuje pracy do wykonania do obliczania wyniku. Na przykład wywołać [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) do wykonywania obliczeń i zwracają wynik.

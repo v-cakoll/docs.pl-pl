@@ -1,79 +1,79 @@
 ---
-title: W samouczku języka C# — przewodnik C#
+title: Przewodnik po przykładzie C# - C# przewodnik
 description: Jesteś nowym użytkownikiem C#? Poznaj podstawy języka.
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: bdb8a84083b391c27d39f5c566a01b2db318123f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bece954c095870651126e486c2c6eb978e78f96d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359010"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150397"
 ---
-# <a name="a-tour-of-the-c-language"></a>Samouczek języka C#  
+# <a name="a-tour-of-the-c-language"></a>Przewodnik po przykładzie C# języka  
 
-C# (wyraźnym "Zobacz Sharp") jest proste, Nowoczesny zorientowany obiektowo i bezpieczny język programowania. C# ma jego katalogów głównych w rodzinie języków C i będzie znane programistów C, C++, Java i JavaScript.
+C# (Wymowa: "Zobacz Sharp") to proste, nowoczesnych, zorientowane obiektowo i bezpieczny typowo język programowania. C#korzenie jego rodziny C języków, będzie znane w programowaniu w języku C, C++, Java i JavaScript.
 
-C# jest zorientowany obiektowo język, ale C# dalsze obejmuje obsługę ***zorientowany*** programowania. Nowoczesne oprogramowanie — projekt zależy coraz składników oprogramowania w formie autonomiczne i samoopisujące pakietów funkcji. Kluczem do takich składników jest promowania model programowania z właściwości, metod i zdarzeń; mają one atrybuty, które zawierają deklaratywne informacje o składniku; i obejmują one własnej dokumentacji. C# zawiera konstrukcji językowych do obsługi bezpośrednio tych pojęć wprowadzania C# bardzo języka naturalnego, w którym do utworzenia i użycia składników oprogramowania.
+C# to język obiektowy, ale C# dalsze obejmuje obsługę ***zorientowanego na*** programowania. Projektowania oprogramowania współczesnych coraz bardziej opiera się na składniki oprogramowania w postaci pakietów niezależna i samoopisujące funkcji. Kluczem do takich składników jest, czy stanowią one model programowania za pomocą właściwości, metod i zdarzeń; mają atrybuty, które zapewniają deklaracyjne informacje o składniku; i obejmują one we własnej dokumentacji. C#udostępnia konstrukcji języka, aby bezpośrednio obsługują te pojęcia, dzięki czemu C# bardzo języka naturalnego, w której do tworzenia i używania składników oprogramowania.
 
-Kilka funkcji C# pomocy w konstrukcji aplikacji niezawodny i trwałe: ***wyrzucanie elementów bezużytecznych*** automatycznie zwraca pamięci zajmowane przez nieosiągalny nieużywane obiekty; ***obsługi wyjątków*** zapewnia strukturalnych i rozszerzalny podejście do wykrywania błędów i odzyskiwania; i ***bezpieczne*** projektu języka uniemożliwia odczytywać niezainicjowany zmienne tablic indeks poza zakresem ich lub wykonania rzutowania typów niezaznaczone.
+Kilka C# funkcje pomocy do tworzenia niezawodnych i trwałych aplikacji: ***Wyrzucanie elementów bezużytecznych*** automatycznie odzyskuje pamięć zajmowanych przez nieosiągalne obiekty nieużywane; ***wyjątków*** ze strukturą i rozszerzalny podejście do wykrywania błędów i odzyskiwania; i ***bezpieczny*** projekt języka umożliwia odczytywanie niezainicjowane zmienne Indeksowanie tablic poza ich zakresem, lub wykonać unchecked typu rzutowania.
 
-C# ma ***unified system typów***. Wszystkie typy C#, tym typy pierwotne, takie jak `int` i `double`, dziedziczą z jednym elementem głównym `object` typu. W związku z tym wszystkie typy mają zestaw typowych operacji, a wartości dowolnego typu mogą być przechowywane, transportowane i wykonywane są operacje w sposób ciągły. Ponadto C# obsługuje zarówno typy odwołań zdefiniowanych przez użytkownika i typów wartości, umożliwiając dynamiczna alokacja obiektów, a także magazynu w wierszu lekkie struktur.
+C# ma ***unified system typów***. Wszystkie C# typów, w tym typów podstawowych takich jak `int` i `double`, dziedziczą z jednym elementem głównym `object` typu. W efekcie wszystkie typy udostępnić zestaw typowych operacji, a wartości dowolnego typu mogą być przechowywane, transportowane i wykonywane są operacje w sposób ciągły. Ponadto, C# obsługuje typy odwołań zdefiniowanych przez użytkownika i typów wartości, umożliwiając dynamiczna alokacja obiektów, a także magazynu w tekście uproszczone struktur.
 
-Aby upewnić się, że programów C# i biblioteki można rozwijać wraz z upływem czasu, w sposób zgodny, znacznie nacisk został umieszczony na ***versioning*** w C# w projekcie. Wiele języków programowania interesuje tego problemu i w związku z tym wprowadzono programów napisanych w tych języków podziału częściej niż niezbędne w przypadku nowszych wersji zależnych bibliotek. Aspekty projektu C# w, które zostały bezpośrednio wpływa zagadnienia dotyczące wersji obejmują szczegółowych `virtual` i `override` modyfikatory, reguły Rozpoznanie przeciążenia metody i pomoc techniczna dla deklaracji elementu członkowskiego interfejsu jawnego.
+Aby upewnić się, że C# programów i bibliotek mogą z czasem ewoluować w sposób zgodny, znacznie większym naciskiem został umieszczony na ***versioning*** w C#projekt. Wiele języków programowania interesuje tego problemu, a w rezultacie, programy napisane w tych języków podziału częściej niż to konieczne, w przypadku nowszych wersjach zależne biblioteki zostały wprowadzone. Aspekty C#przez projekt, który zostały bezpośrednio wpływa uwagi dotyczące wersji zawierają oddzielny `virtual` i `override` modyfikatorów, reguły dla rozwiązania przeciążenia metody i pomoc techniczna dla deklaracji elementu członkowskiego interfejsu jawnego.
 
 ## <a name="hello-world"></a>Cześć ludzie
 
-Wprowadzenie do języka programowania tradycyjnie służy program "Hello, World". Poniżej przedstawiono w języku C#:
+Program "Hello, World" tradycyjnie umożliwia wprowadzenie języka programowania. Poniżej przedstawiono w języku C#:
 
 [!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
 
-Pliki źródłowe C# zazwyczaj mają rozszerzenie `.cs`. Przy założeniu, że program "Hello, World" jest przechowywany w pliku `hello.cs`, program może być kompilowana przy użyciu wiersza polecenia:
+Pliki źródłowe C# zazwyczaj mają rozszerzenie pliku `.cs`. Przy założeniu, że program "Hello, World" jest przechowywany w pliku `hello.cs`, program może być skompilowana przy użyciu wiersza polecenia:
 
 ```console
 csc hello.cs
 ```
 
-pozwalającą na uzyskanie pliku wykonywalnego o nazwie hello.exe zestawu. Dane wyjściowe, generowane przez tę aplikację, po jego uruchomieniu jest:
+który tworzy zestaw pliku wykonywalnego o nazwie hello.exe. Dane wyjściowe generowane przez tę aplikację po jej uruchomieniu są:
 
 ```console
 Hello, World
 ```
 
 > [!IMPORTANT]
-> `csc` Polecenie kompiluje pełne Framework i nie mogą być dostępne na wszystkich platformach.
+> `csc` Polecenie kompiluje dla pełnej struktury i mogą nie być dostępne na wszystkich platformach.
 
 
-Program "Hello, World" rozpoczyna się od `using` dyrektywy, który odwołuje się do `System` przestrzeni nazw. Przestrzenie nazw pozwalają hierarchiczne organizowanie C# programów i bibliotek. Przestrzenie nazw zawierają typy i innych przestrzeniach nazw — na przykład `System` przestrzeń nazw zawiera wiele typów, takie jak `Console` klasy, do których odwołuje się program i wiele innych przestrzeniach nazw, takich jak `IO` i `Collections`. A `using` dyrektywy, który odwołuje się do danej przestrzeni nazw umożliwia niekwalifikowane korzystanie z typów, które są członkami tej przestrzeni nazw. Z powodu `using` dyrektywy, można użyć programu `Console.WriteLine` jako skrócona forma `System.Console.WriteLine`.
+Program "Hello, World" rozpoczyna się od `using` dyrektywę, który odwołuje się do `System` przestrzeni nazw. Przestrzenie nazw zawierają hierarchiczny sposób organizowania programów C# i biblioteki. Przestrzenie nazw zawierają typy i inne przestrzenie nazw — na przykład `System` przestrzeń nazw zawiera wiele typów, takie jak `Console` klasy, do którego odwołuje się program i wiele innych przestrzeniach nazw, takich jak `IO` i `Collections`. A `using` dyrektywę, który odwołuje się do danej przestrzeni nazw umożliwia niekwalifikowanej korzystanie z typów, które są elementami członkowskimi tej przestrzeni nazw. Z powodu `using` dyrektywy, można użyć programu `Console.WriteLine` jako skrót dla `System.Console.WriteLine`.
 
-`Hello` Klasy zadeklarowanej przez program "Hello, World" zawiera jeden element członkowski, metodę o nazwie `Main`. `Main` Metoda jest zadeklarowana z modyfikator statyczny. Gdy wystąpienie metody może odwoływać się konkretnego wystąpienia obiektu otaczającego za pomocą słowa kluczowego `this`, metody statyczne działać bez odwołania do określonego obiektu. Konwencja, statycznej metody o nazwie `Main` służy jako punkt wejścia programu.
+`Hello` Klasy zadeklarowanej przez program "Hello, World" zawiera jeden element członkowski metodę o nazwie `Main`. `Main` Metody jest zadeklarowana za pomocą modyfikator statyczny. Podczas gdy metody wystąpienia można odwołania konkretnego wystąpienia obiektu otaczającej przy użyciu słowa kluczowego `this`, metody statyczne działać bez odwołania do określonego obiektu. Zgodnie z Konwencją statyczną metodę o nazwie `Main` służy jako punkt wejścia programu.
 
-Dane wyjściowe programu jest generowany przez `WriteLine` metody `Console` klasy w `System` przestrzeni nazw. Ta klasa jest zapewniana przez bibliotek klas standardowych, które domyślnie automatycznie przywoływane przez kompilator.
+Dane wyjściowe programu jest generowany przez `WriteLine` metody `Console` klasy w `System` przestrzeni nazw. Ta klasa jest zapewniana przez bibliotek standardowych klas, które domyślnie są automatycznie dołączane do kompilatora.
 
-Istnieje wiele Aby dowiedzieć się więcej o języku C#.  Poniższe tematy zawierają omówienie elementy języka C#. Omówienie tych zapewni podstawowe informacje o wszystkich elementach języka i zapewnić informacje niezbędne do bardziej Poznaj elementy języka C#:
+Istnieje o wiele więcej, aby dowiedzieć się więcej na temat C#.  Poniższe tematy zawierają omówienie elementów C# języka. Te przeglądy będzie podawanie ogólnych informacji o wszystkich elementach języka i zapewnić informacje niezbędne do Dowiedz się więcej na elementy C# języka:
 
 * [Struktura programu](program-structure.md)
-    - Dowiedz się więcej podstawowych pojęć organizacji w języku C#: ***programy***, ***przestrzeni nazw***, ***typy***, ***członków***, i  ***zestawy***.
+    - Dowiedz się, podstawowych pojęć organizacji w C# języka: ***programy***, ***przestrzenie nazw***, ***typy***, ***członków***i ***zestawy***.
 * [Typy i zmienne](types-and-variables.md)
-    - Dowiedz się więcej o ***typów wartości***, ***typy referencyjne***, i ***zmienne*** w języku C#.
+    - Dowiedz się więcej o ***typy wartości***, ***typy odwołań***, i ***zmienne*** w C# języka.
 * [Wyrażenia](expressions.md)
-    - ***Wyrażenia*** są tworzone na podstawie ***operandy*** i ***operatory***. Wyrażenia tworzy wartości.
+    - ***Wyrażenia*** są konstruowane na podstawie ***operandy*** i ***operatory***. Wyrażenia dają wartość.
 * [Instrukcje](statements.md)
-    - Możesz użyć ***instrukcje*** Express działania programu.
+    - Możesz użyć ***instrukcji*** do działania programu express.
 * [Klasy i obiekty](classes-and-objects.md)
-    - ***Klasy*** są najbardziej podstawowe C# dla typów. ***Obiekty*** są wystąpieniami klasy. Klasy są tworzone przy użyciu ***członków***, które są uwzględniane w tym temacie.
+    - ***Klasy*** są najbardziej podstawowe języka C# dla typów. ***Obiekty*** są wystąpieniami klasy. Klasy są tworzone przy użyciu ***członków***, które są uwzględniane w tym temacie.
 * [Struktury](structs.md)
-    - ***Struktury*** są struktury danych, które w przeciwieństwie do klasy, są typy wartości.
+    - ***Struktury*** są struktur danych, które w przeciwieństwie do klasy, są typami wartości.
 * [Tablice](arrays.md)
-    - ***Tablicy*** jest strukturą danych, która zawiera szereg zmiennych, które są udostępniane przez obliczoną indeksów.
+    - ***Tablicy*** to struktura danych, która zawiera szereg zmiennych, które są dostępne za pośrednictwem obliczanej indeksów.
 * [Interfejsy](interfaces.md)
-    - ***Interfejsu*** definiuje kontrakt może być zaimplementowany przez klasy i struktury. Interfejs może zawierać metod, właściwości, zdarzeń i indeksatorów. Interfejs nie zawiera implementacji elementów członkowskich definiuje — Określa on tylko elementy członkowskie, które muszą zostać dostarczone przez klasy lub struktury, który implementuje interfejs.
+    - ***Interfejsu*** definiuje kontrakt, który może być implementowany przez klas i struktur. Interfejs może zawierać metody, właściwości, zdarzeń i indeksatorów. Interfejs nie zawiera implementacji członków definiuje — jedynie określa elementy członkowskie, które muszą być dostarczane przez klasy lub struktury, które implementują interfejs.
 * [Wyliczenia](enums.md)
-    - ***Typu wyliczeniowego*** jest typem unikatowych wartości przy użyciu zestawu stałe nazwane.
-* [Delegaci](delegates.md)
-    - A ***typ delegata*** reprezentuje odwołania do metody z określonego parametru listę i typ zwracany. Obiekty delegowane umożliwiają traktować jako jednostek, które można przypisywać do zmiennych i przekazywane jako parametry metody. Obiekty delegowane są podobne do koncepcji znaleziono w przypadku niektórych języków innych wskaźników funkcji, ale w przeciwieństwie do wskaźników funkcji delegatów są zorientowane obiektowo i bezpieczne.
+    - ***Typu wyliczeniowego*** jest typem wartości odrębnych z szeregu nazwanych stałych.
+* [Delegaty](delegates.md)
+    - A ***typ delegowany*** reprezentuje odwołania do metod z określonego parametru listy i typ zwracany. Delegatów można umożliwić traktować metod jako jednostki, które mogą być przypisane do zmiennych i przekazywane jako parametry. Delegaty są podobne do koncepcji wskaźników funkcji, w przeciwieństwie do innych języków, ale w przeciwieństwie do wskaźników funkcji, obiekty delegowane są zorientowane obiektowo i bezpieczny typowo.
 * [Atrybuty](attributes.md)
-    * ***Atrybuty*** Włącz programy określić dodatkowe deklaratywne informacji o typach, członków i inne jednostki.
+    * ***Atrybuty*** Włącz programy określić dodatkowe deklaratywne informacje na temat typów, składniki i innych jednostek.
 
 >[!div class="step-by-step"]
-[Next](program-structure.md)
+>[Next](program-structure.md)

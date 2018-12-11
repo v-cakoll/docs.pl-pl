@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: c4d3eaa50f6c7645c954ca65bf42c6c1eab3a68d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c4eeb5606d3ea93b76efee58ddfecae0abbbd743
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070789"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128183"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernizowanie cyklu życia aplikacji za pomocą potoków ciągłej integracji/ciągłego Dostarczania i metodyki DevOps w chmurze
 
@@ -36,5 +36,5 @@ Rysunek 4-12 przedstawiono potok ciągłego wdrażania, który wdraża klaster K
 > **Rysunek 4-12.** Potok ciągłego wdrażania usługom DevOps platformy Azure, wdrażanie klastra Kubernetes
 
 >[!div class="step-by-step"]
-[Poprzednie](modernize-your-apps-with-monitoring-and-telemetry.md)
-[dalej](migrate-to-hybrid-cloud-scenarios.md)
+>[Poprzednie](modernize-your-apps-with-monitoring-and-telemetry.md)
+>[dalej](migrate-to-hybrid-cloud-scenarios.md)

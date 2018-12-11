@@ -2,12 +2,12 @@
 title: Zasoby programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
-ms.openlocfilehash: d32b88e0df0b29ccf7fb5e9ba2d5a43585e0fb44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc1a5b76ecc038d8059b04f4dc222126e796f03d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509167"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128677"
 ---
 # <a name="entity-framework-resources"></a>Zasoby programu Entity Framework
 Następujące zasoby zewnętrzne Podaj informacje i pomoc techniczna do tworzenia aplikacji platformy Entity Framework.  
@@ -21,11 +21,11 @@ Następujące zasoby zewnętrzne Podaj informacje i pomoc techniczna do tworzeni
  [Blog programu Entity Framework projektu](https://go.microsoft.com/fwlink/?LinkId=186888)  
  Projektowanie dyskusji i wersje zapoznawcze funkcji w przyszłych wersjach programu Entity Framework.  
   
- [Platforma danych jak to zrobić? Wideo: Entity Framework serii](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [Platforma danych jak to zrobić? Filmy wideo: Seria struktury jednostki](https://go.microsoft.com/fwlink/?LinkId=124600)  
  Zawiera zestaw rzutowania ekranu wideo, które pokazują, jak tworzyć aplikacje przy użyciu różnych składników programu Entity Framework.  
   
- [Entity Framework — często zadawane pytania](https://go.microsoft.com/fwlink/?LinkID=213877)  
- Blog zawierające często zadawane pytania dotyczące programu Entity Framework.  
+ [Entity Framework — często zadawane pytania](https://social.technet.microsoft.com/wiki/contents/articles/3737.entity-framework-faq.aspx)  
+ Witryny typu wiki sekcji zawierającej często zadawane pytania Entity Framework.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  

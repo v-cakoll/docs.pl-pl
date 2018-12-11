@@ -1,17 +1,18 @@
 ---
-title: Wybór wersji platformy .NET core
-description: Dowiedz się, jak .NET Core umożliwia znalezienie i wybiera wersje środowiska uruchomieniowego dla Twojego programu.
+title: Wybierz wersję platformy .NET Core do użycia
+description: Dowiedz się, jak platformy .NET Core znajdzie i automatycznie wybiera wersje środowiska uruchomieniowego dla Twojego programu. Ponadto w tym artykule pokazano, jak do wymuszenia określonej wersji.
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841543"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127241"
 ---
-# <a name="net-core-version-selection"></a>Wybór wersji platformy .NET core
+# <a name="select-the-net-core-version-to-use"></a>Wybierz wersję platformy .NET Core do użycia
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
@@ -80,7 +81,7 @@ Dany zestaw SDK obsługuje stały zestaw struktur, ograniczone do platformy doce
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Uaktualniane zależny od struktury aplikacji
 
-Uruchamianie aplikacji ze źródła przy użyciu [ `dotnet run` ](../tools/dotnet-run.md). `dotnet run` Tworzy i uruchamia aplikację. `dotnet` Pliku wykonywalnego jest **hosta** dla aplikacji w środowiskach programistycznych.
+Po uruchomieniu aplikacji ze źródła przy użyciu [ `dotnet run` ](../tools/dotnet-run.md), z [ **wdrożenia zależny od struktury** ](../deploying/index.md#framework-dependent-deployments-fdd) z [ `dotnet myapp.dll` ](../tools/dotnet.md#description), lub z [ **zależny od struktury pliku wykonywalnego** ](../deploying/index.md#framework-dependent-executables-fde) z `myapp.exe`, `dotnet` pliku wykonywalnego jest **hosta** dla aplikacji.
 
 Host wybiera najnowszą wersję poprawki zainstalowane na komputerze. Na przykład, jeśli określono `netcoreapp2.0` w pliku projektu i `2.0.4` jest zainstalowany, najnowsze środowisko uruchomieniowe .NET `2.0.4` środowiska uruchomieniowego jest używany.
 

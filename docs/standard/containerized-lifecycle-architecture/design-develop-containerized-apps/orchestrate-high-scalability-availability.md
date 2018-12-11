@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: 993f1d18637f39b6df4d876db8a0fe86e34391e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa64562808bba9c9dea5a5eedc367af7decf83b7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192723"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126903"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Organizowanie mikrousług i aplikacji wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 
@@ -19,7 +19,7 @@ Rysunek 4 – 6 przedstawia wdrożenie w klastrze aplikacji składających się 
 
 ![](./media/image6.png)
 
-Rysunek 4 – 6: klaster kontenerów
+Rysunek 4 – 6: Klaster kontenerów
 
 Wygląda jak algorytmu. Ale jak możesz obsługi równoważenia obciążenia, routingu i organizowanie te złożone aplikacje?
 
@@ -35,11 +35,11 @@ Z architektury i projektowania punktu widzenia Jeśli tworzenie dużych przedsi�
 
 Pojęcia związane z klastra i harmonogramu są ściśle powiązane, dlatego produktów dostarczane przez różnych dostawców często podać oba zestawy funkcji. Tabela 4-1 wymieniono najważniejsze platformy i opcje oprogramowania, które mają dla klastrów i transfery danych. Klastry te zwykle są oferowane w chmurach publicznych, takich jak platforma Azure.
 
-Tabela 4-1: platformy oprogramowania dla kontenera, klastrowanie, aranżację i planowanie
+Tabela 4-1: Platformy oprogramowania dla kontenera, klastrowanie, aranżację i planowanie
 
 | Platforma | Opis |
 |---|---|
-| Rozwiązanie docker Swarm<br/> ![Docker Swarm logo](./media/image7.png) | Rozwiązanie docker Swarm daje możliwość klastra i harmonogramu kontenerów platformy Docker. Przy użyciu koordynatora Swarm, można włączyć pulę hostów platformy Docker do pojedynczego wirtualnego hosta platformy Docker. Klientów można wprowadzać żądania interfejsu API Swarm w taki sam sposób, jak na hostach, co oznacza, że Swarm umożliwia łatwe skalowanie aplikacji na wielu hostach. <br /><br /> Rozwiązanie docker Swarm jest produktem docker, firma. <br /><br /> V1.12 platformy docker lub nowszej można uruchomić trybu macierzystego i wbudowanych Swarm. |
+| Docker Swarm<br/> ![Docker Swarm logo](./media/image7.png) | Rozwiązanie docker Swarm daje możliwość klastra i harmonogramu kontenerów platformy Docker. Przy użyciu koordynatora Swarm, można włączyć pulę hostów platformy Docker do pojedynczego wirtualnego hosta platformy Docker. Klientów można wprowadzać żądania interfejsu API Swarm w taki sam sposób, jak na hostach, co oznacza, że Swarm umożliwia łatwe skalowanie aplikacji na wielu hostach. <br /><br /> Rozwiązanie docker Swarm jest produktem docker, firma. <br /><br /> V1.12 platformy docker lub nowszej można uruchomić trybu macierzystego i wbudowanych Swarm. |
 | System mesosphere DC/OS<br/>![System mesosphere DC/OS logo](./media/image8.png) |  Mesosphere Enterprise DC/OS (oparte na Apache Mesos) to platforma gotowe do produkcji do uruchamiania kontenerów i aplikacji rozproszonych. <br /><br /> DC/OS polega na abstrakcyjność zbiór zasobów dostępnych w klastrze oraz udostępniania tych zasobów korzystających z jego składników. Platforma Marathon zwykle jest używana harmonogramu zintegrowana z usługą platformy DC/OS. |
 | Google Kubernetes<br />![Logo usługi Google Kubernetes](./media/image9.png) | Kubernetes to produkt typu open source, który zapewnia funkcje z zakresu od infrastruktury klastra i harmonogramów możliwości organizowanie kontenerów. Dzięki niemu można zautomatyzować wdrażanie, skalowanie i działanie kontenerów aplikacji w klastrach hostów. <br /><br /> Usługa Kubernetes zapewnia kontener skoncentrowane na infrastrukturę, która grupuje kontenery aplikacji w jednostki logiczne, aby ułatwić zarządzanie i odnajdywania. |
 | Azure Service Fabric<br />![Logo usługi Azure Service Fabric](./media/image10.png) | [Usługa Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) to platforma mikrousług firmy Microsoft do tworzenia aplikacji. Jest [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) z usług i służąca do tworzenia klastrów maszyn. Domyślnie Usługa Service Fabric wdraża i aktywuje usług jako procesy, ale usługi Service Fabric można wdrażać usług w obrazów kontenerów platformy Docker. Co ważniejsze, można łączyć usługi w procesach usługi w kontenerach w tej samej aplikacji. <br /><br /> Od maja 2017 r. funkcji usługi Service Fabric, która obsługuje wdrażanie usługi jako kontenery platformy Docker jest w stanie wersji zapoznawczej. <br /><br /> Możesz tworzyć usługi Service Fabric na wiele sposobów korzystania z [modeli programowania usługi Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) wdrażanie [pliki wykonywalne gościa](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) oraz kontenerów. Usługa Service Fabric obsługuje modele normatywnych aplikacji np. [usług stanowych](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) i [elementów Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
@@ -64,7 +64,7 @@ Usługa Azure Container Service może potrwać korzystać z funkcji przeznaczony
 
 ![](./media/image11.png)
 
-Rysunek 4 – 7: klastrowanie opcje dostępne w usłudze Azure Container Service
+Rysunek 4 – 7: Klastrowanie opcje dostępne w usłudze Azure Container Service
 
 Jak pokazano w rysunek 4 – 8, usługi Container Service jest po prostu infrastrukturę platformy Azure w celu wdrożenia rozwiązania DC/OS, Kubernetes lub Docker Swarm, ale nie implementuje żadnych dodatkowych programu orchestrator. W związku z tym usługi Container Service jest nie koordynatora, jako takie; jest infrastruktury, która korzysta z istniejących orkiestratorów typu open source dla kontenerów.
 
@@ -133,7 +133,7 @@ Jak pokazano na rysunku 4 – 10 i myśleć z punktu widzenia mikrousług/biznes
 
 ![](./media/image14.png)
 
-Rysunek 4-10: firm mikrousług przy użyciu kilku usługi stanowe i bezstanowe w usłudze Service Fabric
+Rysunek 4-10: Mikrousługi biznesowych za pomocą kilku usługi stanowe i bezstanowe w usłudze Service Fabric
 
 W każdym przypadku gdy używasz usługi Service Fabric stanowych usług Reliable Services, masz również logicznych lub pracy mikrousługi (ograniczony kontekst), zwykle składa się z wielu usług fizycznych. Każda z ich, Usługa bramy i partycji usługi można można zaimplementować jako usługi interfejsu API sieci Web platformy ASP.NET, jak pokazano na rysunku 4-10.
 
@@ -145,7 +145,7 @@ W odniesieniu do kontenerów w usłudze Service Fabric możesz również usługi
 
 ![](./media/image15.png)
 
-Rysunek 4-11: firm mikrousług przy użyciu kilku usług (kontenery) w usłudze Service Fabric
+Rysunek 4-11: Mikrousługi biznesowych za pomocą kilku usług (kontenery) w usłudze Service Fabric
 
 Jednak kontenery tak zwane "przyczepki" (dwa kontenery, które muszą zostać wdrożone razem jako część usługi logiczne) również są możliwe w usłudze Service Fabric. Ważne jest mikrousług firm logiczne obramowanie kilku elementów cohesive. W wielu przypadkach może być pojedynczą usługę za pomocą pojedynczego modelu danych, ale w innych przypadkach może być fizyczny kilka usług, jak również.
 
@@ -153,7 +153,7 @@ Począwszy od pisania niniejszej (kwietnia 2017 r.) w usłudze Service Fabric ni
 
 ![](./media/image16.png)
 
-Rysunek 4-12: firm mikrousług mapowane do aplikacji usługi Service Fabric z kontenerami i usług stanowych
+Rysunek 4-12: Mikrousługi firm mapowane do aplikacji usługi Service Fabric z kontenerami i usług stanowych
 
 Obsługa jest także różnić w zależności od tego, czy używasz kontenerów platformy Docker w systemie Linux lub Windows kontenery. Obsługa kontenerów w usłudze Service Fabric będzie rozszerzać w przyszłych wydaniach. Aktualne najnowsze wiadomości dotyczące obsługi kontenerów w usłudze Service Fabric, w witrynie sieci Web platformy Azure, przeczytaj [usługi Service Fabric i kontenery](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
@@ -165,7 +165,7 @@ Ale uwierzytelnienia usługi również może być stanowe, co oznacza, że dane 
 
 ![](./media/image17.png)
 
-Rysunek 4 — 13: bezstanowe i stanowe mikrousługi
+Rysunek 4 — 13: Bezstanowe i stanowe mikrousługi
 
 Bezstanowe podejście nadaje się doskonale i jest prostsza do zaimplementowania niż mikrousług stanowych, ponieważ to podejście jest podobne do tradycyjnych i dobrze znanych wzorców. Jednak mikrousługi bezstanowe powodować opóźnienia między źródłami danych i procesów. Wymagają one również więcej ruchomych części próbując zwiększyć wydajność dzięki dodatkowej pamięci podręcznej i kolejek. Powoduje to, że użytkownik może wystąpić złożone architektury, które mają zbyt wiele warstw.
 
@@ -179,7 +179,6 @@ Innych platform tworzenia mikrousług, które umożliwiają usług stanowych obs
 
 Należy zauważyć, że kontenery platformy Docker samodzielnie bezstanowe. Jeśli chcesz wdrożyć usługi stanowej konieczne dodatkowe struktury profesjonalnie opracowany i wyższego poziomu zanotowanej wcześniej. Jednak w trakcie tworzenia tej dokumentacji usług stanowych w usłudze Service Fabric nie są obsługiwane jako kontenery tylko jako zwykły mikrousług. Obsługa interfejsu Reliable services w kontenerach będzie dostępna w przyszłych wersjach usługi Service Fabric.
 
-
 >[!div class="step-by-step"]
-[Poprzednie](soa-applications.md)
-[dalej](docker-apps-development-environment.md)
+>[Poprzednie](soa-applications.md)
+>[dalej](docker-apps-development-environment.md)

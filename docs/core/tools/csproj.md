@@ -2,14 +2,13 @@
 title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejące i pliki csproj .NET Core
 author: blackdwarf
-ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6dff2544d58d9907d0105dd5e5ff6a84ad3fbdb3
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203959"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169620"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -75,9 +74,6 @@ Aby wyłączyć **wszystkie niejawne elementy globalne**, można ustawić `<Enab
     <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
-
-### <a name="recommendation"></a>Zalecenie
-Za pomocą pliku csproj zaleca się, usuń elementy domyślne globalne z projektu i dodać tylko ścieżki do plików za pomocą elementy globalne dla tych artefaktów, których potrzebuje aplikacja/biblioteka, dla różnych scenariuszy (na przykład, środowisko uruchomieniowe i obsługi pakietów NuGet).
 
 ## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>Jak wyświetlić całego projektu, jak MSBuild widzi on
 
@@ -195,8 +191,12 @@ Tytuł przyjaznego dla człowieka pakietu, zwykle używanych w interfejsie użyt
 ### <a name="authors"></a>Autorzy
 Rozdzielana średnikami lista autorów pakietów, pasujące nazwy profilu w witrynie nuget.org. Te są wyświetlane w galerii pakietów NuGet w witrynie nuget.org i są odwoływania się do pakietów przez ten sam autorów.
 
-### <a name="description"></a>Opis
+### <a name="packagedescription"></a>PackageDescription
+
 Długi opis pakietu do wyświetlania w interfejsie użytkownika.
+
+### <a name="description"></a>Opis
+Długi opis zestawu. Jeśli `PackageDescription` nie zostanie określony, a następnie ta właściwość jest również używany jako opis pakietu.
 
 ### <a name="copyright"></a>Prawa autorskie
 Szczegóły dotyczące praw autorskich dla pakietu.

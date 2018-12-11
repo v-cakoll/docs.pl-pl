@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Og
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: e77065614423cd2e7fdb51258a8c7650280d0400
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 6ff6170fd1cdd0c69ecc8729cc8199cceea43ffa
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537829"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128482"
 ---
 # <a name="general-guidance"></a>Ogólne wskazówki
 
@@ -39,13 +39,12 @@ Przy użyciu .NET Framework na platformy Docker można poprawić środowisko wdr
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Książka elektroniczna: modernizacji istniejących aplikacji .NET Framework z platformą Azure i kontenerów Windows**  
+-   **Książka elektroniczna: Modernizacja istniejących aplikacji .NET Framework z platformą Azure i kontenerów Windows**  
     https://aka.ms/liftandshiftwithcontainersebook
 
--   **Przykładowe aplikacje: modernizacji starsze aplikacje sieci web ASP.NET za pomocą kontenerów Windows**  
+-   **Przykładowe aplikacje: Modernizacja starsze aplikacje sieci web ASP.NET za pomocą kontenerów Windows**  
     https://aka.ms/eshopmodernizing
 
-
 >[!div class="step-by-step"]
-[Poprzednie](index.md)
-[dalej](net-core-container-scenarios.md)
+>[Poprzednie](index.md)
+>[dalej](net-core-container-scenarios.md)

@@ -4,25 +4,25 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 487a303e5cf572cf4173423588ee7fb5a93cb394
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 932d3869483b6c96f2394ec308d3aa014b8650d4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185626"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152617"
 ---
 # <a name="development-process-for-azure"></a>Proces programistyczny dla platformy Azure
 
 > _"W chmurze użytkowników indywidualnych i małych firmach mogą przyciąganie ich palców i natychmiast skonfigurować usługi klasy korporacyjnej."_  
 > _-Roy Stephan_
 
- ## <a name="vision"></a>Wizja
+ ## <a name="vision"></a>Obraz
 
 > *Twórz dobrze zaprojektowanego aplikacje ASP .NET Core lubisz, za pomocą programu Visual Studio lub wiersz polecenia dotnet i programu Visual Studio Code lub Edytor wybór.*
 
 ## <a name="development-environment-for-aspnet-core-apps"></a>Środowisko programistyczne dla aplikacji platformy ASP.NET Core
 
-### <a name="development-tools-choices-ide-or-editor"></a>Opcje narzędzia programistyczne: środowisko IDE lub edytora
+### <a name="development-tools-choices-ide-or-editor"></a>Opcje narzędzia do opracowywania: Środowiskiem IDE lub edytorem
 
 Czy wolisz, pełne i zaawansowanego środowiska IDE lub edytora lekkie i elastyczne, Microsoft zapewnia pełne wsparcie podczas tworzenia aplikacji platformy ASP.NET Core.
 
@@ -46,7 +46,7 @@ Cykl życia projektowania aplikacji rozpoczyna się od maszyny każdy Deweloper 
 
 Aby rozpocząć tworzenie aplikacji platformy ASP.NET Core przy użyciu ciągłej integracji/ciągłego wdrażania, można użyć usługom DevOps platformy Azure lub w organizacji właścicielem Team Foundation Server (TFS).
 
-### <a name="initial-setup"></a>Początkowej konfiguracji
+### <a name="initial-setup"></a>Konfiguracja początkowa
 
 Aby utworzyć potok tworzenia wersji aplikacji, musisz mieć kod aplikacji w kontroli źródła. Konfigurowanie lokalnego repozytorium i podłącz go do zdalnego repozytorium w projekcie zespołowym. Wykonaj te instrukcje:
 
@@ -88,7 +88,7 @@ Tworzenie aplikacji platformy ASP.NET Core do wdrożenia na platformie Azure nie
 
 Zawsze, gdy wszystko będzie gotowe udostępniać kod swojemu zespołowi, będzie wypchnąć zmiany z repozytorium lokalnego źródła do repozytorium źródłowy udostępniony Twojego zespołu. Jeśli masz doświadczenie w pracy w gałęzi niestandardowych, ten krok obejmuje zazwyczaj scalanie kodu w gałęzi udostępnionej (prawdopodobnie przez klasy [żądania ściągnięcia](https://docs.microsoft.com/azure/devops/git/pull-requests)).
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Krok 3. Serwer kompilacji: Ciągłej integracji. kompilowanie, testowanie, pakietu
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Krok 3. Serwer kompilacji: Ciągła integracja. kompilowanie, testowanie, pakietu
 
 Nowa kompilacja jest wyzwalana na serwerze kompilacji zawsze wtedy, gdy przeprowadzane jest zatwierdzenie nowe repozytorium kodu udostępnionej aplikacji. Jako część procesu ciągłej integracji Ta kompilacja powinna pełni skompilować aplikację i uruchomić testy automatyczne, aby upewnić się, że wszystko działa zgodnie z oczekiwaniami. Wynik końcowy w procesie ciągłej integracji powinny być spakowana utworzona wersja aplikacji sieci web, gotowe do wdrożenia.
 
@@ -110,5 +110,5 @@ Po uruchomieniu aplikacji sieci Web można monitorować kondycję aplikacji i zb
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
-[Poprzednie](test-asp-net-core-mvc-apps.md)
-[dalej](azure-hosting-recommendations-for-asp-net-web-apps.md)
+>[Poprzednie](test-asp-net-core-mvc-apps.md)
+>[dalej](azure-hosting-recommendations-for-asp-net-web-apps.md)

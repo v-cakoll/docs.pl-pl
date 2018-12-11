@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Ki
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 128801fbe49a3f7618b1cedc814b7663d57df624
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1a91f645aa6f9ce8652fb18243c2e2775abe87d1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195336"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128755"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 
@@ -65,9 +65,6 @@ W międzyczasie dowolnej platformy i usługi na platformie Azure nadal nie obsł
 -   **Omówienie składników platformy .NET**  
     [https://docs.microsoft.com/dotnet/standard/components](../../components.md)
 
-
-
-
 >[!div class="step-by-step"]
-[Poprzednie](net-core-container-scenarios.md)
-[dalej](container-framework-choice-factors.md)
+>[Poprzednie](net-core-container-scenarios.md)
+>[dalej](container-framework-choice-factors.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 308b834a133798104dcc47a16f8adc068ed937ec
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77be620180f1e19c01f47d8ab5cabe3e7d021aca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188348"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129678"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Tworzenie łańcuchów zadań przy użyciu zadań kontynuacji
 W programowaniu asynchronicznych jest częste jedna operacja asynchroniczna po zakończeniu wywołuje drugą operację i przekazuje dane do niej. Tradycyjnie zostało to zrobione za pomocą metody wywołania zwrotnego. W bibliotece zadań równoległych taką samą funkcjonalność świadczą *zadań kontynuacji*. Zadanie kontynuacji (znane również jako kontynuacja) to asynchroniczne zadanie, które jest wywoływane przez inne zadanie, który jest znany jako *zadania poprzedzającego*, po jego zakończeniu.  
@@ -118,7 +118,7 @@ W programowaniu asynchronicznych jest częste jedna operacja asynchroniczna po z
 ## <a name="associating-state-with-continuations"></a>Kojarzenie stanu z Kontynuacjami  
  Można skojarzyć z dowolny stan z kontynuacją zadania. <xref:System.Threading.Tasks.Task.ContinueWith%2A> Metoda zapewnia przeciążone wersje, każda <xref:System.Object> wartość, która reprezentuje stan kontynuacji. Obiekt stanu można później dostęp, za pomocą <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> właściwości. Obiekt stanu to `null` Jeśli nie zostanie określona wartość.  
   
- Stanu kontynuacji jest przydatny, gdy konwertujesz istniejący kod, który używa [modelu programowania asynchronicznego (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) Aby wykorzystać TPL. W modelu programowania Asynchronicznego zazwyczaj podaje się stan obiektu w **rozpocząć *** metoda* i później przechodzi do tego stanu przy użyciu <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> właściwości. Za pomocą <xref:System.Threading.Tasks.Task.ContinueWith%2A> metody, można zachować ten stan podczas konwertowania kodu, który używa APM, aby wykorzystać TPL.  
+ Stanu kontynuacji jest przydatny, gdy konwertujesz istniejący kod, który używa [modelu programowania asynchronicznego (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) Aby wykorzystać TPL. W modelu programowania Asynchronicznego zazwyczaj podaje się stan obiektu w **rozpocząć**_metoda_ i później przechodzi do tego stanu przy użyciu <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> właściwości. Za pomocą <xref:System.Threading.Tasks.Task.ContinueWith%2A> metody, można zachować ten stan podczas konwertowania kodu, który używa APM, aby wykorzystać TPL.  
   
  Stan kontynuacji może być także przydatny podczas pracy z <xref:System.Threading.Tasks.Task> obiektów w debugerze programu Visual Studio. Na przykład w **zadań równoległych** oknie **zadań** kolumna wyświetla ciąg reprezentujący obiekt stanu dla każdego zadania. Aby uzyskać więcej informacji na temat **zadań równoległych** okna, zobacz [korzystanie z okna zadań](/visualstudio/debugger/using-the-tasks-window).  
   

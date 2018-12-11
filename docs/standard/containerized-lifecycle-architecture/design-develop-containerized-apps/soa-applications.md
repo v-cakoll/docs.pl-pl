@@ -1,25 +1,24 @@
 ---
 title: Aplikacje SOA
-description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
+description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 276071a5d55015f2feecc27020ad614684907b4c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 7f88daaf0787cf780e7ab9602f35ae4e6ab8308c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105214"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155317"
 ---
 # <a name="soa-applications"></a>Aplikacje SOA
 
-SOA został termin nadmiernego obciążenia i przewidziany tak wiele różnych rzeczy do innej osoby. Ale co najmniej i najprostszy, SOA, lub orientacji usługi, średniej architektury aplikacji, decomposing go w wielu usługach (najczęściej jako usługi HTTP), które mogą być klasyfikowane w różnych typów tej możesz struktury, takie jak podsystemów lub warstwy z informacjami w innych przypadkach jako.
+SOA nadmiernego obciążenia termin został i jest przeznaczone tak wiele różnych rzeczy do różnych osób. Ale co najmniej i uniwersalność, SOA, lub orientacji usługi, mean architekturę aplikacji przez podzielenie go w wielu usługach (najczęściej jako usługi HTTP), które mogą być klasyfikowane w różnych typach tej można struktury, takie jak podsystemów lub w innych przypadkach jako warstwy.
 
-Obecnie można wdrożyć tych usług jako kontenery Docker, którego rozwiązuje problemy związane z wdrożenia, ponieważ wszystkie zależności są uwzględniane w obrazie kontenera. Jednak gdy musisz SOAs skalowalnego w poziomie, mogą wystąpić problemy wdrażania na podstawie pojedynczego wystąpienia. Jest to, gdzie Docker klastrowania lub oprogramowania orchestrator pomoże Ci. Przyjrzymy to bardziej szczegółowo w następnej sekcji podczas omówione podejścia mikrousług.
+Obecnie można wdrożyć te usługi jako kontenery platformy Docker, która rozwiązuje problemów związanych z wdrażaniem, ponieważ wszystkie zależności są zawarte w obrębie obrazu kontenera. Jednak gdy trzeba skalowalnego w poziomie SOAs mogą wystąpić problemy wdrażania na podstawie jednego wystąpienia. Jest to, gdzie klastra oprogramowania lub koordynatora Docker pomoże Ci. Omówimy to bardziej szczegółowo w następnej sekcji podczas omówiony podejścia mikrousług.
 
-Na koniec dnia rozwiązań klastrowych kontenera są przydatne, dla obu tradycyjnych architektura SOA lub bardziej zaawansowanych architektura mikrousług, w której każdy mikrousługi jest właścicielem jego modelu danych. I dzięki użyciu wielu baz danych, możesz również można skalowalnego w poziomie warstwy danych, a nie Praca z wbudowanymi baz danych udostępnionych przez usługi SOA. Omówienie podział danych jest jednak wyłącznie dotyczące architektury i projektu.
-
+Na koniec dnia rozwiązań klastrowych kontenera są przydatne, dla obu tradycyjna architektura SOA lub bardziej zaawansowanych architektury mikrousług, w której każda mikrousługa jest właścicielem swój model danych. A dzięki wielu baz danych, możesz też może skalowalnego w poziomie warstwy danych, a nie Praca z bazami danych monolityczne, udostępniane przez usługi SOA. Jednak dyskusję na temat dzielenia danych dotyczy wyłącznie architektury i projektu.
 
 >[!div class="step-by-step"]
-[Poprzednie](state-and-data-in-docker-applications.md)
-[dalej](orchestrate-high-scalability-availability.md)
+>[Poprzednie](state-and-data-in-docker-applications.md)
+>[dalej](orchestrate-high-scalability-availability.md)

@@ -1,28 +1,32 @@
 ---
-title: Dodatkowe narzędzia .NET core
-description: Przegląd dodatkowe narzędzia, które obsługują i rozszerzania funkcji platformy .NET Core.
+title: Dodatkowe narzędzia interfejsu wiersza polecenia platformy .NET core
+description: Omówienie dodatkowe narzędzia można zainstalować obsługi i rozszerzania funkcji platformy .NET Core.
 author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2018
-ms.custom: mvc
-ms.openlocfilehash: c64dddbe36b789a695c2603e78b29b38d8718f95
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: 0fb04b65efa26de3f0db9b7f7c28cce01ad9df97
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208386"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169199"
 ---
-# <a name="net-core-additional-tools"></a>Dodatkowe narzędzia .NET core
+# <a name="net-core-additional-tools-overview"></a>Omówienie narzędzia dodatkowe platformy .NET core
 
 W tej sekcji kompiluje listę narzędzi, które obsługują i rozszerzania funkcji platformy .NET Core, oprócz [platformy .NET Core interfejsu wiersza polecenia (CLI)](../tools/index.md) narzędzia.
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[Narzędzia WCF Web Service Reference](wcf-web-service-reference-guide.md)
 
-Odwołanie do usługi sieci Web WCF (Windows Communication Foundation) jest dostawcę usług połączonych programu Visual Studio, zgłaszający jego przedstawiają po raz w [programu Visual Studio 2017 w wersji 15.5](https://visualstudio.microsoft.com/news/releasenotes/vs2017-relnotes#WCFTools). To narzędzie służy do pobierania metadanych z usługi sieci web w bieżącym rozwiązaniu, w lokalizacji sieciowej lub z pliku WSDL, a następnie generuje plik źródłowy jest zgodny z platformą .NET Core, definicji klasy serwera proxy usług WCF za pomocą metod, które umożliwiają dostęp do operacji usługi sieci web.
+Odwołanie do usługi sieci Web WCF (Windows Communication Foundation) jest dostawcę usług połączonych programu Visual Studio, zgłaszający jego przedstawiają po raz w [programu Visual Studio 2017 w wersji 15.5](/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools). To narzędzie służy do pobierania metadanych z usługi sieci web w bieżącym rozwiązaniu, w lokalizacji sieciowej lub z pliku WSDL, a następnie generuje plik źródłowy jest zgodny z platformą .NET Core, definicji klasy serwera proxy usług WCF za pomocą metod, które umożliwiają dostęp do operacji usługi sieci web.
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[Narzędzia dotnet svcutil WCF](dotnet-svcutil-guide.md)
 
 Narzędzia dotnet svcutil WCF (Windows Communication Foundation) jest narzędziem wiersza polecenia platformy .NET Core, które służy do pobierania metadanych z usługi sieci web w lokalizacji sieciowej lub z pliku WSDL, a następnie generuje plik źródłowy zgodnych z platformą .NET Core, definicji klasy serwera proxy usług WCF za pomocą metod Czy można użyć do dostępu do operacji usługi sieci web. **Narzędzia svcutil dotnet** narzędzie jest alternatywnych opcji [ **WCF Web Service Reference** ](wcf-web-service-reference-guide.md) dostawcy usług, który po raz pierwszy wysłane połączona programu Visual Studio z programem Visual Studio v15.5 2017 r. **Narzędzia svcutil dotnet** narzędzia jako narzędzie wiersza polecenia platformy .NET Core, są dostępne dla wielu platform w systemie Linux, macOS i Windows.
+
+## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[Narzędzia dotnet svcutil.xmlserializer WCF](dotnet-svcutil.xmlserializer-guide.md)
+
+Od programu .NET Framework można wstępnie wygenerować zestawu serializacji przy użyciu narzędzia svcutil. Pakiet NuGet dotnet svcutil.xmlserializer zapewnia podobne funkcje na platformie .NET Core. Na — generuje C# kodu serializacji dla typów w aplikacji klienckiej, które są używane przez kontraktu usługi WCF i może być serializowany przez <xref:System.Xml.Serialization.XmlSerializer>. Zwiększa to wydajność uruchamiania serializacji XML podczas serializacji lub deserializacji obiektów z tych typów.
 
 ## <a name="xml-serializer-generatorxml-serializer-generatormd"></a>[Generator serializatora XML](xml-serializer-generator.md)
 

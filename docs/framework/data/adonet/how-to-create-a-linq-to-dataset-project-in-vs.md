@@ -3,13 +3,13 @@ title: Tworzenie projektu LINQ to DataSet w programie Visual Studio
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
 ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297019"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154037"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Porady: Tworzenie projektu LINQ to DataSet w programie Visual Studio
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Instrukcje: Tworzenie projektu LINQ to DataSet w programie Visual Studio
 
 Różne rodzaje projektów LINQ wymagają pewnych odwołania do zestawów i importowanych przestrzeni nazw (Visual Basic) lub [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywy (C#). Minimalne wymagania dla programu LINQ to odwołanie do *System.Core.dll* i `using` dyrektywy dla <xref:System.Linq>.
 
@@ -26,7 +26,7 @@ Wykonaj następujące kroki w celu włączenia zapytań LINQ do funkcji zestawu 
 
 1. Dodaj odwołania do **System.Core**, **System.Data**, i **System.Data.DataSetExtensions**.
 
-   W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** a następnie wybierz węzeł **Dodaj odwołanie**. W **Menadżer odwołań** okno dialogowe, wybierz opcję **System.Core**, **System.Data**, i **System.Data.DataSetExtensions**. Wybierz **OK**.
+   W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** a następnie wybierz węzeł **Dodaj odwołanie**. W **Menadżer odwołań** okno dialogowe, wybierz opcję **System.Core**, **System.Data**, i **System.Data.DataSetExtensions**. Kliknij przycisk **OK**.
 
 1. Dodaj [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywy (lub [importuje instrukcji](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) w języku Visual Basic) dla **System.Data** i **System.Linq**.
 

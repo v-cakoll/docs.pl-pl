@@ -1,96 +1,96 @@
 ---
-title: C# wyrażeń — samouczek języka C#
-description: wyrażenia, argumentów i operatory są blokami konstrukcyjnymi języka C#
+title: C#Wyrażenia — Przewodnik po przykładzie C# języka
+description: bloki konstrukcyjne są wyrażenia, argumenty operacji i operatory C# języka
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 8fa1c5d0464644b26eb457bca8ecaf007c288f42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28e1d6952975c6932dc9ae40af28c7201d61d778
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352306"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154937"
 ---
 # <a name="expressions"></a>Wyrażenia
 
-*Wyrażenia* są tworzone na podstawie *operandy* i *operatory*. Operatory wyrażenia wskazują, jakie operacje, aby zastosować do argumentów operacji. Przykłady operatory `+`, `-`, `*`, `/`, i `new`. Przykładami operandy literały, pola, zmienne lokalne i wyrażenia.
+*Wyrażenia* są konstruowane na podstawie *operandy* i *operatory*. Operatory wyrażenie wskazuje operacji do zastosowania do operandów. Przykłady operatorów `+`, `-`, `*`, `/`, i `new`. Przykładami operandy są literały, pola, zmienne lokalne i wyrażeń.
 
-Jeśli wyrażenie zawiera wiele operatorów *pierwszeństwo* operatorów decyduje o kolejności, w jakiej są oceniane poszczególne operatory. Na przykład, wyrażenie `x + y * z` jest szacowana jako `x + (y * z)` ponieważ `*` operator ma wyższy priorytet niż `+` operatora.
+Gdy wyrażenie zawiera wiele operatorów *pierwszeństwo* operatorów określa kolejność, w jakiej są oceniane poszczególnych operatorach. Na przykład, wyrażenie `x + y * z` jest oceniane jako `x + (y * z)` ponieważ `*` operator ma wyższy priorytet niż `+` operatora.
 
-Po wystąpieniu operand między dwa operatory o tym samym priorytecie *kojarzenie* operatorów decyduje o kolejności, w którym wykonywane są operacje:
+Gdy argument odbywa się między dwa operatory o tym samym priorytecie *kojarzenie* operatorów określa kolejność, w której są wykonywane operacje:
 
-*   Z wyjątkiem operatory przypisania są wszystkie operatory binarne *lewostronne*, co oznacza, że operacje są wykonywane od lewej do prawej. Na przykład `x + y + z` jest szacowana jako `(x + y) + z`.
-*   Operatory przypisania i operator warunkowy (`?:`) są *łączny prawo*, co oznacza, że operacje są wykonywane od prawej do lewej. Na przykład `x = y = z` jest szacowana jako `x = (y = z)`.
+*   Z wyjątkiem operatorów przypisania wszystkie operatory dwuargumentowe to *lewostronne*, co oznacza, że operacje są wykonywane od lewej do prawej. Na przykład `x + y + z` jest oceniane jako `(x + y) + z`.
+*   Operatory przypisania i operator warunkowy (`?:`) są *zespolony z prawej*, co oznacza, że operacje są wykonywane od prawej do lewej. Na przykład `x = y = z` jest oceniane jako `x = (y = z)`.
 
-Priorytet i łączność można sterować za pomocą nawiasów. Na przykład `x + y * z` najpierw mnoży `y` przez `z` , a następnie dodaje wynik do `x`, ale `(x + y) * z` najpierw dodaje `x` i `y` , a następnie mnoży wynik przez `z`.
+Pierwszeństwo i kojarzenie mogą być kontrolowane za pomocą nawiasów. Na przykład `x + y * z` najpierw mnoży `y` przez `z` , a następnie dodaje wynik do `x`, ale `(x + y) * z` najpierw dodaje `x` i `y` i następnie mnoży wynik przez `z`.
 
-Większość operatorów może być *przeciążony*. Przeładowanie operatora pozwala implementacje zdefiniowany przez użytkownika operator może być określony dla operacji skutkującej jeden lub oba argumenty operacji typu klasy lub struktury zdefiniowane przez użytkownika.
+Większość operatorów może być *przeciążone*. Przeciążanie operatora zezwala na implementacjami operatorów zdefiniowanych przez użytkownika, może być określony dla operacji, gdzie jeden lub oba operandy są typu klasy lub struktury zdefiniowany przez użytkownika.
 
-Poniżej przedstawiono podsumowanie C# dla operatorów, wyświetlanie kategorii operatora w kolejności od najwyższego malejąco. Operatory w tej samej kategorii mają taki sam priorytet. W każdej z nich znajduje się lista wyrażeń w tej kategorii, oraz opis tego typu wyrażenia.
+Poniżej znajduje się podsumowanie C#firmy operatorów, najniższą listę kategorii operatora w kolejności od najwyższego do. Operatory w tej samej kategorii mają równy priorytet. W każdej z nich znajduje się lista wyrażeń w danej kategorii, oraz opis tego typu wyrażenia.
 
-* podstawowy
+* Podstawowy
     - `x.m`: Dostęp do elementu członkowskiego
-    - `x(...)`: Wywołanie metody a obiektem delegowanym
-    - `x[...]`: Tablica i dostęp indeksatora
-    - `x++`: Przyrost po
-    - `x--`: Zmniejszenie po
-    - `new T(...)`: Obiekt, a następnie delegatem tworzenia
-    - `new T(...){...}`: Tworzenie obiektów za pomocą inicjatora
-    - `new {...}`: Inicjator obiektu anonimowe
+    - `x(...)`: Wywołanie metody i delegata
+    - `x[...]`: Dostęp do tablicy i indeksatora
+    - `x++`: Postinkrementacja
+    - `x--`: Postdekrementacja
+    - `new T(...)`: Utworzenie obiektu i delegata
+    - `new T(...){...}`: Utworzenie obiektu za pomocą inicjatora
+    - `new {...}`:  Inicjator obiektu anonimowego
     - `new T[...]`: Do utworzenia tablicy
-    - `typeof(T)`: Uzyskanie <xref:System.Type> obiekt do `T`
-    - `checked(x)`: Obliczyć wyrażenia w kontekście zaznaczenia
-    - `unchecked(x)`: Obliczyć wyrażenia w kontekście unchecked
-    - `default(T)`: Wartość domyślna typu uzyskać `T`
-    - `delegate {...}`: Anonimowy — funkcja (metody anonimowej)
-* Jednoargumentowe
-    - `+x`: Tożsamości
-    - `-x`: Negacji
-    - `!x`: Logiczna Negacja
-    - `~x`: Bitową negację
-    - `++x`: Przyrost wstępnego
-    - `--x`: Zmniejszenie wstępnego
+    - `typeof(T)`: Uzyskaj <xref:System.Type> dla obiektu `T`
+    - `checked(x)`: Obliczenie wyrażenia w kontekście sprawdzanym
+    - `unchecked(x)`: Obliczenie wyrażenia w kontekście niesprawdzanym
+    - `default(T)`: Uzyskanie wartości domyślnej typu `T`
+    - `delegate {...}`: Funkcja anonimowa (metoda anonimowa)
+* Jednoargumentowy
+    - `+x`: Tożsamość
+    - `-x`: Negacja
+    - `!x`: Negacja logiczna
+    - `~x`: Negacja bitowa
+    - `++x`: Preinkrementacja
+    - `--x`: Predekrementacja
     - `(T)x`: Jawnie przekonwertować `x` na typ `T`
-    - `await x`: Poczekaj asynchronicznie `x` do ukończenia
+    - `await x`: Asynchronicznie poczekaj, aż `x` do ukończenia
 * Mnożenia
-    - `x * y`: Mnożenia
+    - `x * y`: Mnożenie
     - `x / y`: Dzielenie
-    - `x % y`: Pozostałe
+    - `x % y`: Reszta
 * Dodatku
-    - `x + y`: Dodawanie, ciągów, kombinacja delegata
-    - `x – y`: Odejmowania, usunięcie delegata
-* SHIFT
-    - `x << y`: Przesunięcia w lewo
-    - `x >> y`: Przesuń w prawo
-* Relacyjna i testowania typu
-    - `x < y`: Mniejsza niż
-    - `x > y`: Większa niż
-    - `x <= y`: Mniejsza niż lub równe
-    - `x >= y`: Większe lub równe
-    - `x is T`: Zwracany `true` Jeśli `x` jest `T`, `false` inaczej
-    - `x as T`: Zwracany `x` typu `T`, lub `null` Jeśli `x` nie jest `T`
+    - `x + y`: Dodawanie, łączenie ciągów, łączenie delegatów
+    - `x – y`: Odejmowanie, usuwanie delegata
+* Shift
+    - `x << y`: Przesunięcie w lewo
+    - `x >> y`: Przesunięcie w prawo
+* Relacyjne i badania typu
+    - `x < y`: Mniejsze niż
+    - `x > y`: Większe niż
+    - `x <= y`: Mniejsze niż lub równe
+    - `x >= y`: Większe niż lub równe
+    - `x is T`: Zwróć `true` Jeśli `x` jest `T`, `false` inaczej
+    - `x as T`: Zwróć `x` wpisanych w formie `T`, lub `null` Jeśli `x` nie jest `T`
 * Równość
-    - `x == y`: Równe
-    - `x != y`: Nie jest równy
+    - `x == y`: Równa się
+    - `x != y`: Nie równa się
 * AND logiczne
-    - `x & y`: Liczba całkowita bitowe i logicznych logiczny AND
+    - `x & y`: Liczba całkowita bitowe i logicznych logiczne AND
 * XOR logiczne
-    - `x ^ y`: Liczba całkowita iloczynu bitowego XOR, logiczna XOR logiczne
+    - `x ^ y`: Bitowe XOR dla wartości całkowitych, logiczne XOR dla wartości binarnych
 * OR logiczne
-    - `x | y`: Liczba całkowita bitowe lub logiczna operatora logicznego OR
+    - `x | y`: Bitowe OR dla wartości całkowitych, logiczne OR dla wartości binarnych
 * AND warunkowe
-    - `x && y`: Oblicza `y` tylko wtedy, gdy `x` nie jest `false`
+    - `x && y`: Ocenia `y` tylko wtedy, gdy `x` nie jest `false`
 * OR warunkowe
-    - `x || y`: Oblicza `y` tylko wtedy, gdy `x` nie jest `true`
+    - `x || y`: Ocenia `y` tylko wtedy, gdy `x` nie jest `true`
 * Łączenie wartości null
     - `x ?? y`: Daje w wyniku `y` Jeśli `x` ma wartość null, aby `x` inaczej
 * Warunkowe
-    - `x ? y : z`: Oblicza `y` Jeśli `x` jest `true`, `z` Jeśli `x` jest `false`
-* Przypisanie ani funkcji anonimowej
-    - `x = y`: Przypisania
-    - `x op= y`: Przydział złożony; Operatory obsługiwane są
+    - `x ? y : z`: Ocenia `y` Jeśli `x` jest `true`, `z` Jeśli `x` jest `false`
+* Przypisania lub funkcja anonimowa
+    - `x = y`: Przypisanie
+    - `x op= y`: Przydział złożony; obsługiwane operatory to
         - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-    - `(T x) => y`: Funkcja anonimowe (wyrażenia lambda)
+    - `(T x) => y`: Funkcja anonimowa (wyrażenie lambda)
 
 >[!div class="step-by-step"]
-[Poprzednie](types-and-variables.md)
-[dalej](statements.md)
+>[Poprzednie](types-and-variables.md)
+>[dalej](statements.md)

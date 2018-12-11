@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123231"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154180"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stan i dane w aplikacjach platformy Docker
 
@@ -39,7 +39,7 @@ Rysunek 4-5 zawiera, można umieścić w pamięci masowej z kontenerów, samodzi
 
 ![](./media/image5.png)
 
-Rysunek 4-5: woluminów danych i zewnętrznych źródeł danych dla kontenerów aplikacji/kontenerów
+Rysunek 4-5: Woluminy danych i zewnętrznych źródeł danych dla kontenerów aplikacji/kontenerów
 
 Z powodu braku możliwości zarządzania danymi udostępniane między kontenerów, które są uruchamiane na osobnych hostach fizycznych, zalecane jest, aby używać woluminów dla danych biznesowych, chyba że hosta platformy Docker jest stałą hostów/maszyn wirtualnych, ponieważ podczas korzystania z kontenerów platformy Docker programu orchestrator oczekiwane są kontenery do przeniesienia od jednej do innego hosta, w zależności od optymalizacje wykonywane przez klaster.
 
@@ -49,7 +49,6 @@ W związku z tym woluminy regularnych danych są dobre mechanizm do pracy z plik
 
 Zdalnych źródeł danych i pamięci podręczne, takich jak bazy danych SQL Database, DocumentDB lub zdalnego pamięci podręcznej, takich jak Redis będzie taki sam, jak projektowanie bez kontenerów. Jest to jedna z preferowanych i sprawdzone, sposoby przechowywania danych aplikacji biznesowych.
 
-
 >[!div class="step-by-step"]
-[Poprzednie](monolithic-applications.md)
-[dalej](soa-applications.md)
+>[Poprzednie](monolithic-applications.md)
+>[dalej](soa-applications.md)

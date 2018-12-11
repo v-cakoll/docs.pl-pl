@@ -6,5 +6,5 @@
 |Sugestia|Ten problem został rozwiązany w programie .NET Framework 4.7. Aby zapobiec wyjątek, uaktualnienie do wersji programu .NET Framework, począwszy od programu .NET Framework 4.7.|
 |Zakres|Krawędź|
 |Wersja|4.6.1|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 

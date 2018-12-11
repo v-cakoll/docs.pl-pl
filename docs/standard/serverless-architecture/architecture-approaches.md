@@ -4,12 +4,12 @@ description: Wprowadzenie do architektury zbliża się do tworzenia aplikacji op
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 21e191f17e7d0b4f2d64454fb14c46a4831a8375
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084006"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126748"
 ---
 # <a name="architecture-approaches"></a>Metody dotyczące architektury
 
@@ -97,5 +97,5 @@ Mikrousługi są dostarczane z własnych wyzwaniom, w tym:
 Ostatecznie są wszystkie te wyzwania związane z tym sięgnięcie do korzyści z bez użycia serwera, które zostały omówione w dalszej części rozwiązań.
 
 >[!div class="step-by-step"]
-[Poprzednie](index.md)
-[dalej](architecture-deployment-approaches.md)
+>[Poprzednie](index.md)
+>[dalej](architecture-deployment-approaches.md)

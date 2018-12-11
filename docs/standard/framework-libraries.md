@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 1b5099c73264f3175aa05094f4460c1c97774533
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743966"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143379"
 ---
 # <a name="framework-libraries"></a>Biblioteki Framework
 
@@ -53,7 +53,8 @@ BCL udostępnia najbardziej podstawowe typy i funkcje narzędzia i są podstawą
 
 *   <xref:System.Net.Http.HttpClient> -Interfejs API do wysyłania żądań HTTP i odbierania odpowiedzi HTTP z zasobu zidentyfikowanego z użyciem identyfikatora URI.
 *   <xref:System.Xml.Linq.XDocument> -Interfejs API, ładowanie i wykonywanie zapytań względem dokumentów XML za pomocą LINQ.
-*   <xref:System.IO.StreamReader> -Interfejs API do odczytu plików (<xref:System.IO.StringWriter>) może służyć do zapisania plików.
+*   <xref:System.IO.StreamReader> -Interfejs API, do odczytywania plików. 
+*   <xref:System.IO.StreamWriter> -Interfejs API, do zapisywania plików.
 
 ## <a name="app-model-apis"></a>Interfejsy API modelu aplikacji
 

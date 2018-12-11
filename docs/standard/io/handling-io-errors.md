@@ -2,7 +2,9 @@
 title: Obsługa błędów operacji We/Wy na platformie .NET
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
-ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
@@ -11,12 +13,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 50dee427913e1ec94a06f1202966bb0f7f5f2099
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696420"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126878"
 ---
 # <a name="handling-io-errors-in-net"></a>Obsługa błędów operacji We/Wy na platformie .NET
 
@@ -47,15 +49,15 @@ Ze względu na to sposób nie zależy od systemu operacyjnego identyczne wyjątk
 
 | Typ wyjątku | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | Tak | Tak |
-| <xref:System.IO.FileNotFoundException> | Tak | Tak |
-| <xref:System.IO.DirectoryNotFoundException> | Tak | Tak |
-| <xref:System.IO.DriveNotFoundException?> | Tak | Tak |
-| <xref:System.IO.PathTooLongException> | Tak | Tak |
-| <xref:System.OperationCanceledException> | Tak | Tak |
-| <xref:System.UnauthorizedAccessException> | Tak | Tak |
+| <xref:System.IO.IOException> | Tak | Yes |
+| <xref:System.IO.FileNotFoundException> | Yes | Yes |
+| <xref:System.IO.DirectoryNotFoundException> | Yes | Yes |
+| <xref:System.IO.DriveNotFoundException?> | Yes | Yes |
+| <xref:System.IO.PathTooLongException> | Yes | Yes |
+| <xref:System.OperationCanceledException> | Yes | Yes |
+| <xref:System.UnauthorizedAccessException> | Yes | Tak |
 | <xref:System.ArgumentException> | .NET core 2.0 i starszych| Tak |
-| <xref:System.NotSupportedException> | Nie | Tak |
+| <xref:System.NotSupportedException> | Nie | Yes |
 | <xref:System.Security.SecurityException> | Nie | Tylko ograniczone zaufanie |
 
 ## <a name="handling-ioexception"></a>Ioexception — Obsługa

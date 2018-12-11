@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą chmury platfor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c23acc16698446bc07c0047b68186e21c2ceb2d
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: f5a9d0c7c1c45a6afca390e93384af4c8386fe09
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372854"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150593"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Przewodniki i technicznych wprowadzająca
 
@@ -55,7 +55,7 @@ Te aplikacje są dostępne pod adresem [repozytorium GitHub eShopModernizing](ht
 
 Głównym celem tego przewodnika jest po prostu zapoznać się z tych aplikacji i ich kodu i konfiguracji. Aplikacje można skonfigurować tak, aby wygenerować i użyć danych testowych, bez korzystania z bazy danych SQL do celów testowych. Ta opcjonalna konfiguracja opiera się na iniekcji zależności w sposób odłączony.
 
-### <a name="scenario-1-aspnet-web-apps"></a>Scenariusz 1: Aplikacje ASP.NET sieci Web
+### <a name="scenario-1-aspnet-web-apps"></a>Scenariusz 1: Aplikacje sieci Web platformy ASP.NET
 
 Na poniższym rysunku przedstawiono prosty scenariusz oryginalnego starsze aplikacje sieci web platformy ASP.NET.
 
@@ -79,7 +79,7 @@ Na poniższym rysunku przedstawiono prosty scenariusz oryginalnego starszych apl
 
 ### <a name="benefits"></a>Zalety
 
-Korzyści wynikające z tego przewodnika są proste: po prostu zapoznać się z kodem i początkowy aplikacji.
+Korzyści wynikające z tego przewodnika są proste: Po prostu zapoznać się z kodem i początkowy aplikacji.
 
 ### <a name="next-steps"></a>Następne kroki
 
@@ -107,7 +107,7 @@ Celem tego przewodnika jest, aby pokazać Ci kilka opcji konteneryzowania istnie
 
 Ten przewodnik koncentruje się na Visual Studio Tools 2017 podejścia platformy Docker, ale pozostałe dwie metody są podobne rozumieniu przy użyciu plików Dockerfile.
 
-### <a name="scenario-1-containerized-aspnet-web-apps"></a>Scenariusz 1: Aplikacje sieci web ASP.NET konteneryzowanych
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>Scenariusz 1: Konteneryzowanych aplikacji sieci web platformy ASP.NET
 
 Na poniższym rysunku przedstawiono scenariusz konteneryzowanych eShop starszych internetowych aplikacji.
 
@@ -115,7 +115,7 @@ Na poniższym rysunku przedstawiono scenariusz konteneryzowanych eShop starszych
 >
 
 
-### <a name="scenario-2-containerized-wcf-service"></a>Scenariusz 2: Przekazywanie Usługa WCF konteneryzowanych
+### <a name="scenario-2-containerized-wcf-service"></a>Scenariusz 2: Konteneryzowana Usługa WCF
 
 Na poniższym rysunku przedstawiono scenariusz, w przypadku aplikacji 3-warstwowej przy użyciu konteneryzowana Usługa WCF. 
 
@@ -159,7 +159,7 @@ Celem tego przewodnika jest aby pokazać Ci kilka rozwiązań alternatywnych, do
 
 W tym przewodniku znajdują się kilku scenariuszy.
 
-#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Scenariusz A: Wdrażanie na Maszynie wirtualnej platformy Azure, od deweloperów komputera za pośrednictwem połączenia aparat platformy Docker
+#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Scenariusz A: Wdrażanie na Maszynie wirtualnej platformy Azure od deweloperów komputera za pośrednictwem połączenia aparat platformy Docker
 
 ![Wdrażanie na Maszynie wirtualnej platformy Azure od deweloperów komputera za pośrednictwem połączenia aparat platformy Docker](./media/image5-4.png)
 
@@ -171,7 +171,7 @@ W tym przewodniku znajdują się kilku scenariuszy.
 
 > **Rysunek 5-5.** Wdrażanie na maszynie Wirtualnej platformy Azure za pośrednictwem rejestru platformy Docker
 
-#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Scenariusz C: wdrożyć na Maszynie wirtualnej platformy Azure z potoków ciągłej integracji/ciągłego wdrażania w usługom DevOps platformy Azure
+#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Scenariusz C: Wdrożyć Maszynę wirtualną platformy Azure z poziomu potoków ciągłej integracji/ciągłego wdrażania w usługom DevOps platformy Azure
 
 ![Wdrożyć Maszynę wirtualną platformy Azure z poziomu potoków ciągłej integracji/ciągłego wdrażania w usługom DevOps platformy Azure](./media/image5-6.png)
 
@@ -260,7 +260,7 @@ Celem tego przewodnika jest Dowiedz się, jak wdrażanie aplikacji dla komputer�
 
 > **Rysunek 5 – 7.** Wdróż bezpośrednio w klastrze Kubernetes z poziomu środowiska projektowego
 
-#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Scenariusz B: wdrażanie klastra Kubernetes z ciągłej integracji/ciągłego wdrażania potoków w usługom DevOps platformy Azure
+#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Scenariusz B: Wdrażanie klastra Kubernetes z potoków ciągłej integracji/ciągłego wdrażania w usługom DevOps platformy Azure
 
 ![Wdrażanie klastra Kubernetes z potoków ciągłej integracji/ciągłego wdrażania w usługom DevOps platformy Azure](./media/image5-8.png)
 
@@ -292,7 +292,7 @@ Przy użyciu rozwiązania Kubernetes deweloperzy mogą postępu z myśleć o fiz
 
 Poznaj tę zawartość, więcej informacji na temat w witrynie typu wiki usługi GitHub: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Przewodnik 6: Wdrażanie aplikacji opartych na kontenerach Windows do usługi Azure Service Fabric
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Przewodnik 6: Wdrażanie aplikacji opartych na kontenerach Windows w usłudze Azure Service Fabric
 
 ### <a name="technical-walkthrough-availability"></a>Dostępność technicznym
 
@@ -320,7 +320,7 @@ Celem tego przewodnika jest informacje o sposobie wdrażania aplikacji dla kompu
 
 > **Rysunek 5-9.** Wdróż bezpośrednio do klastra usługi Service Fabric z poziomu środowiska projektowego
 
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Scenariusz B: wdrażanie klastra usługi Service Fabric z ciągłej integracji/ciągłego wdrażania potoków w usługom DevOps platformy Azure
+### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Scenariusz B: Wdrożyć klaster usługi Service Fabric z poziomu potoków ciągłej integracji/ciągłego wdrażania w usługom DevOps platformy Azure
 
 ![Wdrożyć klaster usługi Service Fabric z poziomu potoków ciągłej integracji/ciągłego wdrażania w usługom DevOps platformy Azure](./media/image5-10.png)
 
@@ -367,5 +367,5 @@ Poznaj tę zawartość, więcej informacji na temat w witrynie typu wiki usługi
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
 >[!div class="step-by-step"]
-[Poprzednie](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
-[dalej](conclusions.md)
+>[Poprzednie](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
+>[dalej](conclusions.md)

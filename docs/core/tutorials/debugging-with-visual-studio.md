@@ -1,26 +1,24 @@
 ---
-title: Debugowanie aplikacji C# lub Visual Basic Hello World platformy .NET Core za pomocą programu Visual Studio 2017
+title: Debugowanie aplikacji Hello World platformy .NET Core za pomocą programu Visual Studio 2017
 description: Dowiedz się, jak debugować aplikację Hello World w języku C# lub Visual Basic w programie Visual Studio 2017.
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/15/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 53e4549f4790bc0756cd0ad0b903b3dc25d2f66a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200127"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170668"
 ---
-# <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Debugowanie aplikacji Hello World w programie Visual Studio 2017
+# <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Debugowanie usługi C# lub Visual Basic .NET Core aplikacji Hello World przy użyciu programu Visual Studio 2017
 
-Jak dotąd wykonano kroki opisane w [kompilacji aplikacji C# Hello World z platformą .NET Core w programie Visual Studio 2017](.\with-visual-studio.md) lub [tworzenie aplikacji Hello World języka Visual Basic z platformą .NET Core w programie Visual Studio 2017](vb-with-visual-studio.md) do utworzenia i uruchomienia prostej aplikacji konsolowej. Po napisane i skompilowanych aplikacji, możesz rozpocząć testowanie go. Visual Studio zawiera rozbudowany zestaw narzędzi używanych podczas testowania i rozwiązywanie problemów z aplikacją do debugowania.
+Jak dotąd wykonano kroki opisane w [kompilacji aplikacji C# Hello World z platformą .NET Core w programie Visual Studio 2017](with-visual-studio.md) lub [tworzenie aplikacji Hello World języka Visual Basic z platformą .NET Core w programie Visual Studio 2017](vb-with-visual-studio.md) do utworzenia i uruchomienia prostej aplikacji konsolowej. Po napisane i skompilowanych aplikacji, możesz rozpocząć testowanie go. Visual Studio zawiera rozbudowany zestaw narzędzi używanych podczas testowania i rozwiązywanie problemów z aplikacją do debugowania.
 
 ## <a name="debugging-in-debug-mode"></a>Debugowanie w trybie debugowania
 
 *Debugowanie* i *wersji* są dwa domyślne programu Visual Studio konfiguracji kompilacji. Bieżącą konfigurację kompilacji jest wyświetlany na pasku narzędzi. Na poniższej ilustracji narzędzi przedstawiono, że program Visual Studio jest skonfigurowany do kompilowania aplikacji w **debugowania** trybu.
 
-   ![Visual Studio pasek narzędzi](./media/debugging-with-visual-studio/toolbar1.png)
+   ![domyślne narzędzi programu Visual Studio z wyróżnioną pozycją debugowania](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
 
 Należy zawsze zacząć, testując program w trybie debugowania. Debugowanie trybu wyłącza większość optymalizacji kompilatora i bogatsze informacje podczas procesu kompilacji.
 
@@ -33,7 +31,7 @@ Uruchom program w trybie debugowania, a następnie spróbuj kilka funkcji debugo
 
    Ustaw punkt przerwania w wierszu, który odczytuje `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` , klikając na lewym marginesie w oknie Kod w danym wierszu lub wybierając **debugowania** > **Przełącz punkt przerwania** element menu przy użyciu wiersza wybrany. Jak pokazano na poniższej ilustracji, Visual Studio wskazuje wiersza, w którym ustawiono punkt przerwania, zaznaczając ją i wyświetlając czerwone kółko w jego lewym marginesie.
 
-   ![Wizualne okno programu Studio zestaw punktu przerwania](./media/debugging-with-visual-studio/setbreakpoint.png)
+   ![Wizualne okno programu Studio zestaw punktu przerwania](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
 
 1. Uruchom program w trybie debugowania, wybierając **HelloWorld** przycisk z zieloną strzałkę na pasku narzędzi, naciskając klawisz F5 lub wybierając **debugowania** > **Rozpocznij debugowanie**.
 
@@ -51,11 +49,11 @@ Uruchom program w trybie debugowania, a następnie spróbuj kilka funkcji debugo
 
    **Bezpośrednim** Wyświetla właściwości i wartość zmiennej ciągu <xref:System.DateTime> wartość. Ponadto wartości zmiennych jest aktualizowana w **Autos** i **lokalne** systemu windows.
 
-   ![Okno zmiennych automatycznych i okno bezpośrednie](./media/debugging-with-visual-studio/autosimmediate.png)
+   ![Okno zmiennych automatycznych i okno bezpośrednie](./media/debugging-with-visual-studio/autos-immediate-window.png)
 
 1. Kontynuowania wykonywania programu, wybierając **Kontynuuj** przycisk na pasku narzędzi lub wybierając **debugowania** > **Kontynuuj** elementu menu. Wartości wyświetlane w oknie konsoli odnoszą się do zmian w **bezpośrednim**.
 
-   ![Wyświetla wartość wpisane Jack, co jest nazwą okna konsoli? wiersz następuje Hello Gracie na 11/1/2016 11:59:00](./media/debugging-with-visual-studio/changed.png)
+   ![Okno konsoli Wyświetla wartość gniazda w jak się Nazywasz? wiersz, a następnie Hello Gracie](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. Naciśnij dowolny klawisz, aby wyjść z trybu debugowania aplikacji i na końcu.
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
@@ -63,7 +61,7 @@ Uruchom program w trybie debugowania, a następnie spróbuj kilka funkcji debugo
 
    Ustaw punkt przerwania w wierszu, który odczytuje `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` , klikając na lewym marginesie w oknie Kod w danym wierszu lub wybierając **debugowania** > **Przełącz punkt przerwania** element menu przy użyciu wiersza wybrany. Jak pokazano na poniższej ilustracji, Visual Studio wskazuje wiersza, w którym ustawiono punkt przerwania, zaznaczając ją i wyświetlając czerwone kółko w jego lewym marginesie.
 
-   ![Wizualne okno programu Studio zestaw punktu przerwania](./media/debugging-with-visual-studio/vb-setbreakpoint.png)
+   ![Wizualne okno programu Studio zestaw punktu przerwania](./media/debugging-with-visual-studio/vb-set-breakpoint-in-editor.png)
 
 1. Uruchom program w trybie debugowania, wybierając **HelloWorld** przycisk z zieloną strzałkę na pasku narzędzi, naciskając klawisz F5 lub wybierając **debugowania** > **Rozpocznij debugowanie**.
 
@@ -71,7 +69,7 @@ Uruchom program w trybie debugowania, a następnie spróbuj kilka funkcji debugo
 
 1. Zatrzymuje wykonywanie programów, po osiągnięciu punktu przerwania i przed `Console.WriteLine` metoda jest wykonywana. **Autos** okno wyświetla wartości zmiennych, które są używane w całym bieżącego wiersza. **Lokalne** okna (który można wyświetlić, klikając **lokalne** kartę) wyświetla wartości zmiennych, które są zdefiniowane w aktualnie wykonywanej metody.
 
-   ![Okno aplikacji w usłudze Visual Studio](./media/debugging-with-visual-studio/vb-break.png)
+   ![Visual Studio okna aplikacji w punkcie przerwania](./media/debugging-with-visual-studio/vb-stop-at-breakpoint.png)
 
 1. Można zmienić wartości zmiennych, aby zobaczyć, jak wpływa na program. Jeśli **bezpośrednim** nie jest widoczny, go wyświetlić, wybierając **debugowania** > **Windows** > **bezpośrednie**elementu menu. **Bezpośrednim** umożliwia interakcję z aplikacją debugowania.
 
@@ -81,7 +79,7 @@ Uruchom program w trybie debugowania, a następnie spróbuj kilka funkcji debugo
 
 1. Kontynuowania wykonywania programu, wybierając **Kontynuuj** przycisk na pasku narzędzi lub wybierając **debugowania** > **Kontynuuj** elementu menu. Wartości wyświetlane w oknie konsoli odnoszą się do zmian w **bezpośrednim**.
 
-   ![Okno konsoli zmienione wartości wprowadzone w oknie bezpośrednim](./media/debugging-with-visual-studio/changed.png)
+   ![Okno konsoli zmienione wartości wprowadzone w oknie bezpośrednim](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. Naciśnij dowolny klawisz, aby wyjść z trybu debugowania aplikacji i na końcu.
 ---
@@ -95,7 +93,7 @@ Aby ustawić warunkowego punktu przerwania i testowania, co się stanie po użyt
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Kliknij prawym przyciskiem myszy na czerwoną kropkę, która reprezentuje punkt przerwania. W menu kontekstowym wybierz **warunki** otworzyć **ustawienia punktu przerwania** okna dialogowego. Pole wyboru dla **warunki**.
 
-   ![Panel ustawień punktu przerwania](./media/debugging-with-visual-studio/breakpointsettings.png)
+   ![Panel ustawień edytora przedstawiający punkt przerwania —C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
 
 1. Aby uzyskać **wyrażenia warunkowego** Zastąp "np. x == 5" następującym kodem:
 
@@ -121,7 +119,7 @@ Aby ustawić warunkowego punktu przerwania i testowania, co się stanie po użyt
    ? name == String.Empty
    ```
 
-   ![Zwraca wartość true, po wykonaniu instrukcji okno bezpośrednie](./media/debugging-with-visual-studio/emptystring.png)
+   ![Okno bezpośrednie zwraca wartość true po wykonaniu instrukcji -C#](./media/debugging-with-visual-studio/immediate-window-output.png)
 
 1. Wybierz **Kontynuuj** przycisk na pasku narzędzi, aby kontynuować wykonywanie programów.
 
@@ -131,7 +129,7 @@ Aby ustawić warunkowego punktu przerwania i testowania, co się stanie po użyt
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Kliknij prawym przyciskiem myszy na czerwoną kropkę, która reprezentuje punkt przerwania. W menu kontekstowym wybierz **warunki** otworzyć **ustawienia punktu przerwania** okna dialogowego. Pole wyboru dla **warunki**.
 
-   ![Panel ustawień punktu przerwania](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
+   ![Panel ustawień edytora przedstawiający punkt przerwania — języka Visual Basic](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
 
 1. Aby uzyskać **wyrażenia warunkowego** Zastąp "np. x = 5" następującym kodem:
 
@@ -156,7 +154,7 @@ Aby ustawić warunkowego punktu przerwania i testowania, co się stanie po użyt
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
-  ![Zwraca wartość true, po wykonaniu instrukcji okno bezpośrednie](./media/debugging-with-visual-studio/vb-emptystring.png)
+  ![Zwraca wartość true po instrukcji jest wykonywany — Visual Basic okno bezpośrednie](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. Wybierz **Kontynuuj** przycisk na pasku narzędzi, aby kontynuować wykonywanie programów.
 
@@ -171,13 +169,13 @@ Program Visual Studio umożliwia również przejrzeć wiersz po wierszu programu
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Na pasku menu wybierz **debugowania** > **Step Into** lub nacisnąć klawisz F11. Visual Studio wyróżnia i wyświetla strzałkę obok pozycji następnego wiersza wykonywania.
 
-   ![Okno programu Visual Studio](./media/debugging-with-visual-studio/stepinto1.png)
+   ![Visual Studio krok po kroku — — metodaC#](./media/debugging-with-visual-studio/step-into-method.png)
 
    W tym momencie **Autos** okno pokazuje, czy program został zdefiniowany tylko jednej zmiennej `args`. Ponieważ żadnych argumentów wiersza polecenia nie zostały przekazane do programu, jego wartość jest pustą tablicę ciągów. Ponadto program Visual Studio zostało otwarte okno konsoli pusty.
 
 1. Wybierz **debugowania** > **Step Into** lub nacisnąć klawisz F11. Program Visual Studio są teraz wyróżniane wykonanie następnego wiersza. Jak pokazano na rysunku, trzeba było poświęcić mniejszym niż jedna milisekunda na wykonanie kodu między ostatnią instrukcję, a ten drugi. `args` pozostaje tylko zadeklarowana zmienna, a następnie w oknie konsoli pozostanie puste.
 
-   ![Okno programu Visual Studio](./media/debugging-with-visual-studio/stepinto2.png)
+   ![Program Visual Studio kroku w źródle metoda-C#](./media/debugging-with-visual-studio/step-into-source-method.png)
 
 1. Wybierz **debugowania** > **Step Into** lub nacisnąć klawisz F11. Program Visual Studio wyróżnia instrukcji, która obejmuje `name` przypisanie zmiennej. **Autos** okno pokazuje, że `name` jest `null`, i w oknie konsoli zostaną wyświetlone ciąg "Co to jest Twoja nazwa?".
 
@@ -195,13 +193,13 @@ Program Visual Studio umożliwia również przejrzeć wiersz po wierszu programu
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Na pasku menu wybierz **debugowania** > **Step Into** lub nacisnąć klawisz F11. Visual Studio wyróżnia i wyświetla strzałkę obok pozycji następnego wiersza wykonywania.
 
-   ![Okno programu Visual Studio](./media/debugging-with-visual-studio/vb-stepinto1.png)
+   ![Visual Studio krok po kroku metody - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
 
    W tym momencie ponieważ żadnych argumentów wiersza polecenia nie zostały przekazane do programu, **Autos** okno pokazuje, że wartość `args` zmienna jest tablicą pusty ciąg. Ponadto program Visual Studio zostało otwarte okno konsoli pusty.
 
 1. Wybierz **debugowania** > **Step Into** lub nacisnąć klawisz F11. Program Visual Studio są teraz wyróżniane wykonanie następnego wiersza. Jak pokazano na rysunku, trzeba było poświęcić mniejszym niż jedna milisekunda na wykonanie kodu między ostatnią instrukcję, a ten drugi. `args` pozostaje tylko zadeklarowana zmienna, a następnie w oknie konsoli pozostanie puste.
 
-   ![Okno programu Visual Studio](./media/debugging-with-visual-studio/vb-stepinto2.png)
+   ![Visual Studio krok po kroku metoda źródła - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
 
 1. Wybierz **debugowania** > **Step Into** lub nacisnąć klawisz F11. Program Visual Studio wyróżnia instrukcji, która obejmuje `name` przypisanie zmiennej. **Autos** okno pokazuje, że `name` jest `Nothing`, i w oknie konsoli zostaną wyświetlone ciąg "Co to jest Twoja nazwa?".
 
@@ -224,8 +222,8 @@ Po przetestowaniu kompilacji debugowania aplikacji, należy również skompilowa
 
 Aby skompilować i przetestować wersji aplikacji konsolowej, zmień konfigurację kompilacji na pasku narzędzi z **debugowania** do **wersji**.
 
-![Obraz](./media/debugging-with-visual-studio/toolbar2.png)
+![domyślne narzędzi programu Visual Studio z wyróżnioną pozycją debugowania](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
 
 Po naciśnięciu klawisza F5 lub wybierz **Kompiluj rozwiązanie** z **kompilacji** menu programu Visual Studio kompiluje wersji aplikacji konsoli. Można go przetestować, tak jak wersji debugowania aplikacji.
 
-Po zakończeniu debugowania aplikacji, następnym krokiem jest opublikowanie wdrażanym wersji aplikacji. Aby uzyskać informacje, jak to zrobić, zobacz [publikowanie aplikacji Hello World w programie Visual Studio 2017](./publishing-with-visual-studio.md).
+Po zakończeniu debugowania aplikacji, następnym krokiem jest opublikowanie wdrażanym wersji aplikacji. Aby uzyskać informacje, jak to zrobić, zobacz [publikowanie aplikacji Hello World w programie Visual Studio 2017](publishing-with-visual-studio.md).

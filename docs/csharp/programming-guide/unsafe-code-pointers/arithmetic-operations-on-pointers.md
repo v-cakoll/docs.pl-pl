@@ -1,29 +1,29 @@
 ---
-title: Operacje arytmetyczne na wskaźnikach (Przewodnik programowania w języku C#)
+title: Operacje arytmetyczne na wskaźnikach (C# Programming Guide)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: 3694699466f7a200eecd5eef85f60fa19f9584a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91e621e7cddce50e97b061ecd7d77dae6f7ef3cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862306"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129951"
 ---
-# <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Operacje arytmetyczne na wskaźnikach (Przewodnik programowania w języku C#)
-W tym temacie omówiono przy użyciu operatorów arytmetycznych `+` i **-** do manipulowania wskaźników.  
+# <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Operacje arytmetyczne na wskaźnikach (C# Programming Guide)
+W tym temacie omówiono przy użyciu operatorów arytmetycznych `+` i `-` do manipulowania wskaźników.  
   
 > [!NOTE]
 >  Nie można wykonać wszystkie operacje arytmetyczne na wskaźnikach typu void.  
   
 ## <a name="adding-and-subtracting-numeric-values-to-or-from-pointers"></a>Dodawanie i odejmowanie wartości numerycznych do i z wskaźników  
- Wartość zostanie dodana `n` typu [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [długie](../../../csharp/language-reference/keywords/long.md), lub [ulong](../../../csharp/language-reference/keywords/ulong.md) na wskaźnik `p`, dowolnego typu z wyjątkiem `void*`. Wynik `p+n` jest wskaźnikiem wynikające z dodawania `n * sizeof(p) to the address of p`. Podobnie `p-n` jest wskaźnikiem wynikające z odjęcie `n * sizeof(p)` z adresu `p`.  
+ Wartość zostanie dodana `n` typu [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [długie](../../../csharp/language-reference/keywords/long.md), lub [ulong](../../../csharp/language-reference/keywords/ulong.md) do wskaźnika. Jeśli `p` jest wskaźnikiem typu `pointer-type*`, wynik `p+n` jest wskaźnikiem wynikające z dodawania `n * sizeof(pointer-type)` adres `p`. Podobnie `p-n` jest wskaźnikiem wynikające z odjęcie `n * sizeof(pointer-type)` z adresu `p`.  
   
 ## <a name="subtracting-pointers"></a>Odjęcie wskaźników  
  Możliwe jest również odjęcie wskaźników tego samego typu. Wynik jest zawsze typu `long`. Na przykład jeśli `p1` i `p2` są wskaźnikami typu `pointer-type*`, następnie wyrażenie `p1-p2` powoduje:  
   
- `((long)p1 - (long)p2)/sizeof(pointer_type)`  
+ `((long)p1 - (long)p2)/sizeof(pointer-type)`  
   
  Żadne wyjątki są generowane, gdy operacja arytmetyczna przepełnienia domeny wskaźnika, a wynik zależy od implementacji.  
   
@@ -32,10 +32,10 @@ W tym temacie omówiono przy użyciu operatorów arytmetycznych `+` i **-** do m
   
  [!code-csharp[csProgGuidePointers#15](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_2.cs)]  
   
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
+## <a name="c-language-specification"></a>specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
 - [Niebezpieczny kod i wskaźniki](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  

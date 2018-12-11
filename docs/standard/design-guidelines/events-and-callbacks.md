@@ -1,6 +1,6 @@
 ---
 title: Zdarzenia i wywołania zwrotne
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], extensibility
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 390c12af7107bb78fc261c55ea15390cf9eaa5b7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+author: KrzysztofCwalina
+ms.openlocfilehash: c9ed52c5a313676baeba66f5cb79c7a56927babb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862952"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154427"
 ---
 # <a name="events-and-callbacks"></a>Zdarzenia i wywołania zwrotne
 Wywołania zwrotne są punkty rozszerzeń, umożliwiające to platforma do wywołania zwrotnego w kodzie użytkownika za pośrednictwem pełnomocnika. Te delegaty są zazwyczaj przekazywane Framework parametr metody.  
@@ -42,7 +41,7 @@ Wywołania zwrotne są punkty rozszerzeń, umożliwiające to platforma do wywo�
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
+ *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz także
 

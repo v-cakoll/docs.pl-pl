@@ -4,12 +4,12 @@ description: Opisuje sposób tworzenia narzędzie globalne. Narzędzie globalnej
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 3860aad5e2c13714298d50bb9ac10daec3aadf01
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231222"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144593"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Utworzyć narzędzie globalnej platformy .NET Core przy użyciu interfejsu wiersza polecenia platformy .NET Core
 
@@ -162,7 +162,7 @@ Następnie należy utworzyć pakiet NuGet na potrzeby aplikacji.
 dotnet pack
 ```
 
-`botsay.1.0.0.nupkg` Plik jest tworzony w folderze identyfikowane przez `<PackageOutputPath>` wartość XML z `botsay.csproj` pliku, który w tym przykładzie jest `./nupkg` folderu. Dzięki temu można łatwo zainstalować i przetestować. W przypadku wersji narzędzia publicznie, przekaż go do [ https://www.nuget.org ](https://www.nuget.org).
+`botsay.1.0.0.nupkg` Plik jest tworzony w folderze identyfikowane przez `<PackageOutputPath>` wartość XML z `botsay.csproj` pliku, który w tym przykładzie jest `./nupkg` folderu. Dzięki temu można łatwo zainstalować i przetestować. W przypadku wersji narzędzia publicznie, przekaż go do [ https://www.nuget.org ](https://www.nuget.org). Gdy narzędzie jest dostępne dla narzędzia NuGet, deweloperzy można przeprowadzić instalację na poziomie użytkownika za pomocą narzędzia `--global` opcji [instalacji narzędzi dotnet](dotnet-tool-install.md) polecenia.
 
 Teraz, gdy pakiet, należy zainstalować narzędzia z tego pakietu: 
 

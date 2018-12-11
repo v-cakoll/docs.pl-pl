@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Określanie, które wersje programu .NET Framework są zainstalowane.'
+title: 'Instrukcje: Określanie, które wersje programu .NET Framework są zainstalowane.'
 ms.date: 04/10/2018
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a8fc72735c5e45fb87c503272871fc687bacd3e
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6b77775fdc7f552e6433e6364f153c5bde32d9e0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453245"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151047"
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Porady: Określanie, które wersje programu .NET Framework są zainstalowane.
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Instrukcje: Określanie, które wersje programu .NET Framework są zainstalowane.
 
 Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na swoich komputerach. Podczas tworzenia lub wdrażania aplikacji, może być konieczne wiedzieć, które wersje programu .NET Framework są zainstalowane na komputerze użytkownika. Należy zwrócić uwagę na to, że .NET Framework składa się z dwóch głównych składników, które są określane oddzielnie:  
   
@@ -39,7 +39,7 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
  [Za pomocą narzędzia Clrver](#clr_a)  
  [Aby wysłać zapytanie klasy System.Environment przy użyciu kodu](#clr_b)  
   
- Aby uzyskać informacje dotyczące wykrywania zainstalowanych aktualizacji dla każdej wersji programu .NET Framework, zobacz [jak: ustalić Which .NET Framework Updates Are Installed](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). Aby uzyskać informacje o instalowaniu programu .NET Framework, zobacz [Instalowanie programu .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md).  
+ Aby uzyskać informacje dotyczące wykrywania zainstalowanych aktualizacji dla każdej wersji programu .NET Framework, zobacz [jak: Określanie, które aktualizacje programu .NET Framework są zainstalowane](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). Aby uzyskać informacje o instalowaniu programu .NET Framework, zobacz [Instalowanie programu .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md).  
   
 <a name="net_a"></a>   
 ## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>Aby znaleźć wersji programu .NET Framework, wyświetlając rejestru (.NET Framework 1 – 4)  
@@ -93,11 +93,11 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
     |378758|.NET framework 4.5.1, w systemie Windows 8, Windows 7 z dodatkiem SP1 lub Windows Vista z dodatkiem SP2|
     |379893|.NET Framework 4.5.2|
     |Tylko w systemach Windows 10: 393295<br /><br /> W innych wersjach systemu operacyjnego: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
-    |Tylko w systemach Windows 10 Listopadową aktualizacją: 394254<br /><br /> W innych wersjach systemu operacyjnego: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |W Rocznicowej aktualizacji systemu Windows 10 i Windows Server 2016:394802<br /><br /> W innych wersjach systemu operacyjnego: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
-    |W systemie Windows 10 dla twórców tylko zaktualizować: 460798<br/><br/> W innych wersjach systemu operacyjnego: 460805 | .NET framework 4.7 |
+    |Tylko w systemach Windows 10 listopada Update: 394254<br /><br /> W innych wersjach systemu operacyjnego: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
+    |W Rocznicowej aktualizacji systemu Windows 10 i Windows Server 2016: 394802<br /><br /> W innych wersjach systemu operacyjnego: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |W systemie Windows 10 dla twórców tylko aktualizacji: 460798<br/><br/> W innych wersjach systemu operacyjnego: 460805 | .NET framework 4.7 |
     |Na Windows 10 Fall Creators Update tylko: 461308<br/><br/> W innych wersjach systemu operacyjnego: 461310 | .NET Framework 4.7.1 |
-    |W usłudze Windows Update 10 października 2018 r. tylko: 461814<br/><br/> W usłudze Windows Update 10 kwietnia 2018 r. tylko: 461808<br/><br/> W innych wersjach systemu operacyjnego: 461814| .NET framework 4.7.2 |
+    |W dniu 10 października 2018 r. aktualizacji systemu Windows tylko: 461814<br/><br/> W usłudze Windows tylko Update 10 kwietnia 2018 r.: 461808<br/><br/> W innych wersjach systemu operacyjnego: 461814| .NET framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Można znaleźć wersji programu .NET Framework, wykonując zapytanie w rejestrze w kodzie (.NET Framework 1 – 4)
@@ -169,7 +169,13 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
 - Poniższy przykład sprawdza wartość `Release` — słowo kluczowe, aby określić, czy platformy .NET Framework 4.6.2 lub nowszy jest zainstalowany, niezależnie od wersji systemu operacyjnego Windows (zwracanie `True` , gdy jest i `False` inaczej).
 
     ```PowerShell
-    Get-ChildItem "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\" | Get-ItemPropertyValue -Name Release | ForEach-Object { $_ -ge 394802 } 
+    # PowerShell 5
+    Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\' | Get-ItemPropertyValue -Name Release | Foreach-Object { $_ -ge 394802 } 
+    ```
+
+    ```PowerShell
+    # PowerShell 4
+    (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
     ```
 
     Możesz zastąpić `394802` w poprzednim przykładzie, za pomocą innej wartości z poniższej tabeli, aby sprawdzić, czy są dostępne różne minimalna wymagana wersja programu .NET Framework.
@@ -224,6 +230,6 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
 
 ## <a name="see-also"></a>Zobacz także
 
-[Instrukcje: określanie, które aktualizacje programu .NET Framework są zainstalowane](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+[Jak: Określanie, które aktualizacje programu .NET Framework są zainstalowane.](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
 [Instalowanie programu .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md)  
 [Wersje i zależności](~/docs/framework/migration-guide/versions-and-dependencies.md)  

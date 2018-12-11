@@ -2,14 +2,14 @@
 title: Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
 description: W tym samouczku wyjaśniono, jak organizowanie i testowanie projektów .NET Core z poziomu wiersza polecenia.
 author: cartermp
-ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 960d6e98f39b1d1d07c980c021b1029201f1f631
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415227"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169663"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
 
@@ -97,13 +97,13 @@ Woof!
 Meow!
 ```
 
-Opcjonalne Ćwiczenia: można dodać nowy typ domowych, takich jak `Bird`, rozszerzając tego projektu. Należy z lotu ptaka `TalkToOwner` zapewniają metody `Tweet!` do właściciela. Ponownie uruchom aplikację. Dane wyjściowe będą zawierać `Tweet!`
+Ćwiczenie opcjonalne: Można dodać nowy typ domowych, takich jak `Bird`, rozszerzając tego projektu. Należy z lotu ptaka `TalkToOwner` zapewniają metody `Tweet!` do właściciela. Ponownie uruchom aplikację. Dane wyjściowe będą zawierać `Tweet!`
 
 ### <a name="testing-the-sample"></a>Badanie próbki
 
 `NewTypes` Projektu w miejscu, a ułożone ją, przechowując typy związane z zwierzęta w folderze. Następnie utwórz projekt testu i zacząć pisać testy z [xUnit](https://xunit.github.io/) struktury testowej. Testy jednostkowe umożliwia automatyczne sprawdzenie dostępności zachowanie pet typów, aby upewnić się, że są one działających prawidłowo.
 
-Tworzenie *test* folder z *NewTypesTests* folder znajdujący się w nim. W wierszu polecenia z *NewTypesTests* folderu wykonaj `dotnet new xunit`. Pozwala to na utworzenie dwóch plików: *NewTypesTests.csproj* i *UnitTest1.cs*.
+Tworzenie *test* folder z *NewTypesTests* folder znajdujący się w nim. W wierszu polecenia z *NewTypesTests* folderu wykonaj `dotnet new xunit`. To tworzy dwa pliki: *NewTypesTests.csproj* i *UnitTest1.cs*.
 
 Projekt testowy nie może obecnie testowanie typów w `NewTypes` i wymaga odwołania projektu do `NewTypes` projektu. Aby dodać odwołanie do projektu, należy użyć [ `dotnet add reference` ](../tools/dotnet-add-reference.md) polecenia:
 
@@ -159,7 +159,7 @@ public class PetTests
 }
 ```
 
-Opcjonalne Ćwiczenia: Jeśli dodano `Bird` wcześniej typ, który daje `Tweet!` do właściciela, należy dodać metody testowej, aby *PetTests.cs* pliku `BirdTalkToOwnerReturnsTweet`, aby sprawdzić, czy `TalkToOwner` metoda działa prawidłowo dla `Bird` typu.
+Ćwiczenie opcjonalne: Jeśli dodano `Bird` wcześniej typ, który daje `Tweet!` do właściciela, należy dodać metody testowej, aby *PetTests.cs* pliku `BirdTalkToOwnerReturnsTweet`, aby sprawdzić, czy `TalkToOwner` metoda działa prawidłowo dla `Bird` Typ.
 
 > [!NOTE]
 > Mimo że można oczekiwać, że `expected` i `actual` wartości są równe, początkowe potwierdzenie z `Assert.NotEqual` wyboru określa, czy te wartości są *równa*. Zawsze utworzyć test, aby zakończyć się niepowodzeniem, aby sprawdzić logikę testu. Po upewnieniu się, że test zakończy się niepowodzeniem, należy dostosować potwierdzenie, aby zezwolić na test kończył się pomyślnie.

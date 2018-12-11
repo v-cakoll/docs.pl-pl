@@ -1,15 +1,15 @@
 ---
-title: 'Porady: Określanie, jeśli plik jest zestawem (C#)'
+title: 'Instrukcje: Określić, czy plik jest zestawem (C#)'
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: ee2313677fba21624ccdb44db779633f6c4503bf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0cf9258aa4a5a1a633ee0bb04808d384de8f48d0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861013"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125538"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Porady: Określanie, jeśli plik jest zestawem (C#)
+# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Instrukcje: Określić, czy plik jest zestawem (C#)
 Plik jest zestawem, tylko wtedy, gdy jest zarządzana i wpis zestawu w metadanych. Aby uzyskać więcej informacji na temat zestawów i metadanych, zobacz temat [manifestu zestawu](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Jak ręcznie określić, czy plik jest zestawem  
@@ -18,7 +18,7 @@ Plik jest zestawem, tylko wtedy, gdy jest zarządzana i wpis zestawu w metadanyc
   
 2.  Załaduj plik, który chcesz przetestować.  
   
-3.  Jeśli **ILDASM** raporty, że plik nie jest plikiem przenośny plik wykonywalny (PE), a następnie nie jest zestawem. Aby uzyskać więcej informacji, zobacz temat [porady: wyświetlanie zawartości zestawu](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3.  Jeśli **ILDASM** raporty, że plik nie jest plikiem przenośny plik wykonywalny (PE), a następnie nie jest zestawem. Aby uzyskać więcej informacji, zobacz temat [jak: Wyświetlanie zawartości zestawu](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Jak programowo określić, czy plik jest zestawem  
   
@@ -29,7 +29,7 @@ Plik jest zestawem, tylko wtedy, gdy jest zarządzana i wpis zestawu w metadanyc
 ## <a name="example"></a>Przykład  
  W tym przykładzie testy bibliotekę DLL, aby zobaczyć, jeśli jest to zespół.  
   
-```  
+```csharp
 class TestAssembly  
 {  
     static void Main()  

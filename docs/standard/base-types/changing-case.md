@@ -1,5 +1,6 @@
 ---
-title: Zmienianie wielkości liter w programie .NET Framework
+title: Zmienianie wielkości liter na platformie .NET
+description: Dowiedz się, jak zmienić w przypadku ciągów na platformie .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd20db7fcc16f7781e093d59514c4be75705080a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 480e9a3f7d32bb891b54c7d2529affb45368545b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003675"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128651"
 ---
 # <a name="changing-case-in-net"></a>Zmienianie wielkości liter na platformie .NET
 Jeśli piszesz aplikację, która akceptuje dane wejściowe od użytkownika, nigdy nie można się, że przypadek, jakie użytkownik użyje do wprowadzania danych. Często mają ciągi, aby mieć prawidłową wielkość spójne, szczególnie w przypadku, gdy są ich wyświetlania w interfejsie użytkownika. W poniższej tabeli opisano trzy metody zmiany sprawy. Pierwsze dwie metody dostarczać przeciążenia, które akceptuje kultury.  

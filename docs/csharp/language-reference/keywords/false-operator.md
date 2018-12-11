@@ -1,40 +1,42 @@
 ---
 title: FALSE — operator (odwołanie w C#)
-ms.date: 07/20/2015
+ms.date: 12/03/2018
 helpviewer_keywords:
 - false operator keyword [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: e73113bd37dbb68590267141ad037f78919520bc
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4428d88acb08246623e2deb71a9daf7fb1cca692
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848065"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152308"
 ---
 # <a name="false-operator-c-reference"></a>FALSE — operator (odwołanie w C#)
 
-Zwraca [bool](bool.md) wartość `true` do wskazania, że argument jest `false` i zwraca `false` inaczej.
+Zwraca [bool](bool.md) wartość `true` do wskazania, że argument jest zdecydowanie false. Jeśli typ definiuje `false` operatora on również muszą definiować [true — operator](true-operator.md). `true` i `false` operatorów nie ma gwarancji uzupełniają się wzajemnie.
 
-Przed C# w wersji 2.0 `true` i `false` operatorów były używane do tworzenia typów zdefiniowanych przez użytkownika wartości null, które były zgodne z typami, takich jak `SqlBool`. Jednak język teraz udostępnia wbudowaną obsługę typy o wartości zerowalnej i w miarę możliwości należy używać tych zamiast przeciążenia `true` i `false` operatorów. Aby uzyskać więcej informacji, zobacz [typów dopuszczających wartości zerowe](../../programming-guide/nullable-types/index.md).
+> [!TIP]
+> Użyj `bool?` typu, jeśli wymagana jest obsługa przechowywanymi w trzech logiki, na przykład podczas pracy z bazami danych, które obsługują przechowywanymi w trzech typu logicznego. Aby uzyskać więcej informacji, zobacz [bool? typu](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) części [przy użyciu typów dopuszczających wartości zerowe](../../programming-guide/nullable-types/using-nullable-types.md) artykułu.
 
-Za pomocą wartości logicznych dopuszczającego wartość null, wyrażenie `a != b` nie jest zawsze równa `!(a == b)` , ponieważ co najmniej jeden z wartości może mieć wartości null. Masz oba przeciążenia `true` i `false` operatory oddzielnie, aby poprawnie Obsługa wartości zerowych w wyrażeniu. Poniższy przykład pokazuje, jak przeciążenia i użyj `true` i `false` operatorów.
+Jeśli typ za pomocą zdefiniowanego `false` operator [przeciążenia](operator.md) [logicznego operatora AND](../operators/and-operator.md) `&` w określony sposób, [warunkowego operator logiczny AND](../operators/conditional-and-operator.md) `&&`, czyli short-circuiting, mogą być obliczane w przypadku argumentów operacji tego typu. Aby uzyskać więcej informacji, zobacz [zdefiniowanych przez użytkownika operatorów logicznych warunkowych](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) części [ C# specyfikacji języka](../language-specification/index.md).
 
-[!code-csharp[csrefKeywordsOperator#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#16)]
+Poniższy przykład przedstawia typ, który określa zarówno `true` i `false` operatorów. Ponadto przeciąża logicznego operatora AND `&` w taki sposób, że operator `&&` mogą być obliczane dla argumentów typu.
 
-Typ, który przeciążenia `true` i `false` operatorzy mogą służyć do kontrolowania wyrażenia w [Jeśli](if-else.md), [czy](do.md), [podczas](while.md), i [ Aby uzyskać](for.md) instrukcji i [wyrażenia warunkowe](../operators/conditional-operator.md).
+[!code-csharp-interactive[true and false operators example](~/samples/snippets/csharp/keywords/TrueFalseOperatorsExample.cs)]
 
-Jeśli typ definiuje operator `false`, również muszą definiować operator [true](true.md).
+Zwróć uwagę, zachowanie short-circuiting `&&` operatora. Gdy `GetFuelLaunchStatus` metoda zwraca `LaunchStatus.Red`, drugi operand `&&` operator nie jest oceniany. To dlatego, że `LaunchStatus.Red` ma zdecydowanie wartość false. Następnie wynik logicznego i nie zależy od wartości drugiego operandu. Dane wyjściowe z przykładu jest następująca:
 
-Typem bezpośrednio nie mogą przeciążać operatory logiczne warunkowe [ && ](../operators/conditional-and-operator.md) i [ &#124; &#124; ](../operators/conditional-or-operator.md), ale taki sam efekt można osiągnąć przez przeciążania operatorów logicznych regularne operatory i `true` i `false`.
+```console
+Getting fuel launch status...
+Wait!
+```
 
-## <a name="c-language-specification"></a>specyfikacja języka C#
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Ponadto należy zauważyć, że wyrażenie warunkowe w [operator warunkowy `?:` ](../operators/conditional-operator.md) jest `LaunchStatus` typu. Jest to możliwe, ponieważ `LaunchStatus` definiuje `true` operatora. Aby uzyskać więcej informacji, zobacz [wyrażeń logicznych](~/_csharplang/spec/expressions.md#boolean-expressions) części [ C# specyfikacji języka](../language-specification/index.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)  
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
-- [Słowa kluczowe języka C#](index.md)  
-- [Operatory języka C#](../operators/index.md)  
-- [true](true.md)  
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Operatory języka C#](../operators/index.md)
+- [`false` literał](false-literal.md)

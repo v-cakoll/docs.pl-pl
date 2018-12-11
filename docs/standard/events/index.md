@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5d106dd3b7b9a7a0aeedca86e63a6fccbb1cc27
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192487"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127930"
 ---
 # <a name="handling-and-raising-events"></a>Obsługa i wywoływanie zdarzeń
 Zdarzenia w .NET Framework są oparte na modelu delegata. Model delegata następuje po wzorcu projektowania obserwatora, który umożliwia subskrybentom zarejestrowanie i otrzymywanie powiadomienia od dostawcy. Nadawca wydarzenie wypycha powiadomienie, która miała miejsce zdarzenie, Odbiorca zdarzenia odbiera to powiadomienie i definiuje odpowiedź na to. W tym artykule opisano główne składniki modelu delegowanego, jak używać zdarzenia w aplikacjach i sposobie implementacji zdarzenia w kodzie.  
@@ -76,16 +76,16 @@ Zdarzenia w .NET Framework są oparte na modelu delegata. Model delegata następ
 ## <a name="raising-multiple-events"></a>Podjęcie wielu zdarzeń  
  Jeśli klasa wywołuje wiele zdarzeń, kompilator generuje jedno pole na wystąpienie delegata zdarzenia. Jeśli liczba zdarzeń jest duża, koszt magazynowania jednego pola przypadającego na delegata może nie być akceptowane. W tych sytuacjach program .NET Framework dostarcza właściwości zdarzeń służące z inną wybraną strukturą danych do przechowywania delegatów zdarzeń.  
   
- Właściwości zdarzenia składają się z deklaracji zdarzeń, którym towarzyszą metody dostępu zdarzeń. Metody dostępu zdarzeń są metodami zdefiniowanymi przez użytkownika do dodawania lub usuwania wystąpień delegata zdarzenia ze struktury przechowywania danych. Należy pamiętać, że właściwości zdarzeń są wolniejsze od pól zdarzeń, ponieważ każdy delegat zdarzenia musi zostać pobrany zanim może być wywołana. Jest to kompromis między pamięcią i szybkością. Jeśli klasa definiuje wiele zdarzeń, które rzadko są wywoływane, można zaimplementować właściwości zdarzenia. Aby uzyskać więcej informacji, zobacz [porady: Obsługa wielu zdarzeń przy użyciu właściwości zdarzenia](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
+ Właściwości zdarzenia składają się z deklaracji zdarzeń, którym towarzyszą metody dostępu zdarzeń. Metody dostępu zdarzeń są metodami zdefiniowanymi przez użytkownika do dodawania lub usuwania wystąpień delegata zdarzenia ze struktury przechowywania danych. Należy pamiętać, że właściwości zdarzeń są wolniejsze od pól zdarzeń, ponieważ każdy delegat zdarzenia musi zostać pobrany zanim może być wywołana. Jest to kompromis między pamięcią i szybkością. Jeśli klasa definiuje wiele zdarzeń, które rzadko są wywoływane, można zaimplementować właściwości zdarzenia. Aby uzyskać więcej informacji, zobacz [jak: Obsługa wielu zdarzeń przy użyciu właściwości zdarzenia](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Instrukcje: Wywoływanie zdarzeń i korzystanie z nich](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Zawiera Przykłady podnoszenia i zużywania zdarzeń.|  
-|[Instrukcje: Obsługa wielu zdarzeń przy użyciu właściwości zdarzenia](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Pokazuje, jak używać właściwości zdarzenia do obsługi wielu zdarzeń.|  
+|[Jak: Podnieść i zużyć zdarzenia](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Zawiera Przykłady podnoszenia i zużywania zdarzeń.|  
+|[Jak: Obsługa wielu zdarzeń przy użyciu właściwości zdarzenia](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Pokazuje, jak używać właściwości zdarzenia do obsługi wielu zdarzeń.|  
 |[Wzorzec projektowy obserwatora](../../../docs/standard/events/observer-design-pattern.md)|Opisuje szablon projektu, który umożliwia subskrybentom zarejestrowanie i otrzymywanie powiadomienia od dostawcy.|  
-|[Instrukcje: Korzystanie ze zdarzeń w aplikacjach formularzy internetowych](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Pokazuje, jak obsługiwać zdarzenia wywoływane przez formant formularzy sieci Web.|  
+|[Jak: Korzystanie ze zdarzeń w aplikacjach formularzy internetowych](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Pokazuje, jak obsługiwać zdarzenia wywoływane przez formant formularzy sieci Web.|  
   
 ## <a name="see-also"></a>Zobacz także
 

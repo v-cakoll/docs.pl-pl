@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 839a04d8a06e782582705cf0d9ad92d2e2df6af6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 349324cabc999bac3bd0c247d3614dfc503b8b61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173125"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153530"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generowanie kluczy szyfrowania i odszyfrowywania
 Tworzenie i zarządzanie kluczami jest ważną częścią procesu szyfrowania. Symetryczne algorytmy wymaga utworzenia klucza i wektor inicjowania (IV). Klucz musi trzymane w tajemnicy każdy, kto powinien nie odszyfrowania danych. IV nie muszą być wpisu tajnego, ale powinna zostać zmieniona dla każdej sesji. Asymetryczne algorytmy wymagają utworzenia klucza publicznego i prywatnego klucza. Klucz publiczny mogą być ujawniane dla każdego, kto, gdy klucz prywatny musi znane tylko przez strony, która spowoduje odszyfrowanie dane zaszyfrowane przy użyciu klucza publicznego. W tej sekcji opisano sposób generowania i zarządzania kluczami symetrycznego i asymetrycznych algorytmów.  
@@ -43,7 +43,7 @@ TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();
   
  Jeśli poprzedni kod jest wykonywany, nowy klucz i IV są generowane i umieszczane w **klucz** i **IV** właściwości, odpowiednio.  
   
- Czasami może być konieczne generowania wielu kluczy. W takiej sytuacji można utworzyć nowe wystąpienie klasy, która implementuje algorytm symetryczny i utworzyć nowy klucz i IV przez wywołanie metody **do generowania kluczy** i **GenerateIV** metody. Poniższy przykładowy kod przedstawia sposób tworzenia nowych kluczy i wektory, po dokonaniu nowe wystąpienie klasy kryptograficznych asymetrycznego.  
+ Czasami może być konieczne generowania wielu kluczy. W takiej sytuacji można utworzyć nowe wystąpienie klasy, która implementuje algorytm symetryczny i utworzyć nowy klucz i IV przez wywołanie metody **do generowania kluczy** i **GenerateIV** metody. Poniższy przykładowy kod przedstawia sposób tworzenia nowych kluczy i wektory, po dokonaniu nowe wystąpienie klasy szyfrowania symetrycznego.  
   
 ```vb  
 Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
@@ -70,7 +70,7 @@ TDES.GenerateKey();
   
  Obie metody zaakceptuj wartość logiczna, która wskazuje, czy zwracać tylko informacje o kluczu publicznym lub w celu zwrócenia zarówno klucz publiczny, jak i informacje klucza prywatnego. **RSACryptoServiceProvider** klasy mogą być inicjowane na wartość **RSAParameters** struktury za pomocą <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> metody.  
   
- Klucze asymetryczne prywatnej nigdy nie powinny być przechowywane, verbatim lub w postaci zwykłego tekstu, na komputerze lokalnym. Jeśli musisz przechować klucz prywatny, należy użyć kontenera kluczy. Aby uzyskać więcej informacji na temat sposobu przechowywać klucz prywatny w kontenerze kluczy, zobacz [jak: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
+ Klucze asymetryczne prywatnej nigdy nie powinny być przechowywane, verbatim lub w postaci zwykłego tekstu, na komputerze lokalnym. Jeśli musisz przechować klucz prywatny, należy użyć kontenera kluczy. Aby uzyskać więcej informacji na temat sposobu przechowywać klucz prywatny w kontenerze kluczy, zobacz [jak: Store kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
   
  Poniższy przykład kodu tworzy nowe wystąpienie klasy **RSACryptoServiceProvider** klasy, tworząc parę kluczy publiczny/prywatny, a następnie zapisuje informacje o kluczu publicznym do **RSAParameters** struktury.  
   
@@ -93,4 +93,4 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
 - [Szyfrowanie danych](../../../docs/standard/security/encrypting-data.md)  
 - [Odszyfrowywanie danych](../../../docs/standard/security/decrypting-data.md)  
 - [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)  
-- [Instrukcje: przechowywanie kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [Jak: Store kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

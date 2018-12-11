@@ -4,27 +4,27 @@ description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: bc13a0c8d6f14b8ea7ea2017009ba074f9a96ab3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: fe65e9036c1e0bdf2afe05426c01e75d48f93439
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580212"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152344"
 ---
-# <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Wprowadzenie do platformy firmy Microsoft oraz narzędzi dla aplikacji konteneryzowanych
+# <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Wprowadzenie do platformy firmy Microsoft oraz narzędzi dla aplikacji konteneryzowanych
 
 
 Rysunek 3-1 przedstawiono głównych filarach w cyklu życia aplikacji platformy Docker według rodzaju pracy dostarczane przez wiele zespołów (Tworzenie aplikacji, procesy infrastruktury DevOps i zarządzanie infrastrukturą IT i operacje). Zazwyczaj w przedsiębiorstwie, profile "osoby" odpowiada za dla każdego obszaru są różne. Dlatego są umiejętności.
 
 ![](./media/image1.png)
 
-Rysunek 3-1: główny filarów w cykl życia konteneryzowanych aplikacji platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
+Rysunek 3-1. Głównych filarach w cykl życia konteneryzowanych aplikacji platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
 
 A kontenerowych nimi Docker cyklu życia przepływu pracy może być początkowo profesjonalnie opracowany na podstawie "domyślnie produktu możliwości wyboru," ułatwia deweloperom szybsza, ale jest podstawą, że kulisy musi być otwartej struktury tak, aby go elastyczne przepływ pracy, możliwość dostosowania do różnych kontekstach z każdej organizacji lub przedsiębiorstwie. Infrastruktura przepływu pracy (składnikami i produktami) musi być wystarczająco elastyczny, aby obejmować środowisko, w którym każda firma będzie miała w przyszłości, nawet zdolność zamianę rozwoju lub produktów DevOps do innych osób. Ta elastyczność, otwartości i szeroki wybór technologii platforma i infrastruktura są dokładnie priorytetów firmy Microsoft dla konteneryzowanych aplikacji platformy Docker, jak wyjaśniono w rozdziałach, które należy wykonać.
 
 Tabela 3-1 pokazuje, czy zamiar metodyki DevOps firmy Microsoft dla konteneryzowanych aplikacji platformy Docker ma na celu dostarczenie Otwórz przepływ pracy DevOps tak, aby można było wybrać jakie produkty do użycia dla każdej fazy (Microsoft lub innych firm) przy jednoczesnym zapewnieniu uproszczonego przepływu pracy zapewniający, że podłączony "przez — domyślna produkty"; w związku z tym możesz szybko rozpocząć pracę z przepływem pracy DevOps klasy korporacyjnej dla aplikacji platformy Docker.
 
-Do każdej technologii, przepływ pracy DevOps Otwórz tabela 3-1:
+Tabela 3-1: Otwórz przepływ pracy DevOps do dowolnej technologii
 
 | Host | Technologie firmy Microsoft | Innych firm — podłączanych platformy Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
@@ -59,5 +59,5 @@ Dzięki usługom DevOps platformy Azure, deweloperzy mogą tworzyć ukierunkowan
 W związku z tym firma Microsoft oferuje pełny podstawę dla end-to-end konteneryzowanych Docker cyklu życia aplikacji. Jest jednak *zbiór produkty i technologie umożliwiające opcjonalnie wybierz i zintegrować z istniejącym narzędzi i procesów*. Elastyczność w szerokim podejście wraz z siły szczegółowo możliwości firmy Microsoft należy umieścić w silną pozycję opracowywania konteneryzowanych aplikacji platformy Docker.
 
 >[!div class="step-by-step"]
-[Poprzednie](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
-[dalej](../design-develop-containerized-apps/index.md)
+>[Poprzednie](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+>[dalej](../design-develop-containerized-apps/index.md)

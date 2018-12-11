@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: f456bbe771608258307673337693c1e8a5c45f39
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6db1a3f5fd2011a13a28551a38b319995039ab38
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454372"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153616"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Instalowanie programu .NET Framework w systemach Windows 10 i Windows Server 2016
 
@@ -29,7 +29,7 @@ Użytkownik może już korzystać na tej stronie po próby uruchomienia aplikacj
 * [Usługa Windows Update 10 kwietnia 2018 r.](https://www.microsoft.com/software-download/windows10)
 
 > [!div class="button"]
-[Pobierz program .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [Pobierz program .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) może służyć do uruchamiania aplikacji dla programu .NET Framework 4.0, za pośrednictwem 4.7.1.
 

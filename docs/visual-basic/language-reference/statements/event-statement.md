@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 5ae25cbca73f7c8e767cad0ac332d77c306724a1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 14e70a07469d6bb2701884d8646d161c78e65dc0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883925"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126279"
 ---
 # <a name="event-statement"></a>Event — Instrukcja
 Deklaruje zdarzenie zdefiniowane przez użytkownika.  
@@ -62,22 +62,22 @@ End Event
 |`accessmodifier`|Opcjonalna. Określa, jaki kod może uzyskać dostęp do zdarzenia. Może to być jeden z następujących elementów:<br /><br /> -   [Publiczne](../../../visual-basic/language-reference/modifiers/public.md)— wszelki kod, który mogą uzyskiwać dostęp do elementu, który deklaruje ją do niego dostęp.<br />-   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)— tylko do kodu w swojej klasie lub klasie pochodnej do niego dostęp.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)— tylko do kodu z tego samego zestawu do niego dostęp.<br />-   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)— tylko do kodu w elemencie który deklaruje ją do niego dostęp.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)— tylko do kodu w klasie zdarzeń, klasę pochodną lub tego samego zestawu do niego dostęp. <br />- [Prywatny chroniony](../../language-reference/modifiers/private-protected.md)— tylko do kodu w klasie zdarzenia lub klasę pochodną z tego samego zestawu do niego dostęp.|  
 |`Shared`|Opcjonalna. Określa, czy to zdarzenie nie jest skojarzony z określonego wystąpienia klasy lub struktury.|  
 |`Shadows`|Opcjonalna. Wskazuje, że to zdarzenie programistyczny ponownie deklaruje i ukrywa o identycznej nazwie elementu programistycznego lub zestaw przeciążonych elementów w klasie bazowej. Można w tle dowolnego typu element zadeklarowany za pomocą dowolnego typu.<br /><br /> Zasłonięte element jest niedostępny z w klasie pochodnej, która zasłania, z wyjątkiem sytuacji, z którym przesłaniania elementu jest niedostępny. Na przykład jeśli `Private` element zasłania element klasy bazowej, kod, który nie ma uprawnień dostępu do `Private` element uzyskuje dostęp do elementu klasy podstawowej zamiast tego.|  
-|`eventname`|Wymagane. Nazwa zdarzenia; następuje standardową konwencją nazw zmiennych.|  
+|`eventname`|Wymagana. Nazwa zdarzenia; następuje standardową konwencją nazw zmiennych.|  
 |`parameterlist`|Opcjonalna. Lista zmiennych lokalnych, które reprezentują parametry tego zdarzenia. Należy ująć [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md) w nawiasach.|  
 |`Implements`|Opcjonalna. Wskazuje, że to zdarzenie implementuje zdarzenia interfejsu.|  
 |`implementslist`|Jeśli wymagane `Implements` podano. Lista `Sub` procedury są wdrożone. Wiele procedur są oddzielone przecinkami:<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Każdy `implementedprocedure` ma następujące składni i części:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` — Wymagane. Implementuje Nazwa interfejsu, że tej procedury zawierający klasy lub struktury.<br />-   `Definedname` — Wymagane. Nazwa, za pomocą którego procedura jest zdefiniowany w `interface`. To nie musi być taka sama jak `name`, nazwa która używa tej procedury do zaimplementowania zdefiniowanej procedury.|  
-|`Custom`|Wymagane. Zdarzenia są zadeklarowane jako `Custom` musi definiować niestandardowe `AddHandler`, `RemoveHandler`, i `RaiseEvent` metod dostępu.|  
+|`Custom`|Wymagana. Zdarzenia są zadeklarowane jako `Custom` musi definiować niestandardowe `AddHandler`, `RemoveHandler`, i `RaiseEvent` metod dostępu.|  
 |`delegatename`|Opcjonalna. Nazwa delegat, który określa podpis, program obsługi zdarzeń.|  
-|`AddHandler`|Wymagane. Deklaruje `AddHandler` dostępu, który określa instrukcji do wykonania po dodaniu programu obsługi zdarzeń, jawnie za pomocą `AddHandler` instrukcji lub niejawnie, przy użyciu `Handles` klauzuli.|  
-|`End AddHandler`|Wymagane. Kończy blok `AddHandler`.|  
-|`value`|Wymagane. Nazwa parametru.|  
-|`RemoveHandler`|Wymagane. Deklaruje `RemoveHandler` dostępu, który określa instrukcje wykonywania, gdy program obsługi zdarzeń jest usuwana za pomocą `RemoveHandler` instrukcji.|  
-|`End RemoveHandler`|Wymagane. Kończy blok `RemoveHandler`.|  
-|`RaiseEvent`|Wymagane. Deklaruje `RaiseEvent` dostępu, który określa instrukcji do wykonania, gdy zdarzenie jest wywoływane przy użyciu `RaiseEvent` instrukcji. Zazwyczaj wywołuje to lista delegatów utrzymywane przez `AddHandler` i `RemoveHandler` metod dostępu.|  
-|`End RaiseEvent`|Wymagane. Kończy blok `RaiseEvent`.|  
-|`delegatesignature`|Wymagane. Lista parametrów, który odpowiada parametrów wymaganych przez `delegatename` delegować. Należy ująć [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md) w nawiasach.|  
+|`AddHandler`|Wymagana. Deklaruje `AddHandler` dostępu, który określa instrukcji do wykonania po dodaniu programu obsługi zdarzeń, jawnie za pomocą `AddHandler` instrukcji lub niejawnie, przy użyciu `Handles` klauzuli.|  
+|`End AddHandler`|Wymagana. Kończy blok `AddHandler`.|  
+|`value`|Wymagana. Nazwa parametru.|  
+|`RemoveHandler`|Wymagana. Deklaruje `RemoveHandler` dostępu, który określa instrukcje wykonywania, gdy program obsługi zdarzeń jest usuwana za pomocą `RemoveHandler` instrukcji.|  
+|`End RemoveHandler`|Wymagana. Kończy blok `RemoveHandler`.|  
+|`RaiseEvent`|Wymagana. Deklaruje `RaiseEvent` dostępu, który określa instrukcji do wykonania, gdy zdarzenie jest wywoływane przy użyciu `RaiseEvent` instrukcji. Zazwyczaj wywołuje to lista delegatów utrzymywane przez `AddHandler` i `RemoveHandler` metod dostępu.|  
+|`End RaiseEvent`|Wymagana. Kończy blok `RaiseEvent`.|  
+|`delegatesignature`|Wymagana. Lista parametrów, który odpowiada parametrów wymaganych przez `delegatename` delegować. Należy ująć [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md) w nawiasach.|  
 |`statements`|Opcjonalna. Instrukcje zawierające organów `AddHandler`, `RemoveHandler`, i `RaiseEvent` metody.|  
-|`End Event`|Wymagane. Kończy blok `Event`.|  
+|`End Event`|Wymagana. Kończy blok `Event`.|  
   
 ## <a name="remarks"></a>Uwagi  
  Po zdarzeniu został zadeklarowany, użyj `RaiseEvent` instrukcję, aby zgłosić zdarzenie. Typowe zdarzenia może być zadeklarowana i wywoływane, jak pokazano w poniższym fragmenty:  
@@ -91,7 +91,7 @@ End Event
   
  Możesz użyć `Event` tylko na poziomie modułu. Oznacza to, że *kontekst deklaracji* zdarzenie musi być klasy, struktury, modułu lub interfejsu i nie może być plik źródłowy, przestrzeń nazw, procedurę lub blok. Aby uzyskać więcej informacji, zobacz [Kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- W większości przypadków można użyć pierwszej składni w składni części tego tematu do deklarowania zdarzenia. Jednak niektóre scenariusze wymagają, że masz większą kontrolę nad zachowaniem szczegółowe zdarzenia. Ostatnie składni w sekcji składni w tym temacie, który używa `Custom` — słowo kluczowe, zawiera tę kontrolkę, umożliwiając definiowanie zdarzeń niestandardowych. W przypadku niestandardowych określasz dokładnie co występuje, gdy kod dodaje lub usuwa program obsługi zdarzeń do lub ze zdarzenia lub gdy kod wywołuje zdarzenie. Przykłady, zobacz [porady: deklarowanie niestandardowego zdarzenia do zaoszczędzenia pamięci](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) i [jak: zadeklarować niestandardowe zdarzenia można uniknąć blokowania](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
+ W większości przypadków można użyć pierwszej składni w składni części tego tematu do deklarowania zdarzenia. Jednak niektóre scenariusze wymagają, że masz większą kontrolę nad zachowaniem szczegółowe zdarzenia. Ostatnie składni w sekcji składni w tym temacie, który używa `Custom` — słowo kluczowe, zawiera tę kontrolkę, umożliwiając definiowanie zdarzeń niestandardowych. W przypadku niestandardowych określasz dokładnie co występuje, gdy kod dodaje lub usuwa program obsługi zdarzeń do lub ze zdarzenia lub gdy kod wywołuje zdarzenie. Aby uzyskać przykłady, zobacz [jak: Deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) i [jak: Deklarowanie zdarzeń niestandardowych w celu unikania blokowania](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto zdarzeń odliczanie sekund od 10 do 0. Kod ilustruje kilka powiązanych zdarzeń do metod, właściwości i instrukcji. Obejmuje to `RaiseEvent` instrukcji.  
@@ -115,7 +115,7 @@ End Event
  Naciśnij klawisz F5, aby uruchomić w poprzednim przykładzie, a następnie kliknij przycisk **Start**. Pierwsze pole tekstowe rozpoczyna odliczanie sekund. Po upływie pełnoetatowi (10 sekund), pierwszego pola tekstowego wyświetla "Gotowe".  
   
 > [!NOTE]
->  `My.Application.DoEvents` Metoda nie może przetwarzać zdarzenia w taki sam sposób, w formularzu jest. Aby włączyć formularz do obsługi zdarzeń bezpośrednio, można użyć wielowątkowości. Aby uzyskać więcej informacji, zobacz [wątki](../../programming-guide/concepts/threading/index.md).  
+>  `My.Application.DoEvents` Metoda nie może przetwarzać zdarzenia w taki sam sposób, w formularzu jest. Aby włączyć formularz do obsługi zdarzeń bezpośrednio, można użyć wielowątkowości. Aby uzyskać więcej informacji, zobacz [zarządzana wątkowość](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [RaiseEvent, instrukcja](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
@@ -125,7 +125,7 @@ End Event
  [RemoveHandler, instrukcja](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
  [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
  [Delegate, instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Instrukcje: deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
- [Instrukcje: deklarowanie zdarzeń niestandardowych w celu unikania blokowania](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
+ [Jak: Deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
+ [Jak: Deklarowanie zdarzeń niestandardowych w celu unikania blokowania](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
  [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
  [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)

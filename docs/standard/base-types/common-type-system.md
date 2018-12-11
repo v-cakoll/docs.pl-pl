@@ -1,5 +1,6 @@
 ---
 title: System typu wspólnego
+description: Dowiedz się więcej o systemie typu w środowisku .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: e35ddc0346f73eafaece1bd17ab52e1b847e8e11
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204205"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151229"
 ---
 # <a name="common-type-system"></a>System typu wspólnego
 Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządzane w środowisko uruchomieniowe języka wspólnego, a ponadto jest ważną częścią obsługi integracji wielu języków. Wspólny system typów wykonuje następujące funkcje:  
@@ -63,7 +65,7 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
   
 -   [Interfejsy](#Interfaces)  
   
--   [Delegaci](#Delegates)  
+-   [Delegaty](#Delegates)  
   
 <a name="Classes"></a>   
 ### <a name="classes"></a>Klasy  

@@ -1,21 +1,21 @@
 ---
-title: Tworzenie obrazów platformy Docker programu .NET Core
-description: Opis obrazów platformy Docker i platformy .NET Core
+title: Omówienie obrazów platformy docker
+description: Dowiedz się, jak używać opublikowanych obrazów Docker w programie .NET Core z rejestru platformy Docker. Zostanie również dowiesz się, jak ściągać obrazy i tworzenie własnych obrazów.
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 675b6821588f8d0dd9495346a13665a32986f060
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: mvc, seodec18
+ms.openlocfilehash: dbe509269c1dc5868c44b12b025bbdd9faaa3508
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841167"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169342"
 ---
-# <a name="building-docker-images-for-net-core-applications"></a>Tworzenie obrazów platformy Docker dla aplikacji .NET Core
+# <a name="learn-about-docker-images-for-net-core"></a>Więcej informacji na temat obrazów platformy Docker dla platformy .NET Core
 
- W tym samouczku skupimy się na używanie platformy .NET Core w Docker. Po pierwsze omówimy różnych obrazów platformy Docker, które są oferowane i konserwowane przez firmę Microsoft i przypadkami użycia. Firma Microsoft następnie Dowiedz się, jak tworzyć i przekształcać aplikacji ASP.NET Core.
+W tym samouczku skupimy się na używanie platformy .NET Core w Docker. Po pierwsze omówimy różnych obrazów platformy Docker, które są oferowane i konserwowane przez firmę Microsoft i przypadkami użycia. Firma Microsoft następnie Dowiedz się, jak tworzyć i przekształcać aplikacji ASP.NET Core.
 
 W trakcie tego samouczka dowiesz się:
 > [!div class="checklist"]
@@ -36,11 +36,11 @@ Tworzenie obrazów platformy Docker dla deweloperów, skupiliśmy się na trzech
 Dlaczego trzy obrazy?
 Podczas tworzenia, kompilowania i uruchamiania konteneryzowanych aplikacji, mamy różnych priorytetach.
 
-* **Programowanie:** skupiono się priorytetu na szybko iterować zmiany i możliwość debugowania zmiany. Rozmiar obrazu nie jest ważne, a nie można wprowadzić zmiany do kodu i szybkie wyświetlenie?
+* **Opracowywanie zawartości:**  Skupiono się priorytet na szybko przejść zmiany i możliwość debugowania zmiany. Rozmiar obrazu nie jest ważne, a nie można wprowadzić zmiany do kodu i szybkie wyświetlenie?
 
-* **Kompilacja:** ten obraz zawiera wszystko, co jest potrzebne do kompilowania aplikacji, która obejmuje kompilator i inne zależności, aby zoptymalizować pliki binarne.  Możesz użyć obrazu kompilacji umożliwia tworzenie zasobów, które można umieścić w środowisku produkcyjnym obraz. Obraz kompilacji mogą być wykorzystane w celu zapewnienia ciągłej integracji, lub w środowisku kompilacji. Takie podejście umożliwia agenta kompilacji skompilować i utworzyć aplikację (wszystkie wymagane zależności) w przypadku obrazu kompilacji. Agenta kompilacji, wystarczy wiedzieć, jak uruchomić tego obrazu platformy Docker.
+* **Kompilacja:** Ten obraz zawiera wszystko, co jest potrzebne do kompilowania aplikacji, która obejmuje kompilator i inne zależności, aby zoptymalizować pliki binarne.  Możesz użyć obrazu kompilacji umożliwia tworzenie zasobów, które można umieścić w środowisku produkcyjnym obraz. Obraz kompilacji mogą być wykorzystane w celu zapewnienia ciągłej integracji, lub w środowisku kompilacji. Takie podejście umożliwia agenta kompilacji skompilować i utworzyć aplikację (wszystkie wymagane zależności) w przypadku obrazu kompilacji. Agenta kompilacji, wystarczy wiedzieć, jak uruchomić tego obrazu platformy Docker.
 
-* **Produkcyjne:** jak szybko możesz wdrożyć i uruchomić obraz? Ten obraz jest mała, więc zoptymalizowane pod kątem wydajności sieci hostów platformy Docker z rejestru platformy Docker. Zawartość jest gotowa do uruchomienia, umożliwiając krótsze czasy docker, uruchom do przetwarzania wyników. Kompilacja kodu dynamicznej nie jest potrzebna w modelu platformy Docker. Zawartość, które można umieścić w ten obraz będzie ograniczona do plików binarnych i zawartość wymaganą do uruchomienia aplikacji.
+* **Produkcyjne:** Jak szybko możesz wdrożyć i uruchomić obraz? Ten obraz jest mała, więc zoptymalizowane pod kątem wydajności sieci hostów platformy Docker z rejestru platformy Docker. Zawartość jest gotowa do uruchomienia, umożliwiając krótsze czasy docker, uruchom do przetwarzania wyników. Kompilacja kodu dynamicznej nie jest potrzebna w modelu platformy Docker. Zawartość, które można umieścić w ten obraz będzie ograniczona do plików binarnych i zawartość wymaganą do uruchomienia aplikacji.
 
     Na przykład `dotnet publish` dane wyjściowe zawierają:
 
@@ -69,7 +69,7 @@ Aby osiągnąć powyższe cele, firma Microsoft zapewnia wariantów obraz w rama
 
 Oprócz zoptymalizowane scenariusze programowania, kompilacji i produkcji oferujemy dodatkowe obrazy:
 
-* `microsoft/dotnet:<version>-runtime-deps`**Deps środowiska uruchomieniowego** obraz zawiera system operacyjny, ze wszystkimi natywnych zależności wymagane przez platformy .NET Core. Ten obraz dotyczy [aplikacje samodzielne](../deploying/index.md).
+* `microsoft/dotnet:<version>-runtime-deps`: **Deps środowiska uruchomieniowego** obraz zawiera system operacyjny, ze wszystkimi natywnych zależności wymagane przez platformy .NET Core. Ten obraz dotyczy [aplikacje samodzielne](../deploying/index.md).
 
 Najnowsze wersje każdego wariantu:
 
@@ -115,7 +115,7 @@ Aby skompilować i uruchomić, należy zainstalować następujące elementy:
 
 #### <a name="net-core-21-sdk"></a>.NET core 2.1 SDK
 
-* Zainstaluj [platformy .NET Core SDK 2.1](https://www.microsoft.com/net/core).
+* Zainstaluj [.NET Core 2.1 SDK](https://www.microsoft.com/net/core).
 
 * Wybrany edytor kodu, należy zainstalować, jeśli jeszcze go.
 

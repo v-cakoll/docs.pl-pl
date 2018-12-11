@@ -1,6 +1,6 @@
 ---
 title: Zarządzana wątkowość — najlepsze rozwiązania
-ms.date: 11/30/2017
+ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562375"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150618"
 ---
 # <a name="managed-threading-best-practices"></a>Zarządzana wątkowość — najlepsze rozwiązania
 Wielowątkowość wymaga starannego programowania. W przypadku większości zadań mogą zmniejszyć złożoność przez kolejkowanie żądania do wykonania, wątków z puli wątków. Ten temat dotyczy trudniejsze sytuacjach, takich jak koordynowanie pracy wielu wątków i obsługi wątki tego bloku.  
@@ -70,37 +70,18 @@ else {
   
  Warunki wyścigu może również wystąpić podczas synchronizowania działania wielu wątków. Zawsze, gdy pisania choćby wiersza kodu, należy rozważyć, co może się zdarzyć, jeśli wątek były przerywane, przed wykonaniem wiersza (lub przed każdą instrukcji poszczególnych maszyn, które składają się na wiersz), a inny wątek podbili go.  
   
-## <a name="number-of-processors"></a>Liczba procesorów  
- Większość komputerów teraz mieć wiele procesorów (nazywane również rdzenie) nawet małych urządzeniach, takich jak tablety i telefony. Jeśli wiesz, że tworzysz oprogramowanie, które będzie również uruchomić na komputerach z jednym procesorem, należy zwrócić uwagę oznacza wielowątkowości rozwiązuje problemy różnych komputerach jednym procesorem i wieloprocesorowych.  
-  
-### <a name="multiprocessor-computers"></a>Komputerów wieloprocesorowych  
- Wielowątkowość zapewnia większą przepływność. Dziesięć procesory mogą wykonywać dziesięć razy pracę one, ale tylko jeśli praca odbywa się tak, aby wszystkie dziesięć mogą działać jednocześnie; wątki zapewniają prosty sposób podzielić pracę i wykorzystać dodatkowej mocy obliczeniowej. Jeśli używasz wielowątkowości w komputerach wieloprocesorowych:  
-  
--   Liczba wątków, które mogą być wykonywane jednocześnie jest ograniczona przez liczbę procesorów.  
-  
--   Wątku w tle jest wykonywany tylko wtedy, gdy jest to liczba wątków pierwszego planu wykonania jest mniejszy niż liczba procesorów.  
-  
--   Gdy wywołujesz <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> metody na wątek, wątek może lub nie może uruchomić wykonywanie natychmiast, w zależności od liczby procesorów i liczbę wątków oczekujących na wykonanie.  
-  
--   Warunki wyścigu może wystąpić, nie tylko z powodu wątki są zastępowane nieoczekiwanie zamknięty, ale ponieważ dwa wątki, wykonując na różnych procesorach może racing do osiągnięcia tego samego bloku kodu.  
-  
-### <a name="single-processor-computers"></a>Komputery z jednym procesorem  
- Wielowątkowość zapewnia większą elastyczność do komputera użytkownika i korzysta z czasu bezczynności dla zadań w tle. Jeśli używasz wielowątkowość na komputerze jednoprocesorowym:  
-  
--   Tylko jeden wątek działa w każdej chwili.  
-  
--   Wątku w tle jest wykonywany tylko wtedy, gdy jest bezczynny wątek główny użytkownik. Wątek pierwszego planu, który wykonuje stale starves wątków w tle czasu procesora.  
-  
--   Gdy wywołujesz <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> metody w wątku, że wątek nie rozpocznie się wykonywanie aż do bieżącego wątku daje lub jest przerywane przez system operacyjny.  
-  
--   Sytuacje wyścigu zazwyczaj wystąpić, ponieważ programistę nie jest przewidywane fakt, że wątek może przerywane chwili niewygodna czasami co inny wątek nawiązać blokiem kodu.  
-  
 ## <a name="static-members-and-static-constructors"></a>Statyczne elementy członkowskie i konstruktorów statycznych  
  Klasa nie został zainicjowany aż do jej konstruktora klasy (`static` konstruktora w języku C# `Shared Sub New` w języku Visual Basic) zakończył działanie. Aby uniemożliwić wykonywanie kodu na typie, który nie został zainicjowany, środowisko uruchomieniowe języka wspólnego blokuje wszystkie połączenia z innych wątków do `static` elementów członkowskich klasy (`Shared` elementów członkowskich w języku Visual Basic) do momentu zakończenia uruchamiania konstruktora klasy.  
   
  Na przykład, jeśli Konstruktor klasy rozpoczynają nowy wątek, a następnie wywołuje procedury wątku `static` składowej klasy nowe bloki wątku do chwili zakończenia konstruktora klasy.  
   
  Dotyczy to dowolnego typu, który może mieć `static` konstruktora.  
+
+## <a name="number-of-processors"></a>Liczba procesorów
+
+Czy istnieją tylko jeden procesor lub kilka procesorów dostępnych w systemie może mieć wpływ na architekturę wielowątkowych. Aby uzyskać więcej informacji, zobacz [liczba procesorów](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors).
+
+Użyj <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> właściwości, aby określić liczbę procesorów dostępnych w czasie wykonywania.
   
 ## <a name="general-recommendations"></a>Ogólne zalecenia  
  Korzystając z wielu wątków, należy wziąć pod uwagę następujące wytyczne:  
@@ -145,7 +126,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  W .NET Framework w wersji 2.0 <xref:System.Threading.Interlocked.Add%2A> metoda zapewnia atomic aktualizacje w przyrostach większy niż 1.  
+    > W programie .NET Framework 2.0 i nowszych, należy użyć <xref:System.Threading.Interlocked.Add%2A> metodę atomic przyrosty większy niż 1.  
   
      W drugim przykładzie zmienna typu odwołania jest aktualizowany tylko wtedy, gdy jest odwołanie o wartości null (`Nothing` w języku Visual Basic).  
   
@@ -183,7 +164,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  W .NET Framework w wersji 2.0 <xref:System.Threading.Interlocked.CompareExchange%2A> metoda ma przeciążenie ogólne, który może służyć do zastąpienia bezpieczny dowolnego typu referencyjnego.  
+    > Począwszy od programu .NET Framework 2.0, <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> przeciążenie metody zawiera alternatywne bezpieczny dla typów odwołań.
   
 ## <a name="recommendations-for-class-libraries"></a>Zalecenia dotyczące bibliotek klas  
  Należy wziąć pod uwagę następujące wskazówki podczas projektowania bibliotek klas dla wielowątkowości:  

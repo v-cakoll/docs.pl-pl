@@ -1,15 +1,16 @@
 ---
-title: Testowanie jednostek w platformy .NET Core
+title: Testowanie jednostek w .NET Core i .NET Standard
 description: Testowanie jednostek w projektach .NET Core i .NET Standard.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: fe0807f93396466df7ed7d01dbb7a83e39c67770
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.custom: seodec18
+ms.openlocfilehash: b63b2706a9a97413a7166c87ae25cbe964e4610b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297429"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170018"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testowanie jednostek w .NET Core i .NET Standard
 

@@ -2,14 +2,14 @@
 title: Kompilacja platformy .NET Core ze źródła
 description: Dowiedz się, jak tworzyć oprogramowanie .NET Core i .NET Core interfejsu wiersza polecenia z kodu źródłowego.
 author: bleroy
-ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: 036d7fb64d74c00b4ac0e3d34bacc834f3c3a198
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231115"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170070"
 ---
 # <a name="build-net-core-from-source"></a>Kompilacja platformy .NET Core ze źródła
 
@@ -22,7 +22,7 @@ Kod źródłowy w programie CoreCLR .NET można znaleźć w [dotnet/coreclr](htt
 
 Kompilacja obecnie zależy od następujących wymagań wstępnych:
 
-* [Git](https://git-scm.com/)
+* [Usługa Git](https://git-scm.com/)
 * [Narzędzia CMake](https://cmake.org/)
 * [Python](https://www.python.org/)
 * kompilator języka C++.
@@ -90,7 +90,7 @@ Aby można było utworzyć interfejsu wiersza polecenia platformy .NET Core, pot
   * git na ŚCIEŻCE
 * System macOS:
   * git na ŚCIEŻCE
-  * Środowisko Xcode
+  * Xcode
   * Openssl
 
 Aby skompilować, uruchom `build.cmd` na Windows, lub `build.sh` w systemie Linux i macOS z katalogu głównego. Jeśli nie chcesz wykonać testy, należy uruchomić `build.cmd -t:Compile` lub `./build.sh -t:Compile`. Aby utworzyć interfejs wiersza polecenia w systemie macOS Sierra, musisz ustawić zmienną środowiskową DOTNET_RUNTIME_ID, uruchamiając `export DOTNET_RUNTIME_ID=osx.10.11-x64`.

@@ -5,19 +5,21 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: bed43ac6b6f918b1ee45715101f9142c1add777f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: bcddd6cbb2dc3138b8343ef5e34440a93da70d1e
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836929"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169069"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Biblioteki języka Visual Basic .NET Core za pomocą polecenia dotnet test i NUnit testy jednostkowe
 
 Ten samouczek przeprowadzi Cię przez środowisko interaktywne tworzenie przykładowe rozwiązanie krok po kroku, aby dowiedzieć się więcej pojęcia testów jednostkowych. Jeśli chcesz wykonać kroki samouczka przy użyciu wstępnie utworzone rozwiązania [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) przed przystąpieniem do wykonywania. Aby uzyskać instrukcje pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Wymagania wstępne 
-- [.NET core SDK 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) lub nowszy. 
+## <a name="prerequisites"></a>Wymagania wstępne
+
+- [Zestaw SDK programu .NET core 2.1](https://www.microsoft.com/net/download) lub nowszy.
 - Edytor tekstu lub ulubionego edytora kodu.
 
 ## <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
@@ -152,7 +154,7 @@ W *jednostki — testowanie-języka vb — nunit* katalogu, uruchom `dotnet test
 
 ## <a name="adding-more-features"></a>Dodawanie większej liczby funkcji
 
-Teraz, gdy wprowadzono jeden przebieg testu, nadszedł czas na zapis więcej. Istnieje kilka innych przypadkach proste dla liczb pierwszych: 0, -1. Możesz dodać te przypadki jako nowe testy za pomocą `<Test>` atrybut, ale który szybko staje się uciążliwe. Istnieją inne atrybuty xUnit, które umożliwiają pisanie zestaw testów podobne.  A `<TestCase>` atrybut reprezentuje zestaw testów, które wykonania tego samego kodu, ale mają różne argumenty wejściowe. Możesz użyć `<TestCase>` atrybutu, aby określić wartości dla tych danych wejściowych.
+Teraz, gdy wprowadzono jeden przebieg testu, nadszedł czas na zapis więcej. Istnieje kilka innych przypadkach proste dla liczby pierwsze: 0, -1. Możesz dodać te przypadki jako nowe testy za pomocą `<Test>` atrybut, ale który szybko staje się uciążliwe. Istnieją inne atrybuty xUnit, które umożliwiają pisanie zestaw testów podobne.  A `<TestCase>` atrybut reprezentuje zestaw testów, które wykonania tego samego kodu, ale mają różne argumenty wejściowe. Możesz użyć `<TestCase>` atrybutu, aby określić wartości dla tych danych wejściowych.
 
 Zamiast tworzyć nowe testy, mają zastosowanie do utworzenia szereg testów testujące kilka wartości mniejszej niż dwa, czyli najniższy numer pierwsze dwa atrybuty:
 

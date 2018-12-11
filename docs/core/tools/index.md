@@ -1,15 +1,14 @@
 ---
 title: Narzędzia programu .NET core interfejsu wiersza polecenia (CLI)
 description: Przegląd funkcji i narzędzi .NET Core interfejsu wiersza polecenia (CLI).
-author: mairaw
-ms.author: mairaw
 ms.date: 08/14/2017
-ms.openlocfilehash: 0ef69f98171da98b50aae4cdd2f5f88f37ad0c63
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.custom: seodec18
+ms.openlocfilehash: 698e6188d2cc73c30a7003f53199065d1eff2ec0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778883"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170202"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET core
 

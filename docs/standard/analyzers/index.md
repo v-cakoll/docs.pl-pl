@@ -1,37 +1,38 @@
 ---
-title: Roslyn analizatorów — na podstawie .NET
-description: Więcej informacji na temat analizatorów Roslyn na podstawie, znaleźć problemy, które sugeruje rozwiązania tych problemów.
+title: Analizatory — oparte na platformie Roslyn platformy .NET
+description: Więcej informacji na temat analizatorów Roslyn na podstawie, znajdować problemy, które sugerują poprawkami tych problemów.
 author: billwagner
 ms.author: billwagner
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ec153b8fed08ef245a3a0f58970b4e3955dfacb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 226482d1d385078811f2b1c5ee138e24287a785e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567266"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154336"
 ---
-# <a name="the-roslyn-based-analyzers"></a>Analizatory na podstawie Roslyn
+# <a name="the-roslyn-based-analyzers"></a>Roslyn na podstawie analizatorów
 
-Na podstawie Roslyn analizatorów umożliwia analizowanie kodu źródłowego projektu, aby znaleźć problemy i zaproponuje poprawki zestawu .NET SDK kompilatora (Roslyn API). Różne analizatorów poszukaj różne rodzaje problemów, począwszy od rozwiązania, które mogą spowodować usterki do zagadnienia dotyczące zabezpieczeń w celu zgodności z interfejsu API.
+Oparte na programie Roslyn analizatory Użyj kompilatora zestawu SDK programu .NET (interfejsy API Roslyn) do analizowania kodu źródłowego projektu można znaleźć problemy, a także sugerują poprawki. Analizatory różnych poszukaj różne rodzaje problemów, począwszy od praktyk, które mogą być przyczyną błędów z bezpieczeństwem się zgodnością z interfejsem API.
 
-Na podstawie Roslyn analizatorów działa zarówno interakcyjne i podczas kompilacji. Analizatora znajdują się różne wskazówki w Visual Studio lub w kompilacji z wiersza polecenia.
+Oparte na programie Roslyn analizatory współpracować interaktywnie i podczas kompilacji. Analizator wskazówki różne w przypadku programu Visual Studio lub w kompilacji z wiersza polecenia.
 
-Podczas edytowania kodu w programie Visual Studio analizatorów Uruchom jako wprowadzić zmiany, przechwytywanie możliwych problemach, jak tworzyć kod wyzwolenia problemy. Wszystkie problemy zostały wyróżnione z zygzaki w jakikolwiek problem. Żarówka Wyświetla programu Visual Studio, a po jego kliknięciu analizatora sugeruje możliwe rozwiązania tego problemu. Podczas kompilowania projektu programu Visual Studio lub z wiersza polecenia analizy kodu źródłowego i analizatora zawiera pełną listę potencjalnych problemów. Na poniższej ilustracji przedstawiono przykład.
+Podczas edycji kodu w programie Visual Studio analizatory działać po wprowadzeniu dowolnych zmian, przechwytywanie potencjalne problemy, jak utworzyć kod, który wyzwolić wątpliwości. Wszelkie problemy są wyróżniane faliste linie w dowolnym problemem. Program Visual Studio Wyświetla żarówki, a po jego kliknięciu analizatora sugeruje możliwe poprawki dla tego problemu. Podczas tworzenia projektu w programie Visual Studio lub z wiersza polecenia analizy kodu źródłowego i analizatora zawiera pełną listę potencjalnych problemów. Na poniższej ilustracji przedstawiono przykład.
 
-![problemy zgłoszone przez analizator framework](./media/framework-analyzers-2.png)
+![problemów zgłaszanych przez analizator struktury](./media/framework-analyzers-2.png)
 
-Na podstawie Roslyn analizatorów raport potencjalnych problemach, jak błędy, ostrzeżenia lub informacji na podstawie ich wagi problemu.
+Oparte na programie Roslyn analizatory raport potencjalnych problemów jako błędy, ostrzeżenia lub informacji na podstawie ich wagi problemu.
 
-Na podstawie Roslyn analizatorów jest instalowany jako pakietów NuGet w projekcie. Skonfigurowany analizatorów wszystkie ustawienia dla każdego analizatora przywrócona i uruchomić na maszynie Każdy deweloper dla tego projektu.
+Należy zainstalować oparte na programie Roslyn analizatory jako pakiety NuGet w projekcie. Analizatory skonfigurowane wszystkie ustawienia dla każdego analizatora przywrócona i uruchomić na maszynie Każdy deweloper dla tego projektu.
 
 > [!NOTE]
-> Środowisko użytkownika na podstawie Roslyn analizatorów jest inny niż z biblioteki analizy kodu, takich jak starszych wersji programu FxCop oraz narzędzia do analizy zabezpieczeń.  Nie trzeba uruchomić na podstawie Roslyn analizatorów. Nie istnieje potrzeba użycie elementów menu "Uruchom analizę kodu" w menu "Analyze" w programie Visual Studio. Na podstawie Roslyn analizatorów Uruchom asychronously podczas pracy. 
+> Środowisko użytkownika oparte na programie Roslyn analizatory jest inny niż w przypadku biblioteki analizy kodu, takich jak starsze wersje programu FxCop i narzędzi do analizy zabezpieczeń.  Nie trzeba jawnie uruchomić analizatory oparte na programie Roslyn. Nie ma potrzeby używania elementów menu "Uruchomienia analizy kodu" w menu "Analizuj" w programie Visual Studio. Analizatory są oparte na programie Roslyn uruchamiane asychronously podczas pracy. 
 
 ## <a name="more-information-on-specific-analyzers"></a>Więcej informacji na temat określonych analizatorów
 
-Następujące analizatorów zostały omówione w tej sekcji:
+W tej sekcji omówione są następujące analizatory:
 
-[Analizator interfejsu API](api-analyzer.md): ten analyzer sprawdza, czy kod dla potencjalnych zagrożeń zgodności lub korzysta z interfejsów API przestarzałe.    
-[Analizator Framework](framework-analyzer.md): ten analyzer sprawdza swój kod, aby upewnić się, wynika z wytycznymi dla aplikacji .NET Framework. Reguły obejmują kilka zabezpieczeń na podstawie zalecenia.
+* [Interfejs API analizatora](api-analyzer.md): Ta analizator sprawdza swój kod pod kątem potencjalnych zagrożeń zgodności lub korzysta z interfejsów API przestarzałych.    
+* [Analizator struktury](framework-analyzer.md): Ta analizator sprawdza swój kod, aby upewnić się, że jest zgodna z wytycznymi dla aplikacji programu .NET Framework. Zasady te obejmują kilka zaleceń oparty na zabezpieczeniach.
+* [Narzędzia .NET portability Analyzer](portability-analyzer.md): Ta analizator sprawdza swój kod, aby sprawdzić, ile pracy jest wymagane, aby Twoje aplikacje zgodne z innych implementacji platformy .NET i profilów, w tym .NET Core, .NET Standard, platformy uniwersalnej systemu Windows i Xamarin dla systemów iOS, Android i Mac. 

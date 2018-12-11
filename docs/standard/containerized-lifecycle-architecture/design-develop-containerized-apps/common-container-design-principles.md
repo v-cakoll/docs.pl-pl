@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202181"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152880"
 ---
 # <a name="common-container-design-principles"></a>Wspólne zasady projektowania kontenera
 
@@ -21,7 +21,6 @@ W modelu kontenera kontener reprezentuje pojedynczego procesu. Definiując konte
 
 Może się okazać scenariusz, w którym ma wiele procesów w jeden kontener. W każdym dokumencie architektury nigdy nie jest nigdy nie "," nie ma zawsze wiadomość "zawsze". W przypadku scenariuszy wymagających wielu procesów typowym wzorcem jest użycie [nadzorcy](http://supervisord.org/).
 
-
 >[!div class="step-by-step"]
-[Poprzednie](design-docker-applications.md)
-[dalej](monolithic-applications.md)
+>[Poprzednie](design-docker-applications.md)
+>[dalej](monolithic-applications.md)

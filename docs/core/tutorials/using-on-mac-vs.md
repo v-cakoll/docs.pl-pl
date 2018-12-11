@@ -2,14 +2,14 @@
 title: Wprowadzenie do platformy .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
 description: Ten temat przeprowadzi Cię przez tworzenie prostej aplikacji konsolowej przy użyciu programu Visual Studio dla komputerów Mac i .NET Core.
 author: guardrex
-ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f751e7532e9627de3d3733476f7214654089e468
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.custom: seodec18
+ms.openlocfilehash: 471bdfdaa10b2d66c19177ae36b8bd18ce19e468
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744117"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169576"
 ---
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Wprowadzenie do platformy .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
 
@@ -34,25 +34,25 @@ Pobierz [program Visual Studio for Mac installer](https://visualstudio.microsoft
 
 1. Wybierz **nowy projekt** na ekranie powitalnym.
 
-   ![Przycisk Nowy projekt w programie Visual Studio dla komputerów Mac startowa](./media/using-on-mac-vs/vsmac1.png)
+   ![Przycisk Nowy projekt w programie Visual Studio dla komputerów Mac startowa](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
 1. W **nowy projekt** okno dialogowe, wybierz opcję **aplikacji** w obszarze **platformy .NET Core** węzła. Wybierz **aplikację Konsolową** szablonu następuje **dalej**.
 
-   ![Nowa lista szablonów projektu](./media/using-on-mac-vs/vsmac2.png)
+   ![Nowa lista szablonów projektu](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
 
-1. Wpisz "nazwę HelloWorld" **nazwy projektu**. Wybierz **tworzenie**.
+1. Wpisz "nazwę HelloWorld" **nazwy projektu**. Wybierz pozycję **Utwórz**.
 
-   ![Konfigurowanie nowego okna dialogowego aplikacji konsoli](./media/using-on-mac-vs/vsmac3.png)
+   ![Konfigurowanie nowego okna dialogowego aplikacji konsoli](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 
 1. Zaczekaj, aż zostaną przywrócone zależności projektu. Projekt ma jeden C# pliku *Program.cs*, zawierającego `Program` klasy `Main` metody. `Console.WriteLine` Instrukcji zwróci "Hello World!" w konsoli, gdy aplikacja jest uruchomiona.
 
-   ![Otwórz okno główne z pliku Program.cs](./media/using-on-mac-vs/vsmac4.png)
+   ![Otwórz okno główne z pliku Program.cs](./media/using-on-mac-vs/visual-studio-mac-editor.png)
 
 ## <a name="run-the-application"></a>Uruchamianie aplikacji
 
 Uruchom aplikację w trybie debugowania za pomocą <kbd>F5</kbd> lub w trybie wydania przy użyciu <kbd>CTRL</kbd>+<kbd>F5</kbd>.
 
-![Pokazuje, w okienku dane wyjściowe aplikacji Hello World!](./media/using-on-mac-vs/vsmac5.png)
+![Pokazuje, w okienku dane wyjściowe aplikacji Hello World!](./media/using-on-mac-vs/visual-studio-mac-output.png)
 
 ## <a name="next-step"></a>Następny krok
 

@@ -2,12 +2,12 @@
 title: '&lt;IDN&gt; — Element (ustawienia identyfikatora Uri)'
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 96d70f76f8d29368505dd5054edf3db253b89016
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: e68fa040123180ee31af40e82f45d6efd076d8aa
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50037012"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153361"
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;IDN&gt; — Element (ustawienia identyfikatora Uri)
 Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane do nazwy domeny.  
@@ -94,6 +94,6 @@ Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane 
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+- [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

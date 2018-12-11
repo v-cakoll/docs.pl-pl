@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 17838381f42a760caa7fba7e09ab798c6284bccb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683206"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151068"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Ze względu na modernizowanie istniejących aplikacji .NET do aplikacji zoptymalizowane pod kątem chmury
 
@@ -23,7 +23,7 @@ Mierzenie to, że jeśli organizacja tworzy i zarządza aplikacjami, które są 
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>Zasady aplikacji zoptymalizowane pod kątem chmury i założenia 
 
-Ulepszenia w chmurze przede wszystkim koncentrują się na spotkanie dwa cele: obniżenie kosztów oraz zwiększenie rozwoju ich firm dzięki poprawie elastyczność. Te cele są wykonywane przez uprościć procesy, redukując opór zwolnienie i dostarczaj aplikacje.
+Ulepszenia w chmurze, przede wszystkim koncentrują się na spotkanie dwóch celów: Obniżenie kosztów i poprawy rozwoju ich firm dzięki poprawie elastyczność. Te cele są wykonywane przez uprościć procesy, redukując opór zwolnienie i dostarczaj aplikacje.
 
 Aplikacja jest zoptymalizowane pod kątem chmury w przypadku może w agile sposób opracowywanie aplikacji niezależnie od innych aplikacji w środowisku lokalnym, a następnie zwolnij wdrożenia, automatyczne skalowanie, monitorowanie i rozwiązywanie problemów z aplikacją w chmurze.
 
@@ -68,5 +68,5 @@ Wszystkie te korzyści zapewni redukcję kosztów klucza dla cyklu użytkowania 
 W poniższych sekcjach te korzyści omówiona bardziej szczegółowo i są powiązane z określonymi technologiami.
 
 >[!div class="step-by-step"]
-[Poprzednie](index.md)
-[dalej](microsoft-technologies-in-cloud-optimized-applications.md)
+>[Poprzednie](index.md)
+>[dalej](microsoft-technologies-in-cloud-optimized-applications.md)

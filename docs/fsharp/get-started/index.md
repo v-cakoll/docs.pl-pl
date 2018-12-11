@@ -1,22 +1,33 @@
 ---
-title: WprowadzenieF#
-description: Dowiedz się, jak rozpocząć pracę z F# programowania języka na platformie .NET.
-ms.date: 09/06/2016
-ms.openlocfilehash: 6c419ce8f05096566012b7b6a0b8601350c938a8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: Rozpoczynanie pracy z usługąF#
+description: Dowiedz się, jak rozpocząć pracę z F# języka programowania.
+ms.date: 12/08/2018
+ms.openlocfilehash: df0e98b4d001ceaeca2ebe3d154c6bad57a8a30d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33562547"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170824"
 ---
-# <a name="getting-started-with-f"></a>WprowadzenieF# #
+# <a name="get-started-with-f"></a>Rozpoczynanie pracy z usługąF# #
 
-Istnieje wiele sposobów, aby rozpocząć pracę z F#.  Firma Microsoft ma wielu artykułach dostarczać wskazówki dla każdego rozwija.  Aby pomóc w podejmowaniu decyzji, można użyć poniższej tabeli.
+Możesz rozpocząć pracę z F# na komputerze lub w trybie online.
 
-| SYSTEM OPERACYJNY | Preferuj programu Visual Studio | Preferuj programu Visual Studio Code | Preferuj wiersza polecenia |
+## <a name="get-started-on-your-machine"></a>Rozpocznij pracę na komputerze
+
+Istnieje wiele przewodniki na temat sposobu instalowania i używania F# po raz pierwszy na swojej maszynie.  Skorzystaj z poniższej tabeli, aby pomóc w podejmowaniu decyzji:
+
+| System operacyjny | Preferuj programu Visual Studio | Preferuj programu Visual Studio Code | Preferuj wiersza polecenia |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
-| Windows | [Rozpoczynanie pracy z programem Visual Studio](get-started-visual-studio.md) | [Rozpoczynanie pracy z usługą VSCode i Ionide](get-started-vscode.md) | [Wprowadzenie do interfejsu wiersza polecenia platformy .NET Core](get-started-command-line.md) |
-| macOS | [Rozpoczynanie pracy z programem VS dla komputerów Mac](get-started-with-visual-studio-for-mac.md) | [Rozpoczynanie pracy z usługą VSCode i Ionide](get-started-vscode.md) | [Wprowadzenie do interfejsu wiersza polecenia platformy .NET Core](get-started-command-line.md) |
-| Linux | Brak | [Rozpoczynanie pracy z usługą VSCode i Ionide](get-started-vscode.md) | [Wprowadzenie do interfejsu wiersza polecenia platformy .NET Core](get-started-command-line.md) |
+| Windows | [Rozpoczynanie pracy z programem Visual Studio](get-started-visual-studio.md) | [Rozpoczynanie pracy z usługą Visual Studio Code i Ionide](get-started-vscode.md) | [Wprowadzenie do interfejsu wiersza polecenia platformy .NET Core](get-started-command-line.md) |
+| macOS | [Rozpoczynanie pracy z programem VS dla komputerów Mac](get-started-with-visual-studio-for-mac.md) | [Rozpoczynanie pracy z usługą Visual Studio Code i Ionide](get-started-vscode.md) | [Wprowadzenie do interfejsu wiersza polecenia platformy .NET Core](get-started-command-line.md) |
+| Linux | Brak | [Rozpoczynanie pracy z usługą Visual Studio Code i Ionide](get-started-vscode.md) | [Wprowadzenie do interfejsu wiersza polecenia platformy .NET Core](get-started-command-line.md) |
 
-Ogólnie rzecz biorąc nie ma żadnych określonych sposobem na rozpoczęcie pracy, który jest lepsze niż pozostałe.  Zalecamy wypróbowanie wszystkie sposoby korzystania z F# na komputerze, aby zobaczyć, co najlepsze!
+Ogólnie rzecz biorąc nie ma żadnych określonych, który jest lepsze niż pozostałe. Zalecamy wypróbowanie wszystkie sposoby korzystania z F# na komputerze, aby zobaczyć, co najlepsze!
+
+## <a name="get-started-online"></a>Rozpocznij pracę w trybie online
+
+Jeśli wolisz nie zainstalować program F# i platformy .NET na maszynie, możesz również rozpocząć pracę z F# w przeglądarce:
+
+* [Wprowadzenie do F# w notesach Azure](https://notebooks.azure.com/Microsoft/projects/2018-Intro-FSharp/html/Introduction%20to%20FSharp.ipynb) jest [notesu programu Jupyter](https://jupyter.org/) w bezpłatnej usłudze notesów usługi Azure. Zaloguj się przy użyciu konta Microsoft i mogą pałeczkę bezpośrednio w przeglądarce.
+* [Fable REPL](https://fable.io/repl/) jest REPL interaktywne, w przeglądarce, która używa [Fable](https://fable.io/) do translacji F# kodu na język JavaScript. Zapoznaj się z wielu przykładów ten zakres, z F# podstawy do w pełni użytecznym gry wideo, wszystkie wykonywanego w przeglądarce!

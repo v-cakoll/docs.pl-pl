@@ -2,20 +2,19 @@
 title: Tworzenie gier dopasowania listy aplikacji za pomocą programowania probalistic i Infer.NET
 description: Dowiedz się, jak za pomocą programowania probalistic Infer.NET utworzyć aplikację listy gier matchup oparty na uproszczonej wersji TrueSkill.
 ms.date: 10/04/2018
-ms.topic: how-to
-ms.custom: mvc
-ms.openlocfilehash: 990fd60d809c893730bf2682946f89dbe59f36a5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.custom: mvc,how-to
+ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845823"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152474"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Tworzenie gier dopasowania listy aplikacji przy użyciu Infer.NET i Probabilistyczne programowania
 
 Ten przewodnik zawiera informacje na temat prawdopodobieństwa programowania przy użyciu Infer.NET. Probabilistyczne programowania jest podejście machine learning, gdzie niestandardowe modele są wyrażane jako programów komputerowych. Umożliwia zdobędziesz znajomość domeny w ramach modeli oraz sprawia, że system jest bardziej interpretowanej uczenia maszynowego. Obsługuje ona również wnioskowania online — proces uczenia nadejściu nowych danych. Infer.NET jest używana w różnych produktów w firmie Microsoft na platformie Azure, usługi Xbox i Bing.
 
-## <a name="what-is-probabilistic-programming"></a>Co to jest programowanie Probabilistyczne? 
+## <a name="what-is-probabilistic-programming"></a>Co to jest programowanie Probabilistyczne?
 
 Programowanie Probabilistyczne umożliwia nam tworzenie statystyczne modeli procesów w rzeczywistych warunkach. 
 
@@ -135,7 +134,7 @@ W wierszu polecenia Uruchom następujące polecenie:
 dotnet run
 ```
 
-## <a name="results"></a>wyniki
+## <a name="results"></a>Wyniki
 
 Wyniki powinny wyglądać podobnie do następującego:
 

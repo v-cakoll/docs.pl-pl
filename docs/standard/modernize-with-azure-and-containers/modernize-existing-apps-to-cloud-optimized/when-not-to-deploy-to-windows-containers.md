@@ -1,48 +1,49 @@
 ---
-title: Kiedy nie należy wdrażać na kontenery systemu Windows
-description: Modernizacji istniejących aplikacji .NET z kontenerami chmury Azure i systemu Windows | Kiedy nie należy wdrażać na kontenery systemu Windows
+title: Kiedy nie należy wdrażać kontenery Windows
+description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Kiedy nie należy wdrażać kontenery Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 819f32955ff019414bef8820d17d272eddc11bf8
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 940e94b45dcfb4e301b095cbe4ef5bcaf6752c4c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129899"
 ---
-# <a name="when-not-to-deploy-to-windows-containers"></a>Kiedy nie należy wdrażać na kontenery systemu Windows
+# <a name="when-not-to-deploy-to-windows-containers"></a>Kiedy nie należy wdrażać kontenery Windows
 
-Niektóre technologie systemu Windows nie są obsługiwane przez kontenery systemu Windows. W takich przypadkach nadal należy przeprowadzić migrację do maszyn wirtualnych standardy, zwykle za pomocą tylko systemu Windows i usługi IIS.
+Niektóre technologie Windows nie są obsługiwane przez kontenery Windows. W takich przypadkach nadal należy przeprowadzić migrację do maszyn wirtualnych standardy, zwykle przy użyciu tylko Windows i usług IIS.
 
-Przypadków nie jest obsługiwana w kontenerach systemu Windows, począwszy od 2018 może: 
+W przypadkach nie jest obsługiwana w kontenerach Windows, począwszy od maja 2018 r.: 
 
--   Usługi kolejkowania wiadomości firmy Microsoft (MSMQ) aktualnie jest dostępna tylko w kontenerach systemu Windows oparte na wersji v1803 systemu Windows Server, ale nie w poprzednich wersjach. 
+-   Microsoft usługi kolejkowania komunikatów (MSMQ) obecnie jest dostępna tylko w kontenerach Windows oparte na wersji v1803 systemu Windows Server, ale nie w poprzednich wersjach. 
 
     -   [Forum żądania UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
 
     -   [Forum dyskusyjne](https://social.msdn.microsoft.com/Forums/bce99a7d-aa60-44fa-a348-450855650810/msmqserver-is-it-supported?forum=windowscontainers)
 
--   Koordynator transakcji rozproszonych (MSDTC) nie jest obecnie obsługiwane w kontenerach systemu Windows.
+-   Transakcji Koordynator MSDTC (Microsoft Distributed) nie jest obecnie obsługiwane w kontenerach Windows.
 
-    -   [Problem GitHub](https://github.com/MicrosoftDocs/Virtualization-Documentation/issues/494)
+    -   [Problem w usłudze GitHub](https://github.com/MicrosoftDocs/Virtualization-Documentation/issues/494)
 
--   Microsoft Office nie obsługuje obecnie kontenerów.
+-   Microsoft Office nie jest obecnie obsługiwane kontenerów.
 
     -   [Forum żądania UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
 
--   Aplikacje interfejsu użytkownika (aplikacje klienckie za pomocą interfejsu użytkownika programu visual) nie są obsługiwane scenariusze.
+-   Interfejs użytkownika aplikacji (aplikacje klienckie za pomocą interfejsu użytkownika programu visual) nie są obsługiwane scenariusze.
 
--   Role systemu Windows infrastruktury (DNS, DHCP, kontroler domeny, NTP, drukowania, serwer plików, IAM itp.) nie są obsługiwane scenariusze.
+-   Windows rolami infrastruktury (DNS, DHCP, kontroler domeny, NTP, drukowania, serwer plików, zarządzanie dostępem i Tożsamościami itp.) nie są obsługiwane scenariusze.
 
 
-Żądania od społeczności i dodatkowe scenariusze obsługiwane nie, zobacz forum usługi UserVoice dla kontenerów systemu Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.
+Dodatkowe scenariusze nieobsługiwane i żądań od społeczności można znaleźć UserVoice forum dla kontenerów Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Maszyny wirtualne i kontenerów na platformie Azure**
+-   **Maszyny wirtualne i kontenery na platformie Azure**
 
     [https://docs.microsoft.com/azure/virtual-machines/windows/containers](https://docs.microsoft.com/azure/virtual-machines/windows/containers)
 
 >[!div class="step-by-step"]
-[Poprzednie](deploy-existing-net-apps-as-windows-containers.md)
-[dalej](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
+>[Poprzednie](deploy-existing-net-apps-as-windows-containers.md)
+>[dalej](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)

@@ -2,20 +2,20 @@
 title: Odwołanie interakcyjne F# (fsi.exe)
 description: Dowiedz się, jak F# Interactive (fsi.exe) jest używany do uruchamiania F# kodu interaktywnego w konsoli lub wykonać F# skryptów.
 ms.date: 05/16/2016
-ms.openlocfilehash: 459a2a4ba49ba0f55455797617781d010efecc0b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8f6d261c6570935b665fc8a826b0829b3953a587
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50195258"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153634"
 ---
 # <a name="interactive-programming-with-f"></a>Interaktywny, programowanie za pomocąF# #
 
 > [!NOTE]
-W tym artykule opisano aktualnie środowisko Windows tylko.  Będzie inaczej.
+> W tym artykule opisano aktualnie środowisko Windows tylko.  Będzie inaczej.
 
 > [!NOTE]
-Łącze odwołania API spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
+> Łącze odwołania API spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
 
 F#Interactive (fsi.exe) jest używany do uruchamiania F# kodu interaktywnego w konsoli, lub wykonać F# skryptów. Innymi słowy F# interaktywne wykonuje REPL (Odczyt, oszacowanie, drukowania Loop) dla F# języka.
 
@@ -86,7 +86,7 @@ for arg in fsi.CommandLineArgs do
 printfn "%A" (MyAssembly.myFunction 10 40)
 ```
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 Command line arguments: 

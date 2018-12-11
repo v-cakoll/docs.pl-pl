@@ -4,12 +4,13 @@ description: Poznaj najlepsze rozwiązania dotyczące pisania testów jednostkow
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 69fe0cae141d1ed1e1281eecd78bf03e6e8be961
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 60baa533a8f4dc2fb715b813018f8f84000777d7
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530601"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169628"
 ---
 # <a name="unit-testing-best-practices"></a>Najlepsze rozwiązania testy jednostkowe
 
@@ -32,7 +33,7 @@ Regresja wady są wady, które są wprowadzone podczas wprowadzania zmian do apl
 Za pomocą testów jednostkowych jest możliwe ponowne uruchamianie usługi cały zestaw testów po każdej kompilacji, lub nawet w przypadku, po zmianie wiersza kodu. Co daje pewność, że nowy kod nie mogą przerwać działania istniejących funkcji.
 
 ### <a name="executable-documentation"></a>Dokumentacja pliku wykonywalnego
-Go może nie zawsze jest oczywiste działanie konkretną metodę lub jego zachowania podany niektórych danych wejściowych. Możesz poprosić samodzielnie: to metoda zachowaniem jeśli mogę przekazać pusty ciąg? Wartość null?
+Go może nie zawsze jest oczywiste działanie konkretną metodę lub jego zachowania podany niektórych danych wejściowych. Może zadać sobie: Jak zachowują się ta metoda jeśli mogę przekazać pusty ciąg? Wartość null?
 
 W przypadku zestawu testów jednostkowych dobrze nazwane każdy test powinien móc wyjaśniają oczekiwanych danych wyjściowych dla danego składnika. Ponadto powinno być możliwe sprawdzić, czy rzeczywiście działa.
 
@@ -328,7 +329,7 @@ public interface IDateTimeProvider
     DayOfWeek DayOfWeek();
 }
 
-public bool GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
+public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
     if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
     {

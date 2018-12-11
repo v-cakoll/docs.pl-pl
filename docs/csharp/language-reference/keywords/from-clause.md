@@ -8,12 +8,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: c8c124f44df292b8323560cce541cca2765e2790
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9af24d9c2a99a9c763c6ad3aac9895e7dddcf8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033405"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129041"
 ---
 # <a name="from-clause-c-reference"></a>Klauzula From (odwołanie w C#)
 
@@ -31,11 +31,11 @@ W poniższym przykładzie `numbers` jest źródłem danych i `num` jest zmiennej
 
 ## <a name="the-range-variable"></a>Zmienna zakresu
 
-Kompilator wnioskuje typ zmiennej zakresu, gdy źródło danych implementuje <xref:System.Collections.Generic.IEnumerable%601>. Na przykład, jeśli źródło ma typ `IEnumerable<Customer>`, a następnie wywnioskowana jest zmienna zakresu można `Customer`. Jedyną sytuacją, który musi określać typ jawnie jest, gdy źródłem jest nieogólnego `IEnumerable` wpisz na przykład <xref:System.Collections.ArrayList>. Aby uzyskać więcej informacji, zobacz [porady: zapytanie w ArrayList za pomocą LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
+Kompilator wnioskuje typ zmiennej zakresu, gdy źródło danych implementuje <xref:System.Collections.Generic.IEnumerable%601>. Na przykład, jeśli źródło ma typ `IEnumerable<Customer>`, a następnie wywnioskowana jest zmienna zakresu można `Customer`. Jedyną sytuacją, który musi określać typ jawnie jest, gdy źródłem jest nieogólnego `IEnumerable` wpisz na przykład <xref:System.Collections.ArrayList>. Aby uzyskać więcej informacji, zobacz [jak: Zapytanie w ArrayList za pomocą LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
 
-W poprzednim przykładzie `num` jest wnioskowany typ `int`. Ponieważ zmienna zakresu zdecydowanie jest wpisane, można wywoływać metody na nim lub używać go w innych operacji. Na przykład zamiast zapisywania `select num`, można napisać `select num.ToString()` spowodować wyrażenia zapytania w celu zwrócenia sekwencji, a nie liczby całkowite. Lub możesz napisać `select n + 10` spowodować wyrażenia w celu zwrócenia sekwencji 14, 11, 13, 12, 10. Aby uzyskać więcej informacji, zobacz [klauzuli select](select-clause.md).
+W poprzednim przykładzie `num` jest wnioskowany typ `int`. Ponieważ zmienna zakresu zdecydowanie jest wpisane, można wywoływać metody na nim lub używać go w innych operacji. Na przykład zamiast zapisywania `select num`, można napisać `select num.ToString()` spowodować wyrażenia zapytania w celu zwrócenia sekwencji, a nie liczby całkowite. Lub możesz napisać `select num + 10` spowodować wyrażenia w celu zwrócenia sekwencji 14, 11, 13, 12, 10. Aby uzyskać więcej informacji, zobacz [klauzuli select](select-clause.md).
 
-Zmienna zakresu jest podobna do zmiennej iteracji w [foreach](foreach-in.md) instrukcji, z wyjątkiem jednego bardzo istotną różnicą: zmienną zakresu faktycznie nigdy nie przechowuje dane ze źródła. On po prostu składni wygody umożliwiająca zapytania do opisywania, co ma miejsce, gdy zapytanie jest wykonywane. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md).
+Zmienna zakresu jest podobna do zmiennej iteracji w [foreach](foreach-in.md) instrukcji, z wyjątkiem jednego bardzo istotną różnicą: zmienną zakresu faktycznie nigdy nie przechowuje dane ze źródła. Jest po prostu składni wygody umożliwiająca zapytania do opisywania, co program ma miejsce w przypadku, gdy zapytanie jest wykonywane. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 ## <a name="compound-from-clauses"></a>Złożone z klauzul
 

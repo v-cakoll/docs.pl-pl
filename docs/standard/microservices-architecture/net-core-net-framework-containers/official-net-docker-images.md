@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Of
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075588"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131381"
 ---
 # <a name="official-net-docker-images"></a>Oficjalne obrazy Docker w programie .NET
 
@@ -50,7 +50,6 @@ Podczas eksplorowania repozytoriów obrazu platformy .NET w usłudze Docker Hub 
 | Microsoft/dotnet:**2.1 — aspnetcore-środowiska uruchomieniowego** | ASP.NET Core przy użyciu tylko środowiska uruchomieniowego i optymalizacje platformy ASP.NET Core, w systemie Linux i Windows (wielu arch) |
 | Microsoft/dotnet:**zestawu sdk 2.1**                | .NET core przy użyciu zestawów SDK uwzględnione, w systemie Linux i Windows (wielu arch)                                  |
 
-
 >[!div class="step-by-step"]
-[Poprzednie](net-container-os-targets.md)
-[dalej](../architect-microservice-container-applications/index.md)
+>[Poprzednie](net-container-os-targets.md)
+>[dalej](../architect-microservice-container-applications/index.md)

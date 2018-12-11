@@ -4,11 +4,11 @@ description: Dowiedz się, jak używać strukturze ML.NET do ładowania danych i
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: 971c5c62acc9dd7bf29aa11ce898c2b76822c3d7
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672085"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125405"
 ---
 # <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a>Szkolenie modelu uczenia maszynowego z danymi, które nie znajduje się w pliku tekstowym - strukturze ML.NET
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 8b8237a09b36114f7100c90cee0bd753236789fd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 60b9e1862c7ffd212f19cdc331930e3b5d120763
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522623"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131303"
 ---
 # <a name="basic-linq-query-operations-c"></a>Podstawowe operacje zapytań LINQ (C#)
 Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania wyrażeń i niektóre typowe rodzaje operacji, które można wykonywać w zapytaniu. Więcej szczegółowych informacji znajduje się w następujących tematach:  
@@ -31,7 +31,7 @@ Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbtec
   
  [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
   
- [Wskazówki: Pisanie zapytań w języku C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Wskazówki: Pisanie zapytań wC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
 >  Jeśli już znasz język zapytań, takich jak bazy danych SQL lub wyrażenie XQuery, możesz pominąć większość części tego tematu. Przeczytaj o "`from` klauzuli" w następnej sekcji, aby dowiedzieć się więcej na temat kolejności klauzul [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniach zapytań.  
@@ -44,7 +44,7 @@ Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbtec
  Zmienna zakresu jest podobna do zmiennej iteracji w `foreach` pętli z tą różnicą, że nie rzeczywiste iteracji odbywa się w wyrażeniu zapytania. Po wykonaniu zapytania zmienna zakresu będzie służyć jako odwołanie do każdy element w `customers`. Ponieważ kompilator może wywnioskować typ `cust`, nie trzeba określić ręcznie. Zmienne dodatkowy zakres może zostać wprowadzony przez `let` klauzuli. Aby uzyskać więcej informacji, zobacz [let, klauzula](../../../../csharp/language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
->  Przypadku nieogólnego źródeł danych takich jak <xref:System.Collections.ArrayList>, musi jawnie wpisana zmienna zakresu. Aby uzyskać więcej informacji, zobacz [porady: zapytanie w ArrayList za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) i [klauzuli from](../../../../csharp/language-reference/keywords/from-clause.md).  
+>  Przypadku nieogólnego źródeł danych takich jak <xref:System.Collections.ArrayList>, musi jawnie wpisana zmienna zakresu. Aby uzyskać więcej informacji, zobacz [jak: Zapytanie w ArrayList za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) i [klauzuli from](../../../../csharp/language-reference/keywords/from-clause.md).  
   
 ## <a name="filtering"></a>Filtrowanie  
  Prawdopodobnie najbardziej typowych operacji zapytania polega na zastosowaniu filtrowania w postaci wyrażenia logicznego. Filtr powoduje, że zapytanie, aby zwrócić tylko te elementy, dla których wyrażenie jest prawdziwe. Wynik jest generowany przy użyciu `where` klauzuli. Filtr w praktyce określa, które elementy, które mają zostać wykluczone z sekwencji źródłowej. W poniższym przykładzie, tylko te `customers` mających adresu w Londynie są zwracane.  
@@ -90,7 +90,7 @@ Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbtec
   
  W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] nie trzeba używać `join` tak często, jak to zrobić w języku SQL, ponieważ klucze obce w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] są reprezentowane w modelu obiektu jako właściwości używane do przechowywania kolekcji elementów. Na przykład `Customer` obiekt zawiera zbiór `Order` obiektów. Zamiast wykonywanie sprzężenia, używając zapisu kropkowego dostęp zamówienia:  
   
-```  
+```csharp
 from order in Customer.Orders...  
 ```  
   
@@ -103,6 +103,6 @@ from order in Customer.Orders...
 
 - [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
 - [Wyrażenia zapytań LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [Wskazówki: Pisanie zapytań w języku C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+- [Wskazówki: Pisanie zapytań wC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
 - [Słowa kluczowe zapytania (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
 - [Typy anonimowe](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

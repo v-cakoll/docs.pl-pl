@@ -1,33 +1,33 @@
 ---
-title: Implementowanie mikrousługi warstwy aplikacji przy użyciu interfejsu API sieci Web
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie mikrousługi warstwy aplikacji przy użyciu interfejsu API sieci Web
+title: Implementowanie warstwy aplikacji mikrousług przy użyciu interfejsu API sieci Web
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Dowiedz się, wstrzykiwanie zależności i wzorce mediatora oraz ich szczegóły implementacji w warstwie aplikacji interfejsu API sieci Web.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 1af8d0290eea26d57f4744bbd6d9819d886d4db4
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106557"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151190"
 ---
-# <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implementowanie mikrousługi warstwy aplikacji przy użyciu interfejsu API sieci Web
+# <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementowanie warstwy aplikacji mikrousług przy użyciu interfejsu API sieci Web
 
-## <a name="using-dependency-injection-to-inject-infrastructure-objects-into-your-application-layer"></a>Przy użyciu iniekcji zależności na iniekcję obiektów infrastruktury do warstwy aplikacji
+## <a name="use-dependency-injection-to-inject-infrastructure-objects-into-your-application-layer"></a>Użyj iniekcji zależności iniekcję obiektów infrastruktury do usługi warstwy aplikacji
 
-Jak wspomniano wcześniej, można zaimplementować jako część artefaktu tworzysz, takie jak w projekcie interfejsu API sieci Web lub projektu aplikacji sieci web MVC warstwy aplikacji. W przypadku mikrousługi skompilowanej za pomocą platformy ASP.NET Core warstwy aplikacji będzie zazwyczaj biblioteki interfejsu API sieci Web. Aby oddzielić wkrótce z platformy ASP.NET Core (swoją infrastrukturę oraz kontrolerach) w kodzie warstwy aplikacji niestandardowych, można również umieścić warstwy aplikacji w bibliotece klas oddzielnych, ale jest to opcjonalne.
+Jak wspomniano wcześniej, można zaimplementować jako część artefaktu (assembly), którą tworzysz, takich jak w ramach projektu interfejsu API sieci Web lub projektu aplikacji sieci web MVC warstwy aplikacji. W przypadku mikrousług, utworzonych za pomocą platformy ASP.NET Core warstwy aplikacji będzie zazwyczaj biblioteki interfejsu API sieci Web. Jeśli chcesz oddzielić wkrótce się z platformą ASP.NET Core (swoją infrastrukturę oraz kontrolerach) od kodu warstwy aplikacji niestandardowych warstwie aplikacji można także umieścić w bibliotece osobnej klasy, ale jest opcjonalny.
 
-Na przykład kod warstwy aplikacji porządkowania mikrousługi bezpośrednio jest zaimplementowany jako część **Ordering.API** projekt (projekt interfejsu API platformy ASP.NET Core sieci Web), rysunek jako pokazano 9-23.
+Na przykład kod warstwy aplikacji mikrousług szeregowania bezpośrednio jest wdrażany jako część **Ordering.API** projektu (projekt internetowego interfejsu API platformy ASP.NET Core), rysunek jak pokazano na 7-23.
 
-![](./media/image20.png)
+![Widok Eksploratora rozwiązań mikrousług Ordering.API, przedstawiający podfolderów w folderze aplikacji: Zachowania, poleceń, DomainEventHandlers, IntegrationEvents, modele, zapytań i operacji sprawdzania poprawności.](./media/image20.png)
 
-**Rysunek 9-23**. Warstwa aplikacji w projekcie interfejsu API programu Ordering.API platformy ASP.NET Core sieci Web
+**Rysunek 7-23**. Warstwa aplikacji w projekcie Ordering.API ASP.NET Core Web API
 
-Platformy ASP.NET Core obejmuje prostą [wbudowanych kontenera IoC](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (reprezentowane przez interfejsu IServiceProvider) obsługującej iniekcji konstruktora domyślnie i program ASP.NET udostępnia pewnych usług za pośrednictwem Podpisane. Termin korzysta z platformy ASP.NET Core *usługi* dla każdego z typów rejestrowania, które będą wstrzyknięte przez Podpisane. Należy skonfigurować usługi wbudowanych kontenerów w ConfigureServices metody w klasie uruchomienia aplikacji. Zależności są implementowane w usługach, które wymaga typu.
+Platforma ASP.NET Core obejmuje prostą [wbudowanych kontenera IoC](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (reprezentowany przez interfejsu IServiceProvider), która obsługuje iniekcji Konstruktor domyślny i ASP.NET sprawia, że niektóre usługi są dostępne za pośrednictwem DI. Platforma ASP.NET Core używa termin *usługi* dla każdego z typów rejestrowania, które będą wstrzyknięte przez DI. Możesz skonfigurować usług w kontenerze wbudowane w metodzie ConfigureServices w klasie uruchamiania aplikacji. Zależności są implementowane w usługach wymaga typu i Zarejestruj w kontenerze IoC.
 
-Zazwyczaj mają wstrzyknięcia zależności, które implementują obiektów infrastruktury. Zależność bardzo typowy iniekcję to repozytorium. Jednak można wstrzyknąć innych zależności infrastruktury, który może być. W przypadku prostszych implementacji może bezpośrednio uruchomić obiektu wzorzec jednostki pracy (obiektu EF DbContext), ponieważ DBContext jest również implementacji obiektów trwałości infrastruktury.
+Zazwyczaj mają zależności, które implementują obiektów infrastruktury. Bardzo typowy zależności do dodania to repozytorium. Jednak można wstawić wszelkich innych zależności infrastruktury, które mogą mieć. Prostsze implementacji może bezpośrednio uruchomić obiektu wzorzec jednostki pracy (obiektu EF DbContext), ponieważ kontekstu DBContext jest również implementację obiektów trwałości infrastruktury.
 
-W poniższym przykładzie widać, jak oprogramowanie .NET Core wprowadza obiekty wymagane repozytorium za pośrednictwem konstruktora. Klasa jest programem obsługi, które omówimy w następnej sekcji.
+W poniższym przykładzie można zobaczyć, jak .NET Core wprowadza obiekty wymagane repozytorium za pomocą konstruktora. Klasa jest program obsługi poleceń, co zostanie omówione w następnej sekcji.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -76,15 +76,15 @@ public class CreateOrderCommandHandler
 }
 ```
 
-Klasa używa wprowadzony repozytoria do wykonania transakcji i utrwalić zmiany stanu. Nie ma znaczenia, czy w tej klasy jest programem obsługi, metoda kontrolera interfejsu API platformy ASP.NET Core sieci Web, czy [usługi aplikacji DDD](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/). Ostatecznie jest prostą klasę, który używa repozytoriów, jednostek domeny i innych koordynacji aplikacji w sposób podobny do obsługi polecenia. Taki sam sposób dla wszystkich wymienionych klas, jak pokazano w przykładzie przy użyciu Podpisane oparte na konstruktorze działa iniekcji zależności.
+Klasa używa wprowadzonego repozytoria do wykonywania transakcji i zachować zmiany stanu. Nie ma znaczenia, czy ta klasa procedurę obsługi poleceń, metodą kontroler internetowego interfejsu API platformy ASP.NET Core, czy [usługi aplikacji DDD](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/). Ostatecznie to klient jest prostą klasę, która korzysta z repozytoriów, jednostki domeny i koordynacji innych aplikacji w sposób podobny do obsługi polecenia. Taki sam sposób dla wszystkich wymienionych klas, tak jak w przykładzie, za pomocą DI oparte na konstruktora działa iniekcji zależności.
 
-### <a name="registering-the-dependency-implementation-types-and-interfaces-or-abstractions"></a>Rejestrowanie typów wdrożenia zależności i interfejsów lub obiektów abstrakcyjnych
+### <a name="register-the-dependency-implementation-types-and-interfaces-or-abstractions"></a>Rejestrowanie typów implementacji zależności i interfejsy lub abstrakcje
 
-Przed użyciem obiekty dodane za pomocą konstruktorów, musisz wiedzieć, gdzie można zarejestrować interfejsów i klasy, które powodują powstanie obiektów do klasy Twojej aplikacji za pośrednictwem Podpisane. (Takich jak Podpisane na podstawie konstruktora, jak pokazano wcześniej.)
+Przed użyciem obiektów wprowadzonym za pomocą konstruktorów, musisz wiedzieć, gdzie można zarejestrować interfejsów i klas, które tworzą obiekty, które są wstrzykiwane do swojej klasy aplikacji za pośrednictwem DI. (Takich jak DI na podstawie konstruktora, jak pokazano wcześniej.)
 
-#### <a name="using-the-built-in-ioc-container-provided-by-aspnet-core"></a>Za pomocą wbudowanych kontenera IoC pochodzącymi z platformy ASP.NET Core
+#### <a name="use-the-built-in-ioc-container-provided-by-aspnet-core"></a>Użyj wbudowanych kontenera IoC dostarczone przez platformy ASP.NET Core
 
-Korzystając z wbudowanego kontenera IoC pochodzącymi z platformy ASP.NET Core, zarejestruj się typów, który chcesz wstawić w metodzie ConfigureServices w pliku Startup.cs, zgodnie z poniższym kodem:
+Korzystając z wbudowanych kontenera IoC, dostarczonego przez platformy ASP.NET Core, zarejestruj się typy, które chcesz wstawić w metodzie ConfigureServices w pliku Startup.cs, zgodnie z poniższym kodem:
 
 ```csharp
 // Registration of types into ASP.NET Core built-in container
@@ -103,27 +103,25 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Najbardziej typowe wzorzec po rejestrowanie typów w kontenerze Inwersja kontroli można zarejestrować dwa typy — interfejs i jego klasa implementacji pokrewne. W przypadku żądania obiektu z kontenera IoC za pomocą dowolnego konstruktora, następnie zażądać obiektu określonego typu interfejsu. Na przykład w poprzednim przykładzie, ostatni wiersz stwierdza, że gdy dowolne z konstruktorów zależy od IMyCustomRepository (interfejsu lub abstrakcji), kontenera IoC będzie wstrzyknąć wystąpienie implementacji MyCustomSQLServerRepository Klasa.
+Najczęstszym wzorcem po rejestrowanie typów w pojemniku IoC można zarejestrować dwa typy — interfejs i jej klasy pokrewne implementacji. W przypadku żądania obiektu z kontenera IoC przez dowolny Konstruktor, następnie zażądać obiektu określonego typu interfejsu. Na przykład w poprzednim przykładzie, ostatni wiersz stany, gdy dowolne z konstruktorów mają zależności IMyCustomRepository (interfejs lub abstrakcji), kontenera IoC doda wystąpienia wykonania MyCustomSQLServerRepository Klasa.
 
-#### <a name="using-the-scrutor-library-for-automatic-types-registration"></a>Za pomocą biblioteki Scrutor typy automatycznej rejestracji
+#### <a name="use-the-scrutor-library-for-automatic-types-registration"></a>Korzystanie z biblioteki Scrutor dla typów automatycznej rejestracji
 
-Używając Podpisane w .NET Core, możesz mieć możliwość skanowania zestawu i automatyczne rejestrowanie jego typów przez Konwencję. Ta funkcja nie jest obecnie dostępna w ASP.NET Core. Można jednak użyć [Scrutor](https://github.com/khellang/Scrutor) biblioteki w tym. Takie podejście jest wygodny w przypadku wielu typów, które muszą być zarejestrowane w Twojej kontenera IoC.
+Korzystając z DI platformie .NET Core, możesz chcieć można przeskanować zestawu i automatycznie zarejestrować jego typów zgodnie z Konwencją. Ta funkcja nie jest obecnie dostępna w programie ASP.NET Core. Można jednak użyć [Scrutor](https://github.com/khellang/Scrutor) biblioteki, w tym. To podejście jest wygodne w przypadku wielu typów, które muszą być zarejestrowani w kontenerze IoC.
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Matthew króla. Usługi w zarejestrowani Scrutor**
-    [*https://mking.net/blog/registering-services-with-scrutor*](https://mking.net/blog/registering-services-with-scrutor)
+- **Matthew King. Rejestrowanie usługi przy użyciu Scrutor** \
+  [*https://www.mking.net/blog/registering-services-with-scrutor*](https://www.mking.net/blog/registering-services-with-scrutor)
 
-<!-- -->
+- **Kristian Hellang. Scrutor.** Repozytorium GitHub. \
+  [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
 
--   **Kristian Hellang. Scrutor.** Repozytorium GitHub.
-    [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
+#### <a name="use-autofac-as-an-ioc-container"></a>Użyj Autofac jako kontenera IoC
 
-#### <a name="using-autofac-as-an-ioc-container"></a>Przy użyciu Autofac jako kontenera IoC
+Możesz również dodatkowe kontenery IoC i podłącz je do potoku platformy ASP.NET Core, tak jak szeregowania mikrousługi w ramach aplikacji eShopOnContainers, który używa [Autofac](https://autofac.org/). Korzystając z Autofac zwykle należy zarejestrować typy za pośrednictwem modułów, dzięki czemu można będzie podzielić typów rejestracji między wiele plików, w zależności od tego, gdzie są Twoje typy, tak samo, jak masz typy aplikacji rozproszonych w wielu bibliotek klas.
 
-Można również użyć dodatkowe kontenery Inwersja kontroli i podłącz je do potoku platformy ASP.NET Core, tak jak porządkowania mikrousługi w eShopOnContainers, który używa [Autofac](https://autofac.org/). Korzystając z Autofac zwykle należy zarejestrować typy za pośrednictwem modułów, dzięki której można podzielić typów rejestracji między wiele plików, w zależności od lokalizacji użytkownika typy, tak samo, jak można używać typów aplikacji rozproszone na wielu bibliotek klas.
-
-Na przykład poniżej przedstawiono [modułu aplikacji Autofac](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/ApplicationModule.cs) dla [interfejsu API sieci Web Ordering.API](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.API) projektu z typami można wstrzyknąć.
+Na przykład poniżej przedstawiono [modułu aplikacji Autofac](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/ApplicationModule.cs) dla [interfejsu API sieci Web Ordering.API](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.API) projektu z typami, należy wstawić.
 
 ```csharp
 public class ApplicationModule : Autofac.Module
@@ -152,60 +150,62 @@ public class ApplicationModule : Autofac.Module
 }
 ```
 
-Proces rejestracji i pojęcia są bardzo podobnie możesz zarejestrować typy z wbudowanych kontenera ASP.NET Core IoC, ale składni, korzystając z Autofac różni się nieco.
+Autofac ma również funkcję [skanowanie zestawów i zarejestrować typy według Konwencji nazwy](https://autofac.readthedocs.io/en/latest/register/scanning.html).
 
-W przykładowym kodzie abstrakcji IOrderRepository został zarejestrowany oraz klasa implementacji OrderRepository. Oznacza to, że zawsze, gdy Konstruktor jest deklarowanie zależności za pomocą abstrakcji IOrderRepository lub interfejsu, kontenera IoC będzie wstrzyknąć wystąpienia klasy OrderRepository.
+Proces rejestracji i pojęcia są bardzo podobne do sposób typów można zarejestrować za pomocą wbudowanych kontenera ASP.NET Core IoC, ale składni, korzystając z Autofac jest nieco inna.
 
-Typ zakresu wystąpienia określa, jak wystąpienia są współużytkowane przez żądania dla tej samej usługi lub zależności. Po wysłaniu żądania jest zależność, kontenera IoC może zwrócić następujące czynności:
+W przykładowym kodzie abstrakcji IOrderRepository jest zarejestrowany wraz z implementacji klasy OrderRepository. Oznacza to, że zawsze wtedy, gdy Konstruktor jest zadeklarowanie zależności za pomocą abstrakcji IOrderRepository lub interfejsu, kontenera IoC doda wystąpienia klasy OrderRepository.
 
--   Jednego wystąpienia na okres istnienia zakresu (określone w kontenerze platformy ASP.NET Core IoC jako *zakres*).
+Typ zakresu wystąpienia określa, jak wystąpienie jest współużytkowana przez żądania dla tej samej usługi lub zależności. Po wysłaniu żądania dla zależności, kontenera IoC może zwracać następujące czynności:
 
--   Nowe wystąpienie na zależność (określone w kontenerze platformy ASP.NET Core IoC jako *przejściowa*).
+- Jedno wystąpienie na okres istnienia, zakres (określone w kontenerze platformy ASP.NET Core IoC jako *zakresie*).
 
--   Pojedyncze wystąpienie współużytkowana przez wszystkie obiekty przy użyciu kontenera IoC (określone w kontenerze platformy ASP.NET Core IoC jako *pojedyncze*).
+- Nowe wystąpienie na zależności (określone w kontenerze platformy ASP.NET Core IoC jako *przejściowy*).
+
+- Pojedyncze wystąpienie udostępnione dla wszystkich obiektów za pomocą kontenera IoC (określone w kontenerze platformy ASP.NET Core IoC jako *pojedyncze*).
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Wprowadzenie do iniekcji zależności w platformy ASP.NET Core**
-    [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
+- **Wprowadzenie do iniekcji zależności w programie ASP.NET Core** \
+  [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
 
--   **Autofac.** Oficjalna dokumentacja.
-    [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
+- **Autofac.** Oficjalna dokumentacja. \
+  [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
 
--   **Porównywanie okresy istnienia usługi kontenera platformy ASP.NET Core IoC z zakresami wystąpienia kontenera Autofac IoC - Torre de la Cesarowi.**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+- **Porównywanie okresy istnienia usługi kontenera platformy ASP.NET Core IoC z zakresami wystąpienia kontenera Autofac IoC - Torre'a de la Cesarowi.** \
+  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
-## <a name="implementing-the-command-and-command-handler-patterns"></a>Implementowanie wzorce polecenia i program obsługi poleceń
+## <a name="implement-the-command-and-command-handler-patterns"></a>Implementowanie wzorców polecenia i program obsługi poleceń
 
-W przykładzie Podpisane za pomocą konstruktora przedstawionym w poprzedniej sekcji kontenera IoC został wstrzyknięcie repozytoria za pośrednictwem Konstruktor w klasie. Ale dokładnie gdzie zostały one dodane? W przypadku prostego interfejsu API sieci Web (na przykład mikrousługi katalogu w eShopOnContainers) można wstrzyknąć na poziomie kontrolerów MVC, w Konstruktorze kontrolera. Jednak w początkowej kodu w tej sekcji ( [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) klasy z usługi Ordering.API w eShopOnContainers), iniekcja zależności odbywa się za pośrednictwem konstruktora konkretnego polecenia Program obsługi. Daj nam wyjaśnić programu obsługi poleceń jest i dlaczego warto jej używać.
+W przykładzie DI za pośrednictwem konstruktora pokazano w poprzedniej sekcji kontenera IoC został wprowadza repozytoriów za pośrednictwem konstruktora w klasie. Ale dokładnie których zostały one dodane? Proste internetowego interfejsu API (na przykład mikrousług katalogu w ramach aplikacji eShopOnContainers) należy wstrzyknąć je na poziomie kontrolerów MVC w Konstruktorze kontrolera, jako część potoku żądania programu ASP.NET Core. Jednak w kod początkowy przedstawione w tej sekcji ( [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) klasy usługi Ordering.API w ramach aplikacji eShopOnContainers), iniekcja zależności odbywa się za pośrednictwem konstruktora określonego polecenia Program obsługi. Daj nam wyjaśniono, jakie procedurę obsługi poleceń jest i dlaczego chcesz używać go.
 
-Wzorzec polecenia leżą jest powiązany z wzorca CQRS, który został wprowadzony wcześniej w tym przewodniku. CQRS ma dwie strony. Pierwszy obszar jest zapytania za pomocą uproszczonego zapytań z [Dapper](https://github.com/StackExchange/dapper-dot-net) ORM micro wyjaśniono wcześniej. Drugi ma poleceń, które są punkt początkowy dla transakcji i kanał wejściowy z poza usługi.
+Wzorzec polecenia wewnętrznie jest powiązana z wzorcem CQRS, która została wprowadzona wcześniej w tym przewodniku. Podejście CQRS ma dwie strony. Pierwszy obszar jest zapytań przy użyciu uproszczone zapytań przy użyciu [programem Dapper](https://github.com/StackExchange/dapper-dot-net) ORM wczesnych wyjaśniono wcześniej. Drugi ma polecenia, które są punkt początkowy dla transakcji i kanału wejściowego z poza usługi.
 
-Jak pokazano w rysunek 9 – 24, wzorzec jest oparta na akceptowanie poleceń z po stronie klienta, przetwarzania je zgodnie z regułami modelu domeny, a na koniec utrwalanie stanów transakcji.
+Jak pokazano w rysunek 7-24, wzorzec jest oparty na akceptowanie poleceń po stronie klienta przetwarzanie je zgodnie z regułami modelu domeny, a na koniec utrwalania stanów z transakcji.
 
-![](./media/image21.png)
+![Widok wysokiego poziomu stronie zapisu we wzorcu CQRS: Aplikacja interfejsu użytkownika wysyła polecenie za pomocą interfejsu API, który pobiera commandhandler — obiekt, który zależy od modelu domeny i infrastruktury w celu aktualizacji bazy danych.](./media/image21.png)
 
-**Rysunek 9 – 24**. Widok wysokiego poziomu poleceń lub "transakcyjne po stronie" we wzorcu CQRS
+**Rysunek 7-24**. Ogólny widok poleceń lub "transakcji po stronie" we wzorcu CQRS
 
 ### <a name="the-command-class"></a>Klasy poleceń
 
-Polecenie jest żądaniem systemu do wykonywania akcji zmieniającej stan systemu. Polecenia są konieczne i powinny być przetwarzane tylko raz.
+Polecenie to żądanie systemu do wykonania akcji, który zmienia stan systemu. Polecenia są konieczne i mają być przetwarzane tylko raz.
 
-Ponieważ polecenia priorytetów, są zwykle nazywane ze zleceniem w trybie stylu (na przykład "Utwórz" lub "Aktualizuj"), i może zawierać typu agregacji, na przykład CreateOrderCommand. W przeciwieństwie do zdarzenia polecenie nie jest faktów z przeszłości; jest tylko żądania, a w związku z tym można odmówić.
+Ponieważ polecenia są priorytetów, są zwykle nazywane ze zleceniem ochotę imperatywnego (na przykład "Utwórz" lub "Aktualizuj"), i mogą one obejmować odpowiedni typ agregacji, takich jak CreateOrderCommand. W przeciwieństwie do zdarzenia polecenie nie jest faktów z przeszłości; jest tylko żądania, a więc można odmówić.
 
-Polecenia można pochodzi z interfejsu użytkownika w wyniku inicjowanie żądanie użytkownika lub Menedżera procesu podczas Menedżera procesu jest kierowanie agregacji do wykonania akcji.
+Polecenia mogą pochodzić z interfejsu użytkownika, w wyniku użytkownik inicjuje żądanie lub menedżera procesów, gdy Menedżer procesu jest kierowanie agregacji do wykonania akcji.
 
-Istotne cechy polecenia jest, że powinien on tylko raz przetworzony przez jednego odbiorcę. Jest tak, ponieważ polecenie jest jednej akcji lub transakcji, które należy wykonać w aplikacji. Na przykład tego samego polecenia tworzenia kolejności nie powinny być przetwarzane więcej niż raz. Jest to ważna różnica między poleceń i zdarzeń. Zdarzenia mogą być przetwarzane wiele razy, ponieważ wiele systemów lub mikrousług mogą być zainteresowani zdarzenia.
+Ważną cechą polecenie jest, że powinien on tylko raz przetwarzany przez jednego odbiorcę. Jest to, ponieważ polecenie jest jedna akcja lub transakcji, które mają być wykonywane w aplikacji. Na przykład polecenia do tworzenia tej samej kolejności nie powinny być przetwarzane więcej niż jeden raz. Jest to ważna różnica między poleceń i zdarzeń. Zdarzenia mogą być przetwarzane wiele razy, ponieważ wiele systemów lub mikrousług może być zainteresowany zdarzenia.
 
-Ponadto jest ważne, że polecenie przetwarzane tylko raz w przypadku, gdy polecenie nie jest idempotentności. Polecenie jest idempotentności, jeśli jego mogą być wykonywane wiele razy bez zmiany wyników, z powodu charakteru polecenia lub ze względu na sposób system obsługi polecenia.
+Ponadto jest ważne, że polecenie być przetwarzane tylko raz w przypadku, gdy polecenie nie jest idempotentna. Polecenie jest idempotentna, jeśli go mogą być wykonywane wiele razy bez wprowadzania zmian w wyniku ze względu na rodzaj polecenie lub ze względu na sposób system obsługuje polecenie.
 
-Jest dobrym rozwiązaniem, aby Twoje polecenia i aktualizuje idempotentności, gdy sens w ramach reguł biznesowych użytkownika domeny i invariants. Na przykład do użycia w tym samym przykładzie, jeśli jakiegokolwiek powodu (logika ponowień, przejęcie itp.) tego samego polecenia CreateOrder osiągnie system wielokrotnie, można zidentyfikować je i upewnij się, nie należy tworzyć wielu zamówień. Aby to zrobić, należy dołączyć określonego rodzaju tożsamości w operacjach i ustalić, czy polecenie lub aktualizacji został już przetworzony.
+Jest dobrą praktyką, aby poleceń i aktualizuje idempotentne, gdy największy sens w ramach reguł biznesowych domeny i invariants. Na przykład aby użyć w tym samym przykładzie, jeśli jakiegokolwiek powodu (logika ponowień, stosowanie metod hakerskich itp.) to samo polecenie CreateOrder osiągnie system wielokrotnie, można identyfikację i upewnij się, że nie należy tworzyć wiele zamówień. Aby to zrobić, należy dołączyć pewnego rodzaju tożsamości w operacjach i ustalić, czy polecenie lub aktualizacji został już przetworzony.
 
-Wyślij polecenie do jednego odbiorcę; polecenie nie jest opublikować. Publikowanie jest dla zdarzeń integracji, które stanu fakt — coś się nie stało i mogą być interesujące dla odbiorcy zdarzeń. W przypadku zdarzeń wydawcy ma nie problemów, o których odbiorcy uzyskać zdarzenia lub co robią go. Ale zdarzeń integracji inny wątek już wprowadzone w poprzednich sekcjach.
+Wysłać polecenie do jednego odbiornika; nie opublikowano polecenia. Publikowanie jest dla zdarzeń, które podają fakt — coś się stało i mogą być interesujące dla odbiorcy zdarzeń. W przypadku zdarzeń wydawca ma nie obaw, o których odbiorcy pobrać zdarzenia lub ich działania go. Ale zdarzeń domeny lub Integracja z innego wątku już wprowadzone w poprzednich sekcjach.
 
-Polecenie jest realizowana za pomocą klasy, która zawiera pola danych lub kolekcji wszystkie informacje, które są potrzebne w celu wykonania tego polecenia. Polecenie jest specjalnym rodzajem z danych Transfer obiektu (DTO), które jest używane wyłącznie do żądania zmiany lub transakcji. Samo polecenie opiera się na dokładnie informacje potrzebne do przetwarzania polecenia i nic więcej.
+Polecenie jest implementowane za pomocą klasy, która nie zawiera pola danych i kolekcji wszystkie informacje, które są potrzebne w celu wykonania tego polecenia. Polecenie jest specjalnym rodzajem elementu danych transferu obiektu (DTO), taki, który jest używane wyłącznie do żądania zmiany lub transakcji. Samo polecenie opiera się na dokładnie te informacje, które są potrzebne do przetwarzania polecenia i nic więcej.
 
-W poniższym przykładzie pokazano uproszczony klasy CreateOrderCommand. To jest niezmienialny polecenia, który jest używany w porządkowania mikrousługi w eShopOnContainers.
+Poniższy przykład przedstawia klasę CreateOrderCommand uproszczone. Jest to niezmienne polecenia, który jest używany podczas szeregowania mikrousługi w ramach aplikacji eShopOnContainers.
 
 ```csharp
 // DDD and CQRS patterns comment
@@ -252,13 +252,13 @@ public class CreateOrderCommand
         _orderItems = new List<OrderItemDTO>();
     }
 
-    public CreateOrderCommand(List<OrderItemDTO> orderItems, string city,
+    public CreateOrderCommand(List<BasketItem> basketItems, string city,
         string street,
         string state, string country, string zipcode,
         string cardNumber, string cardHolderName, DateTime cardExpiration,
         string cardSecurityNumber, int cardTypeId) : this()
     {
-        _orderItems = orderItems;
+        _orderItems = MapToOrderItems(basketItems);
         City = city;
         Street = street;
         State = state;
@@ -283,13 +283,15 @@ public class CreateOrderCommand
 }
 ```
 
-Zasadniczo klasy poleceń zawiera wszystkie dane potrzebne do przeprowadzania transakcji firm za pomocą obiektów modelu domeny. W związku z tym polecenia są po prostu struktur danych, które zawierają dane tylko do odczytu i nie zachowanie. Nazwa polecenia wskazuje jej celem. W wielu językach takich jak C\#, polecenia są reprezentowane jako klasy, ale nie są one true klas w tym sensie, rzeczywista obiektowo.
+Po prostu klasy poleceń zawiera wszystkie dane, których potrzebują do przeprowadzania transakcji biznesowych za pomocą obiektów modelu domeny. W efekcie polecenia są po prostu struktur danych, które zawierają dane tylko do odczytu i nie zachowanie. Nazwa polecenia wskazuje jej przeznaczenie. W wielu językach, takich jak C\#, polecenia są reprezentowane jako klasy, ale nie mają wartość true, klasy, w tym sensie, rzeczywiste zorientowane obiektowo.
 
-Jako dodatkowe właściwości polecenia są niezmienne, ponieważ jest oczekiwane wykorzystanie są przetwarzane bezpośrednio przez modelu domeny. Potrzebują oni zmieniać podczas ich przewidywanego okresu istnienia. W języku C\# klasy immutability można osiągnąć, ponieważ nie ma żadnych ustawiające lub innych metod, które spowodują zmianę stanu wewnętrznego.
+Jako dodatkowe właściwości polecenia są niezmienne, ponieważ oczekiwane użycie jest, że są przetwarzane bezpośrednio przez model domeny. Nie ma potrzeby zmiany w okresie ich istnienia przewidywany. W języku C\# klasy, niezmienność można osiągnąć, nie ma żadnych metod ustawiających lub innych metod, które zmieniają stan wewnętrzny.
 
-Na przykład klasa polecenia do tworzenia kolejności jest prawdopodobnie podobne pod względem danych kolejność, według której ma zostać utworzona, ale prawdopodobnie nie ma potrzeby takie same atrybuty. Na przykład CreateOrderCommand nie ma identyfikator zamówienia, ponieważ kolejność nie został jeszcze utworzony.
+Należy pamiętać, że jeśli planowane lub oczekiwać poleceń będzie przechodzić przez proces serializacji deserializing właściwości muszą mieć prywatnej metody ustawiającej, należy sobie zdawać sprawę i `[DataMemeber]` (lub `[JsonProperty]`) atrybutów, w przeciwnym razie Deserializator nie będzie można odtworzenie obiektu w lokalizacji docelowej z wymaganymi wartościami.
 
-Wiele klas polecenie może być prosty, wymagania dotyczące niektórych stanu, który musi zostać zmienione tylko kilka pól. Wyniesie przypadku tylko w przypadku zmiany stanu zlecenia od "w toku" do "płatnej" lub "wysłane" przy użyciu polecenia podobny do następującego:
+Na przykład klasy poleceń do tworzenia zamówienie przypomina prawdopodobnie pod względem danych kolejności, w której ma zostać utworzona, ale prawdopodobnie nie potrzebujesz tych atrybutów. Na przykład CreateOrderCommand ma identyfikator zamówienia, ponieważ kolejność nie został jeszcze utworzony.
+
+Wiele klas polecenia mogą być proste, wymagania dotyczące pewnego stanu, który musi zostać zmienione tylko kilka pól. Byłoby w przypadku tylko w przypadku zmiany stanu zamówienia z "w toku" do "płatnych" lub "dostarczane" przy użyciu polecenia podobnego do następującego:
 
 ```csharp
 [DataContract]
@@ -307,33 +309,35 @@ public class UpdateOrderStatusCommand
 }
 ```
 
-Niektóre deweloperzy tworzą żądania interfejsu użytkownika w nich obiekty niezależnie od ich DTOs polecenia, ale jest to wystarczy preferencji. Jest niewygodny separacji nie wiele wartości dodanej, a obiekty są prawie dokładnie tego samego kształtu. Na przykład w eShopOnContainers, niektóre polecenia pochodzi bezpośrednio z po stronie klienta.
+Niektórzy deweloperzy wprowadzić w nich obiekty interfejsu użytkownika żądania niezależnie od ich dto polecenia, ale jest to kwestia preferencji. Jest niewygodna separacji nie dużo wartością dodaną i obiekty są prawie dokładnie tak sam kształt. Na przykład w ramach aplikacji eShopOnContainers, niektóre polecenia pochodzą bezpośrednio po stronie klienta.
 
-### <a name="the-command-handler-class"></a>Klasa obsługi polecenia
+### <a name="the-command-handler-class"></a>Klasy obsługi poleceń
 
-Należy zaimplementować klasę programu obsługi określonego polecenia dla każdego polecenia. To działanie wzorzec i jest którym będziesz używać obiektów repozytorium infrastruktury, obiektów domeny i obiektu polecenia. Program obsługi poleceń w rzeczywistości jest centralnym warstwy aplikacji pod względem CQRS i DDD. Jednak całą logikę domeny powinny być zawarte w klasach domeny — w ramach korzenie agregacji (jednostek głównego), jednostek podrzędnych lub [usług domenowych w usłudze](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), ale nie w ciągu programu obsługi poleceń, który jest klasy z aplikacji warstwy.
+Należy zaimplementować klasę programu obsługi określone polecenie dla każdego polecenia. To, jak wzorzec działa i jest to, gdzie będzie używać obiekt polecenia, obiektów domeny i obiektów repozytorium infrastruktury. Program obsługi poleceń w rzeczywistości to serce warstwy aplikacji w kontekście CQRS i DDD. Jednak logika domeny powinny być zawarte w obrębie klasy domeny — w ramach korzenie agregacji (głównych jednostek), jednostki podrzędne lub [usługi domenowe](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), ale nie w ramach programu obsługi poleceń jest klasa z aplikacji warstwy.
 
-Program obsługi poleceń odebrało polecenie i uzyskuje wynik z zagregowaną, która jest używana. Wynik powinien być pomyślnego wykonania polecenia lub wystąpił wyjątek. W przypadku wyjątku stanu systemu należy bez zmian.
+Klasa procedury obsługi polecenia oferuje silnej kamień przechodzenia krok po kroku w taki sposób, aby osiągnąć pojedynczego Resposibility zasady (SRP) wymienionych w poprzedniej sekcji.
 
-Program obsługi poleceń zazwyczaj wykonuje następujące czynności:
+Program obsługi poleceń otrzymuje polecenie i uzyskuje wynik agregacji, która jest używana. Wynik powinien być pomyślne wykonanie polecenia lub wyjątek. W przypadku wyjątku stan systemu należy bez zmian.
 
--   Odbiera obiekt polecenia, takich jak DTO (z [mediatora](https://en.wikipedia.org/wiki/Mediator_pattern) lub innego obiektu infrastruktury).
+Program obsługi poleceń zwykle wykonuje następujące czynności:
 
--   Jest sprawdzane, czy to polecenie jest nieprawidłowa (Jeśli nie jest zweryfikowany przez mediatora).
+- Odbiera obiekt polecenia, takie jak obiekt DTO (z [mediatora](https://en.wikipedia.org/wiki/Mediator_pattern) lub inny obiekt infrastruktury).
 
--   Metoda tworzy wystąpienia głównego agregacji, który jest miejscem docelowym bieżącego polecenia.
+- Weryfikuje on, że polecenie jest nieprawidłowy (Jeśli nie jest zweryfikowany przez mediatora).
 
--   Metoda jest wykonywana w wystąpieniu głównego agregacji, pobieranie danych wymagane polecenia.
+- Metoda tworzy wystąpienie głównego agregacji, które jest elementem docelowym bieżącego polecenia.
 
--   Istnieje nowy stan agregacji do jego bazie danych. Ta ostatnia operacja jest rzeczywista transakcji.
+- Metoda wykonuje na wystąpieniu głównego agregacji, pobierania wymaganych danych z polecenia.
 
-Zazwyczaj obsługi polecenia obsługuje pojedynczy agregacji, wynikają z głównym agregacji (jednostka głównego). Agreguje wiele powinny mieć wpływ na odebranie jednego polecenia, należy użyć domeny zdarzenia do propagowanie Agreguje wiele stanów lub akcji.
+- Utrzymuje nowy stan agregacji do powiązanej bazie danych. Ta ostatnia operacja jest rzeczywistych transakcji.
 
-Należy koniecznie zwrócić uwagę to, że podczas przetwarzania polecenia całą logikę domeny powinien znajdować się w modelu domeny (agregacji) pełni hermetyzowany i gotowa do przeprowadzania testów jednostkowych. Program obsługi poleceń po prostu działa jako sposób uzyskać modelu domeny z bazy danych i ostatni krok mówić warstwę infrastruktury (repozytoria), aby utrwalić zmiany po zmianie modelu. Zaletą tej metody jest, że można Refaktoryzuj logika domeny w modelu domeny izolowanym, pełni hermetyzowany, rozbudowane, behawioralnej bez zmiany kodu w aplikacji lub infrastruktury warstw, które są poziom żmudne procesy (programy obsługi poleceń, interfejsu API sieci Web, repozytoria itp.).
+Zazwyczaj obsługi polecenia obsługuje jednej wartości zagregowanej wynika z jego głównego agregacji (jednostki głównej). Jeśli wiele agregacji powinny mieć wpływ na odbiór jednego polecenia, można użyć zdarzeń domeny do propagowanie Agreguje wiele stanów lub akcji.
 
-Podczas obsługi polecenia uzyskać złożonych z logiką zbyt dużo, który może być zapachu kodu. Przejrzyj je, a Jeśli znajdziesz logika domeny zrefaktoryzuj kod, aby przenieść tego zachowania domeny do metod obiektów domeny (łączny główna i podrzędna jednostka).
+Istotną kwestią jest, że podczas przetwarzania polecenia logika domeny powinny być wewnątrz modelu domeny (agregacje), w pełni hermetyzowany i gotowe do testowania jednostki. Procedura obsługi polecenia działa tylko jako sposób uzyskać modelu domeny z bazy danych i ostatni krok, aby poinformować warstwy infrastruktury (repozytoriów), aby utrwalić zmiany po zmianie modelu. Zaletą tego podejścia jest refaktoryzować logika domeny w modelu domeny izolowane pełni zhermetyzowany, rozbudowane, zachowań bez konieczności zmiany kodu w aplikacji lub warstwy infrastruktury, które działają na poziomie nadmiar (programy obsługi poleceń, w przypadku interfejsu API sieci Web repozytoria itp.).
 
-Na przykład klasa obsługi polecenia poniższy kod przedstawia tej samej klasy CreateOrderCommandHandler, który był wyświetlany na początku tego działu. W takim przypadku chcemy zaznacz metodę dojścia i operacje z obiektami modelu domeny/agregacji.
+Podczas obsługi polecenia okazać się skomplikowane, za pomocą zbyt dużo logiki, które mogą być zapachu kodu. Zapoznaj się z nimi, a jeśli okaże się logika domeny zrefaktoryzuj kod, aby przenieść to zachowanie domeny do metod obiektów domeny (agregacji główna i podrzędna jednostki).
+
+Jako przykład klasę programu obsługi poleceń poniższy kod przedstawia tej samej klasie CreateOrderCommandHandler, który był wyświetlany na początku w tym rozdziale. W tym przypadku chcemy podkreślić, metoda dojścia i operacji za pomocą obiektów modelu domeny/agregacji.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -382,96 +386,96 @@ public class CreateOrderCommandHandler
 }
 ```
 
-Program obsługi poleceń należy wykonać dodatkowe kroki, są to:
+Poniżej przedstawiono dodatkowe kroki, które należy wykonać procedurę obsługi poleceń:
 
--   Użyj polecenia danych z metody i zachowanie elementu głównego agregacji.
+- Działanie przy użyciu metody agregacji głównego i zachowanie, należy użyć polecenia danych.
 
--   Wewnętrznie w obiektach domeny wywołania domeny zdarzeń, gdy transakcja jest wykonywana, ale jest przezroczysty z punktu widzenia obsługi polecenia.
+- Wewnętrznie w obiektach domeny zgłosić zdarzenia domeny podczas transakcji jest wykonywane, ale która jest przezroczysta z punktu widzenia obsługi polecenia.
 
--   Jeśli wynik działania wartości zagregowanej zakończy się pomyślnie, a po zakończeniu transakcji, Wywołaj program obsługi poleceń zdarzeń integracji. (Te mogą również być zgłaszany przez klas infrastruktury, takich jak repozytoriów.)
+- Jeśli wynik operacji agregacji zakończy się pomyślnie, a po zakończeniu transakcji, należy zgłosić zdarzenia integracji. (Te mogą również zostać wywołane przez klasy infrastruktury, takie jak repozytoriami.)
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Seemann znaku. Na granicach, aplikacje są zorientowane obiektowo nie**
-    [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries, zorientowane na ApplicationsareNotObject /*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+- **Seemann znacznika. Na granicach aplikacje są nie zorientowane obiektowo** \
+  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries, Zorientowane na ApplicationsareNotObject /*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
--   **Poleceń i zdarzeń**
-    [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
+- **Poleceń i zdarzeń** \
+  [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
 
--   **Do czego służy program obsługi polecenia?**
-    [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
+- **Do czego służy program obsługi poleceń?** \
+  [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
 
--   **Jimmy Bogard. Wzorce poleceń domeny — Obsługa**
-    [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
+- **Jimmy Bogard. Wzorce poleceń domeny — programy obsługi** \
+  [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
 
--   **Jimmy Bogard. Wzorce poleceń domeny — Weryfikacja**
-    [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
+- **Jimmy Bogard. Wzorce poleceń domeny — sprawdzanie poprawności** \
+  [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
 
-## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>Polecenie potoku proces: sposób włączania obsługi polecenia
+## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>Potok przetwarzania polecenia: jak wyzwolić procedurę obsługi poleceń
 
-Następne pytanie jest o wywoływaniu programem obsługi. Można ręcznie wywołać ją z każdym pokrewne kontrolera ASP.NET Core. Jednak metoda byłaby zbyt połączeniu i nie jest idealnym rozwiązaniem.
+Następne pytanie jest jak wywołać procedurę obsługi poleceń. Można ręcznie wywołać go z każdego powiązane kontrolera platformy ASP.NET Core. Jednak podejście byłaby zbyt powiązane i nie jest idealnym rozwiązaniem.
 
-Inne dwa główne, które są zalecane opcje, są następujące opcje:
+Pozostałe dwie główne opcje, które są zalecane opcje, są:
 
--   Za pomocą wzorca artefaktu mediatora w pamięci.
+- Za pomocą wzorca artefakt mediatora w pamięci.
 
--   Z kolejki komunikatów asynchronicznych, Between kontrolerów i obsługi.
+- Za pomocą kolejki wiadomości asynchronicznych, Between kontrolery i obsługi.
 
-### <a name="using-the-mediator-pattern-in-memory-in-the-command-pipeline"></a>W potoku polecenia przy użyciu wzorca mediatora (w pamięci)
+### <a name="use-the-mediator-pattern-in-memory-in-the-command-pipeline"></a>Użyj wzorca mediatora (w pamięci) w potoku do polecenia
 
-Jak pokazano na rysunku 9-25, w podejściu CQRS służy inteligentnego mediatora, podobnie jak magistrala w pamięci, czyli inteligentne przekierowywanie do obsługi polecenie right na podstawie typu polecenia lub DTO odbierane. Pojedynczy czarne strzałki między składnikami reprezentują zależności między obiekty (w wielu przypadkach wprowadzonym za pośrednictwem Podpisane) z ich powiązane interakcje.
+Jak pokazano w rysunek 7-25, w podejście CQRS za pomocą inteligentnego mediatora, podobne do magistrali danych w pamięci, czyli inteligentnego przekierować do obsługi odpowiednie polecenia, na podstawie typu polecenia lub obiekt DTO odbierane. Pojedynczy czarne strzałki powodują przechodzenie między składnikami reprezentują zależności między obiektami (w wielu przypadkach wprowadzony przez DI) przy użyciu ich powiązane interakcje.
 
-![](./media/image22.png)
+![Powiększanie z poprzedniej ilustracji: kontrolera platformy ASP.NET Core wysyła polecenie do potoku polecenie MediatR firmy, dzięki czemu staną się odpowiedni program obsługi.](./media/image22.png)
 
-**Rysunek 9-25**. Przy użyciu wzorca mediatora w procesie w jednym mikrousługi CQRS
+**Rysunek 7-25**. Przy użyciu wzorca mediatora w procesie w mikrousłudze CQRS w jednym
 
-Pasującą przy użyciu wzorca mediatora dzieje się tak że w aplikacjach dla przedsiębiorstw, przetwarzania żądań można uzyskać skomplikowane. Chcesz mieć możliwość dodawania Otwórz liczba kompleksowymi problemy, takie jak rejestrowanie, sprawdzanie poprawności, inspekcji i zabezpieczeń. W takich przypadkach polega na potoku mediatora (zobacz [wzorzec mediatora](https://en.wikipedia.org/wiki/Mediator_pattern)) do wymuszenia dla tych dodatkowych zachowania lub kompleksowymi problemy.
+Przyczyna, pasującą przy użyciu wzorca mediatora jest w aplikacjach dla przedsiębiorstw, przetwarzania żądań może skomplikowane. Chcesz mieć możliwość dodawania open numerem odciąż przekrojowe zagadnienia, takie jak rejestrowanie, sprawdzanie poprawności, inspekcji i zabezpieczeń. W takich przypadkach możesz polegać na potok mediatora (zobacz [wzorzec mediatora](https://en.wikipedia.org/wiki/Mediator_pattern)) do zapewnienia oznacza, że te dodatkowe zachowania lub odciąż przekrojowe zagadnienia.
 
-Obiekt hermetyzujący "jak" tego procesu jest mediatora: go koordynuje wykonywania na podstawie stanu, sposób obsługi polecenia jest wywoływana lub ładunku Podaj do programu obsługi. Ze składnikiem mediatora można zastosować kompleksowymi problemy w sposób scentralizowany i przejrzysty, stosując elementów decorator (lub [potoku zachowania](https://github.com/jbogard/MediatR/wiki/Behaviors) ponieważ [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)). Aby uzyskać więcej informacji, zobacz [wzorzec Dekoratora](https://en.wikipedia.org/wiki/Decorator_pattern).
+Mediatora jest obiektem, który hermetyzuje "jak" tego procesu: koordynuje jej wykonanie w oparciu o stan, wywoływaną sposób obsługi polecenia lub ładunku zapewniają do programu obsługi. Za pomocą składnika mediatora można zastosować odciąż przekrojowe zagadnienia w sposób scentralizowany i przejrzystości, stosując dekoratory (lub [potoku zachowania](https://github.com/jbogard/MediatR/wiki/Behaviors) ponieważ [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)). Aby uzyskać więcej informacji, zobacz [wzorzec Dekoratora](https://en.wikipedia.org/wiki/Decorator_pattern).
 
-Elementy decorator i zachowania są podobne do [aspekt ukierunkowane programowania (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming)tylko zastosowane do zarządzanych przez składnik mediatora potoku określonego procesu. Aspektów AOP implementujących dotyczy kompleksowymi są stosowane na podstawie *weavers aspekt* wprowadzonym w czasie kompilacji lub w oparciu o przechwytywaniu wywołania obiektu. Obu podejść typowe AOP czasami są określane jako działania "magic", ponieważ nie jest łatwo sprawdzić, jak AOP działa jej. Podczas pracy nad poważnych problemów i zgłaszanie usterek, AOP może być trudne do debugowania. Z drugiej strony te elementy decorator/zachowania są jawne i stosowane tylko w kontekście mediatora, więc debugowanie jest bardziej przewidywalna i łatwe.
+Dekoratory i zachowania są podobne do [aspekt zorientowanej na programowania (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming)tylko zastosowane do zarządzanych przez składnik mediatora potoku określonego procesu. AOP aspektów, które implementują odciąż przekrojowe zagadnienia są stosowane na podstawie *weavers aspekt* wprowadzonym w czasie kompilacji lub w oparciu o przejęciu wywołanie obiektu. Oba typowe podejścia AOP czasami mówi się, że działania ""Magia, ponieważ nie jest łatwo sprawdzić, jak AOP wykonuje swoją pracę. Podczas pracy z poważnymi problemami i zgłaszanie usterek, AOP może być trudne do debugowania. Z drugiej strony, te dekoratory/zachowania są jawne i stosowane tylko w kontekście mediatora, dlatego debugowanie jest znacznie bardziej przewidywalna i łatwe.
 
-Na przykład w eShopOnContainers kolejności mikrousługi, wprowadziliśmy dwa przykładowe zachowania, [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) klasy i [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) klasy. Implementacja zachowania znajduje się w następnej sekcji pokazując jak implementuje eShopOnContainers [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) [zachowania](https://github.com/jbogard/MediatR/wiki/Behaviors).
+Na przykład w ramach aplikacji eShopOnContainers porządkowanie mikrousług, wprowadziliśmy dwa przykładowe zachowania, [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) klasy i [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) klasy. Implementacja zachowania zostało wyjaśnione w następnej sekcji, pokazując, jak korzysta z ramach aplikacji eShopOnContainers [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) [zachowania](https://github.com/jbogard/MediatR/wiki/Behaviors).
 
-### <a name="using-message-queues-out-of-proc-in-the-commands-pipeline"></a>W potoku do polecenia, używając kolejek wiadomości (poza procesem)
+### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>Użyj komunikat kolejki (poza poza procesem) w potoku do polecenia
 
-Wybór innego polega na użyciu asynchronicznej wiadomości na podstawie brokerzy lub kolejki komunikatów, jak pokazano w rysunek 9-26. Ta opcja również można łączyć ze składnikiem mediatora bezpośrednio poprzedzający program obsługi poleceń.
+Inną możliwością polega na użyciu wiadomości asynchronicznych, na podstawie brokerów lub kolejki komunikatów, jak pokazano w rysunek 7-26. Tej opcji można również łączyć za pomocą składnika mediatora bezpośrednio poprzedzający program obsługi poleceń.
 
-![](./media/image23.png)
+![Potok polecenia również może być obsługiwany przez kolejki komunikatów o wysokiej dostępności umożliwia umieszczanie w odpowiedni program obsługi poleceń.](./media/image23.png)
 
-**Rysunek 9-26**. Za pomocą polecenia CQRS, używając kolejek wiadomości (poza procesem i komunikacji między procesami)
+**Rysunek 7-26**. Za pomocą poleceń CQRS przy użyciu kolejek komunikatów (poza procesem i komunikacji między procesami)
 
-Za pomocą wiadomości kolejki, aby zaakceptować polecenia można bardziej szczegółowo skomplikować potoku dla polecenia, ponieważ prawdopodobnie będzie konieczne podzielić potok dwa procesy połączone za pośrednictwem kolejki wiadomości zewnętrznych. Nadal należy używać, gdy trzeba mieć zwiększona skalowalność i wydajność w oparciu asynchroniczną obsługę wiadomości. Należy wziąć pod uwagę, że w przypadku rysunku 9-26 kontrolera po prostu zapisuje komunikat polecenia do kolejki i zwraca. Następnie programy obsługi poleceń przetwarzanie wiadomości we własnym tempie. Oznacza to doskonały korzyści kolejek: kolejki wiadomości może działać jako buforu w przypadkach gdy skalowalność funkcji hyper jest wymagane, takie jak w przypadku zasobów lub innych scenariuszy z dużą liczbę danych wejściowych.
+Za pomocą komunikatu kolejki, aby zaakceptować dodatkowo polecenia skomplikować potoku dla polecenia, ponieważ prawdopodobnie konieczne będzie rozdzielenie potoku na dwa procesy połączone za pośrednictwem kolejki komunikatów zewnętrznych. Nadal należy używać, jeśli chcesz mieć zwiększona skalowalność i wydajność w oparciu asynchronicznej obsługi komunikatów. Należy wziąć pod uwagę, że w przypadku rysunek 7-26 kontrolera po prostu publikuje komunikat polecenia w kolejce i zwraca. Następnie programy obsługi poleceń przetwarzania komunikatów w swoim własnym tempie. Oznacza to ogromne korzyści kolejek: kolejki komunikatów może pełnić rolę bufora w przypadkach, gdy skalowalność funkcji hyper jest wymagane, tak samo jak w przypadku zasobów lub innego scenariusza, z dużej ilości danych przychodzących.
 
-Jednak ze względu na asynchroniczne charakter kolejki komunikatów, należy dowiedzieć się, jak do komunikacji z aplikacją klient o powodzeniu lub niepowodzeniu polecenia procesu. Zgodnie z zasadą nigdy nie należy używać poleceń "wyzwalać i zapomnij". Każda aplikacja biznesowa musi wiedzieć, jeśli polecenie zostało przetworzone pomyślnie, co najmniej zweryfikowane i zaakceptowane.
+Jednak ze względu na charakter asynchronicznego kolejek komunikatów, musisz opracować sposób komunikowania się z aplikacją klienta o powodzeniu lub niepowodzeniu polecenia procesu. Zgodnie z zasadą nigdy nie należy użyć polecenia "fire and forget". Aplikacja biznesowa, co musi wiedzieć, jeśli polecenie zostało przetworzone pomyślnie, lub były co najmniej zweryfikowane i zaakceptowane.
 
-W związku z tym możliwość odpowiedzi do klienta po weryfikacji komunikatem polecenia, który został przesłany do asynchronicznego kolejki dodaje złożoność do systemu, w porównaniu do polecenia w trakcie procesu, który zwraca wynik operacji po uruchomieniu transakcji. Korzystanie z kolejek, konieczne może być zwrócić wyników polecenia procesu za pomocą innych wiadomości wynik operacji, które będzie wymagać dodatkowych składników i niestandardowych komunikacji w systemie.
+Dlatego możliwość odpowiedzi do klienta po upewnieniu się, komunikat polecenia, który został przesłany do asynchronicznego kolejki zwiększa złożoność do systemu, w porównaniu do procesu poleceń w procesie, który zwraca wynik operacji po uruchomieniu transakcji. Korzystanie z kolejek, konieczne może być zwracanie wyniku procesu polecenia za pomocą innych wiadomości wynik operacji, które będzie wymagać dodatkowych składników i komunikacja z niestandardowych w systemie.
 
-Ponadto polecenia asynchroniczne są jednokierunkowe poleceń, które w wielu przypadkach mogą nie być wymagane, opisane w poniższych interesujące wymiany między Burtsev Alexey i małych Gregowi w [online konwersacji](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ):
+Ponadto polecenia asynchroniczne są jednokierunkowe poleceń, które w wielu przypadkach może być niepotrzebne, opisane w poniższej interesujące wymiany między Burtsev Alexey i Grega Younga w [rozmowę online](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ):
 
-\[Burtsev Alexey\] znaleźć się części kodu, których użytkownicy korzystają Obsługa polecenia async lub jednokierunkowej polecenia wiadomości bez jakiegokolwiek powodu, aby to zrobić (nie robią niektórych długotrwałej operacji, nie są one wykonywanie kodu async zewnętrznych, ich nie nawet przechodzą aplikacji granic z magistrali komunikatów). Dlaczego ich wprowadzenie tego niepotrzebnych złożoności? I w rzeczywistości I nie zostało to jeszcze widoczne CQRS przykładowego kodu z blokuje programy obsługi poleceń wykonanej do tej pory, że będzie ona działać tak dobrze w większości przypadków.
+> \[Burtsev Alexey\] znaleźć się części kodu, których użytkownicy korzystają z obsługi polecenia async lub jednym ze sposobów polecenia wiadomości bez jakiegokolwiek powodu, aby to zrobić (nie robią pewne długotrwałej operacji, nie są one wykonywane kod asynchroniczny zewnętrznych, ich nie nawet przechodzą aplikacji granica korzystać z magistrali komunikatów). Dlaczego wprowadzają tę złożoność niepotrzebne? I w rzeczywistości mogę nie jeszcze widoczne przykładowy kod CQRS z blokowaniem programy obsługi poleceń do tej pory, chociaż będzie działać prawidłowo w większości przypadków.
+>
+> \[Grega Younga\] \[... \] polecenia asynchronicznego nie istnieje; jest faktycznie inne zdarzenie. Jeśli musisz zaakceptować, co możesz Wyślij do mnie i wywołać zdarzenie, jeśli nie zgadzam się, nie jest już możesz informuje mnie coś zrobić \[oznacza to, że nie jest poleceniem\]. Chodzi o Ciebie informuje mnie, które coś, co zostało zrobione. To niewielka różnica na początku, ale ma wpływ wiele.
 
-\[Gregowi małych\] \[... \] asynchronicznej polecenie nie istnieje; jest faktycznie inne zdarzenie. Jeśli musi zaakceptować, co możesz wysyłać mi i wywołaj zdarzenie, jeśli nie zgadzam się, nie jest już możesz informacją coś zrobić. Jest możesz informujący, który coś zostało wykonane. Prawdopodobnie to niewielka różnica na początku, ale ma wpływ na wiele.
+Asynchroniczne poleceń znaczne zwiększenie złożoności systemu, ponieważ nie ma prostego sposobu wskazują błędy. W związku z tym polecenia asynchronicznego nie są zalecane innych niż razie wymagania dotyczące skalowania lub w szczególnych przypadkach podczas komunikacji wewnętrznej mikrousług za pomocą komunikatów. W takich przypadkach należy projektować oddzielnego systemu raportowania i odzyskiwania na wypadek awarii.
 
-Asynchroniczne polecenia znaczne zwiększenie złożoność systemu, ponieważ nie istnieje prosty sposób wskazująca błędów. W związku z tym polecenia asynchroniczne nie są zalecane inne niż skalowania wymagania są potrzebne, lub w szczególnych przypadkach podczas komunikacji wewnętrznej mikrousług przy użyciu wiadomości. W takich przypadkach należy projektować oddzielnego systemu raportowania i odzyskiwania na wypadek awarii.
+W pierwszej wersji w ramach aplikacji eShopOnContainers zdecydowaliśmy się użyć polecenia synchronicznego przetwarzania, pracy z żądań HTTP i opartych na podstawie wzorca mediatora. Łatwo pozwala to zwracać powodzenie lub niepowodzenie procesu, podobnie jak w [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) implementacji.
 
-W pierwotnej wersji eShopOnContainers zdecydowaliśmy się użyć polecenia synchronicznego przetwarzania, rozpoczynający się od żądań HTTP i regulowane przez wzorzec mediatora. Które łatwo można zwrócić powodzenie lub niepowodzenie procesu, podobnie jak w [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) implementacji.
+W każdym przypadku powinna to być decyzji na podstawie swojej aplikacji lub w mikrousługach wymagań biznesowych.
 
-W każdym przypadku powinien to być decyzji na podstawie wymagań biznesowych w aplikacji lub w mikrousługi.
+## <a name="implement-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>Implementowanie potok przetwarzania polecenia z wzorcem mediatora (MediatR)
 
-## <a name="implementing-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>Implementowanie potoku polecenie procesu z wzorcem mediatora (MediatR)
+Jako przykład implementacji ten przewodnik przedstawia, przy użyciu potoku w trakcie oparta na wzorcu mediatora do wprowadzania polecenia dysku i polecenia route w pamięci do obsługi polecenie right. Przewodnik proponuje, stosując [zachowania](https://github.com/jbogard/MediatR/wiki/Behaviors) w celu oddzielenia odciąż przekrojowe zagadnienia.
 
-Jako przykładowe zastosowanie ten przewodnik przedstawia za pomocą potoku w procesie oparte na wzorcu mediatora wprowadzanie polecenia dysku i polecenia trasy w pamięci, do obsługi polecenie right. Przewodnik proponuje, stosowanie [zachowania](https://github.com/jbogard/MediatR/wiki/Behaviors) aby oddzielić kompleksowymi problemy.
+Do wykonania w programie .NET Core są dostępne wiele bibliotek typu open source, które implementują wzorzec mediatora. Biblioteka używanych w tym przewodniku jest [MediatR](https://github.com/jbogard/MediatR) biblioteki typu open source (utworzonego przez Jimmy Bogard), ale można użyć innego podejścia. MediatR jest niewielki i prosty biblioteki, która umożliwia przetwarzanie komunikatów w pamięci, takich jak polecenia, stosując dekoratory lub zachowania.
 
-Implementacja .NET Core są dostępne wielu bibliotekach open source, które implementują wzorzec mediatora. Biblioteka używanych w tym przewodniku jest [MediatR](https://github.com/jbogard/MediatR) biblioteki open source (utworzony przez Jimmy Bogard), ale można użyć innej metody. MediatR jest niewielki i prosty biblioteki, która służy do przetwarzania komunikatów w pamięci, takich jak polecenia, podczas stosowania elementów decorator lub zachowania.
+Przy użyciu wzorca mediatora pomaga zmniejszyć sprzężenia i aby wyizolować problemy żądanej pracy, automatycznie łącząc program obsługi, który wykonuje pracę — w tym przypadku do obsługi polecenia.
 
-Przy użyciu wzorca mediatora pomaga ograniczyć sprzężenia i do izolowania problemów żądanej pracy, podczas łączenia automatycznie do programu obsługi, który wykonuje pracy — w takim przypadku na programy obsługi poleceń.
+Kolejny powód dobre, aby użyć wzorca mediatora zostało wyjaśnione przy użyciu Jimmy Bogard podczas przeglądania tego przewodnika:
 
-Kolejny powód dobra do użycia z wzorcem mediatora wyjaśniono przez Jimmy Bogard podczas przeglądania w tym przewodniku:
+> Myślę, może być warte wymienienie testowania w tym miejscu — zapewnia dobre rozwiązanie zgodne okno w zachowanie systemu. Żądania w poziomie w odpowiedzi. Odkryliśmy, że aspekt bardzo przydatne w budynku spójnie zachowuje się testy.
 
-Myślę, może być warto zauważyć testowania w tym miejscu — zapewnia nieuprzywilejowany zgodne okno do zachowania systemu. W żądaniu, poza odpowiedzi. Znaleziono element bardzo przydatna w budynku spójnie zachowuje testy.
-
-Po pierwsze Przyjrzyjmy się kontroler WebAPI próbki faktycznie użycia obiektu mediatora. Obiekt mediatora nie były używane, należy wprowadzić wszystkie zależności dla tego kontrolera, np. obiekt rejestratora i inne. W związku z tym Konstruktor jest dość złożone. Z drugiej strony Jeśli używasz obiektu mediatora konstruktora kontroler może być znacznie prostsze, wystarczy kilka zależności, zamiast wiele zależności, jeśli użytkownik ma dla operacji kompleksowymi, jak w poniższym przykładzie:
+Najpierw Przyjrzyjmy się kontrolkę webapi przykładowe faktycznie użycia obiektu mediatora. Obiekt mediatora nie była używana, należy wstrzyknąć wszystkie zależności dla tego kontrolera, np. obiekt rejestratora i innym osobom. W związku z tym Konstruktor będzie dość skomplikowane. Z drugiej strony Jeśli używasz obiektu mediatora, Konstruktor kontrolera może być znacznie prostsze, za pomocą tylko kilku zależności zamiast wiele zależności, jeśli masz jeden na przekrojowe operacji, jak w poniższym przykładzie:
 
 ```csharp
 public class MyMicroserviceController : Controller
@@ -481,7 +485,7 @@ public class MyMicroserviceController : Controller
     // ...
 ```
 
-Widać, że mediatora zapewnia czyste i gotowa konstruktora kontrolera interfejsu API sieci Web. Ponadto w ramach metod kontrolera kod, aby wysyłać polecenia do obiektu mediatora jest prawie jeden wiersz:
+Aby zobaczyć, że mediatora zapewnia czyste i zwarte Konstruktor kontrolera interfejsu API sieci Web. Ponadto w ramach metody kontrolera kod, aby wysłać polecenie do obiektu mediatora jest prawie jeden wiersz:
 
 ```csharp
 [Route("new")]
@@ -495,11 +499,11 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 }
 ```
 
-### <a name="implementing-idempotent-commands"></a>Implementowanie idempotentności poleceń
+### <a name="implement-idempotent-commands"></a>Implementowanie polecenia idempotentne
 
-W eShopOnContainers bardziej zaawansowany przykład niż powyższe jest przesyłanie obiekt CreateOrderCommand mikrousługi zamówienia. Jednak ponieważ proces biznesowy porządkowanie jest bardziej złożony i, w tym przypadku faktycznie uruchomienia mikrousługi koszyka, ta akcja przesyłania obiektu CreateOrderCommand jest wykonywana z obsługi zdarzeń integracji o nazwie [ UserCheckoutAcceptedIntegrationEvent.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) zamiast prostego kontrolera WebAPI wywołana z klienta aplikacji, co w poprzednim przykładzie prostsze. 
+W **ramach aplikacji eShopOnContainers**, stanowi przykład bardziej zaawansowane niż powyższe przesyła obiekt CreateOrderCommand z mikrousług porządkowanie. Ale ponieważ proces biznesowy zamówienia jest nieco bardziej skomplikowane, a w naszym przypadku faktycznie zacznie w mikrousługach koszyka, ta akcja przesyłania obiektu CreateOrderCommand jest przeprowadzane z poziomu programu obsługi zdarzeń integracji o nazwie > UserCheckoutAcceptedIntegrationEvent.cs] (https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) zamiast kontrolkę webapi proste wywoływane z klienta aplikacji, tak jak w poprzednim przykładzie prostsze.
 
-Niemniej jednak akcji przesyłania polecenie MediatR jest bardzo podobnie, jak pokazano w poniższym kodzie.
+Niemniej jednak akcji przesyłania polecenie, aby MediatR jest bardzo podobne, jak pokazano w poniższym kodzie.
 
 ```csharp
 var createOrderCommand = new CreateOrderCommand(eventMsg.Basket.Items,     
@@ -517,11 +521,11 @@ var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOr
 result = await _mediator.Send(requestCreateOrder);
 ```
 
-Jednak ta sprawa jest również nieco bardziej zaawansowanych, ponieważ również wdrażamy polecenia idempotentności. Proces CreateOrderCommand powinny być idempotentności, więc jeśli ten sam komunikat pochodzi zduplikowanych za pośrednictwem sieci, z dowolnej przyczyny, takich jak ponownych prób, takiej samej kolejności firm będą przetwarzane tylko raz.
+Jednak ten przypadek jest również nieco bardziej zaawansowane, ponieważ również wdrażamy polecenia idempotentne. Proces CreateOrderCommand powinny być idempotentne, więc jeśli ten sam komunikat pochodzi zduplikowane za pośrednictwem sieci, w związku z jakiegokolwiek powodu, takie jak ponownych prób, takiej samej kolejności firm będzie przetwarzany tylko raz.
 
-To jest implementowany przez opakowującego aplikacje biznesowe polecenia (w tym wielkość CreateOrderCommand) i embeding go do IdentifiedCommand ogólnych, które są śledzone przez identyfikator każdej wiadomości przesyłanych za pośrednictwem sieci, która ma być idempotentności.
+To jest implementowany przez opakowanie polecenia firmy (w tym przypadku CreateOrderCommand) i osadzenie jej w IdentifiedCommand ogólnych, które są śledzone przez identyfikator każdej wiadomości przesyłanych w sieci, która ma być idempotentne.
 
-W poniższym kodzie widać IdentifiedCommand nieprawidłowość nic więcej niż DTO z i identyfikator oraz obiektu polecenia opakowana biznesowego.
+W poniższym kodzie widać, IdentifiedCommand to nic więcej niż obiekt DTO z i identyfikator oraz obiektu polecenia opakowana biznesowego.
 
 ```csharp
 public class IdentifiedCommand<T, R> : IRequest<R>
@@ -537,7 +541,7 @@ public class IdentifiedCommand<T, R> : IRequest<R>
 }
 ```
 
-Następnie commandhandler — obiekt dla IdentifiedCommand o nazwie [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) zasadniczo Sprawdź, czy identyfikator dostępne jako część komunikatu już istnieje w tabeli. Jeśli już istnieje, że nie można przetworzyć polecenia ponownie, więc działa jako polecenie idempotentności. Wykonanie kodu infrastruktury przez `_requestManager.ExistAsync` wywołanie metody poniżej.
+Następnie commandhandler — obiekt dla IdentifiedCommand o nazwie [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) zasadniczo sprawdzi, czy identyfikator dostępne jako część komunikatu już istnieje w tabeli. Jeśli już istnieje, że polecenie nie będzie on przetworzony ponownie, więc działa jako polecenia idempotentne. Czy infrastruktury kodu odbywa się przez `_requestManager.ExistAsync` poniżej wywołania metody.
 
 ```csharp
 // IdentifiedCommandHandler.cs
@@ -581,9 +585,9 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-Ponieważ IdentifiedCommand działa jak koperty polecenie biznesowych, gdy polecenie firm musi zostać przetworzona, ponieważ nie jest identyfikatorem powtórzony, następnie go przyjmuje polecenia wewnętrzny biznesowych i ponownie przesyła do mediatora, tak jak ostatnia część kodzie pokazanym powyżej kiedy uruchomiona `_mediator.Send(message.Command)`, z [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+Ponieważ IdentifiedCommand zachowuje się jak koperty polecenie biznesowych, gdy polecenie firmy musi zostać przetworzona, ponieważ nie jest powtarzane identyfikator, następnie go zajmuje to polecenie wewnętrzne firmy i ponownie przesyła do mediatora, tak jak w ostatniej części kodu, gdy powyżej uruchamianie `_mediator.Send(message.Command)`, z [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
-Po tym spowoduje link i uruchom biznesowych program obsługi poleceń, w tym przypadku CreateOrderCommandHandler, w której działa transakcji w bazie danych porządkowanie, jak pokazano w poniższym kodzie.
+Podczas tych czynności spowoduje link i uruchom program obsługi poleceń firm, w tym przypadku, [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) której działa transakcje w bazie danych porządkowanie, jak pokazano w poniższym kodzie.
 
 ```csharp
 // CreateOrderCommandHandler.cs
@@ -630,11 +634,11 @@ public class CreateOrderCommandHandler
 }
 ```
 
-### <a name="registering-the-types-used-by-mediatr"></a>Rejestrowanie typów używanych przez MediatR
+### <a name="register-the-types-used-by-mediatr"></a>Zarejestruj typy używane przez MediatR
 
-MediatR pod uwagę klasy obsługi polecenia, należy zarejestrować klasy mediatora i klasy programu obsługi poleceń w Twojej kontenera IoC. Domyślnie MediatR używa Autofac jako kontenera IoC, ale można również użyć wbudowanych kontenera ASP.NET Core IoC lub innych kontenera obsługiwane przez MediatR.
+MediatR znać swojej klasy programu obsługi poleceń, należy zarejestrować klasy mediatora i klasy programu obsługi poleceń w kontenerze IoC. Domyślnie MediatR używa Autofac jako kontenera IoC, ale można również użyć wbudowanych kontenerów platformy ASP.NET Core IoC lub innego kontenera obsługiwane przez MediatR.
 
-Poniższy kod przedstawia sposób rejestrowania poleceń i typów w mediatora przy użyciu modułów Autofac.
+Poniższy kod pokazuje, jak zarejestrować poleceń i typy mediatora firmy, korzystając z modułów Autofac.
 
 ```csharp
 public class MediatorModule : Autofac.Module
@@ -655,9 +659,9 @@ public class MediatorModule : Autofac.Module
 }
 ```
 
-Jest to, gdy "Magia" miejsce w przypadku stron MediatR. 
+Jest to miejsce "Magia" miejsce w przypadku stron MediatR.
 
-Ponieważ każdy program obsługi poleceń implementuje ogólnego IAsyncRequestHandler&lt;T&gt; interfejsu, podczas rejestrowania zestawów, kodu rejestruje RegisteredAssemblyTypes wszystkie typy maked jako RequestHandlers podczas dotyczących CommandHandlers z ich polecenia dzięki użyciu relacji określone w klasie commandhandler — obiekt, jak w poniższym przykładzie:
+Ponieważ każdy program obsługi poleceń implementuje ogólnego `IAsyncRequestHandler<T>` interfejsu, podczas rejestrowania zestawów, ten kod rejestruje `RegisteredAssemblyTypes` oznaczenie wszystkich typów `IAsyncRequestHandler` podczas odnoszących się `CommandHandlers` z ich `Commands`, dziękuję do relacji, o których wspomniano w `CommandHandler` klasy, jak w poniższym przykładzie:
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -665,11 +669,11 @@ public class CreateOrderCommandHandler
 {
 ```
 
-To jest kod odpowiadająca poleceń z programy obsługi poleceń. Program obsługi ma prostą klasę, ale dziedziczy on z RequestHandler&lt;T&gt;, oraz MediatR jest wywoływana z poprawną ładunku.
+To kod, który jest odwrotnie skorelowana poleceń z programy obsługi poleceń. Program obsługi jest prostą klasę, ale dziedziczy `RequestHandler<T>`, gdzie T jest typem polecenia i MediatR upewnia się, zostanie wywołana z ładunkiem poprawne (polecenie).
 
-## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>Stosowanie kompleksowymi problemy podczas przetwarzania polecenia za pomocą zachowań w MediatR
+## <a name="apply-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>Zastosuj odciąż przekrojowe zagadnienia podczas przetwarzania polecenia za pomocą zachowań w MediatR
 
-Istnieje więcej rzecz: możliwość dotyczą problemów kompleksowymi mediatora potoku. Można również sprawdzić na końcu kodu modułu rejestracji Autofac jak rejestruje typ zachowania, w szczególności, niestandardowe klasy LoggingBehavior i klasa ValidatorBehavior. Ale można dodać inne niestandardowe działania zbyt.
+Ma jedną rzecz: możliwość zastosowania odciąż przekrojowe zagadnienia do potoku mediatora. Widać również na końcu kod modułu rejestracji Autofac jak rejestruje typ zachowania, w szczególności klasę niestandardową LoggingBehavior i klasa ValidatorBehavior. Ale można dodać inne niestandardowe zachowania zbyt.
 
 ```csharp
 public class MediatorModule : Autofac.Module
@@ -694,7 +698,7 @@ public class MediatorModule : Autofac.Module
 }
 ```
 
-Czy [LoggingBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) jako następujący kod, który rejestruje informacje na temat program obsługi poleceń, które było wykonywane, i czy było pomyślne lub nie można zaimplementować klasy.
+Czy [LoggingBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) klasy można zaimplementować jako następujący kod, który rejestruje informacje na temat obsługi polecenia wykonywane i tego, czy zakończyło się pomyślnie lub nie.
 
 ```csharp
 public class LoggingBehavior<TRequest, TResponse> 
@@ -715,46 +719,9 @@ public class LoggingBehavior<TRequest, TResponse>
 }
 ```
 
-Wystarczy implementowania tej klasy dekoratora i przez potok wraz z jego dekoracji wszystkich poleceń, które są przetwarzane przez MediatR będzie rejestrowanie informacji na temat wykonywania.
+Po prostu zaimplementowanie tej klasy zachowanie i rejestrując ją w potoku (w powyższym MediatorModule) wszystkie polecenia, które są przetwarzane przez MediatR będziesz rejestrować informacje dotyczące wykonywania.
 
-EShopOnContainers porządkowanie mikrousługi odnosi się także drugi zachowanie podstawowych operacji sprawdzania poprawności, [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) klasy, która zależy od [FluentValidation](https://github.com/JeremySkinner/FluentValidation) biblioteki, jak pokazano w następujący kod:
-
-```csharp
-public class ValidatorDecorator<TRequest, TResponse>
-    : IAsyncRequestHandler<TRequest, TResponse>
-    where TRequest : IAsyncRequest<TResponse>
-{
-    private readonly IAsyncRequestHandler<TRequest, TResponse> _inner;
-    private readonly IValidator<TRequest>[] _validators;
-
-    public ValidatorDecorator(
-        IAsyncRequestHandler<TRequest, TResponse> inner,
-        IValidator<TRequest>[] validators)
-    {
-        _inner = inner;
-        _validators = validators;
-    }
-
-    public async Task<TResponse> Handle(TRequest message)
-    {
-        var failures = _validators
-            .Select(v => v.Validate(message))
-            .SelectMany(result => result.Errors)
-            .Where(error => error != null)
-            .ToList();
-            if (failures.Any())
-            {
-                throw new OrderingDomainException(
-                $"Command Validation Errors for type {typeof(TRequest).Name}",
-                new ValidationException("Validation exception", failures));
-            }
-            var response = await _inner.Handle(message);
-        return response;
-    }
-}
-```
-
-Następnie, na podstawie [FluentValidation](https://github.com/JeremySkinner/FluentValidation) biblioteki, utworzyliśmy sprawdzanie poprawności danych przekazanych z CreateOrderCommand, zgodnie z poniższym kodem:
+Ramach aplikacji eShopOnContainers porządkowanie mikrousług ma zastosowanie również w drugim zachowanie dla podstawowe sprawdzanie poprawności, [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) klasy, która opiera się na [FluentValidation](https://github.com/JeremySkinner/FluentValidation) biblioteki, jak pokazano w Poniższy kod:
 
 ```csharp
 public class ValidatorBehavior<TRequest, TResponse> 
@@ -786,7 +753,9 @@ public class ValidatorBehavior<TRequest, TResponse>
 }
 ```
 
-Następnie oparte na bibliotece FluentValidation, utworzyliśmy sprawdzanie poprawności danych przekazanych z CreateOrderCommand, zgodnie z poniższym kodem:
+Zachowanie w tym miejscu jest wywoływanie wyjątek, jeśli weryfikacja zakończy się niepowodzeniem, ale mogą także zwracać obiekt wyniku, zawierający wynik polecenia w przypadku powodzenia lub Sprawdzanie poprawności wiadomości w przypadku, gdy nie. To będzie prawdopodobnie ułatwiają wyświetlić wyniki sprawdzania poprawności dla użytkownika.
+
+Następnie, na podstawie [FluentValidation](https://github.com/JeremySkinner/FluentValidation) , możemy utworzyć bibliotekę sprawdzania poprawności dla danych przekazanych z CreateOrderCommand, tak jak w poniższym kodzie:
 
 ```csharp
 public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
@@ -819,53 +788,53 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 
 ```
 
-Można utworzyć dodatkowe operacje sprawdzania poprawności. Jest to bardzo czyste i elegancki sposób implementacji Twojego polecenia operacji sprawdzania poprawności.
+Można utworzyć dodatkowe sprawdzanie poprawności. Jest to bardzo prosty i przejrzysty sposób wdrożyć swoje polecenie walidacji.
 
-W podobny sposób można zaimplementować innych zachowań dodatkowe aspekty lub kompleksowymi problemy, które mają być stosowane do poleceń podczas ich obsługę.
+W podobny sposób można zaimplementować innych zachowań dodatkowe aspekty lub odciąż przekrojowe zagadnienia, które mają być stosowane do poleceń, gdy ich obsługę.
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 ##### <a name="the-mediator-pattern"></a>Wzorzec mediatora
 
--   **Wzorzec mediatora**
-    [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
+- **Wzorzec mediatora** \
+  [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>Wzorzec dekoratora
 
--   **Wzorzec dekoratora**
-    [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
+- **Wzorzec dekoratora** \
+  [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
--   **MediatR.** Repozytorium GitHub.
-    [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
+- **MediatR.** Repozytorium GitHub. \
+  [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
 
--   **CQRS MediatR i AutoMapper**
-    [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
+- **Podejście CQRS z MediatR i AutoMapper** \
+  [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
--   **Umieść kontrolerów tradycyjną: ogłoszeń i poleceń.**
-    [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
+- **Umieść swoje kontrolery na diecie: Wpisy i poleceń.** \
+  [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
--   **Realizowanie kompleksowymi problemy z potokiem mediatora**
-    [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
+- **Realizowanie odciąż przekrojowe zagadnienia z potokiem mediatora** \
+  [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
 
--   **CQRS i REST: czego szukasz**
-    [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
+- **Podejście CQRS i REST: doskonałe dopasowanie** \
+  [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
 
--   **Przykłady MediatR potoku**
-    [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
+- **Przykłady MediatR potoku** \
+  [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
 
--   **Wycinek pionowy testów osprzętu MediatR i ASP.NET Core**
-    *<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/> *
+- **Wycinek pionowy testu świetlnymi MediatR i platformy ASP.NET Core** \
+  [*https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/*](https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/)
 
--   **Rozszerzenia MediatR iniekcji zależności Microsoft opublikowała program**
-    [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
+- **Rozszerzenia MediatR do wstrzykiwania zależności firmy Microsoft, wydania** \
+  [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
 
 ##### <a name="fluent-validation"></a>Sprawdzanie poprawności Fluent
 
--   **Jeremy Skinner. FluentValidation.** Repozytorium GitHub.
-    [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
+- **Jeremy Skinner. FluentValidation.** Repozytorium GitHub. \
+  [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
 
 >[!div class="step-by-step"]
-[Poprzednie](microservice-application-layer-web-api-design.md)
-[dalej](../implement-resilient-applications/index.md)
+>[Poprzednie](microservice-application-layer-web-api-design.md)
+>[dalej](../implement-resilient-applications/index.md)

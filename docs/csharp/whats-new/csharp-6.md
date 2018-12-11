@@ -3,12 +3,12 @@ title: Co nowego w języku C# 6 — Przewodnik po języku C#
 description: Dowiedz się, nowych funkcji w języku C# w wersji 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6aa070d54bb1b571d4fa51538b0521a554073cbc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194036"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146748"
 ---
 # <a name="whats-new-in-c-6"></a>Co nowego w języku C# 6
 
@@ -94,9 +94,9 @@ Jeśli dodanie tej składni nie powoduje usunięcia dostępnej metody, [binarne 
 
 *Właściwości automatyczne* umożliwiają deklarowanie początkowa wartość auto właściwością jako część deklaracji właściwości.  We wcześniejszych wersjach te właściwości musi mieć metody ustawiające i trzeba użyć tej metody ustawiającej można zainicjować magazynu danych, używane przez pola pomocniczego. Dla uczniów lub studentów, zawierający nazwę i listę ocen studentów, należy wziąć pod uwagę tej klasy:
 
-[!code-csharp[Construction](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Construction)]
+[!code-csharp[Student](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Student)]
  
-Wraz z rozwojem tej klasy może zawierać innych konstruktorów. Każdy konstruktora musi zainicjować tego pola lub będą powodować błędy.
+Wraz z rozwojem tej klasy może zawierać innych konstruktorów. Każdy konstruktora musi zainicjować właściwości klasy lub będą powodować błędy.
 
 C# 6, można przypisać wartość początkową dla miejsca używanego przez auto właściwością w deklaracji właściwości automatycznej:
 
@@ -104,7 +104,7 @@ C# 6, można przypisać wartość początkową dla miejsca używanego przez auto
 
 `Grades` Elementu członkowskiego jest inicjowany, którym jest zdeklarowana. Który sprawia, że łatwiej wykonać inicjowania dokładnie jeden raz. Inicjowanie jest częścią deklaracji właściwości, dzięki czemu łatwiej jest równoważne Alokacja magazynu za pomocą interfejsu publicznego dla `Student` obiektów.
 
-Właściwości można za pomocą właściwości odczytu/zapisu, a także właściwości tylko do odczytu, jak pokazano poniżej.
+Właściwości może służyć za pomocą właściwości tylko do odczytu, jak pokazano powyżej, a za pomocą właściwości odczytu/zapisu, jak pokazano poniżej.
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 

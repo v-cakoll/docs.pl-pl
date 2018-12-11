@@ -4,12 +4,13 @@ description: Pojęcia dotyczące jednostek testów w języku C# i .NET Core za p
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: af2ae5e1b0f9e6146975c6838cca8b22837bb012
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507833"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168991"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Testowanie jednostek języka C# w .NET Core za pomocą polecenia dotnet test i struktury xUnit
 
@@ -104,7 +105,7 @@ dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
-Podejścia TDD wymaga zapisywania niepowodzenie jednego testu, dzięki czemu przekazać, a następnie powtórzyć ten proces. Usuń *UnitTest1.cs* z *PrimeService.Tests* katalogu i Utwórz nowy plik C# o nazwie *PrimeService_IsPrimeShould.cs*. Dodaj następujący kod:
+Podejścia TDD wymaga zapisywania niepowodzenie jednego testu, dzięki czemu przekazać, a następnie powtórzyć ten proces. Usuń *UnitTest1.cs* z *PrimeService.Tests* katalogu i Utwórz nowy C# plik o nazwie *PrimeService_IsPrimeShould.cs*. Dodaj następujący kod:
 
 ```csharp
 using Xunit;
@@ -151,7 +152,7 @@ W *PrimeService.Tests* katalogu, uruchom `dotnet test` ponownie. `dotnet test` P
 
 ## <a name="adding-more-features"></a>Dodawanie większej liczby funkcji
 
-Teraz, gdy wprowadzono jeden przebieg testu, nadszedł czas na zapis więcej. Istnieje kilka innych przypadkach proste dla liczb pierwszych: 0, -1. Możesz dodać te przypadki jako nowe testy za pomocą `[Fact]` atrybut, ale który szybko staje się uciążliwe. Istnieją inne atrybuty xUnit, które umożliwiają pisanie zestaw testów podobne:
+Teraz, gdy wprowadzono jeden przebieg testu, nadszedł czas na zapis więcej. Istnieje kilka innych przypadkach proste dla liczby pierwsze: 0, -1. Możesz dodać te przypadki jako nowe testy za pomocą `[Fact]` atrybut, ale który szybko staje się uciążliwe. Istnieją inne atrybuty xUnit, które umożliwiają pisanie zestaw testów podobne:
 
 - `[Theory]` reprezentuje zestaw testów, które wykonania tego samego kodu, ale mają różne argumenty wejściowe.
 

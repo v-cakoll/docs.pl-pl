@@ -1,5 +1,6 @@
 ---
 title: Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
+description: Dowiedz się, jak skutecznie używać ciągów w aplikacjach .NET.
 ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080341"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150982"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
 <a name="top"></a> .NET zapewnia rozbudowaną obsługę dla rozwoju zlokalizowane i uniwersalnych aplikacji i ułatwia zastosowanie Konwencji kultury bieżącej lub określonej kultury, podczas wykonywania typowych operacji, takich jak sortowanie i wyświetlanie ciągów. Ale sortowania i porównywania ciągów nie zawsze jest to operacja wrażliwość na ustawienia kulturowe. Na przykład ciągów, które są używane wewnętrznie przez aplikację zwykle powinny być traktowane identycznie we wszystkich kulturach. Kiedy dane ciągu kulturalnie niezależne, takie jak XML tagów, HTML tagów, nazwy użytkowników, ścieżki do plików i nazwy obiektów systemowych są interpretowane tak, jakby były one zależne od kultury, kod aplikacji może być zastrzeżeniem subtelnych błędów, niską wydajnością i w niektórych przypadkach problemy z zabezpieczeniami.  
@@ -120,7 +122,7 @@ ms.locfileid: "47080341"
   
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>Szczegóły dotyczące porównania ciągów  
- Porównanie ciągów jest sercem wiele powiązanych z ciągami operacji, szczególnie sortowania i testowanie pod kątem równości. Posortować ciągi w określonej kolejności: Jeśli "Mój" pojawia się przed "string", w posortowanej listy ciągów, "Mój" należy porównać mniejsze niż lub równe "string". Ponadto porównanie niejawnie definiuje równości. Operacja porównania zwraca zero dla ciągów, które uzna za równe. Interpretacja dobre jest ani ciągu jest mniejszy od drugiego. Największe znaczenie obejmującego ciągi dołączyć jedno lub oba z następujących procedur: porównanie z innego ciągu i wykonywania operacji sortowania dobrze zdefiniowane.  
+ Porównanie ciągów jest sercem wiele powiązanych z ciągami operacji, szczególnie sortowania i testowanie pod kątem równości. Sortowanie ciągów w określonej kolejności: Jeśli "Mój" pojawia się przed "string", w posortowanej listy ciągów, "Mój" należy porównać mniejsze niż lub równe "string". Ponadto porównanie niejawnie definiuje równości. Operacja porównania zwraca zero dla ciągów, które uzna za równe. Interpretacja dobre jest ani ciągu jest mniejszy od drugiego. Największe znaczenie obejmującego ciągi dołączyć jedno lub oba z następujących procedur: porównanie z innego ciągu i wykonywania operacji sortowania dobrze zdefiniowane.  
 
 > [!NOTE]
 > Możesz pobrać [tabele wagi sortowania](https://www.microsoft.com/en-us/download/details.aspx?id=10921), zbiór plików tekstowych, które zawierają informacje o wagi znaku w operacjach sortowania i porównywania dla systemów operacyjnych Windows, a [domyślne Unicode Tabela elementów sortowania](https://www.unicode.org/Public/UCA/latest/allkeys.txt), najnowszą wersję tabeli wagi sortowania dla systemów Linux i macOS. Określoną wersję tabeli wagi sortowania w systemie Linux i macOS jest zależna od wersji [składniki międzynarodowego standardu Unicode](http://site.icu-project.org/) biblioteki zainstalowane w systemie. Informacje na temat ICU wersji i wersje Unicode, które implementują, zobacz [pobieranie ICU](http://site.icu-project.org/download).
@@ -335,7 +337,7 @@ Ponadto porównań ciągów przy użyciu różnych wersji programu .NET lub przy
  [!code-csharp[Conceptual.Strings.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
  [!code-vb[Conceptual.Strings.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]  
   
-### <a name="collections-example-hashtable-constructor"></a>Przykład kolekcji: konstruktor tablicy wartości funkcji mieszającej  
+### <a name="collections-example-hashtable-constructor"></a>Przykład kolekcji: Konstruktor tablicy skrótów  
  Mieszanie ciągów zawiera drugi przykład operacji, która ma to wpływ na podstawie informacji podanych w którym ciągi są porównywane.  
   
  Poniższy przykład tworzy wystąpienie <xref:System.Collections.Hashtable> obiektu przez przekazanie jej <xref:System.StringComparer> obiektu, który jest zwracany przez <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> właściwości. Ponieważ klasa <xref:System.StringComparer> , jest tworzony na podstawie <xref:System.StringComparer> implementuje <xref:System.Collections.IEqualityComparer> interfejsu, jego <xref:System.Collections.IEqualityComparer.GetHashCode%2A> metoda jest używana do obliczenia skrótu ciągów w tabeli wyznaczania wartości skrótu.  

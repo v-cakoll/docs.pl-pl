@@ -2,30 +2,29 @@
 title: Temat platformy .NET Core
 description: Dowiedz się więcej na temat platformy .NET Core.
 author: richlander
-ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: fc4b76df8b71865b14caf27c7e21906cccc88d07
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197656"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170408"
 ---
 # <a name="about-net-core"></a>Temat platformy .NET Core
 
 .NET core ma następującą charakterystykę:
 
-- **Dla wielu platform:** działa na Windows, macOS i Linux [systemów operacyjnych](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
-- **Spójność w ramach architektury:** uruchamia kod z takie samo zachowanie na wielu architekturach, w tym x64, x86 i ARM.
-- **Narzędzia wiersza polecenia:** zawiera łatwy w użyciu narzędzia wiersza polecenia, które być używane dla rozwoju lokalnych i w scenariuszach ciągłej integracji.
-- **Elastyczne wdrażanie:** zainstalowany side-by-side użytkownika — lub dla komputera lub mogą być zawarte w Twojej aplikacji. Mogą być używane z [kontenerów platformy Docker](docker/index.md).
+- **Dla wielu platform:** Działa na Windows, macOS i Linux [systemów operacyjnych](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
+- **Spójność w ramach architektury:** Uruchamia kod z takie samo zachowanie na wielu architekturach, w tym x64, x86 i ARM.
+- **Narzędzia wiersza polecenia:**  Zawiera łatwy w użyciu narzędzia wiersza polecenia, które mogą być używane dla rozwoju lokalnych i w scenariuszach ciągłej integracji.
+- **Elastyczne wdrożenia:** Zainstalowany side-by-side użytkownika — lub dla komputera lub mogą być zawarte w Twojej aplikacji. Mogą być używane z [kontenerów platformy Docker](docker/index.md).
 - **Zgodne:** platformy .NET Core jest zgodny z .NET Framework, Xamarin i platformy Mono, za pośrednictwem [.NET Standard](../standard/net-standard.md).
-- **"Open source":** platformy .NET Core jest typu open source, przy użyciu licencji MIT i Apache 2. Platforma .NET core to [.NET Foundation](https://dotnetfoundation.org/) projektu.
+- **Typu open source:** Platforma .NET Core jest typu open source, przy użyciu licencji MIT i Apache 2. Platforma .NET core to [.NET Foundation](https://dotnetfoundation.org/) projektu.
 - **Obsługiwane przez firmę Microsoft:** platformy .NET Core jest obsługiwane przez firmę Microsoft na [Obsługa platformy .NET Core](https://www.microsoft.com/net/core/support/).
 
 ## <a name="languages"></a>Języki
 
-Języki C#, Visual Basic i F # może służyć do pisania aplikacji i bibliotek dla platformy .NET Core. Te języki są lub można zintegrować z tekstu edytorami i środowiskami IDE, w tym [programu Visual Studio](https://visualstudio.microsoft.com/vs/), [programu Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text i Vim. Ta integracja świadczą, w całości, to dobry osoby z [technologię OmniSharp](https://www.omnisharp.net/) i [Ionide](http://ionide.io) projektów.
+C#, Visual Basic i F# języków może służyć do pisania aplikacji i bibliotek dla platformy .NET Core. Te języki są lub można zintegrować z tekstu edytorami i środowiskami IDE, w tym [programu Visual Studio](https://visualstudio.microsoft.com/vs/), [programu Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text i Vim. Ta integracja świadczą, w całości, to dobry osoby z [technologię OmniSharp](https://www.omnisharp.net/) i [Ionide](http://ionide.io) projektów.
 
 ## <a name="apis"></a>interfejsy API
 
@@ -53,7 +52,7 @@ Wiele struktur zostały utworzone na podstawie platformy .NET Core:
 
 - [Środowisko uruchomieniowe programu .NET Core](https://github.com/dotnet/coreclr), która zapewnia system typów, z ładowaniem zestawu, moduł wyrzucania elementów bezużytecznych, współdziałanie natywne i innych podstawowych usług. [Bibliotek platformy .NET core](https://github.com/dotnet/corefx) zapewniają pierwotne typy danych, typy skład aplikacji i narzędzi podstawowych.
 - [Środowisko uruchomieniowe ASP.NET](https://github.com/aspnet/home), które oferuje platforma tworzenia nowoczesnym rozwiązaniom w chmurze opartego internet połączonych aplikacji, takich jak aplikacje sieci web, aplikacji IoT oraz zapleczy aplikacji mobilnych.
-- [Narzędzi interfejsu wiersza polecenia platformy .NET Core](https://github.com/dotnet/cli) i Kompilatory języka ([Roslyn](https://github.com/dotnet/roslyn) i [F #](https://github.com/microsoft/visualfsharp)), dzięki którym Środowisko deweloperskie platformy .NET Core.
+- [Narzędzi interfejsu wiersza polecenia platformy .NET Core](https://github.com/dotnet/cli) i Kompilatory języka ([Roslyn](https://github.com/dotnet/roslyn) i [ F# ](https://github.com/microsoft/visualfsharp)), dzięki którym Środowisko deweloperskie platformy .NET Core.
 - [Narzędzia dotnet](https://github.com/dotnet/core-setup), która umożliwia uruchamianie aplikacji .NET Core i narzędzi interfejsu wiersza polecenia. Środowisko wykonawcze wybiera i hostuje środowisko wykonawcze, zapewnia zestawu zasad podczas ładowania i uruchamia aplikacje i narzędzia.
 
 Te składniki są dystrybuowane w następujący sposób:

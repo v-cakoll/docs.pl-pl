@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514188"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150976"
 ---
 # <a name="operators-c-programming-guide"></a>Operatory (Przewodnik programowania w języku C#)
 W języku C# *operator* jest elementem programu, który jest stosowany do co najmniej jednego *operandy* w wyrażeniu lub instrukcji. Operatory przyjmujące jeden argument operacji, takich jak operator inkrementacji (`++`) lub `new`, są określane jako *jednoargumentowe* operatorów. Operatory przyjmujące dwa argumenty operacji, takie jak operatory arytmetyczne (`+`,`-`,`*`,`/`), są określane jako *binarne* operatorów. Jeden operator, operator warunkowy (`?:`), przyjmuje trzy argumenty operacji i jest jedynym operatorem trójargumentowym w języku C#.  
@@ -111,8 +111,8 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
 |Kategoria|Wyrażenie|Opis|  
 |--------------|----------------|-----------------|  
 |AND logiczne|x [ & ](../../../csharp/language-reference/operators/and-operator.md) y|Bitowe AND dla wartości całkowitych, logiczne AND dla wartości binarnych|  
-|XOR logiczne|x [ ^ ](../../../csharp/language-reference/operators/xor-operator.md) y|Bitowe XOR dla wartości całkowitych, logiczne XOR dla wartości binarnych|  
-|OR logiczne|x [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) y|Bitowe OR dla wartości całkowitych, logiczne OR dla wartości binarnych|  
+|XOR logiczne|x [ ^ ](../../../csharp/language-reference/operators/xor-operator.md) y|Liczba całkowita iloczynu bitowego XOR, logiczne XOR logiczne|  
+|OR logiczne|x [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) y|Liczba całkowita bitowego lub logiczną logiczne OR|  
 |AND warunkowe|x [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa true|  
 |OR warunkowe|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa false|  
 |Łączenie wartości null|x [?](../../../csharp/language-reference/operators/null-coalescing-operator.md) t|Wynikiem jest wartość y, jeśli x ma wartość null; w przeciwnym razie wynikiem jest wartość x|  

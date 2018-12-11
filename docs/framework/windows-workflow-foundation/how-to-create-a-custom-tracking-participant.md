@@ -1,18 +1,18 @@
 ---
-title: 'Porady: Tworzenie niestandardowego uczestnika śledzenia'
+title: 'Instrukcje: Tworzenie niestandardowego uczestnika śledzenia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: a9a83f64b7ea0de275631d7d3b8d2755671223ce
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0f8d21ca4f08ad4dc2e5f5e62695b9b14aff13d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864485"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53156706"
 ---
-# <a name="how-to-create-a-custom-tracking-participant"></a>Porady: Tworzenie niestandardowego uczestnika śledzenia
+# <a name="how-to-create-a-custom-tracking-participant"></a>Instrukcje: Tworzenie niestandardowego uczestnika śledzenia
 Śledzenie przepływu pracy zapewnia wgląd w stan wykonywania przepływu pracy. Środowisko wykonawcze przepływów pracy emituje rekordów śledzenia, które opisują przepływ pracy zdarzenia cyklu życia, zdarzenia cyklu życia działań, resumptions zakładki i błędów. Te rekordy śledzenia są używane przez śledzenia uczestników. Windows Workflow Foundation (WF) zawiera standardowe śledzenia uczestnika, który zapisuje rekordy śledzenia jako zdarzenia śledzenie zdarzeń dla Windows (ETW). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia. W tym kroku samouczka opisano tworzenie niestandardowego uczestnika śledzenia i profilu śledzenia, który przechwycenie danych wyjściowych `WriteLine` działania, aby mogą być wyświetlane użytkownikowi.  
   
 > [!NOTE]
@@ -334,8 +334,9 @@ ms.locfileid: "43864485"
  **Wprowadź liczbę między 1 a 10**  
 **Przypuszczenie jest zbyt duża.**   
 **Wprowadź liczbę między 1 a 10**    
+
     > [!NOTE]
-    >  Te informacje są przydatne do określania zakresu liczb losowych, ale nie zawiera żadnych informacji o jakie prób zostały wprowadzone wcześniej. Te informacje są w następnym kroku [jak: Host wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+    >  Te informacje są przydatne do określania zakresu liczb losowych, ale nie zawiera żadnych informacji o jakie prób zostały wprowadzone wcześniej. Te informacje są w następnym kroku [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
      Zanotuj identyfikator wystąpienia przepływu pracy i Zagraj w grę za pośrednictwem do jego zakończenia.  
   
@@ -345,4 +346,4 @@ ms.locfileid: "43864485"
 **Przypuszczenie jest zbyt duża.**   
 **Wprowadź liczbę między 1 a 10**   
 **Przypuszczenie jest zbyt duża.**   
-**Wprowadź liczbę między 1 a 10** oprócz braku prób przez użytkownika, to dane śledzenia nie zawiera informacji na temat ostateczny wynik przepływu pracy. To dlatego informacje o śledzeniu składa się tylko z `WriteLine` danych wyjściowych z przepływu pracy, końcowe komunikat, który jest wyświetlany jest wykonywane to `Completed` obsługi po ukończeniu przepływu pracy. W następnym kroku samouczka [jak: Host wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), istniejące `WriteLine` działań są modyfikowane w celu wyświetlania prób przez użytkownika oraz dodatkowy `WriteLine` dodaniu działania, które Wyświetla wyniki końcowe. Po zintegrowaniu są te zmiany, [jak: Host wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) pokazuje, jak hostowanie wielu wersji przepływu pracy w tym samym czasie.
+**Wprowadź liczbę między 1 a 10** oprócz braku prób przez użytkownika, to dane śledzenia nie zawiera informacji na temat ostateczny wynik przepływu pracy. To dlatego informacje o śledzeniu składa się tylko z `WriteLine` danych wyjściowych z przepływu pracy, końcowe komunikat, który jest wyświetlany jest wykonywane to `Completed` obsługi po ukończeniu przepływu pracy. W następnym kroku samouczka [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), istniejące `WriteLine` działań są modyfikowane w celu wyświetlania prób przez użytkownika oraz dodatkowy `WriteLine` dodaniu działania, który wyświetla wyniki końcowe. Po zintegrowaniu są te zmiany, [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) pokazuje, jak hostowanie wielu wersji przepływu pracy w tym samym czasie.

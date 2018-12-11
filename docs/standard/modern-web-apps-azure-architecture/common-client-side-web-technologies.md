@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: eb5612e0cbdc52e397ba367b4cc744796174d06c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404609"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153894"
 ---
 # <a name="common-client-side-web-technologies"></a>Typowe technologie sieci web po stronie klienta
 
@@ -64,7 +64,7 @@ Załóżmy na przykład, jeśli wartość w polu tekstowym przekracza 10, elemen
 
 ### <a name="jquery-vs-a-spa-framework"></a>vs jQuery SPA Framework
 
-| **współczynnik** | **jQuery** | **Platformy angular**|
+| **współczynnik** | **jQuery** | **Angular**|
 |--------------------------|------------|-------------|
 | Przenosi modelu DOM | **Tak** | **Tak** |
 | Obsługa technologii AJAX | **Tak** | **Tak** |
@@ -153,9 +153,9 @@ Będą dalej rozwijać się z szybkością breakneck platformy JavaScript. Użyj
 > <https://jquery.com/>
 > - **jQuery vs AngularJS**  
 > <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
-> - **Platformy angular**  
+> - **Angular**  
 > <https://angular.io/>
-> - **react**  
+> - **React**  
 > <https://facebook.github.io/react/>
 > - **React Slingshot**  
 > <https://github.com/coryhouse/react-slingshot>
@@ -165,5 +165,5 @@ Będą dalej rozwijać się z szybkością breakneck platformy JavaScript. Użyj
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[Poprzednie](common-web-application-architectures.md)
-[dalej](develop-asp-net-core-mvc-apps.md)
+>[Poprzednie](common-web-application-architectures.md)
+>[dalej](develop-asp-net-core-mvc-apps.md)

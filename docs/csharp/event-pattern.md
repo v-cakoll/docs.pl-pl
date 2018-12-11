@@ -4,11 +4,11 @@ description: Więcej informacji na temat wzorce zdarzeń platformy .NET oraz jak
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
 ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297039"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129405"
 ---
 # <a name="standard-net-event-patterns"></a>Standardowe wzorce zdarzeń platformy .NET
 
@@ -69,7 +69,7 @@ Kodu spoza klasy nie mogą wywoływać zdarzenia, nie można wykonać żadnych i
 
 ## <a name="returning-values-from-event-subscribers"></a>Zwracanie wartości od subskrybentów zdarzeń
 
-Proste wersji działa prawidłowo. Dodajmy kolejną funkcją: anulowania.
+Proste wersji działa prawidłowo. Dodajmy kolejną funkcją: Anulowanie.
 
 Po podniesieniu znalezionych zdarzeń odbiorników powinno być możliwe zatrzymać dalsze przetwarzanie, jeśli ten plik jest, że ostatni poszukiwania.
 

@@ -1,23 +1,25 @@
 ---
-title: 'Testowanie jednostek biblioteki F # w .NET Core za pomocą polecenia dotnet test i NUnit'
-description: 'Pojęcia dotyczące jednostki test dla języka F # w .NET Core za pomocą interaktywnych doświadczenia przykładowe rozwiązanie krok po kroku za pomocą polecenia dotnet test i NUnit.'
+title: Testy jednostkowe F# bibliotek w programie .NET Core za pomocą polecenia dotnet test i NUnit
+description: Informacje na temat testów jednostek dla F# platformy .NET Core za pomocą interaktywnych doświadczenia przykładowe rozwiązanie krok po kroku za pomocą polecenia dotnet test i NUnit.
 author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.custom: seodec18
+ms.openlocfilehash: 4135ef1a0f3ef86ae8ab344d27ee8968944bb728
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308432"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169095"
 ---
-# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Testowanie jednostek biblioteki F # w .NET Core za pomocą polecenia dotnet test i NUnit
+# <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Testy jednostkowe F# bibliotek w programie .NET Core za pomocą polecenia dotnet test i NUnit
 
 Ten samouczek przeprowadzi Cię przez środowisko interaktywne tworzenie przykładowe rozwiązanie krok po kroku, aby dowiedzieć się więcej pojęcia testów jednostkowych. Jeśli chcesz wykonać kroki samouczka przy użyciu wstępnie utworzone rozwiązania [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) przed przystąpieniem do wykonywania. Aby uzyskać instrukcje pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Wymagania wstępne 
-- [.NET core SDK 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) lub nowszy. 
+## <a name="prerequisites"></a>Wymagania wstępne
+
+- [Zestaw SDK programu .NET core 2.1](https://www.microsoft.com/net/download) lub nowszy.
 - Edytor tekstu lub ulubionego edytora kodu.
 
 ## <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego

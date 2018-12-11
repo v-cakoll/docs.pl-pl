@@ -2,14 +2,14 @@
 title: Dane telemetryczne zestawu SDK programu .NET core
 description: Poznaj funkcje telemetryczne zestawu .NET Core SDK, które zbierają informacje o użyciu dla analizy, które dane są zbierane i jak go wyłączyć.
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: a20d79e132726cb342064b681218ee568fab2c13
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 8b0b546d70eab837c2e075f839990870ae9ea6b1
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841629"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168848"
 ---
 # <a name="net-core-sdk-telemetry"></a>Dane telemetryczne zestawu SDK programu .NET core
 
@@ -52,7 +52,7 @@ Ta funkcja zbiera następujące dane:
 
 &#8224;Ta metryka jest publikowany.
 
-Począwszy od programu .NET Core SDK 2.0, nowe punkty danych są zbierane:
+Począwszy od programu .NET Core 2.0 SDK nowe punkty danych są zbierane:
 
 - `dotnet` polecenie Opcje i argumenty: tylko znane opcje i argumenty są zbierane (nie dowolne ciągi).
 - Czy zestaw SDK jest uruchomiona w kontenerze.
@@ -64,11 +64,11 @@ Ta funkcja nie zbiera danych osobowych, takich jak nazwy użytkowników lub adre
 
 Zespół .NET chce wiedzieć, jak te narzędzia są używane, a jeśli działają poprawnie, nie co w przypadku tworzenia za pomocą narzędzi. Jeśli podejrzewasz, że zbiera dane telemetryczne poufne dane, lub że dane są insecurely lub niewłaściwie obsługiwane, Prześlij zgłoszenie do [interfejsu wiersza poleceniadotnet/](https://github.com/dotnet/cli/issues) repozytorium na potrzeby badania.
 
-## <a name="published-data"></a>Dane publikowane
+## <a name="published-data"></a>Opublikowane dane
 
 Dane publikowane jest dostępny co kwartał i znajduje się w [danych użycia programu .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md). Dostępne są następujące kolumny w pliku danych:
 
-- Znacznik czasu:
+- Znacznik czasu
 - Occurrences&#8224;
 - Polecenie
 - Geography&#8225;
@@ -83,7 +83,7 @@ Dane publikowane jest dostępny co kwartał i znajduje się w [danych użycia pr
 
 ### <a name="example"></a>Przykład
 
-| Znacznik czasu:      | Wystąpienia | Polecenie | Lokalizacja geograficzna | Rodzina systemów operacyjnych | RuntimeID     | OSVersion | SDKVersion |
+| Znacznik czasu      | Wystąpienia | Polecenie | Lokalizacja geograficzna | Rodzina systemów operacyjnych | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
 | 4/16/2017 0:00 | 8           | Uruchom     | Ugandyjski    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
 

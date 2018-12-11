@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement'
+title: 'Instrukcje: Tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181137"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155252"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Instrukcje: Tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement
 Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane przez system, które można skonfigurować, ale nie zapewniają pełną elastyczność podczas konfigurowania wszystkich opcji zabezpieczeń, które obsługuje usługi WCF. W tym temacie pokazano, jak utworzyć niestandardowego powiązania bezpośrednio z poziomu powiązania poszczególnych elementów i opisano niektóre ustawienia zabezpieczeń, które można określić podczas tworzenia takiego powiązania. Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane pr
   
  W przeciwieństwie do tworzenia niestandardowego powiązania, elementy powiązania są tworzone i konfigurowane i <xref:System.ServiceModel.Channels.CustomBinding> jest tworzona na podstawie elementy wiązania.  
   
- Aby to zrobić, Dodaj elementy powiązania poszczególnych kolekcji reprezentowany przez wystąpienie <xref:System.ServiceModel.Channels.BindingElementCollection> klasy, a następnie ustaw `Elements` właściwość `CustomBinding` taki sam jak ten obiekt. Należy dodać elementy powiązania w następującej kolejności: przepływu transakcji, niezawodnej sesji, zabezpieczeń, złożonego dwukierunkowego, jednokierunkowe Stream zabezpieczeń, kodowania wiadomości i transportu. Należy zauważyć, że nie wszystkie elementy na liście są wymagane w każde powiązanie.  
+ Aby to zrobić, Dodaj elementy powiązania poszczególnych kolekcji reprezentowany przez wystąpienie <xref:System.ServiceModel.Channels.BindingElementCollection> klasy, a następnie ustaw `Elements` właściwość `CustomBinding` taki sam jak ten obiekt. Należy dodać elementy powiązania w następującej kolejności: Przepływ transakcji, niezawodnej sesji, zabezpieczeń, złożonego dupleks, jednokierunkowe zabezpieczeń Stream, kodowanie komunikatu i transportu. Należy zauważyć, że nie wszystkie elementy na liście są wymagane w każde powiązanie.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  Trzy elementy powiązania odnoszą się do komunikatu zabezpieczenia na poziomie, z których pochodzi od <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy. Są trzy <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, i <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> Służy do zapewnienia bezpieczeństwa w trybie mieszanym. Inne elementy są używane, gdy warstwa komunikatów gwarantuje bezpieczeństwo.  

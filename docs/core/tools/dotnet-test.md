@@ -1,15 +1,13 @@
 ---
-title: polecenie test DotNet — interfejs wiersza polecenia platformy .NET Core
+title: polecenie test DotNet
 description: Polecenia dotnet test służy do wykonywania testów jednostkowych w danym projekcie.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 73b1d832b855798dd053187bbb24e8fb989fedf1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 2cfe96b24e5f46ae679c970a1df028d38ebf6037
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "46696459"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170857"
 ---
 # <a name="dotnet-test"></a>polecenia DotNet test
 
@@ -138,7 +136,7 @@ Argumenty są przekazywane jako RunSettings konfiguracji testu. Argumenty są ok
 
 Przykład: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-Aby uzyskać więcej informacji na temat RunSettings zobacz [vstest.console.exe: argumenty przekazywanie RunSettings](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
+Aby uzyskać więcej informacji na temat RunSettings zobacz [vstest.console.exe: Przekazywanie argumentów RunSettings](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

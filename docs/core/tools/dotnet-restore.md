@@ -1,15 +1,13 @@
 ---
-title: polecenie restore DotNet — interfejs wiersza polecenia platformy .NET Core
+title: polecenie restore DotNet
 description: Dowiedz się, jak przywrócić zależności i narzędzi specyficznych dla projektu za pomocą polecenia dotnet restore.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 0eaab1aa1bc52bd5b3c51a6ed2dd7a59c35a4aa5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 6f54671fcd1c17d2466d5a38027e02da5e7494e9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960598"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170785"
 ---
 # <a name="dotnet-restore"></a>DotNet restore
 
@@ -24,7 +22,7 @@ ms.locfileid: "37960598"
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
-    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity] [--interactive]
 dotnet restore [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
@@ -119,6 +117,10 @@ Określa źródło pakietu NuGet ma być używany podczas operacji przywracania.
 
 Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
 
+`--interactive`
+
+Umożliwia polecenie, aby zatrzymać i czeka na dane wejściowe użytkownika lub akcji (na przykład w celu ukończenia uwierzytelniania). Ponieważ 2.1.400 platformy .NET Core.
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--configfile <FILE>`
@@ -160,6 +162,8 @@ Określa źródło pakietu NuGet ma być używany podczas operacji przywracania.
 `--verbosity <LEVEL>`
 
 Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
+
+---
 
 ## <a name="examples"></a>Przykłady
 

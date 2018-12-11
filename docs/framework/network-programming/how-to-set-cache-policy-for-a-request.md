@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Określanie zasad pamięci podręcznej dla żądania'
+title: 'Instrukcje: Określanie zasad pamięci podręcznej dla żądania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 ms.openlocfilehash: f2e3e7ccc16dc24cf79574f8607245b66ea53cb1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190661"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155015"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a>Porady: Określanie zasad pamięci podręcznej dla żądania
+# <a name="how-to-set-cache-policy-for-a-request"></a>Instrukcje: Określanie zasad pamięci podręcznej dla żądania
 W poniższym przykładzie pokazano, ustawianie zasad pamięci podręcznej dla żądania. Przykładowe dane wejściowe to identyfikator URI, taki jak `http://www.contoso.com/`.  
   
 ## <a name="example"></a>Przykład  

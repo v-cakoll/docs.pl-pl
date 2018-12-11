@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 75ef14032ee2211d3b8d355f050ced67b4a04930
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ff0845f7d15a7b65cee755110d26a1e56a9b94af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46579849"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153946"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Wprowadzenie do języka C# i systemu .NET Framework
 
@@ -38,7 +38,7 @@ C# to elegancki i bezpieczny typowo język obiektowy, który umożliwia dewelope
   
 - [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] między różnymi źródłami danych, która zapewnia wbudowane możliwości zapytania.  
   
- Jeśli masz oddziałują na inne oprogramowanie Windows, takich jak obiekty COM lub natywnych bibliotek Win32 dll, można to zrobić w języku C# dzięki procesowi zwanemu "Interop". Usługa międzyoperacyjna umożliwia programom C# niemal wszystko, co można wykonać macierzysta aplikacja C++. C# obsługuje nawet wskazówki i pojęcie "niebezpieczny" kod dla tych przypadków, w których bezpośredni dostęp do pamięci jest absolutnie kluczowego znaczenia.  
+ Jeśli masz oddziałują na inne oprogramowanie Windows, takich jak obiekty COM lub natywnych bibliotek Win32 dll, można to zrobić w C# dzięki procesowi zwanemu "Interop". Usługa międzyoperacyjna umożliwia programom C# niemal wszystko, co można wykonać macierzysta aplikacja C++. C# obsługuje nawet wskazówki i pojęcie "niebezpieczny" kod dla tych przypadków, w których bezpośredni dostęp do pamięci jest absolutnie kluczowego znaczenia.  
   
  Proces kompilacji C# jest prosty w porównaniu do C i C++ i bardziej elastyczny niż w języku Java. Brak ma osobnych plików nagłówka oraz wymagania można zadeklarować metody i typy w określonej kolejności. Plik źródłowy C# może zdefiniować dowolną liczbę klas, struktur, interfejsów i wydarzeń.  
   

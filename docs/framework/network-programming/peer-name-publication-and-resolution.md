@@ -3,11 +3,11 @@ title: Elementu równorzędnego publikowanie i rozwiązywanie nazw
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
 ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184559"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143730"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Elementu równorzędnego publikowanie i rozwiązywanie nazw
 

@@ -1,17 +1,17 @@
 ---
-title: Przechowywanie wersji platformy .NET core
-description: Dowiedz się, jak działa wersji platformy .NET Core.
+title: Jak są wersjonowane środowisko uruchomieniowe programu .NET Core i zestawu SDK
+description: W tym artykule dowiesz się, jak zestaw .NET Core SDK i środowisko uruchomieniowe są wersjonowane (podobne do semantycznego versioning).
 author: bleroy
-ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 54b09a6b74b2cf213cea781dec95a413ac2ad059
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188472"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170720"
 ---
-# <a name="net-core-versioning"></a>Przechowywanie wersji platformy .NET core
+# <a name="overview-of-how-net-core-is-versioned"></a>Omówienie sposobu platformy .NET Core jest wersjonowany
 
 .NET core odnosi się do środowiska uruchomieniowego programu .NET Core i .NET Core SDK, który zawiera narzędzia potrzebne do tworzenia aplikacji. Zestawów .NET core SDK są przeznaczone do pracy z poprzednich wersji środowiska uruchomieniowego programu .NET Core. W tym artykule wyjaśniono, środowisko uruchomieniowe i strategii wersji zestawu SDK. Wyjaśnienie numery wersji dla platformy .NET Standard można znaleźć w artykule Przedstawiamy [.NET Standard](../../standard/net-standard.md#net-implementation-support).
 
@@ -98,7 +98,7 @@ Implementacje na każdej z platform mogą być aktualizowane, zazwyczaj w ramach
 
 Każda wersja programu .NET Core implementuje wersji programu .NET Standard. Zaimplementowanie wersji .NET Standard oznacza pomocy technicznej dla wcześniejszych wersji programu .NET Standard. Wersja platformy .NET standard i .NET Core niezależnie. Jest zbieżność, że zestaw .NET Core 2.0 implementuje .NET Standard 2.0. .NET core 2.1 implementuje również .NET Standard 2.0. .NET core będzie obsługiwać przyszłych wersjach programu .NET Standard, gdy tylko zostaną udostępnione.
 
-| .NET Core | .NET standard |
+| .NET Core | .NET Standard |
 |-----------|---------------|
 | 1.0       | do wersji 1.6     |
 | 2.0       | do 2,0     |

@@ -1,73 +1,72 @@
 ---
-title: Jakie aplikacje natywne chmury?
-description: Modernizacji istniejących aplikacji .NET z kontenerami chmury Azure i systemu Windows | Jakie aplikacje natywne chmury?
+title: Jak wygląda aplikacjom natywnym dla chmury?
+description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Jak wygląda aplikacjom natywnym dla chmury?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 0e880689001ece2b770811cfbe3fea43aa425b32
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 0e390fcc838fc745e5950a8adcaeee0e5aa6e434
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958237"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152575"
 ---
-# <a name="what-about-cloud-native-applications"></a>Jakie aplikacje natywne chmury?
+# <a name="what-about-cloud-native-applications"></a>Jak wygląda aplikacjom natywnym dla chmury?
 
-Mimo że [Native chmury](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) aplikacje nie podlegają głównym celem niniejszego przewodnika warto wiedzę na temat tego poziomu dojrzałości modernizacji i odróżnienia go od aplikacji zoptymalizowanych pod kątem chmury.
+Mimo że [natywnych dla chmury](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) aplikacje nie są głównym celem tego przewodnika, warto rozumieć ten poziom dojrzałości modernizacji i odróżnienia go od aplikacjami optymalizowanymi pod kątem chmury.
 
-Rysunek 4-3 umieszcza aplikacje natywne chmury poziomu dojrzałości modernizacji aplikacji:
+Rysunek 4-3 umieszcza natywnych aplikacji w chmurze w poziomie dojrzałości modernizacja aplikacji:
 
-![Pozycjonowanie aplikacje natywne chmury](./media/image3.png)
+![Pozycjonowanie aplikacjom natywnym dla chmury](./media/image3.png)
 
-> **Rysunek 4-3.** Pozycjonowanie aplikacje natywne chmury
+> **Rysunek 4-3.** Pozycjonowanie aplikacjom natywnym dla chmury
 
-Poziomu dojrzałości modernizacji Native chmury zwykle wymaga nowych programowanie inwestycji. Przenoszenie poziom natywne chmury zwykle niezależnie wynikają z potrzeb biznesowych do modernizacji jak możliwość znacząco zwiększyć skalę w dużych aplikacji przez utworzenie autonomicznego podsystemów (mikrousług), które można wdrożyć i skalowania aplikacji w innych obszarach aplikacji podczas obniżenia kosztów w długich elastyczność ewolucji termin i zwiększyć części tych aplikacji autonomicznej, które zapewniają znaczny konkurować zalety. 
+Poziom dojrzałości modernizacji natywnych dla chmury zwykle wymagają nowych inwestycji rozwoju. Przejście do poziomu natywnych dla chmury zwykle wynikają potrzeba biznesowa w celu zmodernizowania możliwie najlepiej znacząco zwiększyć skalę w dużych aplikacji, tworząc podsystemy autonomicznego (mikrousług), które mogą być wdrażane i skalowania aplikacji niezależnie z innych obszarów aplikacji, obniżając jednocześnie koszty w długi czas trwania umowy i zwiększenia ewolucji elastyczności części tych aplikacji autonomicznych, które zapewniają znaczących konkurować korzyści. 
 
-Główne kolumn [Native chmury](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) aplikacje są oparte na mikrousług architektura metod, które można rozwijać, elastyczność i skalować do ograniczenia, które mogą być trudne w architekturze wbudowanymi wdrożyć do jednej lokalnej lub w środowisku chmury.
+Głównych filarów [natywnych dla chmury](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) aplikacje są oparte na metody dotyczące architektury mikrousług, które ewoluują wraz z elastyczności i skalowanie do ograniczenia, które mogą być trudny do osiągnięcia w monolityczne architektury, albo wdrożyć w środowisku lokalnym lub środowiskiem w chmurze.
 
-Rysunek 4-4 zawiera charakterystykę modelu chmury Native.  
+Rysunek 4-4 przedstawiono charakterystykę modelu natywnych dla chmury.  
 
-> ![Właściwości chmury natywne są Mikrousług, kontenery odporności chmury, orchestrators i serverles](./media/image4.png)
+> ![Cechy natywnych dla chmury są Mikrousług, kontenerów, odporne na błędy dla chmury i koordynatorów serverles](./media/image4.png)
 >
-> **Rysunek 4-4.** Właściwości chmury natywne
+> **Rysunek 4-4.** Właściwości natywnych dla chmury
 
-Ponadto aplikacje podstawowe nowoczesnych witryn sieci web i aplikacje natywne chmury można rozszerzyć przez dodanie innych usług, takich jak analizy sztucznego (AI), usługa machine learning (ML) i IoT. Można użyć dowolnego z tych usług do jednej z metod zoptymalizowanych pod kątem chmury można rozszerzyć.
+Ponadto podstawowe nowoczesne aplikacje sieci web i aplikacji natywnych dla chmury można rozszerzyć przez dodanie innych usług, takich jak sztucznej inteligencji (AI), usługi machine learning (ML) i IoT. Można użyć dowolnej z tych usług do rozszerzenia jedną z możliwych podejść zoptymalizowane pod kątem chmury.
 
-Główną różnicą w aplikacjach na poziomie chmury natywne jest architektury aplikacji. [Chmura native](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) aplikacje są, zgodnie z definicją w aplikacji, które są oparte na mikrousług. Aplikacje natywne chmury wymagają specjalnych architektury, technologii i platform, w porównaniu do aplikacji sieci web wbudowanymi lub tradycyjny N-poziomowej aplikacji.
+Jest główną różnicą w aplikacjach na poziomie natywnych dla chmury w ramach architektury aplikacji. [Natywnych dla chmury](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) aplikacje są, zgodnie z definicją, aplikacje, które są oparte na mikrousługach. Aplikacji natywnych dla chmury wymagają specjalnych architektury, technologii i platform, w porównaniu do monolityczną aplikację lub tradycyjny N-warstwowej.
 
-## <a name="cloud-native-applications-details"></a>Szczegóły aplikacje natywne chmury
+## <a name="cloud-native-applications-details"></a>Szczegóły aplikacji natywnych dla chmury
 
-[Chmura Native](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) jest bardziej zaawansowanych lub dojrzałe stanu dla dużych i kluczowych aplikacji. Aplikacje natywne chmury zwykle wymagają architektury i projektu, które powstały od początku zamiast modernizacji istniejących aplikacji. Najważniejsza różnica między aplikacją chmury natywne i aplikacji sieci web zoptymalizowanych pod kątem chmury prostsze jest zalecenie, aby używać mikrousług architektury w podejściu native chmury. Aplikacje zoptymalizowanych pod kątem chmury można także aplikacje wbudowanymi sieci web lub aplikacji wielowarstwowych.
+[Natywnych dla chmury](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) jest bardziej zaawansowane lub dojrzała stan aplikacji z dużymi i o kluczowym znaczeniu. Aplikacje natywne w chmurze zwykle wymagają architektury i projektowania, które są tworzone od podstaw, a nie przez modernizowanie istniejących aplikacji. Główną różnicą między aplikacji natywnych dla chmury i prostsze zoptymalizowane pod kątem chmury aplikacji sieci web to zalecenie, aby używać architektur mikrousług w podejściu natywnych dla chmury. Zoptymalizowane pod kątem chmury aplikacji może być również w aplikacji monolitycznej sieci web lub aplikacji N-warstwowych.
 
-[Aplikacji współczynnik dwunastu](https://12factor.net/) (kolekcja wzorców, które są ściśle związane ze podejścia mikrousług) jest traktowana jako wymagania dotyczące [native chmury](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) architekturach aplikacji.
+[Aplikacji 12-Factor](https://12factor.net/) (zbiór wzorców, które są ściśle związane ze podejścia mikrousług) jest traktowana jako wymogów dotyczących [natywnych dla chmury](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) architektury aplikacji.
 
-[Foundation natywnego obliczeniowych w chmurze (CNCF)](https://www.cncf.io/) jest podstawowy promotor zasad native chmury. Firma Microsoft [członkiem CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
+[Foundation natywnych obliczeń w chmurze (CNCF)](https://www.cncf.io/) jest podstawowym promoter zasad natywnych dla chmury. Firma Microsoft jest [członkiem CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Dla definicji próbki oraz więcej informacji na temat aplikacji natywnych chmury, zobacz artykuł Gartner [projektowania i zaprojektować aplikacje natywne chmury](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Dokładne wskazówki firmy Microsoft dotyczące sposobu wdrażania aplikacji natywnych chmury, zobacz [mikrousług .NET: Architektura konteneryzowanych aplikacji .NET](https://aka.ms/microservicesebook).
+Przykładowa definicja i więcej informacji na temat właściwości aplikacji natywnych dla chmury, zobacz artykuł firmy Gartner [architektury i projektowania aplikacji natywnych dla chmury](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Dokładne wskazówki od firmy Microsoft o sposobie wdrażania aplikacji natywnych dla chmury, zobacz [mikrousługi .NET: Architektura konteneryzowanych aplikacji .NET](https://aka.ms/microservicesebook).
 
-Najważniejszym czynnikiem wziąć pod uwagę, czy migrować do pełnego zastosowania [native chmury](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) model jest, że należy rearchitect do architektura mikrousług. Wymaga to wyraźnie znaczącą inwestycję w rozwoju ze względu na duże proces refaktoryzacji. Ta opcja jest zazwyczaj wybrany dla kluczowych aplikacji wymagających nowe poziomy skalowalność i elastyczność długoterminowej. Jednak można pomyśleć kierunku native chmury przez dodanie mikrousług dla kilku nowych scenariuszy, a ostatecznie Refaktoryzuj aplikacji pełni jako mikrousług. Jest to przyrostowe metody, która jest najlepszym rozwiązaniem w przypadku niektórych scenariuszy.
+Najistotniejszym czynnikiem wziąć pod uwagę, czy migrować pełnej aplikacji do [natywnych dla chmury](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) model jest, że należy Przekształcanie, do opartych na mikrousługach architektury. Wymaga to wyraźnie znaczących inwestycji związanych z programowania ze względu na duże proces refaktoryzacji. Zazwyczaj zostanie wybrana ta opcja dla aplikacji o kluczowym znaczeniu, które wymagają nowych poziomów skalowalność i elastyczność długoterminowe. Jednak można rozpocząć przenoszenie kierunku natywnych dla chmury, dodając mikrousług dla kilku nowych scenariuszy i ostatecznie refaktoryzacji aplikacji pełni jako mikrousług. To podejście przyrostowe jest najlepszym rozwiązaniem w przypadku niektórych scenariuszy.
 
-## <a name="what-about-microservices"></a>Co mikrousług? 
+## <a name="what-about-microservices"></a>Jak wygląda mikrousług? 
 
-Ważne jest zrozumienie mikrousług oraz ich współdziałaniu, gdy rozważane jest chmury natywne aplikacje dla swojej organizacji.
+Ważne jest zrozumienie mikrousług i sposobie ich działania, gdy rozważasz aplikacjom natywnym dla chmury w organizacji.
 
-Architektura mikrousług jest zaawansowane metody, która służy do aplikacji, które są tworzone od początku lub rozwijać istniejące aplikacje kierunku aplikacje natywne chmury. Można uruchomić, dodając kilka mikrousług do istniejących aplikacji, aby dowiedzieć się o nowych wzorcami mikrousług. Jednak wyraźnie, musisz architektów i kod, szczególnie w przypadku tego typu architektura.
+Architektura mikrousług jest zaawansowane metody, która służy do aplikacji, które są tworzone od podstaw lub ewolucji istniejących aplikacji do aplikacji natywnych dla chmury. Można uruchomić, dodając kilka mikrousług do istniejących aplikacji, aby dowiedzieć się o nowych paradygmatów mikrousług. Ale wyraźnie widać, należy do architektury i kodu, szczególnie w przypadku tego typu podejście.
 
-Jednak mikrousług nie są wymagane dla każdej nowej lub nowoczesnych aplikacji. Mikrousług nie są "magic bullet", a nie są jednej, najlepszym sposobem tworzenia każdej aplikacji. Jak i kiedy korzystać mikrousług zależy od typu aplikacji, która jest potrzebne do tworzenia.
+Mikrousługi są obowiązkowe dla każdej nowej lub nowoczesnych aplikacji. Mikrousługi nie są "magic bullet" i nie są one pojedynczy, najlepszym sposobem tworzenia każdej aplikacji. Jak i kiedy używasz mikrousług zależy od typu aplikacji, które są potrzebne do utworzenia.
 
-Architektura mikrousług staje się to preferowane rozwiązanie dla rozproszonych i dużych lub złożonych aplikacji krytycznym, które są oparte na wiele niezależnych podsystemów w formie autonomicznej usługi. W architektura mikrousług aplikacji jest utworzony jako zbiór usług, które można niezależnie rozwinięte, przetestowane, wersji, wdrożyć i skalowania. Może to obejmować wszystkie powiązane, autonomicznej bazy danych na mikrousługi.
+Architektura mikrousług staje się preferowane podejście do rozproszonego i dużych lub złożonych aplikacji o krytycznym znaczeniu, które opierają się na wiele niezależnych podsystemów w formie autonomicznej usług. W przypadku opartych na mikrousługach architektury aplikacji została stworzona jako zbiór usług, które mogą być niezależne rozwinięte, przetestowane, poddany kontroli wersji, wdrażanie i skalowanie. Może to obejmować wszystkie powiązane autonomicznej bazy danych na mikrousługach.
 
-Aby uzyskać szczegółowy widok architektury mikrousług, które można wdrożyć przy użyciu platformy .NET Core, zobacz e-book do pobrania plików PDF [mikrousług .NET: Architektura konteneryzowanych aplikacji .NET](https://aka.ms/microservicesebook). Przewodnik jest również dostępna [online](../../microservices-architecture/index.md).
+Aby uzyskać szczegółowy widok architektury mikrousług, które można wdrożyć przy użyciu platformy .NET Core, zobacz do pobrania plików PDF książkę elektroniczną [mikrousługi .NET: Architektura konteneryzowanych aplikacji .NET](https://aka.ms/microservicesebook). Przewodnik, dostępna jest także [online](../../microservices-architecture/index.md).
 
-Ale nawet w scenariuszach, w których mikrousług oferują zaawansowane możliwości niezależne od wdrożenia, granice silne podsystemu i różnorodności technologii-też wiązać wiele wyzwania. Wyzwania dotyczące projektowanie aplikacji rozproszonych, takich jak modeli danych pofragmentowanych i niezależny; uzyskanie odporność komunikacji między mikrousług; potrzebę spójność ostateczna; i złożoność działania. Mikrousług wprowadzenie wyższy poziom złożoności w porównaniu do tradycyjnego wbudowanymi aplikacjami.
+Ale nawet w scenariuszach, w których mikrousług oferują zaawansowane możliwości niezależne od wdrożenia, podsystem silnych granic i różnorodność technologii-one też wiązać się z wielu nowe wyzwania. Wyzwania odnoszą się do rozwoju aplikacji rozproszonych, takich jak modele danych pofragmentowanych i niezależne; osiągnięcie odporne na błędy komunikacji między mikrousługami; potrzebę spójność ostateczną; i złożoność operacyjną. Mikrousługi wprowadzają wyższego poziomu złożoności w porównaniu do tradycyjnych monolitycznych aplikacji.
 
-Ze względu na złożoność architektury mikrousług tylko konkretnych scenariuszy i niektórych typów aplikacji są odpowiednie dla aplikacji opartych na mikrousługi. Obejmują one dużych i złożonych aplikacji, które mają wiele rozwijającymi podsystemy. W takich przypadkach warto pomyśleć bardziej złożonych architektura oprogramowania, zwiększyć elastyczność długoterminowej i bardziej efektywną obsługę aplikacji. Ale dla mniej złożonymi scenariuszami, mogą być lepiej kontynuować podejście wbudowanymi aplikacji lub zbliża się do N-warstwowa prostsze.
+Ze względu na złożoność architektury mikrousług są odpowiednie dla aplikacji opartych na mikrousługach tylko konkretnych scenariuszy i niektórych typów aplikacji. Obejmują one dużych i złożonych aplikacji, które mają wiele ewoluują podsystemów. W takich przypadkach warto zainwestować w bardziej złożone architektury oprogramowania, większą elastyczność długoterminowego i bardziej efektywną obsługę aplikacji. Ale w przypadku mniej złożonych scenariuszy może być lepiej kontynuować za pomocą podejścia monolitycznego aplikacji lub zbliża się prostsze N-warstwowej.
 
-Jako ostatecznego Uwaga, nawet ryzyko jest powtarzających się o to pojęcie nie powinien wyglądać za pomocą mikrousług w aplikacji jako "kwoty ujęte lub nic wcale." Można rozszerzać i rozwijać istniejące aplikacje wbudowanymi, dodając nowe, małe scenariusze oparte na mikrousług. Nie trzeba zacząć od początku, aby rozpocząć pracę z podejścia architektura mikrousług. W rzeczywistości zaleca się, że rozwijać z używania istniejącej aplikacji wbudowanymi lub N-warstwowa przez dodanie nowych scenariuszy. Po pewnym czasie można podzielić aplikacji w autonomicznej części lub mikrousług. Możesz przystąpić do zmieniających się wbudowanymi aplikacji w kierunku mikrousług krok po kroku.
+Jako ostatecznego notatki, nawet ryzyko zwrócenia powtarzających się o to pojęcie i nie powinien przyjrzymy się przy użyciu mikrousług w swoich aplikacjach jako "całości opartą or nothing wcale." Można też rozszerzyć i ewolucji istniejących aplikacji monolitycznej, dodając nowe, małe scenariusze oparte na mikrousługach. Nie trzeba zacząć od podstaw, aby rozpocząć pracę z podejścia architektury mikrousług. W rzeczywistości zaleca się, że rozwijać się używać istniejącej aplikacji monolitycznych lub N-warstwowej, dodając nowe scenariusze. Po pewnym czasie można podzielić ją do autonomicznego składników lub mikrousług. Aby rozpocząć, ewoluują aplikacji monolitycznych w kierunku mikrousług krok po kroku.
 
-W każdym przypadku reszty we wskazówkach tych obecny skupiono się większość wszystkich na "nie mikrousług aplikacji opartych na" ponieważ w tych wskazówkach jest skierowany głównie modernizacji istniejących aplikacji, które zwykle mają wbudowanymi lub N-warstwowa architektury.
-
+W każdym przypadku pozostałej części tej wskazówki obecne koncentruje się większość wszystkich na "Brak opartych na mikrousługach aplikacji", ponieważ te wskazówki głównie przeznaczone dla modernizacji istniejących aplikacji, mających monolityczne lub N-warstwowej architektury.
 
 >[!div class="step-by-step"]
-[Poprzednie](microsoft-technologies-in-cloud-optimized-applications.md)
-[dalej](deploy-existing-net-apps-as-windows-containers.md)
+>[Poprzednie](microsoft-technologies-in-cloud-optimized-applications.md)
+>[dalej](deploy-existing-net-apps-as-windows-containers.md)

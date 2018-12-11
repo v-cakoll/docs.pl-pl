@@ -1,18 +1,17 @@
 ---
 title: Wytyczne dotyczące użycia
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8e583bf7768c60477effb6c1cf9b838ae4c8c182
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+author: KrzysztofCwalina
+ms.openlocfilehash: 761570b899a2a36391eb81dc7f42e13fff1f14ef
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197941"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155408"
 ---
 # <a name="usage-guidelines"></a>Wytyczne dotyczące użycia
 
@@ -34,7 +33,7 @@ Ta sekcja zawiera wskazówki dotyczące korzystania z popularnych typów w publi
 
 *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*
 
-*Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*
+*Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*
   
 ## <a name="see-also"></a>Zobacz także
 

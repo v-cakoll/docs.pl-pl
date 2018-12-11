@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: c978f79571494d9b716df4e8a42e7f40d20766f6
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332961"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155028"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)
 Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z stacje, plików i katalogów.  
@@ -27,12 +27,12 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z stacje, plikó
 ## <a name="definition-of-a-stream"></a>Definicja Stream  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Używa strumieni w celu obsługi odczytywanie z oraz zapisywanie do plików. Strumień można traktować jako jednowymiarowa zestaw danych ciągłych, która zawiera początek i koniec i gdzie kursor wskazuje bieżącą pozycję w strumieniu.  
   
- ![Kursor zawiera bieżącą pozycję w strumieniu plików. ] (../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FileStream")  
+ ![Kursor zawiera bieżącą pozycję w strumieniu plików. ](../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FileStream")  
   
 ## <a name="stream-operations"></a>Operacje Stream  
  Dane zawarte w strumieniu mogą pochodzić z pamięci, plik lub gniazda TCP/IP. Strumienie są podstawowe operacje, które można zastosować do nich:  
   
--   Odczytywanie. Możesz przeczytać ze strumienia, transfer danych ze strumienia do struktury danych, takich jak ciąg lub tablicę bajtów.  
+-   **Odczytywanie**. Możesz przeczytać ze strumienia, transfer danych ze strumienia do struktury danych, takich jak ciąg lub tablicę bajtów.  
   
 -   **Zapisywanie**. Możesz napisać do strumienia, transfer danych ze źródła danych w strumieniu.  
   
@@ -55,13 +55,13 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z stacje, plikó
   
  W poniższej tabeli wymieniono zadania najczęściej wykonywane za pomocą usługi stream:  
   
-|Do|Zobacz|
+|Zadanie|Zobacz|
 |---|---|   
-|Odczyt i zapis do pliku danych|[Instrukcje: odczyt i zapis we właśnie utworzonym pliku danych](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|Odczytywanie tekstu z pliku|[Instrukcje: odczytywanie tekstu z pliku](../../../../standard/io/how-to-read-text-from-a-file.md)|  
-|Zapisywanie tekstu do pliku|[Instrukcje: zapisywanie tekstu w pliku](../../../../standard/io/how-to-write-text-to-a-file.md)|  
-|Odczytywanie znaków z ciągu|[Instrukcje: odczytywanie znaków z ciągu](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
-|Zapisywanie znaków w ciągu|[Instrukcje: zapisywanie znaków w ciągu](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
+|Odczyt i zapis do pliku danych|[Jak: Odczyt i zapis w nowo utworzonym pliku danych](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Odczytywanie tekstu z pliku|[Jak: Odczytywanie tekstu z pliku](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|Zapisywanie tekstu do pliku|[Jak: Zapisywanie tekstu do pliku](../../../../standard/io/how-to-write-text-to-a-file.md)|  
+|Odczytywanie znaków z ciągu|[Jak: Odczytywanie znaków z ciągu](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
+|Zapisywanie znaków w ciągu|[Jak: Zapisywanie znaków w ciągu](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
 |Szyfrowanie danych|[Szyfrowanie danych](../../../../standard/security/encrypting-data.md)|  
 |Odszyfrowywanie danych|[Odszyfrowywanie danych](../../../../standard/security/decrypting-data.md)|  
   
@@ -72,9 +72,9 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z stacje, plikó
   
  Poniższa tabela zawiera listę zadań obejmujących dostęp do plików i atrybuty plików:  
   
-|Do|Zobacz|  
+|Zadanie|Zobacz|  
 |---|---|
-|Otwieranie i dołączanie tekstu do pliku dziennika|[Instrukcje: otwieranie pliku dziennika i dołączanie do niego](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
+|Otwieranie i dołączanie tekstu do pliku dziennika|[Jak: Otwieranie i dołączanie do pliku dziennika](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Określania atrybutów pliku|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Uprawnienia do pliku  
@@ -85,15 +85,15 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z stacje, plikó
   
  Poniższa tabela zawiera listę zadań zwykle powiązanych ze izolowany magazyn plików.  
   
-|Do|Zobacz|
+|Zadanie|Zobacz|
 |---|---|  
-|Utwórz w izolowanym magazynie|[Instrukcje: uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
-|Wyliczanie izolowanych magazynów|[Instrukcje: wyliczanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
-|Usuń izolowanym magazynie|[Instrukcje: usuwanie danych z wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
-|Tworzenie pliku lub katalogu w wydzielonej pamięci masowej|[Instrukcje: tworzenie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
-|Znajdź plik w wydzielonej pamięci masowej|[Instrukcje: znajdowanie istniejących plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
-|Odczytać lub zapisać do pliku w magazynie insolated|[Instrukcje: odczyt i zapis w plikach w wydzielonej pamięci masowej](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
-|Usuwanie pliku lub katalogu w wydzielonej pamięci masowej|[Instrukcje: usuwanie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
+|Utwórz w izolowanym magazynie|[Jak: Uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Wyliczanie izolowanych magazynów|[Jak: Wyliczanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Usuń izolowanym magazynie|[Jak: Usuwanie magazynów w wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Tworzenie pliku lub katalogu w wydzielonej pamięci masowej|[Jak: Tworzenie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|Znajdź plik w wydzielonej pamięci masowej|[Jak: Wyszukiwanie istniejących plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|Odczytać lub zapisać do pliku w magazynie insolated|[Jak: Odczyt i zapis w plikach w wydzielonej pamięci masowej](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Usuwanie pliku lub katalogu w wydzielonej pamięci masowej|[Jak: Usuwanie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>Plik zdarzeń  
  <xref:System.IO.FileSystemWatcher> Składnik umożliwia obserwowanie zmian plików i katalogów w systemie lub na dowolnym komputerze, do których masz dostęp do sieci. Na przykład jeśli plik zostanie zmodyfikowany, możesz chcieć powiadomi użytkownika czy miała miejsce zmiana. O zmianach, jedno lub więcej zdarzeń są wywoływane, przechowywane w buforze i przekazywane <xref:System.IO.FileSystemWatcher> składnik do przetworzenia.  

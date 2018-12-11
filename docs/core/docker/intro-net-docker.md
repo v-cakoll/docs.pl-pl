@@ -1,22 +1,22 @@
 ---
-title: Wprowadzenie do platform .NET i Docker
-description: Omówienie platformy Docker i platformy .NET Core
+title: Wprowadzenie do platformy Docker
+description: Ten artykuł zawiera omówienie i wprowadzenie do platformy Docker w kontekście aplikacji .NET Core.
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
-ms.custom: mvc
-ms.openlocfilehash: d578ec5a25dbb5de3c88386e212e68cf3b267749
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 46f7dcd9d13606bc388edee0563163479e2c9987
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970646"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170681"
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do platform .NET i Docker
 
 Ten artykuł zawiera wprowadzenie i pojęciach tła do pracy z platformą .NET na platformy Docker.
 
-## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Platformy docker: Pakowanie aplikacji, wdrażanie i uruchamianie w dowolnym miejscu
+## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker: Pakowanie aplikacji do wdrażania i uruchamiania w dowolnym miejscu
 
 [Docker](../../standard/microservices-architecture/container-docker-introduction/docker-defined.md) to otwarta platforma, która umożliwia deweloperom i administratorom tworzenie [obrazów](https://docs.docker.com/glossary/?term=image), dostarczania i uruchamiania aplikacji rozproszonych w środowisku izolowanym luźno o nazwie [kontenera](https://www.docker.com/what-container). Takie podejście umożliwia zarządzanie cyklem życia aplikacji wydajne między środowiskiem deweloperskim, odpowiedzi na pytania i środowisk produkcyjnych.
  
@@ -28,7 +28,7 @@ Możesz utworzyć własne [obrazów z warstwami](https://docs.docker.com/engine/
 
 ### <a name="further-reading-and-watching"></a>Dalsze informacje (i obserwowanie)
 
-* [Kontenery z systemem Windows: opracowywanie nowoczesnych aplikacji za pomocą kontroli korporacyjnej.](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
+* [Kontenery z systemem Windows: Opracowywanie nowoczesnych aplikacji przy użyciu kontroli korporacyjnej.](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
 * [Przegląd platformy docker](https://docs.docker.com/engine/docker-overview/)
 * [Plik Dockerfile kontenerów Windows](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [Najlepsze rozwiązania dotyczące zapisywania plików Dockerfile](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)

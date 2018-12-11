@@ -4,12 +4,12 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: d76c14aa83fcf47faea41946614e83cfbc8ad57b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c0198cde88b66f5e115c82b5454bd8a32db7ef96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195505"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143717"
 ---
 # <a name="tuples-visual-basic"></a>Krotki (Visual Basic)
 
@@ -50,7 +50,7 @@ Ponieważ elementy i zmienne mają taką samą nazwę, kompilator Visual Basic m
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-Aby włączyć nazwami elementów krotki interred, należy zdefiniować wersji kompilatora języka Visual Basic do użycia w projekcie języka Visual Basic (\*.vbproj) pliku: 
+Aby włączyć wywnioskowane nazwy elementów krotki, należy zdefiniować wersji kompilatora języka Visual Basic do użycia w projekcie języka Visual Basic (\*.vbproj) pliku: 
 
 ```xml 
 <PropertyGroup> 
@@ -87,7 +87,7 @@ Krotki języka Visual Basic dziedziczą członkowie jej **ValueTuple** typu. Opr
 | Element członkowski | Opis |
 | ---|---|
 | Element compareTo | Porównuje bieżącą spójną kolekcję do innego krotki z taką samą liczbę elementów. |
-| równa się | Określa, czy bieżącą spójną kolekcję jest równa innego spójnej kolekcji lub obiektu. |
+| Równa się | Określa, czy bieżącą spójną kolekcję jest równa innego spójnej kolekcji lub obiektu. |
 | GetHashCode | Oblicza wartość skrótu dla bieżącego wystąpienia. |
 | ToString | Zwraca reprezentację ciągu tego spójna kolekcja, która ma postać `(Item1, Item2...)`, gdzie `Item1` i `Item2` reprezentują wartości pól spójnej. |
 

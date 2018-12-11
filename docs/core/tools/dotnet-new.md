@@ -1,15 +1,13 @@
 ---
-title: polecenia DotNet nowego polecenia — interfejs wiersza polecenia platformy .NET Core
+title: nowe polecenia DotNet
 description: Nowe polecenie dotnet tworzy nowe projekty .NET Core, na podstawie określonego szablonu.
-author: mairaw
-ms.author: mairaw
 ms.date: 10/24/2018
-ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3a10aaa93af57e7beb86771e7d3b00b06fca14b2
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188208"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169693"
 ---
 # <a name="dotnet-new"></a>nowe polecenia DotNet
 
@@ -71,6 +69,7 @@ Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyska
 | Biblioteka klas                                | `classlib`       | [C#], F#, VB  |
 | Projekt testów jednostkowych                            | `mstest`         | [C#], F#, VB  |
 | projekt testu xUnit                           | `xunit`          | [C#], F#, VB  |
+| Projekt testu NUnit                           | `nunit`          | [C#], F#, VB  |
 | Strona razor                                   | `page`           | [C#]          |
 | MVC ViewImports                              | `viewimports`    | [C#]          |
 | MVC ViewStart                                | `viewstart`      | [C#]          |
@@ -507,7 +506,7 @@ Każdy szablon projektu może być dostępne dodatkowe opcje. Szablony core są 
 
 ## <a name="examples"></a>Przykłady
 
-Utwórz projekt aplikacji konsoli F # w bieżącym katalogu:
+Tworzenie F# projekt aplikacji konsoli w bieżącym katalogu:
 
 `dotnet new console -lang F#`
 

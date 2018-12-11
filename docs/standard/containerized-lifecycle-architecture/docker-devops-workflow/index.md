@@ -4,12 +4,12 @@ description: Konteneryzowane cyklem życia aplikacji platformy Docker za pomocą
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d313cb8ff6762eba6534ca20b214063315a456f0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a78b6cbae88dcc39d7452a67a2bc5239135dedf9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086596"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128443"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Przepływ pracy DevOps aplikacji platformy docker przy użyciu narzędzi firmy Microsoft
 
@@ -33,7 +33,6 @@ Złożoność tworzenia konteneryzowanych aplikacji stale zwiększa się w zale�
 
 -   Organizacje mogą zainicjować obsługę kontenerów platformy Docker z prywatnych obrazów przechowywanych w usłudze Azure Container Registry, wraz z jej zależności od składników platformy Azure (danych, PaaS, itp.) przy użyciu szablonów usługi Azure Resource Manager za pomocą narzędzi, z którymi są one już Praca komfortowo, jednocześnie.
 
-
 >[!div class="step-by-step"]
-[Poprzednie](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
-[dalej](docker-application-outer-loop-devops-workflow.md)
+>[Poprzednie](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+>[dalej](docker-application-outer-loop-devops-workflow.md)

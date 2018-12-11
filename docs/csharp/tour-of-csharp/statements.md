@@ -1,46 +1,46 @@
 ---
-title: C# instrukcje — samouczek języka C#
-description: Utwórz akcje programu C# przy użyciu instrukcji
+title: C#Instrukcje — Przewodnik po przykładzie C# języka
+description: Utwórz akcje C# program za pomocą instrukcji
 ms.date: 11/06/2016
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 2f25c07ccc0af27a503465b9414bf607c61d1b2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75f6c7bb29af7f9c809c5278c97d21683166a8e5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351982"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154297"
 ---
 # <a name="statements"></a>Instrukcje
 
-Akcje programu są wyrażane przy użyciu *instrukcje*. C# obsługuje wiele rodzajów instrukcje liczba zdefiniowanych pod względem instrukcji osadzonych.
+Akcje programu są wyrażone za pomocą *instrukcji*. C# obsługuje wiele rodzajów instrukcji, z których są definiowane zgodnie z osadzonych instrukcji.
 
-A *bloku* zezwala na użycie wielu instrukcji w kontekstach, których jednej instrukcji jest dozwolone. Blok składa się z listy instrukcji zapisywane między ograniczniki `{` i `}`.
+A *bloku* zezwala na wiele instrukcji, które ma zostać zapisany w kontekstach, których jest dozwolone pojedynczej instrukcji. Blok zawiera listę instrukcji, zapisywane między ogranicznikami `{` i `}`.
 
-*Instrukcje deklaracji* są używane do deklarowania zmiennych lokalnych i stałe.
+*Instrukcje deklaracji* są używane do deklarowania stałe i zmienne lokalne.
 
-*Instrukcje wyrażeń* są używane do analizowania wyrażenia. Wyrażeń, które mogą być używane jako instrukcje obejmują wywołań metody opisywanego obiekt alokacji używających `new` operator, za pomocą przypisań `=` oraz złożone operatory przypisania, inkrementacja i dekrementacja operacje przy użyciu `++`i `--` operatory i `await` wyrażenia.
+*Instrukcje wyrażeń* są używane do oceny wyrażenia. Wyrażenia, które mogą służyć jako stwierdzenia obejmują wywołań metod obiektu alokacje za pomocą `new` operator, za pomocą przypisań `=` i operatorów przypisania złożonego, operacje inkrementacji i dekrementacji przy użyciu `++`i `--` operatorów i `await` wyrażenia.
 
-*Instrukcje wyboru* służą do wybierania jeden z wielu instrukcji możliwych do wykonania na podstawie wartości niektóre wyrażenia. W tej grupie są `if` i `switch` instrukcje.
+*Instrukcje wyboru* są używane, aby wybrać jeden z wielu możliwych instrukcji do wykonania na podstawie wartości w wyrażeniu. W tej grupie są `if` i `switch` instrukcji.
 
-*Instrukcje iteracji* są używane wielokrotnie wykonać instrukcję osadzonych. W tej grupie są `while`, `do`, `for`, i `foreach` instrukcje.
+*Instrukcje iteracji* są używane do wykonywania wielokrotnie osadzona instrukcja. W tej grupie są `while`, `do`, `for`, i `foreach` instrukcji.
 
-*Instrukcje skoku* są używane do przekazywania kontroli. W tej grupie są `break`, `continue`, `goto`, `throw`, `return`, i `yield` instrukcje.
+*Instrukcje skoku* służą do przekazywania kontroli. W tej grupie są `break`, `continue`, `goto`, `throw`, `return`, i `yield` instrukcji.
 
-`try`... `catch` przechwytują wyjątki, jakie występują podczas wykonywania blok, używana jest instrukcja i `try`... `finally` instrukcji służy do określania finalizacji kod, który jest zawsze wykonywana, czy nie wystąpił wyjątek.
+`try`... `catch` instrukcja jest używane do przechwytywania wyjątków, które występują podczas wykonywania blok, a `try`... `finally` instrukcja jest używane do określenia kod finalizacji, który jest zawsze wykonywana, czy wystąpił wyjątek, czy nie.
 
-`checked` i `unchecked` instrukcje są używane do kontrolowania kontekst sprawdzanie przepełnienia dla operacji arytmetycznych typem całkowitym i konwersji.
+`checked` i `unchecked` instrukcje są używane do kontrolowania kontekstu sprawdzającego przepełnienie typu całkowitego operacje arytmetyczne i konwersje.
 
-`lock` Instrukcji służy do uzyskania blokady wzajemnego wykluczeń dla danego obiektu, wykonania instrukcji, a następnie zwolnij blokady.
+`lock` Instrukcja jest używane do uzyskania blokadę wykluczania wzajemnego dla danego obiektu, wykonania instrukcji i następnie zwalnia blokadę.
 
-`using` Instrukcji jest używany do uzyskania zasobu, wykonania instrukcji i następnie usuwania tego zasobu.
+`using` Instrukcja jest używane do uzyskania zasobu, należy wykonać instrukcję, a następnie usunąć tego zasobu.
 
-Poniżej wymieniono rodzaje instrukcji, które mogą być używane i zawiera przykład dla każdego.
+Poniżej wymieniono rodzaje instrukcji, które mogą być używane i przedstawiono przykład dla każdego.
 
-* Deklaracja zmiennej lokalnej:
+* Deklaracji zmiennej lokalnej:
 
  [!code-csharp[Declarations](../../../samples/snippets/csharp/tour/statements/Program.cs#L9-L15)]
 
-* Deklaracja stałej lokalna:
+* Deklaracji stałej lokalnej:
 
  [!code-csharp[ConstantDeclarations](../../../samples/snippets/csharp/tour/statements/Program.cs#L17-L22)]
 
@@ -109,5 +109,5 @@ Poniżej wymieniono rodzaje instrukcji, które mogą być używane i zawiera prz
  [!code-csharp[UsingStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L198-L206)]
 
 >[!div class="step-by-step"]
-[Poprzednie](expressions.md)
-[dalej](classes-and-objects.md)
+>[Poprzednie](expressions.md)
+>[dalej](classes-and-objects.md)

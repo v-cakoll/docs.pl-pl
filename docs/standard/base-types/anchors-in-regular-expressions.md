@@ -1,5 +1,6 @@
 ---
-title: Zakotwiczenia w wyrażeniach regularnych
+title: Kotwice w wyrażeniach regularnych programu .NET
+description: Dowiedz się, jak używać kotwic we wzorcach wyrażeń regularnych.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.custom: seodec18
+ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085189"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155041"
 ---
 # <a name="anchors-in-regular-expressions"></a>Zakotwiczenia w wyrażeniach regularnych
 <a name="top"></a> Kotwice lub atomic asercjami o zerowej szerokości, należy określić pozycja w ciągu, w którym dopasowanie musi wystąpić. Korzystając z elementu zakotwiczenia w wyrażeniu wyszukiwania, aparat wyrażeń regularnych nie przechodzi ciągu lub używa znaków; Wyszukuje dopasowania w określonej pozycji. Na przykład `^` Określa, że dopasowanie musi rozpoczynać się na początku wiersza lub ciągu. W związku z tym, wyrażenie regularne `^http:` pasuje do "http:" tylko wtedy, gdy wystąpi go na początku wiersza. W poniższej tabeli wymieniono kotwic obsługiwane przez wyrażenia regularne w .NET.  
@@ -56,7 +58,7 @@ ms.locfileid: "44085189"
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`^`|Dopasowanie musi przypadać na początku ciągu wejściowego (lub na początku wiersza, jeśli metoda jest wywoływana z <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> opcji).|  
-|`((\w+(\s?)){2,}`|Dopasowuje co najmniej jeden znak słowa, a następnie przez zero lub jedną spację dokładnie dwa razy. Jest to pierwsza grupa przechwytywania. To wyrażenie definiuje również druga i trzecia grupa przechwytywania: drugi składa się przechwyconych wyrazu, a trzeci składa się z przechwyconych miejsca do magazynowania.|  
+|`((\w+(\s?)){2,}`|Dopasowuje co najmniej jeden znak słowa, a następnie przez zero lub jedną spację dokładnie dwa razy. Jest to pierwsza grupa przechwytywania. To wyrażenie definiuje również druga i trzecia grupa przechwytywania: Drugi składa się z przechwyconych programu word, a trzeci składa się z przechwyconych miejsca do magazynowania.|  
 |`,\s`|Dopasowuje przecinek następuje znak odstępu.|  
 |`(\w+\s\w+)`|Dopasowuje co najmniej jeden znak słowa, spację, następuje jeden lub więcej znaków słowa. Jest to czwarty grupa przechwytywania.|  
 |`,`|Odpowiada wartości przecinkami.|  

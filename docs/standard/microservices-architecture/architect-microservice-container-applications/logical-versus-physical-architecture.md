@@ -4,12 +4,12 @@ description: Opis różnic między architektury fizycznych i logicznych.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: fe3833a4b65317e2ebbeb562e19b473ff0374ddd
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: e8ed375899637d06db8eb9b12a0e1cb0c05591f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296129"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129925"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Architektura logiczna a architektura fizyczna
 
@@ -36,5 +36,5 @@ Usługi w przykładzie udostępnić ten sam model danych, ponieważ te same dane
 Krótko mówiąc logiczną architekturę mikrousług nie zawsze ma pokrywają się z architekturą fizycznej wdrożenie. W tym przewodniku zawsze wtedy, gdy firma Microsoft wspomnieć o mikrousługach, mamy na myśli przez firmę lub mikrousług logiczne, które można zamapować na co najmniej jednej usługi (fizycznej). W większości przypadków będzie to pojedyncza usługa, ale może być więcej.
 
 >[!div class="step-by-step"]
-[Poprzednie](data-sovereignty-per-microservice.md)
-[dalej](distributed-data-management.md)
+>[Poprzednie](data-sovereignty-per-microservice.md)
+>[dalej](distributed-data-management.md)

@@ -1,68 +1,177 @@
 ---
-title: Machine learning zadania
-description: Poznaj inną maszynę uczenia zadań obsługiwanych w ML.NET.
-ms.date: 06/04/2018
-author: aditidugar
-ms.author: johalex
-ms.openlocfilehash: 875006a9cddb87b5f9436b78773420858fd842dd
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+title: Zadania uczenia maszynowego — strukturze ML.NET
+description: Zapoznaj się z zadań i skojarzonych uczących, które są obsługiwane w strukturze ML.NET uczenia maszynowego różne.
+ms.custom: seodec18
+ms.date: 11/29/2018
+author: jralexander
+ms.openlocfilehash: 4b333fb8c954c94ed84033d9858a496f591f2169
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208317"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126591"
 ---
-# <a name="machine-learning-tasks"></a>Machine learning zadania
+# <a name="machine-learning-tasks-in-mlnet"></a>Zadania uczenia maszynowego w strukturze ML.NET
 
-Podczas tworzenia modelu uczenia maszynowego, należy najpierw zdefiniować, co to są zostaje do osiągnięcia z danymi. Po można wybrać maszynie prawo uczenia zadań w danej sytuacji. Poniższa lista zawiera inną maszynę uczenia zadań, które są dostępne, a niektóre typowe przypadki użycia. 
-
-> [!NOTE]
-> ML.NET jest obecnie w przeglądzie. Nie wszystkie machine learning zadania są obecnie obsługiwane. Aby przesłać żądanie niektórych zadań, należy otworzyć problemu w [repozytorium dotnet/machinelearning](https://github.com/dotnet/machinelearning/issues).
+Podczas tworzenia modelu uczenia maszynowego, należy najpierw zdefiniować, co to są licząc do osiągnięcia ze swoimi danymi. Później możesz wybrać odpowiednie maszyny zadania uczenia w danej sytuacji. Na poniższej liście opisano różne stanowiska, zadania, których możesz korzystać z uczenia i niektórych typowych przypadków użycia.
 
 > [!NOTE]
-> ML.NET nie obsługuje obecnie zadania uczenia maszyny z obrazami. Obsługa zostanie dodana w przyszłych wersjach. 
+> Strukturze ML.NET jest obecnie dostępna w wersji zapoznawczej. Nie wszystkie zadania uczenia maszynowego są obecnie obsługiwane. Aby przesłać żądanie dla określonego zadania, otwórz problem w [repozytorium dotnet/machinelearning](https://github.com/dotnet/machinelearning/issues).
 
-## <a name="binary-classification"></a>klasyfikacji binarnej
+## <a name="binary-classification"></a>Klasyfikacja binarna
 
-A [nadzorowanego uczenia maszynowego](glossary.md#supervised-machine-learning) zadanie, które służy do prognozowania, którego wystąpienia danych należy do dwóch klas (kategorie). Algorytm klasyfikacji danych wejściowych to zestaw przykładów etykietą, gdzie każda etykieta jest liczbą całkowitą, 0 lub 1. Dane wyjściowe algorytm klasyfikacji binarnej jest klasyfikatora, która służy do prognozowania klasy nowe wystąpienia bez etykiety. Przykładowe scenariusze klasyfikacji binarnej obejmują:
+A [uczenia maszynowego w trybie nadzorowanym](glossary.md#supervised-machine-learning) zadanie, które służy do prognozowania, której wystąpienia danych należy do dwóch klas (kategorie). Dane wejściowe to algorytm klasyfikacji to zestaw z etykietami przykładów, gdzie każda etykieta jest liczbą całkowitą, 0 lub 1. Dane wyjściowe to algorytm klasyfikacji binarnej jest klasyfikatora, które służy do prognozowania klasy nowych wystąpień bez etykiety. Przykłady scenariuszy zastosowania Klasyfikacja binarna:
 
-* [Opis wskaźniki nastrojów klientów komentarzy Twitter](../tutorials/sentiment-analysis.md) jako "dodatnią" lub "ujemną".
-* Diagnozowanie czy pacjenta ma pewnej choroby, czy nie.
-* Podjęciem decyzji o oznaczyć wiadomości e-mail jako "spamu" lub nie.
+* [Opis wskaźniki nastrojów klientów usługi Twitter, komentarzy](../tutorials/sentiment-analysis.md) co "ujemny" lub "pozytywne".
+* Diagnozowanie, czy pacjent ma pewne choroby, czy nie.
+* Podjęciem decyzji o oznaczyć wiadomość e-mail jako "spam", czy nie.
+* Określanie, czy zdjęcie zawiera dog lub owocu.
 
 Aby uzyskać więcej informacji, zobacz [klasyfikacji binarnej](https://en.wikipedia.org/wiki/Binary_classification) artykuł w witrynie Wikipedia.
 
-## <a name="multiclass-classification"></a>wieloklasowej klasyfikacji
+Zalecane uczących dla Klasyfikacja binarna:
 
-A [nadzorowanego uczenia maszynowego](glossary.md#supervised-machine-learning) zadanie, które służy do prognozowania klasy (kategoria) wystąpienia danych. Algorytm klasyfikacji danych wejściowych jest zbiorem etykietą przykłady. Każda etykieta jest liczbą całkowitą od 0 do k-1, gdzie k liczby klas. Dane wyjściowe algorytm klasyfikacji jest klasyfikatora, która służy do prognozowania klasy nowe wystąpienia bez etykiety. Przykłady scenariuszy wielu klas klasyfikacji:
+* AveragedPerceptronTrainer
+* StochasticGradientDescentClassificationTrainer
+* LightGbmBinaryTrainer
+* FastTreeBinaryClassificationTrainer
+* SymSgdClassificationTrainer
 
-* Określanie rodzaj dog jako "Siberian Husky", "Złotego odbiorcy", "Poodle",... itd.
-* Opis filmu przegląda jako "dodatnią", "neutralne" lub "ujemną".
-* Przegląda kategoryzowania hoteli jako "Lokalizacja", "price", "czystości" itp.
+### <a name="binary-classification-learners"></a>Klasyfikacja binarna uczących
 
-Aby uzyskać więcej informacji, zobacz [Wieloklasowej klasyfikacji](https://en.wikipedia.org/wiki/Multiclass_classification) artykuł w witrynie Wikipedia.
+Następujące uczących są dostępne dla zadań Klasyfikacja binarna:
 
-## <a name="regression"></a>Regresja
+* [AveragedPerceptronTrainer](xref:Microsoft.ML.Trainers.Online.AveragedPerceptronTrainer)
+* [BinaryClassificationGamTrainer](xref:Microsoft.ML.Trainers.FastTree.BinaryClassificationGamTrainer)
+* [FastForestClassification](xref:Microsoft.ML.Trainers.FastTree.FastForestClassification)
+* [FastTreeBinaryClassificationTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryClassificationTrainer)
+* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.Runtime.FactorizationMachine.FieldAwareFactorizationMachineTrainer)
+* [LightGbmBinaryTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmBinaryTrainer)
+* [LinearSvm](xref:Microsoft.ML.Trainers.Online.LinearSvm)
+* [PriorTrainer](xref:Microsoft.ML.Trainers.PriorTrainer)
+* [RandomTrainer](xref:Microsoft.ML.Trainers.RandomTrainer)
+* [StochasticGradientDescentClassificationTrainer](xref:Microsoft.ML.Trainers.StochasticGradientDescentClassificationTrainer)
+* [SymSgdClassificationTrainer](xref:Microsoft.ML.Trainers.SymSgd.SymSgdClassificationTrainer)
 
-A [nadzorowanego uczenia maszynowego](glossary.md#supervised-machine-learning) zadanie, które służy do prognozowania wartość etykiety z zestawu powiązanych funkcji. Etykiety można rzeczywistych wartości, a nie z ograniczoną liczbą permutacji zestaw wartości, tak jak zadań klasyfikacji. Model regresji algorytmów zależności etykiety na jego powiązanych funkcji, aby określić sposób zmieni etykiety jako wartości funkcji są różne. Dane wejściowe algorytm regresji to zestaw przykładów z etykietami znane wartości. Dane wyjściowe algorytm regresji jest funkcję, która służy do prognozowania wartości etykiety dla dowolnego nowego zestawu wejściowego funkcji. Przykładowe scenariusze regresji obejmują:
+## <a name="multiclass-classification"></a>Wieloklasowej klasyfikacji
 
-* Prognozowanie cen dom na podstawie atrybutów dom, takie jak Liczba sypialni, lokalizacji lub rozmiaru.
-* Przewidywania przyszłych giełdowych na podstawie danych historycznych i trendów rynku bieżącej.
-* Prognozowanie sprzedaży produktu oparte na anonsowanie budżetu.
+A [uczenia maszynowego w trybie nadzorowanym](glossary.md#supervised-machine-learning) zadanie, które służy do prognozowania klasy (kategoria) wystąpienia danych. Dane wejściowe to algorytm klasyfikacji to zestaw przykładów etykietami. Każda etykieta rozpoczyna się zwykle jako tekst. Następnie jest uruchamiany za pośrednictwem TermTransform, która konwertuje ją na typ (liczbowy) klucz. Dane wyjściowe to algorytm klasyfikacji jest klasyfikatora, które służy do prognozowania klasy nowych wystąpień bez etykiety. Przykłady scenariuszy zastosowania wieloklasowej klasyfikacji:
 
-> [!NOTE]
-> Obecnie ML.NET nadal jest kompilowany obsługę zadań regresji, które obejmują szeregów czasowych.
+* Określanie rasy pies jako "Siberian Husky", "Złotego odbiorcy danych", "Poodle" itd.
+* Opis filmu przegląda jako "dodatnią", "neutralne" lub "ujemny".
+* Kategoryzowanie hotelu przegląda jako "Lokalizacja", "price", "czystość" itd.
 
-## <a name="clustering"></a>Klaster
+Aby uzyskać więcej informacji, zobacz [klasyfikacji Wieloklasowej](https://en.wikipedia.org/wiki/Multiclass_classification) artykuł w witrynie Wikipedia.
 
-[Nienadzorowane uczenia maszynowego](glossary.md#unsupervised-machine-learning) zadanie, które służy do grupy wystąpień danych w klastrach zawierających podobne charakterystyki. Klastra może także służyć do identyfikowania relacje w zestawie danych, która nie może być logicznie pochodzi przez obserwacji przeglądania lub prosty. Wejściami i wyjściami klastrowania algorytmu zależy od metody wybrany. Można wykonać dystrybucji, centroidę wzdłuż, łączności lub opartego na gęstości. ML.NET obsługuje obecnie centroidę wzdłuż opartego na używanie K-średnich klastra. Scenariusze z klastrowaniem należą:
+Zalecane uczących dla wielu klasy:
 
-* Opis segmentów hoteli gości na podstawie zwyczaje i właściwości opcji hoteli.
-* Identyfikowanie segmentów klientów i demograficznych ułatwiająca tworzenie kampanii reklamowych docelowych.
-* Kategoryzowania spisu w oparciu metryki produkcyjny.
+* OVA AveragedPerceptronTrainer
+* SdcaMultiClassTrainer
+* LightGbmMulticlassTrainer
+* OVA FastTreeBinaryClassificationTrainer
 
-## <a name="anomaly-detection-coming-soon"></a>Wykrywanie anomalii (*wkrótce*)
+>[!NOTE]
+>OVA i PKPD uaktualnia dowolne [uczeń klasyfikacji binarnej](#binary-classification) zajmującym się wieloklasowej zestawów danych. Więcej informacji na temat [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
 
-## <a name="ranking-coming-soon"></a>Klasyfikacja (*wkrótce*)
+### <a name="multiclass-classification-learners"></a>Uczących wieloklasowej klasyfikacji
 
-## <a name="recommendation-coming-soon"></a>Zalecenie (*wkrótce*)
+Następujące uczących są dostępne dla zadań wieloklasowej klasyfikacji:
 
+* [LightGbmMulticlassTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmMulticlassTrainer)
+* [MetaMulticlassTrainer < TTransformer, TModel >](xref:Microsoft.ML.Runtime.Learners.MetaMulticlassTrainer%602)
+* [MultiClassClassificationTrainers](xref:Microsoft.ML.Trainers.MultiClassClassificationTrainers)
+* [MultiClassNaiveBayesTrainer](xref:Microsoft.ML.Trainers.MultiClassNaiveBayesTrainer)
+* [Ova](xref:Microsoft.ML.Trainers.Ova)
+* [Pkpd](xref:Microsoft.ML.Trainers.Pkpd)
+* [SdcaMultiClassTrainer](xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer)
+
+## <a name="regression"></a>Regresji
+
+A [uczenia maszynowego w trybie nadzorowanym](glossary.md#supervised-machine-learning) zadanie, które służy do prognozowania wartość etykiety z zestawu powiązanych funkcji. Etykiety można rzeczywistych wartości, a nie z ograniczoną liczbą permutacji ustawiono wartości, jak Klasyfikacja zadań. Algorytmy uczenia modelu regresji zależność etykiety na jego powiązanych funkcji, aby określić, jak etykiety spowoduje to zmianę wartości, które funkcje są zróżnicowane. Dane wejściowe to algorytm regresji to zestaw przykładów z etykietami znane wartości. Dane wyjściowe to algorytm regresji jest funkcja, która służy do prognozowania wartości etykiety dla dowolnego nowego zestawu danych wejściowych funkcji. Przykłady scenariuszy zastosowania regresji:
+
+* Prognozowanie DOM ceny na podstawie atrybutów dom, np. liczby sypialni, lokalizacji lub rozmiaru.
+* Prognozowanie przyszłych cen akcji na podstawie danych historycznych i trendów na rynku bieżącego.
+* Prognozowanie sprzedaży produktu, w oparciu o budżet reklamowych.
+
+Zalecane uczących dla regresji:
+
+* FastTreeTweedieTrainer 
+* LightGbmRegressorTrainer 
+* SdcaRegressionTrainer 
+* FastTreeRegressionTrainer
+
+### <a name="regression-learners"></a>Uczących regresji
+
+Następujące uczących są dostępne dla zadań regresji:
+
+* [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer)
+* [FastTreeRegressionFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeRegressionFastTreeTrainer)
+* [FastTreeTweedieRegressionFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeTweedieRegressionFastTreeTrainer)
+* [FastTreeTweedieTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer)
+* [LightGbmRegressorTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmRegressorTrainer)
+* [LogisticRegression](xref:Microsoft.ML.Runtime.Learners.LogisticRegression)
+* [OlsLinearRegressionTrainer](xref:Microsoft.ML.Trainers.HalLearners.OlsLinearRegressionTrainer)
+* [OnlineGradientDescentTrainer](xref:Microsoft.ML.Trainers.Online.OnlineGradientDescentTrainer)
+* [PoissonRegression](xref:Microsoft.ML.Trainers.PoissonRegression)
+* [RegressionGamTrainer](xref:Microsoft.ML.Trainers.FastTree.RegressionGamTrainer)
+* [SdcaRegressionTrainer](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)
+* [FastTree.SingleTrainer](xref:Microsoft.ML.Trainers.FastTree.SingleTrainer)
+* [LightGBM.SingleTrainer](xref:Microsoft.ML.Runtime.LightGBM.SingleTrainer)
+
+## <a name="clustering"></a>Klastrowanie
+
+[Nienadzorowane uczenia maszynowego](glossary.md#unsupervised-machine-learning) zadanie, które służy do grupy wystąpień danych w klastrach zawierających podobne charakterystyki. Klaster można również zidentyfikować relacji w zestawie danych, który nie może być logicznie pochodny przez obserwację przeglądania lub prosty. Dane wejściowe i wyjściowe algorytmu klastrowania zależy od metodologii wybrany. Możesz korzystać z dystrybucji, centroida — oś, łączności oraz podejścia opartego na gęstości. Strukturze ML.NET obsługuje obecnie podejście oparte na centroida — oś, przy użyciu K-średnich klastra. Scenariusze z klastrowaniem należą:
+
+* Opis segmenty hotelu gości na podstawie nawyki i cechy hotelu wyborów.
+* Identyfikowanie segmentom klientów i danymi demograficznymi ułatwiające tworzenie kampanii reklamowych docelowych.
+* Kategoryzowanie spisu w oparciu metryki produkcji.
+
+### <a name="clustering-learners"></a>Klastrowanie uczących
+
+Następujące uczących są dostępne dla klastra zadań:
+
+* [KMeansPlusPlusTrainer](xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer)
+
+## <a name="anomaly-detection"></a>Wykrywanie anomalii
+
+To zadanie tworzy model wykrywania anomalii przy użyciu jednostki składnik Analysis (UPW). Wykrywanie anomalii oparte na analizie PCA pomaga w tworzeniu modelu w scenariuszach, gdzie jest łatwe można uzyskać danych szkoleniowych z jedną klasę, np. prawidłowe transakcje, ale trudno pobrać wystarczający przykładowe docelowe anomalii.
+
+Technikę ustanowionych w usłudze machine learning, analizie PCA jest często używany w analizie danych poznawczych, ponieważ wewnętrzna struktura danych, co spowoduje wyświetlenie i wyjaśnia wariancji w danych. UPW polega na analizowanie danych, który zawiera wiele zmiennych. Ona szuka korelacji między zmiennych i określa kombinacja wartości, które najlepiej przechwytuje różnice w wyniki. Wartości te połączone funkcji są używane do tworzenia bardziej zwarty miejsca funkcji o nazwie głównych składników.
+
+Wykrywanie anomalii obejmuje wiele ważne zadania w usłudze machine learning:
+
+* Identyfikowanie transakcje, które są potencjalnie oszukańczych.
+* Nauka wzorców, które wskazują, że nastąpiło włamania do sieci.
+* Znajdowanie nietypowe klastrów pacjentów.
+* Sprawdzanie wartości wprowadzone w systemie.
+
+Anomalie są rzadkie zdarzenia zgodnie z definicją, może być trudne do zbierania została przeanalizowana reprezentatywna próbka danych na potrzeby modelowania. Algorytmów do tej kategorii są przeznaczone szczególnie do wyzwania core tworzenie i szkolenie modeli za pomocą imbalanced zestawów danych.
+
+### <a name="anomaly-detection-learners"></a>Uczących wykrywania anomalii
+
+Następujące uczących są dostępne dla zadania wykrywania anomalii:
+
+* [RandomizedPcaTrainer](xref:Microsoft.ML.Trainers.PCA.RandomizedPcaTrainer)
+
+## <a name="ranking"></a>Klasyfikacja
+
+Zadanie klasyfikacji tworzy oceniania z zestawu przykładów etykietami. Ten przykładowy zestaw składa się z grupy wystąpień, które mogą zostać ocenione przy użyciu podanych kryteriów. Etykiety klasyfikacji są {0, 1, 2, 3, 4} dla każdego wystąpienia.  Oceniania jest uczony grupom rangi nowe wystąpienie z nieznanego wyniki dla każdego wystąpienia. Strukturze ML.NET klasyfikacji uczących się [klasyfikacji maszyny przedstawiono](https://en.wikipedia.org/wiki/Learning_to_rank) na podstawie.
+
+### <a name="ranking-learners"></a>Klasyfikacja uczących
+
+Następujące uczących są dostępne do ustalania kolejności zadań:
+
+* [FastTreeRankingFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeRankingFastTreeTrainer)
+* [FastTreeRankingTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer)
+* [LightGbmRankingTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmRankingTrainer)
+
+## <a name="recommendation"></a>Zalecenie
+
+Zadanie zalecenie umożliwia tworzenie listy zalecanych produktów lub usług. Używa strukturze ML.NET [factorization macierzy (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29), [filtrowania z wykorzystaniem współpracy](https://en.wikipedia.org/wiki/Collaborative_filtering) algorytm zalecenia w przypadku produktu historycznych klasyfikacji danych w wykazie. Na przykład mieć historycznych filmu klasyfikacji danych dla użytkowników i chcesz zaleca się inne filmy, które mogą następnie obejrzyj.
+
+### <a name="recommendation-learners"></a>Uczących zalecenia
+
+Następujące uczących są dostępne dla zadań zalecenia:
+
+* [MatrixFactorizationTrainer](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer)
+* [MatrixFactorizationPredictionTransformer](xref:Microsoft.ML.Trainers.Recommender.MatrixFactorizationPredictionTransformer)

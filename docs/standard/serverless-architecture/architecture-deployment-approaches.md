@@ -4,12 +4,12 @@ description: Przewodnik dotyczący architektury przedsiębiorstwa różne sposob
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 6566971d8984ec046b8b5fa2db295c1d48c30b20
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404966"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152672"
 ---
 # <a name="architecture-deployment-approaches"></a>Metody wdrażania dotyczące architektury
 
@@ -103,7 +103,7 @@ Zarządzanie kontenerami na hostach zwykle wymaga narzędzia aranżacji, takich 
 
 Na poniższym obrazie przedstawiono przykład instalacji usługi Kubernetes. Węzły w instalacji adresów skalowania w poziomie i trybu failover. Działają one Docker wystąpień kontenera, które są zarządzane przez serwer główny. *Agenta kubelet* to klient, który przekazuje poleceń usługi Kubernetes do platformy Docker.
 
-![Rozwiązania Kubernetes](./media/kubernetes-example.png)
+![Kubernetes](./media/kubernetes-example.png)
 
 Aby uzyskać więcej informacji na temat organizowania zobacz [Kubernetes na platformie Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes).
 
@@ -138,9 +138,9 @@ Istnieje szerokie spektrum dostępne opcje architektury, w tym podejście hybryd
 
 |         |IaaS     |PaaS     |Kontener|Bez użycia serwera|
 |---------|---------|---------|---------|----------|
-|**Skala**|MASZYNA WIRTUALNA       |Wystąpienie |Aplikacja      |Funkcja  |
+|**Skala**|VM       |Wystąpienie |Aplikacja      |Funkcja  |
 |**Abstract**|Sprzęt|Platforma|System operacyjny hosta|Środowisko uruchomieniowe   |
-|**Unit** |MASZYNA WIRTUALNA       |Projekt  |Obraz    |Kod      |
+|**Unit** |VM       |Projekt  |Obraz    |Kod      |
 |**Okres istnienia**|Miesiące|Liczba dni, miesięcy|Minut do dni|Milisekund minut|
 |**Odpowiedzialność**|Aplikacje, zależności, środowisko uruchomieniowe i systemu operacyjnego|Aplikacje i zależności|Aplikacje, zależności i środowiska uruchomieniowego|Funkcja
 
@@ -166,5 +166,5 @@ Następny rozdział skupić się na architekturze bezserwerowej, przypadki użyc
 * [Aplikacja SaaS biletów o nazwie Wingtip](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
-[Poprzednie](architecture-approaches.md)
-[dalej](serverless-architecture.md)
+>[Poprzednie](architecture-approaches.md)
+>[dalej](serverless-architecture.md)

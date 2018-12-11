@@ -1,19 +1,19 @@
 ---
 title: Testowanie biblioteki klas w języku .NET Core w programie Visual Studio 2017
-description: Dowiedz się, jak przetestować bibliotekę klas, napisany w języku C# za pomocą programu Visual Studio 2017
+description: Utwórz projekt testu jednostkowego dla biblioteki klas platformy .NET Core. Sprawdź, czy biblioteki klas platformy .NET Core działa poprawnie przy użyciu testów jednostkowych.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 04fef4f84658b3a8b82e4e71b62c3bab8537424d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: vs-dotnet, seodoc18
+ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990976"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170798"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testowanie biblioteki klas w języku .NET Core w programie Visual Studio 2017
 
@@ -28,14 +28,14 @@ Aby utworzyć projekt testów jednostkowych, wykonaj następujące czynności:
 
 1. W **Dodaj nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła. Następnie wybierz pozycję **platformy .NET Core** węzła następuje **projekt testów MSTest (.NET Core)** szablonu projektu. W **nazwa** tekstu wprowadź "StringLibraryTest" jako nazwę projektu. Wybierz **OK** Aby utworzyć projekt testów jednostkowych.
 
-   ![Dodaj okno dialogowe Nowy projekt](./media/testing-library-with-visual-studio/testproject.png)
+   ![Dodaj okno dialogowe Nowy projekt z wyświetlane - projekt testów jednostkowychC#](./media/testing-library-with-visual-studio/create-new-test-project.png)
 
    > [!NOTE]  
    > Oprócz projekt testów MSTest można również użyć programu Visual Studio utworzyć projekt testu xUnit dla platformy .NET Core.
 
 1. Visual Studio tworzy projekt i otworzy *UnitTest1.cs* pliku w oknie kodu.
 
-   ![Visual Studio w oknie Kod pokazujący domyślną jednostką Testowanie projektu UnitTest1 klasy i metody TestMethod1](./media/testing-library-with-visual-studio/unittestwindow.png)
+   ![Visual Studio okna kodu jednostki testowania projektu klasy i metody —C#](./media/testing-library-with-visual-studio/unit-test-editor-window.png)
 
    Kod źródłowy, utworzona przez szablon testu jednostki wykonuje następujące czynności:
 
@@ -47,24 +47,24 @@ Aby utworzyć projekt testów jednostkowych, wykonaj następujące czynności:
 
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **zależności** węźle **StringLibraryTest** projektu, a następnie wybierz **Dodaj odwołanie** z menu kontekstowe.
 
-   ![Menu kontekstowe StringLibraryTest zależności](./media/testing-library-with-visual-studio/addreference.png)
+   ![Menu kontekstowe zależności StringLibraryTest-C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
-1. W **Menadżer odwołań** okna dialogowego, rozwiń węzeł **projektów** węzła i zaznacz pole wyboru obok pozycji **StringLibrary**. Dodawanie odwołania do `StringLibrary` zestawu umożliwia kompilatorowi znaleźć **StringLibrary** metody. Wybierz **OK** przycisku. Dodaje to odwołanie do projektu biblioteki klas `StringLibrary`.
+1. W **Menadżer odwołań** okna dialogowego, rozwiń węzeł **projektów** węzła i zaznacz pole wyboru obok pozycji **StringLibrary**. Dodawanie odwołania do `StringLibrary` zestawu umożliwia kompilatorowi znaleźć **StringLibrary** metody. Wybierz przycisk **OK**. Dodaje to odwołanie do projektu biblioteki klas `StringLibrary`.
 
-   ![Menadżer odwołań](./media/testing-library-with-visual-studio/referencemanager.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
+   ![Program Visual Studio Dodaj projekt odwołania w oknie dialogowym](./media/testing-library-with-visual-studio/project-reference-manager.png)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. W **Eksploratora rozwiązań**, otwórz menu kontekstowe dla **ClassLibraryProjects** węzła rozwiązania, a następnie wybierz **Dodaj** > **nowy projekt**.
 
 1. W **Dodaj nowy projekt** okno dialogowe, wybierz opcję **języka Visual Basic** węzła. Następnie wybierz pozycję **platformy .NET Core** węzła następuje **projekt testów MSTest (.NET Core)** szablonu projektu. W **nazwa** tekstu wprowadź "StringLibraryTest" jako nazwę projektu. Wybierz **OK** Aby utworzyć projekt testów jednostkowych.
 
-   ![Dodaj okno dialogowe Nowy projekt](./media/testing-library-with-visual-studio/vb-testproject.png)
+   ![Dodaj okno dialogowe Nowy projekt z projektu testu jednostkowego wyświetlane - Visual Basic](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
 
    > [!NOTE]  
    > Oprócz projekt testów MSTest można również użyć programu Visual Studio utworzyć projekt testu xUnit dla platformy .NET Core.
 
 1. Visual Studio tworzy projekt i otworzy *UnitTest1.vb* pliku w oknie kodu.
 
-   ![Visual Studio w oknie Kod pokazujący domyślną jednostką Testowanie projektu UnitTest1 klasy i metody TestMethod1](./media/testing-library-with-visual-studio/vb-unittestwindow.png)
+   ![Visual Studio okna kodu jednostki testowania projektu klasy i metody - Visual Basic](./media/testing-library-with-visual-studio/vb-unit-test-editor-window.png)
 
    Kod źródłowy, utworzona przez szablon testu jednostki wykonuje następujące czynności:
 
@@ -76,11 +76,11 @@ Aby utworzyć projekt testów jednostkowych, wykonaj następujące czynności:
 
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **zależności** węźle **StringLibraryTest** projektu, a następnie wybierz **Dodaj odwołanie** z menu kontekstowe.
 
-   ![Menu kontekstowe StringLibraryTest zależności](./media/testing-library-with-visual-studio/addreference.png)
+   ![Menu kontekstowe StringLibraryTest zależności](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
-1. W **Menadżer odwołań** okna dialogowego, rozwiń węzeł **projektów** węzła i zaznacz pole wyboru obok pozycji **StringLibrary**. Dodawanie odwołania do `StringLibrary` zestawu umożliwia kompilatorowi znaleźć **StringLibrary** metody. Wybierz **OK** przycisku. Dodaje to odwołanie do projektu biblioteki klas `StringLibrary`.
+1. W **Menadżer odwołań** okna dialogowego, rozwiń węzeł **projektów** węzła i zaznacz pole wyboru obok pozycji **StringLibrary**. Dodawanie odwołania do `StringLibrary` zestawu umożliwia kompilatorowi znaleźć **StringLibrary** metody. Wybierz przycisk **OK**. Dodaje to odwołanie do projektu biblioteki klas `StringLibrary`.
 
-   ![Menadżer odwołań](./media/testing-library-with-visual-studio/referencemanager.png)
+   ![Program Visual Studio Dodaj okno dialogowe z odwołania projekt - Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>Dodawanie i uruchamianie jednostki metod testowych
@@ -115,8 +115,8 @@ Aby utworzyć metody testowe:
 
 1. Na pasku menu wybierz **pliku** > **Zapisz UnitTest1.cs jako**. W **Zapisz plik jako** okno dialogowe, wybierz strzałkę obok **Zapisz** przycisk, a następnie wybierz pozycję **Zapisz z kodowaniem**.
 
-   ![Zapisz plik jako okno dialogowe](./media/testing-library-with-visual-studio/savefileas.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
+   ![Visual Studio Zapisz plik jako okno dialogowe-C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. W *UnitTest1.vb* okna kodu, Zastąp kod następującym kodem:
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
@@ -125,20 +125,20 @@ Aby utworzyć metody testowe:
 
 1. Na pasku menu wybierz **pliku** > **Zapisz UnitTest1.vb jako**. W **Zapisz plik jako** okno dialogowe, wybierz strzałkę obok **Zapisz** przycisk, a następnie wybierz pozycję **Zapisz z kodowaniem**.
 
-   ![Zapisz plik jako okno dialogowe](./media/testing-library-with-visual-studio/savefileas.png)
+   ![Visual Studio Zapisz plik jako okno dialogowe - Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 ---
 
 1. W **Potwierdź zapisywanie jako** okno dialogowe, wybierz opcję **tak** przycisk, aby zapisać plik.
 
 1. W **zaawansowane opcje zapisywania** okno dialogowe, wybierz opcję **Unicode (UTF-8 z podpisem) - strona kodowa 65001** z **kodowanie** listy rozwijanej i wybierz pozycję **OK** .
 
-   ![Okno dialogowe Zaawansowane opcje zapisywania](./media/testing-library-with-visual-studio/advancedsaveoptions.png)
+   ![Visual Studio zaawansowane opcje zapisywania okna dialogowego](./media/testing-library-with-visual-studio/advanced-save-options.png)
 
    Jeśli nie można zapisać kod źródłowy jako plik z kodowaniem UTF8, Visual Studio może ją zapisać jako plik ASCII. Jeśli tak się stanie, środowisko wykonawcze nie dokładnie dekodowania znaków UTF8 poza zakresem ASCII, a wyniki testu nie będzie dokładny.
 
 1. Na pasku menu wybierz **testu** > **Uruchom** > **wszystkie testy**. **Eksplorator testów** okna otwiera się i pokazuje, że testy zostały wykonane pomyślnie. Trzy testy są wymienione w **testy zakończone powodzeniem** sekcji i **Podsumowanie** sekcji raportowane są wynikiem testu.
 
-   ![Okno Eksploratora testów](./media/testing-library-with-visual-studio/firsttest.png)
+   ![Testowanie okna Eksploratora z przekazaniem testów](./media/testing-library-with-visual-studio/test-explorer-window.png)
 
 ## <a name="handling-test-failures"></a>Obsługa niepowodzeń testów
 
@@ -157,11 +157,11 @@ Przebieg testu miał żadne błędy, ale zmień je nieco, tak aby jednej z metod
    ```
 1. Uruchom test, wybierając **Test** > **Uruchom** > **wszystkie testy** z paska menu. **Eksplorator testów** okno wskazuje, że dwóch testów zakończyła się pomyślnie i jeden nie powiodło się.
 
-   ![Okno Eksploratora testów](./media/testing-library-with-visual-studio/failedtest.png)
+   ![Okno Eksploratora testów za pomocą testy zakończone niepowodzeniem](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. W **testy zakończone niepomyślnie** wybierz test zakończony niepowodzeniem `TestDoesNotStartWith`. **Eksplorator testów** okna wyświetlany jest komunikat generowany przez assert: "Assert.IsFalse nie powiodło się. Oczekiwana dla "Error": false; rzeczywiste: True ". Wszystkie ciągi w tablicy po "Błąd" nie zostały przetestowane z powodu błędu.
+1. W **testy zakończone niepomyślnie** wybierz test zakończony niepowodzeniem `TestDoesNotStartWith`. **Eksplorator testów** okna wyświetlany jest komunikat generowany przez assert: "Assert.IsFalse nie powiodło się. Oczekiwana dla "Error": false; rzeczywista: Wartość true". Wszystkie ciągi w tablicy po "Błąd" nie zostały przetestowane z powodu błędu.
 
-   ![Okno Eksploratora testów, wyświetlane jest False Błąd potwierdzenia](./media/testing-library-with-visual-studio/failedtestdetail.png)
+   ![Okno Eksploratora testów, wyświetlane jest False Błąd potwierdzenia](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
 1. Usuń kod, który został dodany (`"Error", `) i ponownie uruchom test. Testy zostaną spełnione.
 
@@ -173,11 +173,11 @@ Aby przetestować kompilacji wydania:
 
 1. Na pasku narzędzi programu Visual Studio, zmień konfigurację kompilacji z **debugowania** do **wersji**.
 
-   ![Visual Studio pasek narzędzi](./media/testing-library-with-visual-studio/toolbar.png)
+   ![Visual Studio pasek narzędzi kompilacji wydania wyróżniony](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
 
 1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **StringLibrary** projektu, a następnie wybierz **kompilacji** z menu kontekstowego, aby ponownie skompilować biblioteki.
 
-   ![Menu kontekstowe StringLibrary](./media/testing-library-with-visual-studio/buildlibrary.png)
+   ![Menu kontekstowe StringLibrary za pomocą polecenia kompilacji](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. Uruchamianie testów jednostkowych, wybierając **testu** > **Uruchom** > **wszystkie testy** z paska menu. Testy zostały zakończone pomyślnie.
 

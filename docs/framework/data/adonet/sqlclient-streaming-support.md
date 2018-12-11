@@ -2,12 +2,12 @@
 title: Obsługa przesyłania strumieniowego SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191049"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152893"
 ---
 # <a name="sqlclient-streaming-support"></a>Obsługa przesyłania strumieniowego SqlClient
 Przesyłanie strumieniowe pomocy technicznej między programu SQL Server i aplikacją (Nowość w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) obsługuje dane bez określonej struktury na serwerze (dokumenty, obrazy i pliki multimedialne). Bazy danych programu SQL Server może przechowywać duże obiekty binarne (BLOB), ale pobieranie obiektów blob może używać dużej ilości pamięci.  
@@ -76,7 +76,7 @@ Przesyłanie strumieniowe pomocy technicznej między programu SQL Server i aplik
 ## <a name="sample----streaming-from-sql-server"></a>Przykład — Przesyłanie strumieniowe z programu SQL Server  
  Należy użyć następującego [!INCLUDE[tsql](../../../../includes/tsql-md.md)] do tworzenie przykładowej bazy danych:  
   
-```  
+```sql
 CREATE DATABASE [Demo]  
 GO  
 USE [Demo]  
@@ -105,7 +105,7 @@ GO
   
 -   Transfer dużych plików, (obiektów BLOB) z jednej bazy danych programu SQL Server na inny bez uruchamiania za mało pamięci.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -297,7 +297,7 @@ namespace StreamingFromServer {
 ## <a name="sample----streaming-to-sql-server"></a>Przykład — Przesyłanie strumieniowe do programu SQL Server  
  Należy użyć następującego [!INCLUDE[tsql](../../../../includes/tsql-md.md)] do tworzenie przykładowej bazy danych:  
   
-```  
+```sql
 CREATE DATABASE [Demo2]  
 GO  
 USE [Demo2]  
@@ -330,7 +330,7 @@ GO
   
 -   Przesyłanie strumieniowe z jednego serwera SQL do innej przy użyciu nowej funkcji asynchronicznych.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -453,7 +453,7 @@ namespace StreamingToServer {
 ## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Przykładowe — Przesyłanie strumieniowe z jednego serwera SQL do innego serwera SQL  
  W tym przykładzie pokazano, jak asynchroniczne przesyłanie strumieniowe dużych obiektów BLOB z jednego serwera SQL do innego, obsługę anulowania.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  

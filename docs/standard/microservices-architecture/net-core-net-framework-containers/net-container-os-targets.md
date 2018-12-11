@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Ja
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: b2ae1d2e732f152133dd8a8757b955e05cdd88eb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f6a5cf8d5e32e527977b7c142f5686310e88a068
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970828"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147203"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Jakiego systemu operacyjnego docelowo z kontenerami .NET
 
@@ -58,5 +58,5 @@ Po dodaniu nazwy obrazu do pliku Dockerfile, można wybrać system operacyjny i 
 </table>
 
 >[!div class="step-by-step"]
-[Poprzednie](container-framework-choice-factors.md)
-[dalej](official-net-docker-images.md)
+>[Poprzednie](container-framework-choice-factors.md)
+>[dalej](official-net-docker-images.md)

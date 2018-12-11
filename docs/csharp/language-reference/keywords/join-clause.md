@@ -1,5 +1,6 @@
 ---
-title: Klauzula join (odwołanie w C#)
+title: JOIN — klauzula - C# odwołania
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - join
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: dee11c1ab754e515c69f330a5919776cbcb1e775
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9052b4b0f1feac5aa56a7fe6745745f1afb5740
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237166"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236287"
 ---
 # <a name="join-clause-c-reference"></a>Klauzula join (odwołanie w C#)
 
@@ -73,7 +74,7 @@ Można wykonać innych niż equijoins, sprzężeń i innych niestandardowych ope
 
 W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażenie zapytania, sprzężenia operacje są wykonywane w kolekcji obiektów. Obiekt kolekcji nie może być "łączone" w taki sam sposób, jak dwie tabele relacyjne. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], jawna `join` klauzule są tylko wymagane w przypadku dwóch źródłowych sekwencji nie są powiązane przez żadnych relacji. Podczas pracy z [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], tabel kluczy obcych są reprezentowane w modelu obiektu jako właściwości tabeli podstawowej. Na przykład w bazie danych Northwind tabeli klientów ma relacji klucza obcego z tabeli zamówienia. Kiedy mapujesz tabele do modelu obiektu klasy klienta ma właściwość zamówienia, który zawiera kolekcję zleceń skojarzonych z tym klientem. W efekcie sprzężenia już przeprowadzono dla Ciebie.
 
-Aby uzyskać więcej informacji na temat wykonywania zapytań w tabelach pokrewnych w kontekście [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], zobacz [jak: relacje bazy danych mapy](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
+Aby uzyskać więcej informacji na temat wykonywania zapytań w tabelach pokrewnych w kontekście [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], zobacz [jak: Mapowanie relacji w bazie danych](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 
 ## <a name="composite-keys"></a>Klucze złożone
 

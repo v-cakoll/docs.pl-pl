@@ -1,20 +1,21 @@
 ---
-title: Metody rozszerzeń (Przewodnik programowania w języku C#)
+title: Metody rozszerzenia - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 7ebd04665d91f599edcb4a5c07680216dfb8925a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8da1deec2238f74a9b594c85feab0445ec2a35b7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840904"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241317"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
-Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. Dla kodu klienta napisanego w języku C#, F # i Visual Basic nie istnieje żadna widoczna różnica między wywołaniem metody rozszerzenia i metod, które faktycznie są zdefiniowane w typie.  
+Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. Dla kodu klienta napisanego w C#, F# i Visual Basic nie ma żadnej widocznej różnicy między wywołanie metody rozszerzenia i metod, które faktycznie są zdefiniowane w typie.  
   
  Najczęściej stosowanymi metodami rozszerzenia są [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] standardowych operatorów zapytań, które dodają funkcje zapytań do istniejących <xref:System.Collections.IEnumerable?displayProperty=nameWithType> i <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> typów. Aby użyć standardowych operatorów zapytań, najpierw Doprowadź je do zakresu za pomocą `using System.Linq` dyrektywy. Następnie dowolny typ, który implementuje <xref:System.Collections.Generic.IEnumerable%601> wydaje się mieć metody wystąpień, takie jak <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>i tak dalej. Możesz zobaczyć te dodatkowe metody w instrukcji IntelliSense po wpisaniu "dot" po wystąpieniu typu <xref:System.Collections.Generic.IEnumerable%601> wpisz na przykład <xref:System.Collections.Generic.List%601> lub <xref:System.Array>.  
   
@@ -43,7 +44,7 @@ int i = s.WordCount();
   
  W kodzie metoda rozszerzenia jest wywoływana za pomocą składni metody wystąpienia. Jednak język pośredni (IL) generowany przez kompilator dokonuje translacji kodu na wywołanie metody statycznej. W związku z tym zasada hermetyzacji tak naprawdę nie jest naruszana. W rzeczywistości metody rozszerzenia nie mają dostępu do zmiennych prywatnych w typie, który rozszerzają.  
   
- Aby uzyskać więcej informacji, zobacz [porady: Implementowanie i wywołanie metody rozszerzenia niestandardowe](../../../csharp/programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Implementowanie i wywołanie niestandardowej metody rozszerzenia](../../../csharp/programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).  
   
  Ogólnie rzecz biorąc, liczba wywołań metod rozszerzenia zazwyczaj jest o wiele większa niż liczba implementacji własnych metod. Metody rozszerzenia są wywoływane przy użyciu składni metody wystąpienia, więc nie jest potrzebna specjalistyczna wiedza, aby móc używać ich z poziomu kodu klienta. Aby włączyć metody rozszerzające dla określonego typu, wystarczy dodać atrybut `using` dyrektywy dla przestrzeni nazw, w którym są zdefiniowane te metody. Na przykład, aby użyć standardowych operatorów zapytań, dodaj to `using` dyrektywę w kodzie:  
   

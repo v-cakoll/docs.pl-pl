@@ -1,5 +1,6 @@
 ---
-title: Instrukcje, wyrażenia i operatory (Przewodnik programowania w języku C#)
+title: Instrukcje, wyrażenia i operatory - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expressions [C#]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 1085de3447bd6101fcccf6cae7b37afac24d37f1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1bb710637922e8fee09fd9424cddd1170cb495c4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45971276"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237210"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Instrukcje, wyrażenia i operatory (Przewodnik programowania w języku C#)
 Kod C#, który składa się z aplikacji składa się z instrukcji, które składają się z słów kluczowych, wyrażenia i operatory. Ta sekcja zawiera informacje dotyczące tych podstawowych elementów programu w języku C#.  
@@ -37,7 +38,7 @@ Kod C#, który składa się z aplikacji składa się z instrukcji, które skład
   
     -   [Używanie operatorów konwersji](using-conversion-operators.md)  
   
-    -   [Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur](how-to-implement-user-defined-conversions-between-structs.md)  
+    -   [Instrukcje: Implementowanie zdefiniowanych przez użytkownika konwersji struktur](how-to-implement-user-defined-conversions-between-structs.md)  
   
 -   [Porównywanie równości](equality-comparisons.md)  
   

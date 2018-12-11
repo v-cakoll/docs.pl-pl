@@ -1,18 +1,19 @@
 ---
-title: 'Porady: użycie wskaźników do kopiowania tablicy bajtów (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Użycie wskaźników do kopiowania tablicy bajtów - C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 061bbbc4557cb25d39edfb1f6235bb065a5de7bd
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 49151c6d2a573a24e63f733a5279faeee40de1b7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087985"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241129"
 ---
-# <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>Porady: użycie wskaźników do kopiowania tablicy bajtów (Przewodnik programowania w języku C#)
+# <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>Instrukcje: Użycie wskaźników do kopiowania tablicy bajtów (C# Programming Guide)
 
 W poniższym przykładzie użyto wskaźników do skopiowania do innej tablicy bajtów.
 

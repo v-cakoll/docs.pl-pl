@@ -1,5 +1,6 @@
 ---
-title: Operator — słowo kluczowe (odwołanie w C#)
+title: Operator — słowo kluczowe - C# odwołania
+ms.custom: seodec18
 description: Dowiedz się, jak przeciążenia wbudowanym operatorem języka C#
 ms.date: 08/27/2018
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
-ms.openlocfilehash: 1e11d7767b61becc39b1158fae9cb2abe997e4bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cdc052da4457a59cc66848780e944ccf203acf39
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209375"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235601"
 ---
 # <a name="operator-c-reference"></a>operator (odwołanie w C#)
 
@@ -47,4 +48,4 @@ W poniższym przykładzie zdefiniowano `Fraction` typ, który reprezentuje cyfry
 - [implicit](implicit.md)
 - [explicit](explicit.md)
 - [Operatory z możliwością przeciążenia](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
-- [Instrukcje: implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [Instrukcje: Implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

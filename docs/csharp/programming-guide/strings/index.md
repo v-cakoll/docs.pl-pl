@@ -1,16 +1,17 @@
 ---
-title: Ciągi (Przewodnik programowania w języku C#)
+title: Parametry - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 7034d37c141d79301bf108b9e7b41ab3e27e2572
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba0c9abe9a38962ab19a204019abd3ac89ae6915
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143925"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236365"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartością tekstową. Wewnętrznie, tekst jest przechowywany jako sekwencyjną kolekcją tylko do odczytu z <xref:System.Char> obiektów. Brak nie znaku zakończenia o wartości null na końcu ciągu języka C#; w związku z tym ciąg języka C# może zawierać dowolną liczbę osadzone znaki null ('\0'). <xref:System.String.Length%2A> Właściwość ciągu reprezentuje liczbę `Char` obiektów zawiera, nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punkty kodowe Unicode w ciągu, należy użyć <xref:System.Globalization.StringInfo> obiektu.  
@@ -127,12 +128,12 @@ string s = String.Empty;
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Jak: Modyfikowanie zawartości ciągu](../../how-to/modify-string-contents.md)|Ilustruje techniki Przekształcanie ciągów i modyfikowania zawartości ciągów.|  
-|[Jak: Porównywanie ciągów](../../how-to/compare-strings.md)|Pokazuje, jak przeprowadzić porządkowe i kultury określonej porównania ciągów.|  
-|[Jak: Łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)|Ilustruje różne sposoby, aby dołączyć wielu ciągów w jeden.|
-|[Jak: Analizowanie ciągów za pomocą funkcji String.Split ](../../how-to/parse-strings-using-split.md)|Zawiera przykłady kodu, które ilustrują sposób korzystania `String.Split` metodę, aby przeanalizować ciągi.|  
-|[Jak: Wyszukiwanie ciągów](../../how-to/search-strings.md)|Opis sposobu użycia wyszukać określony tekst lub wzorców w ciągach.|  
-|[Jak: Określanie, czy ciąg reprezentuje wartość numeryczną](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak bezpiecznie przeanalizować składni ciągu, aby zobaczyć, czy ma prawidłową wartość liczbową.|  
+|[Instrukcje: Modyfikowanie zawartości ciągu](../../how-to/modify-string-contents.md)|Ilustruje techniki Przekształcanie ciągów i modyfikowania zawartości ciągów.|  
+|[Instrukcje: Porównywanie ciągów](../../how-to/compare-strings.md)|Pokazuje, jak przeprowadzić porządkowe i kultury określonej porównania ciągów.|  
+|[Instrukcje: Łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)|Ilustruje różne sposoby, aby dołączyć wielu ciągów w jeden.|
+|[Instrukcje: Analizowanie ciągów za pomocą funkcji String.Split ](../../how-to/parse-strings-using-split.md)|Zawiera przykłady kodu, które ilustrują sposób korzystania `String.Split` metodę, aby przeanalizować ciągi.|  
+|[Instrukcje: Wyszukiwanie ciągów](../../how-to/search-strings.md)|Opis sposobu użycia wyszukać określony tekst lub wzorców w ciągach.|  
+|[Instrukcje: Określanie, czy ciąg reprezentuje wartość numeryczną](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak bezpiecznie przeanalizować składni ciągu, aby zobaczyć, czy ma prawidłową wartość liczbową.|  
 |[Interpolacja ciągów](../../language-reference/tokens/interpolated.md)|Zawiera opis funkcji interpolacji ciągu, która udostępnia wygodne Składnia na ciągi formatu.|
 |[Podstawowe operacje na ciągach](../../../../docs/standard/base-types/basic-string-operations.md)|Zawiera łącza do tematów, które używają <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> metody, aby wykonywać podstawowe operacje na ciągach.|  
 |[Analizowanie ciągów](../../../standard/base-types/parsing-strings.md)|W tym artykule opisano sposób konwertowania ciągów reprezentujących podstawowych typów .NET do wystąpień odpowiednie typy.|  

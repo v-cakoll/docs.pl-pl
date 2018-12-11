@@ -1,5 +1,6 @@
 ---
-title: new (odwołanie w C#)
+title: Nowość — C# odwołania
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - new_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - new keyword [C#]
 ms.assetid: e4136516-f058-45a8-84e5-da00a5cf9b6a
-ms.openlocfilehash: 694fcbca370d3ba628a532008af37a96e0568a75
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a6999491557a83d0042285a4353c24c1e729d6a2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523343"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235826"
 ---
 # <a name="new-c-reference"></a>new (odwołanie w C#)
 W języku C# `new` — słowo kluczowe może służyć jako operatora, Modyfikatory lub ograniczenie.  

@@ -1,5 +1,6 @@
 ---
-title: 'Porady: wpisywanie do pliku tekstowego (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Zapis do pliku tekstowego — C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - TextWriter.WriteLine
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: ca08651bfce1a92f65a3e6fec7da3411a22bffb2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e753f10acd33234d7f5e0c1a4203125ab880e2ae
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43780078"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237145"
 ---
-# <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Porady: wpisywanie do pliku tekstowego (Przewodnik programowania w języku C#)
+# <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Instrukcje: Zapis do pliku tekstowego (C# Programming Guide)
 W poniższych przykładach pokazano różne sposoby zapisywania tekstu w pliku. Pierwszych dwóch przykładach użyto metody statycznej wygody na <xref:System.IO.File?displayProperty=nameWithType> klasę umożliwiającą zapisanie każdy element dowolnego `IEnumerable<string>` i ciąg do pliku tekstowego. Przykład 3 pokazuje, jak dodać tekst do pliku, gdy trzeba osobno przetworzyć każdy wiersz zapisać do pliku. W przykładach 1 – 3 zastępowana cała istniejąca zawartość w pliku, ale w przykładzie 4 pokazano, jak dołączyć tekst do istniejącego pliku.  
   
  Wszystkie te przykłady zapisują literały ciągów znaków do plików. Aby sformatować tekst zapisany do pliku, należy użyć <xref:System.String.Format%2A> metody lub C# [Interpolacja ciągów](../../../csharp/language-reference/tokens/interpolated.md) funkcji.  
@@ -36,4 +37,4 @@ W poniższych przykładach pokazano różne sposoby zapisywania tekstu w pliku. 
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
 - [System plików i rejestr (C# Programming Guide)](../../../csharp/programming-guide/file-system/index.md)  
-- [Przykład: Zapiszesz kolekcję do przechowywania danych aplikacji](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)
+- [Przykład: Zapisywanie kolekcji do przechowywania danych aplikacji](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)

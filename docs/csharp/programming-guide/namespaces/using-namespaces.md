@@ -1,5 +1,6 @@
 ---
-title: Używanie przestrzeni nazw (Przewodnik programowania w języku C#)
+title: Używanie przestrzeni nazw - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 81876d1818a6e82764e4aea0ae2b6f9e091f0ba3
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d29de118e928522dcc3a4b4ab32fe2d2c4d1f2f9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123400"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235787"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Używanie przestrzeni nazw (Przewodnik programowania w języku C#)
 Przestrzenie nazw są intensywnie używane w programach języka C# na dwa sposoby. Po pierwsze klas .NET Framework umożliwia organizowanie jego wiele klas przestrzenie nazw. Po drugie deklarowania własne przestrzenie nazw może kontrolować zakres klasy i metody nazwy w dużych projektach programowania.  
@@ -85,7 +86,7 @@ Przestrzenie nazw są intensywnie używane w programach języka C# na dwa sposob
   
  To działa, ale jeśli typu o nazwie `Alias` zostały następnie zostać wprowadzony `Alias.` czy zamiast tego powiązania do tego typu. Za pomocą `Alias::Exception` ubezpieczycielom, `Alias` jest traktowana jako alias przestrzeni nazw, a nie mylone z typem.  
   
- Zobacz temat [instrukcje: użycie globalnych aliasów Namespace](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) Aby uzyskać więcej informacji dotyczących `global` alias.  
+ Zobacz temat [jak: Użycie globalnych aliasów Namespace](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) Aby uzyskać więcej informacji dotyczących `global` aliasu.  
   
 ## <a name="see-also"></a>Zobacz też
 
@@ -93,5 +94,5 @@ Przestrzenie nazw są intensywnie używane w programach języka C# na dwa sposob
 - [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)  
 - [Słowa kluczowe przestrzeni nazw](../../../csharp/language-reference/keywords/namespace-keywords.md)  
 - [. operator](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [::, operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

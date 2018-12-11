@@ -1,13 +1,13 @@
 ---
 title: Dyrektywy kompilatora (F#)
 description: Dowiedz się więcej o F# dyrektywy preprocesora języka, dyrektywy kompilacji warunkowej, dyrektywy line i dyrektywy kompilatora.
-ms.date: 05/16/2016
-ms.openlocfilehash: bb23096e03584f2a50cfe069075ba94a35c4753c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: 7344785e37454d367aa4dfcfa1bacd01b68363d5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126955"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239699"
 ---
 # <a name="compiler-directives"></a>Dyrektywy kompilatora
 
@@ -21,7 +21,7 @@ W poniższej tabeli wymieniono dyrektywy preprocesora, które są dostępne w F#
 
 |— Dyrektywa|Opis|
 |---------|-----------|
-|`#if` *Symbol*|Obsługuje kompilację warunkową. Kod w sekcji po `#if` jest dołączona, jeśli *symbol* jest zdefiniowana.|
+|`#if` *Symbol*|Obsługuje kompilację warunkową. Kod w sekcji po `#if` jest dołączona, jeśli *symbol* jest zdefiniowana. Symbol również może być ujemna z `!`.|
 |`#else`|Obsługuje kompilację warunkową. Oznacza sekcji kodu do dołączenia, jeśli symbol jest używany z poprzedniego `#if` nie został zdefiniowany.|
 |`#endif`|Obsługuje kompilację warunkową. Oznacza koniec warunkowego sekcji kodu.|
 |`#`[wiersz] *int*,<br/>`#`[wiersz] *int* *ciąg*,<br/>`#`[wiersz] *int* *ciąg verbatim*|Wskazuje oryginalnego źródła kodu wiersza i nazwa pliku, do debugowania. Ta funkcja jest dostępna dla narzędzi, które generują F# kodu źródłowego.|
@@ -46,6 +46,16 @@ Istnieje nie `#define` dyrektywy preprocesora w F#. Należy użyć ustawienia ko
 
 Dyrektywy kompilacji warunkowej, mogą być zagnieżdżone. Wcięcia nie ma znaczenia dla dyrektywy preprocesora.
 
+Można również negate — symbol `!`. W tym przykładzie wartość ciągu jest coś tylko wtedy, gdy _nie_ debugowania:
+
+```fsharp
+#if !DEBUG
+let str = "Not debugging!"
+#else
+let str = "Debugging!"
+#endif
+```
+
 ## <a name="line-directives"></a>Dyrektywy line
 
 Podczas kompilowania, kompilator zgłasza błędy w F# kodu, odwołując się do wiersza liczby, w którym występuje każdy z błędów. Te numery wierszy są liczone od 1 dla pierwszego wiersza w pliku. Jednak jeśli jest generowany F# kodu źródłowego z innego narzędzia, numery wierszy w wygenerowanym kodzie zazwyczaj nie są przedmiotem zainteresowania, ponieważ błędy w wygenerowanym F# kodu, które prawdopodobnie wynikają z innego źródła. `#line` Dyrektywy, umożliwia autorom narzędzia, które generują F# źródła kodu do przekazania informacji o wierszu, oryginalnym liczb i pliki źródłowe do wygenerowany F# kodu.
@@ -65,6 +75,7 @@ W poniższej tabeli wymieniono dyrektywy kompilatora, który jest dostępny w F#
 |— Dyrektywa|Opis|
 |---------|-----------|
 |`#light` ["włączone"&#124;"wyłączone"]|Włącza lub wyłącza uproszczone składni, na potrzeby utrzymywania zgodności z innymi wersjami języka ML. Domyślnie lightweight — składnia jest włączona. Pełna składnia jest zawsze włączona. W związku z tym można użyć zarówno w przypadku składni lekkiej, jak i Pełna składnia. Dyrektywa `#light` samodzielnie jest odpowiednikiem `#light "on"`. Jeśli określisz `#light "off"`, należy użyć składni pełne dla wszystkich konstrukcji językowych. Składnia w dokumentacji dotyczącej F# zobaczy przy założeniu, że używasz składni lekkiej. Aby uzyskać więcej informacji, zobacz [Pełna składnia](verbose-syntax.md).|
+
 Dyrektywy interpreter (fsi.exe), można zobaczyć [interaktywne programowanie za pomocą F# ](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Zobacz także

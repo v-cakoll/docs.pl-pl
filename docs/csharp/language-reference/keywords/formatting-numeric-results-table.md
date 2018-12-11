@@ -1,5 +1,6 @@
 ---
-title: Formatowanie tabeli wyników liczbowych (odwołanie w C#)
+title: Formatowanie tabeli wyników liczbowych - C# odwołania
+ms.custom: seodec18
 description: Dowiedz się więcej o języku C# standardowe ciągi formatujące liczby
 ms.date: 09/20/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 6f1cb5b49139cf9661e678cfc0ecc884a2749622
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: 12fe89e3aa63e9d3d8c3f102fe5a01a5f2225375
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863705"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239972"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Formatowanie tabeli wyników liczbowych (odwołanie w C#)
 

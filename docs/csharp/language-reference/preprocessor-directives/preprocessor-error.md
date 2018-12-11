@@ -1,17 +1,18 @@
 ---
-title: '#Błąd (odwołanie w C#)'
+title: '#Błąd — C# odwołania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#error'
 helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
-ms.openlocfilehash: ed43c1f85142ec6c54e44db5e3b0b7de3ef36bb8
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: b335dfeed23d43938c66f0753590af55ac99b12a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259889"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235599"
 ---
 # <a name="error-c-reference"></a>#error (odwołanie w C#)
 `#error` Umożliwia wygenerowanie [CS1029](../compiler-messages/cs1029.md) błędach zdefiniowane przez użytkownika z określonych lokalizacji w kodzie. Na przykład:  

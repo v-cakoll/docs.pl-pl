@@ -1,16 +1,17 @@
 ---
-title: 'Instrukcje: Testowanie równości odwołań (tożsamości) (C# Programming Guide)'
+title: 'Instrukcje: Testowanie równości odwołań (tożsamości) - C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 4faa674f3f3d65b7c555d7feb9789637f39e9bd7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6aa3aebdc03fc54233ac1cc027241fcb36cc8535
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125474"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237054"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Instrukcje: Testowanie równości odwołań (tożsamości) (C# Programming Guide)
 Nie masz implementuje żadnej logiki niestandardowej obsługuje porównania równości odwołań w typy. Ta funkcjonalność jest dostarczana dla wszystkich typów przez statyczną <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> metody.  

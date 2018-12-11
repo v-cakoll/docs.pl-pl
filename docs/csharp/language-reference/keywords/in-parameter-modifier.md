@@ -1,15 +1,16 @@
 ---
-title: w modyfikator parametrów (odwołanie w C#)
+title: w modyfikator parametru - C# odwołania
+ms.custom: seodec18
 ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 199d2d54a1937b9982131b8cc7f1c777f656d7a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d08b135c92cab176e402fec73999083fe4309362
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199412"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236300"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>w modyfikator parametrów (odwołanie w C#)
 
@@ -54,7 +55,7 @@ Określanie `in` dla argumentów w wywołaniu witryny jest zazwyczaj opcjonalna.
 
 Po pierwsze, określając `in` w wywołaniu witryny wymusza na kompilatorze o wybranie metody zdefiniowane przy użyciu zgodnego `in` parametru. W przeciwnym razie, gdy dwie metody różnią się tylko w obecności właściwości `in`, według wartości przeciążenia ma lepsze dopasowanie.
 
-Po drugie, określając `in` deklaruje zgodne z zamiarami użytkownika do przekazywania argumentu przez odwołanie. Argument używane z `in` musi reprezentować lokalizacji, która może być bezpośrednio określonych. Ten sam ogólne reguły `out` i `ref` stosowanie argumentów: nie można używać stałych, właściwości zwykłych lub innych wyrażeń, które generują wartości. W przeciwnym razie pominięcie `in` w wywołaniu witryny informuje kompilator, będą mogli go, aby utworzyć zmiennej tymczasowej, aby przekazać tylko do odczytu odwołanie do metody. Kompilator tworzy zmienną tymczasową celu wyeliminowanie kilku ograniczeń za pomocą `in` argumenty:
+Po drugie, określając `in` deklaruje zgodne z zamiarami użytkownika do przekazywania argumentu przez odwołanie. Argument używane z `in` musi reprezentować lokalizacji, która może być bezpośrednio określonych. Ten sam ogólne reguły `out` i `ref` stosowanie argumentów: Nie można używać stałych, właściwości zwykłych lub innych wyrażeń, które generują wartości. W przeciwnym razie pominięcie `in` w wywołaniu witryny informuje kompilator, będą mogli go, aby utworzyć zmiennej tymczasowej, aby przekazać tylko do odczytu odwołanie do metody. Kompilator tworzy zmienną tymczasową celu wyeliminowanie kilku ograniczeń za pomocą `in` argumenty:
 
 - Zmienna tymczasowa umożliwia stałe kompilacji jako `in` parametrów.
 - Zmienna tymczasowa umożliwia właściwości lub innych wyrażeń dla `in` parametrów.

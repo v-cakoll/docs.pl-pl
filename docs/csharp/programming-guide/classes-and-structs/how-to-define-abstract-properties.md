@@ -1,27 +1,28 @@
 ---
-title: 'Porady: definiowanie właściwości abstrakcyjnych (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Definiowanie właściwości abstrakcyjnych - C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 549867cac99784ce885b8fce8a1638c40ad88cec
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 70f344fb4e5a74940219688190324beb8183d32b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002986"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237314"
 ---
-# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Porady: definiowanie właściwości abstrakcyjnych (Przewodnik programowania w języku C#)
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Instrukcje: Definiowanie właściwości abstrakcyjnych (C# Programming Guide)
 Poniższy przykład pokazuje jak zdefiniować [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md) właściwości. Deklaracja właściwości abstrakcyjne nie zawiera implementacji metody dostępu właściwości, ponieważ relacja ta stwierdza, że obsługuje właściwości klasy, ale pozostawia implementacji metody dostępu dla klasy pochodnej. Poniższy przykład demonstruje sposób implementacji właściwości abstrakcyjnych dziedziczone z klasy podstawowej.  
   
  Ten przykład obejmuje trzy pliki, z których każdy jest kompilowany oddzielnie, a jego Wynikowy zestaw odwołuje się do następnej kompilacji:  
   
 -   abstractshape.CS: `Shape` klasę, która zawiera abstrakcyjną `Area` właściwości.  
   
--   Shapes.CS: podklasy `Shape` klasy.  
+-   Shapes.CS: Podklasy `Shape` klasy.  
   
--   shapetest.CS: program test, aby wyświetlić obszary niektórych `Shape`-obiektami wywodzącymi.  
+-   shapetest.CS: Program test, aby wyświetlić obszary niektórych `Shape`-obiektami wywodzącymi.  
   
  Aby skompilować przykład, użyj następującego polecenia:  
   
@@ -58,4 +59,4 @@ Poniższy przykład pokazuje jak zdefiniować [abstrakcyjne](../../../csharp/lan
 - [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
 - [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
 - [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Instrukcje: tworzenie i korzystanie z zestawów przy użyciu wiersza polecenia](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Instrukcje: Tworzenie i używanie zestawów przy użyciu wiersza polecenia](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)

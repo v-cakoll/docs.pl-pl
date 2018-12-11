@@ -1,16 +1,17 @@
 ---
-title: Obiekty (Przewodnik programowania w języku C#)
+title: Obiekty - C# przewodnik programowania
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: e5e537d239bd69cb7a95ae82edbdb82144c700a1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 439f001450d51885f943cb28752de1689dd4a748
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683094"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235101"
 ---
 # <a name="objects-c-programming-guide"></a>Obiekty (Przewodnik programowania w języku C#)
 Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić, typ. Obiekt jest zasadniczo bloku pamięci, która została przydzielona i skonfigurowane zgodnie z planu. Program może tworzyć wiele obiektów w tej samej klasy. Obiekty są również nazywane wystąpieniami i mogą być przechowywane w nazwanej zmiennej lub w tablicy lub kolekcji. Kod klienta jest kodem, który używa tych zmiennych w celu wywołania metod i uzyskiwać dostęp do właściwości publiczne obiektu. W języku zorientowane obiektowo takich jak C# typowego programu składa się z wielu obiektów interakcji dynamicznie.  
@@ -45,7 +46,7 @@ Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić
   
  <xref:System.ValueType?displayProperty=nameWithType> Implementacji `Equals` używa odbicia, ponieważ muszą być możliwe ustalenie, jakie pola znajdują się w dowolnej struktury. Podczas tworzenia własnych struktur, Zastąp `Equals` metodę, aby zapewnić efektywne równości algorytm, który jest specyficzne dla danego typu.  
   
--   Aby ustalić, czy wartości pól w dwóch wystąpień klasy są takie same, można używać <xref:System.Object.Equals%2A> metody lub [== — operator](../../../csharp/language-reference/operators/equality-comparison-operator.md). Jednak je stosować wyłącznie wtedy jeśli klasa ma przesłonięcia lub przeciążone je do dostarczania niestandardowych definicji jakie "równości" oznacza dla obiektów tego typu. Klasa może być także implementować <xref:System.IEquatable%601> interfejsu lub <xref:System.Collections.Generic.IEqualityComparer%601> interfejsu. Oba interfejsy zawierają metody, które mogą służyć do testowania równość wartości. Podczas projektowania własnych klas zastąpienie `Equals`, upewnij się, że zgodnie z wytycznymi dotyczącymi określonych w [porady: Definiowanie równości wartości dla typu](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) i <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+-   Aby ustalić, czy wartości pól w dwóch wystąpień klasy są takie same, można używać <xref:System.Object.Equals%2A> metody lub [== — operator](../../../csharp/language-reference/operators/equality-comparison-operator.md). Jednak je stosować wyłącznie wtedy jeśli klasa ma przesłonięcia lub przeciążone je do dostarczania niestandardowych definicji jakie "równości" oznacza dla obiektów tego typu. Klasa może być także implementować <xref:System.IEquatable%601> interfejsu lub <xref:System.Collections.Generic.IEqualityComparer%601> interfejsu. Oba interfejsy zawierają metody, które mogą służyć do testowania równość wartości. Podczas projektowania własnych klas zastąpienie `Equals`, upewnij się, że zgodnie z wytycznymi dotyczącymi określonych w [jak: Definiowanie równości wartości dla typu](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) i <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Informacje dodatkowe:  

@@ -1,17 +1,18 @@
 ---
-title: '#Ostrzeżenie (odwołanie w C#)'
+title: '#Ostrzeżenie - C# odwołania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#warning'
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: 59ca63d5089e377627a9116f24f9a0a1681bb4b2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 08fcefd904ad43c781017087082592120e21f5cd
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506350"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236833"
 ---
 # <a name="warning-c-reference"></a>#warning (odwołanie w C#)
 `#warning` Umożliwia wygenerowanie [CS1030](../../misc/cs1030.md) poziom jednego ostrzeżenia kompilatora z określonej lokalizacji w kodzie. Na przykład:  

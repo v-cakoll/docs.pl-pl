@@ -1,5 +1,6 @@
 ---
-title: 'Porady: uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C# (Przewodnik po programowaniu w języku C#)'
+title: 'Instrukcje: Dostęp do obiektów międzyoperacyjności pakietu Office przy użyciu Visual C# funkcje — C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 9d07f8e7b2f4c31af572829256065cf6aa3383bb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 803c3bd4099b838ddc71fea530565f26bd4142df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260220"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236573"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Porady: uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C# (Przewodnik po programowaniu w języku C#)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Instrukcje: Dostęp do obiektów międzyoperacyjności pakietu Office przy użyciu Visual C# funkcji (C# Programming Guide)
 Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu API usługi Office. Nowe funkcje obejmują argumentów nazwanych i opcjonalnych, nowy typ o nazwie `dynamic`oraz możliwość przekazywania argumentów do parametrów odwołania w metodach COM tak, jakby były one wartości parametrów.  
   
  W tym temacie użyjesz nowych funkcji do pisania kodu, które tworzy i wyświetla arkusz programu Microsoft Office Excel. Następnie napiszesz kod, aby dodać dokument programu Word pakietu Office, który zawiera ikonę która jest połączona w arkuszu programu Excel.  
@@ -49,7 +50,7 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
 1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij przycisk **Dodaj odwołanie**. **Dodaj odwołanie** pojawi się okno dialogowe.  
   
-2.  Na **zestawy** wybierz opcję **Microsoft.Office.Interop.Word** w **nazwa składnika** listy, a następnie przytrzymaj naciśnięty klawisz CTRL, klucza i wybierz pozycję  **Microsoft.Office.Interop.Excel**.  Jeśli nie ma zestawów, może być konieczne upewnić się, są zainstalowane i wyświetlane (zobacz [porady: Instalowanie pakietu Office podstawowe zestawy międzyoperacyjne](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))  
+2.  Na **zestawy** wybierz opcję **Microsoft.Office.Interop.Word** w **nazwa składnika** listy, a następnie przytrzymaj naciśnięty klawisz CTRL, klucza i wybierz pozycję  **Microsoft.Office.Interop.Excel**.  Jeśli nie ma zestawów, może być konieczne upewnić się, są zainstalowane i wyświetlane (zobacz [jak: Instalowanie podstawowych zestawów międzyoperacyjnych pakietu Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))  
   
 3.  Kliknij przycisk **OK**.  
   
@@ -137,7 +138,7 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
 ## <a name="to-set-the-embed-interop-types-property"></a>Aby ustawić właściwość Osadź typy międzyoperacyjne  
   
-1.  Dodatkowe rozszerzenia są możliwe w przypadku, gdy wywołujesz typ modelu COM, który nie wymaga podstawowego zestawu międzyoperacyjnego (PIA) w czasie wykonywania. Eliminujące zależność od wyników zestawów PIA w niezależność i łatwiejsze wdrażanie. Aby uzyskać więcej informacji na temat korzyści programowanie bez zestawów PIA, zobacz [wskazówki: osadzanie typów z zarządzanych zestawów](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
+1.  Dodatkowe rozszerzenia są możliwe w przypadku, gdy wywołujesz typ modelu COM, który nie wymaga podstawowego zestawu międzyoperacyjnego (PIA) w czasie wykonywania. Eliminujące zależność od wyników zestawów PIA w niezależność i łatwiejsze wdrażanie. Aby uzyskać więcej informacji na temat korzyści programowanie bez zestawów PIA, zobacz [instruktażu: Osadzanie typów z zarządzanych zestawów](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
      Ponadto programowania jest łatwiejsze, ponieważ typy, które są wymagane i zwracane przez metody COM mogą być reprezentowane za pomocą typu `dynamic` zamiast `Object`. Zmienne, które mają typ `dynamic` nie są sprawdzane do czasu wykonywania, który eliminuje konieczność jawnego rzutowania. Aby uzyskać więcej informacji, zobacz [przy użyciu typu dynamicznego](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
@@ -178,4 +179,4 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
 - [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
 - [Używanie typu dynamicznego](../../../csharp/programming-guide/types/using-type-dynamic.md)  
 - [Argumenty nazwane i opcjonalne](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
-- [Instrukcje: użycie argumentów nazwanych i opcjonalnych w programowaniu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Instrukcje: Użycie argumentów nazwanych i opcjonalnych w programowaniu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

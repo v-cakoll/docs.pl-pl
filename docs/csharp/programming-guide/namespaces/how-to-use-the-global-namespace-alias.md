@@ -1,19 +1,20 @@
 ---
-title: 'Porady: użycie globalnych aliasów przestrzeni nazw (Przewodnik programowania w języku C#)'
+title: 'Instrukcje: Użycie globalnych aliasów Namespace - C# przewodnik programowania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - aliases [C#]
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: 19d8d20ae630573b44399f8f5c5351f02b9fb1df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514621"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236612"
 ---
-# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Porady: użycie globalnych aliasów przestrzeni nazw (Przewodnik programowania w języku C#)
+# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Instrukcje: Użycie globalnych aliasów Namespace (C# Programming Guide)
 Możliwość dostępu do elementu członkowskiego w globalnym [przestrzeni nazw](../../../csharp/language-reference/keywords/namespace.md) jest przydatne, gdy element członkowski może być ono ukryte przez inną jednostkę o takiej samej nazwie.  
   
  Na przykład w poniższym kodzie `Console` jest rozpoznawana jako `TestApp.Console` zamiast do `Console` wpisać <xref:System> przestrzeni nazw.  
@@ -50,5 +51,5 @@ Możliwość dostępu do elementu członkowskiego w globalnym [przestrzeni nazw]
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
 - [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)  
 - [. operator](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [::, operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

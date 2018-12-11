@@ -1,17 +1,18 @@
 ---
-title: '#pragma checksum (odwołanie w C#)'
+title: '#Suma kontrolna pragma - C# odwołania'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 28a9ccfb9d36e648304a177294904ab1b7f18892
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 83cc6c56f18e5ce284d9e10294f3b3974578fc91
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024548"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235628"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (odwołanie w C#)
 Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stron [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -27,7 +28,7 @@ Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stro
  Nazwa pliku który wymaga monitorowania w celu zmiany lub aktualizacji.  
   
  `"{guid}"`  
- Globalnie unikatowy identyfikator (GUID) dla algorytmu wyznaczania wartości skrótu.  
+ Globalnie unikatowy identyfikator (GUID) dla algorytmu wyznaczania wartości skrótu.  
   
  `"checksum_bytes"`  
  Ciąg cyfr szesnastkowych reprezentujący liczbę bajtów sumy kontrolnej. Musi być parzystą liczbą cyfr szesnastkowych. Nieparzysta liczba cyfr powoduje ostrzeżenie kompilacji i dyrektywy są ignorowane.  

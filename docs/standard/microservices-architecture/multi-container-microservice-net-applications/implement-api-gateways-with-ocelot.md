@@ -4,12 +4,12 @@ description: Dowiedz się, jak zaimplementować bramy interfejsu API za pomocą 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 69b4e36d085c9121cf6d70e50214a81bb649664b
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: e6ffef646f860a07920c37d239ee7f2e379aac92
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297403"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143860"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementowanie bramy interfejsu API za pomocą Ocelot
 
@@ -412,7 +412,7 @@ Ponieważ jest w ramach aplikacji eShopOnContainers przy użyciu wielu bramy int
 
 Jednak Ocelot obsługuje również, znajdują się mikrousług tożsamości/uwierzytelnianie w ramach bramy interfejsu API, tak jak ten inny diagram.
 
- ![Uwierzytelnianie przy użyciu mikrousług tożsamości poniżej bramy interfejsu API (AG): 1) AG żąda tokenu uwierzytelniania z mikrousług tożsamości, mikrousługi tożsamości (2) zwraca toke do grupy dostępności, AG żądań 3 - 4) z mikrousług przy użyciu tokenu uwierzytelniania.](./media/image40.png)
+ ![Uwierzytelnianie przy użyciu mikrousług tożsamości poniżej bramy interfejsu API (AG): (1) AG żąda tokenu uwierzytelniania z mikrousług tożsamości, mikrousługi tożsamości (2) zwraca toke do grupy dostępności, AG żądań 3 - 4) z mikrousług przy użyciu tokenu uwierzytelniania.](./media/image40.png)
 
 **Rysunek 6-40**. Uwierzytelnianie w Ocelot
 
@@ -580,5 +580,5 @@ Istnieją inne ważne funkcje zbadaniu i użyć w przypadku użycia Ocelot bramy
   [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 >[!div class="step-by-step"]
-[Poprzednie](background-tasks-with-ihostedservice.md)
-[dalej](../microservice-ddd-cqrs-patterns/index.md)
+>[Poprzednie](background-tasks-with-ihostedservice.md)
+>[dalej](../microservice-ddd-cqrs-patterns/index.md)

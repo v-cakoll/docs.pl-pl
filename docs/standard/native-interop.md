@@ -1,38 +1,38 @@
 ---
-title: Współdziałanie natywnego
-description: Dowiedz się, jak interfejs ze składnikami natywnego programu .NET.
+title: Współdziałanie natywne
+description: Dowiedz się, jak współpracować z usługą składnikami macierzystymi na platformie .NET.
 author: blackdwarf
 ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 7da86cfe483a2355c53206f4c491fbd07e4c3046
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f427eb5d8f41f730d4263425e268213db92236d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591927"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143191"
 ---
-# <a name="native-interoperability"></a>Współdziałanie natywnego
+# <a name="native-interoperability"></a>Współdziałanie natywne
 
-W tym dokumencie, firma Microsoft będzie Poznaj nieco bardziej wszystkie trzy sposoby wykonanie "natywny współdziałania", które są dostępne przy użyciu platformy .NET.
+W tym dokumencie będzie Zaczniemy nieco bardziej wszystkie trzy metody "współdziałanie natywne", które są dostępne przy użyciu platformy .NET.
 
-Istnieje kilka przyczyn, dlaczego warto wywoływać kodu natywnego:
+Istnieje kilka powodów dlaczego warto mogą wywoływać kodu natywnego:
 
-*   Systemy operacyjne są dostarczane z dużą ilością interfejsów API, które nie są dostępne w bibliotekach klas zarządzanych. Podstawowym przykład dla tego będzie dostęp do sprzętu lub systemu operacyjnego funkcje zarządzania.
-*   Podczas komunikacji z innymi składnikami, które lub można utworzyć ABIs stylu języka C (native ABIs). Obejmuje, na przykład kodu języka Java, który jest dostępny za pośrednictwem [Java natywnego interfejsu (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) lub dowolnego zarządzanego języka, który może utworzyć składnik macierzysty.
-*   W systemie Windows większość oprogramowania, które są instalowane, takich jak pakiet Microsoft Office, rejestruje składników COM, które reprezentują programów i umożliwiają deweloperom zautomatyzować je lub używać ich. Wymaga to współdziałanie macierzystego.
+*   Systemy operacyjne są dostarczane z dużą liczbą interfejsów API, które nie są obecne w bibliotekach klas zarządzanych. Podstawowy przykład to będzie dostęp do sprzętu lub systemu operacyjnego, funkcji zarządzania.
+*   Komunikacja z innymi składnikami, które lub może tworzyć interfejsy ABI stylu języka C (natywnych interfejsów ABI). W tym artykule opisano, na przykład, kod Java, który jest uwidaczniany za pomocą [interfejsem Java Native Interface (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) lub dowolnym innym języku zarządzanych, które może powodować składnika macierzystego.
+*   W Windows większość oprogramowania instalowanego, takich jak pakiet Microsoft Office rejestruje składników COM, które reprezentują swoich programów i umożliwiają deweloperom Automatyzowanie je lub używać ich. Wymaga to interoperacyjności macierzystej.
 
-Oczywiście powyższej listy nie obejmuje wszystkich potencjalnych sytuacji i scenariusze, w których deweloper może chcesz/podobne/potrzebę interfejs ze składnikami natywnego. Biblioteka klas programu .NET, na przykład używa Obsługa natywnego współdziałanie do implementacji odpowiedniego liczba interfejsów API, takie jak obsługa konsoli i manipulowania, dostępu do systemu plików i innych użytkowników. Jednak ważne jest, należy pamiętać, że ma opcji, należy należy go.
+Oczywiście na powyższej liście nie obejmuje wszystkich potencjalnych sytuacji i scenariusze, w których deweloper może chcesz/podobne/potrzebę do połączenia interfejsem z składnikami macierzystymi. Biblioteka klas programu .NET, na przykład korzysta z obsługi interoperacyjności macierzystej zaimplementować podejście liczbę interfejsów API, takich jak obsługa konsoli i manipulowania, dostęp do systemu plików i inne. Jednak ważne jest należy pamiętać, że jest dostępna opcja, należy jeden potrzebny.
 
 > [!NOTE]
-> Większość przykładów w tym dokumencie będzie udostępniana dla wszystkich trzech obsługiwanych platform dla platformy .NET Core (Windows, Linux lub macOS). Jednak niektóre przykłady krótki i opisowy tylko jeden przykład jest przedstawić używającą Windows nazwy plików i rozszerzenia (to znaczy "dll" bibliotek). Oznacza to, że te funkcje nie są dostępne w systemie Linux lub macOS, została wykonana wyłącznie dla wygody sake.
+> Większość przykładów w tym dokumencie, zostanie wyświetlone dla wszystkich trzech obsługiwanych platform dla platformy .NET Core (Windows, Linux i macOS). Kilka przykładów krótki i opisowy tylko jeden przykład jest jednak wyświetlany korzystający Windows nazwy plików i rozszerzenia (czyli "dll" jak biblioteki). Nie oznacza to, że te funkcje nie są dostępne w systemie Linux lub macOS, została wykonana jedynie dla wygody sake.
 
 ## <a name="platform-invoke-pinvoke"></a>Wywołanie platformy (P/Invoke)
 
-P/Invoke jest technologia, która umożliwia dostęp do struktury, wywołania zwrotne i funkcji w bibliotekach niezarządzane z kodu zarządzanego. Większość API P/Invoke znajduje się w dwóch obszarach nazw: `System` i `System.Runtime.InteropServices`. Korzystanie z tych dwóch przestrzeni nazw będzie zezwalał na dostęp do atrybutów, które opisują sposób komunikowania się z składnik macierzysty.
+P/Invoke jest to technologia, która umożliwia dostęp do struktury, wywołania zwrotne i funkcji w bibliotekach niezarządzanych w kodzie zarządzanym. Większość interfejsów API P/Invoke jest zawarta w dwie przestrzeni nazw: `System` i `System.Runtime.InteropServices`. Używanie tych dwóch przestrzeni nazw zezwoli na dostęp do atrybutów, które opisują, jak chcesz nawiązać połączenia z usługą składnika macierzystego.
 
-Zacznijmy od najbardziej typowym przykładem, i który jest wywoływanie niezarządzanych funkcji w kodzie zarządzanym. Umożliwia wyświetlanie okna komunikatu z wiersza polecenia aplikacji:
+Zacznijmy od najbardziej typowym przykładem, a wywołującym niezarządzane funkcje w kodzie zarządzanym. Umożliwia wyświetlanie pola komunikatu z aplikacji wiersza polecenia:
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -51,15 +51,15 @@ public class Program {
 }
 ```
 
-W powyższym przykładzie jest dość proste, ale pokazywanie co jest potrzebne do wywołania niezarządzanej funkcji z kodu zarządzanego. Załóżmy kroków opisanych w tym przykładzie:
+W powyższym przykładzie jest dość prosta, ale stażysta co jest potrzebne do wywoływania funkcji niezarządzanych z kodu zarządzanego. Rozważmy kroki przykładu:
 
-*   #1 wiersz zawiera za pomocą instrukcji dla `System.Runtime.InteropServices` czyli przestrzeni nazw, który zawiera wszystkie elementy potrzebne.
-*   Wprowadza wiersza #5 `DllImport` atrybutu. Ten atrybut jest niezwykle ważny, ponieważ informuje środowiska uruchomieniowego, że należy załadować niezarządzanej DLL. Jest to plik DLL, do którego możemy chcesz wywołać.
-*   Wiersz #6 jest crux pracy P/Invoke. Definiuje metodę zarządzanych, która ma **dokładnie takiego samego podpisu** jako niezarządzane. Deklaracja zawiera słowo kluczowe new, który można zauważysz, `extern`, który określa, że środowisko wykonawcze to jest zewnętrzną metodę, a gdy go wywołać, środowisko uruchomieniowe powinien go znaleźć w bibliotece DLL określone w `DllImport` atrybutu.
+*   #1. wiersz zawiera za pomocą instrukcji for `System.Runtime.InteropServices` czyli przestrzeni nazw, który zawiera wszystkie elementy potrzebne.
+*   Wiersz #5 wprowadza `DllImport` atrybutu. Ten atrybut jest niezwykle istotne, ponieważ informuje, środowisko uruchomieniowe, należy go załadować niezarządzaną biblioteką DLL. Jest to biblioteka DLL, do którego chcesz możemy wywołać.
+*   Wiersz #6 jest crux pracy P/Invoke. Definiuje metody zarządzanej, która ma **dokładnie tym samym podpisie** , niezarządzanych. Deklaracja ma nowe słowo kluczowe, które można zauważyć, `extern`informuje środowisko uruchomieniowe, to jest metody zewnętrznej oraz że po jej wywołaniu, środowisko wykonawcze powinno znajduje się w biblioteki DLL określonej w `DllImport` atrybutu.
 
-Pozostałe przykładu jest tylko wywołania metody, jak w przypadku innych metod zarządzanych.
+Rest przykładu jest po prostu wywołania metody, tak jak każda inna metoda zarządzanych.
 
-Próbki jest podobny do macOS. Rzecz, którą chcesz zmienić jest oczywiście nazwę biblioteki w `DllImport` atrybutu jako macOS ma inny schemat nazewnictwa bibliotek dynamicznych. Przykładowe poniżej używa `getpid(2)` funkcji, aby pobrać Identyfikatora procesu aplikacji i wydrukuj go do konsoli.
+Przykład jest podobny dla systemu macOS. Jeden element, który wymaga wprowadzenia zmian jest oczywiście nazwę biblioteki w `DllImport` atrybutu, zgodnie z systemem macOS ma inny schemat nazewnictwa bibliotek dynamicznych. Przykładowe poniżej został użyty `getpid(2)` funkcję, aby pobrać Identyfikatora procesu aplikacji i wydrukuj go w konsoli.
 
 ```csharp
 using System;
@@ -81,7 +81,7 @@ namespace PInvokeSamples {
 }
 ```
 
-Jest również podobne w systemie Linux. Nazwa funkcji jest taki sam, ponieważ `getpid(2)` jest standardem [POSIX](https://en.wikipedia.org/wiki/POSIX) wywołanie systemowe.
+Jest również w podobny sposób na systemie Linux. Nazwa funkcji jest taka sama, ponieważ `getpid(2)` jest standardem [POSIX](https://en.wikipedia.org/wiki/POSIX) wywołanie systemowe.
 
 ```csharp
 using System;
@@ -103,11 +103,11 @@ namespace PInvokeSamples {
 }
 ```
 
-### <a name="invoking-managed-code-from-unmanaged-code"></a>Wywoływanie kodu zarządzanego z kodem niezarządzanym
+### <a name="invoking-managed-code-from-unmanaged-code"></a>Wywoływanie kodu zarządzanego z niezarządzanego kodu
 
-Oczywiście środowiska uruchomieniowego umożliwia komunikację przepływać w obu kierunkach, dzięki czemu można wywołać w zarządzanych artefaktów z funkcji macierzystym, przy użyciu wskaźników funkcji. Najbliższy operacją do wskaźnika funkcji w kodzie zarządzanym jest **delegować**, więc jest to, co umożliwia wywołań zwrotnych z kodu natywnego kodu zarządzanego.
+Oczywiście środowisko uruchomieniowe umożliwia komunikację do przepływu w obu kierunkach, co pozwala na wywołanie do zarządzanego artefaktów z funkcji natywnych, za pomocą wskaźników funkcji. W najbliższej kolejności ze wskaźnikiem funkcji w kodzie zarządzanym **delegować**, więc jest to, co umożliwia wywołania zwrotne z kodu natywnego do zarządzanego kodu.
 
-Sposób, aby użyć tej funkcji jest podobny do kodu zarządzanego do natywnych proces opisany powyżej. Dla danego wywołania zwrotnego zdefiniuj delegata, który odpowiada podpis, a który przekazywane do metody zewnętrznej. Wszystkie inne zajmie się środowiska uruchomieniowego.
+Sposób, aby użyć tej funkcji jest podobny do kodu zarządzanego do natywnego opisany powyżej proces. Danego wywołania zwrotnego możesz zdefiniować delegata, która pasuje do oznaczenia i przekazać go do metody zewnętrznej. Środowisko uruchomieniowe będzie zajmujemy się całą resztą.
 
 ```csharp
 using System;
@@ -139,18 +139,18 @@ namespace ConsoleApplication1 {
 }
 ```
 
-Zanim firma Microsoft przeprowadzenie naszym przykładzie jest gotowe za pośrednictwem podpisów niezarządzanych funkcji potrzebnych do pracy z. Funkcję, którą chcesz wywołać wyliczyć wszystkie okna ma następującą sygnaturą: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
+Zanim omówimy naszym przykładzie warto omijają sygnatur funkcji niezarządzanych, potrzebne do pracy z. Funkcję, którą chcesz wywołać, aby wyliczyć wszystkie okna ma następujący podpis: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
 
-Pierwszym parametrem jest wywołaniem zwrotnym. Wspomniane wywołania zwrotnego ma następującą sygnaturą: `BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`
+Pierwszy parametr jest wywołanie zwrotne. Wspomniane wywołanie zwrotne ma następujący podpis: `BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`
 
-Pamiętając o tym Przejdźmy przykładzie:
+Pamiętając o tym Przejdźmy przykładu:
 
-*   Wiersz #8 w przykładzie definiuje delegata, który pasuje do podpisu wywołania zwrotnego z kodem niezarządzanym. Zwróć uwagę, jak LPARAM i HWND typy są przedstawiane za pomocą `IntPtr` w kodzie zarządzanym.
-*   Wprowadzenie wierszy #10 i #11 `EnumWindows` funkcji z biblioteki user32.dll.
-*   Wiersze #13-16 implementuje delegata. W tym przykładzie prosty chcemy tylko dane wyjściowe dojścia do konsoli.
-*   Na koniec wiersza #19 możemy wywołanie metody zewnętrznej i podaj delegata.
+*   Wiersz #8 w przykładzie definiuje delegata, która pasuje do oznaczenia wywołania zwrotnego z niezarządzanego kodu. Zwróć uwagę, jak typy LPARAM i HWND są reprezentowane za pomocą `IntPtr` w kodzie zarządzanym.
+*   Wprowadzenie wiersze #10 i #11 `EnumWindows` funkcji z biblioteki user32.dll.
+*   Wiersze #13 16 zaimplementować delegata. Na tym prostym przykładzie chcemy tylko się dane wyjściowe dojścia do konsoli.
+*   Na koniec w wierszu #19 możemy wywołać metody zewnętrznej i przekazać delegata.
 
-Poniżej przedstawiono przykłady systemu Linux i macOS. Ich używamy `ftw` funkcji, które znajdują się w `libc`, biblioteki C. Ta funkcja umożliwia przechodzenie między hierarchiami katalogu i zajmuje wskaźnika do funkcji jako jeden z jego parametrów. Funkcja wspomnianej ma następującą sygnaturą: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
+Poniżej przedstawiono przykłady systemów Linux i macOS. Dla nich używamy `ftw` funkcja, która znajduje się w `libc`, biblioteki C. Ta funkcja jest używana na przechodzenie przez hierarchie katalogu i pobiera wskaźnik do funkcji jako jeden z jego parametrów. Funkcja wspomniane ma następujący podpis: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
 
 ```csharp
 using System;
@@ -202,7 +202,7 @@ namespace PInvokeSamples {
 }
 ```
 
-System macOS przykładzie użyto taką samą funkcję, a jedyną różnicą jest argumentem `DllImport` atrybutu, ponieważ przechowuje macOS `libc` w innym miejscu.
+przykład z systemem macOS używa tej samej funkcji, a jedyną różnicą jest argumentem `DllImport` atrybutu, ponieważ utrzymuje systemu macOS `libc` w innym miejscu.
 
 ```csharp
 using System;
@@ -254,22 +254,22 @@ namespace PInvokeSamples {
 }
 ```
 
-Oba powyższe przykłady są zależne od parametrów, a w obu przypadkach parametry są następujące typy zarządzane. Środowisko uruchomieniowe nie "co" i przetwarza je w jego odpowiedników po drugiej stronie. Ponieważ ten proces jest naprawdę ważne do pisania kodu natywnego międzyoperacyjnego jakości, Spójrzmy na co się stanie, gdy środowisko uruchomieniowe _marshals_ typów.
+Oba powyższe przykłady są zależne od parametrów, a w obu przypadkach parametry są podane jako typami zarządzanymi. Środowisko uruchomieniowe wykonuje "dobre" i przetwarza je na ich odpowiedniki po drugiej stronie. Ponieważ ten proces jest naprawdę ważne podczas pisania kodu macierzystego międzyoperacyjny jakości, Przyjrzyjmy się co się dzieje, gdy środowisko uruchomieniowe _marshals_ typów.
 
-## <a name="type-marshalling"></a>Kierowanie typu
+## <a name="type-marshalling"></a>Typ zarządzany
 
-**Kierowanie** jest procesem przekształcania typów, gdy konieczne jest przekraczają granicę zarządzanego do natywnego i na odwrót.
+**Kierowania** jest procesem przekształcania typów, kiedy ich potrzebują do przekroczenia granicę zarządzanych w trybie macierzystym i na odwrót.
 
-Kierowanie przyczyna jest wymagane jest, ponieważ różnią się typami w kodzie zarządzane i niezarządzane. W kodzie zarządzanym, na przykład masz `String`, podczas gdy w świecie niezarządzane ciągi może być Unicode ("szeroka"), z systemem innym niż Unicode, zerem, ASCII, itp. Domyślnie podsystem P/Invoke spróbuje wykonać czynność prawej na zachowanie domyślne, które można wyświetlić na podstawie [MSDN](../../docs/framework/interop/default-marshaling-behavior.md). Jednak w tych sytuacjach konieczne dodatkowe formantu zostanie zastosowana `MarshalAs` atrybutu, aby określić, co to jest oczekiwany typ po stronie niezarządzane. Na przykład aby ciąg, który zostanie wysłany jako ciągu ANSI zerem, można go jak następująco:
+Kierowania przyczyna jest wymagana, ponieważ różnią się typami w kodzie zarządzanym i niezarządzanym. W kodzie zarządzanym, na przykład masz `String`, natomiast w świecie niezarządzanych ciągi mogą być Unicode ("szerokiego"), innego niż Unicode, zakończony wartością null ASCII, itp. Domyślnie w podsystemie P/Invoke podejmie próbę postępują właściwie na podstawie [domyślne zachowanie](../../docs/framework/interop/default-marshaling-behavior.md). Jednak w tych sytuacjach, gdy potrzebujesz dodatkowych kontroli, zostanie zastosowana [MarshalAs](xref:System.Runtime.InteropServicxes.MarshalAs) atrybutu, aby określić, co to jest oczekiwany typ w niezarządzanym. Na przykład jeśli chcemy, aby ciąg do wysłania jako ciąg znaków zakończony znakiem null ANSI, można robimy to następująco:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 ```
 
-### <a name="marshalling-classes-and-structs"></a>Kierowanie klasy i struktury
+### <a name="marshalling-classes-and-structs"></a>Kierowania klasy i struktury
 
-Innym aspektem kierowania typu jest sposób przekazywania w strukturze do metody niezarządzane. Na przykład wymagać pewnych metod niezarządzane struktury jako parametr. W takich sytuacjach należy utworzyć odpowiednie struktury lub klasy w zarządzanych części świecie, aby używać go jako parametr. Jednak tylko Definiowanie klasy nie jest wystarczająco, musimy także poinstruować organizatora sposób mapowania pól w klasie niezarządzanej strukturę. Jest to, gdy `StructLayout` atrybutu wejścia play.
+Innym aspektem kierowania typu jest sposób przekazywania w strukturze metody niezarządzanego. Na przykład niektóre z niezarządzanych metod wymagają struktury jako parametr. W takich przypadkach należy utworzyć odpowiednie struktury lub klasy w zarządzanych części świata, który będzie używany jako parametr. Jednak po prostu Definiowanie klasy nie jest wystarczająco dużo, musimy również poinstruować Organizator sposób mapowania pól w klasie do struktury niezarządzanej. Jest to miejsce `StructLayout` atrybut, który jest dostarczany do gry.
 
 ```csharp
 [DllImport("kernel32.dll")]
@@ -294,7 +294,7 @@ public static void Main(string[] args) {
 }
 ```
 
-W powyższym przykładzie wyłączone przykładowe wywołanie `GetSystemTime()` funkcji. Bit interesujące znajduje się w wierszu 4. Ten atrybut określa, czy pola klasy powinny być mapowane sekwencyjnie strukturę po drugiej stronie (niezarządzany). Oznacza, że nazwy pól nie ważne tylko ich kolejność jest ważna, ponieważ musi odpowiadać niezarządzane struktury, pokazano poniżej:
+W powyższym przykładzie poza prosty przykład wywołanie `GetSystemTime()` funkcji. Bit interesujące znajduje się w wierszu 4. Ten atrybut określa, że pola klasy powinno zostać zamapowane sekwencyjnie struktury z drugiej strony (niezarządzanego). Oznacza to, że nazwy pól są nieważne, tylko ich kolejność jest ważna, ponieważ musi on odpowiadać niezarządzane struktury, pokazano poniżej:
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -309,7 +309,7 @@ typedef struct _SYSTEMTIME {
 } SYSTEMTIME, *PSYSTEMTIME*;
 ```
 
-Już widzieliśmy w przykładzie z systemami Linux i macOS tego w poprzednim przykładzie. Jest on widoczny ponownie poniżej.
+Już widzieliśmy w systemie Linux i macOS przykładzie w tym w poprzednim przykładzie. Jest on wyświetlany ponownie poniżej.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -330,10 +330,10 @@ public class StatClass {
 }
 ```
 
-`StatClass` Klasy reprezentuje strukturę, która jest zwracana w wyniku `stat` wywołań systemowych na komputerach z systemem UNIX. Reprezentuje informacje dotyczące danego pliku. Klasa powyżej jest reprezentacja stat — struktura w kodzie zarządzanym. Ponownie pola w klasie muszą być w tej samej kolejności jako natywny — Struktura (można znaleźć tych elementów przy perusing man stron w ulubionych implementacji UNIX) i muszą mieć ten sam typ podstawowy.
+`StatClass` Klasa reprezentuje strukturę, która jest zwracana przez `stat` wywołanie systemowe w systemach UNIX. Reprezentuje informacje dotyczące danego pliku. Klasa powyżej jest reprezentacją stat — struktura w kodzie zarządzanym. Ponownie pola w klasie muszą znajdować się w tej samej kolejności jako natywny — Struktura (możesz znaleźć, perusing strony ataków typu man na Twojej ulubionej implementacji UNIX) i muszą mieć ten sam typ podstawowy.
 
-## <a name="more-resources"></a>Więcej zasobów
+## <a name="more-resources"></a>Inne zasoby
 
-*   [Witryna typu wiki PInvoke.net](https://www.pinvoke.net/) znakomity Wiki z informacji o typowych API Win32 i połączeń telefonicznych z nimi.
+*   [PInvoke.net wiki](https://www.pinvoke.net/) doskonałe witryny typu Wiki przy użyciu informacji o typowych interfejsów API systemu Win32 i sposobie ich wywoływania.
 *   [P/Invoke w witrynie MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
-*   [Dokumentacja mono P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/)
+*   [Dokumentacja narzędzia mono w P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/)

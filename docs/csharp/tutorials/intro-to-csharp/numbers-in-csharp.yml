@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Gałęzie i pętle w języku C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7edc39e6b9d45a0f6707adf48199c9a096b8992d
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: d29fae5aa5a34d7a8e91e53f2005178740464827
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50198598"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53131251"
 items:
 - durationInMinutes: 1
   content: >
@@ -63,7 +63,7 @@ items:
 
     int c = 2;
 
-    int d = (a  + b) * c;
+    int d = (a + b) * c;
 
     Console.WriteLine(d);
 
@@ -200,4 +200,19 @@ items:
     > [!NOTE]
 
     > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
-- content: "Ukończono \"liczby w elemencie C#\" interactie samouczka. \n\nMożesz kontynuować te samouczki na własnym środowisku programistycznym. Poznaj podstawy [rozwoju lokalnego](local-environment.md) a następnie wybierz zapoznać się z samouczkiem. Możesz bezpośrednio do następnego samouczka, lub zacząć ponownie z [liczby w elemencie C# ](numbers-in-csharp-local.md) samouczka.\n\nMożesz dowiedzieć się więcej na temat liczb w języku C# w następujących tematach:\n\n[Tabela typów całkowitych](../../language-reference/keywords/integral-types-table.md)   \n[Tabela typów zmiennoprzecinkowych](../../language-reference/keywords/floating-point-types-table.md)   \n[Tabela typów wbudowanych](../../language-reference/keywords/built-in-types-table.md)   \n[Tabela niejawnych konwersji liczbowych](../../language-reference/keywords/implicit-numeric-conversions-table.md)   \n[Tabela jawnych konwersji liczbowych](../../language-reference/keywords/explicit-numeric-conversions-table.md)"
+- content: >-
+    Ukończono "liczby w elemencie C#" interaktywnego samouczka. Możesz kliknąć pozycję **gałęzie i pętle** poniższe łącze do uruchomienia interaktywnego samouczka dalej lub mogą odwiedzić [lokacji .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) można pobrać zestawu .NET Core SDK, Utwórz projekt na komputerze i Zachowaj kodowania. W kroku "Zachowaj Learning" łączy do tych samouczków.
+
+
+    Możesz dowiedzieć się więcej na temat liczb w języku C# w następujących tematach:
+
+
+    - [Tabela typów całkowitych](../../language-reference/keywords/integral-types-table.md)
+
+    - [Tabela typów zmiennoprzecinkowych](../../language-reference/keywords/floating-point-types-table.md)
+
+    - [Tabela typów wbudowanych](../../language-reference/keywords/built-in-types-table.md)
+
+    - [Tabela niejawnych konwersji liczbowych](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+
+    - [Tabela jawnych konwersji liczbowych](../../language-reference/keywords/explicit-numeric-conversions-table.md)

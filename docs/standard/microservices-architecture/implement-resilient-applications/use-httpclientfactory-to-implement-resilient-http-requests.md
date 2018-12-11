@@ -4,12 +4,12 @@ description: HttpClientFactory to ceniona fabryki, dostępne od platformy .NET C
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: f2be3daf1b04613fa8afc1d17cbcbca2d338e062
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347932"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145114"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Użyj HttpClientFactory do zaimplementowania odporne na błędy żądań HTTP
 
@@ -162,7 +162,6 @@ Do tej pory kod przedstawiony jest po prostu wykonując regularne żądań Http,
 
     [*https://github.com/aspnet/HttpClientFactory*](https://github.com/aspnet/HttpClientFactory)
 
-
-
 >[!div class="step-by-step"]
-[Poprzedniego] (explore-custom-http-call-retries-exponential-backoff.md) [dalej] (implement-http-call-retries-exponential-backoff-polly.md)
+>[Poprzednie](explore-custom-http-call-retries-exponential-backoff.md)
+>[dalej](implement-http-call-retries-exponential-backoff-polly.md)

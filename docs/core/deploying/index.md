@@ -1,27 +1,30 @@
 ---
 title: Wdrożenie aplikacji programu .NET core
-description: Wdrażanie aplikacji .NET Core.
+description: Poznaj sposoby wdrażania aplikacji .NET Core.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/03/2018
-ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/03/2018
+ms.custom: seodec18
+ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836631"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144718"
 ---
 # <a name="net-core-application-deployment"></a>Wdrażanie aplikacji .NET core
 
-Można tworzyć dwa typy wdrożeń dla aplikacji .NET Core:
+Można utworzyć trzy typy wdrożeń dla aplikacji .NET Core:
 
 - Wdrażanie zależny od struktury. Jak wskazuje nazwa, zależny od struktury wdrożenia (stacje) zależy od obecności udostępnione całego systemu w wersji programu .NET Core w systemie docelowym. Ponieważ platformy .NET Core jest już obecny, Twoja aplikacja jest również do przenoszenia pomiędzy instalacji programu .NET Core. Aplikacja zawiera tylko własnego kodu i wszelkie zależności innych firm, które znajdują się poza biblioteki .NET Core. Zawiera FDDs *.dll* pliki, które można uruchamiać przy użyciu [narzędzia dotnet](../tools/dotnet.md) z wiersza polecenia. Na przykład `dotnet app.dll` uruchamia aplikację o nazwie `app`.
 
 - Niezależne wdrożenia. W odróżnieniu od Dyskietki niezależna wdrożenia (— SCD) nie jest zależny od obecności składniki współużytkowane w systemie docelowym. Wszystkie składniki, łącznie z biblioteki .NET Core i środowisko uruchomieniowe platformy .NET Core, są dołączone do aplikacji i odizolowane od innych aplikacji .NET Core. SCDs obejmują plik wykonywalny (takie jak *app.exe* na platformach Windows, dla aplikacji o nazwie `app`), czyli wersji zmieniono nazwę hosta, specyficzne dla platformy .NET Core, a *.dll* pliku (np. *app.dll*), który jest rzeczywista aplikacja.
 
+- Pliki wykonywalne zależny od struktury. Tworzy plik wykonywalny, który działa na platformie docelowej. Podobnie jak FDDs, zależny od struktury plików wykonywalnych (FDE) są specyficzne dla platformy i nie są niezależne. Te wdrożenia nadal zależy od obecności udostępniona wersja systemowe programu .NET Core do uruchomienia. W odróżnieniu od — SCD aplikacji zawiera tylko kod i wszelkie zależności innych firm, które znajdują się poza biblioteki .NET Core. FDEs generuje plik wykonywalny, który działa na platformie docelowej.
+
 ## <a name="framework-dependent-deployments-fdd"></a>Zależny od struktury wdrożeń (stacje)
 
-STACJE wdrożysz swojej aplikacji i zależności innych firm. Nie trzeba wdrażać platformy .NET Core, ponieważ Twoja aplikacja będzie używać wersji programu .NET Core, który znajduje się w systemie docelowym. Jest to domyślny model wdrażania dla aplikacji platformy .NET Core i ASP.NET Core, przeznaczonych dla platformy .NET Core.
+STACJE wdrożysz swojej aplikacji i zależności innych firm. Twoja aplikacja będzie używać wersji programu .NET Core, który znajduje się w systemie docelowym. Jest to domyślny model wdrażania dla aplikacji platformy .NET Core i ASP.NET Core, przeznaczonych dla platformy .NET Core.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Dlaczego warto tworzyć wdrożenia zależny od struktury?
 
@@ -31,11 +34,13 @@ Wdrażanie z stacje ma szereg zalet:
 
 - Rozmiar pakietu wdrażania jest mały. Można wdrażać tylko w aplikacji oraz jego zależności, a nie .NET Core sam.
 
+- O ile nie została zastąpiona, FDDs użyje najnowszej obsługiwanych środowiska uruchomieniowego zainstalowanego w systemie docelowym. Dzięki temu aplikacja korzystała poprawionego najnowszej wersji środowiska uruchomieniowego .NET Core. 
+
 - Wiele aplikacji używać tego samego instalacji platformy .NET Core, co zmniejsza zarówno dysku miejsca oraz użycia pamięci w systemach hosta.
 
 Dostępne są również kilka wady:
 
-- Aplikację można uruchomić tylko wtedy, gdy jest to wersja platformy .NET Core, które są przeznaczone lub jego nowsza wersja jest już zainstalowany w systemie hosta.
+- Aplikację można uruchomić tylko wtedy, gdy wersję platformy .NET Core Twojej aplikacji jest przeznaczony dla [lub nowsza wersja](../versions/selection.md#framework-dependent-apps-roll-forward), jest już zainstalowany w systemie hosta.
 
 - Jest to możliwe, środowisko uruchomieniowe programu .NET Core i bibliotek, które można zmienić bez wiedzy użytkownika w przyszłych wersjach. W rzadkich przypadkach może to spowodować zmianę zachowania aplikacji.
 
@@ -65,9 +70,31 @@ Ponadto wprowadzono szereg wady:
 
 - Wdrażanie wielu samodzielne aplikacje platformy .NET Core w systemie może zużywać znacznej ilości miejsca na dysku, od każdej aplikacji duplikatów plików .NET Core.
 
+## <a name="framework-dependent-executables-fde"></a>Zależny od struktury plików wykonywalnych (FDE)
+
+Począwszy od platformy .NET Core 2.2, można wdrożyć aplikację jako FDE oraz wszelkie wymagane zależności innych firm. Twoja aplikacja będzie używać wersji programu .NET Core, który jest zainstalowany w systemie docelowym.
+
+### <a name="why-deploy-a-framework-dependent-executable"></a>Dlaczego warto wdrożyć zależny od struktury pliku wykonywalnego?
+
+Wdrażanie FDE ma szereg zalet:
+
+- Rozmiar pakietu wdrażania jest mały. Można wdrażać tylko w aplikacji oraz jego zależności, a nie .NET Core sam.
+
+- Wiele aplikacji używać tego samego instalacji platformy .NET Core, co zmniejsza zarówno dysku miejsca oraz użycia pamięci w systemach hosta.
+
+- Aplikację można uruchomić, wywołując opublikowanego pliku wykonywalnego bez wywoływania `dotnet` narzędzie bezpośrednio.
+
+Dostępne są również kilka wady:
+
+- Aplikację można uruchomić tylko wtedy, gdy wersję platformy .NET Core Twojej aplikacji jest przeznaczony dla [lub nowsza wersja](../versions/selection.md#framework-dependent-apps-roll-forward), jest już zainstalowany w systemie hosta.
+
+- Jest to możliwe, środowisko uruchomieniowe programu .NET Core i bibliotek, które można zmienić bez wiedzy użytkownika w przyszłych wersjach. W rzadkich przypadkach może to spowodować zmianę zachowania aplikacji.
+
+- Należy opublikować aplikację dla każdej platformy docelowej.
+
 ## <a name="step-by-step-examples"></a>Przykłady krok po kroku
 
-Instrukcje krok po kroku wdrażania aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia, zobacz [wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md). Instrukcje krok po kroku wdrażania aplikacji .NET Core za pomocą programu Visual Studio, zobacz [wdrażanie aplikacji .NET Core z programem Visual Studio](deploy-with-vs.md). Każdy temat zawiera przykłady następujących wdrożeń:
+Instrukcje krok po kroku wdrażania aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia, zobacz [wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md). Instrukcje krok po kroku wdrażania aplikacji .NET Core za pomocą programu Visual Studio, zobacz [wdrażanie aplikacji .NET Core z programem Visual Studio](deploy-with-vs.md). Każdy artykuł zawiera przykłady następujących wdrożeń:
 
 - Wdrożenie zależny od struktury
 - Wdrażanie zależny od struktury za pomocą zależności innych firm

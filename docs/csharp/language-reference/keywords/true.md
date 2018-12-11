@@ -7,22 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - true keyword [C#]
 ms.assetid: 7d0adcdb-02e9-478c-8c84-2e671d4acef3
-ms.openlocfilehash: 41d689c4a781999a939a578e8ac3c85f594ece45
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 59c5aeeb7023cf05de9f13f4393a5d6df771dace
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530213"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130523"
 ---
 # <a name="true-c-reference"></a>true (odwołanie w C#)
-Używane jako przeciążonego operatora lub literału:  
-  
- [true, operator](../../../csharp/language-reference/keywords/true-operator.md)  
-  
- [true, literał](../../../csharp/language-reference/keywords/true-literal.md)  
-  
-## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
+Używane jako przeciążonego operatora lub literału:
+
+- [TRUE — operator](true-operator.md)
+- [TRUE — literał](true-literal.md)
+
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](index.md)
+- [false](false.md)

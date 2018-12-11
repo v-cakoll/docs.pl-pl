@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49122854"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147177"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Praca z danymi w aplikacji platformy ASP.NET Core
 
@@ -200,7 +200,7 @@ Jest pierwszym DbContext \_catalogContext, a druga DbContext mieści się w \_in
 >
 > - **Dokumentacji programu EF Core**  
 >   <https://docs.microsoft.com/ef/>
-> - **Programem EF Core: Dane związane**  
+> - **EF Core: Powiązane dane**  
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Należy unikać powolne ładowanie jednostek w aplikacjach ASPNET**  
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
@@ -301,7 +301,7 @@ Oprócz relacyjnych i opcje magazynu NoSQL aplikacje platformy ASP.NET Core moż
 - Wprowadzenie do usługi Azure Storage  
   <https://docs.microsoft.com/azure/storage/storage-introduction>
 
-## <a name="caching"></a>Pamięć podręczna
+## <a name="caching"></a>Buforowanie
 
 W aplikacjach sieci web należy wykonać wszystkie żądania sieci web w możliwie jak najszybciej. Jednym ze sposobów osiągnięcia tego jest ograniczyć liczbę wywołań zewnętrznego serwera należy wykonać w celu wykonania żądania. Buforowanie obejmuje przechowywanie kopii danych na serwerze (lub inny magazyn danych to znaczy więcej łatwo zapytań od źródła danych). Aplikacje sieci Web i szczególnie bez SPA tradycyjnej sieci web, konieczne zbudowanie cały interfejs użytkownika z każdym żądaniem. Obejmuje to często, dzięki czemu wiele z tego samego zapytania do bazy danych wielokrotnie z jednego użytkownika żądania do następnej. W większości przypadków te dane zmienia się rzadko, więc ma nieco powód, aby stale żądania z bazy danych. ASP.NET Core obsługuje buforowanie odpowiedzi do buforowania całe strony i buforowanie danych, który obsługuje bardziej szczegółowego zachowanie buforowania.
 
@@ -440,5 +440,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 Buforowanie może znacznie zwiększyć wydajność stron sieci web, wielokrotnie żądającym takie same wartości z bazy danych. Pamiętaj zmierzyć wydajność dostępu i stronę przed zastosowaniem buforowania danych i są stosowane tylko wtedy buforowania tam, gdzie zobaczysz na potrzeby poprawy jakości obsługi. Buforowanie zużywanie zasobów pamięci serwera sieci web i zwiększa złożoność aplikacji, dlatego ważne jest, aby nie przedwcześnie Optymalizowanie przy użyciu tej metody.
 
 >[!div class="step-by-step"]
-[Poprzednie](develop-asp-net-core-mvc-apps.md)
-[dalej](test-asp-net-core-mvc-apps.md)
+>[Poprzednie](develop-asp-net-core-mvc-apps.md)
+>[dalej](test-asp-net-core-mvc-apps.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: da9e5bd39cebce27dbaf89ac020c2bf8f154adcc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2b2d487484f026be7637185ef759fb87db571b3a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211843"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145809"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Zapytania w LINQ to DataSet
 Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są zwykle wyrażane w specjalistycznym języku zapytań, takich jak SQL dla relacyjnych baz danych i XQuery dla XML. W związku z tym deweloperzy musieli nauczyć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, które są zapytania. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] oferuje prostszy i spójny model do pracy z danymi w różnych rodzajach formatów i źródeł danych. W [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania, zawsze pracujesz z programowania obiektów.  
@@ -23,7 +23,7 @@ Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania s
   
  W zapytaniu, która zwraca sekwencję liczb sama zmienna kwerendy nigdy nie przechowuje wyników kwerendy i przechowuje tylko polecenia kwerendy. Wykonanie zapytania jest odroczone do czasu zmienna zapytania jest powtarzana w `foreach` lub `For Each` pętli. Jest to nazywane *wykonanie odroczone*; oznacza to, że zapytanie trochę czasu, po kwerendy jest tworzony jest wykonywany. Oznacza to, można wykonać zapytania tak często, jak chcesz. Jest to przydatne, gdy na przykład masz bazę danych, która jest aktualizowana przez inne aplikacje. W aplikacji można utworzyć zapytanie, aby pobrać najnowsze informacje, a następnie wielokrotnie wykonywania zapytania, zwracając zaktualizowane informacje o każdym.  
   
- W przeciwieństwie do odroczonego zapytań, zwracające je sekvence hodnot zapytań, które zwracają wartości pojedynczego wystąpienia są wykonywane natychmiast. Oto kilka przykładów pojedynczych zapytań <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A>, i <xref:System.Linq.Enumerable.First%2A>. Działają one od razu, ponieważ wyniki zapytania są wymagane do obliczenia pojedynczego wyniku. Na przykład w celu obliczenia średniej wyników zapytania zapytanie musi zostać wykonana tak, aby funkcja uśredniania wprowadził pracować z danymi. Można również użyć <xref:System.Linq.Enumerable.ToList%2A> lub <xref:System.Linq.Enumerable.ToArray%2A> metod na podstawie kwerendy, aby wymusić natychmiastowe wykonanie zapytania, który nie generuje wartości pojedynczego wystąpienia. Te techniki, aby wymusić natychmiastowe wykonanie może być przydatne, gdy chcesz buforować wyniki zapytania. Aby uzyskać więcej informacji o wykonanie odroczonych i natychmiastowych zapytań, zobacz [wprowadzenie do LINQ](https://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9).  
+ W przeciwieństwie do odroczonego zapytań, zwracające je sekvence hodnot zapytań, które zwracają wartości pojedynczego wystąpienia są wykonywane natychmiast. Oto kilka przykładów pojedynczych zapytań <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A>, i <xref:System.Linq.Enumerable.First%2A>. Działają one od razu, ponieważ wyniki zapytania są wymagane do obliczenia pojedynczego wyniku. Na przykład w celu obliczenia średniej wyników zapytania zapytanie musi zostać wykonana tak, aby funkcja uśredniania wprowadził pracować z danymi. Można również użyć <xref:System.Linq.Enumerable.ToList%2A> lub <xref:System.Linq.Enumerable.ToArray%2A> metod na podstawie kwerendy, aby wymusić natychmiastowe wykonanie zapytania, który nie generuje wartości pojedynczego wystąpienia. Te techniki, aby wymusić natychmiastowe wykonanie może być przydatne, gdy chcesz buforować wyniki zapytania.
   
 ## <a name="queries"></a>Kwerendy  
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania można formułować w dwóch różnych składni: składnia wyrażenia oraz składni zapytania oparte na metodzie zapytania.  

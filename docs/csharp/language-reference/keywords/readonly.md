@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: d09ce4ea972a3064298eebdf0b8b80999ee8441e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b50d3b571afb3128c973baaf7d7178da705382bd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397546"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146173"
 ---
 # <a name="readonly-c-reference"></a>readonly (odwołanie w C#)
 
@@ -44,7 +44,7 @@ public readonly int y = 5;
 Tych kontekstach Konstruktor są również tylko kontekstów, w których jest on prawidłowy do przekazania `readonly` pola jako [się](out-parameter-modifier.md) lub [ref](ref.md) parametru.
 
 > [!NOTE]
-> `readonly` — Słowo kluczowe różni się od [const](const.md) — słowo kluczowe. A `const` pola mogą być inicjowane tylko na deklarację pola. A `readonly` pola mogą być inicjowane w deklaracji lub w konstruktorze. W związku z tym `readonly` pola mogą mieć różne wartości w zależności od używanego konstruktora. Ponadto, podczas gdy `const` pole jest stałą czasu kompilacji `readonly` pole może być używane dla stałych środowiska uruchomieniowego, jak w poniższym przykładzie:
+> `readonly` — Słowo kluczowe różni się od [const](const.md) — słowo kluczowe. A `const` pola mogą być inicjowane tylko na deklarację pola. A `readonly` pola można przypisać wiele razy w deklaracji pola lub w dowolny Konstruktor. W związku z tym `readonly` pola mogą mieć różne wartości w zależności od używanego konstruktora. Ponadto, podczas gdy `const` pole jest stałą czasu kompilacji `readonly` pole może być używane dla stałych środowiska uruchomieniowego, jak w poniższym przykładzie:
 
 ```csharp
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
@@ -80,7 +80,7 @@ public readonly struct Point
 }
 ```
 
-Dodawanie pola niezaznaczonych `readonly` generuje błąd kompilatora `CS8340`: "wystąpienia pól struktur tylko do odczytu muszą być tylko do odczytu."
+Dodawanie pola niezaznaczonych `readonly` generuje błąd kompilatora `CS8340`: "Wystąpienia pól struktur tylko do odczytu muszą być tylko do odczytu."
 
 ## <a name="ref-readonly-return-example"></a>Przykład zwracane tylko do odczytu REF
 

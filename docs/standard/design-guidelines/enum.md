@@ -1,6 +1,6 @@
 ---
 title: Projekt wyliczeń
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, enumerations
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9dea187b5f3911114e551d640e0bb0aa6fac1143
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: 429f2e3821ff12ff4fc51b73c102ee3799d0228d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213293"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148135"
 ---
 # <a name="enum-design"></a>Projekt wyliczeń
 Typy wyliczeniowe są specjalnym rodzajem typu wartości. Istnieją dwa rodzaje wyliczeń: prostych typów wyliczeniowych i flagi wyliczeń.  
@@ -95,7 +94,7 @@ Typy wyliczeniowe są specjalnym rodzajem typu wartości. Istnieją dwa rodzaje 
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
+ *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz także
 

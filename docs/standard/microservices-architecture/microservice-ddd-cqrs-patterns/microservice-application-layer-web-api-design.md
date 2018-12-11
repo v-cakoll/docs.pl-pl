@@ -4,12 +4,12 @@ description: 'Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | B
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 03e08d757917b5ff658e9d4dd282a096c8dd23d5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: f31c712143a448e12350db1ed242da7561a7a286
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296775"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147499"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>Projektowanie warstwy aplikacji mikrousług i internetowego interfejsu API
 
@@ -37,7 +37,7 @@ Zajęłoby innego przewodnika, aby omówić stałe. W związku z tym ten przewod
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **STAŁE: Zasady podstawowe Obiektowo** \
+- **STAŁE: Obiektowo podstawowych zasad** \
   [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
 
 - **Inwersja kontroli kontenerów i wzorzec wstrzykiwanie zależności** \
@@ -47,5 +47,5 @@ Zajęłoby innego przewodnika, aby omówić stałe. W związku z tym ten przewod
   [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
 
 >[!div class="step-by-step"]
-[Poprzednie](nosql-database-persistence-infrastructure.md)
-[dalej](microservice-application-layer-implementation-web-api.md)
+>[Poprzednie](nosql-database-persistence-infrastructure.md)
+>[dalej](microservice-application-layer-implementation-web-api.md)

@@ -2,12 +2,12 @@
 title: Duże ilości danych i przesyłanie strumieniowe
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: f381df2acdb370c6e84d3a00079578f8fceb69f3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a6c655e260aa75504e9a445458664b11d8e4d56d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192577"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145140"
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
 Windows Communication Foundation (WCF) to infrastruktura komunikacji opartych na języku XML. Ponieważ dane XML zwykle jest zakodowane w formacie tekstu standardowego, zdefiniowane w [Specyfikacja XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838), połączone systemy, deweloperów i architektów są zazwyczaj zajmującym się ochroną zużycie o komunikacji sieciowej (lub rozmiar) komunikaty wysyłane między sieć i kodowanie oparte na tekście XML stanowi szczególne wyzwanie wydajny transfer danych binarnych.  
@@ -15,7 +15,7 @@ Windows Communication Foundation (WCF) to infrastruktura komunikacji opartych na
 ## <a name="basic-considerations"></a>Podstawowe zagadnienia  
  Aby podać ogólne informacje o następujące informacje dotyczące usługi WCF, w tej sekcji opisano niektóre ogólne problemy i zagadnienia dotyczące kodowania i danych binarnych i przesyłania strumieniowego, zazwyczaj dotyczą połączonych systemów infrastruktury.  
   
-### <a name="encoding-data-text-vs-binary"></a>Kodowania danych: A tekst plików binarnych  
+### <a name="encoding-data-text-vs-binary"></a>Kodowanie danych: Vs tekstu. plików binarnych  
  Problemy najczęściej zaakceptowania developer obejmują wrażenie, że plik XML zawiera znaczne obciążenie w porównaniu do formaty binarne ze względu na charakter powtarzające się znaczniki start i znacznikami końcowymi, czy kodowanie wartości liczbowych jest uważany za znacznie większą ponieważ są wyrażone w wartości tekstowe i danych binarnych nie można wyrazić efektywne, ponieważ muszą być specjalnie kodowane dla osadzania w formacie tekstowym.  
   
  Chociaż wiele z nich i podobnych zastosowaniach dotyczy są prawidłowe, rzeczywiste różnica między wiadomości tekstu XML kodowane w środowisku usług XML sieci Web i wiadomości w formacie pliku binarnego w starszej wersji zdalnego wywołania procedury (RPC) środowiska często jest znacznie mniej istotne niż może sugerować początkowej brany pod uwagę.  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) to infrastruktura komunikacji opartych na
  Podczas wysyłania dużych ilości danych należy ustawić `maxAllowedContentLength` ustawienie programu IIS (Aby uzyskać więcej informacji, zobacz [Konfigurowanie limity żądań usług IIS](https://go.microsoft.com/fwlink/?LinkId=253165)) i `maxReceivedMessageSize` powiązanie ustawienia (na przykład [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) lub <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). `maxAllowedContentLength` Właściwości wartość domyślna to 28.6 M i `maxReceivedMessageSize` właściwości wartość domyślna to 64 KB.  
   
 ## <a name="encodings"></a>Kodowanie  
- *Kodowanie* definiuje zestaw reguł o tym, jak prezentować wiadomości na łączu. *Kodera* implementuje takich kodowania i jest odpowiedzialny za, na stronie nadawcy zwroty <xref:System.ServiceModel.Channels.Message> wiadomości w pamięci do strumienia bajtów lub buforem bajtów, które mogą być wysyłane przez sieć. Po stronie odbiorcy kodera włącza sekwencję bajtów do wiadomości w pamięci.  
+ *Kodowanie* definiuje zestaw reguł o tym, jak prezentować wiadomości na łączu. *Kodera* implementuje takich kodowania i jest odpowiedzialny za, na stronie nadawcy włączenie w pamięci <xref:System.ServiceModel.Channels.Message> do strumienia bajtów lub buforem bajtów, które mogą być wysyłane przez sieć. Po stronie odbiorcy kodera włącza sekwencję bajtów do wiadomości w pamięci.  
   
  WCF zawiera trzy koderów i pozwala na zapis i dołączyć własnego kodery w razie potrzeby.  
   
@@ -239,4 +239,4 @@ public class UploadStreamMessage
 >  Decyzja dotycząca użycia buforowanego lub przesyłane strumieniowo transferu jest decyzja lokalnego punktu końcowego. Dla transportu HTTP tryb transferu nie propagować przez połączenie lub serwery proxy i innych pośredników. Ustawianie trybu transferu nie zostaną uwzględnione w opisie interfejsu usługi. Po wygenerowaniu klienta programu WCF do usługi, możesz edytować plik konfiguracji usługi przeznaczone do użycia w przypadku transferów przesyłane strumieniowo można ustawić trybu. Dla protokołu TCP i rodzajów transportu nazwanego potoku tryb transferu jest propagowany jako potwierdzenie zasad.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Instrukcje: włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Jak: Włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

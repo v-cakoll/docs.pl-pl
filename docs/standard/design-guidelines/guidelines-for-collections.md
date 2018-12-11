@@ -1,16 +1,15 @@
 ---
 title: Wytyczne dotyczące kolekcji
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 12f086ac92b449e074b9d39a563a20a3ebf2ff26
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964847"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145585"
 ---
 # <a name="guidelines-for-collections"></a>Wytyczne dotyczące kolekcji
 Dowolny typ, zaprojektowany specjalnie w celu manipulowania grupy obiektów mających pewne cechy wspólne jest uznawana za kolekcji. Prawie zawsze jest odpowiednia dla tych typów do zaimplementowania <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>, więc w tej sekcji możemy tylko należy wziąć pod uwagę typy Implementowanie jedno lub oba te interfejsy jako kolekcji.  
@@ -109,7 +108,7 @@ Dowolny typ, zaprojektowany specjalnie w celu manipulowania grupy obiektów maj�
  **X DO NOT** dziedziczyć nierodzajowe kolekcje podstawowej takich jak `CollectionBase`. Użyj `Collection<T>`, `ReadOnlyCollection<T>`, i `KeyedCollection<TKey,TItem>` zamiast tego.  
   
 ### <a name="naming-custom-collections"></a>Nazewnictwo kolekcje niestandardowe  
- Kolekcje (typami, które implementują `IEnumerable`) są tworzone głównie dwóch powodów: (1), aby utworzyć nową strukturę danych za pomocą operacji specyficznych dla struktury i często różną charakterystykę wydajności niż istniejącymi strukturami danych (np. <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>), a (2), aby utworzyć kolekcję specjalne do przechowywania określony zbiór elementów (np. <xref:System.Collections.Specialized.StringCollection>). Struktury danych są najczęściej używane w wewnętrznej implementacji aplikacji i bibliotek. Specjalne kolekcje są głównie ujawnianie w interfejsach API (jako typy właściwości i parametrów).  
+ Kolekcje (typami, które implementują `IEnumerable`) są tworzone głównie dwóch powodów: (1) do utworzenia nowej struktury danych z operacjami określonej struktury i często z różną charakterystykę wydajności niż istniejącymi strukturami danych (np. <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) oraz (2) Utwórz kolekcję wyspecjalizowane dla zawierający określony zbiór elementów (np. <xref:System.Collections.Specialized.StringCollection>). Struktury danych są najczęściej używane w wewnętrznej implementacji aplikacji i bibliotek. Specjalne kolekcje są głównie ujawnianie w interfejsach API (jako typy właściwości i parametrów).  
   
  **✓ DO** Użyj sufiksu "Słownik" w nazwach obiektów abstrakcyjnych implementacja `IDictionary` lub `IDictionary<TKey,TValue>`.  
   
@@ -127,7 +126,7 @@ Dowolny typ, zaprojektowany specjalnie w celu manipulowania grupy obiektów maj�
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
+ *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz także
 

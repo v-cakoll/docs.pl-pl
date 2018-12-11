@@ -1,19 +1,18 @@
 ---
 title: Klasy bazowe na potrzeby implementowania abstrakcji
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+author: KrzysztofCwalina
+ms.openlocfilehash: 411596f342930c9387dc6523d25805bddad18687
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677074"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148677"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Klasy bazowe na potrzeby implementowania abstrakcji
 Ściśle rzecz ujmując klasę staje się klasę bazową, gdy inna klasa pochodzi od niego. Na potrzeby tej sekcji jednak klasa bazowa jest przeznaczona głównie w celu przesłania wspólnej abstrakcji, lub dla innych klas ponownie użyć niektórych Domyślna implementacja jednak dziedziczenia klasy. Klasy bazowe znajdują się zwykle w środku hierarchii dziedziczenia między klasą abstrakcyjną w katalogu głównym hierarchii i kilka niestandardowych implementacji u dołu.  
@@ -32,7 +31,7 @@ ms.locfileid: "45677074"
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Przedrukowano przez uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: konwencje Idiomy i wzorce wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams opublikowane 22 Oct 2008 przez Professional Addison Wesley jako część serii rozwoju Windows firmy Microsoft.*  
+ *Przedrukowano za uprawnienie Pearson edukacji, Inc. z [wytyczne dotyczące projektowania Framework: Konwencje, Idiomy i wzorców dla wielokrotnego użytku, do bibliotek .NET, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Brad Abrams publikowane 22 Oct 2008 przez Addison Wesley Professional w ramach serii rozwoju Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz także
 

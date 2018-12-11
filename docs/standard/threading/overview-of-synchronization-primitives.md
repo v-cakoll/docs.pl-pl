@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201601"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146579"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Przegląd elementów podstawowych synchronizacji
 
@@ -79,9 +79,9 @@ Aby uzyskać więcej informacji na temat zalety i wady wynikające z użycia pok
 
 ### <a name="readerwriterlockslim-class"></a>Klasa ReaderWriterLockSlim
 
-<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> Klasy udziela wyłączny dostęp do udostępnionego zasobu do zapisu i umożliwia wielu wątkach, aby uzyskać dostęp do zasobu, jednocześnie do odczytu. Możesz chcieć użyć <xref:System.Threading.ReaderWriterLockSlim> do synchronizowania dostępu do struktury danych udostępnionych, która obsługuje operacje odczytu metodą o bezpiecznych wątkach, ale wymaga wyłącznego dostępu do wykonywania operacji zapisu. Gdy wątek żąda wyłącznego dostępu (na przykład przez wywołanie metody <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> metoda), Czytelnik kolejnych żądań bloku dopiero po zamknięciu wszystkich istniejących czytelników blokady i Edytor wprowadził i zakończony blokady.
+<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> Klasy udziela wyłączny dostęp do udostępnionego zasobu do zapisu i umożliwia wielu wątkach, aby uzyskać dostęp do zasobu, jednocześnie do odczytu. Możesz chcieć użyć <xref:System.Threading.ReaderWriterLockSlim> do synchronizowania dostępu do struktury danych udostępnionych, która obsługuje operacje odczytu metodą o bezpiecznych wątkach, ale wymaga wyłącznego dostępu do wykonywania operacji zapisu. Gdy wątek żąda wyłącznego dostępu (na przykład przez wywołanie metody <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> metoda), kolejne bloku czytników i składników zapisywania żądań do wszystkich istniejących czytelnicy opuścili blokady i Edytor wprowadził i zakończony blokady.
   
-Aby uzyskać więcej informacji, zobacz [reader_writer_lock](reader-writer-locks.md) artykułu i <xref:System.Threading.ReaderWriterLockSlim> dokumentacja interfejsu API.
+Aby uzyskać więcej informacji, zobacz <xref:System.Threading.ReaderWriterLockSlim> dokumentacja interfejsu API.
 
 ### <a name="semaphore-and-semaphoreslim-classes"></a>Semaphore i SemaphoreSlim klasy
 
@@ -134,7 +134,7 @@ Aby uzyskać więcej informacji, zobacz [barierę](barrier.md) artykułu i <xref
 
 <xref:System.Threading.Interlocked?displayProperty=nameWithType> Klasa zawiera metody statyczne, wykonujących proste niepodzielne operacje na zmiennej. Te niepodzielne operacje obejmują dodawanie, inkrementacji i dekrementacji, exchange i warunkowego programu exchange, który zależy od porównanie, a operacja wartość 64-bitową liczbę całkowitą odczytu.
 
-Aby uzyskać więcej informacji, zobacz [operacji Blokowanej](interlocked-operations.md) artykułu i <xref:System.Threading.Interlocked> dokumentacja interfejsu API.
+Aby uzyskać więcej informacji, zobacz <xref:System.Threading.Interlocked> dokumentacja interfejsu API.
 
 ## <a name="spinwait-structure"></a>Struktura metody SpinWait
 

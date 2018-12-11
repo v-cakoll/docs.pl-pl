@@ -1,15 +1,15 @@
 ---
 title: Testowanie aplikacji internetowych i usług platformy ASP.NET Core
-description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Testowanie aplikacji internetowych i usług platformy ASP.NET Core
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Eksplorowanie architektury do testowania aplikacji internetowych i usług platformy ASP.NET Core w kontenerach.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 2702a273ade0e58ba93d556cfd1ecc5531027f93
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/02/2018
+ms.openlocfilehash: 67989dc9651745ce0bd9ee9bbcbde1af0b7bc452
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232862"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148031"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług platformy ASP.NET Core
 
@@ -29,7 +29,7 @@ Należy przetestować sposób działania oparte na prawidłowe lub nieprawidłow
 
 Testy jednostkowe polega części aplikacji w izolacji od jego infrastruktura i zależności. Podczas testów jednostkowych można logiką kontrolera, tylko zawartość jednej akcji lub metoda jest testowany, nie zachowanie jego zależności lub samej strukturze. Testy jednostkowe nie wykryto problemów, interakcja między składnikami — to znaczy celem testów integracji.
 
-Jako jednostki możesz przetestować akcji kontrolera, upewnij się, że możesz skoncentrować się tylko na ich zachowanie. Kontroler testu jednostkowego pozwala uniknąć elementów, takich jak filtrów routingu i wiązania modelu. Ponieważ skupiają się na testowanie tylko jedną z rzeczy, testy jednostkowe są zwykle łatwe do zapisania i szybkie uruchamianie. Dobrze napisane zestaw testów jednostkowych mogą być uruchamiane często bez koszty ogólne.
+Jako jednostki możesz przetestować akcji kontrolera, upewnij się, że możesz skoncentrować się tylko na ich zachowanie. Kontroler testu jednostkowego pozwala uniknąć elementów, takich jak filtrów routingu i wiązania modelu (mapowanie dane żądania ViewModel lub obiekt DTO). Ponieważ skupiają się na testowanie tylko jedną z rzeczy, testy jednostkowe są zwykle łatwe do zapisania i szybkie uruchamianie. Dobrze napisane zestaw testów jednostkowych mogą być uruchamiane często bez koszty ogólne.
 
 Testy jednostkowe są implementowane w oparciu o struktury testów, takimi jak xUnit.net, MSTest, Moq lub NUnit. W ramach aplikacji eShopOnContainers przykładowej aplikacji użyto xUnit.
 
@@ -37,19 +37,26 @@ Podczas pisania testów jednostkowych dla kontrolera interfejsu API sieci Web, t
 
 ```csharp
 [Fact]
-public void Add_new_Order_raises_new_event()
+public async Task Get_order_detail_success()
 {
-    // Arrange
-    var street = " FakeStreet ";
-    var city = "FakeCity";
-    // Other variables omitted for brevity ...
-    // Act
-    var fakeOrder = new Order(new Address(street, city, state, country, zipcode),
-        cardTypeId, cardNumber,
-        cardSecurityNumber, cardHolderName,
-        cardExpiration);
-    // Assert
-    Assert.Equal(fakeOrder.DomainEvents.Count, expectedResult);
+    //Arrange
+    var fakeOrderId = "12";
+    var fakeOrder = GetFakeOrder();
+ 
+    //...
+
+    //Act
+    var orderController = new OrderController(
+        _orderServiceMock.Object, 
+        _basketServiceMock.Object, 
+        _identityParserMock.Object);
+
+    orderController.ControllerContext.HttpContext = _contextMock.Object;
+    var actionResult = await orderController.Detail(fakeOrderId);
+ 
+    //Assert
+    var viewResult = Assert.IsType<ViewResult>(actionResult);
+    Assert.IsAssignableFrom<Order>(viewResult.ViewData.Model);
 }
 ```
 
@@ -63,7 +70,7 @@ W przeciwieństwie do testów jednostkowych testów integracji często obejmują
 
 Ponieważ testy integracji wykonywania większych segmenty kodu niż testy jednostkowe i testy integracji zależą elementy infrastruktury, mają zwykle rzędów wolniej niż testy jednostkowe. W związku z tym to dobry pomysł, aby ograniczyć liczbę testów integracji pisania i uruchamiania.
 
-Platforma ASP.NET Core zawiera wbudowany test hosta sieci web używanym do obsługi żądań HTTP bez obciążenie sieci, co oznacza, że mogą szybciej uruchamiania tych testów, korzystając z hosta sieci web rzeczywistych. Test hosta sieci web jest dostępna w składniku NuGet jako Microsoft.AspNetCore.TestHost. On mogą być dodawane do projektów testów integracji i używane do hosta platformy ASP.NET Core aplikacje.
+Platforma ASP.NET Core zawiera wbudowany test hosta sieci web używanym do obsługi żądań HTTP bez obciążenie sieci, co oznacza, że mogą szybciej uruchamiania tych testów, korzystając z hosta sieci web rzeczywistych. Test hosta sieci web (element TestServer) jest dostępna w składniku NuGet jako Microsoft.AspNetCore.TestHost. On mogą być dodawane do projektów testów integracji i używane do hosta platformy ASP.NET Core aplikacje.
 
 Jak widać w poniższym kodzie, tworząc testy integracji dla platformy ASP.NET Core kontrolerów, tworzy się kontrolery, za pośrednictwem hosta testów. To jest porównywalna do żądania HTTP, ale działa szybciej.
 
@@ -96,33 +103,111 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Steve Smith. Kontrolery testów** (platformy ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. Kontrolery testów** (platformy ASP.NET Core) <br/>
+    [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. Testowanie integracji** (platformy ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](/aspnet/core/test/integration-tests)
+-   **Steve Smith. Testowanie integracji** (platformy ASP.NET Core) <br/>
+    [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
--   **Testowanie jednostek w .NET Core za pomocą polecenia dotnet test**
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
+-   **Testowanie jednostek w .NET Core za pomocą polecenia dotnet test** <br/>
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
 
--   **xUnit.net**. Oficjalna witryna.
+-   **xUnit.net**. Oficjalna witryna. <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **O teście jednostkowym.**
+-   **O teście jednostkowym.** <br/>
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
--   **Moq**. Repozytorium GitHub.
+-   **Moq**. Repozytorium GitHub. <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
--   **NUnit**. Oficjalna witryna.
+-   **NUnit**. Oficjalna witryna. <br/>
     [*https://www.nunit.org/*](https://www.nunit.org/)
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>Wdrażanie usługi testów na aplikację obsługującą wiele kontenerów 
 
 Jak wspomniano wcześniej, podczas testowania aplikacji obsługującej wiele kontenerów, wszystkie mikrousługi muszą działać w ramach klastra hostów lub kontenera Docker. Testy usług end-to-end, obejmujących wiele operacji obejmujących wiele mikrousług wymagają jej wdrażanie i uruchamianie całej aplikacji na hoście platformy Docker za pomocą platformy docker-compose up (lub porównywalny mechanizmu, jeśli używasz programu orchestrator). Gdy całej aplikacji i wszystkich jego usług jest uruchomiona, można wykonać end-to-end integracji i testów funkcjonalnych.
 
-Istnieje kilka metod, których można użyć. W pliku docker-compose.yml, który zostanie użyty do wdrożenia aplikacji (lub podobnych, takich jak docker-compose.ci.build.yml), na poziomie rozwiązania można rozwinąć punktu wejścia, aby użyć [polecenia dotnet test](../../../core/tools/dotnet-test.md). Można również użyć innego pliku compose, która może uruchomić testy na ilustracji, które są przeznaczone dla. Przy użyciu innego pliku compose dla testów integracyjnych, które obejmuje z mikrousług i bazami danych w kontenerach, należy upewnić się, że powiązanych danych zawsze jest resetowany do stanu pierwotnego przed uruchomieniem testów.
+Istnieje kilka metod, których można użyć. W pliku docker-compose.yml, która umożliwia wdrażanie aplikacji na poziomie rozwiązania można rozwinąć punktu wejścia, aby użyć [polecenia dotnet test](https://docs.microsoft.com/dotnet/articles/core/tools/dotnet-test). Można również użyć innego pliku compose, która może uruchomić testy na ilustracji, które są przeznaczone dla. Przy użyciu innego pliku compose dla testów integracyjnych, które obejmuje z mikrousług i bazami danych w kontenerach, należy upewnić się, że powiązanych danych zawsze jest resetowany do stanu pierwotnego przed uruchomieniem testów.
 
 Po skonfigurowaniu i uruchomieniu aplikacji compose możesz korzystać z zalet punktów przerwania i wyjątków w przypadku korzystania z programu Visual Studio. Lub uruchomić testy integracji automatycznie w potoku ciągłej integracji w usługach infrastruktury DevOps platformy Azure lub inny system ciągłej integracji/ciągłego wdrażania, który obsługuje kontenery platformy Docker.
 
+## <a name="testing-in-eshoponcontainers"></a>Testowanie w ramach aplikacji eShopOnContainers
+
+Odwołanie do testów aplikacji (w ramach aplikacji eShopOnContainers) zostały ostatnio przekształcony, a teraz istnieją cztery kategorie:
+
+1.  **Jednostka** testów, wystarczy zwykłe stare regularnych testów jednostkowych zawarte w **{MicroserviceName}. UnitTests** projektów
+
+2.  **Testy funkcjonalne/integracji Mikrousług**z przypadkami testowymi obejmujące insfrastructure dla poszczególnych mikrousług, ale odizolowany od innych i są zawarte w **{MicroserviceName}. FunctionalTests** projektów.
+
+3.  **Testy funkcjonalne/integracja aplikacji**, koncentrujących się na mikrousługi integracji z przypadkami testowymi, które powodowały kilka mikrousług. Te testy znajdują się w projekcie **Application.FunctionalTests**.
+
+4.  **Testy obciążenia**, koncentrujących się na czasy odpowiedzi dla poszczególnych mikrousług. Te testy znajdują się w projekcie **LoadTest** i Visual Studio 2017 Enterprise Edition.
+
+Testów jednostek i integracji na mikrousługę znajdują się w folderze testu w każdej mikrousługi i testy obciążenia są umieszczane w obszarze foldel testu w folderze rozwiązania aplikacji, jak pokazano w rysunek 6-25.
+
+![Struktura testów w ramach aplikacji eShopOnContainers: Każda usługa ma folder "test", który zawiera jednostki i testów funkcjonalnych. W folderze rozwiązania "test" istnieją testów szeroki funkcjonalnych aplikacji i ładowanie testów.](./media/image42.png)
+
+**Rysunek 6-25**. Testowanie strukturę folderów w ramach aplikacji eShopOnContainers
+
+Mikrousługi i testów funkcjonalnych/integracja aplikacji są uruchamiane z programu Visual Studio, przy użyciu modułu uruchamiającego testy w regularnych, ale najpierw należy do uruchamiania usług wymaganej infrastruktury, za pomocą zestawu plików docker-compose zawartych w rozwiązaniu test folderu :
+
+**docker-compose-test.yml**
+
+```yml
+version: '3.4'
+
+services:
+  redis.data:
+    image: redis:alpine
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+  nosql.data:
+    image: mongo
+```
+
+**docker-compose-test.override.yml**
+
+```yml
+version: '3.4'
+
+services:
+  redis.data:
+    ports:
+      - "6379:6379"
+  rabbitmq:
+    ports:
+      - "15672:15672"
+      - "5672:5672" 
+  sql.data:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+  nosql.data:
+    ports:
+      - "27017:27017"
+```
+
+Tak do uruchamiania testów funkcjonalnych/integracja należy najpierw uruchomić to polecenie z folderu testów rozwiązania:
+
+``` console
+docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
+```
+
+Jak widać, te narzędzia docker-compose plików Uruchom mikrousług pamięci podręcznej Redis, RabitMQ, programu SQL Server i bazy danych MongoDB.
+
+### <a name="additionl-resources"></a>Zasoby Additionl
+
+-   **Plik README testy** w ramach aplikacji eShopOnContainers repozytorium w witrynie GitHub <br/>
+    [*https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test*](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
+
+-   **Plik README testy obciążenia** w ramach aplikacji eShopOnContainers repozytorium w witrynie GitHub <br/>
+    [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
+
 >[!div class="step-by-step"]
-[Poprzednie](subscribe-events.md)
-[dalej](../microservice-ddd-cqrs-patterns/index.md)
+>[Poprzednie](subscribe-events.md)
+>[dalej](background-tasks-with-ihostedservice.md)

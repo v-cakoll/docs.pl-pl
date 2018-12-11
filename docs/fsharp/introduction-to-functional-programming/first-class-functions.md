@@ -2,12 +2,12 @@
 title: Funkcje pierwszej klasy
 description: Dowiedz się więcej o najwyższej klasy funkcji i jak są one ważne w przypadku programowania funkcyjnego w F#.
 ms.date: 10/29/2018
-ms.openlocfilehash: 1459049c9c1c77f4eefd2a83945335b33ca22ab9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50744622"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148641"
 ---
 # <a name="first-class-functions"></a>Funkcje pierwszej klasy
 
@@ -27,7 +27,7 @@ Ostatnie dwie miary zdefiniować, co to są znane jako *operacje wyższego rzęd
 
 ## <a name="give-the-value-a-name"></a>Nadaj nazwę wartości
 
-Jeśli funkcja jest wartością pierwszej klasy, należy możliwość nadaj mu tak samo, jak możesz nazwać liczb całkowitych, ciągów i innych wbudowanych typów. Jest to określane w funkcjonalności programowania literaturze dostępne jako powiązanie identyfikatora do wartości. F# stosuje [ `let` powiązania](../language-reference/functions/let-bindings.md) można powiązać nazwy wartości: `let <identifier> = <value>`. Poniższy kod pokazuje dwa przykłady.
+Jeśli funkcja jest wartością pierwszej klasy, należy możliwość nadaj mu tak samo, jak możesz nazwać liczb całkowitych, ciągów i innych wbudowanych typów. Jest to określane w funkcjonalności programowania literaturze dostępne jako powiązanie identyfikatora do wartości. F#używa [ `let` powiązania](../language-reference/functions/let-bindings.md) można powiązać nazwy wartości: `let <identifier> = <value>`. Poniższy kod pokazuje dwa przykłady.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet20.fs)]
 
@@ -35,7 +35,7 @@ Funkcja równie łatwo można nazwać. W poniższym przykładzie zdefiniowano fu
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
 
-F# zawiera następujące bardziej zwięzły widok składnię, aby osiągnąć ten sam wynik w trakcie pisania mniej.
+F#udostępnia następujące bardziej zwięzły widok składnię, aby osiągnąć ten sam wynik w trakcie pisania mniej.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet22.fs)]
 
@@ -57,7 +57,7 @@ Podobnie, po prostu jako identyfikator `num` i liczba całkowita 10 może być u
 
 ## <a name="pass-the-value-as-an-argument"></a>Przekaż wartość jako Argument
 
-Jeśli wartość ma stan najwyższej jakości w języku, możesz przekazać go jako argument do funkcji. Na przykład jest wspólne dla przekazywania ciągów i liczby całkowite jako argumenty. Poniższy kod przedstawia liczb całkowitych i ciągi przekazywane jako argumenty w języku F#.
+Jeśli wartość ma stan najwyższej jakości w języku, możesz przekazać go jako argument do funkcji. Na przykład jest wspólne dla przekazywania ciągów i liczby całkowite jako argumenty. Poniższy kod przedstawia liczb całkowitych i ciągi przekazywane jako argumenty w F#.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet26.fs)]
 
@@ -69,7 +69,7 @@ W poniższym przykładzie funkcja `applyIt` zawiera dwa parametry `op` i `arg`. 
 
 Możliwość wysyłania funkcji jako argument do innej funkcji źródłową wspólne elementy abstrakcji w funkcjonalności języków programowania, takich jak mapy lub filtr operacji. Operacja mapy, na przykład jest funkcja wyższego rzędu, która przechwytuje obliczanie udostępnionych przez funkcje, które przejrzeć listę, zrobić coś do każdego elementu, a następnie wróć do listy wyników. Można zwiększyć każdy element na liście liczb całkowitych, kwadratowe każdy element lub zmienić każdy element na liście ciągi na wielkie litery. Podatne część obliczeń jest proces cyklicznego tej czynności za pomocą listy i tworzy listę wyników do zwrócenia. Ta część jest przechwytywane w funkcji mapowania. Wszystko, trzeba napisać dla konkretnej aplikacji, to funkcja, którą chcesz zastosować do każdego elementu listy indywidualnie (Dodawanie, squaring, zmienianie wielkości liter). Że funkcja jest wysyłany jako argument do funkcji mapowania, podobnie jak `squareIt` są wysyłane do `applyIt` w poprzednim przykładzie.
 
-F# zawiera metody mapy dla większości typów kolekcji, w tym [Wyświetla](../language-reference/lists.md), [tablic](../language-reference/arrays.md), i [sekwencje](../language-reference/sequences.md). W poniższych przykładach używane listy. Składnia jest `List.map <the function> <the list>`.
+F#udostępnia metody mapy dla większości typów kolekcji, w tym [Wyświetla](../language-reference/lists.md), [tablic](../language-reference/arrays.md), i [sekwencje](../language-reference/sequences.md). W poniższych przykładach używane listy. Składnia jest `List.map <the function> <the list>`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet28.fs)]
 
@@ -99,19 +99,19 @@ Poniższy kod używa `checkFor` Aby utworzyć nową funkcję, która przyjmuje j
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet33.fs)]
 
-W poniższym przykładzie użyto najwyższej jakości stanu funkcji w języku F# do deklarowania funkcji, `compose`, która zwraca złożeniem dwóch argumentów funkcji.
+W poniższym przykładzie użyto najwyższej jakości stanu funkcji w F# do deklarowania funkcji, `compose`, która zwraca złożeniem dwóch argumentów funkcji.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet34.fs)]
 
->[!NOTE]
-Nawet krótszych wersji zapoznać się z sekcją "Curried funkcji."
+> [!NOTE]
+> Nawet krótszych wersji zapoznać się z sekcją "Curried funkcji."
 
 Poniższy kod wysyła dwie funkcje jako argumenty `compose`, z którym podjąć jeden argument tego samego typu. Wartość zwracana jest nową funkcję, która jest kompozycją argumentów dwóch funkcji.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet35.fs)]
 
->[!NOTE]
-F# zawiera dwa operatory `<<` i `>>`, które tworzą funkcje. Na przykład `let squareAndDouble2 = doubleIt << squareIt` jest odpowiednikiem `let squareAndDouble = compose doubleIt squareIt` w poprzednim przykładzie.
+> [!NOTE]
+> F#udostępnia dwa operatory `<<` i `>>`, które tworzą funkcje. Na przykład `let squareAndDouble2 = doubleIt << squareIt` jest odpowiednikiem `let squareAndDouble = compose doubleIt squareIt` w poprzednim przykładzie.
 
 Poniższy przykład zwraca funkcję jako wartość wywołania funkcji tworzy prostą zgadywania gier. Aby utworzyć grę, wywołaj `makeGame` wartością ma inną osobę do odgadnięcia wysyłany `target`. Wartość zwrócona przez funkcję `makeGame` jest funkcją, która przyjmuje jeden argument (wynik) i raporty, czy wynik jest poprawny.
 
@@ -123,7 +123,7 @@ Poniższy kod wywoła `makeGame`, wysyłania wartości `7` dla `target`. Identyf
 
 ## <a name="curried-functions"></a>Funkcje rozwinięte
 
-Większość przykładów w poprzedniej sekcji można napisać bardziej zwięzłym, wykorzystując niejawny *currying* w deklaracjach funkcji F#. Currying jest procesem, który przekształca funkcja, która ma więcej niż jeden parametr do serii osadzonych funkcji, z których każdy ma jeden parametr. W języku F# natury przenoszeni się funkcji, które mają więcej niż jeden parametr. Na przykład `compose` z poprzedniej sekcji, można napisać tak, jak pokazano na poniższej zwarty styl z trzema parametrami.
+Większość przykładów w poprzedniej sekcji można napisać bardziej zwięzłym, wykorzystując niejawny *currying* w F# deklaracje funkcji. Currying jest procesem, który przekształca funkcja, która ma więcej niż jeden parametr do serii osadzonych funkcji, z których każdy ma jeden parametr. W F#, funkcje, które mają więcej niż jeden parametr natury są przenoszeni. Na przykład `compose` z poprzedniej sekcji, można napisać tak, jak pokazano na poniższej zwarty styl z trzema parametrami.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet38.fs)]
 
@@ -139,8 +139,8 @@ Aby sprawdzić, czy funkcja nadal działa tak jak poprzednio, spróbuj ponownie,
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet41.fs)]
 
->[!NOTE]
-Możesz ograniczyć currying, umieszczając parametrów w spójnych kolekcjach. Aby uzyskać więcej informacji, zobacz "Parametr wzorców" w [parametrami i argumentami](../language-reference/parameters-and-arguments.md).
+> [!NOTE]
+> Możesz ograniczyć currying, umieszczając parametrów w spójnych kolekcjach. Aby uzyskać więcej informacji, zobacz "Parametr wzorców" w [parametrami i argumentami](../language-reference/parameters-and-arguments.md).
 
 W poniższym przykładzie użyto niejawne currying do zapisania krótszą wersję `makeGame`. Szczegóły dotyczące `makeGame` tworzy i zwraca `game` funkcji są mniej jawne, w tym formacie, ale można sprawdzić za pomocą oryginalnego przypadków testowych, czy wynik jest taki sam.
 
@@ -162,7 +162,7 @@ Aby móc go jeden krok dalej, zastąp wartość która `applyIt` jest powiązany
 
 ## <a name="functions-are-first-class-values-in-f"></a>Funkcje są wartości pierwszej klasy w F\#
 
-W przykładach w poprzedniej sekcji pokazują, że funkcje w języku F# spełniają kryteria są wartości pierwszej klasy w języku F#:
+Na potrzeby przykładów w poprzednich sekcjach pokazują, że funkcje w F# spełniają kryteria są wartości pierwszej klasy w F#:
 
 - Można powiązać identyfikatora definicji funkcji.
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
@@ -176,7 +176,7 @@ W przykładach w poprzedniej sekcji pokazują, że funkcje w języku F# spełnia
 - Funkcja może zwrócić jako wartość wywołania funkcji.
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet32.fs)]
 
-Aby uzyskać więcej informacji na temat języka F#, zobacz [dokumentacja języka F#](../language-reference/index.md).
+Aby uzyskać więcej informacji na temat F#, zobacz [ F# Language Reference](../language-reference/index.md).
 
 ## <a name="example"></a>Przykład
 
@@ -194,4 +194,4 @@ Poniższy kod zawiera wszystkie przykłady w tym temacie.
 - [Krotki](../language-reference/tuples.md)
 - [Funkcje](../language-reference/functions/index.md)
 - [`let` Powiązania](../language-reference/functions/let-bindings.md)
-- [Wyrażenia lambda: `fun` — słowo kluczowe](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [Wyrażenia lambda: `fun` — Słowo kluczowe](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

@@ -1,67 +1,65 @@
 ---
 title: Architektura Mikrousług
-description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Architektura Mikrousług
+description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Widok 30.000 stopy architektury Mikrousług.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: e41544a7c5f352321c3fa3e61a71568a6cf0f219
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: dc96c5570ea829802c94c817ebd4910a090632ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106687"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145741"
 ---
 # <a name="microservices-architecture"></a>Architektura Mikrousług
 
-Jak wskazuje nazwę, architektura mikrousług jest podejście do tworzenia aplikacji serwera jako zestaw usług mała. Każda usługa jest uruchamiana we własnym procesie i komunikuje się z innymi procesami przy użyciu protokołów, takich jak HTTP/HTTPS, Websocket, lub [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Każdy mikrousługi implementuje określonej domeny end-to-end lub możliwości biznesowe w obrębie granicy kontekstu oraz poszczególnych musi być opracowana autonomicznie i możliwych do wdrożenia niezależnie. Na koniec każdego mikrousługi powinien być właścicielem jego modelu danych powiązanych domeny i logika domeny (suwerenności i zarządzanie zdecentralizowane danych) na podstawie technologii magazynowania danych (SQL, NoSQL) i różnych języków programowania.
+Jak wskazuje nazwa, architektura mikrousług jest podejście do kompilowania aplikacji serwera jako zestaw małych usług. Oznacza to, że architektura mikrousług jest zorientowany głównie na zaplecze, chociaż to podejście jest również używany fronton. Każda usługa jest uruchamiana we własnym procesie i komunikuje się z innymi procesami przy użyciu protokołów, takich jak HTTP/HTTPS, funkcja WebSockets, lub [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Każda mikrousługa implementuje określonej domeny end-to-end lub funkcję biznesową w obrębie granicy kontekstu, a każda musi być opracowana autonomicznie i być niezależnie do wdrożenia. Na koniec poszczególne mikrousługi powinny odpowiadać jej modelu danych pokrewne domeny i logika domeny (niezależność danych i zarządzania danymi zdecentralizowane) i mogą być oparte na różne technologie przechowywania danych (SQL, NoSQL) i w różnych językach programowania.
 
-Jaki rozmiar powinna być mikrousługi? Podczas tworzenia mikrousługi, rozmiar nie może być istotne. Zamiast tego istotne należy utworzyć słabo sprzężona usług, więc autonomię tworzenia, wdrażania i skalowania dla każdej usługi. Oczywiście podczas identyfikacji i mikrousług projektowania, należy spróbować były możliwie najmniejsze tak długo, jak nie ma zbyt wiele zależności bezpośrednich z innych mikrousług. Większe znaczenie niż rozmiar mikrousługi spójności wewnętrznego, który musi mieć i jego niezależność od innych usług.
+Rozmiar powinien być mikrousługi? Podczas tworzenia mikrousług, rozmiar nie powinien być istotne. Zamiast tego należy koniecznie zwrócić należy utworzyć luźno sprzężonych usług, więc trzeba autonomii programowania, wdrażania i skalowania dla każdej usługi. Oczywiście i projektowanie mikrousług, należy spróbować były tak małej, jak to możliwe tak długo, jak nie ma zbyt wiele zależności bezpośrednich za pomocą innych mikrousług. Ważniejsze niż rozmiar mikrousług jest to wewnętrzny spójności, który musi mieć oraz jego niezależność od innych usług.
 
-Dlaczego architektura mikrousług? Krótko mówiąc zapewnia elastyczność długoterminowej. Mikrousług włączyć lepsze utrzymanie w systemach złożonych, duże i wysoko skalowane przez umożliwienie tworzenia aplikacji z wielu usług niezależnie do wdrożenia że mieć cykle szczegółowego i autonomicznego.
+Dlaczego architektura mikrousług? Krótko mówiąc zapewnia elastyczność długoterminowego. Mikrousługi Włącz lepsze łatwość konserwacji w złożonych, duże i wysoce skalowalnych systemów, umożliwiając tworzenie aplikacji na podstawie wielu usług niezależnie do wdrożenia, w których każdy może mieć cykle życia szczegółową i autonomicznych.
 
-Dodatkowa korzyść mikrousług można skalować w poziomie niezależnie. Zamiast aplikacją wbudowanymi pojedynczego musi skalowanie w poziomie jako jednostki, możesz zamiast tego skalować w poziomie określonych mikrousług. W ten sposób można skalować tylko funkcjonalności wymaga więcej przetwarzania zasilania lub sieci przepustowość do obsługi żądanie, a nie skalowania innych obszarach aplikacji, które nie muszą być skalowane obszaru. Oznacza to, że oszczędności, ponieważ potrzebna mniej sprzętu.
+Jako dodatkowa korzyść mikrousługi można skalować niezależnie. Zamiast pojedynczej aplikacji monolitycznych, należy skalować jako jednostkę, można zamiast tego skalować określonych mikrousług. W ten sposób można skalować tylko obszar funkcjonalny, który wymaga więcej przetwarzania zasilania lub sieci przepustowość do obsługi żądanie, zamiast skalowania w poziomie innych obszarów aplikacji, które nie muszą być skalowane. Oznacza to oszczędności, ponieważ potrzebne mniejszą sprzętu.
 
-![](./media/image6.png)
+![W tradycyjnych podejścia monolitycznego aplikacja jest skalowana przez Sklonowanie całej aplikacji w kilku serwerów/maszyn wirtualnych. W przypadku zastosowania podejścia mikrousług funkcje można podzielić w mniejszych usług, więc każdej usługi można skalować niezależnie.](./media/image6.png)
 
-**Rysunek 4 – 6**. Wbudowanymi wdrożenia i podejście mikrousług
+**Rysunek 4 – 6**. Monolityczny wdrożenia i podejście mikrousług
 
-Jak pokazano na rysunku 4 – 6, podejście mikrousług umożliwia elastyczne zmiany i szybkie iteracji każdego mikrousługi nie można zmienić określone, mała obszary aplikacji złożonych, duże i skalowalne.
+Jak pokazano na rysunku 4 – 6, podejście mikrousług umożliwia elastyczne zmian i iteracji szybkie poszczególne mikrousługi, ponieważ można zmienić określone, małych obszarów złożonych, duże i skalowalne aplikacje.
 
-Zaprojektowanie szczegółowych aplikacji opartych na mikrousług umożliwia ciągłej integracji i rozwiązań ciągłego dostarczania. Przyspiesza również dostarczania nowych funkcji, do aplikacji. Szczegółowe kompozycji aplikacji umożliwia również uruchamianie i testowanie mikrousług w izolacji i rozwijać je samodzielnie, przy zachowaniu wyczyść kontraktów między nimi. Tak długo, jak nie zmienisz interfejsów lub umowy, można zmienić wewnętrzny wykonania dowolnego mikrousługi lub dodawanie nowych funkcji bez przerywania innych mikrousług.
+Tworzenie szczegółowych aplikacji mikrousług umożliwia ciągłą integrację i ciągłe dostarczanie rozwiązań. Przyspiesza również dostarczania nowych funkcji do aplikacji. Szczegółowych skład aplikacji umożliwia uruchamianie i testowanie mikrousług w izolacji i autonomicznie ewolucja przy zachowaniu wyczyść umów między nimi. Tak długo, jak nie zmieniaj interfejsy lub umowy, można zmienić wewnętrzną implementację wszystkie mikrousługi, lub Dodaj nowe funkcje bez przerywania innych mikrousług.
 
-Poniżej przedstawiono istotne aspekty umożliwiające Powodzenie w przejściu w środowisku produkcyjnym z użyciem systemu mikrousług:
+Poniżej przedstawiono ważne kwestie umożliwiające sukces w przejściem do środowiska produkcyjnego w systemie opartych na mikrousługach:
 
--   Monitorowanie i kondycji kontroli usług i infrastruktury.
+- Monitorowanie i kontrole kondycji usług i infrastruktury.
 
--   Skalowalnej infrastruktury usług (czyli chmury i orchestrators).
+- Skalowalną infrastrukturę usługi (czyli chmury i koordynatorów).
 
--   Zabezpieczenia projektowania i wdrażania na wielu poziomach: uwierzytelniania, autoryzacji, zarządzanie klucze tajne, bezpiecznej komunikacji, itp.
+- Bezpieczeństwo projektowania i implementacji, na różnych poziomach: uwierzytelnianie, autoryzacja, zarządzania wpisami tajnymi, bezpiecznej komunikacji, itp.
 
--   Dostarczanie szybkie aplikacji, zwykle za pomocą różnych zespołów koncentrujących się na różnych mikrousług.
+- Dostarczanie aplikacji szybkie, zwykle przy użyciu różnych zespołów, skupiając się na różnych mikrousług.
 
--   DevOps i CI/CD rozwiązań i infrastruktury.
+- Praktyki DevOps i ciągłej integracji/ciągłego Dostarczania i infrastruktury.
 
-Z nich tylko pierwsze trzy są objęte lub wprowadzone w tym przewodniku. Ostatnie dwa punkty, które są związane z cyklem życia aplikacji, znajdują się w dodatkowych [konteneryzowanych cyklem życia aplikacji Docker z platformy firmy Microsoft i narzędziami](https://aka.ms/dockerlifecycleebook) Książka elektroniczna.
+Z tych opcji tylko pierwsze trzy są objęte lub wprowadzone w tym przewodniku. Ostatnie dwa punkty, które są związane z cyklem życia aplikacji, są objęte dodatkowy [kontenerowych nimi Docker cyklem życia aplikacji za pomocą platformy firmy Microsoft i narzędzi](https://aka.ms/dockerlifecycleebook) książki elektronicznej.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Russinovichem znaku. Mikrousług: Ma obrotów aplikacji obsługiwane przez usługę w chmurze**
-    [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
+- **Mark Russinovich. Mikrousługi: Rewolucja w aplikacjach obsługiwana przez chmurę** \
+  [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
 
--   **Pole Fowler. Mikrousług**
-    [*https://www.martinfowler.com/articles/microservices.html*](https://www.martinfowler.com/articles/microservices.html)
+- **Martina Fowlera. Mikrousługi** \
+  [*http://www.martinfowler.com/articles/microservices.html*](http://www.martinfowler.com/articles/microservices.html)
 
--   **Pole Fowler. Wymagania wstępne Mikrousługi**
-    [*https://martinfowler.com/bliki/MicroservicePrerequisites.html*](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
+- **Martina Fowlera. Wymagania wstępne dotyczące Mikrousług** \
+  [*http://martinfowler.com/bliki/MicroservicePrerequisites.html*](http://martinfowler.com/bliki/MicroservicePrerequisites.html)
 
--   **Jimmy Nilsson. Bryłkach chmury obliczeniowej**
-    [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
+- **Jimmy Nilsson. Podziel chmury obliczeniowej** \
+  [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
 
--   **Torre de la Cesarowi. Konteneryzowanych cyklem życia aplikacji Docker z platformy firmy Microsoft i narzędziami** (do pobrania Książka elektroniczna) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
-
-
-
+- **Torre'a de la Cesarowi. Kontenerowych nimi cykl życia aplikacji platformy Docker przy użyciu platformy firmy Microsoft i narzędzi** (do pobrania Książka elektroniczna) \
+  [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
 >[!div class="step-by-step"]
-[Poprzednie](service-oriented-architecture.md)
-[dalej](data-sovereignty-per-microservice.md)
+>[Poprzednie](service-oriented-architecture.md)
+>[dalej](data-sovereignty-per-microservice.md)

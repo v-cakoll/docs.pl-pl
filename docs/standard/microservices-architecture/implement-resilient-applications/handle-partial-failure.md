@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Ob
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: 723719b22c1c7de63f19f68acf91e6499c1a4e43
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 94239fc30292760b2bb28849f8c6ab72c7ceb33d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875186"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144731"
 ---
 # <a name="handling-partial-failure"></a>Obsługa częściowych niepowodzeń
 
@@ -39,7 +39,6 @@ Aby zminimalizować ten problem, w sekcji "*integracji asynchroniczne mikrousłu
 
 Ponadto jest istotne, projektowania aplikacji mikrousług i klienta, do obsługi częściowych niepowodzeń — czyli do kompilowania aplikacji mikrousług odporne na błędy i klienta.
 
-
 >[!div class="step-by-step"]
-[Poprzednie](index.md)
-[dalej](partial-failure-strategies.md)
+>[Poprzednie](index.md)
+>[dalej](partial-failure-strategies.md)

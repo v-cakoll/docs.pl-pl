@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: a71cbdce256b1c1bd5d101d66f216fb229d70adf
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ab533bc6b8bcff54774d849510c66ec3436ad3b5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844907"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146964"
 ---
  # <a name="when-c-reference"></a>gdy (odwołanie w C#)
 
@@ -23,10 +23,10 @@ Możesz użyć `when` kontekstowe słowo kluczowe, aby określić warunek filtru
 
 ## <a name="when-in-a-catch-statement"></a>`when` w `catch` — instrukcja
 
-Począwszy od C# 6, `When` mogą być używane w `catch` instrukcję, aby określić warunek, który musi mieć wartość true dla programu obsługi dla określonego wyjątku do wykonania. Jego składnia jest następująca:
+Począwszy od C# 6, `when` mogą być używane w `catch` instrukcję, aby określić warunek, który musi mieć wartość true dla programu obsługi dla określonego wyjątku do wykonania. Jego składnia jest następująca:
 
 ```csharp
-catch ExceptionType [e] when (expr)
+catch (ExceptionType [e]) when (expr)
 ```
 gdzie *expr* jest wyrażeniem, którego wynikiem jest wartość typu Boolean. Jeśli zostanie zwrócona `true`, uruchamia program obsługi wyjątku; Jeśli `false`, nie ma. 
 

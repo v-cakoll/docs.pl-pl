@@ -2,12 +2,12 @@
 title: Wprowadzenie do C# -zapoznanie się z poziomu narzędzi deweloperskich
 description: Ten artykuł zawiera podstawowe wprowadzenie do narzędzi, będziesz używać do tworzenia C# i aplikacje platformy .NET na maszynie.
 ms.date: 10/23/2018
-ms.openlocfilehash: ec7e55fbf2a89a8ec45db956fc575edeb2283f56
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cf5bf68c1497bf62826656aa9cd2bd981128d3a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200217"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129990"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Zapoznanie się z poziomu narzędzi deweloperskich platformy .NET
 
@@ -22,7 +22,7 @@ Będziesz tworzyć aplikacje za pomocą [ `dotnet new` ](../../../core/tools/dot
 
 Inne polecenia użyjesz [ `dotnet build` ](../../../core/tools/dotnet-build.md) do tworzenia pliku wykonywalnego i [ `dotnet run` ](../../../core/tools/dotnet-run.md) uruchomienia pliku wykonywalnego.
 
-## <a name="pick-your-turorial"></a>Wybierz swoje turorial
+## <a name="pick-your-tutorial"></a>Pobierz samouczek
 
 Można uruchomić z dowolnej z następujących samouczków:
 

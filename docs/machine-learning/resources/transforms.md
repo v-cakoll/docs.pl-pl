@@ -1,15 +1,16 @@
 ---
-title: Przekształcenia danych
+title: Przekształcenia danych w strukturze ML.NET
 description: Eksploruj obsługiwane w strukturze ML.NET przekształcenia danych.
+author: JRAlexander
 ms.date: 10/16/2018
-ms.openlocfilehash: 5df4598de6fcd08689d72c378f51d792860ef49c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c169319937dac13747935e451952bd75d4cc174d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187744"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143951"
 ---
-# <a name="data-transforms"></a>Przekształcenia danych
+# <a name="data-transforms-in-mlnet"></a>Przekształcenia danych w strukturze ML.NET
 
 Poniższe tabele zawierają informacje na temat wszystkich przekształceń danych obsługiwane w strukturze ML.NET (Wybierz dane, przekształcenie typu, aby przejść do odpowiedniej tabeli):
 
@@ -86,7 +87,7 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.BinNormalizer> | Wartości są przypisywane do pojemniki equidensity i wartość jest mapowany do jego bin_number / number_of_bins. |
 | <xref:Microsoft.ML.Legacy.Transforms.ConditionalNormalizer> | Normalizuj kolumn, tylko, jeśli jest to konieczne. |
-| <xref:Microsoft.ML.Legacy.Transforms.GlobalContrastNormalizer> | Wykonuje normalizacji kontrast globalne wartości wejściowe: Y = (s * X - min) / D, których s skalowania, M to średnia i D-L2 norm lub odchylenia standardowego. | 
+| <xref:Microsoft.ML.Legacy.Transforms.GlobalContrastNormalizer> | Wykonuje normalizacji kontrast globalnego na wartości wejściowe: Y = (s * X - min) / D, których s skalowania, M to średnia i D-L2 norm lub odchylenia standardowego. | 
 | <xref:Microsoft.ML.Legacy.Transforms.LogMeanVarianceNormalizer> | Normalizuje danych na podstawie obliczona średnia i Wariancja logarytmu danych. |
 | <xref:Microsoft.ML.Legacy.Transforms.LpNormalizer> | Normalizuj wektorów (wiersze) indywidualnie przez podczas ponownego skalowania ich do normy jednostki (L2, L1 lub LInf). Wykonuje następujące operacje na wektor X: Y = (X - min) / D, gdzie M to średnia i D to L2 norm, L1 norm lub LInf norm. |
 | <xref:Microsoft.ML.Legacy.Transforms.MeanVarianceNormalizer> | Normalizuje danych na podstawie obliczona średnia i wariancja danych. |

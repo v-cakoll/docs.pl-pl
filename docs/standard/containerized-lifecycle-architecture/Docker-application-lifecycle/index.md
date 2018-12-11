@@ -1,20 +1,20 @@
 ---
-title: Wprowadzenie do platformy Docker cyklu życia aplikacji
-description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
+title: Wprowadzenie do cyklu życia aplikacji platformy Docker
+description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 45a6e2fdf4c1308dc0de9d4eb828e6b3edcd4490
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ea97631f1a5147129c8ac3b1a4b9fa18999d21b9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106661"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147570"
 ---
-# <a name="introduction-to-the-docker-application-life-cycle"></a>Wprowadzenie do platformy Docker cyklu życia aplikacji
+# <a name="introduction-tothe-docker-application-life-cycle"></a>Wprowadzenie do cyklu życia aplikacji platformy Docker
  
-Cykl życia wnioski konteneryzowanych jest podróży, który rozpoczyna się od dewelopera. Deweloper wybiera wdrażanie kontenerów i Docker, ponieważ eliminuje frictions wdrożeń i operacji IT, co ostatecznie pomaga uświadomić im bardziej elastyczne i bardziej wydajne end-to-end i szybsze.
+Cykl życia konteneryzowanych aplikacji to podróż, który zaczyna się od dewelopera. Deweloper zdecyduje się na implementacji kontenery i Docker, ponieważ eliminuje frictions wdrożeń i operacji IT, który ostatecznie pomaga uświadomić im większą elastyczność, zwiększyć produktywność end-to-end i szybsze.
 
 >[!div class="step-by-step"]
-[Poprzednie](../docker-containers-images-and-registries.md)
-[dalej](containers-foundation-for-devops-collaboration.md)
+>[Poprzednie](../docker-containers-images-and-registries.md)
+>[dalej](containers-foundation-for-devops-collaboration.md)

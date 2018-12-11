@@ -2,12 +2,12 @@
 title: Wysyłanie według elementu treści
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 449c153092d80bb457a2059b80158ea665bfc645
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58d505770a495e5e423104b9fb912d088ca56f86
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396381"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143162"
 ---
 # <a name="dispatch-by-body-element"></a>Wysyłanie według elementu treści
 Ten przykład demonstruje sposób implementacji alternatywnego algorytmu do przypisywania komunikatów przychodzących do operacji.  
@@ -20,7 +20,7 @@ Ten przykład demonstruje sposób implementacji alternatywnego algorytmu do przy
   
  Konstruktor klasy oczekuje słownik wypełniane przy użyciu pary `XmlQualifiedName` i ciągi znaków, według której kwalifikowanych nazw wskazuje nazwę pierwszego elementu podrzędnego w treści protokołu SOAP i ciągi wskazują pasujące nazwy operacji. `defaultOperationName` Jest nazwą operacji, która odbiera wszystkie komunikaty, które nie mogą być dopasowywane do tego słownika:  
   
-```  
+```csharp
 class DispatchByBodyElementOperationSelector : IDispatchOperationSelector  
 {  
     Dictionary<XmlQualifiedName, string> dispatchDictionary;  
@@ -31,13 +31,14 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
         this.dispatchDictionary = dispatchDictionary;  
         this.defaultOperationName = defaultOperationName;  
     }  
+}
 ```  
   
  <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> implementacje są bardzo proste tworzenie, ponieważ istnieje tylko jedna metoda w interfejsie: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Zadania tej metody jest sprawdzanie wiadomości przychodzących i zwraca ciąg, która jest równa nazwę metody w kontrakcie usługi na bieżący punkt końcowy.  
   
  W tym przykładzie pobiera selektor operacji <xref:System.Xml.XmlDictionaryReader> komunikatu przychodzącego treści za pomocą <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Ta metoda już umieszcza czytelnika na pierwszy element podrzędny w treści wiadomości, tak, aby wystarczające, aby uzyskać nazwę bieżącego elementu i identyfikator URI przestrzeni nazw, a także połączyć je w `XmlQualifiedName` następnie używany do wyszukiwania odpowiednich operacji Słownik utrzymywane przez selektor operacji.  
   
-```  
+```csharp
 public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
 {  
     XmlDictionaryReader bodyReader = message.GetReaderAtBodyContents();  
@@ -57,7 +58,7 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
   
  Dostęp do treści wiadomości z <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> lub dowolnej z metod, które zapewniają dostęp do zawartości w treści komunikatu powoduje, że komunikat, który ma zostać oznaczony jako "przeczytane", co oznacza, że wiadomość jest nieprawidłowy w przypadku dalszego przetwarzania. W związku z tym selektor operacji tworzy kopię wiadomości przychodzących za pomocą metody pokazano w poniższym kodzie. Ponieważ pozycja czytnik nie został zmieniony podczas inspekcji, mogą być przywoływane przez nowo utworzony komunikat do której właściwości wiadomości i nagłówki komunikatów także są kopiowane, co skutkuje dokładną oryginalnego komunikatu:  
   
-```  
+```csharp
 private Message CreateMessageCopy(Message message,   
                                      XmlDictionaryReader body)  
 {  
@@ -77,7 +78,7 @@ private Message CreateMessageCopy(Message message,
   
  Celu skrócenia programu, poniższy fragment kodu przedstawia tylko implementacji metody <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A>, która ma wpływ zmian w konfiguracji dyspozytora w tym przykładzie. Inne metody nie są wyświetlane, ponieważ powrócą do wywołującego bez wykonywania pracy.  
   
-```  
+```csharp
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
 class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior  
 {  
@@ -92,7 +93,7 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
   
  Po słowniku zapełnieniu nowej `DispatchByBodyElementOperationSelector` jest skonstruowany przy użyciu tych informacji i Ustaw jako selektor operacji wysyłania środowiska uruchomieniowego:  
   
-```  
+```csharp
 public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime)  
 {  
     Dictionary<XmlQualifiedName,string> dispatchDictionary =   
@@ -123,7 +124,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
   
  Selektor operacji wywołuje wyłącznie zależnie od elementu treści komunikatu i ignoruje "Action", dlatego jest wymagany stwierdzić, środowisko uruchomieniowe nie Sprawdź nagłówek "Action" w odpowiedzi zwrócony, przypisując symbol wieloznaczny "*" Aby `ReplyAction` właściwość <xref:System.ServiceModel.OperationContractAttribute>. Ponadto jest wymagane do operacji domyślnej, która ma właściwość "Action" do symbolu wieloznacznego "\*". Operacja domyślne odbiera wszystkie komunikaty, które nie mogą być wysyłane i nie ma `DispatchBodyElementAttribute`:  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
                             DispatchByBodyElementBehavior]  
 public interface IDispatchedByBody  

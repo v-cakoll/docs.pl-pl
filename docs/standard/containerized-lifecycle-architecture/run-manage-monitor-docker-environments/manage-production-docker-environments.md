@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3bafdd9f6a6aa4f850fd28b6315e68c643d1f8c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f968b5199f838e35f336dfa8c7d15aa9e5298951
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202858"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147298"
 ---
 # <a name="manage-production-docker-environments"></a>Zarządzanie środowiskami produkcyjnymi platformy Docker
 
@@ -23,12 +23,12 @@ Klastry te są wdrażane przy użyciu usługi Azure Virtual Machine Scale Sets i
 
 Tabela 6-1 zawiera listę popularnych narzędzi do zarządzania związanych z ich koordynatorów, harmonogramów i klastrowania platformy.
 
-Tabela 6-1: narzędzia do zarządzania platformy Docker
+Tabela 6-1: Narzędzia do zarządzania platformy docker
 
 
 | Narzędzia do zarządzania      | Opis           | Powiązane koordynatorów |
 |-----------------------|-----------------------|-----------------------|
-| Container Service\(zarządzania interfejsu użytkownika w witrynie Azure portal) | [Usługa kontenera](https://azure.microsoft.com/services/container-service/) zapewnia łatwy w użyciu można pobrać uruchomiona w sposób, aby [wdrażanie klastra kontenera platformy Azure](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) oparte na popularnych koordynatorów, takich jak Mesosphere DC/OS, Kubernetes i Docker Swarm. <br /><br /> Container Service optymalizuje konfigurację z tych platform. Wystarczy wybrać rozmiar, liczbę hostów i narzędzia koordynatora, a usługa kontenerów zajmuje się całą resztą. | System mesosphere DC/OS <br /><br /> Rozwiązania Kubernetes <br /><br /> Rozwiązanie docker Swarm |
+| Container Service\(zarządzania interfejsu użytkownika w witrynie Azure portal) | [Usługa kontenera](https://azure.microsoft.com/services/container-service/) zapewnia łatwy w użyciu można pobrać uruchomiona w sposób, aby [wdrażanie klastra kontenera platformy Azure](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) oparte na popularnych koordynatorów, takich jak Mesosphere DC/OS, Kubernetes i Docker Swarm. <br /><br /> Container Service optymalizuje konfigurację z tych platform. Wystarczy wybrać rozmiar, liczbę hostów i narzędzia koordynatora, a usługa kontenerów zajmuje się całą resztą. | System mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
 | Uniwersalne płaszczyznę kontroli platformy docker\(w środowisku lokalnym lub w chmurze) | [Uniwersalne płaszczyznę kontroli platformy docker](https://docs.docker.com/v1.11/ucp/overview/) jest rozwiązaniem do zarządzania klastrem przeznaczonych dla przedsiębiorstw z platformy Docker. Ułatwia ona zarządzanie cały klaster z jednego miejsca. <br /><br /> Uniwersalne płaszczyznę kontroli platformy docker jest zawarte w ramach produktu o nazwie Docker Datacenter, która zapewnia rozwiązania Docker Swarm, Docker Universal płaszczyznę kontroli i Docker Trusted Registry. <br /><br /> Docker Datacenter mogą być zainstalowane w środowisku lokalnym lub z chmury publicznej, takich jak platforma Azure. | Docker Swarm\(obsługiwane przez usługę kontenera) |
 | Rozwiązań docker Cloud\(znany także jako Tutum; w chmurze SaaS) | [Rozwiązań docker Cloud](https://docs.docker.com/docker-cloud/) to usługa zarządzania (SaaS), która oferuje możliwości aranżacji i rejestr platformy Docker przy użyciu kompilacji i testowania urządzenia w przypadku obrazów aplikacji Dockerized narzędzia ułatwiające konfigurowanie i zarządzanie nimi infrastrukturę hosta i funkcje wdrażania, ułatwiające automatyzację wdrażania obrazów na konkretnych infrastruktury. Możesz połączyć swoje konto SaaS rozwiązań Docker Cloud do infrastruktury w usłudze kontenera uruchomiony klaster Docker Swarm. | Docker Swarm\(obsługiwane przez usługę kontenera) |
 | Mesosphere Marathon\(w środowisku lokalnym lub w chmurze) | [Marathon](https://mesosphere.github.io/marathon/docs/marathon-ui.html) platformę klasy produkcyjnej kontenera aranżacji i harmonogram dotyczy Mesosphere DC/OS i Apache Mesos. <br /><br /> Współdziała ona z Mesos (DC/OS opiera się na Apache Mesos) do sterowania długotrwałych usług i zapewnia [interfejs użytkownika sieci web do zarządzania procesem i kontener](https://mesosphere.github.io/marathon/docs/marathon-ui.html). Zapewnia narzędzia do zarządzania interfejsu użytkownika sieci web | System mesosphere DC/OS\(oparciu Apache Mesos; obsługiwane przez usługi Container Service) |
@@ -44,7 +44,6 @@ Poniżej przedstawiono narzędzia do zarządzania usługi Service Fabric:
 
 -   [Usługa Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) jest web wyspecjalizowane narzędzia interfejsu użytkownika, który zawiera szczegółowe informacje i niektóre operacje w klastrze usługi Service Fabric z punktu widzenia węzły/maszyny wirtualne i usługi aplikacji i punktu widzenia.
 
-
 >[!div class="step-by-step"]
-[Poprzednie](run-microservices-based-applications-in-production.md)
-[dalej](monitor-containerized-application-services.md)
+>[Poprzednie](run-microservices-based-applications-in-production.md)
+>[dalej](monitor-containerized-application-services.md)

@@ -1,16 +1,17 @@
 ---
 title: Przykłady interfejsów WPF
-ms.date: 03/30/2017
+ms.date: 11/02/2017
 helpviewer_keywords:
 - WPF samples [WPF]
 - samples [WPF]
 ms.assetid: 1fc53e12-dfe5-476e-be13-fc3714aaf640
-ms.openlocfilehash: 8cecb51ad044a8be0baab2ffd077f73c45862ec7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fc4eb03e0488994d9e17337e56b8fa0ecbd62b56
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524442"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148278"
 ---
 # <a name="wpf-samples"></a>Przykłady interfejsów WPF
-Lista przykładów, które przedstawiają [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], zobacz [przykłady interfejsów WPF dokumentacji](https://go.microsoft.com/fwlink/?LinkID=159044) w galerii kodów MSDN.
+
+Aby uzyskać przykłady ilustrujące Windows Presentation Foundation (WPF), zobacz [WPF-Microsoft-Samples repo](https://github.com/Microsoft/WPF-Samples) w witrynie GitHub.

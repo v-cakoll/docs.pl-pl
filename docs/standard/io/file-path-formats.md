@@ -2,18 +2,21 @@
 title: Formaty ścieżki plików w systemach Windows
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296831"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144861"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formaty ścieżki plików w systemach Windows
 
@@ -96,7 +99,7 @@ System operacyjny Windows ma modelu ujednoliconego obiektu, który wskazuje wszy
 
 Ścieżki urządzenia DOS są w pełni kwalifikowane przez definicję. Segmenty względna katalogu (`.` i `..`) nie są dozwolone. Bieżący katalog nigdy nie wprowadzają do ich użycia.
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>Przykład: Sposobów, aby odwołać się do tego samego pliku
+## <a name="example-ways-to-refer-to-the-same-file"></a>Przykład: Sposoby, aby odwołać się do tego samego pliku
 
 W poniższym przykładzie pokazano kilka sposobów, w którym możesz zapoznać się z plikiem przy użyciu interfejsów API w <xref:System.IO> przestrzeni nazw. Przykład tworzy <xref:System.IO.FileInfo> obiektu i zastosowań jego <xref:System.IO.FileInfo.Name> i <xref:System.IO.FileInfo.Length> właściwości, aby wyświetlić nazwę pliku i długość pliku.
 
@@ -203,30 +206,14 @@ Cecha systemu plików Windows, który użytkowników innych niż Windows i dewel
 ```csharp
 Directory.Create("TeStDiReCtOrY");
 ```
+
+```vb
+Directory.Create("TeStDiReCtOrY")
+```
+
 Tworzy katalog o nazwie katalog testowy. W przypadku zmiany nazwy, katalog lub plik, aby zmienić jego przypadek, nazwa pliku lub katalogu odzwierciedla wielkość liter w ciągu używany, gdy można zmienić jego nazwę. Na przykład poniższy kod zmienia nazwę pliku o nazwie jako się jako:
 
-```csharp
-using System;
-using System.IO;
-
-class Example
-{
-   public static void Main()
-   {
-      var fi = new FileInfo(@".\test.txt");
-      fi.MoveTo(@".\Test.txt");
-   }
-}
-``` 
-```vb
-Imports System.IO
-
-Module Example
-   Public Sub Main()
-      Dim fi As New FileInfo(".\test.txt")
-      fi.MoveTo(".\Test.txt")
-   End Sub
-End Module
-```
+[!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
+[!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
 Jednak bez uwzględniania wielkości liter podczas porównywania nazw katalogów i plików. Jeśli wyszukasz plik o nazwie "jako" interfejsów API systemu plików .NET zignorować przypadek, w porównaniu. Jako, TEST. TXT, test. TXT i wszelkich innych kombinacji wielkich i małych liter, będą zgodne "jako".

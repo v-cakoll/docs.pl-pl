@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Wp
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: bc99bbfc3adee4cdc7008a91f42659ebcaa7a1b1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658434"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147954"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Wprowadzenie do kontenerów i platformy Docker
 
@@ -29,7 +29,6 @@ Kolejną korzyścią wynikającą z konteneryzacji jest skalowalność. Można s
 
 Krótko mówiąc kontenery oferują korzyści z izolacji, przenośność, elastyczność, skalowalność i kontroli w całej aplikacji przepływu pracy cyklu życia. Najważniejsze korzyści to środowisko izolacji udostępniane między deweloperskim i operacjami.
 
-
 >[!div class="step-by-step"]
-[Poprzednie](../index.md)
-[dalej](docker-defined.md)
+>[Poprzednie](../index.md)
+>[dalej](docker-defined.md)

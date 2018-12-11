@@ -4,12 +4,12 @@ description: Poznaj różne scenariusze obsługiwane przez architektury bezserwe
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 0261b9f17f133942d635cf331d8cef414378bd90
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404968"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146715"
 ---
 # <a name="serverless-design-examples"></a>Przykłady z projektu bez użycia serwera
 
@@ -63,7 +63,7 @@ Funkcje bezserwerowe może służyć do ułatwienia potoku danych. W tym przykł
 
 ![Potok danych bez użycia serwera](./media/serverless-data-pipeline.png)
 
-## <a name="stream-processing"></a>Przetwarzanie Stream
+## <a name="stream-processing"></a>Przetwarzanie strumienia
 
 Urządzenia i czujniki, często generowania strumieni danych, które muszą zostać przetworzone w czasie rzeczywistym. Istnieje wiele technologii, które można przechwycić komunikaty i strumieni z [usługi Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) i [usługi IoT Hub](https://docs.microsoft.com/azure/iot-hub) do [usługi Service Bus](/service-bus). Niezależnie od tego, transport bez użycia serwera jest mechanizm idealne rozwiązanie do przetwarzania komunikatów i strumieni danych, jak pojawiają się w. Aplikacje niewymagające użycia serwera można szybko skalować w celu spełnienia określonych wymagań dużych ilości danych. Kod bez użycia serwera, można zastosować logikę biznesową w celu analizowania danych i danych wyjściowych w formacie ustrukturyzowanym, akcji i analizy.
 
@@ -77,17 +77,17 @@ Bramy interfejsu API zapewnia jeden punkt wejścia dla klientów, a następnie i
 
 ## <a name="recommended-resources"></a>Zalecane zasoby
 
-* [Usługi Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-* [Usługa Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+* [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
 * [Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi](../microservices-architecture/architect-microservice-container-applications/distributed-data-management.md)
 * [Projektowanie mikrousług: Identyfikowanie granic mikrousługi](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
 * [Usługa Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
 * [Wzorzec określania źródła zdarzeń](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
 * [Implementowanie wzorca wyłącznika](../microservices-architecture/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-* [Usługa IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+* [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
 * [Usługa Service Bus](https://docs.microsoft.com/azure/service-bus)
 * [Praca ze zmianą Obsługa kanału informacyjnego w usłudze Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
-[Poprzednie](serverless-architecture-considerations.md)
-[dalej](azure-serverless-platform.md)
+>[Poprzednie](serverless-architecture-considerations.md)
+>[dalej](azure-serverless-platform.md)

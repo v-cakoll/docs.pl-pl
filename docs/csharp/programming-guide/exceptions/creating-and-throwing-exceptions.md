@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: c81332307542608e2c7a3f3a5fa89900862f1e84
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44260074"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145598"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Tworzenie i zgłaszanie wyjątków (Przewodnik programowania w języku C#)
 Wyjątki są używane do wskazania, że wystąpił błąd podczas uruchamiania programu. Obiekty wyjątków, które opisują błąd są tworzone a następnie *zgłoszony* z [throw](../../../csharp/language-reference/keywords/throw.md) — słowo kluczowe. Środowisko uruchomieniowe wyszukuje następnie najbardziej zgodne obsługi wyjątków.  
@@ -41,7 +41,7 @@ Wyjątki są używane do wskazania, że wystąpił błąd podczas uruchamiania p
   
  Wszystkie wyjątki zawiera właściwość o nazwie <xref:System.Exception.Message%2A>. Ten ciąg powinna być równa wyjaśnienia przyczyn, dla wyjątku. Należy pamiętać, że informacje, które są wrażliwe na zabezpieczeń nie należy umieścić w treści wiadomości. Oprócz <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> zawiera właściwość o nazwie <xref:System.ArgumentException.ParamName%2A> , należy ustawić nazwę argumentu, który spowodował zgłoszenie wyjątku. W przypadku metoda ustawiająca właściwości <xref:System.ArgumentException.ParamName%2A> powinna być równa `value`.  
   
- Metody publiczne i chronione składowe powinny zgłaszać wyjątki, zawsze wtedy, gdy ich nie można ukończyć ich zamierzonych funkcji. Klasy wyjątków, który jest generowany, powinien być bardziej konkretny od pozostałych wyjątków, dostępności, która pasuje do warunków błędów. Te wyjątki powinny być udokumentowane w ramach funkcji klasy i klas pochodnych lub aktualizacje do oryginalnej klasy powinien zachować takie samo zachowanie zgodności z poprzednimi wersjami.  
+ Publiczne i chronione metody należy zgłaszać wyjątki, zawsze wtedy, gdy ich nie można ukończyć ich zamierzonych funkcji. Klasy wyjątków, który jest generowany, powinien być bardziej konkretny od pozostałych wyjątków, dostępności, która pasuje do warunków błędów. Te wyjątki powinny być udokumentowane w ramach funkcji klasy i klas pochodnych lub aktualizacje do oryginalnej klasy powinien zachować takie samo zachowanie zgodności z poprzednimi wersjami.  
   
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>Czynności, aby uniknąć podczas zgłaszania wyjątków  
  Poniższa lista zawiera wskazówki, aby uniknąć podczas zgłaszania wyjątków:  

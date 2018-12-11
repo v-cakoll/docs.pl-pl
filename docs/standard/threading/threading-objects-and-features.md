@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ba47ece16c74555b58780733e14de9833718c33
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9a355c2e996ddb00dad804dfeb22987923d91aa6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873310"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144523"
 ---
 # <a name="threading-objects-and-features"></a>Wątkowość obiektów i funkcji
 
@@ -26,8 +26,6 @@ Wraz z <xref:System.Threading.Thread?displayProperty=nameWithType> klasy .NET za
 |[Przegląd elementów podstawowych synchronizacji](overview-of-synchronization-primitives.md)|Opisuje typy, które mogą służyć do synchronizowania dostępu do udostępnionego zasobu lub kontroli wątku interakcji.|
 |[EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|W tym artykule opisano uchwyty oczekiwania na zdarzenie zarządzane, które są używane do synchronizowania działaniach Sygnalizowanie i Oczekiwanie na sygnałów.|
 |[Muteksy](mutexes.md)|W tym artykule opisano <xref:System.Threading.Mutex?displayProperty=nameWithType>, która przyznaje wyłącznego dostępu do zasobu udostępnionego.|
-|[Operacje blokowane](interlocked-operations.md)|W tym artykule opisano <xref:System.Threading.Interlocked?displayProperty=nameWithType> klasy, która dostarcza operacji niepodzielnych w przypadku zmiennych, które są współużytkowane przez wiele wątków.|
-|[reader_writer_lock, klasa](reader-writer-locks.md)|W tym artykule opisano <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> klasy, która zapewnia jedną — moduł zapisujący/wielu czytników dostęp do zasobu udostępnionego.|
 |[Semaphore i SemaphoreSlim](semaphore-and-semaphoreslim.md)|W tym artykule opisano <xref:System.Threading.Semaphore?displayProperty=nameWithType> klasy, która ogranicza liczbę wątków, które mogą uzyskać dostęp do udostępnionego zasobu lub pulę zasobów jednocześnie.|
 |[Barrier](barrier.md)|W tym artykule opisano <xref:System.Threading.Barrier?displayProperty=nameWithType> klasę, która implementuje wzorzec barierę koordynacji wątków w operacjach etapowe.|
 |[SpinLock](spinlock.md)|W tym artykule opisano <xref:System.Threading.SpinLock?displayProperty=nameWithType> struktury, która jest lekkie alternatywą <xref:System.Threading.Monitor?displayProperty=nameWithType> klasy dla niektórych niskiego poziomu scenariuszy blokowania.|

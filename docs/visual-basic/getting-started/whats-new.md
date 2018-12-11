@@ -1,6 +1,6 @@
 ---
 title: Co nowego w języku Visual Basic
-ms.date: 10/04/2018
+ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e77dca6f87e5039f4aa668a8e08ec112c9eb1b9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194062"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146160"
 ---
 # <a name="whats-new-for-visual-basic"></a>Co nowego w języku Visual Basic
 
@@ -21,10 +21,13 @@ Ten temat zawiera listę nazw funkcji klucza dla każdej wersji programu Visual 
   
 ## <a name="current-version"></a>Bieżąca wersja
 
-Visual Basic 15.5 / Visual Studio 2017 w wersji 15.5  
-Aby przejrzeć nowe funcje, zobacz [Visual Basic 15.5](#visual-basic-155)
+Visual Basic należy zachować 15,8 / Visual Studio 2017 w wersji 15.8  
+W przypadku nowych funkcji, zobacz [15.8 Visual Basic](#visual-basic-158)
 
 ## <a name="previous-versions"></a>Poprzednie wersje
+
+Visual Basic 15.5 / Visual Studio 2017 w wersji 15.5  
+Aby przejrzeć nowe funcje, zobacz [Visual Basic 15.5](#visual-basic-155)
 
 Visual Basic 15.3 / Visual Studio 2017 w wersji 15.3  
 Aby przejrzeć nowe funkcje, zobacz [Visual Basic 15.3](#visual-basic-153)
@@ -55,6 +58,39 @@ Operatory przesunięcia bitowego, deklaracja zmiennej pętli
 
 Visual Basic / Visual Studio .NET 2002   
 Pierwsze wydanie programu Visual Basic .NET
+
+## <a name="visual-basic-158"></a>Visual Basic 15.8
+
+**Zoptymalizowane pod kątem zmiennoprzecinkowych, konwersja liczby całkowitej**
+
+W poprzednich wersjach programu Visual Basic, konwersja [Double](../language-reference/data-types/double-data-type.md) i [pojedynczego](../language-reference/data-types/single-data-type.md) wartości liczb całkowitych oferowane stosunkowo niska wydajność. Podczas przekazywania wartości zwracanej przez dowolny z następujących metod do jednego z 15.8 Visual Basic znacznie zwiększa wydajność konwersje zmiennoprzecinkowe do liczb całkowitych [funkcje wewnętrzne konwersji liczby całkowitej w Visual Basic](../language-reference/functions/type-conversion-functions.md) () CByte CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng), lub kiedy wartość zwracana przez dowolny z następujących metod jest niejawnie rzutowany na całkowite wpisz kiedy [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) ustawiono `Off`:
+
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Single)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Single)?displayProperty=nameWithType>
+- <xref:System.Math.Ceiling(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Floor(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
+
+Tego rodzaju optymalizacji umożliwia kod wymagany do uruchomienia szybciej — maksymalnie dwa razy, jak szybko uzyskać kod, który obsługuje dużą liczbę konwersji na typy liczb całkowitych. W poniższym przykładzie pokazano niektóre wywołania prosta metoda, które dotyczą tego rodzaju optymalizacji:
+
+```vb
+Dim s As Single = 173.7619
+Dim d As Double = s 
+
+Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
+Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
+Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
+Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
+Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
+
+```
+
+Należy zwrócić uwagę na to, czy jest to obcina zamiast wartości zmiennoprzecinkowych Zaokrągla liczbę.
 
 ## <a name="visual-basic-155"></a>Visual Basic 15.5
 

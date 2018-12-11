@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń'
+title: 'Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
 ms.openlocfilehash: 88200b41346a18732647602fb16774610014330c
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744174"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131069"
 ---
-# <a name="how-to-create-a-custom-security-token-provider"></a>Porady: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń
+# <a name="how-to-create-a-custom-security-token-provider"></a>Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń
 W tym temacie pokazano, jak utworzyć nowe typy tokenów przy użyciu niestandardowego dostawcy tokenów zabezpieczeń i sposobu integracji dostawcę z Menedżer tokenów zabezpieczeń niestandardowych.  
   
 > [!NOTE]
@@ -22,7 +22,7 @@ W tym temacie pokazano, jak utworzyć nowe typy tokenów przy użyciu niestandar
   
  Dostawcy tokenów zabezpieczeń tworzy reprezentację tokenu zabezpieczeń, na podstawie informacji w poświadczeniach klienta lub usługę. Aby użyć niestandardowego dostawcy tokenów zabezpieczeń w usłudze security Windows Communication Foundation (WCF), należy utworzyć niestandardowe poświadczenia i implementacje Menedżer tokenów zabezpieczeń.  
   
- Aby uzyskać więcej informacji na temat niestandardowych poświadczeń i Menedżer tokenów zabezpieczeń zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+ Aby uzyskać więcej informacji na temat niestandardowych poświadczeń i Menedżer tokenów zabezpieczeń zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
  Aby uzyskać więcej informacji na temat poświadczeń zabezpieczeń tokenu menedżera, dostawcy i wystawcy uwierzytelnienia klas, zobacz [architekturę zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
@@ -41,7 +41,7 @@ W tym temacie pokazano, jak utworzyć nowe typy tokenów przy użyciu niestandar
   
 2.  Zastąp <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> metody, jeśli nie jest już przesłonięty.  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Metoda jest odpowiedzialna za zwrócenie wystąpienie <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy odpowiednie <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametr przekazywany do metody przez architekturę zabezpieczeń programu WCF. Zmodyfikować metodę, aby zwrócić implementację dostawcy tokenów zabezpieczeń niestandardowych (utworzonym w poprzedniej procedurze) kiedy metoda jest wywoływana z parametrem tokenu odpowiednie zabezpieczenia. Aby uzyskać więcej informacji na temat Menedżer tokenów zabezpieczeń, zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Metoda jest odpowiedzialna za zwrócenie wystąpienie <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy odpowiednie <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametr przekazywany do metody przez architekturę zabezpieczeń programu WCF. Zmodyfikować metodę, aby zwrócić implementację dostawcy tokenów zabezpieczeń niestandardowych (utworzonym w poprzedniej procedurze) kiedy metoda jest wywoływana z parametrem tokenu odpowiednie zabezpieczenia. Aby uzyskać więcej informacji na temat Menedżer tokenów zabezpieczeń, zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
 3.  Dodawanie logiki niestandardowej metody umożliwiającej mu do zwrócenia z niestandardowego dostawcy tokenów zabezpieczeń na podstawie <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametru. Poniższy przykład zwraca niestandardowego dostawcy tokenów zabezpieczeń, jeśli są spełnione wymagania tokenu. Wymagania obejmują token zabezpieczający X.509 i kierunek wiadomości (czy token jest używany przez dane wyjściowe komunikatu). W pozostałych przypadkach kod wywołuje klasę bazową, aby zapewnić odpowiednie zachowanie dostarczane przez system, pozostałe wymagania tokenu zabezpieczeń.  
   
@@ -59,6 +59,6 @@ W tym temacie pokazano, jak utworzyć nowe typy tokenów przy użyciu niestandar
  <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
  <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
  <xref:System.IdentityModel.Tokens.X509SecurityToken>  
- [Przewodnik: tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [Instrukcje: tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ [Wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [Jak: Tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
  [Architektura zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

@@ -4,29 +4,29 @@ description: Dowiedz się, jak używać strukturze ML.NET do ładowania danych i
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: 971c5c62acc9dd7bf29aa11ce898c2b76822c3d7
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672085"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125405"
 ---
-# <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a><span data-ttu-id="5db87-103">Szkolenie modelu uczenia maszynowego z danymi, które nie znajduje się w pliku tekstowym - strukturze ML.NET</span><span class="sxs-lookup"><span data-stu-id="5db87-103">Train a machine learning model with data that's not in a text file - ML.NET</span></span>
+# <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a><span data-ttu-id="bad92-103">Szkolenie modelu uczenia maszynowego z danymi, które nie znajduje się w pliku tekstowym - strukturze ML.NET</span><span class="sxs-lookup"><span data-stu-id="bad92-103">Train a machine learning model with data that's not in a text file - ML.NET</span></span>
 
-<span data-ttu-id="5db87-104">W przypadku użycia często wykazały strukturze ML.NET jest używany `TextLoader` można odczytać danych szkoleniowych z pliku.</span><span class="sxs-lookup"><span data-stu-id="5db87-104">The commonly demonstrated use case for ML.NET is use the `TextLoader` to read the training data from a file.</span></span>
-<span data-ttu-id="5db87-105">Jednak w przypadku scenariuszy szkoleniowych w czasie rzeczywistym dane mogą być w innych miejscach, takich jak:</span><span class="sxs-lookup"><span data-stu-id="5db87-105">However, in real-time training scenarios the data can be elsewhere, such as:</span></span>
+<span data-ttu-id="bad92-104">W przypadku użycia często wykazały strukturze ML.NET jest używany `TextLoader` można odczytać danych szkoleniowych z pliku.</span><span class="sxs-lookup"><span data-stu-id="bad92-104">The commonly demonstrated use case for ML.NET is use the `TextLoader` to read the training data from a file.</span></span>
+<span data-ttu-id="bad92-105">Jednak w przypadku scenariuszy szkoleniowych w czasie rzeczywistym dane mogą być w innych miejscach, takich jak:</span><span class="sxs-lookup"><span data-stu-id="bad92-105">However, in real-time training scenarios the data can be elsewhere, such as:</span></span>
 
-* <span data-ttu-id="5db87-106">w tabelach SQL</span><span class="sxs-lookup"><span data-stu-id="5db87-106">in SQL tables</span></span>
-* <span data-ttu-id="5db87-107">wyodrębniony z plików dziennika</span><span class="sxs-lookup"><span data-stu-id="5db87-107">extracted from log files</span></span>
-* <span data-ttu-id="5db87-108">wygenerowany na bieżąco</span><span class="sxs-lookup"><span data-stu-id="5db87-108">generated on the fly</span></span>
+* <span data-ttu-id="bad92-106">w tabelach SQL</span><span class="sxs-lookup"><span data-stu-id="bad92-106">in SQL tables</span></span>
+* <span data-ttu-id="bad92-107">wyodrębniony z plików dziennika</span><span class="sxs-lookup"><span data-stu-id="bad92-107">extracted from log files</span></span>
+* <span data-ttu-id="bad92-108">wygenerowany na bieżąco</span><span class="sxs-lookup"><span data-stu-id="bad92-108">generated on the fly</span></span>
 
-<span data-ttu-id="5db87-109">Użyj [zrozumienie schematu](https://github.com/dotnet/machinelearning/tree/master/docs/code/SchemaComprehension.md) Aby wyświetlić istniejące C# `IEnumerable` w strukturze ML.NET jako `DataView`.</span><span class="sxs-lookup"><span data-stu-id="5db87-109">Use [schema comprehension](https://github.com/dotnet/machinelearning/tree/master/docs/code/SchemaComprehension.md) to bring an existing C# `IEnumerable` into ML.NET as a `DataView`.</span></span>
+<span data-ttu-id="bad92-109">Użyj [zrozumienie schematu](https://github.com/dotnet/machinelearning/tree/master/docs/code/SchemaComprehension.md) Aby wyświetlić istniejące C# `IEnumerable` w strukturze ML.NET jako `DataView`.</span><span class="sxs-lookup"><span data-stu-id="bad92-109">Use [schema comprehension](https://github.com/dotnet/machinelearning/tree/master/docs/code/SchemaComprehension.md) to bring an existing C# `IEnumerable` into ML.NET as a `DataView`.</span></span>
 
-<span data-ttu-id="5db87-110">W tym przykładzie utworzysz klienta model predykcyjny współczynnika zmian i wyodrębniania następujące funkcje z Twoim systemem produkcyjnym:</span><span class="sxs-lookup"><span data-stu-id="5db87-110">For this example, you'll build the customer churn prediction model, and extract the following features from your production system:</span></span>
+<span data-ttu-id="bad92-110">W tym przykładzie utworzysz klienta model predykcyjny współczynnika zmian i wyodrębniania następujące funkcje z Twoim systemem produkcyjnym:</span><span class="sxs-lookup"><span data-stu-id="bad92-110">For this example, you'll build the customer churn prediction model, and extract the following features from your production system:</span></span>
 
-* <span data-ttu-id="5db87-111">Identyfikator klienta (ignorowane przez model)</span><span class="sxs-lookup"><span data-stu-id="5db87-111">Customer ID (ignored by the model)</span></span>
-* <span data-ttu-id="5db87-112">Czy klient ma modyfikowane (cel "etykieta")</span><span class="sxs-lookup"><span data-stu-id="5db87-112">Whether the customer has churned (the target 'label')</span></span>
-* <span data-ttu-id="5db87-113">Kategoria demograficznych (jednego ciągu, takich jak "młodych zawartość dla dorosłych" itp.)</span><span class="sxs-lookup"><span data-stu-id="5db87-113">The 'demographic category' (one string, like 'young adult' etc.)</span></span>
-* <span data-ttu-id="5db87-114">Liczba wizyt w ciągu ostatnich 5 dni.</span><span class="sxs-lookup"><span data-stu-id="5db87-114">The number of visits from the last 5 days.</span></span>
+* <span data-ttu-id="bad92-111">Identyfikator klienta (ignorowane przez model)</span><span class="sxs-lookup"><span data-stu-id="bad92-111">Customer ID (ignored by the model)</span></span>
+* <span data-ttu-id="bad92-112">Czy klient ma modyfikowane (cel "etykieta")</span><span class="sxs-lookup"><span data-stu-id="bad92-112">Whether the customer has churned (the target 'label')</span></span>
+* <span data-ttu-id="bad92-113">Kategoria demograficznych (jednego ciągu, takich jak "młodych zawartość dla dorosłych" itp.)</span><span class="sxs-lookup"><span data-stu-id="bad92-113">The 'demographic category' (one string, like 'young adult' etc.)</span></span>
+* <span data-ttu-id="bad92-114">Liczba wizyt w ciągu ostatnich 5 dni.</span><span class="sxs-lookup"><span data-stu-id="bad92-114">The number of visits from the last 5 days.</span></span>
 
 ```csharp
 private class CustomerChurnInfo
@@ -40,7 +40,7 @@ private class CustomerChurnInfo
 }
 ```
 
-<span data-ttu-id="5db87-115">Załadować te dane do `DataView` i trenowanie modelu, używając następującego kodu:</span><span class="sxs-lookup"><span data-stu-id="5db87-115">Load this data into the `DataView` and train the model, using the following code:</span></span>
+<span data-ttu-id="bad92-115">Załadować te dane do `DataView` i trenowanie modelu, używając następującego kodu:</span><span class="sxs-lookup"><span data-stu-id="bad92-115">Load this data into the `DataView` and train the model, using the following code:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging,

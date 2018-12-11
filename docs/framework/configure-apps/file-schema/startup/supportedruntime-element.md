@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b86ffdd242a95a0c5c34efb3f38b3501f3f2ba6c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197802"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129250"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; — Element
 
@@ -36,7 +36,7 @@ Określa wersje środowiska uruchomieniowego języka wspólnego, które obsługu
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**Wersja**|Atrybut opcjonalny.<br /><br /> Wartość ciągu określająca wersję środowiska uruchomieniowego języka wspólnego (CLR), którą obsługuje ta aplikacja. Aby uzyskać prawidłowe wartości `version` atrybutów, zobacz [wartości "wersja środowiska uruchomieniowego"](#version) sekcji. **Uwaga:** za pomocą programu .NET Framework 3.5 "*wersji środowiska uruchomieniowego*" wartość ma postać *głównych*. *drobne*. *Tworzenie*. Począwszy od [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], tylko wymagane numery wersji głównych i pomocniczych (to znaczy "v4.0" zamiast "v4.0.30319"). Zalecane jest użycie krótszego ciągu.|  
+|**version**|Atrybut opcjonalny.<br /><br /> Wartość ciągu określająca wersję środowiska uruchomieniowego języka wspólnego (CLR), którą obsługuje ta aplikacja. Aby uzyskać prawidłowe wartości `version` atrybutów, zobacz [wartości "wersja środowiska uruchomieniowego"](#version) sekcji. **Uwaga:**  Za pomocą programu .NET Framework 3.5 "*wersji środowiska uruchomieniowego*" wartość ma postać *głównych*. *drobne*. *Tworzenie*. Począwszy od [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], tylko wymagane numery wersji głównych i pomocniczych (to znaczy "v4.0" zamiast "v4.0.30319"). Zalecane jest użycie krótszego ciągu.|  
 |**sku**|Atrybut opcjonalny.<br /><br /> Wartość ciągu określająca jednostkę magazynową (SKU), który z kolei określa wersji .NET Framework, które obsługuje tę aplikację.<br /><br /> Począwszy od programu .NET Framework 4.0, użycie `sku` atrybutu jest zalecane.  Jeśli jest obecny, oznacza to, wersji systemu .NET Framework, aplikacji jest przeznaczony dla.<br /><br /> Aby uzyskać prawidłowe wartości atrybutu jednostki sku, zobacz [wartości "identyfikatorem jednostki sku"](#sku) sekcji.|  
   
 ## <a name="remarks"></a>Uwagi
@@ -77,12 +77,12 @@ Zalecane jest, aby testować aplikacje z każdą wersją programu .NET Framework
 |----------------------------|---------------------|  
 |4.0|". NETFramework, Version = v4.0 "|  
 |4.0, client Profile|".NETFramework,Version=v4.0,Profile=Client"|  
-|Aktualizacja platformy 4.0, 1|.NETFramework,Version=v4.0.1|  
-|4.0, client Profile, aktualizacja 1|.NETFramework,Version=v4.0.1,Profile=Client|  
-|4.0, platformy, aktualizacja 2|.NETFramework,Version=v4.0.2|  
-|4.0, client Profile, aktualizacja 2|.NETFramework,Version=v4.0.2,Profile=Client|  
-|4.0, platforma update 3|.NETFramework,Version=v4.0.3|  
-|4.0, client Profile, aktualizacja 3|.NETFramework,Version=v4.0.3,Profile=Client|  
+|Aktualizacja platformy 4.0, 1|". NETFramework, Version = v4.0.1 "|  
+|4.0, client Profile, aktualizacja 1|". NETFramework, Version = v4.0.1, profilu klienta = "|  
+|4.0, platformy, aktualizacja 2|". NETFramework, Version = v4.0.2 "|  
+|4.0, client Profile, aktualizacja 2|". NETFramework, Version = v4.0.2, profilu klienta = "|  
+|4.0, platforma update 3|". NETFramework, Version = verze 4.0.3 "|  
+|4.0, client Profile, aktualizacja 3|". NETFramework, Version = verze 4.0.3, profilu klienta = "|  
 |4.5|". NETFramework, Version = 4.5 "|  
 |4.5.1|".NETFramework,Version=v4.5.1"|  
 |4.5.2|". NETFramework, Version = v4.5.2 "|  

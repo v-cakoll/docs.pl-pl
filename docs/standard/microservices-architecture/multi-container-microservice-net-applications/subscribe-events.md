@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Po
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: d32c643e553dfe3ce52e3e2ce8aaf1ea3a296de6
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: b95e256bf8df7207eed0895587c0945f37b08ecb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297319"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128960"
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
@@ -149,7 +149,7 @@ Podejście pokazano w rysunek 6-22 brakuje mikrousług dodatkowe procesu robocze
 
 Temat drugiego podejścia: skorzystaj z tabeli dziennika zdarzeń, co kolejka i zawsze używaj mikrousług procesu roboczego do publikowania wiadomości. W takiej sytuacji proces Krewny, który jest wyświetlany w rysunek 6 – 23. Spowoduje to pokazanie dodatkowe mikrousług, a tabela jest pojedyncze źródło podczas publikowania zdarzeń.
 
-![Innym sposobem obsługi niepodzielność: publikowanie do tabeli dziennika zdarzeń, a następnie mają inny mikrousługi (procesu roboczego tła) opublikować zdarzenia.](./media/image24.png)
+![Innym sposobem obsługi niepodzielność: Publikowanie do tabeli dziennika zdarzeń, a następnie mają inny mikrousługi (procesu roboczego tła) opublikować zdarzenia.](./media/image24.png)
 
 **Rysunek 6-23**. Niepodzielność podczas publikowania zdarzeń w magistrali zdarzeń z mikrousług procesu roboczego
 
@@ -330,7 +330,7 @@ Jeśli flaga "redelivered" jest ustawiona, odbiorca musi uwzględniać który, p
 -   **Aktivita typu EventDriven komunikatów** <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Refaktoryzacja kierunku odporności: Ocena sprzężenia** <br/>
+-   **Jimmy Bogard. Refaktoryzacja kierunku odporności na błędy: Ocena sprzężenia** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 -   **Publikowanie/subskrybowanie kanałów** <br/>
@@ -369,10 +369,10 @@ Jeśli flaga "redelivered" jest ustawiona, odbiorca musi uwzględniać który, p
 -   **Podstawy spójności danych** <br/>
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Rick Saling. Kolejnego elementu teorii CAP: Dlaczego "Wszystko, co jest różne" chmura i Internet** <br/>
+-   **Rick Saling. Kolejnego elementu teorii CAP: Dlaczego "wszystko, co jest różne" chmura i Internet** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewera. LIMIT później dwunastu lat: jak "Zasady" zostały zmienione** <br/>
+-   **Eric Brewera. LIMIT dwunastu latach później: Jak "Zasady" zostały zmienione** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
 -   **Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów**  <br/>
@@ -390,9 +390,6 @@ Jeśli flaga "redelivered" jest ustawiona, odbiorca musi uwzględniać który, p
 -   **Przewodnik niezawodność** (dokumentacja RabbitMQ) <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
-
-
-
 >[!div class="step-by-step"]
-[Poprzednie](rabbitmq-event-bus-development-test-environment.md)
-[dalej](test-aspnet-core-services-web-apps.md)
+>[Poprzednie](rabbitmq-event-bus-development-test-environment.md)
+>[dalej](test-aspnet-core-services-web-apps.md)

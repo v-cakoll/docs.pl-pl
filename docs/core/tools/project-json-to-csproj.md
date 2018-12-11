@@ -1,15 +1,15 @@
 ---
-title: porównanie plików Project.JSON i csproj — .NET Core
+title: porównanie plików Project.JSON i csproj
 description: Zobacz Mapowanie między formatami project.json i csproj elementów.
 author: natemcmaster
-ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: 0079164470f87df665be6f9de62bc98d3fb51696
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: 581ff7cd3fe02e22d481c8386776317a5251cc5c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397715"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168913"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Mapowanie między formatami project.json i csproj właściwości
 

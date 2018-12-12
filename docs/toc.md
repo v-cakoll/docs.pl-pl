@@ -256,7 +256,7 @@
 ## [Przewodnik po środowisku C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [Co nowego w języku C#](csharp/whats-new/index.md)
+## Co nowego w języku C#
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
 ### [C# 7.1](csharp/whats-new/csharp-7-1.md)
@@ -427,7 +427,7 @@
 ### [Zarządzanie zasobami: słowo kluczowe „use”](fsharp/language-reference/resource-management-the-use-keyword.md)
 ### [Przestrzenie nazw](fsharp/language-reference/namespaces.md)
 ### [Moduły](fsharp/language-reference/modules.md)
-### [Deklaracje importowania: słowo kluczowe „open”](fsharp/language-reference/import-declarations-the-open-keyword.md)
+### [Deklaracje importowania: słowo kluczowe open](fsharp/language-reference/import-declarations-the-open-keyword.md)
 ### [Pliki podpisów](fsharp/language-reference/signature-files.md)
 ### [Jednostki miary](fsharp/language-reference/units-of-measure.md)
 ### [Dokumentacja XML](fsharp/language-reference/xml-documentation.md)
@@ -474,7 +474,7 @@
 #### [Uzyskiwanie dostępu do danych użytkownika](visual-basic/developing-apps/programming/accessing-user-data.md)
 #### [Uzyskiwanie dostępu do formularzy aplikacji](visual-basic/developing-apps/programming/accessing-application-forms.md)
 #### [Uzyskiwanie dostępu do usług sieci Web aplikacji](visual-basic/developing-apps/programming/accessing-application-web-services.md)
-##### [Instrukcje: asynchroniczne wywoływanie usługi sieci Web](visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)
+##### [Instrukcje: asynchroniczne wywoływanie usługi internetowej](visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)
 #### [Uzyskiwanie dostępu do ustawień aplikacji](visual-basic/developing-apps/programming/app-settings/index.md)
 #### [Przetwarzanie dysków, katalogów i plików](visual-basic/developing-apps/programming/drives-directories-files/processing.md)
 
@@ -572,7 +572,7 @@
 ### [Typy błędów](visual-basic/programming-guide/language-features/error-types.md)
 ### [Zdarzenia](visual-basic/programming-guide/language-features/events/index.md)
 ### [Interfejsy](visual-basic/programming-guide/language-features/interfaces/index.md)
-#### [Przewodnik: tworzenie i wdrażanie interfejsów](visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)
+#### [Przewodnik: tworzenie i implementowanie interfejsów](visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)
 ### [LINQ](visual-basic/programming-guide/language-features/linq/index.md)
 ### [Obiekty i klasy](visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 ### [Operatory i wyrażenia](visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
@@ -588,11 +588,11 @@
 ### [Instrukcje: praca z kontrolkami ActiveX](visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)
 ### [Przewodnik: wywoływanie interfejsów API systemu Windows](visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 ### [Instrukcje: wywoływanie interfejsów API systemu Windows](visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)
-### [Instrukcje: wywoływanie funkcji Windows wykorzystującej typy bez znaku](visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+### [Instrukcje: wywoływanie funkcji systemu Windows wykorzystującej typy bez znaku](visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 ### [Przewodnik: tworzenie obiektów COM](visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)
 ### [Rozwiązywanie problemów związanych z współdziałaniem](visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
 ### [Współdziałanie COM w aplikacjach .NET Framework](visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-### [Przewodnik: wdrażanie dziedziczenia z obiektami COM](visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+### [Przewodnik: implementowanie dziedziczenia z obiektami COM](visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 
 ## [Dokumentacja języka](visual-basic/language-reference/index.md)
 ### [Konfigurowanie wersji języka](visual-basic/language-reference/configure-language-version.md)

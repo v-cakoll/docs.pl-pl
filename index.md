@@ -6,12 +6,12 @@ title: Dokumentacja platformy .NET
 description: Dowiedz się, jak używać platformy .NET do tworzenia różnych aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: c79e7cd77c637ad06854be6a1372fec351a0c45d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b53abcb46589a012c5bcf2eff901846074004d09
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127345"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240258"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -27,7 +27,7 @@ ms.locfileid: "53127345"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Wprowadzenie do języka C#</h3>
+                                    <h3>Nauka języka C#</h3>
                                 </div>
                             </div>
                         </div>
@@ -172,9 +172,9 @@ ms.locfileid: "53127345"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">Przewodnik dla języka C#</a></h3>
-                                                <p><a href="/dotnet/csharp/tutorials/intro-to-csharp">Nauka C#</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">Wprowadzenie</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Przewodnik po środowisku C#</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new">Co nowego w języku C#</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">Dokumentacja języka C#</a></p>
                                             </div>
                                         </div>

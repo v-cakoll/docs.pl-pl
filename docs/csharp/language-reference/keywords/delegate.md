@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: cbc81f8a9db3b2f637f9c6faabc8b533d2965b0d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 233b0255121cf6e7a5283041d594e2d843f105fb
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241947"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286471"
 ---
 # <a name="delegate-c-reference"></a>delegate (odwołanie w C#)
 
@@ -52,5 +52,6 @@ Za pomocą metody lub wyrażenia lambda zgodne zwracany typ i parametry wejścio
 - [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)  
 - [Delegaty](../../../csharp/programming-guide/delegates/index.md)  
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
-- [Delegaci z metodami nazwanymi lub anonimowymi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+- [Delegaci z metodami nazwanymi lub anonimowymi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) 
 - [Metody anonimowe](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

@@ -2,12 +2,12 @@
 title: F#wskazówki dotyczące formatowania kodu
 description: Dowiedz się, wskazówki dotyczące formatowania F# kodu.
 ms.date: 11/26/2018
-ms.openlocfilehash: 993ba8d42570d92789a9fc1967b8185b45643d56
-ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
+ms.openlocfilehash: edaa8c8b759377e71fcba705b30e8af9a8c2a716
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "43858008"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286549"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#wskazówki dotyczące formatowania kodu
 
@@ -343,16 +343,23 @@ type PostalAddress =
     }
 ```
 
-Wprowadzanie tokenu otwierania na tym samym wierszu i token zamknięcia w nowym wierszu jest również dobrym rozwiązaniem, ale należy pamiętać, że należy użyć [Pełna składnia](../language-reference/verbose-syntax.md) do definiowania elementów członkowskich ( `with` — słowo kluczowe):
+Wprowadzenie do tokenu otwierającym znakiem nowego wiersza i token zamknięcia w nowym wierszu jest preferrable, jeśli są deklarowanie implementacje interfejsu lub elementów członkowskich, które znajdują się w rekordzie:
 
 ```fsharp
-//  OK, but verbose syntax required
-type PostalAddress = { 
-    Address: string
-    City: string
-    Zip: string
-} with
+// Declaring additional members on PostalAddress
+type PostalAddress =
+    { 
+        Address: string
+        City: string
+        Zip: string
+    } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
 ```
 
 ## <a name="formatting-records"></a>Formatowanie rekordów
@@ -371,27 +378,51 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Wprowadzanie tokenu otwierania na tym samym wierszu i token zamknięcia w nowym wierszu jest również dobrym rozwiązaniem:
+Wprowadzenie do otwarcia tokenu w nowym wierszu, zawartość z kartami jednego zakresu, a token zamknięcia w nowym wierszu jest preferrable, jeśli:
+
+* Poruszanie się w rekordów w kodzie z zakresami różnych wcięć
+* Przekazanie w potoku je do funkcji
 
 ```fsharp
-let rainbow = {
-    Boss1 = "Jeffrey"
-    Boss2 = "Jeffrey"
-    Boss3 = "Jeffrey"
-    Boss4 = "Jeffrey"
-    Boss5 = "Jeffrey"
-    Boss6 = "Jeffrey"
-    Boss7 = "Jeffrey"
-    Boss8 = "Jeffrey"
-    Lackeys = ["Zippy"; "George"; "Bungle"]
-}
+let rainbow =
+    {
+        Boss1 = "Jeffrey"
+        Boss2 = "Jeffrey"
+        Boss3 = "Jeffrey"
+        Boss4 = "Jeffrey"
+        Boss5 = "Jeffrey"
+        Boss6 = "Jeffrey"
+        Boss7 = "Jeffrey"
+        Boss8 = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"]
+    }
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
+
+let foo a =
+    a
+    |> Option.map (fun x ->
+        {
+            MyField = x
+        })
 ```
 
 Te same zasady mają zastosowanie dla elementów listy i tablicy.
 
 ## <a name="formatting-lists-and-arrays"></a>Formatowanie, list i tablice
 
-Zapis `x :: l` zawierające spacje wokół `::` — operator (`::` jest operator wrostkowe, dlatego otoczony spacjami) i `[1; 2; 3]` (`;` to ogranicznik, dlatego następuje spacja).
+Zapis `x :: l` zawierające spacje wokół `::` — operator (`::` jest operator wrostkowe, dlatego otoczony spacjami).
+
+Lista i tablice deklarowane w pojedynczym wierszu powinny mieć odstęp po nawiasie otwierającym, a także przed nawiasem zamykającym:
+
+```fsharp
+let xs = [ 1; 2; 3 ]
+let ys = [| 1; 2; 3; |]
+```
 
 Zawsze należy używać co najmniej jedną spację między dwa różne operatory podobne do nawiasu klamrowego. Na przykład, pozostaw odstęp między `[` i `{`.
 
@@ -414,18 +445,21 @@ Zawsze należy używać co najmniej jedną spację między dwa różne operatory
 Listy i tablic, które podzielone między wiele wierszy wykonaj regułę podobne jak rekordy:
 
 ```fsharp
-let pascalsTriangle = [|
-    [|1|]
-    [|1; 1|]
-    [|1; 2; 1|]
-    [|1; 3; 3; 1|]
-    [|1; 4; 6; 4; 1|]
-    [|1; 5; 10; 10; 5; 1|]
-    [|1; 6; 15; 20; 15; 6; 1|]
-    [|1; 7; 21; 35; 35; 21; 7; 1|]
-    [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
-|]
+let pascalsTriangle =
+    [|
+        [|1|]
+        [|1; 1|]
+        [|1; 2; 1|]
+        [|1; 3; 3; 1|]
+        [|1; 4; 6; 4; 1|]
+        [|1; 5; 10; 10; 5; 1|]
+        [|1; 6; 15; 20; 15; 6; 1|]
+        [|1; 7; 21; 35; 35; 21; 7; 1|]
+        [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
+    |]
 ```
+
+I podobnie jak w przypadku rekordów, deklarowanie otwierania i zamykających nawiasów kwadratowych w ich własnych wierszu ułatwi przenoszenie kodu wokół i przesyłanie potokowe do funkcji.
 
 ## <a name="formatting-if-expressions"></a>Jeśli formatowania wyrażeń
 

@@ -5,18 +5,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
-ms.openlocfilehash: ea11fabd7974c67b1f1b3af017db1f34178bfae8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d43640cbde856ac1df8b5034f904da75de6b077c
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238601"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334785"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (modyfikator ogólny) (odwołanie w C#)
 
 Dla parametrów typu genetycznego `in` — słowo kluczowe Określa, że parametr typu jest kontrawariantny. Możesz użyć `in` — słowo kluczowe w interfejsach ogólnych i delegatach.
 
-Kontrawariancja umożliwia używania typu mniej pochodnego niż określona przez parametr ogólny. Umożliwia to niejawna konwersja klasy, które implementują interfejsów typu variant i niejawnej konwersji typów obiektów delegowanych. Kowariancji i kontrawariancji w parametrach typu ogólnego są obsługiwane dla typów odwołań, ale nie są obsługiwane dla typów wartości.
+Kontrawariancja umożliwia używania typu mniej pochodnego niż określona przez parametr ogólny. Dzięki temu niejawnej konwersji klas, które implementują interfejsy kontrawariantnego i niejawnej konwersji typów obiektów delegowanych. Kowariancji i kontrawariancji w parametrach typu ogólnego są obsługiwane dla typów odwołań, ale nie są obsługiwane dla typów wartości.
 
 Typ może być zadeklarowana kontrawariantnego w ogólny interfejs lub delegat tylko wtedy, gdy definiuje typ parametrów metody, a nie typ zwracany metody. `In`, `ref`, i `out` parametry muszą być niezmiennej, co oznacza, są one ani kowariantny lub kontrawariantny.
 

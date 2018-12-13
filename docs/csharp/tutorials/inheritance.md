@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: da21b1419f9d662c71ffd469cec67e01154ffc60
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502167"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334876"
 ---
 # <a name="inheritance-in-c-and-net"></a>Dziedziczenie w języku C# i .NET
 
@@ -98,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-Dziedziczenie ma zastosowanie tylko do klasy i interfejsy. Inne kategorie (struktur, delegaty i wyliczeń) nie obsługują dziedziczenia. Ze względu na te reguły próby kompilacji kodu, jak w poniższym przykładzie generuje błąd kompilatora CS0527: "Typ"ValueType"na liście interfejsów nie jest interfejsem." Komunikat o błędzie wskazuje, że, mimo że można zdefiniować interfejsy, które implementuje struktury, dziedziczenie nie jest obsługiwany.
+Dziedziczenie ma zastosowanie tylko do klasy i interfejsy. Inne kategorie (struktur, delegaty i wyliczeń) nie obsługują dziedziczenia. Ze względu na te reguły próby kompilacji kodu, takie jak poniższy przykład generuje błąd kompilatora CS0527: "Typ"ValueType"na liście interfejsów nie jest interfejsem." Komunikat o błędzie wskazuje, że, mimo że można zdefiniować interfejsy, które implementuje struktury, dziedziczenie nie jest obsługiwany.
 
 ```csharp
 using System;
@@ -249,7 +249,7 @@ Oprócz elementów członkowskich, które dziedziczy `Publication`, `Book` klasa
 
 - Dwa konstruktory
 
-  Dwa `Book` konstruktory udostępnianie trzech typowych parametrów. Dwa *tytuł* i *wydawcy*, odpowiadać parametrom `Publication` konstruktora. Trzecia będzie *Autor*, który jest przechowywany w prywatnej `authorName` pola. Zawiera jeden konstruktor *isbn* parametr, który jest przechowywany w `ISBN` właściwości automatycznej.
+  Dwa `Book` konstruktory udostępnianie trzech typowych parametrów. Dwa *tytuł* i *wydawcy*, odpowiadać parametrom `Publication` konstruktora. Trzecia będzie *Autor*, który jest przechowywany na wartość publiczne, które są niezmienne `Author` właściwości. Zawiera jeden konstruktor *isbn* parametr, który jest przechowywany w `ISBN` właściwości automatycznej.
 
   Pierwszy Konstruktor używa [to](../language-reference/keywords/this.md) — słowo kluczowe do wywoływania innego konstruktora. Tworzenie łańcuchów Konstruktor jest typowym definiować konstruktorów. Konstruktorów z parametrami mniej udostępni wartości domyślne podczas wywoływania konstruktora z największą liczbą parametrów.
 
@@ -257,11 +257,11 @@ Oprócz elementów członkowskich, które dziedziczy `Publication`, `Book` klasa
 
 - Tylko do odczytu `ISBN` właściwość, która zwraca `Book` International Standard książki numer obiektu, unikatowe 10 - lub 13-cyfrowy numer. ISBN jest dostarczany jako argument do jednego z `Book` konstruktorów. ISBN są przechowywane w polem zapasowym prywatnego, który został wygenerowany automatycznie przez kompilator.
 
-- Tylko do odczytu `Author` właściwości. Imię i nazwisko autora jest dostarczany jako argument do obu `Book` konstruktorów i jest przechowywany w prywatnej `authorName` pola.
+- Tylko do odczytu `Author` właściwości. Imię i nazwisko autora jest dostarczany jako argument do obu `Book` konstruktorów i jest przechowywany we właściwości.
 
-- Dwie właściwości tylko do odczytu dotyczące cen, `Price` i `Currency`. Ich wartości są przekazywane jako argumenty `SetPrice` wywołania metody. Ceny są przechowywane w pole private `bookPrice`. `Currency` Właściwość jest symbol waluty ISO trzycyfrowy (na przykład USD za dolar amerykański) i jest przechowywany w prywatnej `ISOCurrencySymbol` pola. Symbole waluty ISO można pobrać z <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> właściwości.
+- Dwie właściwości tylko do odczytu dotyczące cen, `Price` i `Currency`. Ich wartości są przekazywane jako argumenty `SetPrice` wywołania metody. `Currency` Właściwość jest symbol waluty ISO trzycyfrowy (na przykład USD za dolar amerykański). Symbole waluty ISO można pobrać z <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> właściwości. Obie te właściwości są zewnętrznie tylko do odczytu, ale można ustawić zarówno przez kod w `Book` klasy.
 
-- A `SetPrice` metody, która ustawia wartości `bookPrice` i `ISOCurrencySymbol` pola. Te wartości są zwracane przez `Price` i `Currency` właściwości.
+- A `SetPrice` metody, która ustawia wartości `Price` i `Currency` właściwości. Te wartości są zwracane przez te same właściwości.
 
 - Zastąpienia `ToString` — metoda (odziedziczone `Publication`) i <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> i <xref:System.Object.GetHashCode%2A> metody (odziedziczone <xref:System.Object>).
 

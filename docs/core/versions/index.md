@@ -4,18 +4,18 @@ description: W tym artykule dowiesz się, jak zestaw .NET Core SDK i środowisko
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: 54b09a6b74b2cf213cea781dec95a413ac2ad059
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170720"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334811"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Omówienie sposobu platformy .NET Core jest wersjonowany
 
 .NET core odnosi się do środowiska uruchomieniowego programu .NET Core i .NET Core SDK, który zawiera narzędzia potrzebne do tworzenia aplikacji. Zestawów .NET core SDK są przeznaczone do pracy z poprzednich wersji środowiska uruchomieniowego programu .NET Core. W tym artykule wyjaśniono, środowisko uruchomieniowe i strategii wersji zestawu SDK. Wyjaśnienie numery wersji dla platformy .NET Standard można znaleźć w artykule Przedstawiamy [.NET Standard](../../standard/net-standard.md#net-implementation-support).
 
-Środowisko uruchomieniowe programu .NET Core i .NET Core SDK dodania nowych funkcji w różnych stawki — ogólnie rzecz biorąc .NET Core SDK zawiera szybko zaktualizować narzędzia więcej niż środowisko uruchomieniowe programu .NET Core zmiany środowiska uruchomieniowego, którego używasz w środowisku produkcyjnym. Niestety ten problem, przyniosło kilka strategii przechowywania wersji w ciągu kilku ostatnich lat. Informacje na temat historii w artykule na [wersji platformy .NET Core](version-history.md).
+Środowisko uruchomieniowe programu .NET Core i .NET Core SDK dodania nowych funkcji w różnych stawki — ogólnie rzecz biorąc .NET Core SDK zawiera szybko zaktualizować narzędzia więcej niż środowisko uruchomieniowe programu .NET Core zmiany środowiska uruchomieniowego, którego używasz w środowisku produkcyjnym.
 
 ## <a name="versioning-details"></a>Szczegóły wersji
 
@@ -32,7 +32,7 @@ Trzeci położenie numer wersji zestawu SDK komunikuje się oba pomocnicze i pop
 | Środowisko uruchomieniowe i zestaw SDK poprawki | 2.2.1             | 2.2.102           |
 | Zmiana funkcji zestawu SDK    | 2.2.1             | 2.2.200           |
 
-(\*) Ten wykres używa przyszłych 2.2 środowisko uruchomieniowe programu .NET Core co w przykładzie, ponieważ historyczne artefaktu przeznaczone pierwszy zestaw SDK dla platformy .NET Core 2.1 jest 2.1.300. Aby uzyskać więcej informacji, zobacz [historię wersji platformy .NET Core](version-history.md).
+(\*) Ten wykres używa przyszłych 2.2 środowisko uruchomieniowe programu .NET Core co w przykładzie, ponieważ historyczne artefaktu przeznaczone pierwszy zestaw SDK dla platformy .NET Core 2.1 jest 2.1.300. Aby uzyskać więcej informacji, zobacz [wybór wersji platformy .NET Core](selection.md).
 
 UWAGI:
 

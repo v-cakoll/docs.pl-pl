@@ -128,7 +128,6 @@
 ### [Testowanie jednostek — opublikowane dane wyjściowe](core/testing/unit-testing-published-output.md)
 ### [Korzystanie z funkcji Live Unit Testing dla projektów .NET Core w programie Visual Studio](/visualstudio/test/live-unit-testing-start)
 ## [Przechowywanie wersji](core/versions/index.md)
-### [Historia wersji platformy .NET core](core/versions/version-history.md)
 ### [Wybieranie wersji platformy .NET Core](core/versions/selection.md)
 ### [Usuwanie nieaktualnych środowisk uruchomieniowych i zestawów SDK](core/versions/remove-runtime-sdk-versions.md)
 ## [Katalog identyfikatora środowiska uruchomieniowego](core/rid-catalog.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: c19169d61a96314e9fcfad94b013af18440e1ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503617"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286562"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Podstawowe pojęcia programu Windows Communication Foundation
 Ten dokument zawiera ogólny widok architektury usług Windows Communication Foundation (WCF). Jej celem jest zrozumienie podstawowych pojęć i jak one współdziałają ze sobą. Aby uzyskać samouczek dotyczący tworzenia najprostszym wersję usługi i klienta WCF, zobacz [Samouczek wprowadzający](../../../docs/framework/wcf/getting-started-tutorial.md). Programowanie WCF można znaleźć [programowanie WCF Basic](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -48,14 +48,14 @@ Ten dokument zawiera ogólny widok architektury usług Windows Communication Fou
 ## <a name="wcf-terms"></a>Warunki usługi WCF  
  Innych pojęć i terminów używanych w dokumentacji usługi WCF m.in.  
   
- — komunikat  
+  — komunikat  
  Niezależna jednostka danych, który może zawierać kilka elementów, w tym nagłówki i treść.  
   
  usługa  
  Konstrukcja, która udostępnia jeden lub więcej punktów końcowych z każdego punktu końcowego udostępnianie co najmniej jednej operacji usługi.  
   
  endpoint  
- Konstrukcja w wiadomości, które są wysyłane lub odbierane (lub obu). Składa się z lokalizacji (adres), która określa, gdzie mogą być wysyłane wiadomości, specyfikacja mechanizm komunikacji (powiązanie) opisano, jak mają być wysyłane wiadomości, i definicji zestaw komunikatów, które mogą być wysyłane lub odbierane (lub obie) w tym Lokalizacja (kontraktu usługi), który w tym artykule opisano, jakie komunikaty mogą być wysyłane.  
+ Konstrukcja w wiadomości, które są wysyłane lub odbierane (lub obu). Składa się z lokalizacji (adres), która określa, gdzie mogą być wysyłane wiadomości, specyfikacja mechanizm komunikacji (powiązanie), który opisuje, jak mają być wysyłane wiadomości, i definicji zestaw komunikatów, które mogą być wysyłane lub odbierane (lub obie) w tym Lokalizacja (kontraktu usługi), który w tym artykule opisano, jakie komunikaty mogą być wysyłane.  
   
  Usługa WCF jest uwidaczniany w świecie jako kolekcja punktów końcowych.  
   
@@ -144,7 +144,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Określa, że poufność, integralność i uwierzytelniania są udostępniane przez mechanizmy warstwy transportu (np. HTTPS). Korzystając z transportu, takich jak HTTPS, w tym trybie ma tę zaletę, są wydajne pod względem wydajności i dobrze zrozumiałych ze względu na jego występowania w Internecie. Wadą jest to, że tego rodzaju zabezpieczeń są stosowane osobno na każdy przeskok w ścieżce komunikacji wprowadzania komunikacji podatny na ataki man-in middle".  
   
  Tryb zabezpieczeń komunikatów  
- Określa, czy zabezpieczenia dzięki wdrożeniu co najmniej jednym specyfikacji zabezpieczenia, takie jak specyfikację o nazwie [zabezpieczeń usług sieci Web: Zabezpieczanie komunikatów SOAP](https://go.microsoft.com/fwlink/?LinkId=94684). Każdy komunikat zawiera mechanizmy niezbędne do zapewnienia bezpieczeństwa podczas jego przesyłania i włączyć odbiorniki naruszeniem i do odszyfrowywania wiadomości. W tym sensie zabezpieczenia są hermetyzowane w ramach każdej wiadomości, zapewniając bezpieczeństwo end-to-end wielu przeskoków. Ponieważ informacje o zabezpieczeniach staje się częścią wiadomości, istnieje również możliwość obejmują wiele rodzajów poświadczenia za pomocą komunikatu (są one określane jako *oświadczeń*). Takie podejście również ma tę zaletę, włączania komunikat, aby bezpiecznie przesyłane za pośrednictwem dowolnego transportu, w tym wiele transportu między jego początkowego i docelowego. Wadą tego podejścia jest złożoności mechanizmów kryptograficznych zatrudnieni, wynikiem wpływ na wydajność.  
+ Określa, czy zabezpieczenia dzięki wdrożeniu co najmniej jednym specyfikacji zabezpieczenia, takie jak specyfikację o nazwie [zabezpieczeń usług sieci Web: Zabezpieczenia komunikatów SOAP](https://go.microsoft.com/fwlink/?LinkId=94684). Każdy komunikat zawiera mechanizmy niezbędne do zapewnienia bezpieczeństwa podczas jego przesyłania i włączyć odbiorniki naruszeniem i do odszyfrowywania wiadomości. W tym sensie zabezpieczenia są hermetyzowane w ramach każdej wiadomości, zapewniając bezpieczeństwo end-to-end wielu przeskoków. Ponieważ informacje o zabezpieczeniach staje się częścią wiadomości, istnieje również możliwość obejmują wiele rodzajów poświadczenia za pomocą komunikatu (są one określane jako *oświadczeń*). Takie podejście również ma tę zaletę, włączania komunikat, aby bezpiecznie przesyłane za pośrednictwem dowolnego transportu, w tym wiele transportu między jego początkowego i docelowego. Wadą tego podejścia jest złożoności mechanizmów kryptograficznych zatrudnieni, wynikiem wpływ na wydajność.  
   
  transportu przy użyciu trybu zabezpieczenia poświadczeń wiadomości  
  Określa użycie warstwy transportowej zapewnienie poufności, uwierzytelniania i integralności wiadomości, gdy każda komunikatów może zawierać wiele poświadczeń (oświadczenia) są wymagane przez odbiorców w wiadomości.  

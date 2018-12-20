@@ -4,7 +4,7 @@ description: Użyj F# opcje wiersza polecenia kompilatora do kontrolowania kompi
 ms.date: 12/10/2018
 ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
 ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53170876"
@@ -25,7 +25,7 @@ W poniższej tabeli przedstawiono opcje kompilatora w porządku alfabetycznym. N
 |`--baseaddress:address`|Określa preferowany adres podstawowy, w którym można załadować biblioteki DLL.<br /><br />Ta opcja kompilatora jest równoważna C# — opcja kompilatora o takiej samej nazwie. Aby uzyskać więcej informacji, zobacz [ &#47;baseaddress &#40;C&#35; opcje kompilatora&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx).|
 |`--codepage:id`|Określa stronę kodową do użycia podczas kompilacji, jeśli strona wymagany jest bieżący domyślną stroną kodową systemu.<br /><br />Ta opcja kompilatora jest równoważna C# — opcja kompilatora o takiej samej nazwie. Aby uzyskać więcej informacji, zobacz [ &#47;strony kodowe &#40;C&#35; opcje kompilatora&#41;](../../csharp/language-reference/compiler-options/codepage-compiler-option.md).|
 |`--consolecolors`|Określa, że błędy i ostrzeżenia używają kolorowego tekstu na konsoli.|
-|"--crossoptimize — [+|-]`|Włącza lub wyłącza optymalizacje między modułami.|
+|`--crossoptimize[+|-]`|Włącza lub wyłącza optymalizacje między modułami.|
 |<code>--delaysign[+&#124;-]</code>|Podpisuje testowo opóźnienie zestawie, używając tylko publicznej części klucza silnej nazwy.<br /><br />Ta opcja kompilatora jest równoważna C# — opcja kompilatora o takiej samej nazwie. Aby uzyskać więcej informacji, zobacz [ &#47;delaysign &#40;C&#35; opcje kompilatora&#41;](https://msdn.microsoft.com/library/ta1sxwy8.aspx).|
 |<code>--checked[+&#124;-]</code>|Włącza lub wyłącza Generowanie sprawdzenia przepełnienia.<br /><br />Ta opcja kompilatora jest równoważna C# — opcja kompilatora o takiej samej nazwie. Aby uzyskać więcej informacji, zobacz [ &#47;zaznaczone &#40;C&#35; opcje kompilatora&#41;](https://msdn.microsoft.com/library/h25wtyxf.aspx).|
 |<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|Włącza lub wyłącza generowanie informacji debugowania lub określa rodzaj informacji debugowania do wygenerowania. Wartość domyślna jest pełna, co umożliwia dołączanie do uruchomionego programu. Wybierz **pdbonly** uzyskać ograniczone informacje debugowania przechowywane w pliku pdb (bazy danych programu).<br /><br />Odpowiednikiem C# — opcja kompilatora o takiej samej nazwie. Aby uzyskać więcej informacji, zobacz artykuł<br /><br />[&#47;debugowanie &#40;C&#35; opcje kompilatora&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx).|

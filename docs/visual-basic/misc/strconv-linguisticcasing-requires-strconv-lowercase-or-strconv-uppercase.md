@@ -1,23 +1,23 @@
 ---
-title: '&#39;StrConv.LinguisticCasing&#39; wymaga &#39;StrConv.LowerCase&#39; lub &#39;StrConv.UpperCase&#39;'
+title: "\"StrConv.LinguisticCasing\" wymaga \"StrConv.LowerCase\" lub \"StrConv.UpperCase\""
 ms.date: 07/20/2015
 f1_keywords:
 - vbrLinguisticRequirements
 ms.assetid: 99cdb11d-9488-460b-84fb-a27f43da8be4
-ms.openlocfilehash: fc117c6b8993619e0610d5f51287e0fd0369729f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ba166d499e722fcebba2a0f2d751bcfe2857304
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45741855"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53770549"
 ---
-# <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a><span data-ttu-id="e012e-102">&#39;StrConv.LinguisticCasing&#39; wymaga &#39;StrConv.LowerCase&#39; lub &#39;StrConv.UpperCase&#39;</span><span class="sxs-lookup"><span data-stu-id="e012e-102">&#39;StrConv.LinguisticCasing&#39; requires &#39;StrConv.LowerCase&#39; or &#39;StrConv.UpperCase&#39;</span></span>
-<span data-ttu-id="e012e-103">Podjęto próbę użycia `StrConv.LinguisticCasing`, który jest prawidłowy tylko w połączeniu z `StrConv.LowerCase` lub `StrConv.UpperCase`.</span><span class="sxs-lookup"><span data-stu-id="e012e-103">You have attempted to use `StrConv.LinguisticCasing`, which is only valid in combination with `StrConv.LowerCase` or `StrConv.UpperCase`.</span></span>  
+# <a name="strconvlinguisticcasing-requires-strconvlowercase-or-strconvuppercase"></a><span data-ttu-id="689e2-102">"StrConv.LinguisticCasing" wymaga "StrConv.LowerCase" lub "StrConv.UpperCase"</span><span class="sxs-lookup"><span data-stu-id="689e2-102">'StrConv.LinguisticCasing' requires 'StrConv.LowerCase' or 'StrConv.UpperCase'</span></span>
+<span data-ttu-id="689e2-103">Podjęto próbę użycia `StrConv.LinguisticCasing`, który jest prawidłowy tylko w połączeniu z `StrConv.LowerCase` lub `StrConv.UpperCase`.</span><span class="sxs-lookup"><span data-stu-id="689e2-103">You have attempted to use `StrConv.LinguisticCasing`, which is only valid in combination with `StrConv.LowerCase` or `StrConv.UpperCase`.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e012e-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="e012e-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="689e2-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="689e2-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="e012e-105">Użyj `StrConv.LowerCase` lub `StrConv.UpperCase` w połączeniu z `StrConv.LinguisticCasing`.</span><span class="sxs-lookup"><span data-stu-id="e012e-105">Use `StrConv.LowerCase` or `StrConv.UpperCase` in conjunction with `StrConv.LinguisticCasing`.</span></span>  
+1.  <span data-ttu-id="689e2-105">Użyj `StrConv.LowerCase` lub `StrConv.UpperCase` w połączeniu z `StrConv.LinguisticCasing`.</span><span class="sxs-lookup"><span data-stu-id="689e2-105">Use `StrConv.LowerCase` or `StrConv.UpperCase` in conjunction with `StrConv.LinguisticCasing`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e012e-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e012e-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="689e2-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="689e2-106">See Also</span></span>  
    
- [<span data-ttu-id="e012e-107">Stała StrConv zmienia się w języku Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="e012e-107">StrConv Constant Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/7a8c2781-2716-40dd-90c1-96c1548516e2)
+ [<span data-ttu-id="689e2-107">Stała StrConv zmienia się w języku Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="689e2-107">StrConv Constant Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/7a8c2781-2716-40dd-90c1-96c1548516e2)

@@ -1,23 +1,23 @@
 ---
-title: Nie odnaleziono domyślnego członka dla typu &#39; &lt;typename&gt;&#39;
+title: Nie domyślnego elementu członkowskiego znaleziono dla typu "&lt;typename&gt;"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_NoDefaultMemberFound1
 ms.assetid: 1869ecb8-7c6a-422f-86ac-5da96c6adc66
-ms.openlocfilehash: 89d03a9c3aa760e4e9dd26ba652bf80437fb5152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5829476642573b8dc250a1e29b7a21471014e97
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33637507"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53770614"
 ---
-# <a name="no-default-member-found-for-type-39lttypenamegt39"></a><span data-ttu-id="d9b65-102">Nie odnaleziono domyślnego członka dla typu &#39; &lt;typename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="d9b65-102">No default member found for type &#39;&lt;typename&gt;&#39;</span></span>
-<span data-ttu-id="d9b65-103">Indeks późnym wiązaniem `Get` lub `Set` podjęto próbę wywołania.</span><span class="sxs-lookup"><span data-stu-id="d9b65-103">A late-bound index `Get` or `Set` call has been attempted.</span></span>  
+# <a name="no-default-member-found-for-type-lttypenamegt"></a><span data-ttu-id="5ca93-102">Nie domyślnego elementu członkowskiego znaleziono dla typu "&lt;typename&gt;"</span><span class="sxs-lookup"><span data-stu-id="5ca93-102">No default member found for type '&lt;typename&gt;'</span></span>
+<span data-ttu-id="5ca93-103">Indeks z późnym wiązaniem `Get` lub `Set` podjęto próbę wywołania.</span><span class="sxs-lookup"><span data-stu-id="5ca93-103">A late-bound index `Get` or `Set` call has been attempted.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="d9b65-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="d9b65-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5ca93-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="5ca93-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="d9b65-105">Upewnij się, że obiekt ma właściwości domyślnej z `Get` lub `Set`, w zależności od tego, który chcesz utworzyć.</span><span class="sxs-lookup"><span data-stu-id="d9b65-105">Ensure that the object has a default property with a `Get` or `Set`, depending on which you are trying to make.</span></span>  
+1.  <span data-ttu-id="5ca93-105">Upewnij się, że obiekt ma właściwość domyślną z `Get` lub `Set`, w zależności od tego, który chcesz utworzyć.</span><span class="sxs-lookup"><span data-stu-id="5ca93-105">Ensure that the object has a default property with a `Get` or `Set`, depending on which you are trying to make.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d9b65-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d9b65-106">See Also</span></span>  
- [<span data-ttu-id="d9b65-107">Get, instrukcja</span><span class="sxs-lookup"><span data-stu-id="d9b65-107">Get Statement</span></span>](../../visual-basic/language-reference/statements/get-statement.md)  
- [<span data-ttu-id="d9b65-108">Set, instrukcja</span><span class="sxs-lookup"><span data-stu-id="d9b65-108">Set Statement</span></span>](../../visual-basic/language-reference/statements/set-statement.md)
+## <a name="see-also"></a><span data-ttu-id="5ca93-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5ca93-106">See Also</span></span>  
+ [<span data-ttu-id="5ca93-107">Get, instrukcja</span><span class="sxs-lookup"><span data-stu-id="5ca93-107">Get Statement</span></span>](../../visual-basic/language-reference/statements/get-statement.md)  
+ [<span data-ttu-id="5ca93-108">Set, instrukcja</span><span class="sxs-lookup"><span data-stu-id="5ca93-108">Set Statement</span></span>](../../visual-basic/language-reference/statements/set-statement.md)

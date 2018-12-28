@@ -1,14 +1,14 @@
 ---
-title: Kopiowanie i aktualizacja wyrażeń rekordów (F#)
+title: Kopiowanie i aktualizacja wyrażeń rekordów
 description: Dowiedz się, jak napisać "Kopiuj i Aktualizuj rekordu wyrażenia" istniejących aktualizacji rekordu, kopiuje określone pola i zwraca zaktualizowanym rekordem.
 author: ChrSteinert
 ms.date: 06/04/2016
-ms.openlocfilehash: d2b089e8a7fc5c7ee26139003e23d2eaa8a3174e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 5f9b13ebf6c456aff73872b7522d7670c068dd88
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45990846"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613313"
 ---
 # <a name="copy-and-update-record-expressions"></a>Kopiowanie i aktualizacja wyrażeń rekordów
 

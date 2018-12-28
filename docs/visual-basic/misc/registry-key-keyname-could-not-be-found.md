@@ -1,15 +1,15 @@
 ---
-title: Klucz rejestru &#39; &lt;keyname&gt; &#39; nie został odnaleziony
+title: Klucz rejestru "&lt;keyname&gt;" nie można odnaleźć
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
-ms.openlocfilehash: 874371dd2d4dc9f7d4b1374ae08359e4ea6afc87
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: aef0d82b00053e2d6845ad26afac3851d15087fc
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025548"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53767962"
 ---
-# <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a>Klucz rejestru &#39; &lt;keyname&gt; &#39; nie został odnaleziony
+# <a name="registry-key-ltkeynamegt-could-not-be-found"></a>Klucz rejestru "&lt;keyname&gt;" nie można odnaleźć
 Nie można odnaleźć klucza rejestru.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

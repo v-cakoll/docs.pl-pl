@@ -1,15 +1,15 @@
 ---
 title: Użyj strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klasyfikacji binarnej zrozumienie, jak na potrzeby prognozowania tonacji podjąć odpowiednie działania.
-ms.date: 11/06/2018
+ms.date: 12/20/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: cffce6258685502191e1dd33ef8282d664ea2d4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 90f3b79226b16ac1ea4cbbe49ce07d95a138323b
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149656"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779143"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 
@@ -122,7 +122,7 @@ Musisz utworzyć trzy pola globalnego na potrzeby przechowywania ścieżek do os
 * `_trainDataPath` zawiera ścieżkę do zestawu danych, używane do trenowania modelu.
 * `_testDataPath` zawiera ścieżkę do zestawu danych, używane do oceny modelu.
 * `_modelPath` ma ścieżkę, w którym jest zapisany trenowanego modelu.
-* `_reader` jest <xref:Microsoft.ML.Runtime.Data.TextLoader> używany do ładowania i przekształcić zestawy danych.
+* `_textLoader` jest <xref:Microsoft.ML.Runtime.Data.TextLoader> używany do ładowania i przekształcić zestawy danych.
 
 Dodaj następujący kod po prawej stronie wiersza powyżej `Main` metodę, aby określić tych ścieżek i `_textLoader` zmiennej:
 
@@ -216,7 +216,7 @@ Dodaj następujący kod do `Train` metody:
 
 ## <a name="train-the-model"></a>Uczenie modelu
 
-Uczenie modelu, <xref:Microsoft.ML.Runtime.Data.TransformerChain%601>zgodnie z zestawu danych, który został załadowany i przekształcone. Po zdefiniowaniu estymatora uczenie modelu przy użyciu <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> przy jednoczesnym zapewnieniu dane szkoleniowe już załadowana. Spowoduje to zwrócenie modelu na potrzeby prognozy. `pipeline.Fit()` szkolenie modeli potoku i zwraca `Transformer` na podstawie `DataView` przekazany. Eksperyment nie jest wykonywane, dopóki nie dzieje.
+Uczenie modelu, <xref:Microsoft.ML.Data.TransformerChain%601>zgodnie z zestawu danych, który został załadowany i przekształcone. Po zdefiniowaniu estymatora uczenie modelu przy użyciu <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> przy jednoczesnym zapewnieniu dane szkoleniowe już załadowana. Spowoduje to zwrócenie modelu na potrzeby prognozy. `pipeline.Fit()` szkolenie modeli potoku i zwraca `Transformer` na podstawie `DataView` przekazany. Eksperyment nie jest wykonywane, dopóki nie dzieje.
 
 Dodaj następujący kod do `Train` metody:
 

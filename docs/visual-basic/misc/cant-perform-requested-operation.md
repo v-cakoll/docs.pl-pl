@@ -1,22 +1,22 @@
 ---
-title: Można&#39;t wykonać żądanej operacji (Visual Basic)
+title: Nie można wykonać żądanej operacji (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID17
 ms.assetid: eeab237c-4110-4abd-b601-bbb025c5d204
-ms.openlocfilehash: 5ba1ad22fb244fc75db29d98c30e2f7831142b79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb9d0a6d31f1fb37b8d4db7d8abd7a93c83da957
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636851"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53759083"
 ---
-# <a name="can39t-perform-requested-operation-visual-basic"></a>Można&#39;t wykonać żądanej operacji (Visual Basic)
-Operacja nie może być przeprowadzone, ponieważ spowoduje unieważnienie bieżący stan projektu. Na przykład może próbowano programowo zmodyfikować kod, który jest uruchomiony.  
+# <a name="cant-perform-requested-operation-visual-basic"></a>Nie można wykonać żądanej operacji (Visual Basic)
+Operacja nie może być przeprowadzone, ponieważ jej spowoduje unieważnienie bieżącego stanu projektu. Na przykład prawdopodobnie podjęto do programowego modyfikowania kodu, który jest uruchomiony.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Zatrzymuje wykonywanie kodu, wprowadź zmiany w razie potrzeby, a następnie spróbuj ponownie wykonać operację.  
+-   Zatrzymaj wykonywanie kodu, wprowadzać modyfikacje w razie potrzeby, a następnie spróbuj ponownie wykonać operację.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,13 +1,13 @@
 ---
-title: Operatory dopuszczające wartość null (F#)
-description: Więcej informacji na temat operatory dopuszczające wartość null, które są dostępne w F# języka programowania.
+title: Operatory dopuszczające wartość null
+description: Dowiedz się więcej o operatory dopuszczające wartość null, które są dostępne w F# języka programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b17c0de2d81a1ef88b31d833a49ff9e3f9d34e8d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44086286"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610596"
 ---
 # <a name="nullable-operators"></a>Operatory dopuszczające wartość null
 
@@ -15,7 +15,7 @@ Operatory dopuszczające wartość null są operatory dwuargumentowe arytmetyczn
 
 ## <a name="table-of-nullable-operators"></a>Tabela operatory dopuszczające wartość null
 
-W poniższej tabeli wymieniono operatory dopuszczające wartość null, obsługiwane w języku F#.
+W poniższej tabeli wymieniono operatory dopuszczające wartość null, obsługiwane w F# języka.
 
 |Dopuszcza wartości null po lewej stronie|Dopuszcza wartości null w prawo|Obie strony dopuszczającego wartość null|
 |---|---|---|
@@ -55,7 +55,7 @@ Dane wyjściowe są `10.000000`.
 
 Zapytanie operatorów w polach danych dopuszczających wartość null, takie jak `sumByNullable`, dostępne są także do użycia w wyrażeniach zapytań. Operatory zapytań dla typów innych niż null nie są typu zgodnego z typami zerowalnymi, więc nullable wersję operator odpowiednich zapytań należy użyć podczas pracy z wartościami danych dopuszczających wartość null. Aby uzyskać więcej informacji, zobacz [wyrażenia zapytań](../query-expressions.md).
 
-Poniższy przykład pokazuje użycie operatory dopuszczające wartość null w wyrażeniu zapytania F#. Pierwsze zapytanie pokazuje, jak należy napisać zapytanie bez operatora dopuszczającego wartość null; drugie zapytanie zawiera równoważne zapytanie, które używa operatora dopuszczającego wartość null. Dla pełnego kontekstu, w tym sposób konfigurowania bazy danych, aby użyć przykładowego kodu, zobacz [wskazówki: uzyskiwanie dostępu do bazy danych SQL za pomocą dostawców typów](../../tutorials/type-providers/accessing-a-sql-database.md).
+Poniższy przykład pokazuje użycie operatory dopuszczające wartość null w F# wyrażeniu zapytania. Pierwsze zapytanie pokazuje, jak należy napisać zapytanie bez operatora dopuszczającego wartość null; drugie zapytanie zawiera równoważne zapytanie, które używa operatora dopuszczającego wartość null. Dla pełnego kontekstu, w tym sposób konfigurowania bazy danych, aby użyć przykładowego kodu, zobacz [instruktażu: Uzyskiwanie dostępu do bazy danych SQL za pomocą dostawców typów](../../tutorials/type-providers/accessing-a-sql-database.md).
 
 ```fsharp
 open System

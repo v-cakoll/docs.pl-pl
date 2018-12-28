@@ -1,15 +1,16 @@
 ---
-title: Programowanie asynchroniczne
+title: Programowanie asynchroniczne —C#
 description: Więcej informacji na temat języka C# poziomu języka asynchronicznego modelu programowania udostępnianego przez platformy .NET Core.
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126500"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612130"
 ---
 # <a name="asynchronous-programming"></a>Programowanie asynchroniczne
 
@@ -264,5 +265,5 @@ Zalecane dowiesz się, jak osiągnąć pełną lub prawie pełną [referencyjną
 ## <a name="other-resources"></a>Inne zasoby
 
 * [Asynchroniczne szczegółowe](../standard/async-in-depth.md) zawiera więcej informacji na temat działania zadania.
-* [Programowanie asynchroniczne z async i await (C#)](../csharp/programming-guide/concepts/async/index.md)
+* [Programowanie asynchroniczne z async i await (C#)](./programming-guide/concepts/async/index.md)
 * Lucian Wischik [sześć podpowiedzi podstawowych Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) są nagraliście zasobu dla programowania asynchronicznego

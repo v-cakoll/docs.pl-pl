@@ -1,22 +1,22 @@
 ---
-title: Argument &#39; &lt;argumentname&gt; &#39; nie można przekonwertować wartość liczbowa.
+title: Argument "&lt;argumentname&gt;" nie można przekonwertować na wartość liczbową
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgumentNotNumeric1
 ms.assetid: 1901c4d4-abbe-462f-a450-5d907d485e94
-ms.openlocfilehash: daf57db6fbb00ca2110128ec7d3a7d161edfcf55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cfa4dd85fb0dc3eac582a1c6f8e74628e874381
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598959"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53770536"
 ---
-# <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-a-numeric-value"></a>Argument &#39; &lt;argumentname&gt; &#39; nie można przekonwertować wartość liczbowa.
-Konwersja próbował przekonwertować zmiennej, takiego jak ciąg, wartość liczbowa.  
+# <a name="argument-ltargumentnamegt-cannot-be-converted-to-a-numeric-value"></a>Argument "&lt;argumentname&gt;" nie można przekonwertować na wartość liczbową
+Konwersja podjął próbę przekonwertowania zmiennej, takie jak ciąg, wartość liczbową.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Znajdź konwersji, który jest łatwy do rozpoznania.  
+1.  Znajdź konwersji, która ma znaczenie.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersje typów w języku Visual Basic](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

@@ -1,18 +1,18 @@
 ---
-title: Nazwany argument &#39; &lt;argumentname&gt; &#39; określony wiele razy
+title: Argument nazwany "&lt;argumentname&gt;" określony wiele razy
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNamedArgumentAlreadyUsed1
 ms.assetid: a5113d23-ca66-4961-909f-74f97a0eaf87
-ms.openlocfilehash: 4704c9184faa1b4091e17e4b4385419b96597ec1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91594ab01267881732981db959a483485743e53b
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33635762"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53771524"
 ---
-# <a name="named-argument-39ltargumentnamegt39-specified-multiple-times"></a>Nazwany argument &#39; &lt;argumentname&gt; &#39; określony wiele razy
-Nazwany argument jest określona więcej niż raz.  
+# <a name="named-argument-ltargumentnamegt-specified-multiple-times"></a>Argument nazwany "&lt;argumentname&gt;" określony wiele razy
+Nazwany argument jest określony więcej niż jeden raz.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   

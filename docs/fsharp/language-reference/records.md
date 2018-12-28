@@ -1,17 +1,17 @@
 ---
-title: Rekordy (F#)
-description: Dowiedz się, jak rekordów F# reprezentują prostych wartości zagregowanych nazwanych wartości opcjonalnie wraz z elementów członkowskich.
+title: Rekordy
+description: Dowiedz się, jak F# rekordów reprezentują prostych wartości zagregowanych nazwanych wartości opcjonalnie wraz z elementów członkowskich.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48261293"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656144"
 ---
 # <a name="records"></a>Rekordy
 
-Rekordy reprezentują prostych wartości zagregowanych nazwanych wartości opcjonalnie wraz z elementów członkowskich.  Począwszy od F# 4.1, albo można typu struktury lub odwołania.  Są one domyślnie typami odwołań.
+Rekordy reprezentują prostych wartości zagregowanych nazwanych wartości opcjonalnie wraz z elementów członkowskich.  Począwszy od F# 4.1, albo mogą być typu struktury lub odwołania.  Są one domyślnie typami odwołań.
 
 ## <a name="syntax"></a>Składnia
 
@@ -89,6 +89,29 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 // and leave the rest with default values.
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
+
+## <a name="creating-mutually-recursive-records"></a>Tworzenie wzajemnie rekordów cykliczne
+
+Później, podczas tworzenia rekordu, możesz go są zależne od innego typu, który chcesz zdefiniować później. Jest to błąd kompilacji, chyba że zdefiniujesz typów rekordów, które wzajemnie się jako cykliczne.
+
+Definiowanie wzajemnie rekordów cyklicznego jest przeprowadzane za pomocą `and` — słowo kluczowe. Dzięki temu można połączyć ze sobą typy 2 lub więcej rekordów.
+
+Na przykład, poniższy kod definiuje `Person` i `Address` typ jako wzajemnie cyklicznej:
+
+```fsharp
+// Create a Person type and use the Address type that is not defined
+type Person =
+  { Name: string
+    Age: int
+    Address: Address }
+// Define the Address type which is used in the Person record
+and Address =
+  { Line1: string
+    Line2: string
+    PostCode: string }
+```
+
+Jeśli potrzeba zdefiniowania poprzedniego przykładu bez `and` — słowo kluczowe, a następnie ją będzie niemożliwa. `and` — Słowo kluczowe jest wymagany dla wzajemnie definicje cykliczne.
 
 ## <a name="pattern-matching-with-records"></a>Dopasowywanie wzorca z rekordów
 

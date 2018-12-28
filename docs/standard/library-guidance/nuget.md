@@ -4,12 +4,12 @@ description: Zalecane najlepsze dla pakietu nuget biblioteki .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 8ac01046f25176b781240baeba8bf1efb9376689
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129613"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614548"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -44,7 +44,7 @@ Zależności pakietów NuGet są tu szczegółowo [zależności](./dependencies.
 
 ## <a name="important-nuget-package-metadata"></a>Ważne metadane pakietu NuGet
 
-Pakiet NuGet obsługuje wiele [właściwości metadanych](/nuget/reference/nuspec). Poniższa tabela zawiera metadane podstawowe, zapewniające każdy projekt typu open-source:
+Pakiet NuGet obsługuje wiele [właściwości metadanych](/nuget/reference/nuspec). Poniższa tabela zawiera metadane podstawowe, zapewniające każdego pakietu w witrynie NuGet.org:
 
 | Nazwa właściwości programu MSBuild              | Nazwa Nuspec              | Opis  |
 | ---------------------------------- | ------------------------ | ------------ |
@@ -56,14 +56,12 @@ Pakiet NuGet obsługuje wiele [właściwości metadanych](/nuget/reference/nuspe
 | `PackageTags`                      | `tags`                     | Rozdzielany spacjami lista tagów i słów kluczowych, które opisują pakietu. Znaczniki są używane podczas wyszukiwania dla pakietów.             |
 | `PackageIconUrl`                   | `iconUrl`                  | Adres URL obrazu do użycia jako ikona dla pakietu. Adres URL powinien być schemat HTTPS i obraz, który powinien być 64 x 64 i mieć przezroczyste tło.             |
 | `PackageProjectUrl`                | `projectUrl`               | Adres URL strony głównej lub źródło repozytorium projektu.             |
-| `PackageLicenseUrl`                | `licenseUrl`               | Adres URL, aby uzyskać licencję projektu. Może być adres URL do `LICENSE` plików w kontroli źródła.             |
-
-**ROZWAŻ ✔️** Wybieranie nazwy pakietów NuGet z prefiksem, który spełnia rezerwowanie prefiksów identyfikatorów NuGet [kryteria](/nuget/reference/id-prefix-reservation).
-
-**ROZWAŻ ✔️** przy użyciu `LICENSE` plików w kontroli źródła, ponieważ `LicenseUrl`. Na przykład [LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md).
+| `PackageLicenseExpression`         | `license`                  | Licencja projektu [identyfikator SPDX](https://spdx.org/licenses/). Tylko do OSI i FSF zatwierdzone licencji można użyć identyfikatora. Należy używać innych licencji `PackageLicenseFile`. Przeczytaj więcej na temat [ `license` metadanych](/nuget/reference/nuspec#license). |
 
 > [!IMPORTANT]
-> Projekt bez licencji, wartość domyślna to [wyłącznych praw autorskich](https://choosealicense.com/no-permission/), uniemożliwiając innym użytkownikom.
+> Projekt bez licencji, wartość domyślna to [wyłącznych praw autorskich](https://choosealicense.com/no-permission/), uniemożliwiając prawnie przez inne osoby do użycia.
+
+**ROZWAŻ ✔️** Wybieranie nazwy pakietów NuGet z prefiksem, który spełnia rezerwowanie prefiksów identyfikatorów NuGet [kryteria](/nuget/reference/id-prefix-reservation).
 
 **CZY ✔️** Użyj href HTTPS, aby ikona pakietu.
 
@@ -73,9 +71,7 @@ Pakiet NuGet obsługuje wiele [właściwości metadanych](/nuget/reference/nuspe
 
 **ROZWAŻ ✔️** Konfigurowanie [SourceLink](./sourcelink.md) do dodawania metadanych do kontroli źródła do zestawów i pakietów NuGet.
 
-> Automatycznie dodaje SourceLink `RepositoryUrl` i `RepositoryType` metadanych do pakietu NuGet.
-> SourceLink dodaje również, że informacje o kodzie źródłowym dokładnie pakiet został zbudowany z.
-> Na przykład pakiet utworzony na podstawie repozytorium Git będzie mieć skrót zatwierdzenia dodać jako metadane.
+> Automatycznie dodaje SourceLink `RepositoryUrl` i `RepositoryType` metadanych do pakietu NuGet. SourceLink dodaje również, że informacje o kodzie źródłowym dokładnie pakiet został zbudowany z. Na przykład pakiet utworzony na podstawie repozytorium Git będzie mieć skrót zatwierdzenia dodać jako metadane.
 
 ## <a name="pre-release-packages"></a>Pakiety w wersji wstępnej
 

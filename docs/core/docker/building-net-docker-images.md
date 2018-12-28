@@ -1,17 +1,15 @@
 ---
 title: Omówienie obrazów platformy docker
 description: Dowiedz się, jak używać opublikowanych obrazów Docker w programie .NET Core z rejestru platformy Docker. Zostanie również dowiesz się, jak ściągać obrazy i tworzenie własnych obrazów.
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: dbe509269c1dc5868c44b12b025bbdd9faaa3508
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: dd8c6c500dc2177768e6cba0c1e303950e20d4f3
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169342"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656040"
 ---
 # <a name="learn-about-docker-images-for-net-core"></a>Więcej informacji na temat obrazów platformy Docker dla platformy .NET Core
 

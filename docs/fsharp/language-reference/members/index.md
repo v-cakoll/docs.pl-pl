@@ -1,29 +1,27 @@
 ---
-title: Członkowie (F#)
+title: Elementy członkowskie
 description: Dowiedz się więcej o elementach członkowskich obiektu w F# języka programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6dcdb1d7fa061fb838d4aa8f7a2912fd168c3781
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c32bd76ab60673563f0cc45ce0fb569b2ea262b9
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33562211"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613145"
 ---
 # <a name="members"></a>Elementy członkowskie
 
 W tej sekcji opisano elementy członkowskie F# typy obiektów.
 
-
 ## <a name="remarks"></a>Uwagi
+
 *Elementy członkowskie* funkcje, które są częścią definicji typu i są uznane za pomocą `member` — słowo kluczowe. F#typy obiektów, takich jak rekordy, klas, rekord z wariantami, interfejsów i struktury obsługuje elementy członkowskie. Aby uzyskać więcej informacji, zobacz [rekordów](../records.md), [klasy](../classes.md), [sumy rozłączne](../discriminated-Unions.md), [interfejsów](../interfaces.md), i [struktury](../structures.md).
 
 Elementy członkowskie zwykle tworzą interfejsu publicznego dla typu, dlatego są publiczne, chyba że określono inaczej. Prywatne lub wewnętrzne, mogą być także zadeklarowane elementy członkowskie. Aby uzyskać więcej informacji, zobacz [kontroli dostępu](../access-Control.md). Podpisy dla typów może również służyć do ujawniają i nie ujawnia niektóre elementy członkowskie typu. Aby uzyskać więcej informacji, zobacz [podpisy](../signatures.md).
 
 Pola prywatne i `do` powiązania, które są używane tylko z klasami, nie są członkami wartość true, ponieważ nigdy nie są częścią interfejsu publicznego typu i nie są zadeklarowane za pomocą `member` — słowo kluczowe, ale są opisane w tej sekcji również.
 
-
 ## <a name="related-topics"></a>Tematy pokrewne
-
 
 |Temat|Opis|
 |-----|-----------|

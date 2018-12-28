@@ -1,13 +1,13 @@
 ---
-title: 'Wyrażenie warunkowe: if... then...else (F#)'
-description: Dowiedz się, jak napisać wyrażenie warunkowe w języku F# do wykonywania różnych gałęzi kodu.
+title: 'Wyrażenie warunkowe: if... then... else'
+description: Dowiedz się, jak napisać wyrażenie warunkowe F# do wykonywania różnych gałęzi kodu.
 ms.date: 05/16/2016
-ms.openlocfilehash: 10e4224bef772f00520cf5a0fff2f2920147c2fc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: eade8c20c1b62a2e9a54700550d832798308f368
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44177604"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614061"
 ---
 # <a name="conditional-expressions-ifthenelse"></a>Wyrażenie warunkowe: `if...then...else`
 

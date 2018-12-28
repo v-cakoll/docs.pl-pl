@@ -1,21 +1,21 @@
 ---
-title: Dopasowanie wzorca (F#)
-description: Dowiedz się, jak wzorce są używane w języku F# do porównywania danych ze struktury logicznej, rozkładania danych do części składowych lub wyodrębnienia informacji z danych.
+title: Dopasowanie wzorca
+description: Dowiedz się, jak wzorce są stosowane w F# do porównywania danych ze struktury logicznej, rozkładania danych do części składowych lub wyodrębnienia informacji z danych.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991427"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613586"
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca
 
-Wzorce są regułami dotyczącymi przekształcania danych wejściowych. Są one używane w całym języku F# do porównywania danych ze strukturą logiczną lub strukturami, rozkładania danych do części składowych lub wyodrębnienia informacji z danych na różne sposoby.
+Wzorce są regułami dotyczącymi przekształcania danych wejściowych. Są one używane w całym F# język do porównywania danych ze strukturą logiczną lub strukturami, rozkładania danych do części składowych lub wyodrębnienia informacji z danych na różne sposoby.
 
 ## <a name="remarks"></a>Uwagi
 
-Wzorce są stosowane w wielu konstrukcjach języka, takich jak `match` wyrażenia. Są one używane podczas przetwarzania argumentów funkcji w `let` powiązania, wyrażeń lambda i procedurach obsługi wyjątków, skojarzone z `try...with` wyrażenia. Aby uzyskać więcej informacji, zobacz [wyrażenia dopasowań](match-expressions.md), [let — powiązania](functions/let-bindings.md), [wyrażenia Lambda: `fun` — słowo kluczowe](functions/lambda-expressions-the-fun-keyword.md), i [wyjątkami: `try...with` Wyrażenie](exception-handling/the-try-with-expression.md).
+Wzorce są stosowane w wielu konstrukcjach języka, takich jak `match` wyrażenia. Są one używane podczas przetwarzania argumentów funkcji w `let` powiązania, wyrażeń lambda i procedurach obsługi wyjątków, skojarzone z `try...with` wyrażenia. Aby uzyskać więcej informacji, zobacz [wyrażenia dopasowań](match-expressions.md), [let — powiązania](functions/let-bindings.md), [wyrażenia Lambda: `fun` — Słowo kluczowe](functions/lambda-expressions-the-fun-keyword.md), i [wyjątków: `try...with` Wyrażenie](exception-handling/the-try-with-expression.md).
 
 Na przykład w `match` wyrażenie *wzorzec* następuje symbol potoku.
 
@@ -43,7 +43,7 @@ Obsługiwane wzorce przedstawiono w poniższej tabeli. W czasie wykonywania dane
 |Wzorzec ujęty w nawiasy|( *wzorzec* )|`( a )`|
 |Wzór krotki|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
 |Rejestruj wzorzec|{ *identifier1* = *pattern_1*;...; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
-|Wzór symboli wieloznacznych|_|`_`|
+|Wzór symboli wieloznacznych|\_|`_`|
 |Wzorzec wraz ze wskazaniem typu|*wzorzec* : *typu*|`a : int`|
 |Wpisz wzór testu|:? *Typ* [jako *identyfikator* ]|`:? System.DateTime as dt`|
 |Wzorzec zerowy|null|`null`|
@@ -103,7 +103,7 @@ match shape with
 
 Aktywne wzorce umożliwiają zdefiniowanie bardziej złożonego niestandardowego wzorca dopasowania. Aby uzyskać więcej informacji na temat wzorców, zobacz [wzorców](active-patterns.md).
 
-Przypadek, w którym identyfikator jest wyjątkiem jest używany podczas dopasowywania wzorca w kontekście obsługi wyjątków. Aby uzyskać informacje o dopasowywaniu do wzorca w obsługę wyjątków, zobacz [wyjątkami: `try...with` wyrażenie](exception-handling/the-try-with-expression.md).
+Przypadek, w którym identyfikator jest wyjątkiem jest używany podczas dopasowywania wzorca w kontekście obsługi wyjątków. Aby uzyskać informacje o dopasowywaniu do wzorca w obsługę wyjątków, zobacz [wyjątków: `try...with` Wyrażenie](exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Wzory zmiennej
 

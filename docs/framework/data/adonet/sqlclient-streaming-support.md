@@ -2,12 +2,12 @@
 title: Obsługa przesyłania strumieniowego SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eeec8f2a88894762fd8dab93bf0b3b11941ba17a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152893"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613001"
 ---
 # <a name="sqlclient-streaming-support"></a>Obsługa przesyłania strumieniowego SqlClient
 Przesyłanie strumieniowe pomocy technicznej między programu SQL Server i aplikacją (Nowość w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) obsługuje dane bez określonej struktury na serwerze (dokumenty, obrazy i pliki multimedialne). Bazy danych programu SQL Server może przechowywać duże obiekty binarne (BLOB), ale pobieranie obiektów blob może używać dużej ilości pamięci.  
@@ -326,7 +326,7 @@ GO
   
 -   Przy użyciu nowej funkcji asynchronicznych i słowo kluczowe await transferowania dużych obiektów BLOB.  
   
--   Anulowanie transferu dużych obiektów BLOB...  
+-   Anulowanie transferu dużych obiektów BLOB.  
   
 -   Przesyłanie strumieniowe z jednego serwera SQL do innej przy użyciu nowej funkcji asynchronicznych.  
   

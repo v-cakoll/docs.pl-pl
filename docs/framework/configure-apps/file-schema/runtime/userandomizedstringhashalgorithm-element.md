@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a515c3011905c4f5c18ed9d3e8edf489428c04d8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 15a86c1df3e7d6a9d8ddd102bd34aede46c08ba8
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746088"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612091"
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a>&lt;Userandomizedstringhashalgorithm —&gt; — Element
-Określa, czy środowisko uruchomieniowe języka wspólnego oblicza skrótu dla ciągów na poszczególnych domen aplikacji.  
+Określa, czy środowisko uruchomieniowe języka wspólnego oblicza kody skrótów dla ciągów na podstawie domeny aplikacji.  
   
  \<Konfiguracja >  
 \<runtime>  
@@ -38,14 +38,14 @@ Określa, czy środowisko uruchomieniowe języka wspólnego oblicza skrótu dla 
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy skrótu dla ciągów są obliczane na podstawie domen aplikacji.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy kody skrótów dla ciągów są obliczane na podstawie domeny aplikacji.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`0`|Środowisko uruchomieniowe języka wspólnego nie obliczeniowe skrótu dla ciągów na poszczególnych domen aplikacji; jeden algorytm służy do obliczania skrótu ciągu. Domyślnie włączone.|  
-|`1`|Środowisko uruchomieniowe języka wspólnego oblicza skrótu dla ciągów na poszczególnych domen aplikacji. Identycznych ciągów w różnych domenach aplikacji i w różnych procesów będzie miał inną skrótu.|  
+|`0`|Środowisko uruchomieniowe języka wspólnego nie może obliczyć kodów skrótu dla ciągów na podstawie domeny aplikacji; jeden algorytm jest używany do obliczania kodów wartości skrótu ciągu. Domyślnie włączone.|  
+|`1`|Środowisko uruchomieniowe języka wspólnego oblicza kody skrótów dla ciągów na podstawie domeny aplikacji. Identyczne ciągi w różnych domenach aplikacji i w różnych procesach będą miały różne wartości skrótów.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -58,26 +58,26 @@ Określa, czy środowisko uruchomieniowe języka wspólnego oblicza skrótu dla 
 |`runtime`|Zawiera informacje dotyczące opcji inicjowania środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie <xref:System.StringComparer> klasy i <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> metody użyć pojedynczego algorytmu wyznaczania wartości skrótu, tworzącego spójne skrótu w domenach aplikacji. Jest to równoważne ustawienie `enabled` atrybutu `<UseRandomizedStringHashAlgorithm>` elementu `0`. Jest to algorytmu wyznaczania wartości skrótu używany w [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ Domyślnie <xref:System.StringComparer> klasy i <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> metody użyć pojedynczego algorytmu mieszania, który produkuje spójny kod mieszany w różnych domenach aplikacji. Jest to równoważne ustawieniu `enabled` atrybutu `<UseRandomizedStringHashAlgorithm>` elementu `0`. Jest to algorytm mieszania używany w [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
   
- <xref:System.StringComparer> Klasy i <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> metody można również użyć innego algorytmu wyznaczania wartości skrótu, który oblicza skrótu na poszczególnych domen aplikacji. W związku z tym skrótu dla ciągów równoważne różnią się między domenami aplikacji. Jest to funkcji opcjonalnych; Aby móc korzystać z niego, należy ustawić `enabled` atrybutu `<UseRandomizedStringHashAlgorithm>` elementu `1`.  
+ <xref:System.StringComparer> Klasy i <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> metodę można również użyć innego algorytmu wyznaczania wartości skrótu, który oblicza kody skrótów na poszczególnych domen aplikacji. W rezultacie kody skrótów dla równoważnych ciągów różnią się w różnych domenach aplikacji. Jest to opcjonalna funkcja; Aby z niej korzystać, należy ustawić `enabled` atrybutu `<UseRandomizedStringHashAlgorithm>` elementu `1`.  
   
- Operacja O(1) jest zwykle wyszukiwania ciągu w tablicy skrótów. Jednak w przypadku wystąpienia dużej liczby kolizji wyszukiwania może stać się O (n<sup>2</sup>) operacji. Można użyć `<UseRandomizedStringHashAlgorithm>` element konfiguracji do generowania losowego algorytmu wyznaczania wartości skrótu dla domeny aplikacji, co z kolei ogranicza liczbę potencjalnych konfliktów, szczególnie w przypadku, gdy klucze, z których mają być obliczane kodów skrótów są oparte na danych wejściowych przez użytkowników.  
+ Wyszukiwanie ciągu w tabeli skrótów jest zazwyczaj operacją O(1). Jednak w przypadku wystąpienia dużej liczby kolizji wyszukiwanie może stać się O (n<sup>2</sup>) operacji. Możesz użyć `<UseRandomizedStringHashAlgorithm>` element konfiguracji, aby wygenerować losowy algorytm mieszania dla domeny aplikacji, co z kolei ogranicza liczbę potencjalnych konfliktów, szczególnie w przypadku, gdy klucze, z których obliczane są kody mieszania są oparte na danych wejściowych przez użytkowników.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie zdefiniowano `DisplayString` klasy, który obejmuje stałą typu string prywatne, `s`, którego wartość wynosi "Jest ciągiem". Zawiera także `ShowStringHashCode` metodę, która wyświetla wartość ciągu i jego skrótu wraz z nazwą domeny aplikacji, w którym jest wykonywany metody.  
+ W poniższym przykładzie zdefiniowano `DisplayString` klasę zawierającą prywatną stałą typu ciąg, `s`, którego wartość jest "Jest ciąg". Obejmuje również `ShowStringHashCode` metoda, która wyświetla wartości ciągu i jego kod skrótu wraz z nazwą domeny aplikacji, w którym metoda jest wykonywaay.  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  
   
- Po uruchomieniu przykładzie bez podawania plik konfiguracji, wyświetla dane wyjściowe podobne do następującego. Należy zauważyć, że skrótu ciągu identyczne w domenach dwóch aplikacji.  
+ Po uruchomieniu przykładu bez podawania pliku konfiguracji, wyświetla dane wyjściowe podobne do następujących. Należy zauważyć, że kody mieszania dla ciągu są identyczne w dwóch domenach aplikacji.  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
   
- Jednak jeśli dodać następującego pliku konfiguracji do katalogu w tym przykładzie, a następnie uruchomić przykład, kodów skrótów dla tych samych parametrach różnią się według domeny aplikacji.  
+ Jeśli dodasz następujący plik konfiguracji do katalogu w tym przykładzie, a następnie uruchomisz przykład, kody skrótów dla tego samego ciągu będą różne według domeny aplikacji.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -88,7 +88,7 @@ String 'This is a string.' in domain 'NewDomain': 941BCEAC
 </configuration>  
 ```  
   
- Gdy plik konfiguracji jest obecny, w przykładzie przedstawiono następujące dane wyjściowe:  
+ Gdy plik konfiguracji jest obecny, przykładzie są wyświetlane następujące dane wyjściowe:  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  
@@ -96,6 +96,6 @@ String 'This is a string.' in domain 'NewDomain': 75CC8236
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
- <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
+- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
+- <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
+- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>

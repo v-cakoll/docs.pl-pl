@@ -1,25 +1,25 @@
 ---
-title: Wnioskowanie o typie (F#)
-description: Dowiedz się, jak kompilator F# wnioskuje typów wartości, zmiennych, parametrów i zwracanych wartości.
+title: Wnioskowanie o typie
+description: Dowiedz się, jak F# kompilator wnioskuje typów wartości, zmiennych, parametrów i zwracanych wartości.
 ms.date: 05/16/2016
-ms.openlocfilehash: fd826ac48fb9a70aa6f4ff746599c11b7e21a02e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 3e61d5c81fde0a48af66a47745123a842dc04cb1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865699"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612793"
 ---
 # <a name="type-inference"></a>Wnioskowanie o typie
 
-W tym temacie opisano, jak kompilator F# wnioskuje typów wartości, zmiennych, parametrów i zwracanych wartości.
+W tym temacie opisano sposób, w jaki F# kompilator wnioskuje typów wartości, zmiennych, parametrów i zwracanych wartości.
 
 ## <a name="type-inference-in-general"></a>Wnioskowanie o typie ogólnie rzecz biorąc
 
-Koncepcja wnioskowanie o typie jest, czy jest konieczne określanie typów konstrukcje F#, z wyjątkiem sytuacji, gdy kompilator ostatecznie nie można wywnioskować typu. Pomijanie informacji o typie jawne nie oznacza, że F# to język o typach określanych dynamicznie lub że wartości w F# jest słabo z kontrolą typów. Język F# jest statycznie typizowanym językiem, co oznacza, że kompilator wywnioskowuje, że typem dokładne dla każdego konstrukcji podczas kompilacji. Jeśli nie jest wystarczająco dużo informacji dla kompilatora wywnioskowanie typów każdego konstrukcji, dodatkowy typ informacji, musisz podać zwykle przez dodawanie adnotacji typu jawnego gdzieś w kodzie.
+Koncepcja wnioskowanie o typie jest, że trzeba określić typy F# konstrukcji, z wyjątkiem sytuacji, gdy kompilator ostatecznie nie można wywnioskować typu. Pomijanie informacji o typie jawne nie oznacza to, że F# jest dynamicznie typizowanym językiem, lub że wartości w F# czy ze słabą kontrolą typów. F#jest statycznie typizowanym językiem, co oznacza, że kompilator wywnioskowuje, że typem dokładne dla każdego konstrukcji podczas kompilacji. Jeśli nie jest wystarczająco dużo informacji dla kompilatora wywnioskowanie typów każdego konstrukcji, dodatkowy typ informacji, musisz podać zwykle przez dodawanie adnotacji typu jawnego gdzieś w kodzie.
 
 ## <a name="inference-of-parameter-and-return-types"></a>Wnioskowanie parametrów i zwracanych typów
 
-Na liście parametrów nie należy określić typ każdego parametru. I jeszcze, F# to język statycznie wpisane, a w związku z tym każdy wartość i wyrażenie ma określony typ w czasie kompilacji. Dla tych typów, które nie są jawnie określone kompilator wnioskuje typ na podstawie kontekstu. Jeśli typ nie jest w przeciwnym razie określone, wynika to ogólny. Jeśli kod używa wartości niespójnie, w taki sposób, to nie pojedynczy wywnioskować typ, który spełnia wszystkie przypadki użycia wartości, kompilator zgłosi błąd.
+Na liście parametrów nie należy określić typ każdego parametru. I jeszcze F# jest statycznie typizowanym językiem, a w związku z tym każdy wartość i wyrażenie ma określony typ w czasie kompilacji. Dla tych typów, które nie są jawnie określone kompilator wnioskuje typ na podstawie kontekstu. Jeśli typ nie jest w przeciwnym razie określone, wynika to ogólny. Jeśli kod używa wartości niespójnie, w taki sposób, to nie pojedynczy wywnioskować typ, który spełnia wszystkie przypadki użycia wartości, kompilator zgłosi błąd.
 
 Zwracany typ funkcji jest określana przez typ ostatniego wyrażenia w funkcji.
 
@@ -59,7 +59,7 @@ Typ jest wnioskowany jako
 
 ## <a name="additional-information"></a>Dodatkowe informacje
 
-Wnioskowanie o typie jest opisany bardziej szczegółowo w specyfikacji języka F#.
+Wnioskowanie o typie jest opisany bardziej szczegółowo w F# specyfikacji języka.
 
 ## <a name="see-also"></a>Zobacz także
 

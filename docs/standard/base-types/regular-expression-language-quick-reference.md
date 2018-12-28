@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041619"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779389"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Język wyrażeń regularnych — podręczny wykaz
 <a name="top"></a> Wyrażenie regularne to wzorzec, który aparat wyrażeń regularnych próbuje dopasować w tekście wejściowym. Wzorzec składa się z co najmniej jednego literału znakowego, operatora lub konstrukcji.  Aby uzyskać krótkie wprowadzenie – zobacz [wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "44041619"
   
  [Sekwencje ucieczki znaków](#character_escapes)  
  [Klasy znaków](#character_classes)  
- [Kotwice](#atomic_zerowidth_assertions)  
+ [Kotwice](#anchors)  
  [Konstrukcje grupujące](#grouping_constructs)  
  [Kwantyfikatory](#quantifiers)  
  [Konstrukcje dopasowywania wstecznego](#backreference_constructs)  
@@ -74,8 +74,8 @@ ms.locfileid: "44041619"
 |---------------------|-----------------|-------------|-------------|  
 |`[` *character_group* `]`|Dopasowuje dowolny pojedynczy znak w *character_group*. Domyślnie w dopasowaniu jest uwzględniana wielkość liter.|`[ae]`|„a” w ciągu „gray”<br /><br /> „a”, „e” w ciągu „lane”|  
 |`[^` *character_group* `]`|Negacja: Dopasowuje dowolny pojedynczy znak, który nie znajduje się w *character_group*. Domyślnie, znaki w *character_group* jest rozróżniana wielkość liter.|`[^aei]`|„r”, „g”, „n” w „reign”|  
-|`[` *pierwszy* `-` *ostatni* `]`|Zakres znaków: dopasowuje dowolny pojedynczy znak z zakresu od *pierwszy* do *ostatniego*.|`[A-Z]`|„A”, „B” w ciągu „AB123”|  
-|`.`|Symbol wieloznaczny: Dopasowuje każdy pojedynczy znak, oprócz znaku \n.<br /><br /> Aby dopasować znak literału kropki (. lub `\u002E`), należy poprzedzić znak ucieczki (`\.`).|`a.e`|„ave” w ciągu „nave”<br /><br /> „ate” w ciągu „water”|  
+|`[` *pierwszy* `-` *ostatni* `]`|Zakres znaków: Dopasowuje dowolny pojedynczy znak z zakresu od *pierwszy* do *ostatniego*.|`[A-Z]`|„A”, „B” w ciągu „AB123”|  
+|`.`|Symbol wieloznaczny: Dopasowuje dowolny pojedynczy znak z wyjątkiem \n.<br /><br /> Aby dopasować znak literału kropki (. lub `\u002E`), należy poprzedzić znak ucieczki (`\.`).|`a.e`|„ave” w ciągu „nave”<br /><br /> „ate” w ciągu „water”|  
 |`\p{` *Nazwa* `}`|Dopasowuje dowolny pojedynczy znak w ogólnej kategorii Unicode lub nazwanego bloku określonego przez *nazwa*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|„C”, „L” w ciągu „City Lights”<br /><br /> „Д”, „Ж” w ciągu „ДЖem”|  
 |`\P{` *Nazwa* `}`|Dopasowuje dowolny pojedynczy znak, który nie znajduje się w ogólnej kategorii Unicode lub nazwanego bloku określonego przez *nazwa*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|„i”, „t”, „y” w ciągu „City”<br /><br /> „e”, „m” w ciągu „ДЖem”|  
 |`\w`|Dopasowuje dowolny znak słowa.|`\w`|„I”, „D”, „A”, „1”, „3” w ciągu „ID A1.3”|  
@@ -87,7 +87,6 @@ ms.locfileid: "44041619"
   
  [Powrót do początku](#top)  
   
-<a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>Kotwice  
  Kotwice (niepodzielne asercje o zerowej szerokości) powodują, że sukces lub niepowodzenie dopasowywania jest zależne od bieżącej pozycji w ciągu, ale nie powodują, że aparat przechodzi do dalszej części ciągu lub używa znaków. Metaznaki wymienione w poniższej tabeli są kotwicami. Aby uzyskać więcej informacji, zobacz [kotwic](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
@@ -179,7 +178,7 @@ ms.locfileid: "44041619"
 |`$&`|Podstawia kopię całego dopasowania.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
 |<code>$`</code>|Podstawia cały tekst ciągu wejściowego przed dopasowaniem.|`B+`|<code>$`</code>|„AABBCC”|„AAAACC”|  
 |`$'`|Podstawia cały tekst ciągu wejściowego po dopasowaniu.|`B+`|`$'`|„AABBCC”|„AACCCC”|  
-|`$+`|Podstawia ostatnią przechwyconą grupę.|`B+(C+)`|`$+`|„AABBCCDD”|AACCDD|  
+|`$+`|Podstawia ostatnią przechwyconą grupę.|`B+(C+)`|`$+`|„AABBCCDD”|"AACCDD"|  
 |`$_`|Podstawia cały ciąg wejściowy.|`B+`|`$_`|„AABBCC”|„AAAABBCCCC”|  
   
  [Powrót do początku](#top)  

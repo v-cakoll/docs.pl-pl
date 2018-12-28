@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1f041cbfb4195b2c649c3af4fa061bf63e227df
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b53debd8f71bddb353ff7709decf0142c339e5d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754291"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612702"
 ---
 # <a name="ltforceperformancecounteruniquesharedmemoryreadsgt-element"></a>&lt;forceperformancecounteruniquesharedmemoryreads —&gt; — Element
-Określa, czy PerfCounter.dll używa ustawienia rejestru CategoryOptions w aplikacji .NET Framework w wersji 1.1 do określenia, czy ładowanie danych licznika wydajności z pamięci współużytkowanej specyficznego dla kategorii lub pamięci globalnej.  
+Określa, czy PerfCounter.dll używa ustawienia rejestru CategoryOptions w aplikacji .NET Framework w wersji 1.1 do określenia, czy można załadować danych licznika wydajności z pamięci współużytkowanej specyficznego dla kategorii lub globalnej pamięci.  
   
  \<Konfiguracja >  
 \<runtime>  
@@ -35,7 +35,7 @@ enabled="true|false"/>
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Wskazuje, czy PerfCounter.dll używa CategoryOptions ustawienie rejestru w celu określenia, czy ładowanie danych licznika wydajności z pamięci współużytkowanej specyficznego dla kategorii lub globalnej pamięci.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Wskazuje, czy PerfCounter.dll używa CategoryOptions ustawienia rejestru w celu ustalenia, czy można załadować danych licznika wydajności z pamięci współużytkowanej specyficznego dla kategorii lub pamięci globalnej.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
@@ -55,21 +55,21 @@ enabled="true|false"/>
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- W wersjach programu .NET Framework, przed [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], uzgodnić wersji PerfCounter.dll, która została załadowana do środowiska wykonawczego, który został załadowany w procesie. Jeśli komputer ma zarówno programu .NET Framework w wersji 1.1 i [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] zainstalowany, aplikacji .NET Framework 1.1 czy ładowanie wersji .NET Framework 1.1 PerfCounter.dll. Począwszy od [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], najnowsza wersja zainstalowanego PerfCounter.dll został załadowany. Oznacza to, że załaduje aplikacji .NET Framework 1.1 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] wersji PerfCounter.dll Jeśli [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] jest zainstalowany na komputerze.  
+ W wersjach programu .NET Framework przed [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], wersja PerfCounter.dll, który został załadowany odpowiadał do środowiska uruchomieniowego, który został załadowany w procesie. Jeśli komputer ma zarówno programu .NET Framework w wersji 1.1 i [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] zainstalowany, aplikacji programu .NET Framework 1.1 będzie załadować wersji .NET Framework 1.1 PerfCounter.dll. Począwszy od [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], zainstalowaną najnowszą wersję PerfCounter.dll jest ładowany. Oznacza to, że załaduje aplikacji .NET Framework 1.1 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] wersję PerfCounter.dll Jeśli [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] jest zainstalowany na komputerze.  
   
- Począwszy od [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], gdy korzystanie z liczników wydajności, PerfCounter.dll sprawdza CategoryOptions wpisu rejestru dla każdego dostawcy określić, czy odczytywane z pamięci współużytkowanej specyficznego dla kategorii lub globalnej pamięci współdzielonej. .NET Framework 1.1 PerfCounter.dll nie odczytać tego wpisu rejestru, ponieważ nie został powiadomiony o pamięci współużytkowanej specyficznego dla kategorii; zawsze odczytuje z globalnej pamięci współdzielonej.  
+ Począwszy od [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], podczas korzystania z liczników wydajności, PerfCounter.dll sprawdza, czy wpis rejestru CategoryOptions dla każdego dostawcy ustalić, czy powinni przeczytać z pamięci współużytkowanej specyficznego dla kategorii lub globalnej pamięci współdzielonej. PerfCounter.dll 1.1 programu .NET Framework nie odczytać ten wpis rejestru, ponieważ nie ma informacji o pamięci współużytkowanej specyficznego dla kategorii; zawsze odczytuje z globalnej pamięci współdzielonej.  
   
- W celu zapewnienia zgodności z poprzednimi wersjami [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter.dll nie sprawdza wpis rejestru CategoryOptions podczas uruchamiania aplikacji .NET Framework 1.1. Po prostu używa globalnej pamięci współdzielonej, podobnie jak PerfCounter.dll 1.1 programu .NET Framework. Jednak możesz wydać [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter.dll, aby sprawdzić ustawienie rejestru, należy włączyć `<forcePerformanceCounterUniqueSharedMemoryReads>` elementu.  
+ W celu zapewnienia zgodności z poprzednimi wersjami [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter.dll nie sprawdza wpis rejestru CategoryOptions podczas uruchamiania w aplikacji .NET Framework 1.1. Po prostu używa globalnej pamięci współdzielonej, podobnie jak PerfCounter.dll 1.1 programu .NET Framework. Jednak można nakazać [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter.dll, aby sprawdzić ustawienia rejestru, włączając `<forcePerformanceCounterUniqueSharedMemoryReads>` elementu.  
   
 > [!NOTE]
->  Włączanie `<forcePerformanceCounterUniqueSharedMemoryReads>` elementu nie gwarantuje użytą pamięci współużytkowanej specyficznego dla kategorii. Aby włączyć ustawienie `true` tylko powoduje PerfCounter.dll do odwołania na ustawienie rejestru CategoryOptions. Ustawieniem domyślnym dla CategoryOptions jest użycie pamięci współużytkowanej specyficznego dla kategorii; można jednak zmienić CategoryOptions, aby wskazać, że powinny być używane globalnej pamięci współdzielonej.  
+>  Włączanie `<forcePerformanceCounterUniqueSharedMemoryReads>` elementu nie gwarantuje posłuży pamięci współużytkowanej w poszczególnych kategoriach. Ustawienie jest włączone do `true` tylko powoduje, że PerfCounter.dll k odkazu CategoryOptions ustawienie rejestru. Ustawieniem domyślnym dla CategoryOptions jest użycie pamięci współużytkowanej specyficznego dla kategorii; można jednak zmienić CategoryOptions, aby wskazać, że globalne pamięci współużytkowanej powinien być używany.  
   
- Klucz rejestru, która zawiera ustawienie CategoryOptions jest HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< categoryName\>\Performance. Domyślnie CategoryOptions wynosi 3, który powoduje, że PerfCounter.dll do użycia pamięci współużytkowanej specyficznego dla kategorii. Jeśli CategoryOptions jest ustawiona na 0, PerfCounter.dll korzysta z globalnej pamięci współdzielonej. Dane wystąpienia zostanie ono użyte ponownie tylko wtedy, gdy nazwa wystąpienia, tworzony jest identyczny z wystąpieniem używane ponownie. Wszystkie wersje będzie można zapisywać do tej kategorii. Jeśli CategoryOptions jest ustawiona na 1, jest używany w globalnej pamięci współdzielonej, ale dane wystąpienia mogą być ponownie używane, jeśli nazwa kategorii jest taką samą długość jak kategoria używane ponownie.  
+ Klucz rejestru, który zawiera ustawienia CategoryOptions jest HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< categoryName\>\Performance. Domyślnie CategoryOptions jest równa 3, który powoduje, że PerfCounter.dll do użycia pamięci współużytkowanej w poszczególnych kategoriach. Jeśli CategoryOptions jest równa 0, PerfCounter.dll korzysta z globalnej pamięci współdzielonej. Dane wystąpienia zostanie ponownie użyty tylko wtedy, gdy nazwę wystąpienia, tworzona jest taka sama jak wystąpienie używane ponownie. Wszystkie wersje będą mogli zapisywać do tej kategorii. Jeśli CategoryOptions jest ustawiona na 1, jest używany w globalnej pamięci współdzielonej, ale dane wystąpienia mogą być ponownie używane, jeśli nazwa kategorii jest tę samą długość jak kategoria używane ponownie.  
   
- Ustawienia wartości 0 i 1 może prowadzić do przecieki pamięci i wypełnianie zapasowej pamięci liczników wydajności.  
+ Ustawienia 0 i 1 może prowadzić do przecieków pamięci i wypełnianie się pamięci licznika wydajności.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób określania, czy PerfCounter.dll powinien odwoływać się wpis rejestru CategoryOptions, aby określić, czy należy używać pamięci współużytkowanej specyficznego dla kategorii.  
+ Poniższy przykład pokazuje, jak określić, że PerfCounter.dll powinny odwoływać się CategoryOptions wpis rejestru w celu ustalenia, czy należy używać w niej Pamięć współużytkowana specyficznego dla kategorii.  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ enabled="true|false"/>
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

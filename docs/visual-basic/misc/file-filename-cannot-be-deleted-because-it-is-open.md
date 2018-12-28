@@ -1,18 +1,18 @@
 ---
-title: Plik &#39; &lt;filename&gt; &#39; nie można usunąć, ponieważ jest on otwarty
+title: Plik "&lt;filename&gt;" nie można usunąć, ponieważ jest on otwarty
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileAlreadyOpen1
 ms.assetid: e1cbc46a-1db0-412d-8109-31342ec9d327
-ms.openlocfilehash: ceff8579a17369095352468475f426e6e7ea56a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfa2dd883b61b887e91737e736c654372fea92b6
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33638659"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53761215"
 ---
-# <a name="file-39ltfilenamegt39-cannot-be-deleted-because-it-is-open"></a>Plik &#39; &lt;filename&gt; &#39; nie można usunąć, ponieważ jest on otwarty
-Operacja usuwania podjęto próbę na plik.  
+# <a name="file-ltfilenamegt-cannot-be-deleted-because-it-is-open"></a>Plik "&lt;filename&gt;" nie można usunąć, ponieważ jest on otwarty
+Próba usunięcia na otwartego pliku.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   

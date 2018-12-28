@@ -1,13 +1,13 @@
 ---
-title: Opcje kompilatora (F#)
+title: Opcje kompilatora
 description: Użyj F# opcje wiersza polecenia kompilatora do kontrolowania kompilacji usługi F# aplikacji i bibliotek.
 ms.date: 12/10/2018
-ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
+ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170876"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614496"
 ---
 # <a name="compiler-options"></a>Opcje kompilatora
 
@@ -67,10 +67,9 @@ W poniższej tabeli przedstawiono opcje kompilatora w porządku alfabetycznym. N
 |`--warnon:warning-number-list`|Włącz określone ostrzeżenia, które mogą być domyślnie wyłączone lub wyłączone przez inną opcję wiersza polecenia. W F# 3.0 tylko ostrzeżenie 1182 (o nieużywanych zmiennych) jest domyślnie wyłączona.|
 |<code>--warnaserror[+&#124;-] [warning-number-list]</code>|Włącza lub wyłącza opcję zgłaszania ostrzeżeń jako błędów. Możesz zapewnić specjalne numery ostrzeżeń, które mają być wyłączone lub włączone. Opcje później w wierszu polecenia zastępują opcje wcześniej w wierszu polecenia. Na przykład, aby określić, które nie mają być zgłaszane jako błędy ostrzeżenia, należy określić `--warnaserror+` `--warnaserror-:warning-number-list`.<br /><br />Ta opcja kompilatora jest równoważna C# — opcja kompilatora o takiej samej nazwie. Aby uzyskać więcej informacji, zobacz [ &#47;warnaserror &#40;C&#35; opcje kompilatora&#41;](https://msdn.microsoft.com/library/406xhdz3.aspx).|
 |`--win32manifest:manifest-filename`|Dodaje plik manifestu Win32 do kompilacji. Ta opcja kompilatora jest równoważna C# — opcja kompilatora o takiej samej nazwie. Aby uzyskać więcej informacji, zobacz [ &#47;win32manifest &#40;C&#35; opcje kompilatora&#41;](https://msdn.microsoft.com/library/bb545961.aspx).|
-|`--win32res:resource-filename`|Dodaje plik zasobów Win32 do kompilacji.<br /><br />Ta opcja kompilatora jest równoważna C# — opcja kompilatora o takiej samej nazwie. Aby uzyskać więcej informacji, zobacz [ &#47;win32res (&#40;k & #35); Opcje kompilatora&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx).|
+|`--win32res:resource-filename`|Dodaje plik zasobów Win32 do kompilacji.<br /><br />Ta opcja kompilatora jest równoważna C# — opcja kompilatora o takiej samej nazwie. Aby uzyskać więcej informacji, zobacz [ &#47;win32res (&#40;C&#35;) — opcje kompilatora&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx).|
 
 ## <a name="related-articles"></a>Pokrewne artykuły:
-
 
 |Tytuł|Opis|
 |-----|-----------|

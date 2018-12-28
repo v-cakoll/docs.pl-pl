@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
-ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2317ed0dbe8a6e69452ac0721ffed1b9da50a907
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147609"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396932"
 ---
 # <a name="framework-design-guidelines"></a>Framework — zalecenia dotyczące projektowania
 Ta sekcja zawiera wskazówki dotyczące projektowania bibliotek, które rozszerzają i wchodzić w interakcje z programu .NET Framework. Celem jest pomoc projektantów Biblioteka zapewnia spójność interfejsu API i łatwość użycia, udostępniając ujednolicony model programowania, który jest niezależny od języka programowania, używany do tworzenia aplikacji. Zaleca się przestrzegać następujących wytycznych projektowania, podczas tworzenia klas i składników, które rozszerzają programu .NET Framework. Biblioteka niespójne projektu niekorzystnie wpływa na wydajność pracy deweloperskiej i zniechęca do przyjęcia.  
@@ -42,7 +42,7 @@ Ta sekcja zawiera wskazówki dotyczące projektowania bibliotek, które rozszerz
  W tym artykule opisano wskazówki dotyczące przy użyciu popularnych typów, takich jak tablice, atrybuty i kolekcje, obsługa serializacji i przeciążanie operatorów równości.  
   
  [Często używane wzorce projektowe](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- Zawiera wskazówki dotyczące wybierania i implementowanie właściwości zależności i wzorzec dispose.  
+ Zawiera wskazówki dotyczące wybierania i implementowanie właściwości zależności.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   

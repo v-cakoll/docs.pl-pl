@@ -6,6 +6,6 @@
 |Sugestia|Począwszy od aplikacji działających w środowisku .NET Framework 4.7.1, możesz użyć implementacji CryptoServiceProvider, używany domyślnie w programie .NET Framework 4.6.1 i wcześniejszych wersjach, dodając następującą konfigurację przejdź do [środowiska uruchomieniowego](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md)sekcji w pliku konfiguracji aplikacji:<pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.Xml.SignedXmlUseLegacyCertificatePrivateKey=true&quot; /&gt;&#13;&#10;</code></pre>|
 |Zakres|Krawędź|
 |Wersja|4.6.2|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.Security.Cryptography.Xml.SignedXml.CheckSignatureReturningKey(System.Security.Cryptography.AsymmetricAlgorithm@)?displayProperty=nameWithType></li></ul>|
 

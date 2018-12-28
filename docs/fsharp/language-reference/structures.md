@@ -1,13 +1,13 @@
 ---
-title: Struktury (F#)
-description: Dowiedz się więcej o F# struktury, typ obiektu compact, który jest często bardziej efektywne niż klasy dla typów z małą ilością danych i prostego zachowanie.
+title: Struktury
+description: Dowiedz się więcej o F# struktury typu compact obiektu, który jest często bardziej efektywne niż klasy dla typów z małą ilością danych i prostego zachowanie.
 ms.date: 05/16/2016
-ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48845304"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612156"
 ---
 # <a name="structures"></a>Struktury
 
@@ -40,7 +40,7 @@ Struktury nie uczestniczą w dziedziczeniu, nie mogą zawierać `let` lub `do` p
 
 Ponieważ nie zezwalają na struktury `let` powiązania, należy zadeklarować pól w strukturach przy użyciu `val` — słowo kluczowe. `val` — Słowo kluczowe definiuje pola typu i jego typu, ale nie zezwala na inicjowanie. Zamiast tego `val` deklaracje są zainicjowana na zero lub wartość null. Z tego powodu struktur, które mają Konstruktor niejawne (czyli parametry, które zawierają zaraz po nazwie struktury w deklaracji) wymagają `val` deklaracje być oznaczona przy użyciu `DefaultValue` atrybutu. Struktury, które mają zdefiniowany Konstruktor nadal obsługuje inicjowania zero. W związku z tym `DefaultValue` atrybutu jest deklaracją, że takie wartość zero jest prawidłowy dla pola. Niejawne konstruktory dla struktury nie wykonuj żadnych akcji, ponieważ `let` i `do` powiązania nie są dozwolone w typie, ale wartości parametru dorozumiany Konstruktor przekazane są dostępne jako pola prywatne.
 
-Jawnych konstruktorów może obejmować Inicjowanie wartości pól. Jeśli masz strukturę, która ma jawny Konstruktor, nadal obsługuje inicjowania zero; jednak nie użyto `DefaultValue` atrybutu na `val` deklaracji, ponieważ powoduje on konflikt z jawny Konstruktor. Aby uzyskać więcej informacji na temat `val` deklaracji, zobacz [pola jawne: `val` — słowo kluczowe](members/explicit-fields-the-val-keyword.md).
+Jawnych konstruktorów może obejmować Inicjowanie wartości pól. Jeśli masz strukturę, która ma jawny Konstruktor, nadal obsługuje inicjowania zero; jednak nie użyto `DefaultValue` atrybutu na `val` deklaracji, ponieważ powoduje on konflikt z jawny Konstruktor. Aby uzyskać więcej informacji na temat `val` deklaracji, zobacz [pola jawne: `val` — Słowo kluczowe](members/explicit-fields-the-val-keyword.md).
 
 Atrybuty i modyfikatory dostępności są dozwolone w strukturach, a następnie wykonaj te same zasady, jak w przypadku innych typów. Aby uzyskać więcej informacji, zobacz [atrybuty](attributes.md) i [kontroli dostępu](access-control.md).
 
@@ -64,7 +64,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` nie oznacza `Struct`. Zarówno musi być obecny w typie.
 
-Element "`byref`— takich jak" struct w języku F# to typ wartości powiązanym ze stosu. Nigdy nie zostanie przydzielona na stosie zarządzanym. A `byref`— takie jak struktura jest przydatne w przypadku programowania o wysokiej wydajności, jak są wymuszane za pomocą zestawu silne testów o okresie istnienia i -capture. Dostępne są następujące reguły:
+Element "`byref`— takich jak" struct w F# jest typem wartości powiązanym ze stosu. Nigdy nie zostanie przydzielona na stosie zarządzanym. A `byref`— takie jak struktura jest przydatne w przypadku programowania o wysokiej wydajności, jak są wymuszane za pomocą zestawu silne testów o okresie istnienia i -capture. Dostępne są następujące reguły:
 
 * One może służyć jako parametry funkcji, parametrów metody, zmienne lokalne, metoda zwraca wartość.
 * Nie mogą one być statyczne lub wystąpieniami elementów członkowskich klasy lub struktury normalne.
@@ -86,7 +86,7 @@ type S(count1: int, count2: int) =
 
 `IsReadOnly` nie oznacza `Struct`. Musisz dodać oba mieć `IsReadOnly` struktury.
 
-Użyj tego atrybutu emituje metadane, umożliwiając F# i C#, aby traktować jako `inref<'T>` i `in ref`, odpowiednio.
+Użyj tego atrybutu emituje metadane, dzięki czemu F# i C# wiedzieć, aby traktować jako `inref<'T>` i `in ref`, odpowiednio.
 
 Definiowanie wartości modyfikowalne wewnątrz struktury tylko do odczytu powoduje błąd.
 

@@ -1,13 +1,13 @@
 ---
-title: 'Wyjątki: raise — Funkcja (F#)'
-description: Dowiedz się, jak funkcja języka F# "raise" jest używany do wskazania, że wystąpił błąd lub wyjątkowy warunek.
+title: 'Wyjątki: raise — Funkcja'
+description: Dowiedz się, jak F# "raise" funkcja służy do wskazania, że wystąpił błąd lub wyjątkowy warunek.
 ms.date: 05/16/2016
-ms.openlocfilehash: 537d274659d29404380bfdd56310ac267372bb98
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43778262"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610154"
 ---
 # <a name="exceptions-the-raise-function"></a>Wyjątki: raise — Funkcja
 
@@ -37,7 +37,7 @@ Poniższe przykłady kodu ilustrują używanie `raise` funkcję, aby wygenerowa�
 
 - [Obsługa wyjątków](index.md)
 - [Typy wyjątków](exception-types.md)
-- [Wyjątki: `try...with` wyrażenia](the-try-with-expression.md)
-- [Wyjątki: `try...finally` wyrażenia](the-try-finally-expression.md)
-- [Wyjątki: `failwith` — funkcja](the-failwith-function.md)
-- [Wyjątki: `invalidArg` — funkcja](the-invalidArg-function.md)
+- [Wyjątki: `try...with` Wyrażenia](the-try-with-expression.md)
+- [Wyjątki: `try...finally` Wyrażenia](the-try-finally-expression.md)
+- [Wyjątki: `failwith` — Funkcja](the-failwith-function.md)
+- [Wyjątki: `invalidArg` — Funkcja](the-invalidArg-function.md)

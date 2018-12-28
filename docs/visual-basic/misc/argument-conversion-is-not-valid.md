@@ -1,18 +1,18 @@
 ---
-title: Argument &#39;konwersji&#39; jest nieprawidłowy
+title: Argument 'Conversion' jest nieprawidłowy
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidVbStrConv
 ms.assetid: a5497ad5-25be-4ac7-91fb-ad117d683efe
-ms.openlocfilehash: 9ef43c5903d88176d43f1ebfbb17277bb0cbb3bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 748220ec898ffa3637754edab9c2f9ca9e908681
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596840"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773526"
 ---
-# <a name="argument-39conversion39-is-not-valid"></a>Argument &#39;konwersji&#39; jest nieprawidłowy
-Wartość `VbStrConv` wyliczenie nie jest prawidłowy, prawdopodobnie ponieważ jest ona mniejsza od zera. Wartości wyliczenia musi być większa lub równa zero.  
+# <a name="argument-conversion-is-not-valid"></a>Argument 'Conversion' jest nieprawidłowy
+Wartość `VbStrConv` wyliczenia nie są prawidłowe, prawdopodobnie ponieważ ona jest mniejsza niż zero. Wartości wyliczenia musi być większa lub równa zero.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   

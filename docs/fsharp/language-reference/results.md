@@ -1,15 +1,15 @@
 ---
-title: Wyniki (F#)
-description: Dowiedz się, jak pomóc w pisaniu kodu błędu odpornej na uszkodzenia za pomocą typów języka F# "Wynik".
+title: Wyniki
+description: Dowiedz się, jak używać F# "Result" wpisz, aby pomóc w pisaniu kodu błędu odpornej na uszkodzenia.
 ms.date: 04/24/2017
-ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44213043"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612715"
 ---
-# <a name="results"></a>wyniki
+# <a name="results"></a>Wyniki
 
 Począwszy od F# 4.1, Brak `Result<'T,'TFailure>` typu, który służy do pisania kodu błędu odpornej na uszkodzenia, który może być składana.
 
@@ -29,7 +29,7 @@ type Result<'T,'TError> =
 
 Należy zauważyć, że typ wyniku [sumy Unii](discriminated-unions.md#struct-discriminated-unions), która jest inna funkcja wprowadzona w F# 4.1.  Semantyka porównania strukturalnego zgłosić się tutaj.
 
-`Result` Typu jest zwykle używana w monadic obsługi błędów, która jest często nazywany [programowania zorientowanego na kolei](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) w ramach społeczności pasjonatów języka F#.  W poniższym przykładzie trivial pokazano tego podejścia.
+`Result` Typu jest zwykle używana w monadic obsługi błędów, która jest często nazywany [programowania zorientowanego na kolei](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) w ramach F# społeczności.  W poniższym przykładzie trivial pokazano tego podejścia.
 
 ```fsharp
 // Define a simple type which has fields that can be validated

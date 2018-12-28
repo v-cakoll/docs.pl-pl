@@ -2,12 +2,12 @@
 title: Asynchroniczne typy zwracane (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3dfc0c0505d827009dd3d179453869d3af6ab210
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036243"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53774592"
 ---
 # <a name="async-return-types-c"></a>Asynchroniczne typy zwracane (C#)
 Metody asynchroniczne mogą być zwracane typy:
@@ -33,7 +33,7 @@ W poniższym przykładzie `GetLeisureHours` metoda asynchroniczna `return` instr
 
 Podczas `GetLeisureHours` jest wywoływana z poziomu wyrażenia await w `ShowTodaysInfo` metodę, wyrażenie await pobiera wartość całkowitą (wartość `leisureHours`) jest przechowywana w zadaniu zwrócony przez `GetLeisureHours` metody. Aby uzyskać więcej informacji dotyczących wyrażeń oczekiwania, zobacz [await](../../../../csharp/language-reference/keywords/await.md).  
   
-Można lepiej zrozumieć, jak to się dzieje oddzielając wywołanie `GetLeisureHours` ze stosowania `await`, jak pokazano w poniższym kodzie. Wywołanie metody `GetLeisureHours` , która nie jest oczekiwana natychmiast zwraca `Task<int>`, jak można oczekiwać od deklaracji metody. Zadanie zostanie przypisane do `infoTask` zmiennej w przykładzie. Ponieważ `infoTask` jest <xref:System.Threading.Tasks.Task%601>, zawiera on <xref:System.Threading.Tasks.Task%601.Result> właściwości typu `TResult`. W tym przypadku `TResult` reprezentuje typ liczby całkowitej. Gdy `await` jest stosowany do `infoTask`, wyrażenie czekania zwraca wynik zawartość <xref:System.Threading.Tasks.Task%601.Result%2A> właściwość `infoTask`. Wartość jest przypisywana do `ret` zmiennej.  
+Można lepiej zrozumieć, jak to się dzieje oddzielając wywołanie `GetLeisureHours` ze stosowania `await`, jak pokazano w poniższym kodzie. Wywołanie metody `GetLeisureHours` , która nie jest oczekiwana natychmiast zwraca `Task<int>`, jak można oczekiwać od deklaracji metody. Zadanie zostanie przypisane do `integerTask` zmiennej w przykładzie. Ponieważ `integerTask` jest <xref:System.Threading.Tasks.Task%601>, zawiera on <xref:System.Threading.Tasks.Task%601.Result> właściwości typu `TResult`. W tym przypadku `TResult` reprezentuje typ liczby całkowitej. Gdy `await` jest stosowany do `integerTask`, wyrażenie czekania zwraca wynik zawartość <xref:System.Threading.Tasks.Task%601.Result%2A> właściwość `integerTask`. Wartość jest przypisywana do `ret` zmiennej.  
   
 > [!IMPORTANT]
 >  <xref:System.Threading.Tasks.Task%601.Result%2A> Właściwość jest właściwością blokowania. Jeśli spróbujesz się do niej dostęp przed zakończeniem jej zadania, wątek, który jest obecnie aktywny jest zablokowany do momentu ukończenia zadania i wartość jest dostępna. W większości przypadków należy dostęp do wartości przy użyciu `await` zamiast bezpośrednio dostęp do właściwości. <br/> Poprzedni przykład pobrać wartość <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości do blokowania wątku głównego, aby `ShowTodaysInfo` metoda może zakończyć wykonywania przed aplikacji zakończył się.  
@@ -80,7 +80,7 @@ Ponieważ <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>   
-- [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
 - [Przepływ sterowania w programach Async (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
 - [async](../../../../csharp/language-reference/keywords/async.md)   
 - [await](../../../../csharp/language-reference/keywords/await.md)

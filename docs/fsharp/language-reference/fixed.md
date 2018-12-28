@@ -1,17 +1,17 @@
 ---
-title: Fixed — słowo kluczowe (F#)
-description: Dowiedz się, jak "przypięcie" lokalnie na stosie zapobiegające kolekcji przy użyciu języka F# "fixed" — słowo kluczowe.
+title: Fixed — słowo kluczowe
+description: Dowiedz się, jak można przypiąć lokalnego na stosie, aby zapobiec kolekcji z F# — słowo kluczowe "fixed".
 ms.date: 04/24/2017
-ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45624512"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614362"
 ---
 # <a name="the-fixed-keyword"></a>Fixed — słowo kluczowe
 
-Wprowadza F# 4.1 `fixed` — słowo kluczowe, co pozwala na "przypinając" lokalnej na stosie, aby uniemożliwić jej zebrane lub przeniesione podczas wyrzucania elementów bezużytecznych.  Jest używany w scenariuszach programowania niskiego poziomu.
+F#wprowadza 4.1 `fixed` — słowo kluczowe, co pozwala na "przypinając" lokalnej na stosie, aby uniemożliwić jej zebrane lub przeniesione podczas wyrzucania elementów bezużytecznych.  Jest używany w scenariuszach programowania niskiego poziomu.
 
 ## <a name="syntax"></a>Składnia
 

@@ -1,13 +1,13 @@
 ---
-title: Typy elastyczne (F#)
-description: Dowiedz się, jak używać języka F# elastycznym typem adnotacji, co oznacza, że parametr, zmienna lub wartość ma typ, który jest zgodny z określonym typem.
+title: Typy elastyczne
+description: Dowiedz się, jak używać F# adnotacji typu elastyczne, co oznacza, że parametr, zmienna lub wartość ma typ, który jest zgodny z określonym typem.
 ms.date: 05/16/2016
-ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 32857cc317bc6b4b7baf53b623b551e8e0733e41
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47210048"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613677"
 ---
 # <a name="flexible-types"></a>Typy elastyczne
 
@@ -65,7 +65,7 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-W języku F# tak jak w innych językach obiektowych istnieją kontekstów, w których typy pochodne lub typy, które implementują interfejsy są automatycznie konwertowane na typ podstawowy lub typ interfejsu. Automatycznej konwersji występują w argumentach bezpośredni, ale nie wtedy, gdy typ jest w stanie podrzędny, jako część bardziej złożonych typów, takich jak typ zwracany typ funkcji lub jako argument typu. W związku z tym notacji elastycznym typem jest szczególnie przydatna, gdy typ, który chcesz zastosować go do jest częścią typu bardziej złożone.
+W F#, tak jak w innych językach obiektowych istnieją typy pochodne kontekstów, w którym lub typy, które implementują interfejsy są automatycznie konwertowane na typ podstawowy lub typ interfejsu. Automatycznej konwersji występują w argumentach bezpośredni, ale nie wtedy, gdy typ jest w stanie podrzędny, jako część bardziej złożonych typów, takich jak typ zwracany typ funkcji lub jako argument typu. W związku z tym notacji elastycznym typem jest szczególnie przydatna, gdy typ, który chcesz zastosować go do jest częścią typu bardziej złożone.
 
 ## <a name="see-also"></a>Zobacz także
 

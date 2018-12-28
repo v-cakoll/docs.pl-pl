@@ -1,13 +1,13 @@
 ---
-title: Typy ogólne (F#)
+title: Typy ogólne
 description: Dowiedz się, jak używać F# ogólne funkcje i typy, które umożliwiają pisanie kodu działającego z różnymi typami bez konieczności użycia kodu.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7eae69bc0286bff4997c6399c7417bde119c2204
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bafb80893df2f3fab85840ee844bc78d1fb33428
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147008"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614379"
 ---
 # <a name="generics"></a>Typy ogólne
 

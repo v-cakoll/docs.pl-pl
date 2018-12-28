@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a94f9c650927aee0f120ee3c0b1199b6c977ef0e
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129821"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53776737"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework — Przewodnik wdrażania dla administratorów
 W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego zależności systemowe przez sieć przy użyciu programu Microsoft System Center Configuration Manager. W tym artykule przyjęto założenie, że wszystkie docelowe komputery klienckie spełniają minimalne wymagania programu .NET Framework. Aby uzyskać listę wymagania sprzętowe i programowe dotyczące instalowania [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md).  
@@ -90,7 +90,7 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
   
  Aby utworzyć pakiet:  
   
-1.  W konsoli programu Configuration Manager wybierz **Biblioteka oprogramowania**...  
+1.  W konsoli programu Configuration Manager wybierz **Biblioteka oprogramowania**.  
   
 2.  W **Biblioteka oprogramowania** obszaru roboczego, rozwiń węzeł **Zarządzanie aplikacjami**, a następnie wybierz **pakietów**.  
   

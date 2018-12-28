@@ -1,15 +1,15 @@
 ---
-title: 'Pola jawne: val — Słowo kluczowe (F#)'
-description: Więcej informacji na temat języka F# "val" słowo kluczowe, które jest używane do deklarowania lokalizację do przechowywania wartości w typie klasy lub struktury, bez inicjowania typu.
+title: 'Pola jawne: Val — słowo kluczowe'
+description: Dowiedz się więcej o F# słowo kluczowe "val", które jest używane do deklarowania lokalizację do przechowywania wartości w typie klasy lub struktury, bez inicjowania typu.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45746393"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773630"
 ---
-# <a name="explicit-fields-the-val-keyword"></a>Pola jawne: val — Słowo kluczowe
+# <a name="explicit-fields-the-val-keyword"></a>Pola jawne: Val — słowo kluczowe
 
 `val` — Słowo kluczowe jest używane do deklarowania lokalizację do przechowywania wartości w typie klasy lub struktury, bez jego inicjowania. Lokalizacje przechowywania, zadeklarowany w ten sposób są nazywane *pola jawne*. Używanie innego `val` — słowo kluczowe jest używana razem z `member` — słowo kluczowe do deklarowania automatycznie implementowanej właściwości. Aby uzyskać więcej informacji dotyczących automatycznie implementowanych właściwości, zobacz [właściwości](properties.md).
 
@@ -46,7 +46,7 @@ Poniższy kod przedstawia użycie pola jawne i dla porównania `let` powiązania
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
 
-Dane wyjściowe wyglądają następująco:
+Wynik jest następujący:
 
 ```
 11 12 abc
@@ -64,6 +64,10 @@ Poniższy kod przedstawia użycie pola jawne w strukturze. Ponieważ struktura j
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 
 Dane wyjściowe są `11 xyz`.
+
+**Uwaga na podatne na**, jeśli chcesz zainicjować struktury o `mutable` pola bez `mutable` — słowo kluczowe, przypisania będzie działać na kopię struktury, które zostaną odrzucone bezpośrednio po przypisaniu. W związku z tym nie zmienią się ze strukturą.
+
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
 Pola jawne nie są przeznaczone do użytku procedur. Ogólnie rzecz biorąc, gdy jest to możliwe należy używać `let` powiązania w klasie zamiast jawnego pola. Pola jawne są przydatne w niektórych scenariuszach współpracy, takie jak kiedy należy zdefiniować strukturę, która będzie używana w wywołaniu do natywnych interfejsów API lub w scenariuszach międzyoperacyjnego modelu COM wywołania platformy. Aby uzyskać więcej informacji, zobacz [funkcji zewnętrznych](../functions/external-functions.md). Innej sytuacji, w którym może być konieczne jawne pola jest podczas pracy z F# generatora kodu, który emituje klasy bez konstruktora podstawowego. Pola jawne są także przydatne zmienne statyczne wątku lub podobne konstrukcji. Aby uzyskać więcej informacji, zobacz `System.ThreadStaticAttribute`.
 

@@ -1,13 +1,13 @@
 ---
-title: Funkcje śródwierszowe (F#)
-description: Dowiedz się, jak używać języka F# funkcji śródwierszowych wbudowane bezpośrednio w kodzie.
+title: Funkcje śródwierszowe
+description: Dowiedz się, jak używać F# funkcji śródwierszowych, wbudowane bezpośrednio w kodzie.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47fca0fe34630792aeb0908b0cee02a927e2567d
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 12c175e3e46e12d978fe02d3e1fe83142e71a25d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45745948"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610570"
 ---
 # <a name="inline-functions"></a>Funkcje śródwierszowe
 

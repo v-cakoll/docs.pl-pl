@@ -1,13 +1,13 @@
 ---
-title: Przeładowanie operatora (F#)
-description: Dowiedz się, jak przeciążania operatorów arytmetycznych w klasie lub typie rekordu oraz na poziomie globalnym w języku F#.
+title: Przeciążanie operatora
+description: Dowiedz się, jak przeciążania operatorów arytmetycznych w klasie lub typie rekordu oraz na poziomie globalnym w F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087302"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610765"
 ---
 # <a name="operator-overloading"></a>Przeciążanie operatora
 
@@ -47,7 +47,7 @@ Znak operatora `.` nie wpływa na pierwszeństwo, dlatego na przykład w celu zd
 
 Tylko operatory `?` i `?<-` może się rozpoczynać `?`.
 
-Tabelę ilustrująca pierwszeństwo wszystkich operatorów w języku F# można znaleźć w [Operator odwołanie do symbolu i](symbol-and-operator-reference/index.md).
+Tabelę ilustrująca pierwszeństwo wszystkich operatorów w F# znajdują się w [Operator odwołanie do symbolu i](symbol-and-operator-reference/index.md).
 
 ## <a name="overloaded-operator-names"></a>Nazwy przeciążonych operatorów
 

@@ -4,12 +4,12 @@ description: Informacje na temat użycia programu .NET Core SDK i jego narzędzi
 author: guardrex
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 064766555ff178879b91e4395b52b097dcd7c5c5
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 4c651983bb900d000de37a0e413ef9ab0f7893c9
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170161"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611558"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Przy użyciu zestawu .NET Core SDK i narzędzi w ciągłej integracji (CI)
 
@@ -124,7 +124,7 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 Można skonfigurować [rozwiązania Travis CI](https://travis-ci.org/) można zainstalować przy użyciu zestawu .NET Core SDK `csharp` języka i `dotnet` klucza. Aby uzyskać więcej informacji, zobacz oficjalna dokumentacja rozwiązania Travis CI w [budynku C#, F#, lub projekcie Visual Basic](https://docs.travis-ci.com/user/languages/csharp/). Należy zauważyć, jak dostęp do informacji rozwiązania Travis CI, obsługiwane społeczności `language: csharp` identyfikator języka działa dla wszystkich języków .NET, w tym F#oraz Mono.
 
-Rozwiązania Travis CI działa z systemem macOS i Linux zadań w *kompilacji macierzy*, gdzie należy określić kombinacji środowiska uruchomieniowego, środowiska i wyjątki/dołączenia do obejmują swojej kombinacji kompilacji dla aplikacji. Aby uzyskać więcej informacji, zobacz [. przykład travis.yml](https://github.com/dotnet/docs/blob/master/.travis.yml) pliku i [dostosowywania kompilacji](https://docs.travis-ci.com/user/customizing-the-build) w dokumentacji rozwiązania Travis CI. Narzędzia oparte na MSBuild obejmują LTS (1.0.x) i bieżącego środowiska uruchomieniowe (1.1.x) w pakiecie; Dlatego po zainstalowaniu zestawu SDK, otrzymasz wszystko, czego potrzebujesz do tworzenia.
+Rozwiązania Travis CI działa z systemem macOS i Linux zadań w *kompilacji macierzy*, gdzie należy określić kombinacji środowiska uruchomieniowego, środowiska i wyjątki/dołączenia do obejmują swojej kombinacji kompilacji dla aplikacji. Aby uzyskać więcej informacji, zobacz [dostosowywania kompilacji](https://docs.travis-ci.com/user/customizing-the-build) artykułu w dokumentacji rozwiązania Travis CI. Narzędzia oparte na MSBuild obejmują LTS (1.0.x) i bieżącego środowiska uruchomieniowe (1.1.x) w pakiecie; Dlatego po zainstalowaniu zestawu SDK, otrzymasz wszystko, czego potrzebujesz do tworzenia.
 
 ### <a name="appveyor"></a>AppVeyor
 

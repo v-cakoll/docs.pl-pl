@@ -6,6 +6,6 @@
 |Sugestia|Jeśli to zachowanie jest niepożądany, można przywrócić poprzednie zachowanie przez ustawienie <code>Switch.System.Security.ClaimsIdentity.SetActorAsReferenceWhenCopyingClaimsIdentity</code> przełącznika w pliku konfiguracji aplikacji w celu <code>true</code>. Wymaga to, że Dodaj następujące polecenie, aby <code>&lt;runtime&gt;</code> sekcji w pliku web.config:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.ClaimsIdentity.SetActorAsReferenceWhenCopyingClaimsIdentity=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
 |Zakres|Krawędź|
 |Wersja|4.6.2|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity)?displayProperty=nameWithType></li><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})?displayProperty=nameWithType></li><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)?displayProperty=nameWithType></li></ul>|
 

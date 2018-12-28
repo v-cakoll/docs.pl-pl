@@ -6,5 +6,5 @@
 |Sugestia|Jeśli aplikacja generuje IL, która obejmuje ret opcode w regionie, spróbuj, aplikacji mogą odnosić się do programu .NET Framework 4.5 do używania starego JIT i uniknąć tego podziału. Alternatywnie wygenerowanego IL może zostać zaktualizowany do zwracania po try region.|
 |Zakres|Krawędź|
 |Wersja|4.6|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 

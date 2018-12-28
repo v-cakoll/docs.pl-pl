@@ -1,13 +1,13 @@
 ---
-title: do — Powiązania (F#)
-description: Dowiedz się, jak języka F# czy powiązanie jest używana do wykonywania kodu bez definiowania funkcji lub wartość.
+title: do — Powiązania
+description: Dowiedz się, jak F# "do" powiązanie jest używana do wykonywania kodu bez definiowania funkcji lub wartości.
 ms.date: 05/16/2016
-ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: d29f8557fda06097d2e85748ab6286f0415730b3
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45973147"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614522"
 ---
 # <a name="do-bindings"></a>do — Powiązania
 

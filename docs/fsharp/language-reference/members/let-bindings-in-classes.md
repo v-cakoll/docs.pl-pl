@@ -1,17 +1,17 @@
 ---
-title: Powiązania let w klasach (F#)
-description: Dowiedz się, jak zdefiniować pola prywatne i prywatne funkcje dla klas F# za pomocą powiązania "let" w definicji klasy.
+title: Powiązania let w klasach
+description: Dowiedz się, jak zdefiniować pola prywatne i prywatne funkcje dla F# klasy za pomocą "let" powiązania w definicji klasy.
 ms.date: 05/16/2016
-ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 03dd583a141971284e6a8ddaad02272236cd1e4c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48033223"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611129"
 ---
 # <a name="let-bindings-in-classes"></a>Powiązania let w klasach
 
-Można zdefiniować pola prywatne i prywatne funkcje dla klas F# za pomocą `let` powiązania w definicji klasy.
+Możesz zdefiniować pola prywatne i prywatne funkcje dla F# klasy za pomocą `let` powiązania w definicji klasy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,7 +45,7 @@ Dane wyjściowe są następujące:
 
 ## <a name="alternative-ways-to-create-fields"></a>Alternatywne sposoby tworzenia pól
 
-Można również użyć `val` — słowo kluczowe, aby utworzyć pole prywatne. Korzystając z `val` — słowo kluczowe, pole nie zostanie podany wartość, gdy obiekt zostanie utworzony, ale zamiast tego jest inicjowany z wartością domyślną. Aby uzyskać więcej informacji, zobacz [pola jawne: val — słowo kluczowe](explicit-fields-the-val-keyword.md).
+Można również użyć `val` — słowo kluczowe, aby utworzyć pole prywatne. Korzystając z `val` — słowo kluczowe, pole nie zostanie podany wartość, gdy obiekt zostanie utworzony, ale zamiast tego jest inicjowany z wartością domyślną. Aby uzyskać więcej informacji, zobacz [pola jawne: Val — słowo kluczowe](explicit-fields-the-val-keyword.md).
 
 Można również definiować pola prywatne w klasie, przy użyciu definicji elementu członkowskiego i dodanie słowa kluczowego `private` do definicji. Może to być przydatne, jeśli spodziewasz się Zmień dostępność elementu członkowskiego, bez konieczności ponownego zapisu kodu. Aby uzyskać więcej informacji, zobacz [kontroli dostępu](../access-control.md).
 

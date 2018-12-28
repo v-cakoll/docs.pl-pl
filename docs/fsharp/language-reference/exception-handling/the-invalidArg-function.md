@@ -1,15 +1,15 @@
 ---
-title: 'Wyjątki: invalidArg — Funkcja (F#)'
-description: Dowiedz się, jak funkcja "invalidarg —" języka F# generuje wyjątek argumentu.
+title: 'Wyjątki: Invalidarg — funkcja'
+description: Dowiedz się, jak F# invalidarg "—" funkcja generuje wyjątek argumentu.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8bf65fae9392a88205e3cdec8b7d7a3ff42f8416
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fd8d48b80970dbbafc0c23a478b4ccf3490f3ee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44180322"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613339"
 ---
-# <a name="exceptions-the-invalidarg-function"></a>Wyjątki: invalidArg — Funkcja
+# <a name="exceptions-the-invalidarg-function"></a>Wyjątki: Invalidarg — funkcja
 
 `invalidArg` Funkcja generuje wyjątek argumentu.
 
@@ -39,7 +39,7 @@ System.ArgumentException: Month parameter out of range.
 
 - [Obsługa wyjątków](index.md)
 - [Typy wyjątków](exception-types.md)
-- [Wyjątki: `try...with` wyrażenia](the-try-with-expression.md)
-- [Wyjątki: `try...finally` wyrażenia](the-try-finally-expression.md)
+- [Wyjątki: `try...with` Wyrażenia](the-try-with-expression.md)
+- [Wyjątki: `try...finally` Wyrażenia](the-try-finally-expression.md)
 - [Wyjątki: `raise` — funkcja](the-raise-function.md)
-- [Wyjątki: `failwith` — funkcja](the-failwith-function.md)
+- [Wyjątki: `failwith` — Funkcja](the-failwith-function.md)

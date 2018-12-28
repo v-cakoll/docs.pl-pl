@@ -1,13 +1,13 @@
 ---
-title: Wyrażenia dopasowania (F#)
-description: Dowiedz się, jak wyrażenie dopasowania F# zapewnia rozgałęziania formant, który jest oparty na porównaniu wyrażenia zestaw wzorców.
+title: Wyrażenia dopasowania
+description: Dowiedz się, jak F# wyrażenie dopasowania dostarcza rozgałęziania formant, który jest oparty na porównaniu wyrażenia zestaw wzorców.
 ms.date: 04/19/2018
-ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44221847"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611571"
 ---
 # <a name="match-expressions"></a>Wyrażenia dopasowania
 
@@ -43,7 +43,7 @@ fun arg ->
     | ...
 ```
 
-Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażenia Lambda: `fun` — słowo kluczowe](functions/lambda-expressions-the-fun-keyword.md).
+Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażenia Lambda: `fun` — Słowo kluczowe](functions/lambda-expressions-the-fun-keyword.md).
 
 Cały zestaw wzorców powinno obejmować wszystkich możliwych dopasowań zmienna wejściowa. Często używasz wzór symboli wieloznacznych (`_`) jako ostatni wzorzec do dopasowania wszelkie wcześniej niedopasowane wartości wejściowych.
 
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka F#](index.md)  
-- [Wzorce aktywne](active-patterns.md)  
-- [Dopasowanie do wzorca](pattern-matching.md)  
+- [Dokumentacja języka F#](index.md)
+- [Wzorce aktywne](active-patterns.md)
+- [Dopasowanie do wzorca](pattern-matching.md)

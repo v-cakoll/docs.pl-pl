@@ -1,13 +1,13 @@
 ---
-title: Wyrażenia obiektów (F#)
-description: Dowiedz się, jak używać obiektu wyrażeń języka F# uniknąć dodatkowego kodu i czynności wymagane do utworzenia nowego typu nazwanego.
+title: Wyrażenia obiektów
+description: Dowiedz się, jak używać F# wyrażenia obiektów, jeśli chcesz uniknąć dodatkowego kodu i obciążenie wymagane do utworzenia nowego typu nazwanego.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a971044d680d3bf5a6fff38affdaf001d5403b4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: cb15983543fde2459c589b3de2554575d73db686
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865465"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613924"
 ---
 # <a name="object-expressions"></a>Wyrażenia obiektów
 

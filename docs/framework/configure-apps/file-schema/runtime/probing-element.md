@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cab16e83466b5954bfebac07dd79c9a8b5e4594
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5b9be3050da21c0a99931ca70cf990b0b8bf1fe
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745006"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612312"
 ---
 # <a name="ltprobinggt-element"></a>&lt;sondowanie&gt; — Element
-Określa podkatalogi podstawowej aplikacji dla środowiska CLR do przeszukania podczas ładowania zestawów.  
+Określa podkatalogi podstawowej aplikacji dla środowiska uruchomieniowego języka wspólnego wyszukiwania podczas ładowania zestawów.  
   
  \<Konfiguracja >  
 \<runtime>  
@@ -39,7 +39,7 @@ Określa podkatalogi podstawowej aplikacji dla środowiska CLR do przeszukania p
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`privatePath`|Atrybut wymagany.<br /><br /> Określa podkatalogi katalogu podstawowego aplikacji, który może zawierać zestawów. Ograniczone czasowo każdego podkatalogu średnikiem.|  
+|`privatePath`|Atrybut wymagany.<br /><br /> Określa podkatalogi katalogu podstawowego aplikacji, który może zawierać zestawów. Powinny one być poszczególnych podkatalogach średnikiem.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -53,7 +53,7 @@ Określa podkatalogi podstawowej aplikacji dla środowiska CLR do przeszukania p
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak określić podkatalogów podstawowej aplikacji, środowisko uruchomieniowe, należy wyszukać zestawów.  
+ Poniższy przykład pokazuje, jak określić podkatalogów podstawowej aplikacji, które środowisko wykonawcze powinno poszukać zestawów.  
   
 ```xml  
 <configuration>  
@@ -66,7 +66,7 @@ Określa podkatalogi podstawowej aplikacji dla środowiska CLR do przeszukania p
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Określanie lokalizacji zestawu](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Określanie lokalizacji zestawu](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

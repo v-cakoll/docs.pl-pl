@@ -12,21 +12,21 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 2e5d133a4744124723c0373e3d5974b505936190
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402104"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397036"
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
-<a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Obejmuje model dodatku, deweloperzy mogą używać do tworzenia aplikacji, które obsługuje rozszerzalność w dodatku. Ten dodatek model umożliwia tworzenie dodatków, które integrują się z oraz rozszerzanie funkcjonalności aplikacji. W niektórych przypadkach aplikacje wymagają także do wyświetlenia [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] są dostarczane przez dodatków. W tym temacie przedstawiono sposób [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] rozszerzają [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] model w dodatku, aby włączyć te scenariusze, architektura związanych z nim, korzyści i jego pewne ograniczenia.  
+<a name="Introduction"></a> Program .NET Framework zawiera dodatek modelu, który deweloperzy mogą używać do tworzenia aplikacji, które obsługuje rozszerzalność w dodatku. Ten dodatek model umożliwia tworzenie dodatków, które integrują się z oraz rozszerzanie funkcjonalności aplikacji. W niektórych przypadkach aplikacje wymagają także do wyświetlania interfejsu użytkownika, które są dostarczane przez dodatki. W tym temacie pokazano, jak WPF, rozszerzają model dodatku .NET Framework umożliwiają tych scenariuszy, architektura za go, jego zalety i jego pewne ograniczenia.  
   
 
   
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Znajomość [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dodatku model jest wymagany. Aby uzyskać więcej informacji, zobacz [dodatki i rozszerzalność](../../../../docs/framework/add-ins/index.md).  
+ Wymagana jest znajomość model dodatku .NET Framework. Aby uzyskać więcej informacji, zobacz [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 <a name="AddInsOverview"></a>   
 ## <a name="add-ins-overview"></a>Omówienie dodatków  
@@ -48,48 +48,48 @@ ms.locfileid: "43402104"
   
  Aby dodatków do użycia hostowanie aplikacji trzeba je znaleźć i załadować je w czasie wykonywania. W związku z tym aplikacje, które obsługują dodatki mają następujące dodatkowe obowiązki:  
   
--   **Odnajdywanie**: znajdowanie dodatków zgodne z kontraktów obsługiwane przez hosta aplikacji.  
+-   **Odnajdywanie**: Znajdowanie dodatków zgodne z kontraktów obsługiwane przez hosta aplikacji.  
   
--   **Aktywacja**: podczas ładowania, uruchamiania i nawiązywania połączenia z dodatków.  
+-   **Aktywacja**: Podczas ładowania, uruchamiania i nawiązywania połączenia z dodatków.  
   
--   **Izolacja**: za pomocą domen aplikacji lub procesów można ustanowić granic izolacji, które chronić aplikacje przed potencjalne problemy zabezpieczeń i wykonywania za pomocą dodatków.  
+-   **Izolacja**: Ustanowienie granic izolacji, które chronić aplikacje przed potencjalne i wykonywania problemy z dodatków przy użyciu domeny aplikacji lub procesów.  
   
--   **Komunikacja**: pozwalając dodatków i hostowanie aplikacji do komunikowania się ze sobą w granicach izolacji, wywoływanie metod i przekazując dane.  
+-   **Komunikacja**: Pozwalając dodatków i hostowanie aplikacji do komunikowania się ze sobą w granicach izolacji, wywoływanie metod i przekazując dane.  
   
--   **Zarządzanie okresem istnienia**: ładowanie i zwalnianie domeny aplikacji i procesów w sposób zawsze przejrzyste i przewidywalne (zobacz [domen aplikacji](../../../../docs/framework/app-domains/application-domains.md)).  
+-   **Zarządzanie okresem istnienia**: Ładowanie i zwalnianie domeny aplikacji i procesów w sposób zawsze przejrzyste i przewidywalne (zobacz [domen aplikacji](../../../../docs/framework/app-domains/application-domains.md)).  
   
--   **Przechowywanie wersji**: zapewnienie, że dodatków i hostowania aplikacji może nadal komunikować się podczas tworzenia nowych wersji jednej.  
+-   **Przechowywanie wersji**: Zapewnienie, że dodatków i hostowania aplikacji może nadal komunikować się podczas tworzenia nowych wersji jednej.  
   
- Ostatecznie tworzenia niezawodnych model dodatku jest trywialny przedsiębiorstwa. Z tego powodu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zapewnia infrastrukturę do tworzenia modeli w dodatku.  
+ Ostatecznie tworzenia niezawodnych model dodatku jest trywialny przedsiębiorstwa. Z tego powodu programu .NET Framework zapewnia infrastrukturę do tworzenia modeli w dodatku.  
   
 > [!NOTE]
->  Aby uzyskać bardziej szczegółowe informacje dotyczące dodatków, zobacz [dodatki i rozszerzalność](../../../../docs/framework/add-ins/index.md).  
+>  Aby uzyskać bardziej szczegółowe informacje dotyczące dodatków, zobacz [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 <a name="NETFrameworkAddInModelOverview"></a>   
 ## <a name="net-framework-add-in-model-overview"></a>Przegląd Model dodatku .NET framework  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Model dodatku, znaleziono w <xref:System.AddIn> przestrzeni nazw, zawiera zestaw typów, które są zaprojektowane w celu uproszczenia opracowywania rozszerzeń w dodatku. Podstawową jednostką [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dodatku model jest *kontraktu*, która definiuje, jak aplikacji hosta i dodatek komunikują się ze sobą. Kontrakt jest widoczna dla aplikacji hosta, za pomocą hosta aplikacji specyficzne *widoku* kontraktu. Podobnie, add logującego się *widoku* Umowy ma połączenie dodatku. *Karty* służy do umożliwiania hosta aplikacji i Dodaj w komunikacji między swoimi opiniami odpowiedniej umowy. Kontrakty, widoki i adaptery są określane jako segmenty i stanowi zbiór powiązanych segmentów *potoku*. Potoki są podstawę, na którym [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dodatku model obsługuje odnajdywania, aktywacji, izolacji zabezpieczeń, izolacji wykonywania (przy użyciu domeny aplikacji i procesów), komunikacji, zarządzanie okresem istnienia i przechowywania wersji.  
+ .NET Framework — w modelu znaleziono w <xref:System.AddIn> przestrzeni nazw, zawiera zestaw typów, które są zaprojektowane w celu uproszczenia opracowywania rozszerzeń w dodatku. Jest podstawową jednostką model dodatku .NET Framework *kontraktu*, która definiuje, jak aplikacji hosta i dodatek komunikują się ze sobą. Kontrakt jest widoczna dla aplikacji hosta, za pomocą hosta aplikacji specyficzne *widoku* kontraktu. Podobnie, add logującego się *widoku* Umowy ma połączenie dodatku. *Karty* służy do umożliwiania hosta aplikacji i Dodaj w komunikacji między swoimi opiniami odpowiedniej umowy. Kontrakty, widoki i adaptery są określane jako segmenty i stanowi zbiór powiązanych segmentów *potoku*. Potoki są podstawę, na którym model dodatku .NET Framework obsługuje odnajdywania, aktywacji, izolacji zabezpieczeń, izolacji wykonywania (przy użyciu domeny aplikacji i procesów), komunikacji, zarządzanie okresem istnienia i przechowywania wersji.  
   
- Suma ta obsługa umożliwia deweloperom tworzenie dodatków, które integrują się z funkcjami aplikacji hosta. Jednak niektóre scenariusze wymagają obsługi aplikacji do wyświetlenia [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] dostarczone przez dodatków. Ponieważ każda technologia prezentacji w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ma swój własny model implementowania [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dodatku model nie obsługuje innych technologii prezentacji. Zamiast tego [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] rozszerza [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] model dodatku za pomocą [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] pomocy technicznej dla dodatku.  
+ Suma ta obsługa umożliwia deweloperom tworzenie dodatków, które integrują się z funkcjami aplikacji hosta. Jednak niektóre scenariusze wymagają obsługi aplikacji, aby wyświetlać interfejsy użytkownika dostępne dodatki. Ponieważ poszczególnych technologii prezentacji w programie .NET Framework ma swój własny model dotyczące implementowania interfejsów użytkownika, model dodatku .NET Framework nie obsługuje innych technologii prezentacji. Zamiast tego WPF rozszerza model dodatku .NET Framework z obsługą interfejsu użytkownika dla dodatków.  
   
 <a name="WPFAddInModel"></a>   
 ## <a name="wpf-add-ins"></a>Dodatki WPF  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], w połączeniu z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dodatek modelu pozwala rozwiązać szerokiej gamy scenariuszy, które wymagają obsługi aplikacji do wyświetlenia [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] z dodatków. W szczególności te scenariusze są rozwiązywane przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] za pomocą następujących dwóch modelach programowania:  
+ WPF, w połączeniu z .NET Framework — w modelu pozwala rozwiązać szerokiej gamy scenariuszy, które wymagają obsługi aplikacji, aby wyświetlić interfejs użytkownika z dodatków. W szczególności te scenariusze są rozwiązywane przez WPF za pomocą następujących dwóch modelach programowania:  
   
-1.  **Dodatek zwraca interfejs użytkownika**. Dodatek zwraca [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aplikacji hosta, za pomocą wywołania metody, zgodnie z definicją w umowie. W tym scenariuszu jest używany w następujących przypadkach:  
+1.  **Dodatek zwraca interfejs użytkownika**. Dodatek zwraca interfejs użytkownika do aplikacji hosta za pośrednictwem wywołania metody, zgodnie z definicją w umowie. W tym scenariuszu jest używany w następujących przypadkach:  
   
-    -   Wygląd [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zwracanym przez dodatek jest zależny od danych albo lub warunków, które istnieją tylko w czasie wykonywania, takie jak dynamicznie wygenerowanych raportów.  
+    -   Wygląd interfejsu użytkownika, który jest zwracany przez dodatek jest zależny od danych albo lub warunków, które istnieją tylko w czasie wykonywania, takie jak dynamicznie wygenerowanych raportów.  
   
-    -   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Usługi świadczone przez dodatek różni się od [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aplikacji hosta, które można używać dodatku.  
+    -   W interfejsie użytkownika dla usług udostępnianych przez dodatek różni się od interfejsu użytkownika aplikacji hosta, które można używać dodatku.  
   
-    -   Dodatek przede wszystkim wykonuje usługi dla aplikacji hosta, a następnie raportuje stan aplikacji hosta, za pomocą [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+    -   Dodatek przede wszystkim wykonuje usługi dla aplikacji hosta i raportuje stan aplikacji hosta, za pomocą interfejsu użytkownika.  
   
-2.  **Dodatek jest interfejsem użytkownika**. Dodatek jest [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], zgodnie z definicją w umowie. W tym scenariuszu jest używany w następujących przypadkach:  
+2.  **Dodatek jest interfejsem użytkownika**. Dodatek jest interfejsem użytkownika, zgodnie z definicją w umowie. W tym scenariuszu jest używany w następujących przypadkach:  
   
     -   Dodatek nie zapewnia usługami innymi niż są wyświetlane, takich jak reklamy.  
   
-    -   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Usługi świadczone przez dodatek jest wspólny dla wszystkich aplikacji hosta, które można użyć tego dodatku, takich jak kalkulatora lub próbnika kolorów.  
+    -   W interfejsie użytkownika dla usług udostępnianych przez dodatek jest wspólne dla wszystkich aplikacji hosta, które można użyć tego dodatku, takich jak kalkulatora lub próbnika kolorów.  
   
- Scenariusze te wymagają, aby [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] obiekty mogą być przekazywane między aplikacją hosta i domen aplikacji w dodatku. Ponieważ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dodatku model opiera się na komunikacji zdalnej do komunikowania się między domenami aplikacji, obiekty, które są przekazywane między nimi muszą być może być zastosowana zdalnie.  
+ Scenariusze te wymagają, że obiekty interfejsu użytkownika mogą być przekazywane między aplikacją hosta i domen aplikacji w dodatku. Od programu .NET Framework, który zależy od usług zdalnych do komunikowania się między domenami aplikacji model dodatku obiekty, które są przekazywane między nimi musi być może być zastosowana zdalnie.  
   
  Obiekt może być zastosowana zdalnie jest wystąpieniem klasy, która wykonuje jedno lub więcej z następujących czynności:  
   
@@ -100,13 +100,13 @@ ms.locfileid: "43402104"
 -   Ma <xref:System.SerializableAttribute> zastosowany.  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji na temat tworzenia może być zastosowana zdalnie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiekty, zobacz [może być zastosowana zdalnie obiektów wprowadzania](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
+>  Aby uzyskać więcej informacji na temat tworzenia obiektów .NET Framework może być zastosowana zdalnie, zobacz [może być zastosowana zdalnie obiektów wprowadzania](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Typy nie są wykonywane zdalnie. Aby rozwiązać ten problem, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] rozszerza [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] model w dodatku, aby umożliwić [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] utworzone przez dodatki mają być wyświetlane z hosta aplikacji. Ta pomoc techniczna jest świadczona przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przez dwa typy: <xref:System.AddIn.Contract.INativeHandleContract> interfejsu i dwa statycznych metod zaimplementowanych przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters> klasy: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Na wysokim poziomie te typy i metody są używane w następujący sposób:  
+ Typy WPF UI nie są wykonywane zdalnie. Aby rozwiązać ten problem, WPF rozszerza model dodatku .NET Framework umożliwia WPF UI utworzone przez dodatki mają być wyświetlane z hosta aplikacji. Ta pomoc techniczna jest świadczona przez WPF przez dwa typy: <xref:System.AddIn.Contract.INativeHandleContract> interfejsu i dwa statycznych metod zaimplementowanych przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters> klasy: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Na wysokim poziomie te typy i metody są używane w następujący sposób:  
   
-1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wymaga, aby [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] dostarczone przez dodatki są klasami, które pochodzą bezpośrednio lub pośrednio z <xref:System.Windows.FrameworkElement>, takich jak kształtów, formantów, kontrolki użytkownika, panele układu i strony.  
+1.  WPF wymaga, że interfejsy użytkownika, dostarczone przez dodatki są klas, które pochodzą bezpośrednio lub pośrednio z <xref:System.Windows.FrameworkElement>, takich jak kształtów, formantów, kontrolki użytkownika, panele układu i strony.  
   
-2.  Wszędzie tam, gdzie kontrakt deklaruje, że interfejs użytkownika będą przekazywane między dodatkiem a aplikacją hosta, musi być zadeklarowany jako <xref:System.AddIn.Contract.INativeHandleContract> (nie <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> jest reprezentacją może być zastosowana zdalnie dodatek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] mogą być przekazywane w granicach izolacji.  
+2.  Wszędzie tam, gdzie kontrakt deklaruje, że interfejs użytkownika będą przekazywane między dodatkiem a aplikacją hosta, musi być zadeklarowany jako <xref:System.AddIn.Contract.INativeHandleContract> (nie <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> jest reprezentacją może być zastosowana zdalnie dodatku interfejs użytkownika, który może być przekazywany w granicach izolacji.  
   
 3.  Przed przesłaniem z dodatku w domenie aplikacji <xref:System.Windows.FrameworkElement> jest spakowany jako <xref:System.AddIn.Contract.INativeHandleContract> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
@@ -116,27 +116,27 @@ ms.locfileid: "43402104"
   
 <a name="ReturnUIFromAddInContract"></a>   
 ## <a name="add-in-returns-a-user-interface"></a>Dodatek zwraca interfejs użytkownika  
- Dla dodatku do zwrócenia [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dla aplikacji hosta, wymagane są następujące:  
+ Dla dodatku do zwrócenia interfejsu użytkownika dla aplikacji hosta wymagane jest spełnienie następujących:  
   
-1.  Aplikacja hosta i potoku należy utworzyć, zgodnie z opisem w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] [dodatki i rozszerzalność](../../../../docs/framework/add-ins/index.md) dokumentacji.  
+1.  Aplikacja hosta i potoku należy utworzyć, zgodnie z opisem w programie .NET Framework [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacji.  
   
-2.  Kontrakt musi implementować <xref:System.AddIn.Contract.IContract> i zwracać [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], kontrakt musi zadeklarować metody o wartości zwracanego typu <xref:System.AddIn.Contract.INativeHandleContract>.  
+2.  Kontrakt musi implementować <xref:System.AddIn.Contract.IContract> i zwracać interfejsu użytkownika, kontrakt musi deklarować metody o wartości zwracanego typu <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Jest ono przekazywane między dodatkiem a hostem aplikacji należy bezpośrednio ani pośrednio dziedziczyć <xref:System.Windows.FrameworkElement>.  
+3.  Interfejs użytkownika, który jest przekazywany między dodatkiem a aplikacją hosta należy bezpośrednio ani pośrednio dziedziczyć <xref:System.Windows.FrameworkElement>.  
   
-4.  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Zwracanym przez dodatek muszą zostać skonwertowane z <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przed przekroczeniem granic izolacji.  
+4.  Interfejs użytkownika, który jest zwracany przez dodatek muszą zostać skonwertowane z <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przed przekroczeniem granic izolacji.  
   
-5.  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Zwracanym muszą zostać skonwertowane z <xref:System.AddIn.Contract.INativeHandleContract> do <xref:System.Windows.FrameworkElement> po przekroczeniu granic izolacji.  
+5.  Interfejs użytkownika, który jest zwracany, muszą zostać skonwertowane z <xref:System.AddIn.Contract.INativeHandleContract> do <xref:System.Windows.FrameworkElement> po przekroczeniu granic izolacji.  
   
 6.  Aplikacja hosta Wyświetla zwracanego <xref:System.Windows.FrameworkElement>.  
   
- Aby uzyskać przykład, który demonstruje sposób implementacji dodatku, który zwraca [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], zobacz [utworzyć dodatek zwracającego interfejs użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
+ Na przykład, który demonstruje sposób implementacji dodatku, który zwraca interfejs użytkownika, zobacz [utworzyć dodatek zwracającego interfejs użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>Dodatek jest interfejsem użytkownika  
- Gdy dodatek jest [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], wymagane są następujące:  
+ Gdy dodatek jest interfejsem użytkownika, wymagane są następujące:  
   
-1.  Aplikacja hosta i potoku należy utworzyć, zgodnie z opisem w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] [dodatki i rozszerzalność](../../../../docs/framework/add-ins/index.md) dokumentacji.  
+1.  Aplikacja hosta i potoku należy utworzyć, zgodnie z opisem w programie .NET Framework [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacji.  
   
 2.  Musi implementować interfejs kontraktu dla dodatku <xref:System.AddIn.Contract.INativeHandleContract>.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "43402104"
   
 6.  Aplikacja hosta Wyświetla zwracanego <xref:System.Windows.FrameworkElement>.  
   
- Aby uzyskać przykład, który demonstruje sposób implementacji dodatku, który jest [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], zobacz [dodatku oznacza to tworzenie interfejsu użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
+ Na przykład, który demonstruje sposób implementacji dodatku, który jest interfejsem użytkownika, zobacz [dodatku oznacza to tworzenie interfejsu użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>Zwracanie wielu interfejsów użytkownika z dodatku  
- Dodatki często udostępniają wiele [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] dla aplikacji hosta do wyświetlenia. Rozważmy na przykład dodatku, który jest [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , także zawiera informacje o stanie aplikacji hosta również jako [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Dodatek w następujący sposób można zaimplementować przy użyciu kombinacji metod z obu [interfejsu użytkownika dodatku zwraca](#ReturnUIFromAddInContract) i [dodatek jest to interfejs użytkownika](#AddInIsAUI) modeli.  
+ Dodatki często udostępniają wiele interfejsów użytkownika dla aplikacji hosta do wyświetlenia. Na przykład należy wziąć pod uwagę dodatku, który jest interfejsem użytkownika, które również jako interfejs użytkownika umożliwia także informacje o stanie aplikacji hosta. Dodatek w następujący sposób można zaimplementować przy użyciu kombinacji metod z obu [interfejsu użytkownika dodatku zwraca](#ReturnUIFromAddInContract) i [dodatek jest to interfejs użytkownika](#AddInIsAUI) modeli.  
   
 <a name="AddInsAndXBAPs"></a>   
 ## <a name="add-ins-and-xaml-browser-applications"></a>Dodatki i aplikacje przeglądarek XAML  
@@ -194,7 +194,7 @@ ms.locfileid: "43402104"
 2.  W **pliki aplikacji** okno dialogowe, zestaw **stan publikowania** każdego potoku i biblioteki DLL dodatku **Include (Auto)** i ustaw **grupa pobierania** dla każdego potoku dodatku DLL **(wymagane)**.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Przy użyciu potoku i dodać od podstawy aplikacji  
- Jeśli skonfigurowana potoku i dodać do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] wdrożenie, są one pobierane do tej samej [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] folder pamięci podręcznej jako [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Korzystanie z potoku i dodatek z [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kodu należy pobrać je z aplikacji podstawowej. Różne typy i członkowie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dodatku model przy użyciu potoków i dodatki obsługi specjalnych dla tego scenariusza. Po pierwsze, ścieżka jest identyfikowane za pomocą <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> wartości wyliczenia. Będzie ona używana z przeciążeń odpowiednich członków dodatku dotyczące korzystania z potokiem, które są następujące:  
+ Jeśli skonfigurowana potoku i dodać do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] wdrożenie, są one pobierane do tej samej [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] folder pamięci podręcznej jako [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Korzystanie z potoku i dodatek z [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kodu należy pobrać je z aplikacji podstawowej. Różne typy i członkowie model dodatku .NET Framework dla przy użyciu potoków i dodatki obsługi specjalnych dla tego scenariusza. Po pierwsze, ścieżka jest identyfikowane za pomocą <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> wartości wyliczenia. Będzie ona używana z przeciążeń odpowiednich członków dodatku dotyczące korzystania z potokiem, które są następujące:  
   
 -   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
@@ -209,82 +209,82 @@ ms.locfileid: "43402104"
   
 <a name="WPFAddInModelArchitecture"></a>   
 ## <a name="wpf-add-in-architecture"></a>Architektura dodatków WPF  
- Na najwyższym poziomie jak w związku z czym dostrzegliśmy, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umożliwia [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dodatków do zaimplementowania [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] (który pochodzi bezpośrednio lub pośrednio od <xref:System.Windows.FrameworkElement>) przy użyciu <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Wynik jest zwracany jest aplikacja hosta <xref:System.Windows.FrameworkElement> wyświetlonej z [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] w aplikacji hosta.  
+ Na najwyższym poziomie, jak w związku z czym dostrzegliśmy, WPF umożliwia dodatków .NET Framework do implementacji interfejsów użytkownika (który pochodzi bezpośrednio lub pośrednio od <xref:System.Windows.FrameworkElement>) przy użyciu <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Wynik jest zwracany jest aplikacja hosta <xref:System.Windows.FrameworkElement> która jest wyświetlana w interfejsie użytkownika w aplikacji hosta.  
   
- Dla prostej [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenariuszy dodatek jest możliwie szczegółowo jeden z deweloperów musi. W przypadku bardziej złożonych scenariuszy, szczególnie te, które spróbuj korzystanie z dodatkowych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usługi, takie jak układ, zasobów i wiązania danych, szczegółowymi wiedzy na temat [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] rozszerza [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] model dodatku za pomocą [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Obsługa jest wymagana do zrozumieć jego zalety i ograniczenia.  
+ W przypadku prostego interfejsu użytkownika dodatku scenariuszy jest możliwie szczegółowo potrzebuje Deweloper. Dla bardziej złożonych scenariuszy, szczególnie te, w których podejmowana jest próba korzystanie z dodatkowych usług WPF, takie jak układ, zasobów i powiązania danych bardziej szczegółowych informacji dotyczących sposobu WPF rozszerza model dodatku .NET Framework z obsługą interfejsu użytkownika jest wymagane, aby zrozumieć korzyści i ograniczenia.  
   
- Zasadniczo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] nie przeszło [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] z dodatku dla aplikacji hosta; zamiast tego [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przechodzi uchwyt okna Win32 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] przy użyciu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] współdziałania. Jako takie, gdy [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] z dodatku jest przekazywany do aplikacji hosta, zostaną wykonane następujące zadania:  
+ Zasadniczo WPF nie przeszło interfejsu użytkownika z dodatku dla aplikacji hosta; Zamiast tego WPF przechodzi uchwyt okna Win32 dla interfejsu użytkownika przy użyciu współdziałanie WPF. Jako takie gdy interfejs użytkownika z dodatku jest przekazywany do aplikacji hosta, są następujące operacje:  
   
--   Po stronie dodatku [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uzyskuje uchwytu okna dla [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] który będzie wyświetlany przez aplikację hosta. Uchwyt okna jest hermetyzowany przez wewnętrzną [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] klasę pochodzącą od <xref:System.Windows.Interop.HwndSource> i implementuje <xref:System.AddIn.Contract.INativeHandleContract>. Wystąpienie tej klasy jest zwracany przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> i jest przekazywane z dodatku w domenie aplikacji do aplikacji hosta domeny aplikacji.  
+-   Po stronie dodatku WPF uzyskuje uchwyt okna interfejsu użytkownika, który będzie wyświetlany przez aplikację hosta. Uchwyt okna jest hermetyzowany przez Wewnętrzna klasa WPF, która pochodzi od klasy <xref:System.Windows.Interop.HwndSource> i implementuje <xref:System.AddIn.Contract.INativeHandleContract>. Wystąpienie tej klasy jest zwracany przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> i jest przekazywane z dodatku w domenie aplikacji do aplikacji hosta domeny aplikacji.  
   
--   Na stronie aplikacji hosta [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przepakowuje <xref:System.Windows.Interop.HwndSource> jako wewnętrzne [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] klasę pochodzącą od <xref:System.Windows.Interop.HwndHost> i wykorzystuje <xref:System.AddIn.Contract.INativeHandleContract>. Wystąpienie tej klasy jest zwracany przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> aplikacji hosta.  
+-   Po stronie aplikacja hosta WPF przepakowuje <xref:System.Windows.Interop.HwndSource> jako Wewnętrzna klasa WPF, która pochodzi od klasy <xref:System.Windows.Interop.HwndHost> i wykorzystuje <xref:System.AddIn.Contract.INativeHandleContract>. Wystąpienie tej klasy jest zwracany przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> aplikacji hosta.  
   
- <xref:System.Windows.Interop.HwndHost> istnieje w celu wyświetlenia [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], identyfikowane przez uchwytów okien z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Aby uzyskać więcej informacji, zobacz [WPF i Win32 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> istnieje, aby wyświetlać interfejsy użytkownika, identyfikowane za pomocą uchwytów okien, od interfejsów użytkownika WPF. Aby uzyskać więcej informacji, zobacz [WPF i Win32 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
   
- Podsumowując <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> pozwalających uchwytu okna dla [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] przekazany z dodatku dla aplikacji hosta, w której jest hermetyzowany przez <xref:System.Windows.Interop.HwndHost> i wyświetlane hosta aplikacji [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ Podsumowując <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> pozwalających uchwytu okna WPF UI przekazany z dodatku dla aplikacji hosta, gdzie jest hermetyzowany przez <xref:System.Windows.Interop.HwndHost> i wyświetlane w interfejsie użytkownika aplikacji hosta.  
   
 > [!NOTE]
 >  Ponieważ aplikacja hosta pobiera <xref:System.Windows.Interop.HwndHost>, aplikacji hosta nie można przekonwertować na obiekt, który jest zwracany przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> do typu jest implementowana za dodatek (na przykład <xref:System.Windows.Controls.UserControl>).  
   
- Z natury <xref:System.Windows.Interop.HwndHost> ma pewne ograniczenia, które wpływają na jak aplikacji hosta można z nich korzystać. Jednak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] rozszerza <xref:System.Windows.Interop.HwndHost> możliwości kilku scenariuszach dodatku. Te korzyści i ograniczenia są opisane poniżej.  
+ Z natury <xref:System.Windows.Interop.HwndHost> ma pewne ograniczenia, które wpływają na jak aplikacji hosta można z nich korzystać. Jednak rozszerza WPF <xref:System.Windows.Interop.HwndHost> możliwości kilku scenariuszach dodatku. Te korzyści i ograniczenia są opisane poniżej.  
   
 <a name="WPFAddInModelBenefits"></a>   
 ## <a name="wpf-add-in-benefits"></a>Korzyści z dodatku programu WPF  
- Ponieważ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dodatku [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] są wyświetlane w aplikacji hosta, za pomocą klasą wewnętrzną, która pochodzi od klasy <xref:System.Windows.Interop.HwndHost>, w których [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] są ograniczone przez możliwości <xref:System.Windows.Interop.HwndHost> w odniesieniu do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] usługi, takie jak układ, renderowanie, powiązanie danych, style, szablony i zasoby. Jednak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] rozszerzają jego wewnętrznych <xref:System.Windows.Interop.HwndHost> podklasy o dodatkowe funkcje, które obejmują następujące elementy:  
+ Ponieważ interfejsy użytkownika w dodatku WPF zostaną wyświetlone z aplikacji hosta, za pomocą klasą wewnętrzną, która pochodzi od klasy <xref:System.Windows.Interop.HwndHost>, te interfejsy użytkownika są ograniczone przez możliwości <xref:System.Windows.Interop.HwndHost> względem usługi WPF UI, takie jak układ Renderowanie, powiązań danych, style, szablony i zasoby. Jednak WPF rozszerzają jego wewnętrznych <xref:System.Windows.Interop.HwndHost> podklasy o dodatkowe funkcje, które obejmują następujące elementy:  
   
--   Przełączania między aplikacją hosta [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] i dodatku [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Należy pamiętać, że "dodatek jest [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" modelu programowania wymaga karty Dodaj strony zastąpić <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> włączyć klawiszem TAB, czy dodatek jest w pełni zaufana, czy częściowo zaufany.  
+-   Przełączania między interfejsu użytkownika dla aplikacji hosta i interfejsu użytkownika dodatku. Pamiętaj, że model programowania "dodatek jest interfejsem użytkownika" wymaga karty add w side zastąpić <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> włączyć klawiszem TAB, czy dodatek jest w pełni zaufana, czy częściowo zaufany.  
   
--   Wymagania dotyczące ułatwień dostępu dla dodatku zapewniane [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] , zostaną wyświetlone z aplikacją hosta [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)].  
+-   Zapewniane wymagania dotyczące ułatwień dostępu dla interfejsów użytkownika w dodatku, które są wyświetlane od interfejsów użytkownika aplikacji hosta.  
   
--   Włączanie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bezpieczne uruchamianie w wielu zastosowaniach domeny aplikacji.  
+-   Włączanie aplikacji WPF, bezpieczne uruchamianie w wielu scenariuszach domeny aplikacji.  
   
--   Zapobieganie dostępowi niedozwolone dodatku [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] okna obsługi uruchamiania dodatków przy użyciu zabezpieczeń, izolacji (to znaczy piaskownicy częściowego zaufania zabezpieczeń). Wywoływanie <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> zapewnia to bezpieczeństwo:  
+-   Zapobieganie niedozwolony dostęp do interfejsu użytkownika dodatku okna obsługuje uruchamiania dodatków przy użyciu zabezpieczeń, izolacji (to znaczy piaskownicy częściowego zaufania zabezpieczeń). Wywoływanie <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> zapewnia to bezpieczeństwo:  
   
-    -   Dla "dodatek zwraca [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" model programowania, jedynym sposobem, aby przekazać uchwyt okna dodatku [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] na izolację granic jest wywołanie <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+    -   "Add-in zwraca interfejs użytkownika" modelu programowania, jedynym sposobem, aby przekazać uchwyt okna dla dodatków interfejsu użytkownika przez granicę izolacji jest wywołać <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-    -   Dla "dodatek jest [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" programowania modelu, zastępowanie <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> na karcie add w side i wywoływania <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (jak pokazano w poprzednich przykładach) jest wymagana, ponieważ wywoływany kartę add w side `QueryContract` implementacji z karty po stronie hosta.  
+    -   "Dodatek jest interfejsem użytkownika" modelu programowania zastępowanie <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> na karcie add w side i wywoływania <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (jak pokazano w poprzednich przykładach) jest wymagana, ponieważ wywoływany kartę add w side `QueryContract` implementację z Adaptery po stronie hosta.  
   
--   Zapewnienie ochrony wykonywania domeny w usłudze wielu aplikacji. Ze względu na ograniczenia z domenami aplikacji nieobsłużonych wyjątków, które są zgłaszane w domenach aplikacji dodatku spowodować całej aplikacji ulega awarii, nawet jeśli istnieje granic izolacji. Jednak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] model dodatku zapewniają prosty sposób do obejścia tego problemu i zwiększenia stabilności aplikacji. A [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dodatek, który wyświetla [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] tworzy <xref:System.Windows.Threading.Dispatcher> dla wątku, który domeny aplikacji jest wykonywany, gdy aplikacja hosta jest [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji. Można wykryć wszystkie nieobsługiwane wyjątki, występujących w domenie aplikacji, obsługując <xref:System.Windows.Threading.Dispatcher.UnhandledException> zdarzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dodatku <xref:System.Windows.Threading.Dispatcher>. Możesz uzyskać <xref:System.Windows.Threading.Dispatcher> z <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> właściwości.  
+-   Zapewnienie ochrony wykonywania domeny w usłudze wielu aplikacji. Ze względu na ograniczenia z domenami aplikacji nieobsłużonych wyjątków, które są zgłaszane w domenach aplikacji dodatku spowodować całej aplikacji ulega awarii, nawet jeśli istnieje granic izolacji. Jednakże WPF i model dodatku .NET Framework zapewnia prostą metodę obejścia tego problemu i zwiększenia stabilności aplikacji. Dodatek programu WPF, który wyświetla interfejs użytkownika tworzy <xref:System.Windows.Threading.Dispatcher> dla wątku, który domeny aplikacji działa, jeśli aplikacja hosta aplikacji WPF. Można wykryć wszystkie nieobsługiwane wyjątki, występujących w domenie aplikacji, obsługując <xref:System.Windows.Threading.Dispatcher.UnhandledException> zdarzenia WPF dodatku <xref:System.Windows.Threading.Dispatcher>. Możesz uzyskać <xref:System.Windows.Threading.Dispatcher> z <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> właściwości.  
   
 <a name="WPFAddInModelLimitations"></a>   
 ## <a name="wpf-add-in-limitations"></a>Ograniczenia dotyczące dodawania WPF  
- Poza korzyści, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dodaje do zachowania domyślne, dostarczone przez <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>i uchwytów okien są również ograniczenia dotyczące dodatku [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] które są wyświetlane z hosta aplikacji:  
+ Poza korzyści, które WPF dodaje się do zachowania domyślne, dostarczone przez <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>i uchwytów okien są również ograniczenia dla interfejsów użytkownika w dodatku, które są wyświetlane z hosta aplikacji:  
   
--   Dodatek [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] wyświetlane z hosta aplikacji nie respektują zachowanie wycinka aplikacji hosta.  
+-   Interfejsy użytkownika dodatku wyświetlane z aplikacją hosta nie respektują zachowanie wycinka aplikacji hosta.  
   
 -   Pojęcie *powietrznej* w współdziałanie scenariuszy ma również zastosowanie do dodatków (zobacz [regiony technologiczne — Przegląd](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)).  
   
--   Dla aplikacji hosta [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] usług, takich jak dziedziczenie zasobów, powiązań danych i polecenia, nie są automatycznie dostępne dla dodatku [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Aby zapewnić tych usług do dodatku, należy zaktualizować potoku.  
+-   Interfejs użytkownika dla aplikacji hosta usług, takich jak dziedziczenie zasobów, powiązań danych i polecenia, nie są automatycznie dostępne dla dodatku interfejsów użytkownika. Aby zapewnić tych usług do dodatku, należy zaktualizować potoku.  
   
--   Dodatek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nie można obracać, skalować, nierówne lub w przeciwnym razie wpływ transformacji (zobacz [przekształca Przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
+-   Dodatków interfejsu użytkownika nie można obracać, skalować, nierówne lub w przeciwnym razie wpływ transformacji (zobacz [przekształca Przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
   
--   Zawartość wewnątrz dodatku [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] który jest renderowany za pomocą rysowania operacje z <xref:System.Drawing> przestrzeni nazw może obejmować przenikaniem alfa. Jednak zarówno dodatku [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a aplikacją hosta [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zawierający go musi być nieprzezroczyste 100%; innymi słowy, `Opacity` zarówno właściwość musi być równa 1.  
+-   Zawartość wewnątrz interfejsy użytkownika dodatku renderowania za pomocą rysowania operacje z <xref:System.Drawing> przestrzeni nazw może obejmować przenikaniem alfa. Jednak zarówno dodatków interfejsu użytkownika, jak i hosta aplikacji interfejsu użytkownika, który go zawiera musi wskazywać 100% nieprzezroczyste; innymi słowy `Opacity` zarówno właściwość musi być równa 1.  
   
--   Jeśli <xref:System.Windows.Window.AllowsTransparency%2A> właściwości okna aplikacji hosta, który zawiera dodatek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ustawiono `true`, dodatek jest niewidoczna. Ta zasada obowiązuje nawet wtedy, gdy dodatek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] jest nieprzezroczysta 100% (czyli `Opacity` właściwość ma wartość 1).  
+-   Jeśli <xref:System.Windows.Window.AllowsTransparency%2A> właściwości okna aplikacji hosta, który zawiera dodatków interfejsu użytkownika ustawiono `true`, dodatek jest niewidoczna. Ta zasada obowiązuje nawet w przypadku interfejsu użytkownika dodatku w 100% nieprzezroczyste (czyli `Opacity` właściwość ma wartość 1).  
   
--   Dodatek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] musi znajdować się na drugim [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] elementów w tym samym oknie najwyższego poziomu.  
+-   Dodatek interfejsu użytkownika musi znajdować się na inne elementy WPF, w tym samym oknie najwyższego poziomu.  
   
--   Nie części dodatku [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] może być renderowany przy użyciu <xref:System.Windows.Media.VisualBrush>. Zamiast tego dodatku mogą utworzyć migawkę wygenerowany [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do utworzenia mapy bitowej, który może być przekazywany do aplikacji hosta, za pomocą metod zdefiniowanych przez umowy.  
+-   Nie części interfejsu użytkownika dodatku może być renderowany przy użyciu <xref:System.Windows.Media.VisualBrush>. Zamiast tego dodatku mogą utworzyć migawkę wygenerowany interfejs użytkownika, aby utworzyć mapę bitową, który może być przekazywany do aplikacji hosta, za pomocą metod zdefiniowanych przez umowy.  
   
--   Pliki multimedialne, nie można odtworzyć z <xref:System.Windows.Controls.MediaElement> w dodatku [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+-   Pliki multimedialne, nie można odtworzyć z <xref:System.Windows.Controls.MediaElement> w dodatku w interfejsie użytkownika.  
   
--   Wskaźnik myszy generowane dla dodatku [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nie są odbierane ani zgłoszone przez aplikację hosta i `IsMouseOver` właściwości dla aplikacji hosta [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ma wartość `false`.  
+-   Zdarzenia myszy generowane dla interfejsu użytkownika dodatku nie są odbierane ani zgłoszone przez aplikację hosta i `IsMouseOver` właściwości dla hosta aplikacji interfejsu użytkownika ma wartość `false`.  
   
--   Gdy fokus jest przenoszony między kontrolkami w dodatku [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], `GotFocus` i `LostFocus` zdarzenia nie są odbierane ani zgłoszone przez aplikację hosta.  
+-   Gdy fokus jest przenoszony między kontrolkami w dodatku w interfejsie użytkownika, `GotFocus` i `LostFocus` zdarzenia nie są odbierane ani zgłoszone przez aplikację hosta.  
   
--   Część aplikacji hosta, który zawiera dodatek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] pojawia się białe po wydrukowaniu.  
+-   Część aplikacji hosta, który zawiera dodatków interfejsu użytkownika pojawi się białe po wydrukowaniu.  
   
--   Wszystkie dyspozytorów (zobacz <xref:System.Windows.Threading.Dispatcher>) utworzone przez dodatek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] musi być zamknięty ręcznie przed dodatku właściciel jest zwalniana, gdy aplikacja hosta kontynuuje wykonywanie. Kontrakt można implementować metody, które umożliwiają aplikacji hosta w celu sygnalizowania, że dodatek przed dodatek jest zwalniany, umożliwiając dodatek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zamknąć jego dystrybucja.  
+-   Wszystkie dyspozytorów (zobacz <xref:System.Windows.Threading.Dispatcher>) utworzone przez dodatek interfejsu użytkownika musi być zamknięty ręcznie przed dodatku właściciel jest zwalniana, gdy aplikacja hosta kontynuuje wykonywanie. Kontrakt może implementować metody, które umożliwiają aplikacji hosta w celu sygnalizowania, że dodatek przed dodatek jest załadowany, umożliwiając w ten sposób dodatków interfejsu użytkownika do zamykania jego dyspozytorów.  
   
--   Jeśli dodatek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] jest <xref:System.Windows.Controls.InkCanvas> lub zawiera <xref:System.Windows.Controls.InkCanvas>, nie można zwolnić dodatku.  
+-   Jeśli dodatek interfejs użytkownika jest <xref:System.Windows.Controls.InkCanvas> lub zawiera <xref:System.Windows.Controls.InkCanvas>, nie można zwolnić dodatku.  
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Optymalizacja wydajności  
- Domyślnie, jeśli używanych jest wiele domen aplikacji różnych [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zestawów wymaganych przez poszczególne aplikacje są wszystkie załadowane do domeny tej aplikacji. W rezultacie czas wymagany do tworzenia nowych domen aplikacji i uruchamiania aplikacji w nich może wpłynąć na wydajność. Jednak [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] umożliwia zmniejszenie czasu uruchomienia przez poinstruowanie aplikacjom udostępnianie zestawów w domenach aplikacji, jeśli są już załadowane. Możesz to zrobić przy użyciu <xref:System.LoaderOptimizationAttribute> atrybut, który należy zastosować do metody punktu wejścia (`Main`). W takim przypadku musisz podać tylko kod do implementacji definicji aplikacji (zobacz [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
+ Domyślnie jeśli używanych jest wiele domen aplikacji, różnych zestawów .NET Framework, wymagane przez poszczególne aplikacje są wszystkie ładowane do domeny w tej aplikacji. W rezultacie czas wymagany do tworzenia nowych domen aplikacji i uruchamiania aplikacji w nich może wpłynąć na wydajność. Jednak .NET Framework umożliwia zmniejszenie czasu uruchomienia przez poinstruowanie aplikacjom udostępnianie zestawów w domenach aplikacji, jeśli są już załadowane. Możesz to zrobić przy użyciu <xref:System.LoaderOptimizationAttribute> atrybut, który należy zastosować do metody punktu wejścia (`Main`). W takim przypadku musisz podać tylko kod do implementacji definicji aplikacji (zobacz [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.LoaderOptimizationAttribute>  
- [Dodatki i rozszerzalność](../../../../docs/framework/add-ins/index.md)  
+ [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
  [Domeny aplikacji](../../../../docs/framework/app-domains/application-domains.md)  
  [Przegląd komunikacji zdalnej programu .NET framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
  [Tworzenie obiektów może być zastosowana zdalnie](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  

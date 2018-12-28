@@ -1,17 +1,17 @@
 ---
-title: Jednostki miary (F#)
-description: Dowiedz się, jak zmiennoprzecinkowych i wartości liczby całkowitej ze znakiem w języku F# można skojarzyć jednostki miary, które są zazwyczaj używane do wskazać, długości, woluminów i urządzeń pamięci masowej.
+title: Jednostki miary
+description: Dowiedz się, jak zmiennoprzecinkowych i zalogowano wartości całkowitych F# może być skojarzony jednostki miary, które są zazwyczaj używane do wskazać, długości, woluminów i urządzeń pamięci masowej.
 ms.date: 05/16/2016
-ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 935dbff3545f92736ce8c51de86a168429dc194f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45972520"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610986"
 ---
 # <a name="units-of-measure"></a>Jednostki miary
 
-Zmiennoprzecinkowe wartości liczby całkowitej ze znakiem i punkt w języku F# może być skojarzony jednostki miary, które są zwykle używane do wskazania długość woluminu, masa, i tak dalej. Za pomocą ilości z jednostkami, Włącz kompilator, aby sprawdzić, czy relacje arytmetyczne mają prawidłowe jednostki, co pomaga zapobiec błędy programowania.
+Liczba zmiennoprzecinkowa i zalogowano wartości całkowitych F# może być skojarzony jednostki miary, które są zwykle używane w celu wskazania, długość, woluminu, urządzeń pamięci masowej i tak dalej. Za pomocą ilości z jednostkami, Włącz kompilator, aby sprawdzić, czy relacje arytmetyczne mają prawidłowe jednostki, co pomaga zapobiec błędy programowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -113,7 +113,7 @@ Aby przekonwertować wartość unitless wartość, która zawiera jednostki, nal
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>Jednostki miary w podstawowej biblioteki F#
+## <a name="units-of-measure-in-the-f-core-library"></a>Jednostki miary w F# podstawowej biblioteki
 
 Biblioteka jednostka jest dostępna w `FSharp.Data.UnitSystems.SI` przestrzeni nazw. Zawiera jednostki SI w ich formie symboli (takich jak `m` dla licznika) w `UnitSymbols` podrzędnej przestrzeni nazw, a ich pełną nazwę (np. `meter` dla licznika) w `UnitNames` podrzędnej przestrzeni nazw.
 

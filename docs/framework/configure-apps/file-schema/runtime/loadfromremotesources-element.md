@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a8858059159edddb4456561719c572fb9268be7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509486"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611402"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadfromremotesources —&gt; — element
 Określa, czy zestawy, ładowane z zdalnych źródeł może być przyznany pełnego zaufania w programie .NET Framework 4 i nowszych.
   
 > [!NOTE]
->  Jeśli były kierowane do tego tematu, ze względu na komunikat o błędzie na liście błędów projektu programu Visual Studio lub błąd kompilacji, zobacz [porady: Użyj zestawu z sieci Web w programie Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
+>  Jeśli były kierowane do tego tematu, ze względu na komunikat o błędzie na liście błędów projektu programu Visual Studio lub błąd kompilacji, zobacz [jak: Użyj zestawu z sieci Web w programie Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
   
  \<Konfiguracja >  
 \<runtime>  
@@ -74,7 +74,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 Aby załadować zestaw i wykonywanie kodu, należy:
 
-- Jawnie utworzyć piaskownicy dla zestawu (zobacz [porady: uruchamianie częściowo zaufanego kodu w piaskownicy](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
+- Jawnie utworzyć piaskownicy dla zestawu (zobacz [jak: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
 
 - Uruchom kod zestawu w trybie pełnego zaufania. Możesz to zrobić, konfigurując `<loadFromRemoteSources>` elementu. Dzięki temu można określić, że zestawy, które działają w częściowej relacji zaufania we wcześniejszych wersjach programu .NET Framework jest teraz uruchomione w trybie pełnego zaufania w .NET Framework 4 i nowszych wersjach.
 
@@ -117,8 +117,8 @@ Poniższy przykład pokazuje, jak udzielić pełnym zaufaniu zestawy, ładowane 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Więcej niejawne zastosowania zasady CAS: loadfromremotesources —](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-[Porady: uruchamianie częściowo zaufanego kodu w piaskownicy](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-[Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-[Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [Więcej niejawne zastosowania zasady CAS: loadfromremotesources —](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
+- [Instrukcje: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  

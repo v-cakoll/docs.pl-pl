@@ -1,13 +1,13 @@
 ---
-title: Zdarzenia (F#)
+title: Zdarzenia
 description: Dowiedz się, jak F# zdarzenia umożliwiają kojarzenie wywołań funkcji z akcjami użytkownika, które są ważne w programowaniu graficznych interfejsów użytkownika.
 ms.date: 05/16/2016
-ms.openlocfilehash: 82cde0e1df980a2ae204ad0923f4bac0769f0831
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 38eb15e59611d018b6005f64a957c9275ec931a4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745345"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612169"
 ---
 # <a name="events"></a>Zdarzenia
 
@@ -179,7 +179,7 @@ Application.Run(appForm)
 
 - [Elementy członkowskie](index.md)
 - [Obsługa i wywoływanie zdarzeń](../../../../docs/standard/events/index.md)
-- [Wyrażenia lambda: `fun` — słowo kluczowe](../functions/lambda-expressions-the-fun-keyword.md)
+- [Wyrażenia lambda: słowo kluczowe `fun`](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control.Event — moduł](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control.Event&#60;t&#62; klasy](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 - [Control.Event&#60;"Delegowanie", argumenty&#62; klasy](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

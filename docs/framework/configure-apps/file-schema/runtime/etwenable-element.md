@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 267a4a29282881d18201d0cb2062e91b4ff974a9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6ea2f8a32a18dfce6be54ce52ce8fef4abf92ce
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745178"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610778"
 ---
 # <a name="ltetwenablegt-element"></a>&lt;etwenable —&gt; — Element
-Określa, czy włączyć śledzenie zdarzeń systemu Windows (ETW) dla zdarzenia środowiska uruchomieniowego języka wspólnego.  
+Określa, czy włączyć śledzenie zdarzeń dla Windows (ETW) dla typowych zdarzeń środowiska wykonawczego języka.  
   
- \<Konfiguracja > — Element  
-\<środowisko uruchomieniowe > — Element  
+ \<Konfiguracja > Element  
+\<środowisko uruchomieniowe > Element  
 \<etwEnabled >  
   
 ## <a name="syntax"></a>Składnia  
@@ -34,14 +34,14 @@ Określa, czy włączyć śledzenie zdarzeń systemu Windows (ETW) dla zdarzenia
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|włączone|Atrybut wymagany.<br /><br /> Określa, czy powinno być włączone ETW.|  
+|Włączone|Atrybut wymagany.<br /><br /> Określa, czy powinien być włączony funkcji ETW.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|true|Włączanie funkcji ETW. Jest to wartość domyślna dla wersji systemu Windows, począwszy od systemów operacyjnych Windows Vista i Windows Server 2008.|  
-|false|Wyłączanie funkcji ETW. Jest to wartość domyślna dla wcześniejszych wersji systemu Windows.|  
+|true|Włączanie funkcji ETW. Jest to wartość domyślna dla wersji systemu Windows począwszy od systemów operacyjnych Windows Vista i Windows Server 2008.|  
+|false|Wyłączenie funkcji ETW. Jest to wartość domyślna dla wcześniejszych wersji systemu Windows.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -54,10 +54,10 @@ Określa, czy włączyć śledzenie zdarzeń systemu Windows (ETW) dla zdarzenia
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Począwszy od systemu Windows Vista, ETW jest domyślnie włączona. Ten element służy do wyłączenia funkcji ETW dla aplikacji. We wcześniejszych wersjach systemu Windows użyj tego elementu, aby włączyć ETW dla aplikacji.  
+ Począwszy od systemów Windows Vista, ETW jest domyślnie włączona. Ten element służy do wyłączania funkcji ETW dla aplikacji. We wcześniejszych wersjach systemu Windows, ten element umożliwia włączenie funkcji ETW dla aplikacji.  
   
 > [!NOTE]
->  ETW można włączać lub globalnie wyłączone na serwerze za pomocą ustawienia rejestru. Zobacz [kontrolowanie .NET Framework rejestrowania](../../../../../docs/framework/performance/controlling-logging.md).  
+>  ETW można włączać lub globalnie wyłączone na serwerze za pomocą ustawienia rejestru. Zobacz [Kontrolowanie logowania w programie .NET Framework](../../../../../docs/framework/performance/controlling-logging.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak włączyć śledzenie zdarzeń systemu Windows dla aplikacji.  
@@ -71,6 +71,6 @@ Określa, czy włączyć śledzenie zdarzeń systemu Windows (ETW) dla zdarzenia
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Kontrolowanie logowania w programie .NET Framework](../../../../../docs/framework/performance/controlling-logging.md)
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Kontrolowanie logowania w programie .NET Framework](../../../../../docs/framework/performance/controlling-logging.md)

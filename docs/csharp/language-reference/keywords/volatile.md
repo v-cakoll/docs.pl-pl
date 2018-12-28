@@ -8,47 +8,47 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 6ae5445de69e987826fb58ff50ca8d47c11eb53c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f96b450eea5f2b45d256bfe00a18aa616d501d69
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245496"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612182"
 ---
 # <a name="volatile-c-reference"></a>volatile (odwołanie w C#)
 
 `volatile` — Słowo kluczowe wskazuje, że pola mogą zostać zmodyfikowane przez wiele wątków, które są wykonywane w tym samym czasie. Kompilator, system plików środowiska uruchomieniowego i sprzętu może zmienić kolejność operacji odczytu i zapisu do lokalizacji pamięci, ze względu na wydajność. Pola, które są zadeklarowane `volatile` nie podlegają Optymalizacje te. Dodawanie `volatile` modyfikator gwarantuje, że wszystkie wątki będzie przestrzegać volatile zapisów wykonywane przez inny wątek, w kolejności, w którym zostały wykonane. Nie ma żadnej gwarancji, pojedynczy całkowita kolejności volatile zapisów wyświetlanego ze wszystkich wątków wykonania.
-  
-`volatile` — Słowo kluczowe mogą być stosowane do pól z następujących typów:  
-  
-- Typy odwołań.  
-- Typy wskaźników (w niebezpiecznym kontekście). Należy pamiętać, że chociaż wskaźnika, sama może być nietrwałe, obiekt, który wskazuje nie może. Innymi słowy nie można zadeklarować "wskaźnik volatile."  
-- Proste typy, takie jak `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `char`, `float`, i `bool`.  
-- `enum` Typu z jednym z następujących typów podstawowych: `byte`, `sbyte`, `short`, `ushort`, `int`, lub `uint`.  
+
+`volatile` — Słowo kluczowe mogą być stosowane do pól z następujących typów:
+
+- Typy odwołań.
+- Typy wskaźników (w niebezpiecznym kontekście). Należy pamiętać, że chociaż wskaźnika, sama może być nietrwałe, obiekt, który wskazuje nie może. Innymi słowy nie można zadeklarować "wskaźnik volatile."
+- Proste typy, takie jak `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `char`, `float`, i `bool`.
+- `enum` Typu z jednym z następujących typów podstawowych: `byte`, `sbyte`, `short`, `ushort`, `int`, lub `uint`.
 - Parametry typu ogólnego, znane jako typy odwołań.
-- <xref:System.IntPtr> i <xref:System.UIntPtr>.  
+- <xref:System.IntPtr> i <xref:System.UIntPtr>.
 
 Inne typy, w tym `double` i `long`, nie można oznaczyć `volatile` ponieważ odczyty i zapisy do pól z tych typów, nie można zagwarantować niepodzielnych. Aby chronić wielowątkowych dostęp do tych typów pól, użyj <xref:System.Threading.Interlocked> elementy członkowskie klasy lub ochrona dostępu przy użyciu [ `lock` ](lock-statement.md) instrukcji.
 
 `volatile` — Słowo kluczowe może być stosowany tylko do pól `class` lub `struct`. Nie można zadeklarować zmienne lokalne `volatile`.
-  
+
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób deklarowania zmiennej pole publiczne `volatile`.  
-  
+Poniższy przykład pokazuje sposób deklarowania zmiennej pole publiczne `volatile`.
+
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
 
 Poniższy przykład pokazuje, jak wątek wiadomości pomocniczych lub procesu roboczego można tworzyć i używany do wykonywania przetwarzania równolegle z wątku głównego. Aby uzyskać więcej informacji o wielowątkowości, zobacz [zarządzana wątkowość](../../../standard/threading/index.md).
-  
+
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
 
 Za pomocą `volatile` modyfikator dodane do deklaracji `_shouldStop` w miejscu, zawsze uzyskasz takie same wyniki (podobnie jak fragment, jak pokazano w poprzednim kodzie). Jednak bez ten modyfikator na `_shouldStop` elementu członkowskiego, zachowanie jest nieprzewidywalne. `DoWork` Metoda może zoptymalizować dostęp do elementu członkowskiego, wynikiem odczytywanie nieaktualnych danych. Ze względu na charakter programowania wielowątkowe liczba odczytów starych jest nieprzewidywalne. Różnych tras program generuje wyniki nieco inny.
 
-## <a name="c-language-specification"></a>Specyfikacja języka C#
+## <a name="c-language-specification"></a>specyfikacja języka C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Zobacz też
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Zobacz także
 
 - [C#Specyfikacja języka: volatile — słowo kluczowe](../../../../_csharplang/spec/classes.md#volatile-fields)
 - [Dokumentacja języka C#](../index.md)

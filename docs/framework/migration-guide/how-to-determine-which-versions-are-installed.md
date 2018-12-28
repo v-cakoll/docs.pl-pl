@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b77775fdc7f552e6433e6364f153c5bde32d9e0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 890ce1e9a23d57121cd714252444e5ff1caa6b19
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151047"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396880"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Instrukcje: Określanie, które wersje programu .NET Framework są zainstalowane.
 
@@ -97,7 +97,7 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
     |W Rocznicowej aktualizacji systemu Windows 10 i Windows Server 2016: 394802<br /><br /> W innych wersjach systemu operacyjnego: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |W systemie Windows 10 dla twórców tylko aktualizacji: 460798<br/><br/> W innych wersjach systemu operacyjnego: 460805 | .NET framework 4.7 |
     |Na Windows 10 Fall Creators Update tylko: 461308<br/><br/> W innych wersjach systemu operacyjnego: 461310 | .NET Framework 4.7.1 |
-    |W dniu 10 października 2018 r. aktualizacji systemu Windows tylko: 461814<br/><br/> W usłudze Windows tylko Update 10 kwietnia 2018 r.: 461808<br/><br/> W innych wersjach systemu operacyjnego: 461814| .NET framework 4.7.2 |
+    |W usłudze Windows tylko Update 10 kwietnia 2018 r.: 461808<br/><br/> W przypadku innych wersji systemu operacyjnego takie jak aktualizacja systemu Windows 10 października 2018 r.: 461814| .NET framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Można znaleźć wersji programu .NET Framework, wykonując zapytanie w rejestrze w kodzie (.NET Framework 1 – 4)
@@ -230,6 +230,6 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
 
 ## <a name="see-also"></a>Zobacz także
 
-[Jak: Określanie, które aktualizacje programu .NET Framework są zainstalowane.](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+[Instrukcje: Określanie, które aktualizacje programu .NET Framework są zainstalowane.](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
 [Instalowanie programu .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md)  
 [Wersje i zależności](~/docs/framework/migration-guide/versions-and-dependencies.md)  

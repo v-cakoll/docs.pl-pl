@@ -1,13 +1,13 @@
 ---
-title: do — Powiązania w klasach (F#)
-description: Dowiedz się, jak używać języka F# są powiązania w definicji klasy, która wykonuje akcje w przypadku, gdy obiekt jest konstruowany lub przy pierwszym użyciu typu.
+title: do — Powiązania w klasach
+description: Dowiedz się, jak używać F# "do" powiązanie w definicji klasy, która wykonuje akcje w przypadku, gdy obiekt jest konstruowany lub przy pierwszym użyciu typu.
 ms.date: 05/16/2016
-ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0ddf2b5ca458d0950c2e07bf2c37c205877e2173
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43801542"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613118"
 ---
 # <a name="do-bindings-in-classes"></a>do — Powiązania w klasach
 

@@ -1,13 +1,13 @@
 ---
-title: Parametry i argumenty (F#)
-description: Więcej informacji na temat Obsługa języka F# do definiowania parametrów i przekazanie argumentów do funkcji, metody i właściwości.
+title: Parametry i argumenty
+description: Dowiedz się więcej o F# Obsługa języka dla Definiowanie parametrów i przekazanie argumentów do funkcji, metody i właściwości.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 08332ad9ab1c1a05f68ba27b2f1513ad0fe7c4d5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50744460"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612481"
 ---
 # <a name="parameters-and-arguments"></a>Parametry i argumenty
 
@@ -105,11 +105,11 @@ W wywołaniu konstruktora klasy można ustawić wartości właściwości klasy p
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-Aby uzyskać więcej informacji, zobacz [Konstruktorzy (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
+Aby uzyskać więcej informacji, zobacz [konstruktory (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>Parametry opcjonalne
 
-Można określić opcjonalny parametr dla metody, przy użyciu znaku zapytania przed nazwą parametru. Następujące parametry opcjonalne są interpretowane jako typów opcji języka F#, dzięki czemu można tworzyć zapytania je w zwykły sposób, że zapytania są typy opcji za pomocą `match` wyrażenie `Some` i `None`. Następujące parametry opcjonalne są dozwolone tylko w elementach członkowskich, nie na funkcje nie powstały przy użyciu `let` powiązania.
+Można określić opcjonalny parametr dla metody, przy użyciu znaku zapytania przed nazwą parametru. Następujące parametry opcjonalne są interpretowane jako F# opcji typu, dzięki czemu można tworzyć zapytania je w zwykły sposób, że zapytania są typy opcji za pomocą `match` wyrażenie `Some` i `None`. Następujące parametry opcjonalne są dozwolone tylko w elementach członkowskich, nie na funkcje nie powstały przy użyciu `let` powiązania.
 
 Możesz przekazać istniejący opcjonalnych wartości do metody, nazwę parametru, takie jak `?arg=None` lub `?arg=Some(3)` lub `?arg=arg`. Może to być przydatne, gdy tworzenie metody, która przekazuje opcjonalne argumenty do innej metody.
 
@@ -151,7 +151,7 @@ W tym przypadku kompilator generuje ostrzeżenie i zignoruje całkowicie obu atr
 
 ## <a name="passing-by-reference"></a>Przekazywanie poprzez odwołanie
 
-Przekazywanie F# wartości według odwołania polega na [zkratka](byrefs.md), które są typami wskaźnika zarządzanych. Wskazówki dla jakiego typu użycia jest następująca:
+Przekazywanie F# polega na wartość przez odwołanie [zkratka](byrefs.md), które są typami wskaźnika zarządzanych. Wskazówki dla jakiego typu użycia jest następująca:
 
 * Użyj `inref<'T>` Jeśli wymagane jest tylko do odczytu wskaźnika.
 * Użyj `outref<'T>` Jeśli wymagane jest tylko do zapisu do wskaźnika.
@@ -186,11 +186,11 @@ Spójna kolekcja można użyć jako wartości zwracanej, do przechowywania wszel
 
 Czasami jest konieczne jest określenie funkcji, która przyjmuje dowolną liczbę parametrów typu heterogenicznych. Nie jest praktyczne utworzyć wszystkie możliwe metody przeciążone do konta dla wszystkich typów, które mogłyby zostać użyte. Implementacje platformy .NET zapewnia obsługę takich metod za pomocą funkcji tablicy parametrów. Z dowolnej liczby parametrów można podać metodę, która przyjmuje jeho signatura tablicy parametrów. Parametry są umieszczane w tablicy. Określa typ elementów tablicy, typy parametrów, które mogą być przekazywane do funkcji. Jeśli zdefiniujesz tablicy parametrów za pomocą `System.Object` jako typ elementu następnie kod klienta można przekazać wartości dowolnego typu.
 
-W języku F# tablice parametrów mogą można zdefiniować tylko w metodach. Nie można ich używać w autonomicznej lub funkcji, które są definiowane w modułach.
+W F#, tablice parametrów mogą być definiowane tylko w metodach. Nie można ich używać w autonomicznej lub funkcji, które są definiowane w modułach.
 
 Tablica parametrów są definiowane za pomocą `ParamArray` atrybutu. `ParamArray` Atrybut można stosować tylko do ostatniego parametru.
 
-Poniższy kod ilustruje obie wywołanie metody .NET, która przyjmuje tablicy parametrów i definicji typu w F#, który ma metodę, która przyjmuje tablicy parametrów.
+Poniższy kod ilustruje obie wywołanie metody .NET, która przyjmuje tablicy parametrów i definicji typu w F# zawierający metody, która przyjmuje tablicy parametrów.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 

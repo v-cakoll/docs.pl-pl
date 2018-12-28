@@ -1,13 +1,13 @@
 ---
-title: Potwierdzenia (F#)
+title: Potwierdzenia
 description: Dowiedz się, jak użyć wyrażenia "Potwierdź" jako funkcja debugowania do testowania wyrażeń w F# języka programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: fbaf038f08cfc74e6cb262c110322dc586813c0c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c2d97386e87e9b915da490a78fff9aedb9def616
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127254"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610206"
 ---
 # <a name="assertions"></a>Potwierdzenia
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11e892d8ab9001d3670c801b43ba444aa24b2e41
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 32ffe48e7a65ab4ca2250eee65d188c0c7270c11
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743579"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611337"
 ---
 # <a name="ltappdomainresourcemonitoringgt-element"></a>&lt;appdomainresourcemonitoring —&gt; — Element
-Powoduje, że środowiska uruchomieniowego w celu zbierania statystyk we wszystkich domenach aplikacji w trakcie cyklu życia procesu.  
+Powoduje, że środowisko uruchomieniowe w celu zbierania statystyk na wszystkie domeny aplikacji, w trakcie trwania procesu.  
   
  \<Konfiguracja >  
 \<runtime>  
@@ -41,8 +41,8 @@ Powoduje, że środowiska uruchomieniowego w celu zbierania statystyk we wszystk
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`true`|Statystyki dotyczące monitorowania zasobów domen aplikacji są zbierane.|  
-|`false`|Statystyki dotyczące monitorowania zasobów domen aplikacji nie są zbierane.|  
+|`true`|Monitorowanie zasobów domeny aplikacji statystyki są zbierane.|  
+|`false`|Statystyki dotyczące monitorowanie zasobów domeny aplikacji nie są zbierane.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -55,14 +55,14 @@ Powoduje, że środowiska uruchomieniowego w celu zbierania statystyk we wszystk
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Monitorowanie zasobów domen aplikacji jest dostępna za pośrednictwem klasy domeny zarządzanej aplikacji, hostingu [ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) interfejsu i śledzenie zdarzeń systemu Windows (ETW). Gdy jest włączone monitorowanie, statystyki są zbierane dla wszystkich domen aplikacji w trakcie cyklu życia procesu.  
+ Monitorowanie zasobów domeny aplikacji jest dostępna za pośrednictwem klasy domeny zarządzanej aplikacji, hostingu [ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) interfejsu i śledzenie zdarzeń dla Windows (ETW). Gdy jest włączone monitorowanie, statystyki są zbierane dla wszystkich domen aplikacji w trakcie trwania procesu.  
   
- Aby włączyć monitorowanie z kodu zarządzanego, użyj <xref:System.AppDomain.MonitoringIsEnabled%2A> właściwości.  
+ Aby włączyć monitorowanie z kodu zarządzanego, należy użyć <xref:System.AppDomain.MonitoringIsEnabled%2A> właściwości.  
   
  Ten element konfiguracji jest dostępny tylko w [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] i nowszych.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób włączania monitorowania zasobów domen aplikacji.  
+ Poniższy przykład pokazuje, jak umożliwić monitorowanie zasobów domeny aplikacji.  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ Powoduje, że środowiska uruchomieniowego w celu zbierania statystyk we wszystk
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

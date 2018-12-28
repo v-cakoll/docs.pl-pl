@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8c73f1a4373583530d5afde113c5c4ec049bcea4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195895"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613521"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
 Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji .NET Framework lub aplikacje, które przetwarzają dużą ilość danych, takie jak pliki lub bazy danych. Te wskazówki pochodzą ponowne napisanie kompilatory C# i Visual Basic w kodzie zarządzanym, a w tym artykule przedstawiono kilka przykładów rzeczywistych z kompilatorem C#. 
@@ -28,10 +28,10 @@ Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji
 ## <a name="just-the-facts"></a>Po prostu fakty  
  Należy wziąć pod uwagę następujące fakty podczas dostosowywania wydajności i tworzenie szybko reagujących aplikacji .NET Framework. 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>Fakt 1: Przedwcześnie nie Optymalizuj  
+### <a name="fact-1-dont-prematurely-optimize"></a>Fakt 1: Przedwczesne nie Optymalizuj  
  Pisanie kodu, który jest bardziej złożona, nie musi to być naliczane konserwacji, debugowania i wygładzanie kosztów. Doświadczeni programiści mają opanujesz intuicyjny sposób rozwiązywania problemów kodowania i napisać kod, bardziej wydajne. Jednak mogą czasami przedwcześnie optymalizacji ich kodu. Na przykład używają tabeli mieszania podczas prostej tablicy może wystarczyć lub używanie buforowania skomplikowane, że dochodzi do wycieku pamięci, a nie po prostu ponowne obliczanie wartości. Nawet jeśli jesteś programistą środowisko, możesz testowanie wydajności i Analizuj swój kod, gdy znajdziesz problemy. 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Fakt 2: Jeśli nie notuje, możesz teraz zgadywania  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Fakt 2: Jeśli użytkownik nie notuje, jesteś zgadywania  
  Profile i pomiarów nie znajdować się. Profile dowiesz się, czy Procesor jest w pełni załadowane lub tego, czy w przypadku zablokowania na We/Wy dysku. Profile wyświetla komunikat informujący o tym, jakiego rodzaju i jak ilość pamięci alokowaniu i czy your CPU zużywa dużo czasu w [wyrzucania elementów bezużytecznych](../../../docs/standard/garbage-collection/index.md) (GC). 
   
  Należy ustawić środowiska lub scenariuszy celami wydajności dla klientów w aplikacji i pisania testów do pomiaru wydajności. Badanie niepowodzenie testów, stosując metodę wykładniczej: aby ułatwiają, hipotezę, co może być problem, użyj profilów i testowanie Twojej hipotezę z eksperymentu lub zmiany kodu. Wraz z upływem czasu z regularnych testowania, należy ustanowić pomiarów wydajności bazowego, dzięki czemu można izolować zmiany, które powodują regresji wydajności. Zbliża się wydajność pracy, w sposób rygorystyczne, będzie uniknąć marnowania czasu za pomocą aktualizacji kodu, które nie są potrzebne. 
@@ -361,7 +361,8 @@ public Symbol FindMatchingSymbol(string name)
  Ten kod nie korzysta z metod rozszerzeń LINQ, wyrażenia lambda lub moduły wyliczające i wiąże się nie alokacji. Istnieją nie alokacji, ponieważ kompilator może być wyświetlana `symbols` kolekcja jest <xref:System.Collections.Generic.List%601> i może powiązać wynikowy modułu wyliczającego (struktury) do zmiennej lokalnej przy użyciu właściwego typu, aby uniknąć pakowania. Oryginalna wersja tej funkcji został świetny przykład wszechstronnym możliwościom języka C# i efektywność programu .NET Framework. Ta wersja nowe i bardziej wydajne zachowuje tych klas bez dodawania żadnych złożonego kodu do konserwowania. 
   
 ### <a name="async-method-caching"></a>Buforowanie metody asynchronicznej  
- W kolejnym przykładzie pokazano powszechny problem podczas próby użycia pamięci podręcznej powoduje [async](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7) metody. 
+
+W kolejnym przykładzie pokazano powszechny problem podczas próby użycia pamięci podręcznej powoduje [async](../../csharp/programming-guide/concepts/async/index.md) metody.
   
  **Przykład 6: buforowanie w metodach asynchronicznych**  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f72bedbaaf0b15ade7ff6b7b8c3edcdfd3fda6d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: edf3fd9a4561677813adbfb970a9d6be43d7c83d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749429"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612585"
 ---
 # <a name="ltthrowunobservedtaskexceptionsgt-element"></a>&lt;Throwunobservedtaskexceptions —&gt; — Element
-Określa, czy zadanie nieobsługiwanych wyjątków powinny przerwanie uruchomiony proces.  
+Określa, czy zadanie nieobsługiwanych wyjątków powinien wygasają uruchomionego procesu.  
   
  \<Konfiguracja >  
 \<runtime>  
@@ -38,14 +38,14 @@ Określa, czy zadanie nieobsługiwanych wyjątków powinny przerwanie uruchomion
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy zadanie nieobsługiwanych wyjątków powinny przerwanie uruchomiony proces.|  
+|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy zadanie nieobsługiwanych wyjątków powinien wygasają uruchomionego procesu.|  
   
 ## <a name="enabled-attribute"></a>Atrybut włączony  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|Nie kończy proces uruchomione zadania nieobsługiwany wyjątek. Domyślnie włączone.|  
-|`true`|Kończy proces uruchomione zadania nieobsługiwany wyjątek.|  
+|`false`|Nie kończy proces uruchomiony nieobsłużony wyjątek zadania. Domyślnie włączone.|  
+|`true`|Kończy proces uruchomiony nieobsłużony wyjątek zadania.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -59,22 +59,22 @@ Określa, czy zadanie nieobsługiwanych wyjątków powinny przerwanie uruchomion
 |||  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wyjątek, który jest skojarzony z <xref:System.Threading.Tasks.Task> nie zostało spełnione, brak nie <xref:System.Threading.Tasks.Task.Wait%2A> operacji, element nadrzędny nie jest dołączony i <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> właściwości nie została przeczytana zadania wyjątek jest uznawany za niezaobserwowany.  
+ Jeśli wyjątek, który jest skojarzony z <xref:System.Threading.Tasks.Task> nie zostało spełnione, istnieje nie <xref:System.Threading.Tasks.Task.Wait%2A> operacji, element nadrzędny nie jest podłączony i <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> właściwości nie została ona odczytana wyjątek zadania jest uważany za niewidocznego.  
   
- W [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], przez domyślne, jeśli <xref:System.Threading.Tasks.Task> mający niezaobserwowany wyjątek bezużytecznych, finalizator zgłasza wyjątek i kończy proces. Zakończenie procesu jest określana przez czas wyrzucanie elementów bezużytecznych i finalizacji.  
+ W [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], domyślnie, jeśli <xref:System.Threading.Tasks.Task> ma niewidocznego wyjątek bezużyteczne, finalizator zgłasza wyjątek i kończy proces. Przed zakończeniem procesu jest określany przez chronometrażu wyrzucania elementów bezużytecznych i finalizacji jest zakończona.  
   
- Aby ułatwić deweloperom pisanie kodu asynchroniczny oparty na zadaniach, [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] zmieni to domyślne zachowanie dla wyznaczonego wyjątków. Być niezauważalna wyjątki nadal powodują <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> się zdarzenia, ale domyślnie nie zakończyć proces. Zamiast tego wyjątku została zignorowana po wywołaniu zdarzenia, niezależnie od tego, czy program obsługi zdarzeń przestrzega wyjątek.  
+ Aby ułatwić programistom pisanie kodu asynchronicznego, na podstawie zadań, [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] zmienia to zachowanie domyślne niewidocznego wyjątków. Niezauważalne wyjątki, które nadal powodują <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> zdarzenia, ale domyślnie nie zakończyć proces. Zamiast tego wyjątek jest ignorowany, po wywołaniu zdarzenia, niezależnie od tego, czy program obsługi zdarzeń przestrzega wyjątku.  
   
- W [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], można użyć [ \<throwunobservedtaskexceptions — > element](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) w pliku konfiguracji aplikacji, aby włączyć [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] zachowanie Zgłaszanie wyjątku.  
+ W [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], możesz użyć [ \<throwunobservedtaskexceptions — > element](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) w pliku konfiguracyjnym aplikacji, aby umożliwić [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] zachowanie zostanie zgłoszony wyjątek.  
   
  Można również określić zachowanie wyjątek w jednym z następujących sposobów:  
   
 -   Przez ustawienie zmiennej środowiskowej `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
--   Przez ustawienie rejestru DWORD wartość throwunobservedtaskexceptions — = 1 w HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Klucz NETFramework.  
+-   Przez ustawienie rejestru DWORD wartości throwunobservedtaskexceptions — = 1 w HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Klucz NETFramework.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak można włączyć zgłaszanie wyjątków w zadania przy użyciu pliku konfiguracji aplikacji.  
+ Poniższy przykład pokazuje, jak włączyć zgłaszanie wyjątków w zadaniach przy użyciu pliku konfiguracji aplikacji.  
   
 ```xml  
 <configuration>   
@@ -85,11 +85,11 @@ Określa, czy zadanie nieobsługiwanych wyjątków powinny przerwanie uruchomion
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak niezaobserwowany wyjątek zadania. Kod musi być uruchamiany jako wydanych program działał prawidłowo.  
+ W poniższym przykładzie pokazano, jak niewidocznego wyjątku z zadania. Kod musi działać jako wydana program działał prawidłowo.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

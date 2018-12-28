@@ -1,13 +1,13 @@
 ---
 title: Rozwiązywanie problemów z dostawcami typów
-description: Odkryj rozwiązania potencjalnych problemów, które najprawdopodobniej będzie występować w przypadku użycia dostawcy typów F#.
+description: Odkryj potencjalne rozwiązania problemów, które najprawdopodobniej będzie występować podczas korzystania z typu dostawców w F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6c675720e0b7c306a2916c94d8096d2f09c0daca
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48873219"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610336"
 ---
 # <a name="troubleshooting-type-providers"></a>Rozwiązywanie problemów z dostawcami typów
 

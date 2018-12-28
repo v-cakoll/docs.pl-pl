@@ -1,13 +1,13 @@
 ---
-title: Dziedziczenie (F#)
-description: Dowiedz się, jak określić dziedziczenia relacji F# za pomocą słowa kluczowego "inherit".
+title: Dziedziczenie
+description: Dowiedz się, jak określić F# relacje dziedziczenia z użyciem słowa kluczowego "inherit".
 ms.date: 05/16/2016
-ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 775ee52039caf4c4ab65f82fa21d4e536135a12a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43864472"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610141"
 ---
 # <a name="inheritance"></a>Dziedziczenie
 
@@ -34,7 +34,7 @@ Słowo kluczowe `base` jest dostępna w klasach pochodnych i odnosi się do wyst
 
 ## <a name="virtual-methods-and-overrides"></a>Metody wirtualne i zastąpień
 
-Metody wirtualne (i właściwości) działają trochę inaczej w języku F# w porównaniu do innych języków platformy .NET. Aby zadeklarować nowa wirtualna składowa, należy użyć `abstract` — słowo kluczowe. W tym niezależnie od tego, czy zapewniasz Domyślna implementacja tej metody. Ten sposób kompletną definicję metody wirtualnej w klasie bazowej ze wzorcem to:
+Metody wirtualne (i właściwości) działają trochę inaczej w F# porównaniu z innymi językami .NET. Aby zadeklarować nowa wirtualna składowa, należy użyć `abstract` — słowo kluczowe. W tym niezależnie od tego, czy zapewniasz Domyślna implementacja tej metody. Ten sposób kompletną definicję metody wirtualnej w klasie bazowej ze wzorcem to:
 
 ```fsharp
 abstract member [method-name] : [type]
@@ -62,7 +62,7 @@ Poniższy kod pokazuje klasa bazowa i Klasa pochodna, gdzie klasy pochodnej wywo
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-W przypadku wiele konstruktorów służy poniższy kod. Pierwszy wiersz konstruktorami klasy pochodnej jest `inherit` klauzuli i pola są wyświetlane jako jawne pola, które są zadeklarowane za pomocą `val` — słowo kluczowe. Aby uzyskać więcej informacji, zobacz [pola jawne: `val` — słowo kluczowe](members/explicit-fields-the-val-keyword.md).
+W przypadku wiele konstruktorów służy poniższy kod. Pierwszy wiersz konstruktorami klasy pochodnej jest `inherit` klauzuli i pola są wyświetlane jako jawne pola, które są zadeklarowane za pomocą `val` — słowo kluczowe. Aby uzyskać więcej informacji, zobacz [pola jawne: `val` — Słowo kluczowe](members/explicit-fields-the-val-keyword.md).
 
 ```fsharp
 type BaseClass =

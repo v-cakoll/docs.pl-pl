@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 72cf3e2e60f27ed4faac12882fcc17974601f6e6
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453479"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396997"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET framework — przewodnik wdrażania dla deweloperów
 Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować dowolną wersję programu .NET Framework z .NET Framework 4.5 do [!INCLUDE[net_current](../../../includes/net-current-version.md)] wraz ze swoimi aplikacjami.
@@ -230,7 +230,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 - [Wykrywanie](#detecting-the-language-packs) tego, czy pakiety językowe są już zainstalowane na komputerze użytkownika.
 
-- Jeśli chcesz kontrolować wdrażanie, dyskretnie Uruchom i Śledź proces instalacji programu .NET Framework (zobacz [porady: pobieranie postęp Instalatora programu .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
+- Jeśli chcesz kontrolować wdrażanie, dyskretnie Uruchom i Śledź proces instalacji programu .NET Framework (zobacz [jak: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
 
 - Jeśli wdrażasz Instalator w trybie offline, [oddzielnie łańcucha pakietów językowych](#chain_langpack).
 
@@ -247,9 +247,8 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Wersja|Wartość DWORD dotycząca wersji|
 |-------------|--------------------------------|
-|.NET framework 4.7.2 zainstalowany w systemie Windows 10 października 2018 r. Zaktualizuj|461814|
 |.NET framework 4.7.2 zainstalowany w systemie Windows 10 kwietnia 2018 r. Zaktualizuj i w systemie Windows Server w wersji 1803|461808|
-|.NET framework 4.7.2 zainstalowane we wszystkich wersjach systemów operacyjnych innych niż Windows 10 października 2018 Update i Windows 10 kwietnia 2018 Update i Windows Server w wersji 1803|461814|
+|.NET framework 4.7.2 zainstalowane we wszystkich wersjach systemów operacyjnych innych niż Windows 10 kwietnia 2018 Update i Windows Server w wersji 1803. W tym Windows 10 października 2018 r. Zaktualizuj. |461814|
 |.NET framework 4.7.1 zainstalowane na Windows 10 Fall Creators Update oraz w systemie Windows Server w wersji 1709|461308|
 |.NET framework 4.7.1 zainstalowane we wszystkich wersjach systemów operacyjnych innych niż Windows 10 Fall Creators Update i Windows Server w wersji 1709|461310|
 |.NET framework 4.7 zainstalowanym systemem Windows 10 Creators Update|460798|
@@ -360,7 +359,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |------------|-----------------|
 |**/CEIPConsent**|Zastępuje domyślne zachowanie i wysyła anonimowe opinie do firmy Microsoft w celu wdrażania w przyszłości. Ta opcja może służyć tylko wtedy, gdy Instalator monituje o zgodę, i jeśli użytkownik udziela uprawnień do wysyłania anonimowych opinii do firmy Microsoft.|
 |**chainingpackage** `packageName`|Określa nazwę pliku wykonywalnego, który tworzy łańcuch. Te informacje są wysyłane do firmy Microsoft, jak napotyka anonimowe opinie do ulepszania wdrażania w przyszłości.<br /><br /> Jeśli nazwa pakietu zawiera spacje, należy użyć podwójnego cudzysłowu jako ogranicznika; na przykład: **chainingpackage "Lucerne Publishing"**. Na przykład pakiet łańcuchowy zobacz [uzyskiwanie informacji o postępie z pakietu instalacyjnego](https://go.microsoft.com/fwlink/?LinkId=181926) w bibliotece MSDN.|
-|**/LCID**  `LCID`<br /><br /> gdzie `LCID` Określa identyfikator ustawień regionalnych (zobacz [obsługiwane języki](#supported-languages))|Instaluje pakiet językowy określony przez `LCID` i wymusza wyświetlanie interfejsu użytkownika, które mają być wyświetlane w tym języku, o ile nie jest ustawiony tryb cichy.<br /><br /> Aby uzyskać Instalator sieci web ta opcja instaluje łańcuchowo pakiet językowy z sieci web. **Uwaga:** Użyj tej opcji tylko w przypadku Instalatora sieci web.|
+|**/LCID**  `LCID`<br /><br /> gdzie `LCID` Określa identyfikator ustawień regionalnych (zobacz [obsługiwane języki](#supported-languages))|Instaluje pakiet językowy określony przez `LCID` i wymusza wyświetlanie interfejsu użytkownika, które mają być wyświetlane w tym języku, o ile nie jest ustawiony tryb cichy.<br /><br /> Aby uzyskać Instalator sieci web ta opcja instaluje łańcuchowo pakiet językowy z sieci web. **Uwaga:**  Użyj tej opcji tylko w przypadku Instalatora sieci web.|
 |**/ log** `file`&#124; `folder`|Określa lokalizację pliku dziennika. Wartość domyślna to folder tymczasowy dla procesu, a domyślna nazwa pliku opiera się na pakiet. Jeśli rozszerzenie .txt, generowany jest Dziennik tekstowy. Jeśli określisz dowolne inne rozszerzenie lub Brak rozszerzenia, zostanie utworzony dziennik HTML.|
 |**/msioptions**|Określa opcje przekazywane do elementów .msi i .msp; na przykład: `/msioptions "PROPERTY1='Value'"`.|
 |**/ norestart /**|Uniemożliwia automatyczne ponowne uruchomienie programu instalacyjnego. Jeśli używasz tej opcji, aplikacja połączona w łańcuch musi przechwytywać kod powrotny i obsługiwać ponowny rozruch (zobacz [uzyskiwanie informacji o postępie z pakietu instalacyjnego](https://go.microsoft.com/fwlink/?LinkId=179606) w bibliotece MSDN).|
@@ -377,7 +376,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 ### <a name="supported-languages"></a>Obsługiwane języki
 W poniższej tabeli wymieniono pakiety językowe .NET Framework, które są dostępne dla [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego wydania punktowe.
 
-|LCID|Język — kraj/region|Kultury|
+|LCID|Język — kraj/region|Kultura|
 |----------|--------------------------------|-------------|
 |1025|Arabski — Arabia Saudyjska|ar|
 |1028|Chiński (tradycyjny)|nazwy zh-Hant|

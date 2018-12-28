@@ -1,13 +1,13 @@
 ---
-title: Wyliczenia (F#)
-description: Dowiedz się, jak sprawić, że kod bardziej czytelny i łatwy w obsłudze za pomocą wyliczenia F# zamiast literałów.
+title: Wyliczenia
+description: Dowiedz się, jak używać F# wyliczeń zamiast literałów sprawić, że kod bardziej czytelny i łatwy w obsłudze.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8839b73de074f62606b70ffe969a53b3db753bf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46003168"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611740"
 ---
 # <a name="enumerations"></a>Wyliczenia
 
@@ -40,7 +40,7 @@ Można z łatwością przekształcić wyliczenia typem podstawowym za pomocą od
 
 Typy wyliczone może mieć jedną z następujących typów podstawowych: `sbyte`, `byte`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, i `char`. Typy wyliczeniowe są reprezentowane w .NET Framework jako typy, które są dziedziczone z `System.Enum`, który z kolei jest odziedziczone po `System.ValueType`. Dlatego są typy wartości, które znajdują się w stos lub bezpośrednio w zawierającego go obiektu i dowolną wartość typu podstawowego jest prawidłową wartością wyliczenia. Jest to znaczące podczas dopasowania do wzorca w wyliczenia wartości, ponieważ musisz podać wzorzec, który przechwytuje nienazwanych wartości.
 
-`enum` Funkcji biblioteki języka F# może służyć do generowania wartości wyliczenia, nawet wartość inna niż jeden z wstępnie zdefiniowanych, o nazwie wartości. Możesz użyć `enum` funkcji w następujący sposób.
+`enum` Działa w programach F# biblioteki może służyć do generowania wartości wyliczenia, nawet wartość inna niż jeden z wstępnie zdefiniowanych, o nazwie wartości. Możesz użyć `enum` funkcji w następujący sposób.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 

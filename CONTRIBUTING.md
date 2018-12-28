@@ -68,6 +68,8 @@ Pamiętaj wykonać poprawnej składni języka Markdown. Aby uzyskać więcej inf
 
 **Krok 4:** Prześlij ściągnięcia żądania (PR) z gałęzi `dotnet/docs/master`.
 
+Żądanie Ściągnięcia powinno *zawsze* docelowych gałęzi głównej. Należy *nigdy nie* Otwórz żądania Ściągnięcia, który jest przeznaczony dla gałęzi aktywnej.
+
 Każdego żądania Ściągnięcia powinien zwykle adres jednym problemem w danym momencie. Żądania Ściągnięcia można zmodyfikować jeden lub wiele plików. Jeśli masz adresowania wiele poprawek dla innych plików, oddzielne żądania ściągnięcia są preferowane.
 
 Jeśli żądanie Ściągnięcia jest adresowanie istniejący problem, Dodaj `Fixes #Issue_Number` — słowo kluczowe komunikat dotyczący zatwierdzenia lub opis żądania Ściągnięcia. W ten sposób ten problem zostanie zamknięty automatycznie po scaleniu żądania Ściągnięcia. Aby uzyskać więcej informacji, zobacz [zamyka problemy za pośrednictwem wiadomości z zatwierdzeń](https://help.github.com/articles/closing-issues-via-commit-messages/).

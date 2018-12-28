@@ -1,13 +1,13 @@
 ---
-title: 'Pętle: for...in — Wyrażenie (F#)'
+title: 'Pętle: for...in — Wyrażenie'
 description: Zobacz jak F# for... w wyrażeniu konstrukcji pętli jest używany do wykonywania iteracji dopasowania wzorca w kolekcji wyliczenia.
 ms.date: 05/16/2016
-ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48027237"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614413"
 ---
 # <a name="loops-forin-expression"></a>Pętle: for...in — Wyrażenie
 
@@ -136,5 +136,5 @@ Number of elements in list1: 5
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
-- [Pętle: `for...to` wyrażenia](loops-for-to-expression.md)
-- [Pętle: `while...do` wyrażenia](loops-while-do-expression.md)
+- [Pętle: `for...to` Wyrażenie](loops-for-to-expression.md)
+- [Pętle: `while...do` Wyrażenie](loops-while-do-expression.md)

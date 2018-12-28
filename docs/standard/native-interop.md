@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 2f427eb5d8f41f730d4263425e268213db92236d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 14dfe7639a160af64e925018a4fd9e2bd44d4fe1
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143191"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396815"
 ---
 # <a name="native-interoperability"></a>Współdziałanie natywne
 
@@ -260,7 +260,7 @@ Oba powyższe przykłady są zależne od parametrów, a w obu przypadkach parame
 
 **Kierowania** jest procesem przekształcania typów, kiedy ich potrzebują do przekroczenia granicę zarządzanych w trybie macierzystym i na odwrót.
 
-Kierowania przyczyna jest wymagana, ponieważ różnią się typami w kodzie zarządzanym i niezarządzanym. W kodzie zarządzanym, na przykład masz `String`, natomiast w świecie niezarządzanych ciągi mogą być Unicode ("szerokiego"), innego niż Unicode, zakończony wartością null ASCII, itp. Domyślnie w podsystemie P/Invoke podejmie próbę postępują właściwie na podstawie [domyślne zachowanie](../../docs/framework/interop/default-marshaling-behavior.md). Jednak w tych sytuacjach, gdy potrzebujesz dodatkowych kontroli, zostanie zastosowana [MarshalAs](xref:System.Runtime.InteropServicxes.MarshalAs) atrybutu, aby określić, co to jest oczekiwany typ w niezarządzanym. Na przykład jeśli chcemy, aby ciąg do wysłania jako ciąg znaków zakończony znakiem null ANSI, można robimy to następująco:
+Kierowania przyczyna jest wymagana, ponieważ różnią się typami w kodzie zarządzanym i niezarządzanym. W kodzie zarządzanym, na przykład masz `String`, natomiast w świecie niezarządzanych ciągi mogą być Unicode ("szerokiego"), innego niż Unicode, zakończony wartością null ASCII, itp. Domyślnie w podsystemie P/Invoke podejmie próbę postępują właściwie na podstawie [domyślne zachowanie](../../docs/framework/interop/default-marshaling-behavior.md). Jednak w tych sytuacjach, gdy potrzebujesz dodatkowych kontroli, zostanie zastosowana [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) atrybutu, aby określić, co to jest oczekiwany typ w niezarządzanym. Na przykład jeśli chcemy, aby ciąg do wysłania jako ciąg znaków zakończony znakiem null ANSI, można robimy to następująco:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

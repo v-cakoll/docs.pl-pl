@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cc3b7220fe34f5dc049a3da71b160a88f82fdb1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4c81b403fa4d633428946d36960d5df32df76d21
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746101"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613781"
 ---
 # <a name="ltpublisherpolicygt-element"></a>&lt;publisherPolicy&gt; — Element
-Określa, czy środowisko wykonawcze ma zastosowanie zasad wydawcy.  
+Określa, czy środowisko uruchomieniowe mają zastosowanie zasady wydawcy.  
   
  \<Konfiguracja >  
 \<runtime>  
@@ -41,9 +41,9 @@ Określa, czy środowisko wykonawcze ma zastosowanie zasad wydawcy.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`apply`|Określa, czy zastosować zasady wydawcy.|  
+|`apply`|Określa, czy zastosować zasad wydawcy.|  
   
-## <a name="apply-attribute"></a>zastosowanie atrybutu  
+## <a name="apply-attribute"></a>Zastosuj atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -61,11 +61,11 @@ Określa, czy środowisko wykonawcze ma zastosowanie zasad wydawcy.
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli dostawcy składnika udostępnia nową wersję zestawu, dostawcy mogą być zasad wydawcy, aplikacje używające starą wersję teraz używać nowej wersji. Aby określić, czy zastosować zasady wydawcy dla danego zestawu, umieść  **\<publisherPolicy >** element  **\<dependentAssembly >** elementu.  
+ Jeśli dostawcy składników udostępnia nową wersję zestawu, dostawcy mogą być zasad wydawcy, dzięki czemu aplikacje, które używają starej wersji teraz używać nowej wersji. Aby określić, czy do zastosowania zasad wydawcy dla określonego zestawu, należy umieścić  **\<publisherPolicy >** element  **\<dependentAssembly >** elementu.  
   
- Ustawieniem domyślnym dla **zastosować** atrybutu **tak**. Ustawienie **zastosować** atrybutu **nie** zastąpienia żadnych poprzednich **tak** ustawienia dla zestawu.  
+ Ustawieniem domyślnym dla **zastosować** atrybut jest **tak**. Ustawienie **zastosować** atrybutu **nie** zastępuje wszystkie poprzednie **tak** ustawienia zestawu.  
   
- Uprawnienie jest wymagane dla aplikacji, aby jawnie Ignoruj przy użyciu zasad wydawcy [ \<zastosować publisherPolicy = "nie" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) elementu w pliku konfiguracyjnym aplikacji. Uprawnienie zostanie udzielone przez ustawienie <xref:System.Security.Permissions.SecurityPermissionFlag> Flaga na <xref:System.Security.Permissions.SecurityPermission>. Aby uzyskać więcej informacji, zobacz [uprawnienie zabezpieczeń przekierowania powiązania zestawu](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
+ Uprawnienie jest wymagane dla aplikacji, aby jawnie Ignoruj przy użyciu zasad wydawcy [ \<zastosować publisherPolicy = "no" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) elementu w pliku konfiguracyjnym aplikacji. To uprawnienie jest przydzielane przez ustawienie <xref:System.Security.Permissions.SecurityPermissionFlag> flagą <xref:System.Security.Permissions.SecurityPermission>. Aby uzyskać więcej informacji, zobacz [uprawnienie zabezpieczeń przekierowania powiązania zestawu](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład powoduje wyłączenie zasad wydawcy dla zestawu, `myAssembly`.  
@@ -86,7 +86,7 @@ Określa, czy środowisko wykonawcze ma zastosowanie zasad wydawcy.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Przekierowywanie wersji zestawu](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Przekierowywanie wersji zestawu](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

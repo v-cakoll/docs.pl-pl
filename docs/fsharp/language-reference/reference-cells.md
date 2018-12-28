@@ -1,13 +1,13 @@
 ---
-title: Komórki odwołań (F#)
-description: Dowiedz się, jak komórki odwołań F# są lokalizacje przechowywania, które umożliwiają tworzenie modyfikowalnych wartości z semantyką odwołań.
+title: Komórki odwołań
+description: Dowiedz się, jak F# komórki odwołań są lokalizacje przechowywania, które umożliwiają tworzenie modyfikowalnych wartości z semantyką odwołań.
 ms.date: 05/16/2016
-ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44192271"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612767"
 ---
 # <a name="reference-cells"></a>Komórki odwołań
 
@@ -57,6 +57,7 @@ W poniższej tabeli przedstawiono funkcje, które są dostępne w komórce odwo�
 |`ref` (operator)|Hermetyzuje wartość do nowej komórki odwołania.|`'a -> 'a ref`|`let ref x = { contents = x }`|
 |`Value` (właściwość)|Pobiera lub ustawia podstawową wartość.|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (pole rekordu)|Pobiera lub ustawia podstawową wartość.|`'a`|`let ref x = { contents = x }`|
+
 Istnieje kilka sposobów dostępu do podstawowej wartości. Wartość zwracana przez operator wyłuskania (`!`) nie jest przypisywalna. W związku z tym, jeśli w przypadku modyfikowania podstawowej wartości należy użyć operatora przypisania (`:=`) zamiast tego.
 
 Zarówno `Value` właściwości i `contents` są przypisywalne. W związku z tym można za ich pomocą uzyskać dostęp do podstawowej wartości albo ją zmienić, jak pokazano w poniższym kodzie.
@@ -74,7 +75,7 @@ Dane wyjściowe są następujące:
 
 Pole `contents` zapewnia zgodność z innymi wersjami języka ML i spowoduje wygenerowanie ostrzeżenia podczas kompilacji. Aby wyłączyć to ostrzeżenie, użyj `--mlcompatibility` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [opcje kompilatora](compiler-options.md).
 
-Programiści języka C# powinni wiedzieć, że `ref` w języku C# nie jest tak samo jak `ref` w języku F#. Równoważne konstrukcje w języku F# są [zkratka](byrefs.md), które są różne koncepcji z komórki odwołań.
+C#Programiści powinni wiedzieć, że `ref` w C# nie jest tak samo jak `ref` w F#. Odpowiednik konstrukcje w F# są [zkratka](byrefs.md), które są różne koncepcji z komórki odwołań.
 
 Wartości oznaczone jako `mutable`może zostać automatycznie podwyższony do `'a ref` przechwycone przez zamknięcie; zobacz [wartości](values/index.md).
 

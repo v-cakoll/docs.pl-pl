@@ -1,15 +1,15 @@
 ---
-title: 'Wyjątki: try...finally — Wyrażenie (F#)'
+title: 'Wyjątki: Try... finally — wyrażenie'
 description: Dowiedz się, jak F# "try... finally" wyrażenie umożliwia wykonanie kodu oczyszczania, nawet wtedy, gdy blok kodu zgłasza wyjątek.
 ms.date: 05/16/2016
-ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 24613185818c8ea30b27dcf639b22af320c4b401
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45970321"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611623"
 ---
-# <a name="exceptions-the-tryfinally-expression"></a>Wyjątki: try...finally — Wyrażenie
+# <a name="exceptions-the-tryfinally-expression"></a>Wyjątki: Try... finally — wyrażenie
 
 `try...finally` Wyrażenie umożliwia wykonanie kodu oczyszczania, nawet wtedy, gdy blok kodu zgłasza wyjątek.
 
@@ -50,4 +50,4 @@ W kontekście wyrażenia obliczeń, w tym wyrażenia sekwencji i asynchroniczne 
 ## <a name="see-also"></a>Zobacz także
 
 - [Obsługa wyjątków](index.md)
-- [Wyjątki: `try...with` wyrażenia](the-try-with-expression.md)
+- [Wyjątki: `try...with` Wyrażenia](the-try-with-expression.md)

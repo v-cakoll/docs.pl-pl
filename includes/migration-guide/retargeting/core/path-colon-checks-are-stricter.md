@@ -6,6 +6,6 @@
 |Sugestia|Jeśli przekazywanie adresu URI, do których to dotyczy interfejsów API, należy zmodyfikować ciągu jako ścieżka.<ul><li>Ręcznie usuń schemat z adresów URL (np. Usuń <code>file://</code> z adresów URL)</li><li>Przekaż identyfikator URI do <xref:System.Uri> klasy i użyć <xref:System.Uri.LocalPath></li></ul>Alternatywnie można zrezygnować z nowych normalizacji ścieżki, ustawiając <code>Switch.System.IO.UseLegacyPathHandling</code> AppContext przełącznik na wartość true.|
 |Zakres|Krawędź|
 |Wersja|4.6.2|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.IO.Path.GetDirectoryName(System.String)?displayProperty=nameWithType></li><li><xref:System.IO.Path.GetPathRoot(System.String)?displayProperty=nameWithType></li></ul>|
 

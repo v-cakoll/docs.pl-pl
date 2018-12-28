@@ -6,6 +6,6 @@
 |Sugestia|W przypadku obsługi logiki, która opiera się na poprzednim zachowaniu wszelkich wyjątków gdzie <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> jest zgłaszany, gdy używane są niestandardowe rozmiarów klucza, rozważ usunięcie logiki.|
 |Zakres|Krawędź|
 |Wersja|4.6.2|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.Security.Cryptography.RSA.ImportParameters(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.ImportParameters(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=nameWithType></li></ul>|
 

@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c17f74fc16e8c9774086c5270a66e9e9d7cc425b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 29610a77eadf587162731b5bddbcc4bbe7fa0714
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237782"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610531"
 ---
-# <a name="using-static-directive-c-reference"></a>Using static, dyrektywa (odwołanie w C#)
+# <a name="using-static-directive-c-reference"></a>Using static, dyrektywa (C# odwołania)
 
 `using static` Dyrektywy wyznacza typ, którego statycznych elementów członkowskich i typy zagnieżdżone, możesz uzyskać dostęp bez określenia nazwy typu. Jego składnia jest następująca:
 
@@ -29,34 +29,34 @@ gdzie *w pełni kwalifikowana nazwa--typ* jest nazwa typu, którego statycznych 
 `using static` Dyrektywa została wprowadzona w języku C# 6.
 
 ## <a name="remarks"></a>Uwagi
- 
+
 Zwykle po wywołaniu statycznego elementu członkowskiego, podaj nazwę typu, wraz z nazwą elementu członkowskiego. Wielokrotnego wprowadzania tej samej nazwie typu, aby wywołać elementy członkowskie tego typu może spowodować pełne zasłoniętej kodu. Na przykład poniższą definicję `Circle` klasy odwołuje się do liczby elementów członkowskich <xref:System.Math> klasy.
-  
-[!code-csharp[using-static#1](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
+
+[!code-csharp[using-static#1](~/samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
 
 Dzięki wyeliminowaniu konieczności, aby jawnie odwołać <xref:System.Math> klasy zawsze odwołuje się do elementu członkowskiego, `using static` — dyrektywa generuje znacznie bardziej przejrzysty kod:
 
-[!code-csharp[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
+[!code-csharp[using-static#2](~/samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
 
-`using static` Importuje tylko dostępne statyczne elementy członkowskie i zagnieżdżone typy zadeklarowane w określonym typie.  Dziedziczone elementy członkowskie nie są importowane.  Można importować z dowolnego typu o nazwie z za pomocą dyrektywy statyczne, w tym moduły języka Visual Basic.  Jeśli F# funkcji najwyższego poziomu są wyświetlane w metadanych jako statyczne elementy członkowskie typu nazwanego, którego nazwa jest prawidłowym C# identyfikator, a następnie F# funkcje mogą być importowane.  
-  
- `using static` sprawia, że metody rozszerzenia zadeklarowana w określonego typu dostępne do przeszukiwania metody rozszerzenia.  Nazwy metody rozszerzenia nie są importowane w zakresie niekwalifikowanej odwołania w kodzie.  
-  
- Metody o tej samej nazwie, zaimportowane z różnych typów przez różne `using static` dyrektywy w tej samej jednostce kompilacyjnej lub nazw tworzą grupy metod.  Rozpoznanie przeciążenia w tych grupach metoda regułom normalnego języka C#.  
-  
+`using static` Importuje tylko dostępne statyczne elementy członkowskie i zagnieżdżone typy zadeklarowane w określonym typie.  Dziedziczone elementy członkowskie nie są importowane.  Można importować z dowolnego typu o nazwie z za pomocą dyrektywy statyczne, w tym moduły języka Visual Basic.  Jeśli F# funkcji najwyższego poziomu są wyświetlane w metadanych jako statyczne elementy członkowskie typu nazwanego, którego nazwa jest prawidłowym C# identyfikator, a następnie F# funkcje mogą być importowane.
+
+ `using static` sprawia, że metody rozszerzenia zadeklarowana w określonego typu dostępne do przeszukiwania metody rozszerzenia.  Nazwy metody rozszerzenia nie są importowane w zakresie niekwalifikowanej odwołania w kodzie.
+
+ Metody o tej samej nazwie, zaimportowane z różnych typów przez różne `using static` dyrektywy w tej samej jednostce kompilacyjnej lub nazw tworzą grupy metod.  Rozpoznanie przeciążenia w tych grupach metoda regułom normalnego języka C#.
+
 ## <a name="example"></a>Przykład
 
 W poniższym przykładzie użyto `using static` dyrektywy, aby statyczne elementy członkowskie <xref:System.Console>, <xref:System.Math>, i <xref:System.String> klasy dostępne bez konieczności określania nazwy typu.
 
-[!code-csharp[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
+[!code-csharp[using-static#3](~/samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
 W tym przykładzie `using static` dyrektywy może również zostały zastosowane do <xref:System.Double> typu. To spowoduje umożliwiły wywołać <xref:System.Double.TryParse(System.String,System.Double@)> metody bez określania nazwy typu. Jednak powoduje to utworzenie mniej czytelny kod, ponieważ staje się to konieczne sprawdzić `using static` instrukcje, aby ustalić, jakiego typu liczbowego `TryParse` metoda jest wywoływana.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Using — Dyrektywa](using-directive.md)
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
-- [Używanie przestrzeni nazw](../../../csharp/programming-guide/namespaces/using-namespaces.md)
-- [Słowa kluczowe przestrzeni nazw](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)
+- [Dokumentacja języka C#](../index.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Używanie przestrzeni nazw](../../programming-guide/namespaces/using-namespaces.md)
+- [Słowa kluczowe przestrzeni nazw](namespace-keywords.md)
+- [Przestrzenie nazw](../../programming-guide/namespaces/index.md)

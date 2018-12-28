@@ -1,27 +1,27 @@
 ---
-title: Rzutowanie i konwersje (F#)
-description: Dowiedz się, jak programowania języka F# zapewnia operatory konwersji konwersje arytmetyczne między różnych typów pierwotnych.
+title: Rzutowanie i konwersje
+description: Dowiedz się, jak F# język programowania przewiduje operatory konwersji konwersje arytmetyczne między różnych typów pierwotnych.
 ms.date: 05/16/2016
-ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 2a12d48106a267edfc67c9e7b3d3a7bd41d8261c
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45677934"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655988"
 ---
 # <a name="casting-and-conversions-f"></a>Rzutowanie i konwersje (F#)
 
-W tym temacie opisano obsługę konwersje typów języka F#.
+W tym temacie opisano obsługę konwersje typów w F#.
 
 ## <a name="arithmetic-types"></a>Typy arytmetyczne
 
-F# zawiera operatory konwersji dla konwersji arytmetycznych między różnych typów pierwotnych, takich jak między liczb całkowitych i zmiennoprzecinkowych typów. Sprawdzeniu operatory konwersji liczbę całkowitą i char i unchecked formularze; zmiennoprzecinkowy operatorów i `enum` nie obsługują operatora konwersji. Unchecked formularze są definiowane w `Microsoft.FSharp.Core.Operators` i sprawdzonych formularze są definiowane w `Microsoft.FSharp.Core.Operators.Checked`. Checked formularzy sprawdzaj przepełnienie i wygenerować wyjątek czasu wykonywania, jeśli wartość wynikowa przekracza limit typu docelowego.
+F#zawiera operatory konwersji konwersje arytmetyczne między różnych typów pierwotnych, takich jak między liczb całkowitych i zmiennoprzecinkowych typów. Sprawdzeniu operatory konwersji liczbę całkowitą i char i unchecked formularze; zmiennoprzecinkowy operatorów i `enum` nie obsługują operatora konwersji. Unchecked formularze są definiowane w `Microsoft.FSharp.Core.Operators` i sprawdzonych formularze są definiowane w `Microsoft.FSharp.Core.Operators.Checked`. Checked formularzy sprawdzaj przepełnienie i wygenerować wyjątek czasu wykonywania, jeśli wartość wynikowa przekracza limit typu docelowego.
 
 Każda z tych operatorów ma taką samą nazwę jak nazwa typu miejsca docelowego. Na przykład, w następujący kod, w którym typy są jawnie adnotację, `byte` pojawia się z dwóch różne znaczenie. Pierwsze wystąpienie jest typem, a drugą jest wartość operatora konwersji.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4401.fs)]
 
-W poniższej tabeli przedstawiono operatory konwersji zdefiniowane w języku F#.
+W poniższej tabeli przedstawiono operatory konwersji zdefiniowane w F#.
 
 |Operator|Opis|
 |--------|-----------|
@@ -40,6 +40,7 @@ W poniższej tabeli przedstawiono operatory konwersji zdefiniowane w języku F#.
 |`decimal`|Konwertuj na `System.Decimal`.|
 |`char`|Konwertuj na `System.Char`, znaków Unicode.|
 |`enum`|Konwertuj na typ wyliczany.|
+
 Oprócz wbudowanych typów pierwotnych, można użyć tych operatorów z typami, które implementują `op_Explicit` lub `op_Implicit` metod z odpowiednią sygnaturą. Na przykład `int` operatora konwersji współpracuje z dowolnego typu, który udostępnia metodę statyczną `op_Explicit` która przyjmuje typ jako parametr i zwraca `int`. Jako specjalne wyjątek ogólną zasadą, że typem zwracanym nie mogą być przeciążone metody, można to zrobić `op_Explicit` i `op_Implicit`.
 
 ## <a name="enumerated-types"></a>Typy wyliczone
@@ -67,11 +68,11 @@ Aby uzyskać więcej informacji, zobacz [wyliczenia](enumerations.md).
 
 Konwersja między typami w hierarchii obiektów ma podstawowe znaczenie dla programowania obiektowego. Istnieją dwa podstawowe rodzaje konwersje: rzutowanie w górę (Rzutowanie rozszerzające) i rzutowanie w dół (rzutowanie). Rzutowanie hierarchii oznacza rzutowanie z odwołaniem pochodnego obiektu do obiektu podstawowego odwołania. Takie rzutowanie jest gwarantowane tak długo, jak klasy bazowej znajduje się w hierarchii dziedziczenia klasy pochodnej. Rzutowanie w dół hierarchii z obiektu podstawowego odwołania do odwołanie do obiektu pochodnej, zakończy się powodzeniem, tylko wtedy, gdy obiekt jest rzeczywiście wystąpienia typu odpowiedniego miejsca docelowego (derived) lub typ pochodzący od typu miejsca docelowego.
 
-F# zawiera operatory dla tych typów konwersji. `:>` Operator rzutuje w hierarchii i `:?>` rzutuje operatora w dół hierarchii.
+F#zawiera operatory dla tych typów konwersji. `:>` Operator rzutuje w hierarchii i `:?>` rzutuje operatora w dół hierarchii.
 
 ### <a name="upcasting"></a>Rzutowanie rozszerzające
 
-W wielu językach obiektowych Rzutowanie rozszerzające jest niejawne; w języku F# zasady są nieco inne. Rzutowanie rozszerzające jest stosowane automatycznie, gdy argument jest przekazywany do metody typu obiektu. W przypadku funkcji powiązanych z umożliwiają w module Rzutowanie rozszerzające nie jest jednak automatyczne, chyba że typ parametru jest zadeklarowany jako typ elastyczne. Aby uzyskać więcej informacji, zobacz [typy elastyczne](flexible-Types.md).
+W wielu językach obiektowych Rzutowanie rozszerzające jest niejawne; w F#, zasady są nieco inne. Rzutowanie rozszerzające jest stosowane automatycznie, gdy argument jest przekazywany do metody typu obiektu. W przypadku funkcji powiązanych z umożliwiają w module Rzutowanie rozszerzające nie jest jednak automatyczne, chyba że typ parametru jest zadeklarowany jako typ elastyczne. Aby uzyskać więcej informacji, zobacz [typy elastyczne](flexible-Types.md).
 
 `:>` Operator wykonuje statyczną rzutowania, co oznacza, że sukces rzutowanie jest określana w czasie kompilacji. Jeśli rzutowania, który używa `:>` kompiluje pomyślnie, jest prawidłowy rzutowania i ma nie ryzyko wystąpienia awarii w czasie wykonywania.
 

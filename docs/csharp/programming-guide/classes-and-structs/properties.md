@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: ec34d6f49a538ac106196c342a7ff0f9dad8b6d8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c37a273b4091d98ccc202f7d98859333658ccf7f
+ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242779"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53451212"
 ---
 # <a name="properties-c-programming-guide"></a>Właściwości (Przewodnik programowania w języku C#)
 
@@ -34,7 +34,7 @@ Właściwość jest elementem członkowskim, który oferuje elastyczny mechanizm
 
 Jeden podstawowy wzorzec implementacji właściwości polega na tym, za pomocą pola prywatne zapasowy, ustawiania i pobierania wartości właściwości. `get` Akcesor zwraca wartość pola prywatnego i `set` dostępu może wykonywać niektóre sprawdzanie poprawności danych przed przypisaniem wartości do pola prywatnego. Obu metod dostępu może również wykonywać niektóre konwersji lub obliczeń na danych, przed jego przechowywane lub zwracane.
 
-Poniższy przykład ilustruje ten wzorzec. W tym przykładzie `TimePeriod` klasa reprezentuje przedział czasu. Wewnętrznie klasa przechowuje przedział czasu w ciągu kilku sekund w prywatnej pole o nazwie `seconds`. Właściwości odczytu / zapisu o nazwie `Hours` umożliwia klientowi określenie interwału czasu w godzinach. Zarówno `get` i `set` metod dostępu do wykonania niezbędnych konwersji między godzin i sekund. Ponadto `set` akcesor weryfikuje ona dane i zgłasza <xref:System.ArgumentOutOfRangeException> Jeśli liczba godzin jest nieprawidłowa. 
+Poniższy przykład ilustruje ten wzorzec. W tym przykładzie `TimePeriod` klasa reprezentuje przedział czasu. Wewnętrznie klasa przechowuje przedział czasu w ciągu kilku sekund w prywatnej pole o nazwie `_seconds`. Właściwości odczytu / zapisu o nazwie `Hours` umożliwia klientowi określenie interwału czasu w godzinach. Zarówno `get` i `set` metod dostępu do wykonania niezbędnych konwersji między godzin i sekund. Ponadto `set` akcesor weryfikuje ona dane i zgłasza <xref:System.ArgumentOutOfRangeException> Jeśli liczba godzin jest nieprawidłowa. 
    
  [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   

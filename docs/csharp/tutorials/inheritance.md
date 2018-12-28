@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: da21b1419f9d662c71ffd469cec67e01154ffc60
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 1938876bcf72fccd7582ede332d052fb3d759395
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334876"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656196"
 ---
 # <a name="inheritance-in-c-and-net"></a>Dziedziczenie w języku C# i .NET
 
@@ -152,7 +152,7 @@ W poniższej tabeli wymieniono kategorie typów, utworzone w języku C# oraz typ
 Zazwyczaj dziedziczenia jest używany do wyrażenia "to" relację między klasą bazową i jeden lub więcej klas pochodnych, w których specjalistyczne wersje klasy bazowej; klasy pochodne Klasa pochodna jest typem klasy bazowej. Na przykład `Publication` klasa reprezentuje publikacji dowolnego rodzaju i `Book` i `Magazine` klasy reprezentują określonych rodzajów publikacji.
 
 > [!NOTE]
-> Klasy lub struktury, można zaimplementować jeden większej liczby interfejsów. Podczas implementacji interfejsu często są prezentowane, jako obejście pojedyncze dziedziczenie lub sposób użycia dziedziczenia w strukturach, jest ona przeznaczona do innej relacji (relację "może zrobić") między interfejsem, a jego typ implementujący niż express dziedziczenie. Interfejs definiuje podzbiór funkcji (np. możliwość testowania pod kątem równości do porównywania lub Sortuj obiektów, lub obsługuje wrażliwość na ustawienia kulturowe formatowanie i analizowanie), która udostępnia interfejs do jego typy implementujące.
+> Klasy lub struktury, można zaimplementować jeden lub więcej interfejsów. Podczas implementacji interfejsu często są prezentowane, jako obejście pojedyncze dziedziczenie lub sposób użycia dziedziczenia w strukturach, jest ona przeznaczona do innej relacji (relację "może zrobić") między interfejsem, a jego typ implementujący niż express dziedziczenie. Interfejs definiuje podzbiór funkcji (np. możliwość testowania pod kątem równości do porównywania lub Sortuj obiektów, lub obsługuje wrażliwość na ustawienia kulturowe formatowanie i analizowanie), która udostępnia interfejs do jego typy implementujące.
 
 Należy pamiętać, że "jest" również określa relację między typem i określonego wystąpienia tego typu. W poniższym przykładzie `Automobile` to klasa, która ma trzy unikatowe właściwości tylko do odczytu: `Make`, producent samochodów; `Model`, rodzaj samochodów; i `Year`, rok produkcji. Twoje `Automobile` klasa również ma konstruktora, w której argumenty są przypisywane do wartości właściwości i zastępuje ona <xref:System.Object.ToString%2A?displayProperty=nameWithType> metody do tworzenia ciąg, który unikatowo identyfikuje `Automobile` wystąpienia zamiast `Automobile` klasy.
 

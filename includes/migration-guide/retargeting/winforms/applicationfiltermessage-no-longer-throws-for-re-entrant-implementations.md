@@ -6,6 +6,6 @@
 |Sugestia|Należy pamiętać, że <xref:System.Windows.Forms.Application.FilterMessage(System.Windows.Forms.Message@)> nie będzie już zgłaszać dla wielobieżnej <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage(System.Windows.Forms.Message@)> zachowanie opisane powyżej. Dotyczy to tylko aplikacji przeznaczonych dla środowiska .NET Framework 4.6.1.Apps przeznaczonych dla platformy .NET Framework 4.6.1 można zrezygnować z tej zmiany (lub określania wartości docelowej struktury starsze zrezygnować w aplikacji) za pomocą [DontSupportReentrantFilterMessage](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md#mitigation) Przełącznik zgodności.|
 |Zakres|Krawędź|
 |Wersja|4.6.1|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Forms.Application.FilterMessage(System.Windows.Forms.Message@)?displayProperty=nameWithType></li></ul>|
 

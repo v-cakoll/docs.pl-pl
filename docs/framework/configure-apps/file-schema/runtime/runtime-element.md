@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: 5ab9fafeb6c836f1561752a8e2bdfddb97296399
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863629"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610681"
 ---
 # <a name="ltruntimegt-element"></a>&lt;środowisko uruchomieniowe&gt; — Element
 Zawiera informacje używane przez środowisko uruchomieniowe języka wspólnego, aby skonfigurować aplikacje.  
@@ -92,5 +92,5 @@ Zawiera informacje używane przez środowisko uruchomieniowe języka wspólnego,
  Elementy w [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcji odczytywanych automatycznie przez środowisko uruchomieniowe języka wspólnego przy uruchamianiu aplikacji. Można również definiować plik konfiguracyjny dla domeny aplikacji innych niż domyślne, podając jego nazwę na <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> właściwości jego ustawienia są odczytywane automatycznie po załadowaniu do domeny aplikacji. Rzadko, jeśli w ogóle, należy potrzebę bezpośredniego odczytywania ustawień w [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcji w pliku konfiguracyjnym aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

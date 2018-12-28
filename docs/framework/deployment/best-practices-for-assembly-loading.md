@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201585"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397049"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Najlepsze praktyki dotyczące ładowania zestawu
 W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, który może prowadzić do <xref:System.InvalidCastException>, <xref:System.MissingMethodException>i inne błędy. W tym artykule omówiono następujące zalecenia:  
@@ -44,7 +44,7 @@ W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, kt
   
 -   Kontekst load-from zawiera zestawy, które są ładowane z lokalizacji, które nie są przeszukiwane przez moduł ładujący. Na przykład dodatków może być zainstalowane w katalogu, który nie znajduje się w ścieżce aplikacji. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType>, i <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> przedstawiono przykładowe metody, które są ładowane przy użyciu ścieżki.  
   
--   Kontekstu reflection-only zawiera zestawy, ładowane z <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> i <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> metody. Nie można wykonać kod w tym kontekście, więc nie jest tutaj omówiona. Aby uzyskać więcej informacji, zobacz [porady: ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+-   Kontekstu reflection-only zawiera zestawy, ładowane z <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> i <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> metody. Nie można wykonać kod w tym kontekście, więc nie jest tutaj omówiona. Aby uzyskać więcej informacji, zobacz [jak: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 -   Jeśli przemijający zestaw dynamiczny jest generowany przy użyciu odbicia emisji, zestaw nie jest w jakimkolwiek kontekście. Ponadto większość zestawów, które są ładowane przy użyciu <xref:System.Reflection.Assembly.LoadFile%2A> metody zostały załadowane bez kontekstu i zestawy, które są ładowane z tablic bajtowych są załadowane bez kontekstu, chyba że tożsamości (po zastosowaniu zasad) określa, czy znajdują się w Globalna pamięć podręczna zestawów.  
   
@@ -154,7 +154,7 @@ W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, kt
  Jeśli nie jest możliwe umieszczenie wszystkich zestawów w ścieżce badania, należy wziąć pod uwagę rozwiązań alternatywnych, takich jak za pomocą model dodatku .NET Framework, umieszczenie zestawów w globalnej pamięci podręcznej lub tworzenia domen aplikacji.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>Należy wziąć pod uwagę przy użyciu platformy .NET Framework Model dodatku  
- Jeśli używasz kontekst load-from można zaimplementować dodatki, które zwykle nie są zainstalowane w bazie danych aplikacji, należy użyć model dodatku .NET Framework. Ten model zawiera izolacja na poziomie domeny lub procesu aplikacji, bez konieczności zarządzania domenami aplikacji, samodzielnie. Aby uzyskać informacje na temat modelu dodatku, zobacz [dodatki i rozszerzalność](../../../docs/framework/add-ins/index.md).  
+ Jeśli używasz kontekst load-from można zaimplementować dodatki, które zwykle nie są zainstalowane w bazie danych aplikacji, należy użyć model dodatku .NET Framework. Ten model zawiera izolacja na poziomie domeny lub procesu aplikacji, bez konieczności zarządzania domenami aplikacji, samodzielnie. Aby uzyskać informacje na temat modelu dodatku, zobacz [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>Należy rozważyć użycie Global Assembly Cache  
  Miejsce zestawów w globalnej pamięci podręcznej, aby skorzystać z zalet ścieżka udostępnionego zestawu jest poza aplikacją podstawowej, bez utraty korzyści wynikające z domyślny kontekst ładowania lub tworzenia wady innych kontekstach.  
@@ -170,4 +170,3 @@ W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, kt
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
-- [Dodatki i rozszerzalność](../../../docs/framework/add-ins/index.md)

@@ -1,13 +1,13 @@
 ---
-title: Statycznie rozwiązywane parametry typu (F#)
-description: Dowiedz się, jak używać języka F# statystycznie rozpoznany typ parametru, który jest zastępowany rzeczywistym typem w czasie kompilacji, a nie w czasie wykonywania.
+title: Statycznie rozwiązywane parametry typu
+description: Dowiedz się, jak używać F# statystycznie rozpoznany typ parametru, który jest zastępowany rzeczywistym typem w czasie kompilacji, a nie w czasie wykonywania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9ad23a881e644dfe2bccd56fa04d3c219b51cf7d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48032780"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614093"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statycznie rozwiązywane parametry typu
 
@@ -21,7 +21,7 @@ A *statystycznie rozpoznany typ parametru* jest parametrem typu, który jest zas
 
 ## <a name="remarks"></a>Uwagi
 
-W języku F# istnieją dwa odrębne rodzaje parametrów typu. Pierwszy rodzaj jest parametrem standardowym typu rodzajowego. Te są oznaczane apostrofem ('), podobnie jak w `'T` i `'U`. Są one równoważnymi parametrami typu rodzajowego w innych językach .NET Framework. Inny rodzaj jest statycznie rozwiązany i jest oznaczany symbolem daszka, podobnie jak w `^T` i `^U`.
+W F# języka, istnieją dwa odrębne rodzaje parametrów typu. Pierwszy rodzaj jest parametrem standardowym typu rodzajowego. Te są oznaczane apostrofem ('), podobnie jak w `'T` i `'U`. Są one równoważnymi parametrami typu rodzajowego w innych językach .NET Framework. Inny rodzaj jest statycznie rozwiązany i jest oznaczany symbolem daszka, podobnie jak w `^T` i `^U`.
 
 Statycznie rozwiązywane parametry typu są szczególnie przydatne w połączeniu z ograniczeniami elementu członkowskiego, które są ograniczeniami, które pozwalają na określenie, że argument typu musi mieć danego członka lub członków, aby możliwe było użycie. Nie ma możliwości do utworzenia tego rodzaju ograniczenia przy użyciu parametru regularnego typu rodzajowego.
 
@@ -30,7 +30,7 @@ W poniższej tabeli podsumowano podobieństwa i różnice między dwoma rodzajam
 |Funkcja|Ogólny|Statycznie rozwiązane|
 |-------|-------|-------------------|
 |Składnia|`'T`, `'U`|`^T`, `^U`|
-|Czas rozpoznawania nazw|Czas wykonywania|Czas kompilacji|
+|Czas rozpoznawania nazw|W czasie wykonywania|Czas kompilacji|
 |Ograniczenia elementu członkowskiego|Nie można używać z ograniczeniami elementu członkowskiego.|Może być używany z ograniczeniami elementu członkowskiego.|
 |Generowanie kodu|Typ (lub metoda) ze standardowymi parametrami ogólnego typu powoduje generowanie jednego ogólnego typu lub metody.|Wiele wystąpień typów i metod jest generowanych, po jednym dla każdego typu, który jest potrzebny.|
 |Za pomocą typów|Może być stosowany na typach.|Nie może być stosowany na typach.|
@@ -42,7 +42,7 @@ Wbudowane metody i funkcje, które używają operatorów lub innych funkcji, kt�
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
-Rozpoznać typ `(+@)` opiera się na wykorzystaniu obu `(+)` i `(*)`, z którym spowodować, że wniosek typu wywnioskowuje ograniczenia Członkowskie na statycznie rozwiązywane parametry typu. Rozwiązany typ, jak pokazano w interpretera F# jest w następujący sposób.
+Rozpoznać typ `(+@)` opiera się na wykorzystaniu obu `(+)` i `(*)`, z którym spowodować, że wniosek typu wywnioskowuje ograniczenia Członkowskie na statycznie rozwiązywane parametry typu. Rozwiązany typ, jak pokazano na F# interpreter, jest następujący.
 
 ```fsharp
 ^a -> ^c -> ^d
@@ -57,7 +57,7 @@ Dane wyjściowe są następujące:
 1.500000
 ```
 
-Począwszy od F# 4.1, można również określić konkretny typ nazwy w podpisach parametrów typu statycznie rozpoznanych.  W poprzednich wersjach języka nazwę typu można wywnioskować faktycznie przez kompilator, ale faktycznie nie można określić w podpisie.  Począwszy od F# 4.1 możesz również określić konkretny typ nazwy w podpisach parametrów typu statycznie rozpoznanych. Oto przykład:
+Począwszy od F# 4.1, można również określić konkretny typ nazwy w podpisach parametrów typu statycznie rozpoznanych.  W poprzednich wersjach języka nazwę typu można wywnioskować faktycznie przez kompilator, ale faktycznie nie można określić w podpisie.  Począwszy od programu F# 4.1, możesz również określić konkretny typ nazwy w podpisach parametrów typu statycznie rozpoznanych. Oto przykład:
 
 ```fsharp
 let inline konst x _ = x

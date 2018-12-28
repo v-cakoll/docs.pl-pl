@@ -2,12 +2,12 @@
 title: Uwierzytelnianie w programie SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 8d7fcb149059c06b7875663e4df5272312121c87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0172259446724e0be85bd7ca2d15cf299db04e27
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521520"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613105"
 ---
 # <a name="authentication-in-sql-server"></a>Uwierzytelnianie w programie SQL Server
 SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania Windows i w trybie mieszanym.  
@@ -19,7 +19,7 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania Windows 
 > [!IMPORTANT]
 >  Zaleca się korzystania z uwierzytelniania Windows wszędzie tam, gdzie to możliwe. Uwierzytelnianie Windows przy użyciu szeregu szyfrowanych komunikatów do uwierzytelniania użytkowników w programie SQL Server. Podczas logowania do programu SQL Server są używane, nazwy logowania programu SQL Server i zaszyfrowane hasła są przekazywane za pośrednictwem sieci, co sprawia, że są ich mniej bezpieczna opcja.  
   
- Przy użyciu uwierzytelniania Windows użytkowników jest już zalogowany na Windows i nie musisz oddzielnie Zaloguj się do programu SQL Server. Następujące `SqlConnection.ConnectionString` Określa uwierzytelnianie Windows bez konieczności nazwa użytkownika lub hasło.  
+ Przy użyciu uwierzytelniania Windows użytkowników jest już zalogowany na Windows i nie musisz oddzielnie Zaloguj się do programu SQL Server. Następujące `SqlConnection.ConnectionString` Określa uwierzytelnianie Windows bez konieczności użytkowników o podanie nazwy użytkownika ani hasła.  
   
 ```  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  

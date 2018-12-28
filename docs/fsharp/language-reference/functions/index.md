@@ -1,17 +1,17 @@
 ---
-title: Funkcje (F#)
-description: Więcej informacji na temat funkcji w F# oraz jak F# obsługuje typowych konstrukcji programowania funkcjonalnego.
+title: Funkcje
+description: Dowiedz się więcej o funkcji w F# i w jaki sposób F# obsługuje typowych konstrukcji programowania funkcjonalnego.
 ms.date: 05/16/2016
-ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839579"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610921"
 ---
 # <a name="functions"></a>Funkcje
 
-Funkcje są podstawową jednostką wykonywanie programu w dowolnym języku programowania. Tak jak w innych językach funkcja języka F# o nazwie, mogą mieć parametry i argumenty take i ma treść. F# obsługuje również konstrukcji programowania funkcjonalnego, takich jak traktowanie funkcje jako wartości, przy użyciu funkcji bez nazwy w wyrażeniach kompozycja funkcji w celu utworzenia nowych funkcji, funkcje rozwinięte i definicję niejawną funkcji za pomocą częściowego Stosowanie argumentów funkcji.
+Funkcje są podstawową jednostką wykonywanie programu w dowolnym języku programowania. Tak jak w innych językach F# funkcji o nazwie, mogą mieć parametry i argumenty take i ma treść. F#obsługuje również konstrukcji programowania funkcjonalnego, takich jak traktowanie funkcje jako wartości, przy użyciu nazwy funkcji w wyrażeniach kompozycja funkcji w celu utworzenia nowych funkcji, funkcje rozwinięte i definicję niejawną funkcji za pomocą częściowego Stosowanie argumentów funkcji.
 
 Funkcje są definiowane za pomocą `let` — słowo kluczowe, lub, jeśli funkcja jest cykliczna, `let rec` kombinacja słów kluczowych.
 
@@ -120,7 +120,7 @@ Niektóre funkcje rekursywne może przepełnienie stosu program lub wykonać nie
 
 ## <a name="function-values"></a>Wartości funkcji
 
-W języku F# wszystkie funkcje są traktowane jako wartości. w rzeczywistości są one znane jako *funkcji wartości*. Ponieważ funkcje są wartościami, ich może służyć jako argumenty do innych funkcji lub w innych kontekstach których wartości są używane. Poniżej znajduje się przykład funkcji, która przyjmuje wartość funkcji jako argumentem:
+W F#, wszystkie funkcje są traktowane jako wartości. w rzeczywistości są one znane jako *funkcji wartości*. Ponieważ funkcje są wartościami, ich może służyć jako argumenty do innych funkcji lub w innych kontekstach których wartości są używane. Poniżej znajduje się przykład funkcji, która przyjmuje wartość funkcji jako argumentem:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
@@ -142,11 +142,11 @@ A *wyrażenia lambda* jest funkcją bez nazwy. W poprzednich przykładach, zamia
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Wyrażenia lambda są definiowane za pomocą `fun` — słowo kluczowe. Wyrażenia lambda przypomina definicji funkcji, chyba że zamiast `=` tokenu, `->` token jest używany do oddzielania na liście argumentów od treści funkcji. Tak jak w definicji funkcji regularnych typy argumentów można wywnioskować lub jawnie określony, a zwracany typ wyrażenia lambda jest wnioskowany z typu ostatniego wyrażenia w treści. Aby uzyskać więcej informacji, zobacz [wyrażenia Lambda: `fun` — słowo kluczowe](../functions/lambda-expressions-the-fun-keyword.md).
+Wyrażenia lambda są definiowane za pomocą `fun` — słowo kluczowe. Wyrażenia lambda przypomina definicji funkcji, chyba że zamiast `=` tokenu, `->` token jest używany do oddzielania na liście argumentów od treści funkcji. Tak jak w definicji funkcji regularnych typy argumentów można wywnioskować lub jawnie określony, a zwracany typ wyrażenia lambda jest wnioskowany z typu ostatniego wyrażenia w treści. Aby uzyskać więcej informacji, zobacz [wyrażenia Lambda: `fun` — Słowo kluczowe](../functions/lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Kompozycja funkcji i przetwarzanie potokowe
 
-Funkcje w języku F# może składać się z innych funkcji. Kompozycja dwie funkcje **function1** i **function2** jest inną funkcję, która reprezentuje stosowania **function1** po zastosowaniu **function2**:
+Funkcje w F# może składać się z innych funkcji. Kompozycja dwie funkcje **function1** i **function2** jest inną funkcję, która reprezentuje stosowania **function1** po zastosowaniu **function2**:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 

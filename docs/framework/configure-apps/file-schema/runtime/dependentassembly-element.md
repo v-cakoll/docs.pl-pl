@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54036baee6fc2d7af49e818a1c112dec8eac80aa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5b0d3bfb7e4db2fec39f37c9fb794731cdf5bbc
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744915"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613300"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt; — Element
 Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. Użyj jednej `dependentAssembly` elementu dla każdego zestawu.  
@@ -44,9 +44,9 @@ Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. U�
 |Element|Opis|  
 |-------------|-----------------|  
 |`assemblyIdentity`|Zawiera informacje identyfikujące zestaw. Ten element musi być uwzględniony w każdym `dependentAssembly` elementu.|  
-|`codeBase`|Określa, gdzie środowiska uruchomieniowego można znaleźć zestaw udostępnionego, jeśli nie jest zainstalowany na komputerze.|  
+|`codeBase`|Określa, gdzie środowisko uruchomieniowe można znaleźć zestaw współużytkowany, jeśli nie jest zainstalowany na komputerze.|  
 |`bindingRedirect`|Przekierowuje jedną wersję zestawu do innej.|  
-|`publisherPolicy`|Określa, czy środowisko uruchomieniowe stosuje zasady wydawcy dla tego zestawu.|  
+|`publisherPolicy`|Określa, czy środowisko uruchomieniowe mają zastosowanie zasady wydawcy dla tego zestawu.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -57,7 +57,7 @@ Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. U�
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak w celu hermetyzacji informacji o zestawie dla dwóch zestawów.  
+ Poniższy przykład pokazuje, jak do hermetyzacji informacji o zestawie dla dwóch zestawów.  
   
 ```xml  
 <configuration>  
@@ -81,6 +81,6 @@ Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. U�
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Przekierowywanie wersji zestawu](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Przekierowywanie wersji zestawu](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

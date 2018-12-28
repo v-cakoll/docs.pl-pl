@@ -1,22 +1,22 @@
 ---
-title: Opcje wartości (F#)
-description: Więcej informacji na temat typu wartości opcja F#, który jest wersja struktury typu opcji.
+title: Opcje wartości
+description: Dowiedz się więcej o F# opcję wartość typu, który jest wersja struktury typu opcji.
 ms.date: 06/16/2018
-ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: d5209e620d53e12e9344faea09321f640af21491
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50185839"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613430"
 ---
 # <a name="value-options"></a>Opcje wartości
 
-Typ wartości opcji w F# jest używany podczas przechowywania następujących dwóch przypadkach:
+Typ opcji wartości w F# jest używany podczas przechowywania następujących dwóch przypadkach:
 
-1. Scenariusz jest odpowiedni dla [opcja F#](options.md).
+1. Scenariusz jest odpowiedni dla [ F# opcji](options.md).
 2. Za pomocą struktury zapewnia korzyści wydajności, w tym scenariuszu.
 
-Nie wszystkie scenariusze wrażliwego na wydajność to "rozwiązane" przy użyciu struktury. Należy wziąć pod uwagę dodatkowych kosztów kopiowania podczas korzystania z nich zamiast typów odwołań. Jednak duże F# programy często tworzy wiele opcjonalne typy, które będą działać przy użyciu ścieżek krytycznych, ponieważ struktury czasami może przynieść lepiej ogólną wydajność przez cały okres istnienia programu.
+Nie wszystkie scenariusze wrażliwego na wydajność to "rozwiązane" przy użyciu struktury. Należy wziąć pod uwagę dodatkowych kosztów kopiowania podczas korzystania z nich zamiast typów odwołań. Jednak duże F# programy często wystąpienia wielu opcjonalne typy, które będą działać przy użyciu ścieżek krytycznych, ponieważ struktury czasami może zapewnić lepszą ogólną wydajność w okresie istnienia programu.
 
 ## <a name="definition"></a>Definicja
 

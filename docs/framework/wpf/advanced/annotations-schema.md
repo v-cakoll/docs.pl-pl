@@ -6,31 +6,31 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: e463a087516dc45cb4bd879c77aef6fbeba2b546
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f3fa70673c7ae5819346ab152b74acf93a164c
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542018"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029843"
 ---
 # <a name="annotations-schema"></a>Schemat adnotacji
-W tym temacie opisano definicji schematu XML (XSD) używany przez platformę Microsoft adnotacje do zapisywania i pobierania danych adnotacji użytkownika.  
+W tym temacie opisano definicji schematu XML (XSD) używane przez Microsoft Framework adnotacje do zapisywania i pobierania danych adnotacji użytkownika.  
   
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] Serializuje dane adnotacji z reprezentacji wewnętrznej na XML format.  Format XML używany dla tej konwersji jest opisane przez [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] schematu XSD.  Schemat definiuje format XML niezależny od implementacji, który może służyć do wymiany adnotacji danych między aplikacjami.  
+ [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] Serializuje dane adnotacji z reprezentacji wewnętrznej na format XML.  Format XML używany do konwersji jest opisana przez [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] schematu XSD.  Schemat definiuje format XML niezależny od implementacji, który może służyć do wymiany adnotacji danych między aplikacjami.  
   
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] Definicji schematu XML składa się z dwóch subschemas  
+ [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] Definicji schematu XML, który składa się z dwóch subschemas  
   
 -   Adnotacje Core schematu XML (schemat Core).  
   
--   Adnotacje XML podstawowa schematu (podstawowy schemat).  
+-   Adnotacje XML podstawowa schematem (schematem podstawowej).  
   
- Schemat Core definiuje podstawowej struktury XML <xref:System.Windows.Annotations.Annotation>.  Większość elementów XML zdefiniowanej w schemacie Core odpowiadają typów w <xref:System.Windows.Annotations> przestrzeni nazw.  Schemat Core udostępnia trzy punkty rozszerzenia, gdzie aplikacji można dodać własne dane XML.  Punkty te rozszerzenia obejmują <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, a "Zawartość".  (Zawartości elementy znajdują się w formie <xref:System.Xml.XmlElement> listy.)  
+ Schemat Core definiuje podstawowej struktury XML <xref:System.Windows.Annotations.Annotation>.  Większość elementów XML zdefiniowane w schemacie Core odnoszą się do typów w <xref:System.Windows.Annotations> przestrzeni nazw.  Schemat Core udostępnia trzy punkty rozszerzenia, w którym aplikacji można dodawać własne dane XML.  Punkty te rozszerzenia obejmują <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>i "Zawartość".  (Zawartości, elementy znajdują się w formie <xref:System.Xml.XmlElement> listy.)  
   
- Schemat Base opisanych w tym temacie Określa rozszerzenia dla <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>i dołączone do początkowej wersji systemu Windows Presentation Foundation (WPF) typów zawartości.  
+ Schemat podstawowy opisane w tym temacie Określa rozszerzenia dla <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>oraz zawartości typów dołączone do początkowej wersji Windows Presentation Foundation (WPF).  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>Adnotacje XML Core schematu  
- Schemat Core adnotacje XML definiuje struktury XML, który jest używany do przechowywania <xref:System.Windows.Annotations.Annotation> obiektów.  
+ Schemat adnotacji XML Core definiuje struktury XML, który jest używany do przechowywania <xref:System.Windows.Annotations.Annotation> obiektów.  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -181,8 +181,8 @@ W tym temacie opisano definicji schematu XML (XSD) używany przez platformę Mic
 ```  
   
 <a name="BaseSchema"></a>   
-## <a name="annotations-xml-base-schema"></a>Podstawowy schemat XML adnotacji  
- Podstawowy schemat definiuje struktury XML trzy elementy abstrakcyjne zdefiniowanej w schemacie Core — <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, i <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.  
+## <a name="annotations-xml-base-schema"></a>Schemat bazowy XML adnotacji  
+ Schemat podstawowy definiuje struktury XML trzy elementy abstrakcyjne zdefiniowanymi w schemacie Core — <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, i <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -429,11 +429,11 @@ W tym temacie opisano definicji schematu XML (XSD) używany przez platformę Mic
     </xsd:complexContent>  
   </xsd:complexType>  
   
-  <-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
-  *  page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
-  *   conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
-  *   page are the coordinates defined in the FixedTextRange.  
-  *   Example of a PageNumber ContentLocatorPart:  
+  <!-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
+  *    page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
+  *    conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
+  *    page are the coordinates defined in the FixedTextRange.  
+  *    Example of a PageNumber ContentLocatorPart:  
   *     
   *       <anb:PageNumber>  
   *         <anc:Item Name="Value" Value="1" />  
@@ -464,8 +464,8 @@ W tym temacie opisano definicji schematu XML (XSD) używany przez platformę Mic
   <xsd:element name="Text" type="anb:TextContentType"  
                substitutionGroup="anc:Content"/>  
   
-  <-- Ink – contains XAML representing Sticky Note ink.  
-  *   Used in annotations of type InkStickyNote. -->  
+  <!-- Ink – contains XAML representing Sticky Note ink.  
+  *    Used in annotations of type InkStickyNote. -->  
   <xsd:complexType name="InkContentType">  
     <!-- See XAML schema for Ink content -->  
   </xsd:complexType>  
@@ -492,8 +492,8 @@ W tym temacie opisano definicji schematu XML (XSD) używany przez platformę Mic
 ```  
   
 <a name="SampleXML"></a>   
-## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Przykładowy kod XML utworzonego przez XmlStreamStore adnotacji  
- Kod XML znajdujący się zawierają dane wyjściowe adnotacje <xref:System.Windows.Annotations.Storage.XmlStreamStore> i organizacji przykładowy plik, który zawiera trzy adnotacje - wyróżnienie tekstu-notatki i notatki odręczne USB —.  
+## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Przykładowy kod XML utworzony przez XmlStreamStore adnotacji  
+ Plik XML, który następuje po zawierają dane wyjściowe adnotacje <xref:System.Windows.Annotations.Storage.XmlStreamStore> i organizowanie przykładowy plik, który zawiera trzy adnotacje — wyróżnienie, tekst-notatki i należy pamiętać hokejowego pisma odręcznego.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

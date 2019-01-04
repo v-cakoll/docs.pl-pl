@@ -1,13 +1,13 @@
 ---
 title: Rozpoczynanie pracy z usługą F# w programie Visual Studio Code
 description: Dowiedz się, jak używać F# za pomocą programu Visual Studio Code i Ionide zestawu wtyczki.
-ms.date: 05/28/2018
-ms.openlocfilehash: 2db587b5614c5a7ca9285cad9b719970d53afd55
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/23/2018
+ms.openlocfilehash: 34802551bf4e34abb5aa0130643f32dbce68f1b2
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129795"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029557"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Rozpoczynanie pracy z usługą F# w programie Visual Studio Code
 
@@ -150,8 +150,7 @@ Następnie otwórz `Script.fsx` ponownie plik, a następnie usuń całą `toPigL
 #load "ClassLibraryDemo.fs"
 open ClassLibraryDemo
 ```
-
-Pierwszy wiersz jest wymagany w przypadku skryptów można załadować FSI `ClassLibraryDemo.fs`. Drugi wiersz jest wygoda: pomijając go jest opcjonalne, ale będzie trzeba wpisywać `open ClassLibraryDemo` w oknie FSI, jeśli chcesz wyświetlić `ToPigLatin` modułu do zakresu.
+Wybierz obie linie tekstu, a następnie naciśnij klawisze Alt + Enter, aby wykonać te wiersze w FSI. Te załaduje zawartość biblioteki Pig Latin procesem FSI i `open` `ClassLibraryDemo` przestrzeni nazw, aby mieć dostęp do funkcji.
 
 Następnie w oknie FSI Wywołaj funkcję z `PigLatin` moduł, który wcześniej zdefiniowaną:
 

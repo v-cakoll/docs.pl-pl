@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; w &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: f4e37281539106fef93dc4ab566d94d781c39d29
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 01fe2bc98326e3cef2b3df8bdf4aa03055df5e65
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845680"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030337"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;transport&gt; w &lt;basicHttpBinding&gt;
 Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu HTTP.  
@@ -67,8 +67,8 @@ Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu 
 |Wartość|Opis|  
 |-----------|-----------------|  
 |Brak|— Liczba komunikatów nie są zabezpieczane podczas przesyłania.|  
-|Podstawowy|Określa uwierzytelnianie podstawowe, zgodnie z definicją w dokumencie RFC 2617 — uwierzytelnianie HTTP: podstawowe i uwierzytelnianie szyfrowane.|  
-|Podsumowanie|Określa uwierzytelnianie szyfrowane zgodnie z definicją w dokumencie RFC 2617 — uwierzytelnianie HTTP: podstawowe i uwierzytelnianie szyfrowane.|  
+|Podstawowy|Określa uwierzytelnianie podstawowe, zgodnie z definicją w dokumencie RFC 2617 — uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane.|  
+|Podsumowanie|Określa uwierzytelniania szyfrowanego, zgodnie z definicją w dokumencie RFC 2617 — uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane.|  
 |Uwierzytelnianie NTLM|Określa uwierzytelniania NTLM, jeśli jest to możliwe, a w przypadku niepowodzenia uwierzytelniania Windows.|  
 |Windows|Określa, czy zintegrowane uwierzytelnianie Windows|  
 |Certyfikat|Wykonuje uwierzytelnianie klienta przy użyciu certyfikatu. Ta opcja działa tylko wtedy, gdy `Mode` atrybutu elementu nadrzędnego `security` elementu jest ustawiona na Transport i nie będzie działać, jeśli jest ustawiona wartość TransportCredentialOnly.|  
@@ -99,8 +99,8 @@ Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu 
    </services>  
     <bindings>  
         <basicHttpBinding>  
-        <!-- Configure basicHttpBinding with Transport security -- >  
-        <!-- mode and clientCredentialType set to None.-->  
+        <!-- Configure basicHttpBinding with Transport security -->  
+        <!-- mode and clientCredentialType set to None. -->  
            <binding name="Binding1">  
                <security mode="Transport">  
                    <transport clientCredentialType="None"  

@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b00d08f43874518e117739d4a9502bf9463db5c1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185852"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029882"
 ---
 # <a name="net-class-library-overview"></a>Przegląd biblioteki klas programu .NET
 
@@ -84,9 +84,9 @@ Implementacje platformy .NET zawierają klasy, interfejsy, delegaty i typów war
 
  <xref:System> Przestrzeń nazw jest przestrzeń nazw korzenia dla podstawowych typów na platformie .NET. Ta przestrzeń nazw zawiera klasy reprezentujące podstawowe typy danych używany przez wszystkie aplikacje: <xref:System.Object> (główny hierarchii dziedziczenia), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String>i tak dalej. Wiele z tych typów odnoszą się do typów danych pierwotnych, które używa języka programowania. Podczas pisania kodu za pomocą typów programu .NET Framework, można użyć danego języka odpowiednich słów kluczowych podczas .NET Framework jest oczekiwany typ danych podstawowych.  
   
- Poniższa tabela zawiera listę typów podstawowych, że .NET dostarcza, krótko opisano każdy typ i oznacza odpowiedni typ w języku Visual Basic, C#, C++ i F #.  
+ Poniższa tabela zawiera listę typów podstawowych, że .NET dostarcza krótko opisano każdy typ i oznacza odpowiedni typ w języku Visual Basic C#, C++, i F#.  
   
-|Kategoria|Nazwa klasy|Opis|Typ danych w języku Visual Basic|Typ danych w języku C#|C + +/ interfejsu wiersza polecenia — typ danych|Typów danych języka F #|  
+|Kategoria|Nazwa klasy|Opis|Typ danych w języku Visual Basic|Typ danych w języku C#|C + +/ interfejsu wiersza polecenia — typ danych|F#Typ danych|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Liczba całkowita|<xref:System.Byte>|8-bitowa liczba całkowita bez znaku.|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|8-bitową całkowita.<br /><br /> Niezgodne ze specyfikacją CLS.|**SByte**|**sbyte**|**char**<br /> —lub—<br /> **podpisana** **char**|**sbyte**|  
@@ -103,7 +103,7 @@ Implementacje platformy .NET zawierają klasy, interfejsy, delegaty i typów war
 ||<xref:System.Decimal>|Wartość dziesiętna (128-bitowe).|**Decimal**|**decimal**|**Decimal**|**decimal**|  
 ||<xref:System.IntPtr>|Liczba całkowita ze znakiem której rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowe) i 64-bitowych wartości na platformie 64-bitowej.|**Pola IntPtr**<br /><br /> Brak typu wbudowanego.|**Pola IntPtr**<br /><br /> Brak typu wbudowanego.|**Pola IntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint —**|  
 ||<xref:System.UIntPtr>|Liczbą całkowitą bez znaku, którego rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowe) i 64-bitowych wartości na platformie 64-bitowej.<br /><br /> Niezgodne ze specyfikacją CLS.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint —**|  
-||<xref:System.Object>|Katalog główny hierarchii obiektów.|**obiekt**|**object**|**Object ^**|**obj**|  
+||<xref:System.Object>|Katalog główny hierarchii obiektów.|**Obiekt**|**object**|**Object ^**|**obj**|  
 ||<xref:System.String>|Niezmienny, o stałej długości ciągu znaków Unicode.|**Ciąg**|**string**|**String ^**|**string**|  
   
  Oprócz podstawowe typy danych <xref:System> przestrzeń nazw zawiera klasy ponad 100, począwszy od klas, które obsługi wyjątków do klas, które zajmują się podstawowe koncepcje środowiska uruchomieniowego, takich jak domeny aplikacji i moduł odśmiecania pamięci. <xref:System> Przestrzeń nazw zawiera także wiele nazw drugiego poziomu.  
@@ -113,5 +113,5 @@ Implementacje platformy .NET zawierają klasy, interfejsy, delegaty i typów war
 ## <a name="see-also"></a>Zobacz także
 
 - [System typu wspólnego](../../docs/standard/base-types/common-type-system.md)  
-- [Przeglądarka interfejsu API .NET](https://docs.microsoft.com/dotnet/api)  
+- [Przeglądarka interfejsu API .NET](../../api/index.md)  
 - [Omówienie](../../docs/framework/get-started/overview.md)

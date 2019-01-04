@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087333"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030161"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Podstawienia w wyrażeniach regularnych
 <a name="Top"></a> Podstawienia są elementami języka, które są rozpoznawane tylko we wzorcach zamieniania. Używają one wzorca wyrażenia regularnego w celu zdefiniowania całości lub części teksu, który ma zastąpić dopasowany tekst w ciągu wejściowym. Wzorzec zamieniania może składać się z co najmniej jednego podstawienia oraz znaków literału. Wzorce zamieniania są dostarczane do przeciążeń <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metodę, która ma `replacement` parametru i <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> metody. Te metody zamieniają dopasowany wzorzec z wzorcem, który jest definiowany przez `replacement` parametru.  
@@ -33,7 +33,7 @@ ms.locfileid: "47087333"
 |`${` *Nazwa* `}`|Zawiera ostatni podciąg dopasowany przez nazwaną grupę, który jest wyznaczone przez `(?<` *nazwa* `> )` w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie nazwanej grupy](#Named).|  
 |`$$`|Zawiera pojedynczy literał „$” w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie symbolu "$"](#DollarSign).|  
 |`$&`|Zawiera kopię całego dopasowania w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie całego dopasowania](#EntireMatch).|  
-|<code>$\`</code>|Zawiera cały tekst ciągu wejściowego przed dopasowaniem w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie tekstu przed dopasowaniem](#BeforeMatch).|  
+|``$` ``|Zawiera cały tekst ciągu wejściowego przed dopasowaniem w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie tekstu przed dopasowaniem](#BeforeMatch).|  
 |`$'`|Zawiera cały tekst ciągu wejściowego po dopasowaniu w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie tekstu po dopasowaniu](#AfterMatch).|  
 |`$+`|Zawiera ostatnią grupę przechwyconą w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie ostatniej przechwyconej grupy](#LastGroup).|  
 |`$_`|Zawiera cały ciąg wejściowy w ciągu zamiennym. Aby uzyskać więcej informacji, zobacz [podstawianie całego ciągu wejściowego](#EntireString).|  
@@ -142,14 +142,14 @@ ms.locfileid: "47087333"
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>Podstawianie tekstu przed dopasowaniem  
- <code>$\`</code> Podstawienia zamienia dopasowany ciąg na cały ciąg wejściowy przed dopasowaniem. Oznacza to, że duplikuje ciąg wejściowy przed dopasowaniem, a jednocześnie usuwa dopasowany tekst. Ciąg znajdujący się po dopasowanym tekście zostanie umieszczony w ciągu wynikowym bez zmian. Jeśli w ciągu wejściowym będzie znajdować się wiele dopasowań, tekst zamienny będzie pochodził z oryginalnego ciągu wejściowego, a nie z ciągu, w którym tekst został zamieniony na poprzednie dopasowania. \(Przykład stanowi ilustrację.\) Jeśli nie zostanie odnaleziony odpowiednik <code>$\`</code> podstawienia nie ma wpływu.  
+ ``$` `` Podstawienia zamienia dopasowany ciąg na cały ciąg wejściowy przed dopasowaniem. Oznacza to, że duplikuje ciąg wejściowy przed dopasowaniem, a jednocześnie usuwa dopasowany tekst. Ciąg znajdujący się po dopasowanym tekście zostanie umieszczony w ciągu wynikowym bez zmian. Jeśli w ciągu wejściowym będzie znajdować się wiele dopasowań, tekst zamienny będzie pochodził z oryginalnego ciągu wejściowego, a nie z ciągu, w którym tekst został zamieniony na poprzednie dopasowania. \(Przykład stanowi ilustrację.\) Jeśli nie zostanie odnaleziony odpowiednik ``$` `` podstawienia nie ma wpływu.  
   
- W poniższym przykładzie użyto wzorca wyrażenia regularnego `\d+` dostosowując sekwencji jednego lub więcej cyfr dziesiętnych w ciągu wejściowym. Ciąg zastępujący <code>$`</code> zamienia te cyfry na tekst, który poprzedza dopasowanie.  
+ W poniższym przykładzie użyto wzorca wyrażenia regularnego `\d+` dostosowując sekwencji jednego lub więcej cyfr dziesiętnych w ciągu wejściowym. Ciąg zastępujący ``$` `` zamienia te cyfry na tekst, który poprzedza dopasowanie.  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/before1.cs#4)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/before1.vb#4)]  
   
- W tym przykładzie ciąg wejściowy `"aa1bb2cc3dd4ee5"` zawiera pięć dopasowań. W poniższej tabeli przedstawiono sposób, w jaki <code>$`</code> podstawienia powoduje, że aparat wyrażeń regularnych do zastępowania każdego dopasowania w ciągu wejściowym. Wstawiony tekst wyróżniono pogrubieniem w kolumnie wyników.  
+ W tym przykładzie ciąg wejściowy `"aa1bb2cc3dd4ee5"` zawiera pięć dopasowań. W poniższej tabeli przedstawiono sposób, w jaki ``$` `` podstawienia powoduje, że aparat wyrażeń regularnych do zastępowania każdego dopasowania w ciągu wejściowym. Wstawiony tekst wyróżniono pogrubieniem w kolumnie wyników.  
   
 |Dopasowanie|Pozycja|Ciąg przed dopasowaniem|Ciąg wynikowy|  
 |-----------|--------------|-------------------------|-------------------|  

@@ -39,7 +39,7 @@ Możesz również z istniejących problemów dla społeczności, które obejmuj�
 
 Można także przyjrzeć się nasze [zgłaszanie problemów](https://github.com/dotnet/docs/issues) listy i volunteer do pracy nad tymi interesuje Cię. Używamy [w górę do chwyty](https://github.com/dotnet/docs/labels/up-for-grabs) etykietę do tagu problemy otwarte dla udziału. 
 
-**Krok 2:** Rozwidlenia `/dotnet/docs`, `dotnet/samples` lub `dotnet/dotnet-api-docs` repozytoriów jako potrzebne i utwórz gałąź dla Twoich zmian.
+**Krok 2:** Rozwidlenia `dotnet/docs`, `dotnet/samples` lub `dotnet/dotnet-api-docs` repozytoriów jako potrzebne i utwórz gałąź dla Twoich zmian.
 
 Dla niewielkich zmian można użyć interfejsu sieci web usługi GitHub. Po prostu kliknij **Edytuj plik w Twoim rozwidleniu ten projekt** w pliku, czy chcesz zmienić. GitHub tworzy nową gałąź dla Ciebie, po przesłaniu zmian.
 
@@ -101,7 +101,7 @@ Ponadto wszystkie przykłady w obszarze *core* i *standardowa* folderów należy
 Możemy rozwinąć te katalogi jako repozytorium dokumentów dodaje nową zawartość. Na przykład dodamy katalogów platformy Xamarin, takie jak `xamarin-ios` i `xamarin-android` katalogów.
 
 Pełny przykład, z którą tworzysz powinien zawierać *readme.md* pliku. Ten plik powinien zawierać krótki opis przykładu (jednej lub dwóch akapitów). Twoje *readme.md* powinien poinformować czytelnicy, co przedstawiono eksplorując ten przykład. *Readme.md* plik powinien również zawierać łącze do dokumentu na żywo na [witrynie dokumentacji .NET](https://docs.microsoft.com/dotnet/welcome).
-Aby określić, gdzie dany plik w repozytorium jest mapowany na tę lokację, należy zastąpić `/docs` w ścieżce repozytorium za pomocą `http://docs.microsoft.com/dotnet/articles`.
+Aby określić, gdzie dany plik w repozytorium jest mapowany na tę lokację, należy zastąpić `/docs` w ścieżce repozytorium za pomocą `https://docs.microsoft.com/dotnet`.
 
 Twój temat zawiera również linki do przykładu. Link bezpośrednio do folderu przykładu, w witrynie GitHub.
 

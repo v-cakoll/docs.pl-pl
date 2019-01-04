@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a1006816168e405d0d79786b8430b802f1ec0928
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999445"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030376"
 ---
 # <a name="freezable-objects-overview"></a>Przegląd Obiekty Freezable
 W tym temacie opisano, jak skutecznie używać i Utwórz <xref:System.Windows.Freezable> obiektów, które zapewniają funkcje specjalne, które mogą pomóc zwiększyć wydajność aplikacji. Przykładami obiektów freezable pędzle, pióra, przekształcenia, geometrii i animacji.  
@@ -126,7 +126,7 @@ mc:Ignorable="PresentationOptions"
   
 -   Bezpieczeństwo wątków: zamrożone <xref:System.Windows.Freezable> udostępniona w wielu wątkach.  
   
--   Szczegółowe powiadomienia o zmianie: w odróżnieniu od innych <xref:System.Windows.DependencyObject>s, obiekty Freezable zapewniają powiadomienia o zmianie po zmianie wartości właściwości podrzędnych.  
+-   Powiadomienie o zmianie szczegółowe: W odróżnieniu od innych <xref:System.Windows.DependencyObject>s, obiekty Freezable zapewniają powiadomienia o zmianie po zmianie wartości właściwości podrzędnych.  
   
 -   Klonowanie proste: Freezable klasy zaimplementował już kilka metod, które tworzą klony głębokiego.  
   
@@ -154,7 +154,7 @@ mc:Ignorable="PresentationOptions"
   
 -   Wywołaj <xref:System.Windows.Freezable.WritePostscript%2A> metoda przed wyjściem metody modyfikujące właściwość zależności innych składowych danych.  
   
- Jeśli klasa zawiera składowe danych inną niż właściwość zależności, które są <xref:System.Windows.DependencyObject> obiektów, musisz również wywołać <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> metody po każdej zmianie na ich wartości, nawet wtedy, gdy element członkowski jest ustawienie na `null`.  
+ Jeśli klasa zawiera składowe danych inną niż właściwość zależności, które są <xref:System.Windows.DependencyObject> obiektów, musisz również wywołać <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> metody po każdej zmianie jedną z dostępnych wartości, nawet wtedy, gdy element członkowski jest ustawienie na `null`.  
   
 > [!NOTE]
 >  Bardzo ważne, Rozpocznij każdy <xref:System.Windows.Freezable> zastąpić wywołaniem implementację podstawową metody.  

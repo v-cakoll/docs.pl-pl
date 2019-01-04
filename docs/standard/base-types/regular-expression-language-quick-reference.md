@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53779389"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030402"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Język wyrażeń regularnych — podręczny wykaz
 <a name="top"></a> Wyrażenie regularne to wzorzec, który aparat wyrażeń regularnych próbuje dopasować w tekście wejściowym. Wzorzec składa się z co najmniej jednego literału znakowego, operatora lub konstrukcji.  Aby uzyskać krótkie wprowadzenie – zobacz [wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -176,7 +176,7 @@ ms.locfileid: "53779389"
 |`${` *Nazwa* `}`|Podstawia podciąg dopasowany przez nazwaną grupę *nazwa*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|„one two”|„two one”|  
 |`$$`|Podstawia literał „$”.|`\b(\d+)\s?USD`|`$$$1`|„103 USD”|„$103”|  
 |`$&`|Podstawia kopię całego dopasowania.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
-|<code>$`</code>|Podstawia cały tekst ciągu wejściowego przed dopasowaniem.|`B+`|<code>$`</code>|„AABBCC”|„AAAACC”|  
+|``$` ``|Podstawia cały tekst ciągu wejściowego przed dopasowaniem.|`B+`|``$` ``|„AABBCC”|„AAAACC”|  
 |`$'`|Podstawia cały tekst ciągu wejściowego po dopasowaniu.|`B+`|`$'`|„AABBCC”|„AACCCC”|  
 |`$+`|Podstawia ostatnią przechwyconą grupę.|`B+(C+)`|`$+`|„AABBCCDD”|"AACCDD"|  
 |`$_`|Podstawia cały ciąg wejściowy.|`B+`|`$_`|„AABBCC”|„AAAABBCCCC”|  

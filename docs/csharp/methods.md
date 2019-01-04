@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cb47d1c7eecebca42a65557b61d782a76266c2f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127449"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030181"
 ---
 # <a name="methods"></a>Metody #
 
@@ -197,10 +197,7 @@ Czasami chcesz metodę do zwrócenia więcej niż jedną wartość. Począwszy o
 public (string, string, string, int) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -208,8 +205,7 @@ Obiekt wywołujący mogły zwrócone spójna kolekcja znajdująca się z kodem, 
 
 ```csharp
 var person = GetPersonalInfo("111111111")
-if (person != null)
-   Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
+Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
 Również można przypisać nazwy elementów krotki w definicji typu krotki. W poniższym przykładzie pokazano alternatywnej wersji `GetPersonalInfo` metodę, która korzysta z nazwanych elementów:
@@ -218,10 +214,7 @@ Również można przypisać nazwy elementów krotki w definicji typu krotki. W p
 public (string FName, string MName, string LName, int Age) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -229,8 +222,7 @@ Poprzednie wywołanie `GetPersonInfo` metoda może być modyfikowany w następuj
 
 ```csharp
 var person = GetPersonalInfo("111111111");
-if (person != null)
-   Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
+Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 ```
 
 Jeśli metoda jest przekazywana tablicę jako argument i modyfikuje wartość poszczególnych elementów, nie jest konieczne dla metody zwrócić tablicę, mimo że można to zrobić dla dobra stylu lub funkcjonalności przepływu wartości.  Jest to spowodowane C# przekazuje wszystkich typów odniesienia według wartości, a wartość odwołania do tablicy jest wskaźnik do tablicy. W poniższym przykładzie zmienia się na zawartość `values` tablicy, które zostały wprowadzone w `DoubleValues` metody jest możliwość obserwowania przez każdy kod, który zawiera odwołanie do tablicy.

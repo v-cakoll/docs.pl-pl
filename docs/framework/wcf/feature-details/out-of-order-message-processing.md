@@ -2,18 +2,18 @@
 title: Przetwarzanie komunikatów poza kolejnością
 ms.date: 03/30/2017
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
-ms.openlocfilehash: a7839b60dbad7919a644c196a1c63f6bc46fb5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3beca8d73788d177d07868d7169d8aea3ecd8e80
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492948"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029948"
 ---
 # <a name="out-of-order-message-processing"></a>Przetwarzanie komunikatów poza kolejnością
-Usługi przepływu pracy może zależeć od wiadomości w określonej kolejności. Usługi przepływu pracy zawiera jeden lub więcej <xref:System.ServiceModel.Activities.Receive> działań i każdego <xref:System.ServiceModel.Activities.Receive> działania oczekuje określonego komunikatu. Bez gwarancją dostarczania danego transportu wiadomości wysyłane przez klientów mogą być opóźnione i w związku z tym dostarczane w określonym porządku usługi przepływu pracy nie mogą oczekiwać. Wdrażanie usługi przepływu pracy, który nie wymaga wiadomości wysyłane w określonej kolejności zwykle odbywa się za pomocą działania równoległego. Dla bardziej złożonego protokołu aplikacji przepływu pracy może być bardzo złożone bardzo szybko.  Funkcja w systemie Windows Communication Foundation (WCF) przetwarzania komunikatów poza kolejnością służy do tworzenia przepływ bez wszystkich złożoność zagnieżdżonego działania równoległe. Przetwarzanie komunikatów poza kolejnością jest obsługiwana tylko na kanałów, które obsługują <xref:System.ServiceModel.Channels.ReceiveContext> np. powiązania WCF usługi MSMQ.  
+Usługi przepływu pracy może zależeć od wiadomości w określonej kolejności. Usługi przepływu pracy zawiera jeden lub więcej <xref:System.ServiceModel.Activities.Receive> działań, a każdy <xref:System.ServiceModel.Activities.Receive> działania oczekuje szczegółowy komunikat o błędzie. Bez gwarancją dostarczania danego transportu komunikatów wysyłanych przez klientów może być opóźniony i w związku z tym dostarczane w określonym porządku usługi przepływu pracy nie może oczekiwać. Wdrażanie usługi przepływu pracy, które nie wymagają komunikaty wysłane w konkretnym kolejności zwykle odbywa się przy użyciu działania równoległego. Dla bardziej skomplikowanych protokołu aplikacji przepływ pracy może być bardzo złożone bardzo szybko.  Komunikatów poza kolejnością przetwarzania funkcji w Windows Communication Foundation (WCF) umożliwia tworzenie takich przepływu pracy wszystkich wymaganych złożoności zagnieżdżonych działań równoległych. Przetwarzanie komunikatów poza kolejnością jest obsługiwane tylko za pośrednictwem kanałów, które obsługują <xref:System.ServiceModel.Channels.ReceiveContext> np. powiązania WCF usługi MSMQ.  
   
-## <a name="enabling-out-of-order-message-processing"></a>Włączanie przetwarzanie komunikatów poza kolejnością.  
- Przetwarzanie komunikatów poza kolejnością jest włączane przez ustawienie <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> właściwości `true` na WorkflowService. Poniższy przykład przedstawia sposób ustawiania <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> właściwości w kodzie.  
+## <a name="enabling-out-of-order-message-processing"></a>Włączanie przetwarzanie komunikatów poza kolejnością  
+ Przetwarzanie komunikatów poza kolejnością jest włączona, ustawiając <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> właściwości `true` na WorkflowService. Poniższy przykład pokazuje, jak ustawić <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> właściwości w kodzie.  
   
 ```csharp  
 // Code: Opt-in to Buffered Receive processing...  
@@ -25,12 +25,12 @@ WorkflowService service = new WorkflowService
 };  
 ```  
   
- Można także zastosować `AllowBufferedReceive` atrybutu usługi przepływu pracy w języku XAML, jak pokazano w poniższym przykładzie.  
+ Można również zastosować `AllowBufferedReceive` atrybutów w usługach XAML przepływu pracy, jak pokazano w poniższym przykładzie.  
   
 ```xaml  
 // Xaml: Opt-in to Buffered Receive processing...  
 <WorkflowService AllowBufferedReceive="True">  
-   <!—the actual children activities -->  
+   <!--the actual children activities -->  
 </Sequence>  
 ```  
   

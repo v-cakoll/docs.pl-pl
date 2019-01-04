@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Wy
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 31f4807c956a8b4fb9381145f8e9b5eaffafe698
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 72a3e7ef8043e0016cefb45a4182b5c2e3061753
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149500"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029713"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Użyj klas wyliczeń zamiast typów wyliczeń
 
@@ -17,7 +17,7 @@ ms.locfileid: "53149500"
 
 Zamiast tego można utworzyć klasy wyliczenie, które umożliwiają bogatych funkcji obiektowy język.
 
-Jednak nie jest to temat krytycznych i w wielu przypadkach dla uproszczenia można nadal używać zwykłe [typach wyliczeniowych](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/enum) przypadku swoje preferencje. Mimo to używanie klas wyliczeń są bardziej powiązane ze pojęć związanych z firmą.
+Jednak nie jest to temat krytycznych i w wielu przypadkach dla uproszczenia można nadal używać zwykłe [typach wyliczeniowych](../../../csharp/language-reference/keywords/enum.md) przypadku swoje preferencje. Mimo to używanie klas wyliczeń są bardziej powiązane ze pojęć związanych z firmą.
 
 ## <a name="implement-an-enumeration-base-class"></a>Implementowanie klasy bazowej wyliczenia
 

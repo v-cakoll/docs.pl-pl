@@ -2,12 +2,12 @@
 title: F#Przewodnik po stylu
 description: Dowiedz się, zasady pięciu dobrze F# kodu.
 ms.date: 12/10/2018
-ms.openlocfilehash: 7718df596bde9004fb9ba6143146f1f475d25683
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9f47257626e04b09b546de2ae315d48d791678be
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168965"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030272"
 ---
 # <a name="f-style-guide"></a>F#Przewodnik po stylu
 
@@ -21,7 +21,7 @@ Pamiętać o następujących zasadach ilekroć pisania F# kod, szczególnie w pr
 
 1. **Dobre F# kod jest zwięzły, ekspresyjny i konfigurowalna**
 
-    F#oferuje wiele funkcji umożliwiających express akcje w mniejszej liczby linii kodu i ponowne użycie ogólną funkcję. F# Biblioteka podstawowa zawiera również wiele typów przydatne i funkcje do pracy z typowych kolekcji danych. Tworzenie własnych funkcji i znajdującymi się na F# Biblioteka podstawowa (lub inne biblioteki) jest częścią standardowego idiomatyczną F# programowania. Zgodnie z ogólną zasadą Jeśli rozwiązanie problemu w mniejszą liczbę wierszy kodu można wyrazić innym deweloperom (lub z własnym przyszłych) będzie przynosi. Również zdecydowanie zaleca się, że używasz biblioteki, takie jak elementu FSharp.Core, [ogromnej biblioteki .NET](https://docs.microsoft.com/dotnet/api/) , F# działa, lub pakiet innych firm na [NuGet](https://www.nuget.org/) kiedy trzeba będzie wykonać proste zadanie.
+    F#oferuje wiele funkcji umożliwiających express akcje w mniejszej liczby linii kodu i ponowne użycie ogólną funkcję. F# Biblioteka podstawowa zawiera również wiele typów przydatne i funkcje do pracy z typowych kolekcji danych. Tworzenie własnych funkcji i znajdującymi się na F# Biblioteka podstawowa (lub inne biblioteki) jest częścią standardowego idiomatyczną F# programowania. Zgodnie z ogólną zasadą Jeśli rozwiązanie problemu w mniejszą liczbę wierszy kodu można wyrazić innym deweloperom (lub z własnym przyszłych) będzie przynosi. Również zdecydowanie zaleca się, że używasz biblioteki, takie jak elementu FSharp.Core, [ogromnej biblioteki .NET](../../../api/index.md) , F# działa, lub pakiet innych firm na [NuGet](https://www.nuget.org/) kiedy trzeba będzie wykonać proste zadanie.
 
 2. **Dobre F# kodu jest współpracujący**
 

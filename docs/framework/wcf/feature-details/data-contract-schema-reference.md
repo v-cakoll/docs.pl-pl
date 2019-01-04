@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873722"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030532"
 ---
 # <a name="data-contract-schema-reference"></a>Odwołanie do schematu kontraktu danych
 W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref:System.Runtime.Serialization.DataContractSerializer> do opisania wspólnego języka wspólnego (CLR) typy serializacji XML.  
@@ -89,7 +89,7 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
 |`complexContent`|Obsługiwane. Zobacz "Dziedziczenie".|  
 |`group`|Jest zabronione.|  
 |`all`|Jest zabronione.|  
-|`choice`|Dostęp zabroniony|  
+|`choice`|Zabroniony|  
 |`sequence`|Obsługiwane mapują do elementów członkowskich danych kontraktu danych.|  
 |`attribute`|Dostęp zabroniony, nawet w przypadku użycia = "prohibited" (z jednym wyjątkiem). Obsługiwane są tylko opcjonalne atrybuty z przestrzeni nazw standardowego schematu serializacji. Nie są mapowane na elementy członkowskie danych w modelu programowania kontraktu danych. Obecnie tylko jeden taki atrybut ma znaczenie i został opisany w sekcji ISerializable. Wszystkie pozostałe są ignorowane.|  
 |`attributeGroup`|Jest zabronione. W wersji v1 usługi WCF `DataContractSerializer` ignoruje obecności `attributeGroup` wewnątrz `xs:complexType`.|  
@@ -290,15 +290,14 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
   
  Poniższy kod przedstawia klasy wyliczenie C#.  
   
-```  
+```csharp  
 public enum MyEnum  
 {  
-   first = 3,  
-   second = 4,  
-   third =5  
+  first = 3,  
+  second = 4,  
+  third =5  
+}  
 ```  
-  
- }  
   
  Ta klasa jest mapowany na poniższe schemat, `DataContractSerializer`. Jeśli wartości wyliczenia, zacznij od 1, `xs:annotation` bloki nie są generowane.  
   
@@ -349,7 +348,7 @@ public enum MyEnum
   
  Na przykład poniższy kod flagi typem wyliczenia.  
   
-```  
+```csharp  
 [Flags]  
 public enum AuthFlags  
 {    
@@ -402,7 +401,7 @@ rialization/">64</EnumerationValue>
   
  Na przykład poniższy kod jest kontraktu danych.  
   
-```  
+```csharp  
 [DataContract]  
 public class Person  
 {  
@@ -619,7 +618,7 @@ public class Employee : Person
 ## <a name="importing-non-datacontract-schemas"></a>Importowanie schematów innych niż typ  
  `DataContractSerializer` ma `ImportXmlTypes` opcję, aby umożliwić Importowanie schematów, które nie są zgodne z `DataContractSerializer` profilu XSD (zobacz <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> właściwości). Ustawienie tej opcji na `true` umożliwia przyjmowanie niezgodnych typów schematu i mapowania ich na następującą implementacją <xref:System.Xml.Serialization.IXmlSerializable> zawijania tablicę <xref:System.Xml.XmlNode> (różni się tylko nazwę klasy).  
   
-```  
+```csharp  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
 [System.Xml.Serialization.XmlSchemaProviderAttribute("ExportSchema")]  
 [System.Xml.Serialization.XmlRootAttribute(IsNullable=false)]  

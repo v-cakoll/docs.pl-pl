@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 220e43ed6aadbcc443f4cf06310fe12e970abcf2
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149591"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030428"
 ---
 # <a name="best-practices-for-exceptions"></a>Najlepsze praktyki dotyczące wyjątków
 
@@ -24,7 +24,7 @@ Dobrze zaprojektowana aplikacja obsługuje wyjątki i błędy, aby zapobiegać a
 
 Użyj `try` / `catch` bloki wokół kodu, który potencjalnie może generować wyjątek ***i*** kodu można odzyskać z tego wyjątku. W `catch` blokuje zawsze porządkować wyjątki od najbardziej pochodnej do najmniej pochodnego. Wszystkie wyjątki pochodzić od <xref:System.Exception>. Bardziej pochodnego wyjątki nie są obsługiwane przez klauzuli catch, który jest poprzedzona klauzulą catch dla klasy bazowej wyjątku. Gdy kodu nie można odzyskać z wyjątku, nie Złap, ten wyjątek. Włącz metody dalsze górę stosu wywołań, aby odzyskać, jeśli jest to możliwe.
 
-Czyszczenie zasobów przydzielonych z oboma `using` instrukcji lub `finally` bloków. Preferuj `using` instrukcji, aby automatycznie wyczyścić zasoby, gdy wyjątki zostaną zgłoszone. Użyj `finally` bloków, aby wyczyścić zasoby, które nie implementują <xref:System.IDisposable>. Możesz pisać kod w `finally` claus prawie zawsze jest wykonywane, nawet wtedy, gdy wyjątki zostaną zgłoszone.
+Czyszczenie zasobów przydzielonych z oboma `using` instrukcji lub `finally` bloków. Preferuj `using` instrukcji, aby automatycznie wyczyścić zasoby, gdy wyjątki zostaną zgłoszone. Użyj `finally` bloków, aby wyczyścić zasoby, które nie implementują <xref:System.IDisposable>. Możesz pisać kod w `finally` klauzuli prawie zawsze jest wykonywane, nawet wtedy, gdy wyjątki zostaną zgłoszone.
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>Obsługa typowe warunki bez zgłaszanie wyjątków
 

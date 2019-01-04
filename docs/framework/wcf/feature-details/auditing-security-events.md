@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 70bd756c9de2cf6ffb43479b0b28a6d51340f905
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198085"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030571"
 ---
 # <a name="auditing-security-events"></a>Inspekcja zdarzeń dotyczących zabezpieczeń
 Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń związanych z zabezpieczeniami (Powodzenie, Niepowodzenie lub obie) za pomocą funkcji inspekcji. Zdarzenia są zapisywane w dzienniku zdarzeń systemu Windows i można zbadać za pomocą Podglądu zdarzeń.  
@@ -28,7 +28,7 @@ Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF)
  Możesz sprawdzić zarówno inspekcji poziomy powodzenie lub niepowodzenie, który jest znany jako *inspekcji zachowanie*.  
   
 ## <a name="audit-log-location"></a>Lokalizacja dziennika inspekcji  
- Po określeniu poziomu inspekcji i zachowanie użytkownika (lub administratora) można określić lokalizację dziennika inspekcji. Dostępne są następujące trzy opcje: domyślny, aplikacji i zabezpieczeń. Podczas określania domyślny dziennik rzeczywisty zależy od używasz od systemu i tego, czy system obsługuje zapisu w dzienniku zabezpieczeń. Aby uzyskać więcej informacji zobacz sekcję "System operacyjny" w dalszej części tego tematu.  
+ Po określeniu poziomu inspekcji i zachowanie użytkownika (lub administratora) można określić lokalizację dziennika inspekcji. Dostępne są następujące trzy opcje: Domyślny, aplikacji i zabezpieczeń. Podczas określania domyślny dziennik rzeczywisty zależy od używasz od systemu i tego, czy system obsługuje zapisu w dzienniku zabezpieczeń. Aby uzyskać więcej informacji zobacz sekcję "System operacyjny" w dalszej części tego tematu.  
   
  Aby zapisać w dzienniku zabezpieczeń wymaga `SeAuditPrivilege`. Domyślnie tylko konta System lokalny i Usługa sieciowa mają to uprawnienie. Aby zarządzać funkcji dziennika zabezpieczeń `read` i `delete` wymaga `SeSecurityPrivilege`. Domyślnie tylko administratorzy mają to uprawnienie.  
   
@@ -51,7 +51,7 @@ Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF)
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|Określa, jakie typy zdarzeń autoryzacji usługi są poddawane inspekcji na poziomie usługi. Dostępne są następujące mechanizmy `None`, `Failure`, `Success`, i `SuccessOrFailure`.|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|Określa, co się dzieje z żądania klienta, w przypadku inspekcji kończy się niepowodzeniem. Na przykład, gdy usługa próbuje zapisać do dziennika zabezpieczeń, ale nie ma `SeAuditPrivilege`. Wartość domyślna `true` wskazuje, że błędy są ignorowane i żądania klienta są przetwarzane w zwykły sposób.|  
   
- Aby uzyskać przykład konfigurowania aplikacji do rejestrowania zdarzeń inspekcji, zobacz [instrukcje: inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ Aby uzyskać przykład konfigurowania aplikacji do rejestrowania zdarzeń inspekcji, zobacz [jak: Inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ### <a name="configuration"></a>Konfiguracja  
  Można również użyć konfiguracji określające zachowanie inspekcji, dodając [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) w obszarze [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md). Należy dodać element pod [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) jak pokazano w poniższym kodzie.  
@@ -61,7 +61,7 @@ Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF)
   <system.serviceModel>  
     <behaviors>  
       <behavior>  
-        <!— auditLogLocation="Application" or "Security" -—>  
+        <!-- auditLogLocation="Application" or "Security" -->  
         <serviceSecurityAudit  
                   auditLogLocation="Application"  
                   suppressAuditFailure="true"  
@@ -103,7 +103,7 @@ Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF)
  <xref:System.ServiceModel.AuditLogLocation>  
  [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Instrukcje: inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [Instrukcje: Inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
  [\<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

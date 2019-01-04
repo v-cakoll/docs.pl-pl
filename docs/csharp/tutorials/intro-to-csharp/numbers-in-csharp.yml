@@ -11,19 +11,96 @@ metadata:
   nextTutorialTitle: Gałęzie i pętle w języku C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: d29fae5aa5a34d7a8e91e53f2005178740464827
-  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+  ms.openlocfilehash: 1475941e0b0169566307f016d68ef3c3cb0b907c
+  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 12/10/2018
-  ms.locfileid: "53131251"
+  ms.lasthandoff: 01/04/2019
+  ms.locfileid: "54029739"
 items:
 - durationInMinutes: 1
   content: >
     Ten samouczek zawiera informacje na temat typów liczbowych w C# interaktywnie przy użyciu przeglądarki do zapisania C# i wyświetlić wyniki kompilacji i uruchomienia kodu. Zawiera on cykl lekcji dotyczących liczb i operacji matematycznych w języku C#. Te lekcje umożliwiają poznanie podstaw języka C#.
 - title: Poznawanie matematyki całkowitoliczbowej
   durationInMinutes: 4
-  content: "Uruchom następujący kod w oknie interaktywnym. Aby to zrobić, wpisz poniższy blok kodu w oknie interaktywnym, a następnie kliknij przycisk **Uruchom** przycisku:\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\nPo prostu przedstawiono jedną z podstawowych operacji matematycznych na liczbach całkowitych. `int` Wpisz reprezentuje **całkowitą**, dodatnią lub ujemną liczbę całkowitą. Możesz użyć `+` symbol do dodania. Inne typowe operacje matematyczne dla liczb całkowitych obejmują:\n\n- `-` odejmowanie\n- `*` mnożenie\n- `/` dzielenie\n\n> [!TIP]\n> W tym samouczku interaktywne możesz eksplorować samodzielnie, modyfikując kod wpisany w oknie interaktywnym. Ten samouczek zawiera przykłady, które można wypróbować w każdym kroku.\n\nRozpocznij od wypróbowania różnych operacji. Zmodyfikuj trzeci wiersz, aby użyć każdej z tych operacji. Po każdej modyfikacji kliknij **Uruchom** przycisku.\n\nOdejmowanie:\n\n```csharp\nint c = a - b;\n```\n\nMnożenie:\n\n```csharp\nint c = a * b;\n```\n\nDział: \n\n```csharp\nint c = a / b;\n```\n\nMożesz także eksperymentować, wykonując wiele operacji matematycznych w jednym wierszu, jeśli chcesz.\n\n> [!TIP]\n> Gdy eksplorujesz C# (lub dowolnego języka programowania), będziesz robić błędy podczas pisania kodu. **Kompilatora** znajdzie te błędy i zgłosi je. Gdy dane wyjściowe zawierają komunikaty o błędach, Przyjrzyj się uważnie przykładowy kod i kod w oknie interaktywnym, aby zobaczyć, jak naprawić.\n> To ćwiczenie pomoże Ci poznać strukturę kodu C#.     \n\n> [!NOTE]\n> To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Uruchom następujący kod w oknie interaktywnym. Aby to zrobić, wpisz poniższy blok kodu w oknie interaktywnym, a następnie kliknij przycisk **Uruchom** przycisku:
+
+
+    ```csharp
+
+    int a = 18;
+
+    int b = 6;
+
+    int c = a + b;
+
+    Console.WriteLine(c);
+
+    ```
+
+
+    Po prostu przedstawiono jedną z podstawowych operacji matematycznych na liczbach całkowitych. `int` Wpisz reprezentuje **całkowitą**, dodatnią lub ujemną liczbę całkowitą. Możesz użyć `+` symbol do dodania. Inne typowe operacje matematyczne dla liczb całkowitych obejmują:
+
+
+    - `-` odejmowanie
+
+    - `*` mnożenie
+
+    - `/` dzielenie
+
+
+    > [!TIP]
+
+    > W tym samouczku interaktywne możesz eksplorować samodzielnie, modyfikując kod wpisany w oknie interaktywnym. Ten samouczek zawiera przykłady, które można wypróbować w każdym kroku.
+
+
+    Rozpocznij od wypróbowania różnych operacji. Zmodyfikuj trzeci wiersz, aby użyć każdej z tych operacji. Po każdej modyfikacji kliknij **Uruchom** przycisku.
+
+
+    Odejmowanie:
+
+
+    ```csharp
+
+    int c = a - b;
+
+    ```
+
+
+    Mnożenie:
+
+
+    ```csharp
+
+    int c = a * b;
+
+    ```
+
+
+    Dział:
+
+
+    ```csharp
+
+    int c = a / b;
+
+    ```
+
+
+    Możesz także eksperymentować, wykonując wiele operacji matematycznych w jednym wierszu, jeśli chcesz.
+
+
+    > [!TIP]
+
+    > Gdy eksplorujesz C# (lub dowolnego języka programowania), będziesz robić błędy podczas pisania kodu. **Kompilatora** znajdzie te błędy i zgłosi je. Gdy dane wyjściowe zawierają komunikaty o błędach, Przyjrzyj się uważnie przykładowy kod i kod w oknie interaktywnym, aby zobaczyć, jak naprawić.
+
+    > To ćwiczenie pomoże Ci poznać strukturę kodu C#.
+
+
+    > [!NOTE]
+
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - title: Poznawanie kolejności operacji
   durationInMinutes: 7
   content: >
@@ -160,7 +237,9 @@ items:
     ```
 
 
-    Należy zauważyć, że odpowiedź jest bardzo zbliżona minimalnej (ujemnej) liczby całkowitej. Jest taka sama jak `min + 2`. Operacja dodawania **przepełnienie** dozwolone wartości liczb całkowitych.
+    Należy zauważyć, że odpowiedź jest bardzo zbliżona minimalnej (ujemnej) liczby całkowitej. Jest taka sama jak `min + 2`.
+
+    Operacja dodawania **przepełnienie** dozwolone wartości liczb całkowitych.
 
     Odpowiedzią jest bardzo duża liczba ujemna, ponieważ przepełnienie "zawinięcie" z największej możliwej liczby całkowitej do najmniejszej.
 
@@ -173,10 +252,142 @@ items:
     > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - title: Praca z typem double
   durationInMinutes: 5
-  content: "`double` Typu numerycznego reprezentuje liczbę zmiennoprzecinkową podwójnej precyzji. Te pojęcia mogą być dla Ciebie nowe. A **zmiennoprzecinkowa** numer jest przydatne do reprezentowania liczb niecałkowitoliczbowego, które mogą być bardzo małych lub dużych. **Podwójnej precyzji** oznacza, że te liczby są przechowywane z większą dokładnością niż **pojedynczej precyzji**. W przypadku współczesnych komputerów jest bardziej powszechne, aby użyć podwójnej precyzji niż pojedynczej precyzji liczb.\nPrzyjrzyjmy się. Wypróbuj poniższy kod w oknie interaktywnym i zobacz wynik:\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a  + b) / c;\nConsole.WriteLine(d);\n```\n\nNależy zauważyć, że odpowiedź obejmuje część dziesiętną ilorazu. Spróbuj nieco bardziej skomplikowanego wyrażenia z liczbami podwójnej precyzji:\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a  + b) / c;\nConsole.WriteLine(d);\n```\n\nZakres liczb podwójnej precyzji jest dużo większy niż liczb całkowitych. Wypróbuj poniższy kod w oknie interaktywnym:\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\nTe wartości są drukowane w notacji naukowej. Liczba po lewej stronie `E` to mantysa. Liczba po prawej stronie to wykładnik jako potęga 10. \n\nPodobnie jak liczb dziesiętnych w matematyce wartości podwójnej precyzji w języku C# mogą wystąpić błędy zaokrąglania. Wypróbuj ten kod:\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\nNależy pamiętać, że `0.3` powtarzanie nie jest dokładnie taka sama jak `1/3`.\n\n***Wyzwanie***\n\nSpróbuj innych obliczeń z dużą liczbą, małymi liczbami, mnożeniem i dzieleniem za pomocą `double` typu.  Spróbuj bardziej skomplikowanych obliczeń.\n\n> [!NOTE]\n> To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    `double` Typu numerycznego reprezentuje liczbę zmiennoprzecinkową podwójnej precyzji. Te pojęcia mogą być dla Ciebie nowe. A **zmiennoprzecinkowa** numer jest przydatne do reprezentowania liczb niecałkowitoliczbowego, które mogą być bardzo małych lub dużych. **Podwójnej precyzji** oznacza, że te liczby są przechowywane z większą dokładnością niż **pojedynczej precyzji**. W przypadku współczesnych komputerów jest bardziej powszechne, aby użyć podwójnej precyzji niż pojedynczej precyzji liczb.
+
+    Przyjrzyjmy się. Wypróbuj poniższy kod w oknie interaktywnym i zobacz wynik:
+
+
+    ```csharp
+
+    double a = 5;
+
+    double b = 4;
+
+    double c = 2;
+
+    double d = (a  + b) / c;
+
+    Console.WriteLine(d);
+
+    ```
+
+
+    Należy zauważyć, że odpowiedź obejmuje część dziesiętną ilorazu. Spróbuj nieco bardziej skomplikowanego wyrażenia z liczbami podwójnej precyzji:
+
+
+    ```csharp
+
+    double a = 19;
+
+    double b = 23;
+
+    double c = 8;
+
+    double d = (a  + b) / c;
+
+    Console.WriteLine(d);
+
+    ```
+
+
+    Zakres liczb podwójnej precyzji jest dużo większy niż liczb całkowitych. Wypróbuj poniższy kod w oknie interaktywnym:
+
+
+    ```csharp
+
+    double max = double.MaxValue;
+
+    double min = double.MinValue;
+
+    Console.WriteLine($"The range of double is {min} to {max}");
+
+    ```
+
+
+    Te wartości są drukowane w notacji naukowej. Liczba po lewej stronie `E` to mantysa. Liczba po prawej stronie to wykładnik jako potęga 10.
+
+
+    Podobnie jak liczb dziesiętnych w matematyce wartości podwójnej precyzji w języku C# mogą wystąpić błędy zaokrąglania. Wypróbuj ten kod:
+
+
+    ```csharp
+
+    double third = 1.0 / 3.0;
+
+    Console.WriteLine(third);
+
+    ```
+
+
+    Należy pamiętać, że `0.3` powtarzanie nie jest dokładnie taka sama jak `1/3`.
+
+
+    ***Wyzwanie***
+
+
+    Spróbuj innych obliczeń z dużą liczbą, małymi liczbami, mnożeniem i dzieleniem za pomocą `double` typu.  Spróbuj bardziej skomplikowanych obliczeń.
+
+
+    > [!NOTE]
+
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - title: Praca ze stałoprzecinkowymi typami
   durationInMinutes: 8
-  content: "W tym samouczku podstawowe typy danych liczbowych w języku C#: liczby całkowite i typ podwójnej precyzji.  Istnieje jeszcze jeden typ, aby dowiedzieć się więcej: `decimal` typu. `decimal` Typ ma mniejszy zakres, lecz większą precyzję niż `double`. Termin **Stałoprzecinkowy** oznacza, że punkt dziesiętny (lub binarny) nie jest przenoszony. Przyjrzyjmy się:\n\n```csharp\ndecimal min = decimal.MinValue;\ndecimal max = decimal.MaxValue;\nConsole.WriteLine($\"The range of the decimal type is {min} to {max}\");\n```\n\nNależy zauważyć, że zakres jest mniejszy niż `double` typu. Możesz zobaczyć większą precyzję typu dziesiętnego, wykonując następujący kod:\n\n```csharp\ndouble a = 1.0;\ndouble b = 3.0;\nConsole.WriteLine(a / b);\n\ndecimal c = 1.0M;\ndecimal d = 3.0M;\nConsole.WriteLine(c / d);\n```\n\n`M` Sufiks liczby jest wskazuje, że stałe powinny używać `decimal` typu.\n\nNależy zauważyć, że matematyczne liczbach typu dziesiętnego ma więcej cyfr po prawej stronie przecinka dziesiętnego. \n\n***Wyzwanie***\n\nTeraz, gdy różne typy liczbowe, należy napisać kod obliczający pole koła o promieniu jest kosztuje 2,50 cm. Należy pamiętać, że pole koła to promień pomnożony pomnożonej przez PI. Wskazówka: platforma .NET zawiera stałą dla liczby PI — <xref:System.Math.PI?displayProperty=nameWithType> używanego dla tej wartości. \n\n> [!NOTE]\n> To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).\n\nPowinna pojawić się odpowiedź zakresu 19-20.\n"
+  content: >
+    W tym samouczku podstawowe typy danych liczbowych w języku C#: liczby całkowite i typ podwójnej precyzji.  Istnieje jeszcze jeden typ, aby dowiedzieć się więcej: `decimal` typu. `decimal` Typ ma mniejszy zakres, lecz większą precyzję niż `double`. Termin **Stałoprzecinkowy** oznacza, że punkt dziesiętny (lub binarny) nie jest przenoszony. Przyjrzyjmy się:
+
+
+    ```csharp
+
+    decimal min = decimal.MinValue;
+
+    decimal max = decimal.MaxValue;
+
+    Console.WriteLine($"The range of the decimal type is {min} to {max}");
+
+    ```
+
+
+    Należy zauważyć, że zakres jest mniejszy niż `double` typu. Możesz zobaczyć większą precyzję typu dziesiętnego, wykonując następujący kod:
+
+
+    ```csharp
+
+    double a = 1.0;
+
+    double b = 3.0;
+
+    Console.WriteLine(a / b);
+
+
+    decimal c = 1.0M;
+
+    decimal d = 3.0M;
+
+    Console.WriteLine(c / d);
+
+    ```
+
+
+    `M` Sufiks liczby jest wskazuje, że stałe powinny używać `decimal` typu.
+
+
+    Należy zauważyć, że matematyczne liczbach typu dziesiętnego ma więcej cyfr po prawej stronie przecinka dziesiętnego.
+
+
+    ***Wyzwanie***
+
+
+    Teraz, gdy różne typy liczbowe, należy napisać kod obliczający pole koła o promieniu jest kosztuje 2,50 cm. Należy pamiętać, że pole koła to promień pomnożony pomnożonej przez PI. Wskazówka: platforma .NET zawiera stałą dla liczby PI — <xref:System.Math.PI?displayProperty=nameWithType> używanego dla tej wartości.
+
+
+    > [!NOTE]
+
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+
+
+    Powinna pojawić się odpowiedź zakresu 19-20.
 - title: Ukończenie wyzwania
   durationInMinutes: 1
   content: >

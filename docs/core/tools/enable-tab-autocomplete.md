@@ -4,14 +4,14 @@ description: Ten artykuł nauczy Cię sposobu włączania uzupełniania po naci�
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 10b2e13aad9821295efc5c36d1cad04f1a95477c
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 783868fb8300dd4a25c62a108c1c0f7a485721df
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53784407"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029609"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Jak włączyć uzupełnianie po naciśnięciu TABULATORA dla interfejsu wiersza polecenia platformy .NET Core
+# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Jak włączyć uzupełnianie po naciśnięciu TABULATORA dla wiersza polecenia platformy .NET Core
 
 Począwszy od programu .NET Core 2.0 SDK, interfejsu wiersza polecenia platformy .NET Core obsługuje uzupełnianie po naciśnięciu tabulatora. W tym artykule opisano sposób konfigurowania uzupełniania po naciśnięciu tabulatora dla trzech powłoki, programu PowerShell, Bash i zsh. Inne powłoki mogą mieć obsługę funkcji autouzupełniania. Zobacz ich dokumentację na temat konfigurowania funkcji autouzupełniania, kroki powinny być podobne do czynności opisanych w tym artykule.
 
@@ -28,7 +28,7 @@ migrate
 pack
 ```
 
-Jeśli polecenie nie działa, upewnij się, że zestaw .NET Core 2.0 SDK lub powyżej jest zainstalowany. Jeśli jest zainstalowany, ale polecenie nie działa, upewnij się, że `dotnet` polecenie usuwa do wersji programu .NET Core 2.0 i nowszych. Użyj `dotnet --version` polecenie, aby zobaczyć bieżącą wersję programu `dotnet` Twojej bieżącej ścieżki jest rozpoznawana. Aby uzyskać więcej informacji, zobacz [wybierz wersję platformy .NET Core do użycia](../versions/selection.md).
+Jeśli polecenie nie działa, upewnij się, że zestaw .NET Core 2.0 SDK lub powyżej jest zainstalowany. Jeśli jest zainstalowany, ale polecenie nie działa, upewnij się, że `dotnet` polecenie usuwa do wersji programu .NET Core 2.0 SDK lub jego nowszych wersjach. Użyj `dotnet --version` polecenie, aby zobaczyć bieżącą wersję programu `dotnet` Twojej bieżącej ścieżki jest rozpoznawana. Aby uzyskać więcej informacji, zobacz [wybierz wersję platformy .NET Core do użycia](../versions/selection.md).
 
 ### <a name="examples"></a>Przykłady
 

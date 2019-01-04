@@ -4,12 +4,12 @@ description: Dowiedz się, różnice i wykorzystuje wzorzec bramy interfejsu API
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152646"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030545"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą
 
@@ -41,7 +41,7 @@ Interakcja z wielu mikrousług, co umożliwia tworzenie jednego ekranu interfejs
 
 Implementowanie zabezpieczeń i odciąż przekrojowe zagadnienia, takie jak zabezpieczenia i autoryzacji w mikrousługach, co może wymagać znaczących postanowiło. Możliwych podejść jest tych usług w ramach wewnątrz klastra lub hosta platformy Docker, aby ograniczyć bezpośredni dostęp do nich z zewnątrz i do implementowania tych odciąż przekrojowe zagadnienia w centralnym miejscu, takie jak bramy interfejsu API.
 
-- Jak może aplikacje klienckie komunikować się z usługami, które używają protokołów innych niż Internet przyjazne? *
+- *Jak aplikacje klienckie mogą komunikować się z usługami, które używają protokołów innych niż przyjazne Internet?*
 
 Protokoły używane po stronie serwera (na przykład protokół AMQP lub protokołów binarnych) zwykle nie są obsługiwane w aplikacjach klienckich. W związku z tym żądania musi być wykonywane za pośrednictwem protokołów, takich jak HTTP/HTTPS i przetłumaczone na inne protokoły później. A *ataków typu man-in--middle* podejście może pomóc w takiej sytuacji.
 

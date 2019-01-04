@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485732"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030298"
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
 W tym temacie opisano terminy, które są używane do opisywania elementy składni XAML. Te warunki są często stosowane w pozostałej części tej dokumentacji, zarówno dla dokumentacji WPF specjalnie i dla innych platform, które używają XAML lub włączane przez obsługę języka XAML na poziomie System.Xaml podstawowe pojęcia dotyczące XAML. W tym temacie omówiono w podstawowej terminologii opisanymi w temacie [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -288,7 +288,7 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
   
 <a name="optional_and_nonrecommended_xaml_usages"></a>   
 ## <a name="optional-and-nonrecommended-xaml-usages"></a>Opcjonalne i Nonrecommended XAML użycia  
- W poniższych sekcjach opisano użycia XAML z technicznego punktu widzenia obsługiwane przez procesory XAML, ale który produkcji poziom szczegółowości lub inne estetycznych problemy, które zakłócają pozostałe czytelny dla człowieka, gdy pliki XAML swoje opracowywania aplikacji, które zawierają źródła XAML .  
+ W poniższych sekcjach opisano użycia XAML z technicznego punktu widzenia obsługiwane przez procesory XAML, ale która generuje poziom szczegółowości lub inne estetycznych problemy, które zakłócają pozostałe czytelny dla człowieka, podczas tworzenia aplikacji, które zawierają źródła XAML pliki XAML.  
   
 ### <a name="optional-property-element-usages"></a>Opcjonalna właściwość elementu użycia  
  Opcjonalna właściwość elementu użycia obejmują jawnie wypisywanie zawartości właściwości elementu czy procesor XAML uwzględnia niejawne. Na przykład, kiedy Deklarujesz zawartość <xref:System.Windows.Controls.Menu>, można jawnie deklarować <xref:System.Windows.Controls.ItemsControl.Items%2A> zbiór <xref:System.Windows.Controls.Menu> jako `<Menu.Items>` tagu elementu właściwości, a miejsce każdego <xref:System.Windows.Controls.MenuItem> w ramach `<Menu.Items>`, a niż użycie niejawnej zachowanie procesora XAML, wszystkie elementy podrzędne elementu <xref:System.Windows.Controls.Menu> musi być <xref:System.Windows.Controls.MenuItem> i są umieszczane w <xref:System.Windows.Controls.ItemsControl.Items%2A> kolekcji. Czasami opcjonalne użycia może pomóc wizualnie wyjaśnienie struktury obiektu reprezentowane w znaczniku. Lub czasami użycie elementu właściwości jawne można uniknąć znaczników, który jest technicznie funkcjonalności, ale wizualnie mylące, takie jak rozszerzenia znaczników zagnieżdżone w obrębie wartość atrybutu.  
@@ -317,7 +317,7 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Przestrzeń nazw XAML (x:) — funkcje językowe](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [Namespace XAML (x:) Funkcje językowe](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [Rozszerzenia WPF XAML](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
  [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [TypeConverters i XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  

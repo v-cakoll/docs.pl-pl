@@ -3,12 +3,12 @@ title: Temat platformy .NET Core
 description: Dowiedz się więcej na temat platformy .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170408"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058558"
 ---
 # <a name="about-net-core"></a>Temat platformy .NET Core
 
@@ -95,7 +95,7 @@ Być może najłatwiej jest poznać wielkość i kształt platformy .NET Core, p
 
 Najważniejsze różnice między .NET Core i .NET Framework:
 
-- **Modele aplikacji** — .NET Core nie obsługuje wszystkich .NET Framework — modele aplikacji. W szczególności nie obsługuje, MVC i formularzy sieci Web platformy ASP.NET. Ogłoszono go, [.NET Core 3 będzie obsługiwać WPF i formularze Windows](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
+- **Modele aplikacji** — .NET Core nie obsługuje wszystkich .NET Framework — modele aplikacji. W szczególności program nie obsługuje platformy ASP.NET MVC i formularzy sieci Web platformy ASP.NET, ale obsługuje ona ASP.NET Core MVC. Ogłoszono go, [.NET Core 3 będzie obsługiwać WPF i formularze Windows](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
 - **Interfejsy API** — .NET Core zawiera dużego podzbioru .NET Framework Biblioteka klasy podstawowej, przy użyciu różnych wyprowadzenie (nazwy zestawu różnią się; elementy eksponowane na typach różnią się w przypadku klucza). Te różnice wymagają zmiany portu źródłowego platformę .NET Core, w niektórych przypadkach (zobacz [dotnet/microsoft-apiport](https://github.com/microsoft/dotnet-apiport)). Implementuje platformy .NET core [.NET Standard](../standard/net-standard.md) specyfikacji interfejsu API.
 - **Podsystemy** — .NET Core implementuje podzbiór podsystemów w programie .NET Framework w celu wykonania prostsze i modelu programowania. Na przykład zabezpieczenia dostępu kodu (CAS) jest nieobsługiwana, gdy odbicie jest obsługiwana.
 - **Platform** — .NET Framework obsługuje Windows i Windows Server, a .NET Core obsługuje również w systemach macOS i Linux.

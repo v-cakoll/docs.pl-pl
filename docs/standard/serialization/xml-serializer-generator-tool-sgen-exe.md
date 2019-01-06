@@ -2,12 +2,12 @@
 title: Narzędzie generatora serializatora XML (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 1e11a4d762950b4227b0a9accef10500fd89886d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2091c75f5aeef8b64ac9afa361f28dbe0b76530b
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148122"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058311"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Narzędzie generatora serializatora XML (Sgen.exe)
 Generator serializatora XML tworzy zestawu serializacji XML dla typów w określonym zestawie w celu zwiększenia wydajności uruchamiania <xref:System.Xml.Serialization.XmlSerializer> po serializuje lub deserializuje obiektów określonego typu.  
@@ -22,19 +22,19 @@ sgen [options]
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/a**[**zestawu**]**:**_nazwy pliku_|Generuje kod serializacji dla wszystkich typów zawartych w zestawie lub plik wykonywalny określony przez *filename*. Można uwzględnić tylko jeden PLik. Jeśli ten argument jest powtarzany, nazwisko PLik jest używany.|  
-|**/c [ompiler]:** *opcje*|Określa opcje do przekazania do kompilatora C#. Wszystkie opcje csc.exe są obsługiwane, gdy przekazywane do kompilator. To może posłużyć do określenia zestawu powinny być podpisane i określ PLik klucza.|  
-|**/d**[**ebug**]|Generuje obrazu, który może być używany z debugera.|  
-|**/f [orce]**|Wymusza zastępowanie istniejącego zestawu o tej samej nazwie. Wartość domyślna to **false**.|  
+|**/a\[zestawu\]:**_nazwy pliku_|Generuje kod serializacji dla wszystkich typów zawartych w zestawie lub plik wykonywalny określony przez *filename*. Można uwzględnić tylko jeden PLik. Jeśli ten argument jest powtarzany, nazwisko PLik jest używany.|  
+|**/c\[ompiler\]:**_opcje_|Określa opcje do przekazania do kompilatora C#. Wszystkie opcje csc.exe są obsługiwane, gdy przekazywane do kompilator. To może posłużyć do określenia zestawu powinny być podpisane i określ PLik klucza.|  
+|**/d\[ebug\]**|Generuje obrazu, który może być używany z debugera.|  
+|**/f\[orce\]**|Wymusza zastępowanie istniejącego zestawu o tej samej nazwie. Wartość domyślna to **false**.|  
 |**/ help lub /?**|Wyświetla składnię polecenia i opcje narzędzia.|  
-|**/k**[**Zachowaj**]|Pomija usuwanie wygenerowanych PLików źródłowych i innych PLików tymczasowych po zostały skompilowane do zestawu serializacji. To może posłużyć do określenia, czy to narzędzie jest generowania kodu serializacji dla danego typu.|  
-|**/n**[**ologo**]|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
-|**/o**[**ut**]**:**_ścieżki_|Określa katalog, w którym chcesz zapisać wygenerowanego zestawu. **Uwaga:**  Nazwa zestawu wygenerowanego składa się z nazwy zestawu wejściowego oraz "xmlSerializers.dll".|  
-|**/p**[**roxytypes**]|Generuje kod serializacji tylko dla typów serwera proxy usług sieci Web XML.|  
-|**/r**[**większ**]**:**_assemblyfiles_|Określa zestawy, które są określone przez typy wymagające serializacji XML. Akceptuje kilka plików zestawu oddzielonych przecinkami.|  
-|**/s**[**ilent**]|Pomija wyświetlanie komunikatów o sukcesie.|  
-|**/t**[**yp**]**:**_typu_|Generuje kod serializacji tylko dla określonego typu.|  
-|**/v**[**erbose**]|Wyświetla pełne dane wyjściowe do debugowania. Wyświetla listę typów z zestawu docelowego, który nie może być serializowany z <xref:System.Xml.Serialization.XmlSerializer>.|  
+|**/k\[Zachowaj\]**|Pomija usuwanie wygenerowanych PLików źródłowych i innych PLików tymczasowych po zostały skompilowane do zestawu serializacji. To może posłużyć do określenia, czy to narzędzie jest generowania kodu serializacji dla danego typu.|  
+|**/n\[ologo\]**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
+|**/o\[ut\]:**_ścieżki_|Określa katalog, w którym chcesz zapisać wygenerowanego zestawu. **Uwaga:**  Nazwa zestawu wygenerowanego składa się z nazwy zestawu wejściowego oraz "xmlSerializers.dll".|  
+|**/p\[roxytypes\]**|Generuje kod serializacji tylko dla typów serwera proxy usług sieci Web XML.|  
+|**/r\[większ\]:**_assemblyfiles_|Określa zestawy, które są określone przez typy wymagające serializacji XML. Akceptuje kilka plików zestawu oddzielonych przecinkami.|  
+|**/s\[ilent\]**|Pomija wyświetlanie komunikatów o sukcesie.|  
+|**/t\[yp\]:**_typu_|Generuje kod serializacji tylko dla określonego typu.|  
+|**/v\[erbose\]**|Wyświetla pełne dane wyjściowe do debugowania. Wyświetla listę typów z zestawu docelowego, który nie może być serializowany z <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  

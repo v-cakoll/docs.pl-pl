@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3fdacd5beb2c6cbfc631d58e99a8741f7a6b233c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f3054ca74efbd09449f43e0654734bfe10e3a7c0
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243985"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058337"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testowanie jednostek w .NET Core i .NET Standard
 
@@ -43,7 +43,7 @@ Projekty testów jednostkowych .NET core są obsługiwane:
 Można również wybrać:
 * [xUnit](https://xunit.github.io) 
 * [NUnit](https://nunit.org)
-* [MSTest](https://github.com/Microsoft/vstest-docs)
+* [MSTest](https://github.com/Microsoft/testfx-docs)
 
 Możesz dowiedzieć się więcej, zobacz następujące instruktaże:
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: e2fdb92ad2f044aa74201676ed8cb89bb51de5f5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dfbeb5ff94f39e8d8df03feea9ff55db748d2182
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239842"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058584"
 ---
 # <a name="readonly-c-reference"></a>readonly (odwołanie w C#)
 
@@ -45,7 +45,7 @@ public readonly int y = 5;
 Tych kontekstach Konstruktor są również tylko kontekstów, w których jest on prawidłowy do przekazania `readonly` pola jako [się](out-parameter-modifier.md) lub [ref](ref.md) parametru.
 
 > [!NOTE]
-> `readonly` — Słowo kluczowe różni się od [const](const.md) — słowo kluczowe. A `const` pola mogą być inicjowane tylko na deklarację pola. A `readonly` pola można przypisać wiele razy w deklaracji pola lub w dowolny Konstruktor. W związku z tym `readonly` pola mogą mieć różne wartości w zależności od używanego konstruktora. Ponadto, podczas gdy `const` pole jest stałą czasu kompilacji `readonly` pole może być używane dla stałych środowiska uruchomieniowego, jak w poniższym przykładzie:
+> `readonly` — Słowo kluczowe różni się od [const](const.md) — słowo kluczowe. A `const` pola mogą być inicjowane tylko na deklarację pola. A `readonly` pola można przypisać wiele razy w deklarację pola i dowolny Konstruktor. W związku z tym `readonly` pola mogą mieć różne wartości w zależności od używanego konstruktora. Ponadto, podczas gdy `const` pole jest stałą czasu kompilacji `readonly` pole może być używane dla stałych środowiska uruchomieniowego, jak w poniższym przykładzie:
 
 ```csharp
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;

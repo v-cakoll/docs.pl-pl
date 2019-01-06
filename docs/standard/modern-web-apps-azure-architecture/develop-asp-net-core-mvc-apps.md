@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aed0ba4621eab91dd47df9ef760fdf8c39ff1103
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152785"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058506"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Tworzenie platformy ASP.NET Core MVC aplikacji
 
@@ -69,13 +69,13 @@ W przypadku internetowych interfejsów API obsługuje platformy ASP.NET Core MVC
 > ### <a name="references--mapping-requests-to-responses"></a>Odwołania — mapowania żądania do odpowiedzi
 >
 > - **Routing do akcji kontrolera**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
 > - **Wiązanie modelu**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **Walidacja modelu**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **Filtry**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>Praca z zależnościami
 
@@ -213,7 +213,7 @@ Miarę wzrostu aplikacji, staje się coraz ważniejsze wyodrębnić odciąż prz
 
 Wykonanie żądania na rysunku 7-2 przy użyciu filtrów i potok żądań.
 
-Filtry zwykle są implementowane jako atrybuty, dzięki czemu można je stosować kontrolerów i akcji. Po dodaniu w taki sposób, filtry określone zastąpienia poziomie akcji lub bazują filtry określone na poziomie kontrolera znacznej zastąpić filtrów globalnych. Na przykład \[trasy\] atrybut może służyć do zbudowania tras między kontrolerów i akcji. Podobnie autoryzacji można konfigurować na poziomie kontrolera i następnie zastępowane przez poszczególne akcje, tak jak pokazano w następującym przykładzie:
+Filtry zwykle są implementowane jako atrybuty, dzięki czemu można je zastosować do kontrolerów i akcji (lub nawet globalnie). Po dodaniu w taki sposób, filtry określone zastąpienia poziomie akcji lub bazują filtry określone na poziomie kontrolera znacznej zastąpić filtrów globalnych. Na przykład \[trasy\] atrybut może służyć do zbudowania tras między kontrolerów i akcji. Podobnie autoryzacji można konfigurować na poziomie kontrolera i następnie zastępowane przez poszczególne akcje, tak jak pokazano w następującym przykładzie:
 
 ```csharp
 [Authorize]
@@ -282,7 +282,7 @@ Możesz dowiedzieć się więcej o implementacji filtry i pobrać przykładowy p
 > - **Obszary**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine — wycinki funkcji dla platformy ASP.NET Core MVC**  
- > <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtry**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN — rzeczywistych platformy ASP.NET Core MVC filtry**  

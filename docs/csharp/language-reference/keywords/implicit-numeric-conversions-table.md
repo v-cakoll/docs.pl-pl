@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 98774a0f7ad86e43178c6d0216e29e7b4767f3f2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ab6506e619c675ddd68237c4ddca870e9e14098f
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235257"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058467"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabela niejawnych konwersji liczbowych (odwołanie w C#)
 
@@ -23,14 +23,14 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowanych niejawne konwersje mi
 |----------|--------|  
 |[sbyte](sbyte.md)|`short`, `int`, `long`, `float`, `double`, lub `decimal`|  
 |[byte](byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
+|[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
 |[short](short.md)|`int`, `long`, `float`, `double`, lub `decimal`|  
 |[ushort](ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
 |[int](int.md)|`long`, `float`, `double`, lub `decimal`|  
 |[uint](uint.md)|`long`, `ulong`, `float`, `double`, lub `decimal`|  
 |[long](long.md)|`float`, `double`, lub `decimal`|  
-|[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, lub `decimal`|  
-|[float](float.md)|`double`|  
 |[ulong](ulong.md)|`float`, `double`, lub `decimal`|  
+|[float](float.md)|`double`|  
   
 ## <a name="remarks"></a>Uwagi  
 
@@ -38,9 +38,11 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowanych niejawne konwersje mi
 
 - Dokładności, ale wartość nie może być utracone w konwersje z `int`, `uint`, `long`, lub `ulong` do `float` i `long` lub `ulong` do `double`.  
   
-- Brak konwersji niejawnych do `char` typu.  
+- Brak konwersji niejawnych do `char`, `byte` i `sbyte` typów.  
+
+- Brak niejawnej konwersji z `char`, `double` i `decimal` typów.
   
-- Brak niejawnej konwersji między `float` i `double` typów i `decimal` typu.  
+- Brak niejawnej konwersji między `decimal` typu i `float` lub `double` typów.  
   
 - Wartości stałe wyrażenia typu `int` (na przykład, wartość reprezentowany przez całkowite literał) mogą być konwertowane na `sbyte`, `byte`, `short`, `ushort`, `uint`, lub `ulong`, o ile ma on w zakresie typu miejsca docelowego:
 

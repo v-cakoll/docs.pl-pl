@@ -2,12 +2,12 @@
 title: Tworzenie atrybutów niestandardowych (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 5a846771eb26e3760e3f47458b862356f4da1ae6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0a27924623cc462f6d3339149718a1b29999ac1d
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503709"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058272"
 ---
 # <a name="creating-custom-attributes-c"></a>Tworzenie atrybutów niestandardowych (C#)
 Można utworzyć własne niestandardowe atrybuty, definiując klasę atrybutów klasy, która pochodzi bezpośrednio lub pośrednio z <xref:System.Attribute>, co sprawia, że identyfikowanie definicji atrybutów w metadanych jest łatwe i szybkie. Załóżmy, że chcesz typy tag o nazwie programisty, który napisał typu. Można zdefiniować niestandardowy `Author` klasy atrybutu:  
@@ -62,9 +62,6 @@ class SampleClass
     // R. Koch's code goes here...  
 }  
 ```  
-  
-> [!NOTE]
->  Jeśli atrybut klasy zawiera właściwości, ta właściwość musi być odczytu i zapisu.  
   
 ## <a name="see-also"></a>Zobacz też
 

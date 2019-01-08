@@ -1,15 +1,15 @@
 ---
 title: Aplikacje bazujące na proces programistyczny dla platformy Docker
-description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Aplikacje bazujące na proces programistyczny dla platformy Docker
+description: Uzyskaj Przegląd wysokiego poziomu opcji do tworzenia aplikacji opartych na platformie Docker. Przy użyciu wybranego programu Visual Studio for Windows, Visual Studio for Mac lub Visual Studio Code obsługi dla wielu platform (Windows, Mac i Linux).
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: 7736c1fe4cb1a2a4553ba36cecceab37e2fe90c4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 09/27/2018
+ms.openlocfilehash: eb87f9a214dbffe71dae1e1739f2563c08fac280
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144471"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084930"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Proces programistyczny dotyczący aplikacji opartych na platformie Docker
 
@@ -21,24 +21,24 @@ ms.locfileid: "53144471"
 
 Czy wolisz, pełne i zaawansowanego środowiska IDE lub edytora lekkie i elastyczne, firma Microsoft ma narzędzia, które służą do tworzenia aplikacji platformy Docker.
 
-**Program Visual Studio (for Windows)**. Tworzenie aplikacji opartych na platformie Docker, użyj programu Visual Studio 2017 lub nowsze wersje, które jest dostarczany za pomocą narzędzi dla platformy Docker wbudowane. Tools for Docker umożliwiają tworzenie, uruchamianie i Weryfikuj aplikacje bezpośrednio w docelowym środowisku platformy Docker. Naciśnij klawisz F5, aby uruchomić i zdebugować aplikację (jeden kontener lub wiele kontenerów) bezpośrednio do hosta platformy Docker lub naciśnij klawisze CTRL + F5, aby edytować i odświeżać aplikację bez konieczności ponownego kompilowania kontenera. Jest to najbardziej wydajnymi procesorami wybór rozwój aplikacji opartych na platformie Docker.
+**Program Visual Studio (for Windows).** Podczas opracowywania aplikacji platformy Docker za pomocą programu Visual Studio, zaleca się używać programu Visual Studio 2017 w wersji 15.7 lub nowszej, dostarczanego z tools for Docker wbudowane. Tools for Docker umożliwiają tworzenie, uruchamianie i Weryfikuj aplikacje bezpośrednio w docelowym środowisku platformy Docker. Naciśnij klawisz F5, aby uruchomić i zdebugować aplikację (jeden kontener lub wiele kontenerów) bezpośrednio do hosta platformy Docker lub naciśnij klawisze CTRL + F5, aby edytować i odświeżać aplikację bez konieczności ponownego kompilowania kontenera. Jest to najbardziej wydajnymi procesorami wybór rozwój aplikacji opartych na platformie Docker.
 
-**Visual Studio for Mac**. To środowisko IDE rozwoju programu Xamarin Studio, która działa w systemie macOS i obsługuje opracowywanie aplikacji opartych na platformie Docker. Powinna to być preferowanych przez dla deweloperów pracujących w komputerów Mac, również chcą korzystać z zaawansowanego środowiska IDE.
+**Program Visual Studio dla komputerów Mac.** Jest środowisko IDE rozwoju programu Xamarin Studio działające w systemach macOS i obsługuje platformę Docker od połowy 2017. Powinna to być preferowanych przez dla deweloperów pracujących w komputerów Mac, również chcą korzystać z zaawansowanego środowiska IDE.
 
-**Visual Studio Code i platformy Docker CLI**. Jeśli wolisz lekkie i Międzyplatformowe edytor, który obsługuje dowolny język programowania, można użyć programu Microsoft Visual Studio Code (VS Code) i interfejsu wiersza polecenia platformy Docker. Jest to podejście wieloplatformowego opracowywania aplikacji dla komputerów Mac, Linux i Windows.
+**Visual Studio Code i platformy Docker CLI**. Jeśli wolisz lekkie i Międzyplatformowe edytor, który obsługuje dowolny język programowania, można użyć programu Microsoft Visual Studio Code (VS Code) i interfejsu wiersza polecenia platformy Docker. Jest to podejście wieloplatformowego opracowywania aplikacji dla komputerów Mac, Linux i Windows. Ponadto Visual Studio Code obsługuje rozszerzenia dla platformy Docker, takie jak IntelliSense dla plików Dockerfile i skrót zadania to uruchamianie poleceń Docker z poziomu edytora.
 
-Instalując [Docker Community Edition (CE)](https://www.docker.com/community-edition) narzędzi, można użyć pojedynczego interfejsu wiersza polecenia platformy Docker do tworzenia aplikacji dla systemów Windows i Linux. Ponadto Visual Studio Code obsługuje rozszerzenia dla platformy Docker, takie jak IntelliSense dla plików Dockerfile i skrót zadania to uruchamianie poleceń Docker z poziomu edytora.
+Instalując [Docker Community Edition (CE)](https://www.docker.com/community-edition) narzędzi, można użyć pojedynczego interfejsu wiersza polecenia platformy Docker do tworzenia aplikacji dla systemów Windows i Linux.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Visual Studio Tools for Docker**
-    [*https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker*](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
+- **Program Visual Studio**. Oficjalna witryna. \
+  [*https://visualstudio.microsoft.com/vs/*](https://visualstudio.microsoft.com/vs/)
 
--   **Program Visual Studio Code** Oficjalna witryna.
-    [*https://code.visualstudio.com/download*](https://code.visualstudio.com/download)
+- **Program Visual Studio Code** Oficjalna witryna. \
+  [*https://code.visualstudio.com/download*](https://code.visualstudio.com/download)
 
--   **Platformę docker Community Edition (CE) dla systemów Mac i Windows**
-    [*https://www.docker.com/community-editions*](https://www.docker.com/community-edition)
+- **Platformę docker Community Edition (CE) dla systemów Mac i Windows** \
+  [*https://www.docker.com/community-editions*](https://www.docker.com/community-edition)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>.NET, języków i struktur dla kontenerów Docker
 

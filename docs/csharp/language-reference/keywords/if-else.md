@@ -11,16 +11,16 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: 86a7a7aa480cec6fcaf8142a4d41e4cd188d9b80
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ccb783d8d478b14078ab6fe09f12e480c12ac06b
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242207"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084774"
 ---
 # <a name="if-else-c-reference"></a>if-else (odwołanie w C#)
 
-`if` Instrukcja identyfikuje, które instrukcji do uruchomienia na podstawie wartości wyrażenia logicznego. W poniższym przykładzie `bool` zmiennej `result` ustawiono `true` i następnie zaewidencjonować `if` instrukcji. Dane wyjściowe są `The variable is set to true.`.
+`if` Instrukcja identyfikuje, które instrukcji do uruchomienia na podstawie wartości wyrażenia logicznego. W poniższym przykładzie `bool` zmiennej `condition` ustawiono `true` i następnie zaewidencjonować `if` instrukcji. Dane wyjściowe są `The variable is set to true.`.
 
 [!code-csharp[csrefKeywordsSelection#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#1)]
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188615"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084722"
 ---
 # <a name="switch-c-reference"></a>Switch (odwołanie w C#)
 
@@ -88,7 +88,7 @@ Instrukcje dotyczące `switch` instrukcji i dopasowywania do wzorca, zobacz [dop
 
 Ponieważ języka C# 6 obsługuje tylko stałe wzorzec i nie zezwala na powtórzenia wartości stałych, etykiet case zdefiniować wartości wzajemnie się wykluczają i tylko jeden wzorzec może być zgodna z wyrażeniem dopasowania. W rezultacie, kolejność, w której `case` instrukcje są wyświetlane, nie ma znaczenia.
 
-W języku C# 7.0, ponieważ inne wzorce są obsługiwane, etykiet case nie muszą definiować wartości wzajemnie się wykluczają i wielu wzorców może odnosić się wyrażenie dopasowania. Ponieważ wykonywane są tylko instrukcje w sekcji przełącznika, który zawiera definicję wzorca pierwszego dopasowania, kolejność, w której `case` instrukcje pojawiają się teraz jest ważne. Jeśli C# wykryje sekcji przełącznika, których instrukcji case instrukcje są równoważne lub są podzbiorem poprzednich instrukcji, generuje błąd kompilatora, CS8120, "przypadku switch została już obsłużona przez poprzednią etykietę case."
+W języku C# 7.0, ponieważ inne wzorce są obsługiwane, etykiet case nie muszą definiować wartości wzajemnie się wykluczają i wielu wzorców może odnosić się wyrażenie dopasowania. Ponieważ wykonywane są tylko instrukcje w pierwszej sekcji przełącznika, który zawiera pasującego wzorca, kolejność, w której `case` instrukcje pojawiają się teraz jest ważne. Jeśli C# wykryje sekcji przełącznika, których instrukcji case instrukcje są równoważne lub są podzbiorem poprzednich instrukcji, generuje błąd kompilatora, CS8120, "przypadku switch została już obsłużona przez poprzednią etykietę case."
 
 W poniższym przykładzie pokazano `switch` instrukcję, która korzysta z rozmaitych wzorców bez wzajemnie się wykluczają. Jeśli przeniesiesz `case 0:` Przełącz sekcję, tak aby nie jest już pierwszej sekcji `switch` instrukcja języka C#, generuje błąd kompilatora, ponieważ liczbą całkowitą, którego wartość jest równa zero jest podzestawem wszystkich liczb całkowitych, czyli wzorca określonego przez `case int val` Instrukcja.
 

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-ms.openlocfilehash: 57b1bebb95c1b3f24e550d554fe369d931d6f6b4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4f5d82e0ccdffcb694e3030aabe58b8da687a5e1
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241804"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084800"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Jak uzyskać dostęp do elementu tablicy za pomocą wskaźnika (C# Programming Guide)
 
@@ -24,7 +24,7 @@ for (int i = 65; i < 123; i++)
 }
 ```
 
-Wyrażenie w nawiasach kwadratowych musi umożliwiać niejawną konwersję na `int`, `uint`, `long`, lub `ulong`. Operacja p [e] jest odpowiednikiem \*(p + e). Podobnie jak C i C++, dostępu do elementu wskaźnik nie sprawdza obecności liczbach błędy.
+Wyrażenie w nawiasach kwadratowych musi umożliwiać niejawną konwersję na `int`, `uint`, `long`, lub `ulong`. Operacja `p[e]` jest odpowiednikiem `*(p+e)`. Podobnie jak C i C++, dostępu do elementu wskaźnik nie sprawdza obecności liczbach błędy.
 
 ## <a name="example"></a>Przykład
 

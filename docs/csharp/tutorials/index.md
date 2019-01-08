@@ -2,12 +2,12 @@
 title: Samouczki języka C#
 description: Zapoznaj się z tych C# samouczki, aby dowiedzieć się, jak tworzyć C# programów i ucz się C# funkcje języka.
 ms.date: 10/25/2018
-ms.openlocfilehash: 2e7981c0b958e6ff4682dc502b83766f56d6c528
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195128"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084670"
 ---
 # <a name="c-tutorials"></a>Samouczki języka C#
 
@@ -47,20 +47,18 @@ Ten samouczek zakłada, Zakończono lekcje wymienionych powyżej.
 
 Wprowadzających samouczków po lekcji Witaj, świecie są dostępne w środowisku projektowym lokalnego. Na koniec każdego samouczka zdecyduj, czy chcesz kontynuować z następnej lekcji online lub na własnym komputerze. Brak łącza, które ułatwiają konfigurowanie środowiska i przejdź do następnego samouczka na komputerze.
 
+## <a name="explore-new-features-in-c"></a>Poznaj nowe funkcjeC# #
+
+Wypróbuj nowe funkcje w [ C# 6](../whats-new/csharp-6.md) w tym [możliwość interaktywnego eksplorowania](exploration/csharp-6.yml).
+
 ## <a name="general-tutorials"></a>Samouczki ogólne
 
 Następujące samouczki umożliwiają tworzenie C# programy przy użyciu [platformy .NET Core](../../core/index.md):
 
 * [Aplikacja konsoli](console-teleprompter.md): Pokazuje konsoli operacje We/Wy, struktury aplikacji konsoli i podstawy opartego na zadaniach asynchronicznego modelu programowania.
-
 * [Klient REST](console-webapiclient.md): demonstruje komunikacji w sieci web, serializację JSON i funkcji zorientowanych obiektowo w C# języka.
-
 * [Dziedziczenie w C# i .NET](inheritance.md): Pokazuje dziedziczenie w C#, łącznie z użyciem dziedziczenia, aby zdefiniować klas bazowych, abstrakcyjne klasy podstawowe i klasach pochodnych.
-
 * [Praca z technologią LINQ](working-with-linq.md): Pokazuje wiele funkcji LINQ i elementów języka, które go obsługują.
-
-* [Mikrousługi hostowane na platformie Docker](microservices.md): Pokazuje, tworzenia mikrousług platformy ASP.NET Core, a następnie hostując go na platformie Docker.
-
 * [Interpolacja ciągów](string-interpolation.md): Pokazuje, jak używać Interpolacja ciągów w celu utworzenia sformatowane ciągi w C#.
-
 * [Przy użyciu atrybutów](attributes.md): Pokazuje, jak utworzyć i używać atrybutów w C#.
+* [Typy dopuszczające wartości null odwołań](nullable-reference-types.md): Pokazuje sposób użycia typy dopuszczające wartości null odwołanie do wyrażenia zgodne z zamiarami użytkownika dla odwołania o wartości null.

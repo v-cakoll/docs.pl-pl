@@ -2,18 +2,18 @@
 title: Omówienie odnajdywania WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 24d758502e360a8368be25c506b8648b12a3eb20
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: 8f89a3b52728f10a0d0e0544f3663c9af13488c9
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44494255"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084943"
 ---
 # <a name="wcf-discovery-overview"></a>Omówienie odnajdywania WCF
 API odnajdywania udostępniają jednolity model programowania do opublikowania dynamiczne i odnajdywania usług sieci Web przy użyciu protokołu WS Discovery. Te interfejsy API umożliwiają services, aby publikować z nimi i klientów w celu znalezienia opublikowanych usług. Gdy usługa jest wykrywalne, usługa ma możliwość wysyłania komunikatów Anons, a także nasłuchiwania i odpowiadania na żądania odnajdywania. Wykrywalny usług można wysłać wiadomości powitania poinformować ich przybycia w sieci i Bye komunikaty, aby poinformować o ich wyjścia z sieci. Aby znaleźć usługi, klienci wysyłają `Probe` żądanie, które zawiera określone kryteria, takich jak typ kontraktu usługi, słowa kluczowe i zakresu w sieci. Usługi odbierać `Probe` żądania i określić, czy spełniają kryteria. Jeśli usługa jest zgodny, odpowie, wysyłając `ProbeMatch` wiadomość do klienta przy użyciu informacji niezbędnych do kontaktu z usługą. Klienci mogą również wysyłać `Resolve` żądań, które pozwalają znaleźć usług, które uległy zmianie adresu punktu końcowego. Zgodnych usług odpowiadanie na `Resolve` żądań, wysyłając `ResolveMatch` wiadomość do klienta.  
   
 ## <a name="ad-hoc-and-managed-modes"></a>Tryby zarządzanych i Ad-Hoc  
- Interfejs API Discovery obsługuje dwa różne tryby: zarządzanych i Ad-Hoc. Zarządzany tryb ma centralny serwer o nazwie serwera proxy odnajdywania, która przechowuje informacje o dostępnych usługach. Serwera proxy odnajdywania można wypełnić przy użyciu informacji o usługach różne sposoby. Na przykład services wysłać komunikaty anonsów podczas uruchamiania serwera proxy odnajdywania lub serwer proxy może odczytywać dane z bazy danych lub plik konfiguracji, aby ustalić, jakie usługi są dostępne. Jak jest wypełniana serwera proxy odnajdywania zależy wyłącznie od dewelopera. Klienci używają serwera proxy odnajdywania można pobrać informacji o dostępnych usługach. Gdy klient wyszukuje usługa go wysyła `Probe` wiadomość do serwera proxy odnajdywania i serwer proxy Określa, czy spełniają dowolnej usługi bez informacji o usługa korzysta z klienta. W przypadku dopasowania wysyła serwera proxy odnajdywania `ProbeMatch` odpowiedź z powrotem do klienta. Klient może, skontaktuj się z usługi bezpośrednio przy użyciu usługi informacje zwrócone z serwera proxy. Zasady kluczy za zarządzany tryb jest, że żądań odnajdywania są wysyłane w sposób emisji pojedynczej na jeden urząd, serwera proxy odnajdywania. .NET Framework zawiera najważniejsze składniki, które pozwalają na tworzenie własnego serwera proxy. Klienci i usługi mogą zlokalizować serwer proxy przy użyciu wielu metod:  
+ Interfejs API Discovery obsługuje dwa różne tryby: Zarządzana i Ad-Hoc. Zarządzany tryb ma centralny serwer o nazwie serwera proxy odnajdywania, która przechowuje informacje o dostępnych usługach. Serwera proxy odnajdywania można wypełnić przy użyciu informacji o usługach różne sposoby. Na przykład services wysłać komunikaty anonsów podczas uruchamiania serwera proxy odnajdywania lub serwer proxy może odczytywać dane z bazy danych lub plik konfiguracji, aby ustalić, jakie usługi są dostępne. Jak jest wypełniana serwera proxy odnajdywania zależy wyłącznie od dewelopera. Klienci używają serwera proxy odnajdywania można pobrać informacji o dostępnych usługach. Gdy klient wyszukuje usługa go wysyła `Probe` wiadomość do serwera proxy odnajdywania i serwer proxy Określa, czy spełniają dowolnej usługi bez informacji o usługa korzysta z klienta. W przypadku dopasowania wysyła serwera proxy odnajdywania `ProbeMatch` odpowiedź z powrotem do klienta. Klient może, skontaktuj się z usługi bezpośrednio przy użyciu usługi informacje zwrócone z serwera proxy. Zasady kluczy za zarządzany tryb jest, że żądań odnajdywania są wysyłane w sposób emisji pojedynczej na jeden urząd, serwera proxy odnajdywania. .NET Framework zawiera najważniejsze składniki, które pozwalają na tworzenie własnego serwera proxy. Klienci i usługi mogą zlokalizować serwer proxy przy użyciu wielu metod:  
   
 -   Serwer proxy mogą odpowiadać na komunikaty ad hoc.  
   
@@ -74,7 +74,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
     // ** DISCOVERY ** //
     // Make the service discoverable by adding the discovery behavior
     ServiceDiscoveryBehavior discoveryBehavior = new ServiceDiscoveryBehavior();
-    serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());
+    serviceHost.Description.Behaviors.Add(discoveryBehavior);
 
     // Send announcements on UDP multicast transport
     discoveryBehavior.AnnouncementEndpoints.Add(
@@ -155,7 +155,7 @@ class Client
   
 2.  Komunikować się w imieniu usługi za pomocą serwera proxy odnajdywania  
   
- Windows Server AppFabric ma funkcję automatycznego uruchamiania, która umożliwi usługi do uruchomienia przed odbierał komunikaty. Auto-Start zestawu usług IIS / WAS hostowanej usługi można skonfigurować jako wykrywalne. Aby uzyskać więcej informacji na temat automatycznego uruchamiania funkcji, zobacz [systemu Windows Server AppFabric Auto-Start funkcji](https://go.microsoft.com/fwlink/?LinkId=205545). Wraz z włączając funkcję automatycznego uruchamiania, należy skonfigurować usługę odnajdywania. Aby uzyskać więcej informacji, zobacz [instrukcje: programowe Dodawanie możliwości odnajdywania do usługi i klienta WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Konfigurowanie odnajdywania w pliku konfiguracyjnym](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ Windows Server AppFabric ma funkcję automatycznego uruchamiania, która umożliwi usługi do uruchomienia przed odbierał komunikaty. Auto-Start zestawu usług IIS / WAS hostowanej usługi można skonfigurować jako wykrywalne. Aby uzyskać więcej informacji na temat automatycznego uruchamiania funkcji, zobacz [systemu Windows Server AppFabric Auto-Start funkcji](https://go.microsoft.com/fwlink/?LinkId=205545). Wraz z włączając funkcję automatycznego uruchamiania, należy skonfigurować usługę odnajdywania. Aby uzyskać więcej informacji, zobacz [jak: Programowe Dodawanie możliwości odnajdywania do usługi i klienta WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Konfigurowanie odnajdywania w pliku konfiguracyjnym](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   
  Serwera proxy odnajdywania może służyć do komunikowania się w imieniu usługi WCF, gdy usługa nie jest uruchomiona. Serwer proxy może nasłuchiwać sondy lub rozwiązać wiadomości i odpowiadać na klienta. Klient następnie może wysyłać wiadomości bezpośrednio do usługi. Gdy klient wysyła komunikat do usługi zostanie utworzone wystąpienie odpowiedzieć na wiadomość. Aby uzyskać więcej informacji o implementowaniu odnajdywania serwera proxy, zobacz temat [Implementowanie serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   

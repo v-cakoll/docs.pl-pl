@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 37575ff080fca1514e4fd6e4e22243227c529dd2
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836962"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084956"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach
 Asynchroniczny wzorzec oparty na zdarzeniach zapewnia skuteczny sposób udostępnienia zachowanie asynchroniczne w klasach, za pomocą dobrze znanych zdarzenia i delegować semantyki. Aby zaimplementować wzorzec asynchroniczny oparty na zdarzeniach, należy wykonać niektóre szczególne wymagania funkcjonalne. W poniższych sekcjach opisano wymagania i wskazówki, które należy wziąć pod uwagę podczas implementowania klasę, która następuje po wzorca asynchronicznego opartego na zdarzeniach.  
@@ -28,7 +28,7 @@ Asynchroniczny wzorzec oparty na zdarzeniach zapewnia skuteczny sposób udostęp
  W przypadku zastosowania wzorca asynchronicznego opartego na zdarzeniach, należy podać liczbę gwarancje w celu zapewnienia, że klasa będzie działać prawidłowo, a klientów klasy może polegać na takie zachowanie.  
   
 ### <a name="completion"></a>Uzupełnianie  
- Zawsze wywołuje <em>MethodName</em>**Ukończono** program obsługi zdarzeń w przypadku pomyślnego zakończenia, błędu lub anulowania. Aplikacje nigdy nie powinny wystąpić sytuacja, w którym mogą pozostawać bezczynne i uzupełniania nigdy nie następuje. Jedynym wyjątkiem od tej reguły jest, jeśli operacja asynchroniczna, sama go tak zaprojektowane, aby nigdy nie zostanie zakończona.  
+ Zawsze wywołuje <em>MethodName</em>**Ukończono** program obsługi zdarzeń w przypadku pomyślnego zakończenia, błędu lub anulowania. Aplikacje nigdy nie powinny wystąpić sytuacja, w którym mogą pozostawać bezczynne i uzupełniania nigdy nie następuje. Jedynym wyjątkiem od tej reguły jest, jeśli operacja asynchroniczna, sama zaprojektowano tak, aby nigdy nie zostanie zakończona.  
   
 ### <a name="completed-event-and-eventargs"></a>Zdarzenie ukończone i EventArgs  
  Dla każdego oddzielnego <em>MethodName</em>**Async** metody, zastosuj następujące wymagania:  
@@ -73,7 +73,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Jeśli klasa obsługuje wiele równoczesnych wywołań, należy włączyć dla deweloperów śledzić każdego wywołania oddzielnie, definiując <em>MethodName</em>**Async** przeciążenia przyjmującego zwracającej obiekt stanu parametr lub identyfikator zadania o nazwie `userSuppliedState`. Ten parametr powinien zawsze być ostatnim parametrem <em>MethodName</em>**Async** podpis metody.  
   
--   Jeśli klasa definiuje <em>MethodName</em>**Async** przeciążenia przyjmującego parametr zwracającej obiekt stanu lub identyfikator zadania: Pamiętaj śledzić okres istnienia operację, podając identyfikator tego zadania i pamiętaj podać go ponownie do procedury obsługi zakończenia. Brak klasy pomocy jest dostępny. Aby uzyskać więcej informacji na temat zarządzania współbieżności, zobacz [porady: implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+-   Jeśli klasa definiuje <em>MethodName</em>**Async** przeciążenia przyjmującego parametr zwracającej obiekt stanu lub identyfikator zadania: Pamiętaj śledzić okres istnienia operację, podając identyfikator tego zadania i pamiętaj podać go ponownie do procedury obsługi zakończenia. Brak klasy pomocy jest dostępny. Aby uzyskać więcej informacji na temat zarządzania współbieżności, zobacz [jak: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 -   Jeśli klasa definiuje <em>MethodName</em>**Async** metody bez parametru stanu, a nie obsługuje wielu równoczesnych wywołań, upewnij się, że dowolne próba wywołania <em>MethodName</em>  **Async** przed wcześniej <em>MethodName</em>**Async** wywołanie zostało zakończone zgłasza <xref:System.InvalidOperationException>.  
   
@@ -127,7 +127,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 > [!NOTE]
 >  Te reguły mogą omijać, jeśli chcesz jawnie korzystać z zobowiązania zasady modelu aplikacji, ale nadal korzystać z zalet używania wzorca asynchronicznego opartego na zdarzeniach. Można na przykład, że Threading klasy działających w formularzach Windows Forms będzie bezpłatne. Możesz utworzyć bezpłatne klasy wątków, tak długo, jak deweloperzy poznać dorozumianych ograniczenia. Aplikacje konsoli nie są synchronizowane wykonywania <xref:System.ComponentModel.AsyncOperation.Post%2A> wywołania. Może to spowodować `ProgressChanged` zdarzenia wywoływane, poza kolejnością. Jeśli chcesz mieć serializacji wykonywania <xref:System.ComponentModel.AsyncOperation.Post%2A> wywołań, wdrożyć i zainstalować <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> klasy.  
   
- Aby uzyskać więcej informacji o korzystaniu z <xref:System.ComponentModel.AsyncOperation> i <xref:System.ComponentModel.AsyncOperationManager> Aby włączyć operacji asynchronicznych, zobacz [porady: implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+ Aby uzyskać więcej informacji o korzystaniu z <xref:System.ComponentModel.AsyncOperation> i <xref:System.ComponentModel.AsyncOperationManager> Aby włączyć operacji asynchronicznych, zobacz [jak: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="guidelines"></a>Wytyczne dotyczące  
   
@@ -154,5 +154,5 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
 - [Decydowanie o czasie implementacji wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
 - [Implementacja wzorca asynchronicznego opartego na zdarzeniach — najlepsze rozwiązania](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
-- [Instrukcje: Używanie składników obsługujących wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+- [Instrukcje: Używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
 - [Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)

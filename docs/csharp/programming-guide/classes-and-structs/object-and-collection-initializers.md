@@ -1,94 +1,131 @@
 ---
 title: Inicjatory obiektów i kolekcji - C# przewodnik programowania
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 12/19/2018
 helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 60c4e8c5b83ee1c279bf8e7f4905ef9f2cf814b4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1dc28ac218eb0325095641840834b40594ad67ab
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243169"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084865"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Inicjatory obiektów i kolekcji (Przewodnik programowania w języku C#)
-Inicjatory obiektów umożliwiają przypisywanie wartości do dowolnych dostępnych pól lub właściwości obiektu w czasie jego tworzenia, bez konieczności wywoływania konstruktora, po którym występują wiersze instrukcji przypisania. Składnia inicjatora obiektów umożliwia określenie argumentów dla konstruktora lub pominięcie argumentów (i składni z nawiasami).  Poniższy przykład pokazuje, jak używać inicjatora obiektów z typem nazwanym `Cat` i jak wywołać konstruktora domyślnego. Zwróć uwagę na użycie właściwości zaimplementowane automatycznie w `Cat` klasy. Aby uzyskać więcej informacji, zobacz [implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
+
+C#Pozwala utworzyć wystąpienie obiektu lub kolekcji i wykonywać przypisań składowych w pojedynczej instrukcji.
+
+## <a name="object-initializers"></a>Inicjatory obiektów
+
+Inicjatory obiektów umożliwiają przypisywanie wartości do dowolnych dostępnych pól lub właściwości obiektu w czasie jego tworzenia, bez konieczności wywoływania konstruktora, po którym występują wiersze instrukcji przypisania. Składnia inicjatora obiektów umożliwia określenie argumentów dla konstruktora lub pominięcie argumentów (i składni z nawiasami).  Poniższy przykład pokazuje, jak używać inicjatora obiektów z typem nazwanym `Cat` i jak wywołać konstruktora domyślnego. Zwróć uwagę na użycie właściwości zaimplementowane automatycznie w `Cat` klasy. Aby uzyskać więcej informacji, zobacz [implemented Properties](auto-implemented-properties.md).  
   
- [!code-csharp[csProgGuideLINQ#39](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_1.cs)]  
-  
- [!code-csharp[csProgGuideLINQ#45](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_2.cs)] 
+[!code-csharp[ObjectInitializer1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#CatDeclaration)]  
+[!code-csharp[ObjectInitializer1a](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ObjectPropertyInitialization)]  
  
 Składnię inicjatorów obiektów można utworzyć wystąpienia, a po tym przypisuje nowo utworzony obiekt, za pomocą właściwości przypisane do zmiennej w ramach przypisania.
-  
-## <a name="object-initializers-with-anonymous-types"></a>Inicjatory obiektów z typami anonimowymi  
- Mimo że inicjatorów obiektów można używać w dowolnym kontekście, są one szczególnie użyteczne w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniach zapytań. Wyrażeniach zapytań często są używane [typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md), który może być inicjowane tylko przy użyciu inicjatora obiektów, jak pokazano w poniższej deklaracji.  
-  
+
+Począwszy od C# 6, obiektu, inicjatory można ustawić indeksatorów, oprócz przypisywanie pola i właściwości. Należy wziąć pod uwagę to podstawowe `Matrix` klasy:
+
+[!code-csharp[ObjectInitializer2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#MatrixDeclaration)]  
+
+Można zainicjować macierzą następującym kodem:
+
+[!code-csharp[ObjectInitializer2a](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#MatrixInitialization)]  
+
+Dostęp indeksatora, który zawiera dostępnej metody ustawiającej może służyć jako jedno z wyrażeń w inicjatorze obiektu, niezależnie od liczby i typy argumentów. Argumenty indeksu formularza po lewej stronie przypisania, a wartość jest po prawej stronie wyrażenia.  Na przykład są to wszystkie prawidłowe, gdy `IndexersExample` ma odpowiednie indeksatory:
+
+```csharp
+var thing = new IndexersExample {
+    name = "object one",
+    [1] = '1',
+    [2] = '4',
+    [3] = '9',
+    Baz = Math.PI,
+    ['C',4] = "Middle C"
+}
+```
+
+Dla poprzedniego kodu skompilować `IndexersExample` typ musi zawierać następujące elementy:
+
+```csharp
+public string name;
+public double Size { set { ... }; }
+public char this[int i] { set { ... }; }
+public string this[char c, int i] {  set { ... }; }
+}
+```
+
+## <a name="object-initializers-with-anonymous-types"></a>Inicjatory obiektów z typami anonimowymi
+
+Mimo że inicjatorów obiektów można używać w dowolnym kontekście, są one szczególnie użyteczne w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniach zapytań. Wyrażeniach zapytań często są używane [typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md), który może być inicjowane tylko przy użyciu inicjatora obiektów, jak pokazano w poniższej deklaracji.  
+
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
-```  
+```
+
+Typy anonimowe umożliwiają `select` w klauzuli [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniu do przekształcenia obiektów oryginalnej sekwencji w obiekty, których wartość i kształt mogą różnić się od oryginalnego zapytania. Jest to użyteczne, gdy chce się przechowywać tylko część informacji z każdego obiektu sekwencji. W poniższym przykładzie przyjęto założenie, że obiekt produktu (`p`) zawiera wiele pól i metod, i że możesz jest zainteresowany wyłącznie utworzeniem sekwencji obiektów, które zawierają nazwę produktu i cenę jednostkową.  
   
- Typy anonimowe umożliwiają `select` w klauzuli [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniu do przekształcenia obiektów oryginalnej sekwencji w obiekty, których wartość i kształt mogą różnić się od oryginalnego zapytania. Jest to użyteczne, gdy chce się przechowywać tylko część informacji z każdego obiektu sekwencji. W poniższym przykładzie przyjęto założenie, że obiekt produktu (`p`) zawiera wiele pól i metod, i że możesz jest zainteresowany wyłącznie utworzeniem sekwencji obiektów, które zawierają nazwę produktu i cenę jednostkową.  
-  
- [!code-csharp[csProgGuideLINQ#40](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_3.cs)]  
-  
- Gdy to zapytanie jest wykonywane, `productInfos` zmienna będzie zawierać sekwencję obiektów, które mogą być udostępniane w `foreach` instrukcji, jak pokazano w poniższym przykładzie:  
-  
+[!code-csharp[ObjectInitializer3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#AnonymousUse)]  
+
+Gdy to zapytanie jest wykonywane, `productInfos` zmienna będzie zawierać sekwencję obiektów, które mogą być udostępniane w `foreach` instrukcji, jak pokazano w poniższym przykładzie:  
+
 ```csharp
 foreach(var p in productInfos){...}  
-```  
-  
- Każdy obiekt w nowym typie anonimowym ma dwie właściwości publiczne, które otrzymują takie same nazwy, jak właściwości lub pola w oryginalnym obiekcie. Możesz również zmienić nazwę pola, podczas tworzenia typu anonimowego; w poniższym przykładzie nazwa `UnitPrice` pole `Price`.  
-  
+```
+
+Każdy obiekt w nowym typie anonimowym ma dwie właściwości publiczne, które odbierają takie same nazwy właściwości lub pola w oryginalnym obiekcie. Możesz również zmienić nazwę pola, podczas tworzenia typu anonimowego; w poniższym przykładzie nazwa `UnitPrice` pole `Price`.  
+
 ```csharp
 select new {p.ProductName, Price = p.UnitPrice};  
-```  
+```
+
+## <a name="collection-initializers"></a>Inicjatory kolekcji
+
+Inicjatory kolekcji pozwalają określić jedną lub więcej inicjatory elementów podczas inicjowania kolekcji typu, który implementuje <xref:System.Collections.IEnumerable> i ma `Add` z odpowiednim podpisem jako metodę wystąpienia lub metodę rozszerzenia. Inicjatory elementów mogą być wartościami prostymi, wyrażenie lub inicjatora obiektu. Za pomocą inicjatora kolekcji, nie trzeba określać wielu wywołań; Kompilator sam doda te wywołania automatycznie.  
   
-## <a name="collection-initializers"></a>Inicjatory kolekcji  
- Inicjatory kolekcji pozwalają określić jedną lub więcej inicjatory elementów podczas inicjowania kolekcji typu, który implementuje <xref:System.Collections.IEnumerable> i ma `Add` z odpowiednim podpisem jako metodę wystąpienia lub metodę rozszerzenia. Inicjatory elementów mogą być wartościami prostymi, wyrażeniami lub inicjatorami obiektów. Za pomocą inicjatora kolekcji nie trzeba określać wielu wywołań `Add` klasy w kodzie źródłowym, ponieważ kompilator sam doda te wywołania.  
-  
- W poniższych przykładach pokazano dwa proste inicjatory kolekcji:  
-  
+W poniższym przykładzie pokazano dwa proste inicjatory kolekcji:  
+
 ```csharp
 List<int> digits = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };  
 List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };  
-```  
+```
+
+Następujący inicjator kolekcji używa inicjatorów obiektów w celu zainicjowania obiektów klasy `Cat` klasy zdefiniowanej w poprzednim przykładzie. Należy zauważyć, że poszczególne inicjatory obiektów są umieszczone w nawiasach klamrowych i rozdzielone przecinkami.  
   
- Następujący inicjator kolekcji używa inicjatorów obiektów w celu zainicjowania obiektów klasy `Cat` klasy zdefiniowanej w poprzednim przykładzie. Należy zauważyć, że poszczególne inicjatory obiektów są umieszczone w nawiasach klamrowych i rozdzielone przecinkami.  
+[!code-csharp[ListInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitializer)]  
   
- [!code-csharp[csProgGuideLINQ#41](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_4.cs)]  
+Można określić [null](../../language-reference/keywords/null.md) jako element w inicjatorze kolekcji Jeśli kolekcji `Add` zezwala na to metoda.  
   
- Można określić [null](../../../csharp/language-reference/keywords/null.md) jako element w inicjatorze kolekcji Jeśli kolekcji `Add` zezwala na to metoda.  
+[!code-csharp[ListInitializerNull](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitialerWithNull)]  
   
- [!code-csharp[csProgGuideLINQ#42](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_5.cs)]  
+ Można określić elementy indeksowane, jeżeli obsługuje kolekcji odczytu i zapisu indeksowania.
   
- Można określić indeksowane elementów, jeśli kolekcja obsługuje indeksowanie.  
-  
-```csharp
-var numbers = new Dictionary<int, string> {   
-    [7] = "seven",   
-    [9] = "nine",   
-    [13] = "thirteen"   
-};  
-```  
-  
+[!code-csharp[DictionaryInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryIndexerInitializer)]  
+
+Poprzedni przykład generuje kod, który wywołuje <xref:System.Collections.Generic.Dictionary%602.Item(%600)> można ustawić wartości. Począwszy od C# 6, można inicjować słowników i inne kontenery asocjacyjne przy użyciu następującej składni. Zwróć uwagę, że zamiast składni indeksatora, za pomocą nawiasów i przypisania, używa obiekt z wieloma wartościami:
+
+[!code-csharp[DictionaryAddInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryAddInitializer)]  
+
+Ten przykład inicjatora wywołuje <xref:System.Collections.Generic.Dictionary%602.Add(%600,%601)> można dodać trzy elementy do słownika. Te dwa różne sposoby inicjowania kolekcji asocjacyjnych ma nieco inaczej, ze względu na wywołania metody, które kompilator generuje. Oba warianty pracować `Dictionary` klasy. Inne typy mogą obsługują tylko jeden lub innych zależności na ich publicznego interfejsu API.
+
 ## <a name="examples"></a>Przykłady
 
- Poniższy przykład łączy koncepcji inicjatory obiektów i kolekcji.
+Poniższy przykład łączy koncepcji inicjatory obiektów i kolekcji.
 
- [!code-csharp[csProgGuideLINQ#46](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_6.cs)]  
- 
- Pokazano w poniższym przykładzie obiekt, który implementuje <xref:System.Collections.IEnumerable> zawierający `Add` metody z wieloma parametrami umożliwia inicjatory kolekcji z wieloma elementami każdego elementu na liście odpowiadający podpis `Add` metody. 
- 
- [!code-csharp[csProgGuideLINQ#84](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_7.cs)]
- 
- `Add` można użyć metody `params` — słowo kluczowe, aby móc zmienną liczbę argumentów, jak pokazano w poniższym przykładzie. W tym przykładzie pokazano niestandardową implementację indeksatora również zainicjować kolekcji za pomocą indeksów.
- 
- [!code-csharp[csProgGuideLINQ#85](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_8.cs)]
- 
+[!code-csharp-interactive[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullExample)]  
+
+W poniższym przykładzie pokazano obiekt, który implementuje <xref:System.Collections.IEnumerable> i zawiera `Add` metody z wieloma parametrami, używa inicjatora kolekcji z wieloma elementami każdego elementu na liście, które odpowiadają podpis `Add`metody.
+
+[!code-csharp-interactive[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullListExample)]  
+
+`Add` można użyć metody `params` — słowo kluczowe, aby móc zmienną liczbę argumentów, jak pokazano w poniższym przykładzie. W przykładzie pokazano również niestandardową implementację indeksatora zainicjować kolekcji za pomocą indeksów.
+
+[!code-csharp-interactive[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
+
 ## <a name="see-also"></a>Zobacz też
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [Typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [Przewodnik programowania w języku C#](../index.md)  
+- [Wyrażenia zapytań LINQ](../linq-query-expressions/index.md)  
+- [Typy anonimowe](anonymous-types.md)

@@ -2,30 +2,30 @@
 title: '&lt;endToEndTracing&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5034f5de-bb60-4157-9ad4-58aaade094e0
-ms.openlocfilehash: 855f579241dfd495e7f8603ce3bd57aa2556ca2d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 78a69256a391e97ff1962eea923f09115c4ebadd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753472"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150113"
 ---
 # <a name="ltendtoendtracinggt"></a>&lt;endToEndTracing&gt;
 Element konfiguracji, który umożliwia włączanie i wyłączanie różnych aspektów śledzenia end-to-end podczas uruchamiania aplikacji usługi.  
   
  \<system.ServiceModel>  
-\<diagnostycznych >  
+\<diagnostyczne >  
 \<endToEndTracing >  
   
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<system.serviceModel>  
-   <diagnostics>  
-       <endToEndTracing activityTracing="Boolean"  
-          messageFlowTracing="Boolean"  
-          propagateActivity="Boolean" />  
-   </diagnostics>  
-</system.serviceModel>  
+<system.serviceModel>
+  <diagnostics>
+    <endToEndTracing activityTracing="Boolean"
+                     messageFlowTracing="Boolean"
+                     propagateActivity="Boolean" />
+  </diagnostics>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -46,7 +46,7 @@ Element konfiguracji, który umożliwia włączanie i wyłączanie różnych asp
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Diagnostyka >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Definiuje ustawienia WCF dla środowiska uruchomieniowego inspekcji i kontroli administratora.|  
+|[\<Diagnostyka >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Definiuje ustawienia WCF dla środowiska uruchomieniowego kontroli i kontroli dla administratora.|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.DiagnosticSection>  

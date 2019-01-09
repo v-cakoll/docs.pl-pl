@@ -2,12 +2,12 @@
 title: Przewodnik po F#
 description: Sprawdź, niektóre najważniejsze funkcje w języku programowania w ten samouczek przy użyciu przykładów kodu F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: 32bf892e97b29fcaf426791ef9ada15c9c35b5ae
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 72ecb9e71e5d039f5a62f74ad594fac82269f304
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143751"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145526"
 ---
 # <a name="tour-of-f"></a>Przewodnik po F# #
 
@@ -17,7 +17,7 @@ Istnieją dwa podstawowe pojęcia języka F#: funkcji i typów.  Ten samouczek b
 
 ## <a name="executing-the-code-online"></a>Wykonywanie kodu w trybie online
 
-Jeśli nie masz F# zainstalowany na komputerze, można wykonywać wszystkie przykłady online za pomocą [Fable REPL](http://fable.io/repl/). Fable jest dialekt F# , który jest wykonywany bezpośrednio w przeglądarce. Aby wyświetlić przykłady, które należy wykonać w rozwiązaniu REPL, zapoznaj się z **przykłady > Dowiedz się więcej > Przewodnik po przykładzie F#**  na pasku menu po lewej stronie replikacja Fable
+Jeśli nie masz F# zainstalowany na komputerze, można wykonywać wszystkie przykłady online za pomocą [Fable REPL](https://fable.io/repl/). Fable jest dialekt F# , który jest wykonywany bezpośrednio w przeglądarce. Aby wyświetlić przykłady, które należy wykonać w rozwiązaniu REPL, zapoznaj się z **przykłady > Dowiedz się więcej > Przewodnik po przykładzie F#**  na pasku menu po lewej stronie replikacja Fable
 
 ## <a name="functions-and-modules"></a>Funkcje i modułów
 

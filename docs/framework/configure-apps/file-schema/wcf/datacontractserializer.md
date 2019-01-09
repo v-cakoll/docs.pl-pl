@@ -2,15 +2,15 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 0528ae823db500da3c3a1efc6934951c4e41cea7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a024ca89bd766681f25b992f1d2c66a92e3b31b7
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748019"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150204"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
-Zawiera dane konfiguracyjne <xref:System.Runtime.Serialization.DataContractSerializer>.  
+Zawierająca dane konfiguracyjne <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  \<system.ServiceModel>  
 \<zachowania >  
@@ -21,8 +21,8 @@ Zawiera dane konfiguracyjne <xref:System.Runtime.Serialization.DataContractSeria
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<dataContractSerializer ignoreExtensionDataObject="Boolean"  
-      maxItemsInObjectGraph="Integer" />  
+<dataContractSerializer ignoreExtensionDataObject="Boolean"
+                        maxItemsInObjectGraph="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -32,7 +32,7 @@ Zawiera dane konfiguracyjne <xref:System.Runtime.Serialization.DataContractSeria
   
 |Element|Opis|  
 |-------------|-----------------|  
-|IgnoreExtensionDataObject|Wartość logiczna określająca, czy można zignorować dane dostarczone przez punkt końcowy, gdy jest on serializowany lub deserializowany.|  
+|IgnoreExtensionDataObject|Wartość logiczna określająca, czy ignorować dane dostarczane przez punkt końcowy, po jego serializowany lub deserializowany.|  
 |MaxItemsInObjectGraph|Liczba całkowita określająca maksymalną liczbę elementów do serializacji lub deserializacji.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -45,10 +45,10 @@ Zawiera dane konfiguracyjne <xref:System.Runtime.Serialization.DataContractSeria
 |[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Zobacz <xref:System.Runtime.Serialization.DataContractSerializer> dokumentację, aby uzyskać więcej informacji na temat znanych typów.  
+ Zobacz <xref:System.Runtime.Serialization.DataContractSerializer> dokumentacji, aby uzyskać więcej informacji na temat znanych typów.  
   
 > [!CAUTION]
->  `<dataContractSerializer>` Zachowanie elementu (jeśli istnieje) zawsze powinna być wyświetlana przed `<enableWebScript>` zachowanie elementu w pliku konfiguracji. W przeciwnym razie efekty jest niezdefiniowany.  
+>  `<dataContractSerializer>` Zachowanie elementu (jeśli istnieje) zawsze powinna być wyświetlana przed `<enableWebScript>` zachowania elementu w pliku konfiguracji. W przeciwnym razie wynikowe zachowanie jest niezdefiniowane.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

@@ -2,15 +2,15 @@
 title: '&lt;pnrpPeerResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: f0874d38c3432f066d1bec5cc84f53e1f3730180
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 882974ea29804c7218d4c6c21da2b9ddd7551c54
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747983"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150152"
 ---
 # <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
-Określa, że program rozpoznawania nazw PNRP (Peer Name Resolution Protocol) ma być używany jako program rozpoznawania nazw. Ten element jest opcjonalny, ponieważ usługa PNRP jest domyślny program rozpoznawania nazw.  
+Określa, że program rozpoznawania nazw PNRP (Peer Name Resolution Protocol) ma być używany jako program rozpoznawania nazw. Ten element jest opcjonalny, ponieważ PNRP jest domyślny mechanizm rozwiązywania konfliktów.  
   
  \<system.serviceModel>  
 \<powiązania >  
@@ -21,7 +21,7 @@ Określa, że program rozpoznawania nazw PNRP (Peer Name Resolution Protocol) ma
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<pnrpResolver resolverType="String" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -31,7 +31,7 @@ Określa, że program rozpoznawania nazw PNRP (Peer Name Resolution Protocol) ma
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|Element resolverType|Ciąg, który określa mechanizm rozpoznawania do użycia. Ten atrybut jest opcjonalne. Jeśli nie jest ustawiona lub jest ustawiona na pusty ciąg, jest używana usługa PNRP.|  
+|Element resolverType|Ciąg, który określa rozpoznawania nazw ma być używany. Ten atrybut jest opcjonalny. Jeśli nie jest ustawiona lub jest ustawiony na pusty ciąg, jest używany protokół PNRP.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -40,12 +40,12 @@ Określa, że program rozpoznawania nazw PNRP (Peer Name Resolution Protocol) ma
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie możliwości powiązania niestandardowego powiązania.|  
+|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
   
 ## <a name="example"></a>Przykład  
   
 ```xml  
-<pnrpResolver resolverType="" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -2,15 +2,15 @@
 title: '&lt;Wystawcy&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
-ms.openlocfilehash: 638b206f5372a654eca68d2f6ebb69bb0ac9e241
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d2728bf3613b41ed9f0810207d27d6d67477afd2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750560"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149556"
 ---
 # <a name="ltissuergt"></a>&lt;Wystawcy&gt;
-Określa zabezpieczeń tokenu usługi (STS), która wystawia tokeny zabezpieczające.  
+Określa Usługa tokenu zabezpieczającego (STS), która wystawia tokeny zabezpieczające.  
   
  \<system.serviceModel>  
 \<powiązania >  
@@ -23,28 +23,28 @@ Określa zabezpieczeń tokenu usługi (STS), która wystawia tokeny zabezpieczaj
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<issuer address="Uri" >  
-   <headers>  
-      <add name="String"  
-                 namespace="String" />  
-   </headers>  
-   <identity>  
-           <certificate encodedValue="String"/>  
-      <certificateReference findValue="String"   
-         isChainIncluded="Boolean"  
-         storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-         storeLocation="LocalMachine/CurrentUser"  
-                  x509FindType=System.Security.Cryptography.X509certificates.X509findtype/>  
-      <dns value="String"/>  
-      <rsa value="String"/>  
-      <servicePrincipalName value="String"/>  
-      <usePrincipalName value="String"/>  
-   </identity>  
-</issuer>  
+<issuer address="Uri">
+  <headers>
+    <add name="String"
+         namespace="String" />
+  </headers>
+  <identity>
+    <certificate encodedValue="String" />
+    <certificateReference findValue="String"
+                          isChainIncluded="Boolean"
+                          storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+                          storeLocation="LocalMachine/CurrentUser"
+                          x509FindType="System.Security.Cryptography.X509certificates.X509findtype" />
+    <dns value="String" />
+    <rsa value="String" />
+    <servicePrincipalName value="String" />
+    <usePrincipalName value="String" />
+  </identity>
+</issuer>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty i elementy podrzędne, elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
   
 ### <a name="attributes"></a>Atrybuty  
   
@@ -56,8 +56,8 @@ Określa zabezpieczeń tokenu usługi (STS), która wystawia tokeny zabezpieczaj
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<nagłówki >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Kolekcja nagłówków adresu dla punktów końcowych, które można utworzyć konstruktora.|  
-|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Korzystając z wystawionego tokenu, określa ustawienia, które umożliwiają klienta do uwierzytelniania serwera.|  
+|[\<nagłówki >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Kolekcja nagłówków adresowych dla punktów końcowych, które można utworzyć konstruktora.|  
+|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Podczas używania tokenu wystawionego, określa ustawienia, które umożliwiają klienta do uwierzytelniania serwera.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

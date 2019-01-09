@@ -2,15 +2,15 @@
 title: '&lt;limity czasu&gt;'
 ms.date: 03/30/2017
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
-ms.openlocfilehash: 1f0638f85177d2acb6f61e3246a1a5ee9a4e2f5c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e39deeb251865b87eb7734e4447088ca2f221d1d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753004"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148334"
 ---
 # <a name="lttimeoutsgt"></a>&lt;limity czasu&gt;
-Reprezentuje element konfiguracji, który określa przedział czasu dozwolony na otwarcie lub zamknięcie usługi hosta.  
+Reprezentuje element konfiguracji, który określa przedział czasu dozwolony usługi hosta na otwarcie lub zamknięcie.  
   
  \<system.ServiceModel>  
 \<Klient >  
@@ -21,8 +21,8 @@ Reprezentuje element konfiguracji, który określa przedział czasu dozwolony na
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<timeOuts closeTimeout="TimeSpan"  
-   openTimeout="TimeSpan" >  
+<timeOuts closeTimeout="TimeSpan"
+          openTimeout="TimeSpan" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -32,8 +32,8 @@ Reprezentuje element konfiguracji, który określa przedział czasu dozwolony na
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`closeTimeout`|A <xref:System.TimeSpan> wartość, która określa okres czasu dozwolony dla na zamknięcie usługi hosta.|  
-|`openTimeout`|A <xref:System.TimeSpan> wartość, która określa okres czasu dozwolony dla na otwarcie usługi hosta.|  
+|`closeTimeout`|A <xref:System.TimeSpan> wartość, która określa przedział czasu dozwolony na zamknięcie usługi hosta.|  
+|`openTimeout`|A <xref:System.TimeSpan> wartość, która określa okres czasu dozwolony dla otwarcie usługi hosta.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -42,7 +42,7 @@ Reprezentuje element konfiguracji, który określa przedział czasu dozwolony na
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<host >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Element konfiguracji określa ustawienia dla usługi hosta.|  
+|[\<host >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Element konfiguracji, który określa ustawienia dla usługi hosta.|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.HostElement>  

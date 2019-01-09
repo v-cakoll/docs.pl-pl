@@ -2,12 +2,12 @@
 title: '&lt;serviceSecurityAudit&gt;'
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 36215709f0ede32c25739ea47f2f285e4122f098
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3202b5055d16f0daa1bd829aa53ff6662a687b5d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144441"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150256"
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczeń podczas operacji usługi.  
@@ -21,11 +21,10 @@ Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczeń podcza
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<serviceSecurityAudit   
-   auditLogLocation="Default/Application/Security"  
-   messageAuthenticationAuditLevel= None/Success/Failure/SuccessOrFailure"   serviceAuthorizationAuditLevel="None/Success/Failure/SuccessOrFailure"  
-   suppressAuditFailure="Boolean"  
-/>  
+<serviceSecurityAudit auditLogLocation="Default/Application/Security"
+                      messageAuthenticationAuditLevel="None/Success/Failure/SuccessOrFailure"
+                      serviceAuthorizationAuditLevel="None/Success/Failure/SuccessOrFailure"
+                      suppressAuditFailure="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -65,16 +64,18 @@ Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczeń podcza
 ## <a name="example"></a>Przykład  
   
 ```xml  
-<system.serviceModel>  
-   <serviceBehaviors>  
-      <behavior name="NewBehavior">  
-         <serviceSecurityAudit auditLogLocation="Application"   
-             suppressAuditFailure="true"  
-             serviceAuthorizationAuditLevel="Success"   
-             messageAuthenticationAuditLevel="Success" />  
-      </behavior>  
-   </serviceBehaviors>  
-</behaviors>  
+<system.serviceModel>
+  <behaviors>
+    <serviceBehaviors>
+      <behavior name="NewBehavior">
+        <serviceSecurityAudit auditLogLocation="Application"
+                              suppressAuditFailure="true"
+                              serviceAuthorizationAuditLevel="Success"
+                              messageAuthenticationAuditLevel="Success" />
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+</system.serviceModel>
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
@@ -82,5 +83,5 @@ Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczeń podcza
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Inspekcja](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Jak: Inspekcja zdarzeń zabezpieczeń](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [Instrukcje: Inspekcja zdarzeń zabezpieczeń](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [Zachowanie inspekcji usługi](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

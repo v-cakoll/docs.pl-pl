@@ -1,16 +1,16 @@
 ---
-title: '&lt;Element XmlElement&gt;'
+title: '&lt;XmlElement&gt;'
 ms.date: 03/30/2017
 ms.assetid: 395205c2-d8c0-4a5e-90f3-7ce3c085fccd
-ms.openlocfilehash: 70ff9b93bcd59331c5fa5e66bb51dc4cd1e043ff
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6a197f7aa29645a08a581bcee103eb94c0e20179
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767651"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147021"
 ---
-# <a name="ltxmlelementgt"></a>&lt;Element XmlElement&gt;
-Określa element XML, który jest wysyłany w treści wiadomości do usługi tokenu zabezpieczeń, jeśli żądania tokenu.  
+# <a name="ltxmlelementgt"></a>&lt;XmlElement&gt;
+Określa element XML, który będzie wysyłany w treści komunikatu do usługi tokenu zabezpieczeń, podczas żądania tokenu.  
   
  \<system.ServiceModel>  
 \<powiązania >  
@@ -23,9 +23,9 @@ Określa element XML, który jest wysyłany w treści wiadomości do usługi tok
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<tokenRequestParameters>  
-      <xmlElement xmlElement="String" />  
-</tokenRequestParameters>  
+<tokenRequestParameters>
+  <xmlElement xmlElement="String" />
+</tokenRequestParameters>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -35,7 +35,7 @@ Określa element XML, który jest wysyłany w treści wiadomości do usługi tok
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|xmlElement|Ciąg określający element XML, który jest wysyłany w treści wiadomości do usługi tokenu zabezpieczeń, jeśli żądania tokenu.|  
+|xmlElement|Ciąg określający element XML, który będzie wysyłany w treści komunikatu do usługi tokenu zabezpieczeń, podczas żądania tokenu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  

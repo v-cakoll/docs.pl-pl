@@ -2,15 +2,15 @@
 title: '&lt;diagnostics&gt; w Activation'
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 4e5332eed87ded51cebcd614f45cbc8e80e570fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 28f051a7ab06dbc1b40f804c56071818eb37e88b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747934"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144980"
 ---
 # <a name="ltdiagnosticsgt-for-activation"></a>&lt;diagnostics&gt; w Activation
-Konfiguruje funkcje diagnostyki odbiornika usługi Windows Communication Foundation (WCF).  
+Umożliwia skonfigurowanie funkcji diagnostyki odbiornika usługi Windows Communication Foundation (WCF).  
   
  \<system.serviceModel.activation>  
 \<Diagnostyka >  
@@ -18,11 +18,11 @@ Konfiguruje funkcje diagnostyki odbiornika usługi Windows Communication Foundat
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<configuration>  
-   <system.serviceModel.activation>  
-       <diagnostics performanceCountersEnabled="Boolean" />  
-   </system.serviceModel.activation>  
-</configuration>  
+<configuration>
+  <system.serviceModel.activation>
+    <diagnostics performanceCountersEnabled="Boolean" />
+  </system.serviceModel.activation>
+</configuration>
 ```  
   
 ## <a name="type"></a>Typ  
@@ -35,7 +35,7 @@ Konfiguruje funkcje diagnostyki odbiornika usługi Windows Communication Foundat
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`performanceCountersEnabled`|Wartość logiczna wskazująca, czy liczniki wydajności są włączone w celach diagnostycznych.|  
+|`performanceCountersEnabled`|Wartość logiczna wskazująca, czy liczniki wydajności są włączone do celów diagnostycznych.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  

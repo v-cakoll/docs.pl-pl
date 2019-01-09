@@ -2,12 +2,12 @@
 title: Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: f1185e7f8d455a59edf2b11e4e77ac6470d768fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 03bfa53ac8e2a6cf7b252a8d0ea4683727134e4a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517078"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152089"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 Model programowania protokołu HTTP sieci WEB Windows Communication Foundation (WCF) udostępnia podstawowe elementy, które są wymagane do kompilowania usług HTTP w sieci WEB z programem WCF. Usługi WCF WEB HTTP można uzyskać dostęp przez największą liczbę potencjalnych klientów, w tym przeglądarki sieci Web i ma następujące wymagania:  
@@ -26,7 +26,7 @@ Model programowania protokołu HTTP sieci WEB Windows Communication Foundation (
 >  Usługi napisane przy użyciu modelu programowania protokołu HTTP sieci WEB WCF nie należy używać komunikaty protokołu SOAP. Ponieważ protokołu SOAP nie są używane, nie można użyć funkcjach zabezpieczeń zapewnianych przez architekturę WCF. Można jednak użyć zabezpieczenia na poziomie transportu, udostępniając usługi przy użyciu protokołu HTTPS. Aby uzyskać więcej informacji na temat zabezpieczeń programu WCF zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  Instalowanie rozszerzenia WebDAV dla usług IIS może spowodować usług HTTP w sieci Web do zwrócenia błędu HTTP 405 WebDAV rozszerzenia próbuje obsłużyć wszystkie żądania PUT. Aby obejść ten problem, można odinstalować rozszerzenie WebDAV lub wyłączyć rozszerzenie WebDAV dla witryny sieci web. Aby uzyskać więcej informacji, zobacz [usługi IIS i WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  Instalowanie rozszerzenia WebDAV dla usług IIS może spowodować usług HTTP w sieci Web do zwrócenia błędu HTTP 405 WebDAV rozszerzenia próbuje obsłużyć wszystkie żądania PUT. Aby obejść ten problem, można odinstalować rozszerzenie WebDAV lub wyłączyć rozszerzenie WebDAV dla witryny sieci web. Aby uzyskać więcej informacji, zobacz [usługi IIS i WebDav](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>Identyfikator URI przetwarzania za pomocą klasy UriTemplate i UriTemplateTable  
  Identyfikator URI Szablony zapewniają efektywne składni dla wyrażania dużych zestawów strukturalnie podobne identyfikatorów URI. Na przykład następujący szablon określa zbiór identyfikatorów URI z wszystkich trzech segmentu, które zaczynają się od "a" i kończyć się znakiem "c" bez względu na wartość pośredni segmentu: / {segment} /c  
@@ -96,7 +96,7 @@ interface ICustomer
 }  
 ```  
   
- Aby zobaczyć pełny przykład usługi WCF, która używa modelu programowania protokołu HTTP sieci WEB WCF, zobacz [porady: tworzenie podstawowa usługa HTTP w sieci Web WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ Aby zobaczyć pełny przykład usługi WCF, która używa modelu programowania protokołu HTTP sieci WEB WCF, zobacz [jak: Tworzenie podstawowej usługi programu WCF Web HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
   
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>Adresy URL i parametry ciągu zapytania UriTemplate  
  Usługi w stylu sieci Web można wywołać z przeglądarki sieci Web, wpisując adres URL, który jest skojarzony z operacji usługi. Te operacje usługi może potrwać parametry ciągu zapytania, które muszą być określone w postaci ciągu w adresie URL. W poniższej tabeli przedstawiono typy, które mogą być przekazywane w ramach adresu URL i format używany.  

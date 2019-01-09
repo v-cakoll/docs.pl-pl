@@ -3,12 +3,12 @@ title: Historia języka C# — Przewodnik po języku C#
 description: Język jak wygląda w jego wersje i jak go powstała od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 00294287c978cf3ede5bdbd951587f5addab1994
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: c24ac6c87762c4808c0794bf7c724eee942ad0fc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084839"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152063"
 ---
 # <a name="the-history-of-c"></a>Historia języka C# #
 
@@ -28,7 +28,7 @@ C# Narzędzia do kompilacji należy wziąć pod uwagę najnowszej wersji języka
 
 ## <a name="c-version-10"></a>C# w wersji 1.0
 
-Gdy cofając się i sprawdź, C# w wersji 1.0 oglądałem się znacznie takich jak Java. Jako [wchodzi w skład jego celów projektowania podane dla ECMA](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), miały być "prostych, nowoczesnych, ogólnego przeznaczenia obiektowy język."  W tym czasie wyszukiwania, takie jak Java przeznaczone go osiągnąć tych wczesnych cele projektu.
+Gdy cofając się i sprawdź, C# w wersji 1.0 oglądałem się znacznie takich jak Java. Jako [wchodzi w skład jego celów projektowania podane dla ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), miały być "prostych, nowoczesnych, ogólnego przeznaczenia obiektowy język."  W tym czasie wyszukiwania, takie jak Java przeznaczone go osiągnąć tych wczesnych cele projektu.
 
 Ale można spojrzeć Wstecz w języku C# 1.0 teraz, czy okaże się, że to nieco dizzy. Brakuje w niej funkcje wbudowane async i niektóre funkcje sprawny wokół ogólne potrwać dla przyznane. Jak rzeczy brakuje w niej ogólne całkowicie.  I [LINQ](../linq/index.md)? Nie jest dostępny jeszcze. Te dodatki zajmie kilka lat na osiągnięcie.
 

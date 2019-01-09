@@ -1,16 +1,16 @@
 ---
-title: Rozpoczynanie pracy z usługą Azure Table storage przy użyciu języka F#
+title: Rozpoczynanie pracy z usługą Azure Table storage przy użyciuF#
 description: Store ustrukturyzowanych danych w chmurze przy użyciu usługi Azure Table storage lub Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43519538"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152076"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Rozpoczynanie pracy z usługą Azure Table storage i Azure Cosmos DB interfejsu API tabel przy użyciu języka F# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Rozpoczynanie pracy z usługą Azure Table storage i przy użyciu interfejsu API tabeli usługi Azure Cosmos DBF# # 
 
 Usługa Azure Table storage to usługa, która przechowuje dane strukturalne NoSQL w chmurze. Magazyn tabel to magazyn klucz/atrybutów bez schematu. Ponieważ Magazyn tabel nie ma, to można łatwo zaadaptować dane aplikacji rozwijających się potrzeb. Dostęp do danych jest szybki i ekonomiczny dla wszystkich rodzajów aplikacji. Magazyn tabel jest zwykle znacznie tańszy od tradycyjnego rozwiązania SQL dla podobnych ilości danych.
 
@@ -30,16 +30,16 @@ Aby uzyskać więcej informacji, zobacz [wprowadzenie do interfejsu API tabeli u
 
 ## <a name="about-this-tutorial"></a>Informacje o tym samouczku
 
-W tym samouczku pokazano, jak napisać kod F#, aby wykonywać niektóre typowe zadania za pomocą usługi Azure Table storage lub Azure Cosmos DB interfejsu API tabel, w tym tworzenie i usuwanie tabeli i wstawianie, aktualizowanie, usuwanie i odpytywanie danych tabeli.
+Ten samouczek przedstawia sposób zapisania F# kod, aby wykonywać niektóre typowe zadania za pomocą usługi Azure Table storage lub Azure Cosmos DB interfejsu API tabel, w tym tworzenie i usuwanie tabeli i wstawianie, aktualizowanie, usuwanie i odpytywanie danych tabeli.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 Aby użyć tego przewodnika, należy najpierw [Tworzenie konta usługi Azure storage](/azure/storage/storage-create-storage-account) lub [konta usługi Azure Cosmos DB](https://azure.microsoft.com/try/cosmosdb/).
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Utwórz skrypt F# i Rozpocznij języka F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Tworzenie F# skrypt i uruchomić F# interaktywne
 
-Przykłady w tym artykule może służyć w aplikacji F# lub skryptu F#. Aby utworzyć skrypt F#, Utwórz plik o `.fsx` rozszerzenia, na przykład `tables.fsx`, w środowisku projektowym F#.
+Przykłady w tym artykule mogą być używane w jednej F# aplikacji lub F# skryptu. Aby utworzyć F# skrypt, Utwórz plik o `.fsx` rozszerzenia, na przykład `tables.fsx`w usługi F# środowiska deweloperskiego.
 
 Następnie użyj [Menedżera pakietów](package-management.md) takich jak [Paket](https://fsprojects.github.io/Paket/) lub [NuGet](https://www.nuget.org/) zainstalował `WindowsAzure.Storage` pakietów i odwołań `WindowsAzure.Storage.dll` w skrypcie za pomocą `#r`dyrektywy. Wykonaj ponownie ją `Microsoft.WindowsAzure.ConfigurationManager` celu uzyskanie Microsoft.Azure przestrzeni nazw.
 
@@ -196,7 +196,7 @@ Teraz, kiedy znasz już podstawy usługi Table storage, skorzystaj z poniższych
 
 - [Wprowadzenie do usługi Azure Cosmos DB Table API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
 - [Biblioteka klienta usługi Storage dla platformy .NET odwołania](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
-- [Dostawcy typów usługi Azure Storage](http://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Dostawcy typów usługi Azure Storage](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Blog zespołu usługi Azure Storage](https://blogs.msdn.com/b/windowsazurestorage/)
 - [Konfigurowanie parametrów połączenia](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
 - [Wprowadzenie do usługi Azure Table Storage na platformie .NET](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

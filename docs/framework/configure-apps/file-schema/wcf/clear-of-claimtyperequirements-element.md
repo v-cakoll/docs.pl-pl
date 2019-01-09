@@ -2,15 +2,15 @@
 title: '&lt;clear&gt; w &lt;claimTypeRequirements&gt;. element,'
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: ca8ea91f5806a6cedc98729de1c45ab6b5de6afb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e77e3c978c1e385aec983d5e2d4bea64697c43e
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747128"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145292"
 ---
 # <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a>&lt;clear&gt; w &lt;claimTypeRequirements&gt;. element,
-Określa, że wszystkie typy roszczeń do usunięcia w federacyjnym poświadczeniu. Dzięki temu, że kolekcji zaczyna się pusta.  
+Określa, że wszystkie typy roszczeń do usunięcia w federacyjnym poświadczeniu. Daje to gwarancję, że uruchomieniu pusty kolekcji.  
   
  \<system.ServiceModel>  
 \<powiązania >  
@@ -23,9 +23,9 @@ Określa, że wszystkie typy roszczeń do usunięcia w federacyjnym poświadczen
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<claimTypeRequirements>  
-      <clear />  
-</claimTypeRequirements>  
+<claimTypeRequirements>
+  <clear />
+</claimTypeRequirements>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -41,7 +41,7 @@ Określa, że wszystkie typy roszczeń do usunięcia w federacyjnym poświadczen
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Określa kolekcję wymaganych typów oświadczeń. Każdy element jest typu <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> W federacyjnym scenariuszu usług stanu wymagania dotyczące poświadczeń przychodzących. Na przykład poświadczenia przychodzące musi mieć określone typy oświadczeń. Każdy element w tej kolekcji Określa typy wymaganych i opcjonalnych oświadczeń, które mogą występować w federacyjnym poświadczeniu.|  
+|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Określa kolekcję wymaganych typów oświadczeń. Każdy element jest typu <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> W federacyjnym scenariuszu usługi stanu wymagania dotyczące poświadczeń przychodzących. Na przykład poświadczenia przychodzących musi mieć określone typy oświadczeń. Każdy element w tej kolekcji Określa typy wymaganych i opcjonalnych oświadczeń, oczekiwano w federacyjnym poświadczeniu.|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>  

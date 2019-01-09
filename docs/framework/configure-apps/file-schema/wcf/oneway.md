@@ -1,15 +1,15 @@
 ---
-title: '&lt;oneWay&gt;'
+title: '&lt;OneWay&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: f9a5631501b3879463606f526485314efd5eff2b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5f3d534ee98100347acaa485e60a3c74f82ee0b9
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746725"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150581"
 ---
-# <a name="ltonewaygt"></a>&lt;oneWay&gt;
+# <a name="ltonewaygt"></a>&lt;OneWay&gt;
 Włącza pakiet rutingu i metod jednokierunkowych dla niestandardowego powiązania.  
   
  \<system.serviceModel>  
@@ -21,15 +21,11 @@ Włącza pakiet rutingu i metod jednokierunkowych dla niestandardowego powiązan
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<oneWay packetRoutable="Boolean">  
-        <channelPoolSettings  
-           idleTimeout"TimeSpan"  
-          leaseTimeout"TimeSpan"  
-          maxOutboundConnectionsPerEndpopint="Integer" />  
-```  
-  
-```xml  
-</oneWay>  
+<oneWay packetRoutable="Boolean">
+  <channelPoolSettings idleTimeout="TimeSpan"
+                       leaseTimeout="TimeSpan"
+                       maxOutboundConnectionsPerEndpopint="Integer" />
+</oneWay>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -46,16 +42,16 @@ Włącza pakiet rutingu i metod jednokierunkowych dla niestandardowego powiązan
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<channelPoolSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/channelpoolsettings.md)|A <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> obiekt, który zawiera właściwości puli kanału dla bieżącego kanału.|  
+|[\<channelPoolSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/channelpoolsettings.md)|A <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> obiekt, który zawiera właściwości puli kanału na kanał bieżący.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie możliwości powiązania niestandardowego powiązania.|  
+|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby włączyć routing pakietów, warstwy jednokierunkowe konwersja jest wymagana, który zawiera ten element. Użytkownik może utworzyć niestandardowego powiązania, który warstwy tego powiązania za pośrednictwem sesji aware lub żądanie odpowiedź transportu była pakietów routingu. Ten element jest również przydatne, gdy chcesz udostępnić metody jednokierunkowe w sposób bardziej macierzystego. Przekształcenia więcej można zastosować za pośrednictwem tej warstwy, takie jak złożone dupleksu i niezawodna obsługa komunikatów.  
+ Aby włączyć routing pakietów, warstwy jednokierunkowe konwersji jest wymagany, który zawiera ten element. Użytkownik może utworzyć niestandardowego powiązania, które warstw tego powiązania za pośrednictwem obsługujących sesji lub "żądanie-odpowiedź" transportu ułatwiają pakietów obsługi routingu. Ten element jest również przydatne, gdy chcesz udostępnić metody jednokierunkowe w sposób bardziej natywnych. Kolejnych przekształceń można stosować w tej warstwie, takie jak złożone dwukierunkowego i niezawodną obsługę komunikatów.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.OneWayBindingElement>  

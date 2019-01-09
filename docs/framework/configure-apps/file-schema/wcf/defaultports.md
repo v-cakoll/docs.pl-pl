@@ -2,12 +2,12 @@
 title: '&lt;defaultPorts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
-ms.openlocfilehash: 2f7de066a1b91e9fa22fbe0213e221c6f4bbe617
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ddfddaa13778ce98bd93b6d8029438377fc7e94
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747177"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145188"
 ---
 # <a name="ltdefaultportsgt"></a>&lt;defaultPorts&gt;
 Kolekcja portów domyślnych Wyświetla domyślne punktów końcowe komunikacji, które nasłuchuje aplikacja kliencka.  
@@ -24,9 +24,10 @@ Kolekcja portów domyślnych Wyświetla domyślne punktów końcowe komunikacji,
 ```xml  
 <useRequestHeadersForMetadataAddress>
   <defaultPorts>
-    <add scheme="http" port="integer" />
+    <add scheme="http"
+         port="integer" />
   </defaultPorts>
-</useRequestHeadersForMetadataAddress>  
+</useRequestHeadersForMetadataAddress>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -39,7 +40,7 @@ Kolekcja portów domyślnych Wyświetla domyślne punktów końcowe komunikacji,
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Dodaj > z \<defaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|Domyślny punkt końcowy komunikacji, który aplikacja kliencka nasłuchuje.|  
+|[\<Dodaj > z \<defaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|Domyślny punkt końcowy komunikacji, aplikacja kliencka nasłuchuje.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

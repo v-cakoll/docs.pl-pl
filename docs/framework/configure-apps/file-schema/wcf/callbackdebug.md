@@ -2,12 +2,12 @@
 title: '&lt;callbackDebug&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-ms.openlocfilehash: 2103c32112b6c5554d7b510f486d4cbb1349f35d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5bd2356c3bb798e948341cb3c4ba504ac886ed44
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747956"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145084"
 ---
 # <a name="ltcallbackdebuggt"></a>&lt;callbackDebug&gt;
 Określa usługę debugowania dla obiektu wywołania zwrotnego Windows Communication Foundation (WCF).  
@@ -21,7 +21,7 @@ Określa usługę debugowania dla obiektu wywołania zwrotnego Windows Communica
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<callbackDebug  includeExceptionDetailInFaults="Boolean" />  
+<callbackDebug includeExceptionDetailInFaults="Boolean" />
 ```  
   
 ## <a name="type"></a>Typ  
@@ -34,7 +34,7 @@ Określa usługę debugowania dla obiektu wywołania zwrotnego Windows Communica
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`includeExceptionDetailInFaults`|Wartość, która określa, czy obiekty klienta wywołania zwrotnego wrócić informacje o zarządzanym wyjątku w błędach SOAP do usługi.<br /><br /> Jeśli ustawisz ten atrybut `true` programowo, można włączyć przepływ informacji o zarządzanych wyjątku w obiekcie klienta wywołania zwrotnego do usługi w celu debugowania. **Uwaga:** zwraca informacje o zarządzanym wyjątku do klientów mogą stanowić zagrożenie bezpieczeństwa. Jest to spowodowane szczegóły wyjątku ujawnienie informacji o implementacji usługi wewnętrznego, które mogą być używane przez nieautoryzowanych klientów.|  
+|`includeExceptionDetailInFaults`|Wartość, która określa, czy obiekty klienta wywołania zwrotnego zwracają informacje o zarządzanym wyjątku w błędach SOAP powrót do usługi.<br /><br /> Jeśli ten atrybut jest ustawiony `true` programowo, można włączyć przepływ informacji o zarządzanych wyjątku w obiekcie klienta wywołania zwrotnego do usługi w celu debugowania. **Uwaga:**  Zwracanie informacje o zarządzanym wyjątku do klientów może stanowić zagrożenie bezpieczeństwa. Jest to spowodowane szczegóły wyjątku ujawniać informacje o implementacji usługi wewnętrznej, która mogłaby być używana przez nieautoryzowane klientów.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  

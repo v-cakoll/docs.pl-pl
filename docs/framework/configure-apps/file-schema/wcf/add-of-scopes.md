@@ -2,12 +2,12 @@
 title: '&lt;add&gt; w &lt;scopes&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: a889100da4723a1f5e8f84ca88ea426ccaa2e77f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e2bf649259d6ccb0e55428ab3619fe561d051ff7
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745802"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146242"
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a>&lt;add&gt; w &lt;scopes&gt;
 Dodaje niestandardowy zakres Uri, który może służyć do filtrowania punktów końcowych usługi podczas zapytania.  
@@ -28,12 +28,12 @@ Dodaje niestandardowy zakres Uri, który może służyć do filtrowania punktów
     <behavior name="String">
       <endpointDiscovery enable="Boolean">
         <scopes>
-          <add scope="URI"/>
+          <add scope="URI" />
         </scopes>
       </endpointDiscovery>
     </behavior>
   </endpointBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -43,7 +43,7 @@ Dodaje niestandardowy zakres Uri, który może służyć do filtrowania punktów
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|zakres|Identyfikator URI zawierający zakres informacji dla punktu końcowego, który może być używana w dopasowaniu kryteriów dla znajdowanej usługi.|  
+|zakres|Identyfikator URI zawierający zakres informacji dla punktu końcowego, który może być użyty w dopasowaniu kryteriów dla znajdowanej usługi.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  

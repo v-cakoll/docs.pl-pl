@@ -2,12 +2,12 @@
 title: '&lt;security&gt; w &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: 8be7582ce5db88d9a79698193c44d9c50bdea4cb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ec164fa8830321f90f824f85841a379d577ab5af
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184758"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147801"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;security&gt; w &lt;netMsmqBinding&gt;
 Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ. Określa, czy włączono transportu lub zabezpieczeń protokołu SOAP, a jeśli tak, jakie poziomy tryb i ochrona uwierzytelniania są używane.  
@@ -21,15 +21,14 @@ Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ. Określa, czy w
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<security mode="None/Transport/Message/Both">  
-   <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"  
-      msmqEncryptionAlgorithm="RC4Stream/AES"  
-      msmqProtectionLevel="None/Sign/EncryptAndSign"  
-      msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />  
-      <message  
-      algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-      clientCredentialType="None/Windows/UserName/Certificate/CardSpace"/>  
-</security>  
+<security mode="None/Transport/Message/Both">
+  <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"
+             msmqEncryptionAlgorithm="RC4Stream/AES"
+             msmqProtectionLevel="None/Sign/EncryptAndSign"
+             msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />
+    <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+             clientCredentialType="None/Windows/UserName/Certificate/CardSpace" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -39,7 +38,7 @@ Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ. Określa, czy w
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb|Określa typ bezpieczeństwa, kontrolujące integralności, poufności i uwierzytelniania. Prawidłowe wartości są następujące:<br /><br /> -Brak: Powoduje to wyłączenie zabezpieczeń.<br />-Transport: Ochrony i uwierzytelniania oferowana przez transportu. Dotyczy to zabezpieczeń wiadomości między menedżerami kolejki dwa. Nie ma żadnych zabezpieczeń udostępniane między aplikacją i Menedżer kolejki. Istniejące aplikacje usługi Msmq są funkcjonalnie równoważne z tym typem tryb zabezpieczeń.<br />-Komunikat o błędzie: Określa kompleksowe zabezpieczenia aplikacji. Nie ma żadnych zabezpieczeń będzie oferowana w cenie warstwy transportowej. Jest to podobne do zabezpieczeń oferowanych przez inne standardowe powiązania.<br />-Zarówno: Zapewnia bezpieczeństwo na transport i protokołu SOAP wiadomości warstwy. Te same poświadczenia jest wymagana na obu poziomach.<br /><br /> Wartość domyślna to transportu. Ten atrybut jest typu <xref:System.ServiceModel.NetMsmqSecurityMode>.|  
+|tryb|Określa typ bezpieczeństwa, kontrolujące integralności, poufności i uwierzytelniania. Prawidłowe wartości są następujące:<br /><br /> -Brak: Powoduje to wyłączenie zabezpieczeń.<br />-Transport: Ochrona i uwierzytelniania są oferowane przez transportu. Dotyczy to zabezpieczeń wiadomości między menedżerami kolejki dwa. Nie ma żadnych zabezpieczeń udostępniane między aplikacją i Menedżer kolejki. Istniejące aplikacje usługi Msmq są funkcjonalnie równoważne z tym typem tryb zabezpieczeń.<br />-Komunikat o błędzie: Określa kompleksowe zabezpieczenia aplikacji. Nie ma żadnych zabezpieczeń będzie oferowana w cenie warstwy transportowej. Jest to podobne do zabezpieczeń oferowanych przez inne standardowe powiązania.<br />-Zarówno: Zapewnia bezpieczeństwo na transport i Warstwa obsługi wiadomości SOAP. Te same poświadczenia jest wymagana na obu poziomach.<br /><br /> Wartość domyślna to transportu. Ten atrybut jest typu <xref:System.ServiceModel.NetMsmqSecurityMode>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   

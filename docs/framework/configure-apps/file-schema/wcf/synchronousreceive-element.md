@@ -2,15 +2,15 @@
 title: '&lt;synchronousReceive&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: af1ca2ee1fe3c03c33f05e0c30c7b843b3720a36
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc89470900e50e4d3e522682b39b20e21a66b284
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753264"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147385"
 ---
 # <a name="ltsynchronousreceivegt-element"></a>&lt;synchronousReceive&gt;, element
-Ten element konfiguracji służy do określania zachowania w czasie wykonywania do odbierania wiadomości w aplikacji usługi lub klienta. Nie ma żadnych atrybutów ani elementów podrzędnych.  
+Ten element konfiguracji służy do określania zachowania w czasie wykonywania do odbierania wiadomości w aplikacji usługi lub klienta. Nie ma żadnych atrybutów lub elementów podrzędnych.  
   
  \<system.ServiceModel>  
 \<zachowania >  
@@ -21,7 +21,7 @@ Ten element konfiguracji służy do określania zachowania w czasie wykonywania 
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<synchronousReceive />  
+<synchronousReceive />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -40,7 +40,7 @@ Ten element konfiguracji służy do określania zachowania w czasie wykonywania 
 |[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie punktu końcowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Umożliwia to zachowanie poinstruować odbiornik kanału do użycia synchronicznego odbierania zamiast domyślnego, asynchroniczne. Windows Communication Foundation (WCF) wystawia nowego wątku pompa dla poszczególnych zaakceptowanych kanałów. Jeśli istnieje wiele kanałów, istnieje możliwość wyczerpaniu wątków.  
+ Użyj tego zachowania, aby nakazać odbiornik kanału do użycia przez synchroniczny otrzymywać zamiast domyślnej, asynchronicznego. Windows Communication Foundation (WCF) wystawia nowy wątek pompy dla każdego kanału akceptowane. W przypadku wielu kanałów, istnieje możliwość korzystającym z wątków.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>  

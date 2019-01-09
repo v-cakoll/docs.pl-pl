@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; w &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 5c7e96beee2fc1e4780729e56f10a52b63dde4e8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fe015fa308821519419a97a26bb5f57a6b4ab0cd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841420"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148620"
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transport&gt; w &lt;ws2007HttpBinding&gt;
 Definiuje ustawienia uwierzytelniania dla protokołu HTTP.  
@@ -21,11 +21,10 @@ Definiuje ustawienia uwierzytelniania dla protokołu HTTP.
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-transport clientCredentialType =   
-       "Basic/Certificate/Digest/None/Ntlm/Windows"  
-       proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-       realm="string"   
+```xml  
+<transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+           proxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+           realm="string" />
 ```  
   
 ## <a name="type"></a>Typ  

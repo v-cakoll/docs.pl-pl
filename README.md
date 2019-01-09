@@ -10,7 +10,7 @@ Zagadnienia i zadania dla wszystkich trzech tych repozytoriów są śledzone w t
 
 Chętnie poznamy wkładów, aby pomóc nam w ulepszeniu ukończenia dokumentacji platformy .NET. Aby współtworzyć, zobacz [projektów dla platformy .NET, uczestnicy społeczności](https://github.com/dotnet/docs/projects/35) zapoznać się z pomysłami. [Współtworzenia przewodnik](CONTRIBUTING.md) zawiera instrukcje na procedurach używamy. Lub sprawdź [listę problemów](https://github.com/dotnet/docs/issues) zadań, które Cię interesują.
 
-Przewidujemy, że [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) i [Unity](http://docs.unity3d.com/Manual/index.html) spowoduje również użycie tej dokumentacji.
+Przewidujemy, że [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) i [Unity](https://docs.unity3d.com/Manual/index.html) spowoduje również użycie tej dokumentacji.
 
 Ten projekt przyjęła Kodeks postępowania definicją Przymierzem współautorem, aby wyjaśnić, oczekiwane zachowanie w naszej społeczności.
 Aby uzyskać więcej informacji, zobacz [.NET Foundation Kodeks postępowania](https://dotnetfoundation.org/code-of-conduct).

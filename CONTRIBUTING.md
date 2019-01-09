@@ -140,7 +140,7 @@ Poniższa lista zawiera pewne wskazówki reguł, które należy mieć na uwadze,
 
 ## <a name="contributor-license-agreement"></a>Umowę licencyjną współautora
 
-Musisz zalogować się [.NET Foundation wkład internetowej umowy licencyjnej (CLA)](https://cla.dotnetfoundation.org) przed scaleniu żądania Ściągnięcia. Jest to jednorazowe wymaganie dla projektów w .NET Foundation. Przeczytaj więcej o [internetowej umowy licencyjnej współautorstwa (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) w witrynie Wikipedia.
+Musisz zalogować się [.NET Foundation wkład internetowej umowy licencyjnej (CLA)](https://cla.dotnetfoundation.org) przed scaleniu żądania Ściągnięcia. Jest to jednorazowe wymaganie dla projektów w .NET Foundation. Przeczytaj więcej o [internetowej umowy licencyjnej współautorstwa (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) w witrynie Wikipedia.
 
 Umowa: [net-foundation wkład licencji agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

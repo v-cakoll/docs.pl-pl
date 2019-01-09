@@ -2,12 +2,12 @@
 title: '&lt;Zakresy&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-ms.openlocfilehash: 7e2dda0d0def4d1f90bf1b4dbf54f18983355222
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7afab700c2d9eb91ffe57bfefaf5864782a0af5f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749624"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145331"
 ---
 # <a name="ltscopesgt"></a>&lt;Zakresy&gt;
 Zawiera kolekcję elementów konfiguracji określającą niestandardowy zakres identyfikatorów URI, który może służyć do filtrowania punktów końcowych usługi podczas zapytania.  
@@ -32,7 +32,7 @@ Zawiera kolekcję elementów konfiguracji określającą niestandardowy zakres i
       </endpointDiscovery>
     </behavior>
   </endpointBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -45,7 +45,7 @@ Zawiera kolekcję elementów konfiguracji określającą niestandardowy zakres i
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|Dodaje zakres informacji dla punktu końcowego, który może być używana w dopasowaniu kryteriów dla znajdowanej usługi.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|Dodaje zakres informacji dla punktu końcowego, który może służyć w dopasowaniu kryteriów dla znajdowanej usługi.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

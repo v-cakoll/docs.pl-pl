@@ -2,15 +2,15 @@
 title: '&lt;add&gt; w &lt;serviceActivations&gt;'
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: 1a25ad517e26e037c588bb14844e38147e251d96
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b40127d531926f103f3e367c8721e8f5ff8e1a99
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745828"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151543"
 ---
 # <a name="ltaddgt-of-ltserviceactivationsgt"></a>&lt;add&gt; w &lt;serviceActivations&gt;
-Element konfiguracji, który można zdefiniować ustawienia Aktywacja usług wirtualnych które odpowiadają typom usług Windows Communication Foundation (WCF). Dzięki temu można aktywować usługi hostowane w WAS / usług IIS bez pliku svc.  
+Element konfiguracji, który pozwala zdefiniować ustawienia Aktywacja usług wirtualnych mapowane odpowiadają typom usług Windows Communication Foundation (WCF). Dzięki temu można aktywować usługi hostowane w WAS / IIS bez pliku .svc.  
   
  \<system.ServiceModel>  
 \<serviceHostingEnvironment >  
@@ -18,12 +18,12 @@ Element konfiguracji, który można zdefiniować ustawienia Aktywacja usług wir
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<serviceHostingEnvironment>   
-   <serviceActivations>  
-      <add factory="String"  
-           service="String"/>  
-   </serviceActivations>  
-</serviceHostingEnvironment>  
+<serviceHostingEnvironment>
+    <serviceActivations>
+      <add factory="String"
+           service="String" />
+  </serviceActivations>
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -33,9 +33,9 @@ Element konfiguracji, który można zdefiniować ustawienia Aktywacja usług wir
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|Fabryka|Ciąg określający nazwę typu CLR fabryki, która generuje element aktywacji usługi.|  
-|usługa|Typ ServiceType, który implementuje usługę (pełna kwalifikowana nazwa typu lub krótkich Typename (gdy jest on umieszczany w folderze App_Code).|  
-|Element relativeAddress|Adres względny w bieżącej aplikacji usług IIS — na przykład "Service.svc". Ten adres względny WCF 4.0 musi zawierać jedno z rozszerzeń plików znanych (SVC, .xamlx,...). Nie pliku fizycznego musi istnieć dla relativeUrl|  
+|Fabryka|Ciąg, który określa nazwę typu CLR fabryki, która generuje element aktywacji usługi.|  
+|usługa|Typ ServiceType, który implementuje usługę (pełna kwalifikowana nazwa typu lub krótki Typename (jeśli znajduje się w folderze App_Code).|  
+|relativeAddress|Adres względny w bieżącej aplikacji usług IIS — na przykład "Service.svc". W wersji 4.0 WCF tego adresu względnego musi zawierać rozszerzenia znanych plików (.svc .xamlx...). Nie pliku fizycznego musi istnieć dla relativeUrl|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -44,28 +44,28 @@ Element konfiguracji, który można zdefiniować ustawienia Aktywacja usług wir
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Sekcja konfiguracyjna, który opisuje ustawienia aktywacji.|  
+|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Sekcja konfiguracji, który opisuje ustawienia aktywacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Poniższy przykład przedstawia sposób konfigurowania ustawień aktywacji w pliku web.config.  
+ Poniższy przykład pokazuje, jak skonfigurować ustawienia aktywacji w pliku web.config.  
   
 ```xml  
-<configuration>  
-  <system.serviceModel>  
-    <serviceHostingEnvironment>  
-      <serviceActivations>  
-        <add service="GreetingService"/>  
-      </serviceActivations>  
-    </serviceHostingEnvironment>  
-  </system.serviceModel>  
-</configuration>  
+<configuration>
+  <system.serviceModel>
+    <serviceHostingEnvironment>
+      <serviceActivations>
+        <add service="GreetingService" />
+      </serviceActivations>
+    </serviceHostingEnvironment>
+  </system.serviceModel>
+</configuration>
 ```  
   
- Za pomocą tej konfiguracji, można uaktywnić GreetingService bez użycia pliku svc.  
+ Za pomocą tej konfiguracji, możesz aktywować GreetingService bez użycia pliku .svc.  
   
- Należy pamiętać, że `<serviceHostingEnvironment>` jest konfiguracji na poziomie aplikacji. Należy umieścić `web.config` zawierający konfigurację w katalogu głównym aplikacji wirtualnej. Ponadto `serviceHostingEnvironment` jest sekcją dziedziczne machinetoApplication. Jeśli zarejestrujesz pojedynczą usługę w katalogu głównym komputera każdej usługi w aplikacji będzie dziedziczyć tej usługi.  
+ Należy pamiętać, że `<serviceHostingEnvironment>` jest konfiguracji na poziomie aplikacji. Musisz umieszczać `web.config` zawierający konfigurację w katalogu głównym aplikacji wirtualnej. Ponadto `serviceHostingEnvironment` to sekcja dziedziczne machinetoApplication. Jeśli zarejestrujesz jednej usługi w katalogu głównym maszyny do każdej usługi w aplikacji będą dziedziczyć tę usługę.  
   
- Aktywacja oparta na konfiguracji obsługuje aktywacji za pośrednictwem protokołu http i innych niż http. Wymaga to rozszerzenia w relatativeAddress, tj. SVC, xoml lub .xamlx. Należy mapować własne rozszerzenia buildProviders wiedzieć, który następnie umożliwi aktywowania usługi przez dowolnego rozszerzenia. Po konflikt `<serviceActivations>` sekcji zastępuje .svc rejestracji.  
+ Aktywacja oparta na konfiguracji obsługuje aktywacji za pośrednictwem protokołu http i innych niż http. Wymaga rozszerzenia w relatativeAddress, czyli .svc xoml oraz .xamlx. Własne rozszerzenia można zamapować na buildProviders wie, który następnie umożliwi Aktywuj usługę za pośrednictwem dowolnego rozszerzenia. Po konfliktu `<serviceActivations>` sekcji zastępuje .svc rejestracji.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.ServiceActivationElement>  

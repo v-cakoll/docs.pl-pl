@@ -2,12 +2,12 @@
 title: '&lt;windowsStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: e117c30ba2583158ee21fd11ff4a38b094c18fd9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6cce178910767d7fd197aff0d007b7cc3f4e60f3
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197642"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151127"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsStreamSecurity&gt;
 Określ ustawienia zabezpieczenia strumienia Windows niestandardowego powiązania.  
@@ -21,7 +21,7 @@ Określ ustawienia zabezpieczenia strumienia Windows niestandardowego powiązani
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign"/>  
+<windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  

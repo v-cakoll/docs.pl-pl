@@ -2,33 +2,34 @@
 title: '&lt;namespaceTable&gt;'
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: 31d661f39f9e3de0f7012c7fa52d4964e7ee4a69
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 55b5565ffe9d3e9e7ea41d2a2e2f380490be1781
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748883"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151426"
 ---
 # <a name="ltnamespacetablegt"></a>&lt;namespaceTable&gt;
 
-Reprezentuje sekcję konfiguracji definiującą zestaw elementów zawierających przestrzeń nazw do mapowania prefiksów, które mogą być następnie używane w filtrach XPath dla routingu.
+Reprezentuje sekcję konfiguracji definiującą zestaw elementów zawierających przestrzeń nazw do mapowania prefiksów, które następnie mogą być używane w filtrach XPath dla routingu.
 
 **\<system.serviceModel >**   
 &nbsp;&nbsp;**\<Routing >**   
 &nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable >**
-
-## <a name="syntax"></a>Składnia
-
-```xml
+  
+## <a name="syntax"></a>Składnia  
+  
+```xml  
 <system.serviceModel>
   <routing>
     <namespaceTable>
-      <add namespace="String" prefix="String" />
+      <add namespace="String"
+           prefix="String" />
     </namespaceTable>
   </routing>
 </system.serviceModel>
-``` 
-
+```  
+  
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy
 
 W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.
@@ -47,7 +48,7 @@ Brak
 
 |     | Opis |
 | --- | ----------- |
-| [**\<Routing >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Reprezentuje sekcję konfiguracji określającą zestaw filtrów routingu, które określają typ obiektu Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących, jak również routingu tabel docelowych punktów końcowych, aby zdefiniować wysyłanie komunikatów do gdy kryteria filtru. |
+| [**\<Routing >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Reprezentuje sekcję konfiguracji określającą zestaw filtrów routingu, które określają typ obiektu programu Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących, jak również routingu definiujące miejsce docelowe punktów końcowych do tabel wysyłanie komunikatów do gdy kryteria filtru. |
 
 ## <a name="see-also"></a>Zobacz także
 

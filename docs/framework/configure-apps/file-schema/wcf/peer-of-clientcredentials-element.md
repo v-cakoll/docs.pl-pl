@@ -2,12 +2,12 @@
 title: '&lt;peer&gt; w &lt;clientCredentials&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 9d63aaaa6404b791559d1288730098075f1fd8eb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9846a25a8df165f51290aa8a26f907d40b6b159f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504486"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150568"
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;peer&gt; w &lt;clientCredentials&gt;, element
 Określa poświadczenia używane podczas uwierzytelniania klientów peer-to-peer.  
@@ -22,11 +22,11 @@ Określa poświadczenia używane podczas uwierzytelniania klientów peer-to-peer
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<peer>  
-  <certificate/>  
-  <peerAuthentication/>  
-  <messageSenderAuthentication/>  
-</peer>  
+<peer>
+  <certificate />
+  <peerAuthentication />
+  <messageSenderAuthentication />
+</peer>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  

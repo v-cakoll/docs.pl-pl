@@ -2,12 +2,12 @@
 title: '&lt;add&gt; w &lt;authorizationPolicies&gt;'
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: 008f465134860141293776130ebd75cd39120f5e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5f4afe0a0a72d7f45dd0ed38cbcc7a0d89d17d44
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753957"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148464"
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;add&gt; w &lt;authorizationPolicies&gt;
 Określa zasady autoryzacji dla transformacji roszczenia.  
@@ -22,9 +22,9 @@ Określa zasady autoryzacji dla transformacji roszczenia.
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<authorizationPolicies>  
-   <add policyType="String" />  
-</authorizationPolicies>  
+<authorizationPolicies>
+  <add policyType="String" />
+</authorizationPolicies>
 ```  
   
 ## <a name="type"></a>Typ  
@@ -37,7 +37,7 @@ Określa zasady autoryzacji dla transformacji roszczenia.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`policyType`|Wymagany atrybut ciągu.<br /><br /> Model kontroli dostępu Windows Communication Foundation (WCF) obsługuje zapewnienie zestawu zasad autoryzacji jako typów. Ten atrybut określa zasady autoryzacji, dzięki czemu przekształcania jednego zestawu oświadczeń wejściowych do innego zestawu oświadczeń. Udzielono lub odmówiono kontrola dostępu oparta na.|  
+|`policyType`|Wymagany atrybut ciągu.<br /><br /> Model kontroli dostępu Windows Communication Foundation (WCF) obsługuje zapewnienie zestawu zasad autoryzacji jako typów. Ten atrybut określa zasady autoryzacji, która umożliwia przekształcanie jednego zestawu oświadczeń wejściowych na inny zestaw oświadczeń. Udzielić lub odmówić kontrola dostępu oparta na.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -49,7 +49,7 @@ Określa zasady autoryzacji dla transformacji roszczenia.
 |[\<authorizationPolicies >](../../../../../docs/framework/configure-apps/file-schema/wcf/authorizationpolicies.md)|Określa kolekcję typów zasad autoryzacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Każdej zasady autoryzacji zawiera jeden z wymaganych `policyType` atrybut, który jest ciągiem. Ten atrybut określa zasady autoryzacji, dzięki czemu przekształcania jednego zestawu oświadczeń wejściowych do innego zestawu oświadczeń. Udzielono lub odmówiono kontrola dostępu oparta na. Aby uzyskać więcej informacji dotyczących sposobu działania zasad autoryzacji, zobacz <xref:System.IdentityModel.Policy.IAuthorizationPolicy> i [zasady autoryzacji](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
+ Zasady autoryzacji, każdy zawiera jeden wymagane `policyType` atrybut, który jest ciągiem. Ten atrybut określa zasady autoryzacji, która umożliwia przekształcanie jednego zestawu oświadczeń wejściowych na inny zestaw oświadczeń. Udzielić lub odmówić kontrola dostępu oparta na. Aby uzyskać więcej informacji na temat sposobu działania zasad autoryzacji, zobacz <xref:System.IdentityModel.Policy.IAuthorizationPolicy> i [zasady autoryzacji](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  
@@ -60,6 +60,6 @@ Określa zasady autoryzacji dla transformacji roszczenia.
  <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection>  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
  [Autoryzowanie dostępu do operacji usługi](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [Instrukcje: tworzenie menedżera autoryzacji niestandardowej dla usługi](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Instrukcje: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-authorizationpolicies.md)  
  [Zasady autoryzacji](../../../../../docs/framework/wcf/samples/authorization-policy.md)

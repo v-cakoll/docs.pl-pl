@@ -3,13 +3,13 @@ title: Zasady dotyczące architektury
 description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure | Zasady dotyczące architektury
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: 675ecc0dc6a90f3a4ab42861d850ed43a6c10bad
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 06/28/2018
+ms.openlocfilehash: fb854b89b9f8e425d594545b9ad61cbd334b7b2f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146605"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151894"
 ---
 # <a name="architectural-principles"></a>Zasady dotyczące architektury
 

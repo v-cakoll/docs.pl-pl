@@ -4,12 +4,12 @@ description: Dowiedz się, jakie są problemy i rozwiązania dotyczące rozprosz
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: adfb3c0be33d18a991ee552a99a2d02cc3ec7bb3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c3da158bf7a7ee2d4b979349299bba7487c9b1a2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151034"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145994"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi
 
@@ -53,7 +53,7 @@ Jednak w przypadku aplikacji opartych na mikrousługach tabel Product i koszyka 
 
 **Rysunek 4 – 9**. Mikrousługi nie może uzyskać bezpośredni dostęp do tabeli w innej mikrousług
 
-Mikrousług katalogu nie należy bezpośrednio zaktualizować tabeli koszyka, ponieważ tabeli koszyka jest własnością mikrousług koszyka. Aby dokonać aktualizacji mikrousług koszyka, mikrousługi katalogu należy używać spójność ostateczną, prawdopodobnie oparte na komunikacji asynchronicznej, takich jak zdarzenia integracji (wiadomości i komunikacji oparte na zdarzeniu). Jest to sposób, w jaki [ramach aplikacji eShopOnContainers](http://aka.ms/eshoponcontainers) odwołania aplikacja wykonuje ten typ spójności między mikrousług.
+Mikrousług katalogu nie należy bezpośrednio zaktualizować tabeli koszyka, ponieważ tabeli koszyka jest własnością mikrousług koszyka. Aby dokonać aktualizacji mikrousług koszyka, mikrousługi katalogu należy używać spójność ostateczną, prawdopodobnie oparte na komunikacji asynchronicznej, takich jak zdarzenia integracji (wiadomości i komunikacji oparte na zdarzeniu). Jest to sposób, w jaki [ramach aplikacji eShopOnContainers](https://aka.ms/eshoponcontainers) odwołania aplikacja wykonuje ten typ spójności między mikrousług.
 
 Podane przez [kolejnego elementu teorii CAP](https://en.wikipedia.org/wiki/CAP_theorem), musisz wybrać między dostępnością i ACID silnej spójności. Większość scenariuszy opartych na mikrousługach wymaga dostępności i wysokiej skalowalności w przeciwieństwie do silnej spójności. Aplikacji o krytycznym znaczeniu musi znajdować się, a następnie uruchomiona i deweloperów można obejść wysoki poziom spójności przy użyciu technik do pracy z słabych lub ostateczną spójność. To podejście stosowane przez większość opartych na mikrousługach architektury.
 
@@ -101,7 +101,7 @@ Korzystanie z komunikacji asynchronicznej zostało wyjaśnione z dodatkowymi szc
   [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
 - **Charles wiersz. ACID programu vs. PODSTAWOWA: PH Shifting przetwarzania transakcji bazy danych** \
-  [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+  [*https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 - **Transakcja wyrównująca** \
   [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)

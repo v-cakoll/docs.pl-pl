@@ -2,12 +2,12 @@
 title: '&lt;connectionPoolSettings&gt; w &lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 1fbc4e179fa5f59a903dad51728638a1e182b23e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8780709a5713c0192d6be1139e3425747b0b07ca
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753082"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145695"
 ---
 # <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a>&lt;connectionPoolSettings&gt; w &lt;tcpTransport&gt;
 Określa ustawienia puli dodatkowego połączenia dla transportu TCP.  
@@ -22,11 +22,10 @@ Określa ustawienia puli dodatkowego połączenia dla transportu TCP.
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<connectionPoolSettings  
-    groupName="String"  
-    idleTimeout"TimeSpan"  
-        leaseTimeout="TimeSpan"  
-    maxOutboundConnectionsPerEndpopint="Integer" />  
+<connectionPoolSettings groupName="String"
+                        idleTimeout="TimeSpan"
+                        leaseTimeout="TimeSpan"
+                        maxOutboundConnectionsPerEndpopint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -36,10 +35,10 @@ Określa ustawienia puli dodatkowego połączenia dla transportu TCP.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`groupName`|Ciąg, który definiuje nazwę puli połączeń dla wychodzących kanałów. W trybie przesyłanej strumieniowo połączenia nie są udostępniane, co oznacza, że buforowanie połączeń jest wyłączona. Wartość domyślna to ciąg "domyślny". Można zmodyfikować tę wartość, aby odizolować połączeń dla określonego klienta do oddzielnych grup.|  
-|`idleTimeout`|Dodatnią <xref:System.TimeSpan> , który określa maksymalny czas, połączenie może być bezczynne, zanim zostanie rozłączone. Wartość domyślna to 00:02:00.|  
-|`leaseTimeout`|A <xref:System.TimeSpan> , który określa czas, po którym zamknięte jest aktywne połączenie. Wartość domyślna to 00:05:00.<br /><br /> Połączenie jest zamykane po została zwrócona do pamięci podręcznej połączenia, a nie podczas transmisji aktywne. Pamięć podręczna połączenie używane przez transportu TCP tworzy nowe połączenia, co jest wymagane dla każdego punktu końcowego w granicach pamięci podręcznej, który jest uporządkowany według `maxOutboundConnectionsPerEndpoint.`|  
-|`maxOutboundConnectionsPerEndpoint`|Dodatnia liczba całkowita, która określa maksymalną liczbę połączeń do zdalnego punktu końcowego, inicjowanego przez usługę. Połączenia poza limitem są umieszczane w kolejce, dopóki nie będzie dostępne miejsce poniżej limitu. `idleTimeout` Ogranicza okres, w którym połączenia pozostają w kolejce przed jest zgłaszany wyjątek. Wartość domyślna to 10.<br /><br /> Ten atrybut ogranicza liczbę równoczesnych aktywnych połączeń z klienta do określonego punktu końcowego. Tę wartość po przekroczeniu dzięki użyciu aktywnych połączeń klienckich, usługi mogą być wyświetlane odpowiadać do klienta. W takim przypadku ta wartość powinna dostosowana do przekracza maksymalną liczbę oczekiwanych równoczesnych połączeń klientów do określonego punktu końcowego.|  
+|`groupName`|Ciąg, który definiuje nazwę puli połączeń dla wychodzących kanałów. W trybie przesyłane strumieniowo połączenia nie są udostępniane, co oznacza, że buforowanie połączeń jest wyłączona. Wartość domyślna to ciąg "default". Możesz zmodyfikować tę wartość, aby odizolować połączeń dla konkretnego klienta do osobnych grup.|  
+|`idleTimeout`|Dodatnią <xref:System.TimeSpan> , który określa maksymalny czas połączenia może być bezczynne, zanim zostanie rozłączone. Wartość domyślna to 00:02:00.|  
+|`leaseTimeout`|Element <xref:System.TimeSpan> , który określa czas, po którym aktywne połączenie jest zamknięte. Wartość domyślna to 00:05:00.<br /><br /> Połączenie zostało zamknięte po został zwrócony z pamięcią podręczną w połączeń, a nie podczas transmisji active. Pamięć podręczna połączenia używane przez warstwy transportowej TCP tworzy nowe połączenia, zgodnie z wymaganiami dla każdego punktu końcowego do limitu pamięci podręcznej, która została ustawiona przez `maxOutboundConnectionsPerEndpoint.`|  
+|`maxOutboundConnectionsPerEndpoint`|Dodatnia liczba całkowita, określająca maksymalną liczbę połączeń do zdalnego punktu końcowego, inicjowanego przez usługę. Połączeń poza limitem zostaną umieszczone w kolejce, dopóki miejsce poniżej limitu staje się dostępna. `idleTimeout` Ogranicza okres, w którym pozostają w kolejce zanim zostanie zgłoszony wyjątek. Wartość domyślna wynosi 10.<br /><br /> Ten atrybut ogranicza liczbę równoczesnych aktywnych połączeń z klienta do endpoint określonej usługi. Jeśli ta wartość zostanie przekroczony zlecając aktywnych połączeń klienta, usługa może pojawić się odpowiadać do klienta. W takim przypadku można dostosować tę wartość w przekracza maksymalną liczbę oczekiwanych równoczesnych połączeń klientów do określonego punktu końcowego.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  

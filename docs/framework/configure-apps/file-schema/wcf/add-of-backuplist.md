@@ -2,15 +2,15 @@
 title: '&lt;add&gt; w &lt;backupList&gt;'
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 7e7361b24c0444b5f3d51a6f5bf079d5eb2dee18
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4a8eb3df9be6b6b5bfe43aee330f3174ddca66ab
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745555"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151478"
 ---
 # <a name="ltaddgt-of-ltbackuplistgt"></a>&lt;add&gt; w &lt;backupList&gt;
-Reprezentuje element konfiguracji, który definiuje element zapasowego punktu końcowego.  
+Reprezentuje element konfiguracji, który definiuje element kopii zapasowej punktu końcowego.  
   
  \<system.serviceModel>  
 \<Routing >  
@@ -21,7 +21,13 @@ Reprezentuje element konfiguracji, który definiuje element zapasowego punktu ko
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-   <routing>  <backupLists>    <backupList name="String">      <add endpointName="String" />    </backupList>    </backupLists></routing>  
+<routing>
+  <backupLists>
+    <backupList name="String">
+      <add endpointName="String" />
+    </backupList>
+  </backupLists>
+</routing>
 ```  
   
 ```csharp  
@@ -34,7 +40,7 @@ Reprezentuje element konfiguracji, który definiuje element zapasowego punktu ko
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Ciąg określający nazwę zapasowego punktu końcowego.|  
+|nazwa|Ciąg, który określa nazwę punktu końcowego, tworzenia kopii zapasowej.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -43,7 +49,7 @@ Reprezentuje element konfiguracji, który definiuje element zapasowego punktu ko
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Zawiera listę punktów końcowych, które chcesz usługa routingu do użycia w przypadku, gdy podstawowy punkt końcowy jest nieosiągalny.|  
+|[\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Zawiera listę punktów końcowych, które chcesz, aby usługa routingu do użycia w przypadku, gdy nie można nawiązać połączenia z podstawowego punktu końcowego.|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType> 

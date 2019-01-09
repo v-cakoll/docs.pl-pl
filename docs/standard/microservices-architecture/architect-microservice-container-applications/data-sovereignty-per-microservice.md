@@ -4,12 +4,12 @@ description: Suwerenność danych przypadająca na mikrousługę jest jednym z p
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 136f8d173042ab235e5fa3c8478f4aa5659a9787
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126851"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144905"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Suwerenność danych przypadająca na mikrousługę
 
@@ -37,7 +37,7 @@ Partycjonowane trwałego polyglot architektura do przechowywania danych ma wiele
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>Relacja między mikrousług i wzorzec ograniczony kontekst
 
-Pojęcie mikrousług jest pochodną [wzorzec ograniczony kontekst (BC)](http://martinfowler.com/bliki/BoundedContext.html) w [projektowania opartego na domenach (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design). DDD dotyczy dużych modeli przez podzielenie ich na wielu usług łączności biznesowej i są wyraźnie ich granice. Każdy BC musi mieć swój własny model i bazy danych. Podobnie każda mikrousługa jest właścicielem jej powiązane dane. Ponadto każdy BC zazwyczaj ma swój własny [wszechobecne języka](http://martinfowler.com/bliki/UbiquitousLanguage.html) ułatwiających komunikację między programistami i ekspertów z konkretnych dziedzin.
+Pojęcie mikrousług jest pochodną [wzorzec ograniczony kontekst (BC)](https://martinfowler.com/bliki/BoundedContext.html) w [projektowania opartego na domenach (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design). DDD dotyczy dużych modeli przez podzielenie ich na wielu usług łączności biznesowej i są wyraźnie ich granice. Każdy BC musi mieć swój własny model i bazy danych. Podobnie każda mikrousługa jest właścicielem jej powiązane dane. Ponadto każdy BC zazwyczaj ma swój własny [wszechobecne języka](https://martinfowler.com/bliki/UbiquitousLanguage.html) ułatwiających komunikację między programistami i ekspertów z konkretnych dziedzin.
 
 Te warunki (głównie domeny jednostek) w języku uniwersalnych może mieć różne nazwy w różnych kontekstach powiązana, jednostki nawet wtedy, gdy różne domeny udostępnianie tej samej tożsamości (czyli unikatowy identyfikator, który został użyty do odczytu jednostki magazynu). Na przykład w kontekstach ograniczonych profilu użytkownika, jednostka domeny użytkownika może udostępniać tożsamości jednostka domeny kupujący w kontekście szeregowania ograniczone.
 

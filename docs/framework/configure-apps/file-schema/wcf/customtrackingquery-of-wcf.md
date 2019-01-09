@@ -2,12 +2,12 @@
 title: '&lt;customTrackingQuery&gt; w WCF'
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: e13064afbd9f5dbc8d7216eb384001e1e005785c
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 234703e677f838dcdccdf857ba38b8729d25a488
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316236"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146384"
 ---
 # <a name="ltcustomtrackingquerygt-of-wcf"></a>&lt;customTrackingQuery&gt; w WCF
 
@@ -25,7 +25,7 @@ Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz 
   
 ## <a name="syntax"></a>Składnia  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -38,8 +38,8 @@ Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz 
     </trackingProfile>
   </profiles>
 </tracking>
-```
-
+```  
+  
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
 
 W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  

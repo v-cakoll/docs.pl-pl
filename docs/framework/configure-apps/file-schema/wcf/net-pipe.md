@@ -1,16 +1,16 @@
 ---
-title: '&lt;usługi NET.pipe&gt;'
+title: '&lt;NET.pipe&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 71291b1163ffb4e5fe13ff18d88d47f7d2193497
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a525f0684902841a2be75823932935e7533ba8b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359367"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151153"
 ---
-# <a name="ltnetpipegt"></a>&lt;usługi NET.pipe&gt;
-Określa ustawienia konfiguracji dla nazwanych potoków aktywacji usługi, która zarządza czasem istnienia połączenia nazwanego potoku i obsługuje żądania aktywacyjne przychodzące za pośrednictwem nazwanych potoków.  
+# <a name="ltnetpipegt"></a>&lt;NET.pipe&gt;
+Określa ustawienia konfiguracyjne o nazwie potoku aktywacji usługi, która zarządza czasem istnienia połączenia nazwanego potoku i obsługuje żądania aktywacyjne przychodzące za pośrednictwem nazwanych potoków.  
   
  \<system.serviceModel.activation>  
 \<NET.pipe >  
@@ -18,26 +18,26 @@ Określa ustawienia konfiguracji dla nazwanych potoków aktywacji usługi, któr
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<configuration>  
-   <system.serviceModel.activation>  
-       <net.pipe maxPendingAccepts="Integer"  
-                    maxPendingConnections="Integer"  
-          receiveTimeout="TimeSpan">  
-          <allowAccounts>  
-             // LocalSystem account  
-             <add securityIdentifier="S-1-5-18"/>  
-             // LocalService account  
-             <add securityIdentifier="S-1-5-19"/>  
-             // Administrators account  
-             <add securityIdentifier="S-1-5-20"/>  
-             // Network Service account  
-             <add securityIdentifier="S-1-5-32-544" />  
-             // IIS_IUSRS account (Vista only)  
-             <add securityIdentifier="S-1-5-32-568"/>  
-           </allowAccounts>  
-       </net.pipe>  
-   </system.serviceModel.activation>  
-</configuration>  
+<configuration>
+  <system.serviceModel.activation>
+    <net.pipe maxPendingAccepts="Integer"
+              maxPendingConnections="Integer"
+              receiveTimeout="TimeSpan">
+      <allowAccounts>
+        <!-- LocalSystem account -->
+        <add securityIdentifier="S-1-5-18" />
+        <!-- LocalService account -->
+        <add securityIdentifier="S-1-5-19" />
+        <!-- Administrators account -->
+        <add securityIdentifier="S-1-5-20" />
+        <!-- Network Service account -->
+        <add securityIdentifier="S-1-5-32-544" />
+        <!-- IIS_IUSRS account (Vista only) -->
+        <add securityIdentifier="S-1-5-32-568" />
+      </allowAccounts>
+    </net.pipe>
+  </system.serviceModel.activation>
+</configuration>
 ```  
   
 ## <a name="type"></a>Typ  
@@ -52,13 +52,13 @@ Określa ustawienia konfiguracji dla nazwanych potoków aktywacji usługi, któr
 |---------------|-----------------|  
 |`maxPendingAccepts`|Liczba całkowita określająca maksymalną liczbę oczekujących współbieżnych wątków na punkcie końcowym nasłuchiwania dla usługi udostępniania. Wartość domyślna to 2.|  
 |`maxPendingConnections`|Liczba całkowita określająca maksymalną liczbę połączeń, które mogą poczekać na wysłanie. Wartość domyślna to 100.|  
-|`receiveTimeout`|A `TimeSpan` , który określa limit czasu dla odczytu danych z ramek i wykonania przekazania połączenia z połączeń podkreślonych. Wartość domyślna to "00: 00:10"|  
+|`receiveTimeout`|Element `TimeSpan` , który określa limit czasu dla odczytu danych z ramek i wykonania przekazania połączenia z połączeń podkreślonych. Wartość domyślna to "00: 00:10"|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Kolekcja elementów konfiguracji, które zawierają `securityIdentifier` atrybutu określ konta użytkowników dla procesów, które host usługi WCF i przyznano im dostęp do połączenia z usługą udostępniania.|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Kolekcja elementów konfiguracji, które zawierają `securityIdentifier` atrybutu, aby określić konta użytkowników dla procesów, które prowadzą hosting usług WCF i przyznano im dostęp do połączenia z usługą udostępniania.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

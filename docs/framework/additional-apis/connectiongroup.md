@@ -1,5 +1,5 @@
 ---
-title: Klasa ConnectionGroup
+title: ConnectionGroup, klasa
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 420925f9f257bff5a788cd5af918e33c96882674
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8fddc2cd537963ad2aa1e0858476e7b9b9c6c032
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753612"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144694"
 ---
-# <a name="connectiongroup-class"></a>Klasa ConnectionGroup
+# <a name="connectiongroup-class"></a>ConnectionGroup, klasa
 
-`ConnectionGroup` Listę połączeń w ramach grupy klasy <xref:System.Net.ServicePoint> kontekstu i jest używany w celu zachowania kontekst dla zasobów sieciowych (na przykład serwery proxy i oddzielne klientów).
+`ConnectionGroup` Klasy grupy lista połączeń w ramach <xref:System.Net.ServicePoint> kontekstu i służy do zachowania kontekstu dla zasobów sieciowych (na przykład serwery proxy i oddzielnych klientów).
 
 ## <a name="syntax"></a>Składnia
   
@@ -30,14 +30,14 @@ internal class ConnectionGroup
 ```
 
 > [!WARNING]
-> `ConnectionGroup` Klasa jest wewnętrzna i nie są one przeznaczone do użycia bezpośrednio w kodzie.
+> `ConnectionGroup` Klasy jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 > 
-> Microsoft w aplikacji produkcyjnej, w żadnym przypadku nie obsługuje korzystanie z tej klasy.
+> Firma Microsoft nie obsługuje użycia tej klasy w aplikacji produkcyjnej w żadnym wypadku.
 
 ## <a name="requirements"></a>Wymagania
 
 **Namespace:** <xref:System.Net>
 
-**Zestaw:** System (w System.dll)
+**Zestaw:** System (System.dll)
 
-**Wersje programu .NET framework:** dostępne od wersji 2.0.
+**Wersje programu .NET framework:** Dostępne od wersji 2.0.

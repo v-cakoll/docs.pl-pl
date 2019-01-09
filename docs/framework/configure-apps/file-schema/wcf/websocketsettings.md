@@ -2,12 +2,12 @@
 title: '&lt;webSocketSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 94a5883c37221a8d637a188fe42aad220a332575
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 134a233a337c40d21f7547fe385ec788cef2165b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582401"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150061"
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 Element konfiguracji, służy do określania ustawień gniazda sieci Web.  
@@ -19,18 +19,18 @@ Element konfiguracji, służy do określania ustawień gniazda sieci Web.
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<netHttpBinding>  
-  <binding>   
-    <webSocketSettings createNotificationOnConnection="boolean" 
-                       disablePayloadMasking="boolean" 
-                       keepAliveInterval="TimeSpan" 
-                       maxPendingConnections="Integer" 
-                       receiveBufferSize="Integer" 
-                       sendBufferSize="Integer" 
-                       subProtocol="String" 
-                       transportUsage="WhenDuplex/Always/Never"/>
-  </binding>  
-</netHttpBinding>  
+<netHttpBinding>
+  <binding>
+    <webSocketSettings createNotificationOnConnection="Boolean"
+                       disablePayloadMasking="Boolean"
+                       keepAliveInterval="TimeSpan"
+                       maxPendingConnections="Integer"
+                       receiveBufferSize="Integer"
+                       sendBufferSize="Integer"
+                       subProtocol="String"
+                       transportUsage="WhenDuplex/Always/Never" />
+  </binding>
+</netHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -70,19 +70,18 @@ Element konfiguracji, służy do określania ustawień gniazda sieci Web.
  Poniższy przykład pokazuje, jak używać \<webSocketSettings > element.  
   
 ```xml  
-<netHttpBinding>  
-        <binding>  
-          <webSocketSettings createNotificationOnConnection="true"  
-                              disablePayloadMasking="false  
-                              keepAliveInterval="00:10:00"  
-                              maxPendingConnections="100"  
-                              receiveBufferSize="1000"  
-                              sendBufferSize="1000"  
-                              subProtocol="Soap"  
-                              transportUsage="WhenDuplex/Always/Never"/>  
-  
-        </binding>  
-      </netHttpBinding>  
+<netHttpBinding>
+  <binding>
+    <webSocketSettings createNotificationOnConnection="true"
+                       disablePayloadMasking="false"
+                       keepAliveInterval="00:10:00"
+                       maxPendingConnections="100"
+                       receiveBufferSize="1000"
+                       sendBufferSize="1000"
+                       subProtocol="Soap"
+                       transportUsage="WhenDuplex/Always/Never" />
+  </binding>
+</netHttpBinding>
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

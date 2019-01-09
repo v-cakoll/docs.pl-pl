@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 74c0e8ac025d69f0fd1ee7d451033165a1c8e615
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611858"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150638"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Instrukcje: Tworzenie niestandardowego uczestnika śledzenia
 Śledzenie przepływu pracy zapewnia wgląd w stan wykonywania przepływu pracy. Środowisko wykonawcze przepływów pracy emituje rekordów śledzenia, które opisują przepływ pracy zdarzenia cyklu życia, zdarzenia cyklu życia działań, resumptions zakładki i błędów. Te rekordy śledzenia są używane przez śledzenia uczestników. Windows Workflow Foundation (WF) zawiera standardowe śledzenia uczestnika, który zapisuje rekordy śledzenia jako zdarzenia śledzenie zdarzeń dla Windows (ETW). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia. W tym kroku samouczka opisano tworzenie niestandardowego uczestnika śledzenia i profilu śledzenia, który przechwycenie danych wyjściowych `WriteLine` działania, aby mogą być wyświetlane użytkownikowi.  
@@ -92,7 +92,7 @@ ms.locfileid: "53611858"
     }  
     ```  
   
-     Jeśli nie określono żadnego profilu śledzenia, jest używany domyślny profil śledzenia. Gdy używany jest domyślny profil śledzenia, dla wszystkich są emitowane rekordów śledzenia `ActivityStates`. Ponieważ musimy przechwytywany tekst jeden raz podczas cyklu życia `WriteLine` działania, firma Microsoft tylko wyodrębniania tekstu z `ActivityStates.Executing` stanu. W [utworzyć profil śledzenia i rejestrowania śledzenia uczestnika](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), tworzony jest profil śledzenia, który określa, że tylko `WriteLine` `ActivityStates.Executing` są emitowane rekordów śledzenia.  
+     Jeśli nie określono żadnego profilu śledzenia, jest używany domyślny profil śledzenia. Gdy używany jest domyślny profil śledzenia, dla wszystkich są emitowane rekordów śledzenia `ActivityStates`. Ponieważ musimy przechwytywany tekst jeden raz podczas cyklu życia `WriteLine` działania, firma Microsoft tylko wyodrębniania tekstu z `ActivityStates.Executing` stanu. W [utworzyć profil śledzenia i rejestrowania śledzenia uczestnika](#to-create-the-tracking-profile-and-register-the-tracking-participant), tworzony jest profil śledzenia, który określa, że tylko `WriteLine` `ActivityStates.Executing` są emitowane rekordów śledzenia.  
   
 ## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>Aby utworzyć profil śledzenia i zarejestrować uczestnika śledzenia  
   

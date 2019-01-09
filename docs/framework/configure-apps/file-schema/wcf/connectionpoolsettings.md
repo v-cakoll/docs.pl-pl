@@ -1,61 +1,61 @@
 ---
-title: '&lt;ConnectionPoolSettings&gt;'
+title: '&lt;connectionPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
-ms.openlocfilehash: 87fcbf08d897cf8d9e1924a8a5ed2b5b20945638
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2d79b3e28d1a80011cba7c515d979ae0037785a5
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149530"
 ---
-# <a name="ltconnectionpoolsettingsgt"></a><span data-ttu-id="a5e55-102">&lt;ConnectionPoolSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="a5e55-102">&lt;connectionPoolSettings&gt;</span></span>
-<span data-ttu-id="a5e55-103">Określa ustawienia puli dodatkowego połączenia powiązania nazwanego potoku.</span><span class="sxs-lookup"><span data-stu-id="a5e55-103">Specifies additional connection pool settings for a Named Pipe binding.</span></span>  
+# <a name="ltconnectionpoolsettingsgt"></a><span data-ttu-id="7770d-102">&lt;connectionPoolSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="7770d-102">&lt;connectionPoolSettings&gt;</span></span>
+<span data-ttu-id="7770d-103">Określa ustawienia puli dodatkowego połączenia powiązania nazwanego potoku.</span><span class="sxs-lookup"><span data-stu-id="7770d-103">Specifies additional connection pool settings for a Named Pipe binding.</span></span>  
   
- <span data-ttu-id="a5e55-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="a5e55-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="a5e55-105">\<powiązania ></span><span class="sxs-lookup"><span data-stu-id="a5e55-105">\<bindings></span></span>  
-<span data-ttu-id="a5e55-106">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="a5e55-106">\<customBinding></span></span>  
-<span data-ttu-id="a5e55-107">\<Powiązanie ></span><span class="sxs-lookup"><span data-stu-id="a5e55-107">\<binding></span></span>  
-<span data-ttu-id="a5e55-108">\<namePipeTransport ></span><span class="sxs-lookup"><span data-stu-id="a5e55-108">\<namePipeTransport></span></span>  
-<span data-ttu-id="a5e55-109">\<connectionPoolSettings ></span><span class="sxs-lookup"><span data-stu-id="a5e55-109">\<connectionPoolSettings></span></span>  
+ <span data-ttu-id="7770d-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="7770d-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="7770d-105">\<powiązania ></span><span class="sxs-lookup"><span data-stu-id="7770d-105">\<bindings></span></span>  
+<span data-ttu-id="7770d-106">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="7770d-106">\<customBinding></span></span>  
+<span data-ttu-id="7770d-107">\<Powiązanie ></span><span class="sxs-lookup"><span data-stu-id="7770d-107">\<binding></span></span>  
+<span data-ttu-id="7770d-108">\<namePipeTransport ></span><span class="sxs-lookup"><span data-stu-id="7770d-108">\<namePipeTransport></span></span>  
+<span data-ttu-id="7770d-109">\<connectionPoolSettings ></span><span class="sxs-lookup"><span data-stu-id="7770d-109">\<connectionPoolSettings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5e55-110">Składnia</span><span class="sxs-lookup"><span data-stu-id="a5e55-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7770d-110">Składnia</span><span class="sxs-lookup"><span data-stu-id="7770d-110">Syntax</span></span>  
   
 ```xml  
-<connectionPoolSettings  
-        groupName="String"  
-    idleTimeout"TimeSpan"  
-    maxOutboundConnectionsPerEndpopint="Integer" />  
+<connectionPoolSettings groupName="String"
+                        idleTimeout="TimeSpan"
+                        maxOutboundConnectionsPerEndpopint="Integer" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a5e55-111">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="a5e55-111">Attributes and Elements</span></span>  
- <span data-ttu-id="a5e55-112">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="a5e55-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7770d-111">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="7770d-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="7770d-112">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="7770d-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a5e55-113">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="a5e55-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7770d-113">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="7770d-113">Attributes</span></span>  
   
-|<span data-ttu-id="a5e55-114">Atrybut</span><span class="sxs-lookup"><span data-stu-id="a5e55-114">Attribute</span></span>|<span data-ttu-id="a5e55-115">Opis</span><span class="sxs-lookup"><span data-stu-id="a5e55-115">Description</span></span>|  
+|<span data-ttu-id="7770d-114">Atrybut</span><span class="sxs-lookup"><span data-stu-id="7770d-114">Attribute</span></span>|<span data-ttu-id="7770d-115">Opis</span><span class="sxs-lookup"><span data-stu-id="7770d-115">Description</span></span>|  
 |---------------|-----------------|  
-|`groupName`|<span data-ttu-id="a5e55-116">Ciąg, który definiuje nazwę puli połączeń dla wychodzących kanałów.</span><span class="sxs-lookup"><span data-stu-id="a5e55-116">A string that defines the name of the connection pool used for outgoing channels.</span></span> <span data-ttu-id="a5e55-117">W trybie przesyłanej strumieniowo połączenia nie są udostępniane, co oznacza, że buforowanie połączeń jest wyłączona.</span><span class="sxs-lookup"><span data-stu-id="a5e55-117">In streamed mode, connections are not shared, meaning that connection pooling is disabled.</span></span> <span data-ttu-id="a5e55-118">Wartość domyślna to ciąg "domyślny".</span><span class="sxs-lookup"><span data-stu-id="a5e55-118">The default is a "default" string.</span></span> <span data-ttu-id="a5e55-119">Można zmodyfikować tę wartość, aby odizolować połączeń dla określonego klienta do oddzielnych grup.</span><span class="sxs-lookup"><span data-stu-id="a5e55-119">You can modify this value to isolate the connections for a particular client into separate groups.</span></span>|  
-|`idleTimeout`|<span data-ttu-id="a5e55-120">Dodatnią <xref:System.TimeSpan> , który określa maksymalny czas, połączenie może być bezczynne, zanim zostanie rozłączone.</span><span class="sxs-lookup"><span data-stu-id="a5e55-120">A positive <xref:System.TimeSpan> that specifies the maximum time the connection can be idle before being disconnected.</span></span> <span data-ttu-id="a5e55-121">Wartość domyślna to 00:02:00.</span><span class="sxs-lookup"><span data-stu-id="a5e55-121">The default is 00:02:00.</span></span>|  
-|`maxOutboundConnectionsPerEndpoint`|<span data-ttu-id="a5e55-122">Dodatnia liczba całkowita, która określa maksymalną liczbę połączeń do zdalnego punktu końcowego, inicjowanego przez usługę.</span><span class="sxs-lookup"><span data-stu-id="a5e55-122">A positive integer that specifies the maximum number of connections to a remote endpoint initiated by the service.</span></span> <span data-ttu-id="a5e55-123">Połączenia poza limitem są umieszczane w kolejce, dopóki nie będzie dostępne miejsce poniżej limitu.</span><span class="sxs-lookup"><span data-stu-id="a5e55-123">Connections in excess of the limit are queued until a space below the limit becomes available.</span></span> <span data-ttu-id="a5e55-124">`idleTimeout` Ogranicza okres, w którym połączenia pozostają w kolejce przed jest zgłaszany wyjątek.</span><span class="sxs-lookup"><span data-stu-id="a5e55-124">The `idleTimeout` limits the duration in which connections remain queued before an exception is thrown.</span></span> <span data-ttu-id="a5e55-125">Wartość domyślna to 10.</span><span class="sxs-lookup"><span data-stu-id="a5e55-125">The default is 10.</span></span><br /><br /> <span data-ttu-id="a5e55-126">Ten atrybut ogranicza liczbę równoczesnych aktywnych połączeń z klienta do określonego punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="a5e55-126">This attribute limits the number of simultaneous active connections from the client to a particular service endpoint.</span></span> <span data-ttu-id="a5e55-127">Tę wartość po przekroczeniu dzięki użyciu aktywnych połączeń klienckich, usługi mogą być wyświetlane odpowiadać do klienta.</span><span class="sxs-lookup"><span data-stu-id="a5e55-127">If this value is exceeded by having more active client connections, the service may appear unresponsive to the client.</span></span> <span data-ttu-id="a5e55-128">W takim przypadku ta wartość powinna dostosowana do przekracza maksymalną liczbę oczekiwanych równoczesnych połączeń klientów do określonego punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="a5e55-128">In this case, this value should be adjusted to exceed the maximum number of expected simultaneous client connections to a specific endpoint.</span></span>|  
+|`groupName`|<span data-ttu-id="7770d-116">Ciąg, który definiuje nazwę puli połączeń dla wychodzących kanałów.</span><span class="sxs-lookup"><span data-stu-id="7770d-116">A string that defines the name of the connection pool used for outgoing channels.</span></span> <span data-ttu-id="7770d-117">W trybie przesyłane strumieniowo połączenia nie są udostępniane, co oznacza, że buforowanie połączeń jest wyłączona.</span><span class="sxs-lookup"><span data-stu-id="7770d-117">In streamed mode, connections are not shared, meaning that connection pooling is disabled.</span></span> <span data-ttu-id="7770d-118">Wartość domyślna to ciąg "default".</span><span class="sxs-lookup"><span data-stu-id="7770d-118">The default is a "default" string.</span></span> <span data-ttu-id="7770d-119">Możesz zmodyfikować tę wartość, aby odizolować połączeń dla konkretnego klienta do osobnych grup.</span><span class="sxs-lookup"><span data-stu-id="7770d-119">You can modify this value to isolate the connections for a particular client into separate groups.</span></span>|  
+|`idleTimeout`|<span data-ttu-id="7770d-120">Dodatnią <xref:System.TimeSpan> , który określa maksymalny czas połączenia może być bezczynne, zanim zostanie rozłączone.</span><span class="sxs-lookup"><span data-stu-id="7770d-120">A positive <xref:System.TimeSpan> that specifies the maximum time the connection can be idle before being disconnected.</span></span> <span data-ttu-id="7770d-121">Wartość domyślna to 00:02:00.</span><span class="sxs-lookup"><span data-stu-id="7770d-121">The default is 00:02:00.</span></span>|  
+|`maxOutboundConnectionsPerEndpoint`|<span data-ttu-id="7770d-122">Dodatnia liczba całkowita, określająca maksymalną liczbę połączeń do zdalnego punktu końcowego, inicjowanego przez usługę.</span><span class="sxs-lookup"><span data-stu-id="7770d-122">A positive integer that specifies the maximum number of connections to a remote endpoint initiated by the service.</span></span> <span data-ttu-id="7770d-123">Połączeń poza limitem zostaną umieszczone w kolejce, dopóki miejsce poniżej limitu staje się dostępna.</span><span class="sxs-lookup"><span data-stu-id="7770d-123">Connections in excess of the limit are queued until a space below the limit becomes available.</span></span> <span data-ttu-id="7770d-124">`idleTimeout` Ogranicza okres, w którym pozostają w kolejce zanim zostanie zgłoszony wyjątek.</span><span class="sxs-lookup"><span data-stu-id="7770d-124">The `idleTimeout` limits the duration in which connections remain queued before an exception is thrown.</span></span> <span data-ttu-id="7770d-125">Wartość domyślna wynosi 10.</span><span class="sxs-lookup"><span data-stu-id="7770d-125">The default is 10.</span></span><br /><br /> <span data-ttu-id="7770d-126">Ten atrybut ogranicza liczbę równoczesnych aktywnych połączeń z klienta do endpoint określonej usługi.</span><span class="sxs-lookup"><span data-stu-id="7770d-126">This attribute limits the number of simultaneous active connections from the client to a particular service endpoint.</span></span> <span data-ttu-id="7770d-127">Jeśli ta wartość zostanie przekroczony zlecając aktywnych połączeń klienta, usługa może pojawić się odpowiadać do klienta.</span><span class="sxs-lookup"><span data-stu-id="7770d-127">If this value is exceeded by having more active client connections, the service may appear unresponsive to the client.</span></span> <span data-ttu-id="7770d-128">W takim przypadku można dostosować tę wartość w przekracza maksymalną liczbę oczekiwanych równoczesnych połączeń klientów do określonego punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="7770d-128">In this case, this value should be adjusted to exceed the maximum number of expected simultaneous client connections to a specific endpoint.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a5e55-129">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="a5e55-129">Child Elements</span></span>  
- <span data-ttu-id="a5e55-130">Brak.</span><span class="sxs-lookup"><span data-stu-id="a5e55-130">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7770d-129">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="7770d-129">Child Elements</span></span>  
+ <span data-ttu-id="7770d-130">Brak.</span><span class="sxs-lookup"><span data-stu-id="7770d-130">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="a5e55-131">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="a5e55-131">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7770d-131">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="7770d-131">Parent Elements</span></span>  
   
-|<span data-ttu-id="a5e55-132">Element</span><span class="sxs-lookup"><span data-stu-id="a5e55-132">Element</span></span>|<span data-ttu-id="a5e55-133">Opis</span><span class="sxs-lookup"><span data-stu-id="a5e55-133">Description</span></span>|  
+|<span data-ttu-id="7770d-132">Element</span><span class="sxs-lookup"><span data-stu-id="7770d-132">Element</span></span>|<span data-ttu-id="7770d-133">Opis</span><span class="sxs-lookup"><span data-stu-id="7770d-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a5e55-134">\<namedPipeTransport ></span><span class="sxs-lookup"><span data-stu-id="a5e55-134">\<namedPipeTransport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|<span data-ttu-id="a5e55-135">Definiuje transport, powodujący przesył kanałem wiadomości używając potoków nazwanych.</span><span class="sxs-lookup"><span data-stu-id="a5e55-135">Defines a transport that causes a channel to transfer messages using named pipes.</span></span>|  
+|[<span data-ttu-id="7770d-134">\<namedPipeTransport ></span><span class="sxs-lookup"><span data-stu-id="7770d-134">\<namedPipeTransport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|<span data-ttu-id="7770d-135">Definiuje transport, powodujący przesył kanałem wiadomości używając potoków nazwanych.</span><span class="sxs-lookup"><span data-stu-id="7770d-135">Defines a transport that causes a channel to transfer messages using named pipes.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="a5e55-136">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a5e55-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7770d-136">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7770d-136">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.NamedPipeConnectionPoolSettingsElement>  
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement.ConnectionPoolSettings%2A>  
  <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [<span data-ttu-id="a5e55-137">Transporty</span><span class="sxs-lookup"><span data-stu-id="a5e55-137">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [<span data-ttu-id="a5e55-138">Wybieranie transportu</span><span class="sxs-lookup"><span data-stu-id="a5e55-138">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [<span data-ttu-id="a5e55-139">Powiązania</span><span class="sxs-lookup"><span data-stu-id="a5e55-139">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="a5e55-140">Rozszerzanie powiązań</span><span class="sxs-lookup"><span data-stu-id="a5e55-140">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="a5e55-141">Powiązania niestandardowe</span><span class="sxs-lookup"><span data-stu-id="a5e55-141">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="a5e55-142">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="a5e55-142">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [<span data-ttu-id="7770d-137">Transporty</span><span class="sxs-lookup"><span data-stu-id="7770d-137">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [<span data-ttu-id="7770d-138">Wybieranie transportu</span><span class="sxs-lookup"><span data-stu-id="7770d-138">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [<span data-ttu-id="7770d-139">Powiązania</span><span class="sxs-lookup"><span data-stu-id="7770d-139">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="7770d-140">Rozszerzanie powiązań</span><span class="sxs-lookup"><span data-stu-id="7770d-140">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="7770d-141">Powiązania niestandardowe</span><span class="sxs-lookup"><span data-stu-id="7770d-141">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="7770d-142">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="7770d-142">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

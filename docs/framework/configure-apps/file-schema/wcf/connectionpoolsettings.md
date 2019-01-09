@@ -1,15 +1,15 @@
 ---
-title: '&lt;ConnectionPoolSettings&gt;'
+title: '&lt;connectionPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
-ms.openlocfilehash: 87fcbf08d897cf8d9e1924a8a5ed2b5b20945638
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2d79b3e28d1a80011cba7c515d979ae0037785a5
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748155"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149530"
 ---
-# <a name="ltconnectionpoolsettingsgt"></a>&lt;ConnectionPoolSettings&gt;
+# <a name="ltconnectionpoolsettingsgt"></a>&lt;connectionPoolSettings&gt;
 Określa ustawienia puli dodatkowego połączenia powiązania nazwanego potoku.  
   
  \<system.serviceModel>  
@@ -22,10 +22,9 @@ Określa ustawienia puli dodatkowego połączenia powiązania nazwanego potoku.
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<connectionPoolSettings  
-        groupName="String"  
-    idleTimeout"TimeSpan"  
-    maxOutboundConnectionsPerEndpopint="Integer" />  
+<connectionPoolSettings groupName="String"
+                        idleTimeout="TimeSpan"
+                        maxOutboundConnectionsPerEndpopint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -35,9 +34,9 @@ Określa ustawienia puli dodatkowego połączenia powiązania nazwanego potoku.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`groupName`|Ciąg, który definiuje nazwę puli połączeń dla wychodzących kanałów. W trybie przesyłanej strumieniowo połączenia nie są udostępniane, co oznacza, że buforowanie połączeń jest wyłączona. Wartość domyślna to ciąg "domyślny". Można zmodyfikować tę wartość, aby odizolować połączeń dla określonego klienta do oddzielnych grup.|  
-|`idleTimeout`|Dodatnią <xref:System.TimeSpan> , który określa maksymalny czas, połączenie może być bezczynne, zanim zostanie rozłączone. Wartość domyślna to 00:02:00.|  
-|`maxOutboundConnectionsPerEndpoint`|Dodatnia liczba całkowita, która określa maksymalną liczbę połączeń do zdalnego punktu końcowego, inicjowanego przez usługę. Połączenia poza limitem są umieszczane w kolejce, dopóki nie będzie dostępne miejsce poniżej limitu. `idleTimeout` Ogranicza okres, w którym połączenia pozostają w kolejce przed jest zgłaszany wyjątek. Wartość domyślna to 10.<br /><br /> Ten atrybut ogranicza liczbę równoczesnych aktywnych połączeń z klienta do określonego punktu końcowego. Tę wartość po przekroczeniu dzięki użyciu aktywnych połączeń klienckich, usługi mogą być wyświetlane odpowiadać do klienta. W takim przypadku ta wartość powinna dostosowana do przekracza maksymalną liczbę oczekiwanych równoczesnych połączeń klientów do określonego punktu końcowego.|  
+|`groupName`|Ciąg, który definiuje nazwę puli połączeń dla wychodzących kanałów. W trybie przesyłane strumieniowo połączenia nie są udostępniane, co oznacza, że buforowanie połączeń jest wyłączona. Wartość domyślna to ciąg "default". Możesz zmodyfikować tę wartość, aby odizolować połączeń dla konkretnego klienta do osobnych grup.|  
+|`idleTimeout`|Dodatnią <xref:System.TimeSpan> , który określa maksymalny czas połączenia może być bezczynne, zanim zostanie rozłączone. Wartość domyślna to 00:02:00.|  
+|`maxOutboundConnectionsPerEndpoint`|Dodatnia liczba całkowita, określająca maksymalną liczbę połączeń do zdalnego punktu końcowego, inicjowanego przez usługę. Połączeń poza limitem zostaną umieszczone w kolejce, dopóki miejsce poniżej limitu staje się dostępna. `idleTimeout` Ogranicza okres, w którym pozostają w kolejce zanim zostanie zgłoszony wyjątek. Wartość domyślna wynosi 10.<br /><br /> Ten atrybut ogranicza liczbę równoczesnych aktywnych połączeń z klienta do endpoint określonej usługi. Jeśli ta wartość zostanie przekroczony zlecając aktywnych połączeń klienta, usługa może pojawić się odpowiadać do klienta. W takim przypadku można dostosować tę wartość w przekracza maksymalną liczbę oczekiwanych równoczesnych połączeń klientów do określonego punktu końcowego.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  

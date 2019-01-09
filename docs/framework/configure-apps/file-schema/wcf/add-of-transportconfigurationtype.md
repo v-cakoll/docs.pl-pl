@@ -2,15 +2,15 @@
 title: '&lt;add&gt; w &lt;transportConfigurationType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: 5d13ef51444e1600b0cea5d55a1b5e332e440bc6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1079b25ce137dc89fc31f46a11f3720486462021
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749637"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149140"
 ---
 # <a name="ltaddgt-of-lttransportconfigurationtypegt"></a>&lt;add&gt; w &lt;transportConfigurationType&gt;
-Ten element jest para klucza i wartości, które identyfikuje typ danego transportu.  
+Ten element jest para klucza i wartości, który identyfikuje typ danego transportu.  
   
  \<system.ServiceModel>  
 \<serviceHostingEnvironment >  
@@ -20,12 +20,12 @@ Ten element jest para klucza i wartości, które identyfikuje typ danego transpo
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<serviceHostingEnvironment>   
-   <transportConfigurationTypes>  
-      <add name="String"  
-               transportConfigurationType="String"/>   
-   </transportConfigurationTypes>  
-</serviceHostingEnvironment>  
+<serviceHostingEnvironment>
+  <transportConfigurationTypes>
+    <add name="String"
+         transportConfigurationType="String" />
+  </transportConfigurationTypes>
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -35,7 +35,7 @@ Ten element jest para klucza i wartości, które identyfikuje typ danego transpo
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|nazwa|Wymagany atrybut ciągu.<br /><br /> Zawiera klucz zdefiniowane przez użytkownika, który unikatowo identyfikuje typem transportu.|  
+|nazwa|Wymagany atrybut ciągu.<br /><br /> Zawiera klucz zdefiniowanych przez użytkownika, który unikatowo identyfikuje typ transportu.|  
 |transportConfigurationType|Ciąg, który zawiera typ, który implementuje określonego transportu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -45,17 +45,17 @@ Ten element jest para klucza i wartości, które identyfikuje typ danego transpo
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Kolekcja typów, które implementują określonego transportu.|  
+|[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Kolekcja typów implementujących określonego transportu.|  
   
 ## <a name="example"></a>Przykład  
   
 ```xml  
-<serviceHostingEnvironment>   
-   <transportConfigurationTypes>  
-      <add name="net.udp"  
-      transportConfigurationType="Microsoft.ServiceModel.Samples.Hosting.HostedUdpTransportConfiguration, UdpActivation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6fa904d2da1848d6" />   
-   </transportConfigurationTypes>  
-</serviceHostingEnvironment>  
+<serviceHostingEnvironment>
+  <transportConfigurationTypes>
+    <add name="net.udp"
+         transportConfigurationType="Microsoft.ServiceModel.Samples.Hosting.HostedUdpTransportConfiguration, UdpActivation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6fa904d2da1848d6" />
+  </transportConfigurationTypes>
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

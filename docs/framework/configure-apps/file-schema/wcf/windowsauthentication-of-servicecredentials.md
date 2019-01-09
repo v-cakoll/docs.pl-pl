@@ -2,15 +2,15 @@
 title: '&lt;windowsAuthentication&gt; w &lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: 9872b1f2520661ff3f31cef94b6822bb345ebfdf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: acbb4f788d805d72dedcc7be711a38d1f1e82687
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767547"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148347"
 ---
 # <a name="ltwindowsauthenticationgt-of-ltservicecredentialsgt"></a>&lt;windowsAuthentication&gt; w &lt;serviceCredentials&gt;
-Określa ustawienia poświadczenia usługi systemu Windows.  
+Określa ustawienia poświadczenia usługi Windows.  
   
  \<system.ServiceModel>  
 \<zachowania >  
@@ -22,9 +22,8 @@ Określa ustawienia poświadczenia usługi systemu Windows.
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<windowsAuthentication  
-      allowAnonymousLogons="Boolean"  
-      includeWindowsGroups="Boolean" />  
+<windowsAuthentication allowAnonymousLogons="Boolean"
+                       includeWindowsGroups="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -34,8 +33,8 @@ Określa ustawienia poświadczenia usługi systemu Windows.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`includeWindowsGroups`|Opcjonalny logiczny atrybut, który określa, czy system zawiera grupy systemu Windows w kontekście zabezpieczeń. Wartość domyślna to `true`.<br /><br /> Ustawienie tego atrybutu na `true` ma wpływ na wydajność, ponieważ jej wynikiem rozszerzenia grupy pełnej. Ten atrybut na `false` Jeśli nie musisz ustanowić listę grup należy użytkownik.|  
-|`allowAnonymousLogons`|Opcjonalny logiczny atrybut, który określa, czy są dozwolone anonimowe, nieuwierzytelnione wywoływania. Wartość domyślna to `false`.<br /><br /> Gdy `clientCredentialType` ustawiono atrybut powiązania `Windows`, systemu nie zezwala na anonimowe obiekty wywołujące. Oznacza to, że tylko domeny lub grupy roboczej uwierzytelniony elementy wywołujące mogą uzyskać dostępu do systemu. Aby zmienić to zachowanie, należy za pomocą tego atrybutu.<br /><br /> Użyj tego ustawienia z najwyższą ostrożność.|  
+|`includeWindowsGroups`|Opcjonalny logiczny atrybut, który określa, czy system zawiera grupy Windows w kontekście zabezpieczeń. Wartość domyślna to `true`.<br /><br /> Ustawienie tego atrybutu na `true` ma wpływ na wydajność, ponieważ powoduje ona wystąpił błąd rozszerzania grupy pełnej. Ustaw ten atrybut na `false` Jeśli potrzebujesz nawiązać listy grup należy użytkownik.|  
+|`allowAnonymousLogons`|Opcjonalny logiczny atrybut, który określa, czy są dozwolone anonimowe, nieuwierzytelnione wywoływania. Wartość domyślna to `false`.<br /><br /> Gdy `clientCredentialType` ma ustawioną wartość atrybutu powiązania `Windows`, system nie zezwala na dostęp anonimowy wywołań. Oznacza to, tym tylko domeny lub grupy roboczej uwierzytelniony obiekty wywołujące mogą uzyskać dostęp do systemu. To zachowanie można zastąpić za pomocą tego atrybutu.<br /><br /> Użyj tego ustawienia z najwyższą ostrożnością.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -44,10 +43,10 @@ Określa ustawienia poświadczenia usługi systemu Windows.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Określa poświadczenia do użycia w uwierzytelnianiu usługi i ustawień dotyczących walidacji poświadczeń klienta.|  
+|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Określa poświadczenie do użycia w uwierzytelnianiu usługi i ustawień dotyczących walidacji poświadczeń klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj tego elementu, aby określić, czy zezwolić na dostęp do anonimowych użytkowników systemu Windows przez ustawienie `allowAnonymousLogons` atrybutu. Można również określić, czy do uwzględnienia informacji o grupie, do której należą użytkowników w elementu AuthorizationContext przez ustawienie `includeWindowsGroups` atrybutu. Jeśli wartość jest ustawiona na `true` (ustawienie domyślne), ta usługa może określić grupy systemu Windows, do której należy dany klient.  
+ Użyj tego elementu, aby określić, czy chcesz zezwolić anonimowym użytkownikom Windows dostępu przez ustawienie `allowAnonymousLogons` atrybutu. Można również określić, czy do uwzględnienia informacji o grupie, do której należą użytkownicy w autoryzacji, ustawiając `includeWindowsGroups` atrybutu. Jeśli jest równa `true` (ustawienie domyślne), ta usługa może określić grupy Windows, do której należy dany klient.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.WindowsServiceElement>  

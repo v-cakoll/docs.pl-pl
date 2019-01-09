@@ -4,12 +4,12 @@ description: Poznaj różne scenariusze obsługiwane przez architektury bezserwe
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146715"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149680"
 ---
 # <a name="serverless-design-examples"></a>Przykłady z projektu bez użycia serwera
 
@@ -65,7 +65,7 @@ Funkcje bezserwerowe może służyć do ułatwienia potoku danych. W tym przykł
 
 ## <a name="stream-processing"></a>Przetwarzanie strumienia
 
-Urządzenia i czujniki, często generowania strumieni danych, które muszą zostać przetworzone w czasie rzeczywistym. Istnieje wiele technologii, które można przechwycić komunikaty i strumieni z [usługi Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) i [usługi IoT Hub](https://docs.microsoft.com/azure/iot-hub) do [usługi Service Bus](/service-bus). Niezależnie od tego, transport bez użycia serwera jest mechanizm idealne rozwiązanie do przetwarzania komunikatów i strumieni danych, jak pojawiają się w. Aplikacje niewymagające użycia serwera można szybko skalować w celu spełnienia określonych wymagań dużych ilości danych. Kod bez użycia serwera, można zastosować logikę biznesową w celu analizowania danych i danych wyjściowych w formacie ustrukturyzowanym, akcji i analizy.
+Urządzenia i czujniki, często generowania strumieni danych, które muszą zostać przetworzone w czasie rzeczywistym. Istnieje wiele technologii, które można przechwycić komunikaty i strumieni z [usługi Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) i [usługi IoT Hub](https://docs.microsoft.com/azure/iot-hub) do [usługi Service Bus](https://docs.microsoft.com/azure/service-bus). Niezależnie od tego, transport bez użycia serwera jest mechanizm idealne rozwiązanie do przetwarzania komunikatów i strumieni danych, jak pojawiają się w. Aplikacje niewymagające użycia serwera można szybko skalować w celu spełnienia określonych wymagań dużych ilości danych. Kod bez użycia serwera, można zastosować logikę biznesową w celu analizowania danych i danych wyjściowych w formacie ustrukturyzowanym, akcji i analizy.
 
 ![Przetwarzanie strumienia bez użycia serwera](./media/serverless-stream-processing.png)
 

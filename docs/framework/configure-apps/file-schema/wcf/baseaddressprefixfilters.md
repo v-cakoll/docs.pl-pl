@@ -2,18 +2,18 @@
 title: '&lt;baseAddressPrefixFilters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 9ac0c756f611c877ca689f12e5fe365026924f1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04579980201b397e7ed92f55ffcb19e54de18aaa
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358544"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149231"
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
-Reprezentuje kolekcję elementów, które określają przechodzą przez filtry, które zawierają mechanizm wyboru odpowiednich powiązań usług Internet Information Services (IIS), odnośnie do hostowania aplikacji Windows Communication Foundation (WCF) w usługach IIS konfiguracji.  
+Reprezentuje kolekcję konfiguracji, które elementy, które określają przechodzą przez filtry, które zapewniają mechanizm wyboru odpowiednich powiązań usług Internet Information Services (IIS) w przypadku hostowania aplikacji Windows Communication Foundation (WCF) w usługach IIS.  
   
 > [!WARNING]
->  \<baseAddressPrefixFilters > nie rozpoznano "localhost", zamiast tego użyj nazwy FQDN komputera.  
+>  \<baseAddressPrefixFilters > nie rozpoznaje "localhost", zamiast tego użyj w pełni kwalifikowanej nazwy komputera.  
   
  \<system.ServiceModel>  
 \<serviceHostingEnvironment >  
@@ -21,11 +21,11 @@ Reprezentuje kolekcję elementów, które określają przechodzą przez filtry, 
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<serviceHostingEnvironment>  
-     <baseAddressPrefixFilters>  
-        <add prefix="string"/>  
-     </baseAddressPrefixFilters>  
-</serviceHostingEnvironment>  
+<serviceHostingEnvironment>
+  <baseAddressPrefixFilters>
+    <add prefix="String" />
+   </baseAddressPrefixFilters>
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -38,7 +38,7 @@ Reprezentuje kolekcję elementów, które określają przechodzą przez filtry, 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddressprefixfilter.md)|Dodaje element konfiguracji, który określa filtr prefiks dla adres podstawowy używany przez hosta usługi.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddressprefixfilter.md)|Dodaje element konfiguracji, który określa filtr prefiksu adres podstawowy, używany przez hosta usługi.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -47,38 +47,38 @@ Reprezentuje kolekcję elementów, które określają przechodzą przez filtry, 
 |[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Definiuje typ, który usługę hostingu środowiskowego dla danego transportu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Filtr prefiks umożliwia udostępnionego dostawcy hostingu określić, które identyfikatory URI są używane przez usługę. Umożliwia on udostępniony hostów do obsługi wielu aplikacji za pomocą innego adresu podstawowego dla tego samego schematu w tej samej lokacji.  
+ Filtr prefiksu umożliwia udostępniony dostawcy hostingu określić, które identyfikatory URI, które mają być używane przez usługę. Dzięki temu hosty udostępnione do hostowania wielu aplikacji przy użyciu różnych adresami podstawowymi dla tego samego schematu w tej samej lokacji.  
   
- Witryn sieci Web IIS są kontenerami dla aplikacji wirtualnych, które zawierają katalogów wirtualnych. Za pomocą co najmniej jednego powiązania usługi IIS można uzyskać dostępu do aplikacji w lokacji. Informacje Podaj powiązania usługi IIS: Protokół powiązania i informacje o wiązaniu. Powiązanie protokół (na przykład HTTP) definiuje schemat, przez który dane są przesyłane i powiązanie informacji (na przykład adres IP, portu, nagłówka hosta) zawiera dane używane do uzyskania dostępu do witryny.  
+ Witryn sieci Web IIS są kontenerami dla aplikacji wirtualnych, które zawierają katalogów wirtualnych. Aplikacja w lokacji jest możliwy za pośrednictwem jednego lub więcej powiązań usług IIS. Powiązania usługi IIS zapewniają dwóch rodzajów informacji: Protokół powiązania i informacje o powiązaniu. Powiązanie protokołu (na przykład HTTP) definiuje schemat, przez który dane są przesyłane i informacje (na przykład adres IP, portu, nagłówka hosta) zawiera dane używane do uzyskiwania dostępu do witryny.  
   
- Usługi IIS obsługują określania wielokrotne powiązania usługi IIS dla każdej lokacji, co prowadzi do wielu adresu podstawowego dla każdego schematu. Ponieważ usługi WCF hostowanej przez witrynę umożliwia powiązanie tylko jeden adres podstawowy dla każdego schematu, można użyć funkcji filtrowania prefiks wybierz wymagany adres podstawowy usługi hostowanej. Przychodzące adres podstawowy, dostarczone przez usługi IIS, są filtrowane z filtru listy opcjonalny prefiks.  
+ Program IIS obsługuje Określanie wielu powiązań usług IIS dla każdej lokacji, co skutkuje z wieloma adresami podstawowymi dla każdego schematu. Ponieważ usługi WCF hostowanej przez witrynę pozwala na powiązanie tylko jeden adres podstawowy dla każdego schematu, można użyć funkcji filtrowania prefiksu i wybierz wymagany adres podstawowy usługi hostowanej. Przychodzące adres podstawowy, dostarczone przez usługi IIS, są filtrowane w oparciu o filtr list opcjonalny prefiks.  
   
- Na przykład witryna może zawierać następujący adres podstawowy.  
+ Na przykład witryna może zawierać następujące adresy podstawowy.  
   
 ```  
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  
   
- Można użyć następującego pliku konfiguracji do określenia filtru prefiks na poziomie elementu appdomain.  
+ Następujący plik konfiguracji służy do określania prefiksu filtr na poziomie domeny aplikacji.  
   
 ```xml  
-<system.serviceModel>  
-  <serviceHostingEnvironment>  
-     <baseAddressPrefixFilters>  
-        <add prefix="net.tcp://test1.fabrikam.com:8000"/>  
-        <add prefix="http://test2.fabrikam.com:9000"/>  
-    </baseAddressPrefixFilters>  
-  </serviceHostingEnvironment>  
-</system.serviceModel>  
+<system.serviceModel>
+  <serviceHostingEnvironment>
+    <baseAddressPrefixFilters>
+      <add prefix="net.tcp://test1.fabrikam.com:8000" />
+      <add prefix="http://test2.fabrikam.com:9000" />
+    </baseAddressPrefixFilters>
+  </serviceHostingEnvironment>
+</system.serviceModel>
 ```  
   
  W tym przykładzie `net.tcp://test1.fabrikam.com:8000` i `http://test2.fabrikam.com:9000` są tylko podstawowy adres ich systemów, które mogą być przekazywane.  
   
- Domyślnie jeśli nie określono prefiksu, wszystkie adresy są przekazywane. Określenie prefiksu umożliwia tylko pasujących adres podstawowy schemat przekazywane.  
+ Domyślnie jeśli nie określono prefiksu, wszystkie adresy są przekazywane. Umożliwia określenie prefiksu tylko pasujących adres podstawowy dla tego schematu, które zostaną przekazane za pośrednictwem.  
   
 > [!NOTE]
->  Filtr nie obsługuje żadnych symboli wieloznacznych. Ponadto baseAddresses dostarczonych przez usługi IIS może być adresy powiązany z innych systemów, które nie znajduje się w `baseAddressPrefixFilters` listy. Tych adresów nie są odfiltrowywane.  
+>  Filtr nie obsługuje żadnych symboli wieloznacznych. Ponadto baseAddresses dostarczane przez usługi IIS wiążące adresy powiązany z innych systemów, które nie znajduje się w `baseAddressPrefixFilters` listy. Te adresy nie są odfiltrowywane.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElementCollection>  

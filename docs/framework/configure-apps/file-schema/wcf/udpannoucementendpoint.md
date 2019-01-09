@@ -2,15 +2,15 @@
 title: '&lt;udpAnnoucementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: a6dbec19beb3800603bd745bacbd6cbcbcdaa739
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8a6c874d7d2930b969f2cc9778534aa99eab78f5
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766793"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145825"
 ---
 # <a name="ltudpannoucementendpointgt"></a>&lt;udpAnnoucementEndpoint&gt;
-Ten element konfiguracji definiuje standardowy punkt końcowy jest używany przez usługi do wysłania komunikatów Anons powiązania protokołu UDP. Ma stały kontraktu i obsługuje dwie wersje odnajdywania. Ponadto ma stałym powiązaniem UDP oraz domyślną wartość adresu zgodnie ze specyfikacją WS-Discovery (WS-Discovery kwietnia 2005 lub WS-Discovery w wersji 1.1). Można określić adres multiemisji do użycia na potrzeby wysyłania i odbierania wiadomości powiadomienia.  
+Ten element konfiguracji definiuje standardowy punkt końcowy, który jest używany przez usługi do wysłania komunikatów Anons z powiązania protokołu UDP. Ma stały kontraktu i obsługuje dwie wersje odnajdywania. Ponadto ma stałym powiązaniem UDP oraz domyślną wartość adresu określonych w specyfikacji WS-Discovery (WS-Discovery kwietnia 2005 lub w wersji 1.1 protokołu WS-Discovery). Możesz określić adres multiemisji na potrzeby wysyłania i odbierania wiadomości anonsów.  
   
 \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -18,16 +18,16 @@ Ten element konfiguracji definiuje standardowy punkt końcowy jest używany prze
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <announcementEndpoint>
-      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005" 
+      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
                         maxAnnouncementDelay="Timespan"
                         multicastAddress="Uri"
                         name="String" />
     </announcementEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -37,46 +37,46 @@ Ten element konfiguracji definiuje standardowy punkt końcowy jest używany prze
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|discoveryVersion|Ciąg, który określa jeden z dwóch wersji protokołu WS-Discovery. Prawidłowe wartości to WSDiscovery11 i WSDiscoveryApril2005. Ta wartość jest typu <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.|  
-|maxAnnouncementDelay|Wartość Timespan określający maksymalną wartość opóźnienia protokołu Discovery będzie czekać przed wysłaniem wiadomości powitania. Przed wysłaniem wiadomości będą oczekiwać losowo wartość z zakresu od 0 i wartość tego atrybutu. Ten atrybut służy do ustawiania małe, losowe opóźnienie do uniknięcia sieci "burz", gdy sieć trafia i wszystkich usług powróci w tym samym czasie.|  
-|multicastAddress|Identyfikator URI, który określa adres multiemisji do użycia na potrzeby wysyłania i odbierania wiadomości odnajdywania. Wartość domyślna to adres multiemisji jako zgodna ze specyfikacją protokołu.|  
-|nazwa|Ciąg określający nazwę Konfiguracja standardowego punktu końcowego. Nazwa jest używana w `endpointConfiguration` atrybutu punktu końcowego usługi, aby połączyć standardowy punkt końcowy do konfiguracji.|  
+|DiscoveryVersion|Ciąg, który określa jedno z dwóch wersji protokołu WS Discovery. Prawidłowe wartości to WSDiscovery11 i WSDiscoveryApril2005. Ta wartość jest typu <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.|  
+|maxAnnouncementDelay|Wartość przedziału czasu, która określa maksymalną wartość opóźnienia protokołu odnajdowania będzie czekać przed wysłaniem wiadomości powitania. Przed wysłaniem wiadomości będą oczekiwać czasu losowego wartość z zakresu od 0 i wartość tego atrybutu. Ten atrybut służy do ustawiania małe, losowego opóźnienia, aby zapobiec nadmiarem sieci, gdy trafia do sieci i wszystkich usług pochodzą wróci do trybu online w tym samym czasie.|  
+|multicastAddress|Identyfikator URI, który określa adres multiemisji służące do wysyłania i odbierania komunikatów odnajdywania. Wartość domyślna to adres multiemisji jako zgodna ze specyfikacją protokołu.|  
+|nazwa|Ciąg, który określa nazwę konfiguracji standardowy punkt końcowy. Nazwa jest używana w `endpointConfiguration` atrybut punktu końcowego usługi do łączenia standardowy punkt końcowy do jego konfiguracji.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<udpTransportSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Kolekcja ustawień, które pozwalają na skonfigurowanie transportu UDP dla punktu końcowego protokołu UDP.|  
+|[\<udpTransportSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Kolekcja ustawień, które umożliwiają skonfigurowanie transportu UDP dla punktu końcowego protokołu UDP.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowanych punktów końcowych z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe.|  
+|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowane punkty końcowe z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe.|  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano klienta nasłuchiwanie powiadomienia za pośrednictwem protokołu UDP multiemisji transportu z domyślny adres multiemisji i UDP multiemisji transportu z określonym adresem multiemisji.  
+ W poniższym przykładzie pokazano klienta nasłuchiwanie anonsu za pośrednictwem protokołu UDP transportu multiemisji za pomocą domyślny adres multiemisji i UDP transportu multiemisji przy użyciu określonego adresu multiemisji.  
   
 ```xml  
-<services>  
-  <service name="ServiceAnnouncementListener">  
-      <endpoint name="udpAnnouncementEndpointStandard"  
-                kind="udpAnnouncementEndpoint"  
-                bindingConfiguration="..." />  
-      <endpoint name="udpAnnouncementEndpoint2"  
-                kind="udpAnnouncementEndpoint"  
-                endpointConfiguration="AnnouncementConfiguration3702"  
-                bindingConfiguration="..." />  
-...  
-  </service>  
-</services>  
-<standardEndpoints>  
-  <udpAnnouncementEndpoint>  
-     <standardEndpoint name="AnnouncementConfiguration2"   
-          version="WSDiscoveryApril2005"   
-          multicastAddress="soap.udp://239.255.255.250:3703"/>          
-  </udpAnnouncementEndpoint>  
-</standardEndpoints>  
+<services>
+  <service name="ServiceAnnouncementListener">
+    <endpoint name="udpAnnouncementEndpointStandard"
+              kind="udpAnnouncementEndpoint"
+              bindingConfiguration="..." />
+    <endpoint name="udpAnnouncementEndpoint2"
+              kind="udpAnnouncementEndpoint"
+              endpointConfiguration="AnnouncementConfiguration3702"
+              bindingConfiguration="..." />
+    ...
+  </service>
+</services>
+<standardEndpoints>
+  <udpAnnouncementEndpoint>
+    <standardEndpoint name="AnnouncementConfiguration2"
+                      version="WSDiscoveryApril2005"
+                      multicastAddress="soap.udp://239.255.255.250:3703"/>
+  </udpAnnouncementEndpoint>
+</standardEndpoints>
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

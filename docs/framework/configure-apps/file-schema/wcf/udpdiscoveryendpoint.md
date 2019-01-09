@@ -2,12 +2,12 @@
 title: '&lt;UdpDiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: 01808594d54d5c79a6530bc7f6a03b66dde7ee99
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6508f73de7920a339e40284c86b0d1d649e7eabe
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144757"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145435"
 ---
 # <a name="ltudpdiscoveryendpointgt"></a>&lt;UdpDiscoveryEndpoint&gt;
 Ten element konfiguracji definiuje standardowy punkt końcowy, który jest wstępnie konfigurowany dla operacji odnajdowania za pośrednictwem protokołu UDP powiązania multiemisji. Ten punkt końcowy ma stały kontraktu i obsługuje dwie wersje protokołu WS Discovery. Ponadto ma stały powiązanie protokołu UDP oraz domyślny adres określonych w specyfikacji WS-Discovery (WS-Discovery kwietnia 2005 lub w wersji 1.1 protokołu WS-Discovery).  
@@ -18,9 +18,17 @@ Ten element konfiguracji definiuje standardowy punkt końcowy, który jest wstę
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<system.serviceModel>  
-    <standardEndpoints>       <discoveryEndpoint>           <standardEndpoint                  discoveryMode="Adhoc/Managed"                  discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"                  maxResponseDelay="Timespan"                  multicastAddress="Uri"                   name="String" />       </discoveryEndpoint>            </standardEndpoints>  
-</system.serviceModel>  
+<system.serviceModel>
+  <standardEndpoints>
+    <discoveryEndpoint>
+      <standardEndpoint discoveryMode="Adhoc/Managed"
+                        discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
+                        maxResponseDelay="Timespan"
+                        multicastAddress="Uri"
+                        name="String" />
+    </discoveryEndpoint>
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -51,21 +59,21 @@ Ten element konfiguracji definiuje standardowy punkt końcowy, który jest wstę
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje usługi nasłuchiwać komunikatów odnajdywania za pośrednictwem protokołu UDP transportu multiemisji.  
   
-```xml
-<services>  
-  <service name="CalculatorService"  
-           behaviorConfiguration="CalculatorServiceBehavior">  
-    <endpoint binding="basicHttpBinding"   
-              address="calculator" 
-              contract="ICalculatorService" />  
-    <endpoint name="DiscoveryEndpoint"  
-              kind="udpDiscoveryEndpoint" />  
-  </service>  
-  <standardEndpoints>  
-    <udpDiscoveryEndpoint>  
-      <standardEndpoint name="DiscoveryEndpoint"                         
-                        version="WSDiscoveryApril2005" />  
-    </udpDiscoveryEndpoint>  
+```xml  
+<services>
+  <service name="CalculatorService"
+           behaviorConfiguration="CalculatorServiceBehavior">
+    <endpoint binding="basicHttpBinding"
+              address="calculator"
+              contract="ICalculatorService" />
+    <endpoint name="DiscoveryEndpoint"
+              kind="udpDiscoveryEndpoint" />
+  </service>
+  <standardEndpoints>
+    <udpDiscoveryEndpoint>
+      <standardEndpoint name="DiscoveryEndpoint"
+                        version="WSDiscoveryApril2005" />
+    </udpDiscoveryEndpoint>
   </standardEndpoints>
 </services>
 ```  

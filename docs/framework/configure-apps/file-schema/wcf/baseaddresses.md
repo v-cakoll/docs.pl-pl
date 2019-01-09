@@ -2,15 +2,15 @@
 title: '&lt;BaseAddresses&gt;'
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: 8de962cc70e1399dd1e9459473055651f9aca5fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0af5dee41c6adf560c90874e6e9a44b62c5decc6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747489"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147359"
 ---
 # <a name="ltbaseaddressesgt"></a>&lt;BaseAddresses&gt;
-Reprezentuje kolekcję `baseAddress` elementów, które są adresami podstawowymi dla usługi hosta w swoim środowisku. Jeśli adres podstawowy jest obecny, można skonfigurować punkty końcowe z adresami względem adresu podstawowego.  
+Reprezentuje kolekcję `baseAddress` elementy, które są adresami podstawowymi dla usługi hosta w środowisku. Jeśli adres podstawowy jest obecny, można skonfigurować punkty końcowe z adresami określany względem adresu podstawowego.  
   
  \<system.ServiceModel>  
 \<Klient >  
@@ -21,9 +21,9 @@ Reprezentuje kolekcję `baseAddress` elementów, które są adresami podstawowym
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<baseAddresses>  
-   <add baseAddress="string" />  
-</baseAddresses>  
+<baseAddresses>
+  <add baseAddress="string" />
+</baseAddresses>
 ```  
   
 ## <a name="type"></a>Typ  
@@ -39,13 +39,13 @@ Reprezentuje kolekcję `baseAddress` elementów, które są adresami podstawowym
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md)|Element konfiguracji określający adres podstawowy używany przez hosta usługi.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md)|Element konfiguracji określający adres podstawowy, używany przez hosta usługi.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<host >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Element konfiguracji określa ustawienia dla usługi hosta.|  
+|[\<host >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Element konfiguracji, który określa ustawienia dla usługi hosta.|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.HostElement>  

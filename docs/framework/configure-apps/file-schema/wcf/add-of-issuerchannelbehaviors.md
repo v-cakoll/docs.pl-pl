@@ -2,18 +2,18 @@
 title: '&lt;add&gt; w &lt;issuerChannelBehaviors&gt;'
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 75531e8ed50ae89f379db23d228804612f4bfccb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 072e3f4e961f6bf45e7c8b48c64cda36d385cf2b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752458"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149543"
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a>&lt;add&gt; w &lt;issuerChannelBehaviors&gt;
-Dodaje zachowanie punktu końcowego, który będzie używany podczas komunikacji z STS.  
+Dodaje zachowanie punktu końcowego, który będzie używany podczas komunikacji z usługą STS.  
   
 > [!NOTE]
->  Jeśli jakiekolwiek zachowanie punktu końcowego zawiera [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementu, zostanie wygenerowany wyjątek.  
+>  Jeśli jakiekolwiek zachowanie punktu końcowego zawiera [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementu, zostanie zgłoszony wyjątek.  
   
  \<system.ServiceModel>  
 \<zachowania >  
@@ -21,18 +21,18 @@ sekcja endpointBehaviors
 \<zachowanie >  
 \<clientCredentials>  
 \<issuedToken >  
-\<issuerChannelBehaviors > — Element  
+\<issuerChannelBehaviors > Element  
 \<add>  
   
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<add issuerAddress="string"  
-     behaviorConfiguraton="string" />  
+<add issuerAddress="string"
+     behaviorConfiguraton="string" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty i elementy podrzędne, elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
   
 ### <a name="attributes"></a>Atrybuty  
   
@@ -48,10 +48,10 @@ sekcja endpointBehaviors
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Zawiera kolekcję zachowania punktu końcowego klienta Windows Communication Foundation (WCF) używanego podczas komunikacji z określonych usług tokenu usługi.|  
+|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Zawiera kolekcję zachowań punktu końcowego klienta usługi Windows Communication Foundation (WCF) ma być używany podczas komunikacji z określonej usługi tokenu usługi.|  
   
 ## <a name="remarks"></a>Uwagi  
- `issuerAddress` zawiera identyfikator URI usługi tokenu zabezpieczającego, który klient do komunikacji z. `behaviorConfiguration` Wskazuje zachowanie punktu końcowego, w której aplikacja będzie używać w kanałach utworzony przez Windows Communication Foundation (WCF) można pobrać wystawionych tokenów z usługi tokenu zabezpieczeń.  
+ `issuerAddress` zawiera identyfikator URI usługi tokenu zabezpieczającego, które klient chce się nawiązać połączenia z usługą. `behaviorConfiguration` Wskazuje zachowanie punktu końcowego, którego używa aplikacja w kanałach utworzone przez Windows Communication Foundation (WCF) można pobrać wystawionych tokenów z usługi tokenu zabezpieczeń.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>  
@@ -63,7 +63,7 @@ sekcja endpointBehaviors
  [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)  
- [Instrukcje: tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Instrukcje: konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Instrukcje: Tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Instrukcje: Konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)

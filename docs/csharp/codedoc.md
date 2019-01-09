@@ -3,12 +3,12 @@ title: Dokumentowanie kodu przy użyciu komentarzy XML
 description: Dowiedz się, jak dokumentowanie kodu za pomocą komentarzy dokumentacji XML do generowania pliku dokumentacji XML w czasie kompilacji.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 70da976861a9bca024d41dd329dc7be043d67c94
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129672"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151010"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu przy użyciu komentarzy XML
 
@@ -205,7 +205,7 @@ I są dostępne: naszego kodu jest do odczytu i utracono żadnych informacji o d
 ### <a name="user-defined-tags"></a>Tagi zdefiniowane przez użytkownika
 
 Wszystkie tagi opisanych powyżej reprezentują te, które są rozpoznawane przez kompilator języka C#. Jednak użytkownik będzie mógł zdefiniować własne tagi.
-Narzędzia, takie jak rozwiązania Sandcastle przenieść pomocy technicznej dla dodatkowego tagów, takich jak [ `<event>` ](http://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [ `<note>` ](http://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) nawet pomocy technicznej i [dokumentowanie przestrzenie nazw](http://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
+Narzędzia, takie jak rozwiązania Sandcastle przenieść pomocy technicznej dla dodatkowego tagów, takich jak [ `<event>` ](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [ `<note>` ](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) nawet pomocy technicznej i [dokumentowanie przestrzenie nazw](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
 Niestandardowy lub narzędzia do generowania dokumentacji wewnętrznych można również za pomocą standardowych tagów i może być obsługiwanych wiele formatów danych wyjściowych z kodu HTML na format PDF.
 
 ## <a name="recommendations"></a>Zalecenia

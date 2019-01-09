@@ -2,12 +2,12 @@
 title: '&lt;tracking&gt; w WCF'
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: e033b569502bba795b5dcd1abdf9f68a726fac21
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7162d66917660a8730f851811643723cd398147c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121308"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146735"
 ---
 # <a name="lttrackinggt-of-wcf"></a>&lt;tracking&gt; w WCF
 Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usługi przepływu pracy.  
@@ -19,19 +19,19 @@ Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usłu
   
 ## <a name="syntax"></a>Składnia  
   
-```xml
+```xml  
 <system.serviceModel>
   <tracking>
     <participants>
-      <add name="String" 
-           profileName="String" 
+      <add name="String"
+           profileName="String"
            type="String" />
     </participants>
     <profiles>
       <trackingProfile name="String">
         <workflow activityDefinitionId="String">
           <activityScheduledQueries>
-            <activityScheduledQuery activityName="String"       
+            <activityScheduledQuery activityName="String"
                                     childActivityName="String"/>
           </activityScheduledQueries>
           <activityStateQueries>
@@ -50,15 +50,15 @@ Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usłu
             <bookmarkResumptionQuery name="String" />
           </bookmarkResumptionQueries>
           <cancelRequestQueries>
-            <cancelRequestQuery activityName="String" 
+            <cancelRequestQuery activityName="String"
                                 childActivityName="String"/>
           </cancelRequestQueries>
           <customTrackingQueries>
-            <customTrackingQuery activityName="String" 
+            <customTrackingQuery activityName="String"
                                  name="String"/>
           </customTrackingQueries>
           <faultPropagationQueries>
-            <faultPropagationQuery activityName="String" 
+            <faultPropagationQuery activityName="String"
                                    faultHandlerActivityName="String"/>
           </faultPropagationQueries>
           <workflowInstanceQueries>
@@ -72,8 +72,8 @@ Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usłu
       </trackingProfile>
     </profiles>
   </tracking>
-</system.serviceModel>   
-```
+</system.serviceModel>
+```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
  W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  

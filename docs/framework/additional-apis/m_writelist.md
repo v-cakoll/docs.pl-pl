@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: d145f6fd21989ada49a581ebf2694dcd56d94351
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a7446b9cbbfd4d3a4d38368a8e24c99527cf9108
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743163"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146709"
 ---
 # <a name="connectionmwritelist-field"></a>Connection.m\_WriteList pola
 
@@ -30,14 +30,14 @@ private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> `Connection.m_WriteList` Pole jest prywatny i nie są one przeznaczone do użycia bezpośrednio w kodzie.
+> `Connection.m_WriteList` Pole jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 > 
-> Firma Microsoft obsługuje Użyj tego pola w aplikacji produkcyjnej, w żadnym przypadku.
+> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
 
 ## <a name="requirements"></a>Wymagania
 
 **Namespace:** <xref:System.Net>
 
-**Zestaw:** System (w System.dll)
+**Zestaw:** System (System.dll)
 
-**Wersje programu .NET framework:** dostępne od wersji 2.0.
+**Wersje programu .NET framework:** Dostępne od wersji 2.0.

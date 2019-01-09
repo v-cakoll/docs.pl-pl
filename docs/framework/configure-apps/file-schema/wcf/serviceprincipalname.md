@@ -1,36 +1,36 @@
 ---
-title: '&lt;ServicePrincipalName&gt;'
+title: '&lt;Element servicePrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: e5c1f5a6986d57d20180560b12f5c7c5540a590d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a22a905744980d0b370023e6236734a9bb0d6357
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750729"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150646"
 ---
-# <a name="ltserviceprincipalnamegt"></a>&lt;ServicePrincipalName&gt;
-Określa tożsamość usługi przez jej nazwy usługi (SPN).  
+# <a name="ltserviceprincipalnamegt"></a>&lt;Element servicePrincipalName&gt;
+Określa tożsamość usługi przez jego głównej nazwy usługi (SPN).  
   
- Aby uzyskać więcej informacji na temat ustawiania nazwy SPN, zobacz [uwierzytelnianie i tożsamość usługi](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Aby uzyskać więcej informacji na temat ustawiania nazwy SPN, zobacz [uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  \<tożsamość >  
-\<servicePrincipalName >  
+\<Element servicePrincipalName >  
   
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<servicePrincipalName value = "String" />  
+<servicePrincipalName value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty i elementy podrzędne, elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|value|Nazwa, przez którą klient jednoznacznie identyfikuje wystąpienie usługi. Jeśli zainstalowano wiele wystąpień usługi na komputerach w całym lesie, każde wystąpienie musi mieć własną nazwę SPN. Wystąpienie danej usługi może mieć wiele nazw SPN, jeśli istnieje wiele nazw, których klienci mogą używać do uwierzytelniania.|  
+|value|Nazwa, przez którą klient jednoznacznie identyfikuje wystąpienie usługi. Jeśli zainstalowano wiele wystąpień usługi na komputerach w całym lesie, każde wystąpienie musi mieć własną nazwę SPN. Wystąpienie danej usługi może mieć wiele nazw SPN, jeśli istnieje kilka nazw, które klienci mogą korzystać z uwierzytelniania.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -39,10 +39,10 @@ Określa tożsamość usługi przez jej nazwy usługi (SPN).
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa tożsamość usługi uwierzytelniania przez klienta.|  
+|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa tożsamość usługi, aby zostać uwierzytelnionym przez klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
- Bezpieczne łączący punkt końcowy o tej tożsamości klienta Windows Communication Foundation (WCF) używa nazwy SPN podczas przeprowadzania uwierzytelniania SSPI z punktem końcowym.  
+ Bezpieczne klienta Windows Communication Foundation (WCF), który nawiązuje połączenie z punktem końcowym o tej tożsamości używa nazwy SPN podczas przeprowadzania uwierzytelniania SSPI z punktem końcowym.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.IdentityElement>  

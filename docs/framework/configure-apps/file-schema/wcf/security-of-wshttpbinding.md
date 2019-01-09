@@ -2,12 +2,12 @@
 title: '&lt;security&gt; w &lt;wsHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: f552e12e98e1fd760a9b36f6984a41a32f96533f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2260a64b53f2ff2ace11f78c392ffc0a69c187bd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192528"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145630"
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;security&gt; w &lt;wsHttpBinding&gt;
 Reprezentuje możliwości zabezpieczeń [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -21,20 +21,18 @@ Reprezentuje możliwości zabezpieczeń [ \<wsHttpBinding >](../../../../../docs
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<security mode="Message/None/Transport/TransportWithMessageCredential">  
-   <transport  
-         clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
-      proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-      realm="string"   
-      defaultClientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
-      defaultProxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-      defaultRealm="string" />  
-   <message  
-            clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"  
-      algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-       establishSecurityContext="Boolean"   
-      negotiateServiceCredential="Boolean"/>  
-</security>  
+<security mode="Message/None/Transport/TransportWithMessageCredential">
+  <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+             proxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+             realm="String"
+             defaultClientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+             defaultProxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+             defaultRealm="String" />
+  <message clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"
+           algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+           establishSecurityContext="Boolean"
+           negotiateServiceCredential="Boolean" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  

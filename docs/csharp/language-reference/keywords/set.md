@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - set keyword [C#]
 ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
-ms.openlocfilehash: 3020badc8b7873d7feb0b8133d3a181e1c051cbd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0322f1bb94174dd3a0cdd2089c8626d25a80cc1c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243741"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147996"
 ---
 # <a name="set-c-reference"></a>set (odwołanie w C#)
 
@@ -23,7 +23,7 @@ W poniższym przykładzie zdefiniowano zarówno `get` i `set` akcesora dla wła�
 
 [!code-csharp[set#1](~/samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]
 
-Często `set` dostępu składa się z pojedynczej instrukcji, która nie zwraca wartości, tak jak w poprzednim przykładzie. Począwszy od języka C# 7.0, można zaimplementować `set` dostępu jako element członkowski wyrażeniem. Poniższy przykład implementuje interfejsy `get` i `set` metod dostępu jako elementy członkowskie z wyrażeniem.
+Często `set` dostępu składa się z pojedynczej instrukcji, która przypisuje wartość, tak jak w poprzednim przykładzie. Począwszy od języka C# 7.0, można zaimplementować `set` dostępu jako element członkowski wyrażeniem. Poniższy przykład implementuje interfejsy `get` i `set` metod dostępu jako elementy członkowskie z wyrażeniem.
 
 [!code-csharp[set#3](~/samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]
   

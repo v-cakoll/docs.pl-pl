@@ -2,12 +2,12 @@
 title: '&lt;security&gt; w &lt;ws2007FederationHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-ms.openlocfilehash: e212e73f03d52bdfcba8559db5ab62288b3ebcc2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4ddf963db10656c905220ca22606772625dd7f3c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199230"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145721"
 ---
 # <a name="ltsecuritygt-element-of-ltws2007federationhttpbindinggt"></a>&lt;security&gt; w &lt;ws2007FederationHttpBinding&gt;
 Definiuje ustawienia zabezpieczeń [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elementu.  
@@ -21,18 +21,18 @@ Definiuje ustawienia zabezpieczeń [ \<ws2007FederationHttpBinding >](../../../.
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<ws2007FederationBinding>  
-    <binding >  
-        <security mode="None/Message/TransportWithMessageCredential">  
-           <message negotiateServiceCredential="Boolean"  
-                algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/ Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-                defaultProtectionLevel="none/sign/EncryptAndSign"   
-                issuedTokenType="string"   
-                issuedKeyType="SymmetricKey/PublicKey"  
-           </message>  
-        </security>  
-    </binding>  
-</ws2007FederationBinding>  
+<ws2007FederationBinding>
+  <binding>
+    <security mode="None/Message/TransportWithMessageCredential">
+      <message negotiateServiceCredential="Boolean"
+               algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/  Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+               defaultProtectionLevel="none/sign/EncryptAndSign"
+               issuedTokenType="string"
+               issuedKeyType="SymmetricKey/PublicKey">
+      </message>
+    </security>
+  </binding>
+</ws2007FederationBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -69,7 +69,7 @@ Definiuje ustawienia zabezpieczeń [ \<ws2007FederationHttpBinding >](../../../.
  <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>  
  <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>  
- [Instrukcje: tworzenie elementu WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Instrukcje: Tworzenie elementu WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Wybieranie typu poświadczeń](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  

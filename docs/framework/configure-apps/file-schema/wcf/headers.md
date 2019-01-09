@@ -2,15 +2,15 @@
 title: '&lt;Nagłówki&gt;'
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: 7683b07093719cda6b210a4174d47e5785d4644d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 84b9a9437d4b0dfae72a6e625b21f2b830eb28d8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747154"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147866"
 ---
 # <a name="ltheadersgt"></a>&lt;Nagłówki&gt;
-Punkt końcowy może zostać zlikwidowane przez co najmniej jeden nagłówek SOAP oprócz jego podstawowego identyfikatora URI. Jeden zestaw scenariuszy, w których jest to przydatne to zestaw SOAP scenariuszy pośredniczącego w przypadku gdy punkt końcowy wymaga klientom tego punktu końcowego obejmują celem pośredników nagłówki SOAP. Ten element konfiguracji może służyć do definiowania takie nagłówki niestandardowy adres. Wpisy w kolekcji nagłówka punktu końcowego są zdefiniowane przez użytkownika elementy XML. Każdy element ma być poprawnie sformułowanym XML.  
+Punkt końcowy może zostać zlikwidowane przez jeden lub więcej nagłówków protokołu SOAP, oprócz jego podstawowego identyfikatora URI. Jeden zestaw scenariuszy, w których jest to przydatne to zestaw scenariuszy pośrednie protokołu SOAP, gdzie punktu końcowego wymaga od klientów zawiera nagłówków protokołu SOAP, przeznaczona dla pośredników tego punktu końcowego. Ten element konfiguracji, może służyć do definiowania takich Nagłówki niestandardowe adresów. Wpisy w kolekcję nagłówków punktu końcowego są zdefiniowane przez użytkownika elementy XML. Każdy element musi być poprawnie sformułowany XML.  
   
  \<system.ServiceModel>  
 \<Klient >  
@@ -19,10 +19,10 @@ Punkt końcowy może zostać zlikwidowane przez co najmniej jeden nagłówek SOA
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<headers>  
-    <Region xmlns="Uri">"String"</Region>  
-        <Member xmlns="Uri">"String"</Member>  
-</headers>  
+<headers>
+  <region xmlns="Uri">"String"</region>
+  <member xmlns="Uri">"String"</member>
+</headers>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -42,14 +42,14 @@ Punkt końcowy może zostać zlikwidowane przez co najmniej jeden nagłówek SOA
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<punkt końcowy >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Umożliwia skonfigurowanie różnych typów punktów końcowych.|  
+|[\<punkt końcowy >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Służy do konfigurowania różnych typów punktów końcowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Opcjonalne nagłówki zawierają bardziej szczegółowe informacje adresowania do identyfikacji użytkownika lub interakcji z punktem końcowym. Na przykład nagłówków można wskazać sposobu przetwarzania wiadomości przychodzących, gdzie wysłać komunikat odpowiedzi punktu końcowego lub które wystąpienie usługi do przetwarzania komunikat przychodzący z konkretnego użytkownika, jeśli dostępnych jest wiele wystąpień.  
+ Opcjonalne nagłówki zawierają więcej szczegółowych informacji adresowania, aby zidentyfikować lub nawiązać kontakt z punktem końcowym. Na przykład nagłówków, można wskazać sposób przetwarzania wiadomości przychodzących, gdzie wysłać komunikat odpowiedzi punktu końcowego lub które wystąpienie usługi do przetwarzania wiadomości przychodzących konkretnego użytkownika, jeśli wiele wystąpień są dostępne.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.IdentityElement>  
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Headers%2A>  
  <xref:System.ServiceModel.Channels.AddressHeaderCollection>  
- [Punkty końcowe: adresy, powiązania i kontrakty](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+ [Punkty końcowe: Adresy, powiązania i kontrakty](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

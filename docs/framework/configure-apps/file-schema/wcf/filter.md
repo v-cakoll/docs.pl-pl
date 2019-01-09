@@ -2,32 +2,32 @@
 title: '&lt;Filtr&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: 93d47fc6b25a75eedae43cd70582abc863a74e6c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f7224eab9f3c21bce9839298b50c52e9da08b6f7
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747213"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146410"
 ---
 # <a name="ltfiltergt"></a>&lt;Filtr&gt;
 
-Określa filtr routingu, który określa typ Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących, jak również obsługujących danych lub parametrów wymaganych przez filtr.
+Określa filtr routingu, który określa typ programu Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących, jak również obsługujących danych lub parametrów wymaganych przez filtr.
 
 \<system.serviceModel > \<routingu > \<Filtry > \<filtru >
-
-## <a name="syntax"></a>Składnia
-
-```xml
+  
+## <a name="syntax"></a>Składnia  
+  
+```xml  
 <routing>
   <filters>
-    <filter customType="String" 
-            filterData="String" 
-            filterType="Action/Address/AddressPrefix/And/Custom/Endpoint/MatchAll/XPath" 
+    <filter customType="String"
+            filterData="String"
+            filterType="Action/Address/AddressPrefix/And/Custom/Endpoint/MatchAll/XPath"
             name="String" />
   </filters>
 </routing>
-```
-
+```  
+  
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy
 
 W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.
@@ -36,9 +36,9 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 | Atrybut  | Opis |
 | ---------- | ----------- |
-| customtype — | Ciąg zawierający nazwę FQDN typu niestandardowego typu ma być używany jako filtr. Jeśli `filterType` ma ustawioną wartość `custom`, ten atrybut zawiera typu w pełni kwalifikowaną nazwę klasy w celu utworzenia.  `filterData` może również zawierać wartości, które mają być użyte podczas obliczania filtru typu niestandardowego. |
-| danych filtru | Ciąg zawierający dane filtru. Aby uzyskać więcej informacji dotyczących sposobu określania tego atrybutu, zobacz <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
-| filterType | Ciąg zawierający typ filtru. Ten atrybut jest <xref:System.ServiceModel.Routing.Configuration.FilterType> typu.  Aby uzyskać więcej informacji na temat sposobu wykonywania z `filterData` atrybutów, zobacz <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
+| Customtype — | Ciąg zawierający w pełni kwalifikowana nazwa typu niestandardowego typu ma być używany jako filtr. Jeśli `filterType` ustawiono `custom`, ten atrybut zawiera w pełni kwalifikowana nazwa typu klasy, aby utworzyć.  `filterData` może również zawierać wartości, które mają być używane podczas obliczania wartości filtru typu niestandardowego. |
+| danych filtru | Ciąg zawierający dane filtru. Aby uzyskać więcej informacji na temat sposobu określania tego atrybutu, zobacz <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
+| filterType | Ciąg zawierający typ filtru. Ten atrybut jest <xref:System.ServiceModel.Routing.Configuration.FilterType> typu.  Aby uzyskać więcej informacji na temat działania z `filterData` atrybutów, zobacz <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | nazwa       | Ciąg zawierający unikatową nazwę tego elementu filtru. |
 
 ### <a name="child-elements"></a>Elementy podrzędne
@@ -49,7 +49,7 @@ Brak.
 
 | Element | Opis |
 | ------- | ----------- |
-| [\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Sekcję konfiguracji określającą zestaw filtrów routingu, które określają typ obiektu Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących. |
+| [\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Sekcję konfiguracji określającą zestaw filtrów routingu, które określają typ obiektu programu Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> używanego podczas oceniania wiadomości przychodzących. |
 
 ## <a name="see-also"></a>Zobacz także
 

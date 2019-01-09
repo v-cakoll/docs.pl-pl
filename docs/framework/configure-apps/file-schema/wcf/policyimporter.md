@@ -2,15 +2,15 @@
 title: '&lt;policyImporter&gt;'
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 7483a95accef0a4bc956d919087379363b4762ca
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 22d90ff9d0cd5325300cf42437836f075cbf8c31
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753030"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148490"
 ---
 # <a name="ltpolicyimportergt"></a>&lt;policyImporter&gt;
-Określa importera zasad, która kontroluje, importowanie niestandardowych asercji zasad dotyczących powiązań.  
+Określa importera zasad, który kontroluje importowanie niestandardowych asercji zasad dotyczących powiązań.  
   
  \<system.ServiceModel>  
 \<Klient >  
@@ -21,11 +21,11 @@ Określa importera zasad, która kontroluje, importowanie niestandardowych aserc
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<metadata>  
-   <policyImporters>  
-      <policyImporter type="string" />  
-   </policyImporters>  
-</metadata>  
+<metadata>
+  <policyImporters>
+    <policyImporter type="String" />
+  </policyImporters>
+</metadata>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -47,7 +47,7 @@ Określa importera zasad, która kontroluje, importowanie niestandardowych aserc
 |[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Określa wszystkich importerów zasad sterujących importem potwierdzeń niestandardowych zasad dotyczących powiązań.|  
   
 ## <a name="remarks"></a>Uwagi  
- Importer zasad służy do wyszukiwania niestandardowych asercji zasad dotyczących powiązanie funkcji, jak również dołączyć element niestandardowego powiązania, który implementuje funkcje, które wymaga potwierdzenia.  
+ Importer zasad służy do wyszukiwania niestandardowych asercji zasad dotyczących powiązań funkcji, jak również dołączyć element niestandardowego powiązania, który implementuje funkcje, których wymaga potwierdzenia.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>  

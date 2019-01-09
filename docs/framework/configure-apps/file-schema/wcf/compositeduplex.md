@@ -2,12 +2,12 @@
 title: '&lt;compositeDuplex&gt;'
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: ce04eb96868da9760412e37d2335d020cc768ac9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4b84b4f2816dc68b7dcee784d957189728e5a4b2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748350"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149054"
 ---
 # <a name="ltcompositeduplexgt"></a>&lt;compositeDuplex&gt;
 Definiuje element powiązania, który jest używany, gdy klient musi ujawniać punkt końcowy usługi by wysłać wiadomości do klienta.  
@@ -21,7 +21,7 @@ Definiuje element powiązania, który jest używany, gdy klient musi ujawniać p
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<compositeDuplex clientBaseAddress="URI" />  
+<compositeDuplex clientBaseAddress="URI" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -31,7 +31,7 @@ Definiuje element powiązania, który jest używany, gdy klient musi ujawniać p
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|clientBaseAddress|Identyfikator URI, który ustawia adres kanału powrotnego w trybie duplex. Usługa używa ten adres, aby upewnić się, skontaktuj się z pomocą i nawiązania połączenia z klientem.<br /><br /> Jeśli ten atrybut nie jest ustawiona, domyślny adres "`full qualified name+default port\TemporaryIndigoAddress\guid`" jest generowany. Wartość domyślna to `null`.|  
+|clientBaseAddress|Identyfikator URI, który ustawia adres kanału zwrotnego w tryb dupleks. Usługa używa tego adresu, skontaktuj się z pomocą i nawiąż połączenie z klientem.<br /><br /> Jeśli ten atrybut nie jest ustawiony, domyślnego adresu "`full qualified name+default port\TemporaryIndigoAddress\guid`" jest generowany. Wartość domyślna to `null`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -40,17 +40,17 @@ Definiuje element powiązania, który jest używany, gdy klient musi ujawniać p
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie możliwości powiązania niestandardowego powiązania.|  
+|[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten element konfiguracji jest używany z transportu, które nie zezwalają na komunikacji dupleksowej natywnie, na przykład HTTP. TCP, natomiast natywnie umożliwia komunikacji dupleksowej i nie wymaga użycia tego elementu powiązania dla usługi wysłać wiadomości zwrotnie do klienta.  
+ Ten element konfiguracji jest używany z transportów, które nie zezwalają na komunikację dwukierunkowego natywnie, na przykład HTTP. TCP, z drugiej strony, natywnie umożliwia dwukierunkowe komunikacji i nie wymaga użycia tego elementu powiązania usługi można wysłać wiadomości zwrotnie do klienta.  
   
- Klient musi ujawniać adres usługi upewnić się, skontaktuj się z pomocą i nawiązania połączenia. Ten adres klienta jest zapewniana przez `clientBaseAddress` atrybutu. Należy pamiętać, że Windows Communication Foundation (WCF) auto generuje ClientBaseAddress Jeśli jeden nie jest jawnie ustawiona przez użytkownika.  
+ Klient musi ujawniać adres korespondencyjny upewnić się, skontaktuj się z pomocą i nawiązania połączenia. Ten adres klienta są dostarczane przez `clientBaseAddress` atrybutu. Należy pamiętać, że usługi Windows Communication Foundation (WCF) automatycznie generuje ClientBaseAddress Jeśli jeden nie jest jawnie ustawiona przez użytkownika.  
   
 ## <a name="example"></a>Przykład  
   
 ```xml  
-<compositeDuplex clientBaseAddress="http://www.contoso.com" />  
+<compositeDuplex clientBaseAddress="http://www.contoso.com" />
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

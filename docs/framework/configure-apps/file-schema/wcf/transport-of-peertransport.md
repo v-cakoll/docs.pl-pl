@@ -2,15 +2,15 @@
 title: '&lt;transport&gt; w &lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: aeadf23b4ae6b4b0be18755c43585cbfea418567
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c82e91543920522f0ed6232036ec1b5a94189fa8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756426"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148946"
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;transport&gt; w &lt;peerTransport&gt;
-Określa typ transportu zabezpieczonych wiadomości wysyłanych przez elementy równorzędne skonfigurowane dla tego wiązania.  
+Określa typ transportu dla zabezpieczonych wiadomości wysłanych przez elementy równorzędne skonfigurowany tym wiązaniem.  
   
  \<system.serviceModel>  
 \<powiązania >  
@@ -23,26 +23,26 @@ Określa typ transportu zabezpieczonych wiadomości wysyłanych przez elementy r
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<security>  
-   <transport credentialType="Certificate/Password" />  
-</security>         
+<security>
+  <transport credentialType="Certificate/Password" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty i elementy podrzędne, elementy nadrzędne  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
   
 ### <a name="attributes"></a>Atrybuty  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|credentialType|Opcjonalna. Określa poświadczenia używane do weryfikowania wiadomości wysyłane z transportu elementów równorzędnych. Ten atrybut jest typu <xref:System.ServiceModel.PeerTransportCredentialType>.|  
+|credentialType|Opcjonalna. Określa typ poświadczenia używane do weryfikowania komunikaty wysyłane za pomocą transportu elementu równorzędnego. Ten atrybut jest typu <xref:System.ServiceModel.PeerTransportCredentialType>.|  
   
 ## <a name="credentialtype-attribute"></a>credentialType atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|certyfikat|Uwierzytelnianie kanał transportowy peer wymaga X509 certyfikatu.|  
-|Hasło|Uwierzytelnianie kanał transportowy peer wymaga poprawne hasło.|  
+|Certyfikat|Uwierzytelnianie transportu kanał elementu równorzędnego wymaga X509 certyfikatu.|  
+|Hasło|Uwierzytelnianie transportu kanał elementu równorzędnego wymaga prawidłowego hasła.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -51,7 +51,7 @@ Określa typ transportu zabezpieczonych wiadomości wysyłanych przez elementy r
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Definiuje ustawienia zabezpieczeń transportu elementów równorzędnych.|  
+|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Definiuje ustawienia zabezpieczeń transport elementu równorzędnego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten element jest ustawiona tylko wtedy, gdy atrybut tryb [ \<zabezpieczeń >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) ustawiono `Transport` lub `TransportWithMessageCredential`.  

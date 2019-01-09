@@ -1,34 +1,34 @@
 ---
-title: '&lt;Obiektu DiscoveryEndpoint&gt;'
+title: '&lt;DiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: 6a352fbfced08001f76dceaff283d6bca25f56f9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ab00a80904cdcd2844a44c154edb2e424633427b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747401"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145383"
 ---
-# <a name="ltdiscoveryendpointgt"></a>&lt;Obiektu DiscoveryEndpoint&gt;
+# <a name="ltdiscoveryendpointgt"></a>&lt;DiscoveryEndpoint&gt;
 
-Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym kontraktem odkrywania. Po dodaniu do konfiguracji usługi, określa gdzie nasłuchiwać komunikatów odnajdywania. Po dodaniu do konfiguracji klienta Określa gdzie wysyłanie zapytań odnajdywania.  
+Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym kontraktem odkrywania. Po dodaniu do konfiguracji usługi, określa, gdzie nasłuchiwać komunikatów odnajdywania. Po dodaniu do konfiguracji klienta określa, gdzie wysyłać zapytania odnajdywania.  
   
 \<system.serviceModel>  
 \<standardEndpoints >  
   
-## <a name="syntax"></a>Składnia
-
-```xml
+## <a name="syntax"></a>Składnia  
+  
+```xml  
 <system.serviceModel>
   <standardEndpoints>
     <discoveryEndpoint>
-      <standardEndpoint discoveryMode="Adhoc/Managed" 
-                        discoveryVersion="WSDiscovery11/WSDiscoveryApril2005" 
-                        maxResponseDelay="Timespan" 
+      <standardEndpoint discoveryMode="Adhoc/Managed"
+                        discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
+                        maxResponseDelay="Timespan"
                         name="String" />
     </discoveryEndpoint>
   </standardEndpoints>
-</system.serviceModel>  
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy
@@ -39,10 +39,10 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 | Atrybut        | Opis |  
 | ---------------- | ----------- |  
-| discoveryMode    | Ciąg, który określa tryb protokół RDP. Prawidłowe wartości to "Ad hoc" i "Zarządzany". W trybie zarządzanym protokołu zależy od serwera Proxy odnajdywania, która działa jako repozytorium wykrywalny usług. W trybie ad hoc wymagane używany protokół UDP mechanizmu multiemisji można znaleźć dostępne usługi. Aby uzyskać więcej informacji dotyczących właściwości, zobacz <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A>. |  
-| discoveryVersion | Ciąg, który określa jeden z dwóch wersji protokołu WS-Discovery. Prawidłowe wartości to WSDiscovery11 i WSDiscoveryApril2005. Ta wartość jest typu <xref:System.ServiceModel.Discovery.DiscoveryVersion>. |  
-| maxResponseDelay | Wartość Timespan określający maksymalną wartość opóźnienia odnajdywania protokołu będzie czekać przed wysłaniem niektóre komunikaty, takie jak sondowania Match lub rozwiązać dopasowania.<br /><br /> Jeśli wszystkie ProbeMatches są wysyłane w tym samym czasie, może spowodować storm sieci. Aby temu zapobiec, ProbeMatches są wysyłane z losowego opóźnienia między każdym ProbeMatch. Opóźnienie losowe jest z zakresu od 0 do wartości tego atrybutu. Jeśli ten atrybut jest ustawiony na 0, ProbeMatches komunikaty są wysyłane w pętli ścisłej bez opóźnień. W przeciwnym razie ProbeMatches komunikaty są wysyłane z niektórych losowe opóźnienie tak, aby całkowity czas wykonywania wszystkich wysyłać ProbeMatches nie przekracza maxResponseDelay. Ta wartość ma zastosowanie tylko dla usług, nie jest on używany przez klientów. |  
-| `name`           | Ciąg określający nazwę Konfiguracja standardowego punktu końcowego. Nazwa jest używana w `endpointConfiguration` atrybutu punktu końcowego usługi, aby połączyć standardowy punkt końcowy do konfiguracji. |  
+| discoveryMode    | Ciąg, który określa tryb protokół RDP. Prawidłowe wartości to "Ad hoc" i "Zarządzane". W trybie zarządzanym protokołu zależy od serwera Proxy odnajdywania, który działa jako repozytorium wykrywalny usług. W trybie ad hoc wymagane używany protokół UDP mechanizm multiemisji, aby znaleźć dostępne usługi. Aby uzyskać więcej informacji na temat właściwości, zobacz <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A>. |  
+| DiscoveryVersion | Ciąg, który określa jedno z dwóch wersji protokołu WS Discovery. Prawidłowe wartości to WSDiscovery11 i WSDiscoveryApril2005. Ta wartość jest typu <xref:System.ServiceModel.Discovery.DiscoveryVersion>. |  
+| maxResponseDelay | Wartość przedziału czasu, która określa maksymalną wartość opóźnienia protokołu odnajdowania będzie czekać przed wysłaniem niektóre komunikaty, takie jak dopasowanie sondowania lub rozwiązać dopasowania.<br /><br /> Jeśli wszystkie ProbeMatches są wysyłane w tym samym czasie, może spowodować storm sieci. Aby temu zapobiec, ProbeMatches są wysyłane z losowo wybranym opóźnieniem między każdym ProbeMatch. Opóźnienie losowe jest z zakresu od 0 do wartość ustawioną przy użyciu tego atrybutu. Jeśli ten atrybut jest ustawiony na wartość 0, ProbeMatches komunikaty są wysyłane w pętli bez żadnego opóźnienia. W przeciwnym razie wiadomości ProbeMatches są wysyłane z pewne opóźnienie losowe w taki sposób, że całkowity czas wykonywania, aby wysłać wszystkie wiadomości ProbeMatches nie przekracza maxResponseDelay. Ta wartość ma zastosowanie tylko dla usług, nie jest używany przez klientów. |  
+| `name`           | Ciąg, który określa nazwę konfiguracji standardowy punkt końcowy. Nazwa jest używana w `endpointConfiguration` atrybut punktu końcowego usługi do łączenia standardowy punkt końcowy do jego konfiguracji. |  
   
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -52,35 +52,35 @@ Brak.
 
 | Element | Opis |  
 | ------- | ----------- |  
-| [\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowanych punktów końcowych z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe. |  
+| [\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowane punkty końcowe z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe. |  
   
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano usługi nasłuchiwania komunikatów odnajdywania za pośrednictwem elementu równorzędnego net transportu multiemisji. W przykładzie jawnie określa WS-Discovery wersji z kwietnia 2005.  
+Poniższy przykład pokazuje usługi nasłuchiwać komunikatów odnajdywania za pośrednictwem elementu równorzędnego netto transportu multiemisji. Przykład jawnie określa WS-Discovery w wersji 2005 kwietnia.  
   
-Konfiguracja standardowego punktu końcowego jest zdefiniowany dla usługi i nie może być współużytkowana przez usługę. Inna usługa chcą mieć tego samego punktu końcowego odnajdywania, taką samą konfigurację musi zostać dodany do sekcji tej usługi.  
+Konfiguracja standardowego punktu końcowego jest zdefiniowana na usługę i nie może być współużytkowane przez usługę. Jeśli inna usługa chce mieć ten sam punkt końcowy odnajdywania, tę samą konfigurację musi można dodawać do sekcji tej usługi.  
   
-```xml
-<services>  
+```xml  
+<services>
   <service name="CalculatorService"
            behaviorConfiguration="CalculatorServiceBehavior">
-    <endpoint binding="basicHttpBinding" 
-              address="calculator" 
-              contract="ICalculatorService" />  
-    <endpoint name="peerNetDiscovery"  
-              binding="peerTcpBinding"  
-              address="net.p2p://discoveryMesh/multicast"  
-              kind="discoveryEndpoint"  
-              endpointConfiguration="peerTcpDiscoveryEndpointConfiguration"  
-              bindingConfiguration="discoveryPeerTcpBindingConfig" />      
-  </service>  
-</services>  
-<standardEndpoints>  
-  <discoveryEndpoint>  
-    <standardEndpoint name="peerTcpDiscoveryEndpointConfiguration"                         
-                      version="WSDiscoveryApril2005" />  
-  </discoveryEndpoint>  
-</standardEndpoints>  
+    <endpoint binding="basicHttpBinding"
+              address="calculator"
+              contract="ICalculatorService" />
+    <endpoint name="peerNetDiscovery"
+              binding="peerTcpBinding"
+              address="net.p2p://discoveryMesh/multicast"
+              kind="discoveryEndpoint"
+              endpointConfiguration="peerTcpDiscoveryEndpointConfiguration"
+              bindingConfiguration="discoveryPeerTcpBindingConfig" />
+  </service>
+</services>
+<standardEndpoints>
+  <discoveryEndpoint>
+    <standardEndpoint name="peerTcpDiscoveryEndpointConfiguration"
+                      version="WSDiscoveryApril2005" />
+  </discoveryEndpoint>
+</standardEndpoints>
 ```  
   
 ## <a name="see-also"></a>Zobacz także

@@ -2,12 +2,12 @@
 title: '&lt;localIssuer&gt;'
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
-ms.openlocfilehash: cb5afb0e73ad0a07ea43f06915f4e477d7f8f985
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7a48cbb3a1e17ac1fc9fa9f43301ef153cdb866c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841556"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151886"
 ---
 # <a name="ltlocalissuergt"></a>&lt;localIssuer&gt;
 Określa adres i powiązanie wystawcy lokalnego, można użyć do uzyskania tokenu zabezpieczającego.  
@@ -23,9 +23,9 @@ sekcja endpointBehaviors
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<localIssuer address="string"  
-      binding="string"  
-      bindingConfiguration="string" />  
+<localIssuer address="String"
+             binding="String"
+             bindingConfiguration="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -53,28 +53,28 @@ sekcja endpointBehaviors
 |[\<issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Określa niestandardowy token używany do uwierzytelniania klienta do usługi.|  
   
 ## <a name="remarks"></a>Uwagi  
- W przypadku uzyskania wystawiony token z Usługa tokenu zabezpieczającego (STS), należy skonfigurować aplikację klienta przy użyciu adresu i powiązania do użycia do komunikowania się z usługi STS. Gdy <xref:System.ServiceModel.WSFederationHttpBinding> nie dostarcza adres URL dla usługi tokenu zabezpieczającego lub gdy adres wystawcy powiązania federacyjnego `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` lub `null`, klienta programu Windows Communication Foundation (WCF) kanału używa wartości określonych przez `address`i `binding` nawiązać połączenia z usługą STS uzyskać Wystawiony token. Aby uzyskać więcej informacji na temat konfigurowania lokalnego wystawcy, zobacz [porady: Konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ W przypadku uzyskania wystawiony token z Usługa tokenu zabezpieczającego (STS), należy skonfigurować aplikację klienta przy użyciu adresu i powiązania do użycia do komunikowania się z usługi STS. Gdy <xref:System.ServiceModel.WSFederationHttpBinding> nie dostarcza adres URL dla usługi tokenu zabezpieczającego lub gdy adres wystawcy powiązania federacyjnego `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` lub `null`, klienta programu Windows Communication Foundation (WCF) kanału używa wartości określonych przez `address`i `binding` nawiązać połączenia z usługą STS uzyskać Wystawiony token. Aby uzyskać więcej informacji na temat konfigurowania lokalnego wystawcy, zobacz [jak: Konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład ustawia `address`, `binding`, i `bindingConfiguration` atrybuty `localIssuer` elementu.  
   
 ```xml  
-<system.serviceModel>  
- <behaviors>  
- <endpointBehaviors>  
-  <behavior name="MyEndpointBehavior">  
-   <clientCredentials>  
-    <issuedToken cacheIssuedTokens="false"   
-                 defaultKeyEntropyMode="ClientEntropy">  
-     <localIssuer address="net.tcp://cohowinery/tokens"   
-                  binding="netTcpBinding"  
-                  bindingConfiguration="myTcpBindingConfig" />  
-    </issuedToken>  
-   </clientCredentials>  
-  </behavior>  
-  </endpointBehaviors>  
-  </behaviors>  
-</system.serviceModel>  
+<system.serviceModel>
+  <behaviors>
+    <endpointBehaviors>
+      <behavior name="MyEndpointBehavior">
+        <clientCredentials>
+          <issuedToken cacheIssuedTokens="false"
+                       defaultKeyEntropyMode="ClientEntropy">
+            <localIssuer address="net.tcp://cohowinery/tokens"
+                         binding="netTcpBinding"
+                         bindingConfiguration="myTcpBindingConfig" />
+          </issuedToken>
+        </clientCredentials>
+      </behavior>
+    </endpointBehaviors>
+  </behaviors>
+</system.serviceModel>
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
@@ -82,11 +82,11 @@ sekcja endpointBehaviors
  <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>  
  <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
  [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Instrukcje: konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Instrukcje: Konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)  
- [Instrukcje: tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Instrukcje: Tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

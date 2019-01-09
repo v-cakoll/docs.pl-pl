@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 67c94eeaa295b19e99f870780f555baff936889f
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: f6e139a4e10ca10fac45510715110d156ddf82ff
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030130"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145972"
 ---
 # <a name="redirecting-assembly-versions"></a>Przekierowywanie wersji zestawu
 
@@ -163,7 +163,6 @@ Można włączyć automatyczne przekierowywanie powiązań, jeśli aplikacja jes
 - [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Konfigurowanie aplikacji](../../../docs/framework/configure-apps/index.md)
-- [Konfigurowanie aplikacji programu .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
 - [Schemat ustawień środowiska uruchomieniowego](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Instrukcje: Tworzenie zasad wydawcy](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

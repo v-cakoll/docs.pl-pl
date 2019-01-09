@@ -2,12 +2,12 @@
 title: '&lt;faultPropagationQuery&gt; w WCF'
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: c3853c470a9243835e071d35008dfff5b885591d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: cf582fce4e899e62daa4f34f193a0232ec19a135
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123322"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149036"
 ---
 # <a name="ltfaultpropagationquerygt-of-wcf"></a>&lt;faultPropagationQuery&gt; w WCF
 
@@ -25,20 +25,20 @@ Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz 
   
 ## <a name="syntax"></a>Składnia  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
       <workflow>
         <faultPropagationQueries>
           <faultPropagationQuery faultSourceActivityName="String"
-                                 faultHandlerActivityName="String"/>
+                                 faultHandlerActivityName="String" />
         </faultPropagationQueries>
       </workflow>
     </trackingProfile>
   </profiles>
 </tracking>
-```
+```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy
 

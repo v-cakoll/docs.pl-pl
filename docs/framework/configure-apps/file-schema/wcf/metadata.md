@@ -2,15 +2,15 @@
 title: '&lt;metadata&gt;'
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-ms.openlocfilehash: 7e314ae56ed7a1b532bb8946fbb28802e72d3e20
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 119cd4d5b63f8d957bc6db9dd6aabdf9e2beeb64
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747856"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147372"
 ---
 # <a name="ltmetadatagt"></a>&lt;metadata&gt;
-Określa, jak metadanych usługi mogą być przetwarzane.  
+Określa, jak metadane usługi mogą być przetwarzane.  
   
  \<system.ServiceModel>  
 \<Klient >  
@@ -18,18 +18,18 @@ Określa, jak metadanych usługi mogą być przetwarzane.
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<system.serviceModel>  
-    <client>  
-        <metadata>  
-                   <policyImporters>  
-                          <policyImporter type="string" />  
-                   </policyImporters  
-                 <wsdlImporters>  
-                      <wsdlImporter type="string" />  
-                 </wsdlImporters>  
-        </metadata>  
-    </client>  
-</system.serviceModel>  
+<system.serviceModel>
+  <client>
+    <metadata>
+      <policyImporters>
+        <policyImporter type="string" />
+      </policyImporters>
+      <wsdlImporters>
+        <wsdlImporter type="string" />
+      </wsdlImporters>
+    </metadata>
+  </client>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -42,14 +42,14 @@ Określa, jak metadanych usługi mogą być przetwarzane.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Określa wszystkich importerów zasad sterujących importem potwierdzeń niestandardowych zasad dotyczących powiązań. Importer zasad służy do wyszukiwania niestandardowych asercji zasad dotyczących powiązanie funkcji, jak również dołączyć element niestandardowego powiązania, który implementuje funkcje, które wymaga potwierdzenia.|  
-|[\<wsdlImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|Określa wszystkich importerów WSDL, które importują metadane Web Services Description Language (WSDL) 1.1 z załącznikami WS-Policy. WSDL importer umożliwia importowanie metadanych, jak również przekonwertować tych informacji do różnych klas, które reprezentują kontraktu i informacje o punkcie końcowym. Selektywnie importowaniem informacji kontraktu i punktu końcowego i właściwości, które ujawnia błędy importu i zaakceptuj typu informacje istotne dla procesu importowania i konwersji. Obsługuje ona również importowania informacji o powiązaniu i właściwości, które zapewniają dostęp do dokumentów zasad, dokumentów WSDL, rozszerzenia WSDL i dokumentach schematów XML.|  
+|[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Określa wszystkich importerów zasad sterujących importem potwierdzeń niestandardowych zasad dotyczących powiązań. Importer zasad służy do wyszukiwania niestandardowych asercji zasad dotyczących powiązań funkcji, jak również dołączyć element niestandardowego powiązania, który implementuje funkcje, których wymaga potwierdzenia.|  
+|[\<wsdlImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|Określa importerów WSDL, które importują metadane Web Services Description Language (WSDL) 1.1 z załącznikami WS-Policy. WSDL importer umożliwia importowanie metadanych, a także przekształcać dane tej informacji do różnych klas, które reprezentują kontraktu i informacje o punkcie końcowym. Selektywnie można było zaimportować informacje o kontraktu i punktu końcowego i właściwości, które ujawnić błędy importowania i zaakceptuj dotyczą proces importowania i konwersji informacji o typie. Obsługuje ona również importowania informacje o powiązaniu i właściwości, które zapewniają dostęp do dokumentów zasad, dokumenty WSDL, rozszerzenia WSDL i dokumentów schematu XML.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Klient >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|W sekcji klienta definiuje listę punktów końcowych, które klient może połączyć się.|  
+|[\<Klient >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|W sekcji klienta definiuje listę punktów końcowych, które klient może połączyć się z.|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.MetadataElement>  

@@ -2,12 +2,12 @@
 title: '&lt;Diagnostyka&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 0854ce6525fd7c96cf7c19d2c86dadef1b9a53bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ee611d3903ba36748837d2743cd03d54670befd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747310"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149348"
 ---
 # <a name="ltdiagnosticsgt"></a>&lt;Diagnostyka&gt;
 `diagnostics` Element definiuje ustawienia używane przez administratora w czasie wykonywania inspekcji i kontroli.  
@@ -18,28 +18,25 @@ ms.locfileid: "32747310"
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
-<system.serviceModel>  
-  <diagnostics 
-      etwProviderId="String"       
-      performanceCounters="Off/ServiceOnly/All/Default"              
-      wmiProviderEnabled="Boolean" >       
-    <endToEndTracing 
-        activityTracing="Boolean"  
-        messageFlowTracing="Boolean"  
-        propagateActivity="Boolean" />  
-    <messageLogging 
-        logEntireMessage="Boolean"  
-        logMalformedMessages="Boolean"  
-        logMessagesAtServiceLevel="Boolean"  
-        logMessagesAtTransportLevel="Boolean"  
-        maxMessagesToLog="Integer"  
-        maxSizeOfMessageToLog="Integer" >  
-      <filters>  
-        <clear />  
-      </filters>  
-    </messageLogging>  
-  </diagnostics>  
-</system.serviceModel>  
+<system.serviceModel>
+  <diagnostics etwProviderId="String"
+               performanceCounters="Off/ServiceOnly/All/Default"
+               wmiProviderEnabled="Boolean">
+    <endToEndTracing activityTracing="Boolean"
+                     messageFlowTracing="Boolean"
+                     propagateActivity="Boolean" />
+    <messageLogging logEntireMessage="Boolean"
+                    logMalformedMessages="Boolean"
+                    logMessagesAtServiceLevel="Boolean"
+                    logMessagesAtTransportLevel="Boolean"
+                    maxMessagesToLog="Integer"
+                    maxSizeOfMessageToLog="Integer">
+      <filters>
+        <clear />
+      </filters>
+    </messageLogging>
+  </diagnostics>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy  
@@ -49,44 +46,42 @@ ms.locfileid: "32747310"
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|etwProviderId|Ciąg określający identyfikator dostawcy śledzenia zdarzeń, która zapisuje zdarzenia do sesji ETW.|  
-|liczniki wydajności|Określa, czy są włączone liczniki wydajności dla zestawu. Prawidłowe wartości to<br /><br /> -Off: Liczniki wydajności są wyłączone.<br />-ServiceOnly: Jest włączona tylko liczniki wydajności istotne dla tej usługi.<br />-Wszystkie: Wydajności liczniki można wyświetlać w czasie wykonywania.<br />— Wartość domyślna: _WCF_Admin wystąpienia licznika wydajności pojedynczego jest tworzony. To wystąpienie jest używane umożliwia zbieranie danych SQM używane przez infrastrukturę. Brak wartości liczników dla tego wystąpienia są aktualizowane i w związku z tym pozostanie od zera. Jest to wartość domyślna, jeśli konfiguracja nie jest stosowany w przypadku usługi WCF.|  
-|wmiProviderEnabled|Wartość logiczna określająca czy włączone jest dostawca WMI dla zestawu. Dostawca WMI jest wymagany dla użytkownik może uzyskać dostępu do środowiska wykonawczego do inspekcji i kontroli funkcji Windows Communication Foundation (WCF). Wartość domyślna to `false`.|  
+|etwProviderId|Ciąg określający identyfikator dostawcy śledzenia zdarzeń, który zapisuje zdarzenia do sesji ETW.|  
+|Liczniki wydajności|Określa, czy są włączone liczniki wydajności dla zestawu. Prawidłowe wartości to:<br /><br /> — Wyłączone: Liczniki wydajności są wyłączone.<br />-ServiceOnly: Tylko liczniki wydajności istotne dla tej usługi jest włączone.<br />— Wszystkie: Liczniki wydajności mogą być wyświetlane w czasie wykonywania.<br />— Wartość domyślna: _WCF_Admin wystąpienia licznika wydajności pojedynczego zostanie utworzony. To wystąpienie jest używane do włączenia zbierania danych METRYK dla używana przez infrastrukturę. Brak wartości liczników dla tego wystąpienia są aktualizowane, a w związku z tym pozostanie od zera. Jest wartością domyślną, jeśli konfiguracja nie jest obecny dla usługi WCF.|  
+|wmiProviderEnabled|Wartość logiczna określająca, czy włączony jest dostawca usługi WMI dla zestawu. Dostawca usługi WMI jest wymagana dla użytkownika w celu uzyskania dostępu do funkcji inspekcji i kontroli programu Windows Communication Foundation (WCF) w czasie wykonywania. Wartość domyślna to `false`.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<endToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Element konfiguracji, który umożliwia włączanie i wyłączanie różnych aspektów śledzenia end-to-end podczas uruchamiania aplikacji usługi.|  
-|[\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Opisuje ustawienia rejestrowania komunikatów usługi WCF.|  
+|[\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|W tym artykule opisano ustawienia rejestrowania komunikatów WCF.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|ServiceModel|Element główny wszystkich elementów konfiguracji usługi WCF.|  
+|modelu serviceModel|Element główny wszystkich elementów konfiguracji programu WCF.|  
   
 ## <a name="remarks"></a>Uwagi  
- `diagnostics` Sekcja definiuje ustawień diagnostycznych dla wszystkich usług znajduje się w zestawie. Nie jest możliwe do definiowania ustawień diagnostyki oddzielne na poziomie usługi, chyba że istnieje tylko jedna usługa w zestawie. Atrybuty są ustawione zgodnie z wymaganiami sekcji.  
+ `diagnostics` Sekcja definiuje ustawienia diagnostyki dla wszystkich usług znajdujących się w zestawie. Nie jest możliwe do definiowania ustawień diagnostycznych oddzielne na poziomie usługi, chyba że istnieje tylko jedna usługa w zestawie. Atrybuty są ustawione zgodnie z wymogami sekcji.  
   
 ## <a name="example"></a>Przykład  
   
 ```xml  
-<diagnostics
-    wmiProviderEnabled="false"  
-    performanceCounters="all">  
-  <messageLogging 
-      logEntireMessage="true"  
-      logMalformedMessages="true"  
-      logMessagesAtServiceLevel="true"  
-      logMessagesAtTransportLevel="true"  
-      maxMessagesToLog="42"  
-      maxSizeOfMessageToLog="42">  
-    <filters>  
-      <clear />  
-    </filters>  
-  </messageLogging>  
-</diagnostics>  
+<diagnostics wmiProviderEnabled="false"
+             performanceCounters="all">
+  <messageLogging logEntireMessage="true"
+                  logMalformedMessages="true"
+                  logMessagesAtServiceLevel="true"
+                  logMessagesAtTransportLevel="true"
+                  maxMessagesToLog="42"
+                  maxSizeOfMessageToLog="42">
+    <filters>
+      <clear />
+    </filters>
+  </messageLogging>
+</diagnostics>
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

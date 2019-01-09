@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 5844f8d63aa5646bfd7860dc0407528fb2eaf329
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c9162e123c1167e3aa1be26ddd37279c088acc89
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753342"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149166"
 ---
 # <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList pola
 
-`ConnectionGroup.m_ConnectionList` jest <xref:System.Collections.ArrayList> obiektów połączenia, które służy do tego samego identyfikatora URI i udziału takie same wartości dla niektórych innych właściwości, takie jak wygaśnięcia i uwierzytelniania.
+`ConnectionGroup.m_ConnectionList` jest <xref:System.Collections.ArrayList> obiektów połączeń, które służy do tego samego udziału i identyfikator URI takie same wartości dla niektórych innych właściwości, takich jak uwierzytelnianie i wygaśnięcia.
 
 ## <a name="syntax"></a>Składnia
   
@@ -30,14 +30,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> `ConnectionGroup.m_ConnectionList` Pole jest prywatny i nie są one przeznaczone do użycia bezpośrednio w kodzie.
+> `ConnectionGroup.m_ConnectionList` Pole jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 > 
-> Firma Microsoft obsługuje Użyj tego pola w aplikacji produkcyjnej, w żadnym przypadku.
+> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
 
 ## <a name="requirements"></a>Wymagania
 
 **Namespace:** <xref:System.Net>
 
-**Zestaw:** System (w System.dll)
+**Zestaw:** System (System.dll)
 
-**Wersje programu .NET framework:** dostępne od wersji 2.0.
+**Wersje programu .NET framework:** Dostępne od wersji 2.0.

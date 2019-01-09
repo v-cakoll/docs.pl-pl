@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio'
+title: 'Przewodnik: Tworzenie kontrolki formularzy Windows wykorzystującego funkcje czasu projektowania w programie Visual Studio'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: aa30842ca72bb50767513cf387f59e29e40574e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cb102ec9b3a7eb4673f42c2ca5ad876e049ff59c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865868"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146280"
 ---
-# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Wskazówki: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio
+# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Przewodnik: Tworzenie kontrolki formularzy Windows wykorzystującego funkcje czasu projektowania w programie Visual Studio
 Środowisko czasu projektowania formantu niestandardowego może zostać poprawione tworząc skojarzone niestandardowego projektanta.  
   
  W tym instruktażu przedstawiono sposób tworzenia niestandardowego projektanta dla formantu niestandardowego. Zostaną zaimplementowane `MarqueeControl` typu i skojarzone projektanta klasę o nazwie `MarqueeControlRootDesigner`.  
@@ -60,7 +60,7 @@ ms.locfileid: "43865868"
   
  ![Możliwe formantu MarqueeControl](../../../../docs/framework/winforms/controls/media/demomarqueecontrol.gif "DemoMarqueeControl")  
   
- Lista kompletny kod znajduje się [porady: tworzenie Windows Forms kontroli, przyjmuje korzystać z funkcje czasu projektowania](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
+ Lista kompletny kod znajduje się [jak: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
   
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -84,18 +84,18 @@ ms.locfileid: "43865868"
   
 1.  Dodaj projekt Biblioteka kontrolek formularzy Windows do rozwiązania. Nazwij projekt "MarqueeControlLibrary."  
   
-2.  Za pomocą **Eksploratora rozwiązań**, usunąć projekt domyślny formant przez usunięcie pliku źródłowego o nazwie "UserControl1.cs" lub "UserControl1.vb", w zależności od tego, w wybranym języku. Aby uzyskać więcej informacji, zobacz [NIB: instrukcje: usuwanie, usuwania i wykluczyć elementy](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+2.  Za pomocą **Eksploratora rozwiązań**, usunąć projekt domyślny formant przez usunięcie pliku źródłowego o nazwie "UserControl1.cs" lub "UserControl1.vb", w zależności od tego, w wybranym języku. Aby uzyskać więcej informacji, zobacz [jak: Usuń Delete i wykluczyć elementy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
 3.  Dodaj nową <xref:System.Windows.Forms.UserControl> elementu do `MarqueeControlLibrary` projektu. Nazwij nowy plik źródłowy podstawowego elementu "MarqueeControl."  
   
-4.  Za pomocą **Eksploratora rozwiązań**, Utwórz nowy folder w `MarqueeControlLibrary` projektu. Aby uzyskać więcej informacji, zobacz [NIB: instrukcje: dodawanie nowych elementów projektu](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Nadaj nazwę nowego folderu "Projekt".  
+4.  Za pomocą **Eksploratora rozwiązań**, Utwórz nowy folder w `MarqueeControlLibrary` projektu. Aby uzyskać więcej informacji, zobacz [jak: Dodaj nowe elementy projektu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Nadaj nazwę nowego folderu "Projekt".  
   
 5.  Kliknij prawym przyciskiem myszy **projektowania** folderze i Dodaj nową klasę. Nadaj plikowi źródła podstawowej nazwy "MarqueeControlRootDesigner."  
   
 6.  Należy używać typów z zestawu System.Design, dlatego należy dodać to odwołanie do `MarqueeControlLibrary` projektu.  
   
     > [!NOTE]
-    >  Aby użyć zestawu System.Design, projekt musi być przeznaczony pełną wersję programu .NET Framework nie .NET Framework Client Profile. Aby zmienić platformę docelową, zobacz [jak: docelowa wersja systemu .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).  
+    >  Aby użyć zestawu System.Design, projekt musi być przeznaczony pełną wersję programu .NET Framework nie .NET Framework Client Profile. Aby zmienić platformę docelową, zobacz [jak: Docelowa wersja systemu .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).  
   
 ## <a name="referencing-the-custom-control-project"></a>Odwołanie do projektu kontrolki niestandardowej  
  Użyjesz `MarqueeControlTest` projekt do przetestowania kontrolki niestandardowej. Projekt testowy, dowie się o formant niestandardowy, podczas dodawania odwołania projektu do `MarqueeControlLibrary` zestawu.  
@@ -168,7 +168,7 @@ using MarqueeControlLibrary;
 5.  Skompiluj projekt.  
   
 ## <a name="setting-up-the-project-for-design-time-debugging"></a>Konfigurowanie projektu dla debugowania w czasie projektowania  
- Podczas tworzenia niestandardowego środowiska czasu projektowania, będzie trzeba debugować swoje formanty i składniki. Brak prosty sposób skonfigurować projekt w celu zezwolenia na debugowanie w czasie projektowania. Aby uzyskać więcej informacji, zobacz [wskazówki: debugowanie niestandardowych Windows formantów formularzy w czasie projektowania](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
+ Podczas tworzenia niestandardowego środowiska czasu projektowania, będzie trzeba debugować swoje formanty i składniki. Brak prosty sposób skonfigurować projekt w celu zezwolenia na debugowanie w czasie projektowania. Aby uzyskać więcej informacji, zobacz [instruktażu: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
   
 #### <a name="to-set-up-the-project-for-design-time-debugging"></a>Aby skonfigurować projekt do debugowania w czasie projektowania  
   
@@ -219,9 +219,9 @@ using MarqueeControlLibrary;
 ## <a name="creating-a-child-control-for-your-custom-control"></a>Tworzenie kontrolki podrzędnej kontrolki niestandardowej  
  `MarqueeControl` Będzie obsługiwać dwa rodzaje kontrolki podrzędnej: `MarqueeBorder` kontroli i `MarqueeText` kontroli.  
   
--   `MarqueeBorder`: Ta kontrolka malowania obramowanie "światła" wokół jego krawędzi. Kontrolki programu flash w sekwencji, aby były widoczne przemieszczają się wokół obramowania. Szybkość jaką flash kontrolki jest kontrolowana przez właściwość o nazwie `UpdatePeriod`. Kilka właściwości niestandardowe, określ inne aspekty wyglądu formantu. Dwie metody, o nazwie `StartMarquee` i `StopMarquee`, kontrolować podczas uruchamiania i zatrzymywania w animacji.  
+-   `MarqueeBorder`: Ten formant do malowania obramowanie "światła" wokół jego krawędzi. Kontrolki programu flash w sekwencji, aby były widoczne przemieszczają się wokół obramowania. Szybkość jaką flash kontrolki jest kontrolowana przez właściwość o nazwie `UpdatePeriod`. Kilka właściwości niestandardowe, określ inne aspekty wyglądu formantu. Dwie metody, o nazwie `StartMarquee` i `StopMarquee`, kontrolować podczas uruchamiania i zatrzymywania w animacji.  
   
--   `MarqueeText`: Ta kontrolka malowania migające ciągu. Podobnie jak `MarqueeBorder` kontrolki, szybkość jaką miga tekst jest kontrolowana przez `UpdatePeriod` właściwości. `MarqueeText` Kontroli ma również `StartMarquee` i `StopMarquee` metody wspólnego z `MarqueeBorder` kontroli.  
+-   `MarqueeText`: Ten formant do malowania migające ciągu. Podobnie jak `MarqueeBorder` kontrolki, szybkość jaką miga tekst jest kontrolowana przez `UpdatePeriod` właściwości. `MarqueeText` Kontroli ma również `StartMarquee` i `StopMarquee` metody wspólnego z `MarqueeBorder` kontroli.  
   
  W czasie projektowania `MarqueeControlRootDesigner` umożliwia te typy dwóch kontrolek do dodania do `MarqueeControl` w dowolnej kombinacji.  
   
@@ -459,7 +459,7 @@ using MarqueeControlLibrary;
 ## <a name="adding-designer-verbs-to-your-custom-designer"></a>Dodanie zlecenia projektanta do niestandardowego projektanta  
  Zlecenia projektanta jest polecenia menu, połączyć programu obsługi zdarzeń. Zlecenia projektanta są dodawane do menu skrótów składnika w czasie projektowania. Aby uzyskać więcej informacji, zobacz <xref:System.ComponentModel.Design.DesignerVerb>.  
   
- Zlecenia projektanta dwóch zostanie dodany do Twojego projektantów: **Uruchom Test** i **Zatrzymaj Test**. Tych poleceń pozwala wyświetlić zachowanie środowiska wykonawczego `MarqueeControl` w czasie projektowania. Tych poleceń, które zostaną dodane do `MarqueeControlRootDesigner`.  
+ Zlecenia projektanta dwóch zostanie dodany do Twojego projektantów: **Uruchom Test** i **zatrzymania testu**. Tych poleceń pozwala wyświetlić zachowanie środowiska wykonawczego `MarqueeControl` w czasie projektowania. Tych poleceń, które zostaną dodane do `MarqueeControlRootDesigner`.  
   
  Gdy **Uruchom Test** jest wywołana, program obsługi zdarzeń zlecenie, wywoła `StartMarquee` metody `MarqueeControl`. Gdy **Zatrzymaj Test** jest wywołana, program obsługi zdarzeń zlecenie, wywoła `StopMarquee` metody `MarqueeControl`. Implementacja `StartMarquee` i `StopMarquee` metody wywołania tych metod w zawartych w nim formantów, które implementują `IMarqueeWidget`, więc wszystkie zawarty `IMarqueeWidget` kontrolek również będą uczestniczyć w teście.  
   
@@ -476,7 +476,7 @@ using MarqueeControlLibrary;
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]  
   
 ## <a name="creating-a-custom-uitypeeditor"></a>Tworzenie niestandardowych UITypeEditor  
- Podczas tworzenia niestandardowego środowiska czasu projektowania dla użytkowników często jest pożądane tworzenie niestandardowych interakcji w oknie właściwości. Można to zrobić, tworząc <xref:System.Drawing.Design.UITypeEditor>. Aby uzyskać więcej informacji, zobacz [porady: tworzenie edytora typów Interfejsu](https://msdn.microsoft.com/library/292c6e33-8d85-4012-9b51-05835a6f6dfd).  
+ Podczas tworzenia niestandardowego środowiska czasu projektowania dla użytkowników często jest pożądane tworzenie niestandardowych interakcji w oknie właściwości. Można to zrobić, tworząc <xref:System.Drawing.Design.UITypeEditor>. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie edytora typów Interfejsu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120)).  
   
  `MarqueeBorder` Kontroli udostępnia kilka właściwości w oknie dialogowym właściwości. Dwa z tych właściwości `MarqueeSpinDirection` i `MarqueeLightShape` są reprezentowane przez wyliczenia. Aby zilustrować korzystanie z edytora typów Interfejsu `MarqueeLightShape` właściwość będzie miał skojarzoną <xref:System.Drawing.Design.UITypeEditor> klasy.  
   
@@ -628,19 +628,19 @@ private void stopButton_Click(object sender, System.EventArgs e)
   
 -   Dodatkowo dostosować środowisko czasu projektowania. Możesz spróbować przesłanianie więcej właściwości, niż <xref:System.Windows.Forms.Control.Enabled%2A> i <xref:System.Windows.Forms.Control.Visible%2A>, i dodać nowe właściwości. Dodaj nowe zlecenia projektanta, aby uprościć typowych zadań, takich jak dokowanie formantów podrzędnych.  
   
--   Licencja `MarqueeControl`. Aby uzyskać więcej informacji, zobacz [jak: licencja składników i formantów](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57).  
+-   Licencja `MarqueeControl`. Aby uzyskać więcej informacji, zobacz [jak: Licencjonowanie składników i kontrolek](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120)).  
   
 -   Kontrolować, jak kontrolki są serializowane i jak kod jest generowany dla nich. Aby uzyskać więcej informacji, zobacz [dynamiczne generowanie kodu źródłowego i kompilacja](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.UserControl>  
- <xref:System.Windows.Forms.Design.ParentControlDesigner>  
- <xref:System.Windows.Forms.Design.DocumentDesigner>  
- <xref:System.ComponentModel.Design.IRootDesigner>  
- <xref:System.ComponentModel.Design.DesignerVerb>  
- <xref:System.Drawing.Design.UITypeEditor>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [Porady: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)  
- [Rozszerzenie obsługi w czasie projektowania](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Niestandardowi projektanci](https://msdn.microsoft.com/library/ca11988e-d38e-44d8-a05d-71362ae7844d)  
- [Biblioteka kształt .NET: Projektanta próbki](http://windowsforms.net/articles/shapedesigner.aspx)
+## <a name="see-also"></a>Zobacz także
+
+- <xref:System.Windows.Forms.UserControl>
+- <xref:System.Windows.Forms.Design.ParentControlDesigner>
+- <xref:System.Windows.Forms.Design.DocumentDesigner>
+- <xref:System.ComponentModel.Design.IRootDesigner>
+- <xref:System.ComponentModel.Design.DesignerVerb> 
+- <xref:System.Drawing.Design.UITypeEditor>
+- <xref:System.ComponentModel.BackgroundWorker>
+- [Instrukcje: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [Rozszerzenie obsługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) 
+- [Niestandardowi projektanci](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))

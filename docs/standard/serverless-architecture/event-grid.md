@@ -4,16 +4,16 @@ description: Usługa Azure Event Grid to rozwiązanie bez użycia serwera do nie
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143665"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145894"
 ---
 # <a name="event-grid"></a>Event Grid
 
-[Usługa Azure Event Grid](/azure-event-grid/overview) zapewnia infrastrukturę bez użycia serwera dla aplikacji opartych na zdarzeniach. Możesz publikować do usługi Event Grid z dowolnego źródła i używać komunikatów z dowolnej platformy. Usługa Event Grid również ma wbudowaną obsługę zdarzeń z zasobów platformy Azure, aby usprawnić integracji z aplikacjami. Na przykład możesz subskrybować zdarzenia usługi blob storage do powiadamiania aplikacji, gdy plik zostanie przekazany. Aplikację można następnie publikować komunikat siatki zdarzeń niestandardowych, który jest używany przez inne chmurę lub lokalne aplikacje. Usługa Event Grid została stworzona z myślą niezawodny sposób będą obsługiwać bardzo dużą skalę. Korzyści publikowania i subskrybowania komunikatów bez konieczności konfigurowania infrastruktury wymaganej.
+[Usługa Azure Event Grid](/azure/event-grid/overview) zapewnia infrastrukturę bez użycia serwera dla aplikacji opartych na zdarzeniach. Możesz publikować do usługi Event Grid z dowolnego źródła i używać komunikatów z dowolnej platformy. Usługa Event Grid również ma wbudowaną obsługę zdarzeń z zasobów platformy Azure, aby usprawnić integracji z aplikacjami. Na przykład możesz subskrybować zdarzenia usługi blob storage do powiadamiania aplikacji, gdy plik zostanie przekazany. Aplikację można następnie publikować komunikat siatki zdarzeń niestandardowych, który jest używany przez inne chmurę lub lokalne aplikacje. Usługa Event Grid została stworzona z myślą niezawodny sposób będą obsługiwać bardzo dużą skalę. Korzyści publikowania i subskrybowania komunikatów bez konieczności konfigurowania infrastruktury wymaganej.
 
 ![Logo siatki zdarzeń](./media/event-grid-logo.png)
 

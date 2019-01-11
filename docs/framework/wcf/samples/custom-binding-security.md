@@ -2,12 +2,12 @@
 title: Zabezpieczenia powiązania niestandardowego
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 72812c23bca5cd5c61f906cfd98f1929b0edee1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 56c3ed4be894a265635c747373e0b79599ce129d
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192892"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221703"
 ---
 # <a name="custom-binding-security"></a>Zabezpieczenia powiązania niestandardowego
 Niniejszy przykład pokazuje sposób konfigurowania zabezpieczeń przy użyciu niestandardowego powiązania. Widoczny jest sposób użyć niestandardowego powiązania, aby włączyć zabezpieczenia na poziomie komunikatu wraz z bezpiecznym transportem. Jest to przydatne, gdy bezpiecznym transportem jest wymagana do przesyłania komunikatów między klientem a usługą i jednocześnie komunikaty muszą być bezpieczne na poziomie komunikatu. Ta konfiguracja nie jest obsługiwana przez powiązania dostarczane przez system.
@@ -113,7 +113,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze
 
-1.  Otwórz okno wiersza polecenia programu Visual Studio z uprawnieniami administratora i uruchom Setup.bat jest z poziomu folderu instalacji przykładowej. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.
+1.  Otwórz wiersz polecenia dewelopera dla okna programu Visual Studio z uprawnieniami administratora i uruchom Setup.bat jest z poziomu folderu instalacji przykładowej. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.
 
     > [!NOTE]
     >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z programu Visual Studio 2012 wiersz polecenia. Ustaw w Visual Studio 2012 Command Prompt punkty do katalogu, który zawiera pliki wykonywalne wymagane przez skrypt Setup.bat jest zmiennej środowiskowej PATH.  
@@ -134,7 +134,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3.  Skopiuj pliki Setup.bat i Cleanup.bat komputer usługi.  
   
-    4.  Uruchom następujące polecenie w wierszu polecenia programu Visual Studio otwartych z uprawnieniami administratora: `Setup.bat service`. Spowoduje to utworzenie certyfikatu usługi o nazwie podmiotu, pasujące do nazwy komputera, na którym uruchomiono plik wsadowy na.  
+    4.  Uruchom następujące polecenie w wierszu polecenia dewelopera dla programu Visual Studio otwartych z uprawnieniami administratora: `Setup.bat service`. Spowoduje to utworzenie certyfikatu usługi o nazwie podmiotu, pasujące do nazwy komputera, na którym uruchomiono plik wsadowy na.  
   
         > [!NOTE]
         >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z programu Visual Studio 2010 wiersz polecenia. Wymaga to, że zmiennej środowiskowej path odwołują się do katalogu, w którym jest zainstalowany zestaw SDK. Ta zmienna środowiskowa jest automatycznie ustawiana w ramach programu Visual Studio 2010 wiersz polecenia.
@@ -149,7 +149,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     2.  Uruchom Cleanup.bat, aby usunąć wszelkie stare certyfikaty z poprzednich przykładów.
 
-    3.  Eksportowanie certyfikatu usługi Otwieranie wiersza polecenia programu Visual Studio z uprawnieniami administracyjnymi, a następnie uruchamiając następujące polecenie na komputerze usługi (Zastąp `%SERVER_NAME%` z w pełni kwalifikowaną nazwę komputera, na których ta usługa jest Uruchamianie):
+    3.  Eksportowanie certyfikatu usługi otworzyć wiersz polecenia dla deweloperów programu Visual Studio z uprawnieniami administracyjnymi, a następnie uruchamiając następujące polecenie na komputerze usługi (Zastąp `%SERVER_NAME%` z w pełni kwalifikowaną nazwę komputera, na którym Usługa jest uruchomiona):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -157,7 +157,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     4.  Skopiuj %SERVER_NAME%.cer komputer kliencki (Zastąp nazwa_serwera % z w pełni kwalifikowaną nazwę komputera, na którym jest uruchomiona usługa).
 
-    5.  Zaimportuj certyfikat usługi, otwierając wiersza polecenia programu Visual Studio z uprawnieniami administracyjnymi, a następnie uruchamiając następujące polecenie na komputerze klienckim (Zastąp nazwa_serwera % z w pełni kwalifikowaną nazwę komputera, na których ta usługa jest Uruchamianie):
+    5.  Zaimportuj certyfikat usługi otworzyć wiersz polecenia dla deweloperów programu Visual Studio z uprawnieniami administracyjnymi, a następnie uruchamiając następujące polecenie na komputerze klienckim (Zastąp % nazwa_serwera % z w pełni kwalifikowaną nazwę komputera, na którym Usługa jest uruchomiona):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople

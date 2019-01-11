@@ -2,12 +2,12 @@
 title: Wystawca uwierzytelnienia tokenów
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 198994acb322ece374ba0e04bc4d15cb2754f995
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d9eeee3e69d053fba9afb03e4e938cbe02c7a303
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582648"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222899"
 ---
 # <a name="token-authenticator"></a>Wystawca uwierzytelnienia tokenów
 Ten przykład demonstruje sposób implementacji niestandardowego wystawcy uwierzytelniania tokenu. Wystawcy uwierzytelnienia tokenu w Windows Communication Foundation (WCF) służy do sprawdzania poprawności tokenu użytego komunikatem, weryfikowanie, czy jest spójny i uwierzytelniania tożsamości skojarzonych z tokenem.
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2.  Skopiuj pliki programu usługi do katalogu usługi na komputerze usługi. Także skopiować pliki Setup.bat i Cleanup.bat na komputerze usługi.  
   
-3.  Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Plik App.config usługi należy zaktualizować w celu odzwierciedlenia tej nowej nazwy certyfikatu. Możesz je utworzyć za pomocą Setup.bat, jeśli ustawisz `%SERVER_NAME%` zmiennych hosta w pełni kwalifikowaną nazwę komputera, na którym uruchomiona jest usługa. Należy pamiętać, że plik Setup.bat jest należy uruchomić z wiersza polecenia programu Visual Studio, otwartych z uprawnieniami administratora.  
+3.  Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Plik App.config usługi należy zaktualizować w celu odzwierciedlenia tej nowej nazwy certyfikatu. Możesz je utworzyć za pomocą Setup.bat, jeśli ustawisz `%SERVER_NAME%` zmiennych hosta w pełni kwalifikowaną nazwę komputera, na którym uruchomiona jest usługa. Należy zauważyć, że plik Setup.bat jest należy uruchomić z wiersza polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora.  
   
 4.  Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople klienta. Nie trzeba to zrobić, z wyjątkiem sytuacji, gdy certyfikat serwera jest wystawiony przez klienta zaufanego wystawcy.  
   

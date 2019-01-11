@@ -2,12 +2,12 @@
 title: Powiązanie HTTP w standardzie WS 2007 Federation
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 53f2cb893476cdfa0517bd6586f38951dff1f2af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7dffe56cf5593f1cd59cccd7ea9b6b0e173e0c2c
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513065"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221287"
 ---
 # <a name="ws-2007-federation-http-binding"></a>Powiązanie HTTP w standardzie WS 2007 Federation
 Ten przykład demonstruje użycie <xref:System.ServiceModel.WS2007FederationHttpBinding>, standard, powiązanie, której można tworzyć scenariuszach obejmujących Federację obsługi wersji 1.3 specyfikację protokołu WS-Trust.  
@@ -112,7 +112,7 @@ Press <ENTER> to terminate client.
   
 1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Otwórz wiersz polecenia programu Visual Studio z uprawnieniami administratora i uruchom plik Setup.bat jest, aby utworzyć wymagane certyfikaty.  
+2.  Otwórz wiersz polecenia dla deweloperów programu Visual Studio z uprawnieniami administratora i uruchom plik Setup.bat jest, aby utworzyć wymagane certyfikaty.  
   
  Ten plik wsadowy używa Certmgr.exe i Makecert.exe, które są dystrybuowane za pomocą zestawu Windows SDK. Należy jednak uruchomić Setup.bat z, w wierszu polecenia programu Visual Studio, aby włączyć skryptów znaleźć te narzędzia.  
   

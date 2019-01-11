@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: Tworzenie niestandardowego typu bloku przepływu danych'
+title: 'Przewodnik: Tworzenie typu bloku przepływu danych niestandardowych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f07f1a2a7c393d70befc42a2c5b090c2c27320c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 380bcb6d2a2846d09267eeb3a0d637469ce9fba5
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868620"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221092"
 ---
-# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Wskazówki: Tworzenie niestandardowego typu bloku przepływu danych
+# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Przewodnik: Tworzenie typu bloku przepływu danych niestandardowych
 Mimo że biblioteka przepływu danych TPL udostępnia kilka typów bloku przepływu danych, które umożliwiają wykonywanie różnych funkcji, można również utworzyć typów bloków niestandardowych. Ten dokument zawiera opis sposobu tworzenia typu bloku przepływu danych, który implementuje niestandardowe zachowanie.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
@@ -53,7 +53,7 @@ Mimo że biblioteka przepływu danych TPL udostępnia kilka typów bloku przepł
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.  
+ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w wierszu polecenia dla deweloperów programu Visual Studio okna.  
   
  Visual C#  
   

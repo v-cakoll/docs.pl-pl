@@ -3,12 +3,12 @@ title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejące i pliki csproj .NET Core
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: bc81dc5c201fea6caa752248c2b59636bd7465ec
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286575"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222067"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -62,7 +62,7 @@ Aby obejść ten błąd, można usunąć jawne `Compile` elementy, które są zg
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 </PropertyGroup>
 ```
-Ustawienie tej właściwości na `false` spowoduje przesłonięcie niejawne dołączania i zachowanie zostaną przywrócone poprzednie zestawów SDK, który wymagał określić elementy domyślne globalne w projekcie. 
+Ustawienie tej właściwości na `false` spowoduje wyłączenie włączenia niejawne, przywrócenie zachowania poprzedniego zestawów SDK, który wymagał określić elementy domyślne globalne w projekcie.
 
 Ta zmiana nie powoduje modyfikacji głównego zawiera mechanika innych. Jednak jeśli chcesz określić, na przykład, niektóre pliki na publikowaniu z Twoją aplikacją, nadal można znanych mechanizmów w *csproj* do tego (na przykład `<Content>` elementu).
 
@@ -88,7 +88,7 @@ Jeśli projekt zawiera wiele platform docelowych, wyniki polecenia powinna zosta
 ## <a name="additions"></a>Dodatki
 
 ### <a name="sdk-attribute"></a>Atrybutu zestawu SDK 
-`<Project>` Elementu *.csproj* plik ma nowy atrybut o nazwie `Sdk`. `Sdk` Określa zestaw SDK będzie używane przez projekt. Zestaw SDK, jako [dokumentu warstwowe](cli-msbuild-architecture.md) opisuje, to zbiór MSBuild [zadania](/visualstudio/msbuild/msbuild-tasks) i [cele](/visualstudio/msbuild/msbuild-targets) , można tworzyć kod platformy .NET Core. Publikujemy trzech głównych zestawów SDK z narzędziami .NET Core:
+Katalog główny `<Project>` elementu *.csproj* plik ma nowy atrybut o nazwie `Sdk`. `Sdk` Określa zestaw SDK będzie używane przez projekt. Zestaw SDK, jako [dokumentu warstwowe](cli-msbuild-architecture.md) opisuje, to zbiór MSBuild [zadania](/visualstudio/msbuild/msbuild-tasks) i [cele](/visualstudio/msbuild/msbuild-targets) , można tworzyć kod platformy .NET Core. Publikujemy trzech głównych zestawów SDK z narzędziami .NET Core:
 
 1. .NET Core SDK o identyfikatorze `Microsoft.NET.Sdk`
 2. .NET Core web SDK o identyfikatorze `Microsoft.NET.Sdk.Web`
@@ -97,7 +97,7 @@ Jeśli projekt zawiera wiele platform docelowych, wyniki polecenia powinna zosta
 Musisz mieć `Sdk` atrybut do jednego z tych identyfikatorów w `<Project>` element, aby użyć narzędzi .NET Core i kompilowanie kodu. 
 
 ### <a name="packagereference"></a>PackageReference
-Element, który określa zależność NuGet w projekcie. `Include` Atrybut określa identyfikator pakietu. 
+Element `<PackageReference>` elementu określa zależność NuGet w projekcie. `Include` Atrybut określa identyfikator pakietu. 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
@@ -131,7 +131,7 @@ Alternatywnie ten atrybut może zawierać:
 * `All` — wszystkie zasoby są używane.
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
-`<DotNetCliToolReference>` elementu określa narzędzie interfejsu wiersza polecenia, które użytkownik chce przywrócić w kontekście projektu. Jest zamiennikiem `tools` w węźle *project.json*. 
+Element `<DotNetCliToolReference>` elementu określa narzędzie interfejsu wiersza polecenia, które użytkownik chce przywrócić w kontekście projektu. Jest zamiennikiem `tools` w węźle *project.json*. 
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
@@ -141,21 +141,23 @@ Alternatywnie ten atrybut może zawierać:
 `Version` Określa numer wersji pakietu do przywrócenia. Ten atrybut przestrzega zasad [wersji NuGet](/nuget/create-packages/dependency-versions#version-ranges) schematu. Domyślnym zachowaniem jest dokładna wersja dopasowania. Na przykład określenie `Version="1.2.3"` jest odpowiednikiem notacji NuGet `[1.2.3]` dla 1.2.3 dokładną wersję pakietu.
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
-`<RuntimeIdentifiers>` Element umożliwia określenie rozdzieloną średnikami listę [identyfikatorów środowiska uruchomieniowego (RID)](../rid-catalog.md) dla projektu. Włącz identyfikatorów RID, publikowanie niezależne wdrożenia. 
+`<RuntimeIdentifiers>` Property — element umożliwia określenie rozdzieloną średnikami listę [identyfikatorów środowiska uruchomieniowego (RID)](../rid-catalog.md) dla projektu. RID włączyć publikowanie niezależne wdrożenia. 
 
 ```xml
 <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 ```
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
-`<RuntimeIdentifier>` Element można określić tylko jeden [identyfikator środowiska uruchomieniowego (RID)](../rid-catalog.md) dla projektu. Włącz identyfikatorów RID, publikowanie niezależne wdrożenia. 
+`<RuntimeIdentifier>` Element właściwości można określić tylko jeden [identyfikator środowiska uruchomieniowego (RID)](../rid-catalog.md) dla projektu. Identyfikator RID umożliwia publikowanie niezależne wdrożenia.
 
 ```xml
 <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
 ```
 
+Użyj `<RuntimeIdentifiers>` (liczba mnoga) zamiast Jeśli potrzebujesz do opublikowania dla wielu modułów wykonawczych. `<RuntimeIdentifier>` zapewnia szybsze kompilacje, gdy tylko jednego środowiska wykonawczego jest wymagana.
+
 ### <a name="packagetargetfallback"></a>PackageTargetFallback 
-`<PackageTargetFallback>` Element umożliwia określenie zestawu zgodnych elementów docelowych do użycia podczas przywracania pakietów. Został zaprojektowany tak, aby zezwolić na pakiety, które używają dotnet [TxM (krótkiej nazwy docelowej x)](/nuget/schema/target-frameworks) do pracy z pakietami, które nie deklarują dotnet TxM. Jeśli projekt używa dotnet TxM, a następnie wszystkich pakietów to zależy od musi również mieć dotnet TxM, chyba że dodasz `<PackageTargetFallback>` do swojego projektu, aby umożliwić-dotnet platform zapewnić ich zgodność za pomocą polecenia dotnet. 
+`<PackageTargetFallback>` Element właściwości można określić zestaw zgodnych elementów docelowych do użycia podczas przywracania pakietów. Został zaprojektowany tak, aby zezwolić na pakiety, które używają dotnet [TxM (krótkiej nazwy docelowej x)](/nuget/schema/target-frameworks) do pracy z pakietami, które nie deklarują dotnet TxM. Jeśli projekt używa dotnet TxM, a następnie wszystkich pakietów to zależy od musi również mieć dotnet TxM, chyba że dodasz `<PackageTargetFallback>` do swojego projektu, aby umożliwić-dotnet platform zapewnić ich zgodność za pomocą polecenia dotnet. 
 
 W poniższym przykładzie przedstawiono przejścia dla wszystkich obiektów docelowych w projekcie: 
 

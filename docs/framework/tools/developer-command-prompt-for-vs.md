@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cded8ce271ea0f3d1dbb8fc3d9a072ee4a23d1ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6e648cdadb567919d320ea8a12d30b7be306e67a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149175"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221235"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Wiersz polecenia programisty dla programu Visual Studio
 
@@ -34,7 +34,7 @@ Może mieć kilka wierszy polecenia, w zależności od wersji programu Visual St
 
 1. W polu wyszukiwania na pasku zadań, należy uruchomić, wpisując nazwę narzędzia, takie jak `dev` lub `developer command prompt`. Wyświetlenie listy zainstalowanych aplikacji spełniających kryteria wyszukiwania. Jeśli potrzebujesz innego wiersza polecenia, spróbuj wprowadzić różne wyszukiwany termin takich jak `prompt`.
 
-2. Wybierz **wiersz polecenia dla deweloperów** (lub wiersza polecenia, którego chcesz użyć).
+2. Wybierz **wiersz polecenia programisty dla programu Visual Studio** (lub wiersza polecenia, którego chcesz użyć).
 
 ### <a name="in-windows-81"></a>W Windows 8.1
 

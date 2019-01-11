@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f0827634278f248089b105844dadf8959f953595
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196470"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221599"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Narzędzie podpisu)
 Narzędzie podpisywania to narzędzie wiersza polecenia, które cyfrowo podpisuje pliki, weryfikuje podpisy w plikach i oznacza pliki znacznikami czasu.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersz polecenia programisty dla programu Visual Studio (lub wiersza polecenia programu Visual Studio Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -129,7 +129,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|Określa opcjonalny algorytm wyznaczania wartości skrótu, który ma być używany podczas wyszukiwania pliku w wykazie.|  
 |`/kp`|Określa, że weryfikacja powinna być wykonywana przy użyciu zasad podpisywania sterowników trybu jądra.|  
 |`/ms`|Używa wielu semantyk weryfikacji. Jest to domyślne zachowanie [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) wywołanie na [!INCLUDE[win8](../../../includes/win8-md.md)] i nowsze wersje.|  
-|`/o` *Wersja*|Weryfikuje plik na podstawie wersji systemu operacyjnego. *Wersja* ma następującą postać: *PlatformID*:*VerMajor*. *VerMinor*. *BuildNumber*. *PlatformID* reprezentuje źródłową wartość elementu <xref:System.PlatformID> elementu członkowskiego wyliczenia. **Ważne:** użytkowania `/o` przełącznik jest zalecane. Jeśli `/o` nie zostanie określony, SignTool.exe może zwrócić nieoczekiwane wyniki. Na przykład, jeśli nie zostanie uwzględniony `/o` przełącznika, wykazy systemu, które są poprawnie weryfikowane w starszym systemie operacyjnym może być niepoprawnie weryfikowane w nowszych systemach operacyjnych.|  
+|`/o` *Wersja*|Weryfikuje plik na podstawie wersji systemu operacyjnego. *Wersja* ma następującą postać: *PlatformID*:*VerMajor*. *VerMinor*. *BuildNumber*. *PlatformID* reprezentuje źródłową wartość elementu <xref:System.PlatformID> elementu członkowskiego wyliczenia. **Ważne:**  Korzystanie z `/o` przełącznik jest zalecane. Jeśli `/o` nie zostanie określony, SignTool.exe może zwrócić nieoczekiwane wyniki. Na przykład, jeśli nie zostanie uwzględniony `/o` przełącznika, wykazy systemu, które są poprawnie weryfikowane w starszym systemie operacyjnym może być niepoprawnie weryfikowane w nowszych systemach operacyjnych.|  
 |`/p7`|Weryfikuje pliki PKCS #7. Żadne z istniejących zasad nie są używane do weryfikacji plików PKCS #7. Podpis jest sprawdzany i zostaje utworzony łańcuch dla certyfikatu podpisywania.|  
 |`/pa`|Określa, że mają być używane domyślne zasady weryfikacji Authenticode. Jeśli `/pa` opcja nie jest określona, narzędzie podpisywania używa zasady weryfikacji sterowników Windows. Tej opcji nie można używać z `catdb` opcje.|  
 |`/pg` *PolicyGUID*|Określa zasady weryfikacji według identyfikatora GUID. *PolicyGUID* odpowiada identyfikatorowi ActionID zasad weryfikacji. Tej opcji nie można używać z `catdb` opcje.|  

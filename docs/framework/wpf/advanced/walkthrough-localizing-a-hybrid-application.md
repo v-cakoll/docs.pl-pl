@@ -1,18 +1,18 @@
 ---
-title: 'Wskazówki: lokalizacja aplikacji hybrydowej'
+title: 'Przewodnik: Lokalizacja aplikacji hybrydowej'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: e1d06085b4edb5c1e102eaab766ec7636194b991
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6b7db8182b5764e3df65ccbdef3b54330c1ee64a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402701"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223010"
 ---
-# <a name="walkthrough-localizing-a-hybrid-application"></a>Wskazówki: lokalizacja aplikacji hybrydowej
+# <a name="walkthrough-localizing-a-hybrid-application"></a>Przewodnik: Lokalizacja aplikacji hybrydowej
 
 W tym instruktażu pokazano, jak zlokalizować [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementów w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]— na podstawie aplikacji hybrydowych.
 
@@ -48,7 +48,7 @@ Pierwszym krokiem jest utworzenie [!INCLUDE[TLA#tla_winforms](../../../../includ
 
 2.  Dodaj [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> element o nazwie `SimpleControl` do projektu.
 
-3.  Użyj <xref:System.Windows.Forms.Integration.ElementHost> formantu, aby umieścić `SimpleControl` elementu w formularzu. Aby uzyskać więcej informacji, zobacz [wskazówki: Hosting 3-złożonego formantu WPF w formularzach Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
+3.  Użyj <xref:System.Windows.Forms.Integration.ElementHost> formantu, aby umieścić `SimpleControl` elementu w formularzu. Aby uzyskać więcej informacji, zobacz [instruktażu: Hosting złożonego formantu 3D WPF w formularzach Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
 
 ## <a name="adding-localizable-content"></a>Dodawanie możliwych do zlokalizowania zawartości
 
@@ -118,7 +118,7 @@ Możliwych do zlokalizowania zawartości można mapować do zestawów zasobów p
 
 ### <a name="to-assign-resource-identifiers"></a>Aby przypisać identyfikatory zasobów
 
-1.  Z Menu Start otwórz wiersz polecenia programu Visual Studio.
+1.  Z Menu Start otwórz wiersz polecenia programisty dla programu Visual Studio.
 
 2.  Użyj następującego polecenia, aby przypisać identyfikatory zasobów do zlokalizowania zawartości.
 
@@ -177,5 +177,5 @@ Zlokalizowane zawartość jest przechowywana w tylko do zasobów *zestawie satel
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Lokalizowanie aplikacji](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
-- [Wskazówki: Lokalizowanie interfejsów Windows Forms](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+- [Przewodnik: Lokalizowanie interfejsów Windows Forms](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

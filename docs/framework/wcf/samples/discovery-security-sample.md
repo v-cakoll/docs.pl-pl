@@ -2,12 +2,12 @@
 title: Zabezpieczenia odnajdywania — przykład
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9435afa7324ad9e0f2bf994b2f3ed5e54e5e2e7e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129353"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223107"
 ---
 # <a name="discovery-security-sample"></a>Zabezpieczenia odnajdywania — przykład
 Specyfikacja odnajdywania nie jest wymagane, czy punkty końcowe, które uczestniczą w procesie odnajdowania, można zabezpieczyć. Udoskonalanie komunikaty odnajdywania Dzięki zabezpieczeniom zmniejsza różne rodzaje ataków (komunikat zmiany, odmowa usługi, oparte na metodzie powtórzeń, fałszowanie adresów). W tym przykładzie implementuje niestandardowe kanały, które obliczeń i sprawdzanie podpisów komunikat w formacie compact podpisu (opisanej w sekcji 8.2 specyfikacji WS-Discovery). Przykład obsługuje zarówno [specyfikacji odnajdywania 2005](https://go.microsoft.com/fwlink/?LinkId=177912) i [wersji 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -60,7 +60,7 @@ Specyfikacja odnajdywania nie jest wymagane, czy punkty końcowe, które uczestn
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Uruchom skrypt Setup.bat jest z poziomu wiersza polecenia programu Visual Studio. W przykładzie użyto certyfikaty do podpisywania i Sprawdź komunikaty. Skrypt tworzy certyfikaty przy użyciu Makecert.exe, a następnie instaluje je przy użyciu Certmgr.exe. Skrypt musi być uruchamiane z uprawnieniami administratora.  
+1.  Wykonaj skrypt Setup.bat jest z wiersza polecenia dla deweloperów programu Visual Studio. W przykładzie użyto certyfikaty do podpisywania i Sprawdź komunikaty. Skrypt tworzy certyfikaty przy użyciu Makecert.exe, a następnie instaluje je przy użyciu Certmgr.exe. Skrypt musi być uruchamiane z uprawnieniami administratora.  
   
 2.  Aby skompilować i uruchomić przykład, otwórz plik Security.sln w programie Visual Studio, a następnie wybierz **Kompiluj wszystko ponownie**. Aktualizowanie właściwości rozwiązania, aby uruchomić wiele projektów: Wybierz **Start** dla wszystkich projektów, z wyjątkiem DiscoverySecureChannels. Rozwiązania będą działać normalnie.  
   

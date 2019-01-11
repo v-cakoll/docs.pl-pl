@@ -2,12 +2,12 @@
 title: Obsługa tokenów
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: b1fda39903c39811187fe3701d2a4c143b637544
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e71fd48cbed4201e5946ff0aea991b7602131f94
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237704"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223068"
 ---
 # <a name="supporting-tokens"></a>Obsługa tokenów
 Przykładowe tokenów pomocniczych pokazuje, jak dodać dodatkowe tokeny na komunikat, który korzysta z protokołu WS-Security. W przykładzie dodano tokenu zabezpieczeń binarnych X.509, oprócz nazwy użytkownika tokenu zabezpieczającego. Token jest przekazywany w nagłówku wiadomości WS-Security od klienta do usługi i część komunikatu jest podpisany przy użyciu klucza prywatnego skojarzonego z tokenem zabezpieczającym X.509 potwierdzenie posiadania certyfikatu X.509 do odbiorcy. Jest to przydatne w przypadku, gdy istnieje wymóg posiadania wielu oświadczeń skojarzonych z wiadomością uwierzytelniania lub autoryzacji nadawcy. Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".
@@ -441,13 +441,13 @@ iisreset
   
 4.  Skopiuj pliki programu klienta do katalogu klienta na komputerze klienckim. Także skopiować pliki Setup.bat, Cleanup.bat i ImportServiceCert.bat do klienta.  
   
-5.  Na serwerze, uruchom `setup.bat service` w wierszu polecenia programu Visual Studio otwartych z uprawnieniami administratora. Uruchamianie `setup.bat` z `service` argument tworzy certyfikat usługi z w pełni kwalifikowana nazwa domeny komputera i eksportuje certyfikat usługi do pliku o nazwie Service.cer.  
+5.  Na serwerze, uruchom `setup.bat service` w wierszu polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora. Uruchamianie `setup.bat` z `service` argument tworzy certyfikat usługi z w pełni kwalifikowana nazwa domeny komputera i eksportuje certyfikat usługi do pliku o nazwie Service.cer.  
   
 6.  Edytuj plik Web.config, aby odzwierciedlały nową nazwę certyfikatu (w `findValue` atrybutu w [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) który jest taka sama jak w pełni kwalifikowana nazwa domeny komputera.  
   
 7.  Skopiuj plik Service.cer z katalogu usług w katalogu klienta na komputerze klienckim.  
   
-8.  Na komputerze klienckim, należy uruchomić `setup.bat client` w wierszu polecenia programu Visual Studio otwartych z uprawnieniami administratora. Uruchamianie `setup.bat` z `client` argument tworzy certyfikat klienta o nazwie client.com i eksportuje certyfikat klienta do pliku o nazwie Client.cer.  
+8.  Na komputerze klienckim, należy uruchomić `setup.bat client` w wierszu polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora. Uruchamianie `setup.bat` z `client` argument tworzy certyfikat klienta o nazwie client.com i eksportuje certyfikat klienta do pliku o nazwie Client.cer.  
   
 9. W pliku Client.exe.config na komputerze klienckim należy zmienić wartość adresu punktu końcowego, aby dopasować nowy adres usługi. To zrobić, zastępując localhost w pełni kwalifikowana nazwa domeny serwera.  
   

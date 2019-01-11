@@ -2,12 +2,12 @@
 title: Token niestandardowy
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 8aa41a1f9651d0a385836178bc791c14706c17e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6e743be961de2c6d7b09805e6f91d7710efe227e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243052"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223094"
 ---
 # <a name="custom-token"></a>Token niestandardowy
 Niniejszy przykład pokazuje, jak dodać niestandardową implementację tokenu w aplikacji Windows Communication Foundation (WCF). W przykładzie użyto `CreditCardToken` można bezpiecznie przekazać informacje o kartach kredytowych klienta do usługi. Token jest przekazywany w nagłówku wiadomości WS-Security jest podpisany i szyfrowane przy użyciu elementu powiązania zabezpieczeń symetryczne, wraz z treści wiadomości i innych nagłówków wiadomości. Jest to przydatne w przypadkach, gdzie wbudowany tokenów nie są wystarczające. W tym przykładzie pokazano, jak zapewnić tokenu zabezpieczającego niestandardowe z usługą zamiast przy użyciu jednej z wbudowanych tokenów. Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".
@@ -609,7 +609,7 @@ string GetCallerCreditCardNumber()
   
 2.  Skopiuj pliki programu usługi do katalogu usługi na komputerze usługi. Pamiętaj skopiować CreditCardFile.txt; w przeciwnym razie authenticator karta kredytowa nie można zweryfikować informacji o karcie kredytowej wysłanych z klienta. Także skopiować pliki Setup.bat i Cleanup.bat na komputerze usługi.  
   
-3.  Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Możesz je utworzyć za pomocą Setup.bat, jeśli zmienisz `%SERVER_NAME%` zmiennej do w pełni kwalifikowaną nazwę komputera, na którym jest hostowana usługa. Należy pamiętać, że plik Setup.bat jest należy uruchomić polecenie w wierszu polecenia programu Visual Studio, otwartych z uprawnieniami administratora.  
+3.  Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Możesz je utworzyć za pomocą Setup.bat, jeśli zmienisz `%SERVER_NAME%` zmiennej do w pełni kwalifikowaną nazwę komputera, na którym jest hostowana usługa. Należy zauważyć, że plik Setup.bat jest należy uruchomić w wierszu polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora.  
   
 4.  Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople na komputerze klienckim. Należy to zrobić tylko wtedy, gdy certyfikat serwera nie jest wystawiony przez zaufanego wystawcy.  
   

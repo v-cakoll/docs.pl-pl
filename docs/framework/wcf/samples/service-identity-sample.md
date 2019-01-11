@@ -2,12 +2,12 @@
 title: Tożsamość usług — przykład
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 341e4922089634c3e46929d6cdb474b2dfbd0666
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 64adee14c3c0a0ba8071bbaca35b8712280e10b4
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152735"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221963"
 ---
 # <a name="service-identity-sample"></a>Tożsamość usług — przykład
 Ta tożsamość usług — przykład pokazuje, jak ustawić tożsamość usługi. W czasie projektowania klient może pobrać tożsamości przy użyciu metadanych usługi, a następnie w czasie wykonywania klienta można uwierzytelnić tożsamości usługi. Pojęcie tożsamości usługi jest umożliwienie klienta do uwierzytelniania usługi przed wywołaniem dowolnej swojego działania, w tym samym ochrony klienta przed nieuwierzytelnione wywołania. Dla bezpiecznego połączenia usługi jest również uwierzytelniany poświadczeń klienta przed zezwoleniem na jego dostęp, ale nie jest celem tego przykładu. Zobacz przykłady w [klienta](../../../../docs/framework/wcf/samples/client.md) ukazują uwierzytelniania serwera.
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze
 
-1.  Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] lub [!INCLUDE[wv](../../../../includes/wv-md.md)], zaimportuj plik certyfikatu Identity.pfx w folderze rozwiązania tożsamości do magazynu LocalMachine/My certyfikatów (osobistych), za pomocą narzędzia przystawki programu MMC. Ten plik jest chroniony hasłem. Podczas importowania zostanie wyświetlona prośba o podanie hasła. Typ `xyz` w polu hasła. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie certyfikatów za pomocą przystawki programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) tematu. Po zakończeniu tej operacji Uruchom Setup.bat w programie Visual Studio wiersz polecenia z uprawnieniami administratora, który kopiuje ten certyfikat do magazynu osób zaufanych/CurrentUser do użytku na komputerze klienckim.
+1.  Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] lub [!INCLUDE[wv](../../../../includes/wv-md.md)], zaimportuj plik certyfikatu Identity.pfx w folderze rozwiązania tożsamości do magazynu LocalMachine/My certyfikatów (osobistych), za pomocą narzędzia przystawki programu MMC. Ten plik jest chroniony hasłem. Podczas importowania zostanie wyświetlona prośba o podanie hasła. Typ `xyz` w polu hasła. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie certyfikatów za pomocą przystawki programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) tematu. Po zakończeniu tej operacji Uruchom Setup.bat w wierszu polecenia dla deweloperów programu Visual Studio z uprawnieniami administratora, która kopiuje ten certyfikat do magazynu osób zaufanych/CurrentUser do użytku na komputerze klienckim.
 
 2.  Na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], uruchom Setup.bat jest z poziomu folderu instalacji przykładowej wewnątrz programu Visual Studio 2012 wiersz polecenia z uprawnieniami administratora. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.
 
@@ -140,13 +140,13 @@ class CustomIdentityVerifier : IdentityVerifier
   
 5.  Skopiuj pliki programu klienta do katalogu klienta na komputerze klienckim. Także skopiować pliki Setup.bat, Cleanup.bat i ImportServiceCert.bat do klienta.  
   
-6.  W usłudze Uruchom `setup.bat service` w wierszu polecenia programu Visual Studio otwartych z uprawnieniami administratora. Uruchamianie `setup.bat` z `service` argument tworzy certyfikat usługi z w pełni kwalifikowana nazwa domeny komputera i eksportuje certyfikat usługi do pliku o nazwie Service.cer.  
+6.  W usłudze Uruchom `setup.bat service` w wierszu polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora. Uruchamianie `setup.bat` z `service` argument tworzy certyfikat usługi z w pełni kwalifikowana nazwa domeny komputera i eksportuje certyfikat usługi do pliku o nazwie Service.cer.  
   
 7.  Skopiuj plik Service.cer z katalogu usług w katalogu klienta na komputerze klienckim.  
   
 8.  W pliku Client.exe.config na komputerze klienckim należy zmienić wartość adresu punktu końcowego, aby dopasować nowy adres usługi. Istnieje wiele wystąpień, które musi zostać zmienione.  
   
-9. Na komputerze klienckim należy uruchomić ImportServiceCert.bat w wierszu polecenia programu Visual Studio otwartych z uprawnieniami administratora. To importuje certyfikatu usługi z pliku Service.cer, do CurrentUser - TrustedPeople magazynu.  
+9. Na komputerze klienckim uruchom ImportServiceCert.bat w wierszu polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora. To importuje certyfikatu usługi z pliku Service.cer, do CurrentUser - TrustedPeople magazynu.  
   
 10. Na komputerze, usługi uruchom Service.exe w wierszu polecenia.  
   

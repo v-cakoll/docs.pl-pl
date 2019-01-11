@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: c5a8b38e819c323a06faad2edba586cb18d26edc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f6daa696ecd7b91c6d53edaa447f2d64bca0fd7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409081"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221209"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Kompilator licencji)
 Kompilator licencji czyta pliki tekstowe zawierające informacje o licencjonowaniu i tworzy plik binarny, który może zostać osadzony jako zasób w pliku wykonywalnym środowiska uruchomieniowego języka wspólnego.  
@@ -26,7 +26,7 @@ Kompilator licencji czyta pliki tekstowe zawierające informacje o licencjonowan
   
  Krzyżowa kompilacja wersji 32-bitowych i 64-bitowych jest nieobsługiwana, gdy podczas kompilowania projektu jest używany Kompilator licencji. Jest to spowodowane tym, że Kompilator licencji musi ładować zestawy, a ładowanie 64-bitowych zestawów z aplikacji 32-bitowej (i odwrotnie) jest niedozwolone. W takim przypadku należy użyć Kompilatora licencji z wiersza polecenia, aby skompilować licencję ręcznie i określić odpowiednią architekturę.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersz polecenia programisty dla programu Visual Studio (lub wiersza polecenia programu Visual Studio Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -40,44 +40,44 @@ Kompilator licencji czyta pliki tekstowe zawierające informacje o licencjonowan
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/complist:** *filename*|Określa nazwę pliku zawierającego listę licencjonowanych składników, która ma zostać umieszczona w pliku licenses. W odwołaniu do każdego składnika musi być używana jego pełna nazwa, a w wierszu może znajdować się tylko jeden składnik.<br /><br /> Użytkownicy wiersza polecenia mogą określić osobny plik dla każdego formularza w projekcie. Program LC.exe akceptuje wiele plików wejściowych i tworzy jeden plik licenses.|  
-|**/h**[**elp**]|Wyświetla składnię polecenia i opcje narzędzia.|  
-|**i:** *modułu*|Określa modułów zawierających składniki na liście **/complist** pliku. Aby określić więcej niż jeden moduł, użyj wielu **/i** flagi.|  
+|**/complist:** *nazwy pliku*|Określa nazwę pliku zawierającego listę licencjonowanych składników, która ma zostać umieszczona w pliku licenses. W odwołaniu do każdego składnika musi być używana jego pełna nazwa, a w wierszu może znajdować się tylko jeden składnik.<br /><br /> Użytkownicy wiersza polecenia mogą określić osobny plik dla każdego formularza w projekcie. Program LC.exe akceptuje wiele plików wejściowych i tworzy jeden plik licenses.|  
+|**/ h**[**elp**]|Wyświetla składnię polecenia i opcje narzędzia.|  
+|**i:** *modułu*|Określa moduły, które zawierają składniki wymienione w **/complist** pliku. Aby określić więcej niż jeden moduł, używanych jest wiele **/i** flag.|  
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
-|**firmy:** *ścieżki*|Określa katalog, w którym ma zostać umieszczony wyjściowy plik licenses.|  
+|**do pliku klucza:** *ścieżki*|Określa katalog, w którym ma zostać umieszczony wyjściowy plik licenses.|  
 |**/ target:** *targetPE*|Określa plik wykonywalny, dla którego jest generowany plik licenses.|  
 |**/v**|Określa tryb pełny; wyświetla informacje o postępie kompilacji.|  
-|**@** *Plik*|Określa plik odpowiedzi (.rsp —).|  
+|**@** *Plik*|Określa plik odpowiedzi (rsp).|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="example"></a>Przykład  
   
-1.  Jeśli używasz licencjonowanego formantu `MyCompany.Samples.LicControl1` zawartych w `Samples.DLL` w aplikacji o nazwie `HostApp.exe` *,* można utworzyć `HostAppLic.txt` zawiera następujące.  
+1.  Jeśli używasz licencjonowany formant `MyCompany.Samples.LicControl1` zawarte w `Samples.DLL` w aplikacji o nazwie `HostApp.exe` *,* można utworzyć `HostAppLic.txt` zawiera następujące czynności.  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  Utwórz .licenses — plik o nazwie `HostApp.exe.licenses` przy użyciu następującego polecenia.  
+2.  Utwórz plik licenses o nazwie `HostApp.exe.licenses` przy użyciu następującego polecenia.  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  Tworzenie `HostApp.exe` tym .licenses — plik jako zasób. W przypadku kompilowania aplikacji w języku C# należy użyć następującego polecenia, aby skompilować aplikację.  
+3.  Tworzenie `HostApp.exe` dołączając plik licenses jako zasób. W przypadku kompilowania aplikacji w języku C# należy użyć następującego polecenia, aby skompilować aplikację.  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
     ```  
   
- Następujące polecenie kompiluje `myApp.licenses` z list licencjonowane składniki określony przez `hostapplic.txt`, `hostapplic2.txt` i `hostapplic3.txt`. `modulesList` Argument określa modułów zawierających składniki licencjonowane.  
+ Następujące polecenie kompiluje `myApp.licenses` z list licencjonowanych składników `hostapplic.txt`, `hostapplic2.txt` i `hostapplic3.txt`. `modulesList` Argument określa moduły zawierające licencjonowane składniki.  
   
 ```  
 lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
 ```  
   
-## <a name="response-file-example"></a>Przykładowy plik odpowiedzi  
- Poniżej przedstawiono przykładowy plik odpowiedzi `response.rsp`. Aby uzyskać więcej informacji na pliki odpowiedzi, zobacz [pliki odpowiedzi](/visualstudio/msbuild/msbuild-response-files).  
+## <a name="response-file-example"></a>Przykład pliku odpowiedzi  
+ Poniżej przedstawiono przykładowy plik odpowiedzi, `response.rsp`. Aby uzyskać więcej informacji na temat plików odpowiedzi, zobacz [pliki odpowiedzi](/visualstudio/msbuild/msbuild-response-files).  
   
 ```  
 /target:hostapp.exe  

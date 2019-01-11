@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 806ccb1d33d9a7b66c740099864decd651c9213f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f1dac8aec7f565b82797ba179fc01968e00bf36b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144887"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223081"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Narzędzie Global Assembly Cache)
 Narzędzie globalnej pamięci podręcznej zestawów umożliwia wyświetlenie zawartości globalnej pamięci podręcznej zestawów i wykonywanie na niej operacji oraz pobieranie pamięci podręcznej.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersz polecenia programisty dla programu Visual Studio (lub wiersza polecenia programu Visual Studio Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -55,7 +55,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/i** *Ścieżkazestawu*|Instaluje zestaw w globalnej pamięci podręcznej zestawów.|  
 |**/IF***Ścieżkazestawu*|Instaluje zestaw w globalnej pamięci podręcznej zestawów. Jeśli zestaw o tej samej nazwie już istnieje w globalnej pamięci podręcznej zestawów, narzędzie zastępuje go.<br /><br /> Użycie tej opcji jest równoznaczne z użyciem **/i** i **/f** opcje razem.|  
 |**/il** *Pliklistyzestawów*|Instaluje jeden lub więcej zestawów, do których określony w *Pliklistyzestawów* w globalnej pamięci podręcznej.|  
-|**/IR***Ścieżkazestawu* <br /><br /> *Schemat*<br /><br /> *id*<br /><br /> *Opis elementu*|Instaluje zestaw w globalnej pamięci podręcznej zestawów i dodaje odwołanie, aby zliczyć zestaw. Należy określić *Ścieżkazestawu*, *schemat*, *identyfikator*, i *opis* parametrów przy użyciu tej opcji. Aby uzyskać opis prawidłowe wartości dla tych parametrów można określić, zobacz **/r** opcji.<br /><br /> Użycie tej opcji jest równoznaczne z użyciem **/i** i **/r** opcje razem.|  
+|**/IR***Ścieżkazestawu*<br /><br /> *Schemat*<br /><br /> *id*<br /><br /> *Opis elementu*|Instaluje zestaw w globalnej pamięci podręcznej zestawów i dodaje odwołanie, aby zliczyć zestaw. Należy określić *Ścieżkazestawu*, *schemat*, *identyfikator*, i *opis* parametrów przy użyciu tej opcji. Aby uzyskać opis prawidłowe wartości dla tych parametrów można określić, zobacz **/r** opcji.<br /><br /> Użycie tej opcji jest równoznaczne z użyciem **/i** i **/r** opcje razem.|  
 |**/l** [*assemblyName*]|Wyświetla zawartość globalnej pamięci podręcznej zestawów. Jeśli określisz *assemblyName* parametru, narzędzie wyświetli tylko zestawy pasujące do danej nazwy.|  
 |**/Ldl**|Wyświetla zawartość pamięci podręcznej pobranych plików.|  
 |**/LR** [*assemblyName*]|Wyświetla listę wszystkich zestawów i liczbę odwołań do nich. Jeśli określisz *assemblyName* parametr, narzędzie wyświetli tylko zestawy pasujące do nazwy i ich odpowiadające im liczby odwołań.|  

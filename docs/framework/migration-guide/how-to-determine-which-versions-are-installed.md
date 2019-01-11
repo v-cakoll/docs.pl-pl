@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 890ce1e9a23d57121cd714252444e5ff1caa6b19
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: d1a0ee772618b89d3b8cf6efc9400e3dcf4804da
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396880"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223185"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Instrukcje: Określanie, które wersje programu .NET Framework są zainstalowane.
 
@@ -197,7 +197,7 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
 
 - Użyj narzędzia wersji środowiska CLR (Clrver.exe) w celu ustalenia, które wersje środowiska uruchomieniowego języka wspólnego są zainstalowane na komputerze.
 
-     Z wiersza polecenia Visual Studio, wprowadź `clrver`. To polecenie tworzy dane wyjściowe podobne do poniższych:
+     Wprowadź w wierszu polecenia dla deweloperów programu Visual Studio, `clrver`. To polecenie tworzy dane wyjściowe podobne do poniższych:
 
     ```
     Versions installed on the machine:

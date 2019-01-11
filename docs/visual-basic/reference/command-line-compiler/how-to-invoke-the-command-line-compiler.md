@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wywoływanie kompilatora wiersza polecenia (Visual Basic)'
+title: 'Instrukcje: Wywoływanie kompilatora wiersza polecenia (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 0b835bb5654574a5aa6f32eede1e942b11e7dcb0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d2d193f8c3d483ff87fe719919982e8c3473ec0b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932157"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221846"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Porady: wywoływanie kompilatora wiersza polecenia (Visual Basic)
-Można wywołać kompilatora wiersza polecenia, wpisując nazwę jego pliku wykonywalnego do wiersza polecenia, znany także jako wiersz systemu MS-DOS. Jeśli kompilujesz w wierszu polecenia Windows domyślnej, należy wpisać w pełni kwalifikowana ścieżka do pliku wykonywalnego. Aby zastąpić to zachowanie domyślne, można użyć wiersza polecenia programu Visual Studio lub zmodyfikować zmiennej środowiskowej PATH. Obie umożliwiają kompilowanie z dowolnego katalogu, po prostu wpisując nazwę kompilatora.  
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Instrukcje: Wywoływanie kompilatora wiersza polecenia (Visual Basic)
+Można wywołać kompilatora wiersza polecenia, wpisując nazwę jego pliku wykonywalnego do wiersza polecenia, znany także jako wiersz systemu MS-DOS. Jeśli kompilujesz w wierszu polecenia Windows domyślnej, należy wpisać w pełni kwalifikowana ścieżka do pliku wykonywalnego. Aby zastąpić to zachowanie domyślne, można użyć wiersza polecenia dewelopera dla programu Visual Studio lub zmodyfikować zmiennej środowiskowej PATH. Obie umożliwiają kompilowanie z dowolnego katalogu, po prostu wpisując nazwę kompilatora.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-invoke-the-compiler-using-the-visual-studio-command-prompt"></a>Aby wywołać kompilatora przy użyciu wiersza polecenia programu Visual Studio  
+### <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Aby wywołać kompilatora przy użyciu wiersza polecenia dla deweloperów programu Visual Studio  
   
 1.  Otwórz folder programu Visual Studio Tools w obrębie grupy programu Microsoft Visual Studio.  
   
-2.  Visual Studio Command Prompt służy do dostępu kompilator z dowolnego katalogu na komputerze, jeśli jest zainstalowany program Visual Studio.  
+2.  Jeśli zainstalowano program Visual Studio, można użyć wiersza polecenia dewelopera dla programu Visual Studio dostęp do kompilatora z dowolnego katalogu na komputerze.  
   
-3.  Wywołaj wiersz polecenia programu Visual Studio.  
+3.  Wywołaj wiersz polecenia programisty dla programu Visual Studio.  
   
 4.  W wierszu polecenia wpisz polecenie `vbc.exe` *sourceFileName* i naciśnij klawisz ENTER.  
   

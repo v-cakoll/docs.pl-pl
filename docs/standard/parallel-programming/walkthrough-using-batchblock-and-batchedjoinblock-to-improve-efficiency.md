@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: Poprawa wydajności z wykorzystaniem klas BatchBlock i BatchedJoinBlock'
+title: 'Przewodnik: Poprawa wydajności przy użyciu klas BatchBlock i BatchedJoinBlock'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb3f50459eeafcbb9f4882e56fb08b2001a35fb3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0367b4224b49377d8d17045e044976e1c511a8ed
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042374"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222109"
 ---
-# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Wskazówki: Poprawa wydajności z wykorzystaniem klas BatchBlock i BatchedJoinBlock
+# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Przewodnik: Poprawa wydajności przy użyciu klas BatchBlock i BatchedJoinBlock
 Biblioteka przepływu danych TPL zapewnia <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> klasy tak, że może odbierać i buforować dane z jednego lub kilku źródeł i następnie rozpropagować te buforowane dane jako jedną kolekcję. Ten mechanizm łączenia we wsady jest przydatny, podczas zbierania danych z co najmniej jednego źródła, a następnie przetwarzania wielu elementów danych jako zadania wsadowego. Na przykład rozważmy aplikację, która używa przepływu danych do wstawiania rekordów do bazy danych. Ta operacja może być bardziej skuteczna, jeśli wiele elementów jest wstawianych jednocześnie zamiast pojedynczo po kolei. W tym dokumencie opisano, jak używać <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> operacje wstawiania klasy, aby zwiększyć wydajność takiej bazy danych. Opisano również sposób użycia <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> klasa do przechwytywania zarówno wyników jak i wyjątków, które występują, gdy program czyta z bazy danych.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -30,7 +30,7 @@ Biblioteka przepływu danych TPL zapewnia <xref:System.Threading.Tasks.Dataflow.
 2.  Upewnij się, że masz kopię bazy danych Northwind, Northwind.sdf, dostępną na komputerze. Ten plik znajduje się w folderze % Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
   
     > [!IMPORTANT]
-    >  W niektórych wersjach systemu Windows możesz nie może połączyć się z Northwind.sdf, jeśli program Visual Studio jest uruchomiony w trybie administratora. Aby połączyć się z Northwind.sdf, uruchom Visual Studio lub wiersza polecenia programu Visual Studio w **Uruchom jako administrator** trybu.  
+    >  W niektórych wersjach systemu Windows możesz nie może połączyć się z Northwind.sdf, jeśli program Visual Studio jest uruchomiony w trybie administratora. Aby połączyć się z Northwind.sdf, uruchom Visual Studio lub wiersz polecenia dla deweloperów dla programu Visual Studio w **Uruchom jako administrator** trybu.  
   
  Ten przewodnik zawiera następujące sekcje:  
   

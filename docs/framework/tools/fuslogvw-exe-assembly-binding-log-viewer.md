@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73fa08f92a4572a501be65f05e8141c349cc003e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17e8e00afd759a3408ca54930c15d0b8797ff947
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400214"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222340"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Podgląd dziennika powiązań zasobów)
-Podgląd dziennika powiązań zestawów wyświetla szczegóły dotyczące powiązań zestawu. Te informacje pomagają zdiagnozować, dlaczego .NET Framework nie może zlokalizować zestawu w czasie wykonywania. Te błędy są zazwyczaj wynikiem wdrożenia zestawu w nieprawidłowej lokalizacji, obrazu macierzystego, który przestał być prawidłowy lub niezgodności numerów wersji lub kultur. Środowisko uruchomieniowe języka wspólnego firmy błędu można znaleźć zestawu zwykle jest wyświetlany jako <xref:System.TypeLoadException> w aplikacji.  
+Podgląd dziennika powiązań zestawów wyświetla szczegóły dotyczące powiązań zestawu. Te informacje pomagają zdiagnozować, dlaczego .NET Framework nie może zlokalizować zestawu w czasie wykonywania. Te błędy są zazwyczaj wynikiem wdrożenia zestawu w nieprawidłowej lokalizacji, obrazu macierzystego, który przestał być prawidłowy lub niezgodności numerów wersji lub kultur. Błąd wykonywalnych języka wspólnego do zlokalizowania zestawu zwykle pojawia się jako <xref:System.TypeLoadException> w aplikacji.  
   
 > [!IMPORTANT]
 >  Program fuslogvw.exe musi być uruchomione z uprawnieniami administratora.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersz polecenia dewelopera (lub wiersz polecenia programu Visual Studio w systemie Windows 7) z poświadczeniami administratora. Aby uzyskać więcej informacji, zobacz [wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersz polecenia programisty dla programu Visual Studio (lub wiersza polecenia programu Visual Studio Windows 7) przy użyciu poświadczeń administratora. Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -38,7 +38,7 @@ fuslogvw
   
 1.  Wybierz **domyślne** przycisk opcji, aby wyświetlić błędy powiązania dla wszystkich typów aplikacji. Domyślnie wpisy dziennika są przechowywane na dysku w katalogach użytkowników, w pamięci podręcznej wininet.  
   
-2.  Wybierz **niestandardowych** przycisk opcji, aby wyświetlić błędy bind w katalogu niestandardowego, który określisz. Należy określić niestandardowe lokalizację środowiska uruchomieniowego do przechowywania dzienników ustawiając lokalizacja dziennika niestandardowego w **ustawienia dziennika** okna dialogowego, aby prawidłową nazwą folderu. Ten katalog powinien być pusty i zawierać tylko pliki, które generuje środowisko uruchomieniowe. Jeśli zawiera plik wykonywalny, który generuje błąd, który ma zostać zapisany, błąd nie zostanie zapisany, ponieważ narzędzie spróbuje utworzyć katalog o takiej samej nazwie jak plik wykonywalny. Ponadto próba uruchomienia pliku wykonywalnego z lokalizacji dziennika nie powiedzie się.  
+2.  Wybierz **niestandardowe** przycisk opcji, aby wyświetlić błędy powiązania w określonym niestandardowym katalogu, który określisz. Należy określić niestandardową lokalizację, w której chcesz środowiska uruchomieniowego do przechowywania dzienników, ustawiając niestandardową lokalizację dziennika w **ustawienia dziennika** okno dialogowe prawidłowej nazwy katalogu. Ten katalog powinien być pusty i zawierać tylko pliki, które generuje środowisko uruchomieniowe. Jeśli zawiera plik wykonywalny, który generuje błąd, który ma zostać zapisany, błąd nie zostanie zapisany, ponieważ narzędzie spróbuje utworzyć katalog o takiej samej nazwie jak plik wykonywalny. Ponadto próba uruchomienia pliku wykonywalnego z lokalizacji dziennika nie powiedzie się.  
   
     > [!NOTE]
     >  Domyślna lokalizacja powiązania jest preferowana nad niestandardową lokalizacją powiązania. Środowisko uruchomieniowe przechowuje w pamięci podręcznej wininet domyślną lokalizację powiązania i dlatego czyści ją automatycznie. Jeśli określisz niestandardową lokalizację powiązania, jesteś także odpowiedzialny za jej czyszczenie.  
@@ -47,7 +47,7 @@ fuslogvw
   
 1.  Wybierz nazwę aplikacji dla żądnego wpisu w przeglądarce.  
   
-2.  Kliknij przycisk **znajdują się w dzienniku** przycisku. Można także kliknąć dwukrotnie wybrany wpis.  
+2.  Kliknij przycisk **Wyświetl dziennik** przycisku. Można także kliknąć dwukrotnie wybrany wpis.  
   
      W narzędziu są wyświetlane następujące szczegółowe informacje o błędzie wybranego powiązania:  
   
@@ -59,7 +59,7 @@ fuslogvw
   
     -   Opis dowolnych zastosowanych polityk wersji Aplikacji, Wydawcy lub Administratora.  
   
-    -   Czy zestaw został znaleziony w [Globalna pamięć podręczna zestawów](../../../docs/framework/app-domains/gac.md).  
+    -   Czy zestaw został znaleziony w [globalnej pamięci podręcznej](../../../docs/framework/app-domains/gac.md).  
   
     -   Lista wszystkich badających adresów URL.  
   
@@ -105,7 +105,7 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Aby usunąć wszystkie wpisy z dziennika  
   
--   Kliknij przycisk **usunąć wszystkie** przycisku.  
+-   Kliknij przycisk **Usuń wszystkie** przycisku.  
   
 ### <a name="to-refresh-the-user-interface"></a>Aby odświeżyć interfejs użytkownika  
   
@@ -120,11 +120,11 @@ LOG: All probing URLs attempted and failed.
 -   Kliknij przycisk **o** przycisku.  
   
 ## <a name="binding-logs-for-native-images"></a>Dzienniki powiązań dla obrazów macierzystych  
- Domyślnie Fuslogvw.exe rejestruje normalne żądania powiązania zestawów. Alternatywnie można rejestrować wiązania zestawu dla obrazów natywnych, które zostały utworzone przy użyciu [Ngen.exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Domyślnie Fuslogvw.exe rejestruje normalne żądania powiązania zestawów. Alternatywnie można rejestrować powiązania zestawów dla obrazów macierzystych, które zostały utworzone przy użyciu [Ngen.exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
 #### <a name="to-log-assembly-binds-for-native-images"></a>Aby rejestrować powiązania zestawów dla obrazów macierzystych  
   
--   W **kategorie dziennika** grupy wybierz **obrazów macierzystych** przycisk opcji.  
+-   W **kategorie dziennika** grupy, wybierz opcję **obrazy natywne** przycisku opcji.  
   
  Następujący dziennik pokazuje błąd spowodowany przez zależność, która nie istniała, kiedy obraz macierzysty został utworzony dla aplikacji. Jeżeli zależności w czasie wykonywania różnią się od zależności po uruchomieniu Ngen.exe, powiązanie z obrazem macierzystym jest niedozwolone.  
   
@@ -181,49 +181,49 @@ Discarding native image.
 ```  
   
 ## <a name="the-log-settings-dialog"></a>Okno dialogowe Ustawienia dziennika  
- Można użyć **ustawienia dziennika** okna dialogowego, aby wykonać następujące czynności.  
+ Możesz użyć **ustawienia dziennika** okno dialogowe, aby wykonać następujące czynności.  
   
 #### <a name="to-disable-logging"></a>Aby wyłączyć rejestrowanie  
   
--   Wybierz **dziennika wyłączone** przycisk opcji.  Należy zauważyć, że ta opcja jest domyślnie zaznaczona.  
+-   Wybierz **dziennika wyłączone** przycisku opcji.  Należy zauważyć, że ta opcja jest domyślnie zaznaczona.  
   
 #### <a name="to-log-assembly-binds-in-exceptions"></a>Aby rejestrować powiązania zestawu w wyjątkach  
   
--   Wybierz **Zaloguj tekst wyjątku** przycisk opcji. Tylko najmniej szczegółowe informacje dziennika łączenia są rejestrowane w tekście wyjątku. Aby wyświetlić pełne informacje, użyj jednego z innych ustawień.  
+-   Wybierz **Rejestruj w tekście wyjątku** przycisku opcji. Tylko najmniej szczegółowe informacje dziennika łączenia są rejestrowane w tekście wyjątku. Aby wyświetlić pełne informacje, użyj jednego z innych ustawień.  
   
      Zobacz Ważne informacje dotyczące zestawów, które są ładowane, jako niezależne od domeny.  
   
 #### <a name="to-log-assembly-bind-failures"></a>Aby rejestrować błędy powiązania zestawów  
   
--   Wybierz **dziennika błędów bind dysku** przycisk opcji.  
+-   Wybierz **błędy powiązania dziennika na dysku** przycisku opcji.  
   
      Zobacz Ważne informacje dotyczące zestawów, które są ładowane, jako niezależne od domeny.  
   
 #### <a name="to-log-all-assembly-binds"></a>Aby rejestrować wszystkie powiązania zestawów  
   
--   Wybierz **logowania wszystkie powiązania przy użyciu dysku** przycisk opcji.  
+-   Wybierz **Zaloguj się na dysku wszystkie powiązania** przycisku opcji.  
   
      Zobacz Ważne informacje dotyczące zestawów, które są ładowane, jako niezależne od domeny.  
   
 > [!IMPORTANT]
->  Jeśli zestaw jest ładowany jako domena neutralne, na przykład przez ustawienie <xref:System.AppDomainSetup.LoaderOptimization%2A> właściwości <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> lub <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, włączanie rejestrowania może wyciek pamięci w niektórych przypadkach. Może się to zdarzyć, jeśli wpis dziennika jest dodawany, gdy moduł niezależny od domeny jest ładowany do domeny aplikacji, a później domena aplikacji jest zwalniana. Wpis dziennika nie może być zwolniony do czasu zakończenia procesu. Niektóre debugery włączają rejestrowanie automatycznie.  
+>  Kiedy zestaw jest ładowany jako niezależny od domeny, na przykład przez ustawienie <xref:System.AppDomainSetup.LoaderOptimization%2A> właściwości <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> lub <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, włączenie rejestrowania może przecieki pamięci, w niektórych przypadkach. Może się to zdarzyć, jeśli wpis dziennika jest dodawany, gdy moduł niezależny od domeny jest ładowany do domeny aplikacji, a później domena aplikacji jest zwalniana. Wpis dziennika nie może być zwolniony do czasu zakończenia procesu. Niektóre debugery włączają rejestrowanie automatycznie.  
   
 #### <a name="to-enable-a-custom-log-path"></a>Aby włączyć niestandardową ścieżkę dziennika  
   
-1.  Wybierz **Włącz dziennik niestandardowy ścieżki** przycisk opcji.  
+1.  Wybierz **włącz niestandardową ścieżkę dziennika** przycisku opcji.  
   
-2.  Wprowadź ścieżkę do **ścieżki dziennika niestandardowego** pola tekstowego.  
+2.  Wprowadź ścieżkę do **niestandardowa ścieżka dziennika** pola tekstowego.  
   
 > [!NOTE]
->  [Podgląd dziennika powiązań zestawów (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) używa pamięci podręcznej programu Internet Explorer (IE) do przechowywania dziennika powiązania. Z powodu sporadycznych uszkodzenia w pamięci podręcznej programu Internet Explorer [Podgląd dziennika powiązań zestawów (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) można czasami przestanie być wyświetlana nowe dzienniki powiązania w oknie Przeglądanie. W wyniku tego uszkodzenia infrastruktura powiązań .NET (fusion) nie może zapisywać w dzienniku powiązań ani z niego odczytywać. (Ten problem nie wystąpi, jeśli używana jest niestandardowa ścieżka dziennika).  Aby naprawić uszkodzenie i umożliwić programowi fusion ponowne wyświetlanie dzienników powiązań, należy wyczyścić pamięć podręczną programu IE poprzez usunięcie tymczasowych plików internetowych w oknie Opcji internetowych programu IE.  
+>  [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) używa pamięci podręcznej programu Internet Explorer (IE), aby przechowywać swój dziennik powiązań. Z powodu okazjonalnego uszkodzenia w pamięci podręcznej programu IE [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) może czasami przestać pokazywać nowe dzienniki powiązań w oknie przeglądania. W wyniku tego uszkodzenia infrastruktura powiązań .NET (fusion) nie może zapisywać w dzienniku powiązań ani z niego odczytywać. (Ten problem nie wystąpi, jeśli używana jest niestandardowa ścieżka dziennika).  Aby naprawić uszkodzenie i umożliwić programowi fusion ponowne wyświetlanie dzienników powiązań, należy wyczyścić pamięć podręczną programu IE poprzez usunięcie tymczasowych plików internetowych w oknie Opcji internetowych programu IE.  
 >   
->  Jeśli niezarządzanych aplikacji obsługuje środowisko uruchomieniowe języka wspólnego zaimplementowanie `IHostAssemblyManager` i `IHostAssemblyStore` interfejsów, wpisy dziennika nie mogą być przechowywane w pamięci podręcznej wininet.  Aby wyświetlić wpisy dziennika dla hostów niestandardowych, które implementują te interfejsy, należy określić alternatywną ścieżkę dziennika.  
+>  Jeśli Niezarządzana aplikacja hostuje środowisko uruchomieniowe języka wspólnego poprzez implementację `IHostAssemblyManager` i `IHostAssemblyStore` interfejsów, wpisy dziennika nie mogą być przechowywane w pamięci podręcznej wininet.  Aby wyświetlić wpisy dziennika dla hostów niestandardowych, które implementują te interfejsy, należy określić alternatywną ścieżkę dziennika.  
   
 #### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Aby włączyć rejestrowanie dla aplikacji działających w kontenerze aplikacji systemu Windows  
   
 1.  Należy włączyć niestandardową ścieżkę dziennika, jak opisano w poprzedniej procedurze. Domyślnie aplikacje, które są uruchomione w kontenerze aplikacji systemu Windows mają ograniczony dostęp do dysku twardego. Katalog, który zostanie określony, będzie miał dostęp do odczytu i zapisu dla wszystkich aplikacji z kontenera aplikacji.  
   
-2.  Wybierz **włączyć rejestrowanie bez ramek** pole wyboru.  
+2.  Wybierz **Włącz imersywne rejestrowanie** pole wyboru.  
   
     > [!NOTE]
     >  To pole jest włączone tylko w systemie Windows 8 lub nowszym.  

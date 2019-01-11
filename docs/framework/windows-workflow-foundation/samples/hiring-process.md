@@ -2,12 +2,12 @@
 title: Proces zatrudniania
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520641"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223224"
 ---
 # <a name="hiring-process"></a>Proces zatrudniania
 Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyciu działań dotyczących komunikatów i dwa przepływy pracy hostowany jako usług przepływu pracy. Te przepływy pracy są częścią infrastruktury IT w fikcyjnej firmy o nazwie Contoso, Inc.  
@@ -131,13 +131,13 @@ Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyci
 ## <a name="data-storage"></a>Magazyn danych  
  Dane są przechowywane w bazie danych programu SQL Server o nazwie `ContosoHR` (skryptu do tworzenia tej bazy danych znajduje się w `DbSetup` folder). Wystąpienia przepływu pracy są przechowywane w bazie danych programu SQL Server o nazwie `InstanceStore` (skrypty służące do tworzenia magazyn wystąpienia są częścią [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] dystrybucji).  
   
- Obu bazach danych są tworzone przez uruchomienie skryptu plik Setup.cmd w wierszu polecenia programu Visual Studio.  
+ Obu bazach danych są tworzone przez uruchomienie skryptu plik Setup.cmd z wiersza polecenia dla deweloperów programu Visual Studio.  
   
 ## <a name="running-the-sample"></a>Działa aplikacja przykładowa  
   
 #### <a name="to-create-the-databases"></a>Do tworzenia baz danych  
   
-1.  Otwórz wiersz polecenia programu Visual Studio.  
+1.  Otwórz wiersz polecenia dla deweloperów programu Visual Studio.  
   
 2.  Przejdź do folderu przykładu.  
   

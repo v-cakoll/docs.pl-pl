@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 463e31ff286b0022ac55f4f9f8e2a4478cceadc9
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 7f086c5b6bf1d45f3f711112c618e2398c3a39ed
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49400479"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222171"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generator obrazu natywnego)
 Generator obrazów natywnych (Ngen.exe) jest narzędziem, które poprawia wydajność zarządzanych aplikacji. Program Ngen.exe tworzy obrazy natywne, które są plikami zawierającymi skompilowany kod maszynowy specyficzny dla procesora, i instaluje je w pamięci podręcznej obrazów natywnych na komputerze lokalnym. Środowisko uruchomieniowe może używać obrazów natywnych z tej pamięci podręcznej, zamiast używać kompilatora JIT (Just-In-Time) w celu skompilowania oryginalnego zestawu.  
@@ -55,7 +55,7 @@ Generator obrazów natywnych (Ngen.exe) jest narzędziem, które poprawia wydajn
 > [!NOTE]
 >  Składnia ngen.exe w wersjach 1.0 i 1.1 programu .NET Framework można znaleźć w [Native Image Generator (Ngen.exe) Legacy Syntax](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersz polecenia programisty dla programu Visual Studio (lub wiersza polecenia programu Visual Studio Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -75,7 +75,7 @@ ngen /? | /help
 |Akcja|Opis|  
 |------------|-----------------|  
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Generuje obrazy natywne dla zestawu i jego zależności, a także instaluje obrazy w pamięci podręcznej obrazów natywnych.<br /><br /> Jeśli `/queue` jest określona, akcja jest kolejkowana dla usługi obrazów natywnych. Domyślnym priorytetem jest 3. Zobacz [poziomy priorytetów](#PriorityTable) tabeli.|  
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Usuwa obrazy natywne zestawu i jego zależności z pamięci podręcznej obrazów natywnych.<br /><br /> Aby odinstalować pojedynczy obraz i jego zależności, należy użyć tych samych argumentów wiersza polecenia, które zostały użyte podczas instalacji obrazu. **Uwaga:** począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Akcja `uninstall` * nie jest już obsługiwana.|  
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Usuwa obrazy natywne zestawu i jego zależności z pamięci podręcznej obrazów natywnych.<br /><br /> Aby odinstalować pojedynczy obraz i jego zależności, należy użyć tych samych argumentów wiersza polecenia, które zostały użyte podczas instalacji obrazu. **Uwaga:**  Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Akcja `uninstall` * nie jest już obsługiwana.|  
 |`update` [`/queue`]|Aktualizuje obrazy natywne, które stały się nieprawidłowe.<br /><br /> Jeśli `/queue` jest określony, aktualizacje są kolejkowane dla usługi obrazów natywnych. Aktualizacje są zawsze planowane z priorytetem 3, więc są uruchamiane, gdy komputer znajduje się w stanie bezczynności.|  
 |`display` [`assemblyName` &#124; `assemblyPath`]|Wyświetla stan obrazów natywnych dla zestawu i jego zależności.<br /><br /> Jeśli nie zostaną dostarczone argumenty, będą wyświetlane wszystkie dane z pamięci podręcznej obrazów natywnych.|  
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> —lub—<br /><br /> `eqi` [1&#124;2&#124;3]|Wykonuje umieszczone w kolejce zadania kompilacji.<br /><br /> Jeśli określono priorytet, wykonywane są zadania kompilacji z większym lub równym priorytetem. Jeśli nie określono priorytetu, wykonywane są wszystkie skolejkowane zadania kompilacji.|  
@@ -86,7 +86,7 @@ ngen /? | /help
   
 |Argument|Opis|  
 |--------------|-----------------|  
-|`assemblyName`|Pełna nazwa wyświetlana zestawu. Na przykład `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Uwaga:** można podać częściową nazwę zestawu, taką jak `myAssembly`, aby uzyskać `display` i `uninstall` akcji. <br /><br /> W jednym wierszu polecenia programu Ngen.exe można określić tylko jeden zestaw.|  
+|`assemblyName`|Pełna nazwa wyświetlana zestawu. Na przykład `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Uwaga:**  Można podać częściową nazwę zestawu, taką jak `myAssembly`, aby uzyskać `display` i `uninstall` akcji. <br /><br /> W jednym wierszu polecenia programu Ngen.exe można określić tylko jeden zestaw.|  
 |`assemblyPath`|Jawna ścieżka zestawu. Można określić pełną lub względną ścieżkę.<br /><br /> Jeśli użytkownik określi nazwę pliku bez ścieżki, zestaw musi znajdować się w bieżącym katalogu.<br /><br /> W jednym wierszu polecenia programu Ngen.exe można określić tylko jeden zestaw.|  
   
 <a name="PriorityTable"></a>   
@@ -122,7 +122,7 @@ ngen /? | /help
 |------------|-----------------|  
 |`/nologo`|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |`/silent`|Pomija wyświetlanie komunikatów o sukcesie.|  
-|`/verbose`|Wyświetla szczegółowe informacje na potrzeby debugowania. **Uwaga:** ze względu na ograniczenia systemu operacyjnego, ta opcja nie powoduje wyświetlenie tylu dodatkowych informacji w systemach Windows 98 i Windows Millennium Edition.|  
+|`/verbose`|Wyświetla szczegółowe informacje na potrzeby debugowania. **Uwaga:**  Ze względu na ograniczenia systemu operacyjnego ta opcja nie wyświetla tak wielu dodatkowych informacji w systemach Windows 98 i Windows Millennium Edition.|  
 |`/help`, `/?`|Wyświetla składnię polecenia i opcje dla aktualnego wydania.|  
   
 ## <a name="remarks"></a>Uwagi  

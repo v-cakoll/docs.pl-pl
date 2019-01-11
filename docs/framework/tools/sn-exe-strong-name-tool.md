@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 213c27a4ddfa6134c4aaa8a76c71309a6496998d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 127a059865250642c604288b0296b4152cf91f52
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151139"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221651"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Narzędzie silnych nazw)
 Narzędzie silnych nazw (Sn.exe) pomaga podpisywać zestawy za pomocą [silnych nazw](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe dostarcza opcje do zarządzania kluczami, generowania podpisów i ich weryfikacji.  
@@ -30,7 +30,7 @@ Narzędzie silnych nazw (Sn.exe) pomaga podpisywać zestawy za pomocą [silnych 
  Narzędzie silnych nazw jest automatycznie instalowane z Visual Studio. Aby uruchomić to narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio Windows 7). Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
 
 > [!NOTE]
->  Na komputerach 64-bitowych należy uruchomić przy użyciu wiersza polecenia programu Visual Studio i 64-bitowej wersji przy użyciu wiersza polecenia Win64 programu Visual Studio x64 32-bitowej wersji programu Sn.exe. 
+>  Na komputerach 64-bitowych należy uruchomić przy użyciu wiersza polecenia dewelopera dla programu Visual Studio i 64-bitowej wersji przy użyciu wiersza polecenia Win64 programu Visual Studio x64 32-bitowej wersji programu Sn.exe. 
   
  W wierszu polecenia wpisz następujące polecenie:  
   

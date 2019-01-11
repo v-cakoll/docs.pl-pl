@@ -3,17 +3,17 @@ title: Platforma kompilatora .NET (interfejsy API Roslyn) SDK
 description: Dowiedz się, za pomocą SDK platformy kompilatora .NET (nazywane również interfejsy API Roslyn) zrozumieć kod platformy .NET, wykrywać błędy i Rozwiąż te błędy.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 4fb67b1d7ff963a01696ce163fdcef0b7944dcee
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 62f2cf0eb8a7c7cf3606bb55efd3525059a6a267
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925034"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221274"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Zestaw SDK platformy kompilatora .NET
 
 Kompilatory tworzyć szczegółowy model kodu aplikacji, jak sprawdzają poprawność składnia i semantyka tego kodu. Używają tego modelu do tworzenia pliku wykonywalnego dane wyjściowe z kodu źródłowego. Zestaw SDK platformy kompilatora .NET zapewnia dostęp do tego modelu. Coraz częściej, możemy polegać na funkcje środowiska (IDE) zintegrowanego rozwoju takich jak funkcja IntelliSense, Refaktoryzacja, inteligentne rename "Znajdź wszystkie odwołania" i "Przejdź do definicji" zwiększyć naszą produktywność. Polegamy narzędzi analizy kodu w celu ulepszania swojego jakość kodu i generatorów kodu, aby ułatwić budowy aplikacji. Jak uzyskuj tych narzędzi, potrzebować dostępu do coraz więcej modelu, który tylko kompilatory tworzyć zgodnie z ich przetwarzanie kodu aplikacji. Jest to misję podstawowe interfejsy API Roslyn: otwarcie czarne skrzynki narzędzi i użytkownikom końcowym udostępnianie w szeregu informacji kompilatory się o naszego kodu.
-Zamiast nieprzezroczystości źródła code w i obiektu kodu komentarz tłumaczy przy użyciu platformy Roslyn, kompilatory stają się platform: interfejsy API, które służy do zadań związanych z kodu, narzędzia i aplikacje.
+Zamiast nieprzezroczystości źródła code w i obiektu kodu komentarz tłumaczy przy użyciu platformy Roslyn, kompilatory stają się platform: W przypadku interfejsów API, które służy do zadań związanych z kodu, narzędzia i aplikacje.
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>Pojęcia dotyczące zestawu SDK platformy kompilatora .NET
 
@@ -60,7 +60,7 @@ Te analizatory mogą być przekazywane [Visual Studio Marketplace](https://marke
 
 W zestawie SDK platformy kompilatora .NET zawiera najnowsze modele obiektów języka dla generowania kodu, analizy i refaktoryzacji. Ta sekcja zawiera omówienie pojęć dotyczących zestawu SDK platformy kompilatora .NET. Więcej szczegółowych informacji można znaleźć w sekcjach przewodników Szybki Start, przykładami i samouczkami.
 
-Możesz dowiedzieć się więcej o koncepcjach w zestawie SDK platformy kompilatora .NET w tych tematach cztery:
+Możesz dowiedzieć się więcej o koncepcjach w zestawie SDK platformy kompilatora .NET w tych pięciu tematach:
 
  - [Eksplorowanie kodu za pomocą wizualizatora składni](syntax-visualizer.md)
  - [Omówienie modelu interfejsu API kompilatora](compiler-api-model.md)

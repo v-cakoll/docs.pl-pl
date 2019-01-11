@@ -2,12 +2,12 @@
 title: 'Samouczek: Tworzenie dostawcy typów'
 description: Dowiedz się, jak tworzyć własne F# dostawców w typów F# 3.0, sprawdzając kilku dostawców typu prostego, w celu zilustrowania podstawowych koncepcji.
 ms.date: 05/16/2016
-ms.openlocfilehash: c5a68df5f0b89fe9496ad86ab88208e0ec4bcdc9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b16981b70db0896805754c60afa96a07623a1263
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614535"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223211"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Samouczek: Tworzenie dostawcy typów
 
@@ -156,7 +156,7 @@ Aby debugować ten dostawca za pomocą instrukcji drukowania, wprowadź skrypt, 
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-Aby debugować tego dostawcę przy użyciu programu Visual Studio, otwórz wiersz polecenia programu Visual Studio przy użyciu poświadczeń administracyjnych i uruchom następujące polecenie:
+Aby debugować tego dostawcę przy użyciu programu Visual Studio, otwórz wiersz polecenia dla deweloperów programu Visual Studio przy użyciu poświadczeń administracyjnych i uruchom następujące polecenie:
 
 ```fsharp
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx

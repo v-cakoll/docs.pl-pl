@@ -2,12 +2,12 @@
 title: Dostawca tokenów
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: 780521fb05c9b5545fa586473c531670806db52f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a5fc8708e94bd2aa820c2d558d33dad968b88ebd
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185446"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222766"
 ---
 # <a name="token-provider"></a>Dostawca tokenów
 Ten przykład demonstruje sposób implementacji niestandardowego dostawcy tokenów. Dostawca tokenu w Windows Communication Foundation (WCF) jest używany dla podanie poświadczeń w celu infrastruktura zabezpieczeń. Dostawcy tokenu, który sprawdza ogólnie rzecz biorąc, element docelowy i problemy odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć wiadomości. Usługi WCF jest dostarczany z domyślny dostawca tokenu Menedżera poświadczeń. Usługi WCF jest również dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Niestandardowego dostawcy tokenów są przydatne w następujących przypadkach:
@@ -273,7 +273,7 @@ static void DisplayIdentityInformation()
   
 2.  Skopiuj pliki programu usługi do katalogu usługi na komputerze usługi. Także skopiować pliki Setup.bat i Cleanup.bat na komputerze usługi.  
   
-3.  Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Plik Service.exe.config należy zaktualizować w celu odzwierciedlenia tej nowej nazwy certyfikatu. Można utworzyć certyfikatu serwera, modyfikując plik wsadowy Setup.bat. Należy pamiętać, że plik Setup.bat jest należy uruchomić z wiersza polecenia programu Visual Studio, otwartych z uprawnieniami administratora. Należy ustawić `%SERVER_NAME%` zmiennej do hosta w pełni kwalifikowaną nazwę komputera, który jest używany do obsługi usługi.  
+3.  Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Plik Service.exe.config należy zaktualizować w celu odzwierciedlenia tej nowej nazwy certyfikatu. Można utworzyć certyfikatu serwera, modyfikując plik wsadowy Setup.bat. Należy zauważyć, że plik Setup.bat jest należy uruchomić z wiersza polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora. Należy ustawić `%SERVER_NAME%` zmiennej do hosta w pełni kwalifikowaną nazwę komputera, który jest używany do obsługi usługi.  
   
 4.  Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople klienta. Nie trzeba to zrobić, gdy certyfikat serwera jest wystawiony przez klienta zaufanego wystawcy.  
   

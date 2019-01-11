@@ -1,5 +1,5 @@
 ---
-title: 'Porady: podpisywanie zestawu silną nazwą'
+title: 'Instrukcje: Podpisywanie zestawu silną nazwą'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191067"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221261"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Porady: podpisywanie zestawu silną nazwą
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Instrukcje: Podpisywanie zestawu silną nazwą
 Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:  
   
 -   Za pomocą **podpisywanie** kartę w projekcie **właściwości** okno dialogowe w programie Visual Studio. Jest to najprostsza i najwygodniejsza metoda podpisywania zestawów za pomocą silnych nazw.  
@@ -31,7 +31,7 @@ Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:
   
 -   Przy użyciu opcji kompilatora.  
   
- Aby podpisać zestaw za pomocą silnej nazwy, trzeba mieć parę kluczy kryptograficznych. Aby uzyskać więcej informacji o tworzeniu pary kluczy, zobacz [jak: utworzyć parę klucz publiczny i prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
+ Aby podpisać zestaw za pomocą silnej nazwy, trzeba mieć parę kluczy kryptograficznych. Aby uzyskać więcej informacji o tworzeniu pary kluczy, zobacz [jak: Tworzenie pary kluczy publiczny prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Aby utworzyć i podpisać zestaw za pomocą silnej nazwą przy użyciu programu Visual Studio  
   
@@ -45,7 +45,7 @@ Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Aby utworzyć i podpisać zestaw za pomocą silnej nazwy przy użyciu programu Assembly Linker  
   
--   W [Visual Studio Command Prompt](../../../docs/framework/tools/developer-command-prompt-for-vs.md), wpisz następujące polecenie:  
+-   W [wiersz polecenia programisty dla programu Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), wpisz następujące polecenie:  
   
      **Al** **/out:**\<*assemblyName*> *\<Nazwa_modułu >* **/KeyFile:** \<  *keyfileName*>  
   
@@ -99,7 +99,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ## <a name="see-also"></a>Zobacz też  
 - [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
-- [Instrukcje: tworzenie pary kluczy publiczny-prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Instrukcje: Tworzenie pary kluczy publiczny prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
 - [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
 - [Opóźnione podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md)  
 - [Zarządzanie podpisywaniem zestawu i manifestu](/visualstudio/ide/managing-assembly-and-manifest-signing)  

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Wykonaj operację, kiedy blok przepływu danych odbiera dane'
+title: 'Instrukcje: Wykonanie akcji, gdy blok przepływu danych odbiera dane'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd5963fee985633d843cc60f521b66000b84e55e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 369559feca4edab6de587a3494588973e0c2e1b7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217194"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221066"
 ---
-# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Porady: Wykonaj operację, kiedy blok przepływu danych odbiera dane
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Instrukcje: Wykonanie akcji, gdy blok przepływu danych odbiera dane
 *Wykonanie bloku przepływu danych* typy wywołanie delegata dostarczone przez użytkownika, po otrzymaniu danych. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, I <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> klasy są typami bloku przepływu danych wykonywania. Możesz użyć `delegate` — słowo kluczowe (`Sub` w języku Visual Basic), <xref:System.Action%601>, <xref:System.Func%602>, lub wyrażenie lambda, gdy zawierają funkcję pracy do wykonania bloku przepływu danych. W tym dokumencie opisano, jak używać <xref:System.Func%602> i wyrażenia lambda do wykonania akcji w blokach wykonywania.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "44217194"
  Sekcja Podsumowanie delegować typów w [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) dokumencie przedstawiono podsumowanie typy delegatów, które można udostępnić <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, i <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> obiektów. Tabela określa również, czy typ delegata działa synchronicznie lub asynchronicznie.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.  
+ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w wierszu polecenia dla deweloperów programu Visual Studio okna.  
   
  Visual C#  
   

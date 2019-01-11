@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68593509e384b2acd33fad0f476b6f300f2dbd92
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3809345432b705e4b44700fd6e8231c84bdce6ad
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202189"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221625"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (narzędzie optymalizacji sterowania zarządzanym profilem)
 
@@ -25,7 +25,7 @@ Profilowana optymalizacja poprawia czas uruchamiania aplikacji, wykorzystanie pa
   
 Jeśli wystąpią problemy z wydajnością czasu uruchamiania i rozmiarem zestawu roboczego dla zestawów języka pośredniego (IL), zaleca się użyć w pierwszej kolejności Ngen.exe, aby wyeliminować koszty kompilacji JIT oraz umożliwić udostępnianie kodu. Jeśli potrzebujesz dodatkowych usprawnień, możesz użyć Mpgo.exe do dalszej optymalizacji aplikacji. Dane dotyczące wydajności z zestawów niezoptymalizowanego obrazu natywnego można zastosować jako podstawę do oszacowania wzrostu wydajności. Użycie Mpgo.exe może spowodować przyspieszenie zimnego uruchamiania i zmniejszenie rozmiaru zestawu roboczego. Mpgo.exe dodaje informacje do zestawów IL, których Ngen.exe używa do tworzenia zoptymalizowanych zestawów obrazu natywnego. Aby uzyskać więcej informacji, zobacz wpis [zwiększanie wydajności uruchamiania aplikacji dla pulpitu](https://go.microsoft.com/fwlink/p/?LinkId=248943) w blogu .NET.  
   
-To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7) z poświadczeniami administratora i wpisać następujące polecenie. Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersza polecenia dla deweloperów programu Visual Studio (lub wiersza polecenia programu Visual Studio Windows 7) z poświadczeniami administratora i wpisz następujące polecenie w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
 W przypadku aplikacji klasycznych:  
   
@@ -104,11 +104,11 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 -   Nie można używać ścieżek w cudzysłowie ze znakami ukośnika na końcu, ponieważ makra Visual Studio również domyślnie używają końcowych ukośników. (Na przykład `–OutDir "C:\Output Folder\"` jest nieprawidłowy.) Aby obejść to ograniczenie, można pominąć końcowy ukośnik. (Na przykład użyć `-OutDir "$(OutDir)\"` zamiast.)  
   
--   Domyślnie program Mpgo.exe nie znajduje się w ścieżce kompilacji programu Visual Studio. Możesz dodać ścieżkę do programu Visual Studio lub podać pełną ścieżkę w wierszu polecenia Mpgo. Można użyć dowolnego `–Scenario` lub `–Import` parametru w zdarzeniu po kompilacji w programie Visual Studio. Jednak typowy proces jest użycie `–Scenario` monit o jeden raz z polecenia dla deweloperów programu Visual Studio, a następnie użyj `–Import` do zaktualizowania zoptymalizowanych zestawów po każdej kompilacji; na przykład: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
+-   Domyślnie program Mpgo.exe nie znajduje się w ścieżce kompilacji programu Visual Studio. Możesz dodać ścieżkę do programu Visual Studio lub podać pełną ścieżkę w wierszu polecenia Mpgo. Można użyć dowolnego `–Scenario` lub `–Import` parametru w zdarzeniu po kompilacji w programie Visual Studio. Jednak typowy proces jest użycie `–Scenario` jeden raz z deweloperem polecenia wiersza dla programu Visual Studio, a następnie użyj `–Import` do zaktualizowania zoptymalizowanych zestawów po każdej kompilacji; na przykład: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>Przykłady  
- Następujące polecenie Mpgo.exe z deweloperskiego wiersza polecenia programu Visual Studio optymalizuje aplikację podatkową:  
+ Następujące polecenie Mpgo.exe z wiersz polecenia dla deweloperów programu Visual Studio optymalizuje aplikację podatkową:  
   
 ```  
 mpgo –scenario "C:\MyApp\MyTax.exe /params par" –AssemblyList Mytax.dll MyTaxUtil2011.dll –OutDir C:\Optimized –TimeOut 15  

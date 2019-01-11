@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Rozłączanie bloków przepływu danych'
+title: 'Instrukcje: Rozłączanie bloków przepływu danych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc0f266169a2d82bb76355febd58b2268907fe97
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 93705653169b5efce3e3a062b7490abc4ea39c30
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540609"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223120"
 ---
-# <a name="how-to-unlink-dataflow-blocks"></a>Porady: Rozłączanie bloków przepływu danych
+# <a name="how-to-unlink-dataflow-blocks"></a>Instrukcje: Rozłączanie bloków przepływu danych
 Ten dokument zawiera opis sposobu odłączania docelowej bloku przepływu danych ze źródła.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -35,7 +35,7 @@ Ten dokument zawiera opis sposobu odłączania docelowej bloku przepływu danych
  Aby włączyć pozostałe wywołania do `TrySolution` kończy się po jednej z nich oblicza wartość `TrySolution` metoda przyjmuje <xref:System.Threading.CancellationToken> obiektów, które zostało anulowane po wywołaniu `ReceiveFromAny(T)` zwraca. <xref:System.Threading.SpinWait.SpinUntil%2A> Metoda zwraca, kiedy to <xref:System.Threading.CancellationToken> obiektu zostanie anulowane.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.  
+ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w wierszu polecenia dla deweloperów programu Visual Studio okna.  
   
  Visual C#  
   

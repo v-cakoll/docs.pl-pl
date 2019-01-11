@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Implementowanie wzorca przepływu danych producent — konsument'
+title: 'Instrukcje: Implementowanie wzorca przepływu danych producent — konsument'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8b6237e41826d2bc95672ee2f6b19598eea19ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2ad212117cc51c17b2a0f68a98bee24e1dd3fa05
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252912"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221765"
 ---
-# <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Porady: Implementowanie wzorca przepływu danych producent — konsument
+# <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Instrukcje: Implementowanie wzorca przepływu danych producent — konsument
 W tym dokumencie opisano sposób umożliwia Implementowanie wzorca producent — konsument Biblioteka przepływu danych TPL. W tym wzorcu *producentów* wysyła komunikaty do bloku komunikatu i *konsumenta* odczytuje komunikaty z tego bloku.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -33,7 +33,7 @@ W tym dokumencie opisano sposób umożliwia Implementowanie wzorca producent —
  [!code-vb[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowProducerConsumer.cs` (`DataflowProducerConsumer.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.  
+ Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowProducerConsumer.cs` (`DataflowProducerConsumer.vb` dla języka Visual Basic), a następnie uruchom następujące polecenie w wierszu polecenia dla deweloperów programu Visual Studio okna.  
   
  Visual C#  
   

@@ -1,5 +1,5 @@
 ---
-title: gdy - C# odwołania
+title: gdy kontekstowego słowa kluczowego - C# odwołania
 ms.custom: seodec18
 ms.date: 03/07/2017
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: 103309b5e5a121647576ce120f4353b4ceef08c4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a8f64da0ab603830972035f1c2cd3a0b1eaadaff
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235530"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221859"
 ---
- # <a name="when-c-reference"></a>gdy (odwołanie w C#)
+# <a name="when-c-reference"></a>gdy (odwołanie w C#)
 
 Możesz użyć `when` kontekstowe słowo kluczowe, aby określić warunek filtru w dwóch kontekstów:
 
@@ -29,12 +29,13 @@ Począwszy od C# 6, `when` mogą być używane w `catch` instrukcję, aby okreś
 ```csharp
 catch (ExceptionType [e]) when (expr)
 ```
-gdzie *expr* jest wyrażeniem, którego wynikiem jest wartość typu Boolean. Jeśli zostanie zwrócona `true`, uruchamia program obsługi wyjątku; Jeśli `false`, nie ma. 
+
+gdzie *expr* jest wyrażeniem, którego wynikiem jest wartość typu Boolean. Jeśli zostanie zwrócona `true`, uruchamia program obsługi wyjątku; Jeśli `false`, nie ma.
 
 W poniższym przykładzie użyto `when` — słowo kluczowe warunkowo wykonanie procedury obsługi dla <xref:System.Net.Http.HttpRequestException> w zależności od tekstu komunikat o wyjątku.
 
- [!code-csharp[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]  
-  
+[!code-csharp[when-with-catch](~/samples/snippets/csharp/language-reference/keywords/when/catch.cs)]
+
 ## <a name="when-in-a-switch-statement"></a>`when` w `switch` — instrukcja
 
 Począwszy od C# 7.0, `case` etykiety już nie muszą być wzajemnie wyłącznie i kolejność, w której `case` etykiety pojawiają się w `switch` instrukcji można określić, które blok "switch" wykonuje. `when` — Słowo kluczowe może służyć do określania warunku filtru, który powoduje, że jego skojarzony etykiety case PRAWDA, tylko wtedy, gdy warunek filtru jest również wartość true. Jego składnia jest następująca:
@@ -42,14 +43,15 @@ Począwszy od C# 7.0, `case` etykiety już nie muszą być wzajemnie wyłącznie
 ```csharp
 case (expr) when (when-condition):
 ```
-gdzie *expr* wzór stałej lub wzorzec typ, który jest porównywany z wyrażenie dopasowania i *kiedy warunek* jest dowolne wyrażenie logiczne. 
 
-W poniższym przykładzie użyto `when` — słowo kluczowe do testowania `Shape` obiektów, które mają obszar o wartości zero, a także do testowania różnych `Shape` obiektów, które mają obszar jest większy od zera. 
+gdzie *expr* wzór stałej lub wzorzec typ, który jest porównywany z wyrażenie dopasowania i *kiedy warunek* jest dowolne wyrażenie logiczne.
 
- [!code-csharp[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]  
+W poniższym przykładzie użyto `when` — słowo kluczowe do testowania `Shape` obiektów, które mają obszar o wartości zero, a także do testowania różnych `Shape` obiektów, które mają obszar jest większy od zera.
+
+[!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Switch — instrukcja](switch.md)  
-- [Instrukcja try/catch](try-catch.md)  
-- [instrukcji try/catch/finally](try-catch-finally.md) 
+- [Switch — instrukcja](switch.md)
+- [Instrukcja try/catch](try-catch.md)
+- [instrukcji try/catch/finally](try-catch-finally.md)

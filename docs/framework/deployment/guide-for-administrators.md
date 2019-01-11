@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a94f9c650927aee0f120ee3c0b1199b6c977ef0e
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 50ea2b1fefe5c41f0c67ab8c12362f19ea125b5b
+ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53776737"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54186218"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework — Przewodnik wdrażania dla administratorów
 W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego zależności systemowe przez sieć przy użyciu programu Microsoft System Center Configuration Manager. W tym artykule przyjęto założenie, że wszystkie docelowe komputery klienckie spełniają minimalne wymagania programu .NET Framework. Aby uzyskać listę wymagania sprzętowe i programowe dotyczące instalowania [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md).  
@@ -254,10 +254,11 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
   
  Inne kody błędów:  
   
--   [Kody błędów usługi Instalator Windows](/windows/desktop/msi/error-codes)  
-  
--   [Kody wyników programu Windows Update Agent](/security-updates/WindowsUpdateServices/18127055)  
-  
-## <a name="see-also"></a>Zobacz też  
-- [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+-   [Kody błędów usługi Instalator Windows](/windows/desktop/msi/error-codes)
+
+-   [Kody wyników programu Windows Update Agent](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
+
+## <a name="see-also"></a>Zobacz także
+
+- [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [Wymagania systemowe](../../../docs/framework/get-started/system-requirements.md)

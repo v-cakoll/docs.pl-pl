@@ -3,12 +3,12 @@ title: Historia języka C# — Przewodnik po języku C#
 description: Język jak wygląda w jego wersje i jak go powstała od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: c24ac6c87762c4808c0794bf7c724eee942ad0fc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
+ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152063"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54186231"
 ---
 # <a name="the-history-of-c"></a>Historia języka C# #
 
@@ -168,7 +168,6 @@ Inne funkcje uwzględnione:
 
 - [Odrzucenia](./csharp-7.md#discards)
 - [Literały binarne oraz separatory cyfr](./csharp-7.md#numeric-literal-syntax-improvements)
-- [Wartości zwracane ref i zmienne lokalne](./csharp-7.md#ref-locals-and-returns)
 - [Wyrażeń throw](./csharp-7.md#throw-expressions)
 
 Wszystkie te funkcje oferują ciekawe nowe funkcje dla deweloperów i możliwość pisania kodu jeszcze bardziej przejrzyste niż kiedykolwiek wcześniej. Wyróżnienie jest skondensowanie trzech deklaracji zmiennych, za pomocą `out` — słowo kluczowe i umożliwiając z wieloma wartościami zwracanymi za pomocą spójnej kolekcji.

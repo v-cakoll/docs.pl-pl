@@ -3,12 +3,12 @@ title: Platforma kompilatora .NET (interfejsy API Roslyn) SDK
 description: Dowiedz się, za pomocą SDK platformy kompilatora .NET (nazywane również interfejsy API Roslyn) zrozumieć kod platformy .NET, wykrywać błędy i Rozwiąż te błędy.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 62f2cf0eb8a7c7cf3606bb55efd3525059a6a267
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: be65d8ecafc13fc699efb10dc396b0631ba70810
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221274"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249141"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Zestaw SDK platformy kompilatora .NET
 
@@ -31,7 +31,7 @@ Istnieją trzy główne scenariusze dotyczące pisania analizatory i poprawki ko
 
 1. [*Wymuszanie norm kodowania w ramach zespołu*](#enforce-team-coding-standards)
 1. [*Zapewnić wskazówki dotyczące pakietów biblioteki*](#provide-guidance-with-library-packages)
-1. [*Podaj ogólne wskazówki dotyczące kodowania*](#provide-general-coding-guidance)
+1. [*Ogólne wytyczne*](#provide-general-guidance)
 
 ## <a name="enforce-team-coding-standards"></a>Wymuszanie norm kodowania w ramach zespołu
 

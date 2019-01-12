@@ -3,15 +3,15 @@ title: Kwiatów iris klastra przy użyciu klastrowania uczeń - strukturze ML.NE
 description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klastrowania
 author: pkulikov
 ms.author: johalex
-ms.date: 12/17/2018
+ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: cf743864f566c58fad2146fbabdf24f860330b2f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ab888a2cd9469d5ce0131ba2b17f7c134cf2855c
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146202"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249076"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Samouczek: Kwiatów iris klastra przy użyciu klastrowania uczeń za pomocą platformy ML.NET
 
@@ -84,9 +84,9 @@ Usuń istniejącą definicję klasy i Dodaj następujący kod, który określa k
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` jest klasą danych wejściowych i ma definicji dla każdej funkcji z zestawu danych. Użyj [kolumny](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) atrybutu, aby określić indeksów kolumny źródłowe w pliku zestawu danych.
+`IrisData` jest klasą danych wejściowych i ma definicji dla każdej funkcji z zestawu danych. Użyj [kolumny](xref:Microsoft.ML.Data.ColumnAttribute) atrybutu, aby określić indeksów kolumny źródłowe w pliku zestawu danych.
 
-`ClusterPrediction` Klasa reprezentuje dane wyjściowe model klastrowania dotyczą `IrisData` wystąpienia. Użyj [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) atrybut do powiązania `PredictedClusterId` i `Distances` polom **PredictedLabel** i **wynik** kolumn odpowiednio. W przypadku klastrowania zadania te kolumny mają następujące znaczenie:
+`ClusterPrediction` Klasa reprezentuje dane wyjściowe model klastrowania dotyczą `IrisData` wystąpienia. Użyj [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) atrybut do powiązania `PredictedClusterId` i `Distances` polom **PredictedLabel** i **wynik** kolumn odpowiednio. W przypadku klastrowania zadania te kolumny mają następujące znaczenie:
 
 - **PredictedLabel** kolumna zawiera identyfikator przewidywane klastra.
 - **Wynik** kolumna zawiera tablicę z kwadratów euklidesowa odległości centroids klastra. Długość tablicy jest równa liczbie klastrów.
@@ -127,9 +127,9 @@ Dodaj następujący kod do `Main` metodę, aby skonfigurować sposób ładowania
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Należy pamiętać, że nazwy kolumn i indeksów, które są zgodne schemat zdefiniowany przez `IrisData` klasy. <xref:Microsoft.ML.Runtime.Data.DataKind.R4?displayProperty=nameWithType> Wartość Określa `float` typu.
+Należy pamiętać, że nazwy kolumn i indeksów, które są zgodne schemat zdefiniowany przez `IrisData` klasy. <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> Wartość Określa `float` typu.
 
-Użyj wystąpienia <xref:Microsoft.ML.Runtime.Data.TextLoader> wystąpienia, aby utworzyć <xref:Microsoft.ML.Runtime.Data.IDataView> wystąpienia, która reprezentuje źródło danych dla zestawu danych szkolenia:
+Użyj wystąpienia <xref:Microsoft.ML.Data.TextLoader> wystąpienia, aby utworzyć <xref:Microsoft.ML.Data.IDataView> wystąpienia, która reprezentuje źródło danych dla zestawu danych szkolenia:
 
 [!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
@@ -160,7 +160,7 @@ W tym momencie masz modelu, który można zintegrować wszystkich istniejących 
 
 ## <a name="use-the-model-for-predictions"></a>Na użytek modelu prognozy
 
-Aby tworzyć prognozy, należy użyć <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> klasy, która pobiera wystąpienia typu danych wejściowych przez potok przekształcania i tworzy wystąpienia typu danych wyjściowych. Dodaj następujący wiersz do `Main` metodę, aby utworzyć wystąpienie tej klasy:
+Aby tworzyć prognozy, należy użyć <xref:Microsoft.ML.PredictionEngine%602> klasy, która pobiera wystąpienia typu danych wejściowych przez potok przekształcania i tworzy wystąpienia typu danych wyjściowych. Dodaj następujący wiersz do `Main` metodę, aby utworzyć wystąpienie tej klasy:
 
 [!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
 

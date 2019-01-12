@@ -4,12 +4,12 @@ description: Poznaj składniki inżynierów funkcji obsługiwanych w strukturze 
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451095"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249128"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Przekształcenia danych - strukturze ML.NET uczenia maszynowego
 
@@ -103,7 +103,6 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 | <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | Brak wartości z kolumn spadnie. |
 | <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Tworzy kolumnę dane wyjściowe z taką samą liczbę miejsc, jako kolumna danych wejściowych, których dane wyjściowe ma wartość true, jeśli brak wartości w kolumnie wejściowej. |
 | <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | Obsługiwać brakujące wartości, zastępując wartość domyślna lub wartość średnią/min/max (dla tylko kolumny nietekstową). |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Tworzy kolumnę dane wyjściowe z taką samą liczbę miejsc, jako kolumna danych wejściowych, których dane wyjściowe ma wartość true, jeśli brak wartości w kolumnie wejściowej. |
 
 ## <a name="normalization"></a>Normalizacja
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;uruchamianie&gt; — Element'
+title: '&lt;uruchamianie&gt; — element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup
@@ -11,88 +11,93 @@ helpviewer_keywords:
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 7dfa196ad6aa71dd22bcb9bbd5a0857cccb819c5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 82ee7b163efcefae0f2a169b74d29ea4c9f5398a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201078"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222743"
 ---
-# <a name="ltstartupgt-element"></a><span data-ttu-id="234f9-102">&lt;uruchamianie&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="234f9-102">&lt;startup&gt; Element</span></span>
-<span data-ttu-id="234f9-103">Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka.</span><span class="sxs-lookup"><span data-stu-id="234f9-103">Specifies common language runtime startup information.</span></span>  
-  
- <span data-ttu-id="234f9-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="234f9-104">\<configuration></span></span>  
-<span data-ttu-id="234f9-105">\<startup></span><span class="sxs-lookup"><span data-stu-id="234f9-105">\<startup></span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="234f9-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="234f9-106">Syntax</span></span>  
-  
-```xml  
-<startup useLegacyV2RuntimeActivationPolicy="true|false" >   
-</startup>  
-```  
-  
-## <a name="attributes-and-elements"></a><span data-ttu-id="234f9-107">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="234f9-107">Attributes and Elements</span></span>  
- <span data-ttu-id="234f9-108">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="234f9-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
-  
-### <a name="attributes"></a><span data-ttu-id="234f9-109">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="234f9-109">Attributes</span></span>  
-  
-|<span data-ttu-id="234f9-110">Atrybut</span><span class="sxs-lookup"><span data-stu-id="234f9-110">Attribute</span></span>|<span data-ttu-id="234f9-111">Opis</span><span class="sxs-lookup"><span data-stu-id="234f9-111">Description</span></span>|  
-|---------------|-----------------|  
-|`useLegacyV2RuntimeActivationPolicy`|<span data-ttu-id="234f9-112">Atrybut opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="234f9-112">Optional attribute.</span></span><br /><br /> <span data-ttu-id="234f9-113">Określa, czy włączyć [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] zasad aktywacji środowiska uruchomieniowego lub użyć [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] zasad aktywacji.</span><span class="sxs-lookup"><span data-stu-id="234f9-113">Specifies whether to enable the [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] runtime activation policy or to use the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] activation policy.</span></span>|  
-  
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a><span data-ttu-id="234f9-114">Atrybut useLegacyV2RuntimeActivationPolicy</span><span class="sxs-lookup"><span data-stu-id="234f9-114">useLegacyV2RuntimeActivationPolicy Attribute</span></span>  
-  
-|<span data-ttu-id="234f9-115">Wartość</span><span class="sxs-lookup"><span data-stu-id="234f9-115">Value</span></span>|<span data-ttu-id="234f9-116">Opis</span><span class="sxs-lookup"><span data-stu-id="234f9-116">Description</span></span>|  
-|-----------|-----------------|  
-|`true`|<span data-ttu-id="234f9-117">Włącz [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] środowiska uruchomieniowego zasad aktywacji dla wybranego środowiska uruchomieniowego, czyli można powiązać technik aktywacji starszej wersji środowiska uruchomieniowego (takie jak [corbindtoruntimeex — funkcja](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) do środowiska uruchomieniowego, wybrana z pliku konfiguracji zamiast Ograniczanie je na wersji CLR 2.0.</span><span class="sxs-lookup"><span data-stu-id="234f9-117">Enable [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] runtime activation policy for the chosen runtime, which is to bind legacy runtime activation techniques (such as the [CorBindToRuntimeEx function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) to the runtime chosen from the configuration file instead of capping them at CLR version 2.0.</span></span> <span data-ttu-id="234f9-118">W związku z tym Jeśli wersja środowiska CLR 4 lub nowszego jest wybierany z pliku konfiguracji, zestawy mieszane utworzonych w starszych wersjach programu .NET Framework są ładowane z wybranej wersji środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="234f9-118">Thus, if CLR version 4 or later is chosen from the configuration file, mixed-mode assemblies created with earlier versions of the .NET Framework are loaded with the chosen CLR version.</span></span> <span data-ttu-id="234f9-119">Ustawienie tej wartości zapobiega środowisko CLR w wersji 1.1 lub środowisko CLR w wersji 2.0 ładowanie do tego samego procesu i efektywne wyłączenie funkcji side-by-side w procesie.</span><span class="sxs-lookup"><span data-stu-id="234f9-119">Setting this value prevents CLR version 1.1 or CLR version 2.0 from loading into the same process, effectively disabling the in-process side-by-side feature.</span></span>|  
-|`false`|<span data-ttu-id="234f9-120">Użyj domyślnych zasad aktywacji dla [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] i nowszy, która umożliwia starszej wersji środowiska uruchomieniowego technik aktywacji można załadować środowiska CLR w wersji 1.1 lub 2.0 do procesu.</span><span class="sxs-lookup"><span data-stu-id="234f9-120">Use the default activation policy for the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] and later, which is to allow legacy runtime activation techniques to load CLR version 1.1 or 2.0 into the process.</span></span> <span data-ttu-id="234f9-121">Ta wartość zapobiega zestawy mieszane ładowanie do programu .NET Framework 4 lub nowszy, chyba że zostały skompilowane przy użyciu programu .NET Framework 4 lub nowszej.</span><span class="sxs-lookup"><span data-stu-id="234f9-121">Setting this value prevents mixed-mode assemblies from loading into the .NET Framework 4 or later unless they were built with the .NET Framework 4 or later.</span></span> <span data-ttu-id="234f9-122">Ta wartość jest domyślna.</span><span class="sxs-lookup"><span data-stu-id="234f9-122">This value is the default.</span></span>|  
-  
-### <a name="child-elements"></a><span data-ttu-id="234f9-123">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="234f9-123">Child Elements</span></span>  
-  
-|<span data-ttu-id="234f9-124">Element</span><span class="sxs-lookup"><span data-stu-id="234f9-124">Element</span></span>|<span data-ttu-id="234f9-125">Opis</span><span class="sxs-lookup"><span data-stu-id="234f9-125">Description</span></span>|  
-|-------------|-----------------|  
-|[<span data-ttu-id="234f9-126">\<requiredRuntime ></span><span class="sxs-lookup"><span data-stu-id="234f9-126">\<requiredRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|<span data-ttu-id="234f9-127">Określa, że aplikacja obsługuje tylko wersję 1.0 środowiska uruchomieniowego języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="234f9-127">Specifies that the application supports only version 1.0 of the common language runtime.</span></span> <span data-ttu-id="234f9-128">Skorzystaj z aplikacji utworzonych za pomocą środowiska uruchomieniowego wersji 1.1 lub nowszej  **\<supportedRuntime >** elementu.</span><span class="sxs-lookup"><span data-stu-id="234f9-128">Applications built with runtime version 1.1 or later should use the **\<supportedRuntime>** element.</span></span>|  
-|[<span data-ttu-id="234f9-129">\<supportedRuntime ></span><span class="sxs-lookup"><span data-stu-id="234f9-129">\<supportedRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|<span data-ttu-id="234f9-130">Określa wersje środowiska uruchomieniowego języka wspólnego, które obsługuje aplikacja.</span><span class="sxs-lookup"><span data-stu-id="234f9-130">Specifies which versions of the common language runtime the application supports.</span></span>|  
-  
-### <a name="parent-elements"></a><span data-ttu-id="234f9-131">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="234f9-131">Parent Elements</span></span>  
-  
-|<span data-ttu-id="234f9-132">Element</span><span class="sxs-lookup"><span data-stu-id="234f9-132">Element</span></span>|<span data-ttu-id="234f9-133">Opis</span><span class="sxs-lookup"><span data-stu-id="234f9-133">Description</span></span>|  
-|-------------|-----------------|  
-|`configuration`|<span data-ttu-id="234f9-134">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="234f9-134">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-  
-## <a name="remarks"></a><span data-ttu-id="234f9-135">Uwagi</span><span class="sxs-lookup"><span data-stu-id="234f9-135">Remarks</span></span>  
- <span data-ttu-id="234f9-136">**\<SupportedRuntime >** element powinien być używany przez wszystkie aplikacje kompilowane przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="234f9-136">The **\<supportedRuntime>** element should be used by all applications built using version 1.1 or later of the runtime.</span></span> <span data-ttu-id="234f9-137">Aplikacje stworzone z myślą o obsługiwały tylko wersję 1.0 środowiska uruchomieniowego muszą używać  **\<requiredRuntime >** elementu.</span><span class="sxs-lookup"><span data-stu-id="234f9-137">Applications built to support only version 1.0 of the runtime must use the **\<requiredRuntime>** element.</span></span>  
-  
- <span data-ttu-id="234f9-138">Ignoruje kodu startowego dla aplikacji hostowanej w programie Internet Explorer  **\<uruchamiania >** elementu i jego elementy podrzędne.</span><span class="sxs-lookup"><span data-stu-id="234f9-138">The startup code for an application hosted in Microsoft Internet Explorer ignores the **\<startup>** element and its child elements.</span></span>  
-  
-## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a><span data-ttu-id="234f9-139">Atrybut useLegacyV2RuntimeActivationPolicy</span><span class="sxs-lookup"><span data-stu-id="234f9-139">The useLegacyV2RuntimeActivationPolicy Attribute</span></span>  
- <span data-ttu-id="234f9-140">Ten atrybut jest przydatna, jeśli aplikacja używa ścieżki aktywacji starszych [corbindtoruntimeex — funkcja](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), i potrzebujesz tych ścieżek do aktywacji w wersji 4 środowiska CLR zamiast wcześniejszej wersji, czy aplikacja jest utworzonych za pomocą [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ale ma zależność od zestawu trybu mieszanego, skompilowanych przy użyciu wcześniejszej wersji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="234f9-140">This attribute is useful if your application uses legacy activation paths, such as the [CorBindToRuntimeEx function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), and you want those paths to activate version 4 of the CLR instead of an earlier version, or if your application is built with the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] but has a dependency on a mixed-mode assembly built with an earlier version of the .NET Framework.</span></span> <span data-ttu-id="234f9-141">W tych scenariuszach atrybut na `true`.</span><span class="sxs-lookup"><span data-stu-id="234f9-141">In those scenarios, set the attribute to `true`.</span></span>  
-  
+# <a name="ltstartupgt-element"></a><span data-ttu-id="d82e8-102">&lt;uruchamianie&gt; — element</span><span class="sxs-lookup"><span data-stu-id="d82e8-102">&lt;startup&gt; element</span></span>
+
+<span data-ttu-id="d82e8-103">Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka.</span><span class="sxs-lookup"><span data-stu-id="d82e8-103">Specifies common language runtime startup information.</span></span>
+
+ <span data-ttu-id="d82e8-104">\<Konfiguracja > \<uruchamiania ></span><span class="sxs-lookup"><span data-stu-id="d82e8-104">\<configuration> \<startup></span></span>
+
+## <a name="syntax"></a><span data-ttu-id="d82e8-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="d82e8-105">Syntax</span></span>
+
+```xml
+<startup useLegacyV2RuntimeActivationPolicy="true|false" > 
+</startup>
+```
+
+## <a name="attributes-and-elements"></a><span data-ttu-id="d82e8-106">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="d82e8-106">Attributes and elements</span></span>
+
+ <span data-ttu-id="d82e8-107">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="d82e8-107">The following sections describe attributes, child elements, and parent elements.</span></span>
+
+### <a name="attributes"></a><span data-ttu-id="d82e8-108">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="d82e8-108">Attributes</span></span>
+
+|<span data-ttu-id="d82e8-109">Atrybut</span><span class="sxs-lookup"><span data-stu-id="d82e8-109">Attribute</span></span>|<span data-ttu-id="d82e8-110">Opis</span><span class="sxs-lookup"><span data-stu-id="d82e8-110">Description</span></span>|
+|---------------|-----------------|
+|`useLegacyV2RuntimeActivationPolicy`|<span data-ttu-id="d82e8-111">Atrybut opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="d82e8-111">Optional attribute.</span></span><br /><br /> <span data-ttu-id="d82e8-112">Określa, czy włączyć [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] zasad aktywacji środowiska uruchomieniowego lub użyć [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] zasad aktywacji.</span><span class="sxs-lookup"><span data-stu-id="d82e8-112">Specifies whether to enable the [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] runtime activation policy or to use the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] activation policy.</span></span>|
+
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a><span data-ttu-id="d82e8-113">Atrybut useLegacyV2RuntimeActivationPolicy</span><span class="sxs-lookup"><span data-stu-id="d82e8-113">useLegacyV2RuntimeActivationPolicy attribute</span></span>
+
+|<span data-ttu-id="d82e8-114">Wartość</span><span class="sxs-lookup"><span data-stu-id="d82e8-114">Value</span></span>|<span data-ttu-id="d82e8-115">Opis</span><span class="sxs-lookup"><span data-stu-id="d82e8-115">Description</span></span>|
+|-----------|-----------------|
+|`true`|<span data-ttu-id="d82e8-116">Włącz [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] środowiska uruchomieniowego zasad aktywacji dla wybranego środowiska uruchomieniowego, czyli można powiązać technik aktywacji starszej wersji środowiska uruchomieniowego (takie jak [corbindtoruntimeex — funkcja](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) do środowiska uruchomieniowego, wybrana z pliku konfiguracji zamiast Ograniczanie je na wersji CLR 2.0.</span><span class="sxs-lookup"><span data-stu-id="d82e8-116">Enable [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] runtime activation policy for the chosen runtime, which is to bind legacy runtime activation techniques (such as the [CorBindToRuntimeEx function](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) to the runtime chosen from the configuration file instead of capping them at CLR version 2.0.</span></span> <span data-ttu-id="d82e8-117">W związku z tym Jeśli wersja środowiska CLR 4 lub nowszego jest wybierany z pliku konfiguracji, zestawy mieszane utworzonych w starszych wersjach programu .NET Framework są ładowane z wybranej wersji środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="d82e8-117">Thus, if CLR version 4 or later is chosen from the configuration file, mixed-mode assemblies created with earlier versions of the .NET Framework are loaded with the chosen CLR version.</span></span> <span data-ttu-id="d82e8-118">Ustawienie tej wartości zapobiega środowisko CLR w wersji 1.1 lub środowisko CLR w wersji 2.0 ładowanie do tego samego procesu i efektywne wyłączenie funkcji side-by-side w procesie.</span><span class="sxs-lookup"><span data-stu-id="d82e8-118">Setting this value prevents CLR version 1.1 or CLR version 2.0 from loading into the same process, effectively disabling the in-process side-by-side feature.</span></span>|
+|`false`|<span data-ttu-id="d82e8-119">Użyj domyślnych zasad aktywacji dla [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] i nowszy, która umożliwia starszej wersji środowiska uruchomieniowego technik aktywacji można załadować środowiska CLR w wersji 1.1 lub 2.0 do procesu.</span><span class="sxs-lookup"><span data-stu-id="d82e8-119">Use the default activation policy for the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] and later, which is to allow legacy runtime activation techniques to load CLR version 1.1 or 2.0 into the process.</span></span> <span data-ttu-id="d82e8-120">Ta wartość zapobiega zestawy mieszane ładowanie do programu .NET Framework 4 lub nowszy, chyba że zostały skompilowane przy użyciu programu .NET Framework 4 lub nowszej.</span><span class="sxs-lookup"><span data-stu-id="d82e8-120">Setting this value prevents mixed-mode assemblies from loading into the .NET Framework 4 or later unless they were built with the .NET Framework 4 or later.</span></span> <span data-ttu-id="d82e8-121">Ta wartość jest domyślna.</span><span class="sxs-lookup"><span data-stu-id="d82e8-121">This value is the default.</span></span>|
+
+### <a name="child-elements"></a><span data-ttu-id="d82e8-122">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="d82e8-122">Child elements</span></span>
+
+|<span data-ttu-id="d82e8-123">Element</span><span class="sxs-lookup"><span data-stu-id="d82e8-123">Element</span></span>|<span data-ttu-id="d82e8-124">Opis</span><span class="sxs-lookup"><span data-stu-id="d82e8-124">Description</span></span>|
+|-------------|-----------------|
+|[<span data-ttu-id="d82e8-125">\<requiredRuntime ></span><span class="sxs-lookup"><span data-stu-id="d82e8-125">\<requiredRuntime></span></span>](requiredruntime-element.md)|<span data-ttu-id="d82e8-126">Określa, że aplikacja obsługuje tylko wersję 1.0 środowiska uruchomieniowego języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="d82e8-126">Specifies that the application supports only version 1.0 of the common language runtime.</span></span> <span data-ttu-id="d82e8-127">Skorzystaj z aplikacji utworzonych za pomocą środowiska uruchomieniowego wersji 1.1 lub nowszej  **\<supportedRuntime >** elementu.</span><span class="sxs-lookup"><span data-stu-id="d82e8-127">Applications built with runtime version 1.1 or later should use the **\<supportedRuntime>** element.</span></span>|
+|[<span data-ttu-id="d82e8-128">\<supportedRuntime ></span><span class="sxs-lookup"><span data-stu-id="d82e8-128">\<supportedRuntime></span></span>](supportedruntime-element.md)|<span data-ttu-id="d82e8-129">Określa wersje środowiska uruchomieniowego języka wspólnego, które obsługuje aplikacja.</span><span class="sxs-lookup"><span data-stu-id="d82e8-129">Specifies which versions of the common language runtime the application supports.</span></span>|
+
+### <a name="parent-elements"></a><span data-ttu-id="d82e8-130">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="d82e8-130">Parent elements</span></span>
+
+|<span data-ttu-id="d82e8-131">Element</span><span class="sxs-lookup"><span data-stu-id="d82e8-131">Element</span></span>|<span data-ttu-id="d82e8-132">Opis</span><span class="sxs-lookup"><span data-stu-id="d82e8-132">Description</span></span>|
+|-------------|-----------------|
+|`configuration`|<span data-ttu-id="d82e8-133">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d82e8-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|
+
+## <a name="remarks"></a><span data-ttu-id="d82e8-134">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d82e8-134">Remarks</span></span>
+
+ <span data-ttu-id="d82e8-135"> *\*\<SupportedRuntime >** element powinien być używany przez wszystkie aplikacje kompilowane przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="d82e8-135">The **\<supportedRuntime>** element should be used by all applications built using version 1.1 or later of the runtime.</span></span> <span data-ttu-id="d82e8-136">Aplikacje stworzone z myślą o obsługiwały tylko wersję 1.0 środowiska uruchomieniowego muszą używać  **\<requiredRuntime >** elementu.</span><span class="sxs-lookup"><span data-stu-id="d82e8-136">Applications built to support only version 1.0 of the runtime must use the **\<requiredRuntime>** element.</span></span>
+
+ <span data-ttu-id="d82e8-137">Ignoruje kodu startowego dla aplikacji hostowanej w programie Internet Explorer  **\<uruchamiania >** elementu i jego elementy podrzędne.</span><span class="sxs-lookup"><span data-stu-id="d82e8-137">The startup code for an application hosted in Microsoft Internet Explorer ignores the **\<startup>** element and its child elements.</span></span>
+
+## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a><span data-ttu-id="d82e8-138">Atrybut useLegacyV2RuntimeActivationPolicy</span><span class="sxs-lookup"><span data-stu-id="d82e8-138">The useLegacyV2RuntimeActivationPolicy attribute</span></span>
+
+ <span data-ttu-id="d82e8-139">Ten atrybut jest przydatna, jeśli aplikacja używa ścieżki aktywacji starszych [corbindtoruntimeex — funkcja](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), i potrzebujesz tych ścieżek do aktywacji w wersji 4 środowiska CLR zamiast wcześniejszej wersji, czy aplikacja jest utworzonych za pomocą [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ale ma zależność od zestawu trybu mieszanego, skompilowanych przy użyciu wcześniejszej wersji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d82e8-139">This attribute is useful if your application uses legacy activation paths, such as the [CorBindToRuntimeEx function](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), and you want those paths to activate version 4 of the CLR instead of an earlier version, or if your application is built with the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] but has a dependency on a mixed-mode assembly built with an earlier version of the .NET Framework.</span></span> <span data-ttu-id="d82e8-140">W tych scenariuszach atrybut na `true`.</span><span class="sxs-lookup"><span data-stu-id="d82e8-140">In those scenarios, set the attribute to `true`.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="234f9-142">Ustawienie atrybutu `true` uniemożliwia ładowanie do tego samego procesu i efektywne wyłączenie funkcji side-by-side w trakcie środowisko CLR w wersji 1.1 lub środowisko CLR w wersji 2.0 (zobacz [Side-by-Side wykonywania COM Interop](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).</span><span class="sxs-lookup"><span data-stu-id="234f9-142">Setting the attribute to `true` prevents CLR version 1.1 or CLR version 2.0 from loading into the same process, effectively disabling the in-process side-by-side feature (see [Side-by-Side Execution for COM Interop](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="234f9-143">Przykład</span><span class="sxs-lookup"><span data-stu-id="234f9-143">Example</span></span>  
- <span data-ttu-id="234f9-144">Poniższy przykład pokazuje, jak określić wersji środowiska uruchomieniowego w pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="234f9-144">The following example shows how to specify the runtime version in a configuration file.</span></span>  
-  
-```xml  
-<!-- When used with version 1.0 of the .NET Framework runtime -->  
-<configuration>  
-   <startup>  
-      <requiredRuntime version="v1.0.3705" safemode="true"/>  
-   </startup>  
-</configuration>  
-<!-- When used with version 1.1 (or later) of the runtime -->  
-<configuration>  
-   <startup>  
-      <supportedRuntime version="v1.1.4322"/>  
-      <supportedRuntime version="v1.0.3705"/>  
-   </startup>  
-</configuration>  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="234f9-145">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="234f9-145">See Also</span></span>  
- [<span data-ttu-id="234f9-146">Schemat ustawień uruchamiania</span><span class="sxs-lookup"><span data-stu-id="234f9-146">Startup Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [<span data-ttu-id="234f9-147">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="234f9-147">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="234f9-148">\<PaveOver > Określanie wersji środowiska uruchomieniowego, które ma być używana</span><span class="sxs-lookup"><span data-stu-id="234f9-148">\<PaveOver> Specifying Which Runtime Version to Use</span></span>](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
- [<span data-ttu-id="234f9-149">Wykonanie Side-by-Side dla współdziałania z modelem COM</span><span class="sxs-lookup"><span data-stu-id="234f9-149">Side-by-Side Execution for COM Interop</span></span>](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
- [<span data-ttu-id="234f9-150">Wykonywanie równoczesne i wewnątrzprocesowe</span><span class="sxs-lookup"><span data-stu-id="234f9-150">In-Process Side-by-Side Execution</span></span>](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+> <span data-ttu-id="d82e8-141">Ustawienie atrybutu `true` uniemożliwia ładowanie do tego samego procesu i efektywne wyłączenie funkcji side-by-side w trakcie środowisko CLR w wersji 1.1 lub środowisko CLR w wersji 2.0 (zobacz [Side-by-Side wykonywania COM Interop](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).</span><span class="sxs-lookup"><span data-stu-id="d82e8-141">Setting the attribute to `true` prevents CLR version 1.1 or CLR version 2.0 from loading into the same process, effectively disabling the in-process side-by-side feature (see [Side-by-Side Execution for COM Interop](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).</span></span>
+
+## <a name="example"></a><span data-ttu-id="d82e8-142">Przykład</span><span class="sxs-lookup"><span data-stu-id="d82e8-142">Example</span></span>
+
+ <span data-ttu-id="d82e8-143">Poniższy przykład pokazuje, jak określić wersji środowiska uruchomieniowego w pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="d82e8-143">The following example shows how to specify the runtime version in a configuration file.</span></span>
+
+```xml
+<!-- When used with version 1.0 of the .NET Framework runtime -->
+<configuration>
+   <startup>
+      <requiredRuntime version="v1.0.3705" safemode="true"/>
+   </startup>
+</configuration>
+<!-- When used with version 1.1 (or later) of the runtime -->
+<configuration>
+   <startup>
+      <supportedRuntime version="v1.1.4322"/>
+      <supportedRuntime version="v1.0.3705"/>
+   </startup>
+</configuration>
+```
+
+## <a name="see-also"></a><span data-ttu-id="d82e8-144">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d82e8-144">See also</span></span>
+
+- [<span data-ttu-id="d82e8-145">Schemat ustawień uruchamiania</span><span class="sxs-lookup"><span data-stu-id="d82e8-145">Startup Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="d82e8-146">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="d82e8-146">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="d82e8-147">Instrukcje: Konfigurowanie aplikacji do obsługi w programie .NET Framework 4 lub nowszy</span><span class="sxs-lookup"><span data-stu-id="d82e8-147">How to: Configure an app to support .NET Framework 4 or later versions</span></span>](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [<span data-ttu-id="d82e8-148">Wykonanie Side-by-Side dla współdziałania z modelem COM</span><span class="sxs-lookup"><span data-stu-id="d82e8-148">Side-by-Side Execution for COM Interop</span></span>](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
+- [<span data-ttu-id="d82e8-149">Wykonywanie równoczesne i wewnątrzprocesowe</span><span class="sxs-lookup"><span data-stu-id="d82e8-149">In-Process Side-by-Side Execution</span></span>](../../../deployment/in-process-side-by-side-execution.md)

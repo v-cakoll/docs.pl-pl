@@ -205,7 +205,6 @@
 ### [Ułatwienia dostępu](framework/ui-automation/)
 ### [Dane i modelowanie](framework/data/)
 ### [Aplikacje klienckie](framework/develop-client-apps.md)
-#### [Typowe technologie klienckie](framework/common-client-technologies/)
 #### [Windows Presentation Foundation](framework/wpf/)
 #### [Windows Forms](framework/winforms/)
 ### [Zorientowane na usługę aplikacje z usługą WCF](framework/wcf/)

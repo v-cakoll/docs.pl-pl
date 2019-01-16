@@ -3,13 +3,13 @@ title: Biblioteki NuGet i platformy .NET
 description: Zalecane najlepsze dla pakietu nuget biblioteki .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/15/2019
+ms.openlocfilehash: 6c3c7feb95f0ebe6b348f42cdd243ce1d14b9c50
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614548"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333424"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -98,6 +98,8 @@ NuGet.org znajduje się własną [repozytorium serwera symboli](/nuget/create-pa
 
 > [!IMPORTANT]
 > Serwer symboli NuGet.org obsługuje tylko nowe [pliki symboli przenośne](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) utworzone przez projektów w stylu zestawu SDK.
+>
+> Aby użyć serwera symboli NuGet.org, podczas debugowania biblioteki .NET, deweloperzy musi mieć program Visual Studio 2017 15.9 lub nowszej.
 
 Alternatywą dla tworzenia pakietu symboli jest osadzanie plików symboli w głównym pakietu NuGet. Głównym pakietu NuGet jest większy, ale osadzone symboli plików oznacza, że deweloperzy nie muszą skonfigurować serwer symboli NuGet.org. Jeśli tworzysz pakiet NuGet za pomocą zestawu SDK stylu projektu, a następnie umożliwia osadzanie plików symboli, ustawiając `AllowedOutputExtensionsInPackageBuildOutputFolder` właściwości:
 

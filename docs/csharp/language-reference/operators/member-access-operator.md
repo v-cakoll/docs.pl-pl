@@ -9,45 +9,47 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: f5048761973e10bec9650469383e2f52cee74da4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a59f69d0349a054c8c2a5b701b8f63df113a6580
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235049"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333723"
 ---
-# <a name="-operator-c-reference"></a>. Operator (odwołanie w C#)
-Operator kropki (`.`) służy do uzyskiwania dostępu do elementu członkowskiego. Określa on element członkowski typu lub przestrzeni nazw. Operator kropki umożliwia na przykład dostęp do określonych metod w ramach biblioteki klas .NET Framework:  
-  
- [!code-csharp[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
-  
- Na przykład rozważmy następujące klasy:  
-  
- [!code-csharp[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]  
-  
- [!code-csharp[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]  
-  
- Zmienna `s` ma dwa elementy członkowskie, `a` i `b`; Aby uzyskać do nich dostęp, użyj operatora kropka:  
-  
- [!code-csharp[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
-  
- Kropka (.) jest również używana do formułowania nazw kwalifikowanych określających na przykład przestrzeń nazw lub interfejs, do których należą te nazwy.  
-  
- [!code-csharp[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
-  
- Dyrektywa using sprawia, że część kwalifikacji nazwy jest opcjonalna:  
-  
- [!code-csharp[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
-  
- Jednak gdy identyfikator jest niejednoznaczny, kwalifikacja nazwy jest wymagana:  
-  
- [!code-csharp[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
-  
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Zobacz też
+# <a name="-operator-c-reference"></a>. operator (odwołanie w C#)
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)
+Operator kropki (`.`) służy do uzyskiwania dostępu do elementu członkowskiego. Określa on element członkowski typu lub przestrzeni nazw. Operator kropki umożliwia na przykład dostęp do określonych metod w ramach biblioteki klas .NET Framework:
+
+[!code-csharp[csRefOperators#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#16)]
+
+Na przykład rozważmy następujące klasy:
+
+[!code-csharp[csRefOperators#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#17)]
+
+[!code-csharp[csRefOperators#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#18)]
+
+Zmienna `s` ma dwa elementy członkowskie, `a` i `b`; Aby uzyskać do nich dostęp, użyj operatora kropka:
+
+[!code-csharp[csRefOperators#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#19)]
+
+Kropka (.) jest również używana do formułowania nazw kwalifikowanych określających na przykład przestrzeń nazw lub interfejs, do których należą te nazwy.
+
+[!code-csharp[csRefOperators#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#20)]
+
+Dyrektywa using sprawia, że część kwalifikacji nazwy jest opcjonalna:
+
+[!code-csharp[csRefOperators#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#21)]
+
+Jednak gdy identyfikator jest niejednoznaczny, kwalifikacja nazwy jest wymagana:
+
+[!code-csharp[csRefOperators#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#22)]
+
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Operatory języka C#](index.md)

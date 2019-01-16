@@ -1,15 +1,15 @@
 ---
 title: Użyj strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klasyfikacji binarnej zrozumienie, jak na potrzeby prognozowania tonacji podjąć odpowiednie działania.
-ms.date: 12/20/2018
+ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c6ef4da7f429b92591c90daa3fb06f367d8a578a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 429304bbbef94457800673f1b087752eb3d5dba9
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030168"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333801"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 
@@ -122,7 +122,7 @@ Musisz utworzyć trzy pola globalnego na potrzeby przechowywania ścieżek do os
 * `_trainDataPath` zawiera ścieżkę do zestawu danych, używane do trenowania modelu.
 * `_testDataPath` zawiera ścieżkę do zestawu danych, używane do oceny modelu.
 * `_modelPath` ma ścieżkę, w którym jest zapisany trenowanego modelu.
-* `_textLoader` jest <xref:Microsoft.ML.Runtime.Data.TextLoader> używany do ładowania i przekształcić zestawy danych.
+* `_textLoader` jest <xref:Microsoft.ML.Data.TextLoader> używany do ładowania i przekształcić zestawy danych.
 
 Dodaj następujący kod po prawej stronie wiersza powyżej `Main` metodę, aby określić tych ścieżek i `_textLoader` zmiennej:
 
@@ -152,10 +152,10 @@ Utwórz zmienną o nazwie `mlContext` i zainicjuj ją o nowe wystąpienie klasy 
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Create the ML Context")]
 
-Następnie do Instalatora w celu załadowania zainicjować danych `_textLoader` zmienna globalna, aby można było użyć go ponownie.  Należy zauważyć, że używasz `TextReader`. Po utworzeniu `TextLoader` przy użyciu `TextReader`, są przekazywane w kontekście potrzebne i <xref:Microsoft.ML.Runtime.Data.TextLoader.Arguments> klasy, która umożliwia dostosowanie.
+Następnie do Instalatora w celu załadowania zainicjować danych `_textLoader` zmienna globalna, aby można było użyć go ponownie.  Należy zauważyć, że używasz `TextReader`. Po utworzeniu `TextLoader` przy użyciu `TextReader`, są przekazywane w kontekście potrzebne i <xref:Microsoft.ML.Data.TextLoader.Arguments> klasy, która umożliwia dostosowanie.
 
- Określ schemat danych, przekazując tablicę <xref:Microsoft.ML.Runtime.Data.TextLoader.Column> obiektów modułu ładującego zawierająca wszystkie nazwy kolumn i ich typy. Wcześniej zdefiniowany schemat danych podczas tworzenia naszej `SentimentData` klasy. Dla naszych schematu jest pierwszą kolumnę (etykieta) <xref:System.Boolean> (Prognozowane) i druga kolumna (SentimentText) to funkcja typu/ciąg tekstowy używany do prognozowania tonacji.
-`TextReader` Klasa zwraca w pełni zainicjowane <xref:Microsoft.ML.Runtime.Data.TextLoader>  
+ Określ schemat danych, przekazując tablicę <xref:Microsoft.ML.Data.TextLoader.Column> obiektów modułu ładującego zawierająca wszystkie nazwy kolumn i ich typy. Wcześniej zdefiniowany schemat danych podczas tworzenia naszej `SentimentData` klasy. Dla naszych schematu jest pierwszą kolumnę (etykieta) <xref:System.Boolean> (Prognozowane) i druga kolumna (SentimentText) to funkcja typu/ciąg tekstowy używany do prognozowania tonacji.
+`TextReader` Klasa zwraca w pełni zainicjowane <xref:Microsoft.ML.Data.TextLoader>  
 
 Aby zainicjować `_textLoader` zmienna globalna, aby można było użyć go ponownie w przypadku wymaganych zestawów danych, Dodaj następujący kod po `mlContext` inicjowania:
 
@@ -186,7 +186,7 @@ Należy zauważyć, że dwa parametry są przekazywane do metody Train; `MLConte
 
 ## <a name="load-the-data"></a>Ładowanie danych
 
-Będzie załadować dane przy użyciu `_textLoader` zmienna globalna z `dataPath` parametru. Zwraca <xref:Microsoft.ML.Runtime.Data.IDataView>. Jako dane wejściowe i wyjściowe `Transforms`, `DataView` jest typem potoku danych podstawowych porównywalne do `IEnumerable` dla `LINQ`.
+Będzie załadować dane przy użyciu `_textLoader` zmienna globalna z `dataPath` parametru. Zwraca <xref:Microsoft.ML.Data.IDataView>. Jako dane wejściowe i wyjściowe `Transforms`, `DataView` jest typem potoku danych podstawowych porównywalne do `IEnumerable` dla `LINQ`.
 
 W strukturze ML.NET dane są podobne do widoku SQL. Jest opóźnieniem ocenianą informatycznych i heterogenicznych. Obiekt jest pierwszą częścią potoku i służy do ładowania danych. W tym samouczku ładuje zestaw danych o komentarze i odpowiednie toksyczne lub inne niż toksyczne tonacji. Służy do tworzenia modelu i szkoleń.
 
@@ -200,7 +200,7 @@ Wstępne przetwarzanie i czyszczenie danych są ważne zadania, które występuj
 
 UCZENIE MASZYNOWE. Potoki przekształcenie firmy NET tworzą zbiór niestandardowych przekształceń, które są stosowane do danych przed szkolenie i testowanie. Przekształcenia głównym celem jest danych [cechowania](../resources/glossary.md#feature-engineering). Omówienie algorytmów uczenia maszynowego [neural](../resources/glossary.md#feature) dane, dzięki czemu następnym krokiem jest do przekształcania danych tekstowych do formatu, który rozpoznaje nasze algorytmy uczenia Maszynowego. Ten format jest [liczbowych wektor](../resources/glossary.md#numerical-feature-vector).
 
-Następnie wywołaj `mlContext.Transforms.Text.FeaturizeText` które featurizes kolumny tekstowej (`SentimentText`) o nazwie kolumny do wektora liczbowych `Features` używane przez algorytm uczenia maszynowego. To wywołanie otoką zwracające <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601> skutecznie się potoku. Nazwij to `pipeline` jako następnie dołączy trainer do `EstimatorChain`. Dodaj jako następnego wiersza kodu:
+Następnie wywołaj `mlContext.Transforms.Text.FeaturizeText` które featurizes kolumny tekstowej (`SentimentText`) o nazwie kolumny do wektora liczbowych `Features` używane przez algorytm uczenia maszynowego. To wywołanie otoką zwracające <xref:Microsoft.ML.Data.EstimatorChain%601> skutecznie się potoku. Nazwij to `pipeline` jako następnie dołączy trainer do `EstimatorChain`. Dodaj jako następnego wiersza kodu:
 
 [!code-csharp[TextFeaturizingEstimator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizingEstimator")]
 
@@ -216,7 +216,7 @@ Dodaj następujący kod do `Train` metody:
 
 ## <a name="train-the-model"></a>Uczenie modelu
 
-Uczenie modelu, <xref:Microsoft.ML.Data.TransformerChain%601>zgodnie z zestawu danych, który został załadowany i przekształcone. Po zdefiniowaniu estymatora uczenie modelu przy użyciu <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> przy jednoczesnym zapewnieniu dane szkoleniowe już załadowana. Spowoduje to zwrócenie modelu na potrzeby prognozy. `pipeline.Fit()` szkolenie modeli potoku i zwraca `Transformer` na podstawie `DataView` przekazany. Eksperyment nie jest wykonywane, dopóki nie dzieje.
+Uczenie modelu, <xref:Microsoft.ML.Data.TransformerChain%601>zgodnie z zestawu danych, który został załadowany i przekształcone. Po zdefiniowaniu estymatora uczenie modelu przy użyciu <xref:Microsoft.ML.Data.EstimatorChain`1.Fit*> przy jednoczesnym zapewnieniu dane szkoleniowe już załadowana. Spowoduje to zwrócenie modelu na potrzeby prognozy. `pipeline.Fit()` szkolenie modeli potoku i zwraca `Transformer` na podstawie `DataView` przekazany. Eksperyment nie jest wykonywane, dopóki nie dzieje.
 
 Dodaj następujący kod do `Train` metody:
 
@@ -287,7 +287,7 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 
 * Zapisuje modelu w postaci pliku zip.
 
-Następnie utwórz metodę, aby zapisać modelu mogą być używane ponownie i używane w innych aplikacjach. `ITransformer` Ma <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.Runtime.IHostEnvironment,System.IO.Stream)> metodę, która przyjmuje `_modelPath` globalne pola i <xref:System.IO.Stream>. Aby zapisać ten element jako plik zip, należy utworzyć `FileStream` bezpośrednio przed wywołaniem `SaveTo` metody. Dodaj następujący kod do `SaveModelAsFile` metodę jako następny wiersz:
+Następnie utwórz metodę, aby zapisać modelu mogą być używane ponownie i używane w innych aplikacjach. `ITransformer` Ma <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> metodę, która przyjmuje `_modelPath` globalne pola i <xref:System.IO.Stream>. Aby zapisać ten element jako plik zip, należy utworzyć `FileStream` bezpośrednio przed wywołaniem `SaveTo` metody. Dodaj następujący kod do `SaveModelAsFile` metodę jako następny wiersz:
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#24 "Add the SaveTo Method")]
 
@@ -319,16 +319,16 @@ Dodaj wywołanie do nowej metody z `Main` metody, po prawej stronie w obszarze `
 
 [!code-csharp[CallPredict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#16 "Call the Predict method")]
 
-Gdy `model` jest `transformer` który operuje na wiele wierszy danych, to bardzo typowy scenariusz w środowisku produkcyjnym jest na potrzeby prognoz na poszczególne przykłady. <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> Jest otoką, który jest zwracany z `MakePredictionFunction` metody. Możemy dodać następujący kod, aby utworzyć PredictionFunction jako pierwszy wiersz w `Predict` metody:
+Gdy `model` jest `transformer` który operuje na wiele wierszy danych, to bardzo typowy scenariusz w środowisku produkcyjnym jest na potrzeby prognoz na poszczególne przykłady. <xref:Microsoft.ML.PredictionEngine%602> Jest otoką, który jest zwracany z `CreatePredictionEngine` metody. Możemy dodać następujący kod, aby utworzyć `PredictionFunction` jako pierwszy wiersz w `Predict` metody:
 
-[!code-csharp[MakePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
+[!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
   
 Dodaj komentarz do testowania uczonego modelu prognozowania w `Predict` metody przez utworzenie wystąpienia `SentimentData`:
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for single prediction")]
 
 
- Możesz go używać, aby przewidzieć toksyczne lub inne niż toksyczne tonacji pojedyncze wystąpienie danych komentarz. Aby uzyskać prognozę, użyj <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)> na danych. Należy pamiętać, że dane wejściowe to ciąg, a model zawiera cechowania. Potok jest zsynchronizowany podczas uczenia i przewidywania. Nie trzeba napisać kod przetwarzania wstępnego cechowania specjalnie dla prognoz i zajmuje się tego samego interfejsu API i usługi batch jednorazowe prognozy.
+ Możesz go używać, aby przewidzieć toksyczne lub inne niż toksyczne tonacji pojedyncze wystąpienie danych komentarz. Aby uzyskać prognozę, użyj <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> na danych. Należy pamiętać, że dane wejściowe to ciąg, a model zawiera cechowania. Potok jest zsynchronizowany podczas uczenia i przewidywania. Nie trzeba napisać kod przetwarzania wstępnego cechowania specjalnie dla prognoz i zajmuje się tego samego interfejsu API i usługi batch jednorazowe prognozy.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create a prediction of sentiment")]
 
@@ -368,7 +368,7 @@ Model obciążenia
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
-Teraz, gdy model, możesz go używać, aby przewidzieć toksyczne lub inne niż toksyczne tonacji przy użyciu danych komentarz <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Runtime.Data.IDataView)> metody. Aby uzyskać prognozę, użyj `Predict` na nowych danych. Należy pamiętać, że dane wejściowe to ciąg, a model zawiera cechowania. Potok jest zsynchronizowany podczas uczenia i przewidywania. Nie trzeba napisać kod przetwarzania wstępnego cechowania specjalnie dla prognoz i zajmuje się tego samego interfejsu API i usługi batch jednorazowe prognozy. Dodaj następujący kod do `PredictWithModelLoadedFromFile` metodę dla prognoz:
+Teraz, gdy model, możesz go używać, aby przewidzieć toksyczne lub inne niż toksyczne tonacji przy użyciu danych komentarz <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Data.IDataView)> metody. Aby uzyskać prognozę, użyj `Predict` na nowych danych. Należy pamiętać, że dane wejściowe to ciąg, a model zawiera cechowania. Potok jest zsynchronizowany podczas uczenia i przewidywania. Nie trzeba napisać kod przetwarzania wstępnego cechowania specjalnie dla prognoz i zajmuje się tego samego interfejsu API i usługi batch jednorazowe prognozy. Dodaj następujący kod do `PredictWithModelLoadedFromFile` metodę dla prognoz:
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#28 "Create predictions of sentiments")]
 
@@ -413,7 +413,7 @@ Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.529704
 
 The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.0\Data\Model.zip
 
-=============== Prediction Test of loaded model with a multiple samples ===============
+=============== Prediction Test of loaded model with a multiple sample ===============
 
 Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.4585565
 Sentiment: He is the best, and the article should say that. | Prediction: Not Toxic | Probability: 0.9924279
@@ -437,4 +437,4 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 
 Przejdź do następnego samouczka, aby dowiedzieć się więcej
 > [!div class="nextstepaction"]
-> [Taksówek taryfy predykcyjne](taxi-fare.md)
+> [Taxi Fare Predictor](taxi-fare.md)

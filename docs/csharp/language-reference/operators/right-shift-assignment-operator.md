@@ -1,5 +1,5 @@
 ---
-title: '&gt;&gt;= — Operator - C# odwołania'
+title: '&gt;&gt;= — operator - C# odwołania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,38 +8,41 @@ helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: aebc92ffb007db7b4950313874ebc2bf3c40615f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 02a9559a5c4086eeed09094c15c3620366ffad8c
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239449"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333695"
 ---
-# <a name="gtgt-operator-c-reference"></a>&gt;&gt;= — Operator (odwołanie w C#)
-Operator przypisania przesunięcia w prawo.  
-  
-## <a name="remarks"></a>Uwagi  
- Wyrażenie formularza  
-  
-```csharp  
-x >>= y  
-```  
-  
- jest wykonywane jako  
-  
-```csharp  
-x = x >> y  
-```  
-  
- z tą różnicą, że `x` jest obliczone tylko raz. [Operator >>](../../../csharp/language-reference/operators/right-shift-operator.md) przesuwa `x` w prawo o liczbę bitów określoną przez `y`.  
-  
- Operatora [ nie można przeciążyć bezpośrednio, ale ](../../../csharp/language-reference/operators/right-shift-operator.md)operator >>[ (zobacz ](../../../csharp/language-reference/keywords/operator.md)operator) może zostać przeciążony w typach danych zdefiniowanych przez użytkownika.  
-  
-## <a name="example"></a>Przykład  
- [!code-csharp[csRefOperators#11](../../../csharp/language-reference/operators/codesnippet/CSharp/right-shift-assignment-operator_1.cs)]  
-  
-## <a name="see-also"></a>Zobacz też
+# <a name="gtgt-operator-c-reference"></a>&gt;&gt;= — operator (C# odwołania)
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)
+Operator przypisania przesunięcia w prawo.
+
+## <a name="remarks"></a>Uwagi
+
+Wyrażenie formularza
+
+```csharp
+x >>= y
+```
+
+jest wykonywane jako
+
+```csharp
+x = x >> y
+```
+
+z tą różnicą, że `x` jest obliczone tylko raz. [Operator >>](right-shift-operator.md) przesuwa `x` w prawo o liczbę bitów określoną przez `y`.
+
+Operatora [ nie można przeciążyć bezpośrednio, ale ](right-shift-operator.md)operator >>[ (zobacz ](../keywords/operator.md)operator) może zostać przeciążony w typach danych zdefiniowanych przez użytkownika.
+
+## <a name="example"></a>Przykład
+
+[!code-csharp[csRefOperators#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#11)]
+
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [C#Operatory](index.md)

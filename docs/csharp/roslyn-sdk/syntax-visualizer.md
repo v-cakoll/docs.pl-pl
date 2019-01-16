@@ -3,12 +3,12 @@ title: Eksplorowanie kodu za pomocą wizualizatora składni Roslyn w programie V
 description: Wizualizatora składni obejmuje narzędzia wizualne Eksplorowanie modeli, które generuje kod w zestawie SDK platformy kompilatora .NET.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143569"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307204"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Eksplorowanie kodu za pomocą wizualizatora składni Roslyn w programie Visual Studio
 
@@ -80,7 +80,7 @@ Oto układ dokowania za pomocą okna narzędzi wizualizatora i okno wykresu skł
 
 Innym rozwiązaniem jest umieszczenie okno wykresu składni na drugim monitorze w konfiguracji dwóch monitorów.
 
-# <a name="inspecting-semantics"></a>Inspekcja semantyki
+## <a name="inspecting-semantics"></a>Inspekcja semantyki
 
 Syntax Visualizer włącza podstawowe kontrolę symboli i informacje semantyczne. Typ `double x = 1 + 1;` wewnątrz Main() w przykładzie języka C#. Następnie wybierz wyrażenie `1 + 1` w oknie edytora kodu. Wyróżnia wizualizatora **AddExpression** węzła w wizualizatorze. Kliknij prawym przyciskiem myszy to **AddExpression** i kliknij pozycję **Symbol widoku (jeśli istnieje)**. Należy zauważyć, że większość elementów menu ma kwalifikator "ewentualne". Syntax Visualizer sprawdza właściwości węzła, w tym właściwości, które może nie być dostępne dla wszystkich węzłów. 
 

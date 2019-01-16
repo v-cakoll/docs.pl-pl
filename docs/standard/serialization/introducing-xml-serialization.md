@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: e1625d2cdf0be4106a43b9d40aef97ea2b5c4ec4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 5de13fc4da371220f46a107ca9b620e1313e75d4
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999472"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307529"
 ---
 # <a name="introducing-xml-serialization"></a>Wprowadzenie do serializacji XML
 
@@ -28,7 +28,7 @@ Serializacji to proces konwersji obiektu do formularza, który można łatwo prz
 > [!NOTE]
 > Serializacji XML nie konwertuje metody, indeksatory, prywatnych pola lub właściwości tylko do odczytu (z wyjątkiem kolekcji tylko do odczytu). Do serializacji obiektu wszystkie pola i właściwości, zarówno publiczne, jak i prywatnych, użyj <xref:System.Runtime.Serialization.DataContractSerializer> zamiast serializacji XML.
 
- Klasa centralnej w serializacji XML jest <xref:System.Xml.Serialization.XmlSerializer> klasy i najważniejszych metod w tej klasie są **Serialize** i **Deserialize** metody. <xref:System.Xml.Serialization.XmlSerializer> Tworzy PLiki C# i kompiluje je na PLiki z rozszerzeniem dll do wykonania tej serializacji. W programie .NET Framework 2.0 [narzędzie generatora serializatora XML (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) jest przeznaczona do generowania te zestawy serializacji z góry na wdrożony z aplikacją i zwiększeniu wydajności uruchamiania. Strumień XML generowanych przez **XmlSerializer** jest zgodne z konsorcjum World Wide Web (W3C) [język definicji schematu XML (XSD) 1.0 zalecenia](https://www.w3.org/TR/xslt). Ponadto generowane typy danych są zgodne z dokumentu zatytułowanej "XML schematu część 2: typy danych."
+ Klasa centralnej w serializacji XML jest <xref:System.Xml.Serialization.XmlSerializer> klasy i najważniejszych metod w tej klasie są **Serialize** i **Deserialize** metody. <xref:System.Xml.Serialization.XmlSerializer> Tworzy PLiki C# i kompiluje je na PLiki z rozszerzeniem dll do wykonania tej serializacji. W programie .NET Framework 2.0 [narzędzie generatora serializatora XML (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) jest przeznaczona do generowania te zestawy serializacji z góry na wdrożony z aplikacją i zwiększeniu wydajności uruchamiania. Strumień XML generowanych przez **XmlSerializer** jest zgodne z konsorcjum World Wide Web (W3C) [język definicji schematu XML (XSD) 1.0 zalecenia](https://www.w3.org/TR/xslt). Ponadto generowane typy danych są zgodne z dokumentu zatytułowanej "XML schematu część 2: Typy danych."
 
  Dane w obiekty opisano przy użyciu narzędzi programistycznych języka, takich jak klasy, pola, właściwości, typy pierwotne, tablice i XML nawet osadzone w formie **XmlElement** lub **XmlAttribute**obiektów. Istnieje możliwość tworzenia własnych klas oznaczona z atrybutów, lub za pomocą narzędzia definicji schematu XML można wygenerować klas na podstawie istniejącego schematu XML.
 
@@ -36,9 +36,9 @@ Serializacji to proces konwersji obiektu do formularza, który można łatwo prz
 
  Atrybuty kontrolować strumień XML generowanych przez **XmlSerializer** klasy, co pozwala ustawić przestrzeni nazw XML, nazwa elementu, nazwa atrybutu i tak dalej strumienia XML. Aby uzyskać więcej informacji o tych atrybutów i sposobie ich kontrolować serializacji XML, zobacz [kontrolowanie atrybutów za pomocą serializacji XML](controlling-xml-serialization-using-attributes.md). Dla tabeli te atrybuty, które są używane do kontrolowania wygenerowany kod XML, zobacz [atrybutów, sterowania serializacji XML](attributes-that-control-xml-serialization.md).
 
- **XmlSerializer** klasy dalsze można serializować obiektu i generowanie zakodowany strumień XML protokołu SOAP. Wygenerowany kod XML jest zgodna z części 5 dokumentu World Wide Web Consortium "Simple Object Access Protocol (SOAP) 1.1." Aby uzyskać więcej informacji na temat tego procesu, zobacz [instrukcje: serializacja obiektu jako Stream XML SOAP-Encoded](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md). Dla tabeli atrybutów kontrolujących wygenerowany kod XML, zobacz [atrybuty, kontroli kodowany protokołu SOAP serializacji](attributes-that-control-encoded-soap-serialization.md).
+ **XmlSerializer** klasy dalsze można serializować obiektu i generowanie zakodowany strumień XML protokołu SOAP. Wygenerowany kod XML jest zgodna z części 5 dokumentu World Wide Web Consortium "Simple Object Access Protocol (SOAP) 1.1." Aby uzyskać więcej informacji na temat tego procesu, zobacz [jak: Serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md). Dla tabeli atrybutów kontrolujących wygenerowany kod XML, zobacz [atrybuty, kontroli kodowany protokołu SOAP serializacji](attributes-that-control-encoded-soap-serialization.md).
 
- **XmlSerializer** generuje komunikaty protokołu SOAP utworzone przez i przekazanych do usług XML sieci Web. Aby kontrolować komunikaty protokołu SOAP, można zastosować atrybutów do klasy, zwracanej wartości, parametry i pola znaleziony w pliku usługi sieci Web XML (.asmx). Można użyć atrybuty wymienione w "Serializacji XML atrybuty czy kontroli" i "Atrybuty czy kontroli kodowany protokołu SOAP serializacji", ponieważ usługi XML sieci Web mogą korzystać styl literału lub zakodowanego protokołu SOAP. Aby uzyskać więcej informacji o korzystaniu z atrybutów w celu sterowania XML generowanych przez usługi sieci Web XML, zobacz [serializacji XML przy użyciu usług XML sieci Web](xml-serialization-with-xml-web-services.md). Aby uzyskać więcej informacji o usługach sieci Web XML i protokołu SOAP, zobacz [Dostosowywanie komunikaty protokołu SOAP](https://msdn.microsoft.com/en-us/subscriptions/index/dkwy2d72\(v=vs.71\).aspx).
+ **XmlSerializer** generuje komunikaty protokołu SOAP utworzone przez i przekazanych do usług XML sieci Web. Aby kontrolować komunikaty protokołu SOAP, można zastosować atrybutów do klasy, zwracanej wartości, parametry i pola znaleziony w pliku usługi sieci Web XML (.asmx). Można użyć atrybuty wymienione w "Serializacji XML atrybuty czy kontroli" i "Atrybuty czy kontroli kodowany protokołu SOAP serializacji", ponieważ usługi XML sieci Web mogą korzystać styl literału lub zakodowanego protokołu SOAP. Aby uzyskać więcej informacji o korzystaniu z atrybutów w celu sterowania XML generowanych przez usługi sieci Web XML, zobacz [serializacji XML przy użyciu usług XML sieci Web](xml-serialization-with-xml-web-services.md). Aby uzyskać więcej informacji o usługach sieci Web XML i protokołu SOAP, zobacz [Dostosowywanie komunikaty protokołu SOAP](https://msdn.microsoft.com/subscriptions/index/dkwy2d72\(v=vs.71\).aspx).
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>Zagadnienia dotyczące aplikacji XmlSerializer zabezpieczeń
 
@@ -107,7 +107,7 @@ Następujące elementy mogą być Zserializowany za pomocą **XmLSerializer** kl
 
 - **Zestaw danych** obiektów.
 
- Aby uzyskać więcej informacji na temat serializacji lub deserializacji obiektów, zobacz [instrukcje: serializacja obiektu](how-to-serialize-an-object.md) i [jak: wykonywać deserializację obiektu](how-to-deserialize-an-object.md).
+ Aby uzyskać więcej informacji na temat serializacji lub deserializacji obiektów, zobacz [jak: Serializacja obiektu](how-to-serialize-an-object.md) i [jak: Deserializacji obiektu](how-to-deserialize-an-object.md).
 
 ## <a name="advantages-of-using-xml-serialization"></a>Korzyści wynikające z używania serializacji XML
 
@@ -147,7 +147,7 @@ Następujące należy uwzględnić podczas przy użyciu **XmlSerializer** klasy:
 
 ## <a name="xsd-data-type-mapping"></a>Mapowania typów danych XSD
 
-W3C dokumentu zatytułowanej [XML schematu część 2: typy danych](https://www.w3.org/TR/xmlschema-2/) Określa typy proste dane, które są dozwolone w schemacie języka (XSD) definicji schematu XML. Dla wielu z tych (na przykład **int** i **dziesiętna**), ma odpowiedni typ danych w programie .NET Framework. Jednak niektóre typy danych XML ma odpowiedni typ danych w programie .NET Framework (na przykład **NMTOKEN** — typ danych). W takich przypadkach Jeśli za pomocą narzędzia definicji schematu XML ([narzędzie definicji schematu XML (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)) do generowania klasy w schemacie, odpowiedni atrybut jest stosowany do składowej typu ciąg i jego **typudanych** właściwość jest ustawiona na nazwę typu danych XML. Na przykład, jeśli schemat zawiera element o nazwie "MyToken" z typem danych XML **NMTOKEN**, wygenerowana klasa może zawierać składową, jak pokazano w poniższym przykładzie.
+W3C dokumentu zatytułowanej [XML schematu część 2: Typy danych](https://www.w3.org/TR/xmlschema-2/) Określa typy proste dane, które są dozwolone w schemacie języka (XSD) definicji schematu XML. Dla wielu z tych (na przykład **int** i **dziesiętna**), ma odpowiedni typ danych w programie .NET Framework. Jednak niektóre typy danych XML ma odpowiedni typ danych w programie .NET Framework (na przykład **NMTOKEN** — typ danych). W takich przypadkach Jeśli za pomocą narzędzia definicji schematu XML ([narzędzie definicji schematu XML (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)) do generowania klasy w schemacie, odpowiedni atrybut jest stosowany do składowej typu ciąg i jego **typudanych** właściwość jest ustawiona na nazwę typu danych XML. Na przykład, jeśli schemat zawiera element o nazwie "MyToken" z typem danych XML **NMTOKEN**, wygenerowana klasa może zawierać składową, jak pokazano w poniższym przykładzie.
 
 ```vb
 <XmlElement(DataType:="NMTOKEN")> _
@@ -186,4 +186,4 @@ Aby uzyskać pełną listę mapowań typu, zobacz **DataType** właściwości dl
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Przykłady serializacji XML](examples-of-xml-serialization.md)
 - [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)
-- [Instrukcje: Deserializacja obiektu](how-to-deserialize-an-object.md)
+- [Instrukcje: Deserializacji obiektu](how-to-deserialize-an-object.md)

@@ -4,12 +4,12 @@ description: Odkryj opcje do organizowania mikrousług i wielokontenerowych apli
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c3a40d5a9229ec754f5a5c2e2637af964f25ba08
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152733"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307438"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie mikrousług i wielokontenerowych aplikacji o wysokiej skalowalności i dostępności
 
@@ -91,7 +91,7 @@ Usługa Azure Kubernetes Service optymalizuje konfigurację popularnych narzędz
 
 **Rysunek 4-24**. Uproszczoną strukturę i topologii klastra Kubernetes
 
-Jeśli rysunek 4 – 24 widać strukturę klastra Kubernetes, w którym węzła głównego (VM) określa większość koordynację klastra i kontenerów można wdrożyć na pozostałe węzły, które są zarządzane jako pojedynczy puli z punktu widzenia aplikacji i umożliwia y jednostki organizacyjnej, aby możliwe było skalowanie tysięcy lub nawet dziesiątków tysięcy kontenerów.
+Na rysunku 4 – 24 widać strukturę klastra Kubernetes, w którym węzła głównego (VM) określa większość koordynację klastra i kontenerów można wdrożyć na pozostałe węzły, które są zarządzane jako pojedynczy puli z punktu widzenia aplikacji i umożliwia y jednostki organizacyjnej, aby możliwe było skalowanie tysięcy lub nawet dziesiątków tysięcy kontenerów.
 
 ## <a name="development-environment-for-kubernetes"></a>Środowisko programistyczne dla platformy Kubernetes
 
@@ -148,7 +148,7 @@ Aby uzyskać więcej informacji Sprawdź artykuł [programowanie zespołowe za p
 - **Wprowadzenie do korzystania z usługi Azure Kubernetes Service (AKS)** \
   [*https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal*](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
 
-- **Usługa Azure Dev miejsca do magazynowania** \
+- **Azure Dev Spaces** \
   [*https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces*](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
 
 - **Kubernetes** oficjalna witryna. \

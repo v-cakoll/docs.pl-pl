@@ -1,7 +1,7 @@
 ---
 title: Operator [] — C# odwołania
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/10/2019
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -10,52 +10,62 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 3e2ce5c4b74cbf79e00410791ffcc31368f78648
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c464dab1ebf62d33b74c83b8d5c3c563fef4e77c
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244006"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307126"
 ---
 # <a name="-operator-c-reference"></a>Operator [] (odwołanie w C#)
-Nawiasy kwadratowe (`[]`) są używane do obsługi tablic, indeksatorów i atrybutów. Mogą być również używane ze wskaźnikami.  
-  
-## <a name="remarks"></a>Uwagi  
- Typ tablicy jest typem następującym po `[]`:  
-  
- [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
-  
- Aby uzyskać dostęp do elementu tablicy, indeks żądanego elementu musi zostać ujęty w nawiasy kwadratowe:  
-  
- [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
-  
- Wyjątek jest generowany, jeśli indeks tablicy jest poza zakresem.  
-  
- Tablica indeksowania operator nie może zostać przeciążony; jednak typów można zdefiniować indeksatorów, które przyjmują jeden lub więcej parametrów. Parametry indeksatora są ujęte w nawiasy kwadratowe, podobnie jak indeksy tablicy, ale parametry indeksatora mogą być deklarowane jako dowolny typ — w odróżnieniu od indeksów tablicy, które muszą być wartością całkowitą.  
-  
- Na przykład: .NET Framework definiuje typ `Hashtable`, który kojarzy klucze i wartości dowolnego typu:  
-  
- [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
-  
- Nawiasy kwadratowe są również używane do określenia [atrybutów](../../../csharp/programming-guide/concepts/attributes/index.md):  
-  
- [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
-  
- Nawiasów kwadratowych można użyć do odindeksowania wskaźnika:  
-  
- [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
-  
- Nie jest wykonywane sprawdzanie granic.  
-  
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Zobacz też
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Operatory języka C#](../../../csharp/language-reference/operators/index.md)  
-- [Tablice](../../../csharp/programming-guide/arrays/index.md)  
-- [Indeksatory](../../../csharp/programming-guide/indexers/index.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed, instrukcja](../../../csharp/language-reference/keywords/fixed-statement.md)
+Nawiasy kwadratowe `[]`, są zwykle używane do dostępu do elementu tablicy, indeksator lub wskaźnika.
+
+Aby uzyskać więcej informacji o dostępie do elementu wskaźnika, zobacz [porady: uzyskiwanie dostępu do elementu tablicy za pomocą wskaźnika](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).
+
+Nawiasy kwadratowe również służy do określania [atrybuty](../../programming-guide/concepts/attributes/index.md):
+
+```csharp
+[System.Diagnostics.Conditional("DEBUG")]
+void TraceMethod() {}
+```
+
+## <a name="array-access"></a>Dostęp do tablicy
+
+Poniższy przykład pokazuje, jak uzyskać dostęp do elementów tablicy:
+
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Arrays)]
+
+Jeśli indeks tablicy jest poza granicami odpowiedniego wymiaru tablicy, <xref:System.IndexOutOfRangeException> zgłaszany.
+
+Jak pokazano na poprzednim przykładzie, możesz także użyć nawiasy kwadratowe w deklaracji typu tablicowego i konkretyzacji wystąpień tablicy.
+
+Aby uzyskać więcej informacji na temat tablic, zobacz [tablic](../../programming-guide/arrays/index.md).
+
+## <a name="indexer-access"></a>Dostęp indeksatora
+
+W poniższym przykładzie użyto .NET <xref:System.Collections.Generic.Dictionary%602> typu, aby zademonstrować dostęp indeksatora:
+
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Indexers)]
+
+Indeksatory pozwalają na indeks wystąpienia typu zdefiniowanego przez użytkownika w podobny sposób jak indeksowanie tablicy. W przeciwieństwie do tablicy wskaźników, które musi być liczbą całkowitą, argumenty indeksator może być zadeklarowana jako dowolnego typu.
+
+Aby uzyskać więcej informacji na temat indeksatorów, zobacz [indeksatory](../../programming-guide/indexers/index.md).
+
+## <a name="operator-overloadability"></a>Overloadability — operator
+
+Dostęp do elementu `[]` nie jest uważany za z możliwością przeciążenia operatora. Użyj [indeksatory](../../programming-guide/indexers/index.md) do obsługi indeksowanie z typami zdefiniowanymi przez użytkownika.
+
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+Aby uzyskać więcej informacji, zobacz [dostępu do elementu](~/_csharplang/spec/expressions.md#element-access) i [wskaźnika elementu dostępu](~/_csharplang/spec/unsafe-code.md#pointer-element-access) sekcje [ C# specyfikacji języka](../language-specification/index.md).
+
+## <a name="see-also"></a>Zobacz także
+
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Operatory języka C#](index.md)
+- [Tablice](../../programming-guide/arrays/index.md)
+- [Indeksatory](../../programming-guide/indexers/index.md)
+- [Typy wskaźników](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Atrybuty](../../programming-guide/concepts/attributes/index.md)

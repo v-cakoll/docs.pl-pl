@@ -1,7 +1,7 @@
 ---
 title: Operator [] — C# odwołania
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/10/2019
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -10,52 +10,62 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 3e2ce5c4b74cbf79e00410791ffcc31368f78648
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c464dab1ebf62d33b74c83b8d5c3c563fef4e77c
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244006"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307126"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="3dc49-102">Operator [] (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="3dc49-102">[] Operator (C# Reference)</span></span>
-<span data-ttu-id="3dc49-103">Nawiasy kwadratowe (`[]`) są używane do obsługi tablic, indeksatorów i atrybutów.</span><span class="sxs-lookup"><span data-stu-id="3dc49-103">Square brackets (`[]`) are used for arrays, indexers, and attributes.</span></span> <span data-ttu-id="3dc49-104">Mogą być również używane ze wskaźnikami.</span><span class="sxs-lookup"><span data-stu-id="3dc49-104">They can also be used with pointers.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="3dc49-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3dc49-105">Remarks</span></span>  
- <span data-ttu-id="3dc49-106">Typ tablicy jest typem następującym po `[]`:</span><span class="sxs-lookup"><span data-stu-id="3dc49-106">An array type is a type followed by `[]`:</span></span>  
-  
- [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
-  
- <span data-ttu-id="3dc49-107">Aby uzyskać dostęp do elementu tablicy, indeks żądanego elementu musi zostać ujęty w nawiasy kwadratowe:</span><span class="sxs-lookup"><span data-stu-id="3dc49-107">To access an element of an array, the index of the desired element is enclosed in brackets:</span></span>  
-  
- [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
-  
- <span data-ttu-id="3dc49-108">Wyjątek jest generowany, jeśli indeks tablicy jest poza zakresem.</span><span class="sxs-lookup"><span data-stu-id="3dc49-108">An exception is thrown if an array index is out of range.</span></span>  
-  
- <span data-ttu-id="3dc49-109">Tablica indeksowania operator nie może zostać przeciążony; jednak typów można zdefiniować indeksatorów, które przyjmują jeden lub więcej parametrów.</span><span class="sxs-lookup"><span data-stu-id="3dc49-109">The array indexing operator cannot be overloaded; however, types can define indexers that take one or more parameters.</span></span> <span data-ttu-id="3dc49-110">Parametry indeksatora są ujęte w nawiasy kwadratowe, podobnie jak indeksy tablicy, ale parametry indeksatora mogą być deklarowane jako dowolny typ — w odróżnieniu od indeksów tablicy, które muszą być wartością całkowitą.</span><span class="sxs-lookup"><span data-stu-id="3dc49-110">Indexer parameters are enclosed in square brackets, just like array indexes, but indexer parameters can be declared to be of any type, unlike array indexes, which must be integral.</span></span>  
-  
- <span data-ttu-id="3dc49-111">Na przykład: .NET Framework definiuje typ `Hashtable`, który kojarzy klucze i wartości dowolnego typu:</span><span class="sxs-lookup"><span data-stu-id="3dc49-111">For example, the .NET Framework defines a `Hashtable` type that associates keys and values of arbitrary type:</span></span>  
-  
- [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
-  
- <span data-ttu-id="3dc49-112">Nawiasy kwadratowe są również używane do określenia [atrybutów](../../../csharp/programming-guide/concepts/attributes/index.md):</span><span class="sxs-lookup"><span data-stu-id="3dc49-112">Square brackets are also used to specify [Attributes](../../../csharp/programming-guide/concepts/attributes/index.md):</span></span>  
-  
- [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
-  
- <span data-ttu-id="3dc49-113">Nawiasów kwadratowych można użyć do odindeksowania wskaźnika:</span><span class="sxs-lookup"><span data-stu-id="3dc49-113">You can use square brackets to index off a pointer:</span></span>  
-  
- [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
-  
- <span data-ttu-id="3dc49-114">Nie jest wykonywane sprawdzanie granic.</span><span class="sxs-lookup"><span data-stu-id="3dc49-114">No bounds checking is performed.</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="3dc49-115">Specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="3dc49-115">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="3dc49-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3dc49-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="3bdd4-102">Operator [] (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="3bdd4-102">[] Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="3dc49-117">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="3dc49-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="3dc49-118">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="3dc49-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="3dc49-119">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="3dc49-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="3dc49-120">Tablice</span><span class="sxs-lookup"><span data-stu-id="3dc49-120">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
-- [<span data-ttu-id="3dc49-121">Indeksatory</span><span class="sxs-lookup"><span data-stu-id="3dc49-121">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
-- [<span data-ttu-id="3dc49-122">unsafe</span><span class="sxs-lookup"><span data-stu-id="3dc49-122">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
-- [<span data-ttu-id="3dc49-123">fixed, instrukcja</span><span class="sxs-lookup"><span data-stu-id="3dc49-123">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)
+<span data-ttu-id="3bdd4-103">Nawiasy kwadratowe `[]`, są zwykle używane do dostępu do elementu tablicy, indeksator lub wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="3bdd4-103">Square brackets, `[]`, are typically used for array, indexer, or pointer element access.</span></span>
+
+<span data-ttu-id="3bdd4-104">Aby uzyskać więcej informacji o dostępie do elementu wskaźnika, zobacz [porady: uzyskiwanie dostępu do elementu tablicy za pomocą wskaźnika](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).</span><span class="sxs-lookup"><span data-stu-id="3bdd4-104">For more information about pointer element access, see [How to: access an array element with a pointer](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).</span></span>
+
+<span data-ttu-id="3bdd4-105">Nawiasy kwadratowe również służy do określania [atrybuty](../../programming-guide/concepts/attributes/index.md):</span><span class="sxs-lookup"><span data-stu-id="3bdd4-105">You also use square brackets to specify [attributes](../../programming-guide/concepts/attributes/index.md):</span></span>
+
+```csharp
+[System.Diagnostics.Conditional("DEBUG")]
+void TraceMethod() {}
+```
+
+## <a name="array-access"></a><span data-ttu-id="3bdd4-106">Dostęp do tablicy</span><span class="sxs-lookup"><span data-stu-id="3bdd4-106">Array access</span></span>
+
+<span data-ttu-id="3bdd4-107">Poniższy przykład pokazuje, jak uzyskać dostęp do elementów tablicy:</span><span class="sxs-lookup"><span data-stu-id="3bdd4-107">The following example demonstrates how to access array elements:</span></span>
+
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Arrays)]
+
+<span data-ttu-id="3bdd4-108">Jeśli indeks tablicy jest poza granicami odpowiedniego wymiaru tablicy, <xref:System.IndexOutOfRangeException> zgłaszany.</span><span class="sxs-lookup"><span data-stu-id="3bdd4-108">If an array index is outside the bounds of the corresponding dimension of an array, an <xref:System.IndexOutOfRangeException> is thrown.</span></span>
+
+<span data-ttu-id="3bdd4-109">Jak pokazano na poprzednim przykładzie, możesz także użyć nawiasy kwadratowe w deklaracji typu tablicowego i konkretyzacji wystąpień tablicy.</span><span class="sxs-lookup"><span data-stu-id="3bdd4-109">As the preceding example shows, you also use square brackets in declaration of an array type and instantiation of array instances.</span></span>
+
+<span data-ttu-id="3bdd4-110">Aby uzyskać więcej informacji na temat tablic, zobacz [tablic](../../programming-guide/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="3bdd4-110">For more information about arrays, see [Arrays](../../programming-guide/arrays/index.md).</span></span>
+
+## <a name="indexer-access"></a><span data-ttu-id="3bdd4-111">Dostęp indeksatora</span><span class="sxs-lookup"><span data-stu-id="3bdd4-111">Indexer access</span></span>
+
+<span data-ttu-id="3bdd4-112">W poniższym przykładzie użyto .NET <xref:System.Collections.Generic.Dictionary%602> typu, aby zademonstrować dostęp indeksatora:</span><span class="sxs-lookup"><span data-stu-id="3bdd4-112">The following example uses .NET <xref:System.Collections.Generic.Dictionary%602> type to demonstrate indexer access:</span></span>
+
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Indexers)]
+
+<span data-ttu-id="3bdd4-113">Indeksatory pozwalają na indeks wystąpienia typu zdefiniowanego przez użytkownika w podobny sposób jak indeksowanie tablicy.</span><span class="sxs-lookup"><span data-stu-id="3bdd4-113">Indexers allow you to index instances of a user-defined type in the similar way as array indexing.</span></span> <span data-ttu-id="3bdd4-114">W przeciwieństwie do tablicy wskaźników, które musi być liczbą całkowitą, argumenty indeksator może być zadeklarowana jako dowolnego typu.</span><span class="sxs-lookup"><span data-stu-id="3bdd4-114">Unlike array indices, which must be integer, the indexer arguments can be declared to be of any type.</span></span>
+
+<span data-ttu-id="3bdd4-115">Aby uzyskać więcej informacji na temat indeksatorów, zobacz [indeksatory](../../programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="3bdd4-115">For more information about indexers, see [Indexers](../../programming-guide/indexers/index.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="3bdd4-116">Overloadability — operator</span><span class="sxs-lookup"><span data-stu-id="3bdd4-116">Operator overloadability</span></span>
+
+<span data-ttu-id="3bdd4-117">Dostęp do elementu `[]` nie jest uważany za z możliwością przeciążenia operatora.</span><span class="sxs-lookup"><span data-stu-id="3bdd4-117">Element access `[]` is not considered an overloadable operator.</span></span> <span data-ttu-id="3bdd4-118">Użyj [indeksatory](../../programming-guide/indexers/index.md) do obsługi indeksowanie z typami zdefiniowanymi przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="3bdd4-118">Use [indexers](../../programming-guide/indexers/index.md) to support indexing with user-defined types.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="3bdd4-119">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="3bdd4-119">C# language specification</span></span>
+
+<span data-ttu-id="3bdd4-120">Aby uzyskać więcej informacji, zobacz [dostępu do elementu](~/_csharplang/spec/expressions.md#element-access) i [wskaźnika elementu dostępu](~/_csharplang/spec/unsafe-code.md#pointer-element-access) sekcje [ C# specyfikacji języka](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="3bdd4-120">For more information, see the [Element access](~/_csharplang/spec/expressions.md#element-access) and [Pointer element access](~/_csharplang/spec/unsafe-code.md#pointer-element-access) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="3bdd4-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3bdd4-121">See also</span></span>
+
+- [<span data-ttu-id="3bdd4-122">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="3bdd4-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="3bdd4-123">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="3bdd4-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="3bdd4-124">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="3bdd4-124">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="3bdd4-125">Tablice</span><span class="sxs-lookup"><span data-stu-id="3bdd4-125">Arrays</span></span>](../../programming-guide/arrays/index.md)
+- [<span data-ttu-id="3bdd4-126">Indeksatory</span><span class="sxs-lookup"><span data-stu-id="3bdd4-126">Indexers</span></span>](../../programming-guide/indexers/index.md)
+- [<span data-ttu-id="3bdd4-127">Typy wskaźników</span><span class="sxs-lookup"><span data-stu-id="3bdd4-127">Pointer types</span></span>](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [<span data-ttu-id="3bdd4-128">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="3bdd4-128">Attributes</span></span>](../../programming-guide/concepts/attributes/index.md)

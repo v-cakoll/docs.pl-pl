@@ -1,24 +1,24 @@
 ---
-title: Użyj PredictionFunction przewiduje jednego naraz — strukturze ML.NET
-description: Dowiedz się, jak używać PredictionFunction strukturze ML.NET przewiduje jednego naraz
-ms.date: 11/07/2018
+title: Użyj PredictionEngine przewiduje jednego naraz — strukturze ML.NET
+description: Dowiedz się, jak używać PredictionEngine strukturze ML.NET przewiduje jednego naraz
+ms.date: 01/15/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9e34c1357e5ac241abd628289cd694bcd6b9cbb1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0b3f60038fe7f49ffbff3c63fd2862ba67adb506
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131586"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333645"
 ---
-# <a name="use-the-predictionfunction-to-make-one-prediction-at-a-time---mlnet"></a><span data-ttu-id="e19ef-103">Użyj PredictionFunction przewiduje jednego naraz — strukturze ML.NET</span><span class="sxs-lookup"><span data-stu-id="e19ef-103">Use the PredictionFunction to make one prediction at a time - ML.NET</span></span> 
+# <a name="use-the-predictionengine-to-make-one-prediction-at-a-time---mlnet"></a><span data-ttu-id="2e53f-103">Użyj PredictionEngine przewiduje jednego naraz — strukturze ML.NET</span><span class="sxs-lookup"><span data-stu-id="2e53f-103">Use the PredictionEngine to make one prediction at a time - ML.NET</span></span> 
 
-<span data-ttu-id="e19ef-104">Ponieważ każdy model w strukturze ML.NET transformatora, użyj `model.Transform` do zastosowania modelu, który ma `DataView` do przewidywania przyszłych zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="e19ef-104">Since any ML.NET model is a transformer, you use `model.Transform` to apply the model to the `DataView` to make predictions.</span></span> 
+<span data-ttu-id="2e53f-104">Ponieważ każdy model w strukturze ML.NET transformatora, użyj `model.Transform` do zastosowania modelu, który ma `DataView` do przewidywania przyszłych zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="2e53f-104">Since any ML.NET model is a transformer, you use `model.Transform` to apply the model to the `DataView` to make predictions.</span></span> 
 
-<span data-ttu-id="e19ef-105">Bardziej typowy przypadek, jednak to nie "zestaw danych" Czy chcesz przewidzieć na, ale zamiast tego pojawi się jednym z przykładów w danym momencie.</span><span class="sxs-lookup"><span data-stu-id="e19ef-105">A more typical case, though, is when there is no 'dataset' that you want to predict on, but instead you receive one example at a time.</span></span> <span data-ttu-id="e19ef-106">Na przykład uruchomić model w ramach witryny sieci Web ASP.NET, a potrzebne do prognozowania na przychodzące żądania HTTP.</span><span class="sxs-lookup"><span data-stu-id="e19ef-106">For instance, you run the model as part of your ASP.NET website, and need to make a prediction for an incoming HTTP request.</span></span>
+<span data-ttu-id="2e53f-105">Bardziej typowy przypadek, jednak to nie "zestaw danych" Czy chcesz przewidzieć na, ale zamiast tego pojawi się jednym z przykładów w danym momencie.</span><span class="sxs-lookup"><span data-stu-id="2e53f-105">A more typical case, though, is when there is no 'dataset' that you want to predict on, but instead you receive one example at a time.</span></span> <span data-ttu-id="2e53f-106">Na przykład uruchomić model w ramach witryny sieci Web ASP.NET, a potrzebne do prognozowania na przychodzące żądania HTTP.</span><span class="sxs-lookup"><span data-stu-id="2e53f-106">For instance, you run the model as part of your ASP.NET website, and need to make a prediction for an incoming HTTP request.</span></span>
 
-<span data-ttu-id="e19ef-107">`PredictionFunction` Uruchamia przykładem w danym momencie przez potok prognozy.</span><span class="sxs-lookup"><span data-stu-id="e19ef-107">The `PredictionFunction` runs one example at a time through the prediction pipeline.</span></span>
+<span data-ttu-id="2e53f-107">`PredictionEngine` Uruchamia przykładem w danym momencie przez potok prognozy.</span><span class="sxs-lookup"><span data-stu-id="2e53f-107">The `PredictionEngine` runs one example at a time through the prediction pipeline.</span></span>
 
-<span data-ttu-id="e19ef-108">Oto pełny przykład za pomocą wbudowanych modelu zestawu danych Iris prognozowania:</span><span class="sxs-lookup"><span data-stu-id="e19ef-108">Here is the full example using a prebuilt Iris prediction dataset model:</span></span>
+<span data-ttu-id="2e53f-108">Oto pełny przykład za pomocą wbudowanych modelu zestawu danych Iris prognozowania:</span><span class="sxs-lookup"><span data-stu-id="2e53f-108">Here is the full example using a prebuilt Iris prediction dataset model:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
@@ -27,7 +27,7 @@ var mlContext = new MLContext();
 
 // Step one: read the data as an IDataView.
 // First, we define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.TextReader(new TextLoader.Arguments
+var reader = mlContext.Data.CreateTextReader(new TextLoader.Arguments
 {
     Column = new[] {
         new TextLoader.Column("SepalLength", DataKind.R4, 0),
@@ -59,7 +59,7 @@ var pipeline =
 var model = pipeline.Fit(trainData);
 ```
 
-<span data-ttu-id="e19ef-109">Do użycia [zrozumienie schematu](https://github.com/dotnet/machinelearning/blob/master/docs/code/SchemaComprehension.md) do prognozowania, należy zdefiniować parę klasy takie jak następujące:</span><span class="sxs-lookup"><span data-stu-id="e19ef-109">To use [schema comprehension](https://github.com/dotnet/machinelearning/blob/master/docs/code/SchemaComprehension.md) for prediction, define a pair of classes like the following:</span></span>
+<span data-ttu-id="2e53f-109">Do użycia [zrozumienie schematu](https://github.com/dotnet/machinelearning/blob/master/docs/code/SchemaComprehension.md) do prognozowania, należy zdefiniować parę klasy takie jak następujące:</span><span class="sxs-lookup"><span data-stu-id="2e53f-109">To use [schema comprehension](https://github.com/dotnet/machinelearning/blob/master/docs/code/SchemaComprehension.md) for prediction, define a pair of classes like the following:</span></span>
 
 ```csharp
 private class IrisInput
@@ -80,7 +80,7 @@ private class IrisPrediction
 }
 ```
 
-<span data-ttu-id="e19ef-110">Kod prognozowania wygląda teraz następująco:</span><span class="sxs-lookup"><span data-stu-id="e19ef-110">The prediction code now looks as follows:</span></span>
+<span data-ttu-id="2e53f-110">Kod prognozowania wygląda teraz następująco:</span><span class="sxs-lookup"><span data-stu-id="2e53f-110">The prediction code now looks as follows:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
@@ -89,13 +89,13 @@ var mlContext = new MLContext();
 
 // Use the model for one-time prediction.
 // Make the prediction function object. Note that, on average, this call takes around 200x longer
-// than one prediction, so you might want to cache and reuse the prediction function, instead of
+// than one prediction, so you might want to cache and reuse the prediction engine, instead of
 // creating one per prediction.
-var predictionFunc = model.MakePredictionFunction<IrisInput, IrisPrediction>(mlContext);
+var predictionEngine = model.CreatePredictionEngine<IrisInput, IrisPrediction>(mlContext);
 
 // Obtain the prediction. Remember that 'Predict' is not reentrant. If you want to use multiple threads
-// for simultaneous prediction, make sure each thread is using its own PredictionFunction.
-var prediction = predictionFunc.Predict(new IrisInput
+// for simultaneous prediction, make sure each thread is using its own PredictionEngine.
+var prediction = predictionEngine.Predict(new IrisInput
 {
     SepalLength = 4.1f,
     SepalWidth = 0.1f,

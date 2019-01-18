@@ -4,12 +4,12 @@ description: Mikrousługi mają być tak zaprojektowana, radzić sobie ze przej�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 174e9881be50b8c2f8220960e93dce626e776b65
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745332"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362239"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Odporność i wysoka dostępność w mikrousługach
 
@@ -29,12 +29,12 @@ Może wydawać się oczywiste, jest często pomijane, ale mikrousługi należy z
 
 Kondycja różni się od diagnostyki. Kondycja jest o mikrousługach raportowania swojego bieżącego stanu, aby podjąć odpowiednie działania. Dobrym przykładem jest praca z mechanizmów uaktualnieniu i wdrożeniu w celu zapewnienia dostępności. Mimo, że usługa może obecnie będącą w złej kondycji ze względu na awarię procesu lub ponowne uruchomienie komputera, usługi może nadal działać. Ostatnią czynnością, jaką potrzebne jest zapewnienie to niższa, wykonując uaktualnienie. Najlepszym rozwiązaniem jest w celu badania lub poczekaj na mikrousługach odzyskać. Zdarzenia dotyczące kondycji z mikrousługi pomagają nam podejmowanie świadomych decyzji, a w efekcie pomagają stworzyć samonaprawiania usług.
 
-W [Implementowanie kondycji sprawdza, czy w programie ASP.NET Core services](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) sekcji tego przewodnika firma Microsoft wyjaśniają jak używać nowej biblioteki ASP.NET HealthChecks w mikrousługi, więc zgłaszają stanu do monitorowania usługi i podejmij odpowiednie Akcje.
+W [Implementowanie kondycji sprawdza, czy w programie ASP.NET Core services](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services) sekcji tego przewodnika firma Microsoft wyjaśniają jak używać nowej biblioteki ASP.NET HealthChecks w mikrousługi, więc zgłaszają stanu do monitorowania usługi i podejmij odpowiednie Akcje.
 
 Istnieje również możliwość korzystania z doskonałą biblioteki typu open source o nazwie zapewniała Pulse, dostępne na [GitHub](https://github.com/Xabaril/BeatPulse) i [pakietu NuGet](https://www.nuget.org/packages/BeatPulse/). Ta biblioteka jest również kontrole kondycji, za pomocą akcentem, obsługiwane są dwa typy kontroli:
 
-- **Żywotności**: sprawdza, czy mikrousługach podtrzymania połączenia, oznacza to, jeśli będzie to możliwe do akceptowania żądań i odpowiedzi. 
-- **Gotowość**: sprawdza, czy mikrousług zależności (bazy danych, usługi kolejki, itp.) czy samodzielnie wszystko będzie gotowe, więc mikrousługi można zrobić, co ma odbywać się zrobić. 
+- **Żywotności**: Sprawdza, czy mikrousługach podtrzymania połączenia, oznacza to, jeśli będzie to możliwe do akceptowania żądań i odpowiedzi. 
+- **Gotowość**: Sprawdza, czy mikrousług zależności (bazy danych, usługi kolejki, itp.) czy samodzielnie wszystko będzie gotowe, więc mikrousługi można zrobić, co ma odbywać się zrobić. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Za pomocą strumieni zdarzeń diagnostycznych i dzienniki
 
@@ -58,7 +58,7 @@ Różne koordynatorów może brzmią podobnie, ale dane diagnostyczne i kontrole
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **12 Factor aplikacji. XI. Dzienniki: Traktować dzienniki jako strumieni zdarzeń** \
+- **12 Factor aplikacji. XI. Dzienniki: Traktuj dzienniki jako strumieni zdarzeń** \
   [*https://12factor.net/logs*](https://12factor.net/logs)
 
 - **Biblioteka programu Microsoft diagnostycznych użyciu struktury EventFlow** repozytorium GitHub. \
@@ -70,7 +70,7 @@ Różne koordynatorów może brzmią podobnie, ale dane diagnostyczne i kontrole
 - **Łączenie komputerów Windows do usługi Log Analytics na platformie Azure** \
   [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
-- **Rejestrowanie tym, co oznacza: Przy użyciu blok semantycznego rejestrowania aplikacji** \
+- **Rejestrowanie tym, co oznacza: Za pomocą blok semantycznego rejestrowania aplikacji** \
   [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 - **Splunk** oficjalna witryna. \

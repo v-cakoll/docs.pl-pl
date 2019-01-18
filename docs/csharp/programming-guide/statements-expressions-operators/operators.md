@@ -7,14 +7,15 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: e9518dcf2a9facfdc46c2f6245184ea2da95b819
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ec3cafec49ae2e05c67d177ad1ea1fdd9b73bca
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239004"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362499"
 ---
 # <a name="operators-c-programming-guide"></a>Operatory (Przewodnik programowania w języku C#)
+
 W języku C# *operator* jest elementem programu, który jest stosowany do co najmniej jednego *operandy* w wyrażeniu lub instrukcji. Operatory przyjmujące jeden argument operacji, takich jak operator inkrementacji (`++`) lub `new`, są określane jako *jednoargumentowe* operatorów. Operatory przyjmujące dwa argumenty operacji, takie jak operatory arytmetyczne (`+`,`-`,`*`,`/`), są określane jako *binarne* operatorów. Jeden operator, operator warunkowy (`?:`), przyjmuje trzy argumenty operacji i jest jedynym operatorem trójargumentowym w języku C#.  
   
  Poniższa instrukcja języka C# zawiera jeden operator jednoargumentowy i jeden argument operacji. Operator inkrementacji `++`, modyfikuje wartość argumentu operacji `y`.  
@@ -25,7 +26,8 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
   
  [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>Operatory, obliczenia i pierwszeństwo operatorów  
+## <a name="operators-evaluation-and-operator-precedence"></a>Operatory, obliczenia i pierwszeństwo operatorów
+
  Argument operacji może być prawidłowym wyrażeniem zawierającym kod o dowolnej długości i może składać się z dowolnej liczby podwyrażeń. W wyrażeniu zawierającym wiele operatorów kolejność stosowania operatorów jest ustalana *pierwszeństwo operatorów*, *kojarzenie*i nawiasy.  
   
  Każdy operator ma zdefiniowane pierwszeństwo. W wyrażeniu zawierającym wiele operatorów, które mają różne poziomy pierwszeństwa, pierwszeństwo operatorów określa kolejność wykonywania obliczeń tych operatorów. Na przykład następująca instrukcja przypisuje wartość 3 do `n1`.  
@@ -48,7 +50,7 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
 |[nowe](../../../csharp/language-reference/keywords/new-operator.md) T(...)|Utworzenie obiektu i delegata|  
 |`new` T(...){...}|Utworzenie obiektu za pomocą inicjatora. Zobacz [inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).|  
 |`new` {...}|Inicjator obiektu anonimowego. Zobacz [typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).|  
-|`new` T [...]|Utworzenie tablicy. Zobacz [tablic](../../../csharp/programming-guide/arrays/index.md).|  
+|`new` T[...]|Utworzenie tablicy. Zobacz [tablic](../../../csharp/programming-guide/arrays/index.md).|  
 |[TypeOf](../../../csharp/language-reference/keywords/typeof.md)(T)|Uzyskanie obiektu System.Type dla typu T|  
 |[zaznaczone](../../../csharp/language-reference/keywords/checked.md)(x)|Obliczenie wyrażenia w kontekście sprawdzanym|  
 |[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)|Obliczenie wyrażenia w kontekście niesprawdzanym|  
@@ -127,7 +129,8 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
 |x op= y|Przypisanie złożone Obsługuje następujące operatory: [ += ](../../../csharp/language-reference/operators/addition-assignment-operator.md), [ -= ](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [ *= ](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [ /= ](../../../csharp/language-reference/operators/division-assignment-operator.md), [ %= ](../../../csharp/language-reference/operators/modulus-assignment-operator.md) , [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [ => ](../../../csharp/language-reference/operators/lambda-operator.md) y|Funkcja anonimowa (wyrażenie lambda)|  
   
-## <a name="associativity"></a>Łączność  
+## <a name="associativity"></a>Łączność
+
  Gdy co najmniej dwa operatory w wyrażeniu mają takie samo pierwszeństwo, są obliczane na podstawie łączności. Operatory mające łączność do lewej strony są obliczane w kolejności od lewej do prawej. Na przykład `x * y / z` jest oceniane jako `(x * y) / z`. Operatory mające łączność do prawej strony są obliczane w kolejności od prawej do lewej. Na przykład operator przypisania ma łączność do prawej strony. Gdyby tak nie było, poniższy kod powodowałby wystąpienie błędu.  
   
 ```csharp  
@@ -154,7 +157,8 @@ a = (b = c);
 |`a = b - c + d`|a, b, c, -, d, +, =|  
 |`a += b -= c`|a, b, c, -=, +=|  
   
-## <a name="adding-parentheses"></a>Dodawanie nawiasów  
+## <a name="adding-parentheses"></a>Dodawanie nawiasów
+
  Używając nawiasów, można zmienić kolejność określoną przez pierwszeństwo operatorów oraz łączność. Na przykład `2 + 3 * 2` zazwyczaj daje w wyniku 8, ponieważ operatory mnożne pierwszeństwo przed operatorami addytywnymi. Jednak jeśli piszesz wyrażenia jako `(2 + 3) * 2`, dodawanie zostanie wykonane przed mnożeniem, a wynik to 10. W poniższych przykładach pokazano kolejność obliczania w wyrażeniach z nawiasami. Tak jak w poprzednich przykładach argumenty operacji są obliczane przed zastosowaniem operatora.  
   
 |Instrukcja|Kolejność obliczeń|  
@@ -163,10 +167,12 @@ a = (b = c);
 |`a = b - (c + d)`|a, b, c, d, +, -, =|  
 |`a = (b + c) * (d - e)`|a, b, c, +, d, e, -, *, =|  
   
-## <a name="operator-overloading"></a>Przeciążanie operatora  
+## <a name="operator-overloading"></a>Przeładowanie operatora
+
  Można zmienić zachowanie operatorów dla niestandardowych klas i struktur. Ten proces jest nazywany *przeciążenia operatora*. Aby uzyskać więcej informacji, zobacz [operatory z możliwością przeciążenia](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) i [operator](../../../csharp/language-reference/keywords/operator.md) artykułu — słowo kluczowe.  
   
-## <a name="related-sections"></a>Sekcje pokrewne  
+## <a name="related-sections"></a>Sekcje pokrewne
+
  Aby uzyskać więcej informacji, zobacz [słowa kluczowe operatora](../../../csharp/language-reference/keywords/operator-keywords.md) i [operatory języka C#](../../../csharp/language-reference/operators/index.md).  
   
 ## <a name="see-also"></a>Zobacz też

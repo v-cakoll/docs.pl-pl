@@ -1,22 +1,22 @@
 ---
-title: 'Porady: tworzenie nieoznaczonych przyjaznych zestawów (C#)'
+title: 'Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 16699d827aa168f2392a78ddbc7556bc5af864e8
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211804"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362148"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Porady: tworzenie nieoznaczonych przyjaznych zestawów (C#)
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów (C#)
 W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, które są bez znaku.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Aby utworzyć zestaw i zestaw przyjazny  
   
 1.  Otwórz wiersz polecenia.  
   
-2.  Utwórz plik języka C# o nazwie `friend_signed_A.` zawierający poniższy kod. Kod używa <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aby zadeklarować friend_signed_B jako przyjaznego zestawu.  
+2.  Utwórz plik języka C# o nazwie `friend_unsigned_A.` zawierający poniższy kod. Kod używa <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aby zadeklarować friend_unsigned_B jako przyjaznego zestawu.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,7 +46,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, kt�
     }  
     ```  
   
-3.  Skompiluj i podpisać friend_signed_A przy użyciu następującego polecenia.  
+3.  Skompiluj i podpisać friend_unsigned_A przy użyciu następującego polecenia.  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
@@ -75,7 +75,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, kt�
     }  
     ```  
   
-5.  Skompiluj friend_signed_B przy użyciu następującego polecenia.  
+5.  Skompiluj friend_unsigned_B przy użyciu następującego polecenia.  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,7 +83,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, kt�
   
      Nazwa zestawu, który jest generowany przez kompilator musi odpowiadać nazwy przyjaznego zestawu, który jest przekazywany do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu. Należy jawnie określić nazwę zestawu wyjściowego (.exe lub .dll), za pomocą `/out` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [/out (opcje kompilatora C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-6.  Uruchom plik friend_signed_B.exe.  
+6.  Uruchom plik friend_unsigned_B.exe.  
   
      Program wyświetla dwa ciągi: "Class1.Test" i "Class2.Test".  
   
@@ -95,5 +95,5 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, kt�
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
 - [Zestawy i Globalna pamięć podręczna zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
 - [Przyjazne zestawy (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
-- [Porady: tworzenie oznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+- [Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
 - [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)

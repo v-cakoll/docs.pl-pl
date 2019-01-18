@@ -1,15 +1,15 @@
 ---
 title: Implementowanie wzorca wyłącznika
-description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Implementowanie wzorca wyłącznika jako uzupełniający system do ponownych prób Http
+description: Dowiedz się, jak zaimplementować wzorzec wyłącznika jako uzupełniający system do ponownych prób Http.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 07/03/2018
-ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: ca35214332b5ae0851a35d34aa329775206c2b66
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147271"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362811"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementowanie wzorca wyłącznika
 
@@ -23,7 +23,7 @@ Zamiast tego aplikacja powinny być kodowane przyjąć, że operacja zakończył
 
 Za pomocą ponownych prób Http zaniedbali może spowodować utworzenie "odmowa usługi" ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) ataku w ramach własnego oprogramowania. Mikrousługi nie powiedzie się lub działa powoli, wielu klientów może wielokrotnie ponów próbę wykonania żądania zakończone niepowodzeniem. Który tworzy niebezpiecznych ryzyko wykładniczo w ten sposób ruch z celem usługi niepowodzeniem.
 
-Dlatego należy pewnego rodzaju barierę defense tak, aby żądania nadmierne Zatrzymaj, gdy nie zaleca się utrzymywanie podjęcie próby. Tej bariery defense jest dokładnie wyłącznika.
+Dlatego należy pewnego rodzaju barierę defense tak, aby żądania nadmierne Zatrzymaj, gdy nie jest wart ponawiania prób. Tej bariery defense jest dokładnie wyłącznika.
 
 Wzorzec wyłącznika ma innym celu niż "wzorca ponawiania". "Wzorzec ponawiania" umożliwia aplikacji ponowienie próby wykonania operacji w założeniu, że operacja powiedzie się po pewnym czasie. Wzorzec wyłącznika zapobiega aplikację wykonywania operacji, która prawdopodobnie się nie powiedzie. Aplikacja może korzystać z tych dwóch wzorców. Jednak Logika ponawiania powinna uwzględniać każdy wyjątek, zwrócone przez wyłącznik i jej przerwać ponawianie prób, jeśli wyłącznik wskazuje, że błąd nie jest przejściowy.
 
@@ -38,14 +38,15 @@ Tylko dodać tutaj kod umożliwiający ponownych prób wywołania HTTP jest kod,
 ```csharp
 //ConfigureServices()  - Startup.cs
 services.AddHttpClient<IBasketService, BasketService>()
-        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to 5 minutes
+        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Sample. Default lifetime is 2 minutes
+        .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
         .AddPolicyHandler(GetRetryPolicy())
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 ```
 
-`AddPolicyHandler()`Metoda to, co dodaje zasady do obiektów klasy HttpClient będą używane. W tym przypadku go polega na dodaniu zasadę Polly wyłącznika.
+`AddPolicyHandler()` Metoda to, co dodaje zasady do `HttpClient` obiekty użyjesz. W tym przypadku go polega na dodaniu zasadę Polly wyłącznika.
 
-Aby uzyskać więcej dzięki podejściu, zasada wyłącznik jest zdefiniowana w oddzielnych metodach o nazwie GetCircuitBreakerPolicy() jako następujący kod.
+Aby uzyskać więcej dzięki podejściu, zasada wyłącznik jest zdefiniowana w oddzielnych metodach o nazwie `GetCircuitBreakerPolicy()`, jak pokazano w poniższym kodzie:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
@@ -56,51 +57,48 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-W powyższym przykładzie kodu skonfigurowano zasad wyłącznika, dlatego przerywa ani otwiera obwodu, gdy było pięć kolejnych błędów podczas ponownego wykonywania żądania Http. Jeśli tak się stanie, obwodu spowoduje przerwanie przez 30 sekund: w tym okresie wywołania nie powiedzie się natychmiast przez wyłącznik — zamiast faktycznie umieszczone.  Zasady automatycznie interpretuje [istotne wyjątki i kodów stanu HTTP](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) jako błędy.  
+W powyższym przykładzie kodu skonfigurowano zasad wyłącznika, dlatego przerywa ani otwiera obwodu, gdy było pięć kolejnych błędów podczas ponownego wykonywania żądania Http. Jeśli tak się stanie, obwodu spowoduje przerwanie przez 30 sekund: w tym okresie wywołania nie powiedzie się natychmiast przez wyłącznik — zamiast faktycznie umieszczone.  Zasady automatycznie interpretuje [istotne wyjątki i kodów stanu HTTP](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) jako błędy.  
 
-Wyłączniki powinien również przekierować żądania do rezerwowego infrastruktury, jeśli masz problemy dotyczące określonego zasobu, który jest wdrożony w innym środowisku niż aplikacja kliencka lub usługa, która wykonuje wywołania HTTP. W ten sposób w przypadku wystąpienia awarii w centrum danych, która ma wpływ na tylko mikrousługi wewnętrznej bazy danych, ale nie w aplikacji klienta, aplikacje klienckie mogą przekierowywać do rezerwowego usługi. Polly jest planowanie nowe zasady w celu zautomatyzowania tego [zasad trybu failover](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) scenariusza. 
+Wyłączniki powinien również przekierować żądania do rezerwowego infrastruktury, jeśli masz problemy w określonego zasobu, który jest wdrożony w innym środowisku niż aplikacja kliencka lub usługa, która wykonuje wywołania HTTP. W ten sposób w przypadku wystąpienia awarii w centrum danych, która ma wpływ na tylko mikrousługi wewnętrznej bazy danych, ale nie w aplikacji klienta, aplikacje klienckie mogą przekierowywać do rezerwowego usługi. Polly jest planowanie nowe zasady w celu zautomatyzowania tego [zasad trybu failover](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) scenariusza. 
 
 Wszystkie te funkcje są w przypadkach, w których zarządzasz trybu failover z kodem .NET, zamiast go zarządzane automatycznie dla Ciebie przez platformę Azure, z przezroczystością lokalizacji. 
 
 Z użycia punktu widzenia, gdy za pomocą elementu HttpClient nie ma potrzeby, aby dodać coś nowego w tym miejscu, ponieważ kod jest taki sam, niż gdy za pomocą elementu HttpClient z HttpClientFactory, jak pokazano w poprzednich sekcjach. 
 
-## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Testowanie ponownych prób Http i wyłączników w ramach aplikacji eShopOnContainers
+## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Testowanie ponownych prób Http i wyłączników w ramach aplikacji eShopOnContainers
 
-Przy każdym uruchomieniu rozwiązania w ramach aplikacji eShopOnContainers hosta platformy Docker musi uruchomić wiele kontenerów. Niektóre z nich są wolniejsze uruchamianie i zainicjować, takich jak kontener programu SQL Server. Jest to szczególnie istotne po raz pierwszy można wdrażać w ramach aplikacji eShopOnContainers platformy docker, ponieważ należy ją skonfigurować obrazów i bazy danych. Fakt, że niektóre kontenery start wolniej niż inne mogą powodować pozostałych usług początkowo zgłaszają wyjątki protokołu HTTP, nawet wtedy, gdy ustawisz zależności między kontenerami w docker-compose poziom, zgodnie z opisem w poprzedniej sekcji. Te narzędzia docker-compose zależności między kontenery są tylko na poziomie procesu. Proces punktu wejścia kontener może być uruchomiona, ale program SQL Server może nie być gotowe dla zapytań. Może to spowodować kaskadę błędów, a aplikacja może uzyskać Wystąpił wyjątek podczas próby korzystania z tego określonego kontenera. 
+Przy każdym uruchomieniu rozwiązania w ramach aplikacji eShopOnContainers hosta platformy Docker musi uruchomić wiele kontenerów. Niektóre z nich są wolniejsze uruchamianie i zainicjować, takich jak kontener programu SQL Server. Jest to szczególnie istotne, możesz wdrożyć ją w ramach aplikacji eShopOnContainers platformy docker, ponieważ należy ją skonfigurować obrazów i bazę danych po raz pierwszy. Fakt, że niektóre kontenery start wolniej niż inne mogą powodować pozostałych usług początkowo zgłaszają wyjątki protokołu HTTP, nawet wtedy, gdy ustawisz zależności między kontenerami w docker-compose poziom, zgodnie z opisem w poprzedniej sekcji. Te narzędzia docker-compose zależności między kontenery są tylko na poziomie procesu. Proces punktu wejścia kontener może być uruchomiona, ale program SQL Server może nie być gotowe dla zapytań. Może to spowodować kaskadę błędów, a aplikacja może uzyskać Wystąpił wyjątek podczas próby korzystania z tego określonego kontenera.
 
 Mogą również zawiera tego typu błędu podczas uruchamiania, wdrażając aplikację w chmurze. W takim przypadku koordynatorów może być przenoszenie kontenerów z jednego węzła lub maszyny Wirtualnej do innego (który rozpocznie się nowych wystąpień) do równoważenia liczba kontenerów w węzłach klastra.
 
 Sposób "w ramach aplikacji eShopOnContainers" rozwiązuje te problemy podczas uruchamiania wszystkich kontenerów jest przy użyciu wzorca ponawiania przedstawionymi wcześniej. 
 
-### <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Testowanie wyłącznika w ramach aplikacji eShopOnContainers
+### <a name="test-the-circuit-breaker-in-eshoponcontainers"></a>Testowanie wyłącznika w ramach aplikacji eShopOnContainers
 
 Istnieje kilka sposobów podziału/Otwórz obwodu i przetestujemy ramach aplikacji eShopOnContainers.
 
 Jedną z opcji jest, aby zmniejszyć dozwoloną liczbę ponownych prób na 1 w zasadach wyłącznika i ponownego wdrożenia całej rozwiązania platformy docker. Za pomocą pojedynczego ponawiania próby istnieje szansa, że żądanie HTTP zakończy się niepowodzeniem podczas wdrażania, spowoduje to otwarcie wyłącznika i zostanie wyświetlony komunikat o błędzie.
 
-Innym rozwiązaniem jest, aby użyć niestandardowego oprogramowania pośredniczącego, które jest zaimplementowana w mikrousługach koszyka. Po włączeniu tego oprogramowania pośredniczącego przechwytuje wszystkie żądania HTTP i zwraca kod stanu 500. Aby umożliwić oprogramowanie pośredniczące, żądania GET niepowodzenia identyfikatora URI, takich jak następujące:
+Innym rozwiązaniem jest użycie niestandardowego oprogramowania pośredniczącego, które jest zaimplementowana w **koszyka** mikrousług. Po włączeniu tego oprogramowania pośredniczącego przechwytuje wszystkie żądania HTTP i zwraca kod stanu 500. Aby umożliwić oprogramowanie pośredniczące, żądania GET niepowodzenia identyfikatora URI, takich jak następujące:
 
-- `GET http://localhost:5103/failing`
+- `GET http://localhost:5103/failing`\
+  To żądanie zwraca bieżący stan oprogramowania pośredniczącego. Jeśli oprogramowanie pośredniczące jest włączona, żądanie zwrócić kod stanu 500. Jeśli oprogramowanie pośredniczące jest wyłączona, nie będzie odpowiedzi.
 
-To żądanie zwraca bieżący stan oprogramowania pośredniczącego. Jeśli oprogramowanie pośredniczące jest włączona, żądanie zwrócić kod stanu 500. Jeśli oprogramowanie pośredniczące jest wyłączona, nie będzie odpowiedzi. 
+- `GET http://localhost:5103/failing?enable`\
+  To żądanie temu oprogramowanie pośredniczące.
 
-- `GET http://localhost:5103/failing?enable`
-
-To żądanie temu oprogramowanie pośredniczące. 
-
-- `GET http://localhost:5103/failing?disable`
-
-To żądanie wyłącza oprogramowania pośredniczącego. 
+- `GET http://localhost:5103/failing?disable`\
+  To żądanie wyłącza oprogramowania pośredniczącego.
 
 Na przykład gdy aplikacja jest uruchomiona, można włączyć oprogramowanie pośredniczące, wprowadzając żądanie przy użyciu następujący identyfikator URI w dowolnej przeglądarce. Należy pamiętać, że szeregowania mikrousług korzysta z portu 5103.
 
 `http://localhost:5103/failing?enable` 
 
-Następnie można sprawdzić stan, używając identyfikatora URI `http://localhost:5103/failing`, jak pokazano na rysunku 10-4.
+Następnie można sprawdzić stan, używając identyfikatora URI `http://localhost:5103/failing`, jak pokazano na rysunku 8-5.
 
-![](./media/image4.png)
+![Widok przeglądarki wynik sprawdzania stanu niepowodzenia symulacji oprogramowania pośredniczącego](./media/image4.png)
 
-**Rysunek 10-4**. Sprawdzanie stanu "Niepowodzenie" ASP.NET oprogramowanie pośredniczące — w tym przypadku wyłączone. 
+**Rysunek 8-5**. Sprawdzanie stanu "Niepowodzenie" ASP.NET oprogramowanie pośredniczące — w tym przypadku wyłączone.
 
 W tym momencie współpracuje mikrousług koszyka, kod stanu 500 w każdym przypadku, gdy wywołujesz wywołać go.
 
@@ -115,7 +113,7 @@ public class CartController : Controller
     public async Task<IActionResult> Index()
     {
         try
-        {          
+        {
             var user = _appUserParser.Parse(HttpContext.User);
             //Http requests using the Typed Client (Service Agent)
             var vm = await _basketSvc.GetBasket(user);
@@ -123,11 +121,11 @@ public class CartController : Controller
         }
         catch (BrokenCircuitException)
         {
-            // Catches error when Basket.api is in circuit-opened mode                 
+            // Catches error when Basket.api is in circuit-opened mode
             HandleBrokenCircuitException();
         }
         return View();
-    }       
+    }
 
     private void HandleBrokenCircuitException()
     {
@@ -136,11 +134,11 @@ public class CartController : Controller
 }
 ```
 
-Poniżej przedstawiono podsumowanie. Zasady ponawiania spróbuje kilka razy, aby żądania HTTP i pobiera błędy HTTP. Gdy liczba ponownych prób osiągnie maksymalny ustawiony numer wyłącznik zasad (w tym przypadku 5), aplikacja zgłasza BrokenCircuitException. Wynik jest przyjazny komunikat, jak pokazano na rysunku 10-5.
+Poniżej przedstawiono podsumowanie. Zasady ponawiania spróbuje kilka razy, aby żądania HTTP i pobiera błędy HTTP. Gdy liczba ponownych prób osiągnie maksymalny ustawiony numer wyłącznik zasad (w tym przypadku 5), aplikacja zgłasza BrokenCircuitException. Wynik jest przyjazny komunikat, jak pokazano w rysunek 8-6.
 
-![](./media/image5.png)
+![Widok aplikacji sieci web MVC, przedstawiający komunikat "Usługa koszyka niedziałających" wyzwalanych przez zasady wyłącznika w przeglądarce](./media/image5.png)
 
-**Rysunek 10-5**. Wyłącznik zwróci błąd w interfejsie użytkownika
+**Rysunek 8 – 6**. Wyłącznik zwróci błąd w interfejsie użytkownika
 
 Można zaimplementować logikę różnych kiedy open/break obwodu. Lub możesz spróbować żądanie HTTP względem różne mikrousługi serwer zaplecza w przypadku rezerwowego centrum danych lub nadmiarowe systemu zaplecza. 
 
@@ -148,8 +146,8 @@ Na koniec inną możliwością `CircuitBreakerPolicy` jest użycie `Isolate` (kt
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Wzorzec wyłącznika**
-    [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
+- **Wzorzec wyłącznika**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
 >[Poprzednie](implement-http-call-retries-exponential-backoff-polly.md)

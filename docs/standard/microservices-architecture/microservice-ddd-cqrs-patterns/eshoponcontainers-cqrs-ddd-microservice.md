@@ -4,18 +4,20 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Po
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143639"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362850"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Stosowanie podejścia CQRS i CQS w mikrousługach DDD w ramach aplikacji eShopOnContainers
 
 Projekt szeregowania mikrousługi w ramach aplikacji eShopOnContainers aplikacja referencyjna jest oparta na zasadach podejścia CQRS. Jednak używa najprostszą metodą, co jest po prostu oddzielenie zapytania w poleceniach i przy użyciu tej samej bazy danych dla obu akcji.
 
-Kluczową cechą tych wzorców i należy koniecznie zwrócić uwagę, jest, że zapytania są idempotentne: niezależnie od tego, ile razy zapytań systemu, nie spowoduje zmiany stanu tego systemu. Nawet można korzystają z modelu danych różnych "Odczyt" niż logiki transakcyjnej "zapisuje" model domeny, mimo że szeregowania mikrousług jest używanie tej samej bazy danych. Dlatego jest to uproszczone podejście CQRS.
+Kluczową cechą tych wzorców i należy koniecznie zwrócić uwagę, jest, że zapytania są idempotentne: niezależnie od tego, ile razy zapytań systemu, nie zmienią się stan tego systemu. Innymi słowy zapytania są efekt uboczny bezpłatnie.
+
+W związku z tym można użyć różnych "Odczyt" model danych niż logiki transakcyjnej "zapisuje" model domeny, mimo że szeregowania mikrousług korzystają z tej samej bazy danych. Dlatego jest to uproszczone podejście CQRS.
 
 Z drugiej strony poleceń, które wyzwalają transakcji i aktualizacji danych, zmiany stanu w systemie. Za pomocą poleceń, musisz należy zachować ostrożność podczas dotyczących złożoności i ciągle zmieniające reguł biznesowych. To jest, gdy chcesz zastosować technik DDD, aby lepiej modelowanych systemu.
 
@@ -41,10 +43,10 @@ Istnieje tylko jedna aplikacja architektury: Architektura aplikacji system lub e
 
 ####  <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Martina Fowlera. PODEJŚCIE CQRS** \
+- **Martin Fowler. CQRS** \
   [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
-- **Grega Younga. CQS programu vs. PODEJŚCIE CQRS** \
+- **Grega Younga. CQS programu vs. CQRS** \
   [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
 - **Grega Younga. Podejście CQRS dokumentów** \
@@ -56,7 +58,7 @@ Istnieje tylko jedna aplikacja architektury: Architektura aplikacji system lub e
 - **Udi Dahan. Sklarowanego CQRS** \
   [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
-- **PODEJŚCIE CQRS** \
+- **CQRS** \
   [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 - **Określanie źródła zdarzeń (ES)** \

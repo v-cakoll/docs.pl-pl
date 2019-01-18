@@ -1,7 +1,7 @@
 ---
 title: operator () - C# odwołania
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/15/2019
 f1_keywords:
 - ()_CSharpKeyword
 helpviewer_keywords:
@@ -9,38 +9,48 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 656a1ca7a992df43ff857d2c4ecb62b044f7e06f
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 3a0af33739c9cb4d090842219eba4ece9700ef89
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333281"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362785"
 ---
 # <a name="-operator-c-reference"></a>() — operator (C# odwołania)
 
-Oprócz określania kolejności operacji w wyrażeniach nawiasy są też używane do następujących zadań:
+Nawiasy, `()`, są zwykle używane dla wywołania metody lub delegata lub wyrażenia cast.
 
-1. Określanie rzutowania lub konwersji typów.
+Możesz także użyć nawiasów, aby określić kolejność, w którym ma być operacji w wyrażeniu. Aby uzyskać więcej informacji, zobacz [Dodawanie nawiasów](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) części [operatory](../../programming-guide/statements-expressions-operators/operators.md) artykułu. Listy uporządkowane według poziomu pierwszeństwo operatorów, zobacz [ C# operatory](index.md).
 
-    [!code-csharp[csRefOperators#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#1)]
+## <a name="method-invocation"></a>Wywołanie metody
 
-2. Wywoływanie metody lub delegatów.
+Poniższy przykład przedstawia sposób wywołania metody, z lub bez argumentów i delegata:
 
-    [!code-csharp[csRefOperators#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#2)]
+[!code-csharp-interactive[use for invocation](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
 
-## <a name="remarks"></a>Uwagi
+Można także użyć nawiasów podczas wywołujesz [Konstruktor](../../programming-guide/classes-and-structs/constructors.md) z [ `new` ](../keywords/new-operator.md) operatora.
 
-Rzutowanie jawnie wywołuje operatora konwersji z jednego typu do drugiego. Rzutowanie kończy się niepowodzeniem, jeśli żaden operator konwersji nie jest zdefiniowany. Aby zdefiniować operatora konwersji, zobacz [jawne](../keywords/explicit.md) i [niejawne](../keywords/implicit.md) definiowanie operatorów konwersji.
+Aby uzyskać więcej informacji o metodach, zobacz [metody](../../programming-guide/classes-and-structs/methods.md). Aby uzyskać więcej informacji na temat obiektów delegowanych, zobacz [delegatów](../../programming-guide/delegates/index.md).
 
- Operator `()` nie może być przeciążony.
+## <a name="cast-expression"></a>Wyrażenie CAST
 
- Aby uzyskać więcej informacji, zobacz [Rzutowanie i konwersje typów](../../programming-guide/types/casting-and-type-conversions.md). 
+Wyrażenie cast w postaci `(T)E` wywołuje operatora konwersji można przekonwertować wartości wyrażenia `E` na typ `T`. Jeśli istnieje nie jawna konwersja z typu `E` na typ `T`, wystąpi błąd kompilacji. Aby dowiedzieć się, jak definiowanie operatora konwersji, zobacz [jawne](../keywords/explicit.md) i [niejawne](../keywords/implicit.md) artykuły — słowo kluczowe.
 
- Aby uzyskać więcej informacji na temat wywołania metody, zobacz [metody](../../programming-guide/classes-and-structs/methods.md).
+W poniższym przykładzie pokazano konwersja typu typy liczbowe:
+
+[!code-csharp-interactive[use for cast](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
+
+Aby uzyskać więcej informacji na temat wstępnie zdefiniowanych jawne konwersje między typów liczbowych, zobacz [Tabela jawnych konwersji liczbowych](../keywords/explicit-numeric-conversions-table.md).
+
+Aby uzyskać więcej informacji, zobacz [konwersje rzutowania i typ](../../programming-guide/types/casting-and-type-conversions.md) i [operatory konwersji](../../programming-guide/statements-expressions-operators/conversion-operators.md).
+
+## <a name="operator-overloadability"></a>Overloadability — operator
+
+Operator `()` nie mogą być przeciążone.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Aby uzyskać więcej informacji, zobacz [wyrażenia wywołania](~/_csharplang/spec/expressions.md#invocation-expressions) i [rzutowane wyrażenia,](~/_csharplang/spec/expressions.md#cast-expressions) sekcje [ C# specyfikacji języka](../language-specification/index.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wykonywanie incjalizacji obiektów z opóźnieniem'
+title: 'Instrukcje: Wykonywanie Incjalizacji obiektów'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d33dcb2b060d1d453ae17a48d2765d489de0038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3bcdbfacf02d84848934e21d58ed6fff7d37d52
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394478"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362889"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a>Porady: wykonywanie incjalizacji obiektów z opóźnieniem
-<xref:System.Lazy%601?displayProperty=nameWithType> Klasa upraszcza pracy wykonania inicjowania z opóźnieniem i tworzenie wystąpień obiektów. Inicjowanie obiektów w sposób opóźnieniem, można uniknąć konieczności tworzenia ich w ogóle, jeśli nigdy nie są one potrzebne lub można odroczyć inicjalizacji, aż najpierw uzyskiwania do nich. Aby uzyskać więcej informacji, zobacz [Incjalizacji](../../../docs/framework/performance/lazy-initialization.md).  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>Instrukcje: Wykonywanie Incjalizacji obiektów
+<xref:System.Lazy%601?displayProperty=nameWithType> Klasa upraszcza pracę wykonywanie incjalizacji i wystąpienia obiektów. Inicjowanie obiektów w sposób z opóźnieniem, można uniknąć konieczności tworzenia ich w ogóle, jeśli nigdy nie są one potrzebne lub można odroczyć ich inicjowania, aż najpierw są one używane. Aby uzyskać więcej informacji, zobacz [inicjowania z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak zainicjować wartości z <xref:System.Lazy%601>. Załóżmy, że opóźnieniem zmiennej może nie być potrzebne, w zależności od innego kodu, która ustawia `someCondition` zmiennej wartość PRAWDA lub FAŁSZ.  
+ Poniższy przykład pokazuje, jak zainicjować wartość składającą się z <xref:System.Lazy%601>. Przyjęto założenie, że zmienna z opóźnieniem nie konieczne może być w zależności od innego kodu, który ustawia `someCondition` zmiennej na wartość true lub false.  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -62,16 +62,16 @@ End Sub
   //  ...  
   // Initialize the data only if necessary  
   if (someCondition)  
-{  
+  {  
     if (_data.Value > 100)  
       {  
           Console.WriteLine("Good data");  
       }  
-}  
+  }  
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> klasy można zainicjować typu, który jest widoczny tylko dla bieżącego wystąpienia obiektu w bieżącym wątku.  
+ Poniższy przykład pokazuje, jak używać <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> klasy, aby zainicjować typu, która jest widoczna tylko dla bieżącego wystąpienia obiektu dla bieżącego wątku.  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  

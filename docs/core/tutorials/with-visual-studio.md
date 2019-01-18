@@ -1,16 +1,16 @@
 ---
-title: Tworzenie C# aplikacji Hello World platformy .NET Core w programie Visual Studio 2017
+title: Tworzenie aplikacji C# Hello World z platformą .NET Core w programie Visual Studio 2017
 description: Dowiedz się, jak utworzyć prostą aplikację konsoli .NET Core przy użyciu języka C# za pomocą programu Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 455058ad0a9155b8c6d2a267259783c2a7cc9815
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168926"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362803"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie C# aplikacji Hello World przy użyciu zestawu .NET Core SDK w programie Visual Studio 2017
 
@@ -26,7 +26,7 @@ Aby uzyskać więcej informacji, zobacz [wymagania wstępne dla platformy .NET C
 
 Rozpocznij od utworzenia prostej aplikacji konsoli "Hello World". Wykonaj następujące kroki:
 
-1. Uruchom program Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W *nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** tekstu wpisz "nazwę HelloWorld". Wybierz przycisk **OK**.
+1. Launch Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W *nowy projekt** okno dialogowe, wybierz opcję **Visual C#** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** tekstu wpisz "nazwę HelloWorld". Wybierz przycisk **OK**.
 
    ![Okno dialogowe nowego projektu za pomocą aplikacji Konsolowej wybrane](./media/with-visual-studio/visual-studio-new-project.png)
    
@@ -76,9 +76,9 @@ Rozszerz aplikację, aby monitować użytkownika o ich nazwy i wyświetl ją wra
 
 Został utworzony i uruchom aplikację. Tworzenie profesjonalnych aplikacji, należy wykonać dodatkowe kroki w celu przygotowania aplikacji do wersji:
 
-- Aby uzyskać informacje na temat debugowania aplikacji, zobacz [debugowania języka C# aplikacji Hello World w programie Visual Studio 2017](debugging-with-visual-studio.md).
+- Aby uzyskać informacje na temat debugowania aplikacji, zobacz [debugowania aplikacji .NET Core Witaj, świecie przy użyciu programu Visual Studio 2017](debugging-with-visual-studio.md).
 
-- Aby uzyskać informacje na temat tworzenia i publikowania dystrybucyjny wersji aplikacji, zobacz [publikowania C# aplikacji Hello World w programie Visual Studio 2017](publishing-with-visual-studio.md).
+- Aby uzyskać informacje na temat tworzenia i publikowania dystrybucyjny wersji aplikacji, zobacz [publikowania aplikacji platformy .NET Core Witaj, świecie przy użyciu programu Visual Studio 2017](publishing-with-visual-studio.md).
 
 ## <a name="related-topics"></a>Tematy pokrewne
 

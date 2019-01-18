@@ -1,18 +1,18 @@
 ---
-title: Tworzenie C# biblioteki klas .NET Standard za pomocą programu Visual Studio 2017
+title: Tworzenie C# biblioteki .NET Standard w programie Visual Studio 2017
 description: Dowiedz się, jak utworzyć bibliotekę klas .NET Standard, napisany w języku C# za pomocą programu Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 0c98f8c8fc4847570964d8d4ea8deb221164441d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 6228cd93b275a059da63a8b8e3408032d78c5e39
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168939"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362018"
 ---
-# <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie biblioteki klas .NET Standard z C# i .NET Core SDK w programie Visual Studio 2017
+# <a name="build-a-net-standard-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie biblioteki .NET Standard z C# i .NET Core SDK w programie Visual Studio 2017
 
 A *biblioteki klas* Określa typy i metody, które są wywoływane przez aplikację. Biblioteka klas, który jest przeznaczony dla .NET Standard 2.0 umożliwia biblioteki można wywoływać za pomocą dowolnego implementacji .NET, która obsługuje daną wersję .NET Standard. Po zakończeniu biblioteki klas, można zdecydować, czy chcesz rozprowadzić go jako składników innych firm lub tego, czy chcesz dołączyć go jako składnik powiązane z jedną lub więcej aplikacji.
 

@@ -1,18 +1,18 @@
 ---
-title: Publikowanie aplikacji Hello World w programie Visual Studio 2017
-description: Publikowanie tworzy zbiór plików, które są wymagane do uruchamiania aplikacji.
+title: Publikowanie aplikacji platformy .NET Core Witaj, świecie przy użyciu programu Visual Studio 2017
+description: Publikowanie tworzy zbiór plików, które są wymagane do uruchomienia aplikacji środowiska .NET Core.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 8d6d5cc7766334e10e7ae3a70af0c309c05bc98b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ae202d8102d470e4260394f427e861750d4f0ee6
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169121"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362473"
 ---
-# <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Publikowanie aplikacji Hello World w programie Visual Studio 2017
+# <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Publikowanie aplikacji platformy .NET Core Witaj, świecie przy użyciu programu Visual Studio 2017
 
 W [kompilacji C# aplikacji Hello World z platformą .NET Core w programie Visual Studio 2017](with-visual-studio.md) lub [tworzenie aplikacji Visual Basic Hello World z platformą .NET Core w programie Visual Studio 2017](vb-with-visual-studio.md), utworzoną aplikację konsolową w języku Hello World . W [debugowania języka C# aplikacji Hello World w programie Visual Studio 2017](debugging-with-visual-studio.md), przetestowane za pomocą debugera programu Visual Studio. Teraz, gdy masz pewność, że działa zgodnie z oczekiwaniami, możesz ją opublikować tak, aby uruchomić ją innym użytkownikom. Publikowanie tworzy zbiór plików, które są wymagane do uruchamiania aplikacji i plików można wdrożyć, kopiując je na komputerze docelowym.
 

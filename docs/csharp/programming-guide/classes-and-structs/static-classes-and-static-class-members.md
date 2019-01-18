@@ -9,15 +9,15 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: ef1b5262e8cb9906fb0e0d0e8cfef9257f1223a4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: eae8d290c25399170153bbebd0637539bc565584
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243204"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362876"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Klasy statyczne i statyczni członkowie klas (Przewodnik programowania w języku C#)
-A [statyczne](../../../csharp/language-reference/keywords/static.md) klasy jest zasadniczo taki sam jak niestatycznych klas, ale ma jedną różnicą: nie można utworzyć wystąpienia klasy statycznej. Innymi słowy, nie można użyć [nowe](../../../csharp/language-reference/keywords/new.md) — słowo kluczowe, aby utworzyć zmienną typu klasy. Ponieważ nie ma żadnej zmiennej wystąpienia, uzyskujesz dostęp do członków klasy statycznej za pomocą sama nazwa klasy. Na przykład jeśli masz statyczna klasy, która jest o nazwie `UtilityClass` który posiada publiczną metodę o nazwie `MethodA`, należy wywołać metodę, jak pokazano w poniższym przykładzie:  
+A [statyczne](../../../csharp/language-reference/keywords/static.md) klasy jest zasadniczo taki sam jak niestatycznych klas, ale ma jedną różnicą: nie można utworzyć wystąpienia klasy statycznej. Innymi słowy, nie można użyć [nowe](../../../csharp/language-reference/keywords/new.md) — słowo kluczowe, aby utworzyć zmienną typu klasy. Ponieważ nie ma żadnej zmiennej wystąpienia, uzyskujesz dostęp do członków klasy statycznej za pomocą sama nazwa klasy. Na przykład jeśli masz statyczna klasy, która jest o nazwie `UtilityClass` zawierający publicznej statycznej metody o nazwie `MethodA`, należy wywołać metodę, jak pokazano w poniższym przykładzie:  
   
 ```csharp  
 UtilityClass.MethodA();  

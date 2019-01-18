@@ -1,23 +1,23 @@
 ---
 title: Zapoznaj się z niestandardowych ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania
-description: Dowiedz się, jak można zaimplementować, od podstaw, ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania do obsługi możliwych scenariuszy błędu HTTP.
+description: Dowiedz się, jak można implementować ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania, od początku do obsługi możliwych scenariuszy błędu HTTP.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: b7aaad9199bb275f45fd088a6207d707e8e5751c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145101"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362252"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>Zapoznaj się z niestandardowych ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania
 
 Aby utworzyć mikrousługi odporne na błędy, wymagana jest obsługa możliwych scenariuszy błędu HTTP. Jednym ze sposobów obsługi te błędy, chociaż nie jest to zalecane jest tworzenie własnej implementacji ponownych prób z wykorzystaniem wykładniczego wycofywania.
 
-**Ważna Uwaga:** W tej sekcji przedstawiono, jak można utworzyć własny kod niestandardowy w celu zaimplementowania ponownych prób wywołania HTTP. Jednak nie zaleca się zrobienie tego swoim aplikacjom, ale można użyć bardziej zaawansowana i niezawodna, gdy jest łatwiejszy w obsłudze mechanizmów, takich jak `HttpClientFactory` usłudze Polly dostępne od platformy .NET Core 2.1. Te zalecane metody są szczegółowo opisane w kolejnych sekcjach. 
+**Ważna Uwaga:** W tej sekcji przedstawiono, jak można utworzyć własny kod niestandardowy w celu zaimplementowania ponownych prób wywołania HTTP. Jednak nie jest zalecane jest, aby to zrobić po własnych ale używać bardziej zaawansowane i niezawodne, gdy jest łatwiejszy w obsłudze mechanizmów, takich jak `HttpClientFactory` usłudze Polly dostępne od platformy .NET Core 2.1. Te zalecane metody są szczegółowo opisane w kolejnych sekcjach.
 
-Jako początkowej eksploracji, można zaimplementować własny kod w klasie narzędzia dla wykładniczego wycofywania, podobnie jak w [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), oraz kod podobnie do następującej (który jest również dostępny w tym [GitHub repozytorium](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).
+Jako początkowej eksploracji, można zaimplementować własny kod w klasie narzędzia dla wykładniczego wycofywania, podobnie jak w [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), oraz kod podobnie do poniższego.
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -113,8 +113,7 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-Należy pamiętać, że ten kod nadaje się tylko jako weryfikacji koncepcji. W kolejnych sekcjach wyjaśniono, jak korzystać z bardziej zaawansowanych metod, gdy jest to prostsze, przy użyciu HttpClientFactory.
-HttpClientFactory jest dostępny od platformy .NET Core 2.1, przy użyciu odporność sprawdzonych bibliotek, takich jak Polly. 
+Należy pamiętać, że ten kod nadaje się tylko jako weryfikacji koncepcji. W kolejnych sekcjach wyjaśniono, jak korzystać z bardziej zaawansowanych metod, gdy jest to prostsze, przy użyciu HttpClientFactory. HttpClientFactory jest dostępny od platformy .NET Core 2.1, przy użyciu odporność sprawdzonych bibliotek, takich jak Polly.
 
 >[!div class="step-by-step"]
 >[Poprzednie](implement-resilient-entity-framework-core-sql-connections.md)

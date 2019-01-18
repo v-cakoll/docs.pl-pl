@@ -7,14 +7,14 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: e743cb496aca101b4594435c86e48951870cf8ef
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: de7a423bb3e9a288d17c86e9e0afc3b00f6fd80b
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170031"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362265"
 ---
-# <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Tworzenie aplikacji .NET Core Visual Basic Hello World w programie Visual Studio 2017
+# <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie aplikacji Visual Basic Witaj, świecie przy użyciu zestawu .NET Core SDK w programie Visual Studio 2017
 
 Ten temat zawiera instrukcje krok po kroku wprowadzenie do tworzenia, debugowania i publikowania prostego aplikacji konsolowej .NET Core w języku Visual Basic w programie Visual Studio 2017. Program Visual Studio 2017 zapewnia środowisko projektowe w pełni funkcjonalne służące do tworzenia aplikacji platformy .NET Core. Tak długo, jak aplikacja nie ma zależności specyficzne dla platformy, aplikację można uruchomić na dowolnej platformie przeznaczonego platformy .NET Core i w każdym systemie, który ma zainstalowany .NET Core.
 
@@ -28,7 +28,7 @@ Aby uzyskać więcej informacji, zobacz [wymagania wstępne dla platformy .NET C
 
 Rozpocznij od utworzenia prostej aplikacji konsoli "Hello World". Wykonaj następujące kroki:
 
-1. Uruchom program Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W *nowy projekt** okno dialogowe, wybierz opcję **języka Visual Basic** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** tekstu wpisz "nazwę HelloWorld". Wybierz przycisk **OK**.
+1. Launch Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W *nowy projekt** okno dialogowe, wybierz opcję **języka Visual Basic** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** tekstu wpisz "nazwę HelloWorld". Wybierz przycisk **OK**.
 
    ![Okno dialogowe nowego projektu za pomocą aplikacji Konsolowej wybrane](./media/vb-with-visual-studio/visual-studio-new-project.png)
    
@@ -78,9 +78,9 @@ Rozszerz aplikację, aby monitować użytkownika o jej nazwę i wyświetlić go 
 
 Został utworzony i uruchom aplikację. Tworzenie profesjonalnych aplikacji, należy wykonać dodatkowe kroki w celu przygotowania aplikacji do wersji:
 
-- Aby uzyskać informacje na temat debugowania aplikacji, zobacz [debugowania języka C# aplikacji Hello World w programie Visual Studio 2017](debugging-with-visual-studio.md).
+- Aby debugować aplikację, zobacz [debugowania aplikacji .NET Core Witaj, świecie przy użyciu programu Visual Studio 2017](debugging-with-visual-studio.md).
 
-- Aby uzyskać informacje na temat tworzenia i publikowania dystrybucyjny wersji aplikacji, zobacz [publikowania C# aplikacji Hello World w programie Visual Studio 2017](publishing-with-visual-studio.md).
+- Aby opublikować dystrybucyjny wersji aplikacji, zobacz [publikowania aplikacji platformy .NET Core Witaj, świecie przy użyciu programu Visual Studio 2017](publishing-with-visual-studio.md).
 
 <!--
 ## Related topics

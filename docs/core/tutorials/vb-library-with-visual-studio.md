@@ -1,20 +1,20 @@
 ---
-title: Tworzenie biblioteki klas w języku Visual Basic .NET Core w programie Visual Studio 2017
-description: Dowiedz się, jak utworzyć bibliotekę klas platformy .NET Core, napisany w języku Visual Basic w programie Visual Studio 2017
+title: Tworzenie biblioteki klas w języku Visual Basic .NET Standard w programie Visual Studio 2017
+description: Dowiedz się, jak utworzyć bibliotekę klas .NET Standard, napisany w języku Visual Basic w programie Visual Studio 2017
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 04d866c0615d299fe3df72553bafce2514a1c121
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1fddbfd84164a95505cff1783e241ea9001231f5
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168835"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362044"
 ---
-# <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie biblioteki klas w języku Visual Basic i .NET Core SDK w programie Visual Studio 2017
+# <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie biblioteki .NET Standard, w języku Visual Basic i .NET Core SDK w programie Visual Studio 2017
 
 A *biblioteki klas* Określa typy i metody, które są wywoływane przez aplikację. Biblioteka klas, który jest przeznaczony dla .NET Standard 2.0 umożliwia biblioteki można wywoływać za pomocą dowolnego implementacji .NET, która obsługuje daną wersję .NET Standard. Po zakończeniu biblioteki klas, można zdecydować, czy chcesz rozprowadzić go jako składników innych firm lub tego, czy chcesz dołączyć go jako składnik powiązane z jedną lub więcej aplikacji.
 

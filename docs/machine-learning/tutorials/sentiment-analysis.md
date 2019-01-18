@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klasyfik
 ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 429304bbbef94457800673f1b087752eb3d5dba9
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
-ms.translationtype: HT
+ms.openlocfilehash: bf4e5f00371cba1e6546903a1d27e833b0e57271
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333801"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362902"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 
@@ -268,7 +268,7 @@ Użyj poniższego kodu, aby wyświetlić metryki, udostępnianie wyników, a nas
 
 [!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Display selected metrics")]
 
-Aby zapisać swój model do pliku zip, przed zwróceniem, Dodaj następujący kod do wywoływania `SaveModelAsFile` metody w następnym wierszu `TrainFinalModel`:
+Aby zapisać swój model do pliku zip, przed zwróceniem, Dodaj następujący kod do wywoływania `SaveModelAsFile` metody w następnym wierszu `Evaluate`:
 
 [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#23 "Save the model")]
 

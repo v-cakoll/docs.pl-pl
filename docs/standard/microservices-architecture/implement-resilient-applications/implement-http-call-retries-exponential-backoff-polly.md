@@ -1,15 +1,15 @@
 ---
 title: Implementowanie ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania w usłudze Polly
-description: Informacje o sposobie obsługi błędów HTTP za pomocą Polly i HttpClientFactory
+description: Informacje o sposobie obsługi błędów HTTP za pomocą Polly i HttpClientFactory.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/10/2018
-ms.openlocfilehash: 78de1440721e83459e455f5c31d10e52a1d3b1b6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143990"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362759"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementowanie ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania z zasadami dotyczącymi HttpClientFactory i Polly
 
@@ -36,9 +36,9 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetRetryPolicy());
 ```
 
-**AddPolicyHandler()** metoda to, co dodaje zasady do `HttpClient` obiektów, będą używane. W tym przypadku go polega na dodaniu zasad Polly dla protokołu Http ponownych prób z wykorzystaniem wykładniczego wycofywania.
+**AddPolicyHandler()** metoda to, co dodaje zasady do `HttpClient` obiekty użyjesz. W tym przypadku go polega na dodaniu zasad Polly dla protokołu Http ponownych prób z wykorzystaniem wykładniczego wycofywania.
 
-Aby uzyskać więcej dzięki podejściu, można zdefiniować zasady ponów Http w oddzielnych metodach w metodzie ConfigureServices() jako następujący kod.
+Aby uzyskać więcej dzięki podejściu, można zdefiniować zasady ponów Http w oddzielnych metodach w ramach `Startup.cs` pliku, jak pokazano w poniższym kodzie:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -55,7 +55,7 @@ Usłudze Polly można zdefiniować zasady ponawiania z liczbą ponownych prób, 
 
 więc spróbuje sześciokrotnie sekund między kolejnymi próbami. zostanie ona wykładniczego, począwszy od dwóch sekund.
 
-### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Dodawanie strategii zakłócenia do zasad ponawiania prób
+## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Dodaj strategię zakłócenia do zasady ponawiania
 
 Regularne zasady ponawiania mogą mieć wpływ na systemu w przypadku wysokiej współbieżności i skalowalności i w obszarze rywalizacji o wysokiej. Aby wyeliminować szczytowe podobne ponownych prób, pochodzące z wielu klientów w przypadku częściowej awarii, dobre rozwiązanie jest dodanie strategii zakłócenia do algorytmu/zasady ponawiania. Może to zwiększyć ogólną wydajność systemu end-to-end, dodając losowości do wykładniczego wycofywania. Rozszerza się skokom o problemach. Przy użyciu zwykłego zasad Polly, kod implementujący zakłócenia może wyglądać następująco:
 
@@ -71,19 +71,17 @@ Policy
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Wzorzec ponawiania**
-    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- **Wzorzec ponawiania**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/retry*](/azure/architecture/patterns/retry)
 
--   **Polly i HttpClientFactory**
-    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
+- **Polly i HttpClientFactory**\
+  [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
--   **Polly (odporności platformy .NET i biblioteki przejściowy błędów obsługi)**
+- **Polly (odporności platformy .NET i biblioteki przejściowy błędów obsługi)**\
+  [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
-
--   **Marc Brooker. Zakłócenia: Lepiej wprowadzania rzeczy za pomocą losowości**
-
-    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
+- **Marc Brooker. Jitter: Lepiej wprowadzania rzeczy za pomocą losowości**\
+  [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
 >[!div class="step-by-step"]
 >[Poprzednie](explore-custom-http-call-retries-exponential-backoff.md)

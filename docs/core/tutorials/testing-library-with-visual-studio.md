@@ -1,5 +1,5 @@
 ---
-title: Testowanie biblioteki klas w języku .NET Core w programie Visual Studio 2017
+title: Testowanie biblioteki klas .NET Standard z platformą .NET Core w programie Visual Studio 2017
 description: Utwórz projekt testu jednostkowego dla biblioteki klas platformy .NET Core. Sprawdź, czy biblioteki klas platformy .NET Core działa poprawnie przy użyciu testów jednostkowych.
 author: BillWagner
 ms.author: wiwagn
@@ -8,16 +8,16 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170798"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362694"
 ---
-# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testowanie biblioteki klas w języku .NET Core w programie Visual Studio 2017
+# <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Test biblioteki .NET Standard z platformą .NET Core w programie Visual Studio 2017
 
-W [tworzenia biblioteki klas w języku C# i .NET Core w programie Visual Studio 2017](library-with-visual-studio.md) lub [tworzenia biblioteki klas w języku Visual Basic i .NET Core w programie Visual Studio 2017](vb-library-with-visual-studio.md), utworzone biblioteki prostą klasę, która dodaje metodę rozszerzenia, aby <xref:System.String> klasy. Teraz utworzysz testu jednostkowego, aby upewnić się, że działa zgodnie z oczekiwaniami. Dodasz projektu testu jednostkowego do rozwiązania, który został utworzony w poprzednim temacie.
+W [kompilacji biblioteki .NET Standard z C# i .NET Core w programie Visual Studio 2017](library-with-visual-studio.md) lub [Tworzenie biblioteki .NET Standard, w języku Visual Basic i .NET Core w programie Visual Studio 2017](vb-library-with-visual-studio.md), utworzyć prostą klasę Biblioteka, która dodaje metodę rozszerzenia, aby <xref:System.String> klasy. Teraz utworzysz testu jednostkowego, aby upewnić się, że działa zgodnie z oczekiwaniami. Dodasz projektu testu jednostkowego z rozwiązaniem, utworzonej w poprzednim artykule.
 
 ## <a name="creating-a-unit-test-project"></a>Tworzenie projektu testu jednostkowego
 
@@ -159,7 +159,7 @@ Przebieg testu miał żadne błędy, ale zmień je nieco, tak aby jednej z metod
 
    ![Okno Eksploratora testów za pomocą testy zakończone niepowodzeniem](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. W **testy zakończone niepomyślnie** wybierz test zakończony niepowodzeniem `TestDoesNotStartWith`. **Eksplorator testów** okna wyświetlany jest komunikat generowany przez assert: "Assert.IsFalse nie powiodło się. Oczekiwana dla "Error": false; rzeczywista: Wartość true". Wszystkie ciągi w tablicy po "Błąd" nie zostały przetestowane z powodu błędu.
+1. W **testy zakończone niepomyślnie** wybierz test zakończony niepowodzeniem `TestDoesNotStartWith`. **Eksplorator testów** okna wyświetlany jest komunikat generowany przez assert: "Assert.IsFalse nie powiodło się. Oczekiwana dla "Error": false; rzeczywista: True". Wszystkie ciągi w tablicy po "Błąd" nie zostały przetestowane z powodu błędu.
 
    ![Okno Eksploratora testów, wyświetlane jest False Błąd potwierdzenia](./media/testing-library-with-visual-studio/failed-test-detail.png)
 

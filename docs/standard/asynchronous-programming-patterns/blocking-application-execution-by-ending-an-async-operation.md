@@ -13,21 +13,21 @@ ms.author: ronpet
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 782cb614d74b331cef8ab9f28924104ed15a8a38
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 854528670bbddbc2dc318bf4a5ecd12368a5e8d1
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611545"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361979"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>Blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej
 Aplikacje, które nie mogą w dalszym ciągu wykonywać inne zadania podczas oczekiwania na wyniki operacji asynchronicznej należy zablokować, aż do zakończenia operacji. Blokowanie wątku głównego aplikacji podczas oczekiwania na zakończenie operacji asynchronicznej, użyj jednej z następujących opcji:  
   
 -   Wywoływanie operacji asynchronicznych **zakończenia**_OperationName_ metody. To podejście jest przedstawiona w tym temacie.  
   
--   Użyj <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwość <xref:System.IAsyncResult> zwrócony przez operację asynchroniczną **rozpocząć *** OperationName* metody. Aby uzyskać przykład demonstrujący takie podejście, zobacz [blokowania aplikacji wykonywania za pomocą właściwości AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+-   Użyj <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwość <xref:System.IAsyncResult> zwrócony przez operację asynchroniczną **rozpocząć**_OperationName_ metody. Aby uzyskać przykład demonstrujący takie podejście, zobacz [blokowania aplikacji wykonywania za pomocą właściwości AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
   
- Aplikacje, które używają **zakończenia**_OperationName_ zazwyczaj wywoła metodę, aby zablokować do czasu ukończenia operacji asynchronicznej **rozpocząć *** OperationName* metody wykonać wszelkie prace, które może odbywać się bez wyników operacji, a następnie wywołaj **zakończenia**_OperationName_.  
+ Aplikacje, które używają **zakończenia**_OperationName_ zazwyczaj wywoła metodę, aby zablokować do czasu ukończenia operacji asynchronicznej **rozpocząć**  _OperationName_ metody, wykonać wszelkie prace, które może odbywać się bez wyników operacji, a następnie wywołaj **zakończenia**_OperationName_.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu demonstruje, za pomocą metod asynchronicznych we <xref:System.Net.Dns> klasy do pobrania informacji System nazw domen dla komputera określonego przez użytkownika. Należy pamiętać, że `null` (`Nothing` w języku Visual Basic) jest przekazywana <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` i `stateObject` parametry ponieważ tych argumentów nie są wymagane w przypadku korzystania z tej metody.  

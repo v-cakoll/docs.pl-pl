@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: b2975403c38dbb2b73c10b147a6903013a1e5573
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239293"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362317"
 ---
 # <a name="expressions-c-programming-guide"></a>Wyrażenia (Przewodnik programowania w języku C#)
 *Wyrażenie* jest sekwencją jednego lub większej liczbie operandów i zero lub więcej operatorów, które mogą być obliczane do pojedynczej wartości, obiektu, metody lub przestrzeni nazw. Wyrażenia może składać się z wartością literału, wywołanie metody, operatora i jego operandy lub *prostej nazwie*. Proste nazwy mogą być nazwa zmiennej, składowej typu, parametru metody, przestrzeń nazw lub typu.  
@@ -25,7 +25,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>Wyrażenie wartości  
- W większości w sytuacjach, w których wyrażenia są używane, na przykład w instrukcji lub parametrach metody wyrażenia powinien ocenić na wartość. Jeśli x i y są liczbami całkowitymi, wyrażenie `x + y` daje w wyniku wartość liczbową. Wyrażenie `new MyClass()` ocenia na odwołanie do nowego wystąpienia `MyClass` obiektu. Wyrażenie `myClass.ToString()` ocenia na ciąg, ponieważ jest to typ zwracany metody. Jednak mimo że nazwa przestrzeni nazw jest klasyfikowana jako wyrażenia, nie można rozpoznać wartości i w związku z tym nigdy nie może być ostateczny wynik dowolne wyrażenie. Nie można przekazać nazwę przestrzeni nazw do parametru metody, lub używać go w nowe wyrażenie lub przypisać ją do zmiennej. Można używać tylko ją jako wyrażenie podrzędnych w dłuższym wyrażeniu. To samo dotyczy typów (w odróżnieniu od <xref:System.Type?displayProperty=nameWithType> obiektów), nazwy grupy metod (jak różniący się od określonej metody) oraz zdarzenia [Dodaj](../../../csharp/language-reference/keywords/add.md) i [Usuń](../../../csharp/language-reference/keywords/remove.md) metod dostępu.  
+ W większości w sytuacjach, w których wyrażenia są używane, na przykład w instrukcji lub parametrach metody wyrażenia powinien ocenić na wartość. Jeśli x i y są liczbami całkowitymi, wyrażenie `x + y` daje w wyniku wartość liczbową. Wyrażenie `new MyClass()` ocenia na odwołanie do nowego wystąpienia `MyClass` klasy. Wyrażenie `myClass.ToString()` ocenia na ciąg, ponieważ jest to typ zwracany metody. Jednak mimo że nazwa przestrzeni nazw jest klasyfikowana jako wyrażenia, nie można rozpoznać wartości i w związku z tym nigdy nie może być ostateczny wynik dowolne wyrażenie. Nie można przekazać nazwę przestrzeni nazw do parametru metody, lub używać go w nowe wyrażenie lub przypisać ją do zmiennej. Można używać tylko ją jako wyrażenie podrzędnych w dłuższym wyrażeniu. To samo dotyczy typów (w odróżnieniu od <xref:System.Type?displayProperty=nameWithType> obiektów), nazwy grupy metod (jak różniący się od określonej metody) oraz zdarzenia [Dodaj](../../../csharp/language-reference/keywords/add.md) i [Usuń](../../../csharp/language-reference/keywords/remove.md) metod dostępu.  
   
  Każda wartość ma skojarzony typ. Na przykład jeśli x i y są obie zmienne typu `int`, wartość wyrażenia `x + y` jako również wpisana `int`. Jeśli wartość jest przypisywana do zmiennej innego typu lub x i y są różnych typów, reguły konwersji typów są stosowane. Aby uzyskać więcej informacji na temat działania takich konwersji, zobacz [rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   

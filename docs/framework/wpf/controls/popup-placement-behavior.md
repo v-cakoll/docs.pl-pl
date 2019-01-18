@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 6f1fb6fa7702d36aa7ddf4c12fe4a370f4e66e23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99875de320d6728fdacb55c153064c5c1267efdf
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528795"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362928"
 ---
 # <a name="popup-placement-behavior"></a>Zachowanie położenia okna podręcznego
 A <xref:System.Windows.Controls.Primitives.Popup> kontrolka Wyświetla zawartość w osobnym oknie, które pojawia się za pośrednictwem aplikacji. Można określić położenie <xref:System.Windows.Controls.Primitives.Popup> względem formantu, myszy lub ekranu przy użyciu <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> właściwości.  Właściwości te działają razem, zapewniają elastyczność podczas określania położenia <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -36,7 +36,7 @@ Obraz z czterech wyskakujące okienka
  Ten prosty przykład pokazuje, jak ustawić <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> i <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwości, ale przy użyciu <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> właściwości, masz większą kontrolę nad <xref:System.Windows.Controls.Primitives.Popup> znajduje się.  
   
 <a name="Definitions"></a>   
-## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>Definicje terminów: anatomia okna podręcznego  
+## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>Definicje terminów: Anatomia okna podręcznego  
  Następujące warunki są przydatne do zrozumienia sposób, w jaki <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> właściwości odnoszą się do siebie nawzajem i <xref:System.Windows.Controls.Primitives.Popup>:  
   
 -   Obiekt docelowy  
@@ -228,4 +228,4 @@ Umieszczanie jest myszy, a okno podręczne napotka dolną krawędzią ekranu
  Docelowy punkt wyrównania okna podręczne oraz źródła można dostosować przez ustawienie <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwość <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Następnie zdefiniuj <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegata, która zwraca zestaw punktów możliwe umieszczanie i osi podstawowej (w kolejności preferencji) dla <xref:System.Windows.Controls.Primitives.Popup>. Punkt, który pokazuje największą część <xref:System.Windows.Controls.Primitives.Popup> jest zaznaczone.  Pozycja <xref:System.Windows.Controls.Primitives.Popup> jest automatycznie dostosowywany Jeśli <xref:System.Windows.Controls.Primitives.Popup> jest ukryta przez krawędzi ekranu. Aby uzyskać przykład, zobacz [Określ niestandardowe położenie okna podręcznego](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe położenia okna podręcznego](https://go.microsoft.com/fwlink/?LinkID=160032)
+ [Przykładowe położenia okna podręcznego](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)

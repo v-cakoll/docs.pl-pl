@@ -1,13 +1,13 @@
 ---
 title: skrypty instalacji DotNet
 description: Więcej informacji na temat skryptów instalacji dotnet do zainstalowania narzędzi interfejsu wiersza polecenia platformy .NET Core i udostępnionego środowiska uruchomieniowego.
-ms.date: 11/15/2018
-ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/16/2019
+ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148333"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362834"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dokumentacja skryptów instalacji DotNet
 
@@ -21,7 +21,7 @@ W systemie Windows:
 
 `dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture] [-SharedRuntime] [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential] [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]`
 
-System macOS/Linux:
+macOS/Linux:
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential] [--runtime-id] [--skip-non-versioned-files] [--help]`
 
@@ -73,7 +73,7 @@ Można to zrobić przy użyciu określonej wersji `--version` argumentu. Wersja 
 
 * **`-Architecture <ARCHITECTURE>`**
 
-  Architektura platformy .NET Core pliki binarne do zainstalowania. Możliwe wartości to `auto`, `x64`, i `x86`. Wartość domyślna to `auto`, który reprezentuje aktualnie uruchomionych architektury systemu operacyjnego.
+  Architektura platformy .NET Core pliki binarne do zainstalowania. Możliwe wartości to `<auto>`, `amd64`, `x64`, `x86`, `arm64`, i `arm`. Wartość domyślna to `<auto>`, który reprezentuje aktualnie uruchomionych architektury systemu operacyjnego.
 
 * **`-SharedRuntime`**
 
@@ -143,7 +143,7 @@ Można to zrobić przy użyciu określonej wersji `--version` argumentu. Wersja 
   ./dotnet-install.ps1 -Channel LTS
   ```
 
-  System macOS/Linux:
+  macOS/Linux:
 
   ```bash
   ./dotnet-install.sh --channel LTS
@@ -157,7 +157,7 @@ Można to zrobić przy użyciu określonej wersji `--version` argumentu. Wersja 
   ./dotnet-install.ps1 -Channel 2.0 -InstallDir C:\cli
   ```
 
-  System macOS/Linux:
+  macOS/Linux:
 
   ```bash
   ./dotnet-install.sh --channel 2.0 --install-dir ~/cli
@@ -171,7 +171,7 @@ Można to zrobić przy użyciu określonej wersji `--version` argumentu. Wersja 
   ./dotnet-install.ps1 -SharedRuntime -Version 1.1.0
   ```
 
-  System macOS/Linux:
+  macOS/Linux:
 
   ```bash
   ./dotnet-install.sh --shared-runtime --version 1.1.0
@@ -192,7 +192,7 @@ Można to zrobić przy użyciu określonej wersji `--version` argumentu. Wersja 
   @powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
   ```
 
-  System macOS/Linux:
+  macOS/Linux:
 
   ```bash
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>

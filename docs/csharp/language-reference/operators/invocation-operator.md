@@ -1,7 +1,7 @@
 ---
 title: operator () - C# odwołania
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/15/2019
 f1_keywords:
 - ()_CSharpKeyword
 helpviewer_keywords:
@@ -9,41 +9,51 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 656a1ca7a992df43ff857d2c4ecb62b044f7e06f
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 3a0af33739c9cb4d090842219eba4ece9700ef89
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333281"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362785"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="56b4a-102">() — operator (C# odwołania)</span><span class="sxs-lookup"><span data-stu-id="56b4a-102">() operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="3e299-102">() — operator (C# odwołania)</span><span class="sxs-lookup"><span data-stu-id="3e299-102">() operator (C# Reference)</span></span>
 
-<span data-ttu-id="56b4a-103">Oprócz określania kolejności operacji w wyrażeniach nawiasy są też używane do następujących zadań:</span><span class="sxs-lookup"><span data-stu-id="56b4a-103">In addition to being used to specify the order of operations in an expression, parentheses are used to perform the following tasks:</span></span>
+<span data-ttu-id="3e299-103">Nawiasy, `()`, są zwykle używane dla wywołania metody lub delegata lub wyrażenia cast.</span><span class="sxs-lookup"><span data-stu-id="3e299-103">Parentheses, `()`, are typically used for method or delegate invocation or in cast expressions.</span></span>
 
-1. <span data-ttu-id="56b4a-104">Określanie rzutowania lub konwersji typów.</span><span class="sxs-lookup"><span data-stu-id="56b4a-104">Specify casts, or type conversions.</span></span>
+<span data-ttu-id="3e299-104">Możesz także użyć nawiasów, aby określić kolejność, w którym ma być operacji w wyrażeniu.</span><span class="sxs-lookup"><span data-stu-id="3e299-104">You also use parentheses to specify the order in which to evaluate operations in an expression.</span></span> <span data-ttu-id="3e299-105">Aby uzyskać więcej informacji, zobacz [Dodawanie nawiasów](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) części [operatory](../../programming-guide/statements-expressions-operators/operators.md) artykułu.</span><span class="sxs-lookup"><span data-stu-id="3e299-105">For more information, see the [Adding parentheses](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) section of the [Operators](../../programming-guide/statements-expressions-operators/operators.md) article.</span></span> <span data-ttu-id="3e299-106">Listy uporządkowane według poziomu pierwszeństwo operatorów, zobacz [ C# operatory](index.md).</span><span class="sxs-lookup"><span data-stu-id="3e299-106">For the list of operators ordered by precedence level, see [C# operators](index.md).</span></span>
 
-    [!code-csharp[csRefOperators#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#1)]
+## <a name="method-invocation"></a><span data-ttu-id="3e299-107">Wywołanie metody</span><span class="sxs-lookup"><span data-stu-id="3e299-107">Method invocation</span></span>
 
-2. <span data-ttu-id="56b4a-105">Wywoływanie metody lub delegatów.</span><span class="sxs-lookup"><span data-stu-id="56b4a-105">Invoke methods or delegates.</span></span>
+<span data-ttu-id="3e299-108">Poniższy przykład przedstawia sposób wywołania metody, z lub bez argumentów i delegata:</span><span class="sxs-lookup"><span data-stu-id="3e299-108">The following example demonstrates how to invoke a method, with or without arguments, and a delegate:</span></span>
 
-    [!code-csharp[csRefOperators#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#2)]
+[!code-csharp-interactive[use for invocation](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
 
-## <a name="remarks"></a><span data-ttu-id="56b4a-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="56b4a-106">Remarks</span></span>
+<span data-ttu-id="3e299-109">Można także użyć nawiasów podczas wywołujesz [Konstruktor](../../programming-guide/classes-and-structs/constructors.md) z [ `new` ](../keywords/new-operator.md) operatora.</span><span class="sxs-lookup"><span data-stu-id="3e299-109">You also use parentheses when you invoke a [constructor](../../programming-guide/classes-and-structs/constructors.md) with a [`new`](../keywords/new-operator.md) operator.</span></span>
 
-<span data-ttu-id="56b4a-107">Rzutowanie jawnie wywołuje operatora konwersji z jednego typu do drugiego. Rzutowanie kończy się niepowodzeniem, jeśli żaden operator konwersji nie jest zdefiniowany.</span><span class="sxs-lookup"><span data-stu-id="56b4a-107">A cast explicitly invokes the conversion operator from one type to another; the cast fails if no such conversion operator is defined.</span></span> <span data-ttu-id="56b4a-108">Aby zdefiniować operatora konwersji, zobacz [jawne](../keywords/explicit.md) i [niejawne](../keywords/implicit.md) definiowanie operatorów konwersji.</span><span class="sxs-lookup"><span data-stu-id="56b4a-108">To define a conversion operator, see [explicit](../keywords/explicit.md) and [implicit](../keywords/implicit.md).</span></span>
+<span data-ttu-id="3e299-110">Aby uzyskać więcej informacji o metodach, zobacz [metody](../../programming-guide/classes-and-structs/methods.md).</span><span class="sxs-lookup"><span data-stu-id="3e299-110">For more information about methods, see [Methods](../../programming-guide/classes-and-structs/methods.md).</span></span> <span data-ttu-id="3e299-111">Aby uzyskać więcej informacji na temat obiektów delegowanych, zobacz [delegatów](../../programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="3e299-111">For more information about delegates, see [Delegates](../../programming-guide/delegates/index.md).</span></span>
 
- <span data-ttu-id="56b4a-109">Operator `()` nie może być przeciążony.</span><span class="sxs-lookup"><span data-stu-id="56b4a-109">The `()` operator cannot be overloaded.</span></span>
+## <a name="cast-expression"></a><span data-ttu-id="3e299-112">Wyrażenie CAST</span><span class="sxs-lookup"><span data-stu-id="3e299-112">Cast expression</span></span>
 
- <span data-ttu-id="56b4a-110">Aby uzyskać więcej informacji, zobacz [Rzutowanie i konwersje typów](../../programming-guide/types/casting-and-type-conversions.md). </span><span class="sxs-lookup"><span data-stu-id="56b4a-110">For more information, see [Casting and Type Conversions](../../programming-guide/types/casting-and-type-conversions.md).</span></span>
+<span data-ttu-id="3e299-113">Wyrażenie cast w postaci `(T)E` wywołuje operatora konwersji można przekonwertować wartości wyrażenia `E` na typ `T`.</span><span class="sxs-lookup"><span data-stu-id="3e299-113">A cast expression of the form `(T)E` invokes a conversion operator to convert the value of expression `E` to type `T`.</span></span> <span data-ttu-id="3e299-114">Jeśli istnieje nie jawna konwersja z typu `E` na typ `T`, wystąpi błąd kompilacji.</span><span class="sxs-lookup"><span data-stu-id="3e299-114">If no explicit conversion exists from the type of `E` to type `T`, a compile-time error occurs.</span></span> <span data-ttu-id="3e299-115">Aby dowiedzieć się, jak definiowanie operatora konwersji, zobacz [jawne](../keywords/explicit.md) i [niejawne](../keywords/implicit.md) artykuły — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="3e299-115">For information about how to define a conversion operator, see the [explicit](../keywords/explicit.md) and [implicit](../keywords/implicit.md) keyword articles.</span></span>
 
- <span data-ttu-id="56b4a-111">Aby uzyskać więcej informacji na temat wywołania metody, zobacz [metody](../../programming-guide/classes-and-structs/methods.md).</span><span class="sxs-lookup"><span data-stu-id="56b4a-111">For more information about method invocation, see [Methods](../../programming-guide/classes-and-structs/methods.md).</span></span>
+<span data-ttu-id="3e299-116">W poniższym przykładzie pokazano konwersja typu typy liczbowe:</span><span class="sxs-lookup"><span data-stu-id="3e299-116">The following example demonstrates type conversion between numeric types:</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="56b4a-112">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="56b4a-112">C# language specification</span></span>
+[!code-csharp-interactive[use for cast](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+<span data-ttu-id="3e299-117">Aby uzyskać więcej informacji na temat wstępnie zdefiniowanych jawne konwersje między typów liczbowych, zobacz [Tabela jawnych konwersji liczbowych](../keywords/explicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="3e299-117">For more information about predefined explicit conversions between numeric types, see [Explicit numeric conversions table](../keywords/explicit-numeric-conversions-table.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="56b4a-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="56b4a-113">See also</span></span>
+<span data-ttu-id="3e299-118">Aby uzyskać więcej informacji, zobacz [konwersje rzutowania i typ](../../programming-guide/types/casting-and-type-conversions.md) i [operatory konwersji](../../programming-guide/statements-expressions-operators/conversion-operators.md).</span><span class="sxs-lookup"><span data-stu-id="3e299-118">For more information, see [Casting and type conversions](../../programming-guide/types/casting-and-type-conversions.md) and [Conversion operators](../../programming-guide/statements-expressions-operators/conversion-operators.md).</span></span>
 
-- [<span data-ttu-id="56b4a-114">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="56b4a-114">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="56b4a-115">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="56b4a-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="56b4a-116">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="56b4a-116">C# Operators</span></span>](index.md)
+## <a name="operator-overloadability"></a><span data-ttu-id="3e299-119">Overloadability — operator</span><span class="sxs-lookup"><span data-stu-id="3e299-119">Operator overloadability</span></span>
+
+<span data-ttu-id="3e299-120">Operator `()` nie mogą być przeciążone.</span><span class="sxs-lookup"><span data-stu-id="3e299-120">The operator `()` cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="3e299-121">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="3e299-121">C# language specification</span></span>
+
+<span data-ttu-id="3e299-122">Aby uzyskać więcej informacji, zobacz [wyrażenia wywołania](~/_csharplang/spec/expressions.md#invocation-expressions) i [rzutowane wyrażenia,](~/_csharplang/spec/expressions.md#cast-expressions) sekcje [ C# specyfikacji języka](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="3e299-122">For more information, see the [Invocation expressions](~/_csharplang/spec/expressions.md#invocation-expressions) and [Cast expressions](~/_csharplang/spec/expressions.md#cast-expressions) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="3e299-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3e299-123">See also</span></span>
+
+- [<span data-ttu-id="3e299-124">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="3e299-124">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="3e299-125">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="3e299-125">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="3e299-126">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="3e299-126">C# Operators</span></span>](index.md)

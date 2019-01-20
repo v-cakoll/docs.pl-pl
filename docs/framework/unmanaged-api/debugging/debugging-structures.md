@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c7415920d34fc231bf82dd00199c7e01eec7a73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23aa619d666f2e0b9eb67ab4cf8d4f92761865d3
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408115"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415328"
 ---
 # <a name="debugging-structures"></a>Struktury debugowania
 W tej sekcji opisano niezarządzane struktury, których używa interfejsu API debugowania.  
@@ -23,61 +23,68 @@ W tej sekcji opisano niezarządzane struktury, których używa interfejsu API de
  Określa wersję produktu środowisko uruchomieniowe języka wspólnego (CLR) na potrzeby debugowania.  
   
  [CodeChunkInfo, struktura1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
- Reprezentuje pojedynczy fragmentu kodu w pamięci.  
+ Reprezentuje jeden fragment kodu w pamięci.  
   
  [CorDebugBlockingObject, struktura](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)  
- Definiuje obiekt, który blokuje wątku i przyczyny, dlaczego wątek jest zablokowany.  
+ Definiuje obiekt, który blokuje wątek i przyczyny, dlaczego wątek jest blokowany.  
   
  [CorDebugEHClause, struktura](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)  
- Reprezentuje wyjątek klauzuli (EH) dla danego elementu języku pośrednim (IL).  
+ Reprezentuje wyjątek obsługi klauzuli (EH) dla danego języka pośredniego (IL).  
   
  [CorDebugExceptionObjectStackFrame, struktura](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  
- Reprezentuje stosu ramki informacji z obiektu wyjątku.  
+ Reprezentuje stosu ramki informacje z obiekt wyjątku.  
   
  [CorDebugExceptionObjectStackFrame, struktura](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  
- Mapy [!INCLUDE[wrt](../../../../includes/wrt-md.md)] identyfikator GUID na odpowiednie [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) obiektu.  
+ Mapy [!INCLUDE[wrt](../../../../includes/wrt-md.md)] identyfikator GUID służący do odpowiadającymi mu dostawcami [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) obiektu.  
   
- COR_ACTIVE_FUNCTION —  
- Zawiera informacje na temat funkcji, które są aktualnie aktywne w ramkach wątku.  
+ COR_ACTIVE_FUNCTION  
+ Zawiera informacje na temat funkcji, które są aktualnie aktywne w ramkach w wątku.  
   
  [COR_ARRAY_LAYOUT, struktura](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md)  
- Zawiera informacje o układzie tablicy obiektów w pamięci.  
+ Informacje dotyczące układu obiektu tablicowego w pamięci.  
   
- COR_DEBUG_IL_TO_NATIVE_MAP —  
- Zawiera przesunięcia, które są używane do mapowania kodu natywnego kodu języka pośredniego (MSIL) firmy Microsoft.  
+ COR_DEBUG_IL_TO_NATIVE_MAP  
+ Zawiera przesunięcia, które są używane do mapowania kod intermediate language (MSIL) firmy Microsoft do kodu macierzystego.  
   
  COR_DEBUG_STEP_RANGE  
- Zawiera informacje przesunięcia zakresu kodu.  
+ Zawiera informacje przesunięcia w zakresie kodu.  
   
  [COR_FIELD, struktura](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)  
- Zawiera informacje dotyczące pola w obiekcie.  
+ Zawiera informacje dotyczące pól w obiekcie.  
   
  [COR_GC_REFERENCE, struktura](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)  
- Zawiera informacje dotyczące obiektu, który ma być zbierane z pamięci.  
+ Zawiera informacje dotyczące obiektu, który ma być zebranych elementów bezużytecznych.  
   
  [COR_HEAPINFO, struktura](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)  
- Ogólne informacje dotyczące odzyskiwania pamięci sterty kolekcji, także wyliczalny.  
+ Zawiera ogólne informacje o stercie wyrzucania elementów bezużytecznych, w tym, czy jest wyliczalna.  
   
  [COR_HEAPOBJECT, struktura](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)  
- Zawiera informacje dotyczące obiektów na stercie zarządzanej.  
+ Zawiera informacje dotyczące obiektu na stosie zarządzanym.  
   
  COR_IL_MAP  
- Określa przesunięcie względną funkcji zmiany.  
+ Określa przesunięcie względne funkcji zmiany.  
   
  [COR_SEGMENT, struktura](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md)  
- Zawiera informacje na temat obszar pamięci sterty zarządzanej.  
+ Zawiera informacje o region pamięci w stosie zarządzanym.  
   
  [COR_TYPEID, struktura](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)  
  Zawiera identyfikator typu.  
   
  [COR_TYPE_LAYOUT, struktura](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md)  
- Zawiera informacje o układzie obiektu w pamięci.  
+ Informacje dotyczące układu obiektu w pamięci.  
   
- COR_VERSION —  
- Przechowuje numer wersji czteroczęściową standardowe środowisko uruchomieniowe języka wspólnego.  
+ COR_VERSION  
+ Przechowuje standardowe Czteroczęściowy numer środowiska uruchomieniowego języka wspólnego.  
   
  [StackTrace_SimpleContext, struktura](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)  
- Udostępnia prosty kontekstu, którego można użyć zamiast pełnej `CONTEXT` struktury.  
+ Udostępnia prosty kontekst, który można użyć zamiast pełnego `CONTEXT` struktury.
+
+ [Struktura CLRDATA_ADDRESS_RANGE](../../../../docs/framework/unmanaged-api/debugging/clrdata-address-range-structure.md) definiuje zakres adresów.
+ 
+ [Struktura CLRDATA_IL_ADDRESS_MAP](../../../../docs/framework/unmanaged-api/debugging/clrdata-il-address-map-structure.md) definiuje języka Pośredniego do mapowania adresu
+ 
+ [Struktura DacpGetModuleAddress](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) definiuje kontener dla żądania adres modułu.
+
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Klasy coclass debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

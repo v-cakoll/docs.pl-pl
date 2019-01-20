@@ -10,25 +10,25 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c40b68a67219cd8f24874780281023974886e4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201021"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54416030"
 ---
 # What's new in .NET Framework <a name="introduction"></a>
 
 Ten artykuł zawiera podsumowanie kluczowych nowych funkcji i ulepszeń w następujących wersjach systemu .NET Framework:
 
-- [.NET framework 4.7.2](#v472)
-- [.NET framework 4.7.1](#v471)
-- [.NET framework 4.7](#v47)
-- [.NET framework 4.6.2](#v462)
-- [Program .NET framework 4.6.1](#v461)
+- [.NET Framework 4.7.2](#v472)
+- [.NET Framework 4.7.1](#v471)
+- [.NET Framework 4.7](#v47)
+- [.NET Framework 4.6.2](#v462)
+- [.NET Framework 4.6.1](#v461)
 - [.NET 2015 i .NET Framework 4.6](#v46)
 - [.NET Framework 4.5.2](#v452)
-- [.NET framework 4.5.1](#v451)
+- [.NET Framework 4.5.1](#v451)
 - [.NET Framework 4.5](#v45)
 
 Ten artykuł nie zawiera wyczerpujących informacji odnośnie każdej nowej funkcji i może ulec zmianie. Aby uzyskać ogólne informacje dotyczące programu .NET Framework, zobacz [wprowadzenie](../../../docs/framework/get-started/index.md). Dla obsługiwanych platform, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md). Łącza pobierania oraz instrukcje dotyczące instalacji, zobacz [Przewodnik instalacji](../../../docs/framework/install/guide-for-developers.md).
@@ -242,9 +242,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 [Wstrzykiwanie zależności (DI)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) oddziela obiektów i ich zależności, aby kod obiektu nie jest już musi zostać zmienione tylko w przypadku, ponieważ zależność została zmieniona. Podczas tworzenia aplikacji ASP.NET, które obsługują program .NET Framework 4.7.2, możesz wykonywać następujące czynności:
 
-- Użyj iniekcji na podstawie metody ustawiającej, oparte na interfejsie i na podstawie konstruktora w [programów obsługi i modułów](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [stronie wystąpień](xref:System.Web.UI.Page), i [kontrolki użytkownika](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) aplikacji internetowej platformy ASP.NET projekty.
+- Użyj iniekcji na podstawie metody ustawiającej, oparte na interfejsie i na podstawie konstruktora w [programów obsługi i modułów](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [stronie wystąpień](xref:System.Web.UI.Page), i [kontrolki użytkownika](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) aplikacji internetowej platformy ASP.NET projekty.
 
-- Użyj metody ustawiającej, jak i oparty na iniekcji w [programów obsługi i modułów](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [stronie wystąpień](xref:System.Web.UI.Page), i [kontrolki użytkownika](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) projektów witryny sieci web platformy ASP.NET.
+- Użyj metody ustawiającej, jak i oparty na iniekcji w [programów obsługi i modułów](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [stronie wystąpień](xref:System.Web.UI.Page), i [kontrolki użytkownika](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) projektów witryny sieci web platformy ASP.NET.
 
 - Podłącz struktur iniekcji zależności różne.
 
@@ -557,7 +557,7 @@ W programie .NET Framework 4.7 program ASP.NET zawiera następujące nowe funkcj
 
 Począwszy od programu .NET Framework 4.7 ASP.NET dodaje nowy zestaw interfejsów API, które umożliwiają deweloperom w celu zastąpienia domyślnej implementacji platformy ASP.NET do monitorowania pamięci i buforowania obiektów w pamięci. Deweloperzy teraz zastąpić żadnego z następujących trzech składników, jeśli implementacja programu ASP.NET nie jest odpowiednia:
 
-- **Obiektu pamięci podręcznej Store**. Za pomocą nowej sekcji konfiguracji dostawcy pamięci podręcznej, deweloperzy można dodać nowego implementacjach pamięci podręcznej obiektów dla aplikacji ASP.NET za pomocą nowego **ICacheStoreProvider** interfejsu.
+- **Object Cache Store**. Za pomocą nowej sekcji konfiguracji dostawcy pamięci podręcznej, deweloperzy można dodać nowego implementacjach pamięci podręcznej obiektów dla aplikacji ASP.NET za pomocą nowego **ICacheStoreProvider** interfejsu.
 
 - **Monitorowanie pamięci**. Domyślny monitor pamięci w programie ASP.NET: powiadamia aplikacje uruchamianego bliski limitu skonfigurowanego prywatne bajty dla procesu, lub gdy komputer ma za mało całkowitej dostępnej pamięci fizycznej RAM. Gdy zbliża się te limity, powiadomienia są uruchamiane. W przypadku niektórych aplikacji Powiadomienia są uruchamiane zbyt Zamknij skonfigurowanego limitami, umożliwiające reakcje przydatne. Deweloperzy mogą zapisywać swoje własne monitorów pamięci, aby zastąpić domyślny za pomocą <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> właściwości.
 
@@ -1176,7 +1176,7 @@ Klient SQL teraz automatycznie zapewnia szybsze połączenia do grupy dostępno�
 
 <a name="WWF461" />
 
-### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation: transakcje
+### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation: Transakcje
  <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> Metoda teraz umożliwia korzystanie z Menedżera transakcji rozproszonych, innym niż MSDTC mógł wypromować transakcji. Można to zrobić, określając identyfikator GUID transakcji promoter do nowego <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> przeciążenia. Jeśli operacja się powiedzie, istnieją ograniczenia nakładane na możliwości transakcji. Gdy promoter transakcji MSDTC nie jest zarejestrowana, następujące metody throw <xref:System.Transactions.TransactionPromotionException> ponieważ te metody wymagają promocji do usługi MSDTC:
 
 - <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>
@@ -1469,7 +1469,7 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
         - **Przy użyciu prefiksu nazwy grupy połączenia**
 
-             Użytkownicy mogą określić ciąg, który WCF będzie używany jako prefiksu nazwy grupy połączeń. Dwa komunikaty z różnymi prefiksami są wysyłane przy użyciu różnych podstawowych połączeń HTTP. Ustaw prefiks poprzez dodanie pary klucz/wartość na komunikat <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> właściwości. Klucz jest "HttpTransportConnectionGroupNamePrefix"; wartość jest żądany prefiks.
+             Użytkownicy mogą określić ciąg, który WCF będzie używany jako prefiksu nazwy grupy połączeń. Dwa komunikaty z różnymi prefiksami są wysyłane przy użyciu różnych podstawowych połączeń HTTP. Ustaw prefiks poprzez dodanie pary klucz/wartość na komunikat <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> właściwości. The key is "HttpTransportConnectionGroupNamePrefix"; the value is the desired prefix.
 
         - **Przy użyciu fabryk różnych kanałów**
 
@@ -1641,7 +1641,7 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
     - Za pomocą interfejsów API środowiska wykonawczego Windows w przenośnych bibliotek, których platformą docelową, Windows 8.1, Windows Phone 8.1 i Windows Phone Silverlight 8.1.
 
-    - XAML (typy Windows.UI.XAML) można uwzględnić w przenośnych bibliotek, gdy miejscem docelowym, Windows 8.1 lub Windows Phone 8.1. Obsługiwane są następujące szablony XAML: pusta strona, słownika zasobów, formant z szablonem i kontrolki użytkownika.
+    - XAML (typy Windows.UI.XAML) można uwzględnić w przenośnych bibliotek, gdy miejscem docelowym, Windows 8.1 lub Windows Phone 8.1. Obsługiwane są następujące szablony XAML:  Pusta strona, słownika zasobów, formant z szablonem i kontrolki użytkownika.
 
     - Przenośne składnika wykonawczego Windows (plik winmd) można utworzyć do użycia w aplikacjach Store, przeznaczonych dla Windows 8.1 i Windows Phone 8.1.
 
@@ -1655,7 +1655,7 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
  Najważniejsze nowe funkcje i ulepszenia w programie .NET Framework 4.5.1 obejmują:
 
-- Automatyczne przekierowywanie powiązań zestawów. Począwszy od programu Visual Studio 2013, gdy kompilujesz aplikację, który jest przeznaczony dla [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], przekierowania powiązań mogą być dodawane do pliku konfiguracji aplikacji Jeśli Twoja aplikacja lub jej składniki odwołują się do wielu wersji tego samego zestawu. Można również włączyć tę funkcję dla projektów przeznaczonych dla starszych wersji programu .NET Framework. Aby uzyskać więcej informacji, zobacz [porady: Włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Automatyczne przekierowywanie powiązań zestawów. Począwszy od programu Visual Studio 2013, gdy kompilujesz aplikację, który jest przeznaczony dla [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], przekierowania powiązań mogą być dodawane do pliku konfiguracji aplikacji Jeśli Twoja aplikacja lub jej składniki odwołują się do wielu wersji tego samego zestawu. Można również włączyć tę funkcję dla projektów przeznaczonych dla starszych wersji programu .NET Framework. Aby uzyskać więcej informacji, zobacz [jak: Włączanie i wyłączanie automatycznego przekierowywania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Możliwość zbierania informacji diagnostycznych, aby pomóc deweloperom ulepszyć wydajność aplikacji serwera i chmury. Aby uzyskać więcej informacji, zobacz <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> i <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> metody <xref:System.Diagnostics.Tracing.EventSource> klasy.
 
@@ -1765,7 +1765,7 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
 Program ASP.NET 4.5 i 4.5.1 dodaje powiązanie modelu dla formularzy sieci Web, obsługa protokołu WebSocket, obsługę asynchroniczną, ulepszenia wydajności i wiele innych funkcji. Aby uzyskać więcej informacji, zobacz następujące zasoby:
 
-- [Program ASP.NET 4.5 i programu Visual Studio 2012](https://msdn.microsoft.com/library/hh420390(v=vs.110).aspx)
+- [ASP.NET 4.5 and Visual Studio 2012](https://msdn.microsoft.com/library/hh420390(v=vs.110).aspx)
 
 - [Platforma ASP.NET i narzędzia Web Tools dla programu Visual Studio 2013 — informacje o wersji](/aspnet/visual-studio/overview/2013/release-notes)
 

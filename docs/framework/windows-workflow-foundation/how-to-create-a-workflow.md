@@ -1,19 +1,19 @@
 ---
-title: 'Porady: Tworzenie przepływu pracy'
+title: 'Instrukcje: Tworzenie przepływu pracy'
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-ms.openlocfilehash: adaa322d4129f56abcad4fd848204ee373e907bd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e54dcc240a12100650bacbc355895a043c68c117
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502487"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415666"
 ---
-# <a name="how-to-create-a-workflow"></a>Porady: Tworzenie przepływu pracy
-Przepływy pracy można skonstruować z wbudowanych działań, a także z działań niestandardowych. Ten temat w tym kroku sekcji proces tworzenia przepływu pracy, który używa zarówno wbudowanych działań, takich jak <xref:System.Activities.Statements.Flowchart> działanie i działań niestandardowych z poprzedniego [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tematu. Przepływ pracy modeli gra odgadnięcia liczb. Tylko jeden tematy w tej sekcji jest wymagany do ukończenia tego samouczka; należy wybrać styl, który Cię interesuje i wykonaj ten krok. Jednak użytkownik może przejść wszystkie tematy w razie potrzeby.  
+# <a name="how-to-create-a-workflow"></a>Instrukcje: Tworzenie przepływu pracy
+Przepływy pracy można skonstruować z wbudowanych działań, a także z działań niestandardowych. Tematy w tej części kroku proces tworzenia przepływu pracy, który używa zarówno wbudowanych działań, takich jak <xref:System.Activities.Statements.Flowchart> działanie i działań niestandardowych z poprzedniego [jak: Utwórz działanie](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tematu. Przepływ pracy modeli gra odgadnięcia liczb. Tylko jeden tematy w tej sekcji jest wymagany do ukończenia tego samouczka; należy wybrać styl, który Cię interesuje i wykonaj ten krok. Jednak użytkownik może przejść wszystkie tematy w razie potrzeby.  
   
 > [!NOTE]
->  Każdy temat samouczka Wprowadzenie zależy od poprzednich tematach. Aby ukończyć ten temat, najpierw musisz zakończyć [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
+>  Każdy temat samouczka Wprowadzenie zależy od poprzednich tematach. Aby ukończyć ten temat, najpierw musisz zakończyć [jak: Utwórz działanie](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
 >  Aby pobrać pełną wersję tego samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](https://go.microsoft.com/fwlink/?LinkID=248976).  

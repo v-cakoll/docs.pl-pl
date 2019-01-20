@@ -1,23 +1,22 @@
 ---
-title: 'Porady: Przesłoń zakodowanego protokołu SOAP serializacji XML'
+title: 'Instrukcje: Zastąp zakodowanego protokołu SOAP serializacji XML'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 721a27b4bba239f0d22a24e0e159ef36b742d1b7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7deec91f605555cff94fa882c887a4adf97db58a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003779"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415068"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a>Porady: Przesłoń zakodowanego protokołu SOAP serializacji XML
-[Przykładowy kod](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
+# <a name="how-to-override-encoded-soap-xml-serialization"></a>Instrukcje: Zastąp zakodowanego protokołu SOAP serializacji XML
   
- Zastępowanie serializacji obiektów XML jako komunikaty protokołu SOAP proces jest podobny do procesu dla zastępowanie standardowych serializacji XML. Aby uzyskać informacje o zastępowanie standardowych serializacji XML, zobacz [jak: Określ alternatywną nazwę elementu XML Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
+ Zastępowanie serializacji obiektów XML jako komunikaty protokołu SOAP proces jest podobny do procesu dla zastępowanie standardowych serializacji XML. Aby uzyskać informacje o zastępowanie standardowych serializacji XML, zobacz [jak: Określ nazwę elementu alternatywny Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
   
-### <a name="to-override-serialization-of-objects-as-soap-messages"></a>Aby zastąpić serializacji obiektów jako protokołu SOAP wiadomości  
+## <a name="to-override-serialization-of-objects-as-soap-messages"></a>Aby zastąpić serializacji obiektów jako protokołu SOAP wiadomości  
   
 1.  Utworzenie wystąpienia <xref:System.Xml.Serialization.SoapAttributeOverrides> klasy.  
   
@@ -284,5 +283,5 @@ public class Run
 - [Atrybuty kontrolujące zakodowaną serializację SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
 - [Serializacja XML z usługami internetowymi XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
 - [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [Instrukcje: Serializacja obiektu jako kodowanego strumienia XML protokołu SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Instrukcje: Deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [Instrukcje: Serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

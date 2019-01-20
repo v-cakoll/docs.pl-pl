@@ -5,18 +5,18 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144718"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415692"
 ---
 # <a name="net-core-application-deployment"></a>Wdrażanie aplikacji .NET core
 
 Można utworzyć trzy typy wdrożeń dla aplikacji .NET Core:
 
-- Wdrażanie zależny od struktury. Jak wskazuje nazwa, zależny od struktury wdrożenia (stacje) zależy od obecności udostępnione całego systemu w wersji programu .NET Core w systemie docelowym. Ponieważ platformy .NET Core jest już obecny, Twoja aplikacja jest również do przenoszenia pomiędzy instalacji programu .NET Core. Aplikacja zawiera tylko własnego kodu i wszelkie zależności innych firm, które znajdują się poza biblioteki .NET Core. Zawiera FDDs *.dll* pliki, które można uruchamiać przy użyciu [narzędzia dotnet](../tools/dotnet.md) z wiersza polecenia. Na przykład `dotnet app.dll` uruchamia aplikację o nazwie `app`.
+- Framework-dependent deployment. Jak wskazuje nazwa, zależny od struktury wdrożenia (stacje) zależy od obecności udostępnione całego systemu w wersji programu .NET Core w systemie docelowym. Ponieważ platformy .NET Core jest już obecny, Twoja aplikacja jest również do przenoszenia pomiędzy instalacji programu .NET Core. Aplikacja zawiera tylko własnego kodu i wszelkie zależności innych firm, które znajdują się poza biblioteki .NET Core. Zawiera FDDs *.dll* pliki, które można uruchamiać przy użyciu [narzędzia dotnet](../tools/dotnet.md) z wiersza polecenia. Na przykład `dotnet app.dll` uruchamia aplikację o nazwie `app`.
 
 - Niezależne wdrożenia. W odróżnieniu od Dyskietki niezależna wdrożenia (— SCD) nie jest zależny od obecności składniki współużytkowane w systemie docelowym. Wszystkie składniki, łącznie z biblioteki .NET Core i środowisko uruchomieniowe platformy .NET Core, są dołączone do aplikacji i odizolowane od innych aplikacji .NET Core. SCDs obejmują plik wykonywalny (takie jak *app.exe* na platformach Windows, dla aplikacji o nazwie `app`), czyli wersji zmieniono nazwę hosta, specyficzne dla platformy .NET Core, a *.dll* pliku (np. *app.dll*), który jest rzeczywista aplikacja.
 
@@ -94,12 +94,7 @@ Dostępne są również kilka wady:
 
 ## <a name="step-by-step-examples"></a>Przykłady krok po kroku
 
-Instrukcje krok po kroku wdrażania aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia, zobacz [wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md). Instrukcje krok po kroku wdrażania aplikacji .NET Core za pomocą programu Visual Studio, zobacz [wdrażanie aplikacji .NET Core z programem Visual Studio](deploy-with-vs.md). Każdy artykuł zawiera przykłady następujących wdrożeń:
-
-- Wdrożenie zależny od struktury
-- Wdrażanie zależny od struktury za pomocą zależności innych firm
-- Niezależne wdrożenia
-- Niezależne wdrożenia przy użyciu zależności innych firm
+Instrukcje krok po kroku wdrażania aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia, zobacz [wdrażanie aplikacji .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md). Instrukcje krok po kroku wdrażania aplikacji .NET Core za pomocą programu Visual Studio, zobacz [wdrażanie aplikacji .NET Core z programem Visual Studio](deploy-with-vs.md). 
 
 ## <a name="see-also"></a>Zobacz także
 

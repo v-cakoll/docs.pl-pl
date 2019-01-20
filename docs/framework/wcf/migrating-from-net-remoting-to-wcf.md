@@ -2,12 +2,12 @@
 title: Migrowanie z programu .NET Remoting do programu WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245681"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415978"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrowanie z programu .NET Remoting do programu WCF
 W tym artykule opisano sposób migrowania aplikacji korzystającej z wywołaniem funkcji zdalnych .NET do użycia usług Windows Communication Foundation (WCF). Jego porównuje podobne pojęcia między tymi produktami, a następnie w tym artykule opisano sposób wykonywania kilku typowych scenariuszy komunikacji zdalnej programu WCF.  
@@ -307,9 +307,9 @@ catch (FaultException<CustomerServiceFault> fault)
   
  Po migracji aplikacji usług zdalnych do programu WCF jest nadal ważne usunąć zależności między wywołaniem funkcji zdalnych .NET. Daje to gwarancję, że wszystkie luki w zabezpieczeniach z wywołaniem funkcji zdalnych są usuwane z aplikacji. Kroki te obejmują następujące czynności:  
   
--   **Przestać korzystać ze MarshalByRefObject.** Typ elementu MarshalByRefObject istnieje tylko dla niego komunikację zdalną i nie jest używany przez architekturę WCF. Wszystkie typy aplikacji, które podrzędnych klasy MarshalByRefObject powinny być usunięte lub zmienione. Typ elementu MarshalByRefObject istnieje tylko dla niego komunikację zdalną i nie jest używany przez architekturę WCF. Wszystkie typy aplikacji, które podrzędnych klasy MarshalByRefObject powinny być usunięte lub zmienione.  
+-   **Przestać korzystać ze MarshalByRefObject.** Typ elementu MarshalByRefObject istnieje tylko dla niego komunikację zdalną i nie jest używany przez architekturę WCF. Wszystkie typy aplikacji, które podrzędnych klasy MarshalByRefObject powinny być usunięte lub zmienione.  
   
--   **Zaprzestanie użytkowania [Serializable] i interfejs ISerializable.** Atrybut [Serializable] i interfejs ISerializable zostały pierwotnie zaprojektowane do serializacji typów w środowiskach zaufanych i są one używane przez komunikację zdalną. Serializacja WCF opiera się na typy, które są oznaczone [DataContract] i [DataMember]. Powinien być modyfikowany typów danych używanych przez aplikację, aby użyć [DataContract] i nie należy używać interfejsu ISerializable lub [Serializable]. Atrybut [Serializable] i interfejs ISerializable zostały pierwotnie zaprojektowane do serializacji typów w środowiskach zaufanych i są one używane przez komunikację zdalną. Serializacja WCF opiera się na typy, które są oznaczone [DataContract] i [DataMember]. Powinien być modyfikowany typów danych używanych przez aplikację, aby użyć [DataContract] i nie należy używać interfejsu ISerializable lub [Serializable].  
+-   **Zaprzestanie użytkowania [Serializable] i interfejs ISerializable.** Atrybut [Serializable] i interfejs ISerializable zostały pierwotnie zaprojektowane do serializacji typów w środowiskach zaufanych i są one używane przez komunikację zdalną. Serializacja WCF opiera się na typy, które są oznaczone [DataContract] i [DataMember]. Powinien być modyfikowany typów danych używanych przez aplikację, aby użyć [DataContract] i nie należy używać interfejsu ISerializable lub [Serializable].  
   
 ### <a name="migration-scenarios"></a>Scenariusze migracji  
  Teraz zobaczmy, jak wykonywać następujące typowe scenariusze komunikacji zdalnej programu WCF:  

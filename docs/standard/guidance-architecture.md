@@ -4,13 +4,13 @@ description: Więcej informacji na temat recoommended wskazówki dotyczące arch
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.technology: dotnet
-ms.openlocfilehash: e63f7043b2dfdbe367ed2cbfba13bc6985c1ead6
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.technology: dotnet-ebooks
+ms.openlocfilehash: cb96b56eb6ad76fc8809e46c86277a96fa7b85c8
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404177"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415874"
 ---
 # <a name="net-architecture-guidance"></a>Wskazówki dotyczące architektury .NET
 
@@ -30,6 +30,6 @@ Ten przewodnik stanowi wprowadzenie do zalecaną architekturę, projektowania i 
 
 Ten przewodnik stanowi wprowadzenie do tworzenia aplikacji opartych na mikrousługach i zarządzanie nimi przy użyciu kontenerów. Omówiono w nim kwestie projektowania architektonicznego i zbliża się do wdrożenia przy użyciu platformy .NET Core i kontenerów rozwiązania Docker.
 
-## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[Aplikacje niewymagające użycia serwera: Architektura, wzorce i implementacji platformy Azure](serverless-architecture/index.md)
+## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure](serverless-architecture/index.md)
 
 Jest to przewodnik do tworzenia aplikacji bezserwerowych wraz z przykładami korzystania z systemu Azure. Omówiono w nim różne architektury i projektowania podejścia, korzyści i problemy, które wynikają z bez użycia serwera, i udostępnia scenariuszy i przypadków użycia na potrzeby aplikacji bez użycia serwera.

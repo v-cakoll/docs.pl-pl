@@ -4,16 +4,16 @@ description: Dowiedz się, jak analizować zależnościami zewnętrznymi w celu 
 author: cartermp
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: dce8e6cd4986b15cf926154b378964db4beef398
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170330"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415224"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analizowanie zależności kodu portów w celu platformy .NET Core
 
-Do portu kodu platformy .NET Core lub .NET Standard, należy zrozumieć zależności. Zależności zewnętrzne to [pakiety NuGet](#analyze-referenced-nuget-packages-on-your-project) lub [biblioteki dll](#analyze-dependencies-that-arent-nuget-packages) odwołania w projekcie, ale nie kompilacji. Oceń poszczególne zależności i opracować plan awaryjny te, które nie są zgodne z platformą .NET Core. Poniżej przedstawiono sposób ustalić, czy zależność jest zgodna z platformą .NET Core.
+Do portu kodu platformy .NET Core lub .NET Standard, należy zrozumieć zależności. Zależności zewnętrzne to [pakiety NuGet](#analyze-referenced-nuget-packages-in-your-projects) lub [biblioteki dll](#analyze-dependencies-that-arent-nuget-packages) odwołania w projekcie, ale nie kompilacji. Oceń poszczególne zależności i opracować plan awaryjny te, które nie są zgodne z platformą .NET Core. Poniżej przedstawiono sposób ustalić, czy zależność jest zgodna z platformą .NET Core.
 
 ## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>Analizowanie odwołania pakietów NuGet w projektach
 
@@ -77,7 +77,7 @@ Po przeanalizowaniu pakietów NuGet, może się okazać że ich tylko dla środo
 
 Począwszy od .NET Standard 2.0 wprowadzono tryb zgodności w programie .NET Framework. Ten tryb zgodności umożliwia projektów .NET Standard i .NET Core odwoływać się do bibliotek .NET Framework. Odwołujące się do bibliotek .NET Framework nie działa dla wszystkich projektów, takich jak if biblioteki korzysta z Windows Presentation Foundation (WPF) interfejsów API, ale go odblokować wiele scenariuszy przenoszenia.
 
-Gdy odwołujesz się pakiety NuGet dla środowiska .NET Framework w projekcie, takie jak [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections), zostanie wyświetlone ostrzeżenie rezerwowego pakietu ([NU1701](/nuget/reference/errors-and-warnings#nu1701)) podobny do poniższego przykładu:
+Gdy odwołujesz się pakiety NuGet dla środowiska .NET Framework w projekcie, takie jak [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections), zostanie wyświetlone ostrzeżenie rezerwowego pakietu ([NU1701](/nuget/reference/errors-and-warnings/nu1701)) podobny do poniższego przykładu:
 
 `NU1701: Package ‘Huitian.PowerCollections 1.0.0’ was restored using ‘.NETFramework,Version=v4.6.1’ instead of the project target framework ‘.NETStandard,Version=v2.0’. This package may not be fully compatible with your project.`
 
@@ -91,7 +91,7 @@ Aby pominąć to ostrzeżenie, edytując plik projektu, znaleźć `PackageRefere
 </ItemGroup>
 ```
 
-Aby uzyskać więcej informacji na temat sposobu pomijanie ostrzeżeń kompilatora w programie Visual Studio, zobacz [pomijanie ostrzeżeń dla pakietów NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages).
+Aby uzyskać więcej informacji na temat sposobu pomijanie ostrzeżeń kompilatora w programie Visual Studio, zobacz [pomijanie ostrzeżeń dla pakietów NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages).
 
 ### <a name="port-your-packages-to-packagereference"></a>Pakietów do portu `PackageReference`
 

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: c193a91eaffe2e56a5df2afa8d66989981123a48
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8641757d9252c88cf30595cec06d27b964e4d95c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238796"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415289"
 ---
 # <a name="gt-operator-c-reference"></a>=&gt; Operator (odwołanie w C#)
 
 `=>` Operator może być używany na dwa sposoby, w języku C#:
 
-- Jako [operatora lambda](#lamba-operator) w [wyrażenia lambda](../../lambda-expressions.md), z treści lambda są dzielone zmienne wejściowe.
+- Jako [operatora lambda](#lambda-operator) w [wyrażenia lambda](../../lambda-expressions.md), z treści lambda są dzielone zmienne wejściowe.
  
 - W [definicja treści wyrażenia](#expression-body-definition), nazwa elementu członkowskiego rozdziela od implementacji elementu członkowskiego. 
 

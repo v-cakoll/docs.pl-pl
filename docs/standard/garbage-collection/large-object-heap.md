@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202910"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415536"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Stos dużych obiektów w systemach Windows
 
@@ -52,8 +52,8 @@ Rysunek 1: Generacji 0 i odzyskiwania pamięci generacji 1.
 
 Rysunek 2 pokazuje, że po GC generacji 2 której pokazano, że `Obj1` i `Obj2` są serialem telewizyjnym GC formularzy ciągłych ilość wolnego miejsca na Brak pamięci używanej zajmowany przez `Obj1` i `Obj2`, który następnie został użyty do spełnienia żądania alokacji Aby uzyskać `Obj4`. Odstęp po ostatni obiekt `Obj3`do końca segmentu można również spełnić żądania alokacji.
 
-![Rysunek 2: po gen 2 GC](media/loh/loh-figure-2.jpg)  
-Rysunek 2: po GC generacji 2
+![Rysunek 2: Po gen 2 GC](media/loh/loh-figure-2.jpg)  
+Rysunek 2: Po GC generacji 2
 
 Jeśli nie ma wystarczającej ilości wolnego miejsca, aby obsłużyć żądania alokacji dużego obiektu, GC najpierw próbuje pobrać więcej segmentów z systemu operacyjnego. W przypadku niepowodzenia wyzwala wykaz Globalny generacji 2 w nadzieję, że jest zwolnić miejsce.
 
@@ -144,7 +144,7 @@ Aby zbierać dane dotyczące wydajności LOH, można użyć następujących narz
 
 ### <a name="net-clr-memory-performance-counters"></a>Liczniki wydajności pamięci CLR platformy .NET
 
-Te liczniki wydajności są zwykle dobry, pierwszym krokiem w badanie problemów z wydajnością (mimo że zaleca się, że używasz [zdarzenia ETW](#etw)). Możesz skonfigurować monitorowanie wydajności, dodając liczniki, które chcesz, jak pokazano na rysunku 4. Te, które są istotne dla LOH są:
+Te liczniki wydajności są zwykle dobry, pierwszym krokiem w badanie problemów z wydajnością (mimo że zaleca się, że używasz [zdarzenia ETW](#etw-events)). Możesz skonfigurować monitorowanie wydajności, dodając liczniki, które chcesz, jak pokazano na rysunku 4. Te, które są istotne dla LOH są:
 
 - **Zbieranie pokolenia 2**
 
@@ -185,7 +185,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 Wynik jest podobny do poniższego:
 
 ![Rysunek 5: Badanie zdarzeń ETW za pomocą narzędzia PerfView](media/loh/perfview.png)  
-Rysunek 5: Zdarzenia ETW pokazany przy użyciu narzędzia PerfView
+Rysunek 5: Zdarzenia ETW są wyświetlane, za pomocą narzędzia PerfView
 
 Jak widać, wszystkie wykazów globalnych są operacje odzyskiwania pamięci generacji 2, a ich wszystkich wygenerowaniu przez AllocLarge, oznacza to, czy alokowanie dużego obiektu wyzwolenie tej GC. Wiemy, że te przydziały są tymczasowe ponieważ **% LOH przeżywalność** kolumny mówi 1%.
 

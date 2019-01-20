@@ -4,12 +4,12 @@ description: Poznaj składniki inżynierów funkcji obsługiwanych w strukturze 
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: ebcbcc56eeb7c3caf7350e6c4bfd53997582652e
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307503"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415354"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Przekształcenia danych - strukturze ML.NET uczenia maszynowego
 
@@ -64,7 +64,6 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Oblicza projekcji wektor funkcji na podobszar niski rangi. |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Używa modelu wstępnie przetrenowane opinii, aby oceniać ciągów wejściowych. |
 | <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | Usuwa listy specyficzny dla języka słowa ignorowane (najbardziej popularne wyrazy) porównując Stop-słowa oddzielne tokeny (porównanie bez uwzględniania wielkości liter). |
-| <xref:Microsoft.ML.Transforms.Categorical.TermLookupTransformer> | Mapuje kolumn wartości tekstowych na nowe kolumny przy użyciu mapy zestawu danych, dostępne za pośrednictwem jego argumenty. |
 | <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | Tworzy zbiór liczników ngrams (sekwencji następujących po sobie słowa) w danego tekstu. Robi to, tworząc słownika ngrams i za pomocą identyfikatora w słowniku jako indeks w zbiorze. |
 | <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | Tworzy zbiór liczników ngrams (sekwencji kolejnych wyrazów o długości 1-n) w danego tekstu. Robi to przez tworzenie skrótów każdego ngram i przy użyciu wartości skrótu jako indeks w zbiorze. |
 | <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | Dzieli tekst na przy użyciu znaków separatora słów. |
@@ -102,7 +101,6 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | Oblicza średnią i wariancji dla kolumny cenionym wektora. Śledzi bieżącego średnią i M2 (suma kwadratów różnic wartości od średniej), liczba NaNs i liczbę elementów różna od zera. |
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | Oblicza średnią i wariancji dla kolumny cenionym wektora. Śledzi bieżącego średnią i M2 (suma kwadratów różnic wartości od średniej), liczba NaNs i liczbę elementów różna od zera. |
 | <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | Śledzi min, max, liczby wartości rozrzedzonych (vCount) i liczbę wywołań ProcessValue() (trainCount) w kolumnie cenionym wektora. |
-| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxSngAggregator> | Śledzi min, max, liczby wartości rozrzedzonych (vCount) i liczbę wywołań ProcessValue() (trainCount) w kolumnie cenionym wektora. |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | Standaryzuje zakresów funkcji. |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |Standaryzuje zakresów funkcji. |
 
@@ -176,4 +174,3 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 | <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | Dodaje kolumnę o wygenerowanego numeru sekwencji. |
 | <xref:Microsoft.ML.Transforms.ProduceIdTransform> | Tworzy kolumny o identyfikatorze kursora w kolumnie. |
 | <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | Generuje losową liczbę. |
-| <xref:Microsoft.ML.Transforms.ScoringTransformer> | Łączy informacje z wielu modeli predykcyjnych, aby wygenerować nowy model w potoku za pomocą wyniki z już uczonego modelu. |

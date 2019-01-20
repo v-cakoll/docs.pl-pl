@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232849"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415926"
 ---
 # <a name="tour-of-net"></a>Przewodnik po środowisku .NET
 
@@ -27,11 +27,11 @@ Aby dowiedzieć się, jak skonfigurować środowisko deweloperskie do uruchamian
 
 .NET obsługuje wiele języków programowania. Implementowanie implementacji .NET [Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), między innymi określający niezależny od języka środowiska uruchomieniowego i interoperacyjności języka. Oznacza to, że wybierasz dowolnego języka platformy .NET do tworzenia aplikacji i usług na platformie .NET.
 
-Firma Microsoft aktywnie opracowuje i obsługuje trzy języków .NET: C#, F # i Visual Basic (VB). 
+Firma Microsoft aktywnie opracowuje i obsługuje trzy języków .NET: C#, F#i Visual Basic (VB). 
 
 * C# to prosta, wydajna, bezpieczne i zorientowane obiektowo, przy zachowaniu wyrazistości i elegancji stylów języka c. Każdego kto zna C i podobne języki znajduje kilka problemów w dostosowanie do języka C#. Zapoznaj się z [przewodnik C#](../csharp/index.md) Aby dowiedzieć się więcej na temat języka C#.
 
-* Język F # jest dla wielu platform, funkcjonalny język programowania, który obsługuje również tradycyjne programowanie zorientowane obiektowo i bezwzględne. Zapoznaj się z [Podręcznik języka F #](../fsharp/index.md) Aby dowiedzieć się więcej na temat języka F #.
+* F#jest międzyplatformowa, skoncentrowane na funkcjonalności język programowania, który obsługuje również tradycyjne programowanie zorientowane obiektowo i bezwzględne. Zapoznaj się z [ F# przewodnik](../fsharp/index.md) Aby dowiedzieć się więcej na temat F#.
 
 * Visual Basic to łatwe języka, aby dowiedzieć się, że umożliwia tworzenie różnych aplikacji uruchamianych na platformie .NET. Między językami .NET składnia VB jest najbardziej zbliżony do zwykłych języka ludzi, często ułatwiając dla osób nowych do tworzenia oprogramowania.
 
@@ -64,7 +64,7 @@ Gdy `using` bloku zakończeniu środowiska uruchomieniowego .NET automatycznie w
 Aby uzyskać więcej informacji zobacz następujące tematy:
 
 * Dla języka C#, zobacz [using — instrukcja (odwołanie w C#)](../csharp/language-reference/keywords/using-statement.md) tematu.
-* W języku F #, zobacz [zarządzanie zasobami: use — słowo kluczowe](../fsharp/language-reference/resource-management-the-use-keyword.md).
+* Aby uzyskać F#, zobacz [zarządzanie zasobami: Use — słowo kluczowe](../fsharp/language-reference/resource-management-the-use-keyword.md).
 * Dla języka VB, zobacz [przy użyciu — instrukcja (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) tematu.
 
 ## <a name="type-safety"></a>Bezpieczeństwo typów
@@ -79,11 +79,11 @@ Bezpieczeństwo typów umożliwia również egzekwują przestrzeganie hermetyzac
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, VB i F # obsługuje lokalnego *wnioskowanie o typie*. Wnioskowanie o typie oznacza, że kompilator określi typ wyrażenia po lewej stronie wyrażenia po prawej stronie. Nie oznacza to, że bezpieczeństwa typu jest uszkodzony lub unikać. Wynikowy typ ma silnego typu wszystko kojarzący się. W poprzednim przykładzie `dog` jest przepisane, aby wprowadzić wnioskowanie o typie, i ulega w pozostałej części przykładu:
+C#, VB i F# lokalnej pomocy technicznej *wnioskowanie o typie*. Wnioskowanie o typie oznacza, że kompilator określi typ wyrażenia po lewej stronie wyrażenia po prawej stronie. Nie oznacza to, że bezpieczeństwa typu jest uszkodzony lub unikać. Wynikowy typ ma silnego typu wszystko kojarzący się. W poprzednim przykładzie `dog` jest przepisane, aby wprowadzić wnioskowanie o typie, i ulega w pozostałej części przykładu:
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F # jeszcze bardziej ma funkcje wnioskowania typu niż metoda local wnioskowanie znalezionych w języku C# i VB. Aby dowiedzieć się więcej, zobacz [wnioskowanie o typie](../fsharp/language-reference/type-inference.md).
+F#ma nawet dodatkowe możliwości wnioskowania typu niż wnioskowanie o typie metody lokalnej znaleziony w C# i VB. Aby dowiedzieć się więcej, zobacz [wnioskowanie o typie](../fsharp/language-reference/type-inference.md).
 
 ## <a name="delegates-and-lambdas"></a>Delegaci i wyrażenia lambda
 
@@ -125,7 +125,7 @@ Główne sposób interoperacyjności macierzystej jest za pośrednictwem "wywoł
 
 Większość przez narzędzie Mono (i w związku z tym Xamarin) współdziałanie obsługę języka Java i języka Objective-C są zbudowane Analogicznie, oznacza to, że używają tych samych zasad.
 
-Dowiedz się więcej o współdziałanie natywne w [interoperacyjności macierzystej](native-interop.md) tematu.
+Aby uzyskać więcej informacji na temat interoperacyjności macierzystej zobacz [interoperacyjności macierzystej](native-interop/index.md) artykułu.
 
 ## <a name="unsafe-code"></a>Niebezpieczny kod
 
@@ -139,7 +139,7 @@ Poniższy przykład to zmodyfikowana wersja `ToString()` metody z `StringBuilder
 
 Jeśli interesuje Cię prezentacją funkcji w języku C#, zapoznaj się z [samouczka dla języka C#](../csharp/tour-of-csharp/index.md).
 
-Jeśli interesuje Cię prezentacją funkcji w języku F #, zobacz [samouczek programu F #](../fsharp/tour.md).
+Jeśli interesuje Cię z przewodnikiem dotyczącym F# funkcje, zobacz [Przewodnik po przykładzie F# ](../fsharp/tour.md).
 
 Jeśli chcesz rozpocząć pisanie kodu własny, odwiedź stronę [wprowadzenie](get-started.md).
 

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2018
-ms.openlocfilehash: 3ca833031eb8bb0f43a334f833f2e0075842d57d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 26fb7cb25b9bf7f00f87059fbe1848763f7f175d
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155481"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415549"
 ---
 # <a name="whats-new-in-net-core-30-preview-1"></a>What's new in .NET Core 3.0 (wersja zapoznawcza 1)
 
@@ -24,21 +24,18 @@ W tym artykule opisano nowości w programie .NET Core 3.0 (wersja zapoznawcza 1)
 
 Aby uzyskać więcej informacji, zobacz [ogłoszenie .NET Core 3.0 w wersji zapoznawczej 1](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/).
 
-## <a name="net-standard-21"></a>.NET standard 2.1
+## <a name="net-standard-21"></a>.NET Standard 2.1
 
 .NET core 3.0 implementuje platformy .NET Standard 2.1.
 
 ## <a name="default-executables"></a>Domyślne pliki wykonywalne
 
-.NET core będzie teraz tworzyć pliki wykonywalne domyślnie. Jest to nowość w aplikacji, które używają globalnie zainstalowaną wersję platformy .NET Core. Do tej pory tylko [niezależna wdrożeń](../deploying/index.md#self-contained-deployments-scd) miał plików wykonywalnych.
+.NET core będzie teraz tworzyć [zależny od struktury plików wykonywalnych](../deploying/index.md#framework-dependent-executables-fde) domyślnie. Jest to nowość w aplikacji, które używają globalnie zainstalowaną wersję platformy .NET Core. Do tej pory tylko [niezależna wdrożeń](../deploying/index.md#self-contained-deployments-scd) dałby w efekcie plik wykonywalny.
 
 Podczas `dotnet build` lub `dotnet publish`, plik wykonywalny jest tworzony, pod warunkiem, które odpowiadają środowisko i platforma używasz zestawu SDK. Mogą spodziewać się tego samego rzeczy, korzystając z tych plików wykonywalnych, tak jak w innych natywnych plików wykonywalnych, takich jak:
 
 * Możesz kliknąć dwukrotnie plik wykonywalny.
 * Można uruchomić aplikacji z poziomu wiersza polecenia, takie jak `myapp.exe` na Windows, i `./myapp` w systemie Linux i macOS.
-
-> [!NOTE]
-> Określanie określonego środowiska uruchomieniowego za pomocą `dotnet publish -r` lub `dotnet build -r` argumentów w innych środowiskach środowisko uruchomieniowe nie jest obsługiwane.
 
 ## <a name="build-copies-dependencies"></a>Kopiuje zależności kompilacji
 

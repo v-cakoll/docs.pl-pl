@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: ce6b23edb10733de3134b5233413de8b535c11ac
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c14b0470f7ea488fcb813b68174b5d1cb0d95786
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235296"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415588"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Ograniczniki tagów dokumentacji (Przewodnik programowania w języku C#)
 Użycie komentarze dokumentacji XML wymaga ograniczników, które wskazują kompilatora, gdzie rozpoczyna się i kończy w komentarzu dokumentacji. Za pomocą następujących rodzajów ograniczniki tagów dokumentacji XML:  
@@ -38,7 +38,7 @@ Użycie komentarze dokumentacji XML wymaga ograniczników, które wskazują komp
   
 -   To jedyna część Poniższy komentarz, które będą przetwarzane jest wiersz, który rozpoczyna się od `<summary>`. Formaty trzech etykiet generuje ten sam komentarzy.  
   
-    ```  
+    ```csharp  
     /** <summary>text</summary> */   
   
     /**   
@@ -52,7 +52,7 @@ Użycie komentarze dokumentacji XML wymaga ograniczników, które wskazują komp
   
 -   Kompilator identyfikuje wspólny wzorzec "*" na początku linii drugiego i trzeciego. Wzorzec jest niedostępna w danych wyjściowych.  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
      * text </summary>*/   
@@ -60,7 +60,7 @@ Użycie komentarze dokumentacji XML wymaga ograniczników, które wskazują komp
   
 -   Kompilator znajdzie nie wspólny wzorzec w poniższy komentarz, ponieważ drugim znakiem w trzecim wierszu nie jest znak gwiazdki. W związku z tym cały tekst w wierszach drugiej i trzeciej są przetwarzane w ramach komentarza.  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
        text </summary>  
@@ -69,7 +69,7 @@ Użycie komentarze dokumentacji XML wymaga ograniczników, które wskazują komp
   
 -   Kompilator znajdzie nie wzorca w poniższy komentarz z dwóch przyczyn. Po pierwsze liczbę spacji przed gwiazdka nie jest spójna. Po drugie piąty wiersz rozpoczyna się od kartę, która jest niezgodna z miejsc do magazynowania. W związku z tym cały tekst z dwóch wierszy, za pośrednictwem pięciu osób są przetwarzane jako część komentarza.  
   
-    ```  
+    ```csharp  
     /**   
       * <summary>   
       * text   

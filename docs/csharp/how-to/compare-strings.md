@@ -1,16 +1,16 @@
 ---
 title: 'Instrukcje: Porównywanie ciągów - C# przewodnik'
 description: Dowiedz się, jak porównywanie i kolejność wartości ciągu, z lub bez niego z lub bez kultury określonej kolejności, w przypadku
-ms.date: 03/20/2018
+ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 5b62dd37474dc0afb186c65d1f55f7ccaf7266ec
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 0eb8669e52099e35553d9e7842371045bd88a643
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334837"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415887"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Sposób porównywania ciągów w języku C\#
 
@@ -29,7 +29,13 @@ Podczas porównywania ciągów należy zdefiniować kolejność między nimi. Po
 
 ## <a name="default-ordinal-comparisons"></a>Porównania liczb porządkowych domyślne
 
-Najbardziej popularnych metod, które testowanie pod kątem równości, <xref:System.String.Equals%2A?displayProperty=nameWithType> i <xref:System.String.op_Equality%2A?displayProperty=nameWithType>, użyj porządkowego porównania uwzględniającego wielkość liter. Wyniki są wyświetlane w następującym przykładzie.
+Najbardziej typowe operacje:
+
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- <xref:System.String.Equals%2A?displayProperty=nameWithType>
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+
+Użyj porównania porządkowego porównania uwzględniającego wielkość liter, a używają bieżącej kultury. Wyniki są wyświetlane w następującym przykładzie:
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: modyfikowanie danych w bazie danych za pomocą LINQ (Visual Basic)'
+title: 'Instrukcje: Modyfikowanie danych w bazie danych za pomocą LINQ (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 02aaf2924c6230615d7d1cbcceac72265419b541
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b957fb7524b7eaf46bf321713196e90bae66b6c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520691"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415211"
 ---
-# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Porady: modyfikowanie danych w bazie danych za pomocą LINQ (Visual Basic)
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Instrukcje: Modyfikowanie danych w bazie danych za pomocą LINQ (Visual Basic)
 Language-Integrated Query (LINQ) zapytania ułatwiają dostęp do bazy danych informacji i zmodyfikuj wartości w bazie danych.  
   
  Poniższy przykład pokazuje, jak utworzyć nową aplikację, która pobiera i informacji o aktualizacjach w bazie danych programu SQL Server.  
@@ -122,7 +122,10 @@ Language-Integrated Query (LINQ) zapytania ułatwiają dostęp do bazy danych in
       Dim updateCust = (From cust In db.Customers   
                         Where cust.CustomerID = "JILLF").ToList()(0)  
   
-      updateCust.ContactName = "Jill Shrader"  
+      updateCust.ContactName = "Jill Shrader"
+      updateCust.Country = "Wales"
+      updateCust.CompanyName = "Red Yonder Airlines"
+      updateCust.City = "Cardiff"
   
       Try  
         db.SubmitChanges()  
@@ -162,4 +165,4 @@ Language-Integrated Query (LINQ) zapytania ułatwiają dostęp do bazy danych in
  [Zapytania](../../../../visual-basic/language-reference/queries/index.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [Metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Instrukcje: przypisywanie procedur składowanych na potrzeby wykonywania aktualizacji, wstawiania i usuwania (O/R Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+ [Instrukcje: Przypisywanie procedur składowanych na potrzeby wykonywania aktualizacji, wstawiania i usuwania (Object Relational Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

@@ -2,12 +2,12 @@
 title: Wybierz wersję języka Visual Basic
 description: Skonfiguruj kompilatora przeprowadzić weryfikacji składni przy użyciu określonej wersji kompilatora.
 ms.date: 05/24/2018
-ms.openlocfilehash: 7628b5a7c27f5b26171d42e44a58598ef3d5d49f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194725"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415107"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Wybierz wersję języka Visual Basic
 
@@ -44,7 +44,7 @@ Wartość `latest` korzysta z najnowszej wersji pomocniczej języka Visual Basic
 |15|Kompilator akceptuje tylko w przypadku składni, która jest dostępne w ramach 15.0 programu Visual Basic lub niższą.|
 |15.3|Kompilator akceptuje tylko w przypadku składni, która jest zawarty w Visual Basic 15.3 lub niższą.|
 |15.5|Kompilator akceptuje tylko w przypadku składni, która jest dostępna w wersji 15.5 programu Visual Basic lub niższy.|
-|najnowsze|Kompilator akceptuje wszystkie składni obowiązujący język, który może obsługiwać.|
+|najnowsza|Kompilator akceptuje wszystkie składni obowiązujący język, który może obsługiwać.|
 
 Ciągi specjalne `default` i `latest` rozwiązania do najnowszej wersji głównych i pomocniczych język zainstalowany na komputerze kompilacji, odpowiednio.
 
@@ -60,7 +60,7 @@ Możesz utworzyć **Directory.build.props** pliku, który zawiera `<LangVersion>
 </Project>
 ```
 
-Teraz kompilacje w każdym podkatalogu katalogu zawierającego ten plik będzie używać składni w wersji 15.5 programu Visual Basic. Aby uzyskać więcej informacji, zobacz artykuł [Dostosowywanie kompilacji](/visualstudio/msbuild/customize-your-build.md).
+Teraz kompilacje w każdym podkatalogu katalogu zawierającego ten plik będzie używać składni w wersji 15.5 programu Visual Basic. Aby uzyskać więcej informacji, zobacz artykuł [Dostosowywanie kompilacji](/visualstudio/msbuild/customize-your-build).
 
 ## <a name="set-the-langversion-compiler-option"></a>Ustaw langversion — opcja kompilatora
 

@@ -1,22 +1,22 @@
 ---
-title: 'Porady: Tworzenie przepływu pracy schematu blokowego'
+title: 'Instrukcje: Tworzenie przepływu pracy schematu blokowego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 185d46d041ee342962c624ad6a3592e5a426cc6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502154"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415250"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>Porady: Tworzenie przepływu pracy schematu blokowego
-Przepływy pracy można skonstruować z wbudowanych działań, a także z działań niestandardowych. Ten temat prowadzi przez proces tworzenia przepływu pracy, który używa zarówno wbudowanych działań, takich jak <xref:System.Activities.Statements.Flowchart> działanie i działań niestandardowych z poprzedniego [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tematu. Przepływ pracy modeli gra odgadnięcia liczb.  
+# <a name="how-to-create-a-flowchart-workflow"></a>Instrukcje: Tworzenie przepływu pracy schematu blokowego
+Przepływy pracy można skonstruować z wbudowanych działań, a także z działań niestandardowych. Ten temat prowadzi przez proces tworzenia przepływu pracy, który używa zarówno wbudowanych działań, takich jak <xref:System.Activities.Statements.Flowchart> działanie i działań niestandardowych z poprzedniego [jak: Utwórz działanie](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tematu. Przepływ pracy modeli gra odgadnięcia liczb.  
   
 > [!NOTE]
->  Każdy temat samouczka Wprowadzenie zależy od poprzednich tematach. Aby ukończyć ten temat, najpierw musisz zakończyć [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
+>  Każdy temat samouczka Wprowadzenie zależy od poprzednich tematach. Aby ukończyć ten temat, najpierw musisz zakończyć [jak: Utwórz działanie](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
 >  Aby pobrać pełną wersję tego samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -67,7 +67,7 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
 1.  Przeciągnij **przypisać** działanie z **podstawowych** części **przybornika** i zatrzymaj wskaźnik myszy nad **Start** węzła, który znajduje się w górnej części Schemat blokowy. Gdy **przypisać** działań znajduje się nad **Start** węzła, trzy trójkąty wokół niego pojawią **Start** węzła. Upuść **przypisać** działania na trójkąt, który jest bezpośrednio poniżej **Start** węzła. To łączenie ze sobą dwa elementy, ustawiając **przypisać** działań jako pierwsze działanie w schemacie blokowym.  
   
     > [!NOTE]
-    >  Działania mogą być wskazywane jako wyjścia działania w przepływie pracy tworząc ręcznie ich działanie węzeł początkowy. Aby to zrobić, umieść kursor myszy nad **Start** węzła, kliknij jeden z prostokątami, które są wyświetlane, gdy wskaźnik myszy znajduje się nad **Start** węzeł, a następnie przeciągnij w nawiązywaniu połączenia wiersz w dół do żądanej działania i upuść je na jednym z prostokąty, które są wyświetlane. Można również wyznaczyć i działanie jako wyjścia działania, kliknij prawym przyciskiem myszy it i wybierając pozycję **ustawiona jako węzeł Start**.  
+    >  Działania mogą być wskazywane jako wyjścia działania w przepływie pracy tworząc ręcznie ich działanie węzeł początkowy. Aby to zrobić, umieść kursor myszy nad **Start** węzła, kliknij jeden z prostokątami, które są wyświetlane, gdy wskaźnik myszy znajduje się nad **Start** węzeł, a następnie przeciągnij w nawiązywaniu połączenia wiersz w dół do żądanej działania i upuść je na jednym z prostokąty, które są wyświetlane. Działania można wyznaczyć jako działanie początkowe, klikając prawym przyciskiem myszy it i wybierając polecenie **ustawiona jako węzeł Start**.  
   
 2.  Typ `Target` do **do** pole i następującego wyrażenia do **wprowadź wyrażenie języka C#** lub **wprowadź wyrażenie VB** pole.  
   
@@ -148,7 +148,7 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
   
 1.  Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   
-     Aby uzyskać instrukcje na temat sposobu uruchamiania przepływu pracy, zobacz następny temat, [porady: uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Jeśli wykonano już [porady: uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) kroku przy użyciu innego stylu przepływu pracy, a chcesz uruchomić go za pomocą przepływu pracy schematu blokowego, w tym kroku, przejdź do sekcji [do kompilowania i uruchamiania aplikacji](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)części [porady: uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
+     Aby uzyskać instrukcje na temat sposobu uruchamiania przepływu pracy, zobacz następny temat, [jak: Uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Jeśli wykonano już [jak: Uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) kroku przy użyciu innego stylu przepływu pracy, a chcesz uruchomić go za pomocą przepływu pracy schematu blokowego, w tym kroku, przejdź do sekcji [Aby skompilować i uruchomić aplikację](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) części [jak: Uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Activities.Statements.Flowchart>  
@@ -156,5 +156,5 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
  [Programowanie w programie Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
  [Projektowanie przepływów pracy](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  [Wprowadzenie — samouczek](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Instrukcje: Tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [Instrukcje: Utwórz działanie](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
  [Instrukcje: Uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

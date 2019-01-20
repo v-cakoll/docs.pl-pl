@@ -3,12 +3,12 @@ title: Usługi Machine learning — słownik w strukturze ML.NET
 description: Słownik ważne terminy dotyczące uczenia maszynowego, które są przydatne podczas tworzenia niestandardowych modeli w strukturze ML.NET.
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53760396"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415380"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine learning słownik terminów ważne
 
@@ -17,8 +17,6 @@ Poniższa lista jest kompilacja terminy dotyczące uczenia maszynowego ważne, k
 ## <a name="accuracy"></a>dokładność
 
 W [klasyfikacji](#classification), dokładności jest liczba elementów poprawnie sklasyfikowane podzielona przez całkowitą liczbę elementów w zestawie testów. Z zakresu od 0 (co najmniej z dokładnością) do 1 (najdokładniejszych). Dokładność jest jedną z metryk oceny wydajności modelu. Należy wziąć pod uwagę w połączeniu z [dokładności](#precision), [odwołania](#recall), i [wynik F](#f-score).
-
-Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
 
 ## <a name="area-under-the-curve-auc"></a>Powierzchni pod krzywą (AUC)
 
@@ -44,7 +42,7 @@ Właściwość mierzalne zjawisko mierzony, zazwyczaj (podwójny) wartość licz
 
 Inżynieria funkcji to proces, który obejmuje zdefiniowanie zestawu [funkcji](#feature) i opracowywania oprogramowania, które tworzy wektorów funkcji z danych dostępnych zjawiskiem, czyli wyodrębniania funkcji. Aby uzyskać więcej informacji, zobacz [Inżynieria funkcji](https://en.wikipedia.org/wiki/Feature_engineering) artykuł w witrynie Wikipedia.
 
-## <a name="f-score"></a>Wynik F
+## <a name="f-score"></a>F-score
 
 W [klasyfikacji](#classification), metryki oceny, która równoważy [dokładności](#precision) i [odwołania](#recall).
 
@@ -87,8 +85,6 @@ Wszystkie operacje wymagane do dopasowania modelu do zestawu danych. Potok skła
 ## <a name="precision"></a>Dokładność
 
 W [klasyfikacji](#classification), dokładność dla klasy jest liczba elementów, poprawnie przewidzieć jako należące do tej klasy podzielona przez całkowitą liczbę elementów, które przewiduje jako należące do tej klasy.
-
-Interfejs API powiązane strukturze ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
 ## <a name="recall"></a>Odwołaj
 

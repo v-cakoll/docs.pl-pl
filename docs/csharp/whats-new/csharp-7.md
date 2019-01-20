@@ -3,12 +3,12 @@ title: Co nowego w języku C# 7.0 — przewodnik po języku C#
 description: Zapoznaj się z omówieniem nowych funkcji, które zostaną dodane w przyszłych wersji języka C# 7.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 08e9b9d1a991c6dd18477214dec60fba95afc6c9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155291"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415731"
 ---
 # <a name="whats-new-in-c-70"></a>Co nowego w języku C# 7.0
 
@@ -27,7 +27,7 @@ C# 7.0 dodaje wiele nowych funkcji do języka C#:
     - Można zagnieżdżać funkcji w innych funkcjach, aby ograniczyć ich zakres i widoczność.
 * [Więcej elementy członkowskie z wyrażeniem](#more-expression-bodied-members)
     - Zwiększył się listę elementów członkowskich, które można tworzyć za pomocą wyrażeń.
-* [`throw` Wyrażenia](#throw-expressions)
+* [`throw` Expressions](#throw-expressions)
     - W konstrukcji kodu, które wcześniej były niedozwolona, ponieważ może generować wyjątki `throw` został instrukcję. 
 * [Uogólnionego asynchroniczne typy zwracane](#generalized-async-return-types)
     - Metody zadeklarowane za pomocą `async` modyfikator może zwrócić inne typy oprócz `Task` i `Task<T>`.
@@ -168,7 +168,7 @@ Obsługa dopasowania do wzorca `is` wyrażeń i `switch` wyrażenia. Każdy umo�
 
 ### <a name="is-expression"></a>`is` Wyrażenie
 
-`is` Wyrażenia wzorca rozszerza znanej `is` operator, aby wysłać zapytania do obiektu poza jego typu.
+`is` Wyrażenia wzorca rozszerza znanej [ `is` operator](../language-reference/keywords/is.md#pattern-matching-with-is) zapytanie poza jego typ obiektu.
 
 Zacznijmy od prostego scenariusza. Dodamy możliwości tego scenariusza, które pokazują, jak wzorzec dopasowywania wyrażeniach algorytmów, współpracujących z niepowiązanych typy proste. Rozpoczniemy od metody, która oblicza sumę liczby ustala struktury:
 

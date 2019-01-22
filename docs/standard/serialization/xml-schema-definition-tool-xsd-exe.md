@@ -2,12 +2,12 @@
 title: Narzędzie definicji schematu XML (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: ebbbe763ecfc4aeac338d0eb88ee785a4f637456
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a7824f0f39820b186b654aa4369dc068134d6a0d
+ms.sourcegitcommit: 42522983167b52852e1a20c87d57a1f63215f9bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148607"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443658"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Narzędzie definicji schematu XML (Xsd.exe)
 Narzędzie definicji schematu XML (Xsd.exe) generuje schemat XML lub wspólnej klasy środowiska wykonawczego języka z PLików XDR, XML i XSD lub klasy w zestawie czasu wykonywania.  
@@ -45,7 +45,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |Opcja|Opis|  
 |------------|-----------------|  
 |**/c\[zy\]**|Generuje klasy, które odpowiadają określony schemat. Do odczytywania danych XML do obiektu, użyj <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> metody.|  
-|**/d**[**ataset**]|Generuje klasę pochodną <xref:System.Data.DataSet> , który odpowiada określony schemat. Do odczytywania danych XML w klasie pochodnej, użyj <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> metody.|  
+|**/d [ataset]**|Generuje klasę pochodną <xref:System.Data.DataSet> , który odpowiada określony schemat. Do odczytywania danych XML w klasie pochodnej, użyj <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> metody.|  
   
  Można również określić jedną z poniższych opcji dotyczących XSD PLików.  
   
@@ -54,7 +54,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |**/e\[lementuj\]:**_— element_|Określa schemat do generowania kodu dla elementu. Domyślnie wszystkie elementy są wpisane. Tego argumentu można określić więcej niż raz.|  
 |**/enableDataBinding**|Implementuje <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu dla wszystkich typów wygenerowanego umożliwiające powiązanie danych. Formularz Skrócony jest `/edb`.|  
 |**/enableLinqDataSet**|(Skrócona forma: `/eld`.) Określa, że wygenerowanego zestawu danych mogą być wyszukiwane względem przy użyciu LINQ do zestawu danych. Ta opcja jest stosowana, gdy określona jest również opcja /dataset. Aby uzyskać więcej informacji, zobacz [omówienie LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) i [zapytań wpisanych zestawów danych](../../../docs/framework/data/adonet/querying-typed-datasets.md). Aby uzyskać ogólne informacje o korzystaniu z LINQ, zobacz [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
-|**/f\[pola\]**|Generuje pola, a nie właściwości. Domyślnie są generowane, właściwości.|  
+|**/f\[ields\]**|Generuje pola, a nie właściwości. Domyślnie są generowane, właściwości.|  
 |**/l\[język\]:**_języka_|Określa język programowania. Wybierz z `CS` (C#, który jest domyślnie), `VB` (Visual Basic), `JS` (JScript) lub `VJS` (Visual J#). Można również określić w pełni kwalifikowaną nazwę klasy wykonania <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
 |**/n\[amespace\]:**_przestrzeni nazw_|Określa przestrzeń nazw czasu wykonywania wygenerowany typów. Domyślny obszar nazw jest `Schemas`.|  
 |**/nologo**|Pomija transparentu.|  
@@ -119,8 +119,8 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
   
 |Element|Opis|  
 |-------------|-----------------|  
-|\<Zestaw >|Określa generowanie schematu z zestawu.|  
-|\<Typ >|Określa typ odnaleźć w zestawie do generowania schemat.|  
+|\<assembly>|Określa generowanie schematu z zestawu.|  
+|\<type>|Określa typ odnaleźć w zestawie do generowania schemat.|  
 |\<xml>|Określa PLik XML do generowania schemat.|  
 |\<xdr>|Określa PLik XDR do generowania schemat.|  
   
@@ -138,7 +138,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
   
 |Element|Opis|  
 |-------------|-----------------|  
-|\<Element >|Określa PLik XSD do generowania kodu dla elementu.|  
+|\<element>|Określa PLik XSD do generowania kodu dla elementu.|  
 |\<schemaImporterExtensions>|Określa typ pochodzący od <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> klasy.|  
 |\<schema>|Określa PLik schematu XML do generowania kodu.  Wiele plików schematów XML można określić za pomocą wielu \<schematu > elementy.|  
   

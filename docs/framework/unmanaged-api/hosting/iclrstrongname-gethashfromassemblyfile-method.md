@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8d9e7d593c2a8a9cce798724b2705dee21a740e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: d456dac488805d6d028c89781131daf5ac777512
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504239"
 ---
-# <a name="iclrstrongnamegethashfromassemblyfile-method"></a><span data-ttu-id="94ccb-102">ICLRStrongName::GetHashFromAssemblyFile — Metoda</span><span class="sxs-lookup"><span data-stu-id="94ccb-102">ICLRStrongName::GetHashFromAssemblyFile Method</span></span>
-<span data-ttu-id="94ccb-103">Pobiera skrót pliku określonego zestawu, przy użyciu określonego algorytmu skrótu.</span><span class="sxs-lookup"><span data-stu-id="94ccb-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamegethashfromassemblyfile-method"></a><span data-ttu-id="013b5-102">ICLRStrongName::GetHashFromAssemblyFile — Metoda</span><span class="sxs-lookup"><span data-stu-id="013b5-102">ICLRStrongName::GetHashFromAssemblyFile Method</span></span>
+<span data-ttu-id="013b5-103">Pobiera skrót pliku określonego zestawu, przy użyciu określonego algorytmu skrótu.</span><span class="sxs-lookup"><span data-stu-id="013b5-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="94ccb-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="94ccb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="013b5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="013b5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromAssemblyFile (  
@@ -39,34 +39,34 @@ HRESULT GetHashFromAssemblyFile (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="94ccb-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="94ccb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="013b5-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="013b5-105">Parameters</span></span>  
  `szFilePath`  
- <span data-ttu-id="94ccb-106">[in] Ścieżka do pliku ma zostać obliczona wartość skrótu.</span><span class="sxs-lookup"><span data-stu-id="94ccb-106">[in] The path to the file to be hashed.</span></span>  
+ <span data-ttu-id="013b5-106">[in] Ścieżka do pliku ma zostać obliczona wartość skrótu.</span><span class="sxs-lookup"><span data-stu-id="013b5-106">[in] The path to the file to be hashed.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="94ccb-107">[out w] Stała, który określa algorytm wyznaczania wartości skrótu.</span><span class="sxs-lookup"><span data-stu-id="94ccb-107">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="94ccb-108">Użyj wartości zero dla domyślnego algorytmu wyznaczania wartości skrótu.</span><span class="sxs-lookup"><span data-stu-id="94ccb-108">Use zero for the default hash algorithm.</span></span>  
+ <span data-ttu-id="013b5-107">[out w] Stała, który określa algorytm wyznaczania wartości skrótu.</span><span class="sxs-lookup"><span data-stu-id="013b5-107">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="013b5-108">Użyj wartości zero dla domyślnego algorytmu wyznaczania wartości skrótu.</span><span class="sxs-lookup"><span data-stu-id="013b5-108">Use zero for the default hash algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="94ccb-109">[out] Bufor zwrócone wyznaczania wartości skrótu.</span><span class="sxs-lookup"><span data-stu-id="94ccb-109">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="013b5-109">[out] Bufor zwrócone wyznaczania wartości skrótu.</span><span class="sxs-lookup"><span data-stu-id="013b5-109">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="94ccb-110">[in] Żądany maksymalny rozmiar `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="94ccb-110">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="013b5-110">[in] Żądany maksymalny rozmiar `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="013b5-110">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="94ccb-111">[out] Zwrócone rozmiar w bajtach, z `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="94ccb-111">[out] The returned size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="013b5-111">[out] Zwrócone rozmiar w bajtach, z `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="013b5-111">[out] The returned size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="94ccb-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="94ccb-112">Return Value</span></span>  
- <span data-ttu-id="94ccb-113">`S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).</span><span class="sxs-lookup"><span data-stu-id="94ccb-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="013b5-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="013b5-112">Return Value</span></span>  
+ <span data-ttu-id="013b5-113">`S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).</span><span class="sxs-lookup"><span data-stu-id="013b5-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="94ccb-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="94ccb-114">Requirements</span></span>  
- <span data-ttu-id="94ccb-115">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94ccb-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="013b5-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="013b5-114">Requirements</span></span>  
+ <span data-ttu-id="013b5-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="013b5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="94ccb-116">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="94ccb-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="013b5-116">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="013b5-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="94ccb-117">**Biblioteka:** dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="94ccb-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="013b5-117">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="013b5-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="94ccb-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94ccb-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="013b5-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="013b5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="94ccb-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="94ccb-119">See Also</span></span>  
- [<span data-ttu-id="94ccb-120">GetHashFromAssemblyFileW, metoda</span><span class="sxs-lookup"><span data-stu-id="94ccb-120">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  
- [<span data-ttu-id="94ccb-121">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="94ccb-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="013b5-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="013b5-119">See also</span></span>
+- [<span data-ttu-id="013b5-120">GetHashFromAssemblyFileW, metoda</span><span class="sxs-lookup"><span data-stu-id="013b5-120">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [<span data-ttu-id="013b5-121">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="013b5-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: stosowanie atrybutów w formantach formularzy systemu Windows'
+title: 'Instrukcje: Stosowanie atrybutów w kontrolkach formularzy Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 1ab54b0c6828a0648fecfc293b6a7143b012ad6a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 522c8b207b86608e3bbd9a5831a3adb5c6d6d430
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45592969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735159"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Porady: stosowanie atrybutów w formantach formularzy systemu Windows
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Instrukcje: Stosowanie atrybutów w kontrolkach formularzy Windows Forms
 Do tworzenia składników i formantów, które nawiązują prawidłową interakcję z środowiska projektowania i poprawnego wykonania w czasie wykonywania, należy poprawnie zastosować atrybutów do klas i składowych.  
   
 ## <a name="example"></a>Przykład  
@@ -46,7 +46,7 @@ Do tworzenia składników i formantów, które nawiązują prawidłową interakc
  [!code-csharp[System.ComponentModel.AttributesDemoControl#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#20)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#20)]  
   
-### <a name="typeconverter-attribute"></a>Atribut TypeConverter  
+### <a name="typeconverter-attribute"></a>TypeConverter Attribute  
  <xref:System.ComponentModel.TypeConverterAttribute> jest inny atrybut poziomie klasy często używane. Poniższy przykład kodu pokazuje jego stosowanie `LogEntry` klasy. W tym przykładzie przedstawiono również implementację <xref:System.ComponentModel.TypeConverter> dla `LogEntry` typu, o nazwie `LogEntryTypeConverter`.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#5)]
@@ -58,7 +58,7 @@ Do tworzenia składników i formantów, które nawiązują prawidłową interakc
  [!code-csharp[System.ComponentModel.AttributesDemoControl#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#21)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#21)]  
   
-### <a name="ambientvalue-attribute"></a>Atrybut AmbientValue  
+### <a name="ambientvalue-attribute"></a>AmbientValue Attribute  
  W poniższym przykładzie pokazano <xref:System.ComponentModel.AmbientValueAttribute> i zawiera kod, który obsługuje wchodzi w interakcję z środowisko projektowania. Ta interakcja jest nazywany *otoczenie*.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#23)]
@@ -77,9 +77,9 @@ Do tworzenia składników i formantów, które nawiązują prawidłową interakc
   
 -   Formularz, który jest hostem `AttributesDemoControl` wymaga odwołania do `AttributesDemoControl` zestawu w celu kompilacji.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IComparable>  
- <xref:System.Windows.Forms.DataGridView>  
- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Atrybuty w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
- [Instrukcje: serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IComparable>
+- <xref:System.Windows.Forms.DataGridView>
+- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Atrybuty w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+- [Instrukcje: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)

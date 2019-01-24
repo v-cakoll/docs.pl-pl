@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d0e7f20be3f18e49dcc1b986460d5da0c3d7777
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd544619f9e5fb85a0b08b91ead8231ea25743cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651233"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction — Metoda
 Pobiera skojarzone z tym "ICorDebugCode" "ICorDebugFunction".  
@@ -40,10 +40,10 @@ HRESULT GetFunction (
  [out] Wskaźnik do adresu funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `ICorDebugCode` i `ICorDebugFunction` Obsługa relacją.  
+ `ICorDebugCode` i `ICorDebugFunction` Obsługa relacja jeden do jednego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -51,5 +51,5 @@ HRESULT GetFunction (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

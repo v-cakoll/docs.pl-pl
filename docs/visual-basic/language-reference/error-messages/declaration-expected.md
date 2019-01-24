@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: c5c9b665b78c7c63c55292e38cc96ee8b2962a61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e776d3d08ff7d63b094a71e6990d87ea454a4428
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638434"
 ---
 # <a name="declaration-expected"></a>Oczekiwano deklaracji
-Zestawienie nondeclarative, takich jak przypisanie ani instrukcji pętli jest wykonywane poza dowolnej procedury. Tylko deklaracji są dozwolone zewnętrznej procedury.  
+Nondeclarative instrukcji, takie jak przypisania lub instrukcji pętli jest wykonywane poza dowolnej procedury. Tylko deklaracje mogą poza procedur.  
   
  Alternatywnie elementu programistycznego została zadeklarowana bez słowa kluczowego deklaracji takich jak `Dim` lub `Const`.  
   
@@ -23,12 +23,12 @@ Zestawienie nondeclarative, takich jak przypisanie ani instrukcji pętli jest wy
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Przenieś nondeclarative instrukcji w treści procedury.  
+-   Przenieś instrukcję nondeclarative treści procedury.  
   
 -   Rozpocznij deklaracji z odpowiednią deklarację słowem kluczowym.  
   
--   Upewnij się, że słowo kluczowe deklaracja nie jest błędna.  
+-   Upewnij się, że deklaracja słowo kluczowe nie jest błędnie wpisana.  
   
-## <a name="see-also"></a>Zobacz też  
- [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: a0ff04bf67faea4c834570e8faa4197369289fb7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 25d18b4e362481dfde8fb440911bac67f27eab40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636238"
 ---
 # <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -64,5 +64,5 @@ Następujące witryny sieci web, wytyczne i mogą pomóc w znalezieniu odpowiedz
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wprowadzenie do języka Visual Basic](../../visual-basic/getting-started/index.md)  
-[Porozmawiaj z nami](/visualstudio/ide/talk-to-us)  
+- [Wprowadzenie do języka Visual Basic](../../visual-basic/getting-started/index.md)
+- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

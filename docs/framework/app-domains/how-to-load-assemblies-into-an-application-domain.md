@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ładowanie zestawów do domeny aplikacji'
+title: 'Instrukcje: Ładowanie zestawów do domeny aplikacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e91441f593b7533026d5980f8cf39fb5a3d5b71
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c6b816c3a2c4f684993117deb38b40f4436a627c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653804"
 ---
-# <a name="how-to-load-assemblies-into-an-application-domain"></a>Porady: ładowanie zestawów do domeny aplikacji
+# <a name="how-to-load-assemblies-into-an-application-domain"></a>Instrukcje: Ładowanie zestawów do domeny aplikacji
 Istnieje kilka sposobów, aby załadować zestawu do domeny aplikacji. Zalecaną metodą jest użycie `static` (`Shared` w języku Visual Basic) <xref:System.Reflection.Assembly.Load%2A> metody <xref:System.Reflection.Assembly?displayProperty=nameWithType> klasy. Inne sposoby, które zestawy można załadować obejmują:  
   
 -   <xref:System.Reflection.Assembly.LoadFrom%2A> Metody <xref:System.Reflection.Assembly> klasy ładuje zestaw podanej lokalizacji pliku. Ładowanie zestawów przy użyciu tej metody używa kontekstu różne obciążenia.  
   
--   <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> i <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> metody ładowania zestawu do kontekstu reflection-only. Zestawy ładowane w tym kontekście można zbadać, ale nie jest to wykonywane, dzięki czemu badania zestawów, przeznaczonych dla innych platform. Zobacz [porady: ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+-   <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> i <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> metody ładowania zestawu do kontekstu reflection-only. Zestawy ładowane w tym kontekście można zbadać, ale nie jest to wykonywane, dzięki czemu badania zestawów, przeznaczonych dla innych platform. Zobacz [jak: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 > [!NOTE]
 >  Kontekstu reflection-only jest nowa w .NET Framework w wersji 2.0.  
@@ -46,10 +46,10 @@ Istnieje kilka sposobów, aby załadować zestawu do domeny aplikacji. Zalecaną
  [!code-csharp[System.AppDomain.Load#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source2.cs#2)]
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
-- [Programowanie z domenami aplikacji](application-domains.md#programming-with-application-domains)  
-- [Odbicie](../../../docs/framework/reflection-and-codedom/reflection.md)  
-- [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)  
-- [Instrukcje: ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
+- [Programowanie z domenami aplikacji](application-domains.md#programming-with-application-domains)
+- [Odbicie](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)
+- [Instrukcje: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Domeny aplikacji i zestawy](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

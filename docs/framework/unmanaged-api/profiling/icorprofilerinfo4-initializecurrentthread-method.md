@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f5a4a6bc7b1e79068b11b099352cec64dd09f301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 990ae316a780af9be96f6b91900f33cbb2db4f36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727979"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread — Metoda
-Inicjuje bieżący wątek klienta z wyprzedzeniem kolejnych profilera, który wywołania interfejsu API w tym samym wątku, aby uniknąć tego zakleszczenia.  
+Inicjuje bieżący wątek ewentualnej profilującym kolejnych wywołań interfejsu API w tym samym wątku, dzięki czemu można uniknąć tego zakleszczenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,13 +34,13 @@ HRESULT InitializeCurrentThread ();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Firma Microsoft zaleca, aby wywołać `InitializeCurrentThread` w którymkolwiek wątku, który będzie dzwonić profiler interfejsu API, gdy są zawieszone wątków. Ta metoda jest zwykle używana przez profilowania próbkowania, które utworzyć własne wątku do wywołania [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) przedstawiono metodę w celu stosu podczas docelowy wątek jest zawieszony. Wywołując `InitializeCurrentThread` po po profilera najpierw tworzy wątku próbkowania, profilery można zapewnić, inicjowanie tego wątku opóźnieniem, które wykonywania innych podczas pierwszego wywołania do środowiska CLR `DoStackSnapshot` może teraz wystąpić bezpiecznie kiedy są nie ma innych wątków zawieszone.  
+ Firma Microsoft zaleca wywołanie `InitializeCurrentThread` dotyczące dowolnego wątku, który będzie wybierany program profilujący interfejsu API, gdy istnieją wstrzymane wątki. Ta metoda jest zwykle używana przez profilowania próbkowania, tworzonych z własnych wątków do wywoływania [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) przedstawia metodę w celu stosu, gdy wątek docelowy jest wstrzymane. Przez wywołanie metody `InitializeCurrentThread` po kiedy profiler najpierw tworzy wątek próbkowania, profilery zagwarantować, że inicjowanie wątku z opóźnieniem, w przeciwnym razie wykona środowiska CLR Podczas pierwszego wywołania `DoStackSnapshot` teraz możliwe bezpiecznie kiedy są nie ma innych wątków zawieszone.  
   
 > [!NOTE]
->  `InitializeCurrentThread` nie inicjowania z wyprzedzeniem, aby zakończyć zadania wykonuj blokad, które mogą zakleszczenie. Wywołanie `InitializeCurrentThread` tylko wtedy, gdy nie ma żadnych zawieszonych wątków.  
+>  `InitializeCurrentThread` wykonuje inicjowanie z wyprzedzeniem, aby zakończyć zadania, które były blokad i może zakleszczenie. Wywołaj `InitializeCurrentThread` tylko wtedy, gdy nie istnieją wątki zawieszone.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -47,7 +48,7 @@ HRESULT InitializeCurrentThread ();
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

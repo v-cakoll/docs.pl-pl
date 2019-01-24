@@ -16,12 +16,12 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 0211438e8b4c02fead910dd7a32e0df9ed73ddc5
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ecb75e71225d2b6705d6235a941ecd83b3aab75b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699808"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports — Instrukcja (.NET Namespace i Type)
 Pozwala wpisać nazwy przywoływanie bez kwalifikacji przestrzeni nazw.  
@@ -38,8 +38,8 @@ Imports [ aliasname = ] namespace.element
   
 |Termin|Definicja|  
 |---|---|  
-|`aliasname`|Opcjonalna. *Zaimportować alias* lub za pomocą którego kod może odnosić się do nazwy `namespace` zamiast ciągu pełnej kwalifikacji. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`namespace`|Wymagane. W pełni kwalifikowana nazwa importowanych przestrzeni nazw. Może być ciągiem przestrzenie nazw zagnieżdżona na dowolnym poziomie.|  
+|`aliasname`|Opcjonalna. *Zaimportować alias* lub za pomocą którego kod może odnosić się do nazwy `namespace` zamiast ciągu pełnej kwalifikacji. Zobacz [Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`namespace`|Wymagana. W pełni kwalifikowana nazwa importowanych przestrzeni nazw. Może być ciągiem przestrzenie nazw zagnieżdżona na dowolnym poziomie.|  
 |`element`|Opcjonalna. Nazwa elementu programistycznego zadeklarowanych w przestrzeni nazw. Może być dowolny element kontenera.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -56,7 +56,7 @@ Imports [ aliasname = ] namespace.element
  Należy pamiętać, że `Imports` instrukcji nie udostępnia elementy z innych projektów i zestawów do projektu. Importowanie nie odbywa się odwołanie do ustawienia. Powoduje tylko usunięcie potrzeby kwalifikowania nazwy, które są już dostępne do projektu. Aby uzyskać więcej informacji, zobacz "Importowanie zawierający elementy" w [odwołania do elementów zadeklarowany](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 > [!NOTE]
->  Można zdefiniować niejawne `Imports` instrukcji za pomocą [strona odwołań, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Aby uzyskać więcej informacji, zobacz [porady: Dodawanie lub usuwanie zaimportowane przestrzenie nazw (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
+>  Można zdefiniować niejawne `Imports` instrukcji za pomocą [strona odwołań, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Aby uzyskać więcej informacji, zobacz [jak: Dodawanie lub usuwanie importowanych przestrzeni nazw (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
   
 ## <a name="import-aliases"></a>Importowanie aliasów  
  *Zaimportować alias* definiuje aliasu dla typu lub przestrzeni nazw. Importowanie aliasów są przydatne, gdy należy użyć elementów o takiej samej nazwie, które są zadeklarowane w jeden lub kilka przestrzeni nazw. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz "Kwalifikowanie elementu Name" w [odwołania do elementów zadeklarowany](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
@@ -98,9 +98,9 @@ Imports [ aliasname = ] namespace.element
   
  [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Namespace, instrukcja](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Przestrzenie nazw w języku Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [Referencje i instrukcja Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- [Imports, instrukcja (przestrzeń nazw XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
- [Odwołania do elementów zadeklarowanych](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>Zobacz także
+- [Namespace, instrukcja](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Przestrzenie nazw w języku Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Referencje i instrukcja Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Imports, instrukcja (przestrzeń nazw XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [Odwołania do elementów zadeklarowanych](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

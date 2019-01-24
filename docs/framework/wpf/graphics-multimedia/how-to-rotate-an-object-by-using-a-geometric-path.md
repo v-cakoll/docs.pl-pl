@@ -1,5 +1,5 @@
 ---
-title: Jak obrócić obiekt z wykorzystaniem ścieżki geometrycznej
+title: 'Instrukcje: Obróć obiekt z wykorzystaniem ścieżki geometrycznej'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - geometric paths [WPF], rotating objects by
 - rotating objects by geometric paths [WPF]
 ms.assetid: cb31ca4d-f05a-4c6b-9a18-4b6faaf38d45
-ms.openlocfilehash: 6d6d21f3f7b609cb2933093a6990425deb39d4a6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: cd8aaee7563d684e70dc29f1c293b091c1e6cff9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661493"
 ---
-# <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Jak obrócić obiekt z wykorzystaniem ścieżki geometrycznej
+# <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Instrukcje: Obróć obiekt z wykorzystaniem ścieżki geometrycznej
 W tym przykładzie pokazano, jak obrócić (Tabela przestawna) obiekt na ścieżce geometryczne, który jest definiowany przez <xref:System.Windows.Media.PathGeometry> obiektu.  
   
 ## <a name="example"></a>Przykład  
@@ -34,7 +34,7 @@ W tym przykładzie pokazano, jak obrócić (Tabela przestawna) obiekt na ścież
   
  Aby uzyskać pełny przykład, zobacz [przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028).  
   
-## <a name="see-also"></a>Zobacz też  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

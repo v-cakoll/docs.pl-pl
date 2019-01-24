@@ -8,31 +8,31 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 477921069411bb4b7ac32a5e93cc409bc7fbdec2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30836f7f1cbf742c621254ef92314d20a4fffd83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492128"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715077"
 ---
 # <a name="data-member-default-values"></a>Domyślne wartości elementów członkowskich danych
-W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], typy korzystają z pojęcia *wartości domyślne*. Na przykład dla dowolnego typu odwołania, wartością domyślną jest `null`, i dla typu Liczba całkowita jest równa 0. Jest czasami pożądane, aby pominąć elementu członkowskiego danych z danych serializacji, gdy jest ustawiona na wartość domyślną. Ponieważ element członkowski ma wartość domyślną, wartość rzeczywista nie wymagają serializacji; to ustawienie korzyści wydajności.  
+W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], typy mają koncepcji *wartości domyślne*. Na przykład dla dowolnego typu odwołania, wartość domyślna to `null`, a typ liczby całkowitej wynosi zero. Należy co pewien czas pominięto element członkowski danych z serializowanych danych, gdy jest ustawiona na wartość domyślną. Ponieważ element członkowski ma wartość domyślną, wartość rzeczywistą nie muszą podlegać serializacji; ma to zalety wydajności.  
   
- Aby pominąć element członkowski danych serializacji, ustaw <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu `false` (wartość domyślna to `true`).  
+ Aby pominąć elementu członkowskiego w danych serializacji, należy ustawić <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu `false` (wartość domyślna to `true`).  
   
 > [!NOTE]
->  Należy ustawić <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> właściwości `false` gdy istnieje konkretna potrzeba Aby to zrobić, takie jak współdziałanie lub danych rozmiar odstępu.  
+>  Należy ustawić <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> właściwości `false` w przypadku określonych trzeba to zrobić, takie jak współdziałanie lub danych rozmiar redukcji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod zawiera kilka elementów członkowskich z <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ustawioną `false`.  
+ Poniższy kod zawiera kilka elementów członkowskich z <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> równa `false`.  
   
  [!code-csharp[DataMemberAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/datamemberattribute/cs/overview.cs#4)]
  [!code-vb[DataMemberAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/datamemberattribute/vb/overview.vb#4)]  
   
- Jeśli wystąpienie tej klasy jest serializowana, wynik jest następujący: `employeeName` i `employeeID` jest serializowany. Wartość null dla `employeeName` i wartość zerową dla `employeeID` jest jawnie część danych serializacji. Jednak `position`, `salary`, i `bonus` elementy członkowskie nie są serializowane. Na koniec `targetSalary` jest serializowany w zwykły sposób, nawet jeśli <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> właściwość jest ustawiona na `false`, ponieważ 57800 jest niezgodna z wartością domyślną .NET dla całkowitą, która jest równa zero.  
+ Jeśli wystąpienie tej klasy jest serializowana, wynik jest następujący: `employeeName` i `employeeID` jest serializowana. Wartość null dla `employeeName` i wartości zero dla `employeeID` jest jawnie część serializowanych danych. Jednak `position`, `salary`, i `bonus` elementy członkowskie nie są serializowane. Na koniec `targetSalary` jest serializowany w zwykły sposób, nawet jeśli <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> właściwość jest ustawiona na `false`, ponieważ 57800 jest niezgodna z wartością domyślną .NET dla liczby całkowitej, która jest równa zero.  
   
 ### <a name="xml-representation"></a>Reprezentacja XML  
- Jeśli w poprzednim przykładzie jest serializowana do pliku XML, reprezentacja jest podobny do następującego.  
+ Jeśli w poprzednim przykładzie, jest serializowany do XML, reprezentacja jest podobny do następującego.  
   
 ```xml  
 <Employee>  
@@ -42,20 +42,20 @@ W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], typy korzysta
 </Employee>  
 ```  
   
- `xsi:nil` Jest atrybutem specjalne w przestrzeni nazw schematu XML w sieci World Wide Web konsorcjum W3C wystąpienia, który zapewnia współdziałanie sposób jawnie reprezentowania wartości null. Należy pamiętać, że nie ma żadnych informacji w ogóle w kodzie XML o pozycji, wynagrodzenie i podwyższenie elementy członkowskie danych. Stronie odbierającej może interpretować je jako `null`, zero, i `null`odpowiednio. Nie ma żadnej gwarancji, który Deserializator innych firm może zgłaszać poprawnej interpretacji, dlatego ten wzorzec jest niezalecane. <xref:System.Runtime.Serialization.DataContractSerializer> Klasy zawsze wybiera poprawnej interpretacji dla brakujących wartości.  
+ `xsi:nil` Atrybut jest atrybutem specjalne w przestrzeni nazw wystąpienia schematu XML World Wide Web Consortium (W3C), który zapewnia sposób interoperacyjny jawnie reprezentujący wartość null. Należy pamiętać, że żadne informacje w ogóle w formacie XML o pozycja, wynagrodzenie i dodatkowe elementy członkowskie danych. Stronie odbierającej może interpretować je jako `null`, zerowego, i `null`, odpowiednio. Nie ma żadnej gwarancji, który Deserializator innych firm może zgłaszać poprawną interpretację, dlatego ten wzorzec nie jest zalecane. <xref:System.Runtime.Serialization.DataContractSerializer> Klasy zawsze wybiera poprawną interpretację dotyczącą brakujących wartości.  
   
 ### <a name="interaction-with-isrequired"></a>Interakcja z IsRequired  
- Zgodnie z opisem w [przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md), <xref:System.Runtime.Serialization.DataMemberAttribute> ma atrybut <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> właściwość (wartość domyślna to `false`). Właściwość wskazuje, czy element członkowski danych danego musi znajdować się w danych serializacji. gdy jest poddawany deserializacji. Jeśli `IsRequired` ustawiono `true`, (co oznacza, że wartość musi być obecny) i <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ma ustawioną wartość `false` (co oznacza, że wartość nie może być wyświetlany, jeśli jest ustawiona na wartość domyślną), nie może mieć wartości domyślne dla tego elementu członkowskiego danych serializowany, ponieważ wyniki będą sprzeczne. Jeśli element danych jest ustawiony na wartość domyślną (zazwyczaj `null` lub zerem) i serializacja zostanie podjęta, <xref:System.Runtime.Serialization.SerializationException> jest generowany.  
+ Zgodnie z opisem w [przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md), <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut ma <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> właściwość (wartość domyślna to `false`). Właściwość wskazuje, czy element członkowski danych danego musi znajdować się w serializowane dane, gdy jest on przeprowadzona. Jeśli `IsRequired` jest ustawiona na `true`, (wskazuje, że wartość musi być obecny) i <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> jest ustawiona na `false` (co oznacza, że wartość nie może być wyświetlany, jeśli jest ustawiona na wartość domyślną), wartości domyślne dla tego elementu członkowskiego danych nie może być. serializowany, ponieważ wyniki będą sprzeczne. Jeśli element członkowski danych jest ustawiony na wartość domyślną (zazwyczaj `null` lub zerem) i podejmowana jest próba serializacji, <xref:System.Runtime.Serialization.SerializationException> zgłaszany.  
   
 ### <a name="schema-representation"></a>Reprezentacja schematu  
- Szczegóły schematu XML definition language (XSD) schematu reprezentacja elementy członkowskie danych podczas `EmitDefaultValue` właściwość jest ustawiona na `false` omówiono w [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Jednak poniżej znajduje się krótki przegląd:  
+ Szczegółowe informacje o reprezentacji schematu języka (XSD) definicji schematu XML składowych danych podczas `EmitDefaultValue` właściwość jest ustawiona na `false` zostały omówione w [odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Jednakże Oto krótki przegląd:  
   
--   Gdy <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ma ustawioną wartość `false`, jest przedstawiany w schemacie adnotacji określonych do usługi Windows Communication Foundation (WCF). Nie istnieje sposób interoperacyjne do reprezentowania tych informacji. W szczególności atrybut "domyślny" w schemacie nie jest używany w tym celu `minOccurs` atrybut ma wpływ tylko przez <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ustawienie i `nillable` atrybutu dotyczy tylko typu elementu członkowskiego danych.  
+-   Gdy <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ustawiono `false`, jest reprezentowana w schemacie jako adnotacja określonych do programu Windows Communication Foundation (WCF). Nie ma interoperacyjne możliwości do reprezentowania tych informacji. W szczególności atrybutu "default" w schemacie nie jest używany w tym celu `minOccurs` atrybutu, dotyczy tylko przez <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ustawienie i `nillable` atrybut dotyczy tylko typu składowej danych.  
   
--   W schemacie nie ma wartości rzeczywistych do użycia. Jest odbierania punktu końcowego odpowiednio interpretować Brak elementu.  
+-   Nie ma wartości rzeczywistych do użycia w schemacie. Jest odbieranie punkt końcowy, aby odpowiednio interpretacji brakującego elementu.  
   
- Podczas importowania schematu <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> jest automatycznie ustawiana właściwość `false` po każdej zmianie adnotacji specyficzne dla usługi WCF wymienione wcześniej została wykryta. Zostanie ona również ustawiona `false` dla typów odwołań, które mają `nillable` ustawioną właściwość `false` obsługi określonych współdziałanie, w których zwykle występują w przypadku uzyskiwania dostępu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web.  
+ Podczas importowania schematu <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> zostaje automatycznie ustalona `false` zawsze, gdy adnotacji specyficzne dla usługi WCF wymienionych wcześniej wykrycia. Jest również ustawiona na `false` dla typów odwołań, które mają `nillable` właściwością `false` do obsługi scenariuszy określonych współdziałanie, często występujących podczas używania [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usług sieci Web.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>

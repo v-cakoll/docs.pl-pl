@@ -1,23 +1,23 @@
 ---
-title: 'Porady: znajdowanie elementów w Namespace (XPath-LINQ do XML) (Visual Basic)'
+title: 'Instrukcje: Znajdowanie elementów w Namespace (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 417ff63408ea640bbbd5cc4863193e769a2ec444
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e8220c1dc34a56306d78db5d90ab5697ba5f632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714792"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Porady: znajdowanie elementów w Namespace (XPath-LINQ do XML) (Visual Basic)
-Wyrażenia XPath można znaleźć węzłów w określonej przestrzeni nazw. Wyrażenia XPath Użyj prefiksy przestrzeni nazw dla określenie obszarów nazw. Aby analizować wyrażenie XPath, który zawiera prefiksy przestrzeni nazw, trzeba przekazać do metody XPath, które implementuje obiektu <xref:System.Xml.IXmlNamespaceResolver>. W tym przykładzie użyto <xref:System.Xml.XmlNamespaceManager>.  
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie elementów w Namespace (XPath-LINQ to XML) (Visual Basic)
+Wyrażenia XPath można znaleźć węzły w określonej przestrzeni nazw. Wyrażenia XPath używać prefiksów przestrzeni nazw do określania przestrzeni nazw. Aby analizować wyrażenie XPath, który zawiera prefiksy przestrzeni nazw, należy przekazać obiekt do metody XPath, które implementuje <xref:System.Xml.IXmlNamespaceResolver>. W tym przykładzie użyto <xref:System.Xml.XmlNamespaceManager>.  
   
  Wyrażenie XPath jest:  
   
  `./aw:*`  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład odczytuje drzewo XML, który zawiera dwie przestrzenie nazw. Używa <xref:System.Xml.XmlReader> dokumentu XML. Następnie pobiera <xref:System.Xml.XmlNameTable> z <xref:System.Xml.XmlReader>i <xref:System.Xml.XmlNamespaceManager> z <xref:System.Xml.XmlNameTable>. Używa <xref:System.Xml.XmlNamespaceManager> podczas wybierania elementów.  
+ Poniższy przykład odczytuje drzewa XML, który zawiera dwie przestrzeni nazw. Używa ona <xref:System.Xml.XmlReader> do odczytu dokumentu XML. Następnie pobiera <xref:System.Xml.XmlNameTable> z <xref:System.Xml.XmlReader>i <xref:System.Xml.XmlNamespaceManager> z <xref:System.Xml.XmlNameTable>. Używa ona <xref:System.Xml.XmlNamespaceManager> podczas wybierania elementów.  
   
 ```vb  
 Dim reader As XmlReader = _  
@@ -80,5 +80,5 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do XML dla wyrażenia XPath użytkowników (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ to XML dla użytkowników metody XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

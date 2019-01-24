@@ -2,17 +2,11 @@
 title: Właściwości osi XML (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- XML axis properties [Visual Basic]
-- Visual Basic code, XML
-- XML axis [Visual Basic]
-- XML [Visual Basic], accessing
+  - 'XML axis properties [Visual Basic]'
+  - 'Visual Basic code, XML'
+  - 'XML axis [Visual Basic]'
+  - 'XML [Visual Basic], accessing'
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
-ms.openlocfilehash: c7593273893f1bb4961788b07fe716f234f0576f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908754"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>Właściwości osi XML (Visual Basic)
 Tematy w tej części dokumentu składni właściwości osi XML w Visual Basic. Właściwości osi XML ułatwiają uzyskiwanie dostępu do XML bezpośrednio w kodzie.  
@@ -27,5 +21,5 @@ Tematy w tej części dokumentu składni właściwości osi XML w Visual Basic. 
 |[Właściwość indeksatora rozszerzenia](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|Opisano, jak uzyskać dostęp do poszczególnych elementów w kolekcji <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XAttribute> obiektów.|  
 |[Właściwość wartości XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|Zawiera opis sposobu uzyskania dostępu do wartości pierwszego elementu w kolekcji <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XAttribute> obiektów.|  
   
-## <a name="see-also"></a>Zobacz też  
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>Zobacz także
+- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

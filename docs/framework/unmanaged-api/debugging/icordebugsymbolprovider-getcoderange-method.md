@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider::GetCodeRange — metoda
+title: ICorDebugSymbolProvider::GetCodeRange Method
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f60ba1c68e95363a59c5a1d217756664f63e5256
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfaa8ce16a3874d28e06bdb77f1e903548c0a03b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684791"
 ---
-# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange — metoda
-Pobiera adres początkowy — metoda i rozmiar podany wirtualny adres względny (RVA) w metodzie.  
+# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange Method
+Pobiera adres początkowy metody i biorąc względnych adresów wirtualnych (RVA) w metodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,18 +29,18 @@ HRESULT GetCodeRange(
  [in] Wirtualny adres względny (RVA) w metodzie.  
   
  `pCodeStartAddress`  
- [out] Wskaźnik do metody adres początkowy.  
+ [out] Wskaźnik do adres początkowy metody.  
   
  `pCodeSize`  
- Wskaźnik do rozmiaru kodu — metoda (liczba bajtów kod metody).  
+ Wskaźnik do rozmiaru kodu — metoda (liczba bajtów kodu metody).  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z platformą .NET Native.  
+>  Ta metoda jest tylko dostępne z architekturą .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -48,6 +48,6 @@ HRESULT GetCodeRange(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

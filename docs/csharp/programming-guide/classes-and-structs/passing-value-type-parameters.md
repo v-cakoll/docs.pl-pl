@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: df394a6b71a06edc064fba0925398f87ed1802a8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e5d1aa97a53d52e0915c2fbf5f1b296c65b16435
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704894"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Przekazywanie parametrów typu wartość (Przewodnik programowania w języku C#)
 A [typ wartości](../../../csharp/language-reference/keywords/value-types.md) zmienna zawiera swoje dane bezpośrednio w przeciwieństwie do [Typ referencyjny](../../../csharp/language-reference/keywords/reference-types.md) zmienną, która zawiera odwołanie do jego danych. Przekazywanie zmiennej typu wartości do metody poprzez wartość oznacza, że przekazywanie kopię zmiennej do metody. Wszelkie zmiany do parametru, które odbywają się wewnątrz metody mają nie będzie miała wpływu na oryginalne dane przechowywane w zmiennej argumentu. Jeśli ma metodę o nazwie, aby zmienić wartość parametru, możesz przekazać go przez odwołanie, za pomocą [ref](../../../csharp/language-reference/keywords/ref.md) lub [się](../../../csharp/language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe. Można także użyć [w](../../../csharp/language-reference/keywords/in-parameter-modifier.md) — słowo kluczowe do przekazywania parametru wartości przez odwołanie, aby uniknąć kopii przy jednoczesnym zagwarantowaniu, że wartości nie zostaną zmienione. Dla uproszczenia w poniższych przykładach używane `ref`.  
@@ -39,8 +39,8 @@ A [typ wartości](../../../csharp/language-reference/keywords/value-types.md) zm
   
  [!code-csharp[csProgGuideParameters#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_4.cs)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Przekazywanie parametrów](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Przekazywanie parametrów](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
 - [Przekazywanie parametrów typu odwołanie](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)

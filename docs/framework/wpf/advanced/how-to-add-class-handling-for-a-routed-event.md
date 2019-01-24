@@ -1,5 +1,5 @@
 ---
-title: Jak dodać obsługę klasy dla zdarzenia trasowanego
+title: 'Instrukcje: Dodaj obsługę klasy dla zdarzenia trasowanego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - task_core_add_class_handling_routed_properties [WPF]
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-ms.openlocfilehash: 85c3491c9035d807b4c654659a8641121bb5709f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10ef6354a426bc43731ca3711a533f26a4bd27b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619519"
 ---
-# <a name="how-to-add-class-handling-for-a-routed-event"></a>Jak dodać obsługę klasy dla zdarzenia trasowanego
-Kierowane zdarzenia mogą być obsługiwane przez programy obsługi klasy lub wystąpienia obsługi na dowolny węzeł w trasie. Klasy obsługi są wywoływane najpierw i implementacji klasy można pominąć zdarzenia z obsługi wystąpienia lub wprowadzenie innych zachowań określonych zdarzeń na zdarzenia, które należą do klasy podstawowej. W tym przykładzie przedstawiono dwie metody ściśle związanych wykonawczych obsługę klas.  
+# <a name="how-to-add-class-handling-for-a-routed-event"></a>Instrukcje: Dodaj obsługę klasy dla zdarzenia trasowanego
+Zdarzenia trasowane mogą być obsługiwane przez funkcje obsługi klas lub wystąpień obsługi na dowolny węzeł w trasie. Funkcje obsługi klas są wywoływane najpierw i może służyć przez implementacje klasy do pomijania zdarzenia z obsługi wystąpienia lub wprowadzenia innych zdarzeń zachowań określonych zdarzeń, które są własnością klas bazowych. W tym przykładzie przedstawiono dwie techniki ściśle powiązanych implementacji funkcje obsługi klas.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto niestandardowej klasy na podstawie <xref:System.Windows.Controls.Canvas> panelu. Podstawowe lokalnych aplikacji jest, że niestandardowej klasy wprowadza zachowań na jego elementy podrzędne, w tym przechwytywaniu klikniętego dowolnego przycisku myszy po lewej stronie i oznaczania ich obsługę, zanim zostanie wywołany klasa elementu podrzędnego lub dowolnego obsługi wystąpienia na nim.  
+ W tym przykładzie użyto klasy niestandardowej na podstawie <xref:System.Windows.Controls.Canvas> panelu. Podstawowe założenia aplikacji jest, że klasy niestandardowej wprowadza zachowań na jego elementy podrzędne, w tym przechwytywaniu klikniętego dowolnego przycisku myszy po lewej stronie i oznaczanie ich obsługę, zanim zostanie wywołana klasa elementu podrzędnego lub dowolnej obsługi wystąpienia na nim.  
   
- <xref:System.Windows.UIElement> Klasa opisuje metodę wirtualnego umożliwia klasy obsługi na <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> zdarzenia przez zastąpienie po prostu zdarzenia. Jest to najprostszy sposób do zaimplementowania klasy obsługi, jeśli metoda wirtualna jest dostępna w hierarchii swojej klasy. Poniższy kod przedstawia <xref:System.Windows.UIElement.OnPreviewMouseLeftButtonDown%2A> implementacja "MyEditContainer", która jest pochodną <xref:System.Windows.Controls.Canvas>. Implementacja oznacza zdarzenia, jako obsługiwane w argumentach, a następnie dodanie kodu umożliwiają elementu źródła podstawowe widocznych zmian.  
+ <xref:System.Windows.UIElement> Klasa udostępnia metodę wirtualną, która umożliwia obsługę na klasy <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> zdarzenia, po prostu zastępowanie zdarzenia. Jest to najprostszy sposób implementacji klasy obsługi, jeśli metoda wirtualna znajduje się gdzieś w swojej klasie hierarchii. Poniższy kod przedstawia <xref:System.Windows.UIElement.OnPreviewMouseLeftButtonDown%2A> implementację w "MyEditContainer", która jest pochodną <xref:System.Windows.Controls.Canvas>. Implementacja oznacza zdarzenia jako obsługiwane w argumentach, a następnie dodanie kodu, aby zapewnić podstawowe widocznych zmian elementu źródłowego.  
   
  [!code-csharp[ClassHandling#OnStarClassHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#onstarclasshandler)]
  [!code-vb[ClassHandling#OnStarClassHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#onstarclasshandler)]  
   
- Jeśli wirtualnego nie jest dostępne dla klas podstawowych lub dla określonej metody, klasy obsługi można dodać bezpośrednio za pomocą metody narzędzie <xref:System.Windows.EventManager> klasy <xref:System.Windows.EventManager.RegisterClassHandler%2A>. Ta metoda powinna być wywoływana tylko w statyczne zainicjowanie klasy, które dodajesz klasy obsługi. W tym przykładzie dodaje innego programu obsługi dla <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> , i w takim przypadku zarejestrowanych klasy niestandardowej klasy. Z kolei, korzystając z elementów wirtualnych, zarejestrowanych klasy to naprawdę <xref:System.Windows.UIElement> klasy podstawowej. W przypadkach, gdy klasy podstawowe, jak i podklasy zarejestrować klasy obsługi najpierw są wywoływane programy obsługi podklasy. Zachowanie w aplikacji będą najpierw ten program obsługi może wyświetlić jego pola wiadomości, a następnie zostaną pokazane visual zmiany w obsłudze metody wirtualnej.  
+ Jeśli wirtualny nie jest dostępny na klasach bazowych, lub dla tej konkretnej metody, klasy obsługi można dodać bezpośrednio przy użyciu metody narzędzie <xref:System.Windows.EventManager> klasy <xref:System.Windows.EventManager.RegisterClassHandler%2A>. Ta metoda powinna być wywoływana tylko w statyczne inicjowanie klas, które dodajesz Obsługa klasy. Ten przykład dodaje innego programu obsługi dla <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> , a w tym przypadku zarejestrowanych klasy niestandardowej klasy. Korzystając z elementów wirtualnych, zarejestrowanych klasy jest naprawdę <xref:System.Windows.UIElement> klasy bazowej. W przypadkach, w której klasy podstawowe, jak i podklasy zarejestrować klasy obsługi są wywoływane najpierw obsługi podklasę. Zachowanie w aplikacji będzie, że najpierw ten program obsługi będzie przedstawiała jej okno komunikatu, a następnie zostaną pokazane zmianę wizualną metody wirtualnej programu obsługi.  
   
  [!code-csharp[ClassHandling#StaticAndRegisterClassHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#staticandregisterclasshandler)]
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.EventManager>  
- [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Obsługa zdarzenia trasowanego](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.EventManager>
+- [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)
+- [Obsługa zdarzenia trasowanego](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)
+- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: odczyt tekstu z plików za pomocą StreamReader (Visual Basic)'
+title: 'Instrukcje: Odczytywanie tekstu z plików za pomocą StreamReader (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading files [Visual Basic], text
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - reading text from files [Visual Basic]
 - files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
-ms.openlocfilehash: 28ef741398b6d8c5cbbdcc3906b4845e6a2a0d86
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 829b515a6f99799e26da40aa8ee4ed41130dbc20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206448"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660063"
 ---
-# <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Porady: odczyt tekstu z plików za pomocą StreamReader (Visual Basic)
+# <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Instrukcje: Odczytywanie tekstu z plików za pomocą StreamReader (Visual Basic)
 `My.Computer.FileSystem` Obiektu udostępnia metody, aby otworzyć <xref:System.IO.TextReader> i <xref:System.IO.TextWriter>. Te metody `OpenTextFileWriter` i `OpenTextFileReader`, są zaawansowane metody, które nie są wyświetlane w IntelliSense dopiero po wybraniu **wszystkich** kartę.  
   
 ### <a name="to-read-a-line-from-a-file-with-a-text-reader"></a>Aby odczytywać plik wiersz z czytnika tekstu  
@@ -33,10 +33,10 @@ ms.locfileid: "44206448"
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Aby odczytać z pliku, zestaw wymaga poziom uprawnień przyznanych przez <xref:System.Security.Permissions.FileIOPermission> klasy. Jeśli używasz w kontekście częściowego zaufania, kod może zgłosić wyjątek ze względu na niewystarczające uprawnienia. Aby uzyskać więcej informacji, zobacz [podstawy zabezpieczeń dostępu kodu](../../../../framework/misc/code-access-security-basics.md). Użytkownik musi również dostępu do pliku. Aby uzyskać więcej informacji, zobacz [Przegląd technologii ACL](https://msdn.microsoft.com/library/06fbf66d-6f02-4378-b863-b2f12e349045).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:System.Windows.Forms.OpenFileDialog>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>  
- [SaveFileDialog, składnik](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md)  
- [Odczyt z plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:System.Windows.Forms.OpenFileDialog>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>
+- [SaveFileDialog, składnik](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md)
+- [Odczyt z plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

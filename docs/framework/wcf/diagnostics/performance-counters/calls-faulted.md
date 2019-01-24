@@ -2,18 +2,18 @@
 title: Wywołania zwracające błędy
 ms.date: 03/30/2017
 ms.assetid: bb9e8045-6aeb-4b7f-a825-8283c44252a1
-ms.openlocfilehash: 26d79d74980d0bab93acace29bc24df7b473c4f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 456dbc924579cd792e746b422b074f19403137ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712538"
 ---
 # <a name="calls-faulted"></a>Wywołania zwracające błędy
-Nazwa licznika: Wywołania zwracające błędy  
+Nazwa komputera: Wywołania zwracające błędy  
   
 ## <a name="description"></a>Opis  
- Liczba wywołań tej operacji zakończonych zwróceniem. W aplikacji Windows Communication Foundation (WCF) metody usługi komunikują się za pomocą protokołu SOAP komunikatów "fault" informacje o błędzie przetwarzania. Błędach SOAP są typów komunikatów, które są zawarte w metadanych dla operacji usługi i dlatego należy utworzyć kontrakt błędu, w której klienci mogą używać, aby ich wykonanie bardziej niezawodne lub interakcyjne. Ponieważ błędach SOAP są wyrażane klientom w postaci XML, są one bardzo interoperacyjne.  
+ Liczba wywołań na tę operację, która zwróceniem. W aplikacjach Windows Communication Foundation (WCF) metody usługi komunikują się przy użyciu protokołu SOAP wiadomości błędu informacje o błędzie przetwarzania. Błędy protokołu SOAP są typy komunikatów, które są zawarte w metadanych dla operacji usługowej i z tego względu utworzyć kontrakt błędu, w której klienci mogą używać się ich wykonanie, bardziej niezawodne lub interaktywne. Ponieważ błędach SOAP są wyrażone klientom w postaci XML, są one bardzo międzyoperacyjnych.  
   
-## <a name="see-also"></a>Zobacz też  
- [Określanie i obsługa błędów w kontraktach i usługach](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Określanie i obsługa błędów w kontraktach i usługach](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

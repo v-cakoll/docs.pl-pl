@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f2dc9fccf6718c4edebc26efcdda71b41873a3a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0c13f5aef9f08929dcd17f53777ba9e23b00b838
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728388"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Wykorzystywanie niezarządzanych funkcji DLL
 Wywołanie platformy jest usługą, że umożliwia zarządzanemu kodowi wywoływanie funkcji niezarządzanych zaimplementowane w biblioteki dołączanej dynamicznie (dll), takich jak te w interfejsie API Win32. Lokalizuje i wywołuje eksportowanych funkcji i kieruje argumentów (liczby całkowite, ciągi, tablice, struktur i tak dalej) wewnątrz międzyoperacyjnej granicy, zgodnie z potrzebami.  
@@ -72,7 +72,7 @@ Wywołanie niezarządzanych funkcji DLL wywołania platformy
   
  Wywołanie platformy zgłasza wyjątki generowane przez funkcję niezarządzane do zarządzanego obiektu wywołującego.
 
-## <a name="see-also"></a>Zobacz też  
- [Współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md)  
- [Przykłady wywołań platformy](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)  
+## <a name="see-also"></a>Zobacz także
+- [Współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md)
+- [Przykłady wywołań platformy](../../../docs/framework/interop/platform-invoke-examples.md)
+- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)

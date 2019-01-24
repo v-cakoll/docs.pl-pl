@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 078fac7f21ac31b21e5ac442ef81a1c0f496db93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e90f2b7b81bbf6401313209170ea65186c38d4e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711044"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices — Interfejs
-Udostępnia metody dla skatalogowania usług.  
+Udostępnia metody do katalogowania usług.  
   
  Ten interfejs obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
@@ -32,8 +32,8 @@ Udostępnia metody dla skatalogowania usług.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Autodone, metoda](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|Zastrzeżone wyłącznie do użytku wewnętrznego.|  
-|[NotAutodone, metoda](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Zastrzeżone wyłącznie do użytku wewnętrznego.|  
+|[Autodone, metoda](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
+|[NotAutodone, metoda](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

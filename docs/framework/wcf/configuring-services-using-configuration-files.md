@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717405"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurowanie usług za pomocą plików konfiguracji
 Konfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfiguracyjnym zapewnia elastyczność związanych z udostępnianiem punktu końcowego i danych zachowanie usługi na miejscu wdrożenia, a nie w czasie projektowania. W tym temacie opisano dostępne metody podstawowej.  
@@ -69,7 +69,7 @@ Konfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfigur
 ### <a name="the-services-element"></a>\<Usługi > — Element  
  `services` Element zawiera specyfikacje dotyczące wszystkich usług hostów aplikacji. Począwszy od modelu uproszczona konfiguracja w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ta sekcja jest opcjonalna.  
   
- [\<usługi >](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
+ [\<services>](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
   
 ### <a name="the-service-element"></a>\<Usługi > — Element  
  Każda usługa ma następujące atrybuty:  
@@ -78,7 +78,7 @@ Konfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfigur
   
 -   `behaviorConfiguration`. Określa nazwę jednej z `behavior` elementy znalezione w `behaviors` elementu. Określonego zachowania Określa akcje, takie jak czy umożliwia personifikacji. Gdy jego wartość jest pusta nazwa lub nie `behaviorConfiguration` znajduje się na wybranie domyślnego zestawu zachowania usług jest dodawana do usługi.  
   
--   [\<usługi >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+-   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>\<Punktu końcowego > Element  
  Każdy punkt końcowy wymaga adresu, powiązanie i umowy, które są reprezentowane przez następujące atrybuty:  
@@ -262,8 +262,8 @@ Konfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfigur
   
  Jeśli kolekcja zachowanie podrzędnych zawiera zachowania, które znajduje się już w zbiorze zachowanie nadrzędnym, zachowanie podrzędnego zastępuje element nadrzędny. Tak, jeśli próba zawierała kolekcji nadrzędnej zachowanie `<serviceMetadata httpGetEnabled="False" />` i zachowanie kolekcji podrzędnej `<serviceMetadata httpGetEnabled="True" />`zachowanie podrzędnych przesłonić zachowanie nadrzędnego w kolekcji zachowanie i httpGetEnabled będzie "true".  
   
-## <a name="see-also"></a>Zobacz też  
- [Uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md)  
- [Konfigurowanie aplikacji programu Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<usługi >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<Powiązanie >](../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- [Uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md)
+- [Konfigurowanie aplikacji programu Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
+- [\<Powiązanie >](../../../docs/framework/misc/binding.md)

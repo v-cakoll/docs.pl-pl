@@ -2,19 +2,19 @@
 title: LINQ to XML a. Inne Technologies2 XML
 ms.date: 07/20/2015
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
-ms.openlocfilehash: 926f1a1ab49a627331a614ef68790ea289b3dcff
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 2a671e2588dfe5d325caf745d60fcb993f4d0052
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908079"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690331"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML a. Inne technologie XML
 W tym temacie porównano [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] następujące technologie XML: <xref:System.Xml.XmlReader>, XSLT, MSXML i XmlLite. Te informacje mogą pomóc w podjęciu decyzji technologie stosowaną do.  
   
  Porównanie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do modelu DOM (Document Object), zobacz [LINQ to XML a. Modelu DOM (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
   
-## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML a. Element XmlReader  
+## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML a. XmlReader  
  <xref:System.Xml.XmlReader> jest analizatorem szybkie tylko do przodu, bez buforowania.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest implementowana w górnej części <xref:System.Xml.XmlReader>, i są one ściśle zintegrowane. Jednak możesz również użyć <xref:System.Xml.XmlReader> samodzielnie.  
@@ -52,5 +52,5 @@ W tym temacie porównano [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] n
   
  XmlLite nie jest zintegrowany z [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Nie przekazuje on programistę udoskonalenia dotyczące produktywności, które są motywującego życie za [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

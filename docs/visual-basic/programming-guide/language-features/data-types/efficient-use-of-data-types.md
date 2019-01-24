@@ -13,32 +13,32 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 6e71c4e2225bbcde3bb2bd20ae098f5600990051
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0cb67b4b26bf59b074bf5964f253c007fdbe719
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736172"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Skuteczne stosowanie typów danych (Visual Basic)
-Niezadeklarowany zmiennych i zmiennych zadeklarowanych bez typu danych są przypisane `Object` — typ danych. To ułatwia szybkie pisania programów, ale może to spowodować ich do wykonania wolniej.  
+Niezadeklarowany zmienne i zmienne zadeklarowane bez typu danych są przypisywane `Object` typu danych. To ułatwia szybkie pisanie programów, ale może to spowodować ich pracę wolniej.  
   
 ## <a name="strong-typing"></a>Silne wpisywanie  
- Określenie typów danych dla wszystkich zmiennych nosi nazwę *silne wpisywanie*. Przy użyciu silne wpisywanie ma kilka zalet:  
+ Określenie typów danych dla wszystkich zmiennych jest znany jako *silne wpisywanie*. Za pomocą silne wpisywanie ma kilka zalet:  
   
--   Umożliwia obsługę funkcji IntelliSense dla zmiennych. Dzięki temu można zobaczyć ich właściwości oraz o innych elementach członkowskich jako typu w kodzie.  
+-   Umożliwia obsługę funkcji IntelliSense dla zmiennych. Dzięki temu można zobaczyć ich właściwości i inne elementy członkowskie podczas wpisywania w kodzie.  
   
--   Trwa zaletą Sprawdzanie typu kompilatora. To połowy instrukcji, które może zakończyć się niepowodzeniem w czasie wykonywania z powodu błędów, takich jak przepełnienia. Przechwytuje również wywołania metod, w obiektach, które nie są obsługiwane.  
+-   Wykorzystuje ona sprawdzania typu kompilatora. To połowy instrukcji, które może zakończyć się niepowodzeniem w czasie wykonywania z powodu błędów, takich jak przepełnienia. Przechwytuje także wywołania metod, na obiektach, które nie obsługują je.  
   
--   Wynikiem szybsze wykonywanie kodu.  
+-   Powoduje ona szybsze wykonywanie Twojego kodu.  
   
-## <a name="most-efficient-data-types"></a>Najbardziej efektywne typy danych  
- Zmienne, które nigdy nie zawierają ułamków typy całkowite danych są bardziej wydajne niż nonintegral typów. W języku Visual Basic `Integer` i `UInteger` są najbardziej efektywny typy liczbowe.  
+## <a name="most-efficient-data-types"></a>Najbardziej wydajne typy danych  
+ W przypadku zmiennych, które nigdy nie zawierają ułamki typy całkowite danych są bardziej wydajne niż nonintegral typów. W języku Visual Basic `Integer` i `UInteger` są najbardziej efektywny sposób typów liczbowych.  
   
- Liczb ułamkowych `Double` jest najbardziej wydajnym typu danych, ponieważ procesorów na platformach bieżącego wykonywania operacji zmiennoprzecinkowych w podwójnej precyzji. Jednak operacje przy użyciu `Double` nie są tak szybko, jak w przypadku typów całkowitych, takich jak `Integer`.  
+ W przypadku liczb ułamkowych `Double` jest najbardziej efektywny sposób typ danych, ponieważ procesorów na platformach bieżącego wykonywania operacji zmiennoprzecinkowej w podwójnej precyzji. Jednak operacje `Double` nie są tak szybko, podobnie jak w przypadku typów całkowitych, takie jak `Integer`.  
   
 ## <a name="specifying-data-type"></a>Określanie typu danych  
- Użyj [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) Aby zadeklarować zmienną określonego typu. Można jednocześnie określić jego poziom dostępu za pomocą [publicznego](../../../../visual-basic/language-reference/modifiers/public.md), [chronione](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), lub [prywatnej](../../../../visual-basic/language-reference/modifiers/private.md) — słowo kluczowe, jak w Poniższy przykład.  
+ Użyj [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) Aby zadeklarować zmienną określonego typu. Można jednocześnie określić jego poziom dostępu za pomocą [publicznych](../../../../visual-basic/language-reference/modifiers/public.md), [chronione](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), lub [prywatnej](../../../../visual-basic/language-reference/modifiers/private.md) — słowo kluczowe, jak Poniższy przykład.  
   
 ```  
 Private x As Double  
@@ -46,14 +46,14 @@ Protected s As String
 ```  
   
 ## <a name="character-conversion"></a>Konwersja znaków  
- `AscW` i `ChrW` funkcje działają w standardzie Unicode. Powinny być używane w preference do `Asc` i `Chr`, które muszą tłumaczyć do i z Unicode.  
+ `AscW` i `ChrW` funkcje działają w formacie Unicode. Powinny być używane w preference do `Asc` i `Chr`, który musi przetłumaczyć do i z Unicode.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Typy danych liczbowych](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Typy danych liczbowych](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)
+- [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense)

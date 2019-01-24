@@ -2,12 +2,12 @@
 title: Kolekcje schematów OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 1ab6426875b73b400a59b7e4cf155615d7472d05
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658458"
 ---
 # <a name="ole-db-schema-collections"></a>Kolekcje schematów OLE DB
 W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla programu Microsoft SQL Server, Oracle i Microsoft Jet.  
@@ -29,7 +29,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="tables"></a>Tabele  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -43,7 +43,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="columns"></a>Kolumny  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -81,7 +81,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="procedures"></a>Procedury  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
@@ -94,7 +94,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
@@ -116,14 +116,14 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="catalog"></a>Wykaz  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |CATALOG_NAME|String|  
 |OPIS ELEMENTU|String|  
   
 ### <a name="indexes"></a>Indeksy  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -149,7 +149,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |KARDYNALNOŚĆ|Wartość dziesiętna|  
 |STRONY|Int32|  
 |FILTER_CONDITION|String|  
-|ZINTEGROWANE|Boolean|  
+|INTEGRATED|Boolean|  
   
 ## <a name="microsoft-oracle-ole-db-provider"></a>Dostawca programu Microsoft Oracle OLE DB  
  Sterownik firmy Microsoft Oracle OLE DB obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
@@ -170,7 +170,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="tables"></a>Tabele  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -184,7 +184,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="columns"></a>Kolumny  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -217,7 +217,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="procedures"></a>Procedury  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
@@ -230,7 +230,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
@@ -252,7 +252,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="views"></a>Widoki  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -266,7 +266,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="indexes"></a>Indeksy  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -292,9 +292,9 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |KARDYNALNOŚĆ|Wartość dziesiętna|  
 |STRONY|Int32|  
 |FILTER_CONDITION|String|  
-|ZINTEGROWANE|Boolean|  
+|INTEGRATED|Boolean|  
   
-## <a name="microsoft-jet-ole-db-provider"></a>Dostawca programu Microsoft Jet OLE DB  
+## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB Provider  
  Sterownik firmy Microsoft Jet OLE DB obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
   
 -   Tabele  
@@ -309,7 +309,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="tables"></a>Tabele  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -323,7 +323,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="columns"></a>Kolumny  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -356,7 +356,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="procedures"></a>Procedury  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CATALOG|String|  
 |PROCEDURE_SCHEMA|String|  
@@ -369,7 +369,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="views"></a>Widoki  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -383,7 +383,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
   
 ### <a name="indexes"></a>Indeksy  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CATALOG|String|  
 |TABLE_SCHEMA|String|  
@@ -409,7 +409,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |KARDYNALNOŚĆ|Wartość dziesiętna|  
 |STRONY|Int32|  
 |FILTER_CONDITION|String|  
-|ZINTEGROWANE|Boolean|  
+|INTEGRATED|Boolean|  
   
-## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

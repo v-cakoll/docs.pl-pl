@@ -10,45 +10,45 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 5d622c1cff77a45c8de7772af7efbb73586f4400
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a246e2565ec6d96e828654fef74500c4cf896b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627671"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Określa, że klasa może być używana tylko jako klasa bazowa i że nie można utworzyć obiektu bezpośrednio z niej.  
   
 ## <a name="remarks"></a>Uwagi  
- Celem *klasa podstawowa* (znanej także jako *klasy abstrakcyjnej*) jest określenie funkcje, które są wspólne dla wszystkich klas pochodnych. Spowoduje to zapisanie klasy pochodnej z konieczności ponownego zdefiniowania wspólne elementy. W niektórych przypadkach wspólnej nie jest to pełny, aby używać obiektu, a każda klasa pochodna definiuje brakującej funkcjonalności. W takim przypadku ma zostać odbierającą do tworzenia obiektów tylko z klasy pochodnej. Możesz użyć `MustInherit` w klasie podstawowej tego wymusić.  
+ Celem *klasy bazowej* (znany także jako *abstrakcyjna klasa*) polega na zdefiniowaniu funkcji, które są wspólne dla wszystkich klas, które są od niego pochodzi. Spowoduje to zapisanie klasy pochodne od konieczności przedefiniować wspólne elementy. W niektórych przypadkach wspólnej nie jest to kompletny, aby wprowadzić użytecznej obiektu, a każda klasa pochodna definiuje brakującej funkcji. W takim przypadku należy kod konsumencki do tworzenia obiektów tylko z klas pochodnych. Możesz użyć `MustInherit` w klasie bazowej do wyegzekwowania tego.  
   
- Użycie innego `MustInherit` klasy jest ograniczenie zmienną do zestawu powiązanymi klasami. Można zdefiniować klasę podstawową i pochodną te klasy pokrewne. Klasa podstawowa nie trzeba podać żadnej funkcji, które są wspólne dla wszystkich klas pochodnych, ale może służyć jako filtr dla przypisywanie wartości do zmiennych. Jeśli odbierającą kod deklaruje zmienną jako klasę podstawową, Visual Basic umożliwia przypisanie tylko obiekt z jednej z klas pochodnych do tej zmiennej.  
+ Używanie innego `MustInherit` klasy jest ograniczenie zmienną do zestawu powiązanych klas. Można zdefiniować klasę bazową i pochodną te klasy pokrewne. Klasa bazowa trzeba podawać żadnych funkcji, które są wspólne dla wszystkich klas pochodnych, ale może służyć jako filtr do przypisywania wartości do zmiennych. Jeśli Twój kod konsumencki deklaruje zmienną jako klasa bazowa, Visual Basic umożliwia przypisywanie tylko obiekt z jednej z klas pochodnych do tej zmiennej.  
   
- .NET Framework definiuje kilka `MustInherit` klas między nimi <xref:System.Array>, <xref:System.Enum>, i <xref:System.ValueType>. <xref:System.ValueType> jest to przykład klasy podstawowej, która ogranicza zmiennej. Wszystkie typy wartości pochodzi od <xref:System.ValueType>. Deklarowanie zmiennej jako <xref:System.ValueType>, tylko typy wartości można przypisać do tej zmiennej.  
+ .NET Framework definiuje kilka `MustInherit` klas między nimi <xref:System.Array>, <xref:System.Enum>, i <xref:System.ValueType>. <xref:System.ValueType> jest przykładem klasę bazową, która ogranicza zmienną. Wszystkie typy wartości wywodzą się z <xref:System.ValueType>. Jeśli zadeklarujesz zmienną <xref:System.ValueType>, tylko typy wartości można przypisać do zmiennej.  
   
-## <a name="rules"></a>Reguły  
+## <a name="rules"></a>reguły  
   
--   **Kontekst deklaracji.** Można użyć `MustInherit` tylko w `Class` instrukcji.  
+-   **Kontekst deklaracji.** Możesz użyć `MustInherit` tylko w `Class` instrukcji.  
   
--   **Łączna modyfikatorów.** Nie można określić `MustInherit` razem z `NotInheritable` w tej samej deklaracji.  
+-   **Modyfikatory połączone.** Nie można określić `MustInherit` wraz z `NotInheritable` w tej samej deklaracji.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono wymuszone dziedziczenia i zastępowanie wymuszone. Klasa podstawowa `shape` definiuje zmienną `acrossLine`. Klasy `circle` i `square` pochodzi od `shape`. Dziedziczą definicji `acrossLine`, ale zdefiniować funkcję `area` to obliczenie różni się dla każdego rodzaju kształtu.  
+ Poniższy przykład ilustruje wymuszonego dziedziczenia i zastępowania wymuszone. Klasa bazowa `shape` definiuje zmienną `acrossLine`. Klasy `circle` i `square` dziedziczyć `shape`. Dziedziczą definicji `acrossLine`, ale one należy zdefiniować funkcję `area` ponieważ to obliczenie jest inna dla każdego rodzaju kształtu.  
   
  [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/VisualBasic/mustinherit_1.vb)]  
   
- Można zadeklarować `shape1` i `shape2` typu `shape`. Jednak nie można utworzyć obiektu z `shape` ponieważ brakuje w nim funkcje funkcji `area` i jest oznaczony jako `MustInherit`.  
+ Można zadeklarować `shape1` i `shape2` typu `shape`. Jednak nie można utworzyć obiektu z `shape` ponieważ brakuje funkcjonalność funkcji `area` i jest oznaczony jako `MustInherit`.  
   
- Ponieważ zostały zgłoszone jako `shape`, zmienne `shape1` i `shape2` są ograniczone do obiektów z klasy pochodnej `circle` i `square`. Visual Basic nie umożliwiają przypisywanie drugi obiekt do tych zmiennych zapewniający wysokiego poziomu zabezpieczeń.  
+ Ponieważ są one zadeklarowane jako `shape`, zmienne `shape1` i `shape2` są ograniczone do obiektów z klas pochodnych `circle` i `square`. Visual Basic nie umożliwić przypisanie jakiegokolwiek innego obiektu do tych zmiennych, który zapewnia wysoki poziom bezpieczeństwa typu.  
   
 ## <a name="usage"></a>Użycie  
  `MustInherit` Modyfikatora można używać w tym kontekście:  
   
  [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Inherits, instrukcja](../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)  
- [Podstawowe informacje o dziedziczeniu](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a>Zobacz także
+- [Inherits, instrukcja](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
+- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+- [Podstawowe informacje o dziedziczeniu](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

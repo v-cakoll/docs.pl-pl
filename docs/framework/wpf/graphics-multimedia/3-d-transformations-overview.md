@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: d27e1bda296a153343b450c84c65fa35d55d72f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 427840430a37f675ccc0f0ee4f423370f2a55550
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646373"
 ---
 # <a name="3-d-transformations-overview"></a>Przegląd Przekształcenia 3-D
 W tym temacie opisano, jak zastosować przekształcenia w modelach 3-D w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system grafiki. Przekształcenia umożliwiają deweloperom zmienić położenie, rozmiar i zmienić orientację modeli bez wprowadzania zmian w podstawowej wartości, które je zdefiniować.  
@@ -50,7 +50,7 @@ Tłumaczenie z przesunięciem
 ## <a name="scale-transformations"></a>Przekształcenia skalowania  
  <xref:System.Windows.Media.Media3D.ScaleTransform3D> zmiany skali modelu wektor określona skala w odniesieniu do punktu centralnego. Określ jednolitego skalę, co umożliwia skalowanie modelu przez tę samą wartość w osi X, Y i Z, aby zmienić model rozmiar proporcjonalnie. Na przykład ustawienie na przekształcenie <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>, <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>, i <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> właściwości 0,5 połówki rozmiar modelu; ustawienie tymi samymi właściwościami na 2 podwaja się jej skalowanie wszystkich trzech osi.  
   
- ![Jednolity obiekt ScaleTransform3D](../../../../docs/framework/wpf/graphics-multimedia/media/threecubes-uniformscale-1.png "threecubes_uniformscale_1")  
+ ![Uniform ScaleTransform3D](../../../../docs/framework/wpf/graphics-multimedia/media/threecubes-uniformscale-1.png "threecubes_uniformscale_1")  
 Przykład ScaleVector  
   
  Określając przekształcania skalowania obsługuje technologię niejednolitego — przekształcania skali, w których wartości X, Y i Z nie są takie same — może spowodować modelu rozciągnąć lub umowy w co najmniej dwóch wymiarów, bez wywierania wpływu na inne. Na przykład ustawienie <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 1, <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 2, a <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> 1 spowodowałoby przekształcone modelu dwukrotnie wysokości, ale nie ulega zmianie, wzdłuż osi X i Z.  
@@ -105,7 +105,7 @@ Przykład obrotu
   
  Ponieważ aparaty fotograficzne, są również modeli, jest możliwe jest przekształcenie również właściwości kamery.  Natomiast wygląd sceny można zmienić bez obaw dzięki przekształcaniu odległości lokalizacji lub płaszczyzny aparatu — w efekcie Przekształcanie projekcji całej sceny — należy pamiętać, że wiele efekty osiągnięcia w ten sposób może być bezużyteczny tyle "visual" do podglądu jako przekształcenia stosowane do lokalizacji lub pozycji modeli w scenie.  
   
-## <a name="see-also"></a>Zobacz też  
- [Grafika 3D — przegląd](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [Przekształcenia — przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Przykładowe transformacje 2-D](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>Zobacz także
+- [Grafika 3D — przegląd](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [Przekształcenia — przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Przykładowe transformacje 2-D](https://go.microsoft.com/fwlink/?LinkID=158252)

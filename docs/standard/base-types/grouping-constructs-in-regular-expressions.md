@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645902"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżnić podwyrażenia wyrażeń regularnych i przechwytywane podciągi ciągu wejściowego. Można użyć konstrukcji grupowania, wykonaj następujące czynności:  
@@ -37,7 +37,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażeń regularnych i przechw
   
 |Konstrukcja grupująca|Przechwytywania lub niezapamiętywane|  
 |------------------------|-------------------------------|  
-|[Dopasowane podwyrażenia](#matched_subexpression)|Przechwytywanie|  
+|[Matched subexpressions](#matched_subexpression)|Przechwytywanie|  
 |[O nazwie dopasowane podwyrażenia](#named_matched_subexpression)|Przechwytywanie|  
 |[Równoważenie definicji grup](#balancing_group_definition)|Przechwytywanie|  
 |[Grupy niezapamiętywane](#noncapturing_group)|Niezapamiętywane|  
@@ -472,5 +472,5 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażeń regularnych i przechw
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Śledzenie wsteczne](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

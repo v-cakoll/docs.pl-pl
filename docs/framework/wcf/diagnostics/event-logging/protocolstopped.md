@@ -2,23 +2,23 @@
 title: ProtocolStopped
 ms.date: 03/30/2017
 ms.assetid: bc4c892f-b5ed-40cd-979c-382f4bed41b6
-ms.openlocfilehash: b4981325d6c11b79394b27c94322737b587efdd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2df75fbcb5be6a3f1e770ae57b71f8d11ceb4b96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33470614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625591"
 ---
 # <a name="protocolstopped"></a>ProtocolStopped
-Identyfikator: 151  
+Id: 151  
   
- Ważność: błąd  
+ Ważność: Błąd  
   
  Kategoria: TransactionBridge  
   
 ## <a name="description"></a>Opis  
- To zdarzenie oznacza, że Usługa protokołu WS-AT została zatrzymana. Zdarzenia zawiera identyfikator protokołu, nazwy protokołu i nazwy procesu identyfikatora procesu. .  
+ To zdarzenie wskazuje, czy Usługa protokołu WS-Atomic Transaction została zatrzymana. Zdarzenie Wyświetla identyfikator protokołu, nazwy protokołu, nazwy procesu i identyfikatora procesu. .  
   
-## <a name="see-also"></a>Zobacz też  
- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

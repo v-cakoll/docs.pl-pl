@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 0193112812aeccb7365526240b8e81d81abcd8a4
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 83538dc971419ad7918c16c5ccbd2003d16e2c6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627999"
 ---
 # <a name="custom-serialization"></a>Niestandardowej serializacji
 Niestandardowej serializacji to proces sterowania serializacji i deserializacji obiektu określonego typu. Kontrolując serializacji jest możliwe w celu zapewnienia zgodności serializacji, które jest możliwość serializacji i deserializacji pomiędzy wersjami typu bez przerywania podstawowych funkcji typu. Na przykład w pierwszej wersji typu, może istnieć tylko dwa pola. W następnej wersji typu są dodawane kilka więcej pól. Jeszcze drugi wersji aplikacji, musi mieć możliwość serializacji i deserializacji oba typy. W następujących sekcjach opisano kontrola serializacji.
@@ -181,6 +181,6 @@ End Class
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Serializacja binarna](binary-serialization.md)  
-- [Serializacja XML i SOAP](xml-and-soap-serialization.md)  
+- [Serializacja binarna](binary-serialization.md)
+- [Serializacja XML i SOAP](xml-and-soap-serialization.md)
 - [Zabezpieczenia i serializacja](../../../docs/framework/misc/security-and-serialization.md)

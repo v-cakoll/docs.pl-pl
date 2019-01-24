@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wyszukiwanie istniejących plików i katalogów w izolowanym magazynie'
+title: 'Instrukcje: Wyszukiwanie istniejących plików i katalogów w wydzielonej pamięci masowej'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fd5bc2a8db8d98791cdd1a75b007555226c050b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 277f7d562d5e345556a9047f6e4bf2b60eaef462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646714"
 ---
-# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Porady: wyszukiwanie istniejących plików i katalogów w izolowanym magazynie
+# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Instrukcje: Wyszukiwanie istniejących plików i katalogów w wydzielonej pamięci masowej
 
 Aby wyszukać katalogu w wydzielonej pamięci masowej, należy użyć <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> metody. Ta metoda przyjmuje ciąg, który reprezentuje wzorzec wyszukiwania. Można użyć zarówno pojedynczych znaków (?), jak i wielu znaków (\*) znaki symboli wieloznacznych w wzorzec wyszukiwania, ale znaki symboli wieloznacznych, musi znajdować się w końcowej części nazwy. Na przykład `directory1/*ect*` jest prawidłowy ciąg wyszukiwania, ale `*ect*/directory2` nie jest.  
   
@@ -43,5 +43,5 @@ Aby wyszukać katalogu w wydzielonej pamięci masowej, należy użyć <xref:Syst
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)

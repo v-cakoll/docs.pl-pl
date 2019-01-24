@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41679d4041a6a5a7b9b71a451a083c539d6b4c7b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: dd46266286687881956e5de31963ac5957dede84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641580"
 ---
 # <a name="getting-started-with-net-native"></a>Wprowadzenie do architektury .NET Native
 Czy podczas pisania nowych aplikacji Windows dla systemu Windows 10 jest przeprowadzana migracja istniejącej aplikacji Windows Store, możesz wykonać ten sam zestaw procedur. Aby utworzyć [!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacji, wykonaj następujące kroki:  
@@ -26,7 +26,7 @@ Czy podczas pisania nowych aplikacji Windows dla systemu Windows 10 jest przepro
 >  Jeśli migrujesz istniejącą aplikację Windows Store w celu [!INCLUDE[net_native](../../../includes/net-native-md.md)], należy przejrzeć [Migrowanie Your Windows Store aplikacji platformy .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
 <a name="Step1"></a>   
-## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Krok 1: Tworzenie i debugowania testowego kompilacji aplikacji platformy uniwersalnej systemu Windows  
+## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Krok 1. Tworzenie i testowanie kompilacji do debugowania aplikacji platformy uniwersalnej systemu Windows  
  Czy tworzysz nową aplikację lub Migrowanie istniejącą, wykonaj się tego samego procesu jak w przypadku dowolnej aplikacji Windows.  
   
 1.  Utwórz nowy projekt platformy uniwersalnej systemu Windows w programie Visual Studio za pomocą szablonu aplikacji Universal Windows dla języka Visual C# lub Visual Basic. Domyślnie wszystkie aplikacje platformy uniwersalnej systemu Windows docelowe oprogramowania CoreCLR i ich kompilacji wydania są kompilowane przy użyciu platformy .NET Native łańcucha narzędzi.  
@@ -41,7 +41,7 @@ Czy podczas pisania nowych aplikacji Windows dla systemu Windows 10 jest przepro
  Domyślnie jest kompilowany dokładnie na czas umożliwiające szybkie wdrożenie F5, podczas kompilacji wydania są kompilowane przy użyciu kompilacji do debugowania [!INCLUDE[net_native](../../../includes/net-native-md.md)] technologia wstępnej kompilacji. Oznacza to, należy tworzenia i testowania debugowania kompilacji aplikacji w taki sposób, aby upewnić się, że działają normalnie przed skompilowaniem je przy użyciu platformy .NET Native łańcucha narzędzi.  
   
 <a name="Step2"></a>   
-## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Krok 2: Obsługa dodatkowych odbicia i użycia serializacji  
+## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Krok 2. Obsługa dodatkowe użycie odbicia i serializacja  
  Plik dyrektywy środowiska uruchomieniowego, Default.rd.xml, jest automatycznie dodawane do projektu podczas jego tworzenia. W przypadku tworzenia w języku C# zostanie znaleziony w twoim projekcie **właściwości** folderu. W przypadku tworzenia w języku Visual Basic, zostanie znaleziony w twoim projekcie **mój projekt** folderu.  
   
 > [!NOTE]
@@ -71,15 +71,15 @@ Czy podczas pisania nowych aplikacji Windows dla systemu Windows 10 jest przepro
 >  Nazwy typów, używany w plikach dyrektywy środowiska uruchomieniowego musi być w pełni kwalifikowana. Na przykład plik należy określić "System.String" zamiast "String".  
   
 <a name="Step3"></a>   
-## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Krok 3: Wdrażanie i testowanie kompilacji wydania aplikacji  
+## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Krok 3. Wdrażanie i testowanie kompilacji wydania aplikacji  
  Po zaktualizowaniu pliku dyrektyw środowiska uruchomieniowego, można ponownie skompilować i wdrażanie kompilacji wydania aplikacji. .NET native pliki binarne są umieszczane w podkatalogu ILC.out w katalogu wskazanym na **ścieżkę wyjściową kompilacji** pole tekstowe projektu **właściwości** okno dialogowe **skompilować**kartę. Jeszcze nie zostały skompilowane pliki binarne, które nie znajdują się w tym folderze z architekturą .NET Native. Dokładnie przetestuj aplikację i przetestować wszystkie scenariusze, w tym scenariuszy awarii, na każdym z jego platform docelowych.  
   
- Jeśli aplikacja nie działa prawidłowo (zwłaszcza w przypadkach, w którym wyniku weryfikacji zgłasza wyjątek [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) lub [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) wyjątków w czasie wykonywania), postępuj zgodnie z instrukcjami w ciągu następnych sekcja [krok 4: ręcznie rozwiązać Brak metadanych](#Step4). Włączanie wyjątki pierwszej szansy może pomóc w znalezieniu tych błędów.  
+ Jeśli aplikacja nie działa prawidłowo (zwłaszcza w przypadkach, w którym wyniku weryfikacji zgłasza wyjątek [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) lub [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) wyjątków w czasie wykonywania), postępuj zgodnie z instrukcjami w ciągu następnych sekcja [krok 4: Ręczne rozwiązywanie Brak metadanych](#Step4). Włączanie wyjątki pierwszej szansy może pomóc w znalezieniu tych błędów.  
   
  Kiedy został przetestowany i debugować debugowania kompilacji aplikacji i masz pewność, że zostały wyeliminowane [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) i [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) wyjątki, należy przetestować aplikację jako zoptymalizowane [!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacji. Aby to zrobić, należy zmienić konfigurację aktywnego projektu z **debugowania** do **wersji**.  
   
 <a name="Step4"></a>   
-## <a name="step-4-manually-resolve-missing-metadata"></a>Krok 4: Ręcznie rozwiązać Brak metadanych  
+## <a name="step-4-manually-resolve-missing-metadata"></a>Krok 4. Ręczne rozwiązywanie Brak metadanych  
  Najbardziej typowych błędów, którymi spotkasz się za pomocą [!INCLUDE[net_native](../../../includes/net-native-md.md)] nie występują na pulpicie to środowisko uruchomieniowe [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), lub [ MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątku. W niektórych przypadkach braku metadanych można objawiać nieprzewidywalne zachowanie lub nawet w przypadku błędów aplikacji. W tej sekcji omówiono sposób debugowania i rozpoznania tych wyjątków, dodając dyrektywy do pliku dyrektyw środowiska uruchomieniowego. Aby uzyskać informacje o formacie dyrektyw środowiska uruchomieniowego, zobacz [dyrektywy środowiska uruchomieniowego (rd.xml) odwołanie do pliku konfiguracji](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Po dodaniu dyrektywy środowiska uruchomieniowego należy [wdrażania i testowania aplikacji](#Step3) ponownie i rozpoznać żadnej nowe [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), i [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątki, dopóki nie wystąpią żadne wyjątki więcej.  
   
 > [!TIP]
@@ -106,17 +106,17 @@ Czy podczas pisania nowych aplikacji Windows dla systemu Windows 10 jest przepro
   
  Aby uzyskać kilka przykładów Obsługa wyjątków i inne problemy występujące podczas testowania aplikacji Zobacz:  
   
--   [Przykład: Obsługa wyjątków podczas wiązania danych](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Przykład: Obsługa wyjątków podczas powiązywania danych](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
 -   [Przykład: Rozwiązywanie problemów z programowaniem dynamicznym](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [Wyjątki czasu wykonywania w aplikacjach .NET Native](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [NIB: .NET Native instalacji i konfiguracji](https://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)  
- [Architektura .NET Native i kompilacja](../../../docs/framework/net-native/net-native-and-compilation.md)  
- [Odbicie i architektura .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
- [Interfejsy API, które działają na podstawie odbicia](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
- [Serializacja i metadane](../../../docs/framework/net-native/serialization-and-metadata.md)  
- [Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+## <a name="see-also"></a>Zobacz także
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [NIB: .NET Native instalacji i konfiguracji](https://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)
+- [Architektura .NET Native i kompilacja](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Odbicie i architektura .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Interfejsy API, które działają na podstawie odbicia](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
+- [Serializacja i metadane](../../../docs/framework/net-native/serialization-and-metadata.md)
+- [Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

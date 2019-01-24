@@ -1,5 +1,5 @@
 ---
-title: 'Porady: kontrolowanie punktu wstawiania w formancie TextBox formularzy systemu Windows'
+title: 'Instrukcje: Kontrolowanie punktu wstawiania w formancie TextBox formularzy Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: ced563eb063bbcc429cdf1447a0158459e5d5c97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ed49cac8341551dd0900a8468990e314a16e7b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660193"
 ---
-# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Porady: kontrolowanie punktu wstawiania w formancie TextBox formularzy systemu Windows
-Gdy program Windows Forms <xref:System.Windows.Forms.TextBox> formant najpierw uzyskuje fokus, wstawiania domyślną w polu tekstowym znajduje się na lewo od istniejącego tekstu. Użytkownik może przenieść punkt wstawiania z klawiatury lub myszy. Jeśli pole tekstowe utraci i ponownie otrzymuje fokus, punkt wstawiania będzie wszędzie tam, gdzie użytkownika ostatniego umieszczenia go.  
+# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Instrukcje: Kontrolowanie punktu wstawiania w formancie TextBox formularzy Windows
+Gdy formularze Windows <xref:System.Windows.Forms.TextBox> formant najpierw otrzymuje fokus, wstawiania domyślną w polu tekstowym znajduje się po lewej stronie wszelki istniejący tekst. Użytkownik może przenieść punkt wstawiania, za pomocą klawiatury lub myszy. Jeśli pole tekstowe traci, a następnie ponownie otrzymuje fokus, kursor będzie wszędzie tam, gdzie użytkownik ostatniego umieszczenia go.  
   
- W niektórych przypadkach to zachowanie może być niejasna dla użytkownika. W edytorze tekstu aplikacji, użytkownik może spodziewać się nowe znaki są wyświetlane po istniejącego tekstu. W aplikacji zapisu danych użytkownik może spodziewać się nowych znaków, aby zastąpić istniejący wpis. <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> i <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> właściwości umożliwia modyfikowanie zachowania do własnych potrzeb.  
+ W niektórych przypadkach to zachowanie może być niejasna dla użytkownika. W edytorze tekstu aplikacji, użytkownik może oczekiwać nowe znaki pojawi się po wszelki istniejący tekst. W aplikacji zapisu danych użytkownik może się spodziewać nowe znaki zastąpienie dowolnego istniejącego wpisu. <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> i <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> właściwości umożliwia modyfikowanie zachowania do konkretnego celu.  
   
 ### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>Aby kontrolować punktu wstawiania w formancie TextBox  
   
-1.  Ustaw <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> właściwości odpowiednią wartość. Zero umieszcza punkt wstawiania natychmiast po lewej stronie pierwszego znaku.  
+1.  Ustaw <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> właściwość do odpowiedniej wartości. Zero umieszcza punkt wstawiania natychmiast na lewo od pierwszego znaku.  
   
-2.  (Opcjonalnie) Ustaw <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> właściwości długość tekstu, aby wybrać.  
+2.  (Opcjonalnie) Ustaw <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> właściwości do długości tekstu, aby wybrać.  
   
-     Poniższy kod zawsze zwraca punkt wstawiania na 0. `TextBox1_Enter` Obsługi zdarzeń musi być powiązana do formantu, aby uzyskać więcej informacji, zobacz [tworzenie obsługi zdarzeń w formularzach systemu Windows](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md).  
+     Poniższy kod zawsze zwraca punkt wstawiania do 0. `TextBox1_Enter` Programu obsługi zdarzeń musi być powiązana z formantem; Aby uzyskać więcej informacji, zobacz [tworzenie obsługi zdarzeń w formularzach Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md).  
   
     ```vb  
     Private Sub TextBox1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Enter  
@@ -54,19 +54,19 @@ Gdy program Windows Forms <xref:System.Windows.Forms.TextBox> formant najpierw u
        }  
     ```  
   
-## <a name="making-the-insertion-point-visible-by-default"></a>Zapewnienie widoczności domyślnie punkt wstawiania  
- <xref:System.Windows.Forms.TextBox> Jest widoczne domyślnie w nowego formularza tylko wtedy, gdy punkt wstawiania <xref:System.Windows.Forms.TextBox> formant jest pierwszy w kolejności tabulacji. W przeciwnym razie punkt wstawiania jest wyświetlana tylko wtedy, gdy przekażesz <xref:System.Windows.Forms.TextBox> fokus klawiatury lub myszy.  
+## <a name="making-the-insertion-point-visible-by-default"></a>Uwidaczniania domyślnie punkt wstawiania  
+ <xref:System.Windows.Forms.TextBox> Punkt wstawiania znajduje się domyślnie w nowy formularz tylko wtedy, gdy widoczny <xref:System.Windows.Forms.TextBox> formant jest pierwszy w kolejności tabulacji. W przeciwnym razie punkt wstawiania jest wyświetlana tylko wtedy, gdy udzielisz <xref:System.Windows.Forms.TextBox> fokus klawiatury lub myszy.  
   
-#### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>Aby punkt wstawiania pole tekstowe widoczne domyślnie na nowy formularz  
+#### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>Aby uwidocznić punkt wstawiania pole tekstowe domyślnie na nowego formularza  
   
--   Ustaw <xref:System.Windows.Forms.TextBox> formantu <xref:System.Windows.Forms.Control.TabIndex%2A> właściwości `0`.  
+-   Ustaw <xref:System.Windows.Forms.TextBox> kontrolki <xref:System.Windows.Forms.Control.TabIndex%2A> właściwość `0`.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.TextBox>  
- [TextBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [Instrukcje: tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [Instrukcje: tworzenie pola tekstowego tylko do odczytu](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [Instrukcje: umieszczanie cudzysłowu w ciągu](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- [Instrukcje: zaznaczanie tekstu w kontrolce TextBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [Instrukcje: wyświetlanie wielu wierszy w kontrolce TextBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [TextBox, kontrolka](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.TextBox>
+- [TextBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+- [Instrukcje: Tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy Windows](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Instrukcje: Tworzenie pola tekstowego tylko do odczytu](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
+- [Instrukcje: Umieszczanie cudzysłowu w ciągu](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Instrukcje: Zaznaczanie tekstu w formancie TextBox formularzy Windows](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Instrukcje: Wyświetlanie wielu wierszy w formancie TextBox formularzy Windows](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox, kontrolka](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

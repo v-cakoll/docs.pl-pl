@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 86ded7351d435b3a7077f0354d8a923b33a3f2b6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f48f9486c5d29fc0b70e4487a12a1c499235cba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732651"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Tworzenie aplikacji klienckich programu .NET Framework (WCF Data Services — Szybki Start)
 
@@ -23,7 +23,7 @@ To jest ostatnim zadaniem tego przewodnika Szybki Start usług danych WCF. W ram
 
 1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy rozwiązanie, kliknij przycisk **Dodaj**, a następnie kliknij przycisk **nowy projekt**.
 
-2.  W okienku po lewej stronie wybierz **zainstalowane** > [**Visual C#** lub **języka Visual Basic**] > **pulpitu Windows**, a następnie wybierz pozycję **Aplikacja WPF** szablonu.
+2.  W okienku po lewej stronie wybierz **zainstalowane** > [**Visual C#**  lub **języka Visual Basic**] > **pulpitu Windows**, a następnie wybierz pozycję  **Aplikacja WPF** szablonu.
 
 3.  Wprowadź `NorthwindClient` nazwę projektu, a następnie kliknij przycisk **OK**.
 
@@ -86,7 +86,7 @@ Pomyślnie utworzono aplikację kliencką, która uzyskuje dostęp do przykłado
 
 Aby więcej informacji na temat uzyskiwania dostępu do OData Kanał informacyjny z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji, zobacz [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 - [Zasoby](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

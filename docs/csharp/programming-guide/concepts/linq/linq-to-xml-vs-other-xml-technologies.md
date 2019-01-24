@@ -2,19 +2,19 @@
 title: LINQ to XML a. Inne Technologies3 XML
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 2b9ae3a71dab0e9d355cf2d86eebd2763885caaf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8e2a6b11e450890373de449c0a55839460b97566
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648661"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML a. Inne technologie XML
 W tym temacie porównano [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] następujące technologie XML: <xref:System.Xml.XmlReader>, XSLT, MSXML i XmlLite. Te informacje mogą pomóc w podjęciu decyzji technologie stosowaną do.  
   
  Porównanie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do modelu DOM (Document Object), zobacz [LINQ to XML a. MODELU DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
   
-## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML a. Element XmlReader  
+## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML a. XmlReader  
  <xref:System.Xml.XmlReader> jest analizatorem szybkie tylko do przodu, bez buforowania.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest implementowana w górnej części <xref:System.Xml.XmlReader>, i są one ściśle zintegrowane. Jednak możesz również użyć <xref:System.Xml.XmlReader> samodzielnie.  
@@ -52,6 +52,6 @@ W tym temacie porównano [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] n
   
  XmlLite nie jest zintegrowany z [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Nie przekazuje on programistę udoskonalenia dotyczące produktywności, które są motywującego życie za [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 76be426049489bb58e50878822c03fa5cd5cca8e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731529"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Wywoływanie właściwości lub metody za pomocą nazwy ciągu (Visual Basic)
 W większości przypadków dostęp do właściwości i metod obiektu w czasie projektowania i napisać kod, aby je obsłużyć. Jednak w niektórych przypadkach użytkownik może nie wiedzieć o właściwości i metod obiektu z wyprzedzeniem lub po prostu chcesz elastyczność umożliwienie użytkownikowi końcowemu określić właściwości lub wykonywanie metod w czasie wykonywania.  
@@ -27,7 +27,7 @@ W większości przypadków dostęp do właściwości i metod obiektu w czasie pr
   
  `CallByName` Funkcja pozwala użyć ciągu, aby określić właściwości lub metody w czasie wykonywania. Podpis dla `CallByName` funkcja wygląda następująco:  
   
- *Wynik* = `CallByName`(*obiektu*, *Nazwaprocedury*, *CallType*, *argumenty*())  
+ *Result* = `CallByName`(*Object*, *ProcedureName*, *CallType*, *Arguments*())  
   
  Pierwszy argument *obiektu*, przyjmuje nazwę obiektu, które mają być wykonywane działania. *Nazwaprocedury* argument przyjmuje ciąg, który zawiera nazwę metody lub właściwości procedury wywoływanej. *CallType* argument przyjmuje stałą, który reprezentuje typ procedury, aby wywołać: metody (`Microsoft.VisualBasic.CallType.Method`), właściwość Odczyt (`Microsoft.VisualBasic.CallType.Get`), lub zestaw właściwości (`Microsoft.VisualBasic.CallType.Set`). *Argumenty* argumentu, który jest opcjonalny, pobiera tablicę typu `Object` zawierający żadnych argumentów do procedury.  
   
@@ -46,6 +46,6 @@ W większości przypadków dostęp do właściwości i metod obiektu w czasie pr
 > [!NOTE]
 >  Gdy `CallByName` funkcja może być przydatna w niektórych przypadkach, należy porównać jego użyteczność względem wpływ na wydajność — przy użyciu `CallByName` do wywołania procedury jest nieco wolniej niż wywołanie z późnym wiązaniem. Jeśli to wywołanie funkcji, która jest wywoływana wielokrotnie, takie jak wewnątrz pętli, `CallByName` mogą mieć poważny wpływ na wydajność.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>  
- [Określanie typu obiektu](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
+- [Określanie typu obiektu](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)

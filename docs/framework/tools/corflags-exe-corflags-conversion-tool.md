@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21b9881f1275c6a9343421131af478e11b826073
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: ae2efe619d9c6ebcf2c570b5a63d569faf3b3343
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690751"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Narzędzie konwersji CorFlags)
 Narzędzie do konwersji CorFlags pozwala na konfigurowanie sekcji CorFlags w nagłówku przenośnego obrazu wykonywalnego.  
@@ -36,23 +36,23 @@ CorFlags.exe assembly [options]
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/ 32-BITOWE [WYMAGANE] +**|Ustawia flagę 32BITREQUIRED.|  
-|**/ 32-BITOWE [WYMAGANE]-**|Czyści flagę 32BITREQUIRED.|  
+|**/32BIT[REQ]+**|Ustawia flagę 32BITREQUIRED.|  
+|**/32BIT[REQ]-**|Czyści flagę 32BITREQUIRED.|  
 |**/32BITPREF+**|Ustawia flagę 32BITPREFERRED. Aplikacja działa jako proces 32-bitowy nawet na platformach 64-bitowych. Należy ustawić tą flagę tylko dla plików EXE. Jeśli flaga jest ustawiona dla biblioteki dll, nie uda się jej załadować w procesach 64-bitowych i <xref:System.BadImageFormatException> wyjątku. Plik EXE z tą flagą może być załadowany do procesu 64-bitowego.<br /><br /> Nowość w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
 |**/32BITPREF-**|Czyści flagę 32BITPREFERRED.<br /><br /> Nowość w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
-|**/ Force**|Wymusza aktualizację, nawet jeśli jest to zestaw z silną nazwą. **Ważne:**  Jeżeli zestaw o silnej nazwie zostanie zaktualizowany, należy podpisać go ponownie przed wykonaniem jego kodu.|  
+|**/Force**|Wymusza aktualizację, nawet jeśli jest to zestaw z silną nazwą. **Ważne:**  Jeżeli zestaw o silnej nazwie zostanie zaktualizowany, należy podpisać go ponownie przed wykonaniem jego kodu.|  
 |**/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/ILONLY+**|Ustawia flagę ILONLY.|  
 |**/ILONLY-**|Czyści flagę ILONLY.|  
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
-|**/ RevertCLRHeader**|Przywraca wersję nagłówka do CLR 2.0.|  
-|**/ UpgradeCLRHeader**|Uaktualnienia wersję nagłówka CLR do 2.5. **Uwaga:**  Aby zestaw mógł być uruchomiony natywnie, musi mieć wersję nagłówka CLR 2.5 lub wyższą.|  
+|**/RevertCLRHeader**|Przywraca wersję nagłówka do CLR 2.0.|  
+|**/UpgradeCLRHeader**|Uaktualnienia wersję nagłówka CLR do 2.5. **Uwaga:**  Aby zestaw mógł być uruchomiony natywnie, musi mieć wersję nagłówka CLR 2.5 lub wyższą.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli nie określono opcji, narzędzie konwersji CorFlags wyświetla flagi dla określonego zestawu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Narzędzia](../../../docs/framework/tools/index.md)  
- [Aplikacje 64-bitowe](../../../docs/framework/64-bit-apps.md)  
- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Zobacz także
+- [Narzędzia](../../../docs/framework/tools/index.md)
+- [Aplikacje 64-bitowe](../../../docs/framework/64-bit-apps.md)
+- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

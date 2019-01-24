@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: 6d568c1c78677b53f4b79f5aefd3a56d71c2685f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3d59fac08ee59ab5ede943de5109805ff1633d48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623940"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 Kojarzy fabryka użyta do wyprodukowania hosta usługi przy użyciu usługi hostowane i innych aspektów programowania wymagane w celu uzyskania dostępu lub skompilować kod hostingu z pliku .svc.  
@@ -66,5 +66,5 @@ Factory="WebScriptServiceHostFactory"
 %>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Niestandardowy host usługi](../../../../../docs/framework/wcf/samples/custom-service-host.md)
+## <a name="see-also"></a>Zobacz także
+- [Niestandardowy host usługi](../../../../../docs/framework/wcf/samples/custom-service-host.md)

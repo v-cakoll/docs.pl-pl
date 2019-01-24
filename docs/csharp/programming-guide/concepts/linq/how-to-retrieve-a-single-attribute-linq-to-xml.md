@@ -1,15 +1,15 @@
 ---
-title: 'Porady: pobieranie pojedynczego atrybutu (LINQ to XML) (C#)'
+title: 'Instrukcje: Pobieranie pojedynczego atrybutu (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 7e7da2b63b9b46a23fcdbcbea6a0f499de32cf19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2bf42333d7a0b3e34cc0a636b68659b8c45d1d83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738186"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Porady: pobieranie pojedynczego atrybutu (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Instrukcje: Pobieranie pojedynczego atrybutu (LINQ to XML) (C#)
 W tym temacie wyjaśniono, jak pobieranie pojedynczego atrybutu elementu, otrzymuje nazwę atrybutu. Jest to przydatne do pisania wyrażeń zapytań, które chcesz znaleźć element, który ma określony atrybut.  
   
  <xref:System.Xml.Linq.XElement.Attribute%2A> Metody <xref:System.Xml.Linq.XElement> klasy zwraca <xref:System.Xml.Linq.XAttribute> o określonej nazwie.  
@@ -97,6 +97,6 @@ home
 work  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [LINQ do XML osi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

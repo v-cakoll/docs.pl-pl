@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6667812ab7f9acff2a66e458f68d77a0d670bc2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a4f0fd100397fc52ca917c54f0276598d714640
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642847"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps — Metoda
-Modyfikuje określony `AssemblyRef` struktura metadanych.  
+Modyfikuje określonego `AssemblyRef` struktury metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,40 +44,40 @@ HRESULT SetAssemblyRefProps (
   
 #### <a name="parameters"></a>Parametry  
  `ar`  
- [in] Token metadanych, który określa `AssemblyRef` struktura metadanych ma być zmodyfikowana.  
+ [in] Token metadanych, który określa `AssemblyRef` struktury metadanych do zmodyfikowania.  
   
  `pbPublicKeyOrToken`  
  [in] Klucz publiczny wydawcy przywoływanego zestawu.  
   
  `cbPublicKeyOrToken`  
- [in] Wyrażony w bajtach rozmiar `pbPublicKeyOrToken`.  
+ [in] Rozmiar w bajtach `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] Tekst zrozumiałą nazwę zestawu.  
+ [in] Nazwa tekstowych zrozumiałych zestawu.  
   
  `pMetaData`  
- [in] Wskaźnik do wystąpienia assemblymetadata —, który zawiera informacje o wersji platformy i ustawień regionalnych dla zestawu.  
+ [in] Wskaźnik na wystąpienie assemblymetadata —, który zawiera informacje o wersji, platformy i ustawienia regionalne dla zestawu.  
   
  `pbHashValue`  
- [in] Wskaźnik do wyznaczania wartości skrótu skojarzonych z zestawu danych.  
+ [in] Wskaźnik do danych wyznaczania wartości skrótu, skojarzone z zestawem.  
   
  `cbHashValue`  
- [in] Wyrażony w bajtach rozmiar `pbHashValue`.  
+ [in] Rozmiar w bajtach `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] Bitowe połączenie [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) wartości, które określają atrybuty przywoływanego zestawu.  
+ [in] Bitowa kombinacja [assemblyrefflags —](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) wartości, które określają atrybuty przywoływanego zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby utworzyć `AssemblyRef` metadanych struktury, użyj [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) metody.  
+ Aby utworzyć `AssemblyRef` struktury metadanych, użyj [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

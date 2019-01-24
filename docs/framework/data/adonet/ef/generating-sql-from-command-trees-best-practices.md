@@ -1,19 +1,19 @@
 ---
-title: Generowanie SQL na podstawie drzew poleceń — najlepsze praktyki
+title: Generowanie kodu SQL na podstawie drzew poleceń — najlepsze rozwiązania
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 476a2b9d6d3a8efb6094afce0143abed765bdb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659098"
 ---
-# <a name="generating-sql-from-command-trees---best-practices"></a>Generowanie SQL na podstawie drzew poleceń — najlepsze praktyki
-Drzew poleceń w danych wyjściowych zapytania modelu ściśle zapytania można wyrazić w języku SQL. Istnieją pewne wyzwania autorzy dostawcy podczas generowania SQL z poziomu drzewa poleceń danych wyjściowych. W tym temacie omówiono te problemy. W następnym temacie dostawcy przykładowych pokazano, jak rozwiązać te problemy.  
+# <a name="generating-sql-from-command-trees---best-practices"></a>Generowanie kodu SQL na podstawie drzew poleceń — najlepsze rozwiązania
+Drzew poleceń kwerendy danych wyjściowych dokładnie modelowały zapytania można wyrazić w języku SQL. Istnieją pewne typowe wyzwania dla dostawcy modułów zapisujących podczas generowania SQL z poziomu drzewa poleceń w danych wyjściowych. W tym temacie omówiono te wyzwania. W następnym temacie dostawcy przykładowych pokazano, jak te wyzwania.  
   
-## <a name="group-dbexpression-nodes-in-a-sql-select-statement"></a>Węzły DbExpression grup w instrukcji SQL SELECT  
- Typowy instrukcja SQL zawiera zagnieżdżone struktury następujących kształt:  
+## <a name="group-dbexpression-nodes-in-a-sql-select-statement"></a>Grupowanie węzłów DbExpression w instrukcji SQL SELECT  
+ Typowe instrukcji SQL ma zagnieżdżonej struktury kształtu następujące:  
   
 ```  
 SELECT …  
@@ -23,9 +23,9 @@ GROUP BY …
 ORDER BY …  
 ```  
   
- Co najmniej jedną klauzulę może być pusta.  Zagnieżdżona instrukcja SELECT może wystąpić w każdym wierszy.  
+ Jeden lub więcej klauzul, może być pusta.  Użycie zagnieżdżonej instrukcji SELECT może wystąpić w dowolnym wierszu.  
   
- Tłumaczenie możliwe z poziomu drzewa poleceń zapytania na instrukcję SQL SELECT dałby w efekcie podzapytania jednej dla każdego operator relacyjny. Jednak, która może spowodować niepotrzebne zagnieżdżonych podzapytań, które mogą być trudny do odczytania.  Na niektóre sklepy danych zapytania mogą działać nieprawidłowo.  
+ Możliwe tłumaczenie zapytania drzewa poleceń na instrukcję SQL SELECT dałby w efekcie podzapytania jeden dla każdego operator relacyjny. Jednakże, co może spowodować niepotrzebne zagnieżdżonych podzapytań, które byłyby trudne do odczytania.  Na niektóre magazyny danych zapytanie może działać nieprawidłowo.  
   
  Na przykład należy wziąć pod uwagę następujące drzewo poleceń zapytania  
   
@@ -48,11 +48,11 @@ FROM (   SELECT *
          WHERE b.y = 5) as a  
 ```  
   
- Należy pamiętać, że każdy węzeł wyrażenie relacyjne staje się nowych instrukcję SQL SELECT.  
+ Należy pamiętać, że każdy węzeł wyrażenie relacyjne staje się nowych instrukcji SQL SELECT.  
   
- W związku z tym należy do agregacji tyle węzły wyrażenia jak to możliwe w jednej instrukcji SQL SELECT przy zachowaniu poprawności.  
+ W związku z tym należy zagregować dowolną liczbę węzłów wyrażenia jak to możliwe w pojedynczej instrukcji SQL SELECT przy jednoczesnym zachowaniu poprawności.  
   
- Wynikiem tych agregacji, na przykład przedstawionych powyżej byłby:  
+ Będzie wynik takiego agregacji, na przykład przedstawiony powyżej:  
   
 ```  
 SELECT b.x   
@@ -61,9 +61,9 @@ WHERE b.y = 5
 ```  
   
 ## <a name="flatten-joins-in-a-sql-select-statement"></a>Spłaszczanie sprzężenia w instrukcji SQL SELECT  
- Jeden przypadek sumowania wiele węzłów w jednej instrukcji SQL SELECT jest agregowanie wiele wyrażeń sprzężenia w jednej instrukcji SQL SELECT. DbJoinExpression reprezentuje pojedynczy sprzężenie dwóch parametrów wejściowych. Jednak w ramach jednej instrukcji SQL SELECT, można określić więcej niż jedno połączenie. W takim przypadku sprzężeń są wykonywane w określonej kolejności.  
+ Jeden przypadek agregowanie wielu węzłów w pojedynczej instrukcji SQL SELECT jest agregowanie wielu wyrażeniach sprzężenia w pojedynczej instrukcji SQL SELECT. DbJoinExpression reprezentuje pojedynczy łączenia dwóch wartościach wejściowych. Jednak w ramach pojedynczej instrukcji SQL SELECT, można określić więcej niż jedno połączenie. W takim przypadku sprzężeń są wykonywane w określonej kolejności.  
   
- Pozostanie kręgosłupa sprzężenia, (sprzężenia, które są wyświetlane jako element podrzędny lewego sprzężenia innego) może być łatwiej jako spłaszczone do jednej instrukcji SQL SELECT. Rozważmy na przykład drzewo poleceń następujące zapytania:  
+ Pozostanie grzbietu sprzężeń, (sprzężenia, które są wyświetlane jako element podrzędny lewego sprzężenia innego) może być łatwiej jako spłaszczone do pojedynczą instrukcję SQL SELECT. Na przykład należy wziąć pod uwagę następujące drzewo poleceń kwerendy:  
   
 ```  
 InnerJoin(  
@@ -85,7 +85,7 @@ LEFT OUTER JOIN TableB as c ON b.y = c.x
 INNER JOIN TableC as d ON b.y = d.z  
 ```  
   
- Nie można łatwo spłaszczenia sprzężenia kręgosłupa lewego górnego i nie należy próbować spłaszczanie je. Na przykład sprzężenia w następującym zapytaniu polecenie drzewa:  
+ Jednak sprzężeń grzbietu — po lewej stronie nie można łatwo spłaszczone i nie należy próbować spłaszczanie ich. Na przykład sprzężeń w następującym zapytaniu polecenie drzewa:  
   
 ```  
 InnerJoin(  
@@ -98,7 +98,7 @@ InnerJoin(
 )  
 ```  
   
- Może być przekonwertowana na instrukcję SQL SELECT z podzapytania.  
+ Może zostać przetłumaczone na instrukcję SQL SELECT podzapytaniu.  
   
 ```  
 SELECT *  
@@ -111,32 +111,32 @@ ON b.y = d.z
 ```  
   
 ## <a name="input-alias-redirecting"></a>Wprowadź Alias przekierowania folderu  
- Wyjaśnienie, przekierowywanie alias wejściowy, należy wziąć pod uwagę struktury relacyjne wyrażeń, takie jak DbFilterExpression DbProjectExpression, obiekt DbCrossJoinExpression, DbJoinExpression, DbSortExpression, DbGroupByExpression, metody DbApplyExpression, i DbSkipExpression.  
+ Aby wyjaśnić, przekierowywanie alias danych wejściowych, należy wziąć pod uwagę Struktura wyrażeń relacyjnych, takich jak DbFilterExpression DbProjectExpression, obiekt DbCrossJoinExpression, DbJoinExpression, DbSortExpression, DbGroupByExpression, metody DbApplyExpression, i DbSkipExpression.  
   
- Każdego z tych typów ma co najmniej jednej właściwości danych wejściowych, opisujących kolekcja wejściowa i zmiennej powiązanie odpowiadający każdej danych wejściowych jest używana do reprezentowania każdy element dane wejściowe podczas przechodzenia kolekcji. Zmienna powiązania jest używany podczas odwoływania się do elementu wejściowego, na przykład w przypadku właściwości predykatu DbFilterExpression lub właściwości projekcji DbProjectExpression.  
+ Każdy z tych typów ma jedną lub więcej właściwości danych wejściowych, które opisują kolekcję danych wejściowych, a zmienna powiązania odpowiadający każdej danych wejściowych jest używana do reprezentowania każdy element te dane wejściowe podczas przechodzenia kolekcji. Zmienna powiązania jest używana przy odwoływaniu się do elementu danych wejściowych, na przykład w predykacie własności DbFilterExpression lub właściwości projekcji DbProjectExpression.  
   
- Gdy może agregowanie wyrażenie relacyjne większą liczbę węzłów w jednej instrukcji SQL SELECT, a obliczenia wyrażenia będącej częścią wyrażenie relacyjne (na przykład część właściwości projekcji DbProjectExpression) używa zmiennej powiązania nie być taka sama jak alias danych wejściowych, wiele powiązań wyrażenie musi być przekierowywane na jednym zakresie.  Ten problem jest nazywany, zmiana nazwy aliasu.  
+ Podczas agregowania więcej węzłów wyrażenie relacyjne w pojedynczej instrukcji SQL SELECT i ocenianie wyrażenia, który jest częścią wyrażenie relacyjne (na przykład część właściwości projekcji DbProjectExpression) Zmienna powiązania, która używa może nie być taka sama jak alias danych wejściowych, jak wiele powiązań wyrażenie musi zostać przekierowany do jednego zakresu.  Ten problem jest wywoływana, zmiana nazwy aliasu.  
   
- Rozważmy przykład pierwszy w tym temacie. Jeśli podczas tłumaczenia prosty i tłumaczenia projekcji "a.x" (DbPropertyExpression (, x)), są prawidłowe do tłumaczenia go do `a.x` ponieważ mamy alias wejściowy jako "a" na zgodne powiązanie zmiennej.  Jednak podczas agregowania obu węzłów w jednej instrukcji SQL SELECT, potrzebne jest tłumaczenie tego samego DbPropertyExpression do `b.x`, jak dane wejściowe były używane z aliasem na "b".  
+ Należy wziąć pod uwagę pierwszego przykładu w tym temacie. Jeśli podczas tłumaczenia naiwni i tłumaczenie projekcji "a.x" (DbPropertyExpression (, x)), jest poprawna do tłumaczenia go do `a.x` dysponujemy alias danych wejściowych jako "a", aby dopasować zmienna powiązania.  Jednak podczas agregowania obu węzłów w pojedynczej instrukcji SQL SELECT, potrzebne jest tłumaczenie tych samych DbPropertyExpression do `b.x`, jak dane wejściowe były aliasem znakiem "b".  
   
-## <a name="join-alias-flattening"></a>Dołącz spłaszczanie aliasu  
- W odróżnieniu od żadnych innych wyrażenie relacyjne w danych wyjściowych polecenia drzewa DbJoinExpression generuje typ wyniku, który wiersz składający się z dwóch kolumn, z których każdy odpowiada jednej z jej danych wejściowych. DbPropertyExpresssion korzysta z wbudowanej dostępu do właściwości skalarnej pochodzące z sprzężenia, jest za pośrednictwem innego DbPropertyExpresssion.  
+## <a name="join-alias-flattening"></a>Dołącz do spłaszczanie aliasu  
+ W odróżnieniu od wszelkich innych wyrażenie relacyjne w danych wyjściowych polecenia drzewa DbJoinExpression danych wyjściowych typu wyniku, który jest wiersz składający się z dwóch kolumn, z których każdy odpowiada jednej z danych wejściowych. DbPropertyExpresssion został opracowany pod kątem dostępu do właściwości skalarne pochodzące z sprzężenia, jest za pośrednictwem innego DbPropertyExpresssion.  
   
- Przykładami "a.b.y" w przykładzie 2 i "b.c.y" w przykładzie 3. Jednak w odpowiedniej instrukcji SQL te są określane jako "b.y". Aliasów ponowna nosi nazwę spłaszczanie alias sprzężenia.  
+ Przykłady obejmują "a.b.y" w przykładzie 2 i "b.c.y" w przykładzie 3. Jednak w odpowiedniej instrukcji SQL są one określane jako "b.y". Aliasów re nosi nazwę spłaszczanie alias sprzężenia.  
   
-## <a name="column-name-and-extent-alias-renaming"></a>Nazwa kolumny i zakres Alias zmiana nazwy  
- Jeśli kwerendę SQL SELECT z sprzężenia ma zostać wykonane z projekcji, podczas wyliczania wszystkich uczestniczących kolumn danych wejściowych, kolizję nazw mogą wystąpić, jako więcej niż jedno wejście mogą mieć takiej samej nazwie kolumny. Użyj innej nazwy dla kolumny, która umożliwi uniknięcie kolizji.  
+## <a name="column-name-and-extent-alias-renaming"></a>Nazwa kolumny i zakresu, Alias zmiana nazwy  
+ Jeśli kwerendę SQL SELECT z sprzężenia ma zostać wykonane z projekcją, podczas wyliczania wszystkich kolumn uczestniczących w programie z wprowadzonymi danymi, może wystąpić kolizja nazwy, jako więcej niż jeden zestaw danych wejściowych może mieć taką samą nazwę kolumny. Użyj innej nazwy dla kolumny, aby uniknąć kolizji.  
   
- Ponadto podczas spłaszczania sprzężenia, tabele (ani podzapytań) może być kolizji aliasy, w którym przypadek te muszą zostać zmienione.  
+ Ponadto podczas spłaszczanie sprzężeń, tabele (ani podzapytań) może być kolizji aliasy, w którym zamierzone, Zapisz te potrzeby można zmienić jego nazwy.  
   
-## <a name="avoid-select-"></a>Unikaj SELECT *  
- Nie używaj `SELECT *` można wybierać z tabel podstawowych. W modelu magazynu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji może zawierać tylko podzestaw kolumn, które znajdują się w tabeli bazy danych. W takim przypadku `SELECT *` może powodować niepoprawne wyniki. Zamiast tego należy określić wszystkich uczestniczących kolumn za pomocą nazwy kolumn typu wyniku uczestniczących wyrażeń.  
+## <a name="avoid-select-"></a>Należy unikać SELECT *  
+ Nie używaj `SELECT *` dokonania wyboru z tabel podstawowych. Model magazynu w [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji mogą zawierać tylko podzbiór kolumn, które znajdują się w tabeli bazy danych. W tym przypadku `SELECT *` może wygenerować niepoprawny wynik. Zamiast tego należy określić wszystkich kolumn uczestniczących w programie przy użyciu nazwy kolumn z typu wyniku wyrażenia uczestniczących w programie.  
   
-## <a name="reuse-of-expressions"></a>Ponowne użycie wyrażenia  
- Wyrażenia może nastąpić w drzewie poleceń zapytania przekazany przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Nie należy zakładać, każde wyrażenie jest wyświetlany w drzewie poleceń zapytania tylko raz.  
+## <a name="reuse-of-expressions"></a>Ponowne użycie wyrażeń  
+ Wyrażenia może zostać ponownie użyte w drzewo poleceń zapytania, które są przekazywane przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Nie należy zakładać, każde wyrażenie jest wyświetlany w drzewie polecenia kwerendy tylko raz.  
   
-## <a name="mapping-primitive-types"></a>Typy pierwotne mapowania  
- Podczas mapowania koncepcyjnej typów (EDM) do dostawcy typów tak, aby dopasować wszystkich możliwych wartości powinny mapy typowi najszerszych (Int32). Ponadto uniknąć mapowania typów, których nie można używać w wielu operacjach, takich jak typy obiektów BLOB (na przykład `ntext` w programie SQL Server).  
+## <a name="mapping-primitive-types"></a>Mapowanie typów pierwotnych  
+ Podczas mapowania koncepcyjny typów (EDM struktury) do dostawcy typów, powinny być mapowane do najszerszego typu (Int32) tak, aby dopasować wszystkich możliwych wartości. Ponadto należy unikać mapowanie dla typów, których nie można używać w wielu operacjach, takich jak typy obiektów BLOB (na przykład `ntext` w programie SQL Server).  
   
-## <a name="see-also"></a>Zobacz też  
- [Generowanie kodu SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Zobacz także
+- [Generowanie kodu SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

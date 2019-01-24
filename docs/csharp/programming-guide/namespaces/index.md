@@ -1,17 +1,11 @@
 ---
-title: Przestrzenie nazw — C# przewodnik programowania
+title: 'Przestrzenie nazw — C# przewodnik programowania'
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-- C# language, namespaces
-- namespaces [C#]
+  - 'C# language, namespaces'
+  - 'namespaces [C#]'
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 4abdf8a0008ce50a89eb5f3ad3512a9579dc832a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236755"
 ---
 # <a name="namespaces-c-programming-guide"></a>Przestrzenie nazw (Przewodnik programowania w języku C#)
 
@@ -46,14 +40,14 @@ Przestrzenie nazw mają następujące właściwości:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Używanie przestrzeni nazw](using-namespaces.md)
 - [Instrukcje: Użycie globalnych aliasów Namespace](how-to-use-the-global-namespace-alias.md)
 - [Instrukcje: Użyj mojej Namespace](how-to-use-the-my-namespace.md)
-- [Przewodnik programowania w języku C#](../index.md)  
+- [Przewodnik programowania w języku C#](../index.md)
 - [Nazwy identyfikatorów](../inside-a-program/identifier-names.md)
-- [Słowa kluczowe przestrzeni nazw](../../language-reference/keywords/namespace-keywords.md)  
-- [using, dyrektywa](../../language-reference/keywords/using-directive.md)  
-- [:: operator](../../language-reference/operators/namespace-alias-qualifer.md)  
+- [Słowa kluczowe przestrzeni nazw](../../language-reference/keywords/namespace-keywords.md)
+- [using, dyrektywa](../../language-reference/keywords/using-directive.md)
+- [:: operator](../../language-reference/operators/namespace-alias-qualifer.md)
 - [. operator](../../language-reference/operators/member-access-operator.md)

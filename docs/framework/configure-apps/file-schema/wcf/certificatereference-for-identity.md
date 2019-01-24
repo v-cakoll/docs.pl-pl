@@ -2,18 +2,18 @@
 title: '&lt;certificateReference&gt; w &lt;identity&gt;'
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 17c64150edd7cb1763387323f8683ed68d064fb0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ff831cebc78113e1808f9fe3911717f19127c4f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626631"
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;certificateReference&gt; w &lt;identity&gt;
 Określa ustawienia dla walidacji certyfikatu X.509. Bezpieczne klienta Windows Communication Foundation (WCF), który nawiązuje połączenie z punktem końcowym o tej tożsamości weryfikuje czy wnioski przedstawione przez serwer zawierają roszczenia tożsamość użyta do skonstruowania tej tożsamości.  
   
- \<tożsamość >  
-\<certificateReference >  
+ \<identity>  
+\<certificateReference>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,8 +48,8 @@ Określa ustawienia dla walidacji certyfikatu X.509. Bezpieczne klienta Windows 
 |-------------|-----------------|  
 |[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa ustawienia, które umożliwiają uwierzytelnianie punktu końcowego przez inne punkty końcowe, wymiana wiadomości z nim.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.CertificateReferenceElement>  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.CertificateReferenceElement>
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>

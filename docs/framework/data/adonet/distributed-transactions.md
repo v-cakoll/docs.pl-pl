@@ -2,12 +2,12 @@
 title: Transakcje rozproszone
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 002ed52b0f760376e813b15d0344a349da669f4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660336"
 ---
 # <a name="distributed-transactions"></a>Transakcje rozproszone
 Transakcja jest zestaw powiązanych zadań, który zakończy się powodzeniem (zatwierdzenie) albo kończy się niepowodzeniem (przerwanie) jako jednostki, między innymi. A *transakcja rozproszona* jest transakcji, która ma wpływ na kilka zasobów. Dla rozproszonych można zatwierdzić transakcji wszyscy uczestnicy należy zagwarantować, że wszelkie zmiany danych będą trwałe. Zmiany muszą zostać zachowane niezależnie awarie systemu lub inne nieprzewidziane zdarzenia. Jeśli pojedynczego uczestnika nie powiedzie się gwarancji, cała transakcja nie powiedzie się, a wszelkie zmiany danych w zakresie transakcji zostaną przywrócone.  
@@ -47,7 +47,7 @@ Transakcja jest zestaw powiązanych zadań, który zakończy się powodzeniem (z
 ## <a name="configuring-distributed-transactions"></a>Konfigurowanie transakcje rozproszone  
  Może być konieczne Włączanie MS DTC za pośrednictwem sieci, aby można było używać transakcji rozproszonych. Jeśli masz Windows włączona zapora, musisz zezwolić na usługę MS DTC, aby używała sieci ani nie otwieraj portu MS DTC.  
   
-## <a name="see-also"></a>Zobacz też  
- [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Integracja System.Transactions z programem SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Integracja System.Transactions z programem SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

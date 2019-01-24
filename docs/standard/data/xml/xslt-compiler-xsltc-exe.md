@@ -1,18 +1,18 @@
 ---
-title: Kompilator XSLT (xsltc.exe)
+title: XSLT Compiler (xsltc.exe)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 321afe8904ff683ce9807ba9912bf3a38ecd73bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650512"
 ---
-# <a name="xslt-compiler-xsltcexe"></a>Kompilator XSLT (xsltc.exe)
+# <a name="xslt-compiler-xsltcexe"></a>XSLT Compiler (xsltc.exe)
 Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestaw. Arkusz stylów skompilowanego można następnie przekazać bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody. Nie można wygenerować zestawy podpisane za pomocą xsltc.exe.  
   
  Narzędzie xsltc.exe jest dołączony do Visual Studio. Aby uzyskać więcej informacji, zobacz [pobieranie Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).  
@@ -34,7 +34,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |Opcja|Opis|  
 |------------|-----------------|  
 |`/c[lass]:``name`|Określa nazwę klasy następujące arkusza stylów. Nazwa klasy może być w pełni kwalifikowana.<br /><br /> Nazwa klasy jest wartością domyślną nazwę arkusza stylów. Na przykład jeśli customers.xsl arkusza stylów jest kompilowany, domyślną nazwę klasy jest klientów.|  
-|`/debug[`+&#124;-`]`|Określa, czy informacje debugowania będą generowane.<br /><br /> Określanie `+` lub `/debug`, powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku bazy danych (PDB) programu. Nazwę wygenerowanego pliku PDB jest `assemblyName`.pdb.<br /><br /> Określanie `-`, ponieważ jest aktywna, jeśli nie określisz `/debug`, powoduje, że żadne informacje debugowania do utworzenia. Zestaw danych sprzedaży detalicznej jest generowany. **Uwaga:** kompilowanie w trybie debugowania może wpłynąć na wydajność XSLT w znacznym stopniu.|  
+|`/debug[`+&#124;-`]`|Określa, czy informacje debugowania będą generowane.<br /><br /> Określanie `+` lub `/debug`, powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku bazy danych (PDB) programu. Nazwę wygenerowanego pliku PDB jest `assemblyName`.pdb.<br /><br /> Określanie `-`, ponieważ jest aktywna, jeśli nie określisz `/debug`, powoduje, że żadne informacje debugowania do utworzenia. Zestaw danych sprzedaży detalicznej jest generowany. **Uwaga:**  Kompilowanie w trybie debugowania mogą wpływać na wydajność XSLT znacznie.|  
 |`/help`|Wyświetla składnię polecenia i opcje narzędzia.|  
 |`/nologo`|Pomija komunikat o prawach autorskich kompilatora były wyświetlane.|  
 |`/platform:``string`|Określa platform, które zestawu mogą być uruchamiane na. Poniżej opisano platformy prawidłowe wartości:<br /><br /> `x86` kompiluje zestaw do uruchomienia w 32-bitowy, x86 zgodne środowisko uruchomieniowe języka wspólnego<br /><br /> `x64` kompiluje zestaw do uruchomienia na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T przez 64-bitowe środowisko uruchomieniowe języka wspólnego.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] kompiluje zestaw do uruchomienia w 64-bitowe środowisko uruchomieniowe języka wspólnego na komputerze, który ma [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] procesora.<br /><br /> `anycpu` Kompiluje zestaw można uruchomić na dowolnej platformie. Domyślnie włączone.|  
@@ -84,6 +84,6 @@ xsltc booksort.xsl output.xsl
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
-- [Instrukcje: Wykonywanie przekształcenia XSLT przy użyciu zestawu](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- [Instrukcje: Wykonywanie przekształcenia XSLT przy użyciu zestawu](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
 - [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

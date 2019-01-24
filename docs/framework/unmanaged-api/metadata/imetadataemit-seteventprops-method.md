@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 42dc78ff3c58b67801cd99512781d8c8509dd272
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab479aab56b429c104a44b1fae192bc7f20a389d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656924"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps — Metoda
-Ustawia lub aktualizuje określoną funkcję wynika z wcześniejszym wywołaniu zdarzenia [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Ustawia lub aktualizuje określoną funkcję zdarzenie zdefiniowane przez wcześniejsze wywołanie [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,32 +46,32 @@ HRESULT SetEventProps (
  [in] Token zdarzeń.  
   
  `dwEventFlags`  
- [in] Flagi zdarzeń. To jest maską bitów z `CorEventAttr` wartości.  
+ [in] Flagi zdarzenia. Jest to z `CorEventAttr` wartości.  
   
  `tkEventType`  
  [in] Token dla klasy zdarzeń. Jest to `mdTypeDef` lub `mdTypeRef` tokenu.  
   
  `mdAddOn`  
- [in] Metoda użyta do subskrybowania zdarzenia lub wartość null.  
+ [in] Metoda używana do subskrybowania zdarzenia lub wartość null.  
   
  `mdRemoveOn`  
- [in] Metoda używana do anulowania subskrypcji zdarzeń lub wartość null.  
+ [in] Metoda użyta Aby anulować subskrypcję zdarzenia lub wartość null.  
   
  `mdFire`  
- [in] Metoda używana (przez klasę pochodną), aby wywołać zdarzenie.  
+ [in] Metoda używana (przez klasę pochodną), aby zgłosić zdarzenie.  
   
  `rmdOtherMethods[]`  
- [in] Tablica dla innych metod, skojarzone ze zdarzeniem. Musi być ostatnim elementem tablicy `mdMethodDefNil`.  
+ [in] Tablica do innych metod, skojarzone ze zdarzeniem. Ostatni element tablicy muszą być `mdMethodDefNil`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

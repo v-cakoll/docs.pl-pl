@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: d52c6bfdadf0a53ac4c5f62c37f1056c6702a82c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 99f6e9e265071c2e7e3c79cf158ab5051eb78f04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620269"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statystyki dostawcy dla programu SQL Server
 Począwszy od programu .NET Framework w wersji 2.0, .NET Framework Data Provider for SQL Server obsługuje statystyki czasu wykonywania. Należy włączyć statystyki, ustawiając <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> właściwość <xref:System.Data.SqlClient.SqlConnection> obiekt `True` po poprawnego obiektu połączenia utworzone. Po statystyki są włączone, można przejrzeć je jako "migawki w czasie" pobierając <xref:System.Collections.IDictionary> odwoływać się za pośrednictwem <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> metody <xref:System.Data.SqlClient.SqlConnection> obiektu. Wyliczanie za pośrednictwem listy jako zbiór wpisy słownika par nazwa/wartość. Tych par nazwa/wartość są nieuporządkowane. W dowolnym momencie możesz wywołać <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> metody <xref:System.Data.SqlClient.SqlConnection> obiekt, aby zresetować liczniki. Jeśli zbieranie wartości licznika statystyka nie została włączona, wyjątek nie zostanie wygenerowany. Ponadto jeśli <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> jest wywoływana bez <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> o najpierw wywołuje, są wartościami pobranymi początkowe wartości dla każdego wpisu. Jeśli włączysz statystyki, uruchomienie aplikacji przez jakiś czas i następnie wyłącz statystyki, wartościami pobranymi będą odzwierciedlać wartości, które są zbierane aż do momentu, gdy statystyki zostały wyłączone. Wszystkie wartości statystyczne zebrane znajdują się na poszczególnych połączeń.  
@@ -31,7 +31,7 @@ Począwszy od programu .NET Framework w wersji 2.0, .NET Framework Data Provider
 |`BytesSent`|Zwraca liczbę bajtów danych wysyłanych do serwera SQL w pakietach TDS po aplikacja została uruchomiona przy użyciu dostawcy i włączył statystyk.|  
 |`ConnectionTime`|Ilość czasu (w milisekundach), że połączenie zostało otwarte po włączeniu statystyki (całkowity czas połączenia, jeśli statystyki zostały włączone przed otwarciem połączenie).|  
 |`CursorOpens`|Zwraca liczbę przypadków, gdy kursor był otwarty za pośrednictwem połączenia w przypadku, gdy aplikacja została uruchomiona przy użyciu dostawcy i włączył statystyk.<br /><br /> Pamiętaj, że tylko/do przodu — tylko do odczytu wyników zwróconych przez instrukcji "SELECT" nie są uważane za kursorów, a zatem nie wpływają na wartość tego licznika.|  
-|`ExecutionTime`|Zwraca wartość łącznego czasu (w milisekundach), czy dostawca jest poświęcony na przetwarzanie po włączeniu statystyki, w tym czas oczekiwania na odpowiedzi z serwera, a także czas poświęcony na wykonywanie kodu w samej dostawcy.<br /><br /> Klasy, które zawierają kod chronometrażu są:<br /><br /> Element SqlConnection<br /><br /> Klasy SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> Aby zachować wydajność krytycznych członków tak małej, jak to możliwe, następujące elementy członkowskie są nie upłynął limit czasu:<br /><br /> SqlDataReader<br /><br /> Ten operator [] (wszystkie przeciążenia)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> Getguid —<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> Getname —<br /><br /> Getordinal —<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString —<br /><br /> IsDBNull|  
+|`ExecutionTime`|Zwraca wartość łącznego czasu (w milisekundach), czy dostawca jest poświęcony na przetwarzanie po włączeniu statystyki, w tym czas oczekiwania na odpowiedzi z serwera, a także czas poświęcony na wykonywanie kodu w samej dostawcy.<br /><br /> Klasy, które zawierają kod chronometrażu są:<br /><br /> SqlConnection<br /><br /> Klasy SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> Aby zachować wydajność krytycznych członków tak małej, jak to możliwe, następujące elementy członkowskie są nie upłynął limit czasu:<br /><br /> SqlDataReader<br /><br /> Ten operator [] (wszystkie przeciążenia)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> Getordinal —<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString —<br /><br /> IsDBNull|  
 |`IduCount`|Zwraca sumę instrukcje INSERT, usuwania i aktualizacji, które są wykonywane za pośrednictwem połączenia, gdy aplikacja została uruchomiona przy użyciu dostawcy i włączył statystyk.|  
 |`IduRows`|Zwraca łączną liczbę wierszy, o których wpływ instrukcje INSERT, usuwania i aktualizacji, które są wykonywane za pośrednictwem połączenia, gdy aplikacja została uruchomiona przy użyciu dostawcy i włączył statystyk.|  
 |`NetworkServerTime`|Zwraca łącznego czasu (w milisekundach), dostawca poświęcony oczekiwania na odpowiedzi z serwera, gdy aplikacja została uruchomiona przy użyciu dostawcy i włączył statystyki.|  
@@ -338,6 +338,6 @@ namespace CS_Stats_Console_GetAll
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

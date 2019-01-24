@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0898936665b3b337f2fd4e4d53bcc9f6071469b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d570f9392bbd66f0d9031c776b139ee3b30541b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698222"
 ---
 # <a name="corfield-structure"></a>COR_FIELD — Struktura
-Zawiera informacje dotyczące pola w obiekcie.  
+Zawiera informacje dotyczące pól w obiekcie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,15 +41,15 @@ typedef struct COR_FIELD{
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`token`|`mdFieldDef` Token, który może służyć do pobrania informacji z pola.|  
-|`offset`|Przesunięcie w bajtach, aby dane pola w obiekcie.|  
-|`id`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) wartość, która identyfikuje typu tego pola.|  
-|`fieldType`|Wartość wyliczenia CorElementType, który wskazuje typ pola.|  
+|`token`|`mdFieldDef` Token, którego można uzyskać informacji o polu.|  
+|`offset`|Przesunięcie w bajtach, do pola danych w obiekcie.|  
+|`id`|A [cor_typeid —](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) wartość, która identyfikuje typ tego pola.|  
+|`fieldType`|Corelementtype — wartość wyliczenia, który wskazuje typ pola.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -57,6 +57,6 @@ typedef struct COR_FIELD{
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

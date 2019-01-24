@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728371"
 ---
 # <a name="white-space-processing-in-xaml"></a>Znak odstępu przetwarzanie w XAML
 Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementacji procesora. W tym temacie opisano te reguły języka XAML. Również dokumenty obsługi dodatkowe biały znak, który jest definiowany przez [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementacji procesora XAML i zapisywania XAML do serializacji.  
@@ -53,7 +53,7 @@ Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone
 ## <a name="preserving-white-space"></a>Zachowywanie białych  
  Istnieje kilka technik w celu zachowania biały znak w źródle [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dla ostatecznej prezentacji, która nie ma wpływu [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] normalizacji biały znak — procesor.  
   
- **XML: Space = "preserve"**: atrybut na poziomie elementu, gdzie jest pożądane zachowania miejsca biały. Ta zachowuje wszystkie białe miejsca, która zawiera spacje, które mogłyby zostać dodane przez edytowanie kodu aplikacji "pretty print" wyrównywania elementów jako wizualnie intuicyjne zagnieżdżania. Jednak tego, czy renderowanie te miejsca do magazynowania jest określany przez model zawartości elementu zawierającego. Unikaj określania `xml:space="preserve"` na poziomie głównym ponieważ większość obiektów modeli nie bierze pod uwagę białe miejsca tak duże, niezależnie od tego, jak ustawić atrybutu. Ustawienie `xml:space` globalnie może mieć konsekwencje wydajności na XAML w niektórych implementacjach na przetworzenie (zwłaszcza serializacji). Lepiej jest tylko ustawić atrybutu specjalnie na poziomie elementów, które renderowania biały znak wewnątrz ciągów lub są kolekcjami znaczące odstępu.  
+ **xml:space="preserve"**: Określ ten atrybut na poziomie elementu, gdzie jest pożądane zachowania miejsca biały. Ta zachowuje wszystkie białe miejsca, która zawiera spacje, które mogłyby zostać dodane przez edytowanie kodu aplikacji "pretty print" wyrównywania elementów jako wizualnie intuicyjne zagnieżdżania. Jednak tego, czy renderowanie te miejsca do magazynowania jest określany przez model zawartości elementu zawierającego. Unikaj określania `xml:space="preserve"` na poziomie głównym ponieważ większość obiektów modeli nie bierze pod uwagę białe miejsca tak duże, niezależnie od tego, jak ustawić atrybutu. Ustawienie `xml:space` globalnie może mieć konsekwencje wydajności na XAML w niektórych implementacjach na przetworzenie (zwłaszcza serializacji). Lepiej jest tylko ustawić atrybutu specjalnie na poziomie elementów, które renderowania biały znak wewnątrz ciągów lub są kolekcjami znaczące odstępu.  
   
  **Jednostki i miejsca do magazynowania bez podziału**: [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] obsługuje umieszczanie dowolne [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] jednostki w modelu obiektu tekstu. Można użyć dedykowanej jednostki, takie jak spacja nierozdzielająca (&\#160; przy użyciu kodowania UTF-8). Można również użyć formantów tekstu sformatowanego, które obsługują znaki spacji nierozdzielających. Należy zachować ostrożność, jeśli używasz jednostek do symulacji layout charakterystyki, takie jak wcięcia, ponieważ dane wyjściowe w czasie wykonywania, które jednostek będzie zależeć od większa liczba czynników nie będzie możliwości przedstawiania wyników wcięcia w typowej system układu, takich jak polecenia paneli i marginesów. Na przykład, jednostki są mapowane na czcionek i rozmiar w odpowiedzi na wybór czcionki użytkownika można zmienić.  
   
@@ -74,7 +74,7 @@ Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone
   
  Ponadto niektóre elementy wbudowane, które oznacza rzeczywistej linebreak w modelu dokument przepływu celowo nie powinna wprowadzać dodatkowe miejsce, nawet w przypadku kolekcji znaczące odstępu. Na przykład <xref:System.Windows.Documents.LineBreak> element ma tę samą funkcję co \<BR / > tag w [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]i aby zwiększyć czytelność w znaczniku, zwykle <xref:System.Windows.Documents.LineBreak> jest oddzielona od tekstu kolejnych utworzone wysuwu wiersza. Tego wysuwu wiersza nie powinny być znormalizowane do stają się spację, kolejny wiersz. Aby włączyć to zachowanie w definicji klasy dla <xref:System.Windows.Documents.LineBreak> dotyczy elementu <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, który następnie jest interpretowany przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] procesora oznacza ten biały znak otaczającego <xref:System.Windows.Documents.LineBreak> zawsze są spacje.  
   
-## <a name="see-also"></a>Zobacz także  
- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Jednostki znaków XML i XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [XML: Space — Obsługa w XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Jednostki znaków XML i XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+- [XML: Space — Obsługa w XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a79133b117f3a718dd84af6c2144a6098bc79f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ef46c066512caac93f5f0cb189152d2cac6dada
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633872"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase — Metoda
 Pobiera adres podstawowy pamięci określonego obrazu.  
@@ -41,13 +41,13 @@ HRESULT GetImageBase (
  [in] Nazwa pliku obrazu, wraz ze ścieżką.  
   
  `baseAddress`  
- [out] Wskaźnik do CLRDATA_ADDRESS, która przechowuje adres podstawowy obraz.  
+ [out] Wskaźnik do CLRDATA_ADDRESS, która przechowuje adres podstawowy obrazu.  
   
 ## <a name="remarks"></a>Uwagi  
- Nazwa pliku obrazu może lub nie ma ścieżki. Jeśli ścieżka jest określona, dopasowywanie odbywa się na całej ścieżce; w przeciwnym razie dopasowania odbywa się tylko na nazwę pliku.  
+ Nazwa pliku obrazu może lub nie może być ścieżką. Jeśli ścieżka jest określona, dopasowanie jest wykonywane na całej ścieżce; w przeciwnym razie dopasowanie jest wykonywane tylko na nazwę pliku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData.idl, ClrData.h  
   
@@ -55,5 +55,5 @@ HRESULT GetImageBase (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

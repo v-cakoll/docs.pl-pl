@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: b85fb6ebf56b110330be121c87d2492b0cfac536
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b4edc1bbf1448fc86df76ed9f790a924a563647b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43804072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700315"
 ---
 # <a name="copying-dataset-contents"></a>Kopiowanie zawartości elementu DataSet
 Można utworzyć kopię <xref:System.Data.DataSet> tak, aby pracować z danymi bez wywierania wpływu na oryginalnych danych lub pracy przy użyciu podzestawu danych z **zestawu danych**. Podczas kopiowania **DataSet**, możesz:  
@@ -94,8 +94,8 @@ foreach (DataRow copyRow in copyRows)
   customerTable.ImportRow(copyRow);  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataTable>  
- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataTable>
+- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

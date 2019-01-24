@@ -1,5 +1,5 @@
 ---
-title: 'Porady: definiowanie zachowania dotyczącego zmieniania rozmiaru i pozycjonowania w podzielonym oknie'
+title: 'Instrukcje: Definiowanie zmieniania rozmiaru i pozycjonowania zachowania w podzielonym oknie'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 015e93fb551b8d48b8a57662b8def61c3cb46c2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0e16a1961e5eb7fcb81503d0ccead38e08974dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628256"
 ---
-# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Porady: definiowanie zachowania dotyczącego zmieniania rozmiaru i pozycjonowania w podzielonym oknie
-Panele <xref:System.Windows.Forms.SplitContainer> kontroli redagowanie również są zmiany rozmiaru i manipulowanie przez użytkowników. Jednak zostanie wystąpić sytuacje, kiedy można programowo zarządzać rozdzielacza, gdzie jest umieszczony i w jakim stopniu można go przenieść.  
+# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Instrukcje: Definiowanie zmieniania rozmiaru i pozycjonowania zachowania w podzielonym oknie
+Panele <xref:System.Windows.Forms.SplitContainer> kontroli nadają się również do bycia ze zmienionym rozmiarem i przetwarzany przez użytkowników. Jednak będzie konieczny będzie Aby programistycznie sterować rozdzielacza — gdzie jest umieszczony i w jakim stopniu można go przenieść.  
   
- <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Właściwości i innych właściwości w <xref:System.Windows.Forms.SplitContainer> kontroli zapewniają precyzyjną kontrolę zachowania interfejsu użytkownika w zależności od potrzeb. W poniższej tabeli przedstawiono te właściwości.  
+ <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Właściwości i inne właściwości na <xref:System.Windows.Forms.SplitContainer> kontroli zapewniają ścisłą kontrolę nad zachowaniem interfejsu użytkownika do własnych potrzeb. Te właściwości są wymienione w poniższej tabeli.  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> Właściwość|Określa, czy rozdzielacz jest ruchomy za pomocą klawiatury lub myszy.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> Właściwość|Określa odległość w pikselach pasek podziału ruchomy od lewej lub górnej krawędzi.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Właściwość|Określa minimalny odstęp w pikselach, że rozdzielacza mogą być przenoszone przez użytkownika.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> Właściwość|Określa, czy rozdzielacza ruchome za pomocą klawiatury lub myszy.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> Właściwość|Określa odległość w pikselach pasek podziału ruchome z lewej lub górnej krawędzi.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Właściwość|Określa minimalną odległość w pikselach, że rozdzielacza mogą być przenoszone przez użytkownika.|  
   
- W poniższym przykładzie modyfikuje <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> właściwości do utworzenia efektu "przyciąganie podziału"; gdy użytkownik przeciąga rozdzielacza, zwiększa narastająco w jednostkach 10 pikseli zamiast domyślnego 1.  
+ Poniższy przykład modyfikuje <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> właściwości do utworzenia efektu "przyciągania rozdzielacz"; gdy użytkownik przeciąga rozdzielacz, zwiększa się w jednostkach 10 pikseli, a nie wartość domyślna: 1.  
   
-### <a name="to-define-splitcontainer-resize-behavior"></a>Aby określić zachowanie podczas zmiany rozmiaru SplitContainer  
+### <a name="to-define-splitcontainer-resize-behavior"></a>Aby zdefiniować zachowanie przy zmianie rozmiaru SplitContainer  
   
-1.  W procedurze, ustaw <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> właściwości do żądanego rozmiaru, dzięki czemu zostaje przywrócony zachowanie "przyciąganie" rozdzielacza.  
+1.  W procedurze, należy ustawić <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> właściwość żądany rozmiar, dzięki czemu uzyskuje się zachowanie "przyciąganie" rozdzielacza.  
   
-     W poniższym przykładzie kodu, w ramach formularza <xref:System.Windows.Forms.Form.Load> zdarzenie, podziału w <xref:System.Windows.Forms.SplitContainer> kontrola została ustawiona na przejście 10 pikseli podczas przeciągania.  
+     W poniższym przykładzie kodu w formularzu <xref:System.Windows.Forms.Form.Load> zdarzenie, podziału w ramach <xref:System.Windows.Forms.SplitContainer> kontrolki jest ustawiona na szybkie 10 pikseli po przeciągnięciu.  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, _  
@@ -61,8 +61,8 @@ Panele <xref:System.Windows.Forms.SplitContainer> kontroli redagowanie również
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
-     Przenoszenie rozdzielacza nieco do lewej lub prawej nie wpłyną zauważalny; Gdy wskaźnik myszy przechodzi 10 pikseli, rozdzielacza spowoduje przyciąganie do nowej pozycji.  
+     Przenoszenie rozdzielacza nieco do lewej lub prawej odniesie żadnego skutku zauważalny; Gdy wskaźnik myszy przechodzi 10 pikseli w dowolnym kierunku, rozdzielacza będą przyciągane do nowej pozycji.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.SplitContainer>  
- <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.SplitContainer>
+- <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>

@@ -1,5 +1,5 @@
 ---
-title: My.Computer.FileSystem — obiekt (Visual Basic)
+title: My.Computer.FileSystem Object (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - FileSystem module
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 515c12a87ddab6c616f98325624e7fd31ea926d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642925"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem — Obiekt
 Udostępnia właściwości i metody do pracy z stacje, plików i katalogów.  
@@ -37,6 +37,6 @@ Udostępnia właściwości i metody do pracy z stacje, plików i katalogów.
   
  **Zestaw:** Visual Basic Runtime Library (w pliku Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Zobacz też  
- [My.Computer.FileSystem.SpecialDirectories, obiekt](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
- [My.Computer, obiekt](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>Zobacz także
+- [My.Computer.FileSystem.SpecialDirectories, obiekt](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)
+- [My.Computer, obiekt](../../../visual-basic/language-reference/objects/my-computer-object.md)

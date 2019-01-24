@@ -2,12 +2,12 @@
 title: Omówienie ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714389"
 ---
 # <a name="adonet-overview"></a>Omówienie ADO.NET
 ADO.NET zapewnia spójny dostęp do źródeł danych, takie jak SQL Server i XML i źródła danych dostępne za pośrednictwem OLE DB i ODBC. Udostępnianie danych aplikacje komercyjne umożliwia ADO.NET nawiązać połączenie z tymi źródłami danych i pobierania, obsługiwać i zaktualizować dane, które zawierają.  
@@ -20,7 +20,7 @@ ADO.NET zapewnia spójny dostęp do źródeł danych, takie jak SQL Server i XML
   
  ADO.NET zapewnia najbardziej bezpośrednią metodę dostępu do danych w ramach programu .NET Framework. Na wyższym poziomie abstrakcji, który umożliwia aplikacjom pracować z modelu koncepcyjnego zamiast odpowiedni model magazynu, zobacz [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
- **Privacy Statement**: The System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll, and System.Data.DataSetExtensions.dll assemblies do not distinguish between a user's private data and non-private data.  Te zestawy nie zbierania, przechowywania lub transportu danych prywatnych dowolnego użytkownika. Jednak aplikacje innych firm mogą zbierać, przechowywania lub transportu przez użytkownika dane prywatne przy użyciu tych zestawów.  
+ **Zasady zachowania poufności informacji**: Zestawy System.Data.dll, System.Data.Design.dll i System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll oraz System.Data.DataSetExtensions.dll nie dokonuje rozróżnienia między użytkownika -prywatne dane i dane prywatne.  Te zestawy nie zbierania, przechowywania lub transportu danych prywatnych dowolnego użytkownika. Jednak aplikacje innych firm mogą zbierać, przechowywania lub transportu przez użytkownika dane prywatne przy użyciu tych zestawów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Architektura ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -57,7 +57,7 @@ ADO.NET zapewnia spójny dostęp do źródeł danych, takie jak SQL Server i XML
  [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  W tym artykule opisano, jak połączyć się ze źródłem danych, pobieranie danych i modyfikować dane. Obejmuje to `DataReaders` i `DataAdapters`.  
   
-## <a name="see-also"></a>Zobacz też  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [Uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

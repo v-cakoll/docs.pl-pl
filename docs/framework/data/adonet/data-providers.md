@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: af7b444a391de56f516d84620b4dbd2eba3497fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d96be73fc63856e317b129c1fdd8c381c9df6c07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627268"
 ---
 # <a name="net-framework-data-providers"></a>Dostawcy danych .NET framework
 A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawca danych służy do nawiązywania połączenia z bazą danych, wykonując polecenia i pobierania wyników. Te wyniki są albo przetwarzane bezpośrednio, umieszczone w <xref:System.Data.DataSet> celu uwidocznienie użytkownika zgodnie z potrzebami, połączone z danymi z wielu źródeł lub węzłach między warstwami. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych są uproszczone, tworzenie minimalnej warstwy między źródłem danych i kodu, zwiększenie wydajności bez poświęcania funkcjonalności.  
@@ -54,7 +54,7 @@ A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawca danyc
 > [!NOTE]
 >  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC ma podobną architekturę do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB; na przykład, wywołania do składnika usługi ODBC.  
   
- ![Dostawcy danych](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
+ ![Data providers](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 Porównanie dla programu .NET Framework Data Provider for SQL Server i .NET Framework Data Provider for OLE DB  
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Dostawca danych dla klas SQL Server znajdują się w <xref:System.Data.SqlClient> przestrzeni nazw.  
@@ -76,7 +76,7 @@ using System.Data.SqlClient;
   
  W poniższej tabeli przedstawiono dostawców, które zostały przetestowane z [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
-|Sterownik|Dostawcy|  
+|Sterownik|Dostawca|  
 |------------|--------------|  
 |SQLOLEDB|Dostawca Microsoft OLE DB dla programu SQL Server|  
 |MSDAORA|Dostawca Microsoft OLE DB dla Oracle|  
@@ -147,7 +147,7 @@ using System.Data.OracleClient;
 ## <a name="choosing-a-net-framework-data-provider"></a>Wybieranie dostawcy danych .NET Framework  
  W zależności od projektu i źródła danych dla aplikacji, wybranych przez siebie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych może zwiększyć wydajność, możliwości i integralność aplikacji. Poniższa tabela w tym artykule omówiono zalety i ograniczenia dotyczące każdego [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych.  
   
-|Dostawcy|Uwagi|  
+|Dostawca|Uwagi|  
 |--------------|-----------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Dostawca danych programu SQL Server|Zalecane w przypadku aplikacji warstwy środkowej, które używają programu Microsoft SQL Server.<br /><br /> Zalecane w przypadku aplikacji jednowarstwowej, które używają Microsoft Database Engine (MSDE) lub SQL Server.<br /><br /> Zalecane przez użycie dostawcy OLE DB dla programu SQL Server (SQLOLEDB) przy użyciu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB|Dla programu SQL Server [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server, zaleca się zamiast tego dostawcy.<br /><br /> Zalecane w przypadku aplikacji jednowarstwowej, które używają bazy danych Microsoft Access. Nie zaleca się korzystanie z bazy danych programu Access dla aplikacji warstwy środkowej.|  
@@ -157,7 +157,7 @@ using System.Data.OracleClient;
 ## <a name="entityclient-provider"></a>Dostawca EntityClient  
  Dostawca EntityClient jest używany do uzyskiwania dostępu do danych opartych na Entity Data Model (EDM). W przeciwieństwie do innych dostawcy danych .NET Framework nie współdziała bezpośrednio ze źródłem danych. Zamiast tego używa jednostki SQL do komunikowania się z podstawowym dostawcą danych. Aby uzyskać więcej informacji, zobacz [EntityClient i jednostki SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

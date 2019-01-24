@@ -2,12 +2,12 @@
 title: Omówienie rozszerzonej ochrony uwierzytelniania
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 6063aa7093ed6c70e835364fdf5dd1c4293dd2eb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5eb9e07bfd80e325a5223e6a7c6108134c4a3faa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647824"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Omówienie rozszerzonej ochrony uwierzytelniania
 Rozszerzona ochrona uwierzytelniania pomaga w ochronie przed ataków typu man-in--middle (MITM) ataków, w których osoba atakująca przechwytuje poświadczenia klienta i przekazuje je do serwera.  
@@ -26,11 +26,11 @@ Rozszerzona ochrona uwierzytelniania pomaga w ochronie przed ataków typu man-in
   
 -   Brak. Odbywa się nie sprawdzenia poprawności powiązania kanału. Jest to zachowanie w procentach wszystkich serwerów, które nie zostały zaktualizowane.  
   
--   Częściowe. Wszyscy klienci, które zostały zaktualizowane, musisz podać informacje o powiązaniu kanału do serwera. Klienci, którzy nie zostały zaktualizowane nie trzeba to zrobić. Jest to opcja pośredniego, umożliwiający zgodności aplikacji.  
+-   Partial. Wszyscy klienci, które zostały zaktualizowane, musisz podać informacje o powiązaniu kanału do serwera. Klienci, którzy nie zostały zaktualizowane nie trzeba to zrobić. Jest to opcja pośredniego, umożliwiający zgodności aplikacji.  
   
 -   Pełna. Wszyscy klienci, musisz podać informacje o powiązaniu do kanału. Serwer odrzuca żądania uwierzytelniania od klientów, które to robi.  
   
  Aby uzyskać więcej informacji zobacz przykład Win7 CBT/rozszerzonej ochrony.  
   
-## <a name="see-also"></a>Zobacz też  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

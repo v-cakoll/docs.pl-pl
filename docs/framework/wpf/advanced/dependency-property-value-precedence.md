@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 25dfe63a65c3044837beb26ec6c4eaa772c1df1b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ad5bd74388ab1d4a20e496271fd992b1562587d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711278"
 ---
 # <a name="dependency-property-value-precedence"></a>Następstwo zależności wartości właściwości
 <a name="introduction"></a> W tym temacie opisano sposób pracy z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system właściwości mogą mieć wpływ na wartość właściwości zależności i opisuje pierwszeństwa, które cechy właściwości systemu zastosowania do skutecznego wartości właściwości.  
@@ -126,9 +126,9 @@ ms.locfileid: "46696802"
 ## <a name="clearvalue-and-value-precedence"></a>Pierwszeństwo wartość i ClearValue  
  <xref:System.Windows.DependencyObject.ClearValue%2A> Metoda zapewnia wskazane oznacza, że wyczyszczenie wszelkich lokalnie stosowane wartości z właściwości zależności, który jest ustawiony na element. Jednak podczas wywoływania <xref:System.Windows.DependencyObject.ClearValue%2A> nie jest gwarancją to nową, efektywną wartość domyślną występującej w metadanych w trakcie rejestracji właściwości. Wszystkie innych uczestników pierwszeństwo wartości są nadal aktywne. Tylko lokalnie ustawiony wartość została usunięta z sekwencji pierwszeństwo. Na przykład, jeśli wywołasz <xref:System.Windows.DependencyObject.ClearValue%2A> we właściwości, w których ta właściwość jest również ustawiona przez style motyw, a następnie wartość motyw jest stosowany jako nową wartość, a nie domyślnej na podstawie metadanych. Jeśli chcesz podjęcia wszyscy uczestnicy wartość właściwości poza procesem, a następnie ustaw wartość domyślną zarejestrowanych metadanych można uzyskać, wartość domyślna ostatecznie Sondując metadane zależności właściwości, a następnie użyć wartość domyślną, aby lokalnie Ustaw właściwość z wywołaniem <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.DependencyObject>  
- <xref:System.Windows.DependencyProperty>  
- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Wywołania zwrotne i weryfikacja właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.DependencyObject>
+- <xref:System.Windows.DependencyProperty>
+- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Wywołania zwrotne i weryfikacja właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)

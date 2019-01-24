@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13498c58c7625edfa4954b8da8837f1bd60c976d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b5800890a5dfaef40225616f1d661a8e37ed4d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661103"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID — Metoda
-Konwertuje wartość ICorDebugType identyfikator typu.  
+Konwertuje wartość będącą liczbą ICorDebugType identyfikator typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,13 +41,13 @@ HRESULT GetTypeForTypeID(
  [in] Identyfikator typu.  
   
  `ppType`  
- [out] Wskaźnik do obiektu ICorDebugType adres.  
+ [out] Wskaźnik na adres obiektu ICorDebugType.  
   
 ## <a name="remarks"></a>Uwagi  
- W niektórych przypadkach metody, które zwracają identyfikatora typu może zwrócić wartość null `COR_TYPEID` wartość. Jeśli ta wartość jest przekazywany jako `id` argumentu, `GetTypeForTypeID` — metoda spowoduje niepowodzenie i zwracać `E_FAIL`.  
+ W niektórych przypadkach, metody, które zwracają identyfikatora typu może zwracać wartość null `COR_TYPEID` wartość. Jeśli ta wartość jest przekazywana jako `id` argument `GetTypeForTypeID` metody będą się niepowodzeniem i zwróci `E_FAIL`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -55,6 +55,6 @@ HRESULT GetTypeForTypeID(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugProcess5, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugProcess5, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

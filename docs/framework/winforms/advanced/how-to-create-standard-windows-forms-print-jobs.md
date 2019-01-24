@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie standardowych zadań drukowania formularzy systemu Windows'
+title: 'Instrukcje: Tworzenie zadań drukowania formularzy Windows Standard'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: b580268a6af3f56f240a1c511c3d473a4a5ddc15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18078c5e6bf518487707a8dc5639b3d6aa8a5783
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723345"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Porady: tworzenie standardowych zadań drukowania formularzy systemu Windows
-Podstawę drukowanie w formularzach systemu Windows jest <xref:System.Drawing.Printing.PrintDocument> składnik — w szczególności <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń. Pisanie kodu do obsługi <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń, można określić wydruku i jak go wydrukować.  
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Instrukcje: Tworzenie zadań drukowania formularzy Windows Standard
+Jest podstawą drukowanie w formularzach Windows Forms <xref:System.Drawing.Printing.PrintDocument> składnika — w szczególności <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń. Pisanie kodu do obsługi <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzenia, można określić wydruku i jak go wydrukować.  
   
 ### <a name="to-create-a-print-job"></a>Aby utworzyć zadanie drukowania  
   
 1.  Dodaj <xref:System.Drawing.Printing.PrintDocument> składnika do formularza.  
   
-2.  Napisać kod obsługujący <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń.  
+2.  Napisz kod obsługujący <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń.  
   
-     Konieczne będzie kodu logiki drukowania. Ponadto należy określić materiały do drukowania.  
+     Trzeba będzie drukowania logikę kodu. Ponadto należy określić materiału, który ma zostać wydrukowany.  
   
-     W poniższym przykładzie kodu, przykładowe grafiki w kształcie czerwonym prostokątem jest tworzony w <xref:System.Drawing.Printing.PrintDocument.PrintPage> obsługi zdarzeń do działania jako materiały do drukowania.  
+     W poniższym przykładzie kodu przykładowej grafiki w kształcie prostokąta czerwony jest tworzony w <xref:System.Drawing.Printing.PrintDocument.PrintPage> programu obsługi zdarzeń do działania jako materiałów, które ma zostać wydrukowany.  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -55,7 +55,7 @@ Podstawę drukowanie w formularzach systemu Windows jest <xref:System.Drawing.Pr
        }  
     ```  
   
-     (Visual C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieścić następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Visual C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -69,13 +69,13 @@ Podstawę drukowanie w formularzach systemu Windows jest <xref:System.Drawing.Pr
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-     Można również napisać kod dla <xref:System.Drawing.Printing.PrintDocument.BeginPrint> i <xref:System.Drawing.Printing.PrintDocument.EndPrint> zdarzeń może obejmować całkowitą reprezentującą łączną liczbą stron do drukowania, który jest zmniejszana, jak drukuje każdej strony.  
+     Możesz również chcieć napisać kod dla <xref:System.Drawing.Printing.PrintDocument.BeginPrint> i <xref:System.Drawing.Printing.PrintDocument.EndPrint> zdarzenia, w tym może być liczbą całkowitą reprezentującą łączna liczba stron do wydrukowania wraz z przydzielaniem zgodnie z każdej strony wyświetli.  
   
     > [!NOTE]
-    >  Możesz dodać <xref:System.Windows.Forms.PrintDialog> składnika do formularza zapewnia interfejs czyste i wydajne użytkownika (UI) dla użytkowników. Ustawienie <xref:System.Windows.Forms.PrintDialog.Document%2A> właściwość <xref:System.Windows.Forms.PrintDialog> umożliwia składnika można ustawić właściwości powiązanych z print dokumentu pracuje w formularzu. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.PrintDialog> składników, zobacz [składnika PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md).  
+    >  Możesz dodać <xref:System.Windows.Forms.PrintDialog> składnika do formularza umożliwiającego użytkownikom udostępniać interfejs czyste i wydajne użytkownika (UI). Ustawienie <xref:System.Windows.Forms.PrintDialog.Document%2A> właściwość <xref:System.Windows.Forms.PrintDialog> składnika umożliwia ustawienie właściwości powiązanych z print dokumentu pracujesz w formularzu. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.PrintDialog> składników, zobacz [składnika PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md).  
   
-     Aby uzyskać więcej informacji o specyfice formularzy systemu Windows zadania drukowania, łącznie ze sposobem tworzenia zadania drukowania programowo, zobacz <xref:System.Drawing.Printing.PrintPageEventArgs>.  
+     Aby uzyskać więcej informacji o specyfice formularzy Windows Forms zadania drukowania, w tym jak utworzyć zadanie drukowania programowo, zobacz <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Drawing.Printing.PrintDocument>  
- [Obsługa drukowania w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Drawing.Printing.PrintDocument>
+- [Obsługa drukowania w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

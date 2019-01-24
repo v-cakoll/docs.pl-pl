@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: KrzysztofCwalina
-ms.openlocfilehash: 4ff79af968c8a0a360cade687b8c60cdd71de192
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fcf566c24677630fdbb1fcd0eb7628f830b3be2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702941"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstrakcje (typy abstrakcyjne i interfejsy)
 Abstrakcja to typ, który zawiera opis kontraktu, ale nie zapewnia pełnej implementacji kontraktu. Abstrakcje są zwykle implementowane jako abstrakcyjnych klas lub interfejsów, a pochodzą one z dobrze zdefiniowanego zestawu dokumentacji opisujące wymagany semantykę typów Implementowanie kontraktu. Najważniejsze elementy abstrakcji w programie .NET Framework między innymi <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, i <xref:System.Object>.  
@@ -39,5 +39,5 @@ Abstrakcja to typ, który zawiera opis kontraktu, ale nie zapewnia pełnej imple
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
 - [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

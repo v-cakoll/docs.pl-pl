@@ -1,5 +1,5 @@
 ---
-title: 'Porady: usuwanie lub ukrywanie kolumn w formancie DataGrid formularzy systemu Windows'
+title: 'Instrukcje: Usuń lub ukrywanie kolumn w kontrolce DataGrid formularzy Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: 6541ffff1149e5df13c43ee392ffa8b221c8407d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 635fbc112a241c4c8b17d2b49c22042c6bd59a21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653947"
 ---
-# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Porady: usuwanie lub ukrywanie kolumn w formancie DataGrid formularzy systemu Windows
+# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Instrukcje: Usuń lub ukrywanie kolumn w kontrolce DataGrid formularzy Windows Forms
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcje do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> formantu są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Można programistycznie usunąć lub ukrywanie kolumn w formularzach systemu Windows <xref:System.Windows.Forms.DataGrid> formantu przy użyciu właściwości i metod <xref:System.Windows.Forms.GridColumnStylesCollection> i <xref:System.Windows.Forms.DataGridColumnStyle> obiektów (które są członkami <xref:System.Windows.Forms.DataGridTableStyle> klasy).  
+ Możesz programowo Usuń lub ukrywanie kolumn w formularzach Windows Forms <xref:System.Windows.Forms.DataGrid> kontroli przy użyciu właściwości i metod <xref:System.Windows.Forms.GridColumnStylesCollection> i <xref:System.Windows.Forms.DataGridColumnStyle> obiektów (które są członkami <xref:System.Windows.Forms.DataGridTableStyle> klasy).  
   
- Usunięto lub ukrytych kolumn nadal istnieć w źródle danych, jest powiązany z siatki i nadal można uzyskać programistycznie. Nie są one tylko widoczne w elemencie datagrid.  
+ Usunięto lub ukrytych kolumn nadal istnieją w źródle danych, jest powiązany z siatki i nadal można uzyskać programistycznie. Oni po prostu nie są już widoczne w elemencie datagrid.  
   
 > [!NOTE]
->  Jeśli aplikacja nie dostępu do niektórych kolumn danych, a nie chcesz, aby były wyświetlane w elemencie datagrid, następnie prawdopodobnie nie jest konieczne do uwzględnienia w źródle danych, w pierwszej kolejności.  
+>  Jeśli aplikacja nie uzyskuje dostępu do niektórych kolumn danych, a nie chcesz, aby były wyświetlane w elemencie datagrid, następnie prawdopodobnie nie jest to konieczne uwzględnić je w pierwszej kolejności w źródle danych.  
   
-### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>Aby usunąć kolumnę z elementu DataGrid programowo  
+### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>Aby programowo usunąć kolumnę z elementu DataGrid  
   
-1.  W obszarze deklaracje w formularzu zadeklarować nowe wystąpienie klasy <xref:System.Windows.Forms.DataGridTableStyle> klasy.  
+1.  W obszarze deklaracje w formularzu, należy zadeklarować nowe wystąpienie klasy <xref:System.Windows.Forms.DataGridTableStyle> klasy.  
   
-2.  Ustaw <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> właściwości do tabeli w źródle danych, który chcesz zastosować styl. W poniższym przykładzie użyto <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> właściwość, która przyjęto założenie, że jest już ustawiony.  
+2.  Ustaw <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> właściwości do tabeli w źródle danych, którą chcesz zastosować styl. W poniższym przykładzie użyto <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> właściwość, która zakłada, że jest już ustawiona.  
   
-3.  Dodaj nowe <xref:System.Windows.Forms.DataGridTableStyle> obiekt Kolekcja stylów tabeli w elemencie datagrid.  
+3.  Dodaj nowy <xref:System.Windows.Forms.DataGridTableStyle> obiektu do kolekcji style tabeli w elemencie datagrid.  
   
-4.  Wywołanie <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> metody <xref:System.Windows.Forms.DataGrid>w <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> zbierania, określając indeks kolumny kolumny do usunięcia.  
+4.  Wywołaj <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> metody <xref:System.Windows.Forms.DataGrid>firmy <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> zbierania, określając indeks kolumny kolumny do usunięcia.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -77,15 +77,15 @@ ms.locfileid: "33534557"
     }  
     ```  
   
-### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>Aby programowo ukrywanie kolumn w elemencie DataGrid  
+### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>Aby ukryć kolumnę w elemencie DataGrid programowe  
   
-1.  W obszarze deklaracje w formularzu zadeklarować nowe wystąpienie klasy <xref:System.Windows.Forms.DataGridTableStyle> klasy.  
+1.  W obszarze deklaracje w formularzu, należy zadeklarować nowe wystąpienie klasy <xref:System.Windows.Forms.DataGridTableStyle> klasy.  
   
-2.  Ustaw <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle> do tabeli w źródle danych, który chcesz zastosować styl. Poniższy przykład kodu wykorzystuje <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> właściwość, która przyjęto założenie, że jest już ustawiony.  
+2.  Ustaw <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle> do tabeli w źródle danych, którą chcesz zastosować styl. Poniższy przykład kodu wykorzystuje <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> właściwość, która zakłada, że jest już ustawiona.  
   
-3.  Dodaj nowe <xref:System.Windows.Forms.DataGridTableStyle> obiekt Kolekcja stylów tabeli w elemencie datagrid.  
+3.  Dodaj nowy <xref:System.Windows.Forms.DataGridTableStyle> obiektu do kolekcji style tabeli w elemencie datagrid.  
   
-4.  Ukryj kolumnę przez ustawienie jej `Width` właściwości na wartość 0, określając indeks kolumny kolumny, aby ukryć.  
+4.  Ukryj kolumnę, ustawiając jego `Width` właściwości na wartość 0, określając indeks kolumny, aby ukryć kolumny.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -124,6 +124,6 @@ ms.locfileid: "33534557"
     }  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: zmienianie wyświetlanych danych w czasie wykonywania w kontrolce DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)  
- [Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Zmienianie wyświetlanych danych w czasie wykonywania w kontrolce DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Instrukcje: Dodawanie tabel i kolumn do kontrolki DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

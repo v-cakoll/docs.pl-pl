@@ -7,41 +7,41 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: 1cc2ccef09dd027c6f1e82f60ed4ac5f50db6ebe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c34108b9eb53da77a48afb5d270dce9a32289c99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731117"
 ---
 # <a name="extension-methods-visual-basic"></a>Metody rozszerzeń (Visual Basic)
-Metody rozszerzenia umożliwiają deweloperom dodania funkcji niestandardowych do typów danych, które zostały już zdefiniowane bez tworzenia nowego typu pochodnego. Metody rozszerzenia umożliwiają napisanie metody, która może być wywołana tak, jakby była metodą wystąpienia istniejącego typu.  
+Metody rozszerzające umożliwiają programistom dodawanie niestandardowych funkcji do typów danych, które są już zdefiniowane bez tworzenia nowego typu pochodnego. Metody rozszerzające umożliwiają napisanie metody, która może być wywoływany tak, jakby jego była wystąpieniem metody istniejącego typu.  
   
 ## <a name="remarks"></a>Uwagi  
- Metody rozszerzenia mogą być tylko `Sub` procedury lub `Function` procedury. Nie można zdefiniować właściwości rozszerzenia, pole lub zdarzeń. Wszystkie metody rozszerzenia muszą być oznaczone atrybutem rozszerzenia `<Extension()>` z <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> przestrzeni nazw.  
+ Metoda rozszerzenia może być tylko `Sub` procedury lub `Function` procedury. Nie można zdefiniować właściwości rozszerzenia, pola lub zdarzenia. Wszystkie metody rozszerzenia muszą być oznaczone atrybutem rozszerzenia `<Extension()>` z <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> przestrzeni nazw.  
   
- Pierwszy parametr w definicji — metoda rozszerzenia Określa typ danych metoda jest rozszerzeniem. Po uruchomieniu metoda pierwszy parametr jest powiązany z wystąpieniem typu danych, która wywołuje metodę.  
+ Pierwszy parametr w definicji metody rozszerzenie Określa typ danych, które rozszerza metoda. Gdy metoda jest uruchomiona, pierwszy parametr jest powiązany do wystąpienia typu danych, który wywołuje tę metodę.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie zdefiniowano `Print` rozszerzenie <xref:System.String> — typ danych. W metodzie `Console.WriteLine` do wyświetlenia ciąg. Parametr `Print` metody `aString`, określa, że metoda jest rozszerzeniem <xref:System.String> klasy.  
+ W poniższym przykładzie zdefiniowano `Print` rozszerzenie <xref:System.String> — typ danych. Metoda używa `Console.WriteLine` do wyświetlenia ciągu. Wartość parametru `Print` metody `aString`, ustala, że metoda rozszerza <xref:System.String> klasy.  
   
  [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
- Zwróć uwagę, że definicji — metoda rozszerzenia jest oznaczony atrybutem rozszerzenia `<Extension()>`. Oznaczenie modułu, w którym zdefiniowana jest metoda jest opcjonalne, ale każda metoda rozszerzenia musi być oznaczona. <xref:System.Runtime.CompilerServices> należy zaimportować tak, aby uzyskać dostęp do atrybutu rozszerzenia.  
+ Należy zauważyć, że definicja metody rozszerzenia jest oznaczona atrybutem rozszerzenia `<Extension()>`. Oznaczanie modułu, w którym metoda jest określona jest opcjonalne, ale każda metoda rozszerzenia musi być oznaczona. <xref:System.Runtime.CompilerServices> muszą być importowane w celu uzyskania dostępu do atrybutu rozszerzenia.  
   
- Metody rozszerzenia mogą być deklarowane tylko w modułach. Zazwyczaj modułu, w którym jest zdefiniowany — metoda rozszerzenia nie jest tym samym module, w którym jest wywoływana. Zamiast tego należy moduł, który zawiera metody rozszerzenia są importowane, jeśli wymagane jest, aby przełączyć go do zakresu. Po moduł, który zawiera `Print` jest w zakresie, można wywołać metody, tak jakby był on metodę zwykłej wystąpienia, który nie przyjmuje żadnych argumentów, takich jak `ToUpper`:  
+ Metody rozszerzenia mogą być deklarowane tylko w modułach. Zazwyczaj moduł, w którym zdefiniowano metody rozszerzenia nie jest tym samym module, w którym jest wywoływana. Zamiast tego modułu, który zawiera metodę rozszerzająca jest importowany, jeśli wymagane jest, aby wprowadzić dane do zakresu. Po tym jak moduł zawierający `Print` jest w zakresie, można wywołać metody, tak jakby był metodą instancji zwykłej, która nie przyjmuje żadnych argumentów, takich jak `ToUpper`:  
   
  [!code-vb[VbVbalrExtensionMethods#2](./codesnippet/VisualBasic/extension-methods_2.vb)]  
   
- Kolejnym przykładzie `PrintAndPunctuate`, także jest rozszerzeniem <xref:System.String>, teraz zdefiniowany dwa parametry. Pierwszy parametr `aString`, określa, że metodę rozszerzenie rozszerza <xref:System.String>. Drugi parametr `punc`, jest przeznaczona do postaci ciągu znaków interpunkcyjnych, który jest przekazywany jako argument podczas wywoływania metody. Metoda wyświetla ciąg następuje znaków interpunkcyjnych.  
+ Następny przykład `PrintAndPunctuate`, również jest rozszerzeniem <xref:System.String>, tym razem zdefiniowane za pomocą dwóch parametrów. Pierwszy parametr `aString`, ustala, że metoda rozszerzenia rozszerza <xref:System.String>. Drugi parametr `punc`, ma być ciągiem znaków interpunkcyjnych, który jest przekazywany jako argument przy wywołaniu metody. Metoda wyświetla ciąg, a następnie znaków interpunkcyjnych.  
   
  [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
- Metoda jest wywoływana przez wysyłanie argument ciągu `punc`: `example.PrintAndPunctuate(".")`  
+ Metoda jest wywoływana przez wysłanie argumentu ciągu dla `punc`: `example.PrintAndPunctuate(".")`  
   
- W poniższym przykładzie przedstawiono `Print` i `PrintAndPunctuate` zdefiniowany i wywołać. <xref:System.Runtime.CompilerServices> zostaną zaimportowane w module definicji w celu umożliwienia dostępu do atrybutu rozszerzenia.  
+ W poniższym przykładzie przedstawiono `Print` i `PrintAndPunctuate` zdefiniowane i wywoływane. <xref:System.Runtime.CompilerServices> jest importowany w module definicji w celu umożliwienia dostępu do atrybutu rozszerzenia.  
   
 ### <a name="code"></a>Kod  
   
@@ -64,7 +64,7 @@ Module StringExtensions
 End Module  
 ```  
   
- Metody rozszerzenia są następnie wejścia zakres i o nazwie.  
+ Następnie metody rozszerzające są dostosowane do zakresu i o nazwie.  
   
 ```vb  
 Imports ConsoleApplication2.StringExtensions  
@@ -84,16 +84,16 @@ End Module
 ```  
   
 ### <a name="comments"></a>Komentarze  
- Wymaganiem, aby można było uruchomić te lub podobne metody rozszerzenia jest, aby być w zakresie. Jeśli moduł, który zawiera metody rozszerzenia znajduje się w zakresie, jest widoczny w IntelliSense i można wywołać, tak jakby był on metodę wystąpienia zwykłej.  
+ Wszystko co jest wymagane, aby można było uruchomić te lub podobne metody rozszerzenia jest, aby były one w zakresie. Jeśli moduł, który zawiera metodę rozszerzającą znajduje się w zakresie, jest widoczny w technologii IntelliSense i może być wywoływany tak, jakby był metodą instancji zwykłej.  
   
- Zwróć uwagę, że gdy metody są wywoływane, Brak argumentu nie są przesyłane pierwszego parametru. Parametr `aString` w metodzie poprzedniej definicje jest powiązany z `example`, wystąpienie `String` , który odwołuje się je. Kompilator użyje `example` jako argument wysyłane do pierwszego parametru.  
+ Należy zauważyć, że gdy metody są wywołane, żaden argument nie jest wysyłany jako pierwszy parametr. Parametr `aString` w poprzedniej metody jest powiązana definicje `example`, wystąpienie `String` które je wywołuje. Kompilator będzie używał `example` jako argumentu wysyłanego do pierwszego parametru.  
   
- Jeśli metoda rozszerzenia jest wywoływana dla obiekt, który ma ustawioną wartość `Nothing`, wykonuje metodę rozszerzenie. Dotyczy to zwykłych wystąpienia metody. Można jawnie sprawdzaj `Nothing` w metodzie rozszerzenia.  
+ Jeśli metoda rozszerzająca zostanie wywołana dla obiektu, który jest ustawiony na `Nothing`, metoda rozszerzająca zostanie wykonana. To nie ma zastosowania do metod zwykłego wystąpienia. Możesz jawnie szukać `Nothing` w metodzie rozszerzenia.  
   
 ## <a name="types-that-can-be-extended"></a>Typy, które mogą zostać rozszerzone  
- Można zdefiniować metody rozszerzenia większość typów, które może być reprezentowany w liście parametrów języka Visual Basic, takie jak następujące:  
+ Można zdefiniować metodę rozszerzenia w większości typów, które mogą być reprezentowane w liście parametrów języka Visual Basic, takie jak następujące:  
   
--   Klasy (typy referencyjne)  
+-   Klasy (typy odwołań)  
   
 -   Struktury (typy wartości)  
   
@@ -103,84 +103,84 @@ End Module
   
 -   Argumenty ByRef i ByVal  
   
--   Parametry ogólne — metoda  
+-   Parametry metody ogólnej  
   
 -   Tablice  
   
- Ponieważ pierwszy parametr określa typ danych, rozszerzający metody rozszerzenia, jest wymagana i nie może być opcjonalny. Z tego powodu `Optional` parametrów i `ParamArray` parametrów nie może być pierwszym parametrem na liście parametrów.  
+ Ponieważ pierwszy parametr określa typ danych, który rozszerza metoda rozszerzenia, jest wymagana i nie może być opcjonalny. Z tego powodu `Optional` parametrów i `ParamArray` parametrów nie może być pierwszym parametrem na liście parametrów.  
   
- Metody rozszerzenia nie są wliczane późne wiązanie. W poniższym przykładzie instrukcja `anObject.PrintMe()` zgłasza <xref:System.MissingMemberException> wyjątek, ten sam wyjątek, zobaczysz, jeśli drugi `PrintMe` definicji — metoda rozszerzenia zostały usunięte.  
+ Metody rozszerzenia nie są uwzględniane w późnym wiązaniu. W poniższym przykładzie instrukcja `anObject.PrintMe()` zgłasza <xref:System.MissingMemberException> wyjątek, ten sam wyjątek zostałby wyświetlony, gdyby drugi `PrintMe` definicja metody rozszerzenia zostały usunięte.  
   
  [!code-vb[VbVbalrExtensionMethods#9](./codesnippet/VisualBasic/extension-methods_4.vb)]  
   
 ## <a name="best-practices"></a>Najlepsze praktyki  
- Metody rozszerzenia udostępniają wygodnym i zaawansowanym sposób rozszerzenia istniejącego typu. W celu użycia pomyślnie istnieją pewne kwestie do rozważenia. Te kwestie głównie autorów bibliotek klas, ale mogą wpłynąć na dowolnej aplikacji, która używa metody rozszerzenia.  
+ Metody rozszerzenia zapewniają wygodny, zaawansowany sposób rozszerzenia istniejącego typu. Aby ich używać, istnieją pewne kwestie do rozważenia. Te zagadnienia dotyczą głównie autorów bibliotek klas, ale mogą mieć wpływ na dowolnej aplikacji, która wykorzystuje metody rozszerzeń.  
   
- Metody rozszerzenia, które dodajesz do typów, które nie ma są zazwyczaj, bardziej narażony, niż metody rozszerzenia dodane do typów, które kontrolujesz. Liczba elementów może wystąpić w klasach nie użytkownika, które może zakłócać metody rozszerzenia.  
+ Najogólniej mówiąc metody rozszerzenia, które można dodać do typów, które nie są jego własnością są bardziej narażone niż metody rozszerzające dodane do typów, które możesz kontrolować. Kilka rzeczy, może wystąpić w klasach, których nie jesteś właścicielem, które mogą zakłócać Twoje rozszerzenia metody.  
   
--   Jeśli żadnego członka dostępne wystąpienia istnieje, która ma podpisu zgodnego z argumentów w instrukcji wywoływania z konwersji zawężającej wymagane od argumentu do parametru, zostanie użyta metoda wystąpienia preferowanego w stosunku do dowolnej metody rozszerzenia. W związku z tym jeśli metoda odpowiednie wystąpienie jest dodawana do klasy, w pewnym momencie, istniejącym elementem członkowskim rozszerzenia, które korzystają z mogą stać się niedostępne.  
+-   Jeśli istnieje jakikolwiek dostępny członek wystąpienia, który ma podpis, który jest zgodny z argumentami w instrukcji wywołujące, bez konwersji zawężającej wymaganej od argumentu do parametru, metoda wystąpienia będą używane zamiast dowolnej metody. W związku z tym jeśli odpowiednia metoda wystąpienia jest dodawany do klasy w jakimś momencie, istniejący element członkowski rozszerzenia, które korzystają z może stać się niedostępny.  
   
--   Autor metody rozszerzenia nie może uniemożliwić zapisywanie metod rozszerzeń powodujące konflikt, które mogą mieć pierwszeństwo nad oryginalne rozszerzenie innych programistów.  
+-   Autor metody rozszerzenia nie może uniemożliwić innym programistom od pisania niezgodnych metod rozszerzeń, które mogą mieć pierwszeństwo nad oryginalnym rozszerzeniem.  
   
--   Można zwiększyć niezawodność umieszczenie metody rozszerzenia w ich własnej przestrzeni nazw. Konsumenci biblioteki dołączyć przestrzeni nazw lub go wykluczyć lub wybierz jeden z przestrzeni nazw, niezależnie od pozostałej części biblioteki.  
+-   Możesz ulepszyć odporność umieszczając metody rozszerzeń w ich przestrzeniach nazw. Konsumenci biblioteki mogą następnie włączyć obszar nazw lub go wykluczyć lub wybrać wśród obszarów nazw, niezależnie od pozostałej części biblioteki.  
   
--   Może być bezpieczniejsze rozszerzenie interfejsów, niż jest rozszerzenie klasy, zwłaszcza, jeśli nie ma interfejsu lub klasy. Zmiana w interfejsie wpływa na każdej klasy, która implementuje go. W związku z tym Autor może być mniej prawdopodobne dodać lub zmienić metody w interfejsie. Jednak jeśli klasa implementuje dwa interfejsy, które mają metody rozszerzenia o tej samej sygnaturze, żadna z tych metod rozszerzenia jest widoczny.  
+-   Bezpieczniejsze może być rozszerzenie interfejsów niż rozszerzenie klas, zwłaszcza, jeśli nie posiadasz interfejsu lub klasy. Zmiany w interfejsie dotyczą każdej klasy, która implementuje go. W związku z tym Autor może być mniej prawdopodobne dodać lub zmienić metodę w interfejsie. Jeśli jednak klasa implementuje dwa interfejsy, które mają metodę rozszerzającą o tej samej sygnaturze, żadna metoda rozszerzenia jest widoczne.  
   
--   Rozszerzanie najbardziej określonego typu, które można wykonywać następujące czynności. W hierarchii typów Jeśli należy wybrać typ, od których pochodzą wiele innych typów, istnieją warstwy możliwości wprowadzania wystąpienia metody lub innych metod rozszerzenia, które może zakłócać należy do Ciebie.  
+-   Rozszerz najbardziej szczegółowy typ. możesz. W hierarchii typów, w przypadku wybrania typu, od których pochodzą wiele innych typów, istnieją warstwy możliwości wprowadzenia metod instancji lub innych metod rozszerzających, które mogą kolidować z Twoimi.  
   
-## <a name="extension-methods-instance-methods-and-properties"></a>Metody rozszerzenia, wystąpienie metody i właściwości  
- Metody wystąpienia w zakresie po podpisie, który jest zgodny z argumentami instrukcji wywoływania metody wystąpienia jest wybierany preferowanego w stosunku do dowolnej metody rozszerzenia. Metoda wystąpienia ma pierwszeństwo, nawet jeśli — metoda rozszerzenia jest lepszym dopasowaniem. W poniższym przykładzie `ExampleClass` zawiera metodę wystąpienia o nazwie `ExampleMethod` który ma jeden parametr typu `Integer`. Metody rozszerzenia `ExampleMethod` rozszerza `ExampleClass`, i ma jeden parametr typu `Long`.  
+## <a name="extension-methods-instance-methods-and-properties"></a>Metody rozszerzające, wystąpienia metod i właściwości  
+ Gdy w zakresie metoda wystąpień posiada oznaczenie, które są zgodne z argumentami instrukcji wywołania, metoda wystąpienia jest wybierana mieszcząca wszystkich metod rozszerzenia. Metoda instancji ma pierwszeństwo, nawet jeśli metoda rozszerzenia ma lepsze dopasowanie. W poniższym przykładzie `ExampleClass` zawiera metodę instancji o nazwie `ExampleMethod` posiadającą jeden parametr typu `Integer`. Metoda rozszerzenia `ExampleMethod` rozszerza `ExampleClass`, i ma jeden parametr typu `Long`.  
   
  [!code-vb[VbVbalrExtensionMethods#4](./codesnippet/VisualBasic/extension-methods_5.vb)]  
   
- W pierwszym wywołaniu `ExampleMethod` poniższy kod wywołuje metodę rozszerzenia, ponieważ `arg1` jest `Long` i jest zgodna tylko z `Long` parametru w metodzie rozszerzenia. Drugie wywołanie `ExampleMethod` ma `Integer` argumentu, `arg2`, i wywołuje metodę wystąpienia.  
+ Pierwsze wywołanie `ExampleMethod` w poniższym kodzie wywołuje metodę rozszerzenia, ponieważ `arg1` jest `Long` i jest zgodny tylko z `Long` parametru w metodzie rozszerzenia. Drugie wywołanie `ExampleMethod` ma `Integer` argument `arg2`, i wywołuje metodę wystąpienia.  
   
  [!code-vb[VbVbalrExtensionMethods#5](./codesnippet/VisualBasic/extension-methods_6.vb)]  
   
- Teraz wycofywania typów danych parametrów w dwóch metod:  
+ Teraz Odwróć typy danych parametrów w dwóch metod:  
   
  [!code-vb[VbVbalrExtensionMethods#6](./codesnippet/VisualBasic/extension-methods_7.vb)]  
   
- Tym razem kod w `Main` wywołuje metodę wystąpienia razem. Jest to spowodowane zarówno `arg1` i `arg2` umożliwiać konwersję rozszerzającą do `Long`, oraz metody wystąpienia mają pierwszeństwo przed — metoda rozszerzenia w obu przypadkach.  
+ Tym razem z kodem w `Main` wywołuje metodę wystąpienia w obu przypadkach. Jest to spowodowane zarówno `arg1` i `arg2` umożliwiać konwersję rozszerzającą do `Long`, i metoda wystąpienia ma pierwszeństwo przez metoda rozszerzenia w obu przypadkach.  
   
  [!code-vb[VbVbalrExtensionMethods#7](./codesnippet/VisualBasic/extension-methods_8.vb)]  
   
- W związku z tym metody rozszerzenia nie może zastąpić istniejącą metodę wystąpienia. Jednak gdy metody rozszerzenia ma taką samą nazwę jako metodę wystąpienia, ale nie powodują konfliktu podpisy, obie metody są dostępne. Na przykład jeśli klasa `ExampleClass` zawiera metodę o nazwie `ExampleMethod` pobierającej nie argumentów, metody rozszerzenia o tej samej nazwie, ale różnych podpisów są dozwolone, jak pokazano w poniższym kodzie.  
+ W związku z tym metody rozszerzenia nie może zastąpić istniejącej metody wystąpienia. Jednakże gdy metoda rozszerzająca ma taką samą nazwę jak metoda wystąpienia, ale podpisy nie będą w konflikcie, obie metody są dostępne. Na przykład jeśli klasa `ExampleClass` zawiera metodę o nazwie `ExampleMethod` która nie przyjmuje argumentów, metody rozszerzające o tej samej nazwie, ale różnych dopuszczalne są, jak pokazano w poniższym kodzie.  
   
  [!code-vb[VbVbalrExtensionMethods#8](./codesnippet/VisualBasic/extension-methods_9.vb)]  
   
- Dane wyjściowe z tego kodu jest następujący:  
+ Dane wyjściowe z tego kodu jest następująca:  
   
  `Extension method`  
   
  `Instance method`  
   
- Sytuacja jest prostsze właściwości: Jeśli metody rozszerzenia ma taką samą nazwę jak właściwość rozszerza klasy, metody rozszerzenia nie jest widoczny i nie są dostępne.  
+ Ta sytuacja jest prostsza w przypadku właściwości: Jeżeli metoda rozszerzająca ma taką samą nazwę jak właściwość klasy którą rozszerza, metoda rozszerzenia nie jest widoczna i nie są dostępne.  
   
-## <a name="extension-method-precedence"></a>Pierwszeństwo — metoda rozszerzenia  
- Gdy dwie metody rozszerzenia, które mają identyczne podpisy są w zakresie i jest dostępny, zostanie wywołany z wyższy priorytet. Metody rozszerzenia pierwszeństwo jest oparta na mechanizm służący do wprowadzenia metody w zakresie. Na poniższej liście przedstawiono hierarchią pierwszeństwo w kolejności malejącej.  
+## <a name="extension-method-precedence"></a>Pierwszeństwo metody rozszerzającej  
+ Gdy dwie metody rozszerzające, posiadające identyczne oznaczenie są z zakresie oraz są dostępne, co o wyższym priorytecie zostanie wywołany. Pierwszeństwo metody rozszerzenia opiera się na mechanizmie zastosowanym w celu dostosowania metody do zakresu. Na poniższej liście przedstawiono hierarchię pierwszeństwa, od najwyższego do najniższego.  
   
-1.  Metody rozszerzenia, zdefiniowane wewnątrz bieżącego modułu.  
+1.  Metody rozszerzające zdefiniowane wewnątrz bieżącego modułu.  
   
-2.  Metody rozszerzenia zdefiniowane wewnątrz danych typów w bieżącej przestrzeni nazw lub jednego z jego elementów nadrzędnych z podrzędne przestrzenie nazw mające wyższy priorytet niż nadrzędny przestrzeni nazw.  
+2.  Metody rozszerzające zdefiniowane wewnątrz typów danych w bieżącej przestrzeni nazw lub jednego z elementów nadrzędnych za pomocą podrzędne przestrzenie nazw mającą wyższy priorytet niż nadrzędna przestrzeń nazw.  
   
-3.  Metody rozszerzenia, zdefiniowane wewnątrz wszystkie Importy typu w bieżącym pliku.  
+3.  Metody rozszerzające zdefiniowane wewnątrz dowolnego typu importu w bieżącym pliku.  
   
-4.  Metody rozszerzenia, zdefiniowane wewnątrz żadnych importów przestrzeni nazw w bieżącym pliku.  
+4.  Metody rozszerzające zdefiniowane wewnątrz dowolnej importowanej przestrzeni nazw w bieżącym pliku.  
   
-5.  Metody rozszerzenia, zdefiniowane wewnątrz importów dowolnego typu na poziomie projektu.  
+5.  Metody rozszerzające zdefiniowane wewnątrz dowolnej importowanej typu na poziomie projektu.  
   
-6.  Metody rozszerzenia zdefiniowany w dowolnym importowane elementy obszaru nazw poziom projektu.  
+6.  Metody rozszerzające zdefiniowane wewnątrz dowolnej importowanej przestrzeni nazw na poziomie projektu.  
   
- Jeśli pierwszeństwo rozwiązania niejednoznaczności, można w pełni kwalifikowana nazwa Określ metodę, która jest wywoływana. Jeśli `Print` poprzedniego przykładu metoda jest zdefiniowany w module o nazwie `StringExtensions`, jest w pełni kwalifikowana nazwa `StringExtensions.Print(example)` zamiast `example.Print()`.  
+ Jeśli pierwszeństwo nie rozwiązuje niejasności, można użyć w pełni kwalifikowana nazwa, aby określić metodę, którą wywołujesz. Jeśli `Print` metoda we wcześniejszym przykładzie jest zdefiniowana w module o nazwie `StringExtensions`, w pełni kwalifikowana nazwa to `StringExtensions.Print(example)` zamiast `example.Print()`.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.CompilerServices>  
- <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
- [Metody rozszerzeń](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [Module, instrukcja](../../../../visual-basic/language-reference/statements/module-statement.md)  
- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Parametry opcjonalne](./optional-parameters.md)  
- [Tablice parametrów](./parameter-arrays.md)  
- [Atrybuty — omówienie](../../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.CompilerServices>
+- <xref:System.Runtime.CompilerServices.ExtensionAttribute>
+- [Metody rozszerzeń](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Instrukcja Module](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
+- [Parametry opcjonalne](./optional-parameters.md)
+- [Tablice parametrów](./parameter-arrays.md)
+- [Omówienie atrybuty](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - data binding [Windows Forms], checkbox controls
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
-ms.openlocfilehash: 54a0bba3923626398fb4d1b0af753177dfaa09a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e81ac9e8830333e5aadb195563b25fdd93895c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733288"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>CheckBox — Informacje o formancie [Formularze systemu Windows]
-Formularze systemu Windows <xref:System.Windows.Forms.CheckBox> formant wskazuje, czy określony warunek jest on lub off. Zwykle jest używana do prezentowania tak/nie lub PRAWDA/FAŁSZ wybór dla użytkownika. Formanty pól wyboru w grupach służy do wyświetlania wiele wyborów, z których użytkownik może wybrać co najmniej jeden.  
+Formularze Windows <xref:System.Windows.Forms.CheckBox> formant wskazuje, czy określony warunek jest włączone czy wyłączone. Często są one wykorzystywane do przedstawienia tak/nie lub zaznaczenie PRAWDA/FAŁSZ dla użytkownika. Formanty pól wyboru w grupach umożliwia wyświetlanie wielu opcji, z których użytkownik może wybrać co najmniej jeden.  
   
- Kontrolka pola wyboru jest podobny do kontrolkę przycisku radiowego, w tym każdego służy do wskazywania wyboru, które zostało utworzone przez użytkownika. Są one różne, w których można wybrać przycisk radiowy tylko jednej grupy naraz. Za pomocą formantu pole wyboru jednak dowolną liczbę pól wyboru można zaznaczyć.  
+ Kontrolka pola wyboru jest podobny do kontrolki przycisku radiowego, w tym, że każdy obiekt jest używany do wskazania wybranej przez użytkownika. Różnią się one w tym można wybrać przycisk radiowy tylko jednej grupy naraz. Za pomocą kontrolki pola wyboru jednak dowolną liczbę pól wyboru można wybrać.  
   
- Pole wyboru może być połączone elementy w bazie danych przy użyciu proste powiązanie danych. Wiele pól wyboru mogą być zgrupowane za pomocą <xref:System.Windows.Forms.GroupBox> formantu. Jest to przydatne do wyglądu i również projektu interfejsu użytkownika, ponieważ grupowanych formanty mogą być przenoszone między razem na projektanta formularza. Aby uzyskać więcej informacji, zobacz [wiązanie danych formularzy systemu Windows](../../../../docs/framework/winforms/windows-forms-data-binding.md) i [GroupBox — formant](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md).  
+ Pole wyboru mogą być połączone z elementami w bazie danych za pomocą proste powiązanie danych. Wiele pól wyboru może być zgrupowane za pomocą <xref:System.Windows.Forms.GroupBox> kontroli. Jest to przydatne dla wygląd, a także projektu interfejsu użytkownika, ponieważ kontrolki zgrupowane mogą być przenoszone między ze sobą w Projektancie formularza. Aby uzyskać więcej informacji, zobacz [powiązanie danych formularzy Windows](../../../../docs/framework/winforms/windows-forms-data-binding.md) i [GroupBox, kontrolka](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md).  
   
- <xref:System.Windows.Forms.CheckBox> Formant ma dwie ważne właściwości <xref:System.Windows.Forms.CheckBox.Checked%2A> i <xref:System.Windows.Forms.CheckBox.CheckState%2A>. <xref:System.Windows.Forms.CheckBox.Checked%2A> Właściwość zwraca albo `true` lub `false`. <xref:System.Windows.Forms.CheckBox.CheckState%2A> Właściwość zwraca albo <xref:System.Windows.Forms.CheckState.Checked> lub <xref:System.Windows.Forms.CheckState.Unchecked>; lub, jeśli <xref:System.Windows.Forms.CheckBox.ThreeState%2A> właściwość jest ustawiona na `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> może też zwracać <xref:System.Windows.Forms.CheckState.Indeterminate>. W stanie nieokreślonym pole zostanie wyświetlony z wygaszone wyglądu, aby wskazać, że ta opcja jest niedostępna.  
+ <xref:System.Windows.Forms.CheckBox> Kontroli ma dwie właściwości ważne <xref:System.Windows.Forms.CheckBox.Checked%2A> i <xref:System.Windows.Forms.CheckBox.CheckState%2A>. <xref:System.Windows.Forms.CheckBox.Checked%2A> Właściwość zwraca albo `true` lub `false`. <xref:System.Windows.Forms.CheckBox.CheckState%2A> Właściwość zwraca albo <xref:System.Windows.Forms.CheckState.Checked> lub <xref:System.Windows.Forms.CheckState.Unchecked>; lub, jeśli <xref:System.Windows.Forms.CheckBox.ThreeState%2A> właściwość jest ustawiona na `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> może również zwracać <xref:System.Windows.Forms.CheckState.Indeterminate>. Stan nieokreślony pojawia się okno dialogowe z wygaszone wygląd, aby wskazać, że ta opcja jest niedostępna.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.CheckBox>  
- [Instrukcje: ustawianie opcji za pomocą kontrolek CheckBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
- [Instrukcje: odpowiadanie na kliknięcia kontrolki CheckBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
- [CheckBox, kontrolka](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.CheckBox>
+- [Instrukcje: Ustawianie opcji za pomocą formantów CheckBox formularzy Windows](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Instrukcje: Odpowiadanie do formularzy Windows Forms kliknięcia kontrolki CheckBox](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [CheckBox, kontrolka](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

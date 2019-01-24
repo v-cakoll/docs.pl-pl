@@ -1,5 +1,5 @@
 ---
-title: 'Optymalizacja wydajności: układ i projekt'
+title: 'Optymalizacja wydajności: Układ i projekt'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,74 +9,74 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: 9c9921e664d69038480e73ee6779ca9e48b81c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5dd567fa9f5db69c52072a1cc67b5c574f8e1f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623875"
 ---
-# <a name="optimizing-performance-layout-and-design"></a>Optymalizacja wydajności: układ i projekt
-Projekt sieci [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji może wpłynąć na jego wydajność, tworząc niepotrzebnego obciążenia obliczania układ i sprawdzanie poprawności odwołania do obiektów. Konstrukcja obiektów, szczególnie w czasie wykonywania mogą wpłynąć na charakterystykę wydajności aplikacji.  
+# <a name="optimizing-performance-layout-and-design"></a>Optymalizacja wydajności: Układ i projekt
+Projekt usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji może mieć wpływ na jego wydajność, tworząc niepotrzebne koszty Obliczanie układu i sprawdzanie poprawności odwołania do obiektu. Konstrukcja obiektów, szczególnie w czasie wykonywania, może wpłynąć na charakterystykę wydajności aplikacji.  
   
  Ten temat zawiera zalecenia dotyczące wydajności w następujących obszarach.  
   
 ## <a name="layout"></a>Układ  
- Termin "przebiegu układu" opisano proces pomiarów i rozmieszczanie elementów członkowskich <xref:System.Windows.Controls.Panel>-pochodnych kolekcję elementów podrzędnych, a następnie je na ekranie rysowania obiektu. Przebiegu układ jest procesem ze sobą matematycznie intensywnie — im jest większa liczba elementów podrzędnych w kolekcji, im większa liczba wyliczenia wymagane. Na przykład po każdej aktualizacji elementu podrzędnego <xref:System.Windows.UIElement> obiektu w kolekcji zmianę położenia, ma możliwość wyzwolenia nowy przebieg przez system układu. Z powodu zamknięcia relacji między właściwości obiektu i zachowanie układu ważne jest zrozumienie typ zdarzenia, które może wywołać układu systemu. Aplikacji będą działać lepiej zmniejszając możliwie przekazać wszelkie niepotrzebne wywołania układu.  
+ Termin "przekazanie układu" w tym artykule opisano proces pomiaru i rozmieszczanie elementów członkowskich <xref:System.Windows.Controls.Panel>-pochodzi z obiektu kolekcji elementów podrzędnych, a następnie narysować je na ekranie. Przekazanie układu jest procesem ze sobą matematycznie intensywnie — im większa liczba elementów podrzędnych w kolekcji, większa liczba obliczeń wymagana. Na przykład każdym elementem podrzędnym <xref:System.Windows.UIElement> zmieni się jego położenie obiektu w kolekcji, ma możliwość wyzwalania nowy przebieg przez system układu. Ze względu na Zamknij relacji między właściwości obiektu i zachowanie układu ważne jest zrozumienie typ zdarzenia, które można wywołać system układu. Aplikacji będą działać lepiej dzięki zmniejszeniu możliwie przekazywania wszelkie niepotrzebne wywołania układu.  
   
- Układ systemu wykonuje dwie przejścia dla każdego elementu podrzędnego w kolekcji: przebiegu miary i przekazać Rozmieść. Każdy obiekt podrzędny zawiera własną implementację przesłoniętych <xref:System.Windows.UIElement.Measure%2A> i <xref:System.Windows.UIElement.Arrange%2A> metody w celu zapewnienia zachowania określonych układu. W najprostszym układu to system cyklicznej, który prowadzi do elementu trwa o rozmiarze, znajduje się i rysowane na ekranie.  
+ System układu wykonuje dwa przejścia dla każdego elementu podrzędnego w kolekcji: przebieg miary i przekazać Rozmieść. Każdy obiekt podrzędny zawiera własną implementację zgodnym z przesłoniętą <xref:System.Windows.UIElement.Measure%2A> i <xref:System.Windows.UIElement.Arrange%2A> metody, aby zapewnić zachowanie określonego układu. W najprostszym układ jest systemem cyklicznej, który prowadzi do bycia elementu o rozmiarze, umieszczony i rysowane na ekranie.  
   
--   Element podrzędny <xref:System.Windows.UIElement> obiektu rozpoczyna proces układu przez jego właściwości core mierzony uprzedniego.  
+-   Element podrzędny <xref:System.Windows.UIElement> obiektu rozpoczyna proces układ przez pierwszy jej podstawowe właściwości mierzone.  
   
--   Obiektu <xref:System.Windows.FrameworkElement> właściwości, które są związane z rozmiar, takich jak <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, i <xref:System.Windows.FrameworkElement.Margin%2A>, są sprawdzane.  
+-   Obiekt <xref:System.Windows.FrameworkElement> właściwości, które są powiązane z rozmiar, takich jak <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, i <xref:System.Windows.FrameworkElement.Margin%2A>, są oceniane.  
   
 -   <xref:System.Windows.Controls.Panel>— Logika charakterystyczna zostanie zastosowana, takich jak <xref:System.Windows.Controls.DockPanel.Dock%2A> właściwość <xref:System.Windows.Controls.DockPanel>, lub <xref:System.Windows.Controls.StackPanel.Orientation%2A> właściwość <xref:System.Windows.Controls.StackPanel>.  
   
--   Zawartość jest rozmieszczone lub znajduje się po zostały zmierzone wszystkich obiektów podrzędnych.  
+-   Zawartość jest uporządkowane lub umieszczone po wszystkich obiektów podrzędnych zostały zmierzone.  
   
 -   Kolekcja obiektów podrzędnych jest rysowana na ekranie.  
   
- Proces przekazywania układ jest wywoływana ponownie, jeśli wystąpienia któregokolwiek z następujących czynności:  
+ Proces — dostęp próbny układu zostanie wywołana ponownie, jeśli wystąpi dowolne z następujących czynności:  
   
--   Obiekt podrzędny jest dodawany do kolekcji.  
+-   Obiekt podrzędny zostanie dodany do kolekcji.  
   
--   A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> jest stosowany do obiektu podrzędnego.  
+-   Element <xref:System.Windows.FrameworkElement.LayoutTransform%2A> jest stosowany do obiektu podrzędnego.  
   
--   <xref:System.Windows.UIElement.UpdateLayout%2A> Metoda jest wywoływana dla obiekt podrzędny.  
+-   <xref:System.Windows.UIElement.UpdateLayout%2A> Metoda jest wywoływana dla obiektu podrzędnego.  
   
--   Gdy nastąpi zmiana wartości właściwości zależności, która jest oznaczony atrybutem metadanych wpływających na miary lub rozmieszczania przebiegów.  
+-   Gdy wystąpi zmiana wartości właściwości zależności, który jest oznaczony za pomocą metadanych wpływających na miary lub Rozmieść przebiegów.  
   
-### <a name="use-the-most-efficient-panel-where-possible"></a>Skorzystaj z panelu najbardziej efektywne, gdy jest to możliwe  
- Złożoności procesu układu bezpośrednio opiera się na zachowanie układu <xref:System.Windows.Controls.Panel>-używasz elementów pochodnych. Na przykład <xref:System.Windows.Controls.Grid> lub <xref:System.Windows.Controls.StackPanel> kontroli udostępnia znacznie więcej funkcji niż <xref:System.Windows.Controls.Canvas> formantu. Cena za większy wzrost funkcji jest większa wzrost wydajności kosztów. Jednak jeśli nie potrzebujesz funkcji który <xref:System.Windows.Controls.Grid> zawiera formant, należy użyć mniej kosztowne rozwiązań alternatywnych, takich jak <xref:System.Windows.Controls.Canvas> lub niestandardowy panel.  
+### <a name="use-the-most-efficient-panel-where-possible"></a>Skorzystaj z panelu najbardziej efektywny sposób, jeśli jest to możliwe  
+ Złożoności procesu układ jest bezpośrednio oparty na podstawie zachowania układ <xref:System.Windows.Controls.Panel>-pochodnych elementy, możesz użyć. Na przykład <xref:System.Windows.Controls.Grid> lub <xref:System.Windows.Controls.StackPanel> control oferuje znacznie więcej funkcji niż <xref:System.Windows.Controls.Canvas> kontroli. Cena za to zwiększenie większą funkcjonalność jest większa wzrost kosztów wydajności. Jednakże jeśli nie potrzebujesz funkcji, <xref:System.Windows.Controls.Grid> udostępnia kontrolki, należy użyć mniej kosztowne rozwiązania alternatywne, takiego jak <xref:System.Windows.Controls.Canvas> lub niestandardowy panel.  
   
- Aby uzyskać więcej informacji, zobacz [omówienie panele](../../../../docs/framework/wpf/controls/panels-overview.md).  
+ Aby uzyskać więcej informacji, zobacz [Przegląd panele](../../../../docs/framework/wpf/controls/panels-overview.md).  
   
-### <a name="update-rather-than-replace-a-rendertransform"></a>Zaktualizuj zamiast zastąpić właściwość RenderTransform  
- Można aktualizować <xref:System.Windows.Media.Transform> zamiast zastąpienie jako wartość <xref:System.Windows.UIElement.RenderTransform%2A> właściwości. Jest to szczególnie istotne w scenariuszach obejmujących animacji. Aktualizacja istniejącej <xref:System.Windows.Media.Transform>, można uniknąć, inicjowanie obliczeń niepotrzebnych układu.  
+### <a name="update-rather-than-replace-a-rendertransform"></a>Aktualizacji, a nie zamienić RenderTransform  
+ Może być w stanie zaktualizować <xref:System.Windows.Media.Transform> zamiast zastąpienie jako wartość <xref:System.Windows.UIElement.RenderTransform%2A> właściwości. Jest to szczególnie istotne w scenariuszach obejmujących animacji. Aktualizacja istniejącego <xref:System.Windows.Media.Transform>, można uniknąć, inicjowanie obliczeń niepotrzebne układu.  
   
-### <a name="build-your-tree-top-down"></a>Tworzenie z drzewa góra dół  
- Gdy węzeł zostanie dodany lub usunięty z drzewa logicznego, pojawienia się właściwości invalidations nadrzędnego węzła i wszystkich jego obiektów podrzędnych. W związku z tym wzorzec konstrukcji góra dół zawsze można wykonać w celu uniknięcia koszt niepotrzebnych invalidations w węzłach, które już zostały zatwierdzone. W poniższej tabeli przedstawiono różnice szybkość wykonywania między tworzenia drzewa góra dół w zależności od dołu do góry, gdzie drzewa jest 150 poziomów w głąb za pomocą jednej <xref:System.Windows.Controls.TextBlock> i <xref:System.Windows.Controls.DockPanel> na każdym poziomie.  
+### <a name="build-your-tree-top-down"></a>Twórz swoje drzewa góra dół  
+ Gdy węzeł jest dodawany lub usuwany z drzewa logicznego, invalidations właściwości są inicjowane na węzeł nadrzędny i wszystkich jego obiektów podrzędnych. W rezultacie wzorzec konstrukcji góra dół zawsze powinien być używany do uniknąć kosztów niepotrzebne invalidations w węzłach, które już zostały zweryfikowane. W poniższej tabeli przedstawiono różnice w szybkości wykonywania między kompilacją drzewa góra dół w zależności od dołu do góry, gdzie drzewa jest 150 poziomów w głąb za pomocą jednego <xref:System.Windows.Controls.TextBlock> i <xref:System.Windows.Controls.DockPanel> na każdym poziomie.  
   
-|**Akcja**|**Drzewo kompilacji (w ms)**|**Renderowanie — zawiera drzewa kompilacji (w ms)**|  
+|**Akcja**|**Drzewo kompilowania (w ms)**|**Renderowanie — zawiera drzewo kompilowania (w ms)**|  
 |----------------|---------------------------------|-------------------------------------------------|  
-|Dołu do góry|366|454|  
+|Od dołu do góry|366|454|  
 |Góra dół|11|96|  
   
- Poniższy przykładowy kod przedstawia sposób tworzenia top drzewa w dół.  
+ Poniższy przykład kodu demonstruje sposób tworzenia najwyższego drzewa w dół.  
   
  [!code-csharp[Performance#PerformanceSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
  [!code-vb[Performance#PerformanceSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
   
- Aby uzyskać więcej informacji na drzewie logicznym, zobacz [drzewa WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
+ Aby uzyskać więcej informacji na temat drzewa logicznego, zobacz [drzewa w WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Planowanie wydajności aplikacji](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
- [Wykorzystanie możliwości sprzętu](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Zachowanie obiektu](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
- [Zasoby aplikacji](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Tekst](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Inne zalecenia dotyczące wydajności](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
- [Układ](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>Zobacz także
+- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [Planowanie wydajności aplikacji](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
+- [Wykorzystanie możliwości sprzętu](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
+- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Zachowanie obiektu](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
+- [Zasoby aplikacji](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [Tekst](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Inne zalecenia dotyczące wydajności](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Układ](../../../../docs/framework/wpf/advanced/layout.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31bb28b5bda51fb1579021e47b8d5ec49adb644e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c278eca421020bea4f36f87eb6c8a9a8ba7d2a43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388836"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658289"
 ---
 # <a name="specifying-an-entry-point"></a>Określanie punktu wejścia
 Punkt wejścia określa lokalizację funkcji w bibliotece DLL. W obrębie zarządzanego projektu, oryginalna nazwa lub porządkowy punkt wejścia docelowej funkcji określa tę funkcję wewnątrz międzyoperacyjnej granicy. Co więcej, możesz zmapować punkt wejścia do innej nazwy, efektywnie zmieniając nazwę funkcji.  
@@ -31,7 +31,7 @@ Punkt wejścia określa lokalizację funkcji w bibliotece DLL. W obrębie zarzą
  Ten temat demonstruje, w jaki sposób zmienić nazwę funkcji DLL w kodzie zarządzanym.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Zmiana nazwy funkcji w języku Visual Basic  
- Używa języka Visual Basic **funkcja** — słowo kluczowe w **Declare** instrukcja <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> pola. Poniższy przykład pokazuje podstawową deklarację.  
+ Visual Basic stosuje **funkcja** — słowo kluczowe w **Declare** instrukcję, aby ustawić <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> pola. Poniższy przykład pokazuje podstawową deklarację.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -43,7 +43,7 @@ Public Class Win32
 End Class  
 ```  
   
- Można zastąpić **MessageBox** punkt wejścia z **MsgBox** przez dołączenie **Alias** — słowo kluczowe w definicji, jak pokazano w poniższym przykładzie. W obu przykładach **automatycznie** — słowo kluczowe eliminuje potrzebę Określ wersję zestawu znaków punktu wejścia. Aby uzyskać więcej informacji o wybieraniu znak, zobacz [określający zestaw znaków](../../../docs/framework/interop/specifying-a-character-set.md).  
+ Możesz zastąpić **MessageBox** punktu wejścia przy użyciu **MsgBox** umieszczając **Alias** — słowo kluczowe w definicji, jak pokazano w poniższym przykładzie. W obu przykładach **automatycznie** — słowo kluczowe eliminuje potrzebę określenia wersji zestawu znaków punktu wejścia. Aby uzyskać więcej informacji o wybieraniu znak zestawu, zobacz [Określanie zestawu znaków](../../../docs/framework/interop/specifying-a-character-set.md).  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -56,7 +56,7 @@ End Class
 ```  
   
 ## <a name="renaming-a-function-in-c-and-c"></a>Zmiana nazwy funkcji w języku C# i C++  
- Można użyć pola <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>, aby określić funkcję DLL po nazwie lub liczbie porządkowej. Jeśli nazwa funkcji w definicji metody jest taka sama jak punkt wejścia w bibliotece DLL, nie trzeba jawnie zidentyfikowanie funkcji z **punktu wejścia** pola. W innym wypadku, użyj jednego z poniższych form atrybutów, aby wskazać nazwę lub liczbę porządkową:  
+ Można użyć pola <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>, aby określić funkcję DLL po nazwie lub liczbie porządkowej. Jeśli nazwa funkcji w definicji metody jest taka sama jak punkt wejścia w DLL, nie trzeba jawnie identyfikować funkcji przy użyciu **punktu wejścia** pola. W innym wypadku, użyj jednego z poniższych form atrybutów, aby wskazać nazwę lub liczbę porządkową:  
   
 ```  
 [DllImport("dllname", EntryPoint="Functionname")]  
@@ -65,7 +65,7 @@ End Class
   
  Należy zauważyć, że liczba porządkowa musi być poprzedzona znakiem kratki (#).  
   
- W poniższym przykładzie pokazano, jak zastąpić **MessageBoxA** z **MsgBox** w kodzie za pomocą **punktu wejścia** pola.  
+ Poniższy przykład demonstruje sposób zamiany **MessageBoxA** z **MsgBox** w kodzie za pomocą **punktu wejścia** pola.  
   
 ```csharp  
 using System.Runtime.InteropServices;  
@@ -88,8 +88,8 @@ extern "C" int MsgBox(HWND hWnd,
                       unsigned int uType);  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Przykłady wywołań platformy](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Marshaling danych w wywołaniu platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [Przykłady wywołań platformy](../../../docs/framework/interop/platform-invoke-examples.md)
+- [Marshaling danych w wywołaniu platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)

@@ -2,12 +2,12 @@
 title: Używanie akcji do implementacji zachowania po stronie serwera
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c478c09ada879bdb237cff1e3c914a5990aba765
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622614"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Używanie akcji do implementacji zachowania po stronie serwera
 
@@ -16,7 +16,7 @@ Akcje protokołu OData umożliwiają implementowanie zachowania, które podejmuj
 ## <a name="implementing-an-action"></a>Implementowanie akcji  
  Do wykonania działania usługi, musisz zaimplementować <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), i [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) interfejsów. <xref:System.IServiceProvider> Umożliwia WCF Data Services uzyskać implementacji [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) umożliwia usługi danych WCF w celu tworzenia, znajdowanie, opis i wywołania akcji usługi. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) pozwala wywołuje kod, który implementuje zachowanie akcji usługi i uzyskiwać wyniki, jeśli istnieje. Należy pamiętać o tym, czy na wywołanie usług WCF, nowe wystąpienie klasy usługi WCF Data Services zostanie utworzony w każdym razem, gdy usługa jest wywoływana.  Upewnij się, że bez niepotrzebnych wykonywania pracy po utworzeniu usługi.  
   
-### <a name="iserviceprovider"></a>Element IServiceProvider  
+### <a name="iserviceprovider"></a>IServiceProvider  
  <xref:System.IServiceProvider> zawiera metodę o nazwie <xref:System.IServiceProvider.GetService%2A>. Ta metoda jest wywoływana przez usługi danych WCF w celu pobrania liczba dostawców usług, w tym metadanych, dostawców usług i dostawcy akcji usługi danych. Po wyświetleniu monitu Akcja dostawcy usługi danych, zwraca swoje [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) implementacji.  
   
 ### <a name="idataserviceactionprovider"></a>IDataServiceActionProvider  
@@ -48,7 +48,7 @@ Akcje protokołu OData umożliwiają implementowanie zachowania, które podejmuj
   
  Parametry mogą być przekazywane jako tokenów. To dlatego istnieje możliwość zapisu danych dostawcy usług, działająca z tokenów, które reprezentują zasoby, jeśli jest to przypadek, konieczne może być przekonwertować (marshal) tokeny te służą do rzeczywistych zasobów przed wysłaniem do rzeczywistego akcji. Po parametrze został skierowany, tak aby zmiany do zasobu, które występują podczas wywoływania akcji zostaną zapisane i będą zapisane na dysku musi być w stanie edycji.  
   
- Ten interfejs wymaga dwóch metod: wywołania i GetResult. Wywoływanie wywołuje delegata, który implementuje zachowanie akcji i zwraca GetResult wynik monitorowanej akcji.  
+ Ten interfejs wymaga dwóch metod: Wywołania i GetResult. Wywoływanie wywołuje delegata, który implementuje zachowanie akcji i zwraca GetResult wynik monitorowanej akcji.  
   
 ## <a name="invoking-a-wcf-data-service-action"></a>Wywołanie akcji usług danych WCF  
  Akcje są wywoływane za pomocą żądania HTTP POST. Adres URL Określa zasób następuje nazwa akcji. Parametry są przekazywane w treści żądania. Na przykład, jeśli było usługi o nazwie MovieService, na której widoczne akcję o nazwie szybkości. Można użyć następującego adresu URL wywołanie akcji stawki na określonych film:  
@@ -80,8 +80,8 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
   
  W powyższym fragmencie kodu `MoviesModel` klasy został wygenerowany przy użyciu programu Visual Studio Dodaj odwołanie do usługi z usługą danych programu WCF.  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługi danych WCF 4.5](../../../../docs/framework/data/wcf/index.md)  
- [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Tworzenie i wdrażanie usług danych programu WCF](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
- [Niestandardowi dostawcy usługi danych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi danych WCF 4.5](../../../../docs/framework/data/wcf/index.md)
+- [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Tworzenie i wdrażanie usług danych programu WCF](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+- [Niestandardowi dostawcy usługi danych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

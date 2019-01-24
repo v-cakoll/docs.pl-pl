@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Przywracanie stref czasowych z zasobu osadzonego'
+title: 'Instrukcje: Przywracanie stref czasowych z zasobu osadzonego'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99d38b336b5e655dd1c96682eec90c5fbe8469d6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656808"
 ---
-# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Porady: Przywracanie stref czasowych z zasobu osadzonego
+# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Instrukcje: Przywracanie stref czasowych z zasobu osadzonego
 
-W tym temacie opisano przywracanie stref czasowych, które zostały zapisane w pliku zasobów. Aby uzyskać informacje i instrukcje dotyczące zapisywanie stref czasowych, zobacz [porady: zapisywanie stref czasowych w zasobie osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
+W tym temacie opisano przywracanie stref czasowych, które zostały zapisane w pliku zasobów. Aby uzyskać informacje i instrukcje dotyczące zapisywanie stref czasowych, zobacz [jak: Zapisywanie stref czasowych w zasobie osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
 
 ### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>Do deserializacji obiektów TimeZoneInfo z zasobu osadzonego
 
@@ -60,6 +60,6 @@ Ten przykład wymaga:
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
-* [Strefy czasowe — omówienie](../../../docs/standard/datetime/time-zone-overview.md)
-* [Instrukcje: Zapisywanie stref czasowych w zasobie osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+- [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
+- [Strefy czasowe — omówienie](../../../docs/standard/datetime/time-zone-overview.md)
+- [Instrukcje: Zapisywanie stref czasowych w zasobie osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEnum Interface1
+title: ICorDebugEnum, interfejs1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEnum
@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4659bbc9c2e3c71a6cf85e51a06bee4f789356b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97080f7d850e67d635f9a65ee85ad3ddddbb244d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732755"
 ---
-# <a name="icordebugenum-interface1"></a>ICorDebugEnum Interface1
-Pełni rolę abstrakcyjnej interfejs podstawowy dla wyliczenia, które są używane przez aplikację do debugowania.  
+# <a name="icordebugenum-interface1"></a>ICorDebugEnum, interfejs1
+Służy jako abstrakcyjny interfejs podstawowy dla wyliczenia, które są używane przez aplikację do debugowania.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Clone, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Tworzy kopię tego `ICorDebugEnum` obiektu.|  
+|[Clone, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Tworzy kopię `ICorDebugEnum` obiektu.|  
 |[GetCount, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Pobiera liczbę elementów w wyliczeniu.|  
-|[Reset, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Przesuwa kursor na początku wyliczenia.|  
-|[Skip, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Przesuwa kursor do przodu w wyliczeniu określoną liczbę elementów.|  
+|[Reset, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Przenosi kursor do początku wyliczenia.|  
+|[Skip, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Przesuwa kursor do przodu w wyliczeniu przez określoną liczbę elementów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Następujące moduły wyliczające pochodzi od `ICorDebugEnum`:  
+ Następujące moduły wyliczające pochodzić od `ICorDebugEnum`:  
   
 -   "ICorDebugAppDomainEnum"  
   
--   "ICorDebugAssemblyEnum"  
+-   Icordebugassemblyenum "—"  
   
 -   [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
   
--   "ICorDebugBreakpointEnum"  
+-   Icordebugbreakpointenum "—"  
   
--   "ICorDebugChainEnum"  
+-   Icordebugchainenum "—"  
   
 -   "ICorDebugCodeEnum"  
   
@@ -64,7 +64,7 @@ Pełni rolę abstrakcyjnej interfejs podstawowy dla wyliczenia, które są używ
   
 -   [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
   
--   "ICorDebugModuleEnum"  
+-   Icordebugmoduleenum "—"  
   
 -   "ICorDebugObjectEnum"  
   
@@ -81,10 +81,10 @@ Pełni rolę abstrakcyjnej interfejs podstawowy dla wyliczenia, które są używ
 -   [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -92,5 +92,5 @@ Pełni rolę abstrakcyjnej interfejs podstawowy dla wyliczenia, które są używ
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

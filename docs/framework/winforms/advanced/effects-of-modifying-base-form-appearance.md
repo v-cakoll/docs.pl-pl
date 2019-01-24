@@ -8,12 +8,12 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: adaf9224fd340c6ea4342e2591806a7c877e83ff
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b942c160d7c4f89b1aad97c2dfdef1d060c18e55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639227"
 ---
 # <a name="effects-of-modifying-a-base-form39s-appearance"></a>Efekty modyfikowania formularza podstawowego&#39;wygląd
 Podczas opracowywania aplikacji często konieczne może być zmiana wyglądu formularza podstawowego, z której dziedziczą inne formy w projekcie (lub w innych projektach).  
@@ -25,7 +25,7 @@ Podczas opracowywania aplikacji często konieczne może być zmiana wyglądu for
   
  Modyfikacje wprowadzone do formularza podstawowego w czasie wykonywania mają nie będzie miała wpływu na odziedziczone formularze, które już są tworzone.  
   
-## <a name="see-also"></a>Zobacz też  
- [base](~/docs/csharp/language-reference/keywords/base.md)  
- [Instrukcje: dziedziczenie formularzy Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+## <a name="see-also"></a>Zobacz także
+- [base](~/docs/csharp/language-reference/keywords/base.md)
+- [Instrukcje: Dziedziczenie formularzy Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+- [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c879af682e2d54ed3ae1e9821c0bd85b5cac27d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 516485d39f1e18a3b82886ed08cd0344c16236dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640540"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback — Interfejs
 Dostarcza metody do przetwarzania wywołań zwrotnych debugera.  
@@ -30,45 +30,45 @@ Dostarcza metody do przetwarzania wywołań zwrotnych debugera.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Break, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|Powiadamia debuger podczas <xref:System.Reflection.Emit.OpCodes.Break> wykonaniem instrukcji w strumieniu kodu.|  
-|[Breakpoint, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpoint-method.md)|Powiadamia debugera w przypadku napotkania punktu przerwania.|  
-|[BreakpointSetError, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpointseterror-method.md)|Powiadamia debugera, że środowisko uruchomieniowe języka wspólnego (CLR) nie może powiązać dokładnie punkt przerwania ustawiony przed funkcją just-in-time (JIT) skompilowany.|  
-|[ControlCTrap, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-controlctrap-method.md)|Powiadamia debugera, że klawisze CTRL + C jest kolor w debugowanym procesie.|  
-|[CreateAppDomain, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createappdomain-method.md)|Powiadamia debugera, czy domena aplikacji została utworzona.|  
-|[CreateProcess, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)|Powiadamia debuger został dołączony proces lub uruchomiony po raz pierwszy.|  
-|[CreateThread, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)|Powiadamia debugera, że wątek rozpoczęła wykonywanie kodu zarządzanego.|  
-|[DebuggerError, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-debuggererror-method.md)|Powiadamia debugera wystąpił błąd podczas próby obsługi zdarzenia ze środowiska CLR.|  
-|[EditAndContinueRemap, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)|Przestarzałe. Powiadamia debugera, czy zdarzenie ponownego mapowania zostało wysłane do środowiska IDE.|  
-|[EvalComplete, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md)|Powiadamia debuger ocenę została ukończona.|  
-|[EvalException, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalexception-method.md)|Powiadamia debugera, że ocenę zostało przerwane z powodu nieobsługiwanego wyjątku.|  
-|[Exception, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md)|Powiadamia debugera, czy wyjątek został zgłoszony z kodu zarządzanego.|  
+|[Break, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|Powiadamia debuger po <xref:System.Reflection.Emit.OpCodes.Break> instrukcji w strumieniu kod jest wykonywany.|  
+|[Breakpoint, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpoint-method.md)|Powiadamia debugera, gdy zostanie osiągnięty punkt przerwania.|  
+|[BreakpointSetError, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpointseterror-method.md)|Powiadamia debugera, środowisko uruchomieniowe języka wspólnego (CLR) i nie można powiązać dokładnie punkcie przerwania, który został ustawiony, aby funkcja była just-in-time (JIT) skompilowany.|  
+|[ControlCTrap, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-controlctrap-method.md)|Powiadamia debugera, CTRL + C jest zablokował w debugowanym procesie.|  
+|[CreateAppDomain, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createappdomain-method.md)|Powiadamia debuger utworzono domeny aplikacji.|  
+|[CreateProcess, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)|Powiadamia debuger został dołączony proces lub uruchomiona po raz pierwszy.|  
+|[CreateThread, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)|Powiadamia debugera, czy wątek rozpoczęła wykonywanie kodu zarządzanego.|  
+|[DebuggerError, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-debuggererror-method.md)|Powiadamia debuger wystąpił błąd podczas próby obsłużyć zdarzenie ze środowiska CLR.|  
+|[EditAndContinueRemap, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)|Przestarzałe. Powiadamia debugera, zdarzenia ponowne mapowanie została wysłana do środowiska IDE.|  
+|[EvalComplete, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md)|Powiadamia użytkownika debugera o zakończeniu oceny.|  
+|[EvalException, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalexception-method.md)|Powiadamia debugera, że ocena została przerwana z powodu nieobsługiwanego wyjątku.|  
+|[Exception, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md)|Powiadamia debuger zgłoszony wyjątek z kodu zarządzanego.|  
 |[ExitAppDomain, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)|Powiadamia debuger zakończył domeny aplikacji.|  
 |[ExitProcess, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)|Powiadamia debugera, że proces został zakończony.|  
-|[ExitThread, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md)|Powiadamia debuger zakończył wątku, który został wykonywania kodu zarządzanego.|  
-|[LoadAssembly, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)|Powiadamia debugera, czy zestaw CLR został załadowany pomyślnie.|  
-|[LoadClass, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)|Powiadamia debuger załadowaniu klasy.|  
+|[ExitThread, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md)|Powiadamia debugera, że zakończył się wątek, który był wykonywany kod zarządzany.|  
+|[LoadAssembly, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)|Powiadamia debugera, czy zestaw CLR został pomyślnie załadowany.|  
+|[LoadClass, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)|Powiadamia debuger załadowano klasy.|  
 |[LoadModule, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)|Powiadamia debugera, że moduł CLR został pomyślnie załadowany.|  
-|[LogMessage, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)|Powiadamia debuger wątku CLR zarządzanych została wywołana metoda <xref:System.Diagnostics.EventLog> klasę, aby rejestrować zdarzenia.|  
-|[LogSwitch, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logswitch-method.md)|Powiadamia debuger wątku CLR zarządzanych została wywołana metoda <xref:System.Diagnostics.Switch> klasę, aby utworzyć, zmodyfikować lub usunąć przełącznika debugowania śledzenia.|  
-|[NameChange, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-namechange-method.md)|Powiadamia debugera, że nazwa domeny aplikacji lub wątek został zmieniony.|  
-|[StepComplete, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)|Powiadamia debugera, czy krok zostało zakończone.|  
-|[UnloadAssembly, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)|Powiadamia debuger Zestaw CLR został usunięty z pamięci.|  
-|[UnloadClass, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)|Powiadamia debugera jest zwalniany klasy.|  
-|[UnloadModule, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)|Powiadamia debuger CLR modułu (dynamicznie DLL) został usunięty z pamięci.|  
-|[UpdateModuleSymbols, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md)|Powiadamia debugera, że symboli dla modułu CLR zostały zmienione.|  
+|[LogMessage, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)|Powiadamia debuger wątku środowiska CLR zarządzane została wywołana metoda <xref:System.Diagnostics.EventLog> klasy, aby rejestrować zdarzenia.|  
+|[LogSwitch, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logswitch-method.md)|Powiadamia debuger wątku środowiska CLR zarządzane została wywołana metoda <xref:System.Diagnostics.Switch> klasy, aby utworzyć, zmodyfikować lub usunąć przełącznik debugowanie śledzenia.|  
+|[NameChange, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-namechange-method.md)|Powiadamia debugera, że zmieniono nazwę domeny aplikacji lub wątku.|  
+|[StepComplete, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)|Powiadamia debugera, że krok została zakończona.|  
+|[UnloadAssembly, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)|Powiadamia debuger Zestaw CLR został zwolniony.|  
+|[UnloadClass, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)|Powiadamia debuger jest zwalniany klasy.|  
+|[UnloadModule, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)|Powiadamia debuger moduł CLR (DLL) został zwolniony.|  
+|[UpdateModuleSymbols, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md)|Powiadamia debugera, że symbole dla modułu CLR zostały zmienione.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wszystkie wywołania zwrotne serializacji, w tym samym wątku i wywoływana z procesem w stanie zsynchronizowane.  
+ Wszystkie wywołania zwrotne są serializowane, o nazwie w tym samym wątku, a następnie wywołać z procesu w stanie zsynchronizowane.  
   
- Każda implementacja wywołania zwrotnego należy wywołać [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) można wznowić wykonywania. Jeśli `ICorDebugController::Continue` nie jest wywoływana przed zwraca wywołania zwrotnego, proces pozostanie zatrzymana i nie więcej wywołania zwrotne zdarzeń będzie powtarzana, dopóki nie `ICorDebugController::Continue` jest wywoływana.  
+ Każda implementacja wywołania zwrotnego musi wywołać [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) można wznowić wykonywania. Jeśli `ICorDebugController::Continue` nie zostanie wywołana przed zwraca wywołanie zwrotne, proces pozostanie zatrzymany i nie więcej wywołań zwrotnych zdarzeń będzie powtarzana, dopóki nie `ICorDebugController::Continue` jest wywoływana.  
   
- Debuger musi implementować [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) Jeśli trwa debugowanie aplikacji .NET Framework w wersji 2.0. Wystąpienie `ICorDebugManagedCallback` lub `ICorDebugManagedCallback2` jest przekazywany jako obiektu wywołania zwrotnego do [ICorDebug::SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md).  
+ Debuger musi implementować [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) Jeśli jest on debugowanie aplikacji w wersji 2.0 programu .NET Framework. Wystąpienie `ICorDebugManagedCallback` lub `ICorDebugManagedCallback2` jest przekazywany jako obiektu wywołania zwrotnego do [ICorDebug::SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md).  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -76,7 +76,7 @@ Dostarcza metody do przetwarzania wywołań zwrotnych debugera.
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [ICorDebugManagedCallback2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugManagedCallback2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

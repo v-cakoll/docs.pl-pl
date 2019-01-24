@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 4f389530b287d1c7a11a88972ef948347d3ea533
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9af19f2ef552c5871d488c968368a9192bae9edb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656222"
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteka klienta usług danych WCF
 Każda aplikacja może współdziałać z [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]— na podstawie danych usługi, jeśli jest w stanie wysyłać żądania HTTP i [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych zwracanych usługi danych. Takie współdziałanie pozwala uzyskać dostęp do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usług z szerokim aplikacje korzystające z zakresu sieci Web. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zawiera biblioteki klienckie, które zapewniają bardziej zaawansowane środowisko programowania, gdy wykorzystasz [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł z .NET Framework lub aplikacji opartych na technologii Silverlight.  
@@ -51,6 +51,6 @@ Każda aplikacja może współdziałać z [!INCLUDE[ssODataFull](../../../../inc
  [Praca z danymi binarnymi](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  Informacje dotyczące dostępu i zmiany danych binarnych zwracane przez usługę danych jako strumień danych.  
   
-## <a name="see-also"></a>Zobacz też  
- [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

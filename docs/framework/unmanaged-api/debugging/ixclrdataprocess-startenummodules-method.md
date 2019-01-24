@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: a81da147c1483e7649612050f4aba29a2cc63b49
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 4a086157b27b7426cb6d5f17f13426c0f26d2b2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658224"
 ---
 # <a name="ixclrdataprocessstartenummodules-method"></a>Metoda IXCLRDataProcess::StartEnumModules
 
@@ -51,7 +51,7 @@ Podana metoda jest częścią `IXCLRDataProcess` interfejs i odnosi się do 24 g
 **Biblioteka:** Brak  
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wyliczenie CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

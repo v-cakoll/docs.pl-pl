@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7d617400fe5c07e8c9754e322960f31a350f62e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657418"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Omówienie powiązań WCF (Windows Communication Foundation)
 Powiązania to obiekty, które są używane do określania szczegółów komunikacji, które są wymagane do połączenia z punktem końcowym usługi Windows Communication Foundation (WCF). Każdy punkt końcowy usługi WCF wymaga powiązania do być poprawnie określona. W tym temacie opisano rodzaje komunikacji szczegółowe informacje, które definiują powiązania, elementy powiązania, jakie powiązania znajdują się w programie WCF i jak można określić powiązanie dla punktu końcowego.  
@@ -23,7 +23,7 @@ Powiązania to obiekty, które są używane do określania szczegółów komunik
  Kodowanie  
  Określa kodowanie komunikatu (na przykład tekst lub dane binarne).  
   
- Transportu  
+ Transport  
  Określa podstawowy protokół transportu do użycia (na przykład, TCP lub HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Elementy powiązania  
@@ -32,7 +32,7 @@ Powiązania to obiekty, które są używane do określania szczegółów komunik
 ## <a name="system-provided-bindings"></a>Powiązania dostarczane przez system  
  Informacje przedstawione w powiązaniu może być złożonym procesem, a niektóre ustawienia mogą nie być zgodne z innymi osobami. Z tego powodu WCF zawiera zestaw powiązań dostarczanych przez system. Te powiązania są przeznaczone do obejmuje większość wymagań aplikacji. Następujące klasy reprezentują kilka przykładów powiązania dostarczane przez system:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: Protokołu HTTP powiązanie odpowiednie do łączenia się z usługami sieci Web, który jest zgodny z WS-I specyfikacja profilu podstawowego (na przykład, sieci Web platformy ASP.NET opartego na usługach usługi).  
+-   <xref:System.ServiceModel.BasicHttpBinding>: Protokół HTTP powiązanie odpowiednie do łączenia się z usługami sieci Web, który jest zgodny z WS-I specyfikacja profilu podstawowego (na przykład, sieci Web platformy ASP.NET opartego na usługach usługi).  
   
 -   <xref:System.ServiceModel.WSHttpBinding>: Interoperacyjne powiązanie odpowiednie do nawiązywania połączenia z punktami końcowymi, które odpowiadają WS-* protokołów.  
   
@@ -57,5 +57,5 @@ Powiązania to obiekty, które są używane do określania szczegółów komunik
 ## <a name="code-and-configuration"></a>Kod i Konfiguracja  
  Można zdefiniować powiązania na dwa sposoby: za pomocą kodu lub konfiguracji. Te dwie metody nie są zależne od tego, czy przy użyciu powiązania dostarczane przez system lub niestandardowego powiązania. Ogólnie rzecz biorąc przy użyciu kodu zapewnia pełną kontrolę nad definicji powiązania w czasie projektowania. Z drugiej strony, przy użyciu konfiguracji umożliwia administratora systemu lub użytkownika usługi WCF lub klienta w celu zmiany parametrów powiązania, bez konieczności ponownego kompilowania aplikacji usługi. Ta elastyczność często jest pożądane, ponieważ nie istnieje żaden sposób przewidzieć wymagania dotyczące określonego komputera, na których ma zostać wdrożona aplikacja WCF. Zachowanie powiązania (i adresowania) informacji z kodu pozwala im można zmienić bez konieczności ponownej kompilacji lub ponownego wdrażania aplikacji. Należy pamiętać, że powiązań zdefiniowanych w kodzie są tworzone po powiązania określone w konfiguracji, dzięki czemu powiązań zdefiniowanych przez kod zastąpić wszelkie powiązań zdefiniowanych przez konfigurację.  
   
-## <a name="see-also"></a>Zobacz też  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Zobacz także
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

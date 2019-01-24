@@ -1,5 +1,5 @@
 ---
-title: Jak utworzyć niestandardowy element panelu
+title: 'Instrukcje: Utwórz niestandardowy element panelu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: bca8900ccb3c31a78066a43709a5e9334bc09eab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 93d9ebacda8c753ab5a4446999e1aa86828a2b9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776716"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621935"
 ---
-# <a name="how-to-create-a-custom-panel-element"></a>Jak utworzyć niestandardowy element panelu
+# <a name="how-to-create-a-custom-panel-element"></a>Instrukcje: Utwórz niestandardowy element panelu
 ## <a name="example"></a>Przykład  
  W tym przykładzie pokazano, jak zastąpić domyślne zachowanie układu <xref:System.Windows.Controls.Panel> elementu i tworzenie elementów układu niestandardowego, które są uzyskiwane z <xref:System.Windows.Controls.Panel>.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "43776716"
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
  [!code-vb[PlotPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Controls.Panel>  
- [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Tworzenie niestandardowych przykładowej panelu zawijania zawartości](https://go.microsoft.com/fwlink/?LinkID=159979)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Controls.Panel>
+- [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Tworzenie niestandardowych przykładowej panelu zawijania zawartości](https://go.microsoft.com/fwlink/?LinkID=159979)

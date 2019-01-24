@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 2d0a4f829f6fe4d9662e25a4d8fd3936d2afd7f1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242487"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700614"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Bufory o ustalonym rozmiarze (Przewodnik programowania w języku C#)
 
@@ -49,9 +49,9 @@ Niebezpieczne bufory różnią się od regularnych tablic w następujący sposó
 - Deklaracja tablicy powinna zawierać liczbę, takich jak `char id[8]`. Nie można użyć `char id[]`.
 - Niebezpieczne bufory można tylko wystąpienia pól struktur w niebezpiecznym kontekście.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../index.md)  
-- [Niebezpieczny kod i wskaźniki](index.md)  
-- [fixed, instrukcja](../../language-reference/keywords/fixed-statement.md)  
+- [Przewodnik programowania w języku C#](../index.md)
+- [Niebezpieczny kod i wskaźniki](index.md)
+- [fixed, instrukcja](../../language-reference/keywords/fixed-statement.md)
 - [Współdziałanie](../interop/index.md)

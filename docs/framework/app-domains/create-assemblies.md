@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8590b38ace0abcc370f94852a35569b95c4a2d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643614"
 ---
 # <a name="creating-assemblies"></a>Tworzenie zestawów
 
@@ -24,7 +24,7 @@ Możesz utworzyć zestaw wieloplikowy z kilku modułów kodu i pliki zasobów. M
 
 Istnieje kilka opcji, gdy grupowanie modułów kodu i zasoby do zestawów, w zależności od następujących czynników:
 
--   Przechowywanie wersji
+-   Obsługa wersji
 
      Moduły grupy, które powinny mieć te same informacje o wersji.
 
@@ -46,11 +46,11 @@ Istnieje kilka opcji, gdy grupowanie modułów kodu i zasoby do zestawów, w zal
 
 Podczas udostępniania języka wspólnego zestawów środowiska uruchomieniowego do niezarządzanych aplikacji modelu COM, można wprowadzać uwagi. Aby uzyskać więcej informacji na temat pracy z kodem niezarządzanym, zobacz [udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md)
-- [Instrukcje: kompilacja zestawu jednoplikowego](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)
-- [Instrukcje: kompilacja zestawów wieloplikowych](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Instrukcje: Kompilacja zestawów pojedynczego pliku](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)
+- [Instrukcje: Kompilacja zestawów wieloplikowych](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Zestawy wieloplikowe](../../../docs/framework/app-domains/multifile-assemblies.md)

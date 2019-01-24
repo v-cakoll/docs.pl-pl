@@ -1,43 +1,43 @@
 ---
-title: 'Modelu Entity Data Model: Typy danych pierwotnych'
+title: 'Model danych jednostki: Pierwotne typy danych'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: 3e99f65c57cf0e0ee4cbccc79d5819d39b9ee60b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2c2e1056c43f974ec38407372a8f447e52b4a630
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748015"
 ---
-# <a name="entity-data-model-primitive-data-types"></a>Modelu Entity Data Model: Typy danych pierwotnych
-Modelu danych jednostki (EDM) obsługuje zestaw typów danych pierwotnych abstrakcyjny (na przykład String, Boolean, Int32 i tak dalej), które są używane do definiowania [właściwości](../../../../docs/framework/data/adonet/property.md) w modelu koncepcyjnym. Te typy danych pierwotnych są serwery proxy dla typów pierwotnych danych rzeczywistych, które są obsługiwane w środowisku macierzystym, takie jak bazy danych programu SQL Server lub środowisko uruchomieniowe języka wspólnego (CLR) lub magazynu. EDM nie definiuje semantykę operacje lub konwersji na typy pierwotne danych; Te semantyki są definiowane przez magazynu lub w środowisku macierzystym. Zazwyczaj typów danych pierwotnych w EDM są mapowane odpowiednie typy pierwotne danych w pamięci masowej lub środowisku macierzystym. Aby uzyskać informacje dotyczące sposobu mapowania programu Entity Framework typów pierwotnych w EDM do typów danych programu SQL Server, zobacz [SqlClient dla jednostki FrameworkTypes](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
+# <a name="entity-data-model-primitive-data-types"></a>Model danych jednostki: Pierwotne typy danych
+Entity Data Model (EDM) obsługuje zestaw abstrakcyjne pierwotne typy danych (na przykład ciąg, wartość logiczna, Int32 i tak dalej), które są używane do definiowania [właściwości](../../../../docs/framework/data/adonet/property.md) w modelu koncepcyjnym. Te typy danych pierwotnych są serwery proxy dla rzeczywistego pierwotne typy danych, które są obsługiwane w magazynie, czy środowisko hostingu, takich jak bazy danych programu SQL Server lub środowisko uruchomieniowe języka wspólnego (CLR). EDM nie definiuje semantykę operacji lub przeliczeń za pośrednictwem pierwotne typy danych; Semantyka te są definiowane przez Magazyn lub środowisko hostingu. Zazwyczaj pierwotne typy danych w EDM są mapowane do odpowiedniego pierwotne typy danych w pamięci masowej lub środowisko hostingu. Aby dowiedzieć się, jak sposób Entity Framework mapowania typów pierwotnych w EDM do typów danych programu SQL Server, zobacz [SqlClient dla typów programu Entity Framework](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
   
 > [!NOTE]
 >  Nie obsługuje kolekcji typów danych pierwotnych EDM.  
   
- Aby uzyskać informacje o typach danych strukturalnych w EDM, zobacz [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) i [typu złożonego](../../../../docs/framework/data/adonet/complex-type.md).  
+ Aby uzyskać informacji na temat typów danych strukturalnych EDM, zobacz [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) i [typu złożonego](../../../../docs/framework/data/adonet/complex-type.md).  
   
-## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>Typy pierwotne danych obsługiwane w modelu danych jednostki  
- W poniższej tabeli przedstawiono typy pierwotne danych obsługiwane przez EDM. Podano również [aspekty](../../../../docs/framework/data/adonet/facet.md) który można zastosować do poszczególnych typów danych pierwotnych.  
+## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>Typy pierwotne danych obsługiwane w modelu Entity Data Model  
+ W poniższej tabeli przedstawiono typy pierwotne danych obsługiwane przez EDM. Podano również [aspektami](../../../../docs/framework/data/adonet/facet.md) , mogą być stosowane do poszczególnych typów danych pierwotnych.  
   
-|Typ danych pierwotnych|Opis|Zastosowanie aspektów|  
+|Typem danych pierwotnych|Opis|Zastosowanie zestawów reguł|  
 |-------------------------|-----------------|-----------------------|  
-|plików binarnych|Zawiera dane binarne.|Domyślna wartość parametru MaxLength, FixedLength wartości null,|  
-|Boolean|Zawiera wartość `true` lub `false`.|Wartości null, domyślny|  
-|Byte|Zawiera wartość bez znaku 8-bitową liczbą całkowitą.|Dokładność wartości null, domyślny|  
-|DataGodzina|Reprezentuje datę i godzinę.|Dokładność wartości null, domyślny|  
-|DateTimeOffset|Zawiera datę i godzinę jako przesunięcie w minutach od GMT.|Dokładność wartości null, domyślny|  
-|Wartość dziesiętna|Zawiera wartość liczbową ze stałym precyzję i skalę.|Dokładność wartości null, domyślny|  
-|Double|Zawiera zmiennoprzecinkowej numer z dokładnością do 15 cyfr.|Dokładność wartości null, domyślny|  
-|Float|Zawiera zmiennoprzecinkowej numer dokładności 7 cyfr.|Dokładność wartości null, domyślny|  
-|Identyfikator GUID|Zawiera unikatowy identyfikator 16 bajtów.|Dokładność wartości null, domyślny|  
-|Int16|Zawiera wartość całkowita 16-bitowych.|Dokładność wartości null, domyślny|  
-|Int32|Zawiera wartość całkowita 32-bitowa.|Dokładność wartości null, domyślny|  
-|Int64|Zawiera wartość całkowita 64-bitowa.|Dokładność wartości null, domyślny|  
-|SByte|Zawiera wartość całkowita 8-bitowa.|Dokładność wartości null, domyślny|  
-|String|Zawiera dane znaków.|Unicode, FixedLength, MaxLength, sortowania, dokładność, wartości null, domyślny|  
-|Godzina|Zawiera pora dnia.|Dokładność wartości null, domyślny|  
+|plików binarnych|Zawiera dane binarne.|Element MaxLength, wartości null, domyślne|  
+|Boolean|Zawiera wartość `true` lub `false`.|Wartość null, domyślne|  
+|Byte|Zawiera wartość Liczba całkowita bez znaku 8-bitowych.|Precyzja dopuszczającego wartość null, domyślny|  
+|DataGodzina|Reprezentuje datę i godzinę.|Precyzja dopuszczającego wartość null, domyślny|  
+|DateTimeOffset|Zawiera datę i godzinę w ciągu kilku minut od GMT przesunięcia.|Precyzja dopuszczającego wartość null, domyślny|  
+|Wartość dziesiętna|Zawiera wartość liczbową ze stałym dokładności i skali.|Precyzja dopuszczającego wartość null, domyślny|  
+|Double|Zawiera zmiennoprzecinkowa numer z dokładnością do 15 cyfr.|Precyzja dopuszczającego wartość null, domyślny|  
+|float|Zawiera zmiennoprzecinkowa numer z siedmiu cyfr precyzji.|Precyzja dopuszczającego wartość null, domyślny|  
+|Identyfikator GUID|Zawiera unikatowy identyfikator 16-bajtowy.|Precyzja dopuszczającego wartość null, domyślny|  
+|Int16|Zawiera wartość liczby całkowitej ze znakiem 16-bitowych.|Precyzja dopuszczającego wartość null, domyślny|  
+|Int32|Zawiera wartość całkowita 32-bitowa.|Precyzja dopuszczającego wartość null, domyślny|  
+|Int64|Zawiera wartość całkowita 64-bitowa.|Precyzja dopuszczającego wartość null, domyślny|  
+|SByte|Zawiera wartość całkowita 8-bitowa.|Precyzja dopuszczającego wartość null, domyślny|  
+|String|Zawiera dane znaków.|Unicode dla wpisu, MaxLength, sortowanie, dokładności, dopuszczającego wartość null, domyślne|  
+|Godzina|Zawiera porze dnia.|Precyzja dopuszczającego wartość null, domyślny|  
   
-## <a name="see-also"></a>Zobacz też  
- [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>Zobacz także
+- [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)

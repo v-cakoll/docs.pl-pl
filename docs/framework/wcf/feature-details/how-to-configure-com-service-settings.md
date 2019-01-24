@@ -1,17 +1,17 @@
 ---
-title: 'Porady: Konfigurowanie ustawień usługi COM +'
+title: 'Instrukcje: Konfigurowanie ustawień usługi COM+'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 9cbeb03e21ed3b8ec272d47815ac7e9c48d77499
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 8deb7be51cdf3273a57d6777b103123636a2d2f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49348773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637401"
 ---
-# <a name="how-to-configure-com-service-settings"></a>Porady: Konfigurowanie ustawień usługi COM +
+# <a name="how-to-configure-com-service-settings"></a>Instrukcje: Konfigurowanie ustawień usługi COM+
 Interfejs aplikacji są dodawane lub usuwane za pomocą narzędzia konfiguracji usług COM +, konfiguracji usługi sieci Web jest aktualizowana w pliku konfiguracji aplikacji. W trybie hostowanej modelu COM + plik Application.config jest umieszczany w katalogu głównym aplikacji (aplikacje %PROGRAMFILES%\ComPlus\\{appid} jest wartością domyślną). W obu trybach hostowanych w sieci Web w katalogu określonym vroot znajduje się plik Web.config.  
   
 > [!NOTE]
@@ -96,5 +96,5 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-* [Współdziałanie z aplikacjami COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+## <a name="see-also"></a>Zobacz także
+- [Współdziałanie z aplikacjami COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

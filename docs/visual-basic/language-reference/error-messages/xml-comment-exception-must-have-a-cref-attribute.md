@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: abe9fe0f6216f81fa223fe83a122b580577e1c32
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0f276781165e80b2d869da2518dbe34b33085d5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649950"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>Wyjątek komentarza XML musi mieć &#39;cref&#39; atrybutu
 \<Wyjątku > tag umożliwia dokumentowanie wyjątki, które mogą być generowane przez metodę. Wymagane `cref` atrybut określa nazwę elementu członkowskiego, która jest sprawdzana przez generator dokumentacji. Jeśli istnieje elementu członkowskiego, jest tłumaczony nazwy kanonicznej elementu w pliku dokumentacji.  
@@ -27,7 +27,7 @@ ms.locfileid: "43785560"
     '''<exception cref="member">description</exception>  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [\<wyjątku >](../../../visual-basic/language-reference/xmldoc/exception.md)  
- [Instrukcje: tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>Zobacz także
+- [\<wyjątku >](../../../visual-basic/language-reference/xmldoc/exception.md)
+- [Instrukcje: Tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)

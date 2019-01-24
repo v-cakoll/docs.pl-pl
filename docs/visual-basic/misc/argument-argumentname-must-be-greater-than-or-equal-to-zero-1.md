@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GEZero1
 ms.assetid: 6f54fdc6-e263-4b2f-a66f-f206f3a59818
-ms.openlocfilehash: 6c95f657c9032f9661cde77d4ad42bd8c1b6fc3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef130ce0cb3b7b65936dad3421dee101cfdca4c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624759"
 ---
 # <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to-zero"></a>Argument &lt;argumentname&gt; musi być większa lub równa zero
 Wartość argumentu jest mniejsza od zera. Wartości argumentu musi być większa lub równa zero.  
@@ -18,8 +18,8 @@ Wartość argumentu jest mniejsza od zera. Wartości argumentu musi być większ
   
 1.  Upewnij się, że wartość argumentu jest większa lub równa zero.  
   
-2.  Jeśli argument jest dostarczana przez obliczeń, sprawdź wartości przetwarzanych przez obliczenie.  
+2.  Jeśli argument jest dostarczana przez obliczenie, sprawdź wartości przetwarzanych przez obliczenie.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przekazywanie argumentów według wartości i według odwołania](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
+## <a name="see-also"></a>Zobacz także
+- [Przekazywanie argumentów według wartości i według odwołania](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
 

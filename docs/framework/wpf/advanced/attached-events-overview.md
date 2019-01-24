@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: c6a8b3b7355d315b83f859e7016018b56ade5484
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b82af44b1262f4eb2839efef85a4b35eba534524
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682959"
 ---
 # <a name="attached-events-overview"></a>Przegląd Załączone zdarzenia
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Definiuje składnika języka i typu zdarzenia o nazwie *dołączone zdarzenie*. Pojęcie dołączone zdarzenie umożliwia dodanie obsługi dla określonego zdarzenia do dowolnego elementu, a nie do elementu, który faktycznie definiuje lub dziedziczy zdarzenia. W tym przypadku obiekt potencjalnie podnoszonego zdarzenia ani docelowym wystąpienia obsługi definiuje lub w przeciwnym razie jego "właścicielem" zdarzenie.  
@@ -91,7 +91,7 @@ ms.locfileid: "47196346"
   
  Jednak jeśli definiujesz dołączone zdarzenia niestandardowego na podstawie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzeń dołączonych model oparty na <xref:System.Windows.RoutedEvent>, możesz użyć <xref:System.Windows.UIElement.RaiseEvent%2A> aby wywołać zdarzenie dołączonych za pomocą dowolnego <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement>. Podnoszenie zdarzenia trasowanego (dołączone, lub nie) wymaga zadeklarujesz konkretnego elementu w drzewie elementów jako źródło zdarzenia; to źródło jest zgłaszana jako <xref:System.Windows.UIElement.RaiseEvent%2A> obiektu wywołującego. Określanie, który element jest zgłaszana jako źródła w drzewie odpowiada z usługą  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Szczegóły składni XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [Klasy XAML i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Szczegóły składni XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [Klasy XAML i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

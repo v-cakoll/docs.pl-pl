@@ -2,12 +2,12 @@
 title: 'Instrukcje: Migrowanie usług sieci Web obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: cd630fa8a583b5d1efdaefaf899cb6e345e7c7ad
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638291"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Instrukcje: Migrowanie usług sieci Web obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF
 W tym temacie opisano procedury migracji podstawowej usługi ASP.NET AJAX do równoważne usługi obsługujące technologie AJAX Windows Communication Foundation (WCF). Widoczny jest sposób utworzyć funkcjonalnie równoważne wersję usługi ASP.NET AJAX WCF. Te dwie usługi mogą następnie służyć obok siebie lub usługi WCF umożliwia zastąpienie usługi ASP.NET AJAX.
@@ -22,11 +22,11 @@ W tym temacie opisano procedury migracji podstawowej usługi ASP.NET AJAX do ró
 
  Kod, który jest wynikiem procedury opisane w tym temacie podano w przykładzie zamieszczonym procedur.
 
- Aby uzyskać więcej informacji na temat udostępniania usługi WCF, za pośrednictwem punktu końcowego z włączoną obsługą technologii AJAX, zobacz [porady: Użyj konfiguracji, aby dodać punktu końcowego AJAX ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) tematu.
+ Aby uzyskać więcej informacji na temat udostępniania usługi WCF, za pośrednictwem punktu końcowego z włączoną obsługą technologii AJAX, zobacz [jak: Dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) tematu.
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Do tworzenia i testowania aplikacji usługi sieci Web platformy ASP.NET
 
-1.  Otwórz program Visual Studio 2012.
+1.  Open Visual Studio 2012.
 
 2.  Z **pliku** menu, wybierz opcję **nowy**, następnie **projektu**, następnie **Web**, a następnie wybierz pozycję **aplikacji usługi sieci Web platformy ASP.NET** .
 
@@ -201,7 +201,7 @@ d.Add("two", 2);
 
  Znaczne różnice między tymi serializatory podsumowano w poniższej tabeli.
 
-|Kategoria różnice|Klasa DataContractJsonSerializer|JavaScriptSerializer AJAX programu ASP.NET|
+|Kategoria różnice|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |Podczas deserializacji pusty bufor (nowe byte[0]) do <xref:System.Object> (lub <xref:System.Uri>, lub niektóre inne klasy).|SerializationException|null|
 |Serializacja <xref:System.DBNull.Value>|{} (lub {"__type": "#System"})|Null|
@@ -212,5 +212,5 @@ d.Add("two", 2);
 |Reprezentacja słowników|Tablica KeyValuePair\<K, V >, obsługuje typy kluczy, które nie są ciągami.|Jako rzeczywistych obiektów JSON — ale jedyne typy kluczy uchwyty, które są ciągami.|
 |Znaki ucieczki|Zawsze za pomocą ucieczki ukośnika (/); nigdy nie umożliwia niezmieniony nieprawidłowe znaki JSON, takich jak "\n".|Za pomocą ucieczki ukośnika (/) dla wartości daty/godziny.|
 
-## <a name="see-also"></a>Zobacz też
- [Instrukcje: dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

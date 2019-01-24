@@ -8,20 +8,20 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 2d263fd64475d119d536e7cef69896fcfa5ae42c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4daa0d133342d2bbbf4dd716246d8ba90e49ef9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183701"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685042"
 ---
 # <a name="ltmodulegt-element-network-settings"></a>&lt;Moduł&gt; — Element (ustawienia sieci)
 Dodaje nowy moduł serwera proxy aplikacji.  
   
  \<Konfiguracja >  
 \<system.net>  
-\<defaultProxy — >  
-\<Moduł >  
+\<defaultProxy>  
+\<module>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ Dodaje nowy moduł serwera proxy aplikacji.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[defaultProxy —](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).|  
   
 ## <a name="remarks"></a>Uwagi  
  `module` Element rejestruje klasy serwera proxy, które implementują <xref:System.Net.IWebProxy> interfejsu. Po zarejestrowaniu klasy proxy `module` może służyć do żądania informacji za pośrednictwem obsługiwanych serwera proxy.  
@@ -72,6 +72,6 @@ Dodaje nowy moduł serwera proxy aplikacji.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.IWebProxy?displayProperty=nameWithType>
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

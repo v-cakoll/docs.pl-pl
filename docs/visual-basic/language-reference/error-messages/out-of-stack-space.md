@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: e39be5913fe877cf7b3396e4f13f4440288cb8f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f91763888069b6dca90da03995dc1b6812fd426
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655494"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Za mało miejsca na stosie (Visual Basic)
-Stos jest obszar roboczy pamięci, który powiększa się i zmniejsza dynamicznie z wymaganiami wykonywania programu. Przekroczono limit.  
+Stos jest pracy obszaru pamięci, która zwiększania lub zmniejszania dynamicznie z zapotrzebowaniem na zasoby wykonywania programu. Przekroczono limit.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
@@ -20,13 +20,13 @@ Stos jest obszar roboczy pamięci, który powiększa się i zmniejsza dynamiczni
   
 2.  Upewnij się, że procedury rekurencyjne kończą się poprawnie.  
   
-3.  Jeśli zmienne lokalne wymagają lokalnej zmiennej miejsca niż jest dostępne, spróbuj deklarowanie niektóre zmienne na poziomie modułu. Można również zadeklarować wszystkie zmienne w procedurze statycznych poprzedzając `Property`, `Sub`, lub `Function` — słowo kluczowe z `Static`. Możesz też użyć `Static` instrukcji, aby zadeklarować poszczególnych zmiennych statycznych w ramach procedur.  
+3.  Jeśli zmienne lokalne wymagają lokalnej zmiennej miejsca niż dostępna, spróbuj deklarowanie niektóre zmienne na poziomie modułu. Można również zadeklarować wszystkie zmienne w procedurze statyczne poprzedzając `Property`, `Sub`, lub `Function` — słowo kluczowe z `Static`. Możesz też `Static` instrukcję, aby zadeklarować poszczególnych zmiennych statycznych w ramach procedur.  
   
-4.  Niektóre z ciągi o stałej długości jako ciągi o zmiennej długości przedefiniować jako ciągi o stałej długości Użyj więcej miejsca na stosie niż ciągi o zmiennej długości. Można również zdefiniować ciąg na poziomie modułu, których wymaga miejsca na stosie.  
+4.  Niektóre z Twoimi ciągami o stałej długości, jako ciągi o zmiennej długości przedefiniować jako ciągi o stałej długości Użyj więcej miejsca na stosie niż ciągi o zmiennej długości. Można również zdefiniować ciąg na poziomie modułu wymagającym nie obszar stosu.  
   
-5.  Sprawdź liczbę zagnieżdżonych `DoEvents` funkcji wywołań, za pomocą `Calls` okno dialogowe do widoku, które procedury są aktywne na stosie.  
+5.  Sprawdź liczbę zagnieżdżonych `DoEvents` funkcję wywołania, przy użyciu `Calls` okno dialogowe do widoku, które procedury są aktywne na stosie.  
   
-6.  Upewnij się, że nie spowodowało "cascade zdarzeń" wyzwalając zdarzenie, które wywołuje procedurę zdarzenia już na stosie. Cascade zdarzeń jest podobny do niezakończony procedur rekursja, ale jest mniej oczywista, ponieważ połączenie jest nawiązywane przez zamiast jawnego wywołania w kodzie języka Visual Basic. Użyj `Calls` okno dialogowe do widoku, które procedury są aktywne na stosie.  
+6.  Upewnij się, że nie był przyczyną "cascade zdarzeń", wyzwalając zdarzenie, które wywołuje procedury zdarzenia już na stosie. Kaskadowe zdarzeń jest podobny do niezakończony cykliczne wywołanie procedury, ale jest mniej oczywistych, ponieważ jest nawiązywane połączenie, zamiast jawnego wywołania w kodzie języka Visual Basic. Użyj `Calls` okno dialogowe do widoku, które procedury są aktywne na stosie.  
   
-## <a name="see-also"></a>Zobacz też  
- [Okno pamięci](/visualstudio/debugger/memory-windows)
+## <a name="see-also"></a>Zobacz także
+- [Okna pamięci](/visualstudio/debugger/memory-windows)

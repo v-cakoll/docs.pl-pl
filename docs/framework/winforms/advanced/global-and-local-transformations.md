@@ -9,57 +9,57 @@ helpviewer_keywords:
 - transformations [Windows Forms], global
 - transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-ms.openlocfilehash: a5a8201f0adb44347bdd42081e0263176d179321
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc23478cc4aaa51af3ff15bcc3c63590e7a8dcb2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630882"
 ---
 # <a name="global-and-local-transformations"></a>Globalne i lokalne przekształcenia
-Globalne przekształcenie jest transformację, która ma zastosowanie do każdego elementu narysowanymi przez dany <xref:System.Drawing.Graphics> obiektu. Z kolei transformację lokalnego jest transformację, która ma zastosowanie do określonego elementu do narysowania.  
+Globalne przekształcenie jest przekształcenie, które mają zastosowanie do każdego elementu narysowanymi przez dany <xref:System.Drawing.Graphics> obiektu. Z kolei lokalnego transformacji jest przekształcenie, które mają zastosowanie do określonego elementu do narysowania.  
   
 ## <a name="global-transformations"></a>Globalne przekształcenia  
- Aby utworzyć transformację globalnego, należy utworzyć <xref:System.Drawing.Graphics> obiekt, a następnie wykonywać jego <xref:System.Drawing.Graphics.Transform%2A> właściwości. <xref:System.Drawing.Graphics.Transform%2A> Jest właściwość <xref:System.Drawing.Drawing2D.Matrix> obiektu, więc może zawierać żadnych sekwencji affine — przekształcenia. Transformacja przechowywane w <xref:System.Drawing.Graphics.Transform%2A> właściwości jest wywoływana transformacji świata. <xref:System.Drawing.Graphics> Klasa udostępnia kilka metod budowania przekształcenia złożonego world: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A>, i <xref:System.Drawing.Graphics.TranslateTransform%2A>. Poniższy przykład Rysuje elipsę dwa razy: raz w przed utworzeniem transformacja świata i jeden raz po. Transformacja skaluje najpierw według współczynnika 0,5 w kierunku y, a następnie wykonuje translację 50 jednostek w kierunku x i obraca się 30 stopni.  
+ Aby utworzyć przekształcenie globalnego, należy utworzyć <xref:System.Drawing.Graphics> obiektu, a następnie manipulować jego <xref:System.Drawing.Graphics.Transform%2A> właściwości. <xref:System.Drawing.Graphics.Transform%2A> Właściwość <xref:System.Drawing.Drawing2D.Matrix> obiektu, dzięki czemu może on przechowywać dowolnej sekwencji affine — przekształcenia. Transformacja przechowywane w <xref:System.Drawing.Graphics.Transform%2A> właściwość nazywa się transformacji świata. <xref:System.Drawing.Graphics> Klasa udostępnia kilka metod budowania transformacji świata złożonego: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A>, i <xref:System.Drawing.Graphics.TranslateTransform%2A>. Poniższy przykład Rysuje elipsę dwa razy: raz przed tworzeniem transformacji świata i jeden raz po. Przekształcenie najpierw skaluje o 0,5 w kierunku y, a następnie tłumaczy 50 jednostek w kierunku x, a następnie obraca się 30 stopni.  
   
  [!code-csharp[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#21)]  
   
- Na poniższej ilustracji przedstawiono objętego przekształcenia macierzy.  
+ Poniższa ilustracja przedstawia macierzy zaangażowanych w transformacji.  
   
  ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")  
   
 > [!NOTE]
->  W powyższym przykładzie elipsy obraca się wokół pochodzenia współrzędnych, która jest w lewym górnym rogu obszaru klienckiego. To daje różne wyniki niż obracanie elipsy temat własnego Centrum.  
+>  W powyższym przykładzie elipsy jest obracany o pochodzenie współrzędnych, który znajduje się w lewym górnym rogu obszaru klienta. To daje różne wyniki niż obracanie elipsę o własne Centrum.  
   
 ## <a name="local-transformations"></a>Lokalne przekształcenia  
- Transformację lokalnego ma zastosowanie do określonego elementu do narysowania. Na przykład <xref:System.Drawing.Drawing2D.GraphicsPath> obiekt ma <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> — metoda, która pozwala na Przekształcanie punktów danych tej ścieżki. Poniższy przykład rysuje prostokąt z nie transformacji i ścieżki z transformację obrotu. (Przyjmowane jest nie transformacja świata).  
+ Lokalne przekształcenia mają zastosowanie do określonego elementu do narysowania. Na przykład <xref:System.Drawing.Drawing2D.GraphicsPath> obiekt ma <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> metodę, która umożliwia przekształcenie punktów danych tej ścieżki. Poniższy przykład rysuje prostokąt o nie przekształcania i ścieżki z transformacji obrotu. (Przyjęto założenie, że nie istnieje żadne transformacji świata).  
   
  [!code-csharp[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#22)]  
   
- Transformacja świata przekształceń lokalnego, aby uzyskać różne wyniki można łączyć. Na przykład można transformacji świata korygowanie współrzędnych i lokalne przekształcenia umożliwia obracanie i skalowanie obiektów na nowy układ współrzędnych.  
+ Można połączyć transformacji świata przekształceń lokalne, aby uzyskać różne wyniki. Na przykład można użyć transformacji świata korygowanie w układzie współrzędnych i za pomocą lokalnego przekształcania obracać i skalować obiektów na nowy układ współrzędnych.  
   
- Załóżmy, że ma układ współrzędnych, jego pochodzenie 200 pikseli od lewej krawędzi obszaru klienckiego i 150 pikseli od góry obszaru klienckiego. Ponadto wariantem jednostki miary być pikseli, o wskazanie osi y skierowany w górę i prawej osi x. Domyślny układ współrzędnych ma osi y skierowany w dół, więc należy przeprowadzić odbicie wzdłuż osi poziomej. Na poniższej ilustracji przedstawiono macierzy takie odbicia.  
+ Załóżmy, że chcesz, aby system współrzędnych, jego pochodzenie 200 pikseli od lewej krawędzi obszaru klienta i 150 pikseli od górnej krawędzi obszaru klienta. Ponadto Załóżmy, mają jednostka miary jako pikseli, za pomocą osi x, wskazując i prawej osi y skierowana w górę. System współrzędnych domyślne ma osi y skierowany w dół, więc trzeba wykonać odbicie wzdłuż osi poziomej. Poniższa ilustracja przedstawia macierz takich odbicia.  
   
  ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")  
   
- Następnie przyjęto założenie, że należy przeprowadzić translacji 200 w prawo i 150 jednostek w dół.  
+ Następnie przyjęto założenie, że trzeba wykonać 200 jednostek tłumaczenia, z prawej strony i 150 jednostki w dół.  
   
- Poniższy przykład ustanawia współrzędnych właśnie opisanego przez ustawienie transformacji świata <xref:System.Drawing.Graphics> obiektu.  
+ Poniższy przykład określa układ współrzędnych właśnie opisanego przez ustawienie transformacji świata z <xref:System.Drawing.Graphics> obiektu.  
   
  [!code-csharp[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#23)]  
   
- Poniższy kod (umieszczona na końcu powyższego przykładu) tworzy ścieżki, która składa się z jednego prostokąt z jego lewym dolnym rogu źródłem nowy układ współrzędnych. Prostokąt jest wypełniana raz nie transformację lokalnych i drugi raz z transformację lokalnego. Transformacja lokalnego składa się z skalowanie w poziomie przez współczynnik 2 następuje 30 stopni.  
+ Poniższy kod (umieszczona na końcu poprzedniego przykładu) tworzy ścieżki, która składa się z pojedynczego prostokąt z jego lewego dolnego rogu w źródle nowy układ współrzędnych. Prostokąt jest wypełniana po nie lokalnych transformacji i drugi raz lokalne przekształcenia. Przekształcenie lokalne składa się z skalowanie w poziomie przez współczynnik 2 następuje 30 stopni.  
   
  [!code-csharp[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#24)]
  [!code-vb[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#24)]  
   
- Na poniższej ilustracji przedstawiono nowe współrzędnych i prostokąty dwa.  
+ Na poniższej ilustracji przedstawiono nowy układ współrzędnych i dwoma prostokątami.  
   
  ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")  
   
-## <a name="see-also"></a>Zobacz też  
- [Systemy i przekształcenia współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
- [Używanie przekształceń w zarządzanym GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a>Zobacz także
+- [Systemy i przekształcenia współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+- [Używanie przekształceń w zarządzanym GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

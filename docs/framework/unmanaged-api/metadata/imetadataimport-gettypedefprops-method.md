@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa69eda974187748d7046c792fa16b7729e3deff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12adffbfeb2ce6271774cf44c1a913d7a1414ba4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718614"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps — Metoda
 Zwraca informacje o metadanych <xref:System.Type> reprezentowany przez określony token TypeDef.  
@@ -42,32 +42,32 @@ HRESULT GetTypeDefProps (
   
 #### <a name="parameters"></a>Parametry  
  `td`  
- [in] TypeDef token, który reprezentuje typ do zwracania metadanych dla.  
+ [in] TypeDef token, który reprezentuje typ, można zwrócić metadanych dla.  
   
  `szTypeDef`  
- [out] Bufor zawierający nazwy typu.  
+ [out] Bufor zawierający nazwę typu.  
   
  `cchTypeDef`  
- [in] Rozmiar w znaki dwubajtowe `szTypeDef`.  
+ [in] Rozmiar w znaków `szTypeDef`.  
   
  `pchTypeDef`  
- [out] Liczba zwracanych w znaki dwubajtowe `szTypeDef`.  
+ [out] Liczba znaków dwubajtowych zwracane w `szTypeDef`.  
   
  `pdwTypeDefFlags`  
- [out] Wskaźnik do żadnych flag, które modyfikują definicji typu. Ta wartość jest maską bitów z [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) wyliczenia.  
+ [out] Wskaźnik do flag, które modyfikują definicji typu. Ta wartość jest z [cortypeattr —](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) wyliczenia.  
   
  `ptkExtends`  
- [out] Element TypeDef ani TypeRef metadanych token, który reprezentuje typ podstawowy elementu żądanego typu.  
+ [out] Element TypeDef lub TypeRef metadanych token, który reprezentuje typ podstawowy elementu żądanego typu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

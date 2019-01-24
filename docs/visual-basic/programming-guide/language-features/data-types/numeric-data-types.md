@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 6578a410e389a313b0bad70f043691240e288887
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1188e8288bb73a49acc3e3bf0f72e3ac4fef5f7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636425"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Numeric — Typ danych (Visual Basic)
 Visual Basic dostarcza kilka *typy danych numerycznych* do obsługi liczb w różnych reprezentacji. *Całkowite* typy reprezentują tylko liczby całkowite (dodatnie, ujemne i zera), i *nonintegral* typy reprezentujące liczby zarówno liczba całkowita, jak i ułamkowe.  
@@ -78,9 +78,9 @@ Visual Basic dostarcza kilka *typy danych numerycznych* do obsługi liczb w ró�
 ### <a name="small-fractional-numbers"></a>Małe liczb ułamkowych  
  Jeśli nie potrzebujesz pełnego zakresu `Double` typu danych, można użyć `Single` typ danych, który może zawierać liczb zmiennoprzecinkowych z - 3.4028235E + 38, za pośrednictwem 3.4028235E + 38. Najmniejsza wielkości dla `Single` zmienne są - 1, 401298E-45 dla wartości ujemnych i 1, 401298E-45 dla wartości dodatnich. W przypadku bardzo dużej liczby zmiennych, które pełnią small zmiennopozycyjnych środowiska uruchomieniowego języka wspólnego czasami mogą przechowywać swoje `Single` zmienne bardziej wydajnie, a następnie zapisz zużycie pamięci.  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Znakowe typy danych](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- [Różne typy danych](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Instrukcje: wywoływanie funkcji Windows wykorzystującej typy bez znaku](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Znakowe typy danych](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
+- [Różne typy danych](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)
+- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Instrukcje: wywoływanie funkcji systemu Windows wykorzystującej typy bez znaku](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

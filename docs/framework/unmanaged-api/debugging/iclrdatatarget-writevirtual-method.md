@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e55bc18c7a41e235d1ba6274067c45c26dc7262a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 540f9d1a765ff46235f3c3d62f5da4a00b8ab85a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745483"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual — Metoda
-Zapisuje dane z określonego bufora na adres określony pamięci wirtualnej.  
+Zapisuje dane z określonego bufora do adresu określonego pamięci wirtualnej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ HRESULT WriteVirtual (
   
 #### <a name="parameters"></a>Parametry  
  `address`  
- [in] CLRDATA_ADDRESS, która przechowuje adresów pamięci wirtualnej.  
+ [in] CLRDATA_ADDRESS, która przechowuje adres pamięci wirtualnej.  
   
  `buffer`  
  [in] Wskaźnik do buforu, który przechowuje dane do zapisania.  
@@ -50,10 +50,10 @@ HRESULT WriteVirtual (
  [in] Liczba bajtów do zapisania.  
   
  `bytesWritten`  
- [out] Wskaźnik do rzeczywistą liczbę bajtów, które zostały zapisane.  
+ [out] Wskaźnik do rzeczywistej liczby bajtów, które zostały napisane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData.idl, ClrData.h  
   
@@ -61,5 +61,5 @@ HRESULT WriteVirtual (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

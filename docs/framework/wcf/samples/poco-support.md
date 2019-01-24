@@ -2,12 +2,12 @@
 title: Obsługa obiektów POCO
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: bb4f8b0a5eb20be50a2d3ba9a15d66fd7fc573f8
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8d94d6a9700c38014aa53ee9910b53239fc28b0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640034"
 ---
 # <a name="poco-support"></a>Obsługa obiektów POCO
 Niniejszy przykład pokazuje obsługę serializacji typów nieoznaczone. oznacza to typów, do których nie zostały zastosowane atrybutów serializacji, czasami określane jako typy zwykłe stare CLR obiektu (— POCO). <xref:System.Runtime.Serialization.DataContractSerializer> Wnioskuje kontraktu danych dla wszystkich publicznych nieoznaczone typy, które mają domyślnego konstruktora. Kontrakty danych umożliwia przekazanie ze strukturą danych do i z usługi. Aby uzyskać więcej informacji na temat nieoznaczone typy zobacz [typów możliwych do serializacji](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
@@ -56,6 +56,6 @@ public class ComplexNumber
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\POCO`  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>  
- [Typy z możliwością serializowania](../../../../docs/framework/wcf/feature-details/serializable-types.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
+- [Typy z możliwością serializowania](../../../../docs/framework/wcf/feature-details/serializable-types.md)

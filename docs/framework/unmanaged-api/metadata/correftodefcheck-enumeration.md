@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5caf432b5de7cb0c8ff0e6f53b3e79a64ecf802e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a54b20ecf34ecf1824420fcbb3d45fba64017b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657197"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck — Wyliczenie
-Określa flagi kontrolujące elementy do którego istnieje odwołanie, które są konwertowane na ich definicje w celu optymalizacji kodu.  
+Określa flagi do kontroli, do którego istnieje odwołanie elementy, które są konwertowane na ich definicji w celu optymalizacji kodu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,18 +42,18 @@ typedef enum CorRefToDefCheck {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Określa, że odwołania do typu i odwołania do elementu członkowskiego powinny być konwertowane do definicji. Jest to wartość domyślna (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Określa, że wszystkie elementy z którym związane są odwołania powinny być konwertowane do definicji.|  
-|`MDRefToDefNone`|Określa, że nie przywoływanych elementów powinny być konwertowane do definicji.|  
-|`MDTypeRefToDef`|Określa, że tylko odwołania do typu powinny być konwertowane na typ definicje.|  
-|`MDMemberRefToDef`|Określa, że tylko odwołania do elementu członkowskiego powinny być konwertowane do definicji. Oznacza to, że odwołania do elementu członkowskiego powinny być konwertowane na definicjami metod lub definicje pól.|  
+|`MDRefToDefDefault`|Określa, czy typ odwołania i odwołania do elementu członkowskiego powinny być konwertowane do definicji. Jest to wartość domyślna (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefAll`|Określa, że wszystkie elementy odwołania powinny być konwertowane do definicji.|  
+|`MDRefToDefNone`|Określa, że żadne elementy odwołania powinny być konwertowane na definicje.|  
+|`MDTypeRefToDef`|Określa, że tylko typ odwołania powinny być konwertowane na definicje typów.|  
+|`MDMemberRefToDef`|Określa, że tylko odwołania do elementu członkowskiego powinny być konwertowane do definicji. Oznacza to, że odwołania do elementu członkowskiego powinny być konwertowane na definicje metod lub definicje pól.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

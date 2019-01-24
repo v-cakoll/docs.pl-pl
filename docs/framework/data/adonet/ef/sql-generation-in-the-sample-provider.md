@@ -2,12 +2,12 @@
 title: Generowanie kodu SQL w dostawcy próbki
 ms.date: 03/30/2017
 ms.assetid: e70f553d-4622-4627-928e-1aa2ee605d8e
-ms.openlocfilehash: 5aa6e31cfc93a4ae1871da63f466864b4ea6f5d9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b2397570bb5f312aa6a3955a76234bde508fcc6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505507"
 ---
 # <a name="sql-generation-in-the-sample-provider"></a>Generowanie kodu SQL w dostawcy próbki
 [Dostawcy programu Entity Framework przykładowe](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) pokazuje nowe składniki dostawcy danych ADO.NET, który obsługuje [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  Z bazą danych programu SQL Server 2005 i lepiej jest implementowany jako otoki dla dostawcy danych System.Data.SqlClient ADO.NET w wersji 2.0.  
@@ -19,7 +19,7 @@ ms.locfileid: "53149721"
   
  [Architektura i projekt](../../../../../docs/framework/data/adonet/ef/architecture-and-design.md)  
   
- [Wskazówki: Generowanie kodu SQL](../../../../../docs/framework/data/adonet/ef/walkthrough-sql-generation.md)  
+ [Przewodnik: Generowanie kodu SQL](../../../../../docs/framework/data/adonet/ef/walkthrough-sql-generation.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Generowanie kodu SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Zobacz także
+- [Generowanie kodu SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

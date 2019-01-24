@@ -2,12 +2,12 @@
 title: Przykład technologii serializacji typów ogólnych usług sieci Web
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: b233ed4374231c7e7ff2b6617a63c4e4c94612c2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 27e0a7621bc77b62e36a0bbbdfa25f0ec3778798
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636589"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Przykład technologii serializacji typów ogólnych usług sieci Web
 [Pobierz przykładowe](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -65,8 +65,8 @@ ms.locfileid: "47108939"
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections.Generic>  
-- <xref:System.Web.Services>  
-- <xref:System.Xml.Serialization>  
-- [Serializacja](../../../docs/standard/serialization/index.md)  
+- <xref:System.Collections.Generic>
+- <xref:System.Web.Services>
+- <xref:System.Xml.Serialization>
+- [Serializacja](../../../docs/standard/serialization/index.md)
 - [Usługi sieci Web XML utworzone za pomocą platformy ASP.NET i klientów usługi sieci Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

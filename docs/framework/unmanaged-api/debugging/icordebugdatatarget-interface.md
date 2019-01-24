@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 972c650e0fb3b42e943838b72faf2658f65543ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53c054b59376a78eda83181e75aec94548e92f17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499823"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget — Interfejs
 Dostarcza interfejs wywołania zwrotnego, który zapewnia dostęp do konkretnego procesu docelowego.  
@@ -30,28 +30,28 @@ Dostarcza interfejs wywołania zwrotnego, który zapewnia dostęp do konkretnego
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetPlatform, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|Zawiera informacje o platformie, w tym architektury procesora i systemu operacyjnego, na którym jest uruchomiony proces docelowy.|  
-|[ReadVirtual, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|Pobiera blok pamięci ciągłej, zaczynając od określonego adresu i zwraca go do dostarczonego buforu.|  
+|[GetPlatform, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|Zawiera informacje dotyczące platformy, w tym architektury procesora i systemu operacyjnego, na którym jest uruchomiony proces docelowy.|  
+|[ReadVirtual, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|Pobiera blok pamięci ciągłej uruchamianie pod podanym adresem i zwraca go w dostarczony bufor.|  
 |[GetThreadContext, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|Żąda bieżący kontekst wątku określonego wątku.|  
   
 ## <a name="remarks"></a>Uwagi  
- `ICorDebugDataTarget` i jego metody mają następujące cechy:  
+ `ICorDebugDataTarget` i jego metody mają następującą charakterystykę:  
   
--   Debugowanie usług wywoływać metod w tym interfejsie dostęp do pamięci i innych danych w procesie docelowym.  
+-   Debugowanie usług wywoływać metody, w tym interfejsie dostępu do pamięci i innych danych w procesie docelowym.  
   
--   Klient debugera musi implementować ten interfejs na potrzeby określonego elementu docelowego (na przykład procesu na żywo lub zrzut pamięci).  
+-   Klient debugera musi implementować ten interfejs stosownie do określonego celu (na przykład żywy proces lub zrzutu pamięci).  
   
--   `ICorDebugDataTarget` Metody można wywołać tylko z wewnątrz metody implementowane w innych `ICorDebug*` interfejsów. Dzięki temu klient debugera ma kontroli, przez który wątek jest wywoływana na i.  
+-   `ICorDebugDataTarget` Metody może być wywołana tylko z w ramach metod zaimplementowanych w innych `ICorDebug*` interfejsów. Daje to gwarancję, że klient debugera ma kontroluje, przez który wątek jest wywoływana na i.  
   
--   `ICorDebugDataTarget` Implementacji zawsze musi zwracać aktualnych informacji dotyczących obiektu docelowego.  
+-   `ICorDebugDataTarget` Implementacji zwracana zawsze aktualne informacje dotyczące obiektu docelowego.  
   
- Proces docelowy powinien zatrzymana i nie uległy zmianie w jakikolwiek sposób podczas `ICorDebug*` interfejsów (i w związku z tym `ICorDebugDataTarget` metody) są wywoływane. Jeśli obiektem docelowym jest procesem na żywo i jego zmiany stanu [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) metoda musi ponownie wywołany, aby zapewnić wystąpienie ICorDebugProcess zastąpienia.  
+ Proces docelowy powinien być zatrzymana i nie uległy zmianie w jakikolwiek sposób podczas `ICorDebug*` interfejsów (i w związku z tym `ICorDebugDataTarget` metody) jest wywoływana. Jeśli obiektem docelowym są żywy proces i zmiany jego stanu, [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) metoda musi zostać ponownie wywoływana w celu zapewnienia wystąpienia icordebugprocess — zastąpienie.  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -59,6 +59,6 @@ Dostarcza interfejs wywołania zwrotnego, który zapewnia dostęp do konkretnego
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

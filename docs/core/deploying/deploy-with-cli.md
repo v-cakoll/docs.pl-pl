@@ -1,207 +1,168 @@
 ---
-title: Wdrażanie aplikacji .NET Core przy użyciu narzędzi interfejsu wiersza polecenia (CLI)
-description: Dowiedz się, jak wdrożyć aplikację platformy .NET Core za pomocą narzędzi interfejsu wiersza polecenia (CLI)
-author: rpetrusha
-ms.author: ronpet
-ms.date: 09/05/2018
+title: Publikowanie .NET Core z aplikacji przy użyciu interfejsu wiersza polecenia
+description: Dowiedz się opublikować aplikację platformy .NET Core za pomocą narzędzi interfejsu wiersza polecenia (CLI) platformy .NET Core SDK.
+author: thraka
+ms.author: adegeo
+ms.date: 01/16/2019
 dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504005"
 ---
-# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>Wdrażanie aplikacji .NET Core przy użyciu narzędzi interfejsu wiersza polecenia (CLI)
+# <a name="publish-net-core-apps-with-the-cli"></a>Publikowanie .NET Core z aplikacji przy użyciu interfejsu wiersza polecenia
 
-Możesz wdrożyć aplikację platformy .NET Core albo jako *wdrożenia zależny od struktury*, który zawiera pliki binarne aplikacji, ale zależy od obecności platformy .NET Core w systemie docelowym lub jako *niezależna wdrożenie*, który zawiera pliki binarne .NET Core i aplikacji. Aby uzyskać przegląd, zobacz [wdrożenie aplikacji programu .NET Core](index.md).
+W tym artykule przedstawiono, jak opublikować aplikację .NET Core z poziomu wiersza polecenia. .NET core udostępnia trzy sposoby na publikowanie własnych aplikacji. Wdrożenie zależny od struktury tworzy plik .dll dla wielu platform, który używa zainstalowane lokalnie środowisko uruchomieniowe platformy .NET Core. Plik wykonywalny zależny od struktury tworzy specyficzne dla platformy plik wykonywalny, który używa zainstalowane lokalnie środowisko uruchomieniowe platformy .NET Core. Plik wykonywalny niezależna tworzy wykonywalnej specyficzne dla platformy i obejmuje lokalną kopię środowisko uruchomieniowe platformy .NET Core.
 
-W poniższych sekcjach opisano sposób użycia [narzędzi interfejsu wiersza polecenia platformy .NET Core](../tools/index.md) do tworzenia następujących rodzajów wdrożenia:
+Omówienie tych trybów publikowania, zobacz [wdrożenie aplikacji programu .NET Core](index.md). 
 
-- Wdrożenie zależny od struktury
-- Wdrażanie zależny od struktury za pomocą zależności innych firm
-- Niezależne wdrożenia
-- Niezależne wdrożenia przy użyciu zależności innych firm
+Szukasz szybkiego pomocy przy użyciu interfejsu wiersza polecenia? W poniższej tabeli przedstawiono kilka przykładów sposobu publikowania aplikacji. Można określić platformę docelową z `-f <TFM>` parametru lub przez edycję pliku projektu. Aby uzyskać więcej informacji, zobacz [publikowania podstawy](#publishing-basics).
 
-Podczas pracy z poziomu wiersza polecenia, można użyć dowolnego edytora w programie. Jeśli Edytor programu [programu Visual Studio Code](https://code.visualstudio.com), można otworzyć konsoli poleceń w środowisku Visual Studio Code, wybierając **widoku** > **zintegrowany Terminal**.
+| Tryb publikowania | Wersja zestawu SDK | Polecenie |
+| ------------ | ----------- | ------- |
+| Wdrożenie zależny od struktury | 2.x | `dotnet publish -c Release` |
+| Plik wykonywalny zależny od struktury | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0* | `dotnet publish -c Release` |
+| Niezależne wdrożenia      | 2.1 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
+
+>[!IMPORTANT]
+>\*Korzystając z zestawu SDK w wersji 3.0 lub nowszej, plik wykonywalny zależny od struktury jest to domyślny tryb publikowania podczas uruchamiania podstawowego `dotnet publish` polecenia. Dotyczy tylko projektów przeznaczonych **platformy .NET Core 2.1** lub **.NET Core 3.0 to**.
+
+## <a name="publishing-basics"></a>Podstawy publikowania
+
+`<TargetFramework>` Ustawienie pliku projektu określa platformę docelową domyślne podczas publikowania aplikacji. Możesz zmienić platformę docelową na dowolne, prawidłowe [Moniker Framework docelowych (TFM)](../../standard/frameworks.md). Na przykład, jeśli projekt używa `<TargetFramework>netcoreapp2.2</TargetFramework>`, zostanie utworzony plik binarny, który jest przeznaczony dla platformy .NET Core 2.2. TFM określone w tym ustawieniu jest używany przez domyślny element docelowy [ `dotnet publish` ] [ dotnet-publish] polecenia.
+
+Jeśli chcesz przeanalizować więcej niż jednej struktury, możesz ustawić `<TargetFrameworks>` ustawienie do więcej niż jednego elementu TFM wartości, rozdzielając je średnikiem. Możesz opublikować jedną z platform z `dotnet publish -f <TFM>` polecenia. Na przykład, jeśli masz `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` i uruchom `dotnet publish -f netcoreapp2.1`, zostanie utworzony plik binarny, który jest przeznaczony dla platformy .NET Core 2.1.
+
+Chyba że inaczej ustawiony, katalog wyjściowy [ `dotnet publish` ] [ dotnet-publish] polecenie jest `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Wartość domyślna **konfigurację kompilacji** tryb jest **debugowania** , chyba że zmieniono za pomocą `-c` parametru. Na przykład `dotnet publish -c Release -f netcoreapp2.1` publikuje `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+
+Jeśli używasz platformy .NET Core SDK 3.0, domyślnie opublikować tryb dla aplikacji, czy docelowej platformy .NET Core w wersji 2.1, 2.2 lub 3.0 jest zależny od struktury pliku wykonywalnego.
+
+Jeśli używasz platformy .NET Core SDK 2.1, domyślnie opublikować tryb dla wersji docelowej platformy .NET Core 2.1, 2.2 to wdrożenie zależny od struktury aplikacji.
+
+### <a name="native-dependencies"></a>Natywne zależności
+
+Jeśli aplikacja ma zależności natywnych, może nie działać w innym systemie operacyjnym. Na przykład jeśli aplikacja używa natywnego interfejsu API Win32, nie będzie uruchomić w systemie macOS lub Linux. Będzie konieczne podanie kodu specyficznego dla platformy i skompiluj plik wykonywalny dla każdej platformy. 
+
+Rozważ również, jeśli biblioteka odwołaniu ma zależności natywnych, aplikacja może nie działać na każdej platformie. Jednak jest możliwe, pakietu NuGet, który jest odwołanie do pakietu wersji specyficzne dla platformy do obsługi wymaganych zależności natywnych dla Ciebie.
+
+Podczas dystrybucji aplikacji za pomocą natywnego zależności, może być konieczne użycie `dotnet publish -r <RID>` platformy docelowej, który chcesz opublikować dla przełącznika. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
+
+Więcej informacji na temat pliki binarne specyficzne dla platformy są omówione w [zależny od struktury pliku wykonywalnego](#framework-dependent-executable) i [niezależna wdrożenia](#self-contained-deployment) sekcje.
+
+## <a name="sample-app"></a>Przykładowa aplikacja
+
+Eksplorowanie publikowania poleceń, można użyć następującej aplikacji. Aplikacja zostanie utworzona, uruchamiając następujące polecenia w terminalu:
+
+```dotnetcli
+mkdir apptest1
+cd apptest1
+dotnet new console
+dotnet add package Figgle
+```
+
+`Program.cs` Lub `Program.vb` pliku, który jest generowany przez szablon konsoli musi być zmieniony na następujący:
+
+```csharp
+using System;
+
+namespace apptest1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"));
+        }
+    }
+}
+```
+```vb
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"))
+    End Sub
+End Module
+```
+
+Po uruchomieniu aplikacji ([`dotnet run`][dotnet-run]), zostaną wyświetlone następujące dane wyjściowe:
+
+```terminal
+  _   _      _ _         __        __         _     _ _
+ | | | | ___| | | ___    \ \      / /__  _ __| | __| | |
+ | |_| |/ _ \ | |/ _ \    \ \ /\ / / _ \| '__| |/ _` | |
+ |  _  |  __/ | | (_) |    \ V  V / (_) | |  | | (_| |_|
+ |_| |_|\___|_|_|\___( )    \_/\_/ \___/|_|  |_|\__,_(_)
+                     |/
+```
 
 ## <a name="framework-dependent-deployment"></a>Wdrożenie zależny od struktury
 
-Wdrożenie zależny od struktury bez zależności innych firm po prostu polega na tworzenia, testowania i publikowania aplikacji. Prosty przykład napisany w języku C# przedstawiono proces.
+Dla zestawu .NET Core SDK 2.x interfejsu wiersza polecenia deployment zależny od struktury (stacje) jest to domyślny tryb dla podstawowego `dotnet publish` polecenia.
 
-1. Utwórz katalog projektu.
+Po opublikowaniu aplikacji zgodnie z stacje `<PROJECT-NAME>.dll` plik zostanie utworzony w `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` folderu. Aby uruchomić aplikację, przejdź do folderu wyjściowego i użyj `dotnet <PROJECT-NAME>.dll` polecenia.
 
-   Utwórz katalog dla projektu, co bieżący katalog.
+Aplikacja jest skonfigurowana pod kątem określonej wersji programu .NET Core. Docelowych .NET Core środowiska uruchomieniowego musi być na komputerze, na którym chcesz uruchomić aplikację. Na przykład jeśli aplikacja jest przeznaczony dla platformy .NET Core 2.2, dowolnym komputerze, który aplikacja działa w systemie musi mieć zainstalowanego środowiska uruchomieniowego platformy .NET Core 2.2. Jak wspomniano w [publikowania podstawy](#publishing-basics) sekcji można edytować plik projektu, aby zmienić platformę docelową domyślne lub pod kątem więcej niż jednej struktury.
 
-1. Utwórz projekt.
+Publikowanie z stacje tworzy aplikację, automatycznie ustala przekazywania dalej na najnowsze platformy .NET Core poprawki zabezpieczeń do dostępnej w systemie, który uruchamia aplikację. Aby uzyskać więcej informacji na temat wersji powiązania w czasie kompilacji, zobacz [wybierz wersję platformy .NET Core do użycia](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-   W wierszu polecenia wpisz polecenie [dotnet nową konsolę](../tools/dotnet-new.md) Aby utworzyć nowy projekt konsoli języka C# lub [dotnet nowej konsoli — lang vb](../tools/dotnet-new.md) Aby utworzyć nowy projekt konsoli języka Visual Basic, w tym katalogu.
+## <a name="framework-dependent-executable"></a>Plik wykonywalny zależny od struktury
 
-1. Dodawanie kodu źródłowego aplikacji.
+Dla zestawu .NET Core SDK 3.x interfejsu wiersza polecenia, zależny od struktury plik wykonywalny (FDE) to domyślny tryb podstawowy `dotnet publish` polecenia. Nie trzeba określić innych parametrów, tak długo, jak długo ma pod kątem bieżącego systemu operacyjnego.
 
-   Otwórz *Program.cs* lub *Program.vb* w edytorze i Zastęp automatycznie wygenerowany kod następującym kodem. On monituje użytkownika o wprowadzenie tekstu i wyświetla poszczególne wyrazy wprowadzonej przez użytkownika. Używa wyrażenia regularnego `\w+` do oddzielania słów w tekście wejściowym.
+W tym trybie hosta do pliku wykonywalnego specyficzne dla platformy jest tworzony do hostowania aplikacji dla wielu platform. Ten tryb jest podobny do Dyskietki, zgodnie z stacje wymaga hosta w formie `dotnet` polecenia. Nazwa pliku wykonywalnego hosta różni się dla danej platformy i nazwana w sposób podobny do `<PROJECT-FILE>.exe`. Możesz uruchomić plik wykonywalny bezpośrednio bez wywoływania `dotnet <PROJECT-FILE>.dll` która nadal jest akceptowany sposób, aby uruchomić aplikację.
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+Aplikacja jest skonfigurowana pod kątem określonej wersji programu .NET Core. Docelowych .NET Core środowiska uruchomieniowego musi być na komputerze, na którym chcesz uruchomić aplikację. Na przykład jeśli aplikacja jest przeznaczony dla platformy .NET Core 2.2, dowolnym komputerze, który aplikacja działa w systemie musi mieć zainstalowanego środowiska uruchomieniowego platformy .NET Core 2.2. Jak wspomniano w [publikowania podstawy](#publishing-basics) sekcji można edytować plik projektu, aby zmienić platformę docelową domyślne lub pod kątem więcej niż jednej struktury.
 
-1. Zależności projektu i narzędzia do aktualizacji.
+Publikowanie FDE tworzy aplikację, automatycznie ustala przekazywania dalej na najnowsze platformy .NET Core poprawki zabezpieczeń do dostępnej w systemie, który uruchamia aplikację. Aby uzyskać więcej informacji na temat wersji powiązania w czasie kompilacji, zobacz [wybierz wersję platformy .NET Core do użycia](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-   Uruchom [dotnet restore](../tools/dotnet-restore.md) ([patrz Uwaga](#dotnet-restore-note)) polecenie, aby przywrócić zależności określony w projekcie.
+Należy najpierw (z wyjątkiem platformy .NET Core 3.x, gdy miejscem docelowym bieżącej platformie) Użyj następujących przełączników z `dotnet publish` polecenie w celu opublikowania FDE:
 
-1. Utworzenie kompilacja do debugowania aplikacji.
+- `-r <RID>`  
+  Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
 
-   Użyj [kompilacji dotnet](../tools/dotnet-build.md) polecenie, aby skompilować aplikację lub [dotnet, uruchom](../tools/dotnet-run.md) polecenie, aby skompilować i uruchomić ją.
+- `--self-contained false`  
+  Ten przełącznik informuje zestawu .NET Core SDK, aby utworzyć plik wykonywalny jako FDE.
 
-1. Wdrażanie aplikacji.
+Zawsze, gdy używasz `-r` przełącznika, ścieżka folderu danych wyjściowych zmieni się na: `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
-   Po utworzeniu debugowania i przetestować program, należy utworzyć wdrożenie za pomocą następującego polecenia:
+Jeśli używasz [Przykładowa aplikacja](#sample-app)Uruchom `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. To polecenie tworzy następujące pliku wykonywalnego: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
-      ```console
-      dotnet publish -f netcoreapp2.1 -c Release
-      ```
-   Spowoduje to utworzenie wydania (zamiast debugowania) wersję aplikacji. Pliki wynikowe są umieszczane w katalogu o nazwie *publikowania* znajdujący się w podkatalogu projektu *bin* katalogu.
+> [!Note]
+> Można zmniejszyć całkowity rozmiar wdrożenia, włączając **globalizacji niezmiennej tryb**. Ten tryb jest przydatne w przypadku aplikacji, które nie są wspierane i mogą używać konwencji formatowania Konwencji obudowy i ciąg porównywania i sortowania kolejności [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture). Aby uzyskać więcej informacji na temat **globalizacji niezmiennej tryb** i jak go włączyć, zobacz [trybie niezmiennej globalizacji platformy .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
-   Wraz z plikami aplikacji proces publikowania emituje plik bazy danych (PDB) program, który zawiera informacje o debugowaniu dotyczących aplikacji. Plik jest przydatne głównie do debugowania wyjątków. Można nie rozprowadzić go z plikami aplikacji. Jednak należy je zapisać, w przypadku, gdy chcesz debugować kompilację wydania aplikacji.
+## <a name="self-contained-deployment"></a>Niezależne wdrożenia
 
-   Kompletny zestaw plików aplikacji w jakikolwiek sposób, który można wdrożyć. Na przykład, można umieścić je w pliku Zip, użyć prostego `copy` polecenie lub wdrożyć je przy użyciu dowolnego pakietu instalacyjnego wybranych przez użytkownika.
+Podczas publikowania niezależna wdrożenia (— SCD), .NET Core SDK tworzy wykonywalnej specyficzne dla platformy. Publikowanie — SCD zawiera wszystkie wymagane pliki platformy .NET Core, aby uruchomić aplikację, ale nie zawiera [natywnych zależności platformy .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Te zależności musi znajdować się w systemie przed uruchomieniem aplikacji. 
 
-1. Uruchamianie aplikacji
+Publikowanie — SCD tworzy aplikację, która nie przodu do najnowszych dostępnych platformy .NET Core poprawki zabezpieczeń. Aby uzyskać więcej informacji na temat wersji powiązania w czasie kompilacji, zobacz [wybierz wersję platformy .NET Core do użycia](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
-   Po zainstalowaniu, użytkownicy mogą wykonać aplikacji przy użyciu `dotnet` polecenia i podając nazwę pliku aplikacji, takich jak `dotnet fdd.dll`.
+Należy użyć następujących przełączników z `dotnet publish` polecenie w celu opublikowania — SCD:
 
-   Oprócz plików binarnych aplikacji Instalatora należy również pakietu Instalatora udostępnionego framework albo Wyszukaj jako warunek wstępny jako część instalacji aplikacji.  Instalacja udostępnionego framework wymaga dostępu administratora/root.
+- `-r <RID>`  
+  Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
 
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Wdrażanie zależny od struktury za pomocą zależności innych firm
+- `--self-contained true`  
+  Ten przełącznik informuje zestawu .NET Core SDK, aby utworzyć plik wykonywalny jako — SCD.
 
-Wdrożenie zależny od struktury z co najmniej jeden zależności innych firm wymaga tych zależności dostępne dla projektu. Wymagane są dwa dodatkowe kroki, aby można było uruchomić `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia:
+> [!Note]
+> Można zmniejszyć całkowity rozmiar wdrożenia, włączając **globalizacji niezmiennej tryb**. Ten tryb jest przydatne w przypadku aplikacji, które nie są wspierane i mogą używać konwencji formatowania Konwencji obudowy i ciąg porównywania i sortowania kolejności [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture). Aby uzyskać więcej informacji na temat **globalizacji niezmiennej tryb** i jak go włączyć, zobacz [trybie niezmiennej globalizacji platformy .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
-1. Dodaj odwołania do wymaganych bibliotek innych firm, aby `<ItemGroup>` części Twojej *csproj* pliku. Następujące `<ItemGroup>` sekcja zawiera zależność na [Json.NET](https://www.newtonsoft.com/json) jako biblioteki innej firmy:
-
-      ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-      ```
-
-1. Jeśli jeszcze nie, Pobierz pakiet NuGet zawierający zależności innych firm. Aby pobrać pakiet, należy wykonać `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia po dodaniu zależności. Ponieważ zależność jest rozwiązany z lokalnej pamięci podręcznej narzędzia NuGet w czasu publikacji, musi on być dostępny w Twoim systemie.
-
-Należy pamiętać, że wdrożenie zależny od struktury z zależności innych firm tylko jako przenośne jako jego zależności innych firm. Na przykład jeśli biblioteki innych firm obsługuje tylko z systemem macOS, aplikacja nie jest przenośny z systemami Windows. Dzieje się tak, jeśli zależności innych firm, sama jest zależna od kodu natywnego. Dobrym przykładem jest [serwera Kestrel](/aspnet/core/fundamentals/servers/kestrel), co wymaga zależności natywnych na [libuv](https://github.com/libuv/libuv). Podczas tworzenia Dyskietki dla aplikacji za pomocą tego rodzaju zależności innych firm opublikowane dane wyjściowe zawiera folder dla każdego [identyfikator środowiska uruchomieniowego (RID)](../rid-catalog.md) obsługującego natywnych zależności (i znajdujące się w pakiecie NuGet).
-
-## <a name="simpleSelf"></a> Niezależne wdrożenia bez zależności innych firm
-
-Wdrożenie niezależna bez zależności innych firm obejmuje tworzenie projektu i modyfikując *csproj* pliku, tworzenia, testowania i publikowania aplikacji. Prosty przykład napisany w języku C# przedstawiono proces. W przykładzie pokazano, jak utworzyć niezależna wdrożenia przy użyciu [narzędzia dotnet](../tools/dotnet.md) z wiersza polecenia.
-
-1. Utwórz katalog dla projektu.
-
-   Utwórz katalog dla projektu i ułatwiają bieżącego katalogu.
-
-1. Utwórz projekt.
-
-   W wierszu polecenia wpisz polecenie [dotnet nową konsolę](../tools/dotnet-new.md) Aby utworzyć nowy projekt konsoli języka C#, w tym katalogu.
-
-1. Dodawanie kodu źródłowego aplikacji.
-
-   Otwórz *Program.cs* w edytorze i Zastęp automatycznie wygenerowany kod następującym kodem. On monituje użytkownika o wprowadzenie tekstu i wyświetla poszczególne wyrazy wprowadzonej przez użytkownika. Używa wyrażenia regularnego `\w+` do oddzielania słów w tekście wejściowym.
-
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
-1. Zdefiniuj platformy, dla których będzie dotyczyć aplikacji.
-
-   Tworzenie `<RuntimeIdentifiers>` tagów w `<PropertyGroup>` części Twojej *csproj* pliku, który definiuje platform aplikacji jest przeznaczony dla i określ identyfikator środowiska uruchomieniowego (RID) dla każdej z platform docelowych. Należy zauważyć, że trzeba będzie również dodać średnika do rozdzielenia identyfikatorów RID. Zobacz [katalog identyfikatora środowiska uruchomieniowego](../rid-catalog.md) Lista identyfikatorów środowisk uruchomieniowych.
-
-   Na przykład następująca `<PropertyGroup>` sekcja wskazuje, że aplikacja działa w 64-bitowych systemach operacyjnych Windows 10 i 64-bitowym systemie operacyjnym OS X w wersji 10.11.
-
-     ```xml
-     <PropertyGroup>
-         <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-     </PropertyGroup>
-     ```
-
-   Należy pamiętać, że `<RuntimeIdentifiers>` element może znajdować się w dowolnym `<PropertyGroup>` w swojej *csproj* pliku. Pełny przykład *csproj* plik pojawia się w dalszej części w tej sekcji.
-
-1. Zależności projektu i narzędzia do aktualizacji.
-
-   Uruchom [dotnet restore](../tools/dotnet-restore.md) ([patrz Uwaga](#dotnet-restore-note)) polecenie, aby przywrócić zależności określony w projekcie.
-
-1. Określ, czy używać globalizacji niezmiennej trybu.
-
-   Szczególnie w przypadku, gdy aplikacja jest przeznaczona na systemie Linux, można zmniejszyć całkowity rozmiar wdrożenia, wykorzystując [globalizacji niezmiennej tryb](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Globalizacji niezmiennej tryb jest przydatne w przypadku aplikacji, które nie są wspierane i mogą używać konwencji formatowania Konwencji obudowy i ciąg porównywania i sortowania kolejności [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture).
-
-   Aby włączyć tryb niezmiennej, kliknij prawym przyciskiem myszy nad projektem (nie rozwiązanie) **Eksploratora rozwiązań**i wybierz **Edytuj SCD.csproj** lub **Edytuj SCD.vbproj**. Następnie dodaj następujące wiersze wyróżnione do pliku:
-
- [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
-
-1. Utworzenie kompilacja do debugowania aplikacji.
-
-   W wierszu polecenia użyj [kompilacji dotnet](../tools/dotnet-build.md) polecenia.
-
-1. Po utworzeniu debugowania i przetestować program, należy utworzyć pliki do wdrożenia z aplikacją, dotyczącymi poszczególnych platform, że jest ono przeznaczone dla.
-
-   Użyj `dotnet publish` polecenia dla obu platform docelowych w następujący sposób:
-
-      ```console
-      dotnet publish -c Release -r win10-x64
-      dotnet publish -c Release -r osx.10.11-x64
-      ```
-
-   Spowoduje to utworzenie wydania (zamiast debugowania) wersję aplikacji dla każdej platformy docelowej. Pliki wynikowe są umieszczane w podkatalogu nazwanym *publikowania* znajdujący się w podkatalogu projektu *.\bin\Release\netcoreapp2.1\<runtime_identifier >* podkatalogu. Należy pamiętać, że każdy podkatalogu zawiera kompletny zestaw plików (pliki aplikacji i wszystkich plików z platformy .NET Core) potrzebnych do uruchomienia aplikacji.
-
-Wraz z plikami aplikacji proces publikowania emituje plik bazy danych (PDB) program, który zawiera informacje o debugowaniu dotyczących aplikacji. Plik jest przydatne głównie do debugowania wyjątków. Istnieje możliwość nie spakujesz ją z plikami aplikacji. Jednak należy je zapisać, w przypadku, gdy chcesz debugować kompilację wydania aplikacji.
-
-Wdrażanie plików publikowanych w jakikolwiek sposób, który chcesz. Na przykład, można umieścić je w pliku Zip, użyć prostego `copy` polecenie lub wdrożyć je przy użyciu dowolnego pakietu instalacyjnego wybranych przez użytkownika.
-
-Poniżej przedstawiono pełne *csproj* pliku dla tego projektu.
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
-```
-
-## <a name="self-contained-deployment-with-third-party-dependencies"></a>Niezależne wdrożenia przy użyciu zależności innych firm
-
-Niezależna wdrożenie z co najmniej jeden zależności innych firm obejmuje dodawanie zależności. Wymagane są dwa dodatkowe kroki, aby można było uruchomić `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia:
-
-1. Dodaj odwołania do żadnych bibliotek innych firm, aby `<ItemGroup>` części Twojej *csproj* pliku. Następujące `<ItemGroup>` sekcji używa struktury Json.NET jako biblioteki innej firmy.
-
-    ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-    ```
-
-1. Jeśli jeszcze nie, Pobierz pakiet NuGet zawierający zależności innych firm w systemie. Aby jednak udostępnić zależności aplikacji, należy wykonać `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) polecenia po dodaniu zależności. Ponieważ zależność jest rozwiązany z lokalnej pamięci podręcznej narzędzia NuGet w czasu publikacji, musi on być dostępny w Twoim systemie.
-
-Poniżej przedstawiono pełne *csproj* pliku dla tego projektu:
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-  </ItemGroup>
-</Project>
-```
-
-Podczas wdrażania aplikacji, wszelkie zależności innych firm używanych w aplikacji znajdują się również z plikami aplikacji. Bibliotek innych firm nie są wymagane w systemie, na którym działa aplikacja.
-
-Należy pamiętać, że można wdrożyć tylko niezależna wdrożenia przy użyciu biblioteki innej firmy na platformach obsługiwanych przez tej biblioteki. Jest to podobne do mających zależności innych firm za pomocą natywnego zależności w ramach wdrożenia zależny od struktury, gdzie zależności natywnych musi być zgodny z platform, w której wdrażana jest aplikacja.
-
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Wdrożenie aplikacji programu .NET core](index.md)
-* [Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)
+- [Przegląd wdrażania aplikacji programu .NET core](index.md)
+- [Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)
+
+[dotnet-publish]: ../tools/dotnet-publish.md
+[dotnet-run]: ../tools/dotnet-run.md

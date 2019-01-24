@@ -1,19 +1,19 @@
 ---
-title: 'Wskazówki: utwórz przycisk przy użyciu Microsoft Expression Blend'
+title: 'Przewodnik: Utwórz przycisk przy użyciu Microsoft Expression Blend'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: ce0a0623c2317fd95286e96c7bb5521a7400d4f9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bf6da0600335061e15560aabf668671a24d8911d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502251"
 ---
-# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Wskazówki: utwórz przycisk przy użyciu Microsoft Expression Blend
+# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Przewodnik: Utwórz przycisk przy użyciu Microsoft Expression Blend
 Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dostosowany przycisk przy użyciu Microsoft Expression Blend.  
   
 > [!IMPORTANT]
@@ -42,23 +42,23 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
 #### <a name="to-convert-a-rectangle-to-a-button"></a>Aby przekonwertować prostokąta przycisku  
   
-1.  **Ustaw właściwość tło okna na czarny:** wybierz okno, kliknij przycisk **karta właściwości**i ustaw <xref:System.Windows.Controls.Control.Background%2A> właściwość `Black`.  
+1.  **Ustaw właściwość tło okna na czarny:** Kliknij pozycję Wybierz okno **karta właściwości**i ustaw <xref:System.Windows.Controls.Control.Background%2A> właściwość `Black`.  
   
      ![Jak ustawić tło przycisku na czarny](../../../../docs/framework/wpf/controls/media/custom-button-blend-changebackground.png "custom_button_blend_ChangeBackground")  
   
-2.  **Rysuj prostokąt około rozmiar przycisku w oknie:** zaznacz prostokąt-narzędzie w panelu po lewej stronie narzędzia i przeciągnij prostokąt na okna.  
+2.  **Rysuj prostokąt około rozmiar przycisku w oknie:** Wybierz Prostokąt-narzędzie w panelu po lewej stronie narzędzia, a następnie przeciągnij prostokąt na okna.  
   
      ![Jak narysować prostokąt](../../../../docs/framework/wpf/controls/media/custom-button-blend-drawrect.png "custom_button_blend_DrawRect")  
   
-3.  **ROUND się narożników prostokąta:** przeciągnij punkty kontrolne, prostokąta lub ustawić bezpośrednio <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> i <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> właściwości. Ustaw wartości <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> i <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> do 20.  
+3.  **Zaokrąglanie narożników prostokąta — limit:** Przeciągnij punkty kontrolne, prostokąta lub ustawić bezpośrednio <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> i <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> właściwości. Ustaw wartości <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> i <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> do 20.  
   
      ![Jak narożników prostokąt zaokrąglony](../../../../docs/framework/wpf/controls/media/custom-button-blend-roundcorners.png "custom_button_blend_RoundCorners")  
   
-4.  **Zmień prostokąt na przycisku:** wybierz prostokąt. Na **narzędzia** menu, kliknij przycisk **wprowadzić przycisk**.  
+4.  **Zmień prostokąt na przycisku:** Zaznacz prostokąt. Na **narzędzia** menu, kliknij przycisk **wprowadzić przycisk**.  
   
      ![Jak utworzyć kształt do przycisku](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton.png "custom_button_blend_MakeButton")  
   
-5.  **Określ zakres styl/szablonu:** tak jak pojawia się następujące okno dialogowe.  
+5.  **Określ zakres styl/szablonu:** Zostanie wyświetlone okno dialogowe, jak pokazano poniżej.  
   
      ![W oknie dialogowym "Tworzenie zasobu stylu"](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")  
   
@@ -69,7 +69,7 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
 #### <a name="to-edit-the-button-template-to-change-the-button-appearance"></a>Aby edytować szablon przycisku w celu zmiany wyglądu przycisku  
   
-1.  **Przejdź do widoku szablonu edycji:** dalsze dostosowywanie wyglądu przycisku, należy zmodyfikować szablon przycisku. Ten szablon został utworzony po przekonwertowaniu możemy prostokąt, aby na przycisku. Aby edytować szablon przycisku, kliknij prawym przyciskiem myszy przycisk, a następnie wybierz **Edytuj części kontrolki (szablon)** i następnie **Edytuj szablon**.  
+1.  **Przejdź do widoku szablonu edycji:** Dalsze dostosowywanie wyglądu przycisku, należy edytować szablon przycisku. Ten szablon został utworzony po przekonwertowaniu możemy prostokąt, aby na przycisku. Aby edytować szablon przycisku, kliknij prawym przyciskiem myszy przycisk, a następnie wybierz **Edytuj części kontrolki (szablon)** i następnie **Edytuj szablon**.  
   
      ![Jak edytować szablon](../../../../docs/framework/wpf/controls/media/custom-button-blend-edittemplate.jpg "custom_button_blend_EditTemplate")  
   
@@ -77,11 +77,11 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
      ![Składniki w prezentacji prostokąta](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatepanel.png "custom_button_blend_TemplatePanel")  
   
-2.  **Zmień nazwy składniki szablonu:** kliknij prawym przyciskiem myszy prostokąt w spisie szablonu, zmiana <xref:System.Windows.Shapes.Rectangle> nazwę z "[prostokąt]", "outerRectangle", a następnie zmień element "[ContentPresenter]" na "myContentPresenter".  
+2.  **Zmień nazwy składniki szablonu:** Kliknij prawym przyciskiem myszy prostokąt w spisie szablonu, zmiana <xref:System.Windows.Shapes.Rectangle> nazwę z "[prostokąt]", "outerRectangle", a następnie zmień element "[ContentPresenter]" na "myContentPresenter".  
   
      ![Jak zmienić nazwę składnika szablonu](../../../../docs/framework/wpf/controls/media/custom-button-blend-renamecomponents.png "custom_button_blend_RenameComponents")  
   
-3.  **ALTER prostokąt, tak aby był pusty wewnątrz (na przykład pierścieniowy):** wybierz **outerRectangle** i ustaw <xref:System.Windows.Shapes.Shape.Fill%2A> "Przezroczysty" i <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> do 5.  
+3.  **ALTER prostokąt, tak aby był pusty wewnątrz (na przykład pierścieniowy):** Wybierz **outerRectangle** i ustaw <xref:System.Windows.Shapes.Shape.Fill%2A> "Przezroczysty" i <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> do 5.  
   
      ![Sposób opróżnić prostokąt](../../../../docs/framework/wpf/controls/media/custom-button-blend-changerectproperties.png "custom_button_blend_ChangeRectProperties")  
   
@@ -89,51 +89,51 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
      ![Jak ustawić stosowanie koloru szablonu](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatestroke.png "custom_button_blend_TemplateStroke")  
   
-4.  **Utwórz wewnętrzny prostokąt:** teraz utworzyć inną prostokąt (nadaj mu nazwę "innerRectangle") i umieść ją w symetrycznie wewnątrz **outerRectangle** . Dla tego rodzaju pracy prawdopodobnie można powiększać przycisku większe w obszarze edycji.  
+4.  **Utwórz wewnętrzny prostokąt:** Teraz Utwórz inny prostokąt (nadaj mu nazwę "innerRectangle") i umieść ją w symetrycznie wewnątrz **outerRectangle** . Dla tego rodzaju pracy prawdopodobnie można powiększać przycisku większe w obszarze edycji.  
   
     > [!NOTE]
     >  Prostokąt może wyglądać innej niż na ilustracji (na przykład, jego może mieć zaokrąglone rogi).  
   
      ![Jak utworzyć prostokąt wewnątrz innego prostokąta](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangleproperties.png "custom_button_blend_innerRectangleProperties")  
   
-5.  **Przenieś element ContentPresenter u góry:** na tym etapie jest możliwe, że tekst "Button" nie będą widoczne już. Jeśli jest to tak, jest to spowodowane **innerRectangle** jest w górnej części **myContentPresenter**. Aby rozwiązać ten problem, przeciągnij **myContentPresenter** poniżej **innerRectangle**. Zmienianie położenia prostokąty i **myContentPresenter** wyglądały podobnie jak na poniższej ilustracji.  
+5.  **Przenieś element ContentPresenter u góry:** W tym momencie jest to możliwe, że tekst "Button" nie będą widoczne dłużej. Jeśli jest to tak, jest to spowodowane **innerRectangle** jest w górnej części **myContentPresenter**. Aby rozwiązać ten problem, przeciągnij **myContentPresenter** poniżej **innerRectangle**. Zmienianie położenia prostokąty i **myContentPresenter** wyglądały podobnie jak na poniższej ilustracji.  
   
     > [!NOTE]
     >  Alternatywnie, możesz także określić położenie **myContentPresenter** u góry, klikając go prawym przyciskiem myszy, a następnie naciskając klawisz **wysyłania do przodu**.  
   
      ![Jak przenieść przycisk na inny przycisk](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangle2.png "custom_button_blend_innerRectangle2")  
   
-6.  **Zmienianie wyglądu innerRectangle:** ustaw <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>, i <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> wartości do 20. In Addition, ustaw <xref:System.Windows.Shapes.Shape.Fill%2A> do tła szablonu przy użyciu wyrażenia niestandardowego "{tła TemplateBinding}") i ustaw <xref:System.Windows.Shapes.Shape.Stroke%2A> na "przezroczyste". Należy zauważyć, że ustawienia <xref:System.Windows.Shapes.Shape.Fill%2A> i <xref:System.Windows.Shapes.Shape.Stroke%2A> z **innerRectangle** są przeciwieństwem przypadku **outerRectangle**.  
+6.  **Zmiana wyglądu innerRectangle:** Ustaw <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>, i <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> wartości do 20. In Addition, ustaw <xref:System.Windows.Shapes.Shape.Fill%2A> do tła szablonu przy użyciu wyrażenia niestandardowego "{tła TemplateBinding}") i ustaw <xref:System.Windows.Shapes.Shape.Stroke%2A> na "przezroczyste". Należy zauważyć, że ustawienia <xref:System.Windows.Shapes.Shape.Fill%2A> i <xref:System.Windows.Shapes.Shape.Stroke%2A> z **innerRectangle** są przeciwieństwem przypadku **outerRectangle**.  
   
      ![Jak zmienić wygląd prostokąta](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties1.png "custom_button_blend_glassRectangleProperties1")  
   
-7.  **Dodaj warstwę szkła na wierzchu:** ostatni element Dostosowywanie wyglądu przycisku jest dodanie warstwy szkła u góry. Ta warstwa szkła składa się z trzeciej prostokąta. Ponieważ szkła obejmie cały przycisku, prostokąt szkła jest podobna we wymiarów **outerRectangle**. W związku z tym, Utwórz prostokąt, po prostu tworząc kopię **outerRectangle**. Wyróżnij **outerRectangle** i użyj klawiszy CTRL + C i CTRL + V do skopiowania. Nazwij nowy prostokąt "glassCube".  
+7.  **Dodaj warstwę szkła u góry:** Dostosowywanie wyglądu przycisku ostatni element jest dodanie warstwy szkła u góry. Ta warstwa szkła składa się z trzeciej prostokąta. Ponieważ szkła obejmie cały przycisku, prostokąt szkła jest podobna we wymiarów **outerRectangle**. W związku z tym, Utwórz prostokąt, po prostu tworząc kopię **outerRectangle**. Wyróżnij **outerRectangle** i użyj klawiszy CTRL + C i CTRL + V do skopiowania. Nazwij nowy prostokąt "glassCube".  
   
-8.  **Zmienianie położenia glassCube, jeśli to konieczne:** Jeśli **glassCube** jest nie jest jeszcze ustawiony, tak, aby zajmowała cały przycisk, przeciągnij go do określonej pozycji.  
+8.  **Jeśli to konieczne, należy zmienić położenie glassCube:** Jeśli **glassCube** jest nie jest jeszcze ustawiony, tak, aby zajmowała cały przycisk, przeciągnij go do określonej pozycji.  
   
-9. **Nadaj glassCube kształt nieco inne niż outerRectangle:** zmiana właściwości **glassCube**. Początek, zmieniając <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> i <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> właściwości do 10 i <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> do 2.  
+9. **Nadaj glassCube kształt nieco inne niż outerRectangle:** Zmiana właściwości **glassCube**. Początek, zmieniając <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> i <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> właściwości do 10 i <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> do 2.  
   
      ![Ustawienia wyglądu glassCube](../../../../docs/framework/wpf/controls/media/custom-button-blend-glasscubeappearance.gif "custom_button_blend_GlassCubeAppearance")  
   
-10. **Wprowadź glassCube wygląda jak szkło:** ustaw <xref:System.Windows.Shapes.Shape.Fill%2A> glassy wyglądzie przy użyciu gradientu liniowego, wynosi 75% nieprzezroczystych i przełącza między kolor biały i przezroczysty ponad 6 przybliżeniu równomiernie rozmieszczonych odstępach czasu. Jest to, co równa ograniczniki gradientu:  
+10. **Wprowadź glassCube wygląda jak szkło:** Ustaw <xref:System.Windows.Shapes.Shape.Fill%2A> glassy wyglądzie przy użyciu gradientu liniowego, wynosi 75% nieprzezroczystych i przełącza między kolor biały i przezroczysty ponad 6 przybliżeniu równomiernie rozmieszczonych odstępach czasu. Jest to, co równa ograniczniki gradientu:  
   
-    -   Gradientu 1: Oficjalny przy użyciu wartości alfa 75%  
+    -   Ogranicznik gradientu 1: Kolor biały z wartości alfa 75%  
   
-    -   Gradient zatrzymać 2: przezroczyste  
+    -   Ogranicznik gradientu 2: Przezroczyste  
   
-    -   Gradientu 3: Oficjalny wartość alfa 75%  
+    -   Ogranicznik gradientu 3: Kolor biały z wartości alfa 75%  
   
-    -   Gradient zatrzymać 4: przezroczyste  
+    -   Ogranicznik gradientu 4: Przezroczyste  
   
-    -   Gradientu 5: Oficjalny wartość alfa 75%  
+    -   Ogranicznik gradientu 5: Kolor biały z wartości alfa 75%  
   
-    -   Gradient zatrzymać 6: przezroczyste  
+    -   Ogranicznik gradientu 6: Przezroczyste  
   
      Spowoduje to utworzenie wygląd szkła "faliste".  
   
      ![Prostokąt, który wygląda jak szkło](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties2.png "custom_button_blend_glassRectangleProperties2")  
   
-11. **Ukryj warstwę szkła:** teraz, zobaczysz, jak wygląda glassy warstwy, przejdź do **okienko wygląd** z **panelu właściwości** i ustawić nieprzezroczystość 0%, aby je ukryć. W sekcjach wyprzedzeniem użyjemy wyzwalacze właściwości i zdarzeń do wyświetlania i manipulowania warstwy szkła.  
+11. **Ukryj warstwę szkła:** Teraz, zobaczysz, jak wygląda glassy warstwy, przejdź do **okienko wygląd** z **panelu właściwości** i ustawić nieprzezroczystość 0%, aby je ukryć. W sekcjach wyprzedzeniem użyjemy wyzwalacze właściwości i zdarzeń do wyświetlania i manipulowania warstwy szkła.  
   
      ![Jak ukryć prostokąt szkła](../../../../docs/framework/wpf/controls/media/custom-button-glassrectangleproperties3.gif "custom_button_glassRectangleProperties3")  
   
@@ -142,13 +142,13 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
 #### <a name="to-set-property-triggers"></a>Aby ustawić wyzwalacze właściwości  
   
-1.  **Utwórz nowy wyzwalacz właściwości:** z **glassCube** zaznaczone, kliknij przycisk **+ właściwość** w **wyzwalaczy** panelu (patrz rysunek, który następuje po następnym krokiem). Spowoduje to utworzenie wyzwalacz właściwości z domyślny wyzwalacz właściwości.  
+1.  **Utwórz nowy wyzwalacz właściwości:** Za pomocą **glassCube** zaznaczone, kliknij przycisk **+ właściwość** w **wyzwalaczy** panelu (patrz rysunek, który następuje po następnym krokiem). Spowoduje to utworzenie wyzwalacz właściwości z domyślny wyzwalacz właściwości.  
   
-2.  **Wprowadź IsMouseOver właściwość używana przez wyzwalacz:** należy zmienić właściwość na <xref:System.Windows.UIElement.IsMouseOver%2A>. To sprawia, że wyzwalacz właściwości podczas aktywowania <xref:System.Windows.UIElement.IsMouseOver%2A> właściwość `true` (po użytkownik wskaże przycisk za pomocą myszy).  
+2.  **Wprowadź IsMouseOver właściwość używana przez wyzwalacz:** Zmień właściwość <xref:System.Windows.UIElement.IsMouseOver%2A>. To sprawia, że wyzwalacz właściwości podczas aktywowania <xref:System.Windows.UIElement.IsMouseOver%2A> właściwość `true` (po użytkownik wskaże przycisk za pomocą myszy).  
   
      ![Jak ustawić wyzwalacz na właściwość](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger.png "custom_button_blend_IsMousedOverPropertyTrigger")  
   
-3.  **IsMouseOver wyzwala nieprzezroczystość 100% glassCube:** Zwróć uwagę, że **wyzwalacza — nagrywanie jest włączone** (patrz na poprzednim rysunku). Oznacza to, że wszelkie zmiany wprowadzone do wartości właściwości **glassCube** podczas nagrywania znajduje się w stanie się akcja ma miejsce, gdy <xref:System.Windows.UIElement.IsMouseOver%2A> jest `true`. Podczas nagrywania, zmień <xref:System.Windows.UIElement.Opacity%2A> z **glassCube** do 100%.  
+3.  **Nieprzezroczystość wyzwalaczy IsMouseOver 100% glassCube:** Należy zauważyć, że **wyzwalacza — nagrywanie jest włączone** (patrz na poprzednim rysunku). Oznacza to, że wszelkie zmiany wprowadzone do wartości właściwości **glassCube** podczas nagrywania znajduje się w stanie się akcja ma miejsce, gdy <xref:System.Windows.UIElement.IsMouseOver%2A> jest `true`. Podczas nagrywania, zmień <xref:System.Windows.UIElement.Opacity%2A> z **glassCube** do 100%.  
   
      ![Jak ustawić nieprzezroczystość przycisku](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom_button_blend_IsMousedOverPropertyTrigger2")  
   
@@ -158,11 +158,11 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
      Naciśnij klawisz F5, aby uruchomić aplikację, a następnie przesuń wskaźnik myszy nad i wyłączanie przycisku. Powinien zostać wyświetlony warstwy szkła są wyświetlane, gdy przycisk myszą i znikają po odsunięciu wskaźnika.  
   
-4.  **Wyzwalacze IsMouseOver obrysu zmiana wartości:** umożliwia kojarzenie niektóre akcje, za pomocą <xref:System.Windows.UIElement.IsMouseOver%2A> wyzwalacza. Nadal nagrywania, Przełącz zaznaczenie z **glassCube** do **outerRectangle**. Następnie ustaw <xref:System.Windows.Shapes.Shape.Stroke%2A> z **outerRectangle** niestandardowe wyrażenie "{dynamicresource — {x: Static SystemColors.HighlightBrushKey}}". To ustawienie <xref:System.Windows.Shapes.Shape.Stroke%2A> na typowej Wyróżnij kolor używany przez przycisków. Naciśnij klawisz F5, aby zobaczyć efekt, gdy wskaźnik myszy nad przyciskiem.  
+4.  **Wyzwalacze IsMouseOver obrysu zmiana wartości:** Umożliwia kojarzenie niektóre akcje, za pomocą <xref:System.Windows.UIElement.IsMouseOver%2A> wyzwalacza. Nadal nagrywania, Przełącz zaznaczenie z **glassCube** do **outerRectangle**. Następnie ustaw <xref:System.Windows.Shapes.Shape.Stroke%2A> z **outerRectangle** niestandardowe wyrażenie "{dynamicresource — {x: Static SystemColors.HighlightBrushKey}}". To ustawienie <xref:System.Windows.Shapes.Shape.Stroke%2A> na typowej Wyróżnij kolor używany przez przycisków. Naciśnij klawisz F5, aby zobaczyć efekt, gdy wskaźnik myszy nad przyciskiem.  
   
      ![Jak ustawić skok na kolor wyróżnienia](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger3.png "custom_button_blend_IsMousedOverPropertyTrigger3")  
   
-5.  **IsMouseOver wyzwala rozmyty tekst:** umożliwia kojarzenie jednego więcej akcji <xref:System.Windows.UIElement.IsMouseOver%2A> wyzwalacza właściwości. Oznaczanie zawartości przycisku być nieco rozmyte, gdy szkła pojawi się nad nią. Aby to zrobić, można zastosować Rozmycie <xref:System.Windows.Media.Effects.BitmapEffect> do <xref:System.Windows.Controls.ContentPresenter> (**myContentPresenter**).  
+5.  **IsMouseOver wyzwala rozmyty tekst:** Umożliwia kojarzenie jednego więcej akcji <xref:System.Windows.UIElement.IsMouseOver%2A> wyzwalacza właściwości. Oznaczanie zawartości przycisku być nieco rozmyte, gdy szkła pojawi się nad nią. Aby to zrobić, można zastosować Rozmycie <xref:System.Windows.Media.Effects.BitmapEffect> do <xref:System.Windows.Controls.ContentPresenter> (**myContentPresenter**).  
   
      ![Jak rozmycie zawartość przycisku](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerwithbitmapeffect.png "custom_button_blend_PropertyTriggerWithBitMapEffect")  
   
@@ -171,7 +171,7 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
      W tym momencie użyliśmy wyzwalacz właściwości z kilka skojarzonych z nimi działań do utworzenia wyróżnianie zachowania w przypadku, gdy wskaźnik myszy wprowadza i opuszcza obszar przycisku. Inne typowe zachowanie dla przycisku jest Podświetl, gdy ma ona fokus (tak jak po kliknięciu). Możemy dodać zachowanie przez dodanie kolejnego wyzwalacza właściwości dla <xref:System.Windows.UIElement.IsFocused%2A> właściwości.  
   
-6.  **Tworzenie wyzwalacza właściwości dla IsFocused:** przy użyciu tej samej procedury jak w przypadku <xref:System.Windows.UIElement.IsMouseOver%2A> (patrz pierwszym krokiem w tej sekcji), utworzenia innego wyzwalacza właściwości dla <xref:System.Windows.UIElement.IsFocused%2A> właściwości. Gdy **wyzwalacza — nagrywanie jest włączone**, Dodaj następujące akcje do wyzwalacza:  
+6.  **Utwórz wyzwalacz właściwości dla IsFocused:** Przy użyciu tej samej procedury jak w przypadku <xref:System.Windows.UIElement.IsMouseOver%2A> (patrz pierwszym krokiem w tej sekcji), utworzenia innego wyzwalacza właściwości dla <xref:System.Windows.UIElement.IsFocused%2A> właściwości. Gdy **wyzwalacza — nagrywanie jest włączone**, Dodaj następujące akcje do wyzwalacza:  
   
     -   **glassCube** pobiera <xref:System.Windows.UIElement.Opacity%2A> 100%.  
   
@@ -181,11 +181,11 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
 #### <a name="to-use-event-triggers-and-animations-to-add-interactivity"></a>Na potrzeby interakcyjności wyzwalacze zdarzeń i animacji  
   
-1.  **Tworzenie wyzwalacza zdarzeń MouseEnter:** dodać nowy wyzwalacz zdarzenia, a następnie wybierz pozycję <xref:System.Windows.UIElement.MouseEnter> jako zdarzenie do użycia w wyzwalaczu.  
+1.  **Tworzenie wyzwalacza zdarzeń MouseEnter:** Dodaj nowy wyzwalacz zdarzenia, a następnie wybierz pozycję <xref:System.Windows.UIElement.MouseEnter> jako zdarzenie do użycia w wyzwalaczu.  
   
      ![Jak utworzyć wyzwalacz zdarzeń MouseEnter](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger.png "custom_button_blend_MouseOverEventTrigger")  
   
-2.  **Utwórz oś czasu animacji:** następnie skojarzyć osi czasu animacji w celu <xref:System.Windows.UIElement.MouseEnter> zdarzeń.  
+2.  **Utwórz oś czasu animacji:** Następnie należy skojarzyć osi czasu animacji w celu <xref:System.Windows.UIElement.MouseEnter> zdarzeń.  
   
      ![Jak dodać oś czasu animacji do zdarzenia](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger2.png "custom_button_blend_MouseOverEventTrigger2")  
   
@@ -196,11 +196,11 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
      ![Panel oś czasu](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger3.png "custom_button_blend_MouseOverEventTrigger3")  
   
-3.  **Tworzenie klatki kluczowej:** do tworzenia animacji, zaznacz obiekt, którego chcesz animować, Utwórz dwa lub więcej ramek kluczowych na osi czasu, a także dla tych ramkami kluczowymi, ustaw wartości właściwości, które mają animacji do interpolacji między. Poniższa ilustracja przeprowadzi Cię przez tworzenie klatki kluczowej.  
+3.  **Utwórz ramkę kluczową:** Aby utworzyć animację, zaznacz obiekt, który chcesz animować, Utwórz dwa lub więcej ramek kluczowych na osi czasu, a także dla tych ramkami kluczowymi, ustaw wartości właściwości, które mają animacji do interpolacji między. Poniższa ilustracja przeprowadzi Cię przez tworzenie klatki kluczowej.  
   
      ![Jak utworzyć ramkę kluczową](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger4.png "custom_button_blend_MouseOverEventTrigger4")  
   
-4.  **Zmniejszanie glassCube w tej ramki kluczowej:** przy użyciu drugiej klatki kluczowej, zaznaczone, należy zmniejszyć rozmiar **glassCube** do 90% firm z jego za pomocą pełnego rozmiaru **Przekształcanie rozmiar**.  
+4.  **Zmniejszanie glassCube w tej ramki kluczowej:** Z drugiej klatki kluczowej, zaznaczone, należy zmniejszyć rozmiar **glassCube** do 90% firm z jego za pomocą pełnego rozmiaru **Przekształcanie rozmiar**.  
   
      ![Jak zmniejszyć rozmiar przycisku](../../../../docs/framework/wpf/controls/media/custom-button-blend-sizetransform.png "custom_button_blend_SizeTransform")  
   
@@ -247,9 +247,9 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
 -   Różne: Tworzenie gradientów, Dodaj BitmapEffects, użyj przekształceń i ustaw podstawowe właściwości obiektów.  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie przycisku przy użyciu XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Malowanie jednolitymi kolorami i gradientami — przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Efekty mapy bitowej — przegląd](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie przycisku przy użyciu XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)
+- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Malowanie jednolitymi kolorami i gradientami — przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Efekty mapy bitowej — przegląd](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

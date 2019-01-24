@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ustawianie wcięć, wysunięć i akapitów punktowanych za pomocą formantu RichTextBox formularzy systemu Windows'
+title: 'Instrukcje: Ustawianie wcięć, wysunięć i akapitów punktowanych za pomocą formantu RichTextBox formularzy Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: 95ba276f3b2682d5b5bcaaa49916e856eb580632
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad5dd1cc3839fbe29d39f6ab38b0e865e7b0a335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492430"
 ---
-# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Porady: ustawianie wcięć, wysunięć i akapitów punktowanych za pomocą formantu RichTextBox formularzy systemu Windows
-Formularze systemu Windows <xref:System.Windows.Forms.RichTextBox> formant ma wiele opcji formatowania tekstu Wyświetla. Zaznaczonych akapitów można sformatować jako listy punktowane, ustawiając <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> właściwości. Można również użyć <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, i <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> właściwości, aby ustawić wcięcie akapitów względem lewej i prawej krawędzi formantu a lewą krawędzią innych wierszy tekstu.  
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Instrukcje: Ustawianie wcięć, wysunięć i akapitów punktowanych za pomocą formantu RichTextBox formularzy Windows
+Formularze Windows <xref:System.Windows.Forms.RichTextBox> kontrolka ma wiele opcji formatowania tekstu, zostanie wyświetlony. Możesz sformatować zaznaczonych akapitów jako listy punktowane, ustawiając <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> właściwości. Można również użyć <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, i <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> właściwości, aby ustawić wcięcia akapitów względem lewej i prawej krawędzi formantu a lewą krawędzią innych wierszy tekstu.  
   
-### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Aby sformatować akapitu listy punktowanej  
+### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Aby sformatować akapitu jako listy punktowane  
   
-1.  Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> właściwości `true`.  
+1.  Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> właściwość `true`.  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -41,11 +41,11 @@ Formularze systemu Windows <xref:System.Windows.Forms.RichTextBox> formant ma wi
   
 ### <a name="to-indent-a-paragraph"></a>Wcięcia akapitu  
   
-1.  Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> właściwości na liczbę całkowitą reprezentującą odległość w pikselach między lewą krawędzią formantu a lewą krawędzią tekstu.  
+1.  Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> właściwości na liczbę całkowitą reprezentującą odległość w pikselach między lewą krawędzią kontrolki a lewą krawędzią tekstu.  
   
-2.  Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> właściwości na liczbę całkowitą reprezentującą odległość w pikselach między lewą krawędź pierwszego wiersza tekstu akapitu a lewą krawędzią kolejnych wierszy w tym samym obiekcie paragraph. Wartość <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> właściwość ma zastosowanie wyłącznie do wierszy akapitu, które zostały opakowane poniżej pierwszego wiersza.  
+2.  Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> właściwości na liczbę całkowitą reprezentującą odległość w pikselach między lewą krawędzią pierwszy wiersz tekstu akapitu a lewą krawędzią kolejne wiersze, w tym samym akapicie. Wartość <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> właściwość ma zastosowanie tylko do wierszy w akapicie, które zostały opakowane poniżej pierwszego wiersza.  
   
-3.  Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> właściwości na liczbę całkowitą reprezentującą odległość w pikselach między prawą krawędzią formantu a prawej krawędzi tekstu.  
+3.  Ustaw <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> właściwości na liczbę całkowitą reprezentującą odległość w pikselach między prawą krawędzią kontrolki a prawej krawędzi tekstu.  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  
@@ -66,9 +66,9 @@ Formularze systemu Windows <xref:System.Windows.Forms.RichTextBox> formant ma wi
     ```  
   
     > [!NOTE]
-    >  Te właściwości mają wpływ na wszystkie akapitów, które zawierają zaznaczonego tekstu, a także tekst, który został wpisany po do bieżącego punkt wstawiania. Na przykład gdy użytkownik wybiera word akapitu i można dostosować wcięcie, nowe ustawienia będą stosowane do całego akapitu, który zawiera ten wyraz, a także do dowolnego akapitów, następnie wprowadzone po akapitów. Aby uzyskać informacje o programowy wybór tekstu, zobacz <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
+    >  Te właściwości mają wpływ na wszystkie akapitów, zawierające zaznaczony tekst i tekst, który bezpośrednio po bieżącym punkcie wstawiania. Na przykład gdy użytkownik zaznacza słowo akapitu, a następnie dopasowuje wcięcie, nowe ustawienia zostaną zastosowane cały akapit, który zawiera słowo, a także wszelkie akapitów, następnie wprowadzone po akapitów. Aby dowiedzieć się, jak programowy wybór tekstu, zobacz <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.RichTextBox>  
- [RichTextBox, kontrolka](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.RichTextBox>
+- [RichTextBox, kontrolka](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
+- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

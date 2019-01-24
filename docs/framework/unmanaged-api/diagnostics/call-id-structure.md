@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8d6b16f3eeb32e41f3568e0b237f18c945a8cb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 204c2dfbf28f95c1b8c2d2c1b757730e64a8e91d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503706"
 ---
 # <a name="callid-structure"></a>CALL_ID — Struktura
-Zapewnia informacje o debugera o funkcję, która jest wywoływana. Zobacz [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interfejsu, aby uzyskać więcej informacji.  
+Informacje debugera o funkcję, która jest wywoływana. Zobacz [inotifysink2 —](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interfejsu, aby uzyskać więcej informacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,16 +44,16 @@ typedef struct tagCALL_ID
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`szMachine`|Identyfikuje komputer, który jest wywołania.|  
-|`dwPid`|Identyfikuje procesora komputera.|  
+|`szMachine`|Identyfikuje komputer, który wykonuje wywołanie.|  
+|`dwPid`|Określa procesor maszyny.|  
 |`pUserThread`|Identyfikuje wątku, który wykonuje wywołanie.|  
 |`addrStackPointer`|Określa adres stosu wywołań.|  
 |`szEntryPoint`|Określa adres wywołania.|  
-|`szDestinationMachine`|Identyfikuje komputer, który będzie wykonywać wywołanie.|  
+|`szDestinationMachine`|Identyfikuje komputer, na którym będą wykonywane wywołanie.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Zobacz też  
- [INotifySink2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [Struktury magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a>Zobacz także
+- [INotifySink2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [Struktury magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

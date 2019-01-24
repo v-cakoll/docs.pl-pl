@@ -1,20 +1,14 @@
 ---
-title: Przewodnik programowania w języku C#
+title: 'Przewodnik programowania w języku C#'
 ms.date: 05/02/2017
 f1_keywords:
-- cs.langref
+  - cs.langref
 helpviewer_keywords:
-- reference tables [C#]
-- C# language, programming guide
-- Visual C#, programming concepts
-- C# language, concepts
+  - 'reference tables [C#]'
+  - 'C# language, programming guide'
+  - 'Visual C#, programming concepts'
+  - 'C# language, concepts'
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 3827ebfe401938e4fa1b530672352123ae2ac826
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235742"
 ---
 # <a name="c-programming-guide"></a>Przewodnik programowania C#
 Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# oraz o funkcjach tego języka dostępnych przez platformę .NET Framework.  
@@ -85,7 +79,7 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
   
  [Odbicie](../../csharp/programming-guide/concepts/reflection.md)  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../csharp/language-reference/index.md)  
+- [Dokumentacja języka C#](../../csharp/language-reference/index.md)
 - [C#](../../csharp/index.md)

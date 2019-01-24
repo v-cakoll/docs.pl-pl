@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5d541f834e829305fa2b091c45d0dc8f387bb55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f62ad2c9ec6e1c9672ac5c78e838e926b02359f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512375"
 ---
 # <a name="cordllmain-function"></a>_CorDllMain — Funkcja
-Inicjuje środowisko uruchomieniowe języka wspólnego (CLR), lokalizuje zarządzany punkt wejścia w nagłówku CLR zestawu biblioteki DLL i rozpoczęciu wykonywania.  
+Inicjuje środowisko uruchomieniowe języka wspólnego (CLR), lokalizuje zarządzany punkt wejścia w nagłówku CLR zestawu biblioteki DLL i rozpoczyna wykonywanie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,34 +38,34 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
 #### <a name="parameters"></a>Parametry  
  `hInst`  
- [in] Dojście wystąpienia załadować modułu.  
+ [in] Uchwyt wystąpienia załadowanym module.  
   
  `dwReason`  
- [in] Wskazuje, dlaczego jest wywoływana funkcja punktu wejścia biblioteki DLL. Ten parametr może mieć jedną z następujących wartości: DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH lub komunikat DLL_PROCESS_DETACH. Aby uzyskać opis tych wartości, zobacz `DllMain` dokumentacji zestawu SDK platformy.  
+ [in] Wskazuje, dlaczego jest wywoływana funkcja punktu wejścia biblioteki DLL. Ten parametr może być jedną z następujących wartości: DLL_PROCESS_ATTACH DLL_THREAD_ATTACH, DLL_THREAD_ATTACH lub komunikat DLL_PROCESS_DETACH. Aby uzyskać opis tych wartości, zobacz `DllMain` dokumentacji w zestawie SDK platformy.  
   
  `lpReserved`  
  [in] Nieużywane.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca `true` w przypadku powodzenia i `false` w przypadku wystąpienia błędu.  
+ Ta metoda zwraca `true` w celu osiągnięcia sukcesu i `false` w przypadku wystąpienia błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta funkcja jest wywoływana przez moduł ładujący systemu operacyjnego dla zestawów biblioteki DLL. Dla pliku wykonywalnego zestawów wywołuje moduł ładujący [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) zamiast tego działania.  
+ Ta funkcja jest wywoływana przez program ładujący systemu operacyjnego dla zestawów DLL. Dla pliku wykonywalnego zestawów wywołuje moduł ładujący [_corexemain —](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) zamiast tego funkcji.  
   
- Moduł ładujący systemu operacyjnego wywołuje tę metodę, niezależnie od punkt wejścia określony w pliku DLL.  
+ Program ładujący systemu operacyjnego wywołuje tę metodę, niezależnie od tego punktu wejścia, określone w pliku DLL.  
   
- W Windows 98, Windows ME, Windows NT i system Windows 2000 `_CorDllMain` funkcja jest wywoływana bezpośrednio za pomocą fixupin modułu ładującego systemu operacyjnego. We wszystkich innych wersjach systemu Windows jest ona wywoływana bezpośrednio przez moduł ładujący systemu operacyjnego.  
+ W Windows 98, Windows ME, Windows NT i Windows 2000 `_CorDllMain` funkcja jest wywoływana, pośrednio za pośrednictwem fixupin program ładujący systemu operacyjnego. We wszystkich innych wersjach systemu Windows jest wywoływana bezpośrednio przez program ładujący systemu operacyjnego.  
   
- Aby uzyskać dodatkowe informacje, zobacz sekcję uwag w [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) tematu.  
+ Aby uzyskać dodatkowe informacje, zobacz sekcję Uwagi w [_corvalidateimage —](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) tematu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

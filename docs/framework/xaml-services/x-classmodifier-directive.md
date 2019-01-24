@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: 5a3bbd1d4d75c84dda741d382c8dd7568dbb474b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ef55549b43ecbef539d7e84a7281fa704a328938
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507593"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier — dyrektywa
 Modyfikuje zachowanie kompilacji XAML podczas `x:Class` jest również udostępniany. W szczególności, zamiast tworzyć częściowym `class` zawierający `Public` (ustawienie domyślne), poziom dostępu podany `x:Class` jest tworzona przy użyciu `NotPublic` poziom dostępu. To zachowanie ma wpływ na poziom dostępu dla klasy w generowanych zestawów.  
@@ -53,9 +53,9 @@ Modyfikuje zachowanie kompilacji XAML podczas `x:Class` jest również udostępn
 ## <a name="security-notes"></a>Uwagi dotyczące zabezpieczeń  
  Poziom dostępu, zgodnie z deklaracją w `x:ClassModifier` jest nadal podlega procesowi interpretacji przez określonej struktury i ich funkcji. WPF obejmuje funkcje, aby załadować i tworzenie wystąpień typów gdzie `x:ClassModifier` jest `internal`, jeśli z zasobu WPF za pomocą pakietu odwołanie do identyfikatora URI odwołuje się do tej klasy. W wyniku tego przypadku i potencjalnie innych podoba Ci się zaimplementowane przez innych platform, nie należy polegać wyłącznie na `x:ClassModifier` zablokować wszystkie możliwe podczas tworzenia wystąpienia prób.  
   
-## <a name="see-also"></a>Zobacz też  
- [x:Class, dyrektywa](../../../docs/framework/xaml-services/x-class-directive.md)  
- [Plik codebehind i XAML w WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [x:FieldModifier, dyrektywa](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)  
- [Zabezpieczenia (WPF)](../../../docs/framework/wpf/security-wpf.md)  
- [Typy migrowane z WPF do System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>Zobacz także
+- [x:Class, dyrektywa](../../../docs/framework/xaml-services/x-class-directive.md)
+- [Plik codebehind i XAML w WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [x:FieldModifier, dyrektywa](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)
+- [Zabezpieczenia (WPF)](../../../docs/framework/wpf/security-wpf.md)
+- [Typy migrowane z WPF do System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

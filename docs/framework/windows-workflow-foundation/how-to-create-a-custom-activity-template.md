@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie niestandardowego szablonu działań'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: 87acf0d084154c9c3e5cbc97da4af9821709f0a5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c90721676fc5b77704ee86bcd5e98c99e3af6683
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131446"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512714"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Instrukcje: Tworzenie niestandardowego szablonu działań
 
@@ -19,7 +19,7 @@ Szablony niestandardowe działania są używane do dostosowywania konfiguracji d
 
 ## <a name="to-create-a-template-for-the-delay-activity"></a>Aby utworzyć szablon działania opóźnienia
 
-1.  Uruchom program Visual Studio 2010.
+1.  Start Visual Studio 2010.
 
 2.  Na **pliku** menu wskaż **New**, a następnie wybierz pozycję **projektu**.
 
@@ -124,7 +124,7 @@ namespace DelayActivityTemplate
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Activities.Presentation.IActivityTemplateFactory>
 - [Dostosowywanie środowiska projektowania przepływu pracy](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

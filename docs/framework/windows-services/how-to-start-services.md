@@ -1,19 +1,19 @@
 ---
-title: 'Porady: uruchamianie usług'
+title: 'Instrukcje: Uruchamianie usług'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: b3f04deb11a23957198864c444b4872aef45b2e4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494385"
 ---
-# <a name="how-to-start-services"></a>Porady: uruchamianie usług
+# <a name="how-to-start-services"></a>Instrukcje: Uruchamianie usług
 Po zainstalowaniu usługi musi być uruchomiona. Początkowo wywołań <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metody w klasie usługi. Zazwyczaj <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metoda definiuje przydatnej pracy, wykona usługi. Po uruchomieniu usługi pozostaje aktywne do czasu jest ręcznie wstrzymana lub zatrzymana.  
   
  Usługi można skonfigurować do uruchamiania automatycznie lub ręcznie. Usługa, która jest uruchamiana automatycznie zostanie uruchomiony, gdy komputer, na którym jest zainstalowany, jest ponownie uruchamiany lub najpierw jest włączona. Użytkownik musi uruchomić usługę, która jest uruchamiana ręcznie.  
@@ -27,7 +27,7 @@ Po zainstalowaniu usługi musi być uruchomiona. Początkowo wywołań <xref:Sys
   
 ### <a name="to-specify-how-a-service-should-start"></a>Aby określić, jak usługa powinna być uruchamiana  
   
-1.  Po utworzeniu usługi, dodanie niezbędnych instalatorów dla niego. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie instalatorów do aplikacji usługi](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Po utworzeniu usługi, dodanie niezbędnych instalatorów dla niego. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 2.  W Projektancie kliknij Instalatora usługi dla usługi, którą pracujesz.  
   
@@ -48,7 +48,7 @@ Po zainstalowaniu usługi musi być uruchomiona. Początkowo wywołań <xref:Sys
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>Aby ręcznie uruchomić usługę z poziomu Eksploratora serwera  
   
-1.  W **Eksploratora serwera**, dodać serwer, jeśli go nie ma już na liście. Aby uzyskać więcej informacji, zobacz jak: dostępu oraz inicjowanie Eksploratora bazy danych Eksploratora serwera.  
+1.  W **Eksploratora serwera**, dodać serwer, jeśli go nie ma już na liście. Aby uzyskać więcej informacji, zobacz jak: Uzyskiwanie dostępu oraz inicjowanie Eksploratora bazy danych Eksploratora serwera.  
   
 2.  Rozwiń **usług** węzła, a następnie znajdź odpowiednią usługę, aby uruchomić.  
   
@@ -77,7 +77,7 @@ Po zainstalowaniu usługi musi być uruchomiona. Początkowo wywołań <xref:Sys
   
 2.  Wywołaj <xref:System.ServiceProcess.ServiceController.Start%2A> metodę, aby uruchomić usługę.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Instrukcje: tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Instrukcje: dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Instrukcje: Tworzenie usług Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Instrukcje: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

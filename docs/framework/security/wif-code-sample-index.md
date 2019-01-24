@@ -3,12 +3,12 @@ title: Indeks przykładów kodu programu WIF
 ms.date: 03/30/2017
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 author: BrucePerlerMS
-ms.openlocfilehash: b4c73bac9ddda83d78a4d9c95e3864d8d4e8ec4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a18392b892f9aa81e3ee8e924dd6b29058e486c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493394"
 ---
 # <a name="wif-code-sample-index"></a>Indeks przykładów kodu programu WIF
 Poniżej przedstawiono przykłady kodu dla systemu Windows Identity Foundation 4.5:  
@@ -29,5 +29,5 @@ Poniżej przedstawiono przykłady kodu dla systemu Windows Identity Foundation 4
   
 -   [CustomToken](https://go.microsoft.com/fwlink/?LinkID=248412) — w tym przykładzie pokazano, jak utworzyć niestandardowy typ tokenu Simple Web Token (SWT).  
   
-## <a name="see-also"></a>Zobacz też  
- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Windows Identity Foundation](../../../docs/framework/security/index.md)

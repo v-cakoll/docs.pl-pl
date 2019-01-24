@@ -2,12 +2,12 @@
 title: Autoryzacja i uprawnienia w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: bdf5112e3f0e2cada4885b0b66adf248f0ffe808
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 5d1ea7a9ad451db67e7a51c3485f98e03fd40690
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510016"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autoryzacja i uprawnienia w programie SQL Server
 Podczas tworzenia obiektów bazy danych, należy jawnie udzielić uprawnień, aby udostępnić je użytkownikom. Każdy obiekt zabezpieczany ma uprawnienia, które mogą być przyznane podmiot zabezpieczeń za pomocą instrukcji uprawnień.  
@@ -35,7 +35,7 @@ Podczas tworzenia obiektów bazy danych, należy jawnie udzielić uprawnień, ab
 |--------------------------|-----------------|  
 |PRZYDZIAŁ|Udziela uprawnienia.|  
 |ODWOŁYWANIE|Odwołuje uprawnienia. Jest to domyślny stan nowego obiektu. Uprawnienie odwołane dla użytkownika lub rolę nadal może być dziedziczona z innych grup lub ról, którym przypisano podmiot zabezpieczeń.|  
-|ODMÓW|ODMÓW odwołuje uprawnienia, tak aby nie może być dziedziczona. Odmowa ma pierwszeństwo przed wszystkie uprawnienia, z wyjątkiem ODMÓW nie ma zastosowania do obiektów właściciele i członkowie `sysadmin`. Odmowa uprawnień do obiektu do `public` roli jest możliwy wszyscy użytkownicy i role z wyjątkiem właścicieli obiektów i `sysadmin` elementów członkowskich.|  
+|DENY|ODMÓW odwołuje uprawnienia, tak aby nie może być dziedziczona. Odmowa ma pierwszeństwo przed wszystkie uprawnienia, z wyjątkiem ODMÓW nie ma zastosowania do obiektów właściciele i członkowie `sysadmin`. Odmowa uprawnień do obiektu do `public` roli jest możliwy wszyscy użytkownicy i role z wyjątkiem właścicieli obiektów i `sysadmin` elementów członkowskich.|  
   
 -   Wykonywanie instrukcji GRANT można przypisać uprawnienia do grupy lub roli, które mogą być dziedziczone przez użytkowników bazy danych. Jednak instrukcji DENY ma pierwszeństwo przed wszystkie inne instrukcje uprawnień. W związku z tym, użytkownik, który odmówiono uprawnień nie może dziedziczyć po jego innej roli.  
   
@@ -58,10 +58,10 @@ Podczas tworzenia obiektów bazy danych, należy jawnie udzielić uprawnień, ab
 |--------------|-----------------|  
 |[Uprawnienia](/sql/relational-databases/security/permissions-database-engine)|Zawiera tematy, zawierająca opis uprawnienia hierarchii, widoków wykazu i uprawnienia stałe role serwera i bazy danych.|
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Uwierzytelnianie w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [Serwer i role bazy danych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
- [Własność i oddzielenie schematu użytkownika w programie SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Uwierzytelnianie w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
+- [Serwer i role bazy danych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
+- [Własność i oddzielenie schematu użytkownika w programie SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

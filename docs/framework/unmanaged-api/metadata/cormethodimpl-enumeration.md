@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ef293daea1a768c26adf05d14107a42889226e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491288"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl — Wyliczenie
-Zawiera wartości, które opisują funkcji w implementacji metody.  
+Zawiera wartości, które opisano funkcje implementacji metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,29 +58,29 @@ typedef enum CorMethodImpl {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Flagi opisujące typ kodu.|  
-|`miIL`|Określa, że implementacja metody język pośredni firmy Microsoft (MSIL).|  
+|`miCodeTypeMask`|Flagi, które opisują typ kodu.|  
+|`miIL`|Określa, że implementacja metody języka Microsoft intermediate language (MSIL).|  
 |`miNative`|Określa, że implementacja metody natywnej.|  
 |`miOPTIL`|Określa, że implementacja metody OPTIL.|  
-|`miRuntime`|Określa, że implementacja metody są dostarczane przez środowisko uruchomieniowe języka wspólnego.|  
-|`miManagedMask`|Flagi, które wskazują, czy kod jest zarządzane lub niezarządzane.|  
-|`miUnmanaged`|Określa, że implementacja metody niezarządzane.|  
-|`miManaged`|Określa, że jest zarządzana w implementacji metody.|  
-|`miForwardRef`|Określa, że metoda jest zdefiniowana. Ta flaga jest wykorzystywana głównie w przypadku scenariuszy scalania.|  
+|`miRuntime`|Określa, że implementacja metody jest świadczona przez środowisko uruchomieniowe języka wspólnego.|  
+|`miManagedMask`|Flagi, które wskazują, czy kod jest zarządzany lub niezarządzany.|  
+|`miUnmanaged`|Określa, że implementacja metody niezarządzanego.|  
+|`miManaged`|Określa, że implementacja metody jest zarządzana.|  
+|`miForwardRef`|Określa, że metoda jest zdefiniowana. Ta flaga jest używana głównie w scenariuszach scalania.|  
 |`miPreserveSig`|Określa, że podpis metody nie zniekształcone konwersji HRESULT.|  
 |`miInternalCall`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
-|`miSynchronized`|Określa, że metoda jest jednowątkowy za pośrednictwem jego treści.|  
-|`miNoInlining`|Określa, że metoda nie może być wbudowane.|  
-|`miAggressiveInlining`|Określa, że metoda powinna być wbudowane, jeśli to możliwe.|  
-|`miNoOptimization`|Określa, że metoda nie może zostać zoptymalizowana.|  
+|`miSynchronized`|Określa, że metoda jest jednowątkowym za pośrednictwem jej treści.|  
+|`miNoInlining`|Określa, że metoda nie może być śródwierszowa.|  
+|`miAggressiveInlining`|Określa, że metoda powinna być śródwierszowa, jeśli jest to możliwe.|  
+|`miNoOptimization`|Określa metody nie powinny być zoptymalizowany.|  
 |`miMaxMethodImplVal`|Maksymalna prawidłowa wartość dla `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

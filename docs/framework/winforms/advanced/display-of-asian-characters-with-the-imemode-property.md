@@ -14,16 +14,16 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: c60ae399-0dab-4f07-9dea-6dbfb15ec0ae
-ms.openlocfilehash: d3733f642d4218c851040582ee5637b5486a7804
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 25602e1a878443bd54411dfd6481581abebda5c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500528"
 ---
 # <a name="display-of-asian-characters-with-the-imemode-property"></a>Wyświetlanie znaków azjatyckich za pomocą właściwości ImeMode
-<xref:System.Windows.Forms.Control.ImeMode%2A> Właściwość jest używana przez formularzy i kontrolek, aby wymusić określony tryb edytora metody wprowadzania (IME). Edytora IME jest istotnym elementem do pisania skryptów chińskich, japońskich i koreańskich, ponieważ te systemy zapisu mają więcej znaków niż mogą być kodowane w regularnych klawiatury. Na przykład można zezwolić tylko znaki ASCII w określonym polu. W takim przypadku można ustawić <xref:System.Windows.Forms.Control.ImeMode%2A> właściwości <xref:System.Windows.Forms.ImeMode> i użytkownicy będą mogli tylko do wprowadzania znaków ASCII określonego pola. Wartość domyślna <xref:System.Windows.Forms.Control.ImeMode%2A> właściwość jest <xref:System.Windows.Forms.ImeMode>, więc po ustawieniu właściwości formularza wszystkich kontrolek w formularzu będzie dziedziczyć tego ustawienia. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.Control.ImeMode%2A> ) i <xref:System.Windows.Forms.ImeMode>.  
+<xref:System.Windows.Forms.Control.ImeMode%2A> Właściwość jest używana przez formularze i formanty, aby wymusić określony tryb na edytor input method editor (IME). Edytora IME jest istotnym elementem do pisania skryptów języka chińskiego, japońskiego i koreańskiego, ponieważ te systemy pisania mieć więcej znaków niż może być zakodowany na potrzeby regularnego klawiatury. Na przykład można zezwolić tylko znaki ASCII w określonym polu. W takim przypadku można ustawić <xref:System.Windows.Forms.Control.ImeMode%2A> właściwość <xref:System.Windows.Forms.ImeMode> i użytkowników tylko wtedy będzie można wprowadzić znaki ASCII określonego pola. Wartość domyślna <xref:System.Windows.Forms.Control.ImeMode%2A> właściwość <xref:System.Windows.Forms.ImeMode>, więc jeśli ustawisz właściwość formularza, wszystkie formanty w formularzu będą dziedziczyć tego ustawienia. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.Control.ImeMode%2A> ) i <xref:System.Windows.Forms.ImeMode>.  
   
 ## <a name="see-also"></a>Zobacz także
 
-[Globalizowanie aplikacji Windows Forms](globalizing-windows-forms.md)
+- [Globalizowanie aplikacji Windows Forms](globalizing-windows-forms.md)

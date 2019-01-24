@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7a04f0a9862927f8588a895c7f0f099509aa4d8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512895"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal — Typ danych (Visual Basic)
 Przechowuje podpisany 128-bitowego (16-bajtową) wartości reprezentujących numery 96-bitową liczbę całkowitą z (12-bajtową) skalowania przez zmienną potęgą liczby 10. Czynnik skalowania określa liczbę cyfr z prawej strony punktu dziesiętnego; waha się od 0 do 28. O skali 0 (bez miejsc dziesiętnych) największa możliwa wartość to +/-79,228,162,514,264,337,593,543,950,335 (+/-7 .9228162514264337593543950335E + 28). 28 miejsc dziesiętnych największa wartość jest +/-7.9228162514264337593543950335 i najmniejszą wartość różną od zera jest +/-0,0000000000000000000000000001 (+/-1E-28).  
@@ -57,7 +57,7 @@ Przechowuje podpisany 128-bitowego (16-bajtową) wartości reprezentujących num
   
      Dane wyjściowe `MsgBox` w powyższym przykładzie jest następująca:  
   
-     D1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4  
+     d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4  
   
 -   **Znaki typu.** Dołączanie znaku typu literał `D` do literału wymusza `Decimal` typu danych. Dołączanie znaku typu identyfikator `@` do jakiegokolwiek identyfikatora wymusza `Decimal`.  
   
@@ -78,13 +78,13 @@ Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
   
  Aby uzyskać `bigDec3`, znak literalny typu `D` rozwiązuje problem, wymuszając na kompilatorze interpretowanie literału jako `Decimal` zamiast jako `Long`.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Decimal?displayProperty=nameWithType>  
- <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>  
- <xref:System.Math.Round%2A?displayProperty=nameWithType>  
- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
- [Single, typ danych](../../../visual-basic/language-reference/data-types/single-data-type.md)  
- [Double, typ danych](../../../visual-basic/language-reference/data-types/double-data-type.md)  
- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Decimal?displayProperty=nameWithType>
+- <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>
+- <xref:System.Math.Round%2A?displayProperty=nameWithType>
+- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+- [Single, typ danych](../../../visual-basic/language-reference/data-types/single-data-type.md)
+- [Double, typ danych](../../../visual-basic/language-reference/data-types/double-data-type.md)
+- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

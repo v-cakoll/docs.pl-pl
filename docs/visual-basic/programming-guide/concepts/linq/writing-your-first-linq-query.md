@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b49475bf7aea8d28ce057c7d4376cf7ad8285a0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506254"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Pisanie pierwszego zapytania LINQ (Visual Basic)
 A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są wyrażone w język kwerendy dedykowanych. Wraz z upływem czasu różnych języków zostały opracowane dla różnych typów źródeł danych, na przykład SQL dla relacyjnych baz danych i XQuery dla XML. Dzięki temu niezbędne dla deweloperów aplikacji dowiedzieć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, która jest obsługiwana.  
@@ -60,7 +60,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  Aby uzyskać więcej informacji na temat sposobu tworzenia określonych typów źródeł danych, zobacz dokumentację dla różnych [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawców. (Aby uzyskać listę tych dostawców, zobacz [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) Podstawowa zasada jest proste: [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródło danych jest dowolny obiekt obsługujący ogólny <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub interfejs, który dziedziczy z niego.  
   
 > [!NOTE]
->  Typy takie jak <xref:System.Collections.ArrayList> który obsługuje niepodstawowy <xref:System.Collections.IEnumerable> interfejs może również służyć jako [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródeł danych. Aby uzyskać przykład, który używa <xref:System.Collections.ArrayList>, zobacz [porady: zapytanie w ArrayList za pomocą LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
+>  Typy takie jak <xref:System.Collections.ArrayList> który obsługuje niepodstawowy <xref:System.Collections.IEnumerable> interfejs może również służyć jako [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródeł danych. Aby uzyskać przykład, który używa <xref:System.Collections.ArrayList>, zobacz [jak: Zapytanie w ArrayList za pomocą LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
   
 ## <a name="the-query"></a>Zapytanie  
  Należy określić w zapytaniu, informacji, które mają zostać pobrane ze źródła danych lub źródła. Istnieje również możliwość wybrania, jak te informacje powinny być sortowane, pogrupowane lub ze strukturą przed zwróceniem. Aby włączyć tworzenie kwerendy, Visual Basic ma włączyć nową składnię zapytań do języka.  
@@ -120,9 +120,9 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do LINQ w Visual Basic](getting-started-with-linq.md)  
-- [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Omówienie operatorów standardowej kwerendy (Visual Basic)](standard-query-operators-overview.md)  
-- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Wprowadzenie do LINQ w Visual Basic](getting-started-with-linq.md)
+- [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Omówienie operatorów standardowej kwerendy (Visual Basic)](standard-query-operators-overview.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Zapytania](../../../../visual-basic/language-reference/queries/index.md)

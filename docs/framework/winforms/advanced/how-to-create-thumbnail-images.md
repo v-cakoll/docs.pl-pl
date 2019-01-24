@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie obrazów miniatur'
+title: 'Instrukcje: Tworzenie obrazów miniatur'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,48 +8,48 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 870ea223698e48438bd4dd08597d0a6ab79cec27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd5e0b5341a712f25f9d41670f9b3ede5414dda4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521488"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497045"
 ---
-# <a name="how-to-create-thumbnail-images"></a>Porady: tworzenie obrazów miniatur
-Obraz miniatury jest małą wersję obrazu. Obraz miniatury można utworzyć przez wywołanie metody <xref:System.Drawing.Image.GetThumbnailImage%2A> metody <xref:System.Drawing.Image> obiektu.  
+# <a name="how-to-create-thumbnail-images"></a>Instrukcje: Tworzenie obrazów miniatur
+Obraz miniatury jest mały wersję obrazu. Możesz utworzyć obraz miniatury, przez wywołanie metody <xref:System.Drawing.Image.GetThumbnailImage%2A> metody <xref:System.Drawing.Image> obiektu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy <xref:System.Drawing.Image> obiekt z pliku JPG. Oryginalny obraz ma 640 pikseli szerokości i wysokości 479 pikseli. Kod tworzy miniaturę, która zawiera 100 pikseli szerokości i wysokości 100 pikseli.  
+ Poniższy przykład tworzy <xref:System.Drawing.Image> obiekt z pliku JPG. Oryginalny obraz ma 640 pikseli szerokości i wysokości 479 pikseli. Ten kod tworzy obraz miniatury, który ma 100 pikseli szerokości i wysokości 100 pikseli.  
   
- Na poniższej ilustracji przedstawiono obraz miniatury.  
+ Poniższa ilustracja przedstawia obraz miniatury.  
   
  ![Obraz miniatury](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")  
   
 > [!NOTE]
->  W tym przykładzie metoda wywołania zwrotnego jest zadeklarowana, ale nigdy używane. Obejmuje to obsługę wszystkich wersji GDI +.  
+>  W tym przykładzie metody wywołania zwrotnego jest zadeklarowana, ale nigdy używane. To obsługuje wszystkie wersje interfejsu GDI +.  
   
  [!code-csharp[System.Drawing.WorkingWithImages#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.WorkingWithImages#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzedni przykład jest przeznaczony do użytku z formularzy systemu Windows i wymaga <xref:System.Windows.Forms.PaintEventArgs> `e`, który jest parametrem <xref:System.Windows.Forms.Control.Paint> obsługi zdarzeń. Aby uruchomić przykład, wykonaj następujące kroki:  
+ Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń. Aby uruchomić przykład, wykonaj następujące kroki:  
   
-1.  Tworzenie nowej aplikacji formularzy systemu Windows.  
+1.  Tworzenie nowej aplikacji Windows Forms.  
   
-2.  Przykładowy kod należy dodać do formularza.  
+2.  Dodaj przykładowy kod do formularza.  
   
-3.  Tworzenie programu obsługi dla formularza <xref:System.Windows.Forms.Control.Paint> zdarzeń  
+3.  Utwórz procedurę obsługi w formularzu <xref:System.Windows.Forms.Control.Paint> zdarzeń  
   
-4.  W <xref:System.Windows.Forms.Control.Paint> obsługi, wywołaj `GetThumbnail` — metoda i przekazać `e` dla <xref:System.Windows.Forms.PaintEventArgs>.  
+4.  W <xref:System.Windows.Forms.Control.Paint> program obsługi, wywołanie `GetThumbnail` metody i przekazać `e` dla <xref:System.Windows.Forms.PaintEventArgs>.  
   
-5.  Znajdź plik obrazu, który ma być miniaturę.  
+5.  Znajdź plik obrazu, który ma się miniaturę.  
   
 6.  W `GetThumbnail` metody, określ ścieżkę i nazwę obrazu pliku.  
   
-7.  Naciśnij klawisz F5, aby uruchomić w przykładzie.  
+7.  Naciśnij klawisz F5, aby uruchomić przykład.  
   
-     Obraz miniatury 100 na 100 pojawia się w formularzu.  
+     W formularzu pojawi się miniaturę 100 x 100.  
   
-## <a name="see-also"></a>Zobacz też  
- [Obrazy, mapy bitowe i metapliki](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>Zobacz także
+- [Obrazy, mapy bitowe i metapliki](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

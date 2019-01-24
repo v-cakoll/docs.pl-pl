@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0017cff43f7a1b1bdd90806f50abb374a96dadf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48d43d9107d010b12167b977acd2e500437c039f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501717"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished — Metoda
-Powiadamia profilera, czy domena aplikacji została utworzona.  
+Powiadamia program profilujący, że utworzono domeny aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,18 +37,18 @@ HRESULT AppDomainCreationFinished(
   
 #### <a name="parameters"></a>Parametry  
  `appDomainId`  
- [in] Określa domenę, która została utworzona.  
+ [in] Identyfikuje domeny, który został utworzony.  
   
  `hrStatus`  
- [in] HRESULT, która wskazuje, czy Tworzenie domeny aplikacji została ukończona pomyślnie.  
+ [in] Wartość HRESULT, która wskazuje, czy Tworzenie domeny aplikacji została ukończona pomyślnie.  
   
 ## <a name="remarks"></a>Uwagi  
- Identyfikator aplikacji jest nieprawidłowy dla żądania żadnych informacji do `AppDomainCreationFinished` metoda jest wywoływana.  
+ Identyfikator aplikacji jest nieprawidłowa dla każdego żądania informacje do momentu `AppDomainCreationFinished` metoda jest wywoływana.  
   
- Niektóre elementy ładowania domeny aplikacji mogą nadal po `AppDomainCreationFinished` wywołania zwrotnego. Błąd HRESULT w `hrStatus` oznacza błąd. Jednak Powodzenie HRESULT w `hrStatus` tylko wskazuje, że pierwsza część tworzenia domeny aplikacji zakończyła się pomyślnie.  
+ Niektóre części podczas ładowania domeny aplikacji może kontynuować po `AppDomainCreationFinished` wywołania zwrotnego. Błąd HRESULT w `hrStatus` wskazuje błąd. Jednak sukcesów wartość HRESULT w `hrStatus` wskazuje tylko, że pierwsza część tworzenia domeny aplikacji zakończyła się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -56,5 +56,5 @@ HRESULT AppDomainCreationFinished(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

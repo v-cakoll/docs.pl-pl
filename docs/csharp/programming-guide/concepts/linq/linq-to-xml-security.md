@@ -2,12 +2,12 @@
 title: Zabezpieczenia LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-ms.openlocfilehash: 0c4ee8df85d6e5c6f84947dcaaeb6875bbd687de
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e13a1db6a02ac2990624e93480e973284a0784e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493096"
 ---
 # <a name="linq-to-xml-security-c"></a>Zabezpieczenia LINQ to XML (C#)
 W tym temacie opisano problemy dotyczące zabezpieczeń skojarzonych z LINQ to XML. Ponadto zawiera pewne wskazówki łagodzenia zagrożenie bezpieczeństwa.  
@@ -99,6 +99,6 @@ W tym temacie opisano problemy dotyczące zabezpieczeń skojarzonych z LINQ to X
   
  Niektóre zabezpieczeń są udostępniane przez środowisko uruchomieniowe języka wspólnego (CLR). Na przykład składnik, który nie zawiera klasę prywatną nie może uzyskać dostępu adnotacje kluczach tej klasy. Jednak można usunąć adnotacji przez składniki, które nie mogą ich odczytać. To może być używany jako manipulacją ataku.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33bff2b72f2381fea461bb043506ee78f757dea8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504912"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam — Metoda
-Tworzy definicję parametru z określoną sygnaturą dla metody odwołuje się określony token i pobiera token dla tej definicji parametru.  
+Tworzy definicję parametrów o określonej sygnaturze metody odwołuje się określony token, a następnie pobiera token dla tej definicji parametru.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,22 +44,22 @@ HRESULT DefineParam (
   
 #### <a name="parameters"></a>Parametry  
  `md`  
- [in] Token metody zdefiniowano którego parametr.  
+ [in] Token dla metody, w której parametr jest definiowany.  
   
  `ulParamSeq`  
  [in] Numer sekwencji parametru.  
   
  `szName`  
- [in] Nazwa parametru w standardzie Unicode.  
+ [in] Nazwa parametru w formacie Unicode.  
   
  `dwParamFlags`  
- [in] Flagi dla parametru. To jest maską bitów z `CorParamAttr` wartości.  
+ [in] Flagi unikatowe dla parametru. Jest to z `CorParamAttr` wartości.  
   
  `dwCPlusTypeFlag`  
  [in] `ELEMENT_TYPE_` *\** wartości stałej.  
   
  `pValue`  
- [in] Wartość stała dla parametru.  
+ [in] Stała wartość dla parametru.  
   
  `cchValue`  
  [in] Rozmiar w znaki Unicode z `pValue`.  
@@ -68,17 +68,17 @@ HRESULT DefineParam (
  [out] `mdParamDef` Token przypisany.  
   
 ## <a name="remarks"></a>Uwagi  
- Sekwencja wartości w `ulParamSeq` zaczynać się od 1 do parametrów. Wartość zwrotna ma numer sekwencji 0.  
+ Sekwencja wartości w `ulParamSeq` zaczynają się od 1 dla parametrów. Wartość zwracana ma kolejny numer 0.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

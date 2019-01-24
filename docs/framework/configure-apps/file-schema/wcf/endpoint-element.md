@@ -2,18 +2,18 @@
 title: '&lt;endpoint&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: ea95e2d16027869778e99cb217d5ea4f7ba7d21a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f0701f522874e9e77ba8cb8f013016dd66fbfa30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509704"
 ---
 # <a name="ltendpointgt-element"></a>&lt;endpoint&gt;, element
 Określa powiązanie, kontrakt i właściwości adresu punktu końcowego usługi, który jest używany do udostępnienia usług.  
   
  \<system.ServiceModel>  
-\<usługi >  
+\<service>  
 \<punkt końcowy >  
   
 ## <a name="syntax"></a>Składnia  
@@ -52,21 +52,21 @@ Określa powiązanie, kontrakt i właściwości adresu punktu końcowego usługi
 |isSystemEndpoint|Wartość logiczna określająca, czy punkt końcowy jest punktem końcowym infrastruktury.|  
 |rodzaj|Ciąg określający typ stosowanego standardowego punktu końcowego. Typ musi być zarejestrowana w `<extensions>` sekcji lub w pliku machine.config. Jeśli nic nie zostanie określony, zostanie utworzony wspólnego punktu końcowego usługi.|  
 |listenUriMode|Określa, jak warstwa transportu traktuje `ListenUri` określone usługi do nasłuchiwania. Prawidłowe wartości to:<br /><br /> -Jawne<br />— Unikatowe<br /><br /> Wartość domyślna to jawne.|  
-|Identyfikatorze ListenUri|Ciąg określający URI, na którym nasłuchuje punktu końcowego usługi. Wartość domyślna to ciąg pusty.|  
+|listenUri|Ciąg określający URI, na którym nasłuchuje punktu końcowego usługi. Wartość domyślna to ciąg pusty.|  
 |nazwa|Atrybut opcjonalny. Ciąg określający nazwę punktu końcowego usługi. Wartość domyślna to łączenie nazwę i opis nazwy kontraktu. Usługi mogą mieć wiele punktów końcowych, więc punktu końcowego `name` atrybut różni się od nazwy usługi.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<nagłówki >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Kolekcję nagłówków adresowych.|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Kolekcję nagłówków adresowych.|  
 |[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Tożsamość, która umożliwia uwierzytelnianie punktu końcowego przez inne punkty końcowe, wymiana wiadomości z nim.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<usługi >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Sekcja konfiguracji, który definiuje listę punktów końcowych, które klient może połączyć się z.|  
+|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Sekcja konfiguracji, który definiuje listę punktów końcowych, które klient może połączyć się z.|  
   
 ## <a name="example"></a>Przykład  
  Jest to przykład konfiguracji punktu końcowego usługi.  
@@ -84,9 +84,9 @@ Określa powiązanie, kontrakt i właściwości adresu punktu końcowego usługi
 </endpoint>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.Description.ServiceEndpoint>  
- [Punkty końcowe: Adresy, powiązania i kontrakty](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Instrukcje: Tworzenie punktu końcowego usługi w konfiguracji](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.Description.ServiceEndpoint>
+- [Punkty końcowe: Adresy, powiązania i kontrakty](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Instrukcje: Tworzenie punktu końcowego usługi w konfiguracji](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego systemu Windows'
+title: 'Instrukcje: Konwertowanie między .NET Framework i strumieni środowiska wykonawczego Windows'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 6a006d739b6fa9a31ad238702dd0b2d26254deca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492768"
 ---
-# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Porady: konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego systemu Windows
+# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Instrukcje: Konwertowanie między .NET Framework i strumieni środowiska wykonawczego Windows
 
 Program .NET Framework dla aplikacji do Sklepu Windows to podzestaw funkcji pełnego programu .NET Framework. Ze względu na zabezpieczenia i inne wymagania aplikacji do Sklepu Windows nie można używać pełnego zestawu interfejsów API programu .NET Framework w celu otwierania i odczytywania plików. Aby uzyskać więcej informacji, zobacz [Omówienie aplikacji .NET dla Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Jednak może być wymagane użycie interfejsów API programu .NET Framework w celu wykonywania innych operacji na strumieniach. Do manipulowania te strumienie, może okazać się niezbędne do konwersji między typem strumienia środowiska .NET Framework, takich jak <xref:System.IO.MemoryStream> lub <xref:System.IO.FileStream>i strumieni środowiska wykonawczego Windows, takich jak <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream>, lub <xref:Windows.Storage.Streams.IRandomAccessStream>.
 
@@ -79,6 +79,6 @@ Strumienie programu .NET Framework nie obsługują klonowania, nawet po konwersj
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Szybki Start: Odczyt i zapis pliku (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-- [Omówienie aplikacji .NET dla Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-- [Aplikacje .NET for Windows Store — obsługiwane interfejsy API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [Szybki start: Odczyt i zapis pliku (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)
+- [Omówienie aplikacji .NET dla Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)
+- [Aplikacje .NET for Windows Store — obsługiwane interfejsy API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

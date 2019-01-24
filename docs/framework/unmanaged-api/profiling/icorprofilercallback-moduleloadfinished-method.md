@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14f918a312031359043076be0b739f9b7e0e9f2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d15656079c087026a905d9268edf4966d8ef4034
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503563"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished — Metoda
-Powiadamia profilera zakończenie moduł ładowania.  
+Powiadamia program profilujący, że moduł zakończeniu ładowania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,18 +37,18 @@ HRESULT ModuleLoadFinished(
   
 #### <a name="parameters"></a>Parametry  
  `moduleId`  
- [in] Identyfikator modułu, w którym została załadowana.  
+ [in] Identyfikator modułu, który zakończy ładowanie.  
   
  `hrStatus`  
- [in] HRESULT, która wskazuje, czy moduł został załadowany pomyślnie.  
+ [in] Wartość HRESULT, która wskazuje, czy moduł został załadowany pomyślnie.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `moduleId` jest nieprawidłowa dla żądania informacji do `ModuleLoadFinished` metoda jest wywoływana.  
+ Wartość `moduleId` jest nieprawidłowa dla żądania informacje do momentu `ModuleLoadFinished` metoda jest wywoływana.  
   
- Niektóre elementy podczas ładowania modułu może nadal po `ModuleLoadFinished` wywołania zwrotnego. Błąd HRESULT w `hrStatus` oznacza błąd. Jednak Powodzenie HRESULT w `hrStatus` tylko wskazuje, że pierwsza część podczas ładowania modułu zakończyła się pomyślnie.  
+ Niektóre części podczas ładowania modułu może nadal po `ModuleLoadFinished` wywołania zwrotnego. Błąd HRESULT w `hrStatus` wskazuje błąd. Jednak sukcesów wartość HRESULT w `hrStatus` wskazuje tylko, powiodło się w pierwszej części podczas ładowania modułu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -56,6 +56,6 @@ HRESULT ModuleLoadFinished(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ModuleLoadStarted, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadstarted-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ModuleLoadStarted, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadstarted-method.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: bcfc59efda0627f83713fe9ada24cedc20d823e3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8985fb081443d931be3210c81099d510e2da057d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491899"
 ---
 # <a name="-operator"></a>\\= — Operator
 Dzieli wartość zmiennej lub właściwości przez wartość wyrażenia i przypisuje wyniku liczby całkowitej do zmiennej lub właściwości.  
@@ -29,10 +29,10 @@ variableorproperty \= expression
   
 ## <a name="parts"></a>Części  
  `variableorproperty`  
- Wymagane. Zmienna numeryczna lub właściwość.  
+ Wymagana. Zmienna numeryczna lub właściwość.  
   
  `expression`  
- Wymagane. Dowolne wyrażenie numeryczne.  
+ Wymagana. Dowolne wyrażenie numeryczne.  
   
 ## <a name="remarks"></a>Uwagi  
  Element w lewej części `\=` operator może być prosta zmienna skalarne, właściwości lub elementu w tablicy. Zmiennej lub właściwości nie może być [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
@@ -49,11 +49,11 @@ variableorproperty \= expression
   
  [!code-vb[VbVbalrOperators#19](codesnippet/VisualBasic/integer-division-assignment-operator_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [\ — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
- [/ = — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
- [Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Zobacz także
+- [\ — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [/ = — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)
+- [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)

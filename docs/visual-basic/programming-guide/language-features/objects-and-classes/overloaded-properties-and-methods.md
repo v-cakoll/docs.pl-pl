@@ -12,56 +12,56 @@ helpviewer_keywords:
 - method overloading
 - Overloads keyword [Visual Basic], overloaded members
 ms.assetid: b686fb97-e7d7-4001-afaa-6650cba08f0d
-ms.openlocfilehash: c0aa7c4a13e049045743044a98020a1aab2cf1a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 472cd0dbfc0544477d8e368b553a454b977d633c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498612"
 ---
 # <a name="overloaded-properties-and-methods-visual-basic"></a>Przeciążone właściwości i metody (Visual Basic)
 
-Przeciążanie jest tworzenie więcej niż jednej procedury, wystąpienie konstruktora lub właściwości w klasie z tej samej nazwie, ale argument różnych typów.  
+Przeciążenie jest tworzenie więcej niż jednej procedury, Konstruktor wystąpienia lub właściwości w klasie o takiej samej nazwie, ale argument różnych typów.  
   
 ## <a name="overloading-usage"></a>Przeciążanie użycia
 
- Przeciążanie jest szczególnie przydatna w przypadku, gdy model obiektu mówią, że zostanie zastosowana identycznych nazw dla procedur, które działają na różnych typach danych. Na przykład klasa służąca do wyświetlania kilku różnych typów danych może mieć `Display` procedur, które wyglądają następująco:  
+ Przeciążenie jest szczególnie przydatne w przypadku, gdy model obiektu mówią, że zostanie zastosowana identyczne nazwy dla procedur, które działają na różnych typach danych. Na przykład klasa, która może wyświetlać wiele różnych typów danych może mieć `Display` procedur, które wyglądają następująco:  
   
  [!code-vb[VbVbalrOOP#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#64)]
   
- Bez przeładowania, będzie potrzebny do tworzenia unikatowych nazw dla każdej procedury, mimo że robią to samo, jak pokazano w następnym:  
+ Bez przeciążenia, będziesz potrzebować do tworzenia unikatowych nazw dla każdej procedury, mimo że tak samo, jak pokazano dalej:  
   
  [!code-vb[VbVbalrOOP#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#65)]
   
- Przeciążanie ułatwia używać właściwości lub metody, ponieważ umożliwia wybór typów danych, które mogą być używane. Na przykład przeciążone `Display` omówionych wcześniej można wywołać metody za pomocą dowolnego z następujących wierszy kodu:  
+ Przeciążanie sprawia, że łatwiej używać właściwości lub metody, ponieważ zapewnia szeroki wybór typów danych, które mogą być używane. Na przykład zastąpionej `Display` omówionych wcześniej można wywołać metody z dowolnym następujące wiersze kodu:  
   
  [!code-vb[VbVbalrOOP#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#66)]
   
- W czasie wykonywania Visual Basic wywołuje procedurę poprawne na podstawie typów danych parametrów, które określisz.  
+ W czasie wykonywania Visual Basic wywołuje procedury poprawny, na podstawie typów danych parametrów, które określisz.  
   
 ## <a name="overloading-rules"></a>Przeciążanie reguły
 
- Przeciążonego elementu członkowskiego klasy można utworzyć przez dodanie dwóch lub więcej właściwości lub metody o tej samej nazwie. Z wyjątkiem przeciążone elementy członkowskie pochodnej każdy przeciążonego elementu członkowskiego musi mieć listy różnych parametrów, a następujące elementy nie może pełnić funkcji różnego przeciążania właściwość lub procedura:  
+ Możesz utworzyć członka przeciążonego, dla klasy, dodając dwa lub więcej właściwości lub metody o tej samej nazwie. Z wyjątkiem przeciążone elementy członkowskie pochodnej każdego członka przeciążonego musi mieć listy różnych parametrów, a następujące elementy nie może pełnić funkcję różnicujący przeciążania właściwość lub procedura:  
   
--   Modyfikatory, takich jak `ByVal` lub `ByRef`, które są stosowane do elementu członkowskiego lub parametrów elementu członkowskiego.  
+-   Modyfikatory, takich jak `ByVal` lub `ByRef`, które są stosowane do członka lub parametrów elementu członkowskiego.  
   
 -   Nazwy parametrów  
   
 -   Zwracane typy procedur  
   
- `Overloads` — Słowo kluczowe jest opcjonalny w przypadku przeciążania, ale jeśli występują przeciążony używa elementu członkowskiego `Overloads` — słowo kluczowe, a następnie wszystkie inne przeciążone elementy członkowskie o tej samej nazwie należy także określić słowa kluczowego.  
+ `Overloads` — Słowo kluczowe jest opcjonalny w przypadku przeciążania, ale jeśli przeciążone używa elementu członkowskiego `Overloads` — słowo kluczowe, a następnie wszystkie inne przeciążone elementy członkowskie o takiej samej nazwie należy także określić to słowo kluczowe.  
   
- Klasy pochodne mogą przeciążania dziedziczonych członków z elementów członkowskich, które mają identyczne parametry i typy parametrów procesu nazywanego *przesłanianie według nazwy i podpisu*. Jeśli `Overloads` — słowo kluczowe jest używana, gdy przesłanianie według nazwy i podpisu, implementacja klasy pochodnej elementu członkowskiego zamiast będzie używany do implementacji w klasie podstawowej, i inne przeciążenia dla tego elementu członkowskiego będą dostępne do wystąpień klasy pochodnej.  
+ Klasy pochodne może doprowadzić do przeciążenia dziedziczone elementy członkowskie z elementami członkowskimi, które mają identyczne parametry i typy parametrów, proces ten jest znany jako *przesłanianie przez nazwę i podpis*. Jeśli `Overloads` — słowo kluczowe jest używana podczas przesłanianie przez nazwę i podpis, implementacja klasy pochodnej elementu członkowskiego, będą używane zamiast implementacji w klasie bazowej i inne przeciążenia dla tego elementu członkowskiego będą dostępne dla wystąpienia elementu klasy pochodnej.  
   
- Jeśli `Overloads` — słowo kluczowe zostanie pominięty przeciążania dziedziczonego elementu członkowskiego z elementem członkowskim, który ma identyczne parametry i typy parametrów, a następnie przeładowanie jest nazywany *przesłanianie według nazwy*. Przesłanianie według nazwy zastępuje implementacji dziedziczonego elementu członkowskiego, a także udostępnia inne przeciążenia jest niedostępny dla wystąpień klasy pochodnej i jego decedents.  
+ Jeśli `Overloads` — słowo kluczowe zostanie pominięty w przypadku przeciążania dziedziczonej składowej ze składową, który ma identyczne parametry i typy parametrów, a następnie przeciążenie jest wywoływane *przesłanianie według nazwy*. Przesłanianie według nazwy zastępuje dziedziczona implementacja elementu członkowskiego, a także udostępnia inne przeciążenia niedostępny dla wystąpień klasy pochodnej i jego decedents.  
   
- `Overloads` i `Shadows` Modyfikatory nie można używać z tej samej właściwości lub metody.  
+ `Overloads` i `Shadows` modyfikatorów nie można używać z tej samej właściwości lub metody.  
   
 ### <a name="example"></a>Przykład
 
- Poniższy przykład tworzy przeciążonych metod, które akceptują albo `String` lub `Decimal` reprezentację kwota dolara ($) i zwracany ciąg zawierający podatku.  
+ Poniższy przykład tworzy przeciążone metody, które akceptują albo `String` lub `Decimal` reprezentacja kwoty i zwracany ciąg zawierający podatku od sprzedaży.  
   
-#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>Aby użyć w tym przykładzie do utworzenia przeciążonej metody
+#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>Aby wykorzystać ten przykład, aby utworzyć przeciążonej metody
   
 1.  Otwórz nowy projekt i Dodaj klasę o nazwie `TaxClass`.  
   
@@ -73,20 +73,20 @@ Przeciążanie jest tworzenie więcej niż jednej procedury, wystąpienie konstr
   
      [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
   
-4.  Dodawanie przycisku do formularza i wywołanie `ShowTax` procedury z `Button1_Click` zdarzeń przycisku.  
+4.  Dodawanie przycisku do formularza i wywołania `ShowTax` procedury z `Button1_Click` zdarzenia przycisku.  
   
-5.  Uruchom projekt i kliknij przycisk w formularzu do testowania przeciążone `ShowTax` procedury.  
+5.  Uruchom projekt, a następnie kliknij przycisk na formularzu, aby przetestować przeciążone `ShowTax` procedury.  
   
- W czasie wykonywania kompilator wybiera odpowiednią przeciążonej funkcji zgodny z parametrami używane. Po kliknięciu przycisku przeciążona metoda jest wywoływana najpierw z `Price` parametr, który jest ciągiem i komunikat "cena jest ciągiem. Podatek jest $5,12" jest wyświetlany. `TaxAmount` jest wywoływana z `Decimal` wartość po raz drugi i komunikat, "cena jest wartości dziesiętnej. Podatek jest $5,12" jest wyświetlany.  
+ W czasie wykonywania kompilator wybiera odpowiednie przeciążonej funkcji zgodny z parametrami, które są używane. Po kliknięciu przycisku, przeciążona metoda jest wywoływana najpierw z `Price` parametr, który jest ciągiem i komunikat, "cena jest ciąg. Podatek jest $5,12" jest wyświetlana. `TaxAmount` jest wywoływana z `Decimal` wartość po raz drugi i komunikat, "cena to wartości dziesiętnej. Podatek jest $5,12" jest wyświetlana.  
   
 ## <a name="see-also"></a>Zobacz także
 
- [Obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Przesłanianie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
- [Sub, instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Podstawowe informacje o dziedziczeniu](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)  
- [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)  
- [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)  
- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)  
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Przesłanianie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Sub, instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Podstawowe informacje o dziedziczeniu](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
+- [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)
+- [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)

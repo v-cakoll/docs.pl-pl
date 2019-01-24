@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 256afe9a4304654ddb263a0671db7525f3bedcba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b31db6e6a8ecb3fa15f1a8690b007bdb536b97c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506553"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress — Funkcja
-Pobiera adres określonej funkcji, który został wyeksportowany z najnowszej wersji zainstalowane środowisko uruchomieniowe języka wspólnego (CLR).  
+Pobiera adres określonej funkcji, która została wyeksportowana z najnowszej zainstalowanej wersji środowiska uruchomieniowego języka wspólnego (CLR).  
   
  Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -42,25 +42,25 @@ HRESULT GetRealProcAddress (
  [in] Nazwa funkcji.  
   
  `ppv`  
- [out] Lokalizacja odbierająca wskaźnik do adresu funkcji.  
+ [out] Lokalizacja, który otrzymuje wskaźnik do adresu funkcji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowy składnik modelu COM. kody błędów, zgodnie z definicją w pliku WinError.h oprócz następujących wartości zdefiniowane w CorError.h.  
+ Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujące wartości, które są zdefiniowane w CorError.h.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
 |E_POINTER|`ppv` nie jest prawidłowy.|  
-|CLR_E_SHIM_RUNTIMEEXPORT|Funkcja nie są eksportowane z środowiska uruchomieniowego.|  
+|CLR_E_SHIM_RUNTIMEEXPORT|Funkcja nie jest eksportowane ze środowiska wykonawczego.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

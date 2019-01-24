@@ -2,12 +2,12 @@
 title: LINQ to XML a. Modelu DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: 4feb0df2e4d3ffe5c79ce61d7b94142833a312c7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 07c54c9e2097a328ba09b16dab5b6c8b71c90934
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494850"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML a. Modelu DOM (Visual Basic)
 W tej sekcji opisano niektóre podstawowe różnice między [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i bieżącej dominujący XML programowania interfejsu API, W3C Document Object Model (DOM).  
@@ -104,7 +104,7 @@ doc.AppendChild(name)
  Inny problem z modelu DOM jest, że nie zezwala Ci zmienić nazwę węzła. Zamiast tego należy utworzyć nowy węzeł i skopiuj wszystkie węzły podrzędne, utraty oryginalną tożsamość węzła. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pozwala uniknąć tego problemu, należy włączyć ustawienia <xref:System.Xml.Linq.XName> właściwość w węźle.  
   
 ## <a name="static-method-support-for-loading-xml"></a>Obsługa statycznej metody ładowania danych XML  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Umożliwia ładowanie kodu XML przy użyciu metody statyczne, zamiast metody wystąpienia. Upraszcza to ładowania i analizowania. Aby uzyskać więcej informacji, zobacz [porady: ładowanie XML z pliku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Umożliwia ładowanie kodu XML przy użyciu metody statyczne, zamiast metody wystąpienia. Upraszcza to ładowania i analizowania. Aby uzyskać więcej informacji, zobacz [jak: Ładowanie kodu XML z pliku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>Usunięcie obsługi konstrukcji DTD  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dodatkowo upraszcza programowanie, usuwając obsługę jednostek i odwołań do jednostek XML. Zarządzanie jednostkami jest złożona i jest rzadko używana. Usuwanie ich obsługi zwiększa wydajność i upraszcza interfejs programowania. Gdy [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] drzewa jest wypełniana, zostaną rozwinięte wszystkie jednostki DTD.  
@@ -128,7 +128,7 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] elementy obsługuje extensible zbiór adnotacji. Jest to przydatne do śledzenia dodatkowych informacji na temat elementu, np. informacji o schemacie, informacji na temat tego, czy element jest powiązany z interfejsu użytkownika lub inne informacje dotyczące rodzaju specyficzne dla aplikacji. Aby uzyskać więcej informacji, zobacz [adnotacje LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Obsługa informacji o schemacie  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia obsługę walidację XSD za pośrednictwem metody rozszerzające w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw. Aby zweryfikować, że drzewa XML jest zgodny z XSD. Możesz wypełnić drzewa XML z zestaw informacji po weryfikacji (PSVI). Aby uzyskać więcej informacji, zobacz [porady: weryfikowanie przy użyciu XSD](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) i <xref:System.Xml.Schema.Extensions>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia obsługę walidację XSD za pośrednictwem metody rozszerzające w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw. Aby zweryfikować, że drzewa XML jest zgodny z XSD. Możesz wypełnić drzewa XML z zestaw informacji po weryfikacji (PSVI). Aby uzyskać więcej informacji, zobacz [jak: Weryfikowanie przy użyciu XSD](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) i <xref:System.Xml.Schema.Extensions>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

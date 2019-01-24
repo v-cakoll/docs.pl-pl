@@ -1,37 +1,38 @@
 ---
-title: Usuwanie elementy, atrybuty i węzły z drzewa XML (Visual Basic)
+title: Usuwanie elementów, atrybutów i węzłów z drzewa XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5cf21919-4360-4b49-b29d-58ea3164ac72
-ms.openlocfilehash: dbc5cfd7bf6e1f1b77dd14a6771c387fac29d062
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eee761772d920c6f6fa49b3ddd8b3142ec9f5e43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495776"
 ---
-# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>Usuwanie elementy, atrybuty i węzły z drzewa XML (Visual Basic)
-Drzewo XML można zmodyfikować usunięcie elementów, atrybutów i innych typów węzłów.  
+# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>Usuwanie elementów, atrybutów i węzłów z drzewa XML (Visual Basic)
+Możesz zmodyfikować drzewa XML, usunięcie elementów, atrybutów i innych typów węzłów.  
   
- Usuwanie pojedynczy element lub jeden atrybut z dokumentu XML jest prosta. Jednak podczas usuwania kolekcji elementów lub atrybutów, należy najpierw zmaterializowania kolekcji do listy, a następnie usuń z listy elementów lub atrybutów. Najlepszym rozwiązaniem jest użycie <xref:System.Xml.Linq.Extensions.Remove%2A> — metoda rozszerzenia, co zrobić to za Ciebie.  
+ Usuwanie dokumentu XML pojedynczy element lub jeden atrybut jest bardzo proste. Jednak podczas usuwania kolekcji elementów lub atrybutów, należy najpierw zmaterializowania kolekcji do listy, a następnie usuń z listy elementów lub atrybutów. Najlepszym rozwiązaniem jest użycie <xref:System.Xml.Linq.Extensions.Remove%2A> metodę rozszerzenia, które wykona to dla Ciebie.  
   
- Głównym celem tej czynności jest zwróciło większość kolekcje, które można pobrać z drzewa XML przy użyciu odroczonego wykonania. Jeśli użytkownik nie najpierw zmaterializowania je do listy, lub jeśli nie używasz metody rozszerzenia, istnieje możliwość wystąpienia klasy usterek. Aby uzyskać więcej informacji, zobacz [mieszanych deklaratywne usterki kodu kodu/Imperatywne (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).  
+ Głównym powodem w ten sposób jest uzyskane większość kolekcje, które możesz pobrać z drzewa XML za pomocą odroczonego wykonania. Jeśli użytkownik nie najpierw zmaterializowania je do listy lub jeśli nie używasz metody rozszerzenia, jest możliwość napotkania klasę usterek. Aby uzyskać więcej informacji, zobacz [mieszane deklaratywne usterki kodu kodu/Imperatywne (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).  
   
  Następujące metody usuń węzły i atrybuty z drzewa XML.  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|Usuwa <xref:System.Xml.Linq.XAttribute> po swoim obiekcie nadrzędnym.|  
-|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|Usuwa węzłów podrzędnych z <xref:System.Xml.Linq.XContainer>.|  
-|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|Usuwa zawartość oraz atrybutów z <xref:System.Xml.Linq.XElement>.|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|Usuwa <xref:System.Xml.Linq.XAttribute> od jego elementu nadrzędnego.|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|Usuwa węzły podrzędne z <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|Usuwa zawartość i atrybutów z <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|Usuwa atrybuty <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|W przypadku przekazania `null` dla wartości, a następnie usuwa ten atrybut.|  
-|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|W przypadku przekazania `null` dla wartości, a następnie usuwa element podrzędny.|  
-|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|Usuwa <xref:System.Xml.Linq.XNode> po swoim obiekcie nadrzędnym.|  
-|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|Usuwa każdy atrybut lub element w kolekcji źródłowej z jego elementu nadrzędnego.|  
+|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|W przypadku przekazania `null` wartości, a następnie usuwa atrybut.|  
+|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|W przypadku przekazania `null` wartości, a następnie usuwa element podrzędny.|  
+|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|Usuwa <xref:System.Xml.Linq.XNode> od jego elementu nadrzędnego.|  
+|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|Usuwa każdego atrybutu lub elementu w kolekcji źródłowej, z jego elementu nadrzędnego.|  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W tym przykładzie przedstawiono trzy sposoby usuwanie elementów. Po pierwsze Usuwa pojedynczy element. Po drugie, pobiera kolekcję elementów, zostaje je przy użyciu <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> , operator i spowoduje usunięcie kolekcji. Na koniec pobiera kolekcję elementów i usuwa je przy użyciu <xref:System.Xml.Linq.Extensions.Remove%2A> — metoda rozszerzenia.  
+ W tym przykładzie przedstawiono trzy sposoby usuwania elementów. Po pierwsze Usuwa pojedynczy element. Po drugie, pobiera kolekcję elementów, materializuje je przy użyciu <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> operatora i usuwa kolekcji. Na koniec pobiera kolekcję elementów i usuwa je przy użyciu <xref:System.Xml.Linq.Extensions.Remove%2A> — metoda rozszerzenia.  
   
  Aby uzyskać więcej informacji na temat <xref:System.Linq.Enumerable.ToList%2A> operatora, zobacz [konwertowanie typów danych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).  
   
@@ -76,7 +77,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- Należy zauważyć, że pierwszy element podwójnym został usunięty z `Child1`. Wszystkie elementy podrzędne zostały usunięte z `Child2` i z `Child3`.  
+ Należy zauważyć, że pierwszy element podwójnym została usunięta z `Child1`. Wszystkie elementy podrzędne zostały usunięte z `Child2` i `Child3`.  
   
-## <a name="see-also"></a>Zobacz też  
- [Modyfikowanie drzew XML (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Modyfikowanie drzew XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Przykłady składni zapytania oparte na metodzie: filtrowanie'
+title: 'Przykłady składni zapytania oparte na metodzie: Filtrowanie'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
-ms.openlocfilehash: 45000713d0151172762fd797bad7d7736c78a620
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8dc65af84a3cdb4a5fe9744eb1c134670b76260a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509319"
 ---
-# <a name="method-based-query-syntax-examples-filtering"></a>Przykłady składni zapytania oparte na metodzie: filtrowanie
+# <a name="method-based-query-syntax-examples-filtering"></a>Przykłady składni zapytania oparte na metodzie: Filtrowanie
 Przykłady w tym temacie prezentują sposób użycia `Where` i `Where…Contains` metod do wykonywania zapytań [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) za pomocą składni zapytania oparte na metodzie. Zapamiętaj, gdzie...`Contains` Nie można użyć jako części [skompilowany zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
   
  Model sprzedaży AdventureWorks używanego w tych przykładach składa się z kontaktu, adres, produktu, SalesOrderHeader i szczegóły zamówienia sprzedaży tabele w przykładowej bazy danych AdventureWorks.  
@@ -48,7 +48,7 @@ Przykłady w tym temacie prezentują sposób użycia `Where` i `Where…Contains
  [!code-csharp[DP L2E Examples#WhereNavProperty_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#wherenavproperty_mq)]
  [!code-vb[DP L2E Examples#WhereNavProperty_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#wherenavproperty_mq)]  
   
-## <a name="wherecontains"></a>WHERE... Zawiera  
+## <a name="wherecontains"></a>Where…Contains  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie użyto tablicy jako część `Where…Contains` klauzulę, aby znaleźć wszystkie produkty, które mają `ProductModelID` odpowiadającej wartości w tablicy.  
@@ -65,5 +65,5 @@ Przykłady w tym temacie prezentują sposób użycia `Where` i `Where…Contains
  [!code-csharp[DP L2E ArraysAndListsInQueries#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e arraysandlistsinqueries/cs/program.cs#4)]
  [!code-vb[DP L2E ArraysAndListsInQueries#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#4)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Zobacz także
+- [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

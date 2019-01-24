@@ -1,12 +1,12 @@
 ---
-title: 'Przewodnik: Przechowywanie obiektu przy użyciu języka C#'
+title: 'Przewodnik: Przechowywanie obiektu przy użyciuC#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 61e7496b39bcbc42b0ebb2642fcb1ad1d32696af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512453"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Przewodnik: przechowywanie obiektu przy użyciu języka C# #
 
@@ -99,7 +99,7 @@ Następnie należy dodać kod do serializacji klas w pliku. Dodaj następujący 
 
 W tym momencie możesz ponownie skompiluj i uruchom aplikację. Przy pierwszym uruchomieniu, należy zauważyć, że odsetek rozpoczyna się w wersji 7.5, a następnie zmienia 7.1. Zamknij aplikację, a następnie uruchom ją ponownie. Teraz aplikacja wyświetla komunikat, że ma ona odczytu zapisany plik, a stopę 7.1, nawet przed kod, który zmienia ją.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Serializacja (C#)](index.md)  
-- [Przewodnik programowania w języku C#](../..//index.md)  
+- [Serializacja (C#)](index.md)
+- [Przewodnik programowania w języku C#](../..//index.md)

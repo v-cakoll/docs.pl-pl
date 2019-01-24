@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f5b12825c9a348cd16eed9f5be0f41e03c367c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd8c5e05d3f331d46b2d31f3f2448a674f090eaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508629"
 ---
 # <a name="corprfgcrootkind-enumeration"></a>COR_PRF_GC_ROOT_KIND — Wyliczenie
-Określa rodzaj operacji wyrzucania elementów kolekcji głównego, który jest udostępniany przez [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) wywołania zwrotnego.  
+Wskazuje rodzaj głównego kolekcji wyrzucania elementów, który jest udostępniany przez [icorprofilercallback2::rootreferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) wywołania zwrotnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,13 +41,13 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_STACK`|Główny jest zmienna na stosie.|  
-|`COR_PRF_GC_ROOT_FINALIZER`|Katalog główny to pozycja w kolejce finalizatora.|  
-|`COR_PRF_GC_ROOT_HANDLE`|Główny jest dojście kolekcji pamięci.|  
-|`COR_PRF_GC_ROOT_OTHER`|Rodzaj elementu głównego jest nieokreślony.|  
+|`COR_PRF_GC_ROOT_STACK`|Katalog główny jest zmienną na stosie.|  
+|`COR_PRF_GC_ROOT_FINALIZER`|Katalog główny jest wpis w kolejce finalizatora.|  
+|`COR_PRF_GC_ROOT_HANDLE`|Katalog główny jest uchwytem kolekcji wyrzucania elementów.|  
+|`COR_PRF_GC_ROOT_OTHER`|Rodzaj elementu głównego jest nieokreślona.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -54,5 +55,5 @@ typedef enum {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

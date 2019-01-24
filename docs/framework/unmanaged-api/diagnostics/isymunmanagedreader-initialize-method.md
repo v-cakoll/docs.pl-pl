@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d141d23f02b2abc92e3d4455aebe1a4057b6bb85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee68533e95deb4b6efaa9226c047599f233b3954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494759"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize — Metoda
-Inicjuje czytnika symboli z interfejsem importer metadanych, który tego czytnika zostanie skojarzona z, wraz z nazwą modułu.  
+Inicjuje czytnika symboli z interfejsem importera metadanych, które ten czytnik będzie skojarzona, wraz z nazwą pliku modułu.  
   
 > [!NOTE]
->  Ta metoda może być wywołana tylko raz i musi zostać wywołana przed innymi metodami czytnika.  
+>  Ta metoda może być wywołana tylko raz i musi zostać wywołana przed wszystkimi metodami czytnika.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,25 +42,25 @@ HRESULT Initialize (
   
 #### <a name="parameters"></a>Parametry  
  `importer`  
- [in] Interfejs importer metadanych, z którą zostanie skojarzona tego czytnika.  
+ [in] Interfejs importera metadanych za pomocą którego ten czytnik zostanie skojarzona.  
   
  `filename`  
- [in] Nazwa pliku modułu. Można użyć `pIStream` parametru zamiast tego.  
+ [in] Nazwa pliku modułu. Możesz użyć `pIStream` parametru zamiast tego.  
   
  `searchPath`  
- [in] Ścieżka do wyszukiwania. Ten parametr jest opcjonalny.  
+ [in] Ścieżka do wyszukania. Ten parametr jest opcjonalny.  
   
  `pIStream`  
- [in] Strumień pliku używany jako alternatywę dla parametru filename.  
+ [in] Strumień pliku używana jako alternatywa dla parametru filename.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- Należy określić tylko jeden z `filename` lub `pIStream` parametrów nie oba. `searchPath` Parametr jest opcjonalny.  
+ Należy określić tylko jeden z `filename` lub `pIStream` parametrów, nie obydwa. `searchPath` Parametr jest opcjonalny.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

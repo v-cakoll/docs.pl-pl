@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b98aa5b62718a2ff19cb50a09de1a0ddf55ddb91
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 2b3a2432deb1e956060ab3615db01821658f8782
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508682"
 ---
 # <a name="xml-document-object-model-dom"></a>XML Document Object Model (DOM)
 Klasa XML Document Object Model (DOM) jest reprezentacją w pamięci dokumentu XML. Model DOM umożliwia programowe do odczytu, modyfikowania i modyfikowanie dokumentu XML. **XmlReader** klasy odczytuje również XML; jednak zapewnia dostęp bez pamięci podręcznej, tylko do przodu, tylko do odczytu. Oznacza to, że nie ma możliwość edytowania wartości atrybutu lub zawartości elementu lub możliwość wstawiania i usuwania węzłów z **XmlReader**. Edytowanie jest podstawową funkcją DOM. To typowe i sposób strukturalnych, że dane XML są reprezentowane w pamięci, mimo, że rzeczywiste dane XML są przechowywane w sposób liniowy w przypadku pliku lub odbierane z innego obiektu. Poniżej znajduje się danych XML.  
@@ -56,7 +56,7 @@ Strukturę dokumentu XML
   
     -   **DocumentFragment**  
   
-    -   **Obiekt EntityReference**  
+    -   **EntityReference**  
   
     -   **Element**  
   
@@ -78,5 +78,5 @@ Strukturę dokumentu XML
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy węzłów XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [Typy węzłów XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
 - [Mapowanie hierarchii obiektów na dane XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

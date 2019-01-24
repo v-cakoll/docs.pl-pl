@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 81898e09ff513043b205cde13378ae24ee755226
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 78fc56a49c92d17e6e4638573169bf43c3b77ce3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497292"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.SplitContainer> kontrolki mogą być uważane za złożonego, a dwa panele rozdzielone ruchome paska. Gdy wskaźnik myszy znajduje się nad paskiem, kursor zmienia kształt, aby pokazać, że pasek jest ruchomy.  
@@ -49,7 +49,7 @@ Formularze Windows <xref:System.Windows.Forms.SplitContainer> kontrolki mogą by
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Zdarzenia|Występuje, gdy porusza się rozdzielacza.|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Zdarzenia|Występuje, gdy został przeniesiony rozdzielacza.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer, kontrolka](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [Przykładowe SplitContainer, kontrolka](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer, kontrolka](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [Przykładowe SplitContainer, kontrolka](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)

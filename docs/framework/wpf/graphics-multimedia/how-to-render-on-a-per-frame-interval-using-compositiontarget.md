@@ -1,5 +1,5 @@
 ---
-title: Jak renderować w interwałach klatek z użyciem CompositionTarget
+title: 'Instrukcje: Renderuj w interwałach klatek z użyciem CompositionTarget'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: cc043e6d225ad3dbe57a0924593fac0f68af7eb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: afbaf6652351e056fb0ce31ffd9e69cf98a90e85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511228"
 ---
-# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Jak renderować w interwałach klatek z użyciem CompositionTarget
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Instrukcje: Renderuj w interwałach klatek z użyciem CompositionTarget
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aparat animacji udostępnia wiele funkcji do tworzenia opartych na klatkach animacji. Istnieją jednak scenariuszy aplikacji, w których potrzebujesz bardziej szczegółowej kontroli nad renderowania na zasadzie na ramki. <xref:System.Windows.Media.CompositionTarget> Obiekt zapewnia możliwość tworzenia niestandardowe animacje oparte na wywołanie zwrotne poszczególnych klatkach.  
   
  <xref:System.Windows.Media.CompositionTarget> jest klasą statyczną, który reprezentuje powierzchni ekranu, na którym jest rysowana aplikacji. <xref:System.Windows.Media.CompositionTarget.Rendering> Zdarzenie jest zgłaszane w każdym sceny aplikacji rysowania. Szybkość klatek renderowania jest to liczba razy na sekundę rysowania sceny.  
@@ -40,6 +40,6 @@ ms.locfileid: "43526444"
   
  Dodawanie lub usuwanie renderowania <xref:System.EventHandler> po zakończeniu zdarzenia delegata, gdy zdarzenie jest uruchamiana zostanie opóźnione aż do wyzwalania. Jest to zgodne z jak <xref:System.MulticastDelegate>— na podstawie zdarzenia są obsługiwane w środowiska uruchomieniowego języka wspólnego (CLR). Należy również zauważyć, że renderowanie zdarzeń nie ma gwarancji, można wywołać w określonej kolejności. Jeśli masz wiele <xref:System.EventHandler> delegatów, które zależą od określonej kolejności, należy zarejestrować pojedynczy <xref:System.Windows.Media.CompositionTarget.Rendering> zdarzeń i multipleksować delegatów prawidłowo kolejność samodzielnie.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.CompositionTarget>  
- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.CompositionTarget>
+- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Porady: tworzenie interfejsu w stylu Eksploratora Windows na formularzu systemu Windows'
+title: 'Instrukcje: Tworzenie interfejsu w stylu Eksploratora Windows na formularzu Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Explorer [Windows Forms], creating with Windows Forms
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 249210d2bcb7a9ef2c5bf1aed00bcfe138193aab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0b61961aff04a089ce12f4b96637e3f05023e929
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511107"
 ---
-# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Porady: tworzenie interfejsu w stylu Eksploratora Windows na formularzu systemu Windows
+# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Instrukcje: Tworzenie interfejsu w stylu Eksploratora Windows na formularzu Windows
 Eksplorator Windows jest wspólne wybór interfejsu użytkownika dla aplikacji ze względu na swoją znajomość gotowe.  
   
  Eksplorator Windows jest zasadniczo <xref:System.Windows.Forms.TreeView> kontroli i <xref:System.Windows.Forms.ListView> formantu w oddzielnych paneli. Rozdzielacz zostają o zmiennym rozmiarze paneli. Taki układ kontrolki jest bardzo skuteczny sposób na wyświetlanie i informacji o przeglądaniu.  
@@ -49,9 +49,9 @@ Eksplorator Windows jest wspólne wybór interfejsu użytkownika dla aplikacji z
     > [!NOTE]
     >  Podczas przeciągania rozdzielacza zmienić rozmiar paneli, samodzielnie.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.SplitContainer>  
- [Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
- [Instrukcje: definiowanie zachowania dotyczącego zmieniania rozmiaru i pozycjonowania w podzielonym oknie](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
- [Instrukcje: dzielenie okna w poziomie](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
- [SplitContainer, kontrolka](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.SplitContainer>
+- [Instrukcje: Tworzenie złożonego interfejsu użytkownika z formularzami Windows](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Instrukcje: Definiowanie zmieniania rozmiaru i pozycjonowania zachowania w podzielonym oknie](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Instrukcje: Dzielenie okna w poziomie](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)
+- [SplitContainer, kontrolka](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

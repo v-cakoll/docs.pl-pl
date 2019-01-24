@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6761ff204d299bc2db84e2e80d988306125a110
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4be027238d676d78a3ec29e4f2696f765291f29b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504434"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding — Interfejs
-Udostępnia metody, która jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), aby powiadomić aplikacji hosta utworzono domeny aplikacji.  
+Dostarcza metodę, która jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), by powiadomić aplikację hosta utworzono domeny aplikacji.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[OnAppDomain, metoda](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Wywoływane przez środowisko uruchomieniowe języka wspólnego (CLR), aby powiadomić hosta utworzono domeny aplikacji.|  
+|[OnAppDomain, metoda](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Metoda wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR) w celu powiadomienia hosta, że utworzono domeny aplikacji.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b77ead51b4e064d223735ca52affdec434e5c818
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa11cea7e78a56c3f5cbfd9d0678e1ed671f6f3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506046"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;Dodaj&gt; elementu &lt;namedCaches&gt;
 Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.  
   
  \<system.runtime.caching>  
 \<memoryCache>  
-\<namedCaches >  
+\<namedCaches>  
 \<add>  
   
 ## <a name="syntax"></a>Składnia  
@@ -78,5 +78,5 @@ Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 - [\<namedCaches >, Element (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

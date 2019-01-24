@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d31caf88e1376025484ed6d65d5277c015e70b5e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7e183a624b95e207d34697c906cc3f278c967ae9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499786"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;Usuń&gt; elementu &lt;namedCaches&gt;
 Usuwa wpis nazwaną pamięć podręczną z `namedCaches` kolekcji w pamięci podręcznej.  
   
  \<system.runtime.caching>  
 \<memoryCache>  
-\<namedCaches >  
-\<Usuń >  
+\<namedCaches>  
+\<remove>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,5 +52,5 @@ Usuwa wpis nazwaną pamięć podręczną z `namedCaches` kolekcji w pamięci pod
 ## <a name="remarks"></a>Uwagi  
  `remove` Usuwa element `namedCache` wpis z kolekcji nazwaną pamięć podręczną dla pamięci podręcznej.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 - [\<namedCaches >, Element (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

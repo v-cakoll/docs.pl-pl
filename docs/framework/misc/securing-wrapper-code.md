@@ -9,52 +9,52 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac278a4a3b06e0611e1cf57d079516a1dccf606b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c74a130c078077d9f692fbf6107e9d5aefc16b9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505942"
 ---
 # <a name="securing-wrapper-code"></a>Zabezpieczanie kodu otoki
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Kod otoki, szczególnie gdy otoka ma zaufania wyższe niż kod, który korzysta z niego, można otworzyć unikatowy zestaw słabych zabezpieczeń. Wszystko gotowe imieniu obiekt wywołujący, gdzie ograniczone uprawnienia obiektu wywołującego nie znajdują się w wyboru odpowiednich ustawień zabezpieczeń, to potencjalne osłabienia wykorzystanie.  
+ Kod otoki, szczególnie w przypadku gdy otoki ma zaufania wyższe niż kod, który korzysta z niego, można otworzyć unikatowy zestaw luk zabezpieczeń. Wszystko gotowe w imieniu obiekt wywołujący, gdzie wywołującego ograniczone uprawnienia nie są uwzględnione w wyboru odpowiednich zabezpieczeń, jest słabość potencjalne wykorzystanie.  
   
- Nigdy nie włączyć coś otoki, który obiekt wywołujący nie może sam. Jest to specjalne zagrożenie, gdy ten element, który obejmuje kontrolę ograniczonych zabezpieczeń, zamiast żądanie przeszukiwania pełnego stosu. W przypadku poziom kontroli interposing kod otoki między rzeczywistych wywołującego i element interfejsu API w pytanie łatwo może spowodować sprawdzania zabezpieczeń, aby możliwe, gdy jest on powinien nie, a tym samym osłabienia zabezpieczeń.  
+ Nigdy nie umożliwiają coś otok, który obiekt wywołujący nie może sam. Jest to szczególne zagrożenie, gdy wykonuje określone operacje, które obejmuje sprawdzanie zabezpieczeń ograniczona, a nie żądanie przeszukiwania pełnego stosu. W przypadku poziom kontroli interposing kod otoki między rzeczywistego obiektu wywołującego, a element interfejsu API w pytaniu mogą łatwo spowodować sprawdzania zabezpieczeń, aby pomyślnie wykonane po jego powinna nie, a tym samym osłabienia zabezpieczeń.  
   
 ## <a name="delegates"></a>Delegaty  
- Delegat zabezpieczeń różni się od wersji programu .NET Framework.  W tej sekcji opisano zachowania innego obiektu delegowanego i skojarzone zagadnienia dotyczące zabezpieczeń.  
+ Delegat zabezpieczeń różni się między wersjami programu .NET Framework.  W tej sekcji opisano zachowania różnych delegata i skojarzone zagadnienia dotyczące zabezpieczeń.  
   
-### <a name="in-version-10-and-11-of-the-net-framework"></a>W wersji 1.0, 1.1 programu .NET Framework  
- Akcje zabezpieczeń wersja 1.0 i 1.1 platformy .NET, wykonaj poniższe czynności przed twórcy delegata i obiekt wywołujący delegata.  
+### <a name="in-version-10-and-11-of-the-net-framework"></a>W wersji 1.0 i 1.1 programu .NET Framework  
+ Akcje zabezpieczeń wersja 1.0 i 1.1 programu .NET Framework, wykonaj następujące czynności przed twórcy delegata, jak i obiekt wywołujący delegata.  
   
--   Po utworzeniu delegata zabezpieczeń linkdemand dla metody docelowego delegata są wykonywane względem zestawu twórcy obiektu delegowanego.  Nieprzestrzeganie akcji zabezpieczeń powoduje <xref:System.Security.SecurityException>.  
+-   Podczas tworzenia delegata zabezpieczeń zapotrzebowania na łącza na metody delegata w docelowej są wykonywane względem zestaw uprawnień twórcy delegata.  Niespełnienie akcji zabezpieczeń powoduje <xref:System.Security.SecurityException>.  
   
--   Po wywołaniu delegata są wykonywane wszystkie istniejące żądania kontroli zabezpieczeń na wywołującego delegata.  
+-   Gdy obiekt delegowany jest wywoływany, są wykonywane żadnych istniejących wymogów bezpieczeństwa na obiekcie wywołującym delegata.  
   
- Zawsze, gdy trwa kodu <xref:System.Delegate> z kodu niższym poziomie zaufania, które może wywołać ją, upewnij się, że nie włączasz kod zaufany mniej eskalować uprawnienia. Przypadku trwać delegata i używać go później, kod utworzenia delegata nie jest w stosie wywołań, a jego uprawnienia nie zostanie sprawdzona, jeśli kod w lub na podstawie delegata prób chronionych operacji. Jeśli kod i kod wywołujący uprawnień wyższe niż twórca, twórca można organizować ścieżki wywołania nie są częścią stosu wywołań.  
+ Zawsze, gdy kod przyjmuje <xref:System.Delegate> kodu niższym poziomie zaufania, który może wywołać go, upewnij się, nie włączasz kod niższym poziomie zaufania, aby eskalować uprawnienia. Jeśli wykonać delegata i użyć go później, kod, który utworzony delegat nie znajduje się na stosie wywołań i jego uprawnienia nie zostaną przetestowane, jeśli kod w lub na podstawie obiektu delegowanego prób chronionej operacji. Jeśli Twój kod i kod wywołujący ma uprawnienia wyższe niż twórca, twórca można organizować ścieżki wywołania nie są częścią stosu wywołań.  
   
-### <a name="in-version-20-and-later-versions-of-the-net-framework"></a>W wersji 2.0 i nowszych wersji programu .NET Framework  
- W przeciwieństwie do poprzednich wersji w wersji 2.0 i nowszych wersji programu .NET Framework wykonuje akcję zabezpieczeń przed twórca delegata podczas tworzenia i wywołuje delegata.  
+### <a name="in-version-20-and-later-versions-of-the-net-framework"></a>W wersji 2.0 i nowszych wersjach programu .NET Framework  
+ W przeciwieństwie do poprzednich wersji wersji 2.0 i nowszych wersjach .NET Framework wykonuje akcję zabezpieczeń względem Autor delegowanego Jeśli delegat jest tworzony i o nazwie.  
   
--   Po utworzeniu delegata zabezpieczeń linkdemand dla metody docelowego delegata są wykonywane względem zestawu twórcy obiektu delegowanego.  Nieprzestrzeganie akcji zabezpieczeń powoduje <xref:System.Security.SecurityException>.  
+-   Podczas tworzenia delegata zabezpieczeń zapotrzebowania na łącza na metody delegata w docelowej są wykonywane względem zestaw uprawnień twórcy delegata.  Niespełnienie akcji zabezpieczeń powoduje <xref:System.Security.SecurityException>.  
   
--   Zestaw uprawnień twórcy obiektu delegowanego jest również przechwycone podczas tworzenia obiektu delegowanego i przechowywane z obiektem delegowanym.  
+-   Zestaw uprawnień twórcy delegata jest również przechwycony podczas tworzenia delegata i przechowywane z obiektem delegowanym.  
   
--   Po wywołaniu delegat przechwyconych zestawu twórcy delegata najpierw zostaną ocenione względem wszystkie żądania w bieżącym kontekście, jeśli delegat twórcę i wywołującego należą do różnych zestawów.  Następnie wszystkie istniejące żądania kontroli zabezpieczeń na wywołującego delegata są wykonywane.  
+-   Gdy obiekt delegowany jest wywoływany, twórca delegata przechwyconych przydzielonym zestawie najpierw zostaną ocenione względem dowolnego żądania w bieżącym kontekście, jeśli twórca delegata i element wywołujący należą do różnych zestawów.  Następnie są wykonywane żadnych istniejących wymogów bezpieczeństwa na obiekcie wywołującym delegata.  
   
-## <a name="link-demands-and-wrappers"></a>Żądania łączy i otoki  
- W infrastrukturze zabezpieczeń została wzmocniona przypadku specjalnej ochrony z żądaniem linkdemand, ale nadal jest źródłem możliwe osłabienia w kodzie.  
+## <a name="link-demands-and-wrappers"></a>Żądania połączeń i otoki  
+ Przypadek specjalny ochrony za pomocą zapotrzebowania na łącza została wzmocniona w ramach infrastruktury zabezpieczeń, ale nadal jest źródłem możliwe słabość w kodzie.  
   
- Jeśli pełni zaufany kod wywołuje właściwości, zdarzenia lub metoda chronione przez [LinkDemand](../../../docs/framework/misc/link-demands.md), wywołanie zakończy się pomyślnie, jeśli **LinkDemand** spełnieniu sprawdzenie uprawnień do obiektu wywołującego. Ponadto, jeśli pełni zaufanego kodu udostępnia klasę pobierającej nazwę właściwości i wywołania jego **uzyskać** dostępu za pomocą odbicia, które wywołanie **uzyskać** dostępu zakończy się powodzeniem, nawet jeśli kod użytkownika wykonuje nie ma prawa dostępu do tej właściwości. Jest to spowodowane **LinkDemand** sprawdza tylko bezpośredniego obiektu wywołującego, który jest całkowicie zaufanego kodu. W zasadzie całkowicie zaufanego kodu jest wywołania uprzywilejowanych imieniu kod użytkownika bez upewnieniu się, że kod użytkownik ma prawo do wprowadzania tego wywołania.  
+ Jeśli w pełni zaufany kod wywołuje właściwości, zdarzenia lub metoda chronione przez [LinkDemand](../../../docs/framework/misc/link-demands.md), wywołanie zakończy się pomyślnie, jeśli **LinkDemand** sprawdzenie uprawnień do obiektu wywołującego jest spełniony. Ponadto, jeśli całkowicie zaufanego kodu udostępnia klasę, przyjmuje nazwę właściwości i wywołuje jego **uzyskać** przy użyciu odbicia, że wywołanie metody dostępu **uzyskać** dostępu zakończy się pomyślnie, nawet jeśli kod użytkownika realizuje nie ma uprawnień do dostępu do tej właściwości. Jest to spowodowane **LinkDemand** sprawdza tylko bezpośredniego wywołującego, która jest całkowicie zaufanego kodu. W zasadzie w pełni zaufany kod wywołuje element uprzywilejowanych imieniu kod użytkownika bez upewniając się, że kod użytkownika ma uprawnienia do wykonania tego wywołania.  
   
- Aby zapobiec takiej luk w zabezpieczeniach, środowisko uruchomieniowe języka wspólnego rozszerza wyboru do pełnej przejście stosu zażąda na wszelkie pośrednie wywołanie do metody, konstruktora, właściwość lub zdarzenie chronione przez **LinkDemand**. Ta ochrona ponosi pewne koszty wydajności i zmienia semantykę kontroli zabezpieczeń. żądanie pełnego przeszukiwana stosu mogą wystąpić błędy, gdzie będzie przekazanego wyboru szybsze, jeden poziom.  
+ Aby uniknąć takich luk w zabezpieczeniach, środowisko uruchomieniowe języka wspólnego rozszerzenie wyboru do pełnej zalet stosu zapotrzebowanie na każde wywołanie pośrednie metoda, Konstruktor, właściwość lub zdarzenie chronione przez **LinkDemand**. Ta ochrona jest naliczana pewne koszty wydajności i zmienia semantykę kontroli zabezpieczeń. żądanie przejście przez stos może przestać działać, gdzie będzie przeszły sprawdzania szybciej i jeden poziom.  
   
 ## <a name="assembly-loading-wrappers"></a>Otoki ładowania zestawu  
- Kilka metod używana do załadowania kodu zarządzanego włącznie z <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, ładowanie zestawów dowody obiektu wywołującego. Jeśli opakowaniem jednej z tych metod system zabezpieczeń można użyć udzielanie uprawnień swój kod, zamiast uprawnienia obiektu wywołującego do Twojej otoki załadować zestawów. Nie należy zezwalać na niższym poziomie zaufania kod, aby załadować kodu, który jest wyższy uprawnień niż obiekt wywołujący, aby Twoje otoki.  
+ Kilka metod, używana do ładowania kodu zarządzanego, w tym <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, ładować zestawów z dowodem obiektu wywołującego. Jeśli opakowaniem dowolnej z tych metod system zabezpieczeń za pomocą udzielenia uprawnień kodu, zamiast uprawnień obiekt wywołujący, aby Twoje otoki załadować zestawy. Nie należy zezwalać na niższym poziomie zaufania kod, aby załadować kod, który otrzymuje wyższych uprawnień niż te, które obiekt wywołujący, aby Twoje otoki.  
   
- Wszelki kod, który ma pełne zaufanie lub zaufania znacznie wyższa niż obiekt wywołujący potencjalnych (w tym Internet uprawnienia obiektu wywołującego) może obniżyć poziom zabezpieczeń w ten sposób. Jeśli kod ma publicznej metody, która przyjmuje tablicę bajtów i przekazuje je do **metody Assembly.Load**, co umożliwia tworzenie zestawu w imieniu wywołującego, go może spowodować uszkodzenie zabezpieczeń.  
+ Wszelki kod, który ma pełnego zaufania lub zaufania znacznie wyższa niż obiekt wywołujący potencjalnych (w tym Internetu uprawnienia poziomu obiektu wywołującego) może obniżyć poziom zabezpieczeń w ten sposób. Jeśli kod zawiera metodę publiczną, która przyjmuje tablicę bajtów i przekazuje go do **Assembly.Load**, a tym samym tworzenia zestawu w imieniu obiektu wywołującego, jego mogłyby spowodować przerwanie działania zabezpieczeń.  
   
  Ten problem dotyczy następujących elementów interfejsu API:  
   
@@ -66,40 +66,40 @@ ms.locfileid: "33397952"
   
 -   <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
-## <a name="demand-vs-linkdemand"></a>Żądanie programu vs. Żądanie LinkDemand  
- Zabezpieczenia deklaracyjne oferuje dwa rodzaje kontroli zabezpieczeń, które są podobne, ale sprawdzana jest bardzo różnią się. Zarówno formularzy należy poznać, ponieważ błędnego wyboru może spowodować utratę słabe zabezpieczeń lub wydajności.  
+## <a name="demand-vs-linkdemand"></a>Żądanie programu vs. LinkDemand  
+ Zabezpieczenia deklaratywne oferuje dwa rodzaje zabezpieczeń sprawdza, czy są podobne, ale kontrole bardzo różnią się. Należy zrozumieć obie formy, ponieważ błędnego wyboru może spowodować utratę słabe zabezpieczeń i wydajności.  
   
- Zabezpieczenia deklaracyjne oferuje następujące kontrole zabezpieczeń:  
+ Zabezpieczenia deklaratywne oferuje następujące kontrole zabezpieczeń:  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> Określa przeszukiwania stosu zabezpieczeń dostępu kodu. Wszystkich obiektów wywołujących na stosie musi mieć określone uprawnienie lub tożsamości do przekazania. **Żądanie** wykonywane przy każdym wywołaniu, ponieważ stos mogą zawierać różne elementy wywołujące. Jeśli wielokrotnie wywołania metody to sprawdzanie zabezpieczeń jest wykonywane zawsze. **Żądanie** dobrej ochrony przed atakami; zapewnienia zostanie wykryty nieautoryzowanego kodu próby pobrania za jego pośrednictwem.  
+-   <xref:System.Security.Permissions.SecurityAction.Demand> Określa przeszukiwania stosu zabezpieczeń dostępu kodu. Wszystkie obiekty wywołujące w stosie musi mieć określone uprawnienie lub tożsamości w celu przekazania. **Żądanie** występuje w przypadku każdego wywołania, ponieważ stos może zawierać różne obiekty wywołujące. Tego sprawdzenia zabezpieczeń występuje zawsze, jeśli wielokrotne wywołania metody. **Żądanie** jest dobrą ochronę przed atakami; zapewnienia nieautoryzowanego kodu próby uzyskania przez nią zostanie wykryty.  
   
--   [Żądanie LinkDemand](../../../docs/framework/misc/link-demands.md) odbywa się na czas kompilacji just in time (JIT) i sprawdza tylko bezpośredniego obiektu wywołującego. Ta kontrola zabezpieczeń nie sprawdza obiekt wywołujący obiektu wywołującego. Po pomyślnej ten test, nie istnieje żadne dodatkowe zabezpieczenia narzut niezależnie od tego, ile razy może wywołać obiekt wywołujący. Ponieważ nie ma również nie ochrona przed atakami zapewnienia. Z **LinkDemand**, kodu, który przekazuje testu i może się odwoływać kod potencjalnie może uszkodzić zabezpieczeń przez złośliwy kod wywołać przy użyciu autoryzowanego kodu. W związku z tym nie należy używać **LinkDemand** chyba, że wszystkie możliwe słabe punkty można uniknąć dokładnie.  
+-   [Żądanie LinkDemand](../../../docs/framework/misc/link-demands.md) się dzieje w momencie kompilacji just-in-time (JIT) i sprawdza, czy tylko bezpośredniego wywołującego. Tego sprawdzenia zabezpieczeń nie sprawdza obiekt wywołujący obiektu wywołującego. Po pomyślnej to sprawdzenie nie istnieje żadne dodatkowe zabezpieczenia, obciążenie niezależnie od tego, ile razy może wywołać obiekt wywołujący. Istnieje jednak także nie ochrony przed atakami zapewnienia. Za pomocą **LinkDemand**, umożliwiając złośliwego kodu do wywołania, przy użyciu kodu autoryzowanych wszelki kod, który przejdzie test i może przywoływać kod może potencjalnie uszkodzić zabezpieczeń. W związku z tym, nie używaj **LinkDemand** chyba, że wszystkie możliwe luki zabezpieczeń można uniknąć dokładnie.  
   
     > [!NOTE]
-    >  W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], linkdemand zostały zastąpione przez <xref:System.Security.SecurityCriticalAttribute> atrybutu w <xref:System.Security.SecurityRuleSet.Level2> zestawów. <xref:System.Security.SecurityCriticalAttribute> Jest odpowiednikiem żądanie łącza dla pełnego zaufania, jednak również wpływa na zasady dziedziczenia. Aby uzyskać więcej informacji na temat tej zmiany, zobacz [kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    >  W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], zapotrzebowanie na łącza zostały zastąpione przez <xref:System.Security.SecurityCriticalAttribute> atrybutu w <xref:System.Security.SecurityRuleSet.Level2> zestawów. <xref:System.Security.SecurityCriticalAttribute> Jest odpowiednikiem zapotrzebowania na łącza, aby uzyskać pełne zaufanie; jednak również wpływa na zasady dziedziczenia. Aby uzyskać więcej informacji na temat tej zmiany, zobacz [kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
- Dodatkowe środki ostrożności, wymagane, gdy usługa **LinkDemand** musi być programowane pojedynczo; może systemu zabezpieczeń, pomoc wymuszania. Wszelkie błędu otwiera osłabienia zabezpieczeń. Wszystkie autoryzowane kodu, że używa Twój kod musi być odpowiedzialny za zaimplementowanie dodatkowych zabezpieczeń w następujący sposób:  
+ Dodatkowe środki ostrożności, wymagany, gdy za pomocą **LinkDemand** musi być zaprogramowany pojedynczo; może system zabezpieczeń, pomoc dotycząca wymuszania. Wszelkie błędu zostanie otwarty do osłabienia zabezpieczeń. Wszystkie autoryzowane kodu, że używa Twój kod musi być odpowiedzialne za wykonanie dodatkowe zabezpieczenia, wykonując następujące czynności:  
   
--   Ograniczanie dostępu wywołującego kodu do klasy lub zestawu.  
+-   Ograniczanie dostępu do kodu wywołującego do klasy lub zestawu.  
   
--   Wprowadzenie do zabezpieczeń tego samego kontroli kodu wywołującego, który pojawia się na wywoływanego kodu i obligating jego wywołań, aby to zrobić. Na przykład, jeśli pisania kodu, który wywołuje metodę, która jest chroniony za pomocą **LinkDemand** dla <xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> Flaga określona, również powinny być metodę **LinkDemand** (lub **Żądanie**, który jest mocniejszy) dla tego uprawnienia. Wyjątek stanowi, jeśli używa Twój kod **LinkDemand**-Metoda chroniona w sposób ograniczony, który ma jest bezpieczne, podane innych mechanizmów ochrony zabezpieczeń (na przykład wymagania) w kodzie. W tym przypadku wyjątkowych wywołującego ma odpowiedzialność za osłabienia ochrony zabezpieczeń kodu źródłowego.  
+-   Wprowadzenie do zabezpieczeń tego samego kontroli kodu wywołującego, wyświetlane na wywoływanego kodu i obligating wywołujące, aby to zrobić. Na przykład jeśli piszesz kod, który wywołuje metodę, która jest chroniona za pomocą **LinkDemand** dla <xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> określone flagi, metoda również powinny być **LinkDemand** (lub **Żądanie**, który jest silniejszy) tego uprawnienia. Wyjątkiem jest, jeśli kod używa **LinkDemand**— Metoda chroniona w sposób ograniczony, możesz zdecydować, jak są bezpieczne, biorąc pod uwagę innych mechanizmów ochrony zabezpieczeń (na przykład żądania) w kodzie. W tym wyjątkowym przypadku obiekt wywołujący odpowiada w osłabienia ochrony zabezpieczeń na odpowiedni kod.  
   
--   Zapewnienie, że wywoływania z kodu nie można wymuszać kodu wywoływanie chronionych kodu w ich imieniu. Innymi słowy wywołań nie może wymusić autoryzowanego kodu do przekazania parametrów określonych w kodzie chronionych lub uzyskiwać wyniki z powrotem od niego.  
+-   Zapewnienie wywołujących swój kod nie może wymuszać kod do wywoływania chronionego kodu w ich imieniu. Innymi słowy obiekty wywołujące nie może wymusić autoryzowanego kodu przekazać określone parametry do chronionego kodu lub wrócić wyniki z niego.  
   
-### <a name="interfaces-and-link-demands"></a>Interfejsy i żądania łączy  
- Jeśli wirtualny metoda, właściwość lub zdarzenie z **LinkDemand** zastępuje metodę klasy podstawowej metody klasy podstawowej również muszą mieć ten sam **LinkDemand** przesłoniętej metody w celu wprowadzenia. Istnieje możliwość złośliwego kodu można rzutować typu podstawowego i wywołanie metody klasy podstawowej. Również należy pamiętać, że link wymagań można dodać niejawnie do zestawów, które nie mają <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybut na poziomie zestawu.  
+### <a name="interfaces-and-link-demands"></a>Interfejsy i zapotrzebowania na łącza  
+ Jeśli metoda wirtualna, właściwość lub zdarzenie z **LinkDemand** zastępuje metodę klasy bazowej, metody klasy bazowej również muszą mieć taką samą **LinkDemand** dla przeciążonej, aby były skuteczne. Istnieje możliwość dla złośliwego kodu, można rzutować typu podstawowego i wywołać metodę klasy bazowej. Ponadto należy pamiętać, że link żądania można dodać niejawnie do zestawów, które nie mają <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybut na poziomie zestawu.  
   
- Dobrym rozwiązaniem do ochrony implementacje metod z żądaniem linkdemand, gdy metody interfejsu muszą również linkdemand jest. Należy pamiętać, że o korzystaniu z interfejsami linkdemand:  
+ Jest dobrą praktyką chronić implementacje metod za pomocą zapotrzebowania na łącza, gdy metody interfejsu muszą również zapotrzebowania na łącza. Należy pamiętać o używaniu zapotrzebowania na łącza z interfejsów:  
   
--   Jeśli umieścisz **LinkDemand** w publicznej metody klasy, która implementuje metody interfejsu **LinkDemand** nie będą wymuszane, jeśli następnie rzutowane na interfejs i wywołania metody. W takim przypadku ponieważ powiązane interfejsu tylko **LinkDemand** w interfejsie jest go uznać.  
+-   Jeśli umieścisz **LinkDemand** w publicznej metodzie klasy, która implementuje metodę interfejsu **LinkDemand** nie zostaną wymuszone, jeśli następnie rzutowane na interfejs i wywołać metodę. W tym przypadku faktu, że połączone interfejsu tylko **LinkDemand** w interfejsie są uwzględniane.  
   
  Sprawdź następujące elementy związane z zabezpieczeniami:  
   
--   Jawne linkdemand dla metod interfejsu. Upewnij się, te linkdemand zapewniają ochronę oczekiwanego. Ustal, czy złośliwy kod może używać rzutowanie uzyskanie wokół linkdemand opisanych powyżej.  
+-   Zapotrzebowanie na łącza jawnych metod interfejsu. Upewnij się, zapotrzebowanie na łącza zapewniają oczekiwanego ochronę. Ustal, czy złośliwy kod może użyć rzutowania, aby obejść zapotrzebowania na łącza zgodnie z wcześniejszym opisem.  
   
--   Metody wirtualne z żądaniem linkdemand zastosowane.  
+-   Metody wirtualne linkdemand stosowane.  
   
--   Typy i interfejsów, które miały zaimplementowane. Te należy używać linkdemand spójnie.  
+-   Typy i interfejsy, które implementują. Te powinny używać żądań konsolidacji spójne.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Zobacz także
+- [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)

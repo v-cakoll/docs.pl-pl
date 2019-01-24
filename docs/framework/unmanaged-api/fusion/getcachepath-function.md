@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42bae646b0b1cdd451e01d55ed5b218f3660bb5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac0b6ac09db452eb06c633027e9596bda6627005
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509392"
 ---
 # <a name="getcachepath-function"></a>GetCachePath — Funkcja
 Pobiera ścieżkę do zestawu pamięci podręcznej, przy użyciu określonych flag.  
@@ -46,15 +46,15 @@ HRESULT GetCachePath (
  [out] Zwrócony wskaźnik do ścieżki.  
   
  `pcchPath`  
- [w, out] Żądana długość maksymalna `pwzCachePath`, a po powrocie, z rzeczywistą długością `pwzCachePath`.  
+ [out w] Żądana długość maksymalna `pwzCachePath`, a po powrocie, rzeczywista długość `pwzCachePath`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Fusion.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ASM_CACHE_FLAGS, wyliczenie](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)  
- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [ASM_CACHE_FLAGS, wyliczenie](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
+- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 18f9920891e35517efe7adcfd4c03e03ac771478
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 16f4fb28ab030ccebed2a8d1b93a3a6c29d075c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254744"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501259"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Odwołania do elementów zadeklarowanych (Visual Basic)
 Gdy kod odwołuje się do element zadeklarowany, kompilator Visual Basic pasuje do nazwy, w której można się odwołać do odpowiedniego zgłoszenia o takiej nazwie. Jeśli więcej niż jeden element jest zadeklarowana za pomocą tej samej nazwie, możesz kontrolować, które z tych elementów ma być przywoływane przez *kwalifikacji* jego nazwę.  
@@ -193,11 +193,11 @@ Dim xDoc As xD.XmlDocument
 ## <a name="shadowing"></a>Przesłanianie  
  Gdy dwa elementy programowania mają taką samą nazwę, jeden z nich można ukryć, lub *w tle*, jeden z nich. Tekst z cieniem element nie jest dostępne do użytku; Zamiast tego po kodzie używa nazwy elementu zasłonięte, kompilator Visual Basic jest rozpoznawany jako jego przesłaniania elementu. Aby uzyskać bardziej szczegółowy opis wraz z przykładami, zobacz [przesłanianie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Nazwy zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)  
- [Zmienne](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
+## <a name="see-also"></a>Zobacz także
+- [Nazwy zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zmienne](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [New, operator](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Public](../../../../visual-basic/language-reference/modifiers/public.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-ms.openlocfilehash: 1de6731591e524080ac4ae7d5b2ec2a25a27f301
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 78d2bb3e49ae971b54d521585184a9565c4ff105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512618"
 ---
 # <a name="access-control-mechanisms"></a>Mechanizmy kontroli dostępu
 Możesz kontrolować dostęp w kilku sposób za pomocą programu Windows Communication Foundation (WCF). W tym temacie krótko omówiono różne mechanizmy i sugestie, kiedy należy używać każdego; jest ona przeznaczona do ułatwienia wybrania poprawne mechanizm do użycia. Technologie dostępu są wymienione w kolejności złożoności. To najprostszy <xref:System.Security.Permissions.PrincipalPermissionAttribute>; najbardziej złożone jest modelu tożsamości.  
@@ -22,7 +22,7 @@ Możesz kontrolować dostęp w kilku sposób za pomocą programu Windows Communi
   
  Użyj <xref:System.Security.Permissions.PrincipalPermissionAttribute> do kontrolowania dostępu do zasobów na komputerze, na którym usługa jest uruchomiona, a jeśli użytkownicy usługi zawsze będzie częścią tej samej domeny Windows, czy usługa jest uruchomiona na. Możesz łatwo tworzyć grupy Windows, które zostały określone poziomy dostępu (np. Brak, tylko do odczytu lub odczytu i zapisu).  
   
- Aby uzyskać więcej informacji na temat za pomocą atrybutu zobacz [instrukcje: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md). Aby uzyskać więcej informacji o tożsamości, zobacz [uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Aby uzyskać więcej informacji na temat za pomocą atrybutu zobacz [jak: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md). Aby uzyskać więcej informacji o tożsamości, zobacz [uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="aspnet-membership-provider"></a>Dostawcy członkostwa platformy ASP.NET  
  Funkcja [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jest dostawcy członkostwa. Mimo że dostawcy członkostwa, nie ma pod względem technicznym mechanizm kontroli dostępu, umożliwia kontrolowanie dostępu do usługi, ograniczając zestaw możliwych tożsamości, które mogą uzyskiwać dostęp do punktu końcowego usługi. Funkcja członkostwo obejmuje bazy danych, który można wypełnić przy użyciu kombinacji nazwy i hasła użytkownika, które umożliwiają użytkownikom witryny sieci Web zakładać kont w witrynie. Aby uzyskać dostęp do usługi, która używa dostawcy członkostwa, użytkownik musi zalogować się przy użyciu swojej nazwy użytkownika i hasło.  
@@ -32,21 +32,21 @@ Możesz kontrolować dostęp w kilku sposób za pomocą programu Windows Communi
   
  Umożliwia także funkcja członkostwa w członkowskiej bazie danych z istniejącego przypadku już [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] witryny sieci Web i chcesz włączyć tych samych użytkowników użyć usługi autoryzacji przy użyciu tej samej nazwy użytkownika i hasła.  
   
- Aby uzyskać więcej informacji na temat używania funkcji członkostwa w usłudze WCF zobacz [porady: użycie dostawcy członkostwa ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+ Aby uzyskać więcej informacji na temat używania funkcji członkostwa w usłudze WCF zobacz [jak: Użycie dostawcy członkostwa ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
   
 ## <a name="aspnet-role-provider"></a>Dostawcy ról ASP.NET  
  Kolejną funkcją [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] jest możliwość zarządzania autoryzacji przy użyciu ról. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Dostawcy ról umożliwia deweloperów do tworzenia ról dla użytkowników i przypisać każdemu użytkownikowi na ról. Za pomocą dostawcy członkostwa, ról i przypisań są przechowywane w bazie danych i mogą zostać wypełnione za pomocą narzędzi dostarczonych przez określoną implementację [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról. Jako z funkcją członkostwa WCF deweloperzy mogą używać informacji w bazie danych do autoryzowania użytkowników usługi przez role. Na przykład można użyć dostawcy ról w połączeniu z `PrincipalPermissionAttribute` dostęp do mechanizmu kontroli opisanych powyżej.  
   
  Można również użyć [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról, jeśli masz istniejącą [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] bazę danych dostawców ról, aby użyć tego samego zestawu reguł i przypisania użytkownika w usłudze WCF.  
   
- Aby uzyskać więcej informacji dotyczących używania funkcji dostawcy ról, zobacz [porady: Używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+ Aby uzyskać więcej informacji dotyczących używania funkcji dostawcy ról, zobacz [jak: Używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
 ## <a name="authorization-manager"></a>Menedżer autoryzacji  
  Kolejną funkcją łączy Menedżera autoryzacji (AzMan) z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról, aby autoryzować klientów. Gdy [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] usługi sieci Web, AzMan można zintegrować aplikację tak, aby autoryzacji z usługą odbywa się za pośrednictwem AzMan hostów. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Menedżer ról zapewnia interfejs API, który pozwala na zarządzanie rolami w aplikacji, dodawania i usuwania użytkowników z ról oraz sprawdź członkostwo w roli, ale nie jest możliwe możesz zbadać, czy użytkownik jest autoryzowany do operacji lub nazwane zadanie. AzMan umożliwia definiowanie poszczególnych operacji i połączyć je w zadania. Za pomocą AZMan oprócz kontroli roli, możesz również sprawdzić czy użytkownik może wykonywać zadania. Autoryzacji ról przypisania i zadania można skonfigurowane poza aplikacją lub wykonać programowo w aplikacji. Administracja AzMan przystawkę Microsoft Management Console (MMC) umożliwia administratorom zmienić zadania, które rola może wykonywać w czasie wykonywania oraz zarządzanie członkostwem ról każdego użytkownika.  
   
  Możesz również użyć AzMan i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról, jeśli już masz dostęp do istniejącej instalacji AzMan i chcesz autoryzować użytkowników usługi przy użyciu funkcji z połączenia dostawca AzMan/roli.  
   
- Aby uzyskać więcej informacji na temat AzMan i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról, zobacz [instrukcje: Korzystanie z Menedżera autoryzacji (AzMan) za pomocą programu ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=88951). Aby uzyskać więcej informacji na temat przy użyciu AzMan i dostawcy ról, usług WCF zobacz [porady: Używanie dostawcy roli Menedżera autoryzacji platformy ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
+ Aby uzyskać więcej informacji na temat AzMan i [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról, zobacz [How to: Korzystanie z Menedżera autoryzacji (AzMan) za pomocą platformy ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=88951). Aby uzyskać więcej informacji na temat przy użyciu AzMan i dostawcy ról, usług WCF zobacz [jak: Używanie dostawcy roli Menedżera autoryzacji platformy ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Modelu tożsamości  
  Model tożsamości to zestaw interfejsów API, które umożliwiają zarządzanie oświadczenia i zasady, aby autoryzować klientów. Za pomocą modelu tożsamości można sprawdzić, co oświadczeń zawartych w poświadczeniach, które pozwala uwierzytelniać w usłudze, porównywanie oświadczeń do zestawu zasad dla usługi i udzielić lub odmówić dostępu do obiektu wywołującego na podstawie porównania.  
@@ -57,10 +57,10 @@ Możesz kontrolować dostęp w kilku sposób za pomocą programu Windows Communi
   
  Aby uzyskać więcej informacji na temat modelu tożsamości, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [Instrukcje: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Instrukcje: używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- [Instrukcje: używanie dostawcy roli menedżera autoryzacji platformy ASP.NET za pomocą usługi](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- [Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Instrukcje: Używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Instrukcje: Używanie dostawcy roli Menedżera autoryzacji platformy ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
+- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

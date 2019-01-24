@@ -1,5 +1,5 @@
 ---
-title: Jak utworzyć nowe BitmapSource
+title: 'Instrukcje: Utwórz nowe BitmapSource'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - creating new BitmapSource objects [WPF]
 - BitmapSource objects [WPF], creating
 ms.assetid: 0adf447e-014f-4ceb-97b2-f21affe6d55b
-ms.openlocfilehash: f330f433c52b753f6b36bcb77878b3666a61c660
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f4ce1bbecab80d51d71f22ecc0e128b8f18290d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512313"
 ---
-# <a name="how-to-create-a-new-bitmapsource"></a>Jak utworzyć nowe BitmapSource
+# <a name="how-to-create-a-new-bitmapsource"></a>Instrukcje: Utwórz nowe BitmapSource
 W tym przykładzie przedstawiono sposób użycia <xref:System.Windows.Media.Imaging.BitmapSource.Create%2A> metody <xref:System.Windows.Media.Imaging.BitmapSource> do tworzenia nowego <xref:System.Windows.Media.Imaging.BitmapSource> obiektu.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[ImagingSnippetGallery_procedural_snip#BitmapSourceCreate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/BitmapSourceExample.cs#bitmapsourcecreate)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#BitmapSourceCreate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/BitmapSourceExample.vb#bitmapsourcecreate)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

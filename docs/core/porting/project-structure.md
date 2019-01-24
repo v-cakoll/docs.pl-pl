@@ -4,12 +4,12 @@ description: Pomoc dla właścicieli projektu, którzy chcą Kompiluj swoje rozw
 author: conniey
 ms.date: 04/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: 97673e1ccaeb094bf8c7cb835a84ae9389fac502
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 52205a32af212dc74b000025c0e4fc8cde3ae134
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498664"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Zorganizować projekt do obsługi środowiska .NET Framework i .NET Core
 
@@ -67,7 +67,7 @@ Zmiany, należy pamiętać, są następujące:
 * .NET Core i istniejące projekty są przechowywane w oddzielnych folderach.
   * Utrzymywanie projektów w oddzielnych folderach pozwala uniknąć, co zmuszało do programu Visual Studio 2017. Możesz utworzyć oddzielne rozwiązanie, które otwiera tylko starych projektów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 * Zobacz [platformy .NET Core, przenoszenie dokumentacji] [ porting-doc] Aby uzyskać więcej wskazówek na temat migracji do platformy .NET Core.
 

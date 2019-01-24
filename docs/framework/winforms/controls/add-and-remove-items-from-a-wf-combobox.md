@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dodawanie i usuwanie elementów za pomocą formantu ComboBox, ListBox lub CheckedListBox formularzy systemu Windows'
+title: 'Instrukcje: Dodawanie i usuwanie elementów z Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f789a0e00b1d235fe61b93190ae167250113846
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500223"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Porady: dodawanie i usuwanie elementów za pomocą formantu ComboBox, ListBox lub CheckedListBox formularzy systemu Windows
-Elementy mogą być dodawane do pola kombi formularzy systemu Windows, pole listy lub zaznaczone pole listy na różne sposoby, ponieważ tych kontrolek można powiązać z różnych źródeł danych. Jednak w tym temacie przedstawiono najprostszą metodą i wymaga nie powiązania danych. Elementy wyświetlane są zwykle ciągi; jednak można użyć dowolnego obiektu. Tekst, który jest wyświetlany w formancie jest wartość zwrócona przez obiekt `ToString` metody.  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Instrukcje: Dodawanie i usuwanie elementów z Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka
+Elementy mogą być dodawane do pola kombi Windows Forms, pole listy lub sprawdzić pola listy w na różne sposoby, ponieważ te kontrolki mogą być powiązane z różnymi źródłami danych. Jednak w tym temacie przedstawiono najprostszą metodą i wymaga żadne wiązanie danych. Elementy wyświetlane są zwykle ciągów; Jednak każdy obiekt może być używany. Tekst, który jest wyświetlany w kontrolce jest wartość zwrócona przez obiekt `ToString` metody.  
   
 ### <a name="to-add-items"></a>Aby dodać elementy  
   
-1.  Dodaj ciąg lub obiekt do listy przy użyciu `Add` metody `ObjectCollection` klasy. Kolekcja odwołuje się przy użyciu `Items` właściwości:  
+1.  Dodaj ciąg lub obiekt do listy przy użyciu `Add` metody `ObjectCollection` klasy. Kolekcja jest wskazywane za pomocą `Items` właściwości:  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -40,9 +40,9 @@ Elementy mogą być dodawane do pola kombi formularzy systemu Windows, pole list
     comboBox1->Items->Add("Tokyo");  
     ```  
   
-     - lub -  
+     - lub —  
   
-2.  Wstaw ciąg lub obiekt w wybrane miejsce na liście zawierającej `Insert` metody:  
+2.  Wstaw ciąg lub obiekt w żądany moment na liście z `Insert` metody:  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -56,9 +56,9 @@ Elementy mogą być dodawane do pola kombi formularzy systemu Windows, pole list
     checkedListBox1->Items->Insert(0, "Copenhagen");  
     ```  
   
-     - lub -  
+     - lub —  
   
-3.  Przypisz całą tablicę do `Items` kolekcji:  
+3.  Przypisz całej tablicy, aby `Items` kolekcji:  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -89,9 +89,9 @@ Elementy mogą być dodawane do pola kombi formularzy systemu Windows, pole list
   
 ### <a name="to-remove-an-item"></a>Aby usunąć element  
   
-1.  Wywołanie `Remove` lub `RemoveAt` metodę, aby usunąć elementy.  
+1.  Wywołaj `Remove` lub `RemoveAt` metodę, aby usunąć elementy.  
   
-     `Remove` ma jeden argument, który określa element do usunięcia.`RemoveAt` Usuwa element z określonym indeksem.  
+     `Remove` ma jeden argument, który określa element do usunięcia.`RemoveAt` Usuwa element o określonym indeksie.  
   
     ```vb  
     ' To remove item with index 0:  
@@ -122,7 +122,7 @@ Elementy mogą być dodawane do pola kombi formularzy systemu Windows, pole list
   
 ### <a name="to-remove-all-items"></a>Aby usunąć wszystkie elementy  
   
-1.  Wywołanie `Clear` metodę, aby usunąć wszystkie elementy z kolekcji:  
+1.  Wywołaj `Clear` metodę, aby usunąć wszystkie elementy z kolekcji:  
   
     ```vb  
     ListBox1.Items.Clear()  
@@ -136,10 +136,10 @@ Elementy mogą być dodawane do pola kombi formularzy systemu Windows, pole list
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.ComboBox>  
- <xref:System.Windows.Forms.ListBox>  
- <xref:System.Windows.Forms.CheckedListBox>  
- [Instrukcje: sortowanie zawartości kontrolki ComboBox, ListBox lub CheckedListBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- [Kiedy należy używać kontrolki ComboBox formularzy Windows Forms zamiast ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- [Kontrolki formularzy Windows Forms używane do obsługi opcji list](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms.CheckedListBox>
+- [Instrukcje: Sortowanie zawartości Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Kiedy należy używać kontrolki ComboBox formularzy Windows Forms zamiast ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [Kontrolki formularzy Windows Forms używane do obsługi opcji list](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7624a22e5d65ae94797779a0b8cfa70f226450ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f71901acf8227d018bf288b6cd0265f053e6a3a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418987"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510835"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>ICorDebugModuleEnum::Next — Metoda
-Pobiera liczbę wystąpień "ICorDebugModule" określony przez `celt` z wyliczenia, zaczynając od bieżącego położenia.  
+Pobiera liczbę wystąpień "ICorDebugModule" określonego przez `celt` z wyliczenia, zaczynając od bieżącej pozycji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,13 +43,13 @@ HRESULT Next (
  [in] Liczba `ICorDebugModule` wystąpienia mają zostać pobrane.  
   
  `modules`  
- [out] Tablicy wskaźników, z których każdy wskazuje `ICorDebugModule` obiektu.  
+ [out] Tablica wskaźników, z których każdy wskazuje `ICorDebugModule` obiektu.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby `ICorDebugModule` wystąpienia faktycznie zwracane. Ta wartość może mieć wartości zerowej Jeśli `celt` jeden.  
+ [out] Wskaźnik do liczby `ICorDebugModule` wystąpień rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -57,5 +57,5 @@ HRESULT Next (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

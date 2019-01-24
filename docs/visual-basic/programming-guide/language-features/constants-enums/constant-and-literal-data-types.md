@@ -9,12 +9,12 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 1d030f8058cd497212c20bca8f064f2bedc99fce
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d85ff343587e8689a4859a09c8dc80932374a82e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498651"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Stała i typy literałów (Visual Basic)
 Literał jest wartość, która jest wyrażona w swoim imieniu, a nie jako wartość zmiennej lub wyniku wyrażenia, takie jak numer 3 lub ciąg "Hello". Stałe są znaczącą nazwę, która zajmuje miejsce literału i zachowuje ta sama wartość w całym programie, w przeciwieństwie do zmiennej, którego wartość może ulec zmianie.  
@@ -61,14 +61,14 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Single`|(Brak)|F lub!|  
 |`String`|"|(Brak)|  
   
-## <a name="see-also"></a>Zobacz też  
- [Stałe zdefiniowane przez użytkownika](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)  
- [Instrukcje: deklarowanie stałej](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)  
- [Stałe — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Option Explicit, instrukcja](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Wyliczenia — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
- [Porady: deklarowanie wyliczeń](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
- [Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
- [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)  
- [Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Stałe zdefiniowane przez użytkownika](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
+- [Instrukcje: Deklarowanie stałej](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
+- [Stałe — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Explicit, instrukcja](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Wyliczenia — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+- [Instrukcje: Deklarowanie wyliczeń](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
+- [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)
+- [Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)

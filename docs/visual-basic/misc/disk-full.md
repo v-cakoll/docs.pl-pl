@@ -1,22 +1,22 @@
 ---
-title: Dysk jest zapełniony (Visual Basic)
+title: Dysk zapełniony (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
 ms.assetid: 039fd26a-947d-4c64-a08e-96c2b53c6d50
-ms.openlocfilehash: ec25aa0d41a4c04143c307c5555cd9f0e184d686
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18ad9dd8702de66a6a60c590cd3aa28a3cc78c10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33635580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503303"
 ---
-# <a name="disk-full-visual-basic"></a>Dysk jest zapełniony (Visual Basic)
-Nie ma wystarczającej ilości miejsca na dysku, aby wykonać `Print`, `Write`, lub `FileClose` operacji, lub utworzyć wymaganych plików.  
+# <a name="disk-full-visual-basic"></a>Dysk zapełniony (Visual Basic)
+Nie jest wystarczająco dużo miejsca na dysku, aby wykonać `Print`, `Write`, lub `FileClose` operacji, lub utworzyć wymagane pliki.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Zwolnij więcej miejsca na dysku przez przeniesienie niektórych plików na innym dysku albo usuń niektóre pliki.  
+-   Utwórz więcej miejsca na dysku przez przeniesienie niektórych plików na inny dysk lub usuwania niektórych plików.  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)

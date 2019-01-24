@@ -2,12 +2,12 @@
 title: Modyfikowanie drzew XML (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8ec47e6d-2363-4694-be46-8d5ca4d15fc9
-ms.openlocfilehash: 55e75762772a071b97eecb7d6d78e28c3002a179
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 68ccd4990ab1a657b8e35bb145ae82c4bdb9ecb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511591"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-c"></a>Modyfikowanie drzew XML (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest magazyn w pamięci dla drzewa XML. Po ładowania lub analizowania drzewa XML z źródła, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] umożliwia modyfikowanie tego drzewa w miejscu, a następnie serializacji drzewa, może być zapisanie go do pliku i wysyłaniu ich do serwera zdalnego.  
@@ -25,8 +25,8 @@ ms.locfileid: "43505722"
 |[Modyfikowanie elementów, atrybutów i węzłów w drzewie XML](../../../../csharp/programming-guide/concepts/linq/modifying-elements-attributes-and-nodes-in-an-xml-tree.md)|Zawiera informacje dotyczące modyfikowania istniejących elementów, atrybutów lub węzłów.|  
 |[Usuwanie elementów, atrybutów i węzłów z drzewa XML (C#)](../../../../csharp/programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md)|Zawiera informacje dotyczące usuwania elementów, atrybutów i węzłów z drzewa XML.|  
 |[Obsługa pary nazwa/wartość (C#)](../../../../csharp/programming-guide/concepts/linq/maintaining-name-value-pairs.md)|W tym artykule opisano, jak zachować informacje o aplikacji, który jest najlepiej pozostawić w postaci par nazwa/wartość, takie jak informacje o konfiguracji lub ustawień globalnych.|  
-|[Porady: Zmienianie Namespace dla całego drzewa XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|Pokazuje sposób przenoszenia drzewa XML z jednego obszaru nazw do innego.|  
+|[Instrukcje: Zmień Namespace dla całego drzewa XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|Pokazuje sposób przenoszenia drzewa XML z jednego obszaru nazw do innego.|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 281c1c9556773446808f7bd4b4ef558805503cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499317"
 ---
 # <a name="freezable-objects-overview"></a>Przegląd Obiekty Freezable
 W tym temacie opisano, jak skutecznie używać i Utwórz <xref:System.Windows.Freezable> obiektów, które zapewniają funkcje specjalne, które mogą pomóc zwiększyć wydajność aplikacji. Przykładami obiektów freezable pędzle, pióra, przekształcenia, geometrii i animacji.  
@@ -161,8 +161,8 @@ mc:Ignorable="PresentationOptions"
   
  Na przykład niestandardowy <xref:System.Windows.Freezable> klasy, zobacz [przykład animacji niestandardowej](https://go.microsoft.com/fwlink/?LinkID=159981).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Freezable>  
- [Przykład animacji niestandardowej](https://go.microsoft.com/fwlink/?LinkID=159981)  
- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Freezable>
+- [Przykład animacji niestandardowej](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

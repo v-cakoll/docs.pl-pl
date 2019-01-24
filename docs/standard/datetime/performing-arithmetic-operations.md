@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2a50823b812541786cf1bebfd6b1262ce2e9314
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2d5f807481468b61365c8b4d8412f12a4741ebb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503164"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Wykonywanie operacji arytmetycznych na wartościach dat i godzin
 
@@ -78,7 +78,7 @@ Aby zilustrować, przejście do czasu letniego w Stanach Zjednoczonych Środkowy
 
 Aby uzyskać więcej informacji, zobacz [Konwertowanie godzin między strefami czasowymi](../../../docs/standard/datetime/converting-between-time-zones.md).
 
-<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> Klasa nie zapewnia żadnych metod, które automatyczne stosowanie reguł korygowania, gdy wykonujesz arytmetyka daty i godziny. Jednakże można to zrobić przez konwertowanie czas w strefie czasowej UTC, wykonywanie operacji arytmetycznych i następnie konwertując względem czasu UTC do czasu w strefie czasowej. Aby uzyskać więcej informacji, zobacz [porady: użycie stref czasowych w arytmetyka daty i godziny](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
+<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> Klasa nie zapewnia żadnych metod, które automatyczne stosowanie reguł korygowania, gdy wykonujesz arytmetyka daty i godziny. Jednakże można to zrobić przez konwertowanie czas w strefie czasowej UTC, wykonywanie operacji arytmetycznych i następnie konwertując względem czasu UTC do czasu w strefie czasowej. Aby uzyskać więcej informacji, zobacz [jak: Używanie stref czasowych w arytmetyka daty i godziny](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
 
 Na przykład poniższy kod jest podobny do poprzedniego kodu, który dodaje dwa i pół godziny do 2:00:00 9 marca 2008. Jednak ponieważ środkowy czas standardowy go konwertuje na czas UTC, zanim wykonuje arytmetyczne daty i czasu, a następnie konwertuje wynik względem czasu UTC do Środkowa (czas standardowy), czasu wynikowy odzwierciedla przejście letniego strefy Środkowa (czas standardowy) czas.
 
@@ -87,5 +87,5 @@ Na przykład poniższy kod jest podobny do poprzedniego kodu, który dodaje dwa 
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
-* [Instrukcje: Używanie stref czasowych w arytmetyce wartości daty i godziny](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)
+- [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
+- [Instrukcje: Używanie stref czasowych w arytmetyka daty i godziny](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)

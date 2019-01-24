@@ -16,43 +16,43 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74c5036bdc8a4a75e5711c6dc1d34d8f2c21128f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05c95d47d57525aa2aebe16d536b771042600000
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509730"
 ---
 # <a name="icordebug-interface"></a>ICorDebug — Interfejs
-Udostępnia metody, które umożliwiają deweloperom debugowanie aplikacji w środowisku środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego.  
+Udostępnia metody, które umożliwiają deweloperom debugowanie aplikacji w środowisku uruchomieniowym języka wspólnego (CLR).  
   
 > [!NOTE]
->  Debugowanie trybu mieszanego (kodu zarządzanego i natywnego) nie jest obsługiwane w systemie Windows 95, Windows 98 lub Windows ME lub na platformach innych niż x86 (na przykład IA64 i AMD64).  
+>  Debugowanie trybu mieszanego (kodu zarządzanego i natywnego) nie jest obsługiwana na Windows 95, Windows 98 lub Windows ME lub na platformach innych niż x86 (na przykład IA64 i AMD64).  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CanLaunchOrAttach, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|Określa, czy uruchamianie nowego procesu lub dołączanie do procesu danego jest możliwe w kontekście bieżącej konfiguracji komputera i środowiska uruchomieniowego.|  
+|[CanLaunchOrAttach, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|Określa, czy uruchamianie nowego procesu lub dołączanie do danego procesu jest możliwe w kontekście bieżącej konfiguracji komputera i środowiska uruchomieniowego.|  
 |[CreateProcess, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|Uruchamia proces i jego podstawowym wątku pod kontrolą debugera.|  
 |[DebugActiveProcess, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|Dołącza debuger do istniejącego procesu.|  
 |[EnumerateProcesses, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|Pobiera moduł wyliczający dla procesów, które są debugowane.|  
-|[GetProcess, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|Zwraca obiekt "ICorDebugProcess" z identyfikatorem danego procesu.|  
+|[GetProcess, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|Zwraca obiekt "ICorDebugProcess" o identyfikatorze danego procesu.|  
 |[Initialize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|Inicjuje `ICorDebug` obiektu.|  
 |[SetManagedHandler, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|Określa obiekt programu obsługi zdarzeń dla zdarzeń zarządzanych.|  
-|[SetUnmanagedHandler, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|Określa obiekt programu obsługi zdarzeń dla niezarządzanego zdarzeń.|  
+|[SetUnmanagedHandler, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|Określa obiekt programu obsługi zdarzeń dla zdarzenia niezarządzane.|  
 |[Terminate, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Kończy `ICorDebug` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `ICorDebug` reprezentuje pętli przetwarzania zdarzeń dla procesu debugera. Debuger musi czekać, aż [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) wywołania zwrotnego od wszystkich procesów debugowany przed wydaniem tego interfejsu.  
+ `ICorDebug` reprezentuje pętlę przetwarzania zdarzeń dla procesu, debuger. Debuger musi czekać [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) wywołania zwrotnego od wszystkich procesów debugowany przed wydaniem tego interfejsu.  
   
- `ICorDebug` Obiekt jest obiektem początkowej do sterowania wszystkie dalsze zarządzane debugowania. W wersji systemu .NET Framework 1.0 i 1.1, ten obiekt był `CoClass` obiektu utworzone na podstawie modelu COM. W programie .NET Framework w wersji 2.0, ten obiekt nie jest już `CoClass` obiektu. Musi być utworzony przez [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) funkcji, która jest bardziej wersji obsługujących. Ta nowa funkcja tworzenia umożliwia klientom uzyskanie określonej implementacji `ICorDebug`, które również emuluje określoną wersję interfejsu API debugowania.  
+ `ICorDebug` Obiekt jest obiektem początkowej do kontrolowania wszystkich dalszych zarządzanych debugowania. W .NET Framework w wersji 1.0 i 1.1, ten obiekt był `CoClass` obiektu utworzonego na podstawie modelu COM. W .NET Framework w wersji 2.0, ten obiekt nie jest już `CoClass` obiektu. Musi ona zostać utworzona przez [createdebugginginterfacefromversion —](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) funkcji, która jest bardziej rozpoznający wersje. Ta nowa funkcja tworzenia pozwala klientom na pobieranie określonej implementacji `ICorDebug`, które również emuluje określoną wersję interfejsu API debugowania.  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -60,5 +60,5 @@ Udostępnia metody, które umożliwiają deweloperom debugowanie aplikacji w śr
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

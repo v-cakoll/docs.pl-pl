@@ -10,31 +10,31 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: 555e15110c7af501de05d1f395a72ca4b7800054
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b63fa66c9cda1e439e3917ca62377f68028fc049
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497844"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
 Identyfikuje właściwość jako domyślną właściwość klasy, struktury lub interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- Klasy, struktury lub interfejsu można wyznaczyć co najwyżej jednej z jego właściwości jako *domyślna właściwość*, pod warunkiem, że właściwość przyjmuje co najmniej jeden parametr. Jeśli kod sprawia, że odwołanie do klasy lub struktury bez określenia członka, Visual Basic rozpoznaje odwołujące się do właściwości domyślnej.  
+ Klasy, struktury lub interfejsu można wyznaczyć co najwyżej jeden z jego właściwości jako *właściwość domyślna*pod warunkiem, że właściwość przyjmuje co najmniej jeden parametr. Jeśli kod sprawia, że odwołanie do klasy lub struktury bez podania członek, Visual Basic rozpoznaje tego odwołania do właściwości domyślnej.  
   
- Właściwości domyślnych może spowodować zmniejszenie małych znaków kodu źródłowego, ale może wprowadzić czytelność kodu. Jeśli kod wywołujący nie są zaznajomieni z klasy lub struktury, podczas wykonywania odwołanie do nazwy klasy lub struktury nie może być niektórych czy uzyskuje dostęp tego odwołania do klasy lub struktury, sam lub domyślnej właściwości. Może to prowadzić do błędów kompilatora lub błędy niewielkie logiki czasu wykonywania.  
+ Właściwości domyślnych może spowodować zmniejszenie małe znaki kodu źródłowego, ale mogą robić więjsze kodu czytelność. Jeśli kod wywołujący nie są zaznajomieni z klasy lub struktury, jeśli go nawiązuje odwołanie do nazwy klasy lub struktury nie może być określone czy tego odwołania uzyskuje dostęp do, klasa lub struktura lub domyślnej właściwości. Może to prowadzić do błędów kompilatora lub błędy subtelne logiki czasu wykonywania.  
   
- Nieco zmniejsza ryzyko błędów właściwości domyślne przy użyciu zawsze [Option Strict — instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md) można ustawić typ kompilatora sprawdzania `On`.  
+ Trochę zmniejsza ryzyko wystąpienia błędów właściwości domyślne przy użyciu zawsze [Option Strict — instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md) ustawienie typu kompilatora sprawdzanie `On`.  
   
- Jeśli planujesz użyć wstępnie zdefiniowanych klasy lub struktury w kodzie, należy określić, czy ma ona domyślnej właściwości, a jeśli tak, jakie jego nazwa jest.  
+ Jeśli planujesz użyć wstępnie zdefiniowanych klasy lub struktury w kodzie, należy określić, czy ma ona właściwości domyślnej, a jeśli tak, jakie jego nazwa jest.  
   
- Z powodu niedogodności należy rozważyć nie definiuje właściwości domyślnych. Aby zwiększyć czytelność kodu należy również wziąć pod uwagę zawsze odwołujących się do wszystkich właściwości jawnie, nawet domyślnej właściwości.  
+ Z powodu niedogodności należy rozważyć nie definiuje właściwości domyślnych. Aby zwiększyć czytelność kodu należy również wziąć pod uwagę zawsze odwołujące się do wszystkich właściwości jawnie, nawet domyślne właściwości.  
   
  `Default` Modyfikatora można używać w tym kontekście:  
   
- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Porady: deklarowanie i wywoływanie w właściwości domyślnej w Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)  
- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
+- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

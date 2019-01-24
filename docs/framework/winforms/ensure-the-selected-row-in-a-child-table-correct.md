@@ -1,5 +1,5 @@
 ---
-title: 'Porady: zapewnienie pozostawania wybranego wiersza w tabeli potomnej w prawidłowym położeniu'
+title: 'Instrukcje: Upewnij się, że zaznaczony wiersz w tabeli podrzędnej pozostaje w prawidłowym położeniu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: e1fdb007451c157e60a1ad723b5d2d06bc85ecdf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ef2c72fb941aa40eff85af4a83f6c76843dc2d6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547634"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Porady: zapewnienie pozostawania wybranego wiersza w tabeli potomnej w prawidłowym położeniu
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Instrukcje: Upewnij się, że zaznaczony wiersz w tabeli podrzędnej pozostaje w prawidłowym położeniu
 Często w przypadku, gdy pracujesz z powiązanie danych w formularzach Windows Forms, będą wyświetlane dane, co jest nazywany nadrzędne/podrzędne lub wzorzec/szczegół widoku. Odnosi się do scenariusza wiązania danych, których dane z tego samego źródła są wyświetlane w dwóch kontrolek. Zmienianie zaznaczenia w jednym formancie powoduje, że dane wyświetlane w drugiej kontrolce. Na przykład pierwszy formant może zawierać listę klientów i druga lista zamówień powiązanych z wybranym klientem w pierwszej kontrolce.  
   
  Uruchamianie przy użyciu platformy .NET Framework w wersji 2.0, podczas wyświetlania danych w widoku nadrzędne/podrzędne, które można wykonać dodatkowe czynności, aby upewnić się, ponieważ obecnie wybrany wiersz w tabeli podrzędnej nie jest resetowana do pierwszego wiersza tabeli. Aby to zrobić, trzeba będzie położenie elementów podrzędnych w tabeli w pamięci podręcznej i zresetowanie jej po zmianie tabeli nadrzędnej. Resetowanie podrzędnych występuje zwykle po raz pierwszy pól w wierszu zmian w tabeli nadrzędnej.  
@@ -81,9 +81,9 @@ Często w przypadku, gdy pracujesz z powiązanie danych w formularzach Windows F
   
 -   Odwołania do zestawów systemu, dane systemowe, System.Drawing, przestrzeń nazw System.Windows.Forms i System.XML.  
   
- Aby uzyskać informacje dotyczące sposobu tworzenia tego przykładu z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby uzyskać informacje dotyczące sposobu tworzenia tego przykładu z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
- [BindingSource, składnik](../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Wiązanie danych i formularzy Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Upewnij się, wiele formantów powiązanych z tym samym źródłem danych pozostają zsynchronizowane](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)
+- [BindingSource, składnik](../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [Wiązanie danych i formularzy Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

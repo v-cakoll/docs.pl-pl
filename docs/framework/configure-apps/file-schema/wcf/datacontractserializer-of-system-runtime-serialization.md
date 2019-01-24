@@ -2,18 +2,18 @@
 title: '&lt;dataContractSerializer&gt; w &lt;system.runtime.serialization&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
-ms.openlocfilehash: f31dd8479f3bd6b36915b3ff00ff53babe3c0248
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3a959c9a4e2b1cbbbb6a52a1438261037704d244
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557971"
 ---
 # <a name="ltdatacontractserializergt-of-ltsystemruntimeserializationgt"></a>&lt;dataContractSerializer&gt; w &lt;system.runtime.serialization&gt;
 Zawierająca dane konfiguracyjne <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- \<System.Runtime.serialization >  
-\<dataContractSerializer >  
+ \<system.runtime.serialization>  
+\<dataContractSerializer>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,8 +42,8 @@ Zawierająca dane konfiguracyjne <xref:System.Runtime.Serialization.DataContract
   
 |Element|Opis|  
 |-------------|-----------------|  
-|IgnoreExtensionDataObject|Wartość logiczna określająca, czy ignorować dane dostarczane przez punkt końcowy, gdy jego serializowany lub deserializowany. Ten atrybut jest można ustawić tylko na `<dataContractSerializer>` w obszarze `<behavior>` elementu.|  
-|MaxItemsInObjectGraph|Liczba całkowita określająca maksymalną liczbę elementów do serializacji lub deserializacji. Ten atrybut jest 65536.|  
+|ignoreExtensionDataObject|Wartość logiczna określająca, czy ignorować dane dostarczane przez punkt końcowy, gdy jego serializowany lub deserializowany. Ten atrybut jest można ustawić tylko na `<dataContractSerializer>` w obszarze `<behavior>` elementu.|  
+|maxItemsInObjectGraph|Liczba całkowita określająca maksymalną liczbę elementów do serializacji lub deserializacji. Ten atrybut jest 65536.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -60,7 +60,7 @@ Zawierająca dane konfiguracyjne <xref:System.Runtime.Serialization.DataContract
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji na temat znanych typów, zobacz <xref:System.Runtime.Serialization.DataContractSerializer> i [znane typy kontraktu danych](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
- [Znane typy kontraktów danych](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
+- [Znane typy kontraktów danych](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

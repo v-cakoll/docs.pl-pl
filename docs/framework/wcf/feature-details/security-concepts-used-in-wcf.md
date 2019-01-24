@@ -2,12 +2,12 @@
 title: Pojęcia zabezpieczeń użyte dla programu WCF
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: 9fe27f3f63f8c7fad1a4bbb0975a5255d5a16654
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2dd820d4b6ba38f194074465ac7c1f40289fd928
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541797"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Pojęcia zabezpieczeń użyte dla programu WCF
 Zabezpieczenia usług Windows Communication Foundation (WCF) jest utworzonych na podstawie pojęcia już w użyciu i wdrożone w różnych infrastrukturach zabezpieczeń.  
@@ -29,7 +29,7 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) jest utworzonych na
  Certyfikaty X.509 są używane w zastosowaniach zabezpieczeń formularza podstawowej credential. Aby uzyskać więcej informacji na temat X.509 certyfikatów Zobacz [klucz publiczny certyfikatu X.509](https://go.microsoft.com/fwlink/?LinkId=210213). Certyfikaty X.509 są przechowywane w magazynie certyfikatów. Komputer z systemem Windows ma kilka rodzajów magazynów certyfikatów, każdy z innego celu. Aby uzyskać więcej informacji na temat różnych sklepach zobacz [magazynów certyfikatów](https://go.microsoft.com/fwlink/?LinkID=87787).  
   
 ## <a name="web-services-security-specifications"></a>Specyfikacje zabezpieczeń usług sieci Web  
- Powiązania zdefiniowane przez system obsługuje wiele powszechnie używanych w sieci web usług zabezpieczeń specyfikacji. Aby uzyskać pełną listę powiązania dostarczane przez system i specyfikacji usługi sieci web obsługują zobacz: [Web Services protokoły obsługiwane przez wiązania współdziałania System-Provided](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ Powiązania zdefiniowane przez system obsługuje wiele powszechnie używanych w sieci web usług zabezpieczeń specyfikacji. Aby uzyskać pełną listę powiązania dostarczane przez system i specyfikacji usługi sieci web obsługują one, zobacz: [Protokoły usług internetowych obsługiwane przez wiązania współdziałania udostępnione przez system](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
   
 ## <a name="access-control-mechanisms"></a>Mechanizmy kontroli dostępu  
  Usługi WCF zapewnia szereg sposobów kontrolowania dostępu do usługi lub operacji. Między nimi są  
@@ -46,6 +46,6 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) jest utworzonych na
   
  Aby uzyskać więcej informacji na temat, zobacz następujące tematy [mechanizmy kontroli dostępu](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

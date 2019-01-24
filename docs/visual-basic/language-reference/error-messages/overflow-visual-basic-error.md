@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30036
 ms.assetid: b2c83de9-a132-449a-870b-e7c409d4d7ee
-ms.openlocfilehash: ecd209fbff85256b35f6e940cdcc37a2cdf8c246
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 881ca8040f79bdb91dad2b909685400e17af4d26
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545858"
 ---
 # <a name="overflow-visual-basic-error"></a>Przepełnienie (Błąd w Visual Basic)
 Literał reprezentuje wartość poza granicami typu danych, które są przypisane.  
@@ -23,5 +23,5 @@ Literał reprezentuje wartość poza granicami typu danych, które są przypisan
   
 -   Zapoznaj się zakres wartości dla elementu docelowego, typ danych i ponowne zapisywanie adresów literału, które są zgodne z tego zakresu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)

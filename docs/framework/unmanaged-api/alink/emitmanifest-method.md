@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6df28cd3eaadfe62cd34e20e6e03d5a89e6bb425
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9217a045a8ddf6ad41adcc71a9568a05fe3fb334
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565552"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest — Metoda
-Emituje końcowego manifestu. Tę metodę można wywołać po zaimportowaniu wszystkie inne pliki i ustawieniu wszystkich opcji. Nie wywołuj tej metody dla modułów niepowiązanych.  
+Emituje końcowego manifestu. Po zaimportowaniu wszystkich innych plików i ustawieniu wszystkich opcji, należy wywołać tę metodę. Nie wywołuj tej metody dla modułów niepowiązanej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,10 +42,10 @@ HRESULT EmitManifest(
  Identyfikator zestawu.  
   
  `pdwReserveSize`  
- Odbiera rozmiar do zarezerwowania w pliku zestawu pobierane z [StrongNameSignatureSize — funkcja](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md).  
+ Odbiera rozmiar do zarezerwowania w pliku zestawu pobierane [strongnamesignaturesize — funkcja](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md).  
   
  `ptkManifest`  
- Opcjonalnie otrzymuje token manifestu zestawu.  
+ Opcjonalnie odbiera token manifestu zestawu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
@@ -53,7 +53,7 @@ HRESULT EmitManifest(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h.  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

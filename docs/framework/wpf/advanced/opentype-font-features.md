@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: f3d1dd9f7ef8122ac5573121e4f779fade776c8c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5751efe0c6621425b8b54c642d51127118c0b6bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529791"
 ---
 # <a name="opentype-font-features"></a>OpenType funkcje czcionki
 W tym temacie omówiono niektóre kluczowe funkcje [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] technologia czcionek w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -360,9 +360,9 @@ Tekst, wielkie litery OpenType
 |<xref:System.Windows.Documents.Typography.StylisticSet20%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Documents.Typography>  
- [Specyfikacja OpenType](https://go.microsoft.com/fwlink/?LinkId=96731)  
- [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Przykład pakietu czcionek OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [Pakowanie czcionek z aplikacjami](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Documents.Typography>
+- [Specyfikacja OpenType](https://go.microsoft.com/fwlink/?LinkId=96731)
+- [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Przykład pakietu czcionek OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)
+- [Pakowanie czcionek z aplikacjami](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

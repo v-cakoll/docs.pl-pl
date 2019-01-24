@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572930022d44e6f0882ee02ecb837404c409f720
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c010208075f0f6cb0ad0e24e05984bf6dc15aa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653778"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain — Interfejs
 Reprezentuje i dostarcza informacje dotyczące domeny aplikacji.  
@@ -31,10 +31,10 @@ Reprezentuje i dostarcza informacje dotyczące domeny aplikacji.
 |Metoda|Opis|  
 |------------|-----------------|  
 |[GetID, metoda](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Pobiera unikatowy identyfikator dla tego `ICorPublishAppDomain`.|  
-|[GetName, metoda](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Pobiera nazwę domeny aplikacji to odwołuje `ICorPublishAppDomain`.|  
+|[GetName, metoda](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Pobiera nazwę domeny aplikacji odwołuje się ten `ICorPublishAppDomain`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorPub.idl, CorPub.h  
   
@@ -42,6 +42,6 @@ Reprezentuje i dostarcza informacje dotyczące domeny aplikacji.
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [CorpubPublish, klasa coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [CorpubPublish, klasa coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

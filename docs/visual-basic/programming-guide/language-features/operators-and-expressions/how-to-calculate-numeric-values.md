@@ -1,5 +1,5 @@
 ---
-title: 'Porady: obliczanie wartości liczbowych (Visual Basic)'
+title: 'Instrukcje: Obliczanie wartości liczbowych (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator precedence
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: cf24d7259ac04f6901497c81558a4d59b340eec7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7bbc3bcadb318203688a3b8ecae18e723e82c8ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560753"
 ---
-# <a name="how-to-calculate-numeric-values-visual-basic"></a>Porady: obliczanie wartości liczbowych (Visual Basic)
-Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyrażenia liczbowego* jest wyrażenie, które zawiera literały, stałe i zmienne reprezentujący wartości liczbowych i operatory, które działają na tych wartości.  
+# <a name="how-to-calculate-numeric-values-visual-basic"></a>Instrukcje: Obliczanie wartości liczbowych (Visual Basic)
+Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyrażenia liczbowego* to wyrażenie, które zawiera literały, stałe i zmienne reprezentujące wartości liczbowe i operatory, które działają w tych wartości.  
   
 ## <a name="calculating-numeric-values"></a>Obliczanie wartości liczbowych  
   
 #### <a name="to-calculate-a-numeric-value"></a>Obliczanie wartości liczbowych  
   
--   Łączenie co najmniej jeden literały numeryczne, stałe i zmienne w wyrażenia liczbowego. W poniższym przykładzie przedstawiono niektóre prawidłowe wyrażenia liczbowego.  
+-   Połącz co najmniej jeden literały numeryczne, stałe i zmienne w wyrażenia liczbowego. Poniższy przykład pokazuje niektóre prawidłowe wyrażenia liczbowego.  
   
      `93.217`  
   
@@ -35,37 +35,37 @@ Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyraż
   
      `4 * (67 + i)`  
   
-     Pierwsze trzy wiersze zawierają literałem stałej i zmiennej. Każda z nich stanowi prawidłowe wyrażenie liczbowe samodzielnie. Końcowe wiersz zawiera kombinację zmiennej z dwóch literały.  
+     Pierwsze trzy wiersze Pokaż literałem stałej i zmiennej. Każdy z nich stanowi prawidłowe wyrażenie liczbowe samodzielnie. Ostatni wiersz zawiera kombinację zmiennego dwa literały.  
   
      Należy pamiętać, że wyrażenie liczbowe nie tworzą pełną instrukcję języka Visual Basic samodzielnie. Należy użyć wyrażenia jako część pełną instrukcję.  
   
-#### <a name="to-store-a-numeric-value"></a>Do przechowywania wartości numerycznej  
+#### <a name="to-store-a-numeric-value"></a>Do przechowywania wartości liczbowych  
   
--   Aby przypisać wartość reprezentowanego przez wyrażenie liczbowe do zmiennej, jak w poniższym przykładzie pokazano służy instrukcji przypisania.  
+-   Aby przypisać wartość reprezentowane przez wyrażenie liczbowe do zmiennej, tak jak pokazano w poniższym przykładzie, można użyć instrukcji przypisania.  
   
      [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
   
-     W powyższym przykładzie wartość wyrażenie po prawej stronie operatora równa (`=`) jest przypisany do zmiennej `j` po lewej stronie operatora, więc `j` daje w wyniku 276.  
+     W poprzednim przykładzie wartość wyrażenia po prawej stronie operatora równa (`=`) jest przypisany do zmiennej `j` po lewej stronie operatora, dzięki czemu `j` daje w wyniku 276.  
   
-     Aby uzyskać więcej informacji, zobacz [instrukcje](../../../../visual-basic/language-reference/statements/index.md).  
+     Aby uzyskać więcej informacji, zobacz [instrukcji](../../../../visual-basic/language-reference/statements/index.md).  
   
 ## <a name="multiple-operators"></a>Wiele operatorów  
- Jeśli wyrażenie liczbowe zawiera więcej niż jeden operator, kolejność, w jakiej są oceniane jest określana przez reguły pierwszeństwo operatorów. Aby zastąpić reguły pierwszeństwa operatora, ujmij wyrażenia w nawiasach, tak jak w powyższym przykładzie; zamknięte wyrażenia są sprawdzane jako pierwsze.  
+ Jeśli wyrażenie liczbowe zawiera więcej niż jeden operator, kolejność, w jakiej są oceniane jest określana przez reguły pierwszeństwa operatorów. Aby zastąpić reguły pierwszeństwa operatorów, ujmij wyrażeń w nawiasach, tak jak w powyższym przykładzie; ujęty wyrażenia są obliczane jako pierwsze.  
   
-#### <a name="to-override-normal-operator-precedence"></a>Aby zastąpić normalne kolejność wykonywania działań  
+#### <a name="to-override-normal-operator-precedence"></a>Do zastępowania normalnego kolejność wykonywania działań  
   
--   Umieść nawiasy operacje, które można wykonać pierwsze. W poniższym przykładzie pokazano dwa różne wyniki z tej samej argumenty i operatory.  
+-   Użyj nawiasów, aby ująć operacje, które mają zostać wykonane jako pierwsze. Poniższy przykład przedstawia dwa różne wyniki przy użyciu tych samych argumentów i operatorów.  
   
      [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
   
-     W powyższym przykładzie obliczeń dla `j` wykonuje operator dodawania (`+`) pierwszego ponieważ nawiasy, `(67 + i)` zastąpienia normalnym priorytecie, a wartość przypisana do `j` jest 276 (4 razy 69). Obliczanie dla `k` wykonuje operatorów w ich normalnym pierwszeństwa (`*` przed `+`) i wartość przypisana do `k` jest 270 (268 plus 2).  
+     W powyższym przykładzie obliczeń dla `j` wykonuje operator dodawania (`+`) pierwszego ponieważ nawiasów wokół `(67 + i)` zastępują normalny priorytet i wartość przypisana do `j` jest 276 (4 razy 69). Obliczeń dla `k` wykonuje operatorów w ich normalnym priorytecie (`*` przed `+`), a wartość przypisana do `k` jest 270 (268 plus 2).  
   
-     Aby uzyskać więcej informacji, zobacz [kolejność wykonywania w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+     Aby uzyskać więcej informacji, zobacz [pierwszeństwo operatorów w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Operatory i wyrażenia](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Porównania wartości](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
- [Instrukcje](../../../../visual-basic/language-reference/statements/index.md)  
- [Kolejność wykonywania w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operatory arytmetyczne](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Skuteczna kombinacja operatorów](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+## <a name="see-also"></a>Zobacz także
+- [Operatory i wyrażenia](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Porównania wartości](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
+- [Instrukcje](../../../../visual-basic/language-reference/statements/index.md)
+- [Pierwszeństwo operatorów w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operatory arytmetyczne](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Skuteczna kombinacja operatorów](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

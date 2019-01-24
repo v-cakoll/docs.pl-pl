@@ -2,44 +2,44 @@
 title: Kształt drzew poleceń
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 9084e2616ac4ea540bdf755afd011d67a5c991fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b859dfaa6350341b4b90753fd5dda3339e6bb584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573033"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Kształt drzew poleceń
-Moduł generowania SQL jest odpowiedzialny za wygenerowanie wewnętrznej bazy danych określonej kwerendy SQL na podstawie wyrażenia drzewa zapytanie wejściowe danego polecenia. W tej sekcji omówiono charakterystyki, właściwości i struktura drzewa polecenia zapytania.  
+Moduł generowania SQL jest odpowiedzialny za wygenerowanie zapytania SQL określonych zaplecza opartego na wyrażenie kwerendy wejściowej danego polecenia drzewa. W tej sekcji omówiono cech, właściwości i struktury drzew poleceń zapytania.  
   
-## <a name="query-command-trees-overview"></a>Przegląd drzewa polecenia zapytania  
- Drzewo poleceń zapytania jest reprezentacji modelu obiektu zapytania. Zapytanie drzewa polecenia służą dwa cele:  
+## <a name="query-command-trees-overview"></a>Omówienie drzew poleceń zapytania  
+ Drzewo poleceń zapytania jest reprezentacja obiektu modelu zapytania. Zapytanie drzew poleceń służą do dwóch celów:  
   
--   Do wyrażenia zapytania określonego dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+-   Wyrażenia kwerendy wejściowej, który jest określony względem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
--   Do wyrażenia zapytania danych wyjściowych, znajduje się u dostawcy, który opisuje zapytanie wewnętrznej bazy danych.  
+-   Wyrażenia zapytań danych wyjściowych, znajduje się z dostawcą, który opisuje zapytanie do wewnętrznej bazy danych.  
   
- Polecenie obsługę drzew bardziej rozbudowane semantyki niż SQL:1999 zgodne zapytania, łącznie z pomocy technicznej do pracy z zagnieżdżonych kolekcji i typ operacji, takich jak sprawdzanie, czy jednostka jest określonego typu lub Filtrowanie zestawów oparty na typie Query.  
+ Wyślij zapytanie do polecenia drzewa obsługę semantyki bogatszy niż SQL:1999 kwerendy zgodne, w tym obsługę pracy z kolekcje zagnieżdżone oraz typ operacji, takich jak sprawdzanie, czy jednostka jest określonego typu lub filtrowanie na podstawie typu zestawów.  
   
- Właściwość DBQueryCommandTree.Query jest elementem głównym drzewa wyrażenia, który opisuje logiki kwerendy. Właściwość DBQueryCommandTree.Parameters zawiera listę parametrów, które są używane w zapytaniu. Drzewo wyrażenia składa się z obiektów DbExpression.  
+ Właściwość DBQueryCommandTree.Query jest głównym drzewa wyrażeń, który opisuje logiki zapytania. Właściwość DBQueryCommandTree.Parameters zawiera listę parametrów, które są używane w zapytaniu. Drzewo wyrażenia składa się z obiektów DbExpression.  
   
- Obiekt DbExpression reprezentuje pewnych obliczeń. Kilka rodzajów wyrażenia są dostarczane przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] do tworzenia wyrażenia zapytania, łącznie z stałe, zmienne, funkcje konstruktory i standardowe operatory, takie jak filtr i sprzężenia. Każdy obiekt DbExpression ma właściwość ResultType, który reprezentuje typ wyniku utworzone przez tego wyrażenia. Ten typ jest wyrażona jako właściwości TypeUsage.  
+ Obiekt DbExpression reprezentuje niektórych obliczeń. Kilka rodzajów wyrażenia są dostarczane przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] do redagowania wyrażeń zapytania, łącznie ze stałymi, zmienne, funkcje, konstruktorów i standardowe operatory, takie jak filtrowanie i dołączania. Każdy obiekt DbExpression ma właściwość ResultType, który reprezentuje typ wynik tworzony przez to wyrażenie. Ten typ jest wyrażona jako właściwości TypeUsage.  
   
-## <a name="shapes-of-the-output-query-command-tree"></a>Kształty drzewa dane wyjściowe polecenia zapytania  
- Drzew poleceń w danych wyjściowych zapytania ściśle reprezentują relacyjnego zapytania (SQL) i oparte na znacznie bardziej rygorystyczne zasady, niż te, które dotyczą drzew poleceń w kwerendzie. Zawierają one zazwyczaj konstrukcje, które są łatwe przetłumaczyć na język SQL.  
+## <a name="shapes-of-the-output-query-command-tree"></a>Kształty drzewo poleceń kwerendy danych wyjściowych  
+ Drzew poleceń kwerendy danych wyjściowych ściśle reprezentują kwerend relacyjnych (SQL) i spełnić znacznie bardziej rygorystyczne zasady niż te, które dotyczą drzew poleceń zapytania. Zawierają one zazwyczaj konstrukcji, które łatwo są tłumaczone na SQL.  
   
- Drzew poleceń w wejściowe są wyrażane w modelu koncepcyjnym, obsługująca właściwości nawigacji, skojarzenia między jednostkami i dziedziczenie. Dane wyjściowe polecenia drzew są wyrażane w modelu magazynu. Wprowadź drzew poleceń w umożliwiają projektu zagnieżdżonego kolekcji, ale nie drzew poleceń w danych wyjściowych.  
+ Drzew poleceń wejściowych są wyrażane względem modelu koncepcyjnego, która obsługuje właściwości nawigacji, skojarzenia między jednostkami i dziedziczenie. Dane wyjściowe polecenia drzewa są wyrażane w modelu magazynu. Wprowadź liczbę drzew poleceń umożliwiają projektu kolekcje zagnieżdżone, ale dane wyjściowe polecenia drzewa nie.  
   
- Drzew poleceń w danych wyjściowych zapytania są tworzone przy użyciu podzbioru dostępnych obiektów DbExpression, a nawet niektóre wyrażenia w tym podzbiór ograniczono użycia.  
+ Drzew poleceń zapytania dane wyjściowe są tworzone za pomocą podzestawu dostępne obiekty DbExpression, a nawet niektóre wyrażenia, w tym podzbiór mają ograniczone użycie.  
   
- Typ operacji, takich jak sprawdzanie, czy podane wyrażenie jest określonego typu lub filtrowanie na podstawie typu, zestawów nie występują w danych wyjściowych polecenia drzewa.  
+ Typ operacji, takich jak sprawdzanie, czy podane wyrażenie jest określonego typu lub filtrowanie na podstawie typu, zestawy nie są obecne w danych wyjściowych drzew poleceń.  
   
- W danych wyjściowych polecenia drzewa tylko wyrażenia, które zwracają wartości logiczne są używane dla projekcje i tylko do predykatów w wyrażeniach wymagające predykatu filtru lub instrukcji case.  
+ W danych wyjściowych polecenia drzewa tylko wyrażenia, które zwracają wartości logiczne są używane w przypadku projekcji i tylko w przypadku predykatów w wyrażeniach wymagające predykat filtru lub instrukcji case.  
   
- Katalog główny drzew poleceń w danych wyjściowych zapytania jest obiektem DbProjectExpression.  
+ Główny drzew poleceń kwerendy danych wyjściowych jest obiektem DbProjectExpression.  
   
-### <a name="expression-types-not-present-in-output-query-command-trees"></a>Typy wyrażenia nie występują w drzew poleceń w danych wyjściowych zapytania  
- Następujące typy wyrażeń nie są prawidłowe w drzewie dane wyjściowe polecenia zapytania i nie muszą być obsługiwane przez dostawców:  
+### <a name="expression-types-not-present-in-output-query-command-trees"></a>Typy wyrażenia nieobecne w drzew poleceń kwerendy danych wyjściowych  
+ Następujące typy wyrażeń nie są prawidłowe w drzewie polecenia kwerendy danych wyjściowych i nie muszą być obsługiwane przez dostawców:  
   
  DbDerefExpression  
   
@@ -57,53 +57,53 @@ Moduł generowania SQL jest odpowiedzialny za wygenerowanie wewnętrznej bazy da
   
  DbTreatExpression  
   
-### <a name="expression-restrictions-and-notes"></a>Ograniczenia wyrażenia i uwagi  
- Wiele wyrażeń można używać tylko w sposób ograniczony w drzew poleceń w danych wyjściowych zapytania:  
+### <a name="expression-restrictions-and-notes"></a>Wyrażenie ograniczenia i uwagi  
+ Wiele wyrażeń należy używać tylko w sposób ograniczony w drzew poleceń kwerendy danych wyjściowych:  
   
-#### <a name="dbfunctionexpression"></a>Obiekcie DbFunctionExpression  
+#### <a name="dbfunctionexpression"></a>DbFunctionExpression  
  Można przekazać następujących funkcji:  
   
--   Canonical funkcje, które są rozpoznawane przez obszar nazw Edm.  
+-   Funkcje Canonical, które są rozpoznawane przez przestrzeń nazw Edm.  
   
--   Funkcje wbudowane (magazyn), które są rozpoznawane przez BuiltInAttribute.  
+-   Funkcje wbudowane (Sklep), które są rozpoznawane przez BuiltInAttribute.  
   
 -   Funkcje zdefiniowane przez użytkownika.  
   
- Canonical funkcji (zobacz [kanonicznej funkcji](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) Aby uzyskać więcej informacji) są określone jako część [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], oraz dostawców należy dostarczyć implementacji dla funkcji kanonicznej na podstawie tych specyfikacji. Funkcje magazynu są oparte na specyfikacji w odpowiednich manifestu dostawcy. Funkcje zdefiniowane przez użytkownika są oparte na specyfikacji w pliku SSDL.  
+ Funkcje Canonical (zobacz [funkcje Canonical](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) Aby uzyskać więcej informacji) są określane jako część [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], oraz dostawcy powinni dostarczać implementacje dla funkcji kanonicznej na podstawie tych specyfikacji. Funkcje Store są oparte na specyfikacji w odpowiedniej manifest dostawcy. Funkcje zdefiniowane przez użytkownika są oparte na specyfikacjach SSDL.  
   
- Ponadto funkcje, w których atrybut NiladicFunction nie mają argumentów i powinny być przekonwertowana bez nawiasów na końcu.  Oznacza to, do  *\<functionName >* zamiast  *\<functionName > ()*.  
+ Ponadto funkcje, w których atrybut NiladicFunction ma nie argumentów i powinien być tłumaczony bez nawiasów, na końcu.  Oznacza to,  *\<functionName >* zamiast  *\<functionName > ()*.  
   
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
- Obiekt DbNewInstanceExpression może wystąpić tylko w następujących przypadków:  
+ Obiekt DbNewInstanceExpression mogą występować tylko w dwóch przypadkach:  
   
--   Jako właściwość projekcji DbProjectExpression.  Zastosowanie następujące ograniczenia:  
+-   Jako właściwość projekcji DbProjectExpression.  Gdy jest używana w związku z tym obowiązują następujące ograniczenia:  
   
-    -   Typ wyniku musi być typu wiersz.  
+    -   Typ wyniku musi być typu wiersza.  
   
-    -   Każdy z argumentów jest wyrażenie zwraca wynik z typem pierwotnym. Zazwyczaj każdy argument jest wyrażenie skalarne, takie jak PropertyExpression nad DbVariableReferenceExpression, wywołania funkcji lub arytmetyczne obliczeń DbPropertyExpression za pośrednictwem DbVariableReferenceExpression lub wywołania funkcji . Jednak wyrażenie skalarne podzapytania reprezentujące może również wystąpić w liście argumentów dla obiekt DbNewInstanceExpression. Wyrażenie, które reprezentuje skalarne podzapytania jest reprezentujący podzapytania zwracające dokładnie jeden wiersz i jedną kolumnę typu pierwotnego z głównego obiektu DbElementExperession drzewa wyrażeń  
+    -   Każdy z jej argumentów jest wyrażeniem, który produkuje wynik z parametrem typu podstawowego. Zwykle każdy argument znajduje się wyrażenie skalarne, takie jak PropertyExpression nad DbVariableReferenceExpression, wywołania funkcji lub arytmetyczne obliczeń DbPropertyExpression DbVariableReferenceExpression lub wywołania funkcji . Jednak wyrażenie reprezentujące podzapytania skalarnej może również wystąpić na liście argumentów obiekt DbNewInstanceExpression. Wyrażenie, które reprezentuje skalarne podzapytania jest drzewo wyrażenia, reprezentujący podzapytania, która zwraca dokładnie jeden wiersz i jedną kolumnę typu prymitywnego za pomocą głównego obiektu DbElementExperession  
   
--   Z typem zwracanym kolekcji w którym to przypadku definiuje nową kolekcję wyrażeń podane jako argumenty.  
+-   Z typem zwracanym kolekcji w którym to przypadku definiuje nową kolekcję wyrażeń dostarczone jako argumenty.  
   
 #### <a name="dbvariablereferenceexpression"></a>DbVariableReferenceExpression  
  DbVariableReferenceExpression musi być elementem podrzędnym węzła DbPropertyExpression.  
   
 #### <a name="dbgroupbyexpression"></a>DbGroupByExpression  
- Właściwość agregacji obiektu DbGroupByExpression może mieć tylko elementy typu DbFunctionAggregate. Nie ma żadnych innych typów agregacji.  
+ Właściwość agregacje element dbgroupaggregate może zawierać tylko elementy typu DbFunctionAggregate. Istnieją inne typy agregacji.  
   
 #### <a name="dblimitexpression"></a>DbLimitExpression  
- Właściwość limitu tylko może być obiektem DbConstantExpression lub DbParameterReferenceExpression. Również właściwość WithTies ma zawsze wartość false wersji programu .NET Framework w wersji 3.5 lub nowszej.  
+ Właściwość limitu tylko może być obiektem DbConstantExpression lub DbParameterReferenceExpression. Również właściwość WithTies jest zawsze wartość false, począwszy od programu .NET Framework w wersji 3.5.  
   
 #### <a name="dbscanexpression"></a>DbScanExpression  
- Gdy są używane w danych wyjściowych polecenia drzewa, DbScanExpression skutecznie reprezentuje skanowania przez tabelę, widok lub kwerendę magazynu reprezentowany przez EnitySetBase::Target.  
+ W przypadku użycia w danych wyjściowych drzew poleceń, DbScanExpression skutecznie reprezentuje skanowania za pośrednictwem tabeli, widoku lub zapytania magazynu, reprezentowane przez EnitySetBase::Target.  
   
- Jeśli właściwość metadanych "Definiowanie zapytania" z elementem docelowym jest różna od null, reprezentuje zapytanie, tekst zapytania, dla której znajduje się w tej właściwości metadanych w dostawcy określonego języka (lub dialekt) określona w definicji schematu magazynu.  
+ Jeśli właściwość metadanych "Definiowanie zapytania" element docelowy jest różna od null, reprezentuje zapytanie, tekst zapytania, dla której znajduje się w tej właściwości metadanych w dostawcy określonego języka (lub dialekt), jak to określono w definicji schematu magazynu.  
   
- W przeciwnym razie element docelowy reprezentuje tabelę lub widok. Prefiksu jego schematu jest albo we właściwości metadanych "Schema", jeśli nie null, w przeciwnym razie jest nazwa kontenera jednostek.  Nazwa tabeli lub widoku jest albo właściwości metadanych "Table", jeśli nie wartość null, w przeciwnym razie podstawowej ustaw właściwość Name jednostki.  
+ W przeciwnym razie element docelowy reprezentuje tabelą ani widokiem. Jej prefiks schematu jest albo we właściwości metadanych "Schema", jeśli nie ma wartość null, w przeciwnym razie jest nazwa kontenera jednostki.  Nazwa tabeli lub widoku jest albo właściwość metadanych "Table", o ile nie wartość null, w przeciwnym razie podstawowego zestawu właściwości Name obiektu jednostki.  
   
- Te właściwości pochodzą z definicji odpowiednich obiektów EntitySet w pliku definicji schematu magazynu (SSDL).  
+ Te właściwości pochodzą z definicji odpowiedniego obiektu EntitySet w pliku definicji schematu magazynu (SSDL).  
   
-### <a name="using-primitive-types"></a>Używanie typów pierwotnych  
- W przypadku typów pierwotnych odwołuje się drzew poleceń w danych wyjściowych, są one zwykle przywoływany w typach pierwotnych modelu koncepcyjnego. Dla niektórych wyrażeń dostawców należy odpowiedni typ pierwotny magazynu. Przykłady takich wyrażeń obejmują DbCastExpression i prawdopodobnie DbNullExpression, jeśli dostawca wymaga można rzutować wartości null do odpowiedniego typu. W takich przypadkach dostawców należy wykonać mapowania na podstawie rodzaju typu pierwotnego i jego aspektów typ dostawcy.  
+### <a name="using-primitive-types"></a>Przy użyciu typów pierwotnych  
+ Gdy typy pierwotne są wywoływane w danych wyjściowych drzew poleceń, zwykle występuje do nich w typach pierwotnych modelu koncepcyjnego. Jednak niektóre wyrażenia dostawców na potrzeby odpowiedni typ pierwotny magazynu. Takie wyrażenia przykładami DbCastExpression i prawdopodobnie DbNullExpression, jeśli dostawca musi można rzutować wartości null do odpowiedniego typu. W takich przypadkach dostawców należy wykonać mapowanie na typ dostawcy, na podstawie typu pierwotnego typu i jego zestawów reguł.  
   
-## <a name="see-also"></a>Zobacz też  
- [Generowanie kodu SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Zobacz także
+- [Generowanie kodu SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

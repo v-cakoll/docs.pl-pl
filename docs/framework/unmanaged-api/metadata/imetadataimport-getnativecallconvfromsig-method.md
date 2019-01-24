@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 963d46aea4ab31e770cb845fe699208f6c8f9ac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 752dcf90f790d6403c37fcee377c35656b655b36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491070"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig — Metoda
-Pobiera natywnego Konwencję wywoływania dla metody, która jest reprezentowana przez wskaźnik określoną sygnaturą.  
+Pobiera natywnych konwencja wywołania dla metody, która jest reprezentowana przez wskaźnik określonej sygnaturze.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,24 +39,24 @@ HRESULT GetNativeCallConvFromSig (
   
 #### <a name="parameters"></a>Parametry  
  `pvSig`  
- [in] Wskaźnik do metody do zwrócenia Konwencja wywoływania dla podpisu metadanych.  
+ [in] Wskaźnik do metody do zwrócenia konwencja wywołania dla podpisu metadanych.  
   
  `cbSig`  
- [in] Wyrażony w bajtach rozmiar `pvSig`.  
+ [in] Rozmiar w bajtach `pvSig`.  
   
  `pCallConv`  
  [out] Wskaźnik do natywną Konwencję wywoływania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.InteropServices.CallingConvention>  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.InteropServices.CallingConvention>
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

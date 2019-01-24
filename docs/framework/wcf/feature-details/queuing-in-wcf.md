@@ -2,12 +2,12 @@
 title: Tworzenie kolejek w programie WCF
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: f04055df2c6d4b0a51b36040a5b377bb8738c534
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: fcdd38cf02157829bdc476cc289ea89ff8767487
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559475"
 ---
 # <a name="queuing-in-wcf"></a>Tworzenie kolejek w programie WCF
 W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w Windows Communication Foundation (WCF).  
@@ -48,7 +48,7 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w Windows C
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce i trwałe właściwości  
  `ExactlyOnce` i `Durable` właściwości wpływają na sposób przekazywania komunikatów pomiędzy kolejki:  
   
--   `ExactlyOnce`: Jeśli równa `true` (ustawienie domyślne), zwrócony gwarantuje, że komunikat, jeśli dostarczony, nie jest zduplikowany. Gwarantuje również, że komunikat nie zostanie utracony. Jeśli nie można dostarczyć komunikatu lub komunikat do czasu na żywo wygaśnie przed wiadomości, które mogą być dostarczane, nie powiodło się komunikat i odtworzy dostarczania Przyczyna niepowodzenia jest rejestrowana w kolejki utraconych wiadomości. Po ustawieniu `false`, zwrócony sprawia, że zmierzających do transferu wiadomości. W takim przypadku możesz opcjonalnie wybrać kolejki utraconych wiadomości.  
+-   `ExactlyOnce`: Po ustawieniu `true` (ustawienie domyślne), zwrócony gwarantuje, że komunikat, jeśli dostarczony, nie jest zduplikowany. Gwarantuje również, że komunikat nie zostanie utracony. Jeśli nie można dostarczyć komunikatu lub komunikat do czasu na żywo wygaśnie przed wiadomości, które mogą być dostarczane, nie powiodło się komunikat i odtworzy dostarczania Przyczyna niepowodzenia jest rejestrowana w kolejki utraconych wiadomości. Po ustawieniu `false`, zwrócony sprawia, że zmierzających do transferu wiadomości. W takim przypadku możesz opcjonalnie wybrać kolejki utraconych wiadomości.  
   
 -   `Durable:` Po ustawieniu `true` (ustawienie domyślne), zwrócony gwarantuje, że usługi MSMQ przechowuje komunikat trwale na dysku. W związku z tym jeśli usługa MSMQ udało się zatrzymać i uruchomić ponownie, wiadomości na dysku jest przeniesiona do kolejki docelowej lub dostarczane do usługi. Po ustawieniu `false`, komunikaty są przechowywane w magazynie volatile i zostaną utracone na zatrzymanie i ponowne uruchomienie usługi MSMQ.  
   
@@ -89,7 +89,7 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w Windows C
   
 -   `QueueTransferProtocol`: Wyliczenie protokół do użycia dla transferów kolejki do kolejki komunikatów. Usługa MSMQ implementuje protokół transmisji w trybie macierzystym kolejki do kolejki i opartego na protokole SOAP protokołu SOAP Reliable Messaging Protocol (SRMP). SRMP jest używany, gdy za pomocą transportu HTTP transferów kolejki do kolejki. SRMP bezpieczne jest używana w przypadku używania protokołu HTTPS dla kolejki do kolejki transferu.  
   
--   `UseActiveDirectory`Wartość logiczna, aby wskazać, czy usługi Active Directory muszą być używane do rozpoznawania adresów kolejki. Domyślnie jest wyłączona. Aby uzyskać więcej informacji, zobacz [punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+-   `UseActiveDirectory`: Wartość logiczna, aby wskazać, czy usługi Active Directory muszą być używane do rozpoznawania adresów kolejki. Domyślnie jest wyłączona. Aby uzyskać więcej informacji, zobacz [punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  `MsmqIntegrationBinding` Jest używany, gdy punkt końcowy usługi WCF do komunikowania się z istniejącą aplikacją usługi MSMQ napisanych w C, C++, COM lub System.Messaging interfejsów API.  
@@ -105,9 +105,9 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w Windows C
 ### <a name="sample-code"></a>Przykładowy kod  
  Aby uzyskać instrukcje krok po kroku dotyczące pisania WCF usług korzystających z usługi MSMQ, zobacz następujące tematy:  
   
--   [Instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Instrukcje: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Instrukcje: wymiana komunikatów znajdujących się w kolejce z punktami końcowymi WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Instrukcje: Wymiana zakolejkowanych komunikatów z punktami końcowymi programu WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Aby uzyskać kompletny kod przykładowy pokazujący użycie usługi MSMQ w usłudze WCF, zobacz następujące tematy:  
   
@@ -125,6 +125,6 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w Windows C
   
 -   [Zabezpieczenia komunikatów w ramach kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
- [Sieć Web hostująca aplikację zakolejkowaną](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>Zobacz także
+- [Punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Sieć Web hostująca aplikację zakolejkowaną](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

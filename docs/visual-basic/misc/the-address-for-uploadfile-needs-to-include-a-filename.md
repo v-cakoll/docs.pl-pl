@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_UploadAddressNeedsFilename
 ms.assetid: 0ee11749-0432-4ccb-8c08-1663a4a55ad0
-ms.openlocfilehash: a3f0b02246264cb50c6f719294cb990221702ea2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 95c3c027d9f73e06ba1b318a76b0745766451622
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560415"
 ---
 # <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a>Adres UploadFile musi zawierać nazwę pliku
 Podczas przekazywania plików z `UploadFile` metody, należy podać nazwę pliku w ścieżce docelowej.  
@@ -18,8 +18,8 @@ Podczas przekazywania plików z `UploadFile` metody, należy podać nazwę pliku
   
 -   Podaj nazwę pliku.  
   
-## <a name="see-also"></a>Zobacz też  
- [Operacje sieciowe w programie .NET Framework za pomocą Visual Basic](https://msdn.microsoft.com/library/c5379021-44ef-4d6a-acf5-e951fdcab6b2)  
- [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network)  
- [Instrukcje: przekazywanie pliku](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)
+## <a name="see-also"></a>Zobacz także
+- [Operacje sieciowe w programie .NET Framework za pomocą Visual Basic](https://msdn.microsoft.com/library/c5379021-44ef-4d6a-acf5-e951fdcab6b2)
+- [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network)
+- [Instrukcje: Przekaż plik](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
+- [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)

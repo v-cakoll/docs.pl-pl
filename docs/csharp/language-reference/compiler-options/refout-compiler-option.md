@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: e204a053f6f68a4b848d22c95c98f04edff58716
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 51029c071b3c5bdefe5af798f01238086b8e6d4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506628"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589795"
 ---
 # <a name="-refout-c-compiler-options"></a>-opcji refout (opcje kompilatora C#)
 
@@ -44,7 +44,7 @@ Dodatkowo zestawy odwołań metadanych (prywatne składowe) należy usunąć z z
 
 `-refout` i [ `-refonly` ](refonly-compiler-option.md) opcje wykluczają się wzajemnie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

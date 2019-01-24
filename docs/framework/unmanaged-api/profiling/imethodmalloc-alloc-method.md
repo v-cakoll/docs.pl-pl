@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d73fe16720248d541bac64a432bb6f35d6873b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54c38f9a9abc9a02ba4d84c9a41b2ef6b1f7cb69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528566"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc — Metoda
-Próbuje przydzielić określonej ilości pamięci dla nowego treści funkcji języka pośredniego (MSIL) firmy Microsoft.  
+Próbuje przydzielić określonej ilości pamięci dla nowej treści funkcji Microsoft intermediate language (MSIL).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,9 +40,9 @@ PVOID Alloc (
  [in] Liczba bajtów do przydzielenia dla treści metody.  
   
 ## <a name="remarks"></a>Uwagi  
- Pod adresem większy niż adres bazowy moduł, który jest skojarzony z tym alokatora rozpocznie się alokacji pamięci. Innymi słowy każdego programu przydzielania jest tworzony dla danego modułu i podejmie próbę przydzielenia pamięci z przesunięciem dodatnią z jego adres podstawowy. Jeśli `Alloc` nie może przydzielić żądanej liczby bajtów pod adresem większy niż adres bazowy moduł, zwraca E_OUTOFMEMORY, niezależnie od rzeczywistej ilości miejsca w pamięci.  
+ Ilość przydzielonej pamięci rozpocznie się pod adresem większy niż adres podstawowy moduł, który jest skojarzony z tym alokatora. Innymi słowy każdy alokatora jest tworzona dla danego modułu i podejmie próbę przydzielenia pamięci na dodatnią przesunięcie z adresu podstawowego. Jeśli `Alloc` nie może przydzielić żądanej liczby bajtów pod adresem większy niż adres podstawowy moduł, zwraca E_OUTOFMEMORY niezależnie od rzeczywistej ilości miejsca w pamięci.  
   
- `Alloc` Metody powinny być używane w połączeniu z [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metody.  
+ `Alloc` Metoda powinna służyć w połączeniu z [icorprofilerinfo::setilfunctionbody —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** WindSee [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -53,5 +53,5 @@ PVOID Alloc (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMethodMalloc, interfejs](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMethodMalloc, interfejs](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)

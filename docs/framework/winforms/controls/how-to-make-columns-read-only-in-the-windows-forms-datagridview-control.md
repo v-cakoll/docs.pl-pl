@@ -1,5 +1,5 @@
 ---
-title: 'Porady: określanie kolumn jako tylko do odczytu w formancie DataGridView formularzy systemu Windows'
+title: 'Instrukcje: Nadawanie kolumnom w trybie tylko do odczytu w kontrolce DataGridView formularzy Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], read-only columns
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
-ms.openlocfilehash: a8b5c0f9492941cf0e01e016d9fb097e1df44d2e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e57f926208e67ce894b58bdfaf5d0c3e3815b2ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514884"
 ---
-# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>Porady: określanie kolumn jako tylko do odczytu w formancie DataGridView formularzy systemu Windows
-Nie wszystkie dane, jest przeznaczona do edycji. W <xref:System.Windows.Forms.DataGridView> kontrolować kolumny <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> wartość właściwości określa, czy użytkownicy mogą edytować komórek w tej kolumnie. Aby dowiedzieć się, jak sprawić, że formant całkowicie tylko do odczytu, zobacz [porady: zapobieganie Dodawanie wierszy i usuwanie w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).  
+# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>Instrukcje: Nadawanie kolumnom w trybie tylko do odczytu w kontrolce DataGridView formularzy Windows Forms
+Nie wszystkie dane, jest przeznaczona do edycji. W <xref:System.Windows.Forms.DataGridView> kontrolować kolumny <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> wartość właściwości określa, czy użytkownicy mogą edytować komórek w tej kolumnie. Aby dowiedzieć się, jak sprawić, że formant całkowicie tylko do odczytu, zobacz [jak: Zapobieganie dodawaniu i usuwaniu w Windows formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).  
   
- Są obsługiwane dla tego zadania w programie Visual Studio.  Zobacz też [jak: utworzyć tylko do odczytu w kolumnach w Windows Forms DataGridView kontroli przy użyciu narzędzia Projektant](https://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\)).  
+ Są obsługiwane dla tego zadania w programie Visual Studio.  Zobacz też [jak: Określanie kolumn jako tylko do odczytu w Windows Forms formantu DataGridView za pomocą projektanta](https://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\)).  
   
 ### <a name="to-make-a-column-read-only-programmatically"></a>Aby kolumnę tylko do odczytu programowe  
   
@@ -34,9 +34,9 @@ Nie wszystkie dane, jest przeznaczona do edycji. W <xref:System.Windows.Forms.Da
   
 -   Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>  
- [Podstawowe funkcje komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
- [Instrukcje: zapobieganie dodawaniu i usuwaniu wierszy dla kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>
+- [Podstawowe funkcje komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Instrukcje: Zapobieganie dodawaniu i usuwaniu w Windows formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetOffset — metoda
+title: Metoda ICorDebugVariableHome::GetOffset
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetOffset
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a2ea7273fec62654c168d6786d3644b184ff7f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 687c3bb441c2a12529c873b4fa5f9283b9326a40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659072"
 ---
-# <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome::GetOffset — metoda
+# <a name="icordebugvariablehomegetoffset-method"></a>Metoda ICorDebugVariableHome::GetOffset
 Pobiera przesunięcie z podstawowej rejestru dla zmiennej.  
   
 ## <a name="syntax"></a>Składnia  
@@ -37,7 +37,7 @@ HRESULT GetOffset(
   
 #### <a name="parameters"></a>Parametry  
  `pOffset`  
- [out] Przesunięcie z podstawowej rejestru.  
+ [out] Przesunięcie od podstawowej rejestru.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Metoda zwraca następujące wartości:  
@@ -48,7 +48,7 @@ HRESULT GetOffset(
 |`E_FAIL`|Zmienna nie jest w lokalizacji pamięci względem rejestru.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -56,5 +56,5 @@ HRESULT GetOffset(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugVariableHome, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugVariableHome, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

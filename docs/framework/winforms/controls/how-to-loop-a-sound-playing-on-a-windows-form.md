@@ -1,5 +1,5 @@
 ---
-title: 'Porady: odtwarzanie dźwięku w pętli w formularzu systemu Windows'
+title: 'Instrukcje: Odtwarzanie w formularzu Windows dźwięku w pętli'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: e6b227915a98bb757b559d229ebc1ee757ffb25c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 93793fae418b33c954c9d597f020c8daf8cfedfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493407"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Porady: odtwarzanie dźwięku w pętli w formularzu systemu Windows
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Instrukcje: Odtwarzanie w formularzu Windows dźwięku w pętli
 Poniższy przykład kodu odtwarza dźwięk wielokrotnie. Gdy kod w `stopPlayingButton_Click` programu obsługi zdarzeń uruchamia wszystkie obecnie odtwarzanie zatrzymuje dźwięku. Jeśli żaden dźwięk jest odtwarzany, nic się nie dzieje.  
   
 ## <a name="example"></a>Przykład  
@@ -31,7 +31,7 @@ Poniższy przykład kodu odtwarza dźwięk wielokrotnie. Gdy kod w `stopPlayingB
   
 -   Zastąp nazwę pliku `"c:\Windows\Media\chimes.wav"` z prawidłową nazwą pliku.  
   
- Aby uzyskać informacje o tworzeniu tego przykładu z wiersza polecenia dla programu visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby uzyskać informacje o tworzeniu tego przykładu z wiersza polecenia dla programu visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Operacje na plikach powinna zostać ujęta w odpowiednie bloki obsługi wyjątków.  
@@ -53,7 +53,7 @@ Poniższy przykład kodu odtwarza dźwięk wielokrotnie. Gdy kod w `stopPlayingB
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1.vb może nie być plik źródłowy w języku Visual Basic. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Media.SoundPlayer.PlayLooping%2A>  
- [Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
- [SoundPlayer, klasa — omówienie](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Media.SoundPlayer.PlayLooping%2A>
+- [Instrukcje: Odtwarzanie dźwięku za pomocą formularza Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+- [SoundPlayer, klasa — omówienie](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)

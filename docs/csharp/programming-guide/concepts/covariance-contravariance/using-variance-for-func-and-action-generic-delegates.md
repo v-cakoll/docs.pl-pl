@@ -2,12 +2,12 @@
 title: Korzystanie z wariancji dla Func i akcji delegatów ogólnych (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: 903926bc86b1b96cea25b91314e35ed4771bbcb9
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f517eea07588bb01ef903c8311126eab872bd735
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540601"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Korzystanie z wariancji dla Func i akcji delegatów ogólnych (C#)
 Te przykłady przedstawiają sposób zastosowania kowariancji i kontrawariancji w `Func` i `Action` delegatów ogólnych, które umożliwiają wielokrotne użycie metod i zapewniają większą elastyczność w kodzie.  
@@ -81,7 +81,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Kowariancja i Kontrawariancja (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
+- [Kowariancja i Kontrawariancja (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [Typy ogólne](~/docs/standard/generics/index.md)

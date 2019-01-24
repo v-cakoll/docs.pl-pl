@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 7718edaefbad18afa11b3e3680fac39da585a610
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1246ce5056c17641e10bb96f79b60090d6f43b89
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525056"
 ---
 # <a name="configuring-services"></a>Konfigurowanie usług
-Po zaprojektowane i zaimplementowane umowy serwisowej, możesz przystąpić do konfigurowania usługi. To pozwala definiować i dostosowywać, jak usługa jest widoczne dla klientów, łącznie z określeniem adres, gdzie można je znaleźć, transport i kodowanie wiadomości używanych do wysyłania i odbierania wiadomości oraz typ zabezpieczeń, które wymaga.  
+Po zaprojektowane i zaimplementowane umowy serwisowej można przystąpić do konfigurowania usługi. Jest to, gdzie zdefiniujesz i dostosujesz, jak usługa jest narażony na klientów, łącznie z określeniem adresu, gdzie można je znaleźć, transport i kodowanie komunikatu, używanych do wysyłania i odbierania komunikatów i typ zabezpieczeń wymagane przez nią.  
   
- Konfiguracja tutaj obejmuje wszystkich metod imperatively w kodzie, lub za pomocą pliku konfiguracji, w którym można zdefiniować i dostosować różne aspekty usług, takich jak określanie jego adresy punktów końcowych, transportów używane i jego systemów zabezpieczeń. W praktyce, zapisywanie konfiguracji jest poważnym należą do programowania aplikacji WCF.  
+ Konfiguracja tutaj obejmuje wszystkie sposoby obowiązkowo w kodzie lub za pomocą pliku konfiguracji, można zdefiniować i dostosować różnych aspektów usługi, takich jak określanie jego adresy punktów końcowych, transportów używane i jej programów zabezpieczeń. W praktyce Zapisywanie konfiguracji jest poważnym należą do programowania aplikacji WCF.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md)  
- Począwszy od [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF jest dostarczany z nowy model konfiguracji domyślnej, które upraszcza wymagania dotyczące konfiguracji usługi WCF. Jeśli nie zostanie określona żadna konfiguracja usługi WCF dla określonej usługi, środowisko uruchomieniowe automatycznie konfiguruje usługi domyślne punkty końcowe, powiązania i zachowania.  
+ Począwszy od [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF, który jest dostarczany z nowy model konfiguracji domyślnej, który upraszcza wymagania dotyczące konfiguracji usługi WCF. Jeśli nie podano żadnej konfiguracji programu WCF dla określonej usługi, środowisko uruchomieniowe automatycznie konfiguruje usługi przy użyciu domyślnych punktów końcowych, powiązania i zachowania.  
   
  [Konfigurowanie usług za pomocą plików konfiguracji](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Usługa Windows Communication Foundation (WCF) to można skonfigurować przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] technologia konfiguracji. Najczęściej elementy XML są dodawane do pliku Web.config dla witryny Internet Information Services (IIS), który jest hostem usługi WCF. Elementy umożliwiają zmianę szczegóły, takie jak adresy punktów końcowych (rzeczywiste adresy używane do komunikacji z usługą) na komputerze przez komputer.  
+ Usługa Windows Communication Foundation (WCF) jest, można skonfigurować przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] technologia konfiguracji. Najczęściej XML elementy są dodawane do pliku Web.config dla witryny usług Internet Information Services (IIS), który hostuje usługę WCF. Elementy umożliwiają zmianę szczegóły, takie jak adresy punktów końcowych (rzeczywista adresy, używane do komunikacji z usługą) na podstawie maszyny według komputera.  
   
  [Powiązania](../../../docs/framework/wcf/bindings.md)  
- Ponadto WCF zawiera kilka typowych konfiguracji dostarczane przez system w postaci powiązania, które umożliwiają szybkie wybierz najbardziej podstawowa funkcje sposobu komunikacji między klientem a usługą, na przykład transportów, zabezpieczeń i używane kodowanie komunikatu.  
+ Ponadto WCF zawiera kilka typowych konfiguracji dostarczane przez system w postaci powiązania, które umożliwiają szybko wybrać najbardziej podstawowe funkcje dla sposób komunikacji klientów i usług, takich jak transportu, zabezpieczeń i używać kodowania komunikatu.  
   
  [Punkty końcowe](../../../docs/framework/wcf/endpoints.md)  
- Cała komunikacja z usługą WCF odbywa się przez *punkty końcowe* usługi. Punkty końcowe zawiera kontrakt, informacje o konfiguracji, który jest określony w powiązaniach i adresy, wskazujące, gdzie można znaleźć usługi lub gdzie można uzyskać informacji o usłudze.  
+ Cała komunikacja z usługą WCF odbywa się przez *punktów końcowych* usługi. Punkty końcowe zawierać umowy, informacje o konfiguracji, który jest określony w powiązaniach i adresy, które wskazują, gdzie można znaleźć usługi lub gdzie można uzyskać informacji na temat usługi.  
   
  [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md)  
- Za pomocą usługi WCF i istniejące mechanizmy zabezpieczeń, można zaimplementować poufność, integralność, uwierzytelniania i autoryzacji do dowolnej usługi. Można również przeprowadzać inspekcję dla zabezpieczeń sukcesy i niepowodzenia.  
+ Przy użyciu usługi WCF i istniejące mechanizmy zabezpieczeń, można zaimplementować poufność, integralność, uwierzytelniania i autoryzacji do każdej usługi. Można również przeprowadzać inspekcję zabezpieczeń sukcesów i niepowodzeń.  
   
  [Tworzenie usług międzyoperacyjnych 1.1 profilu podstawowego WS-I](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  Wymagania dotyczące wdrażania usługi, która współdziała z usług i klientów na dowolnej platformie lub systemu operacyjnego zostały opisane w WS-I Basic Profile 1.1 specyfikacji.  
@@ -55,7 +55,7 @@ Po zaprojektowane i zaimplementowane umowy serwisowej, możesz przystąpić do k
   
  [Administracja i diagnostyka](../../../docs/framework/wcf/diagnostics/index.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawy programowania przy użyciu programu WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)  
- [Szczegóły funkcji WCF](../../../docs/framework/wcf/feature-details/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Podstawy programowania przy użyciu programu WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)
+- [Szczegóły funkcji WCF](../../../docs/framework/wcf/feature-details/index.md)

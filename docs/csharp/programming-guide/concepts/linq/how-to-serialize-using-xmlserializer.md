@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: serializowanie przy użyciu elementu XmlSerializer (C#)'
+title: 'Instrukcje: Serializowanie przy użyciu elementu XmlSerializer (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
-ms.openlocfilehash: 32a23792947639c2c0eb1dc14b640c3786bdfd4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9d722735f9a83f0d65fbc10b6c868525e8393a7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567766"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a>Instrukcje: serializowanie przy użyciu elementu XmlSerializer (C#)
+# <a name="how-to-serialize-using-xmlserializer-c"></a>Instrukcje: Serializowanie przy użyciu elementu XmlSerializer (C#)
 W tym temacie przedstawiono przykład, który serializuje i deserializuje przy użyciu <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Przykład  
@@ -89,6 +89,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Serializowanie wykresów obiektów, które zawierają obiekty XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

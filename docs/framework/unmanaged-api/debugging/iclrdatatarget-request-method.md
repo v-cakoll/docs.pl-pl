@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc79277c75118b11766e66137284bd5655eed091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77bd3bc239d0101f02cd515b0ec2a8bec3372882
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596907"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request — Metoda
-Metoda wywoływana przez wspólne języka wspólnego (CLR) danych dostęp do usługi do żądania operacji zdefiniowanej przez implementację.  
+Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych do żądania operacji, zgodnie z definicją przez implementację.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,15 +55,15 @@ HRESULT Request (
  [in] Rozmiar buforu wyjściowego, który służy do odpowiedzi.  
   
  `outBuffer`  
- [out] Bufor zawierający odpowiedzi.  
+ [out] Bufor, zawierająca odpowiedź.  
   
 ## <a name="remarks"></a>Uwagi  
- `Request` Metoda ułatwia dodanie nieokreślony operacjach niestandardowych. Oznacza to, że ta metoda zapewnia rozszerzalności bez konieczności zmiany definicji interfejsu.  
+ `Request` Metoda ułatwia dodawanie nieokreślony operacjach niestandardowych. Oznacza to, że ta metoda zapewnia rozszerzalność bez konieczności zmiany definicji interfejsu.  
   
- Ta metoda jest implementowany przez twórcę debugowania aplikacji.  
+ Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData.idl, ClrData.h  
   
@@ -71,5 +71,5 @@ HRESULT Request (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

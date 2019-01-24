@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07237794ca45b16b1ae1ca95b1d62889f095350f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bad338777db2097ed72ce327f42fde0f0db58e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693720"
 ---
-# <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a><span data-ttu-id="2b84c-102">IMetaDataAssemblyImport::GetManifestResourceProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="2b84c-102">IMetaDataAssemblyImport::GetManifestResourceProps Method</span></span>
-<span data-ttu-id="2b84c-103">Pobiera zestaw właściwości zasobu manifestu o sygnaturze określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="2b84c-103">Gets the set of properties of the manifest resource with the specified metadata signature.</span></span>  
+# <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a><span data-ttu-id="2a363-102">IMetaDataAssemblyImport::GetManifestResourceProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="2a363-102">IMetaDataAssemblyImport::GetManifestResourceProps Method</span></span>
+<span data-ttu-id="2a363-103">Pobiera zestaw właściwości zasobu manifestu o podpisie określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="2a363-103">Gets the set of properties of the manifest resource with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b84c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2b84c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2a363-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2a363-104">Syntax</span></span>  
   
 ```  
 HRESULT GetManifestResourceProps (  
@@ -41,36 +41,36 @@ HRESULT GetManifestResourceProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2b84c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2b84c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2a363-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2a363-105">Parameters</span></span>  
  `mdmr`  
- <span data-ttu-id="2b84c-106">[in] `mdManifestResource` Token reprezentujący zasobu, dla którego można pobrać właściwości.</span><span class="sxs-lookup"><span data-stu-id="2b84c-106">[in] An `mdManifestResource` token that represents the resource for which to get the properties.</span></span>  
+ <span data-ttu-id="2a363-106">[in] `mdManifestResource` Token reprezentujący zasób, dla którego należy pobrać właściwości.</span><span class="sxs-lookup"><span data-stu-id="2a363-106">[in] An `mdManifestResource` token that represents the resource for which to get the properties.</span></span>  
   
  `szName`  
- <span data-ttu-id="2b84c-107">[out] Nazwa zasobu.</span><span class="sxs-lookup"><span data-stu-id="2b84c-107">[out] The name of the resource.</span></span>  
+ <span data-ttu-id="2a363-107">[out] Nazwa zasobu.</span><span class="sxs-lookup"><span data-stu-id="2a363-107">[out] The name of the resource.</span></span>  
   
  `cchName`  
- <span data-ttu-id="2b84c-108">[in] Rozmiar w znaki dwubajtowe z `szName`.</span><span class="sxs-lookup"><span data-stu-id="2b84c-108">[in] The size, in wide chars, of `szName`.</span></span>  
+ <span data-ttu-id="2a363-108">[in] Rozmiar w szerokie znaki z `szName`.</span><span class="sxs-lookup"><span data-stu-id="2a363-108">[in] The size, in wide chars, of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="2b84c-109">[out] Wskaźnik do liczby znaki dwubajtowe faktycznie zwracane w `szName`.</span><span class="sxs-lookup"><span data-stu-id="2b84c-109">[out] A pointer to the number of wide chars actually returned in `szName`.</span></span>  
+ <span data-ttu-id="2a363-109">[out] Wskaźnik do liczby szerokie znaki rzeczywistego zwrotu w `szName`.</span><span class="sxs-lookup"><span data-stu-id="2a363-109">[out] A pointer to the number of wide chars actually returned in `szName`.</span></span>  
   
  `ptkImplementation`  
- <span data-ttu-id="2b84c-110">[out] Wskaźnik do `mdFile` tokenu lub `mdAssemblyRef` token reprezentujący pliku lub zestawu, który zawiera zasób.</span><span class="sxs-lookup"><span data-stu-id="2b84c-110">[out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.</span></span>  
+ <span data-ttu-id="2a363-110">[out] Wskaźnik do `mdFile` tokenu lub `mdAssemblyRef` token reprezentujący pliku lub zestawu, odpowiednio, który zawiera zasób.</span><span class="sxs-lookup"><span data-stu-id="2a363-110">[out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.</span></span>  
   
  `pdwOffset`  
- <span data-ttu-id="2b84c-111">[out] Wskaźnik do wartość określa Przesunięcie początku zasobów w pliku.</span><span class="sxs-lookup"><span data-stu-id="2b84c-111">[out] A pointer to a value that specifies the offset to the beginning of the resource within the file.</span></span>  
+ <span data-ttu-id="2a363-111">[out] Wskaźnik do wartości, który określa przesunięcie na początku tego zasobu w pliku.</span><span class="sxs-lookup"><span data-stu-id="2a363-111">[out] A pointer to a value that specifies the offset to the beginning of the resource within the file.</span></span>  
   
  `pdwResourceFlags`  
- <span data-ttu-id="2b84c-112">[out] Wskaźnik do flagi opisujące metadanych dla zasobu.</span><span class="sxs-lookup"><span data-stu-id="2b84c-112">[out] A pointer to flags that describe the metadata applied to a resource.</span></span> <span data-ttu-id="2b84c-113">Wartość flagi składa się z co najmniej jeden [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) wartości.</span><span class="sxs-lookup"><span data-stu-id="2b84c-113">The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.</span></span>  
+ <span data-ttu-id="2a363-112">[out] Wskaźnik flagi opisujące metadanych dla zasobu.</span><span class="sxs-lookup"><span data-stu-id="2a363-112">[out] A pointer to flags that describe the metadata applied to a resource.</span></span> <span data-ttu-id="2a363-113">Wartość flagi składa się z co najmniej jeden [cormanifestresourceflags —](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) wartości.</span><span class="sxs-lookup"><span data-stu-id="2a363-113">The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2b84c-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2b84c-114">Requirements</span></span>  
- <span data-ttu-id="2b84c-115">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b84c-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2a363-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2a363-114">Requirements</span></span>  
+ <span data-ttu-id="2a363-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2a363-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b84c-116">**Nagłówek:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2b84c-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2a363-116">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="2a363-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2b84c-117">**Biblioteka:** używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2b84c-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2a363-117">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2a363-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="2b84c-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b84c-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2a363-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2a363-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b84c-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="2b84c-119">See Also</span></span>  
- [<span data-ttu-id="2b84c-120">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="2b84c-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2a363-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2a363-119">See also</span></span>
+- [<span data-ttu-id="2a363-120">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="2a363-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

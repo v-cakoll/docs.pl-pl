@@ -1,5 +1,5 @@
 ---
-title: Jak sortować kolumnę GridView po kliknięciu na nagłówek
+title: 'Instrukcje: Sortuj kolumnę GridView po kliknięciu na nagłówek'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694090"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="d1f09-102">Jak sortować kolumnę GridView po kliknięciu na nagłówek</span><span class="sxs-lookup"><span data-stu-id="d1f09-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
-<span data-ttu-id="d1f09-103">W tym przykładzie przedstawiono sposób tworzenia <xref:System.Windows.Controls.ListView> formant, który implementuje <xref:System.Windows.Controls.GridView> wyświetlić trybu i sortowanie danych zawartości, gdy użytkownik kliknie nagłówek kolumny.</span><span class="sxs-lookup"><span data-stu-id="d1f09-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="fbab2-102">Instrukcje: Sortuj kolumnę GridView po kliknięciu na nagłówek</span><span class="sxs-lookup"><span data-stu-id="fbab2-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
+<span data-ttu-id="fbab2-103">W tym przykładzie przedstawiono sposób tworzenia <xref:System.Windows.Controls.ListView> formant, który implementuje <xref:System.Windows.Controls.GridView> wyświetlanie trybu i sortowania danych zawartości, gdy użytkownik kliknie nagłówek kolumny.</span><span class="sxs-lookup"><span data-stu-id="fbab2-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d1f09-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="d1f09-104">Example</span></span>  
- <span data-ttu-id="d1f09-105">W poniższym przykładzie zdefiniowano <xref:System.Windows.Controls.GridView> z trzech kolumn, które wiążą się <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, i <xref:System.DateTime.Day%2A>, właściwości <xref:System.DateTime> struktury.</span><span class="sxs-lookup"><span data-stu-id="d1f09-105">The following example defines a <xref:System.Windows.Controls.GridView> with three columns that bind to the <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A>, properties of the <xref:System.DateTime> structure.</span></span>  
+## <a name="example"></a><span data-ttu-id="fbab2-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="fbab2-104">Example</span></span>  
+ <span data-ttu-id="fbab2-105">W poniższym przykładzie zdefiniowano <xref:System.Windows.Controls.GridView> z trzech kolumn, które należy powiązać <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, i <xref:System.DateTime.Day%2A>, właściwości <xref:System.DateTime> struktury.</span><span class="sxs-lookup"><span data-stu-id="fbab2-105">The following example defines a <xref:System.Windows.Controls.GridView> with three columns that bind to the <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A>, properties of the <xref:System.DateTime> structure.</span></span>  
   
 ```xaml  
 <GridView>  
@@ -37,7 +37,7 @@ ms.locfileid: "33554901"
 </GridView>  
 ```  
   
- <span data-ttu-id="d1f09-106">W poniższym przykładzie przedstawiono elementów danych, które są zdefiniowane jako <xref:System.Collections.ArrayList> z <xref:System.DateTime> obiektów.</span><span class="sxs-lookup"><span data-stu-id="d1f09-106">The following example shows the data items that are defined as an <xref:System.Collections.ArrayList> of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="d1f09-107"><xref:System.Collections.ArrayList> Jest zdefiniowany jako <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> dla <xref:System.Windows.Controls.ListView> formantu.</span><span class="sxs-lookup"><span data-stu-id="d1f09-107">The <xref:System.Collections.ArrayList> is defined as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.ListView> control.</span></span>  
+ <span data-ttu-id="fbab2-106">W poniższym przykładzie pokazano elementów danych, które są zdefiniowane jako <xref:System.Collections.ArrayList> z <xref:System.DateTime> obiektów.</span><span class="sxs-lookup"><span data-stu-id="fbab2-106">The following example shows the data items that are defined as an <xref:System.Collections.ArrayList> of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="fbab2-107"><xref:System.Collections.ArrayList> Jest zdefiniowany jako <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> dla <xref:System.Windows.Controls.ListView> kontroli.</span><span class="sxs-lookup"><span data-stu-id="fbab2-107">The <xref:System.Collections.ArrayList> is defined as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.ListView> control.</span></span>  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -58,7 +58,7 @@ ms.locfileid: "33554901"
 </ListView.ItemsSource>  
 ```  
   
- <span data-ttu-id="d1f09-108">`s` i `p` identyfikatorów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tagi odwoływać się do mapowania przestrzeni nazw, które są zdefiniowane w metadanych [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony.</span><span class="sxs-lookup"><span data-stu-id="d1f09-108">The `s` and `p` identifiers in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="d1f09-109">Poniższy przykład przedstawia definicji metadanych.</span><span class="sxs-lookup"><span data-stu-id="d1f09-109">The following example shows the metadata definition.</span></span>  
+ <span data-ttu-id="fbab2-108">`s` i `p` identyfikatorów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tagi odnoszą się do mapowania przestrzeni nazw, które są zdefiniowane w metadanych [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony.</span><span class="sxs-lookup"><span data-stu-id="fbab2-108">The `s` and `p` identifiers in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="fbab2-109">Poniższy przykład przedstawia definicję metadanych.</span><span class="sxs-lookup"><span data-stu-id="fbab2-109">The following example shows the metadata definition.</span></span>  
   
 ```xaml  
 <Window        
@@ -69,7 +69,7 @@ ms.locfileid: "33554901"
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- <span data-ttu-id="d1f09-110">Aby posortować dane zgodnie z zawartością kolumny, w przykładzie zdefiniowano program obsługi zdarzeń do obsługi <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń, która występuje po naciśnięciu przycisku nagłówka kolumny.</span><span class="sxs-lookup"><span data-stu-id="d1f09-110">To sort the data according to the contents of a column, the example defines an event handler to handle the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event that occurs when you press the column header button.</span></span> <span data-ttu-id="d1f09-111">Poniższy przykład przedstawia sposób określania obsługi zdarzenia dla <xref:System.Windows.Controls.GridViewColumnHeader> formantu.</span><span class="sxs-lookup"><span data-stu-id="d1f09-111">The following example shows how to specify an event handler for the <xref:System.Windows.Controls.GridViewColumnHeader> control.</span></span>  
+ <span data-ttu-id="fbab2-110">Aby posortować dane zgodnie z zawartością kolumny, w przykładzie zdefiniowano program obsługi zdarzeń, aby obsłużyć <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń, która występuje po naciśnięciu przycisku nagłówka kolumny.</span><span class="sxs-lookup"><span data-stu-id="fbab2-110">To sort the data according to the contents of a column, the example defines an event handler to handle the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event that occurs when you press the column header button.</span></span> <span data-ttu-id="fbab2-111">Poniższy przykład pokazuje, jak określić program obsługi zdarzeń dla <xref:System.Windows.Controls.GridViewColumnHeader> kontroli.</span><span class="sxs-lookup"><span data-stu-id="fbab2-111">The following example shows how to specify an event handler for the <xref:System.Windows.Controls.GridViewColumnHeader> control.</span></span>  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -78,7 +78,7 @@ ms.locfileid: "33554901"
  >  
 ```  
   
- <span data-ttu-id="d1f09-112">W przykładzie zdefiniowano programu obsługi zdarzeń, dzięki czemu zmiany kierunek sortowania między rosnąco i malejącej każdym naciśnięciu przycisku nagłówka kolumny.</span><span class="sxs-lookup"><span data-stu-id="d1f09-112">The example defines the event handler so that the sort direction changes between ascending order and descending order each time you press the column header button.</span></span> <span data-ttu-id="d1f09-113">W poniższym przykładzie pokazano programu obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="d1f09-113">The following example shows the event handler.</span></span>  
+ <span data-ttu-id="fbab2-112">W przykładzie zdefiniowano program obsługi zdarzeń, tak aby kierunek sortowania zmienia się między kolejności rosnącej i malejącej każdym naciśnięciu przycisku nagłówek kolumny.</span><span class="sxs-lookup"><span data-stu-id="fbab2-112">The example defines the event handler so that the sort direction changes between ascending order and descending order each time you press the column header button.</span></span> <span data-ttu-id="fbab2-113">Poniższy przykład pokazuje programu obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="fbab2-113">The following example shows the event handler.</span></span>  
   
 ```csharp  
 public partial class Window1 : Window  
@@ -197,7 +197,7 @@ Partial Public Class Window1
 End Class
 ```  
   
- <span data-ttu-id="d1f09-114">W poniższym przykładzie przedstawiono algorytm sortowania, który jest wywoływany przez program obsługi zdarzeń, aby posortować dane.</span><span class="sxs-lookup"><span data-stu-id="d1f09-114">The following example shows the sorting algorithm that is called by the event handler to sort the data.</span></span> <span data-ttu-id="d1f09-115">Sortowanie jest wykonywane przez utworzenie nowej <xref:System.ComponentModel.SortDescription> struktury.</span><span class="sxs-lookup"><span data-stu-id="d1f09-115">The sort is performed by creating a new <xref:System.ComponentModel.SortDescription> structure.</span></span>  
+ <span data-ttu-id="fbab2-114">Poniższy przykład przedstawia algorytm sortowania, która jest wywoływana przez program obsługi zdarzeń, aby posortować dane.</span><span class="sxs-lookup"><span data-stu-id="fbab2-114">The following example shows the sorting algorithm that is called by the event handler to sort the data.</span></span> <span data-ttu-id="fbab2-115">Sortowanie jest wykonywane przez utworzenie nowego <xref:System.ComponentModel.SortDescription> struktury.</span><span class="sxs-lookup"><span data-stu-id="fbab2-115">The sort is performed by creating a new <xref:System.ComponentModel.SortDescription> structure.</span></span>  
   
 ```csharp  
 private void Sort(string sortBy, ListSortDirection direction)  
@@ -223,9 +223,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d1f09-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d1f09-116">See Also</span></span>  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [<span data-ttu-id="d1f09-117">ListView — omówienie</span><span class="sxs-lookup"><span data-stu-id="d1f09-117">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [<span data-ttu-id="d1f09-118">GridView — omówienie</span><span class="sxs-lookup"><span data-stu-id="d1f09-118">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [<span data-ttu-id="d1f09-119">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="d1f09-119">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="fbab2-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fbab2-116">See also</span></span>
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [<span data-ttu-id="fbab2-117">ListView — omówienie</span><span class="sxs-lookup"><span data-stu-id="fbab2-117">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [<span data-ttu-id="fbab2-118">GridView — omówienie</span><span class="sxs-lookup"><span data-stu-id="fbab2-118">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [<span data-ttu-id="fbab2-119">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="fbab2-119">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

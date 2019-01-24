@@ -2,30 +2,30 @@
 title: Za pomocą edytora wyrażeń niestandardowych
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 4eb39fbd51cf4f1914f7fdca545f9c9fd8e83240
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3959fdb5b75ae6e48c19130cf6e825455d8f7103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526915"
 ---
 # <a name="using-a-custom-expression-editor"></a>Za pomocą edytora wyrażeń niestandardowych
-Edytor wyrażenia niestandardowego można zaimplementować zapewnienie wyrażenia bardziej zaawansowane funkcje lub prostsze środowisko edytowania. Istnieje kilka scenariuszy, w których można użyć wyrażenia niestandardowego edytora:  
+Podaj wyrażenie bogatsze lub prostsze środowisko edytowania plików mogą zostać wdrożone edytora wyrażeń niestandardowych. Istnieje kilka scenariuszy, w których możesz chcieć użyć edytora wyrażeń niestandardowych:  
   
--   Aby zapewnić obsługę funkcji IntelliSense i innych zaawansowanej edycji funkcji w Projektancie rehosted przepływu pracy. Ponieważ nie można użyć domyślnego edytora wyrażeń Visual Studio w aplikacjach rehosted należy podać tę funkcję.  
+-   Aby zapewnić obsługę technologii IntelliSense i inne zaawansowane funkcje w rehostowanym projektancie przepływu pracy do edycji. Ta funkcja musi być podany, ponieważ domyślny edytor wyrażeń Visual Studio nie można używać w rehostowanym aplikacji.  
   
--   Aby uprościć wyrażenie środowisko dla użytkowników analityka biznesowych, edytowania, aby nie, na przykład są wymagane do Naucz się Visual Basic lub postępowania w przypadku wyrażeń języka Visual Basic.  
+-   Aby uprościć wyrażenia środowisko dla użytkowników analityków biznesowych, edytowania, aby nie, na przykład, są wymagane do Naucz się Visual Basic lub przeciwdziałania wyrażeń języka Visual Basic.  
   
- Trzy podstawowe kroki są niezbędne do zaimplementowania Edytor wyrażenia niestandardowego:  
+ Trzy podstawowe kroki są niezbędne do zaimplementowania edytora wyrażeń niestandardowych:  
   
-1.  Implementowanie <xref:System.Activities.Presentation.View.IExpressionEditorService> interfejsu. Ten interfejs umożliwia zarządzanie tworzenie i likwidacja edytory wyrażenia.  
+1.  Implementowanie <xref:System.Activities.Presentation.View.IExpressionEditorService> interfejsu. Ten interfejs zarządza tworzeniem i niszczeniem edytory wyrażenia.  
   
-2.  Implementowanie <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interfejsu. Ten interfejs zawiera implementację interfejsu użytkownika dla wyrażenia edycji interfejsu użytkownika.  
+2.  Implementowanie <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interfejsu. Ten interfejs implementuje interfejs użytkownika dla wyrażenia edytowania interfejsu użytkownika.  
   
-3.  Publikowanie <xref:System.Activities.Presentation.View.IExpressionEditorService> w aplikacji rehosted przepływu pracy.  
+3.  Publikowanie <xref:System.Activities.Presentation.View.IExpressionEditorService> w rehostowanym przepływu pracy aplikacji.  
   
-## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>Implementowanie edytora niestandardowego wyrażenia w bibliotece klas  
- Oto przykład kodu (weryfikacja koncepcji) `MyEditorService` klasa implementująca <xref:System.Activities.Presentation.View.IExpressionEditorService> interfejsu jest zawarty w projekcie biblioteki MyExpressionEditorService.  
+## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>Implementowanie edytora wyrażeń niestandardowych w bibliotece klas  
+ Poniżej znajduje się przykładowy kod (weryfikacja koncepcji) `MyEditorService` klasę, która implementuje <xref:System.Activities.Presentation.View.IExpressionEditorService> interfejsu jest zawarty w projekcie biblioteki MyExpressionEditorService.  
   
 ```  
 using System;  
@@ -71,7 +71,7 @@ namespace MyExpressionEditorService
 }  
 ```  
   
- Oto kod `MyExpressionEditorInstance` klasa implementująca <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interfejs w projekcie biblioteki MyExpressionEditorService.  
+ Poniżej przedstawiono kod używany w `MyExpressionEditorInstance` klasę, która implementuje <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interfejsu w projekcie biblioteki MyExpressionEditorService.  
   
 ```  
 using System;  
@@ -221,8 +221,8 @@ namespace MyExpressionEditorService
 }  
 ```  
   
-### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>Publikowanie edytora niestandardowego wyrażenia w projekcie WPF  
- Oto kod, który pokazuje, jak rehost projektanta w [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] aplikacji i jak tworzyć i publikować `MyEditorService` usługi. Przed użyciem tego kodu, Dodaj odwołanie do projektu biblioteki MyExpressionEditorService z projektu, który zawiera aplikację avalon2.  
+### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>Publikowanie edytora wyrażeń niestandardowych w projekcie środowiska WPF  
+ Poniżej przedstawiono kod, który pokazuje, jak ponowne hostowanie projektanta w [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] aplikacji oraz jak tworzyć i publikować `MyEditorService` usługi. Przed rozpoczęciem korzystania z tego kodu, Dodaj odwołanie do projektu biblioteki MyExpressionEditorService z projektu, który zawiera aplikację avalon2.  
   
 ```  
 using System.Windows;  
@@ -276,9 +276,9 @@ namespace WpfApplication1
 ```  
   
 ### <a name="notes"></a>Uwagi  
- Jeśli używasz **ExpressionTextBox** formantu za pomocą projektanta działań niestandardowych nie jest konieczne tworzenie i zniszcz edytory wyrażenie przy użyciu <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> i <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> metody <xref:System.Activities.Presentation.View.IExpressionEditorService> interfejsu. <xref:System.Activities.Presentation.View.ExpressionTextBox> Klasa zarządza to dla Ciebie.  
+ Jeśli używasz **elementu ExpressionTextBox** kontroli w niestandardowego projektanta działań, nie jest konieczne tworzyć i niszczyć edytory wyrażenie przy użyciu <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> i <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> metody <xref:System.Activities.Presentation.View.IExpressionEditorService> interfejsu. <xref:System.Activities.Presentation.View.ExpressionTextBox> Klasa zarządza to dla Ciebie.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Activities.Presentation.View.IExpressionEditorService>  
- <xref:System.Activities.Presentation.View.IExpressionEditorInstance>  
- [Używanie elementu ExpressionTextBox w projektancie działań niestandardowych](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Activities.Presentation.View.IExpressionEditorService>
+- <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
+- [Używanie elementu ExpressionTextBox w projektancie działań niestandardowych](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

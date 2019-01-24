@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: f8fd3237d71bc1960678565192c7ef9ddcb2c366
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 77f8fc5057b8f31e684941b742f2cf696afd6b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525212"
 ---
 # <a name="panels-overview"></a>Przegląd Panele
 <xref:System.Windows.Controls.Panel> elementy są składniki, które kontrolują renderowanie elementów — ich rozmiar i wymiarów, ich pozycji i rozmieszczenie ich zawartość elementu podrzędnego. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Zawiera szereg wstępnie zdefiniowanych <xref:System.Windows.Controls.Panel> elementów, a także możliwość utworzenia niestandardowych <xref:System.Windows.Controls.Panel> elementów.  
@@ -174,7 +174,7 @@ ms.locfileid: "47196632"
   
  Różnica w zachowaniu renderowania są widoczne na tej ilustracji.  
   
- ![Zrzut ekranu: StackPanel vs. Zrzut ekranu DockPanel](../../../../docs/framework/wpf/controls/media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
+ ![Zrzut ekranu: StackPanel programu vs. Zrzut ekranu DockPanel](../../../../docs/framework/wpf/controls/media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
   
 #### <a name="defining-and-using-a-stackpanel"></a>Definiowanie i korzystanie z StackPanel  
  Poniższy przykład pokazuje sposób użycia <xref:System.Windows.Controls.StackPanel> utworzyć zestaw przycisków umieszczony w pionie. Poziome położenie, ustaw <xref:System.Windows.Controls.StackPanel.Orientation%2A> właściwość <xref:System.Windows.Controls.Orientation.Horizontal>.  
@@ -252,13 +252,13 @@ ms.locfileid: "47196632"
   
  Aby uzyskać dodatkowe informacje na temat tworzenia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji przy użyciu możliwych do zlokalizowania [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]s, zobacz [— Przegląd Użyj automatycznego układu](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [Przykład WPF układu galerii](https://go.microsoft.com/fwlink/?LinkID=160054)  
- [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
- [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [Przegląd wyrównania, marginesów i wypełnień](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Tworzenie niestandardowych przykładowej panelu zawijania zawartości](https://go.microsoft.com/fwlink/?LinkID=159979)  
- [Przegląd właściwości dołączonych](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Przegląd używania automatycznego układu](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>Zobacz także
+- [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Przykład WPF układu galerii](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Układ](../../../../docs/framework/wpf/advanced/layout.md)
+- [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Przegląd wyrównania, marginesów i wypełnień](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Tworzenie niestandardowych przykładowej panelu zawijania zawartości](https://go.microsoft.com/fwlink/?LinkID=159979)
+- [Przegląd właściwości dołączonych](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [Przegląd używania automatycznego układu](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: f4d4f6cdbb5ac6bae3af66d46599ec65aaae22f4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b5535343b5ac40b12aa06ffb5b587e114f5cd757
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521406"
 ---
 # <a name="null-comparisons"></a>Porównania wartości null
-A `null` wartość w źródle danych wskazuje, że wartość jest nieznany. W [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] kwerendy, można sprawdzić, tak aby niektóre obliczenia wartości null lub porównania są realizowane wyłącznie na wiersze, które mają prawidłowy lub inną niż null, danych. Semantyka null CLR, jednak mogą się różnić od null semantykę źródła danych. Większość baz danych używa wersji przechowywanymi w trzech logiki do obsługi porównania wartości null. Oznacza to, że porównanie z wartością null nie zostało oszacowane jako `true` lub `false`, daje w wyniku `unknown`. Często jest to implementacja ANSI wartości null, ale nie zawsze jest wielkość liter.  
+A `null` wartości w źródle danych wskazuje, czy wartość jest nieznany. W [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania, można sprawdzić w przypadku wartości null wartości, tak aby niektóre obliczeń lub porównania są realizowane wyłącznie na wiersze, które mają prawidłowy lub innych niż null, danych. Semantyka wartości null CLR, jednak może różnić się od semantyka wartości null, źródła danych. Większość baz danych użyć wersji przechowywanymi w trzech logiki do obsługi porównania wartości null. Oznacza to, że porównanie z wartością null nie można rozpoznać `true` lub `false`, daje w wyniku `unknown`. Często jest to implementacja ANSI na wartości null, ale nie zawsze jest to wymagane.  
   
- Domyślnie w programie SQL Server porównanie wartości null jest równa null, zwraca wartość null. W poniższym przykładzie wiersze gdzie `ShipDate` ma wartość null, są wykluczane z zestawu wyników i [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] instrukcji zwróci 0 wierszy.  
+ Domyślnie w programie SQL Server porównywanie wartości null jest równa null, zwraca wartość null. W poniższym przykładzie wiersze gdzie `ShipDate` ma wartość null są wykluczone z zestawu wyników i [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] instrukcji zwróci 0 wierszy.  
   
 ```  
 -- Find order details and orders with no ship date.  
@@ -25,26 +25,26 @@ JOIN Sales.SalesOrderDetail o ON o.SalesOrderID = h.SalesOrderID
 WHERE h.ShipDate IS Null  
 ```  
   
- To bardzo różni się od CLR semantyki wartości null, gdzie porównanie wartości null jest równa null, zwraca wartość true.  
+ To bardzo różni się od semantyki null CLR, gdzie porównanie wartości null jest równa null, zwraca wartość true.  
   
- Następujące zapytanie LINQ jest wyrażona w środowisku CLR, ale jest wykonywana w źródle danych. Ponieważ nie ma żadnej gwarancji, że będą honorowane semantyki CLR w źródle danych, oczekiwane zachowanie jest nieokreślony.  
+ Następujące zapytanie LINQ jest wyrażona w CLR, ale jest ono wykonywane w źródle danych. Ponieważ nie ma żadnej gwarancji, że semantykę środowiska CLR będzie honorowane w źródle danych, oczekiwane zachowanie jest nieokreślone.  
   
  [!code-csharp[DP L2E Conceptual Examples#JoinOnNull](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#joinonnull)]
  [!code-vb[DP L2E Conceptual Examples#JoinOnNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#joinonnull)]  
   
 ## <a name="key-selectors"></a>Selektory kluczy  
- A *selektora kluczy* to funkcja używana w standardowych operatorów zapytań można wyodrębnić klucza z elementu. W funkcji selektora kluczy wyrażenie może być porównywana ze stałą. Semantyka null CLR są wystawiane, jeśli wyrażenie jest porównywana ze stałą wartość null lub są porównywane dwie stałe wartości null. Semantyka null magazynu są wystawiane, jeśli dwie kolumny o wartości null w źródle danych są porównywane. Selektory kluczy znajdują się w wielu grupowanie i porządkowanie standardowych operatorów zapytań, takich jak <xref:System.Linq.Queryable.GroupBy%2A>i służą do Wybierz klucze za pomocą którego porządek lub grupowanie wyników zapytania.  
+ A *selektora kluczy* to funkcja używana w standardowych operatorów zapytań do wyodrębniania klucza z elementu. W funkcji selektora kluczy można porównać wyrażenia ze stałą. Semantyka wartości null CLR są wystawiane, jeśli wyrażenie jest porównywana ze stałą wartość null lub są porównywane dwie stałe wartości null. Semantyka wartości null Store są uwidocznione jeżeli porównywane są dwie kolumny z wartościami null w źródle danych. Selektory kluczy znajdują się w wielu grupowanie i kolejność standardowych operatorów zapytań, takich jak <xref:System.Linq.Queryable.GroupBy%2A>i są używane do Wybierz klucze za pomocą którego do zamówienia lub grupowanie wyników zapytania.  
   
-## <a name="null-property-on-a-null-object"></a>Właściwość o wartości null na obiekt zerowy  
- W [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)], właściwości obiektu null mają wartość null. Podczas próby odwołania właściwości obiektu null w środowisku CLR, otrzymasz <xref:System.NullReferenceException>. Gdy zapytania LINQ obejmuje właściwości obiektu null, może to spowodować niespójne działanie.  
+## <a name="null-property-on-a-null-object"></a>Właściwość o wartości null w obiekcie o wartości Null  
+ W [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)], właściwości null obiektu ma wartość null. Przy próbie odwoływać się do właściwości obiektu o wartości null w CLR zostanie wyświetlony <xref:System.NullReferenceException>. Gdy zapytanie LINQ obejmuje właściwości obiektu o wartości null, może to spowodować niespójne zachowanie.  
   
- Na przykład w następującej kwerendy, rzutowanie na `NewProduct` odbywa się na warstwie drzewa polecenia, co może spowodować `Introduced` właściwości jest null. Jeśli bazy danych zdefiniowany porównania wartości null tak, aby <xref:System.DateTime> porównania zwraca wartość true, wiersza zostaną uwzględnione.  
+ Na przykład w następującym zapytaniem, rzutowanie na `NewProduct` odbywa się w warstwie drzewa poleceń, co może spowodować `Introduced` właściwość on wartość null. Jeśli baza danych zdefiniowana porównania wartości null, <xref:System.DateTime> porównania jest spełniony, wiersza zostaną uwzględnione.  
   
  [!code-csharp[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#castresultsisnull)]
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
-## <a name="passing-null-collections-to-aggregate-functions"></a>Przekazywanie Null kolekcje w celu funkcje agregujące  
- W [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], podczas przekazywania kolekcji, która obsługuje `IQueryable` do funkcji agregującej, operacje agregacji są wykonywane na bazie danych. Mogą wystąpić różnice w wynikach zapytania, które było wykonywane w pamięci i kwerendę, która została wykonana w bazie danych. Jeśli nie ma żadnych wyników z kwerendy w pamięci, zapytanie zwraca zero. W bazie danych, takie same zapytanie zwraca `null`. Jeśli `null` wartość jest przekazywana do funkcji agregującej LINQ, zostanie wygenerowany wyjątek. Aby zaakceptować możliwe `null` rzutowania wartości, typy i właściwości typów, które odbierania wyników zapytania do typów dopuszczających wartości zerowe.  
+## <a name="passing-null-collections-to-aggregate-functions"></a>Przekazywanie kolekcji o wartości Null do funkcji agregacji  
+ W [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], jeśli przekazujesz kolekcji, która obsługuje `IQueryable` do funkcji agregującej, operacje agregacji są wykonywane w bazie danych. Może to być różnice w wynikach zapytania, które były wykonywane w pamięci i zapytania, które zostało wykonane w bazie danych. Za pomocą zapytania w pamięci Jeśli brak dopasowań, zapytanie zwraca zero. W bazie danych, takie same zapytanie zwraca `null`. Jeśli `null` wartość jest przekazywana do funkcji agregującej LINQ, zostanie zgłoszony wyjątek. Aby zaakceptować to możliwe `null` wartości rzutowania typów i właściwości typów, które odbierają wyników zapytania do typów dopuszczających wartości null.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyrażenia w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyrażenia w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

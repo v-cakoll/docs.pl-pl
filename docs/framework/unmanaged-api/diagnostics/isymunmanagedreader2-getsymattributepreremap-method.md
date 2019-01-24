@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 326f970f53293b74bbf8c5e77830f3f6ce1b73ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d5702f5df1e2d31a4e01de6be7c70af03b54296
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519687"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap — Metoda
-Pobiera atrybut niestandardowy ustalane na podstawie jego nazwy. W przeciwieństwie do niestandardowych atrybutów metadanych te atrybuty są przechowywane w magazynie symboli.  
+Pobiera atrybut niestandardowy na podstawie jego nazwy. W przeciwieństwie do metadanych atrybutów niestandardowych te atrybuty są przechowywane w magazynie symboli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,19 +47,19 @@ HRESULT GetSymAttributePreRemap(
  [in] Wskaźnik do `WCHAR` zawierający nazwę.  
   
  `cBuffer`  
- [in] A `ULONG32` wskazuje, że rozmiar `buffer` tablicy.  
+ [in] A `ULONG32` oznacza rozmiar `buffer` tablicy.  
   
  `pcBuffer`  
- [out] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać atrybut bajtów.  
+ [out] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać bajtów atrybutu.  
   
  `buffer`  
- [out] Wskaźnik do buforu, który odbiera bajtów atrybutu.  
+ [out] Wskaźnik do buforu, który otrzymuje bajtów atrybutu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedReader2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedReader2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

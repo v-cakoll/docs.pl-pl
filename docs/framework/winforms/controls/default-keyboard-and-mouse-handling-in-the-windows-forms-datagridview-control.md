@@ -1,5 +1,5 @@
 ---
-title: Domyślna obsługa w formancie DataGridView formularzy systemu Windows myszy i klawiatury
+title: Domyślna obsługa w formancie DataGridView formularzy Windows myszy i klawiatury
 ms.date: 02/13/2018
 helpviewer_keywords:
 - data grids [Windows Forms], mouse handling
@@ -10,111 +10,111 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-ms.openlocfilehash: b0ed468fe7d38fbeda90d5347338bce14059b730
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d0a3cb7a56b388ee9bd3f932f9fec604b39fa62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521767"
 ---
-# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Domyślna obsługa w formancie DataGridView formularzy systemu Windows myszy i klawiatury
+# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Domyślna obsługa w formancie DataGridView formularzy Windows myszy i klawiatury
 
-W poniższych tabelach opisano sposób interakcji użytkowników z <xref:System.Windows.Forms.DataGridView> sterowanie za pośrednictwem klawiatury i myszy.  
+W poniższych tabelach opisano, jak użytkownicy mogą korzystać z <xref:System.Windows.Forms.DataGridView> sterowanie za pośrednictwem klawiatury i myszy.  
   
 > [!NOTE]
->  Aby dostosować zachowanie klawiatury, może obsłużyć zdarzenia klawiatury standardowe takich jak <xref:System.Windows.Forms.Control.KeyDown>. Jednak w trybie edycji obsługiwanego formantu edycji odbiera wejście klawiatury i nie występują zdarzenia klawiatury dla <xref:System.Windows.Forms.DataGridView> formantu. Do obsługi zdarzenia formantów edycji, Dołącz programu obsługi do edycji kontrolek w <xref:System.Windows.Forms.DataGridView.EditingControlShowing> obsługi zdarzeń. Alternatywnie można dostosować zachowanie klawiatury w <xref:System.Windows.Forms.DataGridView> podklasy przez zastąpienie <xref:System.Windows.Forms.DataGridView.ProcessDialogKey%2A> i <xref:System.Windows.Forms.DataGridView.ProcessDataGridViewKey%2A> metody.  
+>  Aby dostosować zachowanie klawiatury, można obsługiwać zdarzenia standardowy interfejs użytkownika takich jak <xref:System.Windows.Forms.Control.KeyDown>. Jednak w trybie edycji hostowanej kontrolka edycji odbiera danych wprowadzonych z klawiatury i nie występują zdarzenia klawiatury dla <xref:System.Windows.Forms.DataGridView> kontroli. Obsługa zdarzeń formantów edycji, należy dołączyć do edycji kontrolek w inne programy obsługi <xref:System.Windows.Forms.DataGridView.EditingControlShowing> programu obsługi zdarzeń. Alternatywnie, można dostosować zachowanie klawiatury w <xref:System.Windows.Forms.DataGridView> podklasy przez zastąpienie <xref:System.Windows.Forms.DataGridView.ProcessDialogKey%2A> i <xref:System.Windows.Forms.DataGridView.ProcessDataGridViewKey%2A> metody.  
   
 ## <a name="default-keyboard-handling"></a>Domyślna obsługa klawiatury  
   
-### <a name="basic-navigation-and-entry-keys"></a>Podstawowe klucze nawigacji i wpis  
+### <a name="basic-navigation-and-entry-keys"></a>Podstawowe klucze nawigacji i zapis  
   
-|Klucz lub kombinacji klawiszy|Opis|  
+|Klawisz lub kombinację klawiszy|Opis|  
 |----------------------------|-----------------|  
-|STRZAŁKA W DÓŁ|Przenosi fokus do komórki bezpośrednio pod bieżącą komórką. Jeśli fokus jest ustawiony w ostatnim wierszu, nie działają.|  
-|STRZAŁKA W LEWO|Przenosi fokus do poprzedniej komórki w wierszu. Jeśli fokus znajduje się w pierwszej komórki w wierszu, nie działają.|  
-|STRZAŁKA W PRAWO|Przenosi fokus do następnej komórki w wierszu. Jeśli fokus znajduje się w ostatniej komórki w wierszu, nie działają.|  
-|STRZAŁKA W GÓRĘ|Przenosi fokus do komórki bezpośrednio powyżej bieżącej komórki. Jeśli skupiono się w pierwszym wierszu, nie działają.|  
+|STRZAŁKA W DÓŁ|Przenosi fokus do komórki bezpośrednio poniżej bieżącej komórki. Jeśli fokus jest ustawiony w ostatnim wierszu, nic nie robi.|  
+|STRZAŁKA W LEWO|Przenosi fokus do poprzedniej komórki w wierszu. Jeśli fokus znajduje się w pierwszej komórki w wierszu, nic nie robi.|  
+|STRZAŁKA W PRAWO|Przenosi fokus do następnej komórki w wierszu. Jeśli fokus znajduje się w ostatniej komórki w wierszu, nic nie robi.|  
+|STRZAŁKA W GÓRĘ|Przenosi fokus do komórki bezpośrednio powyżej bieżącej komórki. Jeśli fokus jest ustawiony w pierwszym wierszu, nic nie robi.|  
 |STRONA GŁÓWNA|Przenosi fokus do pierwszej komórki w bieżącym wierszu.|  
 |END|Przenosi fokus do ostatniej komórki w bieżącym wierszu.|  
-|PAGE DOWN|Przewija dół formantu przez liczbę wierszy, jaką pełni są wyświetlane. Przenosi fokus do ostatniego wiersza pełni wyświetlanych bez zmieniania kolumn.|  
-|STRONA W GÓRĘ|Przewija formantu w górę przez liczbę wierszy, jaką pełni są wyświetlane. Przenosi fokus do pierwszego wiersza wyświetlany bez zmieniania kolumn.|  
-|TAB|Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `false`, przenosi fokus do następnej komórki w bieżącym wierszu. Jeśli fokus jest już w komórce ostatniego wiersza, przenosi fokus do pierwszej komórki w następnym wierszu. Jeśli fokus znajduje się w ostatniej komórki w formancie, przenosi fokus do następnego formantu w kolejności tabulacji kontenera nadrzędnego.<br /><br /> Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `true`, przenosi fokus do następnego formantu w kolejności tabulacji kontenera nadrzędnego.|  
-|SHIFT+TAB|Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `false`, przenosi fokus do poprzedniej komórki w bieżącym wierszu. Jeśli fokus jest już pierwszej komórki wiersza, przenosi fokus do ostatniej komórki w poprzednim wierszu. Jeśli fokus znajduje się w pierwszej komórki w formancie, przenosi fokus do poprzedniego formantu w kolejności tabulacji kontenera nadrzędnego.<br /><br /> Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `true`, przenosi fokus do poprzedniego formantu w kolejności tabulacji kontenera nadrzędnego.|  
-|CTRL+TAB|Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `false`, przenosi fokus do następnego formantu w kolejności tabulacji kontenera nadrzędnego.<br /><br /> Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `true`, przenosi fokus do następnej komórki w bieżącym wierszu. Jeśli fokus jest już w komórce ostatniego wiersza, przenosi fokus do pierwszej komórki w następnym wierszu. Jeśli fokus znajduje się w ostatniej komórki w formancie, przenosi fokus do następnego formantu w kolejności tabulacji kontenera nadrzędnego.|  
-|CTRL+SHIFT+TAB|Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `false`, przenosi fokus do poprzedniego formantu w kolejności tabulacji kontenera nadrzędnego.<br /><br /> Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `true`, przenosi fokus do poprzedniej komórki w bieżącym wierszu. Jeśli fokus jest już pierwszej komórki wiersza, przenosi fokus do ostatniej komórki w poprzednim wierszu. Jeśli fokus znajduje się w pierwszej komórki w formancie, przenosi fokus do poprzedniego formantu w kolejności tabulacji kontenera nadrzędnego.|  
-|CTRL + STRZAŁKA|Przenosi fokus do najbardziej komórki w kierunku strzałki.|  
-|CTRL + HOME|Przenosi fokus do pierwszej komórki w formancie.|  
+|PAGE DOWN|Przewija formant w dół przez liczbę wierszy, które w pełni są wyświetlane. Przenosi fokus do ostatniego wiersza pełni wyświetlane bez zmieniania kolumn.|  
+|PAGE UP|Przewija w górę kontrolki, przez liczbę wierszy, które w pełni są wyświetlane. Przenosi fokus do pierwszego wiersza wyświetlane bez zmieniania kolumn.|  
+|TAB|Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `false`, przenosi fokus do następnej komórki w bieżącym wierszu. Jeśli fokus jest już w komórce ostatni wiersz, przenosi fokus do pierwszej komórki w kolejnym wierszu. Jeśli fokus znajduje się w ostatniej komórki w formancie, przenosi fokus do następnej kontrolki w kolejności tabulacji kontenera nadrzędnego.<br /><br /> Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `true`, przenosi fokus do następnej kontrolki w kolejności tabulacji kontenera nadrzędnego.|  
+|SHIFT+TAB|Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `false`, przenosi fokus do poprzedniej komórki w bieżącym wierszu. Jeśli fokus jest już pierwszą komórkę w wierszu, przenosi fokus do ostatniej komórki w poprzednim wierszu. Jeśli fokus znajduje się w pierwszej komórki w formancie, przenosi fokus do poprzedniego formantu w kolejności tabulacji kontenera nadrzędnego.<br /><br /> Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `true`, przenosi fokus do poprzedniego formantu w kolejności tabulacji kontenera nadrzędnego.|  
+|CTRL+TAB|Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `false`, przenosi fokus do następnej kontrolki w kolejności tabulacji kontenera nadrzędnego.<br /><br /> Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `true`, przenosi fokus do następnej komórki w bieżącym wierszu. Jeśli fokus jest już w komórce ostatni wiersz, przenosi fokus do pierwszej komórki w kolejnym wierszu. Jeśli fokus znajduje się w ostatniej komórki w formancie, przenosi fokus do następnej kontrolki w kolejności tabulacji kontenera nadrzędnego.|  
+|CTRL+SHIFT+TAB|Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `false`, przenosi fokus do poprzedniego formantu w kolejności tabulacji kontenera nadrzędnego.<br /><br /> Jeśli <xref:System.Windows.Forms.DataGridView.StandardTab%2A> wartość właściwości jest `true`, przenosi fokus do poprzedniej komórki w bieżącym wierszu. Jeśli fokus jest już pierwszą komórkę w wierszu, przenosi fokus do ostatniej komórki w poprzednim wierszu. Jeśli fokus znajduje się w pierwszej komórki w formancie, przenosi fokus do poprzedniego formantu w kolejności tabulacji kontenera nadrzędnego.|  
+|CTRL + STRZAŁKA|Przenosi fokus do położony komórki w kierunku strzałki.|  
+|CTRL+HOME|Przenosi fokus do pierwszej komórki w formancie.|  
 |CTRL+END|Przenosi fokus do ostatniej komórki w formancie.|  
-|CTRL + STRONĘ W GÓRĘ/DÓŁ|Taka sama jak PAGE DOWN lub PAGE UP.|  
-|F2|Umieszcza bieżącej komórki w trybie edycji komórki Jeśli <xref:System.Windows.Forms.DataGridView.EditMode%2A> wartość właściwości jest <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> lub <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>.|
-|F3|Sortuje bieżącą kolumnę, jeśli <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> wartość właściwości jest <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>. Jest taka sama jak kliknięcie nagłówka kolumny bieżącej. Dostępne od .NET Framework 4.7.2. Aby włączyć tę funkcję, aplikacje muszą target .NET Framework 4.7.2 lub nowszy lub jawnie wybrać do usprawnienia dostępu za pomocą przełączników AppContext.|  
-|F4|W przypadku bieżącej komórki <xref:System.Windows.Forms.DataGridViewComboBoxCell>, umieszcza komórki w trybie edycji i umożliwia wyświetlenie listy rozwijanej.|  
-|ALT + STRZAŁKA W GÓRĘ LUB W DÓŁ, STRZAŁKI|W przypadku bieżącej komórki <xref:System.Windows.Forms.DataGridViewComboBoxCell>, umieszcza komórki w trybie edycji i umożliwia wyświetlenie listy rozwijanej.|  
-|MIEJSCA|W przypadku bieżącej komórki <xref:System.Windows.Forms.DataGridViewButtonCell>, <xref:System.Windows.Forms.DataGridViewLinkCell>, lub <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, zgłasza <xref:System.Windows.Forms.DataGridView.CellClick> i <xref:System.Windows.Forms.DataGridView.CellContentClick> zdarzenia. W przypadku bieżącej komórki <xref:System.Windows.Forms.DataGridViewButtonCell>, również naciśnie przycisk. W przypadku bieżącej komórki <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, również zmianę stanu zaznaczenia.|  
-|ENTER|Przekazuje zmiany na bieżącej komórki i wiersza i przenosi fokus do komórki bezpośrednio pod bieżącą komórką. Jeśli fokus jest ustawiony w ostatnim wierszu, przekazuje zmiany bez przenoszenia fokusu.|  
-|ESC|Jeśli formant jest w trybie edycji, anulowanie edycji. Jeśli formant nie jest w trybie edycji, przywraca wszystkie zmiany, które zostały wprowadzone do bieżącego wiersza, jeśli formant jest powiązany ze źródłem danych, który obsługuje edycję lub tryb wirtualny zostało zaimplementowane w zakresie zatwierdzania na poziomie wiersza.|  
+|CTRL + PAGE DOWN/UP|Taka sama jak PAGE DOWN lub PAGE UP.|  
+|F2|Umieszcza bieżącej komórki w komórce trybu edycji, jeśli <xref:System.Windows.Forms.DataGridView.EditMode%2A> wartość właściwości jest <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> lub <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>.|
+|F3|Sortuje bieżącej kolumnie, jeśli <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> wartość właściwości jest <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>. Jest taka sama jak kliknięcie nagłówka kolumny w bieżącym. Available since .NET Framework 4.7.2. Aby włączyć tę funkcję, aplikacje muszą .NET Framework 4.7.2 lub nowsze wersje lub jawnie zoptymalizowany pod kątem do ulepszenia ułatwień dostępu za pomocą przełączników AppContext.|  
+|F4|W przypadku bieżącej komórki <xref:System.Windows.Forms.DataGridViewComboBoxCell>, umieszcza komórkę w trybie edycji i umożliwia wyświetlenie listy rozwijanej.|  
+|ALT + STRZAŁKA W GÓRĘ/STRZAŁKA|W przypadku bieżącej komórki <xref:System.Windows.Forms.DataGridViewComboBoxCell>, umieszcza komórkę w trybie edycji i umożliwia wyświetlenie listy rozwijanej.|  
+|SPACE|W przypadku bieżącej komórki <xref:System.Windows.Forms.DataGridViewButtonCell>, <xref:System.Windows.Forms.DataGridViewLinkCell>, lub <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, zgłasza <xref:System.Windows.Forms.DataGridView.CellClick> i <xref:System.Windows.Forms.DataGridView.CellContentClick> zdarzenia. W przypadku bieżącej komórki <xref:System.Windows.Forms.DataGridViewButtonCell>, również naciśnie przycisk. W przypadku bieżącej komórki <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, zmienia także stan zaznaczenia.|  
+|ENTER|Przekazuje zmiany na bieżącej komórki i wiersza i przenosi fokus do komórki bezpośrednio poniżej bieżącej komórki. Jeśli fokus jest ustawiony w ostatnim wierszu, przekazuje zmiany bez przenoszenia fokusu.|  
+|ESC|Jeśli kontrolka jest w trybie edycji, anuluje edycji. Jeśli formant nie jest w trybie edycji, przywraca zmiany, które zostały wprowadzone do bieżącego wiersza, jeśli kontrolka jest powiązana ze źródłem danych, który obsługuje edycję lub trybu wirtualnego została zaimplementowana w zakresie zatwierdzenia na poziomie wiersza.|  
 |BACKSPACE|Usuwa znak przed punkt wstawiania podczas edytowania komórki.|  
 |DELETE|Usuwa znak od punktu wstawiania podczas edytowania komórki.|  
-|CTRL+ENTER|Zatwierdza wszystkie zmiany do bieżącej komórki bez przenoszenia fokusu. Również zatwierdzeń została zaimplementowana wszystkie zmiany do bieżącego wiersza, jeśli formant jest powiązany ze źródłem danych, który obsługuje tryb edycji lub wirtualne z poziomu wiersza zakresu zatwierdzania.|  
+|CTRL+ENTER|Zatwierdza zmiany do bieżącej komórki bez przenoszenia fokusu. Również zatwierdzenia zmiany do bieżącego wiersza, jeśli kontrolka jest powiązana ze źródłem danych, który obsługuje tryb edycji lub wirtualnych została zaimplementowana za pomocą wiersza na poziomie zakresu zatwierdzania.|  
 |CTRL+0|Wprowadza <xref:System.DBNull.Value?displayProperty=nameWithType> wartość do bieżącej komórki, gdy mogą być edytowane komórki. Domyślnie wartość wyświetlania <xref:System.DBNull> wartość komórki jest wartością <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> właściwość <xref:System.Windows.Forms.DataGridViewCellStyle> dla bieżącej komórki.|  
   
 ### <a name="selection-keys"></a>Wybór kluczy
 
- Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> właściwość jest ustawiona na `false` i <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> właściwość jest ustawiona na <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, bieżącej komórki za pomocą klawiszy nawigacyjnych zmiana zaznaczenie do nowej komórki. SHIFT, CTRL i ALT — klawisze nie wpływają na to zachowanie.  
+ Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> właściwość jest ustawiona na `false` i <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> właściwość jest ustawiona na <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, zmieniania bieżącej komórki za pomocą klawiszy nawigacyjnych zmienia zaznaczenie do nowej komórki. SHIFT, klawisz CTRL i ALT — klawisze nie wpływają na to zachowanie.  
   
- Jeśli <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, występuje takie samo zachowanie, ale z następującymi dodatkami.  
+ Jeśli <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, wystąpi takie samo zachowanie, ale z następującymi dodatkami.  
   
-|Klucz lub kombinacji klawiszy|Opis|  
+|Klawisz lub kombinację klawiszy|Opis|  
 |----------------------------|-----------------|  
-|SHIFT+SPACEBAR|Wybiera pełny wiersz lub kolumnę (taką jak kliknięcie nagłówka wierszy lub kolumn).|  
-|klucz nawigacji (strzałka, wzrost-spadek strony, HOME, END)|Jeśli wybrano pełny wiersz lub kolumnę, zmiana bieżącej komórki na nowy wiersz lub kolumnę przenosi zaznaczenie do pełnej nowy wiersz lub kolumnę (w zależności od trybu wyboru).|  
+|SHIFT+SPACEBAR|Wybiera pełny wiersz lub kolumnę, (taka sama jak kliknięcie nagłówka wiersza lub kolumny).|  
+|klucz nawigacji (klawisz strzałki, strona wzrost-spadek, HOME, END)|Zaznaczenie pełnego wiersza lub kolumny zmiany bieżącej komórki do nowego wiersza lub kolumny przenosi zaznaczenie do pełnej nowego wiersza lub kolumny (w zależności od trybu zaznaczania).|  
   
- Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ustawiono `false` i <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, zmiana bieżącej komórki do nowego wiersza lub komórki za pomocą klawiatury przenosi zaznaczenie do pełnej nowy wiersz lub kolumnę. SHIFT, CTRL i ALT — klawisze nie wpływają na to zachowanie.  
+ Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ustawiono `false` i <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, zmieniania bieżącej komórki do nowego wiersza lub kolumny przy użyciu klawiatury przenosi zaznaczenie do pełnej nowego wiersza lub kolumny. SHIFT, klawisz CTRL i ALT — klawisze nie wpływają na to zachowanie.  
   
- Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ma ustawioną wartość `true`, zachowanie nawigacji nie ulega zmianie, ale Nawigacja przy użyciu klawiatury, przytrzymaj klawisze SHIFT (w tym klawiszy CTRL + SHIFT) zmodyfikuje zaznaczenia wielu komórek. Przed rozpoczęciem nawigacji formantu oznacza bieżącej komórki jako komórki zakotwiczenia. Po przejściu naciskaj klawisz SHIFT, zaznaczenie obejmuje wszystkie komórki między komórki zakotwiczenia i bieżącej komórki. Jeśli zostały one już wybrane, ale ich może stać się niezaznaczone nawigacji klawiatury tymczasowo umieszczane między komórki zakotwiczenia i bieżącej komórki pozostanie wybranego innych komórek w formancie.  
+ Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ustawiono `true`, zachowanie nawigacji nie zmienia się, ale Nawigacja przy użyciu klawiatury, przytrzymaj klawisze SHIFT (w tym klawiszy CTRL + SHIFT) zmodyfikuje zaznaczenia wielu komórek. Przed rozpoczęciem nawigacji, formant oznacza bieżącej komórki jako komórka zakotwiczenia. Po przejściu przytrzymaj klawisze SHIFT zaznaczenie obejmuje wszystkie komórki między komórki zakotwiczenia i bieżącej komórki. Inne komórki w formancie pozostanie wybrane, jeśli zostały one jeszcze wybrana, ale może przestać niezaznaczone nawigacji klawiatury tymczasowo powodująca umieszczenie ich między komórki zakotwiczenia i bieżącej komórki.  
   
- Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ustawiono `true` i <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>zachowanie komórki zakotwiczenia i bieżącej komórki jest taki sam, ale tylko pełna wierszy lub kolumn stają się zaznaczone lub niezaznaczone.  
+ Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ustawiono `true` i <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>zachowanie zakotwiczenia komórki i bieżącej komórki jest taka sama, ale tylko pełne wiersze lub kolumny stają się wybrane lub usunięto zaznaczenie.  
   
 ## <a name="default-mouse-handling"></a>Domyślna obsługa myszy
   
 ### <a name="basic-mouse-handling"></a>Obsługa myszy podstawowe
   
 > [!NOTE]
->  Kliknij komórkę z lewego przycisku myszy zawsze zmiany bieżącej komórki. Jeśli klikniesz komórkę prawym przyciskiem myszy otwiera menu skrótów, gdy jest on dostępny.  
+>  Kliknij komórkę z lewego przycisku myszy zawsze zmiany bieżącej komórki. Jeśli klikniesz prawym przyciskiem myszy komórkę otwiera menu skrótów, gdy jest on dostępny.  
   
 |Akcja myszy|Opis|  
 |------------------|-----------------|  
-|Lewy przycisk myszy w dół|Sprawia, że klikniętej komórki bieżącej komórki i zgłasza <xref:System.Windows.Forms.DataGridView.CellMouseDown?displayProperty=nameWithType> zdarzeń.|  
-|Lewy przycisk myszy górę|Zgłasza <xref:System.Windows.Forms.DataGridView.CellMouseUp?displayProperty=nameWithType> zdarzeń|  
-|Kliknij lewy przycisk myszy|Zgłasza <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> i <xref:System.Windows.Forms.DataGridView.CellMouseClick?displayProperty=nameWithType> zdarzeń|  
-|Lewy przycisk myszy w dół, a następnie przeciągnij w komórce nagłówka kolumny|Jeśli <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> właściwość jest `true`, przenosi kolumnę, tak aby można było porzucić do nowej pozycji.|  
+|Lewy przycisk myszy wciśnięty|Sprawia, że kliknięto komórki bieżącej komórki, a następnie zgłasza <xref:System.Windows.Forms.DataGridView.CellMouseDown?displayProperty=nameWithType> zdarzeń.|  
+|Lewy przycisk myszy się|Wywołuje <xref:System.Windows.Forms.DataGridView.CellMouseUp?displayProperty=nameWithType> zdarzeń|  
+|Kliknij lewy przycisk myszy|Wywołuje <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> i <xref:System.Windows.Forms.DataGridView.CellMouseClick?displayProperty=nameWithType> zdarzenia|  
+|Lewego przycisku myszy w dół, a następnie przeciągnij na komórki nagłówka kolumny|Jeśli <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> właściwość `true`, przenosi kolumnę, tak aby można było porzucić do nowej pozycji.|  
   
 ### <a name="mouse-selection"></a>Wybór myszy
 
- Zachowanie dotyczące wyboru nie jest skojarzony z środkowego przycisku myszy i kółka myszy.  
+ Zachowanie dotyczące wyboru nie jest skojarzony z środkowego przycisku myszy lub kółka myszy.  
   
  Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> właściwość jest ustawiona na `false` i <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> właściwość jest ustawiona na <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, spowoduje następujące zachowanie.  
   
 |Akcja myszy|Opis|  
 |------------------|-----------------|  
-|Kliknij lewy przycisk myszy|Wybiera tylko bieżącej komórki, gdy użytkownik kliknie komórki. Nie zachowanie dotyczące wyboru gdy użytkownik kliknie wiersz lub nagłówek kolumny.|  
+|Kliknij lewy przycisk myszy|Wybiera tylko bieżącej komórki, jeśli użytkownik kliknie komórki. Nie zachowanie podczas zaznaczania, jeśli użytkownik kliknie nagłówek wiersza lub kolumny.|  
 |Kliknij prawym przyciskiem myszy|Wyświetla menu skrótów, jeśli jest dostępny.|  
   
- Takie samo zachowanie występuje podczas <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, ale w zależności od trybu wyboru, klikając wiersz lub nagłówek kolumny zostanie zaznacz pełny wiersz lub kolumnę i ustawianie bieżącej komórki do pierwszej komórki w wierszu lub kolumnie.  
+ Takie samo zachowanie występuje, gdy <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, z tą różnicą, że w zależności od trybu zaznaczania, klikając nagłówek wiersza lub kolumny spowoduje zaznacz pełny wiersz lub kolumnę i ustawianie bieżącej komórki do pierwszej komórki w wierszu lub kolumnie.  
   
- Jeśli <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, kliknij dowolną komórkę w wiersz lub kolumnę wybierze pełny wiersz lub kolumnę.  
+ Jeśli <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, kliknięcie dowolną komórkę w wierszu lub kolumnie powoduje zaznaczenie pełnego wiersza lub kolumny.  
   
- Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ma ustawioną wartość `true`, klikając komórkę naciskaj klawisz CTRL lub SHIFT zmodyfikuje zaznaczenia wielu komórek.  
+ Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ustawiono `true`, klikając komórką trakcie naciskania klawisza CTRL lub SHIFT zmodyfikuje zaznaczenia wielu komórek.  
   
- Po kliknięciu komórki trzymając wciśnięty klawisz CTRL podczas wszystkich komórkach zachować ich bieżący stan zaznaczenia komórki zmieni jego stan zaznaczenia.  
+ Po kliknięciu komórki podczas naciskania klawisza CTRL, komórki zmieni jego stan zaznaczenia, podczas gdy inne komórki zachować wraz z bieżącym stanem wyboru.  
   
- Po kliknięciu komórki lub serii komórki naciskaj klawisz SHIFT zaznaczenie obejmuje wszystkie komórki między bieżącą komórką i komórki zakotwiczenia znajdujący się w pozycji przed pierwszym kliknięciem bieżącej komórki. Kliknij i przeciągnij go na wiele komórek, komórki zakotwiczenia po komórki kliknięty na początku operacji przeciągania. Kolejne kliknięć naciskaj klawisz SHIFT zmienić bieżącej komórki, ale nie komórki zakotwiczenia. Jeśli zostały one już wybrane, ale ich może stać się niezaznaczone nawigacji myszy tymczasowo umieszczane między komórki zakotwiczenia i bieżącej komórki pozostanie wybranego innych komórek w formancie.  
+ Po kliknięciu pozycji komórkę lub serii komórki przytrzymaj klawisze SHIFT zaznaczenie obejmuje wszystkie komórki między bieżącym zakotwiczenia komórkę i znajdujący się w pozycji bieżącej komórki przed pierwsze kliknięcie. Po kliknięciu i przeciągnij go na wiele komórek zakotwiczenia komórka jest kliknięty po rozpoczęciu operacji przeciągania. Kolejne kliknięć przytrzymaj klawisze SHIFT zmienić bieżącej komórki, ale nie komórki zakotwiczenia. Inne komórki w formancie pozostanie wybrane, jeśli zostały one jeszcze wybrana, ale może przestać niezaznaczone nawigacji myszy tymczasowo powodująca umieszczenie ich między komórki zakotwiczenia i bieżącej komórki.  
   
- Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ustawiono `true` i <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, klikając wiersz lub nagłówek kolumny (w zależności od trybu wyboru) podczas naciśnięcie klawisza SHIFT spowoduje zmianę istniejącego zaznaczenia pełne wierszy lub kolumn, jeżeli takie wybrany element znajduje się. W przeciwnym razie utworzy wyczyść zaznaczenie i Rozpocznij nowe zaznaczenie pełnego wierszy lub kolumn. Klikając wiersz lub nagłówek kolumny, trzymając wciśnięty klawisz CTRL, jednak spowoduje dodanie lub usunięcie klikniętej wiersz lub kolumnę z bieżącego zaznaczenia bez modyfikowanie bieżącego zaznaczenia.  
+ Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ustawiono `true` i <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, klikając nagłówek wiersza lub kolumny (w zależności od trybu zaznaczania) podczas naciśnięcie klawisza SHIFT spowoduje zmianę istniejące zaznaczenie pełnego wierszy lub kolumn, jeżeli takie Wybór istnieje. W przeciwnym razie zostanie ona wyczyść zaznaczenie i Rozpocznij nowe Zaznaczanie pełną wierszy lub kolumn. Klikając nagłówek wiersza lub kolumny podczas naciskania klawisza CTRL, jednak spowoduje dodanie lub usunięcie kliknięto wiersz lub kolumnę z bieżącego zaznaczenia, bez konieczności wprowadzania zmian w przeciwnym razie bieżącego zaznaczenia.  
   
- Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ustawiono `true` i <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, klikając komórkę naciskaj klawisz SHIFT lub CTRL zachowuje się tak samo, z wyjątkiem tego tylko całe wiersze i kolumny dotyczy.  
+ Jeśli <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ustawiono `true` i <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ustawiono <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> lub <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, kliknięcie komórki naciskaj klawisz SHIFT lub CTRL zachowuje się tak samo, z wyjątkiem że tylko pełną wiersze i kolumny ma wpływ.  
   
 ## <a name="see-also"></a>Zobacz także
 
-<xref:System.Windows.Forms.DataGridView>  
- [DataGridView, kontrolka](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- <xref:System.Windows.Forms.DataGridView>
+- [DataGridView, kontrolka](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

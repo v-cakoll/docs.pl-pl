@@ -1,13 +1,7 @@
 ---
-title: Elementy DataSet, DataTable i DataView
+title: 'Elementy DataSet, DataTable i DataView'
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 0f537ad8ff468de54adc8bc820a060eaca357be9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506252"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Elementy DataSet, DataTable i DataView
 ADO.NET <xref:System.Data.DataSet> jest reprezentacją rezydentnego zapewnia spójny model programowania relacyjnych niezależnie od źródła danych zawiera dane. A <xref:System.Data.DataSet> przedstawia kompletny zestaw danych w tym tabel, które zawierają, kolejność i Zachowaj dane, jak również relacje między tabelami.  
@@ -78,6 +72,6 @@ ADO.NET <xref:System.Data.DataSet> jest reprezentacją rezydentnego zapewnia sp�
  [Dodawanie istniejących ograniczeń do zestawu danych](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  Zawiera opis sposobu wypełniania **DataSet** o informacje o kluczu podstawowym ze źródła danych.  
   
-## <a name="see-also"></a>Zobacz też  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

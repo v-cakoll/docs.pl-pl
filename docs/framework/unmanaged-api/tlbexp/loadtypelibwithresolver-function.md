@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6a217e2212bb900d7ba83ccdd9cb00d30454baf
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9086cff38e0232d6054d6b1f590be6d8d76ed1af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527375"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver — Funkcja
 Ładuje bibliotekę typów i korzysta z podanym [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) rozpoznać wszystkie biblioteki typu wewnętrznie odwołania.  
@@ -45,7 +45,7 @@ HRESULT LoadTypeLibWithResolver(
   
 -   `REGKIND_DEFAULT`: Użyj domyślnego zachowania rejestracji.  
   
--   `REGKIND_REGISTER`: Zarejestruj tej biblioteki typów.  
+-   `REGKIND_REGISTER`: Zarejestruj tego typu biblioteki.  
   
 -   `REGKIND_NONE`: Nie rejestruj tej biblioteki typów.  
   
@@ -85,7 +85,7 @@ HRESULT LoadTypeLibWithResolver(
  Jeśli wywołasz `LoadTypeLibWithResolver` bezpośrednio, należy podać własne [itypelibresolver — interfejs](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** TlbRef.h  
   
@@ -93,6 +93,6 @@ HRESULT LoadTypeLibWithResolver(
   
  **Wersja programu .NET framework:** 3.5, 3.0, 2.0  
   
-## <a name="see-also"></a>Zobacz też  
- [Tlbexp, funkcje pomocy](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx — funkcja](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a>Zobacz także
+- [Tlbexp, funkcje pomocy](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [LoadTypeLibEx — funkcja](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 463bcf451574700d02f933d024ea5c24cedd259d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3e6230d245ad36b8d5346aa3b6f8911ef008b61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526850"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC — Funkcja
-Tłumaczy wartość HRESULT na komunikat o błędzie, za pomocą domyślną kulturę bieżącego wątku.  
+Tłumaczy wartość HRESULT na komunikat o błędzie przy użyciu domyślnej kultury bieżącego wątku.  
   
  Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -41,7 +41,7 @@ HRESULT LoadStringRC (
   
 #### <a name="parameters"></a>Parametry  
  `iResourceID`  
- [in] HRESULT.  
+ [in] Wartość HRESULT.  
   
  `szBuffer`  
  [out] Bufor, który zawiera komunikat o błędzie po pomyślnym zakończeniu.  
@@ -53,7 +53,7 @@ HRESULT LoadStringRC (
  [in] Ignorowane.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowy składnik modelu COM. kody błędów, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
@@ -64,14 +64,14 @@ HRESULT LoadStringRC (
  Jeśli metoda nie została zakończona pomyślnie, `szBuffer` zawiera pusty ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll i Mscorwks.dll.a;a;pierwsza. Użyj biblioteki MSCorEE.dll zamiast Mscorwks.dll.a;a;pierwsza, aby upewnić się, że docelowy poprawna wersja programu .NET Framework.  
+ **Biblioteka:** MSCorEE.dll i Mscorwks.dll. Użyj MSCorEE.dll zamiast Mscorwks.dll zapewnienie docelowych poprawną wersję programu .NET Framework.  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [LoadStringRCEx, funkcja](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [LoadStringRCEx, funkcja](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

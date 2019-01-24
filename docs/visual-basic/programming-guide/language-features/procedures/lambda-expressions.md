@@ -9,64 +9,64 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: c45500dc7a1e59a7ac83d43b826ca4cbfca6efb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d2cab1c40b1a84e9a3b6bed885b2a0020e53f01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529479"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda — Wyrażenia (Visual Basic)
-A *wyrażenia lambda* jest funkcją lub podprocedury bez nazwy, który może służyć wszędzie tam, gdzie delegata jest prawidłowy. Wyrażenia lambda można używać funkcji lub procedury i może być jednym lub wielu linii. Wyrażenie lambda, można przekazać wartości z bieżącego zakresu.  
+A *wyrażenia lambda* jest funkcji lub podprocedury bez nazwy, który może służyć wszędzie tam, gdzie obiekt delegowany jest prawidłowy. Wyrażenia lambda może być funkcji lub podprocedury i może być w jednym lub wielu linii. Wyrażenie lambda można przekazać wartości z bieżącego zakresu.  
   
 > [!NOTE]
->  `RemoveHandler` Instrukcja jest wyjątek. Nie można przekazać wyrażenia lambda w dla parametru delegowanego `RemoveHandler`.  
+>  `RemoveHandler` Instrukcja jest wyjątek. Nie można przekazać wyrażenia lambda w parametrze delegata `RemoveHandler`.  
   
- Tworzenie wyrażenia lambda za pomocą `Function` lub `Sub` — słowo kluczowe, tak samo jak tworzenie standardowych funkcji lub procedury. Jednak wyrażenia lambda znajdują się w instrukcji.  
+ Tworzenie wyrażenia lambda przy użyciu `Function` lub `Sub` — słowo kluczowe, podobnie jak tworzenie standardowej funkcji lub podprocedury. Jednak wyrażenia lambda są uwzględnione w instrukcji.  
   
- Poniższy przykład jest zwiększa jej argument, który zwraca wartość wyrażenia lambda. W przykładzie zarówno jeden wiersz i wielowierszowe składnia wyrażenia lambda dla funkcji.  
+ Poniższy przykład jest wyrażenie lambda, która zwiększa jej argument i zwraca wartość. W przykładzie pokazano oba jeden wiersz i wielowierszowe składnia wyrażenia lambda dla funkcji.  
   
  [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_1.vb)]  
   
- Poniższy przykład jest wyrażenie lambda, które zapisuje wartość do konsoli. W przykładzie zarówno jeden wiersz i wielowierszowe składnia wyrażenia lambda dla procedury.  
+ Poniższy przykład jest wyrażenie lambda, która zapisuje wartości do konsoli. W przykładzie pokazano oba jeden wiersz i wielowierszowe składnia wyrażenia lambda do procedurę.  
   
  [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_2.vb)]  
   
- Zwróć uwagę, że w poprzednich przykładach wyrażenia lambda są przypisane do nazwy zmiennej. Odwołując się do zmiennej, można wywołać wyrażenia lambda. Można również deklarować i wywołać wyrażenia lambda w tym samym czasie, jak pokazano w poniższym przykładzie.  
+ Należy zauważyć, że w poprzednich przykładach wyrażenia lambda są przypisane do nazwy zmiennej. Zawsze, gdy odwołujesz się do zmiennej, można wywołać wyrażenia lambda. Można również zadeklarować i wywołać Wyrażenie lambda, w tym samym czasie, jak pokazano w poniższym przykładzie.  
   
  [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_3.vb)]  
   
- Wyrażenia lambda, może być zwracany jako wartość wywołania funkcji (jak to pokazano w przykładzie w [kontekstu](#context) później w tym temacie), lub przekazany jako argument do parametru, który przyjmuje typ delegata, jak pokazano w poniższym przykład.  
+ Wyrażenia lambda mogą być zwracane jako wartość wywołania funkcji (jak pokazano w przykładzie w [kontekstu](#context) w dalszej części tego tematu), lub przekazany jako argument do parametru, która przyjmuje typ delegata, jak pokazano w poniższym przykład.  
   
  [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_4.vb)]  
   
 ## <a name="lambda-expression-syntax"></a>Składnia wyrażenia lambda  
- Składnia wyrażenia lambda jest podobny do standardowych funkcji lub procedury. Różnice są następujące:  
+ Składnia wyrażenia lambda przypomina standardowej funkcji lub podprocedury. Różnice są następujące:  
   
--   Wyrażenia lambda nie ma nazwy.  
+-   Wyrażenie lambda nie ma nazwy.  
   
 -   Wyrażenia lambda nie może mieć modyfikatorów, takich jak `Overloads` lub `Overrides`.  
   
--   Nie używaj funkcji lambda jednowierszowego `As` klauzuli, aby określić typ zwracany. Zamiast tego typu jest wywnioskowany na podstawie wartości, która daje w wyniku treści wyrażenia lambda. Na przykład, jeśli treść wyrażenia lambda jest `cust.City = "London"`, jego typem zwracanym jest `Boolean`.  
+-   Nie należy używać funkcji lambda jednowierszowego `As` klauzuli, aby określić typ zwracany. Zamiast tego typ jest wnioskowany z wartości, która daje w wyniku treść wyrażenia lambda. Na przykład, jeśli treść wyrażenia lambda jest `cust.City = "London"`, jego typem zwracanym jest `Boolean`.  
   
--   W wielowierszowym lambda funkcji, można określić zwracanego typu przy użyciu `As` klauzuli lub Pomiń `As` klauzuli tak, aby zwracany typ jest wywnioskowany. Gdy `As` klauzuli pominięto dla funkcji lambda wiele wierszy, zwracany typ jest wywnioskowany dominującą typem ze wszystkich `Return` instrukcje w funkcji lambda wiele wierszy. *Typu dominującą* jest typem unikatowy poszerzyć do innych typów. Nie można określić tego typu unikatowy, ten typ dominującej nie jest unikatowy typ, który wszystkie typy w tablicy można ograniczyć do. Jeśli żadna z tych typów unikatowy nie można ustalić, jest typu dominującą `Object`. W tym przypadku jeśli `Option Strict` ma ustawioną wartość `On`, wystąpi błąd kompilatora.  
+-   W przypadku funkcji lambda wielowierszowe można określić typ zwracany za pomocą `As` klauzuli lub Pomiń `As` klauzuli tak, aby zwracany typ jest wnioskowany. Gdy `As` klauzuli zostanie pominięty dla funkcji lambda wielowierszowego, zwracany typ jest wnioskowany jako typ dominujący ze wszystkich `Return` instrukcji w funkcji lambda wiele wierszy. *Typ dominujący* to unikatowy typ, który poszerzyć do innych typów. Jeżeli nie można ustalić tego typu unikatowego, Typ dominujący to unikatowy typ, który można zawęzić wszystkie typy w tablicy. Jeśli żadna z tych typów unikatowych nie można ustalić, typem dominującym jest `Object`. W takim przypadku `Option Strict` ustawiono `On`, występuje błąd kompilatora.  
   
-     Na przykład, jeśli wyrażenia dostarczony do `Return` instrukcji zawierają wartości typu `Integer`, `Long`, i `Double`, wynikowy tablicy jest typu `Double`. Zarówno `Integer` i `Long` rozszerzane `Double` i tylko `Double`. W związku z tym `Double` jest dominującą typu. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+     Na przykład, jeśli wyrażenie dostarczone do `Return` instrukcji zawierają wartości typu `Integer`, `Long`, i `Double`, tablica wynikowa jest typu `Double`. Zarówno `Integer` i `Long` mogą zostać poszerzone do `Double` i tylko `Double`. W związku z tym `Double` jest typem dominującym. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
--   Treść funkcji pojedynczej linii musi być wyrażenie zwracające wartość, nie instrukcję. Brak nie `Return` instrukcji dla funkcji jeden wiersz. Wartość zwrócona przez funkcję jeden wiersz jest wartość wyrażenia w treści funkcji.  
+-   Treść funkcji pojedynczej linii musi być wyrażenie zwracające wartość nie instrukcję. Istnieje nie `Return` poufności informacji dla funkcji pojedynczej linii. Wartość zwrócona przez funkcję jednowierszowego jest wartość wyrażenia w treści funkcji.  
   
--   Treść podprocedury jeden wiersz musi być instrukcją jeden wiersz.  
+-   Treść procedury jeden wiersz musi być instrukcją jeden wiersz.  
   
--   Nie dołączaj jednowierszowego funkcje i podprocedury `End Function` lub `End Sub` instrukcji.  
+-   Nie dołączaj jednowierszowego, funkcje i procedur `End Function` lub `End Sub` instrukcji.  
   
--   Można określić typ danych parametru wyrażenia lambda za pomocą `As` można wywnioskować — słowo kluczowe lub typ danych parametru. Albo wszystkie parametry muszą określono można wywnioskować typów danych lub wszystkich.  
+-   Typ danych parametru wyrażenia lambda można określić za pomocą `As` można wywnioskować — słowo kluczowe lub typ danych parametru. Musi mieć określony albo wszystkie parametry można wywnioskować typów danych lub wszystkich.  
   
--   `Optional` i `Paramarray` parametry są niedozwolone.  
+-   `Optional` i `Paramarray` parametry nie są dozwolone.  
   
--   Parametry ogólne są niedozwolone.  
+-   Parametry ogólne nie są dozwolone.  
   
 ## <a name="async-lambdas"></a>Lambdy asynchroniczne  
- Można jednak łatwo tworzyć wyrażenia lambda i instrukcje zawierające przetwarzania asynchronicznego przy użyciu [Async](../../../../visual-basic/language-reference/modifiers/async.md) i [operatora Await](../../../../visual-basic/language-reference/operators/await-operator.md) słów kluczowych. Na przykład w poniższym przykładzie formularzy systemu Windows zawiera program obsługi zdarzeń, który wywołuje i oczekujące na metody asynchronicznej `ExampleMethodAsync`.  
+ Możesz łatwo tworzyć wyrażenia lambda i instrukcje, które zawierają Przetwarzanie asynchroniczne przy użyciu [Async](../../../../visual-basic/language-reference/modifiers/async.md) i [operatora Await](../../../../visual-basic/language-reference/operators/await-operator.md) słów kluczowych. Na przykład, poniższy przykład Windows Forms zawiera program obsługi zdarzeń, który wywołuje i czeka na metodę asynchroniczną `ExampleMethodAsync`.  
   
 ```vb  
 Public Class Form1  
@@ -85,7 +85,7 @@ Public Class Form1
 End Class  
 ```  
   
- Można dodać tej procedury obsługi zdarzeń za pomocą asynchroniczne lambda w [AddHandler — instrukcja](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Aby dodać ten program obsługi, Dodaj `Async` modyfikator przed listy parametrów lambda, jak przedstawiono na poniższym przykładzie.  
+ Można dodać tę samą procedurę obsługi zdarzeń, używając lambdy asynchronicznej w [AddHandler — instrukcja](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Aby dodać ten program obsługi `Async` modyfikator przed listą parametrów lambda, co ilustruje poniższy przykład.  
   
 ```vb  
 Public Class Form1  
@@ -107,57 +107,57 @@ Public Class Form1
 End Class  
 ```  
   
- Aby uzyskać więcej informacji o sposobie tworzenia i używania metody asynchroniczne, zobacz [programowanie asynchroniczne z Async i Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
+ Aby uzyskać więcej informacji na temat sposobu tworzenia i używania metod asynchronicznych, zobacz [Asynchronous Programming with Async and Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
 ##  <a name="context"></a> Kontekst  
- Wyrażenia lambda udostępnia kontekst zakresu, w którym jest zdefiniowany. Ma te same prawa dostępu jako dowolny kod napisany w zawierający zakres. Obejmuje to dostęp do zmiennych Członkowskich, funkcje i subskrypcji, `Me`i parametrów i zmiennych lokalnych w zawierającym zasięgu.  
+ Wyrażenie lambda udostępnia kontekst zakresu, w którym jest zdefiniowana. Ma on te same prawa dostępu, jak każdy kod napisany w zakresie zawierającym. Obejmuje to dostęp do zmiennych składowych, funkcje i subskrypcji, `Me`oraz parametry i zmienne lokalne w zakresie zawierającym.  
   
- Dostęp do zmiennych lokalnych i parametrów w zakresie zawierającym mogą wykraczać poza okres istnienia tego zakresu. Tak długo, jak delegata odwołujących się do wyrażenia lambda nie jest dostępny dla wyrzucanie elementów bezużytecznych, dostęp do zmiennych w oryginalne środowisko jest przechowywane. W poniższym przykładzie zmienna `target` jest lokalny dla `makeTheGame`, metody, w którym wyrażenie lambda `playTheGame` jest zdefiniowany. Należy pamiętać, że wyrażenie lambda zwrócony przypisane do `takeAGuess` w `Main`, ma nadal dostęp do zmiennej lokalnej `target`.  
+ Dostęp do zmiennych lokalnych i parametrów w zakresie zawierającym mogą wykraczać poza okres istnienia tego zakresu. Tak długo, jak obiekt delegowany odwołujące się do wyrażenia lambda nie jest dostępna dla wyrzucania elementów bezużytecznych, dostęp do zmiennych w środowisku, oryginalnym są zachowywane. W poniższym przykładzie zmienna `target` jest lokalną grupą `makeTheGame`, metody, w którym wyrażenie lambda `playTheGame` jest zdefiniowana. Należy zauważyć, że wyrażenie lambda zwrócone przypisane do `takeAGuess` w `Main`, wciąż ma dostęp do zmiennej lokalnej `target`.  
   
  [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_5.vb)]  
   
- W poniższym przykładzie pokazano szeroką gamę praw dostępu wyrażenia lambda zagnieżdżonych. Po wykonaniu wyrażenia lambda zwrócony z `Main` jako `aDel`, uzyskuje dostęp do tych elementów:  
+ W poniższym przykładzie pokazano szeroką gamę prawa dostępu zagnieżdżonym wyrażeniem lambda. Gdy wyrażenie lambda zwracany jest wykonywany z `Main` jako `aDel`, uzyskuje dostęp do tych elementów:  
   
--   To pole klasy, w którym jest zdefiniowany: `aField`  
+-   Pole klasy, w którym jest zdefiniowany: `aField`  
   
--   Właściwość klasy, w którym jest zdefiniowana: `aProp`  
+-   Właściwość klasy, w którym jest zdefiniowany: `aProp`  
   
 -   Parametr metody `functionWithNestedLambda`, w którym jest zdefiniowana: `level1`  
   
 -   Zmienna lokalna o `functionWithNestedLambda`: `localVar`  
   
--   Parametr wyrażenia lambda, w którym jest zagnieżdżony: `level2`  
+-   Parametr wyrażenia lambda, w którym jest zagnieżdżona: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   
-## <a name="converting-to-a-delegate-type"></a>Konwertowanie na typ delegowany  
- Wyrażenia lambda można niejawnie przekonwertować na typ delegata zgodne. Aby uzyskać informacje ogólne wymagania dotyczące zgodności, zobacz [swobodna konwersja delegatów](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). Na przykład poniższy przykładowy kod przedstawia wyrażenie lambda, które jawnie konwertuje `Func(Of Integer, Boolean)` lub zgodnego podpisu delegata.  
+## <a name="converting-to-a-delegate-type"></a>Konwertowanie do typu delegata  
+ Wyrażenia lambda mogą być niejawnie konwertowane na typ delegata zgodne. Aby uzyskać informacje na temat ogólnych wymagań dotyczących zgodności, zobacz [swobodna konwersja delegatów](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). Na przykład, poniższy przykład kodu pokazuje Wyrażenie lambda, która niejawnie konwertuje `Func(Of Integer, Boolean)` lub pasujący podpis delegata.  
   
  [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_7.vb)]  
   
- Poniższy przykład kodu pokazuje Wyrażenie lambda, które jawnie konwertuje `Sub(Of Double, String, Double)` lub zgodnego podpisu delegata.  
+ Poniższy przykład kodu pokazuje Wyrażenie lambda, która niejawnie konwertuje `Sub(Of Double, String, Double)` lub pasujący podpis delegata.  
   
  [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_8.vb)]  
   
- Podczas przypisywania do delegatów wyrażenia lambda lub przekazywane jako argumenty do procedur można określić nazwy parametrów, ale pominąć typy danych, umożliwiając typy pobrane z obiektem delegowanym.  
+ Podczas przypisywania wyrażenia lambda do delegatów i przekazywane jako argumenty do procedur, można określić nazwy parametrów, ale Pomiń typy danych, umożliwiając typy podejmowane na podstawie obiektu delegowanego.  
   
 ## <a name="examples"></a>Przykłady  
   
--   W poniższym przykładzie zdefiniowano wyrażenia lambda, która zwraca `True` Jeśli argument NULL ma przypisaną wartość i `False` jeśli jego wartość wynosi `Nothing`.  
+-   W poniższym przykładzie zdefiniowano Wyrażenie lambda, które zwraca `True` Jeśli przypisaną wartością argumentu dopuszcza wartości null i `False` gdy jego wartość jest `Nothing`.  
   
      [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_9.vb)]  
   
--   Poniższy przykład definiuje wyrażenie lambda, które zwraca indeks ostatniego elementu w tablicy.  
+-   W poniższym przykładzie zdefiniowano Wyrażenie lambda, które zwraca indeks ostatniego elementu w tablicy.  
   
      [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Procedury](./index.md)  
- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Delegaci](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Function, instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub, instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Typy wartości dopuszczających wartości null](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [Porady: przekazywanie procedur do innej procedury w Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)  
- [Instrukcje: tworzenie wyrażenia lambda](./how-to-create-a-lambda-expression.md)  
- [Swobodna konwersja delegatów](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+## <a name="see-also"></a>Zobacz także
+- [Procedury](./index.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Delegaty](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Function, instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub, instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Typy wartości dopuszczających wartości null](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Instrukcje: Przekazywanie procedur do innej procedury w Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Instrukcje: Tworzenie wyrażenia Lambda](./how-to-create-a-lambda-expression.md)
+- [Swobodna konwersja delegatów](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

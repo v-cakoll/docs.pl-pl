@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac69bab45ccd39b6a055fe4d2f74950ab47da779
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527604"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField — Metoda
-Pobiera wskaźnik do FieldDef token pola, które jest ujęte przez określony <xref:System.Type> z określoną sygnaturą nazwy i metadanych.  
+Pobiera wskaźnik do FieldDef tokenu dla pola, który jest ujęty w określonym <xref:System.Type> i ma określoną sygnaturą nazwy i metadane.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,36 +41,36 @@ HRESULT FindField (
   
 #### <a name="parameters"></a>Parametry  
  `td`  
- [in] Token TypeDef dla klasy lub interfejsu, który umieszcza pole wyszukiwania. Jeśli ta wartość jest `mdTokenNil`, wyszukiwanie jest wykonywane na potrzeby zmiennej globalnej.  
+ [in] Token element TypeDef dla klasy lub interfejsu, który otacza pole wyszukiwania. Jeśli ta wartość jest `mdTokenNil`, wyszukiwanie jest wykonywane dla zmiennej globalnej.  
   
  `szName`  
  [in] Nazwa pola do wyszukania.  
   
  `pvSigBlob`  
- [in] Wskaźnik do metadanych binarne podpis pola.  
+ [in] Wskaźnik do podpisu metadanych binarne pola.  
   
  `cbSigBlob`  
- [in] Wyrażony w bajtach rozmiar `pvSigBlob`.  
+ [in] Rozmiar w bajtach `pvSigBlob`.  
   
  `pmb`  
- [out] Wskaźnik do dopasowania tokenie FieldDef.  
+ [out] Wskaźnik do zgodnego tokenu FieldDef.  
   
 ## <a name="remarks"></a>Uwagi  
- Określ pola przy użyciu jego otaczającej klasy lub interfejsu (`td`), jego nazwa (`szName`) i opcjonalnie jego podpis (`pvSigBlob`).  
+ Określ pola przy użyciu jego otaczającej klasy lub interfejsu (`td`), jego nazwę (`szName`) i opcjonalnie jeho signatura (`pvSigBlob`).  
   
- Podpis przekazany do `FindField` musi został wygenerowany w bieżącym zakresie, ponieważ podpisy są powiązane z określonego zakresu. Podpis osadzić token, który identyfikuje typ otaczający klasy lub wartości. (Token jest indeks do lokalnej tabeli TypeDef). Nie kompilacji podpisu środowiska wykonawczego poza kontekstem bieżącego zakresu i używają tego podpisu jako dane wejściowe `FindField`.  
+ Podpis jest przekazywany do `FindField` musi zostać wygenerowane w bieżącym zakresie ponieważ podpisy są powiązane z określonego zakresu. Podpis można osadzić token, który identyfikuje typ otaczający klasy lub wartości. (Token jest to indeks w lokalnej tabeli TypeDef). Nie można tworzenia sygnatury czasu wykonywania poza kontekstem bieżącego zakresu i używać tego podpisu jako dane wejściowe `FindField`.  
   
- `FindField` Wyszukuje tylko pola, które zostały zdefiniowane bezpośrednio w klasy lub interfejsu; pola dziedziczonych nie zostanie znaleziona.  
+ `FindField` Umożliwia znalezienie tylko pola, które zostały zdefiniowane bezpośrednio klasę lub interfejs; nie odnajdzie odziedziczonego pola.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

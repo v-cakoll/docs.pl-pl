@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 71e06f8e42e4ca6da80286c9aa329ee99b02fcf4
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5b7a2725b340c4ecb43861e1b8855fcae425a4b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521884"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importer kontrolki ActiveX formularzy systemu Windows)
 Importer formantów ActiveX konwertuje definicje typów w bibliotece typów modelu COM dla formantu ActiveX na formant programu Windows Forms.  
@@ -59,7 +59,7 @@ aximp [options]{file.dll | file.ocx}
   
  Typowe pośredniczący środowiska uruchomieniowego języka dla typów modelu COM: *progid*.dll  
   
- Serwer proxy Windows Forms dla formantów ActiveX (gdzie Ax oznacza ActiveX): AX*progid*.dll  
+ Serwer proxy Windows Forms dla formantów ActiveX (gdzie Ax oznacza ActiveX): Ax*progid*.dll  
   
 > [!NOTE]
 >  Jeśli nazwa składowej formantu ActiveX pasuje do nazwy zdefiniowanej w programie .NET Framework, program Aximp.exe poprzedzi nazwę składowej prefiksem „Ctl”, gdy będzie tworzyć klasę pochodną AxHost. Na przykład jeśli formant ActiveX ma składową o nazwie Layout, jej nazwa w klasie pochodnej AxHost zostanie zmieniona na CtlLayout, ponieważ zdarzenie Layout jest zdefiniowane w programie .NET Framework.  
@@ -79,6 +79,6 @@ aximp [options]{file.dll | file.ocx}
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Narzędzia](../../../docs/framework/tools/index.md)  
- [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+## <a name="see-also"></a>Zobacz także
+- [Narzędzia](../../../docs/framework/tools/index.md)
+- [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

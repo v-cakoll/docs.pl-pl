@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711c85b930617632d69497e4a9cf0a74360d27f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45caad20ef7d2dbe35e0381fb8cd697fc526398f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529807"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień "ICorDebugCode" z wyliczenia, zaczynając od bieżącego położenia.  
+Pobiera określoną liczbę wystąpień "ICorDebugCode" z wyliczenia, zaczynając od bieżącej pozycji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,13 +43,13 @@ HRESULT Next (
  [in] Liczba `ICorDebugCode` wystąpienia mają zostać pobrane.  
   
  `values`  
- [out] Tablicy wskaźników, z których każdy wskazuje `ICorDebugCode` obiektu.  
+ [out] Tablica wskaźników, z których każdy wskazuje `ICorDebugCode` obiektu.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby `ICorDebugCode` wystąpienia faktycznie zwracane. Ta wartość może mieć wartości zerowej Jeśli `celt` jeden.  
+ [out] Wskaźnik do liczby `ICorDebugCode` wystąpień rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -57,6 +57,6 @@ HRESULT Next (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
-    
- 
+## <a name="see-also"></a>Zobacz także
+
+

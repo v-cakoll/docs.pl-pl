@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: c8918bce1d0e19e8f70be4ddbda892924a944e68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 12eafa006e65527a70245c4332a34eb55f7d8af0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525264"
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
 Windows Communication Foundation (WCF) jest SOAP oparta na komunikatach rozproszonej platformy programowania i zabezpieczanie komunikatów między klientami i usługami jest podstawą ochrony danych. Usługi WCF zapewnia platformę wszechstronne i interoperacyjne wymiany zabezpieczonych wiadomości na podstawie istniejącej infrastruktury zabezpieczeń i standardy zabezpieczeń rozpoznawanym komunikaty protokołu SOAP.  
@@ -68,7 +68,7 @@ Windows Communication Foundation (WCF) jest SOAP oparta na komunikatach rozprosz
 ### <a name="standards-and-interoperability"></a>Standardy i współdziałanie  
  W świecie przy użyciu istniejących wdrożeń w dużych zasady jednolitości jest rzadkie. Platformy obliczeniowej/komunikacji rozproszonej muszą współpracować przy użyciu technologii, oferowanych przez różnych dostawców. Podobnie zabezpieczeń, musi być międzyoperacyjnych.  
   
- Aby włączyć systemów zabezpieczeń międzyoperacyjnych, przedsiębiorstwa działające w branży usług sieci Web zostały zredagowane różnych standardów. W szczególności dotyczące zabezpieczeń, zostały zaproponowane kilka standardów istotne: WS-Security: zabezpieczenia wiadomości SOAP (zaakceptowane przez organizację OASIS treść standardów i znana wcześniej jako usługi WS-Security), WS-Trust, WS-SecureConversation i WS-SecurityPolicy.  
+ Aby włączyć systemów zabezpieczeń międzyoperacyjnych, przedsiębiorstwa działające w branży usług sieci Web zostały zredagowane różnych standardów. W szczególności dotyczące zabezpieczeń zostały zaproponowane kilka standardów godne uwagi: WS-Security: Zabezpieczenia komunikatów SOAP (zaakceptowane przez organizację OASIS treść standardów i znana wcześniej jako usługi WS-Security), WS-Trust, WS-SecureConversation i WS-SecurityPolicy.  
   
  Usługi WCF obsługuje szeroką gamę scenariuszach współpracy. <xref:System.ServiceModel.BasicHttpBinding> Klasa jest przeznaczona na podstawowe profil zabezpieczeń (BSP) i <xref:System.ServiceModel.WSHttpBinding> klasa jest przeznaczona dla najnowszych standardów zabezpieczeń, takich jak usługi WS-Security 1.1 i WS-SecureConversation. Dzięki przestrzeganiu tych standardów, zabezpieczeniach WCF można współpracować i integracja z usługami sieci Web, obsługiwanych systemów operacyjnych i platform innych niż Microsoft Windows.  
   
@@ -95,21 +95,21 @@ Windows Communication Foundation (WCF) jest SOAP oparta na komunikatach rozprosz
  W programie WCF, funkcje kontroli dostępu są dostępne za pośrednictwem integracja plików wykonywalnych języka wspólnego (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> i za pomocą zestawu interfejsów API, znane jako *modelu tożsamości*. Aby uzyskać szczegółowe informacje o kontroli dostępu i autoryzacja oparta na oświadczeniach, zobacz [rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Inspekcja  
- *Inspekcja* jest rejestrowanie zdarzeń związanych z zabezpieczeniami w dzienniku zdarzeń Windows. Umożliwia rejestrowanie zdarzeń związanych z zabezpieczeniami, takie jak błędy uwierzytelniania (lub sukcesów). Aby uzyskać więcej informacji, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Programowania szczegółowe informacje, zobacz [instrukcje: inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ *Inspekcja* jest rejestrowanie zdarzeń związanych z zabezpieczeniami w dzienniku zdarzeń Windows. Umożliwia rejestrowanie zdarzeń związanych z zabezpieczeniami, takie jak błędy uwierzytelniania (lub sukcesów). Aby uzyskać więcej informacji, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Programowania szczegółowe informacje, zobacz [jak: Inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [Zabezpieczanie usług](../../../../docs/framework/wcf/securing-services.md)  
- [Typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Uwierzytelnianie](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
- [Autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- [Konfigurowanie usług za pomocą plików konfiguracji](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md)  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- [Zabezpieczanie usług](../../../../docs/framework/wcf/securing-services.md)
+- [Typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+- [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Uwierzytelnianie](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+- [Autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [Konfigurowanie usług za pomocą plików konfiguracji](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md)
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

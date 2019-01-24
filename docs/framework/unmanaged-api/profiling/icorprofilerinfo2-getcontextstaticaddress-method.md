@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d787e3eae59218c46a95c327a0f93502c3833d9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4ebf93c103b74be458ba51577a5195795029176
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520405"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress — Metoda
-Pobiera adres dla określonego pola statycznej kontekstu, który znajduje się w zakresie określonego kontekstu.  
+Pobiera adres dla określonego pola statyczne kontekstu, który znajduje się w zakresie określonego kontekstu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +39,28 @@ HRESULT GetContextStaticAddress(
   
 #### <a name="parameters"></a>Parametry  
  `classId`  
- [in] Identyfikator klasy, która zawiera żądane pole kontekstu statycznego.  
+ [in] Identyfikator klasy, która zawiera żądane pole statyczne kontekstu.  
   
  `fieldToken`  
- [in] Token metadanych dla żądanego pola kontekstu statycznego.  
+ [in] Token metadanych dla żądanego pola statyczne kontekstu.  
   
  `contextId`  
  [in] Identyfikator kontekstu, która jest zakresem dla żądanego pola statyczne kontekstu.  
   
  `ppAddress`  
- [out] Wskaźnik do adresu pola statycznego, który znajduje się w określonym kontekście.  
+ [out] Wskaźnik na adres pole statyczne, który znajduje się w określonym kontekście.  
   
 ## <a name="remarks"></a>Uwagi  
  `GetContextStaticAddress` Metoda może zwracać jedną z następujących czynności:  
   
 -   HRESULT CORPROF_E_DATAINCOMPLETE, jeśli nie przypisano danego pola statycznego adresu w określonym kontekście.  
   
--   Adresy obiektów, które mogą znajdować się w pamięci sterty kolekcji. Te adresy mogą być nieprawidłowe po wyrzucanie elementów bezużytecznych, więc po wyrzucanie elementów bezużytecznych profilowania nie należy zakładać, że są prawidłowe.  
+-   Adresy obiektów, które mogą znajdować się w stercie wyrzucania elementów bezużytecznych. Te adresy mogą stają się nieprawidłowe po wyrzucania elementów bezużytecznych, więc po wyrzucania elementów bezużytecznych profilowania nie należy zakładać, że są prawidłowe.  
   
- Przed ukończeniem konstruktora klasy klasy `GetContextStaticAddress` zwróci CORPROF_E_DATAINCOMPLETE dla wszystkich jego pól statycznych, mimo że niektóre pola statyczne już może zainicjować i umieszczanie w katalogu głównym odzyskiwanie kolekcji obiektów.  
+ Przed ukończeniem konstruktora klasy klasy `GetContextStaticAddress` zwróci CORPROF_E_DATAINCOMPLETE dla wszystkich jego pól statycznych, mimo że niektóre pola statyczne już może być zainicjowany i zakorzenienia wyrzucania elementów kolekcji obiektów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -68,6 +68,6 @@ HRESULT GetContextStaticAddress(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

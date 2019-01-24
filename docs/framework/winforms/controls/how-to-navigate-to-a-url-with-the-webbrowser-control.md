@@ -1,5 +1,5 @@
 ---
-title: 'Porady: nawigowanie do adresu URL za pomocą formantu WebBrowser'
+title: 'Instrukcje: Przejdź do adresu URL za pomocą formantu WebBrowser'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: f34577d45ddfbd2445fd4558c5694facf3f1aa29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 599ae9fbaed3240efa05dc04f5b6dc4180e55cfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524224"
 ---
-# <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>Porady: nawigowanie do adresu URL za pomocą formantu WebBrowser
-Poniższy przykład kodu pokazuje sposób przejścia <xref:System.Windows.Forms.WebBrowser> kontroli z określonym adresem URL.  
+# <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>Instrukcje: Przejdź do adresu URL za pomocą formantu WebBrowser
+Poniższy przykład kodu pokazuje, jak nawigować po <xref:System.Windows.Forms.WebBrowser> kontroli na określony adres URL.  
   
- Aby określić, kiedy nowy dokument zostanie całkowicie załadowany, obsługi <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzeń. Aby demonstracyjne tego zdarzenia, zobacz [porady: drukowanie za pomocą formantu WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md).  
+ Aby określić, kiedy nowy dokument jest w pełni załadowane, obsługi <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzeń. Demonstracyjne tego zdarzenia, zobacz [jak: Drukowanie za pomocą formantu WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md).  
   
 ## <a name="example"></a>Przykład  
   
@@ -41,10 +41,10 @@ this.webBrowser1.Navigate("http://www.microsoft.com");
   
 -   Odwołuje się do `System` i `System.Windows.Forms` zestawów.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.WebBrowser>  
- <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>  
- [WebBrowser, kontrolka](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
- [Instrukcje: drukowanie za pomocą kontrolki WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.WebBrowser>
+- <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>
+- [WebBrowser, kontrolka](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)
+- [Instrukcje: Drukowanie za pomocą formantu WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)

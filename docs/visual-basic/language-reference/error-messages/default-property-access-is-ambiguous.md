@@ -1,5 +1,5 @@
 ---
-title: Dostęp do właściwości domyślnej jest niejednoznaczny między elementami członkowskimi odziedziczonego interfejsu &#39; &lt;defaultpropertyname&gt; &#39; interfejsu &#39; &lt;interfacename1&gt; &#39; i &#39; &lt;defaultpropertyname&gt; &#39; interfejsu &#39; &lt;interfacename2&gt;&#39;
+title: Dostęp do właściwości domyślnej jest niejednoznaczny dla dziedziczonego elementów członkowskich &#39; &lt;defaultpropertyname&gt; &#39; interfejsu &#39; &lt;interfacename1&gt; &#39; i &#39; &lt;defaultpropertyname&gt; &#39; interfejsu &#39; &lt;interfacename2&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518647"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Dostęp do właściwości domyślnej jest niejednoznaczny między elementami członkowskimi odziedziczonego interfejsu &#39; &lt;defaultpropertyname&gt; &#39; interfejsu &#39; &lt;interfacename1&gt; &#39; i &#39; &lt;defaultpropertyname&gt; &#39; interfejsu &#39; &lt;interfacename2&gt;&#39;
-Interfejs dziedziczy dwa interfejsy, z których każdy deklaruje domyślna właściwość o tej samej nazwie. Kompilator nie można rozpoznać dostęp do tej właściwości domyślnej bez kwalifikacji. Ilustruje to poniższy przykład.  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Dostęp do właściwości domyślnej jest niejednoznaczny dla dziedziczonego elementów członkowskich &#39; &lt;defaultpropertyname&gt; &#39; interfejsu &#39; &lt;interfacename1&gt; &#39; i &#39; &lt;defaultpropertyname&gt; &#39; interfejsu &#39; &lt;interfacename2&gt;&#39;
+Interfejs dziedziczy dwa interfejsy, z których każdy deklaruje domyślna właściwość o tej samej nazwie. Kompilator nie można rozpoznać dostępu do tej właściwości domyślnej bez kwalifikacji. Ilustruje to poniższy przykład.  
   
 ```  
 Public Interface Iface1  
@@ -35,13 +35,13 @@ Public Class testClass
 End Class  
 ```  
   
- Po określeniu `testObj(1)`, kompilator próbuje rozpoznać ona domyślnej właściwości. Istnieją dwa możliwe domyślnych właściwości z powodu dziedziczonych interfejsach, dlatego kompilator sygnały tego błędu.  
+ Po określeniu `testObj(1)`, kompilator próbuje rozpoznać ona domyślnej właściwości. Istnieją dwie właściwości domyślne możliwe z powodu dziedziczonych interfejsach, kompilator sygnały tego błędu.  
   
  **Identyfikator błędu:** BC30686  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Unikaj dziedziczenie żadnych elementów członkowskich o tej samej nazwie. W poprzednim przykładzie Jeśli `testObj` nie wymaga żadnego z elementów członkowskich, co oznacza, `Iface2`, Zadeklaruj ją w następujący sposób:  
+-   Należy unikać dziedziczy wszystkie elementy członkowskie o takiej samej nazwie. W poprzednim przykładzie Jeśli `testObj` nie trzeba wykonać jedną z elementów członkowskich, na przykład, `Iface2`, Zadeklaruj go w następujący sposób:  
   
     ```  
     Dim testObj As Iface1  
@@ -49,7 +49,7 @@ End Class
   
      —lub—  
   
--   Zaimplementuj interfejs dziedziczących w klasie. Następnie można wdrożyć wszystkich właściwości dziedziczone o różnych nazwach. Jednak tylko jeden z nich może być domyślną właściwość klasy implementującej. Ilustruje to poniższy przykład.  
+-   Implementuje dziedziczącej interfejsu w klasie. Następnie można wdrożyć wszystkich właściwości dziedziczonych pod różnymi nazwami. Jednak tylko jeden z nich może być domyślną właściwość klasy implementującej. Ilustruje to poniższy przykład.  
   
     ```  
     Public Class useIface3  
@@ -63,5 +63,5 @@ End Class
     End Class  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

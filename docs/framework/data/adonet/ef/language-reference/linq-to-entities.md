@@ -2,12 +2,12 @@
 title: LINQ do Jednostek
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 0a02899ab9dc751cfee1127a092854b81b8360db
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a3b35c28dc9b764b99b73440a1526176293e10a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514754"
 ---
 # <a name="linq-to-entities"></a>LINQ do Jednostek
 Składnik LINQ to Entities zapewnia obsługę Language-Integrated Query (LINQ), która umożliwia programistom pisanie kwerend modelu koncepcyjnego Entity Framework przy użyciu języka Visual Basic lub Visual C#. Zapytania dotyczące programu Entity Framework są reprezentowane przez zapytania w drzewie poleceń, których wykonanie względem kontekst. Składnik LINQ to Entities konwertuje zapytań Language-Integrated zapytania (LINQ) z poleceniem Drzewo zapytań, wykonuje zapytania względem programu Entity Framework i zwraca obiekty używane przez Entity Framework i LINQ. Poniżej przedstawiono proces tworzenia i wykonywanie w zapytaniu składnika LINQ to Entities:  
@@ -88,8 +88,8 @@ Składnik LINQ to Entities zapewnia obsługę Language-Integrated Query (LINQ), 
   
  [Znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [LINQ i ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- [Program Entity Framework na platformie ADO.NET](../../../../../../docs/framework/data/adonet/ef/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [LINQ i ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
+- [Program Entity Framework na platformie ADO.NET](../../../../../../docs/framework/data/adonet/ef/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: KrzysztofCwalina
-ms.openlocfilehash: c9ed52c5a313676baeba66f5cb79c7a56927babb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525485"
 ---
 # <a name="events-and-callbacks"></a>Zdarzenia i wywołania zwrotne
 Wywołania zwrotne są punkty rozszerzeń, umożliwiające to platforma do wywołania zwrotnego w kodzie użytkownika za pośrednictwem pełnomocnika. Te delegaty są zazwyczaj przekazywane Framework parametr metody.  
@@ -45,5 +45,5 @@ Wywołania zwrotne są punkty rozszerzeń, umożliwiające to platforma do wywo�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

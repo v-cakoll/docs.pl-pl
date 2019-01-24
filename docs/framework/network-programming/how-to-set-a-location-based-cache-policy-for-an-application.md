@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Określanie zasad pamięci podręcznej na podstawie lokalizacji dla aplikacji'
+title: 'Instrukcje: Określanie zasad pamięci podręcznej na podstawie lokalizacji dla aplikacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: e47b7de00941a8da24052c21f28e91391cff390d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4ac0d6449fea4980154eef8c88d03d13230a6a62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514052"
 ---
-# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Porady: Określanie zasad pamięci podręcznej na podstawie lokalizacji dla aplikacji
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Instrukcje: Określanie zasad pamięci podręcznej na podstawie lokalizacji dla aplikacji
 Zasady pamięci podręcznej oparte na lokalizacji zezwolić aplikacji na jawne zdefiniowanie zachowania buforowania na podstawie lokalizacji żądanego zasobu. W tym temacie przedstawiono programowe Ustawianie zasad pamięci podręcznej. Aby uzyskać informacje na temat ustawiania zasad dla aplikacji za pomocą plików konfiguracji, zobacz [ \<requestCaching — >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Aby ustawić zasady oparte na lokalizacji pamięci podręcznej dla aplikacji  
@@ -153,9 +153,9 @@ Zasady pamięci podręcznej oparte na lokalizacji zezwolić aplikacji na jawne z
     End Sub  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)  
- [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Zasady pamięci podręcznej oparte na czasie](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [\<requestCaching — >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>Zobacz także
+- [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)
+- [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Zasady pamięci podręcznej oparte na czasie](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [\<requestCaching — >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 0e77b26bdc7eaa038c69a6fb706ee066aa223a2e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 96107c287003cc5fca2eb0eaa86f0f1f32b7d65e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523704"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>Automatyzacja interfejsu użytkownika formantu niestandardowego WPF
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] udostępnia interfejs pojedynczego, uogólnionego tej usługi automation, w których klienci mogą używać do sprawdzania lub działanie interfejsów użytkownika różnych platform i struktur. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] umożliwia aplikacji ułatwień dostępu, takich jak czytniki zawartości ekranu do badania elementy interfejsu użytkownika i symulacji interakcji użytkownika z nimi z innym kodem i kody jakości (test). Aby uzyskać informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] na wszystkich platformach, zobacz funkcje ułatwień dostępu.  
@@ -48,7 +48,7 @@ ms.locfileid: "44211956"
   
  Podczas implementowania formant niestandardowy, konieczne jest przesłonięcie metody "Podstawowy" z klasy elementu równorzędnego podstawowej usługi automation, które opisują zachowanie unikatowe i specyficzne dla formantu niestandardowego.  
   
-### <a name="override-oncreateautomationpeer"></a>Zastąp OnCreateAutomationPeer  
+### <a name="override-oncreateautomationpeer"></a>Override OnCreateAutomationPeer  
  Zastąp <xref:System.Windows.UIElement.OnCreateAutomationPeer%2A> metodę niestandardową kontrolkę tak że zwraca obiekt dostawcy, która musi dziedziczyć pośrednio lub bezpośrednio <xref:System.Windows.Automation.Peers.AutomationPeer>.  
   
 ### <a name="override-getpattern"></a>Zastąp GetPattern  
@@ -154,7 +154,7 @@ End Class
  [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
  [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd automatyzacji interfejsu użytkownika](../../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [Formant NumericUpDown niestandardowe z motywu i przykładowe Obsługa automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=160025)  
- [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd automatyzacji interfejsu użytkownika](../../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Formant NumericUpDown niestandardowe z motywu i przykładowe Obsługa automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=160025)
+- [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

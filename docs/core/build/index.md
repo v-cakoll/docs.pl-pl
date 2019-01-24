@@ -1,16 +1,11 @@
 ---
 title: Kompilacja platformy .NET Core ze źródła
-description: Dowiedz się, jak tworzyć oprogramowanie .NET Core i .NET Core interfejsu wiersza polecenia z kodu źródłowego.
+description: 'Dowiedz się, jak tworzyć oprogramowanie .NET Core i .NET Core interfejsu wiersza polecenia z kodu źródłowego.'
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 036d7fb64d74c00b4ac0e3d34bacc834f3c3a198
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170070"
 ---
+
 # <a name="build-net-core-from-source"></a>Kompilacja platformy .NET Core ze źródła
 
 Kompilacja platformy .NET Core z jego kod źródłowy jest ważne na wiele sposobów: ułatwia port platformy .NET Core do nowych platform, umożliwia wkładu i poprawek dotyczących produktu, i umożliwia tworzenie niestandardowych wersji platformy .NET.
@@ -88,7 +83,7 @@ Aby można było utworzyć interfejsu wiersza polecenia platformy .NET Core, pot
 
 * Windows i Linux:
   * git na ŚCIEŻCE
-* System macOS:
+* macOS:
   * git na ŚCIEŻCE
   * Xcode
   * Openssl
@@ -101,6 +96,6 @@ Użyj `dotnet` z *artefaktów / {os}-{arch} / stage2* do wypróbowania nowo zbud
 
 ## <a name="see-also"></a>Zobacz także
 
-* [.NET core środowiska uruchomieniowego języka wspólnego (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
-* [Przewodnik dewelopera programu .NET core interfejsu wiersza polecenia](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
-* [Tworzenie pakietów dystrybucji platformy .NET Core](./distribution-packaging.md)
+- [.NET core środowiska uruchomieniowego języka wspólnego (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [Przewodnik dewelopera programu .NET core interfejsu wiersza polecenia](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
+- [Tworzenie pakietów dystrybucji platformy .NET Core](./distribution-packaging.md)

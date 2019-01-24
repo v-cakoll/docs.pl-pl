@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf51d2a0e7381cd495da8f3846302ec806c34774
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91bc626e2c75cd7eb2eafad0fc26d343e5b278e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530735"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched — Metoda
-Powiadamia profilera który funkcja, która została just-in-time (JIT)-skompilowany został usunięty z pamięci.  
+Powiadamia program profilujący, że funkcja, która została just-in-time (JIT) — skompilowany został usunięty z pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,12 +39,12 @@ HRESULT JITFunctionPitched(
  [in] Identyfikator funkcji, która została usunięta.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli usunięto funkcja jest wywoływana, profilera otrzymają nowe zdarzenia kompilacji JIT, gdy funkcja jest ponownie kompilowana. Obecnie wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) przy użyciu kompilatora JIT nie powoduje usunięcia funkcji z pamięci, dzięki czemu to wywołanie zwrotne nie jest obecnie używana i nie zostanie odebrana przez profiler.  
+ Jeśli usunięto funkcja jest wywoływana, program profilujący otrzyma nowe zdarzenia kompilacji JIT, gdy funkcja jest ponownie kompilowana. Obecnie kompilator JIT języka wspólnego środowiska uruchomieniowego (języka wspólnego CLR) nie powoduje usunięcia funkcji z pamięci, dzięki czemu to wywołanie zwrotne nie jest obecnie używana i nie będą odbierane przez profiler.  
   
- Wartość `functionId` jest nieprawidłowa, dopóki funkcja jest ponownie kompilowana. Gdy funkcja jest ponownie kompilowana, takie same `functionId` zostanie użyta wartość.  
+ Wartość `functionId` jest nieprawidłowa, dopóki funkcja jest ponownie kompilowana. Gdy funkcja jest ponownie kompilowany, taka sama `functionId` zostanie użyta wartość.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -52,5 +52,5 @@ HRESULT JITFunctionPitched(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

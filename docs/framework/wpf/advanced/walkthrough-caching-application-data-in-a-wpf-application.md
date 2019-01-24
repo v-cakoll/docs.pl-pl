@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF'
+title: 'Przewodnik: Buforowanie danych aplikacji w aplikacji WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 1eddf3ad52bab6ef4665d7c3691353fa9c54574c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513727"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Wskazówki: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Przewodnik: Buforowanie danych aplikacji w aplikacji WPF
 Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Dane o dostępie ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast tego podczas pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.
 
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Udostępnia klasy, które umożliwiają używanie buforowania w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji. W ramach tych zajęć, znajdują się w <xref:System.Runtime.Caching> przestrzeni nazw.
@@ -325,7 +325,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
  [!code-csharp[CachingWPFApplications#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>

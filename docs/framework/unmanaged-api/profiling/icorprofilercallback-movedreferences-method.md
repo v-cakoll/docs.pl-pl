@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28fa18535cce50a62f6aca7ae6f013628698c6dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d13a291db484fd4e1d235ce3bb84a55118214379
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520428"
 ---
 # <a name="icorprofilercallbackmovedreferences-method"></a>ICorProfilerCallback::MovedReferences — Metoda
-Wywołuje się, by raportu nowy układ obiektów na stercie w wyniku kompaktowania wyrzucania elementów bezużytecznych.  
+Wywołuje się, aby zgłosić nowy układ obiektów w stercie wyniku kompaktowania wyrzucania elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,33 +39,33 @@ HRESULT MovedReferences(
   
 #### <a name="parameters"></a>Parametry  
  `cMovedObjectIDRanges`  
- [in] Liczba bloków ciągłe obiektów, które przeniesiona w wyniku kompaktowania wyrzucanie elementów bezużytecznych. Oznacza to, że wartość `cMovedObjectIDRanges` jest całkowity rozmiar `oldObjectIDRangeStart`, `newObjectIDRangeStart`, i `cObjectIDRangeLength` tablic.  
+ [in] Liczba bloków ciągłych obiektów, które przeniesione w wyniku kompaktowania wyrzucania elementów bezużytecznych. Oznacza to, że wartość `cMovedObjectIDRanges` jest całkowity rozmiar `oldObjectIDRangeStart`, `newObjectIDRangeStart`, i `cObjectIDRangeLength` tablic.  
   
- Argumenty trzech kolejnych `MovedReferences` tablice równoległych. Innymi słowy `oldObjectIDRangeStart[i]`, `newObjectIDRangeStart[i]`, i `cObjectIDRangeLength[i]` dotyczą wszystkich jeden blok ciągłe obiektów.  
+ Następne trzy argumenty `MovedReferences` są tablicami równoległych. Innymi słowy `oldObjectIDRangeStart[i]`, `newObjectIDRangeStart[i]`, i `cObjectIDRangeLength[i]` dotyczą wszystkich jeden blok ciągłych obiektów.  
   
  `oldObjectIDRangeStart`  
- [in] Tablica `ObjectID` wartości, z których każdy jest stary (wstępne wyrzucanie elementów bezużytecznych) początkowy adres bloku ciągłym, live obiektów w pamięci.  
+ [in] Tablica `ObjectID` wartości, z których każdy jest stary (wstępne wyrzucania elementów bezużytecznych) początkowy adres bloku ciągłych, obiekty aktywne w pamięci.  
   
  `newObjectIDRangeStart`  
- [in] Tablica `ObjectID` wartości, z których każdy jest nowy adres początkowy (po wyrzucanie elementów bezużytecznych) bloku ciągłym, live obiektów w pamięci.  
+ [in] Tablica `ObjectID` wartości, z których każdy jest nowy adres początkowy (po wyrzucania elementów bezużytecznych), bloku ciągłych, obiekty aktywne w pamięci.  
   
  `cObjectIDRangeLength`  
- [in] Tablica liczb całkowitych, z których każdy jest rozmiar bloku ciągłe obiektów w pamięci.  
+ [in] Tablica liczb całkowitych, z których każdy jest rozmiar bloku ciągłych obiektów w pamięci.  
   
- Rozmiar jest określony dla każdego bloku, który odwołuje się do `oldObjectIDRangeStart` i `newObjectIDRangeStart` tablic.  
+ Rozmiar jest określony dla każdego bloku, w której podano odwołanie w `oldObjectIDRangeStart` i `newObjectIDRangeStart` tablic.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!IMPORTANT]
->  Ta metoda zgłasza rozmiary jako `MAX_ULONG` dla obiektów, które są większe niż 4 GB na platformach 64-bitowych. Aby uzyskać rozmiar obiektów, które są większe niż 4 GB, należy użyć [ICorProfilerCallback4::MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) metody zamiast tego.  
+>  Ta metoda zgłasza rozmiary jako `MAX_ULONG` dla obiektów, które są większe niż 4 GB na platformach 64-bitowych. Aby uzyskać rozmiar obiektów, które są większe niż 4 GB, użyj [icorprofilercallback4::movedreferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) metody zamiast tego.  
   
- Kompaktowanie modułu zbierającego elementy bezużyteczne zwraca pamięci zajmowany przez obiekty martwy i kompaktuje, które zwolnienie miejsca. W związku z tym na żywo obiekty mogą być przeniesione w stercie, i `ObjectID` wartości rozdzielonych powiadomienia mogą ulec zmianie.  
+ Kompaktowania moduł odśmiecania pamięci odzyskuje pamięć zajęta przez obiekty martwe i kompaktuje, które zwolnienie miejsca. W rezultacie obiekty na żywo mogą być przeniesione w stosie, i `ObjectID` wartości rozdzielonych powiadomienia mogą ulec zmianie.  
   
  Przyjęto założenie, że istniejące `ObjectID` wartość (`oldObjectID`) znajduje się w następującym zakresie:  
   
  `oldObjectIDRangeStart[i]` <= `oldObjectID` < `oldObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- W takim przypadku przesunięcie od początku zakresu do rozpoczęcia obiektu wygląda następująco:  
+ W tym przypadku przesunięcie od początku zakresu do rozpoczęcia obiektu jest następująca:  
   
  `oldObjectID` - `oldObjectRangeStart[i]`  
   
@@ -73,14 +73,14 @@ HRESULT MovedReferences(
   
  0 <= `i` < `cMovedObjectIDRanges`  
   
- można obliczyć nowego `ObjectID` w następujący sposób:  
+ można obliczyć nową `ObjectID` w następujący sposób:  
   
  `newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)  
   
- Żadna z `ObjectID` wartości przekazywane przez `MovedReferences` obowiązują podczas wywołania zwrotnego, ponieważ wyrzucanie elementów bezużytecznych może znajdować się w środku przenoszenie obiektów z starego lokalizacji do nowej lokalizacji. W związku z tym profilery nie powinny podejmować próby sprawdź obiekty podczas `MovedReferences` wywołania. A [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) wywołania zwrotnego wskazuje, że wszystkie obiekty zostały przeniesione do nowej lokalizacji i inspekcji mogą być wykonywane.  
+ Żaden z `ObjectID` wartości przekazanych przez `MovedReferences` obowiązują podczas wywołania zwrotnego, ponieważ wyrzucania elementów bezużytecznych może być w trakcie przenoszenia obiektów z lokalizacji starej do nowej lokalizacji. W związku z tym, profilowania nie należy próbować Zbadaj obiekty podczas `MovedReferences` wywołania. A [icorprofilercallback2::garbagecollectionfinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) wywołania zwrotnego wskazuje, że wszystkie obiekty zostały przeniesione do ich nowych lokalizacji i inspekcji mogą być wykonywane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -88,8 +88,8 @@ HRESULT MovedReferences(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [MovedReferences2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [MovedReferences2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10e7da7711cd63579589fda416d0d3a4f777eefe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ad6c8bd59f62bc7b0a96e1ef5e545fe15610c91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516983"
 ---
 # <a name="icordebugmodulegetbaseaddress-method"></a>ICorDebugModule::GetBaseAddress — Metoda
-Pobiera adres podstawowy modułu.  
+Pobiera adres podstawowy moduł.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +37,13 @@ HRESULT GetBaseAddress(
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [out] A `CORDB_ADDRESS` , który określa adres bazowy modułu.  
+ [out] A `CORDB_ADDRESS` określający adres podstawowy moduł.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli moduł jest natywny obrazu (to znaczy, jeśli moduł został utworzony przez generator obrazu natywnego, NGen.exe), jej adres podstawowy będą miały wartość zero.  
+ Jeśli moduł jest natywny obraz (to znaczy, jeśli moduł został wyprodukowany przez generator obrazu natywnego, NGen.exe), jej adres podstawowy będzie mieć wartość zero.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -51,6 +51,6 @@ HRESULT GetBaseAddress(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
-    
- 
+## <a name="see-also"></a>Zobacz także
+
+

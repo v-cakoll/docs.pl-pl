@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6057593362e75044a9b2db32ad5dafe439a551d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e92ca55a04032ad9950888eb59e33ee815b14d42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514620"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>ICorProfilerCallback::ExceptionCLRCatcherExecute — Metoda
-Wywoływane, gdy `catch` zablokować dla wyjątku jest wykonywana wewnątrz środowisko uruchomieniowe języka wspólnego (CLR) samej siebie. Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0.  
+Wywoływane, gdy `catch` blokowania, dla wyjątku jest wykonywany wewnątrz środowisko uruchomieniowe języka wspólnego (CLR), sam. Ta metoda jest przestarzała w programie .NET Framework 2.0.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +34,7 @@ HRESULT ExceptionCLRCatcherExecute();
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -42,6 +42,6 @@ HRESULT ExceptionCLRCatcherExecute();
   
  **Wersje programu .NET framework:** 1.1, 1.0  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ExceptionCLRCatcherFound, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ExceptionCLRCatcherFound, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)

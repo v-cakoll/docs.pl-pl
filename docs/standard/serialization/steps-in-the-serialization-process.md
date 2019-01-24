@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-ms.openlocfilehash: ef81ecc7ca177fa9360f53a6b66015412d282065
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b697e8c590d0865b26eaa9f66a333504a5faece2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517360"
 ---
 # <a name="steps-in-the-serialization-process"></a>Kroki procesu serializacji
 Gdy <xref:System.Runtime.Serialization.Formatter.Serialize*> wywoływana jest metoda [program formatujący](xref:System.Runtime.Serialization.Formatter), przechodzi serializacji obiektów według następującej reguły:
@@ -27,5 +27,5 @@ Gdy <xref:System.Runtime.Serialization.Formatter.Serialize*> wywoływana jest me
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Serializacja binarna](binary-serialization.md)  
+- [Serializacja binarna](binary-serialization.md)
 - [Serializacja XML i SOAP](xml-and-soap-serialization.md)

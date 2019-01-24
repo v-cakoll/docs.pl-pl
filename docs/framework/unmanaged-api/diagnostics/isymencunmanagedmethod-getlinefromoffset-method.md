@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29990ad6a94f063577236bdbc84d02d4d2b4b2f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98015af4a79a9fca4945708e6d0baeb61e46876f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531229"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset — Metoda
-Pobiera informacje o wiersz skojarzony z przesunięciem. Jeśli parametr offset (`dwOffset`) nie jest punktu sekwencji, ta metoda pobiera informacje o wiersz skojarzony z poprzednich przesunięcie.  
+Pobiera informacje o wiersz skojarzony z przesunięcia. Jeśli parametr offset (`dwOffset`) nie jest punktem sekwencji, ta metoda pobiera informacje o wiersz skojarzony z poprzednim przesunięcie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,28 +41,28 @@ HRESULT GetLineFromOffset(
   
 #### <a name="parameters"></a>Parametry  
  `dwOffset`  
- [in] A `ULONG32` zawiera przesunięcie.  
+ [in] Element `ULONG32` zawiera przesunięcie.  
   
  `pline`  
  [out] Wskaźnik do `ULONG32` odbierająca wiersza.  
   
  `pcolumn`  
- [out] Wskaźnik do `ULONG32` odbierająca kolumny.  
+ [out] Wskaźnik do `ULONG32` kolumny, która otrzymuje.  
   
  `pendLine`  
  [out] Wskaźnik do `ULONG32` odbierająca zakończyć wiersza.  
   
  `pendColumn`  
- [out] Wskaźnik do `ULONG32` odbierająca końcowa kolumny.  
+ [out] Wskaźnik do `ULONG32` końcowa kolumny, która otrzymuje.  
   
  `pdwStartOffset`  
- [out] Wskaźnik do `ULONG32` odbierająca punktu skojarzone sekwencji.  
+ [out] Wskaźnik do `ULONG32` odbierająca punktu sekwencji skojarzone.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymENCUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymENCUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

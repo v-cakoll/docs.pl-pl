@@ -2,12 +2,12 @@
 title: nowe polecenia DotNet
 description: Nowe polecenie dotnet tworzy nowe projekty .NET Core, na podstawie określonego szablonu.
 ms.date: 10/24/2018
-ms.openlocfilehash: 3a10aaa93af57e7beb86771e7d3b00b06fca14b2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 5177c920fee6fa946d2bf5d96644f26309ed0a99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516151"
 ---
 # <a name="dotnet-new"></a>nowe polecenia DotNet
 
@@ -19,7 +19,7 @@ ms.locfileid: "53169693"
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
@@ -59,7 +59,7 @@ Wywołuje polecenie [aparatu szablonów](https://github.com/dotnet/templating) d
 
 Szablon do utworzenia wystąpienia podczas wywoływania polecenia. Każdy szablon może być określone opcje, które można przekazać. Aby uzyskać więcej informacji, zobacz [opcje szablonu](#template-options).
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyskać listę dostępnych szablonów. W poniższej tabeli przedstawiono szablony, które są zainstalowane przy użyciu zestawu .NET Core SDK 2.1.300. Domyślny język dla szablonu jest wyświetlany w nawiasie.
 
@@ -68,8 +68,8 @@ Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyska
 | Aplikacja konsolowa                          | `console`        | [C#], F#, VB  |
 | Biblioteka klas                                | `classlib`       | [C#], F#, VB  |
 | Projekt testów jednostkowych                            | `mstest`         | [C#], F#, VB  |
-| projekt testu xUnit                           | `xunit`          | [C#], F#, VB  |
-| Projekt testu NUnit                           | `nunit`          | [C#], F#, VB  |
+| xUnit test project                           | `xunit`          | [C#], F#, VB  |
+| NUnit test project                           | `nunit`          | [C#], F#, VB  |
 | Strona razor                                   | `page`           | [C#]          |
 | MVC ViewImports                              | `viewimports`    | [C#]          |
 | MVC ViewStart                                | `viewstart`      | [C#]          |
@@ -81,7 +81,7 @@ Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyska
 | Platforma ASP.NET Core z użyciem biblioteki React.js i Redux         | `reactredux`     | [C#]          |
 | Interfejs API sieci Web platformy ASP.NET Core                         | `webapi`         | [C#], F#      |
 | Biblioteki klas razor                          | `razorclasslib`  | [C#]          |
-| plik Global.JSON                             | `globaljson`     |               |
+| global.json file                             | `globaljson`     |               |
 | NuGet config                                 | `nugetconfig`    |               |
 | Konfiguracja sieci Web                                   | `webconfig`      |               |
 | Plik rozwiązania                                | `sln`            |               |
@@ -95,7 +95,7 @@ Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyska
 | Aplikacja konsolowa                          | `console`     | [C#], F#, VB  |
 | Biblioteka klas                                | `classlib`    | [C#], F#, VB  |
 | Projekt testów jednostkowych                            | `mstest`      | [C#], F#, VB  |
-| projekt testu xUnit                           | `xunit`       | [C#], F#, VB  |
+| xUnit test project                           | `xunit`       | [C#], F#, VB  |
 | Platforma ASP.NET Core puste                           | `web`         | [C#], F#      |
 | Aplikacja sieci Web platformy ASP.NET Core (Model-View-Controller) | `mvc`         | [C#], F#      |
 | Aplikacja sieci Web platformy ASP.NET Core                         | `razor`       | [C#]          |
@@ -103,7 +103,7 @@ Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyska
 | Platforma ASP.NET Core z użyciem biblioteki React.js                   | `react`       | [C#]          |
 | Platforma ASP.NET Core z użyciem biblioteki React.js i Redux         | `reactredux`  | [C#]          |
 | Interfejs API sieci Web platformy ASP.NET Core                         | `webapi`      | [C#], F#      |
-| plik Global.JSON                             | `globaljson`  |               |
+| global.json file                             | `globaljson`  |               |
 | NuGet config                                 | `nugetconfig` |               |
 | Konfiguracja sieci Web                                   | `webconfig`   |               |
 | Plik rozwiązania                                | `sln`         |               |
@@ -120,7 +120,7 @@ Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -all` Aby uzys
 | Aplikacja konsolowa  | `console`     | [C#], F#  |
 | Biblioteka klas        | `classlib`    | [C#], F#  |
 | Projekt testów jednostkowych    | `mstest`      | [C#], F#  |
-| projekt testu xUnit   | `xunit`       | [C#], F#  |
+| xUnit test project   | `xunit`       | [C#], F#  |
 | Platforma ASP.NET Core puste   | `web`         | [C#]      |
 | Aplikacja sieci Web platformy ASP.NET Core | `mvc`         | [C#], F#  |
 | Interfejs API sieci Web platformy ASP.NET Core | `webapi`      | [C#]      |
@@ -132,7 +132,7 @@ Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -all` Aby uzys
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--force`
 
@@ -266,9 +266,9 @@ Lokalizacja, aby umieścić wygenerowanych danych wyjściowych. Ustawieniem domy
 
 Każdy szablon projektu może być dostępne dodatkowe opcje. Szablony core są dostępne następujące opcje dodatkowe:
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-**Konsola usługi angular, react, reactredux dla platformy, razorclasslib**
+**console, angular, react, reactredux, razorclasslib**
 
   `--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
 
@@ -368,7 +368,7 @@ Każdy szablon projektu może być dostępne dodatkowe opcje. Szablony core są 
 
 `--no-https` -Projekt nie wymaga protokołu HTTPS. `app.UseHsts` i `app.UseHttpsRedirection` nie są dodawane do `Startup.Configure`. Ta opcja ma zastosowanie tylko wtedy, gdy `Individual`, `IndividualB2C`, `SingleOrg`, lub `MultiOrg` nie są używane.
 
-**Strona**
+**page**
 
 `-na|--namespace <NAMESPACE_NAME>`-Namespace dla wygenerowanego kodu. Wartość domyślna to `MyApp.Namespace`.
 
@@ -474,7 +474,7 @@ Każdy szablon projektu może być dostępne dodatkowe opcje. Szablony core są 
 
 `--no-restore` — Nie jest wykonywana niejawna przywracania, podczas tworzenia projektu.
 
-**Strona**
+**page**
 
 `-na|--namespace <NAMESPACE_NAME>`-Namespace dla wygenerowanego kodu. Wartość domyślna to `MyApp.Namespace`.
 
@@ -536,7 +536,7 @@ Tworzenie *global.json* w bieżącym katalogu, ustawienie wersji zestawu SDK 2.0
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Szablony niestandardowe dla nowej platformy dotnet](custom-templates.md)  
-* [Tworzenie szablonu niestandardowego dla polecenia dotnet new](~/docs/core/tutorials/create-custom-template.md)  
-* [repozytorium GitHub DotNet/dotnet-— przykłady szablonów](https://github.com/dotnet/dotnet-template-samples)  
-* [Dostępne szablony dla nowej platformy dotnet](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+- [Szablony niestandardowe dla nowej platformy dotnet](custom-templates.md)
+- [Tworzenie szablonu niestandardowego dla polecenia dotnet new](~/docs/core/tutorials/create-custom-template.md)
+- [repozytorium GitHub DotNet/dotnet-— przykłady szablonów](https://github.com/dotnet/dotnet-template-samples)
+- [Dostępne szablony dla nowej platformy dotnet](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

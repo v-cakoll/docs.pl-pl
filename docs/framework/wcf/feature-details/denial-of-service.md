@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bc209d184ac330b112d17c34f0bf1c479a8b5f7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516164"
 ---
 # <a name="denial-of-service"></a>Odmowa usługi
 Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie można przetworzyć wiadomości lub są przetwarzane bardzo wolno.  
@@ -26,7 +26,7 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Złośliwy klient wysyła żądania nadmierne licencji usługi  
  Złośliwego klienta bombards usługi za pomocą żądania nadmierne licencji, może spowodować serwer do użycia zbyt dużej ilości pamięci.  
   
- Ograniczenie: Użyj następujących właściwości <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> klasy:  
+ Środki zaradcze: Użyj następujących właściwości <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> klasy:  
   
 -   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: Określa maksymalną liczbę ograniczone czasowo `SecurityContextToken`s, który serwer buforuje po `SPNego` lub `SSL` negocjacji.  
   
@@ -49,7 +49,7 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Nieprawidłowy implementacje zawiesza się usługi Przyczyna może IAuthorizationPolicy  
  Wywoływanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metodę, uszkodzony wykonania <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interfejs może spowodować, że usługa zawiesi się.  
   
- Ograniczenie: Użyj tylko przez zaufany kod. Oznacza to, należy użyć tylko kod, który został zapisany i przetestowane, lub który pochodzi z zaufanego dostawcę. Nie zezwalaj na niezaufane rozszerzenia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> być podłączony do kodu bez ukończenia brany pod uwagę. Dotyczy to wszystkich rozszerzeń używanych w implementacji usługi. Usługi WCF nie powoduje żadnych rozróżnienia między kodu aplikacji i obce kod, który jest podłączony przy użyciu punkty rozszerzeń.  
+ Środki zaradcze: Użyj tylko przez zaufany kod. Oznacza to, należy użyć tylko kod, który został zapisany i przetestowane, lub który pochodzi z zaufanego dostawcę. Nie zezwalaj na niezaufane rozszerzenia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> być podłączony do kodu bez ukończenia brany pod uwagę. Dotyczy to wszystkich rozszerzeń używanych w implementacji usługi. Usługi WCF nie powoduje żadnych rozróżnienia między kodu aplikacji i obce kod, który jest podłączony przy użyciu punkty rozszerzeń.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Rozmiar tokenu maksymalny protokołu Kerberos może być konieczne zmiany rozmiaru  
  Jeśli klient należy do wielu grup (około 900, mimo że rzeczywista liczba różni się zależnie od grup), problem może wystąpić, gdy blok nagłówka komunikatu przekracza 64 kilobajtów. W takim przypadku można zwiększyć maksymalny rozmiar tokenu protokołu Kerberos, zgodnie z opisem w artykule firmy Microsoft Support "[uwierzytelniania protokołu Kerberos programu Internet Explorer zakończy się niepowodzeniem ze względu na niewystarczający bufor, nawiązywanie połączeń z usług IIS](https://go.microsoft.com/fwlink/?LinkId=89176)." Konieczne może również zwiększyć maksymalny rozmiar wiadomości WCF do obsługi większych tokenu protokołu Kerberos.  
@@ -69,21 +69,21 @@ Odmowa usługi występuje, gdy system jest przeciążony w taki sposób, że nie
 ## <a name="protect-configuration-files-with-acls"></a>Ochrona plików konfiguracji przy użyciu list kontroli dostępu  
  Można określić wymaganych i opcjonalnych oświadczeń w kod i pliki konfiguracyjne dla [!INCLUDE[infocard](../../../../includes/infocard-md.md)] wystawionych tokenów. Skutkuje to odpowiednie elementy, które są emitowane w `RequestSecurityToken` wiadomości, które są wysyłane do zabezpieczenia tokenu usługi. Osoba atakująca można modyfikować kodu lub konfiguracji, aby usunąć wymaganego lub opcjonalnego roszczenia, potencjalnie wprowadzenie usługę tokenu zabezpieczającego, aby wystawić tokenu, który nie zezwala na dostęp do usługi docelowej.  
   
- Aby uniknąć: wymaga dostępu do komputera, zmodyfikuj plik konfiguracji. Użyj kontroli dostępu do pliku listy (kontroli dostępu ACL) do zabezpieczenia plików konfiguracyjnych. Usługi WCF wymaga kodu w katalogu aplikacji lub w globalnej pamięci podręcznej zanim umożliwi taki kod, aby go załadować z konfiguracji. Użyj listy ACL katalogu, aby zabezpieczyć katalogi.  
+ Aby uniknąć: Wymaga dostępu do komputera, zmodyfikuj plik konfiguracji. Użyj kontroli dostępu do pliku listy (kontroli dostępu ACL) do zabezpieczenia plików konfiguracyjnych. Usługi WCF wymaga kodu w katalogu aplikacji lub w globalnej pamięci podręcznej zanim umożliwi taki kod, aby go załadować z konfiguracji. Użyj listy ACL katalogu, aby zabezpieczyć katalogi.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Osiągnięto maksymalną liczbę bezpiecznej sesji dla usługi  
  Jeśli klient został pomyślnie uwierzytelniony przez usługę bezpiecznego ustanowiono połączenie z usługą, Usługa przechowuje informacje o sesji, dopóki klient go anuluje lub ważności sesji. Każdy ustanowienie sesji zmniejsza limit maksymalnej liczby aktywnych sesji jednoczesnych, za pomocą usługi. Po osiągnięciu tego limitu klientów, które próbują utworzyć nową sesję przy użyciu tej usługi są odrzucane, dopóki jedna lub więcej aktywne sesje wygaśnie lub zostanie anulowane przez klienta. Klient może mieć wiele sesji przy użyciu usługi, a limit liczony w każdej z nich tymi sesjami.  
   
 > [!NOTE]
->  Gdy używasz stanowych sesji, nie ma zastosowania poprzednim akapicie. Aby uzyskać więcej informacji o sesjach stanowe, zobacz [porady: Tworzenie tokenu kontekstu zabezpieczeń dla sesji bezpiecznego](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Gdy używasz stanowych sesji, nie ma zastosowania poprzednim akapicie. Aby uzyskać więcej informacji o sesjach stanowe, zobacz [jak: Utwórz kontekst zabezpieczeń tokenu dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Aby rozwiązać ten problem, należy ustawić, ustawiając limit maksymalnej liczby aktywnych sesji, a maksymalny okres istnienia sesji <xref:System.ServiceModel.Channels.SecurityBindingElement> właściwość <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Ujawnianie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Ataki oparte na metodzie powtórzeń](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [Manipulowanie](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Nieobsługiwane scenariusze](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Zobacz także
+- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Ujawnianie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Ataki oparte na metodzie powtórzeń](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Manipulowanie](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Nieobsługiwane scenariusze](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

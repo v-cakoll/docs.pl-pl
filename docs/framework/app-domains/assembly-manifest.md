@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0b68eaefcd2901f9cf05d491459b18f94a2614a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8422c0b22f2286df98acbed874344f7664cb8903
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415073"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529767"
 ---
 # <a name="assembly-manifest"></a>Manifest zestawu
 Każdy zestaw statyczny i dynamiczny zawiera kolekcję danych, które opisują powiązania między elementami zawartymi w zestawie. Manifest zestawu zawiera metadane zestawu. W manifeście zestawu znajdują się wszystkie metadane potrzebne do określenia wymagań w zakresie wersji zestawu i tożsamości jego zabezpieczeń, a także wszystkie metadane niezbędne do definiowania zakresu zestawu oraz rozpoznawania odwołań do zasobów i klas. Manifest zestawu może być przechowywany w pliku PE (.exe lub .dll) mającym kod w języku Microsoft Intermediate Language (MSIL) lub w samodzielnym pliku PE, który zawiera tylko dane manifestu zestawu.  
@@ -46,7 +46,7 @@ Typy zestawów
 |-----------------|-----------------|  
 |Nazwa zestawu|Ciąg tekstowy określający nazwę zestawu.|  
 |Numer wersji|Główny i pomocniczy numer wersji oraz numery poprawki i kompilacji. Na podstawie tych numerów środowisko uruchomieniowe języka wspólnego wymusza zasady dotyczące wersji.|  
-|Kultury|Informacje o kulturze lub języku obsługiwanym przez zestaw. Informacji tych należy używać wyłącznie w celu oznaczenia zestawu jako zestawu satelickiego zawierającego informacje specyficzne dla kultury lub języka. (Zestaw z informacjami o kulturze jest automatycznie traktowany jako satelicki).|  
+|Kultura|Informacje o kulturze lub języku obsługiwanym przez zestaw. Informacji tych należy używać wyłącznie w celu oznaczenia zestawu jako zestawu satelickiego zawierającego informacje specyficzne dla kultury lub języka. (Zestaw z informacjami o kulturze jest automatycznie traktowany jako satelicki).|  
 |Informacje o silnej nazwie|Klucz publiczny od wydawcy, jeśli zestawowi nadano silną nazwę.|  
 |Lista wszystkich plików w zestawie|Skrót utworzony na podstawie zawartości każdego pliku w zestawie i nazwy pliku. Wszystkie pliki tworzące zestaw muszą być w tym samym katalogu co plik zawierający manifest zestawu.|  
 |Informacje o odwołaniu do typu|Informacje, na podstawie których środowisko uruchomieniowe mapuje odwołanie do typu na plik zawierający jego deklarację i implementację. Wykorzystywane do typów eksportowanych z zestawu.|  
@@ -54,8 +54,8 @@ Typy zestawów
   
  Niektóre informacje w manifeście zestawu można dodawać i zmieniać w kodzie za pomocą atrybutów zestawu. M.in. można zmienić informacje o wersji i atrybuty informacyjne, w tym dotyczące znaku towarowego, praw autorskich, produktu, firmy i danych informacyjnych wersji. Aby uzyskać pełną listę atrybutów zestawu, zobacz [Konfigurowanie atrybutów zestawu](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
-## <a name="see-also"></a>Zobacz też  
-- [Zawartość zestawu](../../../docs/framework/app-domains/assembly-contents.md)  
-- [Przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md)  
-- [Tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
+## <a name="see-also"></a>Zobacz także
+- [Zawartość zestawu](../../../docs/framework/app-domains/assembly-contents.md)
+- [Przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md)
+- [Tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)

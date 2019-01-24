@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: acd51e06382502fdc2facae939212e02d3675f6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdd90e3d10bc5f110622f11fd5bfd17853142ac2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450079"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516633"
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2 — Interfejs
-Rozszerza [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) uwzględnienie metody pracy ze strumieni metadanych.  
+Rozszerza [imetadatatables —](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) obejmujący metody do pracy ze strumieniami metadanych.  
   
 ## <a name="methods"></a>Metody  
   
@@ -34,14 +34,14 @@ Rozszerza [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/im
 |[GetMetaDataStreamInfo, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Pobiera nazwę, rozmiar i zawartość strumienia metadanych pod określonym indeksem.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

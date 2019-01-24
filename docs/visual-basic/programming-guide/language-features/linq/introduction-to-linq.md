@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0b163ac4af4e487ccab4c18b7907eba5a31e5779
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524056"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Wprowadzenie do LINQ w Visual Basic
 Language-Integrated Query (LINQ) umożliwia wykonywanie zapytań do Visual Basic i dostarcza proste oraz wydajne narzędzia podczas pracy z danymi wszelkiego rodzaju. Zamiast wysyłania kwerendy do bazy danych w celu przetworzenia lub posługiwanie się różną składnią kwerendy dla każdego typu danych, które przeszukujesz, LINQ wprowadza kwerendy jako część języka Visual Basic. Używa zunifikowaną składnię, bez względu na typ danych.  
@@ -38,7 +38,7 @@ Language-Integrated Query (LINQ) umożliwia wykonywanie zapytań do Visual Basic
   
  Visual Basic obejmuje następujących dostawców LINQ.  
   
-|Dostawcy|Opis|  
+|Dostawca|Opis|  
 |---|---|  
 |LINQ do obiektów|Dostawca LINQ to Objects umożliwia zapytania w pamięci, kolekcje i tablice. Jeśli obiekt obsługuje <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601> interfejsu, dostawca LINQ to Objects umożliwia przeprowadzenie w nim zapytania.<br /><br /> Możesz włączyć LINQ do dostawcy obiektów importując <xref:System.Linq> przestrzeń nazw, która jest importowana domyślnie dla wszystkich projektów w języku Visual Basic.<br /><br /> Aby uzyskać więcej informacji dotyczących dostawcy LINQ to Objects, zobacz [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
 |LINQ do SQL|Dostawca LINQ to SQL umożliwia zapytania i modyfikację danych w bazie danych programu SQL Server. Ułatwia to mapowanie modelu obiektu dla aplikacji do tabel i obiektów w bazie danych.<br /><br /> Visual Basic sprawia, że łatwiej jest pracować z LINQ to SQL, umieszczając Object Relational Designer (O/R Designer). Projektant jest używany do tworzenia modelu obiektów w aplikacji, która mapuje do obiektów w bazie danych. O/R Designer również zapewnia funkcje procedurom składowanym w mapie i funkcje <xref:System.Data.Linq.DataContext> obiektu, który zarządza komunikacją z bazą danych i zapisuje stan kontroli optymistycznej współbieżności.<br /><br /> Aby uzyskać więcej informacji dotyczących dostawcy LINQ to SQL, zobacz [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Aby uzyskać więcej informacji dotyczących Object Relational Designer, zobacz [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
@@ -177,7 +177,7 @@ Można użyć dodatkowych funkcji zapytania LINQ, wywołując elementy wyliczaln
   
  Jeśli masz prawidłowe połączenie z bazą danych programu SQL Server, możesz dodać **klasy LINQ do SQL** szablonu elementu projektu. Wyświetli to Object Relational Designer (O/R designer). O/R Designer umożliwia przeciąganie elementów, które chcesz uzyskać dostęp w swoim kodzie z **Eksploratora serwera**/**Eksplorator bazy danych** na powierzchnię projektanta. Plik LINQ to SQL dodaje <xref:System.Data.Linq.DataContext> obiektu do projektu. Ten obiekt zawiera właściwości i kolekcje dla tabel i widoków, które mają dostęp do i metody dla procedur przechowywanych, które ma zostać wywołana. Po zapisaniu zmian do programu LINQ to SQL (.dbml) plik, te obiekty są dostępne w kodzie, odwołując się do <xref:System.Data.Linq.DataContext> obiekt, który jest zdefiniowany przez projektanta O/R. <xref:System.Data.Linq.DataContext> Obiektu dla Twojego projektu jest nazwany na podstawie nazwy użytkownika plik LINQ to SQL. Na przykład plik LINQ to SQL o nazwie Northwind.dbml utworzy <xref:System.Data.Linq.DataContext> obiektu o nazwie `NorthwindDataContext`.  
   
- Przykłady z instrukcjami krok po kroku, zobacz [porady: zapytanie dotyczące bazy danych](how-to-query-a-database-by-using-linq.md) i [porady: wywoływanie procedury przechowywane](how-to-call-a-stored-procedure-by-using-linq.md).  
+ Przykłady z instrukcjami krok po kroku, zobacz [jak: Zapytanie dotyczące bazy danych](how-to-query-a-database-by-using-linq.md) i [jak: Wywoływanie procedury przechowywanej](how-to-call-a-stored-procedure-by-using-linq.md).  
   
 ## <a name="visual-basic-features-that-support-linq"></a>Funkcje Visual Basic obsługujące LINQ  
  Visual Basic obejmuje inne zauważalne cechy, które upewnij korzystanie z LINQ jest proste i zmniejszyć ilość kodu, który trzeba napisać, aby wykonać zapytania LINQ. Należą do nich między innymi:  
@@ -224,32 +224,32 @@ Można użyć dodatkowych funkcji zapytania LINQ, wywołując elementy wyliczaln
 |[LINQ to XML](../../concepts/linq/linq-to-xml.md)|Zawiera ogólne informacje, wskazówki programowania i przykłady dla programu LINQ to XML.|  
   
 ## <a name="how-to-and-walkthrough-topics"></a>Jak wskazówki i porady
- [Porady: zapytanie dotyczące bazy danych](how-to-query-a-database-by-using-linq.md)  
+ [Instrukcje: Zapytanie dotyczące bazy danych](how-to-query-a-database-by-using-linq.md)  
   
- [Porady: wywoływanie procedury przechowywanej](how-to-call-a-stored-procedure-by-using-linq.md)  
+ [Instrukcje: Wywoływanie procedury przechowywanej](how-to-call-a-stored-procedure-by-using-linq.md)  
   
- [Porady: modyfikowanie danych w bazie danych](how-to-modify-data-in-a-database-by-using-linq.md)  
+ [Instrukcje: Modyfikowanie danych w bazie danych](how-to-modify-data-in-a-database-by-using-linq.md)  
   
- [Porady: łączenie danych za pomocą sprzężeń](how-to-combine-data-with-linq-by-using-joins.md)  
+ [Instrukcje: Łączenie danych za pomocą sprzężeń](how-to-combine-data-with-linq-by-using-joins.md)  
   
- [Porady: sortowanie wyników zapytania](how-to-sort-query-results-by-using-linq.md)  
+ [Instrukcje: Sortowanie wyników zapytania](how-to-sort-query-results-by-using-linq.md)  
   
- [Porady: filtrowanie wyników zapytania](how-to-filter-query-results-by-using-linq.md)  
+ [Instrukcje: Filtrowanie wyników zapytania](how-to-filter-query-results-by-using-linq.md)  
   
- [Porady: liczba, Suma lub średnia danych](how-to-count-sum-or-average-data-by-using-linq.md)  
+ [Instrukcje: Liczba, Suma lub średnia danych](how-to-count-sum-or-average-data-by-using-linq.md)  
   
- [Porady: znajdowanie wartości minimalnej lub maksymalnej w wyniku zapytania](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ [Instrukcje: Znajdowanie wartości minimalnej lub maksymalnej w wyniku zapytania](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
- [Instrukcje: przypisywanie procedur składowanych na potrzeby wykonywania aktualizacji, wstawiania i usuwania (O/R Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
+ [Instrukcje: Przypisywanie procedur składowanych na potrzeby wykonywania aktualizacji, wstawiania i usuwania (Object Relational Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
 ## <a name="featured-book-chapters"></a>Polecane rozdziały książki  
  [17 rozdziałów: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) w [Programming Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ (Language-Integrated Query)](../../concepts/linq/index.md)  
-- [Przegląd interfejsu LINQ to XML w Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)  
-- [Omówienie LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)  
-- [Narzędzia LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+- [LINQ (Language-Integrated Query)](../../concepts/linq/index.md)
+- [Przegląd interfejsu LINQ to XML w Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)
+- [Omówienie LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)
+- [Narzędzia LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [Metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

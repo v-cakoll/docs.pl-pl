@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie zasad wydawcy'
+title: 'Instrukcje: Tworzenie zasad wydawcy'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3969f066c0a17424d2c4527d2b4661b30f5bb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530528"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Porady: tworzenie zasad wydawcy
+# <a name="how-to-create-a-publisher-policy"></a>Instrukcje: Tworzenie zasad wydawcy
 Dostawcy zestawów mogą stanu, aplikacje powinny używać nowszej wersji zestawu, dołączając plik zasad wydawcy w z uaktualnionych zestawu. Plik zasad wydawcy określa przekierowanie zestawu i podstawowe ustawienia kodu i ma taki sam format jak plik konfiguracji aplikacji. Plik zasad wydawcy jest skompilowany w zestawie i umieszczone w globalnej pamięci podręcznej.  
   
  Istnieją trzy kroki związane z tworzeniem zasad wydawcy:  
@@ -55,7 +55,7 @@ Dostawcy zestawów mogą stanu, aplikacje powinny używać nowszej wersji zestaw
   
 1.  Wpisz następujące polecenie w wierszu polecenia:  
   
-     **Al/Link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/KeyFile:**  *keyPairFile* **/platform:** *processorArchitecture*  
+     **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
      W tym poleceniu:  
   
@@ -102,11 +102,11 @@ Dostawcy zestawów mogą stanu, aplikacje powinny używać nowszej wersji zestaw
     > [!IMPORTANT]
     >  Nie można dodać zestaw zasad wydawcy do globalnej pamięci podręcznej, chyba że oryginalny plik zasad wydawcy znajduje się w tym samym katalogu co zestaw.  
   
-## <a name="see-also"></a>Zobacz też  
- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Konfigurowanie aplikacji](../../../docs/framework/configure-apps/index.md)  
- [Konfigurowanie aplikacji programu .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
- [Schemat ustawień środowiska uruchomieniowego](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)  
- [Przekierowywanie wersji zestawu](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>Zobacz także
+- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Konfigurowanie aplikacji](../../../docs/framework/configure-apps/index.md)
+- [Konfigurowanie aplikacji programu .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Schemat ustawień środowiska uruchomieniowego](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)
+- [Przekierowywanie wersji zestawu](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

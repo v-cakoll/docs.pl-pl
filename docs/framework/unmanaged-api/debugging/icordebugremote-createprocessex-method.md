@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06bdc3605d981acad68a97901627f361da4061c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efc46a0128a4fb9a0edaa86ad20689fda0c2710b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521780"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx — Metoda
 Uruchamia proces na komputerze zdalnym w debugerze.  
@@ -49,65 +49,65 @@ HRESULT CreateProcessEx (
   
 #### <a name="parameters"></a>Parametry  
  `pRemoteTarget`  
- [in] Wskaźnik do [ICorDebugRemoteTarget — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Używany do określenia komputer zdalny, na którym zostanie uruchomiony proces.  
+ [in] Wskaźnik do [icordebugremotetarget — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Używany do określenia komputera zdalnego, na którym zostanie uruchomiony proces.  
   
  `lpApplicationName`  
- [in] Wskaźnik do zerem ciąg, który określa moduł, który ma być wykonane przez uruchomionego procesu. Moduł jest wykonywany w kontekście zabezpieczeń procesu wywołującego.  
+ [in] Wskaźnik Określa moduł, który ma być wykonane przez uruchomienie procesu ciąg zakończony znakiem null. Moduł jest wykonywany w kontekście zabezpieczeń procesu wywołującego.  
   
  `lpCommandLine`  
- [in] Wskaźnik do zerem ciąg, który określa wiersz polecenia ma być wykonane przez uruchomionego procesu.  
+ [in] Wskaźnik na ciąg zakończony znakiem null, który określa wiersz poleceń do wykonania przez uruchomienie procesu.  
   
  `lpProcessAttributes`  
- [in] Nieużywane do zdalnego debugowania.  
+ [in] Nieużywane dla zdalnego debugowania.  
   
  `lpThreadAttributes`  
- [in] Nieużywane do zdalnego debugowania.  
+ [in] Nieużywane dla zdalnego debugowania.  
   
  `bInheritHandles`  
- [in] Nieużywane do zdalnego debugowania.  
+ [in] Nieużywane dla zdalnego debugowania.  
   
  `dwCreationFlags`  
- [in] Nieużywane do zdalnego debugowania.  
+ [in] Nieużywane dla zdalnego debugowania.  
   
  `lpEnvironment`  
  [in] Wskaźnik do bloku środowiska dla nowego procesu.  
   
  `lpCurrentDirectory`  
- [in] Wskaźnik do zerem ciąg, który określa pełną ścieżkę do katalogu bieżącego procesu. Jeśli ten parametr ma wartość null, nowy proces będzie mieć tego samego bieżącego dysku i katalogu jako proces wywoływania.  
+ [in] Wskaźnik na ciąg zakończony znakiem null, który określa pełną ścieżkę do katalogu bieżącego procesu. Jeśli ten parametr ma wartość null, nowy proces, będzie miał ten sam bieżącego dysku i katalogu jako procesu wywołującego.  
   
  `lpStartupInfo`  
- [in] Nieużywane do zdalnego debugowania.  
+ [in] Nieużywane dla zdalnego debugowania.  
   
  `lpProcessInformation`  
- [in] Nieużywane do zdalnego debugowania.  
+ [in] Nieużywane dla zdalnego debugowania.  
   
  `debuggingFlags`  
- [in] Nieużywane do zdalnego debugowania.  
+ [in] Nieużywane dla zdalnego debugowania.  
   
  `ppProcess`  
- [out] Wskaźnik do obiektu "ICorDebugProcess — interfejs", który reprezentuje proces adres.  
+ [out] Wskaźnik do adresu obiektu "Icordebugprocess — interfejs", który reprezentuje proces.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- Pomyślne uruchomienie procesu na komputerze zdalnym i zwrócony "ICorDebugProcess — interfejs" do debugowania.  
+ Pomyślnie uruchomiono proces na komputerze zdalnym i zwrócony "icordebugprocess — interfejs" do debugowania.  
   
- E_FAIL (lub inne kody powrotu E_)  
- Nie można uruchomić procesu na komputerze zdalnym i wrócić do debugowania "ICorDebugProcess — interfejs".  
+ E_FAIL (lub inne kody powrotne e_)  
+ Nie można uruchomić procesu na komputerze zdalnym i zwracają "Interfejs ICorDebugProcess" do debugowania.  
   
 ## <a name="remarks"></a>Uwagi  
  Debugowanie w trybie mieszanym nie jest obsługiwane w programie Silverlight.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl  
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:** 4.5, 4, 3.5 z dodatkiem SP1  
+ **Wersje programu .NET framework:** 4.5, 4, 3.5 Z DODATKIEM SP1  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugRemote, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugRemote, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

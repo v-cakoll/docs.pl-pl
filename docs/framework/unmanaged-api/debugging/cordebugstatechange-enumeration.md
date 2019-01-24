@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 841108457293e3377ee87f9c7d7c6898340e51b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f0f692b692628d50755ce813c66823f940dccb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513792"
 ---
 # <a name="cordebugstatechange-enumeration"></a>Wyliczenie CorDebugStateChange
 W tym artykule opisano wielkość pamięci podręcznej danych, które muszą zostać odrzucone na podstawie zmian do procesu.  
@@ -36,17 +36,17 @@ typedef enum CorDebugStateChange
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`PROCESS_RUNNING`|Proces osiągnięto nowy stan pamięci przez wykonanie do przodu.|  
-|`SET_CONTEXT_FLAG_UNWIND_FRAME`|Pamięć procesu może być arbitralnie inny niż wcześniej.|  
+|`PROCESS_RUNNING`|Proces osiągnięto nowy stan pamięci za pomocą wykonywania do przodu.|  
+|`SET_CONTEXT_FLAG_UNWIND_FRAME`|Pamięć procesu może być dowolnie inny niż wcześniej.|  
   
 ## <a name="remarks"></a>Uwagi  
- Członek `CorDebugStateChange` wyliczenie jest podana jako wartość argumentu, gdy debuger wywołuje [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) — metoda  
+ Członek `CorDebugStateChange` wyliczenia jest dostarczana jako argument, gdy wywołuje debugera [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) — metoda  
   
 > [!NOTE]
->  To wyliczenie jest przeznaczona do użycia w platformę .NET Native tylko w scenariuszach debugowania.  
+>  To wyliczenie jest przeznaczona do użytku w .NET Native tylko w scenariuszach debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -54,6 +54,6 @@ typedef enum CorDebugStateChange
   
  **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

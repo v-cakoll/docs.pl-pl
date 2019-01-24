@@ -1,6 +1,6 @@
 ---
-title: 'Porady: wpisywanie tekstu do pliku'
-ms.date: 03/30/2017
+title: 'Instrukcje: Zapisywanie tekstu do pliku'
+ms.date: 01/04/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,86 +13,62 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c637d9842c05f47bfcaa0431dd2f9f1ee29cc09
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93d87dc98284fad6b8159f681f7d99ce460d60d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524198"
 ---
-# <a name="how-to-write-text-to-a-file"></a>Porady: wpisywanie tekstu do pliku
-Ten temat przedstawia różne sposoby można wpisać tekst w pliku dla aplikacji .NET Framework lub [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Następujące klasy i metody są zwykle używane do zapisywanie tekstu do pliku:  
-  
--   <xref:System.IO.StreamWriter> — zawiera metody służące do zapisu do pliku synchronicznie (<xref:System.IO.StreamWriter.Write%2A> lub <xref:System.IO.TextWriter.WriteLine%2A>) lub asynchronicznie (<xref:System.IO.StreamWriter.WriteAsync%2A> i <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
-  
--   <xref:System.IO.File> — do użycia w aplikacjach .NET Framework. Zapewnia metody statyczne próbę zapisania tekstu do pliku, taką jak <xref:System.IO.File.WriteAllLines%2A> i <xref:System.IO.File.WriteAllText%2A>, lub dołączyć tekst do pliku (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> lub <xref:System.IO.File.AppendText%2A>).  
-  
--   <xref:Windows.Storage.FileIO> — do użycia z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zawiera on metod asynchronicznych próbę zapisania tekstu do pliku (<xref:Windows.Storage.FileIO.WriteLinesAsync%2A> lub <xref:Windows.Storage.FileIO.WriteTextAsync%2A>) lub dołączyć tekst do pliku (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> lub <xref:Windows.Storage.FileIO.AppendTextAsync%2A>).  
+# <a name="how-to-write-text-to-a-file"></a>Instrukcje: Zapisywanie tekstu do pliku
+W tym temacie przedstawiono różne sposoby zapisywanie tekstu do pliku dla aplikacji platformy .NET. 
 
-- <xref:System.IO.Path> — do użycia na ciągi, które zawierają informacje o ścieżce pliku lub katalogu. Zawiera on <xref:System.IO.Path.Combine%2A> metody, która umożliwia łączenie ciągów, aby zbudować ścieżki pliku lub katalogu.
+Następujące klasy i metody są zwykle używane do zapisywanie tekstu do pliku:  
+  
+-   <xref:System.IO.StreamWriter> zawiera metody do zapisu do pliku synchronicznie (<xref:System.IO.StreamWriter.Write%2A> i <xref:System.IO.TextWriter.WriteLine%2A>) lub asynchronicznie (<xref:System.IO.StreamWriter.WriteAsync%2A> i <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
+  
+-   <xref:System.IO.File> udostępnia metody statyczne do zapisywanie tekstu do pliku, taką jak <xref:System.IO.File.WriteAllLines%2A> i <xref:System.IO.File.WriteAllText%2A>, lub dołączyć tekst do pliku, taką jak <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A>, i <xref:System.IO.File.AppendText%2A>.  
+  
+- <xref:System.IO.Path> Służy do ciągów zawierających informacje o ścieżce pliku lub katalogu. Zawiera on <xref:System.IO.Path.Combine%2A> metody i, w programie .NET Core 2.1 i nowsze, <xref:System.IO.Path.Join%2A> i <xref:System.IO.Path.TryJoin%2A> metod, które umożliwiają łączenie ciągów, aby zbudować ścieżki pliku lub katalogu.
 
+> [!NOTE]
+> W poniższych przykładach pokazano minimalnej ilości kodu. Aplikacja rzeczywistych zwykle zapewnia bardziej niezawodne sprawdzanie błędów i wyjątków.  
+  
+## <a name="example-synchronously-write-text-with-streamwriter"></a>Przykład: Synchronicznie wpisać tekst za pomocą StreamWriter
 
- Przykłady te zostały uproszczone celu skupiania się na zadanie wykonywane. Z tego powodu przykłady wykonać sprawdzanie błędów minimalny i obsługę wyjątków, jeśli istnieje. Aplikacji rzeczywistych zwykle zapewnia bardziej niezawodne sprawdzanie błędów i wyjątków.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak synchronicznie zapisywanie tekstu do nowego pliku przy użyciu <xref:System.IO.StreamWriter> klasy jeden wiersz w danym momencie. Nowy plik tekstowy są zapisywane w folderze Moje dokumenty użytkownika. Ponieważ <xref:System.IO.StreamWriter> obiektu jest zadeklarowana i tworzone w `using` instrukcji <xref:System.IO.StreamWriter.Dispose%2A> wywoływana jest metoda, która automatycznie opróżnia i zamyka strumienia.  
-  
- [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeline)] 
- [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeline)]  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak dołączyć tekst do istniejącego pliku przy użyciu <xref:System.IO.StreamWriter> klasy. Używa tego samego pliku tekstowego z poprzedniego przykładu.  
-  
- [!code-csharp[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#appendtext)] 
- [!code-vb[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#appendtext)]     
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak asynchronicznie zapisywanie tekstu do nowego pliku przy użyciu <xref:System.IO.StreamWriter> klasy. Aby można było wywołać <xref:System.IO.StreamWriter.WriteAsync%2A> metoda, wywołanie metody musi mieścić się w `async` metody. Nowy plik tekstowy są zapisywane w folderze Moje dokumenty użytkownika.  
-  
- [!code-csharp[Conceptual.BasicIO.TextFiles#WriteAsync](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeasync)] 
- [!code-vb[Conceptual.BasicIO.TextFiles#WriteAsync](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeasync)]  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak zapisywanie tekstu do nowego pliku i dołączyć nowe wiersze tekstu do tego samego pliku przy użyciu <xref:System.IO.File> klasy. <xref:System.IO.File.WriteAllText%2A> i <xref:System.IO.File.AppendAllLines%2A> metod Otwórz i zamknij plik automatycznie. Jeśli ścieżka uzyskiwanie <xref:System.IO.File.WriteAllText%2A> metody już istnieje, plik zostanie zastąpiony.  
-  
- [!code-csharp[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writefile)] 
- [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak asynchronicznego zapisu danych wejściowych użytkownika do pliku tekstowego w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Ze względów bezpieczeństwa, otwierając plik z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji zwykle wymaga użycia <xref:Windows.Storage.Pickers.FileOpenPicker> kontroli. W tym przykładzie `FileOpenPicker` jest filtrowany w celu wyświetlania plików tekstowych.  
-  
-```xaml  
-<Page  
-    x:Class="OpenFileWindowsStore.MainPage"  
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-    xmlns:local="using:OpenFileWindowsStore"  
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
-    mc:Ignorable="d">  
-  
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">  
-        <Button Content="save text to a file" HorizontalAlignment="Left" Margin="103,417,0,0" VerticalAlignment="Top"   
-                Width="329" Height="86" FontSize="35" Click="Button_Click"/>  
-        <TextBox Name="UserInputTextBox"  FontSize="18" HorizontalAlignment="Left" Margin="106,146,0,0"   
-                 TextWrapping="Wrap" Text="Write some text here, and select a file to write it to." VerticalAlignment="Top"   
-                 Height="201" Width="558" AcceptsReturn="True"/>  
-        <TextBlock Name="StatusTextBox" HorizontalAlignment="Left" Margin="106,570,0,147" TextWrapping="Wrap" Text="Status:"   
-                   VerticalAlignment="Center" Height="51" Width="1074" FontSize="18" />  
-    </Grid>  
-</Page>  
-```  
-  
- [!code-csharp[OpenFileWindowsStore#Code](../../../samples/snippets/csharp/VS_Snippets_CLR/openfilewindowsstore/cs/mainpage.xaml.cs#code)]
- [!code-vb[OpenFileWindowsStore#Code](../../../samples/snippets/visualbasic/VS_Snippets_CLR/openfilewindowsstore/vb/mainpage.xaml.vb#code)]  
-  
+Poniższy przykład pokazuje, jak używać <xref:System.IO.StreamWriter> klasy synchronicznie zapisywanie tekstu do nowego jeden wiersz pliku naraz. Ponieważ <xref:System.IO.StreamWriter> obiektu jest zadeklarowana i tworzone w `using` instrukcji <xref:System.IO.StreamWriter.Dispose%2A> wywoływana jest metoda, która automatycznie opróżnia i zamyka strumienia.  
+
+[!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/write.cs)] 
+[!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/write.vb)]  
+
+## <a name="example-synchronously-append-text-with-streamwriter"></a>Przykład: Synchronicznie dołączyć tekst za pomocą StreamWriter
+
+Poniższy przykład pokazuje, jak używać <xref:System.IO.StreamWriter> klasy synchronicznie dołączyć tekst do pliku tekstowego, utworzony w pierwszym przykładzie.   
+
+[!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/append.cs)] 
+[!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/append.vb)]  
+
+## <a name="example-asynchronously-write-text-with-streamwriter"></a>Przykład: Asynchronicznie zapis tekstu za pomocą StreamWriter
+
+Poniższy przykład pokazuje, jak asynchronicznie zapisywanie tekstu do nowego pliku przy użyciu <xref:System.IO.StreamWriter> klasy. Aby wywołać <xref:System.IO.StreamWriter.WriteAsync%2A> metody wywołania metody które muszą znajdować się w `async` metody. C# Przykład wymaga C# 7.1 lub nowszej, który dodaje obsługę `async` modyfikator dla punktu wejścia programu. 
+
+[!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/async.cs)] 
+[!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/async.vb)]  
+
+## <a name="example-write-and-append-text-with-the-file-class"></a>Przykład: Pisanie i dołączyć tekst z klasą plików
+
+Poniższy przykład pokazuje, jak zapisywanie tekstu do nowego pliku i dołączyć nowe wiersze tekstu do tego samego pliku przy użyciu <xref:System.IO.File> klasy. <xref:System.IO.File.WriteAllText%2A> i <xref:System.IO.File.AppendAllLines%2A> metod Otwórz i zamknij plik automatycznie. Jeśli ścieżka uzyskiwanie <xref:System.IO.File.WriteAllText%2A> metody już istnieje, zostanie on zastąpiony.  
+
+[!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/file.cs)] 
+[!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/file.vb)]  
+
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IO.StreamWriter>  
-- <xref:System.IO.Path>  
-- <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
-- [Instrukcje: wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [Instrukcje: odczyt i zapis we właśnie utworzonym pliku danych](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [Instrukcje: otwieranie pliku dziennika i dołączanie do niego](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Instrukcje: odczytywanie tekstu z pliku](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- <xref:System.IO.StreamWriter>
+- <xref:System.IO.Path>
+- <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>
+- [Instrukcje: Wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [Instrukcje: Odczyt i zapis do pliku danych nowo utworzone](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [Instrukcje: Otwieranie i dołączanie do pliku dziennika](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [Instrukcje: Odczytywanie tekstu z pliku](../../../docs/standard/io/how-to-read-text-from-a-file.md)
 - [We/Wy plików i strumieni](../../../docs/standard/io/index.md)

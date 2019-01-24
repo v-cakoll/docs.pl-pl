@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fc6d08e960b0ba82c76945a318ec723546f71b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9796dd234611fd6bbdf2b949b8a0ed66527aaba9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521260"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags — Wyliczenie
-Zawiera wartości, które opisano funkcje wykonawcze języka zestawu.  
+Zawiera wartości, które opisują zestawu funkcji środowiska uruchomieniowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,24 +42,24 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|Określa, że definicje wyeksportowanego typu niejawnych plików wchodzących w skład zestawu. W wersje programu .NET Framework 1.0 i 1.1 Ta wartość jest zawsze przyjęto, należy ustawić wartość.|  
-|`afImplicitResources`|Określa, że niejawnych plików wchodzących w skład zestawu definicji zasobu. W .NET Framework 1.0 i 1.1 Ta wartość jest zawsze przyjęto, należy ustawić wartość.|  
-|`afNonSideBySideAppDomain`|Określa, że zestaw nie można wykonać z innymi wersjami, jeśli działają w tej samej domenie aplikacji.|  
-|`afNonSideBySideProcess`|Określa, że zestaw nie można wykonać z innymi wersjami, jeśli są na nich uruchomione w tym samym procesie.|  
-|`afNonSideBySideMachine`|Określa, że zestaw nie można wykonać z innymi wersjami, jeśli są na nich uruchomione na tym samym komputerze.|  
+|`afImplicitExportedTypes`|Określa, czy niejawne w ramach plików, wchodzące w skład zestawu definicji eksportowanego typu. W .NET Framework w wersji 1.0 i 1.1 Ta wartość jest zawsze zakłada się, że można ustawić.|  
+|`afImplicitResources`|Określa, że definicje są niejawne w ramach plików, wchodzące w skład zestawu. W .NET Framework 1.0 i 1.1 Ta wartość jest zawsze zakłada się, że można ustawić.|  
+|`afNonSideBySideAppDomain`|Określa, że zestaw nie można wykonać z innymi wersjami, jeśli są uruchomione w tej samej domenie aplikacji.|  
+|`afNonSideBySideProcess`|Określa, że zestaw nie można wykonać z innymi wersjami, jeśli są uruchomione w tym samym procesie.|  
+|`afNonSideBySideMachine`|Określa, że zestaw nie można wykonać z innymi wersjami, jeśli są uruchomione na tym samym komputerze.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartości między 0x0010 i 0x0070 włącznie, służą do opisywania funkcje zgodności side-by-side przywoływanego zestawu. Jeśli żadna z tych wartości, zestaw zakłada się, że side-by-side zgodny.  
+ Wartości między 0x0010 i 0x0070 włącznie, są używane do opisywania funkcje zgodności side-by-side przywoływanego zestawu. Jeśli żadna z tych wartości są ustawione, zestaw zakłada się, że zgodne side-by-side.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MsCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

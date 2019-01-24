@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: 24657f541daf5bb098f8db3b59a3241ecf832d39
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b05ff42fc79a8fc39b7ebe4969875dbadf0dab7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527734"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transakcja i operacje kopiowania zbiorczego
 Jako operacje izolowanej lub w ramach wielu transakcji krok można wykonać operacji kopiowania zbiorczego. Tę opcję, ostatnie pozwala wykonać kilka operacji kopiowania zbiorczego w ramach tej samej transakcji, a także wykonywać inne operacje bazy danych (na przykład wstawiania, aktualizacji i usuwania) przy zachowaniu możliwości Zatwierdź lub Wycofaj całą transakcję.  
@@ -59,6 +59,6 @@ Jako operacje izolowanej lub w ramach wielu transakcji krok można wykonać oper
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Operacje kopiowania masowego w programie SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Operacje kopiowania masowego w programie SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

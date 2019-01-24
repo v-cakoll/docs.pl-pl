@@ -1,25 +1,25 @@
 ---
-title: Zakres domyślne obszary nazw w Visual Basic
+title: Zakres domyślnych przestrzeni nazw w języku Visual Basic
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: a0c07c1b6ca4fea836bd37e4a311655fcb1d7878
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c48273f3788e20e24832be8bf2013af22419fac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527019"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a>Zakres domyślne obszary nazw w Visual Basic
-Domyślne obszary nazw reprezentowany w drzewie XML nie są w zakresie zapytania. Jeśli masz kod XML, który znajduje się w domyślnej przestrzeni nazw, nadal należy zadeklarować <xref:System.Xml.Linq.XNamespace> zmienną i połączyć ją z nazwą lokalną aby kwalifikowana nazwa do użycia w zapytaniu.  
+# <a name="scope-of-default-namespaces-in-visual-basic"></a>Zakres domyślnych przestrzeni nazw w języku Visual Basic
+Domyślne obszary nazw, reprezentowany w drzewie XML nie są uwzględnione w zakresie zapytania. Jeśli masz plik XML, który znajduje się w domyślnej przestrzeni nazw, nadal należy zadeklarować <xref:System.Xml.Linq.XNamespace> zmienną i łączą je z nazwą lokalną, można utworzyć kwalifikowane nazwy ma być używany w zapytaniu.  
   
- Jest jedną z najczęściej występujących problemów podczas wykonywania zapytania drzewa XML, że jeśli drzewo składni XML ma domyślnej przestrzeni nazw, deweloper czasami zapisuje zapytanie tak, jakby plik XML nie zostały w przestrzeni nazw.  
+ Jedną z najbardziej typowych problemów podczas wykonywania zapytań dotyczących drzew XML jest, że jeśli drzewa XML ma domyślny obszar nazw, deweloper czasami zapisuje zapytanie tak, jakby plik XML nie znajdowały się w przestrzeni nazw.  
   
- Pierwszy zestaw przykłady w tym temacie przedstawiono typowy sposób XML w domyślnej przestrzeni nazw jest załadowany, ale jest poddawany kwerendzie nieprawidłowo.  
+ Pierwszy zestaw przykładów w tym temacie przedstawiono typowy sposób XML w domyślnej przestrzeni nazw jest ładowany, że jest nieprawidłowo wysyłane zapytanie.  
   
- Drugi zestaw przykładach niezbędnych poprawek, aby wykonać zapytanie XML w przestrzeni nazw.  
+ Drugi zestaw przykładach pokazano niezbędnych poprawek, dzięki czemu można tworzyć zapytania XML w przestrzeni nazw.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład przedstawia tworzenie XML w przestrzeni nazw, a następnie ustaw kwerendę, która zwraca żadnego wyniku.  
+ W tym przykładzie pokazano tworzenie obiektu XML w przestrzeni nazw i ustaw zapytania, które zwraca żadnego wyniku.  
   
 ### <a name="code"></a>Kod  
   
@@ -56,9 +56,9 @@ End of result set
 ```  
   
 ## <a name="example"></a>Przykład  
- Ten przykład przedstawia tworzenie XML w przestrzeni nazw i zapytanie zakodowanej poprawnie.  
+ W tym przykładzie pokazano tworzenie obiektu XML w przestrzeni nazw i zapytanie, które są poprawnie kodowane.  
   
- W przeciwieństwie do niepoprawnie zakodowany powyższym przykładzie właściwe podejście, korzystając z języka Visual Basic jest zadeklarować i zainicjować domyślnej globalnej przestrzeni nazw. Wszystkie właściwości XML to umieszcza w domyślnej przestrzeni nazw. Nie inne zmiany są wymagane, na przykład aby działać poprawnie.  
+ W przeciwieństwie do kodowane niepoprawnie powyższym przykładzie właściwe podejście, korzystając z języka Visual Basic jest zadeklarowania i zainicjowania domyślnej globalnej przestrzeni nazw. Umieszcza wszystkie właściwości XML domyślny obszar nazw. Nie inne modyfikacje są wymagane do przykładu tak, aby upewnić się, że działa prawidłowo.  
   
 ### <a name="code"></a>Kod  
   
@@ -99,5 +99,5 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Praca z przestrzeni nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

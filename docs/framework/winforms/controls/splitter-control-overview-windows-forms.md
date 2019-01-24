@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 9d36a0cc7117ab88dc575f0f9531c93814243f4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 583596ec44dd5318c199d6cfc33901dbd952b115
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522612"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Splitter — Informacje o formancie (Formularze systemu Windows)
 > [!IMPORTANT]
->  Mimo że <xref:System.Windows.Forms.SplitContainer> zastępuje i dodaje funkcje do <xref:System.Windows.Forms.Splitter> kontrolę nad poprzednie wersje <xref:System.Windows.Forms.Splitter> są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana.  
+>  Mimo że <xref:System.Windows.Forms.SplitContainer> zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.Splitter> kontrolki z poprzednich wersji <xref:System.Windows.Forms.Splitter> został zachowany na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości wybranie opcji.  
   
- Formularze systemu Windows <xref:System.Windows.Forms.Splitter> formantów służą do zmiany rozmiaru formantów dokowanych w czasie wykonywania. <xref:System.Windows.Forms.Splitter> Kontroli jest często używane w formularzach z formantami, które mają różne długości danych do prezentowania, takich jak Eksplorator Windows, w których okienka dane zawierają informacje o różnej szerokości w różnym czasie.  
+ Windows Forms <xref:System.Windows.Forms.Splitter> formantów służą do zmiany rozmiaru zadokowanych formantów w czasie wykonywania. <xref:System.Windows.Forms.Splitter> Kontroli jest często używana w formularzach za pomocą formantów, które mają różne długości danych, aby zaprezentować, takich jak Eksplorator Windows, którego okienka danych zawierają informacje o różnych szerokościach w różnym czasie.  
   
-## <a name="working-with-the-splitter-control"></a>Praca z formantem podziału  
- Gdy użytkownik wskaże wskaźnik myszy na krawędzi niezadokowanego formantu, który można zmienić rozmiar przez formant rozdzielacza, kursor zmienia jego wygląd, aby wskazać, że można zmienić rozmiar formantu. Za pomocą formantu podziału użytkownika można zmienić rozmiar zadokowanego kontrolkę, która jest bezpośrednio przed. W związku z tym aby umożliwić użytkownikowi zmienianie rozmiaru formantu zadokowanych w czasie wykonywania, dock formant oznaczającej krawędzią kontenera i następnie dokowanie formant rozdzielacza do tej samej stronie tego kontenera.  
+## <a name="working-with-the-splitter-control"></a>Praca z Splitter — formant  
+ Gdy użytkownik wskaże wskaźnik myszy na niezadokowane krawędzi kontrolki, która może zmienić rozmiar Splitter — formant, kursor zmienia jego wygląd, aby wskazać, że można zmienić rozmiar kontrolki. Za pomocą kontrolki rozdzielacz użytkownika można zmienić rozmiar zadokowany formant, który jest bezpośrednio przed. W związku z tym aby umożliwić użytkownikowi na zmienianie rozmiaru kontrolki zadokowany w czasie wykonywania, zadokować kontroli rozmiaru krawędzią kontenera, a następnie Zadokuj Splitter — formant do tej samej stronie tego kontenera.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.SplitContainer>  
- [Instrukcje: dokowanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.SplitContainer>
+- [Instrukcje: Dokowanie formantów na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
+- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

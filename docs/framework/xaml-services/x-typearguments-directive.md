@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520181"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments — dyrektywa
 Przebiegi, ograniczając wpisz argumenty ogólne do konstruktora typu ogólnego.  
@@ -64,7 +64,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
 -   Tylko element główny plik XAML może obsługiwać ogólnego użycia XAML, który odwołuje się do typu ogólnego.  
   
--   Element główny musi być mapowane z co najmniej jeden typ argumentu typu ogólnego. Na przykład <xref:System.Windows.Navigation.PageFunction%601>. Funkcje strony są podstawowy scenariusz obsługi ogólnego użycia XAML w WPF.  
+-   Element główny musi być mapowane z co najmniej jeden typ argumentu typu ogólnego. Może to być na przykład <xref:System.Windows.Navigation.PageFunction%601>. Funkcje strony są podstawowy scenariusz obsługi ogólnego użycia XAML w WPF.  
   
 -   Element główny element XAML obiektu dla ogólnej musi również zadeklarować klasy częściowej przy użyciu `x:Class`. Ta zasada obowiązuje, nawet w przypadku definiowania WPF Akcja kompilacji.  
   
@@ -81,8 +81,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
  Na platformie WPF i przeznaczonych dla [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć XAML 2009 — funkcje wraz z `x:TypeArguments` , ale tylko w przypadku luźne XAML (XAML, która nie jest kompilowana do znaczników). XAML kompilowana do znaczników dla platformy WPF i formularz BAML XAML aktualnie nie obsługują tych funkcji i słowa kluczowe XAML 2009. Jeśli potrzebujesz do znaczników kompilacji XAML, musi działać w ramach ograniczenia, o których wspomniano w sekcji "XAML 2006 i WPF ogólny XAML użycia".  
   
-## <a name="see-also"></a>Zobacz też  
- [x:Class, dyrektywa](../../../docs/framework/xaml-services/x-class-directive.md)  
- [x:Type, rozszerzenie znaczników](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Typy wbudowane dla wspólnych elementów podstawowych języka XAML](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
- [Typy ogólne w XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a>Zobacz także
+- [x:Class, dyrektywa](../../../docs/framework/xaml-services/x-class-directive.md)
+- [x:Type, rozszerzenie znaczników](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Typy wbudowane dla wspólnych elementów podstawowych języka XAML](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
+- [Typy ogólne w XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f3ac053f12cb4bc37ab0bd16036fb561f8f176c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519128"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification — Metoda
-Udostępnia funkcję wywołania zwrotnego, które na pewno jest wywoływana, gdy wspólne środowisko uruchomieniowe (języka wspólnego CLR) w wersji językowej jest ładowana jako pierwsza, ale jeszcze nie uruchomiono. Ta metoda zastępuje [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) funkcji.  
+Oferuje funkcję wywołania zwrotnego, która może być wywoływana, gdy typowe wersję środowiska uruchomieniowego (języka wspólnego CLR) języka jest ładowana jako pierwsza, ale jeszcze nie rozpoczęty. Ta metoda zastępuje [lockclrversion —](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,10 +36,10 @@ HRESULT RequestRuntimeLoadedNotification (
   
 #### <a name="parameters"></a>Parametry  
  `pCallbackFunction`  
- [in] Funkcja wywołania zwrotnego, które jest wywoływane, gdy nowe środowisko uruchomieniowe został załadowany.  
+ [in] Funkcja wywołania zwrotnego, która jest wywoływana po załadowaniu nowego środowiska uruchomieniowego.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
@@ -47,15 +47,15 @@ HRESULT RequestRuntimeLoadedNotification (
 |E_POINTER|`pCallbackFunction` ma wartość null.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołania zwrotnego działa w następujący sposób:  
+ Wywołanie zwrotne działa w następujący sposób:  
   
--   Wywołanie zwrotne jest wywoływane tylko wtedy, gdy środowisko wykonawcze jest załadowany po raz pierwszy.  
+-   Wywołanie zwrotne jest wywoływane tylko wtedy, gdy środowisko uruchomieniowe jest ładowany po raz pierwszy.  
   
--   Wywołanie zwrotne nie jest wywoływany w przypadku współużytkowane obciążeń tego samego środowiska uruchomieniowego.  
+-   Wywołanie zwrotne nie jest wywoływany w przypadku obciążeń współużytkowane tego samego środowiska uruchomieniowego.  
   
--   W przypadku obciążeń runtime nie obsługującą wywołań funkcji wywołania zwrotnego są serializowane.  
+-   W przypadku obciążeń nie obsługującą środowiska uruchomieniowego są serializowane wywołania do funkcji wywołania zwrotnego.  
   
- Funkcja wywołania zwrotnego zawiera następujące prototypu:  
+ Funkcja wywołania zwrotnego zawiera poniższy prototyp:  
   
 ```  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
@@ -78,26 +78,26 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Jeśli host zamierza obciążenia lub spowodować innego środowiska uruchomieniowego do załadowania w sposób współużytkowane `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` parametrów, które są podane podczas wywołania zwrotnego funkcja musi być używany w następujący sposób:  
+ Jeśli host zamierza obciążenia lub powodują, że innego środowiska uruchomieniowego do załadowania w sposób współużytkowane `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` parametry, które znajdują się w wywołania zwrotnego funkcji muszą być używane w następujący sposób:  
   
--   `pfnCallbackThreadSet` musi zostać wywołany w wątku, który może spowodować, że obciążenia środowiska wykonawczego przed próbą takie obciążenia.  
+-   `pfnCallbackThreadSet` musi zostać wywołany przez wątek, który może spowodować obciążenia środowiska uruchomieniowego, przed próbą takie obciążenia.  
   
--   `pfnCallbackThreadUnset` musi być wywoływana, gdy wątek już spowoduje obciążenia środowiska uruchomieniowego (i przed powrotem z wywołania zwrotnego początkowej).  
+-   `pfnCallbackThreadUnset` musi być wywoływana, gdy wątek już nie spowoduje obciążenia środowiska uruchomieniowego (i przed powrotem po początkowej wywołania zwrotnego).  
   
 -   `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` są nie obsługującą.  
   
 > [!NOTE]
->  Host aplikacji nie mogą wywoływać `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` poza zakresem `pCallbackFunction` parametru.  
+>  Hostowanie aplikacji nie mogą wywoływać `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` poza zakresem `pCallbackFunction` parametru.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MetaHost.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRMetaHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRMetaHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

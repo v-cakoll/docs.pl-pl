@@ -2,12 +2,12 @@
 title: Programowanie za pomocą węzłów (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: 871755ef0293513f07c60b1d5735c47692163b78
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1cd9792905c1816094d9bbd12e0648c5a4d7c4f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527409"
 ---
 # <a name="programming-with-nodes-visual-basic"></a>Programowanie za pomocą węzłów (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Deweloperzy, którzy trzeba było pisać programy, takie jak edytora XML, system transformacji lub Edytor raportu, często trzeba było pisać programy, które działają na większym poziomie szczegółowości niż elementów i atrybutów. Często muszą wykonywać pracę w węźle poziomu manipulowanie węzły tekstowe, instrukcje przetwarzania i komentarze. Ten temat zawiera informacje na temat programowania na poziomie węzła.  
@@ -171,5 +171,5 @@ Console.WriteLine(doc.Nodes().Count())
 1  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zaawansowane LINQ to XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Zobacz także
+- [Zaawansowane LINQ to XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

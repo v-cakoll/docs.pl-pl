@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5c3185dc6d488223d5882f543f0c690d82261b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 009f7d20dfd6efc279b3187af8f5c95132ae51e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525238"
 ---
 # <a name="closeenum-method"></a>CloseEnum — Metoda
-Zamyka wskazanych wyliczenie i zwalnia skojarzonych zasobów.  
+Zamyka wskazany wyliczenie i zwalnia skojarzonych zasobów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,7 +45,7 @@ HRESULT CloseEnum(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

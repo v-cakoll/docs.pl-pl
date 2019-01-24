@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: b1551583079c66d1bf5f6963a42d5d24e518fff3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2017e8edbb4d1bd25a3669b92553f2905b567594
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514689"
 ---
 # <a name="join-clause-visual-basic"></a>Join — Klauzula (Visual Basic)
 Łączy dwie kolekcje w jedną kolekcję. Operacja łączenia jest oparta na zgodności kluczy i używa `Equals` operatora.  
@@ -31,10 +31,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>Części  
  `element`  
- Wymagane. Zmienna sterująca dla kolekcji jest dołączony.  
+ Wymagana. Zmienna sterująca dla kolekcji jest dołączony.  
   
  `collection`  
- Wymagane. Kolekcja do łączenia z tą kolekcją identyfikowane w lewej części `Join` operatora. A `Join` klauzuli może być zagnieżdżona w innej `Join` klauzuli lub `Group Join` klauzuli.  
+ Wymagana. Kolekcja do łączenia z tą kolekcją identyfikowane w lewej części `Join` operatora. A `Join` klauzuli może być zagnieżdżona w innej `Join` klauzuli lub `Group Join` klauzuli.  
   
  `joinClause`  
  Opcjonalna. Jeden lub więcej dodatkowych `Join` klauzul, aby jeszcze bardziej zawęzić zapytanie.  
@@ -43,7 +43,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  Opcjonalna. Jeden lub więcej dodatkowych `Group Join` klauzul, aby jeszcze bardziej zawęzić zapytanie.  
   
  `key1` `Equals` `key2`  
- Wymagane. Określa klucze dla kolekcji jest dołączony. Należy użyć `Equals` operatora do porównywania kluczy z kolekcji jest dołączony. Warunki sprzężenia można połączyć za pomocą `And` operatora, aby zidentyfikować wielu kluczy. `key1` musi mieć długość od kolekcji w lewej części `Join` operatora. `key2` musi mieć długość od kolekcji na prawej krawędzi `Join` operatora.  
+ Wymagana. Określa klucze dla kolekcji jest dołączony. Należy użyć `Equals` operatora do porównywania kluczy z kolekcji jest dołączony. Warunki sprzężenia można połączyć za pomocą `And` operatora, aby zidentyfikować wielu kluczy. `key1` musi mieć długość od kolekcji w lewej części `Join` operatora. `key2` musi mieć długość od kolekcji na prawej krawędzi `Join` operatora.  
   
  Klucze używane w warunek sprzężenia, może być wyrażeń, które zawierają więcej niż jeden element z kolekcji. Jednak każde wyrażenie kluczy może zawierać tylko elementy z jego odpowiednich kolekcji.  
   
@@ -87,10 +87,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `explorer (2424), File Explorer, Priority = 8`  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Zapytania](../../../visual-basic/language-reference/queries/index.md)  
- [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Klauzula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Zapytania](../../../visual-basic/language-reference/queries/index.md)
+- [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Klauzula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)

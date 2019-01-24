@@ -1,5 +1,5 @@
 ---
-title: 'Poradnik: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework'
+title: 'Instrukcje: Konfigurowanie składników COM opartych na Framework .NET aktywacji bez rejestracji'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 140af66c9ea08d16aa442824ff7333eeeadf5173
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530709"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Poradnik: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Instrukcje: Konfigurowanie składników COM opartych na Framework .NET aktywacji bez rejestracji
 Aktywacji bez rejestracji dla składników opartych na programie .NET Framework jest tylko nieco bardziej skomplikowane niż jest dla składników COM. Instalator wymaga dwóch manifesty:  
   
 -   Aplikacje COM musi mieć Win32 stylu manifest aplikacji, aby zidentyfikować zarządzanego składnika.  
@@ -172,8 +172,8 @@ Aktywacji bez rejestracji dla składników opartych na programie .NET Framework 
   
      Ponownie `myresource.res` to nazwa pliku zasobu zawierającego osadzonego zasobu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Współdziałanie z COM bez rejestrowania](registration-free-com-interop.md)  
- [Wymagania dotyczące współdziałania z modelem COM bez rejestrowania](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
- [Konfigurowanie aktywacji bez rejestracji składników COM](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  
- [Współdziałanie aktywacji. NET składników: Przewodnik](https://msdn.microsoft.com/library/ms973915.aspx)
+## <a name="see-also"></a>Zobacz także
+- [Współdziałanie z COM bez rejestrowania](registration-free-com-interop.md)
+- [Wymagania dotyczące współdziałania z modelem COM bez rejestrowania](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))
+- [Konfigurowanie aktywacji bez rejestracji składników COM](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))
+- [Współdziałanie aktywacji. NET składników: Przewodnik](https://msdn.microsoft.com/library/ms973915.aspx)

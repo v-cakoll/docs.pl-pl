@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517685"
 ---
 # <a name="composite-formatting"></a>Złożone formatowanie
 
@@ -161,15 +161,15 @@ Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Console.WriteLine%2A>  
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- [Interpolacja ciągów (C#)](../../csharp/language-reference/tokens/interpolated.md)  
-- [Ciąg interpolacji (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
-- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
-- [Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
-- [Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
-- [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- <xref:System.Console.WriteLine%2A>
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- [Interpolacja ciągów (C#)](../../csharp/language-reference/tokens/interpolated.md)
+- [Ciąg interpolacji (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)
+- [Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+- [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Ciągi formatujące wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md)

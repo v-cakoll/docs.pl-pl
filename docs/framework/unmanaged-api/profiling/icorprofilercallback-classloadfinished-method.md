@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 671f6743915ae4b7e7f4147f9fcddb1a623916ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b7415809912b7cb56fb2d0bebae196233c45477
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514588"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished — Metoda
-Powiadamia profilera, czy klasa została załadowana.  
+Powiadamia program profilujący, że klasa została zakończona podczas ładowania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,15 +40,15 @@ HRESULT ClassLoadFinished(
  [in] Określa klasę, która została załadowana.  
   
  `hrStatus`  
- [in] HRESULT, która wskazuje, czy klasa został pomyślnie załadowany.  
+ [in] Wartość HRESULT, która wskazuje, czy klasa został pomyślnie załadowany.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `classId` jest nieprawidłowa dla żądania informacji do `ClassLoadFinished` metoda jest wywoływana.  
+ Wartość `classId` jest nieprawidłowa dla żądania informacje do momentu `ClassLoadFinished` metoda jest wywoływana.  
   
- Niektóre elementy ładowania klasy mogą nadal po `ClassLoadFinished` wywołania zwrotnego. Błąd HRESULT w `hrStatus` oznacza błąd. Jednak Powodzenie HRESULT w `hrStatus` tylko wskazuje, że pierwsza część ładowania klasy zakończyła się pomyślnie.  
+ Niektóre części ładowania klasy może kontynuować po `ClassLoadFinished` wywołania zwrotnego. Błąd HRESULT w `hrStatus` wskazuje błąd. Jednak sukcesów wartość HRESULT w `hrStatus` wskazuje tylko, powiodło się w pierwszej części ładowania klasy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -55,6 +56,6 @@ HRESULT ClassLoadFinished(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ClassLoadStarted, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ClassLoadStarted, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)

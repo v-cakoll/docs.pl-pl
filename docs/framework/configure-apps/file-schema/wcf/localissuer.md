@@ -2,12 +2,12 @@
 title: '&lt;localIssuer&gt;'
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
-ms.openlocfilehash: 7a48cbb3a1e17ac1fc9fa9f43301ef153cdb866c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 893ac2cb0e6c54beae68e2607c31564baafd95fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527552"
 ---
 # <a name="ltlocalissuergt"></a>&lt;localIssuer&gt;
 Określa adres i powiązanie wystawcy lokalnego, można użyć do uzyskania tokenu zabezpieczającego.  
@@ -18,7 +18,7 @@ sekcja endpointBehaviors
 \<zachowanie >  
 \<clientCredentials>  
 \<issuedToken >  
-\<localIssuer >  
+\<localIssuer>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,7 +44,7 @@ sekcja endpointBehaviors
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa informacje o tożsamości dla wystawcy lokalnego.|  
-|[\<nagłówki >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Kolekcja nagłówków adresowych, które są wymagane do prawidłowego adresowania wystawcy lokalnego. Możesz użyć `add` — słowo kluczowe, aby dodać nagłówek do tej kolekcji.|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Kolekcja nagłówków adresowych, które są wymagane do prawidłowego adresowania wystawcy lokalnego. Możesz użyć `add` — słowo kluczowe, aby dodać nagłówek do tej kolekcji.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -77,16 +77,16 @@ sekcja endpointBehaviors
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.LocalIssuer%2A>  
- <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>  
- <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Instrukcje: Konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)  
- [Instrukcje: Tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.LocalIssuer%2A>
+- <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
+- <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
+- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Instrukcje: Konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
+- [Instrukcje: Tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

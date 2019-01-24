@@ -1,18 +1,18 @@
 ---
-title: 'Porady: projekt typu anonimowego (Visual Basic)'
+title: 'Instrukcje: Projektowanie typu anonimowego (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 30b42987-0e0e-4b2b-adb1-5255ddfbcd7b
-ms.openlocfilehash: 13500bc606cb99a4264e04657f4a0a8090f07174
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 613bf97556306503c427a70720272dd985495b13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643587"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527760"
 ---
-# <a name="how-to-project-an-anonymous-type-visual-basic"></a>Porady: projekt typu anonimowego (Visual Basic)
-W niektórych przypadkach można projektu zapytania do nowego typu, nawet jeśli wiadomo, że ten typ będzie używać tylko przez krótki czas. Istnieje wiele dodatkowej pracy, aby utworzyć nowy typ tylko do użycia w projekcji. W takim przypadku jest bardziej wydajne rozwiązanie projektu do typu anonimowego. Typy anonimowe umożliwiają definiowanie klasy, a następnie deklarowanie i zainicjowania obiektu dla tej klasy bez podawania nazwy klasy.  
+# <a name="how-to-project-an-anonymous-type-visual-basic"></a>Instrukcje: Projektowanie typu anonimowego (Visual Basic)
+W niektórych przypadkach możesz chcieć projektu zapytania do nowego typu, nawet jeśli wiesz, że tego typu będą używać tylko przez krótki czas. Jest dużo dodatkową pracę, aby utworzyć nowy typ tylko do użycia w projekcji. W tym przypadku jest bardziej wydajne podejście projektu do typu anonimowego. Typy anonimowe umożliwiają definiowanie klasy, a następnie zadeklarowania i zainicjowania obiektu tej klasy bez podawania nazwy klasy.  
   
- Typy anonimowe są implementacji C# matematyczne pojęcia *krotki*. Tuple matematyczne termin pochodzi od sekwencji pojedynczego, double, triple, poczwórnej, pięciokrotnie, n-spójnej kolekcji. Odnosi się do sekwencji skończoną obiektów, każdego programu określonego typu. Czasami jest to Lista par nazwa/wartość. Na przykład zawartość adresu [przykładowego pliku XML: typowe zamówienia zakupu (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) dokument XML, które mogą być wyrażone w następujący sposób:  
+ Typy anonimowe są implementacji języka C# matematyczne koncepcji *krotki*. Krotka matematyczne termin pochodzi z sekwencji jednego, double, triple, czterokrotnie, pięciokrotnie, spójnej kolekcji n. Dotyczy skończonej sekwencji obiektów, każdy z określonego typu. Jest to czasami nazywane listą par nazwa/wartość. Na przykład zawartość adresu w [przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) dokumentu XML, które mogą być wyrażone w następujący sposób:  
   
 ```  
 Name: Ellen Adams  
@@ -23,12 +23,12 @@ Zip: 90952
 Country: USA  
 ```  
   
- Podczas tworzenia wystąpienia typu anonimowego jest wygodne go traktować jako tworzenie krotka n kolejności. Jeśli Napisz zapytanie, które tworzy krotka w `Select` klauzuli, gdy kwerenda zwraca `IEnumerable` z spójnej kolekcji.  
+ Podczas tworzenia wystąpienia typu anonimowego jest wygodne należy traktować go jako tworzenia spójnej kolekcji n zamówienia. Jeśli piszesz zapytanie, które tworzy spójną kolekcję w `Select` klauzuli zapytanie zwraca `IEnumerable` spójnej kolekcji.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie `Select` klauzuli projektów typu anonimowego. W przykładzie następnie użyto `Dim` utworzyć `IEnumerable` obiektu. W ramach `For Each` staje się zmiennej iteracji pętli, wystąpienie typu anonimowego utworzone w wyrażeniu zapytania.  
+ W tym przykładzie `Select` klauzuli projektów typu anonimowego. Następnie w przykładzie `Dim` utworzyć `IEnumerable` obiektu. W ramach `For Each` staje się Zmienna iteracji pętli, wystąpienie typu anonimowego, utworzone w wyrażeniu zapytania.  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: Klienci i zamówienia (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -53,5 +53,5 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Projekcje i przekształcenia (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

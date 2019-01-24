@@ -2,23 +2,23 @@
 title: Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFailed
 ms.date: 03/30/2017
 ms.assetid: 96474056-0418-41e4-8c75-bbc0a853eaba
-ms.openlocfilehash: dec86141a19c3e5edf5d13ed1ef8d2e8f2b38fba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c8592ac34375445964b3dbcbbd4800c47e53850
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33475657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515053"
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorfailed"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFailed
 Usługa protokołu WS-AT nie może wysłać komunikatu rejestracji do koordynatora  
   
 ## <a name="description"></a>Opis  
- Śledzone, jeśli lokalny Menedżer transakcji nie można zarejestrować w usłudze jego wyższego poziomu Menedżera transakcji z powodu niemożności do wysyłania wiadomości.  
+ Śledzone, jeśli lokalny Menedżer transakcji nie można zarejestrować w usłudze jego przełożonego Menedżer transakcji z powodu braku możliwości, aby wysłać wiadomość.  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
- Sprawdź komunikat śledzenia wyjątek powodujący błąd wysyłania wiadomości  
+ Sprawdź komunikat śledzenia, dla wyjątku, co powoduje błąd wysyłania wiadomości  
   
-## <a name="see-also"></a>Zobacz też  
- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

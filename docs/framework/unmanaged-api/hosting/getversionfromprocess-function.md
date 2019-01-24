@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b57d04a8a49371872c679a331b5ae9c45dce797
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 843236243563ce3dff82726aaab05845fa295b9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518140"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess — Funkcja
-Pobiera środowisko uruchomieniowe języka wspólnego (CLR) skojarzony z uchwytu procesu określonego numeru wersji.  
+Pobiera numer wersji środowisko uruchomieniowe języka wspólnego (CLR) skojarzony z określonym dojściem do procesu.  
   
  Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -45,7 +45,7 @@ HRESULT GetVersionFromProcess (
  [in] Dojście do procesu.  
   
  `pVersion`  
- [out] Bufor, który zawiera ciąg numer wersji po pomyślnym ukończeniu metody.  
+ [out] Bufor, który zawiera ciąg numeru wersji, po pomyślnym zakończeniu metody.  
   
  `cchBuffer`  
  [in] Długość buforu wersji.  
@@ -54,25 +54,25 @@ HRESULT GetVersionFromProcess (
  [out] Wskaźnik do długości ciągu numeru wersji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowy składnik modelu COM. kody błędów, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_INVALIDARG|`pVersion` ma wartość null i `cchBuffer` nie ma wartości null, lub na odwrót.<br /><br /> —lub—<br /><br /> `hProcess` nie jest prawidłowym dojściem do procesu.<br /><br /> —lub—<br /><br /> Nie załadowano środowiska CLR.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` to wartość zerową lub mniejszą niż długość ciągu wersji.|  
+|E_INVALIDARG|`pVersion` ma wartość null i `cchBuffer` nie ma wartości null, lub na odwrót.<br /><br /> —lub—<br /><br /> `hProcess` nie jest prawidłowym dojściem do procesu.<br /><br /> —lub—<br /><br /> Środowisko CLR nie został załadowany.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` jest wartość null lub jest mniejsza niż długość ciągu wersji.|  
 |E_NOTIMPL|Ta metoda nie jest dostępna w systemie operacyjnym Microsoft Windows 95, Microsoft Windows 98 lub Microsoft Windows Millennium Edition.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [GetRequestedRuntimeInfo, funkcja](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- [GetRequestedRuntimeVersion, funkcja](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [GetRequestedRuntimeInfo, funkcja](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [GetRequestedRuntimeVersion, funkcja](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

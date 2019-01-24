@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 0b191a01995b7c36d733b225672a3d79f488a276
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531424"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Język wyrażeń regularnych — podręczny wykaz
 <a name="top"></a> Wyrażenie regularne to wzorzec, który aparat wyrażeń regularnych próbuje dopasować w tekście wejściowym. Wzorzec składa się z co najmniej jednego literału znakowego, operatora lub konstrukcji.  Aby uzyskać krótkie wprowadzenie – zobacz [wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "54030402"
 |---------------------|-----------------|-------------|-------------|  
 |`[` *character_group* `]`|Dopasowuje dowolny pojedynczy znak w *character_group*. Domyślnie w dopasowaniu jest uwzględniana wielkość liter.|`[ae]`|„a” w ciągu „gray”<br /><br /> „a”, „e” w ciągu „lane”|  
 |`[^` *character_group* `]`|Negacja: Dopasowuje dowolny pojedynczy znak, który nie znajduje się w *character_group*. Domyślnie, znaki w *character_group* jest rozróżniana wielkość liter.|`[^aei]`|„r”, „g”, „n” w „reign”|  
-|`[` *pierwszy* `-` *ostatni* `]`|Zakres znaków: Dopasowuje dowolny pojedynczy znak z zakresu od *pierwszy* do *ostatniego*.|`[A-Z]`|„A”, „B” w ciągu „AB123”|  
+|`[` *first* `-` *last* `]`|Zakres znaków: Dopasowuje dowolny pojedynczy znak z zakresu od *pierwszy* do *ostatniego*.|`[A-Z]`|„A”, „B” w ciągu „AB123”|  
 |`.`|Symbol wieloznaczny: Dopasowuje dowolny pojedynczy znak z wyjątkiem \n.<br /><br /> Aby dopasować znak literału kropki (. lub `\u002E`), należy poprzedzić znak ucieczki (`\.`).|`a.e`|„ave” w ciągu „nave”<br /><br /> „ate” w ciągu „water”|  
 |`\p{` *Nazwa* `}`|Dopasowuje dowolny pojedynczy znak w ogólnej kategorii Unicode lub nazwanego bloku określonego przez *nazwa*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|„C”, „L” w ciągu „City Lights”<br /><br /> „Д”, „Ж” w ciągu „ДЖem”|  
 |`\P{` *Nazwa* `}`|Dopasowuje dowolny pojedynczy znak, który nie znajduje się w ogólnej kategorii Unicode lub nazwanego bloku określonego przez *nazwa*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|„i”, „t”, „y” w ciągu „City”<br /><br /> „e”, „m” w ciągu „ДЖem”|  
@@ -111,7 +111,7 @@ ms.locfileid: "54030402"
 |------------------------|-----------------|-------------|-------------|  
 |`(` *Podwyrażenie* `)`|Przechwytuje dopasowane podwyrażenia i przypisuje mu liczbę porządkową (liczone od zera).|`(\w)\1`|„ee” w ciągu „deep”|  
 |`(?<` *Nazwa* `>` *Podwyrażenie* `)`|Przechwytuje dopasowane podwyrażenie do nazwanej grupy.|`(?<double>\w)\k<double>`|„ee” w ciągu „deep”|  
-|`(?<` *Nazwa1* `-` *Nazwa2* `>` *Podwyrażenie* `)`|Określa definicję grupy równoważącej. Aby uzyskać więcej informacji, zobacz sekcję "Definicja grupy równoważącej" w [Grouping Constructs](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" w "3+2^((1-3)\*(3-1))"|  
+|`(?<` *name1* `-` *name2* `>` *subexpression* `)`|Określa definicję grupy równoważącej. Aby uzyskać więcej informacji, zobacz sekcję "Definicja grupy równoważącej" w [Grouping Constructs](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" w "3+2^((1-3)\*(3-1))"|  
 |`(?:` *Podwyrażenie* `)`|Definiuje nieprzechwytywaną grupę.|`Write(?:Line)?`|„WriteLine” w ciągu „Console.WriteLine()”<br /><br /> „Write” w ciągu „Console.Write(value)”|  
 |`(?imnsx-imnsx:` *Podwyrażenie* `)`|Stosuje lub wyłącza określone opcje w *Podwyrażenie*. Aby uzyskać więcej informacji, zobacz [Regular Expression Options](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|„A12xl”, „A12XL” w ciągu „A12xl A12XL a12xl”|  
 |`(?=` *Podwyrażenie* `)`|Pozytywna asercja wyprzedzająca o zerowej szerokości.|`\w+(?=\.)`|„is”, „ran” i „out” w ciągu „He is. The dog ran. The sun is out.”|  
@@ -131,14 +131,14 @@ ms.locfileid: "54030402"
 |`*`|Dopasowuje poprzedni element zero lub większą liczbę razy.|`\d*\.\d`|„.0”, „19,9”, „219,9”|  
 |`+`|Dopasowuje poprzedni element co najmniej raz.|`"be+"`|„bee” w ciągu „been”, „be” w ciągu „bent”|  
 |`?`|Dopasowuje poprzedni element zero lub jeden raz.|`"rai?n"`|„ran”, „rain”|  
-|`{` *N* `}`|Dopasowuje poprzedni element dokładnie *n* razy.|`",\d{3}"`|„,043” w ciągu „1,043.6”,„876”, „,543” i „,210” w ciągu „9,876,543,210"|  
-|`{` *N* `,}`|Dopasowuje poprzedni element co najmniej *n* razy.|`"\d{2,}"`|„166”, „29”, „1930”|  
+|`{` *n* `}`|Dopasowuje poprzedni element dokładnie *n* razy.|`",\d{3}"`|„,043” w ciągu „1,043.6”,„876”, „,543” i „,210” w ciągu „9,876,543,210"|  
+|`{` *n* `,}`|Dopasowuje poprzedni element co najmniej *n* razy.|`"\d{2,}"`|„166”, „29”, „1930”|  
 |`{` *n* `,` *m* `}`|Dopasowuje poprzedni element co najmniej *n* razy, ale nie więcej niż *m* razy.|`"\d{3,5}"`|„166”, „17668”<br /><br /> „19302” w ciągu „193024”|  
 |`*?`|Dopasowuje poprzedni element zero lub większą liczbę razy (przy czym ta liczba jest jak najmniejsza).|`\d*?\.\d`|„.0”, „19,9”, „219,9”|  
 |`+?`|Dopasowuje poprzedni element raz lub większą liczbę razy (przy czym ta liczba jest jak najmniejsza).|`"be+?"`|„be” w ciągu „been”, „be” w ciągu „bent”|  
 |`??`|Dopasowuje poprzedni element zero lub jeden raz (przy czym liczba dopasowań jest jak najmniejsza).|`"rai??n"`|„ran”, „rain”|  
-|`{` *N* `}?`|Dopasowuje poprzedzający element dokładnie *n* razy.|`",\d{3}?"`|„,043” w ciągu „1,043.6”,„876”, „,543” i „,210” w ciągu „9,876,543,210"|  
-|`{` *N* `,}?`|Dopasowuje poprzedni element co najmniej *n* razy, ale tyle razy, ile to możliwe.|`"\d{2,}?"`|„166”, „29”, „1930”|  
+|`{` *n* `}?`|Dopasowuje poprzedzający element dokładnie *n* razy.|`",\d{3}?"`|„,043” w ciągu „1,043.6”,„876”, „,543” i „,210” w ciągu „9,876,543,210"|  
+|`{` *n* `,}?`|Dopasowuje poprzedni element co najmniej *n* razy, ale tyle razy, ile to możliwe.|`"\d{2,}?"`|„166”, „29”, „1930”|  
 |`{` *n* `,` *m* `}?`|Dopasowuje poprzedni element między *n* i *m* razy, ale tyle razy, ile to możliwe.|`"\d{3,5}?"`|„166”, „17668”<br /><br /> „193”, „024” w ciągu „193024”|  
   
  [Powrót do początku](#top)  
@@ -217,10 +217,10 @@ ms.locfileid: "54030402"
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
-- <xref:System.Text.RegularExpressions.Regex>  
-- [Wyrażenia regularne](regular-expressions.md)  
-- [Klasy wyrażeń regularnych](the-regular-expression-object-model.md)  
-- [Przykłady wyrażeń regularnych](regular-expression-examples.md)  
-- [Wyrażeń regularnych — podręczny wykaz (do pobrania w formacie programu Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
+- <xref:System.Text.RegularExpressions.Regex>
+- [Regular Expressions](regular-expressions.md)
+- [Klasy wyrażeń regularnych](the-regular-expression-object-model.md)
+- [Przykłady wyrażeń regularnych](regular-expression-examples.md)
+- [Wyrażeń regularnych — podręczny wykaz (do pobrania w formacie programu Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
 - [Wyrażeń regularnych — podręczny wykaz (do pobrania w formacie PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

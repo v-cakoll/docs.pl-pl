@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7634ec801a30aa7ba07954c1df0c3d37ec279eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d6a5673c2aaf287131274b0c590f00a69c64fed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517152"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra — Unia
-Reprezentuje adres używany przez przesunięcie [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfejs może przenosić sekcji.  
+Reprezentuje Przesunięcie adresu, który jest używany przez [iceegen —](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfejsu przenosić sekcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,13 +41,13 @@ typedef union  {
 |`highAdj`|Korekta górny adres dla sekcji.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Unie metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+## <a name="see-also"></a>Zobacz także
+- [Unie metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)

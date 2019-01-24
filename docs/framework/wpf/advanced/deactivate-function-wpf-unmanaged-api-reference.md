@@ -1,5 +1,5 @@
 ---
-title: Dezaktywowanie funkcji (WPF niezarządzany wykaz interfejsów API)
+title: Dezaktywowanie funkcji (niezarządzany wykaz interfejsów API WPF.)
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +8,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 3e81be16-24c7-4399-b242-6268feaa49d7
-ms.openlocfilehash: 94f248cd8b37e142c5e256087d345b80cad3fec3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a279a90b7fa6c32faa7e95dd0c828ec2d9ef77c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522764"
 ---
-# <a name="deactivate-function-wpf-unmanaged-api-reference"></a>Dezaktywowanie funkcji (WPF niezarządzany wykaz interfejsów API)
+# <a name="deactivate-function-wpf-unmanaged-api-reference"></a>Dezaktywowanie funkcji (niezarządzany wykaz interfejsów API WPF.)
 Ten interfejs API obsługuje infrastrukturę programu Windows Presentation Foundation (WPF) i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
- Używane przez infrastrukturę Windows Presentation Foundation (WPF) do zarządzania systemu windows.  
+ Używane przez infrastrukturę Windows Presentation Foundation (WPF) do zarządzania systemem windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -27,15 +27,15 @@ void Deactivate()
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe programu .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [.NET Framework System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **BIBLIOTEKI DLL:**  
+ **DLL:**  
   
  W programie .NET Framework 3.0 i 3.5: PresentationHostDLL.dll  
   
- W wersji programu .NET Framework 4 i nowszych: PresentationHost_v0400.dll  
+ W programie .NET Framework 4 i nowszych wersji: PresentationHost_v0400.dll  
   
- **.NET framework w wersji:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Wersja programu .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Niezarządzane interfejsy API WPF — informacje](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Niezarządzane interfejsy API WPF — informacje](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

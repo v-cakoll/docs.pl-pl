@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1055366576f45a7ca137b6d8170d1786c2ba4492
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cb3a2235325533d5bd943a530a0a8e5b77100e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519947"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs — Metoda
-Zwraca tablicę identyfikatorów, które identyfikują wszystkie ponownie kompilowana JIT wersje określona funkcja nadal przydzielonych. Dotyczy to również ponownie kompilowana JIT wersje funkcji, które później przywrócić, ale nie została jeszcze uwolnione (na przykład, gdy domeny aplikacji, która zawiera funkcję przywróconego jest nadal używane).  
+Zwraca tablicę identyfikatorów, które identyfikują wszystkie ponownie skompilowana JIT wersje określonej funkcji, które nadal są przydzielane. Obejmuje to ponownie skompilowana JIT wersje funkcji, które następnie przywrócona, ale nie zostały jeszcze zwolnione (na przykład, gdy domeny aplikacji, która zawiera przywróconym funkcja jest nadal w użyciu).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +39,22 @@ HRESULT GetReJITIDs (
   
 #### <a name="parameters"></a>Parametry  
  `functionId`  
- [in] `FunctionID` Wystąpienia funkcji, dla którego wyliczyć wersji.  
+ [in] `FunctionID` Wystąpienia funkcji, do których chcesz wyliczyć wersji.  
   
  `cReJitIds`  
- [in] Liczba identyfikatorów ponownie kompilowana JIT przydzielone w `reJitIds` tablicy.  
+ [in] Liczba identyfikatorów ponownie skompilowana JIT, przydzielone w `reJitIds` tablicy.  
   
  `pcReJitIds`  
- [out] Rzeczywista liczba identyfikatorów ponownie kompilowana JIT.  
+ [out] Rzeczywista liczba identyfikatorów ponownie skompilowana JIT.  
   
  `reJitIds`  
- [out] Tablica przydzielone przez obiekt wywołujący, która będzie zawierać identyfikatory ponownie kompilowana JIT dla określonej funkcji.  
+ [out] Tablica przydzielana przez obiekt wywołujący, który będzie zawierać identyfikatory ponownie skompilowana JIT dla określonej funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetReJITIDs` Wylicza aktywne identyfikatory ponownie kompilowana JIT dla wystąpienia danej funkcji. Wynika z tego samego wzorca użycia jak inne `ICorProfilerInfo` funkcje, które akceptują buforów przydzielone przez obiekt wywołujący.  
+ `GetReJITIDs` Wylicza aktywne identyfikatory ponownie skompilowana JIT dla wystąpienia danej funkcji. Wynika z tego samego wzorca użycia, jak inne `ICorProfilerInfo` funkcje, które akceptują bufory przypisane do obiektu wywołującego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -62,7 +62,7 @@ HRESULT GetReJITIDs (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

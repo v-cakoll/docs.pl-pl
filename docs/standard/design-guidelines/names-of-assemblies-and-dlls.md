@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
 author: KrzysztofCwalina
-ms.openlocfilehash: 8e20d77c20be8dc74723117f3b0910ecc2090ef7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1aeef9e1be6e5fe747f440a8cb7f21095cb22f49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516446"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Nazwy zestawów i bibliotek DLL
 Zestaw jest jednostką wdrożenia i tożsamości dla programów kodu zarządzanego. Mimo że zestawy może obejmować jeden lub więcej plików, zwykle zestawu mapuje jeden do jednego z biblioteką DLL. W związku z tym w tej sekcji opisano tylko DLL konwencje nazewnictwa, które następnie mogą zostać zmapowane do konwencji nazewnictwa zestawu.  
@@ -37,5 +37,5 @@ Zestaw jest jednostką wdrożenia i tożsamości dla programów kodu zarządzane
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
 - [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)

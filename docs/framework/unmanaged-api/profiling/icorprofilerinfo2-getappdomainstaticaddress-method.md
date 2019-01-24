@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8e1886a3e33b533eb525f5b35480a8a7d326da0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3c5e89057ef4c88d7c5e78120aca9841d731eda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524718"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress — Metoda
-Pobiera adres pola statyczne domeny określonej aplikacji, która znajduje się w zakresie domeny określonej aplikacji.  
+Pobiera adres pola statyczne domeny określonej aplikacji, które znajduje się w zakresie domeny określonej aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +39,28 @@ RESULT GetAppDomainStaticAddress(
   
 #### <a name="parameters"></a>Parametry  
  `classId`  
- [in] Identyfikator klasy klasy zawierającej pole Niestatyczne domeny żądanej aplikacji.  
+ [in] Identyfikator klasy, klasy, która zawiera pole statyczne domeny żądanej aplikacji.  
   
  `fieldToken`  
- [in] Token metadanych dla pola statycznego domeny żądanej aplikacji.  
+ [in] Token metadanych dla pola statyczne domeny żądanej aplikacji.  
   
  `appDomainId`  
- [in] Identyfikator domeny aplikacji, która jest zakresem dla żądanego pola statycznego.  
+ [in] Identyfikator domeny aplikacji, która jest zakresem dla żądanego pola statyczne.  
   
  `ppAddress`  
- [out] Wskaźnik do adresu pola statycznego, który znajduje się w domenie określonej aplikacji.  
+ [out] Wskaźnik na adres pole statyczne, który znajduje się w domenie określonej aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
  `GetAppDomainStaticAddress` Metoda może zwracać jedną z następujących czynności:  
   
 -   HRESULT CORPROF_E_DATAINCOMPLETE, jeśli nie przypisano danego pola statycznego adresu w określonym kontekście.  
   
--   Adresy obiektów, które mogą znajdować się w pamięci sterty kolekcji. Te adresy mogą być nieprawidłowe po wyrzucanie elementów bezużytecznych, więc po wyrzucanie elementów bezużytecznych profilowania nie należy zakładać, że są prawidłowe.  
+-   Adresy obiektów, które mogą znajdować się w stercie wyrzucania elementów bezużytecznych. Te adresy mogą stają się nieprawidłowe po wyrzucania elementów bezużytecznych, więc po wyrzucania elementów bezużytecznych profilowania nie należy zakładać, że są prawidłowe.  
   
- Przed ukończeniem konstruktora klasy klasy `GetAppDomainStaticAddress` zwróci CORPROF_E_DATAINCOMPLETE dla wszystkich jego pól statycznych, mimo że niektóre pola statyczne już może zainicjować i umieszczanie w katalogu głównym odzyskiwanie kolekcji obiektów.  
+ Przed ukończeniem konstruktora klasy klasy `GetAppDomainStaticAddress` zwróci CORPROF_E_DATAINCOMPLETE dla wszystkich jego pól statycznych, mimo że niektóre pola statyczne już może być zainicjowany i zakorzenienia wyrzucania elementów kolekcji obiektów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -68,6 +68,6 @@ RESULT GetAppDomainStaticAddress(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

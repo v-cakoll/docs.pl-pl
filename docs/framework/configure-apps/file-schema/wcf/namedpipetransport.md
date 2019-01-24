@@ -2,12 +2,12 @@
 title: '&lt;namedPipeTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: bf9229411143345847247f36de07b5c014d3f259
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cdb2863ff376a92f7c4b679f4812b895ac3f2234
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518842"
 ---
 # <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
 Definiuje transport, powodujący przesył kanałem wiadomości używając potoków nazwanych, gdy jest włączony do niestandardowego powiązania.  
@@ -16,7 +16,7 @@ Definiuje transport, powodujący przesył kanałem wiadomości używając potok�
 \<powiązania >  
 \<customBinding>  
 \<Powiązanie >  
-\<namePipeTransport >  
+\<namePipeTransport>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,17 +48,17 @@ Brak.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|channelInitializationTimeout|Pobiera lub ustawia <xref:System.TimeSpan> określa maksymalny czas kanału może być w stanie inicjowania przed rozłączeniem.|  
+|ChannelInitializationTimeout|Pobiera lub ustawia <xref:System.TimeSpan> określa maksymalny czas kanału może być w stanie inicjowania przed rozłączeniem.|  
 |ConnectionBufferSize|Pobiera lub ustawia rozmiar buforu używany do przesyłania fragmentów serializacji wiadomości na łączu z klienta lub usługi.|  
 |hostNameComparisonMode|Pobiera lub ustawia wartość wskazującą, czy nazwa hosta jest używana w celu dotarcia do usługi podczas dopasowywania identyfikatora URI.|  
 |opcję manualAddressing|Pobiera lub ustawia wartość wskazującą, czy wymagane jest ręczne adresowanie wiadomości.|  
 |maxBufferPoolSize|Pobiera lub ustawia maksymalny rozmiar w bajtach żadnych pul buforu używany przez transportu.|  
-|wartość maxBufferSize|Pobiera lub ustawia maksymalny rozmiar buforu do użycia. Komunikaty przesyłane strumieniowo ta wartość powinna być co najmniej maksymalny rozmiar nagłówków wiadomości, które są odczytywane w tryb buforowany w.|  
-|MaxOutputDelay|Pobiera lub ustawia maksymalny interwał czasu, przez jaki fragmentów wiadomości lub cały komunikat może być buforowany w pamięci, zanim wysyłane.|  
+|maxBufferSize|Pobiera lub ustawia maksymalny rozmiar buforu do użycia. Komunikaty przesyłane strumieniowo ta wartość powinna być co najmniej maksymalny rozmiar nagłówków wiadomości, które są odczytywane w tryb buforowany w.|  
+|maxOutputDelay|Pobiera lub ustawia maksymalny interwał czasu, przez jaki fragmentów wiadomości lub cały komunikat może być buforowany w pamięci, zanim wysyłane.|  
 |maxPendingAccepts|Pobiera lub ustawia maksymalną liczbę kanałów, o których usługa może mieć oczekiwanie na odbiornik do przetwarzania przychodzących połączeń z usługą.|  
 |maxPendingConnections|Pobiera lub ustawia maksymalną liczbę połączeń, oczekiwanie na wysłanie w usłudze.|  
 |maxReceivedMessageSize|Pobiera i ustawia maksymalny dozwolony rozmiar komunikatu, w bajtach, które mogą być odbierane.|  
-|Tryb transferu|Pobiera lub ustawia wartość wskazującą, czy komunikaty są buforowane, czy strumieniowo z nawiązaniem połączenia transportu.|  
+|transferMode|Pobiera lub ustawia wartość wskazującą, czy komunikaty są buforowane, czy strumieniowo z nawiązaniem połączenia transportu.|  
 |[\<connectionPoolSettings > z \<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|Określa ustawienia puli dodatkowego połączenia powiązania nazwanego potoku.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -72,14 +72,14 @@ Identyfikatory URI w postaci "net.pipe://hostname/path" korzysta z tego transpor
   
 `namedPipeTransport` Element jest punktem wyjścia do tworzenia niestandardowego powiązania, który implementuje protokół transportowy nazwanych potoków. Tego transportu jest używany dla na komputerze Windows Communication Foundation (WCF) - do - komunikacji WCF.  
   
-## <a name="see-also"></a>Zobacz też  
-<xref:System.ServiceModel.Configuration.NamedPipeTransportElement>   
-<xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>   
-<xref:System.ServiceModel.Channels.TransportBindingElement>   
-<xref:System.ServiceModel.Channels.CustomBinding>   
-[Transporty](../../../../../docs/framework/wcf/feature-details/transports.md)   
-[Wybieranie transportu](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
-[Powiązania](../../../../../docs/framework/wcf/bindings.md)   
-[Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
-[Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
-[\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Transporty](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Wybieranie transportu](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

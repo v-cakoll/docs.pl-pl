@@ -2,19 +2,19 @@
 title: '&lt;Dodaj&gt; Element dla schemeSettings (ustawienia identyfikatora Uri)'
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 07bcaf470c68a4d400057b0fe19e96524b2859cb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d64744cf3c88d5ec0f0edf1a31cdf184c3c8277e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205181"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524107"
 ---
 # <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;Dodaj&gt; Element dla schemeSettings (ustawienia identyfikatora Uri)
 Dodaje ustawienia schematu dla nazwy schematu.  
   
  \<Konfiguracja >  
 \<Identyfikator URI >  
-\<schemeSettings >  
+\<schemeSettings>  
 \<add>  
   
 ## <a name="syntax"></a>Składnia  
@@ -81,11 +81,11 @@ Dodaje ustawienia schematu dla nazwy schematu.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
-- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
-- <xref:System.Uri?displayProperty=nameWithType>  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

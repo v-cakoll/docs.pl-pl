@@ -5,41 +5,41 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 7cfcc9fa4dc3bc1450febb39500b7d96f92beac6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3032a0ca19f919344a3f73ea8689a222896093f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547270"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523723"
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalizacja atrybutów i komentarzy
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Lokalizacja komentarze są właściwościami, wewnątrz [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kod źródłowy, dostarczone przez deweloperów do zapewnienia lokalizacji zasad i wskazówek dotyczących serwerów. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Lokalizacja komentarze zawierają dwa zestawy informacji: atrybuty możliwości zlokalizowania i lokalizacja dowolne komentarze. Możliwość lokalizacji atrybuty są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lokalizacja interfejsu API, aby wskazać, zasobów, do których mają być lokalizowany. Dowolne komentarze są wszystkie informacje, które chce dołączyć Autor aplikacji.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Lokalizacja komentarzy są właściwościami, wewnątrz [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kod źródłowy, dostarczone przez deweloperów, które zapewniają reguły i wskazówki dla lokalizacji. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Lokalizacja komentarzy zawierają dwa zestawy danych: atrybuty przeglądu możliwości lokalizacji i komentarze w dowolnej lokalizacji. Możliwości zlokalizowania atrybuty są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lokalizacji interfejsu API, aby wskazać, które zasoby mają być lokalizowany. Wszystkie informacje, które aplikacja chce, aby uwzględnić znajdują się w dowolnej postaci komentarze.  
   
 
   
 <a name="Localizer_Comments_"></a>   
-## <a name="localization-comments"></a>Komentarze w lokalizacji  
- Jeśli znaczników aplikacji Autorzy mają wymagania dotyczące określonych elementów w [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], takie jak ograniczenia dotyczące długość tekstu rodziny czcionek i rozmiar czcionki, ich przedstawienia tych informacji, aby wiadomość dla lokalizatorów z uwagi na [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kodu. Proces dodawania komentarzy do kodu źródłowego, jest następujący:  
+## <a name="localization-comments"></a>Lokalizacja komentarzy  
+ Jeśli autorzy aplikacji znaczników mają wymagania dotyczące określonych elementów w [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], takie jak ograniczenia dotyczące długość tekstu rodzinę czcionek i rozmiar czcionki, ich przekazywanie tych informacji do lokalizatorzy z komentarzami w [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kodu. Proces dodawania komentarzy do kodu źródłowego jest w następujący sposób:  
   
-1.  Deweloper aplikacji dodaje komentarz lokalizacji do [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kod źródłowy.  
+1.  Deweloper aplikacji dodaje komentarze lokalizacji, aby [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kodu źródłowego.  
   
-2.  Podczas procesu kompilacji można określić w pliku .proj czy należy pozostawić komentarze dowolnych lokalizacji zestawu, paska się częścią komentarze lub paska limit wszystkie komentarze. Komentarze usunięta poza są umieszczane w oddzielnym pliku. Można ją określić za pomocą opcji `LocalizationDirectivesToLocFile` tagu np:  
+2.  Podczas procesu kompilacji można określić w pliku .proj czy zamieszczać komentarze dowolnej lokalizacji w zestawie, pasek się częścią komentarze lub pasek się wszystkie komentarze. Komentarze usunięta, a limit są umieszczane w oddzielnym pliku. Określ, przy użyciu opcji `LocalizationDirectivesToLocFile` tagu, na przykład:  
   
      `<LocalizationDirectivesToLocFile>` *Wartość* `</LocalizationDirectivesToLocFile>`  
   
-3.  Dostępne są następujące wartości, które można przypisać:  
+3.  Wartości, które mogą być przypisane są następujące:  
   
-    -   **Brak** -komentarzy i atrybutów pozostają w zestawie, a ten sam plik jest generowany.  
+    -   **Brak** — zarówno komentarzy i atrybutów pozostają w zestawie i generowany jest ten sam plik.  
   
-    -   **CommentsOnly** — usuwa tylko komentarze z zestawu i umieszcza je w oddzielne LocFile.  
+    -   **CommentsOnly** — usuwa tylko komentarze z zestawu i umieszcza je w oddzielnym LocFile.  
   
-    -   **Wszystkie** — usuwa zarówno komentarzy i atrybutów z zestawu i umieszcza je w oddzielne LocFile.  
+    -   **Wszystkie** — usuwa komentarzy i atrybutów z zestawu i umieszczane zarówno w oddzielnych LocFile.  
   
-4.  Gdy zlokalizowania zasobów są wyodrębniane z [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], atrybuty możliwości zlokalizowania są przestrzegane przez [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] lokalizacja interfejsu API.  
+4.  Gdy lokalizowalne zasoby są wyodrębniane z [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], atrybuty możliwości zlokalizowania są przestrzegane przez [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] lokalizacji interfejsu API.  
   
-5.  Pliki komentarza lokalizacji, zawierający tylko dowolne komentarze są włączone w procesie lokalizacji w późniejszym czasie.  
+5.  Pliki komentarzy lokalizacji, zawierający tylko dowolne komentarze są włączone do proces lokalizacji w późniejszym czasie.  
   
- Poniższy przykład przedstawia sposób dodawać komentarze lokalizacja [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] pliku.  
+ Poniższy przykład pokazuje, jak dodawać komentarze lokalizacji [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] pliku.  
   
  `<TextBlock x:Id = "text01"`  
   
@@ -59,48 +59,48 @@ ms.locfileid: "33547270"
   
  `</TextBlock>`  
   
- W poprzednim przykładzie Localization.Attributes sekcja zawiera atrybuty lokalizacji i komentarze sekcji dowolnych Localization.Comments. W poniższej tabeli przedstawiono atrybuty i komentarze i ich znaczenie do lokalizatora.  
+ W poprzednim przykładzie Localization.Attributes sekcja zawiera atrybuty lokalizacji i komentarze sekcji swobodne Localization.Comments. W poniższej tabeli przedstawiono atrybuty i komentarze oraz ich znaczenie do lokalizatorowi.  
   
-|Atrybuty lokalizacji|Znaczenie|  
+|Lokalizacja atrybutów|Znaczenie|  
 |-----------------------------|-------------|  
-|$Content (unmodifiable czytelnej)|Nie można zmodyfikować zawartość elementu blok tekstu. Wiadomość dla lokalizatorów nie można zmienić słowa "Microsoft". Zawartość jest widoczna (elementu Readable) do lokalizatora. Do kategorii zawartości jest tekst.|  
-|FontFamily (Unmodifiable do odczytu)|Nie można zmienić właściwości rodziny czcionek elementu blok tekstu, ale jest widoczny dla lokalizatora.|  
+|$Content (niemodyfikowalnych tekst do odczytu)|Nie można zmodyfikować zawartość elementu TextBlock. Lokalizatorzy nie można zmienić słowo "Microsoft". Zawartość jest widoczna (elementu Readable) lokalizatorowi. Kategoria zawartości jest tekst.|  
+|FontFamily (Niemodyfikowalnych do odczytu)|Nie można zmienić właściwości rodziny czcionek elementu TextBlock, ale jest widoczny dla lokalizatorowi.|  
   
 |Lokalizacja dowolne komentarze|Znaczenie|  
 |--------------------------------------|-------------|  
-|$Content (znak towarowy)|Autor aplikacji lokalizatora informuje, że zawartość w elemencie blok tekstu jest zastrzeżonym znakiem towarowym firmy.|  
-|FontSize (znak towarowy rozmiar czcionki)|Autor aplikacji wskazuje, że właściwość rozmiar czcionki, należy wykonać rozmiar znaków towarowych.|  
+|$Content (znak towarowy)|Autor aplikacji lokalizatorowi informuje, czy zawartość w elemencie TextBlock jest znakiem towarowym firmy.|  
+|FontSize (rozmiar czcionki znaku towarowego)|Autor aplikacji oznacza, że właściwość rozmiar czcionki, należy wykonać rozmiar znaków towarowych.|  
   
-### <a name="localizability-attributes"></a>Możliwość lokalizacji atrybutów  
- Informacje zawarte w Localization.Attributes zawiera listę par: Nazwa docelowej wartości i wartości skojarzone możliwości zlokalizowania. Nazwa docelowego może być nazwa właściwości lub specjalną nazwą $Content. Jeśli jest to nazwa właściwości, wartość docelowa jest wartość właściwości. Jeśli jest $Content wartość docelowa jest zawartość elementu.  
+### <a name="localizability-attributes"></a>Atrybuty przeglądu możliwości lokalizacji  
+ Informacje przedstawione w Localization.Attributes zawiera listę par: wartości skojarzone przeglądu możliwości lokalizacji i nazwę wartości docelowej. Nazwa docelowego może być nazwa właściwości lub nazwę $Content specjalne. Jeśli nazwa właściwości, wartość docelowa jest wartość właściwości. Jeśli jest to $Content, wartość docelowa jest zawartość elementu.  
   
  Istnieją trzy typy atrybutów:  
   
--   **Kategoria**. Określa, czy wartość należy modyfikować za pomocą narzędzia lokalizatora. Zobacz <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+-   **Kategoria**. Określa, czy wartość powinna być można modyfikować za pomocą narzędzia lokalizatorowi. Zobacz <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
   
--   **Czytelność**. Określa, czy narzędzie lokalizatora należy odczytać (i wyświetlić) wartość. Zobacz <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
+-   **Czytelność**. Określa, czy narzędzie lokalizatorowi należy odczytać (i wyświetlić) wartość. Zobacz <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
   
--   **Modifiability**. To ustawienie określa, czy narzędzie lokalizatora daje wartość ma zostać zmodyfikowana. Zobacz <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
+-   **Modifiability**. Określa, czy narzędzie lokalizatorowi zezwala na wartość ma zostać zmodyfikowana. Zobacz <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
   
- Te atrybuty można określić w dowolnej kolejności rozdzielonych spacją. W przypadku, gdy określono zduplikowane atrybuty, ostatniego atrybutu spowoduje zastąpienie pierwszych. Na przykład Localization.Attributes = "Unmodifiable modyfikowalnymi" Ustawia Modifiability do Modifiable, ponieważ jest to ostatnia wartość.  
+ Te atrybuty można określić w dowolnej kolejności, rozdzielonych spacją. W przypadku, gdy określono zduplikowane atrybuty, wartość ostatniego atrybutu zostaną przesłonięte poprzedniej wersji portalu. Na przykład Localization.Attributes = "Niemodyfikowalnych modyfikowalnymi" Ustawia Modifiability do Modifiable, ponieważ jest ostatnią wartość.  
   
- Modifiability i czytelność nie wymaga wyjaśnień. Atrybut kategorii udostępnia wstępnie zdefiniowane kategorie ułatwiające lokalizatora podczas tłumaczenia tekstu. Kategorie, takie jak przyznanie tekst etykiety i tytuł lokalizatora informacje o sposobie tłumaczenie tekstu. Istnieje również specjalne kategorii: Brak, Dziedzicz Ignoruj i NeverLocalize.  
+ Modifiability i czytelności, nie wymaga wyjaśnień. Atrybut Kategoria zawiera wstępnie zdefiniowane kategorie, które pomagają lokalizatorowi podczas tłumaczenia tekstu. Kategorie, takie jak tekst, etykiety i tytuł zapewniają lokalizatorowi informacje o sposobie tłumaczenie tekstu. Istnieją również specjalne kategorie: Brak, dziedziczenie, zignoruj i NeverLocalize.  
   
- W poniższej tabeli przedstawiono znaczenie specjalne kategorii.  
+ W poniższej tabeli przedstawiono znaczenie specjalnych kategoriach.  
   
 |Kategoria|Znaczenie|  
 |--------------|-------------|  
-|Brak|Wartość docelowa ma nie określonych kategorii.|  
-|Dziedziczenie|Wartość docelowa dziedziczy kategorii po swoim obiekcie nadrzędnym.|  
-|Ignoruj|Wartość docelowa jest ignorowany w procesie lokalizacji. Ignoruj dotyczy tylko bieżącej wartości. Nie wpłynie węzłów podrzędnych.|  
-|NeverLocalize|Bieżąca wartość nie może być lokalizowany. Ta kategoria jest dziedziczona przez elementy podrzędne danego elementu.|  
+|Brak|Wartość docelowa jest nie zdefiniowanych kategorii.|  
+|Dziedziczenie|Wartość docelowa dziedziczy jego kategoria od jego elementu nadrzędnego.|  
+|Zignoruj|Wartość docelowa jest ignorowany w procesie lokalizacji. Ignoruj dotyczy tylko bieżącej wartości. Nie wpłynie węzłów podrzędnych.|  
+|NeverLocalize|Bieżąca wartość nie może być zlokalizowany. Ta kategoria jest dziedziczona przez elementy podrzędne elementu.|  
   
 <a name="Localization_Comments"></a>   
-## <a name="localization-comments"></a>Komentarze w lokalizacji  
- Localization.Comments zawiera dowolnych ciągów dotyczące wartości docelowych. Deweloperzy aplikacji można dodać informacje umożliwiają wiadomość dla lokalizatorów podpowiedź sposób przekształcania tekstu aplikacji. Format komentarzy może być dowolnym ciągiem otoczona "()". Użyj "\\' Aby wprowadzić znaków.  
+## <a name="localization-comments"></a>Lokalizacja komentarzy  
+ Localization.Comments zawiera ciągów dotyczące wartości docelowej. Deweloperzy aplikacji mogą dodawać informacje, aby zapewnić lokalizatorzy wskazówek na temat sposób przekształcania tekstu aplikacji. Format komentarze może być dowolnym ciągiem, ujęte w "()". Użyj "\\" jako znak ucieczki dla znaków.  
   
-## <a name="see-also"></a>Zobacz też  
- [Globalizacja dla WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Używanie automatycznego układu do utworzenia przycisku](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [Używanie siatki do automatycznego układu](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [Lokalizowanie aplikacji](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+## <a name="see-also"></a>Zobacz także
+- [Globalizacja dla WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [Używanie automatycznego układu do utworzenia przycisku](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [Używanie siatki do automatycznego układu](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+- [Lokalizowanie aplikacji](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)

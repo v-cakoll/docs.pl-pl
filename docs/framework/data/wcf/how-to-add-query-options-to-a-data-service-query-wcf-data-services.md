@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Dodawanie opcje zapytania do zapytania usługi danych (usługi danych WCF)'
+title: 'Instrukcje: Dodawanie opcji zapytania do zapytania usługi danych (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,42 +9,42 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: e4258526-557e-4e96-91e1-2175400c7c8f
-ms.openlocfilehash: 330581c699ca4beede3333315844af084f27e672
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f02f28127650f316b954eaca182945e83fd418a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519037"
 ---
-# <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Porady: Dodawanie opcje zapytania do zapytania usługi danych (usługi danych WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia to zapytanie usługi danych z aplikacji klienta opartego na programie .NET Framework za pomocą klasy usługi danych wygenerowanego klienta. Najprostsza w tym celu jest utworzenie w wyrażeniu kwerendy języka zapytań zintegrowanym (LINQ) zawiera opcje żądanego zapytania. Można również wywołać szereg metod zapytań LINQ utworzenie równoważne zapytania. Ponadto można użyć <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metody w celu dodania opcje zapytania do zapytania. W każdym z tych przypadków identyfikator URI, generowany przez klienta zawiera zestaw jednostek żądanego z opcje wybrane zapytanie zastosowane. Aby uzyskać więcej informacji, zobacz [zapytanie usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+# <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Instrukcje: Dodawanie opcji zapytania do zapytania usługi danych (WCF Data Services)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia wykonywanie zapytań usługi danych z aplikacji klienta opartego na programie .NET Framework przy użyciu klas usługi danych wygenerowanego klienta. Najłatwiejszy w tym celu jest do redagowania wyrażenie zapytania Language Integrated Query (LINQ), która obejmuje opcje żądanego zapytania. Można również wywołać szereg metod zapytań LINQ do redagowania równoważne zapytania. Na koniec można użyć <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metodę, aby dodać opcje zapytania do zapytania. W każdym z tych przypadków identyfikator URI, który jest generowany przez klienta zawiera zestaw żądanej jednostki przy użyciu opcji wybrane zapytanie stosowane. Aby uzyskać więcej informacji, zobacz [zapytań usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
- Przykład, w tym temacie korzysta z Northwind przykładowych danych wygenerowany automatycznie i usługi klienta danych usługi klas. Ta usługa i klas danych klienta są tworzone po ukończeniu [szybkiego startu usługi danych WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ W przykładzie w tym temacie użyto Northwind przykładowe dane usługi i automatycznie wygenerowany klas usługi danych klienta. Ta usługa i klas danych klienta, są tworzone po ukończeniu [Szybki Start usług danych WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak utworzyć wyrażenie zapytania LINQ, które zwraca tylko zamówień kosztem transport ponad 30 $ i że zamówień wyniki według daty wysyłki w kolejności malejącej.  
+ Poniższy przykład pokazuje, jak utworzyć wyrażenie zapytania LINQ, które zwraca tylko zamówień za pomocą transportu koszt ponad 30 USD i że zamówienia wyniki według daty dostawy w kolejności malejącej.  
   
  [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinq](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionslinq)]
  [!code-vb[Astoria Northwind Client#AddQueryOptionsLinq](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionslinq)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak utworzenie zapytania LINQ za pomocą metody zapytań LINQ, który jest odpowiednikiem poprzedniego zapytania.  
+ Poniższy przykład pokazuje, jak do redagowania zapytania LINQ za pomocą metody zapytań LINQ, który jest odpowiednikiem poprzednie zapytanie.  
   
  [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqExpression](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionslinqexpression)]
  [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqExpression](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionslinqexpression)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie do <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metodę w celu utworzenia <xref:System.Data.Services.Client.DataServiceQuery%601> będący odpowiednikiem poprzednich przykładach.  
+ Poniższy przykład pokazuje, jak za pomocą <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metodę w celu utworzenia <xref:System.Data.Services.Client.DataServiceQuery%601> oznacza to równoważne do poprzednich przykładów.  
   
  [!code-csharp[Astoria Northwind Client#AddQueryOptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptions)]
  [!code-vb[Astoria Northwind Client#AddQueryOptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptions)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie `$orderby` opcji zapytania do filtrowania i kolejność zwróciło obiektów zamówień przez właściwość transportu.  
+ Poniższy przykład pokazuje, jak używać `$orderby` opcji zapytania do filtrowania i kolejność zwracane obiekty zamówienia przez właściwość transportu.  
   
  [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#orderwithfilter)]
  [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#orderwithfilter)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
- [Instrukcje: Projekt wyników zapytania](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Instrukcje: Projekt wyników zapytania](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)

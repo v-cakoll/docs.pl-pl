@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2b3ce24a967a4c8a15facb3f0a5dbdc0243a06ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515943"
 ---
 # <a name="guidelines-and-best-practices"></a>Wskazówki i najlepsze rozwiązania
 Ta sekcja zawiera tematy, które zapewniają wskazówki dotyczące tworzenia aplikacji Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  Wyjaśnia, jak i kiedy utworzyć kontraktów danych, które nie przerywają działania podczas tworzenia przyszłych wersji.  
   
  [Przechowywanie wersji usługi](../../../docs/framework/wcf/service-versioning.md)  
@@ -44,8 +44,8 @@ Ta sekcja zawiera tematy, które zapewniają wskazówki dotyczące tworzenia apl
   
  [Podstawy programowania przy użyciu programu WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation — przykłady](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
- [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)  
- [Kompilowanie klientów](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a>Zobacz także
+- [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation — przykłady](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)
+- [Kompilowanie klientów](../../../docs/framework/wcf/building-clients.md)

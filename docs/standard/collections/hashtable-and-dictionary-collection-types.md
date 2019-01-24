@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4dde57e03e26085d19099e749afd50ba14874a5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fefd9f95a669c9c0384cefe41322c7a10a96a3b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514715"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Typy kolekcji tablic wartości funkcji mieszającej i słowników
 <xref:System.Collections.Hashtable?displayProperty=nameWithType> Klasy, a <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> Implementowanie klas ogólnych <xref:System.Collections.IDictionary?displayProperty=nameWithType> interfejsu. <xref:System.Collections.Generic.Dictionary%602> Implementuje również klasy ogólnej <xref:System.Collections.Generic.IDictionary%602> interfejs generyczny. W związku z tym każdy element w tych kolekcjach jest pary klucz wartość.  
@@ -38,10 +38,10 @@ ms.locfileid: "44195377"
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections.Hashtable>  
-- <xref:System.Collections.IDictionary>  
-- <xref:System.Collections.IHashCodeProvider>  
-- <xref:System.Collections.Generic.Dictionary%602>  
-- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
-- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
+- <xref:System.Collections.Hashtable>
+- <xref:System.Collections.IDictionary>
+- <xref:System.Collections.IHashCodeProvider>
+- <xref:System.Collections.Generic.Dictionary%602>
+- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
+- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>
 - [Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)

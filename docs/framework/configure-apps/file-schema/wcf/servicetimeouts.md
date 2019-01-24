@@ -2,12 +2,12 @@
 title: '&lt;serviceTimeouts&gt;'
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: 4cb4b4ae6fe01430989d9ee5f3d94b16778595aa
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f7aa623ee387f67f3bbff32249d3695049359cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524471"
 ---
 # <a name="ltservicetimeoutsgt"></a>&lt;serviceTimeouts&gt;
 Określa limit czasu usługi.  
@@ -16,7 +16,7 @@ Określa limit czasu usługi.
 \<zachowania >  
 \<serviceBehaviors>  
 \<zachowanie >  
-\<serviceTimeouts >  
+\<serviceTimeouts>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,5 +45,5 @@ Określa limit czasu usługi.
 |-------------|-----------------|  
 |[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>

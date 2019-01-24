@@ -2,12 +2,12 @@
 title: Składnia ciągu połączenia
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 3d8b37315ab3ceea2ddedd139787627e86b6a131
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524549"
 ---
 # <a name="connection-string-syntax"></a>Składnia ciągu połączenia
 Każdy dostawca danych .NET Framework ma `Connection` obiektu, który dziedziczy z <xref:System.Data.Common.DbConnection> oraz specyficzne dla dostawcy <xref:System.Data.Common.DbConnection.ConnectionString%2A> właściwości. Składnia ciągu połączenia określone dla każdego dostawcy jest udokumentowany w jego `ConnectionString` właściwości. W poniższej tabeli wymieniono dostawców cztery danych, które są zawarte w .NET Framework.  
@@ -35,7 +35,7 @@ Każdy dostawca danych .NET Framework ma `Connection` obiektu, który dziedziczy
 ## <a name="windows-authentication"></a>Uwierzytelnianie systemu Windows  
  Firma Microsoft zaleca używanie uwierzytelniania Windows (czasami określane jako *zintegrowane zabezpieczenia*) do łączenia ze źródłami danych, które go obsługują. Składnia zatrudnionych w parametrach połączenia jest zależna od dostawcy. W poniższej tabeli przedstawiono składnię uwierzytelniania Windows używana z dostawcy danych .NET Framework.  
   
-|Dostawcy|Składnia|  
+|Dostawca|Składnia|  
 |--------------|------------|  
 |`SqlClient`|`Integrated Security=true;`<br /><br /> `-- or --`<br /><br /> `Integrated Security=SSPI;`|  
 |`OleDb`|`Integrated Security=SSPI;`|  
@@ -116,8 +116,8 @@ Można również ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder
 |Nie|Brak|Tak|Tak|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
 |Tak|Nie|Ignorowane|Ignorowane|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
 |Tak|Tak|Nie (ustawienie domyślne)|Ignorowane|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
-|Tak|Tak|Tak|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
-|Tak|Tak|Tak|Tak|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
+|Tak|Yes|Tak|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
+|Tak|Yes|Yes|Tak|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
   
  Aby uzyskać więcej informacji, zobacz [przy użyciu szyfrowania bez sprawdzania poprawności](/sql/relational-databases/native-client/features/using-encryption-without-validation).
   
@@ -194,7 +194,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
  Aby uzyskać więcej informacji na temat składnia ciągu połączenia ODBC, zobacz <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

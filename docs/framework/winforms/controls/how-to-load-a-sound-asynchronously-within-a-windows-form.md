@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ładowanie dźwięku asynchronicznie w formularzu systemu Windows'
+title: 'Instrukcje: Ładowanie dźwięku asynchronicznie w formularzu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 2de2be478e81183201cc85e1a6dfd6f1a1833af6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed1257a942eb990c9b0c6427d264013e3324326b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523678"
 ---
-# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Porady: ładowanie dźwięku asynchronicznie w formularzu systemu Windows
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Instrukcje: Ładowanie dźwięku asynchronicznie w formularzu Windows
 Poniższy przykład kodu asynchronicznego ładuje dźwięku z adresu URL i jest odtwarzany w nowym wątku.  
   
 ## <a name="example"></a>Przykład  
@@ -30,7 +30,7 @@ Poniższy przykład kodu asynchronicznego ładuje dźwięku z adresu URL i jest 
   
 -   Zastąp nazwę pliku `"http://www.tailspintoys.com/sounds/stop.wav"` z prawidłową nazwą pliku.  
   
- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Operacje na plikach powinna zostać ujęta w odpowiednie bloki obsługi wyjątków.  
@@ -52,8 +52,8 @@ Poniższy przykład kodu asynchronicznego ładuje dźwięku z adresu URL i jest 
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik `Form1.vb` może nie być plikiem źródłowym programu Visual Basic. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Media.SoundPlayer.LoadAsync%2A>  
- <xref:System.Media.SoundPlayer.LoadCompleted>  
- <xref:System.Media.SoundPlayer.Play%2A>  
- [Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Media.SoundPlayer.LoadAsync%2A>
+- <xref:System.Media.SoundPlayer.LoadCompleted>
+- <xref:System.Media.SoundPlayer.Play%2A>
+- [Instrukcje: Odtwarzanie dźwięku za pomocą formularza Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 468ad1acf55c4d1b4fc2b53730f16ee8630cf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c27669c8473bd52d3b82a14d570340ac38d1e07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523249"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention — Wyliczenie
-Zawiera wartości, które opisują typy konwencji wywoływania, które zostały wprowadzone w kodzie zarządzanym.  
+Zawiera wartości, które opisują rodzaje konwencji wywoływania, które zostały wprowadzone w kodzie zarządzanym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,25 +55,25 @@ typedef enum CorCallingConvention
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Wskazuje domyślną konwencję wywoływania.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|Wskazuje, że metoda korzysta z różną liczbą parametrów.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Wskazuje, że wywołanie jest do pola.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Oznacza wywołania do metody lokalnego.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|Wskazuje, że ta metoda przyjmuje zmienną liczbę parametrów.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Wskazuje, że wywołanie się do pola.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Wskazuje wywołanie do metody lokalnej.|  
 |`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Wskazuje, że wywołanie jest właściwością.|  
 |`IMAGE_CEE_CS_CALLCONV_UNMGD`|Wskazuje, że wywołanie jest niezarządzany.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Wskazuje wystąpienia metody ogólnej.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Wskazuje 64-bitowych wywołanie funkcji PInvoke do metody, która przyjmuje zmienną liczbę parametrów.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Wskazuje wystąpienia metody rodzajowej.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Wskazuje wywołania metody, która przyjmuje zmienną liczbę parametrów funkcji PInvoke 64-bitowych.|  
 |`IMAGE_CEE_CS_CALLCONV_MAX`|W tym artykule opisano nieprawidłową wartość 4-bitowy.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Wskazuje, czy za pomocą liczby bitów dolnej czterech opisano konwencji wywołania.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Wskazuje opisujący top bitu `this` parametru.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Oznacza to, że `this` parametru jest opisana jawnie w podpisie.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Określa podpis metody ogólnej z jawnym liczby argumentów typu. Liczba parametrów zwykłej to poprzedza.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Wskazuje, że Konwencja wywołania jest opisana przez dolnej cztery bity.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Wskazuje, który opisuje bitu najwyższego `this` parametru.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Oznacza to, że `this` parametr jest jawnie opisany w podpisie.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Wskazuje sygnaturę metody ogólnej przy użyciu jawne liczby argumentów typu. To poprzedza liczba zwykłych parametrów.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

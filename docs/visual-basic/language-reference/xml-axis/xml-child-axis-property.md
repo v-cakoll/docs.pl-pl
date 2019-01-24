@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 0b504a9e368e5179d5f91faf7256445d7da47b1d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 696d14630240dce094ace7d595232e1a210ea78e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527149"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Właściwości osi elementu podrzędnego XML (Visual Basic)
 Zapewnia dostęp do elementów podrzędnych w jednej z następujących czynności: <xref:System.Xml.Linq.XElement> obiektu <xref:System.Xml.Linq.XDocument> object, zbiór <xref:System.Xml.Linq.XElement> obiektów lub kolekcji <xref:System.Xml.Linq.XDocument> obiektów.  
@@ -30,10 +30,10 @@ object.<child>
   
 |Termin|Definicja|  
 |---|---|  
-|`object`|Wymagane. <xref:System.Xml.Linq.XElement> Obiektu <xref:System.Xml.Linq.XDocument> object, zbiór <xref:System.Xml.Linq.XElement> obiektów lub kolekcji <xref:System.Xml.Linq.XDocument> obiektów.|  
-|.<|Wymagane. Oznacza początek właściwości osi elementu podrzędnego.|  
-|`child`|Wymagane. Nazwy węzłów podrzędnych, aby uzyskać dostęp, w postaci [`prefix``:`]`name`.<br /><br /> -   `Prefix` — Opcjonalne. Prefiks przestrzeni nazw XML dla węzła podrzędnego. Musi być globalnej przestrzeni nazw XML zdefiniowana z `Imports` instrukcji.<br />-   `Name` — Wymagane. Nazwa węzła podrzędnego lokalnego. Zobacz [nazwy deklarowanych elementów XML oraz atrybuty](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
-|>|Wymagane. Oznacza koniec właściwości osi elementu podrzędnego.|  
+|`object`|Wymagana. <xref:System.Xml.Linq.XElement> Obiektu <xref:System.Xml.Linq.XDocument> object, zbiór <xref:System.Xml.Linq.XElement> obiektów lub kolekcji <xref:System.Xml.Linq.XDocument> obiektów.|  
+|.<|Wymagana. Oznacza początek właściwości osi elementu podrzędnego.|  
+|`child`|Wymagana. Nazwy węzłów podrzędnych, aby uzyskać dostęp, w postaci [`prefix``:`]`name`.<br /><br /> -   `Prefix` — Opcjonalne. Prefiks przestrzeni nazw XML dla węzła podrzędnego. Musi być globalnej przestrzeni nazw XML zdefiniowana z `Imports` instrukcji.<br />-   `Name` — Wymagane. Nazwa węzła podrzędnego lokalnego. Zobacz [nazwy deklarowanych elementów XML oraz atrybuty](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|>|Wymagana. Oznacza koniec właściwości osi elementu podrzędnego.|  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Kolekcja <xref:System.Xml.Linq.XElement> obiektów.  
@@ -73,9 +73,9 @@ object.<child>
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.Linq.XElement>  
- [Właściwości osi XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Tworzenie XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Nazwy deklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Xml.Linq.XElement>
+- [Właściwości osi XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Tworzenie XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Nazwy deklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

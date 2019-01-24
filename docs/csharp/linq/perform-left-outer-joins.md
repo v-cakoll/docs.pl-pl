@@ -3,12 +3,12 @@ title: Wykonanie lewych sprzężeń zewnętrznych (LINQ w C#)
 description: Dowiedz się, jak wykonanie lewych sprzężeń zewnętrznych za pomocą LINQ w C#.
 ms.date: 12/1/2016
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
-ms.openlocfilehash: 329fe9e17640931c5eb39b33b791a7a77a6f7b89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: a4e6fb73a599d0212d72a585bba98630e828e21e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528943"
 ---
 # <a name="perform-left-outer-joins"></a>Wykonanie lewych sprzężeń zewnętrznych
 
@@ -29,8 +29,8 @@ Drugim krokiem jest uwzględnienie każdego elementu pierwszej kolekcji (po lewe
 
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Linq.Enumerable.Join%2A>  
-- <xref:System.Linq.Enumerable.GroupJoin%2A>  
-- [Wykonywanie sprzężeń wewnętrznych](perform-inner-joins.md)  
-- [Wykonywanie sprzężeń grupowanych](perform-grouped-joins.md)  
-- [Typy anonimowe](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>
+- <xref:System.Linq.Enumerable.GroupJoin%2A>
+- [Wykonywanie sprzężeń wewnętrznych](perform-inner-joins.md)
+- [Wykonywanie sprzężeń grupowanych](perform-grouped-joins.md)
+- [Typy anonimowe](../programming-guide/classes-and-structs/anonymous-types.md)

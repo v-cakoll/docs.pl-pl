@@ -1,5 +1,5 @@
 ---
-title: ICorDebugCode4::EnumerateVariableHomes — metoda
+title: ICorDebugCode4::EnumerateVariableHomes Method
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode4.EnumerateVariableHomes
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e1c8157d5a5e4a1bd52f187de7c1d3bfcc4e66d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c765cb2e0e59fe2fcac562fdb2e926e878298c1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530293"
 ---
-# <a name="icordebugcode4enumeratevariablehomes-method"></a>ICorDebugCode4::EnumerateVariableHomes — metoda
+# <a name="icordebugcode4enumeratevariablehomes-method"></a>ICorDebugCode4::EnumerateVariableHomes Method
 Pobiera moduł wyliczający do zmiennych lokalnych i argumenty w funkcji.  
   
 ## <a name="syntax"></a>Składnia  
@@ -37,13 +37,13 @@ HRESULT EnumerateVariableHomes(
   
 #### <a name="parameters"></a>Parametry  
  `ppEnum`  
- Wskaźnik do adresu [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) obiektu interfejsu, który moduł wyliczający dla zmiennych lokalnych i argumenty w funkcji.  
+ Wskaźnik na adres [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) obiektu interfejsu, który jest moduł wyliczający dla zmiennych lokalnych i argumenty w funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) obiekt interfejsu jest standardowy moduł pochodzące z interfejsu "ICorDebugEnum", która umożliwia wyliczyć [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) obiektów. Kolekcja może zawierać wielu [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) obiektów dla tego samego miejsca lub argumentu indeksu, jeśli mają inną domach w różnych punktach w funkcji.  
+ [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) obiektu interfejsu jest standardowy moduł wyliczający, pochodzące z interfejsu "ICorDebugEnum", która pozwala na wyliczenie [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) obiektów. Kolekcja może zawierać wiele [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) obiektów dla tego samego indeksu gniazdo lub argumentu, jeśli mają one różne domach w różnych punktach w funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -51,6 +51,6 @@ HRESULT EnumerateVariableHomes(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugCode4, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugCode4, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

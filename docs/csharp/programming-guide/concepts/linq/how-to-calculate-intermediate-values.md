@@ -1,21 +1,21 @@
 ---
-title: 'Porady: obliczanie wartości pośrednich (C#)'
+title: 'Instrukcje: Obliczanie wartości pośrednich (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: 15ccf58738b64ebfaef77deb162ddb29db0ae33a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 12c8a87114859ce7b47b8206acb454cdc2838470
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604334"
 ---
-# <a name="how-to-calculate-intermediate-values-c"></a><span data-ttu-id="4a4a0-102">Porady: obliczanie wartości pośrednich (C#)</span><span class="sxs-lookup"><span data-stu-id="4a4a0-102">How to: Calculate Intermediate Values (C#)</span></span>
-<span data-ttu-id="4a4a0-103">W tym przykładzie przedstawiono sposób obliczania wartości pośrednich, które mogą być używane w sortowania, filtrowania i wybierając opcję.</span><span class="sxs-lookup"><span data-stu-id="4a4a0-103">This example shows how to calculate intermediate values that can be used in sorting, filtering, and selecting.</span></span>  
+# <a name="how-to-calculate-intermediate-values-c"></a><span data-ttu-id="b8e7e-102">Instrukcje: Obliczanie wartości pośrednich (C#)</span><span class="sxs-lookup"><span data-stu-id="b8e7e-102">How to: Calculate Intermediate Values (C#)</span></span>
+<span data-ttu-id="b8e7e-103">W tym przykładzie przedstawiono sposób obliczania wartości pośrednich, które mogą być używane w sortowania, filtrowania i wybierając opcję.</span><span class="sxs-lookup"><span data-stu-id="b8e7e-103">This example shows how to calculate intermediate values that can be used in sorting, filtering, and selecting.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4a4a0-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="4a4a0-104">Example</span></span>  
- <span data-ttu-id="4a4a0-105">W poniższym przykładzie użyto `Let` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="4a4a0-105">The following example uses the `Let` clause.</span></span>  
+## <a name="example"></a><span data-ttu-id="b8e7e-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="b8e7e-104">Example</span></span>  
+ <span data-ttu-id="b8e7e-105">W poniższym przykładzie użyto `Let` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="b8e7e-105">The following example uses the `Let` clause.</span></span>  
   
- <span data-ttu-id="4a4a0-106">W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="4a4a0-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="b8e7e-106">W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b8e7e-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -29,7 +29,7 @@ foreach (decimal ex in extensions)
     Console.WriteLine(ex);  
 ```  
   
- <span data-ttu-id="4a4a0-107">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="4a4a0-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="b8e7e-107">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="b8e7e-107">This code produces the following output:</span></span>  
   
 ```  
 55.92  
@@ -39,10 +39,10 @@ foreach (decimal ex in extensions)
 435.00  
 ```  
   
-## <a name="example"></a><span data-ttu-id="4a4a0-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="4a4a0-108">Example</span></span>  
- <span data-ttu-id="4a4a0-109">Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="4a4a0-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="4a4a0-110">Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="4a4a0-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="b8e7e-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="b8e7e-108">Example</span></span>  
+ <span data-ttu-id="b8e7e-109">Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="b8e7e-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="b8e7e-110">Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="b8e7e-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="4a4a0-111">W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: dane liczbowe w Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="4a4a0-111">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="b8e7e-111">W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="b8e7e-111">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  
@@ -57,7 +57,7 @@ foreach (decimal ex in extensions)
     Console.WriteLine(ex);  
 ```  
   
- <span data-ttu-id="4a4a0-112">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="4a4a0-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="b8e7e-112">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="b8e7e-112">This code produces the following output:</span></span>  
   
 ```  
 55.92  
@@ -67,6 +67,6 @@ foreach (decimal ex in extensions)
 435.00  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4a4a0-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="4a4a0-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b8e7e-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b8e7e-113">See also</span></span>
 
-- [<span data-ttu-id="4a4a0-114">Podstawowe zapytania (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="4a4a0-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="b8e7e-114">Podstawowe zapytania (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b8e7e-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

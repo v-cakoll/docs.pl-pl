@@ -14,21 +14,21 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: 1dc19da76b73d5b8e5d66851b539a7d1829fc938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c39be1bdcc9c91f4822b7e168f16cb51c51d6c60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580827"
 ---
-# <a name="shapes"></a><span data-ttu-id="f6dd6-102">Kształty</span><span class="sxs-lookup"><span data-stu-id="f6dd6-102">Shapes</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="f6dd6-103"> zapewnia obsługę Rysowanie kształtów podstawowych przy użyciu <xref:System.Windows.Shapes.Shape> klasy.</span><span class="sxs-lookup"><span data-stu-id="f6dd6-103"> provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="f6dd6-104">Obiekty kształtu pochodzi od <xref:System.Windows.FrameworkElement> , uczestniczyć w systemie układ i mogą być wystawiane tylko przy użyciu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f6dd6-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
+# <a name="shapes"></a><span data-ttu-id="e473d-102">Kształty</span><span class="sxs-lookup"><span data-stu-id="e473d-102">Shapes</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="e473d-103">zapewnia obsługę Rysowanie kształtów podstawowych przy użyciu <xref:System.Windows.Shapes.Shape> klasy.</span><span class="sxs-lookup"><span data-stu-id="e473d-103">provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="e473d-104">Obiekty kształtów pochodzić od <xref:System.Windows.FrameworkElement> i jako takie, uczestniczą w systemie układ i mogą być wystawiane, po prostu przy użyciu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e473d-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f6dd6-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="f6dd6-105">In This Section</span></span>  
- [<span data-ttu-id="f6dd6-106">Kształty i podstawowe rysowanie w programie WPF — przegląd</span><span class="sxs-lookup"><span data-stu-id="f6dd6-106">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="f6dd6-107">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="f6dd6-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e473d-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="e473d-105">In This Section</span></span>  
+ [<span data-ttu-id="e473d-106">Kształty i podstawowe rysowanie w programie WPF — przegląd</span><span class="sxs-lookup"><span data-stu-id="e473d-106">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="e473d-107">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="e473d-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f6dd6-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f6dd6-108">See Also</span></span>  
- <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="f6dd6-109">Grafika 2D i obrazowanie</span><span class="sxs-lookup"><span data-stu-id="f6dd6-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="f6dd6-110">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="f6dd6-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="e473d-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e473d-108">See also</span></span>
+- <xref:System.Windows.Shapes.Shape>
+- [<span data-ttu-id="e473d-109">Grafika 2D i obrazowanie</span><span class="sxs-lookup"><span data-stu-id="e473d-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="e473d-110">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="e473d-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

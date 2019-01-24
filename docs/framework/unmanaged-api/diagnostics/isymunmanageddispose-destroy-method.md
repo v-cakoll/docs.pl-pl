@@ -17,27 +17,27 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d4b5f94bdbb7319cef14c8b86f8ea995df7ff21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a4a0bac056c7c88a491ac05a17b662ace833df1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614461"
 ---
-# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="ff107-102">ISymUnmanagedDispose::Destroy — Metoda</span><span class="sxs-lookup"><span data-stu-id="ff107-102">ISymUnmanagedDispose::Destroy Method</span></span>
-<span data-ttu-id="ff107-103">Powoduje, że obiekt zwolnić wszystkie odwołania wewnętrzne i zwraca błąd na wszystkie wywołania metody kolejne.</span><span class="sxs-lookup"><span data-stu-id="ff107-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
+# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="1bbd0-102">ISymUnmanagedDispose::Destroy — Metoda</span><span class="sxs-lookup"><span data-stu-id="1bbd0-102">ISymUnmanagedDispose::Destroy Method</span></span>
+<span data-ttu-id="1bbd0-103">Powoduje, że obiekt jest zwolnienie wszystkich odwołań wewnętrznego i zwraca błąd na dowolne wywołania metody kolejne.</span><span class="sxs-lookup"><span data-stu-id="1bbd0-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff107-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ff107-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1bbd0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1bbd0-104">Syntax</span></span>  
   
 ```  
 HRESULT Destroy();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="ff107-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="ff107-105">Return Value</span></span>  
- <span data-ttu-id="ff107-106">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="ff107-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1bbd0-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="1bbd0-105">Return Value</span></span>  
+ <span data-ttu-id="1bbd0-106">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="1bbd0-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ff107-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ff107-107">Requirements</span></span>  
- <span data-ttu-id="ff107-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ff107-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1bbd0-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1bbd0-107">Requirements</span></span>  
+ <span data-ttu-id="1bbd0-108">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1bbd0-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff107-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ff107-109">See Also</span></span>  
- [<span data-ttu-id="ff107-110">ISymUnmanagedDispose, interfejs</span><span class="sxs-lookup"><span data-stu-id="ff107-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1bbd0-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1bbd0-109">See also</span></span>
+- [<span data-ttu-id="1bbd0-110">ISymUnmanagedDispose, interfejs</span><span class="sxs-lookup"><span data-stu-id="1bbd0-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)

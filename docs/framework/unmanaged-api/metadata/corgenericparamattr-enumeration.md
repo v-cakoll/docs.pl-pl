@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d56be8c6f224010da22803894524299c0d376ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf73f382c1da15e0285ee95be9e8bce39575ae0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557369"
 ---
-# <a name="corgenericparamattr-enumeration"></a><span data-ttu-id="5e107-102">CorGenericParamAttr — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="5e107-102">CorGenericParamAttr Enumeration</span></span>
-<span data-ttu-id="5e107-103">Zawiera wartości, które opisują <xref:System.Type> parametrów dla typów ogólnych jako używanych w wywołaniach [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span><span class="sxs-lookup"><span data-stu-id="5e107-103">Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span></span>  
+# <a name="corgenericparamattr-enumeration"></a><span data-ttu-id="2b2a5-102">CorGenericParamAttr — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="2b2a5-102">CorGenericParamAttr Enumeration</span></span>
+<span data-ttu-id="2b2a5-103">Zawiera wartości, które opisują <xref:System.Type> parametrów dla typów ogólnych, jako używane wywołania [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span><span class="sxs-lookup"><span data-stu-id="2b2a5-103">Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5e107-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="5e107-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b2a5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2b2a5-104">Syntax</span></span>  
   
 ```  
 typedef enum CorGenericParamAttr {  
@@ -45,26 +45,26 @@ typedef enum CorGenericParamAttr {
 } CorGenericParamAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5e107-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="5e107-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2b2a5-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="2b2a5-105">Members</span></span>  
   
-|<span data-ttu-id="5e107-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="5e107-106">Member</span></span>|<span data-ttu-id="5e107-107">Opis</span><span class="sxs-lookup"><span data-stu-id="5e107-107">Description</span></span>|  
+|<span data-ttu-id="2b2a5-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="2b2a5-106">Member</span></span>|<span data-ttu-id="2b2a5-107">Opis</span><span class="sxs-lookup"><span data-stu-id="2b2a5-107">Description</span></span>|  
 |------------|-----------------|  
-|`gpVarianceMask`|<span data-ttu-id="5e107-108">Parametr wariancję dotyczy tylko parametrów ogólnych interfejsów i delegatów.</span><span class="sxs-lookup"><span data-stu-id="5e107-108">Parameter variance applies only to generic parameters for interfaces and delegates.</span></span>|  
-|`gpNonVariant`|<span data-ttu-id="5e107-109">Wskazuje brak wariancji.</span><span class="sxs-lookup"><span data-stu-id="5e107-109">Indicates the absence of variance.</span></span>|  
-|`gpCovariant`|<span data-ttu-id="5e107-110">Wskazuje KOWARIANCJA.</span><span class="sxs-lookup"><span data-stu-id="5e107-110">Indicates covariance.</span></span>|  
-|`gpContravariant`|<span data-ttu-id="5e107-111">Wskazuje kontrawariancja.</span><span class="sxs-lookup"><span data-stu-id="5e107-111">Indicates contravariance.</span></span>|  
-|`gpSpecialConstraintMask`|<span data-ttu-id="5e107-112">Ograniczeń specjalnych można stosować do dowolnych <xref:System.Type> parametru.</span><span class="sxs-lookup"><span data-stu-id="5e107-112">Special constraints can apply to any <xref:System.Type> parameter.</span></span>|  
-|`gpNoSpecialConstraint`|<span data-ttu-id="5e107-113">Wskazuje, że ograniczenie nie dotyczy <xref:System.Type> parametru.</span><span class="sxs-lookup"><span data-stu-id="5e107-113">Indicates that no constraint applies to the <xref:System.Type> parameter.</span></span>|  
-|`gpReferenceTypeConstraint`|<span data-ttu-id="5e107-114">Oznacza to, że <xref:System.Type> parametr musi być typem referencyjnym.</span><span class="sxs-lookup"><span data-stu-id="5e107-114">Indicates that the <xref:System.Type> parameter must be a reference type.</span></span>|  
-|`gpNotNullableValueTypeConstraint`|<span data-ttu-id="5e107-115">Oznacza to, że <xref:System.Type> parametr musi być typem wartości, która nie może być wartością null.</span><span class="sxs-lookup"><span data-stu-id="5e107-115">Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.</span></span>|  
-|`gpDefaultConstructorConstraint`|<span data-ttu-id="5e107-116">Oznacza to, że <xref:System.Type> parametr musi mieć domyślnego konstruktora publicznego, który nie przyjmuje żadnych parametrów.</span><span class="sxs-lookup"><span data-stu-id="5e107-116">Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.</span></span>|  
+|`gpVarianceMask`|<span data-ttu-id="2b2a5-108">Parametr wariancja dotyczy tylko parametrów ogólnych interfejsów i delegatów.</span><span class="sxs-lookup"><span data-stu-id="2b2a5-108">Parameter variance applies only to generic parameters for interfaces and delegates.</span></span>|  
+|`gpNonVariant`|<span data-ttu-id="2b2a5-109">Wskazuje brak wariancji.</span><span class="sxs-lookup"><span data-stu-id="2b2a5-109">Indicates the absence of variance.</span></span>|  
+|`gpCovariant`|<span data-ttu-id="2b2a5-110">Wskazuje KOWARIANCJA.</span><span class="sxs-lookup"><span data-stu-id="2b2a5-110">Indicates covariance.</span></span>|  
+|`gpContravariant`|<span data-ttu-id="2b2a5-111">Wskazuje, kontrawariancja.</span><span class="sxs-lookup"><span data-stu-id="2b2a5-111">Indicates contravariance.</span></span>|  
+|`gpSpecialConstraintMask`|<span data-ttu-id="2b2a5-112">Specjalne ograniczenia można zastosować do dowolnego <xref:System.Type> parametru.</span><span class="sxs-lookup"><span data-stu-id="2b2a5-112">Special constraints can apply to any <xref:System.Type> parameter.</span></span>|  
+|`gpNoSpecialConstraint`|<span data-ttu-id="2b2a5-113">Wskazuje, że nie ograniczenie ma zastosowanie do <xref:System.Type> parametru.</span><span class="sxs-lookup"><span data-stu-id="2b2a5-113">Indicates that no constraint applies to the <xref:System.Type> parameter.</span></span>|  
+|`gpReferenceTypeConstraint`|<span data-ttu-id="2b2a5-114">Oznacza to, że <xref:System.Type> parametr musi być typem referencyjnym.</span><span class="sxs-lookup"><span data-stu-id="2b2a5-114">Indicates that the <xref:System.Type> parameter must be a reference type.</span></span>|  
+|`gpNotNullableValueTypeConstraint`|<span data-ttu-id="2b2a5-115">Oznacza to, że <xref:System.Type> parametr musi być typem wartości, która nie może mieć wartości null.</span><span class="sxs-lookup"><span data-stu-id="2b2a5-115">Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.</span></span>|  
+|`gpDefaultConstructorConstraint`|<span data-ttu-id="2b2a5-116">Oznacza to, że <xref:System.Type> parametr musi mieć domyślnego konstruktora publicznego, który nie przyjmuje żadnych parametrów.</span><span class="sxs-lookup"><span data-stu-id="2b2a5-116">Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5e107-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5e107-117">Requirements</span></span>  
- <span data-ttu-id="5e107-118">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5e107-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b2a5-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2b2a5-117">Requirements</span></span>  
+ <span data-ttu-id="2b2a5-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b2a5-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5e107-119">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5e107-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="2b2a5-119">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="2b2a5-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="5e107-120">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e107-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2b2a5-120">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b2a5-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e107-121">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5e107-121">See Also</span></span>  
- [<span data-ttu-id="5e107-122">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="5e107-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="2b2a5-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2b2a5-121">See also</span></span>
+- [<span data-ttu-id="2b2a5-122">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="2b2a5-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

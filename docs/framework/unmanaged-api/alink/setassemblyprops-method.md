@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aed553a3a8d54b5229a122e76b61e3e58d4af3c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65d6e929a0a6fb5e1933a6c9216dfc5b56342113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560649"
 ---
-# <a name="setassemblyprops-method"></a><span data-ttu-id="59f24-102">SetAssemblyProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="59f24-102">SetAssemblyProps Method</span></span>
-<span data-ttu-id="59f24-103">Przypisuje poziom zestawu właściwości.</span><span class="sxs-lookup"><span data-stu-id="59f24-103">Assigns assembly-level properties.</span></span>  
+# <a name="setassemblyprops-method"></a><span data-ttu-id="6b5ec-102">SetAssemblyProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="6b5ec-102">SetAssemblyProps Method</span></span>
+<span data-ttu-id="6b5ec-103">Przypisuje właściwości na poziomie zestawu.</span><span class="sxs-lookup"><span data-stu-id="6b5ec-103">Assigns assembly-level properties.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59f24-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="59f24-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b5ec-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6b5ec-104">Syntax</span></span>  
   
 ```  
 HRESULT SetAssemblyProps(  
@@ -37,26 +37,26 @@ HRESULT SetAssemblyProps(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="59f24-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="59f24-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6b5ec-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="6b5ec-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="59f24-106">Identyfikator zestawu.</span><span class="sxs-lookup"><span data-stu-id="59f24-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="6b5ec-106">Identyfikator zestawu.</span><span class="sxs-lookup"><span data-stu-id="6b5ec-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="59f24-107">Plik, który definiuje właściwość.</span><span class="sxs-lookup"><span data-stu-id="59f24-107">File that defines the property.</span></span> <span data-ttu-id="59f24-108">Może mieć wartość NULL, jeśli `AssemblyID` nie wskazuje niezwiązanego modułu netmodule.</span><span class="sxs-lookup"><span data-stu-id="59f24-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
+ <span data-ttu-id="6b5ec-107">Plik, który definiuje właściwość.</span><span class="sxs-lookup"><span data-stu-id="6b5ec-107">File that defines the property.</span></span> <span data-ttu-id="6b5ec-108">Może mieć wartości NULL, jeśli `AssemblyID` nie wskazuje niepowiązanych modułu netmodule.</span><span class="sxs-lookup"><span data-stu-id="6b5ec-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
   
  `Option`  
- <span data-ttu-id="59f24-109">Wskazuje opcję, aby zmodyfikować.</span><span class="sxs-lookup"><span data-stu-id="59f24-109">Indicates the option to modify.</span></span>  
+ <span data-ttu-id="6b5ec-109">Wskazuje opcję modyfikacji.</span><span class="sxs-lookup"><span data-stu-id="6b5ec-109">Indicates the option to modify.</span></span>  
   
  `Value`  
- <span data-ttu-id="59f24-110">Nowa wartość opcji.</span><span class="sxs-lookup"><span data-stu-id="59f24-110">New value of the option.</span></span>  
+ <span data-ttu-id="6b5ec-110">Nowa wartość opcji.</span><span class="sxs-lookup"><span data-stu-id="6b5ec-110">New value of the option.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="59f24-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="59f24-111">Return Value</span></span>  
- <span data-ttu-id="59f24-112">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="59f24-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6b5ec-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="6b5ec-111">Return Value</span></span>  
+ <span data-ttu-id="6b5ec-112">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="6b5ec-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="59f24-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="59f24-113">Requirements</span></span>  
- <span data-ttu-id="59f24-114">Wymaga alink.h.</span><span class="sxs-lookup"><span data-stu-id="59f24-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b5ec-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6b5ec-113">Requirements</span></span>  
+ <span data-ttu-id="6b5ec-114">Wymaga alink.h.</span><span class="sxs-lookup"><span data-stu-id="6b5ec-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59f24-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="59f24-115">See Also</span></span>  
- [<span data-ttu-id="59f24-116">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="59f24-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="59f24-117">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="59f24-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="59f24-118">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="59f24-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="6b5ec-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6b5ec-115">See also</span></span>
+- [<span data-ttu-id="6b5ec-116">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="6b5ec-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="6b5ec-117">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="6b5ec-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="6b5ec-118">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="6b5ec-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf6152c643395fe52a43424cab33f527d577b5bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db4f0bbef1ce0e6e4a2a0e904bfe8ebb997d5f4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586595"
 ---
-# <a name="icordebugmanagedcallbackexception-method"></a><span data-ttu-id="749a2-102">ICorDebugManagedCallback::Exception — Metoda</span><span class="sxs-lookup"><span data-stu-id="749a2-102">ICorDebugManagedCallback::Exception Method</span></span>
-<span data-ttu-id="749a2-103">Powiadamia debugera, czy wyjątek został zgłoszony z kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="749a2-103">Notifies the debugger that an exception has been thrown from managed code.</span></span>  
+# <a name="icordebugmanagedcallbackexception-method"></a><span data-ttu-id="ad81e-102">ICorDebugManagedCallback::Exception — Metoda</span><span class="sxs-lookup"><span data-stu-id="ad81e-102">ICorDebugManagedCallback::Exception Method</span></span>
+<span data-ttu-id="ad81e-103">Powiadamia debuger zgłoszony wyjątek z kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="ad81e-103">Notifies the debugger that an exception has been thrown from managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="749a2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="749a2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad81e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ad81e-104">Syntax</span></span>  
   
 ```  
 HRESULT Exception (  
@@ -36,27 +37,27 @@ HRESULT Exception (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="749a2-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="749a2-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ad81e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="ad81e-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="749a2-106">[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domeny aplikacji, w którym został zgłoszony wyjątek.</span><span class="sxs-lookup"><span data-stu-id="749a2-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain in which the exception was thrown.</span></span>  
+ <span data-ttu-id="ad81e-106">[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, w którym wystąpił wyjątek.</span><span class="sxs-lookup"><span data-stu-id="ad81e-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain in which the exception was thrown.</span></span>  
   
  `pThread`  
- <span data-ttu-id="749a2-107">[in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku, w którym został zgłoszony wyjątek.</span><span class="sxs-lookup"><span data-stu-id="749a2-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the exception was thrown.</span></span>  
+ <span data-ttu-id="ad81e-107">[in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątek, w którym wystąpił wyjątek.</span><span class="sxs-lookup"><span data-stu-id="ad81e-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the exception was thrown.</span></span>  
   
  `unhandled`  
- <span data-ttu-id="749a2-108">[in] Jeśli ta wartość jest `false`, wyjątek jeszcze nie zostały przetworzone przez aplikację, a w przeciwnym, jest nieobsługiwany wyjątek i zakończy proces.</span><span class="sxs-lookup"><span data-stu-id="749a2-108">[in] If this value is `false`, the exception has not yet been processed by the application; otherwise, the exception is unhandled and will terminate the process.</span></span>  
+ <span data-ttu-id="ad81e-108">[in] Jeśli ta wartość jest `false`, wyjątek jeszcze nie zostały przetworzone przez aplikację; w przeciwnym razie, wyjątek nie jest obsługiwana i zakończy proces.</span><span class="sxs-lookup"><span data-stu-id="ad81e-108">[in] If this value is `false`, the exception has not yet been processed by the application; otherwise, the exception is unhandled and will terminate the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="749a2-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="749a2-109">Remarks</span></span>  
- <span data-ttu-id="749a2-110">Określony wyjątek można pobrać z obiektu wątku.</span><span class="sxs-lookup"><span data-stu-id="749a2-110">The specific exception can be retrieved from the thread object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ad81e-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ad81e-109">Remarks</span></span>  
+ <span data-ttu-id="ad81e-110">Określony wyjątek, mogą być pobierane z obiektu wątku.</span><span class="sxs-lookup"><span data-stu-id="ad81e-110">The specific exception can be retrieved from the thread object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="749a2-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="749a2-111">Requirements</span></span>  
- <span data-ttu-id="749a2-112">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="749a2-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ad81e-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ad81e-111">Requirements</span></span>  
+ <span data-ttu-id="ad81e-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ad81e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="749a2-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="749a2-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ad81e-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ad81e-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="749a2-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="749a2-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ad81e-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ad81e-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="749a2-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="749a2-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ad81e-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad81e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="749a2-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="749a2-116">See Also</span></span>  
- [<span data-ttu-id="749a2-117">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="749a2-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ad81e-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ad81e-116">See also</span></span>
+- [<span data-ttu-id="ad81e-117">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="ad81e-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

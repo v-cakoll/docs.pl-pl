@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de976f4241fcf1305b4c07befe8c82c99c27d210
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a51fa8504ba15b5250caed070f8b039b3b55e5ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721191"
 ---
-# <a name="iassemblyenumreset-method"></a><span data-ttu-id="be88b-102">IAssemblyEnum::Reset — Metoda</span><span class="sxs-lookup"><span data-stu-id="be88b-102">IAssemblyEnum::Reset Method</span></span>
-<span data-ttu-id="be88b-103">Spowoduje to zresetowanie [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) obiekt do punktu początkowego.</span><span class="sxs-lookup"><span data-stu-id="be88b-103">Resets this [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) object to its starting position.</span></span>  
+# <a name="iassemblyenumreset-method"></a><span data-ttu-id="01929-102">IAssemblyEnum::Reset — Metoda</span><span class="sxs-lookup"><span data-stu-id="01929-102">IAssemblyEnum::Reset Method</span></span>
+<span data-ttu-id="01929-103">Spowoduje to zresetowanie [iassemblyenum —](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) obiektu do jego położenia wyjściowego.</span><span class="sxs-lookup"><span data-stu-id="01929-103">Resets this [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) object to its starting position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be88b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="be88b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01929-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="01929-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset (  
@@ -35,12 +35,12 @@ HRESULT Reset (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="be88b-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="be88b-105">Requirements</span></span>  
- <span data-ttu-id="be88b-106">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be88b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01929-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="01929-105">Requirements</span></span>  
+ <span data-ttu-id="01929-106">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01929-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="be88b-107">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="be88b-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="01929-107">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="01929-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="be88b-108">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be88b-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="01929-108">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01929-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="be88b-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="be88b-109">See Also</span></span>  
- [<span data-ttu-id="be88b-110">IAssemblyEnum, interfejs</span><span class="sxs-lookup"><span data-stu-id="be88b-110">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="01929-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="01929-109">See also</span></span>
+- [<span data-ttu-id="01929-110">IAssemblyEnum, interfejs</span><span class="sxs-lookup"><span data-stu-id="01929-110">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)

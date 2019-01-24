@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77de59de8fcf3797237245ce42c7f0eaa96d3d24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be144ac8250adf803ddb1f20ea55be09cb3e81d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687391"
 ---
-# <a name="functionenter-function"></a><span data-ttu-id="d0056-102">FunctionEnter — Funkcja</span><span class="sxs-lookup"><span data-stu-id="d0056-102">FunctionEnter Function</span></span>
-<span data-ttu-id="d0056-103">Powiadamia profilera, czy formant jest przekazywany do funkcji.</span><span class="sxs-lookup"><span data-stu-id="d0056-103">Notifies the profiler that control is being passed to a function.</span></span>  
+# <a name="functionenter-function"></a><span data-ttu-id="4e0d5-102">FunctionEnter — Funkcja</span><span class="sxs-lookup"><span data-stu-id="4e0d5-102">FunctionEnter Function</span></span>
+<span data-ttu-id="4e0d5-103">Powiadamia program profilujący, że formant jest przekazywany do funkcji.</span><span class="sxs-lookup"><span data-stu-id="4e0d5-103">Notifies the profiler that control is being passed to a function.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d0056-104">`FunctionEnter` Funkcja jest przestarzała w programie .NET Framework w wersji 2.0 i wykorzystanie przez niego będą powodować spadek wydajności.</span><span class="sxs-lookup"><span data-stu-id="d0056-104">The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty.</span></span> <span data-ttu-id="d0056-105">Użyj [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) zamiast tego działania.</span><span class="sxs-lookup"><span data-stu-id="d0056-105">Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.</span></span>  
+>  <span data-ttu-id="4e0d5-104">`FunctionEnter` Funkcja jest przestarzała w programie .NET Framework w wersji 2.0 i jego użycia spowoduje naliczenie opłaty za spadek wydajności.</span><span class="sxs-lookup"><span data-stu-id="4e0d5-104">The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty.</span></span> <span data-ttu-id="4e0d5-105">Użyj [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) zamiast tego funkcji.</span><span class="sxs-lookup"><span data-stu-id="4e0d5-105">Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0056-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="d0056-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4e0d5-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="4e0d5-106">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionEnter (  
@@ -37,35 +37,35 @@ void __stdcall FunctionEnter (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d0056-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="d0056-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4e0d5-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="4e0d5-107">Parameters</span></span>  
  `funcID`  
- <span data-ttu-id="d0056-108">[in] Identyfikator funkcji, do którego jest przekazywany formantu.</span><span class="sxs-lookup"><span data-stu-id="d0056-108">[in] The identifier of the function to which control is passed.</span></span>  
+ <span data-ttu-id="4e0d5-108">[in] Identyfikator funkcji, do której kontrola jest przekazywana.</span><span class="sxs-lookup"><span data-stu-id="4e0d5-108">[in] The identifier of the function to which control is passed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d0056-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d0056-109">Remarks</span></span>  
- <span data-ttu-id="d0056-110">`FunctionEnter` Funkcji jest wywołaniem zwrotnym; musisz go zaimplementować.</span><span class="sxs-lookup"><span data-stu-id="d0056-110">The `FunctionEnter` function is a callback; you must implement it.</span></span> <span data-ttu-id="d0056-111">Należy użyć implementacji `__declspec`(`naked`) atrybuty klasy magazynu.</span><span class="sxs-lookup"><span data-stu-id="d0056-111">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4e0d5-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="4e0d5-109">Remarks</span></span>  
+ <span data-ttu-id="4e0d5-110">`FunctionEnter` Funkcji jest wywołanie zwrotne; należy go zaimplementować.</span><span class="sxs-lookup"><span data-stu-id="4e0d5-110">The `FunctionEnter` function is a callback; you must implement it.</span></span> <span data-ttu-id="4e0d5-111">Należy użyć implementacji `__declspec`(`naked`) atrybuty klasy magazynu.</span><span class="sxs-lookup"><span data-stu-id="4e0d5-111">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="d0056-112">Aparat wykonywania nie powoduje zapisania wszelkich rejestrów przed wywołaniem tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="d0056-112">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="4e0d5-112">Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="4e0d5-112">The execution engine does not save any registers before calling this function.</span></span>  
   
--   <span data-ttu-id="d0056-113">Na wejściu musisz najpierw zapisać wszystkich rejestrów, których używasz, włączając jednostki liczb zmiennoprzecinkowych (FPU).</span><span class="sxs-lookup"><span data-stu-id="d0056-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+-   <span data-ttu-id="4e0d5-113">Przy uruchamianiu musisz najpierw zapisać wszystkich rejestrów, z których korzysta Licencjobiorca, łącznie z programami znajdującymi się na jednostki zmiennoprzecinkowej (FPU).</span><span class="sxs-lookup"><span data-stu-id="4e0d5-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
--   <span data-ttu-id="d0056-114">Po zakończeniu należy przywrócić stosu przy wyświetlaniu Wyłącz wszystkie parametry, które zostały przekazane przez swojego obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="d0056-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+-   <span data-ttu-id="4e0d5-114">Na zakończenie możesz przywrócić stosu, usuwanie, wyłączanie wszystkich parametrów, które zostały wypchnięte przez wywołującego.</span><span class="sxs-lookup"><span data-stu-id="4e0d5-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="d0056-115">Implementacja `FunctionEnter` nie należy zablokować, ponieważ spowoduje to opóźnienie wyrzucanie elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="d0056-115">The implementation of `FunctionEnter` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="d0056-116">Implementacja nie powinny podejmować wyrzucania elementów bezużytecznych, ponieważ stos nie mogą znajdować się w stanie przyjaznych dla kolekcji pamięci.</span><span class="sxs-lookup"><span data-stu-id="d0056-116">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="d0056-117">Próbie wyrzucania elementów bezużytecznych do zablokuje środowiska uruchomieniowego `FunctionEnter` zwraca.</span><span class="sxs-lookup"><span data-stu-id="d0056-117">If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.</span></span>  
+ <span data-ttu-id="4e0d5-115">Implementacja `FunctionEnter` nie powinny blokować, ponieważ zostanie opóźnione, wyrzucanie elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="4e0d5-115">The implementation of `FunctionEnter` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="4e0d5-116">Implementacja nie powinien podejmować wyrzucania elementów bezużytecznych, ponieważ stos może nie być w stanie przyjaznego dla kolekcji wyrzucania elementów.</span><span class="sxs-lookup"><span data-stu-id="4e0d5-116">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="4e0d5-117">Jeśli próba zostanie podjęta wyrzucania elementów bezużytecznych, środowisko uruchomieniowe spowoduje zablokowanie aż do `FunctionEnter` zwraca.</span><span class="sxs-lookup"><span data-stu-id="4e0d5-117">If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.</span></span>  
   
- <span data-ttu-id="d0056-118">Ponadto `FunctionEnter` funkcji nie mogą wywoływać kodu zarządzanego lub w dowolnym Przyczyna sposób przydział pamięci zarządzanej.</span><span class="sxs-lookup"><span data-stu-id="d0056-118">Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="4e0d5-118">Ponadto `FunctionEnter` funkcji nie mogą wywoływać kodu zarządzanego lub w dowolnym Przyczyna sposób alokacji pamięci zarządzanej.</span><span class="sxs-lookup"><span data-stu-id="4e0d5-118">Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0056-119">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d0056-119">Requirements</span></span>  
- <span data-ttu-id="d0056-120">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d0056-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4e0d5-119">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4e0d5-119">Requirements</span></span>  
+ <span data-ttu-id="4e0d5-120">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4e0d5-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d0056-121">**Nagłówek:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="d0056-121">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="4e0d5-121">**Nagłówek:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="4e0d5-121">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="d0056-122">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d0056-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4e0d5-122">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4e0d5-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d0056-123">**Wersje programu .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="d0056-123">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="4e0d5-123">**Wersje programu .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="4e0d5-123">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0056-124">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d0056-124">See Also</span></span>  
- [<span data-ttu-id="d0056-125">FunctionEnter2, funkcja</span><span class="sxs-lookup"><span data-stu-id="d0056-125">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- [<span data-ttu-id="d0056-126">FunctionLeave2, funkcja</span><span class="sxs-lookup"><span data-stu-id="d0056-126">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- [<span data-ttu-id="d0056-127">FunctionTailcall2, funkcja</span><span class="sxs-lookup"><span data-stu-id="d0056-127">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- [<span data-ttu-id="d0056-128">SetEnterLeaveFunctionHooks2, metoda</span><span class="sxs-lookup"><span data-stu-id="d0056-128">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)  
- [<span data-ttu-id="d0056-129">Profilowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="d0056-129">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="4e0d5-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4e0d5-124">See also</span></span>
+- [<span data-ttu-id="4e0d5-125">FunctionEnter2, funkcja</span><span class="sxs-lookup"><span data-stu-id="4e0d5-125">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="4e0d5-126">FunctionLeave2, funkcja</span><span class="sxs-lookup"><span data-stu-id="4e0d5-126">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="4e0d5-127">FunctionTailcall2, funkcja</span><span class="sxs-lookup"><span data-stu-id="4e0d5-127">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [<span data-ttu-id="4e0d5-128">SetEnterLeaveFunctionHooks2, metoda</span><span class="sxs-lookup"><span data-stu-id="4e0d5-128">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="4e0d5-129">Profilowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="4e0d5-129">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

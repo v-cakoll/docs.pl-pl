@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe978930a9f84e0084f79f5fe585a1ecc3bf4eb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679386"
 ---
-# <a name="securing-exception-handling"></a><span data-ttu-id="796d4-102">Zabezpieczanie obsługi wyjątków</span><span class="sxs-lookup"><span data-stu-id="796d4-102">Securing Exception Handling</span></span>
-<span data-ttu-id="796d4-103">W programie Visual C++ i Visual Basic, wyrażenie filtru dalsze górę stosu jest uruchamiany przed każdą **koniec** instrukcji.</span><span class="sxs-lookup"><span data-stu-id="796d4-103">In Visual C++ and Visual Basic, a filter expression further up the stack runs before any **finally** statement.</span></span> <span data-ttu-id="796d4-104">**Catch** blok skojarzonych z tym filtru jest uruchamiany po **finally** instrukcji.</span><span class="sxs-lookup"><span data-stu-id="796d4-104">The **catch** block associated with that filter runs after the **finally** statement.</span></span> <span data-ttu-id="796d4-105">Aby uzyskać więcej informacji, zobacz [wyjątki Using User-Filtered](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span><span class="sxs-lookup"><span data-stu-id="796d4-105">For more information, see [Using User-Filtered Exceptions](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span></span> <span data-ttu-id="796d4-106">W tej sekcji sprawdza, czy zabezpieczenia tego zamówienia.</span><span class="sxs-lookup"><span data-stu-id="796d4-106">This section examines the security implications of this order.</span></span> <span data-ttu-id="796d4-107">Należy wziąć pod uwagę w poniższym przykładzie pseudocode, która ilustruje kolejności, w których instrukcji filtrów i **koniec** instrukcje uruchamiania.</span><span class="sxs-lookup"><span data-stu-id="796d4-107">Consider the following pseudocode example that illustrates the order in which filter statements and **finally** statements run.</span></span>  
+# <a name="securing-exception-handling"></a><span data-ttu-id="af4f1-102">Zabezpieczanie obsługi wyjątków</span><span class="sxs-lookup"><span data-stu-id="af4f1-102">Securing Exception Handling</span></span>
+<span data-ttu-id="af4f1-103">W programie Visual C++ i Visual Basic, wyrażenie filtru do dalszego w górę stosu jest uruchamiany przed każdą **na koniec** instrukcji.</span><span class="sxs-lookup"><span data-stu-id="af4f1-103">In Visual C++ and Visual Basic, a filter expression further up the stack runs before any **finally** statement.</span></span> <span data-ttu-id="af4f1-104">**Catch** bloku skojarzony z filtrem, który jest uruchamiany po **na koniec** instrukcji.</span><span class="sxs-lookup"><span data-stu-id="af4f1-104">The **catch** block associated with that filter runs after the **finally** statement.</span></span> <span data-ttu-id="af4f1-105">Aby uzyskać więcej informacji, zobacz [wyjątki Using User-Filtered](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span><span class="sxs-lookup"><span data-stu-id="af4f1-105">For more information, see [Using User-Filtered Exceptions](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span></span> <span data-ttu-id="af4f1-106">Tej części są rozpatrywane ryzyko związane z tej kolejności.</span><span class="sxs-lookup"><span data-stu-id="af4f1-106">This section examines the security implications of this order.</span></span> <span data-ttu-id="af4f1-107">Rozważmy następujący przykład pseudokodzie, który ilustruje kolejność, w której instrukcji filtrów i **na koniec** instrukcje uruchamiania.</span><span class="sxs-lookup"><span data-stu-id="af4f1-107">Consider the following pseudocode example that illustrates the order in which filter statements and **finally** statements run.</span></span>  
   
 ```cpp  
 void Main()   
@@ -51,7 +51,7 @@ void Sub()
 }                        
 ```  
   
- <span data-ttu-id="796d4-108">Ten kod wyświetla następujące czynności.</span><span class="sxs-lookup"><span data-stu-id="796d4-108">This code prints the following.</span></span>  
+ <span data-ttu-id="af4f1-108">Ten kod wyświetla następujące czynności.</span><span class="sxs-lookup"><span data-stu-id="af4f1-108">This code prints the following.</span></span>  
   
 ```  
 Throw  
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- <span data-ttu-id="796d4-109">Filtr jest uruchamiany przed **koniec** instrukcji, więc problemy dotyczące zabezpieczeń mogą zostać wprowadzone przez wszystko, co sprawia, że stan zmienianie, gdzie wykonywanie innych kodu można wykorzystać.</span><span class="sxs-lookup"><span data-stu-id="796d4-109">The filter runs before the **finally** statement, so security issues can be introduced by anything that makes a state change where execution of other code could take advantage.</span></span> <span data-ttu-id="796d4-110">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="796d4-110">For example:</span></span>  
+ <span data-ttu-id="af4f1-109">Filtr, który jest uruchamiany przed **na koniec** instrukcji, dzięki czemu problemy z zabezpieczeniami mogą zostać wprowadzone przez wszystko, co sprawia, że stan zmiany, których wykonanie innego kodu, możesz wykorzystać.</span><span class="sxs-lookup"><span data-stu-id="af4f1-109">The filter runs before the **finally** statement, so security issues can be introduced by anything that makes a state change where execution of other code could take advantage.</span></span> <span data-ttu-id="af4f1-110">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="af4f1-110">For example:</span></span>  
   
 ```cpp  
 try   
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- <span data-ttu-id="796d4-111">Ta pseudocode umożliwia filtr górę stosu do uruchomienia dowolnego kodu.</span><span class="sxs-lookup"><span data-stu-id="796d4-111">This pseudocode allows a filter higher up the stack to run arbitrary code.</span></span> <span data-ttu-id="796d4-112">Inne przykłady działań, które będą miały ten sam efekt są tymczasowe podszywania się pod innego tożsamości, ustawienie flaga wewnętrzna omija niektóre sprawdzania zabezpieczeń lub zmiana kultura skojarzonym z wątkiem.</span><span class="sxs-lookup"><span data-stu-id="796d4-112">Other examples of operations that would have a similar effect are temporary impersonation of another identity, setting an internal flag that bypasses some security check, or changing the culture associated with the thread.</span></span> <span data-ttu-id="796d4-113">Zalecanym rozwiązaniem jest wprowadzenie obsługi wyjątków do izolowania zmiany kodu do stanu wątku z bloków filtr wywołań.</span><span class="sxs-lookup"><span data-stu-id="796d4-113">The recommended solution is to introduce an exception handler to isolate the code's changes to thread state from callers' filter blocks.</span></span> <span data-ttu-id="796d4-114">Jest ważne, czy program obsługi wyjątku prawidłowo wprowadzić lub, ten problem nie zostanie rozwiązany.</span><span class="sxs-lookup"><span data-stu-id="796d4-114">However, it is important that the exception handler be properly introduced or this problem will not be fixed.</span></span> <span data-ttu-id="796d4-115">Poniższy przykład zmienia kultury interfejsu użytkownika, ale podobnie narażeni każdego rodzaju zmiany stanu wątku.</span><span class="sxs-lookup"><span data-stu-id="796d4-115">The following example switches the UI culture, but any kind of thread state change could be similarly exposed.</span></span>  
+ <span data-ttu-id="af4f1-111">Ta pseudokodzie umożliwia filtr wyższego rzędu stosu do uruchamiania dowolnego kodu.</span><span class="sxs-lookup"><span data-stu-id="af4f1-111">This pseudocode allows a filter higher up the stack to run arbitrary code.</span></span> <span data-ttu-id="af4f1-112">Inne przykłady działań, które będą miały ten sam efekt są tymczasowe personifikacja innego tożsamości, ustawienie flagi wewnętrznej omija niektóre sprawdzanie zabezpieczeń lub zmiana kulturę skojarzonych z wątkiem.</span><span class="sxs-lookup"><span data-stu-id="af4f1-112">Other examples of operations that would have a similar effect are temporary impersonation of another identity, setting an internal flag that bypasses some security check, or changing the culture associated with the thread.</span></span> <span data-ttu-id="af4f1-113">Zalecanym rozwiązaniem jest wprowadzenie obsługi wyjątków do izolowania zmian w kodzie na stan wątku z bloków filtru obiekty wywołujące.</span><span class="sxs-lookup"><span data-stu-id="af4f1-113">The recommended solution is to introduce an exception handler to isolate the code's changes to thread state from callers' filter blocks.</span></span> <span data-ttu-id="af4f1-114">Jednak należy prawidłowo wprowadzane obsługi wyjątków lub ten problem nie zostanie rozwiązany.</span><span class="sxs-lookup"><span data-stu-id="af4f1-114">However, it is important that the exception handler be properly introduced or this problem will not be fixed.</span></span> <span data-ttu-id="af4f1-115">Poniższy przykład zmienia kultura interfejsu użytkownika, ale podobnie narażeni każdego rodzaju zmiany stanu wątku.</span><span class="sxs-lookup"><span data-stu-id="af4f1-115">The following example switches the UI culture, but any kind of thread state change could be similarly exposed.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- <span data-ttu-id="796d4-116">Poprawne w tym przypadku będzie opakowywać istniejące **spróbuj**/**koniec** blok w **spróbuj**/**catch** blok.</span><span class="sxs-lookup"><span data-stu-id="796d4-116">The correct fix in this case is to wrap the existing **try**/**finally** block in a **try**/**catch** block.</span></span> <span data-ttu-id="796d4-117">Po prostu wprowadzenie **catch throw** klauzuli do istniejącego **spróbuj**/**koniec** bloku nie rozwiąże to problemu, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="796d4-117">Simply introducing a **catch-throw** clause into the existing **try**/**finally** block does not fix the problem, as shown in the following example.</span></span>  
+ <span data-ttu-id="af4f1-116">Słuszność poprawki w tym przypadku jest opakowanie, istniejące **spróbuj**/**na koniec** bloku **spróbuj**/**catch** blok.</span><span class="sxs-lookup"><span data-stu-id="af4f1-116">The correct fix in this case is to wrap the existing **try**/**finally** block in a **try**/**catch** block.</span></span> <span data-ttu-id="af4f1-117">Po prostu Przedstawiamy **catch throw** klauzuli się z istniejącymi **spróbuj**/**na koniec** bloku nie rozwiąże problemu, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="af4f1-117">Simply introducing a **catch-throw** clause into the existing **try**/**finally** block does not fix the problem, as shown in the following example.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- <span data-ttu-id="796d4-118">To nie rozwiąże problemu, ponieważ **koniec** instrukcji nie został wcześniej uruchomiony `FilterFunc` pobiera formant.</span><span class="sxs-lookup"><span data-stu-id="796d4-118">This does not fix the problem because the **finally** statement has not run before the `FilterFunc` gets control.</span></span>  
+ <span data-ttu-id="af4f1-118">To nie rozwiąże problemu, ponieważ **na koniec** instrukcji nie został wcześniej uruchomiony `FilterFunc` przejmie kontrolę.</span><span class="sxs-lookup"><span data-stu-id="af4f1-118">This does not fix the problem because the **finally** statement has not run before the `FilterFunc` gets control.</span></span>  
   
- <span data-ttu-id="796d4-119">Poniższy przykład problem został rozwiązany przez zapewnienie, że **koniec** klauzuli zostało wykonane przed oferty wyjątek się bloki filtru wyjątków wywołań.</span><span class="sxs-lookup"><span data-stu-id="796d4-119">The following example fixes the problem by ensuring that the **finally** clause has executed before offering an exception up the callers' exception filter blocks.</span></span>  
+ <span data-ttu-id="af4f1-119">Poniższy przykład naprawia problem przez zapewnienie, że **na koniec** klauzuli zostało wykonane przed oferty wyjątek bloki filtru wyjątków obiekty wywołujące.</span><span class="sxs-lookup"><span data-stu-id="af4f1-119">The following example fixes the problem by ensuring that the **finally** clause has executed before offering an exception up the callers' exception filter blocks.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -160,5 +160,5 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="796d4-120">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="796d4-120">See Also</span></span>  
- [<span data-ttu-id="796d4-121">Wytyczne dotyczące bezpiecznego programowania</span><span class="sxs-lookup"><span data-stu-id="796d4-121">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="af4f1-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="af4f1-120">See also</span></span>
+- [<span data-ttu-id="af4f1-121">Wytyczne dotyczące bezpiecznego programowania</span><span class="sxs-lookup"><span data-stu-id="af4f1-121">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

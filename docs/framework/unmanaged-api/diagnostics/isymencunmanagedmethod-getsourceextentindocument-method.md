@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc3a986326f9b47194558ca86bcbeabb61dbaeb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 832746b911e74790de246b00a364aaec4bda8f67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739982"
 ---
-# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="5cd45-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument — Metoda</span><span class="sxs-lookup"><span data-stu-id="5cd45-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
-<span data-ttu-id="5cd45-103">Pobiera najmniejszą liczbę wierszy i uruchomić największy wiersz end dla metody w określonego dokumentu.</span><span class="sxs-lookup"><span data-stu-id="5cd45-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
+# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="e3aaf-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument — Metoda</span><span class="sxs-lookup"><span data-stu-id="e3aaf-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
+<span data-ttu-id="e3aaf-103">Pobiera najmniejszą liczbę linii i uruchomić największy wiersz końcowy w metodzie w określonym dokumentem.</span><span class="sxs-lookup"><span data-stu-id="e3aaf-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5cd45-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="5cd45-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e3aaf-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e3aaf-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceExtentInDocument(  
@@ -36,21 +36,21 @@ HRESULT GetSourceExtentInDocument(
     [out] ULONG32* pendLine);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5cd45-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="5cd45-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e3aaf-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e3aaf-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="5cd45-106">[in] Wskaźnik do dokumentu.</span><span class="sxs-lookup"><span data-stu-id="5cd45-106">[in] A pointer to the document.</span></span>  
+ <span data-ttu-id="e3aaf-106">[in] Wskaźnik do dokumentu.</span><span class="sxs-lookup"><span data-stu-id="e3aaf-106">[in] A pointer to the document.</span></span>  
   
  `pstartLine`  
- <span data-ttu-id="5cd45-107">[out] Wskaźnik do `ULONG32` odbierająca start wiersza.</span><span class="sxs-lookup"><span data-stu-id="5cd45-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
+ <span data-ttu-id="e3aaf-107">[out] Wskaźnik do `ULONG32` odbierająca wiersza rozpoczęcia.</span><span class="sxs-lookup"><span data-stu-id="e3aaf-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
   
  `pendLine`  
- <span data-ttu-id="5cd45-108">[out] Wskaźnik do `ULONG32` odbierająca zakończyć wiersza.</span><span class="sxs-lookup"><span data-stu-id="5cd45-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
+ <span data-ttu-id="e3aaf-108">[out] Wskaźnik do `ULONG32` odbierająca zakończyć wiersza.</span><span class="sxs-lookup"><span data-stu-id="e3aaf-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5cd45-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="5cd45-109">Return Value</span></span>  
- <span data-ttu-id="5cd45-110">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="5cd45-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e3aaf-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="e3aaf-109">Return Value</span></span>  
+ <span data-ttu-id="e3aaf-110">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="e3aaf-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5cd45-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5cd45-111">Requirements</span></span>  
- <span data-ttu-id="5cd45-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5cd45-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e3aaf-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e3aaf-111">Requirements</span></span>  
+ <span data-ttu-id="e3aaf-112">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e3aaf-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5cd45-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5cd45-113">See Also</span></span>  
- [<span data-ttu-id="5cd45-114">ISymENCUnmanagedMethod, interfejs</span><span class="sxs-lookup"><span data-stu-id="5cd45-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e3aaf-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e3aaf-113">See also</span></span>
+- [<span data-ttu-id="e3aaf-114">ISymENCUnmanagedMethod, interfejs</span><span class="sxs-lookup"><span data-stu-id="e3aaf-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

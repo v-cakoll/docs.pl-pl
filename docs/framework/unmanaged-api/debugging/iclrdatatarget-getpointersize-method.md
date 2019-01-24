@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 749ec14af7bffee87afbe5c0705a6ddf68da5fd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80ed86526c99c36254f2b9c71f00483095e771ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734354"
 ---
-# <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="05604-102">ICLRDataTarget::GetPointerSize — Metoda</span><span class="sxs-lookup"><span data-stu-id="05604-102">ICLRDataTarget::GetPointerSize Method</span></span>
-<span data-ttu-id="05604-103">Pobiera rozmiar w bajtach, który używa procesu docelowego typu wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="05604-103">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="05604-104">Ta metoda jest wywoływana przez usługi dostępu danych środowiska uruchomieniowego języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="05604-104">This method is called by the common language runtime data access services.</span></span>  
+# <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="fce0e-102">ICLRDataTarget::GetPointerSize — Metoda</span><span class="sxs-lookup"><span data-stu-id="fce0e-102">ICLRDataTarget::GetPointerSize Method</span></span>
+<span data-ttu-id="fce0e-103">Pobiera rozmiar w bajtach, typu wskaźnika, który używa procesu docelowego.</span><span class="sxs-lookup"><span data-stu-id="fce0e-103">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="fce0e-104">Ta metoda jest wywoływana przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="fce0e-104">This method is called by the common language runtime data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05604-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="05604-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fce0e-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="fce0e-105">Syntax</span></span>  
   
 ```  
 HRESULT GetPointerSize (  
@@ -35,21 +35,21 @@ HRESULT GetPointerSize (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="05604-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="05604-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="fce0e-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="fce0e-106">Parameters</span></span>  
  `pointerSize`  
- <span data-ttu-id="05604-107">[out] Wskaźnik do wartość całkowita określająca rozmiar w bajtach, wskaźnika w procesie docelowym.</span><span class="sxs-lookup"><span data-stu-id="05604-107">[out] A pointer to an integer value that specifies the size, in bytes, of a pointer on the target process.</span></span>  
+ <span data-ttu-id="fce0e-107">[out] Wskaźnik do wartości całkowitej, która określa rozmiar w bajtach, wskaźnik w procesie docelowym.</span><span class="sxs-lookup"><span data-stu-id="fce0e-107">[out] A pointer to an integer value that specifies the size, in bytes, of a pointer on the target process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="05604-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="05604-108">Remarks</span></span>  
- <span data-ttu-id="05604-109">Ta metoda jest implementowany przez twórcę debugowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="05604-109">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fce0e-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="fce0e-108">Remarks</span></span>  
+ <span data-ttu-id="fce0e-109">Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="fce0e-109">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05604-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="05604-110">Requirements</span></span>  
- <span data-ttu-id="05604-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05604-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fce0e-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fce0e-110">Requirements</span></span>  
+ <span data-ttu-id="fce0e-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fce0e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05604-112">**Nagłówek:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="05604-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="fce0e-112">**Nagłówek:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="fce0e-112">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="05604-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05604-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fce0e-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fce0e-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="05604-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05604-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="fce0e-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fce0e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05604-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="05604-115">See Also</span></span>  
- [<span data-ttu-id="05604-116">ICLRDataTarget, interfejs</span><span class="sxs-lookup"><span data-stu-id="05604-116">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fce0e-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fce0e-115">See also</span></span>
+- [<span data-ttu-id="fce0e-116">ICLRDataTarget, interfejs</span><span class="sxs-lookup"><span data-stu-id="fce0e-116">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

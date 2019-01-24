@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d73fe16720248d541bac64a432bb6f35d6873b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54c38f9a9abc9a02ba4d84c9a41b2ef6b1f7cb69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528566"
 ---
-# <a name="imethodmallocalloc-method"></a><span data-ttu-id="520fa-102">IMethodMalloc::Alloc — Metoda</span><span class="sxs-lookup"><span data-stu-id="520fa-102">IMethodMalloc::Alloc Method</span></span>
-<span data-ttu-id="520fa-103">Próbuje przydzielić określonej ilości pamięci dla nowego treści funkcji języka pośredniego (MSIL) firmy Microsoft.</span><span class="sxs-lookup"><span data-stu-id="520fa-103">Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.</span></span>  
+# <a name="imethodmallocalloc-method"></a><span data-ttu-id="b75cf-102">IMethodMalloc::Alloc — Metoda</span><span class="sxs-lookup"><span data-stu-id="b75cf-102">IMethodMalloc::Alloc Method</span></span>
+<span data-ttu-id="b75cf-103">Próbuje przydzielić określonej ilości pamięci dla nowej treści funkcji Microsoft intermediate language (MSIL).</span><span class="sxs-lookup"><span data-stu-id="b75cf-103">Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="520fa-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="520fa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b75cf-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b75cf-104">Syntax</span></span>  
   
 ```  
 PVOID Alloc (  
@@ -35,23 +35,23 @@ PVOID Alloc (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="520fa-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="520fa-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b75cf-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b75cf-105">Parameters</span></span>  
  `cb`  
- <span data-ttu-id="520fa-106">[in] Liczba bajtów do przydzielenia dla treści metody.</span><span class="sxs-lookup"><span data-stu-id="520fa-106">[in] The number of bytes to allocate for the method body.</span></span>  
+ <span data-ttu-id="b75cf-106">[in] Liczba bajtów do przydzielenia dla treści metody.</span><span class="sxs-lookup"><span data-stu-id="b75cf-106">[in] The number of bytes to allocate for the method body.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="520fa-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="520fa-107">Remarks</span></span>  
- <span data-ttu-id="520fa-108">Pod adresem większy niż adres bazowy moduł, który jest skojarzony z tym alokatora rozpocznie się alokacji pamięci.</span><span class="sxs-lookup"><span data-stu-id="520fa-108">The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator.</span></span> <span data-ttu-id="520fa-109">Innymi słowy każdego programu przydzielania jest tworzony dla danego modułu i podejmie próbę przydzielenia pamięci z przesunięciem dodatnią z jego adres podstawowy.</span><span class="sxs-lookup"><span data-stu-id="520fa-109">In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address.</span></span> <span data-ttu-id="520fa-110">Jeśli `Alloc` nie może przydzielić żądanej liczby bajtów pod adresem większy niż adres bazowy moduł, zwraca E_OUTOFMEMORY, niezależnie od rzeczywistej ilości miejsca w pamięci.</span><span class="sxs-lookup"><span data-stu-id="520fa-110">If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b75cf-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="b75cf-107">Remarks</span></span>  
+ <span data-ttu-id="b75cf-108">Ilość przydzielonej pamięci rozpocznie się pod adresem większy niż adres podstawowy moduł, który jest skojarzony z tym alokatora.</span><span class="sxs-lookup"><span data-stu-id="b75cf-108">The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator.</span></span> <span data-ttu-id="b75cf-109">Innymi słowy każdy alokatora jest tworzona dla danego modułu i podejmie próbę przydzielenia pamięci na dodatnią przesunięcie z adresu podstawowego.</span><span class="sxs-lookup"><span data-stu-id="b75cf-109">In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address.</span></span> <span data-ttu-id="b75cf-110">Jeśli `Alloc` nie może przydzielić żądanej liczby bajtów pod adresem większy niż adres podstawowy moduł, zwraca E_OUTOFMEMORY niezależnie od rzeczywistej ilości miejsca w pamięci.</span><span class="sxs-lookup"><span data-stu-id="b75cf-110">If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.</span></span>  
   
- <span data-ttu-id="520fa-111">`Alloc` Metody powinny być używane w połączeniu z [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="520fa-111">The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method.</span></span>  
+ <span data-ttu-id="b75cf-111">`Alloc` Metoda powinna służyć w połączeniu z [icorprofilerinfo::setilfunctionbody —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="b75cf-111">The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="520fa-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="520fa-112">Requirements</span></span>  
- <span data-ttu-id="520fa-113">**Platformy:** WindSee [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="520fa-113">**Platforms:** WindSee [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b75cf-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b75cf-112">Requirements</span></span>  
+ <span data-ttu-id="b75cf-113">**Platformy:** WindSee [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b75cf-113">**Platforms:** WindSee [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="520fa-114">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="520fa-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b75cf-114">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b75cf-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="520fa-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="520fa-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b75cf-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b75cf-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="520fa-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="520fa-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b75cf-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b75cf-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="520fa-117">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="520fa-117">See Also</span></span>  
- [<span data-ttu-id="520fa-118">IMethodMalloc, interfejs</span><span class="sxs-lookup"><span data-stu-id="520fa-118">IMethodMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b75cf-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b75cf-117">See also</span></span>
+- [<span data-ttu-id="b75cf-118">IMethodMalloc, interfejs</span><span class="sxs-lookup"><span data-stu-id="b75cf-118">IMethodMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)

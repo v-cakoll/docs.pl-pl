@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c9080a588b96c5b89c280a0fb407952bd580f26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5484f8bd5515d3a4a3cd08110cc5d48c4356a9f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590149"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual — Metoda
-Odczytuje dane z adresów pamięci wirtualnej określony w buforze określona.  
+Odczytuje dane z adresu określonego pamięci wirtualnej do określonego bufora.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ HRESULT ReadVirtual (
   
 #### <a name="parameters"></a>Parametry  
  `address`  
- [in] CLRDATA_ADDRESS, która przechowuje adresów pamięci wirtualnej.  
+ [in] CLRDATA_ADDRESS, która przechowuje adres pamięci wirtualnej.  
   
  `buffer`  
  [out] Wskaźnik do buforu, który odbiera dane.  
@@ -50,10 +50,10 @@ HRESULT ReadVirtual (
  [in] Długość buforu.  
   
  `bytesRead`  
- [out] Wskaźnik do liczba bajtów zwrócona.  
+ [out] Wskaźnik do liczby bajtów zwróconych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData.idl, ClrData.h  
   
@@ -61,5 +61,5 @@ HRESULT ReadVirtual (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

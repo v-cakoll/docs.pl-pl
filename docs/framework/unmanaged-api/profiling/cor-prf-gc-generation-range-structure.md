@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f4c8e9a7ce5eddde18c1266cb724d5c3b0d5f41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbeebc766d6e8048843a74691addd1dee90623ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621709"
 ---
 # <a name="corprfgcgenerationrange-structure"></a>COR_PRF_GC_GENERATION_RANGE — Struktura
-Opisuje zakres pamięci, która jest poddawana wyrzucanie elementów bezużytecznych (to znaczy bloku).  
+W tym artykule opisano szeroką gamę (czyli bloku) pamięci, która jest w trakcie wyrzucania elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,16 +41,16 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`generation`|Wartość [cor_prf_gc_generation —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) wyliczenie określający bloku pamięci generacji, do którego należy.|  
+|`generation`|Wartość [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) wyliczenie, które określa blok pamięci generacji, do której należy.|  
 |`rangeStart`|Identyfikator obiektu, który określa lokalizację początkową bloku pamięci.|  
-|`rangeLength`|Wskaźnik do liczba całkowita określająca rozmiar używanych część bloku pamięci (to znaczy ilość pamięci użytej w bloku).|  
-|`rangeLengthReserved`|Wskaźnik do liczba całkowita określająca rozmiar bloku pamięci (to znaczy ilość pamięci zarezerwowanej dla bloku).|  
+|`rangeLength`|Wskaźnik na liczbę całkowitą, która określa rozmiar użytej części bloku pamięci (oznacza to, ilości pamięci używanej w ramach bloku).|  
+|`rangeLengthReserved`|Wskaźnik na liczbę całkowitą, która określa rozmiar bloku pamięci (oznacza to, że ilość pamięci zarezerwowanej dla bloku).|  
   
 ## <a name="remarks"></a>Uwagi  
- `rangeLength` Gwarancji, wartość jest dokładne tylko wtedy, gdy [ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) lub [ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), zarówno wykorzystującymi `COR_PRF_GC_GENERATION_RANGE` struktury, jest wywoływana z [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) lub [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) metody.  
+ `rangeLength` Być dokładna wartość jest wyświetlana tylko wtedy, gdy [icorprofilerinfo2::getgenerationbounds —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) lub [icorprofilerinfo2::getobjectgeneration —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), obie wykorzystującymi `COR_PRF_GC_GENERATION_RANGE` struktury, jest wywoływana z [icorprofilercallback2::garbagecollectionstarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) lub [icorprofilercallback2::garbagecollectionfinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl  
   
@@ -58,5 +58,5 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Profiling — struktury](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Zobacz także
+- [Profiling — struktury](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

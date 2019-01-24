@@ -9,20 +9,20 @@ helpviewer_keywords:
 - source element
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 818324077322fffb40a192c9197efde6e8ff7591
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 493c6ab72ff5554294279b62af49d311026d6e37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624018"
 ---
 # <a name="ltsourcegt-element"></a>&lt;źródło&gt; — Element
 Określa źródło śledzenia, który inicjuje komunikatów śledzenia.  
   
  \<Konfiguracja >  
-\<System.Diagnostics >  
+\<system.diagnostics>  
 \<źródła >  
-\<źródło >  
+\<source>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,7 +48,7 @@ Określa źródło śledzenia, który inicjuje komunikatów śledzenia.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<odbiorniki >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów w postaci.|  
+|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów w postaci.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -84,6 +84,6 @@ Określa źródło śledzenia, który inicjuje komunikatów śledzenia.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Przełączniki śledzenia](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>Zobacz także
+- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Przełączniki śledzenia](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

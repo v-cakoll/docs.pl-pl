@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przerywanie i łączenie instrukcji w Code (Visual Basic)'
+title: 'Instrukcje: Przerywanie i łączenie instrukcji w Code (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -21,36 +21,36 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: 6bca3d62cb3e886ee08b9169d63d4c3a38247f3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b19c36018a0938b9b6546e5baefbbc3de1e5dd30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619918"
 ---
-# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Porady: przerywanie i łączenie instrukcji w Code (Visual Basic)
-Podczas pisania kodu, można utworzyć w czasie długich instrukcji, które wymagają przewijanie w poziomie w edytorze kodu. Mimo że to nie wpływa na sposób działania kodu, go utrudnia nikogo odczytać kodu znajdującego się na monitora. W takim przypadku należy rozważyć dzielenie jednej instrukcji długa na kilka wierszy.  
+# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Instrukcje: Przerywanie i łączenie instrukcji w Code (Visual Basic)
+Podczas pisania kodu, można utworzyć w czasie długich instrukcji, które wymagają przewijanie w poziomie w edytorze kodu. Mimo że to nie ma wpływu na sposób działania kodu, jego utrudnia nikogo odczytać kodu znajdującego się na monitor. W takich przypadkach należy rozważyć podzielenie pojedynczej instrukcji długich na kilka wierszy.  
   
-### <a name="to-break-a-single-statement-into-multiple-lines"></a>Aby podzielić jednej instrukcji na wiele wierszy  
+### <a name="to-break-a-single-statement-into-multiple-lines"></a>Aby przerwać pojedynczej instrukcji wiele wierszy  
   
--   Użyj znaku kontynuacji wiersza jest to znak podkreślenia (`_`), w momencie, w którym ma zostać na podział wiersza. Podkreślenie musi być natychmiast poprzedzone spację i od razu następuje terminator wiersza (powrotu karetki).  
+-   Użyj znaku kontynuacji wiersza, który jest znakiem podkreślenia (`_`), w momencie, dla której ma zostać na podział wiersza. Znak podkreślenia należy natychmiast poprzedzone spację i bezpośrednio po nim terminator wiersza (powrót karetki).  
   
     > [!NOTE]
-    >  W niektórych przypadkach w przypadku pominięcia znak kontynuacji wiersza kompilator Visual Basic niejawnie będzie instrukcji w następnym wierszu kodu. Aby uzyskać listę elementy składni, w których można pominąć znak kontynuacji wiersza, zobacz "Niejawne kontynuacji wiersza" w [instrukcje](../../../visual-basic/programming-guide/language-features/statements.md).  
+    >  W niektórych przypadkach Jeśli pominięto znak kontynuacji wiersza, kompilator Visual Basic będą nadal w następnym wierszu kodu niejawnie instrukcji. Aby uzyskać listę elementy składni, dla których można pominąć znak kontynuacji wiersza, zobacz "Niejawnej kontynuacji wiersza" w [instrukcji](../../../visual-basic/programming-guide/language-features/statements.md).  
   
-     W poniższym przykładzie instrukcja jest dzielony na cztery wiersze z przerywa wszystkie znaki kontynuacji wiersza, ale ostatniego wiersza.  
+     W poniższym przykładzie instrukcja jest dzielony na cztery wiersze ze znakami kontynuacji wiersza przerywa wszystkie, ale ostatni wiersz.  
   
      [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
   
-     Przy użyciu tej sekwencji ułatwia kodu do odczytu, online i po drukowaniu.  
+     Za pomocą tej sekwencji sprawia, że Twój kod łatwiejsza do odczytania, zarówno online, jak i kiedy wydrukowany.  
   
-     Znak kontynuacji wiersza musi być ostatnim znakiem w wierszu. Nie można wykonać jego się inaczej w tym samym wierszu.  
+     Znak kontynuacji wiersza musi być ostatnim znakiem w wierszu. Nie można wykonać to z jakichkolwiek innych czynności w tym samym wierszu.  
   
-     Istnieją pewne ograniczenia klienckiemu, których można użyć znaku kontynuacji wiersza; na przykład nie można go użyć w środku nazwy argumentu. Lista argumentów znak kontynuacji wiersza mogą być dzielone, ale nazwy poszczególnych argumenty muszą pozostać bez zmian.  
+     Istnieje pewne ograniczenia, do których można użyć znaku kontynuacji wiersza; na przykład nie można go użyć w środku nazwę argumentu. Możesz przerwać listy argumentów znakiem kontynuacji wiersza, ale poszczególne nazwy argumentów musi pozostać bez zmian.  
   
-     Nie można kontynuować komentarz przy użyciu znak kontynuacji wiersza. Kompilator nie Sprawdź, czy znaki w komentarz dotyczący specjalnego znaczenia. Komentarz wielu linii, powtórz symbol komentarza (`'`) w każdym wierszu.  
+     Komentarz nie może kontynuować, za pomocą znaku kontynuacji wiersza. Kompilator nie zbadać znaki w komentarzu do specjalnego znaczenia. Komentarz do wielu linii, powtórz symbol komentarza (`'`) w każdym wierszu.  
   
- Jednak zaleca się umieszczenie każdej instrukcji w osobnym wierszu, Visual Basic umożliwia również umieścić użycie wielu instrukcji w tym samym wierszu.  
+ Mimo że zaleca się umieszczenie każdej instrukcji w osobnym wierszu, Visual Basic umożliwia również umieścić użycie wielu instrukcji w tym samym wierszu.  
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>Aby umieścić użycie wielu instrukcji w tym samym wierszu  
   
@@ -58,6 +58,6 @@ Podczas pisania kodu, można utworzyć w czasie długich instrukcji, które wyma
   
      [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktura programu i konwencje związane z kodami](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Zobacz także
+- [Konwencje dotyczące struktury programów i kodu](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)

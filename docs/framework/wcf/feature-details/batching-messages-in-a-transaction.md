@@ -4,52 +4,52 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: 5c8a69c10ddb8b6be35bdd39e3feb91495279be3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a09cbbe8b77523184a3e75b8fd4301ca956d5cd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700560"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Tworzenie partii komunikatów w ramach transakcji
-Aplikacje umieszczonych w kolejce używać transakcji, aby zapewnić poprawność i niezawodne dostarczanie komunikatów. Transakcje, jednak operacje kosztowne i może znacznie zmniejszyć wydajność obsługi wiadomości. Jednym ze sposobów poprawy wydajności przesyłania wiadomości jest używana aplikacja odczytywać i przetwarzać wiele komunikatów w ramach jednej transakcji. Jest kompromis między wydajnością i odzyskiwanie: jak zwiększa liczbę komunikatów w partii, co powoduje ilość pracy odzyskiwania, który wymagany, jeśli wycofywania transakcji. Należy zauważyć różnicę między tworzenie partii komunikatów w transakcji i sesje. A *sesji* jest grupowanie powiązanych wiadomości, które są przetwarzane przez pojedynczą aplikacją i zatwierdzona jako pojedyncza jednostka. Sesje są zazwyczaj stosowane, gdy grupy powiązane komunikaty, które muszą zostać przetworzone jednocześnie. Na przykład jest online zakupów witryna sieci Web. *Partie* są używane do przetwarzania wielu, niepowiązanych wiadomości w taki sposób, że zwiększa komunikatu przepływności. Aby uzyskać więcej informacji o sesji, zobacz [grupowania w kolejce wiadomości w sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Komunikaty w partii są również przetwarzane przez pojedynczą aplikacją i zatwierdzone jako pojedyncza jednostka, ale może być Brak relacji między komunikatami w partii. Tworzenie partii komunikatów w ramach transakcji jest optymalizacji, która nie zmienia sposób uruchamiania aplikacji.  
+Umieszczonych w kolejce aplikacji używać transakcji, aby zapewnić poprawność i niezawodne dostarczanie wiadomości. Transakcje, jednak są kosztownych operacji i może znacznie zmniejszyć wydajność obsługi wiadomości. Jednym ze sposobów, aby zwiększyć przepływność komunikatów jest korzystać z aplikacji, Odczyt i przetwarzanie wielu komunikatów w ramach jednej transakcji. Jest to kompromis między wydajnością i odzyskiwanie: w miarę zwiększania liczby wiadomości w partii to samo dotyczy ilość pracy odzyskiwania, który wymagany, jeśli wycofywania transakcji. Należy zauważyć różnicę między tworzenie partii komunikatów w transakcji i sesji. A *sesji* to grupa pokrewne wiadomości, które są przetwarzane przez jedną aplikację i zadeklarowane jako pojedyncza jednostka. Sesje są zazwyczaj stosowane, gdy grupy pokrewne wiadomości, które muszą być przetwarzane razem. Na przykład jest online zakupów witryna sieci Web. *Partie* będą używani do przetwarzania wielu, niepowiązanych komunikatów w taki sposób, że wzrost komunikatu przepływności. Aby uzyskać więcej informacji o sesjach, zobacz [grupowanie komunikatów w kolejce w sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Komunikaty w partii są również przetwarzane przez jedną aplikację i zadeklarowane jako pojedynczą jednostkę, ale może być Brak relacji między komunikatami w partii. Tworzenie partii komunikatów w ramach transakcji jest optymalizacji, która nie zmienia sposobu uruchamiania aplikacji.  
   
-## <a name="entering-batching-mode"></a>Wprowadzanie przetwarzanie wsadowe tryb  
- <xref:System.ServiceModel.Description.TransactedBatchingBehavior> Kontroli zachowania punktu końcowego przetwarzania wsadowego. Dodawanie tego zachowania punktu końcowego na punkt końcowy usługi określa, że Windows Communication Foundation (WCF) do partii komunikatów w ramach transakcji. Nie wszystkie wiadomości wymaga transakcji, dzięki czemu można tylko komunikaty, które wymagają transakcji są umieszczane w partii i oznaczone wyłącznie wiadomości wysyłane z operacji `TransactionScopeRequired`  =  `true` i `TransactionAutoComplete`  =  `true` są uwzględnione w partii. Jeśli wszystkie operacje w kontrakcie usługi są oznaczone ikoną z `TransactionScopeRequired`  =  `false` i `TransactionAutoComplete`  =  `false`, a następnie przetwarzanie wsadowe tryb nigdy nie wprowadzono.  
+## <a name="entering-batching-mode"></a>Wprowadzanie tryb dzielenia na partie  
+ <xref:System.ServiceModel.Description.TransactedBatchingBehavior> Formantów zachowanie punktu końcowego, przetwarzanie wsadowe. Dodawanie zachowania punktu końcowego do punktu końcowego usługi informuje Windows Communication Foundation (WCF) do komunikatów usługi batch w ramach transakcji. Nie wszystkie komunikaty wymagają transakcji, dzięki czemu tylko komunikaty, które wymagają transakcji są umieszczane w zadaniu wsadowym i wyłącznie wiadomości wysyłane z operacji oznaczone `TransactionScopeRequired`  =  `true` i `TransactionAutoComplete`  =  `true` są rozważyć partii. Jeśli wszystkie operacje na kontrakt usługi są oznaczone znakiem `TransactionScopeRequired`  =  `false` i `TransactionAutoComplete`  =  `false`, a następnie nigdy nie wprowadził przetwarzanie wsadowe w trybie.  
   
 ## <a name="committing-a-transaction"></a>Zatwierdzanie transakcji  
- Transakcji wsadowej dba oparte na następujących czynności:  
+ Wsadowa transakcja została zatwierdzona, w oparciu o następujące czynności:  
   
--   `MaxBatchSize`. Właściwość <xref:System.ServiceModel.Description.TransactedBatchingBehavior> zachowania. Ta właściwość określa maksymalną liczbę wiadomości, które są umieszczane w partii. Po osiągnięciu tej liczby dba partii. Jest to wartość nie jest ścisłym limit, można przekazać partii przed otrzymaniem to liczba komunikatów.  
+-   `MaxBatchSize`. Właściwość <xref:System.ServiceModel.Description.TransactedBatchingBehavior> zachowanie. Ta właściwość określa maksymalną liczbę wiadomości, które są umieszczane w zadaniu wsadowym. Po osiągnięciu tej liczby partii jest zatwierdzona. Jest to wartość nie jest ścisłe ograniczenie, istnieje możliwość zatwierdzić partii przed otrzymaniem tej liczby komunikatów.  
   
--   `Transaction Timeout`. Po upływie limitu czasu transakcji 80 procent, dba partii i utworzeniu nowej instancji. Oznacza to, że jeśli 20% lub mniej czasu dla transakcji ukończyć pozostaje, dba partii.  
+-   `Transaction Timeout`. Po upływie limitu czasu transakcji 80 procent, dba partii i utworzono nową partię. Oznacza to, że jeśli 20 procent lub mniej czasu, biorąc pod uwagę dla transakcji ukończyć pozostaje, dba partii.  
   
--   `TransactionScopeRequired`. Podczas przetwarzania wsadowego komunikatów, jeśli WCF znalezienia punktu, który ma `TransactionScopeRequired`  =  `false`, zatwierdza partii i ponownie otwiera nową instancję po otrzymaniu pierwszego komunikatu z `TransactionScopeRequired`  =  `true` i `TransactionAutoComplete`  = `true`.  
+-   `TransactionScopeRequired`. Podczas przetwarzania partię komunikatów, jeśli WCF znajdzie taki, który ma `TransactionScopeRequired`  =  `false`, zatwierdzeń usługi batch i ponownie otwiera nową partię po otrzymaniu pierwszej wiadomości z `TransactionScopeRequired`  =  `true` i `TransactionAutoComplete`  = `true`.  
   
--   Jeśli nie więcej istnieją wiadomości w kolejce, a następnie bieżącej partii został przekazany, nawet jeśli `MaxBatchSize` nie został osiągnięty lub nie upłynął limit czasu transakcji 80 procent.  
+-   Jeśli istnieją nie więcej wiadomości w kolejce, a następnie dba bieżącej partii nawet wtedy, gdy `MaxBatchSize` nie został osiągnięty lub nie upłynął limit czasu transakcji 80 procent.  
   
-## <a name="leaving-batching-mode"></a>Pozostawienie przetwarzanie wsadowe tryb  
- Jeśli komunikat w partii powoduje przerwanie transakcji, zostaną wykonane następujące kroki:  
+## <a name="leaving-batching-mode"></a>Pozostawienie tryb dzielenia na partie  
+ Jeśli wiadomość w usłudze batch spowoduje przerwanie transakcji, wykonywane są następujące kroki:  
   
-1.  Całą partię komunikatów zostanie wycofana.  
+1.  Całą partię komunikatów jest wycofywana.  
   
-2.  Wiadomości są odczytywane pojedynczo, dopóki liczba wiadomości przekracza dwukrotnie maksymalny rozmiar wsadu.  
+2.  Komunikaty są odczytywane po kolei, dopóki liczba wiadomości, przeczytaj przekracza dwukrotnie maksymalny rozmiar partii.  
   
 3.  Tryb partii jest ponowne wprowadzenie.  
   
-## <a name="choosing-the-batch-size"></a>Wybieranie rozmiaru partii  
- Rozmiar partii jest zależny od aplikacji. Metoda empiryczne jest najlepszym sposobem na rozmiar partii optymalne dla aplikacji. Należy pamiętać, wybierając rozmiar partii, aby wybrać rozmiar zgodnie z modelu rzeczywiste wdrożenie aplikacji. Na przykład w przypadku wdrażania aplikacji, jeśli potrzebujesz programu SQL server na komputerze zdalnym i transakcji obejmującej kolejki i SQL server, następnie rozmiar partii najlepiej zależy, uruchamiając tego dokładnej konfiguracji.  
+## <a name="choosing-the-batch-size"></a>Wybierając rozmiar partii  
+ Rozmiar partii jest zależne od aplikacji. Metoda empiryczne jest najlepszym sposobem na rozmiar optymalne partii dla aplikacji. Należy pamiętać, wybierając rozmiar partii, aby wybrać rozmiar zgodnie z modelem rzeczywiste wdrożenie Twojej aplikacji. Na przykład podczas wdrażania aplikacji, jeśli potrzebujesz programu SQL server na komputerze zdalnym i transakcji, która obejmuje kolejki i programu SQL server, następnie rozmiar partii najlepiej zależy od tego dokładnej konfiguracji uruchamiania.  
   
-## <a name="concurrency-and-batching"></a>Współbieżność i przetwarzanie wsadowe  
- W celu zwiększenia przepływności, może również mieć wiele instancji uruchamiać jednocześnie. Przez ustawienie `ConcurrencyMode.Multiple` w `ServiceBehaviorAttribute`, możesz włączyć równoczesnych przetwarzanie wsadowe.  
+## <a name="concurrency-and-batching"></a>Współbieżność i dzielenia na partie  
+ W celu zwiększenia przepływności, możesz mieć wiele instancji uruchamiać jednocześnie. Ustawiając `ConcurrencyMode.Multiple` w `ServiceBehaviorAttribute`, możesz włączyć równoczesne przetwarzanie wsadowe.  
   
- *Usługa ograniczania* jest zachowanie usługi, który jest używany do określania, ile maksymalna współbieżnych wywołań w usłudze. W przypadku użycia z przetwarzanie wsadowe, jest interpretowany jak można uruchomić wiele równoczesnych partie. Jeśli nie ustawiono ograniczenie usługi, WCF domyślnie maksymalna równoczesnych wywołań 16. W związku z tym Jeśli przetwarzanie wsadowe zachowanie dodano domyślnie, maksymalnie 16 partii zadań mogą być aktywne w tym samym czasie. Najlepiej dostroić ograniczania usługi i przetwarzanie wsadowe oparte na wydajność. Na przykład jeśli kolejki jest 100 wiadomości i wymagane jest partii 20, o maksymalnej równoczesnych wywołań ustawioną 16 nie jest przydatne ponieważ w zależności od przepustowości, 16 transakcji może być aktywne, podobnie jak nie posiadają przetwarzanie wsadowe włączona. W związku z tym podczas dostosowywania wydajności, nie ma równoczesnych przetwarzanie wsadowe lub mieć równoczesnych przetwarzanie wsadowe o rozmiarze ograniczania prawidłowe usługi.  
+ *Usługa ograniczania* jest zachowanie usługi, który jest używany do wskazania, ile maksymalna współbieżnych wywołań w usłudze. W przypadku użycia za pomocą adapterów przetwarzania wsadowego, jest interpretowany jak można uruchamiać wiele równoczesnych partii. Jeśli nie ustawiono ograniczenie usługi, usługi WCF domyślnie maksymalna współbieżnych wywołań do 16. W związku z tym Jeśli przetwarzanie wsadowe zachowanie zostały dodane domyślnie, maksymalnie 16 partii może być aktywne w tym samym czasie. Zaleca się Dostosowywanie ograniczenie usługi i przetwarzanie wsadowe w oparciu o pojemności. Na przykład jeśli pożądane jest partii 20 kolejki jest 100 wiadomości, o maksymalnej współbieżnych wywołań, ustaw 16 nie jest przydatne ponieważ w zależności od przepustowości, 16 transakcji może być aktywny, podobnie jak niemający dzielenia na partie włączona. W związku z tym gdy dostrajanie wydajności, nie mają równoczesne przetwarzanie wsadowe lub mieć równoczesne przetwarzanie wsadowe o rozmiarze ograniczania prawidłowe usługi.  
   
 ## <a name="batching-and-multiple-endpoints"></a>Przetwarzanie wsadowe i wiele punktów końcowych  
- Punkt końcowy składa się z adresu i kontrakt. Może istnieć wiele punktów końcowych, które współużytkują to samo powiązanie. Istnieje możliwość dwa punkty końcowe udostępnianie tego samego powiązania do nasłuchiwania identyfikator URI (Uniform Resource) lub adres kolejki. Jeśli dwa punkty końcowe są czytania z tej samej kolejki i transakcyjnego przetwarzania wsadowego zachowanie jest dodawany do konflikt w partii, które mogą pojawić się rozmiary określone oba punkty końcowe. Jest to rozwiązane przez wdrożenie, przetwarzanie wsadowe przy użyciu podanego rozmiaru partii minimalnego między dwa transakcyjnego łączenia we wsady zachowania. W tym scenariuszu jeśli jeden z punktów końcowych nie określa transakcyjnego przetwarzania wsadowego, następnie oba punkty końcowe nie użyje przetwarzanie wsadowe.  
+ Punkt końcowy składa się z adresu i kontrakt. Może istnieć wiele punktów końcowych, które współużytkują tego samego powiązania. Istnieje możliwość dla dwóch punktach końcowych pozwala na udostępnianie tego samego powiązania i nasłuchiwania identyfikator (URI) lub adres kolejki. Jeśli dwa punkty końcowe są odczytywania z tej samej kolejki i transakcyjne dzielenia na partie zachowanie jest dodawany do konfliktu w usłudze batch, które mogą pojawić się rozmiary określone oba punkty końcowe. Ten problem jest rozwiązany przez zaimplementowanie dzielenia na partie przy użyciu wybranego rozmiaru partii minimalny między dwa zachowania łączenia we wsady transakcyjne. W tym scenariuszu jeśli jeden z punktów końcowych nie określa transakcyjnego przetwarzania wsadowego, następnie zarówno punkty końcowe nie użyje dzielenia na partie.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób określić `TransactedBatchingBehavior` w pliku konfiguracji.  
+ Poniższy przykład pokazuje, jak określić `TransactedBatchingBehavior` w pliku konfiguracji.  
   
 ```xml  
 <behaviors>
@@ -60,7 +60,7 @@ Aplikacje umieszczonych w kolejce używać transakcji, aby zapewnić poprawnoś�
 </behaviors>
 ```  
   
- Poniższy przykład przedstawia sposób określić <xref:System.ServiceModel.Description.TransactedBatchingBehavior> w kodzie.  
+ Poniższy przykład pokazuje, jak określić <xref:System.ServiceModel.Description.TransactedBatchingBehavior> w kodzie.  
   
 ```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
@@ -82,6 +82,6 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+## <a name="see-also"></a>Zobacz także
+- [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

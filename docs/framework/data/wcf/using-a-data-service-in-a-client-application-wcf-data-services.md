@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 092f073a138a09fc25b96fbddde5b73992056981
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: db802e127cacec2243741310b8a885c7ffcd24e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736997"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Używanie usługi danych w aplikacji klienckiej (WCF Data Services)
 Uzyskaniem dostępu do usług, który udostępnia [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] kanału informacyjnego, podając identyfikator URI do przeglądarki sieci Web. Identyfikator URI dostarcza adres zasobu, a żądania są wysyłane do tych adresów na dostęp lub zmienić danych bazowych, który reprezentuje zasobu. Przeglądarka wydaje polecenie HTTP GET i zwraca żądany zasób jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych. Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do usługi z przeglądarki sieci Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -33,7 +33,7 @@ Uzyskaniem dostępu do usług, który udostępnia [!INCLUDE[ssODataFull](../../.
   
 -   **SCAL HTTP** — ze względu na nieefektywność wykonywania delete, insert w źródle danych, aby zmienić dane jednostki, a następnie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] wprowadza nową akcję scalania HTTP. Ładunek komunikatu żądania zawiera właściwości, które musi zostać zmienione w zasobie jednostki zaadresowane. Ponieważ scalania HTTP nie jest zdefiniowana w specyfikacji protokołu HTTP, może wymagać dodatkowego przetwarzania, aby skierować żądanie SCALENIA HTTP za pośrednictwem non -[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] pamiętać serwerów.  
   
- Aby uzyskać więcej informacji, zobacz [OData: operacje](https://go.microsoft.com/fwlink/?LinkId=185792).  
+ Aby uzyskać więcej informacji, zobacz [OData: Operacje](https://go.microsoft.com/fwlink/?LinkId=185792).  
   
 ### <a name="payload-formats"></a>Formaty ładunków  
  HTTP PUT, POST protokołu HTTP lub HTTP scalania żądania ładunku komunikatu żądania zawiera dane jednostki, które możesz wysłać do usługi danych. Zawartość ładunek, zależy od formatu danych wiadomości. Odpowiedzi HTTP do wszystkich akcji, z wyjątkiem usuwania, również zawierać takie ładunku. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje następujące formaty ładunków do uzyskiwania dostępu i zmieniającymi się danymi w usłudze:  
@@ -42,7 +42,7 @@ Uzyskaniem dostępu do usług, który udostępnia [!INCLUDE[ssODataFull](../../.
   
 -   **JSON** — JavaScript Object Notation (JSON) jest formatem wymiany uproszczone danych, który jest oparty na podzbiorze język programowania języka JavaScript. Aby uzyskać więcej informacji, zobacz [OData: JSON Format](https://go.microsoft.com/fwlink/?LinkId=185795).  
   
- Format komunikatu ładunku żądania w nagłówku komunikatu żądania HTTP. Aby uzyskać więcej informacji, zobacz [OData: operacje](https://go.microsoft.com/fwlink/?LinkID=185792).  
+ Format komunikatu ładunku żądania w nagłówku komunikatu żądania HTTP. Aby uzyskać więcej informacji, zobacz [OData: Operacje](https://go.microsoft.com/fwlink/?LinkID=185792).  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Uzyskiwanie dostępu do i zmieniającymi się danymi przy użyciu biblioteki klienta  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zawiera biblioteki klienckie, które umożliwiają łatwiejsze korzystanie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Kanał informacyjny z .NET Framework i aplikacji klienckich opartych na technologii Silverlight. Te biblioteki upraszczają wysyłanie i odbieranie komunikatów HTTP. Mogą również wykonuje translację elementu ładunek komunikatu do obiektów CLR, które reprezentują dane jednostki. Biblioteki klienckie są wyposażone w dwóch głównych klas <xref:System.Data.Services.Client.DataServiceContext> i <xref:System.Data.Services.Client.DataServiceQuery%601>. Klasy te umożliwiają zapytań usługi danych, a następnie pracować z danymi zwróconą jednostkę jako obiekty typu CLR. Aby uzyskać więcej informacji, zobacz [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) i [usług danych WCF (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30).  
@@ -51,6 +51,6 @@ Uzyskaniem dostępu do usług, który udostępnia [!INCLUDE[ssODataFull](../../.
   
  Brak biblioteki programistyczne, które są dostępne, której można używać [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w innych rodzajów aplikacji klienckich. Aby uzyskać więcej informacji, zobacz [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796).  
   
-## <a name="see-also"></a>Zobacz też  
- [Uzyskiwanie dostępu do zasobów usługi danych](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
- [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Uzyskiwanie dostępu do zasobów usługi danych](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

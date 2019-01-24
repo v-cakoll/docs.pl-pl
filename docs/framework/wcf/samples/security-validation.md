@@ -2,12 +2,12 @@
 title: Walidacja zabezpieczeń
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 16a12a031845a8898c32ac43bbb2e2a44fd7c7ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699769"
 ---
 # <a name="security-validation"></a>Walidacja zabezpieczeń
 W tym przykładzie pokazano, jak umożliwia zachowanie niestandardowe sprawdzanie poprawności usługi na komputerze, aby upewnić się, że spełniają określone kryteria. W tym przykładzie usług są weryfikowane przez niestandardowe zachowanie przez skanowanie za pomocą każdego punktu końcowego w usłudze i sprawdzanie, czy zawierają one elementy bezpiecznego powiązania. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -77,7 +77,7 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  Podczas dodawania zachowanie do wszystkich usług, zalecane jest aby utworzyć kopię zapasową pliku Machine.config przed wprowadzeniem zmiany.  
   
- Teraz z klientem w katalogu client\bin tego przykładu. Wyjątek występuje z następującym komunikatem: "żądanej usługi"http://localhost/servicemodelsamples/service.svc"nie można aktywować." Oczekuje się, ponieważ punkt końcowy jest uznawana za niebezpieczne przez punkt końcowy, sprawdzanie poprawności zachowanie i uniemożliwia uruchomienie usługi. Zachowanie zgłasza również wyjątek wewnętrzny, opisujący którym punktem końcowym jest niebezpieczne i zapisuje komunikat do systemu Podglądu zdarzeń w źródle "System.ServiceModel 4.0.0.0" oraz kategorii "Hostem sieci Web". Użytkownik może również włączyć śledzenie usługi w tym przykładzie. Dzięki temu można wyświetlić wyjątki generowane przez działanie sprawdzania poprawności punktu końcowego, otwierając wynikowy śladów usługi za pomocą narzędzia przeglądarki danych śledzenia usługi.  
+ Teraz z klientem w katalogu client\bin tego przykładu. Wyjątek występuje następujący komunikat o błędzie: "Żądanej usługi"http://localhost/servicemodelsamples/service.svc"nie można aktywować." Oczekuje się, ponieważ punkt końcowy jest uznawana za niebezpieczne przez punkt końcowy, sprawdzanie poprawności zachowanie i uniemożliwia uruchomienie usługi. Zachowanie zgłasza również wyjątek wewnętrzny, opisujący którym punktem końcowym jest niebezpieczne i zapisuje komunikat do systemu Podglądu zdarzeń w źródle "System.ServiceModel 4.0.0.0" oraz kategorii "Hostem sieci Web". Użytkownik może również włączyć śledzenie usługi w tym przykładzie. Dzięki temu można wyświetlić wyjątki generowane przez działanie sprawdzania poprawności punktu końcowego, otwierając wynikowy śladów usługi za pomocą narzędzia przeglądarki danych śledzenia usługi.  
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Aby wyświetlić nie powiodło się komunikaty o wyjątkach weryfikacji punktu końcowego w Podglądzie zdarzeń  
   
@@ -106,5 +106,5 @@ public void Validate(ServiceDescription serviceDescription,
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Zobacz także
+- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

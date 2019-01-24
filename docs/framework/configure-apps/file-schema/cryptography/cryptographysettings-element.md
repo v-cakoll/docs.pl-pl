@@ -1,5 +1,5 @@
 ---
-title: '&lt;cryptographysettings —&gt; — Element'
+title: '&lt;cryptographySettings&gt; Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings
@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 4bad1d15bc8e2fd40d42581220888f035e515162
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0d1dfe5cadf59122994f1a751f985e186c6cf5b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602510"
 ---
-# <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographysettings —&gt; — Element
+# <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt; Element
 Zawiera ustawienia szyfrowania.  
   
  \<Konfiguracja >  
-\<mscorlib >  
-\<cryptographysettings — >  
+\<mscorlib>  
+\<cryptographySettings>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,8 +41,8 @@ Zawiera ustawienia szyfrowania.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<cryptonamemapping — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Zawiera mapowania klasy przyjazne nazwy.|  
-|[\<oidmap — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Zawiera mapowania identyfikatora (OID) obiektów ASN.1 do klas.|  
+|[\<cryptoNameMapping>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Zawiera mapowania klasy przyjazne nazwy.|  
+|[\<oidMap>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Zawiera mapowania identyfikatora (OID) obiektów ASN.1 do klas.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -78,7 +78,7 @@ Zawiera ustawienia szyfrowania.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+## <a name="see-also"></a>Zobacz także
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
 - [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)

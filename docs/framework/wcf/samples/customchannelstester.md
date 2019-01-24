@@ -2,21 +2,21 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: eebe4f15095c7cefbd32971fd2f3ee308e9916b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ede9e6b2c2b4d4bf027ff729bc0418d7ac48f06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596647"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
-`CustomChannelsTester` To narzędzie, które służy do testowania implementacjach użytkownika niestandardowym kanale z zestawem kontraktów usług wstępnie zdefiniowane. Możesz wybrać zestaw kontraktów usług i przekaż go za pomocą pliku XML. Narzędzie generuje następnie usługi i klienta, który korzysta z implementacji niestandardowego kanału podczas wymiany wiadomości.  
+`CustomChannelsTester` To narzędzie, które można użyć do testowania implementacji usługi niestandardowym kanale z zestawem kontraktów predefiniowaną usługę. Można wybrać zestaw kontraktów usług i przekazać go do narzędzia, za pomocą pliku XML. Narzędzie generuje następnie usługi i klienta, który korzysta z implementacjami niestandardowym kanale podczas wymiany komunikatów.  
   
 ### <a name="to-build-the-tool"></a>Aby utworzyć narzędzie  
   
-1.  Postępuj zgodnie z instrukcjami w celu skompilowania rozwiązania, [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Tworzenie rozwiązania generuje trzy pliki: CustomChannelsTester.exe, TestSpec.xml i SampleRun.cmd. Plik SampleRun.cmd zawiera przykładowy wiersz polecenia, który przedstawia sposób użycia tego narzędzia do testowania [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki.  
+2.  Skompilować rozwiązanie generuje trzy pliki: CustomChannelsTester.exe, TestSpec.xml and SampleRun.cmd. Plik SampleRun.cmd zawiera przykładowy wiersz polecenia, który pokazuje, jak używać tego narzędzia do testowania [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki.  
   
 ### <a name="to-run-the-tool"></a>Aby uruchomić narzędzie  
   
@@ -26,17 +26,17 @@ ms.locfileid: "33499391"
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
     ```  
   
-     Przy użyciu `/binding` opcja jest wymagana.  
+     Za pomocą `/binding` opcja jest wymagana.  
   
      `/dll` jest wymagany, jeśli "powiązanie" nie jest dostarczane przez system powiązania dostarczane przez Windows Communication Foundation (WCF).  
   
-     `/testspec` jest opcjonalna.  
+     `/testspec` jest opcjonalne.  
   
-     Spowoduje to utworzenie serwer i klienci na podstawie specyfikacji testu i powiązania.  
+     Spowoduje to utworzenie serwera i klientów na podstawie specyfikacji testowego i wiązania.  
   
-     Wykonuje klienta i serwera i zwraca wyniki.  
+     Uruchamia klienta i serwera i zwraca wyniki.  
   
-     Poniżej przedstawiono przykładowe XML opisu specyfikacji testu (testspec.xml):  
+     Poniżej przedstawiono przykładowy kod XML do opisu testu specyfikacje (testspec.xml):  
   
     ```xml  
     <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
@@ -69,4 +69,4 @@ ms.locfileid: "33499391"
     </TestSpec>  
     ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

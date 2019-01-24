@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46ee8c62861a62ac044f295f7da082756d87347b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88b8f874400d68110fa5e8fb66ca910b8e7231e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645967"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers — Metoda
-Wylicza tokenów MemberDef reprezentujący elementy członkowskie określonego typu.  
+Wylicza tokenów MemberDef reprezentujących elementy określonego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,13 +41,13 @@ HRESULT EnumMembers (
   
 #### <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, out] Wskaźnik do modułu wyliczającego.  
+ [out w] Wskaźnik do modułu wyliczającego.  
   
  `cl`  
- [in] Element TypeDef token reprezentujący typ, której członkami są mają zostać wyliczone.  
+ [in] TypeDef token reprezentujący typ, której członkami są do wyliczenia.  
   
  `rMembers`  
- [out] Tablica używanym do przechowywania tokenów MemberDef.  
+ [out] Tablica, używane do przechowywania tokenów MemberDef.  
   
  `cMax`  
  [in] Maksymalny rozmiar `rMembers` tablicy.  
@@ -59,21 +59,21 @@ HRESULT EnumMembers (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` zwrócona pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów MemberDef do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumMembers` pomyślnie zwrócił.|  
+|`S_FALSE`|Nie ma żadnych tokeny MemberDef do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas wyliczania kolekcji elementów członkowskich klasy, `EnumMembers` zwraca tylko elementy członkowskie zdefiniowane bezpośrednio dla klasy. Nie zwraca żadnych elementów członkowskich, które dziedziczy klasa, nawet jeśli ta klasa dostarcza implementacji dla tych członków dziedziczonych. Wyliczyć dziedziczone elementy członkowskie, wywołujący musi jawnie Przeprowadź łańcuch dziedziczenia. Należy pamiętać, że zasady łańcuch dziedziczenia może się różnić w zależności od języka i kompilatora wysyłanego oryginalnych metadanych.  
+ Podczas wyliczania kolekcji elementów członkowskich dla klasy `EnumMembers` zwraca tylko elementy członkowskie zdefiniowane bezpośrednio w klasie. Nie zwraca żadnych elementów członkowskich, które klasa dziedziczy, nawet wtedy, gdy klasa udostępnia implementację dla tych dziedziczonych elementów członkowskich. Aby wyliczyć dziedziczone elementy członkowskie, obiekt wywołujący jawnie prowadzą użytkownika łańcuch dziedziczenia. Należy pamiętać, że zasady łańcuch dziedziczenia, mogą się różnić w zależności od języka i kompilatora, które są emitowane odpowiednich oryginalnych metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

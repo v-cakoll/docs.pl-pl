@@ -1,23 +1,23 @@
 ---
-title: '&lt;Element xmlSerializer&gt; — Element'
+title: '&lt;xmlSerializer&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <xmlSerializer> element
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: 2770b82f71f3c4b43df4c44f75248e5392c528c2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4b511dc229c9e8321b91fbb0f9395627680e5d12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591958"
 ---
-# <a name="ltxmlserializergt-element"></a>&lt;Element xmlSerializer&gt; — Element
+# <a name="ltxmlserializergt-element"></a>&lt;xmlSerializer&gt; Element
 Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSerializer> jest wykonywane.  
   
  \<Konfiguracja >  
-\<System.XML.serialization >  
+\<system.xml.serialization>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -62,6 +62,6 @@ Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSeriali
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)
 - [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

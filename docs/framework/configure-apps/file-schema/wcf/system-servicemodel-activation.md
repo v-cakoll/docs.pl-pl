@@ -2,12 +2,12 @@
 title: '&lt;system.serviceModel.activation&gt;'
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-ms.openlocfilehash: fed7bf41e8c893d10254e09a9733572765ce1661
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 10496b9624e1edb044187c08c9dfac0b852fe490
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666354"
 ---
 # <a name="ltsystemservicemodelactivationgt"></a>&lt;system.serviceModel.activation&gt;
 Ta sekcja konfiguracji reprezentuje ustawienia konfiguracji dla narzędzia SMSvcHost.exe. Elementy konfiguracji można skonfigurować w pliku pliku konfiguracyjnego SMSvcHost.exe.config. W szczególności zawiera wszystkie ustawienia dla komputera, które muszą być skonfigurowane.  
@@ -60,5 +60,5 @@ Ta sekcja konfiguracji reprezentuje ustawienia konfiguracji dla narzędzia SMSvc
 </configuration>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Activation.Configuration>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Activation.Configuration>

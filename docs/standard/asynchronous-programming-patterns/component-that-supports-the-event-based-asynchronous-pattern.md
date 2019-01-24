@@ -1,5 +1,5 @@
 ---
-title: 'Porady: implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach'
+title: 'Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 8213d3d980edc9c37b5f50545edbcd8959616963
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745470"
 ---
-# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Porady: implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach
 Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie zauważalnego opóźnienia, należy wziąć pod uwagę nadając mu funkcje asynchroniczne z zastosowaniem [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
  W tym instruktażu pokazano, jak utworzyć składnika, który implementuje wzorzec asynchroniczny oparty na zdarzeniach. Jej implementacji przy użyciu klas pomocy z <xref:System.ComponentModel?displayProperty=nameWithType> przestrzeń nazw, która zapewnia składnika działa prawidłowo w ramach dowolnego modelu aplikacji, w tym [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], konsoli, aplikacji i aplikacji Windows Forms. Ten składnik jest również designable z <xref:System.Windows.Forms.PropertyGrid> kontroli i własnych niestandardowych projektantów.  
@@ -48,7 +48,7 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
   
 -   Implementowanie Start oraz Anuluj metod  
   
- Aby skopiować kod, w tym temacie na jednej liście, zobacz [porady: implementacja klienta wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ Aby skopiować kod, w tym temacie na jednej liście, zobacz [jak: Implementacja klienta wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="creating-the-component"></a>Tworzenie składnika  
  Pierwszym krokiem jest można stworzyć komponentu, który będzie implementowany wzorca asynchronicznego opartego na zdarzeniach.  
@@ -176,7 +176,7 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
  `CalculateWorker` Metoda jest opakowana w obiekt delegowany i jest wywoływana asynchronicznie przy użyciu wywołania do `BeginInvoke`.  
   
 > [!NOTE]
->  Raportowanie postępu jest zaimplementowana w `BuildPrimeNumberList` metody. Na komputerach szybkie `ProgressChanged` zdarzenia mogą być wywoływane w krótkim odstępie czasu. Wątek klienta, na którym te zdarzenia są wywoływane, musi mieć możliwość obsługi takiej sytuacji. Kod interfejsu użytkownika może być przeciążony wiadomości i nie może nadążyć, wynikiem zawiesza się zachowanie. Dla interfejsu użytkownika przykład obsługujący tę sytuację, zobacz [porady: implementacja klienta wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+>  Raportowanie postępu jest zaimplementowana w `BuildPrimeNumberList` metody. Na komputerach szybkie `ProgressChanged` zdarzenia mogą być wywoływane w krótkim odstępie czasu. Wątek klienta, na którym te zdarzenia są wywoływane, musi mieć możliwość obsługi takiej sytuacji. Kod interfejsu użytkownika może być przeciążony wiadomości i nie może nadążyć, wynikiem zawiesza się zachowanie. Dla interfejsu użytkownika przykład obsługujący tę sytuację, zobacz [jak: Implementacja klienta wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Asynchroniczne wykonywanie obliczeń liczba pierwsza:  
   
@@ -242,7 +242,7 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
   
  `PrimeNumberCalculator` Jest teraz gotowy do użycia.  
   
- Na przykład klienci, którzy korzystają `PrimeNumberCalculator` składników, zobacz [porady: implementacja klienta wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ Na przykład klienci, którzy korzystają `PrimeNumberCalculator` składników, zobacz [jak: Implementacja klienta wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="next-steps"></a>Następne kroki  
  Możesz też wypełnić ten przykład, pisząc `CalculatePrime`, synchroniczne wielokrotność `CalculatePrimeAsync` metody. Dzięki temu `PrimeNumberCalculator` składnika w pełni zgodne, za pomocą wzorca asynchronicznego opartego na zdarzeniach.  
@@ -253,6 +253,6 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: uruchamianie operacji w tle](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
-- [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [Instrukcje: Uruchamianie operacji w tle](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c148ee0b2c96f2a387dac54eaff690ab3f05ebf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34a6762618780b22bcd8be376209912390524578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592023"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs — Metoda
-Wylicza tokenów elementu MemberRef reprezentujący elementy członkowskie określonego typu.  
+Wylicza tokenów MemberRef reprezentujących elementy określonego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,36 +41,36 @@ HRESULT EnumMemberRefs (
   
 #### <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, out] Wskaźnik do modułu wyliczającego.  
+ [out w] Wskaźnik do modułu wyliczającego.  
   
  `tkParent`  
- [in] Element TypeDef, element TypeRef, MethodDef lub element ModuleRef token typu, której członkami są mają zostać wyliczone.  
+ [in] Element TypeDef, TypeRef, MethodDef lub element ModuleRef token dla typu, której członkami są do wyliczenia.  
   
  `rMemberRefs`  
- [out] Tablica używany do przechowywania tokenów elementu MemberRef.  
+ [out] Tablica do przechowywania tokenów MemberRef.  
   
  `cMax`  
  [in] Maksymalny rozmiar `rMemberRefs` tablicy.  
   
  `pcTokens`  
- [out] Rzeczywista liczba tokenów elementu MemberRef zwracane w `rMemberRefs`.  
+ [out] Rzeczywista liczba tokenów MemberRef zwracane w `rMemberRefs`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` zwrócona pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów elementu MemberRef do wyliczenia. W takim przypadku `pcTokens` ma wartość zero.|  
+|`S_OK`|`EnumMemberRefs` pomyślnie zwrócił.|  
+|`S_FALSE`|Nie ma żadnych tokeny MemberRef do wyliczenia. W takim przypadku `pcTokens` ma wartość zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

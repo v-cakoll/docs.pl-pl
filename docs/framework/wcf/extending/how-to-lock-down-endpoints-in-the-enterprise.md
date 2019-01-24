@@ -1,15 +1,15 @@
 ---
-title: 'Porady: blokowanie punktów końcowych w przedsiębiorstwie'
+title: 'Instrukcje: Blokowanie punktów końcowych w przedsiębiorstwie'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663095"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Porady: blokowanie punktów końcowych w przedsiębiorstwie
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Instrukcje: Blokowanie punktów końcowych w przedsiębiorstwie
 Dla dużych przedsiębiorstw często wymagają, że aplikacje są opracowywane zgodne z zasadami zabezpieczeń organizacji. Temacie opisano kroki umożliwiające tworzenie i instalowanie klienta weryfikacji punktu końcowego, który może służyć do sprawdzania poprawności wszystkie aplikacje klienckie usługi Windows Communication Foundation (WCF) zainstalowane na komputerach.  
   
  W tym przypadku modułu sprawdzania poprawności jest moduł weryfikacji klienta, ponieważ to zachowanie punktu końcowego jest dodawany do klienta [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcji w pliku machine.config. WCF ładuje wspólnego zachowania punktu końcowego tylko dla aplikacji klienckich i ładuje wspólnego zachowania usługi tylko dla aplikacji usługi. Aby zainstalować tego samego modułu weryfikacji dla aplikacji usług, moduł weryfikacji musi być zachowania usługi. Aby uzyskać więcej informacji, zobacz [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sekcji.  
@@ -63,6 +63,6 @@ Dla dużych przedsiębiorstw często wymagają, że aplikacje są opracowywane z
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Można również zaszyfrować elementy pliku konfiguracji. Aby uzyskać więcej informacji zobacz sekcję Zobacz też.  
   
-## <a name="see-also"></a>Zobacz też  
- [Szyfrowanie przy użyciu interfejsu DPAPI elementy pliku konfiguracji](https://go.microsoft.com/fwlink/?LinkId=94954)  
- [Szyfrowanie przy użyciu RSA elementy pliku konfiguracji](https://go.microsoft.com/fwlink/?LinkId=94955)
+## <a name="see-also"></a>Zobacz także
+- [Szyfrowanie przy użyciu interfejsu DPAPI elementy pliku konfiguracji](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [Szyfrowanie przy użyciu RSA elementy pliku konfiguracji](https://go.microsoft.com/fwlink/?LinkId=94955)

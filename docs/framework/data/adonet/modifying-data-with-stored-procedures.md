@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: c868528edbccfeb32e6aca02c92b87d51bb0b829
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2093554eb59746d6b52c2895ec3ded5d9088fa3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144770"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658276"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Modyfikowanie danych za pomocą procedur składowanych
 Procedury składowane może akceptować dane jako parametry wejściowe i mogą zwracać dane jako parametry wyjściowe, zestawów danych lub zwracanych wartości. Poniższy przykład ilustruje sposób ADO.NET wysyła i odbiera dane wejściowe parametrów wyjściowych parametry i zwracane wartości. Przykład Wstawia nowy rekord w tabeli, w których kolumna klucza podstawowego jest kolumną tożsamości w bazie danych programu SQL Server.  
@@ -39,8 +39,8 @@ RETURN @@ROWCOUNT
  [!code-csharp[DataWorks SqlClient.SprocIdentityReturn#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.SprocIdentityReturn/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.SprocIdentityReturn#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.SprocIdentityReturn/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Wykonywanie polecenia](../../../../docs/framework/data/adonet/executing-a-command.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Wykonywanie polecenia](../../../../docs/framework/data/adonet/executing-a-command.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

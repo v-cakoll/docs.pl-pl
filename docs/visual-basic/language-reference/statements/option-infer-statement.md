@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: d6a05abec36f97094adaac7572f6015b10874442
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: ded8d334c45a29e7a892b32f51d4bb1246079ecd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646165"
 ---
 # <a name="option-infer-statement"></a>Option Infer — Instrukcja
 Umożliwia użycie wnioskowania o typie lokalnym w zadeklarowania zmiennych.  
@@ -93,12 +93,12 @@ Funkcje IntelliSense dostępne podczas Option Infer jest wyłączona
   
  [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Compare, instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [Option Explicit, instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Domyślne ustawienia programu Visual Basic, Projekty, Opcje — okno dialogowe](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)  
- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [Konwersja boxing i konwersja unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+## <a name="see-also"></a>Zobacz także
+- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Option Compare, instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Option Explicit, instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Domyślne ustawienia programu Visual Basic, Projekty, Opcje — okno dialogowe](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [Konwersja boxing i konwersja unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

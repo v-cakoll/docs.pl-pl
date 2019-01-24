@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04be252092732296354cfec102cf8fe648ed2dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0651609e6d2597336ee42ceae752df7e561cd252
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692655"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs — Metoda
-Pobiera `ClassID` typu przy użyciu tokenu określonych metadanych i `ClassID` wartości dowolnego argumentów typu.  
+Pobiera `ClassID` typu przy użyciu tokenu określonych metadanych i `ClassID` wartości wszelkich argumentów typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,23 +46,23 @@ HRESULT GetClassFromTokenAndTypeArgs(
  [in] `mdTypeDef` Token metadanych, który odwołuje się do typu.  
   
  `cTypeArgs`  
- [in] Liczba parametrów typu dla danego typu. Ta wartość musi być zero dla typu nieogólnego.  
+ [in] Liczba parametrów typu dla danego typu. Ta wartość musi mieć wartość zero dla typu nieogólnego.  
   
  `typeArgs`  
- [in] Tablica `ClassID` wartości, z których każdy jest argumentem typu. Wartość `typeArgs` może mieć wartości NULL, jeśli `cTypeArgs` jest ustawiony na zero.  
+ [in] Tablica `ClassID` wartości, z których każdy jest argumentem typu. Wartość `typeArgs` może mieć wartości NULL, jeśli `cTypeArgs` jest równa zero.  
   
  `pClassID`  
  [out] Wskaźnik do `ClassID` określonego typu.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywoływanie `GetClassFromTokenAndTypeArgs` metody z `mdTypeRef` zamiast `mdTypeDef` token metadanych może mieć nieprzewidziane skutki; powinna być rozpoznawana przez obiekty wywołujące `mdTypeRef` do `mdTypeDef` podczas przekazywania go.  
+ Wywoływanie `GetClassFromTokenAndTypeArgs` metody z `mdTypeRef` zamiast `mdTypeDef` token metadanych może przynieść nieprzewidywalne rezultaty; obiekty wywołujące powinna być rozpoznawana `mdTypeRef` do `mdTypeDef` podczas przekazywania go.  
   
- Jeśli typ nie jest już załadowany, wywoływania `GetClassFromTokenAndTypeArgs` wyzwoli ładowania, który jest niebezpieczne operacji w wielu sytuacjach. Na przykład wywołaniem tej metody w czasie ładowania modułów lub innych typów może spowodować nieskończoną pętlę jako środowisko uruchomieniowe próbuje załadować rekurencyjnie rzeczy.  
+ Jeśli typ nie jest już załadowany, wywołanie `GetClassFromTokenAndTypeArgs` wyzwoli załadunku, które jest operacją niebezpiecznych w wielu kontekstach. Na przykład wywołanie tej metody w czasie ładowania modułów lub innych typów może prowadzić do wejścia w nieskończoną pętlę jako środowisko wykonawcze próby rekurencyjnie załadować rzeczy.  
   
- Ogólnie rzecz biorąc, użycie `GetClassFromTokenAndTypeArgs` jest niezalecane. Zainteresowani profilery zdarzenia dla określonego typu, należy przechowywać `ModuleID` i `mdTypeDef` typu i użyj [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) Aby sprawdzić, czy danego `ClassID` jest odpowiedniego typu.  
+ Ogólnie rzecz biorąc, użytkowania `GetClassFromTokenAndTypeArgs` jest niezalecane. Zainteresowani profilery zdarzeń dla określonego typu, należy przechowywać `ModuleID` i `mdTypeDef` tego typu i użyj [icorprofilerinfo2::getclassidinfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) Aby sprawdzić, czy dany `ClassID` jest żądany typ.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -70,6 +70,6 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

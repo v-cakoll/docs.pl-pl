@@ -8,63 +8,63 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31d14a8ef6a4b17eea1b9160e811bb92946d775b
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 1939666b3dd271959c418e3d714b177e170fcd04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595984"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Zgodność aplikacji w programie .NET Framework
 
 ## <a name="introduction"></a>Wprowadzenie
-Zgodność jest bardzo ważne celem każdej wersji platformy .NET. Zgodności zapewni, że każda wersja dodatku, więc poprzedniej wersji będą nadal działać. Z drugiej strony zmiany w funkcjonalności poprzedniego (w celu zwiększenia wydajności i rozwiązać problemy zabezpieczeń, lub błędów) może spowodować problemy ze zgodnością w istniejący kod lub istniejące aplikacje uruchamiane w nowszej wersji. .NET Framework rozpoznaje zmiany retargetingu i środowiska wykonawczego. Zmiany retargetingu wpływ na aplikacje docelowe określonej wersji programu .NET Framework, ale są uruchomione w nowszej wersji. Zmiany środowiska uruchomieniowego wpływają na wszystkie aplikacje uruchomione na określonej wersji.
+Zgodność jest bardzo ważne celem każdej wersji platformy .NET. Zgodność zapewnia każdej wersji dodatku, więc poprzedniej wersji będą nadal działać. Z drugiej strony zmiany w funkcjonalności poprzedniego (w celu zwiększenia wydajności i rozwiązywać problemy z bezpieczeństwem, lub naprawić usterki) może spowodować problemy ze zgodnością w istniejącym kodzie lub istniejące aplikacje uruchamiane w nowszej wersji. .NET Framework rozpoznaje przekierowanie zmiany i zmiany środowiska uruchomieniowego. Przekierowanie zmiany wpływają na aplikacje, które odwoływać się do określonej wersji programu .NET Framework, ale działają w nowszej wersji. Zmiany środowiska uruchomieniowego wpływają na wszystkie aplikacje uruchomione na określonej wersji.
 
 Każda aplikacja jest przeznaczony dla określonej wersji programu .NET Framework, który może zostać określony przez:
 
 * Definiowanie platformy docelowej w programie Visual Studio.
-* Określenie platformę docelową w pliku projektu.
+* Określanie platformy docelowej w pliku projektu.
 * Stosowanie <xref:System.Runtime.Versioning.TargetFrameworkAttribute> do kodu źródłowego.
 
-Uruchomionej na nowszą wersję niż co był przeznaczony quirked zachowanie programu .NET Framework będą używane do naśladować starszą wersję docelową. Innymi słowy aplikacja będzie uruchomić na nowszą wersję Framework, ale działa tak, jakby działa w starszej wersji. Wiele problemów ze zgodnością między wersjami programu .NET Framework, zostały skorygowane przez ten model quirking. Wersja programu .NET Framework odpowiedniej aplikacji określone przez docelową wersję zestawu wpis dla domeny aplikacji działającej w kodzie. Wszystkie dodatkowe zestawy ładowane w tym celu domeny aplikacji tej wersji .NET Framework. Na przykład w przypadku pliku wykonywalnego platformę cele pliku wykonywalnego jest tryb zgodności wszystkie zestawy w tej domenie aplikacji będzie uruchamiana.
+Podczas uruchamiania na nowszą wersję niż co został określony, .NET Framework użyje quirked zachowanie do naśladowania starszej wersji docelowej. Innymi słowy aplikacja są uruchamiane w nowszej wersji Framework ale działać tak, jakby działa starsza wersja. Wiele problemów ze zgodnością między wersjami programu .NET Framework zostały skorygowane przez ten model quirking. Wersja programu .NET Framework określone przez wersję docelową zestawu wpis dla domeny aplikacji, której kod jest uruchomiony w odpowiedniej aplikacji. Wszystkie dodatkowe zestawy ładowane w przeznaczonych domeny aplikacji tej wersji programu .NET Framework. Na przykład w przypadku pliku wykonywalnego programu framework cele pliku wykonywalnego jest tryb zgodności wszystkich zestawów, w tym elemencie AppDomain zostanie uruchomiony w obszarze.
 
 ## <a name="runtime-changes"></a>Zmiany środowiska uruchomieniowego
 
-Problemy dotyczące środowiska uruchomieniowego to wystąpić, gdy nowe środowisko uruchomieniowe znajduje się na komputerze i są uruchamiane w tej samej plików binarnych, ale pojawia się inaczej. Jeśli dane binarne został skompilowany dla platformy .NET Framework 4.0, zostanie uruchomiony w trybie zgodności programu .NET Framework 4.0, 4.5 lub nowszej wersji. Wiele zmian, które mają wpływ na 4.5 nie dotyczy pliku binarnego skompilowana dla wersji 4.0. To jest specyficzne dla domeny aplikacji i zależy od ustawień zestawu wpisu.
+Problemy w czasie wykonywania są te, które powstają, gdy nowe środowisko uruchomieniowe znajduje się na komputerze są uruchamiane w tych samych plików binarnych, ale inne zachowanie jest widoczny. Jeśli plik binarny został skompilowany dla programu .NET Framework 4.0, będzie ona uruchamiana w trybie zgodności programu .NET Framework 4.0 w wersji 4.5 lub nowszej. Nie wpływa wiele zmian, które wpływają na 4.5 plik binarny skompilowane dla wersji 4.0. To jest specyficzne dla domeny aplikacji i zależy od ustawień zestawu wpisu.
 
 ## <a name="retargeting-changes"></a>Zmiany retargetingu
 
-Problemy przekierowania to wystąpić, gdy zestaw, który był celem 4.0 jest teraz skonfigurowana do docelowego 4.5. Zestaw zdecyduje się teraz do nowych funkcji, a także potencjalnych problemów ze zgodnością ze starego funkcji. Ponownie, to jest zależna zestawu wpisu, więc aplikacji konsoli, która używa zestawu lub witryny sieci Web, który odwołuje się do zestawu.
+Przekierowanie problemy są tymi, które powstają, gdy zestaw, który był celem 4.0 jest równa docelowej 4.5. Teraz zestawu zdecyduje się na nowe funkcje, a także potencjalnych problemów ze zgodnością do starej funkcji. Ponownie, to jest zależna od zestawu wpisu, więc aplikacja konsoli, która używa zestawu lub witryny sieci Web, która odwołuje się do zestawu.
 
 ## <a name="net-compatibility-diagnostics"></a>Diagnostyka zgodności platformy .NET
 
-Diagnostyka zgodności .NET są zasilane Roslyn analizatorów, które pomagają zidentyfikować problemy ze zgodnością aplikacji między wersjami programu .NET Framework. Ta lista zawiera wszystkie analizatory dostępne, mimo że tylko podzestaw będą stosowane do dowolnego migracji. Analizatory określają problemy, które mają zastosowanie w przypadku planowanej migracji i tylko powierzchni te.
+Diagnostyka zgodności platformy .NET są analizatory bazujących na programie Roslyn, które pomagają identyfikować problemy ze zgodnością aplikacji między wersjami programu .NET Framework. Ta lista zawiera wszystkie dostępne, analizatorów, mimo że tylko ich podzestaw będą stosowane do dowolnej dotyczące migracji. Analizatory określi się problemy, które są odpowiednie dla planowanej migracji i ujawni tylko te.
 
 Każde wydanie obejmuje następujące informacje:
 
--   Opis zmiany z poprzedniej wersji.
+-   Opis co zmieniło się od poprzedniej wersji.
 
--   Jak zmiana wpływa na klientów oraz czy wszystkie obejścia są dostępne w celu zachowania zgodności między wersjami.
+-   Wpływ zmiany na klientów i tego, czy wszystkie rozwiązania są dostępne w celu zachowania zgodności między wersjami.
 
--   Ocena jak ważna jest zmiana. Problem ze zgodnością aplikacji są podzielone na następujące kategorie:
+-   Ocena jak ważne jest zmiana. Problem ze zgodnością aplikacji są podzielone na następujące kategorie:
 
     |   |   |
     |---|---|
-    |Główne|Znaczące zmiany, która ma wpływ na wiele aplikacji lub wymaga znacznej modyfikacji kodu.|
-    |Pomocnicza|Zmiana, który wpływa na małej liczby aplikacji lub wymagają drobne zmiany kodu.|
-    |Przypadek krawędzi|Zmiana wpływa na aplikacje w scenariuszach bardzo określone, rzadko.|
-    |Przezroczyste|Zmiana nie wpływa na deweloperem aplikacji lub użytkownika.|
+    |Duży|Istotną zmianę, którą ma wpływ na dużej liczby aplikacji lub wymaga znacznej modyfikacji kodu.|
+    |Mały|Zmiana, to ma wpływ na niewielką liczbę aplikacji lub wymagają drobnych modyfikacji kodu.|
+    |Przypadek krawędzi|Zmiana, który wpływa na aplikacje bardzo specyficzny, nietypowych scenariuszy.|
+    |Przezroczyste|Zmiana nie wpływa na dewelopera aplikacji lub użytkownika.|
 
--   Wersja wskazuje, kiedy zmiany najpierw zostanie wyświetlony w ramach. Niektóre zmiany są wprowadzane w przypadku konkretnej wersji i przywrócone w nowszej wersji; który wskazane jest także.
+-   Wersja wskazuje, kiedy zmiany po raz pierwszy występuje w ramach. Niektóre ze zmian wprowadzonych w określonej wersji i przywrócić w nowszej wersji; wskazane jest także.
 
 -   Typ zmiany:
 
     |   |   |
     |---|---|
-    |Przekierowania|Zmiana wpływa na aplikacje, które są ponownie skompilowana do nowej wersji programu .NET Framework.|
-    |Środowisko uruchomieniowe|Zmiana wpływa na istniejących aplikacji, która jest przeznaczony dla poprzedniej wersji programu .NET Framework, ale działa w nowszej wersji.|
+    |Przekierowanie|Zmiana wpływa na aplikacje, które są ponownie kompilowane pod kątem nowych wersji programu .NET Framework.|
+    |Środowisko uruchomieniowe|Zmiana wpływa na istniejącej aplikacji, który jest przeznaczony dla poprzednich wersji programu .NET Framework, ale działa w nowszej wersji.|
 
--   Dotyczy interfejsy API, jeśli istnieje.
+-   Dotyczy interfejsów API, jeśli istnieje.
 
 -   Identyfikatory dostępne diagnostyki
 
@@ -75,8 +75,8 @@ Aby rozpocząć, wybierz typ zmiany zgodności poniżej:
 * [Zmiany środowiska uruchomieniowego](./runtime/index.md)
 
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-* [Wersje i zależności](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-* [Co nowego](../../../docs/framework/whats-new/index.md)
-* [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Wersje i zależności](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [Co nowego](../../../docs/framework/whats-new/index.md)
+- [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)

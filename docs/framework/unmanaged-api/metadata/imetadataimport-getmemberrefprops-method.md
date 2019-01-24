@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d62b9be1bef16014e2870c15a232bb46d4daf10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ac0d77b1d8d35a7753d3a501f147bd5ac53750c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583733"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps — Metoda
 Pobiera metadane skojarzone z elementem członkowskim odwołuje się określony token.  
@@ -43,35 +43,35 @@ HRESULT GetMemberRefProps (
   
 #### <a name="parameters"></a>Parametry  
  `mr`  
- [in] Token elementu MemberRef do zwrócenia skojarzone metadane.  
+ [in] Token MemberRef do zwrócenia skojarzone metadane.  
   
  `ptk`  
- [out] Token TypeDef lub TypeRef lub elementu TypeSpec, który reprezentuje klasę, która deklaruje element członkowski lub element ModuleRef token, który reprezentuje klasę moduł, który deklaruje element członkowski lub MethodDef, który reprezentuje element członkowski.  
+ [out] Token TypeDef TypeRef i/lub elementu TypeSpec, który reprezentuje klasę, która deklaruje element członkowski lub token element ModuleRef, który reprezentuje klasę modułu, która deklaruje element członkowski lub MethodDef, który reprezentuje element członkowski.  
   
  `szMember`  
  [out] Buforu ciągu dla nazwy elementu członkowskiego.  
   
  `cchMember`  
- [in] Żądany rozmiar w znaki dwubajtowe `szMember`.  
+ [in] Żądany rozmiar w znaków `szMember`.  
   
  `pchMember`  
- [out] Rozmiar zwróconego w znaki dwubajtowe `szMember`.  
+ [out] Rozmiar zwrócony w znaków `szMember`.  
   
  `ppvSibBlob`  
  [out] Wskaźnik do podpisu metadanych binarnych dla elementu członkowskiego.  
   
  `pbSig`  
- [out] Wyrażony w bajtach rozmiar `ppvSigBlob`.  
+ [out] Rozmiar w bajtach `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

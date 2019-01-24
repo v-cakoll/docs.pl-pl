@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 830e3e6e98be2eaaff2af6c0bdac650732833ab7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d4bce84d26e8f498f065c887b583e18d8ea7c786
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651204"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>Konwertowanie pomiędzy DateTime i DateTimeOffset
 
@@ -131,4 +131,4 @@ Należy zwrócić uwagę na to, że ten kod sprawia, że dwa założenia, które
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
+- [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)

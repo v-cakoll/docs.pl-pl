@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39472662cd26799e9adbbbd199129e2c83dd0d93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c9bf5d138be250d1dfeee012368153bac96b067
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672399"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Liczniki wydajności w oprogramowaniu .NET Framework
 Ten temat zawiera listę liczników wydajności można znaleźć w [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
@@ -155,7 +155,7 @@ Ten temat zawiera listę liczników wydajności można znaleźć w [Windows Perf
 |**HttpWebRequest średni okres istnienia**|Średni czas ukończenia dla wszystkich <xref:System.Net.HttpWebRequest> obiektów, które zostało zakończone w ostatniego interwału w ramach <xref:System.AppDomain> od momentu uruchomienia procesu.|  
 |**HttpWebRequest Średni czas oczekiwania**|Średni czas na kolejki dla wszystkich <xref:System.Net.HttpWebRequest> obiektów, które pozostanie kolejki w ostatniego interwału w ramach <xref:System.AppDomain> od momentu uruchomienia procesu.|  
 |**HttpWebRequests utworzone na sekundę**|Liczba <xref:System.Net.HttpWebRequest> obiektów utworzonych w ciągu sekundy <xref:System.AppDomain>.|  
-|**HttpWebRequests/s**|Liczba <xref:System.Net.HttpWebRequest> obiekty, które zostały dodane do kolejki na sekundę w ramach <xref:System.AppDomain>.|  
+|**HttpWebRequests Queued/sec**|Liczba <xref:System.Net.HttpWebRequest> obiekty, które zostały dodane do kolejki na sekundę w ramach <xref:System.AppDomain>.|  
 |**Przerwano HttpWebRequests na sekundę**|Liczba <xref:System.Net.HttpWebRequest> obiekty, których aplikacja o nazwie <xref:System.Net.HttpWebRequest.Abort%2A> metody na sekundę w ramach <xref:System.AppDomain>.|  
 |**HttpWebRequests nie powiodło się na sekundę**|Liczba <xref:System.Net.HttpWebRequest> obiektów, które otrzymały kod stanu nie powiodło się z serwera na sekundę w ramach <xref:System.AppDomain>.|  
   
@@ -205,7 +205,7 @@ Ten temat zawiera listę liczników wydajności można znaleźć w [Windows Perf
   
 -   **HttpWebRequests utworzone na sekundę**  
   
--   **HttpWebRequests/s**  
+-   **HttpWebRequests Queued/sec**  
   
 -   **Przerwano HttpWebRequests na sekundę**  
   
@@ -251,6 +251,6 @@ for (int i = 0; i < Array.Length; i++)
 |**Głębokość przeszukiwania stosu**|Wyświetla Głębokość stosu podczas ostatniego sprawdzanie zabezpieczeń dostępu kodu środowiska uruchomieniowego. Sprawdzanie zabezpieczeń dostępu kodu środowiska uruchomieniowego są wykonywane przez zalet stosu. Ten licznik nie jest średnią; Wyświetla ostatnią odczytaną wartość.|  
 |**Sprawdzanie całkowitego czasu wykonania**|Wyświetla łączną liczbę kod środowiska uruchomieniowego dostępu kontrole zabezpieczeń wykonywane od czasu uruchomienia aplikacji. Kod środowiska uruchomieniowego dostęp zabezpieczeń, które testy są wykonywane, gdy określone uprawnienie wymagane przez obiekt wywołujący. Sprawdzanie środowiska uruchomieniowego jest wykonywane przy każdym wywołaniu przez obiekt wywołujący i sprawdza, czy bieżącego stosu wątku wywołującego. Gdy jest używane z **głębokość zaprezentuje stosu** licznika, ten licznik wskazuje spadek wydajności, występujący do sprawdzania zabezpieczeń.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Liczniki wydajności](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- [Profilowanie środowiska uruchomieniowego](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+## <a name="see-also"></a>Zobacz także
+- [Liczniki wydajności](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [Profilowanie środowiska uruchomieniowego](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

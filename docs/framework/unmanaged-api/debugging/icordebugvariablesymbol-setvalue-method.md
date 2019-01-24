@@ -1,18 +1,18 @@
 ---
-title: ICorDebugVariableSymbol::SetValue — metoda
+title: ICorDebugVariableSymbol::SetValue Method
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ccdb78e522cb037821135c52bf762707f7de76c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 427c885dc1d7cbf535656a7db3f40da28c55a9b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630775"
 ---
-# <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue — metoda
-Przypisuje wartość tablica bajtów do zmiennej.  
+# <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue Method
+Wartość tablicy bajtowej jest przypisywany do zmiennej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,30 +29,30 @@ HRESULT SetValue(
   
 #### <a name="parameters"></a>Parametry  
  `offset`  
- [in] Początkowe przesunięcie w zmiennej, w którym można ustawić wartości. Ten parametr jest używany podczas zapisywania do elementu członkowskiego pola obiektu.  
+ [in] Początkowe przesunięcie w zmiennej, w którym można ustawić wartości. Ten parametr jest używany podczas zapisywania do pola elementu członkowskiego w obiekcie.  
   
  `threadID`  
- [in] Identyfikator wątku wątku, którego kontekst muszą zostać zaktualizowane w celu uwzględnienia nowej wartości.  
+ [in] Identyfikator wątku wątku, którego kontekst muszą zostać zaktualizowane w celu odzwierciedlenia nowej wartości.  
   
  `cbContext`  
  [in] Rozmiar w bajtach kontekst wątku.  
   
  `context`  
- [in] Kontekst wątku używany do zapisu wartości.  
+ [in] Kontekst wątku, używany do zapisywania wartości.  
   
  `cbValue`  
- [in] Wyrażony w bajtach rozmiar `pValue` buforu.  
+ [in] Rozmiar w bajtach `pValue` buforu.  
   
  `pValue`  
- [in] Buforu, który zawiera wartość do ustawienia.  
+ [in] Bufor, który zawiera wartość do ustawienia.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z platformą .NET Native.  
+>  Ta metoda jest tylko dostępne z architekturą .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -60,6 +60,6 @@ HRESULT SetValue(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugVariableSymbol, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugVariableSymbol, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

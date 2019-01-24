@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcfb584fc2380a7ae1567d3d4d6203b537676220
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca2d7fe73fc749296f76e18ecce75b7fdd0795d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429702"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585594"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty — Metoda
-Ustawia wartości właściwości odwołuje się określony identyfikator właściwości.  
+Ustawia wartość właściwości odwołuje się określony identyfikator właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,20 +39,20 @@ HRESULT SetProperty (
   
 #### <a name="parameters"></a>Parametry  
  `PropertyId`  
- [in] Unikatowy identyfikator, którego wartość zostanie określona właściwość.  
+ [in] Unikatowy identyfikator właściwości, którego wartość zostanie ustawiona.  
   
  `pvProperty`  
- [in] Wartość, do którego należy ustawić właściwość odwołuje się `PropertyId`.  
+ [in] Wartość, do którego można ustawić właściwości odwołuje się `PropertyId`.  
   
  `cbProperty`  
  [in] Rozmiar w bajtach z `pvProperty`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Fusion.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

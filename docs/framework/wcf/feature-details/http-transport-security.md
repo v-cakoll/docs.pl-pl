@@ -2,12 +2,12 @@
 title: Zabezpieczenia transportu HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 043154095d4600bd824457750effe9ea5494dcf5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bda749366b452a41a925fa36c90b3a2caa6bca32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201533"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603000"
 ---
 # <a name="http-transport-security"></a>Zabezpieczenia transportu HTTP
 Podczas korzystania z protokołu HTTP jako transportu zabezpieczeń jest dostarczana przez implementację protokołu Secure Sockets Layer (SSL). Protokół SSL jest powszechnie używanych w Internecie uwierzytelniania usługi do klienta, a następnie, aby zapewnić poufność (szyfrowanie) do kanału. W tym temacie wyjaśniono, jak działa protokół SSL oraz jego implementacji w Windows Communication Foundation (WCF).  
@@ -15,7 +15,7 @@ Podczas korzystania z protokołu HTTP jako transportu zabezpieczeń jest dostarc
 ## <a name="basic-ssl"></a>Podstawowe protokołu SSL  
  Jak działa protokół SSL jest najlepsze wyjaśnione przez typowy scenariusz, w tym przypadku banku witryny sieci Web. Witryna pozwala klientowi logują się przy użyciu nazwy użytkownika i hasła. Po uwierzytelniony, użytkownik może wykonywać transakcje, takie jak widok salda konta, opłacić rachunki i przenieść pieniądze z jednego konta do innego.  
   
- Gdy użytkownik najpierw odwiedza witryny, mechanizm SSL rozpoczyna się szereg negocjacji o nazwie *uzgadnianie*, za pomocą klienta użytkownika (w tym przypadku program Internet Explorer). SSL umożliwiają uwierzytelnienie najpierw bank lokacji klienta. Jest to kluczowy etap, ponieważ klienci najpierw trzeba znać komunikują się przy użyciu rzeczywistej lokacji i nie fałszywe, który próbuje nakłonić do wpisując ich nazwy użytkownika i hasła. Protokół SSL jest to uwierzytelnianie za pomocą certyfikatu SSL dostarczone przez zaufany urząd, takich jak VeriSign. Logika przechodzi następująco: VeriSign poręcza tożsamość lokacji bank. Ponieważ program Internet Explorer ufa VeriSign, witryna jest zaufany. Aby skontaktować się z VeriSign, należy więc również, klikając VeriSign logo. Instrukcja autentyczności przedstawiające daty wygaśnięcia i który jest wystawiony dla (lokacja bankowe).  
+ Gdy użytkownik najpierw odwiedza witryny, mechanizm SSL rozpoczyna się szereg negocjacji o nazwie *uzgadnianie*, za pomocą klienta użytkownika (w tym przypadku program Internet Explorer). SSL umożliwiają uwierzytelnienie najpierw bank lokacji klienta. Jest to kluczowy etap, ponieważ klienci najpierw trzeba znać komunikują się przy użyciu rzeczywistej lokacji i nie fałszywe, który próbuje nakłonić do wpisując ich nazwy użytkownika i hasła. Protokół SSL jest to uwierzytelnianie za pomocą certyfikatu SSL dostarczone przez zaufany urząd, takich jak VeriSign. Logika wykracza następująco: VeriSign poręcza tożsamość lokacji bank. Ponieważ program Internet Explorer ufa VeriSign, witryna jest zaufany. Aby skontaktować się z VeriSign, należy więc również, klikając VeriSign logo. Instrukcja autentyczności przedstawiające daty wygaśnięcia i który jest wystawiony dla (lokacja bankowe).  
   
  Aby zainicjować bezpiecznej sesji, klient wysyła wielokrotność "hello" na serwerze z listą algorytmów kryptograficznych, można go użyć do podpisania, generowania skrótów i szyfrowania i odszyfrowywania za pomocą. W odpowiedzi witryny wysyła z powrotem po potwierdzeniu i wybór jednego z zestawów algorytmów. Podczas tej początkowej uzgadniania obie strony wysyłania i odbierania poprawni. A *jednorazowego* to generowany losowo danych, który jest używany w połączeniu z klucza publicznego lokacji, aby utworzyć skrót. A *skrótu* jest nowy numer, który jest tworzony na podstawie dwóch liczb, przy użyciu standardowego algorytmu, takie jak SHA1. (Klient i lokacji również wymiany wiadomości zgody na algorytm wyznaczania wartości skrótu.) Wartość skrótu jest unikatowa i jest używana tylko dla sesji między klientem a lokacją, do szyfrowania i odszyfrowywania wiadomości. Zarówno klient, jak i usługi mają oryginalnego identyfikatora jednorazowego i klucz publiczny certyfikatu, dlatego obie strony może wygenerować ten sam skrót. W związku z tym klient sprawdza poprawność wyznaczania wartości skrótu, wysłanych przez usługę, () przy użyciu uzgodnionych na algorytm obliczania skrótu z danych i (b) porównanie do wyznaczania wartości skrótu, wysłanych przez usługę; Jeśli dwa dopasowania, klient ma gwarancji, że skrót nie zostały naruszone. Klient może następnie używać ten skrót jako klucz szyfrowania wiadomości, która zawiera kolejny nowy skrót. Usługi można odszyfrować wiadomości przy użyciu skrótu i odzyskać ten skrót second-final. Zebranych informacji (identyfikatorów jednorazowych, klucz publiczny i innych danych) jest teraz znane obie strony, a można utworzyć skrótu końcowego (lub klucz główny). Ten klucz końcowego jest szyfrowany i przesyłany przy użyciu skrótu dalej do ostatniego. Klucz główny jest następnie używany do szyfrowania i odszyfrowywania wiadomości w celu zresetowania sesji. Ponieważ zarówno klient, jak i usługi używają tego samego klucza, jest to również nazywane *klucza sesji*.  
   
@@ -38,7 +38,7 @@ Podczas korzystania z protokołu HTTP jako transportu zabezpieczeń jest dostarc
 ### <a name="using-iis-for-transport-security"></a>Korzystanie z usług IIS dla zabezpieczeń transportu  
   
 #### <a name="iis-70"></a>IIS 7.0  
- Aby skonfigurować [!INCLUDE[iisver](../../../../includes/iisver-md.md)] jako bezpiecznego hosta (przy użyciu protokołu SSL), zobacz [IIS 7.0 Beta: Konfigurowanie Secure Sockets Layer w usługach IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
+ Aby skonfigurować [!INCLUDE[iisver](../../../../includes/iisver-md.md)] jako bezpiecznego hosta (przy użyciu protokołu SSL), zobacz [IIS 7.0 Beta: Konfigurowanie protokołu Secure Sockets Layer w usługach IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
   
  Konfigurowanie certyfikatów do użytku z programem [!INCLUDE[iisver](../../../../includes/iisver-md.md)], zobacz [IIS 7.0 Beta: Konfigurowanie certyfikatów serwera w usługach IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
   
@@ -50,8 +50,8 @@ Podczas korzystania z protokołu HTTP jako transportu zabezpieczeń jest dostarc
 ### <a name="using-httpcfg-for-ssl"></a>Za pomocą tak dla protokołu SSL  
  W przypadku tworzenia własnego aplikacji WCF, Pobierz narzędzia HttpCfg.exe dostępne pod adresem [narzędzia obsługi systemu Windows XP Service Pack 2 lokacji](https://go.microsoft.com/fwlink/?LinkId=29002).  
   
- Aby uzyskać więcej informacji o konfigurowaniu portów za pomocą certyfikatu X.509 przy użyciu narzędzia HttpCfg.exe, zobacz [porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Aby uzyskać więcej informacji o konfigurowaniu portów za pomocą certyfikatu X.509 przy użyciu narzędzia HttpCfg.exe, zobacz [jak: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczenia transportu](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczenia transportu](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

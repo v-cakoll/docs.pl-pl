@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4265db62b11453d9fc087928adb0cc0c05c052ca
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 4b1e8cb1cf34bb1c5ade1353351aab953e2b734a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644250"
 ---
 # <a name="ixclrdatamethoddefinition-interface"></a>Interfejs IXCLRDataMethodDefinition
 
@@ -49,7 +49,7 @@ Ten interfejs znajduje się wewnątrz środowiska uruchomieniowego i nie jest do
 **Biblioteka:** Brak  
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

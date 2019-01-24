@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 9f4f83502016fb749c75776dd6c2dc2bd01476e6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c5e6d26fd665fa750b5608002d7abc938075a6ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663040"
 ---
 # <a name="how-to-set-the-security-mode"></a>Instrukcje: Ustawianie trybu zabezpieczeń
 Zabezpieczenia usług Windows Communication Foundation (WCF) ma trzy często używanych trybów zabezpieczeń, które znajdują się na najbardziej wstępnie zdefiniowanych powiązań: transportu, wiadomości i "transport z poświadczeniami komunikatu". Dwa tryby dodatkowe są specyficzne dla dwa powiązania: tryb "tylko transportu credential" znalezione na <xref:System.ServiceModel.BasicHttpBinding>i "Oba" Tryb znalezione na <xref:System.ServiceModel.NetMsmqBinding>. Jednak ten temat koncentruje się na trzech często używanych trybów zabezpieczeń: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, i <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
@@ -111,15 +111,15 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) ma trzy często uż
 ### <a name="using-transportwithmessagecredential"></a>Za pomocą TransportWithMessageCredential  
  Podczas ustawiania trybu zabezpieczeń na `TransportWithMessageCredential`, transportu określa konkretny mechanizm, który zapewnia zabezpieczenia na poziomie transportu. Na przykład protokołu HTTP używa protokołu Secure Sockets Layer (SSL), za pośrednictwem protokołu HTTPS (HTTP). W związku z tym, ustawienie `ClientCredentialType` właściwości dowolnego obiektu zabezpieczeń transportu (takie jak <xref:System.ServiceModel.HttpTransportSecurity>) jest ignorowana.  Innymi słowy, można ustawić tylko `ClientCredentialType` obiektu zabezpieczeń wiadomości (dla `WSHttpBinding` powiązania <xref:System.ServiceModel.NonDualMessageSecurityOverHttp> obiektu).  
   
- Aby uzyskać więcej informacji, zobacz [porady: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: konfigurowanie portu z certyfikatem SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [Instrukcje: korzystanie z zabezpieczeń transportu i poświadczeń komunikatów](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
- [Zabezpieczenia transportu](../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Zabezpieczenia komunikatów](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- [Przegląd zabezpieczeń](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Powiązania dostarczane przez system](../../../docs/framework/wcf/system-provided-bindings.md)  
- [\<Zabezpieczenia >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)  
- [\<Zabezpieczenia >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)  
- [\<Zabezpieczenia >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Konfigurowanie portu z certyfikatem SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Instrukcje: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Zabezpieczenia transportu](../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Zabezpieczenia komunikatów](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [Przegląd zabezpieczeń](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Powiązania dostarczane przez system](../../../docs/framework/wcf/system-provided-bindings.md)
+- [\<Zabezpieczenia >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<Zabezpieczenia >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<Zabezpieczenia >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

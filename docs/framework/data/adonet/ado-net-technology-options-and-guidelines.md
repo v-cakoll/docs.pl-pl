@@ -2,12 +2,12 @@
 title: Opcje technologii ADO.NET i wskazówki
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 7312b2eae0e307fa50c89d37918403ee33412ec3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2550c286485025a394cf3f8afe6c43a0472b2cd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566284"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opcje technologii ADO.NET i wskazówki
 Platforma danych ADO.NET jest strategia wielu wersji, aby zmniejszyć ilość kodowania i konserwacji wymagane dla deweloperów, należy włączyć je aby programować przy użyciu modeli danych koncepcyjnymi encji. Ta platforma obejmuje ADO.NET Entity Framework i powiązanych technologii.  
@@ -39,7 +39,7 @@ Platforma danych ADO.NET jest strategia wielu wersji, aby zmniejszyć ilość ko
 ## <a name="wcf-data-services"></a>Usługi danych WCF  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Służy do wdrażania usług danych w Internecie lub intranecie. Dane mają strukturę jako jednostek i relacji zgodnie ze specyfikacją modelu Entity Data Model. Adresowane przez standardowego protokołu HTTP jest wdrożony w tym modelu danych. Aby uzyskać więcej informacji, zobacz [4.5 usług danych WCF](../../../../docs/framework/data/wcf/index.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Nowości w programie ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Nowości w programie ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

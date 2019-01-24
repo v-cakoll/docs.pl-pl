@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3a8832a0eb173da00715bd0441b7efd337eae932
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 484ca79483fc4a5d8f0d1cf2cd5a961c297249e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654805"
 ---
 # <a name="clrdataaddressrange-structure"></a>Struktura CLRDATA_ADDRESS_RANGE
 
@@ -56,7 +56,7 @@ Ta struktura znajduje się wewnątrz środowiska uruchomieniowego i nie jest dos
 **Biblioteka:** Brak  
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

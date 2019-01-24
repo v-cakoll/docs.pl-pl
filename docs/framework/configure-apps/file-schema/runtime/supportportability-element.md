@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74d6852d14eec234b787ca0e852c333391a7b329
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4f1ceae32445fb350f6fcc98f3a1eec044fa7885
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655507"
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportportability —&gt; — Element
 Określa, czy aplikacja może odwołać się tego samego zestawu w dwóch różnych implementacjach systemu .NET Framework, wyłączając zachowania domyślne, które traktuje zestawy za równorzędne do celów przenoszenia aplikacji.  
@@ -20,7 +20,7 @@ Określa, czy aplikacja może odwołać się tego samego zestawu w dwóch różn
  \<Konfiguracja > Element  
 \<środowisko uruchomieniowe > Element  
 \<assemblybinding — > Element  
-\<supportportability — > Element  
+\<supportPortability> Element  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -78,6 +78,6 @@ Określa, czy aplikacja może odwołać się tego samego zestawu w dwóch różn
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [/ AppConfig (opcje kompilatora C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)  
+## <a name="see-also"></a>Zobacz także
+- [/ AppConfig (opcje kompilatora C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [Przegląd ujednolicenia zestawów programu .NET framework](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

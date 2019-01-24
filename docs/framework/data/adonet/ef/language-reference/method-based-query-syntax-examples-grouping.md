@@ -1,18 +1,18 @@
 ---
-title: 'Przykłady składni zapytania oparte na metodzie: grupowanie'
+title: 'Przykłady składni zapytania oparte na metodzie: Grupowanie'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cb23c25c-1075-4cc3-a8ff-4db72e536c0d
-ms.openlocfilehash: 2fd64cb16224290d76efe327978083b1e834d6cb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7ade24ecee5a69403f3264a62fbdffdcd9decd3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45686196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634483"
 ---
-# <a name="method-based-query-syntax-examples-grouping"></a>Przykłady składni zapytania oparte na metodzie: grupowanie
+# <a name="method-based-query-syntax-examples-grouping"></a>Przykłady składni zapytania oparte na metodzie: Grupowanie
 Przykłady w tym temacie pokazano, jak używać `GroupBy` metody zapytania [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) za pomocą składni zapytania oparte na metodzie. Model sprzedaży AdventureWorks, który jest używany w tych przykładach składa się z kontaktu, adres, produktu, SalesOrderHeader i szczegóły zamówienia sprzedaży tabele w przykładowej bazy danych AdventureWorks.  
   
  Przykłady w tym temacie należy użyć następującego `using` / `Imports` instrukcji:  
@@ -38,5 +38,5 @@ Przykłady w tym temacie pokazano, jak używać `GroupBy` metody zapytania [Adve
  [!code-csharp[DP L2E Examples#GroupByCount_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupbycount_mq)]
  [!code-vb[DP L2E Examples#GroupByCount_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbycount_mq)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Zobacz także
+- [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

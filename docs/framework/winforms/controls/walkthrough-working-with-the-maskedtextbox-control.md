@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: praca z formantem MaskedTextBox'
+title: 'Przewodnik: Praca z formantem MaskedTextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,45 +11,45 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: bcca6c5f5481d351a39a4e71532cc0f006075128
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a81a715578e3cbbe576f1513770ff86f08807fdf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615088"
 ---
-# <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Wskazówki: praca z formantem MaskedTextBox
-Zadania przedstawione w tym przewodniku obejmują:  
+# <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Przewodnik: Praca z formantem MaskedTextBox
+Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Inicjowanie <xref:System.Windows.Forms.MaskedTextBox> formantu  
+-   Inicjowanie <xref:System.Windows.Forms.MaskedTextBox> kontroli  
   
--   Przy użyciu <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> obsługi zdarzeń, aby ostrzec użytkownika, gdy znak jest niezgodna z maską  
+-   Za pomocą <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> program obsługi zdarzeń, aby ostrzec użytkownika, jeśli znak nie jest zgodny z maską  
   
--   Typ do przypisywania <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> właściwości i przy użyciu <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> obsługi zdarzeń, aby ostrzec użytkownika, gdy wartość one próby przekazania nie jest prawidłowa dla typu  
+-   Przypisywanie typu <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> właściwości i za pomocą <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> program obsługi zdarzeń, aby ostrzec użytkownika, gdy wartości są próby przekazania jest nieprawidłowy dla typu  
   
-## <a name="creating-the-project-and-adding-a-control"></a>Tworzenie projektu i dodawanie formantu  
+## <a name="creating-the-project-and-adding-a-control"></a>Tworzenie projektu i dodawanie kontrolki  
   
-#### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>Aby dodać do formularza maskedtextbox — formant  
+#### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>Aby dodać maskedtextbox — formant do formularza  
   
-1.  Otwórz formularz, na którym chcesz umieścić <xref:System.Windows.Forms.MaskedTextBox> formantu.  
+1.  Otwórz formularz, na którym chcesz umieścić <xref:System.Windows.Forms.MaskedTextBox> kontroli.  
   
-2.  Przeciągnij <xref:System.Windows.Forms.MaskedTextBox> kontrolować z **przybornika** do formularza.  
+2.  Przeciągnij <xref:System.Windows.Forms.MaskedTextBox> z kontrolować **przybornika** do formularza.  
   
-3.  Kliknij prawym przyciskiem myszy formantu i wybierz polecenie **właściwości**. W **właściwości** wybierz **maski** właściwości i kliknij przycisk **...**  (wielokropkiem) obok nazwy właściwości.  
+3.  Kliknij prawym przyciskiem myszy formant, a następnie wybierz **właściwości**. W **właściwości** wybierz **maski** właściwości i kliknij przycisk **...**  (wielokropek) przycisk znajdujący się obok nazwy właściwości.  
   
-4.  W **maska wprowadzania** okno dialogowe, wybierz opcję **Data krótka** maski, a następnie kliknij przycisk **OK**.  
+4.  W **maska wprowadzania** okno dialogowe, wybierz opcję **daty krótkiej** maski, a następnie kliknij przycisk **OK**.  
   
-5.  W **właściwości** zestaw okna <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> właściwości `true`. Ta właściwość powoduje, że krótkich dźwiękowego dźwięk za każdym razem, gdy użytkownik próbuje znak, który narusza definicję maski wprowadzania.  
+5.  W **właściwości** zestaw okna <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> właściwość `true`. Tej właściwości powoduje, że sygnał dźwiękowy krótki dźwięk za każdym razem, gdy użytkownik próbuje Wprowadź znak, który narusza definicję maski.  
   
- Podsumowanie znaki, które obsługuje właściwość maska, zobacz sekcję uwag <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> właściwości.  
+ Podsumowanie znaków, które obsługuje właściwość maska, zobacz sekcję Uwagi <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> właściwości.  
   
-## <a name="alert-the-user-to-input-errors"></a>Błędy wejściowych użytkownika  
+## <a name="alert-the-user-to-input-errors"></a>Ostrzegać użytkowników o danych wejściowych błędy  
   
-#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>Dodaj etykieta dymka dla odrzucone maska wprowadzania  
+#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>Dodaj dymku dla odrzuconych maska wprowadzania  
   
 1.  Wróć do **przybornika** i Dodaj <xref:System.Windows.Forms.ToolTip> do formularza.  
   
-2.  Tworzenie procedury obsługi zdarzeń dla <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> zdarzeń, który wywołuje <xref:System.Windows.Forms.ToolTip> gdy wystąpi błąd danych wejściowych. Etykieta dymka pozostanie widoczny przez pięć sekund, lub kliknięciu przez użytkownika.  
+2.  Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> zdarzeń, która wywołuje <xref:System.Windows.Forms.ToolTip> gdy wystąpi błąd danych wejściowych. Dymku pozostają widoczne na pięć sekund, lub użytkownik go kliknie.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -78,11 +78,11 @@ Zadania przedstawione w tym przewodniku obejmują:
     End Sub  
     ```  
   
-## <a name="alert-the-user-to-a-type-that-is-not-valid"></a>Użytkownika typu, który jest nieprawidłowy  
+## <a name="alert-the-user-to-a-type-that-is-not-valid"></a>Ostrzegać użytkowników do typu, który jest nieprawidłowy  
   
-#### <a name="add-a-balloon-tip-for-invalid-data-types"></a>Dodaj etykieta dymka dla typów nieprawidłowe dane  
+#### <a name="add-a-balloon-tip-for-invalid-data-types"></a>Dodaj poradę dotyczącą dymku dla typów nieprawidłowe dane  
   
-1.  Do formularza <xref:System.Windows.Forms.Form.Load> program obsługi zdarzeń, Przypisz <xref:System.Type> reprezentujący obiekt <xref:System.DateTime> typ <xref:System.Windows.Forms.MaskedTextBox> formantu <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> właściwości:  
+1.  Do formularza <xref:System.Windows.Forms.Form.Load> procedura obsługi zdarzeń, Przypisz <xref:System.Type> obiekt reprezentujący <xref:System.DateTime> typ <xref:System.Windows.Forms.MaskedTextBox> kontrolki <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> właściwości:  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -100,7 +100,7 @@ Zadania przedstawione w tym przewodniku obejmują:
     End Sub  
     ```  
   
-2.  Dodaj program obsługi zdarzeń dla <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> zdarzeń:  
+2.  Dodawanie obsługi zdarzeń dla <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> zdarzeń:  
   
     ```csharp  
     public void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)  
@@ -124,6 +124,6 @@ Zadania przedstawione w tym przewodniku obejmują:
     End Sub  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.MaskedTextBox>  
- [MaskedTextBox, kontrolka](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.MaskedTextBox>
+- [MaskedTextBox, kontrolka](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)

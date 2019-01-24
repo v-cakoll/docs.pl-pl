@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1dccb2a3a3f3aaf0f209c8f3543056ab81c562dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f51ce9a4b45bd674f53cf7b4c4d6cedb8d46858d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586426"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString — Metoda
-Emituje określonego ciągu w bazie kodu.  
+Emituje określonego ciągu w kodzie podstawowym.  
   
  Ta metoda jest przestarzała i nie powinna być używana.  
   
@@ -40,19 +40,19 @@ HRESULT EmitString (
   
 #### <a name="parameters"></a>Parametry  
  `lpString`  
- [in] Ciąg do emisji.  
+ [in] Ciąg do emitowania.  
   
  `RVA`  
  [out] Wirtualny adres względny emitowany ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

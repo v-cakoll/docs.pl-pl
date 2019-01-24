@@ -1,16 +1,16 @@
 ---
-title: 'Porady: modyfikowanie zawartości ciągu — Przewodnik po języku C#'
+title: 'Instrukcje: Modyfikowanie zawartości ciągu - C# przewodnik'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 349269f8158f7d4db5e2058791087a258f504460
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664026"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>Porady: modyfikowanie zawartości ciągu w języku C\#
+# <a name="how-to-modify-string-contents-in-c"></a>Instrukcje: Modyfikowanie zawartości ciągu w języku C\#
 
 W tym artykule przedstawiono kilka technik w celu wygenerowania `string` , modyfikując istniejące `string`. Wszystkie techniki przedstawione w artykule zwracają wynik modyfikacji jako nową `string` obiektu. Aby zademonstrować to wyraźnie, wszystkie przykłady przechowuje wynik w nowej zmiennej. Następnie można sprawdzić zarówno oryginał `string` i `string` wynikające z modyfikacji, po uruchomieniu każdy przykład.
 
@@ -73,5 +73,5 @@ Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHu
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyrażeń regularnych programu .NET framework](../../standard/base-types/regular-expressions.md)  
-- [Język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [Wyrażeń regularnych programu .NET framework](../../standard/base-types/regular-expressions.md)
+- [Język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md)

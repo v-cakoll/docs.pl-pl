@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 490a462859a916d21c816ff96c47d2deeb9312ee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e32bf158b91c23c32028eb6877bd0089a9019b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655052"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Różne typy danych (Visual Basic)
 Visual Basic dostarcza kilka typów danych, które nie są opracowane głównie pod kątem liczby lub znaki. Zamiast tego mają do czynienia wyspecjalizowane danych takich jak tak/nie wartości, wartości daty/godziny i adresy obiektów.  
@@ -30,10 +30,10 @@ Visual Basic dostarcza kilka typów danych, które nie są opracowane głównie 
   
  Zaletą `Object` typ danych jest, że służy do przechowywania danych dowolnego typu danych. Wadą jest to pociągnąć za sobą dodatkowych operacji, które zająć więcej czasu wykonywania i aplikacja działać wolniej. Jeśli używasz `Object` zmiennej dla typów wartości, wiąże się z *pakowania* i *Rozpakowywanie*. Jeśli używasz dla typów odwołań wiąże się z *późnym wiązaniu*.  
   
-## <a name="see-also"></a>Zobacz też  
- [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Typy danych liczbowych](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- [Znakowe typy danych](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Wczesne i późne powiązania](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Typy danych liczbowych](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)
+- [Znakowe typy danych](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
+- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Wczesne i późne powiązania](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)

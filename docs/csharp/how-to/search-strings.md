@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 030d71f95947e98d9f269095908b0431c2192430
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623394"
 ---
 # <a name="how-to-search-strings"></a>Porady: wyszukiwanie ciągów
 
@@ -74,12 +74,12 @@ Ten wzorzec wyszukiwania pojedynczego pasuje wiele prawidłowe ciągi. Wyrażeni
 
 Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Można również pobrać przykłady [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../programming-guide/index.md)  
-- [Ciągi](../programming-guide/strings/index.md)  
+- [Przewodnik programowania w języku C#](../programming-guide/index.md)
+- [Ciągi](../programming-guide/strings/index.md)
 - [LINQ i ciągi](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [Wyrażeń regularnych programu .NET framework](../../standard/base-types/regular-expressions.md)
 - [Język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md)
-- [Najlepsze rozwiązania dotyczące używania ciągów w programie .NET](../../standard/base-types/best-practices-strings.md)  
+- [Najlepsze rozwiązania dotyczące używania ciągów w programie .NET](../../standard/base-types/best-practices-strings.md)

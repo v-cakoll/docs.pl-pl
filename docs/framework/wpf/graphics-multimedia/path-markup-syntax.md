@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671268"
 ---
 # <a name="path-markup-syntax"></a>Składni znacznikowania ścieżki
 Ścieżki są omówione w [kształty i podstawowe Rysowanie w WPF — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) i [Przegląd Geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), jednak w tym temacie opisano szczegółowo zaawansowanych i złożonych mini języka można użyć do określenia ścieżki Więcej bardziej kompaktowy przy użyciu geometrii [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "45591935"
 ### <a name="a-note-about-white-space"></a>Uwaga dotycząca biały znak  
  Celu skrócenia programu pojedyncza spacja jest wyświetlany w kolejnych sekcjach składni, ale wiele spacji także są dopuszczalne, wszędzie tam, gdzie jest wyświetlana pojedyncza spacja.  
   
- Dwie liczby faktycznie nie muszą być rozdzielone przecinkami lub spacjami, ale to tylko możliwe, gdy wynikowy ciąg jest jednoznaczna. Na przykład `2..3` jest faktycznie dwóch liczb: "2". A ". 3". Podobnie `2-3` "2" i "-3". Miejsca do magazynowania nie jest wymagane przed lub po poleceniach, albo.  
+ Dwie liczby faktycznie nie muszą być rozdzielone przecinkami lub spacjami, ale to tylko możliwe, gdy wynikowy ciąg jest jednoznaczna. Na przykład `2..3` jest faktycznie dwie liczby: "2." A ". 3". Podobnie `2-3` "2" i "-3". Miejsca do magazynowania nie jest wymagane przed lub po poleceniach, albo.  
   
 ### <a name="syntax"></a>Składnia  
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Składni dla atrybutu <xref:System.Windows.Media.StreamGeometry> składa się z opcjonalną <xref:System.Windows.Media.FillRule> wartość i co najmniej jednym rysunek opisy.  
@@ -88,7 +88,7 @@ ms.locfileid: "45591935"
   
 |Składnia|  
 |------------|  
-|`L` *punkt końcowy*<br /><br /> - lub -<br /><br /> `l` *punkt końcowy*|  
+|`L` *endPoint*<br /><br /> - lub -<br /><br /> `l` *endPoint*|  
   
 |Termin|Opis|  
 |----------|-----------------|  
@@ -224,11 +224,11 @@ Wielkie litery `V` wskazuje, że `y` jest wartością bezwzględną; małymi lit
   
  Można także użyć notacji wykładniczej. Na przykład `+1.e17` jest prawidłową wartością.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.StreamGeometry>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.PathFigureCollection>  
- [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.StreamGeometry>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.PathFigureCollection>
+- [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

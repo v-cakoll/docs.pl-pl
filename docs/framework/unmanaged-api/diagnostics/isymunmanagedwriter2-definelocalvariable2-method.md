@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53f02499bbc64f1502951ff9fbf16a848e77f0ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0ce6a207f2a7862b0b49f1e68cda9528aa03ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667534"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 — Metoda
-Definiuje pojedynczą zmienną w bieżącym zakresie leksykalne. Tę metodę można wywoływać wielokrotnie dla zmiennej o tej samej nazwie, który ma wiele domach w całym zakresie. W tym przypadku jednak wartości `startOffset` i `endOffset` parametrów nie może nakładać się na.  
+Definiuje pojedynczą zmienną w bieżącym zakresie leksykalnym. Tę metodę można wywoływać wielokrotnie dla zmiennej o tej samej nazwie, który ma wiele domów w całym zakresie. W takim jednak wartości `startOffset` i `endOffset` parametry nie mogą się nakładać.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,10 +44,10 @@ HRESULT DefineLocalVariable2(
   
 #### <a name="parameters"></a>Parametry  
  `name`  
- [in] Nazwa zmiennej lokalnej.  
+ [in] Lokalna nazwa zmiennej.  
   
  `attributes`  
- [in] Atrybuty zmiennej lokalnej.  
+ [in] Lokalne atrybuty zmiennej.  
   
  `sigToken`  
  [in] Token metadanych podpisu.  
@@ -56,26 +56,26 @@ HRESULT DefineLocalVariable2(
  [in] Typ adresu.  
   
  `addr1`  
- [in] Pierwszy adres Specyfikacja parametru.  
+ [in] Pierwszy adres specyfikację parametru.  
   
  `addr2`  
- [in] Drugi adres Specyfikacja parametru.  
+ [in] Drugi adres specyfikację parametru.  
   
  `addr3`  
- [in] Trzeci adres Specyfikacja parametru.  
+ [in] Trzeci adres specyfikację parametru.  
   
  `startOffset`  
- [in] Przesunięcie początku zmiennej. Ten parametr jest opcjonalny. Jeśli jest 0, ten parametr jest ignorowany i zmienna jest zdefiniowana w całym całego zakresu. Jeśli wartość niezerową, zmiennej spełnia przesunięcia bieżącego zakresu.  
+ [in] Przesunięcie początku dla zmiennej. Ten parametr jest opcjonalny. Jeśli jest 0, ten parametr jest ignorowany, a zmienna jest zdefiniowana w całym cały zakres. Jeśli jest wartość różną od zera, zmienna mieści się w przesunięcia bieżącego zakresu.  
   
  `endOffset`  
- [in] Przesunięcie zakończenia dla zmiennej. Ten parametr jest opcjonalny. Jeśli jest 0, ten parametr jest ignorowany i zmienna jest zdefiniowana w całym całego zakresu. Jeśli wartość niezerową, zmiennej spełnia przesunięcia bieżącego zakresu.  
+ [in] Przesunięcie zakończenia dla zmiennej. Ten parametr jest opcjonalny. Jeśli jest 0, ten parametr jest ignorowany, a zmienna jest zdefiniowana w całym cały zakres. Jeśli jest wartość różną od zera, zmienna mieści się w przesunięcia bieżącego zakresu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** CorSym.idl  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedWriter2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- [DefineLocalVariable, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedWriter2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [DefineLocalVariable, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)

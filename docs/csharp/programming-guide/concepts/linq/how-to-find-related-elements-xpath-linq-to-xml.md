@@ -1,15 +1,15 @@
 ---
-title: 'Porady: wyszukiwanie elementów powiązanych (XPath-LINQ to XML) (C#)'
+title: 'Instrukcje: Wyszukiwanie elementów powiązanych (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 57cbba6e52feec05ed6381899017f1ce5d1e8ec1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47609f9bf047000585c56387acf648bcfa6ee5b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518629"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617411"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Porady: wyszukiwanie elementów powiązanych (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Instrukcje: Wyszukiwanie elementów powiązanych (XPath-LINQ to XML) (C#)
 W tym temacie pokazano, jak można pobrać elementu, wybierając na atrybut, który odwołuje się do wartości innego elementu.  
   
  Wyrażenie XPath jest:  
@@ -21,7 +21,7 @@ W tym temacie pokazano, jak można pobrać elementu, wybierając na atrybut, kt�
   
  Należy pamiętać, że indeksowanie w liście .net "zero" na podstawie. Indeksowanie w kolekcji węzłów w predykatu języka XPath jest "jeden" na podstawie. W tym przykładzie odzwierciedla tę różnicę.  
   
- W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -84,6 +84,6 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

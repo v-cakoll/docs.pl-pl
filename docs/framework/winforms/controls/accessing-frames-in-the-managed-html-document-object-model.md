@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: b1a858e88ff27de19e2ebbd69c14060813873c13
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d90c2d7f8be2448e1d4f10410b27bc5132cdb16a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653830"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Uzyskiwanie dostępu do ramek w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Niektóre dokumenty HTML składają się z *ramek*, lub windows, które mogą pomieścić własnych unikatowych dokumentów HTML. Przy użyciu klatek można łatwo tworzyć strony HTML, w których statyczne, takie jak pasek nawigacyjny pozostały jedną lub kilka części strony, podczas gdy inne ramki stale zmienić jego zawartość.  
@@ -40,6 +40,6 @@ Niektóre dokumenty HTML składają się z *ramek*, lub windows, które mogą po
   
  Aby uzyskać więcej informacji na temat skryptów między witrynami, zobacz [dotyczące wykonywania skryptów i zabezpieczeń](https://msdn.microsoft.com/library/ms533028.aspx).  
   
-## <a name="see-also"></a>Zobacz też  
- [Element ramki &#124; klatki, obiekt](https://msdn.microsoft.com/library/ms535250.aspx)  
- [Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a>Zobacz także
+- [FRAME Element &#124; frame Object](https://msdn.microsoft.com/library/ms535250.aspx)
+- [Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

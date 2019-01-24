@@ -1,5 +1,5 @@
 ---
-title: 'Porady: konwertowanie ciągu do tablicy znaków w Visual Basic'
+title: 'Instrukcje: Konwertowanie ciągu na tablicę znaków w języku Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - character arrays [Visual Basic], converting strings
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - strings [Visual Basic], converting to arrays
 - string conversion [Visual Basic], arrays
 ms.assetid: 1b54b686-ab29-413b-adce-6bd5422376eb
-ms.openlocfilehash: cc12b70cddcb93a72b4421a8ddd93542ef84f55b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9d68e3d90c52d6a4312ccb7c0c9610968e7a4b55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603758"
 ---
-# <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Porady: konwertowanie ciągu do tablicy znaków w Visual Basic
+# <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Instrukcje: Konwertowanie ciągu na tablicę znaków w języku Visual Basic
 Czasami przydatne jest zapewnienie dane dotyczące znaków w ciągu i położenie tych znaków w ciągu, na przykład gdy są analizowania parametrów. W tym przykładzie pokazano, jak uzyskać tablicę znaków w ciągu, wywołując ciągu <xref:System.String.ToCharArray%2A> metody.  
   
 ## <a name="example"></a>Przykład  
@@ -28,9 +28,9 @@ Czasami przydatne jest zapewnienie dane dotyczące znaków w ciągu i położeni
   
  [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_2.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.String.Chars%2A>  
- <xref:System.Globalization.StringInfo?displayProperty=nameWithType>  
- [Instrukcje: Dostęp do znaków w ciągach](../../../../visual-basic/programming-guide/language-features/strings/how-to-access-characters-in-strings.md)  
- [Konwertowanie pomiędzy ciągami a innymi typami danych w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
- [Ciągi](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.String.Chars%2A>
+- <xref:System.Globalization.StringInfo?displayProperty=nameWithType>
+- [Instrukcje: Dostęp do znaków w ciągach](../../../../visual-basic/programming-guide/language-features/strings/how-to-access-characters-in-strings.md)
+- [Konwertowanie pomiędzy ciągami a innymi typami danych w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
+- [Ciągi](../../../../visual-basic/programming-guide/language-features/strings/index.md)

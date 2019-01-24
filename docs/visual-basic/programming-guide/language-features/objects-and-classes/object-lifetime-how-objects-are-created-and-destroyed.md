@@ -1,5 +1,5 @@
 ---
-title: 'Okres istnienia obiektów: w jaki sposób obiekty są tworzone i niszczone (Visual Basic)'
+title: 'Okres istnienia obiektów: Jak obiekty są tworzone i niszczone (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Constructor
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 319d606bcd19397932c05f1d5b808f2f5d8923ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610334"
 ---
-# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektów: w jaki sposób obiekty są tworzone i niszczone (Visual Basic)
+# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektów: Jak obiekty są tworzone i niszczone (Visual Basic)
 Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczowe. Inicjowanie zadania często muszą być wykonywane na nowe obiekty zanim zostaną użyte. Typowe zadania inicjowania obejmują otwierania plików, łączenie z bazami danych i odczytywania wartości kluczy rejestru. Visual Basic kontroluje inicjowania nowych obiektów za pomocą procedur o nazwie *konstruktory* (specjalne metody, które umożliwiają kontrolę nad inicjowania).  
   
  Obiekt zwolnionego zakres jest on zwalniany przez środowisko uruchomieniowe języka wspólnego (CLR). Visual Basic kontroluje zwolnienia zasobów systemowych za pomocą procedur o nazwie *destruktory*. Razem konstruktory i destruktory obsługuje tworzenie bibliotek klas niezawodne i przewidywalne.  
@@ -146,9 +146,9 @@ End Sub
   
  Inna różnica między systemami wyrzucania elementów bezużytecznych obejmuje użycie `Nothing`. Z zalet zliczanie w Visual Basic 6.0 i starszych wersjach, programiści czasami przypisane `Nothing` do obiektu zmiennych, aby zwolnić odwołań tych zmiennych przechowywanych. Jeśli zmienna przechowywane ostatnie odwołanie do obiektu, obiekt zasoby zostały wydane natychmiast. W nowszych wersjach programu Visual Basic gdy można wykluczyć sytuacji, w których ta procedura jest bardzo przydatna wykonywanie jej nigdy nie powoduje, że przywoływanego obiektu zwolnić jego zasoby, od razu. Aby zwolnić zasoby natychmiast, użyj obiektu <xref:System.IDisposable.Dispose%2A> metody, jeśli jest dostępny. Tylko wtedy należy ustawić zmienną `Nothing` jest, gdy czas względem czasu, moduł odśmiecania pamięci ma wykryć obiekty oddzielone cały okres ich istnienia.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IDisposable.Dispose%2A>  
- [Inicjowanie i kończenie działania składników](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
- [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Oczyszczanie zasobów niezarządzanych](../../../../standard/garbage-collection/unmanaged.md)  
- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IDisposable.Dispose%2A>
+- [Inicjowanie i kończenie działania składników](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)
+- [New, operator](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Oczyszczanie zasobów niezarządzanych](../../../../standard/garbage-collection/unmanaged.md)
+- [Nothing](../../../../visual-basic/language-reference/nothing.md)

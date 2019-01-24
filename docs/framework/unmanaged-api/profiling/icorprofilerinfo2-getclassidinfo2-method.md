@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2af0eacbff8220be7f2286f7f345f14126972261
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6962824551c108907929e19d75fc4a31f7001f03
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727160"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 — Metoda
-Pobiera moduł nadrzędny i metadanych token dla Otwórz ogólną definicję określonej klasy `ClassID` jego klasy nadrzędnej i `ClassID` dla każdego typu argumentu, jeśli jest obecny, klasy.  
+Pobiera moduł nadrzędny i metadane token otwarte ogólne definicji określonej klasy `ClassID` klasy nadrzędnej, a `ClassID` dla każdego typu argumentu, jeśli jest obecny, klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,13 +42,13 @@ HRESULT GetClassIDInfo2(
   
 #### <a name="parameters"></a>Parametry  
  `classId`  
- [in] Identyfikator klasy, dla których zostaną pobrane informacje.  
+ [in] Identyfikator klasy, dla którego będą pobierane informacje.  
   
  `pModuleId`  
- [out] Wskaźnik do Identyfikatora modułu nadrzędnego dla Otwórz ogólną definicję określonej klasy.  
+ [out] Wskaźnik do Identyfikatora modułu nadrzędnego otwarte ogólne definicji określonej klasy.  
   
  `pTypeDefToken`  
- [out] Wskaźnik do token metadanych dla Otwórz ogólną definicję określonej klasy.  
+ [out] Wskaźnik do tokenu metadanych otwarte ogólne definicji określonej klasy.  
   
  `pParentClassId`  
  [out] Wskaźnik do Identyfikatora klasy nadrzędnej.  
@@ -56,22 +57,22 @@ HRESULT GetClassIDInfo2(
  [in] Rozmiar `typeArgs` tablicy.  
   
  `pcNumTypeArgs`  
- [out] Wskaźnik do całkowitej liczby dostępnych elementów.  
+ [out] Wskaźnik na całkowitą liczbę dostępnych elementów.  
   
  `typeArgs`  
- [out] Tablica `ClassID` wartości, z których każdy reprezentuje identyfikator argumentu typu klasy. Gdy metoda zwróci wartość, `typeArgs` będzie zawierał niektórych lub wszystkich dostępnych `ClassID` wartości.  
+ [out] Tablica `ClassID` wartości, z których każdy reprezentuje identyfikator argument typu klasy. Po powrocie z metody `typeArgs` będzie zawierać niektórych lub wszystkich dostępnych `ClassID` wartości.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetClassIDInfo2` Metoda jest podobna do [ICorProfilerInfo::GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) metody, ale `GetClassIDInfo2` uzyskuje dodatkowe informacje na temat typu ogólnego.  
+ `GetClassIDInfo2` Metoda jest podobna do [icorprofilerinfo::getclassidinfo —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) metody, ale `GetClassIDInfo2` uzyskuje dodatkowe informacje na temat typu ogólnego.  
   
- Kod profiler może wywołać [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) uzyskanie [metadanych](../../../../docs/framework/unmanaged-api/metadata/index.md) interfejs dla danego modułu. Token metadanych, która jest zwracana do lokalizacji odwołuje się `pTypeDefToken` następnie może służyć do uzyskania dostępu do klasy metadanych.  
+ Program profilujący kodu może wywołać [icorprofilerinfo::getmodulemetadata —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) uzyskać [metadanych](../../../../docs/framework/unmanaged-api/metadata/index.md) interfejs dla danego modułu. Token metadanych, które są zwracane do lokalizacji, odwołuje się `pTypeDefToken` następnie może służyć do uzyskania dostępu do klasy metadanych.  
   
- Po `GetClassIDInfo2` zwróci wartość, należy sprawdzić, czy `typeArgs` bufor był wystarczająco duży, aby pomieścić wszystkie `ClassID` wartości. W tym celu należy porównać wartości który `pcNumTypeArgs` wskazuje wartość `cNumTypeArgs` parametru. Jeśli `pcNumTypeArgs` wskazuje wartość, która jest większa niż `cNumTypeArgs`, Przydziel większy `typeArgs` buforu, zaktualizuj `cNumTypeArgs` z nowej, większy rozmiar i wywołanie `GetClassIDInfo2` ponownie.  
+ Po `GetClassIDInfo2` zwróci wartość, należy sprawdzić, czy `typeArgs` bufor jest wystarczająco duży, aby zawierała wszystkich `ClassID` wartości. Aby to zrobić, porównaj wartość która `pcNumTypeArgs` wskazuje z wartością `cNumTypeArgs` parametru. Jeśli `pcNumTypeArgs` wskazuje wartość, która jest większa niż `cNumTypeArgs`, Przydziel większego `typeArgs` buforu, zaktualizuj `cNumTypeArgs` przy użyciu nowych, większy rozmiar i Wywołaj `GetClassIDInfo2` ponownie.  
   
- Alternatywnie można wywołać `GetClassIDInfo2` o zerowej długości `typeArgs` buforu w celu uzyskania rozmiar buforu poprawne. Następnie można ustawić `typeArgs` rozmiar wartość zwracana w buforu `pcNumTypeArgs` i Wywołaj `GetClassIDInfo2` ponownie.  
+ Alternatywnie, można wywołać `GetClassIDInfo2` o zerowej długości `typeArgs` buforu w celu uzyskania rozmiar buforu poprawne. Następnie można ustawić `typeArgs` rozmiar do wartości zwracanej w buforu `pcNumTypeArgs` i wywołać `GetClassIDInfo2` ponownie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -79,8 +80,8 @@ HRESULT GetClassIDInfo2(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

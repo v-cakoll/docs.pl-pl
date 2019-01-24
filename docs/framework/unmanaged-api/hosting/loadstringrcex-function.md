@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c942b9a94c83f5a3316cf3ae3ccbbad2b0ec69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ec8e5dfc92a818bfc23c28f3058086c3bd1a8ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597947"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx — Funkcja
-Tłumaczy wartość HRESULT odpowiedni komunikat o błędzie dla określonej kultury.  
+Tłumaczy wartość HRESULT do odpowiedniego komunikatu o błędzie dla określonej kultury.  
   
  Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -43,10 +43,10 @@ HRESULT LoadStringRCEx (
   
 #### <a name="parameters"></a>Parametry  
  `lcid`  
- [in] Identyfikator kultury. Podaj wartość -1 dla `lcid` do użycia domyślną kulturę.  
+ [in] Identyfikator kultury. Przekaż wartość -1 `lcid` używać domyślnej kultury.  
   
  `iResourceID`  
- [in] HRESULT.  
+ [in] Wartość HRESULT.  
   
  `szBuffer`  
  [out] Bufor, który zawiera komunikat o błędzie po pomyślnym zakończeniu.  
@@ -58,10 +58,10 @@ HRESULT LoadStringRCEx (
  [in] Ignorowane.  
   
  `pcwchUsed`  
- [out] Wskaźnik do długości komunikatu o błędzie.  
+ [out] Wskaźnik do długości komunikat o błędzie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowe kody błędów COM, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca standardowe kody błędu modelu COM, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
@@ -72,15 +72,15 @@ HRESULT LoadStringRCEx (
  Jeśli metoda nie została zakończona pomyślnie, `szBuffer` zawiera pusty ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>  
- [LoadStringRC, funkcja](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
+- [LoadStringRC, funkcja](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5112c3c8d5fef6efada4bffdfa575716503515e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2520c37b1969e5e98f02772857f96195b211b549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674166"
 ---
 # <a name="corelementtype-enumeration1"></a>CorElementType, wyliczenie1
 Określa środowisko uruchomieniowe języka wspólnego <xref:System.Type>, modyfikatora typu lub informacje o typie w podpisie typ metadanych.  
@@ -133,17 +133,17 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY < `CorElementType` wartość > \<ranga > \<count1 > \<bound1 >... \<countN > \<boundN >|  
 |`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST < `mdTypeDef` token metadanych > \<argument liczby > \<arg1 >... \<argN >|  
 |`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<pełny podpis dla funkcji, łącznie z konwencji wywoływania >|  
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY < `CorElementType` wartość >|  
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<numer >|  
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY <a `CorElementType` value>|  
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|  
 |`ELEMENT_TYPE_CMOD_REQD`|Element ELEMENT_TYPE_ < `mdTypeRef` lub `mdTypeDef` token metadanych >|  
 |`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT < `mdTypeRef` lub `mdTypeDef` token metadanych >|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** sekcję CorHdr.h  
+ **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

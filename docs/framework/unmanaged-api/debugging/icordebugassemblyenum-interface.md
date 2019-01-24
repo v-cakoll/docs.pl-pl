@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAssemblyEnum Interface1
+title: ICorDebugAssemblyEnum, interfejs1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssemblyEnum
@@ -16,29 +16,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b8fa9304296765fcdb6ebe42db5523e5ff387d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97a5cad5902324a4999648553ab92ee1df11dde5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686730"
 ---
-# <a name="icordebugassemblyenum-interface1"></a>ICorDebugAssemblyEnum Interface1
-Implementuje metody ICorDebugEnum i wylicza ICorDebugAssembly tablic.  
+# <a name="icordebugassemblyenum-interface1"></a>ICorDebugAssemblyEnum, interfejs1
+Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugAssembly.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Pobiera określoną liczbę `ICorDebugAssembly` wystąpień w wyliczeniu, zaczynając od bieżącego położenia.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Pobiera określoną liczbę `ICorDebugAssembly` wystąpień w wyliczeniu, począwszy od bieżącej pozycji.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -46,5 +46,5 @@ Implementuje metody ICorDebugEnum i wylicza ICorDebugAssembly tablic.
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

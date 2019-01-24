@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 661aeff56955f729a5728f00f563bb2bef971a9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 579f925498f6ded83c5e90137d04020e610599b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716716"
 ---
 # <a name="imaptoken-interface"></a>IMapToken — Interfejs
 Zapewnia możliwości mapowania między zestawami.  
   
 > [!NOTE]
->  `IMapToken` Interfejs musi być implementowana przez klienta.  
+>  `IMapToken` Interfejsu muszą być zaimplementowane przez klienta.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Map, metoda](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Mapuje relacje między dwa zestawy za pomocą podpisów metadanych.|  
+|[Map, metoda](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Mapuje relacje między dwa zestawy za pomocą sygnatur metadanych.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

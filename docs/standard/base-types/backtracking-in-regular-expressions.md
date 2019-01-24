@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615983"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Śledzenie wsteczne w wyrażeniach regularnych
 <a name="top"></a> Wycofywanie ma miejsce, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) lub [konstrukcje](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), i aparat wyrażeń regularnych wraca do poprzedniego zapisanego stanu w celu kontynuowania jego wyszukiwane dopasowania. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
@@ -58,11 +58,11 @@ ms.locfileid: "53130094"
 |---------------|-------------------------|------------------------|------------|  
 |1|e|„needing a reed” (indeks 0)|Brak dopasowania.|  
 |2|e|„eeding a reed” (indeks 1)|Możliwe dopasowanie.|  
-|3|E{2}|„eding a reed” (indeks 2)|Możliwe dopasowanie.|  
+|3|e{2}|„eding a reed” (indeks 2)|Możliwe dopasowanie.|  
 |4|\w|„ding a reed” (indeks 3)|Możliwe dopasowanie.|  
 |5|\b|„ing a reed” (indeks 4)|Możliwe dopasowanie nie powiodło się.|  
 |6|e|„eding a reed” (indeks 2)|Możliwe dopasowanie.|  
-|7|E{2}|„ding a reed” (indeks 3)|Możliwe dopasowanie nie powiodło się.|  
+|7|e{2}|„ding a reed” (indeks 3)|Możliwe dopasowanie nie powiodło się.|  
 |8|e|„ding a reed” (indeks 3)|Dopasowanie nie powiodło się.|  
 |9|e|„ing a reed” (indeks 4)|Brak dopasowania.|  
 |10|e|„ng a reed” (indeks 5)|Brak dopasowania.|  
@@ -72,7 +72,7 @@ ms.locfileid: "53130094"
 |14|e|"reed" (indeks 9)|Brak dopasowania.|  
 |15|e|"reed" (indeks 10)|Brak dopasowania.|  
 |16|e|„eed” (indeks 11)|Możliwe dopasowanie.|  
-|17|E{2}|„ed” (indeks 12)|Możliwe dopasowanie.|  
+|17|e{2}|„ed” (indeks 12)|Możliwe dopasowanie.|  
 |18|\w|„d” (indeks 13)|Możliwe dopasowanie.|  
 |19|\b|„” (indeks 14)|Dopasowanie.|  
   
@@ -219,8 +219,8 @@ ms.locfileid: "53130094"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)  
-- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
-- [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
-- [Konstrukcje warunkowe](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
+- [Konstrukcje warunkowe](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
 - [Konstrukcje grupujące](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

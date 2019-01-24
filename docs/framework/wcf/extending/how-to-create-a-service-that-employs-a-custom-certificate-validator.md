@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: cc768f5e5086e6eba1ccac9d969eac14e14ceb2f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c4e9be8cb24745cd9651d4ee649a9a37520aa58d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569326"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów
-W tym temacie przedstawiono sposób implementacji niestandardowego modułu weryfikacji certyfikatów i sposobie konfigurowania poświadczeń klienta lub usługę, należy zastąpić domyślną logikę sprawdzania poprawności certyfikatu niestandardowego modułu weryfikacji certyfikatów.  
+W tym temacie pokazano, jak zaimplementować niestandardowego modułu weryfikacji certyfikatów i sposób konfigurowania poświadczeń klienta lub usługę w celu zastąpienia domyślnej logiki weryfikacji certyfikatu za pomocą niestandardowego modułu weryfikacji certyfikatów.  
   
- Jeśli certyfikat X.509 jest używany do uwierzytelniania klienta lub usługę, Windows Communication Foundation (WCF) domyślnie korzysta z magazynu certyfikatów systemu Windows i interfejsu API szyfrowania weryfikacji certyfikatu i upewnij się, że jest zaufany. Czasami certyfikatu wbudowanych funkcji sprawdzania poprawności nie jest wystarczająco i musi zostać zmienione. WCF zapewnia łatwy sposób zmień logikę sprawdzania poprawności, pozwalając użytkownikom na dodawanie niestandardowego modułu weryfikacji certyfikatów. Jeśli określono niestandardowego modułu weryfikacji certyfikatów, WCF nie korzysta z logikę weryfikacji certyfikatu wbudowanych, ale zamiast tego zależy niestandardowego modułu weryfikacji.  
+ Jeśli certyfikat X.509 jest używany do uwierzytelniania klienta lub usługę, Windows Communication Foundation (WCF) domyślnie używa magazynu certyfikatów Windows i interfejsu API szyfrowania na potrzeby weryfikacji certyfikatu i upewnij się, że jest zaufana. Czasami certyfikatu wbudowanych funkcji sprawdzania poprawności nie jest wystarczająco i musi zostać zmienione. Usługi WCF zapewnia prosty sposób zmienić logikę weryfikacji, pozwalając użytkownikom na dodawanie niestandardowego modułu weryfikacji certyfikatów. Jeśli określono niestandardowego modułu weryfikacji certyfikatów, usługi WCF nie używa logikę weryfikacji certyfikatu wbudowanych, ale opiera się na niestandardowego modułu weryfikacji.  
   
 ## <a name="procedures"></a>Procedury  
   
@@ -25,10 +25,10 @@ W tym temacie przedstawiono sposób implementacji niestandardowego modułu weryf
   
 1.  Zdefiniuj nową klasę pochodną <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  
   
-2.  Implementuje klasy abstrakcyjnej <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> metody. Certyfikat, który musi zostać zweryfikowany jest przekazywany jako argument do metody. Jeśli przekazany certyfikat jest nieprawidłowa według logiki sprawdzania poprawności, ta metoda zgłasza <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>. Jeśli certyfikat jest ważny, metoda zwraca wartość do obiektu wywołującego.  
+2.  Implementowanie abstrakcyjnej <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> metody. Certyfikat, który można sprawdzić poprawności jest przekazywany jako argument do metody. Jeśli przekazany certyfikat jest nieprawidłowy według logiki weryfikacji, ta metoda wyrzuca <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>. Jeśli certyfikat jest prawidłowy, metoda zwraca do obiektu wywołującego.  
   
     > [!NOTE]
-    >  Aby przywrócić błędy uwierzytelniania z powrotem do klienta, throw <xref:System.ServiceModel.FaultException> w <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metody.  
+    >  Aby zostały zwrócone błędy uwierzytelniania z powrotem do klienta, należy zgłosić <xref:System.ServiceModel.FaultException> w <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metody.  
   
  [!code-csharp[c_CustomCertificateValidator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#2)]
  [!code-vb[c_CustomCertificateValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#2)]  
@@ -37,7 +37,7 @@ W tym temacie przedstawiono sposób implementacji niestandardowego modułu weryf
   
 1.  Dodaj [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu i [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) do [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu.  
   
-2.  Dodaj [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) i ustaw `name` atrybutu odpowiednią wartość.  
+2.  Dodaj [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) i ustaw `name` atrybutu do odpowiedniej wartości.  
   
 3.  Dodaj [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) do `<behavior>` elementu.  
   
@@ -45,7 +45,7 @@ W tym temacie przedstawiono sposób implementacji niestandardowego modułu weryf
   
 5.  Dodaj [ \<uwierzytelniania >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) do `<clientCertificate>` elementu.  
   
-6.  Ustaw `customCertificateValidatorType` atrybutu typu modułu sprawdzania poprawności. Poniższy przykład ustawia atrybut przestrzeni nazw i nazwę typu.  
+6.  Ustaw `customCertificateValidatorType` atrybutu typu modułu sprawdzania poprawności. W poniższym przykładzie ustawiono atrybut przestrzeni nazw i nazwę typu.  
   
 7.  Ustaw `certificateValidationMode` atrybutu `Custom`.  
   
@@ -73,7 +73,7 @@ W tym temacie przedstawiono sposób implementacji niestandardowego modułu weryf
   
 2.  Dodaj [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elementu.  
   
-3.  Dodaj `<behavior>` element i ustaw `name` atrybutu odpowiednią wartość.  
+3.  Dodaj `<behavior>` element i ustaw `name` atrybutu do odpowiedniej wartości.  
   
 4.  Dodaj [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementu.  
   
@@ -83,7 +83,7 @@ W tym temacie przedstawiono sposób implementacji niestandardowego modułu weryf
   
 7.  Ustaw `customCertificateValidatorType` atrybutu typu modułu sprawdzania poprawności.  
   
-8.  Ustaw `certificateValidationMode` atrybutu `Custom`. Poniższy przykład ustawia atrybut przestrzeni nazw i nazwę typu.  
+8.  Ustaw `certificateValidationMode` atrybutu `Custom`. W poniższym przykładzie ustawiono atrybut przestrzeni nazw i nazwę typu.  
   
     ```xml  
     <configuration>  
@@ -107,27 +107,27 @@ W tym temacie przedstawiono sposób implementacji niestandardowego modułu weryf
   
 #### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-service"></a>Aby określić niestandardowego modułu weryfikacji certyfikatów w usłudze przy użyciu kodu  
   
-1.  Określ niestandardowego modułu weryfikacji certyfikatów na <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A> właściwości. Można uzyskać dostęp przy użyciu poświadczeń usługi <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> właściwości.  
+1.  Określ niestandardowego modułu weryfikacji certyfikatów na <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A> właściwości. Możesz uzyskać dostęp przy użyciu poświadczeń usługi <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> właściwości.  
   
-2.  Ustaw <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> właściwości <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.  
+2.  Ustaw <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> właściwość <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.  
   
  [!code-csharp[c_CustomCertificateValidator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#1)]
  [!code-vb[c_CustomCertificateValidator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#1)]  
   
 #### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a>Aby określić niestandardowego modułu weryfikacji certyfikatów na komputerze klienckim przy użyciu kodu  
   
-1.  Określ niestandardowego modułu weryfikacji certyfikatów przy użyciu <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> właściwości. Można uzyskać dostępu do poświadczeń klienta przy użyciu <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> właściwości. (Klasa klienta generowane przez [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zawsze pochodną <xref:System.ServiceModel.ClientBase%601> klasy.)  
+1.  Określanie niestandardowego modułu weryfikacji certyfikatów przy użyciu <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> właściwości. Możesz uzyskać dostęp przy użyciu poświadczeń klienta <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> właściwości. (Klient klasy generowanej przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zawsze pochodzi od klasy <xref:System.ServiceModel.ClientBase%601> klasy.)  
   
-2.  Ustaw <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> właściwości <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.  
+2.  Ustaw <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> właściwość <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Poniższy przykład przedstawia implementację niestandardowego modułu weryfikacji certyfikatów i ich użycia w usłudze.  
+ Poniższy przykład pokazuje implementację niestandardowego modułu weryfikacji certyfikatów i sposób jej użycia w usłudze.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[c_CustomCertificateValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#3)]
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Selectors.X509CertificateValidator>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Selectors.X509CertificateValidator>

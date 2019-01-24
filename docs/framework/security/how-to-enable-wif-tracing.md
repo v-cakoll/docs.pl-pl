@@ -3,22 +3,22 @@ title: 'Instrukcje: Włączanie śledzenia programu WIF'
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: f763c279c29bec73d4fc20d59dc86726d84e21bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605179"
 ---
 # <a name="how-to-enable-wif-tracing"></a>Instrukcje: Włączanie śledzenia programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® formularzy sieci Web  
+-   ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Podsumowanie  
- Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące włączania śledzenia programu WIF w aplikacji ASP.NET. Tu również instrukcje testowania aplikacji, aby sprawdzić, czy odbiornik śledzenia i dzienników są poprawne. Instruktaż nie zawiera szczegółowych instrukcji tworzenia usługi tokenów zabezpieczających (STS). Zamiast tego wykorzystuje deweloperską usługę STS wbudowaną w narzędziu Tożsamość i dostęp. Deweloperska usługa STS nie wykonuje faktycznego uwierzytelniania i jest przeznaczona tylko do celów testowych. Narzędzie Tożsamość i dostęp jest koniecznie do ukończenia całego instruktażu. Można go pobrać z następującej lokalizacji: [narzędzie tożsamość i dostęp](https://go.microsoft.com/fwlink/?LinkID=245849)  
+ Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące włączania śledzenia programu WIF w aplikacji ASP.NET. Tu również instrukcje testowania aplikacji, aby sprawdzić, czy odbiornik śledzenia i dzienników są poprawne. Instruktaż nie zawiera szczegółowych instrukcji tworzenia usługi tokenów zabezpieczających (STS). Zamiast tego wykorzystuje deweloperską usługę STS wbudowaną w narzędziu Tożsamość i dostęp. Deweloperska usługa STS nie wykonuje faktycznego uwierzytelniania i jest przeznaczona tylko do celów testowych. Narzędzie Tożsamość i dostęp jest koniecznie do ukończenia całego instruktażu. Można go pobrać z następującej lokalizacji: [Narzędzie tożsamość i dostęp](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 > [!IMPORTANT]
 >  Włączanie śledzenia programu WIF pasywne aplikacje, oznacza to, aplikacje, które używają protokołu WS-Federation potencjalnie uwidocznić aplikacji złośliwa strona atakom typu odmowa usługi (DoS) lub ujawnienie informacji. Obejmuje to zarówno pasywnym RPs i STSes pasywnym. Z tego powodu zaleca się, że możesz nie umożliwiają śledzenia programu WIF pasywnym RPs lub STSes w środowisku produkcyjnym.  
@@ -72,7 +72,7 @@ ms.locfileid: "47207117"
     ```xml  
     <configuration>  
         <configSections>  
-        …  
+            ...
         </configSections>  
         <system.diagnostics>  
             <sources>  

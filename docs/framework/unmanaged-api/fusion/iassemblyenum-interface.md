@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4af4d0a6049c789db371d84b564d261453968b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e3b49654252ad18e9ad4d9e5128b78bd23baee6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602861"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum — Interfejs
 Reprezentuje moduł wyliczający dla tablicy `IAssemblyName` obiektów.  
@@ -32,15 +32,15 @@ Reprezentuje moduł wyliczający dla tablicy `IAssemblyName` obiektów.
 |------------|-----------------|  
 |[Clone, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Tworzy kopię pobieżną to `IAssemblyEnum` obiektu.|  
 |[GetNextAssembly, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Pobiera wskaźnik do następnego `IAssemblyName` zawarte w tym `IAssemblyEnum` obiektu.|  
-|[Reset, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Spowoduje to zresetowanie `IAssemblyEnum` obiekt do punktu początkowego.|  
+|[Reset, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Spowoduje to zresetowanie `IAssemblyEnum` obiektu do jego położenia wyjściowego.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Fusion.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d314d85e7c1297636e8dd5cecaf050a527151518
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd00a1fa8099d5a87577271487c46e68a46794c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43453054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566986"
 ---
 # <a name="execnotificationquerywmi-function"></a>Funkcja ExecNotificationQueryWmi
 Wykonuje zapytanie, aby odbierać zdarzenia. To wywołanie zwraca natychmiast, a obiekt wywołujący można sondować zwróconego modułu wyliczającego dla zdarzenia podczas ich dostarczania. Zwalnianie zwróconego modułu wyliczającego anuluje zapytania.  
@@ -117,11 +117,11 @@ Istnieją limity liczby `AND` i `OR` słów kluczowych, które mogą być używa
 Jeśli wywołanie funkcji zakończy się niepowodzeniem, można uzyskać dodatkowe informacje o błędzie, wywołując [geterrorinfo —](geterrorinfo.md) funkcji.
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Zobacz także  
-[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

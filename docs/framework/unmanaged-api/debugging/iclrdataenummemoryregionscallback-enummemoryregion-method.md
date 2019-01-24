@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0ed92cbf5a859b9d5b7b8eddefda3ad34a98f27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f87107be14554d8d826c58108446ecd245549b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603697"
 ---
 # <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a>ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion — Metoda
-Wywoływane przez [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) zgłoszenia do debugera wynik próby wyliczenia określonego regionu pamięci.  
+Wywoływane przez [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) do zgłaszania do debugera wyniku próby wyliczenia określonego regionu pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,18 +38,18 @@ HRESULT EnumMemoryRegion (
   
 #### <a name="parameters"></a>Parametry  
  `address`  
- [in] Adres początkowy obszaru pamięci, który miał zostać wyliczone.  
+ [in] Adres początkowy region pamięci, który był do wyliczenia.  
   
  `size`  
- [in] Rozmiar w bajtach obszaru pamięci.  
+ [in] Rozmiar w bajtach regionu pamięci.  
   
 ## <a name="remarks"></a>Uwagi  
- `ICLRDataEnumMemoryRegions::EnumMemoryRegions` — Metoda będzie wywoływać tej metody wywołania zwrotnego po każdej próbie wyliczyć regionu pamięci. Wyliczenie będzie kontynuowane, nawet wtedy, gdy ta metoda zwraca wartość HRESULT informujący o niepowodzeniu.  
+ `ICLRDataEnumMemoryRegions::EnumMemoryRegions` Metoda będzie wywołać tę metodę wywołania zwrotnego po każdej próby wyliczenia regionu pamięci. Wyliczenia będą nadal, nawet jeśli ta metoda zwraca wartość HRESULT wskazujący awarię.  
   
- Regiony zgłoszone przez tego wywołania zwrotnego może być duplikatów lub nakładające się regionów.  
+ Zgłoszone przez to wywołanie zwrotne regionów może być duplikaty lub regionów nakładających się.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData.idl, ClrData.h  
   
@@ -57,5 +57,5 @@ HRESULT EnumMemoryRegion (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRDataEnumMemoryRegionsCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRDataEnumMemoryRegionsCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)

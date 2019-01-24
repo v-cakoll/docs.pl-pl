@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 82e022e28d3559791be3236fb80081807426a456
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2f387ecccac2c1c97d03e2c22a31ad2dd0577c77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567779"
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;przestrzeni nazw system.Net&gt; — Element (ustawienia sieci)
 Zawiera ustawienia, które określają, jak .NET Framework łączy się z siecią.  
@@ -40,9 +40,9 @@ Zawiera ustawienia, które określają, jak .NET Framework łączy się z sieci�
 |-----------------|---------------------|  
 |[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Określa moduły używane do uwierzytelniania żądań internetowych.|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Określa maksymalną liczbę połączeń do hostów w Internecie.|  
-|[defaultProxy —](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).|  
-|[mailSettings —](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Konfiguruje opcje wysyłania poczty transportu protokołu SMTP (Simple Mail).|  
-|[requestCaching —](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Określa mechanizm buforowania żądań sieci.|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).|  
+|[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Konfiguruje opcje wysyłania poczty transportu protokołu SMTP (Simple Mail).|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Określa mechanizm buforowania żądań sieci.|  
 |[Ustawienia](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguruje opcje sieciowe podstawowe dla klas w <xref:System.Net> i powiązane podrzędne przestrzenie nazw.|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Określa moduły do użycia na żądanie informacji z hostów w Internecie.|  
   
@@ -92,5 +92,5 @@ Zawiera ustawienia, które określają, jak .NET Framework łączy się z sieci�
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

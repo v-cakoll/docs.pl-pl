@@ -8,12 +8,12 @@ helpviewer_keywords:
 - variables [C#], pointers
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
-ms.openlocfilehash: b20642344b34b5426512ef64bde2ab33d55136b9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5fbc925b6770bc951a0d7ec856898f62c265462e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577157"
 ---
 # <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>Instrukcje: Uzyskiwanie wartości zmiennej wskaźnikowej (C# Programming Guide)
 Użyj operatora pośredniego wskaźnika można uzyskać zmiennej w lokalizacji wskazywanej przez kursor. Wyrażenie ma następującą postać, gdzie `p` jest typem wskaźnika:  
@@ -33,17 +33,17 @@ Użyj operatora pośredniego wskaźnika można uzyskać zmiennej w lokalizacji w
   
  [!code-csharp[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_2.cs)]  
   
-**Wartość theChar = Z**
-**adres theChar = 12F718**
-**wartość pChar = Z**
-**wartość Pinta = 90**
+**Value of theChar = Z**
+**Address of theChar = 12F718**
+**Value of pChar = Z**
+**Value of pInt = 90**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Wyrażenia wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [Typy wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [Typy](../../../csharp/language-reference/keywords/types.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed, instrukcja](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Wyrażenia wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [Typy wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Typy](../../../csharp/language-reference/keywords/types.md)
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
+- [fixed, instrukcja](../../../csharp/language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

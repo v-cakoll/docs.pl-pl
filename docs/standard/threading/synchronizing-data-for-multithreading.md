@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617918"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Synchronizowanie danych na potrzeby wielowątkowości
 Gdy wiele wątków może wykonywać wywołania do właściwości i metody pojedynczy obiekt, ważne jest, można zsynchronizować te wywołania. W przeciwnym razie jeden wątek może spowodować zakłócenie działania innego wątku, a obiekt może pozostać w nieprawidłowym stanie. Klasy, której członkami są chronione przed przerw w zasilaniu nazywa się metodą o bezpiecznych wątkach.  
@@ -34,7 +34,7 @@ Gdy wiele wątków może wykonywać wywołania do właściwości i metody pojedy
 |Kategoria|Globalne pola|Pola statyczne|Metody statyczne|Pola wystąpienia|Metody wystąpienia|Bloki kodu określonych|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |Brak synchronizacji|Nie|Nie|Nie|Nie|Nie|Nie|  
-|Kontekst zsynchronizowane|Nie|Nie|Nie|Tak|Tak|Nie|  
+|Kontekst zsynchronizowane|Nie|Nie|Nie|Yes|Yes|Nie|  
 |Regiony kodu zsynchronizowane|Nie|Nie|Tylko wtedy, gdy zaznaczone|Nie|Tylko wtedy, gdy zaznaczone|Tylko wtedy, gdy zaznaczone|  
 |Ręcznej synchronizacji|Ręcznie|Ręcznie|Ręcznie|Ręcznie|Ręcznie|Ręcznie|  
   
@@ -69,8 +69,8 @@ Gdy wiele wątków może wykonywać wywołania do właściwości i metody pojedy
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
-- [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)  
-- [Przegląd elementów podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
-- [SyncLock, instrukcja](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
+- [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)
+- [Przegląd elementów podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [SyncLock, instrukcja](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
 - [lock, instrukcja](~/docs/csharp/language-reference/keywords/lock-statement.md)

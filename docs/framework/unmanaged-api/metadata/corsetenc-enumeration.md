@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e09bf424a41445f7e36397775d1578cdf4e7e75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf1be8d5c709f3d6e5991e4d33dde2e923291a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442790"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569417"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC — Wyliczenie
-Zawiera wartości używane do wpływają na zachowanie podczas generowania metadanych.  
+Zawiera wartości używane do wywierania wpływu na zachowanie podczas generowania metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,19 +50,19 @@ typedef enum CorSetENC {
 |------------|-----------------|  
 |`MDSetENCOn`|Nieaktualne.|  
 |`MDSetENCOff`|Nieaktualne.|  
-|`MDUpdateENC`|Wskazuje, że metadane mogą zostać uaktualnione, tokenów nie może zostać przeniesiona.|  
+|`MDUpdateENC`|Wskazuje, że może zostać uaktualnione metadane, tokeny nie mogą być przenoszone.|  
 |`MDUpdateFull`|Wskazuje, że tokeny mogą być przenoszone podczas aktualizacji.|  
 |`MDUpdateExtension`|Wskazuje, że aktualizacje może składać się tylko z dodatków. Nie można przenieść tokenów.|  
-|`MDUpdateIncremental`|Wskazuje, czy kompilacja jest przyrostowe.|  
-|`MDUpdateDelta`|Wskazuje, że ma zostać zapisany tylko metadane zmienione.|  
+|`MDUpdateIncremental`|Wskazuje, że kompilacja jest przyrostowe.|  
+|`MDUpdateDelta`|Wskazuje, że powinny być zapisywane tylko zmienione metadane.|  
 |`MDUpdateMask`|Obejmuje `MDUpdateENC`, `MDUpdateFull` i `MDUpdateIncremental`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

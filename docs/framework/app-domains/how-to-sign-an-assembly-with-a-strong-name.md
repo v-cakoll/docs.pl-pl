@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 963923951b3f3c288506cf339cd8a15f27792af3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599221"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Instrukcje: Podpisywanie zestawu silną nazwą
 Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:  
@@ -54,7 +54,7 @@ Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:
      *assemblyName*  
      Nazwa zestawu podpisanego za pomocą silnej nazwy (plik dll lub exe), który zostanie wyemitowany przez program Assembly Linker.  
   
-     *Nazwa modułu*  
+     *moduleName*  
      Nazwa modułu kodu programu .NET Framework (plik netmodule) zawierającego co najmniej jeden typ. Plik netmodule można utworzyć, kompilując kod z `/target:module` przełącznika w języku C# lub Visual Basic.  
   
      *keyfileName*  
@@ -97,10 +97,10 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
-- [Instrukcje: Tworzenie pary kluczy publiczny prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
-- [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
-- [Opóźnione podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md)  
-- [Zarządzanie podpisywaniem zestawu i manifestu](/visualstudio/ide/managing-assembly-and-manifest-signing)  
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Instrukcje: Tworzenie pary kluczy publiczny prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Opóźnione podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md)
+- [Zarządzanie podpisywaniem zestawu i manifestu](/visualstudio/ide/managing-assembly-and-manifest-signing)
 - [Strona podpisywania, Projektant projektu](/visualstudio/ide/reference/signing-page-project-designer)

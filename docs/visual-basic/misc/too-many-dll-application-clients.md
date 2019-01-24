@@ -1,22 +1,22 @@
 ---
-title: Zbyt wielu klientów aplikacji DLL
+title: Zbyt wielu klientów aplikacji biblioteki DLL
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID47
 ms.assetid: 4b87780b-67ad-4c96-9253-db954a751dad
-ms.openlocfilehash: 5795cc46842f22e7f877b96bd81d7039e649664d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f937736cb8d01df36907ac0a9ffbec6acc9e4da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33639643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565855"
 ---
-# <a name="too-many-dll-application-clients"></a>Zbyt wielu klientów aplikacji DLL
-Biblioteki dołączanej (dynamicznie DLL) dla programu Visual Basic tylko może obsłużyć dostępu przy ograniczonej liczby aplikacji hosta. Aplikacja i inne aplikacje, które są hostami programu Visual Basic (niektóre z nich mogą być używane przez aplikację) wszystkich próbujesz uzyskać dostęp biblioteki DLL języka Visual Basic w tym samym czasie.  
+# <a name="too-many-dll-application-clients"></a>Zbyt wielu klientów aplikacji biblioteki DLL
+Biblioteka dołączana dynamicznie (DLL) dla języka Visual Basic tylko może obsłużyć dostępu przez ograniczoną liczbę aplikacji hosta. Aplikacja i inne aplikacje, które są hostami języka Visual Basic (niektóre z nich mogą być używane przez aplikację) są wszystkie próby uzyskania dostępu do biblioteki DLL Visual Basic w tym samym czasie.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Zmniejsz liczbę otwartych aplikacji dostęp do Visual Basic.  
+-   Zmniejsz liczbę otwartych aplikacji dostęp do programu Visual Basic.  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: formanty pozycji na formularzach systemu Windows'
+title: 'Instrukcje: Położenie formantów na formularzach Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 6843c22fec964de92c41760f1108d1c83e1f5bf8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 2baf311f04209e988f2f5dd562e247ee13ed59ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607163"
 ---
-# <a name="how-to-position-controls-on-windows-forms"></a>Porady: formanty pozycji na formularzach systemu Windows
+# <a name="how-to-position-controls-on-windows-forms"></a>Instrukcje: Położenie formantów na formularzach Windows Forms
 Położenie formantów, za pomocą projektanta Windows Forms lub określ <xref:System.Windows.Forms.Control.Location%2A> właściwości.  
   
 > [!NOTE]
@@ -33,7 +33,7 @@ Położenie formantów, za pomocą projektanta Windows Forms lub określ <xref:S
 -   Przeciągnij formant do odpowiedniej lokalizacji za pomocą myszy.  
   
     > [!NOTE]
-    >  Wybierz kontrolkę i przenieś ją za pomocą strzałki kluczy, aby umieść ją na bardziej precyzyjne. Ponadto *linii przyciągania* ułatwienie umieszczenie kontrolki dokładnie w formularzu. Aby uzyskać więcej informacji, zobacz [wskazówki: rozmieszczanie formantów Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+    >  Wybierz kontrolkę i przenieś ją za pomocą strzałki kluczy, aby umieść ją na bardziej precyzyjne. Ponadto *linii przyciągania* ułatwienie umieszczenie kontrolki dokładnie w formularzu. Aby uzyskać więcej informacji, zobacz [instruktażu: Rozmieszczanie formantów Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>Aby ustalić położenie formantu w oknie właściwości  
   
@@ -95,13 +95,13 @@ Położenie formantów, za pomocą projektanta Windows Forms lub określ <xref:S
     > [!NOTE]
     >  Użyj <xref:System.Windows.Forms.Control.Location%2A> właściwość umożliwiająca ustawienie kontrolki X i Y umieszcza jednocześnie. Aby ustawić położenie indywidualnie, należy użyć formantu <xref:System.Windows.Forms.Control.Left%2A> (**X**) lub <xref:System.Windows.Forms.Control.Top%2A> (**Y**) podwłaściwości. Nie należy próbować niejawnie Ustaw współrzędne X i Y <xref:System.Drawing.Point> strukturę, która reprezentuje przycisk lokalizacji, ponieważ ta struktura zawiera kopię współrzędnych przycisku.  
   
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- [Przewodnik: rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Przewodnik: rozmieszczanie kontrolek w aplikacji Windows Forms za pomocą kontrolki TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [Przewodnik: rozmieszczanie kontrolek w formularzach Windows Forms za pomocą kontrolki FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Kontrolki formularzy Windows Forms według funkcji](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [Porady: Ustawianie lokalizacji ekranu formularzy Windows Forms](https://msdn.microsoft.com/library/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)
+## <a name="see-also"></a>Zobacz także
+- [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Kontrolki formularzy Windows Forms według funkcji](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Instrukcje: Ustawianie lokalizacji ekranu formularzy Windows Forms](https://msdn.microsoft.com/library/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)

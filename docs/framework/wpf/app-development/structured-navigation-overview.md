@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 2264686f34123e74bf7d24ce80877742d952f35d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 61a0684b55ae1e40f264db2af3607b07f2fb33a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612037"
 ---
 # <a name="structured-navigation-overview"></a>Przegląd Strukturyzowana nawigacja
 Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, lub <xref:System.Windows.Navigation.NavigationWindow> składa się z stron, zidentyfikowane przez pakiet [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] i przejście przez hiperłącza. Struktura stron i sposoby, w którym ich można nawigować, zgodnie z definicją hiperłącza, jest określany jako topologia nawigacji. Takie topologii pasujące do różnych typów aplikacji, zwłaszcza tych, które nawigowania w dokumentach. Na potrzeby takich aplikacji użytkownik może przejść z jednej strony do innej strony bez dowolnej stronie znajomości o innych.  
@@ -169,7 +169,7 @@ Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../
   
  W innych przypadkach aplikacje mogą mieć topologie nawigacji złożonych, które są zależne od strukturyzowana Nawigacja do efektywnego prowadzenia działalności. Aby uzyskać więcej informacji, zobacz [Przegląd topologia nawigacji](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Navigation.PageFunction%601>  
- <xref:System.Windows.Navigation.NavigationService>  
- [Topologia nawigacji — omówienie](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Navigation.PageFunction%601>
+- <xref:System.Windows.Navigation.NavigationService>
+- [Topologia nawigacji — omówienie](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)

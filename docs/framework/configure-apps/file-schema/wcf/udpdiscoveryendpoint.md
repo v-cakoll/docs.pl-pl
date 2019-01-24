@@ -1,19 +1,19 @@
 ---
-title: '&lt;UdpDiscoveryEndpoint&gt;'
+title: '&lt;udpDiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: 6508f73de7920a339e40284c86b0d1d649e7eabe
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b46da83a175c2a9cff38abc211d462f3d43c1b9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569222"
 ---
-# <a name="ltudpdiscoveryendpointgt"></a>&lt;UdpDiscoveryEndpoint&gt;
+# <a name="ltudpdiscoveryendpointgt"></a>&lt;udpDiscoveryEndpoint&gt;
 Ten element konfiguracji definiuje standardowy punkt końcowy, który jest wstępnie konfigurowany dla operacji odnajdowania za pośrednictwem protokołu UDP powiązania multiemisji. Ten punkt końcowy ma stały kontraktu i obsługuje dwie wersje protokołu WS Discovery. Ponadto ma stały powiązanie protokołu UDP oraz domyślny adres określonych w specyfikacji WS-Discovery (WS-Discovery kwietnia 2005 lub w wersji 1.1 protokołu WS-Discovery).  
   
  \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,13 +48,13 @@ Ten element konfiguracji definiuje standardowy punkt końcowy, który jest wstę
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<udpTransportSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Kolekcja ustawień, które umożliwiają skonfigurowanie transportu UDP dla punktu końcowego protokołu UDP.|  
+|[\<udpTransportSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Kolekcja ustawień, które umożliwiają skonfigurowanie transportu UDP dla punktu końcowego protokołu UDP.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowane punkty końcowe z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe.|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowane punkty końcowe z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe.|  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje usługi nasłuchiwać komunikatów odnajdywania za pośrednictwem protokołu UDP transportu multiemisji.  
@@ -78,5 +78,5 @@ Ten element konfiguracji definiuje standardowy punkt końcowy, który jest wstę
 </services>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>

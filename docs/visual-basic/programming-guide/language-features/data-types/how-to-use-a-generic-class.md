@@ -1,5 +1,5 @@
 ---
-title: 'Porady: używanie klasy ogólnej (Visual Basic)'
+title: 'Instrukcje: Używanie klasy ogólnej (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type parameters [Visual Basic], defining
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: 108532e5b765fa918fa894199ef710a9f52db4e4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cd2e48ad9ee5e6266fff676cf109cdf6b0136f32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573910"
 ---
-# <a name="how-to-use-a-generic-class-visual-basic"></a>Porady: używanie klasy ogólnej (Visual Basic)
+# <a name="how-to-use-a-generic-class-visual-basic"></a>Instrukcje: Używanie klasy ogólnej (Visual Basic)
 Klasa, która przyjmuje *parametry typu* nosi nazwę *klasy generycznej*. Jeśli używasz klasy ogólnej, można wygenerować *skonstruowany klasy* z niego, podając *argument typu* dla każdego z tych parametrów. Następnie można zadeklarować zmienną typu klasy skonstruowany, a następnie można utworzyć wystąpienia klasy skonstruowany i przypisać ją do tej zmiennej.  
   
  Oprócz klas można również zdefiniować i używać struktury ogólne, interfejsy, procedury i delegatów.  
@@ -47,10 +47,10 @@ Klasa, która przyjmuje *parametry typu* nosi nazwę *klasy generycznej*. Jeśli
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
-- [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
-- [Niezależność od języka i składniki niezależne od języka](../../../../standard/language-independence-and-language-independent-components.md)  
-- [z](../../../../visual-basic/language-reference/statements/of-clause.md)  
-- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
-- [Instrukcje: definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
+- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Niezależność od języka i składniki niezależne od języka](../../../../standard/language-independence-and-language-independent-components.md)
+- [z](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Instrukcje: definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
 - [Iteratory](../../../../visual-basic/programming-guide/concepts/iterators.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8121b6e8c5a136f5f89b59636a7cb7f15794164a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b243ee7fdb72aaf749492a008708da4209a7736e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611985"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>
@@ -29,13 +29,13 @@ ms.locfileid: "43745479"
   
 -   [Podczas komunikowania się ze stroną sieci Web hosta](#communicating_with_the_host_web_page)  
   
--   [Zagadnienia dotyczące zabezpieczeń XBAP](#xbap_security_considerations)  
+-   [XBAP Security Considerations](#xbap_security_considerations)  
   
 -   [Zagadnienia związane z wydajnością XBAP początek godziny](#xbap_start_time_performance_considerations)  
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Tworzenie nowej aplikacji przeglądarki XAML (XBAP)  
- Najprostszym sposobem, aby utworzyć nowy projekt XBAP jest program Microsoft Visual Studio. Podczas tworzenia nowego projektu, wybierz **aplikacja przeglądarki środowiska WPF** z listy szablonów. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie nowego projektu aplikacji przeglądarki WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ Najprostszym sposobem, aby utworzyć nowy projekt XBAP jest program Microsoft Visual Studio. Podczas tworzenia nowego projektu, wybierz **aplikacja przeglądarki środowiska WPF** z listy szablonów. Aby uzyskać więcej informacji, zobacz [jak: Utwórz nowy projekt aplikacji przeglądarki WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
   
  Kiedy uruchamiasz projekt XBAP, zostanie otwarty w oknie przeglądarki, zamiast autonomicznych okna. Podczas debugowania XBAP z programu Visual Studio, aplikacja zostanie uruchomiona przy użyciu uprawnień strefy Internet i w związku z tym będzie zgłaszać wyjątki zabezpieczeń przekroczeniu te uprawnienia. Aby uzyskać więcej informacji, zobacz [zabezpieczeń](../../../../docs/framework/wpf/security-wpf.md) i [WPF częściowego zaufania zabezpieczeń](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "43745479"
 </html>  
 ```  
   
-### <a name="clearing-cached-xbaps"></a>Czyszczenie pamięci podręcznej aplikacji XBAP  
+### <a name="clearing-cached-xbaps"></a>Clearing Cached XBAPs  
  W niektórych sytuacjach po ponowne tworzenie i uruchamianie usługi XBAP może się okazać, otwarciu starszą wersję XBAP. Na przykład to zachowanie może wystąpić, gdy numer wersji zestawu XBAP jest statyczna i XBAP jest uruchamiany z wiersza polecenia. W tym przypadku ponieważ numer wersji między pamięci podręcznej wersji (wersja, która została wcześniej uruchomiona) i nowa wersja pozostają takie same, nową wersję XBAP nie zostanie pobrana. Zamiast tego jest ładowany w pamięci podręcznej wersji.  
   
  W takich sytuacjach można usunąć pamięci podręcznej wersji przy użyciu **Mage** polecenia (zainstalowany za pomocą programu Visual Studio lub zestawu Windows SDK) w wierszu polecenia. Następujące polecenie powoduje wyczyszczenie pamięci podręcznej aplikacji.  
@@ -126,7 +126,7 @@ ms.locfileid: "43745479"
 >  Włączanie aktywna zawartość w programie Internet Explorer może zagrożenie komputera. Jeśli nie chcesz zmienić ustawienia zabezpieczeń programu Internet Explorer, możesz uruchomić stronę HTML z serwera i dołączyć debuger programu Visual Studio do procesu.  
   
 <a name="xbap_security_considerations"></a>   
-## <a name="xbap-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń XBAP  
+## <a name="xbap-security-considerations"></a>XBAP Security Considerations  
  XBAP zazwyczaj wykonywane w piaskownicy zabezpieczeń częściowego zaufania, który jest ograniczony do zestaw uprawnień strefy Internet. W związku z tym Twoja implementacja musi obsługiwać podzbiór elementów WPF, które są obsługiwane w strefie Internet lub należy podnieść poziom uprawnień aplikacji. Aby uzyskać więcej informacji, zobacz [zabezpieczeń](../../../../docs/framework/wpf/security-wpf.md).  
   
  Kiedy używasz <xref:System.Windows.Controls.WebBrowser> kontrolki w aplikacji WPF tworzy wewnętrznie macierzystym formancie WebBrowser ActiveX. Gdy aplikacja jest XBAP częściowego zaufania, w programie Internet Explorer, formant ActiveX jest uruchamiany w dedykowanym wątku proces programu Internet Explorer. W związku z tym obowiązują następujące ograniczenia:  
@@ -186,6 +186,6 @@ ms.locfileid: "43745479"
   
  Ponadto ulepszone współbieżności sekwencji pobierania ClickOnce poprawia czas rozpoczęcia przez maksymalnie 10 procent. Po ClickOnce pliki do pobrania i sprawdza poprawność manifestów, uruchamiania pobierania aplikacji i pasek postępu rozpoczyna się do aktualizacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Konfigurowanie w programie Visual Studio debugowania aplikacji przeglądarki XAML w celu wywoływania usługi internetowej](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [Wdrażanie aplikacji WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+## <a name="see-also"></a>Zobacz także
+- [Konfigurowanie w programie Visual Studio debugowania aplikacji przeglądarki XAML w celu wywoływania usługi internetowej](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [Wdrażanie aplikacji WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

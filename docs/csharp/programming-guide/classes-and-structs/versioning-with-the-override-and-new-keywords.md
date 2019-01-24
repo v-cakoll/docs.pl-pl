@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: ddb34fd32d13224faed92bd8ba01933ca19c04a9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5c83ce79bede1ee4e5752ac0b1dcf9647df1f36c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555989"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Przechowywanie wersji przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
 Zaprojektowano w języku C#, aby versioning między [podstawowy](../../../csharp/language-reference/keywords/base.md) i klasy pochodne w różnych bibliotek mogą ewoluować i zachować zgodność z poprzednimi wersjami. Oznacza to, na przykład, że wprowadzenie nowego członka w podstawowym [klasy](../../../csharp/language-reference/keywords/class.md) z taką samą nazwę jak element członkowski w klasie pochodnej jest w pełni obsługiwane w języku C# i nie prowadzi do nieoczekiwanego zachowania. Oznacza to również, że klasy musi jawnie określać, czy metoda jest przeznaczona do zastępowania metody dziedziczonej, lub czy metoda jest nowa metoda, która ukrywa o podobnej nazwie dziedziczone metody.  
@@ -79,9 +79,9 @@ Zaprojektowano w języku C#, aby versioning między [podstawowy](../../../csharp
   
  Aby uzyskać więcej przykładów `new` i `override`, zobacz [, wiedząc, gdy użycie zastępowania i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

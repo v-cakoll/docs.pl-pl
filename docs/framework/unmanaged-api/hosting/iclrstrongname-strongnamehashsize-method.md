@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c09832d296033b0790d3e6282763a1163abdfd2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 335940185324716e27a2efd06ebf714541c27f59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45624596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568832"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>ICLRStrongName::StrongNameHashSize — Metoda
 Pobiera rozmiar bufora wymaganych do wyznaczania wartości skrótu, za pomocą określonego algorytmu skrótu.  
@@ -47,13 +47,13 @@ HRESULT StrongNameHashSize (
  `S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MetaHost.h  
   
- **Biblioteka:** dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

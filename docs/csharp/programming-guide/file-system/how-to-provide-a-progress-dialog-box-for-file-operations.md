@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 13f924566df0d7fe601e32bfe74878c18d8e64b8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ab268c30af6b5eefe84ade852c679535c1e48068
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597271"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Instrukcje: Dostarczanie okna dialogowego postępu dla operacji na plikach (C# Programming Guide)
 Można zapewnić standardowe okno dialogowe, które wyświetla postęp w operacjach plików w Windows, jeśli używasz <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> method in Class metoda <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw.  
@@ -32,6 +32,6 @@ Można zapewnić standardowe okno dialogowe, które wyświetla postęp w operacj
   
  [!code-csharp[csFilesandFolders#11](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-provide-a-progress-dialog-box-for-file-operations_1.cs)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [System plików i rejestr (C# Programming Guide)](../../../csharp/programming-guide/file-system/index.md)

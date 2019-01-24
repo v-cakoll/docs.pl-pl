@@ -2,12 +2,12 @@
 title: Ulepszenia wydajności gniazda w wersji 3.5
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 588edc35f1b0fb39beb9be9a71573a1727ffeab8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 590caba9080119386454671e2cab597a22e4d49b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587768"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Ulepszenia wydajności gniazda w wersji 3.5
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> Klasa została rozszerzona w wersji 3.5 do użycia przez aplikacje, które używają sieci asynchronicznych operacji We/Wy, aby osiągnąć najwyższą wydajność. Szereg nowych klas zostały dodane jako część zbioru ulepszeń klasy <xref:System.Net.Sockets.Socket> klasy, która zapewnia alternatywny wzorzec asynchroniczny, które mogą być używane przez aplikacje specjalistyczne gniazda o wysokiej wydajności. Te ulepszenia zostały zaprojektowane specjalnie dla sieci serwer aplikacji, które wymagają wysokiej wydajności. Aplikację można użyć wyłącznie rozszerzone wzorca asynchronicznego lub tylko w docelowej gorąca obszarów aplikacji (w przypadku odbierania dużej ilości danych, na przykład).  
@@ -33,10 +33,10 @@ ms.locfileid: "50193451"
   
  Okres istnienia nowy obiekt kontekstu operację asynchronicznego gniazda zależy od odwołania w kodzie aplikacji i odwołania do asynchronicznego We/Wy. Nie jest wymagane dla aplikacji, aby zachować odwołanie do obiektu kontekstu operację asynchronicznego gniazda dopiero po przesłaniu go jako parametr do jednej z metod operację asynchronicznego gniazda. Pozostanie on odwołania do momentu ukończenia wywołania zwrotnego zwraca. Jednak jest korzystna dla aplikacji, aby zachować odwołanie do obiektu context, dzięki czemu mogą być ponownie używane dla operacji przyszłych asynchronicznego gniazda.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>  
- [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Przykłady kodu gniazd](socket-code-examples.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
+- [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Przykłady kodu gniazd](socket-code-examples.md)

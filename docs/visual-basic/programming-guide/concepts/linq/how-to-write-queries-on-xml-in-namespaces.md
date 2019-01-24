@@ -1,23 +1,23 @@
 ---
-title: 'Porady: Pisanie zapytań na kod XML w przestrzeni nazw (Visual Basic)'
+title: 'Instrukcje: Pisanie zapytań dotyczących kodu XML w przestrzeniach nazw (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: f4e895e560d0fb11c128248e4f42d1d5124bc124
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00dfc4e14c38357deb3efc4a32fd00a97f6010b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609933"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Porady: Pisanie zapytań na kod XML w przestrzeni nazw (Visual Basic)
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Instrukcje: Pisanie zapytań dotyczących kodu XML w przestrzeniach nazw (Visual Basic)
 Aby napisać zapytanie na języku XML, który znajduje się w przestrzeni nazw, należy użyć <xref:System.Xml.Linq.XName> obiektów, które mają poprawną przestrzeń nazw.  
   
- W języku Visual Basic najbardziej typowym podejściem jest zdefiniowanie globalnej przestrzeni nazw, a następnie użyj literały XML i właściwości XML, które używają globalnej przestrzeni nazw. Można określić domyślnej globalnej przestrzeni nazw, w którym to przypadku elementy w literałach XML będzie się w przestrzeni nazw domyślnie. Alternatywnie można zdefiniować globalnej przestrzeni nazw z prefiksem, a następnie użyć prefiksu zgodnie z wymaganiami w literałach XML i właściwości XML. Podobnie jak w przypadku innych rodzajów XML atrybuty są zawsze podkatalogi domyślnie obszaru nazw.  
+ W języku Visual Basic najbardziej typowym podejściem jest zdefiniowanie globalnej przestrzeni nazw, a następnie użyj literały XML i właściwości XML, które używają globalnej przestrzeni nazw. Można określić domyślnej globalnej przestrzeni nazw, w którym to przypadku elementy w literałach XML będzie się w przestrzeni nazw, domyślnie. Alternatywnie można zdefiniować globalnej przestrzeni nazw z prefiksem, a następnie użyć prefiksu zgodnie z potrzebami w literałach XML i właściwości XML. Podobnie jak w przypadku innych form XML atrybuty są zawsze w żadnej przestrzeni nazw, domyślnie.  
   
- Pierwszy zestaw przykłady w tym temacie przedstawiono sposób tworzenia drzewo XML w domyślnej przestrzeni nazw. Drugi zestaw pokazano, jak utworzyć drzewo XML w przestrzeni nazw z prefiksem.  
+ Pierwszy zestaw przykładów w tym temacie przedstawiono sposób tworzenia drzewa XML w domyślnej przestrzeni nazw. Drugi zestaw przedstawia sposób tworzenia drzewa XML w przestrzeni nazw z prefiksem.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy drzewo XML, który znajduje się w domyślnej przestrzeni nazw. Następnie pobierania kolekcję elementów.  
+ Poniższy przykład tworzy drzewa XML, który znajduje się w domyślnej przestrzeni nazw. Pobiera kolekcję elementów.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -52,9 +52,9 @@ End Module
 ```  
   
 ## <a name="example"></a>Przykład  
- W języku Visual Basic, jednak Pisanie zapytań w drzewie XML, który używa przestrzeni nazw z prefiksem bardzo różni się od badania drzewo XML w domyślnej przestrzeni nazw. Zazwyczaj używają `Imports` instrukcji, aby zaimportować przestrzeni nazw z prefiksem. Następnie należy użyć prefiksu w nazwach elementów i atrybutów podczas skonstruuj drzewo XML. Prefiks można także użyć podczas wykonywania zapytania drzewa XML za pomocą właściwości XML.  
+ W języku Visual Basic, Pisanie zapytań w drzewie XML, który używa przestrzeni nazw z prefiksem bardzo różni się od zapytania drzewa XML w domyślnej przestrzeni nazw. Zazwyczaj używają `Imports` instrukcję, aby zaimportować obszar nazw z prefiksem. Następnie należy użyć prefiksu w nazwach elementów i atrybutów podczas konstruowania drzewa XML. Możesz także użyć prefiksu, podczas wykonywania zapytania drzewa XML przy użyciu właściwości XML.  
   
- Poniższy przykład tworzy drzewo XML, który znajduje się w przestrzeni nazw z prefiksem. Następnie pobierania kolekcję elementów.  
+ Poniższy przykład tworzy drzewa XML, który znajduje się w przestrzeni nazw z prefiksem. Pobiera kolekcję elementów.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -88,5 +88,5 @@ End Module
 3  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Praca z przestrzeni nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

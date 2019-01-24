@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86d48461c601b53d4461331a11a0e0ac7ddc6e7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 493b4850436b3724287210878992d1d8ce8fe168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589402"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction — Metoda
-Konfiguruje wywołanie określonych funkcji.  
+Konfiguruje wywołanie do określonej funkcji.  
   
- Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0. Użyj [ICorDebugEval2::CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) zamiast tego.  
+ Ta metoda jest przestarzała w programie .NET Framework 2.0. Użyj [ICorDebugEval2::CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) zamiast tego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,10 +47,10 @@ HRESULT CallFunction (
  [in] Liczba argumentów funkcji.  
   
  `ppArgs`  
- [in] Tablicy wskaźników, z których każdy wskazuje obiekt ICorDebugValue określający argument można przekazać do funkcji.  
+ [in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugValue, który określa argument, który zostanie przekazany do funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli funkcja jest wirtualny, `CallFunction` wykona wirtualnego wysyłania. Jeśli funkcja znajduje się w domenie innej aplikacji, przejście zostanie przeprowadzona tak długo, jak wszystkie argumenty mają również w tej domenie aplikacji.  
+ Jeśli funkcja znajduje się wirtualny, `CallFunction` wykona wirtualnego wysyłania. Jeśli funkcja znajduje się w domenie innej aplikacji, przejście wystąpi tak długo, jak wszystkie argumenty mają również w tej domenie aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** WindowSee [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -61,5 +61,5 @@ HRESULT CallFunction (
   
  **Wersje programu .NET framework:** 1.1, 1.0  
   
-## <a name="see-also"></a>Zobacz też  
- [CallParameterizedFunction, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)
+## <a name="see-also"></a>Zobacz także
+- [CallParameterizedFunction, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c84aceb0faabd879911e9595a7f3154065e2191
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f55c8986d2efc78b6fcd2840bad588af84228017
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561781"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition — Metoda
-Zwraca tablicę z metod, z których każdy zawiera punkt przerwania w danej pozycji w dokumencie.  
+Zwraca tablicę z metod, z których każdy zawiera punkt przerwania na pozycji w dokumencie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -57,13 +57,13 @@ HRESULT GetMethodsFromDocumentPosition (
  [out] Wskaźnik do zmiennej, która odbiera liczby elementów zwracanych w `pRetVal` tablicy.  
   
  `pRetVal`  
- [out] Tablicy wskaźników, z których każdy wskazuje [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) obiekt, który reprezentuje metodę zawierającego punkt przerwania.  
+ [out] Tablica wskaźników, z których każdy wskazuje [isymunmanagedmethod —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) obiekt, który reprezentuje metodę zawierającego punkt przerwania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

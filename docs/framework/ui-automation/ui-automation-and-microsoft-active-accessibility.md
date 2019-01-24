@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1b7dbc8dffb15485ec035049d2da7aac6915eb58
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f8dfe0520e0db676a208dcd46a45db8fefe98703
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603745"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automatyzacja interfejsu użytkownika a Microsoft Active Accessibility
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] była wcześniej umożliwiająca ułatwianie dostępu do aplikacji. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] jest to nowy model ułatwień dostępu dla [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] i ma na celu spełniać potrzeby produktów technologii pomocniczej i automatyczne narzędzia do testowania. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] oferuje wiele udoskonaleń [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)].  
   
@@ -251,5 +251,5 @@ ms.locfileid: "48036217"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Modelu eliminuje potrzebę dostawcy mogą wykonywać wywołania za pośrednictwem innego dostawcy kodu. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Usługa core wykonuje wszystkie niezbędne agregacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawowe założenia automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Podstawowe założenia automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/index.md)

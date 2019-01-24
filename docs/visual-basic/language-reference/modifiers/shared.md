@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: b76d999bfe3f7ae5205cb9486e040c1d6191b78c
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 001baa8d3cbd294772bef634825c67ea13b23458
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597286"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 Określa, że co najmniej jeden zadeklarowany element programistyczny skojarzonych z klasy lub struktury w dużych, a nie przy użyciu określonego wystąpienia klasy lub struktury.  
@@ -44,7 +44,7 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny skojarzony
   
 ## <a name="behavior"></a>Zachowanie  
   
--   **Magazyn.** Udostępniona zmienna lub zdarzenia są przechowywane w pamięci tylko raz, niezależnie od tego, ile lub kilka wystąpień tworzenia swojej klasy lub struktury. Podobnie procedury udostępnianej lub właściwość zawiera tylko jeden zestaw zmiennych lokalnych.  
+-   **Storage.** Udostępniona zmienna lub zdarzenia są przechowywane w pamięci tylko raz, niezależnie od tego, ile lub kilka wystąpień tworzenia swojej klasy lub struktury. Podobnie procedury udostępnianej lub właściwość zawiera tylko jeden zestaw zmiennych lokalnych.  
   
 -   **Dostęp za pośrednictwem zmiennej wystąpienia.** Użytkownik może uzyskać dostęp do udostępnionego elementu kwalifikując nazwę zmiennej, która zawiera określone wystąpienie jego klasy lub struktury. Mimo że to zazwyczaj działa zgodnie z oczekiwaniami, kompilator generuje komunikat ostrzegawczy i sprawia, że dostęp za pośrednictwem nazwy klasy lub struktury, zamiast zmiennej.  
   
@@ -92,10 +92,10 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny skojarzony
   
  [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Static](../../../visual-basic/language-reference/modifiers/static.md)  
- [Okres istnienia w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Static](../../../visual-basic/language-reference/modifiers/static.md)
+- [Okres istnienia w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

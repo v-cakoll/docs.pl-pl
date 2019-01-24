@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: ba084444-9e68-4cde-9388-54b950670987
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2f055dc19bf7f40036283102d8cc4549555b992
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f20039318d6e1230ccc0fbd203fc44686806bb2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604473"
 ---
 # <a name="isymunmanagedasyncmethodgetkickoffmethod-method"></a>ISymUnmanagedAsyncMethod::GetKickoffMethod — Metoda
-Zobacz [DefineKickoffMethod — metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md).  
+Zobacz [DefineKickoffMethod, Metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,7 +30,7 @@ HRESULT GetKickoffMethod(    [out, retval] mdToken* kickoffMethod);
  Zwraca `HRESULT`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedAsyncMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedAsyncMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

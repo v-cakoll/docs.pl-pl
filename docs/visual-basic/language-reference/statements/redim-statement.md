@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1252c9a93d9c37923b1fd2940a42f1a33b575b8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617329"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim, instrukcja (Visual Basic)
 Przydziela ponownie obszar przechowywania dla zmiennej tablicowej.  
@@ -57,7 +57,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  Instrukcji `ReDim` można używać tylko na poziomie procedury. W związku z tym, kontekstem deklaracji zmiennej musi być procedura, a nie plik źródłowy, przestrzeń nazw, interfejs, klasa, struktura, moduł czy blok. Aby uzyskać więcej informacji, zobacz [Kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
-## <a name="rules"></a>Reguły  
+## <a name="rules"></a>reguły  
   
 -   **Wiele zmiennych.** Można zmienić rozmiar kilku zmiennych tablicowych w tej samej instrukcji deklaracji oraz określić części `name` i `boundlist` dla każdej zmiennej. Wiele zmiennych rozdziela się przecinkami.  
   
@@ -100,10 +100,10 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  Aby uzyskać dodatkowe przykłady, zobacz [Tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IndexOutOfRangeException>  
- [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Erase, instrukcja](../../../visual-basic/language-reference/statements/erase-statement.md)  
- [Nothing](../../../visual-basic/language-reference/nothing.md)  
- [Tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IndexOutOfRangeException>
+- [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Erase, instrukcja](../../../visual-basic/language-reference/statements/erase-statement.md)
+- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md)

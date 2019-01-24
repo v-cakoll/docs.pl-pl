@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dziedziczenie formularzy systemu Windows'
+title: 'Instrukcje: Dziedziczenie formularzy Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 275ae52a36ed9766e2569bd6c8ecdea78ea56e0b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 29b32cd91cefe80f2f0a331f901fcabe55aa9c60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45744053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558985"
 ---
-# <a name="how-to-inherit-windows-forms"></a>Porady: dziedziczenie formularzy systemu Windows
+# <a name="how-to-inherit-windows-forms"></a>Instrukcje: Dziedziczenie formularzy Windows
 Tworzenie nowych formularzy Windows przez dziedziczenie z formularzy podstawowy jest wygodny sposób zduplikowane starań bez przechodzenia przez proces całkowicie ponownego tworzenia formularza, za każdym razem, gdy jej potrzebujesz.  
   
- Aby uzyskać więcej informacji na temat dziedziczenie formularzy przy użyciu czasu projektowania **selektor dziedziczenia** okno dialogowe i jak wizualnie rozróżnienie między poziomy zabezpieczeń dziedziczone formantów, zobacz [porady: dziedziczenie formularzy przy użyciu Selektor dziedziczenia — okno dialogowe](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
+ Aby uzyskać więcej informacji na temat dziedziczenie formularzy przy użyciu czasu projektowania **selektor dziedziczenia** okno dialogowe i jak wizualnie rozróżnienie między poziomy zabezpieczeń dziedziczone formantów, zobacz [jak: Dziedziczenie formularzy przy użyciu okna dialogowego selektora dziedziczenia](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
   
  **Uwaga** celu dziedziczą z formularza, pliku lub przestrzeni nazw, zawierające ten formularz musi zostały skompilowane do pliku wykonywalnego lub biblioteki DLL. Aby skompilować projekt, wybierz opcję **kompilacji** z **kompilacji** menu. Ponadto należy można dodać odwołania do przestrzeni nazw do klasy dziedziczące formularza. Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -40,9 +40,9 @@ Tworzenie nowych formularzy Windows przez dziedziczenie z formularzy podstawowy 
   
  Gdy dziedziczenie formularzy, należy pamiętać o tym, jakie problemy mogą się pojawić w odniesieniu do programów obsługi zdarzeń, wywoływana dwa razy, ponieważ każde zdarzenie jest obsługiwane zarówno przez klasę bazową i odziedziczoną klasę. Aby uzyskać więcej informacji na temat uniknąć tego problemu, zobacz [Rozwiązywanie problemów z dziedziczone procedury obsługi zdarzeń w języku Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Inherits, instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
- [Imports, instrukcja (przestrzeń nazw i typ .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [using](~/docs/csharp/language-reference/keywords/using.md)  
- [Efekty modyfikowania wyglądu formularza podstawowego](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+## <a name="see-also"></a>Zobacz także
+- [Inherits, instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [Imports, instrukcja (przestrzeń nazw i typ .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Efekty modyfikowania wyglądu formularza podstawowego](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
+- [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

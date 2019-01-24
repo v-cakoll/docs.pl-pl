@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c24fe637514ba773cecc7824de276b1707a4e90c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e56680a74bc6800242ff56d27bcf179ee372df74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579592"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>Klasa XmlSchemaSet na potrzeby kompilacji schematu
 W tym artykule opisano <xref:System.Xml.Schema.XmlSchemaSet>, pamięci podręcznej, gdzie schematów języka (XSD) definicji schematu XML mogą być przechowywane i zweryfikowane.  
@@ -27,7 +27,7 @@ W tym artykule opisano <xref:System.Xml.Schema.XmlSchemaSet>, pamięci podręczn
   
  Poniżej przedstawiono porównanie <xref:System.Xml.Schema.XmlSchemaCollection> klasy i <xref:System.Xml.Schema.XmlSchemaSet> klasy.  
   
-|Użyciu klasy XmlSchemaCollection|Element XmlSchemaSet|  
+|XmlSchemaCollection|XmlSchemaSet|  
 |-------------------------|------------------|  
 |Obsługuje XDR firmy Microsoft i W3C schematów XML.|Obsługuje tylko schematów W3C XML.|  
 |Schematy są kompilowane podczas <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> metoda jest wywoływana.|Schematy nie są kompilowane podczas <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> metoda jest wywoływana. Zapewnia to zwiększenie wydajności podczas tworzenia biblioteki schematów.|  
@@ -253,12 +253,12 @@ foreach (XmlSchema schema in schemaSet.Schemas())
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
-- [Element XmlSchemaSet jako pamięci podręcznej schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>
+- [Element XmlSchemaSet jako pamięci podręcznej schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [Sprawdzanie poprawności schematu XML (XSD) przy użyciu klasy XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1975e5bf20453a3bcd6761d9734be7ddd2ceef7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fbc4abe55d59c3140c5c180d5844404e357e3a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586315"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>IManagedObject::GetObjectIdentity — Metoda
 Pobiera tożsamość tego zarządzanego obiektu.  
@@ -39,25 +39,25 @@ HRESULT GetObjectIdentity (
   
 #### <a name="parameters"></a>Parametry  
  `pBSTRGUID`  
- [out] Wskaźnik do identyfikatora GUID procesu, w której znajduje się obiekt.  
+ [out] Wskaźnik na identyfikator GUID procesu, w której znajduje się obiekt.  
   
  `AppDomainID`  
- [out] Wskaźnik do identyfikator domeny aplikacji obiektu.  
+ [out] Wskaźnik do Identyfikatora domeny aplikacji obiektu.  
   
  `pCCW`  
  [out] Wskaźnik do obiektu indeksu w klasycznym modelu COM v-table.  
   
 ## <a name="remarks"></a>Uwagi  
- Tożsamość obiektu zarządzanego obejmuje proces identyfikator GUID, identyfikator domeny aplikacji i indeks obiektu w klasycznym modelu COM v-table.  
+ Tożsamość obiektu zarządzanego zawiera identyfikator GUID procesu, identyfikator domeny aplikacji i indeks obiektu w klasycznym modelu COM v-table.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IManagedObject, interfejs](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IManagedObject, interfejs](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)

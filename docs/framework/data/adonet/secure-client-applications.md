@@ -2,12 +2,12 @@
 title: Zabezpieczanie aplikacje klienckich
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: a3b035d59a39ca20f6a81fbd40d39069a7cc43c2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4233ce4edc788f3129043c5a1ef1acb26dd1d899
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599624"
 ---
 # <a name="secure-client-applications"></a>Zabezpieczanie aplikacje klienckich
 Aplikacje składają się zazwyczaj z wielu części, które muszą być wszystkie chronione przed lukami w zabezpieczeniach, które mogą spowodować utratę danych lub w przeciwnym razie naruszyć bezpieczeństwo systemu. Tworzenie interfejsów użytkownika bezpiecznego może uniemożliwić wielu problemów przez blokowanie osoby atakujące przed uzyskaniem dostępu do danych lub zasobów systemowych.  
@@ -65,9 +65,9 @@ Aplikacje składają się zazwyczaj z wielu części, które muszą być wszystk
 |[Zabezpieczenia w komunikacji zdalnej](https://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|W tym artykule opisano, uwierzytelniania i szyfrowania, a także tematy dodatkowe zabezpieczenia komunikacji zdalnej.|  
 |[Zabezpieczenia i zagadnienia dotyczące komunikacji zdalnej](../../../../docs/framework/misc/security-and-remoting-considerations.md)|W tym artykule opisano problemy z zabezpieczeniami, za pomocą chronionych obiektów i występujące w wielu domenach aplikacji.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Zalecenia dotyczące strategii dostępu do danych](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [Zabezpieczanie aplikacji](/visualstudio/ide/securing-applications)  
- [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Zalecenia dotyczące strategii dostępu do danych](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Zabezpieczanie aplikacji](/visualstudio/ide/securing-applications)
+- [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

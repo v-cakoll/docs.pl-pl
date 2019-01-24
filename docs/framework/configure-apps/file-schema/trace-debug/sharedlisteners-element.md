@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b312ea8180c464fb9f955e7d7079cac930c8bf05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3069022287d469704cc7adac40d02ef3c6997b56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397114"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563056"
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt; — Element
 Zawiera dowolnego źródła i elementu śledzenia można odwoływać się do obiektów nasłuchujących.  Te odbiorniki nie otrzymasz żadnych śladów domyślnie i nie jest możliwe pobrać te odbiorniki w czasie wykonywania. Odbiorniki zidentyfikowane jako współdzielonych detektorów można dodać do źródła lub śledzenie według nazwy.  
   
  \<Konfiguracja >  
-\<System.Diagnostics >  
-\<sharedListeners >  
+\<system.diagnostics>  
+\<sharedListeners>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -90,7 +90,7 @@ Zawiera dowolnego źródła i elementu śledzenia można odwoływać się do obi
 </configuration></system.diagnostics>   
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Diagnostics.TraceListener>  
- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Obiekty nasłuchujące śledzenie](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Diagnostics.TraceListener>
+- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Obiekty nasłuchujące śledzenie](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

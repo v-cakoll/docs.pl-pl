@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b848c30e824d45f6f619cfdb3d00a2d3cdc4573e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dadfabf1d2507b2bd719b5b73238bb38c9ae7563
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448716"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602432"
 ---
 # <a name="imetadataimportenumparams-method"></a>IMetaDataImport::EnumParams — Metoda
-Wylicza tokenów ParamDef reprezentujący parametry metody odwołuje się określony token MethodDef.  
+Wylicza tokenów ParamDef reprezentującą parametry metody odwołuje się określony token MethodDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,13 +41,13 @@ HRESULT EnumParams (
   
 #### <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, out] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwsze wywołanie tej metody.  
+ [out w] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwszego wywołania tej metody.  
   
  `mb`  
- [in] Token MethodDef reprezentujący metody z parametrami wyliczyć.  
+ [in] Token MethodDef reprezentujący metodę z parametrami do wyliczenia.  
   
  `rParams`  
- [out] Tablica używany do przechowywania tokenów ParamDef.  
+ [out] Tablica do przechowywania tokenów ParamDef.  
   
  `cMax`  
  [in] Maksymalny rozmiar `rParams` tablicy.  
@@ -59,18 +59,18 @@ HRESULT EnumParams (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` zwrócona pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumParams` pomyślnie zwrócił.|  
+|`S_FALSE`|Nie ma żadnych tokeny do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -7,39 +7,39 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: 72bc7e45cadd2528f29c88bf6e80ee5f381052dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8059ebc9b6c1de685f2f04c3ee362ab8cf6d05e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611257"
 ---
 # <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Właściwość &#39; &lt;propertyname&gt; &#39; &#39;t zwraca wartości we wszystkich ścieżkach kodu
-Właściwość "\<propertyname >' nie zwraca wartości we wszystkich ścieżkach kodu. W czasie wykonywania, gdy zostanie użyty wynik może wystąpić wyjątek odwołania zerowego.  
+Właściwość "\<propertyname >' nie zwraca wartości we wszystkich ścieżkach kodu. Może wystąpić wyjątek pustej referencji, w czasie wykonywania, gdy zostanie użyty wynik.  
   
- Właściwość `Get` procedura ma co najmniej jedną ścieżkę możliwe za pośrednictwem jego kod, który nie zwraca wartości.  
+ Właściwość `Get` procedura ma co najmniej jedną ścieżkę możliwe za pośrednictwem jego kodu, która nie zwraca wartości.  
   
- Może zwracać wartości z właściwości `Get` procedury w jednym z następujących sposobów:  
+ Może zwracać wartość z właściwością `Get` procedury w dowolnym z następujących sposobów:  
   
--   Przypisuje wartość do nazwy właściwości, a następnie wykonaj `Exit Property` instrukcji.  
+-   Przypisz wartości do danej nazwy właściwości, a następnie wykonaj `Exit Property` instrukcji.  
   
--   Przypisuje wartość do nazwy właściwości, a następnie wykonaj `End Get` instrukcji.  
+-   Przypisz wartości do danej nazwy właściwości, a następnie wykonaj `End Get` instrukcji.  
   
--   Włącz wartość w [zwracać instrukcji](../../../visual-basic/language-reference/statements/return-statement.md).  
+-   Zawiera wartości w [instrukcji Return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
- Jeśli formant przekazuje do `Exit Property` lub `End Get` i nie przypisano żadnej wartości do nazwy właściwości `Get` procedury zwraca wartość domyślna właściwości typu danych. Aby uzyskać więcej informacji, zobacz "Zachowanie" w [instrukcji Function](../../../visual-basic/language-reference/statements/function-statement.md).  
+ Jeśli kontrola przechodzi do `Exit Property` lub `End Get` i nie przypisano żadnej wartości Nazwa właściwości `Get` procedura zwraca wartość domyślną typu danych właściwości. Aby uzyskać więcej informacji, zobacz "Zachowanie" w [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md).  
   
- Domyślnie ten komunikat jest ostrzeżenie. Aby uzyskać więcej informacji na ukrywanie ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ta wiadomość jest ostrzeżenie. Aby uzyskać więcej informacji na temat ukrywania ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC42107  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Sprawdź logika przepływu sterowania i upewnij się, że można przypisać wartości przed każdym instrukcji, która powoduje, że typ zwracany.  
+-   Sprawdź logikę przepływu sterowania i upewnij się, że przypisanie wartości przed każdej instrukcji, który powoduje, że wynik.  
   
-     Ułatwia zagwarantować co zwrotu z procedury zwraca wartość, jeśli używasz zawsze `Return` instrukcji. Jeśli to zrobisz, ostatniej instrukcji przed `End Get` powinien być `Return` instrukcji.  
+     Ułatwia to zagwarantować, każdy zwracany z procedury zwraca wartość, jeśli zawsze używasz `Return` instrukcji. Jeśli to zrobisz, ostatnią instrukcję przed `End Get` powinien być `Return` instrukcji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Procedury właściwości](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Get, instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [Procedury właściwości](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+- [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Get, instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)

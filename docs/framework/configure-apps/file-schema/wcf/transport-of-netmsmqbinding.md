@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; w &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-ms.openlocfilehash: 678f3fd34f368abae11404fcbb1546b2135a75d2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7eac5c7a0da71e2d06929322ac5c702d83a1ea65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597440"
 ---
 # <a name="lttransportgt-of-ltnetmsmqbindinggt"></a>&lt;transport&gt; w &lt;netMsmqBinding&gt;
 Określa ustawienia zabezpieczenia transportu.  
@@ -16,7 +16,7 @@ Określa ustawienia zabezpieczenia transportu.
 \<powiązania >  
 \<netMsmqBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
+\<security>  
 \<transport>  
   
 ## <a name="syntax"></a>Składnia  
@@ -55,14 +55,14 @@ Określa ustawienia zabezpieczenia transportu.
 |-------------|-----------------|  
 |[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Określa ustawienia zabezpieczenia transportu dla transportów umieszczonych w kolejce.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>  
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A>  
- <xref:System.ServiceModel.MsmqTransportSecurity>  
- [Kolejki programu WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
+- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A>
+- <xref:System.ServiceModel.MsmqTransportSecurity>
+- [Kolejki programu WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

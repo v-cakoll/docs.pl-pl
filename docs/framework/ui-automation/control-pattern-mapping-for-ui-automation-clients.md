@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 6beeec86ba8bf16be432bc2ae2de20aa08a0d2d9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7552db2b0d1f9063733ddac29612057e0475570e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597207"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapowanie wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Ten temat zawiera listę typów formantów oraz ich wzorce skojarzonego formantu.  
   
@@ -78,5 +78,5 @@ ms.locfileid: "47113124"
 > [!NOTE]
 >  Jeśli typ kontrolki ma nie wzorce obsługiwanych kontrolki, na liście, ale ma jeden lub kilka wzorców kontrolki warunkowo obsługiwane, a następnie będą jedną z tych wzorców kontrolek warunkowego obsługiwane na wszystkich razy.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

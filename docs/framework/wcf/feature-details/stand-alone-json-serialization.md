@@ -2,19 +2,19 @@
 title: Autonomiczna serializacja kodu JSON
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: b84e7dbb91c4f1e94ae0701dffcca50b7834df6c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841047"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618425"
 ---
 # <a name="stand-alone-json-serialization"></a>Autonomiczna serializacja kodu JSON
 JSON (JavaScript Object Notation) jest formatem danych przeznaczone do użycia przez kod JavaScript na stronach sieci Web uruchomionych w przeglądarce. Jest to domyślny format danych używany przez usługi ASP.NET AJAX, utworzone w Windows Communication Foundation (WCF).  
   
  Ten format można również podczas tworzenie usług AJAX bez integracji z usługą ASP.NET — w tym przypadku XML jest ustawieniem domyślnym, ale można wybrać JSON.  
   
- Na koniec, jeśli wymagana jest obsługa JSON, ale są nietworzenie usługa AJAX <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> umożliwia bezpośrednio serializować obiekty platformy .NET na dane JSON i deserializować tych danych do wystąpienia typów .NET. Aby uzyskać opis jak to zrobić, zobacz [jak: serializacji i deserializacji danych JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+ Na koniec, jeśli wymagana jest obsługa JSON, ale są nietworzenie usługa AJAX <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> umożliwia bezpośrednio serializować obiekty platformy .NET na dane JSON i deserializować tych danych do wystąpienia typów .NET. Aby uzyskać opis jak to zrobić, zobacz [jak: Serializowanie i Deserializowanie danych JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  Podczas pracy z formatu JSON, te same typy .NET są obsługiwane, z pewnymi wyjątkami, ponieważ są obsługiwane przez <xref:System.Runtime.Serialization.DataContractSerializer>. Aby uzyskać listę typów obsługiwanych zobacz [typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Obejmuje to najbardziej pierwotnych typów, większość tablicy i typy kolekcji, jak również tak złożonego typy używające <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
@@ -105,7 +105,7 @@ JSON (JavaScript Object Notation) jest formatem danych przeznaczone do użycia p
   
  Szczegółowe informacje, jak polimorficznych działa serializacji i dyskusji niektórych ograniczeń, które należy przestrzegać podczas korzystania z niego zobacz sekcję zaawansowane informacje w dalszej części tego tematu.  
   
-### <a name="versioning"></a>Przechowywanie wersji  
+### <a name="versioning"></a>Obsługa wersji  
  Przechowywanie wersji funkcji, takich jak kontraktu danych <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejs, są w pełni obsługiwane w formacie JSON. Ponadto, w większości przypadków użytkownik może zdeserializować typ w jednym formacie (na przykład XML) i serializować go do innego formatu (na przykład JSON), a także zachować dane w <xref:System.Runtime.Serialization.IExtensibleDataObject>. Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Należy pamiętać, JSON jest nieuporządkowaną, dzięki czemu utracenie wszelkich informacji o zamówieniu. Ponadto JSON nie obsługuje wiele pary klucz/wartość z taką samą nazwę klucza. Ponadto wszystkie operacje na <xref:System.Runtime.Serialization.IExtensibleDataObject> są założenia polimorficznych —, która jest ich typ pochodny są przypisane do <xref:System.Object>, typ podstawowy dla wszystkich typów.  
   
 ## <a name="json-in-urls"></a>JSON w adresach URL  
@@ -131,7 +131,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 #### <a name="factory-types"></a>Typy fabryki  
  Gdy <xref:System.Runtime.Serialization.IObjectReference> interfejs jest obsługiwany w formacie JSON, ogólnie rzecz biorąc, wszelkie typy, które wymagają funkcji "fabryki type" (zwrócenia wystąpienia innego typu niż <xref:System.Runtime.Serialization.IObjectReference.GetRealObject%28System.Runtime.Serialization.StreamingContext%29> niż typ, który implementuje interfejs) nie są obsługiwane.  
   
-### <a name="datetime-wire-format"></a>Format daty/godziny o komunikacji sieciowej  
+### <a name="datetime-wire-format"></a>DateTime Wire Format  
  <xref:System.DateTime> wartości są wyświetlane jako ciągi JSON w formie "/ Date(700000+0500) /", gdzie jest to pierwszy numer (700000 w przykładzie przedstawionym) liczbę milisekund w strefie czasowej GMT regularne (innych niż-letniego) czas od północy 1 stycznia 1970. Liczba może być ujemna do reprezentowania wcześniej razy. Element, który składa się z "+0500" w przykładzie jest opcjonalny, a także wskazuje, że czas jest <xref:System.DateTimeKind.Local> rodzaj — oznacza to, że powinny być konwertowane na podstawie lokalnej strefy czasowej na deserializacji. Jeśli jest nieobecne, czas jest przeprowadzona jako <xref:System.DateTimeKind.Utc>. Rzeczywista liczba ("0500" w tym przykładzie) i jej znak (+ lub -), są ignorowane.  
   
  Podczas serializacji <xref:System.DateTime>, <xref:System.DateTimeKind.Local> i <xref:System.DateTimeKind.Unspecified> godziny są zapisywane z użyciem przesunięcie i <xref:System.DateTimeKind.Utc> są zapisywane bez.  
@@ -260,6 +260,6 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>Nazwy kluczy z prawidłowym kodem JSON  
  Serializator koduje XML nazwy kluczy, które nie są prawidłowe nazwy XML. Na przykład element członkowski danych o nazwie "123" miałby zakodowane nazwę taką jak "\_x0031\_\_x0032\_\_x0033\_" ponieważ "123" jest nieprawidłową nazwą — element XML (rozpoczyna się od cyfry). Podobna sytuacja może powstać z niektórych zestawów znaków międzynarodowych nazw XML nie jest prawidłowy. Opis ten efekt XML na przetwarzanie JSON zawiera [mapowanie między formatami JSON i XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
-## <a name="see-also"></a>Zobacz także  
+## <a name="see-also"></a>Zobacz także
 
 - [Obsługa formatu JSON i innych formatów transferowania danych](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

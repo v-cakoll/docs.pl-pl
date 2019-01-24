@@ -1,21 +1,21 @@
 ---
-title: 'Porady: tworzenie hierarchii przy użyciu grupowania (C#)'
+title: 'Instrukcje: Tworzenie hierarchii przy użyciu grupowania (C#)'
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 8fa384ced04a90002f8f721266f163c874d6e0ff
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: bd2e8ab9fb0ed1fee68cb51d2d032b202b14ba88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560857"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a>Porady: tworzenie hierarchii przy użyciu grupowania (C#)
+# <a name="how-to-create-hierarchy-using-grouping-c"></a>Instrukcje: Tworzenie hierarchii przy użyciu grupowania (C#)
 W tym przykładzie przedstawiono sposób grupowania danych, a następnie wygeneruj XML, w oparciu o grupowania.  
   
 ## <a name="example"></a>Przykład  
  Pierwszy to przykład grupuje dane według kategorii, następnie generuje nowy plik XML, w którym hierarchię XML odzwierciedla grupowania.  
   
- W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -74,6 +74,6 @@ Console.WriteLine(newData);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zaawansowane techniki zapytań (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

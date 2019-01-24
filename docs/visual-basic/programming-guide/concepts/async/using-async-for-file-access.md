@@ -2,32 +2,32 @@
 title: Użycie Async do uzyskiwania dostępu do plików (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: e12eaa57d0f7186e9d281b89ec3abd26280e12ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76abb5460bbadd234d761a0cce2f0082bb5894a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587505"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>Użycie Async do uzyskiwania dostępu do plików (Visual Basic)
-Funkcja Async dostęp do plików. Korzystając z funkcji asynchronicznych, należy wywołać do metod asynchronicznych bez przy użyciu wywołania zwrotne i dzielenia kodu wielu metod lub wyrażenia lambda. Aby wprowadzić kod synchroniczne asynchroniczne, możesz tylko wywołania metody asynchronicznej zamiast metoda synchroniczna i dodać kilka słów kluczowych w kodzie.  
+Funkcja Async dostępu do plików. Za pomocą funkcji asynchronicznych, można wywoływać do metod asynchronicznych bez za pomocą wywołania zwrotne lub podział swój kod w wielu metod lub wyrażenia lambda. Aby synchroniczny kod asynchroniczny, możesz po prostu Wywołaj metodę asynchroniczną zamiast metody synchronicznej i dodać kilka słów kluczowych w kodzie.  
   
- Należy rozważyć następujące przyczyny dodawania asynchrony do wywołania dostępu do pliku:  
+ Należy rozważyć następujące przyczyny Dodawanie asynchroniczności do wywołania dostępu do pliku:  
   
--   Asynchrony sprawia, że aplikacje interfejsu użytkownika usprawnia ponieważ wątku interfejsu użytkownika, który uruchamia operację można wykonywać inne zadania. Jeśli kod musi być wykonywany w wątku interfejsu użytkownika który zajmuje dużo czasu (na przykład więcej niż 50 w milisekundach), interfejsu użytkownika może zawieszać się dopiero po zakończeniu operacji We/Wy i wątku interfejsu użytkownika można ponownie przetworzyć klawiatury i myszy zdarzenia wejściowe i inne.  
+-   Asynchroniczność sprawia, że interfejsu użytkownika aplikacji zwiększyć szybkość reakcji, ponieważ wątek interfejsu użytkownika, który uruchamia operację można wykonywać inne zadania. Jeśli kod muszą być wykonywane w wątku interfejsu użytkownika, trwa zbyt długo (np. więcej niż 50 MS), interfejs użytkownika może zawieszać się we/wy zakończenie i wątku interfejsu użytkownika jest ponownie przetwarzanie klawiatury i myszy zdarzenia wejściowe i inne.  
   
--   Asynchrony poprawia skalowalność programu ASP.NET i innych aplikacji serwerowych, zmniejszając potrzebę wątków. Jeśli aplikacja używa dedykowanego wątku na odpowiedzi i żądania tysięcy są obsługiwane jednocześnie, potrzebne są tysiące wątków. Operacje asynchroniczne często nie trzeba używać wątku podczas oczekiwania. Istniejące wątku zakończenia We/Wy będzie używać krótko po zakończeniu.  
+-   Asynchroniczność zwiększa skalowalność platformy ASP.NET i innych aplikacji opartych na serwerze, redukując potrzebę dla wątków. Jeśli aplikacja korzysta z dedykowanego wątku na odpowiedzi i tysiące żądań, które są aktualnie obsługiwane jednocześnie, prościej i skuteczniej niż wątki są wymagane. Operacje asynchroniczne często trzeba użyć wątku podczas oczekiwania. Oni korzystać z istniejącego wątku zakończenia operacji We/Wy krótko po zakończeniu.  
   
--   Opóźnienie operacji dostępu do pliku może być bardzo niskich warunkach bieżący, ale opóźnienie może znacznie zwiększyć w przyszłości. Na przykład plik może przenieść do serwera, który jest na całym świecie.  
+-   Opóźnienie operacji dostępu do pliku może być bardzo niska, w ramach bieżących warunków, ale opóźnienie może znacznie zwiększyć w przyszłości. Na przykład pliku mogą być przenoszone do serwera, który jest na całym świecie.  
   
--   Dodany korzystać z funkcji asynchronicznych jest mała.  
+-   Dodano obciążenie związane z użyciem funkcji asynchronicznej jest mała.  
   
--   Zadania asynchronicznego łatwo mogą być uruchamiane równolegle.  
+-   Łatwo można uruchomić zadania asynchroniczne równolegle.  
   
 ## <a name="running-the-examples"></a>Uruchamianie przykładów  
- Aby uruchomić przykłady w tym temacie, można utworzyć **aplikacji WPF** lub **aplikacji Windows Forms** , a następnie dodaj **przycisk**. Przycisk `Click` zdarzeń, dodaj wywołanie do metody pierwszy w każdym przykładzie.  
+ Aby uruchomić przykłady w tym temacie, można utworzyć **aplikacji WPF** lub **aplikacja interfejsu Windows Forms** , a następnie dodaj **przycisk**. W przycisku `Click` zdarzeń, dodaj wywołanie do pierwszej metody w każdym przykładzie.  
   
- W poniższych przykładach są następujące `Imports` instrukcje.  
+ W poniższych przykładach, m.in `Imports` instrukcji.  
   
 ```vb  
 Imports System  
@@ -38,13 +38,13 @@ Imports System.Text
 Imports System.Threading.Tasks  
 ```  
   
-## <a name="use-of-the-filestream-class"></a>Użyj klasy FileStream  
- Przykłady w tym temacie <xref:System.IO.FileStream> klasy, która jest dostępna opcja, która powoduje występowanie asynchroniczne We/Wy na poziomie systemu operacyjnego. Przy użyciu tej opcji, można uniknąć, blokuje puli wątków w wielu przypadkach. Aby włączyć tę opcję, należy określić `useAsync=true` lub `options=FileOptions.Asynchronous` argument w wywołaniu konstruktora.  
+## <a name="use-of-the-filestream-class"></a>Użycie klasy FileStream  
+ Przykłady w tym temacie <xref:System.IO.FileStream> klasy, która jest dostępna opcja, który powoduje, że asynchroniczne operacje We/Wy na poziomie systemu operacyjnego. Za pomocą tej opcji, możesz uniknąć blokowania puli wątków w wielu przypadkach. Aby włączyć tę opcję, należy określić `useAsync=true` lub `options=FileOptions.Asynchronous` argument w wywołaniu konstruktora.  
   
- Nie można użyć tej opcji z <xref:System.IO.StreamReader> i <xref:System.IO.StreamWriter> otwarcia bezpośrednio, określając ścieżkę pliku. Jednak można użyć tej opcji, jeśli zostaną podane <xref:System.IO.Stream> który <xref:System.IO.FileStream> klasy otwarty. Należy zauważyć, że wywołania asynchroniczne szybsze w aplikacjach interfejsu użytkownika, nawet jeśli puli wątków jest zablokowana, ponieważ wątku interfejsu użytkownika nie jest blokowane podczas oczekiwania.  
+ Nie można użyć tej opcji z <xref:System.IO.StreamReader> i <xref:System.IO.StreamWriter> Jeśli możesz otworzyć bezpośrednio, określając ścieżkę do pliku. Jednak można użyć tej opcji, jeśli zostaną podane <xref:System.IO.Stream> , <xref:System.IO.FileStream> klasy otwarty. Należy zauważyć, że wywołania asynchroniczne szybsza w interfejsie użytkownika aplikacji, nawet jeśli puli wątków jest zablokowany, ponieważ wątek interfejsu użytkownika nie jest blokowane podczas oczekiwania.  
   
 ## <a name="writing-text"></a>Pisanie tekstu  
- Poniższy przykład zapisuje tekst w pliku. W każdej await instrukcji, metoda natychmiast kończy pracę. Po zakończeniu operacji We/Wy pliku metody wznawia działanie w instrukcji, która wykonuje instrukcję await. Należy zauważyć, że w definicji metody, które używają instrukcja await modyfikatora async.  
+ Poniższy przykład zapisuje tekst do pliku. W każdej await instrukcji, metoda natychmiast kończy pracę. Po zakończeniu operacji We/Wy pliku metody wznawia działanie w instrukcji, która następuje po instrukcji czekania. Należy zauważyć, że w definicji metody, które używają instrukcji czekania modyfikatora async.  
   
 ```vb  
 Public Async Sub ProcessWrite()  
@@ -66,17 +66,17 @@ Private Async Function WriteTextAsync(filePath As String, text As String) As Tas
 End Function  
 ```  
   
- Przykład oryginalnego ma instrukcji `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, która jest zmniejszenie następujące dwie instrukcje:  
+ Przykład oryginalnego zawiera instrukcję `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, który jest zmniejszenie dwie poniższe instrukcje:  
   
 ```vb  
 Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length)  
 Await theTask  
 ```  
   
- Pierwsza instrukcja zwraca klasę task i powoduje, że przetwarzanie pliku rozpocząć. Drugi instrukcji z await powoduje, że metoda natychmiast wyjść i wrócić inne zadanie. Po zakończeniu przetwarzania później plików, wykonanie zwraca do instrukcji następującej await. Aby uzyskać więcej informacji, zobacz [przepływ sterowania w aplikacjach asynchronicznych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ Pierwsza instrukcja zwraca klasę task i powoduje, że przetwarzanie pliku rozpocząć. Druga instrukcja z await powoduje, że metody od razu zakończyć proces i zwraca inne zadanie. Po zakończeniu przetwarzania w dalszej części plików, wykonywanie powraca do instrukcji następującej await. Aby uzyskać więcej informacji, zobacz [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Odczytywanie tekstu  
- Poniższy przykład odczytuje tekst z pliku. Tekst buforowane i umieszczane w takim przypadku <xref:System.Text.StringBuilder>. Inaczej niż w poprzednim przykładzie oceny await tworzy wartość. <xref:System.IO.Stream.ReadAsync%2A> Metoda zwraca <xref:System.Threading.Tasks.Task> \< <xref:System.Int32>>, więc tworzy oceny await `Int32` wartość (`numRead`) po zakończeniu operacji. Aby uzyskać więcej informacji, zobacz [Async zwracać typów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ Poniższy przykład odczytuje tekst z pliku. Tekst buforowane i umieszczane w tym przypadku <xref:System.Text.StringBuilder>. Inaczej niż w poprzednim przykładzie oceny await generuje wartość. <xref:System.IO.Stream.ReadAsync%2A> Metoda zwraca <xref:System.Threading.Tasks.Task> \< <xref:System.Int32>>, więc tworzy oceny await `Int32` wartość (`numRead`) po zakończeniu operacji. Aby uzyskać więcej informacji, zobacz [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -117,12 +117,12 @@ Private Async Function ReadTextAsync(filePath As String) As Task(Of String)
 End Function  
 ```  
   
-## <a name="parallel-asynchronous-io"></a>Równoległe asynchroniczne We/Wy  
- W poniższym przykładzie pokazano przetwarzanie równoległe pisząc 10 plików tekstowych. Dla każdego pliku <xref:System.IO.Stream.WriteAsync%2A> metoda zwraca klasę task, która jest następnie dodawana do listy zadań. `Await Task.WhenAll(tasks)` Instrukcji opuszcza metody i wznawia w metodzie podczas przetwarzania pliku jest zakończenie wszystkich zadań.  
+## <a name="parallel-asynchronous-io"></a>Równoległe asynchronicznego We/Wy  
+ W poniższym przykładzie pokazano przetwarzania równoległego, pisząc 10 plików tekstowych. Dla każdego pliku <xref:System.IO.Stream.WriteAsync%2A> metoda zwraca klasę task, która następnie zostanie dodany do listy zadań. `Await Task.WhenAll(tasks)` Instrukcji opuszcza metody i wznawia wewnątrz metody, gdy przetwarzanie plików jest pełny dla wszystkich zadań.  
   
- Przykład zamyka wszystkie <xref:System.IO.FileStream> wystąpień w `Finally` zablokować po zakończeniu zadania. Jeśli każda `FileStream` zamiast tego została utworzona w `Imports` instrukcji, `FileStream` może być usunięte przed ukończeniem zadania.  
+ Kod z przykładu zamyka wszystkie <xref:System.IO.FileStream> wystąpienia w `Finally` blokować po zakończeniu zadania. Jeśli każda `FileStream` zamiast tego została utworzona w `Imports` instrukcji `FileStream` może zostać usunięte przed ukończeniem zadania.  
   
- Należy pamiętać, że wszystkie wzrost wydajności prawie całkowicie z przetwarzanie równoległe i przetwarzania asynchronicznego. Zaletą asynchrony jest, aby nie zajmować wiele wątków i że nie blokowały wątek interfejsu użytkownika.  
+ Należy pamiętać, że wszelkie zwiększeniu wydajności prawie całkowicie z przetwarzanie równoległe i przetwarzania asynchronicznego. Zalety asynchroniczności to, czy nie blokując wiele wątków i że nie blokowały wątek interfejsu użytkownika.  
   
 ```vb  
 Public Async Sub ProcessWriteMult()  
@@ -158,9 +158,9 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- Korzystając z <xref:System.IO.Stream.WriteAsync%2A> i <xref:System.IO.Stream.ReadAsync%2A> metod, można określić <xref:System.Threading.CancellationToken>, którego można użyć, aby anulować operację strumienia pośredniej. Aby uzyskać więcej informacji, zobacz [Fine-Tuning Twoja aplikacja Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) i [anulowanie w zarządzanych wątkach](../../../../standard/threading/cancellation-in-managed-threads.md).  
+ Korzystając z <xref:System.IO.Stream.WriteAsync%2A> i <xref:System.IO.Stream.ReadAsync%2A> metody, można określić <xref:System.Threading.CancellationToken>, którego anulowanie strumienia środku operacji. Aby uzyskać więcej informacji, zobacz [aplikacji asynchronicznej Fine-Tuning (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) i [anulowanie w zarządzanych wątkach](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Asynchroniczne typy zwracane (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [Przepływ sterowania w aplikacjach asynchronicznych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+## <a name="see-also"></a>Zobacz także
+- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Asynchroniczne typy zwracane (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [Przepływ sterowania w programach Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)

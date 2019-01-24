@@ -2,12 +2,12 @@
 title: Zabezpieczenia powiązania niestandardowego
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 56c3ed4be894a265635c747373e0b79599ce129d
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5ed4b124fb5150974bcbe334e3fec627e027498f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221703"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584902"
 ---
 # <a name="custom-binding-security"></a>Zabezpieczenia powiązania niestandardowego
 Niniejszy przykład pokazuje sposób konfigurowania zabezpieczeń przy użyciu niestandardowego powiązania. Widoczny jest sposób użyć niestandardowego powiązania, aby włączyć zabezpieczenia na poziomie komunikatu wraz z bezpiecznym transportem. Jest to przydatne, gdy bezpiecznym transportem jest wymagana do przesyłania komunikatów między klientem a usługą i jednocześnie komunikaty muszą być bezpieczne na poziomie komunikatu. Ta konfiguracja nie jest obsługiwana przez powiązania dostarczane przez system.
@@ -186,4 +186,4 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 -   Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

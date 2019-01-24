@@ -10,12 +10,12 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: 44c8814362ebb490d5e7676496309b2124782b78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c716c07fabe5b93f13c86f8d347e4fd4d058145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800891"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569957"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Przegląd Wyrównanie, marginesy i wypełnienia
 <xref:System.Windows.FrameworkElement> Klasa udostępnia kilka właściwości, które są używane do dokładnie pozycjonować elementy podrzędne. W tym temacie omówiono cztery najważniejsze właściwości: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, i <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Efekty te właściwości są ważne, aby dowiedzieć się, ponieważ stanowią podstawę do kontrolowania położenie elementów w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
@@ -139,13 +139,13 @@ ms.locfileid: "43800891"
 ## <a name="whats-next"></a>Jaka jest przyszłość  
  Właściwości zdefiniowane przez pozycjonowania <xref:System.Windows.FrameworkElement> klasy Włączanie dokładnej kontroli położenie elementu w obrębie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Masz teraz kilka technik umożliwia lepsze położenie elementów za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Dodatkowe zasoby są dostępne objaśniające [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układ bardziej szczegółowo. [Przegląd panele](../../../../docs/framework/wpf/controls/panels-overview.md) temat zawiera szczegółowe informacje o różnych <xref:System.Windows.Controls.Panel> elementów. Temat [Instruktaż: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) wprowadza zaawansowanych technik, które pozycji składników i wiązania ich działania ze źródłami danych za pomocą elementów układu.  
+ Dodatkowe zasoby są dostępne objaśniające [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układ bardziej szczegółowo. [Przegląd panele](../../../../docs/framework/wpf/controls/panels-overview.md) temat zawiera szczegółowe informacje o różnych <xref:System.Windows.Controls.Panel> elementów. Temat [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) wprowadza zaawansowanych technik, które pozycji składników i wiązania ich działania ze źródłami danych za pomocą elementów układu.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.Margin%2A>  
- [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
- [Przykład WPF układu galerii](https://go.microsoft.com/fwlink/?LinkID=160054)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.Margin%2A>
+- [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Układ](../../../../docs/framework/wpf/advanced/layout.md)
+- [Przykład WPF układu galerii](https://go.microsoft.com/fwlink/?LinkID=160054)

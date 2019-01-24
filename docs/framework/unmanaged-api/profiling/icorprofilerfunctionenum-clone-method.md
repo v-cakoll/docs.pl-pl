@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce5d5187ee4082bb851fa24bbcda2b099e37b89f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ded15608337d040ab58cb5be45deac4711668ac3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576177"
 ---
 # <a name="icorprofilerfunctionenumclone-method"></a>ICorProfilerFunctionEnum::Clone — Metoda
-Pobiera wskaźnika interfejsu kopię [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) interfejsu.  
+Pobiera wskaźnik interfejsu do kopii tego [icorprofilerfunctionenum —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,10 @@ HRESULT Clone([out] ICorProfilerFunctionEnum **ppEnum);
   
 #### <a name="parameters"></a>Parametry  
  `ppEnum`  
- [out] Wskaźnik do wskaźnika interfejsu, który z kolei wskazuje na kopię [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) interfejsu. Modułu wyliczającego zachowuje własną stan wyliczenia, niezależnie od tego modułu wyliczającego. Jednak pozycji kursora początkowej kopii jest taki sam jak ten moduł wyliczający bieżącej pozycji kursora.  
+ [out] Wskaźnik do wskaźnika interfejsu, który z kolei wskazuje na kopię [icorprofilerfunctionenum —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) interfejsu. Kopię moduł wyliczający zachowuje swój własny stan wyliczenia, niezależnie od tego modułu wyliczającego. Jednak pozycja kursora początkowa kopia jest taki sam jak ten moduł wyliczający bieżącej pozycji kursora.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -46,6 +46,6 @@ HRESULT Clone([out] ICorProfilerFunctionEnum **ppEnum);
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerFunctionEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerFunctionEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

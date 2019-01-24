@@ -1,5 +1,5 @@
 ---
-title: Jak animować obiekt na ścieżce (animacja punktu)
+title: 'Instrukcje: Animuj obiekt na ścieżce (animacja punktu)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (point animation)
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
-ms.openlocfilehash: d6dc79cd7a15aef2a4168fffb293c5e1f33cde08
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 521caa4411f1c0137769e7c221176b5693934ad0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610529"
 ---
-# <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Jak animować obiekt na ścieżce (animacja punktu)
+# <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Instrukcje: Animuj obiekt na ścieżce (animacja punktu)
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.PointAnimationUsingPath> obiektu animować <xref:System.Windows.Point> wzdłuż ścieżki.  
   
 ## <a name="example"></a>Przykład  
@@ -30,7 +30,7 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.P
   
  Wersja kodu powyższego przykładu używane <xref:System.Windows.Media.Animation.Storyboard> animować <xref:System.Windows.Media.EllipseGeometry>, mimo że zastosowano tylko jednej animacji. A <xref:System.Windows.Media.Animation.Storyboard> często jest najprostszym sposobem na stosowanie wielu animacji, ponieważ te animacje mogą być kontrolowane przez ten sam <xref:System.Windows.Media.Animation.Storyboard>. Jednak ułatwiających stosowanie jednej animacji z właściwością przy użyciu kodu jest użycie <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metody. Aby uzyskać przykład, zobacz [animować właściwości bez użycia scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

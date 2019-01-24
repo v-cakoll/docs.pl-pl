@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1d76dcd581b54d54d6b44505e09476993b2930c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7761c2f15cd51bff798e1b12c3a5824930b344d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617723"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>IMetaDataImport2::GetGenericParamConstraintProps — Metoda
-Pobiera metadane skojarzone z ograniczenia parametru ogólnego reprezentowany przez ograniczenie określony token.  
+Pobiera metadane skojarzone z ograniczenia parametru ogólnego, reprezentowane przez ograniczenie określonego tokenu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,23 +39,23 @@ HRESULT GetGenericParamConstraintProps (
   
 #### <a name="parameters"></a>Parametry  
  `gpc`  
- [in] Token do ograniczenia parametru ogólnego, dla którego ma zostać zwrócona metadanych.  
+ [in] Token do ograniczenia parametru ogólnego, dla której ma zostać zwrócone metadanych.  
   
  `ptGenericParam`  
- [out] Wskaźnik do tokenu, który reprezentuje parametr generyczny, który jest ograniczone.  
+ [out] Wskaźnik do tokenu, który reprezentuje parametr generyczny, który jest ograniczony.  
   
  `ptkConstraintType`  
  [out] Wskaźnik do elementu TypeDef, TypeRef lub elementu TypeSpec token, który reprezentuje ograniczenie na `ptGenericParam`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

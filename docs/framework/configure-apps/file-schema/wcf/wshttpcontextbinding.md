@@ -2,12 +2,12 @@
 title: '&lt;wsHttpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-ms.openlocfilehash: a35012cbc075268fad5b371148c0fa276ffdad61
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8445829e0253d66723c3bcaf7416885cde6d9271
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559013"
 ---
 # <a name="ltwshttpcontextbindinggt"></a>&lt;wsHttpContextBinding&gt;
 Dostarcza kontekst dla <xref:System.ServiceModel.WSHttpBinding> wymaga, aby poziom ochrony były podpisane.  
@@ -80,7 +80,7 @@ Dostarcza kontekst dla <xref:System.ServiceModel.WSHttpBinding> wymaga, aby pozi
 |proxyAddress|Identyfikator URI, który określa adres serwera proxy HTTP. Jeśli `useSystemWebProxy` jest `true`, to ustawienie musi być `null`. Wartość domyślna to `null`.|  
 |receiveTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji odbierania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
 |sendTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji wysyłania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
-|textEncoding|Określa kodowanie do użycia w celu emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości są następujące:<br /><br /> -UnicodeFffeTextEncoding: Unicode BigEndian kodowania.<br />-Utf16TextEncoding: 16-bitowego kodowania.<br />-Utf8TextEncoding: 8-bitowego kodowania.<br /><br /> Wartość domyślna to Utf8TextEncoding.<br /><br /> Ten atrybut jest typu <xref:System.Text.Encoding>.|  
+|textEncoding|Określa kodowanie do użycia w celu emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości są następujące:<br /><br /> -   UnicodeFffeTextEncoding: Unicode BigEndian kodowania.<br />-   Utf16TextEncoding: 16-bitowego kodowania.<br />-   Utf8TextEncoding: 8-bitowego kodowania.<br /><br /> The default is Utf8TextEncoding.<br /><br /> Ten atrybut jest typu <xref:System.Text.Encoding>.|  
 |transactionFlow|Wartość logiczna określająca, czy powiązanie obsługuje płynące WS-transakcji. Wartość domyślna to `false`.|  
 |useDefaultWebProxy|Wartość logiczna określająca, czy jest używany serwer proxy HTTP systemu skonfigurowany automatycznie. Wartość domyślna to `true`.|  
   
@@ -98,13 +98,13 @@ Dostarcza kontekst dla <xref:System.ServiceModel.WSHttpBinding> wymaga, aby pozi
 |-------------|-----------------|  
 |[\<powiązania >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Ten element przetrzymuje kolekcję powiązań standardowych i niestandardowych.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSHttpContextBinding>  
- <xref:System.ServiceModel.Configuration.WSHttpContextBindingElement>  
- <xref:System.ServiceModel.Channels.ContextBindingElement>  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)  
- [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSHttpContextBinding>
+- <xref:System.ServiceModel.Configuration.WSHttpContextBindingElement>
+- <xref:System.ServiceModel.Channels.ContextBindingElement>
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

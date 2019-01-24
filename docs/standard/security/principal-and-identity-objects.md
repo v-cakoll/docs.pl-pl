@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c7616a3187cd5fa28f231dffd15b0bfeea4b7f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c5b74f2608022d48dbd7e63e4ddf6112c333e3f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604408"
 ---
 # <a name="principal-and-identity-objects"></a>Obiekty główne i obiekty tożsamości
 Kod zarządzany może odnaleźć tożsamości lub roli jednostki za pośrednictwem <xref:System.Security.Principal.IPrincipal> obiekt, który zawiera odwołanie do <xref:System.Security.Principal.IIdentity> obiektu. Może być przydatne do porównania obiektów tożsamości i jednostki do znanych pojęć, takich jak konta użytkowników i grup. W większości środowisk sieciowych konta użytkowników reprezentują osób lub programów, podczas gdy konta grupy reprezentują niektóre kategorie użytkownicy i prawa, które posiadają. Podobnie obiekty tożsamości .NET Framework reprezentuje użytkowników, gdy role reprezentowania członkostwa i konteksty zabezpieczeń. W .NET Framework obiekt główny hermetyzuje roli i obiektu tożsamości. Aplikacje programu .NET framework udziela praw do jednostki, na podstawie jego tożsamości lub częściej, członkostwo w roli.  
@@ -44,9 +44,9 @@ Kod zarządzany może odnaleźć tożsamości lub roli jednostki za pośrednictw
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: tworzenie obiektu WindowsPrincipal](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
-- [Instrukcje: tworzenie obiektów GenericPrincipal i GenericIdentity](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
-- [Zastępowanie obiektu podmiotu zabezpieczeń](../../../docs/standard/security/replacing-a-principal-object.md)  
-- [Personifikacja i przywracanie](../../../docs/standard/security/impersonating-and-reverting.md)  
-- [Zabezpieczenia oparte na rolach](../../../docs/standard/security/role-based-security.md)  
+- [Instrukcje: Tworzenie obiektu WindowsPrincipal](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)
+- [Instrukcje: Tworzenie obiektów GenericPrincipal i genericidentity — obiekty](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)
+- [Zastępowanie obiektu podmiotu zabezpieczeń](../../../docs/standard/security/replacing-a-principal-object.md)
+- [Personifikacja i przywracanie](../../../docs/standard/security/impersonating-and-reverting.md)
+- [Zabezpieczenia oparte na rolach](../../../docs/standard/security/role-based-security.md)
 - [Główne pojęcia dotyczące zabezpieczeń](../../../docs/standard/security/key-security-concepts.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d10384955e07198a4b5ea7202722bea4b831e02
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560819"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizowanie ciągów daty i godziny na platformie .NET
 
@@ -89,8 +89,8 @@ Każdy przeciążenia <xref:System.DateTime.Parse%2A> i <xref:System.DateTime.Pa
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Analizowanie ciągów](parsing-strings.md)  
-- [Formatowanie typów](formatting-types.md)  
-- [Konwersja typów w programie .NET](type-conversion.md)  
-- [Standardowa Data i godzina formatów](standard-date-and-time-format-strings.md)  
+- [Analizowanie ciągów](parsing-strings.md)
+- [Formatowanie typów](formatting-types.md)
+- [Konwersja typów w programie .NET](type-conversion.md)
+- [Standardowa Data i godzina formatów](standard-date-and-time-format-strings.md)
 - [Niestandardowa data i godzina ciągi formatujące](custom-date-and-time-format-strings.md)

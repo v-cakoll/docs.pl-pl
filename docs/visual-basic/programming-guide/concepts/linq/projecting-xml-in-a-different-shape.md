@@ -1,23 +1,23 @@
 ---
-title: Prognozowanie XML w różnych kształtu (Visual Basic)
+title: Projektowanie kodu XML w innym kształcie (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: d5fe201b14bdfa81bd4c750e17eaef6ba6e895f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9df05ff8c9dc43de861675b4780fcbdca6881bf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609723"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Prognozowanie XML w różnych kształtu (Visual Basic)
-W tym temacie przedstawiono przykład projekcji kod XML, który jest w kształcie innego niż źródło XML.  
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projektowanie kodu XML w innym kształcie (Visual Basic)
+W tym temacie przedstawiono przykład przewidywania XML, który jest w innym kształcie niż źródła XML.  
   
- Wiele typowych transformacji XML składają się z łańcuchowa zapytań, jak w poniższym przykładzie. Jest często do jakiegoś typu XML, projektu pośrednich wyników jako kolekcji typy anonimowe lub nazw typów, a następnie na koniec projektu wyniki z powrotem w formacie XML, który znajduje się w zupełnie innego kształtu niż źródłowy XML.  
+ Wiele typowych przekształceń XML składają się z zapytań łańcuchowych, jak w poniższym przykładzie. Jest wspólne rozpocząć od jakiegoś typu XML, projektu wyników pośrednich w postaci kolekcji typów anonimowych lub nazwanych typów, a następnie na koniec do projektu wyniki z powrotem do XML, który znajduje się w zupełnie innego kształtu, niż źródła XML.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie przetwarza dokument schemat WordprocessingML pobieranie węzłów akapitu z dokumentem schemat WordprocessingML. Identyfikuje również style i text każdego akapitu. Na koniec przykładzie projekcję XML z innego kształtu. W tym przykładzie kompilacje w poprzednich przykładach, w tym samouczku. Nowy raport, który wykonuje projekcji nazywa w komentarzach w poniższym kodzie.  
+ W tym przykładzie przetwarza dokumentu WordprocessingML pobieranie węzłów akapit w dokumencie WordprocessingML. Identyfikuje również styl i tekst każdego akapitu. Na koniec przykład projekty XML przy użyciu innego kształtu. W tym przykładzie opiera się na poprzednich przykładach w tym samouczku. Nowy raport, który wykonuje rzutowanie jest wywoływane w komentarzach, w poniższym kodzie.  
   
- Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu, zobacz [tworzenie źródło dokumentu pakietu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Aby uzyskać instrukcje dotyczące tworzenia dokumentu źródłowego, w tym przykładzie, zobacz [tworzenie źródłowego dokumentu pakietu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  W tym przykładzie użyto klasy z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
@@ -228,9 +228,9 @@ End Module
 ```  
   
 ## <a name="next-steps"></a>Następne kroki  
- W następnym przykładzie będzie kwerendy można znaleźć w dokumencie programu Word cały tekst:  
+ W następnym przykładzie będzie zapytania, aby znaleźć cały tekst w dokumencie programu Word:  
   
 -   [Wyszukiwanie tekstu w dokumentach programu Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Samouczek: Manipulowanie zawartości w dokumencie schemat WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Zobacz także
+- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

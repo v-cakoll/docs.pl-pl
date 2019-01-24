@@ -2,12 +2,12 @@
 title: Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a6324d5400e9fb15b3373eea4df0a15cd7c54887
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 95a717f139983be8291c2d156d8dd1626a43372a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613665"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 Windows 8 wprowadzono nowy typ aplikacji o nazwie aplikacje Windows Store. Te aplikacje są projektowane na podstawie interfejsem ekranie dotykowym. .NET framework 4.5 umożliwia aplikacji Windows Store do wywołania usługi WCF.  
@@ -99,9 +99,9 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 1.  DataContractSerializer  
   
-2.  Klasa DataContractJsonSerializer  
+2.  DataContractJsonSerializer  
   
-3.  Element XmlSerializer  
+3.  XmlSerializer  
   
 > [!WARNING]
 >  XmlDictionaryWriter.Write(DateTime) teraz zapisuje obiekt daty/godziny jako ciąg.  
@@ -174,10 +174,10 @@ void async SomeMethod()
   
  Zwróć uwagę na async — słowo kluczowe dla metody, dzięki czemu wywołania asynchronicznego i słowo kluczowe await podczas wywoływania metody asynchronicznej.  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługi WCF w blogu aplikacje Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)  
- [Klienci WCF Windows Store i zabezpieczeń](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)  
- [Aplikacje Windows Store i wywołań między maszyny](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
- [Wywołanie usługi WCF wdrożonych na platformie Azure z aplikacji Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
- [Programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [Powiązania](../../../../docs/framework/wcf/bindings.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi WCF w blogu aplikacje Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
+- [Klienci WCF Windows Store i zabezpieczeń](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
+- [Aplikacje Windows Store i wywołań między maszyny](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Wywołanie usługi WCF wdrożonych na platformie Azure z aplikacji Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [Powiązania](../../../../docs/framework/wcf/bindings.md)

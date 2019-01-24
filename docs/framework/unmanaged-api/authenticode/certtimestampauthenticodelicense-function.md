@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd77a8a81718837d55f3018564d0f4ba8fdc95ee
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9987640f988f2239a01d2dfdbcd6b1684579d8bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601510"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>Funkcja CertTimestampAuthenticodeLicense
 Sygnatury czasowe wiadomość Authenticode XrML licencji.  
@@ -46,5 +46,5 @@ HRESULT CertTimestampAuthenticodeLicense (
 ## <a name="return-value"></a>Wartość zwracana  
  `S_OK` Jeśli funkcja się powiedzie. W przeciwnym razie zwraca kod błędu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

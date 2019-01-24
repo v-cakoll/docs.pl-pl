@@ -2,12 +2,12 @@
 title: DataTableReaders
 ms.date: 03/30/2017
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
-ms.openlocfilehash: b3881ecfd895bd22a476bdac7dd0b7c1b112092e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9984dc9c215a34ab35524560e4dcbcd6bd12596d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602848"
 ---
 # <a name="datatablereaders"></a>DataTableReaders
 <xref:System.Data.DataTableReader> Przedstawia zawartość <xref:System.Data.DataTable> lub <xref:System.Data.DataSet> w postaci co najmniej jeden wynik tylko do odczytu, tylko do przodu ustawia.  
@@ -23,6 +23,6 @@ ms.locfileid: "43526381"
  [Nawigowanie w elementach DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
  W tym artykule opisano korzystanie z **odczytu** metodę, aby przeglądać zawartość **elementu DataTableReader**.  
   
-## <a name="see-also"></a>Zobacz też  
- [Pobieranie i modyfikowanie danych ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Pobieranie i modyfikowanie danych ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,16 +1,16 @@
 ---
-title: 'Porady: Określanie nazwy bazy danych'
+title: 'Instrukcje: Określanie nazw bazy danych'
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
-ms.openlocfilehash: a69fa1723c0660d3c6dfa8bfa7ec3b9e4dc75d7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1198a294cd4921728919981bae213c0ee891da6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556385"
 ---
-# <a name="how-to-specify-database-names"></a>Porady: Określanie nazwy bazy danych
-Użyj <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> właściwość <xref:System.Data.Linq.Mapping.DatabaseAttribute> atrybutu, aby określić nazwę bazy danych, kiedy nie podano nazwy dla tego połączenia.  
+# <a name="how-to-specify-database-names"></a>Instrukcje: Określanie nazw bazy danych
+Użyj <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> właściwość <xref:System.Data.Linq.Mapping.DatabaseAttribute> atrybutu, aby określić nazwę bazy danych, jeśli nie podano nazwy przez połączenie.  
   
  Aby uzyskać przykłady kodu, zobacz <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.  
   
@@ -18,10 +18,10 @@ Użyj <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> właściwość <
   
 1.  Dodaj <xref:System.Data.Linq.Mapping.DatabaseAttribute> atrybutu deklaracji klasy dla bazy danych.  
   
-2.  Dodaj <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> właściwości <xref:System.Data.Linq.Mapping.DatabaseAttribute> atrybutu.  
+2.  Dodaj <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> właściwość <xref:System.Data.Linq.Mapping.DatabaseAttribute> atrybutu.  
   
-3.  Ustaw <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> wartość właściwości na nazwę, która ma zostać określony.  
+3.  Ustaw <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> wartości właściwości, aby określić nazwę.  
   
-## <a name="see-also"></a>Zobacz też  
- [Model obiektu LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- [Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a>Zobacz także
+- [Model obiektu LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

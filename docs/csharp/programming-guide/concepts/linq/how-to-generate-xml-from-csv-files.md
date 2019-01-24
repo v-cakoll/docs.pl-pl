@@ -1,15 +1,15 @@
 ---
-title: 'Porady: generowanie kodu XML z plików CSV (C#)'
+title: 'Instrukcje: Generowanie kodu XML z plików CSV (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: 9200cfc443ae87fcbeaf87c7674f15d8a241f5dc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 769cc6c2ca8f4c05c46a0054eaccccfe3911a74c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605789"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>Porady: generowanie kodu XML z plików CSV (C#)
+# <a name="how-to-generate-xml-from-csv-files-c"></a>Instrukcje: Generowanie kodu XML z plików CSV (C#)
 W tym przykładzie pokazano, jak używać [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do generowania pliku XML z pliku wartości rozdzielanych przecinkami (CSV).  
   
 ## <a name="example"></a>Przykład  
@@ -107,6 +107,6 @@ Console.WriteLine(cust);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Projekcje i przekształcenia (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

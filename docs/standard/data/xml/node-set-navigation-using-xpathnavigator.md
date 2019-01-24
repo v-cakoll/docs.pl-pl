@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f062f7fd58efe6c350b3a119ec3bdd4d27b896db
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 58adf0251fdc7427f493e8bf9947c081bfccd2a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618133"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>Nawigacja po zestawie węzłów przy użyciu klasy XPathNavigator
 Możesz nawigować przez węzły w <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu przy użyciu metody nawigacji ustaw węzeł <xref:System.Xml.XPath.XPathNavigator> klasy. Możesz przejść za pośrednictwem wszystkich węzłów lub wybrany zestaw węzłów zwrócony przez jedną z metod wybór <xref:System.Xml.XPath.XPathNavigator> klasy.  
@@ -54,10 +54,10 @@ Możesz nawigować przez węzły w <xref:System.Xml.XPath.XPathDocument> lub <xr
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [Nawigacja po atrybutach i przestrzeni nazw węzła przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
-- [Wyodrębnianie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [Nawigacja po atrybutach i przestrzeni nazw węzła przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
+- [Wyodrębnianie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)
 - [Uzyskiwanie dostępu do silnie typizowanych danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

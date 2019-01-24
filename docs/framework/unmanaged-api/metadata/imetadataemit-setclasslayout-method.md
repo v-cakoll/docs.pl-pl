@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e22cf8e540bfdb53ad243640dac110b5750e53e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2dc1664551683066a33fb52e16e4909506601f2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588694"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout — Metoda
-Kończy układ pól dla klasy, która została zdefiniowana przez poprzednie wywołanie [DefineTypeDef — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Kończy układ pól dla klasy, która została zdefiniowana przez wcześniejsze wywołanie [definetypedef — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,35 +40,35 @@ HRESULT SetClassLayout (
   
 #### <a name="parameters"></a>Parametry  
  `td`  
- [in] `mdTypeDef` Token, który określa klasę, do którego układ określa się.  
+ [in] `mdTypeDef` Tokenu, który określa klasy, która ma być rozmieszczony.  
   
  `dwPackSize`  
- [in] Rozmiar pakowania: 1, 2, 4, 8 lub 16 bajtów. Rozmiar pakowania jest to liczba bajtów między polami sąsiadujących ze sobą.  
+ [in] Rozmiar pakowania: 1, 2, 4, 8 lub 16 bajtów. Rozmiar pakowania to liczbę bajtów między sąsiadujące pola.  
   
  `rFieldOffsets`  
- [in] Tablica [cor_field_offset —](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) struktury, z których każdy określa przesunięcie pola klasy i należące do klasy. Przerwanie tablicy o `mdTokenNil`.  
+ [in] Tablica [cor_field_offset —](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) struktur, z których każdy określa pola klasy i przesunięcie w klasie. Zakończenie tablicy przy użyciu `mdTokenNil`.  
   
  `ulClassSize`  
  [in] Rozmiar w bajtach klasy.  
   
 ## <a name="remarks"></a>Uwagi  
- Klasa jest wstępnie zdefiniowana przez wywołanie metody [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) — metoda i określania jednego z trzech układów pola klasy: automatyczna, sekwencyjny lub jawny. Możesz zazwyczaj używa automatyczny układ i let środowiska uruchomieniowego, wybierz najlepszy sposób, aby określić układ pól.  
+ Klasa jest wstępnie zdefiniowana przez wywołanie metody [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) metoda i określając jeden z trzech układów pola klasy: automatyczny, sekwencyjnych lub jawnego. Zwykle będzie Użyj automatycznego układu i pozwól środowiska uruchomieniowego wybierasz najlepszą metodę, aby zmienić układ pól.  
   
- Jednak może być pola, którego układ określa się zgodnie z rozmieszczeniem, który używa kodu niezarządzanego. W takim przypadku wybierz układ sekwencyjny lub jawny i wywołanie `SetClassLayout` przeprowadzenie układ pól:  
+ Jednakże możesz zechcieć pola rozmieszczony zgodnie z rozmieszczenie niezarządzany kod używa. W takim przypadku wybierz Sekwencyjna lub jawnego układu i wywołania `SetClassLayout` do ukończenia układ pól:  
   
--   Układ sekwencyjny: Określ rozmiar pakowania. Pole jest wyrównany zgodnie z jego rozmiar fizyczne lub rozmiar pakowania, niezależnie od wyników w mniejszych przesunięcie pola. Ustaw `rFieldOffsets` i `ulClassSize` od zera.  
+-   Sekwencyjne układu: Określ rozmiar pakowania. Pole jest wyrównany zgodnie z rozmiarem fizyczne lub rozmiar pakowania, niezależnie od wyników w mniejszych przesunięcie pola. Ustaw `rFieldOffsets` i `ulClassSize` do zera.  
   
--   Układ jawny: Określ przesunięcie każdego pola lub określić klasy i rozmiar pakowania.  
+-   Jawnego układu: Określ przesunięcie każdego pola lub określić rozmiar klasy i rozmiarem pakowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

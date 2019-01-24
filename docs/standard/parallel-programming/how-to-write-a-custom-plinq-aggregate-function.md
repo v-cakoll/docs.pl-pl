@@ -1,5 +1,5 @@
 ---
-title: 'Porady: pisanie niestandardowej funkcji agregowania w PLINQ'
+title: 'Instrukcje: Pisanie niestandardowej funkcji agregowania w PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82e4ed0f93d7c41bc36427159442cc88b0a7867d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 03bbb9b7cf33eda1cc479759740e6c5325f635fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580671"
 ---
-# <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Porady: pisanie niestandardowej funkcji agregowania w PLINQ
+# <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Instrukcje: Pisanie niestandardowej funkcji agregowania w PLINQ
 W tym przykładzie pokazano, jak używać <xref:System.Linq.ParallelEnumerable.Aggregate%2A> metody do stosowania funkcji agregacji niestandardowej sekwencji źródłowej.  
   
 > [!WARNING]
@@ -35,5 +35,5 @@ W tym przykładzie pokazano, jak używać <xref:System.Linq.ParallelEnumerable.A
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Linq.ParallelEnumerable>  
+- <xref:System.Linq.ParallelEnumerable>
 - [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

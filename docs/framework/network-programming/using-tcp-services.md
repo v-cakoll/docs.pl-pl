@@ -16,12 +16,12 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 11b0082630fb41823173a87160344d2dfff5482e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 552fb69910d7186321d834e4bc36abc867a31658
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602913"
 ---
 # <a name="using-tcp-services"></a>Stosowanie usług TCP
 <xref:System.Net.Sockets.TcpClient> Klasy żąda danych od zasobu w Internecie przy użyciu protokołu TCP. Metody i właściwości **TcpClient** abstrakcji szczegółowe informacje dotyczące tworzenia <xref:System.Net.Sockets.Socket> dla żądania i odbierania danych przy użyciu protokołu TCP. Ponieważ połączenie z urządzeniem zdalnym jest reprezentowany jako strumień, dane można czytać i napisane przy użyciu techniki obsługi strumienia środowiska .NET Framework.  
@@ -194,5 +194,5 @@ public class TcpTimeServer {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

@@ -2,12 +2,12 @@
 title: '&lt;endpointDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 58bab9aef2e20d762c303e8b698214125531a136
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4611d529c1854ee456585ad3f7aac339ff771bce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556447"
 ---
 # <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 Określa różne ustawienia odkrywania dla punktu końcowego, takie jak jego wykrywalność, zakresy i wszystkich jego rozszerzenia niestandardowe dla jego metadanych.  
@@ -16,7 +16,7 @@ Określa różne ustawienia odkrywania dla punktu końcowego, takie jak jego wyk
 \<zachowania >  
 \<endpointBehaviors>  
 \<zachowanie >  
-\<endpointDiscovery >  
+\<endpointDiscovery>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,7 +50,7 @@ Określa różne ustawienia odkrywania dla punktu końcowego, takie jak jego wyk
 |-------------|-----------------|  
 |[\<zakresy >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Kolekcja zakres identyfikatorów URI dla punktu końcowego. Więcej niż jednego zakresu identyfikatorów URI może być skojarzony z jednym punktem końcowym.|  
 |[\<Rozszerzenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [z \<endpointDiscovery >]|Kolekcja elementów XML umożliwia określenie niestandardowych metadanych do opublikowania dla punktu końcowego.|  
-|\<typy >|Kolekcja interfejsów do wyszukania.|  
+|\<types>|Kolekcja interfejsów do wyszukania.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -104,5 +104,5 @@ Określa różne ustawienia odkrywania dla punktu końcowego, takie jak jego wyk
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

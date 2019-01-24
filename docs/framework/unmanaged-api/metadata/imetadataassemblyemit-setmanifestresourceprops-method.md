@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 755c64aa00b82bf2d8213217787f4dc1916c0898
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d92129bd7c51ba2fa574f8337ba2b3727ab7b172
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599052"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps — Metoda
-Modyfikuje określony `ManifestResource` struktura metadanych.  
+Modyfikuje określonego `ManifestResource` struktury metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,28 +40,28 @@ HRESULT SetManifestResourceProps (
   
 #### <a name="parameters"></a>Parametry  
  `mr`  
- [in] Token, który określa `ManifestResource` struktura metadanych ma być zmodyfikowana.  
+ [in] Token, który określa `ManifestResource` struktury metadanych do zmodyfikowania.  
   
  `tkImplementation`  
- [in] Token typu `File` lub `AssemblyRef`, która jest mapowana do dostawcy zasobów.  
+ [in] Token typu `File` lub `AssemblyRef`, która jest mapowana na potrzeby dostawcy zasobów.  
   
  `dwOffset`  
- [in] Przesunięcie początku zasobów w pliku.  
+ [in] Przesunięcie początku zasobu w pliku.  
   
  `dwResourceFlags`  
- [in] Bitowe połączenie wartości flagi, które określają atrybuty zasobu.  
+ [in] Bitowa kombinacja wartości flagi, które określają atrybuty zasobu.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby utworzyć `ManifestResource` metadanych struktury, użyj [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) metody.  
+ Aby utworzyć `ManifestResource` struktury metadanych, użyj [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

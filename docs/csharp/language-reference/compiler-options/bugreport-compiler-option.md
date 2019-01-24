@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 6e4674acd2a5edbbffd2babf130d2078019ab9b7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 63d64acc0d0a1ed90a722db75b467bd3ce5f260e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560343"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (opcje kompilatora C#)
 Określa, że informacje o debugowaniu należy umieścić w pliku do późniejszej analizy.  
@@ -53,8 +53,8 @@ Określa, że informacje o debugowaniu należy umieścić w pliku do późniejsz
   
  Należy zauważyć, że zawartość pliku wygenerowanego udostępnienia kodu źródłowego, co może spowodować ujawnienie informacji przypadkowego.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
-- [-errorreport (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [-errorreport (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

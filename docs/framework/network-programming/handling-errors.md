@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: d199219b36e2cc06314b38303fb2296f9f3794ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599789"
 ---
 # <a name="handling-errors"></a>Obsługa błędów
 <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klasy zgłaszają wyjątki zarówno system (takie jak <xref:System.ArgumentException>) i wyjątków specyficzne dla sieci Web (służą do <xref:System.Net.WebException> zgłoszony przez <xref:System.Net.WebRequest.GetResponse%2A> metody).  
@@ -167,6 +167,6 @@ End Try
   
  Gdy **SocketException** jest zgłaszany, **SocketException** klasy zestawy <xref:System.Net.Sockets.SocketException.ErrorCode%2A> właściwość ostatni błąd gniazda systemu operacyjnego, który wystąpił. Aby uzyskać więcej informacji o kodach błędów gniazda dokumentacji interfejsu API w wersji 2.0 Winsock błąd kodu w bibliotece MSDN.  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawowe założenia obsługi wyjątków](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
- [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>Zobacz także
+- [Podstawowe założenia obsługi wyjątków](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)

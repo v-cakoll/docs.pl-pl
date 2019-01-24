@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Tworzenie usługi danych przy użyciu LINQ do SQL źródła danych (WCF Data Services)'
+title: 'Instrukcje: Tworzenie usługi danych przy użyciu LINQ do SQL źródła danych (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: e65d9dc48f128d7808f0731057ec0a5e52e65444
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7447a9f2ab0b2a9cca396ee947a0eb5fe2cc8715
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608576"
 ---
-# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Porady: Tworzenie usługi danych przy użyciu LINQ do SQL źródła danych (WCF Data Services)
+# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Instrukcje: Tworzenie usługi danych przy użyciu LINQ do SQL źródła danych (WCF Data Services)
 
 Usługi danych WCF przedstawia dane jednostki w postaci usługi danych. Dostawca odbicia pozwala na zdefiniowanie modelu danych, który opiera się na każdej klasy, która udostępnia elementy Członkowskie zwracające <xref:System.Linq.IQueryable%601> implementacji. Aby można było zaktualizować dane w źródle danych, w ramach tych zajęć musi implementować też <xref:System.Data.Services.IUpdatable> interfejsu. Aby uzyskać więcej informacji, zobacz [dostawców usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md). W tym temacie dowiesz się, jak utworzyć LINQ do klas SQL, uzyskujących dostęp do przykładowej bazy danych Northwind za pomocą dostawcy odbicia, a także jak utworzyć usługę danych, która opiera się na tych klas danych.
 
@@ -72,7 +72,7 @@ Usługi danych WCF przedstawia dane jednostki w postaci usługi danych. Dostawca
 
 6. Aby przetestować usługę danych Northwind.svc przy użyciu przeglądarki sieci Web, postępuj zgodnie z instrukcjami w temacie [uzyskiwania dostępu do usługi z przeglądarki sieci Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Instrukcje: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)
 - [Instrukcje: Tworzenie usługi danych przy użyciu dostawcy odbicia](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)

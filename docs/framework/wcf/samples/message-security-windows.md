@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-ms.openlocfilehash: e5bb27980f38237f69f77721578f30df3830ade2
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: a39d43084457d07a1b2064d80226c1186e42686a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029648"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585175"
 ---
 # <a name="message-security-windows"></a>Zabezpieczenia komunikatów — Windows
 W tym przykładzie przedstawiono sposób konfigurowania <xref:System.ServiceModel.WSHttpBinding> powiązania do użycia zabezpieczenia na poziomie komunikatu z uwierzytelnianiem Windows. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). W tym przykładzie usługa jest hostowana w Internet Information Services (IIS), a klient to aplikacja konsoli (.exe).  
@@ -80,4 +80,4 @@ public string GetCallerIdentity()
   
 3.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

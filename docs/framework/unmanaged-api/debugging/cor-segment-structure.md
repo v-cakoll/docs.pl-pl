@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: deea4e6128eace0ffa539d77bb63f7629eb72354
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 55f1c0da651d786dfdcfda6a54ee1b29db35f3d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587742"
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT — Struktura
-Zawiera informacje na temat obszar pamięci sterty zarządzanej.  
+Zawiera informacje o region pamięci w stosie zarządzanym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,18 +41,18 @@ typedef struct _COR_SEGMENT {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`start`|Adres początkowy obszaru pamięci.|  
+|`start`|Adres początkowy regionów pamięci.|  
 |`end`|Końcowy adres regionu pamięci.|  
-|`gen`|A [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) element członkowski wyliczenia wskazująca generacji regionu pamięci.|  
-|`heap`|Liczba stosu, w której znajduje się obszar pamięci. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.|  
+|`gen`|A [cordebuggenerationtypes —](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) składowej wyliczenia, która wskazuje Generowanie regionu pamięci.|  
+|`heap`|Liczba sterty, w której znajduje się regionu pamięci. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COR_SEGMENTS` Struktury reprezentuje obszar pamięci sterty zarządzanej.  `COR_SEGMENTS` obiekty są członkami [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) obiektu kolekcji, która jest wypełniana przez wywołanie metody [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) metody.  
+ `COR_SEGMENTS` Struktury reprezentuje region pamięci w zarządzanym stosie.  `COR_SEGMENTS` obiekty są członkami [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) obiekt kolekcji, który jest wypełniana przez wywołanie metody [icordebugprocess5::enumerateheapregions —](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) metody.  
   
- `heap` Pole jest numer procesora, co odpowiada sterty zgłaszają. Moduły zbierające elementy bezużyteczne stacji roboczej jego wartość jest zawsze zero, ponieważ stacje robocze mają tylko jeden sterty kolekcji pamięci. Dla modułów zbierających dane pamięci serwera jego wartość odpowiada procesora, której jest dołączona sterty. Należy pamiętać, że może istnieć więcej lub mniej pamięci sterty, niż rzeczywista procesory z powodu szczegóły implementacji moduł garbage collector.  
+ `heap` Pole jest numer procesora, który odnosi się do sterty zgłaszane. Na stacji roboczej wyrzucania elementów modułów zbierających dzienniki jego zawsze ma wartość zero, ponieważ stacje robocze mają tylko jeden stercie wyrzucania elementów bezużytecznych. Dla moduły zbierające pamięci serwera jego wartość odpowiada procesora, której jest dołączona sterty. Należy pamiętać, że może istnieć więcej lub mniej wyrzucania elementów bezużytecznych sterty, niż rzeczywista procesorów ze względu na szczegóły implementacji moduł odśmiecania pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -60,6 +60,6 @@ typedef struct _COR_SEGMENT {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

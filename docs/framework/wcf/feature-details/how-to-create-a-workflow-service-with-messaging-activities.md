@@ -1,20 +1,20 @@
 ---
-title: 'Porada: Tworzenie przepływu pracy usługi przy użyciu działań dotyczących komunikatów'
+title: 'Instrukcje: Tworzenie usługi przepływu pracy przy użyciu działań dotyczących komunikatów'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a90f525e23fcad0e46ebc378d22b8282e613643a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584980"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Porada: Tworzenie przepływu pracy usługi przy użyciu działań dotyczących komunikatów
-W tym temacie opisano sposób tworzenia prostego przepływu pracy usługi przy użyciu działań dotyczących komunikatów. Ten temat koncentruje się na mechanika Tworzenie usługi przepływu pracy, gdy usługa składa się wyłącznie z działań dotyczących komunikatów. W usłudze rzeczywistych przepływ pracy zawiera wiele innych działań. Usługa implementuje jedną operację o nazwie Echo, która przyjmuje ciąg i zwraca ciąg do obiektu wywołującego. W tym temacie jest pierwszy w serii dwa tematy. Następny temat [How to: dostęp do usługi z przepływu pracy aplikacji](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) w tym artykule omówiono sposób tworzenia aplikacji przepływu pracy, który można wywołać usługi utworzonej w tym temacie.  
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Instrukcje: Tworzenie usługi przepływu pracy przy użyciu działań dotyczących komunikatów
+W tym temacie opisano sposób tworzenia prostego przepływu pracy usługi przy użyciu działań dotyczących komunikatów. Ten temat koncentruje się na mechanika Tworzenie usługi przepływu pracy, gdy usługa składa się wyłącznie z działań dotyczących komunikatów. W usłudze rzeczywistych przepływ pracy zawiera wiele innych działań. Usługa implementuje jedną operację o nazwie Echo, która przyjmuje ciąg i zwraca ciąg do obiektu wywołującego. W tym temacie jest pierwszy w serii dwa tematy. Następny temat [How to: Dostęp do usługi z przepływu pracy aplikacji](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) w tym artykule omówiono sposób tworzenia aplikacji przepływu pracy, który można wywołać usługi utworzonej w tym temacie.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Aby utworzyć projekt usługi przepływu pracy  
   
-1.  Uruchom program Visual Studio 2012.  
+1.  Start Visual Studio 2012.  
   
 2.  Kliknij przycisk **pliku** menu, wybierz opcję **New**, a następnie **projektu** do wyświetlenia **okna dialogowego Nowy projekt**. Wybierz **przepływu pracy** na liście zainstalowanych szablonów i **aplikacja usługi przepływu pracy WCF** z listy typów projektów. Nadaj projektowi nazwę `MyWFService` i użyj domyślnej lokalizacji, jak pokazano na poniższej ilustracji.  
   
@@ -81,15 +81,15 @@ W tym temacie opisano sposób tworzenia prostego przepływu pracy usługi przy u
   
 3.  Naciśnij klawisze Ctrl + F5, aby uruchomić usługę. Ikona ASP.NET Development Server jest wyświetlana w prawym dolnym pulpitu, jak pokazano na poniższej ilustracji.  
   
-     ![Ikona serwera ASP.NET dla deweloperów](../../../../docs/framework/wcf/feature-details/media/aspnetdevservericon.JPG "ASPNETDEVServerIcon")  
+     ![The ASP.NET Developer Server Icon](../../../../docs/framework/wcf/feature-details/media/aspnetdevservericon.JPG "ASPNETDEVServerIcon")  
   
      Ponadto program Internet Explorer wyświetla stronę pomocy usługi WCF dla usługi.  
   
      ![Strona pomocy WCF](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
   
-4.  Przejdź do [How to: dostęp do usługi z przepływu pracy aplikacji](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) temacie, aby utworzyć klienta przepływu pracy, który wywołuje tę usługę.  
+4.  Przejdź do [jak: Dostęp do usługi z przepływu pracy aplikacji](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) temacie, aby utworzyć klienta przepływu pracy, który wywołuje tę usługę.  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Przegląd hostowania usług przepływu pracy](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- [Działania dotyczące komunikatów](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Przegląd hostowania usług przepływu pracy](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [Działania dotyczące komunikatów](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 7ddc79a7d9864ecd7834cb75e23c9ad3a4320a91
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 97f30838d6bd61654daa800e891e3a79dd3f1297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617203"
 ---
 # <a name="methods"></a>Metody #
 
@@ -288,12 +288,12 @@ Aby uzyskać więcej informacji, zobacz [Iteratory](programming-guide/concepts/i
 
 ## <a name="see-also"></a>Zobacz także ##
 
-- [Modyfikatory dostępu](language-reference/keywords/access-modifiers.md)   
-- [Klasy statyczne i statyczne elementy członkowskie klas](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
-- [Dziedziczenie](programming-guide/classes-and-structs/inheritance.md)   
-- [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
-- [params](language-reference/keywords/params.md)   
-- [out](language-reference/keywords/out-parameter-modifier.md)   
-- [ref](language-reference/keywords/ref.md)   
-- [in](language-reference/keywords/in-parameter-modifier.md)   
+- [Modyfikatory dostępu](language-reference/keywords/access-modifiers.md)
+- [Klasy statyczne i statyczne elementy członkowskie klas](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+- [Dziedziczenie](programming-guide/classes-and-structs/inheritance.md)
+- [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [params](language-reference/keywords/params.md)
+- [out](language-reference/keywords/out-parameter-modifier.md)
+- [ref](language-reference/keywords/ref.md)
+- [in](language-reference/keywords/in-parameter-modifier.md)
 - [Przekazywanie parametrów](programming-guide/classes-and-structs/passing-parameters.md)

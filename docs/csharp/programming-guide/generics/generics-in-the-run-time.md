@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: 81e506a8b2528b6e3fa783ecd90aa4aa8987bbe5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f68dbec16a82b6504d2fb93581d9d52ddf614c0d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587271"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Typy ogólne w czasie wykonywania (Przewodnik programowania w języku C#)
 W przypadku typu ogólnego lub metody jest kompilowany na język Microsoft intermediate language (MSIL), zawiera metadane, które identyfikuje go jako parametrów typu. Jak kod w języku MSIL dla typu ogólnego jest używany różni się w oparciu czy parametr typu podana jest wartość typu lub typów referencyjnych.  
@@ -47,9 +47,9 @@ W przypadku typu ogólnego lub metody jest kompilowany na język Microsoft inter
   
  Ponadto podczas tworzenia wystąpienia rodzajowego klasy C# za pomocą parametru wartości typu lub odwołanie do typu, odbicie można badać je w czasie wykonywania i można ustalić typu rzeczywistego i jego parametr typu.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections.Generic>  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- <xref:System.Collections.Generic>
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)
 - [Typy ogólne](~/docs/standard/generics/index.md)

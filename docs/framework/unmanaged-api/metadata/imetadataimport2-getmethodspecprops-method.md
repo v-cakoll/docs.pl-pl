@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3249ad76c428752c91540e135bc978d3fe835de1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69af794d5405894d24f0d7545613a0e85ca3ec6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574017"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps — Metoda
-Pobiera token podpisu metadanych metody odwołuje się określony element MethodSpec.  
+Sygnatura metadanych metody odwołuje się określona MethodSpec pobiera token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,26 +40,26 @@ HRESULT GetMethodSpecProps (
   
 #### <a name="parameters"></a>Parametry  
  `mi`  
- [in] Token elementu MethodSpec, który reprezentuje konkretyzacji metody.  
+ [in] Token MethodSpec, który reprezentuje wystąpienia metody.  
   
  `tkParent`  
- [out] Wskaźnik do elementu MethodDef lub MethodRef token, który reprezentuje definicję metody.  
+ [out] Wskaźnik do MethodDef lub MethodRef token, który reprezentuje definicję metody.  
   
  `ppvSigBlob`  
- [out] Wskaźnik do metadanych binarne sygnatury metody.  
+ [out] Wskaźnik do binarnych metadanych podpis metody.  
   
  `pcbSigBlob`  
  [out] Rozmiar w bajtach z `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

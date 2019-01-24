@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5b3c60845fce39ce7f904c6871e7feb16e8970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03c0a9d7315f5158948701d4322887104f0844c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603667"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField — Metoda
-Definiuje pojedynczą zmienną, która nie jest w metodzie. Ta metoda jest używana dla niektórych pól w klasach, pól bitowych i tak dalej.  
+Definiuje pojedynczej zmiennej, która nie znajduje się w metody. Ta metoda jest używana w przypadku niektórych pól w klasach, pola bitowe i tak dalej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,7 +53,7 @@ HRESULT DefineField(
  [in] Atrybuty pól.  
   
  `cSig`  
- [in] A `ULONG32` czyli rozmiar w znaki buforu, muszą zawierać podpis pola.  
+ [in] A `ULONG32` oznacza to rozmiar, w postaci, buforu, muszą zawierać podpis pola.  
   
  `signature`  
  [in] Tablica sygnatury pól.  
@@ -62,19 +62,19 @@ HRESULT DefineField(
  [in] Typ adresu.  
   
  `addr1`  
- [in] Pierwszy adres specyfikacji pola.  
+ [in] Pierwszy adres dotyczyło pola.  
   
  `addr2`  
- [in] Drugi adres specyfikacji pola.  
+ [in] Drugi adres dotyczyło pola.  
   
  `addr3`  
- [in] Trzeci adres specyfikacji pola.  
+ [in] Trzeci adres dotyczyło pola.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

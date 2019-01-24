@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 728acc09f739fe567fca4a2571cbabf1ba8838a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b19e5ce88ea34188b2757d2a0c313341fbf1e7e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604265"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod — Interfejs
-Reprezentuje metodę w magazynie symboli. Ten interfejs umożliwia dostęp do tylko powiązane symbol atrybuty metody, zamiast atrybutów związanych z typu.  
+Reprezentuje metodę w magazynie symboli. Ten interfejs zapewnia dostęp do tylko powiązane symbol atrybuty metody, zamiast atrybutów związane z typu.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
 |[GetNamespace, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getnamespace-method.md)|Pobiera obszar nazw, w którym ta metoda jest zdefiniowana.|  
-|[GetOffset, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getoffset-method.md)|Zwraca przesunięcie w ramach tej metody, która odpowiada na określonej pozycji w dokumencie.|  
+|[GetOffset, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getoffset-method.md)|Zwraca przesunięcie w ramach tej metody, która odnosi się do określonej pozycji w dokumencie.|  
 |[GetParameters, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getparameters-method.md)|Pobiera parametry dla tej metody.|  
-|[GetRanges, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getranges-method.md)|Podanej pozycji w dokumencie zwraca tablicę początkową i końcową pary przesunięcia, które odpowiadają zakresom język pośredni firmy Microsoft (MSIL), który obejmuje pozycję w ramach tej metody.|  
-|[GetRootScope, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getrootscope-method.md)|Pobiera zakres leksykalne głównego w ramach tej metody. Ten zakres obejmuje całą metody.|  
-|[GetScopeFromOffset, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getscopefromoffset-method.md)|Pobiera najbardziej otaczającym zakresie leksykalne w ramach tej metody, które umieszcza danego przesunięcia.|  
+|[GetRanges, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getranges-method.md)|Danou pozici w dokumencie zwraca tablicę rozpoczęcia i zakończenia pary przesunięcia, które odnoszą się do zakresów języka Microsoft intermediate language (MSIL) uwzględniającą pozycja w ramach tej metody.|  
+|[GetRootScope, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getrootscope-method.md)|Pobiera zakres leksykalne głównego w ramach tej metody. Ten zakres obejmuje całą metodę.|  
+|[GetScopeFromOffset, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getscopefromoffset-method.md)|Pobiera najbardziej otaczającym zakresie leksykalnym w ramach tej metody, która otacza danego przesunięcia.|  
 |[GetSequencePointCount, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getsequencepointcount-method.md)|Pobiera liczbę punktów sekwencji w ramach tej metody.|  
 |[GetSequencePoints, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getsequencepoints-method.md)|Pobiera wszystkie punkty sekwencji w ramach tej metody.|  
-|[GetSourceStartEnd, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getsourcestartend-method.md)|Pobiera dokument pozycje początkowe i końcowe dla źródła tej metody.|  
+|[GetSourceStartEnd, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getsourcestartend-method.md)|Pobiera położenie dokumentu rozpoczęcia i zakończenia dla źródłowej, tej metody.|  
 |[GetToken, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-gettoken-method.md)|Zwraca token metadanych dla tej metody.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

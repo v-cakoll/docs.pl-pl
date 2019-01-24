@@ -1,27 +1,27 @@
 ---
-title: 'Porady: porównywanie zawartości dwóch folderów (LINQ) (Visual Basic)'
+title: 'Instrukcje: Porównywanie zawartości dwóch folderów (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 02f05f540afb9dcb398cc63a16f0fbbb80a7f4cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11bd7d7b4984a52ae807c5bce38d62cf4a9978d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600612"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Porady: porównywanie zawartości dwóch folderów (LINQ) (Visual Basic)
-W tym przykładzie przedstawiono porównanie dwóch listach plików na trzy sposoby:  
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Instrukcje: Porównywanie zawartości dwóch folderów (LINQ) (Visual Basic)
+W tym przykładzie przedstawiono trzy sposoby, aby porównać dwa listach plików:  
   
--   Wykonanie zapytania dla wartość logiczna określająca, czy dwa pliku listy są identyczne.  
+-   Przy użyciu zapytań dotyczących wartość logiczna określająca, czy plik dwóch list są identyczne.  
   
--   Wykonanie zapytania dla przecięcia do pobierania plików, które znajdują się w obu folderów.  
+-   Przy użyciu zapytań dotyczących wspólną do pobierania plików, które znajdują się w obu folderów.  
   
--   Wykonanie zapytania dla różnicy do pobierania plików, które znajdują się w jednym folderze, ale nie drugiej.  
+-   Przy użyciu zapytań dotyczących różnicy do pobierania plików, które znajdują się w jednym folderze, ale nie drugiej.  
   
     > [!NOTE]
-    >  Techniki pokazane mogą być dostosowywane do porównania sekwencji obiekty dowolnego typu.  
+    >  Techniki przedstawione w tym miejscu mogą być dostosowane do porównania sekwencje obiekty dowolnego typu.  
   
- `FileComparer` Klasy pokazano poniżej przedstawiono sposób użycia klasy niestandardowej funkcji porównującej, wraz z standardowych operatorów zapytań. Klasa nie jest przeznaczony do użytku w rzeczywistych scenariuszach. Tylko używa nazwę i długość w bajtach każdego pliku, aby ustalić, czy zawartość każdego folderu są identyczne. W przypadku rzeczywistych należy zmodyfikować tego porównania do wykonania bardziej rygorystyczne sprawdzania równości.  
+ `FileComparer` Klasy wyświetlane w tym miejscu przedstawiono sposób użycia klasy niestandardowej funkcji porównującej, wraz z standardowych operatorów zapytań. Klasa nie jest przeznaczona do użytku w rzeczywistych scenariuszach. Po prostu używa nazwy i długość w bajtach każdego pliku w celu określenia, czy zawartość każdego folderu są identyczne. W rzeczywistym scenariuszu należy modyfikować tego modułu porównującego do bardziej rygorystyczne sprawdzanie równości.  
   
 ## <a name="example"></a>Przykład  
   
@@ -114,8 +114,8 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji System.Linq przestrzeni nazw.  
+ Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do obiektów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

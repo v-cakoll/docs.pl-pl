@@ -3,12 +3,12 @@ title: Tworzenie pierwszą aplikację sieci Web programu ASP.NET obsługującej 
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 76b02a0e6869b0d4de181b59296a0858aa80948c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 67489b2bb93719d8182159fbc91703399d5e8bc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840852"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588967"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Tworzenie pierwszą aplikację sieci Web programu ASP.NET obsługującej oświadczenia
 ## <a name="applies-to"></a>Dotyczy:  
@@ -33,7 +33,7 @@ ms.locfileid: "48840852"
   
  STS to usługa, która wystawia tokeny po pomyślnym uwierzytelnieniu. Firma Microsoft oferuje dwie usługi STS będące standardami branżowymi:  
   
--   [Usługi Active Directory Federation Services (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+-   [Active Directory Federation Services (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
 -   [Windows Azure usługa Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
@@ -41,11 +41,11 @@ ms.locfileid: "48840852"
   
  Aby przy użyciu programu WIF utworzyć swoją pierwszą aplikację programu ASP.NET obsługującą oświadczenia, postępuj zgodnie z instrukcjami podanymi w jednym z następujących tematów:  
   
--   [Instrukcje: tworzenie obsługującej oświadczenia aplikacji internetowej MVC ASP.NET za pomocą programu WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [Instrukcje: Tworzenie aplikacji sieci Web obsługującej oświadczenia platformy ASP.NET MVC przy użyciu programu WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Instrukcje: tworzenie obsługującej oświadczenia aplikacji formularzy internetowych ASP.NET za pomocą programu WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [Instrukcje: Tworzenie aplikacji formularzy sieci Web programu ASP.NET obsługującej oświadczenia za pomocą programu WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Instrukcje: tworzenie obsługującej oświadczenia aplikacji ASP.NET przy użyciu uwierzytelniania opartego na formularzach](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [Instrukcje: Tworzenie aplikacji programu ASP.NET obsługującej oświadczenia, za pomocą uwierzytelniania opartego na formularzach](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do korzystania z programu WIF](../../../docs/framework/security/getting-started-with-wif.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do korzystania z programu WIF](../../../docs/framework/security/getting-started-with-wif.md)

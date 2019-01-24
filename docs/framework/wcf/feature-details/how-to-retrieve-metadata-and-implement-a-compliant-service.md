@@ -2,12 +2,12 @@
 title: 'Instrukcje: Pobieranie metadanych i implementowanie zgodnej usługi'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: dc7f5d97a5201698e8dc99e4523e3ab2925f6883
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a043672ad564341209bc179f9d1596c228fe19cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608498"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Instrukcje: Pobieranie metadanych i implementowanie zgodnej usługi
 Tę samą osobę nie często, projektowania i implementacji usługi. W środowiskach, w których ważne aplikacje współpracy kontrakty mogą być zaprojektowana lub opisanego w sieci Web Services Description Language (WSDL) i deweloper musi implementować to usługa, która spełnia podane kontraktu. Można również migrować istniejącą usługę do programu Windows Communication Foundation (WCF), ale zachować format o komunikacji sieciowej. Ponadto kontrakty dwukierunkowe wymaga wywołań zaimplementować kontrakt wywołania zwrotnego, który jest również.  
@@ -59,5 +59,5 @@ Tę samą osobę nie często, projektowania i implementacji usługi. W środowis
 
 [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
-## <a name="see-also"></a>Zobacz też  
- [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>Zobacz także
+- [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

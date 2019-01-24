@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d83da6e995c35de650c496c5792e55b05dd9095
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 862488a157c1030335c5f8e3d02f9f411be6d9a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589574"
 ---
 # <a name="assembly-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń zestawów
 <a name="top"></a> Podczas kompilowania zestawu można określić zestaw uprawnień, które będą wymagane do uruchomienia. To, czy określone uprawnienia są przyznane do zestawu, czy nie, zależy od dowodów.  
@@ -62,7 +62,7 @@ ms.locfileid: "50088796"
   
  Ponieważ stosowanie silnych nazw i podpisywanie przy użyciu narzędzia [SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md) gwarantują integralność, zasady zabezpieczeń dostępu kodu można oprzeć na tych dwóch formach dowodu zestawu. Silne nazewnictwo i podpisywanie przy użyciu narzędzia [SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md) gwarantuje integralność Dzięki podpisom cyfrowym i certyfikatom. Wszystkie wymienione technologie — wyznaczania wartości skrótu weryfikacji, silne nazwy i podpisywanie przy użyciu narzędzia [SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md)— działają razem w celu zapewnienia zestawu nie została zmodyfikowana w dowolny sposób.  
   
-## <a name="see-also"></a>Zobacz też  
-- [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)  
-- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+## <a name="see-also"></a>Zobacz także
+- [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [SignTool.exe (narzędzie podpisywania)](../../../docs/framework/tools/signtool-exe.md)

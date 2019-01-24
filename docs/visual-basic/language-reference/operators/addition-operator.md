@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: da0c6f492b068c9caa50468ead47cdc08559bfce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576359"
 ---
 # <a name="-operator-visual-basic"></a>+ — Operator (Visual Basic)
 Dodaje dwie liczby i zwraca wartość dodatnią wyrażenia liczbowego. Można również do łączenia dwóch ciągów wyrażeń.  
@@ -32,7 +32,7 @@ expression1 + expression2
   
 |Termin|Definicja|  
 |---|---|  
-|`expression1`|Wymagane. Dowolne wyrażenie, liczbą lub ciągiem.|  
+|`expression1`|Wymagana. Dowolne wyrażenie, liczbą lub ciągiem.|  
 |`expression2`|Wymagane, chyba że `+` operator obliczania wartości ujemnej. Dowolne wyrażenie, liczbą lub ciągiem.|  
   
 ## <a name="result"></a>Wynik  
@@ -108,11 +108,11 @@ expression1 + expression2
   
  Aby usunąć niejednoznaczność, należy użyć `&` operator zamiast `+` dla łączenia.  
   
-## <a name="see-also"></a>Zobacz też  
- [&, operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
- [Operatory łączenia](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
- [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operatory arytmetyczne w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [&, operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)
+- [Operatory łączenia](../../../visual-basic/language-reference/operators/concatenation-operators.md)
+- [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operatory arytmetyczne w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)

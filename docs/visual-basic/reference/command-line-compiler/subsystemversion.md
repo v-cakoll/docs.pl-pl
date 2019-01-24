@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: 9c4b4d66ba002e58af87ef39ea82a7a23caa15ca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7519bb648a92cab78b4e4594a9c68a85aa932863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580919"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion — (Visual Basic)
 Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowany plik wykonywalny, określając w ten sposób wersje systemu Windows, na którym można uruchomić pliku wykonywalnego. Najczęściej ta opcja zapewnia, że plik wykonywalny mogą korzystać z funkcji zabezpieczeń, które nie są dostępne ze starszymi wersjami systemu Windows.  
@@ -53,7 +53,7 @@ Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowan
   
     -   [-target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
   
-    -   [-platform: arm](../../../visual-basic/reference/command-line-compiler/platform.md)  
+    -   [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)  
   
 -   Wartość domyślna to 6.00, jeśli używasz programu MSBuild, gdy elementem docelowym [!INCLUDE[net_v45](~/includes/net-v45-md.md)], i nie został ustawiony opcji kompilatora, które zostały określone we wcześniejszej części tej listy.  
   
@@ -64,7 +64,7 @@ Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowan
   
 
   
-## <a name="see-also"></a>Zobacz też  
-[Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 
-[Właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties)
+- [Właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties)

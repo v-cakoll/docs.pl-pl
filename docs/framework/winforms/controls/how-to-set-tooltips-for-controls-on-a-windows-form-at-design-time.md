@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ustawienie elementu ToolTips dla formantów w formularzu systemu Windows w czasie projektowania'
+title: 'Instrukcje: Ustawienie elementu ToolTips dla formantów w formularzu Windows w czasie projektowania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 689b06e8fbebe490f79ab6c12f144546472a95ff
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ebefe596728b5cabd9d24720d8c39f13c8836bd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609411"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Porady: ustawienie elementu ToolTips dla formantów w formularzu systemu Windows w czasie projektowania
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Instrukcje: Ustawienie elementu ToolTips dla formantów w formularzu Windows w czasie projektowania
 Możesz ustawić <xref:System.Windows.Forms.ToolTip> ciągu w kodzie lub w programie Windows Forms Designer. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.ToolTip> składników, zobacz [— informacje o składniku ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).  
   
 > [!NOTE]
@@ -76,7 +76,7 @@ Możesz ustawić <xref:System.Windows.Forms.ToolTip> ciągu w kodzie lub w progr
   
 2.  W **właściwości** oknie Usuwanie tekstu z **etykietki narzędzia w ToolTip1**.  
 
-## <a name="see-also"></a>Zobacz też  
-- [ToolTip, składnik — omówienie](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
-- [Instrukcje: zmienianie opóźnienia składnika ToolTip formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+## <a name="see-also"></a>Zobacz także
+- [ToolTip, składnik — omówienie](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)
+- [Instrukcje: Zmienianie opóźnienia składnika ToolTip formularzy Windows](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [ToolTip, składnik](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: KrzysztofCwalina
-ms.openlocfilehash: f0ad21f0a5b869332223d96991dd0a7bebeba420
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7d940f10799df2efc6c6d031781e1ef7cf777dd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559346"
 ---
 # <a name="protected-members"></a>Chronione elementy członkowskie
 Chronione elementy członkowskie samodzielnie nie oferuje żadnych rozszerzeń, ale mogą robić więjsze rozszerzona funkcjonalność dzięki podklasy bardziej wydajne. One może służyć do udostępnienia Dostosowywanie zaawansowane opcje bez niepotrzebnego komplikowania kodu języka głównego interfejsu publicznego.  
@@ -35,5 +35,5 @@ Chronione elementy członkowskie samodzielnie nie oferuje żadnych rozszerzeń, 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
 - [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

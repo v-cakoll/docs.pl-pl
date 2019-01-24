@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
 author: KrzysztofCwalina
-ms.openlocfilehash: 8d7b1500506ec73a0d33d5352756cb85039358e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d7174de7ddf062b829672e04952c1010fcb74058
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616939"
 ---
 # <a name="unsealed-classes"></a>Niezapieczętowane klasy
 Zapieczętowane klasy nie może być dziedziczona z i zapobiegają one rozszerzalności. Z kolei klas, które mogą być dziedziczone z są nazywane niezapieczętowane klasy.  
@@ -30,6 +30,6 @@ Zapieczętowane klasy nie może być dziedziczona z i zapobiegają one rozszerza
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
-- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
+- [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Pieczętowanie](../../../docs/standard/design-guidelines/sealing.md)

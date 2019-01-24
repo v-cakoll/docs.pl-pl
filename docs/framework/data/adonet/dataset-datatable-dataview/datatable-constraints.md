@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: fa70af311d6b4fa4e17bb3ba6110e4cea420c34c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d0b3bd649da301c563a19450d7d9b42e9d0b29e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200291"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611764"
 ---
 # <a name="datatable-constraints"></a>Ograniczenia elementu DataTable
 Ograniczenia służy do wymuszania ograniczeń dotyczących danych w <xref:System.Data.DataTable>, w celu zachowania integralności danych. Ograniczenie jest reguła automatycznego stosowane kolumny lub powiązanych kolumn, który określa sposobu działania przypadku jakiś sposób zmiany wartości wiersza. Ograniczenia są wymuszane podczas `System.Data.DataSet.EnforceConstraints` właściwość <xref:System.Data.DataSet> jest **true**. Dla przykładu kodu, który pokazuje, jak ustawić `EnforceConstraints` właściwości, zobacz <xref:System.Data.DataSet.EnforceConstraints%2A> temat referencyjny.  
@@ -92,11 +92,11 @@ UniqueConstraint custUnique = new UniqueConstraint(new DataColumn[]
 custDS.Tables["Customers"].Constraints.Add(custUnique);  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Data.DataRelation>  
- <xref:System.Data.DataTable>  
- <xref:System.Data.ForeignKeyConstraint>  
- <xref:System.Data.UniqueConstraint>  
- [Definicja schematu elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Data.DataRelation>
+- <xref:System.Data.DataTable>
+- <xref:System.Data.ForeignKeyConstraint>
+- <xref:System.Data.UniqueConstraint>
+- [Definicja schematu elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

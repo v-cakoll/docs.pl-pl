@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9676730a4f11ed77996b7a4aab4e538aba9b53c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c7452b76509d5eca592cc3b95df1f77703ec1111
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561832"
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP — Struktura
-Określa przesunięcie względną funkcji zmiany.  
+Określa przesunięcie względne funkcji zmiany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,49 +40,49 @@ typedef struct _COR_IL_MAP {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`oldOffset`|Stary Microsoft język pośredni (MSIL) przesuwane względem początku funkcji.|  
+|`oldOffset`|Stary języka Microsoft intermediate language (MSIL) przesunięcie względem początku funkcji.|  
 |`newOffset`|Nowe MSIL przesunięcie względem początku funkcji.|  
-|`fAccurate`|`true` Jeśli mapowanie jest znany jako dokładne; w przeciwnym razie `false`.|  
+|`fAccurate`|`true` Jeśli wiadomo, że mapowanie jest dokładne; w przeciwnym razie `false`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Format mapy jest następujący: debuger zakłada, że `oldOffset` odwołuje się do MSIL przesunięcie w oryginalnym niezmodyfikowanego kodu MSIL. `newOffset` Parametr odwołuje się do odpowiedniego przesunięcie MSIL kodem nowy, instrumentacją.  
+ Format mapy jest w następujący sposób: Debuger będzie przyjęto założenie, że `oldOffset` odwołuje się do przesunięcia MSIL w kodzie MSIL oryginalne, niezmodyfikowanego. `newOffset` Parametr odnosi się do odpowiedniego przesunięcia MSIL kodem nowe, instrumentowaną.  
   
- Dla wykonywanie krok po kroku, aby działała poprawnie, powinny być spełnione następujące wymagania:  
+ Przechodzenie krok po kroku, aby zapewnić prawidłowe działanie, aby uzyskać być spełnione następujące wymagania:  
   
--   Mapy mają być sortowane w kolejności rosnącej.  
+-   Mapa powinny być sortowane w kolejności rosnącej.  
   
--   Nie wymagają zmiany kolejności instrumentowanych kod MSIL.  
+-   Instrumentowane kod MSIL nie wymagają zmiany kolejności.  
   
--   Oryginalny kod MSIL nie powinien zostać usunięty.  
+-   Oryginalny kod MSIL nie powinny być usuwane.  
   
--   Mapy powinny zawierać wpisy do wszystkich punktów sekwencji z programu (PDB) pliku mapowania.  
+-   Mapa powinny zawierać wpisy, aby zamapować wszystkie punkty sekwencji z plik bazy danych (PDB) programu.  
   
- Mapa nie interpolować Brak wpisów. W poniższym przykładzie przedstawiono mapy, a jego wyniki.  
+ Mapa nie interpolacji Brak wpisów. Poniższy przykład pokazuje, mapy i jego wyniki.  
   
- Mapa:  
+ Mapy:  
   
--   Przesunięcie starego 0, 0 przesunięcie nowy  
+-   Przesunięcie stare 0, 0 nowe przesunięcie  
   
--   Przesunięcie starego 5, 10 nowych przesunięcie  
+-   Przesunięcie stare 5, 10 nowych przesunięcie  
   
--   Przesunięcie starego 9, 20 przesunięcie nowy  
+-   Przesunięcie stare 9, 20 nowych przesunięcie  
   
- Wyniki:  
+ Liczba wyników:  
   
--   Stary przesunięciem równym 0, 1, 2, 3 lub 4 zostaną zmapowane do nowego przesunięciem równym 0.  
+-   Stary przesunięcia 0, 1, 2, 3 lub 4 zostanie zamapowane do nowego przesunięcia 0.  
   
--   Stary przesunięcie 5, 6, 7 lub 8 zostaną zmapowane do nowego przesunięcie 10.  
+-   Przesunięcie stare 5, 6, 7 lub 8 zostaną odwzorowane na nowe przesunięcie 10.  
   
--   Przesunięcie starego 9 lub nowszą zostaną zmapowane do nowego przesunięcie 20.  
+-   Stary przesunięcie 9 lub nowszą zostaną odwzorowane na nowe przesunięcie 20.  
   
 -   Nowe przesunięcie 0, 1, 2, 3, 4, 5, 6, 7, 8 lub 9 zostaną zmapowane do starego przesunięciu 0.  
   
--   Nowe przesunięcie 10, 11, 12, 13, 14, 15, 16, 17, 18 lub 19 zostaną zmapowane do starego przesunięcie 5.  
+-   Nowe przesunięcie 10, 11, 12, 13, 14, 15, 16, 17, 18 lub 19 zostanie zamapowane do starego przesunięcia 5.  
   
--   Nowe przesunięcie 20 lub wyższe zostaną zmapowane do starego przesunięcie 9.  
+-   Nowe przesunięcie 20 lub nowszej zostanie zamapowane do starego przesunięcia 9.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorProf.idl  
   
@@ -90,6 +90,6 @@ typedef struct _COR_IL_MAP {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: ad0b639aec60fc1dc9b594ff774232699001db5d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e90a2f9c5681ffddb2a3ca0312bdd2f3f4078328
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589522"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Zatwierdzanie transakcji jednofazowe i wielofazowe
 Poszczególne zasoby używane w transakcji jest zarządzane przez Menedżera zasobów (MB), w których działania są koordynowany przez Menedżera transakcji (TM). [Rejestrowanie zasobów jako uczestników transakcji](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) temacie omówiono, jak (lub wiele zasobów) może być zarejestrowany w transakcji. W tym temacie opisano, jak można skoordynowanego między wyświetlone zasoby zobowiązaniom transakcji.  
@@ -109,6 +109,6 @@ public void InDoubt (Enlistment enlistment)
 ## <a name="single-phase-commit-optimization"></a>Jedna faza zatwierdzania optymalizacji  
  Zatwierdź faza pojedynczy protokół jest bardziej wydajne w czasie wykonywania, ponieważ wszystkie aktualizacje są wykonywane bez jawnego koordynacji. Aby uzyskać więcej informacji dotyczących tego protokołu, zobacz [Optymalizacja za pomocą zatwierdzania jednofazowego i awansowanie powiadomienia jednofazowego](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Optymalizacja za pomocą zatwierdzania jednofazowego i umożliwiającego awansowanie powiadomienia jednofazowego](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [Rejestrowanie zasobów jako uczestników transakcji](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+## <a name="see-also"></a>Zobacz także
+- [Optymalizacja za pomocą zatwierdzania jednofazowego i umożliwiającego awansowanie powiadomienia jednofazowego](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
+- [Rejestrowanie zasobów jako uczestników transakcji](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

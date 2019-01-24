@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dodawanie formantów do formularzy systemu Windows'
+title: 'Instrukcje: Dodawanie formantów do formularzy Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611361"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Porady: dodawanie formantów do formularzy systemu Windows
+# <a name="how-to-add-controls-to-windows-forms"></a>Instrukcje: Dodawanie formantów do formularzy Windows Forms
 Większość formularzy poprzez dodawanie formantów do powierzchni formularza do definiowania interfejsu użytkownika (UI). A *kontroli* jest składnikiem w formularzu, używane do wyświetlania informacji i akceptuje dane wejściowe użytkownika. Aby uzyskać więcej informacji na temat formantów, zobacz [kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md).  
   
 > [!NOTE]
@@ -24,7 +24,7 @@ Większość formularzy poprzez dodawanie formantów do powierzchni formularza d
   
 ### <a name="to-draw-a-control-on-a-form"></a>Narysuj kontrolkę w formularzu  
   
-1.  Otwórz formularz. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie formularzy Windows w Projektancie](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Otwórz formularz. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie formularzy Windows w Projektancie](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  W **przybornika**, kliknij kontrolkę, którą chcesz dodać do formularza.  
   
@@ -37,7 +37,7 @@ Większość formularzy poprzez dodawanie formantów do powierzchni formularza d
   
 ### <a name="to-drag-a-control-to-a-form"></a>Przeciągnij formant do formularza  
   
-1.  Otwórz formularz. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie formularzy Windows w Projektancie](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Otwórz formularz. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie formularzy Windows w Projektancie](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  W **przybornika**, ma miejsce kliknięcie kontrolki i przeciągnij je do formularza.  
   
@@ -89,9 +89,9 @@ Większość formularzy poprzez dodawanie formantów do powierzchni formularza d
     > [!IMPORTANT]
     >  Na komputerze lokalnym to zagrożenie bezpieczeństwa, za pośrednictwem sieci można uwidocznić, odwołując się do złośliwych `UserControl`. Powinien to być jedynie kwestią w przypadku złośliwe osoby tworzącej szkodliwe kontrolka niestandardowa, a następnie przez Ciebie przez pomyłkę dodawania do projektu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Instrukcje: zmienianie rozmiaru kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
- [Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+- [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Instrukcje: Zmiana rozmiaru formantów na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)
+- [Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

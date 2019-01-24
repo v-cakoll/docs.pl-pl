@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eea43e5eaa037a3b70f482b0602d8d8d3d594f75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 595bc20b51ef81d7dea61620040ceb50c9418f4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449852"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589966"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>IMetaDataTables::GetNextString — Metoda
-Pobiera indeks następnego ciągu w bieżącej kolumny tabeli.  
+Pobiera indeks następnego ciągu w bieżącej kolumnie tabeli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,20 +38,20 @@ HRESULT GetNextString (
   
 #### <a name="parameters"></a>Parametry  
  `ixString`  
- [in] Wartość indeksu z kolumną tabeli ciąg.  
+ [in] Wartość indeksu z kolumną tabeli ciągów.  
   
  `pNext`  
  [out] Wskaźnik do indeksu ciągu dalej w tej kolumnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

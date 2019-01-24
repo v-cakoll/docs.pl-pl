@@ -2,12 +2,12 @@
 title: '&lt;enableWebScript&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
-ms.openlocfilehash: 34100ce17e67e12574ec0cdd677991949d0b9214
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1115b598776ca7d28698815974e06f3de57be598
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600105"
 ---
 # <a name="ltenablewebscriptgt"></a>&lt;enableWebScript&gt;
 Ten element włącza zachowanie punktu końcowego, który pozwala na korzystanie z usługi z ASP.NET AJAX stron sieci web.  
@@ -16,7 +16,7 @@ Ten element włącza zachowanie punktu końcowego, który pozwala na korzystanie
 \<zachowania >  
 \<endpointBehaviors>  
 \<zachowanie >  
-\<enableWebScript >  
+\<enableWebScript>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,8 +42,8 @@ Ten element włącza zachowanie punktu końcowego, który pozwala na korzystanie
 ## <a name="remarks"></a>Uwagi  
  To zachowanie należy używać tylko w połączeniu z oboma [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) Powiązanie standardowe lub [ \<webMessageEncoding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md) element powiązania.  Aby uzyskać więcej informacji na temat tego zachowania, zobacz <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>  
- <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>  
- [Obsługa integracji AJAX i notacji JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- [\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>
+- <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>
+- [Obsługa integracji AJAX i notacji JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
+- [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)

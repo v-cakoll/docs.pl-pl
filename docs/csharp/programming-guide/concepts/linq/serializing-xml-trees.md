@@ -2,12 +2,12 @@
 title: Serializowanie drzew XML (C#)
 ms.date: 07/20/2015
 ms.assetid: b3937e54-4ce9-4236-ac96-14e7972aa594
-ms.openlocfilehash: f9bcf049eb6cfe129971923657f5d70a833209cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a1c39c4c85cbd01fa7c3f3f99f2dfae49e3721d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583447"
 ---
 # <a name="serializing-xml-trees-c"></a>Serializowanie drzew XML (C#)
 Serializacji drzewa XML oznacza, że Generowanie XML z drzewa XML. Może wykonywać serializację do pliku, aby konkretną implementację <xref:System.IO.TextWriter> klasy, lub na konkretną implementację <xref:System.Xml.XmlWriter>.  
@@ -23,6 +23,6 @@ Serializacji drzewa XML oznacza, że Generowanie XML z drzewa XML. Może wykonyw
 |[Serializowanie do plików, elementów TextWriter i elementów XmlWriter](../../../../csharp/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|W tym artykule opisano jak do serializacji dokument <xref:System.IO.File>, <xref:System.IO.TextWriter>, lub <xref:System.Xml.XmlWriter>.|  
 |[Serializowanie do elementu XmlReader (wywoływanie XSLT) (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|W tym artykule opisano sposób tworzenia <xref:System.Xml.XmlReader> inny moduł odczytać zawartość drzewa XML, który umożliwia.|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

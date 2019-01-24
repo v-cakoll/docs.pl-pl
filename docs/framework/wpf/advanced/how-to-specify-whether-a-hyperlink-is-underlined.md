@@ -1,5 +1,5 @@
 ---
-title: Jak określić czy hiperłącze jest podkreślone
+title: 'Instrukcje: Określ czy hiperłącze jest podkreślone'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,33 +7,33 @@ dev_langs:
 helpviewer_keywords:
 - Hyperlink control type [WPF]
 ms.assetid: 3996cfe6-1dac-4835-aeb3-c719ce9cfee5
-ms.openlocfilehash: 3d57039d959aa63c031ef467cd2f8398fc3ffd96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3199bce25d49bb471fe21735ebb919bbb7f5132c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576965"
 ---
-# <a name="how-to-specify-whether-a-hyperlink-is-underlined"></a>Jak określić czy hiperłącze jest podkreślone
-<xref:System.Windows.Documents.Hyperlink> Obiekt jest element zawartości śródwierszowy przepływu, który umożliwia hiperłącza hosta w zawartości przepływu. Domyślnie <xref:System.Windows.Documents.Hyperlink> używa <xref:System.Windows.TextDecoration> obiektu do wyświetlenia podkreślenie. <xref:System.Windows.TextDecoration> obiekty mogą być znacznym można utworzyć wystąpienia, wydajność, szczególnie w przypadku wielu <xref:System.Windows.Documents.Hyperlink> obiektów. Jeśli wprowadzisz zwiększone użycie <xref:System.Windows.Documents.Hyperlink> elementów, warto rozważyć przedstawiający podkreślenie tylko wtedy, gdy wyzwolenie zdarzenia, takie jak <xref:System.Windows.ContentElement.MouseEnter> zdarzeń.  
+# <a name="how-to-specify-whether-a-hyperlink-is-underlined"></a>Instrukcje: Określ czy hiperłącze jest podkreślone
+<xref:System.Windows.Documents.Hyperlink> Obiekt jest element zawartości śródwierszowy przepływ, który pozwala na hosta hiperlinki w dowolnej zawartości. Domyślnie <xref:System.Windows.Documents.Hyperlink> używa <xref:System.Windows.TextDecoration> obiektu, aby wyświetlić podkreślenie. <xref:System.Windows.TextDecoration> obiekty mogą być intensywnie do utworzenia wystąpienia, wydajność, zwłaszcza, jeśli dostępnych jest wiele <xref:System.Windows.Documents.Hyperlink> obiektów. Jeśli wprowadzisz zwiększone użycie <xref:System.Windows.Documents.Hyperlink> elementów, warto wziąć pod uwagę przedstawiający podkreślenie, tylko wtedy, gdy wyzwalanie zdarzenia, takie jak <xref:System.Windows.ContentElement.MouseEnter> zdarzeń.  
   
- W poniższym przykładzie jest dynamiczny podkreślenia łącza "Mój MSN" — tylko wygląda na to, kiedy <xref:System.Windows.ContentElement.MouseEnter> zdarzenie zostanie wyzwolone.  
+ W poniższym przykładzie jest dynamiczny podkreślenie dla linku "Mój MSN" — pojawia się tylko, gdy <xref:System.Windows.ContentElement.MouseEnter> zdarzenie jest wyzwalane.  
   
  ![Wyświetlanie właściwości TextDecorations hiperłącza](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")  
 Zdefiniowane za pomocą właściwości TextDecorations hiperłącza  
   
 ## <a name="example"></a>Przykład  
- Poniżej przedstawiono przykładowy kod znaczników <xref:System.Windows.Documents.Hyperlink> zdefiniowane z włączonymi i wyłączonymi podkreślenie:  
+ Ilustruje poniższy przykład kodu znaczników <xref:System.Windows.Documents.Hyperlink> zdefiniowane z lub bez podkreślenie:  
   
  [!code-xaml[Performance#PerformanceSnippet11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
   
- Poniższy przykładowy kod przedstawia sposób tworzenia podkreślenie dla <xref:System.Windows.Documents.Hyperlink> na <xref:System.Windows.ContentElement.MouseEnter> zdarzenia i usunąć go na <xref:System.Windows.ContentElement.MouseLeave> zdarzeń.  
+ Poniższy przykład kodu pokazuje, jak utworzyć podkreślenie dla <xref:System.Windows.Documents.Hyperlink> na <xref:System.Windows.ContentElement.MouseEnter> zdarzenia i usunąć go na <xref:System.Windows.ContentElement.MouseLeave> zdarzeń.  
   
  [!code-csharp[Performance#PerformanceSnippet15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml.cs#performancesnippet15)]
  [!code-vb[Performance#PerformanceSnippet15](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/hyperlink.xaml.vb#performancesnippet15)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.TextDecoration>  
- <xref:System.Windows.Documents.Hyperlink>  
- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Tworzenie dekoracji tekstu](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.TextDecoration>
+- <xref:System.Windows.Documents.Hyperlink>
+- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [Tworzenie dekoracji tekstu](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)

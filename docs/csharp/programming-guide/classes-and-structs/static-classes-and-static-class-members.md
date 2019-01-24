@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: eae8d290c25399170153bbebd0637539bc565584
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 870d7593dcfd6c2b8d58562d182d37a64484a53e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577510"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Klasy statyczne i statyczni członkowie klas (Przewodnik programowania w języku C#)
 A [statyczne](../../../csharp/language-reference/keywords/static.md) klasy jest zasadniczo taki sam jak niestatycznych klas, ale ma jedną różnicą: nie można utworzyć wystąpienia klasy statycznej. Innymi słowy, nie można użyć [nowe](../../../csharp/language-reference/keywords/new.md) — słowo kluczowe, aby utworzyć zmienną typu klasy. Ponieważ nie ma żadnej zmiennej wystąpienia, uzyskujesz dostęp do członków klasy statycznej za pomocą sama nazwa klasy. Na przykład jeśli masz statyczna klasy, która jest o nazwie `UtilityClass` zawierający publicznej statycznej metody o nazwie `MethodA`, należy wywołać metodę, jak pokazano w poniższym przykładzie:  
@@ -88,11 +88,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 
 Aby uzyskać więcej informacji, zobacz [klas statycznych](~/_csharplang/spec/classes.md#static-classes) i [statyczna i wystąpienia elementów członkowskich](~/_csharplang/spec/classes.md#static-and-instance-members) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [static](../../../csharp/language-reference/keywords/static.md)  
-- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
-- [Konstruktory statyczne](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [static](../../../csharp/language-reference/keywords/static.md)
+- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
+- [Konstruktory statyczne](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)
 - [Konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ae5c16f9f508511e4a15b2eae2c28d68238f1d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7bfdcc3c8328d71146732fc4ba5664ebee9bea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574875"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory — Metoda
 Pobiera wartość wskazującą, czy ten moduł istnieje tylko w pamięci.  
@@ -40,10 +40,10 @@ HRESULT IsInMemory(
  [out] `true` Jeśli ten moduł istnieje tylko w pamięci; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko uruchomieniowe języka wspólnego (CLR) obsługuje ładowanie modułów raw strumienie bajtów. Takie moduły są nazywane *modułów w pamięci* i nie istnieje na dysku.  
+ Środowisko uruchomieniowe języka wspólnego (CLR) obsługuje ładowanie modułów z pierwotnych strumieni bajtów. Takie moduły są nazywane *modułów w pamięci* i nie istnieje na dysku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -51,6 +51,6 @@ HRESULT IsInMemory(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
-    
- 
+## <a name="see-also"></a>Zobacz także
+
+

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c179ba23be07e8ff77e1397ed753d4287b22440
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 648a2c044920b7524ad96ff656e83268ffd55652
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612219"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived — Metoda
-Pobiera liczbę bajtów, który udało się przetrwać ostatniego pełnego, blokowanie odzyskiwania pamięci i który odwołuje się bieżącej domeny aplikacji.  
+Pobiera liczbę bajtów, które przetrwały ostatniej pełnej, blokowanie wyrzucania elementów bezużytecznych i które są przywoływane przez bieżącej domeny aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,13 +41,13 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
  [in] Identyfikator domeny żądanej aplikacji.  
   
  `pAppDomainBytesSurvived`  
- [out] Wskaźnik do liczba bajtów, które udało przetrwać po ostatnim wyrzucanie elementów bezużytecznych, które są przechowywane w tej domenie aplikacji. Po pełnej kolekcji ta liczba jest dokładne i kompletne. Po pobraniu tymczasowych ta liczba jest potencjalnie niekompletna. Ten parametr może być `null`.  
+ [out] Wskaźnik do liczby bajtów, które przetrwały po ostatnim wyrzucania elementów bezużytecznych, które są przechowywane w tej domenie aplikacji. Po pełnego ta liczba jest dokładne i kompletne. Po pobraniu tymczasowych ta liczba jest potencjalnie niekompletne. Ten parametr może być `null`.  
   
  `pRuntimeBytesSurvived`  
- [out] Wskaźnik do całkowita liczba bajtów, które udało przetrwać z ostatnich wyrzucanie elementów bezużytecznych. Po pełnej kolekcji liczba ta reprezentuje liczbę bajtów, które są przechowywane w stertach zarządzanych. Po pobraniu tymczasowych liczba ta reprezentuje liczbę bajtów, które są przechowywane na żywo w generacje tymczasowych. Ten parametr może być `null`.  
+ [out] Wskaźnik do całkowita liczba bajtów, które przetrwały od ostatniego wyrzucania elementów bezużytecznych. Po pełnego ta wartość liczbowa określa liczbę bajtów, które są przechowywane w zarządzanej sterty. Po pobraniu tymczasowych ta wartość liczbowa określa liczbę bajtów, które są przechowywane na żywo w generacje efemeryczne. Ten parametr może być `null`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
@@ -55,21 +55,21 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |COR_E_APPDOMAINUNLOADED|Domeny aplikacji został zwolniony lub nie istnieje.|  
   
 ## <a name="remarks"></a>Uwagi  
- Statystyki są aktualizowane tylko po pełnej, blokowanie odzyskiwania pamięci; występuje, oznacza to, kolekcję zawierającą wszystkie generacje i zatrzymuje się podczas pobierania aplikacji. Na przykład <xref:System.GC.Collect?displayProperty=nameWithType> przeciążenie metody wykonuje pełne, blokowanie kolekcji. Współbieżne odzyskiwanie pamięci przebiega w tle i nie są blokowane w aplikacji.  
+ Statystyki są aktualizowane tylko po pełnej, blokowanie wyrzucania elementów bezużytecznych; oznacza to, że występuje kolekcję zawierającą wszystkie generacje i który zatrzymuje aplikację podczas zbierania. Na przykład <xref:System.GC.Collect?displayProperty=nameWithType> przeciążenie metody wykonywania pełnego, blokowanie pamięci. Współbieżne wyrzucanie elementów bezużytecznych występuje w tle i nie są blokowane w aplikacji.  
   
- `GetCurrentSurvived` Metody jest odpowiednikiem niezarządzane zarządzanej <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> właściwości.  
+ `GetCurrentSurvived` Metody odpowiada niezarządzanych zarządzaną <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> właściwości.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MetaHost.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRAppDomainResourceMonitor, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- [Monitorowanie zasobów domen aplikacji](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)  
- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRAppDomainResourceMonitor, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [Monitorowanie zasobów domen aplikacji](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

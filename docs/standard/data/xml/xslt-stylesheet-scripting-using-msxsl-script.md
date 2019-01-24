@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 5c57f8964172d351ddae048ea36e63a13cf2578d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563434"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>XSLT skryptów przy użyciu arkusza stylów &lt;msxsl: Script&gt;
 <xref:System.Xml.Xsl.XslTransform> Klasa obsługuje osadzonych skryptów przy użyciu `script` elementu.  
@@ -31,7 +31,7 @@ ms.locfileid: "46584256"
   
  gdzie `msxsl` jest prefiks, który jest powiązany z przestrzeni nazw `urn:schemas-microsoft-com:xslt`.  
   
- `language` Atrybut nie jest wymagany, ale jeśli zostanie określony, jego wartość musi być jedną z następujących czynności: C#, VB, JScript, JavaScript, języka Visual Basic lub języka CSharp. Jeśli nie zostanie określona, język domyślnie JScript. `language-name` Nie jest rozróżniana wielkość liter, więc "JavaScript" i "javascript" są równoważne.  
+ `language` Atrybut nie jest wymagany, ale jeśli zostanie określony, jego wartość musi być jedną z następujących czynności: C#, VB, JScript, JavaScript, VisualBasic, or CSharp. Jeśli nie zostanie określona, język domyślnie JScript. `language-name` Nie jest rozróżniana wielkość liter, więc "JavaScript" i "javascript" są równoważne.  
   
  `implements-prefix` Atrybut jest wymagany. Ten atrybut służy do deklarację przestrzeni nazw i skojarzyć go z bloku skryptu. Wartość tego atrybutu jest prefiks, który reprezentuje obszar nazw. Ta przestrzeń nazw można zdefiniować gdzieś w arkuszu stylów.  
   
@@ -89,9 +89,10 @@ ms.locfileid: "46584256"
  Wysoce zalecane jest aby cała zawartość skryptu były umieszczane w sekcji CDATA, ponieważ operatory, identyfikatory lub ograniczniki dla danego języka ma potencjał jest błędnie zinterpretowana jako XML. Poniższy przykład pokazuje użycie operatora logicznego AND w skrypcie.  
   
 ```xml  
-<msxsl:script implements-prefix='yourprefix' language='CSharp>  
+<msxsl:script implements-prefix='yourprefix' language='CSharp'>  
     public string book(string abc, string xyz)  
-    {  if ((abc== abc)&&(abc== xyz)) return bar+xyz;  
+    {  
+        if ((abc == bar) && (abc == xyz)) return bar + xyz;  
         else return null;  
     }  
 </msxsl:script>  
@@ -146,8 +147,8 @@ public class Sample
    private const String filename = "number.xml";  
    private const String stylesheet = "calc.xsl";  
   
-   public static void Main() {  
-  
+   public static void Main()  
+   {  
     //Create the XslTransform and load the style sheet.  
     XslTransform xslt = new XslTransform();  
     xslt.Load(stylesheet);  
@@ -162,7 +163,7 @@ public class Sample
     //Transform the file.  
     xslt.Transform(doc, null, writer, null);  
     writer.Close();  
-  }   
+  }  
 }  
 ```  
   
@@ -190,7 +191,8 @@ public class Sample
   
   <msxsl:script language="C#" implements-prefix="user">  
      <![CDATA[  
-     public double circumference(double radius){  
+     public double circumference(double radius)  
+     {  
        double pi = 3.14;  
        double circ = pi*radius*2;  
        return circ;  

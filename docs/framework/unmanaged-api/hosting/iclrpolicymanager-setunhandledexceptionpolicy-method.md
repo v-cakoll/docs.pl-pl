@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6a3d5bb8a8cc5acc88373fa4952848d08ccd485
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6190d867e86ae7e77f701b8b0bdad9caee4421a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561013"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>ICLRPolicyManager::SetUnhandledExceptionPolicy — Metoda
-Określa zachowanie środowisko uruchomieniowe języka wspólnego (CLR), gdy wystąpi nieobsługiwany wyjątek.  
+Określa zachowanie środowiska uruchomieniowego języka wspólnego (CLR), po wystąpieniu nieobsługiwanego wyjątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,33 +37,33 @@ HRESULT SetUnhandledExceptionPolicy (
   
 #### <a name="parameters"></a>Parametry  
  `policy`  
- [in] Jeden z [EClrUnhandledException](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md) wartości, wskazującą, czy zachowanie jest ustawiony przez środowisko CLR lub hosta.  
+ [in] Jedną z [eclrunhandledexception —](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md) wartości, wskazującą, czy zachowanie jest ustawiony przez środowisko CLR lub hosta.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`SetUnhandledExceptionPolicy` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`SetUnhandledExceptionPolicy` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie będzie już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie środowisko CLR jest końcowa procedura obsługi dla wszystkich nieobsługiwanych wyjątków, a jego domyślnym zachowaniem jest zerwanie procesu. Hosta można zmienić to zachowanie, ustawiając `policy` wartość eHostDeterminedPolicy. Ta wartość umożliwia hosta do zaimplementowania własną zachowanie domyślne, tak jak w przypadku wcześniejszych wersji środowiska CLR.  
+ Domyślnie środowisko CLR jest ostatnim Obsługa wszystkie nieobsłużone wyjątki, a jej zachowanie domyślne jest zrywać proces. Hosta można zmienić to zachowanie przez ustawienie `policy` wartość eHostDeterminedPolicy. Ta wartość umożliwia hosta zaimplementować własną zachowanie domyślne, podobnie jak w przypadku wcześniejszych wersji środowiska CLR.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [EClrUnhandledException, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)  
- [ICLRControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [IHostPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [EClrUnhandledException, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)
+- [ICLRControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [IHostPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)

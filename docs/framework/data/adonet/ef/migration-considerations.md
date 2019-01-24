@@ -2,12 +2,12 @@
 title: Zagadnienia dotyczące migracji (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: cf705caa84742d654465a2dba005f2d8f32abcca
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 14f71de4a05c821ec21bf018fe2e2383d747c41b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575622"
 ---
 # <a name="migration-considerations-entity-framework"></a>Zagadnienia dotyczące migracji (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework zapewnia kilka korzyści z istniejącą aplikacją. Jednym z najbardziej istotna te korzyści jest możliwość stosowania modelu koncepcyjnego do oddzielnych struktur danych używanych przez aplikację ze schematu w źródle danych. Dzięki temu można łatwo wprowadzić przyszłe zmiany w modelu magazynu lub do źródła danych bez wprowadzania zmian wyrównującej do aplikacji. Aby uzyskać więcej informacji o zaletach korzystania z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], zobacz [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) i [modelu Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "48837498"
  Ścieżka do migrowania istniejących aplikacji [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zależy od zarówno typ aplikacji i istniejąca strategia dostępu do danych. Jednak należy zawsze wykonać następujące zadania podczas migracji istniejącej aplikacji do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 > [!NOTE]
->  Wszystkie te zadania są wykonywane automatycznie, gdy jest możliwe użycie narzędzi modelu Entity Data Model, począwszy od programu Visual Studio 2008. Aby uzyskać więcej informacji, zobacz [porady: Użyj Kreator modelu Entity Data Model](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+>  Wszystkie te zadania są wykonywane automatycznie, gdy jest możliwe użycie narzędzi modelu Entity Data Model, począwszy od programu Visual Studio 2008. Aby uzyskać więcej informacji, zobacz [jak: Użyj Kreatora modelu danych jednostki](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 1.  Uaktualnienie aplikacji.  
   
@@ -37,23 +37,23 @@ ms.locfileid: "48837498"
   
 2.  Zdefiniuj modeli i mapowania.  
   
-     Modelu i mapowania plików definiowania jednostek w modelu koncepcyjnego; struktury w źródle danych, takich jak tabele, procedur przechowywanych i widoków; i mapowanie między struktury źródła danych i jednostek. Aby uzyskać więcej informacji, zobacz [jak: ręcznie zdefiniować modelu i mapowania plików](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
+     Modelu i mapowania plików definiowania jednostek w modelu koncepcyjnego; struktury w źródle danych, takich jak tabele, procedur przechowywanych i widoków; i mapowanie między struktury źródła danych i jednostek. Aby uzyskać więcej informacji, zobacz [jak: Ręcznie zdefiniować modelu i mapowania plików](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
   
-     Typy, które są zdefiniowane w modelu magazynu musi odpowiadać nazwie obiektów w źródle danych. Jeśli istniejącej aplikacji udostępnia danych jako obiektami, upewnij się, że jednostki i właściwości, które są zdefiniowane w modelu koncepcyjnym odpowiadać nazwom tych istniejących klas danych i właściwości. Aby uzyskać więcej informacji, zobacz [porady: dostosowywanie modelowanie i mapowanie plików do pracy z obiektami niestandardowe](https://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708).  
+     Typy, które są zdefiniowane w modelu magazynu musi odpowiadać nazwie obiektów w źródle danych. Jeśli istniejącej aplikacji udostępnia danych jako obiektami, upewnij się, że jednostki i właściwości, które są zdefiniowane w modelu koncepcyjnym odpowiadać nazwom tych istniejących klas danych i właściwości. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie modelowanie i mapowanie plików do pracy z niestandardowych obiektów](https://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708).  
   
     > [!NOTE]
     >  Projektant modelu danych jednostki może służyć do zmiany nazwy jednostki w modelu koncepcyjnym, aby dopasować istniejących obiektów. Aby uzyskać więcej informacji, zobacz [projektancie Entity Data Model](https://msdn.microsoft.com/library/4ccd7ad6-b934-4f7c-82a0-cfd2d4a95faf).  
   
 3.  Zdefiniowanie ciągu połączenia.  
   
-     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Używa parametrów połączenia specjalnie sformatowanego, podczas wykonywania zapytań względem modelu koncepcyjnego. Te parametry połączenia hermetyzuje informacje o modelu i mapowania plików oraz połączenia ze źródłem danych. Aby uzyskać więcej informacji, zobacz [porady: Określanie parametrów połączenia](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md).  
+     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Używa parametrów połączenia specjalnie sformatowanego, podczas wykonywania zapytań względem modelu koncepcyjnego. Te parametry połączenia hermetyzuje informacje o modelu i mapowania plików oraz połączenia ze źródłem danych. Aby uzyskać więcej informacji, zobacz [jak: Zdefiniowanie ciągu połączenia](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md).  
   
 4.  Konfigurowanie projektu Visual Studio.  
   
-     Odwołuje się do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zestawów i modelu i mapowania plików musi zostać dodany do projektu programu Visual Studio. Możesz dodać te pliki mapowania do projektu, aby upewnić się, że są one wdrażane za pomocą aplikacji w lokalizacji, która jest wskazywany w parametrach połączenia. Aby uzyskać więcej informacji, zobacz [porady: ręczne skonfigurowanie projektu programu Entity Framework](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+     Odwołuje się do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zestawów i modelu i mapowania plików musi zostać dodany do projektu programu Visual Studio. Możesz dodać te pliki mapowania do projektu, aby upewnić się, że są one wdrażane za pomocą aplikacji w lokalizacji, która jest wskazywany w parametrach połączenia. Aby uzyskać więcej informacji, zobacz [jak: Ręczne konfigurowanie projektu programu Entity Framework](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Uwagi dotyczące aplikacji przy użyciu istniejących obiektów  
- Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje "plain old" obiektów CLR (POCO), nazywany również zakresu trwałość obiektów. W większości przypadków można pracować z istniejących obiektów [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , wprowadzając drobne zmiany. Aby uzyskać więcej informacji, zobacz [Praca z jednostkami obiektów POCO](https://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3). Można również przeprowadzić migrację aplikacji [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] i użyć klas danych, które są generowane przez narzędzia Entity Framework. Aby uzyskać więcej informacji, zobacz [porady: Użyj Kreator modelu Entity Data Model](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+ Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje "plain old" obiektów CLR (POCO), nazywany również zakresu trwałość obiektów. W większości przypadków można pracować z istniejących obiektów [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , wprowadzając drobne zmiany. Aby uzyskać więcej informacji, zobacz [Praca z jednostkami obiektów POCO](https://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3). Można również przeprowadzić migrację aplikacji [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] i użyć klas danych, które są generowane przez narzędzia Entity Framework. Aby uzyskać więcej informacji, zobacz [jak: Użyj Kreatora modelu danych jednostki](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Uwagi dotyczące aplikacji korzystających z dostawców ADO.NET  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawców, takich jak Klient SQL, umożliwiają zapytanie zwracające dane tabelaryczne źródła danych. Dane można również załadować do [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] zestawu danych. Na poniższej liście opisano zagadnienia dotyczące uaktualniania aplikacji korzystającej z istniejącej [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy:  
@@ -95,6 +95,6 @@ ms.locfileid: "48837498"
  Aplikacje, które zarządzania stanem.  
  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Aplikacje sieci Web, często musisz utrzymywać stan strony sieci Web lub z sesji użytkownika. Obiekty w <xref:System.Data.Objects.ObjectContext> wystąpienia może być przechowywanych w stan widoku klienta lub w stanie sesji na serwerze i później mogą być pobierane i ponownie dołączyć do nowego obiektu kontekstu. Aby uzyskać więcej informacji, zobacz [Dołączanie i odłączanie obiektów](https://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
   
-## <a name="see-also"></a>Zobacz też  
- [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Terminologia programu Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)
+## <a name="see-also"></a>Zobacz także
+- [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Terminologia programu Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)

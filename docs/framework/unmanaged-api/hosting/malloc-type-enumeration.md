@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c5e970a1677b1e43821cce9985e32ebd0726686
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97aded59f880412a6a26e7e3d664c50ff1c2f103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557412"
 ---
 # <a name="malloctype-enumeration"></a>MALLOC_TYPE — Wyliczenie
 Zawiera wartości, które określają właściwości pamięci, która jest przydzielane.  
@@ -39,17 +39,17 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`MALLOC_EXECUTABLE`|Alokacji pamięci może zawierać plik wykonywalny.|  
-|`MALLOC_THREADSAFE`|Alokacji pamięci jest bezpieczne wątkowo. Oznacza to, że pamięć jest możliwy przez wiele wątków bez żadnej synchronizacji.<br /><br /> Jeśli ta flaga nie jest ustawiona, wywołania dla obiekt musi być serializowany.|  
+|`MALLOC_EXECUTABLE`|Ilość przydzielonej pamięci może zawierać plik wykonywalny.|  
+|`MALLOC_THREADSAFE`|Ilość przydzielonej pamięci jest metodą o bezpiecznych wątkach. Oznacza to, że pamięć jest możliwy przez wiele wątków, bez żadnej synchronizacji.<br /><br /> Jeśli ta flaga nie jest ustawiona, wywołania do obiektu, trzeba go serializować.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

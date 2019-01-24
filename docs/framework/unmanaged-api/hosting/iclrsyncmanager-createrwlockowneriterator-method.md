@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eda20543c28a7b97979463928ce307df9b830103
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3554d351512f48aad65872dd9ae82d084552d518
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600248"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator — Metoda
-Żądania, które iteratora hosta na służy do określania zestawu zadań oczekujących na blokadę zapisu czytnika utworzyć środowisko uruchomieniowe języka wspólnego (CLR).  
+Żądania, które środowisko uruchomieniowe języka wspólnego (CLR) Utwórz iterator dla hosta na potrzeby określania zestawu zadań, oczekiwania na blokadę zapisu czytnika.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,42 +38,42 @@ HRESULT CreateRWLockOwnerIterator (
   
 #### <a name="parameters"></a>Parametry  
  `cookie`  
- [in] Plik cookie skojarzone z żądaną czytnika zapisującym blokady.  
+ [in] Plik cookie skojarzonego z blokadą żądany czytnik składnika zapisywania.  
   
  `pIterator`  
- [out] Wskaźnik do iterację mogą zostać przekazane do [GetRWLockOwnerNext](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md) i [DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) metody.  
+ [out] Wskaźnik do iteratora, który może być przekazywany do [getrwlockownernext —](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md) i [deleterwlockowneriterator —](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) metody.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`CreateRWLockOwnerIterator` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`CreateRWLockOwnerIterator` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator` została wywołana w wątku, który jest obecnie uruchomiona kodu zarządzanego.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator` został wywołany w wątku, który jest obecnie uruchomiona kodu zarządzanego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Hosty zwykle wywołują `CreateRWLockOwnerIterator`, `DeleteRWLockOwnerIterator`, i `GetRWLockOwnerNext` metod wykrywania zakleszczenia. Host jest odpowiedzialny za zapewnienie, że czytnik blokadę jest nadal ważny, ponieważ środowisko CLR sprawia, że próba podtrzymywania czytnika blokadę. Kilka strategii są dostępne dla hosta w celu zapewnienia ważności blokady:  
+ Hosty zwykle wywołują `CreateRWLockOwnerIterator`, `DeleteRWLockOwnerIterator`, i `GetRWLockOwnerNext` metody podczas wykrywania zakleszczeń. Host jest odpowiedzialny za zapewnienie, że czytnik blokadę jest nadal ważny, CLR sprawia, że próba podtrzymywania czytnika blokadę. Kilka strategii są dostępne dla hosta zapewnić poprawność blokady:  
   
--   Hosta można zablokować wywołania wersji na blokadę czytnika (na przykład [IHostSemaphore::ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) przy jednoczesnym zapewnieniu tego bloku nie powoduje zakleszczenia.  
+-   Hosta można zablokować wywołań wersji na blokadę reader (na przykład [ihostsemaphore::releasesemaphore —](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) przy jednoczesnym zapewnieniu, że ten blok nie spowoduje zakleszczenia.  
   
--   Host może zablokować opuszczenia oczekiwania na obiekt zdarzenia skojarzonego z czytnika blokadę ponownie zapewnienie tego bloku nie powoduje zakleszczenia.  
+-   Host może zablokować opuszczenia oczekiwanie na obiekt zdarzenia skojarzone z czytnika blokadę ponownie zapewnienie, że ten blok nie spowoduje zakleszczenia.  
   
 > [!NOTE]
->  `CreateRWLockOwnerIterator` musi zostać wywołana tylko dla wątków, które są aktualnie wykonywanych kodu niezarządzanego.  
+>  `CreateRWLockOwnerIterator` musi zostać wywołany tylko na wątki, które są aktualnie wykonuje kod niezarządzany.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [IHostSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [IHostSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

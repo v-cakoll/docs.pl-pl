@@ -2,25 +2,25 @@
 title: Przyjazne zestawy (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-ms.openlocfilehash: 91bc33f33c4fc34c6e0f3ae197ecd2b876161de3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efb22ce25bdd39fd7a511503eb3ff6792639d29e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579800"
 ---
 # <a name="friend-assemblies-visual-basic"></a>Przyjazne zestawy (Visual Basic)
-A *przyjaznego zestawu* jest zestawie, do którego mogą uzyskać dostęp do innego zestawu [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) typy i składniki. Po zidentyfikowaniu zestawu jako zestawu friend, masz już Oznacz typy i składniki jako public je, aby były dostępne dla innych zestawów. Jest to szczególnie wygodne w następujących scenariuszach:  
+A *przyjaznego zestawu* to zestaw, który mogą uzyskiwać dostęp do innego zestawu [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) typów i elementów członkowskich. Po zidentyfikowaniu zestawu jako zestaw przyjazny, masz już Oznacz typy i elementy członkowskie jako publiczny je, aby były dostępne dla innych zestawów. Jest to szczególnie wygodne w następujących scenariuszach:  
   
--   Podczas przeprowadzania testów jednostkowych, po uruchomieniu testu kodu osobny zestaw, ponieważ wymaga dostępu do elementów członkowskich w zestawie testowane oznaczonych jako `Friend`.  
+-   Podczas testowania jednostek, gdy kod testowy jest uruchamiany osobny zestaw ale wymaga dostępu do składowych w zestawie poddawana testom, które są oznaczone jako `Friend`.  
   
--   Podczas tworzenia biblioteki klas i ma zostać dodany do biblioteki są zawarte w oddzielne zestawy, ale wymagają dostępu do elementów członkowskich w istniejących zestawów, które są oznaczone jako `Friend`.  
+-   Podczas tworzenia biblioteki klas i ma zostać dodany do biblioteki znajdują się w osobnych zestawach, ale wymagają dostępu do elementów członkowskich w istniejących zestawów, które są oznaczone jako `Friend`.  
   
 ## <a name="remarks"></a>Uwagi  
- Można użyć <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aby zidentyfikować jeden lub więcej zestawów przyjazne dla danego zestawu. W poniższym przykładzie użyto <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut w zestawie A i zestawu Określa `AssemblyB` jako przyjaznego zestawu. Dzięki temu zestawu `AssemblyB` dostęp do wszystkich typów i członków w zestawie, które są oznaczone jako `Friend`.  
+ Możesz użyć <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut do identyfikowania jeden lub więcej zestawów przyjaznego dla danego zestawu. W poniższym przykładzie użyto <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu w zestawie A i określa zestaw `AssemblyB` jako przyjaznego zestawu. Dzięki temu zestaw `AssemblyB` dostęp do wszystkich typów i elementów członkowskich w zestawie, które są oznaczone jako `Friend`.  
   
 > [!NOTE]
->  Podczas kompilowania zestawu (zestawu `AssemblyB`) będzie uzyskiwać dostęp wewnętrzne typy lub wewnętrzne elementy członkowskie z innego zestawu (zestawu *A*), należy jawnie określić nazwę pliku wyjściowego (.exe lub .dll) przy użyciu **/out** — opcja kompilatora. Jest to wymagane, ponieważ kompilator nie ma jeszcze wygenerowany nazwę zestawu, w którym jest ona tworzenie w czasie, który jest wiązany odwołań zewnętrznych. Aby uzyskać więcej informacji, zobacz [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
+>  Gdy kompilujesz zestaw (zestaw `AssemblyB`) będzie uzyskiwać dostęp typy wewnętrzne lub wewnętrzne członków innego zestawu (zestaw *A*), należy jawnie określić nazwę pliku wyjściowego (.exe lub .dll), używając **/out** — opcja kompilatora. Jest to wymagane, ponieważ kompilator nie ma jeszcze wygenerować nazwę zestawu, który tworzysz w czasie, który jest wiązanie odwołań zewnętrznych. Aby uzyskać więcej informacji, zobacz [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -42,32 +42,32 @@ Public Class ClassWithFriendMethod
 End Class  
 ```  
   
- Tylko zestawy, które zostaną jawnie określone jako znajomych mogą uzyskiwać dostęp do `Friend` typy i składniki. Na przykład, jeśli zestaw B jest przyjaznego zestawu A i zestawu odwołania do zestawu C B, C nie ma dostępu do `Friend` typów w A.  
+ Tylko zestawy, które zostaną jawnie określone, zgodnie z przyjaciółmi mogą uzyskiwać dostęp do `Friend` typów i elementów członkowskich. Na przykład, jeśli zestaw B jest przyjaznego zestawu A i C zestawu odwołania do zestawu B, C nie ma dostępu do `Friend` typów w A.  
   
- Kompilator wykonuje pewne podstawowe sprawdzanie poprawności nazwy przyjaznego zestawu przekazany do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu. Jeśli zestaw *A* deklaruje *B* jako przyjaznego zestawu reguł sprawdzania poprawności, są następujące:  
+ Kompilator wykonuje niektóre podstawowe sprawdzanie poprawności nazwy przyjaznego zestawu przekazany do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu. Jeśli zestaw *A* deklaruje *B* jako zestaw przyjaznych reguły sprawdzania poprawności są następujące:  
   
--   Jeśli zestaw *A* jest silną nazwę zestawu *B* musi również być silnej nazwy. Nazwy przyjaznego zestawu, który jest przekazywany do atrybutu musi zawierać nazwę zestawu i klucz publiczny klucz silnej nazwy, który jest używany do podpisywania zestawu *B*.  
+-   Jeśli zestaw *A* jest silną nazwę zestawu *B* również musi mieć silną nazwę. Nazwy przyjaznego zestawu, który jest przekazywany do atrybutu musi zawierać nazwę zestawu i klucz publiczny klucz silnej nazwy, który jest używany do podpisywania zestawu *B*.  
   
      Nazwy przyjaznego zestawu, który jest przekazywany do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut nie może być silnej nazwy zestawu *B*: nie ma zestawu wersji, kultury, architektury lub token klucza publicznego.  
   
--   Jeśli zestaw *A* nie jest silnej nazwie, nazwy przyjaznego zestawu powinien zawierać tylko nazwę zestawu. Aby uzyskać więcej informacji, zobacz [porady: tworzenie niepodpisanych przyjazne zestawy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md).  
+-   Jeśli zestaw *A* nie jest silną nazwę, nazwy przyjaznego zestawu powinna składać się wyłącznie nazwy zestawu. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md).  
   
--   Jeśli zestaw *B* jest silnej nazwie, należy określić klucz silnej nazwy zestawu *B* za pomocą ustawienie projektu lub wiersza polecenia `/keyfile` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [porady: tworzenie podpisanego przyjazne zestawy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
+-   Jeśli zestaw *B* jest silną nazwę, należy określić klucz silnej nazwy zestawu *B* przy użyciu wiersza polecenia i ustawienie projektu `/keyfile` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie oznaczonych przyjaznych zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
   
  <xref:System.Security.Permissions.StrongNameIdentityPermission> Klasa udostępnia także możliwość udostępniania typów, z następującymi różnicami:  
   
--   <xref:System.Security.Permissions.StrongNameIdentityPermission> dotyczy poszczególnych typu przyjaznego zestawu dotyczy całego zestawu.  
+-   <xref:System.Security.Permissions.StrongNameIdentityPermission> ma zastosowanie do poszczególnych typu, gdy zestaw przyjazny, który ma zastosowanie do całego zestawu.  
   
--   Jeśli istnieją setki typów w zestawie *A* , który ma zostać udostępniona w zestawie *B*, należy dodać <xref:System.Security.Permissions.StrongNameIdentityPermission> do wszystkich z nich. Jeśli używasz przyjaznego zestawu, wystarczy raz zadeklarować relacji friend.  
+-   Jeśli istnieją setki typów w zestawie *A* , którą chcesz udostępnić zestawu *B*, trzeba dodać <xref:System.Security.Permissions.StrongNameIdentityPermission> do wszystkich z nich. Jeśli używasz zestaw przyjazny, wystarczy raz deklarowania relacji friend.  
   
--   Jeśli używasz <xref:System.Security.Permissions.StrongNameIdentityPermission>, typów, aby udostępnić musi być zadeklarowana jako publiczną. Jeśli używasz przyjaznego zestawu udostępnionego typy są deklarowane jako `Friend`.  
+-   Jeśli używasz <xref:System.Security.Permissions.StrongNameIdentityPermission>, typy, które chcesz udostępnić musi być zadeklarowana jako publiczne. Jeśli używasz zestaw przyjazny, udostępnione typy są deklarowane jako `Friend`.  
   
- Informacje na temat dostępu zestawu `Friend` typy i metody z pliku modułu (plik z rozszerzeniem modułu .netmodule), zobacz [/moduleassemblyname (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).  
+ Aby uzyskać informacje dotyczące dostępu do zestawu `Friend` typów i metod z pliku modułu (plik z rozszerzeniem .netmodule), zobacz [/moduleassemblyname (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- <xref:System.Security.Permissions.StrongNameIdentityPermission>  
- [Porady: tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [Porady: tworzenie oznaczonych przyjaznych zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Pojęcia związane z programowaniem](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- <xref:System.Security.Permissions.StrongNameIdentityPermission>
+- [Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Pojęcia związane z programowaniem](../../../../visual-basic/programming-guide/concepts/index.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e32b9a294f81208fe85a9e1de011daef0d1d5294
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdfec7ce93dd3954af03f6f4822ac00576a7e043
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562937"
 ---
 # <a name="ltmethodgt-element-net-native"></a>Element &lt;Method&gt; (architektura .NET Native)
-Zastosowanie zasad wykonywania odbicia do konstruktora lub metody.  
+Ma zastosowanie zasad odbicia środowiska uruchomieniowego do konstruktora lub metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,62 +32,62 @@ Zastosowanie zasad wykonywania odbicia do konstruktora lub metody.
 |---------------|--------------------|-----------------|  
 |`Name`|Ogólne|Atrybut wymagany. Określa nazwę metody.|  
 |`Signature`|Ogólne|Atrybut opcjonalny. Określa podpis metody. Jeśli podano wiele parametrów są oddzielone przecinkami. Na przykład następująca `<Method>` element definiuje zasady dla <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29> metody.<br /><br /> `<Type Name="System.DateTime">    <Method Name="ToString" Signature="System.String,System.IFormatProvider"            Dynamic="Required" /> </Type>`<br /><br /> Jeśli ten atrybut jest nieobecne, dyrektyw środowiska uruchomieniowego ma zastosowanie do wszystkich przeciążeń metody.|  
-|`Browse`|Odbicie|Atrybut opcjonalny. Określa, czy podczas badania informacji dotyczących metody wyliczania, jednak nie wszystkie wywołania dynamicznej w czasie wykonywania.|  
-|`Dynamic`|Odbicie|Atrybut opcjonalny. Sterowanie dostępem środowiska uruchomieniowego do konstruktora lub metody, aby włączyć dynamiczne programowania. Ta zasada zapewnia, że element członkowski może być wywoływany dynamicznie w czasie wykonywania.|  
+|`Browse`|Odbicie|Atrybut opcjonalny. Określa wykonanie zapytania dotyczącego informacji o wyliczanie metody, ale nie uwzględnia żadnych wywołanie dynamiczne w czasie wykonywania.|  
+|`Dynamic`|Odbicie|Atrybut opcjonalny. Dostęp do środowiska uruchomieniowego formanty do konstruktora lub metody, aby włączyć dynamiczne programowania. Te zasady zapewniają, że element członkowski może być wywoływany dynamicznie w czasie wykonywania.|  
   
 ## <a name="name-attribute"></a>Nazwa atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*method_name*|Nazwa metody. Typ metody jest określany przez element nadrzędny [ \<typu >](../../../docs/framework/net-native/type-element-net-native.md) lub [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementu.|  
+|*method_name*|Nazwa metody. Typ metody jest definiowany przez nadrzędne [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) lub [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementu.|  
   
 ## <a name="signature-attribute"></a>Atrybut podpisu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*method_signature*|Typy parametrów, które tworzą podpis metody. Wiele parametrów są oddzielone przecinkami, na przykład `"System.String,System.Int32,System.Int32)"`. Nazwy parametrów typu powinny być w pełni kwalifikowana.|  
+|*method_signature*|Typy parametrów, które tworzą podpis metody. Wiele parametrów są oddzielone przecinkami, na przykład `"System.String,System.Int32,System.Int32)"`. Nazwami typu parametru powinna być w pełni kwalifikowana.|  
   
-## <a name="all-other-attributes"></a>Inne atrybuty  
+## <a name="all-other-attributes"></a>Wszystkie inne atrybuty  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*policy_setting*|Ustawienia do zastosowania dla tego typu zasad. Możliwe wartości to `Auto`, `Excluded`, `Included`, i `Required`. Aby uzyskać więcej informacji, zobacz [ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Ustawienia do zastosowania do tego typu zasad. Możliwe wartości to `Auto`, `Excluded`, `Included`, i `Required`. Aby uzyskać więcej informacji, zobacz [ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Parametr >](../../../docs/framework/net-native/parameter-element-net-native.md)|Stosuje zasady do typu argumentu przekazanego do metody.|  
-|[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|Stosuje zasady do typu parametru typu ogólnego lub metody.|  
-|[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|Stosuje zasady do typu, o ile tej zasady zostały zastosowane do metody reprezentowany przez zawierający `<Method>` elementu.|  
-|[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|Stosuje zasady do typu reprezentowanego przez <xref:System.Type> argument przekazany do metody.|  
+|[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|Stosuje zasady do typu argumentu przekazanego do metody.|  
+|[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|Stosuje zasady do typu parametru typu ogólnego lub metody.|  
+|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Stosuje zasady do typu, jeśli te zasady zostały doliczone do metody reprezentowanej przez zawierający `<Method>` elementu.|  
+|[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|Stosuje zasady na typ reprezentowany przez <xref:System.Type> argument przekazywany do metody.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje odbicia zasady do typu i jej elementów członkowskich.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i jej elementów członkowskich.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowany typ rodzajowy i jej elementów członkowskich.|  
   
 ## <a name="remarks"></a>Uwagi  
- A `<Method>` element metody rodzajowej dotyczy wszystkich wystąpień, które nie mają własnych zasad polityki.  
+ Element `<Method>` elementu metody ogólnej stosuje swoje zasady do wszystkich wystąpień, które nie mają własnych zasad.  
   
- Można użyć `Signature` atrybutu, aby określić zasady przeciążenia konkretnej metody. W przeciwnym razie, jeśli `Signature` nie jest obecny atrybut, dyrektyw środowiska uruchomieniowego mają zastosowanie do wszystkich przeciążeń metody.  
+ Możesz użyć `Signature` atrybutu, aby określić zasady dla przeciążeń określonej metody. W przeciwnym razie, jeśli `Signature` atrybut jest nieobecne, dyrektyw środowiska uruchomieniowego ma zastosowanie do wszystkich przeciążeń metody.  
   
- Nie można zdefiniować zasady odbicia środowiska uruchomieniowego dla konstruktora przy użyciu `<Method>` elementu. Zamiast tego należy użyć `Activate` atrybutu [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md), [ \<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md), [ \<typu >](../../../docs/framework/net-native/type-element-net-native.md), lub [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementu.  
+ Nie można zdefiniować zasady odbicia środowiska uruchomieniowego dla konstruktora przy użyciu `<Method>` elementu. Zamiast tego należy użyć `Activate` atrybutu [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md), [ \<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md), [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md), lub [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementu.  
   
 ## <a name="example"></a>Przykład  
- `Stringify` Metoda w poniższym przykładzie jest metodę formatowania ogólnego przeznaczenia, która używa odbicia do konwersji obiektu do reprezentacji ciągu. Oprócz wywoływania domyślnego obiektu `ToString` metody, metody powodują ciąg sformatowany wynik przez przekazanie obiektu `ToString` metody ciąg formatu <xref:System.IFormatProvider> implementacji lub oba. Można również wywoływanie jednego z <xref:System.Convert.ToString%2A?displayProperty=nameWithType> przeciążeń, które konwertuje liczbę na jej reprezentację binarnego, szesnastkową lub ósemkowo.  
+ `Stringify` Metody w poniższym przykładzie jest metodą formatowania ogólnego przeznaczenia, która używa odbicia w celu konwersji obiektu na jego reprezentację ciągu. Oprócz wywołanie domyślnego obiektu `ToString` metody, metoda może wygenerować sformatowany ciąg wynikowy przez przekazanie obiektu `ToString` metoda ciąg formatu <xref:System.IFormatProvider> implementacji i / lub. Można też wywołać jedną z <xref:System.Convert.ToString%2A?displayProperty=nameWithType> przeciążenia, które konwertuje liczbę na jego reprezentację binarnym, szesnastkowym lub ósemkowo.  
   
  [!code-csharp[ProjectN_Reflection#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/method1.cs#7)]  
   
- `Stringify` Metoda może być wywoływany przez kod podobnie do następującej:  
+ `Stringify` Metoda może być wywoływana przez kod, podobnie do poniższego:  
   
  [!code-csharp[ProjectN_Reflection#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/method1.cs#7)]  
   
- Jednak gdy skompilowano z platformą .NET Native, przykładzie może zgłosić liczba wyjątków w czasie wykonywania, w tym <xref:System.NullReferenceException> i [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątki, dzieje się tak dlatego `Stringify` jest — metoda przeznaczony głównie do obsługi dynamicznie pierwotne typy formatowania w bibliotece klas programu .NET Framework. Jednak ich metadanych nie zostanie udostępniony przez domyślny plik dyrektywy. Nawet wtedy, gdy metadane są udostępniane, jednak przykładzie zgłasza [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątki ponieważ odpowiednie `ToString` ma zostały zawiera implementacji w kodzie natywnym.  
+ Jednak, gdy skompilowano z architekturą .NET Native, przykładu może zgłosić liczba wyjątków w czasie wykonywania, w tym <xref:System.NullReferenceException> i [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątki, dzieje się tak dlatego `Stringify` jest — metoda przeznaczona głównie w celu obsługi dynamicznie formatowanie typów pierwotnych w bibliotece klas programu .NET Framework. Jednak ich metadanych nie zostanie udostępniony przez domyślny plik dyrektywy. Nawet wtedy, gdy ich metadane są udostępniane, jednak przykład generuje [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątków ponieważ odpowiednie `ToString` nie zostały zawiera implementacji w kodzie natywnym.  
   
- Wyjątki te wszystkie można wyeliminować za pomocą [ \<typu >](../../../docs/framework/net-native/type-element-net-native.md) elementu, aby zdefiniować typy, których metadane muszą być obecne, a przez dodanie `<Method>` elementy, aby zapewnić, że implementacja przeciążenia metody można dynamicznie wywołać który również jest obecny. Poniżej znajduje się plik default.rd.xml eliminuje tych wyjątków i zezwala na przykład aby zostanie wykonane bez błędów.  
+ Wyjątki te mogą wszystkie zostać usunięte przy użyciu [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) elementu, aby zdefiniować typy, których metadane muszą być obecne, a przez dodanie `<Method>` elementy, aby zapewnić, że implementacja przeciążenia metody którą można wywołać dynamicznie również jest obecny. Poniżej znajduje się plik default.rd.xml eliminuje tych wyjątków i zezwala na przykład można wykonać bez błędów.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -145,8 +145,8 @@ Zastosowanie zasad wykonywania odbicia do konstruktora lub metody.
 </Directives>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [\<MethodInstantiation > — Element](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
+## <a name="see-also"></a>Zobacz także
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<MethodInstantiation > Element](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)

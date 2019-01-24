@@ -4,12 +4,12 @@ description: Polecenie "dotnet magazynu" są przechowywane w określonych zestaw
 author: bleroy
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: db1af95150a8949f218169b2999c92c00ac94d56
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 58889039d117a2231cda693e4aca7790f018d1b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606754"
 ---
 # <a name="dotnet-store"></a>Magazyn DotNet
 
@@ -83,4 +83,4 @@ Store pakiety określone w *packages.csproj* bez optymalizacji:
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Magazyn pakietu środowiska uruchomieniowego](../deploying/runtime-store.md)
+- [Magazyn pakietu środowiska uruchomieniowego](../deploying/runtime-store.md)

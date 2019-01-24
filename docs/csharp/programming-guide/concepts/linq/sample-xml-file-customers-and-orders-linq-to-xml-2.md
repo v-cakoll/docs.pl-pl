@@ -2,19 +2,19 @@
 title: 'Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
-ms.openlocfilehash: 01bb9e71b494faa3e0fa0db0779227a4ec114c91
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 74e9ba00b61dbed532c0309043c9a9c944ea6932
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617034"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera klienci i zamówienia.  
   
  Temat [przykładowy plik XSD: Klienci i zamówienia](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) zawiera XSD, który może służyć do sprawdzania poprawności w tym dokumencie. Używa ona `xs:key` i `xs:keyref` funkcji XSD ustalenie, czy `CustomerID` atrybutu `Customer` element jest klucz oraz do ustanawiania relacji między `CustomerID` elementu w każdym `Order` elementu i `CustomerID` atrybutu w każdym `Customer` elementu.  
   
- Na przykład Zapisywanie zapytań LINQ, które skorzystać z tej relacji `Join` klauzuli, zobacz [jak: Dołącz do dwóch kolekcji (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
+ Na przykład Zapisywanie zapytań LINQ, które skorzystać z tej relacji `Join` klauzuli, zobacz [jak: Łączenie dwóch kolekcji (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   
@@ -434,6 +434,6 @@ Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlin
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przykładowe dokumenty XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

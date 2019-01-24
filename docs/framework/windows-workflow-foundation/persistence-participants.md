@@ -1,64 +1,64 @@
 ---
-title: Uczestnicy trwałości
+title: Uczestnicy stanów trwałych
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: f2875ead24e4c072d267a8bb6cddddc7f9b96d86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 66178adda593192678542ebf5ed8906e0dffc908
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569508"
 ---
-# <a name="persistence-participants"></a>Uczestnicy trwałości
-Uczestnika trwałości mogą uczestniczyć w operacji trwałości (Zapisz lub obciążenia) wyzwalane przez hosta aplikacji. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z dwóch klas abstrakcyjnych, **PersistenceParticipant** i **PersistenceIOParticipant**, które służy do tworzenia uczestnika trwałości. Uczestnika trwałości pochodzi z jednego z tych klas, implementuje metody zainteresowań, a następnie dodanie wystąpienia klasy do <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> kolekcji na <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Host aplikacji może wyglądać dla tych rozszerzeń przepływu pracy po trwałym wystąpienia przepływu pracy i wywołać odpowiednie metody uczestnika trwałości w odpowiednim czasie.  
+# <a name="persistence-participants"></a>Uczestnicy stanów trwałych
+Uczestnika stanów trwałych mogą uczestniczyć w operacji trwałości (Zapisz lub obciążenia) wyzwolone przez aplikację hosta. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z dwóch klas abstrakcyjnych, **PersistenceParticipant** i **PersistenceIOParticipant**, którego można użyć do utworzenia uczestnika stanów trwałych. Uczestnika stanów trwałych pochodzi z jednej z tych klas, implementuje metody zainteresowań, a następnie dodaje wystąpienie klasy do <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> kolekcji na <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Host aplikacji może poszukaj takie rozszerzenia przepływu pracy po przechowywanie wystąpienia przepływu pracy i wywoływać właściwe metody na uczestnicy stanów trwałych we właściwym czasie.  
   
- Na poniższej liście opisano zadania wykonywane przez podsystem trwałości na różnych etapach operacji utrwalania (Zapisz). Uczestnicy trwałości są używane w trzecim i czwartym etapach. Jeśli uczestnik jest uczestnika we/wy (trwałości uczestnika, który również uczestniczy w operacjach we/wy), uczestnik jest również używane w fazie szóstego.  
+ Na poniższej liście opisano zadania wykonywane przez podsystem trwałości na różnych etapach operacji utrwalania (Zapisz). Uczestnicy stanów trwałych są używane w etapach trzecia i czwarta. Jeśli uczestnik uczestnika operacji We/Wy (trwałość uczestnika, który również uczestniczy w operacjach we/wy), uczestnika również służy szóstego etapu.  
   
-1.  Zbiera informacje o wbudowanych wartości, w tym stanu przepływu pracy, zakładki zamapowanych zmienne i sygnatura czasowa.  
+1.  Zbiera wartości wbudowanych, w tym stanu przepływu pracy, zakładek, zamapowanego zmienne i sygnatura czasowa.  
   
-2.  Zbiera informacje o wszystkich uczestników trwałości, które zostały dodane do kolekcji rozszerzeń skojarzonej z wystąpieniem przepływu pracy.  
+2.  Zbiera wszystkie uczestnicy stanów trwałych, które zostały dodane do kolekcji rozszerzenie skojarzone z wystąpieniem przepływu pracy.  
   
-3.  Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> metoda zaimplementowana przez wszystkich uczestników trwałości.  
+3.  Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> metody implementowane przez wszystkich uczestników trwałości.  
   
-4.  Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> metoda zaimplementowana przez wszystkich uczestników trwałości.  
+4.  Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> metody implementowane przez wszystkich uczestników trwałości.  
   
-5.  Utrwalić lub zapisać ten przepływ pracy w magazynie informacji o trwałości.  
+5.  Utrwalanie lub Zapisz przepływ pracy w magazynie w trwałości.  
   
-6.  Wywołuje <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> metody dla wszystkich uczestników trwałości we/wy. Jeśli go nie ma uczestnika we/wy, to zadanie zostanie pominięte. Jeśli epizodu trwałości jest transakcyjna, transakcja jest świadczona w Właściwość Transaction.Current.  
+6.  Wywołuje <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> metody wszyscy uczestnicy stanów trwałych operacji We/Wy. Jeśli uczestnik nie jest uczestnikiem operacji We/Wy, to zadanie zostanie pominięte. Jeśli ten odcinek trwałości jest transakcyjna, transakcja jest podana we właściwości Transaction.Current.  
   
-7.  Czeka na zakończenie wszystkich uczestników trwałości. W przypadku wszystkich uczestników w trwałych danych wystąpienia, zatwierdza transakcji.  
+7.  Czeka, aż wszyscy uczestnicy stanów trwałych do ukończenia. Jeśli uda się wszyscy uczestnicy utrwalanie dane wystąpienia, zatwierdzeń transakcji.  
   
- Uczestnika trwałości pochodną **PersistenceParticipant** klasy i może wdrożyć **obiektu CollectValues** i **obiektu MapValues** metody. Uczestnika trwałości we/wy jest pochodną **PersistenceIOParticipant** klasy i może wdrożyć **BeginOnSave** metodę oprócz wykonania **obiektu CollectValues**i **obiektu MapValues** metody.  
+ Pochodzi od klasy uczestnika stanów trwałych **PersistenceParticipant** klasy i mogą implementować **CollectValues** i **MapValues** metody. Trwałość operacji We/Wy uczestnika, który pochodzi od klasy **PersistenceIOParticipant** klasy i może wdrożyć **BeginOnSave** metoda oprócz Implementowanie **CollectValues**i **MapValues** metody.  
   
- Na każdym z etapów zostało ukończone przed rozpoczęciem kolejnego etapu. Na przykład wartości pochodzą z **wszystkie** uczestników trwałości podczas pierwszego etapu. Następnie wszystkie wartości zebranych podczas pierwszego etapu są przekazywane do wszystkich uczestników trwałości w drugim etapie mapowania. Następnie wszystkie wartości zbierane i zamapowana pierwszego i drugiego etapu są dostarczane do dostawcy trwałości w trzecim etapie i tak dalej.  
+ Każdy z etapów zostało zakończone przed rozpoczęciem kolejnego etapu. Na przykład, wartości są zbierane z **wszystkich** uczestnicy stanów trwałych w pierwszym etapie. Następnie wszystkie wartości, które są zbierane w pierwszym etapie podano wszyscy uczestnicy stanów trwałych drugiego etapu dla mapowania. Następnie wszystkie wartości zbierane i mapowane na pierwszym i drugim etapie prowadzą zamieszczone linki do dostawcy stanów trwałych trzeciego etapu i tak dalej.  
   
- Na poniższej liście opisano zadania wykonywane przez podsystem trwałości na różnych etapach operacji ładowania. Uczestnicy trwałości są używane w czwartym etapie. Trwałość uczestników we/wy (uczestników trwałości, które również uczestniczyć w operacji We/Wy) są również używane w trzecim etapie.  
+ Na poniższej liście opisano zadania wykonywane przez podsystem trwałości na różnych etapach operacji ładowania. Uczestnicy stanów trwałych są używane w czwartym etapie. Uczestnicy operacji We/Wy stanów trwałych (Uczestnicy stanów trwałych, które także uczestniczyć w operacji We/Wy) są również używane w trzecim etapie.  
   
-1.  Zbiera informacje o wszystkich uczestników trwałości, które zostały dodane do kolekcji rozszerzeń skojarzonej z wystąpieniem przepływu pracy.  
+1.  Zbiera wszystkie uczestnicy stanów trwałych, które zostały dodane do kolekcji rozszerzenie skojarzone z wystąpieniem przepływu pracy.  
   
-2.  Ładuje przepływu pracy w sklepie trwałości.  
+2.  Ładuje przepływu pracy w trwałości sklepie.  
   
-3.  Wywołuje <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> dla wszystkich uczestników trwałości We/Wy i czeka na wszystkich uczestników trwałości do wykonania. Jeśli epizodu trwałości jest transakcyjna, transakcja znajduje się w operacji Transaction.Current.  
+3.  Wywołuje <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> na wszystkich uczestnicy stanów trwałych operacji We/Wy i czeka na uczestnicy stanów trwałych do ukończenia. Jeśli ten odcinek trwałości jest transakcyjna, transakcja jest przekazywany w Transaction.Current.  
   
-4.  Ładuje wystąpienia przepływu pracy w pamięci na podstawie danych pobrana z magazynu trwałości.  
+4.  Ładuje wystąpienie przepływu pracy w oparciu o dane pobierane z magazynu stanu trwałego pamięci.  
   
-5.  Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> na każdym uczestnika trwałości.  
+5.  Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> na każdym uczestnika stanów trwałych.  
   
- Uczestnika trwałości pochodną **PersistenceParticipant** klasy i może wdrożyć **PublishValues** metody. Uczestnika trwałości we/wy jest pochodną **PersistenceIOParticipant** klasy i może wdrożyć **BeginOnLoad** metodę oprócz wykonania **PublishValues**metody.  
+ Pochodzi od klasy uczestnika stanów trwałych **PersistenceParticipant** klasy i mogą implementować **PublishValues** metody. Trwałość operacji We/Wy uczestnika, który pochodzi od klasy **PersistenceIOParticipant** klasy i może wdrożyć **BeginOnLoad** metoda oprócz Implementowanie **PublishValues**metody.  
   
- Podczas ładowania wystąpienia przepływu pracy dostawca trwałości tworzy blokady w tym wystąpieniu. Uniemożliwia to wystąpienie ładowany przez więcej niż jednego hosta w scenariuszu z wieloma węzłami. Jeśli próba załadowania wystąpienia przepływu pracy, który został zablokowany w sposób zobaczysz wyjątek podobnie do następującej: wyjątek "System.ServiceModel.Persistence.InstanceLockException: nie można ukończyć żądanej operacji, ponieważ blokady dla wystąpienia" 00000000-0000-0000-0000-000000000000 "nie można uzyskać". Ten błąd występuje, gdy wystąpi jedno z następujących czynności:  
+ Podczas ładowania wystąpienia przepływu pracy dostawcy stanów trwałych tworzy blokady w tym wystąpieniu. Zapobiega to ładowany przez więcej niż jednego hosta w przypadku scenariusza z wieloma węzłami wystąpienia. Jeśli użytkownik podejmie próbę załadowania wystąpienia przepływu pracy, który został zablokowany pojawią się wyjątek, jak pokazano poniżej: Wyjątek "System.ServiceModel.Persistence.InstanceLockException: Nie można ukończyć żądanej operacji, ponieważ blokada na przykład "00000000-0000-0000-0000-000000000000" nie można uzyskać ". Ten błąd występuje, gdy wystąpi jedno z następujących czynności:  
   
--   W scenariuszu z wieloma węzłami wystąpienie jest załadowany przez innego hosta.  Istnieje kilka różnych sposobów, aby rozwiązać konfliktów tego typu: przekazywania przetwarzania do węzła, który jest właścicielem blokady i spróbuj ponownie lub wymusić obciążenia, co spowoduje innych hostów można będzie zapisanie pracy.  
+-   W przypadku scenariusza z wieloma węzłami wystąpienie jest ładowany przez innego hosta.  Istnieje kilka różnych sposobów, aby rozwiązać tego rodzaju konfliktów: do przodu przetwarzania węzła, który posiada blokadę i spróbuj ponownie lub wymusić obciążona, co spowoduje, że innych hostów nie było możliwe zapisać swoją pracę.  
   
--   W scenariuszu jednym węzłem i host awaria.  Po uruchomieniu hosta ponownie (odtworzenia procesu lub tworzenia nowych fabryki dostawców trwałości) nowy host próbuje załadować do wystąpienia, które nadal jest zablokowany przez stary host, ponieważ blokada nie jeszcze wygasł.  
+-   W scenariuszu jednym węzłem i host wystąpiła awaria.  Podczas uruchamiania hosta ponownie (odtworzenia procesu lub tworzenie nowej fabryki dostawcy trwałości) nowy host próbuje załadować wystąpienia, która nadal jest zablokowany przez stary hosta, ponieważ jeszcze nie wygasła blokady.  
   
--   W scenariuszu jednym węzłem i wystąpieniem zagrożona zostało przerwane w pewnym momencie i jest tworzony nowe wystąpienie dostawcy trwałości, który ma identyfikator inny host.  
+-   W scenariuszu jednym węzłem, a wystąpienie danego zostało przerwane w pewnym momencie i tworzone jest nowe wystąpienie dostawcy stanów trwałych, która zawiera identyfikator innego hosta.  
   
- Wartość limitu czasu blokady ma wartość domyślna wynosi 5 minut, można określić wartość innego limitu czasu podczas wywoływania metody <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A>.  
+ Wartość limitu czasu blokady ma wartość domyślną w ciągu 5 minut, można określić wartość limitu czasu różnych podczas wywoływania <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A>.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 -   [Instrukcje: Tworzenie niestandardowego uczestnika stanów trwałych](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Rozszerzalność magazynu](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)
+## <a name="see-also"></a>Zobacz także
+- [Rozszerzalność magazynu](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)

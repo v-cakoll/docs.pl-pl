@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 65797863fc8187ffebbcb660e9fb285bfa1aabd0
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f07bdacddfbaa35b17821d2a8a0191fef86e38f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583857"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579397"
 ---
 # <a name="windows-service-host"></a>Host usług systemu Windows
 Niniejszy przykład pokazuje usługi Windows Communication Foundation (WCF), hostowana w zarządzanych usług Windows. Usługi Windows są kontrolowane za pomocą apletu usługi w **Panelu sterowania** i można je skonfigurować, aby uruchamiała się automatycznie po ponownym uruchomieniu systemu. Przykład składa się z program kliencki i programów usługi Windows. Ta usługa jest implementowany jako .exe program i zawiera swój własny kod hostingu. W innych środowiskach hostingu, takich jak Windows Process Activation usług (WAS) lub Internet Information Services (IIS) nie jest konieczne pisanie kod hostingu.
@@ -63,5 +63,5 @@ Niniejszy przykład pokazuje usługi Windows Communication Foundation (WCF), hos
   
 4.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Zobacz także
+- [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

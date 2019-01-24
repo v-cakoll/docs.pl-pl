@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9a70cf0812f84908630f109ef06aafa4b4f7525
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46576552db6e3c9aa06646b260e74cb4b7890d9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559232"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy — Interfejs
-Udostępnia [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metodę, która zwraca wskaźnik do wspólny interfejs środowiska uruchomieniowego (języka wspólnego CLR) języka na podstawie kryteriów zasad, zarządzane zestawu, wersję i pliku konfiguracji.  
+Udostępnia [getrequestedruntime —](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metody, która zwraca wskaźnik do wspólnego interfejsu języka wspólnego (CLR), na podstawie kryteriów zasad, zarządzanego zestawu, wersji i pliku konfiguracji.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetRequestedRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|Dostarcza wybranego interfejsu CLR na podstawie kryteriów zasad, zarządzanych plików zestawu, wersję i konfiguracji.|  
+|[GetRequestedRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|Udostępnia preferowanym interfejsem CLR na podstawie kryteriów zasad, zarządzane pliku zestawu, wersji i konfiguracji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Odwołanie do danego interfejsu można uzyskać przez wywołanie metody [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) działać zgodnie z poniższym kodem:  
+ Można uzyskać odwołanie do tego interfejsu, wywołując [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) funkcji, jak pokazano w poniższym kodzie:  
   
 ```  
 ICLRMetaHostPolicy *pMetaHostPolicy = NULL;  
@@ -42,20 +42,20 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
 ```  
   
 > [!NOTE]
->  Ten interfejs nie faktycznie obciążenie lub aktywować CLR, ale po prostu zwraca preferowany wersji środowiska CLR oparte na dostępne wersje, które są zainstalowane lub załadować.  
+>  Ten interfejs bez faktycznego obciążenia lub aktywacji środowiska CLR, ale po prostu zwraca, w oparciu o dostępne wersje, które są zainstalowane lub załadować preferowaną wersję środowiska CLR.  
   
- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Hostingu API konsoliduje zasady, tak aby hostów z określonych potrzeb może używać podstawowych funkcji bez ponoszenia kar niezamierzone. Na przykład wiele eksportu biblioteki MSCorEE.dll powiąże do określonego środowiska CLR, mimo że metody mogą nie logicznie wymagać go. [Metahost_policy_flags —](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) wyliczenie zawiera zasady powiązania, które są wspólne dla większości hostów.  
+ [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Hostującego interfejs API konsoliduje zasady, tak, aby hosty z konkretnych potrzeb może używać podstawową funkcjonalność bez ponoszenia kar niezamierzone. Na przykład wielu eksportów MSCorEE.dll powiąże określonego środowiska CLR, mimo iż metoda może być logicznie wymaga. [Metahost_policy_flags —](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) wyliczenia zawiera zasad powiązań, które są wspólne dla większości hostów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MetaHost.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy hostingu środowiska CLR dodane w programie .NET Framework 4 i 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy hostingu środowiska CLR dodane w programie .NET Framework 4 i 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4e9d03dcf4603f9470f8f2509050eb6f875746a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 084f0bbab130cd4e7334184fe9baa322c0487942
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616774"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder — Wyliczenie
-Zawiera wartości flagi, które określają warunki, w których ma być generowany metadanych jest emitowany poza kolejnością komunikat o błędzie.  
+Zawiera wartości flagi, które określają warunki, w których mają być generowane metadanych jest emitowane poza kolejnością komunikat o błędzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,21 +47,21 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|Wskazuje zachowanie domyślne, który nie generuje komunikaty o błędach.|  
+|`MDErrorOutOfOrderDefault`|Wskazuje zachowanie domyślne, które generują komunikaty o błędach.|  
 |`MDErrorOutOfOrderNone`|Wskazuje, że kompilator nie powinna generować komunikaty o błędach.|  
-|`MDErrorOutOfOrderAll`|Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy pola, właściwości, zdarzenia, metody lub parametru jest emitowany poza kolejnością.|  
-|`MDMethodOutOfOrder`|Wskazuje, że kompilator powinien generować komunikat o błędzie, gdy metoda jest emitowany poza kolejnością.|  
-|`MDFieldOutOfOrder`|Wskazuje, że kompilator powinien generować komunikat o błędzie, jeśli pole jest emitowany poza kolejnością.|  
-|`MDParamOutOfOrder`|Wskazuje, że kompilator powinien generować komunikat o błędzie, jeśli parametr jest emitowany poza kolejnością.|  
-|`MDPropertyOutOfOrder`|Wskazuje, że kompilator powinien generować komunikat o błędzie, gdy właściwość jest emitowany poza kolejnością.|  
-|`MDEventOutOfOrder`|Wskazuje, że kompilator powinien generować komunikat o błędzie, gdy zdarzenie jest emitowany poza kolejnością.|  
+|`MDErrorOutOfOrderAll`|Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy pola, właściwości, zdarzenia, metody lub parametru jest emitowane poza kolejnością.|  
+|`MDMethodOutOfOrder`|Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy metoda jest emitowane poza kolejnością.|  
+|`MDFieldOutOfOrder`|Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy pole jest emitowane poza kolejnością.|  
+|`MDParamOutOfOrder`|Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy parametr jest emitowane poza kolejnością.|  
+|`MDPropertyOutOfOrder`|Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy właściwość jest emitowana poza kolejnością.|  
+|`MDEventOutOfOrder`|Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy zdarzenie jest emitowane poza kolejnością.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

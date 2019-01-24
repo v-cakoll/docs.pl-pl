@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e60aae158d822a3cfba93f6d714d83bcd7aa0e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155028"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600768"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)
 Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z stacje, plików i katalogów.  
@@ -57,11 +57,11 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z stacje, plikó
   
 |Zadanie|Zobacz|
 |---|---|   
-|Odczyt i zapis do pliku danych|[Jak: Odczyt i zapis w nowo utworzonym pliku danych](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|Odczytywanie tekstu z pliku|[Jak: Odczytywanie tekstu z pliku](../../../../standard/io/how-to-read-text-from-a-file.md)|  
-|Zapisywanie tekstu do pliku|[Jak: Zapisywanie tekstu do pliku](../../../../standard/io/how-to-write-text-to-a-file.md)|  
-|Odczytywanie znaków z ciągu|[Jak: Odczytywanie znaków z ciągu](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
-|Zapisywanie znaków w ciągu|[Jak: Zapisywanie znaków w ciągu](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
+|Odczyt i zapis do pliku danych|[Instrukcje: Odczyt i zapis w nowo utworzonym pliku danych](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Odczytywanie tekstu z pliku|[Instrukcje: Odczytywanie tekstu z pliku](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|Zapisywanie tekstu do pliku|[Instrukcje: Zapisywanie tekstu do pliku](../../../../standard/io/how-to-write-text-to-a-file.md)|  
+|Odczytywanie znaków z ciągu|[Instrukcje: Odczytywanie znaków z ciągu](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
+|Zapisywanie znaków w ciągu|[Instrukcje: Zapisywanie znaków w ciągu](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
 |Szyfrowanie danych|[Szyfrowanie danych](../../../../standard/security/encrypting-data.md)|  
 |Odszyfrowywanie danych|[Odszyfrowywanie danych](../../../../standard/security/decrypting-data.md)|  
   
@@ -74,7 +74,7 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z stacje, plikó
   
 |Zadanie|Zobacz|  
 |---|---|
-|Otwieranie i dołączanie tekstu do pliku dziennika|[Jak: Otwieranie i dołączanie do pliku dziennika](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
+|Otwieranie i dołączanie tekstu do pliku dziennika|[Instrukcje: Otwieranie i dołączanie do pliku dziennika](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Określania atrybutów pliku|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Uprawnienia do pliku  
@@ -87,19 +87,19 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z stacje, plikó
   
 |Zadanie|Zobacz|
 |---|---|  
-|Utwórz w izolowanym magazynie|[Jak: Uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
-|Wyliczanie izolowanych magazynów|[Jak: Wyliczanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
-|Usuń izolowanym magazynie|[Jak: Usuwanie magazynów w wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
-|Tworzenie pliku lub katalogu w wydzielonej pamięci masowej|[Jak: Tworzenie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
-|Znajdź plik w wydzielonej pamięci masowej|[Jak: Wyszukiwanie istniejących plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
-|Odczytać lub zapisać do pliku w magazynie insolated|[Jak: Odczyt i zapis w plikach w wydzielonej pamięci masowej](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
-|Usuwanie pliku lub katalogu w wydzielonej pamięci masowej|[Jak: Usuwanie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
+|Utwórz w izolowanym magazynie|[Instrukcje: Uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Wyliczanie izolowanych magazynów|[Instrukcje: Wyliczanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Usuń izolowanym magazynie|[Instrukcje: Usuwanie magazynów w wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Tworzenie pliku lub katalogu w wydzielonej pamięci masowej|[Instrukcje: Tworzenie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|Znajdź plik w wydzielonej pamięci masowej|[Instrukcje: Wyszukiwanie istniejących plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|Odczytać lub zapisać do pliku w magazynie insolated|[Instrukcje: Odczyt i zapis w plikach w wydzielonej pamięci masowej](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Usuwanie pliku lub katalogu w wydzielonej pamięci masowej|[Instrukcje: Usuwanie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>Plik zdarzeń  
  <xref:System.IO.FileSystemWatcher> Składnik umożliwia obserwowanie zmian plików i katalogów w systemie lub na dowolnym komputerze, do których masz dostęp do sieci. Na przykład jeśli plik zostanie zmodyfikowany, możesz chcieć powiadomi użytkownika czy miała miejsce zmiana. O zmianach, jedno lub więcej zdarzeń są wywoływane, przechowywane w buforze i przekazywane <xref:System.IO.FileSystemWatcher> składnik do przetworzenia.  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie strumieni](../../../../standard/io/composing-streams.md)  
- [We/Wy plików i strumieni](../../../../standard/io/index.md)  
- [Asynchroniczne operacje We/Wy pliku](../../../../standard/io/asynchronous-file-i-o.md)  
- [Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie strumieni](../../../../standard/io/composing-streams.md)
+- [We/Wy plików i strumieni](../../../../standard/io/index.md)
+- [Asynchroniczne operacje We/Wy pliku](../../../../standard/io/asynchronous-file-i-o.md)
+- [Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

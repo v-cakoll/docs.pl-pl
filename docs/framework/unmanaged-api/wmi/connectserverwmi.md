@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b8968ab7c3b6fee1e29a7389020c26232e34c1e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567012"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi — funkcja
 Tworzy połączenie za pomocą modelu DCOM do przestrzeni nazw usługi WMI na określonym komputerze.  
@@ -102,11 +102,11 @@ Ta funkcja zawija wywołanie do [IWbemLocator::ConnectServer](/windows/desktop/a
 
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Zobacz także  
-[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

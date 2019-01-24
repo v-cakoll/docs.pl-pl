@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e15bab136540c73f8e1cff0e6bb52ec1d6c0063
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ecb726f275a694fded2c486448a60b28fadb168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561871"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd — Metoda
-Pobiera dokument pozycje początkowe i końcowe dla źródła tej metody. Pierwszą pozycję tablicy jest początek, a drugi tablicy znajdował się na końcu.  
+Pobiera położenie dokumentu rozpoczęcia i zakończenia dla źródłowej, tej metody. Na pierwszym miejscu tablicy jest początek, a na drugim miejscu tablicy jest zakończenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +39,22 @@ HRESULT GetSourceStartEnd(
   
 #### <a name="parameters"></a>Parametry  
  `docs`  
- [in] Początkowa i końcowa dokumentu źródłowego.  
+ [in] Początkowe i końcowe dokumentu źródłowego.  
   
  `lines`  
- [in] Rozpoczęcia i zakończenia wierszy w odpowiednich źródła dokumentów.  
+ [in] Początkowe i końcowe wiersze w odpowiednich źródła dokumentów.  
   
  `columns`  
- [in] Początkowy i końcowy w odpowiadającej mu kolumny źródłowej dokumentów.  
+ [in] Początkowy i końcowy kolumn w odpowiednich źródła dokumentów.  
   
  `pRetVal`  
- [out] `true` gdyby zdefiniowana; w przeciwnym razie wartość pozycji `false`.  
+ [out] `true` gdyby położenia zdefiniowanych; w przeciwnym razie `false`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

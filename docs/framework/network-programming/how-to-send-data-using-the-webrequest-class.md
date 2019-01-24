@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 1f10c5e0c6c266b7b31d658ec561bd8d6d85697b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dac372ce4f9da99b91b6f8d140d69ce9f1238f30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562907"
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>Instrukcje: Przesyłanie danych przy użyciu klasy WebRequest
 Poniższa procedura opisuje kroki używane do przesyłania danych do serwera. Ta procedura jest często używane dane do strony sieci Web.  
@@ -255,9 +255,9 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie żądań internetowych](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [Stosowanie strumieni w sieci](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)  
- [Jak: Żądanie danych przy użyciu klasy WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie żądań internetowych](../../../docs/framework/network-programming/creating-internet-requests.md)
+- [Stosowanie strumieni w sieci](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)
+- [Instrukcje: Żądanie danych przy użyciu klasy WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)

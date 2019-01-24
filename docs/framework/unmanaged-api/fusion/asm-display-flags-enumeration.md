@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9607aa99e1f1dbe0af3a868a32c70cd83d5e66a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0871a06c6e27089d9e8fea6726d1d7b37fb75120
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429533"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561754"
 ---
 # <a name="asmdisplayflags-enumeration"></a>ASM_DISPLAY_FLAGS — Wyliczenie
-Wskazuje wersję, kompilacji, kultury, sygnatury i tak dalej, zestawu, którego nazwa wyświetlana zostaną pobrane przez [IAssemblyName::GetDisplayName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md) metody.  
+Wskazuje, wersji, kompilacji, kultury, podpis i tak dalej, zestawu, którego nazwa wyświetlana będzie pobierany przez [iassemblyname::GetDisplayName —](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md) metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,17 +52,17 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `ASM_DISPLAYF_FULL` odzwierciedla żadnych zmian wprowadzonych w wersji [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiektu. Zakłada się, że zwracanej wartości nie można modyfikować.  
+ `ASM_DISPLAYF_FULL` odzwierciedla wszelkie zmiany wprowadzone do wersji [iassemblyname —](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiektu. Nie należy zakładać, że zwracana wartość jest niezmienny.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Fusion.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [Wyliczenia łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Wyliczenia łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

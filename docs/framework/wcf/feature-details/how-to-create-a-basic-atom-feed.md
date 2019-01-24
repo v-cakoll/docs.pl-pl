@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: ac356ac9acd3f0b14fb3da902f1a9c3cfbdd9ef7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 1229257cc8c15ea67bd4fdf3ff6ffa959a6bfe02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122630"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582503"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Instrukcje: Tworzenie podstawowego źródła danych Atom
 Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udostępnia kanał. W tym temacie omówiono sposób tworzenia usługi syndykacji, który udostępnia kanał Atom.  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udost�
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Wszystkie operacje usługi, które są stosowane <xref:System.ServiceModel.Web.WebGetAttribute> są mapowane na żądania HTTP GET. Aby zamapować operację na innej metody HTTP, użyj <xref:System.ServiceModel.Web.WebInvokeAttribute> zamiast tego. Aby uzyskać więcej informacji, zobacz [porady: tworzenie podstawowa usługa HTTP w sieci Web WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  Wszystkie operacje usługi, które są stosowane <xref:System.ServiceModel.Web.WebGetAttribute> są mapowane na żądania HTTP GET. Aby zamapować operację na innej metody HTTP, użyj <xref:System.ServiceModel.Web.WebInvokeAttribute> zamiast tego. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi HTTP sieci Web WCF podstawowe](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
   
 2.  Implementowanie kontraktu usługi.  
   
@@ -96,6 +96,6 @@ Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udost�
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Podczas kompilowania w poprzednim kodzie, odwołać System.ServiceModel.dll i System.ServiceModel.Web.dll.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c938ef8783a122dec2a5f5bd3775661d68fba62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ad18aaca1caef242832bbdae9a1094b2ef2d7be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572464"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind — Metoda
-Pobiera wartość identyfikujący rodzaj kod przenośny plik wykonywalny (PE) pliku, zwykle biblioteki DLL lub EXE pliku, który jest zdefiniowany w bieżącym zakresie metadanych.  
+Pobiera wartość identyfikujący rodzaj kodu w pliku wykonalnego (PE) pliku, zazwyczaj pliku DLL lub EXE, który jest zdefiniowany w bieżącym zakresie metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,10 +38,10 @@ HRESULT GetPEKind (
   
 #### <a name="parameters"></a>Parametry  
  `pdwPEKind`  
- [out] Wskaźnik do wartości [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) wyliczenie opisujące pliku PE.  
+ [out] Wskaźnik do wartości [corpekind —](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) wyliczenie opisujące pliku PE.  
   
  `pdwMachine`  
- [out] Wskaźnik do wartość, która identyfikuje Architektura maszyny. W następnej sekcji prawidłowych wartości.  
+ [out] Wskaźnik do wartość, która identyfikuje architektury maszyny. Zobacz następną sekcję uzyskać odpowiednie wartości.  
   
 ## <a name="remarks"></a>Uwagi  
  Wartość przywołana przez `pdwMachine` parametr może być jedną z następujących czynności.  
@@ -53,15 +53,15 @@ HRESULT GetPEKind (
 |IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [CorPEKind, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [CorPEKind, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)

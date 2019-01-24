@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b48adcb8e9de49a312af77c8a9b80a07455ebfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a523a58a137f8276df854da956b3ab0b75cbcec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571629"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity — Funkcja
 Porównuje dwa tożsamości zestawu do ustalenia, czy są równoważne.  
@@ -42,48 +42,48 @@ STDAPI CompareAssemblyIdentity (
   
 #### <a name="parameters"></a>Parametry  
  `pwzAssemblyIdentity1`  
- [in] Tożsamości tekstowej pierwszego zestawu do porównania.  
+ [in] Tożsamość tekstową pierwszego zestawu do porównania.  
   
  `fUnified1`  
- [in] Wartość logiczna flagę wskazującą, ujednolicenie określone przez użytkownika dla `pwzAssemblyIdentity1`.  
+ [in] Flagę logiczną, wskazującą, określonych przez użytkownika ujednolicenie dla `pwzAssemblyIdentity1`.  
   
  `pwzAssemblyIdentity2`  
  [in] Tożsamość tekstową drugiego zestawu do porównania.  
   
  `fUnified2`  
- [in] Wartość logiczna flagę wskazującą, ujednolicenie określone przez użytkownika dla `pwzAssemblyIdentity2`.  
+ [in] Flagę logiczną, wskazującą, określonych przez użytkownika ujednolicenie dla `pwzAssemblyIdentity2`.  
   
  `pfEquivalent`  
  [out] Flaga wartości logicznej, która wskazuje, czy dwa zestawy są równoważne.  
   
  `pResult`  
- [out] [AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md) wyliczenia, który zawiera szczegółowe informacje dotyczące porównania.  
+ [out] [Assemblycomparisonresult —](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md) wyliczenie, które zawiera szczegółowe informacje na temat porównania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `pfEquivalent` Zwraca wartość logiczną, wskazującą, czy dwa zestawy są równoważne. `pResult` Zwraca jedną z `AssemblyComparisonResult` wartości, aby nadać bardziej szczegółowe Przyczyna wartość `pfEquivalent`.  
+ `pfEquivalent` Zwraca wartość logiczną wskazującą, czy dwa zestawy są równoważne. `pResult` Zwraca jedną z `AssemblyComparisonResult` wartości, aby zapewnić bardziej szczegółowe Przyczyna wartość `pfEquivalent`.  
   
 ## <a name="remarks"></a>Uwagi  
  `CompareAssemblyIdentity` sprawdza, czy `pwzAssemblyIdentity1` i `pwzAssemblyIdentity2` są równoważne. `pfEquivalent` ustawiono `true` w jednej lub więcej z następujących warunków:  
   
--   Tożsamości dwóch zestawów są równoważne. Dla zestawów o silnej nazwie równoważność wymaga nazwy zestawu, wersję, token klucza publicznego i kultury, aby była taka sama. W przypadku po prostu nazwane zestawy równoważność wymaga pasującego do nazwy zestawu i kultury.  
+-   Tożsamości dwóch zestawów są równoważne. Dla zestawów o silnej nazwie równoważności wymaga nazwy zestawu, wersji, token klucza publicznego i kultury być identyczne. Po prostu nazwane zestawy równoważności wymaga dopasowania nazwy zestawu i kultury.  
   
--   Zarówno tożsamości zestawu odwołuje się do zestawów, które są uruchamiane w programie .NET Framework. Ten warunek zwraca `true` nawet wtedy, gdy numery wersji zestawu nie są zgodne.  
+-   Zarówno tożsamości zestawu odnoszą się do zestawów, korzystających z programu .NET Framework. Zwraca ten warunek `true` nawet wtedy, gdy numery wersji zestawu nie są zgodne.  
   
--   Dwa zestawy nie są zarządzane zestawy, ale `fUnified1` lub `fUnified2` ustawiono `true`.  
+-   Dwa zestawy nie są zarządzane zestawy, ale `fUnified1` lub `fUnified2` została ustawiona na `true`.  
   
- `fUnified` Flaga wskazuje, że wszystkie numery wersji do wersji liczby zestawu o silnej nazwie zostały uznane za równorzędne do zestawu o silnej nazwie. Na przykład jeśli wartość `pwzAssemblyIndentity1` jest "MyAssembly, wersja 3.0.0.0, culture = neutral, publicKeyToken = =..." i wartość `fUnified1` jest `true`, oznacza to, że wszystkie wersje MyAssembly z wersji 0.0.0.0 i 3.0.0.0 powinny być traktowane jako równoważne. W takim przypadku jeśli `pwzAssemblyIndentity2` odwołuje się do tego samego zestawu jako `pwzAssemblyIndentity1`, z wyjątkiem tego, że ma ona na niższą wersję `pfEquivalent` ma ustawioną wartość `true`. Jeśli `pwzAssemblyIdentity2` odwołuje się do wyższy numer wersji, `pfEquivalent` ustawiono `true` tylko wtedy, gdy wartość `fUnified2` jest `true`.  
+ `fUnified` Flaga wskazuje, że wszystkie numery wersji do numeru wersji zestawu o silnej nazwie są uważane za równoważne do zestawu o silnej nazwie. Na przykład jeśli wartość `pwzAssemblyIndentity1` jest "MyAssembly, wersji = 3.0.0.0, culture = neutral, publicKeyToken =..." i wartość `fUnified1` jest `true`, oznacza to, że wszystkie wersje MyAssembly z wersji 0.0.0.0 do 3.0.0.0 powinny być traktowane jako równoważne. W takim przypadku jeśli `pwzAssemblyIndentity2` odwołuje się do tego samego zestawu co `pwzAssemblyIndentity1`, z tą różnicą, że ma niższy numer wersji `pfEquivalent` jest równa `true`. Jeśli `pwzAssemblyIdentity2` odwołuje się do wyższy numer wersji `pfEquivalent` ustawiono `true` tylko wtedy, gdy wartość `fUnified2` jest `true`.  
   
- `pResult` Parametr zawiera szczegółowe informacje na temat przyczyny dwa zestawy są traktowane jako równoważne lub nie jest równorzędny. Aby uzyskać więcej informacji, zobacz [AssemblyComparisonResult — wyliczenie](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md).  
+ `pResult` Parametr zawiera szczegółowe informacje na temat przyczyny dwa zestawy są uważane za równoważne lub nie jest równorzędny. Aby uzyskać więcej informacji, zobacz [assemblycomparisonresult — wyliczenie](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Fusion.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- [AssemblyComparisonResult, wyliczenie](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)
+## <a name="see-also"></a>Zobacz także
+- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [AssemblyComparisonResult, wyliczenie](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)

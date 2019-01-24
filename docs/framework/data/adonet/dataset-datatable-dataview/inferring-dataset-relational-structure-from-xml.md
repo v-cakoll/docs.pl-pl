@@ -2,12 +2,12 @@
 title: Wnioskowanie relacyjnej struktury zestawu danych z pliku XML
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 13f63d416b76dbeaedbc007cd27eb2975f1efdef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f5cbbcd148f13a630398e870124803d482f63698
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587651"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Wnioskowanie relacyjnej struktury zestawu danych z pliku XML
 Relacyjnej struktury lub schematu z <xref:System.Data.DataSet> składa się z tabel, kolumn, ograniczeń i relacji. Podczas ładowania <xref:System.Data.DataSet> z pliku XML mogą być wstępnie zdefiniowane schematu lub mogą być tworzone, jawnie lub za pośrednictwem wnioskowania z pliku XML, trwa ładowanie. Aby uzyskać więcej informacji na temat ładowania schematu i zawartość <xref:System.Data.DataSet> z pliku XML, zobacz [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) i [podczas ładowania informacji schematu zestawu danych z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).  
@@ -47,5 +47,5 @@ Relacyjnej struktury lub schematu z <xref:System.Data.DataSet> składa się z ta
  [Omówienie ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  W tym artykule opisano ADO.NET architektura i składniki i sposób ich użycia, dostęp do istniejących źródeł danych i zarządzanie danymi aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

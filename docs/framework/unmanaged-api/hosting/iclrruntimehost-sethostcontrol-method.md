@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46cfaa5870d7bbc7edcbe438ddf57fe5f70ad938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e385744f1a9ecef2cbe1f6074501061dc2f15fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602263"
 ---
 # <a name="iclrruntimehostsethostcontrol-method"></a>ICLRRuntimeHost::SetHostControl — Metoda
-Ustawia wskaźnik interfejsu używanego przez środowisko uruchomieniowe języka wspólnego (CLR) Aby uzyskać implementację hosta [IHostControl — interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md).  
+Ustawia wskaźnik interfejsu, używanego przez środowisko uruchomieniowe języka wspólnego (CLR) można pobrać wdrożenia hosta [ihostcontrol — interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,32 +37,32 @@ HRESULT SetHostControl(
   
 #### <a name="parameters"></a>Parametry  
  `pHostControl`  
- [in] Wskaźnik interfejsu do wdrożenia hosta [IHostControl — interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md).  
+ [in] Wskaźnik interfejsu do wdrożenia hosta [ihostcontrol — interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md).  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`SetHostControl` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`SetHostControl` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Jeśli metoda zwraca E_FAIL, CLR nie będzie już można używać w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Jeśli metoda zwraca E_FAIL, środowisko CLR nie będzie już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
 |E_CLR_ALREADY_STARTED|Środowisko CLR został już zainicjowany.|  
   
 ## <a name="remarks"></a>Uwagi  
- Należy wywołać `SetHostControl` przed środowiska CLR został zainicjowany, oznacza to, że przed wywołaniem [Metoda Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) lub użyć innych [interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md). Zalecane jest telefoniczne skontaktowanie się z `SetHostControl` natychmiast po wywołaniu [CorBindToCurrentRuntime — funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md) lub [CorBindToRuntimeEx — funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md).  
+ Należy wywołać `SetHostControl` przed środowisko CLR jest inicjowany, oznacza to, zanim wywołasz [Metoda Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) lub korzystających z [interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md). Zalecane jest, należy wywołać `SetHostControl` natychmiast po wywołaniu [corbindtocurrentruntime — funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md) lub [corbindtoruntimeex — funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [IHostControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [IHostControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

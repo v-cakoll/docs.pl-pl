@@ -2,12 +2,12 @@
 title: TcpConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 19acfba3-c057-4dbc-bac7-8674d7844d83
-ms.openlocfilehash: f9e1c043579f632f16a7cf36bf34c2467a743e47
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e89dbe35a5232c612555b273c3d771aad42aeb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584808"
 ---
 # <a name="tcpconnectionpoolsettings"></a>TcpConnectionPoolSettings
 TcpConnectionPoolSettings  
@@ -30,39 +30,39 @@ class TcpConnectionPoolSettings
 ## <a name="properties"></a>Właściwości  
  Klasa TcpConnectionPoolSettings ma następujące właściwości:  
   
-### <a name="groupname"></a>Nazwa grupy  
+### <a name="groupname"></a>GroupName  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Nazwa grupy puli połączeń używane przez element powiązania.  
   
 ### <a name="idletimeout"></a>IdleTimeout  
  Typ danych: Data i godzina  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Maksymalny czas, który połączenie może być bezczynne, zanim zostanie rozłączone.  
   
 ### <a name="leasetimeout"></a>LeaseTimeout  
  Typ danych: Data i godzina  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Maksymalny czas na ukończenie przed przekroczeniem limitu czasu operacji dzierżawy.  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
  Typ danych: sint32  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Maksymalna liczba połączeń wychodzących dla każdego punktu końcowego.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
+|MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: kompilacja zestawu jednoplikowego'
+title: 'Instrukcje: Kompilacja zestawów pojedynczego pliku'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fff84266dd99b84cc99c1996a3063dc962fa2e94
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b5c0b5dc2e001121ab54447bae4a5eed3290a580
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597843"
 ---
-# <a name="how-to-build-a-single-file-assembly"></a>Porady: kompilacja zestawu jednoplikowego
+# <a name="how-to-build-a-single-file-assembly"></a>Instrukcje: Kompilacja zestawów pojedynczego pliku
 
 Zestawu pojedynczego pliku to najprostszy rodzaj zestawów, zawiera informacje o typie i wdrażania, jak również [manifestu zestawu](../../../docs/framework/app-domains/assembly-manifest.md). Można użyć kompilatorów wiersza polecenia lub programu Visual Studio, można utworzyć zestawu pojedynczego pliku. Domyślnie kompilator tworzy plik zestawu z rozszerzeniem .exe.
 
@@ -88,9 +88,9 @@ csc -out:myCodeLibrary.dll -t:library myCode.cs
 vbc -out:myCodeLibrary.dll -t:library myCode.vb
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)
 - [Zestawy wieloplikowe](../../../docs/framework/app-domains/multifile-assemblies.md)
-- [Instrukcje: kompilacja zestawów wieloplikowych](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Instrukcje: Kompilacja zestawów wieloplikowych](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

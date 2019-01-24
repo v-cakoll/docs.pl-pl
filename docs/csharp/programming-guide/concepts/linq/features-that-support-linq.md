@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 51cc24fd8054b87b6c92a02450420a9c4abef525
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5cda3f1a076a89326d78e2be887d10eae9a722b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558023"
 ---
 # <a name="c-features-that-support-linq"></a>Funkcje C# obsługujące LINQ
 Poniższa sekcja wprowadza nowe konstrukcji językowych, wprowadzona w języku C# 3.0. Mimo że te nowe funkcje są używane w stopniu przy użyciu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, nie są one ograniczone do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] i mogą być używane w dowolnym kontekście gdzie można je odnaleźć przydatne.  
@@ -88,6 +88,6 @@ select new {name = cust.Name, phone = cust.Phone};
   
 -   [Drzewa wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
    
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zapytanie o języku zintegrowanym (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

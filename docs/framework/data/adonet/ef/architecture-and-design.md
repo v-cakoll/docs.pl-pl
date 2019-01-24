@@ -2,12 +2,12 @@
 title: Architektura i projektowanie
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576333"
 ---
 # <a name="architecture-and-design"></a>Architektura i projektowanie
 Moduł generowania SQL w [dostawcy próbki](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) jest implementowany jako obiekt odwiedzający na drzewo wyrażenia, który reprezentuje drzewo poleceń. Generowanie odbywa się w jednym przebiegu za pośrednictwem drzewa wyrażeń.  
@@ -289,7 +289,7 @@ ORDER BY sk1, sk2, ...
 ### <a name="join-expressions"></a>Dołącz do wyrażeń  
  Poniżej są traktowane jako wyrażeniach sprzężenia, a następnie są przetwarzane przez metodę VisitJoinExpression w typowy sposób:  
   
--   Metody DbApplyExpression  
+-   DbApplyExpression  
   
 -   DbJoinExpression  
   
@@ -370,7 +370,7 @@ UNION ALL …
 UNION ALL SELECT <visit-result-argN> as X  
 ```  
   
-### <a name="dbfunctionexpression"></a>Obiekcie DbFunctionExpression  
+### <a name="dbfunctionexpression"></a>DbFunctionExpression  
  Canonical i wbudowane funkcje są przetwarzane tak samo: jeśli wymagają specjalnej obsługi (TRIM(string) do LTRIM(RTRIM(string), na przykład), odpowiedni program obsługi zostanie wywołana. W przeciwnym razie są tłumaczone na FunctionName (arg1, arg2,..., argn).  
   
  Słowniki są używane do śledzenia funkcji, które potrzebują specjalnej obsługi i ich odpowiednie programy obsługi.  
@@ -388,7 +388,7 @@ Any(input, x) => Exists(Filter(input,x))
 All(input, x) => Not Exists(Filter(input, not(x))  
 ```  
   
-### <a name="dbnotexpression"></a>Obiekt DbNotExpression  
+### <a name="dbnotexpression"></a>DbNotExpression  
  W niektórych przypadkach istnieje możliwość Zwiń tłumaczenia obiekt DbNotExpression z jej wyrażenia wejściowego. Na przykład:  
   
 ```  
@@ -414,5 +414,5 @@ IsEmpty(inut) = Not Exists(input)
   
  Aby tworzyć unikatowe nazwy dla zakresu aliasów i kolumn, należy użyć _n < existing_name >, gdzie n to najmniejsza alias, który nie został jeszcze użyty. Globalną listę wszystkie aliasy podkreśla konieczność kaskadowych zmienia nazwę.  
   
-## <a name="see-also"></a>Zobacz też  
- [Generowanie kodu SQL w dostawcy próbki](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>Zobacz także
+- [Generowanie kodu SQL w dostawcy próbki](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: 26b5c53c4983aa392dba7346f357e2700cfe0178
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: b512a391833e726bee7cb21c43912994fe860697
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589948"
 ---
 # <a name="asynchronous-server-socket-example"></a>Przykład asynchronicznego gniazda serwera
 Poniższy przykład program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer jest tworzone za pomocą asynchronicznego gniazda, więc wykonywanie aplikacji serwera nie jest wstrzymany, podczas oczekiwania na połączenie z klientem. Aplikacja odbiera ciąg od klienta, wyświetla ciąg w konsoli i następnie zwraca ciąg do klienta. Ciąg z klienta może zawierać ciąg "\<EOF >" celu sygnalizowania, że koniec komunikatu.  
@@ -289,7 +289,7 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykład asynchronicznego gniazda klienta](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
- [Używanie asynchronicznego gniazda serwera](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Przykłady kodu gniazd](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a>Zobacz także
+- [Przykład asynchronicznego gniazda klienta](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+- [Używanie asynchronicznego gniazda serwera](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [Przykłady kodu gniazd](../../../docs/framework/network-programming/socket-code-examples.md)

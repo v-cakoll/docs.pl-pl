@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3d28b7af96dde30117ec952355958ca75ae559
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: cbb939228791fa36ee64e499a2ba55dc7ce899ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614620"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Generator pliku zasobów)
 Generator plików zasobów (Resgen.exe) konwertuje pliki tekstowe (txt lub restext) i pliki zasobów w formacie XML (resx) na pliki binarne (resources) środowiska uruchomieniowego języka wspólnego, które można osadzić w binarnym pliku wykonywalnym środowiska uruchomieniowego lub zestawie satelickim. (Zobacz [tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -299,7 +299,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  *namespace*  
  Przestrzeń nazw zawierająca silnie typizowaną klasę zasobów. Plik resources i klasa zasobów powinny mieć taką samą przestrzeń nazw. Aby uzyskać informacje dotyczące określania przestrzeni nazw w `outputFilename`, zobacz [kompilowanie zasobów do pliku binarnego](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling). Jeśli *przestrzeni nazw* jest pominięty, klasa zasobów nie jest zawarta w przestrzeni nazw.  
   
- *ClassName*  
+ *classname*  
  Nazwa silnie typizowanej klasy zasobów. Powinna odpowiadać głównej nazwie pliku resources. Na przykład jeśli program Resgen.exe generuje plik resources o nazwie MyCompany.Libraries.Strings.resources, nazwa silnie typizowanej klasy zasobów to Strings. Jeśli *classname* jest pominięty, wygenerowana klasa jest pochodną głównej nazwie `outputFilename`. Jeśli `outputFilename` jest pominięty, wygenerowana klasa jest pochodną głównej nazwie `inputFilename`.  
   
  *ClassName* nie może zawierać nieprawidłowych znaków takich jak spacje. Jeśli *classname* zawierała osadzone spacje, lub jeśli *classname* została wygenerowana domyślnie z *inputFilename*, i *inputFilename* zawierała osadzone spacje, Resgen.exe zastąpi wszystkie nieprawidłowe znaki znakiem podkreślenia (_).  
@@ -329,9 +329,9 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Narzędzia](../../../docs/framework/tools/index.md)  
- [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)  
- [Tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Zobacz także
+- [Narzędzia](../../../docs/framework/tools/index.md)
+- [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)
+- [Tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

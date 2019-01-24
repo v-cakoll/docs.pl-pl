@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: af30f0d09ce772f20f342ec0936d0ca63f5465d7
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: acc732f72e9dae0796da78cdbb8ef4666ae9791a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574433"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Decydowanie o czasie implementacji klienta wzorca asynchronicznego opartego na zdarzeniach
 Asynchroniczny wzorzec oparty na zdarzeniach dostarczają wzorzec publikowania zachowanie asynchroniczne klasy. Wraz z wprowadzeniem tego wzorca [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definiuje dwa wzorce do udostępniania zachowanie asynchroniczne: asynchroniczny wzorzec oparty na <xref:System.IAsyncResult?displayProperty=nameWithType> interfejsu i wzorzec oparty na zdarzeniach. W tym temacie opisano, gdy jest ona odpowiednia dla można zaimplementować obu wzorców.  
@@ -82,8 +82,8 @@ Asynchroniczny wzorzec oparty na zdarzeniach dostarczają wzorzec publikowania z
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
-- [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
-- [Implementowanie wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
-- [Implementacja wzorca asynchronicznego opartego na zdarzeniach — najlepsze rozwiązania](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+- [Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [Implementowanie wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)
+- [Implementacja wzorca asynchronicznego opartego na zdarzeniach — najlepsze rozwiązania](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

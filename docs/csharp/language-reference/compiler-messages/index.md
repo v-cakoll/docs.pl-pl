@@ -1,17 +1,11 @@
 ---
-title: Błędy kompilatora C#
+title: 'Błędy kompilatora C#'
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, compiler errors
-- Visual C# compiler, errors
-- errors [C#]
+  - 'C# language, compiler errors'
+  - 'Visual C# compiler, errors'
+  - 'errors [C#]'
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: 2edd47682223dd94fc8dd7448465613236e67e27
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706401"
 ---
 # <a name="c-compiler-errors"></a>Błędy kompilatora C#
 
@@ -29,10 +23,10 @@ Błędy kompilatora C# mają odpowiednie tematy, które wyjaśniają, dlaczego z
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
-- [Niestety nie mamy szczegółowych informacji na temat tego błędu języka C#](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)  
-- [Strona kompilacji, Projektant projektu (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)  
-- [/ warn (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)  
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Niestety nie mamy szczegółowych informacji na temat tego błędu języka C#](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
+- [Strona kompilacji, Projektant projektu (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
+- [/ warn (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)
 - [/ nowarn (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)

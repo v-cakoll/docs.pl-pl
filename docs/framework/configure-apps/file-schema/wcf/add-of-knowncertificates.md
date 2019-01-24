@@ -2,12 +2,12 @@
 title: '&lt;add&gt; w &lt;knownCertificates&gt;'
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: c08df67ef4f659b0c8f4a5e07c774487edb28caa
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1189b394669acb826342b0a250b39db738599495
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579475"
 ---
 # <a name="ltaddgt-of-ltknowncertificatesgt"></a>&lt;add&gt; w &lt;knownCertificates&gt;
 Dodaje certyfikat X.509 do kolekcji znanych certyfikatów.  
@@ -17,7 +17,7 @@ Dodaje certyfikat X.509 do kolekcji znanych certyfikatów.
 \<serviceBehaviors>  
 \<zachowanie >  
 \<serviceCredentials>  
-\<issuedTokenAuthentication >  
+\<issuedTokenAuthentication>  
 \<knownCertificates >  
 \<add>  
   
@@ -42,7 +42,7 @@ Dodaje certyfikat X.509 do kolekcji znanych certyfikatów.
 |findValue|ciąg. Wartość do wyszukania.|  
 |storeLocation|Wyliczenie. Jednym z dwóch lokalizacji przechowywania do wyszukiwania.|  
 |storeName|Wyliczenie. Jednym z systemów magazynowania do wyszukiwania.|  
-|X509FindType|Wyliczenie. Jedno z pól certyfikatu do wyszukiwania.|  
+|x509FindType|Wyliczenie. Jedno z pól certyfikatu do wyszukiwania.|  
   
 ## <a name="findvalue-attribute"></a>findValue atrybutu  
   
@@ -50,7 +50,7 @@ Dodaje certyfikat X.509 do kolekcji znanych certyfikatów.
 |-----------|-----------------|  
 |String|Wartość zależy od pola (określony przez atrybut X509FindType) wyszukiwany. Na przykład jeśli wyszukiwanie odcisku palca, wartość musi być ciągiem liczb szesnastkowych.|  
   
-## <a name="x509findtype-attribute"></a>Atrybut x509FindType  
+## <a name="x509findtype-attribute"></a>x509FindType Attribute  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -117,16 +117,16 @@ Dodaje certyfikat X.509 do kolekcji znanych certyfikatów.
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>  
- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement.KnownCertificates%2A>  
- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>  
- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>  
- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>  
- [\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)  
- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>
+- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement.KnownCertificates%2A>
+- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>
+- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>
+- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>
+- [\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)
+- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

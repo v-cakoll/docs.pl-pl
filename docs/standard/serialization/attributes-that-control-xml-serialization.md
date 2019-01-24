@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 4acc17db83817d5aa78c9a91bfdac4e775de3743
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0d1aee4650ea29083348af482e445011289e9581
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580684"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>Atrybuty kontrolujące serializację XML
 Można zastosować atrybuty w poniższej tabeli do klas i składowych klasy do kontrolowania sposobu, w którym <xref:System.Xml.Serialization.XmlSerializer> serializuje i deserializuje wystąpienia klasy. Aby dowiedzieć się, jak te atrybuty kontrolować serializacji XML, zobacz [kontrolowanie atrybutów za pomocą serializacji XML](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  
@@ -45,9 +45,9 @@ Można zastosować atrybuty w poniższej tabeli do klas i składowych klasy do k
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
-- [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
+- [Instrukcje: Określ nazwę elementu alternatywny Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Instrukcje: Deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

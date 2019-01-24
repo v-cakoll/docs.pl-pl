@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: f64e47922aea35ac9ddf51428107af0d4002d33e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1666c7743f1116f86bc4457af53711cb6f1a6b7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579826"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 Określa nazwę kontenera kluczy parę kluczy zapewnić zestawu z silną nazwą.  
@@ -49,8 +49,8 @@ Określa nazwę kontenera kluczy parę kluczy zapewnić zestawu z silną nazwą.
 vbc -keycontainer:key1 input.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zestawy i globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Zobacz także
+- [Zestawy i globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

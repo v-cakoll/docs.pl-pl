@@ -2,12 +2,12 @@
 title: '&lt;windows&gt; w &lt;clientCredentials&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 780d73b747feae5495ad08cb2324e7d8f8de0d7d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1331456f6defc24511064684181f615451be5b93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610750"
 ---
 # <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>&lt;windows&gt; w &lt;clientCredentials&gt;, element
 Określa ustawienia dla poświadczenia Windows do użycia do reprezentacji klienta.  
@@ -17,7 +17,7 @@ Określa ustawienia dla poświadczenia Windows do użycia do reprezentacji klien
 \<endpointBehaviors>  
 \<zachowanie >  
 \<clientCredentials>  
-\<Windows >  
+\<windows>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,14 +45,14 @@ Określa ustawienia dla poświadczenia Windows do użycia do reprezentacji klien
 |-------------|-----------------|  
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Określa poświadczenia używane do uwierzytelniania klienta do usługi.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.WindowsClientElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Windows%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)  
- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.WindowsClientElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Windows%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
+- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

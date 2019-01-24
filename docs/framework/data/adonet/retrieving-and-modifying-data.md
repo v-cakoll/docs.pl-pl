@@ -2,12 +2,12 @@
 title: Pobieranie i modyfikowanie danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ab6aa30708140aed2f5f325c3dae9f543937fac8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556434"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Pobieranie i modyfikowanie danych w ADO.NET
 Podstawową funkcją dowolnej aplikacji bazy danych jest łączenie ze źródłem danych i pobierania danych, które zawiera. Dostawcy danych .NET Framework ADO.NET, które służą jako Most między aplikacją a źródłem danych, co umożliwia wykonywanie poleceń również, aby pobierać dane przy użyciu **DataReader** lub **DataAdapter** . Funkcja klucza aplikacji bazy danych jest możliwość aktualizowania danych, która jest przechowywana w bazie danych. W ADO.NET, aktualizowanie danych polega na użyciu **DataAdapter** i <xref:System.Data.DataSet>, i **polecenia** obiektów; i może również obejmować za pomocą transakcji.  
@@ -58,9 +58,9 @@ Podstawową funkcją dowolnej aplikacji bazy danych jest łączenie ze źródłe
  [Obsługa przesyłania strumieniowego SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  W tym artykule omówiono sposób pisania aplikacji strumienia danych z programu SQL Server bez konieczności jego w pełni załadowany do pamięci.  
   
-## <a name="see-also"></a>Zobacz też  
- [Mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Elementy DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
+- [Elementy DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

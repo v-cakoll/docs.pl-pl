@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c259bc167d2d4fbadf0d4721e3329975cb0f0caf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcc7770f95c0cb7d416480145a430d781e093f6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599676"
 ---
 # <a name="icorprofilerinfo2getobjectgeneration-method"></a>ICorProfilerInfo2::GetObjectGeneration — Metoda
-Pobiera segment stosu, który zawiera określony obiekt.  
+Pobiera segment stosu, który zawiera dany obiekt.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,13 +40,13 @@ HRESULT GetObjectGeneration(
  [in] Identyfikator obiektu.  
   
  `range`  
- [out] Wskaźnik do [cor_prf_gc_generation_range —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) struktury, która opisuje zakresu (Blokuj) pamięci w ramach wybranej generacji jest poddawana wyrzucanie elementów bezużytecznych. Ten zakres zawiera określony obiekt.  
+ [out] Wskaźnik do [cor_prf_gc_generation_range —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) struktury, która opisuje zakresu (Blokuj) pamięci w generacji, która jest w trakcie wyrzucania elementów bezużytecznych. Ten zakres zawiera określony obiekt.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetObjectGeneration` Zwrotne profilera, może zostać wywołana metoda pod warunkiem, że pamięci nie jest w toku. Oznacza to, może być wywoływana z dowolnego wywołania zwrotnego z wyjątkiem tych, które mają miejsce między [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) i [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).  
+ `GetObjectGeneration` Metoda może być wywoływana z dowolnym zwrotnego profilera, pod warunkiem, że wyrzucanie elementów bezużytecznych nie jest w toku. Oznacza to, może być wywoływana z dowolnego wywołania zwrotnego, z wyjątkiem tych, które mają miejsce między [icorprofilercallback2::garbagecollectionstarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) i [icorprofilercallback2::garbagecollectionfinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -54,6 +54,6 @@ HRESULT GetObjectGeneration(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

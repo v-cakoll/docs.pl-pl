@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wstrzymywanie usług systemu Windows (Visual Basic)'
+title: 'Instrukcje: Wstrzymaj usługę Windows (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: c62de97439ecf90ebfcc14d9fea4c5ab52f6ef73
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8d378aba5ad09a38d24359fda8b50de072c58035
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612726"
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a>Porady: wstrzymywanie usług systemu Windows (Visual Basic)
+# <a name="how-to-pause-a-windows-service-visual-basic"></a>Instrukcje: Wstrzymaj usługę Windows (Visual Basic)
 W tym przykładzie użyto <xref:System.ServiceProcess.ServiceController> składnika, aby wstrzymać Administrator usług IIS na komputerze lokalnym.  
   
 ## <a name="example"></a>Przykład  
@@ -47,8 +47,8 @@ W tym przykładzie użyto <xref:System.ServiceProcess.ServiceController> składn
   
  Dostęp do informacji o usłudze może być ograniczana przy użyciu <xref:System.Security.Permissions.PermissionState> ustawiania uprawnień w <xref:System.Security.Permissions.SecurityPermission>.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceProcess.ServiceController>  
- <xref:System.ServiceProcess.ServiceControllerStatus>  
- <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>  
- [Instrukcje: kontynuowanie usług systemu Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceProcess.ServiceController>
+- <xref:System.ServiceProcess.ServiceControllerStatus>
+- <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
+- [Instrukcje: Kontynuowanie usług Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)

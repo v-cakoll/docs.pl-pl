@@ -2,12 +2,12 @@
 title: Rejestrowanie procedur składowanych w programie SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: c24edd59992c246c33944e6693ff5ac69311886a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: da7b21d725d301006288245c940e4367c3ce8568
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606825"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Rejestrowanie procedur składowanych w programie SQL Server
  Podpis cyfrowy jest szyfrowane przy użyciu klucza prywatnego osoby podpisującej podsumowanie danych. Klucza prywatnego gwarantuje, że podpis cyfrowy jest unikatowe dla jego elementów nośnych lub właściciela. Możesz zarejestrować procedury składowane, funkcje (z wyjątkiem funkcji z wartościami przechowywanymi w tabeli śródwierszowych), wyzwalacze i zestawów.  
@@ -54,12 +54,12 @@ Jeśli moduł wymaga dodatkowych uprawnień na poziomie serwera:
 |[Moduł podpisywania](https://go.microsoft.com/fwlink/?LinkId=98590) w SQL Server — książki Online|W tym artykule opisano moduł podpisywania, zapewniając przykładowy scenariusz i linki do powiązanych tematów języka Transact-SQL.|  
 |[Rejestrowanie procedur składowanych z certyfikatem](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) w SQL Server — książki Online|Zawiera samouczek dla procedury składowanej przy użyciu certyfikatu podpisywania.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Przegląd zabezpieczeń serwera SQL](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [Dostosowywanie uprawnień personifikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
- [Modyfikowanie danych za pomocą procedur składowanych](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Przegląd zabezpieczeń serwera SQL](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
+- [Dostosowywanie uprawnień personifikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
+- [Modyfikowanie danych za pomocą procedur składowanych](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

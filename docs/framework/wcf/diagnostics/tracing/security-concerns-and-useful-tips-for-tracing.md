@@ -2,12 +2,12 @@
 title: Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 439484cf5df6311bef56be0e28e5949c79d9a8f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0dadf89ecbd7623735debe37355761aea3d62db4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580398"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia
 W tym temacie opisano, jak możesz chronić poufne informacje przed przypadkowym, a także przydatne porady, korzystając z hostem sieci Web.  
@@ -90,5 +90,5 @@ W tym temacie opisano, jak możesz chronić poufne informacje przed przypadkowym
   
  Ponadto adres IP nadawcy wiadomości jest rejestrowane raz na połączenia dla transportu nawiązaniem połączenia i jeden raz na wiadomością wysłaną w inny sposób. Można to zrobić bez zgody nadawcy. Jednak rejestrowanie występuje tylko na poziomie informacji lub pełne śledzenie, które nie są domyślnie lub zalecane poziomy śledzenia w środowisku produkcyjnym, z wyjątkiem aktywnego debugowania.  
   
-## <a name="see-also"></a>Zobacz też  
- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

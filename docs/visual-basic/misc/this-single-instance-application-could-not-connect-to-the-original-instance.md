@@ -1,37 +1,37 @@
 ---
-title: To pojedyncze wystąpienie aplikacji nie można połączyć z oryginalnego wystąpienia
+title: Ta aplikacja o pojedynczym wystąpieniu nie można połączyć z oryginalnego wystąpienia
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 9bc1f33231cc4f29fabd100a695843beb334aeaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c1ec0bf1aa4b6dbf885294c680b3bfe8897eac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565712"
 ---
-# <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>To pojedyncze wystąpienie aplikacji nie można połączyć z oryginalnego wystąpienia
-To pojedyncze wystąpienie aplikacji nie może połączyć się z wystąpieniem oryginalnym. Niektóre możliwe przyczyny tego problemu są następujące:  
+# <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>Ta aplikacja o pojedynczym wystąpieniu nie można połączyć z oryginalnego wystąpienia
+Ta aplikacja o pojedynczym wystąpieniu nie może połączyć do oryginalnego wystąpienia. Niektóre z możliwych przyczyn tego problemu są następujące:  
   
 -   Oryginalne wystąpienie przestał odpowiadać.  
   
--   Aplikacja nie ma uprawnień do tworzenia obiektów jądra. Aby uzyskać więcej informacji o obiektach jądra, zobacz [muteksy](../../standard/threading/mutexes.md).  
+-   Aplikacja nie ma uprawnień do tworzenia obiektów jądra. Aby uzyskać więcej informacji na temat jądra obiektów, zobacz [muteksy](../../standard/threading/mutexes.md).  
   
-     Nazwę podstawową dla obiekt jądra pochodzi z łączenia GUID zestawu, numer wersji głównej i podrzędny numer wersji. Na przykład można podstawowej nazwy `3639f15d-9547-43da-8145-60da347829915.1`.  
+     Nazwa podstawowa dla obiektów jądra pochodzi z łączenia identyfikator GUID, główny numer wersji i pomocniczy numer wersji zestawu. Na przykład może być nazwa podstawowa `3639f15d-9547-43da-8145-60da347829915.1`.  
   
-## <a name="to-correct-this-error-when-developing-the-application"></a>Aby rozwiązać ten problem, podczas opracowywania aplikacji  
+## <a name="to-correct-this-error-when-developing-the-application"></a>Aby naprawić ten błąd, podczas opracowywania aplikacji  
   
-1.  Sprawdź, czy aplikacja nie przechodzi w stan, który nie odpowiada.  
+1.  Upewnij się, że aplikacja nie przechodzi do stanu nie odpowiada.  
   
 2.  Sprawdź, czy aplikacja ma wystarczające uprawnienia do tworzenia obiektów jądra.  
   
-3.  Ponowne uruchomienie oryginalnego wystąpienia aplikacji.  
+3.  Uruchom ponownie oryginalne wystąpienie aplikacji.  
   
-4.  Uruchom ponownie komputer, aby wyczyścić żaden proces, który używa zasobu, który jest wymagany do połączenia do oryginalnego wystąpienia aplikacji.  
+4.  Uruchom ponownie komputer, aby wyczyścić każdy proces, który może używać zasób, który jest wymagane do połączenia z oryginalnej aplikacji wystąpienia.  
   
-5.  Zanotuj okoliczności, w których wystąpił błąd, a telefonu pomocy technicznej firmy Microsoft.  
+5.  Należy pamiętać, okoliczności, w których wystąpił błąd i telefoniczna pomoc techniczna firmy Microsoft.  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawowe informacje o debugerze](/visualstudio/debugger/debugger-basics)  
+## <a name="see-also"></a>Zobacz także
+- [Podstawowe informacje o debugerze](/visualstudio/debugger/debugger-basics)
 

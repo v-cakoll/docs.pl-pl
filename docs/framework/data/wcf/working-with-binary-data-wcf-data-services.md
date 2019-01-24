@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 9f7ee114a5a480d470c2c32b5b83e287b07e9537
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44507d8e746584ecf8efaa0b361d1707eae50156
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570593"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Praca z danymi binarnymi (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteka klienta umożliwia pobieranie i aktualizację danych binarnych pochodzących ze [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych w jednym z następujących sposobów:  
@@ -25,7 +25,7 @@ ms.locfileid: "43515558"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementuje, przesyłanie strumieniowe danych binarnych przy użyciu protokołu HTTP, zgodnie z definicją w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Dane binarne ten mechanizm jest traktowany jako zasób nośnika, który jest oddzielony od ale powiązanych z jednostką, która nosi nazwę wpisu łącza nośnika. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   
 > [!TIP]
->  Aby uzyskać przykład krok po kroku dotyczące tworzenia aplikacji klienckiej Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługa, która przechowuje zdjęcia, zobacz wpis [danych przesyłania strumieniowego dostawcy serii-Part usług 2: uzyskiwanie dostępu do Stream zasobu multimediów od klienta](https://go.microsoft.com/fwlink/?LinkId=201637). Aby pobrać przykładowy kod dla usługi danych strumienia zdjęć polecane wpis w blogu, zobacz [przesyłanie strumieniowe zdjęć dane usług — przykład](https://go.microsoft.com/fwlink/?LinkId=198988) w galerii kodu MSDN.  
+>  Aby uzyskać przykład krok po kroku dotyczące tworzenia aplikacji klienckiej Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługa, która przechowuje zdjęcia, zobacz wpis [danych przesyłania strumieniowego dostawcy serii-Part usług 2: Uzyskiwanie dostępu do Stream zasobu multimediów od klienta](https://go.microsoft.com/fwlink/?LinkId=201637). Aby pobrać przykładowy kod dla usługi danych strumienia zdjęć polecane wpis w blogu, zobacz [przesyłanie strumieniowe zdjęć dane usług — przykład](https://go.microsoft.com/fwlink/?LinkId=198988) w galerii kodu MSDN.  
   
 ## <a name="entity-metadata"></a>Metadane jednostki  
  Jednostki, która ma powiązane multimediów strumieniowych zasobu jest wskazywane WE metadanych usługi danych przez `HasStream` zastosowany do typu jednostki, która jest nośnika wpisu łącza nośnika. W poniższym przykładzie `PhotoInfo` jednostka jest wpisu łącza nośnika, zawierającej powiązanych zasobów nośników, wskazywanym przez `HasStream` atrybutu.  
@@ -38,7 +38,7 @@ ms.locfileid: "43515558"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteki klienta dostarcza metod dostępu do strumieni zasób binarny z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie danych usługi. Podczas pobierania zasobu multimediów, możesz użyć identyfikatora URI zasobu multimediów, lub można uzyskać strumień binarny zawiera same dane zasobu multimediów. Możesz również przekazać dane do zasobu multimediów jako strumień binarny.  
   
 > [!TIP]
->  Aby uzyskać przykład krok po kroku dotyczące tworzenia aplikacji klienckiej Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługa, która przechowuje zdjęcia, zobacz wpis [danych przesyłania strumieniowego dostawcy serii-Part usług 2: uzyskiwanie dostępu do Stream zasobu multimediów od klienta](https://go.microsoft.com/fwlink/?LinkId=201637). Aby pobrać przykładowy kod dla usługi danych strumienia zdjęć polecane wpis w blogu, zobacz [przesyłanie strumieniowe zdjęć dane usług — przykład](https://go.microsoft.com/fwlink/?LinkId=198988) w galerii kodu MSDN.  
+>  Aby uzyskać przykład krok po kroku dotyczące tworzenia aplikacji klienckiej Windows Presentation Foundation (WPF), która pobiera pliki obrazów binarnych z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługa, która przechowuje zdjęcia, zobacz wpis [danych przesyłania strumieniowego dostawcy serii-Part usług 2: Uzyskiwanie dostępu do Stream zasobu multimediów od klienta](https://go.microsoft.com/fwlink/?LinkId=201637). Aby pobrać przykładowy kod dla usługi danych strumienia zdjęć polecane wpis w blogu, zobacz [przesyłanie strumieniowe zdjęć dane usług — przykład](https://go.microsoft.com/fwlink/?LinkId=198988) w galerii kodu MSDN.  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Uzyskiwanie identyfikatora URI binarne Stream  
  Podczas pobierania niektórych rodzajów zasobów nośników, takich jak obrazy i inne pliki multimedialne, często jest łatwiejszy w użyciu identyfikator URI zasobu multimediów w Twojej aplikacji, niż Obsługa sam strumień danych binarnych. Aby uzyskać identyfikator URI skojarzony z danym wpisu łącza nośnika strumienia zasobu, należy wywołać <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> metody <xref:System.Data.Services.Client.DataServiceContext> wystąpienie, które służy do śledzenia jednostki. Poniższy przykład pokazuje sposób wywoływania <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> metodę, aby uzyskać identyfikator URI multimediów strumieniowych zasobu, który jest używany do tworzenia nowego obrazu na komputerze klienckim:  
@@ -66,6 +66,6 @@ ms.locfileid: "43515558"
 > [!NOTE]
 >  Gdy wywołujesz <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>, strumienia nie są wysyłane do usługi danych, dopóki <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> jest wywoływana.  
   
-## <a name="see-also"></a>Zobacz też  
- [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Wiązanie danych do kontrolki](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Wiązanie danych do kontrolki](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)

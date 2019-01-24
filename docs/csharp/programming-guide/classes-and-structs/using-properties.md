@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: dd5d85feb520e10a5d89cf91878d092695efb13a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6aabdf9956365548d3f0cdf0cd046343d8129f04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560748"
 ---
 # <a name="using-properties-c-programming-guide"></a>Używanie właściwości (Przewodnik programowania w języku C#)
 Właściwości łączenia aspektów pola i metody. Do użytkownika obiektu Właściwość wydaje się być pola, uzyskanie dostępu do właściwości wymaga takiej samej składni. Właściwość implementujący klasę, jest co najmniej dwóch bloków kodu, reprezentujący [uzyskać](../../../csharp/language-reference/keywords/get.md) metody dostępu i/lub [ustaw](../../../csharp/language-reference/keywords/set.md) metody dostępu. Blok kodu dla `get` metody dostępu jest wykonywany, gdy właściwość jest do odczytu; kod zablokować na `set` metody dostępu jest wykonywany, gdy właściwość jest przypisywana nowa wartość. Właściwość bez `set` metody dostępu jest traktowane jako tylko do odczytu. Właściwość bez `get` metody dostępu jest traktowane jako tylko do zapisu. Właściwość, która ma obu metod dostępu jest do odczytu i zapisu.  
@@ -100,9 +100,9 @@ Właściwości łączenia aspektów pola i metody. Do użytkownika obiektu Wła�
   
  [!code-csharp[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Właściwości interfejsu](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Właściwości interfejsu](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)
 - [Właściwości zaimplementowane automatycznie](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)

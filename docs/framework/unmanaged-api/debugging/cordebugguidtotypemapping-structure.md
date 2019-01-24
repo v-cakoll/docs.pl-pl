@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c803a805da605bd52fd50eb1e292c0e277143d7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49290a37ca7ea101e3c8b458a5daa4995cb3beee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610048"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping — Struktura
-Mapy [!INCLUDE[wrt](../../../../includes/wrt-md.md)] identyfikator GUID na jego odpowiedni obiekt ICorDebugType.  
+Mapy [!INCLUDE[wrt](../../../../includes/wrt-md.md)] identyfikator GUID służący do jego odpowiedniego obiektu ICorDebugType.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,8 +41,8 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`iid`|Identyfikator GUID zapisane w pamięci podręcznej [!INCLUDE[wrt](../../../../includes/wrt-md.md)] typu.|  
-|`pType`|Wskaźnik do obiektu ICorDebugType, który zawiera informacje o pamięci podręcznej typu.|  
+|`iid`|Identyfikator GUID buforowane [!INCLUDE[wrt](../../../../includes/wrt-md.md)] typu.|  
+|`pType`|Wskaźnik do obiektu ICorDebugType, który zawiera informacje o typie pamięci podręcznej.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)].  
@@ -53,6 +53,6 @@ typedef struct CorDebugGuidToTypeMapping {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

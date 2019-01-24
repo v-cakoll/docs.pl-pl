@@ -2,12 +2,12 @@
 title: Element BasicBinding z elementem Transport Security
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: a1e08b2fd97f7eee8903de8c396e6eacd9e7184e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 40aa914bee858d7cfaad627f7276623b22c2a7e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568540"
 ---
 # <a name="basicbinding-with-transport-security"></a>Element BasicBinding z elementem Transport Security
 Niniejszy przykład pokazuje użycie protokołu SSL z zabezpieczeń transportu z powiązaniem podstawowe. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora.  
@@ -89,4 +89,4 @@ Press <ENTER> to terminate client.
   
 5.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

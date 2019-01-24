@@ -1,5 +1,5 @@
 ---
-title: '&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt; — Element'
+title: '&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - NetFx45_CultureAwareComparerGetHashCode_LongStrings element
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c2dfd5d3944618cf94d32fac2708d6daef5a410
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 67dae26733527a85f4fc13734da896193e53db8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576892"
 ---
-# <a name="ltnetfx45cultureawarecomparergethashcodelongstringsgt-element"></a>&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt; — Element
+# <a name="ltnetfx45cultureawarecomparergethashcodelongstringsgt-element"></a>&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt; Element
 Określa, czy środowisko uruchomieniowe używa stałej ilości pamięci do obliczania kodów wartości skrótu dla <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> metody.  
   
  \<Konfiguracja >  
 \<runtime>  
-< NetFx45_CultureAwareComparerGetHashCode_LongStrings >  
+<NetFx45_CultureAwareComparerGetHashCode_LongStrings>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -61,7 +61,7 @@ Określa, czy środowisko uruchomieniowe używa stałej ilości pamięci do obli
 > [!IMPORTANT]
 >  `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` Element nie jest używany w [!INCLUDE[win8](../../../../../includes/win8-md.md)] i nowszych wersjach.  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

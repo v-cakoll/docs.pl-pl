@@ -7,27 +7,27 @@ helpviewer_keywords:
 - client coordinates
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
-ms.openlocfilehash: ba6bf8c1a8ae5ab14a9b33ae431e34310046b2a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6f082eb57a9cfe1af0d4207cbf5226637191c90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556054"
 ---
 # <a name="windows-forms-coordinates"></a>Współrzędne formularzy systemu Windows
-System współrzędnych dla formularza systemu Windows jest oparta na współrzędnych urządzenia i jednostkę urządzenie (zazwyczaj pikseli) jest podstawową jednostką miary Rysowanie w formularzach systemu Windows. Punkty na ekranie są opisane przez pary współrzędną x i y, z współrzędne x zwiększenie w prawo i współrzędną y zwiększenie od góry do dołu. Miejsce pochodzenia względem ekranu, będą się różnić w zależności od tego, czy są określający współrzędne ekranu lub klienta.  
+System współrzędnych dla formularza Windows opiera się na współrzędnych urządzenia i podstawowa jednostka miary Rysowanie w formularzach Windows Forms jest jednostką urządzenia (zazwyczaj w pikselach). Punkty na ekranie są opisane przez pary współrzędną x i y, za pomocą współrzędnych x zwiększa się po prawej stronie i współrzędne y zwiększenie od góry do dołu. Lokalizacja pochodzenia względem ekranu, różnią się w zależności od tego, czy określasz współrzędne ekranu lub klienta.  
   
 ## <a name="screen-coordinates"></a>Współrzędne ekranu  
- Aplikacji formularzy systemu Windows określa położenie okna na ekranie we współrzędnych ekranu. Współrzędne ekranu źródła jest lewym górnym rogu ekranu. Pełna położenie okna jest często opisanego przez <xref:System.Drawing.Rectangle> struktury zawierającej współrzędne ekranu dwa punkty, które definiują górnym rogu i prawym dolnym rogu okna.  
+ Aplikacja Windows Forms Określa położenie okna na ekranie współrzędne ekranu. Na współrzędne ekranu pochodzi w lewym górnym rogu ekranu. Pełne położenie okna jest często opisywana przez <xref:System.Drawing.Rectangle> struktury zawierającej współrzędne ekranu dwa punkty, które definiują lewym i prawym dolnym rogu okna.  
   
 ## <a name="client-coordinates"></a>Współrzędne klienta  
- Aplikacji formularzy systemu Windows określa pozycję punktów w formularzu lub formantu przy użyciu współrzędnych klienta. Punkt początkowy współrzędne klienta jest lewego górnego rogu obszaru klienta formularza lub kontrolki. Współrzędne klienta upewnij się, czy aplikacja może użyć spójne wartości współrzędnych podczas rysowania formularza lub kontrolki, niezależnie od położenia formularza lub kontrolki, na ekranie.  
+ Aplikacji Windows Forms określa pozycję punktów w formularza lub formantu przy użyciu współrzędnych klienta. Początek dla współrzędnych klienta znajduje się w lewym górnym rogu obszaru klienta formularza lub formantu. Współrzędne klienta upewnij się, że aplikacja może użyć spójnego wartości współrzędnych podczas rysowania w formularza lub formantu, niezależnie od tego, położenie formularza lub kontrolki na ekranie.  
   
- Wymiary obszaru klienckiego są także opisane przez <xref:System.Drawing.Rectangle> struktury, która zawiera współrzędne klienta dla obszaru. We wszystkich przypadkach Współrzędna lewej górnej krawędzi prostokąta znajduje się w obszarze klienta podczas prawą dolną współrzędną jest wyłączone. Operacje graficzne nie dołączaj dolnej i prawej krawędzi obszaru klienckiego. Na przykład <xref:System.Drawing.Graphics.FillRectangle%2A> metoda będzie zapełnić do prawej i w dolnej krawędzi prostokąt określony, ale nie będzie zawierał te krawędzi.  
+ Wymiary obszaru klienta są także opisane przez <xref:System.Drawing.Rectangle> strukturę, która zawiera współrzędne klienta dla danego obszaru. We wszystkich przypadkach Współrzędna lewej górnej krawędzi prostokąta znajduje się w obszar klienta, gdy prawą dolną współrzędną jest wykluczona. Operacje graficzne nie dołączaj dolnej i prawej krawędzi obszaru klienta. Na przykład <xref:System.Drawing.Graphics.FillRectangle%2A> metody zastaną zapełnione prawo i dolną krawędzią prostokąt określony, ale nie będzie zawierać tych krawędzi.  
   
-## <a name="mapping-from-one-type-of-coordinate-to-another"></a>Mapowanie typu współrzędnych  
- Czasami może być konieczne mapowania współrzędne ekranu na współrzędne klienta. Możesz to łatwo zrobić przy użyciu <xref:System.Windows.Forms.Control.PointToClient%2A> i <xref:System.Windows.Forms.Control.PointToScreen%2A> metod w <xref:System.Windows.Forms.Control> klasy. Na przykład <xref:System.Windows.Forms.Control.MousePosition%2A> właściwość <xref:System.Windows.Forms.Control> jest zgłaszany we współrzędnych ekranu, ale chcesz przekonwertować je na współrzędne klienta.  
+## <a name="mapping-from-one-type-of-coordinate-to-another"></a>Mapowania z jednego typu współrzędnych  
+ Od czasu do czasu może być konieczne mapowania współrzędne ekranu na współrzędne klienta. Można to łatwo zrobić przy użyciu <xref:System.Windows.Forms.Control.PointToClient%2A> i <xref:System.Windows.Forms.Control.PointToScreen%2A> metod dostępnych w <xref:System.Windows.Forms.Control> klasy. Na przykład <xref:System.Windows.Forms.Control.MousePosition%2A> właściwość <xref:System.Windows.Forms.Control> jest zgłaszany we współrzędnych ekranu, ale można je przekształcić w współrzędne klienta.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.Control.PointToClient%2A>  
- <xref:System.Windows.Forms.Control.PointToScreen%2A>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.Control.PointToClient%2A>
+- <xref:System.Windows.Forms.Control.PointToScreen%2A>

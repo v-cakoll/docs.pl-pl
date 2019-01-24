@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d86743f59c12cf59376ad542c2cd58f6e8c4ad65
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 38031509b999662c86657f0f5cdc7202de65c194
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607202"
 ---
 # <a name="com-wrappers"></a>Otoki COM
 COM różni się od modelu obiektów programu .NET Framework na kilka sposobów ważne:  
@@ -34,9 +34,9 @@ Przegląd otoki COM
   
  W większości przypadków standard RCW lub CCW generowane przez środowisko wykonawcze zapewnia odpowiednie kierowanie wywołań, które przekraczają granicę między COM i .NET Framework. Za pomocą atrybutów niestandardowych, można opcjonalnie dostosować sposób, środowisko uruchomieniowe reprezentuje kodem zarządzanym i niezarządzanym.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zaawansowane współdziałanie modeli COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [Wywoływana otoka środowiska uruchomieniowego](runtime-callable-wrapper.md)  
- [Wywoływana otoka COM](com-callable-wrapper.md)  
- [Dostosowywanie otok standardowych](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
- [Porady: dostosowywanie wywoływanych otok środowiska uruchomieniowego](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))
+## <a name="see-also"></a>Zobacz także
+- [Zaawansowane współdziałanie modeli COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Wywoływana otoka środowiska uruchomieniowego](runtime-callable-wrapper.md)
+- [Wywoływana otoka COM](com-callable-wrapper.md)
+- [Dostosowywanie otok standardowych](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))
+- [Instrukcje: Dostosowywanie wywoływanych otok środowiska uruchomieniowego](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: filtrowanie i sortowanie danych ADO.NET za pomocą składnika BindingSource formularzy systemu Windows'
+title: 'Instrukcje: Sortowanie i filtrowanie danych ADO.NET za pomocą Windows składnika BindingSource formularzy'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 932d30d356225d88d7ef149561cc4c5cc8ac4dd0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: edb639f25970c6946eb33c68dd5a99cad566d4a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584782"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Porady: filtrowanie i sortowanie danych ADO.NET za pomocą składnika BindingSource formularzy systemu Windows
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Instrukcje: Sortowanie i filtrowanie danych ADO.NET za pomocą Windows składnika BindingSource formularzy
 Należy udostępnić sortowanie i filtrowanie możliwości <xref:System.Windows.Forms.BindingSource> kontrolować za pośrednictwem <xref:System.Windows.Forms.BindingSource.Sort%2A> i <xref:System.Windows.Forms.BindingSource.Filter%2A> właściwości. Można zastosować proste sortowania, jeśli bazowe źródło danych jest <xref:System.ComponentModel.IBindingList>, i można zastosować filtrowanie zaawansowane, sortowanie, gdy źródłem danych jest <xref:System.ComponentModel.IBindingListView>. <xref:System.Windows.Forms.BindingSource.Sort%2A> Właściwość wymaga standard [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Składnia: ciąg reprezentujący nazwę kolumny danych w źródle danych następuje `ASC` lub `DESC` do wskazania, czy lista powinny być sortowane w kolejności rosnącej lub malejącej. Możesz ustawić zaawansowane sortowania lub wiele kolumn, sortowanie, rozdzielając każda kolumna przecinka jako separatora. <xref:System.Windows.Forms.BindingSource.Filter%2A> Właściwość przyjmuje wyrażenia ciągu.  
   
 > [!NOTE]
@@ -53,8 +53,8 @@ Należy udostępnić sortowanie i filtrowanie możliwości <xref:System.Windows.
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Aby uruchomić ten przykład, Wklej kod do formularza, który zawiera <xref:System.Windows.Forms.BindingSource> o nazwie `BindingSource1` i <xref:System.Windows.Forms.DataGridView> o nazwie `dataGridView1`. Obsługa <xref:System.Windows.Forms.Form.Load> zdarzenie w formularzu i wywołania `InitializeSortedFilteredBindingSource` w metodzie obsługi zdarzenia obciążenia.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.BindingSource.Sort%2A>  
- <xref:System.Windows.Forms.BindingSource.Filter%2A>  
- [Porady: Instalowanie przykładowych baz danych](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)  
- [BindingSource, składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.BindingSource.Sort%2A>
+- <xref:System.Windows.Forms.BindingSource.Filter%2A>
+- [Instrukcje: Zainstalować przykładowe bazy danych](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
+- [BindingSource, składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)

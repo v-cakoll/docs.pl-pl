@@ -2,12 +2,12 @@
 title: '&lt;faultPropagationQuery&gt; w WCF'
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: cf582fce4e899e62daa4f34f193a0232ec19a135
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1da2a95d27756296aab5a205a90fb028508c4b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601808"
 ---
 # <a name="ltfaultpropagationquerygt-of-wcf"></a>&lt;faultPropagationQuery&gt; w WCF
 
@@ -17,11 +17,11 @@ Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz 
   
 \<system.serviceModel>  
 \<Śledzenie >  
-\<profile >  
+\<profiles>  
 \<trackingProfile>  
 \<przepływ pracy >  
-\<faultPropagationQueries >  
-\<faultPropagationQuery >  
+\<faultPropagationQueries>  
+\<faultPropagationQuery>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -61,8 +61,8 @@ Brak.
 |-------------|-----------------|  
 |[\<faultPropagationQueries>](faultpropagationqueries-of-wcf.md)|Reprezentuje listę elementów konfiguracji, które są używane do śledzenia obsługi błędów występujących w ramach działania.  To zdarzenie występuje, każdym razem FaultHandler przetwarza błąd wystąpienia.|
   
-## <a name="see-also"></a>Zobacz także  
- 
+## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
 - [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

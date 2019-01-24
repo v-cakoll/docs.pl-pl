@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93763da2afbbdb1e738c802ba172e9f16e5f7af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98d7be5adc81cff09b121265e7d5b5f712122607
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611413"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps — Metoda
-Pobiera informacje o metadanych, łącznie z nazwą, podpis binarny i wirtualny adres względny elementu <xref:System.Type> odwołuje się token metadanych określonego elementu członkowskiego.  
+Pobiera informacje o metadanych, w tym m.in. nazwy, podpis binarny i względny adres wirtualny, <xref:System.Type> odwołuje się token metadanych określonego elementu członkowskiego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,7 +49,7 @@ HRESULT GetMemberProps (
   
 #### <a name="parameters"></a>Parametry  
  `mb`  
- [in] Token, który odwołuje się do elementu członkowskiego do pobrania skojarzone metadane.  
+ [in] Token, który odwołuje się do elementu członkowskiego, który można pobrać skojarzone metadane.  
   
  `pClass`  
  [out] Wskaźnik do tokenu metadanych, który reprezentuje klasę elementu członkowskiego.  
@@ -58,44 +58,44 @@ HRESULT GetMemberProps (
  [out] Nazwa elementu członkowskiego.  
   
  `cchMember`  
- [in] Rozmiar w znaki dwubajtowe `szMember` buforu.  
+ [in] Rozmiar w znaków `szMember` buforu.  
   
  `pchMember`  
- [out] Rozmiar w znaki dwubajtowe zwrócony nazwy.  
+ [out] Rozmiar w znaki dwubajtowe zwrócone nazwy.  
   
  `pdwAttr`  
- [out] Wartości flagi zastosowany do elementu członkowskiego.  
+ [out] Wartości flagi zastosowane do elementu członkowskiego.  
   
  `ppvSigBlob`  
- [out] Wskaźnik do sygnatury binarne metadanych elementu członkowskiego.  
+ [out] Wskaźnik do podpisu binarne metadanych elementu członkowskiego.  
   
  `pcbSigBlob`  
- [out] Wyrażony w bajtach rozmiar `ppvSigBlob`.  
+ [out] Rozmiar w bajtach `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] Wskaźnik do wirtualnego adres względny elementu członkowskiego.  
+ [out] Wskaźnik do wirtualnej adres względny elementu członkowskiego.  
   
  `pdwImplFlags`  
- [out] Wszystkie skojarzone z danym elementem flagi implementacji metod.  
+ [out] Wszystkie skojarzone z elementem flagi implementacji metody.  
   
  `pdwCPlusTypeFlag`  
  [out] Flaga, która oznacza <xref:System.ValueType>.  
   
  `ppValue`  
- [out] Wartość stałej ciągu zwróconych przez ten element członkowski.  
+ [out] Wartość stała ciągu zwracane przez ten element członkowski.  
   
  `pcchValue`  
- [out] Rozmiar w znakach `ppValue`, lub zero, jeśli `ppValue` nie zawiera ciąg.  
+ [out] Rozmiar w znakach `ppValue`, lub zero, jeśli `ppValue` nie zawiera ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

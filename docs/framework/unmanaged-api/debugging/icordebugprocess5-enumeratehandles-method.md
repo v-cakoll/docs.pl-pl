@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f2177702c6c5999033d0852a932e52c0725fb8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b8c3f102405c9b9fa9af2597658b728e618cabb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559375"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles — Metoda
-Pobiera moduł wyliczający dla obiekt dojść w procesie.  
+Pobiera moduł wyliczający dla obiektu uchwytów w procesie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,24 +36,24 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 #### <a name="parameters"></a>Parametry  
  `types`  
- [in] Bitowe połączenie [corgcreferencetype —](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) wartości, które określają typ dojścia do uwzględnienia w kolekcji.  
+ [in] Bitowa kombinacja [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) wartości, które określa typ dojścia do uwzględnienia w kolekcji.  
   
  `ppENum`  
- [out] Wskaźnik do adresu [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) czyli moduł wyliczający dla obiektów być zbierane z pamięci.  
+ [out] Wskaźnik na adres [icordebuggcreferenceenum —](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) oznacza to moduł wyliczający dla obiektów jako zebranych elementów bezużytecznych.  
   
 ## <a name="remarks"></a>Uwagi  
- `EnumerateHandles` to funkcja pomocnika obsługującą kontroli tabeli dojścia. Jest podobna do [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) metody, z wyjątkiem zamiast wypełnianie [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) kolekcji ze wszystkimi obiektami być zbierane odzyskiwanie go obejmuje tylko te obiekty, które mają uchwyty z tabeli dojścia.  
+ `EnumerateHandles` jest funkcja pomocnicza, która obsługuje inspekcji tabelę uchwytów. Jest on podobny do [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) metody, chyba że zamiast wypełnianie [icordebuggcreferenceenum —](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) kolekcji ze wszystkimi obiektami jako zebranych elementów bezużytecznych go zawiera tylko te obiekty, które mają dojścia stałe od tabelę uchwytów.  
   
- `types` Parametr określa typ dojścia do uwzględnienia w kolekcji. `types` Możesz użyć dowolnej z następujących trzech elementów członkowskich [corgcreferencetype —](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) wyliczenie:  
+ `types` Parametr określa typ dojścia do uwzględnienia w kolekcji. `types` może być dowolną z następujących trzech członków [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) wyliczenia:  
   
--   `CorHandleStrongOnly` (dojść tylko silne odwołania).  
+-   `CorHandleStrongOnly` (obsługuje tylko silne odwołania).  
   
--   `CorHandleWeakOnly` (dojść tylko słabego odwołania).  
+-   `CorHandleWeakOnly` (obsługuje wyłącznie słabe odwołania).  
   
--   `CorHandleAll` (wszystkie dojścia).  
+-   `CorHandleAll` (wszystkie uchwyty).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -61,6 +61,6 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

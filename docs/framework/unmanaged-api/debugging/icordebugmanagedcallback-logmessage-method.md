@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4c8494b1ffc80fc49acce01c5de0b3fd18c0f5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61a8d3e4a343818918e140727d3770ba3e82aac8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574693"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a>ICorDebugManagedCallback::LogMessage — Metoda
-Powiadamia debuger wspólnego języka wątku zarządzanego środowiska uruchomieniowego (języka wspólnego CLR) została wywołana metoda <xref:System.Diagnostics.EventLog> klasę, aby rejestrować zdarzenia.  
+Informuje debuger, wspólnym mianownikiem zarządzanych środowiska uruchomieniowego (języka wspólnego CLR) języka została wywołana metoda <xref:System.Diagnostics.EventLog> klasy, aby rejestrować zdarzenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,22 +41,22 @@ HRESULT LogMessage (
   
 #### <a name="parameters"></a>Parametry  
  `pAppDomain`  
- [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domeny aplikacji zawierające zarządzanego wątku, który rejestrowane zdarzenia.  
+ [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, zawierającą wątków zarządzanych, rejestrującej zdarzenie.  
   
  `pThread`  
- [in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje zarządzanego wątku.  
+ [in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątków zarządzanych.  
   
  `lLevel`  
- [in] Wartość [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) wyliczenia, która wskazuje poziom ważności opisowym komunikatem, który został zapisany w dzienniku zdarzeń.  
+ [in] Wartość [logginglevelenum —](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) wyliczenie, które wskazuje poziom ważności opisowy komunikat, który został zapisany w dzienniku zdarzeń.  
   
  `pLogSwitchName`  
- [in] Wskaźnik do nazwy przełącznika śledzenia.  
+ [in] Wskaźnik na nazwę przełącznika śledzenia.  
   
  `pMessage`  
- [in] Wskaźnik do elementu, który został zapisany w dzienniku zdarzeń.  
+ [in] Wskaźnik do komunikat, który został zapisany w dzienniku zdarzeń.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -64,5 +64,5 @@ HRESULT LogMessage (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

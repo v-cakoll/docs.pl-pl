@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41b39597a5a438592d2ae07a16510f5406a91a43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a18e079f84d8adf2cc6f9bd22b35eb1445eaaf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585019"
 ---
 # <a name="icorpublishappdomaingetid-method"></a>ICorPublishAppDomain::GetID — Metoda
 Pobiera unikatowy identyfikator dla tego [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
@@ -37,13 +37,13 @@ HRESULT GetID (
   
 #### <a name="parameters"></a>Parametry  
  `puId`  
- [out] Wskaźnik do identyfikator domeny aplikacji.  
+ [out] Wskaźnik do identyfikatora domeny aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
- Identyfikator jest unikatowy tylko w zakresie zawierającym procesu.  
+ Identyfikator jest unikatowy tylko w zakresie zawierających procesu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorPub.idl, CorPub.h  
   
@@ -51,5 +51,5 @@ HRESULT GetID (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorPublishAppDomain, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorPublishAppDomain, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

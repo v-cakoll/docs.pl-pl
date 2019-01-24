@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f67bd427c83385b2433b9f2e97f0b54e3b29a76f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dc245a53c9ec7cbe56e20313abc4269e33f45c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582321"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken — Metoda
 Pobiera `TypeDef` token metadanych, który odwołuje się do definicji tej klasy.  
@@ -40,7 +40,7 @@ HRESULT GetToken (
  [out] Wskaźnik do `mdTypeDef` token, który odwołuje się do definicji tej klasy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -48,5 +48,5 @@ HRESULT GetToken (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

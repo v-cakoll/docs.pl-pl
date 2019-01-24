@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b5a389af718322d1e0fffebae046bf28731877b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8edb16de4c02d2589ecfb9ae5becba22e10e6be6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609333"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>ICLRPolicyManager::SetTimeout — Metoda
 Ustawia wartość limitu czasu dla określonej operacji.  
@@ -38,7 +38,7 @@ HRESULT SetTimeout (
   
 #### <a name="parameters"></a>Parametry  
  `operation`  
- [in] Jeden z [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) wartości i wskazujący, wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) do których chcesz ustawić limitu czasu. Obsługiwane są następujące wartości:  
+ [in] Jedną z [eclroperation —](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) wartości, wskazując typowych operacji środowiska uruchomieniowego (języka wspólnego CLR) języka, dla którego ma zostać ustawiony limit czasu. Obsługiwane są następujące wartości:  
   
 -   OPR_AppDomainUnload  
   
@@ -49,30 +49,30 @@ HRESULT SetTimeout (
 -   OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `dwMilliseconds`  
- [in] Nowa wartość limitu czasu, w milisekundach. Wartość INFINITE powoduje, że nigdy nie upłynął limit czasu operacji.  
+ [in] Nowa wartość limitu czasu, w milisekundach. Wartość INFINITE powoduje, że operacja nigdy nie przekroczy limit czasu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`SetTimeout` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`SetTimeout` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie będzie już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
 |E_INVALIDARG|Nie można ustawić limitu czasu dla określonego `operation`, lub podano nieprawidłową wartość dla `operation`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [EClrOperation, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  
- [ICLRControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [EClrOperation, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
+- [ICLRControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)

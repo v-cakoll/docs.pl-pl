@@ -8,12 +8,12 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 88932ad30e30d53312e6d76f70415969b9e86675
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9718febfe5aefba75decc133ad2113b64e4547de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618091"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (opcje kompilatora C#)
 Użyj **-win32manifest** opcję, aby określić zdefiniowanych przez użytkownika aplikacji plik manifestu Win32 osadzanego do projektu przenośnych plików wykonywalnych (PE) pliku.  
@@ -66,8 +66,8 @@ Użyj **-win32manifest** opcję, aby określić zdefiniowanych przez użytkownik
 </assembly>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
-- [-nowin32manifest (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)  
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [-nowin32manifest (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

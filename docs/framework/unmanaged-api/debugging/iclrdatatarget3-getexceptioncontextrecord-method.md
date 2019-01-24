@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 72c45e821a59c1e910b5c8422df02978046eb56b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d55fd042cf478c6b3e39298f84f5a931bb346a74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585448"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>Metoda ICLRDataTarget3::GetExceptionContextRecord
 Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych w celu pobrania rekordu kontekstu skojarzonego z procesem docelowym. Na przykład dla elementu docelowego zrzutu jest to równoważne z rekordu kontekstu przekazaną za pomocą `ExceptionParam` argument [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) funkcji w Windows debugowania pomóc w bibliotece (DbgHelp).  
@@ -59,7 +59,7 @@ HRESULT GetExceptionContextRecord(
  Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData.idl, ClrData.h  
   
@@ -67,7 +67,7 @@ HRESULT GetExceptionContextRecord(
   
  **Wersje programu .NET framework:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRDataTarget3, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
- [GetExceptionRecord, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)  
- [GetExceptionThreadID, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRDataTarget3, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
+- [GetExceptionRecord, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)
+- [GetExceptionThreadID, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: 09b0162068bc068bd77612816626897ec4a151d9
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f641f3dbcba32c77bcf73b14a9ac890d1ade5a2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611920"
 ---
 # <a name="char-data-type-visual-basic"></a>Char — Typ danych (Visual Basic)
 Wskazuje niepodpisanego kodu (2-bajtowych) 16-bitowych blokady z zakresu od 0 do 65 535. Każdy *punktem kodu*, lub kod znaku reprezentuje pojedynczy znak Unicode.  
@@ -57,15 +57,15 @@ charVar = "Z"C
   
 -   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Char?displayProperty=nameWithType> struktury.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Char?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
- [String, typ danych](../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Instrukcje: wywoływanie funkcji Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Char?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+- [String, typ danych](../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Instrukcje: wywoływanie funkcji systemu Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

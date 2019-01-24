@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf6152c643395fe52a43424cab33f527d577b5bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db4f0bbef1ce0e6e4a2a0e904bfe8ebb997d5f4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586595"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception — Metoda
-Powiadamia debugera, czy wyjątek został zgłoszony z kodu zarządzanego.  
+Powiadamia debuger zgłoszony wyjątek z kodu zarządzanego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,19 +39,19 @@ HRESULT Exception (
   
 #### <a name="parameters"></a>Parametry  
  `pAppDomain`  
- [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domeny aplikacji, w którym został zgłoszony wyjątek.  
+ [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, w którym wystąpił wyjątek.  
   
  `pThread`  
- [in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku, w którym został zgłoszony wyjątek.  
+ [in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątek, w którym wystąpił wyjątek.  
   
  `unhandled`  
- [in] Jeśli ta wartość jest `false`, wyjątek jeszcze nie zostały przetworzone przez aplikację, a w przeciwnym, jest nieobsługiwany wyjątek i zakończy proces.  
+ [in] Jeśli ta wartość jest `false`, wyjątek jeszcze nie zostały przetworzone przez aplikację; w przeciwnym razie, wyjątek nie jest obsługiwana i zakończy proces.  
   
 ## <a name="remarks"></a>Uwagi  
- Określony wyjątek można pobrać z obiektu wątku.  
+ Określony wyjątek, mogą być pobierane z obiektu wątku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -59,5 +59,5 @@ HRESULT Exception (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

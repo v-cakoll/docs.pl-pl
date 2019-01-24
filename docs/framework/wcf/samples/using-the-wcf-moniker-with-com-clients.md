@@ -2,12 +2,12 @@
 title: Używanie monikera programu WCF z klientami COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 6e5bb35d0d1d9128ddbc5f7ab4dd81c3bc0f8fbf
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 3bcb0291b3ee91d7a5fd402c8f0e2cc4bce3695a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606101"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Używanie monikera programu WCF z klientami COM
 W tym przykładzie pokazano, jak użyć monikera programu Windows Communication Foundation (WCF) do integracji usług internetowych w środowiskach programistycznych opartych na modelu COM, takich jak Microsoft Office Visual Basic for Applications (VBA pakietu Office) lub Visual Basic 6.0. W tym przykładzie składa się z klienta Windows Script Host (VBS), obsługi klienta biblioteki (.dll) i usługi biblioteki (.dll), hostowanej przez Internetowe usługi informacyjne (IIS). Usługa jest usługą Kalkulator i klient modelu COM wywołuje operacji matematycznych — dodawania, odejmowania, mnożenia i dzielenia — w usłudze. Aktywność klienta jest widoczny w systemie windows okno komunikatu.  
@@ -237,4 +237,4 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 -   Ze względów bezpieczeństwa usuń definicję katalogu wirtualnego i uprawnienia udzielone w ramach kroków konfiguracji, po zakończeniu pracy z próbek.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

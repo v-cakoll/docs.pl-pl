@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: a4dfd1bab04f32eefe82a6777ce6864d5a162e23
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 33ad1f4e260d90125d260e2ada0898be7f820b7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572971"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Narzędzie generowania i edytowania manifestu, klient grafiki)
 
@@ -190,7 +190,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |----------------|-----------------|  
 |**Wybierz manifestu**|Można wybrać w manifeście aplikacji. Wszystkie inne pola na tej stronie zostaną wyświetlone po wybraniu manifest aplikacji.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  
- [Przewodnik: Ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
- [Mage.exe (narzędzie generowania manifestu i edytowania)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+## <a name="see-also"></a>Zobacz także
+- [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Przewodnik: Ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
+- [Mage.exe (narzędzie generowania manifestu i edytowania)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 1729ad4d07fdc0d3dbb31c2bfc29edce647373d4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c891b5d67c7f2ef46682233ad555a1276f8e027d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606903"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidentry —&gt; — Element
 Mapuje ASN.1 identyfikator obiektu (OID) przyjazną nazwę.  
   
  \<Konfiguracja >  
-\<mscorlib >  
-\<cryptographysettings — >  
-\<oidmap — >  
-\<oidentry — >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<oidMap>  
+\<oidEntry>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,7 +39,7 @@ Mapuje ASN.1 identyfikator obiektu (OID) przyjazną nazwę.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**IDENTYFIKATOR OID**|Atrybut wymagany.<br /><br /> Określa identyfikator OID ASN.1 odpowiadający algorytm implementowane przez klasy.|  
+|**OID**|Atrybut wymagany.<br /><br /> Określa identyfikator OID ASN.1 odpowiadający algorytm implementowane przez klasy.|  
 |**Nazwa**|Atrybut wymagany.<br /><br /> Określa wartość dla **nazwa** atrybutu w [ \<nameentry — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) tagu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -80,9 +80,9 @@ Mapuje ASN.1 identyfikator obiektu (OID) przyjazną nazwę.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)  
-- [Konfigurowanie klas kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+## <a name="see-also"></a>Zobacz także
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)
+- [Konfigurowanie klas kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Mapowanie identyfikatorów obiektów na algorytmy kryptografii](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

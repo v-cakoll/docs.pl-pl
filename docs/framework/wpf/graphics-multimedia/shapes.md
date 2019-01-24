@@ -14,21 +14,21 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: 1dc19da76b73d5b8e5d66851b539a7d1829fc938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c39be1bdcc9c91f4822b7e168f16cb51c51d6c60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580827"
 ---
 # <a name="shapes"></a>Kształty
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia obsługę Rysowanie kształtów podstawowych przy użyciu <xref:System.Windows.Shapes.Shape> klasy. Obiekty kształtu pochodzi od <xref:System.Windows.FrameworkElement> , uczestniczyć w systemie układ i mogą być wystawiane tylko przy użyciu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia obsługę Rysowanie kształtów podstawowych przy użyciu <xref:System.Windows.Shapes.Shape> klasy. Obiekty kształtów pochodzić od <xref:System.Windows.FrameworkElement> i jako takie, uczestniczą w systemie układ i mogą być wystawiane, po prostu przy użyciu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Shapes.Shape>  
- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Shapes.Shape>
+- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

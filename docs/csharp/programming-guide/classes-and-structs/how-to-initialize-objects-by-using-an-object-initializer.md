@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-ms.openlocfilehash: 29987b9ba1f1f18f4e768766bd2391ebb5862f97
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 2ac4242eb1bd24fd54cc1eca97acb96f39cc050b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607033"
 ---
 # <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>Instrukcje: Inicjowanie obiektów za pomocą inicjatora obiektów (C# Programming Guide)
 
@@ -31,7 +31,7 @@ Inicjatory obiektów może służyć do ustawiania indeksatorów w obiekcie. W p
 
 [!code-csharp-interactive[InitializerIndexerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToIndexInitializer.cs#HowToIndexInitializer)]  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../index.md)  
+- [Przewodnik programowania w języku C#](../index.md)
 - [Inicjatory obiektów i kolekcji](object-and-collection-initializers.md)

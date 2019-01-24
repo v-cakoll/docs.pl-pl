@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; w &lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: 1624b93344e50b0406d314e285ce94786ba6dadc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7177dda08e1ce5b4f8adb072dce6155df714979d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556093"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;transport&gt; w &lt;netNamedPipeBinding&gt;
 Określa ustawienia zabezpieczenia transportu nazwanego potoku.  
@@ -16,7 +16,7 @@ Określa ustawienia zabezpieczenia transportu nazwanego potoku.
 \<powiązania >  
 \<netNamedPipeBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
+\<security>  
 \<transport>  
   
 ## <a name="syntax"></a>Składnia  
@@ -49,13 +49,13 @@ Określa ustawienia zabezpieczenia transportu nazwanego potoku.
 |-------------|-----------------|  
 |[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.NamedPipeTransportSecurity>  
- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.NamedPipeTransportSecurity>
+- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

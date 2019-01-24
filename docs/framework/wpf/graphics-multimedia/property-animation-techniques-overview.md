@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 438b59aa4aa4213960e0bc3d479a2b949f6d374e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 09e778f89f58556a53f19b4c89e3d82ed94cd64b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614165"
 ---
 # <a name="property-animation-techniques-overview"></a>Przegląd Techniki animacji właściwości
 W tym temacie opisano różne metody animowania właściwości: scenorysów, lokalnego animacji, zegary i animacje w poszczególnych klatkach.  
@@ -56,9 +56,9 @@ W tym temacie opisano różne metody animowania właściwości: scenorysów, lok
   
 |Rozpoczyna się scenorysu, za pomocą...|Na wystąpienie|Styl|Szablon kontrolki|Szablon danych|Przykład|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> i <xref:System.Windows.EventTrigger>|Tak|Tak|Tak|Tak|[Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> i właściwości <xref:System.Windows.Trigger>|Nie|Tak|Tak|Tak|[Wyzwalanie animacji w przypadku zmiany wartości właściwości](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> a <xref:System.Windows.DataTrigger>|Nie|Tak|Tak|Tak|[Porady: wyzwalanie animacji w przypadku zmiany danych](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> i <xref:System.Windows.EventTrigger>|Tak|Yes|Yes|Tak|[Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> i właściwości <xref:System.Windows.Trigger>|Nie|Yes|Yes|Tak|[Wyzwalanie animacji w przypadku zmiany wartości właściwości](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> a <xref:System.Windows.DataTrigger>|Nie|Yes|Yes|Tak|[Instrukcje: Wyzwalanie animacji w przypadku zmiany danych](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> — Metoda|Tak|Nie|Nie|Nie|[Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.Animation.Storyboard> obiekty, zobacz [Przegląd Scenorysy](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
@@ -121,8 +121,8 @@ W tym temacie opisano różne metody animowania właściwości: scenorysów, lok
   
  Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.CompositionTarget.Rendering> strony.  
   
-## <a name="see-also"></a>Zobacz też  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Animacja i system chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Animacja i system chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

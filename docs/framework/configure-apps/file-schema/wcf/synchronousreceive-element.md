@@ -2,12 +2,12 @@
 title: '&lt;synchronousReceive&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: bc89470900e50e4d3e522682b39b20e21a66b284
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dedbe156dea79c78f05acdb3a044c9080665675a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147385"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598898"
 ---
 # <a name="ltsynchronousreceivegt-element"></a>&lt;synchronousReceive&gt;, element
 Ten element konfiguracji służy do określania zachowania w czasie wykonywania do odbierania wiadomości w aplikacji usługi lub klienta. Nie ma żadnych atrybutów lub elementów podrzędnych.  
@@ -42,6 +42,6 @@ Ten element konfiguracji służy do określania zachowania w czasie wykonywania 
 ## <a name="remarks"></a>Uwagi  
  Użyj tego zachowania, aby nakazać odbiornik kanału do użycia przez synchroniczny otrzymywać zamiast domyślnej, asynchronicznego. Windows Communication Foundation (WCF) wystawia nowy wątek pompy dla każdego kanału akceptowane. W przypadku wielu kanałów, istnieje możliwość korzystającym z wątków.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>  
- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>

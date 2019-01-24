@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7ecdfff9d309a2e751d5f989760c42d6fa84fe99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47114960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562521"
 ---
 # <a name="encrypting-data"></a>Szyfrowanie danych
 Szyfrowanie symetryczne i szyfrowanie asymetryczne są wykonywane przy użyciu różnych procesów. Szyfrowania symetrycznego odbywa się na strumieni i dlatego jest przydatne do szyfrowania dużych ilości danych. Szyfrowanie asymetryczne odbywa się na niewielką liczbę bajtów i dlatego jest użyteczna tylko w przypadku niewielkich ilości danych.  
@@ -264,6 +264,6 @@ class Class1
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Generowanie kluczy szyfrowania i odszyfrowywania](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [Odszyfrowywanie danych](../../../docs/standard/security/decrypting-data.md)  
+- [Generowanie kluczy szyfrowania i odszyfrowywania](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [Odszyfrowywanie danych](../../../docs/standard/security/decrypting-data.md)
 - [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)

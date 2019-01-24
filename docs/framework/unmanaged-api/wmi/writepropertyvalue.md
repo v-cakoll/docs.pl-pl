@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2a4eb444967390492be33b25866de8a93a1698c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e5a2588023309867694f344041f62be53cab9c37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590123"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue — funkcja
 Zapisuje określoną liczbę bajtów z właściwością identyfikowane przez dojście właściwości.
@@ -76,11 +76,11 @@ Ta funkcja służy do ciągu i wszystkie inne non -`DWORD` lub -`QWORD` danych.
 W przypadku wartości właściwości typu `lNumBytes` musi być prawidłowe dane rozmiar określony typ właściwości. Wartości właściwości ciągu `lNumBytes` musi mieć długość określonego ciągu w bajtach i ciągu musi być nawet długości w bajtach wraz z występować znak zakończenia o wartości null.
 
 ## <a name="requirements"></a>Wymagania  
-**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Zobacz także  
-[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

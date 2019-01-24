@@ -2,12 +2,12 @@
 title: Korzystanie z zabezpieczeń komunikatów
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: ff1d488e58be64f31836587c8893ba608ccd821b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4432540bfb6238be5b3e102283d6b67bebad07bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610958"
 ---
 # <a name="securing-messages-using-message-security"></a>Korzystanie z zabezpieczeń komunikatów
 W tej sekcji omówiono zabezpieczenie wiadomości WCF w przypadku korzystania z <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -63,8 +63,8 @@ W tej sekcji omówiono zabezpieczenie wiadomości WCF w przypadku korzystania z 
 ## <a name="using-transport-and-message-security"></a>Za pomocą transportu i zabezpieczeń komunikatów  
  Korzystając z zabezpieczeń transportu i zabezpieczeń wiadomości, certyfikat używany do zabezpieczenia wiadomości, zarówno na poziomie transportu i protokołu SOAP wiadomości musi być taka sama.  
   
-## <a name="see-also"></a>Zobacz też  
- [Ochrona komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [Zabezpieczenia komunikatów w ramach kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
- [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Zobacz także
+- [Ochrona komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [Zabezpieczenia komunikatów w ramach kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+- [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

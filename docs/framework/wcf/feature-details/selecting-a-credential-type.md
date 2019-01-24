@@ -2,12 +2,12 @@
 title: Wybieranie typu poświadczeń
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: c2ee1b9062d14eaa44de0651985c2a385fe02f8e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 27e1bc4b9e4209fafd0e3707ad6674eb5db6e451
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577116"
 ---
 # <a name="selecting-a-credential-type"></a>Wybieranie typu poświadczeń
 *Poświadczenia* jest Windows Communication Foundation (WCF) używanych do ustalenia tożsamości lub możliwości danych. Na przykład usługi passport jest poświadczeń, przez Rząd potwierdzenie zaawansowanych możliwości dostępnych w kraju lub regionie. W programie WCF poświadczenia mogą mieć wiele form, takich jak tokeny nazwy użytkownika i certyfikaty X.509. W tym temacie omówiono poświadczenia, jak są używane w programie WCF i jak wybierać odpowiednie poświadczenia dla aplikacji.  
@@ -26,9 +26,9 @@ ms.locfileid: "43503394"
 |Ustawienie|Opis|  
 |-------------|-----------------|  
 |Brak|Określa, klient musi przedstawić żadnych poświadczeń. Przekłada się to anonimowym klientem.|  
-|Podstawowy|Określa uwierzytelnianie podstawowe dla klienta. Aby uzyskać więcej informacji, zobacz RFC2617 —[uwierzytelnianie HTTP: podstawowe i uwierzytelnianie szyfrowane](https://go.microsoft.com/fwlink/?LinkID=88313).|  
-|Podsumowanie|Określa, uwierzytelniania szyfrowanego dla klienta. Aby uzyskać więcej informacji, zobacz RFC2617 —[uwierzytelnianie HTTP: podstawowe i uwierzytelnianie szyfrowane](https://go.microsoft.com/fwlink/?LinkID=88313).|  
-|Uwierzytelnianie NTLM|Określa uwierzytelniania NT LAN Manager (NTLM). To jest używany, gdy z jakiegoś powodu nie można użyć uwierzytelniania Kerberos. Można również wyłączyć, ustawiając jako rezerwowe <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> właściwości `false`, co powoduje, że WCF umożliwiają staranności do zgłoszenia wyjątku, jeśli używane jest uwierzytelnianie NTLM. Należy pamiętać, że ustawienie tej właściwości na `false` może uniemożliwia poświadczeń NTLM są przesyłane przez sieć.|  
+|Podstawowy|Określa uwierzytelnianie podstawowe dla klienta. Aby uzyskać więcej informacji, zobacz RFC2617 —[uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane](https://go.microsoft.com/fwlink/?LinkID=88313).|  
+|Podsumowanie|Określa, uwierzytelniania szyfrowanego dla klienta. Aby uzyskać więcej informacji, zobacz RFC2617 —[uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane](https://go.microsoft.com/fwlink/?LinkID=88313).|  
+|Ntlm|Określa uwierzytelniania NT LAN Manager (NTLM). To jest używany, gdy z jakiegoś powodu nie można użyć uwierzytelniania Kerberos. Można również wyłączyć, ustawiając jako rezerwowe <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> właściwości `false`, co powoduje, że WCF umożliwiają staranności do zgłoszenia wyjątku, jeśli używane jest uwierzytelnianie NTLM. Należy pamiętać, że ustawienie tej właściwości na `false` może uniemożliwia poświadczeń NTLM są przesyłane przez sieć.|  
 |Windows|Określa uwierzytelniania Windows. Aby określić protokołu Kerberos w domenie Windows, należy ustawić <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> właściwości `false` (wartość domyślna to `true`).|  
 |Certyfikat|Wykonuje uwierzytelnianie klienta przy użyciu certyfikatu X.509.|  
 |Hasło|Użytkownik musi podać nazwę użytkownika i hasło. Sprawdź poprawność pary nazwa/hasło użytkownika za pomocą uwierzytelniania Windows lub inne niestandardowe rozwiązanie.|  
@@ -97,20 +97,20 @@ ms.locfileid: "43503394"
   
  Aby uzyskać więcej informacji na temat poświadczeń i bezpieczne sesje, zobacz [zagadnienia dotyczące zabezpieczeń bezpiecznych sesji](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.BasicHttpMessageSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>  
- [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [Zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.BasicHttpMessageSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
+- [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [Zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

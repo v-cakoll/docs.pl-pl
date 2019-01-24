@@ -2,12 +2,12 @@
 title: Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 03bfa53ac8e2a6cf7b252a8d0ea4683727134e4a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 64428eb209d8ab4e708640ed1418765e16b4577a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577740"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 Model programowania protokołu HTTP sieci WEB Windows Communication Foundation (WCF) udostępnia podstawowe elementy, które są wymagane do kompilowania usług HTTP w sieci WEB z programem WCF. Usługi WCF WEB HTTP można uzyskać dostęp przez największą liczbę potencjalnych klientów, w tym przeglądarki sieci Web i ma następujące wymagania:  
@@ -143,7 +143,7 @@ interface ICustomer
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Rozwiązywanie problemów z Model programowania protokołu HTTP sieci WEB WCF  
  Podczas wywoływania WCF WEB HTTP services przy użyciu <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> próba utworzenia kanału, <xref:System.ServiceModel.Description.WebHttpBehavior> używa <xref:System.ServiceModel.EndpointAddress> ustawione w pliku konfiguracji nawet jeśli inny <xref:System.ServiceModel.EndpointAddress> jest przekazywany do <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Syndykacja programu WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
- [Model obiektowy programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Zobacz także
+- [Syndykacja programu WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+- [Model obiektowy programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

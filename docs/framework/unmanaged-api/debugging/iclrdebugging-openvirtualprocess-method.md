@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51b5a9ecd85f0d40ac2fe2826cbbe7a56a6228d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cae30dbd1ae9081334e2ff890e1e4cd167a66e04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586332"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess — Metoda
-Pobiera interfejs ICorDebugProcess, który odpowiada wspólny języka wspólnego (CLR) moduł załadowany w procesie.  
+Pobiera icordebugprocess — interfejs, który odnosi się do wspólnego języka wspólnego (CLR) moduł załadowany w procesie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,52 +43,52 @@ HRESULT OpenVirtualProcess(
   
 #### <a name="parameters"></a>Parametry  
  `moduleBaseAddress`  
- [in] Adres podstawowy modułu w procesie docelowym. COR_E_NOT_CLR zostanie zwrócony, jeśli określony moduł nie jest modułem CLR.  
+ [in] Adres podstawowy moduł w procesie docelowym. COR_E_NOT_CLR zostanie zwrócona, jeśli określony moduł nie jest modułem środowiska CLR.  
   
  `pDataTarget`  
- [in] Abstrakcja docelowego danych, umożliwiający zarządzanego debugera sprawdzić stan procesu. Debuger musi implementować [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) interfejsu. Należy zaimplementować [iclrdebugginglibraryprovider —](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interfejs na potrzeby obsługi scenariuszy, których CLR, która jest debugowany nie zainstalowano lokalnie na komputerze.  
+ [in] Abstrakcja docelowego danych, umożliwiająca zarządzanego debugera sprawdzić stan procesu. Debuger musi implementować [icordebugdatatarget —](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) interfejsu. Należy zaimplementować [iclrdebugginglibraryprovider —](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interfejsu do obsługi scenariuszy, w których CLR, która jest debugowana nie zainstalowano lokalnie na komputerze.  
   
  `pLibraryProvider`  
- [in] Biblioteka dostawcy wywołanie zwrotne interfejsu, który umożliwia bibliotek debugowania określonej wersji, należy odnaleźć i załadować na żądanie. Ten parametr jest wymagany tylko wtedy, gdy `ppProcess` lub `pFlags` nie jest `null`.  
+ [in] Biblioteka dostawcy interfejs wywołania zwrotnego, która umożliwia bibliotekom debudowania określonych wersji lokalizowanie i ładowanie na żądanie. Ten parametr jest wymagany tylko wtedy, gdy `ppProcess` lub `pFlags` nie `null`.  
   
  `pMaxDebuggerSupportedVersion`  
- [in] Najwyższa wersja środowiska CLR, która może debugować ten debuger. Należy określić głównych i pomocniczych i kompilacji wersji z najnowszej wersji środowiska CLR, który obsługuje ten debuger i ustawiony numer poprawki do 65535, aby zmieścił się w przyszłości CLR w miejscu obsługi wersji.  
+ [in] Najnowsza wersja środowiska CLR, który można debugować ten debuger. Należy określić głównych i pomocniczych i tworzenia wersji z najnowszej wersji środowiska CLR, który obsługuje ten debuger i ustawić numer poprawki do 65535, aby pomieścić przyszłych CLR w miejscu, obsługi wersji.  
   
  `riidProcess`  
- [in] Identyfikator interfejsu ICorDebugProcess do pobrania. Obecnie akceptowane wartości to wyłącznie są IID_CORDEBUGPROCESS3, IID_CORDEBUGPROCESS2 i IID_CORDEBUGPROCESS.  
+ [in] Identyfikator icordebugprocess — interfejs do pobrania. Obecnie tylko akceptowane wartości są IID_CORDEBUGPROCESS3 IID_CORDEBUGPROCESS2 i IID_CORDEBUGPROCESS.  
   
  `ppProcess`  
  [out] Wskaźnik do interfejsu COM, który jest identyfikowany przez `riidProcess`.  
   
  `pVersion`  
- [w, out] Wersja środowiska CLR. W danych wejściowych, ta wartość może być `null`. Może także wskazywać [clr_debugging_version —](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) struktury, w którym to przypadku struktury `wStructVersion` pola musi zostać zainicjowany jako 0 (zero).  
+ [out w] Wersja środowiska CLR. W danych wejściowych, ta wartość może być `null`. Może też wskazywać na [clr_debugging_version —](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) strukturę, w którym to przypadku struktury `wStructVersion` pola musi zostać zainicjowany do 0 (zero).  
   
- W danych wyjściowych, zwracana `CLR_DEBUGGING_VERSION` struktury zostaną wypełnione informacje o wersji dla środowiska CLR.  
+ W danych wyjściowych, zwrócony `CLR_DEBUGGING_VERSION` struktury zostanie wypełniona informacje o wersji dla środowiska CLR.  
   
  `pdwFlags`  
- [out] Informacyjny flagi informacje o określonym środowisku uruchomieniowym. Zobacz [clr_debugging_process_flags —](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md) temacie opis flag.  
+ [out] Flagi informacyjne dotyczące określonego środowiska uruchomieniowego. Zobacz [clr_debugging_process_flags —](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md) tematu, aby uzyskać opis flag.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
 |E_POINTER|`pDataTarget` jest `null`.|  
-|CORDBG_E_LIBRARY_PROVIDER_ERROR|[Iclrdebugginglibraryprovider —](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) wywołania zwrotnego zwraca błąd lub nie ma prawidłowego dojścia.|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` nie implementuje interfejsów docelowy wymagane dane dla tej wersji środowiska uruchomieniowego.|  
-|CORDBG_E_NOT_CLR|Wskazany modułu nie jest modułem CLR. Ta wartość HRESULT jest także zwracany, jeśli nie można wykryć modułu CLR, ponieważ uszkodzona pamięć, moduł nie jest dostępna lub wersja środowiska CLR jest nowsza niż wersja podkładki.|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Ta wersja środowiska uruchomieniowego nie obsługuje ten model debugowania. Obecnie model debugowania nie jest obsługiwany przez wersje CLR przed [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. `pwszVersion` Parametr wyjściowy nadal jest ustawione na prawidłową wartość po tym błędzie.|  
-|CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|Wersja środowiska CLR jest nowsza niż wersja, ten debuger oświadczenia do obsługi. `pwszVersion` Parametr wyjściowy nadal jest ustawione na prawidłową wartość po tym błędzie.|  
+|CORDBG_E_LIBRARY_PROVIDER_ERROR|[Iclrdebugginglibraryprovider —](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) wywołania zwrotnego zwraca błąd lub nie zawiera prawidłowego uchwytu.|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` nie implementuje interfejsy docelowym wymagane dane dla tej wersji środowiska uruchomieniowego.|  
+|CORDBG_E_NOT_CLR|Wskazany modułu nie jest modułem środowiska CLR. Ta wartość HRESULT jest także zwracany, jeśli nie można wykryć moduł CLR, ponieważ została uszkodzona pamięć, moduł nie jest dostępna lub wersja środowiska CLR jest nowsza niż wersja podkładki.|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Ta wersja środowiska uruchomieniowego nie obsługuje debugowania modelu. Obecnie debugowania model nie jest obsługiwany przez wersje środowiska CLR przed [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. `pwszVersion` Parametru wyjściowego nadal jest ustawione na prawidłową wartość po tym błędzie.|  
+|CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|Wersja środowiska CLR jest nowsza niż wersja, ten debuger oświadczenia do obsługi. `pwszVersion` Parametru wyjściowego nadal jest ustawione na prawidłową wartość po tym błędzie.|  
 |E_NO_INTERFACE|`riidProcess` Interfejs nie jest dostępny.|  
-|CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION` Struktury nie ma rozpoznawaną wartością dla `wStructVersion`. Wartość akceptowane tylko w tej chwili jest 0.|  
+|CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION` Struktura ma rozpoznawaną wartością dla `wStructVersion`. To jedyna wartość zaakceptowane w tej chwili to 0.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -96,6 +96,6 @@ HRESULT OpenVirtualProcess(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

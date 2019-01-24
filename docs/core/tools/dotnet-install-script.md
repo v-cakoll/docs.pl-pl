@@ -2,12 +2,12 @@
 title: skrypty instalacji DotNet
 description: Więcej informacji na temat skryptów instalacji dotnet do zainstalowania narzędzi interfejsu wiersza polecenia platformy .NET Core i udostępnionego środowiska uruchomieniowego.
 ms.date: 01/16/2019
-ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: f796ac494c0be5458b3ea192e809a4d875bcc6dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362834"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608800"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dokumentacja skryptów instalacji DotNet
 
@@ -200,5 +200,5 @@ Można to zrobić przy użyciu określonej wersji `--version` argumentu. Wersja 
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Wersje platformy .NET core](https://github.com/dotnet/core/releases)
-* [Środowisko uruchomieniowe programu .NET core i zestawu SDK Pobierz archiwum](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [Wersje platformy .NET core](https://github.com/dotnet/core/releases)
+- [Środowisko uruchomieniowe programu .NET core i zestawu SDK Pobierz archiwum](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

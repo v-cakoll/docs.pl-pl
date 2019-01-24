@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 907e85d2622ea07ddbb61092f439583ed72e0c50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150618"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560038"
 ---
 # <a name="managed-threading-best-practices"></a>Zarządzana wątkowość — najlepsze rozwiązania
 Wielowątkowość wymaga starannego programowania. W przypadku większości zadań mogą zmniejszyć złożoność przez kolejkowanie żądania do wykonania, wątków z puli wątków. Ten temat dotyczy trudniejsze sytuacjach, takich jak koordynowanie pracy wielu wątków i obsługi wątki tego bloku.  
@@ -179,5 +179,5 @@ Użyj <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> wła
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wątkowość](../../../docs/standard/threading/index.md)  
+- [Wątkowość](../../../docs/standard/threading/index.md)
 - [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)

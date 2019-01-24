@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b8de9852a29c9cc20e2c607506ae3d804e6d406e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569982"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Instrukcje: Tworzenie przepływu pracy schematu blokowego
 Przepływy pracy można skonstruować z wbudowanych działań, a także z działań niestandardowych. Ten temat prowadzi przez proces tworzenia przepływu pracy, który używa zarówno wbudowanych działań, takich jak <xref:System.Activities.Statements.Flowchart> działanie i działań niestandardowych z poprzedniego [jak: Utwórz działanie](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tematu. Przepływ pracy modeli gra odgadnięcia liczb.  
@@ -150,11 +150,11 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
   
      Aby uzyskać instrukcje na temat sposobu uruchamiania przepływu pracy, zobacz następny temat, [jak: Uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Jeśli wykonano już [jak: Uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) kroku przy użyciu innego stylu przepływu pracy, a chcesz uruchomić go za pomocą przepływu pracy schematu blokowego, w tym kroku, przejdź do sekcji [Aby skompilować i uruchomić aplikację](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) części [jak: Uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Activities.Statements.Flowchart>  
- <xref:System.Activities.Statements.FlowDecision>  
- [Programowanie w programie Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [Projektowanie przepływów pracy](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [Wprowadzenie — samouczek](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Instrukcje: Utwórz działanie](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [Instrukcje: Uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Activities.Statements.Flowchart>
+- <xref:System.Activities.Statements.FlowDecision>
+- [Programowanie w programie Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)
+- [Projektowanie przepływów pracy](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
+- [Wprowadzenie — samouczek](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
+- [Instrukcje: Utwórz działanie](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)
+- [Instrukcje: Uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

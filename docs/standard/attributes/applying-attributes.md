@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a6bf86986f9e6f72fca9d6e88ac16699ff7cdb4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606482"
 ---
 # <a name="applying-attributes"></a>Stosowanie atrybutów
 W celu zastosowania atrybutu do elementu kodu należy wykonać procedurę opisaną poniżej.  
@@ -54,7 +54,7 @@ W celu zastosowania atrybutu do elementu kodu należy wykonać procedurę opisan
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Atrybuty](../../../docs/standard/attributes/index.md)  
-- [Pobieranie informacji przechowywanych w atrybutach](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
-- [Pojęcia](/cpp/windows/attributed-programming-concepts)  
+- [Atrybuty](../../../docs/standard/attributes/index.md)
+- [Pobieranie informacji przechowywanych w atrybutach](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
+- [Pojęcia](/cpp/windows/attributed-programming-concepts)
 - [Atrybuty](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)

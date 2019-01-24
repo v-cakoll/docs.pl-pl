@@ -1,5 +1,5 @@
 ---
-title: 'Porady: analizowanie ciągów za pomocą funkcji String.Split (Przewodnik C#)'
+title: 'Instrukcje: Analizowanie ciągów za pomocą funkcji String.Split (C# przewodnik)'
 description: Funkcji String.Split zwraca tablicę ciągów podzielona z zestawu ograniczników. To łatwe analizowanie ciągów.
 ms.date: 01/03/2018
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a8cb3a62497379f60e9cc6dec3d342192361f865
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603731"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Porady: analizowanie ciągów za pomocą funkcji String.Split (Przewodnik C#)
+# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Instrukcje: Analizowanie ciągów za pomocą funkcji String.Split (C# przewodnik)
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> Metoda tworzy tablicę podciągów, dzieląc oparte na co najmniej jeden ograniczników ciągu wejściowego. Często jest najłatwiejszym sposobem rozdzielenia ciągu na granicach słów. Również służy do dzielenia ciągów na inne określone znaki lub ciągi znaków.
 
@@ -50,8 +50,8 @@ Kolejne wystąpienia dowolnego separator dawać pusty ciąg w tablicy danych wyj
 
 Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Można również pobrać przykłady [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../programming-guide/index.md)  
-- [Ciągi](../programming-guide/strings/index.md)  
+- [Przewodnik programowania w języku C#](../programming-guide/index.md)
+- [Ciągi](../programming-guide/strings/index.md)
 - [Wyrażeń regularnych programu .NET](../../standard/base-types/regular-expressions.md)

@@ -1,21 +1,21 @@
 ---
-title: 'Porady: Filtr na nazwy elementów (LINQ do XML) (Visual Basic)'
+title: 'Instrukcje: Filtrowanie nazw elementów (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-ms.openlocfilehash: 3c7ee9ceb2accef34e852396137107fb1f36350c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b685da79f149298df14db0d0793130325aa95d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578708"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>Porady: Filtr na nazwy elementów (LINQ do XML) (Visual Basic)
-Jeśli wywołasz jednej z metod, które zwracają <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, można filtrować według nazwy elementu.  
+# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>Instrukcje: Filtrowanie nazw elementów (LINQ to XML) (Visual Basic)
+Wywołanie jednej z metod, które zwracają <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, możesz przefiltrować listę według nazwy elementu.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie pobiera kolekcję elementów podrzędnych jest filtrowana zawiera tylko elementy podrzędne o określonej nazwie.  
+ W tym przykładzie pobiera kolekcję elementów podrzędnych, która jest filtrowana w celu uwzględnienia tylko elementów potomnych o określonej nazwie.  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: typowe zamówienia zakupu (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -34,7 +34,7 @@ ProductName:Lawnmower
 ProductName:Baby Monitor  
 ```  
   
- Inne metody, które zwracają <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> kolekcje wykonują te same czynności. Ich sygnaturach są podobne do <xref:System.Xml.Linq.XContainer.Elements%2A> i <xref:System.Xml.Linq.XContainer.Descendants%2A>. Oto pełną listę metod, które mają podobne podpisy metod:  
+ Metody, które zwracają <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement> kolekcje postępuj zgodnie z tym samym wzorcem. Ich podpisy są podobne do <xref:System.Xml.Linq.XContainer.Elements%2A> i <xref:System.Xml.Linq.XContainer.Descendants%2A>. Oto Pełna lista metod, które mają podobne podpisy metod:  
   
 -   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -51,9 +51,9 @@ ProductName:Baby Monitor
 -   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeni nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: typowe zamówienia zakupu w Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Typowe zamówienie zakupu w Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -78,5 +78,5 @@ End Module
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do osi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ do osi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

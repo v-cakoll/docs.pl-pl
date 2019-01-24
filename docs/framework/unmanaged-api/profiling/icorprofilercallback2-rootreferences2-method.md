@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf92749e1139a85ea2f49fb5d5caff69ce39c24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4383bf8b7369f5906fe4664056f1cd938f04584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607543"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 — Metoda
-Powiadamia profilera odwołania głównego informacje po zakończeniu wyrzucania elementów bezużytecznych. Ta metoda jest rozszerzeniem [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) metody.  
+Powiadamia program profilujący o odwołaniach do katalogu głównego, po przeprowadzeniu wyrzucania elementów bezużytecznych. Ta metoda jest rozszerzeniem [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,30 +43,30 @@ HRESULT RootReferences2(
  [in] Liczba elementów w `rootRefIds`, `rootKinds`, `rootFlags`, i `rootIds` tablic.  
   
  `rootRefIds`  
- [in] Tablica obiektów identyfikatorów, które odwołuje się do statycznego obiektu albo obiekt na stosie. Elementy w `rootKinds` tablicy zawierają informacje do klasyfikowania odpowiednich elementów w `rootRefIds` tablicy.  
+ [in] Tablica obiektów identyfikatorów, każdy z nich odwołuje się do obiektu statycznego lub obiekt na stosie. Elementy w `rootKinds` tablicy Podaj informacje potrzebne do klasyfikowania odpowiednie elementy w `rootRefIds` tablicy.  
   
  `rootKinds`  
- [in] Tablica [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) wartości, które wskazują na typ główny kolekcji pamięci.  
+ [in] Tablica [cor_prf_gc_root_kind —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) wartości, które wskazują na typ główny kolekcji wyrzucania elementów.  
   
  `rootFlags`  
- [in] Tablica [cor_prf_gc_root_flags —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) wartości, które opisują właściwości głównego kolekcji pamięci.  
+ [in] Tablica [cor_prf_gc_root_flags —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) wartości, które opisują właściwości głównego kolekcji wyrzucania elementów.  
   
  `rootIds`  
- [in] Tablica UINT_PTR wartości prowadzące do liczba całkowita, która zawiera dodatkowe informacje dotyczące głównego kolekcji odzyskiwanie, w zależności od wartości `rootKinds` parametru.  
+ [in] Tablica UINT_PTR wartości tego punktu na liczbę całkowitą, która zawiera dodatkowe informacje na temat głównych kolekcji wyrzucania elementów, w zależności od wartości `rootKinds` parametru.  
   
- Jeśli typ główny stos, identyfikator katalogu głównego jest dla tej funkcji, która zawiera zmienną. Jeśli ten identyfikator głównego to 0, ta funkcja jest bez nazwy funkcji, która jest wewnętrzny do środowiska CLR. Jeśli typu głównego uchwytu, identyfikator katalogu głównego jest na dojście kolekcji pamięci. Dla innych typów głównego Identyfikatora jest wartości nieprzezroczystej i należy ją ignorować.  
+ Jeśli typ główny jest stos, identyfikator katalogu głównego jest dla funkcji, która zawiera zmienną. Jeśli ten identyfikator główny wynosi 0, funkcja jest bez nazwy funkcji, która jest wewnętrzny środowiska CLR. Jeśli typ główny jest uchwytem, identyfikator katalogu głównego wynosi uchwyt kolekcji wyrzucania elementów. Dla innych typów głównego Identyfikatora jest nieprzezroczysta wartość i należy ją ignorować.  
   
 ## <a name="remarks"></a>Uwagi  
- `rootRefIds`, `rootKinds`, `rootFlags`, I `rootIds` tablice są tablice równoległych. Oznacza to `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, i `rootIds[i]` wszystkie dotyczą tego samego głównego.  
+ `rootRefIds`, `rootKinds`, `rootFlags`, I `rootIds` tablic są tablicami równoległych. Oznacza to, że `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, i `rootIds[i]` dotyczą wszystkich takim samym certyfikatem głównym.  
   
- Zarówno `RootReferences` i `RootReferences2` są wywoływane w celu powiadomienia profilera. Profilery będzie zwykle implementowany jednej lub drugiej metody, ale nie oba ponieważ przekazane informacje `RootReferences2` jest nadzbiorem tego przekazano `RootReferences`.  
+ Zarówno `RootReferences` i `RootReferences2` są wywoływane w celu powiadomić profiler. Profilery zwykle wdroży jednej lub drugiej metody, ale nie obie, ponieważ informacje są przekazywane w `RootReferences2` jest nadzbiorem, przekazanej `RootReferences`.  
   
- Istnieje możliwość wpisów w `rootRefIds` zero, co oznacza, że odwołanie do odpowiedniego katalogu głównego ma wartość null i nie odwołuje się do obiektu na stercie zarządzanej.  
+ Istnieje możliwość, że wpisy w `rootRefIds` zero, co oznacza, że główny odwołań ma wartość null i nie odwołuje się do obiektu w zarządzanym stosie.  
   
- Identyfikatory obiektów zwrócona przez `RootReferences2` są nieprawidłowe podczas wywołania zwrotnego, ponieważ wyrzucanie elementów bezużytecznych może znajdować się w środku przenoszenie obiektów z stare adresy do nowych adresów. W związku z tym profilery nie powinny podejmować próby sprawdź obiekty podczas `RootReferences2` wywołania. Gdy [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) jest wywoływana, wszystkie obiekty zostały przeniesione do nowej lokalizacji i może być bezpiecznie kontrolowane.  
+ Identyfikatory obiektów są zwracane przez `RootReferences2` są nieprawidłowe podczas wywołania zwrotnego, ponieważ wyrzucania elementów bezużytecznych może być w trakcie przenoszenia obiektów z stare adresy do nowych adresów. W związku z tym, profilowania nie należy próbować Zbadaj obiekty podczas `RootReferences2` wywołania. Gdy [icorprofilercallback2::garbagecollectionfinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) jest wywoływana, wszystkie obiekty zostały przeniesione do ich nowych lokalizacji i może być bezpiecznie kontrolowane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -74,6 +74,6 @@ HRESULT RootReferences2(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a117fcdf2ba9d37fb5483cc85fb575e5d3476794
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6287b7adf0ef6f6269a51f608657444f5fa7f74e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580229"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption — Metoda
-Pobiera wartość określonej opcji dla bieżącego zakresu metadanych. Opcję określa sposób obsługi wywołania do bieżącego zakresu metadanych.  
+Pobiera wartość określonej opcji dla bieżącego zakresu metadanych. Opcja określa, jak wywołania z bieżących zakresem metadane są obsługiwane.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,13 +38,13 @@ HRESULT GetOption (
   
 #### <a name="parameters"></a>Parametry  
  `optionId`  
- [in] Wskaźnik do identyfikatora GUID, który określa opcje, które mają zostać pobrane. Zobacz sekcję uwag listę obsługiwanych identyfikatorów GUID.  
+ [in] Wskaźnik do identyfikator GUID, który określa opcje, które mają zostać pobrane. Zobacz sekcję Spostrzeżenia, aby listę obsługiwanych identyfikatorów GUID.  
   
  `pValue`  
- [out] Wartości zwracane opcji. Typ tej wartości będą wariant opcji określonego typu.  
+ [out] Wartość zwrócona opcji. Typ tej wartości będą wariant określoną opcję typu.  
   
 ## <a name="remarks"></a>Uwagi  
- Poniższa lista zawiera identyfikatory GUID, które są obsługiwane w przypadku tej metody. Aby uzyskać opis, zobacz [IMetaDataDispenserEx::SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) metody. Jeśli `optionId` jest spoza tej listy, ta metoda zwraca wartość HRESULT `E_INVALIDARG`, wskazując nieprawidłowy parametr.  
+ Poniższa lista zawiera identyfikatory GUID, które są obsługiwane w przypadku tej metody. Aby uzyskać opis, zobacz [IMetaDataDispenserEx::SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) metody. Jeśli `optionId` jest nie ma na tej liście, ta metoda zwraca wartość HRESULT `E_INVALIDARG`, wskazując określono nieprawidłowy parametr.  
   
 -   MetaDataCheckDuplicatesFor  
   
@@ -61,14 +61,14 @@ HRESULT GetOption (
 -   MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataDispenserEx, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [IMetaDataDispenser, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataDispenserEx, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [IMetaDataDispenser, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

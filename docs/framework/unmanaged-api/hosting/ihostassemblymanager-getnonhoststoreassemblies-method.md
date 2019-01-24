@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0da548d5d5cc22eb6754859a802afa4d82fac89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b90ddefb082b9017246bf644b79aa63c5d7444b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600183"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies — Metoda
-Pobiera wskaźnika interfejsu do [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) reprezentujący listę zestawów, które host oczekuje środowisko uruchomieniowe języka wspólnego (CLR) do załadowania.  
+Pobiera wskaźnik interfejsu do [iclrassemblyreferencelist —](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) reprezentujący listę zestawów, które hosta oczekuje, że środowisko uruchomieniowe języka wspólnego (CLR) do załadowania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,46 +37,46 @@ HRESULT GetNonHostStoreAssemblies (
   
 #### <a name="parameters"></a>Parametry  
  `ppReferenceList`  
- [out] Wskaźnik do adresu `ICLRAssemblyReferenceList` zawierający listę odwołań do zestawów, które host oczekuje można załadować środowiska CLR.  
+ [out] Wskaźnik na adres `ICLRAssemblyReferenceList` zawierający listę odwołania do zestawów, do których host oczekuje środowiska CLR do załadowania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`GetNonHostStoreAssemblies` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`GetNonHostStoreAssemblies` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Za mało pamięci była dostępna utworzyć listę odwołania dla żądanego `ICLRAssemblyReferenceList`.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Za mało pamięci była dostępna do utworzenia listy odwołań dla żądanego `ICLRAssemblyReferenceList`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko CLR rozpoznaje odwołań za pomocą zestawu następujących wytycznych:  
+ Środowisko CLR rozwiązuje odwołań za pomocą zestawu następujących wytycznych:  
   
--   Najpierw należy go sprawdza listy odwołania do zestawów zwrócony przez `GetNonHostStoreAssemblies`.  
+-   Po pierwsze, konsultacje dotyczące listy odwołania do zestawów, zwracany przez `GetNonHostStoreAssemblies`.  
   
--   Jeśli zestaw znajduje się na liście, CLR powiązanie go normalnie.  
+-   Jeśli zestaw zostanie wyświetlone na liście, środowisko CLR zwykle wiąże do niego.  
   
--   Jeśli zestaw nie ma na liście, a host udostępnił implementacja [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), wywołania CLR [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) umożliwia hosta do dostarczania zestaw do powiązania.  
+-   Jeśli zestaw nie ma na liście, a host ma pod warunkiem implementację [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), CLR wywołuje [ihostassemblystore::provideassembly —](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) zezwalająca na hoście do dostarczania zestaw można powiązać.  
   
--   W przeciwnym razie wartość CLR nie może powiązać zestawu.  
+-   W przeciwnym razie środowisko CLR nie może powiązać do zestawu.  
   
- Jeśli host ustawia `ppReferenceList` równej null, sond pierwszy CLR wywołuje globalnej pamięci podręcznej zestawów, `ProvideAssembly`, a następnie sondy baza aplikacji można rozpoznać odwołania do zestawu.  
+ Jeśli host ustawia `ppReferenceList` na wartość null, sondy pierwszego środowiska CLR wywołuje global assembly cache `ProvideAssembly`, a następnie sondy podstawy aplikacji, aby rozwiązać odwołania do zestawu.  
   
 > [!NOTE]
->  Po zainicjowaniu, wywołuje CLR `GetNonHostStoreAssemblies` tylko raz. Metoda nie zostanie ponownie wywołany.  
+>  Po zainicjowaniu, środowisko CLR wywołuje `GetNonHostStoreAssemblies` tylko raz. Metoda nie jest ponownie wywoływana.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRAssemblyReferenceList, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [IHostAssemblyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
- [IHostAssemblyStore, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRAssemblyReferenceList, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [IHostAssemblyStore, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)

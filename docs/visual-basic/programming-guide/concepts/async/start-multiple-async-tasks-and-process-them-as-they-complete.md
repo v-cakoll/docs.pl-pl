@@ -2,12 +2,12 @@
 title: Rozpoczynanie wielu zadań asynchronicznych i przetwarzanie ich po ich zakończeniu (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 5213162c24660a54de39c119c5ab67a601a77566
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ae391bfe0c8e16a8cb967ed6df7c548109a7bc09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559320"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Rozpoczynanie wielu zadań asynchronicznych i przetwarzanie ich po ich zakończeniu (Visual Basic)
 Za pomocą <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, można uruchomić wiele zadań w tym samym czasie i przetwarzać je jedno po ich zakończeniu, zamiast przetwarzać je w kolejności, w którym są uruchamiane.  
@@ -18,7 +18,7 @@ Za pomocą <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWith
 >  Aby uruchomić przykłady, konieczne jest posiadanie programu Visual Studio 2012 lub nowszego oraz programu .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
   
 ## <a name="downloading-the-example"></a>Pobieranie przykładu  
- Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
+ Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [próbka asynchroniczna: Poprawnie Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
   
 1.  Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
   
@@ -87,7 +87,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
   
  Należy zauważyć, że musisz dodać odwołanie do <xref:System.Net.Http>.  
   
- Można ściągnąć projekt z [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Można ściągnąć projekt z [próbka asynchroniczna: Dostrajania aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -205,8 +205,8 @@ End Class
 ' Downloads complete.  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
- [Dostrajanie aplikacji Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Próbka asynchroniczna: Dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>
+- [Dostrajanie aplikacji Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Próbka asynchroniczna: Dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

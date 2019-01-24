@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
-ms.openlocfilehash: b335dfeed23d43938c66f0753590af55ac99b12a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3aa31ce7e189684bd60c238905df3bcbd1818ed6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559345"
 ---
 # <a name="error-c-reference"></a>#error (odwołanie w C#)
 `#error` Umożliwia wygenerowanie [CS1029](../compiler-messages/cs1029.md) błędach zdefiniowane przez użytkownika z określonych lokalizacji w kodzie. Na przykład:  
@@ -43,8 +43,8 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Dyrektywy preprocesora C#](../../../csharp/language-reference/preprocessor-directives/index.md)

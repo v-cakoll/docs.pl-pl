@@ -9,45 +9,45 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: a9852998abeae67b2a0e9dc3ffc85318ce5045da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5980549dd063b2c7d5c60ebd4e9762284c072009
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586621"
 ---
 # <a name="determining-object-type-visual-basic"></a>Określanie typu obiektu (Visual Basic)
-Obiekt generyczny zmienne (czyli zmienne można zadeklarować jako `Object`) może przechowywać obiektów z dowolnej klasy. Używając zmiennych typu `Object`, należy wykonać różne operacje, oparty na klasie obiektu; na przykład niektórych obiektów może nie obsługuje określonej właściwości lub metody. Visual Basic udostępnia dwa sposoby kontrolowania, jakiego typu obiektu są przechowywane w zmiennej obiektu: `TypeName` funkcji i `TypeOf...Is` operatora.  
+Obiekt generyczny zmienne (czyli zmienne został zadeklarowany jako `Object`) może zawierać obiekty z dowolnej klasy. W przypadku używania zmiennych typu `Object`, konieczne może być różne akcje na podstawie klasy obiektu; na przykład niektóre obiekty mogą nie obsługiwać określoną właściwość lub metoda. Visual Basic zapewnia dwa sposoby kontrolowania, jakiego typu obiektu jest przechowywany w zmiennej obiektu: `TypeName` funkcji i `TypeOf...Is` operatora.  
   
-## <a name="typename-and-typeofis"></a>Właściwość TypeName i TypeOf... Jest  
- `TypeName` Funkcja zwróci ciąg i jest najlepszym rozwiązaniem, gdy potrzebne do przechowywania lub wyświetlana nazwa klasy obiektu, jak pokazano w poniższy fragment kodu:  
+## <a name="typename-and-typeofis"></a>TypeName, jak i TypeOf... Jest  
+ `TypeName` Funkcja zwraca wartość typu ciąg i sprawdza się najlepiej, gdy należy zapisać lub wyświetlić nazwę klasy obiektu, jak pokazano na następujący fragment kodu:  
   
  [!code-vb[VbVbalrOOP#92](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_1.vb)]  
   
- `TypeOf...Is` Operator jest najlepszym wyborem do testowania typu obiektu, ponieważ jest znacznie szybsza niż porównanie ciągu równoważne przy użyciu `TypeName`. Poniższy fragment kodu używa `TypeOf...Is` w `If...Then...Else` instrukcji:  
+ `TypeOf...Is` Operator jest najlepszym wyborem do testowania typu obiektu, ponieważ jest znacznie szybsze niż porównania ciągu równoważnego przy użyciu `TypeName`. Poniższy fragment kodu używa `TypeOf...Is` w ramach `If...Then...Else` instrukcji:  
   
  [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_2.vb)]  
   
- Wyraz ostrożność jest termin tutaj. `TypeOf...Is` Operator zwraca `True` Jeśli obiekt jest określonego typu lub pochodzi z konkretnego typu. Prawie wszystkie czynności wykonywane za pomocą Visual Basic obejmuje obiekty, do których należą niektóre elementy nie mogą traktować jako obiekty, takie jak parametry i liczb całkowitych. Te obiekty pochodne i dziedziczy metody <xref:System.Object>. Po upływie `Integer` ocenione z `Object`, `TypeOf...Is` operator zwraca `True`. Poniższy przykład zgłasza, że parametr `InParam` jest zarówno `Object` i `Integer`:  
+ W tym miejscu jest zaległe word ostrożności. `TypeOf...Is` Operator zwraca `True` Jeśli obiekt jest określonego typu lub pochodzi z określonego typu. Prawie wszystko, co zrobić za pomocą Visual Basic obejmuje obiekty, które zawierają jakieś elementy, które nie są zazwyczaj uważane za obiekty, takie jak ciągi i liczby całkowite. Te obiekty są uzyskiwane z i odziedziczenie metody z <xref:System.Object>. Przy przekazywaniu `Integer` ocenione z `Object`, `TypeOf...Is` operator zwraca `True`. Poniższy przykład informuje, że parametr `InParam` jest zarówno `Object` i `Integer`:  
   
  [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_3.vb)]  
   
- W poniższym przykładzie użyto zarówno `TypeOf...Is` i `TypeName` można określić typu obiektu przekazana do niej w `Ctrl` argumentu. `TestObject` Wywołań procedur `ShowType` z trzech różnych rodzajów formantów.  
+ W poniższym przykładzie użyto obu `TypeOf...Is` i `TypeName` można ustalić typu obiektu, przekazana do niej w `Ctrl` argumentu. `TestObject` Wywołania procedur `ShowType` z trzech różnych rodzajów formantów.  
   
 #### <a name="to-run-the-example"></a>Aby uruchomić przykład  
   
-1.  Utwórz nowy projekt aplikacji systemu Windows i Dodaj <xref:System.Windows.Forms.Button> kontroli, <xref:System.Windows.Forms.CheckBox> kontroli, a <xref:System.Windows.Forms.RadioButton> sterowania do formularza.  
+1.  Utwórz nowy projekt aplikacji Windows i Dodaj <xref:System.Windows.Forms.Button> kontroli <xref:System.Windows.Forms.CheckBox> kontroli i <xref:System.Windows.Forms.RadioButton> formantu do formularza.  
   
-2.  Po kliknięciu przycisku w formularzu wywołać `TestObject` procedury.  
+2.  Przy użyciu przycisku w formularzu, należy wywołać `TestObject` procedury.  
   
 3.  Dodaj następujący kod do formularza:  
   
      [!code-vb[VbVbalrOOP#95](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_4.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.Information.TypeName%2A>  
- [Wywoływanie właściwości lub metody za pomocą nazwy ciągu](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)  
- [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [If...Then...Else, instrukcja](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [String, typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Integer, typ danych](../../../../visual-basic/language-reference/data-types/integer-data-type.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.Information.TypeName%2A>
+- [Wywoływanie właściwości lub metody za pomocą nazwy ciągu](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
+- [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Dyrektywa #If...Then...#Else](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [String, typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Integer, typ danych](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

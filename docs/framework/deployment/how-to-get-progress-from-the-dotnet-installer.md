@@ -1,5 +1,5 @@
 ---
-title: 'Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5'
+title: 'Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bec27165d1bfd6a501ba8b96a1eb133276fe7269
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 22c44340edf5e7a625524500838ab32d516ad97b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614623"
 ---
-# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5
+# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Jest redystrybucyjnego środowiska uruchomieniowego. W przypadku tworzenia aplikacji dla tej wersji programu .NET Framework, można dołączyć (łańcuch) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalator w ramach wymagań wstępnych instalacji aplikacji. Obecne środowisko dostosowany lub ujednoliconego Instalatora, może chcesz uruchomić w trybie dyskretnym [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] instalacji i śledzić postęp podczas wyświetlania postępu instalacji aplikacji. Aby włączyć śledzenie dyskretnej [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora (mogą być odtwarzane) definiuje protokół, za pomocą mapowanych na pamięć segment operacji We/Wy (rozwiązanie MMIO) do komunikowania się z ustawień (obserwatora lub chainer). Protokół ten definiuje sposób chainer uzyskać informacje o postępie, Uzyskaj szczegółowe wyniki, odpowiadanie na wiadomości i anulować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora.  
   
 -   **Wywołania** .  Aby wywołać [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] instalacji i otrzymywać informacje o postępie w sekcji Rozwiązanie MMIO, program instalacyjny, należy wykonać następujące czynności:  
@@ -35,7 +35,7 @@ ms.locfileid: "50197954"
   
          Zamień tych nazw z nazwami, które są unikatowe dla programu instalacyjnego.  
   
-    2.  Przeczytaj, w sekcji Rozwiązanie MMIO. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], operacji pobierania i instalacji jest jednoczesne: jednej części programu .NET Framework może być instalowany podczas pobierania innej części. W rezultacie postępu są wysyłane z powrotem (zapisywanych) w sekcji Rozwiązanie MMIO jako dwóch liczb (`m_downloadSoFar` i `m_installSoFar`), zwiększyć z zakresu od 0 do 255. Po zapisaniu 255 i umożliwia zamknięcie systemu .NET Framework, instalacja została zakończona.  
+    2.  Przeczytaj, w sekcji Rozwiązanie MMIO. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], operacje pobierania i instalacji są jednocześnie: Jedną z części pakietu programu .NET Framework może być instalowany podczas pobierania innej części. W rezultacie postępu są wysyłane z powrotem (zapisywanych) w sekcji Rozwiązanie MMIO jako dwóch liczb (`m_downloadSoFar` i `m_installSoFar`), zwiększyć z zakresu od 0 do 255. Po zapisaniu 255 i umożliwia zamknięcie systemu .NET Framework, instalacja została zakończona.  
   
 -   **Kody zakończenia**. Następujące kody zakończenia z polecenia do wywołania [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] program do dystrybucji wskazuje, czy Instalator ma zakończonych powodzeniem lub niepowodzeniem:  
   
@@ -309,6 +309,6 @@ ms.locfileid: "50197954"
   
  Typowy serwer tworzy losowe rozwiązanie MMIO nazwę pliku, tworzy plik (jak pokazano w poprzednim przykładzie kodu na `Server::CreateSection`) i uruchamia pakiet redystrybucyjny programu za pomocą `CreateProcess` nazw przy użyciu metody i przekazywania potoku `-pipe someFileSectionName` opcji. Serwer powinien implementować `OnProgress`, `Send`, i `Finished` metody z kodu specyficznego dla interfejsu użytkownika aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
-- [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+## <a name="see-also"></a>Zobacz także
+- [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [Wdrażanie](../../../docs/framework/deployment/index.md)

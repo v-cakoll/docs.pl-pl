@@ -2,21 +2,15 @@
 title: Usługi danych WCF 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Astoria
-- WCF Data Services, getting started
+  - Astoria
+  - 'WCF Data Services, getting started'
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 9ece2fe051855d0fd39556f56a4343ead2c437bc
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702812"
 ---
 # <a name="wcf-data-services-45"></a>Usługi danych WCF 4.5
 
 Usługi danych WCF (wcześniej znane jako "Architektury ADO.NET Data Services") jest składnikiem programu .NET Framework, która umożliwia tworzenie usług, które używają [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do prezentowania i wykorzystywania danych w Internecie lub intranecie przy użyciu semantyki [ (REST) Representational state transfer](https://go.microsoft.com/fwlink/?LinkId=113919). OData przedstawia dane w postaci zasobów, które są adresowane przez identyfikatory URI. Dane są dostępne i zmieniać przy użyciu standardowych poleceń HTTP elementu GET, PUT, POST i DELETE. OData używa konwencji Relacja jednostki [modelu Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) aby uwidocznić zasoby jako zestawów jednostek, które są powiązane przez skojarzenia.
 
-Usługi danych WCF korzysta z protokołu OData do adresowania i aktualizowania zasobów. W ten sposób uzyskujesz dostęp do tych usług, za pomocą dowolnego klienta, który obsługuje OData. OData pozwala na żądania i zapisać dane do zasobów przy użyciu formatów transferowania dobrze znanych: Atom, zestaw standardów wymianę i aktualizowanie danych w formacie XML i JavaScript Object Notation (JSON), formatem wymiany danych tekstowych, często używane w technologii AJAX aplikacja.
+Usługi danych WCF korzysta z protokołu OData do adresowania i aktualizowania zasobów. W ten sposób uzyskujesz dostęp do tych usług, za pomocą dowolnego klienta, który obsługuje OData. OData pozwala na żądanie i zapisywania danych do zasobów przy użyciu dobrze znanych transferu formatów: Atom, zestaw standardów wymianę i aktualizowanie danych w formacie XML i JavaScript Object Notation (JSON), formatem wymiany danych tekstowych, często używane w aplikacji interfejsu AJAX.
 
 Usługi danych WCF można ujawnić dane, które pochodzą z różnych źródeł, jako źródła OData. Narzędzia programu Visual Studio ułatwiają tworzenie usługi OData przy użyciu modelu danych ADO.NET Entity Framework. Można również utworzyć źródła danych OData na podstawie wspólnej klasy środowiska uruchomieniowego (języka wspólnego CLR) języka i nawet z późnym wiązaniem lub bez danych.
 
@@ -42,7 +36,7 @@ Po prostu Pokaż kodu...
 
 -   [Instrukcje: Wykonywanie zapytań usługi danych](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
 
--   [Instrukcje: Wiązanie danych do elementów systemu Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+-   [Instrukcje: Powiąż dane z programu Windows Presentation Foundation elementów](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
 
 Chcę dowiedzieć się więcej o OData...
 
@@ -50,7 +44,7 @@ Chcę dowiedzieć się więcej o OData...
 
 -   [Otwórz witrynę sieci Web protokołu danych](https://go.microsoft.com/fwlink/?LinkID=184554)
 
--   [OData: zestaw SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+-   [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
 -   [OData: Często zadawane pytania](https://go.microsoft.com/fwlink/?LinkId=185867)
 
@@ -68,7 +62,7 @@ Chcę wyświetlić przykłady end-to-end...
 
 -   [Inne usługi WCF Data Services — przykłady w galerii przykładów MSDN](https://go.microsoft.com/fwlink/?LinkId=220866)
 
--   [OData: zestaw SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+-   [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
 Jak można je zintegrować z programem Visual Studio?
 
@@ -134,6 +128,6 @@ Mi nadal potrzebne pewne dodatkowe informacje...
 
  W tym artykule opisano, jak używać tych źródeł od aplikacji klienckiej .NET Framework za pomocą biblioteki klienta.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04956fb5519c66141f4bd7330367f6c78b4e7bc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 313dd7526478377ca457d165de4b95e7e81d93f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599793"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply — Metoda
-Powiadamia profiler Zakończono po stronie serwera część wywołaniem funkcji zdalnych i teraz odbiera klienta i informacje o przetwarzanie odpowiedzi.  
+Powiadamia program profilujący po stronie serwera część wywołanie komunikacji zdalnej została zakończona i klient otrzymuje teraz i wkrótce do przetwarzania odpowiedzi.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,21 +37,21 @@ HRESULT RemotingClientReceivingReply(
   
 #### <a name="parameters"></a>Parametry  
  `pCookie`  
- [in] Wartość, która będzie zgodne z wartością w [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) w tych warunkach:  
+ [in] Wartość, która będzie odpowiadać za pomocą wartość podana w [icorprofilercallback::remotingserversendingreply —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) w tych warunkach:  
   
--   Pliki cookie GUID komunikacji zdalnej są aktywne.  
+-   Pliki cookie identyfikatora GUID komunikacji zdalnej są aktywne.  
   
--   Kanał pomyślnie przesyła komunikat.  
+-   Kanał powiedzie się podczas przesyłania wiadomości.  
   
--   Identyfikator GUID pliki cookie są aktywne w procesie po stronie serwera.  
+-   Identyfikator GUID pliki cookie są aktywne na proces po stronie serwera.  
   
- Dzięki temu można łatwo parowanie zdalnych wywołań.  
+ Dzięki temu można łatwo parowanie wywołaniem funkcji zdalnych wywołań.  
   
  `fIsAsync`  
- [in] Wartość, która jest `true` Jeśli wywołanie jest asynchroniczne, a w przeciwnym razie `false`.  
+ [in] Wartość, która jest `true` Jeśli wywołanie jest asynchroniczne; w przeciwnym razie `false`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -59,5 +59,5 @@ HRESULT RemotingClientReceivingReply(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

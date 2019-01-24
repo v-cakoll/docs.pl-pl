@@ -13,12 +13,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: 65a799355e35fc7d14e3aaad973209147f7e7eae
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c0c8bcca55dc54b2dd89be2e45dade4d09a67362
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574134"
 ---
 # <a name="http"></a>HTTP
 Program .NET Framework oferuje kompleksowe wsparcie dla protokołu HTTP, co sprawia, że większość cały ruch z Internetu za pomocą <xref:System.Net.HttpWebRequest> i <xref:System.Net.HttpWebResponse> klasy. Te klasy pochodne <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse>, zwracane są domyślnie zawsze wtedy, gdy metoda statyczna <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> napotka przez identyfikator URI rozpoczynający się od "http" lub "https". W większości przypadków **WebRequest** i **elementu WebResponse** klasy zapewnia wszystko co jest niezbędne do utworzenia żądania, ale jeśli potrzebujesz dostępu do funkcji specyficznych dla protokołu HTTP, widoczne jako właściwości, możesz rzutowanie typu te klasy **HttpWebRequest** lub **HttpWebResponse**.  
@@ -31,7 +31,7 @@ Program .NET Framework oferuje kompleksowe wsparcie dla protokołu HTTP, co spra
   
  Aplikacje otrzymywać komunikaty o błędach protokołu HTTP przez Przechwytywanie <xref:System.Net.WebException> z <xref:System.Net.WebException.Status%2A> równa <xref:System.Net.WebExceptionStatus>. <xref:System.Net.WebException.Response%2A> Właściwość zawiera **elementu WebResponse** wysłanych przez serwer i wskazuje rzeczywiste Napotkano błąd HTTP.  
   
-## <a name="see-also"></a>Zobacz też  
- [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)  
- [Instrukcje: dostęp do właściwości specyficznych dla protokołu HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+## <a name="see-also"></a>Zobacz także
+- [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)
+- [Instrukcje: Przejdź do właściwości specyficzne dla protokołu HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Wskazówki: przeprowadzanie typowych zadań z tagami inteligentnymi na kontrolkach formularzy systemu Windows'
+title: 'Przewodnik: Wykonywania typowych zadań przy użyciu inteligentnych tagów w Windows Forms, formanty'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DesignerAction object model
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: d1c69d2e9e89e0a4fed767216e8743a0ac9ac81d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b17fbaea48660a47630dd310c74be9cd3cc78609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579319"
 ---
-# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Wskazówki: przeprowadzanie typowych zadań z tagami inteligentnymi na kontrolkach formularzy systemu Windows
+# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Przewodnik: Wykonywania typowych zadań przy użyciu inteligentnych tagów w Windows Forms, formanty
 Podczas przygotowywania formularzy i kontrolek dla aplikacji Windows Forms, istnieje wiele zadań, które należy wykonać wielokrotnie. Oto niektóre z często wykonywanych zadań, które można napotkać:  
   
 -   Dodawanie lub usuwanie karty na <xref:System.Windows.Forms.TabControl>.  
@@ -65,9 +65,9 @@ Podczas przygotowywania formularzy i kontrolek dla aplikacji Windows Forms, istn
   
 6.  Kliknij symbol tagu inteligentnych. W menu skrótów, która pojawia się obok glif, wybierz **orientacji poziomej rozdzielacza** elementu. Zauważ, że <xref:System.Windows.Forms.SplitContainer> pasek podziału kontrolki jest teraz orientacji poziomej.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.TextBox>  
- <xref:System.Windows.Forms.TabControl>  
- <xref:System.Windows.Forms.SplitContainer>  
- <xref:System.ComponentModel.Design.DesignerActionList>  
- [Wskazówki: Dodawanie tagów inteligentnych do składnika Windows Forms](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.TextBox>
+- <xref:System.Windows.Forms.TabControl>
+- <xref:System.Windows.Forms.SplitContainer>
+- <xref:System.ComponentModel.Design.DesignerActionList>
+- [Przewodnik: Dodawanie tagów inteligentnych do składnika Windows Forms](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)

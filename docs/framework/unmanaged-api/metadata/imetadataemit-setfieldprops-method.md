@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a2c38340614e633de4049515b38cb387031739b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f05c6df415a92151783d805799da5bf7dfb6c7a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556106"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps — Metoda
-Ustawia lub aktualizuje wartość domyślna w polu odwołuje się token określonego pola.  
+Ustawia lub aktualizuje wartość domyślną dla pola przywoływane przez token określonego pola.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,10 +41,10 @@ HRESULT SetFieldProps (
   
 #### <a name="parameters"></a>Parametry  
  `fd`  
- [in] Token pola docelowego.  
+ [in] Token do pola docelowego.  
   
  `dwFieldFlags`  
- [in] Atrybuty pól. To jest maską bitów z `CorFieldAttr` wartości.  
+ [in] Atrybuty pól. Jest to z `CorFieldAttr` wartości.  
   
  `dwCPlusTypeFlag`  
  [in] `ELEMENT_TYPE_` *\** Wartości stałej. Jest to `CorElementType` wartość. Jeśli nie zdefiniowano jest stałą, ustaw tę wartość na `ELEMENT_TYPE_END`.  
@@ -56,14 +56,14 @@ HRESULT SetFieldProps (
  [in] Rozmiar w znaki Unicode z `pValue`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

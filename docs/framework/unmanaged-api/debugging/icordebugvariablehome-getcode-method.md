@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetCode — metoda
+title: ICorDebugVariableHome::GetCode Method
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetCode
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee8fa8feebba7258fc84ee7ba00ce2ab1977faa4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 216779ab03b426ceb8003accfbdd182f583b77cc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557347"
 ---
-# <a name="icordebugvariablehomegetcode-method"></a>ICorDebugVariableHome::GetCode — metoda
+# <a name="icordebugvariablehomegetcode-method"></a>ICorDebugVariableHome::GetCode Method
 Pobiera wystąpienie "ICorDebugCode", który zawiera ten [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) obiektu.  
   
 ## <a name="syntax"></a>Składnia  
@@ -37,10 +37,10 @@ HRESULT GetCode(
   
 #### <a name="parameters"></a>Parametry  
  `ppCode`  
- [out] Wskaźnik do wystąpienia "ICorDebugCode", który zawiera ten adres [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) obiektu.  
+ [out] Wskaźnik na adres wystąpienia "ICorDebugCode", który zawiera ten [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -48,6 +48,6 @@ HRESULT GetCode(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugVariableHome, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
- 
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugVariableHome, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+

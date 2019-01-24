@@ -2,15 +2,15 @@
 title: Łańcucha standardowych operatorów zapytań razem (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 07cc6769646f8f3f924b488e30ce2415c587ebe0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 71b364d76860b5daa21ea176947d9cfe9d49b308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582886"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Łańcucha standardowych operatorów zapytań razem (C#)
-To jest ostatnim temacie w [samouczek: tworzenie łańcuchów zapytania ze sobą (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) samouczka.  
+To jest ostatnim temacie w [samouczka: Łączenie łańcuchowe zapytań (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) samouczka.  
   
  Standardowe operatory zapytań można również łączyć w łańcuch. Na przykład można interject <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> operatora, a także działa w sposób z opóźnieniem. Nie wyników pośrednich zmaterializowanego są przez nią.  
   
@@ -19,7 +19,7 @@ To jest ostatnim temacie w [samouczek: tworzenie łańcuchów zapytania ze sobą
   
  Jedną różnicą jest to, że w tym przypadku <xref:System.Linq.Enumerable.Where%2A> metoda iteruje przez jej kolekcji źródłowej Określa pierwszy element nie zostały spełnione predykat, a następnie pobiera następny element przekazać. Daje drugiego elementu.  
   
- Podstawowa koncepcja jest jednak takie same: pośredni kolekcje nie są zmaterializowanego, chyba że mają być.  
+ Podstawowa koncepcja jest jednak takie same: Pośredni kolekcje nie są zmaterializowanego, chyba że mają być.  
   
  W przypadku używania wyrażeń zapytania są konwertowane na wywołania do standardowych operatorów zapytań i obowiązują te same zasady.  
   
@@ -86,6 +86,6 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Tworzenie łańcuchów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [Samouczek: Łączenie łańcuchowe zapytań (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

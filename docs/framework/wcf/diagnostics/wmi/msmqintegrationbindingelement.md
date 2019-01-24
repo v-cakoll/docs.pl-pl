@@ -2,12 +2,12 @@
 title: MsmqIntegrationBindingElement
 ms.date: 03/30/2017
 ms.assetid: eaaa7651-e6e5-4fae-9dad-c1867d38b586
-ms.openlocfilehash: ff8cc5797c25680d257c8d142425538c75dbf044
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 153d9bf27ee68dcda26c59837443ea49314b2f40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610713"
 ---
 # <a name="msmqintegrationbindingelement"></a>MsmqIntegrationBindingElement
 MsmqIntegrationBindingElement  
@@ -30,15 +30,15 @@ class MsmqIntegrationBindingElement : MsmqBindingElementBase
 ### <a name="serializationformat"></a>serializationFormat  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Format używany przez powiązanie do serializacji wiadomości.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
+|MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>

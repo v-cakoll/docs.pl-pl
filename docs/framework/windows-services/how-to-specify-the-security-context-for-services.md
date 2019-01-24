@@ -1,5 +1,5 @@
 ---
-title: 'Porady: określanie kontekstu zabezpieczeń dla usług'
+title: 'Instrukcje: Określanie kontekstu zabezpieczeń dla usług'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: a5a437af90f29bc601215176ad5c4fec702ddbc0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9adcb39504cc2b5189f0c65cc5603c149d1483f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572620"
 ---
-# <a name="how-to-specify-the-security-context-for-services"></a>Porady: określanie kontekstu zabezpieczeń dla usług
+# <a name="how-to-specify-the-security-context-for-services"></a>Instrukcje: Określanie kontekstu zabezpieczeń dla usług
 Domyślnie usługi uruchamiane w kontekście zabezpieczeń inny niż zalogowany użytkownik. Usługi uruchamiane w kontekście domyślnego konta systemu o nazwie `LocalSystem`, która umożliwi im różne przywileje dostępu do zasobów systemowych, nie użytkownik. Możesz zmienić to zachowanie, aby określić inne konto użytkownika na którym jest uruchamiany z usługą.  
   
  Ustaw kontekst zabezpieczeń, manipulowanie <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> właściwości dla procesu, w którym usługa jest uruchamiana. Ta właściwość umożliwia ustawianie usługi do zestawu obejmującego cztery typy konta:  
@@ -35,7 +35,7 @@ Domyślnie usługi uruchamiane w kontekście zabezpieczeń inny niż zalogowany 
   
 ### <a name="to-specify-the-security-context-for-a-service"></a>Do określenia kontekstu zabezpieczeń dla usługi  
   
-1.  Po utworzeniu usługi, dodanie niezbędnych instalatorów dla niego. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie instalatorów do aplikacji usługi](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Po utworzeniu usługi, dodanie niezbędnych instalatorów dla niego. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 2.  W Projektancie dostępu `ProjectInstaller` klasy, a następnie kliknij przycisk Instalatora procesu usługi dla usługi, którymi pracujesz.  
   
@@ -44,7 +44,7 @@ Domyślnie usługi uruchamiane w kontekście zabezpieczeń inny niż zalogowany 
   
 3.  W **właściwości** oknie <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> odpowiednią wartość.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Instrukcje: dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Instrukcje: tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Instrukcje: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Instrukcje: Tworzenie usług Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)

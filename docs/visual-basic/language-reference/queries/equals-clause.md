@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Equals keyword [Visual Basic]
 ms.assetid: 3f5a7f21-3d54-4479-8197-bab62b34ac2e
-ms.openlocfilehash: 564b6470a665d7681d028f3ac574088b7625c60a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f6be7fe7f67511c030e53c5688dfcc0a0250a7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574654"
 ---
 # <a name="equals-clause-visual-basic"></a>Equals — Klauzula (Visual Basic)
 Porównuje klucze z kolekcji jest dołączony.  
   
 ## <a name="remarks"></a>Uwagi  
- `Equals` — Słowo kluczowe jest używany w następujących sytuacjach:  
+ Słowa kluczowego `Equals` można użyć w następujących kontekstach:  
   
- [Group Join, klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Klauzula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
  [Join, klauzula](../../../visual-basic/language-reference/queries/join-clause.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

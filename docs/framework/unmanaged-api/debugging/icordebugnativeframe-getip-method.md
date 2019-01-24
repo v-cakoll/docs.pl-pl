@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d17ac4230296674381c87851377fcb535837ad3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a27a50e6fb120e537d28759a79a2b90c6d437e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600456"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP — Metoda
-Pobiera kod macierzysty przesunięcia lokalizacji, do której jest aktualnie ustawione wskaźnik instrukcji.  
+Pobiera kodu macierzystego przesunięcia lokalizacji, do której jest aktualnie ustawiona wskaźnik instrukcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,10 +40,10 @@ HRESULT GetIP (
  [out] Wskaźnik do przesunięcia lokalizacji w kodzie natywnym.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli ramka stosu reprezentowanego przez ten "ICorDebugNativeFrame" jest aktywna, przesunięcie jest adresem następną instrukcję do wykonania. Jeśli ta ramka stosu nie jest aktywne, przesunięcie jest adresem następną instrukcję do wykonania po ponownym uaktywnieniu ramki stosu.  
+ Jeśli ramka stosu, który jest reprezentowany przez ten icordebugnativeframe "—" jest aktywna, przesunięcie jest adres następnej instrukcji do wykonania. Jeśli tej ramki stosu nie jest aktywny, przesunięcie jest adres następnej instrukcji do wykonania podczas ponownego uaktywniania ramki stosu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -51,5 +51,5 @@ HRESULT GetIP (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

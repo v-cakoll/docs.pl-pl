@@ -3,23 +3,23 @@ title: '&lt;faultPropagationQueries&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 00ff90ae-ebe0-4c85-a93f-61557288d0a3
-ms.openlocfilehash: 5fd6ffc9560247089c7fbb60b0e5a7d3a417ea6f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 546b37279c8ba58f9dd9f07dabacb7af602ff232
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610061"
 ---
 # <a name="ltfaultpropagationqueriesgt"></a>&lt;faultPropagationQueries&gt;
-Reprezentuje kolekcję zapytań, które są używane do śledzenia Obsługa błędów występujących w ramach działania.  To zdarzenie występuje zawsze FaultHandler przetwarza błąd. Należy użyć takiej kwerendy do śledzenia obsługi błędów występujących w ramach działania. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania błędów propagacji rekordów.  
+Reprezentuje kolekcję zapytań, które są używane do śledzenia obsługi błędów występujących w ramach działania.  To zdarzenie występuje, każdym razem FaultHandler przetwarza błąd wystąpienia. Należy użyć takiej kwerendy do śledzenia obsługi błędów występujących w ramach działania. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania błędów propagacji rekordów.  
   
- Aby uzyskać więcej informacji na zapytania dotyczące profilu śledzenia, zobacz [śledzenia profile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+ Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
 \<system.serviceModel>  
 \<Śledzenie >  
 \<trackingProfile>  
 \<przepływ pracy >  
-\<faultPropagationQueries >  
+\<faultPropagationQueries>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,16 +46,16 @@ Reprezentuje kolekcję zapytań, które są używane do śledzenia Obsługa bł�
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Kwerenda, która służy do śledzenia Obsługa błędów występujących w ramach działania.  To zdarzenie występuje zawsze FaultHandler przetwarza błąd.|  
+|[\<faultPropagationQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Zapytanie, które jest używane do śledzenia obsługi błędów występujących w ramach działania.  To zdarzenie występuje, każdym razem FaultHandler przetwarza błąd wystąpienia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<przepływ pracy >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Element konfiguracji, który zawiera wszystkie zapytania dotyczące określonego przepływu pracy, identyfikowane przez **obiektu activityDefinitionId** właściwości.|  
+|[\<przepływ pracy >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Element konfiguracji, który zawiera wszystkie zapytania dotyczące określonego przepływu pracy identyfikowane przez **activityDefinitionId** właściwości.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>       
- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
+- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

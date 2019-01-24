@@ -2,12 +2,12 @@
 title: Konfigurowanie usługi współużytkowania portów Net.TCP
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 3afc4cf50ac0dda0198ca8986177fd3028f9837e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 9bc625f9e998f27b6227a5951f11c7d85220ae7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585526"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Konfigurowanie usługi współużytkowania portów Net.TCP
 Użyj transportu Net.TCP własnym obsługiwanych usług można kontrolować kilka ustawień zaawansowanych, takich jak `ListenBacklog` i `MaxPendingAccepts`, które sterują zachowaniem bazowego gniazda TCP, używana do komunikacji sieciowej. Jednak te ustawienia dla każdego gniazda stosowane tylko wtedy na poziomie powiązania Jeśli powiązania transportu wyłączył możliwość współużytkowania portów, co jest domyślnie włączona.  
@@ -61,5 +61,5 @@ Użyj transportu Net.TCP własnym obsługiwanych usług można kontrolować kilk
 > [!WARNING]
 >  Domyślny plik pliku konfiguracyjnego SMSvcHost.exe.config określa niestandardowy `etwProviderId` zapobiegające śledzenie SMSvcHost.exe od wchodzenia w konflikt ze śledzenia usługi.  
   
-## <a name="see-also"></a>Zobacz też  
- [\<NET.TCP >](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)
+## <a name="see-also"></a>Zobacz także
+- [\<net.tcp>](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)

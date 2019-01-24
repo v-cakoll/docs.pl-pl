@@ -2,12 +2,12 @@
 title: Generowanie klienta programu WCF na podstawie metadanych usługi
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 78804eb7f4139280e7d72c5a45aa0ae4cc3c2d77
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3bdb283e461076ffd5c1e77963933de0e5b4bb02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570960"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generowanie klienta programu WCF na podstawie metadanych usługi
 W tym temacie opisano sposób użycia różnych przełączników w Svcutil.exe do generowania klientów z dokumentów metadanych.  
@@ -20,7 +20,7 @@ W tym temacie opisano sposób użycia różnych przełączników w Svcutil.exe d
   
 -   Żądanie DISCO (przy użyciu [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) z usług sieci Web platformy ASP.NET) na podany adres.  
   
- Svcutil.exe generuje klienta oparty na sieci Web Services Description Language (WSDL) lub zasad pliku otrzymanych z usługi. Główna nazwa użytkownika (UPN) jest generowana przez połączenie nazwy użytkownika z "\@", a następnie dodając w pełni kwalifikowaną nazwą domeny (FQDN). Jednak dla użytkowników, którzy zarejestrowali się w usłudze Active Directory, ten format jest nieprawidłowy, a nazwy UPN, generowany przez narzędzie powoduje awarię w uwierzytelnianiu Kerberos z następujący komunikat o błędzie: **próba logowania nie powiodła się.** Aby rozwiązać ten problem, należy ręcznie rozwiązać pliku klienta, który wygenerował narzędzie.  
+ Svcutil.exe generuje klienta oparty na sieci Web Services Description Language (WSDL) lub zasad pliku otrzymanych z usługi. Główna nazwa użytkownika (UPN) jest generowana przez połączenie nazwy użytkownika z "\@", a następnie dodając w pełni kwalifikowaną nazwą domeny (FQDN). Jednak dla użytkowników, którzy zarejestrowali się w usłudze Active Directory, ten format nie jest prawidłowy, i nazwę UPN, która generuje narzędzie powoduje awarię w uwierzytelnianiu Kerberos z następujący komunikat o błędzie: **Próba logowania nie powiodła się.** Aby rozwiązać ten problem, należy ręcznie rozwiązać pliku klienta, który wygenerował narzędzie.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
@@ -31,7 +31,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |Opcja|Opis|  
 |------------|-----------------|  
 |**/ reference:\<ścieżka pliku >**|Typy odwołań w określonym zestawie. Podczas generowania klientów Użyj tej opcji, aby określić zestawy, które mogą zawierać typy reprezentujące importowane metadane.<br /><br /> Krótka: `/r`|  
-|**/excludeType:\<typ >**|Określa nazwę typu w pełni kwalifikowaną lub kwalifikowaną dla zestawu, które mają być wykluczone z typów kontraktu odwołania.<br /><br /> Krótka: `/et`|  
+|**/excludeType:\<type>**|Określa nazwę typu w pełni kwalifikowaną lub kwalifikowaną dla zestawu, które mają być wykluczone z typów kontraktu odwołania.<br /><br /> Krótka: `/et`|  
   
 ## <a name="choosing-a-serializer"></a>Wybieranie serializatora  
   
@@ -69,6 +69,6 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |**/mergeConfig**|Scala wygenerowaną konfigurację istniejącego pliku, zamiast nadpisywać istniejący plik.|  
 |**/noConfig**|Nie generują pliki konfiguracji.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Używanie metadanych](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Przegląd architektury metadanych](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Używanie metadanych](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Przegląd architektury metadanych](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

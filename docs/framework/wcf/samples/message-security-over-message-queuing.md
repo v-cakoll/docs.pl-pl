@@ -2,12 +2,12 @@
 title: Zabezpieczenia komunikatów w ramach kolejkowania komunikatów
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: ddb06e4c85d3fa6db3df14ce15813adb8ae2fc99
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7303db0e7553e7365d83dfadc377ec265a71891a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583301"
 ---
 # <a name="message-security-over-message-queuing"></a>Zabezpieczenia komunikatów w ramach kolejkowania komunikatów
 Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z protokołu WS-Security przy użyciu uwierzytelniania certyfikatu X.509v3 dla klienta i wymaga uwierzytelnienia serwera za pomocą certyfikatu X.509v3 serwera za pośrednictwem usługi MSMQ. Komunikat zabezpieczeń jest czasem korzystniejsze, aby upewnić się, że komunikaty w magazynie usługi MSMQ pozostają zaszyfrowane i aplikacji można wykonać swoje własne uwierzytelniania wiadomości.
@@ -80,7 +80,7 @@ Ten przykład demonstruje sposób implementacji aplikacji, która korzysta z pro
 -   Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
     > [!NOTE]
-    >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykładów Windows Communication Foundation (WCF), które używają certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+    >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykładów Windows Communication Foundation (WCF), które używają certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
 ## <a name="requirements"></a>Wymagania
  Ten przykładowy skrypt wymaga, że usługa MSMQ jest zainstalowana i uruchomiona.
@@ -345,4 +345,4 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

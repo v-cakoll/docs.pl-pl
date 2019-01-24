@@ -1,5 +1,5 @@
 ---
-title: 'Porady: odwołania do typów .NET z modelu COM'
+title: 'Instrukcje: Odwołanie do typów .NET z modelu COM'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0333cd73240e685b46917d85afe0876532db3fd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9826f8af06693fdff0d5bea75cfa3f2586faa4f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582127"
 ---
-# <a name="how-to-reference-net-types-from-com"></a>Porady: odwołania do typów .NET z modelu COM
-Z punktu widzenia kodu klienta i serwera różnice między COM i .NET Framework są przede wszystkim niewidoczne. Microsoft Visual Basic klientów można wyświetlić obiektu .NET. w przeglądarce obiektów, który udostępnia metody obiektu i składni, właściwości oraz polach dokładnie tak, jakby była innego obiektu COM.  
+# <a name="how-to-reference-net-types-from-com"></a>Instrukcje: Odwołanie do typów .NET z modelu COM
+Z punktu widzenia kodu klienta i serwera różnice w modelu COM i .NET Framework są niewidoczne w dużej mierze. Klienci programu Microsoft Visual Basic można wyświetlić obiektu platformy .NET w przeglądarce obiektów, który udostępnia metody obiektu i składnię, właściwości i pola, dokładnie tak jak w przypadku dowolnego obiektu COM.  
   
- Importowanie biblioteki typów jest nieco trudniejsze dla klientów C++, mimo że Eksportowanie metadanych do biblioteki typów COM za pomocą tych samych narzędzi. Aby odwołać elementy członkowskie programu .NET obiektu z niezarządzanego klienta C++, odwołania pliku TLB (realizowane z Tlbexp.exe) z **#import** dyrektywy. Podczas odwoływania się do biblioteki typów, z C++, należy określić **raw_interfaces_only —** opcji lub zaimportować definicje w bibliotece klasy podstawowej Mscorlib.tlb.  
+ Proces importowania biblioteki typów jest nieco bardziej skomplikowanego dla klientów w języku C++, mimo że Eksportowanie metadanych do biblioteki typów COM za pomocą tych samych narzędzi. Aby odwołać elementach członkowskich obiektu .NET z niezarządzanego klienta języka C++, odwołaj się do TLB pliku (utworzone za pomocą Tlbexp.exe) za pomocą **#import** dyrektywy. Podczas odwoływania się do biblioteki typów, z języka C++, należy określić **raw_interfaces_only —** opcję lub zaimportować definicje w bibliotece klasy bazowej Mscorlib.tlb.  
   
 ### <a name="to-import-a-library"></a>Aby zaimportować bibliotekę  
   
@@ -36,15 +36,15 @@ Z punktu widzenia kodu klienta i serwera różnice między COM i .NET Framework 
   
      —lub—  
   
--   Include — dyrektywa #import dla Mscorlib.tlb. Na przykład:  
+-   #Import — dyrektywa zawierają Mscorlib.tlb. Na przykład:  
   
     ```cpp  
     #import "mscorlib.tlb"  
     #import "..\LoanLib\LoanLib.tlb"  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)  
- [Rejestrowanie zestawów do użycia z modelem COM](registering-assemblies-with-com.md)  
- [Wywołanie obiektu .NET.](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
- [Wdrażanie aplikacji na potrzeby dostępu modelu COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))
+## <a name="see-also"></a>Zobacz także
+- [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)
+- [Rejestrowanie zestawów do użycia z modelem COM](registering-assemblies-with-com.md)
+- [Wywołanie obiektu .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))
+- [Wdrażanie aplikacji dla dostępu do modelu COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

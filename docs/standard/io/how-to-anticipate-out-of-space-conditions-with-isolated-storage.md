@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przewidywanie warunków braku miejsca w izolowanym magazynie'
+title: 'Instrukcje: Przewidywanie warunków limit miejsca w wydzielonej pamięci masowej'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: be3c38c1cf1e6fa6f2bfd5fed05ee8150309d7d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609684"
 ---
-# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Porady: przewidywanie warunków braku miejsca w izolowanym magazynie
+# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Instrukcje: Przewidywanie warunków limit miejsca w wydzielonej pamięci masowej
 Kod, który używa wydzielona pamięć masowa jest ograniczony przez [przydziału](../../../docs/standard/io/isolated-storage.md#quotas) , który określa maksymalny rozmiar przedział danych, w którym izolowany magazyn plików i katalogów istnieje. Limit przydziału jest definiowany przez zasady zabezpieczeń i jest konfigurowane przez administratorów. Gdy maksymalny dozwolony rozmiar zostanie przekroczony podczas próby zapisu danych, <xref:System.IO.IsolatedStorage.IsolatedStorageException> wyjątku i kończy się niepowodzeniem. Pozwala to zapobiec złośliwymi atakami typu "odmowa usługi", które może spowodować, że aplikacja odmowy żądania, ponieważ Magazyn danych jest wypełnione.  
   
  Aby ułatwić ustalenie, czy próba zapisu danego prawdopodobnie się nie powieść z tego powodu <xref:System.IO.IsolatedStorage.IsolatedStorage> klasa udostępnia trzy właściwości tylko do odczytu: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A>, i <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Te właściwości można użyć do określenia, czy zapisywanie w magazynie spowoduje, że maksymalny dozwolony rozmiar magazynu zostać przekroczony. Należy pamiętać, że isolated storage może być uzyskiwany współbieżnie, w związku z tym gdy obliczeniowe ilości pozostałego magazynu miejsca do magazynowania może być używana przez czas podczas próby zapisu w magazynie. Jednak można użyć maksymalny rozmiar magazynu w celu określenia, czy górny limit na dostępny magazyn jest wkrótce osiągnięty.  
@@ -47,6 +47,6 @@ Kod, który używa wydzielona pamięć masowa jest ograniczony przez [przydział
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)  
-- [Instrukcje: uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)
+- [Instrukcje: Uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8609857f142000245aef4326c8ef7490e6d4c95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59fdc3d4682fe3c1967c8153043dc1bfe0668c35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610542"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType — Wyliczenie
-Zawiera wartości, które wskazują na typ task, która jest reprezentowana przez albo [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) lub [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interfejsu.  
+Zawiera wartości, które wskazują na typ zadania, który jest reprezentowany przez [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) lub [ihosttask —](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,26 +48,26 @@ typedef enum ETaskType {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`TT_ADUNLOAD`|Interfejs reprezentuje zadania zwalniania domeny aplikacji.|  
-|`TT_DEBUGGERHELPER`|Interfejs reprezentuje zadania pomocnika debugera.|  
-|`TT_FINALIZER`|Interfejs reprezentuje zadania finalizatora.|  
+|`TT_ADUNLOAD`|Interfejs reprezentuje zadanie Zwalnianie domeny aplikacji.|  
+|`TT_DEBUGGERHELPER`|Interfejs reprezentuje zadanie Pomocnik debugera.|  
+|`TT_FINALIZER`|Interfejs reprezentuje zadanie finalizatora.|  
 |`TT_GC`|Interfejs reprezentuje zadanie odzyskiwania pamięci.|  
-|`TT_THREADPOOL_GATE`|Interfejs reprezentuje zadania wątku bramy.|  
-|`TT_THREADPOOL_IOCOMPLETION`|Interfejs reprezentuje zadania wątków We/Wy lub wątku portu ukończenia zadania.|  
-|`TT_THREADPOOL_TIMER`|Interfejs reprezentuje zadanie czasomierza wątku.|  
-|`TT_THREADPOOL_WAIT`|Interfejs reprezentuje oczekiwania wątku zadania.|  
-|`TT_THREADPOOL_WORKER`|Interfejs reprezentuje zadania wątku roboczego.|  
+|`TT_THREADPOOL_GATE`|Interfejs reprezentuje zadanie wątku bramy.|  
+|`TT_THREADPOOL_IOCOMPLETION`|Interfejs reprezentuje operacji We/Wy wątek zadanie lub zadanie wątków portu zakończenia.|  
+|`TT_THREADPOOL_TIMER`|Interfejs reprezentuje zadanie wątków czasomierza.|  
+|`TT_THREADPOOL_WAIT`|Interfejs reprezentuje zadanie wątku oczekiwania.|  
+|`TT_THREADPOOL_WORKER`|Interfejs reprezentuje zadania wątek procesu roboczego.|  
 |`TT_UNKNOWN`|Zadanie jest nieznany.|  
 |`TT_USER`|Interfejs reprezentuje zadanie użytkownika.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5825f0425947f109ed834879684357fef7b70959
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 76d3be88065d4f29020a794db30c616774db1f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580853"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints — Metoda
 Definiuje grupę punktów sekwencji w bieżącej metodzie. Każda linia początkowa i kolumnę początkową definiują rozpoczęcia instrukcji wewnątrz metody. Zakończenie każdego wiersza i zakończenie kolumnę zdefiniuj końca instrukcji wewnątrz metody. Tablice powinny być sortowane rosnąco przesunięcia. Przesunięcie zawsze jest mierzony od początku metody, w bajtach.  
@@ -66,7 +66,7 @@ HRESULT DefineSequencePoints(
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

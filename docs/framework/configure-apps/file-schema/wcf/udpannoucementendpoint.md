@@ -2,18 +2,18 @@
 title: '&lt;udpAnnoucementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: 8a6c874d7d2930b969f2cc9778534aa99eab78f5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ab0e786ec4b21f25682c52fb7609d24e901f6eac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582438"
 ---
 # <a name="ltudpannoucementendpointgt"></a>&lt;udpAnnoucementEndpoint&gt;
 Ten element konfiguracji definiuje standardowy punkt końcowy, który jest używany przez usługi do wysłania komunikatów Anons z powiązania protokołu UDP. Ma stały kontraktu i obsługuje dwie wersje odnajdywania. Ponadto ma stałym powiązaniem UDP oraz domyślną wartość adresu określonych w specyfikacji WS-Discovery (WS-Discovery kwietnia 2005 lub w wersji 1.1 protokołu WS-Discovery). Możesz określić adres multiemisji na potrzeby wysyłania i odbierania wiadomości anonsów.  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,13 +46,13 @@ Ten element konfiguracji definiuje standardowy punkt końcowy, który jest używ
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<udpTransportSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Kolekcja ustawień, które umożliwiają skonfigurowanie transportu UDP dla punktu końcowego protokołu UDP.|  
+|[\<udpTransportSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Kolekcja ustawień, które umożliwiają skonfigurowanie transportu UDP dla punktu końcowego protokołu UDP.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowane punkty końcowe z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe.|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowane punkty końcowe z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe.|  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano klienta nasłuchiwanie anonsu za pośrednictwem protokołu UDP transportu multiemisji za pomocą domyślny adres multiemisji i UDP transportu multiemisji przy użyciu określonego adresu multiemisji.  
@@ -79,5 +79,5 @@ Ten element konfiguracji definiuje standardowy punkt końcowy, który jest używ
 </standardEndpoints>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>

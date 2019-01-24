@@ -1,30 +1,30 @@
 ---
-title: Czysty funkcjonalności transformacji XML (Visual Basic)
+title: Czyste Przekształcanie funkcjonalne kodu XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
-ms.openlocfilehash: 25719fc53235424b6a1e2b779ab4e6bdfbe6b4d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1af777296c8b8d9736b701b297b2253326c9da7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584743"
 ---
-# <a name="pure-functional-transformations-of-xml-visual-basic"></a>Czysty funkcjonalności transformacji XML (Visual Basic)
-Ta sekcja zawiera samouczek funkcjonalności transformacji XML. Dotyczy to również wyjaśnienia o pojęciach i konstrukcji językowych, że rozumiesz musi używać funkcjonalności przekształcenia i przykłady użycia funkcjonalności przekształceń do manipulowania dokumentu XML. W tym samouczku zapewnia LINQ do XML przykłady kodu, jednak wszystkie podstawowe pojęcia mają zastosowanie również do innych technologii LINQ.  
+# <a name="pure-functional-transformations-of-xml-visual-basic"></a>Czyste Przekształcanie funkcjonalne kodu XML (Visual Basic)
+Ta sekcja zawiera samouczek Przekształcanie funkcjonalne dla formatu XML. W tym wyjaśnienia główne pojęcia i konstrukcji językowych należy poznać przekształceń funkcjonalnych i przykłady użycia przekształceń funkcjonalnych do manipulowania dokumentu XML. Chociaż ten samouczek zawiera LINQ do XML przykłady kodu, wszystkie podstawowe pojęcia mają zastosowanie również do innych technologii LINQ.  
   
- [Samouczek: manipulowanie zawartości w dokumencie schemat WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) samouczek zawiera szereg przykładów, każdy opierając się na poprzedni. Następujące przykłady przedstawiają czysty funkcjonalności transformational podejścia manipulowanie XML.  
+ [Samouczka: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) samouczek zawiera szereg przykładów, każdy rozwijając poprzedni. Przykłady te pokazują czystego funkcjonalności innowacyjne podejście do manipulowania XML.  
   
- Ten samouczek zakłada praktyczną znajomość języka Visual Basic. Nie podano szczegółowe semantykę konstrukcji językowych w tym samouczku, ale podano linki dokumentację języka, zależnie od potrzeb.  
+ Ten samouczek zakłada praktyczną wiedzę dotyczącą języka Visual Basic. Nie podano szczegółowe semantykę konstrukcji językowych w tym samouczku, ale podano linki do dokumentacji języka zgodnie z potrzebami.  
   
- W praktyce koncepcji nauki podstawowego komputera i XML, łącznie z przestrzeni nazw XML, również zakłada, że.  
+ Również założono praktyczną wiedzę na temat pojęć związanych z komputerów podstawowych nauki oraz XML, w tym w przypadku przestrzeni nazw XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Wprowadzenie do przekształcenia funkcjonalności czysty (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|Zawiera opis przekształcenia funkcjonalności i definiuje istotne terminologii.|  
-|[Samouczek: Odroczonego wykonania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)|Opisuje obliczanie leniwe i wykonanie odroczone szczegółowo.|  
-|[Samouczek: Manipulowanie zawartości w dokumencie schemat WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Samouczek przedstawiający transformację funkcjonalności.|  
+|[Wprowadzenie do czystych przekształceń funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|W tym artykule opisano przekształceń funkcjonalnych i definiuje istotne terminologii.|  
+|[Samouczek: Wykonanie odroczone (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)|W tym artykule opisano opóźnieniem i wykonanie odroczone szczegółowo.|  
+|[Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Samouczek, który pokazuje Przekształcanie funkcjonalne.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Wykonywanie zapytania drzewa XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Zobacz także
+- [Wykonywanie zapytań do drzewa XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

@@ -1,18 +1,12 @@
 ---
-title: Dyrektywy preprocesora C#
+title: 'Dyrektywy preprocesora C#'
 ms.date: 07/20/2015
 f1_keywords:
-- cs.preprocessor
+  - cs.preprocessor
 helpviewer_keywords:
-- preprocessor directives [C#]
-- keywords [C#], preprocessor directives
+  - 'preprocessor directives [C#]'
+  - 'keywords [C#], preprocessor directives'
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036100"
 ---
 # <a name="c-preprocessor-directives"></a>Dyrektywy preprocesora C#
 Ta sekcja zawiera informacje o następujących dyrektywy preprocesora C#:
@@ -40,5 +34,5 @@ Dyrektywa preprocesora musi być jedyną instrukcją w wierszu.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad29204e445bc61b6dc9753d594f0e4bf62930fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64e6bd57c5f16b0e7d59f6cf760030aab4c6b9f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568806"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties — Metoda
-Wylicza tokeny właściwości reprezentujący właściwości typu odwołuje się określony token TypeDef.  
+Wylicza tokenów właściwości reprezentujących właściwości typu odwołuje się określony token TypeDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,36 +41,36 @@ HRESULT EnumProperties (
   
 #### <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, out] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwsze wywołanie tej metody.  
+ [out w] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwszego wywołania tej metody.  
   
  `td`  
- [in] Element TypeDef token reprezentujący typ o właściwościach wyliczyć.  
+ [in] TypeDef token reprezentujący typ z właściwościami do wyliczenia.  
   
  `rProperties`  
- [out] Tablica używany do przechowywania tokenów właściwości.  
+ [out] Tablica do przechowywania tokenów właściwości.  
   
  `cMax`  
  [in] Maksymalny rozmiar `rProperties` tablicy.  
   
  `pcProperties`  
- [out] Liczby właściwości tokenów zwracanych w `rProperties`.  
+ [out] Liczba tokenów właściwości zwracane w `rProperties`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties` zwrócona pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim przypadku `pcProperties` wynosi zero.|  
+|`S_OK`|`EnumProperties` pomyślnie zwrócił.|  
+|`S_FALSE`|Nie ma żadnych tokeny do wyliczenia. W takim przypadku `pcProperties` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Porady: Wyszukiwanie elementu głównego (XPath-LINQ to XML) (C#)'
+title: 'Instrukcje: Wyszukiwanie elementu głównego (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-ms.openlocfilehash: df1b151948b7b11757f2f8f312fa1f0bba00673a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 0b9d89f0a9adb540e7efdccd1e4e7c2f8caf9696
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599234"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Porady: Wyszukiwanie elementu głównego (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Instrukcje: Wyszukiwanie elementu głównego (XPath-LINQ to XML) (C#)
 W tym temacie pokazano, jak można pobrać elementów podrzędnych o określonej nazwie.  
   
  Wyrażenie XPath jest `//Name`.  
@@ -17,7 +17,7 @@ W tym temacie pokazano, jak można pobrać elementów podrzędnych o określonej
 ## <a name="example"></a>Przykład  
  W tym przykładzie wyszukuje wszystkie elementy podrzędne, o nazwie `Name`.  
   
- W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -49,6 +49,6 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

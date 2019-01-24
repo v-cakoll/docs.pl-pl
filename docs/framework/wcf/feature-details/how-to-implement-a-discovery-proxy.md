@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Wdrażanie serwera proxy odnajdywania'
+title: 'Instrukcje: wdrażanie serwera proxy odnajdywania'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 2d76a2df0541dfd64058d61ca687a2749d745e8a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 12adc7215e929bb56aafe104546eb6e58af52ddb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608917"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a>Instrukcje: Wdrażanie serwera proxy odnajdywania
+# <a name="how-to-implement-a-discovery-proxy"></a>Instrukcje: wdrażanie serwera proxy odnajdywania
 W tym temacie opisano sposób wdrażania serwera proxy odnajdywania. Aby uzyskać więcej informacji na temat funkcji odnajdywania w Windows Communication Foundation (WCF), zobacz [omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Odnajdowanie serwera proxy można zaimplementować, tworząc klasę, która rozszerza <xref:System.ServiceModel.Discovery.DiscoveryProxy> klasy abstrakcyjnej. Istnieje szereg innych klas pomocy technicznej zdefiniowane i używane w tym przykładzie. `OnResolveAsyncResult`, `OnFindAsyncResult`, i `AsyncResult`. Te klasy implementuje <xref:System.IAsyncResult> interfejsu. Aby uzyskać więcej informacji na temat <xref:System.IAsyncResult> zobacz [interfejsu System.IAsyncResult](xref:System.IAsyncResult).
 
  Implementowanie serwera proxy odnajdywania został podzielony na trzy główne fragmenty tego tematu:
@@ -22,7 +22,7 @@ W tym temacie opisano sposób wdrażania serwera proxy odnajdywania. Aby uzyska�
 
 ### <a name="to-create-a-new-console-application-project"></a>Aby utworzyć nowy projekt aplikacji konsoli
 
-1.  Uruchom program Visual Studio 2012.
+1.  Start Visual Studio 2012.
 
 2.  Utwórz nowy projekt aplikacji konsoli. Nadaj projektowi nazwę `DiscoveryProxy` i nazwę rozwiązania `DiscoveryProxyExample`.
 
@@ -319,7 +319,7 @@ W tym temacie opisano sposób wdrażania serwera proxy odnajdywania. Aby uzyska�
     }
     ```
 
- OnBegin... / OnEnd... metody umożliwiają uzyskanie logiki dla operacji odnajdowania kolejne. Na przykład <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> i <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> metody implementują logikę Znajdź serwera proxy odnajdywania. Gdy serwera proxy odnajdywania odbiera wiadomości sondy te metody są wykonywane w celu wysyłania odpowiedzi do klienta. Użytkownik może modyfikować logiki wyszukiwania, który ma, na przykład można zastosować niestandardowy zakres pasujących algorytmów lub określonych metadanych XML aplikacji, analizy jako część operacji wyszukiwania.
+ The OnBegin.. / OnEnd... metody umożliwiają uzyskanie logiki dla operacji odnajdowania kolejne. Na przykład <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> i <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> metody implementują logikę Znajdź serwera proxy odnajdywania. Gdy serwera proxy odnajdywania odbiera wiadomości sondy te metody są wykonywane w celu wysyłania odpowiedzi do klienta. Użytkownik może modyfikować logiki wyszukiwania, który ma, na przykład można zastosować niestandardowy zakres pasujących algorytmów lub określonych metadanych XML aplikacji, analizy jako część operacji wyszukiwania.
 
 ### <a name="to-implement-the-asyncresult-class"></a>Do zaimplementowania klasy AsyncResult
 
@@ -548,7 +548,7 @@ W tym temacie opisano sposób wdrażania serwera proxy odnajdywania. Aby uzyska�
               }
     ```
 
- Ukończono wdrażanie serwera proxy odnajdywania. Przejdź do [porady: Implementowanie Odnajdywanej usługi rejestrowanej za pomocą serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).
+ Ukończono wdrażanie serwera proxy odnajdywania. Przejdź do [jak: Implementowanie Odnajdywanej usługi rejestrowanej za pomocą serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).
 
 ## <a name="example"></a>Przykład
  Jest to pełna lista kod używany w tym temacie.
@@ -977,9 +977,9 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Instrukcje: implementowanie odnajdywanej usługi rejestrowanej za pomocą serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Instrukcje: wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [Instrukcje: testowanie serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [Instrukcje: Implementowanie Odnajdywanej usługi rejestrowanej za pomocą serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Instrukcje: Wdrażanie aplikacji klienta, który używa serwera Proxy odnajdywania można znaleźć usługi](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Instrukcje: Testowanie serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

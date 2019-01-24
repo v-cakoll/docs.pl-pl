@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558920"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Zgodność wersji w programie .NET Framework
-Zgodność ze starszymi wersjami oznacza, że aplikacja opracowana dla konkretnej wersji platformy będzie działać w nowszych wersjach tej platformy. .NET Framework próbuje maksymalizować zgodność ze starszymi wersjami: kod źródłowy napisany dla jednej wersji programu .NET Framework powinien kompilować się w nowszych wersjach .NET Framework i pliki binarne, które działają w jednej wersji programu .NET Framework powinien zachowują się identycznie w nowsze wersje programu .NET Framework.  
+Zgodność ze starszymi wersjami oznacza, że aplikacja opracowana dla konkretnej wersji platformy będzie działać w nowszych wersjach tej platformy. .NET Framework próbuje zapewnić maksymalną zgodność z poprzednimi wersjami: Kod źródłowy napisany dla jednej wersji programu .NET Framework powinien kompilować się w nowszych wersjach .NET Framework i pliki binarne, które działają w jednej wersji programu .NET Framework powinny działać identycznie w nowszych wersjach .NET Framework.  
   
 <a name="Apps"></a>   
 ## <a name="version-compatibility-for-apps"></a>Zgodność wersji aplikacji  
@@ -34,7 +34,7 @@ Zgodność ze starszymi wersjami oznacza, że aplikacja opracowana dla konkretne
 </configuration>  
 ```  
   
- Aby uzyskać więcej informacji, zobacz [porady: Konfiguracja aplikacji do obsługi platformy .NET Framework 4 lub 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Konfiguracja aplikacji do obsługi platformy .NET Framework 4 lub 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).  
   
 ## <a name="version-compatibility-for-components"></a>Zgodność wersji składników  
  Aplikacja może kontrolować wersję .NET Framework, na którym działa, ale składnik nie może. Składniki biblioteki klas są ładowane w kontekście określonej aplikacji i dlatego automatycznie są uruchamiane w wersji programu .NET Framework, która jest uruchamiana aplikacja.  
@@ -65,9 +65,9 @@ Zgodność ze starszymi wersjami oznacza, że aplikacja opracowana dla konkretne
 ## <a name="compatibility-and-side-by-side-execution"></a>Zgodność i side-by-side wykonywania  
  Jeśli nie możesz znaleźć odpowiedniego obejścia problemu, należy pamiętać, że działa równocześnie z wersjami 1.1, 2.0 i 3.5 programu .NET Framework 4.5 (lub jeden z jego wydania punktowe) i stanowi aktualizację w miejscu, która zastępuje wersję 4. W przypadku aplikacji przeznaczonych dla wersji 1.1, 2.0 i 3.5 można zainstalować odpowiednią wersję programu .NET Framework na komputerze docelowym, aby uruchomić aplikację w najlepszym środowisku. Aby uzyskać więcej informacji na temat wykonywania side-by-side zobacz [Side-by-Side Execution](../../../docs/framework/deployment/side-by-side-execution.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Co nowego](../../../docs/framework/whats-new/index.md)  
- [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Zgodność aplikacji](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Cykl wsparcia technicznego dla programu Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)  
- [Zagadnienia dotyczące migracji programu .NET framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)
+## <a name="see-also"></a>Zobacz także
+- [Co nowego](../../../docs/framework/whats-new/index.md)
+- [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Zgodność aplikacji](../../../docs/framework/migration-guide/application-compatibility.md)
+- [Microsoft .NET Framework Support Lifecycle Policy](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [Zagadnienia dotyczące migracji programu .NET framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

@@ -3,12 +3,12 @@ title: '&lt;issuerTokenResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: eefd18c206b7f013c3a423df424c795583c0dde8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9f88d3cec5e1cb95ce5e12b203e32b706d407a2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556629"
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
 Rejestruje wystawcy program rozpoznawania tokenów, który jest używany przez programy obsługi w kolekcji programu obsługi tokenów. Program rozpoznawania tokenów wystawcy jest używany do rozpoznawania token podpisujący na przychodzące tokeny i komunikatów.  
@@ -16,8 +16,8 @@ Rejestruje wystawcy program rozpoznawania tokenów, który jest używany przez p
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<issuerTokenResolver >  
+\<securityTokenHandlerConfiguration>  
+\<issuerTokenResolver>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ Rejestruje wystawcy program rozpoznawania tokenów, który jest używany przez p
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Określa typ program rozpoznawania tokenów wystawcy. Musi być albo <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasy lub typu, która pochodzi od klasy <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasy. Wymagane.|  
+|— typ|Określa typ program rozpoznawania tokenów wystawcy. Musi być albo <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasy lub typu, która pochodzi od klasy <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasy. Wymagana.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -50,7 +50,7 @@ Rejestruje wystawcy program rozpoznawania tokenów, który jest używany przez p
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Udostępnia konfigurację dla kolekcji zabezpieczeń programy obsługi tokenów.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Udostępnia konfigurację dla kolekcji zabezpieczeń programy obsługi tokenów.|  
   
 ## <a name="remarks"></a>Uwagi  
  Program rozpoznawania tokenów wystawcy jest używany do rozpoznawania token podpisujący na przychodzące tokeny i komunikatów. Służy do pobierania materiałami kryptograficznymi, który służy do sprawdzania podpisu. Należy określić `type` atrybutu. Określony typ może być <xref:System.IdentityModel.Tokens.IssuerTokenResolver> lub typ niestandardowy, który pochodzi od klasy <xref:System.IdentityModel.Tokens.IssuerTokenResolver> klasy.  
@@ -87,5 +87,5 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Tokens.IssuerTokenResolver>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Tokens.IssuerTokenResolver>

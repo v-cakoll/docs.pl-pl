@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70955d496f5cf9e3bf44b9bc03a054d1c96efe98
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 25c5ffa89e6ce4e589b8f12a7b8518272426c9e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597804"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Używanie obiektów implementujących interfejs IDisposable
 
@@ -62,6 +62,6 @@ Możesz wykonać tego podstawowego wzorca, jeśli zadecydować o stosowaniu lub 
   
 ## <a name="see-also"></a>Zobacz także
 
-* [Oczyszczanie zasobów niezarządzanych](../../../docs/standard/garbage-collection/unmanaged.md)   
-* [Using — instrukcja (odwołanie w C#)](~/docs/csharp/language-reference/keywords/using-statement.md)   
-* [Using — instrukcja (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
+- [Oczyszczanie zasobów niezarządzanych](../../../docs/standard/garbage-collection/unmanaged.md)
+- [Using — instrukcja (odwołanie w C#)](~/docs/csharp/language-reference/keywords/using-statement.md)
+- [Using — instrukcja (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)

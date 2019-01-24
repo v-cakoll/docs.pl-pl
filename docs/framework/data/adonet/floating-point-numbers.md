@@ -2,12 +2,12 @@
 title: Liczby zmiennoprzecinkowe
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 2ab583a07c78cfa06ac597c369486f89e19ca66e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8f5985576e966f1a853c9ee8d7bfef4b9bf6fc40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589376"
 ---
 # <a name="floating-point-numbers"></a>Liczby zmiennoprzecinkowe
 W tym temacie opisano niektóre problemy, które często deweloperzy napotykają podczas pracy z liczb zmiennoprzecinkowych w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Te problemy są spowodowane przez sposób komputerom przechowywania liczb zmiennoprzecinkowych i nie są specyficzne dla określonego dostawcy takich jak <xref:System.Data.SqlClient> lub <xref:System.Data.OracleClient>.  
@@ -18,6 +18,6 @@ W tym temacie opisano niektóre problemy, które często deweloperzy napotykają
   
  Aby uniknąć problemów z funkcją porównania równości, należy wziąć pod uwagę kodowania aplikacji, tak aby zmiany w najmniej znaczącymi cyframi są ignorowane. Na przykład zamiast porównywania, aby zobaczyć, czy dwie liczby są równe, Odejmij jedną cyfrę z drugiej liczby. Jeśli różnica jest dopuszczalne marginesem zaokrąglania, aplikację można traktować liczb, tak, jakby były takie same.  
   
-## <a name="see-also"></a>Zobacz też  
- [Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność](https://msdn.microsoft.com/library/1acb1add-ac06-4134-a2fd-aff13d8c4c15)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność](https://msdn.microsoft.com/library/1acb1add-ac06-4134-a2fd-aff13d8c4c15)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

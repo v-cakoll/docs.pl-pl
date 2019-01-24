@@ -2,12 +2,12 @@
 title: Uczestnicy śledzenia
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 3165e08a02954facb7e016606e2f94662c6edfe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613556"
 ---
 # <a name="tracking-participants"></a>Uczestnicy śledzenia
 Śledzenie uczestników są punkty rozszerzeń, zezwalających na dewelopera przepływu pracy, aby uzyskać dostęp do <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> obiektów i ich przetwarzania. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] zawiera standardowe śledzenia uczestnika, który zapisuje rekordy śledzenia jako zdarzenia śledzenie zdarzeń dla Windows (ETW). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia.  
@@ -140,6 +140,6 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
             Console.ReadLine();  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>Zobacz także
+- [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

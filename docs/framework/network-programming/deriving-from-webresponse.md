@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: a065e04e6683279b4541d9a723ed9c7442dec9dc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f07e20bc3d81c328390ad5da43e55aab457a62a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598870"
 ---
 # <a name="deriving-from-webresponse"></a>Wyprowadzanie z elementu WebResponse
 <xref:System.Net.WebResponse> Klasa jest abstrakcyjna klasa bazowa, który udostępnia podstawowe metody i właściwości, do tworzenia odpowiedzi związane z protokołem, który pasuje do modelu podłączanego protokołu .NET Framework. Aplikacje, które używają <xref:System.Net.WebRequest> klasy, żeby dane żądania z zasobów otrzymywać odpowiedzi w **elementu WebResponse**. Oparte na protokole **elementu WebResponse** elementy podrzędne muszą implementować członków abstrakcyjnych z **elementu WebResponse** klasy.  
@@ -38,9 +38,9 @@ ms.locfileid: "50088601"
   
  Wystąpienie strumienia, zwrócone przez **GetResponseStream dla** metoda należące do aplikacji i może zostać zamknięty bez zamykania **elementu WebResponse**. Zgodnie z Konwencją wywoływania **WebResponse.Close** metoda również zamyka Strumień zwrócony przez **metody GetResponse**.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Net.WebResponse>  
- <xref:System.Net.HttpWebResponse>  
- <xref:System.Net.FileWebResponse>  
- [Programowanie protokołów podłączanych](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [Wyprowadzanie z elementu WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.WebResponse>
+- <xref:System.Net.HttpWebResponse>
+- <xref:System.Net.FileWebResponse>
+- [Programowanie protokołów podłączanych](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Wyprowadzanie z elementu WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)

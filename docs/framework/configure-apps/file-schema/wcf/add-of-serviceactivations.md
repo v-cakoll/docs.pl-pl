@@ -2,18 +2,18 @@
 title: '&lt;add&gt; w &lt;serviceActivations&gt;'
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: b40127d531926f103f3e367c8721e8f5ff8e1a99
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d0e1f45cc8ff5b544eff5ff5dae33d5989aaf405
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587638"
 ---
 # <a name="ltaddgt-of-ltserviceactivationsgt"></a>&lt;add&gt; w &lt;serviceActivations&gt;
 Element konfiguracji, który pozwala zdefiniować ustawienia Aktywacja usług wirtualnych mapowane odpowiadają typom usług Windows Communication Foundation (WCF). Dzięki temu można aktywować usługi hostowane w WAS / IIS bez pliku .svc.  
   
  \<system.ServiceModel>  
-\<serviceHostingEnvironment >  
+\<ServiceHostingEnvironment>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,7 +44,7 @@ Element konfiguracji, który pozwala zdefiniować ustawienia Aktywacja usług wi
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Sekcja konfiguracji, który opisuje ustawienia aktywacji.|  
+|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Sekcja konfiguracji, który opisuje ustawienia aktywacji.|  
   
 ## <a name="remarks"></a>Uwagi  
  Poniższy przykład pokazuje, jak skonfigurować ustawienia aktywacji w pliku web.config.  
@@ -67,7 +67,7 @@ Element konfiguracji, który pozwala zdefiniować ustawienia Aktywacja usług wi
   
  Aktywacja oparta na konfiguracji obsługuje aktywacji za pośrednictwem protokołu http i innych niż http. Wymaga rozszerzenia w relatativeAddress, czyli .svc xoml oraz .xamlx. Własne rozszerzenia można zamapować na buildProviders wie, który następnie umożliwi Aktywuj usługę za pośrednictwem dowolnego rozszerzenia. Po konfliktu `<serviceActivations>` sekcji zastępuje .svc rejestracji.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.ServiceActivationElement>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.ServiceActivationElement>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>

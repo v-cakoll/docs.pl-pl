@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73697fdd19f2492aabdc0d76e8c1a27c917c85f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9018ccc27d0afc35b9dfa2d2ebad323c9150ae60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580697"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext — Metoda
-Ustawia bieżący kontekst określonego wątku w procesie docelowym. Ta metoda jest wywoływana przez wspólne usługi dostępu do danych języka środowiska uruchomieniowego (języka wspólnego CLR).  
+Ustawia bieżący kontekst określony wątek w procesie docelowym. Ta metoda jest wywoływana przez usługi dostępu do danych środowiska uruchomieniowego (języka wspólnego CLR) w usłudze common language.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,21 +40,21 @@ HRESULT SetThreadContext (
   
 #### <a name="parameters"></a>Parametry  
  `threadID`  
- [in] System operacyjny identyfikator wątku w procesie docelowym.  
+ [in] Identyfikator systemu operacyjnego wątek w procesie docelowym.  
   
  `contextSize`  
  [in] Rozmiar kontekstu.  
   
  `context`  
- [in] Wskaźnik do bufor zawierający kontekst.  
+ [in] Wskaźnik do buforu zawierająca kontekst.  
   
- Dane w `context` buforu będą w formacie Win32 `CONTEXT` struktury. Kontekst określa dane rejestru specyficznych dla procesora, więc definicji Win32 `CONTEXT` struktury jest zależna od architektury procesora. Zajrzyj do pliku nagłówka pliku WinNT.h definicji Win32 `CONTEXT` struktury.  
+ Dane w `context` buforu będą w formacie Win32 `CONTEXT` struktury. Kontekst określa dane rejestru specyficznych dla procesora, więc definicji Win32 `CONTEXT` struktury jest zależna od architektury procesora. Odwołuje się do pliku nagłówka pliku WinNT.h definicji Win32 `CONTEXT` struktury.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest implementowany przez twórcę debugowania aplikacji.  
+ Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData.idl, ClrData.h  
   
@@ -62,5 +62,5 @@ HRESULT SetThreadContext (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

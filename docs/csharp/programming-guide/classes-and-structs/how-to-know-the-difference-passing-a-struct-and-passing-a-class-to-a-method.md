@@ -7,12 +7,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: c5963f45ee233f4413c4281a063c9c3d2a4c2a93
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f131f647d5335a011c5f446f847ed43fda019ade
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559288"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Instrukcje: Różnica między przekazywaniem struktury a przekazywaniem odwołań do klas do metody (C# Programming Guide)
 W poniższym przykładzie pokazano, jak przekazywanie [struktury](../../../csharp/language-reference/keywords/struct.md) do metody różni się od przekazywanie [klasy](../../../csharp/language-reference/keywords/class.md) wystąpienia do metody. W tym przykładzie oba argumenty (wystąpienia struktury i klasy) są przekazywane przez wartość, a obie metody Zmień wartość pola jednego argumentu. Jednak wyniki z dwóch metod nie są takie same ponieważ przekazywana jest, jeśli przekazujesz struktury różni się od co to jest przekazywana, jeśli przekazujesz wystąpienia klasy.  
@@ -26,9 +26,9 @@ W poniższym przykładzie pokazano, jak przekazywanie [struktury](../../../cshar
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [Struktury](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Struktury](../../../csharp/programming-guide/classes-and-structs/structs.md)
 - [Przekazywanie parametrów](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)

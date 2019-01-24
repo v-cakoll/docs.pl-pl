@@ -16,29 +16,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: febfe7df52a0c1f44cb156faf2da310d317e01a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3b29be2bab2d1b4cea5dcec89e31d4720be769
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576879"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 — Interfejs
-Udostępnia metody, która rozszerza "ICorDebugCode" i "ICorDebugCode2", aby podać informacje o zarządzanych wartości zwracanej.  
+Dostarcza metodę, która rozszerza "ICorDebugCode" i "ICorDebugCode2", aby podać informacje o zarządzaniu wartością zwracaną.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetReturnValueLiveOffset, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)|Określony przesunięcia IL pobiera natywnego przesunięcia gdzie ma zostać umieszczony punkt przerwania, aby debuger można uzyskać wartości zwracanej przez funkcję.|  
+|[GetReturnValueLiveOffset, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)|Dla określonego przesunięcia języka Pośredniego pobiera natywne przesunięcia, w której punkt przerwania powinien znajdować się tak, że debugger może uzyskać wartość zwracaną przez funkcję.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -46,9 +46,9 @@ Udostępnia metody, która rozszerza "ICorDebugCode" i "ICorDebugCode2", aby pod
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
-    
-    
-    
- [ICorDebugILFrame3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+
+
+
+- [ICorDebugILFrame3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

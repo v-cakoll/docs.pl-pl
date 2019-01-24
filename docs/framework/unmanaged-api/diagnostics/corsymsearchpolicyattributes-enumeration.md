@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c3aedea4cc8ce2d8fb8c0c0bf3fead727dcf64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ed868febb5eb82cf73cfc5b0633d86bf4e1315c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561624"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes — Wyliczenie
-Określa zasady do użycia podczas wyszukiwania dla czytnika symboli. Stałe te są używane przez [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) i [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) metody.  
+Określa zasady, które ma być używany podczas wyszukiwania dla czytnika symboli. Te stałe są używane przez [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) i [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) metody.  
   
 > [!IMPORTANT]
->  Jest to zagrożenie, aby otworzyć plik programu (PDB) bazy danych z niezaufanego źródła.  
+>  Jest to zagrożenie bezpieczeństwa, aby otworzyć plik bazy danych (PDB) programu z niezaufanego źródła.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,11 +47,11 @@ typedef enum CorSymSearchPolicyAttributes
 |------------|-----------------|  
 |`AllowRegistryAccess`|Wysyła zapytanie do rejestru dla ścieżki wyszukiwania symboli.|  
 |`AllowSymbolServerAccess`|Uzyskuje dostęp do serwera symboli.|  
-|`AllowOriginalPathAccess`|Wyszukuje ścieżka określona w katalogu debugowania.|  
-|`AllowReferencePathAccess`|Wyszukuje PDB w miejscu, w którym się plik .exe.|  
+|`AllowOriginalPathAccess`|Wyszukuje w ścieżce określonej w katalogu debugowania.|  
+|`AllowReferencePathAccess`|Wyszukiwanie pliku PDB w miejscu, w którym się plik .exe.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

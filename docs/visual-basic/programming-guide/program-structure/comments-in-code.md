@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: fafc80cc4847e9ec05f19fc7f3d31d2d5b11197a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 92aadfe851514dcba713455664cf8f7b0aa1c17b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597544"
 ---
 # <a name="comments-in-code-visual-basic"></a>Komentarze w kodzie (Visual Basic)
 Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbol informuje kompilator języka Visual Basic, aby zignorować tekst następujący, lub *komentarz*. Komentarze to krótkie notatki wyjaśniające, dodane do kodu, aby ułatwić życie innym osobom, które go czytają.  
@@ -59,9 +59,9 @@ Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbo
 > [!NOTE]
 >  Można również dodawać komentarze do kodu, poprzedzając tekst między znakami dwóch `REM` — słowo kluczowe. Jednak `'` symboli i **komentarz**/**Odkomentuj** przyciski są łatwiejsze w użyciu i wymagają mniej miejsca i pamięci.  
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentowanie kodu przy użyciu komentarzy XML](https://msdn.microsoft.com/magazine/dd722812.aspx)  
- [Instrukcje: tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)  
- [Struktura programu i konwencje związane z kodami](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [REM, instrukcja](../../../visual-basic/language-reference/statements/rem-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [Dokumentowanie kodu przy użyciu komentarzy XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [Instrukcje: Tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Konwencje dotyczące struktury programów i kodu](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [REM, instrukcja](../../../visual-basic/language-reference/statements/rem-statement.md)

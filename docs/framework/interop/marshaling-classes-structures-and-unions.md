@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f3e67fe49fb6d8a4d56b3d36d78d86c6c517d2a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ba1651583f4cd962f5038fbe0e3f55a5d8b42ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589678"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling klas, struktur i unii
 Klasy i struktury są podobne w .NET Framework. Jednocześnie może mieć pola, właściwości i zdarzenia. Może to być również metody statyczne i Niestatyczne. Jeden zauważalnej różnicy jest struktury są typami wartości a klasy są typami odwołań.  
@@ -56,7 +56,7 @@ Klasy i struktury są podobne w .NET Framework. Jednocześnie może mieć pola, 
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
--   **TestStructInStruct3** eksportowany z PinvokeLib.dll.  
+-   **TestStructInStruct3** exported from PinvokeLib.dll.  
   
     ```  
     void TestStructInStruct3(MYPERSON3 person3);  
@@ -68,7 +68,7 @@ Klasy i struktury są podobne w .NET Framework. Jednocześnie może mieć pola, 
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) jest niestandardową biblioteką niezarządzaną, która zawiera implementacje dla wyżej wymienionych funkcji i cztery struktury: **MYPERSON**, **MYPERSON2**,  **MYPERSON3**, i **MYARRAYSTRUCT**. Te struktury zawierają następujące elementy:  
+ [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) jest niestandardową biblioteką niezarządzaną, która zawiera implementacje dla wyżej wymienionych funkcji i cztery struktury: **MYPERSON**, **MYPERSON2**, **MYPERSON3**, i **MYARRAYSTRUCT**. Te struktury zawierają następujące elementy:  
   
 ```  
 typedef struct _MYPERSON  
@@ -133,7 +133,7 @@ typedef struct _MYARRAYSTRUCT
   
  Findfile — przykład używa następującej funkcji niezarządzanej, wyświetlane z jej oryginalną deklaracją funkcji:  
   
--   **FindFirstFile** wyeksportowane z modułu Kernel32.dll.  
+-   **FindFirstFile** exported from Kernel32.dll.  
   
     ```  
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
@@ -219,7 +219,7 @@ union MYUNION2
   
  Systime — przykład używa następującej funkcji niezarządzanej, wyświetlane z jej oryginalną deklaracją funkcji:  
   
--   **GetSystemTime** wyeksportowane z modułu Kernel32.dll.  
+-   **GetSystemTime** exported from Kernel32.dll.  
   
     ```  
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
@@ -288,8 +288,8 @@ typedef struct _MYSTRSTRUCT2
  [!code-csharp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)  
- [Typy danych w wywołaniu platformy](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [Marshaling ciągów](marshaling-strings.md)  
- [Organizowanie tablic typów](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
+## <a name="see-also"></a>Zobacz także
+- [Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)
+- [Typy danych w wywołaniu platformy](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
+- [Marshaling ciągów](marshaling-strings.md)
+- [Organizowanie tablic typów](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))

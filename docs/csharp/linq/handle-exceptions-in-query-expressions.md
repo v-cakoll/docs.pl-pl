@@ -3,12 +3,12 @@ title: Obsługa wyjątków w wyrażeniach zapytań (LINQ w C#)
 description: Informacje o sposobie obsługi wyjątków w wyrażeniach zapytań LINQ w C#.
 ms.date: 12/1/2016
 ms.assetid: 2bf0c397-13fb-4f68-bc2b-531c6c88a167
-ms.openlocfilehash: 5ad98565a74a96ac18829eb87f13eb398aa72967
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: e0fa9a20251d3d185448ee386de81d127ae7a42c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564071"
 ---
 # <a name="handle-exceptions-in-query-expressions"></a>Obsługa wyjątków w wyrażeniach zapytań
 
@@ -32,4 +32,4 @@ Należy pamiętać, że `try` otacza bloku `foreach` pętli i nie zapytanie. Jes
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Language Integrated Query (LINQ)](index.md)  
+- [Language Integrated Query (LINQ)](index.md)

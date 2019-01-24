@@ -882,12 +882,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: fa2afebdffb47e7c55ea17a485d43ee648775534
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: f172d9579e18bffdde98756bd3acf471a80e6211
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576023"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Niestety, firma Microsoft nie&#39;t są dostępne szczegółowe informacje na temat tego błędu języka C#
 Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Lub możesz poprosić, aby inni deweloperzy przy użyciu jednej z tych forów:  
@@ -898,7 +898,7 @@ Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. 
  [Środowisko IDE programu Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  Udostępnia forum pytania na temat sposobu pracy w środowisku Visual Studio.  
   
- [Visual C# ogólne](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
+ [Visual C# General](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  Udostępnia forum dla pytania o i problemy z Visual C#, nie są omawiane na innych forach.  
   
  [Stack Overflow](https://stackoverflow.com/questions/tagged/c%23)  
@@ -907,8 +907,8 @@ Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. 
  Zobacz też:  
  [Zasoby dodatkowe dla programistów Visual C#](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)  
-- [Dokumentacja języka C#](../../csharp/language-reference/index.md)  
-- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)  
+- [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)
+- [Dokumentacja języka C#](../../csharp/language-reference/index.md)
+- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

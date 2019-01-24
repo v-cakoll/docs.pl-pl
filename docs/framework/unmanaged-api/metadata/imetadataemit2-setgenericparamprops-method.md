@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d74ee7512f640ab906f1119f61e4998b5e882eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c998d70fa5dd41ab4c1656f129bb77767a8ab97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574628"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps — Metoda
 Ustawia wartości właściwości dla definicji parametru ogólnego odwołuje się określony token.  
@@ -41,29 +41,29 @@ HRESULT SetGenericParamProps (
   
 #### <a name="parameters"></a>Parametry  
  `gp`  
- [in] Token dla definicji parametrów ogólnych, dla którego mają zostać ustawione wartości.  
+ [in] Token dla definicji parametru ogólnego, dla którego mają zostać ustawione wartości.  
   
  `dwParamFlags`  
- [in] Wartość [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) wyliczenie opisujące typ dla parametru ogólnego.  
+ [in] Wartość [corgenericparamattr —](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) wyliczenie opisujące typ dla parametru ogólnego.  
   
  `szName`  
- [in] Opcjonalne. Nazwa parametru, dla którego mają zostać ustawione wartości.  
+ [in] Opcjonalnie. Nazwa parametru, do których chcesz ustawić wartości.  
   
  `reserved`  
- [in] Zarezerwowane dla przyszłego rozszerzalności.  
+ [in] Zarezerwowane dla przyszłej rozszerzalności.  
   
  `rtkConstraints`  
- [in] Opcjonalne. Tablica zakończony zerem ograniczenia typu. Elementy członkowskie tablicy musi być `mdTypeDef`, `mdTypeRef`, lub `mdTypeSpec` token metadanych.  
+ [in] Opcjonalnie. Tablica zakończony zerem ograniczenia typu. Elementy członkowskie tablicy musi być `mdTypeDef`, `mdTypeRef`, lub `mdTypeSpec` token metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

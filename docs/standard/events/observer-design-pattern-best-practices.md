@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600001"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Wzorzec projektowy obserwatora — Najlepsze praktyki
 W .NET Framework po wzorcu projektowania obserwatora są zaimplementowane jako zestaw interfejsów. <xref:System.IObservable%601?displayProperty=nameWithType> Interfejs reprezentuje dostawcy danych, który jest również odpowiedzialny za zapewnienie <xref:System.IDisposable> implementację, która umożliwia obserwatorów zrezygnować z powiadomień. <xref:System.IObserver%601?displayProperty=nameWithType> Interfejs reprezentuje obserwatora. W tym temacie opisano najlepsze rozwiązania, które deweloperzy powinni stosować podczas implementowania po wzorcu projektowania obserwatora, za pomocą tych interfejsów.  
@@ -55,6 +55,6 @@ W .NET Framework po wzorcu projektowania obserwatora są zaimplementowane jako z
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wzorzec projektowy obserwatora](../../../docs/standard/events/observer-design-pattern.md)  
-- [Instrukcje: Implementowanie obserwatora](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [Wzorzec projektowy obserwatora](../../../docs/standard/events/observer-design-pattern.md)
+- [Instrukcje: Implementowanie obserwatora](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [Instrukcje: Implementowanie dostawcy](../../../docs/standard/events/how-to-implement-a-provider.md)

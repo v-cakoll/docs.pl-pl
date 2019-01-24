@@ -1,5 +1,5 @@
 ---
-title: Jak rozdzielić przestrzeń przy użyciu elementu DockPanel
+title: 'Instrukcje: Rozdziel przestrzeń przy użyciu elementu DockPanel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DockPanel control [WPF], partitioning space
 - partitioning space [WPF]
 ms.assetid: a219b9e5-b205-4438-89b5-0a137ac463ab
-ms.openlocfilehash: 6b10fbcd14236f9259dc5772e7f8763c1602d0fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b79b89e512ec9da27774188aeaeed8ebd5b1153
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553887"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577662"
 ---
-# <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>Jak rozdzielić przestrzeń przy użyciu elementu DockPanel
-Poniższy przykład tworzy prosty [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] framework za pomocą <xref:System.Windows.Controls.DockPanel> elementu. <xref:System.Windows.Controls.DockPanel> Partycje dostępne miejsce do jego elementów podrzędnych.  
+# <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>Instrukcje: Rozdziel przestrzeń przy użyciu elementu DockPanel
+Poniższy przykład tworzy prostą [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] przy użyciu framework <xref:System.Windows.Controls.DockPanel> elementu. <xref:System.Windows.Controls.DockPanel> Partycje dostępnego miejsca na jego elementy podrzędne.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto <xref:System.Windows.Controls.DockPanel.Dock%2A> właściwość, która jest dołączona właściwość, aby dock dwie identyczne <xref:System.Windows.Controls.Border> elementy w <xref:System.Windows.Controls.Dock.Top> miejsca podzielonym na partycje. W trzecim <xref:System.Windows.Controls.Border> element jest zadokowany do <xref:System.Windows.Controls.Dock.Left>, przy czym jego szerokość ustawioną 200 pikseli. Czwarty <xref:System.Windows.Controls.Border> jest zadokowana <xref:System.Windows.Controls.Dock.Bottom> ekranu. Ostatni <xref:System.Windows.Controls.Border> elementu automatycznie wypełnia pozostałe miejsce.  
+ W tym przykładzie użyto <xref:System.Windows.Controls.DockPanel.Dock%2A> właściwość, która jest dołączona właściwość, aby zadokować dwa identyczne <xref:System.Windows.Controls.Border> elementy w <xref:System.Windows.Controls.Dock.Top> miejsca podzielonym na partycje. Trzeci <xref:System.Windows.Controls.Border> element jest zadokowany do <xref:System.Windows.Controls.Dock.Left>, za pomocą jego szerokość równa 200 pikseli. Czwarty <xref:System.Windows.Controls.Border> jest zadokowany do <xref:System.Windows.Controls.Dock.Bottom> ekranu. Ostatni <xref:System.Windows.Controls.Border> elementu automatycznie wypełnia pozostałe miejsce.  
   
  [!code-cpp[DockPanelOvwSample#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DockPanelOvwSample/CPP/DockPanel_Ovw_Sample.cpp#1)]
  [!code-csharp[DockPanelOvwSample#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DockPanelOvwSample/CSharp/DockPanel_Ovw_Sample.cs#1)]
@@ -29,12 +29,12 @@ Poniższy przykład tworzy prosty [!INCLUDE[TLA#tla_ui](../../../../includes/tla
  [!code-xaml[DockPanelOvwSample#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DockPanelOvwSample/XAML/default.xaml#1)]  
   
 > [!NOTE]
->  Domyślnie ostatni element podrzędny elementu <xref:System.Windows.Controls.DockPanel> element wypełnia pozostałe nieprzydzielone miejsce. Jeśli nie chcesz, aby ten problem, ustaw `LastChildFill="False"`.  
+>  Domyślnie ostatni element podrzędny elementu <xref:System.Windows.Controls.DockPanel> element wypełnia pozostałe nieprzydzielone miejsce. Jeśli nie chcesz tego zachowania, ustaw `LastChildFill="False"`.  
   
- Skompilowana aplikacja zwraca nowy interfejs użytkownika, który wygląda następująco.  
+ Skompilowaną aplikację daje nowy interfejs użytkownika, który wygląda w następujący sposób.  
   
- ![Typowy scenariusz DockPanel. ] (../../../../docs/framework/wpf/controls/media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
+ ![Typowy scenariusz DockPanel. ](../../../../docs/framework/wpf/controls/media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Controls.DockPanel>  
- [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Controls.DockPanel>
+- [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)

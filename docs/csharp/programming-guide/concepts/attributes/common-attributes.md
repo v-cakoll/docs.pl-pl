@@ -2,12 +2,12 @@
 title: Atrybuty wspólne (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4a1dd6200f7eb9e69caefe62d9e9defd90856ce1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558595"
 ---
 # <a name="common-attributes-c"></a>Atrybuty wspólne (C#)
 W tym temacie opisano atrybuty, które są najczęściej używane w programach języka C#.  
@@ -229,11 +229,11 @@ class SampleClass
   
  Aby uzyskać więcej informacji na temat atrybutów informacji o obiekcie wywołującym zobacz [informacje o wywołującym (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)  
-- [Atrybuty](../../../../../docs/standard/attributes/index.md)  
-- [Odbicie (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)
+- [Atrybuty](../../../../../docs/standard/attributes/index.md)
+- [Odbicie (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
 - [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

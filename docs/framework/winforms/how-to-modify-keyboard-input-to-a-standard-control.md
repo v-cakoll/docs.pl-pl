@@ -1,5 +1,5 @@
 ---
-title: 'Porady: modyfikowanie sygnału z klawiatury do kontrolki standardowej'
+title: 'Instrukcje: Modyfikowanie danych wprowadzonych z klawiatury do kontrolki standardowej'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: c109615b9a0eb61d18f7f44e3248d2b24934ee5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 98e6f4ddbaed5eff2bab53ee332f97253daf4409
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571746"
 ---
-# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Porady: modyfikowanie sygnału z klawiatury do kontrolki standardowej
+# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Instrukcje: Modyfikowanie danych wprowadzonych z klawiatury do kontrolki standardowej
 Windows Forms zapewnia możliwość korzystania i modyfikowanie danych wprowadzonych z klawiatury. Korzystanie z klucza odwołuje się do obsługi klucza w ramach metody lub procedury obsługi zdarzeń, tak, aby inne metody i zdarzenia dalszych szczegółów kolejka komunikatów nie mają wartości klucza. Zmodyfikowanie klucza odwołuje się do modyfikowania wartości klucza, tak aby metody i procedury obsługi zdarzeń dalszych szczegółów kolejki komunikatów odbierać różne wartości klucza. W tym temacie przedstawiono sposób wykonywania tych zadań.  
   
 ### <a name="to-consume-a-key"></a>Korzystanie z klucza  
@@ -65,9 +65,9 @@ Windows Forms zapewnia możliwość korzystania i modyfikowanie danych wprowadzo
   
 -   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzanie z klawiatury w aplikacjach Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [Wprowadzanie przez użytkownika w aplikacjach Windows Forms](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)  
- [Działanie wprowadzania z klawiatury](../../../docs/framework/winforms/how-keyboard-input-works.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzanie z klawiatury w aplikacjach Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
+- [Wprowadzanie przez użytkownika w aplikacjach Windows Forms](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)
+- [Działanie wprowadzania z klawiatury](../../../docs/framework/winforms/how-keyboard-input-works.md)

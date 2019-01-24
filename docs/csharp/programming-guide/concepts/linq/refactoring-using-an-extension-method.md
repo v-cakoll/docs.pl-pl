@@ -2,12 +2,12 @@
 title: Refaktoryzacja przy użyciu metody rozszerzenia (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 08c37923792e1ac6ee922bf052d39fb63b1685c7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 904dd558819a498bd8a3876759edaaa185be3b7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616956"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refaktoryzacja przy użyciu metody rozszerzenia (C#)
 W tym przykładzie opiera się na poprzednim przykładzie [pobieranie tekstu akapitów (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), przez refaktoryzacji łączenia ciągów przy użyciu czystej funkcji, który jest implementowany jako metodę rozszerzenia.  
@@ -246,7 +246,7 @@ StyleName:Code >Hello World<
   
 -   [Refaktoryzacja przy użyciu czystej funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [Refaktoryzacja do czystych funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: fcc3329d6e02a77bf54b5b9f08fddba1bc95ff54
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 33327a8d5e7ce7676ffda6245f3e4f9cccc8b1fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573312"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Stałe i wyliczenia (Visual Basic)
 Visual Basic udostępnia wiele wstępnie zdefiniowanych stałych i wyliczenia dla deweloperów. Stałe przechowywać wartości, które pozostają stałe w trakcie wykonywania aplikacji. Wyliczenia zapewniają wygodny sposób pracy z zestawami pokrewnych stałych i skojarzyć wartości stałych o nazwach.  
@@ -77,8 +77,8 @@ Visual Basic udostępnia wiele wstępnie zdefiniowanych stałych i wyliczenia dl
 |<xref:Microsoft.VisualBasic.VariantType>|Wskazuje typ obiektu variant zwrócony przez <xref:Microsoft.VisualBasic.Information.VarType%2A> funkcji.|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|Wskazuje, jaki rodzaj konwersji do wykonania podczas wywoływania <xref:Microsoft.VisualBasic.Strings.StrConv%2A> funkcji.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja języka Visual Basic](../../visual-basic/language-reference/index.md)  
- [Visual Basic](../../visual-basic/index.md)  
- [Stałe — przegląd](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Wyliczenia — przegląd](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Dokumentacja języka Visual Basic](../../visual-basic/language-reference/index.md)
+- [Visual Basic](../../visual-basic/index.md)
+- [Stałe — przegląd](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Wyliczenia — przegląd](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

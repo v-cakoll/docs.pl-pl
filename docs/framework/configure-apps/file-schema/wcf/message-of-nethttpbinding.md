@@ -2,21 +2,21 @@
 title: '&lt;message&gt; w &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 4159642ee3e972e94f645a70b948a168bc4253c5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4a07989b0ffd19c62d3269924220382f56d92177
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600326"
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;message&gt; w &lt;netHttpBinding&gt;
 Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
  \<system.ServiceModel>  
 \<powiązania >  
-\<netHttpBinding >  
+\<netHttpBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
+\<security>  
 \<message>  
   
 ## <a name="syntax"></a>Składnia  
@@ -119,9 +119,9 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<basicHttpBinding
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

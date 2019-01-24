@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 0fd917d1af38ba558634dfcf5e3a1abf95420a9d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 136d3959a52b793acddf21ae83b8d8eaec053eee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616280"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (odwołanie w C#)
 Może być konieczne dwie wersje zestawów, które mają takie same nazwy w pełni kwalifikowanego typu odwołania. Na przykład trzeba użyć dwóch lub więcej wersji zestawu w tej samej aplikacji. Za pomocą alias zestawu zewnętrznego, przestrzenie nazw z każdego zestawu, może zostać zawinięty wewnątrz przestrzeni nazw poziomie głównym o nazwie określonej przez alias, który umożliwia im ma być używany w tym samym pliku.  
@@ -41,11 +41,11 @@ Może być konieczne dwie wersje zestawów, które mają takie same nazwy w peł
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [Słowa kluczowe przestrzeni nazw](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
+- [Słowa kluczowe przestrzeni nazw](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [:: operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [/ Reference (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

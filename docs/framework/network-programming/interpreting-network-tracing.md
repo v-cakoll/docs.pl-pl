@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 94a64efcd7b4f354eaa22d1b646f36212f9c8fbb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8813bf68ee2b354ed7fc5e981904b8e4b807c1be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576528"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretowanie śledzenia sieci
 Po włączeniu funkcji śledzenia sieci umożliwia śledzenie przechwytywania wywołania aplikacji sprawia, że do różnych <xref:System.Net> składowych klasy. Dane wyjściowe z tych wywołań może być podobne do poniższych przykładach.  
@@ -44,7 +44,7 @@ Po włączeniu funkcji śledzenia sieci umożliwia śledzenie przechwytywania wy
   
  `Connection: Close`  
   
-## <a name="see-also"></a>Zobacz też  
- [Włączanie śledzenia sieci](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Jak: Konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
- [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+## <a name="see-also"></a>Zobacz także
+- [Włączanie śledzenia sieci](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Instrukcje: Konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)

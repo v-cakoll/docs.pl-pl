@@ -2,20 +2,20 @@
 title: Zachowanie inspekcji usługi
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
-ms.openlocfilehash: ae190be48a20af5c108e56c6b0fd7965e39f8b66
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e92f50005870b1c02571cebe0f532bd1810a40dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574953"
 ---
 # <a name="service-auditing-behavior"></a>Zachowanie inspekcji usługi
-W tym przykładzie przedstawiono sposób użycia <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> Aby włączyć inspekcję zdarzeń zabezpieczenia podczas operacji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Usługa i klient zostały skonfigurowane przy użyciu [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). `mode` Atrybutu [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) została ustawiona jako `Message` i `clientCredentialType` została ustawiona jako `Windows`. W tym przykładzie klient jest aplikacji konsoli (.exe), a usługa jest obsługiwana przez Internet Information Services (IIS).  
+W tym przykładzie przedstawiono sposób użycia <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> Aby włączyć inspekcję zdarzeń zabezpieczenia podczas operacji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Usługi i klienta zostały skonfigurowane przy użyciu [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). `mode` Atrybutu [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) został ustawiony na `Message` i `clientCredentialType` został ustawiony na `Windows`. W tym przykładzie klient to aplikacja konsoli (.exe), a usługa jest hostowana przez Internetowe usługi informacyjne (IIS).  
   
 > [!NOTE]
->  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- Plik konfiguracji usługi używa `serviceSecurityAudit` element, aby skonfigurować inspekcję.  
+ Korzysta z pliku konfiguracji usługi `serviceSecurityAudit` element, aby skonfigurować inspekcję.  
   
 ```xml  
 <behaviors>  
@@ -32,24 +32,24 @@ W tym przykładzie przedstawiono sposób użycia <xref:System.ServiceModel.Descr
 </behaviors>  
 ```  
   
- Po uruchomieniu próbki operację żądania i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie konsoli, aby zamknąć klienta.  
+ Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie konsoli, aby zamknąć klienta.  
   
- Wynikowe dzienniki inspekcji będą widoczne przez uruchomienie podglądu zdarzeń. Domyślnie w systemie Windows XP zdarzeń inspekcji można przejrzeć w dzienniku aplikacji podczas w systemie Windows Server 2003 i Windows Vista można wyświetlić zdarzeń inspekcji w dzienniku zabezpieczeń. W systemie Windows Server 2008 i Windows 7 zdarzenia inspekcji są widoczne w dziennikach aplikacji i usług. Można określić lokalizację zdarzeń inspekcji przez ustawienie `auditLogLocation` atrybutu "Aplikacja" lub "Zabezpieczenia". Aby uzyskać więcej informacji, zobacz [porady: zdarzenia inspekcji zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Jeśli zdarzenia są zapisywane w dzienniku zabezpieczeń LocalSecurityPolicy -> Włącz dostęp do obiektów należy ustawić dla "Powodzenie" i "Niepowodzenie".  
+ Wynikowy dzienników inspekcji można wyświetlić, uruchamiając w Podglądzie zdarzeń. Domyślnie w systemie Windows XP zdarzenia inspekcji są widoczne w dzienniku aplikacji podczas w systemie Windows Server 2003 i Windows Vista zdarzenia inspekcji są widoczne w dzienniku zabezpieczeń. W systemie Windows Server 2008 i Windows 7 zdarzenia inspekcji są widoczne w dziennikach aplikacji i usług. Lokalizacja zdarzenia inspekcji można określić, ustawiając `auditLogLocation` atrybutu "Aplikacja" lub "Zabezpieczenia". Aby uzyskać więcej informacji, zobacz [jak: Inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Jeśli zdarzenia są zapisywane w dzienniku zabezpieczeń -> LocalSecurityPolicy Włączanie dostępu do obiektów powinna być ustawiona na "Powodzenie" i "Błąd".  
   
- Podczas przeglądania dziennika zdarzeń, źródło zdarzeń inspekcji jest "ServiceModel inspekcji 3.0.0.0". Rekordów inspekcji uwierzytelniania wiadomości ma kategorii "MessageAuthentication", natomiast rekordów inspekcji usługi autoryzacji kategorii "ServiceAuthorization".  
+ Podczas wyszukiwania w dzienniku zdarzeń, źródła zdarzeń inspekcji jest "ServiceModel inspekcji 3.0.0.0". Rekordy inspekcji uwierzytelniania wiadomości mają kategorię "MessageAuthentication", a rekordy inspekcji autoryzacji usługi kategorią "ServiceAuthorization".  
   
- Zdarzeń inspekcji uwierzytelniania wiadomości obejmuje czy komunikat został zmodyfikowany, czy komunikat wygasł i określa, czy klient może uwierzytelnienia w usłudze. Zawierają informacje o czy uwierzytelnianie zakończyło się pomyślnie lub nie powiodło się wraz z tożsamością klienta, a punkt końcowy wiadomość została wysłana do wraz z akcję skojarzoną z komunikatem.  
+ Zdarzeń inspekcji uwierzytelniania wiadomości obejmują, czy wiadomość została naruszona, czy komunikat utracił ważność i tego, czy klient może uwierzytelniać w usłudze. Zapewniają one informacji na temat tego, czy uwierzytelnianie zakończyło się pomyślnie lub nie powiodło się wraz z tożsamością klienta, a punkt końcowy wiadomość została wysłana do wraz z akcji skojarzonych z wiadomością.  
   
- Zdarzenia inspekcji autoryzacji usługi obejmują decyzję dotyczącą autoryzacji przez Menedżera autoryzacji usługi. Zawierają informacje o czy autoryzacji zakończyło się pomyślnie lub nie powiodło się wraz z tożsamością klienta, punkt końcowy wiadomość została wysłana do, akcję skojarzoną z komunikatem identyfikator kontekst autoryzacji, który został wygenerowany na podstawie Komunikat przychodzący, a typ Menedżera autoryzacji, zgłaszający decyzji dostępu.  
+ Zdarzenia inspekcji autoryzacji usługi obejmują decyzja przez Menedżera usług autoryzacji. Zapewniają one informacji na temat tego, czy Autoryzacja powiodła się lub nie powiodło się, wraz z tożsamością klienta, punktu końcowego wiadomość została wysłana do akcji skojarzonych z wiadomością identyfikator kontekst autoryzacji, który został wygenerowany z przychodząca wiadomość, a typ Menedżera autoryzacji, który podjęła decyzję dostępu.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano procedurę [jednorazowego procedurę instalacji dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aby uruchomić przykładowy w konfiguracji pojedynczej lub między komputerami, postępuj zgodnie z instrukcjami w [uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Instrukcje: inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+## <a name="see-also"></a>Zobacz także
+- [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Instrukcje: Inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie list okien MDI za pomocą elementu MenuStrip (Formularze systemu Windows)'
+title: 'Instrukcje: Tworzenie List okien MDI za pomocą elementu MenuStrip (formularze Windows)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: c87ffadaef2842f10d40f6fd84eb1c70c6dfe37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00f35fe872fc5702595108646e2605ed419823f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585315"
 ---
-# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Porady: tworzenie list okien MDI za pomocą elementu MenuStrip (Formularze systemu Windows)
-Interfejs dokumentu wielokrotnego (MDI) umożliwia tworzenie aplikacji, które można otworzyć kilka dokumentów, w tym samym czasie i kopiowania i wklejania zawartości z jednego dokumentu do drugiego.  
+# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Instrukcje: Tworzenie List okien MDI za pomocą elementu MenuStrip (formularze Windows)
+Umożliwia tworzenie aplikacji, które można otworzyć kilku dokumentów, w tym samym czasie i kopiowania i wklejania zawartości z jednego dokumentu do innego interfejsu wielu dokumentów (MDI).  
   
- Ta procedura przedstawia sposób tworzenia listy wszystkich formularzy podrzędnych aktywne menu okna nadrzędnego.  
+ Ta procedura pokazuje, jak utworzyć listę wszystkie formularze podrzędne aktywne menu okna nadrzędnego.  
   
-### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>Aby tworzenie list okien MDI w formancie MenuStrip  
+### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>Do tworzenie list okien MDI w formancie MenuStrip  
   
-1.  Tworzenie formularza i ustawić jej <xref:System.Windows.Forms.Form.IsMdiContainer%2A> właściwości `true`.  
+1.  Tworzenie formularza i ustaw jego <xref:System.Windows.Forms.Form.IsMdiContainer%2A> właściwość `true`.  
   
 2.  Dodaj <xref:System.Windows.Forms.MenuStrip> do formularza.  
   
-3.  Dodaj dwa elementy menu najwyższego poziomu do <xref:System.Windows.Forms.MenuStrip> i ustawić ich <xref:System.Windows.Forms.Control.Text%2A> właściwości `&File` i `&Window`.  
+3.  Dodaj dwa elementy menu najwyższego poziomu do <xref:System.Windows.Forms.MenuStrip> i ustaw ich <xref:System.Windows.Forms.Control.Text%2A> właściwości `&File` i `&Window`.  
   
-4.  Dodawanie elementu podmenu `&File` element menu i zestaw jej <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwości `&Open`.  
+4.  Dodaj element podmenu do `&File` element menu i ustaw jego <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwość `&Open`.  
   
 5.  Ustaw <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> właściwość <xref:System.Windows.Forms.MenuStrip> do `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-6.  Dodawanie formularza do projektu i Dodaj formant ma do niego, takie jak inny <xref:System.Windows.Forms.MenuStrip>.  
+6.  Dodawanie formularza do projektu i kontrolka ma do niej dodać, takich jak innego <xref:System.Windows.Forms.MenuStrip>.  
   
-7.  Tworzenie procedury obsługi zdarzeń dla <xref:System.Windows.Forms.Control.Click> zdarzenie `&New` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+7.  Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.Control.Click> zdarzenia `&New` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-8.  W ramach programu obsługi zdarzeń Wstawianie kodu podobne do następujących czynności, aby utworzyć i wyświetlić nowe wystąpienia klasy `Form2` jako elementy podrzędne MDI `Form1`.  
+8.  W ramach programu obsługi zdarzeń, Wstaw kod podobne do następujących czynności, aby utworzyć i wyświetlić nowe wystąpienia `Form2` jako elementy podrzędne MDI `Form1`.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As _  
@@ -61,7 +61,7 @@ Interfejs dokumentu wielokrotnego (MDI) umożliwia tworzenie aplikacji, które m
     }  
     ```  
   
-9. Umieść kod podobnie do następującej w `&New` <xref:System.Windows.Forms.ToolStripMenuItem> można zarejestrować obsługi zdarzeń.  
+9. Umieść kod następujący w `&New` <xref:System.Windows.Forms.ToolStripMenuItem> zarejestrować program obsługi zdarzeń.  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
@@ -75,13 +75,13 @@ Interfejs dokumentu wielokrotnego (MDI) umożliwia tworzenie aplikacji, które m
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Dwa <xref:System.Windows.Forms.Form> formantów `Form1` i `Form2`.  
+-   Dwa <xref:System.Windows.Forms.Form> kontrolki o nazwie `Form1` i `Form2`.  
   
 -   A <xref:System.Windows.Forms.MenuStrip> kontrolować na `Form1` o nazwie `menuStrip1`, a <xref:System.Windows.Forms.MenuStrip> kontrolować na `Form2` o nazwie `menuStrip2`.  
   
 -   Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: tworzenie formularzy nadrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Instrukcje: tworzenie formularzy podrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [MenuStrip, kontrolka](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Tworzenie formularzy nadrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [Instrukcje: Tworzenie formularzy podrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [MenuStrip, kontrolka](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

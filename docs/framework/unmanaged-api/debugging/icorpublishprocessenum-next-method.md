@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19a10a527c37d93d00bec799fdaa12bb0ad3fdbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e427c3919e8b714146fbe630a7e151dff10703de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582415"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next — Metoda
 Pobiera określoną liczbę procesów z kolekcji, począwszy od bieżącej pozycji kursora.  
@@ -43,13 +43,13 @@ HRESULT Next (
  [in] Liczba procesów, które mają zostać pobrane.  
   
  `objects`  
- [out] Wskaźnik do tablicy pobrać [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) obiektów, z których każdy reprezentuje procesu.  
+ [out] Wskaźnik do tablicy pobrać [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) obiektów, z których każdy reprezentuje proces.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby procesów faktycznie zwracane. Ta wartość może mieć wartości zerowej Jeśli `celt` jeden.  
+ [out] Wskaźnik do liczby procesów rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorPub.idl, CorPub.h  
   
@@ -57,5 +57,5 @@ HRESULT Next (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorPublishProcessEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorPublishProcessEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)

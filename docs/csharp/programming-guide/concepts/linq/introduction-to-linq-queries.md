@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 80aafccab9b9183a1dc4dc25d531ebe65f6905b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605136"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Wprowadzenie do kwerend LINQ (C#)
 A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są zwykle wyrażane w specjalistycznym języku zapytań. Czas dla różnych rodzajów źródeł danych, na przykład SQL dla relacyjnych baz danych i XQuery dla XML zostały opracowane w różnych językach. Dlatego programiści musieli nauczyć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, które muszą obsługiwać. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] upraszcza tę sytuację oferując spójny model do pracy z danymi w różnych rodzajach formatów i źródeł danych. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, zawsze pracujesz z obiektami. Użyj tych samych podstawowych schematów kodowania do wykonywania zapytań i przekształcania danych w dokumentach XML, baz danych SQL, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawów danych, kolekcjach .NET i innych formatach, do których [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawca jest niedostępny.  
@@ -56,7 +56,7 @@ IQueryable<Customer> custQuery =
  Aby uzyskać więcej informacji na temat sposobu tworzenia określonych typów źródeł danych, zobacz dokumentację dla różnych [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawców. Podstawowa zasada jest jednak bardzo prosta: [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródło danych jest dowolny obiekt obsługujący ogólny <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub interfejs, który dziedziczy z niego.  
   
 > [!NOTE]
->  Typy takie jak <xref:System.Collections.ArrayList> który obsługuje niepodstawowy <xref:System.Collections.IEnumerable> interfejs może również służyć jako [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródła danych. Aby uzyskać więcej informacji, zobacz [porady: zapytanie w ArrayList za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
+>  Typy takie jak <xref:System.Collections.ArrayList> który obsługuje niepodstawowy <xref:System.Collections.IEnumerable> interfejs może również służyć jako [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródła danych. Aby uzyskać więcej informacji, zobacz [jak: Zapytanie w ArrayList za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
   
 ##  <a name="query"></a> Zapytanie  
  Zapytanie Określa, jakie informacje należy pobrać ze źródłem danych lub źródła. Opcjonalnie zapytanie określa również, jak te informacje powinny można sortowane, grupowane i kształtowane przed zwróceniem. Zapytanie jest przechowywane w zmiennej zapytania i inicjowane za pomocą wyrażenia zapytania. Aby ułatwić Zapisywanie zapytań, język C# wprowadził nową składnię zapytań.  
@@ -88,11 +88,11 @@ IQueryable<Customer> custQuery =
   
  Można również wymusić wykonanie przez umieszczenie `foreach` pętli natychmiast po wyrażeniu zapytania. Jednakże wywołując `ToList` lub `ToArray` , również buforujesz wszystkie dane w jednym obiekcie kolekcji.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Wskazówki: Pisanie zapytań w języku C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [Wskazówki: Pisanie zapytań w języku C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [Wyrażenia zapytań LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)  
+- [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Przewodnik: Pisanie zapytań wC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Przewodnik: Pisanie zapytań wC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Wyrażenia zapytań LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)
 - [Słowa kluczowe zapytania (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

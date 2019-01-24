@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: a2d71994647e50afc8d343725e639b6e9d24831f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589324"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Instrukcje: Definiowanie równości wartości dla typu (C# Programming Guide)
 Po zdefiniowaniu klasy lub struktury, możesz zdecydować, czy warto tworzyć niestandardowych definicji równości wartość (lub odpowiednik) dla typu. Zazwyczaj równość wartości zaimplementować w sytuacji, gdy oczekiwano obiektów tego typu do dodania do kolekcji jakieś lub w przypadku, gdy ich głównym celem jest zapisanie zestawu pól lub właściwości. Swojej definicji równości wartość można oprzeć na porównanie wszystkie pola i właściwości w typie lub można utworzyć definicję na podzbiorze. Jednak w obu przypadkach, a w klas i struktur, implementacji należy wykonać pięć gwarancje równoważności:  
@@ -63,7 +63,7 @@ Po zdefiniowaniu klasy lub struktury, możesz zdecydować, czy warto tworzyć ni
   
  [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) i [! =](../../../csharp/language-reference/operators/not-equal-operator.md) operatorów nie może działać na struktury, chyba że struktura jawnie je przeciążenia.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Porównywanie równości](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+- [Porównywanie równości](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)

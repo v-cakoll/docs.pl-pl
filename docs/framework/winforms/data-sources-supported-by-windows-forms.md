@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: aee15d8d40ddd3f928c8bc5396d8bcbff17ba533
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 71013506bfe73907cd19c11b03d01d0c3e05e1d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573978"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Źródła danych obsługiwane przez formularze systemu Windows
 Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzystać z danych przechowywanych w bazach danych. Powiązanie danych formularzy Windows, umożliwia dostęp do danych z bazy danych, a także dane w innych strukturach, takich jak tablice i kolekcje, tak długo, jak niektóre minimalne wymagania zostały spełnione.  
@@ -37,7 +37,7 @@ Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzysta�
  Formularze Windows obsługuje właściwości kontrolki powiązania danych właściwości publicznych w wystąpieniu obiektu przy użyciu <xref:System.Windows.Forms.Binding> typu. Windows Forms również obsługuje powiązanie kontrolek na podstawie listy, takie jak <xref:System.Windows.Forms.ListControl> do obiektu wystąpienia, gdy <xref:System.Windows.Forms.BindingSource> jest używany.  
   
  tablicy lub kolekcji  
- Do działania jako źródło danych, należy zaimplementować listy <xref:System.Collections.IList> interfejsu; jeden przykładem może być tablica, która jest wystąpieniem <xref:System.Array> klasy. Aby uzyskać więcej informacji na temat tablic, zobacz [porady: tworzenie tablicy obiektów (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
+ Do działania jako źródło danych, należy zaimplementować listy <xref:System.Collections.IList> interfejsu; jeden przykładem może być tablica, która jest wystąpieniem <xref:System.Array> klasy. Aby uzyskać więcej informacji na temat tablic, zobacz [jak: Utwórz tablicę obiektów (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
  Ogólnie rzecz biorąc, należy użyć <xref:System.ComponentModel.BindingList%601> podczas tworzenia list obiektów dla powiązania danych. <xref:System.ComponentModel.BindingList%601> jest ogólny wersją <xref:System.ComponentModel.IBindingList> interfejsu. <xref:System.ComponentModel.IBindingList> Interfejs rozszerza <xref:System.Collections.IList> interfejsu przez dodanie właściwości, metody i zdarzenia wymagane dla powiązania danych dwukierunkowe.  
   
@@ -57,7 +57,7 @@ Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzysta�
   
 -   <xref:System.Data.DataViewManager>. A <xref:System.Data.DataViewManager> jest dostosowany widok przedstawiający całą <xref:System.Data.DataSet>, jest odpowiednikiem <xref:System.Data.DataView>, z relacjami uwzględniony, ale. Za pomocą <xref:System.Data.DataViewManager.DataViewSettings%2A> kolekcji, można ustawić domyślne filtry i opcje sortowania dla dowolnego widoków, <xref:System.Data.DataViewManager> ma dla danej tabeli.  
   
-## <a name="see-also"></a>Zobacz też  
- [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [Wiązanie danych i formularzy Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Zobacz także
+- [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
+- [Wiązanie danych i formularzy Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

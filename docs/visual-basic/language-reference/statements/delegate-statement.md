@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1ed2dc91d1a2ea9bade11902aac553e24c0607ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583668"
 ---
 # <a name="delegate-statement"></a>Delegate — Instrukcja
 Używane do deklarowania delegata. Delegat jest typem referencyjnym, który odwołuje się do `Shared` metody typu lub metod wystąpień obiektu. Każda procedura ze zgodnymi typy parametrów i zwrotu może służyć do utworzenia wystąpienia tej klasy delegatu. Procedurę można następnie później wywołać za pośrednictwem wystąpienia delegata.  
@@ -64,12 +64,12 @@ Używane do deklarowania delegata. Delegat jest typem referencyjnym, który odwo
   
  [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [z](../../../visual-basic/language-reference/statements/of-clause.md)  
- [Delegaty](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Instrukcje: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Kowariancja i kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md)  
- [W](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>Zobacz także
+- [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [z](../../../visual-basic/language-reference/statements/of-clause.md)
+- [Delegaty](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Instrukcje: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Kowariancja i kontrawariancja](../../programming-guide/concepts/covariance-contravariance/index.md)
+- [W](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

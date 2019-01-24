@@ -2,12 +2,12 @@
 title: MsmqBindingElementBase
 ms.date: 03/30/2017
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
-ms.openlocfilehash: e7f4cf41168bd1e5483524195e20541d896a6569
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a0e2ac250da3837b41134d3a04a21579a2fe923a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183194"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569040"
 ---
 # <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
@@ -37,89 +37,89 @@ class MsmqBindingElementBase : TransportBindingElement
 ## <a name="properties"></a>Właściwości  
  Klasa MsmqBindingElementBase ma następujące właściwości:  
   
-### <a name="customdeadletterqueue"></a>customDeadLetterQueue  
+### <a name="customdeadletterqueue"></a>CustomDeadLetterQueue  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Identyfikator URI, który zawiera lokalizację kolejki utraconych wiadomości dla każdej aplikacji, gdzie umieszcza komunikaty wygasły lub mają niepowodzeniem transferu lub dostarczania.  
   
-### <a name="deadletterqueue"></a>DeadLetterQueue wartość  
+### <a name="deadletterqueue"></a>DeadLetterQueue  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość wyliczenia, który wskazuje na typ używanej kolejki utraconych wiadomości.  
   
 ### <a name="durable"></a>trwałe  
  Typ danych: wartość logiczna  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość, która wskazuje, czy komunikaty przetwarzane przez to powiązanie są trwałe lub zmienne.  
   
 ### <a name="exactlyonce"></a>exactlyOnce  
  Typ danych: wartość logiczna  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość logiczna wskazująca, czy komunikaty przetwarzane przez to powiązanie są odbierane dokładnie raz.  
   
-### <a name="maxretrycycles"></a>maxRetryCycles  
+### <a name="maxretrycycles"></a>MaxRetryCycles  
  Typ danych: sint32  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Maksymalna liczba ponownych prób cyklów próby dostarczenia komunikatów do aplikacji odbierającej.  
   
 ### <a name="receiveerrorhandling"></a>receiveErrorHandling  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Ustawienia obsługi Zarządzanie skażonymi komunikatami.  
   
-### <a name="receiveretrycount"></a>receiveRetryCount  
+### <a name="receiveretrycount"></a>ReceiveRetryCount  
  Typ danych: sint32  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Maksymalna liczba natychmiastowego ponawiania próby w wiadomości, które są odczytywane z kolejki aplikacji.  
   
-### <a name="retrycycledelay"></a>retryCycleDelay  
+### <a name="retrycycledelay"></a>RetryCycleDelay  
  Typ danych: Data i godzina  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość wskazująca czas opóźnienia między cykle przy próbie dostarczenia komunikatu, którego nie można dostarczyć natychmiast.  
   
-### <a name="timetolive"></a>timeToLive  
+### <a name="timetolive"></a>TimeToLive  
  Typ danych: Data i godzina  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Przedział czasu, która wskazuje, jak długo komunikaty przetwarzane przez to powiązanie mogą znajdować się w kolejce, zanim wygasną.  
   
-### <a name="usemsmqtracing"></a>useMsmqTracing  
+### <a name="usemsmqtracing"></a>UseMsmqTracing  
  Typ danych: wartość logiczna  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość logiczna, która wskazuje, czy komunikaty przetwarzane przez to powiązanie powinny być śledzone.  
   
-### <a name="usesourcejournal"></a>useSourceJournal  
+### <a name="usesourcejournal"></a>UseSourceJournal  
  Typ danych: wartość logiczna  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość logiczna wskazująca, czy kopie komunikatów przetwarzanych przez to powiązanie powinny być przechowywane w kolejce dziennika źródła.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
+|MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.NetMsmqBinding>  
- <xref:System.ServiceModel.MsmqBindingBase>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.NetMsmqBinding>
+- <xref:System.ServiceModel.MsmqBindingBase>

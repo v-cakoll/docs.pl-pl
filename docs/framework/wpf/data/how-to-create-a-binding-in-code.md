@@ -1,5 +1,5 @@
 ---
-title: Jak utworzyć powiązanie w kodzie
+title: 'Instrukcje: Utwórz powiązanie w kodzie'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 2d13650cb3e9a4e97a6642992b7211f323b9ea96
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5b086629b6144a92e9a5eeecdd6adb1ca1bad27a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610737"
 ---
-# <a name="how-to-create-a-binding-in-code"></a>Jak utworzyć powiązanie w kodzie
+# <a name="how-to-create-a-binding-in-code"></a>Instrukcje: Utwórz powiązanie w kodzie
 W tym przykładzie pokazano, jak utworzyć i ustawić <xref:System.Windows.Data.Binding> w kodzie.  
   
 ## <a name="example"></a>Przykład  
@@ -38,6 +38,6 @@ W tym przykładzie pokazano, jak utworzyć i ustawić <xref:System.Windows.Data.
  [!code-csharp[CodeOnlyBinding#BOSetBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#bosetbinding)]
  [!code-vb[CodeOnlyBinding#BOSetBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

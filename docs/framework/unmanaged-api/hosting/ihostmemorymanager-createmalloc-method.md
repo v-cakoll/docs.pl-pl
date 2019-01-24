@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 503a7c2056d0a828c65c5b0b81c50ea1e133aeef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ede65c03d0756ddab3314c04cf443c29dcea7801
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582516"
 ---
 # <a name="ihostmemorymanagercreatemalloc-method"></a>IHostMemoryManager::CreateMAlloc — Metoda
-Pobiera wskaźnika interfejsu do [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) wystąpienie, które jest używane do obliczania żądań alokacji sterty utworzone przez hosta.  
+Pobiera wskaźnik interfejsu do [ihostmalloc —](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) wystąpienie, które służy do wysyłania żądań alokacji ze stosu, utworzone przez hosta.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,35 +38,35 @@ HRESULT CreateMalloc (
   
 #### <a name="parameters"></a>Parametry  
  `dwMallocType`  
- [in] Kombinację [malloc_type —](../../../../docs/framework/unmanaged-api/hosting/malloc-type-enumeration.md) flagi, które określa charakterystykę pamięci, która jest przydzielane.  
+ [in] Kombinacji [MALLOC_TYPE](../../../../docs/framework/unmanaged-api/hosting/malloc-type-enumeration.md) flagi, które określa cechy są przydzielonej pamięci.  
   
  `ppMAlloc`  
- [out] Wskaźnik do adresu `IHostMAlloc` wystąpienia dostarczony przez hosta.  
+ [out] Wskaźnik na adres `IHostMAlloc` wystąpienia udostępniane przez hosta.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`CreateMAlloc` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`CreateMAlloc` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Nie ma wystarczającej ilości pamięci fizycznej nie była dostępna do wykonania żądania alokacji.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Nie ma wystarczającej ilości pamięci fizycznej była dostępna do wykonania żądania alokacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CreateMAlloc` Zwraca obiekt, który umożliwia CLR na wysyłanie żądań alokacji za pośrednictwem hosta zamiast przy użyciu standardowych funkcji Win32.  
+ `CreateMAlloc` Zwraca obiekt, który umożliwia wysyłanie żądań alokacji za pośrednictwem hosta zamiast przy użyciu standardowych funkcji Win32 w środowisku CLR.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IHostMalloc, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)  
- [IHostMemoryManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IHostMalloc, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [IHostMemoryManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

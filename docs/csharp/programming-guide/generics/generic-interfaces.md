@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 8b09d6cb6ffb36570bacb568547afa57a2e7d9ba
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d0b9d35a7e814d8790ee57f1169f2b35f7c42536
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564214"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Interfejsy ogólne (Przewodnik programowania w języku C#)
 Często jest to przydatne do definiowania interfejsów dla klasy kolekcji rodzajowej lub dla klas ogólnych, które reprezentują elementy w kolekcji. Preferencje dla klas ogólnych jest używać interfejsów ogólnych, takich jak <xref:System.IComparable%601> zamiast <xref:System.IComparable>, aby unikać operacji pakowania, jak i rozpakowania dla typów wartości. Biblioteka klas .NET Framework definiuje kilka interfejsów ogólnych do użytku z klas kolekcji przestrzeni <xref:System.Collections.Generic> przestrzeni nazw.  
@@ -44,9 +44,9 @@ Często jest to przydatne do definiowania interfejsów dla klasy kolekcji rodzaj
   
  Reguły które kontrolują, przeciążenie metody są takie same dla metod w obrębie klasy ogólne, ogólny struktury lub interfejsów ogólnych. Aby uzyskać więcej informacji, zobacz [metod ogólnych](../../../csharp/programming-guide/generics/generic-methods.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [interface](../../../csharp/language-reference/keywords/interface.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [interface](../../../csharp/language-reference/keywords/interface.md)
 - [Typy ogólne](~/docs/standard/generics/index.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 241ff40448c3dca2846f9e420dc7df41427dc79d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f80157ddf394fdd058793830bfe3052b41ad1e40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576489"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Odczytywanie i zapisywanie schematów XML
 Schematu Object Model (model SOM) interfejsu API może służyć do odczytu i zapisu schematów języka (XSD) definicji schematu XML z plików lub innych źródeł i tworzenie XML schematów w pamięci przy użyciu klas w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw, które są mapowane do struktur, zdefiniowanych na całym świecie Wide Web Consortium (W3C) XML schematu zalecenia.  
@@ -49,11 +49,11 @@ Schematu Object Model (model SOM) interfejsu API może służyć do odczytu i za
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Model SOM (XML Schema Object Model) ― omówienie](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [Tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [Przechodzenie schematów XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [Edytowanie schematów XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
-- [Uwzględnianie lub importowanie schematów XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [Klasa XmlSchemaSet na potrzeby kompilacji schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
-- [Zestaw informacji po kompilacji schematu](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
+- [Model SOM (XML Schema Object Model) ― omówienie](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Przechodzenie schematów XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [Edytowanie schematów XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [Uwzględnianie lub importowanie schematów XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [Klasa XmlSchemaSet na potrzeby kompilacji schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+- [Zestaw informacji po kompilacji schematu](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
 - [Zarządzanie przestrzeniami nazw w dokumencie XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)

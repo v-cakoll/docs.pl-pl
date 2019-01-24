@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: 6c6ea41b9da9c98f8c4ee45ca1e223a29712729a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e067e5c6e108a27ecaf9e4b0e3e6a33938ad0b59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562994"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema i kolekcje schematów
 **Połączenia** klas w każdej implementacji zarządzanego dostawcy .NET Framework **GetSchema** metodę, która służy do pobierania informacji o schemacie o bazie danych, który jest obecnie połączony, i informacje o schemacie zwróciło **GetSchema** metody jest dostarczany w formie <xref:System.Data.DataTable>. **GetSchema** metodą jest przeciążona metoda, która zapewnia następujące parametry opcjonalne określanie kolekcji schematów, aby powrócić i ograniczając ilość zwracanych informacji.  
@@ -104,6 +104,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

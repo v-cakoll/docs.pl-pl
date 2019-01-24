@@ -2,12 +2,12 @@
 title: Relacje i ograniczenia schematu XML
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: bcb6e257a40040701612b73768a98e056bccd6c5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: aea0efc51adb5a81f479cad41a7fb8d145ceb869
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602874"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Relacje i ograniczenia schematu XML
 W schemacie języka (XSD) definicji schematu XML można określić ograniczenia (unikatowe, klucza i ograniczeń keyref) i relacji (przy użyciu **msdata:Relationship** adnotacji). W tym temacie wyjaśniono, jak interpretować ograniczenia i relacji określony w schemacie XML do generowania <xref:System.Data.DataSet>.  
@@ -186,6 +186,6 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
   
  Jeśli zawiera ograniczenie keyref odwołujące się do tabeli zagnieżdżonej **msdata:IsNested = "true"** adnotacji, **DataSet** spowoduje utworzenie jednego relację zagnieżdżonych, która opiera się na ograniczenie keyref i powiązane ograniczenia unique key.  
   
-## <a name="see-also"></a>Zobacz też  
- [Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

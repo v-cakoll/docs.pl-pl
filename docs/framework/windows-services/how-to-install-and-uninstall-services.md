@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 937c559130ea70ab125935ce26ecc5f9bd315ad1
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: eab291528080b75a07c8f8c3994428eafde94568
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612820"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>Instrukcje: Instalowanie i odinstalowywanie usług
 Jeśli opracowujesz usługi Windows za pomocą programu .NET Framework, można szybko zainstalować aplikacji usługi za pomocą narzędzia wiersza polecenia o nazwie InstallUtil.exe. Jeśli jesteś deweloperem kto chce wersji usług Windows, czy użytkownicy mogą zainstalować i możesz odinstalować należy używać programu InstallShield. Zobacz [wdrożenia Instalatora Windows](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  
@@ -62,8 +62,8 @@ Jeśli opracowujesz usługi Windows za pomocą programu .NET Framework, można s
   
 3.  Czasami po usunięciu pliku wykonywalnego dla usługi usługi może nadal istnieć w rejestrze. W takim przypadku należy użyć polecenia [sc delete](/windows-server/administration/windows-commands/sc-delete) można usunąć wpisu usługi z rejestru.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Instrukcje: Tworzenie usług Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Instrukcje: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Installutil.exe (narzędzie instalatora)](../../../docs/framework/tools/installutil-exe-installer-tool.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Instrukcje: Tworzenie usług Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Instrukcje: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Installutil.exe (narzędzie instalatora)](../../../docs/framework/tools/installutil-exe-installer-tool.md)

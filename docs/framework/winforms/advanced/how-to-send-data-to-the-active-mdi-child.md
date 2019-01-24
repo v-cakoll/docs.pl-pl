@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wysyłanie danych do Active MDI Child'
+title: 'Instrukcje: Wysyłanie danych do Active MDI Child'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 301e8975f9b0b12275b51b2c7626e22412243b25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dab72d64cdd013125ae7c302ccf297ecdc0c98b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589971"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a>Porady: wysyłanie danych do Active MDI Child
-Często w kontekście [aplikacje interfejsu wielu dokumentów (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), konieczne będzie wysyłać dane do okna podrzędnego active, np. gdy użytkownik wkleja danych ze Schowka do aplikacji MDI.  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>Instrukcje: Wysyłanie danych do Active MDI Child
+Często w kontekście [aplikacje interfejsu wielu dokumentów (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), konieczne będzie wysyłać dane do okno podrzędne aktywnego, na przykład gdy użytkownik wkleja danych ze Schowka w aplikacji MDI.  
   
 > [!NOTE]
->  Uzyskać informacji o weryfikacji okno podrzędne, które ma fokus i wysyłanie zawartości do Schowka, zobacz [określania podrzędnego MDI Active](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).  
+>  Aby uzyskać informacji na temat weryfikowania okno podrzędne, które ma fokus, a następnie wysyłając jego zawartość do Schowka, zobacz [Określanie Active MDI Child](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).  
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Aby wysyłać dane do aktywnego okna podrzędnego MDI ze Schowka  
   
-1.  W metodzie skopiować tekst do Schowka aktywnym formantem formularza podrzędnego aktywne.  
+1.  Wewnątrz metody należy skopiować tekst do Schowka do aktywną kontrolkę formularza podrzędnego active.  
   
     > [!NOTE]
-    >  W tym przykładzie założono Brak formularza nadrzędnego MDI (`Form1`) mający okien podrzędnych co najmniej jeden MDI zawierający <xref:System.Windows.Forms.RichTextBox> formantu. Aby uzyskać więcej informacji, zobacz [tworzenie formularzy nadrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  W tym przykładzie przyjęto założenie, istnieje formularza nadrzędnego MDI (`Form1`) zawierający co najmniej jeden podrzędne MDI zawierający <xref:System.Windows.Forms.RichTextBox> kontroli. Aby uzyskać więcej informacji, zobacz [tworzenie formularzy nadrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -91,9 +91,9 @@ Często w kontekście [aplikacje interfejsu wielu dokumentów (MDI)](../../../..
     }  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Aplikacje interfejsu wielu dokumentów (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- [Instrukcje: tworzenie formularzy nadrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Instrukcje: tworzenie formularzy podrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [Instrukcje: określanie elementu podrzędnego MDI Active](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
- [Instrukcje: aranżowanie formularzy podrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a>Zobacz także
+- [Aplikacje interfejsu wielu dokumentów (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
+- [Instrukcje: Tworzenie formularzy nadrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [Instrukcje: Tworzenie formularzy podrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [Instrukcje: Określanie elementu podrzędnego Active MDI](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
+- [Instrukcje: Aranżowanie formularzy podrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

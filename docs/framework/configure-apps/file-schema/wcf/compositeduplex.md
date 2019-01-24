@@ -2,12 +2,12 @@
 title: '&lt;compositeDuplex&gt;'
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: 4b84b4f2816dc68b7dcee784d957189728e5a4b2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: e00cc6f3214dc9a040a9b6170271b1f4188d1631
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601626"
 ---
 # <a name="ltcompositeduplexgt"></a>&lt;compositeDuplex&gt;
 Definiuje element powiązania, który jest używany, gdy klient musi ujawniać punkt końcowy usługi by wysłać wiadomości do klienta.  
@@ -16,7 +16,7 @@ Definiuje element powiązania, który jest używany, gdy klient musi ujawniać p
 \<powiązania >  
 \<customBinding>  
 \<Powiązanie >  
-\<compositeDuplex >  
+\<compositeDuplex>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,11 +53,11 @@ Definiuje element powiązania, który jest używany, gdy klient musi ujawniać p
 <compositeDuplex clientBaseAddress="http://www.contoso.com" />
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.CompositeDuplexElement>  
- <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.CompositeDuplexElement>
+- <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

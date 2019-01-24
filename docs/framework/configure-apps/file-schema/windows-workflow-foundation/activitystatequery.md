@@ -3,12 +3,12 @@ title: '&lt;activityStateQuery&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9f8c3e4f-e2e3-4402-9760-03bf918ece7b
-ms.openlocfilehash: 3c6243e6b8e1d2b32dc830609a5d4df474f48e61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7b872d933d07af329601063b3d769bc43a22007c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568676"
 ---
 # <a name="ltactivitystatequerygt"></a>&lt;activityStateQuery&gt;
 Reprezentuje zapytanie, które jest używane do śledzenia zmian cyklem życia działań, które tworzą wystąpienie przepływu pracy. Na przykład chcesz do śledzenia za każdym razem, gdy kończy działanie "Wyślij wiadomość E-Mail", w ramach wystąpienie przepływu pracy. To zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania obiektów rekordu stanu działania. Stany do subskrybowania są wyszczególnione w ActivityStates.  
@@ -19,8 +19,8 @@ Reprezentuje zapytanie, które jest używane do śledzenia zmian cyklem życia d
 \<Śledzenie >  
 \<trackingProfile>  
 \<przepływ pracy >  
-\<activityStateQueries >  
-\<activityStateQuery >  
+\<activityStateQueries>  
+\<activityStateQuery>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,7 +58,7 @@ Reprezentuje zapytanie, które jest używane do śledzenia zmian cyklem życia d
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<argumenty >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Kolekcja argumenty skojarzone z tej kwerendy działania.|  
+|[\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Kolekcja argumenty skojarzone z tej kwerendy działania.|  
 |[\<Stany >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Kolekcja elementów konfiguracji, które zawierają stany subskrybowanego działania, dla którego należy obliczanie rekord śledzenia.|  
 |[\<Stany >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Kolekcja zmiennych skojarzoną z tym zapytaniem działania.|  
   
@@ -66,7 +66,7 @@ Reprezentuje zapytanie, które jest używane do śledzenia zmian cyklem życia d
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Reprezentuje listę elementów konfiguracji, które są używane do śledzenia żądań, aby anulować działanie podrzędne przez działanie nadrzędne. Zapytanie jest niezbędne do uczestnika śledzenia do subskrybowania Anuluj żądanie rekordu obiektów.|  
+|[\<faultPropagationQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Reprezentuje listę elementów konfiguracji, które są używane do śledzenia żądań, aby anulować działanie podrzędne przez działanie nadrzędne. Zapytanie jest niezbędne do uczestnika śledzenia do subskrybowania Anuluj żądanie rekordu obiektów.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jedno rozwiązanie ActivityStateQuery jest możliwość wyodrębniania danych podczas śledzenia wykonywania przepływu pracy. Umożliwia to dodatkowy kontekst podczas uzyskiwania dostępu do śledzenia rekordów post wykonywania. Możesz użyć [ \<argumenty >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<stany >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) i [ \<stany >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elementy, aby wyodrębnić dowolnej zmiennej lub argumentu wszelkie działania w przepływie pracy. W poniższym przykładzie pokazano kwerendą stanu działania, który wyodrębnia zmienne i argumenty podczas działania `Closed` rekord śledzenia jest emitowane. Zmienne i argumenty wyodrębniania tylko z ActivityStateRecord i w związku z tym subskrybują w ramach śledzenia profilu przy użyciu [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
@@ -85,8 +85,8 @@ Reprezentuje zapytanie, które jest używane do śledzenia zmian cyklem życia d
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
+- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

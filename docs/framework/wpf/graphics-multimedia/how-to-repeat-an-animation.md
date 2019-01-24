@@ -1,5 +1,5 @@
 ---
-title: Jak powtórzyć animację
+title: 'Instrukcje: Powtórz animację'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RepeatBehavior property of timelines [WPF]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Timelines RepeatBehavior property [WPF]
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-ms.openlocfilehash: 176fc9c31f85361a243cd9357d79608e0ff6a4cd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 213fca0796840ae87035be4f474cfdf4648460a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609646"
 ---
-# <a name="how-to-repeat-an-animation"></a>Jak powtórzyć animację
+# <a name="how-to-repeat-an-animation"></a>Instrukcje: Powtórz animację
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> właściwość <xref:System.Windows.Media.Animation.Timeline> w celu sterowania zachowaniem Powtórz animację.  
   
 ## <a name="example"></a>Przykład  
@@ -28,10 +28,10 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.T
   
  Aby uzyskać pełny przykład, zobacz [przykład zachowania chronometrażu animacji](https://go.microsoft.com/fwlink/?LinkID=159970).  
   
-## <a name="see-also"></a>Zobacz też  
- [Gromadzenie wartości animacji podczas cykli powtórzeń](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [Określanie, czy oś czasu ma być automatycznie odtwarzana od końca](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
- [Animacja i chronometraż](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Przykład zachowania chronometrażu animacji](https://go.microsoft.com/fwlink/?LinkID=159970)
+## <a name="see-also"></a>Zobacz także
+- [Gromadzenie wartości animacji podczas cykli powtórzeń](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)
+- [Określanie, czy oś czasu ma być automatycznie odtwarzana od końca](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Animacja i chronometraż](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Przykład zachowania chronometrażu animacji](https://go.microsoft.com/fwlink/?LinkID=159970)

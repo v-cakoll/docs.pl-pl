@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c168fc2ceddde0f8d104ec5e562f92c9c9e487d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583538"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Wyliczanie wystąpień programu SQL Server (ADO.NET)
 Program SQL Server zezwala na aplikacji, aby znaleźć wystąpień programu SQL Server w ramach bieżącej sieci. <xref:System.Data.Sql.SqlDataSourceEnumerator> Klasa udostępnia te informacje do deweloperów aplikacji, zapewniając <xref:System.Data.DataTable> zawierające informacje dotyczące wszystkich serwerów widoczne. Ta wartość zwrócona tabela zawiera listę wystąpień serwera dostępne w sieci, z którą jest zgodne z listą udostępniany, gdy użytkownik próbuje utworzyć nowe połączenie, a następnie rozwija listy rozwijanej zawierające wszystkie dostępne serwery na **połączenia Właściwości** okno dialogowe. Wyniki wyświetlane nie zawsze są pełne.  
@@ -43,12 +43,12 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
  Tabela zwrócony z wywołania metody które zawiera następujące kolumny, które zawierają `string` wartości:  
   
-|Kolumny|Opis|  
+|Kolumna|Opis|  
 |------------|-----------------|  
 |**ServerName**|Nazwa serwera.|  
 |**InstanceName**|Nazwa wystąpienia serwera. Pole puste, jeśli serwer działa jako domyślnego wystąpienia.|  
 |**IsClustered**|Wskazuje, czy serwer jest częścią klastra.|  
-|**Wersja**|Wersja serwera. Na przykład:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
+|**Wersja**|Wersja serwera. Na przykład:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Wyliczenie ograniczeń  
  Wszystkie dostępne serwery mogą lub nie mogą być wyświetlane. Lista może się różnić w zależności od czynników, takich jak przekroczenia limitu czasu i siecią ruchu. Może to spowodować, że na liście, aby różniłaby się w dwóch kolejnych wywołań. Zostaną wyświetlone tylko serwery w tej samej sieci. Pakietów emisji zazwyczaj nie przechodzą przez routery, dlatego nie może zostać wyświetlony serwer, na liście, ale będzie stabilny przez wywołania.  
@@ -124,6 +124,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

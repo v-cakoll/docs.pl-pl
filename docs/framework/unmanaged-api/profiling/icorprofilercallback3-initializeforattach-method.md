@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50fe7399896c35c1d6595b2d7214280e3009fab5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ebdd76655124922008667898e38f873ad93598e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555599"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach — Metoda
-Wywoływane przez środowisko uruchomieniowe języka wspólnego (CLR), aby zapewnić możliwość zainicjować stanu po operacji dołączania profilera.  
+Metoda wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), aby dać profilerowi możliwość zainicjowania jego stanu po operacji dołączania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ HRESULT InitializeForAttach(
   
 #### <a name="parameters"></a>Parametry  
  `pCorProfilerInfoUnk`  
- [in] Wskaźnik interfejsu dla `ICorProfilerInfo*` interfejsu.  
+ [in] Wskaźnik interfejsu do `ICorProfilerInfo*` interfejsu.  
   
  `pvClientData`  
- [in] Wskaźnik do danych przekazany do [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) metody w jego `pvClientData` parametru. Jeśli ten parametr ma wartość null, `cbClientData` będzie równa 0 (zero). Środowisko CLR zwalnia pamięć taka zwrócona z `InitializeForAttach`.  
+ [in] Wskaźnik do danych jest przekazywany do [iclrprofiling::attachprofiler —](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in Class metoda jego `pvClientData` parametru. Jeśli ten parametr ma wartość null, `cbClientData` będzie mieć wartość 0 (zero). Środowisko CLR zwalnia ta pamięć zwrócona z `InitializeForAttach`.  
   
  `cbClientData`  
- [in] Rozmiar w bajtach danych który `pvClientData` wskazuje.  
+ [in] Rozmiar w bajtach, danych, który `pvClientData` wskazuje.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołania CLR `InitializeForAttach` zapewnienie profilera możliwość wywołania zwrotne żądania.  
+ CLR wywołuje `InitializeForAttach` aby dać profilerowi możliwość na wywołania zwrotne żądania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -58,8 +58,8 @@ HRESULT InitializeForAttach(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

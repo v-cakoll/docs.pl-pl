@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStepperEnum Interface1
+title: ICorDebugStepperEnum, interfejs1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepperEnum
@@ -16,29 +16,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af99bd165386f86d2045a7f5a5a7708c7b0d0b8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d9585fc3d10f7f58c7949eaef517e545d51010e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572139"
 ---
-# <a name="icordebugstepperenum-interface1"></a>ICorDebugStepperEnum Interface1
-Implementuje metody ICorDebugEnum i wylicza ICorDebugStepper — tablic.  
+# <a name="icordebugstepperenum-interface1"></a>ICorDebugStepperEnum, interfejs1
+Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugStepper —.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|Pobiera określoną liczbę `ICorDebugStepper` wystąpień z wyliczenia, zaczynając od bieżącego położenia.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|Pobiera określoną liczbę `ICorDebugStepper` wystąpień z wyliczenia, zaczynając od bieżącej pozycji.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -46,5 +46,5 @@ Implementuje metody ICorDebugEnum i wylicza ICorDebugStepper — tablic.
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

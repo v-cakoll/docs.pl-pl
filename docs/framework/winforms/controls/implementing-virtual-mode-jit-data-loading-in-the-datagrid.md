@@ -12,69 +12,69 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: ad3ec7fb2e0012459bcf597ac9abee76c20b767e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c8290fe7722dba564bf5addab662a9f6b62d924f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607884"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w formancie DataGridView formularzy systemu Windows
-Jedną z przyczyn Implementowanie trybu wirtualnego w <xref:System.Windows.Forms.DataGridView> formant jest do pobierania danych tylko wtedy, gdy jest to potrzebne. Ta metoda jest wywoływana *ładowanie danych just in time*.  
+Jednym z powodów Implementowanie trybu wirtualnego w <xref:System.Windows.Forms.DataGridView> formant jest pobrać dane tylko wtedy, gdy jest to konieczne. Jest to nazywane *ładowania danych just-in-time*.  
   
- Podczas pracy z bardzo dużych tabel w zdalnej bazy danych, na przykład można uniknąć opóźnienia uruchomienia przez pobranie danych, które są niezbędne do wyświetlania i pobierania dodatkowych danych, tylko wtedy, gdy użytkownik przewija widok nowych wierszy do wyświetlenia. Jeśli komputery klienckie z systemem aplikacji ma ograniczoną ilość pamięci dostępnej dla przechowywania danych, można również odrzucić nieużywanych danych podczas pobierania nowych wartości z bazy danych.  
+ Jeśli pracujesz z bardzo dużych tabel w zdalnej bazy danych, na przykład, możesz zechcieć w celu uniknięcia opóźnień uruchamiania przez pobieranie tylko dane, które są niezbędne do wyświetlania i pobierania dodatkowych danych, tylko wtedy, gdy użytkownik przewija widok nowych wierszy w widoku. Jeśli na komputerach klienckich, uruchamiania aplikacji istnieje ograniczona ilość pamięci dostępna do przechowywania danych, można również odrzucić niewykorzystane dane podczas pobierania nowych wartości z bazy danych.  
   
- W poniższych sekcjach opisano sposób użycia <xref:System.Windows.Forms.DataGridView> kontrolki z pamięci podręcznej w czasie.  
+ W poniższych sekcjach opisano sposób użycia <xref:System.Windows.Forms.DataGridView> kontrolki z pamięcią podręczną just-in-time.  
   
- Aby skopiować kod w tym temacie na jednej liście, zobacz [porady: Implementowanie trybu wirtualnego just in time w formancie DataGridView formularzy systemu Windows podczas ładowania danych](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
+ Aby skopiować kod, w tym temacie na jednej liście, zobacz [jak: Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w Windows formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   
 ## <a name="the-form"></a>Formularz  
- Poniższy przykładowy kod definiuje formularz zawierający tylko do odczytu <xref:System.Windows.Forms.DataGridView> formant, który współdziała z `Cache` obiektu za pomocą <xref:System.Windows.Forms.DataGridView.CellValueNeeded> obsługi zdarzeń. `Cache` Obiektu zarządza wartości przechowywane lokalnie i używa `DataRetriever` obiektu można pobrać wartości z tabeli zamówienia przykładowej bazy danych Northwind. `DataRetriever` Obiektu, który implementuje `IDataPageRetriever` interfejsu wymaganego przez `Cache` klasy, również służy do inicjowania <xref:System.Windows.Forms.DataGridView> kontrolować wierszy i kolumn.  
+ Poniższy przykład kodu przedstawia formularz zawierający tylko do odczytu <xref:System.Windows.Forms.DataGridView> formant, który wchodzi w interakcję z `Cache` obiektu za pomocą <xref:System.Windows.Forms.DataGridView.CellValueNeeded> programu obsługi zdarzeń. `Cache` Obiektu zarządza wartości przechowywanych lokalnie i używa `DataRetriever` obiektu do pobrania wartości z tabeli Orders z przykładowej bazy danych Northwind. `DataRetriever` Obiektu, który implementuje `IDataPageRetriever` interfejsu wymaganego przez `Cache` klasy, jest również używane do zainicjowania <xref:System.Windows.Forms.DataGridView> kontrolować wierszy i kolumn.  
   
  `IDataPageRetriever`, `DataRetriever`, I `Cache` typy są opisane w dalszej części tego tematu.  
   
 > [!NOTE]
->  Przechowywanie poufne informacje, takie jak hasła, w ciągu połączenia może mieć wpływ na bezpieczeństwo aplikacji. Korzystanie z uwierzytelniania systemu Windows (znanego również jako zabezpieczenia zintegrowane) jest bezpieczniejszym sposobem na kontrolowanie dostępu do bazy danych. Aby uzyskać więcej informacji, zobacz [ochrony informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+>  Przechowywanie poufnych informacji, takich jak hasła, w ciągu połączenia mogą wpływać na bezpieczeństwo aplikacji. Korzystanie z uwierzytelniania systemu Windows (znanego również jako zabezpieczenia zintegrowane) jest bezpieczniejszym sposobem na kontrolowanie dostępu do bazy danych. Aby uzyskać więcej informacji, zobacz [ochrony informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
   
 ## <a name="the-idatapageretriever-interface"></a>Interfejs IDataPageRetriever  
- Poniższy przykładowy kod definiuje `IDataPageRetriever` interfejs, który jest implementowany przez `DataRetriever` klasy. Jedyną metodą zadeklarowany w tym interfejsie jest `SupplyPageOfData` metodę, która wymaga indeks wiersza początkowego oraz liczbę liczbę wierszy w jednej strony danych. Te wartości są używane przez implementujący pobrać podzbiór danych ze źródła danych.  
+ Poniższy przykład kodu przedstawia `IDataPageRetriever` interfejs, który jest implementowany przez `DataRetriever` klasy. Jedyną metodą zadeklarowany w tym interfejsie jest `SupplyPageOfData` metody, która wymaga indeks wiersza początkowego i liczbę wierszy w pojedynczej strony danych. Te wartości są używane przez implementujący pobrać podzbiór danych ze źródła danych.  
   
- A `Cache` obiekt używa implementację tego interfejsu podczas konstruowania załadować dwie strony początkowej danych. Zawsze, gdy wartość bez buforowania jest potrzebna, pamięci podręcznej odrzuca jedną z tych stron i żąda nową stronę zawierającą wartości z `IDataPageRetriever`.  
+ A `Cache` obiekt używa implementację tego interfejsu podczas konstruowania załadować dwie strony początkowej danych. Zawsze wtedy, gdy potrzebna jest wartością bez buforowania, bufor odrzuca jedną z tych stron i żąda nową stronę zawierającą wartości z `IDataPageRetriever`.  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
   
 ## <a name="the-dataretriever-class"></a>Klasa DataRetriever  
- Poniższy przykładowy kod definiuje `DataRetriever` klasy, która implementuje `IDataPageRetriever` interfejsu można pobrać strony danych z serwera. `DataRetriever` Klasa udostępnia także `Columns` i `RowCount` właściwości, które <xref:System.Windows.Forms.DataGridView> formant używa do tworzenia niezbędne kolumn i dodaj odpowiednią liczbę puste wiersze do <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji. Dodawanie puste wiersze jest niezbędne, aby formant będą zachowywać się tak, jakby zawiera wszystkie dane w tabeli. Oznacza to, że pole przewijania na pasku przewijania mają odpowiedni rozmiar, a użytkownik będzie mógł uzyskać dostęp każdy wiersz w tabeli. Wiersze są wypełniane przez <xref:System.Windows.Forms.DataGridView.CellValueNeeded> obsługi zdarzeń tylko wtedy, gdy są one przewijane w widoku.  
+ Poniższy przykład kodu przedstawia `DataRetriever` klasy, która implementuje `IDataPageRetriever` interfejsu można pobrać strony danych z serwera. `DataRetriever` Klasa udostępnia także `Columns` i `RowCount` właściwości, które <xref:System.Windows.Forms.DataGridView> kontroli używa do tworzenia wymaganych kolumn i dodać odpowiednią liczbę pustych wierszy do <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji. Dodawanie pustych wierszy jest niezbędne, tak aby kontrolka będą zachowywać się tak, jakby zawiera wszystkie dane w tabeli. Oznacza to, że pole przewijania na pasku przewijania będzie mieć odpowiedni rozmiar, a użytkownik będzie mógł uzyskać dostęp każdy wiersz w tabeli. Wiersze są wypełniane przez <xref:System.Windows.Forms.DataGridView.CellValueNeeded> program obsługi zdarzeń tylko wtedy, gdy są one przewijane do widoku.  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
   
 ## <a name="the-cache-class"></a>Klasa pamięci podręcznej  
- Poniższy przykładowy kod definiuje `Cache` klasy, która zarządza dwie strony dane wprowadzane przy użyciu `IDataPageRetriever` implementacji. `Cache` Klasa definiuje wewnętrzny `DataPage` struktury, która zawiera <xref:System.Data.DataTable> do przechowywania wartości w jednej pamięci podręcznej strony i który oblicza indeksuje wiersza, który reprezentuje górne i dolne granice strony.  
+ Poniższy przykład kodu przedstawia `Cache` klasy, która zarządza dwie strony danych wypełnione za pośrednictwem `IDataPageRetriever` implementacji. `Cache` Klasa definiuje wewnętrznego `DataPage` struktury, która zawiera <xref:System.Data.DataTable> do przechowywania wartości w jednej pamięci podręcznej strony i — oblicza wiersz indeksy, które reprezentują granice górnej i dolnej części strony.  
   
- `Cache` Klasy ładuje dwóch stronach danych w czasie tworzenia. Zawsze, gdy <xref:System.Windows.Forms.DataGridView.CellValueNeeded> wartość, żądanie zdarzenie `Cache` określa obiekt, jeśli wartość jest dostępna w jednej z jego dwóch stron i, jeśli tak, zwraca go. Jeśli wartość nie jest dostępna lokalnie, `Cache` obiektu określa, które jego dwie strony znajduje się najdalej od aktualnie wyświetlanych wierszy i zastępuje strony nową zawierający Żądana wartość, która następnie zwraca.  
+ `Cache` Klasy ładuje dwie strony danych podczas konstruowania. Zawsze, gdy <xref:System.Windows.Forms.DataGridView.CellValueNeeded> zdarzeń żąda wartość `Cache` określa obiekt, jeśli wartość jest dostępna w jednej z jego dwóch stron i, jeśli tak, zwraca go. Jeśli wartość nie jest dostępna lokalnie, `Cache` obiektu określa, które jego dwie strony znajduje się najdalej od aktualnie wyświetlane wiersze i zastępuje strony nową, zawierający Żądana wartość, która następnie zwraca.  
   
- Przy założeniu, że liczba wierszy na stronie danych jest taka sama jak liczba wierszy, które mogą być jednocześnie wyświetlane na ekranie, ten model umożliwia stronicowania za pośrednictwem tabeli wydajnie powrót do ostatniego przeglądanej strony.  
+ Przy założeniu, że liczba wierszy na stronie danych jest taka sama jak liczba wierszy, które mogą być wyświetlane jednocześnie na ekranie, ten model umożliwia użytkownikom stronicowanie tabeli efektywnie wrócić do ostatnio wyświetlane strony.  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
   
-## <a name="additional-considerations"></a>Dodatkowe uwagi  
- W poprzednich przykładach kodu podano jako pokaz ładowania danych just in time. Należy zmodyfikować kod dla potrzeb osiągnąć maksymalną wydajność. Co najmniej należy wybrać odpowiednią wartość liczby wierszy na stronie danych w pamięci podręcznej. Ta wartość jest przekazywana do `Cache` konstruktora. Liczba wierszy na stronie powinien być nie mniejszy niż liczba wierszy, które mogą być wyświetlane jednocześnie w Twojej <xref:System.Windows.Forms.DataGridView> formantu.  
+## <a name="additional-considerations"></a>Dodatkowe zagadnienia  
+ W poprzednich przykładach kodu są dostarczane jako pokaz ładowania danych just-in-time. Należy zmodyfikować kod do własnych potrzeb osiągnąć maksymalną wydajność. Minimum należy wybrać odpowiednią wartość liczby wierszy na stronie dane w pamięci podręcznej. Ta wartość jest przekazywana do `Cache` konstruktora. Liczba wierszy na stronie powinno być nie mniejszy niż liczba wierszy, które mogą być wyświetlane jednocześnie w swojej <xref:System.Windows.Forms.DataGridView> kontroli.  
   
- Aby uzyskać najlepsze rezultaty należy przeprowadzić test wydajności i użyteczność test, aby ustalić wymagania systemu i użytkownika. Kilka czynników, które należy wziąć pod uwagę dołączenie komputerów klienckich z aplikacji, dostępnej przepustowości połączenia sieciowego, użyty i opóźnienia serwera używanego ilość pamięci. Przepustowości i opóźnień powinny być określone w czasie szczytowego wykorzystania.  
+ Aby uzyskać najlepsze wyniki należy przeprowadzić testowanie wydajności i użyteczności testów w celu określenia wymagań systemu i użytkowników. Kilka czynników, które należy wziąć pod uwagę dołączyć ilość pamięci na komputerach klienckich z aplikacji, dostępną przepustowość połączenia sieciowego używane i czas oczekiwania serwera używanego. Przepustowość i czas oczekiwania powinna zostać określona w czasie szczytowego wykorzystania.  
   
- Aby zwiększyć wydajność przewijania aplikacji, można zwiększyć ilość danych przechowywanych lokalnie. Jednak aby zwiększyć czas uruchamiania, należy unikać, początkowo ładowania zbyt dużej ilości danych. Chcesz zmodyfikować `Cache` klasę, aby zwiększyć liczbę stron danych mogą być przechowywane. Za pomocą więcej stron danych może poprawić wydajność przewijania, ale musisz określić idealne liczbę wierszy na stronie danych, w zależności od dostępnej przepustowości i opóźnień serwera. W mniejszych stron serwera uzyskuje się częściej, ale trwa krócej, aby zwrócić żądanych danych. Jeśli opóźnienie jest więcej niż przepustowość problemu, można używać większych stron danych.  
+ Aby poprawić wydajność aplikacji, można zwiększyć ilość danych przechowywanych lokalnie. Jednak aby poprawić czas uruchamiania, należy unikać, początkowo ładowania zbyt dużej ilości danych. Możesz chcieć zmodyfikować `Cache` klasy, aby zwiększyć liczbę stron danych, które mogą być przechowywane. Za pomocą więcej stron danych może zwiększyć wydajność przewijania, ale musisz określić idealne liczba wierszy na stronie danych w zależności od dostępnej przepustowości i opóźnień serwera. Za pomocą mniejszej stron serwera uzyskuje się częściej, ale trwa krócej, aby zwrócić żądanych danych. Jeśli opóźnienie jest więcej niż przepustowość problemu, można używać większej stron danych.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
- [Dostrajanie wydajności w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
- [Najlepsze praktyki dotyczące skalowania kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
- [Tryb wirtualny w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
- [Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
- [Instrukcje: implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
+- [Dostrajanie wydajności w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Najlepsze praktyki dotyczące skalowania kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Tryb wirtualny w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Przewodnik: Implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
+- [Instrukcje: Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

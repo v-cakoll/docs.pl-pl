@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f8132296035e9ddcdcad76d93ed05358beb0b81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37d91ca7935e114504864683075f4809de7270fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599117"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps — Metoda
-Modyfikuje określony `Assembly` struktura metadanych.  
+Modyfikuje określonego `Assembly` struktury metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,37 +43,37 @@ HRESULT SetAssemblyProps (
   
 #### <a name="parameters"></a>Parametry  
  `pma`  
- [in] Token metadanych, który określa `Assembly` struktura metadanych ma być zmodyfikowana.  
+ [in] Token metadanych, który określa `Assembly` struktury metadanych do zmodyfikowania.  
   
  `pbPublicKey`  
- [in] Wskaźnik do klucza publicznego zestawu wydawcy.  
+ [in] Wskaźnik do klucza publicznego wydawcy zestawu.  
   
  `cbPublicKey`  
- [in] Wyrażony w bajtach rozmiar `pbPublicKey`.  
+ [in] Rozmiar w bajtach `pbPublicKey`.  
   
  `ulHashAlgId`  
- [in] Identyfikator algorytmu wyznaczania wartości skrótu używany do tworzenia skrótu pliki zestawu.  
+ [in] Identyfikator algorytmu mieszania używany do tworzenia skrótu plików zestawu.  
   
  `szName`  
- [in] Tekst zrozumiałą nazwę zestawu.  
+ [in] Nazwa tekstowych zrozumiałych zestawu.  
   
  `pMetaData`  
- [in] Wskaźnik do assemblymetadata —, który zawiera informacje o wersji platformy i ustawień regionalnych dla zestawu.  
+ [in] Wskaźnik do assemblymetadata —, który zawiera informacje o wersji, platformy i ustawienia regionalne dla zestawu.  
   
  `dwAssemblyFlags`  
- [in] Bitowe połączenie [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) wartości, które określają różne atrybuty zestawu.  
+ [in] Bitowa kombinacja [assemblyflags —](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) wartości, które określają różne atrybuty zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby utworzyć `Assembly` metadanych struktury, użyj [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) metody.  
+ Aby utworzyć `Assembly` struktury metadanych, użyj [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

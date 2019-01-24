@@ -1,15 +1,15 @@
 ---
-title: 'Porady: obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (C#)'
+title: 'Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: debc6bffd2a5c23e27fe8685c237b33016745be6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3a4bd410bc0d01e835132f7752970417be66941b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585841"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Porady: obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (C#)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (C#)
 Ten przykład przedstawia sposób wykonywania obliczeń agregacji, takich jak Suma, średnia, minimum i maksimum dla kolumn w pliku CSV. Zasady przykładu, które przedstawiono poniżej mogą dotyczyć innych typów strukturalnych tekstu.  
   
 ### <a name="to-create-the-source-file"></a>Aby utworzyć plik źródłowy  
@@ -161,7 +161,7 @@ class SumColumns
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego, za pomocą odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

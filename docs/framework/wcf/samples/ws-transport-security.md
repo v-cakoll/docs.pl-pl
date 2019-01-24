@@ -2,12 +2,12 @@
 title: Zabezpieczenia transportu WS
 ms.date: 03/30/2017
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
-ms.openlocfilehash: 3bc9cf3700e79b62c54c335f838c7fa660d9e780
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0bf4a4221e52f3fa57c2dce4c23300ecbead28ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616228"
 ---
 # <a name="ws-transport-security"></a>Zabezpieczenia transportu WS
 Niniejszy przykład pokazuje użycie protokołu SSL zabezpieczenia transportu z <xref:System.ServiceModel.WSHttpBinding> powiązania. Domyślnie `wsHttpBinding` powiązania zapewnia komunikację HTTP. Po skonfigurowaniu zabezpieczeń transportu powiązanie obsługuje komunikację HTTPS. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora. `wsHttpBinding` Jest określona i skonfigurowane w plikach konfiguracji aplikacji dla klienta i usługi.  
@@ -85,4 +85,4 @@ Press <ENTER> to terminate client.
   
 5.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

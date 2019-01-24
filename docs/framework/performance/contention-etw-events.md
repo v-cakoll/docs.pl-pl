@@ -7,35 +7,35 @@ helpviewer_keywords:
 ms.assetid: 6933e753-2f2a-425b-ae84-42138c957d76
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3487b67ea49cecfd0da2b5b3f993ea54d562145d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 90beb1487581ff4c031d6f10fb613430207dc026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397523"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575570"
 ---
 # <a name="contention-etw-events"></a>Zdarzenia rywalizacji ETW
-Zdarzenia rywalizacji są wywoływane zawsze, gdy w przypadku konfliktu między <xref:System.Threading.Monitor?displayProperty=nameWithType> blokady lub blokad natywnego używane przez środowisko uruchomieniowe. Gdy wątek oczekuje na blokadę, podczas gdy inny wątek posiada blokady wystąpienia rywalizacji.  
+Zdarzenia rywalizacji o zasoby są wywoływane zawsze wtedy, gdy istnieje rywalizacji o <xref:System.Threading.Monitor?displayProperty=nameWithType> blokad lub natywnych blokady używany przez środowisko uruchomieniowe. Rywalizacji występuje, gdy wątek jest oczekiwanie na blokadę, podczas gdy inny wątek posiada blokadę.  
   
- W poniższej tabeli przedstawiono — słowo kluczowe, w którym są wywoływane zdarzenia rywalizacji i poziom zdarzenia. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ W poniższej tabeli przedstawiono — słowo kluczowe, w którym są generowane zdarzenia rywalizacji o zasoby i poziom zdarzenia. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
-|Słowo kluczowe wywołaniem zdarzenia|Poziom|  
+|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
 |`ContentionKeyword` (0x4000)|Komunikat informacyjny (4)|  
   
- W poniższej tabeli przedstawiono informacje o zdarzeniach.  
+ W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
 |-----------|--------------|-----------------|  
-|`ContentionStart_V1`|81|Uruchamia rywalizacji. To zdarzenie nie zawiera ilość wirowania przed wątek oczekuje na uzyskanie blokady; jest on wywoływane tylko wtedy, gdy wątek oczekuje na uzyskanie blokady.|  
-|`ContentionStop`|81|Kończy się rywalizacji.|  
+|`ContentionStart_V1`|81|Rozpoczyna się rywalizacji o zasoby. To zdarzenie nie zawiera ilość obrotowych czas, po którym wątek czeka na uzyskanie blokady; jest zgłaszany tylko wtedy, gdy wątek czeka na uzyskanie blokady.|  
+|`ContentionStop`|81|Kończy się rywalizacji o zasoby.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Flagi|Windows: UInt8|zarządzane 0; 1 w przypadku natywnego.|  
-|ClrInstanceID|Windows: UInt16|Unikatowy identyfikator wystąpienia środowiska CLR.|  
+|Flagi|win:UInt8|0 w przypadku zarządzanych; 1 w przypadku natywnych.|  
+|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Zobacz także
+- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

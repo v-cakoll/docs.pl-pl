@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 632d3912bae28da22e701078bb47d2d8dbfd3644
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 668b3849af9be24e019dc472a0b80067f0e1e0c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612739"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>ICorDebugRegisterSet::GetThreadContext — Metoda
 Pobiera kontekst bieżącego wątku.  
@@ -42,15 +42,15 @@ HRESULT GetThreadContext(
  [in] Rozmiar w bajtach z `context` tablicy.  
   
  `context`  
- [w, out] Tablicę bajtów, które tworzą Win32 `CONTEXT` strukturę dla bieżącej platformie.  
+ [out w] Tablica bajtów, które tworzą Win32 `CONTEXT` struktury dla bieżącej platformy.  
   
 ## <a name="remarks"></a>Uwagi  
- Debuger powinien wywoływać tej funkcji, zamiast Win32 `GetThreadContext` działać, ponieważ wątek może być w stanie "hijacked", gdy kontekst zostało tymczasowo zmienione. Zwrócone dane mają Win32 `CONTEXT` strukturę dla bieżącej platformie.  
+ Debuger powinien wywołać tę funkcję, zamiast Win32 `GetThreadContext` działać, ponieważ wątek może być w stanie "przejętego", gdzie kontekst zostało tymczasowo zmienione. Dane zwracane to Win32 `CONTEXT` struktury dla bieżącej platformy.  
   
- Ramek liścia klientów należy sprawdzić rejestrujący są prawidłowe, za pomocą [ICorDebugRegisterSet::GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).  
+ Dla ramek elementu członkowskiego typu liść klientów należy sprawdzić rejestrujący są prawidłowe, za pomocą [ICorDebugRegisterSet::GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -58,6 +58,6 @@ HRESULT GetThreadContext(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugRegisterSet, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [ICorDebugRegisterSet2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugRegisterSet, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

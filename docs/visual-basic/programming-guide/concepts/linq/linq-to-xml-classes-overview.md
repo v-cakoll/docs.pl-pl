@@ -2,12 +2,12 @@
 title: LINQ to XML — Przegląd klasy (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
-ms.openlocfilehash: dd9e392c1fec86bfb1fe0e0f8bee0cd0c7919fe4
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 0b95a3f4411e20390962a2eccf28b8cfad4b8e09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570125"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML — Przegląd klasy (Visual Basic)
 Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] klas w <xref:System.Xml.Linq> przestrzeni nazw oraz krótki opis każdego z nich.  
@@ -17,7 +17,7 @@ Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] k
 ### <a name="xattribute-class"></a>Klasy XAttribute  
  <xref:System.Xml.Linq.XAttribute> reprezentuje atrybut XML. Aby uzyskać szczegółowe informacje i przykłady, zobacz [XAttribute klasa — Przegląd (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md).  
   
-### <a name="xcdata-class"></a>Klasa XCData  
+### <a name="xcdata-class"></a>XCData Class  
  <xref:System.Xml.Linq.XCData> reprezentuje węzeł tekstowy CDATA.  
   
 ### <a name="xcomment-class"></a>Klasa XComment  
@@ -65,19 +65,19 @@ Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] k
   
 -   <xref:System.Xml.Linq.XDocumentType>  
   
-### <a name="xnodedocumentordercomparer-class"></a>Klasa XNodeDocumentOrderComparer  
+### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer Class  
  <xref:System.Xml.Linq.XNodeDocumentOrderComparer> oferuje funkcje, aby porównać węzłów w celu ich kolejności dokumentu.  
   
-### <a name="xnodeequalitycomparer-class"></a>Klasa XNodeEqualityComparer  
+### <a name="xnodeequalitycomparer-class"></a>XNodeEqualityComparer Class  
  <xref:System.Xml.Linq.XNodeEqualityComparer> oferuje funkcje, aby porównać węzłów na równoważność wartości.  
   
-### <a name="xobject-class"></a>Klasa XObject  
+### <a name="xobject-class"></a>XObject Class  
  <xref:System.Xml.Linq.XObject> jest abstrakcyjna klasa bazowa <xref:System.Xml.Linq.XNode> i <xref:System.Xml.Linq.XAttribute>. Zapewnia funkcje adnotacji i zdarzeń.  
   
 ### <a name="xobjectchange-class"></a>Klasa XObjectChange  
  <xref:System.Xml.Linq.XObjectChange> Określa typ zdarzenia, gdy zdarzenie jest wywoływane dla <xref:System.Xml.Linq.XObject>.  
   
-### <a name="xobjectchangeeventargs-class"></a>Klasa XObjectChangeEventArgs  
+### <a name="xobjectchangeeventargs-class"></a>XObjectChangeEventArgs Class  
  <xref:System.Xml.Linq.XObjectChangeEventArgs> udostępnia dane dla <xref:System.Xml.Linq.XObject.Changing> i <xref:System.Xml.Linq.XObject.Changed> zdarzenia.  
   
 ### <a name="xprocessinginstruction-class"></a>Klasa XProcessingInstruction  
@@ -86,5 +86,5 @@ Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] k
 ### <a name="xtext-class"></a>Klasa XText  
  <xref:System.Xml.Linq.XText> reprezentuje węzeł tekstowy. W większości przypadków nie trzeba używać tej klasy. Ta klasa służy przede wszystkim dla zawartości mieszanej.  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ to XML — przegląd programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ to XML — przegląd programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

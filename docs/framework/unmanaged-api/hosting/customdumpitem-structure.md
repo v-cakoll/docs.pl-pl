@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f742d219d603488bbade091f7a8192785d3e84f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 930d56fcfe7cf0d2a128c2068e724b85a224b3fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568923"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem — Struktura
 Opis elementu do dodania do niestandardowych zrzutu w raportowaniu błędów.  
@@ -41,20 +41,20 @@ struct {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`itemKind`|[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) wartość, która wskazuje rodzaj elementu do dodania.|  
-|`pReserved`|Obecnie nieużywane. Wszystkie elementy dodane do Unii nie może być większe niż rozmiar wskaźnika. Jeśli `struct` jest wymagane, należy przydzielić je oddzielnie i wskaż go.|  
+|`itemKind`|[Ecustomdumpitemkind —](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) wartość wskazującą rodzaj elementu do dodania.|  
+|`pReserved`|Obecnie nieużywane. Wszystkie elementy dodane do Unii musi być większy niż rozmiar wskaźnika. Jeśli `struct` jest wymagane, należy przydzielić je oddzielnie i wskaż go.|  
   
 ## <a name="remarks"></a>Uwagi  
- [ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) przyjmuje parametr typu `CustomDumpItem`.  
+ [Iclrerrorreportingmanager::begincustomdump —](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) przyjmuje parametr typu `CustomDumpItem`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.idl  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>Zobacz także
+- [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

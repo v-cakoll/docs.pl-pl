@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ustawienie modułu renderowania ToolStrip dla aplikacji'
+title: 'Instrukcje: Ustawienie modułu renderowania ToolStrip dla aplikacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - toolbars [Windows Forms], customizing
 ms.assetid: 46acef3e-9844-4ae8-9a2e-3006fe99cadf
-ms.openlocfilehash: b86724bda83c701ad5c5872ae8d97bb490158e76
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2eaa917ff903c1d9e1579ac9c9caa3f3db516afb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577221"
 ---
-# <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>Porady: ustawienie modułu renderowania ToolStrip dla aplikacji
+# <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>Instrukcje: Ustawienie modułu renderowania ToolStrip dla aplikacji
 Można dostosować wygląd Twojego <xref:System.Windows.Forms.ToolStrip> kontroluje indywidualnie lub dla wszystkich <xref:System.Windows.Forms.ToolStrip> formantów w aplikacji.  
   
 ## <a name="example"></a>Przykład  
@@ -42,11 +42,11 @@ Można dostosować wygląd Twojego <xref:System.Windows.Forms.ToolStrip> kontrol
   
 -   Odwołania do zestawów System.Design System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
- Aby uzyskać informacje o tworzeniu tego przykładu z wiersza polecenia dla programu visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby uzyskać informacje o tworzeniu tego przykładu z wiersza polecenia dla programu visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.ToolStripManager>  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>  
- [ToolStrip, kontrolka](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.ToolStripManager>
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
+- [ToolStrip, kontrolka](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

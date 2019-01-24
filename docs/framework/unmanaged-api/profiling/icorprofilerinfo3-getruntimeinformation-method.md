@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67e1d20f7faf38fa37083f1a5b1cc0c1060b7a32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5262ba6ef0d2d36372326df24b519072e2aa6fc6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587518"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation — Metoda
-Zawiera informacje o wersji dotyczące środowisko uruchomieniowe języka wspólnego (CLR), który jest poddawany profilowaniu.  
+Zawiera informacje o wersji dotyczące wspólne środowisko uruchomieniowe języka (wspólnego CLR), która jest profilowana.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,37 +45,37 @@ HRESULT GetRuntimeInformation(
   
 #### <a name="parameters"></a>Parametry  
  `pClrInstanceId`  
- [out] Identyfikator pracownika uruchomionego wystąpienia CLR w procesie. To jest taka sama jak `ClrInstanceID` czy raporty śledzenie zdarzeń dla zdarzenia uruchamiania systemu Windows (ETW).  
+ [out] Identyfikator przedstawiciel uruchomionego wystąpienia CLR w procesie. To jest taka sama jak `ClrInstanceID` czy raportów śledzenia zdarzeń dla zdarzenia uruchamiania Windows (ETW).  
   
  `pRuntimeType`  
- [out] Typ środowiska uruchomieniowego. Ten parametr zwraca `COR_PRF_DESKTOP_CLR` dla tej wersji środowiska CLR, lub `COR_PRF_CORE_CLR` dla wersji core CLR używane w programie Silverlight.  
+ [out] Typ środowiska uruchomieniowego. Ten parametr zwraca `COR_PRF_DESKTOP_CLR` w przypadku klasycznej wersji środowiska CLR, lub `COR_PRF_CORE_CLR` core wersję środowiska CLR używanego w technologii Silverlight.  
   
  `pMajorVersion`  
  [out] Główny numer wersji środowiska CLR.  
   
  `pMinorVersion`  
- [out] Podrzędny numer wersji środowiska CLR.  
+ [out] Pomocniczy numer wersji środowiska CLR.  
   
  `pBuildVersion`  
  [out] Numer wersji kompilacji środowiska CLR.  
   
  `pQFEVersion`  
- [out] Numer wersji środowiska CLR, która jest skojarzona z aktualizacji oprogramowania.  
+ [out] Numer wersji środowiska CLR, który jest skojarzony z aktualizacji oprogramowania.  
   
  `cchVersionString`  
- [in] Długość w znakach buforu który `szVersionString` wskazuje.  
+ [in] Długość w znakach buforu, który `szVersionString` wskazuje.  
   
  `pcchVersionString`  
  [out] Długość w znakach, z `szVersionString`.  
   
  `szVersionString`  
- [out] Ciąg wersji aparatu CLR.  
+ [out] Ciąg wersji środowiska CLR.  
   
 ## <a name="remarks"></a>Uwagi  
- Użytkownik może przekazać wartości null dla żadnego parametru. Jednak `pcchVersionString` nie może mieć wartości null chyba że `szVersionString` również ma wartość null.  
+ Możesz przekazać wartości null dla każdego parametru. Jednak `pcchVersionString` nie może mieć wartości null Jeśli nie `szVersionString` również ma wartość null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -83,7 +83,7 @@ HRESULT GetRuntimeInformation(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

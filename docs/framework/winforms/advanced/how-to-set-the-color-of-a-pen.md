@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ustawianie koloru pióra'
+title: 'Instrukcje: Ustawianie koloru pióra'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - pens [Windows Forms], setting color
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
-ms.openlocfilehash: 37bc289fa1eeb7ef5510474dff062ae76be5fc65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0402a7d6bb641ef6d97eb41bc25f3c59b3b4250
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522385"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569443"
 ---
-# <a name="how-to-set-the-color-of-a-pen"></a>Porady: ustawianie koloru pióra
+# <a name="how-to-set-the-color-of-a-pen"></a>Instrukcje: Ustawianie koloru pióra
 W tym przykładzie zmienia kolor istniejących wcześniej <xref:System.Drawing.Pen> obiektu  
   
 ## <a name="example"></a>Przykład  
@@ -30,11 +30,11 @@ W tym przykładzie zmienia kolor istniejących wcześniej <xref:System.Drawing.P
 -   A <xref:System.Drawing.Pen> obiektu o nazwie `myPen`.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Należy wywołać <xref:System.Drawing.Pen.Dispose%2A> w obiektach, które zużywają zasoby systemowe (takie jak <xref:System.Drawing.Pen> obiektów) po zakończeniu korzystania z nich.  
+ Należy wywołać <xref:System.Drawing.Pen.Dispose%2A> na obiektach, które zużywają zasoby systemowe (takie jak <xref:System.Drawing.Pen> obiektów) po zakończeniu korzystania z nich.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Drawing.Pen>  
- [Wprowadzenie do programowania grafiki](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Instrukcje: tworzenie pióra](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- [Rysowanie linii i kształtów za pomocą pióra](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- [Pióra, linie i prostokąty w GDI+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Drawing.Pen>
+- [Wprowadzenie do programowania grafiki](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+- [Instrukcje: Tworzenie pióra](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)
+- [Rysowanie linii i kształtów za pomocą pióra](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [Pióra, linie i prostokąty w GDI+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)

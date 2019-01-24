@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: deaeb4e244a4f9c1e8582d9bea26c2ae5cfde818
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee56a7f343de999d68a71d9eac04eed6e06b444e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568897"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters — Metoda
-Pobiera wartość każdego rejestru (na komputerze, który jest aktualnie wykonywany kodu) określonym przez maska bitowa.  
+Pobiera wartość każdego rejestru (na komputerze, który aktualnie wykonuje kod) określonej przez Maska bitów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,21 +40,21 @@ HRESULT GetRegisters (
   
 #### <a name="parameters"></a>Parametry  
  `mask`  
- [in] Maska bitowa, która określa rejestru, które mają być pobierane wartości. Każdy bit odpowiada rejestru. Jeśli bit ma wartość 1, wartość rejestru jest pobierana; w przeciwnym razie wartość rejestru nie została pobrana.  
+ [in] Maska bitów, określający które rejestr wartości, które mają być pobierane. Każdy bit odnosi się do rejestru. Jeśli bit jest ustawiony na jedną, wartość rejestru jest pobierana; w przeciwnym razie wartości rejestru nie są pobierane.  
   
  `regCount`  
  [in] Liczba wartości rejestru, które mają zostać pobrane.  
   
  `regBuffer`  
- [out] Tablica `CORDB_REGISTER` obiektów, z których każdy odbiera wartość rejestru.  
+ [out] Tablica `CORDB_REGISTER` obiektów, z których każdy otrzymuje wartość rejestru.  
   
 ## <a name="remarks"></a>Uwagi  
- Rozmiar tablicy powinna być równa Liczba bitów w maska bitowa. `regCount` Parametr określa liczbę elementów w buforze, który będzie otrzymywał wartości rejestru. Jeśli `regCount` wartość jest za mały dla liczby rejestrów wskazywanym przez maski, wyższy rejestrów numerowane zostanie obcięty z zestawu. Jeśli `regCount` wartość jest zbyt duża, nieużywane `regBuffer` elementy zostaną zmodyfikowane.  
+ Rozmiar tablicy powinna być równa liczbie bitów w masce bitowej. `regCount` Parametr określa liczbę elementów w buforze, który będzie otrzymywał wartości rejestru. Jeśli `regCount` wartość jest zbyt mały dla liczby rejestrów wskazywanym przez maskę, wyższe rejestrów numerowane zostanie obcięta z zestawu. Jeśli `regCount` jest zbyt duża, nieużywane `regBuffer` elementy zostaną zostały zmodyfikowane.  
   
- Jeśli maska bitowa określa rejestru, który jest niedostępny, `GetRegisters` zwraca nieokreśloną wartość rejestru.  
+ Jeśli maska bitowa, określa rejestru, który jest niedostępny, `GetRegisters` zwraca wartość nieokreśloną dla tego rejestru.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -62,6 +62,6 @@ HRESULT GetRegisters (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugRegisterSet, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [ICorDebugRegisterSet2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugRegisterSet, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

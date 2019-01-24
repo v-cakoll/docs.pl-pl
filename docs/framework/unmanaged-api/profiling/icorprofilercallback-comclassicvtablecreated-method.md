@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dcb45fcc987952ec5e84cc468dda8d8ede38bdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c23c52108c5c6534f5b8e8b41517ed2129590466
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574836"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated — Metoda
-Powiadamia profilera utworzono vtable międzyoperacyjnego modelu COM, dla określonego identyfikatora IID i klasy.  
+Powiadamia program profilujący vtable międzyoperacyjnego modelu COM, dla określonego identyfikatora IID i klasa została utworzona.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,7 +39,7 @@ HRESULT COMClassicVTableCreated(
   
 #### <a name="parameters"></a>Parametry  
  `wrappedClasId`  
- [in] Identyfikator klasy, dla którego utworzono vtable.  
+ [in] Identyfikator klasy, dla którego została utworzona vtable.  
   
  `implementedIID`  
  [in] Identyfikator interfejsu zaimplementowany przez klasę. Ta wartość może być NULL, jeśli interfejs jest tylko wewnętrzna.  
@@ -48,15 +48,15 @@ HRESULT COMClassicVTableCreated(
  [in] Wskaźnik do początku vtable.  
   
  `cSlots`  
- [in] Liczba gniazd, które znajdują się w vtable.  
+ [in] Liczba miejsc, które znajdują się w vtable.  
   
 ## <a name="remarks"></a>Uwagi  
- Profilera nie należy zablokować w jej implementacja tej metody, ponieważ stos nie może być w stanie, który umożliwia odzyskiwanie pamięci i dlatego nie można włączyć cenią sobie wcześniejsze wyrzucanie elementów bezużytecznych. Jeśli profilera blokuje tutaj i nastąpiła wyrzucanie elementów bezużytecznych, środowisko uruchomieniowe zablokuje dopóki zwraca tego wywołania zwrotnego.  
+ Program profilujący nie powinna blokować w jego implementacja tej metody, ponieważ stos może nie być w stanie umożliwiającym wyrzucania elementów bezużytecznych, a w związku z tym nie można włączyć preemptive wyrzucania elementów bezużytecznych. Jeśli program profilujący blokuje tutaj i wyrzucania elementów bezużytecznych jest podejmowana próba, środowisko uruchomieniowe spowoduje zablokowanie, dopóki nie zwróci to wywołanie zwrotne.  
   
- Profiler implementacja tej metody nie powinny wywoływać kodu zarządzanego lub w dowolnym Przyczyna sposób alokacji pamięci zarządzane.  
+ Implementacja tej metody program profilujący nie powinien wywoływać wywołanie kodu zarządzanego lub w dowolnym Przyczyna sposób alokacji pamięci zarządzane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -64,6 +64,6 @@ HRESULT COMClassicVTableCreated(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [COMClassicVTableDestroyed, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [COMClassicVTableDestroyed, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)

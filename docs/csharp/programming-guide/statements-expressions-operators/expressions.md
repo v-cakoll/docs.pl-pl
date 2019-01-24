@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600495"
 ---
 # <a name="expressions-c-programming-guide"></a>Wyrażenia (Przewodnik programowania w języku C#)
 *Wyrażenie* jest sekwencją jednego lub większej liczbie operandów i zero lub więcej operatorów, które mogą być obliczane do pojedynczej wartości, obiektu, metody lub przestrzeni nazw. Wyrażenia może składać się z wartością literału, wywołanie metody, operatora i jego operandy lub *prostej nazwie*. Proste nazwy mogą być nazwa zmiennej, składowej typu, parametru metody, przestrzeń nazw lub typu.  
@@ -73,11 +73,11 @@ C# obsługuje *elementy członkowskie z wyrażeniem*, które umożliwiają okre�
 ## <a name="remarks"></a>Uwagi  
  Zawsze, gdy zmienna, właściwości obiektu lub obiektu dostęp indeksatora jest identyfikowany przy użyciu wyrażenia, wartość tego elementu jest używana jako wartość wyrażenia. Wyrażenie można umieścić dowolne miejsce w języku C# gdy wartość lub obiektu jest wymagany, tak długo, jak ostatecznie wynikiem wyrażenia jest na wymagany typ.  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Delegaty](../../../csharp/programming-guide/delegates/index.md)  
-- [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-- [Typy](../../../csharp/programming-guide/types/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Delegaty](../../../csharp/programming-guide/delegates/index.md)
+- [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Typy](../../../csharp/programming-guide/types/index.md)
 - [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

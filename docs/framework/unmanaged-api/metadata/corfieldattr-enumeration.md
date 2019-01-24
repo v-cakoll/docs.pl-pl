@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576018"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr — Wyliczenie
-Zawiera wartości, które opisują metadanych pola.  
+Zawiera wartości, które opisują metadane dotyczące pola.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -63,31 +63,31 @@ typedef enum CorFieldAttr {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|Określa informacje o ułatwieniach dostępu.|  
-|`fdPrivateScope`|Określa, czy pole nie może być przywoływany.|  
-|`fdPrivate`|Określa, że pole jest dostępne tylko dla jego typu nadrzędnego.|  
-|`fdFamANDAssem`|Określa, że pole jest dostępne dla klas pochodnych w jego zestaw.|  
-|`fdAssembly`|Określa, że pole jest dostępne dla wszystkich typów w zestawie jej.|  
-|`fdFamily`|Określa, czy pole jest dostępne tylko dla jego typu i klasach pochodnych.|  
-|`fdFamORAssem`|Określa, czy pole jest dostępny, za pomocą klasy pochodne i wszystkie typy w jego zestaw.|  
-|`fdPublic`|Określa, że pole jest dostępne dla wszystkich typów z widocznością tego zakresu.|  
-|`fdStatic`|Określa, że pole jest elementem członkowskim jego typu, a nie elementu członkowskiego wystąpienia.|  
-|`fdInitOnly`|Określa, że nie można zmienić pola po jego inicjowania.|  
-|`fdLiteral`|Określa, czy wartość pola jest stałą czasu kompilacji.|  
-|`fdNotSerialized`|Określa, czy pole nie jest serializowany, gdy jej typ jest zdalny.|  
-|`fdSpecialName`|Określa, czy pole ma specjalne i że jego nazwa zawiera opis sposobu.|  
-|`fdPinvokeImpl`|Określa, że implementacja pole jest przekazywany za pomocą funkcji PInvoke.|  
+|`fdPrivateScope`|Określa, że pole nie może być przywoływany.|  
+|`fdPrivate`|Określa, że pole jest dostępne tylko dla typu nadrzędnego.|  
+|`fdFamANDAssem`|Określa, że pole jest dostępny przez klasy pochodne w jego zestawie.|  
+|`fdAssembly`|Określa, że pole jest dostępne dla wszystkich typów w jego zestawie.|  
+|`fdFamily`|Określa, że pole jest dostępne tylko dla jego typu i klasach pochodnych.|  
+|`fdFamORAssem`|Określa, że pole jest dostępne, przez klasy pochodne, jak również wszystkie typy w jego zestawie.|  
+|`fdPublic`|Określa, że pole jest dostępne dla wszystkich typów za pomocą widoczność tego zakresu.|  
+|`fdStatic`|Określa, że pole jest elementem członkowskim jego typu, a nie składową wystąpienia.|  
+|`fdInitOnly`|Określa, że pole nie można zmienić po jego zainicjowaniu.|  
+|`fdLiteral`|Określa, że wartość pola jest stałą czasu kompilacji.|  
+|`fdNotSerialized`|Określa, czy pole nie jest serializowana, gdy jej typ jest zdalny.|  
+|`fdSpecialName`|Określa, czy pole ma specjalne i że jego nazwę w tym artykule opisano sposób.|  
+|`fdPinvokeImpl`|Określa, że implementacja pola jest przekazywany za pomocą usług PInvoke.|  
 |`fdReservedMask`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
-|`fdRTSpecialName`|Określa, że typowe metadane środowiska wykonawczego języka wewnętrznych interfejsów API należy sprawdzać kodowanie nazwy.|  
-|`fdHasFieldMarshal`|Określa, czy pole zawiera informacji organizacyjnych.|  
-|`fdHasDefault`|Określa, czy pole ma wartość domyślną.|  
-|`fdHasFieldRVA`|Określa, czy pole ma wirtualnego adresu względnego.|  
+|`fdRTSpecialName`|Określa, że typowe metadanych środowiska wykonawczego języka wewnętrznych interfejsach API należy sprawdzać kodowanie nazwy.|  
+|`fdHasFieldMarshal`|Określa, czy pole zawiera informacje dotyczące organizowania.|  
+|`fdHasDefault`|Określa, że pole ma wartość domyślną.|  
+|`fdHasFieldRVA`|Określa, że pole ma względny adres wirtualny.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

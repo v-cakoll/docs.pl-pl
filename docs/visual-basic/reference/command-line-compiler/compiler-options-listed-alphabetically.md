@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 98a9295f1a2158e28a699aa6dfb1403542e523b4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c16cf910546dcbe0a19efa13b552ffd4d9b6411
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580974"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opcje kompilatora Visual Basic w porządku alfabetycznym
 Kompilator wiersza polecenia programu Visual Basic jest dostarczany jako alternatywę do kompilowania programów z programu Visual Studio zintegrowane środowisko programistyczne (IDE). Oto lista opcje wiersza polecenia kompilatora języka Visual Basic, sortowana alfabetycznie.  
@@ -25,7 +25,7 @@ Kompilator wiersza polecenia programu Visual Basic jest dostarczany jako alterna
 |`-analyzer`|Uruchom analizatorów z tego zestawu (skrócona forma: -)|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Określa adres podstawowy biblioteki dll.|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|Tworzy plik, który zawiera informacje, które można łatwo Zgłoś usterkę.|  
-|`-checksumalgorithm:<alg>`|Określić algorytm obliczania sumy kontrolnej pliku źródłowego, które zostały zapisane w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (domyślna) lub SHA256.|  
+|`-checksumalgorithm:<alg>`|Określić algorytm obliczania sumy kontrolnej pliku źródłowego, które zostały zapisane w pliku PDB.  Obsługiwane są następujące wartości: Algorytm SHA1 (domyślna) lub SHA256.|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Określa stronę kodową do użycia dla wszystkich plikach kodu źródłowego w kompilacji.|  
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Generuje informacje debugowania.|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Definiuje symbole dla kompilacji warunkowej.|  
@@ -80,8 +80,8 @@ Kompilator wiersza polecenia programu Visual Basic jest dostarczany jako alterna
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Identyfikuje użytkownika aplikacji plik manifestu Win32 osadzanego do projektu przenośnych plików wykonywalnych (PE) pliku.|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Wstawia zasób Win32 do pliku wyjściowego.|  
   
-## <a name="see-also"></a>Zobacz także  
- [Opcje kompilatora Visual Basic według kategorii](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
- [Wprowadzenie do projektanta projektu](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
- [Opcje kompilatora C# w porządku alfabetycznym](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [Opcje kompilatora C# w rozbiciu na kategorie](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+## <a name="see-also"></a>Zobacz także
+- [Opcje kompilatora Visual Basic według kategorii](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
+- [Wprowadzenie do projektanta projektu](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)
+- [Opcje kompilatora C# w porządku alfabetycznym](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+- [Opcje kompilatora C# w rozbiciu na kategorie](../../../csharp/language-reference/compiler-options/listed-by-category.md)

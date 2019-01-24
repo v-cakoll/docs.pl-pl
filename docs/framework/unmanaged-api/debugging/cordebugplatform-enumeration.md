@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d3b8f1e869e90fd3388cc0844e608b7ff40fc89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8cbf09ab4ad0192902a964d55a050685b024284
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574303"
 ---
 # <a name="cordebugplatform-enumeration"></a>Wyliczenie CorDebugPlatform
-Udostępnia wartości platform docelowych, które są używane przez [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) metody.  
+Udostępnia wartości platformy docelowe, które są używane przez [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,16 +45,16 @@ typedef enum CorDebugPlatform
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|CORDB_PLATFORM_WINDOWS_X86|Platforma docelowa jest sprzęt Intel x86 z systemem Windows.|  
-|CORDB_PLATFORM_WINDOWS_AMD64|Platforma docelowa jest sprzęt AMD64 lub Intel EM64T z systemem Windows 64-bitowym.|  
-|CORDB_PLATFORM_WINDOWS_IA64|Platforma docelowa jest sprzęt Intel IA-64 z systemem Windows 32-bitowych.|  
-|CORDB_PLATFORM_MAC_PPC|Platforma docelowa jest systemu operacyjnego dla komputerów Macintosh PowerPC sprzętu.|  
-|CORDB_PLATFORM_MAC_X86|Platforma docelowa jest Macintosh systemu operacyjnego na Intel x86 sprzętu.|  
-|CORDB_PLATFORM_WINDOWS_ARM|Platforma docelowa jest Macintosh systemu operacyjnego na sprzęcie ARM systemu Windows.|  
-|CORDB_PLATFORM_MAC_AMD64|Platforma docelowa jest Macintosh systemu operacyjnego na sprzęcie AMD64.|  
+|CORDB_PLATFORM_WINDOWS_X86|Platforma docelowa jest sprzęt firmy Intel x86 z systemem Windows.|  
+|CORDB_PLATFORM_WINDOWS_AMD64|Platforma docelowa jest Windows 64-bitowym systemem AMD64 lub obsługą technologii Intel EM64T sprzętu.|  
+|CORDB_PLATFORM_WINDOWS_IA64|Platforma docelowa jest 32-bitowa Windows uruchomionej na sprzęcie Intel IA-64.|  
+|CORDB_PLATFORM_MAC_PPC|Platforma docelowa jest uruchomionej na sprzęcie PowerPC systemu operacyjnego dla komputerów Macintosh.|  
+|CORDB_PLATFORM_MAC_X86|Platforma docelowa jest uruchomionego na sprzęt firmy Intel x86 systemu operacyjnego dla komputerów Macintosh.|  
+|CORDB_PLATFORM_WINDOWS_ARM|Platforma docelowa jest uruchomionego na ARM Windows sprzętu systemu operacyjnego dla komputerów Macintosh.|  
+|CORDB_PLATFORM_MAC_AMD64|Platformą docelową jest system operacyjny dla komputerów Macintosh uruchomionej na sprzęcie AMD64.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -62,7 +62,7 @@ typedef enum CorDebugPlatform
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
- `CORDB_PLATFORM_WINDOWS_ARM` i `CORDB_PLATFORM_MAC_AMD64` elementy są dostępne w programie .NET Framework 4.5.2 i nowszych wersjach.  
+ `CORDB_PLATFORM_WINDOWS_ARM` i `CORDB_PLATFORM_MAC_AMD64` składowe są dostępne w programie .NET Framework 4.5.2 i nowszych wersjach.  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

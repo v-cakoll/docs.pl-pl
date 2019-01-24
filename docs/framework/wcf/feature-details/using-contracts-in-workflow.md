@@ -2,18 +2,18 @@
 title: Używanie kontraktów w przepływie pracy
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
-ms.openlocfilehash: 1772c61147bb8a96f3f78b4226a1d341df3eb9d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fd18e1a180aa390f8f0ce7ca414921723399eb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565604"
 ---
 # <a name="using-contracts-in-workflow"></a>Używanie kontraktów w przepływie pracy
-Podczas wdrażania usługi, należy określić numer kontraktów opisujących usługę i wysyła i odbiera dane. Dane są reprezentowane jako kontraktów danych i kontrakty komunikatu; usługi WCF, zarówno i przepływu pracy Użyj definicje kontraktu danych kontraktu i wiadomości jako części opisy usług. Sama usługa przedstawia metadanych (w formie WSDL) w celu opisania działania usługi. W programie WCF kontraktów usług i kontrakty operacji definiują usługi i operacje, które obsługuje. Jednak w usłudze przepływu pracy, umowy te są częścią procesu biznesowego. są one widoczne w metadanych przez proces, nazywany wnioskowania kontraktu.  
+Podczas wdrażania usługi, należy zdefiniować liczbę zamówień, które opisują usługi i dane, które wysyła i odbiera. Dane są reprezentowane jako kontraktów danych i kontrakty komunikatów; usługi WCF i przepływu pracy Użyj definicje kontraktu danych kontraktu i komunikat jako część opisy usług. Sama usługa udostępnia metadane (w formie WSDL), w celu opisania działania usługi. W programie WCF kontraktów usług i kontrakty operacji definiują usługi i operacje, które obsługuje. Jednak w usłudze przepływu pracy, umowy te są częścią procesu biznesowego. są one widoczne w metadanych w procesie nazywanym wnioskowania kontraktu.  
   
-## <a name="contract-inference"></a>Kontrakt wnioskowania  
- Gdy usługa przepływu pracy jest obsługiwana przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost>, definicji przepływu pracy się zbadana i kontrakt jest generowany na podstawie zestawu działań w przepływie pracy do obsługi komunikatów. W szczególności następujące działania i właściwości są używane do generowania kontraktu:  
+## <a name="contract-inference"></a>Wnioskowanie kontraktu  
+ Gdy usługi przepływu pracy znajduje się za pomocą <xref:System.ServiceModel.Activities.WorkflowServiceHost>definicji przepływu pracy jest badany i kontrakt jest generowany na podstawie zestawu działań w przepływie pracy do obsługi komunikatów. W szczególności następujące działania i właściwości są używane do generowania umowy:  
   
  <xref:System.ServiceModel.Activities.Receive> Działanie  
   
@@ -29,10 +29,10 @@ Podczas wdrażania usługi, należy określić numer kontraktów opisujących us
   
  <xref:System.ServiceModel.Activities.TransactedReceiveScope> Działanie  
   
- W rezultacie wnioskowania kontraktu jest opis usługi przy użyciu tych samych struktur danych jako WCF kontraktów usługi i działania. Te informacje jest następnie używane do udostępnienia WSDL usługi przepływu pracy.  
+ Wynik końcowy wnioskowania kontraktu jest opis usługi przy użyciu tych samych struktur danych jako kontraktów usługi i operacji usługi WCF. Te informacje jest następnie używane do udostępnienia WSDL usługi przepływu pracy.  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Działania dotyczące komunikatów](../../../../docs/framework/wcf/feature-details/messaging-activities.md)  
- [Instrukcje: tworzenie przepływu pracy usługi przy użyciu działań dotyczących komunikatów](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
- [Instrukcje: Tworzenie usługi przepływu pracy wykorzystującej istniejący kontrakt usługi](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Działania dotyczące komunikatów](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+- [Instrukcje: Tworzenie usługi przepływu pracy przy użyciu działań dotyczących komunikatów](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [Instrukcje: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)

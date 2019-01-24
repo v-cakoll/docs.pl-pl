@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c0fa19841580c7cfe8902577c3f756712a35893
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b88c49ba93ff3c4cc3f5c7a656dfa5da6e82109e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559846"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress — Metoda
 Pobiera adres tego obiektu "ICorDebugValue", który jest w trakcie debugowania.  
@@ -37,13 +37,13 @@ HRESULT GetAddress (
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [out] Wskaźnik do `CORDB_ADDRESS` obiektu, który określa adres tego obiektu wartości.  
+ [out] Wskaźnik do `CORDB_ADDRESS` obiekt, który określa adres obiektu tej wartości.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wartość jest niedostępna, zwracany jest 0 (zero). To może się zdarzyć, jeśli wartość jest co najmniej częściowo w rejestrach lub przechowywane w uchwytu modułu zbierającego elementy bezużyteczne (`GCHandle`).  
+ Jeśli wartość jest niedostępna, zwracany jest 0 (zero). To może się zdarzyć, jeśli wartość wynosi co najmniej częściowo w rejestrach ani przechowywane na uchwyt modułu odśmiecania pamięci (`GCHandle`).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -51,5 +51,5 @@ HRESULT GetAddress (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

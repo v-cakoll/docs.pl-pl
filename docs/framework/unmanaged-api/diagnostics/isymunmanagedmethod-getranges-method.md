@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32036058924aaf79fa7282144ced75040bc1f825
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6afe0f0d8780a93a7d98f24a11bb67ef65ebf63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604278"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges — Metoda
-Podanej pozycji w dokumencie zwraca tablicę początkową i końcową pary przesunięcia, które odpowiadają zakresom język pośredni firmy Microsoft (MSIL), który obejmuje pozycję w ramach tej metody. Tablica jest tablicą liczb całkowitych i ma format [rozpoczęcia, zakończenia, start, zakończenie]. Określona liczba par zakres jest długość tablicy podzielona przez 2.  
+Danou pozici w dokumencie zwraca tablicę rozpoczęcia i zakończenia pary przesunięcia, które odnoszą się do zakresów języka Microsoft intermediate language (MSIL) uwzględniającą pozycja w ramach tej metody. Tablica jest tablicy liczb całkowitych i ma format [rozpoczęcia, zakończenia, uruchamianie i kończenie]. Liczba par zakres jest długość tablicy podzielonej przez 2.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,28 +42,28 @@ HRESULT GetRanges(
   
 #### <a name="parameters"></a>Parametry  
  `document`  
- [in] Dokument, dla którego wnioskuje się przesunięcie.  
+ [in] Dokument, dla którego żądana jest przesunięcie.  
   
  `line`  
  [in] Wiersz dokumentu odpowiadający zakresów.  
   
  `column`  
- [in] Kolumna dokumentu odpowiadający zakresów.  
+ [in] Kolumna dokumentu, odpowiadający zakresów.  
   
  `cRanges`  
  [in] Rozmiar `ranges` tablicy.  
   
  `pcRanges`  
- [out] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać zakresów.  
+ [out] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać zakresy.  
   
  `ranges`  
- [out] Wskaźnik do buforu, który odbiera zakresów.  
+ [out] Wskaźnik do buforu, który otrzymuje zakresów.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

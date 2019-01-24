@@ -2,12 +2,12 @@
 title: CustomBindingElement
 ms.date: 03/30/2017
 ms.assetid: df959dc5-1aef-4338-a123-6ff3e7bc37af
-ms.openlocfilehash: ff0d7d8d6c6cb180043a834a60ca58159ca84c58
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 23c8e7ca87002a6ee0c6e6a7aba649e00acbdc4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681680"
 ---
 # <a name="custombindingelement"></a>CustomBindingElement
 CustomBindingElement  
@@ -36,9 +36,9 @@ class CustomBindingElement : BindingElement
   
 ## <a name="requirements"></a>Wymagania  
   
-|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
+|MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.CustomBinding>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.CustomBinding>

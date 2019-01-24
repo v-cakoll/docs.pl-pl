@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 2ee0e449da89baaa35f3a8a430df6c16fb1e44e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 79b07891d794200507cdb97a869992ef093aff23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648766"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Obsługa wyjątków (Przewodnik programowania w języku C#)
 A [spróbuj](../../../csharp/language-reference/keywords/try-catch.md) blok jest używany przez programistów C# do kodu partycji, który może mieć wpływ wyjątku. Skojarzone [catch](../../../csharp/language-reference/keywords/try-catch.md) bloki są używane do obsługi wszystkich wyjątków wynikowe. A [na koniec](../../../csharp/language-reference/keywords/try-finally.md) blok zawiera kod, który jest wykonywany niezależnie od tego, czy wyjątek jest zgłaszany w `try` bloku, np. przy zwalnianiu zasobów, które są przydzielane w `try` bloku. A `try` bloku wymaga co najmniej jednym skojarzone `catch` bloków lub `finally` bloku i / lub.  
@@ -56,12 +56,12 @@ A [spróbuj](../../../csharp/language-reference/keywords/try-catch.md) blok jest
 
 Aby uzyskać więcej informacji, zobacz [wyjątki](~/_csharplang/spec/exceptions.md) i [instrukcjami "try"](~/_csharplang/spec/statements.md#the-try-statement) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)  
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
 - [using, instrukcja](../../../csharp/language-reference/keywords/using-statement.md)

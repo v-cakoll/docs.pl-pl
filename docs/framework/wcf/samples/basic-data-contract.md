@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-ms.openlocfilehash: c2f16f74638341cfe6c6d0f3b25967082fc99c97
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cfccf5526cdbf0cf0f147474c1c7719b1492f711
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550334"
 ---
 # <a name="basic-data-contract"></a>Podstawowy kontrakt danych
 Ten przykład demonstruje sposób implementacji kontraktu danych. Kontrakty danych umożliwia przekazanie ze strukturą danych do i z usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , ale używa liczby zespolone zamiast podstawowe typy danych liczbowych.  
@@ -147,4 +147,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

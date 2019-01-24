@@ -2,15 +2,15 @@
 title: SPŁASZCZANIE (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 1a670c63-0a29-4738-80e6-101f66af05c3
-ms.openlocfilehash: 75463ed622ac969eb2690c4118861823479a2caa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 897a5071e45fb92d6a5cc4d44c7a7efc0606f745
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702200"
 ---
 # <a name="flatten-entity-sql"></a>SPŁASZCZANIE (jednostka SQL)
-Konwertuje kolekcję spłaszczonych kolekcją kolekcji. Nowa kolekcja te same zawiera elementy, co stary kolekcji, ale bez struktury zagnieżdżone.  
+Konwertuje kolekcję spłaszczonych kolekcją kolekcji. Nowa kolekcja zawiera te same elementy co stary kolekcji, ale bez struktury zagnieżdżonej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -20,19 +20,19 @@ FLATTEN ( collection )
   
 ## <a name="arguments"></a>Argumenty  
  `collection`  
- Dowolne prawidłowe wyrażenie zwracające kolekcją wartość kolekcji do spłaszczenia do jednej kolekcji.  
+ Dowolne prawidłowe wyrażenie, które zwraca kolekcję wartości kolekcji do spłaszczenia w jedną kolekcję.  
   
 ## <a name="remarks"></a>Uwagi  
- `FLATTEN` jest jednym z [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ustawić operatorów. Wszystkie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatory zestawów są oceniane od lewej do prawej. Zobacz [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) pierwszeństwo informacji dla [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ustawić operatorów.  
+ `FLATTEN` Przykładem jest [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatory zestawu. Wszystkie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatory zestawów są przetwarzane od lewej do prawej. Zobacz [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) pierwszeństwo informacji dla [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatory zestawu.  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie SQL jednostki używa `FLATTEN` operator można przekonwertować na kolekcję spłaszczonych kolekcją kolekcji. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
+ Następujące zapytanie SQL jednostki używa `FLATTEN` operatora, aby przekonwertować kolekcję spłaszczonych kolekcją kolekcji. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1.  Postępuj zgodnie z procedurą w [porady: wykonywanie zapytań tego zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Przekaż następujące zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2.  Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#FLATTEN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#flatten)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

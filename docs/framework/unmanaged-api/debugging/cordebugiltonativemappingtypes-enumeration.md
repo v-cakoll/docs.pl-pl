@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fec0f4f31f45847dc092808b2d47c662213e9d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61b57d534770c6ab7cacbc2c084ac364dc31863f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717613"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes — Wyliczenie
-Wskazuje, czy określony zakres instrukcje macierzystego, reprezentowany przez wystąpienie cor_debug_il_to_native_map — struktura, odpowiada specjalne kodu regionu.  
+Wskazuje, czy określony zakres natywne instrukcje, reprezentowany przez wystąpienie cor_debug_il_to_native_map — struktura, odnosi się do regionu specjalny kod.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,12 +40,12 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`NO_MAPPING`|Zakres natywnego instrukcje nie odpowiada wszelkie specjalne kodu regionu.|  
-|`PROLOG`|Zakres natywnego instrukcje odpowiada prologu.|  
-|`EPILOG`|Zakres natywnego instrukcje odpowiada epilogu.|  
+|`NO_MAPPING`|Zakres natywne instrukcje nie odpowiada dowolny region specjalny kod.|  
+|`PROLOG`|Zakres natywne instrukcje odpowiada prologu.|  
+|`EPILOG`|Zakres natywne instrukcje odpowiada epilogu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -53,6 +53,6 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [GetILToNativeMapping, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [GetILToNativeMapping, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

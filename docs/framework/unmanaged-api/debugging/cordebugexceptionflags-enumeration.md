@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d963a478ee7ae42159a0eb8a4b41cf20ae663aa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbb2bf681ed05728a015456e0e4c37157a55f755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699756"
 ---
 # <a name="cordebugexceptionflags-enumeration"></a>CorDebugExceptionFlags — Wyliczenie
 Zawiera dodatkowe informacje o wyjątku.  
@@ -39,14 +39,14 @@ typedef enum CorDebugExceptionFlags {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_NONE`|Nie ma żadnych wyjątków.|  
-|`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|Wyjątek stanowi interceptable.<br /><br /> Czas wyjątku może nadal być w taki sposób, że debuger nie może przechwycić go. Na przykład jeśli nie istnieje żaden kod zarządzany poniżej bieżącego wywołania zwrotnego lub zdarzenie wyjątku jest wynikiem just in time (JIT) załącznika, wyjątek nie może zostać przechwycone.|  
+|`DEBUG_EXCEPTION_NONE`|Nie ma wyjątku.|  
+|`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|Wyjątek stanowi interceptable.<br /><br /> Chronometraż wyjątek może nadal być w taki sposób, że debuger nie może przechwycić go. Na przykład jeśli żaden kod zarządzany poniżej bieżącego wywołania zwrotnego, lub zdarzenie wyjątku jest wynikiem just-in-time (JIT) załącznika, wyjątek nie mogą zostać przechwycone.|  
   
 ## <a name="remarks"></a>Uwagi  
- Nowe wartości mogą zostać dodane do tego wyliczenia w nowszych wersjach, więc należy przygotować kodu korzystającego z `CorDebugExceptionFlags` nieoczekiwane wartości.  
+ Nowe wartości mogą być dodawane do tego wyliczenia w nowszych wersjach, więc należy przygotować kod, który używa `CorDebugExceptionFlags` nieoczekiwane wartości.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -54,5 +54,5 @@ typedef enum CorDebugExceptionFlags {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

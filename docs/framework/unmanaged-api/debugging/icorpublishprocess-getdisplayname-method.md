@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 815f2e2f695837c973210a21ab3631ef307c23d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2d3624d130c005f9ed9109863b052e3272797ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496822"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName — Metoda
-Pobiera pełną ścieżkę do pliku wykonywalnego procesu, który odwołuje się ten [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).  
+Pobiera pełną ścieżkę pliku wykonywalnego procesu odwołuje się ten [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,13 +43,13 @@ HRESULT GetDisplayName (
  [in] Rozmiar `szName` tablicy.  
   
  `pcchName`  
- [out] Liczba zwracanych w znaki dwubajtowe `szName` tablicy.  
+ [out] Liczba znaków dwubajtowych zwracane w `szName` tablicy.  
   
  `szName`  
- [out] Tablica, aby zapisać nazwę, łącznie z pełną ścieżką do pliku wykonywalnego. Nazwa jest zerem.  
+ [out] Tablica do przechowywania nazwy, łącznie z pełną ścieżkę pliku wykonywalnego. Nazwa jest zakończony znakiem null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorPub.idl, CorPub.h  
   
@@ -57,5 +57,5 @@ HRESULT GetDisplayName (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorPublishProcess, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorPublishProcess, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)

@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c838c994144307e9c87e3a4628fa80bfcdbeb59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9b53bb7e34f037f3a165cc8bb59d25ff34ba7da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507151"
 ---
 # <a name="iclrdatatarget3getexceptionthreadid-method"></a>Metoda ICLRDataTarget3::GetExceptionThreadID
-Metoda wywoływana przez wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) dostępu do usługi danych można uzyskać Identyfikatora wątku, który zgłosił wyjątek.  
+Metoda wywoływana przez wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) usługi dostępu do danych można uzyskać identyfikator wątku, który wygenerował wyjątek.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,21 +34,21 @@ HRESULT GetExceptionThreadID(
   
 #### <a name="parameters"></a>Parametry  
  `threadID`  
- [out] Identyfikator wątku, który zgłosił wyjątek.  
+ [out] Identyfikator wątku, który wygenerował wyjątek.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wartość zwracana jest `S_OK` na powodzenie lub niepowodzenie `HRESULT` kod błędu. `HRESULT` Mogą obejmować kody, ale nie są ograniczone do następujących:  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
-|`S_OK`|Metoda zakończyło się pomyślnie.|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|Nie można odnaleźć Identyfikatora wątku prawidłowy wyjątek.|  
+|`S_OK`|Metody powiodło się.|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|Nie można odnaleźć Identyfikatora wątku prawidłowy dla wyjątku.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest implementowany przez twórcę debugowania aplikacji.  
+ Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData.idl, ClrData.h  
   
@@ -56,7 +56,7 @@ HRESULT GetExceptionThreadID(
   
  **Wersje programu .NET framework:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRDataTarget3, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
- [GetExceptionContextRecord, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)  
- [GetExceptionRecord, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRDataTarget3, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
+- [GetExceptionContextRecord, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
+- [GetExceptionRecord, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)

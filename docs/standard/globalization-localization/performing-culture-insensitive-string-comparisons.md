@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d34e8139de9af0d2fdb1dce48fd7ba0dbf3858b4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: d20ce0f09309c84dcbeb016e0f17c37fe338dd9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646798"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504096"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Wykonywanie niezależnych od kultury porównań ciągów
 Domyślnie <xref:System.String.Compare%2A?displayProperty=nameWithType> metoda wykonuje porównania jest rozróżniana kultura oraz wielkość liter. Ta metoda obejmuje także kilka przeciążeń dostarczających `culture` parametr, który umożliwia określenie kultury, aby użyć, a `comparisonType` parametr, który umożliwia określenie reguł porównania do użycia. Wywoływanie tych metod zamiast przeciążenia domyślnego usuwa wszelkie niejednoznaczności dotyczące reguł używanych w wywołaniu określonej metody i jednoznacznie wskazuje, czy w danym porównaniu jest uwzględniana kultura, czy nie.  
@@ -43,7 +43,7 @@ Możesz pobrać [tabele wagi sortowania](https://www.microsoft.com/en-us/downloa
 
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.String.Compare%2A?displayProperty=nameWithType>  
-- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>  
-- [Wykonywanie niezależnych od kultury operacji na ciągach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+- <xref:System.String.Compare%2A?displayProperty=nameWithType>
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- [Wykonywanie niezależnych od kultury operacji na ciągach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Najlepsze rozwiązania dotyczące używania ciągów](../../../docs/standard/base-types/best-practices-strings.md)

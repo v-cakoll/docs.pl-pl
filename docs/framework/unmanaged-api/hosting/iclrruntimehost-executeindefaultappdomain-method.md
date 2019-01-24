@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dcddb5766894a30f1ccb2552a09abe7153c6eea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae7bbc41d0e2cca1cf25a5ec34535b20fc9163d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498258"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain — Metoda
-Wywołuje metodę określonej określonego typu w określonym zestawie zarządzanych.  
+Wywołuje określoną metodę określonego typu w określonym zestawie zarządzanym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ HRESULT ExecuteInDefaultAppDomain (
   
 #### <a name="parameters"></a>Parametry  
  `pwzAssemblyPath`  
- [in] Ścieżka do <xref:System.Reflection.Assembly> definiuje <xref:System.Type> metody, której ma zostać wywołana.  
+ [in] Ścieżka do <xref:System.Reflection.Assembly> definiujący <xref:System.Type> metodę, której ma zostać wywołana.  
   
  `pwzTypeName`  
  [in] Nazwa <xref:System.Type> definiuje metody do wywołania.  
@@ -50,39 +50,39 @@ HRESULT ExecuteInDefaultAppDomain (
  [in] Nazwa metody do wywołania.  
   
  `pwzArgument`  
- [in] Parametr ciągu do przekazania do metody.  
+ [in] Parametr typu ciąg do przekazania do metody.  
   
  `pReturnValue`  
- [out] Wartość całkowita zwracany przez metodę wywołana.  
+ [out] Wartość liczby całkowitej, zwrócona przez wywoływanej metody.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInDefaultAppDomain` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`ExecuteInDefaultAppDomain` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Jeśli metoda zwraca E_FAIL, listy CRL nie będzie już można używać w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Jeśli metoda zwraca E_FAIL, listy CRL nie będzie już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołana metoda musi mieć następującą sygnaturą:  
+ Wywołana metoda musi mieć następujący podpis:  
   
 ```  
 static int pwzMethodName (String pwzArgument)  
 ```  
   
- gdzie `pwzMethodName` reprezentuje nazwę wywoływanej metody i `pwzArgument` reprezentuje wartość ciągu przekazany jako parametr tej metody. Jeśli wartość HRESULT jest ustawiona na wartość S_OK, `pReturnValue` ma ustawioną wartość całkowita zwracany przez metodę wywołana. W przeciwnym razie `pReturnValue` nie jest ustawiona.  
+ gdzie `pwzMethodName` reprezentuje nazwę wywoływanej metody i `pwzArgument` reprezentuje wartość ciągu jest przekazywany jako parametr do tej metody. Jeśli ustawiono wartość HRESULT S_OK, `pReturnValue` jest ustawiona na wartość całkowitą, zwracany przez wywoływanej metody. W przeciwnym razie `pReturnValue` nie jest ustawiona.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

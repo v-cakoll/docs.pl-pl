@@ -16,29 +16,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1af5184881c7d357e084e40ac79e2ebd349c4cfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c503defaee9137cb95e01181831a470a99eb0b1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722546"
 ---
 # <a name="icordebugcodeenum-interface1"></a>ICorDebugCodeEnum Interface1
-Implementuje metody "ICorDebugEnum", a wylicza tablice "ICorDebugCode".  
+Implementuje metody "ICorDebugEnum" i wylicza tablice "ICorDebugCode".  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|Pobiera określoną liczbę `ICorDebugCode` wystąpień z wyliczenia, zaczynając od bieżącego położenia.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|Pobiera określoną liczbę `ICorDebugCode` wystąpień z wyliczenia, zaczynając od bieżącej pozycji.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -46,5 +46,5 @@ Implementuje metody "ICorDebugEnum", a wylicza tablice "ICorDebugCode".
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

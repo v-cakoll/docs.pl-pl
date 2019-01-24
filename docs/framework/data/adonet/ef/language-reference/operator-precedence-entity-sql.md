@@ -2,22 +2,22 @@
 title: Kolejność wykonywania działań (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-ms.openlocfilehash: ab5158a2af18a422cb82f0d44412bcd85a04dc2a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c68ac6d89426896b708ac74de1268f8ea8f193c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506841"
 ---
 # <a name="operator-precedence-entity-sql"></a>Kolejność wykonywania działań (jednostka SQL)
-Gdy [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania ma wiele operatorów, kolejność określa kolejność, w którym wykonywane są operacje. Kolejność wykonywania mogą znacznie wpływać na wynik zapytania.  
+Gdy [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytanie ma wiele operatory, pierwszeństwo operatorów określa kolejność, w której operacje są wykonywane. Kolejność wykonywania może znacząco wpłynąć na wynik zapytania.  
   
- Operatory ma poziomów pierwszeństwo przed, pokazano w poniższej tabeli. Operator o wyższym poziomie jest oceniane przed operatorem o niższym poziomie.  
+ Operatory mają poziomy pierwszeństwa, pokazano w poniższej tabeli. Operator na wyższym poziomie jest oceniany przed operatorem o niższym poziomie.  
   
 |Poziom|Typ operacji|Operator|  
 |-----------|--------------------|--------------|  
-|1|podstawowy|`. , [] ()`|  
-|2|Jednoargumentowe|`! not`|  
+|1|Podstawowy|`. , [] ()`|  
+|2|Jednoargumentowy|`! not`|  
 |3|Mnożenia|`* / %`|  
 |4|Dodatku|`+ -`|  
 |5|Szeregowanie|`< > <= >=`|  
@@ -25,9 +25,9 @@ Gdy [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania ma wiele o
 |7|AND warunkowe|`and &&`|  
 |8|OR warunkowe|`or &#124;&#124;`|  
   
- Po dwóch operatorów w wyrażeniu mają ten sam poziom pierwszeństwa operatora, ich są wykonywane od lewej do prawej, na podstawie ich położenia w zapytaniu. Na przykład `x+y-z` jest szacowana jako `(x+y)-z`.  
+ Gdy dwa operatory w wyrażeniu mają pierwszeństwo przed operatorem na tym samym poziomie, ich są obliczane od lewej do prawej, na podstawie ich pozycji w zapytaniu. Na przykład `x+y-z` jest oceniane jako `(x+y)-z`.  
   
- Można użyć nawiasów do zastąpienia zdefiniowane pierwszeństwo operatorów w zapytaniu. Wszystkie elementy wewnątrz nawiasów oceny najpierw umożliwiające uzyskanie pojedynczego wyniku przed, czy wynik mogą być używane przez każdy podmiot poza nawiasów. Na przykład `x+y*z` mnoży `y` przez `z` , a następnie dodaje `x`, ale `(x+y)*z` dodaje `x` do `y` , a następnie mnoży wynik przez `z`.  
+ Można użyć nawiasów do zastąpienia zdefiniowane pierwszeństwo operatorów w zapytaniu. Wszystko wewnątrz nawiasów jest stosowana jako pierwsza umożliwiające uzyskanie pojedynczego wyniku przed, że wyniki mogą być używane przez dowolny operator poza nawiasami. Na przykład `x+y*z` mnoży `y` przez `z` , a następnie dodaje `x`, ale `(x+y)*z` dodaje `x` do `y` i następnie mnoży wynik przez `z`.  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

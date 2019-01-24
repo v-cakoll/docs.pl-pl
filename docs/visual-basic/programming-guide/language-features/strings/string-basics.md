@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 2a7dd80d141ff5945bcce71fead1bb5bc24ad737
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332678"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552395"
 ---
 # <a name="string-basics-in-visual-basic"></a>Podstawowe informacje o ciągach w Visual Basic
 `String` Typ danych reprezentuje szereg znaków (każdy reprezentuje z kolei wystąpienie `Char` — typ danych). W tym temacie wprowadzono podstawowe pojęcia ciągów w Visual Basic.  
@@ -71,8 +71,8 @@ World]]></xml>.Value
   
  W przeciwieństwie do innych typów danych wewnętrznych `String` jest typem referencyjnym. Jeśli zmienna typu odwołania jest przekazywany jako argument do funkcji lub podprocedury, odwołanie do adresu pamięci, w którym dane są przechowywane jest przekazywany zamiast rzeczywistej wartości ciągu. Co w poprzednim przykładzie nazwa zmiennej pozostają takie same, ale wskazuje na nowe i zróżnicowane wystąpienie `String` klasy, która zawiera nową wartość.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [String, typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Char, typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [Podstawowe operacje na ciągach](../../../../standard/base-types/basic-string-operations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [String, typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Char, typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [Podstawowe operacje na ciągach](../../../../standard/base-types/basic-string-operations.md)

@@ -1,32 +1,32 @@
 ---
-title: 'Porady: tworzenie ciągu z tablicy wartości znaków (Visual Basic)'
+title: 'Instrukcje: Tworzenie ciągu z tablicy wartości znaków (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-ms.openlocfilehash: 104b329011d69e10a2926f31ce5d296759a3cce8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a067474d6b32589a34b031d5c3ea4e5a4be55834
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611465"
 ---
-# <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Porady: tworzenie ciągu z tablicy wartości znaków (Visual Basic)
-W tym przykładzie tworzy ciągu "abcd" z poszczególnych znaków.  
+# <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Instrukcje: Tworzenie ciągu z tablicy wartości znaków (Visual Basic)
+W tym przykładzie tworzy ciągu "abcd" na podstawie poszczególnych znaków.  
   
 ## <a name="example"></a>Przykład  
  [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-a-string-from-an-array-of-char-values_1.vb)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Ta metoda nie ma specjalnych wymagań.  
+ Ta metoda nie ma żadnych specjalnych wymagań.  
   
- Składnia `"a"c`, w którym jeden `c` następuje jeden znak w znaki cudzysłowu, służy do tworzenia literału znaku.  
+ Składnia `"a"c`, w którym jeden `c` następuje pojedynczy znak w cudzysłów, służy do tworzenia znak literału.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Znaki null (odpowiednikiem `Chr(0)`) w ciągu dać nieoczekiwane wyniki, korzystając z ciągu. Znak null zostanie uwzględniony w ciągu, ale nie będą wyświetlane po znaku null w niektórych sytuacjach.  
+ Znaki null (równoważne `Chr(0)`) w ciągu prowadzić do nieoczekiwanych wyników przy użyciu ciągu. Znak null, będzie ona uwzględniona w ciągu, ale znaki po znaku null nie będą wyświetlane w niektórych sytuacjach.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.String>  
- [Char, typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.String>
+- [Char, typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

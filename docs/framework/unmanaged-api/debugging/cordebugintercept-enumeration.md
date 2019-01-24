@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ee2272a43d9f71cd49754a7f4233868b8bb9134
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d15f34c55f0ee261c65649e9d431944201c546f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506033"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept — Wyliczenie
-Wskazuje typy kodu, który może zostać przechwycony (tj. przeprowadził do).  
+Określa typy kodu, która może zostać przechwycona (który jest zmieniana do).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,19 +44,19 @@ typedef enum CorDebugIntercept {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`INTERCEPT_NONE`|Żaden kod nie może zostać przechwycony.|  
-|`INTERCEPT_CLASS_INIT`|Konstruktor może zostać przechwycony.|  
-|`INTERCEPT_EXCEPTION_FILTER`|Może zostać przechwycona filtru wyjątków.|  
+|`INTERCEPT_NONE`|Brak kodu mogą zostać przechwycone.|  
+|`INTERCEPT_CLASS_INIT`|Konstruktor mogą zostać przechwycone.|  
+|`INTERCEPT_EXCEPTION_FILTER`|Mogą zostać przechwycone filtra wyjątku.|  
 |`INTERCEPT_SECURITY`|Kod, który wymusza zabezpieczeń mogą zostać przechwycone.|  
-|`INTERCEPT_CONTEXT_POLICY`|Może zostać przechwycona zasad kontekstu.|  
+|`INTERCEPT_CONTEXT_POLICY`|Zasady kontekstu może zostać przechwycone.|  
 |`INTERCEPT_INTERCEPTION`|Nie używany.|  
-|`INTERCEPT_ALL`|Cały kod może zostać przechwycony.|  
+|`INTERCEPT_ALL`|Cały kod może zostać przechwycone.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj [ICorDebugStepper::SetInterceptMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) metody, aby określić typy kodu, który może zostać przechwycony.  
+ Użyj [ICorDebugStepper::SetInterceptMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) metodę, aby określić typy kodu, która może zostać przechwycona.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -64,5 +64,5 @@ typedef enum CorDebugIntercept {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -2,12 +2,12 @@
 title: '&lt;persistenceProvider&gt;'
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: ba02977a7df44931ae195040949e9a8eb0c141b5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8deca5b4bec4808ac9add201db0c936764fddcb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602224"
 ---
 # <a name="ltpersistenceprovidergt"></a>&lt;persistenceProvider&gt;
 Określa typ implementacji dostawcy stanów stałych do użycia, jak również limit czasu na potrzeby operacji trwałości.  
@@ -16,7 +16,7 @@ Określa typ implementacji dostawcy stanów stałych do użycia, jak również l
 \<zachowania >  
 \<serviceBehaviors>  
 \<zachowanie >  
-\<persistenceProvider >  
+\<persistenceProvider>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,6 +47,6 @@ Określa typ implementacji dostawcy stanów stałych do użycia, jak również l
 ## <a name="remarks"></a>Uwagi  
  Ten element określa dostawcy stanów trwałych, który ma być używany do serializacji stanu usługi WCF. Należy używać razem z `wsHttpContextBinding` który przekazuje informacje o stanie w nagłówkach HTTP.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.PersistenceProviderElement>  
- <xref:System.ServiceModel.Persistence.PersistenceProvider>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.PersistenceProviderElement>
+- <xref:System.ServiceModel.Persistence.PersistenceProvider>

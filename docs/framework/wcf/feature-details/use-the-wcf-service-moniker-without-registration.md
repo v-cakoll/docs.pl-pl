@@ -1,28 +1,28 @@
 ---
-title: 'Porady: Użyj Moniker usługi Windows Communication Foundation bez rejestracji'
+title: 'Instrukcje: Użycie monikera programu Windows Communication Foundation bez rejestracji'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: fd61528770b16b13430be3691aef19c1cc743e9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615282"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Porady: Użyj Moniker usługi Windows Communication Foundation bez rejestracji
-Aby nawiązać połączenie i komunikować się z usługą Windows Communication Foundation (WCF), aplikacja klienta WCF musi mieć szczegóły adresu usługi, Konfiguracja powiązania i kontraktu usługi.  
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Instrukcje: Użycie monikera programu Windows Communication Foundation bez rejestracji
+Aby nawiązać połączenie i komunikować się z usługą Windows Communication Foundation (WCF), aplikacja klienta WCF musi mieć adres usługi, Konfiguracja powiązania i kontraktu usługi.  
   
- Moniker usługi WCF zwykle uzyskuje kontrakt wymagane przez wcześniejsze rejestrację typów wymaganego atrybutu, ale może być przypadki, w którym nie jest to możliwe. Zamiast rejestracji moniker można uzyskać definicję kontraktu w formularzu sieci Web Services Definition Language (WSDL) dokumentu, za pośrednictwem `wsdl` parametru lub za pomocą wymiany metadanych, korzystając ze `mexAddress` parametr.  
+ Monikera programu WCF zwykle uzyskuje kontrakt wymagane przez wcześniejsze rejestrację typów wymaganego atrybutu, ale może być przypadki, w którym nie jest to możliwe. Zamiast rejestracji, moniker można uzyskać definicję kontraktu w postaci dokumentów sieci Web Services Definition Language (WSDL), za pośrednictwem `wsdl` parametru lub za pośrednictwem wymiany metadanych, korzystając ze `mexAddress` parametr.  
   
- Dzięki temu scenariuszy, takich jak dystrybucji arkusz kalkulacyjny programu Excel, gdzie niektórych wartości komórki są obliczane przy użyciu interakcje usługi sieci Web. W tym scenariuszu może nie być możliwe do zarejestrowania zestawu kontraktu usługi na wszystkich klientach, które może otworzyć dokumentu. `wsdl` Parametru lub `mexAddress` parametru zapewnia rozwiązanie niezależne.  
+ Umożliwia to obsługę scenariuszy, takich jak dystrybucja arkusz kalkulacyjny programu Excel, gdzie niektóre komórki wartościami są obliczane za pośrednictwem interakcje usługi sieci Web. W tym scenariuszu może być nie można zarejestrować zestawu kontraktu usługi na wszystkich klientach, które może otworzyć dokumentu. `wsdl` Parametru lub `mexAddress` parametr umożliwia samodzielne rozwiązanie.  
   
 > [!NOTE]
->  Uwierzytelnianie wzajemne, należy użyć do ochrony przed żądań i odpowiedzi, modyfikowaniu lub fałszowania. W szczególności jest ważna w przypadku klientów mieć pewność, że punkt końcowy wymiany metadanych, który odpowiada jest zamierzone zaufany.  
+>  Wzajemnego uwierzytelniania musi być używana do ochrony przed żądań i odpowiedzi, modyfikowaniu lub fałszowanie adresów. Ściślej mówiąc jest ważne dla klientów mieć pewność, że punkt końcowy wymiany metadanych, który odpowiada jest zamierzony zaufany.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie pokazano sposób użycia moniker usługi z kontraktem MEX. Usługi za pomocą następujących kontrakt jest narażony na wsHttpBinding.  
+ Ten przykład przedstawia użycie monikera za pomocą kontraktu wymiany Metadanych. Usługi za pomocą następujących kontraktu jest uwidaczniany za pomocą wsHttpBinding.  
   
 ```  
 using System.ServiceModel;  
@@ -43,7 +43,7 @@ public interface IAffiliate
 }  
 ```  
   
- Aby utworzyć klienta WCF dla usługi zdalnej następujący ciąg monikera przykład można użyć.  
+ Aby utworzyć klienta WCF usługi zdalnej następujący ciąg monikera przykład można użyć.  
   
 ```  
 service4:mexAddress="http://servername/Affiliates/service.svc/mex",  
@@ -52,10 +52,10 @@ contract=IAffiliate, contractNamespace=http://Microsoft.ServiceModel.Demo,
 binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/  
 ```  
   
- Podczas wykonywania aplikacji klienckiej, klient wykonuje `WS-MetadataExchange` się za pomocą podanych `mexAddress`. Może to zwrócić address, binding i szczegóły umowy wielu usług. `address`, `contract`, `contractNamespace`, `binding` i `bindingNamespace` parametry są używane do identyfikowania usługi zamierzone. Po dopasowane tych parametrów moniker konstruuje klienta WCF z definicję kontraktu odpowiednie, a następnie wywołań za pomocą klienta WCF, podobnie jak w przypadku typu kontraktu.  
+ Podczas wykonywania aplikacji klienckiej, klient wykonuje `WS-MetadataExchange` z dostępnego `mexAddress`. To może zwrócić adres, powiązania i podrobnosti o kontraktu dla wielu usług. `address`, `contract`, `contractNamespace`, `binding` i `bindingNamespace` parametry są używane do identyfikowania usługi zamierzone. Po dopasowane tych parametrów moniker tworzy klienta programu WCF za pomocą definicję kontraktu odpowiednie, a następnie wywołań za pomocą klienta WCF, podobnie jak w przypadku wpisane kontraktu.  
   
 > [!NOTE]
->  Jeśli krótka nazwa jest nieprawidłowo sformułowany lub usługa jest niedostępna, wywołanie `GetObject` zwraca błąd informujący o tym "Nieprawidłowa składnia". Jeśli zostanie wyświetlony ten błąd, upewnij się, krótkiej nazwy, którego używasz, jest poprawny i usługa jest dostępna.  
+>  Jeśli moniker jest źle sformułowany lub jeśli usługa jest niedostępna, wywołanie `GetObject` zwraca błąd informujący o "Nieprawidłowa składnia". Jeśli zostanie wyświetlony ten błąd, upewnij się, moniker elementu, którego używasz jest poprawna i ta usługa jest dostępna.  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: rejestrowanie i konfigurowanie monikera usługi](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Rejestrowanie i konfigurowanie monikera usługi](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

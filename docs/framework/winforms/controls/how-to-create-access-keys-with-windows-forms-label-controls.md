@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie klawiszy dostępu za pomocą formantów etykiet formularzy systemu Windows'
+title: 'Instrukcje: Tworzenie klawiszy dostępu za pomocą formantów etykiet formularzy Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,30 +17,30 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: fc9592981f3d926b2b5b85b6869da13dc644e7a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1317f34b39c5689e285f8822fff9bfcc42db1d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680325"
 ---
-# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Porady: tworzenie klawiszy dostępu za pomocą formantów etykiet formularzy systemu Windows
-Formularze systemu Windows <xref:System.Windows.Forms.Label> formanty może służyć do definiowania klucze dostępu dla innych formantów. Po zdefiniowaniu klawisza dostępu w formancie etykiety, użytkownik może nacisnąć klawisz ALT i znak wyznaczyć można przechodzić do formantu, który następuje w kolejności tabulacji. Ponieważ etykiet nie można ustawić fokusu, automatycznie fokusu do następnego formantu w kolejności tabulacji. Ten sposób można przypisać klucze dostępu do pola tekstowe, pola kombi, pola listy i siatki danych.  
+# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Instrukcje: Tworzenie klawiszy dostępu za pomocą formantów etykiet formularzy Windows
+Windows Forms <xref:System.Windows.Forms.Label> kontrolki mogą służyć do definiowania klucze dostępu dla innych kontrolek. Po zdefiniowaniu klucza dostępu w kontrolce etykiety, użytkownik może nacisnąć klawisz ALT i znak należy wyznaczyć, aby przenieść fokus do formantu, który po nim następuje w kolejności tabulacji. Ponieważ etykiety nie może otrzymać ostrości, automatycznie fokusu do następnej kontrolki w kolejności tabulacji. Użyj tej techniki, aby przypisać klucze dostępu do pola tekstowe, pola kombi, pola listy i siatek danych.  
   
-### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>Aby przypisać klucz dostępu do formantu z etykietą  
+### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>Aby przypisać klucza dostępu do kontrolki z etykietą  
   
-1.  Najpierw rysowania etykiety, a następnie narysuj inny formant.  
+1.  Najpierw rysować etykietę, a następnie narysuj inne kontrolki.  
   
      —lub—  
   
-     Narysować kontrolki w dowolnej kolejności i ustawić <xref:System.Windows.Forms.Control.TabIndex%2A> właściwość etykiety do jednego mniej niż inny formant.  
+     Rysowanie kontrolki w dowolnej kolejności i ustaw <xref:System.Windows.Forms.Control.TabIndex%2A> właściwość etykiety na mniejszej o jeden od innego formantu.  
   
-2.  Ustaw wartość etykiety <xref:System.Windows.Forms.Label.UseMnemonic%2A> właściwości `true`.  
+2.  Ustaw właściwość etykiety <xref:System.Windows.Forms.Label.UseMnemonic%2A> właściwość `true`.  
   
-3.  Użyj ampersand (&) na etykiecie <xref:System.Windows.Forms.Label.Text%2A> właściwość do przypisania klucz dostępu dla etykiety. Aby uzyskać więcej informacji, zobacz [tworzenie dostępu do kluczy dla formantów formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).  
+3.  Użyj handlowe "i" (&) na etykiecie <xref:System.Windows.Forms.Label.Text%2A> właściwości, aby przypisać klucz dostępu dla etykiety. Aby uzyskać więcej informacji, zobacz [tworzenia kluczy dla Windows Forms kontroli dostępu](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).  
   
     > [!NOTE]
-    >  Możesz wyświetlić takie znaki w formancie etykiety, a nie ich używać do tworzenia kluczy dostępu. Może to nastąpić, jeśli powiązanie formantu etykiety do pola w zestawie rekordów, w którym dane obejmują takie znaki. Aby wyświetlić takie znaki w formancie etykiety, ustaw <xref:System.Windows.Forms.Label.UseMnemonic%2A> właściwości `false`. Jeśli chcesz wyświetlić ampersandu i mają klucz dostępu, należy ustawić <xref:System.Windows.Forms.Label.UseMnemonic%2A> właściwości `true` i wskazywać klucza dostępu z jednego handlowego "i" (&) i handlowego "i", aby wyświetlić dwa znakami.  
+    >  Możesz chcieć wyświetlić takie znaki w kontrolce etykiety, a nie umożliwia tworzenie klawiszy dostępu. Może to nastąpić, gdy powiąże formant etykiety do pola w zestawie rekordów, w którym dane obejmują takie znaki. Aby wyświetlić takie znaki w kontrolce etykiety, należy ustawić <xref:System.Windows.Forms.Label.UseMnemonic%2A> właściwość `false`. Jeśli chcesz wyświetlić takie znaki i mają klucz dostępu, ustaw <xref:System.Windows.Forms.Label.UseMnemonic%2A> właściwość `true` i wskazuje klucz dostępu za pomocą jednego handlowe "i" (&) i handlowe "i", aby wyświetlić z dwa takie znaki.  
   
     ```vb  
     Label1.UseMnemonic = True  
@@ -63,7 +63,7 @@ Formularze systemu Windows <xref:System.Windows.Forms.Label> formanty może słu
     label2->Text = "&Copy && Paste";  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: zmiana rozmiaru kontrolki Label formularzy Windows Forms w celu dopasowania jej do zawartości](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- [Label, kontrolka — omówienie](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
- [Label, kontrolka](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Rozmiaru kontrolki Label formularzy Windows pasujący do jego zawartości](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Label, kontrolka — omówienie](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)
+- [Label, kontrolka](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)

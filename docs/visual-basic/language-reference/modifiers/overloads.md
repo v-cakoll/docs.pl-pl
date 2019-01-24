@@ -10,26 +10,26 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: b68c13d192845fc4bedf1b34a40165ccc1a5ff75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b20dbf20c580d08553ae22f6a62ee33a7354db74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624921"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
-Określa, że właściwość lub procedura programistyczny ponownie deklaruje co najmniej jednej właściwości istniejących lub procedury o takiej samej nazwie.  
+Określa, że właściwość lub procedura redeclares istniejących właściwości lub procedur o takiej samej nazwie.  
   
 ## <a name="remarks"></a>Uwagi  
- *Przeciążanie* praktyką podawania więcej niż jedną definicję dla danej nazwy właściwość lub procedura w tym samym zakresie. Ponownego deklarowania właściwość lub procedurę o innym podpisie jest czasami nazywany *ukrywanie poprzez podpis*.  
+ *Przeciążanie* w praktyce podawania więcej niż jedną definicję dla danej nazwy właściwość lub procedura w tym samym zakresie. Redeclaring właściwość lub procedura z innym podpisem jest czasami nazywane *ukrywanie poprzez podpis*.  
   
-## <a name="rules"></a>Reguły  
+## <a name="rules"></a>reguły  
   
--   **Kontekst deklaracji.** Można użyć `Overloads` tylko w instrukcji deklaracji właściwość lub procedura.  
+-   **Kontekst deklaracji.** Możesz użyć `Overloads` tylko w instrukcji deklaracji właściwość lub procedura.  
   
--   **Łączna modyfikatorów.** Nie można określić `Overloads` razem z [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) w tej samej deklaracji procedury.  
+-   **Modyfikatory połączone.** Nie można określić `Overloads` wraz z [cieni](../../../visual-basic/language-reference/modifiers/shadows.md) w tej samej deklaracji procedury.  
   
--   **Wymagane różnice.** *Podpisu* w tej deklaracji musi być inna niż podpisu co właściwość lub procedura, która przeciąża. Sygnatura obejmuje nazwę właściwość lub procedura wraz z następujących czynności:  
+-   **Wymagane różnice.** *Podpisu* w tej deklaracji musi się różnić od podpisu co właściwość lub procedura, która przeciąża. Podpis składa się nazwa właściwość lub procedura wraz z następujących czynności:  
   
     -   Liczba parametrów  
   
@@ -37,45 +37,45 @@ Określa, że właściwość lub procedura programistyczny ponownie deklaruje co
   
     -   typy danych parametrów  
   
-    -   Liczba parametrów typu (dla procedury ogólny)  
+    -   Liczba parametrów typu (w przypadku ogólnych procedura)  
   
     -   zwracany typ (tylko dla procedury operatora konwersji)  
   
-     Wszystkie przeciążenia musi mieć taką samą nazwę, ale każdy musi różnić się od wszystkich innych w co najmniej jednego z poprzednich względem. Umożliwia kompilatorowi rozróżnienie wersji do użycia, gdy kod wywołuje właściwość lub procedura.  
+     Wszystkie przeciążenia musi mieć taką samą nazwę, ale każdy musi różnić się od wszystkich innych w co najmniej jednej poprzedniej aspektach. Dzięki temu kompilator, aby odróżnić wyborze wersji do użycia, gdy kod wywołuje właściwość lub procedura.  
   
--   **Niedozwolone różnice.** Zmiana jednego lub więcej z następujących jest nieprawidłowa dla przeładowanie właściwość lub procedura, ponieważ nie są częścią podpisu:  
+-   **Niedozwolone różnice.** Zmiana co najmniej jeden z następujących jest nieprawidłowa dla przeciążania właściwość lub procedura, ponieważ nie są one częścią podpisu:  
   
-    -   Określa, czy zwraca wartość (procedura)  
+    -   Określa, czy zwraca wartość (w przypadku procedura)  
   
     -   Typ danych wartości zwracanej (z wyjątkiem operatora konwersji)  
   
-    -   nazwy parametrów lub parametry typu  
+    -   nazwy parametrów lub parametrów typu  
   
-    -   ograniczenia dotyczące parametrów typu (dla procedury ogólny)  
+    -   ograniczenia dotyczące parametrów typu (w przypadku ogólnych procedura)  
   
-    -   słowa kluczowe modyfikator parametrów (takich jak `ByRef` lub `Optional`)  
+    -   słowa kluczowe modyfikator parametrów (takie jak `ByRef` lub `Optional`)  
   
-    -   Właściwość lub procedura modyfikator słowa kluczowe (takich jak `Public` lub `Shared`)  
+    -   Właściwość lub procedura modyfikator słowa kluczowe (takie jak `Public` lub `Shared`)  
   
--   **Modyfikator opcjonalne.** Nie trzeba używać `Overloads` modyfikator podczas definiowania wielu przeciążone właściwości lub procedury opisane w tej samej klasy. Jednak jeśli używasz `Overloads` w jednej deklaracji, należy użyć go we wszystkich z nich.  
+-   **Opcjonalny modyfikator właściwy.** Nie trzeba używać `Overloads` modyfikator podczas definiowania wielu przeciążone właściwości i procedury z tej samej klasy. Jednak jeśli używasz `Overloads` w jednej deklaracji, musisz ją wykorzystać we wszystkich z nich.  
   
--   **Przesłanianie i przeciążeniu.** `Overloads` można również tle istniejącego elementu członkowskiego lub zestawu przeciążone elementy członkowskie w klasie podstawowej. Jeśli używasz `Overloads` w ten sposób można zadeklarować właściwości lub metody o tej samej nazwie i tej samej listy parametrów jako element członkowski klasy podstawowej i nie zostanie podana `Shadows` — słowo kluczowe.  
+-   **Przesłanianie i przeciążeniu.** `Overloads` można również w tle istniejącego elementu członkowskiego lub zestawu przeciążone elementy członkowskie w klasie bazowej. Kiedy używasz `Overloads` w ten sposób możesz deklarować właściwość lub metoda o tej samej nazwie i tę samą listę parametrów jako składowej klasy bazowej i nie trzeba dostarczać `Shadows` — słowo kluczowe.  
   
- Jeśli używasz `Overrides`, kompilator niejawnie dodaje `Overloads` , aby pracować z C# łatwiej biblioteki interfejsów API.  
+ Jeśli używasz `Overrides`, kompilator niejawnie dodaje `Overloads` tak, aby pracować z interfejsów API biblioteki C# łatwiejsze.  
   
- `Overloads` Modyfikatora można używać w tych sytuacjach:  
+ `Overloads` Modyfikator mogą być używane w tych kontekstach:  
   
  [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
   
  [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
  [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Przeciążanie procedury](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [Instrukcje: definiowanie operatora konwersji](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+## <a name="see-also"></a>Zobacz także
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Przeciążanie procedury](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [Instrukcje: Definiowanie operatora konwersji](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

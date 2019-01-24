@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przechowywanie kluczy asymetrycznych w kontenerze kluczy'
+title: 'Instrukcje: Store kluczy asymetrycznych w kontenerze kluczy'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 42a42ee0fe5029dfe8340701595ba9dfab9a026d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680410"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Porady: przechowywanie kluczy asymetrycznych w kontenerze kluczy
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Instrukcje: Store kluczy asymetrycznych w kontenerze kluczy
 Klucze asymetryczne prywatnej nigdy nie powinny być przechowywane, verbatim lub w postaci zwykłego tekstu, na komputerze lokalnym. Jeśli musisz przechować klucz prywatny, należy użyć kontenera kluczy. Aby uzyskać więcej informacji na temat kontenerów kluczy, zobacz [kontenery kluczy RSA poziomie użytkownika i na poziomie maszyny opis](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Aby utworzyć to klucz asymetryczny i zapisać ją w kontenerze kluczy  
@@ -225,7 +225,7 @@ Key deleted.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Generowanie kluczy szyfrowania i odszyfrowywania](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [Szyfrowanie danych](../../../docs/standard/security/encrypting-data.md)  
-- [Odszyfrowywanie danych](../../../docs/standard/security/decrypting-data.md)  
+- [Generowanie kluczy szyfrowania i odszyfrowywania](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [Szyfrowanie danych](../../../docs/standard/security/encrypting-data.md)
+- [Odszyfrowywanie danych](../../../docs/standard/security/decrypting-data.md)
 - [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)

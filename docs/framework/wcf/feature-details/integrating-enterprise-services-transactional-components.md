@@ -2,12 +2,12 @@
 title: Integrowanie składników transakcyjnych usług dla przedsiębiorstw
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 1fd338e57dab16a02cd31de6b45d4c5291591043
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 865756506f34fecb1848675205715acfb261ba2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686507"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integrowanie składników transakcyjnych usług dla przedsiębiorstw
 Windows Communication Foundation (WCF) zapewnia mechanizm automatycznego w celu integracji z usługami przedsiębiorstwa (zobacz [współdziałanie z aplikacjami COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Jednak możesz elastyczność do tworzenia usług korzystających z wewnętrznie składników transakcyjnych obsługiwany w ramach usług dla przedsiębiorstw. Ponieważ funkcja transakcji WCF jest oparta na <xref:System.Transactions> infrastruktury, proces integracji usług dla przedsiębiorstw z usługą WCF jest identyczna jak do określania współdziałanie <xref:System.Transactions> i usług dla przedsiębiorstw, co zostało opisane w [Współdziałanie z usługami przedsiębiorstwa i transakcjami COM +](https://go.microsoft.com/fwlink/?LinkId=94949).  
@@ -92,6 +92,6 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Współdziałanie z aplikacjami COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [Współdziałanie z aplikacjami COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+## <a name="see-also"></a>Zobacz także
+- [Współdziałanie z aplikacjami COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Współdziałanie z aplikacjami COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: odczyt i zapis we właśnie utworzonym pliku danych'
+title: 'Instrukcje: Odczyt i zapis w nowo utworzonym pliku danych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65c56a11531f705b7e047e435ec575969d39a616
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4f51042564158cfd7924164ce2b1a0fcc9d2658d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45592909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562833"
 ---
-# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Porady: odczyt i zapis we właśnie utworzonym pliku danych
+# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Instrukcje: Odczyt i zapis w nowo utworzonym pliku danych
 <xref:System.IO.BinaryWriter> i <xref:System.IO.BinaryReader?displayProperty=nameWithType> klasy są używane do zapisywania i odczytywania danych, a nie ciągi znaków. Poniższy przykład pokazuje, jak zapisywać danych i odczytywanie danych ze strumienia nowy, pusty plik o nazwie `Test.data`. Po utworzeniu pliku danych w bieżącym katalogu skojarzonego <xref:System.IO.BinaryWriter> i <xref:System.IO.BinaryReader> są tworzone obiekty i <xref:System.IO.BinaryWriter> obiekt jest używany do zapisywania liczby całkowite 0 do 10, aby `Test.data`, która pozostawia na końcu wskaźnika pliku plik. Po ustawieniu wskaźnika pliku z powrotem do źródła, <xref:System.IO.BinaryReader> obiektu odczytuje się określonej zawartości.  
   
 ## <a name="example"></a>Przykład  
@@ -35,15 +35,15 @@ ms.locfileid: "45592909"
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IO.BinaryReader>  
-- <xref:System.IO.BinaryWriter>  
-- <xref:System.IO.FileStream>  
-- <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>  
-- <xref:System.IO.SeekOrigin>  
-- [Instrukcje: wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [Instrukcje: otwieranie pliku dziennika i dołączanie do niego](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Instrukcje: odczytywanie tekstu z pliku](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Instrukcje: zapisywanie tekstu w pliku](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Instrukcje: odczytywanie znaków z ciągu](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [Instrukcje: zapisywanie znaków w ciągu](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- <xref:System.IO.BinaryReader>
+- <xref:System.IO.BinaryWriter>
+- <xref:System.IO.FileStream>
+- <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>
+- <xref:System.IO.SeekOrigin>
+- [Instrukcje: Wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [Instrukcje: Otwieranie i dołączanie do pliku dziennika](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [Instrukcje: Odczytywanie tekstu z pliku](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [Instrukcje: Zapisywanie tekstu do pliku](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [Instrukcje: Odczytywanie znaków z ciągu](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- [Instrukcje: Zapisywanie znaków w ciągu](../../../docs/standard/io/how-to-write-characters-to-a-string.md)
 - [We/Wy plików i strumieni](../../../docs/standard/io/index.md)

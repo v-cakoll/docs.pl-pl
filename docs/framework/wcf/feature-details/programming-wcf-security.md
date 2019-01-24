@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 1cb18f1be8e418ace4c9f9f71b7f97ac37ff8074
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2b49031b0001ddba01a888806206360c1cbdbacb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699470"
 ---
 # <a name="programming-wcf-security"></a>Programowanie zabezpieczeń WCF
 W tym temacie opisano podstawowe zadania programowania, służące do tworzenia bezpiecznych aplikacji Windows Communication Foundation (WCF). W tym temacie omówiono uwierzytelniania, poufności i integralności, nazywane zbiorczo *transferu zabezpieczeń*. W tym temacie nie omówiono autoryzacji (kontrola dostępu do zasobów lub usług); Aby uzyskać informacje dotyczące autoryzacji, zobacz [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -35,7 +35,7 @@ W tym temacie opisano podstawowe zadania programowania, służące do tworzenia 
   
     1.  `Transport`  
   
-         Zabezpieczenia transportu jest zależna od mechanizm, który używa powiązania, który wybrano. Na przykład, jeśli używasz `WSHttpBinding` mechanizmu zabezpieczeń jest Secure Sockets Layer (SSL) (również mechanizm dla protokołu HTTPS). Ogólnie rzecz biorąc główną zaletą zabezpieczeń transportu jest zapewnia dobre przepływność niezależnie od tego, które transportu używasz. Jednak mieć dwa ograniczenia: pierwszy to, że mechanizm transportu Określa typ poświadczenia używane do uwierzytelnienia użytkownika. Wadą jest tylko wtedy, gdy usługa musi współdziałać z innymi usługami, wymagających różne rodzaje poświadczeń. Drugą jest wartość, ponieważ nie zastosowano zabezpieczenia na poziomie komunikatu, są implementowane w sposób przeskoku przeskoku zamiast end-to-end. To ograniczenie ostatnim jest problemem, tylko wtedy, gdy ścieżka wiadomości między klientem a usługą zawiera pośredników. Aby uzyskać więcej informacji na temat które transportu do użycia, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Aby uzyskać więcej informacji na temat za pomocą zabezpieczeń transportu zobacz [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         Zabezpieczenia transportu jest zależna od mechanizm, który używa powiązania, który wybrano. Na przykład, jeśli używasz `WSHttpBinding` mechanizmu zabezpieczeń jest Secure Sockets Layer (SSL) (również mechanizm dla protokołu HTTPS). Ogólnie rzecz biorąc główną zaletą zabezpieczeń transportu jest zapewnia dobre przepływność niezależnie od tego, które transportu używasz. Jednakże ma dwa ograniczenia: Pierwsza to, że mechanizm transportu Określa typ poświadczenia używane do uwierzytelnienia użytkownika. Wadą jest tylko wtedy, gdy usługa musi współdziałać z innymi usługami, wymagających różne rodzaje poświadczeń. Drugą jest wartość, ponieważ nie zastosowano zabezpieczenia na poziomie komunikatu, są implementowane w sposób przeskoku przeskoku zamiast end-to-end. To ograniczenie ostatnim jest problemem, tylko wtedy, gdy ścieżka wiadomości między klientem a usługą zawiera pośredników. Aby uzyskać więcej informacji na temat które transportu do użycia, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Aby uzyskać więcej informacji na temat za pomocą zabezpieczeń transportu zobacz [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2.  `Message`  
   
@@ -101,6 +101,6 @@ W tym temacie opisano podstawowe zadania programowania, służące do tworzenia 
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+## <a name="see-also"></a>Zobacz także
+- [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

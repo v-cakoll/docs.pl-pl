@@ -2,12 +2,12 @@
 title: Klasyfikacja standardowych operatorów zapytań w oparciu o sposób działania (C#)
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: 76a1cc4cdca00df8e3338e9251ce1e715cb8ce29
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eaf0be4faee01e94b508b31bf878a537471750a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711775"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Klasyfikacja standardowych operatorów zapytań w oparciu o sposób działania (C#)
 LINQ do obiektów implementacje metod standardowych operatorów zapytań wykonania w jednym z dwa główne sposoby: odejścia. Operatory zapytań, które używają odroczonego wykonania można dodatkowo podzielić na dwie kategorie: przesyłanie strumieniowe i obsługiwane strumieniowo. Jeśli wiesz, jak wykonać operatory inne zapytanie, jego może ułatwić zrozumienie wyników, które otrzymasz od określonego zapytania. Jest to szczególnie istotne, jeśli zmienia się ze źródłem danych lub jeśli tworzysz kwerendy na podstawie innego zapytania. W tym temacie klasyfikuje standardowych operatorów zapytań zgodnie z ich sposób działania.  
@@ -87,9 +87,9 @@ LINQ do obiektów implementacje metod standardowych operatorów zapytań wykonan
 |<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Linq.Enumerable>  
-- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [Składnia wyrażeń dla standardowych operatorów zapytań (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+- <xref:System.Linq.Enumerable>
+- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Składnia wyrażeń dla standardowych operatorów zapytań (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
 - [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

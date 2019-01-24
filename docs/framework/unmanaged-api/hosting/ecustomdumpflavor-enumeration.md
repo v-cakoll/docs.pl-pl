@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6d0ba3f722f63650a3db6a8f633189993db0716
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2be9f112d5997ec8a6b126229eb8608eb8dd8520
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627645"
 ---
 # <a name="ecustomdumpflavor-enumeration"></a>ECustomDumpFlavor — Wyliczenie
-Zawiera wartości, które wskazują pozycje, które chcesz uwzględnić w niestandardowych podzbiór sterty zrzutu podczas raportowania błędów.  
+Zawiera wartości wskazujące, które elementów do uwzględnienia w niestandardowych podzbiór sterty zrzutu podczas zgłaszania błędów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +39,22 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`DUMP_FLAVOR_Mini`|Określa, że zrzutu niestandardowych sterty należy uruchomić jako minizrzutu i obejmują dodatkowe dane określonym przez [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) wystąpienia przekazane do tej samej metody.|  
-|`DUMP_FLAVOR_NonHeapCLRState`|Określa, że zrzut niestandardowych sterty należy zebrać wszystkie dane stanu czasu wykonywania, które nie zostało przydzielone dynamicznie.|  
+|`DUMP_FLAVOR_Mini`|Określa, że zrzutu sterty niestandardowych należy uruchomić jako minizrzutu i obejmują dodatkowe dane określone przez dowolne [customdumpitem —](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) wystąpienia przekazane do tej samej metody.|  
+|`DUMP_FLAVOR_NonHeapCLRState`|Określa, że zrzut sterty niestandardowego należy zebrać wszystkie dane w stanie w czasie wykonywania, które nie został przydzielony dynamicznie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Parametr typu `ECustomDumpFlavor` jest przekazywana do [ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) metody.  
+ Parametr typu `ECustomDumpFlavor` jest przekazywany do [iclrerrorreportingmanager::begincustomdump —](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ECustomDumpItemKind, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)  
- [ICLRErrorReportingManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [ECustomDumpItemKind, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)
+- [ICLRErrorReportingManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

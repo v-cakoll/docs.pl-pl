@@ -1,26 +1,26 @@
 ---
-title: 'Zadanie 3: Tworzenie przybornika i PropertyGrid okienka'
+title: Zadanie 3. Tworzenie okienka PropertyGrid i przybornika
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 9bfce22e9de1d6115cb88daddcd2dca355b6bae8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558426"
 ---
-# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Zadanie 3: Tworzenie przybornika i PropertyGrid okienka
-W ramach tego zadania spowoduje utworzenie **przybornika** i **PropertyGrid** okienka i dodaj je do rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Zadanie 3. Tworzenie okienka PropertyGrid i przybornika
+W tym zadaniu utworzysz **przybornika** i **PropertyGrid** okienka i dodać je do rehostowanym [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
- Odwołania, kod, który powinien znajdować się w pliku MainWindow.xaml.cs po zakończeniu trzech zadania w programie [Rehosting projektanta przepływów pracy](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) serii tematów znajduje się na końcu tego tematu.  
+ Odwołanie, kod, który powinien znajdować się w pliku MainWindow.xaml.cs po ukończeniu trzy zadania w programie [Rehostowanie projektanta przepływu pracy](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) szeregu tematów znajduje się na końcu tego tematu.  
   
-### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Aby utworzyć przybornika i dodać go do siatki  
+### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Aby utworzyć przybornik i dodaj go do siatki  
   
-1.  Otwórz projekt HostingApplication uzyskano, wykonując procedury opisane w sekcji [zadanie 2: Host projektanta przepływów pracy](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
+1.  Otwórz projekt HostingApplication uzyskany postępując zgodnie z procedurą opisaną w artykule [zadanie 2: Hostowanie projektanta przepływu pracy](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
   
-2.  W **Eksploratora rozwiązań** okienku kliknij prawym przyciskiem myszy plik MainWindow.xaml i wybierz **kod widoku**.  
+2.  W **Eksploratora rozwiązań** okienku kliknij prawym przyciskiem myszy pliku MainWindow.xaml i wybierz **Wyświetl kod**.  
   
-3.  Dodaj `GetToolboxControl` metodę `MainWindow` klasy, która tworzy <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, dodaje nową **przybornika** kategorię, aby **przybornika**i przypisuje <xref:System.Activities.Statements.Assign> i <xref:System.Activities.Statements.Sequence> typy działań do tej kategorii.  
+3.  Dodaj `GetToolboxControl` metody `MainWindow` klasy, która tworzy <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, dodaje nowy **przybornika** kategorię, aby **przybornika**i przypisuje <xref:System.Activities.Statements.Assign> i <xref:System.Activities.Statements.Sequence> typy działań do tej kategorii.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ W ramach tego zadania spowoduje utworzenie **przybornika** i **PropertyGrid** ok
     }  
     ```  
   
-4.  Dodaj prywatnej `AddToolbox` metodę `MainWindow` klasy, który umieszcza **przybornika** w lewej kolumnie siatki.  
+4.  Dodaj prywatnej `AddToolbox` metody `MainWindow` klasy, która umieszcza **przybornika** w lewej kolumnie siatki.  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ W ramach tego zadania spowoduje utworzenie **przybornika** i **PropertyGrid** ok
     }  
     ```  
   
-5.  Dodaj wywołanie do `AddToolBox` metoda `MainWindow()` konstruktora klasy, jak pokazano w poniższym kodzie.  
+5.  Dodaj wywołanie do `AddToolBox` method in Class metoda `MainWindow()` konstruktora klasy, jak pokazano w poniższym kodzie.  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ W ramach tego zadania spowoduje utworzenie **przybornika** i **PropertyGrid** ok
     }  
     ```  
   
-6.  Naciśnij klawisz F5, aby skompilować i uruchomić rozwiązania. **Przybornika** zawierający <xref:System.Activities.Statements.Assign> i <xref:System.Activities.Statements.Sequence> działania powinny być wyświetlane.  
+6.  Naciśnij klawisz F5, aby skompilować i uruchomić rozwiązanie. **Przybornika** zawierający <xref:System.Activities.Statements.Assign> i <xref:System.Activities.Statements.Sequence> działań powinien być wyświetlany.  
   
 ### <a name="to-create-the-propertygrid"></a>Aby utworzyć PropertyGrid  
   
-1.  W **Eksploratora rozwiązań** okienku kliknij prawym przyciskiem myszy plik MainWindow.xaml i wybierz **kod widoku**.  
+1.  W **Eksploratora rozwiązań** okienku kliknij prawym przyciskiem myszy pliku MainWindow.xaml i wybierz **Wyświetl kod**.  
   
-2.  Dodaj `AddPropertyInspector` metodę `MainWindow` klasę, aby umieścić **PropertyGrid** okienka w ostatniej kolumnie siatki.  
+2.  Dodaj `AddPropertyInspector` metody `MainWindow` klasy, aby umieścić **PropertyGrid** w okienku po prawej stronie kolumny w siatce.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ W ramach tego zadania spowoduje utworzenie **przybornika** i **PropertyGrid** ok
     }  
     ```  
   
-3.  Dodaj wywołanie do `AddPropertyInspector` metoda `MainWindow()` konstruktora klasy, jak pokazano w poniższym kodzie.  
+3.  Dodaj wywołanie do `AddPropertyInspector` method in Class metoda `MainWindow()` konstruktora klasy, jak pokazano w poniższym kodzie.  
   
     ```csharp  
     public MainWindow()  
@@ -103,7 +103,7 @@ W ramach tego zadania spowoduje utworzenie **przybornika** i **PropertyGrid** ok
     }  
     ```  
   
-4.  Naciśnij klawisz F5, aby skompilować i uruchomić rozwiązanie. **Przybornika**, kanwy projektu przepływu pracy, i **PropertyGrid** okienka powinny być wyświetlane wszystkie i przeciągnięcie <xref:System.Activities.Statements.Assign> działania lub <xref:System.Activities.Statements.Sequence> działania na kanwę projektu siatki właściwości, należy zaktualizować w zależności od wyróżnione działania.  
+4.  Naciśnij klawisz F5, aby skompilować i uruchomić rozwiązanie. **Przybornika**, kanwą przepływu pracy i **PropertyGrid** okienka powinny być wyświetlane wszystkie i przeciągnięcie <xref:System.Activities.Statements.Assign> działania lub <xref:System.Activities.Statements.Sequence> działania na kanwę projektu siatki właściwości, należy zaktualizować w zależności od działania wyróżnione.  
   
 ## <a name="example"></a>Przykład  
  Plik MainWindow.xaml.cs teraz powinien zawierać następujący kod.  
@@ -212,7 +212,7 @@ namespace HostingApplication
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Rehostowanie projektanta przepływu pracy](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Zadanie 1: Tworzenie nowej aplikacji Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [Zadanie 2: Hostowanie projektanta przepływu pracy](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a>Zobacz także
+- [Rehostowanie projektanta przepływu pracy](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+- [Zadanie 1: Tworzenie nowej aplikacji Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
+- [Zadanie 2. Hostowanie projektanta przepływu pracy](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

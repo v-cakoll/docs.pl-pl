@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: abb679971771f6bff5bd1c84ff744e2fcbb9c45a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 084a31ec008d1651bb66f7d59731a21d4ef0ece7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732859"
 ---
 # <a name="using-the-xmlserializer-class"></a>Używanie klasy XmlSerializer
 Windows Communication Foundation (WCF) można użyć dwóch technologii serializacji w różnych, aby przekształcać dane w aplikacji do formatu XML, które są przesyłane między klientami i usług, w procesie zwanym serializacji.  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) można użyć dwóch technologii serializ
  <xref:System.ServiceModel.MessageHeaderArrayAttribute> Atrybut nie jest obsługiwany w przypadku korzystania z <xref:System.Xml.Serialization.XmlSerializer>.  
   
 > [!NOTE]
->  W tym przypadku <xref:System.Xml.Serialization.XmlSerializer> zgłasza następujący wyjątek, który jest wydane przed WCF: "element zadeklarowany na najwyższym poziomie schematu nie może mieć `maxOccurs` > 1. Dostarcz element otoki, aby uzyskać więcej, korzystając z `XmlArray` lub `XmlArrayItem` zamiast `XmlElementAttribute`, lub używając stylu parametru Wrapped. "  
+>  W tym przypadku <xref:System.Xml.Serialization.XmlSerializer> zgłasza następujący wyjątek, który jest wydane przed WCF: "Element zadeklarowany na najwyższym poziomie schematu nie może mieć `maxOccurs` > 1. Dostarcz element otoki, aby uzyskać więcej, korzystając z `XmlArray` lub `XmlArrayItem` zamiast `XmlElementAttribute`, lub używając stylu parametru Wrapped. "  
 >   
 >  Jeśli wystąpi wyjątek od tej zasady należy zbadać, czy w takiej sytuacji.  
   
@@ -205,11 +205,11 @@ Windows Communication Foundation (WCF) można użyć dwóch technologii serializ
 > [!NOTE]
 >  `<xmlSerializer useLegacySerializerGeneration="true"/>` Przełącznika działa tylko na komputerze z systemem .NET Framework 4.5 lub nowszej wersji. Powyższe `appSettings` podejście działa we wszystkich wersjach systemu .NET Framework.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.DataContractFormatAttribute>  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- <xref:System.ServiceModel.MessageHeaderArrayAttribute>  
- [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
- [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Instrukcje: skracanie czasu uruchamiania aplikacji klienckich programu WCF za pomocą elementu XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.DataContractFormatAttribute>
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.ServiceModel.MessageHeaderArrayAttribute>
+- [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Instrukcje: Poprawę czasu uruchamiania programu WCF klienta aplikacji przy użyciu elementu XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

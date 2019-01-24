@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 44f0763aa09b2a9d036d13c9995d7ea978908d4c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529164"
 ---
 # <a name="transport-security-overview"></a>Przegląd zabezpieczeń transportu
 Mechanizmy zabezpieczeń transportu w Windows Communication Foundation (WCF) zależy od tego, powiązania i transport używane. Na przykład w przypadku korzystania z <xref:System.ServiceModel.WSHttpBinding> klasy, transport, jest protokół HTTP i zabezpieczanie transportu przy użyciu podstawowego mechanizmu jest Secure Sockets Layer (SSL) przy użyciu protokołu HTTP, często nazywane protokołu HTTPS. W tym temacie opisano mechanizmy zabezpieczeń transportu głównych używanych w WCF powiązania dostarczane przez system.  
@@ -47,7 +47,7 @@ Mechanizmy zabezpieczeń transportu w Windows Communication Foundation (WCF) zal
  W poniższych sekcjach omówiono innego typu poświadczeń klienta.  
   
 #### <a name="basic"></a>Podstawowy  
- Odpowiada to podstawowa metoda uwierzytelniania w usługach IIS. Podczas korzystania z tego trybu serwera IIS muszą być skonfigurowane przy użyciu Windows kont użytkowników i odpowiednie uprawnienia systemu plików NTFS. Aby uzyskać więcej informacji na temat [!INCLUDE[iis601](../../../../includes/iis601-md.md)], zobacz [umożliwiające uwierzytelnianie podstawowe i konfigurowanie nazwy obszaru](https://go.microsoft.com/fwlink/?LinkId=88592). Aby uzyskać więcej informacji na temat [!INCLUDE[iisver](../../../../includes/iisver-md.md)], zobacz [IIS 7.0 Beta: Konfigurowanie uwierzytelniania podstawowego](https://go.microsoft.com/fwlink/?LinkId=88593).  
+ Odpowiada to podstawowa metoda uwierzytelniania w usługach IIS. Podczas korzystania z tego trybu serwera IIS muszą być skonfigurowane przy użyciu Windows kont użytkowników i odpowiednie uprawnienia systemu plików NTFS. Aby uzyskać więcej informacji na temat [!INCLUDE[iis601](../../../../includes/iis601-md.md)], zobacz [umożliwiające uwierzytelnianie podstawowe i konfigurowanie nazwy obszaru](https://go.microsoft.com/fwlink/?LinkId=88592). Aby uzyskać więcej informacji na temat [!INCLUDE[iisver](../../../../includes/iisver-md.md)], zobacz [IIS 7.0 Beta: Skonfiguruj uwierzytelnianie podstawowe,](https://go.microsoft.com/fwlink/?LinkId=88593).  
   
 #### <a name="certificate"></a>Certyfikat  
  Usługi IIS zawiera opcję, aby wymagać od klientów, zaloguj się przy użyciu certyfikatu. Ta funkcja umożliwia także usługi IIS do mapowania certyfikatu klienta na konto Windows. Aby uzyskać więcej informacji na temat [!INCLUDE[iis601](../../../../includes/iis601-md.md)], zobacz [Włączanie certyfikatów klientów w usługach IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88594). Aby uzyskać więcej informacji na temat [!INCLUDE[iisver](../../../../includes/iisver-md.md)], zobacz [IIS 7.0 Beta: Konfigurowanie certyfikatów serwera w usługach IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88595).  
@@ -120,5 +120,5 @@ Mechanizmy zabezpieczeń transportu w Windows Communication Foundation (WCF) zal
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding i NetMsmqBinding  
  Wyczerpujące omówienie transportu zabezpieczeń za pomocą usługi kolejkowania komunikatów (nazywanymi wcześniej MSMQ), zobacz [Zabezpieczanie komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a>Zobacz także
+- [Programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

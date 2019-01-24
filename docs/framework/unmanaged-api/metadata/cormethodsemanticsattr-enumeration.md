@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de467c98dfa7ad3eac69502f2afe311b301e1ec5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f888c39160e52e550d07f58b9c5bcd11fd625658
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564084"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr — Wyliczenie
-Zawiera wartości, które opisują relację między metody i skojarzonej właściwości lub zdarzenia.  
+Zawiera wartości, które opisują relację między metodą i skojarzonej właściwości lub zdarzenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,19 +45,19 @@ typedef enum CorMethodSemanticsAttr {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`msSetter`|Określa, że metoda jest `set` metody dostępu właściwości.|  
-|`msGetter`|Określa, że metoda jest `get` metody dostępu właściwości.|  
-|`msOther`|Określa, że metoda ma relacji z właściwości lub zdarzenia innych niż te, zdefiniowane w tym miejscu.|  
+|`msSetter`|Określa, że metoda jest `set` akcesora dla właściwości.|  
+|`msGetter`|Określa, że metoda jest `get` akcesora dla właściwości.|  
+|`msOther`|Określa, że metoda ma relację z właściwości lub zdarzenia inne niż te zdefiniowane w tym miejscu.|  
 |`msAddOn`|Określa, że metoda dodaje metody obsługi zdarzeń.|  
 |`msRemoveOn`|Określa, że metoda usuwa metody obsługi zdarzeń.|  
 |`msFire`|Określa, że metoda wywołuje zdarzenie.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

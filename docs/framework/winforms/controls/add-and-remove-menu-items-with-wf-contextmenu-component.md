@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dodawanie i usuwanie elementów menu za pomocą składnika ContextMenu formularzy systemu Windows'
+title: 'Instrukcje: Dodawanie i usuwanie elementów Menu za pomocą składnika ContextMenu formularzy Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,26 +16,26 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 7cc11eaf4a671c76933c2705b41a4df6c35c0536
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac554f080cdabc7034ca839c3a9086e927429f7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520038"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Porady: dodawanie i usuwanie elementów menu za pomocą składnika ContextMenu formularzy systemu Windows
-Wyjaśniono, jak dodawać i usuwać elementy menu skrótów w formularzach systemu Windows.  
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Instrukcje: Dodawanie i usuwanie elementów Menu za pomocą składnika ContextMenu formularzy Windows
+Wyjaśnia, jak dodawać i usuwać elementy menu skrótów w formularzach Windows Forms.  
   
- Formularze systemu Windows <xref:System.Windows.Forms.ContextMenu> stanowi menu często używanych poleceń, które mają zastosowanie do zaznaczonego obiektu. Można dodać elementy do menu skrótów, dodając <xref:System.Windows.Forms.MenuItem> obiekty do <xref:System.Windows.Forms.Menu.MenuItems%2A> kolekcji.  
+ Formularze Windows <xref:System.Windows.Forms.ContextMenu> składnik zapewnia menu często używanych poleceń, które są istotne dla wybranego obiektu. Możesz dodać elementy do menu skrótów, dodając <xref:System.Windows.Forms.MenuItem> obiekty do <xref:System.Windows.Forms.Menu.MenuItems%2A> kolekcji.  
   
- Elementy menu skrótów można usunąć trwale; Jednak w czasie wykonywania może być bardziej odpowiednie do ukrywania lub wyłącz zamiast tego elementów.  
+ Użytkownik może trwałe usuwanie elementów z menu skrótów; Jednak w czasie wykonywania może być bardziej odpowiednie ukryć lub zamiast tego Wyłącz elementy.  
   
 > [!IMPORTANT]
->  Mimo że <xref:System.Windows.Forms.MenuStrip> i <xref:System.Windows.Forms.ContextMenuStrip> Zastąp oraz dodawać funkcje do <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu> formanty poprzednie wersje <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu> zostaną zachowane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana.  
+>  Mimo że <xref:System.Windows.Forms.MenuStrip> i <xref:System.Windows.Forms.ContextMenuStrip> Zastąp i dodawania funkcjonalności do <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu> kontrolki z poprzednich wersji <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu> zostaną zachowane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
   
-### <a name="to-remove-items-from-a-shortcut-menu"></a>Aby usunąć elementy menu skrótów  
+### <a name="to-remove-items-from-a-shortcut-menu"></a>Aby usunąć elementy z menu skrótów  
   
-1.  Użyj <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> lub <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> metody <xref:System.Windows.Forms.Menu.MenuItems%2A> kolekcję <xref:System.Windows.Forms.ContextMenu> składnika, aby usunąć element z określonym menu.  
+1.  Użyj <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> lub <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> metody <xref:System.Windows.Forms.Menu.MenuItems%2A> zbiór <xref:System.Windows.Forms.ContextMenu> składnika, aby usunąć element menu określonej.  
   
     ```vb  
     ' Removes the first item in the shortcut menu.  
@@ -60,7 +60,7 @@ Wyjaśniono, jak dodawać i usuwać elementy menu skrótów w formularzach syste
   
      —lub—  
   
-2.  Użyj `Clear` metody `MenuItems` Kolekcja <xref:System.Windows.Forms.ContextMenu> składnik, aby usunąć wszystkie elementy z menu.  
+2.  Użyj `Clear` metody `MenuItems` zbiór <xref:System.Windows.Forms.ContextMenu> składnika, aby usunąć wszystkie elementy menu.  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  
@@ -74,7 +74,7 @@ Wyjaśniono, jak dodawać i usuwać elementy menu skrótów w formularzach syste
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.ContextMenu>  
- [ContextMenu, składnik](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
- [ContextMenu, składnik — omówienie](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.ContextMenu>
+- [ContextMenu, składnik](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)
+- [ContextMenu, składnik — omówienie](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 29399beebef3de3e7b4ae8ce7f3611e3d158296f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a93519cbc320def91c030e7344b33be2a10b4351
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674339"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer — Klasa
 `SoundPlayer` Klasy umożliwia łatwe uwzględnianie dźwięki w aplikacji.  
@@ -22,22 +22,22 @@ ms.locfileid: "48835584"
  [SoundPlayer, klasa — omówienie](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
  Wprowadza klasy i jej często używanych właściwości, metod i zdarzeń.  
   
- [Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
+ [Instrukcje: Odtwarzanie dźwięku za pomocą formularza Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
  Zawiera kod, aby odtworzyć dźwięk określony przy użyciu ścieżki pliku, ścieżka UNC lub ścieżki HTTP.  
   
- [Instrukcje: odtwarzanie sygnału dźwiękowego za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
+ [Instrukcje: Odtwórz sygnał dźwiękowy z formularza Windows](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
  Zawiera kod, aby odtworzyć dźwięk dźwiękowego komputera.  
   
- [Instrukcje: odtwarzanie dźwięku osadzonego w zasobie za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
+ [Instrukcje: Odtwarzanie dźwięku osadzonego w zasobie za pomocą formularza Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
  Zawiera kod, aby odtworzyć dźwięk z zasobu.  
   
- [Instrukcje: odtwarzanie dźwięku systemowego za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
+ [Instrukcje: Odtwarzanie dźwięku systemowego za pomocą formularza Windows](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
  Zawiera kod, aby odtworzyć ten dźwięki systemu.  
   
- [Instrukcje: ładowanie dźwięku asynchronicznie w formularzu systemu Windows](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
+ [Instrukcje: Ładowanie dźwięku asynchronicznie w formularzu Windows](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
  Zawiera kod, aby ładowanie dźwięku asynchronicznie z adresu URL i odtwarzać je.  
   
- [Instrukcje: odtwarzanie dźwięku w pętli w formularzu systemu Windows](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
+ [Instrukcje: Odtwarzanie w formularzu Windows dźwięku w pętli](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
  Zawiera kod, który odtwarza dźwięk wielokrotnie.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -51,6 +51,6 @@ ms.locfileid: "48835584"
  [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
   
-## <a name="see-also"></a>Zobacz także 
+## <a name="see-also"></a>Zobacz także
 
 - [My.Computer, obiekt](../../../visual-basic/language-reference/objects/my-computer-object.md)

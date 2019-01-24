@@ -2,12 +2,12 @@
 title: Dołącz do operacji (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: f03d5cf14525a6d23240747c2f377348bf608782
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d8753ef0563a665767204c1ebc0af4e4a23b4455
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537949"
 ---
 # <a name="join-operations-c"></a>Dołącz do operacji (C#)
 A *sprzężenia* dwóch źródeł danych jest skojarzenie obiektów w jednym źródle danych z obiektów mających wspólny atrybut w innym źródle danych.  
@@ -25,20 +25,20 @@ A *sprzężenia* dwóch źródeł danych jest skojarzenie obiektów w jednym źr
 |Nazwa metody|Opis|Składnia wyrażeń zapytania języka C#|Więcej informacji|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Łączenie|Łączy dwie sekwencje, w oparciu o funkcje przełącznika kluczowego i wyodrębnia par wartości.|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
-|Groupjoin —|Łączy dwie sekwencje, w oparciu o funkcje przełącznika kluczowego i grupy znalezione wyniki dla każdego elementu.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
+|GroupJoin|Łączy dwie sekwencje, w oparciu o funkcje przełącznika kluczowego i grupy znalezione wyniki dla każdego elementu.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Linq>  
-- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [Typy anonimowe](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
-- [Formułowanie połączeń i zapytań między produktami](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
-- [join, klauzula](../../../../csharp/language-reference/keywords/join-clause.md)  
-- [Porady: sprzęganie za pomocą kluczy złożonych](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
-- [Porady: łączenie zawartości niepodobnych plików (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
-- [Porady: kolejność wyników klauzuli Join](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
-- [Porady: wykonywanie niestandardowych operacji łączenia](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
-- [Porady: wykonanie sprzężeń grupowanych](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
-- [Porady: wykonanie sprzężeń wewnętrznych](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
-- [Porady: wykonanie lewych sprzężeń zewnętrznych](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
-- [Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- <xref:System.Linq>
+- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Typy anonimowe](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [Formułowanie połączeń i zapytań między produktami](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
+- [join, klauzula](../../../../csharp/language-reference/keywords/join-clause.md)
+- [Instrukcje: Sprzęganie za pomocą kluczy złożonych](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)
+- [Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)
+- [Instrukcje: Kolejność wyników klauzuli Join](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [Instrukcje: Wykonywanie niestandardowych operacji łączenia](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)
+- [Instrukcje: Wykonanie sprzężeń grupowanych](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)
+- [Instrukcje: Wykonanie sprzężeń wewnętrznych](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)
+- [Instrukcje: Wykonanie lewych sprzężeń zewnętrznych](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)
+- [Instrukcje: Wypełnianie kolekcji Object z wielu źródeł (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0652f5f3f3629257f8f67c6b4a0b9551ef547b62
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 06f772b8d26ec87519efdaae7b621f3fd2d321c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45648073"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714740"
 ---
 # <a name="merge-options-in-plinq"></a>Opcje scalania w PLINQ
 Gdy zapytanie jest wykonywany jako równoległego, PLINQ partycje sekwencji źródłowej wiele wątków może pracować na różnych częściach współbieżnie, zazwyczaj w oddzielnych wątkach. Jeśli wyniki mają być używane w jednym wątku, na przykład w `foreach` (`For Each` w języku Visual Basic) w pętli, a następnie wyniki z każdego wątku muszą być scalone jednej sekwencji. Rodzaj scalania, który wykonuje PLINQ jest zależna od operatorów, które są obecne w zapytaniu. Na przykład operatory, które nakładają nowe zamówienie na wynikach musi buforu wszystkie elementy ze wszystkich wątków. Z punktu widzenia zużywającym wątku (jest to również w przypadku użytkowników aplikacji) pełni buforowane zapytanie może działać zauważalne okres czasu, tworzy jej pierwszego wyniku. Inne operatory domyślnie są częściowo buforowane; dają one ich wyniki w partiach. Jeden operator <xref:System.Linq.ParallelEnumerable.ForAll%2A> nie jest buforowana domyślnie. Natychmiast daje wszystkie elementy ze wszystkich wątków.  
@@ -25,7 +25,7 @@ Gdy zapytanie jest wykonywany jako równoległego, PLINQ partycje sekwencji źr�
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- Aby uzyskać kompletny przykład, zobacz [porady: Określanie opcji scalania w PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
+ Aby uzyskać kompletny przykład, zobacz [jak: Określanie opcji scalania w PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
   
  Jeśli określone zapytanie nie obsługuje żądanej opcji, następnie opcję zostanie zignorowane. W większości przypadków jest konieczne określanie opcji scalania dla zapytania PLINQ. Jednak w niektórych przypadkach może się okazać przez testom i pomiarom wykonujący zapytanie najlepiej w trybie innych niż domyślne. Wspólne użycie tej opcji jest wymuszenie operatorem scalanie fragmentu do przesyłania strumieniowego jego wyniki w celu zapewnienia zwiększyć szybkość reakcji interfejsu użytkownika.  
   
@@ -67,5 +67,5 @@ Gdy zapytanie jest wykonywany jako równoległego, PLINQ partycje sekwencji źr�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
-- [Instrukcje: określanie opcji scalania w PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Instrukcje: Określanie opcji scalania w PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

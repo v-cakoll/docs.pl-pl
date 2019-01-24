@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fa6a8c4989b6bc7027a585f098e0aedf17fee01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9588a22feb27d2bd40af2b003179638ef6f34e83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660869"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject — Metoda
 Konwertuje adres obiektu do obiektu "ICorDebugObjectValue".  
@@ -40,13 +41,13 @@ HRESULT GetObject(
  [in] Adres obiektu.  
   
  `ppObject`  
- [out] Wskaźnik do adresu obiektu "ICorDebugObjectValue".  
+ [out] Wskaźnik na adres obiektu "ICorDebugObjectValue".  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `addr` nie wskazuje prawidłowego obiektu zarządzanego `GetObject` metoda zwraca `E_FAIL`.  
+ Jeśli `addr` nie wskazuje prawidłowego obiektu zarządzanego, `GetObject` metoda zwraca `E_FAIL`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -54,6 +55,6 @@ HRESULT GetObject(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugProcess5, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugProcess5, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18247a947449ea5fd19f1882031b598086332742
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 883f987eb168bf5996baba66f5081875e67f2000
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698729"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW — Funkcja
 Wykonuje określone polecenie.  
@@ -41,10 +41,10 @@ HRESULT RunDll32ShimW (
   
 #### <a name="parameters"></a>Parametry  
  `hwnd`  
- [in] Dojście do okna, w którym będzie wyświetlana w wynikach polecenia.  
+ [in] Dojście do okna, w którym będą wyświetlane dane wyjściowe polecenia.  
   
  `hinst`  
- [in] Dojście do biblioteki, który zawiera polecenie.  
+ [in] Dojście do biblioteki, która zawiera polecenia.  
   
  `lpszCmdLine`  
  [in] Ciąg, który określa polecenie do wykonania.  
@@ -53,13 +53,13 @@ HRESULT RunDll32ShimW (
  [in] Liczba całkowita, która określa tryb wyświetlania w oknie danych wyjściowych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

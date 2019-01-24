@@ -9,12 +9,12 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 1720d0a476d3eb5586ed8742c377324bc1950cd5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3d1e2c24cbbdcecd9daefab4312076099816ba70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596062"
 ---
 # <a name="synchronous-client-socket-example"></a>Przykład synchronicznego gniazda klienta
 Poniższy przykład program tworzy klienta, który nawiązuje połączenie z serwerem. Klient jest tworzone za pomocą synchronicznego gniazda, więc zawiesza wykonywanie aplikacji klienckiej, dopóki serwer nie zwróci odpowiedź. Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwracany przez serwer w konsoli.  
@@ -135,7 +135,7 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykład synchronicznego gniazda serwera](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- [Używanie synchronicznego gniazda klienta](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [Przykłady kodu gniazd](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a>Zobacz także
+- [Przykład synchronicznego gniazda serwera](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
+- [Używanie synchronicznego gniazda klienta](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
+- [Przykłady kodu gniazd](../../../docs/framework/network-programming/socket-code-examples.md)

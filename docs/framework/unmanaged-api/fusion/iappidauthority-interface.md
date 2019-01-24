@@ -16,43 +16,43 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 819afec2c448e5f396ab54e2dde00c01da310b12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c803169f87c4033d7e231e8b0243f502b9246f70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493928"
 ---
 # <a name="iappidauthority-interface"></a>IAppIdAuthority — Interfejs
-Udostępnia metody, które Generowanie i klucze dla tożsamości aplikacji i odwołania do porównania.  
+Udostępnia metody, generujących i klucze dla tożsamości aplikacji i odwołania do porównania.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|`IAppIdAuthority::AreDefinitionsEqual`|Pobiera wartość wskazującą, czy dwa określone [IDefinitionAppId](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md) wystąpienia są takie same. Można przekazać wartość flagi IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION zignorowanie informacji o ich odpowiedniej wersji.|  
-|`IAppIdAuthority::AreReferencesEqual`|Pobiera wartość wskazującą, czy dwa określone [IReferenceAppId](../../../../docs/framework/unmanaged-api/fusion/ireferenceappid-interface.md) wystąpienia są takie same. Można przekazać wartość flagi IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION zignorowanie informacji o ich odpowiedniej wersji.|  
-|`IAppIdAuthority::AreTextualDefinitionsEqual`|Pobiera wartość wskazującą, czy dwie definicje określonego ciągu są takie same. Można przekazać wartość flagi IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION zignorowanie informacji o ich odpowiedniej wersji.|  
-|`IAppIdAuthority::AreTextualReferencesEqual`|Pobiera wartość wskazującą, czy dwa odwołania określonego ciągu są takie same. Można przekazać wartość flagi IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION zignorowanie informacji o ich odpowiedniej wersji.|  
-|`IAppIdAuthority::CreateDefinition`|Pobiera wskaźnika interfejsu do nowo utworzonego `IDefinitionAppId` wystąpienia, który reprezentuje zestaw w bieżącym zakresie.|  
-|`IAppIdAuthority::CreateReference`|Pobiera wskaźnika interfejsu, aby nowo utworzony `IReferenceAppId` reprezentujący zestawu w bieżącym zakresie.|  
+|`IAppIdAuthority::AreDefinitionsEqual`|Pobiera wartość wskazującą, czy dwa określone [idefinitionappid —](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md) wystąpień są takie same. Można przekazać wartość flagi IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION ignorowanie informacjami o odpowiedniej wersji.|  
+|`IAppIdAuthority::AreReferencesEqual`|Pobiera wartość wskazującą, czy dwa określone [ireferenceappid —](../../../../docs/framework/unmanaged-api/fusion/ireferenceappid-interface.md) wystąpień są takie same. Można przekazać wartość flagi IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION ignorowanie informacjami o odpowiedniej wersji.|  
+|`IAppIdAuthority::AreTextualDefinitionsEqual`|Pobiera wartość wskazującą, czy dwie definicje określonego ciągu są takie same. Można przekazać wartość flagi IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION ignorowanie informacjami o odpowiedniej wersji.|  
+|`IAppIdAuthority::AreTextualReferencesEqual`|Pobiera wartość wskazującą, czy dwa odwołania określonego ciągu są takie same. Można przekazać wartość flagi IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION ignorowanie informacjami o odpowiedniej wersji.|  
+|`IAppIdAuthority::CreateDefinition`|Pobiera wskaźnik interfejsu do nowo wygenerowane `IDefinitionAppId` wystąpienia, która reprezentuje zestaw w bieżącym zakresie.|  
+|`IAppIdAuthority::CreateReference`|Pobiera wskaźnik interfejsu do nowo utworzonego `IReferenceAppId` reprezentujący zestaw w bieżącym zakresie.|  
 |`IAppIdAuthority::DefinitionToText`|Pobiera wersję ciągu określonego `IDefinitionAppId`, przy użyciu flagi określonej wartości.|  
 |`IAppIdAuthority::DoesDefinitionMatchReference`|Pobiera wartość wskazującą, czy określony `IDefinitionAppId` i `IReferenceAppId` reprezentują tego samego zestawu.|  
-|`IAppIdAuthority::DoesTextualDefinitionMatchTextualReference`|Pobiera wartość wskazującą, czy określona definicja ciągu i ciąg odwołania reprezentują tego samego zestawu.|  
-|`IAppIdAuthority::GenerateDefinitionKey`|Pobiera klucz ciąg reprezentujący określonego `IDefinitionAppId` wystąpienia.|  
-|`IAppIdAuthority::GenerateReferenceKey`|Pobiera klucz ciąg reprezentujący określonego `IReferenceAppId` wystąpienia.|  
+|`IAppIdAuthority::DoesTextualDefinitionMatchTextualReference`|Pobiera wartość wskazującą, czy podana definicja ciągu i ciąg odwołania reprezentują tego samego zestawu.|  
+|`IAppIdAuthority::GenerateDefinitionKey`|Pobiera klucz ciąg, który reprezentuje określony `IDefinitionAppId` wystąpienia.|  
+|`IAppIdAuthority::GenerateReferenceKey`|Pobiera klucz ciąg, który reprezentuje określony `IReferenceAppId` wystąpienia.|  
 |`IAppIdAuthority::HashDefinition`|Pobiera klucz wyznaczania wartości skrótu dla określonego `IDefinitionAppId` wystąpienia.|  
 |`IAppIdAuthority::HashReference`|Pobiera klucz wyznaczania wartości skrótu dla określonego `IReferenceAppId` wystąpienia.|  
 |`IAppIdAuthority::ReferenceToText`|Pobiera wersję ciągu określonego `IReferenceAppId`, przy użyciu flagi określonej wartości.|  
-|`IAppIdAuthority::TextToDefinition`|Pobiera wskaźnika interfejsu do `IDefinitionAppId` wystąpienia, reprezentujący zestaw odwołuje się określony ciąg klucza.|  
-|`IAppIdAuthority::TextToReference`|Pobiera wskaźnika interfejsu do `IReferenceAppId` wystąpienia, reprezentujący zestaw odwołuje się określony ciąg klucza.|  
+|`IAppIdAuthority::TextToDefinition`|Pobiera wskaźnik interfejsu do `IDefinitionAppId` wystąpienia, która reprezentuje zestaw odwołania za pomocą klucza określonego ciągu.|  
+|`IAppIdAuthority::TextToReference`|Pobiera wskaźnik interfejsu do `IReferenceAppId` wystąpienia, która reprezentuje zestaw odwołania za pomocą klucza określonego ciągu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Isolation.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

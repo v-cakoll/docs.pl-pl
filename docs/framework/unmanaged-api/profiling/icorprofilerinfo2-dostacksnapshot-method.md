@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d107653d34689814ae97ca4012d0fd2e2c4190dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45969788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727277"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot — Metoda
 Przedstawia zarządzanych ramek na stosie dla określonego wątku, a następnie wysyła informacje do profilera za pośrednictwem wywołania zwrotnego.  
@@ -73,7 +73,7 @@ HRESULT DoStackSnapshot(
   
  Kolejność, w której zostaje przeprowadzony stosu jest odwrotnością sposobu ramki są wypychane na stosie: ostatnia liści (wypychania przez ostatnie) po pierwsze, głównym (wypychania pierwszy) klatka.  
   
- Aby uzyskać więcej informacji na temat sposobu programowania programu profilującego do przejścia przez stosy zarządzane, zobacz [Profiler stosu zalet w programie .NET Framework 2.0: podstawy i](https://go.microsoft.com/fwlink/?LinkId=73638).  
+ Aby uzyskać więcej informacji na temat sposobu programowania programu profilującego do przejścia przez stosy zarządzane, zobacz [Profiler stosu zalet w programie .NET Framework 2.0: Podstawy i](https://go.microsoft.com/fwlink/?LinkId=73638).  
   
  Przeszukiwania stosu może być synchroniczna lub asynchroniczna, zgodnie z opisem w poniższych sekcjach.  
   
@@ -100,14 +100,14 @@ HRESULT DoStackSnapshot(
  Istnieje również ryzyko zakleszczenia Jeśli wywołasz `DoStackSnapshot` z wątku, który został utworzony swojego programu profilującego, dzięki czemu możesz zapoznać się z stosu wątku oddzielne docelowe. Wprowadza wątek został utworzony po raz pierwszy, niektóre `ICorProfilerInfo*` metody (w tym `DoStackSnapshot`), środowisko CLR będzie wykonywać inicjacje na wątek, specyficzne dla środowiska CLR dla tego wątku. Jeśli Twój program profilujący został wstrzymany wątek docelowy stosu, którego chcesz, aby zapoznać się z, a ten wątek docelowy stało się z właścicielem blokady wymagany do wykonania tego wątku inicjowania, nastąpi zakleszczenia. Aby uniknąć tego zakleszczenia, należy początkowej wywołać `DoStackSnapshot` z wątek utworzone przez program profilujący przeprowadzenie wątek docelowy oddzielny, ale nie zawiesić wątek docelowy, najpierw. To wywołanie początkowej zapewnia, wykonać inicjowania na wątek bez zakleszczenia. Jeśli `DoStackSnapshot` zakończy się pomyślnie i zgłasza co najmniej jedną ramką po tym momencie są one bezpieczne dla tego wątku utworzone przez program profilujący do wstrzymania dowolnego wątek docelowy i wywołanie `DoStackSnapshot` przeprowadzenie stosu ten wątek docelowy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** } CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf.idl, CorProf.h  
   
  **Biblioteka:** CorGuids.lib  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

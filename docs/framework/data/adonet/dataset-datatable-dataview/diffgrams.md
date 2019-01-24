@@ -2,12 +2,12 @@
 title: DataSets
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: fd452efff2a26b66c06a7762b215df140047286d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 573da0b608b3f74b9cf789a27a10183f3320f908
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513662"
 ---
 # <a name="diffgrams"></a>DataSets
 Format DiffGram jest w formacie XML, który identyfikuje bieżąca i oryginalna wersja elementów danych. <xref:System.Data.DataSet> Używa formatu w formacie DiffGram do ładowania i utrzymują się jego zawartość i do wykonywania serializacji jego zawartość dla transportu połączenia sieciowego. Gdy <xref:System.Data.DataSet> są zapisywane jako element w formacie DiffGram, wypełnia ją w formacie DiffGram wszystkie niezbędne informacje dokładnie odtworzyć zawartość, jednak nie schematu z <xref:System.Data.DataSet>, w tym wartości kolumn z obu **oryginalnego** i **bieżącego** wersji wierszy, informacje o błędzie wiersza i kolejności wierszy.  
@@ -85,9 +85,9 @@ Format DiffGram jest w formacie XML, który identyfikuje bieżąca i oryginalna 
 |----------------|-----------------|  
 |**id**|Używany do pary elementów w  **\<diffgr: przed >** i  **\<diffgr:errors >** bloków do elementów w **\<** ***DataInstance*** **>** bloku. Wartości z **diffgr:id** adnotacji znajdują się w formularzu *[Nazwa_tabeli] [RowIdentifier]*. Na przykład: `<Customers diffgr:id="Customers1">`.|  
 |**parentId**|Identyfikuje element, który z **\<** ***DataInstance*** **>** bloku jest elementem nadrzędnym bieżącego elementu. Wartości z **diffgr:parentId** adnotacji znajdują się w formularzu *[Nazwa_tabeli] [RowIdentifier]*. Na przykład: `<Orders diffgr:parentId="Customers1">`.|  
-|**haschanges —**|Identyfikuje wiersz w **\<** ***DataInstance*** **>** block zmodyfikowana. **Haschanges —** adnotacji może mieć jedną z dwóch wartości:<br /><br /> **Wstawiono**<br /> Identyfikuje **dodano** wiersza.<br /><br /> **Zmodyfikowane**<br /> Identyfikuje **zmodyfikowane** wiersza, który zawiera **oryginalnego** wersji wierszy w  **\<diffgr: przed >** bloku. Należy pamiętać, że **usunięte** wiersze będą mieć **oryginalnego** wersji wierszy w  **\<diffgr: przed >** blok, ale nie będzie można żaden element adnotacjami w **\<** ***DataInstance*** **>** bloku.|  
+|**hasChanges**|Identyfikuje wiersz w **\<** ***DataInstance*** **>** block zmodyfikowana. **Haschanges —** adnotacji może mieć jedną z dwóch wartości:<br /><br /> **inserted**<br /> Identyfikuje **dodano** wiersza.<br /><br /> **Zmodyfikowane**<br /> Identyfikuje **zmodyfikowane** wiersza, który zawiera **oryginalnego** wersji wierszy w  **\<diffgr: przed >** bloku. Należy pamiętać, że **usunięte** wiersze będą mieć **oryginalnego** wersji wierszy w  **\<diffgr: przed >** blok, ale nie będzie można żaden element adnotacjami w **\<** ***DataInstance*** **>** bloku.|  
 |**hasErrors**|Identyfikuje wiersz w **\<** ***DataInstance*** **>** blokowania z **RowError**. Błąd elementu jest umieszczany w  **\<diffgr:errors >** bloku.|  
-|**Błąd**|Zawiera tekst **RowError** dla określonego elementu w  **\<diffgr:errors >** bloku.|  
+|**Error**|Zawiera tekst **RowError** dla określonego elementu w  **\<diffgr:errors >** bloku.|  
   
  <xref:System.Data.DataSet> Obejmuje dodatkowe adnotacje podczas odczytu lub zapisu jego zawartość jako element w formacie DiffGram. W poniższej tabeli opisano te dodatkowe adnotacje, które są zdefiniowane w przestrzeni nazw **urn: schemas-microsoft-com: XML-msdata**.  
   
@@ -131,9 +131,9 @@ Format DiffGram jest w formacie XML, który identyfikuje bieżąca i oryginalna 
 </diffgr:diffgram>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Zapisywanie zawartości elementu DataSet jako danych XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Zapisywanie zawartości elementu DataSet jako danych XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

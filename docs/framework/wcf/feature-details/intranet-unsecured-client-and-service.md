@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: eb165b69e1312363a8cc7c1a3ceea66a422d54f7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7583eab4673dc14380f18456d1713351dbc74f17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603121"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Niezabezpieczony klient i usługa w intranecie
 Poniższa ilustracja przedstawia prostą usługę Windows Communication Foundation (WCF) opracowany, aby udostępniać informacje o bezpiecznej sieci prywatnej dla aplikacji WCF. Zabezpieczeń nie jest wymagany, dane o niskiej ważności, powinien być założenia bezpieczne sieci, ponieważ zabezpieczenia przez warstwę poniżej infrastruktury usług WCF.  
@@ -20,7 +20,7 @@ Poniższa ilustracja przedstawia prostą usługę Windows Communication Foundati
 |Cechy|Opis|  
 |--------------------|-----------------|  
 |Tryb zabezpieczeń|Brak|  
-|Transportu|TCP|  
+|Transport|TCP|  
 |Powiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
 |Współdziałanie|Tylko usługi WCF|  
 |Uwierzytelnianie|Brak|  
@@ -112,7 +112,7 @@ Poniższa ilustracja przedstawia prostą usługę Windows Communication Foundati
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.NetTcpBinding>  
- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.NetTcpBinding>
+- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

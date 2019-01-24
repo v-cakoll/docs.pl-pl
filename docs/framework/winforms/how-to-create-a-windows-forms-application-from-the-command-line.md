@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie aplikacji Windows Forms z wiersza polecenia'
+title: 'Instrukcje: Tworzenie aplikacji Windows Forms z wiersza polecenia'
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54581988"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Porady: tworzenie aplikacji Windows Forms z wiersza polecenia
-W poniższych procedurach opisano podstawowe kroki, które należy wykonać, aby utworzyć i uruchomić aplikację Windows Forms z wiersza polecenia. Brak kompleksową obsługę tych procedur w programie Visual Studio.  Zobacz też [wskazówki: Tworzenie prostego formularza Windows](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Instrukcje: Tworzenie aplikacji Windows Forms z wiersza polecenia
+W poniższych procedurach opisano podstawowe kroki, które należy wykonać, aby utworzyć i uruchomić aplikację Windows Forms z wiersza polecenia. Brak kompleksową obsługę tych procedur w programie Visual Studio.  Zobacz też [instruktażu: Tworzenie formularza Windows proste](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
   
 ## <a name="procedure"></a>Procedura  
   
@@ -113,9 +113,9 @@ W poniższych procedurach opisano podstawowe kroki, które należy wykonać, aby
   
 -   Aby skompilować ten kod, postępuj zgodnie z instrukcjami procedury postępowania, które opisują sposób skompilować i uruchomić aplikację.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Control>  
- [Zmienianie wyglądu formularzy Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- [Rozszerzanie aplikacji Windows Forms](../../../docs/framework/winforms/advanced/index.md)  
- [Wprowadzenie do formularzy Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Control>
+- [Zmienianie wyglądu formularzy Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
+- [Rozszerzanie aplikacji Windows Forms](../../../docs/framework/winforms/advanced/index.md)
+- [Wprowadzenie do formularzy Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

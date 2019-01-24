@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5b6cab555144c25c5984d74d19d5e81aa1a196d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d3b01deedd5cd7225c9e54b59ed82a708bad937
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513190"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>ICorProfilerFunctionControl::SetILFunctionBody — Metoda
 Zastępuje treść wspólnego języka pośredniego (CIL) metody.  
@@ -50,10 +50,10 @@ HRESULT SetILFunctionBody(
 |S_OK|Zamiana powiodła się.|  
   
 ## <a name="remarks"></a>Uwagi  
- W odróżnieniu od [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metody `SetILFunctionBody` metody zarządza ilość pamięci wymaganej dla nowych treści CIL. To oznacza, że treść CIL udostępniane przez profiler nie mają do przydzielenia przy użyciu [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interfejsu lub przypisane do określonego zakresu. Może być alokowana na dowolnej stercie. Profiler można zwolnić pamięć używana na potrzeby jej treści CIL po `SetILFunctionBody` zwraca.  
+ W odróżnieniu od [icorprofilerinfo::setilfunctionbody —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metody `SetILFunctionBody` zarządza pamięcią wymaganą dla nowej treści CIL. Oznacza to, że treść CIL dostarczona przez profiler musi być alokowana za pomocą [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interfejs lub w określonym zakresie. Może być alokowana na dowolnej stercie. Profiler można zwolnić pamięć użytą dla tej treści CIL po `SetILFunctionBody` zwraca.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -61,5 +61,5 @@ HRESULT SetILFunctionBody(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerFunctionControl, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerFunctionControl, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)

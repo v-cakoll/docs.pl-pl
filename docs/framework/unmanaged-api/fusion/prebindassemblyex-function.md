@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea34c4087014091b92d6227177a2f08209cc2e10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570882"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx — Funkcja
 Pobiera nazwę wyświetlaną po zastosowaniu zasad dla zestawu.  
   
- Ta funkcja obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
+ Ta funkcja obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,28 +49,28 @@ HRESULT PreBindAssemblyEx (
  [in] Określa nazwę zestawu.  
   
  `pAsmParent`  
- [in] Określa zestaw nadrzędnej. Ten parametr jest ignorowany.  
+ [in] Identyfikuje zestaw nadrzędnej. Ten parametr jest ignorowany.  
   
  `pwzRuntimeVersion`  
- [in] Identyfikuje wersję środowiska uruchomieniowego.  
+ [in] Określa wersję środowiska uruchomieniowego.  
   
  `ppNamePostPolicy`  
  [out] Zawiera nazwę wyświetlaną po zastosowaniu zasad.  
   
  `pvReserved`  
- [in] Zarezerwowane dla przyszłego rozszerzalności. `pvReserved` musi być odwołanie o wartości null.  
+ [in] Zarezerwowane dla przyszłej rozszerzalności. `pvReserved` musi być odwołanie o wartości null.  
   
 ## <a name="remarks"></a>Uwagi  
- `ppNamePostPolicy` Parametr wyjściowy jest ustawiona tylko wtedy, gdy funkcja zwraca HRESULT FUSION_E_REF_DEF_MISMATCH. W przeciwnym razie ma wartość null.  
+ `ppNamePostPolicy` Parametr wyjściowy jest ustawiona tylko wtedy, gdy funkcja zwraca wartość HRESULT FUSION_E_REF_DEF_MISMATCH. W przeciwnym razie ma wartość null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Fusion.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

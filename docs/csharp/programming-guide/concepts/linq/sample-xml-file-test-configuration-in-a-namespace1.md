@@ -1,15 +1,15 @@
 ---
-title: 'Przykładowy plik XML: Konfiguracja testowa w {1 & gt'
+title: 'Przykładowy plik XML: Konfiguracja testu w {1 & gt'
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-ms.openlocfilehash: 01470a66ac42eb9fd68fdcde0d0a4bf9150e3d5f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 975e0bdfe22758b968dde4e97cf5b302579a7ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589246"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Przykładowy plik XML: Konfiguracja testowa w Namespace
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Przykładowy plik XML: Konfiguracja testu w Namespace
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Jest to plik konfiguracji testu. Kod XML jest w przestrzeni nazw.  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
@@ -56,6 +56,6 @@ Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlin
 </Tests>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przykładowe dokumenty XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

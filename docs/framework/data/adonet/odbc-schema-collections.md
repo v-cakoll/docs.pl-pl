@@ -2,12 +2,12 @@
 title: Kolekcje schematów ODBC
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: bdedbb11960f02b99dcca6388abf663635238f74
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 072a9cd365031cd5660d1824bc229d459abc5af8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525836"
 ---
 # <a name="odbc-schema-collections"></a>Kolekcje schematów ODBC
 W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla programu Microsoft SQL Server, Oracle i Microsoft Jet.  
@@ -31,7 +31,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
   
 ### <a name="tables-and-views"></a>Tabele i widoki  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CAT|String|  
 |TABLE_SCHEM|String|  
@@ -41,7 +41,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
   
 ### <a name="indexes"></a>Indeksy  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CAT|String|  
 |TABLE_SCHEM|String|  
@@ -61,7 +61,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
   
 ### <a name="columns"></a>Kolumny  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_CAT|String|  
 |TABLE_SCHEM|String|  
@@ -73,7 +73,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
 |BUFFER_LENGTH|Int32|  
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
-|DOPUSZCZA WARTOŚCI NULL|Int16|  
+|NULLABLE|Int16|  
 |REMARKS|String|  
 |COLUMN_DEF|String|  
 |SQL_DATA_TYPE|Int16|  
@@ -87,7 +87,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
   
 ### <a name="procedures"></a>Procedury  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CAT|String|  
 |PROCEDURE_SCHEM|String|  
@@ -100,7 +100,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CAT|String|  
 |PROCEDURE_SCHEM|String|  
@@ -113,7 +113,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
 |BUFFER_LENGTH|Int32|  
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
-|DOPUSZCZA WARTOŚCI NULL|Int16|  
+|NULLABLE|Int16|  
 |REMARKS|String|  
 |COLUMN_DEF|String|  
 |SQL_DATA_TYPE|Int16|  
@@ -127,7 +127,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CAT|String|  
 |PROCEDURE_SCHEM|String|  
@@ -140,7 +140,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
 |BUFFER_LENGTH|Int32|  
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
-|DOPUSZCZA WARTOŚCI NULL|Int16|  
+|NULLABLE|Int16|  
 |REMARKS|String|  
 |COLUMN_DEF|String|  
 |SQL_DATA_TYPE|Int16|  
@@ -152,7 +152,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
 |SS_TYPE_SCHEMA|String|  
 |SS_DATA_TYPE|Byte|  
   
-## <a name="microsoft-oracle-odbc-driver"></a>Sterownik ODBC firmy Microsoft Oracle  
+## <a name="microsoft-oracle-odbc-driver"></a>Microsoft Oracle ODBC Driver  
  Sterownik ODBC programu Oracle do programu Microsoft SQL Server obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
   
 -   Tabele  
@@ -171,7 +171,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
   
 ### <a name="tables-and-views"></a>Tabele i widoki  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_QUALIFIER|String|  
 |TABLE_OWNER|String|  
@@ -181,7 +181,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
   
 ### <a name="columns"></a>Kolumny  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_QUALIFIER|String|  
 |TABLE_OWNER|String|  
@@ -192,14 +192,14 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
 |PRECYZJA|Int32|  
 |DŁUGOŚĆ|Int32|  
 |SKALA|Int16|  
-|PODSTAWY|Int16|  
-|DOPUSZCZA WARTOŚCI NULL|Int16|  
+|RADIX|Int16|  
+|NULLABLE|Int16|  
 |REMARKS|String|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedures"></a>Procedury  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_QUALIFIER|String|  
 |PROCEDURE_OWNER|String|  
@@ -212,7 +212,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_QUALIFIER|String|  
 |PROCEDURE_OWNER|String|  
@@ -224,13 +224,13 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
 |PRECYZJA|Int32|  
 |DŁUGOŚĆ|Int32|  
 |SKALA|Int16|  
-|PODSTAWY|Int16|  
-|DOPUSZCZA WARTOŚCI NULL|Int16|  
+|RADIX|Int16|  
+|NULLABLE|Int16|  
 |REMARKS|String|  
 |PRZECIĄŻENIE|Int32|  
 |ORDINAL_POSITION|Int32|  
   
-## <a name="microsoft-jet-odbc-driver"></a>Sterownik ODBC firmy Microsoft Jet  
+## <a name="microsoft-jet-odbc-driver"></a>Microsoft Jet ODBC Driver  
  Sterownik ODBC firmy Microsoft Jet obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
   
 -   Tabele  
@@ -249,7 +249,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
   
 ### <a name="tables-and-views"></a>Tabele i widoki  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_QUALIFIER|String|  
 |TABLE_OWNER|String|  
@@ -259,7 +259,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
   
 ### <a name="columns"></a>Kolumny  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |TABLE_QUALIFIER|String|  
 |TABLE_OWNER|String|  
@@ -270,14 +270,14 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
 |PRECYZJA|Int32|  
 |DŁUGOŚĆ|Int32|  
 |SKALA|Int16|  
-|PODSTAWY|Int16|  
-|DOPUSZCZA WARTOŚCI NULL|Int16|  
+|RADIX|Int16|  
+|NULLABLE|Int16|  
 |REMARKS|String|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedures"></a>Procedury  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_QUALIFIER|String|  
 |PROCEDURE_OWNER|String|  
@@ -290,7 +290,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_QUALIFIER|String|  
 |PROCEDURE_OWNER|String|  
@@ -302,15 +302,15 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
 |PRECYZJA|Int32|  
 |DŁUGOŚĆ|Int32|  
 |SKALA|Int16|  
-|PODSTAWY|Int16|  
-|DOPUSZCZA WARTOŚCI NULL|Int16|  
+|RADIX|Int16|  
+|NULLABLE|Int16|  
 |REMARKS|String|  
 |PRZECIĄŻENIE|Int32|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|NazwaKolumny|Typ danych|  
+|NazwaKolumny|DataType|  
 |----------------|--------------|  
 |PROCEDURE_CAT|String|  
 |PROCEDURE_SCHEM|String|  
@@ -323,7 +323,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
 |BUFFER_LENGTH|Int32|  
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
-|DOPUSZCZA WARTOŚCI NULL|Int16|  
+|NULLABLE|Int16|  
 |REMARKS|String|  
 |COLUMN_DEF|String|  
 |SQL_DATA_TYPE|Int16|  
@@ -332,5 +332,5 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla sterowników ODBC dla pro
 |ORDINAL_POSITION|Int32|  
 |IS_NULLABLE|String|  
   
-## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

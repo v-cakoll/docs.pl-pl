@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: a076dcbbe79a7ec0dfbd727e0d0c752bd4675eef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bde264684eb4d36ae59e9ed966c88f379231ac73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596102"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Ładowanie informacji o schemacie elementu DataSet z pliku XML
 Schemat <xref:System.Data.DataSet> (jego tabele, kolumny, relacje i ograniczenia) mogą być definiowane programowo, utworzone przez **wypełnienia** lub **FillSchema** metody <xref:System.Data.Common.DataAdapter>, lub załadowany z Dokument XML. Ładowanie **zestawu danych** informacji o schemacie z dokumentu XML, można użyć dowolnego **ReadXmlSchema** lub **InferXmlSchema** metody **zestawudanych**. **ReadXmlSchema** umożliwia ładowanie lub wywnioskować **DataSet** informacji o schemacie z dokumentu zawierającego schematu języka (XSD) definicji schematu XML lub dokumentu XML z wbudowanego schematu XML. **InferXmlSchema** pozwala na wnioskowanie schematu z dokumentów XML podczas ignoruje niektóre obszary nazw XML, który określisz.  
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- Ze względu na atrybuty określone dla elementów w poprzednim dokumentu XML zarówno **ReadXmlSchema** metody i **ReadXml** metody z **XmlReadMode** programu **InferSchema** utworzyłoby tabel dla każdego elementu w dokumencie: **kategorie**, **CategoryID**, **CategoryName**, **Opis**, **produktów**, **ProductID**, **ReorderLevel**, i **wycofane**. (Aby uzyskać więcej informacji, zobacz [wnioskowanie zestawu danych relacyjnej struktury z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).) Jednakże bardziej odpowiednie struktury może być tylko utworzyć **kategorie** i **produktów** tabel, a następnie utworzyć **CategoryID**, **CategoryName** , i **opis** kolumn w **kategorie** tabeli i **ProductID**, **ReorderLevel**, i **Wycofany** kolumn w **produktów** tabeli. Aby upewnić się, że schemat wykrywany ignoruje atrybuty określone w elementach XML, należy użyć **InferXmlSchema** metody i określ obszar nazw XML dla **officedata** mają być ignorowane, jak pokazano w Poniższy przykład.  
+ Ze względu na atrybuty określone dla elementów w poprzednim dokumentu XML zarówno **ReadXmlSchema** metody i **ReadXml** metody z **XmlReadMode** programu **InferSchema** utworzyłoby tabel dla każdego elementu w dokumencie: **Kategorie**, **CategoryID**, **CategoryName**, **opis**, **produktów**, **ProductID**, **ReorderLevel**, i **wycofane**. (Aby uzyskać więcej informacji, zobacz [wnioskowanie zestawu danych relacyjnej struktury z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).) Jednakże bardziej odpowiednie struktury może być tylko utworzyć **kategorie** i **produktów** tabel, a następnie utworzyć **CategoryID**, **CategoryName** , i **opis** kolumn w **kategorie** tabeli i **ProductID**, **ReorderLevel**, i **Wycofany** kolumn w **produktów** tabeli. Aby upewnić się, że schemat wykrywany ignoruje atrybuty określone w elementach XML, należy użyć **InferXmlSchema** metody i określ obszar nazw XML dla **officedata** mają być ignorowane, jak pokazano w Poniższy przykład.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -85,10 +85,10 @@ DataSet dataSet = new DataSet();
 dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:officedata");  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

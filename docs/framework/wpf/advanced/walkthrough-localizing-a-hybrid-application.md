@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 6b7db8182b5764e3df65ccbdef3b54330c1ee64a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 3d658d0dfb07a636a7338c69cae93b7e8a54383e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613873"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Przewodnik: Lokalizacja aplikacji hybrydowej
 
@@ -172,7 +172,7 @@ Zlokalizowane zawartość jest przechowywana w tylko do zasobów *zestawie satel
 
      Aplikacja zawiera zlokalizowane ciągi zamiast ciągi w języku polskim.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

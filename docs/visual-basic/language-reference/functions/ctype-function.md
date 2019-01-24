@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-ms.openlocfilehash: 7b1c7ae2a0126bf7cd487df4e9a7364c98e1c695
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77bff81efbd61a68c054519710bd671d90af1e7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694779"
 ---
 # <a name="ctype-function-visual-basic"></a>CType — Funkcja (Visual Basic)
 Zwraca wynik jawnej konwersji wyrażenia do określonego typu danych, obiektu, struktury, klasy lub interfejsu.  
@@ -27,7 +27,7 @@ CType(expression, typename)
   
 ## <a name="parts"></a>Części  
  `expression`  
- Dowolne prawidłowe wyrażenie. Jeśli wartość `expression` znajduje się poza zakresem dozwolone przez `typename`, Visual Basic zgłasza wyjątek.  
+ Dowolne prawidłowe wyrażenie. Jeśli wartość `expression` znajduje się poza zakresem dozwolonym przez `typename`, Visual Basic zgłasza wyjątek.  
   
  `typename`  
  Dowolne wyrażenie, które jest dozwolony w `As` w klauzuli `Dim` instrukcji, oznacza to, że nazwa dowolnego typu danych, obiektu, struktury, klasy lub interfejsu.  
@@ -35,37 +35,37 @@ CType(expression, typename)
 ## <a name="remarks"></a>Uwagi  
   
 > [!TIP]
->  Aby dokonać konwersji typu można także użyć następujących funkcji:  
+>  Aby przeprowadzić konwersję typu umożliwia także następujące funkcje:  
 >   
->  -   Funkcje konwersji wpisz na przykład `CByte`, `CDbl`, i `CInt` który wykonania konwersji na typ danych. Aby uzyskać więcej informacji, zobacz [funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
-> -   [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) lub [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md). Operatory te wymagają, że jeden typ dziedziczył lub implementował z innego typu. Udostępniają one nieco większą wydajność niż `CType` podczas konwersji do i z `Object` — typ danych.  
+>  -   Funkcje konwersji typu, takie jak `CByte`, `CDbl`, i `CInt` które wykonują konwersję na określony typ danych. Aby uzyskać więcej informacji, zobacz [funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+> -   [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) lub [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md). Operatorzy Ci wymagają, że jeden typ dziedziczył lub implementował innego typu. Zapewniają lepszą wydajność niż `CType` podczas konwersji do i z `Object` typu danych.  
   
- `CType` jest skompilowany w tekście, co oznacza, że kod konwersji jest częścią kodu, który wylicza wartość wyrażenia. W niektórych przypadkach kod działa szybciej, ponieważ nie procedur są wywoływane w celu wykonania konwersji.  
+ `CType` jest skompilowany w tekście, co oznacza, że kod konwersji jest częścią kodu, który oblicza wyrażenie. W niektórych przypadkach kod działa szybciej ponieważ procedury nie są wywoływane w celu wykonania konwersji.  
   
- Jeśli zdefiniowano brak konwersji z `expression` do `typename` (na przykład z `Integer` do `Date`), Visual Basic wyświetla komunikat o błędzie kompilacji.  
+ Jeśli konwersja nie jest zdefiniowana z `expression` do `typename` (na przykład z `Integer` do `Date`), Visual Basic wyświetli komunikat o błędzie kompilacji.  
   
- W przypadku niepowodzenia konwersji w czasie wykonywania odpowiednich wyjątku. W przypadku niepowodzenia konwersji zawężającej <xref:System.OverflowException> powstaje na podstawie najczęściej. Jeśli zdefiniowano konwersji <xref:System.InvalidCastException> w zgłoszony. Na przykład, to może nastąpić, jeśli `expression` jest typu `Object` i jej typ środowiska wykonawczego nie ma brak konwersji na `typename`.  
+ Jeśli konwersja nie powiedzie się w czasie wykonywania, zgłoszony odpowiedni wyjątek. W przypadku niepowodzenia konwersji zawężającej <xref:System.OverflowException> jest najczęstszym rezultatem. Jeśli konwersja jest niezdefiniowana, <xref:System.InvalidCastException> zgłoszone. Na przykład przyczyną może być `expression` typu `Object` i jego typu run-time nie ma konwersji do `typename`.  
   
- Jeśli typ danych miary `expression` lub `typename` jest klasy lub struktury, zdefiniowany przez użytkownika, można zdefiniować `CType` dla tej klasy lub struktury jako operatora konwersji. Dzięki temu `CType` pełnienie *Przeciążony operator*. Jeśli to zrobisz, można kontrolować zachowanie konwersje do i z klasy lub struktury, w tym wyjątki, które mogą być generowane.  
+ Jeśli typ danych `expression` lub `typename` jest klasy lub struktury zdefiniowany przez użytkownika, można zdefiniować `CType` dla tej klasy lub struktury jako operatora konwersji. To sprawia, że `CType` pełnić rolę *Przeciążony operator*. Jeśli to zrobisz, możesz kontrolować zachowanie podczas konwersji do i od klasy lub struktury, łącznie z wyjątkami, które mogą zostać zgłoszone.  
   
 ## <a name="overloading"></a>Przeciążenie  
- `CType` Również można przeciążać operatora dla klasy lub struktury zdefiniowane poza swój kod. Jeśli kod konwertuje do lub z klasy lub struktury, trzeba koniecznie zapoznać się z zachowaniem jego `CType` operatora. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `CType` Operator może również być przeciążony na klasę lub strukturę zdefiniowaną poza kodem. Jeśli Twój kod konwertuje do lub z takiej klasy lub struktury, należy zrozumieć zachowanie jego `CType` operatora. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## <a name="converting-dynamic-objects"></a>Konwertowanie obiekty dynamiczne  
- Konwersje typów obiektów dynamicznych są wykonywane przez zdefiniowane przez użytkownika konwersje dynamicznych, korzystających z <xref:System.Dynamic.DynamicObject.TryConvert%2A> lub <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A> metody. Jeśli pracujesz z obiektami dynamicznymi, użyj <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> metodę, aby przekonwertować obiekt dynamiczny.  
+## <a name="converting-dynamic-objects"></a>Konwertowanie obiektów dynamicznych  
+ Konwersje typów obiektów dynamicznych są wykonywane przez zdefiniowane przez użytkownika dynamiczne konwersje, które używają <xref:System.Dynamic.DynamicObject.TryConvert%2A> lub <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A> metody. Jeśli pracujesz z obiektami dynamicznymi, użyj <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> metodę, aby przekonwertować obiekt dynamiczny.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `CType` funkcji konwersji wyrażenia do `Single` — typ danych.  
+ W poniższym przykładzie użyto `CType` funkcji konwersji wyrażenia `Single` typu danych.  
   
  [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/ctype-function_1.vb)]  
   
- Aby uzyskać dodatkowe przykłady, zobacz [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
+ Aby uzyskać więcej przykładów, zobacz [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.OverflowException>  
- <xref:System.InvalidCastException>  
- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Funkcje konwersji](../../../visual-basic/language-reference/functions/conversion-functions.md)  
- [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Instrukcje: definiowanie operatora konwersji](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
- [Konwersja typów w programie .NET Framework](../../../standard/base-types/type-conversion.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.OverflowException>
+- <xref:System.InvalidCastException>
+- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Funkcje konwersji](../../../visual-basic/language-reference/functions/conversion-functions.md)
+- [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Instrukcje: Definiowanie operatora konwersji](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Konwersja typów w programie .NET Framework](../../../standard/base-types/type-conversion.md)

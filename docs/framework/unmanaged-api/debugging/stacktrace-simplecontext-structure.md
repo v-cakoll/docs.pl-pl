@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf2ba752ace49ae288857dc22819a8e7e429a34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 510ef77f217cdd6e3441e3d6684d431fc31307fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698924"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext — Struktura
-Udostępnia prosty kontekstu, którego można użyć zamiast pełnej `CONTEXT` struktury.  
+Udostępnia prosty kontekst, który można użyć zamiast pełnego `CONTEXT` struktury.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,19 +43,19 @@ struct StackTrace_SimpleContext
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`StackOffset`|Wskaźnik stosu lub wskaźnik stosu enter (ESP) na x86 platform.|  
-|`FrameOffset`|Przesunięcie ramki lub rejestru EBP na x86 platform.|  
-|`InstructionOffset`|Wskaźnik instrukcji lub wprowadź wskaźnika instrukcji (EIP) na x86 platform.|  
+|`FrameOffset`|Przesunięcie ramki lub zarejestruj EBP na x86 platform.|  
+|`InstructionOffset`|Wskaźnik instrukcji lub enter wskaźnik instrukcji (EIP) na x86 platform.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ponieważ funkcji śledzenia stosu zwykle musi zwracać tylko adres, przesunięcie ramki i adres stosu, można opcjonalnie użyć `SimpleContext` struktury zamiast dużej `CONTEXT` struktury.  
+ Ponieważ funkcje śledzenia stosu zazwyczaj trzeba zwrócić tylko adres, przesunięcie ramki i adresu stosu, można opcjonalnie używać `SimpleContext` struktury zamiast dużą `CONTEXT` struktury.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** SOS_Stacktrace.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

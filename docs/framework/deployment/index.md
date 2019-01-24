@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a650fa0340ce63a573074746eef60994e2254c86
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 5a8920cabfa753a68a3c55029d16c0d63ed5ffa7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563876"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Wdrażanie programu .NET Framework i aplikacji
 Ten artykuł pomoże rozpocząć wdrażanie programu .NET Framework z aplikacją. Większość informacji jest przeznaczona dla deweloperów, producentów OEM i Administratorzy przedsiębiorstwa. Użytkownicy, którzy chcą zainstalować program .NET Framework na swoich komputerach powinni przeczytać [Instalowanie programu .NET Framework](~/docs/framework/install/index.md).  
@@ -116,7 +116,7 @@ Ten artykuł pomoże rozpocząć wdrażanie programu .NET Framework z aplikacją
 ## <a name="packaging-and-distributing-net-framework-applications"></a>Pakowanie i rozpowszechnianie aplikacji .NET Framework  
  Niektóre pakowania i informacje na temat wdrażania programu .NET Framework jest opisany w innych sekcji dokumentacji. Te sekcje zawierają informacje o samoopisujące jednostki o nazwie [zestawy](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md), które nie wymagają żadnych wpisów rejestru [zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md), która zapewnić unikatowość nazwy i zapobiec nazwy fałszowanie adresów, a [przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md), która rozwiązuje wiele problemów związanych z konflikty biblioteki DLL. Poniższe sekcje zawierają informacje dotyczące tworzenia pakietów i rozpowszechnianie aplikacji programu .NET Framework.  
   
-### <a name="packaging"></a>Tworzenie pakietów  
+### <a name="packaging"></a>Pakowanie  
  .NET Framework zawiera następujące opcje dla pakietu aplikacji:  
   
 -   Jako pojedynczy zestaw lub kolekcję zestawów.  
@@ -131,7 +131,7 @@ Ten artykuł pomoże rozpocząć wdrażanie programu .NET Framework z aplikacją
   
      Po wybraniu tej opcji tworzenia pliku .msi do użycia przy użyciu Instalatora Windows lub pakietu aplikacji do użytku z niektórych innych Instalatora.  
   
-### <a name="distribution"></a>Dystrybucji  
+### <a name="distribution"></a>Dystrybucja  
  .NET Framework zawiera następujące opcje dystrybucji aplikacji:  
   
 -   Za pomocą polecenia XCOPY lub FTP.  
@@ -166,5 +166,5 @@ Ten artykuł pomoże rozpocząć wdrażanie programu .NET Framework z aplikacją
 |[Wdrażanie aplikacji międzyoperacyjnych](../../../docs/framework/interop/deploying-an-interop-application.md)|Wyjaśnia, jak dostarczanie i zainstaluj aplikacje współdziałania, obejmujących zazwyczaj zestawie klienta programu .NET Framework jednego lub więcej zestawów międzyoperacyjnych reprezentująca różne biblioteki typów COM, i co najmniej jeden zarejestrowany składnik COM.|  
 |[Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Opisuje sposób dyskretnie Uruchom i Śledź proces instalacji programu .NET Framework podczas wyświetlania własnego widoku postępu instalacji.|  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 - [Podręcznik programowania](../../../docs/framework/development-guide.md)

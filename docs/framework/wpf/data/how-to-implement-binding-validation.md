@@ -1,19 +1,19 @@
 ---
-title: Jak implementować powiązaną walidację
+title: 'Instrukcje: Implementuj powiązaną walidację'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - validation of binding [WPF]
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 5e91ab9fbd2fdeb0aa5d836a1eedfb5e0b45ecba
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e752ad5c3160ac7b73adac55b02a06bf802190ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678359"
 ---
-# <a name="how-to-implement-binding-validation"></a>Jak implementować powiązaną walidację
+# <a name="how-to-implement-binding-validation"></a>Instrukcje: Implementuj powiązaną walidację
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> i wyzwalacz stylu, aby przekazać wizualną opinię, aby poinformować użytkownika, gdy wprowadzono nieprawidłową wartość oparte na niestandardowej reguły walidacji.  
   
 ## <a name="example"></a>Przykład  
@@ -37,6 +37,6 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Controls.Validati
   
  Należy pamiętać, że jeśli nie podasz niestandardowe <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> domyślnego szablonu błąd wydaje się przekazać wizualną opinię do użytkownika, gdy występuje błąd weryfikacji. Zobacz "Sprawdzanie poprawności danych" w [Przegląd wiązanie danych](../../../../docs/framework/wpf/data/data-binding-overview.md) Aby uzyskać więcej informacji. Ponadto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia wbudowane walidację, który przechwytuje wyjątki, które są generowane podczas aktualizacji właściwości źródła powiązania. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

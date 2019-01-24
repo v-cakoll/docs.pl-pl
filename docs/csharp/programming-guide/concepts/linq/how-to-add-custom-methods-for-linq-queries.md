@@ -1,15 +1,15 @@
 ---
-title: 'Porady: dodawanie metod niestandardowych do kwerend LINQ (C#)'
+title: 'Instrukcje: Dodawanie metod niestandardowych do kwerend LINQ (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: 2e843f64a8556b110bc96126ddbbd760b6093270
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0c90e869c3d56696a072585cca7282b459b39e07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540731"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Porady: dodawanie metod niestandardowych do kwerend LINQ (C#)
+# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Instrukcje: Dodawanie metod niestandardowych do kwerend LINQ (C#)
 Można rozszerzyć zbiór metod, które służy do zapytań LINQ, dodając metody rozszerzenia umożliwiające <xref:System.Collections.Generic.IEnumerable%601> interfejsu. Na przykład oprócz standardowych średnia lub maksymalna operacje, możesz utworzyć niestandardowe metody agregacji do obliczenia pojedynczej wartości z sekwencji wartości. Można również utworzyć metodę, która działa jako filtr niestandardowy lub przekształcenia danych określonego dla sekwencji wartości i zwraca nową sekwencję. Przykłady takich metod <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>, i <xref:System.Linq.Enumerable.Reverse%2A>.  
   
  Po rozszerzeniu <xref:System.Collections.Generic.IEnumerable%601> interfejsu swoje niestandardowe metody można zastosować do kolekcji wyliczenia. Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
@@ -205,7 +205,7 @@ foreach (var element in query)
 */  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections.Generic.IEnumerable%601>  
+- <xref:System.Collections.Generic.IEnumerable%601>
 - [Metody rozszerzeń](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

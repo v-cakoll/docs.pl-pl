@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e888b2359336c68ea6fdf52f798145fda12002e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06c9119a2b842a0efcd4af752ba72dbfda03bf13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653868"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType — Wyliczenie
-Zawiera wartości, które wskazują podstawową przyczyną wydarzenia przepełnienie stosu.  
+Zawiera wartości wskazujące podstawowych przyczyn zdarzenie przepełnienia stosu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,21 +40,21 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`SO_ClrEngine`|Przepełnienie stosu spowodowane przez aparat wykonywania.|  
-|`SO_Managed`|Przepełnienie stosu spowodowane przez kod zarządzany.|  
-|`SO_Other`|Przepełnienie stosu spowodowane przez kod niezarządzany.|  
+|`SO_ClrEngine`|Przepełnienie stosu zostało spowodowane przez aparat wykonywania.|  
+|`SO_Managed`|Przepełnienie stosu zostało spowodowane przez kod zarządzany.|  
+|`SO_Other`|Przepełnienie stosu zostało spowodowane przez kod niezarządzany.|  
   
 ## <a name="remarks"></a>Uwagi  
- Te informacje są przesyłane do hosta przez wywołanie [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) metody.  
+ Te informacje są przesyłane do hosta za pomocą wywołania [iactiononclrevent::ONEVENT —](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

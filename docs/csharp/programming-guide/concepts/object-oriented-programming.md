@@ -2,12 +2,12 @@
 title: Programowanie zorientowane obiektowo (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8e211fec25ceb2e8e42620ff3f421e6943d8b5e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8f7a810b3f3ec74723ca5e715b7428e1b60928f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702486"
 ---
 # <a name="object-oriented-programming-c"></a>Programowanie zorientowane obiektowo (C#)
 C# zapewnia pełną obsługę programowanie zorientowane obiektowo, łącznie z hermetyzacji, dziedziczenia i polimorfizmu.  
@@ -34,7 +34,7 @@ C# zapewnia pełną obsługę programowanie zorientowane obiektowo, łącznie z 
   
          [Zdarzenia](#Events)  
   
-         [Klasy zagnieżdżone](#NestedClasses)  
+         [Nested Classes](#NestedClasses)  
   
     -   [Modyfikatory dostępu i poziomy dostępu](#AccessModifiers)  
   
@@ -52,7 +52,7 @@ C# zapewnia pełną obsługę programowanie zorientowane obiektowo, łącznie z 
   
 -   [Typy ogólne](#Generics)  
   
--   [Delegaci](#Delegates)  
+-   [Delegaty](#Delegates)  
   
 ##  <a name="Classes"></a> Klasy i obiekty  
  Warunki *klasy* i *obiektu* są czasami stosowane zamiennie, jednak w rzeczywistości klasy opisują *typu* obiektów, podczas gdy obiekty to użytkowe  *wystąpienia* klas. Więc, akt tworzenia obiektu jest nazywany *wystąpienia*. Korzystając z analogii planu, klasa to plan, a obiekt to budynek utworzony z tego planu.  
@@ -296,7 +296,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };  
 ```  
   
- Aby uzyskać więcej informacji, zobacz: [typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Aby uzyskać więcej informacji, zobacz: [Typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ##  <a name="Inheritance"></a> Dziedziczenie  
  Dziedziczenie umożliwia utworzenie nowej klasy, która używa, rozszerza i modyfikuje zachowanie, która jest zdefiniowana w innej klasy. Nosi nazwę klasy, której członkowie są dziedziczeni *klasy bazowej*, a klasa, która dziedziczy tych członków, jest nazywana *klasy pochodnej*. Jednakże wszystkie klasy w języku C# niejawnie dziedziczą z <xref:System.Object> klasy, która obsługuje hierarchię klas .NET i zapewnia niskopoziomowe usługi dla wszystkich klas.  
@@ -430,10 +430,10 @@ class SampleClass
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Delegaci](../../../csharp/programming-guide/delegates/index.md)  
+-   [Delegaty](../../../csharp/programming-guide/delegates/index.md)  
   
 -   [delegate](../../../csharp/language-reference/keywords/delegate.md)  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)

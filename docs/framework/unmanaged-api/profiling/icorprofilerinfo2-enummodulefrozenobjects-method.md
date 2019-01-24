@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77b07dae5b53db58b3628f677be1714e66ac18ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9c6d6c77f9609ba1a0762a744b28a93f068b862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513324"
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>ICorProfilerInfo2::EnumModuleFrozenObjects — Metoda
-Pobiera moduł wyliczający, który umożliwia iteracji za pośrednictwem zablokowane obiekty w ramach określonego modułu. Ta metoda jest przestarzała.  
+Pobiera moduł wyliczający, który pozwala iteracji przez zamrożone obiekty w określonym module. Ta metoda jest przestarzała.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,20 +37,20 @@ HRESULT EnumModuleFrozenObjects(
   
 #### <a name="parameters"></a>Parametry  
  `moduleID`  
- [in] Identyfikator modułu, który zawiera zablokowane obiekty, które mają zostać wyliczone.  
+ [in] Identyfikator modułu, który zawiera zamrożonych obiektów do wyliczenia.  
   
  `ppEnum`  
- [out] Wskaźnik do adresu [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interfejs, który wylicza zablokowane obiekty.  
+ [out] Wskaźnik na adres [icorprofilerobjectenum —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interfejsu, który zawiera wyliczenie zamrożonych obiektów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:** 3.5, 3.0 z dodatkiem SP1, 3.0, 2.0 z dodatkiem SP1, 2.0  
+ **Wersje programu .NET framework:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

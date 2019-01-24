@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: 6788a7908489591e266af6d141006f2aa2d0e6f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbbcc748a65942e3a89785b267e9231f4a4a01a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686182"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>Parametry opcjonalne muszą określać wartość domyślną
-Parametry opcjonalne podać wartości domyślne, które mogą być używane, jeśli parametr nie zostanie podany przez wywołanie procedury.  
+Następujące parametry opcjonalne, należy podać wartości domyślne, których można użyć, jeśli parametr nie jest dostarczana przez wywołanie procedury.  
   
  **Identyfikator błędu:** BC30812  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Określ wartości domyślne dla parametrów opcjonalnych; na przykład:  
+-   Określanie wartości domyślnych dla parametrów opcjonalnych; na przykład:  
   
     ```  
     Sub Proc1(ByVal X As Integer,   
@@ -30,5 +30,5 @@ Parametry opcjonalne podać wartości domyślne, które mogą być używane, je�
     End Sub  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)
+## <a name="see-also"></a>Zobacz także
+- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b28c18d55b91d6315003229295ab0e6781be183
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03949fb52d23e3b0f107f9f1d5208208369c3960
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574618"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder — Metoda
-Dodaje usługę przesyłania dalej dla typu tabeli typu danego zestawu.  
+Dodaje typ usługi przesyłania dalej do tabeli typu danego zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,13 +42,13 @@ HRESULT ExportTypeForwarder(
  Odwołanie do zestawu, do którego odwołuje się typ usługi przesyłania dalej.  
   
  `pszTypename`  
- Pełni kwalifikowana nazwa typu do wyeksportowania.  
+ W pełni kwalifikowana nazwa typu do wyeksportowania.  
   
  `dwFlags`  
- `ComType` flagi, takich jak `tdPublic` lub `tdNested`. Ta wartość może być przekazana do [DefineExportedType — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` flagi, takich jak `tdPublic` lub `tdNested`. Ta wartość może być przekazana do [defineexportedtype — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Odbiera token wyeksportowanego typu. Jest to konieczne tylko w przypadku emitowanie zagnieżdżone typy.  
+ Odbiera token wyeksportowanego typu. Jest to niezbędne tylko w przypadku emitowania zagnieżdżone typy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
@@ -56,7 +56,7 @@ HRESULT ExportTypeForwarder(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

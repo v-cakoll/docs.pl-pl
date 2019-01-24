@@ -4,12 +4,12 @@ description: Informacje o sposobie tworzenia i debugowania pierwszej aplikacji p
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: bd1e5bf9df929c2c38f737ec3112d3687dba877c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ea8b93128e4acd435ad95fc42257df6ab22812fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620555"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Wprowadzenie do języka C# i Visual Studio Code
 
@@ -27,7 +27,7 @@ Zacznijmy od prostego programu "Hello World" na platformie .NET Core:
 
 1. Otwórz projekt:
 
-    * Otwórz program Visual Studio Code.
+    * Open Visual Studio Code.
     * Kliknij ikonę Explorer z menu po lewej stronie, a następnie kliknij przycisk **Otwórz Folder**.
     * Wybierz **pliku** > **Otwórz Folder** z menu głównego, aby otworzyć folder dla której projekt C# w, a następnie kliknij przycisk **wybierz Folder**. W tym przykładzie tworzymy folderem naszego projektu o nazwie *HelloWorld*.
 
@@ -140,5 +140,5 @@ Rozszerzenia programu Visual Studio kodu C# można wygenerować zasoby do tworze
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Konfigurowanie programu Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-* [Debugowanie w programie Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
+- [Konfigurowanie programu Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Debugowanie w programie Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)

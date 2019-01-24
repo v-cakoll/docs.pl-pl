@@ -1,5 +1,5 @@
 ---
-title: 'Porady: rysowanie krzywych kardynalnych'
+title: 'Instrukcje: Rysowanie krzywych kardynalnych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,46 +9,46 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 3ad06eb28e1d8e6b5d5f4a77e545f174d8a68d9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f2fd0f54c95ff2185c1a1d17785d300c97f7f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739803"
 ---
-# <a name="how-to-draw-cardinal-splines"></a>Porady: rysowanie krzywych kardynalnych
-Kardynalnej krzywej składanej jest krzywą płynnie przechodzi przez podany zestaw punktów. Do rysowania kardynalnej krzywej składanej, Utwórz <xref:System.Drawing.Graphics> obiektu i przekazać adres tablicę punkty <xref:System.Drawing.Graphics.DrawCurve%2A> metody.  
+# <a name="how-to-draw-cardinal-splines"></a>Instrukcje: Rysowanie krzywych kardynalnych
+Krzywa kardynalna jest płynnie przechodzący przez podany zestaw punktów krzywej. Aby narysować kardynalna, należy utworzyć <xref:System.Drawing.Graphics> i przekazać adres tablica wskazuje <xref:System.Drawing.Graphics.DrawCurve%2A> metody.  
   
-### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Rysowanie w kształcie dzwonka krzywej kardynalnej  
+### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Rysowanie krzywej składanej Kardynalną w kształcie dzwonka  
   
--   Poniższy przykład rysuje w kształcie dzwonka kardynalnej krzywej składanej który przechodzi przez pięć punktów wyznaczonych. Na poniższej ilustracji przedstawiono krzywej i pięć punktów.  
+-   Poniższy przykład pobiera w kształcie dzwonka kardynalna przechodzący przez pięć punktów wyznaczonym. Na poniższej ilustracji przedstawiono krzywej i pięć punktów.  
   
-     ![Kardynalnej krzywej składanej](../../../../docs/framework/winforms/advanced/media/cardinalspline1.png "CardinalSpline1")  
+     ![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline1.png "CardinalSpline1")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#21)]  
   
 ### <a name="drawing-a-closed-cardinal-spline"></a>Rysowanie zamkniętej krzywej kardynalnej  
   
--   Użyj <xref:System.Drawing.Graphics.DrawClosedCurve%2A> metody <xref:System.Drawing.Graphics> klasy do zamkniętej krzywej kardynalnej rysowania. W zamkniętej krzywej kardynalnej krzywej będzie kontynuowane do ostatniego punktu w macierzy i nawiązanie połączenia z pierwszego punktu w tablicy. Poniższy przykład rysuje zamkniętego kardynalnej krzywej składanej, który przechodzi przez sześć wyznaczonych punktów. Na poniższej ilustracji przedstawiono zamkniętej krzywej składanej wraz z sześciu punktów.  
+-   Użyj <xref:System.Drawing.Graphics.DrawClosedCurve%2A> metody <xref:System.Drawing.Graphics> klasy, aby narysować zamkniętej krzywej kardynalnej. W zamkniętej krzywej kardynalnej krzywej kontynuuje do ostatniego punktu w macierzy i nawiązuje połączenie z pierwszym punktem w tablicy. Poniższy przykład pobiera zamknięte kardynalna przechodzący przez sześć wyznaczonym punktów. Poniższa ilustracja przedstawia zamkniętej krzywej składanej wraz z sześciu punktów.  
   
- ![Kardynalnej krzywej składanej](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")  
+ ![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#22)]  
   
-### <a name="changing-the-bend-of-a-cardinal-spline"></a>Zmiana odcinek łącznika kardynalnej krzywej składanej  
+### <a name="changing-the-bend-of-a-cardinal-spline"></a>Zmiana odcinek łącznika krzywej składanej kardynalnych  
   
--   Zmień sposób kardynalnej krzywej składanej załamania przekazując argument naprężenia <xref:System.Drawing.Graphics.DrawCurve%2A> metody. Poniższy przykład rysuje trzy kardynalne, które przechodzą przez ten sam zestaw punktów. Na poniższej ilustracji przedstawiono trzy krzywe wraz z wartościami naprężenia. Należy pamiętać, że gdy naciągnięcie ma wartość 0, punkty są połączone liniami proste.  
+-   Zmiana sposobu kardynalna załamania przez przekazanie argumentu napięcie <xref:System.Drawing.Graphics.DrawCurve%2A> metody. Poniższy przykład pobiera trzy kardynalne, które przechodzą przez ten sam zestaw punktów. Poniższa ilustracja przedstawia trzy krzywe wraz z wartościami napięcie. Należy pamiętać, że gdy naciągnięcie wynosi 0, punkty są połączone liniami proste.  
   
- ![Kardynalnej krzywej składanej](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")  
+ ![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#23)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Powyższych przykładach są przeznaczone do użytku z formularzy systemu Windows, a potrzebują <xref:System.Windows.Forms.PaintEventArgs> `e`, który jest parametrem <xref:System.Windows.Forms.Control.Paint> obsługi zdarzeń.  
+ Powyższych przykładach są skonstruowane do użycia za pomocą interfejsu Windows Forms i wymagają one <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
-## <a name="see-also"></a>Zobacz też  
- [Linie, krzywe i kształty](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Konstruowanie i rysowanie krzywych](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+## <a name="see-also"></a>Zobacz także
+- [Linie, krzywe i kształty](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Konstruowanie i rysowanie krzywych](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Else keyword [Visual Basic]
 ms.assetid: 154dd3d3-137b-4de6-a5aa-699b18dfb639
-ms.openlocfilehash: 86608811d42134a27af27fc3d2dd2c6f3bfbbe98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfce3f75fc1d5492f7f7124628becf1844cebc4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491301"
 ---
 # <a name="else-statement-visual-basic"></a>Else — Instrukcja (Visual Basic)
 Wprowadza grupę instrukcji do uruchomienia lub skompilowania, jeśli żadna inna warunkowa grupa instrukcji nie została uruchomiona ani skompilowana.  
@@ -23,7 +23,7 @@ Wprowadza grupę instrukcji do uruchomienia lub skompilowania, jeśli żadna inn
   
  [Instrukcja Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [#If... Then... #Else — dyrektywa](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

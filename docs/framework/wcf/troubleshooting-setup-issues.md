@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów dotyczących konfiguracji
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 69cc6bce08f3d98d3d63570005582bc6f50240bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532555"
 ---
 # <a name="troubleshooting-setup-issues"></a>Rozwiązywanie problemów dotyczących konfiguracji
 W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Foundation (WCF), skonfigurować problemów.  
@@ -23,7 +23,7 @@ W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Founda
   
 -   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SMSvcHost 3.0.0.0  
   
--   Mostek HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC 3.0.0.0  
+-   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
  Klucze nie są ponownie tworzone po uruchomieniu naprawy za pomocą Instalatora programu .NET Framework 3.0 uruchomionego z **Dodaj/Usuń programy** aplet **Panelu sterowania**. Aby ponownie utworzyć te klucze poprawnie, użytkownik musi odinstalowanie i ponowne zainstalowanie programu .NET Framework 3.0.  
   
@@ -38,17 +38,17 @@ W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Founda
   
 4.  Wyjątek taki poniżej mogą być wymienione w pliku dziennika śledzenia dziennika zdarzeń lub instalacji:  
   
-     ServiceModelReg [11:09:59:046]: System.ApplicationException: nieoczekiwany wynik 3 wykonywania E:\WINDOWS\system32\wbem\mofcomp.exe za pomocą "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows komunikacji Foundation\ServiceModel.mof"  
+     ServiceModelReg [11:09:59:046]: System.ApplicationException: Nieoczekiwany wynik 3 wykonywania E:\WINDOWS\system32\wbem\mofcomp.exe za pomocą "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows komunikacji Foundation\ServiceModel.mof"  
   
      lub:  
   
-     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: Inicjator typu "System.Management.ManagementPath" zgłosiła wyjątek. ---> System.Runtime.InteropServices.COMException (0x80040154): pobieranie fabryki klasy COM dla składnika o identyfikatorze CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} nie powiodło się z powodu następującego błędu: 80040154.  
+     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: Inicjator typu "System.Management.ManagementPath" zgłosiła wyjątek. ---> System.Runtime.InteropServices.COMException (0x80040154): Trwa pobieranie fabryki klasy COM dla składnika o identyfikatorze CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} nie powiodło się z powodu następującego błędu: 80040154.  
   
      lub:  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: nie można załadować pliku lub zestawu "C:\WINDOWS\system32\wbem\mofcomp.exe" lub jednej z jego zależności. W systemie nie można odnaleźć określonego pliku.  
+     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Nie można załadować pliku lub zestawu "C:\WINDOWS\system32\wbem\mofcomp.exe" lub jednej z jego zależności. W systemie nie można odnaleźć określonego pliku.  
   
-     Nazwa pliku: "C:\WINDOWS\system32\wbem\mofcomp.exe  
+     Nazwa pliku: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
  Poniższe kroki musi występować w celu rozwiązania problemu opisanego wcześniej.  
   
@@ -73,5 +73,5 @@ W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Founda
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje dotyczące konfiguracji](../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje dotyczące konfiguracji](../../../docs/framework/wcf/samples/set-up-instructions.md)

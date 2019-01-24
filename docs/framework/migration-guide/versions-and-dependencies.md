@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c78a80b6d266f40aa8872f0411d74f10c45e4c68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f32b32a8eeeaae00084bd0a69a94beeb837036a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582181"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Wersje programu .NET framework i zależności
 Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka wspólnego (CLR), biblioteki klas bazowych i inne zarządzane biblioteki. W tym temacie opisano kluczowe funkcje programu .NET Framework według wersji, podano informacje o bazowych wersjach środowiska CLR i skojarzonych środowiskach deweloperskich oraz zidentyfikowano wersje, które są instalowane przez system operacyjny Windows.  
@@ -24,7 +24,7 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
   
  Każda nowa wersja programu .NET Framework zachowuje funkcje z poprzednich wersji i dodaje nowe funkcje. Środowisko CLR jest identyfikowane za pomocą własnego numeru wersji. Numer wersji programu .NET Framework jest zwiększany przy każdym wydaniu, chociaż wersja środowiska CLR nie zawsze jest zwiększana. Na przykład .NET Framework 4, 4.5 i nowsze wersje środowiska CLR 4, ale programu .NET Framework 2.0, 3.0 i 3.5 zawiera środowisko CLR 2.0. (Nie było wersji 3 środowiska CLR).  
   
- Zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md) pełną listę obsługiwanych systemów operacyjnych. Pliki do pobrania, zobacz [Instalowanie programu .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md). W celu określenia, które wersje programu .NET Framework są zainstalowane na komputerze, zobacz [jak: Determine Which .NET Framework w wersji Are Installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
+ Zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md) pełną listę obsługiwanych systemów operacyjnych. Pliki do pobrania, zobacz [Instalowanie programu .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md). W celu określenia, które wersje programu .NET Framework są zainstalowane na komputerze, zobacz [jak: Określanie, które wersje programu .NET Framework są zainstalowane](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
   
  W tabeli, wersji systemu .NET Framework, które są zainstalowane w wersjach systemu operacyjnego oznaczone ✓ w **zawarte w / można zainstalować na Windows** i **objęte / można zainstalować w systemie Windows Server**kolumny muszą być [włączone w Panelu sterowania](../../../docs/framework/install/dotnet-35-windows-10.md) (dla Windows) lub za pomocą Menedżera serwera nie są włączone (dla systemu Windows Server).  
   
@@ -37,10 +37,10 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
 |4.6.1<br/><br/>[Nowe funkcje](../whats-new/index.md#whats-new-in-the-net-framework-461)|4||Update 10 listopada ✓ (wersja 1511) <br /><br /> + 10<br />+ 8.1<br />+ 8<br />+ 7|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|Użyj `Release` DWORD:<br /><br /> -394254 (Aktualizacja systemu Windows 10 listopada)<br />-394271 (wszystkich innych wersji systemu operacyjnego)<br /><br /> (zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
 |4.6<br/><br/>[Nowe funkcje](../whats-new/index.md#whats-new-in-net-2015)|4|2015|✓ 10<br />+ 8.1<br />+ 8<br />+ 7<br />+ Vista|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Użyj `Release` DWORD:<br /><br /> -393295 (system Windows 10)<br />-393297 (wszystkich innych wersji systemu operacyjnego)<br /><br /> (zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
 |4.5.2<br/><br/>[Nowe funkcje](../whats-new/index.md#whats-new-in-the-net-framework-452)|4|-|+ 8.1<br />+ 8<br />+ 7<br />+ Vista|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Użyj `Release` DWORD:<br /><br /> 379893<br /><br />(zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
-|4.5.1<br/><br/>[Nowe funkcje](../whats-new/index.md#whats-new-in-the-net-framework-451)|4|2013|✓ 8.1<br />+ 8<br />+ 7<br />+ Vista|✓ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Użyj `Release` DWORD:<br /><br /> -378675 (Windows 8.1)<br />-378758 (wszystkie inne)<br /><br /> (zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
+|4.5.1<br/><br/>[Nowe funkcje](../whats-new/index.md#whats-new-in-the-net-framework-451)|4|2013|✓ 8.1<br />+ 8<br />+ 7<br />+ Vista|✓ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Użyj `Release` DWORD:<br /><br /> - 378675 (Windows 8.1)<br />-378758 (wszystkie inne)<br /><br /> (zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
 |4.5<br/><br/>[Nowe funkcje](../whats-new/index.md#whats-new-in-the-net-framework-45)|4|2012|✓ 8<br />+ 7<br />+ Vista|✓ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|Użyj `Release` DWORD:<br /><br /> 378389<br /><br />(zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md))|  
 |4<br/><br/>[Nowe funkcje](../whats-new/index.md)|4|2010|+ 7<br />+ Vista|+ 2008 R2 SP1<br />+ 2008 SP2<br />+ 2003|Zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
-|3.5<br/><br/>[Nowe funkcje](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\))|2.0|2008|✓ 10\*<br/>✓ 8.1\*<br />✓ 8\*<br />✓ 7<br />+ Vista|  + W systemie Windows Server w wersji 1803\* <br/> + W systemie Windows Server w wersji 1709\* <br/> + 2016\* <br/>+ 2012 R2\*<br />+ 2012\*<br />✓2008 R2 Z DODATKIEM SP1\*<br />+ 2008 SP2<br />+ 2003|Zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
+|3.5<br/><br/>[Nowe funkcje](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\))|2.0|2008|✓ 10\*<br/>✓ 8.1\*<br />✓ 8\*<br />✓ 7<br />+ Vista|  + W systemie Windows Server w wersji 1803\* <br/> + W systemie Windows Server w wersji 1709\* <br/> + 2016\* <br/>+ 2012 R2\*<br />+ 2012\*<br />✓2008 R2 SP1\*<br />+ 2008 SP2<br />+ 2003|Zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |3.0<br/><br/>New:<br/>WPF, WCF, WF, CardSpace|2.0|-|✓ Vista|✓ 2008 R2 SP1*<br />✓ 2008 SP2\*<br />+ 2003|Zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |2.0<br/><br/>[Nowe funkcje](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/ms229284\(v%3dvs.80\))|2.0|2005|-|✓ 2008 R2 SP1<br />✓ 2008 SP2<br />✓ 2003|Zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.1<br/><br/>[Nowe funkcje](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/9wtde3k4\(v%3dvs.71\))|1.1|2003|-|✓ 2003|Zobacz [instrukcje](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
@@ -76,10 +76,10 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
   
 -   Aby uzyskać informacje dotyczące migracji aplikacji z programu .NET Framework 4, aby [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego wydania punktowe, zobacz [Przewodnik po migracji](../../../docs/framework/migration-guide/index.md).  
   
--   Aby uzyskać informacje dotyczące ustalania, które wersje lub aktualizacje są instalowane na komputerze, zobacz [jak: Determine Which .NET Framework w wersji Are Installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) i [jak: ustalić, które .NET Framework są aktualizacje Zainstalowane](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md).  
+-   Aby uzyskać informacje dotyczące ustalania, które wersje lub aktualizacje są instalowane na komputerze, zobacz [jak: Określanie, które wersje programu .NET Framework są zainstalowane](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) i [jak: Określanie, które aktualizacje programu .NET Framework są zainstalowane](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Zgodność wersji](../../../docs/framework/migration-guide/version-compatibility.md)   - 
-- [Cykl wsparcia technicznego dla programu Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)   
+- [Microsoft .NET Framework Support Lifecycle Policy](https://go.microsoft.com/fwlink/?LinkId=196607)
 - [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee1cfe52caa9d727a132d7adc23b03575293db65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716781"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType — Wyliczenie
 Określa typ modułu.  
@@ -47,20 +47,20 @@ typedef enum
 |------------|-----------------|  
 |`ValidatorModuleTypeInvalid`|Moduł jest nieprawidłowego typu.|  
 |`ValidatorModuleTypeMin`|Minimalna wartość `CorValidatorModuleType` wyliczenia.|  
-|`ValidatorModuleTypePE`|Moduł jest plikiem wykonywalnym przenośnego (PE).|  
-|`ValidatorModuleTypeObj`|Moduł to plik .obj.|  
-|`ValidatorModuleTypeEnc`|Moduł jest sesji debugera edit-and-continue.|  
-|`ValidatorModuleTypeIncr`|Moduł to taki, który został utworzony przyrostowo.|  
+|`ValidatorModuleTypePE`|Moduł jest plikiem przenośny plik wykonywalny (PE).|  
+|`ValidatorModuleTypeObj`|Moduł jest plikiem obj.|  
+|`ValidatorModuleTypeEnc`|Moduł jest sesja debugera edit-and-continue.|  
+|`ValidatorModuleTypeIncr`|Moduł to taki, który został skompilowany przyrostowo.|  
 |`ValidatorModuleTypeMax`|Maksymalna wartość `CorValidatorModuleType` wyliczenia.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

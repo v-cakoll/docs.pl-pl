@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0a5abe8877c8414443fadc00e223df240721132
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11eb49347caacbfa92493e9ac20f1c8cb5c706e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745028"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget — Interfejs
-Udostępnia metody do interakcji z elementem docelowym o środowisko uruchomieniowe języka wspólnego (CLR).  
+Zapewnia metody interakcji z elementem docelowym środowiska uruchomieniowego języka wspólnego (CLR).  
   
 ## <a name="methods"></a>Metody  
   
@@ -32,21 +32,21 @@ Udostępnia metody do interakcji z elementem docelowym o środowisko uruchomieni
 |------------|-----------------|  
 |[GetCurrentThreadID, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getcurrentthreadid-method.md)|Pobiera identyfikator systemu operacyjnego dla bieżącego wątku.|  
 |[GetImageBase, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getimagebase-method.md)|Pobiera adres podstawowy pamięci dla określonego obrazu.|  
-|[GetMachineType, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getmachinetype-method.md)|Pobiera identyfikator dla rodzaju zestaw instrukcji, który używa procesu docelowego.|  
-|[GetPointerSize, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getpointersize-method.md)|Pobiera rozmiar w bajtach wskaźnik do bieżącą lokalizację docelową.|  
-|[GetThreadContext, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getthreadcontext-method.md)|Pobiera wskaźnik w kontekście wątku o podanym identyfikatorze.|  
-|[GetTLSValue, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-gettlsvalue-method.md)|Pobiera wartość w lokalny magazyn wątków (TLS) w określonym indeksie dla określonego wątku.|  
-|[ReadVirtual, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-readvirtual-method.md)|Odczytuje dane z adresów pamięci wirtualnej określony w buforze określona.|  
-|[Request, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|Metoda wywoływana przez wspólne języka wspólnego (CLR) danych dostęp do usługi do żądania operacji zdefiniowanej przez implementację.|  
-|[SetThreadContext, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-setthreadcontext-method.md)|Ustawia bieżący kontekst określonego wątku w procesie docelowym.|  
-|[SetTLSValue, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-settlsvalue-method.md)|Ustawia wartość w lokalny magazyn wątków (TLS) z określonego wątku w procesie docelowym.|  
-|[WriteVirtual, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-writevirtual-method.md)|Zapisuje dane z określonego bufora na adres określony pamięci wirtualnej.|  
+|[GetMachineType, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getmachinetype-method.md)|Pobiera identyfikator dla rodzaju — zestaw instrukcji używanej przez proces docelowy.|  
+|[GetPointerSize, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getpointersize-method.md)|Pobiera rozmiar w bajtach, wskaźnik do bieżącego elementu docelowego.|  
+|[GetThreadContext, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getthreadcontext-method.md)|Pobiera wskaźnik do kontekstu wątku z określonym identyfikatorem.|  
+|[GetTLSValue, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-gettlsvalue-method.md)|Pobiera wartość w pamięci lokalnej wątku (TLS) dla podanego indeksu dla określonego wątku.|  
+|[ReadVirtual, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-readvirtual-method.md)|Odczytuje dane z adresu określonego pamięci wirtualnej do określonego bufora.|  
+|[Request, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych do żądania operacji, zgodnie z definicją przez implementację.|  
+|[SetThreadContext, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-setthreadcontext-method.md)|Ustawia bieżący kontekst określony wątek w procesie docelowym.|  
+|[SetTLSValue, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-settlsvalue-method.md)|Ustawia wartość w pamięci lokalnej wątku (TLS) określony wątek w procesie docelowym.|  
+|[WriteVirtual, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-writevirtual-method.md)|Zapisuje dane z określonego bufora do adresu określonego pamięci wirtualnej.|  
   
 ## <a name="remarks"></a>Uwagi  
- Klienta interfejsu API (debuger) musi implementować ten interfejs na potrzeby elementu określonego elementu docelowego. Na przykład żywy proces miałby inną implementację od tej ze zrzutu pamięci.  
+ Klient interfejsu API (tzn debuger) musi implementować ten interfejs stosownie dla elementu określonego celu. Na przykład żywy proces miałby inną implementację od tej ze zrzutu pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData.idl, ClrData.h  
   
@@ -54,6 +54,6 @@ Udostępnia metody do interakcji z elementem docelowym o środowisko uruchomieni
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRDataTarget2, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRDataTarget2, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6e6f4f6bdfba8deecb3661d88a881759da043ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0444b6a5fd1bb286df573b1bba7d35b0d2d14a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498846"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo — Metoda
-Pobiera szczegółowe informacje o tablicy obiektów.  
+Pobiera szczegółowe informacje dotyczące obiektu array.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,25 +40,25 @@ HRESULT GetArrayObjectInfo(
   
 #### <a name="parameters"></a>Parametry  
  `objectId`  
- [in] Identyfikator obiektu prawidłowy tablicy.  
+ [in] Identyfikator obiektu prawidłową tablicą.  
   
  `cDimensions`  
  [in] Ranga (liczba wymiarów) tablicy.  
   
  `pDimensionSizes`  
- [out] Tablica zawiera liczb całkowitych, każdy reprezentuje rozmiaru wymiaru tablicy.  
+ [out] Tablica, która zawiera liczby całkowite, każdy reprezentuje rozmiar wymiaru tablicy.  
   
  `pDimensionLowerBounds`  
- [out] Tablica zawiera liczb całkowitych, każdy reprezentuje niższa granica wymiaru tablicy.  
+ [out] Tablica, która zawiera liczby całkowite, każda reprezentująca dolna granica wymiaru tablicy.  
   
  `ppData`  
- [out] Wskaźnik do adresu raw buforu dla tablicy, która jest rozmieszczona zgodnie z Konwencją C++.  
+ [out] Wskaźnik na adres surowy bufor dla tablicy, która jest poukładany zgodnie z konwencją języka C++.  
   
 ## <a name="remarks"></a>Uwagi  
- `pDimensionSizes` i `pDimensionLowerBounds` są równoległych tablic, więc elementy znajdujące się w tym samym indeksie w każdej macierzy właściwości tej samej jednostki.  
+ `pDimensionSizes` i `pDimensionLowerBounds` są równoległe tablic, więc elementy znajdujące się w ten sam indeks tablic są właściwości tego samego obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -66,6 +66,6 @@ HRESULT GetArrayObjectInfo(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

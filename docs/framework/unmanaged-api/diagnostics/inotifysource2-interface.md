@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 025aeb564743b6ae08a11d7922f0e8b641220929
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21ee3c073358cc6101634815747615415705395c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500554"
 ---
 # <a name="inotifysource2-interface"></a>INotifySource2 — Interfejs
-Deklaruje metody filtry powiadomień.  
+Deklaruje metody do ustawiania filtrów powiadomień.  
   
 ## <a name="methods"></a>Metody  
   
@@ -35,7 +35,7 @@ Deklaruje metody filtry powiadomień.
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Zobacz też  
- [INotifyConnection2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [INotifySink2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [INotifyConnection2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [INotifySink2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

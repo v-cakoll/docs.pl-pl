@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1bc8d588641163ccf98054fdf1930a72a04c770c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 098aaca8ec318b08c87e30c2a9558b7e64494a4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582009"
 ---
 # <a name="corprffunction-structure"></a>COR_PRF_FUNCTION — Struktura
-Udostępnia reprezentację unikatowy funkcji przez połączenie jej z Identyfikatorem odpowiadającym jej wersji ponownej kompilacji.  
+Udostępnia reprezentację unikatową funkcję, łącząc się jego Identyfikatorem jego ponownej kompilacji wersji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,12 +37,12 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`functionId`|Identyfikator funkcji.|  
-|`reJitId`|Identyfikator funkcji ponownej kompilacji. Wartość 0 (zero) reprezentuje z oryginalną wersją funkcji.|  
+|`reJitId`|Identyfikator funkcji ponownej kompilacji. Wartość 0 (zero) reprezentuje oryginalną wersję funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl  
   
@@ -50,5 +50,5 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Profiling — struktury](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Zobacz także
+- [Profiling — struktury](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

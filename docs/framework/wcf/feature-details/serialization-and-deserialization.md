@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: be2cf6c550ab8778a42f33fa2cb1b109abeea5e9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 7ddad36c05d9972b9fc613403b68b7c793b6701d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873829"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707580"
 ---
 # <a name="serialization-and-deserialization"></a>Serializacja i deserializacja
 Windows Communication Foundation (WCF) obejmuje nowy mechanizm serializacji, <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Tłumaczy [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiektów i XML w obu kierunkach. W tym temacie wyjaśniono, jak serializator działa.  
@@ -260,9 +260,9 @@ Windows Communication Foundation (WCF) obejmuje nowy mechanizm serializacji, <xr
   
  Ponadto należy pamiętać, że `NetDataContractSerializer` nie wyświetla pełną [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typ i nazwa zestawu dla każdego węzła na grafie obiektu. Wyświetla te informacje tylko gdzie jest niejednoznaczny. Oznacza to generuje na poziomie obiektu głównego i polimorficznych przypadki.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.NetDataContractSerializer>  
- <xref:System.Runtime.Serialization.XmlObjectSerializer>  
- [Serializacja binarna](../../../../docs/standard/serialization/binary-serialization.md)  
- [Typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.NetDataContractSerializer>
+- <xref:System.Runtime.Serialization.XmlObjectSerializer>
+- [Serializacja binarna](../../../../docs/standard/serialization/binary-serialization.md)
+- [Typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

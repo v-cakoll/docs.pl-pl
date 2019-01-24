@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 9f33ae085bef2b611d1ce95bed1b26f9101a10b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6aaaa126a0b19300abc2c10b88b0e4ff39a3ad66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530439"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Element DataAdapter DataTable i mapowania elementu DataColumn
 A **DataAdapter** zawiera zbiór zero lub więcej <xref:System.Data.Common.DataTableMapping> obiekty w jego **TableMappings** właściwości. A **DataTableMapping** zapewnia głównej mapowania między danymi zwrócone przez zapytanie w odniesieniu do źródła danych i <xref:System.Data.DataTable>. **DataTableMapping** nazwa może być przekazywany zamiast **DataTable** nazwy do **wypełnienia** metody **DataAdapter**. Poniższy przykład tworzy **DataTableMapping** o nazwie **AuthorsMapping** dla **autorzy** tabeli.  
@@ -90,14 +90,14 @@ adapter.Fill(custDS, "Customers");
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
- Dwie tabele zostały utworzone w **DataSet**: **klientów** i **Customers1**. Mapowania tabel można użyć, aby upewnić się, że druga tabela ma nazwę **zamówienia** zamiast **Customers1**. Aby to zrobić, mapy źródłowej tabeli **Customers1** do **DataSet** tabeli **zamówienia**, jak pokazano w poniższym przykładzie.  
+ Dwie tabele zostały utworzone w **zestawu danych**: **Klienci** i **Customers1**. Mapowania tabel można użyć, aby upewnić się, że druga tabela ma nazwę **zamówienia** zamiast **Customers1**. Aby to zrobić, mapy źródłowej tabeli **Customers1** do **DataSet** tabeli **zamówienia**, jak pokazano w poniższym przykładzie.  
   
 ```  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

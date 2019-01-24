@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46532592057f4fa6d9883d46dcef2f8f9e5f7228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9fc894cdd12e58689fb6b010820bb24d14a9541
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543750"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual — Metoda
-Metoda wywoływana przez wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) dostępu do usługi danych można przydzielić pamięci w przestrzeni adresowej procesu docelowego.  
+Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych można przydzielić pamięci w przestrzeni adresowej procesu docelowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,21 +47,21 @@ HRESULT AllocVirtual(
  [in] Rozmiar w bajtach pamięci do przydzielenia.  
   
  `typeFlags`  
- [in] Flagi, które kontrolują alokacji pamięci. Zobacz Win32 `VirtualAlloc` funkcji.  
+ [in] Flagi sterujące alokacji pamięci. Zobacz Win32 `VirtualAlloc` funkcji.  
   
  `protectFlags`  
- [in] Atrybuty ochrony alokacji pamięci. Zobacz Win32 `VirtualAlloc` funkcji.  
+ [in] Atrybuty ochrony ilość przydzielonej pamięci. Zobacz Win32 `VirtualAlloc` funkcji.  
   
  `virt`  
- [out] Wskaźnik do `CLRDATA_ADDRESS` wartość, która określa rzeczywisty adres początkowy alokacji pamięci.  
+ [out] Wskaźnik do `CLRDATA_ADDRESS` wartość, która określa adres początkowy rzeczywista ilość przydzielonej pamięci.  
   
 ## <a name="remarks"></a>Uwagi  
- `AllocVirtual` Metody służy jako otoka logiczne dla środowiska Win32 `VirtualAlloc` funkcji.  
+ `AllocVirtual` Metody służy jako logiczne otoki dla Win32 `VirtualAlloc` funkcji.  
   
- Ta metoda jest implementowany przez twórcę debugowania aplikacji.  
+ Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData.idl, ClrData.h  
   
@@ -69,6 +69,6 @@ HRESULT AllocVirtual(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRDataTarget2, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)  
- [FreeVirtual, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRDataTarget2, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [FreeVirtual, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)

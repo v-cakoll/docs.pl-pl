@@ -1,5 +1,5 @@
 ---
-title: Jak animować obiekt na ścieżce (animacja matrycy akumulacją przesunięcia)
+title: 'Instrukcje: Animuj obiekt na ścieżce (animacja matrycy akumulacją przesunięcia)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation with offset accumulation)
 - matrix animation with offset accumulation [WPF]
 ms.assetid: 1bca90ef-9832-4128-8ed6-62908e7ec146
-ms.openlocfilehash: 1d3b74ede9cde1928138d4d8625e8625354f5748
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e5e619de8b90737136559db134a131fdc1833fb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640098"
 ---
-# <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Jak animować obiekt na ścieżce (animacja matrycy akumulacją przesunięcia)
+# <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Instrukcje: Animuj obiekt na ścieżce (animacja matrycy akumulacją przesunięcia)
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> klasy animowanie obiektu na ścieżce i animacji są gromadzone przesunięcie wartości jak powtarza się.  
   
 ## <a name="example"></a>Przykład  
@@ -33,6 +33,6 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.M
   
  Aby uzyskać pełny przykład, zobacz [przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028). Aby uzyskać przykład pokazujący sposób animować <xref:System.Windows.Media.Matrix> wartość na ścieżce bez akumulacją przesunięcia, zobacz [animowanie obiektu na ścieżce (animacja Matrix)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

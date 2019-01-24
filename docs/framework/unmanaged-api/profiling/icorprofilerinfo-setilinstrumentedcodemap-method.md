@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4780242dc34f31ecd0ff0dc2c339cdaa30278a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721165"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap — Metoda
-Ustawia mapę kodu dla funkcji określonej przy użyciu określonego wpisów map język pośredni (MSIL) firmy Microsoft.  
+Ustawia mapę kodu dla określonej funkcji przy użyciu określonego wpisy mapy intermediate language (MSIL) firmy Microsoft.  
   
 > [!NOTE]
->  W programie .NET Framework w wersji 2.0, wywoływania `SetILInstrumentedCodeMap` na `FunctionID` czy reprezentuje ogólnego działać w domenie określonej aplikacji będzie miało wpływ na wszystkie wystąpienia tej funkcji w domenie aplikacji.  
+>  W .NET Framework w wersji 2.0, wywołanie `SetILInstrumentedCodeMap` na `FunctionID` czy reprezentuje ogólnej funkcji w domenie określonej aplikacji będzie miało wpływ na wszystkie wystąpienia tej funkcji w domenie aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,48 +42,48 @@ HRESULT SetILInstrumentedCodeMap(
   
 #### <a name="parameters"></a>Parametry  
  `functionId`  
- [in] Identyfikator funkcji, dla którego mają zostać ustawione mapy kodu.  
+ [in] Identyfikator funkcji, dla którego ma zostać ustawiony na mapie kodu.  
   
  `fStartJit`  
- [in] Wartość logiczna, która wskazuje, czy wywołanie `SetILInstrumentedCodeMap` metoda jest pierwszy dla konkretnej `FunctionID`. Ustaw `fStartJit` do `true` w pierwszym wywołaniu `SetILInstrumentedCodeMap` dla danego `FunctionID`, a w `false` później.  
+ [in] Wartość logiczna, która wskazuje, czy wywołanie `SetILInstrumentedCodeMap` metody jest to pierwszy określonego `FunctionID`. Ustaw `fStartJit` do `true` w pierwszym wywołaniu `SetILInstrumentedCodeMap` dla danego `FunctionID`, a `false` po tej dacie.  
   
  `cILMapEntries`  
  [in] Liczba elementów w `cILMapEntries` tablicy.  
   
  `rgILMapEntries`  
- [in] Tablica struktur COR_IL_MAP, z których każdy określa przesunięcie MSIL.  
+ [in] Tablica cor_il_map — struktur, z których każdy określa przesunięcie MSIL.  
   
 ## <a name="remarks"></a>Uwagi  
- Profiler często wstawia instrukcje w kodzie źródłowym metody w celu agregowania tej metody (na przykład do wysyłania powiadomień o osiągnięciu wiersza danego źródła). `SetILInstrumentedCodeMap` Umożliwia profiler do mapowania oryginalnego instrukcje MSIL do nowej lokalizacji. Można użyć profiler [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) metodę, aby pobrać oryginalnego przesunięcie MSIL dla danego przesunięcia macierzystego.  
+ Program profilujący często wstawia instrukcji w kodzie źródłowym metodę w celu Instrumentacja tej metody (na przykład do wysyłania powiadomień o osiągnięciu linię danego źródła). `SetILInstrumentedCodeMap` Umożliwia programowi profilującemu mapowania oryginalny instrukcji MSIL ich nowych lokalizacji. Program profilujący może używać [icorprofilerinfo::getiltonativemapping —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) metodę, aby uzyskać oryginalnego przesunięcie MSIL po danym przesunięciu macierzystym.  
   
- Debuger przyjmie założenie, że każdy starego przesunięcie odwołuje się do MSIL w oryginalnym niezmodyfikowanego kodu MSIL, i że każdego nowego przesunięcie odwołuje się do przesunięcia MSIL kodem nowy, instrumentowanych. Mapy mają być sortowane w kolejności rosnącej. Wykonywanie krok po kroku, aby działała poprawnie, wykonaj następujące wytyczne:  
+ Debuger założy, że każdy stare przesunięcie odwołuje się do MSIL w kodzie MSIL oryginalne, niezmodyfikowanego i że każdy nowy przesunięcie odwołuje się do przesunięcia MSIL kodem nowe, instrumentowanych. Mapa powinny być sortowane w kolejności rosnącej. Do przechodzenia, aby zapewnić prawidłowe działanie, należy przestrzegać następujących wytycznych:  
   
--   Zmień kolejność nie instrumentowanych kod MSIL.  
+-   Nie zmieniają kolejności instrumentowanych kod MSIL.  
   
 -   Nie usuwaj oryginalnego kodu MSIL.  
   
--   Zawierać wpisy dla wszystkich punktów sekwencji z pliku programu (PDB) bazy danych na mapie. Mapa nie interpolować Brak wpisów. Tak podane mapy następujące:  
+-   Zawierać wpisy dla wszystkich punktów sekwencji z plik bazy danych (PDB) programu w mapie. Mapa nie interpolacji Brak wpisów. Tak biorąc pod uwagę poniższe mapy:  
   
-     (0 stare, 0 nowy)  
+     (0 stare, 0 nowe)  
   
      (5 stare, 10 nowych)  
   
-     (9 stare, 20 nowy)  
+     (9 stare, 20 nowych)  
   
-    -   Stary przesunięciem równym 0, 1, 2, 3 lub 4 zostaną zmapowane do nowego przesunięciu 0.  
+    -   Stary przesunięcia 0, 1, 2, 3 lub 4 zostanie zamapowane do nowego przesunięciu 0.  
   
-    -   Stary przesunięcie 5, 6, 7 lub 8 zostaną zmapowane do nowego przesunięcie 10.  
+    -   Przesunięcie stare 5, 6, 7 lub 8 zostaną odwzorowane na nowe przesunięcie 10.  
   
-    -   Przesunięcie starego 9 lub nowszą zostaną zmapowane do nowego przesunięcie 20.  
+    -   Stary przesunięcie 9 lub nowszą zostaną odwzorowane na nowe przesunięcie 20.  
   
     -   Nowe przesunięcie 0, 1, 2, 3, 4, 5, 6, 7, 8 lub 9 zostaną zmapowane do starego przesunięciu 0.  
   
-    -   Nowe przesunięcie 10, 11, 12, 13, 14, 15, 16, 17, 18 lub 19 zostaną zmapowane do starego przesunięcie 5.  
+    -   Nowe przesunięcie 10, 11, 12, 13, 14, 15, 16, 17, 18 lub 19 zostanie zamapowane do starego przesunięcia 5.  
   
-    -   Nowe przesunięcie 20 lub wyższe zostaną zmapowane do starego przesunięcie 9.  
+    -   Nowe przesunięcie 20 lub nowszej zostanie zamapowane do starego przesunięcia 9.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -91,5 +91,5 @@ HRESULT SetILInstrumentedCodeMap(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

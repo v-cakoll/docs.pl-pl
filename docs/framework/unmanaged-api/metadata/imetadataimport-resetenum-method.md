@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 56fc0273fb2c1b77c74d7a1d853886f47170497e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04bdd41e884caa5ed39dff4f4f1e027cde1fec53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568013"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum — Metoda
 Resetuje określonego modułu wyliczającego do określonej pozycji.  
@@ -38,20 +38,20 @@ HRESULT ResetEnum (
   
 #### <a name="parameters"></a>Parametry  
  `hEnum`  
- [in] Moduł wyliczający, aby zresetować.  
+ [in] Moduł wyliczający do zresetowania.  
   
  `ulPos`  
- [in] Nowa pozycja w której ma zostać umieszczony element wyliczający.  
+ [in] Nowa pozycja, na którym ma zostać umieszczony moduł wyliczający.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

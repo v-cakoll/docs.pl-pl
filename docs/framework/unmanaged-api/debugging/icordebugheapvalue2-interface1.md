@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue2 Interface1
+title: ICorDebugHeapValue2, interfejs1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue2
@@ -16,29 +16,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5eb8fa52a3f599787edaa6c47c260f48aa143e61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 447fd8c7a6c52cdebc39ffd9c62cea5890c18c3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499330"
 ---
-# <a name="icordebugheapvalue2-interface1"></a>ICorDebugHeapValue2 Interface1
-Rozszerzenie ICorDebugHeapValue, który zapewnia obsługę obsługuje środowisko uruchomieniowe języka wspólnego (CLR).  
+# <a name="icordebugheapvalue2-interface1"></a>ICorDebugHeapValue2, interfejs1
+Rozszerzenie ICorDebugHeapValue, który obsługuje środowisko uruchomieniowe języka wspólnego (CLR) obsługuje.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CreateHandle, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Tworzy dojście określonego typu dla tego `ICorDebugHeapValue2` obiektu.|  
+|[CreateHandle, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Tworzy dojście określonego typu, w tym `ICorDebugHeapValue2` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -46,5 +46,5 @@ Rozszerzenie ICorDebugHeapValue, który zapewnia obsługę obsługuje środowisk
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

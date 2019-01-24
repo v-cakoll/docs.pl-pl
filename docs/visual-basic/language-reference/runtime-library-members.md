@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: 438094d00375531752f575f1f99b3db4ddf4e2e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef6ce3fe62bd45716184ccbbb0f5a29f18e7477f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514806"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Elementy członkowskie biblioteki wykonawczej programu Visual Basic
-`Microsoft.VisualBasic` Przestrzeń nazw zawiera klasy, modułów, stałe i wyliczenia wchodzących w skład biblioteka wykonawcza języka Visual Basic. Elementy te biblioteki zapewniają procedur, właściwości i wartości stałych używanych w kodzie. Każdy moduł i klasa reprezentuje określonej kategorii funkcji.  
+`Microsoft.VisualBasic` Przestrzeń nazw zawiera klasy, moduły, stałe i wyliczenia wchodzących w skład Biblioteka środowiska uruchomieniowego języka Visual Basic. Te elementy członkowskie biblioteki zawierają procedury, właściwości i wartości stałe, których można użyć w kodzie. Każdy moduł i klasa reprezentuje określoną kategorię funkcji.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Klasa Microsoft.VisualBasic.Collection  
   
@@ -26,13 +26,13 @@ ms.locfileid: "33604591"
 |<xref:Microsoft.VisualBasic.Collection.Add%2A>|<xref:Microsoft.VisualBasic.Collection.Clear%2A>|<xref:Microsoft.VisualBasic.Collection.Contains%2A>|<xref:Microsoft.VisualBasic.Collection.Count%2A>|  
 |<xref:Microsoft.VisualBasic.Collection.GetEnumerator%2A>|<xref:Microsoft.VisualBasic.Collection.Item%2A>|<xref:Microsoft.VisualBasic.Collection.Remove%2A>||  
   
-## <a name="microsoftvisualbasiccomclassattribute-class"></a>Klasa Microsoft.VisualBasic.ComClassAttribute  
+## <a name="microsoftvisualbasiccomclassattribute-class"></a>Microsoft.VisualBasic.ComClassAttribute Class  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.ComClassAttribute.ClassID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.EventID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceShadows%2A>|  
   
-## <a name="microsoftvisualbasiccontrolchars-class"></a>Klasa Microsoft.VisualBasic.ControlChars  
+## <a name="microsoftvisualbasiccontrolchars-class"></a>Microsoft.VisualBasic.ControlChars Class  
   
 |||||  
 |---|---|---|---|  
@@ -40,7 +40,7 @@ ms.locfileid: "33604591"
 |<xref:Microsoft.VisualBasic.ControlChars.Lf>|<xref:Microsoft.VisualBasic.ControlChars.NewLine>|<xref:Microsoft.VisualBasic.ControlChars.NullChar>|<xref:Microsoft.VisualBasic.ControlChars.Quote>|  
 |<xref:Microsoft.VisualBasic.ControlChars.Tab>|<xref:Microsoft.VisualBasic.ControlChars.VerticalTab>|||  
   
-## <a name="microsoftvisualbasicconstants-class"></a>Klasa Microsoft.VisualBasic.Constants  
+## <a name="microsoftvisualbasicconstants-class"></a>Microsoft.VisualBasic.Constants Class  
   
 |||||  
 |---|---|---|---|  
@@ -78,7 +78,7 @@ ms.locfileid: "33604591"
 |<xref:Microsoft.VisualBasic.Conversion.ErrorToString%2A>|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>|<xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
 |<xref:Microsoft.VisualBasic.Conversion.Oct%2A>|<xref:Microsoft.VisualBasic.Conversion.Str%2A>|<xref:Microsoft.VisualBasic.Conversion.Val%2A>||  
   
-## <a name="microsoftvisualbasicdateandtime-module"></a>Moduł Microsoft.VisualBasic.DateAndTime  
+## <a name="microsoftvisualbasicdateandtime-module"></a>Microsoft.VisualBasic.DateAndTime Module  
   
 |||||  
 |---|---|---|---|  
@@ -89,7 +89,7 @@ ms.locfileid: "33604591"
 |<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|<xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>|  
 |<xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Year%2A>|||  
   
-## <a name="microsoftvisualbasicerrobject-class"></a>Klasa Microsoft.VisualBasic.ErrObject  
+## <a name="microsoftvisualbasicerrobject-class"></a>Microsoft.VisualBasic.ErrObject Class  
   
 |||||  
 |---|---|---|---|  
@@ -97,7 +97,7 @@ ms.locfileid: "33604591"
 |<xref:Microsoft.VisualBasic.ErrObject.HelpContext%2A>|<xref:Microsoft.VisualBasic.ErrObject.HelpFile%2A>|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|<xref:Microsoft.VisualBasic.ErrObject.Number%2A>|  
 |<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|||  
   
-## <a name="microsoftvisualbasicfilesystem-module"></a>Moduł Microsoft.VisualBasic.FileSystem  
+## <a name="microsoftvisualbasicfilesystem-module"></a>Microsoft.VisualBasic.FileSystem Module  
   
 |||||  
 |---|---|---|---|  
@@ -121,7 +121,7 @@ ms.locfileid: "33604591"
 |<xref:Microsoft.VisualBasic.Financial.PPmt%2A>|<xref:Microsoft.VisualBasic.Financial.PV%2A>|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|<xref:Microsoft.VisualBasic.Financial.SLN%2A>|  
 |<xref:Microsoft.VisualBasic.Financial.SYD%2A>||||  
   
-## <a name="microsoftvisualbasicglobals-module"></a>Moduł Microsoft.VisualBasic.Globals  
+## <a name="microsoftvisualbasicglobals-module"></a>Microsoft.VisualBasic.Globals Module  
   
 |||||  
 |---|---|---|---|  
@@ -153,13 +153,13 @@ ms.locfileid: "33604591"
 |<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>|<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|<xref:Microsoft.VisualBasic.Interaction.Partition%2A>|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
 |<xref:Microsoft.VisualBasic.Interaction.Shell%2A>|<xref:Microsoft.VisualBasic.Interaction.Switch%2A>|||  
   
-## <a name="microsoftvisualbasicmygroupcollectionattribute-class"></a>Klasa Microsoft.VisualBasic.MyGroupCollectionAttribute  
+## <a name="microsoftvisualbasicmygroupcollectionattribute-class"></a>Microsoft.VisualBasic.MyGroupCollectionAttribute Class  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.CreateMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DefaultInstanceAlias%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DisposeMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.MyGroupName%2A>|  
   
-## <a name="microsoftvisualbasicstrings-module"></a>Moduł Microsoft.VisualBasic.Strings  
+## <a name="microsoftvisualbasicstrings-module"></a>Microsoft.VisualBasic.Strings Module  
   
 |||||  
 |---|---|---|---|  
@@ -191,8 +191,8 @@ ms.locfileid: "33604591"
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic stałe i wyliczenia  
- `Microsoft.VisualBasic` Przestrzeń nazw zawiera stałe i wyliczenia w ramach biblioteki wykonawczej języka Visual Basic. Te wartości stałych można użyć w kodzie. Każde wyliczenie reprezentuje określonej kategorii funkcji. Aby uzyskać więcej informacji, zobacz [stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ `Microsoft.VisualBasic` Przestrzeń nazw zapewnia stałe i wyliczenia jako część biblioteki wykonawczej języka Visual Basic. Te wartości stałych można użyć w kodzie. Każde wyliczenie reprezentuje określoną kategorię funkcji. Aby uzyskać więcej informacji, zobacz [stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md)  
- [Słowa kluczowe](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Słowa kluczowe](../../visual-basic/language-reference/keywords/index.md)

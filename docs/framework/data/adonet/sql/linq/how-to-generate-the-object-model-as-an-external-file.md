@@ -1,29 +1,29 @@
 ---
-title: 'Porady: Generowanie modelu obiektu jako zewnętrzny plik'
+title: 'Instrukcje: Generowanie modelu obiektu jako zewnętrznego pliku'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 00e8563b361a36de6c31e9ff0c0fd8f3b6f46b4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44b123130b79026ed7638ccc7abeb13d8a5f55ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499174"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Porady: Generowanie modelu obiektu jako zewnętrzny plik
-Jako alternatywę do mapowania na podstawie atrybutów można wygenerować modelu obiektu jako plik XML za pomocą narzędzia wiersza polecenia SQLMetal. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Za pomocą zewnętrznego pliku mapowania XML, możesz zaśmiecać w kodzie. Zachowanie można również zmienić, modyfikując plik zewnętrzny bez konieczności ponownego kompilowania plików binarnych aplikacji. Aby uzyskać więcej informacji, zobacz [zewnętrznych mapowania](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Instrukcje: Generowanie modelu obiektu jako zewnętrznego pliku
+Jako alternatywę do mapowania na atrybutach można wygenerować modelu obiektu jako zewnętrznego pliku XML za pomocą narzędzia wiersza polecenia SQLMetal. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Za pomocą plik mapowania XML, zmniejszasz zaśmiecania w kodzie. Można również zmienić zachowanie przez zmodyfikowanie pliku zewnętrznego bez konieczności ponownego kompilowania plików binarnych aplikacji. Aby uzyskać więcej informacji, zobacz [mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 > [!NOTE]
->  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Nie obsługuje generowania pliku mapowania zewnętrznych.  
+>  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Nie obsługuje generowania pliku mapowanie zewnętrzne.  
   
 ## <a name="example"></a>Przykład  
- Polecenie generuje plik mapowania zewnętrznych z przykładowej bazy danych Northwind.  
+ Następujące polecenie generuje plik mapowania zewnętrznych z przykładowej bazy danych Northwind.  
   
 ```  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy fragment pliku mapowania zewnętrznych zawiera mapowania dla tabeli klientów w bazie danych Northwind. Ten fragment został wygenerowany, wykonując SQLMetal z **/map** opcji.  
+ Poniższy fragment z pliku mapowanie zewnętrzne zawiera mapowania dla tabeli Klienci w bazie danych Northwind. Ten fragment został wygenerowany przez wykonanie SQLMetal z **/map** opcji.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -48,7 +48,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie modelu obiektu](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [Instrukcje: Generowanie modelu obiektu w języku Visual Basic lub C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie modelu obiektu](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Instrukcje: Generowanie modelu obiektu w języku Visual Basic lubC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

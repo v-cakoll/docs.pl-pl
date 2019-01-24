@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a864d8285c311a9d5c41a425f81678b294f0d8d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45a7e0c793baa31d9efde2763570cd46a072fe86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546322"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 — Metoda
-Pobiera klasy nadrzędnej, token metadanych i `ClassID` argumentu typu, jeśli jest obecny, funkcji.  
+Pobiera klasy nadrzędnej, token metadanych i `ClassID` każdego argumentu typu, jeśli jest obecny w funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ HRESULT GetFunctionInfo2(
   
 #### <a name="parameters"></a>Parametry  
  `funcId`  
- [in] Identyfikator funkcji, dla którego można pobrać obiektu nadrzędnego, klasy i inne informacje.  
+ [in] Identyfikator funkcji, dla którego należy pobrać element nadrzędny, klasy i inne informacje.  
   
  `frameInfo`  
  [in] A `COR_PRF_FRAME_INFO` wartość, która wskazuje informacji na temat ramki stosu.  
@@ -52,7 +52,7 @@ HRESULT GetFunctionInfo2(
  [out] Wskaźnik do funkcji klasy nadrzędnej.  
   
  `pModuleId`  
- [out] Wskaźnik do modułu, w którym zdefiniowana jest klasa nadrzędna funkcji.  
+ [out] Wskaźnik do modułu, w którym zdefiniowano funkcji klasy nadrzędnej.  
   
  `pToken`  
  [out] Wskaźnik do tokenu metadanych dla funkcji.  
@@ -61,28 +61,28 @@ HRESULT GetFunctionInfo2(
  [in] Rozmiar `typeArgs` tablicy.  
   
  `pcTypeArgs`  
- [out] Wskaźnik do łączna liczba `ClassID` wartości.  
+ [out] Wskaźnik do liczby całkowitej `ClassID` wartości.  
   
  `typeArgs`  
- [out] Tablica `ClassID` wartości, z których każdy jest Identyfikatorem typem argumentu funkcji. Gdy metoda zwróci wartość, `typeArgs` będzie zawierał niektórych lub wszystkich `ClassID` wartości.  
+ [out] Tablica `ClassID` wartości, z których każdy jest Identyfikatorem argument typu funkcji. Po powrocie z metody `typeArgs` będzie zawierać części lub całości `ClassID` wartości.  
   
 ## <a name="remarks"></a>Uwagi  
- Kod profiler może wywołać [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) uzyskanie [metadanych](../../../../docs/framework/unmanaged-api/metadata/index.md) interfejs dla danego modułu. Token metadanych, która jest zwracana do lokalizacji odwołuje się `pToken` mogą następnie służyć do uzyskania dostępu do funkcji metadanych.  
+ Program profilujący kodu może wywołać [icorprofilerinfo::getmodulemetadata —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) uzyskać [metadanych](../../../../docs/framework/unmanaged-api/metadata/index.md) interfejs dla danego modułu. Token metadanych, które są zwracane do lokalizacji, odwołuje się `pToken` następnie może służyć do uzyskania dostępu do funkcji metadanych.  
   
- Klasa identyfikator i typ argumenty, które są zwracane przez `pClassId` i `typeArgs` parametry są zależne od wartości, który jest przekazywany w `frameInfo` parametru, jak pokazano w poniższej tabeli.  
+ Klasa identyfikator i typów argumentów, które są zwracane przez `pClassId` i `typeArgs` parametry są zależne od wartości, które zostały przekazane `frameInfo` parametru, jak pokazano w poniższej tabeli.  
   
-|Wartość `frameInfo` parametru|Wynik|  
+|Wartość atrybutu `frameInfo` parametru|Wynik|  
 |----------------------------------------|------------|  
-|A `COR_PRF_FRAME_INFO` wartości, który został uzyskany z `FunctionEnter2` wywołania zwrotnego|`ClassID`, Zwracane w lokalizacji odwołuje się `pClassId`, i wpisz wszystkich argumentów i zwracane w `typeArgs` tablicy, będą dokładne.|  
-|A `COR_PRF_FRAME_INFO` uzyskany od źródła innego niż `FunctionEnter2` wywołania zwrotnego|Dokładnie `ClassID` i nie można określić argumentów typu. Oznacza to `ClassID` może mieć wartości null i niektórych argumentów typu może występować jako <xref:System.Object>.|  
-|Zero|Dokładnie `ClassID` i nie można określić argumentów typu. Oznacza to `ClassID` może mieć wartości null i niektórych argumentów typu może występować jako <xref:System.Object>.|  
+|A `COR_PRF_FRAME_INFO` wartości, który został uzyskany z `FunctionEnter2` wywołania zwrotnego|`ClassID`, Są zwracane w lokalizacji odwołuje się `pClassId`, a następnie wpisz wszystkich argumentów i zwracanych w `typeArgs` tablicy, będzie dokładna.|  
+|A `COR_PRF_FRAME_INFO` uzyskany ze źródła innego niż `FunctionEnter2` wywołania zwrotnego|Dokładnie `ClassID` i nie można określić argumentów typu. Oznacza to, że `ClassID` może mieć wartości null i mogą pochodzić niektórych argumentów typu jako <xref:System.Object>.|  
+|Zero|Dokładnie `ClassID` i nie można określić argumentów typu. Oznacza to, że `ClassID` może mieć wartości null i mogą pochodzić niektórych argumentów typu jako <xref:System.Object>.|  
   
- Po `GetFunctionInfo2` zwróci wartość, należy sprawdzić, czy `typeArgs` bufor był wystarczająco duży, aby pomieścić wszystkie `ClassID` wartości. W tym celu należy porównać wartości który `pcTypeArgs` wskazuje wartość `cTypeArgs` parametru. Jeśli `pcTypeArgs` wskazuje wartość, która jest większa niż `cTypeArgs` podzielonej przez rozmiar `ClassID` wartość, Przydziel większy `pcTypeArgs` buforu, zaktualizuj `cTypeArgs` z nowej, większy rozmiar i wywołanie `GetFunctionInfo2` ponownie.  
+ Po `GetFunctionInfo2` zwróci wartość, należy sprawdzić, czy `typeArgs` bufor jest wystarczająco duży, aby zawierała wszystkich `ClassID` wartości. Aby to zrobić, porównaj wartość która `pcTypeArgs` wskazuje z wartością `cTypeArgs` parametru. Jeśli `pcTypeArgs` wskazuje wartość, która jest większa niż `cTypeArgs` podzielonej przez rozmiar `ClassID` wartość, należy przydzielić większego `pcTypeArgs` buforu, zaktualizuj `cTypeArgs` przy użyciu nowych, większy rozmiar i Wywołaj `GetFunctionInfo2` ponownie.  
   
- Alternatywnie można wywołać `GetFunctionInfo2` o zerowej długości `pcTypeArgs` buforu w celu uzyskania rozmiar buforu poprawne. Rozmiar buforu można następnie ustawić wartość zwracana w `pcTypeArgs` podzielonej przez rozmiar `ClassID` wartość i wywołanie `GetFunctionInfo2` ponownie.  
+ Alternatywnie, można wywołać `GetFunctionInfo2` o zerowej długości `pcTypeArgs` buforu w celu uzyskania rozmiar buforu poprawne. Następnie można ustawić rozmiar buforu do wartości zwracanej w `pcTypeArgs` podzielonej przez rozmiar `ClassID` wartość i wywołania `GetFunctionInfo2` ponownie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -90,8 +90,8 @@ HRESULT GetFunctionInfo2(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

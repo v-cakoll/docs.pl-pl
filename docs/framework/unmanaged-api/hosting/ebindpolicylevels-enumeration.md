@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1da1d368725ab0a2334080c1caa7d4e25f5f3bab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 635cf7c4e8ff715096728414506b4a7e683727b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704215"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels — Wyliczenie
-Zawiera flagi, aby określić poziom, na których chcesz zastosować lub zmodyfikować zasady zestawu.  
+Zawiera flagi, aby określić poziom, na którym można zastosować lub zmodyfikować zasady zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,27 +45,27 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ePolicyLevelAdmin`|Określa, że zasady powinny zostać zastosowane na poziomie administratora.|  
-|`ePolicyLevelApp`|Określa, że zasady powinny zostać zastosowane na poziomie aplikacji.|  
-|`ePolicyLevelHost`|Określa, że zasady powinny zostać zastosowane na poziomie hosta.|  
-|`ePolicyLevelNone`|Określa żadnych flag poziomu zasad.|  
-|`ePolicyLevelPublisher`|Określa, że zasady powinny zostać zastosowane na poziomie wydawcy.|  
+|`ePolicyLevelAdmin`|Określa, czy zasady mają być stosowane na poziomie administratora.|  
+|`ePolicyLevelApp`|Określa, czy zasady mają być stosowane na poziomie aplikacji.|  
+|`ePolicyLevelHost`|Określa, czy zasady mają być stosowane na poziomie hosta.|  
+|`ePolicyLevelNone`|Określa flagi nie poziomu zasad.|  
+|`ePolicyLevelPublisher`|Określa, czy zasady mają być stosowane na poziomie wydawcy.|  
 |`ePolicyLevelRetargetable`|Określa, że zasady powinny mieć zastosowanie na poziomach zmiennej.|  
-|`ePolicyPortability`|Określa, że zasady powinny obsługiwać przenoszenia między implementacje zestawu .NET Framework. Zobacz [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) element pliku konfiguracji.|  
-|`ePolicyUnifiedToCLR`|Określa, że zasady powinny unified niż środowisko uruchomieniowe języka wspólnego (CLR).|  
+|`ePolicyPortability`|Określa, że zasady powinny obsługiwać przenoszenia między implementacjami zestawu .NET Framework. Zobacz [ \<supportportability — >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) element pliku konfiguracji.|  
+|`ePolicyUnifiedToCLR`|Określa, że zasady powinny unified, środowisko uruchomieniowe języka wspólnego (CLR).|  
   
 ## <a name="remarks"></a>Uwagi  
- To wyliczenie jest przekazywany do metody [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interfejs, aby określić zmiany w zasadach aplikacji.  
+ To wyliczenie jest przekazywany do metody [iclrhostbindingpolicymanager —](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interfejsu, aby określić zmiany w zasadach aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRAssemblyIdentityManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRAssemblyIdentityManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

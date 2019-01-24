@@ -2,15 +2,15 @@
 title: Za pomocą (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 20f58b8f-6070-4456-b7e8-5ff3d6269273
-ms.openlocfilehash: 89306c8b4c317ebaba0d964869c4fe9e1028631a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a07ee1c32a93ee22b7418784fbd893e7699c553e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744300"
 ---
 # <a name="using-entity-sql"></a>Za pomocą (jednostka SQL)
-Określa obszarów nazw używanych w wyrażeniu zapytania.  
+Określa przestrzeń nazw używaną w wyrażeniu zapytania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -20,7 +20,7 @@ USING [ alias = ] namespace
   
 ## <a name="arguments"></a>Argumenty  
  `alias`  
- Określa krótszą alias na kwalifikować się obszar nazw o.  
+ Określa krótszy alias do kwalifikowania przestrzeni nazw za pomocą.  
   
  `namespace`  
  Dowolny prawidłowy obszar nazw.  
@@ -28,14 +28,14 @@ USING [ alias = ] namespace
 ## <a name="example"></a>Przykład  
  Następujące zapytanie SQL jednostki używa operatora USING do określania przestrzeni nazw używany w wyrażeniu zapytania. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1.  Postępuj zgodnie z procedurą w [porady: wykonywanie zapytań tego zwraca wyniki PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Przekaż następujące zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
+2.  Przekaż poniższe zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
   
 ```  
 using SqlServer; RAND()  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przestrzenie nazw](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)  
- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Przestrzenie nazw](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

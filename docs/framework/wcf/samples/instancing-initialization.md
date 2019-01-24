@@ -2,12 +2,12 @@
 title: Tworzenie wystąpienia inicjowania
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 651029783f4632fc0b404bea8df8bd3790622bfd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f4162eb454a0cdeb0db68c1e469da289b8e7ba78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720970"
 ---
 # <a name="instancing-initialization"></a>Tworzenie wystąpienia inicjowania
 Rozszerza w tym przykładzie [Pooling](../../../../docs/framework/wcf/samples/pooling.md) próbki przez definiowanie interfejsu `IObjectControl`, który dostosowuje inicjalizację obiektu za aktywowanie i dezaktywowanie go. Klient wywołuje metody, które zwracają obiekt do puli, a które nie zwracają obiekt do puli.  
@@ -25,7 +25,7 @@ Rozszerza w tym przykładzie [Pooling](../../../../docs/framework/wcf/samples/po
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: Po umieszczeniu komunikatu, wywołuje dyspozytora <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> metodę, aby utworzyć wystąpienie klasy usługi przetworzyć komunikatu. Częstotliwość połączeń do tej metody jest określana przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości. Na przykład jeśli <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>, nowe wystąpienie klasy usługi zostanie utworzona przetworzenie każdego komunikatu przychodzący, więc <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> jest wywoływana w momencie nadejścia wiadomości.  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: Gdy wystąpienie usługi zakończy przetwarzanie komunikatu, wywołuje bibliotekę EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> metody. Podobnie jak w <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> metody częstotliwość połączeń do tej metody jest określana przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości.  
+-   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: Gdy wystąpienie usługi zakończy przetwarzanie komunikatu, wywołuje EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> metody. Podobnie jak w <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> metody częstotliwość połączeń do tej metody jest określana przez <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości.  
   
 ## <a name="the-object-pool"></a>Pula obiektów  
  `ObjectPoolInstanceProvider` Klasa zawiera implementację dla puli obiektów. Ta klasa implementuje <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfejs do interakcji z warstwy modelu usług. Kiedy wywołuje EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> metody, zamiast tworzenia nowego wystąpienia, implementacja niestandardowa szuka istniejący obiekt w puli w pamięci. Jeśli jest dostępny, jest zwracany. W przeciwnym razie `ObjectPoolInstanceProvider` sprawdza, czy `ActiveObjectsCount` właściwości (liczba obiektów zwróconych z puli), osiągnęła maksymalny rozmiar puli. Jeśli nie, nowe wystąpienie jest tworzony i zwracany do wywołującego i `ActiveObjectsCount` następnie rośnie. W przeciwnym razie żądanie utworzenia obiektu jest kolejkowana w skonfigurowanym okresie czasu. Wykonania na `GetObjectFromThePool` przedstawiono w poniższym przykładowym kodzie.  
@@ -136,13 +136,13 @@ if (activeObjectsCount == 0)
   
  Rozszerzenia warstwy modelu ServiceModel są podłączone, wykonując następujące zachowania:  
   
--   Zachowania usług: Te umożliwiają dostosowanie środowiska uruchomieniowego całą usługę.  
+-   Zachowania usług: Umożliwiają one do dostosowywania środowiska uruchomieniowego całą usługę.  
   
 -   Zachowań punktu końcowego: Te umożliwiają dostosowanie punktu końcowego określonej usługi, w tym elemencie EndpointDispatcher.  
   
--   Zachowania kontraktu: Te umożliwiają dostosowanie albo <xref:System.ServiceModel.Dispatcher.ClientRuntime> lub <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klasy po stronie klienta lub usługę, odpowiednio.  
+-   Kontrakt zachowania: Umożliwiają one do dostosowania albo <xref:System.ServiceModel.Dispatcher.ClientRuntime> lub <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klasy po stronie klienta lub usługę, odpowiednio.  
   
--   Zachowania operacji: Te umożliwiają dostosowanie albo <xref:System.ServiceModel.Dispatcher.ClientOperation> lub <xref:System.ServiceModel.Dispatcher.DispatchOperation> klasy po stronie klienta lub usługę, odpowiednio.  
+-   Operacja zachowania: Umożliwiają one do dostosowania albo <xref:System.ServiceModel.Dispatcher.ClientOperation> lub <xref:System.ServiceModel.Dispatcher.DispatchOperation> klasy po stronie klienta lub usługę, odpowiednio.  
   
  Na potrzeby buforowania rozszerzenie obiektu zachowanie punktu końcowego lub zachowanie usługi mogą być tworzone. W tym przykładzie używamy zachowanie usługi, które stosuje obiekt buforowanie zdolność do każdego punktu końcowego usługi. Zachowania usług są tworzone przez zaimplementowanie <xref:System.ServiceModel.Description.IServiceBehavior> interfejsu. Istnieje kilka sposobów, aby uświadomić ServiceModel niestandardowe zachowania:  
   
@@ -265,4 +265,4 @@ else if (pool.Count < minPoolSize)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

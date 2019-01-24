@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54b0a02af7f22e775e3f9567de79664c9805b4e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 116ed60dab3365cac052d3b13ce7b056caca0452
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619687"
 ---
 # <a name="importfile-method"></a>ImportFile — Metoda
-Importuje zestawów i modułów niepowiązanych.  
+Importuje zestawów i modułów niepowiązanej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,19 +41,19 @@ HRESULT ImportFile(
   
 #### <a name="parameters"></a>Parametry  
  `pszFilename`  
- Pełna nazwa pliku do zaimportowania.  
+ W pełni kwalifikowana nazwa pliku do zaimportowania.  
   
  `pszTargetName`  
- Nazwa pliku wyjściowego opcjonalne, który może służyć do zmiany nazwy pliku, ponieważ jest on połączony w zestawie.  
+ Nazwa pliku wyjściowego opcjonalny, którego można zmienić nazwy pliku, ponieważ jest on połączony do zestawu.  
   
  `fSmartImport`  
- Jeśli PRAWDA, ImportTypes jest używany, w przeciwnym razie importowanie musi zostać wykonana ręcznie.  
+ W przypadku opcji TRUE importtypes — jest używana, w przeciwnym razie importowanie muszą być wykonywane ręcznie.  
   
  `pImportToken`  
- Wskaźnik do tokenu, w którym będzie przechowywany Unikatowy identyfikator pliku. Może to być plik zestawu lub pliku.  
+ Wskaźnik do tokenu, gdzie będą przechowywane Unikatowy identyfikator pliku. Plik może być zestawu lub pliku.  
   
  `ppAssemblyScope`  
- Odbiera Wskaźnik do [IMetaDataAssemblyImport — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md). Może mieć wartości NULL, jeśli plik nie jest zestawem.  
+ Otrzymuje wskaźnik do [imetadataassemblyimport — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md). Może mieć wartości NULL, jeśli plik nie jest zestawem.  
   
  `pdwCountOfScopes`  
  Wskaźnik do liczby plików i/lub zakresy, które zostały zaimportowane.  
@@ -64,7 +64,7 @@ HRESULT ImportFile(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

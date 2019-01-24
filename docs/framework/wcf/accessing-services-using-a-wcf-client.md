@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 0678300fca4442cf90dd15c5a4e011d80656eac6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620201"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Uzyskiwanie dostępu do usług za pomocą klienta WCF
 
@@ -52,7 +52,7 @@ Svcutil.exe <file1 [,file2]>
  Jeśli tylko jedną nazwę pliku, który jest nazwa pliku wyjściowego. Jeśli są podane dwie nazwy pliku, pierwszy plik jest plikiem konfiguracja danych wejściowych, których zawartość jest scalany z wygenerowaną konfigurację i zapisywane w pliku drugie. Aby uzyskać więcej informacji o konfiguracji, zobacz [konfigurowanie powiązań dla usług](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).
 
 > [!IMPORTANT]
-> Żądania metadanych niezabezpieczony stanowić zagrożeniom w taki sam sposób, który wykonuje każde żądanie niezabezpieczonej sieci: Jeśli nie masz pewność, że jest komunikują się z punktem końcowym, który jest wyświetlany komunikat, jest, informacje, możesz pobrać może być metadanych usługi złośliwe.
+> Żądania metadanych niezabezpieczony stanowić zagrożeniom w taki sam sposób, który wykonuje każde żądanie niezabezpieczonej sieci: Jeśli nie masz pewność, że punkt końcowy, które komunikują się z jest tożsamości jest, informacje, które możesz pobrać może być metadanych usługi złośliwego.
 
 ## <a name="add-service-reference-in-visual-studio"></a>Dodaj odwołanie do usługi w programie Visual Studio
 
@@ -186,14 +186,14 @@ Wiele wyjątków wygenerowanych przez klienta programu WCF są spowodowane przez
 
 Po wystąpieniu tego rodzaju wyjątków, najlepszym sposobem rozwiązania tego problemu jest włączone jest śledzenie po stronie usługi i określić, jakie wyjątek wystąpił brak. Aby uzyskać więcej informacji na temat śledzenia, zobacz [śledzenia](../../../docs/framework/wcf/diagnostics/tracing/index.md) i [przy użyciu śledzenia do Rozwiązywanie problemów aplikacji](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Instrukcje: asynchroniczne wywoływanie operacji usługi](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktów jednokierunkowych i kontraktów „żądanie-odpowiedź”](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Instrukcje: dostęp do usługi WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Instrukcje: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Instrukcje: Dostęp do usług za pomocą kontraktu dwukierunkowego](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Instrukcje: Asynchroniczne wywoływanie operacji usługi](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Instrukcje: Uzyskiwanie dostępu do usług za pomocą jednokierunkowego i kontraktów "żądanie odpowiedź"](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Instrukcje: Dostęp do programu WSE 3.0 usługi](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Opis wygenerowanego kodu klienta](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Instrukcje: skracanie czasu uruchamiania aplikacji klienckich programu WCF za pomocą elementu XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Instrukcje: Poprawę czasu uruchamiania programu WCF klienta aplikacji przy użyciu elementu XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [Określanie zachowania klienta w czasie wykonywania](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Konfigurowanie zachowań klienta](../../../docs/framework/wcf/configuring-client-behaviors.md)

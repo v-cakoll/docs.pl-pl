@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b25d072ab96b822e79c6f87f535096550e4bb53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f551e2f8a89cf2988ce43bf72a1e87e0ddaf713
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543214"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset — Metoda
-Pobiera Przesunięcie początku tej zmiennej w ramach jego elementu nadrzędnego. Jeśli jest zmienną lokalną w zakresie, Przesunięcie początkowe będzie należeć przesunięcia zdefiniowane dla zakresu.  
+Pobiera Przesunięcie początku tej zmiennej w ramach jego elementu nadrzędnego. Jeśli jest to zmienna lokalna w zakresie, Przesunięcie początku będą wchodzić w przesunięcia zdefiniowana dla zakresu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,11 +39,11 @@ HRESULT GetStartOffset(
  [out] Wskaźnik do `ULONG32` odbierająca Przesunięcie początku.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedVariable, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
- [GetEndOffset, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedVariable, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [GetEndOffset, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)

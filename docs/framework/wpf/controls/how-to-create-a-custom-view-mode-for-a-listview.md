@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: d39f8829e7bdc89c05cda0f586298518908683f5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 336e4ee911d18836eafa6f444c8d900c117acad3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545280"
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Instrukcje: Utwórz niestandardowy tryb widoku dla ListView
 W tym przykładzie pokazano, jak utworzyć niestandardową <xref:System.Windows.Controls.ListView.View%2A> tryb <xref:System.Windows.Controls.ListView> kontroli.  
@@ -42,9 +42,9 @@ W tym przykładzie pokazano, jak utworzyć niestandardową <xref:System.Windows.
   
  Aby uzyskać pełny przykład, zobacz [ListView przy użyciu wielu widoków (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) lub [ListView przy użyciu wielu Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [ListView — omówienie](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView — omówienie](../../../../docs/framework/wpf/controls/gridview-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [ListView — omówienie](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [GridView — omówienie](../../../../docs/framework/wpf/controls/gridview-overview.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b32e0da554622eb84b5569b5a1db04447fdc2940
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 939e10e0c06e98f98e0c468358f4296fd1061a79
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593930"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt; elementu &lt;środowiska uruchomieniowego&gt;
 Zawiera informacje identyfikujące zestaw.  
@@ -24,8 +24,8 @@ Zawiera informacje identyfikujące zestaw.
  \<Konfiguracja >  
 \<runtime>  
 \<assemblybinding — >  
-\<dependentAssembly >  
-\<assemblyIdentity >  
+\<dependentAssembly>  
+\<assemblyIdentity>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -121,7 +121,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Zobacz także
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Przekierowywanie wersji zestawu](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

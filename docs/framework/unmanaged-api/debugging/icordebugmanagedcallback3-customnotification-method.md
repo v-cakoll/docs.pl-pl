@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 098e140b7bffb7798a37b1881f2cb2ced36bcf1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 276a45c9f7b66fecdc4df07da94f813fe025fcb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416488"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592513"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a>ICorDebugManagedCallback3::CustomNotification — Metoda
-Wskazuje powiadomienie niestandardowych debuger został zgłoszony.  
+Wskazuje, że zgłoszono powiadomienie niestandardowego debugera.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,13 +36,13 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
   
 #### <a name="parameters"></a>Parametry  
  `pThread`  
- [in] Wskaźnik do wątku, który uruchamiany powiadomienia.  
+ [in] Wskaźnik do wątku, który spowodował zgłoszenie.  
   
  `pAppDomain`  
- [in] Wskaźnik do domeny aplikacji, która zawiera wątku, który uruchamiany powiadomienia.  
+ [in] Wskaźnik do domeny aplikacji, która zawiera wątku, który spowodował zgłoszenie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
@@ -51,12 +51,12 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- Kolejne wywołania [ICorDebugThread4::GetCurrentCustomDebuggerNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) metoda pobiera obiekt wątku, który został przekazany do <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> metody. Typ obiektu wątek musi być wcześniej włączone przez wywołanie metody [ICorDebugProcess3::SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) metody. Debuger może odczytywać parametry specyficzne dla typu pola obiektu wątku i może przechowywać odpowiedzi do pól.  
+ Kolejne wywołanie [ICorDebugThread4::GetCurrentCustomDebuggerNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) metoda pobiera obiekt wątku, który został przekazany do <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> metody. Typ obiektu wątku musi być wcześniej włączone przez wywołanie metody [ICorDebugProcess3::SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) metody. Debuger może odczytywać parametrach specyficznych dla typu pola obiektu wątku i mogą przechowywać odpowiedzi w polach.  
   
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfejsu nakłada żadnych zasad na typy powiadomień i ich zawartość i semantykę powiadomienia są ściśle kontraktu między debugery, aplikacji i programu .NET Framework.  
+ [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfejsu nakłada żadne zasady dotyczące typów powiadomień i ich zawartość, a semantyka powiadomienia są ściśle kontrakt między debugery, aplikacji i programu .NET Framework.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -64,7 +64,7 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugManagedCallback3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugManagedCallback3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

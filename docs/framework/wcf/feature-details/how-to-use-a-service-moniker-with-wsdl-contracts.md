@@ -2,12 +2,12 @@
 title: 'Instrukcje: Używanie krótkiej nazwy z kontraktami WSDL'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: fc8e5d80ec0b1df699ebe9112f364dd69ca3faf6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 9e9d4b49904f555d790c4b5fde760c004eb1820a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726575"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Instrukcje: Używanie krótkiej nazwy z kontraktami WSDL
 Istnieją sytuacje, gdy chcesz całkowicie niezależna klient COM Interop. Usługi, którą chcesz wywołać nie może ujawniać punktu końcowego MEX i klienta WCF, które biblioteki DLL nie jest zarejestrowany dla współdziałania z modelem COM. W takich przypadkach można utworzyć pliku WSDL, który zawiera opis usługi i przekaż go do monikera programu WCF. W tym temacie opisano sposób wywoływania przykładu wprowadzenie usługi WCF, używanie monikera programu WCF WSDL.  
@@ -56,6 +56,6 @@ Istnieją sytuacje, gdy chcesz całkowicie niezależna klient COM Interop. Usłu
   
 7.  Uruchom aplikację języka Visual Basic. Okno komunikatu pojawi się wraz z wynikami Subtract wywołującym (145, 76.54).  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Przegląd integrowania z aplikacjami COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [Przegląd integrowania z aplikacjami COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

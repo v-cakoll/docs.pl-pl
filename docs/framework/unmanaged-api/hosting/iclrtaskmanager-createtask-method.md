@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f731e121324793a027c5977a02e1973b0d6fff20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3556c9c73d354f096316cf67741a055e9f46adfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600277"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask — Metoda
-Żąda jawnie, czy środowisko uruchomieniowe języka wspólnego (CLR) umożliwia utworzenie nowego zadania.  
+Żąda jawnie, że środowisko uruchomieniowe języka wspólnego (CLR) Utwórz nowe zadanie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,39 +37,39 @@ HRESULT CreateTask (
   
 #### <a name="parameters"></a>Parametry  
  `pTask`  
- [out] Wskaźnik do nowo utworzonego adresu [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md), lub wartość null, jeśli nie można utworzyć zadania.  
+ [out] Wskaźnik do adresu nowo utworzonego [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md), lub wartość null, jeśli nie można utworzyć zadania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda zwróciła pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Za mało pamięci jest dostępna do przydzielenia do żądanego zasobu.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Nie ma wystarczającej ilości pamięci jest dostępna do przydzielenia do żądanego zasobu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko CLR jest utworzenie nowego zadania automatycznie po zainicjowaniu, podczas tworzenia wątku przez kod użytkownika przy użyciu typów w <xref:System.Threading> przestrzeni nazw, lub po zwiększeniu rozmiaru puli wątków. Tworzy również zadania, gdy niezarządzany kod wywołuje funkcją zarządzaną.  
+ Środowisko CLR tworzy nowe zadanie automatycznie po zainicjowaniu, gdy kod użytkownika tworzy wątek przy użyciu typów w <xref:System.Threading> przestrzeni nazw, lub po zwiększeniu rozmiaru puli wątków. Tworzy również zadania, gdy kod niezarządzany sprawia, że wywołanie funkcji zarządzanej.  
   
- `CreateTask` umożliwia hostowi jawnie zażądać, CLR utworzyć nowe zadanie. Na przykład host może wywołać tę metodę, aby wstępnie zainicjować struktury danych.  
+ `CreateTask` Zezwalaj hostowi na jawnie zażądać, środowisko CLR, Utwórz nowe zadanie. Na przykład host wywołać tę metodę w celu preinitialize struktur danych.  
   
 > [!IMPORTANT]
->  Nowe zadanie jest zwracany w stan zawieszenia i pozostanie wstrzymany, aż do hosta jawnie wywołuje [IHostTask::Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
+>  Nowe zadanie, zwracany jest w stanie wstrzymania i Kreator nie wznawia działania do momentu jawnego wywołania hosta [ihosttask::Start —](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

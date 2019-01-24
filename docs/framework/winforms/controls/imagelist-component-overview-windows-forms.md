@@ -8,12 +8,12 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: 1ce9ced0c7e6bc13d5cdf331135590ba48c624fb
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 49da971975deecfde8e299a46dd59d469da63802
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521039"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList — Informacje o składniku (Formularze systemu Windows)
 
@@ -27,7 +27,7 @@ Za pomocą listy obrazów żadnego formantu, który ma `ImageList` właściwoś�
 
 Właściwość klucza <xref:System.Windows.Forms.ImageList> składnik to <xref:System.Windows.Forms.ImageList.Images%2A>, który zawiera obrazy, które ma być używany przez skojarzony formant. Każdy obraz poszczególnych może zostać oceniony przez jej wartość indeksu lub za pomocą klucza. <xref:System.Windows.Forms.ImageList.ColorDepth%2A> Właściwość określa liczbę kolorów, które obrazy są renderowane przy użyciu. Obrazy wszystkie wyświetlane są w taki sam rozmiar, ustawiane przez <xref:System.Windows.Forms.ImageList.ImageSize%2A> właściwości. Obrazy, które są większe zostaną odpowiednio dopasowane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ImageList>
-- [Instrukcje: dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [Instrukcje: Dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy Windows](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

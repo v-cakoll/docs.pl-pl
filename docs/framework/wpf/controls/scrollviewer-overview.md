@@ -9,18 +9,18 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: 4c9a2e8cf64f18f3e8614912759a4a6eb01d4823
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bcd51903879675f2607996c47aab9645217e9e21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519622"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer — Przegląd
 Zawartość w interfejsie użytkownika często jest większy niż obszaru wyświetlania ekranu komputera. <xref:System.Windows.Controls.ScrollViewer> Kontrola zapewnia wygodny sposób, aby włączyć przewijanie zawartości w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. W tym temacie przedstawiono <xref:System.Windows.Controls.ScrollViewer> elementu i udostępnia kilka przykładów użycia.  
   
 <a name="what_is_a_scrollviewer_element"></a>   
-## <a name="the-scrollviewer-control"></a>Scrollviewer — formant  
+## <a name="the-scrollviewer-control"></a>The ScrollViewer Control  
  Istnieją dwa wstępnie zdefiniowane elementy, które umożliwiają przewijanie w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji: <xref:System.Windows.Controls.Primitives.ScrollBar> i <xref:System.Windows.Controls.ScrollViewer>. <xref:System.Windows.Controls.ScrollViewer> Kontroli hermetyzuje poziomo i pionowo <xref:System.Windows.Controls.Primitives.ScrollBar> elementów i zawartość kontenerów (takie jak <xref:System.Windows.Controls.Panel> elementu) aby wyświetlić inne widoczne elementy w przewijanym obszarze. Należy utworzyć niestandardowy obiekt, aby można było używać <xref:System.Windows.Controls.Primitives.ScrollBar> element przewijania zawartości. Można jednak użyć <xref:System.Windows.Controls.ScrollViewer> elementu samodzielnie, ponieważ jest on złożonego kontrolkę, która hermetyzuje <xref:System.Windows.Controls.Primitives.ScrollBar> funkcji.  
   
  <xref:System.Windows.Controls.ScrollViewer> Kontroli reaguje na polecenia klawiatury i myszy, a następnie definiuje wiele metod czekających za pomocą którego można przewijać zawartość przy wstępnie zdefiniowanych przyrostów. Możesz użyć <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> zdarzenia w celu wykrycia zmian w <xref:System.Windows.Controls.ScrollViewer> stanu.  
@@ -60,11 +60,11 @@ Zawartość w interfejsie użytkownika często jest większy niż obszaru wyświ
   
  Aby uzyskać dodatkowe informacje na temat formatów dokumentów i prezentacji opcji, zobacz [dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Controls.ScrollViewer>  
- <xref:System.Windows.Controls.Primitives.ScrollBar>  
- <xref:System.Windows.Controls.Primitives.IScrollInfo>  
- [Tworzenie podglądu z przewijaniem](https://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [ScrollBar — style i szablony](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [Kontrolki](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Controls.ScrollViewer>
+- <xref:System.Windows.Controls.Primitives.ScrollBar>
+- <xref:System.Windows.Controls.Primitives.IScrollInfo>
+- [Tworzenie podglądu z przewijaniem](https://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)
+- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [ScrollBar — style i szablony](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)
+- [Kontrolki](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

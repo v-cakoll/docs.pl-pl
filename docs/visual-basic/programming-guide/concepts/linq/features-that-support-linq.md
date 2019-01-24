@@ -5,17 +5,17 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 557e3607443066a863946ff08958197a14662a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519399"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Funkcje Visual Basic obsługujące LINQ
 Nazwa [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] odnosi się do technologii w języku Visual Basic, że obsługuje składni zapytania i innym języku tworzy bezpośrednio w języku. Za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], nie trzeba uczenia się nowego języka dla zewnętrznego źródła danych zapytania. Aby wykonać zapytanie względem danych w relacyjnych baz danych, Magazyny XML lub obiektów w języku Visual Basic. Ta integracja możliwości kwerend języka umożliwia kompilacji sprawdzania pod kątem błędów składniowych i bezpieczeństwo typów. Ta integracja zapewnia również znanych większość co musisz wiedzieć, aby pisać rozbudowane, zróżnicowane zapytania w języku Visual Basic.  
   
- W poniższych sekcjach opisano konstrukcji języka, które obsługuje LINQ w wystarczającą ilość szczegółów, aby umożliwić wprowadzenie odczytywanie dokumentację wprowadzającą, przykłady kodu i przykładowe aplikacje. Możesz również kliknąć linki można znaleźć bardziej szczegółowe objaśnienia dotyczące jak funkcje językowe grupuje umożliwiające zapytanie o języku zintegrowanym. Jest dobrym miejscem do rozpoczęcia [wskazówki: Pisanie zapytań w języku Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
+ W poniższych sekcjach opisano konstrukcji języka, które obsługuje LINQ w wystarczającą ilość szczegółów, aby umożliwić wprowadzenie odczytywanie dokumentację wprowadzającą, przykłady kodu i przykładowe aplikacje. Możesz również kliknąć linki można znaleźć bardziej szczegółowe objaśnienia dotyczące jak funkcje językowe grupuje umożliwiające zapytanie o języku zintegrowanym. Jest dobrym miejscem do rozpoczęcia [instruktażu: Pisanie zapytań w języku Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
 ## <a name="query-expressions"></a>Wyrażenia zapytań  
  Wyrażenia zapytań w języku Visual Basic mogą być wyrażone w składni deklaratywnej, podobnie jak w przypadku bazy danych SQL lub XQuery. W czasie kompilacji Składnia kwerendy jest konwertowane na wywołania metody dostawcę LINQ implementacji metody standardowego operatora zapytań rozszerzenia. Kontrolowanie aplikacji standardowych operatorów zapytań znajdują się w zakresie, określając odpowiedni obszar nazw z `Imports` instrukcji. Składnia wyrażenia zapytania języka Visual Basic wygląda następująco:  
@@ -44,7 +44,7 @@ Nazwa [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] odnosi się do tec
   
  [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
- Aby uzyskać więcej informacji, zobacz [inicjatory obiektów: typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+ Aby uzyskać więcej informacji, zobacz [inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="anonymous-types"></a>Typy anonimowe  
  Typy anonimowe zapewniają wygodny sposób w celu tymczasowego grupowania zestawu właściwości do elementu, który chcesz uwzględnić w wyniku zapytania. Dzięki temu można wybrać dowolną kombinację dostępnych pól w zapytaniu, w dowolnej kolejności bez zdefiniowania typu danych o nazwie elementu.  
@@ -93,9 +93,9 @@ Nazwa [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] odnosi się do tec
   
  Aby uzyskać więcej informacji, zobacz [wyrażeń Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Zapytanie o języku zintegrowanym (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [Option Infer, instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [Zapytanie o języku zintegrowanym (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [Option Infer, instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

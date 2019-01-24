@@ -2,12 +2,12 @@
 title: Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 5db72a6e5970a2c10e0dd1fb62339efd9b69138c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 35eeab5daec6f63f4d3bed85442ffe6ca28dc38b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583422"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 Większość przykładów Windows Communication Foundation (WCF) są hostowane w Internet Information Services (IIS) i uruchamiane z wspólnego katalogu wirtualnego. Ta procedura konfiguracji jednorazowej tworzy folder z dysku. dodaje także katalog wirtualny usług IIS o nazwie **ServiceModelSamples**.
@@ -40,11 +40,11 @@ Większość przykładów Windows Communication Foundation (WCF) są hostowane w
   
 5.  Postępuj zgodnie z [instrukcje dotyczące zapory](../../../../docs/framework/wcf/samples/firewall-instructions.md) włączania portów używanych przez próbki.  
   
-6.  Wyszukaj następujący katalog domyślny: \<InstallDrive >:**\WF_WCF_Samples**. Jeśli przykłady zostały wcześniej zainstalowane, to jest katalog domyślny.  
+6.  Sprawdź, czy następujący katalog domyślny: \<InstallDrive>:**\WF_WCF_Samples**. Jeśli przykłady zostały wcześniej zainstalowane, to jest katalog domyślny.  
   
 7.  Jeśli nie są zainstalowane przykłady, zainstaluj je z lokalizacji pobierania próbek [Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939) lub [języka Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
   
-8.  Po zainstalowaniu próbki, przejdź do: \<InstallDrive >:**\WF_WCF_Samples\WCF\Setup\\**  
+8.  Po zainstalowaniu próbek, przejdź do: \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. Uruchom **Setupvroot.bat** pliku wsadowego. Są wykonywane następujące czynności:  
   
@@ -86,4 +86,4 @@ Większość przykładów Windows Communication Foundation (WCF) są hostowane w
 
 15. Niektóre przykłady wymagają certyfikatów. Zobacz [internetowych usług informacyjnych (IIS) serwera certyfikatów — instrukcje dotyczące instalacji](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

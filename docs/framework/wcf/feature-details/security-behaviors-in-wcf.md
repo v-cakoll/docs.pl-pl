@@ -2,23 +2,23 @@
 title: Zachowania zabezpieczeń w programie WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592812"
 ---
 # <a name="security-behaviors-in-wcf"></a>Zachowania zabezpieczeń w programie WCF
 W konsoli Windows Communication Foundation (WCF) zachowania zmodyfikować zachowanie w czasie wykonywania na poziomie usługi, lub na poziomie punktu końcowego. (Aby uzyskać więcej informacji na temat zachowań ogólnie rzecz biorąc, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Zachowania zabezpieczeń* umożliwić kontrolę nad poświadczeniami, uwierzytelniania, autoryzacji i dzienniki inspekcji. Można użyć zachowań, programowania lub za pośrednictwem konfiguracji. Ten temat koncentruje się na temat konfigurowania następujące zachowania związane z funkcjami zabezpieczeń:  
   
--   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+-   [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
--   [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
+-   [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
   
 -   [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
   
--   [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
+-   [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
 -   [\<serviceMetadata w pliku >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), które również pozwala na określenie bezpiecznego punktu końcowego, który klienci mogą uzyskiwać dostęp do metadanych.  
   
@@ -50,7 +50,7 @@ W konsoli Windows Communication Foundation (WCF) zachowania zmodyfikować zachow
 ## <a name="service-credentials"></a>Poświadczenia usługi  
  [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) zawiera cztery elementy podrzędne. W poniższych sekcjach omówiono elementów i ich użycia.  
   
-### <a name="servicecertificate-element"></a>\<serviceCertificate > Element  
+### <a name="servicecertificate-element"></a>\<serviceCertificate> Element  
  Użyj tego elementu, aby określić certyfikat X.509, który jest używany do uwierzytelniania usługi dla klientów używających trybu zabezpieczenia wiadomości. Jeśli używasz certyfikatu, który jest okresowo odnawiać, następnie zmiany jego odcisk palca. W takim przypadku użyj nazwy tematu jako `X509FindType` ponieważ certyfikat może zostać wydany ponownie o takiej samej nazwie podmiotu.  
   
  Aby uzyskać więcej informacji na temat za pomocą elementu zobacz [jak: Określanie wartości poświadczeń klienta](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
@@ -61,7 +61,7 @@ W konsoli Windows Communication Foundation (WCF) zachowania zmodyfikować zachow
 ### <a name="authentication-of-clientcertificate-element"></a>\<Uwierzytelnianie > z \<clientCertificate > Element  
  [ \<Uwierzytelniania >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) elementu pozwala na dostosowanie, sposób uwierzytelniania klientów. Możesz ustawić `CertificateValidationMode` atrybutu `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust`, lub `Custom`. Domyślnie ustawiono poziom `ChainTrust`, która określa, że każdy certyfikat musi zostać znaleziony w hierarchii certyfikatów kończy się rozszerzeniem *główny urząd* w górnej części łańcucha. Jest to najbezpieczniejsza opcja Tryb. Można również ustawić wartość, `PeerOrChainTrust`, która określa, że własnym wystawionych certyfikatów (relacja zaufania elementów równorzędnych) są akceptowane oraz certyfikaty, które znajdują się w zaufanym łańcuchem. Ta wartość jest używana podczas opracowywania i debugowania klientów i usług, ponieważ własnym wystawionych certyfikatów nie należy zakupić od zaufanego urzędu. Podczas wdrażania klienta, użyj `ChainTrust` jest wartość. Można również ustawić wartość, `Custom`. Po ustawieniu `Custom` wartości, należy także ustawić `CustomCertificateValidatorType` atrybutu do zestawu i typ używany do weryfikacji certyfikatu. Aby utworzyć własny niestandardowy moduł sprawdzania poprawności, musi dziedziczyć abstrakcyjnej <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy.  
   
-### <a name="issuedtokenauthentication-element"></a>\<issuedTokenAuthentication > Element  
+### <a name="issuedtokenauthentication-element"></a>\<issuedTokenAuthentication> Element  
  Wystawiony token scenariusz ma trzy etapy. W pierwszym etapie klienta próby uzyskania dostępu do usługi jest określane *secure token service* (STS). Usługa STS następnie uwierzytelnia klientów, a następnie wystawia token, zazwyczaj token zabezpieczeń potwierdzenia Markup Language (SAML) klienta. Klient powraca do usługi przy użyciu tokenu. Usługa sprawdza, czy token dla danych, które umożliwia usłudze uwierzytelniania tokenu, a w związku z tym klientem. W celu uwierzytelnienia tokenu certyfikatu, który używa usługa bezpiecznych tokenów musi być znane, do usługi. [ \<IssuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) element jest repozytorium dla wszystkich certyfikatów usługa bezpiecznych tokenów. Aby dodać certyfikaty, należy użyć [ \<knownCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md). Wstaw [ \<Dodaj >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) dla każdego certyfikatu, jak pokazano w poniższym przykładzie.  
   
 ```xml  
@@ -114,19 +114,19 @@ W konsoli Windows Communication Foundation (WCF) zachowania zmodyfikować zachow
  </endpointBehaviors>  
 ```  
   
-#### <a name="clientcertifictate-element"></a>\<clientCertifictate > Element  
+#### <a name="clientcertifictate-element"></a>\<clientCertifictate> Element  
  Ustaw certyfikat używany do uwierzytelniania klienta z tym elementem. Aby uzyskać więcej informacji, zobacz [jak: Określanie wartości poświadczeń klienta](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
-#### <a name="httpdigest"></a>\<httpDigest >  
+#### <a name="httpdigest"></a>\<httpDigest>  
  Ta funkcja wymaga włączenia w usłudze Active Directory, Windows i Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [uwierzytelnianie szyfrowane w usługach IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > Element  
  [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) zawiera elementy umożliwia konfigurowanie lokalnego wystawcy tokenów lub zachowania używane z usługi tokenu zabezpieczającego. Aby uzyskać instrukcje na temat konfigurowania klienta Użyj wystawcy lokalnego, zobacz [jak: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
-#### <a name="localissueraddress"></a>\<localIssuerAddress >  
+#### <a name="localissueraddress"></a>\<localIssuerAddress>  
  Określa domyślny adres usługi tokenu zabezpieczeń. Jest on używany podczas <xref:System.ServiceModel.WSFederationHttpBinding> nie dostarcza adres URL dla usługi tokenu zabezpieczającego lub gdy adres wystawcy powiązania federacyjnego `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` lub `null`. W takich przypadkach <xref:System.ServiceModel.Description.ClientCredentials> musi być skonfigurowany za pomocą adresu lokalnego wystawcy i powiązanie, aby używać do komunikowania się z tym wystawcą.  
   
-#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
+#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors>  
  Użyj [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) dodać zachowań klienta WCF, używane podczas komunikacji z usługi tokenu zabezpieczającego. Definiowanie zachowania klienta w [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) sekcji. Aby użyć zdefiniowanego zachowania, należy dodać <`add`> elementu `<issuerChannelBehaviors>` elementu o dwa atrybuty. Ustaw `issuerAddress` do adresu URL usługi tokenów zabezpieczeń i ustaw `behaviorConfiguration` atrybutu Nazwa zachowania zdefiniowanego punktu końcowego, jak pokazano w poniższym przykładzie.  
   
 ```xml  
@@ -137,7 +137,7 @@ W konsoli Windows Communication Foundation (WCF) zachowania zmodyfikować zachow
                behaviorConfiguration="clientBehavior1" />     
 ```  
   
-#### <a name="servicecertificate-element"></a>\<serviceCertificate > Element  
+#### <a name="servicecertificate-element"></a>\<serviceCertificate> Element  
  Użyj tego elementu do kontrolowania uwierzytelniania certyfikatów usługi.  
   
  [ \<DefaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) elementu można przechowywać jeden certyfikat używany, gdy usługa określa żadnego certyfikatu.  
@@ -217,6 +217,6 @@ W konsoli Windows Communication Foundation (WCF) zachowania zmodyfikować zachow
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

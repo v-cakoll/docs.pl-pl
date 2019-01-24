@@ -1,15 +1,15 @@
 ---
-title: 'Porady: łączenie zawartości niepodobnych plików (LINQ) (C#)'
+title: 'Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 0984b8fc42a8f242f6adc33e1f3c38d4f6ae94b8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5fb954bee6433d28ffb47f789b41492349f7ab42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698417"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Porady: łączenie zawartości niepodobnych plików (LINQ) (C#)
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (C#)
 
 W tym przykładzie pokazano, jak połączyć dane z dwóch plików rozdzielanych przecinkami, które mają wspólne wartość, która jest używana jako zgodnego klucza. Ta technika może być przydatne, jeśli trzeba połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego i z plikiem innego formatu, który ma do nowego pliku. Można zmodyfikować przykładu tak, aby pracować z dowolnym rodzajem tekstu ze strukturą.  
   
@@ -132,7 +132,7 @@ Utwórz i skompiluj projekt, który jest przeznaczony dla jednego z następując
 - .NET framework w wersji 4.0 lub nowszy.
 - .NET core w wersji 1.0 lub nowszej.
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

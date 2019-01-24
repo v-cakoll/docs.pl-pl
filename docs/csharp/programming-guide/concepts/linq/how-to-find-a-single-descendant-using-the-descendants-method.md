@@ -1,15 +1,15 @@
 ---
-title: 'Porady: znajdowanie pojedynczego elementu potomnego przy użyciu metody elementów potomnych (C#)'
+title: 'Instrukcje: Znajdź pojedynczego elementu potomnego przy użyciu metody elementów potomnych (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: fafb7dc4e2e65c913de46b64028f7dcd69fdd2c3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a13a4aef6a3d22d2b7c3adb8e37996de08978b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690530"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Porady: znajdowanie pojedynczego elementu potomnego przy użyciu metody elementów potomnych (C#)
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Instrukcje: Znajdź pojedynczego elementu potomnego przy użyciu metody elementów potomnych (C#)
 Możesz użyć <xref:System.Xml.Linq.XContainer.Descendants%2A> metodę osi, aby szybko napisać kod, aby znaleźć pojedynczy jednoznacznie o nazwie elementu. Ta technika jest szczególnie przydatne, gdy chcesz znaleźć określonego obiektu podrzędnego o określonej nazwie. Można napisać kod, aby przejść do żądanego elementu, ale często jest szybsze i prostsze do pisania kodu za pomocą <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
   
 ## <a name="example"></a>Przykład  
@@ -73,6 +73,6 @@ Console.WriteLine(grandChild3);
 GC3 Value  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Podstawowe zapytania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

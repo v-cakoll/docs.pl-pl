@@ -2,15 +2,15 @@
 title: Przykład serializacji kodu JSON ze słabą kontrolą typów
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 07166b89729fed7911cb842313269e420ae401b7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 212a5ea362600e833303711b750d1c7a0f7252b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676058"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Przykład serializacji kodu JSON ze słabą kontrolą typów
-Podczas serializacji typu zdefiniowanego przez użytkownika, do danego formatu, lub deserializację formatu do typu zdefiniowanego przez użytkownika, to danego typu zdefiniowane przez użytkownika muszą być dostępne zarówno usługi, jak i klienta. Zazwyczaj można to osiągnąć, <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest stosowany do tych typów zdefiniowanych przez użytkownika i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut jest stosowany do ich elementów członkowskich. Ten mechanizm również stosowana, gdy praca z obiektami JavaScript Object Notation (JSON), zgodnie z opisem w temacie [jak: serializacji i deserializacji danych JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+Podczas serializacji typu zdefiniowanego przez użytkownika, do danego formatu, lub deserializację formatu do typu zdefiniowanego przez użytkownika, to danego typu zdefiniowane przez użytkownika muszą być dostępne zarówno usługi, jak i klienta. Zazwyczaj można to osiągnąć, <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest stosowany do tych typów zdefiniowanych przez użytkownika i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybut jest stosowany do ich elementów członkowskich. Ten mechanizm również stosowana, gdy praca z obiektami JavaScript Object Notation (JSON), zgodnie z opisem w temacie [jak: Serializowanie i Deserializowanie danych JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  W niektórych scenariuszach usługi Windows Communication Foundation (WCF) lub klienta musi uzyskać dostęp do obiektów JSON generowanych przez usługi lub klienta, który jest poza kontrolą dewelopera. Zgodnie z większej liczby usług sieci Web uwidoczniają publicznie interfejsy API w formacie JSON, może stać się niepraktyczne dla deweloperów usługi WCF do konstruowania lokalnego typy zdefiniowane przez użytkownika, w którym należy wykonać deserializacji dowolne obiekty JSON. W tym przykładzie zapewnia mechanizm, który umożliwia deweloperom WCF do pracy z obiektami JSON po deserializacji, dowolnego bez tworzenia typów zdefiniowanych przez użytkownika. Jest to nazywane *ze słabą kontrolą typów serializacji* obiektów JSON, ponieważ typ, do którego deserializuje obiekt JSON nie jest znany w czasie kompilacji.  
   
@@ -140,4 +140,4 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

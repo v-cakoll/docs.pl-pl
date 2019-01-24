@@ -2,12 +2,12 @@
 title: Data i godzina funkcje Canonical
 ms.date: 03/30/2017
 ms.assetid: 9628b74f-1585-436a-b385-8b02ed0cdd63
-ms.openlocfilehash: b79d11909c22208e0ea15b4083c230e920f1ad42
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 46a4b595ccdfcb1a6576ee8cb1e080f0d4b48123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579995"
 ---
 # <a name="date-and-time-canonical-functions"></a>Data i godzina funkcje Canonical
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obejmuje funkcje canonical daty i godziny.  
@@ -34,16 +34,16 @@ ms.locfileid: "42925425"
 |`CurrentUtcDateTime()`|Zwraca <xref:System.DateTime> wartości bieżącej daty i czasu serwera w strefie czasowej UTS.<br /><br /> **Wartość zwracana**<br /><br /> A `DateTime`.|  
 |`Day(expression)`|Zwraca część dotyczącą dnia z `expression` jako `Int32` od 1 do 31.<br /><br /> **Argumenty**<br /><br /> A `DateTime` i `DateTimeOffset`.<br /><br /> **Wartość zwracana**<br /><br /> `Int32`.<br /><br /> **Przykład**<br /><br /> `-- The following example returns 12.`<br /><br /> `Day(cast('03/12/1998' as DateTime))`|  
 |`DayOfYear(expression)`|Zwraca część dotyczącą dnia z `expression` jako `Int32` od 1 do 366, gdy 366 jest zwracany w ciągu ostatniego dnia w roku przestępnym.<br /><br /> **Argumenty**<br /><br /> A `DateTime` lub `DateTimeOffset`.<br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
-|`DiffNanoseconds(startExpression,endExpression)`|Zwraca w nanosekundach różnicę między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, lub `Time`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu.   <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
-|`DiffMilliseconds(startExpression,endExpression)`|Zwraca różnicę, w milisekundach między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, lub `Time`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu.   <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
-|`DiffMicroseconds(startExpression,endExpression)`|Zwraca w mikrosekundach, różnicę między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, lub `Time`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu.   <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
-|`DiffSeconds(startExpression,endExpression)`|Zwraca różnicę w sekundach między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, lub `Time`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu.   <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
-|`DiffMinutes(startExpression,endExpression)`|Zwraca różnicę (w minutach) między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, lub `Time`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu.   <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
-|`DiffHours(startExpression,endExpression)`|Zwraca różnicę w godzinach między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, lub `Time`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu.   <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
-|`DiffDays(startExpression,endExpression)`|Zwraca różnicę, dni, między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime` lub `DateTimeOffset`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu.   <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
-|`DiffMonths(startExpression,endExpression)`|Zwraca różnicę w miesiącach między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime` lub `DateTimeOffset`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu.   <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
-|`DiffYears(startExpression,endExpression)`|Zwraca różnicę w latach między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime` lub `DateTimeOffset`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu.   <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
-|`GetTotalOffsetMinutes(datetimeoffset)`|Zwraca liczbę minut, która `datetimeoffset` przesunięcia względem GMT. Zwykle jest to między +780 i-780 (+ lub - 13 godz.). **Uwaga:** ta funkcja jest obsługiwana tylko w programie SQL Server 2008. <br /><br /> **Argumenty**<br /><br /> A `DateTimeOffset`.<br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
+|`DiffNanoseconds(startExpression,endExpression)`|Zwraca w nanosekundach różnicę między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, lub `Time`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu. <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
+|`DiffMilliseconds(startExpression,endExpression)`|Zwraca różnicę, w milisekundach między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, lub `Time`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu. <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
+|`DiffMicroseconds(startExpression,endExpression)`|Zwraca w mikrosekundach, różnicę między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, lub `Time`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu. <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
+|`DiffSeconds(startExpression,endExpression)`|Zwraca różnicę w sekundach między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, lub `Time`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu. <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
+|`DiffMinutes(startExpression,endExpression)`|Zwraca różnicę (w minutach) między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, lub `Time`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu. <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
+|`DiffHours(startExpression,endExpression)`|Zwraca różnicę w godzinach między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, lub `Time`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu. <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
+|`DiffDays(startExpression,endExpression)`|Zwraca różnicę, dni, między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime` lub `DateTimeOffset`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu. <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
+|`DiffMonths(startExpression,endExpression)`|Zwraca różnicę w miesiącach między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime` lub `DateTimeOffset`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu. <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
+|`DiffYears(startExpression,endExpression)`|Zwraca różnicę w latach między `startExpression` i `endExpression`.<br /><br /> **Argumenty**<br /><br /> `startExpression`, `endExpression`: `DateTime` lub `DateTimeOffset`. **Uwaga:** `startExpression` i `endExpression` muszą być tego samego typu. <br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
+|`GetTotalOffsetMinutes(datetimeoffset)`|Zwraca liczbę minut, która `datetimeoffset` przesunięcia względem GMT. Zwykle jest to między +780 i-780 (+ lub - 13 godz.). **Uwaga:**  Ta funkcja jest obsługiwana tylko w programie SQL Server 2008. <br /><br /> **Argumenty**<br /><br /> A `DateTimeOffset`.<br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
 |`Hour(expression)`|Zwraca część dotyczącą godziny z `expression` jako `Int32` od 0 do 23.<br /><br /> **Argumenty**<br /><br /> A `DateTime, Time` i `DateTimeOffset`.<br /><br /> **Przykład**<br /><br /> `-- The following example returns 22.`<br /><br /> `Hour(cast('22:35:5' as DateTime))`|  
 |`Millisecond(expression)`|Zwraca część milisekund `expression` jako `Int32` od 0 do 999.<br /><br /> **Argumenty**<br /><br /> A `DateTime, Time` i `DateTimeOffset`.<br /><br /> **Wartość zwracana**<br /><br /> `Int32`.|  
 |`Minute(expression)`|Zwraca część dotyczącą minut z `expression` jako `Int32` od 0 do 59.<br /><br /> **Argumenty**<br /><br /> A `DateTime, Time` lub `DateTimeOffset`.<br /><br /> **Wartość zwracana**<br /><br /> `Int32`.<br /><br /> **Przykład**<br /><br /> `-- The following example returns 35`<br /><br /> `Minute(cast('22:35:5' as DateTime))`|  
@@ -56,5 +56,5 @@ ms.locfileid: "42925425"
   
  Równoważne funkcje są dostępne w Microsoft SQL klienta zarządzanego dostawcy. Aby uzyskać więcej informacji, zobacz [Klient SQL dla funkcji programu Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Funkcje Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Funkcje Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

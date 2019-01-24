@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: c7775de75ddbf274f3a1555c9f0daaf63bbee713
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dfa3b60e0c76e377a52243c534139d6c9025d46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573337"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Tworzenie i zgłaszanie wyjątków (Przewodnik programowania w języku C#)
 Wyjątki są używane do wskazania, że wystąpił błąd podczas uruchamiania programu. Obiekty wyjątków, które opisują błąd są tworzone a następnie *zgłoszony* z [throw](../../../csharp/language-reference/keywords/throw.md) — słowo kluczowe. Środowisko uruchomieniowe wyszukuje następnie najbardziej zgodne obsługi wyjątków.  
@@ -66,9 +66,9 @@ Wyjątki są używane do wskazania, że wystąpił błąd podczas uruchamiania p
 
 Aby uzyskać więcej informacji, zobacz [wyjątki](~/_csharplang/spec/exceptions.md) i [instrukcji "throw"](~/_csharplang/spec/statements.md#the-throw-statement) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)  
-- [Hierarchia wyjątków](../../../standard/exceptions/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)
+- [Hierarchia wyjątków](../../../standard/exceptions/index.md)
 - [Obsługa wyjątków](../../../csharp/programming-guide/exceptions/exception-handling.md)

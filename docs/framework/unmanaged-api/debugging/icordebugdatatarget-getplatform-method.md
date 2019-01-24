@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ae761b2d48552aded8191ddbea26552d8da277
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bc91a90320967e625aab63fa17ae88ab284ea38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689133"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform — Metoda
-Zawiera informacje o platformie, w tym architektury procesora i systemu operacyjnego, na którym jest uruchomiony proces docelowy.  
+Zawiera informacje dotyczące platformy, w tym architektury procesora i systemu operacyjnego, na którym jest uruchomiony proces docelowy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,21 +35,21 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
 #### <a name="parameters"></a>Parametry  
  `pTargetPlatform`  
- [out] Wskaźnik do [cordebugplatformenum —](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) wyliczenie opisujące platformy docelowej.  
+ [out] Wskaźnik do [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) wyliczenie opisujące platformę docelową.  
   
 ## <a name="remarks"></a>Uwagi  
- `CorDebugPlatformEnum` Zwracana wartość wyliczenia jest używany przez [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfejsu, aby określić szczegóły procesu docelowego, na przykład jego rozmiar wskaźnika, układ przestrzeni adresów, zestaw rejestru, format instrukcji, układ kontekstu i Konwencje wywoływania.  
+ `CorDebugPlatformEnum` Zwracana wartość wyliczenia jest używany przez [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfejsu, aby określić szczegóły procesu docelowego, takie jak rozmiar wskaźnika, układ przestrzeni adresowej, zarejestrować zestaw, format instrukcji, układ kontekstu i Konwencje wywoływania.  
   
- `pTargetPlatform` Wartość może odwoływać się do platformy, która jest emulowane dla elementu docelowego zamiast określania rzeczywistego sprzętu w użyciu. Na przykład, należy użyć procesu, który jest uruchomiony w systemie Windows w środowisku Windows (WOW) w 64-bitowej wersji systemu operacyjnego Windows `CORDB_PLATFORM_WINDOWS_X86` wartość [cordebugplatformenum —](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) wyliczenia.  
+ `pTargetPlatform` Wartość może odwoływać się do platformy, która jest emulowane dla elementu docelowego zamiast określania sprzęt rzeczywisty w użyciu. Na przykład, należy użyć procesu, który jest uruchomiony w Windows w środowisku Windows (WOW) w 64-bitowej wersji systemu operacyjnego Windows `CORDB_PLATFORM_WINDOWS_X86` wartość [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) wyliczenia.  
   
- Ta metoda musi zakończyć się pomyślnie. W przypadku niepowodzenia platformy docelowej jest korzystanie z niej. Metoda może się nie powieść z następujących powodów:  
+ Ta metoda musi zakończyć się pomyślnie. Jeśli nie powiedzie się, platformą docelową jest bezużyteczny. Metoda może się nie powieść z następujących powodów:  
   
--   Platforma, która jest emulowane dla obiekt docelowy jest korzystanie z niej.  
+-   Platforma, która jest emulowane dla obiektu docelowego jest bezużyteczny.  
   
 -   Nadaje się sprzętem na platformie docelowej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -57,7 +57,7 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

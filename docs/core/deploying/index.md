@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e744d9a1f74dad18f6eb6ad4ce019c98fb18d6e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743789"
 ---
 # <a name="net-core-application-deployment"></a>Wdrażanie aplikacji .NET core
 
@@ -98,7 +98,7 @@ Instrukcje krok po kroku wdrażania aplikacji .NET Core za pomocą narzędzi int
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Wdrażanie aplikacji programu .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md)
-* [Wdrażanie aplikacji programu .NET Core z programem Visual Studio](deploy-with-vs.md)
-* [Pakiety, metapakiety i struktury](../packages.md)
-* [Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)
+- [Wdrażanie aplikacji programu .NET Core za pomocą narzędzi interfejsu wiersza polecenia](deploy-with-cli.md)
+- [Wdrażanie aplikacji programu .NET Core z programem Visual Studio](deploy-with-vs.md)
+- [Pakiety, metapakiety i struktury](../packages.md)
+- [Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)

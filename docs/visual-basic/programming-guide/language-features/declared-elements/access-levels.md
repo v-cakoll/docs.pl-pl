@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 433d5dfd4bb3af9b6fbd0dfc951bb0448eb7efcd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704657"
 ---
 # <a name="access-levels-in-visual-basic"></a>Poziomy dostępu w Visual Basic
 *Poziom dostępu* zadeklarowanych elementów jest w zakresie możliwości dostępu do niego, oznacza to, jaki kod ma uprawnienia do jego odczytu lub zapisanie w nim. Jest to ustalane nie tylko, jak zadeklarować elementu, ale z poziomem dostępu do kontenera elementu. Kod, który nie może uzyskać dostępu zawierającego element nie może uzyskać dostępu do dowolnego z jego zawartych elementów, nawet te zadeklarowane jako `Public`. Na przykład `Public` zmienną `Private` struktury jest możliwy z wewnątrz klasy, która zawiera strukturę, ale nie z spoza tej klasy.  
@@ -113,14 +113,14 @@ Aby uzyskać więcej informacji, zobacz [ustawienie wersji języka Visual Basic]
 |`Private`|Kontekst deklaracji:<br /><br /> Kod w typie, który deklaruje, że element prywatne, łącznie z kodem w ramach zamkniętego typów mogą uzyskiwać dostęp do elementu|Interfejsy<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Elementy członkowskie struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne Członkowskie<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Moduł<br /><br /> Class<br /><br /> Struktura|
 |`Private Protected`|Kod w klasie, która deklaruje element prywatny chroniony lub kod w klasie pochodnej, w tym samym zestawie co klasa bas.|Interfejsy<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne Członkowskie<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Class|
   
-## <a name="see-also"></a>Zobacz też  
- [Dim, instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
- [Nazwy zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Instrukcje: kontrolowanie dostępności zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)  
- [Zmienne](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>Zobacz także
+- [Dim, instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+- [Nazwy zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Instrukcje: Kontrolowanie dostępności zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)
+- [Zmienne](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

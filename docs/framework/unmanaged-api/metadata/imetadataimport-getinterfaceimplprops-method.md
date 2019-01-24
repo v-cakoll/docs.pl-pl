@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fca044b5dce260a1eed55b01531e7ae21a16ebd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91cb42a5bf1115de82b5fe28693cb77b66915c9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600561"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps — Metoda
-Pobiera wskaźnik do tokenów metadanych dla <xref:System.Type> implementującej określonej metody i dla interfejsu, który deklaruje tej metody.  
+Pobiera wskaźnik do tokenów metadanych dla <xref:System.Type> implementującej określonej metody, a dla interfejsu, który deklaruje tej metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,23 +39,23 @@ HRESULT GetInterfaceImplProps (
   
 #### <a name="parameters"></a>Parametry  
  `iiImpl`  
- [in] Token metadanych reprezentujący metodę, aby zwrócić klas i interfejsu tokeny zabezpieczające.  
+ [in] Token metadanych reprezentujący metodę do zwrócenia klas i interfejsu tokeny zabezpieczające.  
   
  `pClass`  
- [out] Token metadanych reprezentujący klasę, która implementuje metody.  
+ [out] Klasa, która implementuje metody reprezentująca token metadanych.  
   
  `ptkIface`  
- [out] Token metadanych reprezentujący interfejs, który definiuje metody implementowane.  
+ [out] Interfejs, który definiuje zaimplementowano metody reprezentująca token metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,25 +1,25 @@
 ---
-title: 'Samouczek: Odroczonego wykonania (Visual Basic)'
+title: 'Samouczek: Wykonanie odroczone (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c80d53a8-1a30-4115-b232-52f0d089fec5
-ms.openlocfilehash: cf6540506c1a50bb10884e4aed5edc1d9c851ac6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2459d9089af9886b8b2b8952a5e80832ee2d468f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609437"
 ---
-# <a name="tutorial-deferred-execution-visual-basic"></a>Samouczek: Odroczonego wykonania (Visual Basic)
-W tym samouczku przedstawiono przetwarzania modelu, gdy łańcuch zapytania. Łańcucha zapytań razem jest kluczowym elementem zapisywania funkcjonalności przekształcenia. Należy zrozumieć, dokładnie tak jak łańcuchowa pracy zapytania.  
+# <a name="tutorial-deferred-execution-visual-basic"></a>Samouczek: Wykonanie odroczone (Visual Basic)
+W tym samouczku przedstawiono przetwarzania modelu podczas tworzenia łańcucha zapytania ze sobą. Łączenie łańcuchowe zapytań jest kluczowym elementem pisania przekształceń funkcjonalnych. Należy zrozumieć, dokładnie tak jak łańcuchowe zapytań pracy.  
   
- Zapytania, które przetwarzają dokumenty pakietu Office Open XML często użyć tej metody.  
+ Zapytania, które przetwarzają dokumentów Office Open XML Użyj tej techniki w szerokim zakresie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Wykonanie odroczone i obliczanie leniwe w składniku LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)|Opis pojęć dotyczących odroczonego wykonania i obliczanie leniwe.|  
-|[Wykonanie odroczone — przykład (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)|Przykład odroczonego wykonania.|  
+|[Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)|Opis pojęć dotyczących wykonanie odroczone i obliczanie z opóźnieniem.|  
+|[Przykład wykonania odroczonego (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)|Przykład wykonania odroczonego.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Czysty funkcjonalności transformacji XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Czyste Przekształcanie funkcjonalne kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

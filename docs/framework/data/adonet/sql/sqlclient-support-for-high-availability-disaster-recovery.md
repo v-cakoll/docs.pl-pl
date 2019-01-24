@@ -2,12 +2,12 @@
 title: Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609125"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
 W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) o wysokiej dostępności, odzyskiwania po awarii — zawsze włączonych grup dostępności.  Funkcja zawsze włączonych grup dostępności zostało dodane do programu SQL Server 2012. Aby uzyskać więcej informacji na temat zawsze włączonych grup dostępności zobacz dokumentację SQL Server — książki Online.  
@@ -34,7 +34,7 @@ W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../..
 > [!NOTE]
 >  Ustawienie `MultiSubnetFailover` do `true` nie jest wymagane w przypadku [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] lub nowszy.
   
-## <a name="connecting-with-multisubnetfailover"></a>Łączenie z MultiSubnetFailover  
+## <a name="connecting-with-multisubnetfailover"></a>Connecting With MultiSubnetFailover  
  Zawsze określać `MultiSubnetFailover=True` podczas nawiązywania połączenia z odbiornikiem grupy dostępności programu SQL Server 2012 lub wystąpienia klastra trybu Failover programu SQL Server 2012. `MultiSubnetFailover` Umożliwia szybsze trybu failover dla wszystkich grup dostępności i wystąpienia klastra trybu Failover programu SQL Server 2012 i będzie znacznie skrócić czas pracy awaryjnej dla topologii AlwaysOn pojedynczych i wielu podsieci. Podczas pracy awaryjnej wiele podsieci klient podejmie próbę połączenia równolegle. Podczas pracy awaryjnej podsieci agresywnie ponowi próbę połączenia TCP.  
   
  `MultiSubnetFailover` Właściwości połączenia oznacza, że aplikacja jest wdrażana w grupie dostępności lub wystąpienia klastra trybu Failover programu SQL Server 2012 i SqlClient podejmie próbę połączenia z bazą danych na podstawowe wystąpienie programu SQL Server, podejmując próbę Połącz z adresami IP. Gdy `MultiSubnetFailover=True` jest określona dla połączeń klienta ponawia próby połączeń TCP szybciej niż interwały retransmisji TCP domyślny system operacyjny. Umożliwia to szybsze ponownego łączenia po włączeniu trybu failover grupy dostępności AlwaysOn lub wystąpienia klastra trybu Failover funkcji AlwaysOn oraz dotyczy zarówno subnet jednym i wielu grup dostępności i wystąpienia klastra trybu Failover.  
@@ -51,7 +51,7 @@ W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../..
   
 -   Łączenie z serwerem SQL skojarzone z więcej niż 64 adresami IP wystąpienia spowoduje, że błąd połączenia.  
   
--   Zachowanie aplikacji, która używa `MultiSubnetFailover` właściwości połączenia nie ma wpływu na podstawie typu uwierzytelniania: uwierzytelnianie programu SQL Server, uwierzytelnianie Kerberos lub uwierzytelniania Windows.  
+-   Zachowanie aplikacji, która używa `MultiSubnetFailover` właściwości połączenia nie ma wpływu na podstawie typu uwierzytelniania: Uwierzytelnianie programu SQL Server, uwierzytelnianie Kerberos lub uwierzytelniania Windows.  
   
 -   Zwiększ wartość `Connect Timeout` do uwzględnienia czasu pracy awaryjnej i zmniejszyć próby połączenia w aplikacji.  
   
@@ -96,6 +96,6 @@ W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../..
   
  Routing tylko do odczytu może trwać dłużej niż łączenie do podstawowej, ponieważ odczytu tylko routing najpierw łączy się podstawowym, a następnie szuka najlepsze dostępne pomocniczego do odczytu. W związku z tym należy zwiększyć swoje limit czasu logowania.  
   
-## <a name="see-also"></a>Zobacz też  
- [Funkcje Serwera SQL i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Funkcje Serwera SQL i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

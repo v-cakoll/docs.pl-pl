@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 3674b5e8f54735010da901c76b77bd617218891e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0d1db0e3d2a423c4ba21311b6b9deb0d2565c103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523158"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Wyczyść&gt; elementu &lt;odbiorników&gt; dla &lt;źródła&gt;
 Czyści `Listeners` kolekcję dla źródła śledzenia.  
   
  \<Konfiguracja >  
-\<System.Diagnostics >  
+\<system.diagnostics>  
 \<źródła >  
-\<źródło >  
-\<odbiorniki >  
-\<Wyczyść >  
+\<source>  
+\<listeners>  
+\<clear>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -86,8 +86,8 @@ Czyści `Listeners` kolekcję dla źródła śledzenia.
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Obiekty nasłuchujące śledzenie](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Obiekty nasłuchujące śledzenie](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

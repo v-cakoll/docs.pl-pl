@@ -2,12 +2,12 @@
 title: Nieobsługiwane scenariusze
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 2e44cbf159d5df724a5213648b28d952f49b8e8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631272"
 ---
 # <a name="unsupported-scenarios"></a>Nieobsługiwane scenariusze
 Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niektóre scenariusze zabezpieczeń. Na przykład [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition nie zawiera implementacji protokołów uwierzytelniania SSPI lub protokołu Kerberos i w związku z tym WCF nie obsługuje uruchamiania usługi za pomocą uwierzytelniania Windows na tej platformie. Inne mechanizmy uwierzytelniania, takich jak nazwy użytkownika/hasła i zintegrowane uwierzytelnianie HTTP/HTTPS są obsługiwane podczas uruchamiania usługi WCF w obszarze Windows XP Home Edition.  
@@ -28,7 +28,7 @@ Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niekt
   
 -   Zostanie utworzony token kontekstu zabezpieczeń oparte na stanie (SCT) (domyślnie jest wyłączona tworzenia).  
   
- Oparte na stanie SCT można tworzyć tylko za pomocą niestandardowego powiązania. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie tokenu kontekstu zabezpieczeń dla sesji bezpiecznego](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) W kodzie, token jest włączona, tworząc elementu powiązania zabezpieczeń (albo <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> lub <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) przy użyciu <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> lub <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> metody i ustawienie `requireCancellation` parametr `false`. Parametr odnosi się do buforowania SCT. Ustawienie wartości `false` włącza funkcję SCT na podstawie ich stanu.  
+ Oparte na stanie SCT można tworzyć tylko za pomocą niestandardowego powiązania. Aby uzyskać więcej informacji, zobacz [jak: Utwórz kontekst zabezpieczeń tokenu dla bezpiecznej sesji](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) W kodzie, token jest włączona, tworząc elementu powiązania zabezpieczeń (albo <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> lub <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) przy użyciu <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> lub <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> metody i ustawienie `requireCancellation` parametr `false`. Parametr odnosi się do buforowania SCT. Ustawienie wartości `false` włącza funkcję SCT na podstawie ich stanu.  
   
  Alternatywnie w konfiguracji, token jest włączona, tworząc <`customBinding`>, następnie dodając <`security`> elementu, a ustawienie `authenticationMode` atrybutu do mechanizmu SecureConversation i `requireSecurityContextCancellation` atrybutu `true`.  
   
@@ -58,7 +58,7 @@ Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niekt
 ### <a name="fips-compliant-algorithms-may-fail-if-registry-is-edited"></a>Zgodne ze standardem FIPS, algorytmów może zakończyć się niepowodzeniem w przypadku modyfikacji rejestru  
  Można włączyć i wyłączyć przetwarzania standardów FIPS (Federal Information) - algorytmów zgodnych z za pomocą przystawki usługi lokalne zabezpieczenia ustawienia programu Microsoft Management Console (MMC) - w. Można także przejść ustawienie w rejestrze. Należy jednak pamiętać, że usługi WCF nie obsługuje za pomocą rejestru, aby zresetować ustawienia. Jeśli wartość jest równa nic innego niż 1 lub 0, pomiędzy środowiska CLR i systemu operacyjnego mogą występować niespójne wyniki.  
   
-### <a name="fips-compliant-aes-encryption-limitation"></a>Ograniczenie szyfrowania AES zgodne ze standardem FIPS  
+### <a name="fips-compliant-aes-encryption-limitation"></a>FIPS-Compliant AES Encryption Limitation  
  Szyfrowanie AES zgodne ze standardem FIPS nie działa w dupleksowego wywołania zwrotnego w obszarze identyfikator poziomu personifikacji.  
   
 ### <a name="cngksp-certificates"></a>Certyfikatów CNG/dostawcy magazynu KLUCZY  
@@ -108,10 +108,10 @@ Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niekt
   
  Obejście polega na modyfikowanie wiązanie bezpośrednio na komputerze klienckim po wykonaniu tej importu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Ujawnianie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Manipulowanie](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Ataki oparte na metodzie powtórzeń](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>Zobacz także
+- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Ujawnianie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Manipulowanie](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Ataki oparte na metodzie powtórzeń](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

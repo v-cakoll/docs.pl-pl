@@ -1,15 +1,15 @@
 ---
-title: 'Porady: debugowanie zestawów wyników zapytania (C#)'
+title: 'Instrukcje: Debugowanie zestawów wyników zapytania (C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 4760b1e5274634954bd5fe4b3880fd4415af2510
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0503c09bbdd28276ea4fdc1147e0bca5471fa6e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723186"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a>Porady: debugowanie zestawów wyników zapytania (C#)
+# <a name="how-to-debug-empty-query-results-sets-c"></a>Instrukcje: Debugowanie zestawów wyników zapytania (C#)
 Jedną z najbardziej typowych problemów podczas wykonywania zapytań dotyczących drzew XML jest, że jeśli drzewa XML ma domyślny obszar nazw, deweloper czasami zapisuje zapytanie tak, jakby plik XML nie znajdowały się w przestrzeni nazw.  
   
  Pierwszy zestaw przykładów w tym temacie przedstawiono typowy sposób XML w domyślnej przestrzeni nazw jest ładowany i jest wykonywane zapytanie nieprawidłowo.  
@@ -82,6 +82,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Podstawowe zapytania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

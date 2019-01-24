@@ -2,12 +2,12 @@
 title: Model obiektowy programowania protokołu HTTP sieci Web w programie WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e15f616aa7ef9502176c5d508f8d8882e2a5bd47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739368"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Model obiektowy programowania protokołu HTTP sieci Web w programie WCF
 Usługi WCF WEB HTTP programowania modelu pozwala deweloperom na Uwidacznianie usług Windows Communication Foundation (WCF) w sieci Web za pomocą podstawowego żądania HTTP bez protokołu SOAP. WCF WEB HTTP programowania modelu została stworzona na podstawie istniejącego modelu rozszerzalności programu WCF. Definiuje następujące klasy:  
@@ -94,15 +94,15 @@ Usługi WCF WEB HTTP programowania modelu pozwala deweloperom na Uwidacznianie u
  <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> Klasy używa <xref:System.UriTemplate> i <xref:System.UriTemplateTable> klasy wysyłanie wywołań do operacji usługi.  
   
 ## <a name="compatibility"></a>Zgodność  
- WCF WEB HTTP programowania modelu nie korzysta z opartej na protokole SOAP wiadomości i dlatego nie obsługuje protokołu WS-* protokołów. Można jednak udostępnić ten sam kontrakt przez dwa różne punkt końcowy: ją przy użyciu protokołu SOAP, a inne nie przy użyciu protokołu SOAP. Zobacz [instrukcje: ujawnianie kontraktu klientom internetowym i SOAP](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) przykład.  
+ WCF WEB HTTP programowania modelu nie korzysta z opartej na protokole SOAP wiadomości i dlatego nie obsługuje protokołu WS-* protokołów. Można jednak udostępnić ten sam kontrakt przez dwa różne punkt końcowy: ją przy użyciu protokołu SOAP, a inne nie przy użyciu protokołu SOAP. Zobacz [jak: Ujawnianie kontraktu klientom internetowym i SOAP](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) przykład.  
   
 ## <a name="security"></a>Zabezpieczenia  
  Ponieważ WCF WEB HTTP modelu programowania nie obsługuje protokołu WS-* protokołów, jedynym sposobem, aby zabezpieczyć usługi sieci Web oparta na sieci WEB HTTP modelu programowania programu WCF jest do udostępnienia usługi za pomocą protokołu SSL. Aby uzyskać więcej informacji o konfigurowaniu protokołu SSL za pomocą [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zobacz [Implementowanie protokołu SSL w usługach IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>  
- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
- [Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>
+- [Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

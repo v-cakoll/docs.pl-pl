@@ -1,15 +1,15 @@
 ---
-title: 'Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ) (C#)'
+title: 'Instrukcje: Wypełnianie kolekcji Object z wielu źródeł (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 377b4a21c78be2b53d2bcd0e88d39d06609c462b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571340"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ) (C#)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Instrukcje: Wypełnianie kolekcji Object z wielu źródeł (LINQ) (C#)
 
 W tym przykładzie przedstawiono sposób scalania danych z różnych źródeł w sekwencji nowych typów.
 
@@ -18,7 +18,7 @@ W tym przykładzie przedstawiono sposób scalania danych z różnych źródeł w
 
 ## <a name="to-create-the-data-file"></a>Aby utworzyć plik danych
 
-Skopiuj pliki names.csv i scores.csv w folderze projektu, zgodnie z opisem w [jak: Dołącz do zawartości z plikami niepodobnych (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+Skopiuj pliki names.csv i scores.csv w folderze projektu, zgodnie z opisem w [jak: Łączenie zawartości niepodobnych plików (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Przykład
 
@@ -147,8 +147,8 @@ Utwórz i skompiluj projekt, który jest przeznaczony dla jednego z następując
 - .NET framework w wersji 4.0 lub nowszy.
 - .NET core w wersji 1.0 lub nowszej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [Inicjatory obiektów i kolekcji](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Typy anonimowe](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [Inicjatory obiektów i kolekcji](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Typy anonimowe](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

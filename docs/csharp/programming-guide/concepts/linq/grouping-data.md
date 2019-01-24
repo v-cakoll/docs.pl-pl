@@ -2,12 +2,12 @@
 title: Grupowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 42e93bf291b0921d7aafa07265d1193387d46aa6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 079f346435e2f21b7c46b528d68f917f5532db66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583223"
 ---
 # <a name="grouping-data-c"></a>Grupowanie danych (C#)
 Grupowanie odnosi się do operacji umieszczania danych do grup, tak aby elementów w każdej grupie udostępniać wspólny atrybut.  
@@ -59,13 +59,13 @@ foreach (var group in query)
 */  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Linq>  
-- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [group, klauzula](../../../../csharp/language-reference/keywords/group-clause.md)  
-- [Porady: tworzenie grup zagnieżdżonych](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
-- [Porady: grupowanie plików według rozszerzenia (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
-- [Porady: grupowanie wyników zapytania](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
-- [Porady: wykonanie podzapytania w operacji grupowania](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
-- [Porady: dzielenie pliku na kilka plików za pomocą grup (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- <xref:System.Linq>
+- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [group, klauzula](../../../../csharp/language-reference/keywords/group-clause.md)
+- [Instrukcje: Tworzenie grup zagnieżdżonych](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)
+- [Instrukcje: Grupowanie plików według rozszerzenia (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [Instrukcje: Grupowanie wyników zapytania](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)
+- [Instrukcje: Wykonanie podzapytania w operacji grupowania](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
+- [Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

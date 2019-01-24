@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b85cdee4a65e91c51fdb014bdcc4797b99214daf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aec97ef36b73b1b789c819c4bca516d13ecf1051
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631207"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen — Metoda
-Pobiera długość określonej sekcji.  
+Pobiera długość określona sekcja.  
   
  Ta metoda jest przestarzała i nie powinna być używana.  
   
@@ -40,22 +40,22 @@ HRESULT GetSectionDataLen (
   
 #### <a name="parameters"></a>Parametry  
  `section`  
- [in] Sekcji danych, którego długość zostanie pobrany.  
+ [in] W sekcji danych, których długości mają zostać pobrane.  
   
  `dataLen`  
- [out] Zwrócona długość określonej sekcji.  
+ [out] Zwrócona długość określona sekcja.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołanie `GetSectionDataLen` tylko wtedy, gdy sekcja specjalne wymagania, które nie są obsługiwane za pomocą innych metod.  
+ Wywołaj `GetSectionDataLen` tylko wtedy, gdy masz sekcją wymagań, które nie są obsługiwane przy użyciu innych metod.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

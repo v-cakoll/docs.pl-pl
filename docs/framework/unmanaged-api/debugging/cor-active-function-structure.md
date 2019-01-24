@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ab3d3a0f460f1ecdf86147b14df205aaf49635
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5adf43bd68db449e465ffe3517c9eb9d41a5c18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502055"
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION — Struktura
-Zawiera informacje na temat funkcji, które są aktualnie aktywne w ramkach wątku. Ta struktura jest używany przez [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) metody.  
+Zawiera informacje na temat funkcji, które są aktualnie aktywne w ramkach w wątku. Ta struktura jest używany przez [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,11 +45,11 @@ typedef struct  _COR_ACTIVE_FUNCTION {
 |`pAppDomain`|Wskaźnik do właściciela domeny aplikacji `ilOffset` pola.|  
 |`pModule`|Wskaźnik do właściciela modułu `ilOffset` pola.|  
 |`pFunction`|Wskaźnik do funkcji właściciela `ilOffset` pola.|  
-|`ilOffset`|Język pośredni (MSIL) firmy Microsoft przesunięcie ramki.|  
-|`flags`|Zarezerwowane dla przyszłego rozszerzalności.|  
+|`ilOffset`|Przesunięcia języka pośredniego (MSIL) firmy Microsoft ramki.|  
+|`flags`|Zarezerwowane dla przyszłej rozszerzalności.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl  
   
@@ -57,6 +57,6 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

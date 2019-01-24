@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie gradientu ścieżki'
+title: 'Instrukcje: Tworzenie gradientu ścieżki'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,44 +9,44 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: a3a23d382e199b7ec70a8605041f7e464d1bffe0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe1bdac900e64ec37ca87c35d5378ca1aba26ae3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513038"
 ---
-# <a name="how-to-create-a-path-gradient"></a>Porady: tworzenie gradientu ścieżki
-<xref:System.Drawing.Drawing2D.PathGradientBrush> Klasa umożliwia dostosowanie sposób wypełnienia kształtu z stopniowo zmiana kolorów. Na przykład można określić jeden kolor Centrum ścieżki i innym kolorze dla granicy ścieżki. Można również określić różne kolory dla każdego z kilku punktów wzdłuż granicy ścieżki.  
+# <a name="how-to-create-a-path-gradient"></a>Instrukcje: Tworzenie gradientu ścieżki
+<xref:System.Drawing.Drawing2D.PathGradientBrush> Klasy pozwala dostosować sposób wypełnienia kształtu z stopniowo zmiana kolorów. Na przykład można określić jeden kolor środek ścieżka i innego koloru dla granicy ścieżki. Można również określić różne kolory dla każdego z kilku punktów wzdłuż granic ścieżki.  
   
 > [!NOTE]
->  W [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], ścieżki jest sekwencją linii i krzywych obsługiwanego przez <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu. Aby uzyskać więcej informacji na temat [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ścieżki, zobacz [ścieżki grafiki w GDI +](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md) i [Constructing i rysowanie ścieżek](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md).  
+>  W [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], ścieżki jest sekwencją linii i krzywych utrzymywane przez <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu. Aby uzyskać więcej informacji na temat [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ścieżki, zobacz [ścieżki grafiki w GDI +](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md) i [Constructing i rysowanie ścieżek](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md).  
   
-### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Aby wypełnić elipsy gradientu ścieżki  
+### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Aby wypełnić elipsę gradientu ścieżki  
   
--   Poniższy przykład wypełnia elipsę z pędzla gradientu ścieżki. Kolor jest ustawiona na niebieski i kolor granic ustawiono Akwamaryna. Na poniższej ilustracji przedstawiono wypełnioną elipsę.  
+-   Poniższy przykład wypełnia elipsę z pędzla gradientu ścieżki. Kolor jest ustawiona na niebieski i Akwamaryna jest ustawiony kolor granic. Poniższa ilustracja przedstawia wypełnioną elipsę.  
   
      ![Ścieżka gradientu](../../../../docs/framework/winforms/advanced/media/pathgradient1.png "pathgradient1")  
   
-     Domyślnie pędzla gradientu ścieżki nie rozciąga się poza granicami ścieżki. Jeśli używasz pędzla gradientu ścieżki do wypełnienia rysunku, która wykracza poza granice ścieżki obszaru ekranu poza ścieżka nie zostanie wypełnione.  
+     Domyślnie pędzla gradientu ścieżki nie jest rozszerzana poza granicami ścieżki. Jeśli używasz pędzla gradientu ścieżki do wypełnienia rysunku, który wykracza poza granicę ścieżkę obszaru ekranu poza ścieżka nie zostanie wypełnione.  
   
-     Na poniższej ilustracji pokazano, co się stanie w przypadku zmiany <xref:System.Drawing.Graphics.FillEllipse%2A> wywołania w następujący kod do `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.  
+     Na poniższej ilustracji pokazano, co się stanie, jeśli zmienisz <xref:System.Drawing.Graphics.FillEllipse%2A> wywołania następujący kod do `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.  
   
      ![Ścieżka gradientu](../../../../docs/framework/winforms/advanced/media/pathgradient2.png "pathgradient2")  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
   
-     W poprzednim przykładzie kodu jest przeznaczony do użytku z formularzy systemu Windows i wymaga <xref:System.Windows.Forms.PaintEventArgs> e, który jest parametrem elementu <xref:System.Windows.Forms.PaintEventHandler>.  
+     W poprzednim przykładzie kodu jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> e, który jest parametrem z <xref:System.Windows.Forms.PaintEventHandler>.  
   
-### <a name="to-specify-points-on-the-boundary"></a>Określ punkty na granicy  
+### <a name="to-specify-points-on-the-boundary"></a>Aby określić punktów na granicy  
   
--   Poniższy przykład tworzy pędzla gradientu ścieżki ze ścieżki w kształcie gwiazdy. Ustawia kod <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> właściwość, która ustawia kolor na centroidę wzdłuż gwiazdy na czerwony. A następnie ustawia kod <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> właściwość, aby określić różne kolory (przechowywane w `colors` tablicy) w poszczególnych punktach `points` tablicy. Instrukcja kodu końcowego wypełnia ścieżka kształcie gwiazdy z pędzla gradientu ścieżki.  
+-   Poniższy przykład tworzy pędzla gradientów ścieżki ze ścieżki kształcie gwiazdy. Zestawy kodów <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> właściwość, która ustawia kolor na środek strefy widocznego gwiazdkę na czerwony. A następnie ustawia kod <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> właściwość, aby określić różne kolory (przechowywane w `colors` tablicy) na poszczególnych etapach `points` tablicy. Instrukcja kodu końcowego wypełnia ścieżki kształcie gwiazdy z pędzla gradientu ścieżki.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   Poniższy przykład rysuje gradientu ścieżki bez <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu w kodzie. Szczególne <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> konstruktora w przykładzie odbiera tablicę punkty, ale nie jest wymagane <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu. Ponadto należy pamiętać, że <xref:System.Drawing.Drawing2D.PathGradientBrush> jest używany do wypełniania prostokąta, nie ścieżką. Prostokąt jest większy niż ścieżki zamkniętej używane do definiowania pędzla, więc niektóre prostokąta nie jest rysowane przez pędzla. Na poniższej ilustracji przedstawiono prostokąt (linia przerywana) i część prostokąt malowane przez pędzla gradientu ścieżki.  
+-   Poniższy przykład pobiera gradientu ścieżki bez <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu w kodzie. Określonych <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> konstruktora w przykładzie odbiera tablicę punkty, ale nie wymaga <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu. Ponadto należy pamiętać, że <xref:System.Drawing.Drawing2D.PathGradientBrush> jest używany do wypełniania prostokąt, nie ścieżkę. Prostokąt jest większy niż ścieżki zamkniętej używane do definiowania pędzla, więc niektóre prostokąta nie jest malowane przez pędzla. Na poniższej ilustracji przedstawiono prostokąt (linia przerywana) i części prostokąt malowane przez pędzla gradientu ścieżki.  
   
      ![Gradient](../../../../docs/framework/winforms/advanced/media/gradient4.png "gradient4")  
   
@@ -55,39 +55,39 @@ ms.locfileid: "33529168"
   
 ### <a name="to-customize-a-path-gradient"></a>Aby dostosować gradientu ścieżki  
   
--   Pierwszym sposobem dostosowania pędzla gradientu ścieżki jest skonfigurowanie jej <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> właściwości. Skaluje fokus Określ wewnętrzny znajdująca się wewnątrz ścieżki głównego. Kolor jest wyświetlany wszędzie wewnątrz tej ścieżki wewnętrznego, a nie tylko na punktu centralnego.  
+-   Pierwszym sposobem dostosowania pędzla gradientu ścieżki jest ustalenie jego <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> właściwości. Skaluje fokus Określ wewnętrzny ścieżki, który znajduje się w ścieżce głównej. Kolor jest wyświetlany wszędzie, gdzie w tej ścieżce wewnętrzne, a nie tylko w momencie Centrum.  
   
-     Poniższy przykład tworzy pędzla gradientu ścieżki na podstawie ścieżki eliptycznej. Kod ustawia kolor granic na niebieski, ustawia kolor Akwamaryna, a następnie używa pędzla gradientu ścieżki do wypełnienia eliptycznej ścieżki.  
+     Poniższy przykład obejmuje tworzenie pędzla gradientu ścieżki na podstawie ścieżki elipsy. Kod ustawia kolor granic na niebieski, ustawia kolor Akwamaryna i następnie używa pędzla gradientu ścieżki do wypełnienia eliptycznego ścieżki.  
   
-     Następnie kod ustawia skale fokus pędzla gradientu ścieżki. Skala fokus x ma ustawioną wartość 0,3 i skali fokus y ma ustawioną wartość 0,8. Kod wywołuje <xref:System.Drawing.Graphics.TranslateTransform%2A> metody <xref:System.Drawing.Graphics> obiekt, aby kolejne wywołanie <xref:System.Drawing.Graphics.FillPath%2A> wypełnia elipsy, która znajduje się na prawo od pierwszego elipsy.  
+     Następnie kod ustawia skale fokus pędzla gradientu ścieżki. Skala fokus x jest równa 0,3 i skalowania fokus y jest równa 0,8. Kod wywołuje <xref:System.Drawing.Graphics.TranslateTransform%2A> metody <xref:System.Drawing.Graphics> obiektu, aby kolejne wywołanie <xref:System.Drawing.Graphics.FillPath%2A> wypełnia elipsy, który znajduje się po prawej stronie pierwszej elipsy.  
   
-     Aby zobaczyć efekt skali fokus, załóżmy małych elipsy, który współużytkuje środka z głównym elipsy. Mały (wewnętrzny) elipsy jest głównym elipsy skalowania (o jego center) w poziomie przez współczynnik 0,3 i w pionie przez współczynnik 0,8. Podczas przenoszenia z granic zewnętrzne elipsy do granicy wewnętrzny elipsy zmienia kolor stopniowo z niebieski do Akwamaryna. Jak przenieść z granic wewnętrzny elipsy do udostępnionego Centrum Akwamaryna pozostaje kolorów.  
+     Aby zobaczyć efekt skale fokus, Wyobraź sobie małych elipsy, która udostępni środek głównego elipsy. Małe wielokropka (wewnętrzny) jest głównym elipsy skalowania (o jej środka) poziomo ośmiokrotnego 0,3 i w pionie przez współczynnik 0,8. Po przeniesieniu od granicę zewnętrzne elipsy do granicy wewnętrzny elipsy zmienia kolor stopniowo od niebieskiego na akwamarynowy. Jak przenieść z granic wewnętrzny elipsy do udostępnionego Centrum Akwamaryna pozostaje kolorów.  
   
-     Na poniższej ilustracji przedstawiono dane wyjściowe poniższy kod. Elipsy po lewej stronie jest Akwamaryna tylko na punktu centralnego. Wielokropka po prawej stronie jest Akwamaryna wszędzie wewnątrz ścieżki wewnętrzny.  
+     Poniższa ilustracja przedstawia dane wyjściowe następujący kod. Elipsa po lewej stronie jest Akwamaryna tylko na punktu centralnego. Wielokropka po prawej stronie jest Akwamaryna wszędzie, gdzie wewnątrz ścieżki wewnętrznego.  
   
  ![Gradient](../../../../docs/framework/winforms/advanced/media/focusscales1nogamma.png "focusscales1NoGamma")  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
   
-### <a name="to-customize-with-interpolation"></a>Aby dostosować z interpolacji  
+### <a name="to-customize-with-interpolation"></a>Aby dostosować przy użyciu interpolacji  
   
--   Innym sposobem dostosowania pędzla gradientu ścieżki jest określenie tablicę interpolacji kolorów i pozycji interpolacji tablicy.  
+-   Innym sposobem dostosowania pędzla gradientu ścieżki jest aby określić tablicę interpolacji kolorów i tablicę interpolacji pozycji.  
   
-     Poniższy przykład tworzy pędzla gradientu ścieżki oparte na trójkąt. Ustawia kod <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> właściwość pędzla gradientu ścieżki, aby określić tablicę interpolacji kolorów (zielony ciemny, Akwamaryna, niebieski) i tablicę pozycji interpolacji (0, 0,25, 1). Jak przenieść z granic trójkąta punktu centralnego zmienia kolor stopniowo od ciemnym zielony Akwamaryna, a następnie z Akwamaryna na niebieski. Zmiana od ciemnym zielony Akwamaryna odbywa się w 25 procent odległość od ciemnym zielonego na niebieski.  
+     Poniższy przykład obejmuje tworzenie pędzla gradientu ścieżki oparte na trójkąt. Zestawy kodów <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> właściwość pędzla gradientu ścieżki, aby określić tablicę kolorów interpolacji (Ciemnozielony, Akwamaryna, niebieski) i Tablica pozycji interpolacji (0, 0,25, 1). Jak przenieść z granic trójkąta punktu centralnego zmienia kolor stopniowo z Ciemnozielony na akwamarynowy Akwamaryna na niebieski, a następnie. Zmiana Ciemnozielony Akwamaryna odbywa się w odległości od Ciemnozielony na niebieski 25 procent.  
   
-     Na poniższej ilustracji przedstawiono trójkąt wypełnione pędzla gradientu ścieżki niestandardowej.  
+     Poniższa ilustracja przedstawia trójkąt wypełnione pędzla gradientu ścieżki niestandardowej.  
   
      ![Ścieżka gradientu](../../../../docs/framework/winforms/advanced/media/pathgradient4.png "pathgradient4")  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
   
-### <a name="to-set-the-center-point"></a>Aby ustawić punktu centralnego.  
+### <a name="to-set-the-center-point"></a>Można ustawić punktu centralnego  
   
--   Domyślnie punktu centralnego pędzla gradientu ścieżki jest centroidę wzdłuż ścieżki używany do budowy pędzla. Możesz zmienić lokalizację punktu centralnego przez ustawienie <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> właściwość <xref:System.Drawing.Drawing2D.PathGradientBrush> klasy.  
+-   Domyślnie punktu centralnego pędzla gradientu ścieżki wynosi centroida — oś ścieżki używany do budowy pędzla. Można zmienić położenie punktu środkowego ustawiając <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> właściwość <xref:System.Drawing.Drawing2D.PathGradientBrush> klasy.  
   
-     Poniższy przykład tworzy pędzla gradientu ścieżki oparte na elipsy. Centrum elipsy wynosi (70, 35), ale ustawiono punktu centralnego pędzla gradientu ścieżki (120, 40).  
+     Poniższy przykład obejmuje tworzenie pędzla gradientu ścieżki oparte na elipsę. Środek elipsy wynosi (70, 35), ale punktu centralnego pędzla gradientu ścieżki jest ustawiona na (120, 40).  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
@@ -96,19 +96,19 @@ ms.locfileid: "33529168"
   
      ![Ścieżka gradientu](../../../../docs/framework/winforms/advanced/media/pathgradient5.png "pathgradient5")  
   
--   Można ustawić punktu centralnego pędzla gradientu ścieżki do lokalizacji poza ścieżką, która została użyta do skonstruowania pędzla. Poniższy przykład zastępuje wywołanie ustawiania <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> właściwości w powyższym kodzie.  
+-   Można ustawić punktu centralnego pędzla gradientu ścieżki do lokalizacji poza ścieżki, które zostało użyte do konstruowania pędzla. Poniższy przykład zastępuje wywołanie, aby ustawić <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> właściwość w poprzednim kodzie.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     Na poniższej ilustracji przedstawiono dane wyjściowe z tą zmianą.  
+     Poniższa ilustracja przedstawia dane wyjściowe z tej zmiany.  
   
      ![Ścieżka gradientu](../../../../docs/framework/winforms/advanced/media/pathgradient6.png "pathgradient6")  
   
-     Na powyższej ilustracji punkty na prawym końcu elipsy nie są czysty blue, (chociaż są one bardzo Zamknij). Kolory gradientu są pozycjonowane tak, jakby wypełnienia osiągnięty punkt (145, 35), gdy jest kolor niebieski czysty (0, 0, 255). Ale nigdy nie osiągnie wypełnienia (145, 35), ponieważ ścieżka pędzla gradientu rysują tylko wewnątrz ścieżki.  
+     Na powyższej ilustracji punkty po prawej stronie elipsy nie są czyste niebieski, (mimo że są one bardzo ścisłej). Kolory gradientu są umieszczone tak, jakby wypełnienie osiągnięty punkt (145, 35), gdzie kolor będzie czysty niebieskiego (0, 0, 255). Ale wypełnienie nigdy nie osiągnie (145, 35), ponieważ ścieżka pędzla gradientów do malowania tylko wewnątrz jego ścieżki.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Powyższych przykładach są przeznaczone do użytku z formularzy systemu Windows, a potrzebują <xref:System.Windows.Forms.PaintEventArgs> `e`, który jest parametrem <xref:System.Windows.Forms.Control.Paint> obsługi zdarzeń.  
+ Powyższych przykładach są skonstruowane do użycia za pomocą interfejsu Windows Forms i wymagają one <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
-## <a name="see-also"></a>Zobacz też  
- [Używanie pędzla gradientów do wypełniania kształtów](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+## <a name="see-also"></a>Zobacz także
+- [Używanie pędzla gradientów do wypełniania kształtów](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)

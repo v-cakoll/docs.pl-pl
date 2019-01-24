@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: ad49e5443016dc4fed57be4a991df9f6d6095b55
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d1b573dbafbead20330a4fd0f62e8f21f27dce81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610932"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Rozszerzanie i zwężanie konwersji (Visual Basic)
 Ważną kwestią za pomocą konwersji typu jest, czy wynik konwersji znajduje się w zakresie docelowego typu danych.  
@@ -52,7 +52,7 @@ Ważną kwestią za pomocą konwersji typu jest, czy wynik konwersji znajduje si
 |Dowolny typ wyliczany ([wyliczenia](../../../../visual-basic/language-reference/statements/enum-statement.md))|Jego typ podstawowy dla typu całkowitego i dowolny typ, do której rozszerzenie podstawowego typu.|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
 |`Char` Tablica|`Char` Tablica, `String`|  
-|Dowolnego typu|[obiekt](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
+|Dowolnego typu|[Obiekt](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |Dowolny typ pochodny|Podstawowa dowolnego typu, z którego pochodzi <sup>3</sup>.|  
 |Dowolnego typu|Interfejs, który implementuje.|  
 |[Nothing](../../../../visual-basic/language-reference/nothing.md)|Typ danych lub typ obiektu.|  
@@ -107,12 +107,12 @@ Dim square As cSquare = New cSquare
 shape = square  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Porady: konwertowanie obiektu na inny typ w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [Konwersje tablic](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)  
- [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [Instrukcje: Konwertowanie obiektu na inny typ w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Konwersje tablic](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)
+- [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

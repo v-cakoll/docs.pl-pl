@@ -2,12 +2,12 @@
 title: '&lt;net.tcp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 2a75a33eac61d85a0dab4732cb3b0de7f4703fa7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7df24d816b4eed8ceed542e14261413fbe7651a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728729"
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 Określa ustawienia konfiguracji sieci. TCP usługi udostępniania portów, która umożliwia wielu procesom współużytkowanie tego samego portu TCP.  
@@ -73,7 +73,7 @@ Określa ustawienia konfiguracji sieci. TCP usługi udostępniania portów, któ
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji na temat współużytkowania portów, zobacz [współużytkowania portów Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md). Aby dowiedzieć się, jak skonfigurować port udostępnianej usługi, zobacz [konfigurowania usługi udostępniania portów Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Współużytkowanie portów w składniku Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- [Konfigurowanie usługi współużytkowania portów Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
+- [Współużytkowanie portów w składniku Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
+- [Konfigurowanie usługi współużytkowania portów Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

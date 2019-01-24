@@ -3,12 +3,12 @@ title: Omówienie modułu uwierzytelniania WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: bff3875b5f2f3ac187796d89fcd6da31ba911362
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cebdb0e69ae151afd9a1cc422cf48a201176313a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703669"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Omówienie modułu uwierzytelniania WSFederation
 Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjnego w aplikacjach ASP.NET, za pośrednictwem modułu uwierzytelniania WS-Federated (WS-Rozproszona). Ten temat pomoże zrozumieć, jak federacyjnego działania uwierzytelniania i jak z niej korzystać.  
@@ -35,7 +35,7 @@ Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjn
   
  Możesz skonfigurować Rozproszona WS, aby określić usługi STS, do których powinno zostać przekierowane nieuwierzytelnionych żądań. Program WIF umożliwia uwierzytelnianie użytkowników na dwa sposoby:  
   
-1.  Przekierowanie pasywnym: gdy nieuwierzytelniony użytkownik próbuje uzyskać dostęp do chronionych zasobów i chcesz po prostu przekierowywać je do usługi STS, bez konieczności strony logowania, a następnie to właściwe podejście. Usługa STS weryfikuje tożsamość użytkownika i wystawia token zabezpieczający, który zawiera odpowiednie oświadczenia dla tego użytkownika. Ta opcja wymaga usługi WS-Rozproszona mają zostać dodane w potoku moduły HTTP. Narzędzie tożsamości i dostępu dla programu Visual Studio 2012 umożliwia modyfikowanie pliku konfiguracji aplikacji do używania protokołu WS-Rozproszona i utworzyć Federację z usługą STS. Aby uzyskać więcej informacji, zobacz [narzędzie tożsamości i dostępu dla programu Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1.  Przekierowanie pasywnym: Gdy nieuwierzytelniony użytkownik próbuje uzyskać dostęp do chronionego zasobu, i chcesz po prostu przekierowywać je do usługi STS, bez konieczności strony logowania, to właściwe podejście. Usługa STS weryfikuje tożsamość użytkownika i wystawia token zabezpieczający, który zawiera odpowiednie oświadczenia dla tego użytkownika. Ta opcja wymaga usługi WS-Rozproszona mają zostać dodane w potoku moduły HTTP. Narzędzie tożsamości i dostępu dla programu Visual Studio 2012 umożliwia modyfikowanie pliku konfiguracji aplikacji do używania protokołu WS-Rozproszona i utworzyć Federację z usługą STS. Aby uzyskać więcej informacji, zobacz [narzędzie tożsamości i dostępu dla programu Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
 2.  Możesz wywołać <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> metody lub <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> metody z kodu powiązanego do strony logowania w aplikacji jednostki Uzależnionej.  
   
@@ -139,7 +139,7 @@ Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjn
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- [\<federationConfiguration >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)

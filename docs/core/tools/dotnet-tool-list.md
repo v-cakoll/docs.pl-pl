@@ -2,12 +2,12 @@
 title: Lista narzędzi DotNet — polecenie
 description: Polecenie listy narzędzi dotnet Wyświetla określonego narzędzia globalnej podstawowe w .NET z poziomu Twojej maszyny.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0c17534beb80ed87a8f260342b0f82882a9e17b6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: d3ff7fc90faf6ede3f7de0d5af5112c77ca140db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712932"
 ---
 # <a name="dotnet-tool-list"></a>Lista narzędzi DotNet
 
@@ -59,4 +59,4 @@ Listy globalne narzędzi z określonego folderu w systemie Linux/macOS:
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Narzędzia globalnej platformy .NET core](global-tools.md)
+- [Narzędzia globalnej platformy .NET core](global-tools.md)

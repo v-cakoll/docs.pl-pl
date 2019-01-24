@@ -1,43 +1,43 @@
 ---
-title: 'Porady: połączenie z bazą danych'
+title: 'Instrukcje: Łączenie z bazą danych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: 924fe4fadd5dae9907fca61a556506db1e583669
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b30e6226b7663761b520258a37df0ebdda81fa6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739105"
 ---
-# <a name="how-to-connect-to-a-database"></a>Porady: połączenie z bazą danych
-<xref:System.Data.Linq.DataContext> Jest głównym połączenie za pomocą którego można nawiązać połączenia z bazą danych, pobrać obiekty i przesyłania zmian z powrotem na. Możesz użyć <xref:System.Data.Linq.DataContext> podobnie jak w przypadku [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection>. W rzeczywistości <xref:System.Data.Linq.DataContext> jest inicjowany z połączenia lub parametry połączenia, które należy podać. Aby uzyskać więcej informacji, zobacz [metodę DataContext (Projektanta obiektów relacyjnych)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  
+# <a name="how-to-connect-to-a-database"></a>Instrukcje: Łączenie z bazą danych
+<xref:System.Data.Linq.DataContext> Jest głównym kanał za pomocą którego możesz nawiązać połączenie z bazą danych, pobieranie obiektów z niej i przesyłanie zmian do niej powrót po. Możesz użyć <xref:System.Data.Linq.DataContext> tak samo jak używasz [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection>. W rzeczywistości <xref:System.Data.Linq.DataContext> jest inicjowany za pomocą połączenia lub parametry połączenia, które dostarczasz. Aby uzyskać więcej informacji, zobacz [metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  
   
- Celem <xref:System.Data.Linq.DataContext> jest sformułowanie żądań dla obiektów do zapytania SQL, które ma zostać wykonane w bazie danych, a następnie do łączenia obiektów poza wyniki. <xref:System.Data.Linq.DataContext> Umożliwia [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] zaimplementowanie tego samego wzorca operatora jako standardowych operatorów zapytań, takich jak `Where` i `Select`.  
+ Celem <xref:System.Data.Linq.DataContext> jest do tłumaczenia żądań dla obiektów na zapytania SQL, które ma zostać wykonane w bazie danych, a następnie można złożyć obiektów poza wyniki. <xref:System.Data.Linq.DataContext> Umożliwia [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] poprzez implementację tego samego wzorca operatora jako standardowych operatorów zapytań, takich jak `Where` i `Select`.  
   
 > [!IMPORTANT]
 >  Obsługa bezpiecznego połączenia jest najwyższej wagi. Aby uzyskać więcej informacji, zobacz [zabezpieczeń w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie <xref:System.Data.Linq.DataContext> służy do łączenia z przykładową bazą danych Northwind i pobierać wiersze klientów, których Miasto Londynie.  
+ W poniższym przykładzie <xref:System.Data.Linq.DataContext> służy do łączenia z przykładową bazą danych Northwind i pobierać wiersze klientów, których Miasto jest London.  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#1)]
  [!code-vb[DLinqCommunicatingWithDatabase#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#1)]  
   
- Każda tabela bazy danych jest reprezentowany jako `Table` kolekcji dostępne poprzez <xref:System.Data.Linq.DataContext.GetTable%2A> — metoda, za pomocą klasy jednostki, aby zidentyfikować go.  
+ Każda tabela bazy danych jest przedstawiana jako `Table` kolekcję dostępnych za <xref:System.Data.Linq.DataContext.GetTable%2A> metody, za pomocą klasy jednostki, aby je zidentyfikować.  
   
 ## <a name="example"></a>Przykład  
- Najlepszym rozwiązaniem jest, aby zadeklarować silnie typizowaną <xref:System.Data.Linq.DataContext> zamiast polegania na podstawowe <xref:System.Data.Linq.DataContext> klasy i <xref:System.Data.Linq.DataContext.GetTable%2A> metody. Silnie typizowaną <xref:System.Data.Linq.DataContext> deklaruje wszystkich `Table` kolekcje w postaci członkami kontekst, jak w poniższym przykładzie.  
+ Najlepszym rozwiązaniem jest do zadeklarowania silnie typizowaną <xref:System.Data.Linq.DataContext> zamiast polegania na podstawowa <xref:System.Data.Linq.DataContext> klasy i <xref:System.Data.Linq.DataContext.GetTable%2A> metody. Silnie typizowane <xref:System.Data.Linq.DataContext> deklaruje wszystkie `Table` kolekcji jako elementy członkowskie kontekstu, jak w poniższym przykładzie.  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#2)]
  [!code-vb[DLinqCommunicatingWithDatabase#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#2)]  
   
- Zapytania można następnie express dla klientów z Londynu po prostu jako:  
+ Następnie można wyrazić zapytania dla klientów z Londynu po prostu jako:  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#5)]
  [!code-vb[DLinqCommunicatingWithDatabase#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Komunikacja z bazą danych](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)
+## <a name="see-also"></a>Zobacz także
+- [Komunikacja z bazą danych](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)

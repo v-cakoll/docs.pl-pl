@@ -2,12 +2,12 @@
 title: '&lt;defaultCertificate&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: 2f6167d7b30da753d093a87753eeef3374fcc0f0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1e4c76ea2b3e4064f3bc14461be1729af299117b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676633"
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt;, element
 Określa certyfikat X.509, który ma być używany gdy usługa lub STS nie zapewnia go poprzez protokół negocjacji.  
@@ -17,8 +17,8 @@ Określa certyfikat X.509, który ma być używany gdy usługa lub STS nie zapew
 sekcja endpointBehaviors  
 \<zachowanie >  
 \<clientCredentials>  
-\<serviceCertificate >  
-\<defaultCertificate >  
+\<serviceCertificate>  
+\<defaultCertificate>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,7 +37,7 @@ sekcja endpointBehaviors
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |findValue|ciąg. Wartość do wyszukania.|  
-|X509FindType|Wyliczenie. Jedno z pól certyfikatu do wyszukiwania.|  
+|x509FindType|Wyliczenie. Jedno z pól certyfikatu do wyszukiwania.|  
 |storeLocation|Wyliczenie. Jedną z dwóch systemów przechowywania lokalizacji do przeszukania.|  
 |storeName|Wyliczenie. Jednym z systemów magazynowania do wyszukiwania.|  
   
@@ -47,7 +47,7 @@ sekcja endpointBehaviors
 |-----------|-----------------|  
 |String|Wartość zależy od pola (określony przez atrybut X509FindType) wyszukiwany. Na przykład jeśli wyszukiwanie odcisku palca, wartość musi być ciągiem liczb szesnastkowych.|  
   
-## <a name="x509findtype-attribute"></a>Atrybut x509FindType  
+## <a name="x509findtype-attribute"></a>x509FindType Attribute  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -72,7 +72,7 @@ sekcja endpointBehaviors
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Określa certyfikat używany podczas uwierzytelniania usługi dla klienta.|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Określa certyfikat używany podczas uwierzytelniania usługi dla klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
  Dla powiązań, które korzystają z zabezpieczeń komunikatów opartego na certyfikatach certyfikatu określonego przez ten element konfiguracji jest używany do szyfrowania komunikatów do usługi i powinien być używany przez usługę do podpisywania odpowiedzi do klienta. Przechowuje jeden certyfikat, który ma być używany, gdy żaden certyfikat nie jest określona przez usługę.  
@@ -98,11 +98,11 @@ sekcja endpointBehaviors
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>  
- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [\<Uwierzytelnianie >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
+- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [\<Uwierzytelnianie >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
+- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

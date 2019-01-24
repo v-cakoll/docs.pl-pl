@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: c97c30d77551f519777afa6efd31d507b3f21851
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 134bb68b9cf60cc5082afefdd9eb87d991b6e0ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692759"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Pobierają dane przy użyciu elementu DataReader
 Do pobierania danych przy użyciu **DataReader**, Utwórz wystąpienie obiektu **polecenia** obiektu, a następnie utwórz **DataReader** przez wywołanie metody **Command.ExecuteReader**  pobieranie wierszy ze źródła danych. **DataReader** zapewnia Niebuforowane strumienia danych, które umożliwia procedurach logikę w celu wydajnego przetwarzania wyników ze źródła danych, po kolei. **DataReader** to dobry wybór w przypadku, gdy w przypadku pobierania dużych ilości danych, ponieważ dane nie są buforowane w pamięci.
@@ -257,9 +257,9 @@ adapter.Fill(ds);
 > [!NOTE]
 >  Aby uniknąć **overflowexception —**, firma Microsoft zaleca również obsługiwać każda konwersja z typu Liczba Oracle na prawidłowy typ .NET Framework przed zapisaniem wartości w <xref:System.Data.DataRow>. Możesz użyć <xref:System.Data.Common.DataAdapter.FillError> zdarzenia w celu określenia, czy **overflowexception —** wystąpił. Aby uzyskać więcej informacji na temat <xref:System.Data.Common.DataAdapter.FillError> zdarzeń, zobacz [Obsługa zdarzeń elementu DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
-## <a name="see-also"></a>Zobacz także  
- [Praca z DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Praca z DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
+- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

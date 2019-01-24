@@ -1,46 +1,46 @@
 ---
-title: 'Porady: Rozwiązywanie konfliktów przez scalanie z wartościami bazy danych'
+title: 'Instrukcje: Rozwiązywanie konfliktów, scalając wartości bazy danych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
-ms.openlocfilehash: a263afb7daceccecf7153c6e9bcfc68e10638c30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b6daa28c23c74eaea21f1f3d499a2e206252abd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744131"
 ---
-# <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Porady: Rozwiązywanie konfliktów przez scalanie z wartościami bazy danych
-Uzgadnianie różnic pomiędzy wartościami oczekiwanymi i rzeczywistymi bazy danych, aby spróbować ponownie przesłać zmiany, umożliwia <xref:System.Data.Linq.RefreshMode.KeepChanges> do scalenia wartościami bazy danych z bieżącej wartości elementu członkowskiego klienta. Aby uzyskać więcej informacji, zobacz [optymistycznej współbieżności: omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+# <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Instrukcje: Rozwiązywanie konfliktów, scalając wartości bazy danych
+Aby uzgodnić różnice między wartościami oczekiwanymi i rzeczywistymi bazy danych, zanim spróbujesz ponownie prześlij zmiany, możesz użyć <xref:System.Data.Linq.RefreshMode.KeepChanges> scalić wartości bazy danych przy użyciu bieżących wartości elementu członkowskiego klienta. Aby uzyskać więcej informacji, zobacz [optymistycznej współbieżności: Omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
->  We wszystkich przypadkach rekord klienta jest najpierw odświeżyć pobierając zaktualizowane dane z bazy danych. Ta akcja gwarantuje, że następnej próbie aktualizacji zakończy się niepowodzeniem na tym samym kontrolach współbieżności.  
+>  We wszystkich przypadkach rekordu na komputerze klienckim najpierw są odświeżane poprzez pobranie zaktualizowanych danych z bazy danych. Ta akcja gwarantuje, że następnej próbie aktualizacji zakończy się niepowodzeniem na tych samych kontroli współbieżności.  
   
 ## <a name="example"></a>Przykład  
- W tym scenariuszu <xref:System.Data.Linq.ChangeConflictException> wyjątek próba Użytkownik1 przesyłanie zmian, ponieważ Użytkownik2 w tym samym czasie została zmieniona kolumny Asystenta i działu. W poniższej tabeli przedstawiono tę sytuację.  
+ W tym scenariuszu <xref:System.Data.Linq.ChangeConflictException> wyjątek jest zgłaszany, gdy użytkownik User1 próbuje przesłać zmiany, ponieważ użytkownik2, w tym samym czasie została zmieniona kolumny Asystenta ustawień i działu. W poniższej tabeli przedstawiono tę sytuację.  
   
-||Menedżer|Asystent|Dział|  
+||maszyny wirtualnej|Asystenta ustawień|Dział|  
 |------|-------------|---------------|----------------|  
-|Oryginalny stan bazy danych po otrzymaniu kwerendy od użytkownika Użytkownik1 i Użytkownik2.|Alfreds|Maria|Sprzedaży|  
+|Oryginalny stan bazy danych po otrzymaniu kwerendy od użytkownika Użytkownik1 i Użytkownik2.|Alfreds|Maria|Sprzedaż|  
 |Użytkownik1 przygotowuje się do przesyłania tych zmian.|Alfred||Marketing|  
-|UŻYTKOWNIK2 zostało już przesłane tych zmian.||Joanna|Usługa|  
+|UŻYTKOWNIK2 zostało już przesłane te zmiany.||Mary|Usługa|  
   
- Użytkownik1 decyduje o tym rozwiązać ten konflikt przez scalenie wartościami bazy danych z bieżącej wartości elementu członkowskiego klienta. Wynik będzie tej bazy danych, które wartości są zastępowane tylko wtedy, gdy bieżący zestaw zmian zmodyfikował również tej wartości.  
+ Aby rozwiązać ten konflikt, scalając wartości bazy danych przy użyciu bieżących wartości elementu członkowskiego klient decyduje o User1. Wynik będzie tej bazy danych, których wartości są zastępowane, tylko wtedy, gdy bieżący zestaw zmian zmodyfikował również tej wartości.  
   
- Gdy Użytkownik1 rozwiązuje konflikt przy użyciu <xref:System.Data.Linq.RefreshMode.KeepChanges>, wynik w bazie danych jest w następującej tabeli:  
+ Gdy użytkownik User1 rozwiązuje konflikt przy użyciu <xref:System.Data.Linq.RefreshMode.KeepChanges>, wynik w bazie danych jest tak jak w poniższej tabeli:  
   
-||Menedżer|Asystent|Dział|  
+||maszyny wirtualnej|Asystenta ustawień|Dział|  
 |------|-------------|---------------|----------------|  
-|Nowy stan po rozwiązywania konfliktów.|Alfred<br /><br /> (z poziomu konta użytkownik1)|Joanna<br /><br /> (z Użytkownik2)|Marketing<br /><br /> (z poziomu konta użytkownik1)|  
+|Nowy stan po rozwiązywania konfliktów.|Alfred<br /><br /> (od użytkownika Użytkownik1)|Mary<br /><br /> (od Użytkownik2)|Marketing<br /><br /> (od użytkownika Użytkownik1)|  
   
- Poniższy przykład przedstawia sposób scalania wartościami bazy danych z bieżącej wartości elementu członkowskiego klienta (chyba że klient został zmieniony tej wartości). Występuje, nie inspekcji lub niestandardową obsługę konfliktów poszczególnych elementów członkowskich.  
+ Poniższy przykład pokazuje, jak można scalić wartości bazy danych przy użyciu bieżących wartości elementu członkowskiego klienta (chyba że klient został zmieniony tej wartości). Występuje, nie inspekcji lub niestandardową obsługę konflikty poszczególnych elementów członkowskich.  
   
  [!code-csharp[System.Data.Linq.RefreshMode#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#3)]
  [!code-vb[System.Data.Linq.RefreshMode#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#3)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: Rozwiązywanie konfliktów, zastępując wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)  
- [Instrukcje: Rozwiązywanie konfliktów, zachowując wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)  
- [Instrukcje: Zarządzanie konfliktami zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Rozwiązywanie konfliktów, zastępując wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
+- [Instrukcje: Rozwiązywanie konfliktów, zachowując wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
+- [Instrukcje: Zarządzanie konfliktami zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
-ms.openlocfilehash: 0912ff0909ffa5b22bed07543a2e514de4fb1ff5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 998c7a3f5ca405b3bd66b877d027126f6c76cc15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035834"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494421"
 ---
 # <a name="troubleshooting-service-application-won39t-install"></a>Rozwiązywanie problemów: Usługi aplikacji kupione&#39;instalować
 Jeśli Twoja aplikacja usługi nie zainstaluje się poprawnie, sprawdź, upewnij się, że <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwość klasy usługi jest ustawiona na tę samą wartość, pokazane w Instalatorze za daną usługę. Wartość musi być taka sama w obu przypadkach, w kolejności dla usługi w taki sposób poprawnie zainstalować.  
@@ -25,5 +25,5 @@ Jeśli Twoja aplikacja usługi nie zainstaluje się poprawnie, sprawdź, upewnij
   
  Również należy sprawdzić, czy masz inną usługę o takiej samej nazwie już zainstalowane. Nazwy usług musi być unikatowa instalacja się powiodła.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

@@ -1,30 +1,30 @@
 ---
-title: Nieobsługiwanych funkcji
+title: Nieobsługiwana funkcja
 ms.date: 03/30/2017
 ms.assetid: e480cfb5-697e-42c8-bed5-9264c945c4f9
-ms.openlocfilehash: c4ed52a43fe9cf04c8015aad9247e9f2eb2481e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5022c9011c2aac5b3272e359f991c40236a5673f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686706"
 ---
-# <a name="unsupported-functionality"></a>Nieobsługiwanych funkcji
-W składniku LINQ to SQL nie są dostępne następujące funkcje SQL tłumaczenia istniejące środowisko uruchomieniowe języka wspólnego (CLR) i tworzy .NET Framework:  
+# <a name="unsupported-functionality"></a>Nieobsługiwana funkcja
+W składniku LINQ to SQL tłumaczenie istniejące środowisko uruchomieniowe języka wspólnego (CLR) nie są dostępne następujące funkcje programu SQL i .NET Framework tworzy:  
   
 -   `STDDEV`  
   
 -   `LIKE`  
   
-     Mimo że `LIKE` nie jest obsługiwana przez bezpośrednie tłumaczenia podobne funkcje istnieje w <xref:System.Data.Linq.SqlClient.SqlMethods> klasy. Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>.  
+     Mimo że `LIKE` nie jest obsługiwany za pośrednictwem bezpośredniego tłumaczenia podobne funkcje istnieje w <xref:System.Data.Linq.SqlClient.SqlMethods> klasy. Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>.  
   
 -   `DATEDIFF`  
   
-     LINQ do SQL ma ograniczoną obsługę `DATEDIFF`. Istnieje podobne funkcje w <xref:System.Data.Linq.SqlClient.SqlMethods> klasy.  
+     LINQ to SQL ma ograniczoną obsługę `DATEDIFF`. Podobne funkcje istnieje w <xref:System.Data.Linq.SqlClient.SqlMethods> klasy.  
   
 -   `ROUND`  
   
-     LINQ do SQL ma ograniczoną obsługę `ROUND`. Aby uzyskać więcej informacji, zobacz [metody System.Math](system-math-methods.md).  
+     LINQ to SQL ma ograniczoną obsługę `ROUND`. Aby uzyskać więcej informacji, zobacz [metody System.Math](system-math-methods.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy danych i funkcje](data-types-and-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy danych i funkcje](data-types-and-functions.md)

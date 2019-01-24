@@ -1,5 +1,5 @@
 ---
-title: 'Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer .NET'
+title: 'Przykład międzyoperacyjnego modelu COM: Klient modelu COM i serwer .NET'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26963a6dc057c979b43e9697ec7a85a60fd3932d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc2cd6b59fe7d05e4973d8a9ece13d9ae7f91e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548550"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a>Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer .NET
-W tym przykładzie pokazano współdziałanie z [klient modelu COM](#cpconcominteropsamplecomclientnetserveranchor1) i [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) wykonująca hipoteczne obliczeń. W tym przykładzie klient tworzy i wywołuje wystąpienie zarządzanej `Loan` klasy, przekazuje cztery argumenty (lub jeden z tych czterech jest większy od zera) do wystąpienia i wyświetla obliczeń. Przykłady kodu w tym przykładzie są wyświetlane w tej sekcji.  
+# <a name="com-interop-sample-com-client-and-net-server"></a>Przykład międzyoperacyjnego modelu COM: Klient modelu COM i serwer .NET
+W tym przykładzie przedstawiono współdziałanie z [klient modelu COM](#cpconcominteropsamplecomclientnetserveranchor1) i [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) wykonująca hipoteczny obliczeń. W tym przykładzie tworzy klienta, a wywołuje wystąpienie zarządzane `Loan` klasy, przekazuje cztery argumenty (jedna z tych czterech jest większy od zera) do wystąpienia i wyświetla obliczeń. Przykłady kodu, w tym przykładzie są wyświetlane w tej sekcji.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
 ## <a name="com-client"></a>Klient modelu COM  
@@ -88,7 +88,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>   
-## <a name="net-server"></a>Serwer .NET  
+## <a name="net-server"></a>.NET Server  
   
 ```vb  
 Imports System  
@@ -389,5 +389,5 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+## <a name="see-also"></a>Zobacz także
+- [Udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: bcaefce4621fbfe3b3ac1a65ca634136fd9870e4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d066b282604a53e2cf973ce0425af729fba6a118
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585620"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Podstawowe operacje zapytań (Visual Basic)
 Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażenia w języku Visual Basic i niektóre typowe rodzaje operacji, które można wykonywać w zapytaniu. Więcej informacji znajduje się w następujących tematach:  
@@ -29,7 +29,7 @@ Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinqext](~/includes/vb
   
  [Zapytania](../../../../visual-basic/language-reference/queries/index.md)  
   
- [Wskazówki: Pisanie zapytań w języku Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
+ [Przewodnik: Pisanie zapytań w języku Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>Określanie źródła danych (z)  
  W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, pierwszym krokiem jest określenie źródła danych, które chcesz zbadać. W związku z tym `From` podklauzul zawsze wykorzystasz. Operatory zapytań wybierz i kształtów wyników na podstawie typu źródła.  
@@ -103,7 +103,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  [!code-vb[VbLINQBasicOps#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_9.vb)]  
   
 > [!NOTE]
->  Ten kod można uruchomić za pomocą listy studentów utworzone w [porady: Tworzenie listy elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  
+>  Ten kod można uruchomić za pomocą listy studentów utworzone w [jak: Utwórz listę elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  
   
  `Join` — Słowo kluczowe jest odpowiednikiem `INNER JOIN` w języku SQL. Łączy dwie kolekcje na podstawie dopasowania wartości kluczy między elementami w dwóch kolekcjach. Zapytanie zwraca całości lub części elementów kolekcji, które pasują do wartości klucza. Na przykład poniższy kod duplikuje Akcja poprzedniego łączenia niejawnego.  
   
@@ -116,19 +116,19 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_11.vb)]  
   
- Jeśli można uruchomić ten kod przy użyciu listy studentów utworzone w [porady: Tworzenie listy elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md), dane wyjściowe z `For Each` instrukcja jest:  
+ Jeśli można uruchomić ten kod przy użyciu listy studentów utworzone w [jak: Tworzenie listy elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md), dane wyjściowe z `For Each` instrukcja jest:  
   
- Rok: inny poziom  
+ Rok: Inny poziom  
   
  Tucker, Michael  
   
  Garcia-Hugo  
   
- Garcia, Magdalena  
+ Garcia, Debra  
   
  Tucker, Lance  
   
- Rok: starszy  
+ Rok: Starszy  
   
  Omelchenko, Svetlana  
   
@@ -142,7 +142,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Rok: IV rok  
   
- Rolecki, Tadeusz  
+ Mortensen, Sven  
   
  Garcia-Cesarowi  
   
@@ -152,9 +152,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Aby uzyskać więcej informacji na temat `Group By`, zobacz [grupy przez klauzulę](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Zapytania](../../../../visual-basic/language-reference/queries/index.md)  
- [Omówienie operatorów standardowej kwerendy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
+- [Omówienie operatorów standardowej kwerendy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

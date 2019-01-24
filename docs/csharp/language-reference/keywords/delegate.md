@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: 233b0255121cf6e7a5283041d594e2d843f105fb
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: f9df40c3ca721ca97b575a05377bbac29a29aec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286471"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560610"
 ---
 # <a name="delegate-c-reference"></a>delegate (odwołanie w C#)
 
@@ -46,12 +46,12 @@ Za pomocą metody lub wyrażenia lambda zgodne zwracany typ i parametry wejścio
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)  
-- [Delegaty](../../../csharp/programming-guide/delegates/index.md)  
-- [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
-- [Delegaci z metodami nazwanymi lub anonimowymi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) 
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
+- [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)
+- [Delegaty](../../../csharp/programming-guide/delegates/index.md)
+- [Zdarzenia](../../../csharp/programming-guide/events/index.md)
+- [Delegaci z metodami nazwanymi lub anonimowymi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
 - [Metody anonimowe](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

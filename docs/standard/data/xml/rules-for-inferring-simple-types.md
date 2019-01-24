@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 15e7692abfe06ec9e9f91a3b229bf99971eaecc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550503"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Zasady wnioskowania typów prostych
 W tym artykule opisano sposób, w jaki <xref:System.Xml.Schema.XmlSchemaInference> klasy wnioskuje typ danych dla atrybutów i elementów.  
@@ -37,8 +37,8 @@ W tym artykule opisano sposób, w jaki <xref:System.Xml.Schema.XmlSchemaInferenc
 |unsignedLong|Liczby całkowite z zakresu od 0 do 18446744073709551615 są.|  
 |integer|Skończoną liczbę cyfr, prawdopodobnie z prefiksem "-".|  
 |decimal|Wartości liczbowe, które zawierają z zakresu od 0 do 28 cyfr precyzji.|  
-|float|Miejsca dziesiętne, opcjonalnie, "E" lub "e", po którym następuje wartość całkowitą reprezentującą wykładnik potęgi. Wartości dziesiętnych może być w zakresie-16777216 do 16777216. Wartości wykładnika mogą być w zakresie –149 do 104.<br /><br /> Float umożliwia specjalnych wartości do reprezentowania nieskończoności i wartości nieliczbowe. Specjalne wartości zmiennoprzecinkowe są: 0, - 0, INF, -INF, NaN.|  
-|double|Taka sama jak zmiennoprzecinkową, z wyjątkiem wartości dziesiętnych może być w zakresie-9007199254740992 do 9007199254740992 i wykładnika wartości mogą być w zakresie –1075 do 970.<br /><br /> Umożliwia podwójnej precyzji dla specjalnych wartości do reprezentowania nieskończoności i wartości nieliczbowe. Specjalne wartości zmiennoprzecinkowe są: 0, - 0, INF, -INF, NaN.|  
+|float|Miejsca dziesiętne, opcjonalnie, "E" lub "e", po którym następuje wartość całkowitą reprezentującą wykładnik potęgi. Wartości dziesiętnych może być w zakresie-16777216 do 16777216. Wartości wykładnika mogą być w zakresie –149 do 104.<br /><br /> Float umożliwia specjalnych wartości do reprezentowania nieskończoności i wartości nieliczbowe. Specjalne wartości zmiennoprzecinkowe są następujące: 0, -0, INF, -INF, NaN.|  
+|double|Taka sama jak zmiennoprzecinkową, z wyjątkiem wartości dziesiętnych może być w zakresie-9007199254740992 do 9007199254740992 i wykładnika wartości mogą być w zakresie –1075 do 970.<br /><br /> Umożliwia podwójnej precyzji dla specjalnych wartości do reprezentowania nieskończoności i wartości nieliczbowe. Specjalne wartości zmiennoprzecinkowe są następujące: 0, -0, INF, -INF, NaN.|  
 |czas trwania|Format czasu trwania W3C.|  
 |Data i godzina|Format daty/godziny W3C.|  
 |czas|Format czasu W3C.|  
@@ -78,6 +78,6 @@ Poniżej przedstawiono definiowania schematu atrybutów, które są ignorowane p
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Model SOM (XML Schema Object Model)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [Wnioskowanie schematów na podstawie dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [Model SOM (XML Schema Object Model)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [Wnioskowanie schematów na podstawie dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Zasady wnioskowania typów węzłów schematu i struktury](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

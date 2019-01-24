@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: a7fca5d86cf8679e0845a7051b4ace5b91766030
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 651358dd85c5bc5d41bd7a7c1277c185b769b423
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546481"
 ---
 # <a name="ui-automation-tree-overview"></a>Przegląd drzewa automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Produkty technologii pomocniczej i skrypty testowe Przejdź [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa w celu zbierania informacji o [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] i jej elementów.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "47200311"
   
  Widok zawartości są uzyskiwane przez wyszukiwanie elementów, które mają <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> właściwością `true`, lub za pomocą <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> Przejdź w drzewie.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Automation.AutomationElement>  
- [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Automation.AutomationElement>
+- [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

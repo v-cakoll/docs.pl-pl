@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wyświetlanie określonych dni pogrubioną czcionką za pomocą formantu MonthCalendar formularzy systemu Windows'
+title: 'Instrukcje: Wyświetlanie określonych dni pogrubioną czcionką za pomocą Windows formantu MonthCalendar formularzy'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: 0ee89fb4cfb6ddbf975eb0e85e7dd1bab30f08d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f310d5e30acffdd358bc5108f39102387289562e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547790"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Porady: wyświetlanie określonych dni pogrubioną czcionką za pomocą formantu MonthCalendar formularzy systemu Windows
-Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant może wyświetlać dni pogrubioną czcionką jako pojedynczej daty lub na podstawie powtarzających się. Możesz zrobić to, aby zwrócić uwagę na wybranych dat, takich jak dni wolnych i w weekendy.  
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Instrukcje: Wyświetlanie określonych dni pogrubioną czcionką za pomocą Windows formantu MonthCalendar formularzy
+Formularze Windows <xref:System.Windows.Forms.MonthCalendar> formant może wyświetlić dni pogrubioną czcionką, jako pojedynczej daty lub na zasadzie powtarzające się. Możesz zrobić to, aby zwrócić uwagę czytelnika na wybranych dat, takich jak dni wolnych od pracy i weekendów.  
   
- Trzy właściwości formantu tej funkcji. <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> Właściwość zawiera pojedynczy daty. <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> Właściwość zawiera daty, które są pogrubione co roku. <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> Właściwość zawiera daty, które są pogrubione co miesiąc. Każdy z tych właściwości zawiera tablicę <xref:System.DateTime> obiektów. Aby dodać lub usunąć datę z jednego z tych list, musisz dodać lub usunąć <xref:System.DateTime> obiektu.  
+ Trzy właściwości kontroli tej funkcji. <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> Właściwość zawiera pojedynczy daty. <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> Właściwość zawiera daty wyświetlane wytłuszczonym drukiem co roku. <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> Właściwość zawiera daty, które są pogrubione co miesiąc. Każdy z tych właściwości zawiera tablicę <xref:System.DateTime> obiektów. Aby dodać lub usunąć wartość typu date z jedną z tych list, należy dodać lub usunąć <xref:System.DateTime> obiektu.  
   
-### <a name="to-make-a-date-appear-in-bold-type"></a>Aby wyświetlone czcionką pogrubioną datę  
+### <a name="to-make-a-date-appear-in-bold-type"></a>Daty są wyświetlane pogrubioną czcionką  
   
 1.  Utwórz <xref:System.DateTime> obiektów.  
   
@@ -42,7 +42,7 @@ Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant mo�
     DateTime myVacation2 = DateTime(2001, 6, 17);  
     ```  
   
-2.  Pogrubienie pojedyncza Data wywołując <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, lub <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> metody <xref:System.Windows.Forms.MonthCalendar> formantu.  
+2.  Pogrubienie pojedyncza Data, wywołując <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, lub <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> metody <xref:System.Windows.Forms.MonthCalendar> kontroli.  
   
     ```vb  
     MonthCalendar1.AddBoldedDate(myVacation1)  
@@ -61,7 +61,7 @@ Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant mo�
   
      — lub —  
   
-     Zastosuj pogrubienie zestaw dat w całości, tworząc tablicę <xref:System.DateTime> obiektów i przypisywania go do jednej z właściwości.  
+     Pogrubienie zestaw dat w całości, tworząc tablicę <xref:System.DateTime> obiektów i przypisywanie jej do jednej z właściwości.  
   
     ```vb  
     Dim VacationDates As DateTime() = {myVacation1, myVacation2}  
@@ -80,7 +80,7 @@ Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant mo�
   
 ### <a name="to-make-a-date-appear-in-the-regular-font"></a>Daty są wyświetlane w regularnych czcionki  
   
-1.  Pogrubiony jednej daty są wyświetlane w regularnych czcionki, wywołując <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, lub <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> metody.  
+1.  Pojawiają się w regularnych czcionki przez wywołanie datę pogrubiony pojedynczego <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, lub <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> metody.  
   
     ```vb  
     MonthCalendar1.RemoveBoldedDate(myVacation1)  
@@ -99,7 +99,7 @@ Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant mo�
   
      — lub —  
   
-     Usuń pogrubione daty z jednej z trzech list przez wywołanie metody <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, lub <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> metody.  
+     Usuń pogrubione daty z jedną z trzech list, wywołując <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, lub <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> metody.  
   
     ```vb  
     MonthCalendar1.RemoveAllBoldedDates()  
@@ -113,7 +113,7 @@ Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant mo�
     monthCalendar1->RemoveAllBoldedDates();  
     ```  
   
-2.  Zaktualizuj wygląd czcionki przez wywołanie metody <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> metody.  
+2.  Zaktualizuj wygląd czcionki, wywołując <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> metody.  
   
     ```vb  
     MonthCalendar1.UpdateBoldedDates()  
@@ -127,8 +127,8 @@ Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant mo�
     monthCalendar1->UpdateBoldedDates();  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [MonthCalendar, kontrolka](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
- [Instrukcje: wybieranie zakresu dat w kontrolce MonthCalendar formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
- [Instrukcje: zmienianie wyglądu kontrolki MonthCalendar formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)  
- [Instrukcje: wyświetlanie więcej niż jednego miesiąca w kontrolce MonthCalendar formularzy Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+## <a name="see-also"></a>Zobacz także
+- [MonthCalendar, kontrolka](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
+- [Instrukcje: Wybieranie zakresu dat w kontrolce MonthCalendar formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Instrukcje: Zmienianie wyglądu formantu MonthCalendar formularzy Windows](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)
+- [Instrukcje: Wyświetl więcej niż jednego miesiąca w kontrolce MonthCalendar formularzy Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)

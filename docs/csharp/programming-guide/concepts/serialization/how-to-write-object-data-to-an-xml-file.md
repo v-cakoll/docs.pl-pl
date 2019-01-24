@@ -1,15 +1,15 @@
 ---
-title: 'Porady: zapis danych obiektu do pliku XML (C#)'
+title: 'Instrukcje: Zapisywania obiektów danych do pliku XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: b8fb60640c9bdc0337d45b6901b1be3979dbac1f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 064d7ed61921f3f700311a1b09ee77e0c9818d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554286"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Porady: zapis danych obiektu do pliku XML (C#)
+# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Instrukcje: Zapisywania obiektów danych do pliku XML (C#)
 Ten przykład Przepisuje obiekt z klasy do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
   
 ## <a name="example"></a>Przykład  
@@ -61,8 +61,8 @@ public class XMLWrite
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  W tym przykładzie tworzy nowy plik, jeśli go jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, ta aplikacja musi mieć `Create` dostępu do folderu. Jeśli plik już istnieje, aplikacja potrzebuje tylko `Write` dostępu, mniejsze uprawnienia. Jeśli to możliwe, bezpieczniej jest tworzyć plik podczas wdrożenia i udzielić `Read` dostępu do pojedynczego pliku, zamiast `Create` dostępu do folderu.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IO.StreamWriter>  
-- [Porady: odczytywanie danych o obiektach z pliku XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+- <xref:System.IO.StreamWriter>
+- [Instrukcje: Odczytywanie danych o obiektach z pliku XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
 - [Serializacja (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)

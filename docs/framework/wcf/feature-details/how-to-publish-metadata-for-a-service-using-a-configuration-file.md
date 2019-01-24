@@ -1,21 +1,21 @@
 ---
-title: 'Porady: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji'
+title: 'Instrukcje: Publikowanie metadanych dla usługi za pomocą pliku konfiguracji'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 94013c69bec0ea37c9260567437aeada3ebe2ae4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81bf7db9ec25ae112127712dcd0443d3e045bc10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552804"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Porady: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji
-Jest to jeden z dwóch tematy porad, które przedstawiają Publikowanie metadanych dla usługi Windows Communication Foundation (WCF). Istnieją dwa sposoby, aby określić, jak usługa powinna Publikowanie metadanych, przy użyciu pliku konfiguracji i kod. W tym temacie przedstawiono sposób Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji.  
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Instrukcje: Publikowanie metadanych dla usługi za pomocą pliku konfiguracji
+Jest to jedna z dwóch tematy porad, które pokazują Publikowanie metadanych dla usługi Windows Communication Foundation (WCF). Istnieją dwa sposoby, aby określić, jak usługa powinna Publikowanie metadanych, przy użyciu pliku konfiguracji i przy użyciu kodu. W tym temacie przedstawiono sposób Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji.  
   
 > [!CAUTION]
->  W tym temacie pokazano, jak publikować metadane w sposób niezabezpieczonych. Dowolny klient może pobrać metadanych usługi. Jeśli potrzebujesz usługi publikować metadane w sposób bezpieczny, zobacz [niestandardowe bezpiecznego punktu końcowego metadanych](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+>  W tym temacie przedstawiono sposób Publikowanie metadanych w niezabezpieczony sposób. Dowolny klient może pobierać metadanych z usługi. Jeśli potrzebujesz usługi w celu publikowania metadanych w bezpieczny sposób, zobacz [niestandardowy bezpieczny punkt końcowy metadanych](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- Aby uzyskać więcej informacji o publikowaniu metadanych w kodzie, zobacz [porady: Publikowanie metadanych dla kodu przy użyciu usługi](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Publikowanie metadanych pozwala klientom na pobieranie metadanych za pomocą żądania GET usługi WS-Transfer lub żądania HTTP/GET przy użyciu `?wsdl` ciągu zapytania. Aby się upewnić, że działa kod, należy utworzyć podstawowej usługi WCF. Dla uproszczenia podstawowej usługi hostowanej własnym znajduje się w następującym kodem.  
+ Aby uzyskać więcej informacji na temat publikowania metadanych w kodzie, zobacz [jak: Publikowanie metadanych dla usługi przy użyciu kodu](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Publikowanie metadanych zezwala klientom na pobieranie metadanych za pomocą ROZPOCZYNANIE transferu WS żądania lub żądania HTTP/GET przy użyciu `?wsdl` ciągu zapytania. Aby się upewnić, że kod działa, Utwórz podstawowej usługi WCF. Dla uproszczenia podstawowa usługa Self-Hosted znajduje się w poniższym kodzie.  
   
 ```csharp  
 using System;  
@@ -71,7 +71,7 @@ namespace Metadata.Samples
 }  
 ```  
   
- Ta usługa jest samodzielnie hostowana usługa, która jest konfigurowana przy użyciu pliku konfiguracji. Następujący plik konfiguracji służy jako punkt początkowy.  
+ Ta usługa jest samodzielnie hostowana usługa, która została skonfigurowana przy użyciu pliku konfiguracji. Następujący plik konfiguracji, służy jako punkt wyjścia.  
   
 ```xml  
 <configuration>  
@@ -90,25 +90,25 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Publikowanie metadanych dla usługi WCF, przy użyciu pliku konfiguracji aplikacji  
+### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Publikowanie metadanych dla usługi WCF, za pomocą pliku konfiguracji aplikacji  
   
 1.  W pliku App.config, po upływie `</services>` elementu, Utwórz `<behaviors>` elementu.  
   
   
   
-2.  W ramach `<behaviors>` elementu, Dodaj `<serviceBehaviors>` elementu.  
+2.  W ramach `<behaviors>` elementu Dodawanie `<serviceBehaviors>` elementu.  
   
   
   
-3.  Dodaj `<behavior>` elementu `<serviceBehaviors>` element i określić wartość dla `name` atrybutu `<behavior>` elementu.  
+3.  Dodaj `<behavior>` elementu `<serviceBehaviors>` elementu i określić wartość dla `name` atrybutu `<behavior>` elementu.  
   
   
   
-4.  Dodaj `<serviceMetadata>` elementu `<behavior>` elementu. Ustaw `httpGetEnabled` atrybutu `true` i `policyVersion` atrybutu Policy15. `httpGetEnabled` Umożliwia usłudze odpowiadać na żądania metadanych przez żądanie HTTP GET. `policyVersion` Określa, że usługa odpowiadają WS-Policy 1.5 podczas generowania metadanych.  
+4.  Dodaj `<serviceMetadata>` elementu `<behavior>` elementu. Ustaw `httpGetEnabled` atrybutu `true` i `policyVersion` atrybutu Policy15. `httpGetEnabled` Umożliwia usłudze odpowiadanie na żądania metadanych przez żądanie HTTP GET. `policyVersion` informuje usługę do odpowiadają WS-Policy w wersji 1.5 podczas generowania metadanych.  
   
   
   
-5.  Dodaj `behaviorConfiguration` atrybutu `<service>` element i określ `name` atrybutu `<behavior>` element dodanej w kroku 1, jak pokazano w poniższym przykładzie kodu.  
+5.  Dodaj `behaviorConfiguration` atrybutu `<service>` elementu i określ `name` atrybutu `<behavior>` elementu dodany w kroku 1, jak pokazano w poniższym przykładzie kodu.  
   
     ```xml  
     <services>  
@@ -127,7 +127,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6.  Dodaj jeden lub kilka `<endpoint>` ustawioną elementy z kontraktem `IMetadataExchange`, jak pokazano w poniższym przykładzie kodu.  
+6.  Dodaj jeden lub kilka `<endpoint>` elementy z zamówienia równa `IMetadataExchange`, jak pokazano w poniższym przykładzie kodu.  
   
     ```xml  
     <services>  
@@ -146,31 +146,31 @@ namespace Metadata.Samples
     </services>  
     ```  
   
-7.  Punkty końcowe metadanych dodanym w poprzednim kroku, można ustawić `binding` atrybutu do jednej z następujących czynności:  
+7.  W przypadku punktów końcowych metadanych, dodane w poprzednim kroku, ustawić `binding` atrybut do jednego z następujących czynności:  
   
     -   `mexHttpBinding` dla publikacji HTTP.  
   
-    -   `mexHttpsBinding` dla publikacji HTTPS.  
+    -   `mexHttpsBinding` dla publikacji protokołu HTTPS.  
   
     -   `mexNamedPipeBinding` dla publikacji nazwanego potoku.  
   
     -   `mexTcpBinding` dla publikacji TCP.  
   
-8.  Punkty końcowe metadanych dodanym w poprzednim kroku należy ustawić adres równe:  
+8.  Dla punktów końcowych metadanych, dodane w poprzednim kroku należy ustawić adres równe:  
   
-    -   Pusty ciąg, aby użyć adresu podstawowego w aplikacji hosta jako punktu publikacji, jeśli podstawowy adres jest taki sam jak metadanych powiązania.  
+    -   Pusty ciąg do użycia jako punkt publikacji aplikacji hosta, adres podstawowy, jeśli podstawowy adres jest taki sam jak powiązanie metadanych.  
   
-    -   Adres względny, jeśli aplikacja hosta ma adres podstawowy.  
+    -   Adres względny Jeśli aplikacja hosta ma adres podstawowy.  
   
-    -   Jako adres bezwzględny.  
+    -   Bezwzględny adres.  
   
-9. Tworzenie i uruchamianie aplikacji konsoli.  
+9. Skompiluj i uruchom aplikację konsolową.  
   
-10. Aby przejść do podstawowego adresu usługi w programie Internet Explorer (http://localhost:8001/MetadataSample w tym przykładzie) i sprawdź, czy Publikowanie metadanych jest włączony. Jeśli nie, zostanie wyświetlony komunikat w górnej części strony wynikowy: "Publikowanie metadanych dla tej usługi jest obecnie wyłączona."  
+10. Aby przejść do podstawowego adresu usługi w programie Internet Explorer (http://localhost:8001/MetadataSample w tym przykładzie) i sprawdź, czy Publikowanie metadanych jest włączona. W przeciwnym razie komunikat wyświetlany w górnej części strony wynikowy: "Publikowanie metadanych dla tej usługi jest obecnie wyłączona."  
   
 ### <a name="to-use-default-endpoints"></a>Aby użyć domyślnych punktów końcowych  
   
-1.  Aby skonfigurować metadanych od usługi, która używa domyślne punkty końcowe, określić <xref:System.ServiceModel.Description.ServiceMetadataBehavior> w konfiguracji pliku co w poprzednim przykładzie, ale nie określono żadnych punktów końcowych. Plik konfiguracji następnie będzie wyglądać następująco.  
+1.  Aby skonfigurować usługę korzystającą z domyślnych punktów końcowych metadanych, określ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> w konfiguracji pliku co w poprzednim przykładzie, ale nie określono żadnych punktów końcowych. Plik konfiguracji będzie następnie wyglądać następująco.  
   
     ```xml  
     <configuration>  
@@ -187,10 +187,10 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     Ponieważ usługa ma <xref:System.ServiceModel.Description.ServiceMetadataBehavior> z `httpGetEnabled` ustawioną `true`, usługa ma Publikowanie metadanych włączone, a ponieważ punkty końcowe nie zostały dodane w sposób jawny, środowisko uruchomieniowe dodaje domyślne punkty końcowe. Aby uzyskać więcej informacji na temat domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Ponieważ usługa ma <xref:System.ServiceModel.Description.ServiceMetadataBehavior> z `httpGetEnabled` równa `true`, usługa ma Publikowanie metadanych włączone, a ponieważ punkty końcowe nie zostały jawnie dodane, środowiska uruchomieniowego dodaje domyślne punkty końcowe. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązania i zachowań, zobacz [uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod przedstawia implementację podstawowej usługi WCF i pliku konfiguracji, która umożliwia publikowanie metadanych dla usługi.  
+ Poniższy przykład kodu pokazuje wdrażania podstawowej usługi WCF i pliku konfiguracji, która umożliwia publikowanie metadanych dla usługi.  
   
 ```csharp  
 using System;  
@@ -261,10 +261,10 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- [Instrukcje: hostowanie usługi WCF w zarządzanej aplikacji](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
- [Host samodzielny](../../../../docs/framework/wcf/samples/self-host.md)  
- [Przegląd architektury metadanych](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [Używanie metadanych](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Instrukcje: publikowanie metadanych dla usługi przy użyciu kodu](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
+- [Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Host samodzielny](../../../../docs/framework/wcf/samples/self-host.md)
+- [Przegląd architektury metadanych](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [Używanie metadanych](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Instrukcje: Publikowanie metadanych dla usługi przy użyciu kodu](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

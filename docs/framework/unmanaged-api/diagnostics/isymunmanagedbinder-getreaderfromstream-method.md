@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c5d3d1b868849d17b2068eecfcfeea0f1e598f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af4e9124140c2b311fb2c10800200f5d4d8dc679
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545767"
 ---
 # <a name="isymunmanagedbindergetreaderfromstream-method"></a>ISymUnmanagedBinder::GetReaderFromStream — Metoda
-Podany interfejs metadanych i strumienia, który zawiera magazyn symbol zwraca poprawny [ISymUnmanagedReader](isymunmanagedreader-interface.md) strukturę, która będzie odczytywać debugowanie symboli z magazynu podanego symbolu.  
+Podany interfejs metadanych i strumienia, który zawiera magazyn symboli, zwraca poprawny [isymunmanagedreader —](isymunmanagedreader-interface.md) strukturę, która będzie odczytywać debugowanie symboli z magazynu podanego symbolu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ HRESULT GetReaderFromStream(
   
 #### <a name="parameters"></a>Parametry  
  `importer`  
- [in] Wskaźnik do interfejsu importu metadanych.  
+ [in] Wskaźnik do interfejsu Importowanie metadanych.  
   
  `pstream`  
- [in] Wskaźnik do strumienia, który zawiera magazynu symboli.  
+ [in] Wskaźnik do strumienia, który zawiera magazyn symboli.  
   
  `pRetVal`  
- [out] Wskaźnik, który jest ustawiony na zwróconego [ISymUnmanagedReader](isymunmanagedreader-interface.md) interfejsu.  
+ [out] Wskaźnik, który jest ustawiony do zwracanego [isymunmanagedreader —](isymunmanagedreader-interface.md) interfejsu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedBinder, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedBinder, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)

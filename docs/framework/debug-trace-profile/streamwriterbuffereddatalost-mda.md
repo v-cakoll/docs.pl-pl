@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15957ce03925d75021d88bc81d12809c3fe31c2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e20502cfd64e7e4e40bee0b815729e914c3dd4a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553714"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
-`streamWriterBufferedDataLost` Zarządzany Asystent debugowania (MDA) została aktywowana po <xref:System.IO.StreamWriter> są zapisywane, ale <xref:System.IO.StreamWriter.Flush%2A> lub <xref:System.IO.StreamWriter.Close%2A> metoda nie jest następnie wywoływana przed wystąpienie <xref:System.IO.StreamWriter> zostanie zniszczony. Po włączeniu to zdarzenie MDA środowiska uruchomieniowego Określa, czy wszystkie buforowane dane nadal istnieje w ramach <xref:System.IO.StreamWriter>. Jeśli istnieje buforowane dane, MDA jest aktywowane. Wywoływanie <xref:System.GC.Collect%2A> i <xref:System.GC.WaitForPendingFinalizers%2A> metod można wymusić finalizatory do uruchomienia. Finalizatory w przeciwnym razie zostanie uruchomiony w czasie pozornie dowolnego i prawdopodobnie w ogóle na zakończenie procesu. Jawnie systemie finalizatory to zdarzenie MDA włączone pomogą bardziej niezawodnie odtworzyć ten typ problemu.  
+`streamWriterBufferedDataLost` Zarządzanego Asystenta debugowania (MDA) jest aktywowany po <xref:System.IO.StreamWriter> są zapisywane, ale <xref:System.IO.StreamWriter.Flush%2A> lub <xref:System.IO.StreamWriter.Close%2A> metoda nie jest później wywoływana przed wystąpieniem programu <xref:System.IO.StreamWriter> zostanie zniszczony. Gdy to zdarzenie MDA jest włączona, środowisko wykonawcze określa, czy wszystkie buforowane dane nadal istnieje w ramach <xref:System.IO.StreamWriter>. Jeśli istnieje buforowane dane, to zdarzenie MDA jest aktywowane. Wywoływanie <xref:System.GC.Collect%2A> i <xref:System.GC.WaitForPendingFinalizers%2A> metod można wymusić finalizatory do uruchomienia. Finalizatory w przeciwnym razie zostanie uruchomiony w czasie pozornie dowolnego i prawdopodobnie w ogóle nie będzie na zakończenie procesu. Jawnie uruchamianie finalizatorów z tego MDA włączona ma na celu bardziej niezawodnie odtworzyć ten typ problemu.  
   
 ## <a name="symptoms"></a>Symptomy  
- A <xref:System.IO.StreamWriter> nie zapisuje ostatni 1 – 4 KB danych do pliku.  
+ Element <xref:System.IO.StreamWriter> nie zapisuje ostatni 1 – 4 KB danych w pliku.  
   
 ## <a name="cause"></a>Przyczyna  
- <xref:System.IO.StreamWriter> Buforów danych, które wymaga, aby <xref:System.IO.StreamWriter.Close%2A> lub <xref:System.IO.StreamWriter.Flush%2A> do zapisu buforowane dane odpowiedni magazyn danych można wywołać metody. Jeśli <xref:System.IO.StreamWriter.Close%2A> lub <xref:System.IO.StreamWriter.Flush%2A> nie jest odpowiednio wywoływany, dane buforowane w <xref:System.IO.StreamWriter> wystąpienia nie mogą być zapisane, zgodnie z oczekiwaniami.  
+ <xref:System.IO.StreamWriter> Buforuje dane, które wymaga, aby <xref:System.IO.StreamWriter.Close%2A> lub <xref:System.IO.StreamWriter.Flush%2A> metoda jest wywoływana w celu zapisania buforowane dane do magazynu danych. Jeśli <xref:System.IO.StreamWriter.Close%2A> lub <xref:System.IO.StreamWriter.Flush%2A> nie jest prawidłowo wywoływany, danych, lecz buforowane w <xref:System.IO.StreamWriter> wystąpienia nie może być zapisana, zgodnie z oczekiwaniami.  
   
- Oto przykładowy kod niepoprawnie napisane, że to zdarzenie MDA powinien catch.  
+ Oto przykład źle kod, który należy przechwytywać to zdarzenie MDA.  
   
 ```csharp  
 // Poorly written code.  
@@ -40,7 +40,7 @@ void Write()
 }  
 ```  
   
- Poprzedni kod zostanie aktywowany, to zdarzenie MDA bardziej niezawodnie Jeśli wyrzucania elementów bezużytecznych jest wyzwalane, a następnie wstrzymane do czasu zakończenia finalizatory. Do śledzenia tego rodzaju problem, można dodać następujący kod na końcu poprzedniego metody kompilacji debugowania. Dzięki temu można niezawodnie aktywować MDA, ale oczywiście nie ustalić przyczynę problemu.  
+ Poprzedni kod będzie aktywuje tego zdarzenia MDA bardziej niezawodne, gdy wyrzucanie elementów bezużytecznych jest wyzwalane, a następnie wstrzymane do czasu zakończenia finalizatory. Do śledzenia tego rodzaju problem, można dodać następujący kod na końcu poprzedniego metody do kompilacji debugowanej. Pomoże to niezawodne aktywować MDA, ale oczywiście nie ustalić przyczynę problemu.  
   
 ```csharp
 GC.Collect();  
@@ -48,7 +48,7 @@ GC.WaitForPendingFinalizers();
 ```  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Upewnij się, że należy wywołać <xref:System.IO.StreamWriter.Close%2A> lub <xref:System.IO.StreamWriter.Flush%2A> na <xref:System.IO.StreamWriter> przed zamknięciem aplikacji lub dowolnego blok kodu, który ma wystąpienie <xref:System.IO.StreamWriter>. Z mechanizmów najlepsze na osiągnięcie tego celu jest utworzenia wystąpienia w języku C# `using` bloku (`Using` w języku Visual Basic), który zapewni <xref:System.IO.StreamWriter.Dispose%2A> wywoływana jest metoda dla edytora, co powoduje wystąpienie prawidłowo zamknięte.  
+ Upewnij się, należy wywołać <xref:System.IO.StreamWriter.Close%2A> lub <xref:System.IO.StreamWriter.Flush%2A> na <xref:System.IO.StreamWriter> przed zamknięciem aplikacji lub dowolnym blok kodu, który zawiera wystąpienie <xref:System.IO.StreamWriter>. Jedną z najlepszych mechanizmy służące osiągnięciu tego celu jest utworzenie wystąpienia z C# `using` bloku (`Using` w języku Visual Basic), który zapewni <xref:System.IO.StreamWriter.Dispose%2A> wywoływana jest metoda dla edytora, co w przypadku poprawnie zamknięte.  
   
 ```csharp
 using(StreamWriter sw = new StreamWriter("file.txt"))   
@@ -57,7 +57,7 @@ using(StreamWriter sw = new StreamWriter("file.txt"))
 }  
 ```  
   
- Poniższy kod przedstawia to samo rozwiązanie przy użyciu `try/finally` zamiast `using`.  
+ Poniższy kod przedstawia tego samego rozwiązania przy użyciu `try/finally` zamiast `using`.  
   
 ```csharp
 StreamWriter sw;  
@@ -73,7 +73,7 @@ finally
 }  
 ```  
   
- Jeśli żadna z tych rozwiązań nie może być używany (na przykład, jeśli <xref:System.IO.StreamWriter> są przechowywane w statycznych zmienną i możesz łatwo nie można uruchomić kod z końcem okresu obowiązywania), wywołując <xref:System.IO.StreamWriter.Flush%2A> na <xref:System.IO.StreamWriter> po jej ostatniego użycia lub ustawienie <xref:System.IO.StreamWriter.AutoFlush%2A> dla właściwości `true` przed pierwszym użyciem powinien uniknąć tego problemu.  
+ Jeśli żadna z tych rozwiązań nie może być używana (na przykład, jeśli <xref:System.IO.StreamWriter> są przechowywane w statycznych zmienną i możesz łatwo nie można uruchomić kod na końcu okresu jego istnienia), następnie wywoływania <xref:System.IO.StreamWriter.Flush%2A> na <xref:System.IO.StreamWriter> po jej ostatniego użycia lub ustawienie <xref:System.IO.StreamWriter.AutoFlush%2A> Właściwość `true` przed pierwszym użyciem należy unikać tego problemu.  
   
 ```csharp
 private static StreamWriter log;  
@@ -89,10 +89,10 @@ static WriteToFile()
 ```  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowisko uruchomieniowe.  
+ To zdarzenie MDA nie ma wpływu na środowiska uruchomieniowego.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Komunikat informujący, że wystąpiło to naruszenie.  
+ Komunikat wskazujący, że to naruszenie wystąpił.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -104,6 +104,6 @@ static WriteToFile()
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IO.StreamWriter>  
- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IO.StreamWriter>
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

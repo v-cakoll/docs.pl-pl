@@ -1,5 +1,5 @@
 ---
-title: 'Porady: używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach'
+title: 'Instrukcje: Używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: e11bf8af6f56cbdcdcc920cafe145edcf744efed
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f7e7139aeebea4441f851f7ed28484ba293e9c3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543253"
 ---
-# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Porady: używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach
+# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Instrukcje: Używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach
 Wiele składników zapewniają możliwość wykonywania pracy asynchronicznie. <xref:System.Media.SoundPlayer> i <xref:System.Windows.Forms.PictureBox> składników, na przykład włączyć ładowanie dźwięków i obrazy "w tle" nadal działa bez przerwy z wątku głównego.  
   
  Używanie metod asynchronicznych klasy, która obsługuje [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) mogą być proste i polega na dołączanie programu obsługi zdarzeń do składnika _MethodName_  **Ukończono** zdarzenia, tak jak dowolne inne zdarzenie. Gdy wywołujesz _MethodName_**Async** metody, aplikacja będzie nadal działa nieprzerwanie aż do _MethodName_**Ukończono** zdarzenie jest wywoływane. W przypadku obsługi zdarzenia, można sprawdzić <xref:System.ComponentModel.AsyncCompletedEventArgs> parametru, aby określić, czy pomyślnie Ukończono operację asynchroniczną, czy został anulowany.  
@@ -62,5 +62,5 @@ Wiele składników zapewniają możliwość wykonywania pracy asynchronicznie. <
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: uruchamianie operacji w tle](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+- [Instrukcje: Uruchamianie operacji w tle](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

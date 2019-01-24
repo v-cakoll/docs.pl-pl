@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 435789e0d1bc601a9eb51488254407fefd334e05
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f8802ae00de2bdb87e4e47fb82f6ebdf2108e2a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547296"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate
 <a name="introduction"></a> A <xref:System.Windows.Controls.ControlTemplate> określa struktury wizualnej i zachowanie visual kontrolki. Można dostosować wygląd kontrolki, zapewniając it nowej <xref:System.Windows.Controls.ControlTemplate>. Po utworzeniu <xref:System.Windows.Controls.ControlTemplate>, Zastąp wyglądu istniejącej kontrolki bez zmiany jego działanie. Na przykład, można zwiększyć przycisków w aplikacji round zamiast domyślnego prostokątnego kształtu, ale nadal zgłosi przycisku <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
@@ -133,7 +133,7 @@ Dwa przyciski, za pomocą różnych kolorów tła
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |----------------------|---------------------------|-----------------|  
-|Normalny|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |MouseOver|CommonStates|Wskaźnik myszy jest umieszczony nad kontrolką.|  
 |Naciśnięto|CommonStates|Użytkownik naciśnie kontrolkę.|  
 |Wyłączone|CommonStates|Kontrolka jest wyłączona.|  
@@ -261,5 +261,5 @@ Przycisk, który używa szablonu kontrolki niestandardowej w stanie po naciśni�
   
  [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)

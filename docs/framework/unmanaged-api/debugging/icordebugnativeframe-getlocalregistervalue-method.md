@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b408654f367bc846dc878fb8412eb3e896dd192a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9794a44bfb0bd1b4739689359832ba8500c6e2ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539613"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue — Metoda
-Pobiera wartość argumentu lub zmiennej lokalnej, która jest przechowywana w rejestrze określonego dla tego natywną.  
+Pobiera wartość argumentu lub zmiennej lokalnej, która jest przechowywana w rejestrze określonej dla tej ramki natywne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +40,22 @@ HRESULT GetLocalRegisterValue (
   
 #### <a name="parameters"></a>Parametry  
  `reg`  
- [in] Wartość wyliczenia "CorDebugRegister", która określa rejestru zawierającego wartość.  
+ [in] Wartość wyliczenia "cordebugregister —", który określa rejestru zawierającego wartość.  
   
  `cbSigBlob`  
- [in] Liczba całkowita określająca rozmiar podpisu metadanych binarny, który odwołuje się do niego `pvSigBlob` parametru.  
+ [in] Liczba całkowita określająca rozmiar podpisu metadanych binarny, który odwołuje się do niej `pvSigBlob` parametru.  
   
  `pvSigBlob`  
- [in] A `PCCOR_SIGNATURE` wartość, która wskazuje podpisu metadanych binarnego typu wartości.  
+ [in] A `PCCOR_SIGNATURE` wartość, która wskazuje podpisu metadanych binarny o typie wartości.  
   
  `ppValue`  
- [out] Wskaźnik do adresu reprezentujący pobranej wartości przechowywanej w rejestrze określonego obiektu "ICorDebugValue".  
+ [out] Wskaźnik na adres "ICorDebugValue" obiekt reprezentujący pobrana wartość, która jest przechowywana w określonej rejestru.  
   
 ## <a name="remarks"></a>Uwagi  
  `GetLocalRegisterValue` Metoda może być używana w ramka natywna lub just-in-time (JIT)-skompilowany ramki.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -63,5 +63,5 @@ HRESULT GetLocalRegisterValue (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

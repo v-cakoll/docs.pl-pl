@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f046fb51753bfa79d333d465e8850794ecc73973
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9d775d5c386abeb100604250008ebf1bf377e8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550815"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout — Metoda
-Pobiera informacje o którym typu podana wartość znajduje się po jej jest opakowany.  
+Pobiera informacje o tym, gdzie typ określona wartość jest znajduje się, gdy jest ona umieszczona.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +37,16 @@ HRESULT GetBoxClassLayout(
   
 #### <a name="parameters"></a>Parametry  
  `classId`  
- [in] Identyfikator klasy, która opisuje typ wartości, która jest opakowany.  
+ [in] Identyfikator klasy, która opisuje typ wartości, który jest spakowany.  
   
  `pBufferOffset`  
- [out] Liczba całkowita, która jest przesunięcie względem obiektu spakowanego wskaźnik identyfikator typu wartości.  
+ [out] Liczba całkowita, która jest przesunięcie, względem obiektu w ramce wskaźnika identyfikator typu wartości.  
   
 ## <a name="remarks"></a>Uwagi  
- `pBufferOffset` Wartość to lokalizacja typu wartości w polu. Po `pBufferOffset` została zastosowana do obiektu spakowanego układ klasy typ wartości może służyć do interpretowania wartości obiektu.  
+ `pBufferOffset` Wartość wskazuje lokalizację typ wartości w polu. Po `pBufferOffset` jest stosowany do obiektu w ramce układ klasy typ wartości może służyć do interpretowania wartości obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -54,6 +54,6 @@ HRESULT GetBoxClassLayout(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

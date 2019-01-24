@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2735355097a1f3f581b3a4bc74f08d8f2ebf3bd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e8bb31967a6ad515761e6cd03657f2c834debe5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545559"
 ---
 # <a name="idefinitionappid-interface"></a>IDefinitionAppId — Interfejs
 Reprezentuje unikatowy identyfikator dla kodu, który definiuje aplikacji w bieżącym zakresie.  
@@ -30,19 +30,19 @@ Reprezentuje unikatowy identyfikator dla kodu, który definiuje aplikacji w bie�
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|`IDefinitionAppId::get_Codebase`|Pobiera ciąg formatowania, który reprezentuje kod w tym `IDefinitionAppId` obiektu.|  
+|`IDefinitionAppId::get_Codebase`|Pobiera ciąg formatowania, która przedstawia kod w tym `IDefinitionAppId` obiektu.|  
 |`IDefinitionAppId::put_Codebase`|Ustawia kod to `IDefinitionAppId` wartość ciągu sformatowaną jak określony obiekt.|  
-|`IDefinitionAppId::EnumAppPath`|Pobiera wskaźnika interfejsu do [IEnumDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md) obiekt, który zawiera zestawy w ścieżce bieżącej aplikacji.|  
-|`IDefinitionAppId::SetAppPath`|Ustawia ścieżkę aplikacji dla zestawu w bieżącym zakresie wartości odwołuje się określony [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) obiektu.|  
-|`IDefinitionAppId::get_SubscriptionId`|Pobiera wskaźnik do reprezentację ciągu identyfikatora tokenu dla tej subskrypcji `IDefinitionAppId` obiektu.|  
-|`IDefinitionAppId::put_SubscriptionId`|Ustawia token identyfikator subskrypcji do tego `IDefinitionAppId` obiektu określona wartość ciągu.|  
+|`IDefinitionAppId::EnumAppPath`|Pobiera wskaźnik interfejsu do [ienumdefinitionidentity —](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md) obiekt, który zawiera zestawów w bieżącej ścieżce aplikacji.|  
+|`IDefinitionAppId::SetAppPath`|Ustawia ścieżkę aplikacji dla zestawu w bieżącym zakresie wartości odwołuje się określony [idefinitionidentity —](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) obiektu.|  
+|`IDefinitionAppId::get_SubscriptionId`|Pobiera wskaźnik do reprezentację ciągu identyfikatora tokenu dla subskrypcji w tym `IDefinitionAppId` obiektu.|  
+|`IDefinitionAppId::put_SubscriptionId`|Ustawia token identyfikator subskrypcji to `IDefinitionAppId` obiektu określona wartość ciągu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Isolation.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

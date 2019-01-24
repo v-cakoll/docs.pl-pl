@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: f14e2645772b22a8f6ff2385dcd316a42d1d5cf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88dbecfe6e63248e07b3fdb9102a5cbba4b1b628
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553077"
 ---
 # <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>Wyrażenie cyklicznie wywołuje zawierającą je właściwość &#39; &lt;propertyname&gt;&#39;
-Instrukcja w `Set` procedury definicji właściwości przechowuje wartość w nazwie właściwości.  
+Instrukcja w `Set` procedury definicji właściwości przechowuje wartość do nazwy właściwości.  
   
- Zalecane podejście do przechowywania wartości właściwości jest określenie `Private` zmiennej w kontenerze właściwości i używać go zarówno `Get` i `Set` procedur. `Set` Procedury należy następnie przechowywać wartość przychodzącego w tym `Private` zmiennej.  
+ Zalecane podejście do przechowywania wartości właściwości jest zdefiniowanie `Private` zmiennej w kontenerze właściwości i używać go w obu `Get` i `Set` procedur. `Set` Procedury należy następnie przechowywać wartość przychodzącego w tym `Private` zmiennej.  
   
- `Get` Procedury zachowuje się jak `Function` procedury, można przypisać wartości do nazwy właściwości i zwrócić kontrolkę przez napotkania `End Get` instrukcji. Zalecane podejście jest jednak zawierać `Private` zmiennej jako wartości w [zwracać instrukcji](../../../visual-basic/language-reference/statements/return-statement.md).  
+ `Get` Procedury zachowuje się jak `Function` procedury, dzięki czemu można przypisać wartości do danej nazwy właściwości i przywrócenie kontroli przez napotkania `End Get` instrukcji. Zalecanym podejściem jest jednak obejmują `Private` zmiennej jako wartości w [instrukcji Return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
- `Set` Procedury zachowuje się jak `Sub` procedury, która nie zwraca wartości. W związku z tym nazwa procedura lub właściwość nie ma specjalnego znaczenia w `Set` procedura i nie można zapisać wartości do niego.  
+ `Set` Procedury zachowuje się jak `Sub` procedury, która nie zwraca wartości. W związku z tym, nazwa procedura lub właściwość nie ma specjalnego znaczenia w ramach `Set` procedury, a nie można zapisać wartości do niego.  
   
- Poniższy przykład przedstawia podejście, które mogą być przyczyną tego błędu, następuje zalecane podejście.  
+ Poniższy przykład przedstawia podejście, które może być przyczyną tego błędu, a następnie zalecane podejście.  
   
 ```  
 Public Class illustrateProperties  
@@ -55,15 +55,15 @@ Public Class illustrateProperties
 End Class  
 ```  
   
- Domyślnie ten komunikat jest ostrzeżenie. Aby uzyskać więcej informacji na temat ukrywanie ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ta wiadomość jest ostrzeżenie. Aby uzyskać więcej informacji na temat ukrywania ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC42026  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Należy zmodyfikować definicję właściwości do użycia zalecane podejście, jak pokazano w poprzednim przykładzie.  
+-   Należy zmodyfikować definicję właściwości do użycia zalecane podejście, jak pokazano w powyższym przykładzie.  
   
-## <a name="see-also"></a>Zobacz też  
- [Procedury właściwości](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Set, instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [Procedury właściwości](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+- [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Set, instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)

@@ -10,56 +10,56 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: 71c29cc6d1c7955b889a56b0a6629690a2947c78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21f260262d434ffe3685b226193f2d6cd2125549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548433"
 ---
 # <a name="collection-type-dependency-properties"></a>Właściwości zależności typu kolekcji
-Ten temat zawiera wskazówki i sugerowane wzorce dla implementowania właściwości zależności, których typ właściwości jest typem kolekcji.  
+Ten temat zawiera wskazówki i sugerowane wzorce jak implementować właściwość zależności, gdzie typ właściwości jest typem kolekcji.  
   
  
   
 <a name="implementing"></a>   
-## <a name="implementing-a-collection-type-dependency-property"></a>Implementowanie właściwości zależności typ kolekcji  
- Dla właściwości zależności ogólnie rzecz biorąc, można wzorzec implementacji jest zdefiniowanie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] otoki właściwości, których tej właściwości nie jest obsługiwana przez <xref:System.Windows.DependencyProperty> identyfikator zamiast pola lub innych konstrukcji. W przypadku użycia tego samego wzorca po implementować właściwość typu kolekcji. Jednak właściwość typu kolekcji wprowadza pewne złożoności wzorzec zawsze, gdy typ, który jest zawarty w kolekcji jest <xref:System.Windows.DependencyObject> lub <xref:System.Windows.Freezable> klasy.  
+## <a name="implementing-a-collection-type-dependency-property"></a>Implementowanie właściwości zależności typu kolekcji  
+ Dla właściwości zależności ogólnie rzecz biorąc, implementacja wzorzec stosowanej jest zdefiniowanie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] otoki właściwości, w którym ta właściwość jest wspierana przez <xref:System.Windows.DependencyProperty> identyfikatora, a nie pola lub innej konstrukcji. Podczas implementacji właściwości typu kolekcji, stosować tego samego wzorca. Jednak właściwość typu kolekcji wprowadza złożoność wzorca zawsze wtedy, gdy typ, który znajduje się w tej kolekcji sam <xref:System.Windows.DependencyObject> lub <xref:System.Windows.Freezable> klasy pochodnej.  
   
 <a name="initializing"></a>   
 ## <a name="initializing-the-collection-beyond-the-default-value"></a>Inicjowanie zbierania ponad wartość domyślną  
- Podczas tworzenia właściwości zależności nie określisz wartości domyślnej właściwości jako wartość początkowa pola. Zamiast tego można określić wartość domyślną, za pomocą metadanych właściwości zależności. Jeśli Twoje właściwości jest typem referencyjnym, wartość domyślna określona w metadanych właściwości zależności nie jest wartość domyślną dla każdego wystąpienia; Zamiast tego jest wartość domyślna, która ma zastosowanie do wszystkich wystąpień tego typu. W związku z tym należy zachować ostrożność, aby nie korzystać z pojedynczej kolekcji statycznych zdefiniowany przez metadane właściwości kolekcji pracy wartość domyślną dla nowo utworzonego wystąpienia danego typu. Zamiast tego należy się upewnić, celowo ustaw wartość kolekcji do kolekcji unikatowy (wystąpieniem) jako część logiki konstruktora klasy. W przeciwnym razie zostanie utworzony klasa pojedyncza przypadkowe.  
+ Podczas tworzenia właściwości zależności nie określisz wartość domyślna właściwości jako wartość początkową pola. Zamiast tego należy określić wartość domyślną, za pośrednictwem metadane zależności właściwości. Jeśli Twoja własność jest typem referencyjnym, wartość domyślna określona w metadane zależności właściwości nie jest wartość domyślną dla każdego wystąpienia; Zamiast tego jest wartość domyślna, która ma zastosowanie do wszystkich wystąpień tego typu. W związku z tym należy uważać, aby nie korzystać z pojedynczej kolekcji statyczne, zdefiniowane przez kolekcję metadanych właściwości z wartością domyślną pracy dla nowo utworzonego wystąpienia tego typu. Zamiast tego należy się upewnić, celowo ustaw wartość kolekcji do kolekcji unikatowych (wystąpienie) jako część logiki konstruktora klasy. W przeciwnym razie zostaną utworzone klasy pojedynczej niezamierzone.  
   
- Rozważmy następujący przykład. W poniższej sekcji przykładzie przedstawiono definicję klasy `Aquarium`. Klasa definiuje właściwość zależności typu kolekcji `AquariumObjects`, ogólnego, który używa <xref:System.Collections.Generic.List%601> to typ <xref:System.Windows.FrameworkElement> ograniczenie typu. W <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> wywołania dla właściwości zależności metadanych ustanawia wartość domyślna ma być nowe ogólny <xref:System.Collections.Generic.List%601>.  
+ Rozważmy następujący przykład. Poniższa sekcja przykładzie przedstawiono definicję klasy `Aquarium`. Definiuje właściwości zależności typu kolekcji `AquariumObjects`, ogólny, który używa <xref:System.Collections.Generic.List%601> to typ <xref:System.Windows.FrameworkElement> typu ograniczenia. W <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> wywołania dla właściwości zależności, metadane ustanawia wartość domyślna, która ma być nowy ogólny <xref:System.Collections.Generic.List%601>.  
   
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   
- Jednak jeśli kod pozostanie tak jak pokazano tej wartości domyślne jedną listę jest współdzielona przez wszystkie wystąpienia `Aquarium`. W przypadku uruchomienia następujący kod testu, który jest przeznaczony do wyświetlenia, jak może utworzyć wystąpienia dwa oddzielne `Aquarium` wystąpień i Dodaj jeden różnych `Fish` do każdego z nich, można zobaczyć zaskakująco wyników:  
+ Jednak jeśli właśnie kod przedstawiony, tę wartość domyślną pojedynczej liście jest współdzielona przez wszystkie wystąpienia elementu `Aquarium`. Po uruchomieniu następujący kod testu, który jest przeznaczony do pokazania, jak można utworzyć dwa oddzielne `Aquarium` wystąpień, a następnie dodaj pojedynczy inny `Fish` do każdego z nich można zobaczyć Zaskakujące wyniki:  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
   
- Zamiast każdej kolekcji o licznik równy jeden Każda kolekcja ma licznika dwóch! Jest to spowodowane każdego `Aquarium` dodana jego `Fish` do kolekcji wartości domyślne, wynika z jednego konstruktora wywołanie w metadanych i dlatego jest współużytkowana przez wszystkie wystąpienia. Ta sytuacja jest prawie nigdy nie chcesz.  
+ Zamiast poszczególnych kolekcji o liczenia jedengo Każda kolekcja ma liczbę dwa! Jest to spowodowane każdego `Aquarium` dodano jego `Fish` jako kolekcji wartości domyślnej korzystaniem przez wywołanie konstruktora pojedynczego w metadanych i dlatego jest współużytkowana przez wszystkie wystąpienia. Ta sytuacja jest prawie nigdy nie należy.  
   
- Aby rozwiązać ten problem, należy zresetować wartość właściwości zależności kolekcji do unikatowego wystąpienia, jako część wywołania konstruktora klasy. Ponieważ ta właściwość jest właściwością tylko do odczytu zależności, użyj <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> metodę, aby ustawić, za pomocą <xref:System.Windows.DependencyPropertyKey> który jest dostępny tylko w klasie.  
+ Aby rozwiązać ten problem, możesz zresetować wartość właściwości zależności kolekcji do unikatowego wystąpienia, jako część wywołania konstruktora klasy. Ponieważ właściwość ma wartość właściwości zależności tylko do odczytu, możesz użyć <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> metodę, aby ustawić go przy użyciu <xref:System.Windows.DependencyPropertyKey> , jest dostępny tylko w klasie.  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
- Teraz, po przeprowadzeniu, że sama ponownie testowania kodu, można zobaczyć więcej oczekiwanych rezultatów, gdzie każdy `Aquarium` obsługiwane unikatowych pobrania.  
+ Teraz po uruchomieniu, że takie same ponownie przetestuj kod, zostanie wyświetlona więcej oczekiwanych wyników, gdzie każdy `Aquarium` obsługiwane swoją własną unikatową kolekcję.  
   
- Byłoby niewielkich zmian w tym wzorcu Jeśli zdecydujesz się na Twoje właściwości kolekcji można odczytu i zapisu. W takim przypadku należy wywołać metody dostępu publicznego zestawu z konstruktora w celu inicjowania, który będzie nadal wywoływania nonkey podpis <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> w ramach Twojej otoki zestawu przy użyciu publicznego <xref:System.Windows.DependencyProperty> identyfikator.  
+ Istniała nieznaczne modyfikacją tego wzorca, jeśli została wybrana opcja mają swoje właściwości kolekcji można odczytu i zapisu. W takim przypadku można wywołać metody dostępu publicznego zestawu z konstruktora, celu inicjowania, które nadal będą wywoływać nonkey podpis <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> w ramach Twojej otoki zestawu przy użyciu publicznego <xref:System.Windows.DependencyProperty> identyfikatora.  
   
-## <a name="reporting-binding-value-changes-from-collection-properties"></a>Raportowanie powiązanie zmiany wartości z właściwości kolekcji  
- Właściwości kolekcji, która jest elementem właściwości zależności nie raportuje automatycznie zmiany do właściwości podrzędnych. W przypadku tworzenia powiązania w kolekcji, może to spowodować powiązania z raportowania zmian, w związku z tym unieważnia niektóre scenariusze powiązania danych. Jednak jeśli używany jest typ kolekcji <xref:System.Windows.FreezableCollection%601> jako typ kolekcji, następnie zmiany podrzędnych zawartych w niej elementów w kolekcji są prawidłowo raportowane i powiązanie działa zgodnie z oczekiwaniami.  
+## <a name="reporting-binding-value-changes-from-collection-properties"></a>Raportowanie zmiany wartości powiązania z właściwościami kolekcji  
+ Właściwość kolekcji, która sama jest właściwość zależności nie raportuje automatycznie zmiany do właściwości podrzędnych. W przypadku tworzenia powiązań do kolekcji, może to spowodować tworzenie powiązań z raportowania zmian, tym samym unieważniając Niektóre scenariusze powiązania danych. Jednak jeśli używasz typu kolekcji <xref:System.Windows.FreezableCollection%601> jako typ kolekcji, następnie zmiany właściwości podrzędnych elementów zawartych w kolekcji są prawidłowo raportowane, oraz powiązanie działa zgodnie z oczekiwaniami.  
   
- Aby włączyć podwłaściwości powiązania w kolekcji obiektów zależności, należy utworzyć jako typ właściwości kolekcji <xref:System.Windows.FreezableCollection%601>, z ograniczeniem typu dla tej kolekcji do dowolnego <xref:System.Windows.DependencyObject> klasy.  
+ Aby włączyć powiązania właściwości podrzędnej w kolekcji obiektów zależności, Utwórz właściwość kolekcji jako typ <xref:System.Windows.FreezableCollection%601>, z ograniczeniem typu dla tej kolekcji do dowolnego <xref:System.Windows.DependencyObject> klasy pochodnej.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.FreezableCollection%601>  
- [Klasy XAML i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.FreezableCollection%601>
+- [Klasy XAML i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)

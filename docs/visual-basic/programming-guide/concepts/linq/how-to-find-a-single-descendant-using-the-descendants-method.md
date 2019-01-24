@@ -1,19 +1,19 @@
 ---
-title: 'Porady: znajdowanie pojedynczego podrzędnym, przy użyciu metody elementy podrzędne (Visual Basic)'
+title: 'Instrukcje: Znajdź pojedynczego elementu potomnego przy użyciu metody elementów potomnych (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 5c4e857d28ab4660638198c054cf93bf94a621a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24bad2bc6ac121cd2be16933161a38a6a6fcb1e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642854"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552453"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Porady: znajdowanie pojedynczego podrzędnym, przy użyciu metody elementy podrzędne (Visual Basic)
-Można użyć <xref:System.Xml.Linq.XContainer.Descendants%2A> osi metodę, aby szybko napisać kod, aby znaleźć pojedynczy jednoznacznie o nazwie elementu. Ta technika jest szczególnie przydatne, gdy chcesz znaleźć określonego obiektu podrzędnego o określonej nazwie. Można napisać kod, aby przejść do żądanego elementu, ale często jest szybsze i łatwiejsze do pisania kodu za pomocą <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Instrukcje: Znajdź pojedynczego elementu potomnego przy użyciu metody elementów potomnych (Visual Basic)
+Możesz użyć <xref:System.Xml.Linq.XContainer.Descendants%2A> metodę osi, aby szybko napisać kod, aby znaleźć pojedynczy jednoznacznie o nazwie elementu. Ta technika jest szczególnie przydatne, gdy chcesz znaleźć określonego obiektu podrzędnego o określonej nazwie. Można napisać kod, aby przejść do żądanego elementu, ale często jest szybsze i prostsze do pisania kodu za pomocą <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto <xref:System.Linq.Enumerable.First%2A> — operator zapytań standardowa.  
+ W tym przykładzie użyto <xref:System.Linq.Enumerable.First%2A> standardowego operatora zapytania.  
   
 ```vb  
 Dim root As XElement = _  
@@ -44,7 +44,7 @@ GC3 Value
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeni nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -80,5 +80,5 @@ End Module
 GC3 Value  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawowe zapytania (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Podstawowe zapytania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

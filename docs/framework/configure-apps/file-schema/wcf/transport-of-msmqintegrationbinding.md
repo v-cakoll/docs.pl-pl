@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; w &lt;msmqIntegrationBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: 27876d819f766c130a29b07524e30ac77e9ba05d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6cd930a2ab097e50edfb9bc4eba5c8d29484ad29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550555"
 ---
 # <a name="lttransportgt-of-ltmsmqintegrationbindinggt"></a>&lt;transport&gt; w &lt;msmqIntegrationBinding&gt;
 Definiuje ustawienia zabezpieczeń transport integracji usługi kolejkowania komunikatów.  
@@ -16,7 +16,7 @@ Definiuje ustawienia zabezpieczeń transport integracji usługi kolejkowania kom
 \<powiązania >  
 msmqIntegrationBinding  
 \<Powiązanie >  
-\<Zabezpieczenia >  
+\<security>  
 \<transport>  
   
 ## <a name="syntax"></a>Składnia  
@@ -54,14 +54,14 @@ msmqIntegrationBinding
 ## <a name="remarks"></a>Uwagi  
  Ten element hermetyzuje ustawienia zabezpieczeń transport integracji usługi kolejkowania komunikatów. Ustawienia są takie same, Integracja usługi kolejkowania komunikatów i umieszczonych w kolejce transportów. Umożliwia ustawienie Tryb uwierzytelniania, algorytmów szyfrowania, Secure Hash Algorithm i poziom ochrony.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.MsmqTransportSecurity>  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.MsmqTransportSecurity>
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

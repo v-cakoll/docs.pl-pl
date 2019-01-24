@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42330296defe90980dd431ce39765a549057b82a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4e7b62b7eb038d553b28fbd6422175d511df88d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540549"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess — Metoda
 Powiadamia debugera, że proces został zakończony.  
@@ -37,17 +37,17 @@ HRESULT ExitProcess (
   
 #### <a name="parameters"></a>Parametry  
  `pProcess`  
- [in] Wskaźnik do obiektu ICorDebugProcess, który reprezentuje procesu.  
+ [in] Wskaźnik do obiektu ICorDebugProcess, który reprezentuje proces.  
   
 ## <a name="remarks"></a>Uwagi  
- Nie można kontynuować z `ExitProcess` zdarzeń. To zdarzenie może wyzwalać asynchronicznie z innymi zdarzeniami podczas procesu wydaje się być zatrzymana. Może to wystąpić, jeśli proces zakończy się podczas zatrzymana, zazwyczaj z powodu niektóre siły zewnętrzne.  
+ Nie można kontynuować z `ExitProcess` zdarzeń. To zdarzenie może wyzwalać asynchronicznie z innymi zdarzeniami podczas procesu wydaje się być zatrzymana. Może to wystąpić, jeśli proces zakończy się po zatrzymaniu zwykle ze względu na pewne siły zewnętrzne.  
   
- Jeśli środowisko uruchomieniowe języka wspólnego (CLR) wysyła już zarządzane wywołania zwrotnego, to zdarzenie zostanie opóźnione aż do po zwrócił wywołanie zwrotne.  
+ Jeśli środowisko uruchomieniowe języka wspólnego (CLR) wysyła już zarządzane wywołania zwrotnego, to zdarzenie zostanie opóźnione aż do po zwrócił wywołania zwrotnego.  
   
- `ExitProcess` Zdarzenie jest tylko zdarzenia zakończenia i zwalniania, które może być wywoływana w zamknięcia.  
+ `ExitProcess` Zdarzeń to jedyne zdarzenie zakończenia/zwalnianie, która może zostać wywołana podczas zamykania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -55,5 +55,5 @@ HRESULT ExitProcess (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

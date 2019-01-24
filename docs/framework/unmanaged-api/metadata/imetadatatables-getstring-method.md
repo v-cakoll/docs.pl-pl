@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ed3501930b94eae59cf38355f8255ecf4165bcc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c457d8a6b3ab187b7d02c9c9be800c4ef1f0f58c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537988"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString — Metoda
-Pobiera ciąg pod określonym indeksem z kolumną tabeli w bieżącym zakresie odwołania.  
+Pobiera parametry dla podanego indeksu z kolumną tabeli w bieżącym zakresie odwołania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,20 +38,20 @@ HRESULT GetString (
   
 #### <a name="parameters"></a>Parametry  
  `ixString`  
- [in] Indeks, w którym należy uruchomić wyszukać następnej wartości.  
+ [in] Indeks, od której należy rozpocząć wyszukiwanie następnej wartości.  
   
  `ppString`  
- [out] Wskaźnik na wskaźnik do wartości zwracany ciąg.  
+ [out] Wskaźnik do wskaźnika do wartości zwracanego ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

@@ -2,12 +2,12 @@
 title: Wysyłanie według elementu treści
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 58d505770a495e5e423104b9fb912d088ca56f86
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 43f429a0111198bce17f750b855d8e5588b947b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547910"
 ---
 # <a name="dispatch-by-body-element"></a>Wysyłanie według elementu treści
 Ten przykład demonstruje sposób implementacji alternatywnego algorytmu do przypisywania komunikatów przychodzących do operacji.  
@@ -179,4 +179,4 @@ public interface IDispatchedByBody
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

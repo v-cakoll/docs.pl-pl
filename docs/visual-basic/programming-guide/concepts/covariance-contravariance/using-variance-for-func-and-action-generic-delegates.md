@@ -1,21 +1,21 @@
 ---
-title: Korzystanie z wariancji dla Func i akcji Delegaty ogólne (Visual Basic)
+title: Korzystanie z wariancji dla Func i akcji delegatów ogólnych (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: e4c878f65867c575a1691423df583662d72a257c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 134b3c0776e100a4bdc7e902bc8b41477a0ee264
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549460"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Korzystanie z wariancji dla Func i akcji Delegaty ogólne (Visual Basic)
-Poniższe przykłady pokazują, jak używać Kowariancja i kontrawariancja w `Func` i `Action` delegaty ogólne, aby umożliwić ponowne użycie metody i zapewniają większą elastyczność w kodzie.  
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Korzystanie z wariancji dla Func i akcji delegatów ogólnych (Visual Basic)
+Te przykłady przedstawiają sposób zastosowania kowariancji i kontrawariancji w `Func` i `Action` delegatów ogólnych, które umożliwiają wielokrotne użycie metod i zapewniają większą elastyczność w kodzie.  
   
- Aby uzyskać więcej informacji dotyczących kowariancji i kontrawariancji, zobacz [wariancji w Delegatach (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ Aby uzyskać więcej informacji dotyczących kowariancji i kontrawariancji, zobacz [wariancje w Delegatach (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
-## <a name="using-delegates-with-covariant-type-parameters"></a>Używanie delegatów z parametrami typu kowariantnego  
- Poniższy przykład przedstawia zalety obsługi Kowariancja w ogólnej `Func` delegatów. `FindByTitle` Metoda przyjmuje parametr `String` wpisz i zwraca obiekt `Employee` typu. Jednak można przypisać tę metodę, aby `Func(Of String, Person)` delegata, ponieważ `Employee` dziedziczy `Person`.  
+## <a name="using-delegates-with-covariant-type-parameters"></a>Używanie delegatów z Kowariantnymi parametrami typu  
+ W poniższym przykładzie pokazano zalety obsługi Kowariancja w ogólnej `Func` delegatów. `FindByTitle` Metoda przyjmuje parametr `String` typu i zwraca obiekt `Employee` typu. Jednak można przypisać tę metodę w celu `Func(Of String, Person)` delegata, ponieważ `Employee` dziedziczy `Person`.  
   
 ```vb  
 ' Simple hierarchy of classes.  
@@ -52,8 +52,8 @@ Class Finder
 End Class  
 ```  
   
-## <a name="using-delegates-with-contravariant-type-parameters"></a>Używanie delegatów z parametrami typu kontrawariantnego  
- Poniższy przykład przedstawia zalety obsługi kontrawariancja w ogólnej `Action` delegatów. `AddToContacts` Metoda przyjmuje parametr `Person` typu. Jednak można przypisać tę metodę, aby `Action(Of Employee)` delegata, ponieważ `Employee` dziedziczy `Person`.  
+## <a name="using-delegates-with-contravariant-type-parameters"></a>Używanie delegatów z parametrami kontrawariantnego typu  
+ W poniższym przykładzie pokazano zalety obsługi kontrawariancja w ogólnej `Action` delegatów. `AddToContacts` Metoda przyjmuje parametr `Person` typu. Jednak można przypisać tę metodę w celu `Action(Of Employee)` delegata, ponieważ `Employee` dziedziczy `Person`.  
   
 ```vb  
 Public Class Person  
@@ -89,6 +89,6 @@ Class AddressBook
 End Class  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Kowariancja i Kontrawariancja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)  
- [Typy ogólne](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Kowariancja i Kontrawariancja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
+- [Typy ogólne](~/docs/standard/generics/index.md)

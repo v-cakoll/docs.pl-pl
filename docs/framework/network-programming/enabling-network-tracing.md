@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: b289aa2a60deb10ebda0ca8efc3e172caf2df8a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 29d0f33960534e8a5521b36eb6cc11655ab89c6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540261"
 ---
 # <a name="enabling-network-tracing"></a>Włączanie śledzenia sieci
 Śledzenie sieci zapewnia dostęp do informacji o wywołaniach metod i ruchu sieciowym generowanym przez zarządzaną aplikację. Należy wykonać następujące zadania w celu włączenia funkcji śledzenia sieci w Twojej aplikacji:  
   
--   Kompiluj swój kod z włączonym śledzeniem. Zobacz [porady: kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) Aby uzyskać więcej informacji na temat przełączniki kompilatora, wymagane, aby włączyć śledzenie.  
+-   Kompiluj swój kod z włączonym śledzeniem. Zobacz [jak: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) Aby uzyskać więcej informacji na temat przełączniki kompilatora, wymagane, aby włączyć śledzenie.  
   
 -   Określ miejsce docelowe danych wyjściowych śledzenia.  
   
--   Skonfiguruj zachowanie funkcji śledzenia sieci. Zobacz [porady: Konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) Aby uzyskać szczegółowe informacje.  
+-   Skonfiguruj zachowanie funkcji śledzenia sieci. Zobacz [jak: Konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) Aby uzyskać szczegółowe informacje.  
   
  Najpopularniejsze miejsca docelowe śledzenia, nazywane również detektorów śledzenia są odbiornika domyślne, a plik dziennika.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "50202071"
 </system.diagnostics>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Interpretowanie śledzenia sieci](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
- [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>Zobacz także
+- [Interpretowanie śledzenia sieci](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+- [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

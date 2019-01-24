@@ -16,46 +16,46 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e3e70749a768377ea470bc44a66b9fdabbb1f93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5dadbe757464b24ef532fdd8abe5457fa995348
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555066"
 ---
 # <a name="iceegen-interface"></a>ICeeGen — Interfejs
 Udostępnia metody dla kompilacji dynamicznej kodu.  
   
- Ten interfejs jest przestarzały i nie powinna być używana.  
+ Ten interfejs jest przestarzała i nie powinna być używana.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[AddSectionReloc, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|Nieaktualne. Dodaje instrukcję .reloc do ścieżki bazowej kodu.|  
-|[AllocateMethodBuffer, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|Nieaktualne. Tworzy buforu o określonym rozmiarze metody i pobiera adres względny wirtualnej metody.|  
-|[ComputePointer, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-computepointer-method.md)|Nieaktualne. Określa bufor dla określonego kodu sekcji.|  
-|[EmitString, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|Nieaktualne. Emituje określonego ciągu w bazie kodu.|  
-|[GenerateCeeFile, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|Nieaktualne. Generuje plik bazowej kodu, który zawiera kod podstawowy załadowanych obecnie do tego `ICeeGen`.|  
-|[GenerateCeeMemoryImage, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|Nieaktualne. Generuje obrazu w pamięci dla ścieżki bazowej kodu.|  
-|[GetIlSection, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getilsection-method.md)|Nieaktualne. Pobiera część bazy kodu języka pośredniego odwołuje się określony uchwyt.|  
+|[AddSectionReloc, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|Nieaktualne. Dodaje instrukcję .reloc do bazy kodu.|  
+|[AllocateMethodBuffer, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|Nieaktualne. Tworzy buforu rozmiaru określonego dla metody, a następnie pobiera adres względny wirtualnej metody.|  
+|[ComputePointer, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-computepointer-method.md)|Nieaktualne. Określa bufor dla sekcji określonego kodu.|  
+|[EmitString, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|Nieaktualne. Emituje określonego ciągu w kodzie podstawowym.|  
+|[GenerateCeeFile, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|Nieaktualne. Generuje plik bazy kodu, który zawiera kod podstawowy obecnie załadowane w tym `ICeeGen`.|  
+|[GenerateCeeMemoryImage, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|Nieaktualne. Generuje obrazu w pamięci dla bazy kodu.|  
+|[GetIlSection, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getilsection-method.md)|Nieaktualne. Pobiera części bazy kodu języka pośredniego przywoływane przez określone dojście.|  
 |[GetIMapTokenIface, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getimaptokeniface-method.md)|Nieaktualne. Pobiera interfejs odwołuje się określony token.|  
-|[GetMethodBuffer, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|Nieaktualne. Pobiera odpowiedni rozmiar buforu dla metody pod określonym adresem wirtualnego względną.|  
-|[GetSectionBlock, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectionblock-method.md)|Nieaktualne. Pobiera blok sekcji ścieżki bazowej kodu.|  
-|[GetSectionCreate, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectioncreate-method.md)|Nieaktualne. Generuje i pobiera sekcji kodu przy użyciu określonej nazwy i wartości flag.|  
-|[GetSectionDataLen, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectiondatalen-method.md)|Nieaktualne. Pobiera długość określonej sekcji.|  
-|[GetString, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstring-method.md)|Nieaktualne. Pobiera ciąg przechowywanych na określony wirtualny adres względny.|  
-|[GetStringSection, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstringsection-method.md)|Nieaktualne. Pobiera reprezentację ciągu sekcji kod odwołuje się określony uchwyt.|  
-|[TruncateSection, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-truncatesection-method.md)|Nieaktualne. Obcina sekcji określonego kodu przez określony czas.|  
+|[GetMethodBuffer, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|Nieaktualne. Pobiera odpowiedni rozmiar buforu dla metody o określonym względny adres wirtualny.|  
+|[GetSectionBlock, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectionblock-method.md)|Nieaktualne. Pobiera blok części bazy kodu.|  
+|[GetSectionCreate, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectioncreate-method.md)|Nieaktualne. Generuje i pobiera sekcję kodu przy użyciu określonej nazwy i wartości flag.|  
+|[GetSectionDataLen, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectiondatalen-method.md)|Nieaktualne. Pobiera długość określona sekcja.|  
+|[GetString, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstring-method.md)|Nieaktualne. Pobiera ciąg przechowywaną w określonej względny adres wirtualny.|  
+|[GetStringSection, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstringsection-method.md)|Nieaktualne. Pobiera reprezentację ciągu sekcję kodu przywoływane przez określone dojście.|  
+|[TruncateSection, metoda](../../../../docs/framework/unmanaged-api/metadata/iceegen-truncatesection-method.md)|Nieaktualne. Obcina sekcję kodu określonego przez określony czas.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

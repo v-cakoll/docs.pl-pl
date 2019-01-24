@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 14b05ccf-bcd8-4045-9bae-f7679cd98711
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 5b4bd79d9895a2868f9caf6ac4a2e67faef5f9c0
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: fa9ae1bf544a879c9152db05a16765e6a4bec244
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547082"
 ---
 # <a name="ui-automation-support-for-the-splitbutton-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu SplitButton
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Ten temat zawiera informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pomocy technicznej dla kontrolek typu SplitButton. W [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], typ formantu to zestaw warunków, które kontrolki muszą spełnić, aby można było używać <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> właściwości. Warunki obejmują konkretne wskazówki dotyczące [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struktury drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wartości właściwości i wzorce kontrolki.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "49121340"
   
 |Formant widoku|Widok zawartości|  
 |------------------|------------------|  
-|Przycisk podziału<br /><br /> <ul><li>Obraz (0 lub 1)</li><li>Tekst (0 lub 1)</li><li>Przycisk (1 lub 2)<br /><br /> <ul><li>Menu (0 lub 1; pojawia się jako element podrzędny przycisku, który obsługuje expandcollapse dla wzorca)</li><li>Element MenuItem (od 1 do wielu)</li></ul></li></ul>|Przycisk podziału<br /><br /> — Element MenuItem (od 1 do wielu)|  
+|SplitButton<br /><br /> <ul><li>Obraz (0 lub 1)</li><li>Tekst (0 lub 1)</li><li>Przycisk (1 lub 2)<br /><br /> <ul><li>Menu (0 lub 1; pojawia się jako element podrzędny przycisku, który obsługuje expandcollapse dla wzorca)</li><li>Element MenuItem (od 1 do wielu)</li></ul></li></ul>|SplitButton<br /><br /> — Element MenuItem (od 1 do wielu)|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Właściwości automatyzacji interfejsu użytkownika wymagane  
@@ -45,11 +45,11 @@ ms.locfileid: "49121340"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Zobacz uwagi.|Formant może otrzymywać fokus klawiatury, musi obsługiwać tę właściwość.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|"Wróć"|Kontrolka przycisku podziału nazwa jest wyświetlana na przycisku.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Null|Kontrolki przycisku podziału nie ma etykiety tekst statyczny.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Przycisk podziału|Ta wartość jest taka sama dla wszystkich platform tworzenia interfejsu użytkownika.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|SplitButton|Ta wartość jest taka sama dla wszystkich platform tworzenia interfejsu użytkownika.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"podziału button"|Zlokalizowany ciąg odpowiadający typowi kontrolki SplitButton.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Zobacz uwagi.|Tekst pomocy można wskazać wynik aktywacji przycisk podziału, zwykle jest to ten sam typ informacje znajdujące się za pośrednictwem etykietka narzędzia.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Kontrolka przycisku podziału zawiera informacje dla użytkownika końcowego.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Kontrolka przycisku podziału jest widoczna dla użytkownika końcowego.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Prawda|Kontrolka przycisku podziału zawiera informacje dla użytkownika końcowego.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Prawda|Kontrolka przycisku podziału jest widoczna dla użytkownika końcowego.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika wymagane  
@@ -78,7 +78,7 @@ ms.locfileid: "49121340"
 ## <a name="splitbutton-control-example"></a>Kontrolka SplitButton przykład  
  Na poniższym obrazie przedstawiono typ formantu SplitButton formantu siatki danych.  
   
- ![Przycisk podziału](../../../docs/framework/ui-automation/media/uiauto-splitbutton-detailed.gif "uiauto_splitbutton_detailed")  
+ ![Split button](../../../docs/framework/ui-automation/media/uiauto-splitbutton-detailed.gif "uiauto_splitbutton_detailed")  
   
  Kontrolki i zawartości widok drzewa automatyzacji interfejsu użytkownika, które odnoszą się do kontrolki przycisku grid i podział danych jest wyświetlana poniżej. Wzorce kontrolki dla każdego elementu automatyzacji są wyświetlane w nawiasach.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "49121340"
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |<ul><li>Przycisk podziału "Name" (expandcollapse dla wywołania)</li><li>Przycisk "Więcej opcji" (Wywołaj)<br /><br /> <ul><li>Menu</li><li>Element MenuItem</li><li>…</li></ul></li></ul>|<ul><li>Przycisk podziału "Name" (expandcollapse dla wywołania)</li><li>Przycisk "Więcej opcji" (Wywołaj)<br /><br /> <ul><li>Menu</li><li>Element MenuItem</li><li>…</li></ul></li></ul>|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Automation.ControlType.SplitButton>  
- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Automation.ControlType.SplitButton>
+- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

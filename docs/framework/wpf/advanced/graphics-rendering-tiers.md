@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 9fb24e13ab684170baf5ac3001d3a2d4bcd6df7e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 85631433534a2cd962e398fe435275aa293405a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543857"
 ---
 # <a name="graphics-rendering-tiers"></a>Poziomy zmiany grafiki
 Warstwy renderowania definiuje poziom możliwości sprzętu grafiki i wydajności na urządzeniu z systemem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
@@ -126,13 +126,13 @@ Warstwy renderowania definiuje poziom możliwości sprzętu grafiki i wydajnośc
   
  Po uruchomieniu [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] narzędzia diagnostycznego okno główne zawiera zbiór kart, które umożliwiają wyświetlanie i diagnozowanie [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-powiązane informacje. Na przykład **systemu** zawiera informacje o systemie o komputerze oraz określa wersję [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] zainstalowanej na komputerze.  
   
- ![Screenhot: Narzędzie diagnostyczne DirectX](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Screenhot: DirectX Diagnostic Tool](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Narzędzie diagnostyczne DirectX głównego okna.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.RenderCapability>  
- <xref:System.Windows.Media.RenderOptions>  
- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Pakiet wydajności WPF](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)  
- [Ustawienia rejestru renderowania grafiki](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [Animacja — porady i wskazówki](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.RenderCapability>
+- <xref:System.Windows.Media.RenderOptions>
+- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)
+- [Ustawienia rejestru renderowania grafiki](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
+- [Animacja — porady i wskazówki](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

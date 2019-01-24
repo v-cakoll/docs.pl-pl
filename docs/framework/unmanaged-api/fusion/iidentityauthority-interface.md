@@ -16,45 +16,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 692ac4ef4fe8ea64c6a63dc2f02cc04244a842c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab8965ca5d6c9c96cea5f5b351547ce2d4dfacc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546283"
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority — Interfejs
-Zarządza tożsamości klucze obiekty kod.  
+Zarządza kluczy tożsamości dla obiektów kodu.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|`IIdentityAuthority::AreDefinitionsEqual`|Pobiera wartość wskazującą, czy dwa określone [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) wystąpienia są takie same.|  
-|`IIdentityAuthority::AreReferencesEqual`|Pobiera wartość wskazującą, czy dwa określone [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) wystąpienia są takie same.|  
+|`IIdentityAuthority::AreDefinitionsEqual`|Pobiera wartość wskazującą, czy dwa określone [idefinitionidentity —](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) wystąpień są takie same.|  
+|`IIdentityAuthority::AreReferencesEqual`|Pobiera wartość wskazującą, czy dwa określone [ireferenceidentity —](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) wystąpień są takie same.|  
 |`IIdentityAuthority::AreTextualDefinitionsEqual`|Pobiera wartość wskazującą, czy dwa oświadczenia tożsamości definicji określonego ciągu są takie same.|  
-|`IIdentityAuthority::AreTextualReferencesEqual`|Pobiera wartość wskazującą, czy dwa oświadczenia tożsamości odwołania określonego ciągu są takie same.|  
+|`IIdentityAuthority::AreTextualReferencesEqual`|Pobiera wartość wskazującą, czy dwa oświadczenia tożsamości odwołanie do określonego ciągu są takie same.|  
 |`IIdentityAuthority::CreateDefinition`|Pobiera wskaźnik do nowego `IDefinitionIdentity` wystąpienia, który reprezentuje obiekt kodu w bieżącym zakresie.|  
 |`IIdentityAuthority::CreateReference`|Pobiera wskaźnik do nowego `IReferenceIdentity` wystąpienia, który reprezentuje obiekt kodu w bieżącym zakresie.|  
-|`IIdentityAuthority::DefinitionToText`|Pobiera wersję sformatowanego ciągu określonego `IDefinitionIdentity`.|  
-|`IIdentityAuthority::DefinitionToTextBuffer`|Wypełnia bufor określony znaków dwubajtowych w ciągu wersji z określonym `IDefinitionIdentity`.|  
-|`IIdentityAuthority::DoesDefinitionMatchReference`|Pobiera wartość wskazującą, czy określony `IDefinitionIdentity` i `IReferenceIdentity` wystąpień odwoływać się do tego samego obiektu kodu.|  
-|`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|Pobiera wartość wskazującą, czy określone ciągi odwoływać się do tego samego obiektu kodu.|  
-|`IIdentityAuthority::GenerateDefinitionKey`|Pobiera wskaźnik do nowo utworzony ciąg klucza dla określonego `IDefinitionIdentity`.|  
-|`IIdentityAuthority::GenerateReferenceKey`|Pobiera wskaźnik do nowo utworzony ciąg klucza dla określonego `IReferenceIdentity`.|  
+|`IIdentityAuthority::DefinitionToText`|Pobiera wersję sformatowany ciąg, z określonym `IDefinitionIdentity`.|  
+|`IIdentityAuthority::DefinitionToTextBuffer`|Wypełnia buforu określonego znaku dwubajtowego ciągu wersję określonego `IDefinitionIdentity`.|  
+|`IIdentityAuthority::DoesDefinitionMatchReference`|Pobiera wartość wskazującą, czy określony `IDefinitionIdentity` i `IReferenceIdentity` wystąpień odnoszą się do tego samego obiektu kodu.|  
+|`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|Pobiera wartość wskazującą, czy określone ciągi odnoszą się do tego samego obiektu kodu.|  
+|`IIdentityAuthority::GenerateDefinitionKey`|Pobiera wskaźnik do ciągu nowo utworzony klucz dla określonego `IDefinitionIdentity`.|  
+|`IIdentityAuthority::GenerateReferenceKey`|Pobiera wskaźnik do ciągu nowo utworzony klucz dla określonego `IReferenceIdentity`.|  
 |`IIdentityAuthority::HashDefinition`|Pobiera wartość skrótu dla określonego `IDefinitionIdentity`.|  
 |`IIdentityAuthority::HashReference`|Pobiera wartość skrótu dla określonego `IreferenceIdentity`.|  
-|`IIdentityAuthority::ReferenceToText`|Pobiera wersję sformatowanego ciągu określonego `IReferenceIdentity`.|  
-|`IIdentityAuthority::ReferenceToTextBuffer`|Wypełnia bufor określony znaków dwubajtowych w ciągu wersji z określonym `IReferenceIdentity`.|  
-|`IIdentityAuthority::TextToDefinition`|Pobiera wskaźnika interfejsu do `IDefinitionIdentity` ciąg w formacie wygenerowane z określonego wystąpienia.|  
-|`IIdentityAuthority::TextToReference`|Pobiera wskaźnika interfejsu do `IReferenceIdentity` ciąg w formacie wygenerowane z określonego wystąpienia.|  
+|`IIdentityAuthority::ReferenceToText`|Pobiera wersję sformatowany ciąg, z określonym `IReferenceIdentity`.|  
+|`IIdentityAuthority::ReferenceToTextBuffer`|Wypełnia buforu określonego znaku dwubajtowego ciągu wersję określonego `IReferenceIdentity`.|  
+|`IIdentityAuthority::TextToDefinition`|Pobiera wskaźnik interfejsu do `IDefinitionIdentity` ciąg w formacie wygenerowany na podstawie określonego wystąpienia.|  
+|`IIdentityAuthority::TextToReference`|Pobiera wskaźnik interfejsu do `IReferenceIdentity` ciąg w formacie wygenerowany na podstawie określonego wystąpienia.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Isolation.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

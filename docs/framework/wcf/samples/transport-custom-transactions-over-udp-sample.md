@@ -2,12 +2,12 @@
 title: 'Transport: Przykład niestandardowych transakcji przeprowadzanych za pośrednictwem protokołu UDP'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: b3a105194ceef9d9091dfbc9521fd47978517f89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 931cedfeb5604b00ec1cf3f4d2742e2dff2eacca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552215"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transport: Przykład niestandardowych transakcji przeprowadzanych za pośrednictwem protokołu UDP
 Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki w Windows Communication Foundation (WCF)[rozszerzalność transportu](../../../../docs/framework/wcf/samples/transport-extensibility.md). Rozszerza przykładowe transportu UDP do obsługi przepływu transakcji niestandardowe i zademonstrowano użycie <xref:System.ServiceModel.Channels.TransactionMessageProperty> właściwości.  
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- [Transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) przykładowy używa pakietów UDP do przekazywania wiadomości między klientem a usługą. [Transportu: Przykładowe Transport w niestandardowych](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) używa ten sam mechanizm do transportu komunikatów, ale gdy transakcja jest przepływ, jest wstawiany w pakiecie UDP oraz zakodowanego komunikatu.  
+ [Transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) przykładowy używa pakietów UDP do przekazywania wiadomości między klientem a usługą. [Transportu: Niestandardowe przykładowe transportu](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) używa ten sam mechanizm do transportu komunikatów, ale gdy transakcja jest przepływ, jest wstawiany w pakiecie UDP oraz zakodowanego komunikatu.  
   
 ```  
 byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -262,5 +262,5 @@ if (transaction != null)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## <a name="see-also"></a>Zobacz też  
- [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>Zobacz także
+- [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

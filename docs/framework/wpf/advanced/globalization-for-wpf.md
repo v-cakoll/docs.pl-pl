@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: d2bb4c9a00f31cb87ad8890591aa190fac6384f9
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d7b544fcb308960ff86b83655d60cb1453b6571a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543818"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 W tym temacie przedstawiono problemy, które należy wiedzieć podczas pisania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji na rynek globalny. Globalizacja programistyczny są zdefiniowane w [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] w `System.Globalization`.
@@ -73,15 +73,15 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 
 -   Arabski
 
--   Bengali
+-   Bengalski
 
--   Dewanagari
+-   Devanagari
 
 -   Cyrylica
 
 -   grecki
 
--   Gujarati
+-   Gudżarati
 
 -   Gurmukhi
 
@@ -95,7 +95,7 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 
 -   Łaciński
 
--   Malayalam
+-   Malajalam
 
 -   Mongolian
 
@@ -123,7 +123,7 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 
 -   Myanmar
 
--   Syngaleski
+-   Sinhala
 
  System pisma aparatów obsługi [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] czcionki mogą obejmować [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] tabelach układu, które umożliwiają twórcom czcionki projektowania lepiej międzynarodowych wysokiej klasy związane z typografią czcionek i. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Czcionki tabele zawierają informacje dotyczące podstawienia symbol, pozycjonowanie symbol, uzasadnienie i położenie punktu odniesienia, umożliwiając aplikacji przetwarzanie tekstu w celu zwiększenia układu tekstu.
 
@@ -180,5 +180,5 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>Zobacz też
- [Przeglądanie globalizacji i lokalizacji WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Przeglądanie globalizacji i lokalizacji WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)

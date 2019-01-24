@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fba81500749a16a59405edaaa2ee1d12d86229f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd3ccbe2b6b33e873bdb647987b38aeef74c1b2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552492"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 — Metoda
-Pobiera mapy firmy Microsoft do natywnej przesunięć kod źródłowy znajdujący się w wersji ponownie kompilowana JIT określona funkcja powoduje przesunięcie język pośredni (MSIL).  
+Pobiera mapę od firmy Microsoft intermediate language (MSIL) przesuwa się do macierzystych przesunięciach kod zawarty w wersji ponownie skompilowana JIT określonej funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,31 +44,31 @@ HRESULT GetILToNativeMapping(
  [in] Identyfikator funkcji, która zawiera kod.  
   
  `pReJitId`  
- [in] Tożsamość funkcja ponownie kompilowana JIT. Tożsamość musi być równa zero w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+ [in] Tożsamość funkcja ponownie skompilowana JIT. Tożsamość musi mieć wartość zero w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
  `cMap`  
  [in] Maksymalny rozmiar `map` tablicy.  
   
  `pcMap`  
- [out] Całkowita liczba dostępnych cor_debug_il_to_native_map — struktury.  
+ [out] Całkowita liczba dostępnych struktur cor_debug_il_to_native_map —.  
   
  `map`  
- [out] Tablica `COR_DEBUG_IL_TO_NATIVE_MAP` struktury, z których każdy określa przesunięcie. Po `GetILToNativeMapping2` zwraca metoda `map` będzie zawierał niektórych lub wszystkich `COR_DEBUG_IL_TO_NATIVE_MAP` struktury.  
+ [out] Tablica `COR_DEBUG_IL_TO_NATIVE_MAP` struktur, z których każdy określa przesunięcia. Po `GetILToNativeMapping2` metoda zwraca `map` będzie zawierać części lub całości `COR_DEBUG_IL_TO_NATIVE_MAP` struktury.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetILToNativeMapping2` przypomina [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) metoda, z wyjątkiem tego, że umożliwi profilera określić identyfikator funkcji ponownej kompilacji w przyszłości zwalnia.  
+ `GetILToNativeMapping2` jest podobny do [icorprofilerinfo::getiltonativemapping —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) metody, z tą różnicą, że profiler określić identyfikator funkcji ponownej kompilacji w przyszłości umożliwi wydania.  
   
 > [!NOTE]
->  [ICorProfilerFunctionControl::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) — metoda nie jest zaimplementowana w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], więc funkcje, które zostały ponownie kompilowana JIT nie może mieć mapowania IL do natywnego, która różni się od pierwotnie Funkcja skompilowany. W efekcie `GetILToNativeMapping2` nie można wywołać z niezerowy identyfikator ponownie kompilowana JIT w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+>  [Icorprofilerfunctioncontrol::setilinstrumentedcodemap —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) metoda nie jest zaimplementowana w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], dlatego funkcje, które zostały ponownie skompilowana JIT nie mogą mieć mapowania IL do macierzystego, który różni się od pierwotnie Funkcja skompilowany. W efekcie `GetILToNativeMapping2` nelze volat wartość różną od zera Identyfikatora ponownie skompilowana JIT w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
- `GetILToNativeMapping2` Metoda zwraca tablicę `COR_DEBUG_IL_TO_NATIVE_MAP` struktury. W celu przekazania, że niektórych zakresów instrukcji natywnego odpowiadają specjalne regiony kodu (na przykład prologu), może mieć wpisem w tablicy jego `ilOffset` pole ustawione na wartość [cordebugiltonativemappingtypes —](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) wyliczenie.  
+ `GetILToNativeMapping2` Metoda zwraca tablicę `COR_DEBUG_IL_TO_NATIVE_MAP` struktury. W celu przekazania, czy określone zakresy natywne instrukcje odpowiadają specjalne regiony kodu (na przykład prologu), mogą mieć wpisu w tablicy jej `ilOffset` pole jest ustawione na wartość [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) wyliczenie.  
   
- Po `GetILToNativeMapping2` zwróci wartość, należy sprawdzić, czy `map` bufor był wystarczająco duży, aby pomieścić wszystkie `COR_DEBUG_IL_TO_NATIVE_MAP` struktury. Aby to zrobić, porównanie wartości `cMap` z wartością `pcMap` parametru. Jeśli `pcMap` wartość pomnożona przez rozmiar `COR_DEBUG_IL_TO_NATIVE_MAP` struktury, jest większy niż `cMap`, Przydziel większy `map` buforu, zaktualizuj `cMap` z nowej, większy rozmiar i wywołanie `GetILToNativeMapping2` ponownie.  
+ Po `GetILToNativeMapping2` zwróci wartość, należy sprawdzić, czy `map` bufor jest wystarczająco duży, aby zawierała wszystkich `COR_DEBUG_IL_TO_NATIVE_MAP` struktury. Aby to zrobić, porównanie wartości `cMap` z wartością `pcMap` parametru. Jeśli `pcMap` wartości, gdy jest mnożony przez rozmiar `COR_DEBUG_IL_TO_NATIVE_MAP` struktury, jest większy niż `cMap`, Przydziel większego `map` buforu, zaktualizuj `cMap` przy użyciu nowych, większy rozmiar i Wywołaj `GetILToNativeMapping2` ponownie.  
   
- Alternatywnie można wywołać `GetILToNativeMapping2` o zerowej długości `map` buforu w celu uzyskania rozmiar buforu poprawne. Rozmiar buforu można następnie ustawić wartość zwracana w `pcMap` i Wywołaj `GetILToNativeMapping2` ponownie.  
+ Alternatywnie, można wywołać `GetILToNativeMapping2` o zerowej długości `map` buforu w celu uzyskania rozmiar buforu poprawne. Następnie można ustawić rozmiar buforu do wartości zwracanej w `pcMap` i wywołać `GetILToNativeMapping2` ponownie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -76,8 +76,8 @@ HRESULT GetILToNativeMapping(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [GetILToNativeMapping, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)  
- [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [GetILToNativeMapping, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

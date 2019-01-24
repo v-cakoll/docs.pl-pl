@@ -2,12 +2,12 @@
 title: Wybieranie kodera komunikatów
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44248933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538430"
 ---
 # <a name="choosing-a-message-encoder"></a>Wybieranie kodera komunikatów
 W tym temacie omówiono kryteria wybierania koderów wiadomości, które znajdują się w Windows Communication Foundation (WCF): plik binarny, tekst i komunikat transmisji optymalizacji mechanizm (MTOM).  
@@ -82,6 +82,6 @@ Ponieważ ta właściwość jest dostępne tylko BinaryMessageEncodingBindingEle
 
 Zarówno klient, jak i usługi muszą wyrazić zgodę na wysyłanie i odbieranie komunikatów skompresowane i w związku z tym należy skonfigurować właściwości compressionFormat w elemencie binaryMessageEncoding zarówno klient, jak i usługi. Protocolexception — jest generowany, jeśli usługi lub klienta nie jest skonfigurowany dla kompresji, ale jest drugiej strony. Włączanie kompresji powinien zostać starannie przemyślany. Kompresja przede wszystkim jest przydatne, jeśli przepustowość sieci jest "wąskie gardło". W przypadku, gdy Procesor jest wąskie gardło Kompresja zmniejsza się przepływności. Odpowiednie testy musi odbywać się w środowisku symulowanym, aby dowiedzieć się, jeśli jest to korzystne dla aplikacji  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)

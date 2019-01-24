@@ -6,15 +6,15 @@ helpviewer_keywords:
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: ffeecc1dfe52f1703fc201ef196644afbcc4708c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 976aff327a5212c181d455bab1cdc84f98d75a2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540922"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Podawanie informacji o ułatwieniach dostępu dotyczących formantów w formularzu systemu Windows
-Narzędzi ułatwień dostępu są programy specjalistyczne i urządzenia, które pomagają osób niepełnosprawnych komputerów wydajniej wykorzystywać. Przykładami czytników ekranu dla osób blind i głos wejściowych narzędzi dla osób, które udostępniają ustne polecenia zamiast za pomocą klawiatury lub myszy. Tych narzędzi ułatwień dostępu w interakcje z właściwości dostępu udostępnianych przez formanty formularzy systemu Windows. Te właściwości są:  
+Narzędzi ułatwień dostępu są programy specjalistyczne i urządzenia, które pomagają osobom niepełnosprawnym bardziej efektywne wykorzystanie komputerów. Przykłady obejmują czytniki zawartości ekranu dla osób, które są blind i głosu narzędzia danych wejściowych dla osób, które udostępniają ustnej polecenia zamiast przy użyciu myszy lub klawiatury. Tych narzędzi ułatwień dostępu w interakcje z właściwości ułatwień dostępu, udostępnianych przez kontrolek formularzy Windows Forms. Te właściwości są:  
   
 -   **AccessibilityObject**  
   
@@ -27,10 +27,10 @@ Narzędzi ułatwień dostępu są programy specjalistyczne i urządzenia, które
 -   **AccessibleRole**  
   
 ## <a name="accessibilityobject-property"></a>Właściwość AccessibilityObject  
- Ta właściwość tylko do odczytu zawiera <xref:System.Windows.Forms.AccessibleObject> wystąpienia. **Element AccessibleObject** implementuje <xref:Accessibility.IAccessible> interfejsu, która dostarcza informacji na temat formantu opisu, lokalizacji ekranu możliwości nawigacji i wartość. Projektant konfiguruje tę wartość, gdy formant został dodany do formularza.  
+ Ta właściwość tylko do odczytu zawiera <xref:System.Windows.Forms.AccessibleObject> wystąpienia. **Element AccessibleObject** implementuje <xref:Accessibility.IAccessible> interfejs, który zawiera informacje dotyczące opis kontrolki, położenie na ekranie, możliwości nawigacji i wartości. Projektant ustawia tę wartość, gdy formant został dodany do formularza.  
   
-## <a name="accessibledefaultactiondescription-property"></a>Właściwość AccessibleDefaultActionDescription  
- Ten ciąg zawiera opis akcji formantu. Nie są wyświetlane w oknie właściwości, a można ustawić tylko w kodzie. Poniższy przykład ustawia tę właściwość formantu przycisku:  
+## <a name="accessibledefaultactiondescription-property"></a>AccessibleDefaultActionDescription Property  
+ Ten ciąg w tym artykule opisano działanie sterowania. Go nie jest wyświetlana w oknie dialogowym właściwości i może być ustawiony tylko w kodzie. W poniższym przykładzie ustawiono tej właściwości dla kontrolki przycisku:  
   
 ```  
 ' Visual Basic  
@@ -47,7 +47,7 @@ button1->AccessibleDefaultActionDescription =
 ```  
   
 ## <a name="accessibledescription-property"></a>Właściwość AccessibleDescription  
- Ten ciąg opisuje formantu. Może zostać ustawiony w oknie właściwości lub w kodzie w następujący sposób:  
+ Ten ciąg opisuje kontrolki. Może zostać ustawiony w oknie dialogowym właściwości lub w kodzie w następujący sposób:  
   
 ```  
 ' Visual Basic  
@@ -61,7 +61,7 @@ button1->AccessibleDescription = "A button with text 'Exit'";
 ```  
   
 ## <a name="accessiblename-property"></a>Właściwość AccessibleName  
- Jest to nazwa formantu zgłaszane do narzędzi ułatwień dostępu. Może zostać ustawiony w oknie właściwości lub w kodzie w następujący sposób:  
+ Jest to nazwa kontrolki zgłoszonych narzędzi ułatwień dostępu. Może zostać ustawiony w oknie dialogowym właściwości lub w kodzie w następujący sposób:  
   
 ```  
 ' Visual Basic  
@@ -75,7 +75,7 @@ button1->AccessibleName = "Order";
 ```  
   
 ## <a name="accessiblerole-property"></a>Właściwość AccessibleRole  
- Ta właściwość zawiera <xref:System.Windows.Forms.AccessibleRole> wyliczenia, zawiera opis roli użytkownika interfejsu formantu. Nowy formant jest ustawione na wartość `Default`. To spowoduje oznaczają, że domyślnie **przycisk** formant zachowuje się jak **przycisk**. Możesz zresetować tę właściwość, jeśli formant ma inną rolą. Na przykład używasz **PictureBox** kontrolować jako **wykresu**, i narzędzi ułatwień dostępu, aby zgłosić roli może być **wykresu**, nie jako **PictureBox** . Można również określić tę właściwość w przypadku kontrolek niestandardowych, które zostały opracowane. Tej właściwości można ustawić w oknie właściwości lub w kodzie w następujący sposób:  
+ Tę właściwość, która zawiera <xref:System.Windows.Forms.AccessibleRole> wyliczenia, w tym artykule opisano rolę interfejsu użytkownika formantu. Nowy formant jest ustawione na wartość `Default`. To oznacza, że domyślnie **przycisk** kontroli działa jako **przycisk**. Możesz zresetować tę właściwość, jeśli kontrolka ma inną rolą. Na przykład używasz **PictureBox** powinna być kontrolka **wykresu**, i może być narzędzi ułatwień dostępu, aby zgłosić rolę **wykresu**, nie jako **PictureBox** . Można również określić tę właściwość w przypadku kontrolek niestandardowych, które zostały opracowane. Ta właściwość może ustawiać w oknie dialogowym właściwości lub w kodzie w następujący sposób:  
   
 ```  
 ' Visual Basic  
@@ -88,11 +88,11 @@ PictureBox1.AccessibleRole = AccessibleRole.Chart;
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.AccessibleObject>  
- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.AccessibleRole>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.AccessibleObject>
+- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.AccessibleRole>

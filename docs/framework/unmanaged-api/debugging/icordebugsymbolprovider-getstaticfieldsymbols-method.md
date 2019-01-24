@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider::GetStaticFieldSymbols — metoda
+title: ICorDebugSymbolProvider::GetStaticFieldSymbols Method
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7d5195215762c25b2d7dc2b71fcd53959656303
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a72e9911adf5b48638c2323adcbbb76e721618a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553753"
 ---
-# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider::GetStaticFieldSymbols — metoda
-Pobiera symbole statycznego pola, które odpowiadają podpis elementu typespec.  
+# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider::GetStaticFieldSymbols Method
+Pobiera symbole pole statyczne, które odpowiadają podpisu elementu typespec.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,24 +31,24 @@ HRESULT GetStaticFieldSymbols(
  [in] Liczba bajtów w `typeSig` tablicy.  
   
  `typeSig`  
- [in] Tablica bajtów, który zawiera `typespec` podpisu.  
+ [in] Tablica bajtów, która zawiera `typespec` podpisu.  
   
  `cRequestedSymbols`  
- [in] Liczba symbole żądanie.  
+ [in] Liczba symboli żądanie.  
   
  `pcFetchedSymbols`  
- [out] Wskaźnik do liczbę symboli pobierane przez metodę.  
+ [out] Wskaźnik do liczby symboli pobierane przez metodę.  
   
  `pSymbols`  
- [out] Wskaźnik do [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) tablica, która zawiera symbole żądanego pola statycznego.  
+ [out] Wskaźnik do [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) tablicy, który zawiera symbole żądane pole statyczne.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z platformą .NET Native.  
+>  Ta metoda jest tylko dostępne z architekturą .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -56,7 +56,7 @@ HRESULT GetStaticFieldSymbols(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [GetInstanceFieldSymbols, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getinstancefieldsymbols-method.md)  
- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [GetInstanceFieldSymbols, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getinstancefieldsymbols-method.md)
+- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

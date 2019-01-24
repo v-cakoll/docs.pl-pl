@@ -16,29 +16,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3674643d5590c320bddd5a0e6f1f95814e07ecf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a9f10301db488e4ca68ce5fdaf0ba767053d7d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547004"
 ---
 # <a name="icordebugobjectenum-interface1"></a>ICorDebugObjectEnum Interface1
-Implementuje metody ICorDebugEnum i wylicza tablice obiektów przez względną wirtualnych adresów (RVAs).  
+Implementuje metody ICorDebugEnum i wylicza tablice obiektów według ich względnych adresów wirtualnych (RVA).  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|Pobiera RVAs o określoną liczbę obiektów z wyliczenia, zaczynając od bieżącego położenia.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|Pobiera RVA o określoną liczbę obiektów z wyliczenia, zaczynając od bieżącej pozycji.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -46,5 +46,5 @@ Implementuje metody ICorDebugEnum i wylicza tablice obiektów przez względną w
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

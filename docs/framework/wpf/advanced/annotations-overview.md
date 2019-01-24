@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b3b009d7c25e813a73fe4f32c3eced632b052f13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861705"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543477"
 ---
 # <a name="annotations-overview"></a>Przegląd Adnotacje
 Zapisywanie notatki lub komentarze dotyczące dokumentów dokument jest takie powszechnie używane czynnością, firma Microsoft niemal Zrób to dla przyznane. Te informacje o lub komentarze są "adnotacje" dodajemy do dokumentu do informacji lub aby wyróżnić elementy do późniejszego wykorzystania. Chociaż zapisywania notatki na drukowanych dokumentów jest proste i powszechnie używane, możliwość dodawania swoje komentarze do dokumentów elektronicznych zwykle jest bardzo ograniczona, jeśli jest dostępny w wszystkich.  
@@ -64,15 +64,15 @@ Zapisywanie notatki lub komentarze dotyczące dokumentów dokument jest takie po
   
  Inny przykładowy scenariusz obejmuje aplikacje, które umożliwiają wymianę adnotacje i notatki między czytnikami dokumentu za pośrednictwem poczty e-mail. Ta funkcja umożliwia tych aplikacji, można przejść czytelnika na stronie zawierającej adnotacji, są wymieniane.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
- <xref:System.Windows.Controls.DocumentViewer>  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>  
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
- <xref:System.Windows.Controls.FlowDocumentReader>  
- <xref:System.Windows.Annotations.IAnchorInfo>  
- [Schemat adnotacji](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
- [ContextMenu — przegląd](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
- [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Przegląd dokumentu przepływu](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Porady: Dodawanie polecenia do element MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
+- <xref:System.Windows.Controls.DocumentViewer>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer>
+- <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- <xref:System.Windows.Controls.FlowDocumentReader>
+- <xref:System.Windows.Annotations.IAnchorInfo>
+- [Schemat adnotacji](../../../../docs/framework/wpf/advanced/annotations-schema.md)
+- [ContextMenu — przegląd](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
+- [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Przegląd dokumentu przepływu](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Instrukcje: Dodawanie polecenia do element MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

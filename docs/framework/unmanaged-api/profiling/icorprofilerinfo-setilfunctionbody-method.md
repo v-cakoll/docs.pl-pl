@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 886bb706be30481c082012bf057a001f37903b16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff79f6e439f2bafd598d9d416cc6f7404f4c231d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547335"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody — Metoda
-Zastępuje treści określonej funkcji w określonym module.  
+Zastępuje treść określonej funkcji w określonym module.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,20 +41,20 @@ HRESULT SetILFunctionBody(
  [in] Identyfikator modułu, w której znajduje się funkcja.  
   
  `methodid`  
- [in] Token funkcji, dla którego ma zostać zamieniony treści.  
+ [in] Token funkcji, do których chcesz zastąpić treści.  
   
  `pbNewILMethodHeader`  
- [in] Nagłówek nowych funkcji.  
+ [in] Nowy nagłówek dla tej funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `SetILFunctionBody` Metoda zastępuje adres względny wirtualnej funkcji w metadanych, który wskazuje nowych treści funkcji i dostosowuje wszelkich struktur danych wewnętrznych, zgodnie z wymaganiami.  
+ `SetILFunctionBody` Metoda zastępuje wirtualny adres względny funkcji w metadanych, które wskazuje na nowych treści funkcji oraz dostosowuje wszelkich struktur danych wewnętrznych, zgodnie z potrzebami.  
   
- `SetILFunctionBody` Metodę można wywołać tylko funkcje, które nigdy nie zostały skompilowane za pomocą kompilatora just-in-time (JIT).  
+ `SetILFunctionBody` Metodę można wywołać tylko funkcje, które nigdy nie zostały skompilowane przez kompilator just-in-time (JIT).  
   
- Użyj [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) metody, aby przydzielić miejsce dla nowej metody upewnić się, że bufor jest zgodny.  
+ Użyj [icorprofilerinfo::getilfunctionbodyallocator —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) metodę, aby przydzielić miejsce dla nowej metody upewnić się, że rozmiar buforu jest zgodna.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -62,5 +62,5 @@ HRESULT SetILFunctionBody(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

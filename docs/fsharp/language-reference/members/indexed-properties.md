@@ -2,12 +2,12 @@
 title: Właściwości indeksowane
 description: Więcej informacji na temat właściwości indeksowanych w F#, które umożliwiają dostęp tablicy do danych uporządkowanych.
 ms.date: 10/17/2018
-ms.openlocfilehash: 3817290505339803814e981cd5408cd4df6bd283
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a092da753acacf80807d145051a719df2d3e1520
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550971"
 ---
 # <a name="indexed-properties"></a>Właściwości indeksowane
 
@@ -58,13 +58,29 @@ ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth
 ```
 
-## <a name="indexed-properties-with-multiple-index-variables"></a>Właściwości indeksowane, za pomocą wielu zmiennych indeksu
+## <a name="indexed-properties-with-multiple-index-values"></a>Właściwości indeksowane, za pomocą wielu wartości indeksu
 
-Właściwości indeksowane może mieć więcej niż jedną zmienną indeksu. W takim przypadku zmienne są oddzielone przecinkami, gdy jest używana. Metody set w takiej właściwości musi mieć dwa argumenty rozwinięte, pierwszy z nich jest krotkę zawierającą klucze, a drugi z nich jest wartość.
+Właściwości indeksowane może mieć więcej niż jedną wartość indeksu. W takim przypadku wartości są oddzielone przecinkami, gdy jest używana. Metody set w takiej właściwości musi mieć dwa argumenty rozwinięte, pierwszy z nich jest krotkę zawierającą klucze, a drugi z nich jest wartość do ustawienia.
 
-Poniższy przykład demonstruje użycie Właściwość indeksowana z wielu zmiennych indeksu.
+Poniższy przykład demonstruje użycie właściwości indeksowanej z wieloma wartościami indeksu.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3302.fs)]
+```fsharp
+open System.Collections.Generic
+
+/// Basic implementation of a sparse matrix basedon a dictionary
+type SparseMatrix() =
+    let table = new Dictionary<(int * int), float>()
+    member __.Item
+        // Because the key is comprised of two values, 'get' has two index values
+        with get(key1, key2) = table.[(key1, key2)]
+
+        // 'set' has two index values and a new value to place in the key's position
+        and set (key1, key2) value = table.[(key1, key2)] <- value
+
+let sm = new SparseMatrix()
+for i in 1..1000 do
+    sm.[i, i] <- float i * float i
+```
 
 ## <a name="see-also"></a>Zobacz także
 

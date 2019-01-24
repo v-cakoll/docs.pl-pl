@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f37bbe7d9e76d76bfe4c0f80b6f2343a5598bbfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec7e303e5145e16f4c17074d557410ffe4521c20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549840"
 ---
 # <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a>ICLRErrorReportingManager::GetBucketParametersForCurrentException — Metoda
-Pobiera bieżący wyjątek w wątku wywołującym pakiet programu Watson.  
+Pobiera pakiet programu Watson bieżący wyjątek w wątku wywołującego.  
   
- A *zasobnik* jest kolekcją błąd danych, który jest powiązany z tym samym wad kodu. *Watson* odwołuje się do zestawu technologii do zbierania i analizowania danych, który jest skojarzony z powodu wyjątku.  
+ A *zasobnika* to kolekcja danych błędu, który jest powiązany z samą wadę kodu. *Watson* odwołuje się do zestawu technologii do zbierania i analizowania danych, który jest skojarzony z powodu wyjątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,16 +39,16 @@ HRESULT GetBucketParametersForCurrentException(
   
 #### <a name="parameters"></a>Parametry  
  `pParams`  
- [out] Wskaźnik do [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) struktury, która zawiera dane wyjątku błędu.  
+ [out] Wskaźnik do [bucketparameters —](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) strukturę, która zawiera dane o błędach dla wyjątku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRErrorReportingManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRErrorReportingManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dodawanie przycisków do formantu ToolBar przy użyciu narzędzia Projektant'
+title: 'Instrukcje: Dodawanie przycisków do formantu ToolBar przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding buttons
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: b96f112c83d2296356e3eb566a24315bcefeff1f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e18a2f9b8c22538bc545388af56ee929bc94d70c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538911"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Porady: dodawanie przycisków do formantu ToolBar przy użyciu narzędzia Projektant
+# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Instrukcje: Dodawanie przycisków do formantu ToolBar przy użyciu narzędzia Projektant
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
   
  Integralną częścią <xref:System.Windows.Forms.ToolBar> formant jest przyciski, Dodaj do niej. Mogą one być używane do zapewniają łatwy dostęp do poleceń menu lub też mogą być umieszczane w innym obszarze interfejsu użytkownika aplikacji do udostępnienia poleceń dla użytkowników, które nie są dostępne w strukturze menu.  
   
- Poniższa procedura wymaga **aplikacji Windows** projektu za pomocą zawierający formularz <xref:System.Windows.Forms.ToolBar> kontroli. Uzyskać informacji o konfigurowaniu taki projekt, zobacz [jak: Tworzenie projektu aplikacji Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) i [porady: dodawanie formantów do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ Poniższa procedura wymaga **aplikacji Windows** projektu za pomocą zawierający formularz <xref:System.Windows.Forms.ToolBar> kontroli. Aby uzyskać informacje o konfigurowaniu taki projekt, zobacz [jak: Utwórz projekt aplikacji Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) i [jak: Dodawanie formantów do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -47,9 +47,9 @@ ms.locfileid: "44253172"
   
 5.  Kliknij przycisk **OK** aby zamknąć okno dialogowe i utworzyć panele określony.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.ToolBar>  
- [Instrukcje: określanie ikony dla przycisku kontrolki ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [Instrukcje: zdarzenia wyzwalaczy menu dla przycisków kontrolki Toolbar](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [ToolBar, kontrolka — omówienie](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [ToolBar, kontrolka](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.ToolBar>
+- [Instrukcje: Określanie ikony dla przycisku kontrolki ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar, kontrolka — omówienie](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
+- [ToolBar, kontrolka](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

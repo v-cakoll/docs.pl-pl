@@ -6,84 +6,84 @@ helpviewer_keywords:
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-ms.openlocfilehash: 058a18878b89991bd8124bd69e18476d4f1479d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91da6409eb3a02709332d8d1a5a2d7fe54d3f401
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543071"
 ---
 # <a name="windows-forms-controls-by-function"></a>Formanty formularzy systemu Windows według funkcji
-Formularze systemu Windows oferuje kontrolek i składników, które wykonują wiele funkcji. W poniższej tabeli wymieniono formanty formularzy systemu Windows i składniki według funkcji ogólne. Ponadto w przypadku, gdy wiele istnieją środki zapobiegawcze, które pełnią taką samą funkcję, zalecane formant znajduje się uwagi dotyczące kontroli, którą on zastąpiony. W osobnej tabeli kolejnych formantów zastąpione są wyświetlane z ich zalecane zamiany.  
+Formularze Windows oferuje formanty i składniki, które wykonują wiele funkcji. W poniższej tabeli wymieniono kontrolek formularzy Windows Forms i składników, zgodnie z ogólnych funkcji. Ponadto w przypadku wielu formantów, które obsługują tę samą funkcję, zalecane kontroli znajduje się notatki dotyczące formant, który on zastąpiony. W osobnej tabeli kolejnych zastąpione formanty są wyświetlane z ich zalecane zamienniki.  
   
 > [!NOTE]
->  W poniższych tabelach przedstawiono nie, co formant lub składnik, który można używać w formularzach systemu Windows; Aby bardziej pełną listę, zobacz [formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+>  W poniższej tabeli nie wymieniono każdy formant lub składnika, których można używać w formularzach Windows Forms; Aby bardziej pełną listę, zobacz [kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
   
-## <a name="recommended-controls-and-components-by-function"></a>Zalecane formanty i składniki według funkcji  
+## <a name="recommended-controls-and-components-by-function"></a>Zalecane kontrolek i składników, funkcja  
   
 |Funkcja|Formant|Opis|  
 |--------------|-------------|-----------------|  
-|Wyświetlanie danych|<xref:System.Windows.Forms.DataGridView> Formant|<xref:System.Windows.Forms.DataGridView> Formant zawiera tabelę można dostosować do wyświetlania danych. <xref:System.Windows.Forms.DataGridView> Klasa umożliwia dostosowywanie komórek, wierszy, kolumny i obramowania. **Uwaga:** <xref:System.Windows.Forms.DataGridView> kontrola zapewnia wiele podstawowych i zaawansowanych funkcji, które nie występują w <xref:System.Windows.Forms.DataGrid> formantu. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
-|Powiązanie danych i nawigacji|<xref:System.Windows.Forms.BindingSource> Składnik|Ułatwia powiązanie formantów w formularzu do danych, zapewniając zarządzania waluty, powiadomienia o zmianie i innych usług.|  
-||<xref:System.Windows.Forms.BindingNavigator> Formant|Udostępnia interfejs typ paska narzędzi do nawigacji i manipulacji danymi na formularzu.|  
-|Edytowanie tekstu|<xref:System.Windows.Forms.TextBox> Formant|Wyświetla tekst wprowadzony w czasie projektowania, który można edytowane przez użytkowników w czasie wykonywania, lub programistycznej zmiany.|  
-||<xref:System.Windows.Forms.RichTextBox> Formant|Umożliwia tekst, który ma być wyświetlane z formatowaniem w postaci zwykłego tekstu lub format tekstu sformatowanego (RTF).|  
-||<xref:System.Windows.Forms.MaskedTextBox> Formant|Ogranicza format danych wejściowych użytkownika|  
-|Wyświetlane informacje (tylko do odczytu)|<xref:System.Windows.Forms.Label> Formant|Wyświetlany tekst, który użytkownicy nie mogą bezpośrednio edytować.|  
-||<xref:System.Windows.Forms.LinkLabel> Formant|Tekst jest wyświetlany jako łącze stylu sieci Web i wyzwala zdarzenie, gdy użytkownik kliknie specjalne tekstu. Tekst jest zwykle łącza do innego okna lub witryny sieci Web.|  
-||<xref:System.Windows.Forms.StatusStrip> Formant|Wyświetla informacje o bieżącym stanie aplikacji przy użyciu obszaru ramce, zazwyczaj w dolnej części formularza nadrzędnego.|  
-||<xref:System.Windows.Forms.ProgressBar> Formant|Wyświetla bieżący postęp operacji dla użytkownika.|  
-|Wyświetlanie strony sieci Web|<xref:System.Windows.Forms.WebBrowser> Formant|Umożliwia użytkownikowi nawigację strony sieci Web wewnątrz formularza.|  
-|Wybór z listy|<xref:System.Windows.Forms.CheckedListBox> Formant|Zawiera listę elementów, każdy wraz z polem wyboru.|  
-||<xref:System.Windows.Forms.ComboBox> Formant|Wyświetla listę elementów listy rozwijanej.|  
-||<xref:System.Windows.Forms.DomainUpDown> Formant|Wyświetla listę elementów tekstowych, które użytkownicy mogą przewijać z przycisków w górę i w dół.|  
-||<xref:System.Windows.Forms.ListBox> Formant|Wyświetla listę tekstu i elementów graficznych (ikony).|  
-||<xref:System.Windows.Forms.ListView> Formant|Wyświetla elementy w jednej z czterech różnych widoków. Widoki obejmują tylko tekst, tekst na małe ikony tekstu w dużych ikon i widoku szczegółów.|  
-||<xref:System.Windows.Forms.NumericUpDown> Formant|Wyświetla listę liczb, które użytkownicy mogą przewijać z przycisków w górę i w dół.|  
-||<xref:System.Windows.Forms.TreeView> Formant|Wyświetla użytkownikowi hierarchiczną kolekcję obiektów węzła, które może składać się z pomocą opcjonalne pola wyboru lub ikony.|  
-|Wyświetlanie grafiki|<xref:System.Windows.Forms.PictureBox> Formant|Wyświetla graficzny plików, takich jak mapy bitowe i ikony w ramce.|  
-|Magazyn grafiki|<xref:System.Windows.Forms.ImageList> Formant|Służy jako repozytorium obrazów. <xref:System.Windows.Forms.ImageList> Formanty i obrazów, które zawierają mogą być ponownie używane z jednej aplikacji do następnego.|  
-|Ustawienie wartości|<xref:System.Windows.Forms.CheckBox> Formant|Wyświetla pole wyboru i etykietę dla tekstu. Zazwyczaj używany do ustawiania opcji.|  
-||<xref:System.Windows.Forms.CheckedListBox> Formant|Zawiera listę elementów, każdy wraz z polem wyboru.|  
-||<xref:System.Windows.Forms.RadioButton> Formant|Wyświetla przycisku, który może być włączony lub wyłączony.|  
-||<xref:System.Windows.Forms.TrackBar> Formant|Umożliwia użytkownikom ustawianie wartości w skali, przenosząc "thumb" wzdłuż skali.|  
-|Ustawienie daty|<xref:System.Windows.Forms.DateTimePicker> Formant|Wyświetla graficzny kalendarz, aby zezwolić użytkownikom na wybranie daty lub godziny.|  
-||<xref:System.Windows.Forms.MonthCalendar> Formant|Wyświetla graficzny kalendarz, aby użytkownicy mogli wybrać zakres dat.|  
-|Okna dialogowe|<xref:System.Windows.Forms.ColorDialog> Formant|Wyświetla okno dialogowe selektora kolorów, który umożliwia użytkownikom ustawianie koloru elementu interfejsu.|  
-||<xref:System.Windows.Forms.FontDialog> Formant|Wyświetla okno dialogowe, który umożliwia użytkownikom Ustaw czcionkę i jego atrybuty.|  
-||<xref:System.Windows.Forms.OpenFileDialog> Formant|Wyświetla okno dialogowe, które umożliwia użytkownikom przechodzenie do i wybierz plik.|  
-||<xref:System.Windows.Forms.PrintDialog> Formant|Wyświetla okno dialogowe, które pozwala użytkownikom na wybranie drukarki i ustaw jego atrybuty.|  
-||<xref:System.Windows.Forms.PrintPreviewDialog> Formant|Wyświetla okno dialogowe wyświetla jak formantu <xref:System.Drawing.Printing.PrintDocument> składnika pojawi się po wydrukowaniu.|  
-||<xref:System.Windows.Forms.FolderBrowserDialog> Formant|Wyświetla okno dialogowe, którego użytkownicy mogą przeglądać, tworzyć i ostatecznie wybierz folder|  
-||<xref:System.Windows.Forms.SaveFileDialog> Formant|Wyświetla okno dialogowe, które umożliwia użytkownikom zapisać plik.|  
-|Formanty menu|<xref:System.Windows.Forms.MenuStrip> Formant|Tworzy niestandardowe menu. **Uwaga:** <xref:System.Windows.Forms.MenuStrip> zaprojektowano w celu zastąpienia <xref:System.Windows.Forms.MainMenu> formantu.|  
-||<xref:System.Windows.Forms.ContextMenuStrip> Formant|Tworzy menu kontekstowe niestandardowych. **Uwaga:** <xref:System.Windows.Forms.ContextMenuStrip> zaprojektowano w celu zastąpienia <xref:System.Windows.Forms.ContextMenu> formantu.|  
-|Polecenia|<xref:System.Windows.Forms.Button> Formant|Uruchamia, zatrzymuje lub przerwania procesu.|  
-||<xref:System.Windows.Forms.LinkLabel> Formant|Tekst jest wyświetlany jako łącze stylu sieci Web i wyzwala zdarzenie, gdy użytkownik kliknie specjalne tekstu. Tekst jest zwykle łącza do innego okna lub witryny sieci Web.|  
-||<xref:System.Windows.Forms.NotifyIcon> Formant|Wyświetla ikonę w obszarze powiadomień stanu na pasku zadań, reprezentujący aplikacji uruchomionej w tle.|  
-||<xref:System.Windows.Forms.ToolStrip> Formant|Utworzenie pasków narzędzi, które mogą zostać systemu Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer lub niestandardowy wygląd i działanie z lub bez kompozycje i obsługę przepełnienie i zmianę kolejności elementów czasu wykonywania. **Uwaga:** <xref:System.Windows.Forms.ToolStrip> kontroli zaprojektowano w celu zastąpienia <xref:System.Windows.Forms.ToolBar> formantu.|  
-|Pomoc dla użytkowników|<xref:System.Windows.Forms.HelpProvider> Składnik|Udostępnia menu podręczne lub pomoc dla formantów.|  
-||<xref:System.Windows.Forms.ToolTip> Składnik|Udostępnia okno podręczne, które wyświetla krótki opis przeznaczenia formantu, gdy użytkownik zatrzyma wskaźnik myszy na kontrolce.|  
-|Grupowanie formantów innych|<xref:System.Windows.Forms.Panel> Formant|Grupuje zestaw kontrolek na bez etykiety, którą można przewijać w ramce.|  
-||<xref:System.Windows.Forms.GroupBox> Formant|Grupuje zestawu (takie jak przyciski radiowe) na ramce etykietą, nonscrollable.|  
-||<xref:System.Windows.Forms.TabControl> Formant|Zapewnia wydajne obiekty zgrupowane strony organizowanie i uzyskiwania dostępu do sieci z kartami.|  
-||<xref:System.Windows.Forms.SplitContainer> Formant|Udostępnia dwa panele oddzielone ruchomy paska. **Uwaga:** <xref:System.Windows.Forms.SplitContainer> kontroli zaprojektowano w celu zastąpienia <xref:System.Windows.Forms.Splitter> formantu.|  
-||<xref:System.Windows.Forms.TableLayoutPanel> Formant|Reprezentuje panelu, który dynamicznie wychodzi poza swoją zawartość w siatce składa się z wierszy i kolumn.|  
-||<xref:System.Windows.Forms.FlowLayoutPanel> Formant|Reprezentuje panelu, który dynamicznie wychodzi poza swoją zawartość w poziomie lub pionie.|  
-|audio|<xref:System.Media.SoundPlayer> Formant|Odtwarza dźwięk pliki w formacie .wav. Dźwięki można załadować lub odtwarzane asynchronicznie.|  
+|Wyświetlanie danych|<xref:System.Windows.Forms.DataGridView> Kontrolki|<xref:System.Windows.Forms.DataGridView> Kontroli zawiera tabelę można dostosować do wyświetlania danych. <xref:System.Windows.Forms.DataGridView> Klasa umożliwia dostosowanie komórek, wierszy, kolumny i obramowania. **Uwaga:**  <xref:System.Windows.Forms.DataGridView> Control oferuje wiele podstawowych i zaawansowanych funkcji, których brakuje w <xref:System.Windows.Forms.DataGrid> kontroli. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|Powiązanie danych oraz nawigacji|<xref:System.Windows.Forms.BindingSource> cm6long|Ułatwia powiązanie kontrolek w formularzu z danymi, zapewniając zarządzania waluty, powiadomienia o zmianie i innych usług.|  
+||<xref:System.Windows.Forms.BindingNavigator> Kontrolki|Udostępnia interfejs typu toolbar do nawigowania i manipulowanie danymi w formularzu.|  
+|Edytowanie tekstu|<xref:System.Windows.Forms.TextBox> Kontrolki|Wyświetla tekst wprowadzony w czasie projektowania, które mogą być edytowane przez użytkowników w czasie wykonywania lub programowo zmienić.|  
+||<xref:System.Windows.Forms.RichTextBox> Kontrolki|Umożliwia tekst do wyświetlenia za pomocą formatowania w postaci zwykłego tekstu lub w formacie tekstu sformatowanego (RTF).|  
+||<xref:System.Windows.Forms.MaskedTextBox> Kontrolki|Ogranicza formatu danych wejściowych użytkownika|  
+|Wyświetlane informacje (tylko do odczytu)|<xref:System.Windows.Forms.Label> Kontrolki|Wyświetla tekst, który użytkownicy nie mogą bezpośrednio edytować.|  
+||<xref:System.Windows.Forms.LinkLabel> Kontrolki|Tekst jest wyświetlany jako łączy stylu sieci Web i wyzwala zdarzenie, kiedy użytkownik kliknie specjalne tekstu. Zazwyczaj tekst jest linkiem do innego okna lub witryny sieci Web.|  
+||<xref:System.Windows.Forms.StatusStrip> Kontrolki|Wyświetla informacje dotyczące bieżącego stanu aplikacji przy użyciu obszaru ramce, zazwyczaj w dolnej części formularza nadrzędnego.|  
+||<xref:System.Windows.Forms.ProgressBar> Kontrolki|Wyświetla bieżący postęp operacji dla użytkownika.|  
+|Wyświetlanie strony sieci Web|<xref:System.Windows.Forms.WebBrowser> Kontrolki|Umożliwia użytkownikowi nawigację stron sieci Web wewnątrz formularza.|  
+|Wybór z listy|<xref:System.Windows.Forms.CheckedListBox> Kontrolki|Zawiera listę elementów, każdy wraz z polem wyboru.|  
+||<xref:System.Windows.Forms.ComboBox> Kontrolki|Wyświetla listę rozwijaną listę elementów.|  
+||<xref:System.Windows.Forms.DomainUpDown> Kontrolki|Wyświetla listę elementów tekstowych, które użytkownicy będą mogli przewijać za pośrednictwem przy użyciu przycisków w górę i w dół.|  
+||<xref:System.Windows.Forms.ListBox> Kontrolki|Wyświetla listę tekstu i elementów graficznych (ikony).|  
+||<xref:System.Windows.Forms.ListView> Kontrolki|Wyświetla elementy w jednej z czterech różnych widoków. Widoki zawierać tylko tekst, tekst przy użyciu małych ikon, tekst przy użyciu dużych ikon i widoku szczegółów.|  
+||<xref:System.Windows.Forms.NumericUpDown> Kontrolki|Wyświetla listę liczb, które użytkownicy będą mogli przewijać za pośrednictwem przy użyciu przycisków w górę i w dół.|  
+||<xref:System.Windows.Forms.TreeView> Kontrolki|Przedstawia kolekcję hierarchiczną obiektów węzła, które może składać się z tekstem opcjonalne pola wyboru lub ikony.|  
+|Wyświetlanie grafiki|<xref:System.Windows.Forms.PictureBox> Kontrolki|Wyświetla graficzny pliki, takie jak mapy bitowe i ikony w ramce.|  
+|Magazyn grafiki|<xref:System.Windows.Forms.ImageList> Kontrolki|Służy jako repozytorium obrazów. <xref:System.Windows.Forms.ImageList> kontrolki i obrazów, które zawierają może zostać ponownie użyte z jednej aplikacji do następnego.|  
+|Ustawienie wartości|<xref:System.Windows.Forms.CheckBox> Kontrolki|Wyświetla pole wyboru i etykiety tekstu. Zazwyczaj używane do ustawiania opcji.|  
+||<xref:System.Windows.Forms.CheckedListBox> Kontrolki|Zawiera listę elementów, każdy wraz z polem wyboru.|  
+||<xref:System.Windows.Forms.RadioButton> Kontrolki|Wyświetla przycisk, który może być włączony lub wyłączony.|  
+||<xref:System.Windows.Forms.TrackBar> Kontrolki|Umożliwia użytkownikom ustawienie wartości w skali, przenosząc "mówi" wzdłuż skali.|  
+|Ustawienie daty|<xref:System.Windows.Forms.DateTimePicker> Kontrolki|Wyświetla graficzny kalendarz, aby zezwolić użytkownikom na wybór daty lub godziny.|  
+||<xref:System.Windows.Forms.MonthCalendar> Kontrolki|Wyświetla graficzny kalendarz, aby zezwolić użytkownikom na wybór zakresu dat.|  
+|Okna dialogowe|<xref:System.Windows.Forms.ColorDialog> Kontrolki|Wyświetla okno dialogowe próbnika kolorów, który umożliwia użytkownikom ustawić kolor elementu interfejsu.|  
+||<xref:System.Windows.Forms.FontDialog> Kontrolki|Wyświetlane jest okno dialogowe, która umożliwia użytkownikom ustawić czcionkę i jego atrybuty.|  
+||<xref:System.Windows.Forms.OpenFileDialog> Kontrolki|Wyświetlane jest okno dialogowe, który umożliwia użytkownikom przejdź do, a następnie wybierz plik.|  
+||<xref:System.Windows.Forms.PrintDialog> Kontrolki|Wyświetlane jest okno dialogowe, która umożliwia użytkownikom wybranie drukarki i ustaw jego atrybuty.|  
+||<xref:System.Windows.Forms.PrintPreviewDialog> Kontrolki|Wyświetla okno dialogowe wyświetla, w jaki sposób kontrolki <xref:System.Drawing.Printing.PrintDocument> składnika pojawi się po wydrukowaniu.|  
+||<xref:System.Windows.Forms.FolderBrowserDialog> Kontrolki|Wyświetla okno dialogowe, które umożliwia użytkownikom przeglądanie, tworzenie i ostatecznie wybierz folder|  
+||<xref:System.Windows.Forms.SaveFileDialog> Kontrolki|Wyświetla okno dialogowe, które umożliwia użytkownikom zapisać plik.|  
+|Formanty menu|<xref:System.Windows.Forms.MenuStrip> Kontrolki|Tworzy niestandardowe menu. **Uwaga:**  <xref:System.Windows.Forms.MenuStrip> Zaprojektowano w celu zastąpienia <xref:System.Windows.Forms.MainMenu> kontroli.|  
+||<xref:System.Windows.Forms.ContextMenuStrip> Kontrolki|Tworzy niestandardowego menu kontekstowego. **Uwaga:**  <xref:System.Windows.Forms.ContextMenuStrip> Zaprojektowano w celu zastąpienia <xref:System.Windows.Forms.ContextMenu> kontroli.|  
+|Polecenia|<xref:System.Windows.Forms.Button> Kontrolki|Uruchamia, zatrzymuje się lub przerwanie procesu.|  
+||<xref:System.Windows.Forms.LinkLabel> Kontrolki|Tekst jest wyświetlany jako łączy stylu sieci Web i wyzwala zdarzenie, kiedy użytkownik kliknie specjalne tekstu. Zazwyczaj tekst jest linkiem do innego okna lub witryny sieci Web.|  
+||<xref:System.Windows.Forms.NotifyIcon> Kontrolki|Wyświetla ikonę w obszarze stanu powiadomień na pasku zadań, która reprezentuje aplikację działającą w tle.|  
+||<xref:System.Windows.Forms.ToolStrip> Kontrolki|Tworzy pasków narzędzi, które mogą mieć systemu Microsoft Windows XP, Microsoft Office, programu Microsoft Internet Explorer lub niestandardowy wygląd i działanie, z lub bez motywy i obsługę przepełnienie i zmiany kolejności elementów w czasie wykonywania. **Uwaga:**  <xref:System.Windows.Forms.ToolStrip> Kontroli zaprojektowano w celu zastąpienia <xref:System.Windows.Forms.ToolBar> kontroli.|  
+|Pomoc dla użytkowników|<xref:System.Windows.Forms.HelpProvider> cm6long|Udostępnia pomoc menu podręczne lub kontrolek.|  
+||<xref:System.Windows.Forms.ToolTip> cm6long|Udostępnia okno podręczne, które wyświetla krótki opis przeznaczenia kontrolki, gdy użytkownik zatrzyma wskaźnik myszy na kontrolce.|  
+|Grupowanie innych formantów|<xref:System.Windows.Forms.Panel> Kontrolki|Grupuje zestaw formantów na bez etykiety, którą można przewijać w ramce.|  
+||<xref:System.Windows.Forms.GroupBox> Kontrolki|Grupuje zestaw formantów (na przykład przycisków radiowych) dla etykietą, ramki nonscrollable.|  
+||<xref:System.Windows.Forms.TabControl> Kontrolki|Zawiera strony organizowanie i uzyskiwania dostępu do sieci z kartami obiekty zgrupowane efektywnie.|  
+||<xref:System.Windows.Forms.SplitContainer> Kontrolki|Udostępnia dwa panele rozdzielone ruchome paska. **Uwaga:**  <xref:System.Windows.Forms.SplitContainer> Kontroli zaprojektowano w celu zastąpienia <xref:System.Windows.Forms.Splitter> kontroli.|  
+||<xref:System.Windows.Forms.TableLayoutPanel> Kontrolki|Reprezentuje panel, który dynamicznie wychodzi poza swoją zawartość w siatce, składa się z wierszy i kolumn.|  
+||<xref:System.Windows.Forms.FlowLayoutPanel> Kontrolki|Reprezentuje panel, który dynamicznie wychodzi poza swoją zawartość w poziomie lub pionie.|  
+|Dźwięk|<xref:System.Media.SoundPlayer> Kontrolki|Odtwarza dźwięk pliki w formacie .wav. Dźwięki można załadować lub odtwarzane asynchronicznie.|  
   
-## <a name="superseded-controls-and-components-by-function"></a>Zastąpione formanty i składniki według funkcji  
+## <a name="superseded-controls-and-components-by-function"></a>Zastąpione kontrolek i składników, funkcja  
   
-|Funkcja|Formant zastąpione|Zastąpienie zalecane|  
+|Funkcja|Zastąpione kontroli|Zalecane zastąpienia|  
 |--------------|------------------------|-----------------------------|  
 |Wyświetlanie danych|<xref:System.Windows.Forms.DataGrid>|<xref:System.Windows.Forms.DataGridView>|  
-|Wyświetlane informacje (służy tylko do odczytu)|<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
+|Wyświetlane informacje (formantów tylko do odczytu)|<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
 |Formanty menu|<xref:System.Windows.Forms.ContextMenu>|<xref:System.Windows.Forms.ContextMenuStrip>|  
 ||<xref:System.Windows.Forms.MainMenu>|<xref:System.Windows.Forms.MenuStrip>|  
 |Polecenia|<xref:System.Windows.Forms.ToolBar>|<xref:System.Windows.Forms.ToolStrip>|  
 ||<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
-|Układu formularza|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
+|Układ formularza|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+## <a name="see-also"></a>Zobacz także
+- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

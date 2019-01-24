@@ -16,53 +16,53 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9715738931d1b6a91ad9fae7e00ba607905d380f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d7b85a30a5abd9186f039aa21cbe7790325e4f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545650"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager — Interfejs
-Udostępnia metody umożliwiające środowisko uruchomieniowe języka wspólnego (CLR) do pracy z zadaniami za pośrednictwem hosta zamiast przy użyciu funkcji wątki lub włókna standardowy system operacyjny.  
+Udostępnia metody, które umożliwiają środowisko uruchomieniowe języka wspólnego (CLR) do pracy z zadaniami za pośrednictwem hosta, zamiast korzystać z funkcji wątki lub włókna standardowy system operacyjny.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[BeginDelayAbort, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|Powiadamia hosta, którego kod zarządzany jest wprowadzanie okres, w którym nie musi być zostało przerwane bieżącego zadania.|  
-|[BeginThreadAffinity, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|Powiadamia hosta, którego kod zarządzany jest wprowadzanie okres, w którym bieżącego zadania nie muszą zostać przeniesione do innego wątku systemu operacyjnego.|  
-|[CallNeedsHostHook, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-callneedshosthook-method.md)|Umożliwia hosta określić, czy środowisko uruchomieniowe języka wspólnego może wbudowanego określonego wywołanie funkcji niezarządzanej.|  
-|[CreateTask, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-createtask-method.md)|Żądania, hosta utworzyć nowe zadanie.|  
-|[EndDelayAbort, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md)|Powiadamia hosta, którego kod zarządzany jest zamykanie okres, w którym nie można przerwać bieżące zadanie, po wcześniejszej wywołanie `BeginDelayAbort`.|  
-|[EndThreadAffinity, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)|Powiadamia hosta, którego kod zarządzany jest zamykanie okres, w którym bieżącego zadania nie muszą zostać przeniesione do innego wątku systemu operacyjnego, po wcześniejszej wywołanie `BeginThreadAffinity`.|  
-|[EnterRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)|Powiadamia hosta, że wywołanie do metody niezarządzanych, takich jak platforma wywołania metody, zwraca Kontrola wykonywania do środowiska CLR.|  
-|[GetCurrentTask, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)|Pobiera wskaźnika interfejsu do zadania, które jest obecnie wykonywane w wątku systemu operacyjnego, z której dokonywane jest to wywołanie.|  
-|[GetStackGuarantee, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)|Pobiera ilość miejsca na stosie, który może być dostępne po zakończeniu operacji stosu, ale przed zamknięciem procesu.|  
-|[LeaveRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)|Powiadamia hosta, którego kod zarządzany ma wywoływania funkcji niezarządzanej.|  
+|[BeginDelayAbort, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|Powiadamia hosta, którego kod zarządzany wchodzi okres, w którym musi nie przerwane bieżącego zadania.|  
+|[BeginThreadAffinity, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|Powiadamia hosta, którego kod zarządzany wchodzi okres, w którym bieżące zadanie musi nie można przenieść na inny wątek systemu operacyjnego.|  
+|[CallNeedsHostHook, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-callneedshosthook-method.md)|Umożliwia hosta określić, czy środowisko uruchomieniowe języka wspólnego może wbudowane określone wywołanie do niezarządzanej funkcji.|  
+|[CreateTask, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-createtask-method.md)|Żądania, że host Utwórz nowe zadanie.|  
+|[EndDelayAbort, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md)|Powiadamia hosta, którego kod zarządzany jest kończone okres, w której nie można przerwać bieżące zadanie, zgodnie z wcześniejszym wywołaniem `BeginDelayAbort`.|  
+|[EndThreadAffinity, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)|Powiadamia hosta, którego kod zarządzany jest kończone okres, w którym bieżące zadanie musi nie można przenieść na inny wątek systemu operacyjnego, zgodnie z wcześniejszym wywołaniem `BeginThreadAffinity`.|  
+|[EnterRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)|Powiadamia hosta, że wywołanie metody niezarządzanego, takie jak metody wywołania platformy zwraca Kontrola wykonywania do środowiska CLR.|  
+|[GetCurrentTask, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)|Pobiera wskaźnik interfejsu do zadania, które jest obecnie wykonywany w wątku systemu operacyjnego, w którym wykonano to wywołanie.|  
+|[GetStackGuarantee, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)|Pobiera ilość miejsca stosu, który może być dostępna po zakończeniu operacji stosu, ale przed zamknięciem procesu.|  
+|[LeaveRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)|Powiadamia hosta, którego kod zarządzany ma wykonać wywołanie do niezarządzanej funkcji.|  
 |[ReverseEnterRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)|Powiadamia hosta, że wywołanie odbywa się na środowisko uruchomieniowe języka wspólnego (CLR) z kodem niezarządzanym.|  
-|[ReverseLeaveRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)|Powiadamia hosta, czy formant jest pozostawienie środowiska CLR i wprowadzenie niezarządzanej funkcji, który z kolei wywołane z kodu zarządzanego.|  
-|[SetCLRTaskManager, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|Udostępnia wskaźnik interfejsu do hosta [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md) wystąpienia zaimplementowana przez środowisko CLR.|  
-|[SetLocale, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setlocale-method.md)|Powiadamia hosta zmiana CLR ustawień regionalnych na bieżące zadanie.|  
-|[SetStackGuarantee, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setstackguarantee-method.md)|Zastrzeżone wyłącznie do użytku wewnętrznego.|  
-|[SetUILocale, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setuilocale-method.md)|Powiadamia hosta, że ustawienia regionalne interfejsu użytkownika została zmieniona na bieżące zadanie.|  
+|[ReverseLeaveRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)|Powiadamia hosta, że formant jest pozostawienie środowiska CLR i wprowadzenie niezarządzanej funkcji, która z kolei wywoływana z kodu zarządzanego.|  
+|[SetCLRTaskManager, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|Udostępnia wskaźnik interfejsu do hosta [iclrtaskmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md) wystąpienia implementowane przez środowisko CLR.|  
+|[SetLocale, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setlocale-method.md)|Powiadamia hosta, że środowisko CLR zmienił ustawienia regionalne na bieżące zadanie.|  
+|[SetStackGuarantee, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setstackguarantee-method.md)|Zarezerwowana tylko do użytku wewnętrznego.|  
+|[SetUILocale, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setuilocale-method.md)|Powiadamia hosta, że ustawienia regionalne interfejsu użytkownika został zmieniony na bieżące zadanie.|  
 |[Sleep, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)|Powiadamia hosta, że bieżące zadanie przechodzi w stan uśpienia.|  
-|[SwitchToTask, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|Powiadamia hosta, że należy przełączyć się bieżącego zadania.|  
+|[SwitchToTask, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|Powiadamia hosta, że powinni przełączyć się do bieżącego zadania.|  
   
 ## <a name="remarks"></a>Uwagi  
- `IHostTaskManager` Umożliwia CLR tworzenie i zarządzanie nimi zadania, aby zapewnić punkty zaczepienia dla hosta podjęcie działań kontroli transferu z zarządzanego do kodu niezarządzanego lub odwrotnie, a także określić pewne akcje hosta można i nie może przyjąć podczas wykonywania kodu.  
+ `IHostTaskManager` Umożliwia środowisku CLR utworzyć i zarządzać zadaniami, aby zapewnić punkty zaczepienia dla hosta podjąć działania, gdy formant przesyła z zarządzanego do kodu niezarządzanego i na odwrót i określić pewne akcje, host może i nie można przyjąć podczas wykonywania kodu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

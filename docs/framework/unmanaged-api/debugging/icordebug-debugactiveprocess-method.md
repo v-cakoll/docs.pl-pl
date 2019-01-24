@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84137e7163101f7eaa54a45df0fbaa4e7bcf70fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cdee0d111c18d7bdf8c91ed4cbb368504ca3b2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538313"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>ICorDebug::DebugActiveProcess — Metoda
 Dołącza debuger do istniejącego procesu.  
@@ -42,16 +42,16 @@ HRESULT DebugActiveProcess (
  [in] Identyfikator procesu, do którego ma zostać dołączony debuger.  
   
  `win32Attach`  
- [in] Wartość logiczna, która ma ustawioną wartość `true` Jeśli debuger powinna zachowywać się jako debuger Win32 dla procesu i wysłać niezarządzane wywołania zwrotne; w przeciwnym razie `false`.  
+ [in] Wartość logiczna, która jest równa `true` Jeśli debuger powinien zachowywać się jak debugera Win32 dla procesu i wysyłania niezarządzanych wywołań zwrotnych; w przeciwnym razie `false`.  
   
  `ppProcess`  
- [out] Wskaźnik do adresu obiektu "ICorDebugProcess", który reprezentuje proces, do którego został dołączony debuger.  
+ [out] Wskaźnik na adres obiektu "ICorDebugProcess", który reprezentuje proces, do którego został dołączony debuger.  
   
 ## <a name="remarks"></a>Uwagi  
- Debugowanie międzyoperacyjne nie jest obsługiwane na platformach Win9x i z systemem innym niż x86, takich jak platform IA-64 i procesorem AMD64.  
+ Debugowanie międzyoperacyjne nie jest obsługiwane na platformach Win9x i innych x86, takich jak IA-64 i komputerów z procesorem AMD64 platform.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -59,5 +59,5 @@ HRESULT DebugActiveProcess (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

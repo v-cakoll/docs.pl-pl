@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0ed1dc09e8dcee8a4c67e01279c6e13661e252d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2741f2f1a6c5f92c3d15ba7d0127cd69494afdce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545137"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>ICorProfilerCallback2::SurvivingReferences — Metoda
-Raporty układ obiektów na stercie wyniku-kompaktowania wyrzucania elementów bezużytecznych.  
+Raportuje układ obiektów w stercie wyrzucania elementów bezużytecznych bez kondensowania w wyniku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,39 +40,39 @@ HRESULT SurvivingReferences(
   
 #### <a name="parameters"></a>Parametry  
  `cSurvivingObjectIDRanges`  
- [in] Liczba bloków ciągłe obiektów, które udało przetrwać wyniku-kompaktowania wyrzucanie elementów bezużytecznych. Oznacza to, że wartość `cSurvivingObjectIDRanges` rozmiar `objectIDRangeStart` i `cObjectIDRangeLength` stałych, w których magazyn `ObjectID` oraz długość, odpowiednio do każdego bloku obiektów.  
+ [in] Liczba bloków ciągłych obiektów, które przetrwały wyrzucanie elementów bezużytecznych bez kondensowania w wyniku. Oznacza to, że wartość `cSurvivingObjectIDRanges` jest rozmiarem `objectIDRangeStart` i `cObjectIDRangeLength` tablic, które magazynu `ObjectID` i długość, odpowiednio dla każdego bloku obiektów.  
   
- Następne dwa argumenty `SurvivingReferences` tablice równoległych. Innymi słowy `objectIDRangeStart` i `cObjectIDRangeLength` dotyczą tego samego bloku ciągłe obiektów.  
+ Następne dwa argumenty `SurvivingReferences` są tablicami równoległych. Innymi słowy `objectIDRangeStart` i `cObjectIDRangeLength` dotyczą tego samego bloku ciągłych obiektów.  
   
  `objectIDRangeStart`  
- [in] Tablica `ObjectID` wartości, z których każdy jest adres początkowy blok ciągłym, live obiektów w pamięci.  
+ [in] Tablica `ObjectID` wartości, z których każdy jest początkowy adres bloku ciągłych, obiekty aktywne w pamięci.  
   
  `cObjectIDRangeLength`  
- [in] Tablica liczb całkowitych, z których każdy jest rozmiar bloku sprawny ciągłe obiektów w pamięci.  
+ [in] Tablica liczb całkowitych, z których każdy jest rozmiar sprawny bloku ciągłych obiektów w pamięci.  
   
- Rozmiar jest określony dla każdego bloku, który odwołuje się do `objectIDRangeStart` tablicy.  
+ Rozmiar jest określony dla każdego bloku, w której podano odwołanie w `objectIDRangeStart` tablicy.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!IMPORTANT]
->  Ta metoda zgłasza rozmiary jako `MAX_ULONG` dla obiektów, które są większe niż 4 GB na platformach 64-bitowych. Dla obiektów, które są większe niż 4 GB, użyj [ICorProfilerCallback4::SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) metody zamiast tego.  
+>  Ta metoda zgłasza rozmiary jako `MAX_ULONG` dla obiektów, które są większe niż 4 GB na platformach 64-bitowych. W przypadku obiektów, które są większe niż 4 GB, użyj [icorprofilercallback4::survivingreferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) metody zamiast tego.  
   
- Elementy `objectIDRangeStart` i `cObjectIDRangeLength` tablice powinny być rozumiane w następujący sposób, aby określić, czy udało się obiektu przetrwać wyrzucanie elementów bezużytecznych. Przyjęto założenie, że `ObjectID` wartość (`ObjectID`) znajduje się w następującym zakresie:  
+ Elementy `objectIDRangeStart` i `cObjectIDRangeLength` tablic powinien być interpretowany w następujący sposób w celu określenia, czy obiekt przetrwały wyrzucanie elementów bezużytecznych. Przyjęto założenie, że `ObjectID` wartość (`ObjectID`) znajduje się w następującym zakresie:  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- Dla dowolnej wartości `i` znajdujący się w następującym zakresie, obiekt ma udało przetrwać wyrzucanie elementów bezużytecznych:  
+ Dla dowolnej wartości `i` znajdujący się w następującym zakresie, obiekt ma przetrwały wyrzucanie elementów bezużytecznych:  
   
  0 <= `i` < `cSurvivingObjectIDRanges`  
   
- Kompaktowania wyrzucania elementów bezużytecznych zwraca pamięci zajmowany przez obiekty "martwy", ale nie compact zwolnionych miejsca. W związku z tym pamięci jest zwracany do sterty, ale żadne obiekty "na żywo" są przenoszone.  
+ Wyrzucanie elementów bezużytecznych bez kondensowania odzyskuje pamięć zajęta przez obiekty "martwe", ale nie compact zwolnione miejsca. W rezultacie pamięci jest zwracany do sterty, ale żadne obiekty "na żywo" są przenoszone.  
   
- Środowisko uruchomieniowe języka wspólnego (CLR) wywołuje `SurvivingReferences` dla-kompaktowania wyrzucanie elementów bezużytecznych. Kolekcje garbage kompaktowania [ICorProfilerCallback::MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) jest wywoływana zamiast tego. Pojedynczy wyrzucania elementów bezużytecznych można kompaktowania jeden generacji i z systemem innym niż kompaktowania dla innej. Wyrzucanie elementów bezużytecznych na dowolnym określonym generacji profilera wyświetlany żaden `SurvivingReferences` wywołania zwrotnego lub `MovedReferences` wywołania zwrotnego, ale nie oba.  
+ Środowisko uruchomieniowe języka wspólnego (CLR) wywołuje `SurvivingReferences` dla bez kondensowania wyrzucania elementów bezużytecznych. Do kompaktowania wyrzucania elementów bezużytecznych [icorprofilercallback::movedreferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) zamiast tego wywoływany jest. Pojedynczy wyrzucania elementów bezużytecznych może być kompaktowania jeden generacji i bez kondensowania dla innego. Wyrzucanie elementów bezużytecznych na dowolnym konkretnej generacji, program profilujący wyświetlany żaden `SurvivingReferences` wywołanie zwrotne lub `MovedReferences` wywołania zwrotnego, ale nie oba.  
   
- Wiele `SurvivingReferences` wywołania zwrotne może otrzymał podczas określonego wyrzucania elementów bezużytecznych, ze względu na ograniczone buforowania wewnętrznego, wiele wątków raportowania w przypadku odzyskiwanie pamięci na serwerze i innych powodów. W przypadku wielu wywołań zwrotnych podczas wyrzucania elementów bezużytecznych, informacje są zbiorcza — wszystkich odwołań, które są zgłaszane w żadnym `SurvivingReferences` wywołania zwrotnego przetrwać wyrzucanie elementów bezużytecznych.  
+ Wiele `SurvivingReferences` wywołań zwrotnych mogą odebranych podczas określonego wyrzucania elementów bezużytecznych, ze względu na ograniczone wewnętrznego buforowania, wiele wątków raportowania w przypadku serwer wyrzucania elementów bezużytecznych i innych powodów. W przypadku wielu wywołań zwrotnych podczas wyrzucania elementów bezużytecznych, informacje są zbiorczej — wszystkie odwołania, które są zgłaszane w dowolnym `SurvivingReferences` wywołania zwrotnego przetrwać wyrzucania elementów bezużytecznych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -80,7 +80,7 @@ HRESULT SurvivingReferences(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)  
- [SurvivingReferences2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [SurvivingReferences2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)

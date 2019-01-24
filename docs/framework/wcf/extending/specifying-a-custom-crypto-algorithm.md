@@ -2,24 +2,24 @@
 title: Określanie niestandardowego algorytmu kryptograficznego
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537689"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Określanie niestandardowego algorytmu kryptograficznego
-Usługi WCF pozwala określić niestandardowy algorytm kryptograficzny do użycia podczas szyfrowania danych lub obliczeniowych podpisów cyfrowych. Można to zrobić przez następujące kroki:  
+WCF umożliwia określanie niestandardowego algorytmu kryptograficznego do użycia podczas szyfrowania danych lub przetwarzania podpisów cyfrowych. Jest to realizowane przez następujące kroki:  
   
-1.  Klasa wyprowadzona z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1.  Wyprowadzić klasę z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
 2.  Rejestrowanie algorytmu  
   
-3.  Konfigurowanie powiązania o <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-klasy.  
+3.  Konfigurowanie powiązania z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-klasy pochodnej.  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>Wyprowadzenia klasy z SecurityAlgorithmSuite  
- <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> Jest abstrakcyjna klasa podstawowa, która pozwala na Określanie algorytmu do użycia podczas wykonywania zabezpieczeń różnych operacji związanych z. Na przykład obliczania skrótu podpisu cyfrowego lub szyfrowania wiadomości. Poniższy kod przedstawia sposób klasa wyprowadzona z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:  
+ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> Jest abstrakcyjną klasę bazową, która pozwala na Określanie algorytmu do użycia podczas przeprowadzania zabezpieczeń różnych operacji związanych z. Na przykład obliczanie skrótu do podpisu cyfrowego lub szyfrowania wiadomości. Poniższy kod przedstawia sposób wyprowadzić klasę z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:  
   
 ```csharp  
 public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite  
@@ -86,8 +86,8 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
     }  
 ```  
   
-## <a name="register-the-custom-algorithm"></a>Rejestrowanie algorytmu niestandardowych  
- Rejestracja może odbywać się w pliku konfiguracji lub w kodzie nadrzędnych. Rejestrowanie niestandardowe algorytm należy utworzyć mapowanie między klasy, która implementuje dostawcę usług kryptograficznych i alias. Alias jest następnie mapowany do identyfikatora URI, który jest używany podczas określania algorytm w powiązaniu usługi WCF. Poniższy fragment konfiguracji przedstawia sposób rejestrowania niestandardowego algorytmu w konfiguracji:  
+## <a name="register-the-custom-algorithm"></a>Rejestrowanie niestandardowego algorytmu  
+ Rejestracja może odbywać się w pliku konfiguracji lub kodu imperatywnego. Rejestrowanie niestandardowego algorytmu odbywa się przez utworzenie mapowanie między klasę, która implementuje dostawcę usług kryptograficznych i alias. Alias jest następnie mapowany do identyfikatora URI, który jest używany podczas określania algorytm w powiązaniu usługi WCF. Poniższy fragment kodu konfiguracji przedstawia sposób rejestrowania niestandardowego algorytmu w konfiguracji:  
   
 ```xml  
 <configuration>  
@@ -105,9 +105,9 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- W sekcji <`cryptoClasses`> elementu tworzy mapowanie między SHA256CryptoServiceProvider i alias "SHA256CSP". <`nameEntry`> Elementu tworzy mapowanie między alias "SHA256CSP" i określonego adresu URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
+ W sekcji <`cryptoClasses`> element tworzy mapowanie między SHA256CryptoServiceProvider i alias "SHA256CSP". <`nameEntry`> Element tworzy mapowanie między aliasu "SHA256CSP" i pod określony adres URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
   
- Aby zarejestrować niestandardowy algorytm używany kod <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> metody. Ta metoda tworzy oba mapowania. Poniższy przykład przedstawia sposób wywołania tej metody:  
+ Do rejestrowania niestandardowego algorytmu używany kod <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> metody. Ta metoda tworzy oba mapowania. Poniższy przykład pokazuje, jak wywołać tę metodę:  
   
 ```  
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
@@ -116,17 +116,17 @@ CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.
 ```  
   
 ## <a name="configure-the-binding"></a>Konfigurowanie powiązania  
- Skonfiguruj powiązanie, określając niestandardowy <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-pochodnej klasy w ustawieniach powiązanie, jak pokazano w poniższy fragment kodu:  
+ Konfigurowanie powiązania, określając niestandardowy <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-pochodne klasy w ustawieniach powiązania, jak pokazano w poniższym fragmencie kodu:  
   
 ```csharp  
 WSHttpBinding binding = new WSHttpBinding();  
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
 ```  
   
- Na przykład kompletny kod, zobacz [Zręczność kryptograficzna w zabezpieczeniach WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) próbki.  
+ Aby uzyskać pełny przykład kodu, zobacz [Zręczność kryptograficzna w zabezpieczeniach WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) próbki.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Zabezpieczanie usług](../../../../docs/framework/wcf/securing-services.md)  
- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Zabezpieczanie usług](../../../../docs/framework/wcf/securing-services.md)
+- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)

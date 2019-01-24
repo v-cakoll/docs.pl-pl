@@ -2,12 +2,12 @@
 title: Komunikacja za pomocą nietrwałych kolejek
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c6b72503cb90108e3ecc9a384cb8d7ad326a7c9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548303"
 ---
 # <a name="volatile-queued-communication"></a>Komunikacja za pomocą nietrwałych kolejek
 Niniejszy przykład pokazuje sposób wykonywania volatile komunikatu w kolejce za pomocą transportu usługi kolejkowania komunikatów (MSMQ). W tym przykładzie użyto <xref:System.ServiceModel.NetMsmqBinding>. Usługa jest w tym przypadku aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  
@@ -19,7 +19,7 @@ Niniejszy przykład pokazuje sposób wykonywania volatile komunikatu w kolejce z
   
  Podczas wysyłania wiadomości z żadnych zapewnień, MSMQ tylko sprawia, że najlepszy nakład pracy na dostarczenie wiadomości, w przeciwieństwie do dokładnie jeden raz gwarancji gdzie MSMQ gwarantuje, że komunikat pobiera dostarczane lub jeśli nie można dostarczyć, informuje o tym, że nie można dostarczyć wiadomości.  
   
- W niektórych scenariuszach może chcesz wysłać wiadomość volatile z żadnych zapewnień, za pośrednictwem kolejki, gdy terminowe dostarczanie jest ważniejsza niż utraty wiadomości. Volatile komunikaty nie są unieważniane awarii menedżera kolejki. Dlatego jeśli Menedżer kolejki ulegnie awarii, przeżyje nietransakcyjnej kolejki, używane do przechowywania wiadomości lotnych, ale komunikaty się czy nie, ponieważ komunikaty nie są przechowywane na dysku.  
+ W niektórych scenariuszach może chcesz wysłać wiadomość volatile z żadnych zapewnień, za pośrednictwem kolejki, gdy terminowe dostarczanie jest ważniejsza niż utraty wiadomości. Volatile messages do not survive queue manager crashes. Dlatego jeśli Menedżer kolejki ulegnie awarii, przeżyje nietransakcyjnej kolejki, używane do przechowywania wiadomości lotnych, ale komunikaty się czy nie, ponieważ komunikaty nie są przechowywane na dysku.  
   
 > [!NOTE]
 >  Nie można wysyłać volatile wiadomości nie gwarancji w zakresie transakcji za pomocą usługi MSMQ. Ponadto należy utworzyć nietransakcyjnej kolejkę do wysyłania wiadomości lotnych.  
@@ -227,4 +227,4 @@ Stock Tick zzz9:43.3
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

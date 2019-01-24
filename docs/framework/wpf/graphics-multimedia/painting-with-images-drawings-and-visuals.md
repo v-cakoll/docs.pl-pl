@@ -12,12 +12,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: 0d860062814a447830e1237f4fc2c1ae0d223e9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d226ecb6e168a044cd9802b4278c25084d8c84fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537754"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Malowanie obrazami, rysowaniem i Visual
 W tym temacie opisano sposób użycia <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, i <xref:System.Windows.Media.VisualBrush> obiektów można malować obszar za pomocą obrazu, <xref:System.Windows.Media.Drawing>, lub <xref:System.Windows.Media.Visual>.  
@@ -35,7 +35,7 @@ W tym temacie opisano sposób użycia <xref:System.Windows.Media.ImageBrush>, <x
   
  Podobnie jak wszystkie <xref:System.Windows.Media.Brush> obiektów <xref:System.Windows.Media.ImageBrush> może służyć do malowania obiekty, takie jak kształty, panele, formantów i tekst. Na poniższej ilustracji przedstawiono niektóre efekty, które można osiągnąć za pomocą <xref:System.Windows.Media.ImageBrush>.  
   
- ![ImageBrush danych wyjściowych przykłady](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
+ ![ImageBrush output examples](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
 Obiekty przy użyciu obiektu ImageBrush  
   
  Domyślnie <xref:System.Windows.Media.ImageBrush> odcinkach jego obrazu, aby całkowicie wypełnić obszar jest malowane, prawdopodobnie zakłócanie obrazu, jeśli malowanego obszaru ma inny współczynnik proporcji niż obraz. To zachowanie można zmienić, zmieniając <xref:System.Windows.Media.TileBrush.Stretch%2A> właściwości z jego wartość domyślną <xref:System.Windows.Media.Stretch.Fill> do <xref:System.Windows.Media.Stretch.None>, <xref:System.Windows.Media.Stretch.Uniform>, lub <xref:System.Windows.Media.Stretch.UniformToFill>. Ponieważ <xref:System.Windows.Media.ImageBrush> jest typem <xref:System.Windows.Media.TileBrush>, można określić dokładnie, jak klasa ImageBrush wypełnia obszar danych wyjściowych, a nawet tworzyć wzorców. Aby uzyskać więcej informacji na temat zaawansowana <xref:System.Windows.Media.TileBrush> funkcje, zobacz [TileBrush — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md).  
@@ -90,9 +90,9 @@ Obiekty malowane przez DrawingBrush
   
  Istnieją dwa sposoby, aby określić <xref:System.Windows.Media.VisualBrush.Visual%2A> zawartości <xref:System.Windows.Media.VisualBrush>.  
   
--   Utwórz nową <xref:System.Windows.Media.Visual> i użyj go, aby ustawić <xref:System.Windows.Media.VisualBrush.Visual%2A> właściwość <xref:System.Windows.Media.VisualBrush>. Aby uzyskać przykład, zobacz [przykład: malowanie obiektu za pomocą wizualizacji](#examplevisualbrush1) Poniższa sekcja.  
+-   Utwórz nową <xref:System.Windows.Media.Visual> i użyj go, aby ustawić <xref:System.Windows.Media.VisualBrush.Visual%2A> właściwość <xref:System.Windows.Media.VisualBrush>. Aby uzyskać przykład, zobacz [przykładu: Malowanie obiektu za pomocą wizualizacji](#examplevisualbrush1) Poniższa sekcja.  
   
--   Użyj istniejącego <xref:System.Windows.Media.Visual>, który tworzy zduplikowane obraz elementu docelowego <xref:System.Windows.Media.Visual>. Następnie można użyć <xref:System.Windows.Media.VisualBrush> do tworzenia efektów interesujące, takie jak odbicia i powiększenia. Aby uzyskać przykład, zobacz [przykład: tworzenie odbicia](#examplevisualbrush2) sekcji.  
+-   Użyj istniejącego <xref:System.Windows.Media.Visual>, który tworzy zduplikowane obraz elementu docelowego <xref:System.Windows.Media.Visual>. Następnie można użyć <xref:System.Windows.Media.VisualBrush> do tworzenia efektów interesujące, takie jak odbicia i powiększenia. Aby uzyskać przykład, zobacz [przykładu: Tworzenie odbicia](#examplevisualbrush2) sekcji.  
   
  Podczas definiowania nowej <xref:System.Windows.Media.VisualBrush.Visual%2A> dla <xref:System.Windows.Media.VisualBrush> i <xref:System.Windows.Media.Visual> jest <xref:System.Windows.UIElement> (takich jak panel lub kontrolka), układ jest uruchomiony system <xref:System.Windows.UIElement> i jego elementy podrzędne przy <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> właściwość jest ustawiona na `true`. Jednak główny <xref:System.Windows.UIElement> jest zasadniczo jest odizolowana od reszty systemu: stylów i układu zewnętrznych nie charakteryzują tę granicę. W związku z tym, należy jawnie określić rozmiar głównej <xref:System.Windows.UIElement>, ponieważ jest jedynym nadrzędnego <xref:System.Windows.Media.VisualBrush> i w związku z tym go nie może automatycznie rozmiar samego do obszaru są rysowane. Aby uzyskać więcej informacji na temat układu w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], zobacz [układ](../../../../docs/framework/wpf/advanced/layout.md).  
   
@@ -108,7 +108,7 @@ Obiekty malowane przez DrawingBrush
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
 <a name="examplevisualbrush2"></a>   
-## <a name="example-create-a-reflection"></a>Przykład: Tworzenie odbicia  
+## <a name="example-create-a-reflection"></a>Przykład: Utwórz odbicie  
  Poprzednim przykładzie pokazano, jak utworzyć nową <xref:System.Windows.Media.Visual> do użycia jako tło. Można również użyć <xref:System.Windows.Media.VisualBrush> do wyświetlenia istniejącej wizualizacji; ta funkcja umożliwia tworzenie efektów wizualnych interesujące, takie jak odbić i powiększenia. W poniższym przykładzie użyto <xref:System.Windows.Media.VisualBrush> do tworzenie odbicia <xref:System.Windows.Controls.Border> zawiera wiele elementów. Poniższa ilustracja przedstawia ten przykład generuje dane wyjściowe.  
   
  ![A odzwierciedlone obiekt wizualny](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
@@ -134,16 +134,16 @@ Składniki TileBrush o wiele kafelków
   
  Aby uzyskać więcej informacji o funkcjach fragmentacji <xref:System.Windows.Media.TileBrush> obiekty, zobacz [TileBrush — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [TileBrush — przegląd](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [Pędzle WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Rysowanie obiektów — przegląd](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [Maska nieprzezroczystości — przegląd](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [Przykładowe VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [TileBrush — przegląd](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)
+- [Pędzle WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)
+- [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Rysowanie obiektów — przegląd](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+- [Maska nieprzezroczystości — przegląd](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)
+- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049)

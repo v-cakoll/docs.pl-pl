@@ -2,12 +2,12 @@
 title: Wykonanie Side-by-Side w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: f69a269e5f6370cf7c5a60920b3d5a47ce1079cb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 122cb33f4cca203f09104c5a40a1ad5d13326c57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126617"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538638"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Wykonanie Side-by-Side w ADO.NET
 Wykonywanie Side-by-side w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] jest możliwość wykonywania aplikacji na komputerze, który ma wiele wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zainstalowany, wyłącznie przy użyciu wersji, dla którego aplikacja została skompilowana. Aby uzyskać szczegółowe informacje o konfigurowaniu side-by-side wykonywania, zobacz [Side-by-Side Execution](../../../../docs/framework/deployment/side-by-side-execution.md).  
@@ -64,7 +64,7 @@ SELECT * FROM dbo.Customers;
 SET NOCOUNT OFF;  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

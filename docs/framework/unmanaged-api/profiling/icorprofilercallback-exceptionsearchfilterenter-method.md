@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08ac7eddf96ac54ce16696355f7d5bb5694f872b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be400fd62568c6b7d506acb52a5eedc4fdbfcf0b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549749"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>ICorProfilerCallback::ExceptionSearchFilterEnter — Metoda
-Powiadamia profilera fazy wyszukiwania obsługi wyjątków zostało uruchomione, wykonywanie filtru wyjątków zdefiniowanych przez użytkownika.  
+Powiadamia program profilujący, że faza wyszukiwania dla obsługi wyjątków rozpoczął wykonywanie filtru wyjątków zdefiniowanych przez użytkownika.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,7 +39,7 @@ HRESULT ExceptionSearchFilterEnter(
  [in] Identyfikator funkcji, która zawiera filtr.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -47,6 +47,6 @@ HRESULT ExceptionSearchFilterEnter(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ExceptionSearchFilterLeave, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ExceptionSearchFilterLeave, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)

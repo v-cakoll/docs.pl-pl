@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 641a1cc0fd0ec53872ee3312e7da06923b82ddd7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 132a4c72f6abc4b1510c4d28b4ec0de6f80c1261
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539659"
 ---
 # <a name="optimistic-concurrency"></a>Optymistyczna współbieżność
 W środowisku wielodostępnym, istnieją dwa modele aktualizacji danych w bazie danych: optymistycznej współbieżności i pesymistycznej współbieżności. <xref:System.Data.DataSet> Obiektu jest przeznaczona do zachęcać do stosowania funkcji optymistycznej współbieżności dla długotrwałych działań, takich jak dane usług zdalnych i wchodzenie w interakcje z danymi.  
@@ -37,8 +37,8 @@ W środowisku wielodostępnym, istnieją dwa modele aktualizacji danych w bazie 
 |Nazwa kolumny|Oryginalna wartość|Bieżąca wartość|Wartość w bazie danych|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|Nazwisko|Nowak|Nowak|Nowak|  
-|Imię|Bob|Bob|Bob|  
+|LastName|Nowak|Nowak|Nowak|  
+|FirstName|Bob|Bob|Bob|  
   
  1 o godzinie: 01 Użytkownik2 odczytuje w tym samym wierszu.  
   
@@ -47,8 +47,8 @@ W środowisku wielodostępnym, istnieją dwa modele aktualizacji danych w bazie 
 |Nazwa kolumny|Oryginalna wartość|Bieżąca wartość|Wartość w bazie danych|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|Nazwisko|Nowak|Nowak|Nowak|  
-|Imię|Bob|Robert|Bob|  
+|LastName|Nowak|Nowak|Nowak|  
+|FirstName|Bob|Robert|Bob|  
   
  Aktualizacja zakończy się pomyślnie, ponieważ oryginalne wartości, które ma Użytkownik2 pasuje do wartości w bazie danych w czasie aktualizacji.  
   
@@ -57,8 +57,8 @@ W środowisku wielodostępnym, istnieją dwa modele aktualizacji danych w bazie 
 |Nazwa kolumny|Oryginalna wartość|Bieżąca wartość|Wartość w bazie danych|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|Nazwisko|Nowak|Nowak|Nowak|  
-|Imię|Bob|James|Robert|  
+|LastName|Nowak|Nowak|Nowak|  
+|FirstName|Bob|James|Robert|  
   
  W tym momencie użytkownik User1 napotyka naruszenie optymistycznej współbieżności, ponieważ wartość w bazie danych ("Robert") nie jest zgodna z oryginalnej wartości, że użytkownik User1 oczekiwała ("Bob"). Naruszenie współbieżności po prostu informuje o tym, że aktualizacja nie powiodła się. Teraz decyzja należy zastąpić zmiany dostarczonych przez Użytkownik2 ze zmianami, dostarczone przez użytkownika Użytkownik1 lub Anuluj zmiany przy użyciu konta użytkownik1.  
   
@@ -206,9 +206,9 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [Informacje o błędzie wiersza](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
- [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [Informacje o błędzie wiersza](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
+- [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

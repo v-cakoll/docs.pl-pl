@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7d7f791fbc68a526f428f4f79d9b379a23ca771
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f20ae0b712a5db5cdfb6d5f6a3786af151820294
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550491"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semafor i klasa SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Klasa reprezentuje nazwane (ogólnosystemowe) lub semafor lokalnego. To cienka otokę wokół obiektu semafora Win32. Semaforów Win32 są liczenie semaforów, które mogą być używane do kontrolowania dostępu do puli zasobów.  
@@ -48,6 +48,6 @@ ms.locfileid: "50199490"
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Threading.Semaphore>  
-- <xref:System.Threading.SemaphoreSlim>  
+- <xref:System.Threading.Semaphore>
+- <xref:System.Threading.SemaphoreSlim>
 - [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)

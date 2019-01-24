@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84059c5e5542e13b1d4fc4efcfc4c7f418db391e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2da6bc87a175851aa7b23b67075ce61e39f0b937
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555105"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames — funkcja
 Pobiera nazwy wszystkich kwalifikatorów lub niektórych kwalifikatorów, które są dostępne z bieżącego obiektu lub właściwości. 
@@ -53,8 +53,8 @@ HRESULT QualifierSet_GetNames (
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |  | 0 | Zwraca nazwy wszystkich kwalifikatorów. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Zwróć tylko nazwy kwalifikatory określonych do bieżącej właściwości lub obiektu. <br/> Dla właściwości: zwracać tylko kwalifikatory określonych właściwości (w tym zastąpień), a nie te kwalifikatory propagowane z poziomu definicji klasy. <br/> W przypadku wystąpienia: zwracać tylko nazwy kwalifikator danego wystąpienia. <br/> Dla klasy: przywrócenie tylko kwalifikatory określonych beiong klasy pochodnej.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Zwróć tylko nazwy kwalifikatory propagowane z innego obiektu. <br/> Dla właściwości: Zwróć tylko kwalifikatory propagowane do tej właściwości z definicji klasy, a nie te z samej właściwości. <br/> W przypadku wystąpienia: zwrócenia tylko tych kwalifikatory propagowane z poziomu definicji klasy. <br/> Dla klasy: zwrócenia tylko nazwy kwalifikator dziedziczone z klasy nadrzędnej. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Zwróć tylko nazwy kwalifikatory określonych do bieżącej właściwości lub obiektu. <br/> Dla właściwości: Zwróć tylko kwalifikatory określone dla właściwości (w tym zastąpień), a nie kwalifikatory propagowane z poziomu definicji klasy. <br/> W przypadku wystąpienia: Zwróć tylko nazwy kwalifikator danego wystąpienia. <br/> Dla klasy: Zwróć tylko kwalifikatory określonych beiong klasy pochodnej.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Zwróć tylko nazwy kwalifikatory propagowane z innego obiektu. <br/> Dla właściwości: Zwróć tylko kwalifikatory propagowane do tej właściwości z definicji klasy, a nie te z samej właściwości. <br/> W przypadku wystąpienia: Zwróć tylko tych kwalifikatory propagowane z poziomu definicji klasy. <br/> Dla klasy: Zwróć tylko nazwy kwalifikator dziedziczone z klasy nadrzędnej. |
 
 `pstrNames` [out] Nowy `SAFEARRAY` zawierający żądanej nazwy. Tablica może mieć elementów 0. Jeśli wystąpi błąd, nowy `SAFEARRAY` nie jest zwracana.
 
@@ -77,11 +77,11 @@ Po po pobraniu nazwy kwalifikator, są dostępne każdego kwalifikator według n
 Nie jest błąd dla danego obiektu, który ma zero kwalifikatorów, więc liczba ciągów w `pstrNames` przy powrocie może przyjąć wartość 0, nawet jeśli funkcja zwraca `WBEM_S_NO_ERROR`.
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Zobacz także  
-[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

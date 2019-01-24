@@ -3,12 +3,12 @@ title: Program WIF i farmy serwerów sieci Web
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 8d1d3d67dd578957b5d7f4dc70cd2710143b699d
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 85fbebcd210e7df17212d39b8e3aca9bf76bfb67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543058"
 ---
 # <a name="wif-and-web-farms"></a>Program WIF i farmy serwerów sieci Web
 Korzystając z programu Windows Identity Foundation (WIF) można zabezpieczyć zasobów jednostki uzależnionej aplikacji innych firm (RP), które zostało wdrożone w ramach farmy sieci web, należy wykonać określone kroki, aby upewnić się, że program WIF może przetwarzać tokenów z wystąpień aplikacji jednostki Uzależnionej, uruchomione na różnych komputery z farmy. Proces przetwarzania obejmuje sprawdzanie podpisów tokenów sesji, szyfrowania i odszyfrowywania tokenów sesji, buforowanie tokenów sesji i wykrywanie powtórzone tokenów zabezpieczających.  
@@ -250,8 +250,8 @@ namespace CacheLibrary
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
- <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>  
- [Zarządzanie sesjami programu WIF](../../../docs/framework/security/wif-session-management.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
+- <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
+- [Zarządzanie sesjami programu WIF](../../../docs/framework/security/wif-session-management.md)

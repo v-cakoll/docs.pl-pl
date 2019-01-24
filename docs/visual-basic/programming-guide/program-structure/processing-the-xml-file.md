@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: 524a54443b8f2365252f11282ca29fc492bef351
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: aa31f0f618990d4e57520a1098ec80b722e1cbe3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543673"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Przetwarzanie pliku XML (Visual Basic)
 Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. (Aby uzyskać informacje na temat tagów w kodzie, zobacz [tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md).) Ciąg Identyfikatora jednoznacznie identyfikuje konstrukcja. Programy, które przetwarzają pliku XML umożliwiają identyfikowanie odpowiedni ciąg Identyfikatora [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] elementu metadanych/odbicia.  
@@ -41,6 +41,6 @@ Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, któ
   
  [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)  
- [Instrukcje: tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+## <a name="see-also"></a>Zobacz także
+- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [Instrukcje: Tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

@@ -2,12 +2,12 @@
 title: Procedura wielobieżna ConcurrencyMode
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: 94ea62d18fec202a099c2797602224eab43299b4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 49ef172c607957ad68b628a82d26edbb371522e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549112"
 ---
 # <a name="concurrencymode-reentrant"></a>Procedura wielobieżna ConcurrencyMode
 Niniejszy przykład pokazuje konieczność i zagadnień dotyczących używania pomocą właściwości ConcurrencyMode.Reentrant od implementacji usługi. Pomocą właściwości ConcurrencyMode.Reentrant oznacza, że usługi (lub wywołania zwrotnego) przetwarza tylko jeden komunikat w danym momencie (odpowiednikiem `ConcurencyMode.Single`). Aby zapewnić bezpieczeństwo wątków, Windows Communication Foundation (WCF) blokuje `InstanceContext` przetwarzania komunikatu, tak aby nie inne komunikaty mogą być przetwarzane. W przypadku trybu współużytkowane `InstanceContext` jest odblokowany, po prostu, zanim usługa wykonuje wywołanie wychodzące, co pozwoli na kolejne wywołanie, (które mogą być współużytkowane, jak pokazano w przykładzie) można pobrać blokady następnym razem, jest dostępna w usłudze. Aby zademonstrować zachowanie, przykład pokazuje, jak klienta i usługi mogą wysyłać między sobą za pomocą kontraktu dwukierunkowego.  
@@ -82,4 +82,4 @@ Pong: Ticks = 1
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bba40acf7bfd20897ece4de285fe7a9175be83e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: defe69e8d205a0c66f806e4ffacb09d5a9f63309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552115"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory — Funkcja
 Pobiera ścieżkę katalogu historii aplikacji.  
@@ -40,29 +40,29 @@ HRESULT GetHistoryFileDirectory (
  [out] Bufor do przechowywania ścieżkę do katalogu historii aplikacji.  
   
  `pdwSize`  
- [w, out] Długość buforu.  
+ [out w] Długość buforu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowe kody błędów COM, zgodnie z definicją w pliku pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca standardowe kody błędu modelu COM, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_INVALIDARG|`wzDir` lub `pdwSize` ma wartość null lub wersja parametry są niepoprawne.|  
+|E_INVALIDARG|`wzDir` lub `pdwSize` ma wartość null lub wersji ciąg jest niepoprawny.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po pomyślnym ukończeniu `pdwSize` argument ma wartość długości ciągu ścieżki.  
+ Po pomyślnym zakończeniu `pdwSize` argument jest równa długości ciągu ścieżki.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Fusion.h  
   
- **Biblioteka:** Fusion.dll i Mscorwks.dll.a;a;pierwsza. Użyj Fusion.dll zamiast Mscorwks.dll.a;a;pierwsza, aby upewnić się, że docelowy poprawna wersja programu .NET Framework.  
+ **Biblioteka:** Fusion.dll i Mscorwks.dll. Użyj Fusion.dll zamiast Mscorwks.dll zapewnienie docelowych poprawną wersję programu .NET Framework.  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [CreateHistoryReader, funkcja](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
- [NukeDownloadedCache, funkcja](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)  
- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [CreateHistoryReader, funkcja](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
+- [NukeDownloadedCache, funkcja](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
+- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

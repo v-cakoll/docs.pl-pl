@@ -1,5 +1,5 @@
 ---
-title: Jak ustawić położenie elementów podrzędnych siatki
+title: 'Instrukcje: Ustaw położenie elementów podrzędnych siatki'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: 5ccdcb3d166e1b703faff1dc8046e61ee213d12a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a1b567356588d6798bae5d73d3d410882d087986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538680"
 ---
-# <a name="how-to-position-the-child-elements-of-a-grid"></a>Jak ustawić położenie elementów podrzędnych siatki
+# <a name="how-to-position-the-child-elements-of-a-grid"></a>Instrukcje: Ustaw położenie elementów podrzędnych siatki
 W tym przykładzie pokazano, jak użyć i ustaw metody, które są zdefiniowane na <xref:System.Windows.Controls.Grid> położenie elementów podrzędnych.  
   
 ## <a name="example"></a>Przykład  
@@ -30,6 +30,6 @@ W tym przykładzie pokazano, jak użyć i ustaw metody, które są zdefiniowane 
  
  ![Zrzut ekranu przedstawia interfejs użytkownika WPF z dwiema kolumnami, po prawej stronie ma siatka 3 x 3, a po lewej stronie przycisków, aby przenieść jako kolorowy prostokąt między kolumnami i wierszami siatki](./media/grid-methods-sample.png) 
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Controls.Grid>  
- [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Controls.Grid>
+- [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)

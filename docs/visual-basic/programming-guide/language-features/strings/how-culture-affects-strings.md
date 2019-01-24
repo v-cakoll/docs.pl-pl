@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543451"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Wpływ kultury na ciągi w Visual Basic
 Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przeprowadzenie ciąg konwersje i porównań.  
@@ -36,7 +36,7 @@ Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przepro
  Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Conversion.Str%2A> i <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
 ## <a name="using-a-specific-culture"></a>Przy użyciu określonej kultury  
- Wyobraź sobie, że opracowujesz aplikację, która wysyła daty (sformatowany jako ciąg) do usługi sieci Web. W tym przypadku aplikacja musi używać określonej kultury do konwersji ciągu. Do zilustrowania Dlaczego, należy wziąć pod uwagę wynik za pomocą daty <xref:System.DateTime.ToString> metoda: Jeśli aplikacja korzysta z tej metody do formatowania daty 4 lipca 2005, zwraca "7/4/2005 12:00:00 AM" uruchamiania z kulturą Stanów Zjednoczonych angielski (en US), ale zwraca " 04.07.2005 00:00:00 "uruchamiania z kulturą niemiecki (de-DE).  
+ Wyobraź sobie, że opracowujesz aplikację, która wysyła daty (sformatowany jako ciąg) do usługi sieci Web. W tym przypadku aplikacja musi używać określonej kultury do konwersji ciągu. W celu zilustrowania Dlaczego, należy wziąć pod uwagę wynik za pomocą daty <xref:System.DateTime.ToString> metody: Jeśli aplikacja używa tej metody do formatowania daty 4 lipca 2005, zwraca "7/4/2005 12:00:00 AM" uruchamiania z kulturą Stanów Zjednoczonych angielski (en US), ale zwraca "04.07.2005 00:00:00" uruchamiania z kulturą niemiecki (de-DE).  
   
  Gdy zachodzi potrzeba wykonania konwersji ciągu w formacie określonej kultury, należy użyć `CultureInfo` klasy, która jest wbudowana w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Można utworzyć nową `CultureInfo` obiektu dla określonej kultury, przekazując nazwę kultury, aby <xref:System.Globalization.CultureInfo.%23ctor%2A> konstruktora. Nazwy kultury obsługiwane są wymienione w <xref:System.Globalization.CultureInfo> klasy strony pomocy.  
   
@@ -68,7 +68,7 @@ Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przepro
   
  W przypadku bardziej precyzyjną kontrolę nad jak porównania są wykonywane, można użyć dodatkowych przeciążenia <xref:System.String.Compare%2A> metody. Za pomocą <xref:System.String.Compare%2A?displayProperty=nameWithType> metody, można użyć `comparisonType` argumentu, aby określić typ porównania do użycia.  
   
-|Wartość `comparisonType` argumentu|Typ porównania|Kiedy należy używać|  
+|Wartość `comparisonType` argumentu|Typ porównania|Kiedy stosować|  
 |---|---|---|  
 |`Ordinal`|Porównanie, w bajtach składników ciągów.|Użyj tej wartości podczas porównywania: identyfikatory uwzględniana wielkość liter, ustawienia związane z zabezpieczeniami lub innych nielingwistyczne identyfikatorów, w którym bajtów musi dokładnie pasować.|  
 |`OrdinalIgnoreCase`|Porównanie, w bajtach składników ciągów.<br /><br /> `OrdinalIgnoreCase` informacje Niezmienna kultura są używane do określania, kiedy dwa znaki różnią się jedynie wielkość liter.|Użyj tej wartości podczas porównywania: bez uwzględniania wielkości liter identyfikatorów, ustawienia związane z zabezpieczeniami i dane przechowywane w Windows.|  
@@ -78,7 +78,7 @@ Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przepro
 ### <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
  Jeśli aplikacja podejmuje decyzje dotyczące bezpieczeństwa, w oparciu o wyniki porównania lub operację zmiany sprawy, a następnie operacja powinna użyć <xref:System.String.Compare%2A?displayProperty=nameWithType> metody i przekazać `Ordinal` lub `OrdinalIgnoreCase` dla `comparisonType` argumentu.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Globalization.CultureInfo>  
- [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Globalization.CultureInfo>
+- [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

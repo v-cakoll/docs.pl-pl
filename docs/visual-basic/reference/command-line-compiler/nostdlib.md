@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 957eca6066a316a4f4daf7e6de972df98082c26c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32a5b0531851e9f8b4280e8d2908bfe2d011bf90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547727"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 Powoduje, że kompilator nie automatycznie odwołuje się do standardowych bibliotek.  
@@ -38,8 +38,8 @@ Powoduje, że kompilator nie automatycznie odwołuje się do standardowych bibli
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Dostosowywanie, które obiekty są dostępne w My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+## <a name="see-also"></a>Zobacz także
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Dostosowywanie, które obiekty są dostępne w My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)

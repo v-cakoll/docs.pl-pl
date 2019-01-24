@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58ef462fdccc31a7694721b3ab9c3bec52d66abe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8af9d0f3c31e9178e815dc8fb00f192b8da3e5de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541264"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Co&#39;s jako przestarzałe w bibliotece klas programu .NET Framework
 .NET Framework zmienia się wraz z upływem czasu. Każda nowa wersja dodaje nowe typy i składowe typu, które zapewniają nowe funkcje. Istniejące typy i składowe są również zmienić wraz z upływem czasu. Na przykład niektóre typy stać się mniej ważne technologii, które obsługują zostaje zastąpiona przez nową technologię, a niektóre metody są zastępowane przez nowszą metody, które są bardziej wygodne lub zaawansowanych funkcji.  
@@ -64,8 +64,8 @@ ms.locfileid: "50183480"
 |4|w wersji 4.0|  
 |3.5|v2.0.50727|  
 |2.0|v2.0.50727|  
-|1.1|V1.1.4322|  
-|1.0|V1.0.3705|  
+|1.1|v1.1.4322|  
+|1.0|v1.0.3705|  
   
 ## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Przestarzałe list dla .NET Framework 4.5 lub nowszy  
  [Przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md)  
@@ -81,5 +81,5 @@ ms.locfileid: "50183480"
   
  [.NET framework 2.0 przestarzałe listy](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
-## <a name="see-also"></a>Zobacz też  
- [\<supportedRuntime > Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+## <a name="see-also"></a>Zobacz także
+- [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c76e46c75680d9fc0ad70e94da288f0c6b5e5ee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e222f1a39276b6debc348bfb25e8db65cb648ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544643"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps — Metoda
-Pobiera zestaw właściwości wyeksportowanego typu podpisem określonych metadanych.  
+Pobiera zestaw właściwości typu wyeksportowanego za pomocą podpisu określonych metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,34 +43,34 @@ HRESULT GetExportedTypeProps (
   
 #### <a name="parameters"></a>Parametry  
  `mdct`  
- [in] `mdExportedType` Token metadanych, który reprezentuje wyeksportowanego typu.  
+ [in] `mdExportedType` Token metadanych, który reprezentuje typ eksportowany.  
   
  `szName`  
- [out] Nazwa wyeksportowanego typu.  
+ [out] Nazwa typu wyeksportowanego.  
   
  `cchName`  
- [in] Rozmiar w znaki dwubajtowe z `szName`.  
+ [in] Rozmiar w szerokich znaków z `szName`.  
   
  `pchName`  
- [out] Liczba faktycznie zwracane w znaki dwubajtowe `szName`  
+ [out] Liczba znaków dwubajtowych rzeczywistego zwrotu w `szName`  
   
  `ptkImplementation`  
- [out] `mdFile`, `mdAssemblyRef`, Lub `mdExportedType` token metadanych, który zawiera lub udziela dostępu do właściwości wyeksportowanego typu.  
+ [out] `mdFile`, `mdAssemblyRef`, Lub `mdExportedType` token metadanych, który zawiera lub zezwala na dostęp do właściwości wyeksportowanego typu.  
   
  `ptkTypeDef`  
- [out] Wskaźnik do `mdTypeDef` token, który reprezentuje typ pliku.  
+ [out] Wskaźnik do `mdTypeDef` token, który reprezentuje typ w pliku.  
   
  `pdwExportedTypeFlags`  
- [out] Wskaźnik do flag, które opisują metadanych stosowane do wyeksportowanego typu. Wartość flagi może być co najmniej jeden [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) wartości.  
+ [out] Wskaźnik flagi, które opisują metadane stosowane do wyeksportowanego typu. Wartość flagi może być co najmniej jeden [cortypeattr —](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) wartości.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

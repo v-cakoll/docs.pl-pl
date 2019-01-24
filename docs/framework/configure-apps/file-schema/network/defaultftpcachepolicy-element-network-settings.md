@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: a8c71551adc2b88b5300994134eaec329a083709
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f237831befab627ec603a9000a7cef6184e0ae65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546112"
 ---
 # <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultftpcachepolicy —&gt; — Element (ustawienia sieci)
 Opisuje, czy buforowanie FTP jest aktywny i w tym artykule opisano domyślne zasady buforowania.  
   
  \<Konfiguracja >  
 \<system.net>  
-\<requestCaching — >  
-\<defaultftpcachepolicy — >  
+\<requestCaching>  
+\<defaultFtpCachePolicy>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -60,7 +60,7 @@ Opisuje, czy buforowanie FTP jest aktywny i w tym artykule opisano domyślne zas
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[requestCaching —](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Określa mechanizm buforowania żądań sieci.|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Określa mechanizm buforowania żądań sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -79,8 +79,8 @@ Opisuje, czy buforowanie FTP jest aktywny i w tym artykule opisano domyślne zas
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.Net.Cache>  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.Cache.RequestCacheLevel>  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.Cache>
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.Cache.RequestCacheLevel>
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

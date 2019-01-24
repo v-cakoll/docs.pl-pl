@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac17993a4980e96cbd05fc2523567138e7b56262
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c2eb1898f03a52306a8a2763059cf198208b7b88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551842"
 ---
 # <a name="deploying-the-net-framework"></a>Wdrażanie programu .NET Framework
 Ta sekcja dokumentacji .NET Framework zawiera informacje dla deweloperów, którzy chcą zainstalować program .NET Framework za pomocą swoich aplikacji i administratorów, którzy chcą wdrożyć program .NET Framework w sieci. Również w tym artykule omówiono aktywacji i ponownie uruchom problemów związanych z wdrażaniem i jak monitorować postęp instalacji programu .NET Framework.  
@@ -30,11 +30,11 @@ Ta sekcja dokumentacji .NET Framework zawiera informacje dla deweloperów, któr
  [Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
  Opisuje sposób dyskretnie Uruchom i Śledź proces instalacji programu .NET Framework podczas wyświetlania własnego widoku postępu instalacji.  
   
- [Błędy inicjowania programu .NET Framework: Zarządzanie wrażeniami użytkownika](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
+ [Błędy inicjowania programu .NET framework: Zarządzanie wrażeniami użytkownika](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
  Wyjaśnia, co się stanie, gdy aplikacja .NET Framework wymaga wersji środowiska CLR, która jest nieprawidłowa lub nie jest zainstalowana na komputerze użytkownika, jak naprawić te błędy i sposobie kontrolowania komunikat o błędzie wyświetlany dla użytkownika.  
   
  [Instrukcje: Debugowanie problemów aktywacji środowiska CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
  Przedstawia sposób wyświetlić i debugowania dzienniki aktywacji środowiska CLR, aby rozwiązać problemy, które można napotkać podczas pobierania aplikację do uruchamiania w odpowiedniej wersji środowiska CLR.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 - [Podręcznik programowania](../../../docs/framework/development-guide.md)

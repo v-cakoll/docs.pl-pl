@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be7120b9bff5c51141a1eac80051c4b464433aa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0c58fe8aeeb9acdb886cb224046c68af0577eae7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539756"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Pobieranie zasobów w aplikacjach klasycznych
 Podczas pracy z zlokalizowane zasoby w aplikacjach pulpitu .NET Framework, należy najlepiej pakietów zasobów dla kultury neutralnej lub domyślne przy użyciu zestawu głównego i utworzyć zestaw satelicki osobne dla każdego języka lub kultury, którą obsługuje aplikacja. Następnie można użyć <xref:System.Resources.ResourceManager> klasy zgodnie z opisem w następnej sekcji, aby uzyskać dostęp do zasobów o nazwie. Jeśli nie chcesz osadzić zasobów w głównym zestawie i zestawy satelickie, można również przejść binarnych plików Resources bezpośrednio, zgodnie z opisem w sekcji [pobieranie zasobów z plików Resources](#from_file) później w tym artykuł.  Aby pobrać zasoby w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [tworzenie i pobieranie zasobów w aplikacjach Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) w Centrum deweloperów Windows.  
@@ -40,7 +40,7 @@ Podczas pracy z zlokalizowane zasoby w aplikacjach pulpitu .NET Framework, nale�
   
  Menedżer zasobów używa procesu bazowego zasobu do kontrolowania, jak aplikacja pobiera zasoby specyficzne dla kultury. Aby uzyskać więcej informacji, zobacz sekcję "Zasobów rezerwowych procesu" w [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Aby uzyskać informacje o uruchamianiu <xref:System.Resources.ResourceManager> obiektów, zobacz sekcję "Utworzenie wystąpienia obiektu ResourceManager" w <xref:System.Resources.ResourceManager> temat poświęcony klasie.  
   
-### <a name="retrieving-string-data-an-example"></a>Pobierania danych ciągu: Przykład  
+### <a name="retrieving-string-data-an-example"></a>Trwa pobieranie danych ciągu: Przykład  
  Poniższy przykład wywołuje <xref:System.Resources.ResourceManager.GetString%28System.String%29> metodę, aby pobrać zasoby ciągu z bieżącej kultury interfejsu użytkownika. Francuski (Francja) i kultur rosyjski (Rosja) zawiera zasób w postaci ciągu neutralne kultury angielski (Stany Zjednoczone) i zlokalizowanych zasobów. Następującego zasobu języka angielskiego (Stany Zjednoczone) znajduje się w pliku o nazwie Strings.txt:  
   
 ```  
@@ -81,7 +81,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  Bieżącej kultury interfejsu użytkownika po hiszpański (Hiszpania) należy pamiętać, że w przykładzie są wyświetlane zasoby w języku angielskim, ponieważ języka hiszpańskiego zasoby są niedostępne, a język angielski jest kulturę domyślną na przykład.  
   
-### <a name="retrieving-object-data-two-examples"></a>Podczas pobierania danych obiektu: Dwa przykłady  
+### <a name="retrieving-object-data-two-examples"></a>Trwa pobieranie danych z obiektu: Dwa przykłady  
  Możesz użyć <xref:System.Resources.ResourceManager.GetObject%2A> i <xref:System.Resources.ResourceManager.GetStream%2A> metody do pobierania danych z obiektu. Obejmuje to pierwotne typy danych, obiekty możliwe do serializacji i obiekty, które są przechowywane w formacie binarnym (np. obrazów).  
   
  W poniższym przykładzie użyto <xref:System.Resources.ResourceManager.GetStream%28System.String%29> otwarcia oknie powitalnym metodę, która pobierze mapy bitowej, który jest używany w aplikacji. Następujące źródła kodu w pliku o nazwie CreateResources.cs (dla C#) lub CreateResources.vb (dla języka Visual Basic) generuje plik Resx, który zawiera Zserializowany obraz. W tym przypadku obraz, który jest ładowany z pliku o nazwie SplashScreen.jpg; można zmodyfikować nazwę pliku, aby zastąpić własnego obrazu.  
@@ -200,9 +200,9 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Resources.ResourceManager>  
- [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)  
- [Opakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Tworzenie i pobieranie zasobów w aplikacjach Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Resources.ResourceManager>
+- [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)
+- [Opakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Tworzenie i pobieranie zasobów w aplikacjach Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674)

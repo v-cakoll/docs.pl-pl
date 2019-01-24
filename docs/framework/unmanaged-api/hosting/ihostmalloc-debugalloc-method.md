@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8447f6fa2771128c1bdf424cb9aac141b2dfd486
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3ce303e8bcf33d192dbc7e2447ea6737577dcc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554884"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc — Metoda
-Żąda przydzielić określoną ilością pamięci sterty hosta, a ponadto śledzić, gdzie została przydzielona pamięć.  
+Żąda hosta przydzielić określonej ilości pamięci sterty i dodatkowo Śledź, gdzie pamięć została alokowana.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,44 +41,44 @@ HRESULT DebugAlloc (
   
 #### <a name="parameters"></a>Parametry  
  `cbSize`  
- [in] Rozmiar w bajtach, bieżącego żądania alokacji pamięci.  
+ [in] Rozmiar w bajtach bieżąca żądania alokacji pamięci.  
   
  `dwCriticalLevel`  
- [in] Jeden z [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) wartości i wskazujący wpływ błąd alokacji.  
+ [in] Jedną z [ememorycriticallevel —](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) wartości, wskazując wpływ wystąpił błąd alokacji.  
   
  `pszFileName`  
- [in] Plik kodu wykonywalnego debugowany.  
+ [in] Plik kodu programu do debugowanego pliku wykonywalnego.  
   
  `iLineNo`  
- [in] Numer wiersza w `pszFileName` których alokacji zażądano.  
+ [in] Numer wiersza w `pszFileName` gdzie zażądano alokacji.  
   
  `ppMem`  
- [out] Wskaźnik do alokacji pamięci lub wartość null, jeśli nie można ukończyć żądania.  
+ [out] Wskaźnik do przydzielonej pamięć, lub wartość null, jeśli nie można ukończyć żądania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`DebugAlloc` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`DebugAlloc` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Za mało pamięci nie była dostępna do wykonania żądania alokacji.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Za mało pamięci była dostępna do wykonania żądania alokacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko CLR pobiera wskaźnika interfejsu do [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) wystąpienia przez wywołanie metody [IHostMemoryManager::CreateMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) metody. `DebugAlloc` Umożliwia środowiska wykonawczego uzyskać informacje o pliku kodu do użycia podczas debugowania.  
+ Środowisko CLR pobiera wskaźnik interfejsu do [ihostmalloc —](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) wystąpienia, wywołując [ihostmemorymanager::createmalloc —](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) metody. `DebugAlloc` Umożliwia środowiska uruchomieniowego uzyskać informacje o pliku kod do użycia podczas debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IHostMemoryManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
- [IHostMalloc, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IHostMemoryManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [IHostMalloc, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)

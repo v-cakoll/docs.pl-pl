@@ -2,12 +2,12 @@
 title: Zgodność platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: eeb09914fc90848c987127c789379549917063f6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1128183e990567d15b133bf8aa4ff5d32f10c663
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541095"
 ---
 # <a name="aspnet-compatibility"></a>Zgodność platformy ASP.NET
 Niniejszy przykład pokazuje, jak włączyć tryb zgodności ASP.NET w Windows Communication Foundation (WCF). Usługi działające w zgodność platformy ASP.NET, tryb uczestniczą w pełni potoku platformy ASP.NET w aplikacji i ułatwia korzystanie z funkcji programu ASP.NET, takich jak plik lub adres URL autoryzacji, stan sesji i <xref:System.Web.HttpContext> klasy. <xref:System.Web.HttpContext> Klasy zezwala na dostęp do plików cookie, sesje i inne funkcje platformy ASP.NET. Ten tryb wymaga powiązania użyj transportu HTTP i usługi muszą być hostowane w usługach IIS.  
@@ -127,5 +127,5 @@ Press <ENTER> to terminate client.
   
 4.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Zobacz także
+- [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

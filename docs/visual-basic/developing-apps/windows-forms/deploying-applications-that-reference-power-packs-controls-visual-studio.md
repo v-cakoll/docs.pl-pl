@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Power Packs, deploying
 ms.assetid: f2230f53-a745-4731-89e6-033943faa209
-ms.openlocfilehash: bd235bc0b4a7f9978333931ae1dce012c0950374
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 3fd46a6e8aad61d2f8ce5a230c856470f913d0bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551777"
 ---
 # <a name="deploying-applications-that-reference-power-packs-controls-visual-studio"></a>Wdrażanie aplikacji, które odwołują się do formantów Powerpack (Visual Studio)
 Jeśli chcesz wdrożyć aplikację, która odwołuje się do formantów Powerpack (<xref:Microsoft.VisualBasic.PowerPacks.LineShape>, <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>, <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>, lub <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>), kontrolek, musi być zainstalowany na komputerze docelowym.  
@@ -28,6 +28,6 @@ Jeśli chcesz wdrożyć aplikację, która odwołuje się do formantów Powerpac
   
  Jako alternatywę do uruchomienia można wstępnie wdrożyć formantów Powerpack za pomocą system dystrybucji oprogramowania elektronicznych, takich jak Microsoft Systems Management Server.  
   
-## <a name="see-also"></a>Zobacz także  
- [Instrukcje: instalowanie wstępnie wymaganych składników za pomocą aplikacji ClickOnce](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
- [Visual Basic Powerpacks formantów](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Instalowanie wstępnie wymaganych składników za pomocą aplikacji ClickOnce](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)
+- [Visual Basic Powerpacks formantów](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)

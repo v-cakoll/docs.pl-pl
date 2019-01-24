@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie pary kluczy publiczny prywatny'
+title: 'Instrukcje: Tworzenie pary kluczy publiczny prywatny'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08715f2824dcb7dbc2c6aa26fd3bd8bd71b97038
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ce346bfe0c20e94673009adb0134fbaab62cf551
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653921"
 ---
-# <a name="how-to-create-a-public-private-key-pair"></a>Porady: tworzenie pary kluczy publiczny prywatny
+# <a name="how-to-create-a-public-private-key-pair"></a>Instrukcje: Tworzenie pary kluczy publiczny prywatny
 
 Aby podpisać zestaw silną nazwą, musisz mieć parę kluczy publiczny/prywatny. Ta publicznych i prywatnych z pary kluczy kryptograficznych jest używany podczas kompilacji do tworzenia zestawu z silną nazwą. Możesz utworzyć parę kluczy, używając [narzędzie silnych nazw (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md). Pliki par kluczy mają zwykle rozszerzenie .snk.
 
@@ -67,6 +67,6 @@ sn -p keypair.snk public.snk
  [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]
  [!code-vb[AssemblyName_KeyPair#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/keyfileattrib.vb#21)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

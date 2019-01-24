@@ -5,80 +5,80 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: 3ee707ae4e2a7dafeb7cb42d6d56eeece8f23306
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d2d170679b09eb33bea3569e1e6db8954bde3659
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622289"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Instrukcje: Tworzenie oświadczenia niestandardowego
-Infrastruktury modelu tożsamości w systemie Windows Communication Foundation (WCF) zawiera zestaw wbudowanych oświadczenia i prawa o funkcje pomocnicze do tworzenia <xref:System.IdentityModel.Claims.Claim> wystąpień z tych typów i praw. Te wbudowane oświadczenia są przeznaczone do informacji o modelu znaleziono w typach poświadczeń klienta, które obsługuje WCF domyślnie. W wielu przypadkach wbudowanych oświadczenia są wystarczające; Jednak niektóre aplikacje mogą wymagać oświadczenia niestandardowe. Oświadczenie składa się z typu oświadczenia, zasobów, dla której oświadczenia dotyczy i praw potwierdzona za pośrednictwem tego zasobu. W tym temacie opisano tworzenie oświadczenia niestandardowego.  
+Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) zapewnia zestaw typów wbudowanych oświadczeń i uprawnień przy użyciu funkcji pomocnika dla tworzenia <xref:System.IdentityModel.Claims.Claim> wystąpień z tych typów i praw. Te wbudowane oświadczenia są przeznaczone do informacji o modelu znaleziono w typy poświadczeń klienta, które obsługuje WCF domyślnie. W wielu przypadkach wbudowanych oświadczenia są wystarczające; Jednak niektóre aplikacje mogą wymagać oświadczenia niestandardowe. Oświadczenia składa się z typu oświadczenia, zasobów, dla której oświadczenia ma zastosowanie do i potwierdzone praw za pośrednictwem tego zasobu. W tym temacie opisano tworzenie oświadczenia niestandardowego.  
   
-### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Aby tworzenie oświadczenia niestandardowego, który jest oparty na typie danych pierwotnych  
+### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Aby utworzyć oświadczenia niestandardowego, który jest oparty na typie danych pierwotnych  
   
-1.  Tworzenie oświadczenia niestandardowego przez przekazanie typu oświadczenia i wartości zasobów prawo do <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> konstruktora.  
+1.  Tworzenie oświadczenia niestandardowego, przekazując typ oświadczenia, wartość zasobu i po prawej stronie, aby <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> konstruktora.  
   
-    1.  Wybierz unikatową wartość dla typu oświadczenia.  
+    1.  Decyzję w sprawie unikatową wartość dla typu oświadczenia.  
   
-         Typ oświadczenia jest identyfikator unikatowy ciąg. Odpowiada projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany dla typu oświadczenia jest unikatowa. Dla listy typów oświadczeń, które są zdefiniowane przez usługi WCF, zobacz <xref:System.IdentityModel.Claims.ClaimTypes> klasy.  
+         Typ oświadczenia jest identyfikator unikatowy ciąg. Odpowiada za projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany dla typu oświadczenia jest unikatowa. Aby uzyskać listę typów oświadczeń, które są zdefiniowane przez architekturę WCF, zobacz <xref:System.IdentityModel.Claims.ClaimTypes> klasy.  
   
     2.  Wybierz typ danych pierwotnych i wartość zasobu.  
   
-         Zasób jest obiektem. Typ CLR zasób może być typu pierwotnego, takich jak <xref:System.String> lub <xref:System.Int32>, lub typ możliwy do serializacji. Typ CLR zasobu musi być możliwy do serializacji, ponieważ oświadczenia są serializowane w różnych momentach przez usługę WCF. Typy pierwotne są możliwy do serializacji.  
+         Zasób jest obiektem. Typ CLR zasób może być podstawowy, taką jak <xref:System.String> lub <xref:System.Int32>, lub dowolny typ możliwy do serializacji. Typ CLR zasobu musi być możliwy do serializacji, ponieważ oświadczeń są serializowane w różnych momentach przez architekturę WCF. Typy pierwotne są możliwe do serializacji.  
   
-    3.  Wybierz uprawnienia, który jest definiowana za pomocą usługi WCF lub unikatową wartość dla niestandardowego prawo.  
+    3.  Wybierz po prawej stronie, który jest definiowany przez WCF lub unikatową wartość dla niestandardowych po prawej stronie.  
   
-         Prawo to identyfikator unikatowy ciąg. Prawa, które są definiowane przez WCF są zdefiniowane w <xref:System.IdentityModel.Claims.Rights> klasy.  
+         Po prawej stronie jest identyfikator unikatowy ciąg. Prawa, które są definiowane przez architekturę WCF są zdefiniowane w <xref:System.IdentityModel.Claims.Rights> klasy.  
   
-         Odpowiada projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany do prawej jest unikatowa.  
+         Odpowiada za projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany do prawej strony jest unikatowa.  
   
-         Poniższy przykład kodu tworzy oświadczenia niestandardowego o typie oświadczenia `http://example.org/claims/simplecustomclaim`, dla zasobu o nazwie `Driver's License`oraz <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> prawo.  
+         Poniższy przykład kodu tworzy niestandardowe oświadczenia o typie oświadczenia `http://example.org/claims/simplecustomclaim`, zasobu o nazwie `Driver's License`i <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> prawo.  
   
      [!code-csharp[c_CustomClaim#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#4)]
      [!code-vb[c_CustomClaim#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#4)]  
   
-### <a name="to-create-a-custom-claim-that-is-based-on-a-non-primitive-data-type"></a>Aby tworzenie oświadczenia niestandardowego, który jest oparty na typie danych innego niż pierwotny  
+### <a name="to-create-a-custom-claim-that-is-based-on-a-non-primitive-data-type"></a>Aby utworzyć oświadczenia niestandardowego, który jest oparty na typie danych niepodstawowe  
   
-1.  Tworzenie oświadczenia niestandardowego przez przekazanie typu oświadczenia i wartości zasobów prawo do <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> konstruktora.  
+1.  Tworzenie oświadczenia niestandardowego, przekazując typ oświadczenia, wartość zasobu i po prawej stronie, aby <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> konstruktora.  
   
-    1.  Wybierz unikatową wartość dla typu oświadczenia.  
+    1.  Decyzję w sprawie unikatową wartość dla typu oświadczenia.  
   
-         Typ oświadczenia jest identyfikator unikatowy ciąg. Odpowiada projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany dla typu oświadczenia jest unikatowa. Dla listy typów oświadczeń, które są zdefiniowane przez usługi WCF, zobacz <xref:System.IdentityModel.Claims.ClaimTypes> klasy.  
+         Typ oświadczenia jest identyfikator unikatowy ciąg. Odpowiada za projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany dla typu oświadczenia jest unikatowa. Aby uzyskać listę typów oświadczeń, które są zdefiniowane przez architekturę WCF, zobacz <xref:System.IdentityModel.Claims.ClaimTypes> klasy.  
   
-    2.  Wybierz lub zdefiniuj serializacji typu innego niż pierwotny dla zasobu.  
+    2.  Wybierz, czy definiowane serializacji typu niepodstawowych dla zasobu.  
   
-         Zasób jest obiektem. Typ CLR zasobu musi być możliwy do serializacji, ponieważ oświadczenia są serializowane w różnych momentach przez usługę WCF. Typy pierwotne są już możliwy do serializacji.  
+         Zasób jest obiektem. Typ CLR zasobu musi być możliwy do serializacji, ponieważ oświadczeń są serializowane w różnych momentach przez architekturę WCF. Typy pierwotne są już możliwe do serializacji.  
   
-         Jeśli nowy typ jest zdefiniowany, zastosuj <xref:System.Runtime.Serialization.DataContractAttribute> do klasy. Mają zastosowanie również <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu do wszystkich elementów członkowskich typu nowe, które muszą być Zserializowany jako część oświadczenia.  
+         Jeśli nowy typ jest zdefiniowany, zastosuj <xref:System.Runtime.Serialization.DataContractAttribute> do klasy. Mają zastosowanie również w <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu dla wszystkich członków nowy typ, który musi być serializowana jako część oświadczenia.  
   
-         Poniższy przykład kodu określa niestandardowy typ zasobu o nazwie `MyResourceType`.  
+         Poniższy kod definiuje niestandardowy typ zasobu o nazwie `MyResourceType`.  
   
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)] 
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]        
   
-    3.  Wybierz uprawnienia, który jest definiowana za pomocą usługi WCF lub unikatową wartość dla niestandardowego prawo.  
+    3.  Wybierz po prawej stronie, który jest definiowany przez WCF lub unikatową wartość dla niestandardowych po prawej stronie.  
   
-         Prawo to identyfikator unikatowy ciąg. Prawa, które są definiowane przez WCF są zdefiniowane w <xref:System.IdentityModel.Claims.Rights> klasy.  
+         Po prawej stronie jest identyfikator unikatowy ciąg. Prawa, które są definiowane przez architekturę WCF są zdefiniowane w <xref:System.IdentityModel.Claims.Rights> klasy.  
   
-         Odpowiada projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany do prawej jest unikatowa.  
+         Odpowiada za projektanta oświadczenia niestandardowego upewnij się, że identyfikator ciągu, który jest używany do prawej strony jest unikatowa.  
   
-         Poniższy przykład kodu tworzy oświadczenia niestandardowego o typie oświadczenia `http://example.org/claims/complexcustomclaim`, niestandardowy typ zasobu z `MyResourceType`oraz <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> prawo.  
+         Poniższy przykład kodu tworzy niestandardowe oświadczenia o typie oświadczenia `http://example.org/claims/complexcustomclaim`, niestandardowy typ zasobu z `MyResourceType`i <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> prawo.  
   
          [!code-csharp[c_CustomClaim#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#5)] 
          [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]     
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak tworzenie oświadczenia niestandardowego o typie pierwotnym zasobów i oświadczenia niestandardowe przy użyciu typu innego niż pierwotny zasobu.  
+ Poniższy przykład kodu pokazuje, jak utworzyć oświadczenia niestandardowego z typem pierwotnym zasobów i oświadczenia niestandardowego typu zasobów niepodstawowe.  
   
  [!code-csharp[c_CustomClaim#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#0)]
  [!code-vb[c_CustomClaim#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#0)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Claims.Rights>  
- <xref:System.IdentityModel.Claims.ClaimTypes>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Claims.Rights>
+- <xref:System.IdentityModel.Claims.ClaimTypes>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

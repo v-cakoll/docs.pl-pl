@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wykrywanie, czy jest zainstalowany program .NET Framework 3.5'
+title: 'Instrukcje: Wykryj, czy zainstalowano programu .NET Framework 3.5'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - verifying whether.NET Framework 3.5 is installed [WPF]
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 0d0f99dfa88216d0d768895ea751b0f62eccf701
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbdac46a52ae92ec7a8f6fb819a3da54ddccce7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636426"
 ---
-# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Porady: wykrywanie, czy jest zainstalowany program .NET Framework 3.5
-Przed Administratorzy mogą wdrażać aplikacje systemu Windows Presentation Foundation (WPF) w systemie, którego celem jest [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], ich najpierw upewnić się, że [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] środowiska uruchomieniowego jest obecny. Ten temat zawiera skrypt napisany w HTML/JavaScript, które Administratorzy mogą używać, aby określić, czy [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] jest obecny w systemie.  
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Instrukcje: Wykryj, czy zainstalowano programu .NET Framework 3.5
+Zanim administratorzy mogą wdrażać aplikacje Windows Presentation Foundation (WPF) w systemie, który jest przeznaczony dla [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], ich musi najpierw potwierdzić, że [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] środowiska uruchomieniowego jest obecny. Ten temat zawiera skrypt napisany w języku HTML/JavaScript, Administratorzy mogą używać do określenia czy [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] znajduje się w systemie.  
   
 > [!NOTE]
->  Aby uzyskać szczegółowe informacje dotyczące instalowania, wdrażanie i wykrywanie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], zobacz [Zainstaluj program .NET Framework dla deweloperów](../../../../docs/framework/install/guide-for-developers.md).  
+>  Aby uzyskać szczegółowe informacje na temat instalowania, wdrażanie i wykrywanie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], zobacz [Instalowanie programu .NET Framework dla deweloperów](../../../../docs/framework/install/guide-for-developers.md).  
   
 ## <a name="example"></a>Przykład  
- Gdy [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] jest zainstalowany, MSI dodaje ".NET CLR" oraz numer wersji na ciąg agenta użytkownika. W poniższym przykładzie przedstawiono skrypt osadzony w to prosta strona HTML. Skrypt wyszukuje ciąg agenta użytkownika, aby określić, czy [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] jest zainstalowany, a następnie wyświetla komunikat o stanie w wynikach wyszukiwania.  
+ Gdy [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] jest zainstalowany, MSI dodaje ".NET CLR" oraz numer wersji do ciąg agenta użytkownika. Poniższy przykład pokazuje skrypt osadzone w prostą stronę HTML. Skrypt wyszukuje ciąg agenta użytkownika, aby określić, czy [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] jest zainstalowany i wyświetla komunikat o stanie na wyniki wyszukiwania.  
   
 > [!NOTE]
 >  Ten skrypt jest przeznaczony dla programu Internet Explorer. Inne przeglądarki nie może zawierać informacje o .NET CLR w ciąg agenta użytkownika.  
@@ -128,5 +128,5 @@ Przed Administratorzy mogą wdrażać aplikacje systemu Windows Presentation Fou
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
-## <a name="see-also"></a>Zobacz też  
- [Wykrywanie, czy wtyczka .NET Framework 3.0 jest zainstalowana](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+## <a name="see-also"></a>Zobacz także
+- [Wykrywanie, czy wtyczka .NET Framework 3.0 jest zainstalowana](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)

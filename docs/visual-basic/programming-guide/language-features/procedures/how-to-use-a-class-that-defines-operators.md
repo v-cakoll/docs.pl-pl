@@ -1,5 +1,5 @@
 ---
-title: 'Porady: używanie klasy definiującej operatory (Visual Basic)'
+title: 'Instrukcje: Używanie klasy definiującej operatory (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,42 +11,42 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 7e1d5698c1e83f0adf1be67245e0726aecaabdac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 372d3f663109597fc2d25c5d75a9efa6b3648682
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640688"
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Porady: używanie klasy definiującej operatory (Visual Basic)
-Jeśli używasz klasy lub struktury, która definiuje własną operatory są dostępne te operatory języka Visual Basic.  
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Instrukcje: Używanie klasy definiującej operatory (Visual Basic)
+Jeśli używasz klasy lub struktury, która definiuje swój własny operatory są dostępne te operatory języka Visual Basic.  
   
- Definiowanie operatora w klasie lub strukturze jest również nazywany *przeładowanie* operatora.  
+ Definiowanie operatora dla klasy lub struktury jest również nazywany *przeciążenie* operatora.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład uzyskuje dostęp do struktury SQL <xref:System.Data.SqlTypes.SqlString>, który definiuje operatory konwersji ([CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md)) w obu kierunkach między ciągu SQL i ciąg języka Visual Basic. Użyj `CType(` *wyrażenia ciągu SQL*, `String)` do przekonwertowania ciągu SQL na ciąg języka Visual Basic i `CType(` *wyrażenia ciągu w języku Visual Basic*, <xref:System.Data.SqlTypes.SqlString> `)` przekonwertować w innym kierunku.  
+ Poniższy przykład uzyskuje dostęp do struktury SQL <xref:System.Data.SqlTypes.SqlString>, która definiuje operatory konwersji ([funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) w obu kierunkach między ciąg SQL i ciąg języka Visual Basic. Użyj `CType(` *wyrażenia ciągu SQL*, `String)` do przekonwertowania ciągu SQL na ciąg języka Visual Basic i `CType(` *wyrażenia ciągu w języku Visual Basic*, <xref:System.Data.SqlTypes.SqlString> `)` do przekonwertowania w drugą stronę.  
   
  [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
  [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
- <xref:System.Data.SqlTypes.SqlString> Struktury definiuje operator konwersji ([CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md)) z `String` do <xref:System.Data.SqlTypes.SqlString> oraz z <xref:System.Data.SqlTypes.SqlString> do `String`. Instrukcja, która przypisuje `title` do `jobTitle` sprawia, że użycie operatora pierwszy i <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> drugi używa wywołania funkcji.  
+ <xref:System.Data.SqlTypes.SqlString> Struktury definiuje operator konwersji ([funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) z `String` do <xref:System.Data.SqlTypes.SqlString> , a drugi z <xref:System.Data.SqlTypes.SqlString> do `String`. Instrukcja, która przypisuje `title` do `jobTitle` sprawia, że użycie pierwszy operator i <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> wywołanie funkcji używa drugiego.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Upewnij się, że klasy lub struktury, którego używasz definiuje operator, który ma być używany. Zakłada się, że klasy lub struktury ma zdefiniowany co dostępne do przeciążania operatora. Aby uzyskać listę dostępnych operatorów, zobacz [operator — instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ Upewnij się, że klasy lub struktury, którego używasz, określa operator, który chcesz użyć. Nie należy zakładać, że klasa lub struktura został zdefiniowany co dostępne dla przeciążania operatora. Aby uzyskać listę dostępnych operatorów, zobacz [operator — instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
- Dołączyć odpowiednie `Imports` instrukcji SQL ciągu na początku pliku źródłowego (w tym przypadku <xref:System.Data.SqlTypes>).  
+ Dołączyć odpowiednie `Imports` poufności informacji dla ciągu SQL na początku pliku źródłowego (w tym przypadku <xref:System.Data.SqlTypes>).  
   
- Projekt musi mieć odwołania do system.dane i zestawów System.XML.  
+ Projekt musi mieć odwołania do dane systemowe i System.XML.  
   
-## <a name="see-also"></a>Zobacz też  
- [Procedury operatorów](./operator-procedures.md)  
- [Instrukcje: definiowanie operatora](./how-to-define-an-operator.md)  
- [Instrukcje: definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)  
- [Instrukcje: wywoływanie procedury operatora](./how-to-call-an-operator-procedure.md)  
- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)  
- [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [Structure, instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Instrukcje: deklarowanie struktury](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a>Zobacz także
+- [Procedury operatorów](./operator-procedures.md)
+- [Instrukcje: Definiowanie operatora](./how-to-define-an-operator.md)
+- [Instrukcje: Definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)
+- [Instrukcje: Wywoływanie procedury operatora](./how-to-call-an-operator-procedure.md)
+- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [Structure, instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Instrukcje: deklarowanie struktury](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

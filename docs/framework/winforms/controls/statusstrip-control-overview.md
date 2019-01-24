@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms], about StatusStrip control
 - status bars [Windows Forms], about status bars
 ms.assetid: c0d9bcbb-f8b8-46ef-bae2-4146b8c8ce99
-ms.openlocfilehash: e40373dd05e59325cdb6c2272d5749f3828b0755
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9356ca85003987eabf4f62a25acad45d73e144fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627242"
 ---
 # <a name="statusstrip-control-overview"></a>StatusStrip — Informacje o formancie
 A <xref:System.Windows.Forms.StatusStrip> kontrolka Wyświetla informacje dotyczące obiektu są wyświetlane na <xref:System.Windows.Forms.Form>, składniki obiektu lub informacji kontekstowych, które odnoszą się do tego obiektu operacji w ramach aplikacji. Zazwyczaj <xref:System.Windows.Forms.StatusStrip> kontrola składa się z <xref:System.Windows.Forms.ToolStripStatusLabel> obiektów, z których każda wyświetla tekst i/lub ikonę. <xref:System.Windows.Forms.StatusStrip> Może również zawierać <xref:System.Windows.Forms.ToolStripDropDownButton>, <xref:System.Windows.Forms.ToolStripSplitButton>, i <xref:System.Windows.Forms.ToolStripProgressBar> kontrolki.  
@@ -41,7 +41,7 @@ A <xref:System.Windows.Forms.StatusStrip> kontrolka Wyświetla informacje dotycz
 |<xref:System.Windows.Forms.ToolStripSplitButton>|Reprezentuje kontrolkę legalną dwuczęściową przycisk standardowy i menu rozwijanego.|  
 |<xref:System.Windows.Forms.ToolStripProgressBar>|Wyświetla stan ukończenia procesu.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.StatusStrip>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.StatusStrip>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>

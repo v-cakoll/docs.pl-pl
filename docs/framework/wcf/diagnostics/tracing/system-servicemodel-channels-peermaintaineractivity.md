@@ -2,22 +2,22 @@
 title: System.ServiceModel.Channels.PeerMaintainerActivity
 ms.date: 03/30/2017
 ms.assetid: ef28d086-d7fb-4e81-82e9-45a54647783b
-ms.openlocfilehash: a7f353b00796c845f5686ca2926bbe7effe09e3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c352ad4ac4ffee5d12c054590ef994bab0ba757
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33480587"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642584"
 ---
 # <a name="systemservicemodelchannelspeermaintaineractivity"></a>System.ServiceModel.Channels.PeerMaintainerActivity
-Moduł PeerMaintainer wykonuje określonej operacji (szczegółowe informacje zawarte w treści wiadomości śledzenia).  
+Moduł PeerMaintainer wykonuje określoną operację (szczegóły zawartych w treści komunikatu śledzenia).  
   
 ## <a name="description"></a>Opis  
- Ślad występuje w ciągu różne operacje PeerMaintainer.  
+ Ślad występuje podczas wykonywania różnych operacji PeerMaintainer.  
   
- PeerMaintainer jest to wewnętrzny składnik węzeł równorzędny. Co minutę lub co 32 komunikatów odebranych, wysyła wiadomość LinkUtility z jej sąsiadami dane statystyczne o ile komunikatów są wymieniane i ile są przydatne (z systemem innym niż — duplikatów, untampered). Dzięki temu można ustalić określonego sąsiada łącze narzędzia. Co około pięciu minut, Element utrzymujący sprawdza stan sąsiedniego połączenia. Jeśli liczba połączeń sąsiada przekracza wielkość idealne, Element utrzymujący oczyszcza poza przydatne najmniej połączeń. Jeśli nie ma wystarczającej liczby połączeń, Element utrzymujący uzyskuje nowe połączenia.  
+ PeerMaintainer jest składnikiem wewnętrznego węzeł równorzędny. Co minutę lub co 32 komunikaty odbierane, wysyła wiadomość LinkUtility dla swoich sąsiadów ze statystykami o ile komunikaty są wymieniane i ile są przydatne (innych niż duplikatów, untampered). Dzięki temu można ustalić określonego sąsiada łącze narzędzia. Co około pięciu minut, Element utrzymujący sprawdza kondycję sąsiada połączeń. Jeśli liczba połączeń sąsiada przekracza kwotę idealne, Element utrzymujący oczyszcza off najmniej przydatne połączeń. Jeśli nie ma wystarczającej liczby połączeń, Element utrzymujący uzyskuje nowe połączenia.  
   
-## <a name="see-also"></a>Zobacz też  
- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

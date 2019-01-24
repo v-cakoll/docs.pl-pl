@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a35f35d7aea34c0ef08c30415fde75fe71e645
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf6528e8fe6a979db26ae44819bf34a36592ed6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623628"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints — Metoda
 Pobiera wszystkie punkty sekwencji w ramach tej metody.  
@@ -43,34 +43,34 @@ HRESULT GetSequencePoints(
   
 #### <a name="parameters"></a>Parametry  
  `cPoints`  
- [in] A `ULONG32` odbierająca rozmiar `offsets`, `documents`, `lines`, `columns`, `endLines`, i `endColumns` tablic.  
+ [in] A `ULONG32` wielkości, która otrzymuje `offsets`, `documents`, `lines`, `columns`, `endLines`, i `endColumns` tablic.  
   
  `pcPoints`  
- [out] Wskaźnik do `ULONG32` odbierająca długość buforu, muszą zawierać punkty sekwencji.  
+ [out] Wskaźnik do `ULONG32` odbierająca długość buforu, muszą zawierać punktów sekwencji.  
   
  `offsets`  
- [in] Tablica do przechowywania Microsoft pośredniego language (MSIL) powoduje przesunięcie od początku metodę punkty sekwencji.  
+ [in] Tablica, w którym będą przechowywane przez firmę Microsoft intermediate language (MSIL) powoduje przesunięcie od początku metody punktów sekwencji.  
   
  `documents`  
  [in] Tablica do przechowywania dokumentów, w których znajdują się punkty sekwencji.  
   
  `lines`  
- [in] Tablica do przechowywania dokumentów, w których znajdują się punkty sekwencji wierszy.  
+ [in] Tablica do przechowywania wierszy w dokumentach, w których znajdują się punkty sekwencji.  
   
  `columns`  
- [in] Tablica do przechowywania kolumny w dokumentach, w których znajdują się punkty sekwencji.  
+ [in] Tablica, w którym będą przechowywane w kolumnach w dokumentach, w których znajdują się punkty sekwencji.  
   
  `endLines`  
- [in] Tablica wiersze w dokumentach, w których sekwencja punktów końcowych.  
+ [in] Tablica wiersze w dokumentach, w których sekwencji punktów końcowych.  
   
  `endColumns`  
- [in] Tablica kolumn w dokumentach, w których sekwencja punktów końcowych.  
+ [in] Tablica kolumn w dokumentach, w których sekwencji punktów końcowych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

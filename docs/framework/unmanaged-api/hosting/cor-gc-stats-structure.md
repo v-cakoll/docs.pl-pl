@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 009f1482de6e1daea21766300b4fb6a3ab0ffc8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fc212321b28545f62f0a1c2965281d02ac73e40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432291"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638109"
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS — Struktura
-Udostępnia statystykę mechanizmu kolekcji garbage środowisko uruchomieniowe języka wspólnego (CLR).  
+Przedstawia dane statystyczne dotyczące mechanizmu kolekcji wyrzucania elementów środowiska uruchomieniowego języka wspólnego (CLR).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,22 +48,22 @@ typedef struct _COR_GC_STATS {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`Flags`|Określa wartości pola, które powinny być obliczany i zwracany.|  
-|`ExplicitGCCount`|Wskazuje liczbę operacji wyrzucania, które zostały wymuszone przez żądania zewnętrznego.|  
-|`GenCollectionsTaken`|Wskazuje liczbę operacji wyrzucania wykonywane dla każdego generacji.|  
-|`CommittedKBytes`|Całkowita liczba zatwierdzone we wszystkich stertach kilobajtów.|  
-|`ReservedKBytes`|Całkowita liczba zarezerwowanych we wszystkich stertach kilobajtów.|  
+|`Flags`|Wskazuje wartości pola, które powinny być obliczany i zwracany.|  
+|`ExplicitGCCount`|Wskazuje liczbę wyrzucania elementów bezużytecznych, które zostały zmuszeni przez zewnętrzne żądanie.|  
+|`GenCollectionsTaken`|Wskazuje liczbę wyrzucania elementów bezużytecznych wykonywane dla każdej generacji.|  
+|`CommittedKBytes`|Całkowita liczba kilobajtów zatwierdzone we wszystkich stertach.|  
+|`ReservedKBytes`|Całkowita liczba kilobajtów zastrzeżone we wszystkich stertach.|  
 |`Gen0HeapSizeKBytes`|Rozmiar w kilobajtach sterty generowania od zera.|  
-|`Gen1HeapSizeKBytes`|Rozmiar w kilobajtach sterty generowania-do-jednego.|  
+|`Gen1HeapSizeKBytes`|Rozmiar w kilobajtach sterty jeden generacji.|  
 |`Gen2HeapSizeKBytes`|Rozmiar w kilobajtach sterty pokolenia 2.|  
-|`LargeObjectHeapSizeKBytes`|Rozmiar w kilobajtach sterty dużego obiektu.|  
-|`KBytesPromotedFromGen0`|Rozmiar w kilobajtach obiektów awansowane z pokolenia 0 na pokolenie jeden.|  
-|`KBytesPromotedFromGen1`|Rozmiar w kilobajtach awansowana z Generowanie jednego generacji dwóch obiektów.|  
+|`LargeObjectHeapSizeKBytes`|Rozmiar w kilobajtach stertę dużego obiektu.|  
+|`KBytesPromotedFromGen0`|Rozmiar w kilobajtach obiektów promowane z generacji 0 do generowania jednego.|  
+|`KBytesPromotedFromGen1`|Rozmiar w kilobajtach obiektów promowane z generowania jeden generacji dwa.|  
   
 ## <a name="remarks"></a>Uwagi  
- [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) metoda wymaga `Flags` pole `COR_GC_STATS` struktury, należy ustawić jedną lub więcej wartości [cor_gc_stat_types —](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) wyliczeniu, aby określić, które statystyki mają być tworzone.  
+ [Iclrgcmanager::getstats —](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) metoda wymaga `Flags` pole `COR_GC_STATS` struktury, należy ustawić jedną lub więcej wartości [cor_gc_stat_types —](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) wyliczeniu, aby określić, które statystyki mają być tworzone.  
   
- Poniższa tabela mapuje dostarczonych przez tę strukturę do dwóch statystyk [cor_gc_stat_types —](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) wartości wyliczenia `COR_GC_COUNTS` i `COR_GC_MEMORYUSAGE`.  
+ Poniższa tabela zawiera mapowanie dostarczonych przez tę strukturę do dwóch statystyk [cor_gc_stat_types —](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) wartości wyliczenia `COR_GC_COUNTS` i `COR_GC_MEMORYUSAGE`.  
   
 |Określony przez COR_GC_COUNTS|Określony przez COR_GC_MEMORYUSAGE|  
 |----------------------------------|---------------------------------------|  
@@ -78,15 +78,15 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** GCHost.idl  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [Automatyczne zarządzanie pamięcią](../../../../docs/standard/automatic-memory-management.md)  
- [Odzyskiwanie pamięci](../../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Automatyczne zarządzanie pamięcią](../../../../docs/standard/automatic-memory-management.md)
+- [Odzyskiwanie pamięci](../../../../docs/standard/garbage-collection/index.md)

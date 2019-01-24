@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-ms.openlocfilehash: 8137434bfd8c26144d78b1761b784cdba4894eaf
-ms.sourcegitcommit: 7fe772c6c05a982153655d618c826e9839d39cac
+ms.openlocfilehash: d65c921a1631cd38c4d0d1ab9b34db3d7e43a97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33605267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654844"
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>End &lt;słowo kluczowe&gt; — instrukcja (Visual Basic)
 
@@ -48,7 +48,7 @@ End With
 
 |Część|Opis|
 |---|---|
-|`End`|Wymagane. Kończy definicję elementu programistycznego.|
+|`End`|Wymagana. Kończy definicję elementu programistycznego.|
 |`AddHandler`|Wymagane do zakończenia `AddHandler` uruchomione za pasujący obiekt typu metody dostępu `AddHandler` instrukcji w niestandardowym [Event — instrukcja](event-statement.md).|
 |`Class`|Wymagane do zakończenia definicję klasy uruchomione za pasujący obiekt typu [Class — instrukcja](class-statement.md).|
 |`Enum`|Wymagane do zakończenia definicja wyliczenia uruchomione za pasujący obiekt typu [Enum — instrukcja](enum-statement.md).|
@@ -85,9 +85,9 @@ Jeśli są poprzedzone znakiem numeru (`#`), `End` — słowo kluczowe kończy b
 
 |Część|Opis|
 |---|---|
-|`#End`|Wymagane. Kończy definicję bloku przetwarzania wstępnego.|
+|`#End`|Wymagana. Kończy definicję bloku przetwarzania wstępnego.|
 |`ExternalSource`|Wymagane do zakończenia blokiem zewnętrznego źródła, uruchomione za pasujący obiekt typu [#ExternalSource — dyrektywa](../directives/externalsource-directive.md).|
-|`If`|Wymagane do zakończenia bloku kompilacji warunkowej, uruchomione za pasujący obiekt typu `#If` dyrektywy. Zobacz [#If... Then... #Else — dyrektywy](../directives/if-then-else-directives.md).|
+|`If`|Wymagane do zakończenia bloku kompilacji warunkowej, uruchomione za pasujący obiekt typu `#If` dyrektywy. See [#If...Then...#Else Directives](../directives/if-then-else-directives.md).|
 |`Region`|Wymagane do zakończenia bloku regionu źródłowego uruchomione za pasujący obiekt typu [#Region — dyrektywa](../directives/region-directive.md).|
 |||
 
@@ -101,4 +101,4 @@ Instrukcja `End` bez dodatkowego słowa kluczowego nie jest obsługiwana.
   
 ## <a name="see-also"></a>Zobacz także
 
-[End, instrukcja](end-statement.md)
+- [Instrukcja End](end-statement.md)

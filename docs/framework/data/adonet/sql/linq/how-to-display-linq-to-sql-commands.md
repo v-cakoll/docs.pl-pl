@@ -1,27 +1,27 @@
 ---
-title: 'Porady: wyświetlanie LINQ do poleceń SQL'
+title: 'Instrukcje: Wyświetlanie składnika LINQ to SQL poleceń'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: 2be4096f03fe73f417b4b1871ebfc3b4f0f67206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a70f1e0dd471e86afe2e744c157d4aed2a217deb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630830"
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a>Porady: wyświetlanie LINQ do poleceń SQL
-Użyj <xref:System.Data.Linq.DataContext.GetCommand%2A> do wyświetlenia poleceń SQL i innych informacji.  
+# <a name="how-to-display-linq-to-sql-commands"></a>Instrukcje: Wyświetlanie składnika LINQ to SQL poleceń
+Użyj <xref:System.Data.Linq.DataContext.GetCommand%2A> do wyświetlania poleceń SQL i inne informacje.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie w oknie konsoli wyświetla wyniki zapytania, następuje poleceń SQL, które są generowane, typ poleceń i typ połączenia.  
+ W poniższym przykładzie w oknie konsoli wyświetlane dane wyjściowe z zapytania, następuje poleceń SQL, które są generowane, typ poleceń i typ połączenia.  
   
  [!code-csharp[DLinqDebuggingSupport#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#3)]
  [!code-vb[DLinqDebuggingSupport#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#3)]  
   
- Dane wyjściowe wygląda następująco:  
+ Dane wyjściowe wyglądają następująco:  
   
 ```  
 Customers from London:  
@@ -48,5 +48,5 @@ Command Type: Text
 Connection: System.Data.SqlClient.SqlConnection  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Obsługa debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a>Zobacz także
+- [Obsługa debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

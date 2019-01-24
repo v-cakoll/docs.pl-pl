@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1b5bada61a9d6374a1b961603fcf575199dee591
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2252214a8ec217c30842995ea7d4d141e127d5f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640449"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
 Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jednocześnie również wykorzystuje funkcje zabezpieczeń, możliwości platformy, która zawiera system operacyjny, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], i [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Te warstwy są łączone w celu zapewnienia [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] model zabezpieczeń silne, ochronę w głębi, który próbuje uniknąć dowolnego pojedynczego punktu awarii, jak pokazano na poniższej ilustracji:  
@@ -45,7 +45,7 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
 -   [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
   
-#### <a name="gs-compilation"></a>Kompilacji/GS  
+#### <a name="gs-compilation"></a>/GS Compilation  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] zapewnia ochronę przez kompilację wiele bibliotek systemu core, wraz ze wszystkimi [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zależności, takie jak [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], aby ułatwić uniknięcie przepełnienia buforu. Jest to osiągane przy użyciu parametru/GS za pomocą kompilatora wiersza polecenia języka C/C++. Chociaż należy jawnie unikać przepełnienia buforu, kompilacji/GS zawiera przykład obrony głębokiej względem potencjalnych luk w zabezpieczeniach, które nieodwracalnie lub celowego tworzonych przez nich.  
   
  W przeszłości przepełnienia buforu zostały Przyczyna wielu lukami w zabezpieczeniach o dużym znaczeniu. Przepełnienie buforu występuje, gdy osoba atakująca wykorzystuje kodu, który umożliwia uruchomienie złośliwego kodu, który zapisuje poza granice buforu. Pozwala to następnie osobie atakującej przejąć kontrolę nad proces, w której kod jest wykonywany przez zastąpienie adres zwrotny funkcji, aby spowodować, że wykonywanie kodu osoby atakującej. Wynik jest złośliwy kod, który jest wykonywany dowolnego kodu z takie same uprawnienia jak proces przejętego.  
@@ -82,7 +82,7 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
 #### <a name="internet-explorer-6-service-pack-2-and-internet-explorer-7-for-xp"></a>Dodatek Service Pack 2 dla Internet Explorer 6 i Internet Explorer 7 XP  
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] wykorzystuje zabezpieczeń systemu operacyjnego przez ograniczenie uprawnień procesów dla [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] do dalszej ochrony. Przed obsługiwane w przeglądarce [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacja jest uruchamiana, system operacyjny tworzy proces hosta, która usuwa niepotrzebnych uprawnień z tokenu procesu. Przykłady uprawnień, które są usuwane: możliwość zamknięcia komputera użytkownika, obciążenia sterowniki i dostęp do odczytu do wszystkich plików na komputerze.  
   
-#### <a name="internet-explorer-7-for-vista"></a>Internet Explorer 7, Vista  
+#### <a name="internet-explorer-7-for-vista"></a>Internet Explorer 7 for Vista  
  W [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje są uruchamiane w trybie chronionym. W szczególności [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] Uruchom o poziomie średnim integralności.  
   
 #### <a name="defense-in-depth-layer"></a>Warstwa ochronę w głębi  
@@ -187,7 +187,7 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
  Należy pamiętać, że .NET Framework pozwala zaufany kod, aby rozszerzyć [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] piaskownicy strefy Internet, umożliwiając programistom pisanie zestawów zarządzanych, które są oznaczone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) i wdrażana do użytkownika pamięci podręcznej (globalnej). Oznaczenia zestawu za pomocą APTCA jest operacją zabezpieczeń bardzo ważne, ponieważ pozwala ono żadnego kodu do wywoływania tego zestawu, w tym złośliwy kod z Internetu. Należy zachować wyjątkową ostrożność i najlepsze rozwiązania muszą być używane w ten sposób, a użytkownicy muszą dokonać wyboru zaufać oprogramowanie w celu zainstalowania.  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
-## <a name="microsoft-internet-explorer-security"></a>Zabezpieczeń programu Microsoft Internet Explorer  
+## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer Security  
  Poza zmniejszenie problemy dotyczące zabezpieczeń i konfiguracji zabezpieczeń, uproszczenie [!INCLUDE[TLA#tla_ie6sp2](../../../includes/tlasharptla-ie6sp2-md.md)] zawiera kilka funkcji, w tym poprawki zabezpieczeń, zwiększających bezpieczeństwo dla użytkowników [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]. Kierunek te funkcje próbuje umożliwić użytkownikom większą kontrolę nad przeglądania.  
   
  Przed [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)], użytkownicy mogą podlegać dowolne z następujących czynności:  
@@ -208,12 +208,12 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] dołącza i rozszerza możliwości zabezpieczeń [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] jako część nieustannie zobowiązuje się do zabezpieczeń.  
   
-## <a name="see-also"></a>Zobacz też  
- [Opis zabezpieczeń w programie Microsoft Internet Explorer 6 Windows XP z dodatkiem SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)  
- [Opis i pracą z nimi w programie Internet Explorer w trybie chronionym](https://msdn.microsoft.com/library/bb250462.aspx)  
- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)  
- [Poradnik bezpieczeństwa programu Windows Vista](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)  
- [Zabezpieczenia dostępu kodu](../../../docs/framework/misc/code-access-security.md)  
- [Zabezpieczenia](../../../docs/framework/wpf/security-wpf.md)  
- [Zabezpieczenie częściowej relacji zaufania WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [Strategia zabezpieczeń WPF — projekt zabezpieczeń](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+## <a name="see-also"></a>Zobacz także
+- [Opis zabezpieczeń w programie Microsoft Internet Explorer 6 Windows XP z dodatkiem SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
+- [Opis i pracą z nimi w programie Internet Explorer w trybie chronionym](https://msdn.microsoft.com/library/bb250462.aspx)
+- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)
+- [Poradnik bezpieczeństwa programu Windows Vista](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)
+- [Zabezpieczenia dostępu kodu](../../../docs/framework/misc/code-access-security.md)
+- [Zabezpieczenia](../../../docs/framework/wpf/security-wpf.md)
+- [Zabezpieczenie częściowej relacji zaufania WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [Strategia zabezpieczeń WPF — projekt zabezpieczeń](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

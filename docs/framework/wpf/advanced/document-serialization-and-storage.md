@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 39466eb528003e36bfa05751f83619d86b78a2a7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 028f7e8f2be2aa0718eebc133ebd9d35717c824d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630856"
 ---
 # <a name="document-serialization-and-storage"></a>Serializacja dokumentu i przechowywanie
 Microsoft .NET Framework oferuje zaawansowane środowisko do tworzenia i wyświetlanie dokumentów wysokiej jakości.  Ulepszone funkcje, które obsługują Naprawiono dokumenty i dokumenty przepływu, zaawansowane wyświetlania formantów, w połączeniu z zaawansowanych 2D i funkcje grafiki 3D aplikacji .NET Framework na nowy poziom jakości i środowisko użytkownika.  Możliwość elastycznego zarządzania reprezentacji w pamięci dokumentu jest kluczowym elementem programu .NET Framework i możliwość efektywnie zapisywanie i ładowanie dokumentów z magazynu danych jest niezbędne do niemal wszystkich aplikacji.  Proces konwersji dokumentu z reprezentacji w pamięci wewnętrznej do magazynu danych zewnętrznych jest określane jako serializacji.  Procesu odczytu z magazynu danych i ponowne utworzenie oryginalnego wystąpienia w pamięci jest określane jako deserializacji.  
@@ -73,10 +73,10 @@ Microsoft .NET Framework oferuje zaawansowane środowisko do tworzenia i wyświe
   
 3.  Po utworzeniu dodatku typu plug-in serializator skrypt instalacji został zaimplementowany dla dystrybucji i instalacji (i odinstalowywania) wtyczki (zobacz powyżej, "[Instalowanie wtyczki Serializatory](#InstallingPluginSerializers)").  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Documents.Serialization>  
- <xref:System.Windows.Xps.XpsDocumentWriter>  
- <xref:System.Windows.Xps.Packaging.XpsDocument>  
- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Formatu XML Paper Specification: omówienie](https://go.microsoft.com/fwlink?LinkID=106246)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Documents.Serialization>
+- <xref:System.Windows.Xps.XpsDocumentWriter>
+- <xref:System.Windows.Xps.Packaging.XpsDocument>
+- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Formatu XML Paper Specification: omówienie](https://go.microsoft.com/fwlink?LinkID=106246)

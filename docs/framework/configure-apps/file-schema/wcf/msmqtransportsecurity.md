@@ -2,12 +2,12 @@
 title: '&lt;msmqTransportSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
-ms.openlocfilehash: 6ed7402ac7ec50a98b7d685813448edb173266d9
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2a4daea50e1b6c24d923e01a6bc7ae913c241001
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593488"
 ---
 # <a name="ltmsmqtransportsecuritygt"></a>&lt;msmqTransportSecurity&gt;
 Określa ustawienia zabezpieczenia transportu MSMQ dla niestandardowego powiązania.  
@@ -16,8 +16,8 @@ Określa ustawienia zabezpieczenia transportu MSMQ dla niestandardowego powiąza
 \<powiązania >  
 \<customBinding>  
 \<Powiązanie >  
-\<msmqIntegration >  
-\<msmqTransportSecurity >  
+\<msmqIntegration>  
+\<msmqTransportSecurity>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,21 +48,21 @@ Określa ustawienia zabezpieczenia transportu MSMQ dla niestandardowego powiąza
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<msmqIntegration >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegration.md)|Określa ustawienia wymagane w celu interakcji z usługi kolejkowania komunikatów (MSMQ) nadawcy i adresata.|  
-|[\<msmqTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransport.md)|Określa kolejkowania właściwości komunikacji usługi Windows Communication Foundation (WCF), który korzysta z natywnego protokołu usługi MSMQ.|  
+|[\<msmqIntegration>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegration.md)|Określa ustawienia wymagane w celu interakcji z usługi kolejkowania komunikatów (MSMQ) nadawcy i adresata.|  
+|[\<msmqTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransport.md)|Określa kolejkowania właściwości komunikacji usługi Windows Communication Foundation (WCF), który korzysta z natywnego protokołu usługi MSMQ.|  
   
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji na temat zabezpieczeń transportu, zobacz [Transport Security](../../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>  
- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Kolejki programu WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Transporty](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Wybieranie transportu](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Zabezpieczenia transportu](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>
+- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Kolejki programu WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Transporty](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Wybieranie transportu](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Zabezpieczenia transportu](../../../../../docs/framework/wcf/feature-details/transport-security.md)

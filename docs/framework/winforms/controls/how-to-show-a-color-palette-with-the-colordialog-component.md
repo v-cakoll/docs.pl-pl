@@ -1,5 +1,5 @@
 ---
-title: 'Porady: pokazywanie palety kolorów przy użyciu składnika ColorDialog'
+title: 'Instrukcje: Pokazywanie palety kolorów przy użyciu składnika ColorDialog'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: ea12fe19b6c8c7464f0820267face8a1d66de784
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34da70280ff6e5b850469e7ba041cc7c7aaf1f47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637128"
 ---
-# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Porady: pokazywanie palety kolorów przy użyciu składnika ColorDialog
-[ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md) składnika wyświetla paletę kolorów i zwraca wartość właściwości zawierająca kolor użytkownik wybrał.  
+# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Instrukcje: Pokazywanie palety kolorów przy użyciu składnika ColorDialog
+[ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md) składnik wyświetla palety kolorów i zwraca właściwość zawierające kolor użytkownik wybrał.  
   
-### <a name="to-choose-a-color-using-the-colordialog-component"></a>Aby wybrać kolor przy użyciu składnika ColorDialog  
+### <a name="to-choose-a-color-using-the-colordialog-component"></a>Wybierz kolor, przy użyciu składnika ColorDialog  
   
-1.  Wyświetlać przy użyciu — okno dialogowe <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metody.  
+1.  Wyświetlane przy użyciu okno dialogowe <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metody.  
   
-2.  Użyj <xref:System.Windows.Forms.DialogResult> właściwości, aby określić sposób zamknięcia okna dialogowego.  
+2.  Użyj <xref:System.Windows.Forms.DialogResult> właściwości w celu określenia, jak okno dialogowe zostało zamknięte.  
   
 3.  Użyj <xref:System.Windows.Forms.ColorDialog.Color%2A> właściwość <xref:System.Windows.Forms.ColorDialog> składnika, aby ustawić kolor wybrany.  
   
-     W poniższym przykładzie <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Click> obsługi zdarzeń otwiera <xref:System.Windows.Forms.ColorDialog> składnika. Gdy kolor jest wybrany, a użytkownik kliknie **OK**, <xref:System.Windows.Forms.Button> kolor tła formantu ma ustawioną wartość wybranego koloru. W przykładzie założono formularz zawiera <xref:System.Windows.Forms.Button> kontroli i <xref:System.Windows.Forms.ColorDialog> składnika.  
+     W poniższym przykładzie <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Click> zostanie otwarty program obsługi zdarzeń <xref:System.Windows.Forms.ColorDialog> składnika. Gdy kolor, który jest wybrane i użytkownik klika polecenie **OK**, <xref:System.Windows.Forms.Button> kolor tła kontrolki jest ustawiona na wybranym kolorze. W przykładzie założono, formularz ma <xref:System.Windows.Forms.Button> kontroli i <xref:System.Windows.Forms.ColorDialog> składnika.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -65,7 +65,7 @@ ms.locfileid: "33536930"
        }  
     ```  
   
-     (Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieścić następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -76,6 +76,6 @@ ms.locfileid: "33536930"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.ColorDialog>  
- [ColorDialog, składnik](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.ColorDialog>
+- [ColorDialog, składnik](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)

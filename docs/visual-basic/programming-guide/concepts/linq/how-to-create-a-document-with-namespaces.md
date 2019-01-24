@@ -1,15 +1,15 @@
 ---
-title: 'Porady: Tworzenie dokumentu z przestrzeniami nazw (LINQ to XML) (Visual Basic)'
+title: 'Instrukcje: Tworzenie dokumentu z przestrzeniami nazw (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e0f24b509cdac86f652fb41197c2594b4c474fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631298"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Porady: Tworzenie dokumentu z przestrzeniami nazw (LINQ to XML) (Visual Basic)
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Instrukcje: Tworzenie dokumentu z przestrzeniami nazw (LINQ to XML) (Visual Basic)
 W tym temacie przedstawiono sposób tworzenia dokumentu z przestrzeniami nazw w języku Visual Basic.  
   
  Przy użyciu literałów XML w Visual Basic, użytkownicy mogą definiować jednej domyślnej globalnej przestrzeni nazw XML. Ta przestrzeń nazw jest domyślny obszar nazw dla literały XML i właściwości XML. Domyślny obszar nazw XML można definiować na poziomie projektu lub na poziomie plików. Jeśli jest zdefiniowana na poziomie plików, zastępuje ona domyślny obszar nazw na poziomie projektu.  
@@ -114,5 +114,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

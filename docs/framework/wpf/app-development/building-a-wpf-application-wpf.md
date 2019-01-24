@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 89ceb39b08250bc400eed6ca8f8c24013446b453
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3bae07f8b72225ccb502a32fbc03fb4651c80d63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654285"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
 Aplikacje Windows Presentation Foundation (WPF) może być kompilowany jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pliki wykonywalne (.exe), biblioteki (.dll) lub jako kombinację obu typów zestawów. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji i opisano kluczowe kroki w procesie kompilacji.  
@@ -166,8 +166,8 @@ End Sub
   
 -   Nic nie jest ponownie kompilowany, (Jeśli w projekcie nic się nie zmieniło).  
   
-## <a name="see-also"></a>Zobacz też  
- [Wdrażanie aplikacji WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Odwołanie do WPF MSBuild](/visualstudio/msbuild/wpf-msbuild-reference)  
- [Pakowanie URI w WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Zasoby aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>Zobacz także
+- [Wdrażanie aplikacji WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Odwołanie do WPF MSBuild](/visualstudio/msbuild/wpf-msbuild-reference)
+- [Pakowanie URI w WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [Zasoby aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

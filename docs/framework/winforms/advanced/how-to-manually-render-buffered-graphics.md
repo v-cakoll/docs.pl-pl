@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ręczne renderowanie buforowanej grafiki'
+title: 'Instrukcje: Ręczne renderowanie buforowanej grafiki'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,45 +8,45 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-ms.openlocfilehash: ab0868e31ac8b010c662c04a7670e1ead19cebe0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f901350b1cb63f385eba52665785c8d0f7fd7e5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524199"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636355"
 ---
-# <a name="how-to-manually-render-buffered-graphics"></a>Porady: ręczne renderowanie buforowanej grafiki
-Jeśli zarządzasz buforowanej grafiki, należy mieć możliwość tworzenia i renderowania grafiki buforów. Można utworzyć wystąpienia <xref:System.Drawing.BufferedGraphics> klasy, która jest skojarzona z rysunku powierzchni na ekranie, wywołując <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> metody. Ta metoda tworzy <xref:System.Drawing.BufferedGraphics> wystąpienia, który jest skojarzony z powierzchnią określonego renderowania, takich jak formularz lub formant. Po utworzeniu <xref:System.Drawing.BufferedGraphics> wystąpienia, można narysować grafiki w buforze reprezentuje za pośrednictwem <xref:System.Drawing.BufferedGraphics.Graphics%2A> właściwości. Po wykonaniu wszystkich operacji graficznych, wywołując można skopiować zawartość buforu ekranu <xref:System.Drawing.BufferedGraphics.Render%2A> metody.  
+# <a name="how-to-manually-render-buffered-graphics"></a>Instrukcje: Ręczne renderowanie buforowanej grafiki
+Jeśli zarządzasz buforowanej grafiki, należy mieć możliwość tworzenia i bufory grafiki typu renderowania. Można utworzyć wystąpienia elementu <xref:System.Drawing.BufferedGraphics> klasę, która jest skojarzona z rysunku powierzchnie na ekranie, wywołując <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> metody. Ta metoda tworzy <xref:System.Drawing.BufferedGraphics> wystąpienia, który jest skojarzony z powierzchnię renderowania określonego, takie jak formularz lub formant. Po utworzeniu <xref:System.Drawing.BufferedGraphics> wypadku grafiki można narysować w buforze, czyli przedstawia liczbę za pomocą <xref:System.Drawing.BufferedGraphics.Graphics%2A> właściwości. Po wykonaniu wszystkich operacji graficznych, wywołując można skopiować zawartość buforu ekranu <xref:System.Drawing.BufferedGraphics.Render%2A> metody.  
   
 > [!NOTE]
->  Wykonywać własne renderowania, spowoduje zwiększenie zużycie pamięci, chociaż wzrost mogą być tylko niewielka.  
+>  Możesz wykonać własne renderowania, spowoduje zwiększenie zużycie pamięci, chociaż wzrost mogą być tylko niewielka.  
   
 ### <a name="to-manually-display-buffered-graphics"></a>Aby ręcznie wyświetlić buforowanej grafiki  
   
-1.  Uzyskać odwołania do wystąpienia <xref:System.Drawing.BufferedGraphicsContext> klasy. Aby uzyskać więcej informacji, zobacz [porady: ręczne zarządzanie buforowana grafika](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
+1.  Uzyskaj odwołanie do wystąpienia <xref:System.Drawing.BufferedGraphicsContext> klasy. Aby uzyskać więcej informacji, zobacz [jak: Ręczne zarządzanie buforowaną grafiką](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
   
-2.  Utwórz wystąpienie <xref:System.Drawing.BufferedGraphics> klasy przez wywołanie metody <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> metody, jak pokazano w poniższym przykładzie kodu.  
+2.  Utwórz wystąpienie obiektu <xref:System.Drawing.BufferedGraphics> klasy przez wywołanie metody <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> metodzie, jak pokazano w poniższym przykładzie kodu.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#21)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#21)]  
   
-3.  Rysuj grafiki buforu grafiki przez ustawienie <xref:System.Drawing.BufferedGraphics.Graphics%2A> właściwości. Na przykład:  
+3.  Rysowanie grafiki do buforu grafiki, ustawiając <xref:System.Drawing.BufferedGraphics.Graphics%2A> właściwości. Na przykład:  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#22)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#22)]  
   
-4.  Po ukończeniu wszystkich operacji rysowania do buforu grafiki, wywołaj <xref:System.Drawing.BufferedGraphics.Render%2A> metody do renderowania buforu, albo powierzchni rysowania skojarzonego z tym buforu, lub do określonej powierzchni rysowania, jak pokazano w poniższym przykładzie kodu.  
+4.  Po ukończeniu wszystkich operacji rysowania do buforu grafiki, wywołaj <xref:System.Drawing.BufferedGraphics.Render%2A> metody do renderowania buforu, albo na powierzchni do rysowania skojarzone z tego buforu lub określony powierzchnię rysunku, jak pokazano w poniższym przykładzie kodu.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#23)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#23)]  
   
-5.  Po Zakończono renderowania grafiki wywołać `Dispose` metoda <xref:System.Drawing.BufferedGraphics> wystąpienia można zwolnić zasobów systemowych.  
+5.  Wywołania, gdy jesteś gotowy Renderowanie grafiki, `Dispose` metody <xref:System.Drawing.BufferedGraphics> wystąpienia można zwolnić zasobów systemowych.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#24](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#24)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#24](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#24)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Drawing.BufferedGraphicsContext>  
- <xref:System.Drawing.BufferedGraphics>  
- [Podwójnie buforowana grafika](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- [Instrukcje: ręczne zarządzanie buforowaną grafiką](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Drawing.BufferedGraphicsContext>
+- <xref:System.Drawing.BufferedGraphics>
+- [Podwójnie buforowana grafika](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)
+- [Instrukcje: Ręczne zarządzanie buforowaną grafiką](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)

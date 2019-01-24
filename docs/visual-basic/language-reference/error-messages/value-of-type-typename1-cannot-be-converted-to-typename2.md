@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 9b3c029ed7bf73ff92dba65438d797b27fa135f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00ce143eecefbdf2f1b9e204ae2005be4bb81e39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627606"
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>Wartości typu &#39; &lt;typename1&gt; &#39; nie można przekonwertować na &#39; &lt;typename2&gt;&#39;
-Wartości typu "\<typename1 >' nie można przekonwertować na"\<typename2 > ". Niezgodność typów przyczyną może być połączenie odwołania pliku z odwołaniem projektu do zestawu "\<assemblyname >". Spróbuj zamienić odwołanie pliku do "\<ścieżka_pliku >" w projekcie "\<projectname1 >" na odwołanie projektu do "\<projectname2 >".  
+Wartość typu "\<typename1 >" nie można przekonwertować na "\<typename2 >". Niezgodność typów przyczyną może być połączenie odwołania pliku z odwołaniem projektu do zestawu "\<nazwa_zestawu >". Spróbuj wymienić odwołanie pliku do "\<ścieżka_pliku >' w projekcie"\<projectname1 > "z odwołaniem projektu do"\<projectname2 > ".  
   
- W sytuacji, gdy projekt sprawia, że zarówno odwołanie do projektu i odwołanie do pliku kompilator nie może zagwarantować, że jeden typ można przekonwertować na inny.  
+ W sytuacji, gdy projekt sprawia, że odwołania projektu i odwołanie do pliku kompilator nie może zagwarantować, że jeden typ może być konwertowany na inny.  
   
- Poniższy pseudo-kod przedstawia sytuację, której może wygenerować tego błędu.  
+ Poniższy pseudo-kod pokazano sytuację, która może wygenerować tego błędu.  
   
  `' ================ Visual Basic project P1 ================`  
   
@@ -47,19 +47,19 @@ Wartości typu "\<typename1 >' nie można przekonwertować na"\<typename2 > ". N
   
  `End Class`  
   
- Projekt `P1` wykonuje odwołanie pośrednie projektu do projektu `P2` do projektu `P3`, a także bezpośrednie odwołanie do pliku `P3`. Deklaracja `commonObject` używa odwołanie pliku do `P3`, podczas gdy wywołanie `P2.getCommonClass` używa odwołanie projektu do `P3`.  
+ Projekt `P1` sprawia, że odwołanie do pośredniego projektu za pośrednictwem projektu `P2` do projektu `P3`, a także bezpośrednie odwołanie do pliku `P3`. Deklaracja `commonObject` używa odwołanie pliku do `P3`, podczas gdy wywołaniu `P2.getCommonClass` używa odwołania projektu do `P3`.  
   
- Problem w tej sytuacji jest, że odwołanie do pliku Określa ścieżkę i nazwę pliku dla pliku wyjściowego `P3` (zazwyczaj p3.dll), gdy projekt odwołuje się do identyfikacji projektu źródłowego (`P3`) według nazwy projektu. W związku z tym kompilator nie może zagwarantować, że typ `P3.commonClass` pochodzi z tego samego kodu źródłowego za pomocą dwóch różnych odwołań.  
+ Problem w tej sytuacji jest, że odwołanie do pliku Określa ścieżkę i nazwę pliku dla pliku danych wyjściowych `P3` (zazwyczaj p3.dll), gdy odwołania do projektu zidentyfikować projektu źródłowego (`P3`) według nazwy projektu. W związku z tym kompilator nie może zagwarantować, że typ `P3.commonClass` pochodzi z tego samego kodu źródłowego za pośrednictwem dwóch różnych odwołań.  
   
- Ta sytuacja zwykle występuje, gdy projekt odwołań i mieszane odwołania do pliku. Na powyższej ilustracji, problem może nie wystąpić, jeśli `P1` wprowadzone bezpośrednie odwołanie do `P3` zamiast odwołania pliku.  
+ Taka sytuacja ma zazwyczaj miejsce po projektu odwołania, a mieszane odwołania do pliku. Na poprzedniej ilustracji, problem może nie wystąpić, jeśli `P1` wprowadzone bezpośrednie odwołanie do `P3` zamiast odwołania pliku.  
   
  **Identyfikator błędu:** BC30955  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Zmień odwołanie pliku do projektu odwołanie.  
+-   Zmień odwołanie do pliku z odwołaniem projektu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Konwersje typów w języku Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project)  
- 
+## <a name="see-also"></a>Zobacz także
+- [Konwersje typów w języku Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project)
+

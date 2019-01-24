@@ -2,12 +2,12 @@
 title: Usługa AJAX z formatami JSON i XML — przykład
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 17b0fd362ac84c7fbc0c9e88fb3d318966356bc6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ed337b7e2717083f5b951d9c204b90ebcddf2d3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632299"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Usługa AJAX z formatami JSON i XML — przykład
 W tym przykładzie pokazano, jak używać usług Windows Communication Foundation (WCF) do tworzenia asynchronicznych języka JavaScript i XML (technologia AJAX) usługa, która zwraca dane JavaScript Object Notation (JSON) lub XML. Usługa AJAX dostęp przy użyciu kodu JavaScript w kliencie przeglądarki sieci Web. W tym przykładzie opiera się na [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) próbki.  
@@ -111,5 +111,5 @@ xmlHttp.onreadystatechange=function(){
   
 3.  Przejdź do `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` (nie należy otwierać XmlAjaxClientPage.htm w przeglądarce z katalogu projektu).  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługa AJAX używająca żądań POST protokołu HTTP](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługa AJAX używająca żądań POST protokołu HTTP](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

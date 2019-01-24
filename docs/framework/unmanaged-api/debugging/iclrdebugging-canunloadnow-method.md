@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 557b53df3669bb0567e4d1261124ac725c796c70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fd0a7322437cb89fe62729f86f5ce8005ed3b5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646753"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>ICLRDebugging::CanUnloadNow — Metoda
-Określa, czy biblioteki, który został dostarczony przez [iclrdebugginglibraryprovider —](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interfejsu jest nadal używane lub może zostać zwolniony.  
+Określa, czy biblioteka, który został dostarczony przez [iclrdebugginglibraryprovider —](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interfejsu jest nadal w użyciu lub może być zwolniony.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,24 +35,24 @@ HRESULT CanUnloadNow(HMODULE hModule);
   
 #### <a name="parameters"></a>Parametry  
  `hmodule`  
- [in] Adres podstawowy modułu w procesie docelowym.  
+ [in] Adres podstawowy moduł w procesie docelowym.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Moduł, który odwołuje się do niego `hmodule` może zostać zwolniony.|  
-|S_FALSE|Moduł, który odwołuje się do niego `hmodule` jest nadal używane.|  
-|COR_E_NOT_CLR|Wskazany modułu nie jest modułem CLR.|  
+|S_OK|Moduł, który odwołuje się do niej `hmodule` może zostać zwolniony.|  
+|S_FALSE|Moduł, który odwołuje się do niej `hmodule` jest nadal w użyciu.|  
+|COR_E_NOT_CLR|Wskazany modułu nie jest modułem środowiska CLR.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda sprawdza, czy wszystkie wystąpienia `ICorDebug*` interfejsy zostały zwolnione i wątku nie znajduje się obecnie w wywołaniu [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) metody.  
+ Ta metoda sprawdza, czy wszystkie wystąpienia elementu `ICorDebug*` wydano interfejsów i żaden wątek nie znajduje się obecnie w wywołaniu [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -60,6 +60,6 @@ HRESULT CanUnloadNow(HMODULE hModule);
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

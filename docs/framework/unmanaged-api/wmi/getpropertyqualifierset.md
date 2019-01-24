@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: ec91a1f6fba70e3c9706541dc641ddd019d44841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642207"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet — funkcja
 Pobiera kwalifikator, ustaw dla określonej właściwości.
@@ -77,11 +77,11 @@ Ponieważ każda metoda może mieć własną kwalifikatory [wskaźnik IWbemQuali
 Ponieważ właściwości systemu mieć nie kwalifikatorów, funkcja zwraca `WBEM_E_SYSTEM_PROPERTY` Jeśli użytkownik podejmie próbę uzyskania [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wskaźnik dla właściwości systemu.
 
 ## <a name="requirements"></a>Wymagania  
-**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Zobacz także  
-[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

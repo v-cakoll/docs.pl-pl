@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 43497d3680917917894f1d904852d787fce0888c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 325be8851b63a252c381d943943937332ec91e6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638044"
 ---
 # <a name="abstract-c-reference"></a>abstract (odwołanie w C#)
 `abstract` Modyfikator oznacza, że rzecz modyfikowanego ma implementacji brakujące lub niekompletne. Abstrakcyjna modyfikatora można używać z klas, metod, właściwości, indeksatorów i zdarzeń. Użyj `abstract` modyfikatora w deklaracji klasy, aby wskazać, że klasa jest przeznaczona do użycia wyłącznie jako klasa bazowa innych klas. Elementy członkowskie oznaczony jako abstrakcyjny lub zawarte w klasie abstrakcyjnej, muszą być zaimplementowane przez klasy, które pochodzą z klasy abstrakcyjnej.  
@@ -81,11 +81,11 @@ Otrzymasz błąd informujący o tym, że kompilator nie można utworzyć wystąp
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
-- [override](../../../csharp/language-reference/keywords/override.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)
+- [override](../../../csharp/language-reference/keywords/override.md)
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)

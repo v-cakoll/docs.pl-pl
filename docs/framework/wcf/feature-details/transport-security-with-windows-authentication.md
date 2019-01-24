@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 3e48c397cb97cdfeb476daaf09d997e9609b3467
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bd4e12a861207e5318e8f3f34b38204f6724e7b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652595"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Zabezpieczenia transportu z uwierzytelnianiem systemu Windows
-Następujący scenariusz pokazuje klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych przez usługę Windows security. Aby uzyskać więcej informacji na temat programowania, zobacz [instrukcje: Zabezpieczanie usługi za pomocą poświadczeń Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+Następujący scenariusz pokazuje klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych przez usługę Windows security. Aby uzyskać więcej informacji na temat programowania, zobacz [jak: Zabezpieczanie usługi za pomocą poświadczeń Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
  Intranet usługi sieci Web Wyświetla informacje o zasobów ludzkich. Klient to aplikacja formularza Windows. Aplikacja jest wdrażana w domenie za pomocą kontrolera Kerberos zabezpieczanie domeny.  
   
@@ -21,12 +21,12 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
   
 |Cechy|Opis|  
 |--------------------|-----------------|  
-|Tryb zabezpieczeń|Transportu|  
+|Tryb zabezpieczeń|Transport|  
 |Współdziałanie|Tylko usługi WCF|  
 |Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (za pomocą zintegrowanego uwierzytelniania Windows)<br /><br /> Tak (za pomocą zintegrowanego uwierzytelniania Windows)|  
 |Integralność|Tak|  
 |Poufność|Tak|  
-|Transportu|NET. TCP|  
+|Transport|NET.TCP|  
 |Powiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Usługa  
@@ -117,7 +117,7 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Instrukcje: zabezpieczanie usługi za pomocą poświadczeń systemu Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Instrukcje: Zabezpieczanie usługi za pomocą poświadczeń Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

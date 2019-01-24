@@ -2,12 +2,12 @@
 title: Kolekcje (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 24b2155c07b6b66820d373d6310ff6b1c6ab224f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4163a87c04e280ed19f53d1f715df49b65d02f6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620607"
 ---
 # <a name="collections-c"></a>Kolekcje (C#)
 W przypadku wielu aplikacji, dla których chcesz utworzyć grupy i zarządzać nimi powiązanych obiektów. Istnieją dwa sposoby grupowania obiektów: poprzez tworzenie tablic obiektów oraz poprzez tworzenie kolekcji obiektów.  
@@ -31,9 +31,9 @@ W przypadku wielu aplikacji, dla których chcesz utworzyć grupy i zarządzać n
   
     -   [System.Collections.Generic Classes](#BKMK_Generic)  
   
-    -   [Klasy System.Collections.Concurrent](#BKMK_Concurrent)  
+    -   [System.Collections.Concurrent Classes](#BKMK_Concurrent)  
   
-    -   [Klasy System.Collections](#BKMK_Collections)  
+    -   [System.Collections Classes](#BKMK_Collections)  
   
 -   [Implementowanie kolekcji par klucz/wartość](#BKMK_KeyValuePairs)  
   
@@ -212,7 +212,7 @@ public class Galaxy
  Niektóre klasy uwzględnione w <xref:System.Collections.Concurrent> nazw są <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, i <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
 <a name="BKMK_Collections"></a>
-### <a name="systemcollections-classes"></a>Klasy System.Collections  
+### <a name="systemcollections-classes"></a>System.Collections Classes  
  Klasy w <xref:System.Collections?displayProperty=nameWithType> przestrzeni nazw nie przechowują elementów jako specjalnie typowanych obiektów, ale jako obiekty typu `Object`.  
   
  Jeśli to możliwe, należy używać ogólnych kolekcji w <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw lub <xref:System.Collections.Concurrent> przestrzeni nazw, zamiast typów odziedziczonych w `System.Collections` przestrzeni nazw.  
@@ -575,15 +575,15 @@ private static IEnumerable<int> EvenSequence(
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Koncepcje programowania (C#)](../../../csharp/programming-guide/concepts/index.md)  
-- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
-- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
-- [Równoległe LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
-- [Kolekcje i struktury danych](../../../standard/collections/index.md)  
-- [Tworzenie kolekcji i manipulowanie nimi](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
-- [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md)  
-- [Porównywanie i sortowanie w ramach kolekcji](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
-- [Kiedy należy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)  
+- [Inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Koncepcje programowania (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [Równoległe LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Kolekcje i struktury danych](../../../standard/collections/index.md)
+- [Tworzenie kolekcji i manipulowanie nimi](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
+- [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md)
+- [Porównywanie i sortowanie w ramach kolekcji](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [Kiedy należy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)

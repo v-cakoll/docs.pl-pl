@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ustawianie obrazu wyświetlanego przez formant formularzy systemu Windows'
+title: 'Instrukcje: Ustawianie obrazu wyświetlanego przez kontrolki formularzy Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 4870f9e2acc48a90e1e2193d514926fedee05f61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533744"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644927"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Porady: ustawianie obrazu wyświetlanego przez formant formularzy systemu Windows
-Kilka formantów formularzy systemu Windows można wyświetlić obrazy. Obrazy te można ikony, które Objaśnienie przeznaczenia formantu, takie jak ikoną dyskietki na przycisku określające **zapisać** polecenia. Alternatywnie ikony może być obrazy tła, aby mieć kontrolę wygląd i zachowanie, które mają.  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Instrukcje: Ustawianie obrazu wyświetlanego przez kontrolki formularzy Windows Forms
+Kilka kontrolek Windows Forms można wyświetlać obrazy. Obrazy te można ikony, które wyjaśnienie przeznaczenia kontrolki, takie jak ikonę dyskietki na przycisku określające elementy **Zapisz** polecenia. Alternatywnie ikony może być obrazów tła do zapewnienia kontroli, wygląd i zachowanie, które chcesz.  
   
-### <a name="to-set-the-image-displayed-by-a-control"></a>Aby ustawić obrazu wyświetlanego przez formant  
+### <a name="to-set-the-image-displayed-by-a-control"></a>Aby ustawić obrazu wyświetlanego przez kontrolkę  
   
-1.  Ustawianie formantu `Image` lub `BackgroundImage` dla właściwości typu obiektu <xref:System.Drawing.Image>. Ogólnie rzecz biorąc, użytkownik będzie można ładowanie obrazu z pliku za pomocą <xref:System.Drawing.Image.FromFile%2A> metody.  
+1.  Ustaw dla formantu `Image` lub `BackgroundImage` właściwość do obiektu typu <xref:System.Drawing.Image>. Ogólnie rzecz biorąc, można będzie się ładuje obraz z pliku przy użyciu <xref:System.Drawing.Image.FromFile%2A> metody.  
   
-     W poniższym przykładzie kodu, ścieżka ustawiona dla lokalizacji obrazu jest **Moje obrazy** folderu. Ten katalog zawiera większość komputerów z systemem operacyjnym Windows. Dzięki temu użytkownicy z poziomami dostępu minimalny system można bezpiecznie uruchomić aplikację. Poniższy przykład kodu wymaga już formularza z <xref:System.Windows.Forms.PictureBox> dodano formant.  
+     W poniższym przykładzie kodu ścieżkę zestawu dla lokalizacji obrazu jest **Moje obrazy** folderu. Większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu. Umożliwia także użytkownikom minimalny system poziomy dostępu do bezpiecznego uruchamiania aplikacji. Poniższy przykład kodu wymaga jeszcze formularza z <xref:System.Windows.Forms.PictureBox> dodane kontrolki.  
   
     ```vb  
     ' Replace the image named below  
@@ -56,7 +56,7 @@ Kilka formantów formularzy systemu Windows można wyświetlić obrazy. Obrazy t
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Drawing.Image.FromFile%2A>  
- <xref:System.Drawing.Image>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Drawing.Image.FromFile%2A>
+- <xref:System.Drawing.Image>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>

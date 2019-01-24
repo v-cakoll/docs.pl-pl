@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52da538ba9cf348062905b66a87d13db82a214a0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 15c357533c9f25a2f29da9a9b5cab185712f02f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634925"
 ---
 # <a name="standard-timespan-format-strings"></a>Standardowe ciągi formatujące TimeSpan
 <a name="Top"></a> Standardowa <xref:System.TimeSpan> Ciąg formatujący używa pojedynczego specyfikatora formatu w celu zdefiniowania tekstowa reprezentacja <xref:System.TimeSpan> wartość będącą wynikiem operacji formatowania. Dowolny ciąg formatu, który zawiera więcej niż jeden znak, w tym znak odstępu, jest interpretowany jako niestandardowy <xref:System.TimeSpan> ciąg formatu. Aby uzyskać więcej informacji, zobacz [Custom TimeSpan Format Strings](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
@@ -43,9 +43,9 @@ ms.locfileid: "44085269"
   
 |Specyfikator formatu|Nazwa|Opis|Przykłady|  
 |----------------------|----------|-----------------|--------------|  
-|"c"|Stałe formatu (niezmiennego)|Ten specyfikator nie jest uwzględniana kultura. Ma postać `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.<br /><br /> ("T" i ciągi formatu "T" generuje te same wyniki).<br /><br /> Więcej informacji: [stałych ("c") specyfikator formatu](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|„g”|Ogólnym formacie krótkim|Dane wyjściowe tego specyfikatora, tylko potrzebne elementy. Jest uwzględniana kultura i ma postać `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Więcej informacji: [ogólne krótkiej ("g") specyfikator formatu](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50, 599 (fr-FR)|  
-|„G”|Ogólny format długi|Ten specyfikator zawsze generuje dni i siedmiu cyfr dziesiętnych. Jest uwzględniana kultura i ma postać `[-]d’:’hh’:’mm’:’ss.fffffff`.<br /><br /> Więcej informacji: [specyfikator formatu ogólnego długi ("G")](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00, 0000000 (fr-FR)|  
+|"c"|Stałe formatu (niezmiennego)|Ten specyfikator nie jest uwzględniana kultura. Ma postać `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.<br /><br /> ("T" i ciągi formatu "T" generuje te same wyniki).<br /><br /> Więcej informacji: [Specyfikator formatu ("c") stałej](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|„g”|Ogólnym formacie krótkim|Dane wyjściowe tego specyfikatora, tylko potrzebne elementy. Jest uwzględniana kultura i ma postać `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Więcej informacji: [Specyfikator formatu ogólnego krótkiej ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50, 599 (fr-FR)|  
+|„G”|Ogólny format długi|Ten specyfikator zawsze generuje dni i siedmiu cyfr dziesiętnych. Jest uwzględniana kultura i ma postać `[-]d’:’hh’:’mm’:’ss.fffffff`.<br /><br /> Więcej informacji: [Specyfikator formatu ogólnego długiej ("G")](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00, 0000000 (fr-FR)|  
   
 <a name="Constant"></a>   
 ## <a name="the-constant-c-format-specifier"></a>Specyfikator stałej formatu ("c")  
@@ -132,6 +132,6 @@ ms.locfileid: "44085269"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
-- [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)
+- [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Analizowanie ciągów](../../../docs/standard/base-types/parsing-strings.md)

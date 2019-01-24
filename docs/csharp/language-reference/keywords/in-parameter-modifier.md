@@ -5,12 +5,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: d08b135c92cab176e402fec73999083fe4309362
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c3644b82a180fe6ed376938c9ff86db900db440e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631415"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>w modyfikator parametrów (odwołanie w C#)
 
@@ -119,10 +119,10 @@ Nie można użyć `in`, `ref`, i `out` słowa kluczowe dla następujących rodza
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)  
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
-- [Słowa kluczowe języka C#](index.md)  
-- [Parametry metody](method-parameters.md)  
-- [Pisanie kodu efektywne bezpieczne](../../write-safe-efficient-code.md)  
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Parametry metody](method-parameters.md)
+- [Pisanie kodu efektywne bezpieczne](../../write-safe-efficient-code.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 958b56266b0d2dcc317204c39a1df56baabd83e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ce6478f0331c590a2384a4e7e9b5621c050715d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402486"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623641"
 ---
 # <a name="exporttype-method"></a>ExportType — Metoda
-Określa, że typ jest możliwy do eksportu.  
+Określa, że typ jest eksportowalny.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,22 +41,22 @@ HRESULT ExportType(
   
 #### <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Identyfikator zestawu eksportu.  
+ Identyfikator zestawu, aby wyeksportować z.  
   
  `FileToken`  
- Identyfikator tokenu lub zestawu pliku, który definiuje typ możliwy do eksportu pliku.  
+ Plik tokenu lub zestawu identyfikator pliku, który definiuje typ możliwy do eksportu.  
   
  `TypeToken`  
- Token typu ma zostać wykonane eksportowalny.  
+ Token typu ma zostać wykonane można eksportować.  
   
  `pszTypename`  
- Pełni kwalifikowana nazwa typu ma zostać wykonane eksportowalny.  
+ W pełni kwalifikowana nazwa typu ma zostać wykonane można eksportować.  
   
  `dwFlags`  
- `ComType` flagi, takich jak `tdPublic` lub `tdNested`. Ten parametr może być przekazana do [DefineExportedType — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` flagi, takich jak `tdPublic` lub `tdNested`. Ten parametr może być przekazana do [defineexportedtype — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Odbiera token dla wyeksportowanego typu.  
+ Odbiera token dla eksportowanego typu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
@@ -64,7 +64,7 @@ HRESULT ExportType(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

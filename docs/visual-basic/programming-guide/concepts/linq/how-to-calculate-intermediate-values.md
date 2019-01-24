@@ -1,21 +1,21 @@
 ---
-title: 'Porady: obliczanie wartości pośredniego (Visual Basic)'
+title: 'Instrukcje: Obliczanie wartości pośrednich (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
-ms.openlocfilehash: e3aa54c365e90a11ac8c31e0bf7d901c5a4a6b96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2908abae5f4c4738752fba62c36da340fb3b2ba3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628828"
 ---
-# <a name="how-to-calculate-intermediate-values-visual-basic"></a>Porady: obliczanie wartości pośredniego (Visual Basic)
-Ten przykład przedstawia sposób obliczania wartości pośrednich, które mogą być używane w sortowanie, filtrowanie i wybierając.  
+# <a name="how-to-calculate-intermediate-values-visual-basic"></a>Instrukcje: Obliczanie wartości pośrednich (Visual Basic)
+W tym przykładzie przedstawiono sposób obliczania wartości pośrednich, które mogą być używane w sortowania, filtrowania i wybierając opcję.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Let` klauzuli.  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: dane liczbowe (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -41,9 +41,9 @@ Next
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeni nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: dane liczbowe w Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns="http://www.adatum.com">  
@@ -74,5 +74,5 @@ End Module
 435.00  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawowe zapytania (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Podstawowe zapytania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

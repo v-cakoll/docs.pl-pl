@@ -2,33 +2,33 @@
 title: Implementowanie serwera proxy odnajdywania
 ms.date: 03/30/2017
 ms.assetid: dda20e79-8df3-438e-a281-69d779d978ec
-ms.openlocfilehash: 0c7086e0eecea6cc2d7494d6afda0abf056ba758
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2f687912b966b03c17206f369b46ffd28d019d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634522"
 ---
 # <a name="implementing-a-discovery-proxy"></a>Implementowanie serwera proxy odnajdywania
-W tej sekcji opisano kroki wymagane do wdrożenia serwera proxy odnajdywania. Serwer proxy odnajdywania jest usługi autonomicznej, który zawiera repozytorium usług. Klienci mogą wykonywać kwerendę serwera proxy odnajdywania można znaleźć wykrywalny usługi Serwer proxy jest znane. Jak serwer proxy jest wypełniane przy użyciu usługi jest implementujący. Na przykład serwera proxy odnajdywania można połączyć się z istniejącą repozytorium usługi i stał się wykrywalny, administrator może użyć interfejsu API zarządzania, aby dodać wykrywalny usługi na serwerze proxy lub serwera proxy odnajdywania może używać funkcji anonsu do tych informacji Zaktualizuj swojej wewnętrznej pamięci podręcznej.  
+W tej sekcji opisano kroki wymagane do wdrożenia serwera proxy odnajdywania. Serwera proxy odnajdywania to autonomiczna usługa, który zawiera repozytorium usług. Klienci mogą wysyłać zapytania serwera proxy odnajdywania można znaleźć wykrywalny usług, które ma informacje o serwerze proxy. Jak serwer proxy jest wypełniana przy użyciu usługi zależy od implementujący. Na przykład serwera proxy odnajdywania można nawiązać połączenie z istniejącym repozytorium usługi i stał się wykrywalny, administrator może użyć interfejsu API zarządzania nad dodaniem usług wykrywalny do serwera proxy lub serwera proxy odnajdywania może korzystać z funkcji anons, aby te informacje aktualizowanie swojej wewnętrznej pamięci podręcznej.  
   
- Implementacja WCF udostępnia klas podstawowych, które umożliwiają łatwe tworzenie serwera proxy. Mogą wykorzystywać te interfejsy API do tworzenia serwera Proxy odnajdywania na podstawie istniejących repozytorium.  
+ Implementacja programu WCF zapewnia klas bazowych, które umożliwiają łatwe tworzenie serwera proxy. Korzystanie z tych interfejsów API do tworzenia serwera Proxy odnajdywania na podstawie istniejącego repozytorium.  
   
- Serwera proxy odnajdywania zaimplementowana w tym miejscu jest podobnie jak inne usługi WCF, możesz również ustawić serwera proxy odnajdywania wykrywalny, a klienci mogą zlokalizować jego punktów końcowych.  
+ Serwera proxy odnajdywania zaimplementowane w tym miejscu jest podobnie jak inne usługi WCF, możesz również stał się wykrywalny serwera proxy odnajdywania i klienci mogą zlokalizować jego punkty końcowe.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: wdrażanie serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- Opisuje sposób wdrożenia serwera proxy odnajdywania.  
+ [Instrukcje: Wdrażanie serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ W tym artykule opisano sposób wdrażania serwera proxy odnajdywania.  
   
- [Instrukcje: implementowanie odnajdywanej usługi rejestrowanej za pomocą serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
- Opisuje sposób wdrożenia wykrywalnej usługi WCF, który rejestruje przy użyciu serwera proxy odnajdywania.  
+ [Instrukcje: Implementowanie Odnajdywanej usługi rejestrowanej za pomocą serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ Opisuje sposób Implementowanie odnajdywanej usługi WCF, rejestrowanej za pomocą serwera proxy odnajdywania.  
   
- [Instrukcje: wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
- Zawiera opis sposobu wdrażania aplikacji klienta WCF, która używa serwera proxy odnajdywania do wyszukiwania dla usługi.  
+ [Instrukcje: Wdrażanie aplikacji klienta, który używa serwera Proxy odnajdywania można znaleźć usługi](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ W tym artykule opisano, jak wdrożyć aplikację kliencką usługi WCF, która używa serwera proxy odnajdywania do wyszukiwania dla usługi.  
   
- [Instrukcje: testowanie serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)  
- Opisuje sposoby testowania kod napisany w poprzednim trzy tematy.  
+ [Instrukcje: Testowanie serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)  
+ Zawiera opis sposobu testowania kodu napisanego w poprzednich tematach trzy.  
   
-## <a name="see-also"></a>Zobacz też  
- [Odnajdywanie w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [Instrukcje: programowe dodawanie możliwości odnajdywania do usługi i klienta WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)
+## <a name="see-also"></a>Zobacz także
+- [Odnajdywanie w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [Instrukcje: Programowe Dodawanie możliwości odnajdywania do usługi i klienta WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)

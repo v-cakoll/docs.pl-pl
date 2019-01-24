@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 2b821a1deb947db86e89207c447045f76a8bb842
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4571af701ea28c3b7dbecbb1b1a82e7093c2831e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646464"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Buforowanie w klientach automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  W tym temacie przedstawiono buforowania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wzorców właściwości i kontroli.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48035113"
   
  Aktualizowanie pamięci podręcznej nie zmienia żadnych istniejących właściwości <xref:System.Windows.Automation.AutomationElement> odwołania.  
   
-## <a name="see-also"></a>Zobacz też  
- [Właściwości zdarzeń automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [Używanie buforowania w automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [Przykładowe FetchTimer](https://msdn.microsoft.com/library/5b7d3294-de22-4f24-b2d6-d4785a304b90)
+## <a name="see-also"></a>Zobacz także
+- [Właściwości zdarzeń automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [Używanie buforowania w automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Przykładowe FetchTimer](https://msdn.microsoft.com/library/5b7d3294-de22-4f24-b2d6-d4785a304b90)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej'
+title: 'Instrukcje: Stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db23b424d4357ad94b8b0de66ca71726b765321e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 810b29b4abde174e3634a03d5c7b5e0e43de11b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47234812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637771"
 ---
-# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Porady: stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej
+# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Instrukcje: Stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej
 Anonimowe potoki zapewniają komunikację międzyprocesorową na komputerze lokalnym. One oferuje mniej funkcji niż nazwane potoki, ale wymagają również mniejsze obciążenie. Za pomocą potoków anonimowych ułatwiają komunikację międzyprocesorową na komputerze lokalnym. Anonimowe potoki nie można używać do komunikacji za pośrednictwem sieci.  
   
  Aby zaimplementować potoki anonimowe, użyj <xref:System.IO.Pipes.AnonymousPipeServerStream> i <xref:System.IO.Pipes.AnonymousPipeClientStream> klasy.  
@@ -47,5 +47,5 @@ Anonimowe potoki zapewniają komunikację międzyprocesorową na komputerze loka
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Potoki](../../../docs/standard/io/pipe-operations.md)  
-- [Instrukcje: stosowanie potoków nazwanych do sieciowej komunikacji międzyprocesowej](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [Potoki](../../../docs/standard/io/pipe-operations.md)
+- [Instrukcje: Korzystanie z potoków nazwanych do sieciowej komunikacji międzyprocesowej](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

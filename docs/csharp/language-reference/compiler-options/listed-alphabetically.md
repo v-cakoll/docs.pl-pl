@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653752"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opcje kompilatora C# w porządku alfabetycznym
 
@@ -29,7 +29,7 @@ Następujące opcje kompilatora są sortowane alfabetycznie. Aby uzyskać listę
 |[-baseaddress](baseaddress-compiler-option.md)|Określa adres podstawowy biblioteki, który ma zostać utworzony.|
 |[-bugreport](bugreport-compiler-option.md)|Tworzy plik "Raport o usterce". Ten plik będzie wysyłane wraz z informacjami o awariach, jeśli jest używane z parametrem-errorreport: wiersz lub - errorreport: wysyłanie.|
 |[-checked](checked-compiler-option.md)|Powoduje, że kompilatorowi Generowanie sprawdzenia przepełnienia.|
-|-checksumalgorithm:\<algorytmu podpisu >|Określa algorytm obliczania sumy kontrolnej pliku źródłowego, które zostały zapisane w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (domyślna) lub SHA256.|
+|-checksumalgorithm:\<alg>|Określa algorytm obliczania sumy kontrolnej pliku źródłowego, które zostały zapisane w pliku PDB.  Obsługiwane są następujące wartości: Algorytm SHA1 (domyślna) lub SHA256.|
 |[-codepage](codepage-compiler-option.md)|Określa stronę kodową do użycia przy otwieraniu plików źródłowych.|
 |[-debug](debug-compiler-option.md)|Emituje informacje debugowania.|
 |[-define](define-compiler-option.md)|Definiuje symbole kompilacji warunkowej.|
@@ -41,10 +41,10 @@ Następujące opcje kompilatora są sortowane alfabetycznie. Aby uzyskać listę
 |[-fullpaths](fullpaths-compiler-option.md)|Powoduje, że kompilatorowi Generowanie ścieżek w pełni kwalifikowanych.|
 |[-help](help-compiler-option.md)|Wyświetla komunikat o sposobie użycia do strumienia wyjściowego stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Określa, że o wysokiej entropii, obsługiwany jest ASLR.|
-|-przyrostowe|Włącza kompilację przyrostową [nieaktualne].|
+|-incremental|Włącza kompilację przyrostową [nieaktualne].|
 |[-keycontainer](keycontainer-compiler-option.md)|Określa kontener klucza silnej nazwy.|
 |[-keyfile](keyfile-compiler-option.md)|Określa plik klucza o silnej nazwie.|
-|[-langversion:\<ciąg >](langversion-compiler-option.md)|Określ wersję języka: domyślny, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 lub najnowsze |
+|[-langversion:\<ciąg >](langversion-compiler-option.md)|Określ wersję języka: Domyślny, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 lub r |
 |[-lib](lib-compiler-option.md)|Określa dodatkowe katalogi, w których należy szukać odwołania.|
 |[-link](link-compiler-option.md)|Udostępnia informacje o typie modelu COM w określonych zestawach do projektu.|
 |[-linkresource](linkresource-compiler-option.md)|Łączy określony zasób do tego zestawu.|
@@ -58,7 +58,7 @@ Następujące opcje kompilatora są sortowane alfabetycznie. Aby uzyskać listę
 |[-nowin32manifest](nowin32manifest-compiler-option.md)|Instruuje kompilator, nie można osadzić manifest aplikacji w pliku wykonywalnym.|
 |[-optimize](optimize-compiler-option.md)|Włącza/wyłącza optymalizacje.|
 |[-out](out-compiler-option.md)|Określa nazwę pliku wyjściowego (domyślne: Nazwa podstawowa pliku z klasą główną lub pierwszym plikiem).|
-|-równoległe [+&#124;-]|Określa, czy używać współbieżną kompilację (+).|
+|-parallel[+&#124;-]|Określa, czy używać współbieżną kompilację (+).|
 |[-pathmap](pathmap-compiler-option.md)|Określa mapowania dla źródła danych wyjściowych z nazw ścieżki przez kompilator.|
 |[-pdb](pdb-compiler-option.md)|Określa nazwę pliku i lokalizację pliku .pdb.|
 |[-platform](platform-compiler-option.md)|Ograniczenia platform, których można uruchamiać ten kod na: x86, Itanium, x 64, anycpu, lub anycpu32bitpreferred. Wartość domyślna to anycpu.|
@@ -80,9 +80,9 @@ Następujące opcje kompilatora są sortowane alfabetycznie. Aby uzyskać listę
 |[-win32manifest](win32manifest-compiler-option.md)|Określa niestandardowego pliku manifestu win32.|
 |[-win32res](win32res-compiler-option.md)|Określa plik zasobów win32 (.res).|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](index.md)  
-- [Opcje kompilatora C# w rozbiciu na kategorie](listed-by-category.md)  
-- [Instrukcje: ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
-- [\<Kompilator > Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [Opcje kompilatora C#](index.md)
+- [Opcje kompilatora C# w rozbiciu na kategorie](listed-by-category.md)
+- [Instrukcje: Ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [\<compiler> Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

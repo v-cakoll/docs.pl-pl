@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: fd168bf2e5233d9119872b267aea466a7af07041
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 20c462f811be86d52ec6f06700326f0e949a76d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637914"
 ---
 # <a name="how-to-create-a-custom-token"></a>Instrukcje: Tworzenie tokenu niestandardowego
 W tym temacie pokazano, jak utworzyć token zabezpieczeń niestandardowych przy użyciu <xref:System.IdentityModel.Tokens.SecurityToken> klasy i jak ją zintegrować z niestandardowego dostawcy tokenów zabezpieczeń i uwierzytelniania. Aby uzyskać pełny przykład kodu zobacz [niestandardowy Token](../../../../docs/framework/wcf/samples/custom-token.md) próbki.  
@@ -26,7 +26,7 @@ W tym temacie pokazano, jak utworzyć token zabezpieczeń niestandardowych przy 
   
  Poniższe procedury pokazują, jak utworzyć token zabezpieczający niestandardowych i jak ją zintegrować z infrastruktura zabezpieczeń programu WCF. W tym temacie tworzy token karty kredytowej, który jest używany do przekazywania informacji dotyczących karty kredytowej klienta na serwerze.  
   
- Aby uzyskać więcej informacji na temat niestandardowych poświadczeń i Menedżer tokenów zabezpieczeń, zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+ Aby uzyskać więcej informacji na temat niestandardowych poświadczeń i Menedżer tokenów zabezpieczeń, zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
  Zobacz <xref:System.IdentityModel.Tokens> przestrzeń nazw dla innych klas, które reprezentują tokenów zabezpieczających.  
   
@@ -104,14 +104,14 @@ W tym temacie pokazano, jak utworzyć token zabezpieczeń niestandardowych przy 
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>Aby zintegrować token zabezpieczający niestandardowe z dostawcy tokenów zabezpieczeń  
   
-1.  Dostawcy tokenów zabezpieczeń tworzy, modyfikuje (w razie potrzeby) i zwraca wystąpienie tokenu. Aby utworzyć niestandardowego dostawcę dla tokenu zabezpieczającego niestandardowe, należy utworzyć klasę, która dziedziczy po elemencie <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy. Poniższy przykład zastępuje <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> metodę, aby zwrócić wystąpienia `CreditCardToken`. Aby uzyskać więcej informacji na temat dostawcy tokenów zabezpieczeń niestandardowe zobacz [porady: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+1.  Dostawcy tokenów zabezpieczeń tworzy, modyfikuje (w razie potrzeby) i zwraca wystąpienie tokenu. Aby utworzyć niestandardowego dostawcę dla tokenu zabezpieczającego niestandardowe, należy utworzyć klasę, która dziedziczy po elemencie <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy. Poniższy przykład zastępuje <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> metodę, aby zwrócić wystąpienia `CreditCardToken`. Aby uzyskać więcej informacji na temat dostawcy tokenów zabezpieczeń niestandardowe zobacz [jak: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>Aby zintegrować token zabezpieczający niestandardowe z wystawcy uwierzytelniania tokenu zabezpieczeń  
   
-1.  Wystawcy uwierzytelniania tokenu zabezpieczeń sprawdza poprawność zawartości tokenu zabezpieczającego, gdy jest wyodrębniany z komunikatu. Aby Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowe, należy utworzyć klasę, która dziedziczy po elemencie <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> klasy. Poniższy przykład zastępuje <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> metody. Aby uzyskać więcej informacji na temat wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych zobacz [porady: Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
+1.  Wystawcy uwierzytelniania tokenu zabezpieczeń sprawdza poprawność zawartości tokenu zabezpieczającego, gdy jest wyodrębniany z komunikatu. Aby Tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowe, należy utworzyć klasę, która dziedziczy po elemencie <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> klasy. Poniższy przykład zastępuje <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> metody. Aby uzyskać więcej informacji na temat wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych zobacz [jak: Tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -121,7 +121,7 @@ W tym temacie pokazano, jak utworzyć token zabezpieczeń niestandardowych przy 
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>Aby zintegrować token zabezpieczający niestandardowe z usługą Menedżer tokenów zabezpieczeń  
   
-1.  Menedżer tokenów zabezpieczeń tworzy odpowiedniego dostawcy tokenów zabezpieczeń uwierzytelniania i wystąpień Serializator tokenów. Aby utworzyć niestandardowe Menedżer tokenów, należy utworzyć klasę, która dziedziczy po elemencie <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy. Podstawowe metody używania klasy <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> do utworzenia odpowiedniego dostawcy i poświadczeń klienta lub usługę. Aby uzyskać więcej informacji na temat menedżerów tokenu zabezpieczeń niestandardowe zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+1.  Menedżer tokenów zabezpieczeń tworzy odpowiedniego dostawcy tokenów zabezpieczeń uwierzytelniania i wystąpień Serializator tokenów. Aby utworzyć niestandardowe Menedżer tokenów, należy utworzyć klasę, która dziedziczy po elemencie <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy. Podstawowe metody używania klasy <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> do utworzenia odpowiedniego dostawcy i poświadczeń klienta lub usługę. Aby uzyskać więcej informacji na temat menedżerów tokenu zabezpieczeń niestandardowe zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -131,7 +131,7 @@ W tym temacie pokazano, jak utworzyć token zabezpieczeń niestandardowych przy 
   
 #### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>Aby zintegrować token zabezpieczający niestandardowych za pomocą niestandardowego klienta i poświadczeń usługi  
   
-1.  Niestandardowego klienta i poświadczeń usługi muszą zostać dodane do dostarczać interfejs API dla aplikacji umożliwić określenie niestandardowych tokenu informacje, które są używane przez infrastrukturę tokenu zabezpieczeń niestandardowych został wcześniej utworzony do udostępniania i uwierzytelnianie niestandardowe zabezpieczeń zawartość tokenu. Poniższe przykłady pokazują, jak można to zrobić. Aby uzyskać więcej informacji na temat niestandardowego klienta i poświadczeń usługi, zobacz [wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+1.  Niestandardowego klienta i poświadczeń usługi muszą zostać dodane do dostarczać interfejs API dla aplikacji umożliwić określenie niestandardowych tokenu informacje, które są używane przez infrastrukturę tokenu zabezpieczeń niestandardowych został wcześniej utworzony do udostępniania i uwierzytelnianie niestandardowe zabezpieczeń zawartość tokenu. Poniższe przykłady pokazują, jak można to zrobić. Aby uzyskać więcej informacji na temat niestandardowego klienta i poświadczeń usługi, zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  
@@ -150,19 +150,19 @@ W tym temacie pokazano, jak utworzyć token zabezpieczeń niestandardowych przy 
   
  W tym temacie przedstawiono niezbędne do zaimplementowania i użycia tokenu niestandardowego różnych fragmentów kodu. Aby zobaczyć pełny przykład jak wszystkie te fragmenty kodu współdziałają ze sobą, zobacz [niestandardowy Token](../../../../docs/framework/wcf/samples/custom-token.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Tokens.SecurityToken>  
- <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>  
- <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>  
- <xref:System.IdentityModel.Selectors.SecurityTokenProvider>  
- <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>  
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
- <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
- <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- [Przewodnik: tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [Instrukcje: tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [Instrukcje: tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [Architektura zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Tokens.SecurityToken>
+- <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>
+- <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>
+- <xref:System.IdentityModel.Selectors.SecurityTokenProvider>
+- <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>
+- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
+- <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>
+- <xref:System.IdentityModel.Selectors.SecurityTokenManager>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- [Przewodnik: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Instrukcje: Tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Architektura zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: zestaw Max niedokładność zegara'
+title: 'Instrukcje: Ustawianie maksymalnego przesunięcia czasowego zegara'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,62 +8,62 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: dca675b8d5774948bffd936d146cb0e1dd9aa62d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73c3bd7c8bf02fd003510c838fec45a68829fe1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646883"
 ---
-# <a name="how-to-set-a-max-clock-skew"></a>Porady: zestaw Max niedokładność zegara
-Funkcje o krytycznym znaczeniu czasu można derailed, jeśli są różne ustawienia zegara na dwóch komputerach. Aby ograniczyć to ryzyko, można ustawić `MaxClockSkew` właściwości <xref:System.TimeSpan>. Ta właściwość jest dostępna na dwie klasy:  
+# <a name="how-to-set-a-max-clock-skew"></a>Instrukcje: Ustawianie maksymalnego przesunięcia czasowego zegara
+Czas ma istotne znaczenie funkcje można derailed, jeśli różnią się ustawienia zegara na dwóch komputerach. Aby uniknąć tej możliwości, możesz ustawić `MaxClockSkew` właściwość <xref:System.TimeSpan>. Ta właściwość jest dostępna w dwóch klas:  
   
  <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
   
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
   
 > [!IMPORTANT]
->  Ważne dla bezpiecznej konwersacji, zmienia się na `MaxClockSkew` muszą być wprowadzane właściwości, gdy jest zainicjowano usługi lub klienta. Aby to zrobić, należy ustawić właściwość na <xref:System.ServiceModel.Channels.SecurityBindingElement> zwrócony przez <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A>.  
+>  Ważne dla bezpiecznej konwersacji zmieni się na `MaxClockSkew` właściwości muszą być wykonane, gdy jest załadować usługi lub klienta. Aby to zrobić, należy ustawić właściwość na <xref:System.ServiceModel.Channels.SecurityBindingElement> zwrócone przez <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A>.  
   
- Aby zmienić właściwości na jednym z powiązania dostarczane przez system, należy odnaleźć w kolekcji powiązania elementu powiązania zabezpieczeń i ustawić `MaxClockSkew` właściwości na nową wartość. Dwie klasy pochodzi od <xref:System.ServiceModel.Channels.SecurityBindingElement>: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> i <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Podczas pobierania powiązania zabezpieczeń z kolekcji, należy rzutowanie do jednego z następujących typów, aby poprawnie ustawić `MaxClockSkew` właściwości. W poniższym przykładzie użyto <xref:System.ServiceModel.WSHttpBinding>, który korzysta z <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. Aby uzyskać listę, która określa typ powiązania zabezpieczeń do użycia w każdego powiązania dostarczane przez system, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md).  
+ Aby zmienić właściwość na jednym z powiązań dostarczanych przez system, możesz znaleźć elementu powiązania zabezpieczeń w kolekcji powiązania i ustawić `MaxClockSkew` właściwości na nową wartość. Dwoma klasami pochodnymi <xref:System.ServiceModel.Channels.SecurityBindingElement>: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> i <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Podczas pobierania powiązanie zabezpieczeń z kolekcji, należy rzutować do jednego z następujących typów Aby poprawnie ustawić `MaxClockSkew` właściwości. W poniższym przykładzie użyto <xref:System.ServiceModel.WSHttpBinding>, który używa <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. Aby uzyskać listę, która określa typ zabezpieczeń powiązania do użycia w każdym powiązania dostarczane przez system, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
-### <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>Aby utworzyć niestandardowego powiązania z zegarem nowe pochylanie wartości w kodzie  
+### <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>Aby utworzyć niestandardowego powiązania za pomocą nowego zegara pochylanie wartości w kodzie  
   
 1.  > [!WARNING]
     >  Należy pamiętać, dodaj odwołania do następujących przestrzeni nazw w kodzie: <xref:System.ServiceModel.Channels>, <xref:System.ServiceModel.Description>, <xref:System.Security.Permissions>, i <xref:System.ServiceModel.Security.Tokens>.  
   
-     Utwórz wystąpienie <xref:System.ServiceModel.WSHttpBinding> klasy i ustaw jego tryb zabezpieczeń <xref:System.ServiceModel.SecurityMode.Message>.  
+     Utwórz wystąpienie obiektu <xref:System.ServiceModel.WSHttpBinding> klasy i ustaw jego tryb zabezpieczeń <xref:System.ServiceModel.SecurityMode.Message>.  
   
 2.  Utwórz nowe wystąpienie klasy <xref:System.ServiceModel.Channels.BindingElementCollection> klasy przez wywołanie metody <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A> metody.  
   
 3.  Użyj <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> metody <xref:System.ServiceModel.Channels.BindingElementCollection> klasy można znaleźć elementu powiązania zabezpieczeń.  
   
-4.  Korzystając z <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> metody rzutowany na typ rzeczywistego. Przykład poniżej rzutowania do <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> typu.  
+4.  Korzystając z <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> metody rzutowany na typ rzeczywistego. W poniższym rzutowania na przykładzie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> typu.  
   
 5.  Ustaw <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> właściwość elementu powiązania zabezpieczeń.  
   
 6.  Utwórz <xref:System.ServiceModel.ServiceHost> przy użyciu adresu typu i base odpowiednią usługę.  
   
-7.  Użyj <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> metodę, aby dodać punkt końcowy i obejmują <xref:System.ServiceModel.Channels.CustomBinding>.  
+7.  Użyj <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> metodę, aby dodać punkt końcowy i zawierać <xref:System.ServiceModel.Channels.CustomBinding>.  
   
      [!code-csharp[c_MaxClockSkew#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_maxclockskew/cs/source.cs#1)]
      [!code-vb[c_MaxClockSkew#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_maxclockskew/vb/source.vb#1)]  
   
-### <a name="to-set-the-maxclockskew-in-configuration"></a>Aby ustawić MaxClockSkew w konfiguracji  
+### <a name="to-set-the-maxclockskew-in-configuration"></a>Aby ustawić konfigurację MaxClockSkew  
   
-1.  Utwórz [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) w [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sekcji.  
+1.  Tworzenie [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) w [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sekcji.  
   
-2.  Utwórz [ \<powiązania >](../../../../docs/framework/misc/binding.md) element i ustaw `name` atrybutu odpowiednią wartość. Poniższy przykład ustawia ją na `MaxClockSkewBinding`.  
+2.  Tworzenie [ \<powiązania >](../../../../docs/framework/misc/binding.md) element i ustaw `name` atrybutu do odpowiedniej wartości. Poniższy przykład ustawia ją na `MaxClockSkewBinding`.  
   
-3.  Dodaj element kodowania. W poniższym przykładzie dodaje [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
+3.  Dodawanie elementu kodowania. Poniższy przykład dodaje [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
   
-4.  Dodaj [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element i ustaw `authenticationMode` atrybutu odpowiednie ustawienia. Poniższy przykład ustaw dla atrybutu `Kerberos` do określenia, że usługa używa uwierzytelniania systemu Windows.  
+4.  Dodaj [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element i ustaw `authenticationMode` atrybutu do odpowiedniego ustawienia. Poniższy przykład atrybut jest ustawiony na `Kerberos` do określenia, że usługa używa uwierzytelniania Windows.  
   
-5.  Dodaj [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) i ustaw `maxClockSkew` atrybut na wartość w formie `"##:##:##"`. Poniższy przykład ustawia ją na 7 minut. Opcjonalnie dodaj [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) i ustaw `maxClockSkew` atrybutu odpowiednie ustawienia.  
+5.  Dodaj [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) i ustaw `maxClockSkew` atrybutu wartości w postaci `"##:##:##"`. Poniższy przykład ustawia ją na 7 minut. Opcjonalnie dodaj [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) i ustaw `maxClockSkew` atrybutu do odpowiedniego ustawienia.  
   
 6.  Dodaj element transportu. W poniższym przykładzie użyto [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
   
-7.  Dla bezpiecznej konwersacji, ustawienia zabezpieczeń musi być bootstrap w [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elementu.  
+7.  Do bezpiecznej konwersacji, ustawienia zabezpieczeń musi wystąpić na bootstrap w [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elementu.  
   
     ```xml  
     <bindings>  
@@ -84,8 +84,8 @@ Funkcje o krytycznym znaczeniu czasu można derailed, jeśli są różne ustawie
     </bindings>  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Instrukcje: tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

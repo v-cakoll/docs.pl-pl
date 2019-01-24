@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635978"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Przestarzali członkowie w .NET Framework
 W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są przestarzałe w programie .NET Framework 4.5 i nowsze wersje, uporządkowane według zestawu. Użyj poniższych linków, aby zobaczyć listę przestarzali członkowie i zalecanych rozwiązań alternatywnych, w każdym zestawie. W tym temacie nie ma elementów członkowskich przestarzałe typy. Aby uzyskać listę przestarzałych typów, zobacz [przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -90,7 +90,7 @@ W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są
  Przestarzali członkowie w zestawy systemowe można znaleźć w następujących tabelach. Te zestawy są używane dla ogólnych\-cel tworzenia aplikacji, który jest przeznaczony dla .NET Framework.  
   
 <a name="mscorlib"></a>   
-### <a name="assembly-mscorlibdll"></a>Zestaw: biblioteki mscorlib.dll  
+### <a name="assembly-mscorlibdll"></a>Assembly: mscorlib.dll  
   
 |Typ|Element członkowski|Komunikat|  
 |----------|------------|-------------|  
@@ -781,7 +781,7 @@ W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są
 |`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|Najpierw przestarzałe w programie .NET Framework 4.5.<br /><br /> Używany tylko dla wersji 3.5 zgodności z poprzednimi wersjami.|  
   
 <a name="visualbasic"></a>   
-### <a name="assembly-microsoftvisualbasicdll"></a>Zestaw: Pliku Microsoft.VisualBasic.dll  
+### <a name="assembly-microsoftvisualbasicdll"></a>Zestaw: Microsoft.VisualBasic.dll  
   
 |Typ|Element członkowski|Komunikat|  
 |----------|------------|-------------|  
@@ -798,6 +798,6 @@ W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|Użyj tego elementu członkowskiego generuje błąd kompilatora.<br /><br /> Nie należy używać tej metody.|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` Klucza rejestru działa tylko wobec Win9x, który nie jest obsługiwany przez tę wersję programu .NET Framework. Użyj `PerformanceData` klucz rejestru, który zamiast tego. Ta właściwość zostaną usunięte z przyszłych wersji Framework.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md)
+## <a name="see-also"></a>Zobacz także
+- [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633855"
 ---
 # <a name="ipv6-addressing"></a>Adresowanie IPv6
 W przypadku protokołu internetowego w wersji 6 (IPv6) adresy są długości 128 bitów. Jednym z powodów takich duża przestrzeń adresowa jest pozwalające na dalszy podział dostępnych adresów w hierarchii domen routingu, które odzwierciedlają topologii sieci Internet. Kolejny powód jest mapowania adresów karty sieciowe (lub interfejsy) łączące urządzenia w sieci. Protokół IPv6 funkcji nieprzerwaną pracę możliwość rozpoznania adresów na najniższym poziomie, znajduje się na poziomie interfejsu sieciowego, która ma również funkcji automatycznej konfiguracji.  
@@ -64,7 +64,7 @@ W przypadku protokołu internetowego w wersji 6 (IPv6) adresy są długości 128
   
     -   **Adresy lokacji lokalnej**. Te adresy są używane w jednej lokacji i mają następujący format: FEC0::*SubnetID*:*InterfaceID*. Adresy lokacji lokalnej są używane na potrzeby adresowania wewnątrz witryny bez konieczności stosowania prefiksu globalnego.  
   
-    -   **Adresy globalne emisji pojedynczej protokołu IPv6**. Te adresy mogą być używane w Internecie i mieć następujący format: 010 (FP 3 bity) identyfikator TLA (13-bitowy) zarezerwowany (8 bitów), identyfikator umowy SLA ID NLA (24 bity) (16 bitów) *InterfaceID* (64-bitowy).  
+    -   **Adresy globalne emisji pojedynczej protokołu IPv6**. Te adresy mogą być używane w Internecie i ma następujący format: 010 (FP 3 bity) identyfikator TLA (13-bitowy) zarezerwowany (8 bitów), identyfikator umowy SLA ID NLA (24 bity) (16 bitów) *InterfaceID* (64-bitowy).  
   
 -   **Adres multiemisji**. Identyfikator zestawu interfejsów (zazwyczaj należących do różnych węzłach). Pakiet wysyłane na ten adres jest dostarczane do wszystkich interfejsów, które są identyfikowane za pomocą adresu. Typy adresów multiemisji zastępują adresów IPv4 emisji.  
   
@@ -72,6 +72,6 @@ W przypadku protokołu internetowego w wersji 6 (IPv6) adresy są długości 128
   
  Ogólnie rzecz biorąc węzeł ma zawsze adres połączenia lokalnego. Może mieć adres lokacji lokalnej i co najmniej jeden adres globalnego.  
   
-## <a name="see-also"></a>Zobacz też  
- [Protokół IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Gniazda](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Zobacz także
+- [Protokół IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Gniazda](../../../docs/framework/network-programming/sockets.md)

@@ -8,42 +8,42 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-ms.openlocfilehash: 9b586936281bfbf2dcace7cf2892bebf305fc842
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e33d396dac8ae5f9afd057a27f27bee700092f71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634353"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nazwy deklarowanych elementów XML oraz atrybuty (Visual Basic)
-Ten temat zawiera wskazówki dotyczące języka Visual Basic dla nazw elementów XML oraz atrybuty w literałach XML.  W literał XML można określić nazwę lokalną lub kwalifikowanej nazwy. Kwalifikowana nazwa składa się z prefiksu przestrzeni nazw XML, dwukropek i nazwa lokalna. Aby uzyskać więcej informacji na temat prefiksy przestrzeni nazw XML, zobacz [literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+Ten temat zawiera wskazówki dotyczące języka Visual Basic nazewnictwa elementów XML oraz atrybuty w literałach XML.  W literał XML można określić nazwę lokalnego lub nazwą kwalifikowaną. Kwalifikowana nazwa składa się z prefiksu przestrzeni nazw XML, dwukropek i lokalna nazwa. Aby uzyskać więcej informacji na temat prefiksy przestrzeni nazw XML, zobacz [literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
-## <a name="rules"></a>Reguły  
+## <a name="rules"></a>reguły  
  Lokalna nazwa elementu lub atrybutu w języku Visual Basic muszą spełniać następujące reguły.  
   
--   Może ona rozpoczynać przestrzeni nazw. Musi zaczynać się od litery lub znaku podkreślenia (`_`).  
+-   Można zaczyna się ona z przestrzenią nazw. Musi zaczynać się od znaku alfabetycznego lub znaku podkreślenia (`_`).  
   
--   Musi zawierać tylko znaki alfabetyczne, cyfry dziesiętne, znaki podkreślenia, kropki (.) i łączniki (-).  
+-   Musi zawierać tylko litery, cyfry dziesiętne, znaki podkreślenia, kropki (.) i łączniki (-).  
   
 -   Nie może być więcej niż 1024 znaków.  
   
--   Dwukropki, które pojawiają się w nazwach wskazują odgraniczenie przestrzeni nazw. W związku z tym umożliwia dwukropki tylko określić przestrzeń nazw XML dla określonej nazwy.  
+-   Dwukropki, które pojawiają się w nazwach wskazują odgraniczenie przestrzeni nazw. W związku z tym można użyć dwukropki tylko do określenia obszaru nazw XML dla określonej nazwy.  
   
  Ponadto należy przestrzegać następujących wytycznych.  
   
--   Specyfikacja XML 1.0 zastrzega sobie wszystkie nazwy zaczynającym się od ciągu "xml" jakiekolwiek zmiany wielkości liter. W związku z tym nie należy używać tych nazw dla danego elementu i nazwach atrybutów.  
+-   Specyfikacja XML 1.0 zastrzega sobie wszystkie nazwy rozpoczynające się od ciągu "xml" jakiekolwiek zmiany wielkości liter. W związku z tym nie należy używać tych nazw w odniesieniu do danego elementu i nazwach atrybutów.  
   
-### <a name="name-length-guidelines"></a>Wskazówki dotyczące długość nazwy  
- Jak to w praktyce nazwa powinna być możliwie krótki podczas nadal jednoznacznie identyfikujący rodzaj elementu. To poprawia czytelność kodu i zmniejsza rozmiar linii długość i pliku źródłowego.  
+### <a name="name-length-guidelines"></a>Wytyczne dotyczące długość nazwy  
+ Jak to w praktyce nazwa powinna być możliwie krótkie podczas identyfikacji nadal wyraźnie rodzaj elementu. To zwiększa czytelność kodu i zmniejsza rozmiar wiersza długości i pliku źródłowego.  
   
- Nazwa nie należy jednak tak krótki, że nie można ją było właściwie opisano element lub kodu używaniu go. Jest to ważne w przypadku czytelność kodu. Jeśli ktoś próbuje go zrozumieć, lub jeśli chcesz samodzielnie go przez długi czas, po jego zapisano, nazwy odpowiednich elementów zaoszczędzić czas.  
+ Jednak Twoja nazwa nie powinna być zbyt krótki, że nie odpowiednio opisano element lub kodzie używaniu go. Jest to ważne dla czytelności kodu. Jeśli ktoś inny spróbuje go zrozumieć lub samodzielnie przeglądasz go przez długi czas, po jego autorem, nazwy elementów odpowiednie zaoszczędzić czas.  
   
-## <a name="case-sensitivity-in-names"></a>Uwzględniana wielkość liter w nazwach  
- Nazwy elementów XML jest uwzględniana wielkość liter. Oznacza to, że gdy kompilator Visual Basic porównuje dwie nazwy, które różnią się alfabetycznej tylko wielkością liter, jego interpretuje je jako różne nazwy. Na przykład interpretuje `ABC` i `abc` jako odnoszące się do oddzielania elementów.  
+## <a name="case-sensitivity-in-names"></a>Rozróżnianie wielkości liter w nazwach  
+ Nazwy elementów XML jest uwzględniana wielkość liter. Oznacza to, że gdy kompilator języka Visual Basic porównuje dwie nazwy, które różnią się alfabetycznej tylko wielkością liter, interpretuje je jako różne nazwy. Na przykład interpretuje `ABC` i `abc` jako odnoszące się do oddzielania elementów.  
   
-## <a name="xml-namespaces"></a>Przestrzenie nazw XML  
- Podczas tworzenia literał elementu XML, można określić prefiks przestrzeni nazw XML dla nazwy elementu. Aby uzyskać więcej informacji, zobacz [literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+## <a name="xml-namespaces"></a>Obszary nazw XML  
+ Podczas tworzenia elementu XML literału, można określić prefiks przestrzeni nazw XML dla nazwy elementu. Aby uzyskać więcej informacji, zobacz [literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

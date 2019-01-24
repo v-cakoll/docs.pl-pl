@@ -2,12 +2,12 @@
 title: Śledzenie cykliczne
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-ms.openlocfilehash: 1f6c5287e6a53ed26ee5c9ed477e08dafc512e3f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: eaecf2205e7618f02a66f8c35fc88ca5a59947b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646438"
 ---
 # <a name="circular-tracing"></a>Śledzenie cykliczne
 Niniejszy przykład pokazuje implementację odbiornik śledzenia cyklicznego buforu. Typowy scenariusz dla usług produkcyjnych jest usług, które są dostępne przez długi czas i mieć włączone na niskim poziomie rejestrowanie śledzenia. Te usługi to zajmować dużo miejsca na dysku. Podczas rozwiązywania problemów z usługą, najnowsze dane w dzienniku śledzenia dotyczy rozwiązywanie problemów. Niniejszy przykład pokazuje implementację odbiornik śledzenia cyklicznego buforu, w którym tylko najbardziej aktualne dane śledzenia są przechowywane na dysku do skonfigurowanej ilości danych. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i zawiera odbiornik śledzenia niestandardowych.  
@@ -59,5 +59,5 @@ Niniejszy przykład pokazuje implementację odbiornik śledzenia cyklicznego buf
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Zobacz także
+- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

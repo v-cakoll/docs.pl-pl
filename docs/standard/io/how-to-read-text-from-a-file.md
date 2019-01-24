@@ -1,5 +1,5 @@
 ---
-title: 'Porady: odczyt tekstu z pliku'
+title: 'Instrukcje: Odczytywanie tekstu z pliku'
 ms.date: 06/19/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16404b1e4b2f1e4a835eae5c0f86dac4f508d294
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f667b0a757a676788b693691504512dfc227a7e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646675"
 ---
-# <a name="how-to-read-text-from-a-file"></a>Porady: odczyt tekstu z pliku
+# <a name="how-to-read-text-from-a-file"></a>Instrukcje: Odczytywanie tekstu z pliku
 W poniższych przykładach pokazano, jak odczytać tekst synchronicznie i asynchronicznie z pliku tekstowego przy użyciu platformy .NET dla aplikacji komputerowych. W obu przykładach podczas tworzenia wystąpienia klasy <xref:System.IO.StreamReader> należy dostarczyć względną lub bezwzględną ścieżkę do pliku. W poniższych przykładach założono, że plik o nazwie TestFile.txt znajduje się w folderze aplikacji.  
   
- Te przykłady kodu nie dotyczą projektowania dla aplikacji Windows Store Apps, ponieważ środowisko wykonawcze Windows oferuje typy strumieni różnych do odczytu i zapisu do plików. Na przykład, który pokazuje, jak odczytać tekst z pliku w aplikacji Windows Store, zobacz [Szybki Start: odczytywanie i zapisywanie plików](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)). Przykłady pokazujące, jak przeprowadzać konwersję między strumieniami programu .NET Framework i strumieni środowiska wykonawczego Windows, zobacz [porady: konwertowanie między .NET Framework i strumieni środowiska wykonawczego Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
+ Te przykłady kodu nie dotyczą projektowania dla aplikacji Windows Store Apps, ponieważ środowisko wykonawcze Windows oferuje typy strumieni różnych do odczytu i zapisu do plików. Na przykład, który pokazuje, jak odczytać tekst z pliku w aplikacji Windows Store, zobacz [Szybki Start: Odczyt i zapis plików](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)). Przykłady pokazujące, jak przeprowadzać konwersję między strumieniami programu .NET Framework i strumieni środowiska wykonawczego Windows, zobacz [jak: Konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia operację odczytu synchronicznego przy użyciu aplikacji konsoli. W tym przykładzie plik tekstowy jest otwierane przy użyciu czytnik strumienia, zawartość jest kopiowana do ciągu i ciąg jest dane wyjściowe do konsoli.  
@@ -40,16 +40,16 @@ W poniższych przykładach pokazano, jak odczytać tekst synchronicznie i asynch
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IO.StreamReader>  
-- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
-- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
-- [Asynchroniczne operacje We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [NIB: Instrukcje: Tworzenie listy katalogów](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
-- [Szybki Start: Odczyt i zapis plików](https://docs.microsoft.com/previous-versions/windows/apps/hh758325%28v=win.10%29)  
-- [Instrukcje: konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego systemu Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
-- [Instrukcje: odczyt i zapis we właśnie utworzonym pliku danych](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [Instrukcje: otwieranie pliku dziennika i dołączanie do niego](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Instrukcje: zapisywanie tekstu w pliku](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Instrukcje: odczytywanie znaków z ciągu](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [Instrukcje: zapisywanie znaków w ciągu](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- <xref:System.IO.StreamReader>
+- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>
+- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>
+- [Asynchroniczne operacje We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [NIB: Instrukcje: Utwórz listę katalogów](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)
+- [Szybki start: Odczyt i zapis plików](https://docs.microsoft.com/previous-versions/windows/apps/hh758325%28v=win.10%29)
+- [Instrukcje: Konwertowanie między .NET Framework i strumieni środowiska wykonawczego Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)
+- [Instrukcje: Odczyt i zapis w nowo utworzonym pliku danych](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [Instrukcje: Otwieranie i dołączanie do pliku dziennika](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [Instrukcje: Zapisywanie tekstu do pliku](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [Instrukcje: Odczytywanie znaków z ciągu](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- [Instrukcje: Zapisywanie znaków w ciągu](../../../docs/standard/io/how-to-write-characters-to-a-string.md)
 - [We/Wy plików i strumieni](../../../docs/standard/io/index.md)

@@ -6,12 +6,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 61c0744168a6fef0f8c8cfb589602e7aeff0c48b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5641b31a7fe380b2d19969f4baa7a701d74de4c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638723"
 ---
 # <a name="nameof-c-reference"></a>nameof (odwołanie w C#)
 
@@ -135,8 +135,8 @@ class C {
 
 Aby uzyskać więcej informacji, zobacz [wyrażeń Nameof](~/_csharplang/spec/expressions.md#nameof-expressions) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
  
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [typeof](../../../csharp/language-reference/keywords/typeof.md)

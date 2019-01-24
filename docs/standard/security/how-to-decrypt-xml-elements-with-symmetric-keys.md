@@ -1,5 +1,5 @@
 ---
-title: 'Porady: odszyfrowywanie elementów XML przy użyciu kluczy symetrycznych'
+title: 'Instrukcje: Odszyfrowywanie elementów XML przy użyciu kluczy symetrycznych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38bb22de14ecef618d45f54cced32af57542d3df
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 19ee0e3244d9a9bf7d7eddc9be4eb7c50b467cf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866848"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502627"
 ---
-# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Porady: odszyfrowywanie elementów XML przy użyciu kluczy symetrycznych
+# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Instrukcje: Odszyfrowywanie elementów XML przy użyciu kluczy symetrycznych
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, aby zaszyfrować element w dokumencie XML.  Szyfrowanie XML umożliwia przechowywania lub transportu poufnych kod XML, nie martwiąc się o łatwo odczytywanych danych.  Ten przykład kodu odszyfrowuje — element XML przy użyciu algorytmu Advanced Encryption Standard (AES), nazywany także Rijndael.  
   
- Aby dowiedzieć się, jak zaszyfrować element XML przy użyciu tej procedury, zobacz [porady: szyfrowanie elementów XML przy użyciu kluczy symetrycznych](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+ Aby dowiedzieć się, jak zaszyfrować element XML przy użyciu tej procedury, zobacz [jak: Szyfrowanie elementów XML przy użyciu kluczy symetrycznych](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
   
  Korzystając z algorytmu symetrycznego, takich jak AES do szyfrowania danych XML, należy użyć tego samego klucza do szyfrowania i odszyfrowywania danych XML.  Przykład w tej procedurze założono, że zaszyfrowane XML została zaszyfrowana przy użyciu tego samego klucza, a szyfrowanie i odszyfrowywanie strony wyrażanie zgody na algorytm i klucz do użycia.  W tym przykładzie nie przechowuje ani szyfrowania klucza AES, w ramach zaszyfrowanego pliku XML.  
   
@@ -33,7 +33,7 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, a
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>Aby odszyfrować element XML przy użyciu klucza symetrycznego  
   
-1.  Zaszyfrować XML element przy użyciu wcześniej wygenerowany klucz przy użyciu metod opisanych w [porady: szyfrowanie elementów XML przy użyciu kluczy symetrycznych](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+1.  Zaszyfrować XML element przy użyciu wcześniej wygenerowany klucz przy użyciu metod opisanych w [jak: Szyfrowanie elementów XML przy użyciu kluczy symetrycznych](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
   
 2.  Znajdź <`EncryptedData`> elementu (określoną przez standard szyfrowanie XML) w <xref:System.Xml.XmlDocument> obiekt, który zawiera zaszyfrowane XML i Utwórz nowy <xref:System.Xml.XmlElement> obiekt reprezentujący ten element.  
   
@@ -83,5 +83,5 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, a
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Instrukcje: szyfrowanie elementów XML przy użyciu kluczy symetrycznych](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Instrukcje: Szyfrowanie elementów XML przy użyciu kluczy symetrycznych](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)

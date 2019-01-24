@@ -1,18 +1,18 @@
 ---
-title: 'Porady: tworzenie prostego formantu powiązanego na formularzu systemu Windows'
+title: 'Instrukcje: Tworzenie prostego formantu powiązanego na formularzu Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643575"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Porady: tworzenie prostego formantu powiązanego na formularzu systemu Windows
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Instrukcje: Tworzenie prostego formantu powiązanego na formularzu Windows
 Za pomocą *proste powiązanie*, można wyświetlić elementu danych jednego, takiego jak wartość kolumny z tabeli zestawu danych w formancie. Użytkownik może prosty wiązania dowolnej właściwości kontrolki z wartością danych.  
   
 > [!NOTE]
@@ -45,7 +45,7 @@ Za pomocą *proste powiązanie*, można wyświetlić elementu danych jednego, ta
     > [!NOTE]
     >  Ponieważ formanty powiązane z prostego pokazać tylko danych jednego elementu, to bardzo typowy do uwzględnienia nawigacji logiki w formularzu Windows za pomocą formantów powiązanych z prostego.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.Binding>  
- [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Wiązanie danych i formularzy Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.Binding>
+- [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Wiązanie danych i formularzy Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

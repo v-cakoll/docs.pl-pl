@@ -2,12 +2,12 @@
 title: Działanie
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 00115d51cff40be726ccf94c3cac09242c0bdab8
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505591"
 ---
 # <a name="activity"></a>Działanie
 W tym temacie opisano ślady działania w modelu śledzenia usług Windows Communication Foundation (WCF). Działania to przetwarzania jednostek, które pomagają użytkownikowi zawęzić zakres awarii. Błędy w ramach tego samego działania są bezpośrednio powiązane. Na przykład kończy się niepowodzeniem, ponieważ odszyfrowywania wiadomości nie powiodło się. Śledzenie operacji i błędu odszyfrowywania wiadomości pojawiają się w tym samym działaniu, przedstawiający bezpośrednia korelacja między błąd odszyfrowywania i Błąd żądania.  
@@ -64,15 +64,15 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="activity-lifetime"></a>Okres istnienia działania  
  W sposób najbardziej rygorystyczne dowód działania uruchamiania po raz pierwszy identyfikator działania jest używana w emitowany śledzenia i kończy ostatniego, jest ono używane w emitowany śledzenia. Zestaw wstępnie zdefiniowanych typów śledzenia są dostarczane przez <xref:System.Diagnostics>, w tym uruchamianie i zatrzymywanie, aby wyraźnie oznaczyć granice okres istnienia działania.  
   
--   Start: Wskazuje początek działania. Śledzenie "Start" zawiera rejestr od nowego punktu kontrolnego przetwarzania. Zawiera nowy identyfikator działania śledzenia danego źródła danego procesu, z wyjątkiem sytuacji, gdy identyfikator działania są propagowane w obrębie punktów końcowych, w którym to przypadku widzimy za punkt końcowy jeden "Start". Uruchamianie nowego działania przykłady tworzenia nowego wątku przetwarzania lub wprowadzania nowej metody publiczne.  
+-   Uruchamianie: Wskazuje początek działania. Śledzenie "Start" zawiera rejestr od nowego punktu kontrolnego przetwarzania. Zawiera nowy identyfikator działania śledzenia danego źródła danego procesu, z wyjątkiem sytuacji, gdy identyfikator działania są propagowane w obrębie punktów końcowych, w którym to przypadku widzimy za punkt końcowy jeden "Start". Uruchamianie nowego działania przykłady tworzenia nowego wątku przetwarzania lub wprowadzania nowej metody publiczne.  
   
--   Stop: Wskazuje koniec działania. Śledzenie "Zatrzymaj" zawiera rejestr zakończenia istniejący punkt kontrolny przetwarzania. Zawiera on istniejący identyfikator działania śledzenia danego źródła danego procesu, z wyjątkiem sytuacji, gdy identyfikator działania są propagowane w obrębie punktów końcowych, w którym to przypadku widzimy jeden "Stop" na punkt końcowy.  Zatrzymywanie działania przykładami zakończenie wątku przetwarzania lub Kończenie wykonywania metody, którego początek została oznaczona za pomocą śledzenia "Start".  
+-   Zatrzymywanie: Oznacza koniec działania. Śledzenie "Zatrzymaj" zawiera rejestr zakończenia istniejący punkt kontrolny przetwarzania. Zawiera on istniejący identyfikator działania śledzenia danego źródła danego procesu, z wyjątkiem sytuacji, gdy identyfikator działania są propagowane w obrębie punktów końcowych, w którym to przypadku widzimy jeden "Stop" na punkt końcowy.  Zatrzymywanie działania przykładami zakończenie wątku przetwarzania lub Kończenie wykonywania metody, którego początek została oznaczona za pomocą śledzenia "Start".  
   
 -   Wstrzymywanie: Wskazuje zawieszenia przetwarzania działania. Śledzenie "Wstrzymaj" zawiera istniejący identyfikator działania przetwarzania, którego oczekuje się, aby wznowić w późniejszym czasie. Ślady są emitowane o tym identyfikatorze między zdarzeniami wstrzymywanie i wznawianie z bieżącego źródła śledzenia. Przykłady obejmują wstrzymywanie działania, gdy wywołanie do funkcji zewnętrznej biblioteki lub Oczekiwanie na zasób, taki jak port zakończenia operacji We/Wy.  
   
--   Wznów: Wskazuje wznowienie przetwarzania działania. Śledzenie "Resume" zawiera istniejący identyfikator działania, w których ostatni ślad emitowany z bieżącego źródła śledzenia został śledzenia "Wstrzymaj". Do przykładów należą, zwracając po wywołaniu do funkcji zewnętrznej biblioteki lub gdy sygnalizowane, aby wznowić przetwarzanie przez zasób, taki jak port zakończenia operacji We/Wy.  
+-   Wznów: Wskazuje na wznowienie przetwarzania działania. Śledzenie "Resume" zawiera istniejący identyfikator działania, w których ostatni ślad emitowany z bieżącego źródła śledzenia został śledzenia "Wstrzymaj". Do przykładów należą, zwracając po wywołaniu do funkcji zewnętrznej biblioteki lub gdy sygnalizowane, aby wznowić przetwarzanie przez zasób, taki jak port zakończenia operacji We/Wy.  
   
--   Transfer: Ponieważ niektóre działania są spowodowane przez inne osoby lub odnoszą się do innych osób, działania mogą dotyczyć innych działań za pośrednictwem ślady "Przekazywać". Przeniesienie rejestruje kierowanych relacji jednego działania do innego  
+-   Transfer: Ponieważ niektóre działania są spowodowane przez inne osoby lub odnoszą się do innych osób, działania mogą dotyczyć innych działań za pośrednictwem "Przekazywać" ślady. Przeniesienie rejestruje kierowanych relacji jednego działania do innego  
   
  Uruchamiania i zatrzymania śledzenia nie są krytyczne dla korelacji. Jednak może pomóc w zwiększaniu wydajności, profilowanie i walidacji zakres działania.  
   
@@ -97,9 +97,9 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Działania reprezentują działań, niekoniecznie obiektów. Działanie powinno być interpretowane jako "to się dzieje po. . . (emisji śledzenia istotnych wystąpił)."  
   
-## <a name="see-also"></a>Zobacz też  
- [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Emitowanie danych śledzenia elementu User-Code](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)
+## <a name="see-also"></a>Zobacz także
+- [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Emitowanie danych śledzenia elementu User-Code](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: włączenie operacji przeciągania i upuszczania za pomocą kontrolki RichTextBox formularzy systemu Windows'
+title: 'Instrukcje: Włącz operacje przeciągania i upuszczania za pomocą formantu RichTextBox formularzy Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: 3adafd9b821dd9366a3ad5080154ab7eb5a2d2f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccf98ee1afe82b2e76679406a08e98e6f4e6fb15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637469"
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Porady: włączenie operacji przeciągania i upuszczania za pomocą kontrolki RichTextBox formularzy systemu Windows
-Operacje przeciągania i upuszczania w formularzach systemu Windows <xref:System.Windows.Forms.RichTextBox> formantu są realizowane przez Obsługa <xref:System.Windows.Forms.RichTextBox.DragEnter> i <xref:System.Windows.Forms.RichTextBox.DragDrop> zdarzenia. W związku z tym są bardzo proste operacje przeciągania i upuszczania <xref:System.Windows.Forms.RichTextBox> formantu.  
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Instrukcje: Włącz operacje przeciągania i upuszczania za pomocą formantu RichTextBox formularzy Windows
+Operacje przeciągania i upuszczania za pomocą interfejsu Windows Forms <xref:System.Windows.Forms.RichTextBox> kontrolki są wykonywane przez obsługi <xref:System.Windows.Forms.RichTextBox.DragEnter> i <xref:System.Windows.Forms.RichTextBox.DragDrop> zdarzenia. W związku z tym, przeciągnij i upuść operacje są bardzo proste dzięki <xref:System.Windows.Forms.RichTextBox> kontroli.  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>Aby włączyć operacji przeciągania w formancie RichTextBox  
   
-1.  Ustaw <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> właściwość <xref:System.Windows.Forms.RichTextBox> formant `true`.  
+1.  Ustaw <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> właściwość <xref:System.Windows.Forms.RichTextBox> kontrolę `true`.  
   
-2.  Pisanie kodu w obsłudze zdarzeń <xref:System.Windows.Forms.RichTextBox.DragEnter> zdarzeń. Użyj `if` instrukcję w celu zapewnienia, że dane przeciągane jest dopuszczalne typu (w tym przypadku tekst). <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> Właściwość można ustawić wartości elementu <xref:System.Windows.Forms.DragDropEffects> wyliczenia.  
+2.  Pisz kod w obsłudze zdarzeń <xref:System.Windows.Forms.RichTextBox.DragEnter> zdarzeń. Użyj `if` instrukcję, aby upewnij się, że dane przeciąganie typu dopuszczalnych (w tym przypadku tekstu). <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> Właściwość można ustawić na dowolną wartość <xref:System.Windows.Forms.DragDropEffects> wyliczenia.  
   
     ```vb  
     Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
@@ -62,7 +62,7 @@ Operacje przeciągania i upuszczania w formularzach systemu Windows <xref:System
        }  
     ```  
   
-     (Visual C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieścić następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Visual C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -76,9 +76,9 @@ Operacje przeciągania i upuszczania w formularzach systemu Windows <xref:System
        (this, &Form1::richTextBox1_DragEnter);  
     ```  
   
-3.  Napisać kod obsługujący <xref:System.Windows.Forms.RichTextBox.DragDrop> zdarzeń. Użyj <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> metody do pobierania danych przeciągania.  
+3.  Napisz kod obsługujący <xref:System.Windows.Forms.RichTextBox.DragDrop> zdarzeń. Użyj <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> metody do pobierania danych przeciągania.  
   
-     W przykładzie poniżej kod ustawia <xref:System.Windows.Forms.RichTextBox.Text%2A> właściwość <xref:System.Windows.Forms.RichTextBox> kontrolować równa dane przeciągane. Jeśli istnieje już tekstu w <xref:System.Windows.Forms.RichTextBox> punkt wstawiania jest wstawiany formant, przeciąganego tekstu.  
+     W przykładzie poniżej kod ustawia <xref:System.Windows.Forms.RichTextBox.Text%2A> właściwość <xref:System.Windows.Forms.RichTextBox> kontrolować równa danych przeciągania. Jeśli istnieje już tekstu w <xref:System.Windows.Forms.RichTextBox> wstawieniu kontrolki, przeciąganego tekstowego w punkcie wstawiania.  
   
     ```vb  
     Private Sub RichTextBox1_DragDrop(ByVal sender As Object, _   
@@ -138,7 +138,7 @@ Operacje przeciągania i upuszczania w formularzach systemu Windows <xref:System
        }  
     ```  
   
-     (Visual C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieścić następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+     (Visual C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
@@ -154,18 +154,18 @@ Operacje przeciągania i upuszczania w formularzach systemu Windows <xref:System
   
 ### <a name="to-test-the-drag-and-drop-functionality-in-your-application"></a>Aby przetestować funkcje przeciągania i upuszczania w aplikacji  
   
-1.  Zapisz i skompilować aplikację. Gdy jest uruchomiona, uruchom program WordPad.  
+1.  Zapisz i skompiluj aplikację. Gdy jest uruchomiona, uruchom program WordPad.  
   
-     Program WordPad jest zainstalowany w systemie Windows, która zezwala na wykonywanie operacji przeciągania i upuszczania edytora tekstu. Nie jest dostępny, klikając **Start** przycisku, wybierając **Uruchom**, wpisz `WordPad` w polu tekstowym **Uruchom** — okno dialogowe, a następnie klikając polecenie  **OK**.  
+     Program WordPad, jest Edytor tekstu, zainstalowane przez Windows, która umożliwia wykonywanie operacji przeciągania i upuszczania. Jest dostępny, klikając **Start** przycisku, wybierając **Uruchom**, wpisz `WordPad` w polu tekstowym **Uruchom** okno dialogowe, a następnie klikając polecenie  **OK**.  
   
-2.  Po otwarciu WordPad, wpisz ciąg tekstu w nim. Za pomocą myszy, zaznacz tekst, a następnie przeciągnij zaznaczony tekst do <xref:System.Windows.Forms.RichTextBox> kontroli w aplikacji systemu Windows.  
+2.  Po otwarciu programu WordPad, wpisz ciąg tekstowy w nim. Za pomocą myszy, zaznacz tekst, a następnie przeciągnij zaznaczony tekst do <xref:System.Windows.Forms.RichTextBox> kontrolki w aplikacji Windows.  
   
-     Zwróć uwagę, że po wskazaniu myszy na <xref:System.Windows.Forms.RichTextBox> formantu (i w związku z tym, zgłoś <xref:System.Windows.Forms.RichTextBox.DragEnter> zdarzeń), zmiany wskaźnika myszy, a mogą porzucić zaznaczonego tekstu w <xref:System.Windows.Forms.RichTextBox> formantu.  
+     Należy zauważyć, że po wskazaniu myszą w <xref:System.Windows.Forms.RichTextBox> kontroli (i w związku z tym, wywoływanie <xref:System.Windows.Forms.RichTextBox.DragEnter> zdarzeń), wskaźnik myszy zmienia i mogą porzucić zaznaczonego tekstu do <xref:System.Windows.Forms.RichTextBox> kontroli.  
   
-     Po zwolnieniu przycisku myszy zaznaczony tekst zostanie porzucony (oznacza to, <xref:System.Windows.Forms.RichTextBox.DragDrop> zdarzenia) i jest wstawiana <xref:System.Windows.Forms.RichTextBox> formantu.  
+     Po zwolnieniu przycisku myszy zaznaczony tekst jest porzucany (czyli <xref:System.Windows.Forms.RichTextBox.DragDrop> zdarzenie jest zgłaszane w) jest umieszczany w ramach <xref:System.Windows.Forms.RichTextBox> kontroli.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.RichTextBox>  
- [Instrukcje: wykonywanie operacji przeciągania i upuszczania między aplikacjami](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
- [RichTextBox, kontrolka](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.RichTextBox>
+- [Instrukcje: Wykonywanie operacji przeciągania i upuszczania między aplikacjami](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [RichTextBox, kontrolka](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
+- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

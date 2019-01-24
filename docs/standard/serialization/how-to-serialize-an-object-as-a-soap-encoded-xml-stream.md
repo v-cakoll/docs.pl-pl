@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP'
+title: 'Instrukcje: Serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - XML serialization, SOAP
 - serialization, SOAP
 ms.assetid: af406e0a-fa3a-46dd-a7ba-c80731eba3a0
-ms.openlocfilehash: cdfa2c8c7a27806873217495ac09f7f20e82b6bc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: dc5c4a68c1fba303937ae126cd5b5d4f7f8107ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631389"
 ---
-# <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>Instrukcje: serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP
+# <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>Instrukcje: Serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP
   
  Ponieważ komunikatu protokołu SOAP jest skompilowane za pomocą języka XML, <xref:System.Xml.Serialization.XmlSerializer> klasy może służyć do serializacji klas i generowania zakodowany komunikaty protokołu SOAP. Wynikowy kod XML jest zgodny z [sekcji 5 dokumentu World Wide Web Consortium "Simple Object Access Protocol (SOAP) 1.1"](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512). Podczas tworzenia usługi XML sieci Web, która komunikuje się za pośrednictwem protokołu SOAP wiadomości stosując zestaw specjalnych protokołu SOAP atrybutów do klasy i składowych klas można dostosować strumień XML. Aby uzyskać listę atrybutów, zobacz [atrybuty czy kontroli kodowany protokołu SOAP serializacji](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
   
@@ -72,9 +72,9 @@ XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [Atrybuty kontrolujące zakodowaną serializację SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
-- [Serializacja XML z usługami internetowymi XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
-- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [Instrukcje: Przesłanianie zakodowanej serializacji XML protokołu SOAP](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
+- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Atrybuty kontrolujące zakodowaną serializację SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
+- [Serializacja XML z usługami internetowymi XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
+- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Instrukcje: Deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Instrukcje: Zastąp zakodowanego protokołu SOAP serializacji XML](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)

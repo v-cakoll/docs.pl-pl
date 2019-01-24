@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58e7b3e76d90e9e43f3f5259c52b52cd9f8e1f6e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d5ad57c3a5523494ce0384e665764bc02f679e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547426"
 ---
-# <a name="icorprofilerinfosetenterleavefunctionhooks-method"></a><span data-ttu-id="0d593-102">ICorProfilerInfo::SetEnterLeaveFunctionHooks — Metoda</span><span class="sxs-lookup"><span data-stu-id="0d593-102">ICorProfilerInfo::SetEnterLeaveFunctionHooks Method</span></span>
-<span data-ttu-id="0d593-103">Określa zaimplementowana profilera funkcji do wywołania "Wprowadź", "Pozostaw" i "tailcall" punkty zaczepienia w funkcji zarządzanych.</span><span class="sxs-lookup"><span data-stu-id="0d593-103">Specifies profiler-implemented functions to be called on "enter", "leave", and "tailcall" hooks of managed functions.</span></span>  
+# <a name="icorprofilerinfosetenterleavefunctionhooks-method"></a><span data-ttu-id="8e790-102">ICorProfilerInfo::SetEnterLeaveFunctionHooks — Metoda</span><span class="sxs-lookup"><span data-stu-id="8e790-102">ICorProfilerInfo::SetEnterLeaveFunctionHooks Method</span></span>
+<span data-ttu-id="8e790-103">Określa funkcje implementowane przez profiler ma być wywołane na "enter", "Opuść" i "rekurencja ogonowa" hooks zarządzanej funkcji.</span><span class="sxs-lookup"><span data-stu-id="8e790-103">Specifies profiler-implemented functions to be called on "enter", "leave", and "tailcall" hooks of managed functions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0d593-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0d593-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e790-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8e790-104">Syntax</span></span>  
   
 ```  
 HRESULT SetEnterLeaveFunctionHooks(  
@@ -36,31 +36,31 @@ HRESULT SetEnterLeaveFunctionHooks(
     [in] FunctionTailcall *pFuncTailcall);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0d593-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0d593-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8e790-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="8e790-105">Parameters</span></span>  
  `pFuncEnter`  
- <span data-ttu-id="0d593-106">[in] Wskaźnik do wdrożenia mają być używane jako [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="0d593-106">[in] A pointer to the implementation to be used as the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) callback.</span></span>  
+ <span data-ttu-id="8e790-106">[in] Wskaźnik do implementacji, które ma być używany jako [functionenter —](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="8e790-106">[in] A pointer to the implementation to be used as the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) callback.</span></span>  
   
  `pFuncLeave`  
- <span data-ttu-id="0d593-107">[in] Wskaźnik do wdrożenia mają być używane jako [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="0d593-107">[in] A pointer to the implementation to be used as the [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback.</span></span>  
+ <span data-ttu-id="8e790-107">[in] Wskaźnik do implementacji, które ma być używany jako [functionleave —](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="8e790-107">[in] A pointer to the implementation to be used as the [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback.</span></span>  
   
  `pFuncTailcall`  
- <span data-ttu-id="0d593-108">[in] Wskaźnik do wdrożenia mają być używane jako [FunctionTailcall](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md) wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="0d593-108">[in] A pointer to the implementation to be used as the [FunctionTailcall](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md) callback.</span></span>  
+ <span data-ttu-id="8e790-108">[in] Wskaźnik do implementacji, które ma być używany jako [functiontailcall —](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md) wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="8e790-108">[in] A pointer to the implementation to be used as the [FunctionTailcall](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md) callback.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0d593-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0d593-109">Remarks</span></span>  
- <span data-ttu-id="0d593-110">W programie .NET Framework w wersji 1.0 każdy wskaźnik funkcji może być null powoduje wyłączenie odpowiedniej wywołanie zwrotne.</span><span class="sxs-lookup"><span data-stu-id="0d593-110">In the .NET Framework version 1.0, each function pointer can be null to disable that corresponding callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8e790-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8e790-109">Remarks</span></span>  
+ <span data-ttu-id="8e790-110">W .NET Framework w wersji 1.0 każdy wskaźnik funkcji może być null powoduje wyłączenie odpowiedniego wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="8e790-110">In the .NET Framework version 1.0, each function pointer can be null to disable that corresponding callback.</span></span>  
   
- <span data-ttu-id="0d593-111">Jednocześnie może być aktywny tylko jeden zestaw wywołań zwrotnych.</span><span class="sxs-lookup"><span data-stu-id="0d593-111">Only one set of callbacks can be active at a time.</span></span> <span data-ttu-id="0d593-112">W związku z tym jeśli profiler wywołuje zarówno `SetEnterLeaveFunctionHooks` i [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), następnie `SetEnterLeaveFunctionHooks2` pierwszeństwo.</span><span class="sxs-lookup"><span data-stu-id="0d593-112">Thus, if a profiler calls both `SetEnterLeaveFunctionHooks` and [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), then `SetEnterLeaveFunctionHooks2` takes precedence.</span></span>  
+ <span data-ttu-id="8e790-111">Tylko jeden zestaw wywołań zwrotnych, może być aktywne w danym momencie.</span><span class="sxs-lookup"><span data-stu-id="8e790-111">Only one set of callbacks can be active at a time.</span></span> <span data-ttu-id="8e790-112">W związku z tym jeśli program profilujący wywołuje zarówno `SetEnterLeaveFunctionHooks` i [icorprofilerinfo2::setenterleavefunctionhooks2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), następnie `SetEnterLeaveFunctionHooks2` ma pierwszeństwo.</span><span class="sxs-lookup"><span data-stu-id="8e790-112">Thus, if a profiler calls both `SetEnterLeaveFunctionHooks` and [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), then `SetEnterLeaveFunctionHooks2` takes precedence.</span></span>  
   
- <span data-ttu-id="0d593-113">`SetEnterLeaveFunctionHooks` Metodę można wywołać tylko z profilera [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="0d593-113">The `SetEnterLeaveFunctionHooks` method can be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span></span>  
+ <span data-ttu-id="8e790-113">`SetEnterLeaveFunctionHooks` Metoda może być wywołana tylko z poziomu programu profilującego [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="8e790-113">The `SetEnterLeaveFunctionHooks` method can be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0d593-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0d593-114">Requirements</span></span>  
- <span data-ttu-id="0d593-115">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0d593-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8e790-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8e790-114">Requirements</span></span>  
+ <span data-ttu-id="8e790-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8e790-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0d593-116">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0d593-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8e790-116">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8e790-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0d593-117">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0d593-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8e790-117">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8e790-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0d593-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d593-118">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="8e790-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e790-118">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0d593-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0d593-119">See Also</span></span>  
- [<span data-ttu-id="0d593-120">ICorProfilerInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="0d593-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8e790-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8e790-119">See also</span></span>
+- [<span data-ttu-id="8e790-120">ICorProfilerInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="8e790-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -17,31 +17,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81f96216c61b59c6554e2dcd64a79a25ed87bf95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d20aa04b292fd29b60d68b844ef410258d90d31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451860"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546585"
 ---
-# <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a><span data-ttu-id="ac02b-102">ICorProfilerCallback::ExceptionSearchFunctionLeave — Metoda</span><span class="sxs-lookup"><span data-stu-id="ac02b-102">ICorProfilerCallback::ExceptionSearchFunctionLeave Method</span></span>
-<span data-ttu-id="ac02b-103">Powiadamia profilera fazy wyszukiwania obsługi wyjątków zakończenie funkcję wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="ac02b-103">Notifies the profiler that the search phase of exception handling has finished searching a function.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a><span data-ttu-id="e168d-102">ICorProfilerCallback::ExceptionSearchFunctionLeave — Metoda</span><span class="sxs-lookup"><span data-stu-id="e168d-102">ICorProfilerCallback::ExceptionSearchFunctionLeave Method</span></span>
+<span data-ttu-id="e168d-103">Powiadamia program profilujący fazy wyszukiwania dla obsługi wyjątków zakończenie funkcji wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="e168d-103">Notifies the profiler that the search phase of exception handling has finished searching a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac02b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ac02b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e168d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e168d-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionSearchFunctionLeave();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="ac02b-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ac02b-105">Requirements</span></span>  
- <span data-ttu-id="ac02b-106">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac02b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e168d-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e168d-105">Requirements</span></span>  
+ <span data-ttu-id="e168d-106">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e168d-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac02b-107">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ac02b-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e168d-107">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e168d-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ac02b-108">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ac02b-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e168d-108">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e168d-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ac02b-109">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac02b-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e168d-109">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e168d-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac02b-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ac02b-110">See Also</span></span>  
- [<span data-ttu-id="ac02b-111">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="ac02b-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="ac02b-112">ExceptionSearchFunctionEnter, metoda</span><span class="sxs-lookup"><span data-stu-id="ac02b-112">ExceptionSearchFunctionEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)
+## <a name="see-also"></a><span data-ttu-id="e168d-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e168d-110">See also</span></span>
+- [<span data-ttu-id="e168d-111">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="e168d-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="e168d-112">ExceptionSearchFunctionEnter, metoda</span><span class="sxs-lookup"><span data-stu-id="e168d-112">ExceptionSearchFunctionEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)

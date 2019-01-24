@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b4731a9503ab29a7d90ddd28c7ac0a5a761c1e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5895dc3cb64b72380dead1e048c012b586c4f48e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550724"
 ---
-# <a name="inotifyconnection2registernotifysource-method"></a><span data-ttu-id="2dca6-102">INotifyConnection2::RegisterNotifySource — Metoda</span><span class="sxs-lookup"><span data-stu-id="2dca6-102">INotifyConnection2::RegisterNotifySource Method</span></span>
-<span data-ttu-id="2dca6-103">Instaluje źródło określonego powiadomień.</span><span class="sxs-lookup"><span data-stu-id="2dca6-103">Installs a specified notification source.</span></span>  
+# <a name="inotifyconnection2registernotifysource-method"></a><span data-ttu-id="b8fe5-102">INotifyConnection2::RegisterNotifySource — Metoda</span><span class="sxs-lookup"><span data-stu-id="b8fe5-102">INotifyConnection2::RegisterNotifySource Method</span></span>
+<span data-ttu-id="b8fe5-103">Instaluje źródła określonego powiadomień.</span><span class="sxs-lookup"><span data-stu-id="b8fe5-103">Installs a specified notification source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2dca6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2dca6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b8fe5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b8fe5-104">Syntax</span></span>  
   
 ```  
 HRESULT RegisterNotifySource  
@@ -37,21 +37,21 @@ HRESULT RegisterNotifySource
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2dca6-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2dca6-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b8fe5-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b8fe5-105">Parameters</span></span>  
  `in_pNotifySource`  
- <span data-ttu-id="2dca6-106">[in] Określa obiekt, który ma być używany jako źródło powiadomienia.</span><span class="sxs-lookup"><span data-stu-id="2dca6-106">[in] Specifies the object to be used as the notification source.</span></span>  
+ <span data-ttu-id="b8fe5-106">[in] Określa obiekt, który ma być używany jako źródło powiadomienia.</span><span class="sxs-lookup"><span data-stu-id="b8fe5-106">[in] Specifies the object to be used as the notification source.</span></span>  
   
  `out_ppNotifySink`  
- <span data-ttu-id="2dca6-107">[out] Odbiera obiektu, który ma być używany jako obiekt sink powiadomień.</span><span class="sxs-lookup"><span data-stu-id="2dca6-107">[out] Receives the object to be used as the notification sink.</span></span>  
+ <span data-ttu-id="b8fe5-107">[out] Otrzymuje obiekt, który ma być używany jako obiekt sink powiadomień.</span><span class="sxs-lookup"><span data-stu-id="b8fe5-107">[out] Receives the object to be used as the notification sink.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2dca6-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="2dca6-108">Return Value</span></span>  
- <span data-ttu-id="2dca6-109">Wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="2dca6-109">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b8fe5-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="b8fe5-108">Return Value</span></span>  
+ <span data-ttu-id="b8fe5-109">S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="b8fe5-109">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2dca6-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2dca6-110">Requirements</span></span>  
- <span data-ttu-id="2dca6-111">**Nagłówek:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="2dca6-111">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b8fe5-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b8fe5-110">Requirements</span></span>  
+ <span data-ttu-id="b8fe5-111">**Nagłówek:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="b8fe5-111">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2dca6-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="2dca6-112">See Also</span></span>  
- [<span data-ttu-id="2dca6-113">INotifyConnection2, interfejs</span><span class="sxs-lookup"><span data-stu-id="2dca6-113">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [<span data-ttu-id="2dca6-114">INotifySource2, interfejs</span><span class="sxs-lookup"><span data-stu-id="2dca6-114">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [<span data-ttu-id="2dca6-115">INotifySink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="2dca6-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [<span data-ttu-id="2dca6-116">UnregisterNotifySource, metoda</span><span class="sxs-lookup"><span data-stu-id="2dca6-116">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)
+## <a name="see-also"></a><span data-ttu-id="b8fe5-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b8fe5-112">See also</span></span>
+- [<span data-ttu-id="b8fe5-113">INotifyConnection2, interfejs</span><span class="sxs-lookup"><span data-stu-id="b8fe5-113">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="b8fe5-114">INotifySource2, interfejs</span><span class="sxs-lookup"><span data-stu-id="b8fe5-114">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="b8fe5-115">INotifySink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="b8fe5-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="b8fe5-116">UnregisterNotifySource, metoda</span><span class="sxs-lookup"><span data-stu-id="b8fe5-116">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)

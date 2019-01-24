@@ -2,12 +2,12 @@
 title: Hostowanie usług przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: d51157863984314583c5d225bc9d8d0b6cf74874
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c933fd2bd46588ccd5c6115fbc2efca72bfadca4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594515"
 ---
 # <a name="hosting-workflow-services"></a>Hostowanie usług przepływu pracy
 Usługi przepływu pracy musi być hostowany na jego odpowiadanie na wiadomości przychodzące. Usługi przepływu pracy korzystają z infrastruktury obsługi komunikatów usługi WCF i w związku z tym znajdują się w podobny sposób. Podobnie jak usługi WCF usług przepływu pracy mogą być hostowane w dowolnej aplikacji zarządzanych, w ramach usługi Internet Information Services (IIS) lub w obszarze Windows Process Activation usług (WAS). Ponadto usługi przepływu pracy mogą być hostowane w ramach systemu Windows Server AppFabric. Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric zobacz [dokumentacji systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193037), [funkcje hostingu programu AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494), i [pojęcia hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Aby uzyskać więcej informacji na temat różnych sposobów hosta usługi WCF usług zobacz [usług obsługującego](../../../../docs/framework/wcf/hosting-services.md).
@@ -53,7 +53,7 @@ Usługi przepływu pracy musi być hostowany na jego odpowiadanie na wiadomości
 ## <a name="deployment"></a>wdrażania
  Narzędzie Web Deployment został utworzony w celu ułatwienia zadania wdrażania. To narzędzie pozwala na migrowanie aplikacji między usługami IIS 6.0 i IIS 7.0, synchronizowanie farm serwerów i pakietów oraz archiwizowanie i wdrażanie aplikacji sieci Web. Aby uzyskać więcej informacji, zobacz [narzędzia wdrażania MS](https://go.microsoft.com/fwlink/?LinkId=178690).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Elementy wewnętrzne hosta usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)
 - [Konfigurowanie elementu WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/configuring-workflowservicehost.md)

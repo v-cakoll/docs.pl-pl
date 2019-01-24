@@ -1,20 +1,20 @@
 ---
-title: Metody System.Convert
+title: System.Convert Methods
 ms.date: 03/30/2017
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
-ms.openlocfilehash: a16839bf64d5786caa6feb557333fe93c66edc3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3b8c7105578c57547b79bc95b633bcc6449a0ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591724"
 ---
-# <a name="systemconvert-methods"></a>Metody System.Convert
+# <a name="systemconvert-methods"></a>System.Convert Methods
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje następujących <xref:System.Convert> metody.  
   
--   Wersje z <xref:System.IFormatProvider> parametru.  
+-   Wersje <xref:System.IFormatProvider> parametru.  
   
--   Metody, które wymagają znaków lub tablice typu byte:  
+-   Metody, które obejmują char tablic lub tablice typu byte:  
   
     -   <xref:System.Convert.FromBase64CharArray%2A>  
   
@@ -48,5 +48,5 @@ ms.locfileid: "33357377"
   
     -   <xref:System.Convert.ChangeType%2A>  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

@@ -1,13 +1,7 @@
 ---
-title: Programowanie asynchroniczne z async i await (C#)
+title: 'Programowanie asynchroniczne z async i await (C#)'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: d46e499abb14964407773eca176ba0de7b43ffe2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236339"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programowanie asynchroniczne z async i await (C#)
 Możesz uniknąć problemów z wydajnością i poprawić ogólny czas odpowiedzi aplikacji, stosując programowanie asynchroniczne. Jednak tradycyjne techniki pisania aplikacji asynchronicznych mogą być skomplikowane, przez co trudne do pisania, debugowania i konserwacji.  
@@ -237,7 +231,7 @@ Asynchroniczne API w programowaniu Windows Runtime mieć jedną z następującyc
   
 |Tytuł|Opis|Przykład|  
 |-----------|-----------------|------------|  
-|[Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|Przedstawia, w jaki sposób konwertować synchroniczne rozwiązanie WPF do asynchronicznego rozwiązania WPF. Ta aplikacja pobiera szereg witryn sieci Web.|[Próbka asynchroniczna: Uzyskiwanie dostępu do instruktażu sieci Web](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
+|[Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|Przedstawia, w jaki sposób konwertować synchroniczne rozwiązanie WPF do asynchronicznego rozwiązania WPF. Ta aplikacja pobiera szereg witryn sieci Web.|[Próbka asynchroniczna: Uzyskiwanie dostępu do instruktażu sieci Web](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
 |[Instrukcje: Rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Dodaje <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> do poprzedniego przewodnika. Korzystanie z `WhenAll` rozpoczyna wszystkie akcje pobierania w tym samym czasie.||  
 |[Instrukcje: Wiele żądań sieci Web równolegle za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Ilustruje, jak uruchomić kilka zadań w tym samym czasie.|[Próbka asynchroniczna: Wprowadzić wiele żądań sieci Web równolegle](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
 |[Asynchroniczne typy zwracane (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)|Ilustruje typy zwracane przez metody async i wyjaśnia, kiedy poszczególne typy są odpowiednie.||  
@@ -333,9 +327,9 @@ namespace AsyncFirstExample
 // Length of the downloaded string: 41564.  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [async](../../../../csharp/language-reference/keywords/async.md)  
-- [await](../../../../csharp/language-reference/keywords/await.md)  
-- [Programowanie asynchroniczne](../../../../csharp/async.md)  
-- [Async — omówienie](../../../../standard/async.md)  
+- [async](../../../../csharp/language-reference/keywords/async.md)
+- [await](../../../../csharp/language-reference/keywords/await.md)
+- [Programowanie asynchroniczne](../../../../csharp/async.md)
+- [Async — omówienie](../../../../standard/async.md)

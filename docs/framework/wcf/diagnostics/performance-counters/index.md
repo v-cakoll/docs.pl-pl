@@ -2,14 +2,8 @@
 title: Liczniki wydajności programu WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
-- performance counters [WCF]
+  - 'performance counters [WCF]'
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: d0ad7ee0bc3ea1d15197e6b8d9888d60b21a2f15
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846223"
 ---
 # <a name="wcf-performance-counters"></a>Liczniki wydajności programu WCF
 Windows Communication Foundation (WCF) zawiera duży zestaw liczników wydajności, aby ułatwić mierzyć wydajność aplikacji.  
@@ -27,11 +21,11 @@ Windows Communication Foundation (WCF) zawiera duży zestaw liczników wydajnoś
   
  `performanceCounters` Atrybut można ustawić tak, aby włączyć liczniki wydajności dla określonego typu. Prawidłowe wartości to:  
   
--   Wszystko: Wszystkie liczniki kategorii (ServiceModelService i ServiceModelEndpoint ServiceModelOperation) są włączone.  
+-   Wszystkie: Wszystkie liczniki kategorii (ServiceModelService i ServiceModelEndpoint ServiceModelOperation) są włączone.  
   
--   ServiceOnly: Tylko ServiceModelService kategorii liczników są włączone. Jest to wartość domyślna.  
+-   ServiceOnly: Tylko liczniki kategorii ServiceModelService są włączone. Jest to wartość domyślna.  
   
--   Wyłączony: ServiceModel *, liczniki wydajności są wyłączone.  
+-   Wyłączone: Liczniki wydajności modelu ServiceModel * są wyłączone.  
   
  Jeśli chcesz włączyć liczniki wydajności dla wszystkich aplikacji WCF, ustawienia konfiguracji można umieścić w pliku Machine.config.  Zobacz **zwiększenie rozmiaru pamięci dla liczników wydajności** sekcji poniżej, aby uzyskać więcej informacji na temat konfigurowania wystarczającą ilość pamięci dla liczników wydajności na komputerze.  
   
@@ -59,7 +53,7 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>Zwiększenie rozmiaru pamięci dla liczników wydajności  
  Usługi WCF używa oddzielnych pamięci współużytkowanej dla jego kategorii licznika wydajności.  
   
- Domyślnie oddzielne Pamięć współużytkowana jest równa kwartału ogólnych parametrów liczników pamięci. Domyślny ogólnych parametrów liczników pamięci to 524,288 bajtów. Trzy kategorie liczników wydajności programu WCF więc domyślny rozmiar około 128KB. W zależności od charakterystyki środowiska uruchomieniowego aplikacji WCF na komputerze, mogą się wyczerpać pamięci licznika wydajności. W takim przypadku WCF zapisuje błąd w dzienniku zdarzeń aplikacji. Zawartość błąd stwierdza, że licznika wydajności, który nie został załadowany, a wpis zawiera wyjątek "System.InvalidOperationException: za mało pamięci dla widoku pliku liczników niestandardowych." Jeśli śledzenie jest włączone na poziomie błędu, śledzona jest również tego błędu. Jeśli wyczerpaniu pamięci licznika wydajności w dalszym ciągu uruchamiać aplikacje programu WCF za pomocą liczników wydajności, włączone może spowodować obniżenie wydajności. Jeśli jesteś administratorem na komputerze, należy skonfigurować ją przydzielić wystarczającej ilości pamięci do obsługi maksymalną liczbę liczników wydajności, które może znajdować się w dowolnym momencie.  
+ Domyślnie oddzielne Pamięć współużytkowana jest równa kwartału ogólnych parametrów liczników pamięci. Domyślny ogólnych parametrów liczników pamięci to 524,288 bajtów. Trzy kategorie liczników wydajności programu WCF więc domyślny rozmiar około 128KB. W zależności od charakterystyki środowiska uruchomieniowego aplikacji WCF na komputerze, mogą się wyczerpać pamięci licznika wydajności. W takim przypadku WCF zapisuje błąd w dzienniku zdarzeń aplikacji. Zawartość błąd stwierdza, że licznika wydajności, który nie został załadowany, a wpis zawiera wyjątek "System.InvalidOperationException: Widok pliku liczników niestandardowych jest za mało pamięci." Jeśli śledzenie jest włączone na poziomie błędu, śledzona jest również tego błędu. Jeśli wyczerpaniu pamięci licznika wydajności w dalszym ciągu uruchamiać aplikacje programu WCF za pomocą liczników wydajności, włączone może spowodować obniżenie wydajności. Jeśli jesteś administratorem na komputerze, należy skonfigurować ją przydzielić wystarczającej ilości pamięci do obsługi maksymalną liczbę liczników wydajności, które może znajdować się w dowolnym momencie.  
   
  Można zmienić ilość pamięci licznika wydajności dla kategorii WCF w rejestrze. Aby to zrobić, należy dodać nową wartość DWORD o nazwie `FileMappingSize` do trzech następujących lokalizacji i ustaw ją na żądaną wartość w bajtach. Tak, aby te zmiany są wykonywane w życie, należy ponownie uruchomić maszynę.  
   
@@ -72,7 +66,7 @@ config.Save();
  Gdy dużą liczbę obiektów (na przykład ServiceHost) będą usuwane, ale oczekujące na zebranych elementów bezużytecznych `PrivateBytes` licznika wydajności będą rejestrować się wyjątkowo dużą liczbą. Aby rozwiązać ten problem, możesz dodać własne liczniki specyficzne dla aplikacji, lub użyj `performanceCounters` atrybutu, aby włączyć liczniki tylko poziomu usługi.  
   
 ## <a name="types-of-performance-counters"></a>Typy liczników wydajności  
- Liczniki wydajności są ograniczone do trzech różnych poziomach: usługi, punkt końcowy i operacji.  
+ Liczniki wydajności są ograniczone do trzech różnych poziomach: Usługa punktu końcowego i operacji.  
   
  WMI umożliwia pobieranie nazwy wystąpienia licznika wydajności. Na przykład  
   
@@ -138,5 +132,5 @@ ServiceName@ServiceBaseAddress
   
  Aby uzyskać więcej informacji na temat sposobu programowego dostępu do liczników, zobacz [Architektura programowania licznika wydajności](https://go.microsoft.com/fwlink/?LinkId=95179).  
   
-## <a name="see-also"></a>Zobacz też  
- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

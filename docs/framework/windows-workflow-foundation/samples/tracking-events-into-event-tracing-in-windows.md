@@ -2,12 +2,12 @@
 title: Śledzenie zdarzeń do zdarzenia śledzenia w systemie Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 70c75be09528b31572bdf0dc322af5bcd7e3ca5d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592864"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Śledzenie zdarzeń do zdarzenia śledzenia w systemie Windows
 W tym przykładzie pokazano, jak włączyć śledzenie usługi przepływu pracy Windows Workflow Foundation (WF) i emitować zdarzenia śledzenia w śledzenie zdarzeń dla Windows (ETW). Aby emitować śledzenia rekordów do ETW przepływu pracy, w przykładzie użyto uczestnika śledzenia zdarzeń systemu Windows (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
@@ -149,5 +149,5 @@ W tym przykładzie pokazano, jak włączyć śledzenie usługi przepływu pracy 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Zobacz także
+- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

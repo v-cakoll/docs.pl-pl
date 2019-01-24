@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 63e1c55aa3aad1923ac34070784e8b4de7251a7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592760"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programowanie asynchroniczne oparte na zadanie
 Biblioteka zadań równoległych (TPL) opiera się na koncepcji *zadań*, które reprezentuje operację asynchroniczną. Pod pewnymi względami zadanie jest podobne do wątku lub <xref:System.Threading.ThreadPool> pracy elementu, ale na wyższym poziomie abstrakcji. Termin *równoległość zadań* odwołuje się do co najmniej jeden niezależnych zadań działających równocześnie. Zadania zapewniają dwie podstawowe korzyści:  
@@ -42,7 +42,7 @@ Biblioteka zadań równoległych (TPL) opiera się na koncepcji *zadań*, które
 > [!NOTE]
 >  Liczba <xref:System.Threading.Tasks.Task> wystąpień, które są tworzone w tle przez <xref:System.Threading.Tasks.Parallel.Invoke%2A> nie jest zawsze równa liczbie dostarczanych delegatów. TPL może wykorzystywać różne optymalizacje, zwłaszcza z dużą liczbą obiektów delegowanych.  
   
- Aby uzyskać więcej informacji, zobacz [porady: użycie parallel_invoke podczas przeprowadzania do operacji równoległych](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).  
   
  Aby uzyskać większą kontrolę nad wykonywaniem zadań lub w celu zwrócenia wartości z zadania trzeba pracować z <xref:System.Threading.Tasks.Task> obiekty w bardziej jawny sposób.  
   
@@ -69,7 +69,7 @@ Biblioteka zadań równoległych (TPL) opiera się na koncepcji *zadań*, które
  [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
  [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]  
   
- Aby uzyskać więcej informacji, zobacz [porady: zwracanie wartości z zadania](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Zwracanie wartości z zadania](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
   
  Używając wyrażenia lambda do utworzenia delegata, masz dostęp do wszystkich zmiennych, które są widoczne w tym momencie w kodzie źródłowym. Jednak w niektórych przypadkach, zwłaszcza w pętlach, lambda nie przechwytuje zmiennej zgodnie z oczekiwaniami. Przechwytuje tylko wartość końcową, a nie wartość, która mutuje po każdej iteracji. Poniższy przykład ilustruje ten problem. Pętla przekazuje licznik do wyrażenia lambda, która tworzy wystąpienie `CustomData` obiektu i używa licznika pętli jako identyfikatora obiektu. Jak wynika z przykładu pokazują, każdy `CustomData` obiekt ma identyczny identyfikator.  
   
@@ -181,7 +181,7 @@ Biblioteka zadań równoległych (TPL) opiera się na koncepcji *zadań*, które
  Gdy czekasz na zadanie, poczekasz na wszystkie obiekty podrzędne danego zadania, które zostały utworzone przy użyciu <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> opcji. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> zwraca niezwłocznie, jeśli zadanie zostało już ukończone. Wszelkie wyjątki wywoływane przez zadanie zostaną wyrzucone przez <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> metody, nawet jeśli <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> metoda została wywołana po ukończeniu zadania.  
   
 ## <a name="composing-tasks"></a>Tworzenie zadań  
- <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> klasy zapewniają kilka metod, które mogą pomóc Ci tworzenie wielu zadań do realizacji typowych wzorców i lepszego wykorzystywania asynchronicznych funkcji języka, które są udostępniane przez C#, Visual Basic i F #. W tej sekcji opisano <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A>, i <xref:System.Threading.Tasks.Task.FromResult%2A> metody.  
+ <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> klasy zapewniają kilka metod, które mogą pomóc Ci tworzenie wielu zadań do realizacji typowych wzorców i lepszego wykorzystywania asynchronicznych funkcji języka, które są dostarczane przez C#, Visual Basic i F#. W tej sekcji opisano <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A>, i <xref:System.Threading.Tasks.Task.FromResult%2A> metody.  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
  <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> Metoda asynchronicznie czeka na wiele <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> obiektów, aby zakończyć. Zapewnia przeciążone wersje, które umożliwiają czekanie na niejednolite zestawy zadań. Na przykład, możesz poczekać, aż wielu <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiektów z jednego wywołania metody.  
@@ -201,7 +201,7 @@ Biblioteka zadań równoległych (TPL) opiera się na koncepcji *zadań*, które
  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> Metoda <xref:System.Threading.Tasks.Task> obiektu, który kończy się po określonym czasie. Możesz użyć tej metoda do tworzenia pętli, które od czasu do czasu pobierają dane, wprowadzają limity czasu, opóźniają obsługę danych wejściowych użytkownika przez wyznaczony czas i tak dalej.  
   
 ### <a name="tasktfromresult"></a>Task(T).FromResult  
- Za pomocą <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> metody, można utworzyć <xref:System.Threading.Tasks.Task%601> obiekt, który przechowuje wstępnie obliczony wynik. Ta metoda jest przydatna, gdy wykonujesz operację asynchroniczną, która zwraca <xref:System.Threading.Tasks.Task%601> obiektu, a wynik tego obiektu <xref:System.Threading.Tasks.Task%601> obiektu jest już obliczony. Aby uzyskać przykład, który używa <xref:System.Threading.Tasks.Task.FromResult%2A> do pobierania wyników asynchronicznych operacji pobrania, które są przechowywane w pamięci podręcznej, zobacz [jak: Create Pre-Computed Tasks](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).  
+ Za pomocą <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> metody, można utworzyć <xref:System.Threading.Tasks.Task%601> obiekt, który przechowuje wstępnie obliczony wynik. Ta metoda jest przydatna, gdy wykonujesz operację asynchroniczną, która zwraca <xref:System.Threading.Tasks.Task%601> obiektu, a wynik tego obiektu <xref:System.Threading.Tasks.Task%601> obiektu jest już obliczony. Aby uzyskać przykład, który używa <xref:System.Threading.Tasks.Task.FromResult%2A> do pobierania wyników asynchronicznych operacji pobrania, które są przechowywane w pamięci podręcznej, zobacz [jak: Tworzenie wstępnie obliczonych zadań](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).  
   
 ## <a name="handling-exceptions-in-tasks"></a>Obsługa wyjątków w zadaniach  
  Gdy zadanie wyrzuca jeden lub kilka wyjątków, wyjątki są opakowane w <xref:System.AggregateException> wyjątku. Ten wyjątek jest propagowany z powrotem do wątku, który łączy się z zadaniem, które jest zazwyczaj wątkiem, który oczekuje na zakończenie zadania lub wątkiem, który uzyskuje dostęp do <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości. To zachowanie służy do wymuszania zasady .NET Framework, zgodnie z którą wszystkie nieobsłużone wyjątki powinny domyślnie przerywać proces. Kod wywołujący może obsługiwać wyjątki za pomocą jednej z następujących czynności w `try` / `catch` bloku:  
@@ -223,7 +223,7 @@ Biblioteka zadań równoległych (TPL) opiera się na koncepcji *zadań*, które
   
  Możesz utworzyć token i wydawać żądanie anulowania w późniejszym czasie, przy użyciu <xref:System.Threading.CancellationTokenSource> klasy. Przekaż token do <xref:System.Threading.Tasks.Task> jako argument, a także odwołanie do tego samego tokenu w swoim delegacie użytkownika, który wykonuje pracę odpowiadania na żądanie anulowania.  
   
- Aby uzyskać więcej informacji, zobacz [anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md) i [porady: anulowanie zadania i jego elementy podrzędne](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+ Aby uzyskać więcej informacji, zobacz [anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md) i [jak: Anulowanie zadania i jego elementów podrzędnych](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
 ## <a name="the-taskfactory-class"></a>Klasa TaskFactory  
  <xref:System.Threading.Tasks.TaskFactory> Klasa zawiera metody statyczne, które hermetyzują niektóre typowe wzorce do tworzenia i uruchamiania zadań oraz zadań kontynuacji.  
@@ -258,16 +258,16 @@ Biblioteka zadań równoległych (TPL) opiera się na koncepcji *zadań*, które
 |[Dołączone i odłączone zadania podrzędne](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Opisano różnicę między zadaniami podrzędnymi dołączonymi i odłączonymi.|  
 |[Anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md)|W tym artykule opisano obsługę anulowania, która jest wbudowana w <xref:System.Threading.Tasks.Task> obiektu.|  
 |[Obsługa wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|Opisuje sposób obsługi wyjątków w wątkach współbieżnych.|  
-|[Instrukcje: wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Opisuje sposób używania <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|  
-|[Instrukcje: zwracanie wartości z zadania](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Zawiera opis sposobu zwracania wartości z zadań.|  
-|[Instrukcje: anulowanie zadania i jego elementów podrzędnych](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Opisuje, jak anulować zadania.|  
-|[Instrukcje: tworzenie wstępnie obliczonych zadań](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Opisuje sposób używania <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> metody do pobierania wyników asynchronicznych operacji pobrania, które są przechowywane w pamięci podręcznej.|  
-|[Instrukcje: przenoszenie drzewa binarnego z zadaniami równoległymi](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|Opisuje używanie zadań do przechodzenia w drzewie binarnym.|  
-|[Instrukcje: odpakowywanie zadania zagnieżdżonego](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Pokazuje sposób użycia <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> — metoda rozszerzenia.|  
+|[Instrukcje: Wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Opisuje sposób używania <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|  
+|[Instrukcje: Zwracanie wartości z zadania](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Zawiera opis sposobu zwracania wartości z zadań.|  
+|[Instrukcje: Anulowanie zadania i jego elementów podrzędnych](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Opisuje, jak anulować zadania.|  
+|[Instrukcje: Tworzenie wstępnie obliczonych zadań](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Opisuje sposób używania <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> metody do pobierania wyników asynchronicznych operacji pobrania, które są przechowywane w pamięci podręcznej.|  
+|[Instrukcje: Przenoszenie drzewa binarnego z zadaniami równoległymi](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|Opisuje używanie zadań do przechodzenia w drzewie binarnym.|  
+|[Instrukcje: Dekodowanie zadania zagnieżdżonego](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Pokazuje sposób użycia <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> — metoda rozszerzenia.|  
 |[Równoległość danych](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Opisuje sposób używania <xref:System.Threading.Tasks.Parallel.For%2A> i <xref:System.Threading.Tasks.Parallel.ForEach%2A> do tworzenia pętli równoległych nad danymi.|  
 |[Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)|Węzeł najwyższego poziomu dla .NET Framework programowania równoległego.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  
+- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)
 - [Przykłady dotyczące programowania równoległego za pomocą programu .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

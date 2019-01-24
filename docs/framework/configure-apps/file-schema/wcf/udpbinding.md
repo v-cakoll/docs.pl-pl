@@ -2,19 +2,19 @@
 title: '&lt;udpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 4b5fca2fbcece8c5a1641d4cea7700f12de11782
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c8e77eae52352a4ed5167a43386ec933afffa1fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592422"
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 Element konfiguracji umożliwiają skonfigurowanie <xref:System.ServiceModel.UdpBinding> powiązania.  
   
  \<system.ServiceModel>  
 \<powiązania >  
-\<udpBinding >  
+\<udpBinding>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -62,7 +62,7 @@ Element konfiguracji umożliwiają skonfigurowanie <xref:System.ServiceModel.Udp
 |`openTimeout`|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na zakończenie operacji Otwórz. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
 |`receiveTimeout`|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji odbierania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:10:00.|  
 |`sendTimeout`|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji wysyłania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
-|`textEncoding`|Określa kodowanie do użycia dla emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości są następujące:<br /><br /> -BigEndianUnicode: Unicode BigEndian kodowania.<br />-Unicode: 16-bitowego kodowania.<br />-UTF8: 8-bitowego kodowania<br /><br /> Wartość domyślna to UTF8. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
+|`textEncoding`|Określa kodowanie do użycia dla emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości są następujące:<br /><br /> -BigEndianUnicode: Unicode BigEndian kodowania.<br />-Unicode: 16-bitowego kodowania.<br />-   UTF8: 8-bitowego kodowania<br /><br /> Wartość domyślna to UTF8. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
 |`timeToLive`|Wartość przedziału czasu, który określa czas wygaśnięcia dla wiązania.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -103,12 +103,12 @@ Element konfiguracji umożliwiają skonfigurowanie <xref:System.ServiceModel.Udp
 </udpBinding>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

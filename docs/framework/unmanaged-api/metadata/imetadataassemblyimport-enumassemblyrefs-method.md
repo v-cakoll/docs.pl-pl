@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a56d874e5e7ef491c24b0aef2ace700087de677
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d10fb391953e924feb553ae4516fb7674345ed3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592019"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs — Metoda
 Wylicza `mdAssemblyRef` wystąpień, które są zdefiniowane w manifeście zestawu.  
@@ -40,32 +40,32 @@ HRESULT EnumAssemblyRefs (
   
 #### <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, out] Wskaźnik do modułu wyliczającego. Musi to być wartość null wartość przy `EnumAssemblyRefs` metoda jest wywoływana po raz pierwszy.  
+ [out w] Wskaźnik do modułu wyliczającego. Musi to być wartość null wartość przy `EnumAssemblyRefs` metoda jest wywoływana po raz pierwszy.  
   
  `rAssemblyRefs`  
- [out] Wyliczanie `mdAssemblyRef` tokenów metadanych.  
+ [out] Wyliczanie `mdAssemblyRef` tokeny metadanych.  
   
  `cMax`  
  [in] Maksymalna liczba tokenów, które można umieścić w `rAssemblyRefs` tablicy.  
   
  `pcTokens`  
- [out] Liczba tokenów faktycznie umieszczonych w `rAssemblyRefs`.  
+ [out] Liczba tokenów faktycznie umieszczone w `rAssemblyRefs`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs` zwrócona pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim przypadku `pcTokens` jest ustawiony na zero.|  
+|`S_OK`|`EnumAssemblyRefs` pomyślnie zwrócił.|  
+|`S_FALSE`|Nie ma żadnych tokeny do wyliczenia. W tym przypadku `pcTokens` jest równa zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

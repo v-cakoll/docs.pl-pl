@@ -1,5 +1,5 @@
 ---
-title: 'Porady: definiowanie metody ogólnej przy użyciu emisji odbicia'
+title: 'Instrukcje: Definiowanie metody ogólnej przy użyciu odbicia emisji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,165 +11,165 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49531945b073a909ba49b2b0865b96f9658fba50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c0b6ee6fc789b2586d76b5ec8f10815e543e1d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596864"
 ---
-# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Porady: definiowanie metody ogólnej przy użyciu emisji odbicia
-Pierwsza procedura pokazuje, jak utworzyć prostą metodę ogólnego z dwoma parametrami typu i sposób stosowania ograniczenia klasy, interfejsu, ograniczenia i ograniczeń specjalnych parametrów typu.  
+# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Instrukcje: Definiowanie metody ogólnej przy użyciu odbicia emisji
+Pierwsza procedura pokazuje, jak utworzyć proste metody ogólnej z dwoma parametrami typu, a także jak zastosować ograniczenia klasy, interfejsu, ograniczenia i ograniczenia specjalne do parametrów typu.  
   
- Druga procedura pokazuje, jak Emituj treść metody i jak używać parametrów typu metody ogólnej do tworzenia wystąpień typów ogólnych i ich metod wywołania.  
+ Druga procedura pokazuje, jak do wysyłania treści metody oraz jak używać parametrów typu ogólnego metody do tworzenia wystąpień typów ogólnych i wywołania ich metod.  
   
- Trzeci procedury przedstawiono sposób wywołania metody ogólnej.  
+ Trzeci procedura przedstawia sposób wywołania metody rodzajowej.  
   
 > [!IMPORTANT]
->  Metoda nie jest rodzajowa tak, ponieważ należy do typu ogólnego i używa parametrów typu tego typu. Metody jest rodzajowy, tylko wtedy, gdy ma własną listy parametrów typu. Metoda ogólna może występować w nierodzajowe typu, jak w poniższym przykładzie. Na przykład nierodzajowe metody dla typu ogólnego. zobacz [porady: Definiowanie typu ogólnego z emisja odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+>  Metoda nie jest ogólna tylko w przypadku, ponieważ należy do typu ogólnego i używa parametrów typu tego typu. Metoda jest ogólna tylko wtedy, gdy ma ona własną lista parametrów typu. Metody ogólnej może znajdować się w danym typie nierodzajowych, jak w poniższym przykładzie. Na przykład nierodzajowymi metoda w typie rodzajowym zobacz [jak: Definiowanie typu ogólnego przy użyciu odbicia emitować](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
-### <a name="to-define-a-generic-method"></a>Aby zdefiniować Metoda ogólna  
+### <a name="to-define-a-generic-method"></a>Aby zdefiniować metody ogólnej  
   
-1.  Przed rozpoczęciem, warto przyjrzeć się wygląd Metoda ogólna napisane przy użyciu języka wysokiego poziomu. Poniższy kod znajduje się w przykładowym kodzie w tym temacie wraz z wywołania metody ogólnej. Metoda ma dwa parametry typu `TInput` i `TOutput`, drugi z nich musi być typu odwołania (`class`), musi mieć konstruktora bez parametrów (`new`) i musi implementować `ICollection(Of TInput)` (`ICollection<TInput>` w języku C#). To ograniczenie interfejsu upewnia się, że <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> metody można użyć do dodawania elementów do `TOutput` kolekcji, która tworzy metody. Metoda ma jeden formalny parametr `input`, który jest tablicą `TInput`. Ta metoda tworzy kolekcję typu `TOutput` i kopiuje elementy `input` do kolekcji.  
+1.  Przed rozpoczęciem warto przyjrzyj wyświetlania metody ogólnej napisane przy użyciu języka wysokiego poziomu. Poniższy kod znajduje się w przykładowym kodzie, w tym temacie, wraz z kodem do wywoływania metody rodzajowej. Metoda ma dwa parametry typu `TInput` i `TOutput`, drugi z nich musi być typem referencyjnym (`class`), musi mieć konstruktora bez parametrów (`new`) i musi implementować `ICollection(Of TInput)` (`ICollection<TInput>` w C#). To ograniczenie interfejs zapewnia, że <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> metoda może służyć do dodawania elementów do `TOutput` kolekcji, która tworzy metodę. Metoda ma jeden parametr formalny, `input`, który jest tablicą `TInput`. Ta metoda tworzy kolekcję typu `TOutput` i kopiuje elementy ze `input` do kolekcji.  
   
      [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]
      [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]  
   
-2.  Zdefiniuj zestawie dynamicznym i należy module dynamicznym zawierać typu metody ogólnej. W takim przypadku zestaw ma tylko jeden moduł o nazwie `DemoMethodBuilder1`, a nazwa modułu jest taka sama nazwa zestawu i rozszerzenia. W tym przykładzie zestaw jest zapisywany na dysku i również wykonywane, to <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> jest określona. Można użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) zbadać DemoMethodBuilder1.dll i porównania go na język pośredni firmy Microsoft (MSIL) dla metody przedstawionym w kroku 1.  
+2.  Definiowanie zestawu dynamicznego i zawierać typu metody ogólnej modułu dynamicznego należy do. W tym przypadku zestaw ma tylko jeden moduł, o nazwie `DemoMethodBuilder1`, i nazwę modułu jest taka sama jak nazwa zestawu i rozszerzenia. W tym przykładzie zestawu jest zapisywany na dysku i również wykonała, więc <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> jest określony. Możesz użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) zbadać DemoMethodBuilder1.dll i porównać go do języka Microsoft intermediate language (MSIL) metody przedstawionym w kroku 1.  
   
      [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]
      [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]  
   
-3.  Zdefiniuj typ, którego Metoda ogólna należy. Typ nie ma być rodzajowy. Metoda ogólna może należeć do typu ogólnego lub nierodzajowe. W tym przykładzie typ to klasa, nie jest rodzajowa i nosi nazwę `DemoType`.  
+3.  Zdefiniuj typ, której metody rodzajowej. Typ ma być ogólna. Metody ogólne mogą należeć do typu ogólnego lub nierodzajowymi. W tym przykładzie typ jest klasą, nie jest ogólna i nosi nazwę `DemoType`.  
   
      [!code-csharp[GenericMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#3)]
      [!code-vb[GenericMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#3)]  
   
-4.  Definiowanie metody ogólnej. Jeśli typy parametrów formalnych Metoda ogólna są określane przez ogólnych parametrów typu metody ogólnej, użyj <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%28System.String%2CSystem.Reflection.MethodAttributes%29> przeciążenie metody w celu zdefiniowania metody. Parametry typu ogólnego metody nie zostały jeszcze zdefiniowane, więc nie można określić typy parametrów formalnych metody w wywołaniu <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A>. W tym przykładzie metodę o nazwie `Factory`. Metoda jest publiczna i `static` (`Shared` w języku Visual Basic).  
+4.  Definiowanie metody ogólnej. Jeśli nie określono typy parametrów formalnych metody ogólnej przez parametrów typu ogólnego dla metody rodzajowej, użyj <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%28System.String%2CSystem.Reflection.MethodAttributes%29> przeciążenia metody, aby zdefiniować metodę. Parametry typu ogólnego metody nie zostały jeszcze zdefiniowane, więc nie można określić typy parametrów formalnych metody w wywołaniu <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A>. W tym przykładzie nosi nazwę metody `Factory`. Ta metoda jest publiczny i `static` (`Shared` w języku Visual Basic).  
   
      [!code-csharp[GenericMethodHowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#4)]
      [!code-vb[GenericMethodHowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#4)]  
   
-5.  Zdefiniuj parametry typu ogólnego `DemoMethod` przez przekazanie tablica ciągów zawierająca nazwy parametrów w celu <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> metody. Dzięki temu ta metoda metody rodzajowej. Poniższy kod sprawia, że `Factory` Metoda ogólna z parametrami typu `TInput` i `TOutput`. Aby czytelność kodu, zmiennych o tych nazwach, są tworzone do przechowywania <xref:System.Reflection.Emit.GenericTypeParameterBuilder> obiekty reprezentujące dwa typy parametrów.  
+5.  Definiowanie parametrów typu ogólnego `DemoMethod` , przekazując tablicę ciągów, które zawierają nazwy parametrów w celu <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> metody. To sprawia, że metoda metody rodzajowej. Poniższy kod powoduje, że `Factory` metody ogólnej z parametrami typu `TInput` i `TOutput`. Aby kod była łatwiejsza do odczytania, zmiennych o tych nazwach są tworzone na potrzeby przechowywania <xref:System.Reflection.Emit.GenericTypeParameterBuilder> obiekty reprezentujące dwa typy parametrów.  
   
      [!code-csharp[GenericMethodHowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#5)]
      [!code-vb[GenericMethodHowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#5)]  
   
-6.  Opcjonalnie można dodać ograniczeń specjalnych do parametrów typu. Ograniczeń specjalnych są dodawane przy użyciu <xref:System.Reflection.Emit.GenericTypeParameterBuilder.SetGenericParameterAttributes%2A> metody. W tym przykładzie `TOutput` jest ograniczona, typu odwołania i ma konstruktora bez parametrów.  
+6.  Opcjonalnie dodaj specjalne ograniczenia parametrów typu. Specjalne ograniczenia są dodawane przy użyciu <xref:System.Reflection.Emit.GenericTypeParameterBuilder.SetGenericParameterAttributes%2A> metody. W tym przykładzie `TOutput` jest ograniczony do jako typów referencyjnych i ma konstruktora bez parametrów.  
   
      [!code-csharp[GenericMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#6)]
      [!code-vb[GenericMethodHowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#6)]  
   
-7.  Opcjonalnie można dodać ograniczenia klasy i interfejs do parametrów typu. W tym przykładzie parametr typu `TOutput` jest ograniczona do typów, które implementują `ICollection(Of TInput)` (`ICollection<TInput>` w języku C#) interfejsu. Gwarantuje to, że <xref:System.Collections.Generic.ICollection%601.Add%2A> metody można użyć do dodawania elementów.  
+7.  Opcjonalnie można dodać ograniczenia klasy i interfejs do parametrów typu. W tym przykładzie parametr typu `TOutput` jest ograniczony do typów, które implementują `ICollection(Of TInput)` (`ICollection<TInput>` w C#) interfejsu. Gwarantuje to, że <xref:System.Collections.Generic.ICollection%601.Add%2A> metoda może służyć do dodawania elementów.  
   
      [!code-csharp[GenericMethodHowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#7)]
      [!code-vb[GenericMethodHowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#7)]  
   
-8.  Zdefiniowanie parametrów formalnych metody, przy użyciu <xref:System.Reflection.Emit.MethodBuilder.SetParameters%2A> metody. W tym przykładzie `Factory` metoda ma jeden parametr, tablicę `TInput`. Ten typ jest tworzony przez wywołanie metody <xref:System.Type.MakeArrayType%2A> metoda <xref:System.Reflection.Emit.GenericTypeParameterBuilder> reprezentujący `TInput`. Argument <xref:System.Reflection.Emit.MethodBuilder.SetParameters%2A> jest tablicą <xref:System.Type> obiektów.  
+8.  Definiowanie parametrów formalnych metody, przy użyciu <xref:System.Reflection.Emit.MethodBuilder.SetParameters%2A> metody. W tym przykładzie `Factory` metoda ma jeden parametr, tablicę `TInput`. Ten typ jest tworzony przez wywołanie metody <xref:System.Type.MakeArrayType%2A> metody <xref:System.Reflection.Emit.GenericTypeParameterBuilder> reprezentujący `TInput`. Argument <xref:System.Reflection.Emit.MethodBuilder.SetParameters%2A> jest tablicą <xref:System.Type> obiektów.  
   
      [!code-csharp[GenericMethodHowTo#8](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#8)]
      [!code-vb[GenericMethodHowTo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#8)]  
   
-9. Zdefiniuj typ zwracany przez metodę, przy użyciu <xref:System.Reflection.Emit.MethodBuilder.SetReturnType%2A> metody. W tym przykładzie wystąpienia `TOutput` jest zwracany.  
+9. Zdefiniuj typ zwracany przez metodę, przy użyciu <xref:System.Reflection.Emit.MethodBuilder.SetReturnType%2A> metody. W tym przykładzie wystąpienie `TOutput` jest zwracana.  
   
      [!code-csharp[GenericMethodHowTo#9](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#9)]
      [!code-vb[GenericMethodHowTo#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#9)]  
   
-10. Emituj metody treści, przy użyciu <xref:System.Reflection.Emit.ILGenerator>. Aby uzyskać więcej informacji zobacz procedurę towarzyszący do emitowania treści metody.  
+10. Emituj metody treści, za pomocą <xref:System.Reflection.Emit.ILGenerator>. Aby uzyskać szczegółowe informacje Zobacz towarzyszący procedurę do emitowania treści metody.  
   
     > [!IMPORTANT]
-    >  Emituj wywołania metod typów ogólnych i argumentów typu tych typów są parametry typu metody ogólnej, należy używać `static` <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29>, <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29>, i <xref:System.Reflection.Emit.TypeBuilder.GetField%28System.Type%2CSystem.Reflection.FieldInfo%29> metoda przeciąża z <xref:System.Reflection.Emit.TypeBuilder> klasa do Uzyskaj skonstruowane formularze metod. Procedury towarzyszące emitowanie treści metody pokazano to.  
+    >  Emituj wywołania metod typów ogólnych i argumenty typu z tych typów są parametry typu metody ogólnej, należy użyć `static` <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29>, <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29>, i <xref:System.Reflection.Emit.TypeBuilder.GetField%28System.Type%2CSystem.Reflection.FieldInfo%29> przeciążenia metody <xref:System.Reflection.Emit.TypeBuilder> klasy Uzyskaj skonstruowany rodzaje metod. Towarzyszący procedury do emitowania treści metody pokazuje to.  
   
-11. Ukończ typ zawierający metody i Zapisz zestaw. Wywoływanie metody ogólnej procedury towarzyszące przedstawia dwa sposoby wywołania metody ukończone.  
+11. Typ, który zawiera metodę ukończenia, a następnie Zapisz zestaw. Towarzyszący procedury do wywoływania metody rodzajowej przedstawia dwa sposoby wywołania metody ukończone.  
   
      [!code-csharp[GenericMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#14)]
      [!code-vb[GenericMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#14)]  
   
 <a name="procedureSection1"></a>   
-### <a name="to-emit-the-method-body"></a>Aby emitować treści metody  
+### <a name="to-emit-the-method-body"></a>Do wysyłania treści metody  
   
-1.  Pobierz generator kodu i deklarować zmiennych lokalnych i etykiet. <xref:System.Reflection.Emit.ILGenerator.DeclareLocal%2A> Metoda służy do deklarowania zmiennych lokalnych. `Factory` Metoda ma cztery zmiennych lokalnych: `retVal` aby pomieścić nowy `TOutput` który jest zwracany przez metodę `ic` do przechowywania `TOutput` po jest rzutowane na `ICollection(Of TInput)` (`ICollection<TInput>` w języku C#), `input` do Przytrzymaj tablicy wejściowej z `TInput` obiektów, a `index` do iterowania po tablicy. Metoda ma również dwie etykiety, jedna, aby wprowadzić pętli (`enterLoop`) i jeden dla górnej pętli (`loopAgain`), zdefiniowany za pomocą <xref:System.Reflection.Emit.ILGenerator.DefineLabel%2A> — metoda.  
+1.  Uzyskaj generatora kodu i zadeklarować zmienne lokalne i etykiety. <xref:System.Reflection.Emit.ILGenerator.DeclareLocal%2A> Metoda służy do deklarowania zmiennych lokalnych. `Factory` Metoda ma cztery zmiennych lokalnych: `retVal` do przechowywania nowej `TOutput` zwracanym przez metodę, `ic` do przechowywania `TOutput` kiedy jest rzutowany na `ICollection(Of TInput)` (`ICollection<TInput>` w C#), `input`do przechowywania tablicy wejściowej z `TInput` obiekty, i `index` można wykonać iterację tablicy. Metoda ma również dwie etykiety do wprowadź pętli (`enterLoop`) i jeden dla góry pętli (`loopAgain`) zdefiniowaną za pomocą <xref:System.Reflection.Emit.ILGenerator.DefineLabel%2A> metody.  
   
-     Pierwszą czynnością jest metoda jest pobranie jej argument <xref:System.Reflection.Emit.OpCodes.Ldarg_0> opcode i zapisz go w zmiennej lokalnej `input` przy użyciu <xref:System.Reflection.Emit.OpCodes.Stloc_S> opcode.  
+     Pierwszą rzeczą, metoda jest pobranie jej argument <xref:System.Reflection.Emit.OpCodes.Ldarg_0> opcode i zapisz go w zmiennej lokalnej `input` przy użyciu <xref:System.Reflection.Emit.OpCodes.Stloc_S> opcode.  
   
      [!code-csharp[GenericMethodHowTo#10](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#10)]
      [!code-vb[GenericMethodHowTo#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#10)]  
   
-2.  Emituj kod w celu utworzenia wystąpienia `TOutput`, za pomocą przeciążenia metody ogólnej <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> metody. Za pomocą tego przeciążenia wymaga określony typ ma konstruktora bez parametrów, czyli Przyczyna dodanie tego ograniczenia do `TOutput`. Utwórz skonstruowane Metoda ogólna przez przekazanie `TOutput` do <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>. Po emitowanie kodu, aby wywołać metodę, wyemitować kodu, zapisz go w zmiennej lokalnej `retVal` przy użyciu <xref:System.Reflection.Emit.OpCodes.Stloc_S>  
+2.  Emituj kod, aby utworzyć wystąpienie `TOutput`, za pomocą przeciążenia metody ogólnej <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> metody. Korzystanie z tego przeciążenia wymaga określonego typu ma konstruktora bez parametrów, która jest dodawana takiego ograniczenia do `TOutput`. Utwórz skonstruowany metody rodzajowej, przekazując `TOutput` do <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>. Po emitowanie kodu w celu wywołania metody, emitują kod, aby zapisać ją w zmiennej lokalnej `retVal` przy użyciu <xref:System.Reflection.Emit.OpCodes.Stloc_S>  
   
      [!code-csharp[GenericMethodHowTo#11](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#11)]
      [!code-vb[GenericMethodHowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#11)]  
   
-3.  Emituj kod można rzutować nowe `TOutput` do obiektu `ICollection(Of TInput)` i zapisz go w zmiennej lokalnej `ic`.  
+3.  Emitują kod, aby rzutować nowy `TOutput` obiekt `ICollection(Of TInput)` i zapisz go w zmiennej lokalnej `ic`.  
   
      [!code-csharp[GenericMethodHowTo#31](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#31)]
      [!code-vb[GenericMethodHowTo#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#31)]  
   
-4.  Pobierz <xref:System.Reflection.MethodInfo> reprezentujący <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> metody. Metoda działa na `ICollection(Of TInput)` (`ICollection<TInput>` w języku C#), więc konieczne jest uzyskanie `Add` metody określonej w tym skonstruować typu. Nie można użyć <xref:System.Type.GetMethod%2A> metodę, aby uzyskać dostęp do tej <xref:System.Reflection.MethodInfo> bezpośrednio z `icollOfTInput`, ponieważ <xref:System.Type.GetMethod%2A> nie jest obsługiwana dla typu, który został skonstruowany przy <xref:System.Reflection.Emit.GenericTypeParameterBuilder>. Zamiast tego wywołać <xref:System.Type.GetMethod%2A> na `icoll`, który zawiera definicję typu ogólnego <xref:System.Collections.Generic.ICollection%601> interfejs generyczny. Następnie użyj <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29> `static` metodę, aby utworzyć <xref:System.Reflection.MethodInfo> skonstruowanego typu. Poniższy kod przedstawia to.  
+4.  Pobierz <xref:System.Reflection.MethodInfo> reprezentujący <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> metody. Metoda działa na `ICollection(Of TInput)` (`ICollection<TInput>` w C#), co jest niezbędne do doprowadzenia `Add` metody określonej w tym skonstruowany typ. Nie można użyć <xref:System.Type.GetMethod%2A> metodę, aby uzyskać dostęp do tej <xref:System.Reflection.MethodInfo> bezpośrednio z `icollOfTInput`, ponieważ <xref:System.Type.GetMethod%2A> nie jest obsługiwana dla typu, który został skonstruowany przy użyciu <xref:System.Reflection.Emit.GenericTypeParameterBuilder>. Zamiast tego należy wywołać <xref:System.Type.GetMethod%2A> na `icoll`, który zawiera definicję typu ogólnego <xref:System.Collections.Generic.ICollection%601> interfejs generyczny. Następnie użyj <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29> `static` metody do tworzenia <xref:System.Reflection.MethodInfo> skonstruowanego typu. Poniższy kod przedstawia to.  
   
      [!code-csharp[GenericMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#12)]
      [!code-vb[GenericMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#12)]  
   
-5.  Emituj kod do zainicjowania `index` zmiennej przez ładowanie 32-bitową liczbę całkowitą 0 i przechowywanie ich w zmiennej. Emituj kod do gałęzi do etykiety `enterLoop`. Etykieta nie jeszcze została oznaczona, ponieważ znajduje się wewnątrz pętli. Kod dla pętli są emitowane w następnym kroku.  
+5.  Emituj kod, aby zainicjować `index` zmiennej, ładując 32-bitowej liczby całkowitej 0 i zapisanie go w zmiennej. Emitowanie kodu do gałęzi do etykiety `enterLoop`. Ta etykieta nie jeszcze została oznaczona, ponieważ znajduje się wewnątrz pętli. Kod dla pętli jest emitowane w następnym kroku.  
   
      [!code-csharp[GenericMethodHowTo#32](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#32)]
      [!code-vb[GenericMethodHowTo#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#32)]  
   
-6.  Emituj kodu dla pętli. Pierwszym krokiem jest oznaczenie górnej pętli, wywołując <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> z `loopAgain` etykiety. Branch — instrukcje używających etykieta zostanie teraz gałęzi w tym punkcie w kodzie. Następnym krokiem jest push `TOutput` obiektu rzutować `ICollection(Of TInput)`, na stosie. Nie jest wymagane natychmiast, ale musi być w pozycji dla wywołania `Add` metody. Dalej tablicy wejściowej spoczywa na stosie, a następnie `index` zmienną, która zawiera bieżący indeks w tablicy. <xref:System.Reflection.Emit.OpCodes.Ldelem> Kod operacji POP indeks i Tablica ze stosu i umieszcza elementu tablicy indeksowanej na stosie. Stos jest gotowy dla wywołania <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> metodę, która będzie wyświetlana, kolekcji i nowego elementu ze stosu i dodaje element do kolekcji.  
+6.  Wyemitować kodu dla pętli. Pierwszym krokiem jest do oznaczania początku pętli, wywołując <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> z `loopAgain` etykiety. Branch — instrukcje używające etykiety będą teraz gałąź do tego momentu w kodzie. Następnym krokiem jest wypychania `TOutput` obiektu rzutować `ICollection(Of TInput)`, na stosie. Nie jest wymagane natychmiast, ale musi znajdować się w miejscu do wywoływania `Add` metody. Dalej Tablica wejściowa jest wypychane na stosie, a następnie `index` zmienną, która zawiera bieżący indeks do tablicy. <xref:System.Reflection.Emit.OpCodes.Ldelem> Opcode POP, indeksu i tablicy ze stosu i wypycha elementu tablicy indeksowanej na stosie. Stos jest teraz gotowa do wywołania <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> metody, która pojawia się kolekcja i nowy element ze stosu i dodaje element do kolekcji.  
   
-     Zwiększa pozostałej części kodu w pętli indeks i testy, aby zobaczyć, czy Zakończenie pętli: indeks 32-bitową liczbę całkowitą 1 wypychana na stosie i dodany, pozostawiając Suma na stosie; Suma są przechowywane w `index`. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> wywoływana jest ustawiony jako punkt wejścia dla pętli tego punktu. Indeks został załadowany ponownie. Tablica wejściowa spoczywa na stosie, i <xref:System.Reflection.Emit.OpCodes.Ldlen> jest emitowany uzyskać jego długość. Indeks i długość są teraz na stosie, i <xref:System.Reflection.Emit.OpCodes.Clt> jest emitowany do porównania. Jeśli indeks jest mniejszy niż długość, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> oddziałów z powrotem do początku pętli.  
+     Pozostała część kodu w pętli zwiększa indeks i testy, aby zobaczyć, czy pętla została zakończona: Indeks i 32-bitowa liczba całkowita 1 są wypychane na stosie i dodawane, pozostawiając Suma na stosie; Suma jest przechowywany w `index`. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> jest wywoływana, aby ustawić ten punkt jako punkt wejścia dla pętli. Indeks jest ładowany ponownie. Tablica wejściowa jest wypychane na stos, a <xref:System.Reflection.Emit.OpCodes.Ldlen> jest emitowane, aby uzyskać jego długość. Indeks i długość są teraz w stosie, i <xref:System.Reflection.Emit.OpCodes.Clt> jest emitowany do porównania. Jeśli indeks jest mniejsza niż długość <xref:System.Reflection.Emit.OpCodes.Brtrue_S> gałęzi z powrotem do początku pętli.  
   
      [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
      [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]  
   
-7.  Emituj kod, aby wypychać `TOutput` obiektu na stosie i zwracany przez metodę. Zmienne lokalne `retVal` i `ic` zawierają odwołania do nowego `TOutput`; `ic` służy tylko do dostępu <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> metody.  
+7.  Emituj kod służący do wypychania `TOutput` obiektów na stosie i zwraca z metody. Zmienne lokalne `retVal` i `ic` zawierają odwołania do nowego `TOutput`; `ic` służy jedynie do access <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> metody.  
   
      [!code-csharp[GenericMethodHowTo#33](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#33)]
      [!code-vb[GenericMethodHowTo#33](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#33)]  
   
 <a name="procedureSection2"></a>   
-### <a name="to-invoke-the-generic-method"></a>Można wywołać metody ogólne  
+### <a name="to-invoke-the-generic-method"></a>Do wywołania metody ogólnej  
   
-1.  `Factory` jest ogólną definicją metody. Aby można było wywołać go, należy przypisać typów jego parametrów typu ogólnego. Użyj <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> metody w tym celu. Poniższy kod tworzy skonstruowane metody ogólnej, określając <xref:System.String> dla `TInput` i `List(Of String)` (`List<string>` w języku C#) dla `TOutput`i wyświetla reprezentację ciągu metody.  
+1.  `Factory` jest definicją metody rodzajowej. Aby można było ją wywołać, należy przypisać typów, do jego parametrów typu rodzajowego. Użyj <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> metodę, aby to zrobić. Poniższy kod tworzy skonstruowany metody rodzajowej, określając <xref:System.String> dla `TInput` i `List(Of String)` (`List<string>` w C#) dla `TOutput`i wyświetla reprezentację ciągu metody.  
   
      [!code-csharp[GenericMethodHowTo#21](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#21)]
      [!code-vb[GenericMethodHowTo#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#21)]  
   
-2.  Aby wywołać metodę późnym wiązaniem, użyj <xref:System.Reflection.MethodBase.Invoke%2A> metody. Poniższy kod tworzy tablicę <xref:System.Object>, zawierające jako jej jedynym elementem tablicy ciągów i przekazuje ją jako listy argumentów dla metody ogólnej. Pierwszy parametr <xref:System.Reflection.MethodBase.Invoke%2A> jest odwołanie o wartości null, ponieważ metoda jest `static`. Wartość zwracana jest rzutowane na `List(Of String)`, i nie jest wyświetlany pierwszego elementu.  
+2.  Aby wywołać metody z późnym wiązaniem, należy użyć <xref:System.Reflection.MethodBase.Invoke%2A> metody. Poniższy kod tworzy tablicę <xref:System.Object>, zawierający jako jego jedynym elementem tablicę ciągów i przekazuje ją jako lista argumentów dla metody rodzajowej. Pierwszy parametr <xref:System.Reflection.MethodBase.Invoke%2A> jest odwołanie o wartości null, ponieważ ta metoda jest `static`. Wartość zwracana jest rzutowany na `List(Of String)`, a jej pierwszy element będzie wyświetlany.  
   
      [!code-csharp[GenericMethodHowTo#22](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#22)]
      [!code-vb[GenericMethodHowTo#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#22)]  
   
-3.  Aby wywołać metodę delegata, musi mieć delegata, który pasuje do podpisu skonstruowane metoda rodzajowa. Prosty sposób, w tym celu jest utworzyć to delegat generyczny. Poniższy kod tworzy wystąpienie Delegat ogólny `D` zdefiniowane w przykładowym kodzie za pomocą <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Reflection.MethodInfo%29?displayProperty=nameWithType> przeciążenie metody i wywołuje delegata. Obiekty delegowane lepiej niż wywołania z późnym wiązaniem.  
+3.  Aby wywołać metodę delegata, konieczne jest posiadanie delegat, który pasuje do podpisu skonstruowanego metody rodzajowej. Prosty sposób, w tym celu jest do utworzenia delegata ogólnego. Poniższy kod tworzy wystąpienie delegata ogólnego `D` zdefiniowane w przykładowym kodzie za pomocą <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Reflection.MethodInfo%29?displayProperty=nameWithType> przeciążenie metody i wywołuje delegata. Delegaty mają lepszą wydajność niż wywołania późnego wiązania.  
   
      [!code-csharp[GenericMethodHowTo#23](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#23)]
      [!code-vb[GenericMethodHowTo#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#23)]  
   
-4.  Metoda emitowany można skrót z programu, który odwołuje się do zestawu zapisane.  
+4.  Metoda emitowany mogą być również wywoływane z programu, który odwołuje się do zestawu zapisane.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu tworzy typu nierodzajowe `DemoType`, metodą rodzajową `Factory`. Ta metoda ma dwa parametry typu ogólnego, `TInput` Aby określić typ danych wejściowych i `TOutput` określenia typu danych wyjściowych. `TOutput` Parametr typu jest ograniczona do zaimplementowania `ICollection<TInput>` (`ICollection(Of TInput)` w języku Visual Basic), typu odwołania i mieć konstruktora bez parametrów.  
+ Poniższy kod tworzy typ nierodzajowych, `DemoType`, za pomocą metody rodzajowej, `Factory`. Ta metoda ma dwa parametry typu ogólnego, `TInput` określenia typu danych wejściowych i `TOutput` określenia typu danych wyjściowych. `TOutput` Parametr typu jest ograniczony do zaimplementowania `ICollection<TInput>` (`ICollection(Of TInput)` w języku Visual Basic), typ odwołania i ma konstruktora bez parametrów.  
   
- Metoda ma jeden formalny parametr, który jest tablicą o `TInput`. Metoda zwraca wystąpienie klasy `TOutput` zawierający wszystkie elementy tablicy wejściowej. `TOutput` mogą być dowolnego typu kolekcja ogólna, który implementuje <xref:System.Collections.Generic.ICollection%601> interfejs generyczny.  
+ Metoda ma jeden parametr formalny, który jest tablicą o `TInput`. Metoda ta zwraca wystąpienie `TOutput` zawierający wszystkie elementy tablicy wejściowej. `TOutput` mogą być dowolnego typu kolekcji generycznej, która implementuje <xref:System.Collections.Generic.ICollection%601> interfejs generyczny.  
   
- Podczas wykonywania kodu zostanie zapisany jako DemoGenericMethod1.dll zestawu dynamicznego, a przy [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
+ Gdy kod jest wykonywany, jest zapisywany jako DemoGenericMethod1.dll zestawu dynamicznego i można zbadać za pomocą [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
   
 > [!NOTE]
->  Dobrym sposobem Dowiedz się, jak można wyemitować kodu jest Napisz program Visual Basic, C# lub Visual C++, który wykonuje zadanie, które próbujesz Emituj i użyj dezasembler Sprawdź MSIL generowane przez kompilator.  
+>  Dobrym sposobem na informacje o sposobie emitują kod jest napisanie języka Visual Basic, C#, lub w programie Visual C++, który wykonuje to zadanie, które próbujesz emitują i użyj dezasembler, aby sprawdzić MSIL wytworzone przez kompilator.  
   
- Przykładowy kod zawiera kod źródłowy, który jest odpowiednikiem emitowany metody. Emitowany — metoda jest wywoływana z późnym wiązaniem i również przy użyciu Delegat ogólny zadeklarowany w przykładzie kodu.  
+ Przykład kodu zawiera kod źródłowy, który jest odpowiednikiem emitowany metody. Emitowany metoda jest wywoływana z późnym wiązaniem, a także za pomocą delegata ogólnego zadeklarowana w przykładzie kodu.  
   
  [!code-csharp[GenericMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1)]
  [!code-vb[GenericMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Zawiera kod C# `using` instrukcje (`Imports` w języku Visual Basic) niezbędne do kompilacji.  
+-   Zawiera kod języka C# `using` instrukcji (`Imports` w języku Visual Basic) niezbędne do kompilacji.  
   
--   Nie odwołania do zestawów dodatkowe są wymagane.  
+-   Nie odwołania do zestawu dodatkowe są wymagane.  
   
--   Kompilowanie kodu w wierszu polecenia przy użyciu csc.exe, vbc.exe lub cl.exe. Aby skompilować kod w programie Visual Studio, należy umieścić w szablonie Projekt aplikacji konsoli.  
+-   Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Reflection.Emit.MethodBuilder>  
- [Instrukcje: definiowanie typu ogólnego przy użyciu emisji odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Reflection.Emit.MethodBuilder>
+- [Instrukcje: Definiowanie typu ogólnego przy użyciu odbicia emisji](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

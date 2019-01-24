@@ -2,12 +2,12 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 93789cf64653af863cbedbf1caeea886afb713f5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4731b0c94f9ecd03dc3d1229f27cb8ede7e0e203
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592903"
 ---
 # <a name="dataviews"></a>DataView
 A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych przechowywanych w <xref:System.Data.DataTable>, możliwości, jest często używany w aplikacjach powiązanie danych. Za pomocą **DataView**, może uwidaczniać dane w tabeli z zamówieniami sortowania i dane można filtrować według wierszy, stanu lub w zależności od wyrażenia filtru.  
@@ -59,5 +59,5 @@ A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych prz
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  W tym artykule opisano ADO.NET architektura i składniki i jak za pomocą ADO.NET dostęp do istniejących źródeł danych i zarządzania danymi w aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

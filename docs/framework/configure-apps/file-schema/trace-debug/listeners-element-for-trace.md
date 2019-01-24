@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: bfcf96c553f85aeb0a40dfd6ea36667d504e8eee
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 20d6a0e221b7e9e1c2647098ef8bae25f7cd4d43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596829"
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;odbiorniki&gt; elementu &lt;śledzenia&gt;
 Określa odbiornik, który zbiera, magazynów i przekazuje komunikaty. Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.  
   
  \<Konfiguracja > Element  
-\<System.Diagnostics > Element  
-\<Śledzenie > Element  
-\<odbiorniki >, Element dla \<śledzenia >  
+\<system.diagnostics> Element  
+\<trace> Element  
+\<listeners> Element for \<trace>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,7 +45,7 @@ Określa odbiornik, który zbiera, magazynów i przekazuje komunikaty. Odbiornik
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Dodaje odbiornik do `Listeners` kolekcji.|  
-|[\<Wyczyść >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|Czyści `Listeners` kolekcji na potrzeby śledzenia.|  
+|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|Czyści `Listeners` kolekcji na potrzeby śledzenia.|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|Usuwa odbiornik z `Listeners` kolekcji.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -86,6 +86,6 @@ Określa odbiornik, który zbiera, magazynów i przekazuje komunikaty. Odbiornik
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Diagnostics.TraceListener>  
- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Diagnostics.TraceListener>
+- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 371768a8306c3751e7fc54b91a8583df41ad219b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4576d8ea7d601e1b37d0cb6f54802f93bc128622
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593787"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget — Interfejs
-Udostępnia metody, które sterować liczby odwołań, wyliczenie procesów i zwolnić pamięć, skojarzone z debugera, który jest dołączony do docelowego elementu zdalnego Macintosh Silverlight.  
+Udostępnia metody, które kontrolować liczbę odwołań, wyliczenie procesów i zwalniają pamięć skojarzone z debugera, który jest dołączony do zdalnego obiektu docelowego Silverlight dla komputerów Macintosh.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,23 +54,23 @@ class ICoreClrDebugTarget {
 |Metoda|Opis|  
 |------------|-----------------|  
 |[ICoreClrDebugTarget::EnumProcesses, metoda](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|Wylicza procesów, które są uruchomione na komputerze zdalnym.|  
-|[ICoreClrDebugTarget::EnumRuntimes, metoda](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|Wylicza wspólnej obsługi language (CLRs) określonego procesu na komputerze zdalnym.|  
-|[ICoreClrDebugTarget::FreeMemory, metoda](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|Zwalnia pamięci przydzielonej przez wyliczenie metody tej klasy.|  
+|[ICoreClrDebugTarget::EnumRuntimes, metoda](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|Wylicza środowiska uruchomieniowego języka wspólnego (CLRs) w określonym procesie na komputerze zdalnym.|  
+|[ICoreClrDebugTarget::FreeMemory, metoda](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|Zwalnia pamięć, która jest przydzielona za pomocą metod wyliczenia w tej klasie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Obecnie ta funkcja jest obsługiwana tylko w przypadku debugowania docelowego aplikacja Silverlight, który jest uruchomiony na komputerze zdalnym Macintosh.  
+ Obecnie ta funkcja jest obsługiwana tylko w przypadku debugowania element docelowy aplikacji opartych na technologii Silverlight, który jest uruchomiony na komputerze zdalnym dla komputerów Macintosh.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Biblioteka:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
  **Wersje programu .NET framework:** 3.5 z dodatkiem SP1  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugRemoteTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugRemoteTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 756b0ff726c31bf096a1c1b70004c3ff82fe9979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0301506d591a3738ea403393236c2574d48a7cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593969"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo — Metoda
 Pobiera nazwę, rozmiar i zawartość strumienia metadanych pod określonym indeksem.  
@@ -40,10 +40,10 @@ HRESULT GetMetaDataStreamInfo (
   
 #### <a name="parameters"></a>Parametry  
  `ix`  
- [in] Indeks strumienia żądane metadanych.  
+ [in] Indeks strumienia metadanych żądanej.  
   
  `ppchName`  
- [out] Wskaźnik do nazwy strumienia.  
+ [out] Wskaźnik na nazwę strumienia.  
   
  `ppv`  
  [out] Wskaźnik do strumienia metadanych.  
@@ -52,14 +52,14 @@ HRESULT GetMetaDataStreamInfo (
  [out] Rozmiar w bajtach z `ppv`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)  
- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

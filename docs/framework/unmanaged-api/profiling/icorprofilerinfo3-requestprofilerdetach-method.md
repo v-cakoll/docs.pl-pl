@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5171022d35c6f9e194ddcf615d29610ea2e0d4fb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b5e021116b29045837a5afae14aa560690cc944
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595373"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach — Metoda
 Powoduje, że środowisko uruchomieniowe, aby odłączyć profiler.  
@@ -58,15 +58,15 @@ HRESULT RequestProfilerDetach(
  Jeśli program profilujący Określa `dwExpectedCompletionMilliseconds` jako 0 (zero), środowisko CLR używa domyślnie wynosi 5000, co oznacza, że zostanie przeprowadzone sprawdzanie po 5 sekundach ponownie po 10 sekund, a następnie co 10 minut po tej dacie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** } CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf.idl, CorProf.h  
   
  **Biblioteka:** CorGuids.lib  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

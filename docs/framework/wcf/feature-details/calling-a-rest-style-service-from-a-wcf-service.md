@@ -2,12 +2,12 @@
 title: Wywoływanie usługi typu REST z poziomu usługi WCF
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: be9f15d35ec00ba91a06abf5a0a413b59452270b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: df57433b01df9faf49eada8189ba8864fe7a9093
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596790"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Wywoływanie usługi typu REST z poziomu usługi WCF
 Podczas wywoływania usługi typu REST z regularnych usługi WCF (w oparciu o protokół SOAP), kontekst operacji dla metody usługi, (który zawiera informacje dotyczące żądania przychodzące) zastępuje kontekstu, który powinien być używany przez żądania wychodzącego. Powoduje to, że żądania HTTP GET przejść do żądania HTTP POST. Aby wymusić uruchomienia usługi WCF do użycia w kontekście wywoływanie usługi typu REST, Utwórz nowy <xref:System.ServiceModel.OperationContextScope> i wywoływanie usługi typu REST z wewnątrz zakresu kontekstu operacji. W tym temacie opisano sposób tworzenia prostych przykładowych, który ilustruje tej techniki.  
@@ -233,6 +233,6 @@ public class CallingRESTSample
 }
 ```
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: tworzenie podstawowej, opartej na protokole HTTP usługi internetowej programu WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- [Model obiektowy programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Tworzenie podstawowej usługi programu WCF Web HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)
+- [Model obiektowy programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f086c5b6bf1d45f3f711112c618e2398c3a39ed
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 915ffcba4ad0dc361e3a3c392adc6215d2420a85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592630"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generator obrazu natywnego)
 Generator obrazów natywnych (Ngen.exe) jest narzędziem, które poprawia wydajność zarządzanych aplikacji. Program Ngen.exe tworzy obrazy natywne, które są plikami zawierającymi skompilowany kod maszynowy specyficzny dla procesora, i instaluje je w pamięci podręcznej obrazów natywnych na komputerze lokalnym. Środowisko uruchomieniowe może używać obrazów natywnych z tej pamięci podręcznej, zamiast używać kompilatora JIT (Just-In-Time) w celu skompilowania oryginalnego zestawu.  
@@ -584,10 +584,10 @@ ngen executeQueuedItems
 ### <a name="service-interaction-with-clients"></a>Usługa interakcji z klientami  
  W .NET Framework w wersji 2.0 jedyna interakcja z usługi obrazów natywnych jest przy użyciu wiersza polecenia narzędzia Ngen.exe. Narzędzie wiersza polecenia w skryptach instalacji do kolejki akcji dla usługi obrazów natywnych i interakcji z usługą.  
   
-## <a name="see-also"></a>Zobacz też  
- [Narzędzia](../../../docs/framework/tools/index.md)  
- [Proces zarządzanego wykonania](../../../docs/standard/managed-execution-process.md)  
- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Zobacz także
+- [Narzędzia](../../../docs/framework/tools/index.md)
+- [Proces zarządzanego wykonania](../../../docs/standard/managed-execution-process.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 
 [Native Image Service]: #native-image-service

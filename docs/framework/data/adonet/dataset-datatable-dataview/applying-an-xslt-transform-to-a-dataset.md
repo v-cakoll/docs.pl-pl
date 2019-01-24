@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: abcb3231aa92bd62edefc7f7341da5fcb3321e4b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b665fc9593cd73e759625bdfd537581958f8734d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595568"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Stosowanie transformacji XSLT do zestawu danych
 **WriteXml** metody <xref:System.Data.DataSet> umożliwia zapisanie zawartości **DataSet** jako danych XML. Często wykonywanym zadaniem jest następnie Przekształć element XML, że na inny format za pomocą przekształcenia XSL (XSLT). Jednak synchronizowanie **zestawu danych** z <xref:System.Xml.XmlDataDocument> umożliwia zastosowanie arkusz stylów XSLT do zawartości **DataSet** bez konieczności pisania najpierw zawartość  **Zestaw danych** jako danych XML przy użyciu **WriteXml**.  
@@ -123,6 +123,6 @@ xslTran.Transform(xmlDoc, null, writer);
 writer.Close();  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Synchronizacja elementów DataSet i XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Synchronizacja elementów DataSet i XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,14 +1,6 @@
 ---
-title: "RunDll32ShimW — Funkcja"
-ms.custom: 
+title: RunDll32ShimW — Funkcja
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - RunDll32ShimW
 api_location:
@@ -22,24 +14,21 @@ helpviewer_keywords:
 ms.assetid: 9ea07b57-96e2-44df-8711-8fe6c119087f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a046ed8d540b27bfb73a6e94f148d41f8ac7b264
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 883f987eb168bf5996baba66f5081875e67f2000
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698729"
 ---
-# <a name="rundll32shimw-function"></a><span data-ttu-id="36e55-102">RunDll32ShimW — Funkcja</span><span class="sxs-lookup"><span data-stu-id="36e55-102">RunDll32ShimW Function</span></span>
-<span data-ttu-id="36e55-103">Wykonuje określone polecenie.</span><span class="sxs-lookup"><span data-stu-id="36e55-103">Executes the specified command.</span></span>  
+# <a name="rundll32shimw-function"></a><span data-ttu-id="fc7ab-102">RunDll32ShimW — Funkcja</span><span class="sxs-lookup"><span data-stu-id="fc7ab-102">RunDll32ShimW Function</span></span>
+<span data-ttu-id="fc7ab-103">Wykonuje określone polecenie.</span><span class="sxs-lookup"><span data-stu-id="fc7ab-103">Executes the specified command.</span></span>  
   
- <span data-ttu-id="36e55-104">Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="36e55-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="fc7ab-104">Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fc7ab-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="36e55-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="36e55-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc7ab-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="fc7ab-105">Syntax</span></span>  
   
 ```  
 HRESULT RunDll32ShimW (  
@@ -50,27 +39,27 @@ HRESULT RunDll32ShimW (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="36e55-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="36e55-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="fc7ab-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="fc7ab-106">Parameters</span></span>  
  `hwnd`  
- <span data-ttu-id="36e55-107">[in] Dojście do okna, w którym będzie wyświetlana w wynikach polecenia.</span><span class="sxs-lookup"><span data-stu-id="36e55-107">[in] A handle to a window in which the command output will be displayed.</span></span>  
+ <span data-ttu-id="fc7ab-107">[in] Dojście do okna, w którym będą wyświetlane dane wyjściowe polecenia.</span><span class="sxs-lookup"><span data-stu-id="fc7ab-107">[in] A handle to a window in which the command output will be displayed.</span></span>  
   
  `hinst`  
- <span data-ttu-id="36e55-108">[in] Dojście do biblioteki, który zawiera polecenie.</span><span class="sxs-lookup"><span data-stu-id="36e55-108">[in] A handle to the library that contains the command.</span></span>  
+ <span data-ttu-id="fc7ab-108">[in] Dojście do biblioteki, która zawiera polecenia.</span><span class="sxs-lookup"><span data-stu-id="fc7ab-108">[in] A handle to the library that contains the command.</span></span>  
   
  `lpszCmdLine`  
- <span data-ttu-id="36e55-109">[in] Ciąg, który określa polecenie do wykonania.</span><span class="sxs-lookup"><span data-stu-id="36e55-109">[in] A string that specifies the command to be executed.</span></span>  
+ <span data-ttu-id="fc7ab-109">[in] Ciąg, który określa polecenie do wykonania.</span><span class="sxs-lookup"><span data-stu-id="fc7ab-109">[in] A string that specifies the command to be executed.</span></span>  
   
  `nCmdShow`  
- <span data-ttu-id="36e55-110">[in] Liczba całkowita, która określa tryb wyświetlania w oknie danych wyjściowych.</span><span class="sxs-lookup"><span data-stu-id="36e55-110">[in] An integer that specifies the display mode for the output window.</span></span>  
+ <span data-ttu-id="fc7ab-110">[in] Liczba całkowita, która określa tryb wyświetlania w oknie danych wyjściowych.</span><span class="sxs-lookup"><span data-stu-id="fc7ab-110">[in] An integer that specifies the display mode for the output window.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="36e55-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="36e55-111">Requirements</span></span>  
- <span data-ttu-id="36e55-112">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36e55-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc7ab-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fc7ab-111">Requirements</span></span>  
+ <span data-ttu-id="fc7ab-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc7ab-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="36e55-113">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="36e55-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="fc7ab-113">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fc7ab-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="36e55-114">**Biblioteka:** biblioteki MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="36e55-114">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="fc7ab-114">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fc7ab-114">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="36e55-115">**Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36e55-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fc7ab-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc7ab-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36e55-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="36e55-116">See Also</span></span>  
- [<span data-ttu-id="36e55-117">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="36e55-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="fc7ab-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fc7ab-116">See also</span></span>
+- [<span data-ttu-id="fc7ab-117">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="fc7ab-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

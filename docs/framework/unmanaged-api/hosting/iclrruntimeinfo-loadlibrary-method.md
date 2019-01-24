@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2684be39898afa307e582bfcc952422213b4964b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dbcbf1b66793a67c815b420e6d5fe221febe719
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716885"
 ---
-# <a name="iclrruntimeinfoloadlibrary-method"></a><span data-ttu-id="8e68b-102">ICLRRuntimeInfo::LoadLibrary — Metoda</span><span class="sxs-lookup"><span data-stu-id="8e68b-102">ICLRRuntimeInfo::LoadLibrary Method</span></span>
-<span data-ttu-id="8e68b-103">Ładuje Biblioteka programu .NET Framework z środowisko uruchomieniowe języka wspólnego (CLR) reprezentowany przez [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="8e68b-103">Loads a .NET Framework library from the common language runtime (CLR) represented by an [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
+# <a name="iclrruntimeinfoloadlibrary-method"></a><span data-ttu-id="886cd-102">ICLRRuntimeInfo::LoadLibrary — Metoda</span><span class="sxs-lookup"><span data-stu-id="886cd-102">ICLRRuntimeInfo::LoadLibrary Method</span></span>
+<span data-ttu-id="886cd-103">Ładuje bibliotekę .NET Framework z środowisko uruchomieniowe języka wspólnego (CLR) reprezentowany przez [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="886cd-103">Loads a .NET Framework library from the common language runtime (CLR) represented by an [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
   
- <span data-ttu-id="8e68b-104">Ta metoda zastępuje [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="8e68b-104">This method supersedes the [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) function.</span></span>  
+ <span data-ttu-id="886cd-104">Ta metoda zastępuje [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="886cd-104">This method supersedes the [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8e68b-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="8e68b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="886cd-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="886cd-105">Syntax</span></span>  
   
 ```  
 HRESULT LoadLibrary(  
@@ -37,35 +37,35 @@ HRESULT LoadLibrary(
      [out, retval] HMODULE *phndModule);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8e68b-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="8e68b-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="886cd-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="886cd-106">Parameters</span></span>  
  `pwzDllName`  
- <span data-ttu-id="8e68b-107">[in] Nazwa zestawu do załadowania.</span><span class="sxs-lookup"><span data-stu-id="8e68b-107">[in] The name of the assembly to be loaded.</span></span>  
+ <span data-ttu-id="886cd-107">[in] Nazwa zestawu do załadowania.</span><span class="sxs-lookup"><span data-stu-id="886cd-107">[in] The name of the assembly to be loaded.</span></span>  
   
  `phndModule`  
- <span data-ttu-id="8e68b-108">[out] Dojście do załadowanego zestawu.</span><span class="sxs-lookup"><span data-stu-id="8e68b-108">[out] A handle to the loaded assembly.</span></span>  
+ <span data-ttu-id="886cd-108">[out] Dojście do załadowanego zestawu.</span><span class="sxs-lookup"><span data-stu-id="886cd-108">[out] A handle to the loaded assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8e68b-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="8e68b-109">Return Value</span></span>  
- <span data-ttu-id="8e68b-110">Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="8e68b-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="886cd-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="886cd-109">Return Value</span></span>  
+ <span data-ttu-id="886cd-110">Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="886cd-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="8e68b-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8e68b-111">HRESULT</span></span>|<span data-ttu-id="8e68b-112">Opis</span><span class="sxs-lookup"><span data-stu-id="8e68b-112">Description</span></span>|  
+|<span data-ttu-id="886cd-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="886cd-111">HRESULT</span></span>|<span data-ttu-id="886cd-112">Opis</span><span class="sxs-lookup"><span data-stu-id="886cd-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8e68b-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="8e68b-113">S_OK</span></span>|<span data-ttu-id="8e68b-114">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="8e68b-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="8e68b-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="8e68b-115">E_POINTER</span></span>|<span data-ttu-id="8e68b-116">`pwzDllName` lub `phndModule` ma wartość null.</span><span class="sxs-lookup"><span data-stu-id="8e68b-116">`pwzDllName` or `phndModule` is null.</span></span>|  
-|<span data-ttu-id="8e68b-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="8e68b-117">E_OUTOFMEMORY</span></span>|<span data-ttu-id="8e68b-118">Za mało pamięci jest dostępna do obsługi żądania.</span><span class="sxs-lookup"><span data-stu-id="8e68b-118">Not enough memory is available to handle the request.</span></span>|  
+|<span data-ttu-id="886cd-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="886cd-113">S_OK</span></span>|<span data-ttu-id="886cd-114">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="886cd-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="886cd-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="886cd-115">E_POINTER</span></span>|<span data-ttu-id="886cd-116">`pwzDllName` lub `phndModule` ma wartość null.</span><span class="sxs-lookup"><span data-stu-id="886cd-116">`pwzDllName` or `phndModule` is null.</span></span>|  
+|<span data-ttu-id="886cd-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="886cd-117">E_OUTOFMEMORY</span></span>|<span data-ttu-id="886cd-118">Nie ma wystarczającej ilości pamięci dostępnej może obsłużyć żądania.</span><span class="sxs-lookup"><span data-stu-id="886cd-118">Not enough memory is available to handle the request.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8e68b-119">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8e68b-119">Remarks</span></span>  
- <span data-ttu-id="8e68b-120">Ta metoda ładuje tylko biblioteki DLL uwzględniona w pakiet redystrybucyjny programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8e68b-120">This method only loads DLLs included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="8e68b-121">Nie można załadować zestawów generowanych przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="8e68b-121">It can not load user-generated assemblies.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="886cd-119">Uwagi</span><span class="sxs-lookup"><span data-stu-id="886cd-119">Remarks</span></span>  
+ <span data-ttu-id="886cd-120">Ta metoda ładuje tylko pliki dll zawarte w pakiet redystrybucyjny programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="886cd-120">This method only loads DLLs included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="886cd-121">Nie można załadować zestawów generowanych przez użytkowników.</span><span class="sxs-lookup"><span data-stu-id="886cd-121">It can not load user-generated assemblies.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8e68b-122">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8e68b-122">Requirements</span></span>  
- <span data-ttu-id="8e68b-123">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8e68b-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="886cd-122">Wymagania</span><span class="sxs-lookup"><span data-stu-id="886cd-122">Requirements</span></span>  
+ <span data-ttu-id="886cd-123">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="886cd-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8e68b-124">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="8e68b-124">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="886cd-124">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="886cd-124">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="8e68b-125">**Biblioteka:** uwzględnione jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8e68b-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="886cd-125">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="886cd-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8e68b-126">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e68b-126">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="886cd-126">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="886cd-126">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8e68b-127">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="8e68b-127">See Also</span></span>  
- [<span data-ttu-id="8e68b-128">ICLRRuntimeInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="8e68b-128">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [<span data-ttu-id="8e68b-129">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="8e68b-129">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [<span data-ttu-id="8e68b-130">Hosting</span><span class="sxs-lookup"><span data-stu-id="8e68b-130">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="886cd-127">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="886cd-127">See also</span></span>
+- [<span data-ttu-id="886cd-128">ICLRRuntimeInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="886cd-128">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="886cd-129">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="886cd-129">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="886cd-130">Hosting</span><span class="sxs-lookup"><span data-stu-id="886cd-130">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

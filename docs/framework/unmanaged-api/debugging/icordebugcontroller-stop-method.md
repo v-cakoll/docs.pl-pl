@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cd0fc9f86515d63533275002301eb47f11feebb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4cb5b091aadbdd503dd7988f713f40a00876a2dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608329"
 ---
-# <a name="icordebugcontrollerstop-method"></a><span data-ttu-id="7687d-102">ICorDebugController::Stop — Metoda</span><span class="sxs-lookup"><span data-stu-id="7687d-102">ICorDebugController::Stop Method</span></span>
-<span data-ttu-id="7687d-103">Wykonuje wspólne Zatrzymaj wszystkie wątki uruchomione kodu zarządzanego w procesie.</span><span class="sxs-lookup"><span data-stu-id="7687d-103">Performs a cooperative stop on all threads that are running managed code in the process.</span></span>  
+# <a name="icordebugcontrollerstop-method"></a><span data-ttu-id="3bd10-102">ICorDebugController::Stop — Metoda</span><span class="sxs-lookup"><span data-stu-id="3bd10-102">ICorDebugController::Stop Method</span></span>
+<span data-ttu-id="3bd10-103">Wykonuje wspólne stop we wszystkich wątkach, na których uruchomiono kod zarządzany w procesie.</span><span class="sxs-lookup"><span data-stu-id="3bd10-103">Performs a cooperative stop on all threads that are running managed code in the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7687d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7687d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3bd10-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3bd10-104">Syntax</span></span>  
   
 ```  
 HRESULT Stop (  
@@ -35,26 +35,26 @@ HRESULT Stop (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7687d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="7687d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3bd10-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="3bd10-105">Parameters</span></span>  
  `dwTimeoutIgnored`  
- <span data-ttu-id="7687d-106">Nie używany.</span><span class="sxs-lookup"><span data-stu-id="7687d-106">Not used.</span></span>  
+ <span data-ttu-id="3bd10-106">Nie używany.</span><span class="sxs-lookup"><span data-stu-id="3bd10-106">Not used.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7687d-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="7687d-107">Remarks</span></span>  
- <span data-ttu-id="7687d-108">`Stop` wykonuje kod stop współpracy na wszystkie wątki uruchomione zarządzanych w procesie.</span><span class="sxs-lookup"><span data-stu-id="7687d-108">`Stop` performs a cooperative stop on all threads running managed code in the process.</span></span> <span data-ttu-id="7687d-109">Podczas sesji debugowania tylko do zarządzanych wątków niezarządzane może kontynuować działanie (ale będą blokowane podczas próby wywołania kodu zarządzanego).</span><span class="sxs-lookup"><span data-stu-id="7687d-109">During a managed-only debugging session, unmanaged threads may continue to run (but will be blocked when trying to call managed code).</span></span> <span data-ttu-id="7687d-110">Podczas sesji debugowania interop również zostaną zatrzymane niezarządzanych wątków.</span><span class="sxs-lookup"><span data-stu-id="7687d-110">During an interop debugging session, unmanaged threads will also be stopped.</span></span> <span data-ttu-id="7687d-111">`dwTimeoutIgnored` Wartość jest obecnie zignorowana i potraktowana jako INFINITE (-1).</span><span class="sxs-lookup"><span data-stu-id="7687d-111">The `dwTimeoutIgnored` value is currently ignored and treated as INFINITE (-1).</span></span> <span data-ttu-id="7687d-112">Jeśli współpracy stop zakończy się niepowodzeniem z powodu zakleszczenia, wszystkie wątki są wstrzymane i E_TIMEOUT jest zwracany.</span><span class="sxs-lookup"><span data-stu-id="7687d-112">If the cooperative stop fails due to a deadlock, all threads are suspended and E_TIMEOUT is returned.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3bd10-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3bd10-107">Remarks</span></span>  
+ <span data-ttu-id="3bd10-108">`Stop` wykonuje kod zatrzymania współpracy na wszystkie wątki uruchomione zarządzanych w procesie.</span><span class="sxs-lookup"><span data-stu-id="3bd10-108">`Stop` performs a cooperative stop on all threads running managed code in the process.</span></span> <span data-ttu-id="3bd10-109">Podczas sesji debugowania tylko do zarządzanych niezarządzanych wątków może kontynuować działanie (ale będą blokowane podczas próby wywołania kodu zarządzanego).</span><span class="sxs-lookup"><span data-stu-id="3bd10-109">During a managed-only debugging session, unmanaged threads may continue to run (but will be blocked when trying to call managed code).</span></span> <span data-ttu-id="3bd10-110">Podczas debugowania międzyoperacyjnego sesji również zostaną zatrzymane niezarządzanych wątków.</span><span class="sxs-lookup"><span data-stu-id="3bd10-110">During an interop debugging session, unmanaged threads will also be stopped.</span></span> <span data-ttu-id="3bd10-111">`dwTimeoutIgnored` Wartość aktualnie jest ignorowany i traktowany jako NIESKOŃCZONE (-1).</span><span class="sxs-lookup"><span data-stu-id="3bd10-111">The `dwTimeoutIgnored` value is currently ignored and treated as INFINITE (-1).</span></span> <span data-ttu-id="3bd10-112">Jeśli współpracy stop zakończy się niepowodzeniem z powodu zakleszczenia, wszystkie wątki są wstrzymywane i E_TIMEOUT jest zwracana.</span><span class="sxs-lookup"><span data-stu-id="3bd10-112">If the cooperative stop fails due to a deadlock, all threads are suspended and E_TIMEOUT is returned.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="7687d-113">`Stop` jest to tylko synchroniczne metoda w interfejsie API debugowania.</span><span class="sxs-lookup"><span data-stu-id="7687d-113">`Stop` is the only synchronous method in the debugging API.</span></span> <span data-ttu-id="7687d-114">Gdy `Stop` zwraca wartość S_OK, proces został zatrzymany.</span><span class="sxs-lookup"><span data-stu-id="7687d-114">When `Stop` returns S_OK, the process is stopped.</span></span> <span data-ttu-id="7687d-115">Bez wywołania zwrotnego ma nadane uprawnienia do powiadamiania słuchaczy ogranicznika.</span><span class="sxs-lookup"><span data-stu-id="7687d-115">No callback is given to notify listeners of the stop.</span></span> <span data-ttu-id="7687d-116">Debuger musi wywołać [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) umożliwia wznowienie procesu.</span><span class="sxs-lookup"><span data-stu-id="7687d-116">The debugger must call [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) to allow the process to resume.</span></span>  
+>  <span data-ttu-id="3bd10-113">`Stop` jest tylko synchroniczne metody w interfejsie API debugowania.</span><span class="sxs-lookup"><span data-stu-id="3bd10-113">`Stop` is the only synchronous method in the debugging API.</span></span> <span data-ttu-id="3bd10-114">Gdy `Stop` zwraca wartość S_OK, proces został zatrzymany.</span><span class="sxs-lookup"><span data-stu-id="3bd10-114">When `Stop` returns S_OK, the process is stopped.</span></span> <span data-ttu-id="3bd10-115">Nie wywołania zwrotnego otrzymuje o ogranicznika.</span><span class="sxs-lookup"><span data-stu-id="3bd10-115">No callback is given to notify listeners of the stop.</span></span> <span data-ttu-id="3bd10-116">Debuger musi wywołać [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) umożliwia wznowienie procesu.</span><span class="sxs-lookup"><span data-stu-id="3bd10-116">The debugger must call [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) to allow the process to resume.</span></span>  
   
- <span data-ttu-id="7687d-117">Debuger obsługuje licznika stop.</span><span class="sxs-lookup"><span data-stu-id="7687d-117">The debugger maintains a stop counter.</span></span> <span data-ttu-id="7687d-118">Gdy licznik przechodzi do zera, kontrolerem jest wznawiana.</span><span class="sxs-lookup"><span data-stu-id="7687d-118">When the counter goes to zero, the controller is resumed.</span></span> <span data-ttu-id="7687d-119">Każde wywołanie `Stop` lub każdego wysyłanego wywołania zwrotnego zwiększa licznik.</span><span class="sxs-lookup"><span data-stu-id="7687d-119">Each call to `Stop` or each dispatched callback increments the counter.</span></span> <span data-ttu-id="7687d-120">Każde wywołanie `ICorDebugController::Continue` zmniejsza licznika.</span><span class="sxs-lookup"><span data-stu-id="7687d-120">Each call to `ICorDebugController::Continue` decrements the counter.</span></span>  
+ <span data-ttu-id="3bd10-117">Debuger obsługuje licznika zatrzymania.</span><span class="sxs-lookup"><span data-stu-id="3bd10-117">The debugger maintains a stop counter.</span></span> <span data-ttu-id="3bd10-118">Gdy licznik zbliża się do zera, jest wznawiany kontrolera.</span><span class="sxs-lookup"><span data-stu-id="3bd10-118">When the counter goes to zero, the controller is resumed.</span></span> <span data-ttu-id="3bd10-119">Każde wywołanie `Stop` lub każdego wysłane wywołanie zwrotne zwiększa wartość licznika.</span><span class="sxs-lookup"><span data-stu-id="3bd10-119">Each call to `Stop` or each dispatched callback increments the counter.</span></span> <span data-ttu-id="3bd10-120">Każde wywołanie `ICorDebugController::Continue` zmniejsza wartość licznika.</span><span class="sxs-lookup"><span data-stu-id="3bd10-120">Each call to `ICorDebugController::Continue` decrements the counter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7687d-121">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7687d-121">Requirements</span></span>  
- <span data-ttu-id="7687d-122">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7687d-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3bd10-121">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3bd10-121">Requirements</span></span>  
+ <span data-ttu-id="3bd10-122">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3bd10-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7687d-123">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7687d-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3bd10-123">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3bd10-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7687d-124">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7687d-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3bd10-124">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3bd10-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7687d-125">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7687d-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3bd10-125">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3bd10-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7687d-126">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7687d-126">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="3bd10-126">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3bd10-126">See also</span></span>
+

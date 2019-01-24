@@ -2,23 +2,23 @@
 title: CoordinatorRecoveryLogEntryCorrupt
 ms.date: 03/30/2017
 ms.assetid: 3cd0c3e3-84c8-4d43-a561-a8851c78e565
-ms.openlocfilehash: 3f51d1269f5ca89f4f02257c8accef3423aa7eb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0dc74b784d8a9ed3ab27bb4b8d3de34143f6ce07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639487"
 ---
-# <a name="coordinatorrecoverylogentrycorrupt"></a><span data-ttu-id="63aa1-102">CoordinatorRecoveryLogEntryCorrupt</span><span class="sxs-lookup"><span data-stu-id="63aa1-102">CoordinatorRecoveryLogEntryCorrupt</span></span>
-<span data-ttu-id="63aa1-103">Identyfikator: 139</span><span class="sxs-lookup"><span data-stu-id="63aa1-103">Id: 139</span></span>  
+# <a name="coordinatorrecoverylogentrycorrupt"></a><span data-ttu-id="d6762-102">CoordinatorRecoveryLogEntryCorrupt</span><span class="sxs-lookup"><span data-stu-id="d6762-102">CoordinatorRecoveryLogEntryCorrupt</span></span>
+<span data-ttu-id="d6762-103">Id: 139</span><span class="sxs-lookup"><span data-stu-id="d6762-103">Id: 139</span></span>  
   
- <span data-ttu-id="63aa1-104">Ważność: błąd</span><span class="sxs-lookup"><span data-stu-id="63aa1-104">Severity: Error</span></span>  
+ <span data-ttu-id="d6762-104">Ważność: Błąd</span><span class="sxs-lookup"><span data-stu-id="d6762-104">Severity: Error</span></span>  
   
- <span data-ttu-id="63aa1-105">Kategoria: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="63aa1-105">Category: TransactionBridge</span></span>  
+ <span data-ttu-id="d6762-105">Kategoria: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="d6762-105">Category: TransactionBridge</span></span>  
   
-## <a name="description"></a><span data-ttu-id="63aa1-106">Opis</span><span class="sxs-lookup"><span data-stu-id="63aa1-106">Description</span></span>  
- <span data-ttu-id="63aa1-107">To zdarzenie oznacza, że pozycji dziennika odzyskiwania koordynatora był uszkodzony i nie może być zdeserializowany.</span><span class="sxs-lookup"><span data-stu-id="63aa1-107">This event indicates that a  coordinator recovery log entry was corrupt and could not be deserialized.</span></span> <span data-ttu-id="63aa1-108">Z tego błędu może spowodować utratę danych.</span><span class="sxs-lookup"><span data-stu-id="63aa1-108">Data loss may result from this error.</span></span> <span data-ttu-id="63aa1-109">Listy zdarzeń identyfikator transakcji, dane odzyskiwania (kodowanie Base64), wyjątek, nazwa procesu i procesu identyfikatora.</span><span class="sxs-lookup"><span data-stu-id="63aa1-109">The event lists the Transaction ID, Recovery data (Base64 encoded), exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="d6762-106">Opis</span><span class="sxs-lookup"><span data-stu-id="d6762-106">Description</span></span>  
+ <span data-ttu-id="d6762-107">To zdarzenie oznacza, że wpis dziennika odzyskiwania koordynatora został uszkodzony i nie może być zdeserializowany.</span><span class="sxs-lookup"><span data-stu-id="d6762-107">This event indicates that a  coordinator recovery log entry was corrupt and could not be deserialized.</span></span> <span data-ttu-id="d6762-108">Z tego błędu może spowodować utratę danych.</span><span class="sxs-lookup"><span data-stu-id="d6762-108">Data loss may result from this error.</span></span> <span data-ttu-id="d6762-109">Listy zdarzeń identyfikator transakcji, odzyskiwania danych (kodowanie Base64), wyjątków, nazwa procesu i proces identyfikatora.</span><span class="sxs-lookup"><span data-stu-id="d6762-109">The event lists the Transaction ID, Recovery data (Base64 encoded), exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="63aa1-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="63aa1-110">See Also</span></span>  
- [<span data-ttu-id="63aa1-111">Rejestrowanie zdarzeń</span><span class="sxs-lookup"><span data-stu-id="63aa1-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="63aa1-112">Informacje ogólne o zdarzeniach</span><span class="sxs-lookup"><span data-stu-id="63aa1-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="d6762-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d6762-110">See also</span></span>
+- [<span data-ttu-id="d6762-111">Rejestrowanie zdarzeń</span><span class="sxs-lookup"><span data-stu-id="d6762-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [<span data-ttu-id="d6762-112">Informacje ogólne o zdarzeniach</span><span class="sxs-lookup"><span data-stu-id="d6762-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

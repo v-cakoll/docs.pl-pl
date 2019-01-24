@@ -1,6 +1,6 @@
 ---
-title: 'Porady: wpisywanie tekstu do pliku'
-ms.date: 03/30/2017
+title: 'Instrukcje: Zapisywanie tekstu do pliku'
+ms.date: 01/04/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,86 +13,62 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c637d9842c05f47bfcaa0431dd2f9f1ee29cc09
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93d87dc98284fad6b8159f681f7d99ce460d60d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524198"
 ---
-# <a name="how-to-write-text-to-a-file"></a><span data-ttu-id="0790d-102">Porady: wpisywanie tekstu do pliku</span><span class="sxs-lookup"><span data-stu-id="0790d-102">How to: Write Text to a File</span></span>
-<span data-ttu-id="0790d-103">Ten temat przedstawia różne sposoby można wpisać tekst w pliku dla aplikacji .NET Framework lub [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0790d-103">This topic shows different ways you can write text to a file for .NET Framework applications or [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span> <span data-ttu-id="0790d-104">Następujące klasy i metody są zwykle używane do zapisywanie tekstu do pliku:</span><span class="sxs-lookup"><span data-stu-id="0790d-104">The following classes and methods are typically used to write text to a file:</span></span>  
-  
--   <span data-ttu-id="0790d-105"><xref:System.IO.StreamWriter> — zawiera metody służące do zapisu do pliku synchronicznie (<xref:System.IO.StreamWriter.Write%2A> lub <xref:System.IO.TextWriter.WriteLine%2A>) lub asynchronicznie (<xref:System.IO.StreamWriter.WriteAsync%2A> i <xref:System.IO.StreamWriter.WriteLineAsync%2A>).</span><span class="sxs-lookup"><span data-stu-id="0790d-105"><xref:System.IO.StreamWriter> - it contains methods to write to a file synchronously (<xref:System.IO.StreamWriter.Write%2A> or <xref:System.IO.TextWriter.WriteLine%2A>) or asynchronously (<xref:System.IO.StreamWriter.WriteAsync%2A> and <xref:System.IO.StreamWriter.WriteLineAsync%2A>).</span></span>  
-  
--   <span data-ttu-id="0790d-106"><xref:System.IO.File> — do użycia w aplikacjach .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0790d-106"><xref:System.IO.File> – to be used with .NET Framework applications.</span></span> <span data-ttu-id="0790d-107">Zapewnia metody statyczne próbę zapisania tekstu do pliku, taką jak <xref:System.IO.File.WriteAllLines%2A> i <xref:System.IO.File.WriteAllText%2A>, lub dołączyć tekst do pliku (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> lub <xref:System.IO.File.AppendText%2A>).</span><span class="sxs-lookup"><span data-stu-id="0790d-107">It provides static methods to write text to a file such as <xref:System.IO.File.WriteAllLines%2A> and <xref:System.IO.File.WriteAllText%2A>, or to append text to a file (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> or <xref:System.IO.File.AppendText%2A>).</span></span>  
-  
--   <span data-ttu-id="0790d-108"><xref:Windows.Storage.FileIO> — do użycia z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0790d-108"><xref:Windows.Storage.FileIO> - to be used with [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span> <span data-ttu-id="0790d-109">Zawiera on metod asynchronicznych próbę zapisania tekstu do pliku (<xref:Windows.Storage.FileIO.WriteLinesAsync%2A> lub <xref:Windows.Storage.FileIO.WriteTextAsync%2A>) lub dołączyć tekst do pliku (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> lub <xref:Windows.Storage.FileIO.AppendTextAsync%2A>).</span><span class="sxs-lookup"><span data-stu-id="0790d-109">It contains asynchronous methods to write text to a file (<xref:Windows.Storage.FileIO.WriteLinesAsync%2A> or <xref:Windows.Storage.FileIO.WriteTextAsync%2A>) or to append text to a file (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> or <xref:Windows.Storage.FileIO.AppendTextAsync%2A>).</span></span>  
+# <a name="how-to-write-text-to-a-file"></a><span data-ttu-id="4374f-102">Instrukcje: Zapisywanie tekstu do pliku</span><span class="sxs-lookup"><span data-stu-id="4374f-102">How to: Write text to a file</span></span>
+<span data-ttu-id="4374f-103">W tym temacie przedstawiono różne sposoby zapisywanie tekstu do pliku dla aplikacji platformy .NET.</span><span class="sxs-lookup"><span data-stu-id="4374f-103">This topic shows different ways to write text to a file for a .NET app.</span></span> 
 
-- <span data-ttu-id="0790d-110"><xref:System.IO.Path> — do użycia na ciągi, które zawierają informacje o ścieżce pliku lub katalogu.</span><span class="sxs-lookup"><span data-stu-id="0790d-110"><xref:System.IO.Path> - to be used on strings that contain file or directory path information.</span></span> <span data-ttu-id="0790d-111">Zawiera on <xref:System.IO.Path.Combine%2A> metody, która umożliwia łączenie ciągów, aby zbudować ścieżki pliku lub katalogu.</span><span class="sxs-lookup"><span data-stu-id="0790d-111">It contains the <xref:System.IO.Path.Combine%2A> method, which allows concatenation of strings to build a file or directory path.</span></span>
+<span data-ttu-id="4374f-104">Następujące klasy i metody są zwykle używane do zapisywanie tekstu do pliku:</span><span class="sxs-lookup"><span data-stu-id="4374f-104">The following classes and methods are typically used to write text to a file:</span></span>  
+  
+-   <span data-ttu-id="4374f-105"><xref:System.IO.StreamWriter> zawiera metody do zapisu do pliku synchronicznie (<xref:System.IO.StreamWriter.Write%2A> i <xref:System.IO.TextWriter.WriteLine%2A>) lub asynchronicznie (<xref:System.IO.StreamWriter.WriteAsync%2A> i <xref:System.IO.StreamWriter.WriteLineAsync%2A>).</span><span class="sxs-lookup"><span data-stu-id="4374f-105"><xref:System.IO.StreamWriter> contains methods to write to a file synchronously (<xref:System.IO.StreamWriter.Write%2A> and <xref:System.IO.TextWriter.WriteLine%2A>) or asynchronously (<xref:System.IO.StreamWriter.WriteAsync%2A> and <xref:System.IO.StreamWriter.WriteLineAsync%2A>).</span></span>  
+  
+-   <span data-ttu-id="4374f-106"><xref:System.IO.File> udostępnia metody statyczne do zapisywanie tekstu do pliku, taką jak <xref:System.IO.File.WriteAllLines%2A> i <xref:System.IO.File.WriteAllText%2A>, lub dołączyć tekst do pliku, taką jak <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A>, i <xref:System.IO.File.AppendText%2A>.</span><span class="sxs-lookup"><span data-stu-id="4374f-106"><xref:System.IO.File> provides static methods to write text to a file, such as <xref:System.IO.File.WriteAllLines%2A> and <xref:System.IO.File.WriteAllText%2A>, or to append text to a file, such as <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A>, and <xref:System.IO.File.AppendText%2A>.</span></span>  
+  
+- <span data-ttu-id="4374f-107"><xref:System.IO.Path> Służy do ciągów zawierających informacje o ścieżce pliku lub katalogu.</span><span class="sxs-lookup"><span data-stu-id="4374f-107"><xref:System.IO.Path> is for strings that have file or directory path information.</span></span> <span data-ttu-id="4374f-108">Zawiera on <xref:System.IO.Path.Combine%2A> metody i, w programie .NET Core 2.1 i nowsze, <xref:System.IO.Path.Join%2A> i <xref:System.IO.Path.TryJoin%2A> metod, które umożliwiają łączenie ciągów, aby zbudować ścieżki pliku lub katalogu.</span><span class="sxs-lookup"><span data-stu-id="4374f-108">It contains the <xref:System.IO.Path.Combine%2A> method and, in .NET Core 2.1 and later, the <xref:System.IO.Path.Join%2A> and <xref:System.IO.Path.TryJoin%2A> methods, which allow concatenation of strings to build a file or directory path.</span></span>
 
+> [!NOTE]
+> <span data-ttu-id="4374f-109">W poniższych przykładach pokazano minimalnej ilości kodu.</span><span class="sxs-lookup"><span data-stu-id="4374f-109">The following examples show only the minimum amount of code needed.</span></span> <span data-ttu-id="4374f-110">Aplikacja rzeczywistych zwykle zapewnia bardziej niezawodne sprawdzanie błędów i wyjątków.</span><span class="sxs-lookup"><span data-stu-id="4374f-110">A real-world app usually provides more robust error checking and exception handling.</span></span>  
+  
+## <a name="example-synchronously-write-text-with-streamwriter"></a><span data-ttu-id="4374f-111">Przykład: Synchronicznie wpisać tekst za pomocą StreamWriter</span><span class="sxs-lookup"><span data-stu-id="4374f-111">Example: Synchronously write text with StreamWriter</span></span>
 
- <span data-ttu-id="0790d-112">Przykłady te zostały uproszczone celu skupiania się na zadanie wykonywane.</span><span class="sxs-lookup"><span data-stu-id="0790d-112">The samples have been kept simple in order to focus on the task being performed.</span></span> <span data-ttu-id="0790d-113">Z tego powodu przykłady wykonać sprawdzanie błędów minimalny i obsługę wyjątków, jeśli istnieje.</span><span class="sxs-lookup"><span data-stu-id="0790d-113">For this reason, the samples perform minimal error checking and exception handling, if any.</span></span> <span data-ttu-id="0790d-114">Aplikacji rzeczywistych zwykle zapewnia bardziej niezawodne sprawdzanie błędów i wyjątków.</span><span class="sxs-lookup"><span data-stu-id="0790d-114">A real-world application generally provides more robust error checking and exception handling.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="0790d-115">Przykład</span><span class="sxs-lookup"><span data-stu-id="0790d-115">Example</span></span>  
- <span data-ttu-id="0790d-116">Poniższy przykład pokazuje, jak synchronicznie zapisywanie tekstu do nowego pliku przy użyciu <xref:System.IO.StreamWriter> klasy jeden wiersz w danym momencie.</span><span class="sxs-lookup"><span data-stu-id="0790d-116">The following example shows how to synchronously write text to a new file using the <xref:System.IO.StreamWriter> class, one line at a time.</span></span> <span data-ttu-id="0790d-117">Nowy plik tekstowy są zapisywane w folderze Moje dokumenty użytkownika.</span><span class="sxs-lookup"><span data-stu-id="0790d-117">The new text file is saved to the user's My Documents folder.</span></span> <span data-ttu-id="0790d-118">Ponieważ <xref:System.IO.StreamWriter> obiektu jest zadeklarowana i tworzone w `using` instrukcji <xref:System.IO.StreamWriter.Dispose%2A> wywoływana jest metoda, która automatycznie opróżnia i zamyka strumienia.</span><span class="sxs-lookup"><span data-stu-id="0790d-118">Because the <xref:System.IO.StreamWriter> object is declared and instantiated in a `using` statement, the <xref:System.IO.StreamWriter.Dispose%2A> method is invoked which automatically flushes and closes the stream.</span></span>  
-  
- [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeline)] 
- [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeline)]  
-  
-## <a name="example"></a><span data-ttu-id="0790d-119">Przykład</span><span class="sxs-lookup"><span data-stu-id="0790d-119">Example</span></span>  
- <span data-ttu-id="0790d-120">Poniższy przykład pokazuje, jak dołączyć tekst do istniejącego pliku przy użyciu <xref:System.IO.StreamWriter> klasy.</span><span class="sxs-lookup"><span data-stu-id="0790d-120">The following example shows how to append text to an existing file using the <xref:System.IO.StreamWriter> class.</span></span> <span data-ttu-id="0790d-121">Używa tego samego pliku tekstowego z poprzedniego przykładu.</span><span class="sxs-lookup"><span data-stu-id="0790d-121">It uses the same text file from the previous example.</span></span>  
-  
- [!code-csharp[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#appendtext)] 
- [!code-vb[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#appendtext)]     
-  
-## <a name="example"></a><span data-ttu-id="0790d-122">Przykład</span><span class="sxs-lookup"><span data-stu-id="0790d-122">Example</span></span>  
- <span data-ttu-id="0790d-123">Poniższy przykład pokazuje, jak asynchronicznie zapisywanie tekstu do nowego pliku przy użyciu <xref:System.IO.StreamWriter> klasy.</span><span class="sxs-lookup"><span data-stu-id="0790d-123">The following example shows how to asynchronously write text to a new file using the <xref:System.IO.StreamWriter> class.</span></span> <span data-ttu-id="0790d-124">Aby można było wywołać <xref:System.IO.StreamWriter.WriteAsync%2A> metoda, wywołanie metody musi mieścić się w `async` metody.</span><span class="sxs-lookup"><span data-stu-id="0790d-124">In order to invoke the <xref:System.IO.StreamWriter.WriteAsync%2A> method, the method call needs to be within an `async` method.</span></span> <span data-ttu-id="0790d-125">Nowy plik tekstowy są zapisywane w folderze Moje dokumenty użytkownika.</span><span class="sxs-lookup"><span data-stu-id="0790d-125">The new text file is saved to the user's My Documents folder.</span></span>  
-  
- [!code-csharp[Conceptual.BasicIO.TextFiles#WriteAsync](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeasync)] 
- [!code-vb[Conceptual.BasicIO.TextFiles#WriteAsync](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeasync)]  
-  
-## <a name="example"></a><span data-ttu-id="0790d-126">Przykład</span><span class="sxs-lookup"><span data-stu-id="0790d-126">Example</span></span>  
- <span data-ttu-id="0790d-127">Poniższy przykład pokazuje, jak zapisywanie tekstu do nowego pliku i dołączyć nowe wiersze tekstu do tego samego pliku przy użyciu <xref:System.IO.File> klasy.</span><span class="sxs-lookup"><span data-stu-id="0790d-127">The following example shows how to write text to a new file and append new lines of text to the same file using the <xref:System.IO.File> class.</span></span> <span data-ttu-id="0790d-128"><xref:System.IO.File.WriteAllText%2A> i <xref:System.IO.File.AppendAllLines%2A> metod Otwórz i zamknij plik automatycznie.</span><span class="sxs-lookup"><span data-stu-id="0790d-128">The <xref:System.IO.File.WriteAllText%2A> and <xref:System.IO.File.AppendAllLines%2A> methods open and close the file automatically.</span></span> <span data-ttu-id="0790d-129">Jeśli ścieżka uzyskiwanie <xref:System.IO.File.WriteAllText%2A> metody już istnieje, plik zostanie zastąpiony.</span><span class="sxs-lookup"><span data-stu-id="0790d-129">If the path you provide to the <xref:System.IO.File.WriteAllText%2A> method already exists, the file will be overwritten.</span></span>  
-  
- [!code-csharp[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writefile)] 
- [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
-  
-## <a name="example"></a><span data-ttu-id="0790d-130">Przykład</span><span class="sxs-lookup"><span data-stu-id="0790d-130">Example</span></span>  
- <span data-ttu-id="0790d-131">Poniższy przykład pokazuje, jak asynchronicznego zapisu danych wejściowych użytkownika do pliku tekstowego w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0790d-131">The following example shows how to asynchronously write user input to a text file in a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app.</span></span> <span data-ttu-id="0790d-132">Ze względów bezpieczeństwa, otwierając plik z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji zwykle wymaga użycia <xref:Windows.Storage.Pickers.FileOpenPicker> kontroli.</span><span class="sxs-lookup"><span data-stu-id="0790d-132">Because of security considerations, opening a file from a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app typically requires the use of a <xref:Windows.Storage.Pickers.FileOpenPicker> control.</span></span> <span data-ttu-id="0790d-133">W tym przykładzie `FileOpenPicker` jest filtrowany w celu wyświetlania plików tekstowych.</span><span class="sxs-lookup"><span data-stu-id="0790d-133">In this example, the `FileOpenPicker` is filtered to show text files.</span></span>  
-  
-```xaml  
-<Page  
-    x:Class="OpenFileWindowsStore.MainPage"  
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-    xmlns:local="using:OpenFileWindowsStore"  
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
-    mc:Ignorable="d">  
-  
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">  
-        <Button Content="save text to a file" HorizontalAlignment="Left" Margin="103,417,0,0" VerticalAlignment="Top"   
-                Width="329" Height="86" FontSize="35" Click="Button_Click"/>  
-        <TextBox Name="UserInputTextBox"  FontSize="18" HorizontalAlignment="Left" Margin="106,146,0,0"   
-                 TextWrapping="Wrap" Text="Write some text here, and select a file to write it to." VerticalAlignment="Top"   
-                 Height="201" Width="558" AcceptsReturn="True"/>  
-        <TextBlock Name="StatusTextBox" HorizontalAlignment="Left" Margin="106,570,0,147" TextWrapping="Wrap" Text="Status:"   
-                   VerticalAlignment="Center" Height="51" Width="1074" FontSize="18" />  
-    </Grid>  
-</Page>  
-```  
-  
- [!code-csharp[OpenFileWindowsStore#Code](../../../samples/snippets/csharp/VS_Snippets_CLR/openfilewindowsstore/cs/mainpage.xaml.cs#code)]
- [!code-vb[OpenFileWindowsStore#Code](../../../samples/snippets/visualbasic/VS_Snippets_CLR/openfilewindowsstore/vb/mainpage.xaml.vb#code)]  
-  
-## <a name="see-also"></a><span data-ttu-id="0790d-134">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0790d-134">See also</span></span>
+<span data-ttu-id="4374f-112">Poniższy przykład pokazuje, jak używać <xref:System.IO.StreamWriter> klasy synchronicznie zapisywanie tekstu do nowego jeden wiersz pliku naraz.</span><span class="sxs-lookup"><span data-stu-id="4374f-112">The following example shows how to use the <xref:System.IO.StreamWriter> class to synchronously write text to a new file one line at a time.</span></span> <span data-ttu-id="4374f-113">Ponieważ <xref:System.IO.StreamWriter> obiektu jest zadeklarowana i tworzone w `using` instrukcji <xref:System.IO.StreamWriter.Dispose%2A> wywoływana jest metoda, która automatycznie opróżnia i zamyka strumienia.</span><span class="sxs-lookup"><span data-stu-id="4374f-113">Because the <xref:System.IO.StreamWriter> object is declared and instantiated in a `using` statement, the <xref:System.IO.StreamWriter.Dispose%2A> method is invoked, which automatically flushes and closes the stream.</span></span>  
 
-- <xref:System.IO.StreamWriter>  
-- <xref:System.IO.Path>  
-- <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
-- [<span data-ttu-id="0790d-135">Instrukcje: wyliczanie katalogów i plików</span><span class="sxs-lookup"><span data-stu-id="0790d-135">How to: Enumerate Directories and Files</span></span>](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [<span data-ttu-id="0790d-136">Instrukcje: odczyt i zapis we właśnie utworzonym pliku danych</span><span class="sxs-lookup"><span data-stu-id="0790d-136">How to: Read and Write to a Newly Created Data File</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [<span data-ttu-id="0790d-137">Instrukcje: otwieranie pliku dziennika i dołączanie do niego</span><span class="sxs-lookup"><span data-stu-id="0790d-137">How to: Open and Append to a Log File</span></span>](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [<span data-ttu-id="0790d-138">Instrukcje: odczytywanie tekstu z pliku</span><span class="sxs-lookup"><span data-stu-id="0790d-138">How to: Read Text from a File</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [<span data-ttu-id="0790d-139">We/Wy plików i strumieni</span><span class="sxs-lookup"><span data-stu-id="0790d-139">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)
+[!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/write.cs)] 
+[!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/write.vb)]  
+
+## <a name="example-synchronously-append-text-with-streamwriter"></a><span data-ttu-id="4374f-114">Przykład: Synchronicznie dołączyć tekst za pomocą StreamWriter</span><span class="sxs-lookup"><span data-stu-id="4374f-114">Example: Synchronously append text with StreamWriter</span></span>
+
+<span data-ttu-id="4374f-115">Poniższy przykład pokazuje, jak używać <xref:System.IO.StreamWriter> klasy synchronicznie dołączyć tekst do pliku tekstowego, utworzony w pierwszym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="4374f-115">The following example shows how to use the <xref:System.IO.StreamWriter> class to synchronously append text to the text file created in the first example.</span></span>   
+
+[!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/append.cs)] 
+[!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/append.vb)]  
+
+## <a name="example-asynchronously-write-text-with-streamwriter"></a><span data-ttu-id="4374f-116">Przykład: Asynchronicznie zapis tekstu za pomocą StreamWriter</span><span class="sxs-lookup"><span data-stu-id="4374f-116">Example: Asynchronously write text with StreamWriter</span></span>
+
+<span data-ttu-id="4374f-117">Poniższy przykład pokazuje, jak asynchronicznie zapisywanie tekstu do nowego pliku przy użyciu <xref:System.IO.StreamWriter> klasy.</span><span class="sxs-lookup"><span data-stu-id="4374f-117">The following example shows how to asynchronously write text to a new file using the <xref:System.IO.StreamWriter> class.</span></span> <span data-ttu-id="4374f-118">Aby wywołać <xref:System.IO.StreamWriter.WriteAsync%2A> metody wywołania metody które muszą znajdować się w `async` metody.</span><span class="sxs-lookup"><span data-stu-id="4374f-118">To invoke the <xref:System.IO.StreamWriter.WriteAsync%2A> method, the method call must be within an `async` method.</span></span> <span data-ttu-id="4374f-119">C# Przykład wymaga C# 7.1 lub nowszej, który dodaje obsługę `async` modyfikator dla punktu wejścia programu.</span><span class="sxs-lookup"><span data-stu-id="4374f-119">The C# example requires C# 7.1 or later, which adds support for the `async` modifier on the program entry point.</span></span> 
+
+[!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/async.cs)] 
+[!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/async.vb)]  
+
+## <a name="example-write-and-append-text-with-the-file-class"></a><span data-ttu-id="4374f-120">Przykład: Pisanie i dołączyć tekst z klasą plików</span><span class="sxs-lookup"><span data-stu-id="4374f-120">Example: Write and append text with the File class</span></span>
+
+<span data-ttu-id="4374f-121">Poniższy przykład pokazuje, jak zapisywanie tekstu do nowego pliku i dołączyć nowe wiersze tekstu do tego samego pliku przy użyciu <xref:System.IO.File> klasy.</span><span class="sxs-lookup"><span data-stu-id="4374f-121">The following example shows how to write text to a new file and append new lines of text to the same file using the <xref:System.IO.File> class.</span></span> <span data-ttu-id="4374f-122"><xref:System.IO.File.WriteAllText%2A> i <xref:System.IO.File.AppendAllLines%2A> metod Otwórz i zamknij plik automatycznie.</span><span class="sxs-lookup"><span data-stu-id="4374f-122">The <xref:System.IO.File.WriteAllText%2A> and <xref:System.IO.File.AppendAllLines%2A> methods open and close the file automatically.</span></span> <span data-ttu-id="4374f-123">Jeśli ścieżka uzyskiwanie <xref:System.IO.File.WriteAllText%2A> metody już istnieje, zostanie on zastąpiony.</span><span class="sxs-lookup"><span data-stu-id="4374f-123">If the path you provide to the <xref:System.IO.File.WriteAllText%2A> method already exists, the file is overwritten.</span></span>  
+
+[!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/file.cs)] 
+[!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/file.vb)]  
+
+## <a name="see-also"></a><span data-ttu-id="4374f-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4374f-124">See also</span></span>
+
+- <xref:System.IO.StreamWriter>
+- <xref:System.IO.Path>
+- <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>
+- [<span data-ttu-id="4374f-125">Instrukcje: Wyliczanie katalogów i plików</span><span class="sxs-lookup"><span data-stu-id="4374f-125">How to: Enumerate directories and files</span></span>](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [<span data-ttu-id="4374f-126">Instrukcje: Odczyt i zapis do pliku danych nowo utworzone</span><span class="sxs-lookup"><span data-stu-id="4374f-126">How to: Read and write to a newly-created data file</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [<span data-ttu-id="4374f-127">Instrukcje: Otwieranie i dołączanie do pliku dziennika</span><span class="sxs-lookup"><span data-stu-id="4374f-127">How to: Open and append to a log file</span></span>](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [<span data-ttu-id="4374f-128">Instrukcje: Odczytywanie tekstu z pliku</span><span class="sxs-lookup"><span data-stu-id="4374f-128">How to: Read text from a file</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [<span data-ttu-id="4374f-129">We/Wy plików i strumieni</span><span class="sxs-lookup"><span data-stu-id="4374f-129">File and stream I/O</span></span>](../../../docs/standard/io/index.md)

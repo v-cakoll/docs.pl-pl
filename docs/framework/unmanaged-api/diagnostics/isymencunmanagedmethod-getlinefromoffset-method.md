@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29990ad6a94f063577236bdbc84d02d4d2b4b2f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98015af4a79a9fca4945708e6d0baeb61e46876f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531229"
 ---
-# <a name="isymencunmanagedmethodgetlinefromoffset-method"></a><span data-ttu-id="503e8-102">ISymENCUnmanagedMethod::GetLineFromOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="503e8-102">ISymENCUnmanagedMethod::GetLineFromOffset Method</span></span>
-<span data-ttu-id="503e8-103">Pobiera informacje o wiersz skojarzony z przesunięciem.</span><span class="sxs-lookup"><span data-stu-id="503e8-103">Gets the line information associated with an offset.</span></span> <span data-ttu-id="503e8-104">Jeśli parametr offset (`dwOffset`) nie jest punktu sekwencji, ta metoda pobiera informacje o wiersz skojarzony z poprzednich przesunięcie.</span><span class="sxs-lookup"><span data-stu-id="503e8-104">If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.</span></span>  
+# <a name="isymencunmanagedmethodgetlinefromoffset-method"></a><span data-ttu-id="f0efb-102">ISymENCUnmanagedMethod::GetLineFromOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="f0efb-102">ISymENCUnmanagedMethod::GetLineFromOffset Method</span></span>
+<span data-ttu-id="f0efb-103">Pobiera informacje o wiersz skojarzony z przesunięcia.</span><span class="sxs-lookup"><span data-stu-id="f0efb-103">Gets the line information associated with an offset.</span></span> <span data-ttu-id="f0efb-104">Jeśli parametr offset (`dwOffset`) nie jest punktem sekwencji, ta metoda pobiera informacje o wiersz skojarzony z poprzednim przesunięcie.</span><span class="sxs-lookup"><span data-stu-id="f0efb-104">If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="503e8-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="503e8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f0efb-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="f0efb-105">Syntax</span></span>  
   
 ```  
 HRESULT GetLineFromOffset(  
@@ -39,30 +39,30 @@ HRESULT GetLineFromOffset(
      [out] ULONG32*  pdwStartOffset);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="503e8-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="503e8-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f0efb-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="f0efb-106">Parameters</span></span>  
  `dwOffset`  
- <span data-ttu-id="503e8-107">[in] A `ULONG32` zawiera przesunięcie.</span><span class="sxs-lookup"><span data-stu-id="503e8-107">[in] A `ULONG32` that contains the offset.</span></span>  
+ <span data-ttu-id="f0efb-107">[in] Element `ULONG32` zawiera przesunięcie.</span><span class="sxs-lookup"><span data-stu-id="f0efb-107">[in] A `ULONG32` that contains the offset.</span></span>  
   
  `pline`  
- <span data-ttu-id="503e8-108">[out] Wskaźnik do `ULONG32` odbierająca wiersza.</span><span class="sxs-lookup"><span data-stu-id="503e8-108">[out] A pointer to a `ULONG32` that receives the line.</span></span>  
+ <span data-ttu-id="f0efb-108">[out] Wskaźnik do `ULONG32` odbierająca wiersza.</span><span class="sxs-lookup"><span data-stu-id="f0efb-108">[out] A pointer to a `ULONG32` that receives the line.</span></span>  
   
  `pcolumn`  
- <span data-ttu-id="503e8-109">[out] Wskaźnik do `ULONG32` odbierająca kolumny.</span><span class="sxs-lookup"><span data-stu-id="503e8-109">[out] A pointer to a `ULONG32` that receives the column.</span></span>  
+ <span data-ttu-id="f0efb-109">[out] Wskaźnik do `ULONG32` kolumny, która otrzymuje.</span><span class="sxs-lookup"><span data-stu-id="f0efb-109">[out] A pointer to a `ULONG32` that receives the column.</span></span>  
   
  `pendLine`  
- <span data-ttu-id="503e8-110">[out] Wskaźnik do `ULONG32` odbierająca zakończyć wiersza.</span><span class="sxs-lookup"><span data-stu-id="503e8-110">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
+ <span data-ttu-id="f0efb-110">[out] Wskaźnik do `ULONG32` odbierająca zakończyć wiersza.</span><span class="sxs-lookup"><span data-stu-id="f0efb-110">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
   
  `pendColumn`  
- <span data-ttu-id="503e8-111">[out] Wskaźnik do `ULONG32` odbierająca końcowa kolumny.</span><span class="sxs-lookup"><span data-stu-id="503e8-111">[out] A pointer to a `ULONG32` that receives the end column.</span></span>  
+ <span data-ttu-id="f0efb-111">[out] Wskaźnik do `ULONG32` końcowa kolumny, która otrzymuje.</span><span class="sxs-lookup"><span data-stu-id="f0efb-111">[out] A pointer to a `ULONG32` that receives the end column.</span></span>  
   
  `pdwStartOffset`  
- <span data-ttu-id="503e8-112">[out] Wskaźnik do `ULONG32` odbierająca punktu skojarzone sekwencji.</span><span class="sxs-lookup"><span data-stu-id="503e8-112">[out] A pointer to a `ULONG32` that receives the associated sequence point.</span></span>  
+ <span data-ttu-id="f0efb-112">[out] Wskaźnik do `ULONG32` odbierająca punktu sekwencji skojarzone.</span><span class="sxs-lookup"><span data-stu-id="f0efb-112">[out] A pointer to a `ULONG32` that receives the associated sequence point.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="503e8-113">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="503e8-113">Return Value</span></span>  
- <span data-ttu-id="503e8-114">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="503e8-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f0efb-113">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="f0efb-113">Return Value</span></span>  
+ <span data-ttu-id="f0efb-114">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="f0efb-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="503e8-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="503e8-115">Requirements</span></span>  
- <span data-ttu-id="503e8-116">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="503e8-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f0efb-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f0efb-115">Requirements</span></span>  
+ <span data-ttu-id="f0efb-116">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f0efb-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="503e8-117">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="503e8-117">See Also</span></span>  
- [<span data-ttu-id="503e8-118">ISymENCUnmanagedMethod, interfejs</span><span class="sxs-lookup"><span data-stu-id="503e8-118">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f0efb-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f0efb-117">See also</span></span>
+- [<span data-ttu-id="f0efb-118">ISymENCUnmanagedMethod, interfejs</span><span class="sxs-lookup"><span data-stu-id="f0efb-118">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

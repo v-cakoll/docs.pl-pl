@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrDIR_IllegalCall
 ms.assetid: 7b5d149f-be91-4ac3-8262-86a360894e7d
-ms.openlocfilehash: 3a271d7c2c2f7b98bae8f3f6fa9b67b65e3548f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7e9ef9cc6309f24ae9f8963e910b41180c029b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518491"
 ---
-# <a name="39dir39-function-must-first-be-called-with-a-39pathname39-argument"></a><span data-ttu-id="af382-102">&#39;Dir&#39; należy najpierw wywołać funkcję z &#39;PathName&#39; argumentu</span><span class="sxs-lookup"><span data-stu-id="af382-102">&#39;Dir&#39; function must first be called with a &#39;PathName&#39; argument</span></span>
-<span data-ttu-id="af382-103">Wywołanie początkowej `Dir` nie ma funkcji `PathName` argumentu.</span><span class="sxs-lookup"><span data-stu-id="af382-103">An initial call to the `Dir` function does not include the `PathName` argument.</span></span> <span data-ttu-id="af382-104">W pierwszym wywołaniu `Dir` musi zawierać `PathName`, ale kolejnych wywołań `Dir` nie trzeba podawać parametry do pobrania następnej.</span><span class="sxs-lookup"><span data-stu-id="af382-104">The first call to `Dir` must include a `PathName`, but subsequent calls to `Dir` do not need to include parameters to retrieve the next item.</span></span>  
+# <a name="39dir39-function-must-first-be-called-with-a-39pathname39-argument"></a><span data-ttu-id="11366-102">&#39;Dir&#39; należy najpierw wywołać funkcję z &#39;PathName&#39; argumentu</span><span class="sxs-lookup"><span data-stu-id="11366-102">&#39;Dir&#39; function must first be called with a &#39;PathName&#39; argument</span></span>
+<span data-ttu-id="11366-103">Początkowe wywołanie `Dir` nie ma funkcji `PathName` argumentu.</span><span class="sxs-lookup"><span data-stu-id="11366-103">An initial call to the `Dir` function does not include the `PathName` argument.</span></span> <span data-ttu-id="11366-104">Pierwsze wywołanie `Dir` musi zawierać `PathName`, ale kolejne wywołania `Dir` nie trzeba podawać parametrów, aby pobrać następny element.</span><span class="sxs-lookup"><span data-stu-id="11366-104">The first call to `Dir` must include a `PathName`, but subsequent calls to `Dir` do not need to include parameters to retrieve the next item.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="af382-105">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="af382-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="11366-105">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="11366-105">To correct this error</span></span>  
   
-1.  <span data-ttu-id="af382-106">Podaj `PathName` argument w wywołaniu funkcji.</span><span class="sxs-lookup"><span data-stu-id="af382-106">Supply a `PathName` argument in the function call.</span></span>  
+1.  <span data-ttu-id="11366-106">Podaj `PathName` argumentu w wywołaniu funkcji.</span><span class="sxs-lookup"><span data-stu-id="11366-106">Supply a `PathName` argument in the function call.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af382-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="af382-107">See Also</span></span>  
- <xref:Microsoft.VisualBasic.FileSystem.Dir%2A>
+## <a name="see-also"></a><span data-ttu-id="11366-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="11366-107">See also</span></span>
+- <xref:Microsoft.VisualBasic.FileSystem.Dir%2A>

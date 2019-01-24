@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4fd6102b65137a06009428c1245b80c0d44924a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4dd08afba664a491b3ba398f3da4c6a73cda5378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517139"
 ---
-# <a name="imetadataemitdefinetyperefbyname-method"></a><span data-ttu-id="83ad5-102">IMetaDataEmit::DefineTypeRefByName — Metoda</span><span class="sxs-lookup"><span data-stu-id="83ad5-102">IMetaDataEmit::DefineTypeRefByName Method</span></span>
-<span data-ttu-id="83ad5-103">Pobiera token metadanych dla typu, który jest zdefiniowany w określonym zakresie znajduje się poza bieżącym zakresem.</span><span class="sxs-lookup"><span data-stu-id="83ad5-103">Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.</span></span>  
+# <a name="imetadataemitdefinetyperefbyname-method"></a><span data-ttu-id="cc36b-102">IMetaDataEmit::DefineTypeRefByName — Metoda</span><span class="sxs-lookup"><span data-stu-id="cc36b-102">IMetaDataEmit::DefineTypeRefByName Method</span></span>
+<span data-ttu-id="cc36b-103">Pobiera token metadanych dla typu, który jest zdefiniowany w określonym zakresie, który znajduje się poza bieżącym zakresie.</span><span class="sxs-lookup"><span data-stu-id="cc36b-103">Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83ad5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="83ad5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cc36b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="cc36b-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineTypeRefByName (   
@@ -37,35 +37,35 @@ HRESULT DefineTypeRefByName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="83ad5-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="83ad5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="cc36b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="cc36b-105">Parameters</span></span>  
  `tkResolutionScope`  
- <span data-ttu-id="83ad5-106">[in] Token określający zakres rozpoznawania.</span><span class="sxs-lookup"><span data-stu-id="83ad5-106">[in] The token specifying the resolution scope.</span></span> <span data-ttu-id="83ad5-107">Następujące typy tokenów są prawidłowe:</span><span class="sxs-lookup"><span data-stu-id="83ad5-107">The following token types are valid:</span></span>  
+ <span data-ttu-id="cc36b-106">[in] Token, określając zakres rozwiązywania.</span><span class="sxs-lookup"><span data-stu-id="cc36b-106">[in] The token specifying the resolution scope.</span></span> <span data-ttu-id="cc36b-107">Następujące typy tokenów są prawidłowe:</span><span class="sxs-lookup"><span data-stu-id="cc36b-107">The following token types are valid:</span></span>  
   
--   <span data-ttu-id="83ad5-108">`mdModuleRef`, jeśli typ jest zdefiniowany w tym samym zestawie, w którym jest zdefiniowany element wywołujący.</span><span class="sxs-lookup"><span data-stu-id="83ad5-108">`mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.</span></span>  
+-   <span data-ttu-id="cc36b-108">`mdModuleRef`, jeśli typ jest zdefiniowany w tym samym zestawie, w którym zdefiniowano element wywołujący.</span><span class="sxs-lookup"><span data-stu-id="cc36b-108">`mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.</span></span>  
   
--   <span data-ttu-id="83ad5-109">`mdAssemblyRef`, jeśli typ jest zdefiniowany w zestawie innego niż ten, w którym jest zdefiniowany element wywołujący.</span><span class="sxs-lookup"><span data-stu-id="83ad5-109">`mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.</span></span>  
+-   <span data-ttu-id="cc36b-109">`mdAssemblyRef`, jeśli typ jest zdefiniowany w zestawie innym niż ten, w którym zdefiniowano element wywołujący.</span><span class="sxs-lookup"><span data-stu-id="cc36b-109">`mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.</span></span>  
   
--   <span data-ttu-id="83ad5-110">`mdTypeRef`, jeśli typ jest typem zagnieżdżonym.</span><span class="sxs-lookup"><span data-stu-id="83ad5-110">`mdTypeRef`, if the type is a nested type.</span></span>  
+-   <span data-ttu-id="cc36b-110">`mdTypeRef`, jeśli typ jest typem zagnieżdżonym.</span><span class="sxs-lookup"><span data-stu-id="cc36b-110">`mdTypeRef`, if the type is a nested type.</span></span>  
   
--   <span data-ttu-id="83ad5-111">`mdModule`, jeśli typ jest zdefiniowany w tym samym module, w którym jest zdefiniowany element wywołujący.</span><span class="sxs-lookup"><span data-stu-id="83ad5-111">`mdModule`, if the type is defined in the same module in which the caller is defined.</span></span>  
+-   <span data-ttu-id="cc36b-111">`mdModule`, jeśli typ jest zdefiniowany w tym samym module, w którym zdefiniowano element wywołujący.</span><span class="sxs-lookup"><span data-stu-id="cc36b-111">`mdModule`, if the type is defined in the same module in which the caller is defined.</span></span>  
   
--   <span data-ttu-id="83ad5-112">Wartość null, jeśli typ jest zdefiniowany globalnie.</span><span class="sxs-lookup"><span data-stu-id="83ad5-112">Null, if the type is defined globally.</span></span>  
+-   <span data-ttu-id="cc36b-112">Wartość null, jeśli typ jest zdefiniowany jako globalnie.</span><span class="sxs-lookup"><span data-stu-id="cc36b-112">Null, if the type is defined globally.</span></span>  
   
  `szName`  
- <span data-ttu-id="83ad5-113">[in] Nazwa typu docelowego w standardzie Unicode.</span><span class="sxs-lookup"><span data-stu-id="83ad5-113">[in] The name of the target type in Unicode.</span></span>  
+ <span data-ttu-id="cc36b-113">[in] Nazwa typu docelowego w formacie Unicode.</span><span class="sxs-lookup"><span data-stu-id="cc36b-113">[in] The name of the target type in Unicode.</span></span>  
   
  `ptr`  
- <span data-ttu-id="83ad5-114">[out] Wskaźnik do `mdTypeRef` token, który jest przypisany do typu.</span><span class="sxs-lookup"><span data-stu-id="83ad5-114">[out] A pointer to the `mdTypeRef` token that is assigned to the type.</span></span>  
+ <span data-ttu-id="cc36b-114">[out] Wskaźnik do `mdTypeRef` token, który jest przypisany do typu.</span><span class="sxs-lookup"><span data-stu-id="cc36b-114">[out] A pointer to the `mdTypeRef` token that is assigned to the type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="83ad5-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="83ad5-115">Requirements</span></span>  
- <span data-ttu-id="83ad5-116">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83ad5-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cc36b-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cc36b-115">Requirements</span></span>  
+ <span data-ttu-id="cc36b-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cc36b-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="83ad5-117">**Nagłówek:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="83ad5-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="cc36b-117">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="cc36b-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="83ad5-118">**Biblioteka:** używany jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="83ad5-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="cc36b-118">**Biblioteka:** Używany jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cc36b-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="83ad5-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83ad5-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cc36b-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cc36b-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83ad5-120">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="83ad5-120">See Also</span></span>  
- [<span data-ttu-id="83ad5-121">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="83ad5-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="83ad5-122">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="83ad5-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="cc36b-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cc36b-120">See also</span></span>
+- [<span data-ttu-id="cc36b-121">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="cc36b-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="cc36b-122">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="cc36b-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 9e1c38abd1c9cacfd4db953d9fb875437b2f1093
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9902333b892c6961a93bb3be6918c042cb72d70c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672165"
 ---
 # <a name="impersonating-the-client"></a>Personifikowanie klienta
 Personifikacja — przykład pokazuje, jak dokonać personifikacji aplikacji obiektu wywołującego na usługę tak, aby usługa może uzyskiwać dostęp do zasobów systemu imieniu obiekt wywołujący.  
@@ -125,4 +125,4 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
   
 5.  Po uruchomieniu klienta, Zapamiętaj tożsamość przed i po uruchomieniu przy użyciu różnych poświadczeń.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

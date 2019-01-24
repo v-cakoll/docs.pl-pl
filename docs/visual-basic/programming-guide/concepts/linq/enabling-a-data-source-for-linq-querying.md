@@ -2,12 +2,12 @@
 title: Włączanie źródła danych dla LINQ Querying2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: 6d2601e807a00ce2a6f8c342a565f5542ffc8f5b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f705db90f4838479621117bd9303f5a374d33d4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676500"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Włączanie źródła danych do zapytań LINQ
 
@@ -40,7 +40,7 @@ W tym temacie omówiono te opcje.
 
  Złożony `IQueryable` dostawcy, takich jak [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] dostawcy, może tłumaczyć kompletne [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania wyrażeniowy język zapytań, takich jak SQL. Złożony dostawca jest bardziej ogólny niż dostawca mniej skomplikowany, ponieważ może obsługiwać szerszą gamy pytań w kwerendzie. Ma także system typu otwartego i dlatego musi zawierać rozległe infrastruktury do mapowania typów zdefiniowanych przez użytkownika. Opracowywanie złożonego dostawcy wymaga znacznej ilości wysiłku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq.IQueryable%601>
 - <xref:System.Collections.Generic.IEnumerable%601>

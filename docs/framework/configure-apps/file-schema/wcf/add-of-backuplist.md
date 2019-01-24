@@ -2,20 +2,20 @@
 title: '&lt;add&gt; w &lt;backupList&gt;'
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 4a8eb3df9be6b6b5bfe43aee330f3174ddca66ab
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2cc7cce62082317bb86218d68bd2881b74649771
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670189"
 ---
 # <a name="ltaddgt-of-ltbackuplistgt"></a>&lt;add&gt; w &lt;backupList&gt;
 Reprezentuje element konfiguracji, który definiuje element kopii zapasowej punktu końcowego.  
   
  \<system.serviceModel>  
 \<Routing >  
-\<backupLists >  
-\<backupList >  
+\<backupLists>  
+\<backupList>  
 \<add>  
   
 ## <a name="syntax"></a>Składnia  
@@ -49,7 +49,7 @@ Reprezentuje element konfiguracji, który definiuje element kopii zapasowej punk
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Zawiera listę punktów końcowych, które chcesz, aby usługa routingu do użycia w przypadku, gdy nie można nawiązać połączenia z podstawowego punktu końcowego.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Zawiera listę punktów końcowych, które chcesz, aby usługa routingu do użycia w przypadku, gdy nie można nawiązać połączenia z podstawowego punktu końcowego.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType> 
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType>

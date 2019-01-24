@@ -1,5 +1,5 @@
 ---
-title: Typ zmiennej &#39; &lt;nazwa_zmiennej&gt; &#39; nie będzie można wywnioskować, ponieważ jest on powiązany z polem w otaczającym zakresie
+title: Typ zmiennej &#39; &lt;nazwa_zmiennej&gt; &#39; nie zostanie wywnioskowany, ponieważ jest on powiązany z polem w zakresie otaczającym
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42110
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: cb423e8dcced6956eb86d484607915030c91412b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6adcc1c2a449c9192e488a5d714e1c3271568be0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672386"
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Typ zmiennej &#39; &lt;nazwa_zmiennej&gt; &#39; nie będzie można wywnioskować, ponieważ jest on powiązany z polem w otaczającym zakresie
-Typ zmiennej "\<nazwa_zmiennej >' nie będzie można wywnioskować, ponieważ jest on powiązany z polem w otaczającym zakresie. Zmień nazwę "\<nazwa_zmiennej >", lub użyj w pełni kwalifikowaną nazwę (na przykład "Me.variablename" lub "MyBase.variablename").  
+# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Typ zmiennej &#39; &lt;nazwa_zmiennej&gt; &#39; nie zostanie wywnioskowany, ponieważ jest on powiązany z polem w zakresie otaczającym
+Typ zmiennej "\<nazwa_zmiennej >' nie zostanie wywnioskowany, ponieważ jest on powiązany z polem w zakresie otaczającym. Zmień nazwę "\<nazwa_zmiennej >", lub użyj w pełni kwalifikowana nazwa (na przykład "Me.variablename" lub "MyBase.variablename").  
   
- Zmienna sterująca pętli w kodzie ma taką samą nazwę pola klasy lub innych otaczającego zakresu. Ponieważ zmiennej formantu jest używana bez `As` klauzuli jest powiązany z polem w otaczającym zakresie, a kompilator nie jest w stanie utworzyć nową zmienną dla niego lub wywnioskować jej typu.  
+ Zmienna sterująca pętli w kodzie ma taką samą nazwę jako pola klasy lub innego zasięgu. Ponieważ zmienna sterująca jest używany bez `As` klauzula jest powiązany z polem w zasięgu, a kompilator nie tworzy nową zmienną dla niego ani nie wywnioskować jej typu.  
   
- W poniższym przykładzie `Index`, zmienna sterująca w `For` instrukcji, jest powiązany z `Index` w `Customer` klasy. Kompilator nie tworzy nową zmienną dla zmiennej formantu `Index` lub wywnioskować jej typu.  
+ W poniższym przykładzie `Index`, zmienna sterująca w `For` instrukcji, jest powiązany z `Index` pole `Customer` klasy. Kompilator nie tworzy nową zmienną dla zmienna sterująca `Index` lub wywnioskować jej typu.  
   
 ```  
 Class Customer  
@@ -38,32 +38,32 @@ Class Customer
 End Class  
 ```  
   
- Domyślnie ten komunikat jest ostrzeżenie. Informacje o Ukryj ostrzeżenia lub Traktuj ostrzeżenia jako błędy, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ta wiadomość jest ostrzeżenie. Aby uzyskać informacji na temat sposobu Ukryj ostrzeżenia lub jak Traktuj ostrzeżenia jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC42110  
   
-### <a name="to-address-this-warning"></a>W celu rozwiązania tego ostrzeżenia  
+### <a name="to-address-this-warning"></a>Aby rozwiązać tego ostrzeżenia  
   
--   Zmienna sterująca pętli należy lokalnego, zmieniając jej nazwę na identyfikator, który nie jest również nazwę pola klasy.  
+-   Zmienna sterująca pętli należy lokalnych, zmieniając jej nazwę na identyfikator, który nie jest również nazwę pola klasy.  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   Wyjaśnienie, że zmienna sterująca pętli for jest powiązany z pola klasy, prefiksu `Me.` do nazwy zmiennej.  
+-   Wyjaśnienie, że zmienna sterująca pętli wiąże pola klasy przez dodanie przedrostka `Me.` do nazwy zmiennej.  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   Zamiast polegania na wnioskowanie o typie lokalnym, użyj `As` klauzuli, aby określić typ dla zmienna sterująca pętli for.  
+-   Zamiast polegania na wnioskowanie o typie lokalnym, użyj `As` klauzuli, aby określić typ zmienna sterująca pętli.  
   
     ```  
     For Index As Integer = 1 To 10  
     ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia wcześniejszego przykładu z pierwszego korekty w miejscu.  
+ Poniższy kod przedstawia wcześniejszy przykład przy pierwszym korekcji w miejscu.  
   
 ```  
 Class Customer  
@@ -81,10 +81,10 @@ Class Customer
 End Class  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Option Infer, instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [For Each...Next, instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [For...Next, instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Instrukcje: odwoływanie się do bieżącego wystąpienia obiektu](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)  
- [Wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Me, My, MyBase i MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>Zobacz także
+- [Option Infer, instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [For Each...Next, instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [For...Next, instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Instrukcje: Odwoływanie się do bieżącego wystąpienia obiektu](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
+- [Wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Me, My, MyBase i MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

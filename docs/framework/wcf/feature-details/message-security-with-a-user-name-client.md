@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 76accbccc1f65bb44b7e710f3f24dc2bae17eeda
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 872283f55ae6f085b2cdf5c64c229b9d459b71f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701277"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Zabezpieczenia na poziomie komunikatu z użyciem klienta nazwy użytkownika
 Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation (WCF) i klient zabezpieczone przy użyciu zabezpieczeń na poziomie komunikatu. Usługa jest uwierzytelniana przy użyciu certyfikatu X.509. Klient jest uwierzytelniany przy użyciu nazwy użytkownika i hasła.  
@@ -27,7 +27,7 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
 |Uwierzytelnianie (klient)|Nazwa użytkownika/hasło|  
 |Integralność|Tak, za pomocą kontekstu zabezpieczeń udostępnionego|  
 |Poufność|Tak, za pomocą kontekstu zabezpieczeń udostępnionego|  
-|Transportu|HTTP|  
+|Transport|HTTP|  
 |Powiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Usługa  
@@ -125,9 +125,9 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
- [Uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<tożsamość >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md)
+- [Uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<tożsamość >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

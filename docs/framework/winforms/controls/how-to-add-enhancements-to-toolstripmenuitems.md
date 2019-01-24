@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dodawanie rozszerzeń do formantu ToolStripMenuItems'
+title: 'Instrukcje: Dodawanie rozszerzeń do kontrolki ToolStripMenuItems'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: eb55796480bea896383da479fe23a5d8967a52e3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 621b96805543abb92bc73f734f1a090d9cdb7319
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685092"
 ---
-# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Porady: dodawanie rozszerzeń do formantu ToolStripMenuItems
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Instrukcje: Dodawanie rozszerzeń do kontrolki ToolStripMenuItems
 Możesz zwiększyć użyteczność <xref:System.Windows.Forms.MenuStrip> i <xref:System.Windows.Forms.ContextMenuStrip> kontrolek w następujący sposób:  
   
 -   Dodawanie znaczników zaznaczenia Określa, czy funkcja jest włączony lub wyłączony, takie jak czy linijki są wyświetlane wzdłuż marginesu edytora lub aby wskazać plik, który w postaci listy plików jest w trakcie wyświetlania, takich jak na **okna** menu.  
@@ -113,7 +113,7 @@ Możesz zwiększyć użyteczność <xref:System.Windows.Forms.MenuStrip> i <xref
     this.exitToolStripMenuItem});  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- [MenuStrip, kontrolka — omówienie](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- [MenuStrip, kontrolka — omówienie](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

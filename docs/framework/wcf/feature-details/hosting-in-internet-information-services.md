@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: e9d0e5a165eb2eabae95da9fd1e744a9bd1c201b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: edf3927fb9fdbd9855561b32aec2a425d7ee0638
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680913"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hostowanie przez Internetowe usługi informacyjne
 Jedną z opcji hostingu usług Windows Communication Foundation (WCF) jest wewnątrz aplikacji usług Internet Information Services (IIS). Ten model obsługi jest podobny do modelu posługują się [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] i usługami sieci Web (ASMX) usług sieci Web platformy ASP.NET.  
@@ -56,10 +56,10 @@ Jedną z opcji hostingu usług Windows Communication Foundation (WCF) jest wewn�
 ## <a name="wcf-services-and-aspnet"></a>Usługi WCF i platforma ASP.NET  
  Usługi WCF, mogą być hostowane albo side-by-side przy użyciu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] lub [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] tryb zgodności, w którym usługi mogą w pełni korzystać z funkcji oferowanych przez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] platforma aplikacji sieci Web. Omówienie tych funkcji, zobacz [usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Rozszerzanie hostingu za pomocą elementu ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)  
- [Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
- [Usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
- [Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Konfigurowanie Internetowych usług informacyjnych 7.0 na potrzeby programu Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)  
- [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Zobacz także
+- [Rozszerzanie hostingu za pomocą elementu ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
+- [Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
+- [Usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+- [Konfigurowanie Internetowych usług informacyjnych 7.0 na potrzeby programu Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
+- [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)

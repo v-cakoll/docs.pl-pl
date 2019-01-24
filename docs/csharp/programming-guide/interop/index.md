@@ -1,19 +1,13 @@
 ---
-title: Współdziałanie — C# przewodnik programowania
+title: 'Współdziałanie — C# przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- COM interop
-- interoperability
-- platform invoke, accessing APIs with C#
-- C# language, interoperability
+  - COM interop
+  - interoperability
+  - 'platform invoke, accessing APIs with C#'
+  - 'C# language, interoperability'
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: f3cbfe564fb5820c9e0fa77b75f76be36dd718a4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235010"
 ---
 # <a name="interoperability-c-programming-guide"></a>Współdziałanie (Przewodnik programowania w języku C#)
 Współdziałanie pozwala na zachowanie i wykorzystać istniejące inwestycje w niezarządzanym kodzie. Kod, który działa pod kontrolą środowisko uruchomieniowe języka wspólnego (CLR) jest nazywany *kodu zarządzanego*, a kod, który działa poza środowisko CLR jest nazywana *kod niezarządzany*. COM, COM +, składniki C++, składników ActiveX i Microsoft Win32 API są przykłady kodu niezarządzanego.  
@@ -33,7 +27,7 @@ Współdziałanie pozwala na zachowanie i wykorzystać istniejące inwestycje w 
  [Instrukcje: Użycie wywołania platformy do odtwarzania pliku Wave](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)  
  Opisuje sposób używania platformy wywołania usług do odtwarzania pliku dźwiękowego .wav w systemie operacyjnym Windows.  
   
- [Wskazówki: Programowanie Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)  
+ [Przewodnik: Programowanie Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  Pokazuje, jak utworzyć skoroszytu programu Excel i dokument programu Word, zawierającą łącze do skoroszytu.  
   
  [Przykładowa klasa modelu COM](../../../csharp/programming-guide/interop/example-com-class.md)  
@@ -43,9 +37,9 @@ Współdziałanie pozwala na zachowanie i wykorzystać istniejące inwestycje w 
 
 Aby uzyskać więcej informacji, zobacz [podstawowe pojęcia](~/_csharplang/spec/unsafe-code.md) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)  
-- [Wskazówki: Programowanie Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
+- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)
+- [Przewodnik: Programowanie Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

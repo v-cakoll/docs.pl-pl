@@ -2,12 +2,12 @@
 title: Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 0024cb1bf4ac7c27d64edcd695b4782dfbcd16af
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e4e0fcb1d706fef09233543487aebdeb01cdfbcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695896"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 Można skonfigurować przycisk, który służy do anulowania aplikacji asynchronicznej, jeśli nie chcesz czekać na zakończenie jego działania. Postępując zgodnie z przykładami w tym temacie, można dodać przycisk anulowania do aplikacji, która pobiera zawartość jednej witryny sieci Web lub listę witryn sieci Web.  
@@ -21,7 +21,7 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
  Pierwszy przykład kojarzy **anulować** przycisk z pojedynczym zadaniem pobierania. Jeśli wybierzesz przycisk podczas pobierania zawartości aplikacji, pobieranie zostanie anulowane.  
   
 ### <a name="downloading-the-example"></a>Pobieranie przykładu  
- Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
+ Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [próbka asynchroniczna: Poprawnie Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
   
 1.  Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
   
@@ -139,7 +139,7 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
  Możesz rozszerzyć poprzedniego przykładu, aby anulować wiele zadań można skojarzyć takie same `CancellationTokenSource` z każdym zadaniem. Jeśli wybierzesz **anulować** przycisku, anulujesz wszystkie zadania, które nie są jeszcze kompletne.  
   
 ### <a name="downloading-the-example"></a>Pobieranie przykładu  
- Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
+ Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [próbka asynchroniczna: Poprawnie Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
   
 1.  Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
   
@@ -250,7 +250,7 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
 ##  <a name="BKMK_CompleteExamples"></a> Kompletne przykłady  
  Poniższe sekcje zawierają kod dla każdego z poprzednich przykładów. Należy zauważyć, że musisz dodać odwołanie do <xref:System.Net.Http>.  
   
- Można ściągnąć projekty z [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Można ściągnąć projekty z [próbka asynchroniczna: Dostrajania aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ### <a name="cancel-a-task-example"></a>Anuluj zadanie-przykład  
  Poniższy kod jest pełnym plikiem MainWindow.xaml.vb dla przykładu, który anuluje pojedyncze zadanie.  
@@ -454,9 +454,9 @@ End Class
 ' Downloads canceled.  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.CancellationTokenSource>  
- <xref:System.Threading.CancellationToken>  
- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Dostrajanie aplikacji Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Próbka asynchroniczna: Dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Threading.CancellationTokenSource>
+- <xref:System.Threading.CancellationToken>
+- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Dostrajanie aplikacji Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Próbka asynchroniczna: Dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

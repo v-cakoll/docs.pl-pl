@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003633"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679438"
 ---
 # <a name="-reference-c-compiler-options"></a>— Odwołanie (opcje kompilatora C#)
 **— Dokumentacja** opcja powoduje, że kompilator, aby zaimportować [publicznych](../../../csharp/language-reference/keywords/public.md) wpisz informacje w określonym pliku do bieżącego projektu, dzięki czemu można odwoływać się do metadanych z określonych plików zestawów.  
@@ -61,7 +61,7 @@ ms.locfileid: "46003633"
  Csc pliku odpowiedzi (rsp), która odwołuje się do powszechnie stosowane zestawów .NET Framework, jest używany domyślnie. Użyj [- noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) , jeśli nie chcesz, aby kompilator korzystać csc.rsp.  
   
 > [!NOTE]
-> W programie Visual Studio, należy użyć **Dodaj odwołanie** okno dialogowe. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie lub usuwanie odwołań za pomocą Menedżera odwołań](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Aby zapewnić zachowanie równoważne między dodawaniem odwołań za pomocą `-reference` i dodawaniem odwołań za pomocą **Dodaj odwołanie** okno dialogowe, zestaw **Osadź typy współdziałania** właściwość **False** dla zestawu, który dodajesz. **Wartość true,** jest wartością domyślną dla właściwości.  
+> W programie Visual Studio, należy użyć **Dodaj odwołanie** okno dialogowe. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie lub usuwanie odwołań za pomocą Menedżera odwołań](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Aby zapewnić zachowanie równoważne między dodawaniem odwołań za pomocą `-reference` i dodawaniem odwołań za pomocą **Dodaj odwołanie** okno dialogowe, zestaw **Osadź typy współdziałania** właściwość **False** dla zestawu, który dodajesz. **Wartość true,** jest wartością domyślną dla właściwości.  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie pokazano, jak używać [alias zewnętrzny](../../../csharp/language-reference/keywords/extern-alias.md) funkcji.  
@@ -92,7 +92,7 @@ GridV1::Grid
 GridV2::Grid   
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

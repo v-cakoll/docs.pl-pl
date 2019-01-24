@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ee3c3302d77bcc7b807c01ccb5bab172153ddda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad192f753cd1977c9ca68e147d23375ce092b66f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708236"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>Metoda ICorProfilerCallback5::ConditionalWeakTableElementReferences
-Identyfikuje przechodnie zamknięcia odwołuje się katalogami za pomocą obu odwołania do pól bezpośrednimi elementami członkowskimi i za pomocą obiektów `ConditionalWeakTable` zależności.  
+Identyfikuje przechodnie zamknięcia obiektów, odwołuje się katalogami, za pomocą odwołania do obu pól bezpośrednim członkiem i za pomocą `ConditionalWeakTable` zależności.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,18 +38,18 @@ HRESULT ConditionalWeakTableElementReferences(     [in]                     ULON
  [in] Liczba elementów w `keyRefIds`, `valueRefIds`, i `rootIds` tablic.  
   
  `keyRefIds`  
- [in] Tablica wartości identyfikatorów obiektów, z których każdy zawiera `ObjectID` podstawowego elementu w parze dojścia zależnych.  
+ [in] Tablica identyfikatory obiektów, z których każdy zawiera `ObjectID` dla podstawowego elementu w parze dojście zależne.  
   
  `valueRefIds`  
- [in] Tablica wartości identyfikatorów obiektów, z których każdy zawiera `ObjectID` dla elementu pomocniczego w parze dojścia zależnych. (`keyRefIds[i]` przechowuje `valueRefIds[i]` aktywności.)  
+ [in] Tablica identyfikatory obiektów, z których każdy zawiera `ObjectID` dla elementu pomocniczego w parze dojście zależne. (`keyRefIds[i]` utrzymuje `valueRefIds[i]` podtrzymywania połączenia.)  
   
  `rootIds`  
- [in] Tablica `GCHandleID` wartości, które wskazują liczba całkowita, która zawiera dodatkowe informacje dotyczące głównego kolekcji pamięci.  
+ [in] Tablica `GCHandleID` wartości, które wskazują na liczbę całkowitą, która zawiera dodatkowe informacje na temat głównych kolekcji wyrzucania elementów.  
   
- Żadna z `ObjectID` wartości zwracanych przez `ConditionalWeakTableElementReferences` — metoda są prawidłowe podczas wywołania zwrotnego, ponieważ moduł garbage collector może znajdować się w trakcie przenoszenia obiektów ze starej do nowej lokalizacji. W związku z tym profilery nie powinny podejmować próby sprawdź obiekty podczas `ConditionalWeakTableElementReferences` wywołania. W `GarbageCollectionFinished`, wszystkie obiekty zostały przeniesione do nowej lokalizacji i można przeprowadzić inspekcji.  
+ Żaden z `ObjectID` wartości zwracanych przez `ConditionalWeakTableElementReferences` metody są prawidłowe podczas wywołania zwrotnego, ponieważ moduł odśmiecania pamięci może być w trakcie przenoszenia obiektów ze starej do nowej lokalizacji. W związku z tym, profilowania nie należy próbować Zbadaj obiekty podczas `ConditionalWeakTableElementReferences` wywołania. W `GarbageCollectionFinished`, wszystkie obiekty zostały przeniesione do ich nowych lokalizacji i może zostać przeprowadzona inspekcja.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje, jak wdrożyć [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) i użyć tej metody.  
+ Poniższy przykład kodu demonstruje sposób implementacji [icorprofilercallback5 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) i używania tej metody.  
   
 ```  
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(  
@@ -73,14 +73,14 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Profilera dla [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] lub nowsze wersje implementuje [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) interfejsu i rejestruje zależności określony przez `ConditionalWeakTableElementReferences` metody. `ICorProfilerCallback5` zapewnia pełny zestaw zależności między obiektami na żywo reprezentowany przez `ConditionalWeakTable` wpisów. Te zależności i element członkowski odwołania określony przez pole [ICorProfilerCallback::ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) metoda włączyć zarządzany profiler do generowania wykresu obiektu pełne obiektów na żywo.  
+ Profiler dla [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] lub nowsze wersje implementuje [icorprofilercallback5 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) interfejsu i rekordy zależności, określony przez `ConditionalWeakTableElementReferences` metody. `ICorProfilerCallback5` zawiera pełen zestaw zależności między obiektami na żywo, reprezentowane przez `ConditionalWeakTable` wpisów. Te zależności i element członkowski pola odwołania do określonego przez [icorprofilercallback::objectreferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) metoda włączyć zarządzany profiler można wygenerować wykresu obiektu pełną obiektów na żywo.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback5, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback5, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)

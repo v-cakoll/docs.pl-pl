@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95850448504fd863f2726a7fb7574436476a6dc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685532"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps — Metoda
-Pobiera wartości metadanych dla parametru odwołuje się określony ParamDef token.  
+Pobiera metadane wartości dla parametru odwołuje się określona ParamDef token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,44 +46,44 @@ HRESULT GetParamProps (
   
 #### <a name="parameters"></a>Parametry  
  `tk`  
- [in] Token ParamDef, który reprezentuje parametr do zwracania metadanych.  
+ [in] Token ParamDef, który reprezentuje parametr można zwrócić metadanych dla.  
   
  `pmd`  
  [out] Wskaźnik do tokenu MethodDef reprezentujący metodę, która przyjmuje parametr.  
   
  `pulSequence`  
- [out] {Numer porządkowy pozycja parametru na liście argumentów metody.  
+ [out] Numer porządkowy pozycja parametru na liście argumentów metody.  
   
  `szName`  
- [out] Bufor aby pomieścić nazwę parametru.  
+ [out] Bufor do przechowywania nazwy parametru.  
   
  `cchName`  
- [in] Żądany rozmiar w znaki dwubajtowe `szName`.  
+ [in] Żądany rozmiar w znaków `szName`.  
   
  `pchName`  
- [out] Rozmiar zwróconego w znaki dwubajtowe `szName`.  
+ [out] Rozmiar zwrócony w znaków `szName`.  
   
  `pdwAttr`  
- [out] Wskaźnik do żadnych flag atrybutów skojarzonych z parametrem.  
+ [out] Wskaźnik do flag atrybut skojarzony z parametrem.  
   
  `pdwCPlusTypeFlag`  
  [out] Wskaźnik do określania flagi, że parametr jest <xref:System.ValueType>.  
   
  `ppValue`  
- [out] Wskaźnik ze stałym ciągiem zwrócona przez parametr.  
+ [out] Wskaźnik ze stałym ciągiem zwrócone przez parametr.  
   
  `pcchValue`  
- [out] Rozmiar `ppValue` w znaki dwubajtowe lub zero, jeśli `ppValue` nie zawiera ciąg.  
+ [out] Rozmiar `ppValue` znaków dwubajtowych lub zero, jeśli `ppValue` nie zawiera ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

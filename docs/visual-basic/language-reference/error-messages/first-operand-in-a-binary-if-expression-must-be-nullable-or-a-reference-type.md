@@ -1,5 +1,5 @@
 ---
-title: Typem pierwszego operandu w binarnym &#39;Jeśli&#39; wyrażenie musi być typ zerowalny lub typ odwołania
+title: Typem pierwszego operandu w binarnym &#39;Jeśli&#39; wyrażenie musi być typ zerowalny lub typ referencyjny
 ms.date: 07/20/2015
 f1_keywords:
 - bc33107
@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 76078d315b2c32a2a29aa652a65b463622afec36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85094ba6d6a44bf2e6cc4fba7946598c286a08a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590832"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668278"
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Typem pierwszego operandu w binarnym &#39;Jeśli&#39; wyrażenie musi być typ zerowalny lub typ odwołania
-`If` Wyrażenie może zająć dwie lub trzy argumenty. Po wysłaniu tylko dwa argumenty pierwszy argument musi być parametrem typu odwołanie lub typ dopuszczający wartość null. Jeśli pierwszy argument daje w wyniku cokolwiek innego niż `Nothing`, zwracana jest jego wartość. Jeśli pierwszy argument ma wartość `Nothing`, drugi argument jest obliczany i zwracany.  
+# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Typem pierwszego operandu w binarnym &#39;Jeśli&#39; wyrażenie musi być typ zerowalny lub typ referencyjny
+`If` Wyrażenie może przyjmować dwa lub trzy argumenty. Podczas wysyłania tylko dwóch argumentów pierwszy argument musi być typem referencyjnym lub typ dopuszczający wartość null. Jeśli pierwszy argument daje w wyniku nic innego niż `Nothing`, zwracana jest jego wartość. Jeśli pierwszy argument daje w wyniku `Nothing`, drugi argument funkcji jest obliczany i zwracany.  
   
- Na przykład poniższy kod zawiera dwa `If` wyrażenia, jeden z trzech argumentów i jeden z dwóch argumentów. Wyrażenia obliczenia i zwracają taką samą wartość.  
+ Na przykład, poniższy kod zawiera dwa `If` wyrażeń: jeden z trzech argumentów i jeden z dwóch argumentów. Wyrażenia obliczyć i zwrócić tę samą wartość.  
   
 ```vb  
 ' firstChoice is a nullable value type.  
@@ -29,7 +29,7 @@ Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))
 Console.WriteLine(If(firstChoice, secondChoice))  
 ```  
   
- Następujących wyrażeń być przyczyną tego błędu:  
+ Następujących wyrażeń przyczyny wystąpienia tego błędu:  
   
 ```vb  
 Dim choice1 = 4  
@@ -46,14 +46,14 @@ Dim booleanVar = True
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Jeśli nie możesz zmienić kod, aby pierwszy argument jest typu dopuszczającego wartość null lub typ referencyjny, należy wziąć pod uwagę konwertowania na trzech argumentów `If` wyrażenia, lub do `If...Then...Else` instrukcji.  
+-   Jeśli nie możesz zmienić kod, tak aby pierwszy argument jest typu dopuszczającego wartość null lub typ referencyjny, należy wziąć pod uwagę konwersji argumentowi trzech `If` wyrażenie lub `If...Then...Else` instrukcji.  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  
 Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [If, operator](../../../visual-basic/language-reference/operators/if-operator.md)  
- [If...Then...Else, instrukcja](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Typy wartości dopuszczających wartości null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>Zobacz także
+- [If, operator](../../../visual-basic/language-reference/operators/if-operator.md)
+- [Dyrektywa #If...Then...#Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [Typy wartości dopuszczających wartości null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

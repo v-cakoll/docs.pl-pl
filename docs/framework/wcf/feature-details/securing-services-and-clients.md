@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
-ms.openlocfilehash: 05dc9c810d2e8ba64c4dcf21d83e91f8a61225a1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad5bffdb98276864501861d36ea4353eed6860b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691453"
 ---
 # <a name="securing-services-and-clients"></a>Zabezpieczanie usług i klientów
 Informacje przedstawione w tej sekcji skupiono się na programowaniu zabezpieczeń w Windows Communication Foundation (WCF). Ogólnie rzecz biorąc w tym wybranie odpowiedniego powiązania dostarczane przez system, ustawienie właściwości elementu zabezpieczeń, a następnie ustawić właściwości zachowania usług, które określają sposób, jak pobrać poświadczenia do użycia przez usługę lub klienta. Techniki te obejmują wymagania dotyczące zabezpieczeń większości użytkowników w przypadku większości scenariuszy, jak pokazano na [typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Jeśli dany scenariusz wymaga więcej funkcji, należy najpierw sprawdzić [możliwości zabezpieczeń powiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); Jeśli rozwiązanie nie jest widoczny, zobacz [rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md). Jeśli tworzysz (lub współdziałanie z) system, który korzysta z zaawansowanych oświadczeń, zobacz Tematy w [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -52,6 +52,6 @@ Informacje przedstawione w tej sekcji skupiono się na programowaniu zabezpiecze
   
  [Autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

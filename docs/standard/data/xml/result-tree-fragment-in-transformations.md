@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10449867a37863798a0da2df9111bcd7addfc6ef
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4835536dd3ae815fbe7e50582b94caefb1fc9082
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683823"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Wynikowego fragmentu drzewa w przekształceniach
 
@@ -35,7 +35,7 @@ Aby uzyskać `parameter` elementu, wartość jest przypisywana do kwalifikowanej
 
 Aby uzyskać `variable` , wartość jest również przypisany element na kilka sposobów. Można ją przypisać, zwracając zawartości przy użyciu wyrażenia XPath w `select` atrybutu lub przez przypisanie zawartość treści szablonu.
 
-Dla obu `parameter` i `variable` elementów, jeśli wartość jest przypisywany przez wyrażenie XPath następnie zestawu obejmującego cztery podstawowe typy XPath zostaną zwrócone: atrybut typu wartość logiczna, ciąg, liczba lub zestawu węzłów. Gdy wartość znajduje się za pomocą treści szablonu pusta, zwracany typ danych bez XPath, który będzie wynikowego fragmentu drzewa.
+Dla obu `parameter` i `variable` elementów, jeśli wartość jest przypisywany przez wyrażenie XPath następnie zestawu obejmującego cztery podstawowe typy XPath zostaną zwrócone: Ustaw atrybut typu wartość logiczna, ciąg, liczba lub węzeł. Gdy wartość znajduje się za pomocą treści szablonu pusta, zwracany typ danych bez XPath, który będzie wynikowego fragmentu drzewa.
 
 Gdy zmienna jest powiązana z wynikowego fragmentu drzewa, zamiast jednej z czterech podstawowych typów danych XPath, to jest jedyny raz, że zapytanie XPath zwraca typ, który nie jest jedną z czterech typów obiektów języka XPath. Fragmenty drzewa wynik i ich zachowania, które zostały omówione w [Specyfikacja konsorcjum World Wide Web Consortium (W3C)](https://www.w3.org/TR/xslt-10/), [sekcji 11.1 fragmenty drzewa wynik](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments) za pośrednictwem [sekcji 11.6 przekazywanie Parametry szablonów](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates). Ponadto [sekcji 1 wprowadzenie](https://www.w3.org/TR/xslt-10/#section-Introduction) w tym artykule omówiono, jak szablony mogą zawierać elementy z przestrzeni nazw XSLT, które zwracają lub utworzyć fragmenty drzewa wynik.
 
@@ -194,7 +194,7 @@ Poniżej znajduje się wynik Przekształcanie XML za pomocą tego arkusza styló
 
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Xml.XPath.XPathNodeIterator>  
-- <xref:System.Xml.XPath.XPathNodeIterator>  
-- [Przekształcenia XSLT przy użyciu klasy XslTransform](xslt-transformations-with-the-xsltransform-class.md)  
-- [Implementowanie procesora XSLT przy użyciu klasy XslTransform](xsltransform-class-implements-the-xslt-processor.md)  
+- <xref:System.Xml.XPath.XPathNodeIterator>
+- <xref:System.Xml.XPath.XPathNodeIterator>
+- [Przekształcenia XSLT przy użyciu klasy XslTransform](xslt-transformations-with-the-xsltransform-class.md)
+- [Implementowanie procesora XSLT przy użyciu klasy XslTransform](xsltransform-class-implements-the-xslt-processor.md)

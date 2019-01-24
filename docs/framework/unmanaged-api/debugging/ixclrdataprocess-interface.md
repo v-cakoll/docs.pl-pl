@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8c98dd42b4ac5593d96478c2286f49ad216a4bc1
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: ff74a7acb5cc84c177f083c19402cd78977aeab5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680377"
 ---
 # <a name="ixclrdataprocess-interface"></a>Interfejs IXCLRDataProcess
 
@@ -51,7 +51,7 @@ Ten interfejs znajduje się wewnątrz środowiska uruchomieniowego i nie jest do
 **Biblioteka:** Brak  
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

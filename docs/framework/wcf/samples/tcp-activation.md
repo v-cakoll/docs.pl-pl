@@ -2,12 +2,12 @@
 title: Aktywacja TCP
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 1939f611067d65d70849748604e0589a8928b09d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5e7f441873ec4d3ad087d1ff28510d92d87db9b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677832"
 ---
 # <a name="tcp-activation"></a>Aktywacja TCP
 Niniejszy przykład pokazuje usługi, który używa usługi aktywacji procesów Windows (WAS), aby aktywować usługę, która komunikuje się za pośrednictwem protokołu net.tcp hosta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -205,5 +205,5 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  To polecenie musi być wpisana w jako pojedynczy wiersz tekstu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Zobacz także
+- [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

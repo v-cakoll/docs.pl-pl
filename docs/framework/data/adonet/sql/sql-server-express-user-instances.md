@@ -1,18 +1,18 @@
 ---
-title: Wystąpienia programu SQL Server Express użytkownika
+title: SQL Server Express User Instances
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d7ab6694ec467f957228bfde0a044c577bc2f923
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664086"
 ---
-# <a name="sql-server-express-user-instances"></a>Wystąpienia programu SQL Server Express użytkownika
+# <a name="sql-server-express-user-instances"></a>SQL Server Express User Instances
 Microsoft SQL Server Express Edition, (SQL Server Express) obsługuje funkcję wystąpienia użytkownika, który jest dostępny tylko w przypadku używania dostawcy danych .NET Framework dla programu SQL Server (`SqlClient`). Wystąpienia użytkownika jest osobnego wystąpienia programu SQL Server Express aparatu bazy danych generowanych przez wystąpienie nadrzędne. Wystąpienia użytkownika umożliwiają użytkownikom niebędącym administratorami na swoich komputerach lokalnych do dołączenia i nawiązać połączenie z SQL Server Express bazy danych. Każde wystąpienie jest uruchamiany w kontekście zabezpieczeń użytkownika, na podstawie jednego wystąpienia na użytkownika.  
   
 ## <a name="user-instance-capabilities"></a>Możliwości wystąpienia użytkownika  
@@ -150,8 +150,8 @@ private static void OpenSqlConnection()
   
 -   W wersji dedykowanej przy użyciu uwierzytelniania Windows hostingu platformy ASP.NET. Pojedyncze wystąpienie programu SQL Server Express, mogą być hostowane w sieci intranet. Aplikacja nawiązuje połączenie, za pomocą konta Windows ASPNET, nie za pomocą personifikacji. Wystąpienia użytkownika nie powinien służyć do innych firm lub udostępnione hostingu scenariuszach, gdzie wszystkie aplikacje będą współużytkują to samo wystąpienie użytkownika i nie jest już pozostać odizolowane od siebie nawzajem.  
   
-## <a name="see-also"></a>Zobacz też  
- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Parametry połączeń](../../../../../docs/framework/data/adonet/connection-strings.md)  
- [Nawiązywanie połączenia ze źródłem danych](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Parametry połączeń](../../../../../docs/framework/data/adonet/connection-strings.md)
+- [Nawiązywanie połączenia ze źródłem danych](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

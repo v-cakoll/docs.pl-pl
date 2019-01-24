@@ -3,12 +3,12 @@ title: Narzędzie tożsamości i dostępu dla programu Visual Studio 2012
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: 1177048d8124c955220605e52dde539b84510cba
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a1b5456f9081d807a3c9e29e1010cbfbf91e637f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678554"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Narzędzie tożsamości i dostępu dla programu Visual Studio 2012
 W tym temacie opisano nowe narzędzie tożsamości i dostępu dla programu Visual Studio 11. To narzędzie można pobrać spod następującego adresu URL: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) lub bezpośrednio z poziomu programu Visual Studio 11, wyszukując "tożsamość" w Menedżerze rozszerzeń.  
@@ -25,7 +25,7 @@ W tym temacie opisano nowe narzędzie tożsamości i dostępu dla programu Visua
   
 -   Za pomocą jednego ekranu możesz ustanowić federację z usługą Active Directory Federation Services (AD FS) 2.0 (lub innymi dostawcami protokołu WS-Federation).  
   
--   Narzędzie wykorzystuje możliwości usługi kontroli dostępu (ACS) systemu Microsoft Azure, wyświetlając prostą listę pól wyboru odpowiadających wszystkim dostawcom tożsamości, których chcesz używać: Facebook, Google, Live ID, Yahoo!, dowolny dostawca protokołu OpenID i dowolny dostawca protokołu WS-Federation. Wybierz swoich dostawców tożsamości, kliknij przycisk OK, a następnie naciśnij klawisz F5, i aplikacja i usługa ACS zostaną automatycznie skonfigurowane, a aplikacja testowa będzie obsługiwać usługę ACS.  
+-   Narzędzie wykorzystuje możliwości systemu Windows Azure Access Control Service (ACS) z prostą listę pól wyboru dla wszystkich dostawców tożsamości, które chcesz użyć: Facebook, Google, Live ID, Yahoo!, dowolny dostawca protokołu OpenID i wszystkich dostawców usługi WS-Federation. Wybierz swoich dostawców tożsamości, kliknij przycisk OK, a następnie naciśnij klawisz F5, i aplikacja i usługa ACS zostaną automatycznie skonfigurowane, a aplikacja testowa będzie obsługiwać usługę ACS.  
   
-## <a name="see-also"></a>Zobacz też  
- [Funkcje programu WIF](../../../docs/framework/security/wif-features.md)
+## <a name="see-also"></a>Zobacz także
+- [Funkcje programu WIF](../../../docs/framework/security/wif-features.md)

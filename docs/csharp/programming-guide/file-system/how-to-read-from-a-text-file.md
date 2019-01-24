@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 67e98750af589a3deb5e9d0d51f8b1204fdaad84
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f7ddfbec13fad073272c75c3e68a4f5c9c3eef9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672243"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Instrukcje: Odczyt z pliku tekstowego (C# Programming Guide)
 Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod statycznych <xref:System.IO.File.ReadAllText%2A> i <xref:System.IO.File.ReadAllLines%2A> z <xref:System.IO.File?displayProperty=nameWithType> klasy.  
@@ -41,8 +41,8 @@ Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod statyczn
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Nie należy polegać na nazwę pliku, aby określić zawartość pliku. Na przykład plik `myFile.cs` może nie być plik źródłowy C#.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [System plików i rejestr (C# Programming Guide)](../../../csharp/programming-guide/file-system/index.md)

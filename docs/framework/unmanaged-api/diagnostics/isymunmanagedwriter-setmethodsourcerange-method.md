@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d057201c7d7bec3070027bb1d9de62735d583cf6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40d05ee60d0183337e67b1f36722dff29ae9beaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429005"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663547"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange — Metoda
-Określa wartość true, początek i koniec metody w pliku źródłowym. Użyj tej metody, aby określić zakres metody, niezależnie od punkty sekwencji, które istnieją w metodzie.  
+Określa wartość true, początek i koniec okresu metody w pliku źródłowym. Ta metoda umożliwia określenie stopnia metody, niezależnie od punktów sekwencji, które istnieją w metodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ HRESULT SetMethodSourceRange(
   
 #### <a name="parameters"></a>Parametry  
  `startDoc`  
- [in] Wskaźnik do dokumentu zawierającego pozycji początkowej.  
+ [in] Wskaźnik do dokumentu zawierającego pozycja początkowa.  
   
  `startLine`  
  [in] Numer wiersza początkowego.  
@@ -50,19 +50,19 @@ HRESULT SetMethodSourceRange(
  [in] Kolumna początkowa.  
   
  `endDoc`  
- [in] Wskaźnik do dokumentu zawierającego pozycję końcową.  
+ [in] Wskaźnik do dokumentu zawierającego pozycji końcowej.  
   
  `endLine`  
- [in] Numer wiersza końcowego.  
+ [in] Końcowy numer wiersza.  
   
  `endColumn`  
  [in] Numer kolumny końcowej.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -2,12 +2,12 @@
 title: Refaktoryzacja przy użyciu czystej funkcji (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: 28f31b144cbdbd85febfc57acccb9bd7a158d702
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 66aab1b92f1a017eae650b18bd13d52536e84a6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45610125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692301"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refaktoryzacja przy użyciu czystej funkcji (C#)
 Poniższy przykład refactors poprzedni przykład [Refaktoryzacja przy użyciu metody rozszerzenia (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), aby używać czystej funkcji w tym przykładzie kod, aby znaleźć tekst akapitu jest przenoszony do czystych statycznej metody `ParagraphText`.  
@@ -179,8 +179,8 @@ StyleName:Code >Hello World<
   
 -   [Projektowanie kodu XML w innym kształcie (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
-- [Refaktoryzacja przy użyciu metody rozszerzenia (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refaktoryzacja przy użyciu metody rozszerzenia (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
 - [Refaktoryzacja do czystych funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

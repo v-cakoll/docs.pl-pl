@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9058c6c3256efad15e0811fcc1f21f440e13edbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683024"
 ---
 # <a name="tilebrush-overview"></a>TileBrush — Przegląd
 <xref:System.Windows.Media.TileBrush> obiekty umożliwiają z dużym stopniem kontrolę nad jak obszar jest malowane z obrazem, <xref:System.Windows.Media.Drawing>, lub <xref:System.Windows.Media.Visual>. W tym temacie opisano sposób użycia <xref:System.Windows.Media.TileBrush> funkcje, aby uzyskać większą kontrolę nad jak <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, lub <xref:System.Windows.Media.VisualBrush> Malowanie obszaru.  
@@ -53,17 +53,17 @@ Składniki TileBrush z TileMode kafelka
 ## <a name="the-base-tile"></a>Podstawowy Kafelek  
  A <xref:System.Windows.Media.TileBrush> projektów jego zawartość na podstawowy Kafelek. <xref:System.Windows.Media.TileBrush.Stretch%2A> Właściwości kontrolki jak <xref:System.Windows.Media.TileBrush> zawartości jest rozciągany tak, aby wypełnić podstawowy Kafelek. <xref:System.Windows.Media.TileBrush.Stretch%2A> Właściwość akceptuje następujące wartości, zdefiniowane przez <xref:System.Windows.Media.Stretch> wyliczenia:  
   
--   <xref:System.Windows.Media.Stretch.None>Zawartość pędzel nie jest rozciągana do wypełnienia kafelka.  
+-   <xref:System.Windows.Media.Stretch.None>: Pędzel zawartość nie jest rozciągana do wypełnienia kafelka.  
   
--   <xref:System.Windows.Media.Stretch.Fill>Zawartość pędzla jest skalowane w celu dopasowania na kafelku. Ponieważ wysokość i szerokość zawartość jest skalowana niezależnie, oryginalny współczynnik proporcji zawartości mogą nie zostać zachowane. Oznacza to, że zawartość pędzla może zniekształcenia Aby całkowicie wypełnić kafelka dane wyjściowe.  
+-   <xref:System.Windows.Media.Stretch.Fill>: Pędzel zawartość jest skalowana do rozmiaru kafelka. Ponieważ wysokość i szerokość zawartość jest skalowana niezależnie, oryginalny współczynnik proporcji zawartości mogą nie zostać zachowane. Oznacza to, że zawartość pędzla może zniekształcenia Aby całkowicie wypełnić kafelka dane wyjściowe.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>Pędzla zawartość jest skalowana tak, aby zmieścił się całkowicie we fragmencie. Zawartość proporcje są zachowywane.  
+-   <xref:System.Windows.Media.Stretch.Uniform>: Pędzel zawartość jest skalowana tak, aby zmieścił się całkowicie we fragmencie. Zawartość proporcje są zachowywane.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>Pędzla zawartość jest skalowana tak, aby całkowicie wypełnia obszar wyjściowy przy jednoczesnym zapewnieniu właściwej zawartości oryginalnego współczynnika proporcji.  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>: Pędzel zawartość jest skalowana tak, aby całkowicie wypełnia obszar wyjściowy przy jednoczesnym zapewnieniu właściwej zawartości oryginalnego współczynnika proporcji.  
   
  Na poniższym obrazie przedstawiono poszczególne <xref:System.Windows.Media.TileBrush.Stretch%2A> ustawienia.  
   
- ![Różne ustawienia TileBrush Stretch](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
+ ![Different TileBrush Stretch settings](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
   
  W poniższym przykładzie zawartość <xref:System.Windows.Media.ImageBrush> jest ustawiony tak, aby nie dopasowuje się do wypełnienia obszaru wyjściowego.  
   
@@ -100,19 +100,19 @@ Składniki TileBrush z TileMode kafelka
 ### <a name="tiling-behavior"></a>Zachowanie fragmentacji  
  A <xref:System.Windows.Media.TileBrush> generuje wzorzec fragmentacji, podczas jego podstawowy Kafelek nie wypełnia całkowicie obszaru wyjściowego i tryb fragmentacji innych następnie <xref:System.Windows.Media.TileMode.None> jest określony. Gdy Kafelek pędzla kafelków nie wypełnia całkowicie obszaru wyjściowego jego <xref:System.Windows.Media.TileBrush.TileMode%2A> właściwość określa, czy powinny zostać zduplikowane podstawowy Kafelek, aby wypełnił obszar danych wyjściowych, a jeśli tak, jak podstawowy Kafelek powinny zostać zduplikowane. <xref:System.Windows.Media.TileBrush.TileMode%2A> Właściwość akceptuje następujące wartości, zdefiniowane przez <xref:System.Windows.Media.TileMode> wyliczenia:  
   
--   <xref:System.Windows.Media.TileMode.None>: Jest rysowana tylko podstawowy Kafelek.  
+-   <xref:System.Windows.Media.TileMode.None>: Podstawowy Kafelek jest rysowane.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: Rysowania podstawowy Kafelek, a pozostałe obszar zostanie wypełniony przez powtarzanie podstawowy Kafelek taki sposób, że prawą krawędzią jeden Kafelek jest przyległa do lewej krawędzi następnego i podobnie dla dołu i od góry.  
+-   <xref:System.Windows.Media.TileMode.Tile>: Podstawowy Kafelek jest rysowana, a pozostałe obszar zostanie wypełniony przez powtarzanie podstawowy Kafelek taki sposób, że prawą krawędzią jeden Kafelek jest przyległa do lewej krawędzi następnego i podobnie dla dołu i od góry.  
   
--   <xref:System.Windows.Media.TileMode.FlipX>: W taki sam jak <xref:System.Windows.Media.TileMode.Tile>, ale kolumn alternatywnego Kafelki są przerzucane poziomo.  
+-   <xref:System.Windows.Media.TileMode.FlipX>: Taka sama jak <xref:System.Windows.Media.TileMode.Tile>, ale kolumn alternatywnego Kafelki są przerzucane poziomo.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: W taki sam jak <xref:System.Windows.Media.TileMode.Tile>, ale naprzemienne wiersze Kafelki są przerzucane w pionie.  
+-   <xref:System.Windows.Media.TileMode.FlipY>: Taka sama jak <xref:System.Windows.Media.TileMode.Tile>, ale naprzemienne wiersze Kafelki są przerzucane w pionie.  
   
 -   <xref:System.Windows.Media.TileMode.FlipXY>: Kombinacji <xref:System.Windows.Media.TileMode.FlipX> i <xref:System.Windows.Media.TileMode.FlipY>.  
   
  Na poniższym obrazie przedstawiono tryby różnych fragmentacji.  
   
- ![Różne ustawienia TileBrush TileMode](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")  
+ ![Different TileBrush TileMode settings](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")  
   
  W poniższym przykładzie obraz jest używany do malowania prostokąt, 100 pikseli szerokości i 100 pikseli wysokości. Ustawiając pędzla <xref:System.Windows.Media.TileBrush.Viewport%2A> została ustawiona do 0,0,0.25,0.25, podstawowy Kafelek pędzla dokonuje się za 1/4 obszaru wyjściowego. Pędzel <xref:System.Windows.Media.TileBrush.TileMode%2A> ustawiono <xref:System.Windows.Media.TileMode.FlipXY>. tak, aby wypełnił prostokąt z wierszami kafelków.  
   
@@ -121,13 +121,13 @@ Składniki TileBrush z TileMode kafelka
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [Przykładowe VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049)

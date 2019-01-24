@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: 414998b4bef526060e7ba4f584fa071fbd0acaa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c128ab9982ae7ccd5fff34020f2750f703da16a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664606"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
-Określa, że Visual Basic powinien kierować ciągi zgodnie z regułami programu .NET Framework oparte na zewnętrzną nazwę procedury zewnętrznej został zadeklarowany.  
+Określa, że Visual Basic powinien kierować ciągi zgodnie z regułami programu .NET Framework, na podstawie nazwy zewnętrznej procedury zewnętrznego został zadeklarowany.  
   
- Po wywołaniu procedury zdefiniowany poza projektem, kompilator Visual Basic nie ma dostępu do informacji musi mieć do wywołania tej procedury poprawnie. Informacje te obejmują lokalizacji procedurą, jak określono, jego sekwencja wywoływania oraz zwracany typ i ciąg znaków ustaw go używa. [Instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md) tworzy odwołanie do zewnętrznej procedury i przekazywać te informacje niezbędne.  
+ Po wywołaniu procedury zdefiniowane poza projektem, kompilator Visual Basic nie ma dostępu do informacji, muszą mieć próby wywołania tej procedury poprawnie. Informacje te obejmują, gdzie znajduje się procedura, sposób jego identyfikacji, jego sekwencja wywoływania i zwracany typ i zestaw znaków ciągu, od go używa. [Instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md) tworzy odwołanie do zewnętrznej procedury i dostarcza to informacje niezbędne.  
   
- `charsetmodifier` Części w `Declare` instrukcji dostarcza informacji zestaw znaków dla organizowanie ciągów podczas wywoływania procedury zewnętrznego. Wpływa to również na jak Visual Basic wyszukuje plik zewnętrznych dla nazwę procedury zewnętrznej. `Auto` Modyfikator Określa, że Visual Basic powinien kierować ciągi zgodnie z regułami programu .NET Framework i powinien ustalić podstawowy zestaw czasu wykonywania platformy i prawdopodobnie znaków zmodyfikować nazwę procedury zewnętrznej, jeśli początkowe wyszukiwanie kończy się niepowodzeniem. Aby uzyskać więcej informacji, zobacz "Zestawów znaków" w [instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md).  
+ `charsetmodifier` Wchodzi w skład w `Declare` instrukcji dostarcza informacji zestaw znaków dla marshaling ciągów podczas wywoływania procedury zewnętrznego. Ma to również wpływ jak języka Visual Basic poszukuje zewnętrznego pliku, aby uzyskać nazwę procedury zewnętrznej. `Auto` Modyfikator Określa, że Visual Basic powinien kierować ciągi zgodnie z regułami programu .NET Framework i, należy określić, podstawowego znak zestawu usługi platformy uruchomieniowej i możliwie zmodyfikować nazwę procedury zewnętrznej, jeśli początkowe wyszukiwanie kończy się niepowodzeniem. Aby uzyskać więcej informacji, zobacz "Zestawach znaków" w [instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md).  
   
  Jeśli określono nie modyfikator zestawu znaków, `Ansi` jest ustawieniem domyślnym.  
   
@@ -30,10 +30,10 @@ Określa, że Visual Basic powinien kierować ciągi zgodnie z regułami program
   
  [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Uwagi dla deweloperów inteligentnych urządzeń  
- To słowo kluczowe nie jest obsługiwane.  
+## <a name="smart-device-developer-notes"></a>Uwagi dla deweloperów urządzeń inteligentnych  
+ This — słowo kluczowe nie jest obsługiwane.  
   
-## <a name="see-also"></a>Zobacz też  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
+- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)
+- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: deklarowanie struktury (Visual Basic)'
+title: 'Instrukcje: Deklarowanie struktury (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], structures
@@ -7,27 +7,27 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: 6128addd60609bfc88a1409648fb320bc7089974
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfed5c969466cb427e6c94d39bfcc6a6e007c320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672048"
 ---
-# <a name="how-to-declare-a-structure-visual-basic"></a>Porady: deklarowanie struktury (Visual Basic)
-Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md), i zakończyć je z `End` `Structure` instrukcji. Między te dwie instrukcje muszą deklarować co najmniej jeden *elementu*. Elementy mogą być dowolnego typu danych, ale co najmniej jeden musi być udostępniana zmiennej lub zdarzeń udostępniana, standardowych.  
+# <a name="how-to-declare-a-structure-visual-basic"></a>Instrukcje: Deklarowanie struktury (Visual Basic)
+Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md), i kończy z `End` `Structure` instrukcji. Między te dwie instrukcje należy zadeklarować co najmniej jeden *elementu*. Elementy mogą być dowolnego typu danych, ale co najmniej jedna musi być zmienną nieudostępnionych lub nieudostępnionych, niestandardowych zdarzeń.  
   
- Nie można zainicjować elementy struktury w deklaracji struktury. Podczas zadeklarować zmiennej typu struktury, można przypisać wartości do elementów, uzyskując dostęp do nich za pośrednictwem zmiennej.  
+ Nie można zainicjować elementy struktury w deklaracji struktury. Kiedy Deklarujesz zmienną typu struktury, należy przypisać wartości do elementów, uzyskując dostęp do nich za pośrednictwem zmiennej.  
   
- Omówienie różnice między struktury i klasy, zobacz [struktury i klasy](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
+ Omówienie różnic między strukturami i klasami, zobacz [struktury i klasy](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
   
- Dla celów demonstracyjnych Rozważmy sytuację, w miejscu do śledzenia nazwa, numer wewnętrzny i wynagrodzenie pracownika. Struktura umożliwia to zrobić w pojedynczej zmiennej.  
+ Dla celów demonstracyjnych Rozważmy sytuację, w miejscu do śledzenia nazwa, numer wewnętrzny i wynagrodzenia pracownika. Struktura umożliwia to zrobić w pojedynczej zmiennej.  
   
-### <a name="to-declare-a-structure"></a>Deklarowanie struktury  
+### <a name="to-declare-a-structure"></a>Aby zadeklarować strukturę  
   
-1.  Utwórz początkowy i końcowy instrukcje dla struktury.  
+1.  Utwórz początkowy i końcowy instrukcji w strukturze.  
   
-     Możesz określić poziom dostępu, używając struktury [publicznego](../../../../visual-basic/language-reference/modifiers/public.md), [chronione](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), lub [prywatnej](../../../../visual-basic/language-reference/modifiers/private.md) — słowo kluczowe lub możesz pozwolić, aby go Domyślnie `Public`.  
+     Można określić poziom dostępu przy użyciu struktury [publicznych](../../../../visual-basic/language-reference/modifiers/public.md), [chronione](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), lub [prywatnej](../../../../visual-basic/language-reference/modifiers/private.md) — słowo kluczowe lub można pozwolić, aby go Domyślnie `Public`.  
   
     ```  
     Private Structure employee  
@@ -36,7 +36,7 @@ Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-
   
 2.  Dodawanie elementów do treści struktury.  
   
-     Struktura musi mieć co najmniej jeden element. Należy zadeklarować wszystkie elementy i określ poziom dostępu. Jeśli używasz [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) bez żadnych słów kluczowych, domyślnie dostępność `Public`.  
+     Struktura musi mieć co najmniej jeden element. Musisz zadeklarować każdego elementu i określić poziom dostępu dla niego. Jeśli używasz [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) bez żadnych słów kluczowych, domyślnie dostępność `Public`.  
   
     ```  
     Private Structure employee  
@@ -51,18 +51,18 @@ Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-
     End Structure  
     ```  
   
-     `salary` Pole w poprzednim przykładzie jest `Private`, co oznacza, że jest niedostępny poza struktury, nawet z zawierające klasy. Jednak `giveRaise` procedura jest `Public`, dlatego może być wywołana z poza struktury. Podobnie można zwiększyć `salaryReviewTime` zdarzenia z poza struktury.  
+     `salary` Pole w powyższym przykładzie jest `Private`, co oznacza, że jest niedostępny poza struktury, nawet z zawierający klasy. Jednak `giveRaise` procedura jest `Public`, dzięki czemu mogą być wywoływane z poza struktury. Podobnie, można podnieść `salaryReviewTime` zdarzenie z poza struktury.  
   
-     Oprócz zmiennych `Sub` procedur i zdarzeń, stałe, można również zdefiniować `Function` procedury i właściwości w strukturze. Można określić co najwyżej jedną właściwość jako *domyślna właściwość*, o ile potrzebny co najmniej jednego argumentu. Można obsługiwać zdarzenia z [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` procedury. Aby uzyskać więcej informacji, zobacz [porady: deklarowanie i wywoływanie właściwości domyślne w Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
+     Oprócz zmiennych `Sub` procedur i zdarzeń, można również zdefiniować stałych, `Function` procedur i właściwości w strukturze. Możesz wyznaczyć co najwyżej jedną właściwość jako *właściwość domyślna*, o ile trwa co najmniej jednego argumentu. Można obsługiwać zdarzenia z [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` procedury. Aby uzyskać więcej informacji, zobacz [jak: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Zmienne struktur](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- [Struktury oraz inne elementy programowania](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- [Struktury i klasy](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [User-Defined, typ danych](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Zmienne struktur](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
+- [Struktury oraz inne elementy programowania](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
+- [Struktury i klasy](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [User-Defined, typ danych](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)

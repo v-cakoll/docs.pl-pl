@@ -3,21 +3,15 @@ title: Obsługa i wywoływanie zdarzeń
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
-- csharp
-- vb
+  - csharp
+  - vb
 helpviewer_keywords:
-- delegate model for events
-- application development [.NET Framework], events
-- events [.NET Framework]
+  - delegate model for events
+  - 'application development [.NET Framework], events'
+  - 'events [.NET Framework]'
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127930"
 ---
 # <a name="handling-and-raising-events"></a>Obsługa i wywoływanie zdarzeń
 Zdarzenia w .NET Framework są oparte na modelu delegata. Model delegata następuje po wzorcu projektowania obserwatora, który umożliwia subskrybentom zarejestrowanie i otrzymywanie powiadomienia od dostawcy. Nadawca wydarzenie wypycha powiadomienie, która miała miejsce zdarzenie, Odbiorca zdarzenia odbiera to powiadomienie i definiuje odpowiedź na to. W tym artykule opisano główne składniki modelu delegowanego, jak używać zdarzenia w aplikacjach i sposobie implementacji zdarzenia w kodzie.  
@@ -82,17 +76,17 @@ Zdarzenia w .NET Framework są oparte na modelu delegata. Model delegata następ
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Jak: Podnieść i zużyć zdarzenia](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Zawiera Przykłady podnoszenia i zużywania zdarzeń.|  
-|[Jak: Obsługa wielu zdarzeń przy użyciu właściwości zdarzenia](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Pokazuje, jak używać właściwości zdarzenia do obsługi wielu zdarzeń.|  
+|[Instrukcje: Podnieść i zużyć zdarzenia](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Zawiera Przykłady podnoszenia i zużywania zdarzeń.|  
+|[Instrukcje: Obsługa wielu zdarzeń przy użyciu właściwości zdarzenia](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Pokazuje, jak używać właściwości zdarzenia do obsługi wielu zdarzeń.|  
 |[Wzorzec projektowy obserwatora](../../../docs/standard/events/observer-design-pattern.md)|Opisuje szablon projektu, który umożliwia subskrybentom zarejestrowanie i otrzymywanie powiadomienia od dostawcy.|  
-|[Jak: Korzystanie ze zdarzeń w aplikacjach formularzy internetowych](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Pokazuje, jak obsługiwać zdarzenia wywoływane przez formant formularzy sieci Web.|  
+|[Instrukcje: Korzystanie ze zdarzeń w aplikacjach formularzy internetowych](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Pokazuje, jak obsługiwać zdarzenia wywoływane przez formant formularzy sieci Web.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.EventHandler>  
-- <xref:System.EventHandler%601>  
-- <xref:System.EventArgs>  
-- <xref:System.Delegate>  
-- [Zdarzenia i przegląd zdarzeń trasowanych (aplikacje platformy uniwersalnej systemu Windows)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
-- [Zdarzenia (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- <xref:System.EventHandler>
+- <xref:System.EventHandler%601>
+- <xref:System.EventArgs>
+- <xref:System.Delegate>
+- [Zdarzenia i przegląd zdarzeń trasowanych (aplikacje platformy uniwersalnej systemu Windows)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [Zdarzenia (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [Zdarzenia (C# Programming Guide)](../../csharp/programming-guide/events/index.md)

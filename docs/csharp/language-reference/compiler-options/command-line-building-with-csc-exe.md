@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 833308838c5087a657c8f718682aef8d971c188f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: bb8f9ace8f259ece803aa6681ebab90355146380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661701"
 ---
 # <a name="command-line-build-with-cscexe"></a>Kompilacji wiersza polecenia przy użyciu csc.exe
 Można wywołać kompilatora języka C#, wpisując nazwę jego pliku wykonywalnego (*csc.exe*) w wierszu polecenia.
@@ -97,11 +97,11 @@ Istnieją żaden obiekt (*.obj*) pliki utworzone w wyniku wywołania kompilator 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
-- [Opcje kompilatora C# w porządku alfabetycznym](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
-- [Opcje kompilatora C# w rozbiciu na kategorie](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
-- [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [Argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
-- [Instrukcje: Wyświetlanie argumentów wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
-- [Instrukcje: Dostęp do argumentów wiersza polecenia za pomocą foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opcje kompilatora C# w porządku alfabetycznym](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+- [Opcje kompilatora C# w rozbiciu na kategorie](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+- [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [Argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
+- [Instrukcje: Wyświetlanie argumentów wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Instrukcje: Dostęp do argumentów wiersza polecenia za pomocą foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Main() — zwracane wartości](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

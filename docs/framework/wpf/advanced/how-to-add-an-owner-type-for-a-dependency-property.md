@@ -1,5 +1,5 @@
 ---
-title: Jak dodać typ właściciela dla właściwości zależności
+title: 'Instrukcje: Dodaj typ właściciela dla właściwości zależności'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-ms.openlocfilehash: bf3f73743d1c76145bf520ed859c27c4d3aaf662
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 528ec28750c6ce7dffb1104d750679a546df0487
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697065"
 ---
-# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Jak dodać typ właściciela dla właściwości zależności
-W tym przykładzie przedstawiono sposób dodawania klasy jako właściciela właściwości zależności zarejestrowany dla innego typu. Dzięki temu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] czytnika właściwości systemu są i rozpoznawany jako właściciela dodatkowe właściwości klasy. Dodawanie jako właściciela opcjonalnie umożliwia dodawanie klasy do udostępnienia metadanych określonego typu.  
+# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Instrukcje: Dodaj typ właściciela dla właściwości zależności
+W tym przykładzie przedstawiono sposób dodawania klasy jako właściciele właściwości zależności, zarejestrowany dla innego typu. Dzięki temu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] czytnika i system właściwości są rozpoznawać klasy jako właściciel dodatkowe właściwości. Dodawanie jako właściciel opcjonalnie umożliwia dodanie klasy do udostępnienia metadanych specyficznych dla typu.  
   
- W poniższym przykładzie `StateProperty` właściwość zarejestrowane przez `MyStateControl` klasy. Klasa `UnrelatedStateControl` dodaje się jako właściciel `StateProperty` przy użyciu <xref:System.Windows.DependencyProperty.AddOwner%2A> metody, w szczególności za pomocą podpisu, który zezwala na nowe metadane dla właściwości zależności, ponieważ znajduje się na dodawanie typu. Należy zauważyć, że należy zapewnić [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] metod dostępu właściwości, podobnie jak w przykładzie przedstawionym w [implementuje właściwości zależności](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md) przykład, jak również ponownie udostępnić identyfikatora właściwości zależności klasy dodawane jako właściciel.  
+ W poniższym przykładzie `StateProperty` właściwość zarejestrowane przez `MyStateControl` klasy. Klasa `UnrelatedStateControl` dodaje się jako właściciel `StateProperty` przy użyciu <xref:System.Windows.DependencyProperty.AddOwner%2A> metody, w szczególności za pomocą podpisu, umożliwiający nowe metadane dla właściwości zależności, ponieważ znajduje się na dodawanie typu. Należy zauważyć, że należy podać [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] metod dostępu właściwości, które są podobne do pokazanego poniżej [implementować właściwość zależności](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md) przykładu, a także ponownie udostępnić identyfikator właściwości zależności klasy dodawane jako właściciel.  
   
- Bez otoki, właściwości zależności będą nadal działać z punktu widzenia programowy dostęp przy użyciu <xref:System.Windows.DependencyObject.GetValue%2A> lub <xref:System.Windows.DependencyObject.SetValue%2A>. Ale zwykle można równoległe to zachowanie właściwości systemu z [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] otoki właściwości. Otoki ułatwić można ustawić właściwości zależności programowo i pozwala ustawić właściwości jako [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atrybutów.  
+ Bez otoki, właściwość zależności będą nadal działać z punktu widzenia dostęp programowy przy użyciu <xref:System.Windows.DependencyObject.GetValue%2A> lub <xref:System.Windows.DependencyObject.SetValue%2A>. Jednak zazwyczaj równoległe tego zachowania system właściwości [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] otoki właściwości. Otoki ułatwić programowe Ustawianie właściwości zależności i umożliwia ustawianie właściwości jako [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atrybutów.  
   
- Aby dowiedzieć się, jak zastąpić domyślny metadanych, zobacz [zastąpienia metadane dla właściwości zależności](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md).  
+ Aby dowiedzieć się, jak zastąpić domyślny metadanych, zobacz [zastąpić metadane dla właściwości zależności](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
@@ -30,6 +30,6 @@ W tym przykładzie przedstawiono sposób dodawania klasy jako właściciela wła
 [!code-csharp[PropertySystemEsoterics#UnrelatedStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#unrelatedstatecontrol)]
 [!code-vb[PropertySystemEsoterics#UnrelatedStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#unrelatedstatecontrol)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

@@ -2,12 +2,12 @@
 title: '&lt;message&gt; w &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: efd2edd96e695216f8c31128b6cf670668cd0da8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6a6010399d0dd884e5c921829395531f1133e439
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677618"
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;message&gt; w &lt;ws2007HttpBinding&gt;
 Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elementu.  
@@ -16,7 +16,7 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<ws2007HttpBindin
 \<powiązania >  
 \<ws2007HttpBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
+\<security>  
 \<message>  
   
 ## <a name="syntax"></a>Składnia  
@@ -90,13 +90,13 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<ws2007HttpBindin
 |-------------|-----------------|  
 |[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Definiuje ustawienia zabezpieczeń dla [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md).|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>  
- <xref:System.ServiceModel.WSHttpSecurity.Message%2A>  
- <xref:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement>  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>
+- <xref:System.ServiceModel.WSHttpSecurity.Message%2A>
+- <xref:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement>
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

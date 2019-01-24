@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668993"
 ---
 # <a name="xtype-markup-extension"></a>x:Type — Rozszerzenie znaczników
 Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla określonego typu XAML.  
@@ -41,7 +41,7 @@ Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla okre�
 |||  
 |-|-|  
 |`prefix`|Opcjonalna. Prefiks, który mapuje przestrzeń nazw XAML innych niż domyślne. Określenie prefiksu często nie jest konieczne. Zobacz uwagi.|  
-|`typeNameValue`|Wymagane. Nazwa typu, który jest rozpoznawalna do bieżącej domyślnej XAML przestrzeni nazw; lub określony mapowanych prefiks Jeśli `prefix` podano.|  
+|`typeNameValue`|Wymagana. Nazwa typu, który jest rozpoznawalna do bieżącej domyślnej XAML przestrzeni nazw; lub określony mapowanych prefiks Jeśli `prefix` podano.|  
   
 ## <a name="remarks"></a>Uwagi  
  `x:Type` — Rozszerzenie znaczników ma podobną funkcję do `typeof()` operatora w języku C# lub `GetType` operatora programu Microsoft Visual Basic.  
@@ -79,8 +79,8 @@ Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla okre�
   
  W środowisku WPF można użyć funkcji XAML 2009, ale tylko dla luźne XAML (XAML, która nie jest kompilowana do znaczników). XAML kompilowana do znaczników dla platformy WPF i formularz BAML XAML aktualnie nie obsługują tych funkcji i słowa kluczowe XAML 2009.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Style>  
- [Tworzenie szablonów i stylów](../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Rozszerzenia znaczników i WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Style>
+- [Tworzenie szablonów i stylów](../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

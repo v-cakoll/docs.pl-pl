@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a4ed21b6f9fd067f3357e07c5fda07d25ce868d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4619d5a1444d42c6f3ac43306fbd979a6a70f12b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672178"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps — Metoda
-Pobiera wartość atrybutu niestandardowego, podane jego token metadanych.  
+Pobiera wartość atrybutu niestandardowego, biorąc pod uwagę jego token metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,32 +41,32 @@ HRESULT GetCustomAttributeProps (
   
 #### <a name="parameters"></a>Parametry  
  `cv`  
- [in] Token metadanych, który reprezentuje atrybutu niestandardowego, które mają zostać pobrane.  
+ [in] Token metadanych, który reprezentuje atrybut niestandardowy do pobrania.  
   
  `ptkObj`  
- [out, opcjonalnie] Token metadanych reprezentujący obiekt, który modyfikuje atrybutu niestandardowego. Ta wartość może być dowolnego typu token metadanych z wyjątkiem `mdCustomAttribute`.  
+ [out, opcjonalny] Token metadanych reprezentujący obiekt, który modyfikuje atrybutu niestandardowego. Ta wartość może być dowolnego typu tokenu metadanych z wyjątkiem `mdCustomAttribute`.  
   
  `ptkType`  
- [out, opcjonalnie] `mdMethodDef` Lub `mdMemberRef` metadanych token reprezentujący <xref:System.Type> zwrócony atrybutu niestandardowego.  
+ [out, opcjonalny] `mdMethodDef` Lub `mdMemberRef` metadanych token reprezentujący <xref:System.Type> zwrócone atrybutu niestandardowego.  
   
  `ppBlob`  
- [out, opcjonalnie] Wskaźnik do tablicy danych, która jest wartością atrybutu niestandardowego.  
+ [out, opcjonalny] Wskaźnik do tablicy danych, która jest wartością atrybutu niestandardowego.  
   
  `pcbSize`  
- [out, opcjonalnie] Rozmiar w bajtach dane zwrócone w *`ppBlob`.  
+ [out, opcjonalny] Rozmiar w bajtach dane zwrócone w *`ppBlob`.  
   
 ## <a name="remarks"></a>Uwagi  
- Atrybut niestandardowy jest przechowywana jako tablicę danych, formatu, który jest rozpoznawany przez aparat metadanych.  
+ Atrybut niestandardowy jest przechowywany jako tablicę danych, formatu, który zrozumieniu przez aparat metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

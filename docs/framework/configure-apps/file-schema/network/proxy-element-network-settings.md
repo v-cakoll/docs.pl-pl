@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 3a6d5b080c74fbd3f6ebca9882c1667951cfcb91
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4bec5422165a1795fd2442d95b2dd27ac1b4bc8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685987"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;Serwer proxy&gt; — Element (ustawienia sieci)
 Określa serwer proxy.  
   
  \<Konfiguracja >  
 \<system.net>  
-\<defaultProxy — >  
-\<Serwer proxy >  
+\<defaultProxy>  
+\<proxy>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,7 +55,7 @@ Określa serwer proxy.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[defaultProxy —](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).|  
   
 ## <a name="text-value"></a>Wartość tekstowa  
   
@@ -90,6 +90,6 @@ Określa serwer proxy.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

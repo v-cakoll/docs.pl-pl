@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 1db4ebff194a63552f54d1a3011099d28cbbf659
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d96897b9b11419bba8a6ef9d3c9579a62e19ee20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686494"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Instrukcje: Zabezpieczanie usługi za pomocą certyfikatu X.509
 Zabezpieczanie usługi za pomocą certyfikatu X.509 to podstawowa technika, używanego przez większość powiązania w Windows Communication Foundation (WCF). W tym temacie przedstawiono kroki konfigurowania samodzielnie hostowanej usłudze przy użyciu certyfikatu X.509.  
@@ -82,5 +82,5 @@ Zabezpieczanie usługi za pomocą certyfikatu X.509 to podstawowa technika, uży
   
 -   <xref:System.Runtime.Serialization>  
   
-## <a name="see-also"></a>Zobacz też  
- [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>Zobacz także
+- [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

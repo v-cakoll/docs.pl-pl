@@ -1,18 +1,18 @@
 ---
-title: Jak dostosować znaczniki na suwaku
+title: 'Instrukcje: Dostosuj znaczniki na suwaku'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TickBar [WPF]
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
-ms.openlocfilehash: 045a2f540a37cdea84d2bf2f3ed1e74e122bdbb5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b6ade07b0b4c04578d2523d6d8ba992b8b2d31f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696675"
 ---
-# <a name="how-to-customize-the-ticks-on-a-slider"></a>Jak dostosować znaczniki na suwaku
+# <a name="how-to-customize-the-ticks-on-a-slider"></a>Instrukcje: Dostosuj znaczniki na suwaku
 W tym przykładzie przedstawiono sposób tworzenia <xref:System.Windows.Controls.Slider> formant, który zawiera znaczniki.  
   
 ## <a name="example"></a>Przykład  
@@ -24,8 +24,8 @@ W tym przykładzie przedstawiono sposób tworzenia <xref:System.Windows.Controls
   
  [!code-xaml[Slider#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Controls.Slider>  
- <xref:System.Windows.Controls.Primitives.TickBar>  
- <xref:System.Windows.Controls.Slider.TickPlacement%2A>  
- [Suwak tematy porad](https://msdn.microsoft.com/library/534be86c-afb2-425d-8186-631278a9925e)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Controls.Slider>
+- <xref:System.Windows.Controls.Primitives.TickBar>
+- <xref:System.Windows.Controls.Slider.TickPlacement%2A>
+- [Suwak tematy porad](https://msdn.microsoft.com/library/534be86c-afb2-425d-8186-631278a9925e)

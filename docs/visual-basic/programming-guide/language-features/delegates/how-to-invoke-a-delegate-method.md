@@ -1,15 +1,15 @@
 ---
-title: 'Porady: wywoływanie metody delegata (Visual Basic)'
+title: 'Instrukcje: Wywoływanie metody delegata (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: c50a32d300aaf52efe0c55cef69d5793a98305ac
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 42d56fca7e1d33c071db2e7e38935aa00caa5b7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676214"
 ---
-# <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Porady: wywoływanie metody delegata (Visual Basic)
+# <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Instrukcje: Wywoływanie metody delegata (Visual Basic)
 Ten przykład pokazuje, jak skojarzyć metodę z delegata, a następnie wywołać tę metodę przez delegat.  
   
 ### <a name="create-the-delegate-and-matching-procedures"></a>Utwórz delegata i procedur dopasowania  
@@ -44,7 +44,7 @@ Ten przykład pokazuje, jak skojarzyć metodę z delegata, a następnie wywoła�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Delegate, instrukcja](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
-- [Delegaci](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
-- [Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)  
+- [Delegate, instrukcja](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Delegaty](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)
 - [Aplikacje wielowątkowe](../../../../standard/threading/using-threads-and-threading.md)

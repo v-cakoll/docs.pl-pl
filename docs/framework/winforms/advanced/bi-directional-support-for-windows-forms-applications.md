@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9e35f097380272822e9dbcda01617cce9fed8fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676851"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Dwukierunkowa obsługa aplikacji Windows Forms
 Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługują dwukierunkowej języków (od prawej do lewej), takich jak arabski i hebrajski. W tym standardowych formularzy, okna dialogowe, formularze MDI i wszystkich kontrolek, można pracować w nich — oznacza to, że wszystkie obiekty w <xref:System.Windows.Forms.Control> przestrzeni nazw.  
@@ -23,7 +23,7 @@ Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługu
  Kultura i ustawienia kultury interfejsu użytkownika można określić za pomocą daty, godziny, waluty i inne informacje, jak działa aplikacja. Obsługa kultury i kultury UI, jest taka sama dla języków dwukierunkowych, podobnie jak w przypadku innych języków.   Zobacz też [klasy specyficzne dla kultury dla globalnych formularzy Windows i formularzy sieci Web](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) lub [klasy specyficzne dla kultury dla globalnych formularzy Windows i formularzy sieci Web](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft i właściwości RightToLeftLayout zostanie zmieniona  
- Podstawa <xref:System.Windows.Forms.Control> zawiera klasy, z którego pochodzi formularzy, <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości, które można ustawić, aby zmienić kolejność czytania formularza i jej kontrolek. Jeśli ustawisz formularza <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości domyślne kontrolki na formularzu dziedziczą ustawienie. Jednak możesz również ustawić <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwość indywidualnie dla większości kontrolek. Zobacz też [jak: Tekst wyświetlania od prawej do lewej w formularzach Windows Forms dla globalizacji](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
+ Podstawa <xref:System.Windows.Forms.Control> zawiera klasy, z którego pochodzi formularzy, <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości, które można ustawić, aby zmienić kolejność czytania formularza i jej kontrolek. Jeśli ustawisz formularza <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości domyślne kontrolki na formularzu dziedziczą ustawienie. Jednak możesz również ustawić <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwość indywidualnie dla większości kontrolek. Zobacz też [jak: Wyświetlanie tekstu od prawej do lewej w formularzach Windows Forms dla globalizacji](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
   
  Efekt <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości może się różnić z jednego formantu do drugiego. W niektórych kontrolek właściwość określa tylko kolejność odczytu, podobnie jak w <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> i <xref:System.Windows.Forms.ToolTip> kontrolki. W innych formantów <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwość zmienia kolejność czytania i układ. Obejmuje to <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> i <xref:System.Windows.Forms.CheckBox> kontrolki. Inne formanty wymagającą <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> właściwości można zastosować do utworzenia duplikatów jej układ od prawej do lewej. Poniższa tabela zawiera szczegółowe informacje dotyczące sposobu <xref:System.Windows.Forms.Control.RightToLeft%2A> i <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> właściwości na poszczególnych kontrolek Windows Forms.  
   
@@ -119,5 +119,5 @@ Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługu
   
 ## <a name="see-also"></a>Zobacz także
 
-[Dwukierunkowa obsługa aplikacji sieci Web ASP.NET](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
-[Globalizowanie aplikacji Windows Forms](globalizing-windows-forms.md)
+- [Dwukierunkowa obsługa aplikacji sieci Web ASP.NET](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)
+- [Globalizowanie aplikacji Windows Forms](globalizing-windows-forms.md)

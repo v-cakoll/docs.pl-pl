@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e5a7d0555b026340ec53363a7cd054532d1491c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e269e699d708c669715829eade9ca56fba16eac3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694833"
 ---
 # <a name="idebuggerinfo-interface"></a>IDebuggerInfo — Interfejs
 Udostępnia metody uzyskiwania informacji na temat stanu usług debugowania.  
@@ -30,17 +30,17 @@ Udostępnia metody uzyskiwania informacji na temat stanu usług debugowania.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[IsDebuggerAttached, metoda](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-isdebuggerattached-method.md)|Pobiera wartość wskazującą, czy zarządzany debuger jest dołączony do tego procesu.|  
+|[IsDebuggerAttached, metoda](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-isdebuggerattached-method.md)|Pobiera wartość wskazującą, czy zarządzane debuger jest dołączony do tego procesu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [CorRuntimeHost, klasa coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+## <a name="see-also"></a>Zobacz także
+- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [CorRuntimeHost, klasa coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

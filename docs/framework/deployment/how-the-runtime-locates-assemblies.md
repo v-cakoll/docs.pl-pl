@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661870"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Sposoby lokalizowania zestawów przez środowisko uruchomieniowe
 Aby pomyślnie wdrożyć aplikacji środowiska .NET Framework, trzeba zrozumieć, jak środowisko uruchomieniowe języka wspólnego lokalizuje i wiąże się do zestawów, które składają się na aplikację. Domyślnie środowisko uruchomieniowe podejmuje próbę powiązania z dokładną wersją zestawu, który aplikacja została skompilowana przy użyciu. To zachowanie domyślne można przesłonić, ustawień pliku konfiguracji.  
@@ -61,7 +61,7 @@ Aby pomyślnie wdrożyć aplikacji środowiska .NET Framework, trzeba zrozumieć
         >  Wersja sprawdzania pod kątem zestawy bez silnej nazwy nie jest ani środowisko uruchomieniowe sprawdza w globalnej pamięci podręcznej zestawy bez silnej nazwy.  
   
 <a name="step1"></a>   
-## <a name="step-1-examining-the-configuration-files"></a>Krok 1. Badanie plików konfiguracji  
+## <a name="step-1-examining-the-configuration-files"></a>Krok 1. Przeglądanie plików konfiguracji  
  Zachowanie powiązań zestawów, można skonfigurować na różnych poziomach w oparciu o trzy pliki XML:  
   
 -   Plik konfiguracji aplikacji.  
@@ -138,7 +138,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Po trzecie środowisko uruchomieniowe sprawdza, czy plik konfiguracji komputera. Ten plik o nazwie Machine.config — znajduje się na komputerze lokalnym w podkatalogu Config katalog główny, w którym zainstalowano środowiska wykonawczego. Ten plik może służyć przez administratorów do określenia zestawu powiązania ograniczenia, które są lokalne na tym komputerze. Ustawienia w pliku konfiguracji komputera mają pierwszeństwo przed wszystkie inne ustawienia konfiguracji; jednak oznacza to, że wszystkie ustawienia konfiguracji należy umieścić w tym pliku. Wersja określona przez plik zasad administrator jest ostateczne i nie może być zastąpiona. Określone w pliku Machine.config zastąpienia wpływają na wszystkie aplikacje. Aby uzyskać więcej informacji na temat plików konfiguracyjnych, zobacz [Konfigurowanie aplikacji za pomocą plików konfiguracji](../../../docs/framework/configure-apps/index.md).  
   
 <a name="step2"></a>   
-## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Krok 2. Sprawdzanie zestawów poprzednio występujących w odwołaniu  
+## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Krok 2. Sprawdzanie wcześniej zestawów występujących w odwołaniu  
  Jeśli żądany zestaw zażądano również w poprzednich wywołań, środowisko uruchomieniowe języka wspólnego używa zestawu, który jest już załadowany. Podczas nadawania nazw zestawów tworzących aplikację, może to mieć konsekwencje. Aby uzyskać więcej informacji na temat nazewnictwa zestawów, zobacz [nazw zestawów](../../../docs/framework/app-domains/assembly-names.md).  
   
  Jeśli poprzednie żądanie dla zestawu nie powiodło się, kolejne żądania dla zestawu są nie powiodło się natychmiast bez próby załadowania zestawu. Począwszy od programu .NET Framework w wersji 2.0, niepowodzenia powiązań zestawu są buforowane i buforowane informacje są używane do określenia, czy podejmie próbę załadowania zestawu.  
@@ -147,11 +147,11 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 >  Aby przywrócić działanie programu .NET Framework w wersji 1.0 i 1.1, który nie pamięci podręcznej niepowodzenia powiązań, należy dołączyć [ \<disablecachingbindingfailures — > Element](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) w pliku konfiguracji.  
   
 <a name="step3"></a>   
-## <a name="step-3-checking-the-global-assembly-cache"></a>Krok 3. Sprawdzanie globalnej pamięci podręcznej zestawów  
+## <a name="step-3-checking-the-global-assembly-cache"></a>Krok 3. Sprawdzanie globalnej pamięci podręcznej  
  W przypadku zestawów o silnych nazwach powiązania proces jest kontynuowany przez wyszukiwanie w globalnej pamięci podręcznej. Global assembly cache przechowuje zestawy, które mogą być używane przez kilka aplikacji na komputerze. Wszystkie zestawy w globalnej pamięci podręcznej muszą mieć silnej nazwy.  
   
 <a name="step4"></a>   
-## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Krok 4. Lokalizowanie zestawu za pośrednictwem ścieżek bazowych kodu lub sondowania  
+## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Krok 4. Lokalizowanie zestawu za pośrednictwem ścieżek bazowych kodu lub sondowanie  
  Po określeniu wersji poprawny zestaw, korzystając z informacji w odwołaniu do wywołującego zestawu i w plikach konfiguracji, a po jego zaewidencjonowanego w globalnej pamięci podręcznej (tylko w przypadku zestawu o silnych nazwach), języka wspólnego środowisko uruchomieniowe próbuje znaleźć zestawu. Proces lokalizowania zestawów obejmuje następujące czynności:  
   
 1.  Jeśli [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) element zostanie znaleziony w pliku konfiguracyjnym aplikacji, środowisko uruchomieniowe sprawdza określonej lokalizacji. Jeśli zostanie znalezione dopasowanie, że zestaw jest używany i badania nie występuje. Jeśli zestaw nie zostaną znalezione, żądania powiązania nie powiedzie się.  
@@ -247,6 +247,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  Na przykład, jeśli odwołuje się Assembly1 Assembly2 i Assembly1 została pobrana z `http://www.code.microsoft.com/utils`, czy lokalizacja jest uważany za wskazówkę o tym, gdzie można znaleźć Assembly2.dll. Środowisko uruchomieniowe, a następnie sondy dla zestawu w `http://www.code.microsoft.com/utils/Assembly2.dll` i `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Jeśli Assembly2 nie zostanie znaleziony w jednej z tych lokalizacji, środowisko uruchomieniowe wysyła zapytanie do Instalatora Windows.  
   
-## <a name="see-also"></a>Zobacz też  
-- [Najlepsze praktyki dotyczące ładowania zestawu](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>Zobacz także
+- [Najlepsze praktyki dotyczące ładowania zestawu](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Wdrażanie](../../../docs/framework/deployment/index.md)

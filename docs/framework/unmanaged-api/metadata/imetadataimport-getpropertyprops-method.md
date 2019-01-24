@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7312cbd31a04365801b0380d5914966f36679560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81680825daff2cd2358da7b3956782020edf4791
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449458"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672061"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps — Metoda
 Pobiera metadane dla właściwości reprezentowanej przez określony token.  
@@ -52,7 +52,7 @@ HRESULT GetPropertyProps (
   
 #### <a name="parameters"></a>Parametry  
  `prop`  
- [in] Token, który reprezentuje właściwość do zwracania metadanych.  
+ [in] Token, który reprezentuje właściwość, można zwrócić metadanych dla.  
   
  `pClass`  
  [out] Wskaźnik do TypeDef token, który reprezentuje typ, który implementuje właściwości.  
@@ -61,53 +61,53 @@ HRESULT GetPropertyProps (
  [out] Bufor do przechowywania nazwy właściwości.  
   
  `cchProperty`  
- [in] Rozmiar w znaki dwubajtowe `szProperty`.  
+ [in] Rozmiar w znaków `szProperty`.  
   
  `pchProperty`  
- [out] Liczba zwracanych w znaki dwubajtowe `szProperty`.  
+ [out] Liczba znaków dwubajtowych zwracane w `szProperty`.  
   
  `pdwPropFlags`  
- [out] Wskaźnik do flagi, atrybut zastosowany do właściwości. Ta wartość jest maską bitów z [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) wyliczenia.  
+ [out] Wskaźnik do flag atrybut stosowany do właściwości. Ta wartość jest z [corpropertyattr —](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) wyliczenia.  
   
  `ppvSig`  
  [out] Wskaźnik do podpisania metadanych właściwości.  
   
  `pbSig`  
- [out] Liczba bajtów zwrócona w `ppvSig`.  
+ [out] Liczba bajtów zwróconych w `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out] Flaga określający typ stałej, która jest wartością domyślną właściwości. Ta wartość jest z corelementtype — wyliczenie.  
+ [out] Flaga określająca typ stałej, która jest wartością domyślną właściwości. Ta wartość pochodzi z corelementtype — wyliczenie.  
   
  `ppDefaultValue`  
- [out] Wskaźnik do bajtów, które przechowują wartość domyślna dla tej właściwości.  
+ [out] Wskaźnik na bajty, które przechowują wartość domyślna tej właściwości.  
   
  `pcchDefaultValue`  
- [out] Rozmiar w znaki dwubajtowe `ppDefaultValue`, jeśli `pdwCPlusTypeFlag` jest ELEMENT_TYPE_STRING; w przeciwnym razie wartość ta nie jest ważna. W takim przypadku długość `ppDefaultValue` jest wywnioskowany na podstawie typu, który jest określony przez `pdwCPlusTypeFlag`.  
+ [out] Rozmiar w znaków `ppDefaultValue`, jeśli `pdwCPlusTypeFlag` jest ELEMENT_TYPE_STRING; w przeciwnym razie ta wartość nie jest ważna. W takim przypadku długość `ppDefaultValue` jest wnioskowany z typu, który jest określony przez `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
  [out] Wskaźnik do tokenu MethodDef, który reprezentuje metody dostępu set dla właściwości.  
   
  `pmdGetter`  
- [out] Wskaźnik do tokenu MethodDef, który reprezentuje metodę dostępu get dla właściwości.  
+ [out] Wskaźnik do tokenu MethodDef, który reprezentuje metody dostępu get dla właściwości.  
   
  `rmdOtherMethod`  
- [out] Tablica MethodDef reprezentujących innych metod skojarzony z właściwością.  
+ [out] Tablica MethodDef, które reprezentują inne metody skojarzony z właściwością.  
   
  `cMax`  
- [in] Maksymalny rozmiar `rmdOtherMethod` tablicy. Tablica jest wystarczająco duży, aby pomieścić wszystkie metody nie zostaną podane, są pominięcie bez ostrzeżenia.  
+ [in] Maksymalny rozmiar `rmdOtherMethod` tablicy. Jeśli nie podasz, tablica jest wystarczająco duży, aby pomieścić wszystkie metody, są one pomijane bez ostrzeżenia.  
   
  `pcOtherMethod`  
  [out] Liczba tokenów MethodDef zwracane w `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

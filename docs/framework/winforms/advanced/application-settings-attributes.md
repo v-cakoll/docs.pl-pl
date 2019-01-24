@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: 9ed549cb1e10b22c4fa34d984133a6be11dfab44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 09fb5c26f7ecccd427155836c3864773153dddfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668954"
 ---
 # <a name="application-settings-attributes"></a>Atrybuty ustawień aplikacji
 Architektura ustawień aplikacji zawiera wiele atrybutów, które mogą być stosowane do klasy otoki ustawień aplikacji lub jego poszczególnych właściwości. Te atrybuty są sprawdzane w czasie wykonywania przez infrastrukturę ustawienia aplikacji, często specjalnie Dostawca ustawień, aby dostosować jego funkcjonowania określone potrzeby niestandardowej otoki.  
@@ -19,9 +19,9 @@ Architektura ustawień aplikacji zawiera wiele atrybutów, które mogą być sto
  W poniższej tabeli przedstawiono atrybuty, które można zastosować do klasy otoki ustawień aplikacji i/lub poszczególnych właściwości tej klasy. Zgodnie z definicją, tylko jeden zakres atrybut —**UserScopedSettingAttribute** lub **atrybutu ApplicationScopedSettingAttribute**— muszą być stosowane do każdej właściwości ustawienia.  
   
 > [!NOTE]
->  Dostawca ustawień niestandardowych, pochodzące z <xref:System.Configuration.SettingsProvider> klasy, jest wymagana tylko do rozpoznawania następujące trzy atrybuty: **atrybutu ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, i **DefaultSettingValueAttribute**.  
+>  Dostawca ustawień niestandardowych, pochodzące z <xref:System.Configuration.SettingsProvider> klasy, jest wymagana tylko do rozpoznawania następujące trzy atrybuty: **Atrybutu ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, i **DefaultSettingValueAttribute**.  
   
-|Atrybut|Docelowy|Opis|  
+|Atrybut|Cel|Opis|  
 |---------------|------------|-----------------|  
 |<xref:System.Configuration.SettingsProviderAttribute>|Oba|Określa krótką nazwę dostawcy ustawień na potrzeby stanu trwałego.<br /><br /> Jeśli ten atrybut nie zostanie podany, domyślny dostawca <xref:System.Configuration.LocalFileSettingsProvider>, zakłada, że.|  
 |<xref:System.Configuration.UserScopedSettingAttribute>|Oba|Definiuje właściwość jako ustawienia aplikacji użytkownika o określonym zakresie.|  
@@ -37,8 +37,8 @@ Architektura ustawień aplikacji zawiera wiele atrybutów, które mogą być sto
   
  *Klasa* wskazuje, czy atrybut można stosować tylko do klasy otoki ustawień aplikacji. *Właściwość* wskazuje, czy atrybut może zostać zastosowana tylko właściwości ustawień. *Zarówno* wskazuje, że na tym poziomie można zastosować atrybutu.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- [Architektura ustawień aplikacji](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Instrukcje: tworzenie ustawień aplikacji](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- [Architektura ustawień aplikacji](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Instrukcje: Tworzenie ustawień aplikacji](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)

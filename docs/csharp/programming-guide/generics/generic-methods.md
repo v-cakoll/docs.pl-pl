@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 28ce14eca4398a359061a54b7c6cc74ed69b87b1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a32309af150685ec1e6280b26d82a57082c1bdbd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681238"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Metody ogólne (Przewodnik programowania w języku C#)
 Metody ogólnej to metoda, która jest zadeklarowana za pomocą parametrów typu w następujący sposób:  
@@ -46,9 +46,9 @@ Metody ogólnej to metoda, która jest zadeklarowana za pomocą parametrów typu
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  Aby uzyskać więcej informacji, zobacz [Specyfikacja języka C#](~/_csharplang/spec/classes.md#methods).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections.Generic>  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- <xref:System.Collections.Generic>
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)
 - [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)

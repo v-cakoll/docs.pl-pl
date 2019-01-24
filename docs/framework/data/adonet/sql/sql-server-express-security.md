@@ -1,15 +1,15 @@
 ---
-title: Zabezpieczenia programu SQL Server Express
+title: SQL Server Express Security
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 736c450d944efe7e6a69e16e00e1c96f0a868697
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c14548f2ff8e93c4dbbc61b946b9ed01cb62ab8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664073"
 ---
-# <a name="sql-server-express-security"></a>Zabezpieczenia programu SQL Server Express
+# <a name="sql-server-express-security"></a>SQL Server Express Security
 Microsoft SQL Server Express Edition, (SQL Server Express) jest oparty na programie Microsoft SQL Server i obsługuje większość funkcji aparatu bazy danych. Zaprojektowano tak, aby mniej ważne funkcje i połączenie sieciowe są domyślnie wyłączone. Powoduje to zmniejszenie obszaru powierzchni dostępne ataku przez złośliwego użytkownika.  
   
  SQL Server Express jest zazwyczaj instalowany jako nazwane wystąpienie. Domyślna nazwa wystąpienia to `SQLExpress`. Nazwane wystąpienie jest identyfikowane przez nazwę sieciową komputera, a także nazwę wystąpienia, który jest określany podczas instalacji.  
@@ -31,13 +31,13 @@ Microsoft SQL Server Express Edition, (SQL Server Express) jest oparty na progra
   
 |||  
 |-|-|  
-|[SQL Server — książki Online](https://msdn.microsoft.com/library/bb543165.aspx)|Zawiera dokumentację dla programu SQL Server Express.|  
+|[SQL Server Books Online](https://msdn.microsoft.com/library/bb543165.aspx)|Zawiera dokumentację dla programu SQL Server Express.|  
 |[Nawiązywanie połączenia z SQL Server Express](https://msdn.microsoft.com/library/ms165679.aspx) w SQL Server — książki Online|Opisuje sposób używania programu SQL Server Express Edition w sieci.|  
-|[Program Microsoft SQL Server 2005 Express Edition — książki Online](https://msdn.microsoft.com/library/ms165706.aspx)|Pełna dokumentacja dotycząca programu SQL Server 2005 Express Edition.|  
+|[Microsoft SQL Server 2005 Express Edition Books Online](https://msdn.microsoft.com/library/ms165706.aspx)|Pełna dokumentacja dotycząca programu SQL Server 2005 Express Edition.|  
 |[Wystąpienia użytkownika dla użytkowników niebędących administratorami](https://msdn.microsoft.com/library/ms143684.aspx) w SQL Server — książki Online|Opisuje sposób tworzenia i wdrażania wystąpienia użytkownika.|  
 |[Wystąpienia użytkownika programu SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|W tym artykule opisano możliwości wystąpienia użytkownika w aplikacji ADO.NET. Zawiera informacje o tym, jak włączyć wystąpienia użytkownika, nawiązać połączenie z wystąpieniem użytkownika za pomocą <xref:System.Data.SqlClient.SqlConnection>, okres istnienia wystąpienia użytkownika i scenariuszy wystąpienia użytkownika.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczenia serwera SQL](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Wystąpienia użytkownika programu SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczenia serwera SQL](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Wystąpienia użytkownika programu SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: '&lt;message&gt; w &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: 06346ba50b68f43cb2c3f9c92a37a432339126d1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b636a22fe7c6bcfae5b8f81c1566ea39c9f8ced5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683745"
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;message&gt; w &lt;netMsmqBinding&gt;
 Definiuje ustawienia zabezpieczeń wiadomości protokołu SOAP w tym `netMsmqBinding` powiązania.  
@@ -16,7 +16,7 @@ Definiuje ustawienia zabezpieczeń wiadomości protokołu SOAP w tym `netMsmqBin
 \<powiązania >  
 \<netMsmqBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
+\<security>  
 \<message>  
   
 ## <a name="syntax"></a>Składnia  
@@ -51,14 +51,14 @@ Definiuje ustawienia zabezpieczeń wiadomości protokołu SOAP w tym `netMsmqBin
 |-------------|-----------------|  
 |[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>  
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Message%2A>  
- <xref:System.ServiceModel.NetMsmqSecurity.Message%2A>  
- <xref:System.ServiceModel.MessageSecurityOverMsmq>  
- [Kolejki programu WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>
+- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Message%2A>
+- <xref:System.ServiceModel.NetMsmqSecurity.Message%2A>
+- <xref:System.ServiceModel.MessageSecurityOverMsmq>
+- [Kolejki programu WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

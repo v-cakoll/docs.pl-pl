@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85e7213342984276d8509fca8caefb2661865733
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c7e2f0f239ffded3d9f16a32b1f8e6601e27d06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685859"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM
-W przykładzie pokazano, jak [klienta .NET](#cpconcominteropsamplenetclientcomserveranchor1), wbudowanego dostępu [serwer COM](#cpconcominteropsamplenetclientcomserveranchor2), tworzy wystąpienie klasy coclass COM i wywołuje elementów członkowskich klasy do obliczeń hipotecznych.  
+Niniejszy przykład pokazuje, jak [klient modelu .NET](#cpconcominteropsamplenetclientcomserveranchor1), opracowana z myślą o dostęp [serwer COM](#cpconcominteropsamplenetclientcomserveranchor2), tworzy wystąpienie klasy coclass COM i wywołuje składowych klasy do wykonywania obliczeń hipoteczny.  
   
- W tym przykładzie klient tworzy i wywołuje wystąpienie **pożyczki** coclass, przekazuje cztery argumenty (jeden z tych czterech jest większy od zera) do wystąpienia i wyświetla obliczeń. Fragmenty kodu, w tym przykładzie są wyświetlane w tej sekcji.  
+ W tym przykładzie tworzy klienta, a wywołuje wystąpienie **pożyczki** coclass, przekazuje cztery argumenty (jeden z tych czterech jest większy od zera) do wystąpienia i wyświetla obliczeń. Fragmenty kodu, w tym przykładzie są wyświetlane w tej sekcji.  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## <a name="net-client"></a>Klient .NET  
+## <a name="net-client"></a>Klient modelu .NET  
   
 ```vb  
 Imports System  
@@ -299,5 +299,5 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Udostępnianie składników COM programowi .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a>Zobacz także
+- [Udostępnianie składników COM programowi .NET Framework](../../../docs/framework/interop/exposing-com-components.md)

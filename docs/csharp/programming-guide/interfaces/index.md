@@ -1,17 +1,11 @@
 ---
-title: Interfejsy - C# przewodnik programowania
+title: 'Interfejsy - C# przewodnik programowania'
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-- interfaces [C#]
-- C# language, interfaces
+  - 'interfaces [C#]'
+  - 'C# language, interfaces'
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 33e3feb874b8ddb13788a2a3a2bb69a199335e54
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245444"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfejsy (Przewodnik programowania w języku C#)
 
@@ -86,7 +80,7 @@ Interfejs ma następujące właściwości:
 
 [Interfejsy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) w [uczenia C# 3.0: Opanowanie podstaw C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Dziedziczenie](../classes-and-structs/inheritance.md)

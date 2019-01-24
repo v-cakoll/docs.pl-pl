@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 04abb999ae232d2dd49b1fad8887a596530ea369
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4c1b52622ccd70a591af3134642d4e0528bd32fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681693"
 ---
 # <a name="ui-automation-overview"></a>Przegląd automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] to nowe środowisko ułatwień dostępu do [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], która jest dostępna we wszystkich systemach operacyjnych, które obsługują [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)].  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48842674"
 |---------------|-----------------|  
 |Dostawca [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] (UIAutomationProvider.dll i UIAutomationTypes.dll)|Zbiór definicji interfejsów, które są implementowane przez dostawców automatyzacji interfejsu użytkownika, obiekty, które dostarczają informacje na temat [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementów i reagowanie na wprowadzanie programowe.|  
 |Klient interfejsu API (UIAutomationClient.dll i UIAutomationTypes.dll)|Zestaw typów dla kodu zarządzanego, który umożliwia aplikacjom klienta automatyzacji interfejsu użytkownika uzyskać informacje na temat [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] i wysłać danych wejściowych do kontrolek.|  
-|Bibliotekę UiAutomationCore.dll|Podstawowy kod (nazywane czasem [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core) obsługującego komunikację między dostawcami i klientami.|  
+|UiAutomationCore.dll|Podstawowy kod (nazywane czasem [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core) obsługującego komunikację między dostawcami i klientami.|  
 |UIAutomationClientsideProviders.dll|Zestaw dostawców automatyzacji interfejsu użytkownika dla standardowych kontrolek starszej wersji. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] formanty mają natywną obsługę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Ta funkcja jest automatycznie dostępne dla aplikacji klienckich.|  
   
  Z perspektywy deweloperów oprogramowania, istnieją dwa sposoby korzystania z [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: do utworzenia pomocy technicznej w przypadku kontrolek niestandardowych (przy użyciu dostawcy interfejsu API) i tworzenia aplikacji wykorzystujących [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core do komunikowania się z [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementów (przy użyciu Klient interfejsu API). W zależności od Twojego zespołu należy zapoznać się do różnych części dokumentacji. Można dowiedzieć się więcej na temat pojęć i uzyskiwanie porad wiedzy w poniższych sekcjach.  
@@ -76,9 +76,9 @@ ms.locfileid: "48842674"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zawiera również informacje dla aplikacji klienckich za pomocą zdarzeń. W odróżnieniu od [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)], [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia nie są oparte na mechanizmie emisji. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zarejestrowanie powiadomień o zdarzeniach określonych klientów i mogą żądać tego konkretnego [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości i wzorzec informacje sterujące przekazania do swoich programów obsługi zdarzeń. Ponadto [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenie zawiera odwołanie do elementu, który go spowodował. Dostawców może zwiększyć wydajność przez wywoływanie zdarzeń selektywnie, w zależności od tego, czy wszyscy klienci są nasłuchiwania.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [Przegląd zabezpieczeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-security-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
+- [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
+- [Przegląd zabezpieczeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-security-overview.md)

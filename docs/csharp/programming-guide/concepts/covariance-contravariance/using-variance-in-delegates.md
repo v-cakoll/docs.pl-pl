@@ -2,12 +2,12 @@
 title: Korzystanie z wariancji w Delegatach (C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 5be4f786d2e1b8a0ead3fd58fe056e188faa916a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44a6153a9a1c0aa0aebb18710ea9e770fd4e57fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667283"
 ---
 # <a name="using-variance-in-delegates-c"></a>Korzystanie z wariancji w Delegatach (C#)
 Po przypisaniu metody z delegatem, *Kowariancja* i *kontrawariancja* zapewniają elastyczność dopasowanie typu delegata z podpis metody. Kowariancja zezwala na metodę, aby zwracany typ, który jest bardziej pochodnego niż zdefiniowanymi dla delegata. Kontrawariancja umożliwia metody, która ma typy parametrów, które są mniej pochodnego niż typ delegata.  
@@ -77,7 +77,7 @@ public Form1()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
+- [Wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
 - [Korzystanie z wariancji dla Func i akcji delegatów ogólnych (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

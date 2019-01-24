@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 47034b3699f4dfee67d36e72d4b22898d469c900
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084712"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700302"
 ---
 # <a name="mid-statement"></a>Mid — Instrukcja
 Zamienia określoną liczbę znaków w `String` zmiennej znakami z innego ciągu.  
@@ -32,16 +32,16 @@ Mid( _
   
 ## <a name="parts"></a>Części  
  `Target`  
- Wymagane. Nazwa `String` zmiennej, do zmodyfikowania.  
+ Wymagana. Nazwa `String` zmiennej, do zmodyfikowania.  
   
  `Start`  
- Wymagane. `Integer` wyrażenie. Znak na pozycji w `Target` gdzie rozpoczyna się zastępowanie tekstu. `Start` używa indeksu liczonego od jednego.  
+ Wymagana. `Integer` wyrażenie. Znak na pozycji w `Target` gdzie rozpoczyna się zastępowanie tekstu. `Start` używa indeksu liczonego od jednego.  
   
  `Length`  
  Opcjonalna. `Integer` wyrażenie. Liczba znaków do zastąpienia. Jeśli argument jest pominięty, wszystkie `String` jest używany.  
   
  `StringExpression`  
- Wymagane. `String` wyrażenie, które zastępuje część `Target`.  
+ Wymagana. `String` wyrażenie, które zastępuje część `Target`.  
   
 ## <a name="exceptions"></a>Wyjątki  
   
@@ -63,13 +63,13 @@ Mid( _
  [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
 ## <a name="requirements"></a>Wymagania  
- **Przestrzeń nazw:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **Moduł:** `Strings`  
   
  **Zestaw:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- [Ciągi](../../../visual-basic/programming-guide/language-features/strings/index.md)  
- [Wprowadzenie do ciągów w Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.Strings.Mid%2A>
+- [Ciągi](../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [Wprowadzenie do ciągów w Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

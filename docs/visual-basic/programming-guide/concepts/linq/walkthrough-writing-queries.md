@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6c5f7d288d805a6a25afa9a5b32a4550aaa76ec3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666582"
 ---
-# <a name="walkthrough-writing-queries-in-visual-basic"></a>Wskazówki: Pisanie zapytań w Visual Basic
+# <a name="walkthrough-writing-queries-in-visual-basic"></a>Przewodnik: Pisanie zapytań w języku Visual Basic
 W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do zapisywania [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażeniach zapytań. Przewodnik pokazuje, jak tworzyć zapytania na liście obiektów dla uczniów, jak uruchamiać zapytania i sposobu ich modyfikacji. Kilka funkcji, w tym inicjatorów obiektów, wnioskowanie o typie lokalnym i typy anonimowe dołączyć do nich zapytania.  
   
  Po ukończeniu tego przewodnika, wszystko będzie gotowe przejść do przykłady i dokumentację, aby uzyskać konkretne [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawcy Cię interesuje. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawcy obejmują [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -43,11 +43,11 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
 -   Zdefiniuj `Student` klasy i tworzenie listy wystąpień klasy.  
   
     > [!IMPORTANT]
-    >  Kod niezbędnej do zdefiniowania `Student` klasy i tworzenie listy używane w instruktażu przykłady znajduje się w [porady: Tworzenie listy elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Można skopiować go w tym miejscu i wklej go do projektu. Nowy kod zastępuje kodu, które wystąpiły podczas tworzenia projektu.  
+    >  Kod niezbędnej do zdefiniowania `Student` klasy i tworzenie listy używane w instruktażu przykłady znajduje się w [jak: Utwórz listę elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Można skopiować go w tym miejscu i wklej go do projektu. Nowy kod zastępuje kodu, które wystąpiły podczas tworzenia projektu.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Aby dodać nowego studenta do listy studentów  
   
--   Postępuj zgodnie ze wzorcem w `getStudents` metodę, aby dodać inne wystąpienie `Student` klasy do listy. Dodawanie student zostaną wprowadzone do inicjatorów obiektów. Aby uzyskać więcej informacji, zobacz [inicjatory obiektów: typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+-   Postępuj zgodnie ze wzorcem w `getStudents` metodę, aby dodać inne wystąpienie `Student` klasy do listy. Dodawanie student zostaną wprowadzone do inicjatorów obiektów. Aby uzyskać więcej informacji, zobacz [inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Utwórz kwerendę  
  Po wykonaniu zapytania dodane w tej sekcji tworzy listę uczniów, w której akademickich pozycję umieszcza je w dziesięciu najlepszych. Ponieważ zapytanie wybiera pełne `Student` obiekt typu wyniku zapytania za każdym razem jest `IEnumerable(Of Student)`. Jednak zapytania zwykle nie określono typu w definicji zapytania. Zamiast tego kompilator używa wnioskowanie o typie lokalnym można ustalić typu. Aby uzyskać więcej informacji, zobacz [wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Zmienna zakresu zapytania, `currentStudent`, służy jako punkt odniesienia do każdego `Student` wystąpienia w źródle, `students`, zapewniając dostęp do właściwości każdego obiektu w `students`.  
@@ -144,11 +144,11 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zapytanie o języku zintegrowanym (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
-- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Inicjatory obiektów: typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Zapytanie o języku zintegrowanym (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Zapytania](../../../../visual-basic/language-reference/queries/index.md)

@@ -2,12 +2,12 @@
 title: Duże ilości danych i przesyłanie strumieniowe
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: a6c655e260aa75504e9a445458664b11d8e4d56d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c6514903294147671804b5b8de47fddc764b0547
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674118"
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
 Windows Communication Foundation (WCF) to infrastruktura komunikacji opartych na języku XML. Ponieważ dane XML zwykle jest zakodowane w formacie tekstu standardowego, zdefiniowane w [Specyfikacja XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838), połączone systemy, deweloperów i architektów są zazwyczaj zajmującym się ochroną zużycie o komunikacji sieciowej (lub rozmiar) komunikaty wysyłane między sieć i kodowanie oparte na tekście XML stanowi szczególne wyzwanie wydajny transfer danych binarnych.  
@@ -58,7 +58,7 @@ Windows Communication Foundation (WCF) to infrastruktura komunikacji opartych na
   
  Podczas wysyłania dużych ilości danych należy ustawić `maxAllowedContentLength` ustawienie programu IIS (Aby uzyskać więcej informacji, zobacz [Konfigurowanie limity żądań usług IIS](https://go.microsoft.com/fwlink/?LinkId=253165)) i `maxReceivedMessageSize` powiązanie ustawienia (na przykład [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) lub <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). `maxAllowedContentLength` Właściwości wartość domyślna to 28.6 M i `maxReceivedMessageSize` właściwości wartość domyślna to 64 KB.  
   
-## <a name="encodings"></a>Kodowanie  
+## <a name="encodings"></a>Encodings  
  *Kodowanie* definiuje zestaw reguł o tym, jak prezentować wiadomości na łączu. *Kodera* implementuje takich kodowania i jest odpowiedzialny za, na stronie nadawcy włączenie w pamięci <xref:System.ServiceModel.Channels.Message> do strumienia bajtów lub buforem bajtów, które mogą być wysyłane przez sieć. Po stronie odbiorcy kodera włącza sekwencję bajtów do wiadomości w pamięci.  
   
  WCF zawiera trzy koderów i pozwala na zapis i dołączyć własnego kodery w razie potrzeby.  
@@ -238,5 +238,5 @@ public class UploadStreamMessage
 > [!NOTE]
 >  Decyzja dotycząca użycia buforowanego lub przesyłane strumieniowo transferu jest decyzja lokalnego punktu końcowego. Dla transportu HTTP tryb transferu nie propagować przez połączenie lub serwery proxy i innych pośredników. Ustawianie trybu transferu nie zostaną uwzględnione w opisie interfejsu usługi. Po wygenerowaniu klienta programu WCF do usługi, możesz edytować plik konfiguracji usługi przeznaczone do użycia w przypadku transferów przesyłane strumieniowo można ustawić trybu. Dla protokołu TCP i rodzajów transportu nazwanego potoku tryb transferu jest propagowany jako potwierdzenie zasad.  
   
-## <a name="see-also"></a>Zobacz też  
- [Jak: Włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

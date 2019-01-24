@@ -1,20 +1,20 @@
 ---
-title: 'Porady: obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (Visual Basic)'
+title: 'Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 9eb0198c16efebd09af45ae26a47288b2153cf43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c99696472deaa79842e3270d05b63cd591754d8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671905"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Porady: obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (Visual Basic)
-Ten przykład przedstawia sposób wykonywania obliczenia agregacji, takie jak Suma, średnia, minimum i maksimum dla kolumn w pliku CSV. Zasady przykładzie, które są wyświetlane tutaj można zastosować do innych typów strukturalnych tekstu.  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (Visual Basic)
+Ten przykład przedstawia sposób wykonywania obliczeń agregacji, takich jak Suma, średnia, minimum i maksimum dla kolumn w pliku CSV. Zasady przykładu, które przedstawiono poniżej mogą dotyczyć innych typów strukturalnych tekstu.  
   
 ### <a name="to-create-the-source-file"></a>Aby utworzyć plik źródłowy  
   
-1.  Skopiuj następujące wiersze do pliku o nazwie scores.csv i zapisać ją w folderze projektu. Założono, że pierwsza kolumna reprezentuje identyfikator dla użytkowników domowych i kolejne kolumny reprezentują wyniki z czterech egzaminów.  
+1.  Skopiuj następujące wiersze do pliku, który nosi nazwę scores.csv i zapisz go w folderze projektu. Załóżmy, że pierwsza kolumna reprezentuje identyfikator dla uczniów, a kolejne kolumny reprezentują wyniki z czterech egzaminy.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -140,11 +140,11 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- Zapytanie działa przy użyciu <xref:System.String.Split%2A> metodę, aby przekonwertować każdy wiersz tekstu do tablicy. Każdy element tablicy reprezentuje kolumny. Na koniec tekstu w każdej kolumnie jest konwertowana na jej reprezentacji liczbowej. Jeśli plik jest plikiem tabulatorem, wystarczy zaktualizować argumentu w `Split` metodę `\t`.  
+ Zapytanie działa, korzystając z <xref:System.String.Split%2A> metodę, aby przekonwertować każdego wiersza tekstu do tablicy. Każdy element tablicy reprezentuje kolumnę. Na koniec tekstu w każdej kolumnie jest konwertowana na jego reprezentację liczbową. Jeśli plik jest plikiem rozdzielane znakami tabulacji, wystarczy zaktualizować argumentu w `Split` metody `\t`.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji System.Linq przestrzeni nazw.  
+ Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

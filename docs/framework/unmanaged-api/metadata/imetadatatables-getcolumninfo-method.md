@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79f08109f1ad267c4898cc0789859b55f534d1b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 245933b23028e2baf8a09ca07595f394b65c0ec3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698300"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo — Metoda
 Pobiera dane o określonej kolumny w określonej tabeli.  
@@ -42,32 +42,32 @@ HRESULT GetColumnInfo (
   
 #### <a name="parameters"></a>Parametry  
  `ixTbl`  
- [in] Indeks tabeli żądany.  
+ [in] Indeks tabeli, którą chcesz.  
   
  `ixCol`  
- [in] Indeks odpowiednie kolumny.  
+ [in] Indeks żądanej kolumny.  
   
  `poCol`  
  [out] Wskaźnik do przesunięcia kolumny w wierszu.  
   
  `pcbCol`  
- [out] Wskaźnik do rozmiar w bajtach kolumny.  
+ [out] Wskaźnik do rozmiaru, w bajtach dla kolumny.  
   
  `pType`  
  [out] Wskaźnik do typu wartości w kolumnie.  
   
  `ppName`  
- [out] Wskaźnik na wskaźnik do nazwy kolumny.  
+ [out] Wskaźnik do wskaźnika na nazwę kolumny.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

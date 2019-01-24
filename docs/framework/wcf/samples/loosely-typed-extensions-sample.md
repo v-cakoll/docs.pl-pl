@@ -2,12 +2,12 @@
 title: Przykład rozszerzeń z typowaniem luźnym
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: f46cf3dfcdb60669f0a02337b54de97d4af3efdc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 19d39e4a70022304262c5872636d3ea03a3b861b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668486"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Przykład rozszerzeń z typowaniem luźnym
 Modelu obiektu syndykacji programu zawiera, zaawansowana obsługa Praca z danymi rozszerzenia — informacje, które są obecne w kanał w reprezentacji XML, ale nie zostały jawnie udostępnianych przez klasy takie jak <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem>. W tym przykładzie przedstawiono podstawowe techniki do pracy z danymi rozszerzenia.  
@@ -155,6 +155,6 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
-## <a name="see-also"></a>Zobacz też  
- [Rozszerzenia z silną kontrolą typów](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
- [Syndykacja programu WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+## <a name="see-also"></a>Zobacz także
+- [Rozszerzenia z silną kontrolą typów](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
+- [Syndykacja programu WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

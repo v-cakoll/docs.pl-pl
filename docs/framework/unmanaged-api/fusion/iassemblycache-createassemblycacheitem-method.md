@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c45257a76127adf2bcf9ab356639d4754d151bf6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27001f8560dcd128b5d737ed0f219387be86d6e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672311"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>IAssemblyCache::CreateAssemblyCacheItem — Metoda
-Pobiera odwołanie do nowego [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) obiektu.  
+Pobiera odwołanie do nowego [iassemblycacheitem —](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,21 +47,21 @@ HRESULT CreateAssemblyCacheItem (
 -   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0X00000002)  
   
  `pvReserved`  
- [in] Zarezerwowane dla przyszłego rozszerzalności. `pvReserved` musi być odwołanie o wartości null.  
+ [in] Zarezerwowane dla przyszłej rozszerzalności. `pvReserved` musi być odwołanie o wartości null.  
   
  `ppAsmItem`  
- [out] Zwrócona `IAssemblyCacheItem` wskaźnika.  
+ [out] Zwrócony `IAssemblyCacheItem` wskaźnika.  
   
  `pszAssemblyName`  
- [w, opcjonalnie] Uncanonicalized, rozdzielone przecinkami `name=value` pary.  
+ [in, opcjonalny] Uncanonicalized, oddzielone przecinkami `name=value` pary.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Fusion.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IAssemblyCache, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
- [IAssemblyCacheItem, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IAssemblyCache, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCacheItem, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

@@ -1,22 +1,22 @@
 ---
-title: 'Porady: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework (WCF Data Services)'
+title: 'Instrukcje: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework (WCF Data Services)'
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 4bccd1e4655786ae24166cdc32619b420c4a54d3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 294c579c366c1abf0b9a328f7480d1b29e2cb8e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675604"
 ---
-# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Porady: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework (WCF Data Services)
+# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Instrukcje: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework (WCF Data Services)
 
 Usługi danych WCF przedstawia dane jednostki w postaci usługi danych. Dane te jednostki są udostępniane przez [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] po relacyjnej bazy danych w źródle danych. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]— na podstawie modelu danych w aplikacji internetowego programu Visual Studio, która opiera się na istniejącą bazę danych i Utwórz nową usługę danych przy użyciu tego modelu danych.
 
-[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Także narzędzia wiersza polecenia, które mogą generować [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] modelu spoza projektu programu Visual Studio. Aby uzyskać więcej informacji, zobacz [porady: użycie EdmGen.exe do generowania modelu i mapowania plików](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
+[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Także narzędzia wiersza polecenia, które mogą generować [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] modelu spoza projektu programu Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Generowanie modelu i mapowania plików za pomocą EdmGen.exe](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Aby dodać modelu Entity Framework, która opiera się na istniejącą bazę danych do istniejącej aplikacji sieci Web
 
@@ -72,9 +72,9 @@ Usługi danych WCF przedstawia dane jednostki w postaci usługi danych. Dane te 
 
 8. Aby przetestować usługę danych Northwind.svc przy użyciu przeglądarki sieci Web, postępuj zgodnie z instrukcjami w temacie [uzyskiwania dostępu do usługi z przeglądarki sieci Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Instrukcje: Tworzenie usługi danych przy użyciu dostawcy odbicia](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
-- [Instrukcje: Tworzenie usługi danych przy użyciu źródła danych LINQ to SQL](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)
+- [Instrukcje: Tworzenie usługi danych przy użyciu LINQ do SQL źródła danych](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)

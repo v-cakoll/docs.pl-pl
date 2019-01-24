@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 38ebe2d53bf2f22f6d28452dbc8763247382cc54
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1023d7213c665619f5417eb1016aa50c73def2c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669136"
 ---
 # <a name="making-asynchronous-requests"></a>Tworzenie żądań asynchronicznych
 <xref:System.Net> Klasy na użytek programu .NET Framework standardowa asynchronicznego modelu programowania asynchronicznego dostępu do zasobów w Internecie. <xref:System.Net.WebRequest.BeginGetResponse%2A> i <xref:System.Net.WebRequest.EndGetResponse%2A> metody <xref:System.Net.WebRequest> klasy rozpoczęcie i zakończenie żądań asynchronicznych do zasobu internetowego.  
@@ -334,5 +334,5 @@ Class ClientGetAsync
 End Class  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>Zobacz także
+- [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)

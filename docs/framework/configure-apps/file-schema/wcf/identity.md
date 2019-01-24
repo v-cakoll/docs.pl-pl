@@ -2,18 +2,18 @@
 title: '&lt;Tożsamość&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 8d4074319a10abc1ce4aafe15e3b51381398c39c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 03e73f64090e0851b06ee67fe70c157b6145966c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677367"
 ---
 # <a name="ltidentitygt"></a>&lt;Tożsamość&gt;
 Element tożsamości pozwala deweloperowi klienta określić w czasie projektu oczekiwaną tożsamość usługi. W procesu uzgadniania między klientem a usługą infrastruktury usług Windows Communication Foundation (WCF) gwarantuje, że tożsamość pasuje do oczekiwanej usługi wartości tego elementu i dlatego może zostać uwierzytelniony. Aby uzyskać więcej informacji, zobacz [uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  \<system.ServiceModel>  
-\<Klient >  
+\<client>  
 \<punkt końcowy >  
   
 ## <a name="syntax"></a>Składnia  
@@ -54,16 +54,16 @@ Element tożsamości pozwala deweloperowi klienta określić w czasie projektu o
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<niestandardowe >](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Określa niestandardowe elementu równorzędnego programu rozpoznawania nazw dla netPeerTcpBinding.|  
+|[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Określa niestandardowe elementu równorzędnego programu rozpoznawania nazw dla netPeerTcpBinding.|  
 |[\<punkt końcowy >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Służy do konfigurowania różnych typów punktów końcowych.|  
 |[\<Wystawca >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Określa Usługa tokenu zabezpieczającego (STS) dla usługi federacyjnej.|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Określa punkt końcowy metadanych dla Usługa tokenu zabezpieczającego (STS) z usługi federacyjnej.|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Definiuje parametry dla wystawiony token do niestandardowego powiązania.|  
 |[\<localIssuer >](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Określa lokalnym usługa tokenu zabezpieczającego (STS).|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Punkty końcowe: Adresy, powiązania i kontrakty](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Punkty końcowe: Adresy, powiązania i kontrakty](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

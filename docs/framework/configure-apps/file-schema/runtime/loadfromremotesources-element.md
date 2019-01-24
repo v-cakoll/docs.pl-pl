@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2b2a5301defabde44c4f5a98e57bd302fe390d53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671880"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadfromremotesources —&gt; — element
 Określa, czy zestawy, ładowane z zdalnych źródeł może być przyznany pełnego zaufania w programie .NET Framework 4 i nowszych.
@@ -22,7 +22,7 @@ Określa, czy zestawy, ładowane z zdalnych źródeł może być przyznany pełn
   
  \<Konfiguracja >  
 \<runtime>  
-\<loadfromremotesources — >  
+\<loadFromRemoteSources>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -117,8 +117,8 @@ Poniższy przykład pokazuje, jak udzielić pełnym zaufaniu zestawy, ładowane 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Więcej niejawne zastosowania zasady CAS: loadfromremotesources —](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-- [Instrukcje: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [Więcej niejawne zastosowania zasady CAS: loadfromremotesources —](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [Instrukcje: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

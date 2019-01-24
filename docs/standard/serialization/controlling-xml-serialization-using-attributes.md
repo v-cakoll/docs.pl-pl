@@ -15,16 +15,16 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 28c7ebe1de3adb92e531597027e4b8bb7a63294c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686169"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Kontrolowanie serializacji XML przy użyciu atrybutów
 
-Atrybuty można kontrolować serializacji XML obiektu lub utworzyć alternatywny strumień XML z tego samego zestawu klas. Aby uzyskać więcej informacji na temat tworzenia alternatywne strumień XML, zobacz [jak: Określ alternatywną nazwę elementu XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+Atrybuty można kontrolować serializacji XML obiektu lub utworzyć alternatywny strumień XML z tego samego zestawu klas. Aby uzyskać więcej informacji na temat tworzenia alternatywne strumień XML, zobacz [jak: Określ nazwę elementu alternatywny Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
 > Jeśli wygenerowany kod XML musi być zgodna z części 5 dokumentu World Wide Web Consortium (W3C) [proste obiektu dostępu protokołu (protokołu SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), użyj atrybutów na liście [atrybuty czy kontroli kodowany protokołu SOAP Serializacja](attributes-that-control-encoded-soap-serialization.md).
@@ -70,7 +70,7 @@ Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty](../../../
 
 ## <a name="controlling-array-serialization"></a>Kontrolowanie serializacji tablicy
 
-<xref:System.Xml.Serialization.XmlArrayAttribute> i <xref:System.Xml.Serialization.XmlArrayItemAttribute> atrybuty są przeznaczone do sterowania serializacji tablic. Przy użyciu tych atrybutów, można kontrolować nazwy elementu, nazw i typ danych schematu XML (XSD) (zgodnie z definicją w dokumencie World Wide Web Consortium [www.w3.org] zatytułowany "XML schematu część 2: typy danych"). Można również określić typy, które mogły zostać uwzględnione w tablicy.
+<xref:System.Xml.Serialization.XmlArrayAttribute> i <xref:System.Xml.Serialization.XmlArrayItemAttribute> atrybuty są przeznaczone do sterowania serializacji tablic. Korzystając z tych atrybutów, można kontrolować nazwy elementu, nazw i typ danych schematu XML (XSD) (zgodnie z definicją w dokumencie World Wide Web Consortium [www.w3.org] zatytułowany "XML schematu część 2: Typy danych"). Można również określić typy, które mogły zostać uwzględnione w tablicy.
 
 <xref:System.Xml.Serialization.XmlArrayAttribute> Ustali właściwości otaczającego element XML, który powstaje wtedy, gdy jest serializowana tablicy. Na przykład domyślnie serializację tablicy poniżej spowoduje element XML o nazwie `Employees`. `Employees` Element będzie zawierać szereg elementów o nazwie po typ tablicy `Employee`.
 
@@ -317,10 +317,10 @@ Może to być sytuacje, gdy właściwość publiczna lub pola nie jest konieczne
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Atrybuty kontrolujące serializację XML](attributes-that-control-xml-serialization.md)  
-- [Atrybuty kontrolujące zakodowaną serializację SOAP](attributes-that-control-encoded-soap-serialization.md)  
-- [Wprowadzenie do serializacji XML](introducing-xml-serialization.md)  
-- [Przykłady serializacji XML](examples-of-xml-serialization.md)  
-- [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-- [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)  
-- [Instrukcje: Deserializacja obiektu](how-to-deserialize-an-object.md)  
+- [Atrybuty kontrolujące serializację XML](attributes-that-control-xml-serialization.md)
+- [Atrybuty kontrolujące zakodowaną serializację SOAP](attributes-that-control-encoded-soap-serialization.md)
+- [Wprowadzenie do serializacji XML](introducing-xml-serialization.md)
+- [Przykłady serializacji XML](examples-of-xml-serialization.md)
+- [Instrukcje: Określ nazwę elementu alternatywny Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)
+- [Instrukcje: Deserializacji obiektu](how-to-deserialize-an-object.md)

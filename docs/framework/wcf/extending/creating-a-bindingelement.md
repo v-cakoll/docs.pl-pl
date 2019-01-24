@@ -2,12 +2,12 @@
 title: Tworzenie elementu BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 5b7fd3e88fa12a66e086906de6f0d7d6a7d1aa17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8c4f3b4b3f9a3e4694ece814de691c07ef88ec5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684882"
 ---
 # <a name="creating-a-bindingelement"></a>Tworzenie elementu BindingElement
 Powiązania i elementy powiązań (obiekty, które rozszerzają <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>odpowiednio) to miejsce, gdzie model aplikacji Windows Communication Foundation (WCF) skojarzony z fabryki kanałów i odbiorników kanału. Bez powiązania, za pomocą niestandardowych kanałów wymaga programowania na poziomie kanału zgodnie z opisem w [programowania na poziomie kanału usługi](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) i [programowania na poziomie kanału klienta](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). W tym temacie omówiono wymagania minimalne, aby umożliwić używanie Twojego kanału w usłudze WCF, rozwoju <xref:System.ServiceModel.Channels.BindingElement> dla kanału i Zezwalaj na używanie aplikacji, zgodnie z opisem w kroku 4 [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -71,7 +71,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  Po utworzeniu elementu powiązania kanału, wróć do [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md) tematu, aby zobaczyć, czy chcesz dodać obsługę pliku konfiguracji usługi elementu powiązania, jeśli i jak dodać obsługę publikowania metadanych, i czy i w jaki sposób do utworzenia powiązania zdefiniowane przez użytkownika, który używa usługi elementu powiązania.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [Opracowywanie kanałów](../../../../docs/framework/wcf/extending/developing-channels.md)  
- [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [Opracowywanie kanałów](../../../../docs/framework/wcf/extending/developing-channels.md)
+- [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

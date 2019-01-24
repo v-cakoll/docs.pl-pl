@@ -1,5 +1,5 @@
 ---
-title: 'Porady: definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych (Visual Basic)'
+title: 'Instrukcje: Definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,59 +26,59 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 3570a1c851bb8fead33f4cd208489c4ae087a68d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f6faf7b9ba2338784fda2cec2efc2b3991d415e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667482"
 ---
-# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Porady: definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych (Visual Basic)
-Można zdefiniować klasę z którego można tworzyć obiektów, które zapewnić identyczną funkcjonalność różnych typów danych. Aby to zrobić, należy określić co najmniej jeden *parametry typu* w definicji. Klasa może następnie służyć jako szablon dla obiektów, które używają różnych typów danych. Klasy określonej w ten sposób jest nazywany *klasy ogólnej*.  
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Instrukcje: Definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych (Visual Basic)
+Można zdefiniować klasę, w którym możesz tworzyć obiekty, które zapewnić identyczną funkcjonalność różnych typów danych. Aby to zrobić, należy określić co najmniej jeden *parametry typu* w definicji. Klasy mogą następnie służyć jako szablon dla obiektów, które używają różnych typów danych. Nosi nazwę klasy zdefiniowanej w ten sposób *klasy generycznej*.  
   
- Zaletą definiowania klasy generycznej jest tylko raz określić, czy kod można go użyć do utworzenia wiele obiektów, które używają różnych typów danych. Powoduje to lepszą wydajność niż definiowanie klas z `Object` typu.  
+ Zaletą definiowania klasy ogólnej jest, że można określić tylko raz, a kod służy do tworzenia wielu obiektów, które używają różnych typów danych. Skutkuje to lepszą wydajność niż Definiowanie klasy za pomocą `Object` typu.  
   
- Oprócz klas można również zdefiniować i używać struktury ogólne, interfejsów, procedury i delegatów.  
+ Oprócz klas można również zdefiniować i używać struktury ogólne, interfejsy, procedury i delegatów.  
   
 ### <a name="to-define-a-class-with-a-type-parameter"></a>Aby zdefiniować klasę z parametrem typu  
   
-1.  Zdefiniuj klasę w zwykły sposób.  
+1.  Zdefiniuj klasę w normalny sposób.  
   
 2.  Dodaj `(Of` *typeparameter* `)` zaraz po nazwie klasy, aby określić parametr typu.  
   
-3.  Jeśli masz więcej niż jeden parametr typu należy wewnątrz nawiasów listy rozdzielanej przecinkami. Nie powtarzaj `Of` — słowo kluczowe.  
+3.  Jeśli masz więcej niż jeden parametr typu, należy utworzyć listę rozdzielonych przecinkami wewnątrz nawiasów. Nie powtarzaj `Of` — słowo kluczowe.  
   
-4.  Jeśli kod wykonuje operacje na parametr typu innego niż prosty przypisania, wykonaj parametru typu z `As` klauzuli, aby dodać jeden lub więcej *ograniczenia*. Ograniczenie gwarantuje, że podany dla tego parametru typu typ spełnia wymagania, takie jak następujące:  
+4.  Jeśli Twój kod wykonuje operacje na parametr typu innego niż przypisanie proste, postępuj zgodnie z tego parametru typu z `As` klauzuli, aby dodać co najmniej jedno *ograniczenia*. Ograniczenie gwarantuje, że podany dla tego parametru typu typ spełnia wymagania, takie jak następujące:  
   
-    -   Obsługuje operacji, takich jak `>`, który wykonuje kodu  
+    -   Obsługuje operacji, takich jak `>`, który wykonuje kod  
   
-    -   Obsługuje członka, takich jak metoda, która uzyskuje dostęp do kodu  
+    -   Obsługuje elementu członkowskiego, takie jak metody, która uzyskuje dostęp do kodu  
   
-    -   Przedstawia konstruktora bez parametrów  
+    -   Udostępnia konstruktora bez parametrów  
   
-     Jeśli nie określono żadnych ograniczeń, tylko operacje i elementów członkowskich, można użyć kodu są obsługiwanymi przez [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md). Aby uzyskać więcej informacji, zobacz [lista typów](../../../../visual-basic/language-reference/statements/type-list.md).  
+     Jeśli nie określisz żadnych ograniczeń, tylko operacji i kod użytkownika może używać elementów członkowskich są obsługiwane przez [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md). Aby uzyskać więcej informacji, zobacz [lista typów](../../../../visual-basic/language-reference/statements/type-list.md).  
   
-5.  Zidentyfikuj co element członkowski klasy, która ma być deklarowany za pomocą podanego typu i Zadeklaruj `As` `typeparameter`. Dotyczy to pamięci wewnętrznej, procedury parametrów i zwracanych wartości.  
+5.  Identyfikowanie każdy członek klasy, która ma być deklarowany za pomocą podanego typu i Zadeklaruj go `As` `typeparameter`. Dotyczy to pamięci wewnętrznej, procedury parametrów i zwracanych wartości.  
   
-6.  Pamiętaj, że kod używa tylko operacje i metody, które są obsługiwane przez dowolny typ danych może dostarczyć do `itemType`.  
+6.  Pamiętaj, że kod używa tylko operacje i metody, które są obsługiwane przez dowolny typ danych, można dostarczyć do `itemType`.  
   
-     W poniższym przykładzie zdefiniowano klasę, która zarządza listą bardzo proste. Przechowuje listy w tablicy wewnętrznej `items`i przy użyciu kodu można zadeklarować typu danych elementów listy. Umożliwia korzystanie z sparametryzowanym konstruktorze kod, aby ustawić górna granica `items`, i ustawia domyślny konstruktor, to do 9 (dla wszystkich elementów 10).  
+     W poniższym przykładzie zdefiniowano klasę, która zarządza listą bardzo proste. Przechowuje listę w tablicy wewnętrznej `items`oraz przy użyciu kodu można zadeklarować typ danych elementów listy. Sparametryzowania konstruktora umożliwia przy użyciu kodu, aby ustawić górną granicę `items`, i ustawia domyślny konstruktor, to do 9 (w sumie 10 elementów).  
   
      [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
   
-     Można zadeklarować klasy z `simpleList` do przechowywania listy `Integer` wartości inną klasę do przechowywania listy `String` wartości, a druga do przechowywania `Date` wartości. Z wyjątkiem typu danych listy elementów członkowskich obiekty utworzone na podstawie tych klas zachowują się tak samo.  
+     Można zadeklarować klasy z `simpleList` do przechowywania listy `Integer` wartości innej klasy do przechowywania listy `String` wartości, a druga do przechowywania `Date` wartości. Z wyjątkiem typu danych listy elementów członkowskich obiekty utworzone na podstawie tych klas zachowują się identycznie.  
   
-     Argument typu, który za pomocą kodu dostarcza do `itemType` może być typu wewnętrznego takich jak `Boolean` lub `Double`, struktury, wyliczenia lub dowolnego typu klasy, w tym, który definiuje aplikacji.  
+     Argument typu, który używając kodu dostarcza do `itemType` może być typu wewnętrznego taką jak `Boolean` lub `Double`, struktury, wyliczenia lub dowolnego typu klasy, w tym taki, który jest określane przez aplikację.  
   
-     Można przetestować klasy `simpleList` następującym kodem.  
+     Możesz przetestować klasy `simpleList` następującym kodem.  
   
      [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Niezależność od języka i składniki niezależne od języka](../../../../standard/language-independence-and-language-independent-components.md)  
- [z](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [Lista typów](../../../../visual-basic/language-reference/statements/type-list.md)  
- [Instrukcje: używanie klasy ogólnej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Niezależność od języka i składniki niezależne od języka](../../../../standard/language-independence-and-language-independent-components.md)
+- [z](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [Lista typów](../../../../visual-basic/language-reference/statements/type-list.md)
+- [Instrukcje: używanie klasy ogólnej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)

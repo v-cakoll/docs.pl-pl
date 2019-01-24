@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f37be8e3d2e92147e9f13954ab64396062ade2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51cd834b92dd595b5b3e7f668ef252462f4287de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695286"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo — Funkcja
-Pobiera informacje o wersji i katalogu o środowisko uruchomieniowe języka wspólnego (CLR) wymagane przez aplikację.  
+Pobiera informacje wersji i katalogu o środowisko uruchomieniowe języka wspólnego (CLR) żądane przez aplikację.  
   
  Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -58,13 +58,13 @@ HRESULT GetRequestedRuntimeInfo (
  [in] Nazwa pliku konfiguracji, który jest skojarzony z `pExe`.  
   
  `startupFlags`  
- [in] Co najmniej jednego [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) wartości wyliczenia.  
+ [in] Co najmniej jeden [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) wartości wyliczenia.  
   
  `runtimeInfoFlags`  
- [in] Co najmniej jednego [runtime_info_flags —](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) wartości wyliczenia.  
+ [in] Co najmniej jeden [runtime_info_flags —](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) wartości wyliczenia.  
   
  `pDirectory`  
- [out] Buforu, który zawiera ścieżkę katalogu do środowiska wykonawczego po pomyślnym zakończeniu.  
+ [out] Bufor, który zawiera ścieżkę katalogu do środowiska uruchomieniowego, po pomyślnym zakończeniu.  
   
  `dwDirectory`  
  [in] Długość buforu katalogu.  
@@ -73,7 +73,7 @@ HRESULT GetRequestedRuntimeInfo (
  [out] Wskaźnik do długości ciągu ścieżki katalogu.  
   
  `pVersion`  
- [out] Buforu, który zawiera numer wersji środowiska uruchomieniowego na pomyślne zakończenie.  
+ [out] Bufor, który zawiera numer wersji środowiska uruchomieniowego, po pomyślnym zakończeniu.  
   
  `cchBuffer`  
  [in] Długość buforu ciągu wersji.  
@@ -82,31 +82,31 @@ HRESULT GetRequestedRuntimeInfo (
  [out] Wskaźnik do długości ciągu wersji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowy składnik modelu COM. kody błędów, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|ERROR_INSUFFICIENT_BUFFER|Bufor katalogu nie jest wystarczająco duży, aby przechowywać ścieżki katalogu.<br /><br /> - lub -<br /><br /> Bufor wersji nie jest wystarczająco duży, aby zapisać ciąg wersji.|  
+|ERROR_INSUFFICIENT_BUFFER|Bufor katalogu nie jest wystarczająco duży, aby zapisać ścieżki katalogu.<br /><br /> - lub -<br /><br /> Bufor wersji nie jest wystarczająco duży, aby zapisać ciąg wersji.|  
   
 ## <a name="remarks"></a>Uwagi  
- `GetRequestedRuntimeInfo` Metoda zwraca wartość czasu wykonywania informacji o wersji załadowany do procesu, który nie musi być najnowszą wersję zainstalowanego na komputerze.  
+ `GetRequestedRuntimeInfo` Metoda zwraca wartość czasu wykonywania informacji o wersji załadowany do procesu, który nie musi być najnowszej wersji, które są zainstalowane na komputerze.  
   
- Informacje o najnowszej wersji zainstalowanej w programie .NET Framework w wersji 2.0, można uzyskać za pomocą `GetRequestedRuntimeInfo` metody w następujący sposób:  
+ W .NET Framework w wersji 2.0, można uzyskać informacji na temat najnowszej zainstalowanej wersji za pomocą `GetRequestedRuntimeInfo` metody w następujący sposób:  
   
--   Określ `pExe`, `pwszVersion`, i `pConfigurationFile` parametrów jako wartość null.  
+-   Określ `pExe`, `pwszVersion`, i `pConfigurationFile` parametry o wartości null.  
   
 -   Określ flagę RUNTIME_INFO_UPGRADE_VERSION `RUNTIME_INFO_FLAGS` wyliczenia dla `runtimeInfoFlags` parametru.  
   
  `GetRequestedRuntimeInfo` Metoda nie zwraca najnowszą wersję środowiska CLR w następujących okolicznościach:  
   
--   Istnieje plik konfiguracji aplikacji, która określa ładowania określonej wersji środowiska CLR. Należy pamiętać, że programu .NET Framework będzie pliku konfiguracji nawet, jeśli określono wartość null dla `pConfigurationFile` parametru.  
+-   Istnieje plik konfiguracji aplikacji, określający, ładowanie określonej wersji środowiska CLR. Pamiętaj, że nawet w przypadku określenia wartości null dla programu .NET Framework będą używać pliku konfiguracji `pConfigurationFile` parametru.  
   
 -   [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) wywołano metodę określania starszej wersji środowiska CLR.  
   
--   Obecnie jest uruchomiona aplikacja, która została skompilowana dla starszej wersji środowiska CLR.  
+-   Aplikacji skompilowanej dla starszej wersji środowiska CLR jest obecnie uruchomiony.  
   
- Dla `runtimeInfoFlags` parametru, można określić tylko jeden stałe architektura `RUNTIME_INFO_FLAGS` wyliczenie jednocześnie:  
+ Dla `runtimeInfoFlags` parametru, można określić tylko jeden stałe architektury `RUNTIME_INFO_FLAGS` wyliczenia w czasie:  
   
 -   RUNTIME_INFO_REQUEST_IA64  
   
@@ -115,15 +115,15 @@ HRESULT GetRequestedRuntimeInfo (
 -   RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [GetRequestedRuntimeVersion, funkcja](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
- [GetVersionFromProcess, funkcja](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [GetRequestedRuntimeVersion, funkcja](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [GetVersionFromProcess, funkcja](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

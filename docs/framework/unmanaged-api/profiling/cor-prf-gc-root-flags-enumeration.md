@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d5dcb089074b52fc87a0bb83c7e062e7ef07b46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4ce8fb8d9d941544982c8da852260b8018788a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680753"
 ---
 # <a name="corprfgcrootflags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS — Wyliczenie
-Wskazuje właściwość głównego kolekcji pamięci.  
+Wskazuje właściwość kolekcji wyrzucania elementów katalogu głównego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,16 +41,16 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|Katalog główny zapobiega wyrzucania elementów bezużytecznych przenoszenia obiektu.|  
-|`COR_PRF_GC_ROOT_WEAKREF`|Katalog główny nie zapobiega wyrzucanie elementów bezużytecznych.|  
+|`COR_PRF_GC_ROOT_PINNING`|Katalog główny zapobiega wyrzucania elementów bezużytecznych z przeniesienia obiektu.|  
+|`COR_PRF_GC_ROOT_WEAKREF`|Katalog główny nie uniemożliwia wyrzucania elementów bezużytecznych.|  
 |`COR_PRF_GC_ROOT_INTERIOR`|Katalog główny odwołuje się do pola obiektu, a nie samego obiektu.|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|Głównego zapobiega wyrzucanie elementów bezużytecznych, jeśli liczba odwołanie do obiektu jest określoną wartość.|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|Katalog główny zapobiega wyrzucania elementów bezużytecznych, jeśli licznik odwołań obiektu jest określoną wartością.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COR_PRF_GC_ROOT_FLAGS` jest maską bitów udostępnia dodatkowe informacje o specjalne katalogów głównych. Niemniej jednak nie wszystkie certyfikaty główne są specjalne. Na przykład niektóre katalogów głównych nie są słabe odwołania, wewnętrznych wskaźników przypiętych lub zliczane odwołania. Dla tych certyfikatów głównych nie ma żadnych flag w celu przedstawienia. W związku z tym te metody, które używają tego wyliczenia, takich jak [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) metody send 0 flagi maski bitów, wskazujące, że wszystkie flagi są wyłączone.  
+ `COR_PRF_GC_ROOT_FLAGS` jest maską bitów, który zawiera dodatkowe informacje na temat specjalne katalogów głównych. Jednak nie wszystkie elementy główne są specjalne. Na przykład niektóre elementy główne nie są słabe odwołania, wskaźniki posługiwanie się nimi, przypiętych lub zliczonych odwołań. Takie elementy główne są nie flagi do przekazania. W związku z tym, w przypadku metod, które używają tego wyliczenia, takich jak [icorprofilercallback2::rootreferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) metody wysyłania 0 maski bitów flag, wskazujący, że wszystkie flagi są wyłączone.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -58,5 +58,5 @@ typedef enum {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

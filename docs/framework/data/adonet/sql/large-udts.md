@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: a57bf400288c11e5ba651515feba42437b93148f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 259b8e6df9b302ec50fe84a3b57d4597821bdcc8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533471"
 ---
 # <a name="large-udts"></a>Duże UDT
 Typy zdefiniowane przez użytkownika (UDTs) umożliwiają deweloperom rozszerzenie serwera typ skalarny systemu, przechowując wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów w bazie danych programu SQL Server. Typów zdefiniowanych przez użytkownika może zawierać wiele elementów i może mieć zachowań, w przeciwieństwie do typów danych tradycyjnych aliasu, które składają się z jednego typu danych systemu programu SQL Server.  
@@ -22,7 +22,7 @@ Typy zdefiniowane przez użytkownika (UDTs) umożliwiają deweloperom rozszerzen
   
  Aby uzyskać pełną dokumentację dla typów zdefiniowanych przez użytkownika Zobacz wersja programu SQL Server — książki Online dla wersji programu SQL Server, którego używasz.  
   
- **SQL Server — książki Online**  
+ **SQL Server Books Online**  
   
 1.  [Zdefiniowane przez użytkownika typy CLR](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
@@ -44,7 +44,7 @@ Typy zdefiniowane przez użytkownika (UDTs) umożliwiają deweloperom rozszerzen
 |`DataTypeName`|`SqlDbType.VarBinary`|Trzy części nazwy określonej jako *Database.SchemaName.TypeName*.|  
 |`IsLong`|Różni się|Różni się|  
   
-## <a name="sqldatareader-considerations"></a>Zagadnienia dotyczące SqlDataReader  
+## <a name="sqldatareader-considerations"></a>SqlDataReader Considerations  
  <xref:System.Data.SqlClient.SqlDataReader> Został rozszerzony począwszy od programu SQL Server 2008 do obsługi pobierania dużych wartości UDT. Jak duże UDT wartości są przetwarzane przez <xref:System.Data.SqlClient.SqlDataReader> zależy od wersji programu SQL Server, które są używane, jak również na `Type System Version` określone w parametrach połączenia. Aby uzyskać więcej informacji, zobacz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
  Następujące metody <xref:System.Data.SqlClient.SqlDataReader> zwróci <xref:System.Data.SqlTypes.SqlBinary> zamiast UDT po `Type System Version` jest ustawiona na program SQL Server 2005:  
@@ -131,9 +131,9 @@ Using connection As New SqlConnection( _
 End Using  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Konfigurowanie parametrów i typów danych parametrów](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Pobieranie informacji o schemacie bazy danych](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [Mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Dane binarne i dużej wartości w programie SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Konfigurowanie parametrów i typów danych parametrów](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Pobieranie informacji o schemacie bazy danych](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [Mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [Dane binarne i dużej wartości w programie SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

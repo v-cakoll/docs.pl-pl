@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: d148de99d1a1fab40f01e5807d1e7d6488b3186d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5ce9291fd047dfa9c69048887ccbd878819f2de8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533141"
 ---
 # <a name="checked-c-reference"></a>checked (odwołanie w C#)
 
@@ -43,8 +43,8 @@ Ten przykład ilustruje sposób używania `checked` umożliwiające przepełnien
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [Checked i Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
+- [Checked i Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)
 - [unchecked](../../../csharp/language-reference/keywords/unchecked.md)

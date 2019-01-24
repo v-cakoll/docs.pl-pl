@@ -15,15 +15,15 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 9c50d03454860979e3475cb381fefc2acc07cece
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3762e3bf0978feeb1155f8cc8249a77f0a497df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535272"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With — Instrukcja (Visual Basic)
-Wykonuje szereg instrukcji, które wielokrotnie odwołują się do pojedynczego obiektu lub struktury, dzięki czemu instrukcje mogą używać uproszczonej składni podczas uzyskiwania dostępu do członków obiektu lub struktury.  Podczas używania struktury można odczytać wartości elementów członkowskich lub tylko wywołania metod i występuje błąd, Jeśli spróbujesz przypisać wartości do elementów członkowskich struktury używane w `With...End With` instrukcji.  
+Wykonuje szereg instrukcji, które wielokrotnie odwołują się do pojedynczego obiektu lub struktury, dzięki czemu instrukcje mogą używać uproszczonej składni podczas uzyskiwania dostępu do członków obiektu lub struktury.  Korzystając ze struktury możesz jedynie odczytać wartości członków lub wywoływać metody i wystąpi błąd, jeśli zostanie podjęta próba przypisania wartości do członków struktury używanych w `With...End With` instrukcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,49 +38,49 @@ End With
 |Termin|Definicja|  
 |---|---|  
 |`objectExpression`|Wymagana. Wyrażenie, które zostaje oszacowane do obiektu. Wyrażenie może być dowolnie złożone i jest sprawdzane tylko raz. Wyrażenie może być dowolnego typu danych, w tym typów podstawowych.|  
-|`statements`|Opcjonalna. Co najmniej jeden instrukcji między `With` i `End With` może odwołujące się do elementów członkowskich obiektu, który jest generowany przez ocenę `objectExpression`.|  
+|`statements`|Opcjonalna. Jedna lub więcej instrukcji między `With` i `End With` które mogą się odwoływać do członków obiektu, który jest wytwarzany przez ocenę `objectExpression`.|  
 |`End With`|Wymagana. Kończy definicję `With` bloku.|  
   
 ## <a name="remarks"></a>Uwagi  
- Przy użyciu `With...End With`, można wykonać serię instrukcji na określony obiekt bez określania nazwy obiektu wiele razy. W ramach `With` blok instrukcji, można określić elementu członkowskiego obiektu, rozpoczynając od okresu, tak jakby `With` obiektu instrukcji poprzedzające go.  
+ Za pomocą `With...End With`, można wykonać serię instrukcji na określonym obiekcie bez określania nazwy obiektu wiele razy. W ramach `With` blok instrukcji, można określić członka obiektu, rozpoczynając od kropki, tak jakby `With` obiektu instrukcji go poprzedzał.  
   
- Na przykład, aby zmienić wiele właściwości w jednym obiekcie, umieść instrukcje przypisania właściwości wewnątrz `With...End With` bloku, odwołanie do obiektu tylko raz zamiast raz dla każdego przydziału właściwości.  
+ Na przykład, aby zmienić wiele właściwości dla pojedynczego obiektu, umieść instrukcje przypisania właściwości wewnątrz `With...End With` bloku, odwołanie do obiektu tylko raz zamiast raz dla każdego przypisania właściwości.  
   
- Jeśli kod uzyskuje dostęp do tego samego obiektu wiele instrukcji, za pomocą zyskać następujące korzyści `With` instrukcji:  
+ Jeśli kod uzyskuje dostęp do tego samego obiektu w wielu instrukcjach, uzyskasz następujące korzyści za pomocą `With` instrukcji:  
   
 -   Nie musisz szacować złożonego wyrażenia wiele razy ani przypisywać wyniku do zmiennej tymczasowej, aby odwołać się do jego członków wiele razy.  
   
 -   Kod staje się bardziej czytelny dzięki eliminacji powtarzających się wyrażeń kwalifikujących.  
   
- Typ danych miary `objectExpression` może być dowolną klasę lub typ struktury lub nawet typu podstawowe języka Visual Basic takich jak `Integer`.  Jeśli `objectExpression` wyniki w innym niż obiekt można odczytać wartości jego elementów członkowskich lub tylko wywołania metod i występuje błąd, Jeśli spróbujesz przypisać wartości do elementów członkowskich struktury używane w `With...End With` instrukcji.  Jest to ten sam błąd, jeśli należy wywołać metodę zwrócił strukturę i od razu dostępne i przypisywać wartości do elementu członkowskiego wyniku funkcji, takich jak `GetAPoint().x = 1`.  Problem w obu przypadkach jest taki, że struktura istnieje tylko na stosie wywołań i nie ma żadnego sposobu, aby członek zmodyfikowanej struktury w takich sytuacjach mógł pisać do takich lokalizacji, żeby inny kod w programie mógł obserwować zmiany.  
+ Typ danych `objectExpression` może być dowolną klasę lub typ struktury lub nawet typ podstawowy języka Visual Basic taką jak `Integer`.  Jeśli `objectExpression` wyniki coś innego niż obiekt można tylko odczytać wartości jego członków lub wywoływać metody i wystąpi błąd, jeśli zostanie podjęta próba przypisania wartości do członków struktury używanych w `With...End With` instrukcji.  Jest to ten sam błąd, jeśli wywołano metodę, która zwróciła strukturę i natychmiast uzyskać dostęp i przypisać wartość do członka wyniku funkcji, takich jak `GetAPoint().x = 1`.  Problem w obu przypadkach jest taki, że struktura istnieje tylko na stosie wywołań i nie ma żadnego sposobu, aby członek zmodyfikowanej struktury w takich sytuacjach mógł pisać do takich lokalizacji, żeby inny kod w programie mógł obserwować zmiany.  
   
- `objectExpression` Jest oceniane, po wejściu do bloku. Nie można przepisać `objectExpression` z poziomu `With` bloku.  
+ `objectExpression` Jest wykonywane tylko raz, po wejściu do bloku. Nie można ponownie przypisać `objectExpression` z poziomu `With` bloku.  
   
- W ramach `With` bloku, użytkownik ma dostęp do metod i właściwości określonego obiektu bez kwalifikujących się je. Możesz użyć metod i właściwości innych obiektów, ale musisz je zakwalifikować z ich nazwami obiektów.  
+ W ramach `With` bloku, jest dostępne metody i właściwości jedynie określonego obiektu bez ich kwalifikowania. Możesz użyć metod i właściwości innych obiektów, ale musisz je zakwalifikować z ich nazwami obiektów.  
   
- Możesz umieścić jedną `With...End With` instrukcji w innym. Zagnieżdżone `With...End With` instrukcji może być mylące, jeśli obiekty, które są określone nie jest jasne z kontekstu. Należy podać pełną odwołanie do obiektu, który znajduje się w zewnętrznym `With` zablokować, jeśli obiekt jest wywoływany przez w wewnętrzny `With` bloku.  
+ Możesz umieścić jedną `With...End With` instrukcji w innym. Zagnieżdżone `With...End With` instrukcji może być skomplikowane, jeśli obiekty, które są określone, nie są jasne z kontekstu. Należy podać w pełni kwalifikowane odwołanie do obiektu, który znajduje się w zewnętrznym `With` zablokować, jeśli odwołanie do obiektu pochodzi z wewnętrznego `With` bloku.  
   
- Nie można rozgałęzić do `With` blok instrukcji z poza blokiem.  
+ Nie można rozgałęzić do `With` bloku instrukcji poza blokiem.  
   
  Instrukcje są wykonywane tylko raz, chyba że blok zawiera pętlę. Możesz zagnieździć różne rodzaje struktur sterujących. Aby uzyskać więcej informacji, zobacz [zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 > [!NOTE]
->  Można użyć `With` — słowo kluczowe w obiekt również inicjatory. Aby uzyskać dodatkowe informacje i przykłady, zobacz [inicjatory obiektów: typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) i [typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+>  Możesz użyć `With` również słowa kluczowego w inicjatorach obiektów. Aby uzyskać więcej informacji i przykładów, zobacz [inicjatory obiektów: Typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) i [typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
 >   
->  Jeśli używasz `With` bloku tylko zainicjować właściwości lub pola obiektu, który właśnie został uruchomiony, rozważ użycie zamiast tego inicjatora obiektu.  
+>  Jeśli używasz `With` bloku tylko do zainicjowania właściwości lub pól obiektu, który został właśnie utworzony, rozważ użycie zamiast tego inicjatora obiektu.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie każdy `With` bloku uruchamia serię instrukcji na pojedynczy obiekt.  
+ W poniższym przykładzie każdy `With` bloku wykonuje serię instrukcji na pojedynczym obiekcie.  
   
  [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_1.vb)]  
   
 ## <a name="example"></a>Przykład  
- Następujące zagnieżdża przykład `With…End With` instrukcje. W ramach zagnieżdżone `With` , składnia odwołuje się do obiektu wewnętrznego.  
+ Poniższy przykład zagnieżdża instrukcje `With…End With` instrukcji. W ramach zagnieżdżonej `With` instrukcji, składnia odnosi się do obiektu wewnętrznego.  
   
  [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Collections.Generic.List%601>  
- [Zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Inicjatory obiektów: typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Collections.Generic.List%601>
+- [Zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

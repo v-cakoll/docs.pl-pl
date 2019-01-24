@@ -2,12 +2,12 @@
 title: Wnioskowanie relacji
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 7dc3fb0c6098d636e640aaf52b72a404c1486492
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2d25160b8dae8b8dc883abb589551782925ca325
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536286"
 ---
 # <a name="inferring-relationships"></a>Wnioskowanie relacji
 Jeśli element, który jest wnioskowany jako tabela ma element podrzędny, która została wywnioskowana, także jako tabelę, <xref:System.Data.DataRelation> zostaną utworzone między dwiema tabelami. Nową kolumnę o nazwie **ParentTableName_Id** zostaną dodane do tabeli, który został utworzony dla elementu nadrzędnego i tabelę utworzoną dla elementu podrzędnego. **ColumnMapping** właściwość ta kolumna identity jest równa **MappingType.Hidden**. Kolumna będzie zwiększenie automatycznie klucz podstawowy dla tabeli nadrzędnej i będą używane dla **DataRelation** między dwiema tabelami. Typ danych w kolumnie tożsamości dodano będzie **System.Int32**, inaczej niż w przypadku wszystkich pozostałych kolumn wywnioskowane na typ danych, który jest **System.String**. A <xref:System.Data.ForeignKeyConstraint> z **DeleteRule** = **Cascade** zostanie również utworzony przy użyciu nowej kolumny w tabelach nadrzędne i podrzędne.  
@@ -31,9 +31,9 @@ Jeśli element, który jest wnioskowany jako tabela ma element podrzędny, któr
   
  A **DataRelation** i **ForeignKeyConstraint** zostanie utworzona z użyciem **Element1_Id** kolumny z obu tabel.  
   
- **Zestaw danych:** elementu DocumentElement  
+ **Zestaw danych:** Elementu DocumentElement  
   
- **Tabela:** Element1  
+ **Tabela:** element1  
   
 |Element1_Id|ChildElement2|  
 |------------------|-------------------|  
@@ -43,11 +43,11 @@ Jeśli element, który jest wnioskowany jako tabela ma element podrzędny, któr
   
 |attr1|attr2|Element1_Id|  
 |-----------|-----------|------------------|  
-|Wartość1|Wartość2|0|  
+|value1|value2|0|  
   
- **DataRelation —:** Element1_ChildElement1  
+ **DataRelation:** Element1_ChildElement1  
   
- **ParentTable:** Element1  
+ **ParentTable:** element1  
   
  **ParentColumn:** Element1_Id  
   
@@ -55,25 +55,25 @@ Jeśli element, który jest wnioskowany jako tabela ma element podrzędny, któr
   
  **ChildColumn:** Element1_Id  
   
- **Zagnieżdżone:** True  
+ **Zagnieżdżone:** Prawda  
   
  **ForeignKeyConstraint:** Element1_ChildElement1  
   
  **Kolumna:** Element1_Id  
   
- **ParentTable:** Element1  
+ **ParentTable:** element1  
   
  **ChildTable:** ChildElement1  
   
- **DeleteRule:** kaskadowo  
+ **DeleteRule:** Kaskadowe  
   
- **AcceptRejectRule:** None  
+ **AcceptRejectRule:** Brak  
   
-## <a name="see-also"></a>Zobacz też  
- [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Ładowanie informacji o schemacie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [Zagnieżdżanie elementów DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Ładowanie informacji o schemacie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [Zagnieżdżanie elementów DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
+- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

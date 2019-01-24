@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93c430bb7e4d14c5f6f4e0563adfd387a1900ee6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d16f1c7d4b56da93b2f2f0a91d889bde72ec94f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530132"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next — Metoda
-Pobiera określoną liczbę [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) wystąpień, które zawierają informacje dotyczące obiektów na stercie zarządzanej.  
+Pobiera określoną liczbę [cor_heapobject —](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) wystąpień, które zawierają informacje dotyczące obiektów na stosie zarządzanym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,17 +40,17 @@ HRESULT Next(
  celt  
  [in] Liczba obiektów, które mają zostać pobrane.  
   
- — obiekty  
- [out] Tablicy wskaźników, z których każdy wskazuje [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) obiektu, który zawiera informacje o obiektów na stercie zarządzanej.  
+  — obiekty  
+ [out] Tablica wskaźników, z których każdy wskazuje [cor_heapobject —](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) obiektu, który zawiera informacje dotyczące obiektu na stosie zarządzanym.  
   
  pceltFetched  
- [out] Wskaźnik do liczby [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) obiekty zwrócone faktycznie w `objects`. Ta wartość może być `null` Jeśli `celt` 1.  
+ [out] Wskaźnik do liczby [cor_heapobject —](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) obiekty, które faktycznie są zwracane w `objects`. Ta wartość może być `null` Jeśli `celt` 1.  
   
 ## <a name="remarks"></a>Uwagi  
- `COR_HEAPOBJECT.type` Pole jest identyfikatorem zagnieżdżonego interfejsu COM zliczane odwołania. To odwołanie musi zostać zwolniona przez obiekt wywołujący `ICorDebugHeapEnum::Next`.  
+ `COR_HEAPOBJECT.type` Pola jest identyfikatorem zagnieżdżonego interfejsu COM zliczonych odwołań. Ta dokumentacja muszą zostać zwolnione przez obiekt wywołujący `ICorDebugHeapEnum::Next`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -58,6 +58,6 @@ HRESULT Next(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugHeapEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugHeapEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

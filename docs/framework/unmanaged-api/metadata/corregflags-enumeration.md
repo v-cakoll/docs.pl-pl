@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7b935b8f59e434c9da364be1986dbed654a1efd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52b59a4e52d3e0cda7353ec1b39c5307bd7b218e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532269"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags — Wyliczenie
-Udostępnia wartości flag używane w przypadku rejestracji podczas instalowania modułu lub złożonych obrazu.  
+Udostępnia wartości flagi używane do rejestracji podczas instalowania modułu lub obrazu złożonego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,18 +41,18 @@ typedef enum
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`regNoCopy`|Określa, że pliki nie powinny być kopiowane do lokalizacji docelowej.|  
-|`regConfig`|Określa, czy konfiguracja jest moduł lub złożone.|  
-|`regHasRefs`|Określa, że moduł lub złożone ma odwołań do klas.|  
+|`regNoCopy`|Określa, że nie można skopiować pliki do miejsca docelowego.|  
+|`regConfig`|Określa, czy modułu lub złożone jest konfiguracja.|  
+|`regHasRefs`|Określa, czy moduł lub złożone ma odwołań do klas.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

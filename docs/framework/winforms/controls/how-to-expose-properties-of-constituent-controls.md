@@ -1,5 +1,5 @@
 ---
-title: 'Porady: udostępnianie właściwości formantów składowych'
+title: 'Instrukcje: Udostępnianie właściwości formantów składowych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 8f7b5c44a5cb20b5da10df5fd630b371cc959fa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3ad37032ee2bb85f37a0eb754277cc9bc040a38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532165"
 ---
-# <a name="how-to-expose-properties-of-constituent-controls"></a>Porady: udostępnianie właściwości formantów składowych
-Formanty, które tworzą formantu złożonego są nazywane *formanty składników*. Tych kontrolek zwykle są deklarowane jako prywatny, a w związku z tym nie można uzyskać dostępu do tych przez dewelopera. Jeśli chcesz udostępnić użytkownikom przyszłych właściwości tych kontrolek musi ujawniać je użytkownikowi. Właściwość formantu składników jest udostępniana przez tworzenie właściwości formantu użytkownika i używanie `get` i `set` metody dostępu właściwości dokonanie zmiany właściwości prywatnej składowych formantu.  
+# <a name="how-to-expose-properties-of-constituent-controls"></a>Instrukcje: Udostępnianie właściwości formantów składowych
+Noszą nazwę kontrolek, które tworzą kontrolki złożonej *formanty składników*. Te kontrolki są zwykle zgłaszane w prywatnej, a zatem nie są dostępne przez dewelopera. Jeśli chcesz udostępnić użytkownikom przyszłych właściwości tych kontrolek, należy je udostępnić użytkownikowi. Właściwość składowej formantu jest uwidaczniany przez tworzenie właściwości w kontrolce użytkownika i używanie `get` i `set` metod dostępu właściwości do efektu zmianę właściwości prywatnej składowej formantu.  
   
- Rozważ kontrolkę użytkownika hipotetyczny składowych przycisk o nazwie `MyButton`. W tym przykładzie, gdy użytkownik zażąda `ConstituentButtonBackColor` właściwości, do wartości przechowywanej w <xref:System.Windows.Forms.Control.BackColor%2A> właściwość `MyButton` jest dostarczany. Gdy użytkownik przypisuje wartość do tej właściwości, ta wartość jest automatycznie przekazywane do <xref:System.Windows.Forms.Control.BackColor%2A> właściwość `MyButton` i `set` kod zostanie wykonany, zmianę koloru `MyButton`.  
+ Należy wziąć pod uwagę kontrolki hipotetyczny użytkownika za pomocą składników przycisk o nazwie `MyButton`. W tym przykładzie, gdy użytkownik zażąda `ConstituentButtonBackColor` właściwość, wartość przechowywana we <xref:System.Windows.Forms.Control.BackColor%2A> właściwość `MyButton` są dostarczane. Po użytkownik przypisuje wartość tej właściwości, ta wartość jest automatycznie przekazywana do <xref:System.Windows.Forms.Control.BackColor%2A> właściwość `MyButton` i `set` wykona kodu, zmieniając kolor `MyButton`.  
   
- Poniższy przykład przedstawia sposób ujawniać <xref:System.Windows.Forms.Control.BackColor%2A> właściwość przycisku składników:  
+ Poniższy przykład pokazuje, jak udostępnić <xref:System.Windows.Forms.Control.BackColor%2A> właściwość składowe przycisku:  
   
 ```vb  
 Public Property ButtonColor() as System.Drawing.Color  
@@ -49,15 +49,15 @@ public Color ButtonColor
 }  
 ```  
   
-### <a name="to-expose-a-property-of-a-constituent-control"></a>Do udostępnienia właściwości formantu składników  
+### <a name="to-expose-a-property-of-a-constituent-control"></a>Aby udostępnić z właściwością kontrolki składników  
   
-1.  Utwórz właściwość publiczna dla formantu użytkownika.  
+1.  Utwórz właściwość publiczna dla kontrolki użytkownika.  
   
-2.  W `get` sekcji właściwości zapisu kod, który pobiera wartość właściwości chcesz udostępnić.  
+2.  W `get` sekcji właściwości, napisz kod, który pobiera wartość właściwości, którą chcesz uwidocznić.  
   
-3.  W `set` sekcji właściwości zapisu kod, który przekazuje wartość właściwości do ujawnionych właściwości formantu składników.  
+3.  W `set` sekcji właściwości, napisz kod, który przekazuje wartość właściwości do narażonych właściwość składowej formantu.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.UserControl>  
- [Właściwości kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Różne typy kontrolek niestandardowych](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.UserControl>
+- [Właściwości kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+- [Różne typy kontrolek niestandardowych](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

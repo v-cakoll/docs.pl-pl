@@ -9,40 +9,40 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3764916263f6f88615d61badaf2c32807bcc09b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48f24187d0c9992008e7471ffe1a5b75f9768239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494387"
 ---
 # <a name="passing-structures"></a>Przekazywanie struktur
-Wiele funkcji niezarządzanej oczekiwać, że można przekazać jako parametru funkcji, członków struktur (Typy definiowane przez użytkownika w języku Visual Basic) lub klas zdefiniowanych w kodzie zarządzanym. Podczas wywołania przekazywanie struktury lub klasy do kodu niezarządzanego, przy użyciu platformy, należy podać dodatkowe informacje, aby zachować oryginalne układ i wyrównania. W tym temacie przedstawiono <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybut, który służy do definiowania typów sformatowany. Zarządzane, struktur i klas, możesz wybrać z zachowaniami przewidywalną układu dostarczanych przez **LayoutKind** wyliczenia.  
+Wiele funkcji niezarządzanych oczekuje przekazania jako parametr do funkcji elementów członkowskich struktury (typy zdefiniowane przez użytkownika w języku Visual Basic) lub elementów członkowskich klas, które są zdefiniowane w kodzie zarządzanym. Podczas wywołania przekazywanie struktury lub klasy do kodu niezarządzanego za pomocą platformy, należy podać dodatkowe informacje, aby zachować oryginalny układ i wyrównania. W tym temacie przedstawiono <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybut, który służy do definiowania typów sformatowany. Zarządzane struktur i klas, możesz wybrać z zachowaniami przewidywalne układu dostarczanych przez **LayoutKind** wyliczenia.  
   
- Centralnej do koncepcji przedstawionych w tym temacie jest istotną różnicą między typami struktury i klasy. Typy wartości są struktur i klas typów referencyjnych — klas zawsze podawać co najmniej jeden poziom pośredni pamięci (wskaźnik do wartości). Ta różnica jest ważne, ponieważ funkcje niezarządzane często wymaga pośredni, pokazane podpisów w pierwszej kolumnie tabeli. Zarządzane struktury i klasy deklaracje w pozostałych kolumnach Pokaż stopień, do którego można dostosować poziom pośredni w Twojej deklaracji. Deklaracje są udostępniane dla języka Visual Basic i Visual C#.  
+ Centralny do koncepcji przedstawionych w tym temacie jest jedną istotną różnicą między typami struktury i klasy. Struktury są typami wartości i klasy są typami odwołań — klasy zawsze zapewniają co najmniej jeden poziom pośredni pamięci (wskaźnik do wartości). Różnica ta jest ważne, ponieważ niezarządzane funkcje często wymagają pośredniego, przedstawiony przez sygnatury w pierwszej kolumnie tabeli. Struktury zarządzanej i deklaracje klas w pozostałych kolumnach pokazano stopnia, do którego można dostosować poziom pośrednictwa w swojej deklaracji. Deklaracje znajdują się zarówno dla języka Visual Basic i Visual C#.  
   
-|Niezarządzanego podpisu|Deklaracja zarządzanego: <br />nie pośredni<br />`Structure MyType`<br />`struct MyType;`|Deklaracja zarządzanego: <br />jeden poziom pośredni<br />`Class MyType`<br />`class MyType;`|  
+|Niezarządzane podpisu|Deklaracja zarządzanego: <br />nie operatora pośredniego<br />`Structure MyType`<br />`struct MyType;`|Deklaracja zarządzanego: <br />jeden poziom pośredni<br />`Class MyType`<br />`class MyType;`|  
 |-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
-|`DoWork(MyType x);`<br /><br /> Wymagania poziomach pośredników od zera.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Dodaje zero poziomach operatorów pośrednich.|Nie jest możliwa, ponieważ istnieje już jeden poziom pośredni.|  
-|`DoWork(MyType* x);`<br /><br /> Wymaga pośredników o jeden poziom.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Dodaje pośredników o jeden poziom.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Dodaje zero poziomach operatorów pośrednich.|  
-|`DoWork(MyType** x);`<br /><br /> Wymaga dwóch poziomach operatorów pośrednich.|Nie jest możliwe ponieważ **ByRef** **ByRef** lub `ref` `ref` nie można użyć.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Dodaje pośredników o jeden poziom.|  
+|`DoWork(MyType x);`<br /><br /> Żądania poziomach pośredników od zera.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Dodaje zero poziomach operatorów pośrednich.|Nie jest możliwe, ponieważ istnieje już jeden poziom pośredni.|  
+|`DoWork(MyType* x);`<br /><br /> Wymaga jednego poziomu pośredniego.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Dodaje jeden poziom pośrednictwa.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Dodaje zero poziomach operatorów pośrednich.|  
+|`DoWork(MyType** x);`<br /><br /> Zapotrzebowania na dwóch poziomach operatorów pośrednich.|Nie jest możliwe ponieważ **ByRef** **ByRef** lub `ref` `ref` nie mogą być używane.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Dodaje jeden poziom pośrednictwa.|  
   
- W tabeli opisano następujące wskazówki dla deklaracji wywołania platformy:  
+ W tabeli opisano następujące wytyczne dla deklaracji wywołania platformy:  
   
--   Struktura przekazany przez wartość, gdy pośredni nie żąda niezarządzanej funkcji jest używana.  
+-   Struktura przekazywany przez wartość, gdy niezarządzanej funkcji zapotrzebowania na pośrednie nie jest używana.  
   
--   Użyj struktury przekazywana przez odwołanie, lub klasy przekazany przez wartość, gdy jeden poziom pośredni żąda niezarządzanej funkcji.  
+-   Użyj przekazywany przez odwołanie struktury lub klasy przekazywany przez wartość, gdy zapotrzebowania na jeden poziom pośredni w funkcji niezarządzanej.  
   
--   Używanie klasy przekazywany przez odwołanie, gdy dwa poziomy pośredni żąda niezarządzanej funkcji.  
+-   Używanie klasy przekazywany przez odwołanie, gdy niezarządzanej funkcji zapotrzebowania na dwóch poziomach operatorów pośrednich.  
   
 ## <a name="declaring-and-passing-structures"></a>Deklarowanie i przekazywanie struktur  
- Poniższy przykład przedstawia sposób definiowania `Point` i `Rect` struktury w kodzie zarządzanym i przekazywania typów jako parametr do **PtInRect** funkcji w pliku User32.dll. **PtInRect** ma następujące niezarządzanego podpisu:  
+ Poniższy przykład pokazuje jak zdefiniować `Point` i `Rect` struktury w kodzie zarządzanym i przekazywania typów jako parametr do **PtInRect** funkcji w pliku User32.dll. **PtInRect** ma następujący podpis niezarządzanych:  
   
 ```  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
- Należy zauważyć, że trzeba przekazać struktura Rect przez odwołanie, ponieważ funkcja oczekuje wskaźnika do typu Rect.  
+ Należy zauważyć, że należy przekazać struktura Rect przez odwołanie, ponieważ funkcja oczekuje wskaźnika do typu Rect.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -89,13 +89,13 @@ class Win32API {
 ```  
   
 ## <a name="declaring-and-passing-classes"></a>Deklarowanie i przekazywanie klas  
- Elementy członkowskie klasy można przekazać do funkcji niezarządzanej DLL, tak długo, jak klasa ma układ stałego elementu członkowskiego. W poniższym przykładzie pokazano sposób przekazywania członkami `MySystemTime` klasy, które są zdefiniowane w kolejności sekwencyjnej, do **GetSystemTime** w pliku User32.dll. **GetSystemTime** ma następujące niezarządzanego podpisu:  
+ Elementy członkowskie klasy można przekazać do niezarządzanych funkcji DLL, tak długo, jak klasa ma układ członek stałej. W poniższym przykładzie pokazano sposób przekazywania członkowie `MySystemTime` klasy, które są zdefiniowane w porządku sekwencyjnym do **GetSystemTime** w pliku User32.dll. **GetSystemTime** ma następujący podpis niezarządzanych:  
   
 ```  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
- W przeciwieństwie do typów wartości klasy zawsze mają co najmniej jeden poziom pośredni.  
+ Inaczej niż w przypadku typów wartości klasy mają zawsze co najmniej jeden poziom pośrednictwa.  
   
 ```vb  
 Imports System  
@@ -175,8 +175,8 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
+## <a name="see-also"></a>Zobacz także
+- [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

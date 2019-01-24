@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e8c5021b00de503783adb3f1b1dc11964639afbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 40bba9f89801a75ac8c9d15e67e060714d1a29d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680770"
 ---
 # <a name="ltcompilergt-element"></a>&lt;Kompilator&gt; — Element
 
@@ -55,15 +55,15 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<provideroption — > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/provideroption-element.md)|Określa atrybuty wersji kompilatora dla dostawcy języka.|
+|[\<providerOption> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/provideroption-element.md)|Określa atrybuty wersji kompilatora dla dostawcy języka.|
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
 |Element|Opis|
 |-------------|-----------------|
 |[\<Konfiguracja > Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|
-|[\<System.CodeDom > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Określa ustawienia konfiguracyjne kompilatora dla dostępnych dostawców języka.|
-|[\<kompilatory > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Kontener dla elementów konfiguracji, kompilator; zawiera zero lub więcej `<compiler>` elementów.|
+|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Określa ustawienia konfiguracyjne kompilatora dla dostępnych dostawców języka.|
+|[\<compilers> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Kontener dla elementów konfiguracji, kompilator; zawiera zero lub więcej `<compiler>` elementów.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -99,11 +99,11 @@ W poniższym przykładzie pokazano element kompilatora typowej konfiguracji:
 </configuration>
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<kompilatory > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
+- [\<compilers> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
 - [Określanie w pełni kwalifikowanych nazw typów](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
 - [Kompilator Element kompilatorów dla kompilacji (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e(v=vs.100))

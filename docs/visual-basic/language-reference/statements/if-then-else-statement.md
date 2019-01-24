@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: 08d51326ee0c9f91eec02467ebcb116354b5033f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ceca58b2d69d72e079a9f2e2791f7f586c459167
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743650"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else — Instrukcja (Visual Basic)
 Warunkowo wykonuje grupy poleceń w zależności od wartości wyrażenia.  
@@ -47,62 +47,62 @@ End If
 If condition Then [ statements ] [ Else [ elsestatements ] ]  
 ```  
 
-## <a name="quick-links-to-example-code"></a>Szybkie linki do przykładowy kod
+## <a name="quick-links-to-example-code"></a>Szybkie łącza do przykładowego kodu
 
-Ten artykuł zawiera przykłady ilustrujące zastosowań `If`... `Then`... `Else` instrukcji:
+W tym artykule przedstawiono kilka przykładów, które ilustrują zastosowań `If`... `Then`... `Else` instrukcji:
 
 * [Przykład składni wielowierszowy](#multi-line)
 * [Przykład składni zagnieżdżonych](#nested)
-* [Przykład składni jeden wiersz](#single-line)
+* [Przykład składni jednowierszowy](#single-line)
 
 ## <a name="parts"></a>Części  
  `condition`  
- Wymagana. Wyrażenie. Musi być `True` lub `False`, lub umożliwiają niejawnej konwersji na typ danych `Boolean`.  
+ Wymagana. wyrażenie. Musi być `True` lub `False`, lub do typu danych, który jest niejawnie konwertowany na `Boolean`.  
   
- Jeśli wyrażenie jest [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` zmiennej, która daje w wyniku [nic](../../../visual-basic/language-reference/nothing.md), warunek jest traktowany jako wyrażenie `False` i `Else` bloku jest wykonywana.  
+ Jeśli wyrażenie ma [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` zmiennej, która daje w wyniku [nic](../../../visual-basic/language-reference/nothing.md), warunek jest traktowany tak, jakby wyrażenie jest `False` i `Else` blok jest wykonywany.  
   
  `Then`  
  Wymagany w składni pojedynczej linii; Opcjonalnie w wielowierszowym składni.  
   
  `statements`  
- Opcjonalna. Jeden lub więcej następujących instrukcji `If`... `Then` wdrożeniowych Jeśli `condition` daje w wyniku `True`.  
+ Opcjonalna. Jeden lub więcej następujących instrukcji `If`... `Then` które są wykonywane, jeśli `condition` daje w wyniku `True`.  
   
  `elseifcondition`  
- Jeśli wymagane `ElseIf` jest obecny. Wyrażenie. Musi być `True` lub `False`, lub umożliwiają niejawnej konwersji na typ danych `Boolean`.  
+ Jeśli wymagane `ElseIf` jest obecny. wyrażenie. Musi być `True` lub `False`, lub do typu danych, który jest niejawnie konwertowany na `Boolean`.  
   
  `elseifstatements`  
- Opcjonalna. Jeden lub więcej następujących instrukcji `ElseIf`... `Then` wdrożeniowych Jeśli `elseifcondition` daje w wyniku `True`.  
+ Opcjonalna. Jeden lub więcej następujących instrukcji `ElseIf`... `Then` które są wykonywane, jeśli `elseifcondition` daje w wyniku `True`.  
   
  `elsestatements`  
- Opcjonalna. Co najmniej jeden instrukcji, które są wykonywane, jeśli nie poprzedniej `condition` lub `elseifcondition` wyrażenie daje w wyniku `True`.  
+ Opcjonalna. Jedna lub więcej instrukcji, które są wykonywane, jeśli nie poprzedniej `condition` lub `elseifcondition` wyrażenie daje w wyniku `True`.  
   
  `End If`  
- Kończy wielowierszowy wersja `If`... `Then`... `Else` bloku.  
+ Kończy wielowierszowy wersję `If`... `Then`... `Else` bloku.  
   
 ## <a name="remarks"></a>Uwagi  
   
-### <a name="multiline-syntax"></a>Wielowierszowy składni  
- Gdy `If`... `Then`... `Else` napotkano instrukcji `condition` jest testowana. Jeśli `condition` jest `True`, instrukcji `Then` są wykonywane. Jeśli `condition` jest `False`, każdy `ElseIf` instrukcji (jeśli istnieją) są oceniane w kolejności. Gdy `True` `elseifcondition` zostanie znaleziony, natychmiast po skojarzone instrukcje `ElseIf` są wykonywane. Jeśli nie `elseifcondition` daje w wyniku `True`, lub jeśli występują nie `ElseIf` instrukcje, instrukcji `Else` są wykonywane. Po wykonaniu następujące instrukcje `Then`, `ElseIf`, lub `Else`, wykonanie będzie kontynuowane przy użyciu następujących instrukcji `End If`.  
+### <a name="multiline-syntax"></a>Składnia wielowierszowy  
+ Gdy `If`... `Then`... `Else` napotkania instrukcji `condition` jest testowana. Jeśli `condition` jest `True`instrukcje po `Then` są wykonywane. Jeśli `condition` jest `False`, każdy `ElseIf` — instrukcja (jeśli istnieją) jest obliczane w kolejności. Gdy `True` `elseifcondition` zostanie znaleziony, instrukcje natychmiast po skojarzonego `ElseIf` są wykonywane. Jeśli nie `elseifcondition` daje w wyniku `True`, lub jeśli występują nie `ElseIf` instrukcji, instrukcje po `Else` są wykonywane. Po wykonaniu następujących instrukcji `Then`, `ElseIf`, lub `Else`, wykonywanie jest kontynuowane przy użyciu następujących instrukcji `End If`.  
   
- `ElseIf` i `Else` klauzule są opcjonalne. Może mieć tyle `ElseIf` klauzule jako użytkownik ma `If`... `Then`... `Else` instrukcji, ale nie `ElseIf` klauzula może występować po `Else` klauzuli. `If`... `Then`... `Else` instrukcje mogą być zagnieżdżone wewnątrz innych.  
+ `ElseIf` i `Else` klauzule są opcjonalne. Masz tyle `ElseIf` klauzule jako użytkownik ma `If`... `Then`... `Else` instrukcji, ale nie `ElseIf` klauzuli może następować po elemencie `Else` klauzuli. `If`... `Then`... `Else` instrukcje mogą być zagnieżdżone wewnątrz innych.  
   
- W wielowierszowym składni `If` instrukcja musi być jedyną instrukcją w pierwszym wierszu. `ElseIf`, `Else`, I `End If` instrukcje mogą być poprzedzone tylko etykiety linii. `If`... `Then`... `Else` musi się kończyć bloku `End If` instrukcji.  
+ W składni wielowierszowy `If` instrukcja musi być jedyną instrukcją w pierwszym wierszu. `ElseIf`, `Else`, I `End If` instrukcji może być poprzedzony tylko etykieta wiersza. `If`... `Then`... `Else` bloku musi się kończyć `End If` instrukcji.  
   
 > [!TIP]
->  [Wybierz... Case — instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md) może być bardziej użyteczne podczas oceny jedno wyrażenie, które ma kilka możliwych wartości.  
+>  [Wybierz... Case — instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md) mogą być bardziej przydatne podczas oceny pojedyncze wyrażenie, które ma kilka możliwych wartości.  
   
-### <a name="single-line-syntax"></a>Składnia jeden wiersz  
- Za pomocą składni jeden wiersz dla jednego warunku kod do wykonania w przypadku wartości true. Jednak składni wielowierszowe zapewnia więcej struktury i elastyczność i jest łatwiej odczytywać, obsługa i debugowania.  
+### <a name="single-line-syntax"></a>Składnia jednowierszowy  
+ Do wykonania, jeśli to PRAWDA, można użyć składni jeden wiersz dla jednego warunku przy użyciu kodu. Jednak składni wielowierszowe zapewnia więcej struktury i elastyczności i łatwiej odczytać, obsługa i debugowania.  
   
- Jakie następujące `Then` — słowo kluczowe jest sprawdzony w celu określenia, czy instrukcja jest jeden wiersz `If`. Jeśli jest inny niż komentarz za `Then` w tym samym wierszu, instrukcja jest traktowane jako jeden wiersz `If` instrukcji. Jeśli `Then` jest nieobecne, musi być uruchomienia wielu linii `If`... `Then`... `Else`.  
+ Poniżej `Then` — słowo kluczowe jest sprawdzane w celu określenia, czy instrukcja jest jeden wiersz `If`. Jeśli coś innego niż komentarz pojawia się po `Then` w tym samym wierszu, instrukcja jest traktowany jako jeden wiersz `If` instrukcji. Jeśli `Then` jest nieobecne, należy go z początku wielu linii `If`... `Then`... `Else`.  
   
- W składni jeden wiersz może mieć wiele instrukcji wykonane w wyniku `If`... `Then` decyzji. Wszystkie instrukcje musi znajdować się na tym samym wierszu i być oddzielone dwukropkiem.  
+ W składni jednowierszowego, może mieć wiele instrukcji wykonane w wyniku `If`... `Then` decyzji. Wszystkie instrukcje musi znajdować się na tym samym wierszu i być rozdzielone średnikami.  
 
 ## <a name="multiline-syntax-example"></a>Przykład składni wielowierszowy
 
 <a name="multi-line"></a>
  
- Poniższy przykład przedstawia użycie składni wielowierszowy `If`... `Then`... `Else` instrukcji.  
+ Poniższy przykład ilustruje użycie składni wielowierszowy `If`... `Then`... `Else` instrukcji.  
   
  [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_1.vb?highlight=11,14,17,19)]
 
@@ -110,22 +110,22 @@ Ten artykuł zawiera przykłady ilustrujące zastosowań `If`... `Then`... `Else
 
 <a name="nested"></a>
 
- Poniższy przykład zawiera zagnieżdżone `If`... `Then`... `Else` instrukcje.  
+ Poniższy przykład zawiera zagnieżdżone `If`... `Then`... `Else` instrukcji.  
   
  [!code-vb[VbVbalrStatements#102](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_2.vb?highlight=14,15,17,19,20,21,23,25,26,28)]
 
-## <a name="single-line-syntax-example"></a>Przykład składni jeden wiersz
+## <a name="single-line-syntax-example"></a>Przykład składni jednowierszowy
   
-<a name="single-line"></a> Poniższy przykład przedstawia użycie składni jeden wiersz.  
+<a name="single-line"></a> Poniższy przykład ilustruje użycie składni jeden wiersz.  
   
  [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_3.vb?highlight=18)]
   
-## <a name="see-also"></a>Zobacz także  
- <xref:Microsoft.VisualBasic.Interaction.Choose%2A>  
- <xref:Microsoft.VisualBasic.Interaction.Switch%2A>  
- [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [Select...Case, instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md)  
- [Zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Struktury decyzji](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- [Operatory logiczne i bitowe w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
- [If, operator](../../../visual-basic/language-reference/operators/if-operator.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
+- <xref:Microsoft.VisualBasic.Interaction.Switch%2A>
+- [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [Instrukcja Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [Zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Struktury decyzji](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [Operatory logiczne i bitowe w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [If, operator](../../../visual-basic/language-reference/operators/if-operator.md)

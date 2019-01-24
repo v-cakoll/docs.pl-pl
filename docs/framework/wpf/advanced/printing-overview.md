@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 04ea64f0e6563012a3b272306df6be4575ed7659
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e17a3888e3467d8d21506108e6599c8ae5da2fe2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838848"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695611"
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
 Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu Windows Presentation Foundation (WPF) mają bogaty zestaw nowych Zarządzanie systemem drukowania i wydruku [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Za pomocą [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], niektóre z tych rozszerzeń systemu drukowania są również dostępne dla programistów tworzących [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji i deweloperzy korzystający z niezarządzanego kodu. W ramach tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku i [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżka wydruku.  
@@ -66,7 +66,7 @@ Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu
   
  Poniższa ilustracja przedstawia podsystem wydruku i definiuje fragmenty, dostarczone przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]i fragmenty zdefiniowane przez producentów sprzętu i oprogramowania.  
   
- ![System drukowania XPS](../../../../docs/framework/wpf/advanced/media/xpsprint.PNG "XPSPrint")  
+ ![The XPS Print System](../../../../docs/framework/wpf/advanced/media/xpsprint.PNG "XPSPrint")  
   
 ### <a name="basic-xps-printing"></a>Drukowanie plików XPS podstawowe  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] definiuje zarówno podstawowe i zaawansowane [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Dla tych aplikacji, które nie wymagają rozbudowane drukowanie dostosowywania lub dostęp do pełnego [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] zestawu funkcji podstawowych drukowania Pomoc techniczna jest dostępna. Podstawowa pomoc techniczna drukowania jest dostępna za pośrednictwem formantu w oknie dialogowym drukowania, który wymaga minimalnej konfiguracji i funkcje powszechnie znane [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Wiele [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] funkcji dostępnych za pomocą tego uproszczony model drukowania.  
@@ -134,16 +134,16 @@ W przypadku aplikacji, które nie wymagają [!INCLUDE[TLA2#tla_metro](../../../.
   
 -   **Kompresji ZIP**. Wszystkie [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dokumentów Użyj kompresji ZIP.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Controls.PrintDialog>  
- <xref:System.Windows.Xps.XpsDocumentWriter>  
- <xref:System.Windows.Xps.Packaging.XpsDocument>  
- <xref:System.Printing.PrintTicket>  
- <xref:System.Printing.PrintCapabilities>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.PrintQueue>  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](https://www.microsoft.com/xps)  
- [Serializacja dokumentu i przechowywanie](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [Konwerter (MXDC) dokumentów XPS firmy Microsoft](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Controls.PrintDialog>
+- <xref:System.Windows.Xps.XpsDocumentWriter>
+- <xref:System.Windows.Xps.Packaging.XpsDocument>
+- <xref:System.Printing.PrintTicket>
+- <xref:System.Printing.PrintCapabilities>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.PrintQueue>
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
+- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [XPS](https://www.microsoft.com/xps)
+- [Serializacja dokumentu i przechowywanie](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [Konwerter (MXDC) dokumentów XPS firmy Microsoft](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)

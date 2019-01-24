@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 7090d5e9cd4b44a6f894cc92ad69b34761356118
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d76b7db8a3c8f2dcdc8bdbc325a1bb14b87229ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721113"
 ---
 # <a name="securing-clients"></a>Zabezpieczanie klientów [WCF]
 W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotyczące zabezpieczeń dla klientów. Oznacza to, że usługa określa jakie tryb zabezpieczeń do użycia i określa, czy klient musi podać poświadczenia. Zabezpieczanie klienta, w związku z tym, proces jest prosty: metadane uzyskane z usługi (jeśli jest publikowany) oraz tworzyć klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie omówiono proces bardziej szczegółowo. Aby uzyskać więcej informacji na temat tworzenia usługi bezpiecznego zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
@@ -134,7 +134,7 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
 > [!NOTE]
 >  Niektóre wartości poświadczeń klienta nie może być zestaw za pomocą plików konfiguracji aplikacji, na przykład, nazwę użytkownika i hasła, lub Windows użytkownika i wartości haseł. Wartości tych poświadczeń można określić tylko w przypadku kodu.  
   
- Aby uzyskać więcej informacji na temat ustawiania poświadczeń klienta, zobacz [porady: Określanie wartości poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Aby uzyskać więcej informacji na temat ustawiania poświadczeń klienta, zobacz [jak: Określanie wartości poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
 >  `ClientCredentialType` jest ignorowany, kiedy `SecurityMode` ustawiono `"TransportWithMessageCredential",` jak pokazano w poniższym Przykładowa konfiguracja.  
@@ -152,16 +152,16 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
 </wsHttpBinding>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
- <xref:System.ServiceModel.ClientBase%601>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<powiązania >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
- [Narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
- [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md)  
- [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Instrukcje: określanie wartości poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
- [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Instrukcje: określanie typu poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
+- <xref:System.ServiceModel.ClientBase%601>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
+- [\<powiązania >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+- [Narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md)
+- [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Instrukcje: Określanie wartości poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Instrukcje: Określanie typu poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

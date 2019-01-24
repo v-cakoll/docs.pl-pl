@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: ac789ba81d728c067be515479e749440bb5809d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a2b8f4f49afb987243ed96c29a09d7f0ec842945
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744586"
 ---
 # <a name="trusted-subsystem"></a>Zaufany podsystem
 Klient uzyskuje dostęp do usług sieci Web, które są rozpowszechniane w sieci. Usługi sieci Web zostały zaprojektowane, tak że dostęp do dodatkowych zasobów (np. baz danych lub inne usługi sieci Web) są hermetyzowane w logice biznesowej usługi sieci Web. Te zasoby muszą być chronione przed nieautoryzowanym dostępem. Poniższa ilustracja przedstawia proces zaufany podsystem.  
@@ -37,7 +37,7 @@ Klient uzyskuje dostęp do usług sieci Web, które są rozpowszechniane w sieci
 |Uwierzytelnianie (klient)|Zaufany podsystem uwierzytelnia klienta i zasobów uwierzytelnia usługi zaufany podsystem.|  
 |Integralność|Tak|  
 |Poufność|Tak|  
-|Transportu|Protokół HTTP między klientem a usługą zaufany podsystem.<br /><br /> NET. TCP między usługą zaufany podsystem i zasobów (usłudze zaplecza).|  
+|Transport|Protokół HTTP między klientem a usługą zaufany podsystem.<br /><br /> NET. TCP między usługą zaufany podsystem i zasobów (usłudze zaplecza).|  
 |Powiązanie|<xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Zasób (usługa zaplecza)  
@@ -101,7 +101,7 @@ Klient uzyskuje dostęp do usług sieci Web, które są rozpowszechniane w sieci
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>Konfiguracja  
- Następująca konfiguracja konfiguruje ten sam punkt końcowy, za pomocą konfiguracji. Należy zauważyć dwa powiązania: zabezpiecza jedną usługę hostowaną w zaufany podsystem, a druga komunikuje się między zaufany podsystem i usługi zaplecza.  
+ Następująca konfiguracja konfiguruje ten sam punkt końcowy, za pomocą konfiguracji. Należy zwrócić uwagę dwa powiązania: Zabezpiecza jedną usługę hostowaną w zaufany podsystem, a druga zapewnia komunikację między zaufany podsystem i usługi zaplecza.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -210,6 +210,6 @@ Klient uzyskuje dostęp do usług sieci Web, które są rozpowszechniane w sieci
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

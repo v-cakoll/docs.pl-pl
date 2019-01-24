@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9351738e979b49ec23b51a2fa554fc219e163541
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a6c39989a37f46d684c3a467d5e099ea7167185
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624135"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>IMetaDataConverter::GetTypeLibFromMetaData — Metoda
-Pobiera wskaźnik do `ITypeLib` wystąpienia, który reprezentuje bibliotekę typu, która zawiera nazwy modułu i bibliotekę.  
+Pobiera wskaźnik do `ITypeLib` wystąpienia, która reprezentuje biblioteki typów, która ma określonej nazwy biblioteki i moduł.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,16 +45,16 @@ HRESULT GetTypeLibFromMetaData (
  [in] Nazwa biblioteki typów.  
   
  `ppITL`  
- [out] Wskaźnik do lokalizacji, która odbiera adres `ITypeLib` wystąpienia, który reprezentuje bibliotekę typów.  
+ [out] Wskaźnik do lokalizacji, która otrzymuje adres `ITypeLib` wystąpienia, która reprezentuje biblioteki typów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataConverter, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataConverter, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)

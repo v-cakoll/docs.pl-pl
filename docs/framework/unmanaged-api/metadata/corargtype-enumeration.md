@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5803f958c9340c068d6ce6e7fc0b1d6846d67876
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fa71b15a5e4852bc87ad2088edb343704df6ca9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734328"
 ---
 # <a name="corargtype-enumeration"></a>CorArgType — Wyliczenie
-Zawiera wartości, które opisują natywny typ dojścia środowiska wykonawczego.  
+Zawiera wartości, które opisują typ macierzysty dojścia środowiska uruchomieniowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,11 +47,11 @@ typedef enum CorArgType {
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

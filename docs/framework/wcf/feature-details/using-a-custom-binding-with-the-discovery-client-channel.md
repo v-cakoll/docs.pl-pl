@@ -2,12 +2,12 @@
 title: Używanie powiązania niestandardowego z kanałem klienta odnajdywania
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-ms.openlocfilehash: 7473262ec52adfd917b8ec5cd7ec1f4935a3646d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6fe9370bb22ca424774fc8cb4566e0802bc06697
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698368"
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>Używanie powiązania niestandardowego z kanałem klienta odnajdywania
 Korzystając z niestandardowego powiązania za pomocą <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, należy zdefiniować <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> tworząca <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> wystąpień.  
@@ -45,7 +45,7 @@ customBinding.Elements.Insert(0, discoveryBindingElement);
   
  Aby uzyskać więcej informacji o korzystaniu z kanałem klienta odnajdywania, zobacz [używanie kanału klienta odnajdywania](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md). 
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
-- [Używanie kanału klienta odnajdywania](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+- [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Używanie kanału klienta odnajdywania](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)

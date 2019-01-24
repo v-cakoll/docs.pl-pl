@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: 89c5ec7713c6420060310b5df90acec0cc3b088b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d860f1a3c6917238a529093672dc5f2abc5ae066
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620200"
 ---
 # <a name="extern-c-reference"></a>extern (odwołanie w C#)
 
@@ -90,8 +90,8 @@ SampleMethod() returns 50.
 
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>  
-- [Dokumentacja języka C#](../index.md)  
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
-- [Słowa kluczowe języka C#](index.md)  
-- [Modyfikatory](modifiers.md)  
+- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Modyfikatory](modifiers.md)

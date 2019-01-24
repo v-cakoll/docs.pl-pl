@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2de22729fd3d7a511c1105ebf810d0402bd73a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 229bf968d21516d48468610c8f47367324fb6b13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695520"
 ---
 # <a name="icordebugcodegetaddress-method"></a>ICorDebugCode::GetAddress — Metoda
-Pobiera adres względny wirtualnych (RVA) segmentu kod reprezentujący ten interfejs "ICorDebugCode".  
+Pobiera względnych adresów wirtualnych (RVA) segmentu kodu, który reprezentuje ten interfejs "ICorDebugCode".  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,10 +37,10 @@ HRESULT GetAddress (
   
 #### <a name="parameters"></a>Parametry  
  `pStart`  
- [out] Wskaźnik do adres RVA segment kodu.  
+ [out] Wskaźnik do RVA segmentu kodu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -48,5 +48,5 @@ HRESULT GetAddress (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

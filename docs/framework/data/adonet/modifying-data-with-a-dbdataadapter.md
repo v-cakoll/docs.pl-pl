@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 0e38bc663d3c2143703ba178eb8ac420bb1baa08
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3bd4cbeffcf320d6415b3a3d4aa907280d71a598
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725184"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Modyfikowanie danych za pomocą DbDataAdapter
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> Metody <xref:System.Data.Common.DbProviderFactory> zapewnia obiekt <xref:System.Data.Common.DbDataAdapter> obiekt, który jest silnie typizowaną do podstawowego dostawcy danych określony w momencie tworzenia fabryka. Następnie można użyć <xref:System.Data.Common.DbCommandBuilder> do tworzenia poleceń do wstawiania, aktualizowania i usuwania danych z <xref:System.Data.DataSet> ze źródłem danych.  
@@ -42,8 +42,8 @@ ms.locfileid: "43400549"
 > [!IMPORTANT]
 >  Unikanie parametrów właściwe dla dostawcy całkowicie za pomocą ciągów do konstruowania bezpośrednie instrukcji SQL nie jest zalecane ze względów bezpieczeństwa. Za pomocą ciągów zamiast parametrów pozostawia aplikacji podatny na ataki przez wstrzyknięcie kodu SQL.  
   
-## <a name="see-also"></a>Zobacz też  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [Uzyskiwanie DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
- [DbConnection, DbCommand i DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [Uzyskiwanie DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
+- [DbConnection, DbCommand i DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

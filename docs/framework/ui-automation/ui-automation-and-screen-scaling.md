@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 4fe6a0c39388e72807043e9e1ccd2deb59afb656
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: d4c3801e81efc7af1afbf15d882a9d13ad552524
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717561"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automatyzacja interfejsu użytkownika a skalowanie ekranu
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] Umożliwia użytkownikom zmianę [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] ustawienie dlatego najlepiej odpowiadającej [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementów na ekranie są większe. Mimo że tę funkcję długo udostępniono w [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], w poprzednich wersjach skalowanie musiały być implementowana przez aplikacje. W [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], Menedżer okien pulpitu wykonuje domyślne skalowanie dla wszystkich aplikacji, które nie obsługują własne skalowania. Aplikacje klienckie automatyzacji interfejsu użytkownika musi uwzględniać tej funkcji.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48845970"
   
  Skalowanie ekranu tworzy nowe wyzwania dla aplikacji, które są zainteresowane w jakikolwiek sposób za pomocą współrzędnych ekranu. Ekran zawiera teraz dwoma układami współrzędnych: fizycznymi i logicznymi. Fizyczne współrzędnych punktu są rzeczywiste przesunięcie w pikseli od górnej left pochodzenia. Logiczne współrzędne są przesunięcia, tak jak powinny, jeśli zostały skalowany pikseli, samodzielnie.  
   
- Załóżmy, że projekt okno dialogowe z przyciskiem na współrzędnych (100, 48). Gdy to okno dialogowe zostanie wyświetlona w domyślnej 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], przycisk znajduje się w fizycznych współrzędne (100, 48). Na 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], znajduje się on w fizycznych współrzędne (125, 60). Ale współrzędne logiczne są takie same, w dowolnym [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ustawienie: (100, 48).  
+ Załóżmy, że projekt okno dialogowe z przyciskiem na współrzędnych (100, 48). Gdy to okno dialogowe zostanie wyświetlona w domyślnej 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], przycisk znajduje się w fizycznych współrzędne (100, 48). Na 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], znajduje się on w fizycznych współrzędne (125, 60). Ale współrzędne logiczne są takie same, w dowolnym [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ustawienia: (100, 48).  
   
  Współrzędne logiczne są istotne, ponieważ ich zachowania systemu operacyjnego i aplikacji spójne bez względu na to [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ustawienie. Na przykład <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> zwykle zwraca wartość logiczną współrzędnych. Jeśli przesuniesz kursor nad elementem w oknie dialogowym takich samych współrzędnych są zwracane niezależnie od wartości [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ustawienie. Jeśli podczas rysowania kontrolki u (100, 100), są wizualizowane w tych współrzędnych w logiczne i zajmie się do tej samej pozycji względnej w dowolnym [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ustawienie.  
   
@@ -77,5 +77,5 @@ ms.locfileid: "48845970"
   
  Jeśli Twoja aplikacja działa bezpośredniej komunikacji między procesami z non - [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aplikacjom obsługującym może mieć konwertowania między logiczne i fizyczne współrzędnych przy użyciu [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] funkcje `PhysicalToLogicalPoint` i `LogicalToPhysicalPoint`.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykładowe wyróżnienia](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+## <a name="see-also"></a>Zobacz także
+- [Przykładowe wyróżnienia](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

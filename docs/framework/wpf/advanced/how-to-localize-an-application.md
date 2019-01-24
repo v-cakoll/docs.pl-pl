@@ -1,5 +1,5 @@
 ---
-title: Jak lokalizować aplikację
+title: 'Instrukcje: Lokalizuj aplikację'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 1190fb739e7c1873532e96b50399ac0deb6bb51c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1761fbf1cb8ec337ea5733e3ab693031b1934179
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725550"
 ---
-# <a name="how-to-localize-an-application"></a>Jak lokalizować aplikację
+# <a name="how-to-localize-an-application"></a>Instrukcje: Lokalizuj aplikację
 W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu locbaml — narzędzie.  
   
 > [!NOTE]
@@ -46,11 +46,11 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
 3.  UID, aby dodać swoje [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików. UID są używane do śledzenia zmian w plikach i zidentyfikować elementy, które musi podlegać translacji. Aby dodać UID do plików, uruchom **updateuid** w pliku projektu:  
   
-     **Program MSBuild - t: updateuid helloapp.csproj**  
+     **msbuild -t:updateuid helloapp.csproj**  
   
      Aby sprawdzić, czy nie brakuje lub zduplikowane UID, uruchom **checkuid**:  
   
-     **Program MSBuild - t: checkuid helloapp.csproj**  
+     **msbuild -t:checkuid helloapp.csproj**  
   
      Po uruchomieniu **updateuid**, pliki może zawierać UID. Na przykład w pliku Pane1.xaml HelloApp, powinien znajdować się następujące czynności:  
   
@@ -68,7 +68,7 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
 1.  Skompilować HelloApp, aby utworzyć [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
   
-     **MSBUILD helloapp.csproj**  
+     **msbuild helloapp.csproj**  
   
 2.  Nowo utworzony głównym zestawem aplikacji, HelloApp.exe, jest tworzony w następującym folderze:  
   
@@ -85,25 +85,25 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
 2.  Uruchom plik projektu (locbaml.csproj) do skompilowania narzędzie z wiersza polecenia:  
   
-     **MSBUILD locbaml.csproj**  
+     **msbuild locbaml.csproj**  
   
 3.  Przejdź do katalogu Bin\Release, aby znaleźć nowo utworzony plik wykonywalny (locbaml.exe). Example:C:\LocBaml\Bin\Release\locbaml.exe.  
   
 4.  Dostępne są następujące opcje, które można określić po uruchomieniu locbaml —:  
   
-    -   **analizowanie** lub **-p:** analizuje Baml zasobów, lub [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] plików, aby wygenerować plik CSV lub txt.  
+    -   **analizowanie** lub **-p:** Analizuje Baml, zasobów, lub [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] plików, aby wygenerować plik CSV lub txt.  
   
-    -   **Generowanie** lub **-g:** generuje zlokalizowany plik binarny, używając przetłumaczonego pliku.  
+    -   **Generowanie** lub **-g:** Generuje zlokalizowany plik binarny, używając przetłumaczonego pliku.  
   
-    -   **limit** lub **-o** {*filedirectory*] **:** nazwa pliku wyjściowego.  
+    -   **limit** lub **-o** {*filedirectory*] **:** Nazwa pliku wyjściowego.  
   
-    -   **kultura** lub **- cul** {*kultury*] **:** ustawień regionalnych, zestawów danych wyjściowych.  
+    -   **kultura** lub **- cul** {*kultury*] **:** Ustawienia regionalne, zestawów danych wyjściowych.  
   
-    -   **Tłumaczenie** lub **- trans** {*translation.csv*] **:** przetłumaczona lub zlokalizowanego pliku.  
+    -   **Tłumaczenie** lub **- trans** {*translation.csv*] **:** Przetłumaczone lub zlokalizowanego pliku.  
   
-    -   **asmpath** lub **- asmpath:** {*filedirectory*] **:** Jeśli Twoje [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kod zawiera kontrolki niestandardowe, należy podać  **asmpath** do zestawu kontrolki niestandardowej.  
+    -   **asmpath** lub **- asmpath:** {*filedirectory*] **:** Jeśli Twoje [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kod zawiera kontrolki niestandardowe, należy podać **asmpath** do zestawu kontrolki niestandardowej.  
   
-    -   **nologo:** wyświetlane żadne informacje logo lub praw autorskich.  
+    -   **nologo:** Wyświetla informacje o nie logo lub praw autorskich.  
   
     -   **verbose:** Wyświetla informacje o trybie informacji pełnej.  
   
@@ -118,7 +118,7 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
 2.  Aby przeanalizować plik zestawu satelickiego i przechowywanie danych wyjściowych w formacie pliku CSV, użyj następującego polecenia:  
   
-     **/Parse LocBaml.exe HelloApp.resources.dll /out:Hello.csv**  
+     **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
     >  Jeśli plik wejściowy HelloApp.resources.dll, nie znajduje się w tym samym katalogu co LocBaml.exe przenieść jeden z plików, tak aby oba pliki znajdują się w tym samym katalogu.  
@@ -127,9 +127,9 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
 
    | |
    |-|
-   |HelloApp.g.en US.resources:window1.baml, Stack1:System.Windows.Controls.StackPanel. $Content, zignorować, FALSE, FALSE,, #Text1; # Tekst2;|
-   |HelloApp.g.en US.resources:window1.baml, Text1:System.Windows.Controls.TextBlock. $Content, None, wartość TRUE, TRUE,, Hello World|
-   |HelloApp.g.en US.resources:window1.baml, Text2:System.Windows.Controls.TextBlock. $Content, None, wartość TRUE, TRUE,, Goodbye świata|
+   |HelloApp.g.en-US.resources:window1.baml,Stack1:System.Windows.Controls.StackPanel.$Content,Ignore,FALSE, FALSE,,#Text1;#Text2;|
+   |HelloApp.g.en-US.resources:window1.baml,Text1:System.Windows.Controls.TextBlock.$Content,None,TRUE, TRUE,,Hello World|
+   |HelloApp.g.en-US.resources:window1.baml,Text2:System.Windows.Controls.TextBlock.$Content,None,TRUE, TRUE,,Goodbye World|
 
    Siedem pola są:  
   
@@ -151,9 +151,9 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
    |Nazwa BAML|Klucz zasobu|Kategoria|Czytelność|Modifiability|Komentarze|Wartość|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en US.resources:window1.baml|Stack1:system.Windows.Controls.StackPanel.$Content|Ignoruj|FAŁSZ|FAŁSZ||#Text1; # Tekst2|
-   |HelloApp.g.en US.resources:window1.baml|Text1:system.Windows.Controls.TextBlock.$Content|Brak|WARTOŚĆ TRUE|WARTOŚĆ TRUE||Witaj Świecie|
-   |HelloApp.g.en US.resources:window1.baml|Text2:system.Windows.Controls.TextBlock.$Content|Brak|WARTOŚĆ TRUE|WARTOŚĆ TRUE||Goodbye świata|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Zignoruj|FAŁSZ|FAŁSZ||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Brak|WARTOŚĆ TRUE|WARTOŚĆ TRUE||Witaj Świecie|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Brak|WARTOŚĆ TRUE|WARTOŚĆ TRUE||Goodbye World|
   
    Należy zauważyć, że wszystkie wartości dla **komentarze** pola nie zawierają wartości; Jeśli pola nie ma wartości, jest pusty. Także zauważyć, że elementu w pierwszym wierszu nie można odczytać ani można modyfikować oraz "Ignorowania" jako jego **kategorii** wartości, które wskazuje, że wartość jest możliwych do zlokalizowania.  
   
@@ -169,7 +169,7 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
 1.  Użyj następującej składni, aby wygenerować nowy plik HelloApp.resources.dll. Oznacz kulturę, co en US (/ cul:en — Stany Zjednoczone).  
   
-     **LocBaml.exe / Generowanie HelloApp.resources.dll /trans:Hello.csv /out:c: \ /cul:en — Stany Zjednoczone**  
+     **LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**  
   
     > [!NOTE]
     >  Jeśli plik wejściowy Hello.csv, nie jest w tym samym katalogu co plik wykonywalny LocBaml.exe, należy przenieść jeden z plików tak, aby oba pliki znajdują się w tym samym katalogu.  
@@ -180,7 +180,7 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
 4.  Do tłumaczenia, aby określić inną kulturę, używają kultury języka, który tłumaczy do. Poniższy przykład pokazuje, jak przełożyć na French-Canadian:  
   
-     **LocBaml.exe / Generowanie HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c: \ /cul:fr-urzędu certyfikacji**  
+     **LocBaml.exe /generate HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c:\ /cul:fr-CA**  
   
 5.  Z tego samego zestawu jako zestawu głównej aplikacji Utwórz nowy folder specyficzne dla kultury do przechowywania nowego zestawu satelickiego. French-Canadian folder będzie fr-CA.  
   
@@ -209,6 +209,6 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
 ## <a name="whats-next"></a>Jaka jest przyszłość  
  Teraz powinien mieć podstawową wiedzę na temat sposobu użycia locbaml — narzędzie.  Powinien móc plik, który zawiera UID. Za pomocą locbaml — narzędzie, można przeanalizować pliku można wyodrębnić możliwych do zlokalizowania zawartości, a po zawartość jest tłumaczona, powinno być możliwe wygenerowanie. resources.dll zawierający scala tłumaczonej zawartości. W tym temacie nie ma możliwości szczegóły każdego zdarzenia, ale masz teraz wiedzy koniecznych do używania locbaml — do lokalizowania aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Globalizacja dla WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Przegląd używania automatycznego układu](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Globalizacja dla WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [Przegląd używania automatycznego układu](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)

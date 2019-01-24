@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 395dc85ad638e8a790962a4aa38019612c360ce1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 632f19e0ead57d5508265fece578bb22f18ba54a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722728"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll — Funkcja
-Wyszukuje i ładuje Biblioteka DLL komunikatów. Zwraca wartość 0, jeśli nie można znajduje się lub załadowana biblioteka DLL komunikatów. Biblioteka DLL komunikatów, należy w podkatalogu, którego nazwa jest identyfikator języka lub w bieżącym katalogu.  
+Umożliwia znalezienie i ładuje Biblioteka DLL komunikatu. Zwraca wartość 0, jeśli biblioteka DLL komunikatu nie można się lub załadowane. Biblioteka DLL komunikatu powinna być w podkatalogu, której nazwa to identyfikator języka lub w bieżącym katalogu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,5 +38,5 @@ HINSTANCE WINAPI GetALinkMessageDll();
   
  **Biblioteka**: alink.dll  
   
-## <a name="see-also"></a>Zobacz też  
- [Al.exe (konsolidator zestawów)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Zobacz także
+- [Al.exe (konsolidator zestawów)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

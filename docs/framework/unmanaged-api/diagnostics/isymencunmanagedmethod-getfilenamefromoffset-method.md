@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db3e9cfa73672920ff70d9128541a8f513fca00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0582714c157de69293eb1e8dfa40e0cd2f44cba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621201"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset — Metoda
-Pobiera nazwę pliku dla wiersz skojarzony z przesunięciem.  
+Pobiera nazwę pliku dla linii skojarzonych z przesunięcia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +40,22 @@ HRESULT GetFileNameFromOffset(
   
 #### <a name="parameters"></a>Parametry  
  `dwOffset`  
- [in] A `ULONG32` zawiera przesunięcie.  
+ [in] Element `ULONG32` zawiera przesunięcie.  
   
  `cchName`  
- [in] A `ULONG32` wskazuje, że rozmiar `szName` buforu.  
+ [in] A `ULONG32` oznacza rozmiar `szName` buforu.  
   
  `pcchName`  
- [out] Wskaźnik do `ULONG32` rozmiaru, który odbiera w znaki buforu, muszą zawierać nazw plików.  
+ [out] Wskaźnik do `ULONG32` rozmiar, który odbiera w postaci, buforu, muszą zawierać nazwy pliku.  
   
  `szName`  
- [out] Buforu, który zawiera nazwy pliku.  
+ [out] Bufor, który zawiera nazwy pliku.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymENCUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymENCUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

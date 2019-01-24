@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: b4b89047cb1b85c4386f1bd9d2a16a06ec112b73
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c0f31f753a45bf4c13280febb164324535b0fdeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715585"
 ---
 # <a name="timing-behaviors-overview"></a>Przegląd Zachowania chronometrażu
 W tym temacie opisano zachowania chronometrażu animacji i innych <xref:System.Windows.Media.Animation.Timeline> obiektów.  
@@ -118,13 +118,13 @@ W tym temacie opisano zachowania chronometrażu animacji i innych <xref:System.W
   
 -   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> — Umożliwia określenie tego kursu, względem jego elementu nadrzędnego, w którym czasu w miarę dla <xref:System.Windows.Media.Animation.Timeline>. Wartości jest większa niż jeden przyspieszenie <xref:System.Windows.Media.Animation.Timeline> i jej podrzędne <xref:System.Windows.Media.Animation.Timeline> obiektów; wartości z zakresu od zera do jednego spowolnić jej. Wartość 1 oznacza, że <xref:System.Windows.Media.Animation.Timeline> realizowany przy użyciu stawki stosowanej jako klasy nadrzędnej. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Ustawienie na osi czasu w kontenerze ma wpływ na wszystkie jego podrzędny <xref:System.Windows.Media.Animation.Timeline> także obiekty.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> — Określa wartość procentową <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego przyspieszenia. Aby uzyskać przykład, zobacz [porady: przyspieszanie lub zwalnianie animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> — Określa wartość procentową <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego przyspieszenia. Aby uzyskać przykład, zobacz [jak: Przyspieszanie lub zwalnianie animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Określa wartość procentową <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego spowolnienie. Aby uzyskać przykład, zobacz [porady: przyspieszanie lub zwalnianie animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Określa wartość procentową <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego spowolnienie. Aby uzyskać przykład, zobacz [jak: Przyspieszanie lub zwalnianie animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Animacja i system chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Zdarzenia chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
- [Przykład zachowania chronometrażu animacji](https://go.microsoft.com/fwlink/?LinkID=159970)
+## <a name="see-also"></a>Zobacz także
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Animacja i system chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Zdarzenia chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Przykład zachowania chronometrażu animacji](https://go.microsoft.com/fwlink/?LinkID=159970)

@@ -1,19 +1,19 @@
 ---
-title: 'Wskazówki: Hosting zawartości WPF w Win32'
+title: 'Przewodnik: Hosting zawartości WPF w Win32'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 692105d464c005109cbf1ff704045efa7d1e9173
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c56ef33d1a44b263466a293b06aa988885b2008d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725600"
 ---
-# <a name="walkthrough-hosting-wpf-content-in-win32"></a>Wskazówki: Hosting zawartości WPF w Win32
+# <a name="walkthrough-hosting-wpf-content-in-win32"></a>Przewodnik: Hosting zawartości WPF w Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu, może być bardziej efektywne dodać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcje do aplikacji, zamiast ponownego zapisywania adresów oryginalnego kodu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia prosty mechanizm do hostowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna.  
   
  W tym samouczku opisano sposób pisania aplikacji przykładowej, [Hosting zawartości WPF w przykładzie oknie Win32](https://go.microsoft.com/fwlink/?LinkID=160004), które hosty [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna. Możesz rozszerzyć ten przykład do obsługi dowolnej [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna. Ponieważ spowodowałoby to łączenie kodu zarządzanego i niezarządzanego, aplikacja została napisana [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)].  
@@ -180,7 +180,7 @@ ms.locfileid: "48842804"
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>Układ
- [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Elementów w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości, składać się z pięciu <xref:System.Windows.Controls.TextBox> kontroluje, za pomocą skojarzoną <xref:System.Windows.Controls.Label> kontrolki: nazwa, adres, Miasto, stanu i Zip. Istnieją również dwa <xref:System.Windows.Controls.Button> kontrolek **OK** i **Anuluj**
+ [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Elementów w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości, składać się z pięciu <xref:System.Windows.Controls.TextBox> kontroluje, za pomocą skojarzoną <xref:System.Windows.Controls.Label> kontrolki: Nazwa, adres, Miasto, stanu i Zip. Istnieją również dwa <xref:System.Windows.Controls.Button> kontrolek **OK** i **Anuluj**
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Zawartości jest zaimplementowana w `WPFPage` klasy. Układ jest obsługiwane za pomocą <xref:System.Windows.Controls.Grid> elementu układu. Klasa dziedziczy <xref:System.Windows.Controls.Grid>, co skutecznie czyni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] element główny zawartości.
 
@@ -220,15 +220,15 @@ ms.locfileid: "48842804"
 ### <a name="setting-the-wpf-properties"></a>Ustawianie właściwości WPF
  [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Hosta pozwala użytkownikowi na zmianę kilka [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości właściwości. Z [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] stronie jest po prostu kwestią zmiany właściwości. Implementacja w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klasy zawartości jest nieco bardziej skomplikowane, ponieważ nie ma jednej właściwości globalnego kontrolujące czcionki dla wszystkich kontrolek. Zamiast tego właściwość odpowiednie dla każdego formantu jest zmieniany w metodach dostępu set właściwości. Poniższy przykład przedstawia kod dla `DefaultFontFamily` właściwości. Ustawianie właściwości wywołuje metody prywatnej to z kolei zestawy <xref:System.Windows.Controls.Control.FontFamily%2A> właściwości różne formanty.
 
- Z WPFPage.h:
+ From WPFPage.h:
 
  [!code-cpp[Win32HostingWPFPage#WPFPageFontFamilyProperty](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpagefontfamilyproperty)]
 
- Z WPFPage.cpp:
+ From WPFPage.cpp:
 
  [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Interop.HwndSource>
 - [WPF i Win32 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-ms.openlocfilehash: f061497083dc23fd07f61108938a4129c0af5f3a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4c1be34cf76cfb12ea1e3b3246e9e0bc26199c24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687963"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
 Włącza sprawdzanie operacji liczby całkowitej lub wyłącz błąd przepełnienia.  
@@ -42,6 +42,6 @@ Włącza sprawdzanie operacji liczby całkowitej lub wyłącz błąd przepełnie
 vbc -removeintchecks+ test.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Zobacz także
+- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

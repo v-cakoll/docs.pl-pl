@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e9b9bc8e364342a601c0738d5a64c5eac3cb7e7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a4273b36ce3e761348a091df3acb41212e1df05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722319"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs — Metoda
-Wylicza tokenów elementu TypeSpec zdefiniowany w bieżącym zakresie metadanych.  
+Wylicza TypeSpec tokeny zdefiniowane w bieżącym zakresie metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,10 +40,10 @@ HRESULT EnumTypeSpecs (
   
 #### <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, out] Wskaźnik do modułu wyliczającego. Ta wartość musi być równa NULL, pierwsze wywołanie tej metody.  
+ [out w] Wskaźnik do modułu wyliczającego. Ta wartość musi być wartością NULL dla pierwszego wywołania tej metody.  
   
  `rTypeSpecs`  
- [out] Tablica używany do przechowywania tokenów elementu TypeSpec.  
+ [out] Tablica do przechowywania tokenów elementu TypeSpec.  
   
  `cMax`  
  [in] Maksymalny rozmiar `rTypeSpecs` tablicy.  
@@ -55,21 +55,21 @@ HRESULT EnumTypeSpecs (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs` zwrócona pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim przypadku `pcTypeSpecs` wynosi zero.|  
+|`S_OK`|`EnumTypeSpecs` pomyślnie zwrócił.|  
+|`S_FALSE`|Nie ma żadnych tokeny do wyliczenia. W takim przypadku `pcTypeSpecs` wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element TypeSpec tokenów są tworzone przez [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) metody.  
+ Tokeny elementu TypeSpec są tworzone przez [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2efa46abf5a1fcedee4a4055331f7a59963be794
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803333"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709159"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Scenariusze aplikacji (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje udostępnianie i wykorzystywanie danych jako podstawowy zestaw scenariuszy [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. W tym temacie punktów do tematów, które są istotne dla tych scenariuszy.  
@@ -41,12 +41,12 @@ ms.locfileid: "43803333"
   
 -   [Operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Porady: powiązywanie danych usługi Data do formantów (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Instrukcje: Powiązania usługi danych z kontrolkami (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  Używanie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienckiej opartych na technologii AJAX.  
  -   [Używanie usługi danych w aplikacji klienta](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
--   [OData: Zgodnie z konwencjami identyfikator URI](https://go.microsoft.com/fwlink/?LinkId=185564)  
+-   [OData: Konwencje identyfikatora URI](https://go.microsoft.com/fwlink/?LinkId=185564)  
   
 -   [OData: JavaScript Object Notation (JSON) Format](https://go.microsoft.com/fwlink/?LinkId=185790)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "43803333"
  Powiąż [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych do kontrolek w aplikacji Windows Presentation Framework (WPF).  
  -   [Wiązanie danych do kontrolki](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
   
--   [Instrukcje: Wiązanie danych do elementów systemu Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
+-   [Instrukcje: Powiąż dane z programu Windows Presentation Foundation elementów](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
   
 -   [Instrukcje: Wiązanie danych przy użyciu źródła danych projektu](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
   
@@ -86,6 +86,6 @@ ms.locfileid: "43803333"
   
 -   [Operacje usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
- [Zasoby](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+## <a name="see-also"></a>Zobacz także
+- [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Zasoby](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

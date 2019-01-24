@@ -5,39 +5,39 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 0bacf874e09aca82b2f2685a146612cdef0673db
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705907"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Instrukcje: Tworzenie niestandardowych zasad autoryzacji
-Infrastruktura modelu tożsamości w systemie Windows Communication Foundation (WCF) obsługuje modelu autoryzacji na podstawie oświadczeń. Oświadczenia są wyodrębnione z tokenów, opcjonalnie przetworzone przez niestandardowych zasad autoryzacji i następnie są umieszczane w <xref:System.IdentityModel.Policy.AuthorizationContext> które następnie można zbadać podejmowanie decyzji dotyczących autoryzacji. Zasady niestandardowe mogą służyć do przekształcania oświadczeń z przychodzące tokeny oświadczeń oczekiwany przez aplikację. W ten sposób warstwy aplikacji mogą być wyłączone ze szczegóły na różne oświadczenia obsługiwane przez różne typy tokenów, obsługiwanych przez usługę WCF. W tym temacie przedstawiono implementowania niestandardowych zasad autoryzacji oraz sposobu dodawania tej zasady do kolekcji zasad używanych przez usługę.  
+Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) obsługuje model na podstawie oświadczeń autoryzacji. Wyodrębnione z tokenów, opcjonalnie przetwarzane przez niestandardowych zasad autoryzacji i następnie umieszczać w oświadczeń <xref:System.IdentityModel.Policy.AuthorizationContext> , następnie można zbadać do podejmowania decyzji dotyczących autoryzacji. Zasady niestandardowe może służyć do przekształcania oświadczeń przychodzących tokenów oświadczeń oczekiwane przez aplikację. W ten sposób warstwy aplikacji mogą być izolowane dane na różne oświadczenia, obsługiwane przez różne typy tokenów, które obsługuje usługi WCF. W tym temacie pokazano, jak zaimplementować niestandardowych zasad autoryzacji oraz sposób dodawania tej zasady do kolekcji zasad używanych przez usługę.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Aby zaimplementować niestandardowych zasad autoryzacji  
   
-1.  Zdefiniuj nową klasę, która jest pochodną <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
+1.  Zdefiniuj nową klasę, która pochodzi od klasy <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
   
-2.  Implementuje tylko do odczytu <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> właściwości przez generowanie unikatowy ciąg w konstruktorze klasy i zwracanie tego ciągu przy każdym uzyskaniu dostępu do właściwości.  
+2.  Implementowanie tylko do odczytu <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> właściwości przez wygenerowanie unikatowego ciągu w konstruktorze klasy i zwraca ciąg, w każdym przypadku, gdy uzyskano dostęp do właściwości.  
   
-3.  Implementuje tylko do odczytu <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> właściwości zwracając <xref:System.IdentityModel.Claims.ClaimSet> reprezentujący wystawcy zasad. Może to być `ClaimSet` reprezentujący aplikacji lub wbudowaną `ClaimSet` (na przykład `ClaimSet` zwrócony przez statycznych <xref:System.IdentityModel.Claims.ClaimSet.System%2A> właściwości.  
+3.  Implementowanie tylko do odczytu <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> właściwości, zwracając <xref:System.IdentityModel.Claims.ClaimSet> reprezentujący wystawcy zasad. Może to być `ClaimSet` reprezentujący aplikację lub wbudowanego `ClaimSet` (na przykład `ClaimSet` zwróconą przez statyczną <xref:System.IdentityModel.Claims.ClaimSet.System%2A> właściwości.  
   
-4.  Implementowanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> metody zgodnie z opisem w poniższej procedurze.  
+4.  Implementowanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> metoda zgodnie z opisem w poniższej procedurze.  
   
-### <a name="to-implement-the-evaluate-method"></a>Aby zaimplementować metodę oceny  
+### <a name="to-implement-the-evaluate-method"></a>Aby wdrożyć metodę Evaluate  
   
 1.  Dwa parametry są przekazywane do tej metody: wystąpienie <xref:System.IdentityModel.Policy.EvaluationContext> klasy i odwołanie do obiektu.  
   
-2.  Jeśli zasady autoryzacji niestandardowej dodaje <xref:System.IdentityModel.Claims.ClaimSet> wystąpień niezależnie bieżącą zawartość <xref:System.IdentityModel.Policy.EvaluationContext>, następnie dodać każdy `ClaimSet` przez wywołanie metody <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> — metoda i wróć `true` z <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> — metoda. Zwracanie `true` wskazuje infrastruktury autoryzacji, że zasady autoryzacji wykonał pracę i nie trzeba ponownie wywołany.  
+2.  Jeśli dodanie niestandardowych zasad autoryzacji <xref:System.IdentityModel.Claims.ClaimSet> wystąpienia, bez względu na bieżącą zawartość <xref:System.IdentityModel.Policy.EvaluationContext>, następnie dodać każdy `ClaimSet` przez wywołanie metody <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> metody i wróć `true` z <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metody. Zwracanie `true` wskazuje infrastruktury autoryzacji, że zasady autoryzacji ma wykonać swoją pracę i nie trzeba ponownie wywołana.  
   
-3.  Jeśli zasady autoryzacji niestandardowej dodaje zestawów oświadczeń tylko wtedy, gdy niektóre oświadczenia jest już obecny w `EvaluationContext`, poszukaj te oświadczenia, sprawdzając `ClaimSet` wystąpień zwrócona przez <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A> właściwości. Jeśli oświadczenia są obecne, Dodaj nowe oświadczenie ustawia wywołując <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> — metoda i, jeżeli nie ma więcej oświadczeń zestawy mają zostać dodane, zwróć `true`, wskazujące infrastruktury autoryzacji, że zasady autoryzacji ukończył pracę. Jeśli nie podano oświadczenia, zwróć `false`, wskazujący, że zasady autoryzacji powinna być wywoływana ponownie w przypadku innych zasad autoryzacji dodać więcej zestawów do oświadczeń `EvaluationContext`.  
+3.  Jeśli niestandardowych zasad autoryzacji dodaje zestawów oświadczeń tylko wtedy, gdy niektóre oświadczenia jest już obecny w `EvaluationContext`, poszukaj te oświadczenia, sprawdzając `ClaimSet` wystąpień zwrócona przez <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A> właściwości. Jeśli oświadczenia są obecne, Dodaj nowe oświadczenie ustawia przez wywołanie metody <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> metoda i jeśli nie ma więcej oświadczeń zestawy mają być dodawane zwracany `true`oznaczający infrastruktury autoryzacji, że zasady autoryzacji zakończy pracę. Jeśli oświadczenia nie są obecne, zwracają `false`, wskazujący, że zasady autoryzacji powinna zostać wywołana, jeśli inne zasady autoryzacji, Dodaj więcej w zestawie oświadczeń do `EvaluationContext`.  
   
-4.  W bardziej złożonych scenariuszach przetwarzania, drugi parametr funkcji <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> metoda jest używana do przechowywania stanu zmiennej, która przekazuje infrastruktury autoryzacji trakcie każde kolejne wywołanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> metodę dla określonej wersji ewaluacyjnej.  
+4.  W bardziej złożonych scenariuszy przetwarzania, drugi parametr <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> metoda jest używana do przechowywania zmiennej stanu, który infrastruktury autoryzacji będzie przekazywany w trakcie każde kolejne wywołanie <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> metodę dla konkretnej wersji ewaluacyjnej.  
   
-### <a name="to-specify-a-custom-authorization-policy-through-configuration"></a>Aby określić niestandardowych zasad autoryzacji przy użyciu konfiguracji  
+### <a name="to-specify-a-custom-authorization-policy-through-configuration"></a>Aby określić niestandardowych zasad autoryzacji za pomocą konfiguracji  
   
-1.  Określ typ zasad autoryzacji niestandardowej w `policyType` atrybutu w `add` element `authorizationPolicies` element `serviceAuthorization` elementu.  
+1.  Określ typ niestandardowych zasad autoryzacji w `policyType` atrybutu w `add` element `authorizationPolicies` element `serviceAuthorization` elementu.  
   
     ```xml  
     <configuration>  
@@ -45,8 +45,8 @@ Infrastruktura modelu tożsamości w systemie Windows Communication Foundation (
       <behaviors>  
         <serviceAuthorization serviceAuthorizationManagerType=  
                   "Samples.MyServiceAuthorizationManager" >  
-          <authorizationPolicies>         
-            <add policyType="Samples.MyAuthorizationPolicy"  
+          <authorizationPolicies>  
+            <add policyType="Samples.MyAuthorizationPolicy" />  
           </authorizationPolicies>  
         </serviceAuthorization>  
       </behaviors>  
@@ -54,29 +54,29 @@ Infrastruktura modelu tożsamości w systemie Windows Communication Foundation (
     </configuration>  
     ```  
   
-### <a name="to-specify-a-custom-authorization-policy-through-code"></a>Aby określić niestandardowych zasad autoryzacji przy użyciu kodu  
+### <a name="to-specify-a-custom-authorization-policy-through-code"></a>Aby określić niestandardowych zasad autoryzacji za pomocą kodu  
   
-1.  Utwórz <xref:System.Collections.Generic.List%601> z <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
+1.  Tworzenie <xref:System.Collections.Generic.List%601> z <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
   
 2.  Utwórz wystąpienie niestandardowych zasad autoryzacji.  
   
-3.  Wystąpienie zasady autoryzacji można dodać do listy.  
+3.  Dodaj wystąpienie zasad autoryzacji do listy.  
   
-4.  Powtórz kroki 2 i 3 dla każdej zasady autoryzacji niestandardowej.  
+4.  Powtórz kroki 2 i 3 dla każdego niestandardowych zasad autoryzacji.  
   
-5.  Przypisz tylko do odczytu wersji na liście, aby <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A> właściwości.  
+5.  Przypisz wersji tylko do odczytu na liście, aby <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A> właściwości.  
   
      [!code-csharp[c_CustomAuthPol#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#8)]
      [!code-vb[c_CustomAuthPol#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#8)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia kompletny <xref:System.IdentityModel.Policy.IAuthorizationPolicy> implementacji.  
+ Poniższy przykład pokazuje kompletną <xref:System.IdentityModel.Policy.IAuthorizationPolicy> implementacji.  
   
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Instrukcje: porównywanie oświadczeń](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Instrukcje: tworzenie menedżera autoryzacji niestandardowej dla usługi](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [Zasady autoryzacji](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- [Instrukcje: Porównywanie oświadczeń](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Instrukcje: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Zasady autoryzacji](../../../../docs/framework/wcf/samples/authorization-policy.md)

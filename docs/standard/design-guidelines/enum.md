@@ -10,12 +10,12 @@ helpviewer_keywords:
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: KrzysztofCwalina
-ms.openlocfilehash: 429f2e3821ff12ff4fc51b73c102ee3799d0228d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c0645ba1179c4c6fd961b871b3061cd51174f427
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148135"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675261"
 ---
 # <a name="enum-design"></a>Projekt wyliczeń
 Typy wyliczeniowe są specjalnym rodzajem typu wartości. Istnieją dwa rodzaje wyliczeń: prostych typów wyliczeniowych i flagi wyliczeń.  
@@ -98,5 +98,5 @@ Typy wyliczeniowe są specjalnym rodzajem typu wartości. Istnieją dwa rodzaje 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  
+- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)
 - [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

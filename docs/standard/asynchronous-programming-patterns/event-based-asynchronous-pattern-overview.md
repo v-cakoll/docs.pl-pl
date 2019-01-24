@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 492542743b27c709901267d5fd4e066a65158b85
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3f3c7e96f1c372bb05aba9bef81192aec47b3cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678294"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Asynchroniczny wzorzec oparty na zdarzeniach — przegląd
 Aplikacje, które jednocześnie wykonywać wiele zadań, ale ciągle reagować na interakcję z użytkownikiem, często wymagają projektu, który korzysta z wielu wątków. <xref:System.Threading> Przestrzeń nazw zawiera wszystkie narzędzia niezbędne do utworzenia aplikacji wielowątkowych o wysokiej wydajności, ale za pomocą tych narzędzi skutecznie wymaga bogate doświadczenie z wielowątkowych inżynierii oprogramowania. W przypadku stosunkowo proste aplikacji wielowątkowych <xref:System.ComponentModel.BackgroundWorker> składnik udostępnia proste rozwiązanie. Dla bardziej zaawansowanych aplikacji asynchronicznych należy rozważyć zaimplementowanie klasę, która jest zgodna wzorca asynchronicznego opartego na zdarzeniach.  
@@ -133,12 +133,12 @@ public class AsyncExample
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.ComponentModel.ProgressChangedEventArgs>  
-- <xref:System.ComponentModel.BackgroundWorker>  
-- <xref:System.ComponentModel.AsyncCompletedEventArgs>  
-- [Jak: Używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
-- [Jak: Uruchamianie operacji w tle](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [Jak: Implementowanie formularza korzystającego z operacji w tle](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
-- [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
-- [Implementacja wzorca asynchronicznego opartego na zdarzeniach — najlepsze rozwiązania](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+- <xref:System.ComponentModel.ProgressChangedEventArgs>
+- <xref:System.ComponentModel.BackgroundWorker>
+- <xref:System.ComponentModel.AsyncCompletedEventArgs>
+- [Instrukcje: Używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [Instrukcje: Uruchamianie operacji w tle](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Instrukcje: Implementowanie formularza korzystającego z operacji w tle](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [Implementacja wzorca asynchronicznego opartego na zdarzeniach — najlepsze rozwiązania](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Decydowanie o czasie implementacji wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

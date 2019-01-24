@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d4e07fb3d0988838fde662f4bb7d4719cc2d50f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b905d3b5de39057cba384ea7bca917bc3476623f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700653"
 ---
 # <a name="cortypeid-structure"></a>COR_TYPEID — Struktura
 Zawiera identyfikator typu.  
@@ -43,12 +43,12 @@ typedef struct COR_TYPEID{
 |`token2`|Drugiego tokena.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COR_TYPEID` Struktury jest zwracany przez liczbę metod debugowania, które zawierają informacje o obiektach być zbierane z pamięci. Go można następnie przekazać jako argument do innych metod debugowania, które znajdują się dodatkowe informacje o tym elemencie. Na przykład, wyliczając [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) obiektu, możesz pobrać poszczególnych [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) obiektów, które reprezentują poszczególnych obiektów na stercie zarządzanej. Można następnie przekazać `COR_TYPEID` wartość z `COR_HEAPOBJECT.type` do [ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) metoda pobierania obiektu ICorDebugType, który zawiera typ informacji o obiekcie.  
+ `COR_TYPEID` Struktury jest zwracany przez szereg metod debugowania, które zawierają informacje dotyczące obiektów zebranych elementów bezużytecznych. Go może być następnie przekazywany jako argument do innych metod debugowania, które zapewniają dodatkowe informacje na temat tego elementu. Na przykład, wyliczając [icordebugheapenum —](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) obiektu, możesz pobrać poszczególne [cor_heapobject —](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) obiektami, które reprezentują poszczególne obiekty na zarządzanej stercie. Możesz następnie przekazać `COR_TYPEID` wartość z `COR_HEAPOBJECT.type` pole [ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) metodę, aby pobrać obiekt ICorDebugType, który zawiera informacje o typie o obiekcie.  
   
- A `COR_TYPEID` obiektu ma być nieprzezroczyste. Nie można uzyskać dostępu do lub modyfikowany w zakresie poszczególnych pól. Jest jego wyłącznie do użytku jako identyfikatora, który został dostarczony jako `out` parametr w wywołaniu metody i który może z kolei można przekazać do innych metod, aby podać dodatkowe informacje.  
+ A `COR_TYPEID` obiekt ma być nieprzezroczyste. Nie należy uzyskać dostępu do ani modyfikować jego poszczególne pola. Jej jedyny użycie jest jako identyfikator, który jest dostarczana jako `out` parametr w wywołaniu metody i który może z kolei można przekazać do innych metod, aby podać dodatkowe informacje.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -56,6 +56,6 @@ typedef struct COR_TYPEID{
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

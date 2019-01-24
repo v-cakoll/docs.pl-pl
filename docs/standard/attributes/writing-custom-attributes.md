@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 70845b3e184e7e8e06002a308d574d4d084e25fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696220"
 ---
 # <a name="writing-custom-attributes"></a>Wpisywanie atrybutów niestandardowych
 Aby zaprojektować atrybutów niestandardowych, nie trzeba opanować wiele nowych pojęć. Jeśli znasz programowanie zorientowane obiektowo i wiedzieć, jak klasy należy projektować, masz już większość wiedzę potrzebną. Atrybuty niestandardowe są zasadniczo tradycyjnych klas, które pochodzą bezpośrednio lub pośrednio z <xref:System.Attribute?displayProperty=nameWithType>. Podobnie jak tradycyjnych klasy atrybutów niestandardowych, które zawierają metody, które przechowywać i pobierać dane.  
@@ -47,7 +47,7 @@ Aby zaprojektować atrybutów niestandardowych, nie trzeba opanować wiele nowyc
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute> Ma trzy elementy członkowskie, które są ważne w przypadku tworzenia niestandardowych atrybutów: [attributetargets —](#attributetargets-member), [dziedziczone](#inherited-property), i [AllowMultiple](#allowmultiple-property).  
+ <xref:System.AttributeUsageAttribute> Ma trzy elementy członkowskie, które są ważne w przypadku tworzenia niestandardowych atrybutów: [Attributetargets —](#attributetargets-member), [dziedziczone](#inherited-property), i [AllowMultiple](#allowmultiple-property).  
   
 ### <a name="attributetargets-member"></a>Attributetargets — element członkowski  
  W poprzednim przykładzie <xref:System.AttributeTargets.All?displayProperty=nameWithType> jest określony, wskazujący, że ten atrybut można stosować do wszystkich elementów programu. Alternatywnie, można określić <xref:System.AttributeTargets.Class?displayProperty=nameWithType>, wskazujący, że Twoje atrybut można stosować tylko do klasy, lub <xref:System.AttributeTargets.Method?displayProperty=nameWithType>, wskazujący, że Twoje atrybut można stosować tylko do metody. Wszystkie elementy program może być oznaczony jako opis przez atrybut niestandardowy w ten sposób.  
@@ -150,6 +150,6 @@ Aby zaprojektować atrybutów niestandardowych, nie trzeba opanować wiele nowyc
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Attribute?displayProperty=nameWithType>  
-- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
+- <xref:System.Attribute?displayProperty=nameWithType>
+- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>
 - [Atrybuty](../../../docs/standard/attributes/index.md)

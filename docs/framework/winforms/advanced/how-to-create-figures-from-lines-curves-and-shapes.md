@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie figur z linii, krzywych i kształtów'
+title: 'Instrukcje: Tworzenie figur z linii, krzywych i kształtów'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from shapes
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-ms.openlocfilehash: 222245fa4b3b593e0a38752a8cb991a12e469698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb0b13b8c7b27d6c85cc969f10c126df26a14acf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707833"
 ---
-# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Porady: tworzenie figur z linii, krzywych i kształtów
-Do utworzenia rysunku, należy utworzyć <xref:System.Drawing.Drawing2D.GraphicsPath>, a następnie wywołać metod, takich jak <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> i <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, aby dodać elementów podstawowych do ścieżki.  
+# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Instrukcje: Tworzenie figur z linii, krzywych i kształtów
+Do utworzenia rysunku, należy utworzyć <xref:System.Drawing.Drawing2D.GraphicsPath>, a następnie wywołać metod, takich jak <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> i <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, aby dodać w nim elementów podstawowych do ścieżki.  
   
 ## <a name="example"></a>Przykład  
- W poniższych przykładach kodu Utwórz ścieżek, które mają dane:  
+ Poniższe przykłady kodu Utwórz ścieżek, które mają dane:  
   
--   W pierwszym przykładzie jest tworzony ścieżki, która zawiera jedną wartość. Rysunek składa się z jednego łuk. Łuk ma kąt odchylenia –180 stopni, która jest zegara w układzie współrzędnych domyślne.  
+-   Pierwszy przykład tworzy ścieżką, która ma jedną wartość. Rysunek składa się z pojedynczego łuku. Łuk ma kąt odchylenia –180 stopni, czyli do ruchu wskazówek zegara w układzie współrzędnych domyślne.  
   
--   W drugim przykładzie jest tworzony ścieżki, która ma dwa rysunki. Pierwszą jest łuk znak wiersza. Drugi rysunek to linia następuje krzywej znak wiersza. Pierwszą pozostanie otwarte, a drugi rysunek jest zamknięty.  
+-   Drugi przykład tworzy ścieżki, która ma dwie cyfry. Pierwszy rysunek jest łuk znak wiersza. Drugi rysunek jest linię następuje krzywej znak wiersza. Pierwszy rysunek pozostanie otwarty, a drugi rysunek jest zamknięty.  
   
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#21)]  
@@ -32,9 +32,9 @@ Do utworzenia rysunku, należy utworzyć <xref:System.Drawing.Drawing2D.Graphics
  [!code-vb[System.Drawing.ConstructingDrawingPaths#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#22)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzednich przykładach są przeznaczone do użytku z formularzy systemu Windows, a potrzebują <xref:System.Windows.Forms.PaintEventArgs> `e`, który jest parametrem <xref:System.Windows.Forms.Control.Paint> obsługi zdarzeń.  
+ Poprzednie przykłady są skonstruowane do użycia za pomocą interfejsu Windows Forms i wymagają one <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Drawing.Drawing2D.GraphicsPath>  
- [Konstruowanie i rysowanie ścieżek](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
- [Rysowanie linii i kształtów za pomocą pióra](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Drawing.Drawing2D.GraphicsPath>
+- [Konstruowanie i rysowanie ścieżek](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+- [Rysowanie linii i kształtów za pomocą pióra](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

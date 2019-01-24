@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44f220f12f72ca8d0be6a9fc50b363c9bccb85fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c36e9e38acf1d183bcc5af5284e194c994c16749
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706712"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryRegisterValue — Metoda
-Pobiera wartość argumentu lub zmiennej lokalnej, z których word niski i wysoki word są przechowywane w określonym rejestrze i lokalizacji pamięci odpowiednio dla tego natywną.  
+Pobiera wartość argumentu lub zmiennej lokalnej, którego word niski i wysoki word są przechowywane w określonej rejestru i lokalizację w pamięci, odpowiednio dla tej ramki natywne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,22 +41,22 @@ HRESULT GetLocalMemoryRegisterValue (
   
 #### <a name="parameters"></a>Parametry  
  `highWordAddress`  
- [in] A `CORDB_ADDRESS` wartość, która określa lokalizację pamięci zawierające słowo wysokiej wartości.  
+ [in] A `CORDB_ADDRESS` wartość, która określa lokalizację w pamięci zawierających wyraz wysokiej wartości.  
   
  `lowWordRegister`  
- [in] Wartość określająca rejestru zawierającego słowo niskiej wartości wyliczenia "CorDebugRegister".  
+ [in] Wartość wyliczenia "Cordebugregister —", określający rejestru zawierające niskich słowo wartości.  
   
  `cbSigBlob`  
- [in] Liczba całkowita określająca rozmiar podpisu metadanych binarny, który odwołuje się do niego `pvSigBlob` parametru.  
+ [in] Liczba całkowita określająca rozmiar podpisu metadanych binarny, który odwołuje się do niej `pvSigBlob` parametru.  
   
  `pvSigBlob`  
- [in] A `PCCOR_SIGNATURE` wartość, która wskazuje podpisu metadanych binarnego typu wartości.  
+ [in] A `PCCOR_SIGNATURE` wartość, która wskazuje podpisu metadanych binarny o typie wartości.  
   
  `ppValue`  
- [out] Wskaźnik do adresu "ICorDebugValue" obiekt reprezentujący pobranej wartości przechowywane w określonej lokalizacji rejestru i pamięci.  
+ [out] Wskaźnik na adres "ICorDebugValue" obiekt reprezentujący pobrana wartość, która jest przechowywana w określonej lokalizacji w rejestrze i pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -64,5 +64,5 @@ HRESULT GetLocalMemoryRegisterValue (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

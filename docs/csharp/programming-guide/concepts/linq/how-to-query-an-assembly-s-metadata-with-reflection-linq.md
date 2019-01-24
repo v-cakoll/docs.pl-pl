@@ -1,15 +1,15 @@
 ---
-title: 'Porady: zapytanie zestawu&#39;s metadanych z odbiciem (LINQ) (C#)'
+title: 'Instrukcje: Zapytanie zestawu&#39;s metadanych z odbiciem (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: dece3cd6dbac2d10a3467892ef8aed80443cb2ef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c4e10001e4c4b84265147c43aa9a5557e68e2d54
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696064"
 ---
-# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a>Porady: zapytanie zestawu&#39;s metadanych z odbiciem (LINQ) (C#)
+# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a>Instrukcje: Zapytanie zestawu&#39;s metadanych z odbiciem (LINQ) (C#)
 Poniższy przykład pokazuje, jak LINQ może służyć za pomocą odbicia do pobierania metadanych określone informacje o metodach, spełniających określone kryteria wyszukiwania. W tym przypadku zapytanie znajdzie nazwy wszystkie metody w zestawie, który zwraca wyliczalny typów, takich jak tablice.  
   
 ## <a name="example"></a>Przykład  
@@ -54,6 +54,6 @@ namespace LINQReflection
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

@@ -1,29 +1,29 @@
 ---
-title: 'Porady: zapytanie o największy plik lub pliki w drzewie katalogu (LINQ) (Visual Basic)'
+title: 'Instrukcje: Zapytanie o największy plik lub pliki w drzewie katalogu (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: fd1ec163685af539e644d9fb4a0845fdcb3e1b5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc41fb29a765e8824526dcd78c9ecab377f06d22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724060"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Porady: zapytanie o największy plik lub pliki w drzewie katalogu (LINQ) (Visual Basic)
-Ten przykład przedstawia pięć zapytań dotyczących rozmiaru pliku w bajtach:  
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Instrukcje: Zapytanie o największy plik lub pliki w drzewie katalogu (LINQ) (Visual Basic)
+Ten przykład przedstawia pięć zapytań dotyczących rozmiar pliku w bajtach:  
   
 -   Jak pobrać rozmiar w bajtach największy plik.  
   
 -   Jak pobrać rozmiar w bajtach najmniejszy plik.  
   
--   Jak pobrać <xref:System.IO.FileInfo> największego lub najmniejszy plik obiektu z jednego lub więcej folderów w folderze określonym katalogu głównym.  
+-   Jak pobrać <xref:System.IO.FileInfo> pliku największą lub najmniejszą z jednego lub więcej folderów w folderze głównym określonego obiektu.  
   
--   Jak pobrać sekwencji, takie jak 10 plików największy.  
+-   Jak pobrać sekwencji, np. 10 największych plików.  
   
--   Jak kolejności plików do grup, w oparciu o ich rozmiar pliku w bajtach, pliki, które mają mniej niż określony rozmiar zostaną zignorowane.  
+-   Jak kolejność plików do grup, w oparciu o ich rozmiar pliku w bajtach, pliki, których wartość jest mniejsza niż określony rozmiar zostaną zignorowane.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zawiera pięć oddzielne zapytania, które pokazują, jak wykonać zapytanie i grupy plików, w zależności od ich rozmiar pliku w bajtach. Można łatwo zmodyfikować te przykłady, aby utworzyć zapytanie na niektóre inne właściwości <xref:System.IO.FileInfo> obiektu.  
+ Poniższy przykład zawiera pięć oddzielne zapytania, które pokazują, jak wykonać zapytanie i grupy plików, w zależności od ich rozmiar pliku w bajtach. Można łatwo modyfikować te przykłady, aby utworzyć kwerendy na kilka innych właściwości <xref:System.IO.FileInfo> obiektu.  
   
 ```vb  
 Module QueryBySize  
@@ -113,13 +113,13 @@ Module QueryBySize
 End Module  
 ```  
   
- Aby powrócić na zakończenie jednego lub więcej <xref:System.IO.FileInfo> obiekty zapytania najpierw musi sprawdzić każdą z nich w danych źródła i sortować je przez wartość właściwości ich długość. Następnie może zwrócić pojedynczego co najmniej sekwencji o największej długości. Użyj <xref:System.Linq.Enumerable.First%2A> do zwrócenia pierwszy element na liście. Użyj <xref:System.Linq.Enumerable.Take%2A> do zwrócenia pierwsze n liczby elementów. Określ malejącej kolejności sortowania umieścić najmniejszą elementów na początku listy.  
+ Aby powrócić, wykonaj co najmniej jeden <xref:System.IO.FileInfo> obiektów, najpierw kwerendy należy zbadać każdej z nich dane źródła, a następnie posortuj je według wartości ich właściwości Length. Następnie może zwrócić pojedynczego co najmniej sekwencji największy długości. Użyj <xref:System.Linq.Enumerable.First%2A> aby powrócić do pierwszego elementu na liście. Użyj <xref:System.Linq.Enumerable.Take%2A> zwracać n pierwszą liczbę elementów. Określ malejącej kolejności sortowania umieścić najmniejszy elementów na początku listy.  
   
- Zapytanie uwidacznia do oddzielnych metodach uzyskać rozmiar pliku w bajtach, aby można było korzystać z możliwości wyjątek, który zostanie wygenerowany, w przypadku, gdy plik został usunięty przez inny wątek w okresie od <xref:System.IO.FileInfo> obiekt został utworzony w wywołaniu `GetFiles`. Nawet za pomocą <xref:System.IO.FileInfo> obiekt już istnieje, może wystąpić wyjątek ponieważ <xref:System.IO.FileInfo> obiektu podejmie próbę odświeżenia jego <xref:System.IO.FileInfo.Length%2A> właściwości przy użyciu najnowszych rozmiar w bajtach przy pierwszym uzyskaniu dostępu do właściwości. Ustawiając tę operację w bloku try-catch poza zapytanie, firma Microsoft wykonaj reguły unikania operacji w zapytaniach, które mogą powodować efekty uboczne. Ogólnie rzecz biorąc szczególną uwagę należy podczas używania wyjątków, upewnij się, że aplikacja nie pozostanie w nieznanym stanie.  
+ Wywołuje zapytanie do oddzielnych metodach, aby uzyskać rozmiar pliku w bajtach w celu korzystania z możliwości wyjątek, który zostanie wygenerowany, w przypadku, w którym plik został usunięty w innym wątku w okresie od <xref:System.IO.FileInfo> obiekt został utworzony w wywołaniu `GetFiles`. Nawet za pośrednictwem <xref:System.IO.FileInfo> obiekt został już utworzony, może wystąpić wyjątek ponieważ <xref:System.IO.FileInfo> obiektu podejmie próbę odświeżenia jego <xref:System.IO.FileInfo.Length%2A> właściwości przy użyciu najbardziej bieżący rozmiar w bajtach po raz pierwszy uzyskano dostęp do właściwości. Przez umieszczenie tej operacji w bloku try / catch, poza zapytania, postępujemy zgodnie z reguły unikania operacji w zapytaniach, które mogą spowodować, że efekty uboczne. Ogólnie rzecz biorąc doskonałe należy uważać podczas korzystania z wyjątków, aby upewnić się, że aplikacja nie pozostanie w nieznanym stanie.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji System.Linq przestrzeni nazw.  
+ Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do obiektów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

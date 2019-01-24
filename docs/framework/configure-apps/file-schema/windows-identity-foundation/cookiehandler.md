@@ -3,19 +3,19 @@ title: '&lt;cookieHandler&gt;'
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 99bf6edb4e4f631eba292990c65c1f0c8553d8c0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 58c258bd20ce6b69a73b37a61a4d26f1efbb117a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717106"
 ---
 # <a name="ltcookiehandlergt"></a>&lt;cookieHandler&gt;
 Konfiguruje <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) używa na odczytywanie i zapisywanie plików cookie.  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
-\<cookieHandler >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<cookieHandler>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ Konfiguruje <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.Id
 |ścieżka|Określa wartość ścieżki na pliki cookie zapisywane. Wartość domyślna to "Elementu HttpRuntime.AppDomainAppVirtualPath".|  
 |tryb|Jedną z <xref:System.IdentityModel.Services.CookieHandlerMode> wartości, które określa rodzaj obsługi plików cookie używany przez tego Zabronić. Mogą być używane następujące wartości:<br /><br /> -"Default" — taka sama jak "Fragmentaryczne".<br />-"Fragmentaryczne" — używa wystąpienia <xref:System.IdentityModel.Services.ChunkedCookieHandler> klasy. Ten program obsługi plików cookie sprawdza, czy poszczególnych plików cookie nie przekracza maksymalny rozmiar zestawu. Jest to osiągane przez potencjalnie "segmentu" jednego logicznego pliku cookie do liczby plików cookie w locie.<br />-"Niestandardowy" — używa wystąpienia niestandardowej klasy pochodzącej od <xref:System.IdentityModel.Services.CookieHandler>. Odwołuje się do klasy pochodnej `<customCookieHandler>` elementu podrzędnego.<br /><br /> Wartość domyślna to "Default".|  
 |persistentSessionLifetime|Określa czas istnienia trwałych sesji. Jeśli zero, przejściowe sesje są zawsze używane. Wartość domyślna to "0:0:0", który określa przejściowy sesji. Wartość maksymalna to "365:0:0", który określa sesję 365 dni. Wartość powinna być określona zgodnie z następujących ograniczeń: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, gdzie wartość lewej określa dni, wartość środkowa (jeśli istnieje) określa godziny, a wartość po prawej stronie (jeśli istnieje) określa minut.|  
-|Wartość parametru RequireSsl|Określa, czy flaga "Secure" jest emitowane w żadnych plików cookie, zapisane. Jeśli ta wartość jest ustawiona, pliki cookie sesji logowania tylko będą dostępne za pośrednictwem protokołu HTTPS. Wartość domyślna to "true".|  
+|requireSsl|Określa, czy flaga "Secure" jest emitowane w żadnych plików cookie, zapisane. Jeśli ta wartość jest ustawiona, pliki cookie sesji logowania tylko będą dostępne za pośrednictwem protokołu HTTPS. Wartość domyślna to "true".|  
 |hideFromScript|Określa, czy flaga "HttpOnly" jest emitowane w żadnych plików cookie, zapisane. Niektóre przeglądarki sieci web honorować tej flagi, przechowując skryptu po stronie klienta uzyskanie dostępu do wartości pliku cookie. Wartość domyślna to "true".|  
 |domena|Wartość domeny żadnych plików cookie, zapisane. Wartość domyślna to "".|  
   
@@ -55,14 +55,14 @@ Konfiguruje <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.Id
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<chunkedCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|Konfiguruje <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Ten element może być tylko obecne Jeśli `mode` atrybutu `<cookieHandler>` element to "Default" lub "Fragmentaryczne".|  
-|[\<customCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|Ustawia typ procedury obsługi niestandardowego pliku cookie. Ten element musi być obecny Jeśli `mode` atrybutu `<cookieHandler>` element jest "Niestandardowy". Nie może być stosowany w przypadku wszystkich innych wartości z `mode` atrybutu. Niestandardowy typ musi pochodzić od <xref:System.IdentityModel.Services.CookieHandler> klasy.|  
+|[\<chunkedCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|Konfiguruje <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Ten element może być tylko obecne Jeśli `mode` atrybutu `<cookieHandler>` element to "Default" lub "Fragmentaryczne".|  
+|[\<customCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|Ustawia typ procedury obsługi niestandardowego pliku cookie. Ten element musi być obecny Jeśli `mode` atrybutu `<cookieHandler>` element jest "Niestandardowy". Nie może być stosowany w przypadku wszystkich innych wartości z `mode` atrybutu. Niestandardowy typ musi pochodzić od <xref:System.IdentityModel.Services.CookieHandler> klasy.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Zawiera ustawienia, które skonfigurować <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) i <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
+|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Zawiera ustawienia, które skonfigurować <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) i <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
   
 ## <a name="remarks"></a>Uwagi  
  <xref:System.IdentityModel.Services.CookieHandler> Odpowiada za odczytywanie i zapisywanie nieprzetworzone pliki cookie HTTP protokołu poziom. Można skonfigurować <xref:System.IdentityModel.Services.ChunkedCookieHandler> lub obsługi niestandardowych plików cookie jest pochodną <xref:System.IdentityModel.Services.CookieHandler> klasy.  
@@ -83,7 +83,7 @@ Konfiguruje <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.Id
 <cookieHandler requireSsl="false" />  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Services.CookieHandler>  
- <xref:System.IdentityModel.Services.ChunkedCookieHandler>  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Services.CookieHandler>
+- <xref:System.IdentityModel.Services.ChunkedCookieHandler>
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>

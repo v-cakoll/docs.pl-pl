@@ -1,19 +1,19 @@
 ---
-title: 'Porady: sortowanie elementów (Visual Basic)'
+title: 'Instrukcje: Sortowanie elementów (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: 868f3eb448393e5c06a37ab68431620638e9dc35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f049c4d0e8180781cb6581d4efda2297d4b7151d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746224"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a>Porady: sortowanie elementów (Visual Basic)
-Ten przykład przedstawia, jak napisać zapytanie sortujące wyniki.  
+# <a name="how-to-sort-elements-visual-basic"></a>Instrukcje: Sortowanie elementów (Visual Basic)
+W tym przykładzie pokazano, jak napisać zapytanie sortujące wyniki.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: dane liczbowe (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -40,9 +40,9 @@ Next
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeni nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: dane liczbowe w Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -74,6 +74,6 @@ End Module
 89.99  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Sortowanie danych](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
- [Podstawowe zapytania (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Sortowanie danych](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
+- [Podstawowe zapytania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

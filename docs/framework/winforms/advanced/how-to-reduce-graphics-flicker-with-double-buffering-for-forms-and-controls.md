@@ -1,5 +1,5 @@
 ---
-title: 'Porady: zmniejszanie migotania grafiki za pomocą podwójnego buforowania formularzy i kontrolek'
+title: 'Instrukcje: Zmniejszanie migotania grafiki za pomocą podwójnego buforowania formularzy i kontrolek'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,34 +8,34 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-ms.openlocfilehash: 6e11e364af5dc361a24cdd88d72432d6ba4d4058
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96bdaa8882b5f33c68d2a87dd28163c1acd606bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522857"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663586"
 ---
-# <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Porady: zmniejszanie migotania grafiki za pomocą podwójnego buforowania formularzy i kontrolek
-Podwójne buforowanie używa bufora pamięci rozwiązywania problemów migotania skojarzone z wielu operacji malowania. Po włączeniu podwójnego buforowania wszystkie operacje paint najpierw są renderowane w buforze pamięci zamiast powierzchni rysowania na ekranie. Po ukończeniu wszystkich działań programu paint, bufora pamięci jest kopiowana bezpośrednio na powierzchni rysowania skojarzonych z nim. Grafika tylko jedna operacja jest wykonywana na ekranie, migotanie obrazu skojarzonego z operacjami malowania złożonego wyeliminowania. W przypadku większości aplikacji domyślne podwójnego buforowania dostarczonych przez [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zapewni najlepsze wyniki. Standardowe formanty formularzy systemu Windows są dwa razy buforowana domyślnie. Można włączyć domyślny podwójnego buforowania w formularzach i utworzone formantów na dwa sposoby. Można albo zestaw <xref:System.Windows.Forms.Control.DoubleBuffered%2A> właściwości `true`, lub możesz wywołać <xref:System.Windows.Forms.Control.SetStyle%2A> metodę, aby ustawić <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flaga `true`. Obie metody włączy domyślne podwójnego buforowania formularza lub kontrolki i podaj renderowania pozbawione migotania grafiki. Wywoływanie <xref:System.Windows.Forms.Control.SetStyle%2A> metody jest zalecane tylko w przypadku kontrolek niestandardowych, dla których napisano kod renderowania.  
+# <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Instrukcje: Zmniejszanie migotania grafiki za pomocą podwójnego buforowania formularzy i kontrolek
+Podwójnego buforowania używa bufora pamięci, aby rozwiązywać problemy migotania skojarzonych wiele operacji malowania. Po włączeniu podwójnego buforowania wszystkich operacji malowania najpierw są renderowane w buforze pamięci zamiast powierzchni do rysowania na ekranie. Po ukończeniu wszystkich operacji malowania bufora pamięci jest kopiowana bezpośrednio na powierzchni do rysowania skojarzone z nią. Ponieważ grafiki tylko jedna operacja jest wykonywana na ekranie, obraz migotanie skojarzone z operacjami złożonego rysowania zostanie wyeliminowany. W przypadku większości aplikacji domyślnej podwójnego buforowania podał [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] udostępni najlepsze rezultaty. Standardowych kontrolek Windows Forms są double buforowana domyślnie. Można włączyć domyślny podwójnego buforowania w formularzach i autorstwa formantów na dwa sposoby. Możesz albo zestaw <xref:System.Windows.Forms.Control.DoubleBuffered%2A> właściwości `true`, można też wywołać <xref:System.Windows.Forms.Control.SetStyle%2A> metodę, aby ustawić <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flaga `true`. Obie metody zostanie włączony, domyślne podwójnego buforowania danych formularza lub formantu i podaj renderowania pozbawionej migotania grafiki. Wywoływanie <xref:System.Windows.Forms.Control.SetStyle%2A> metoda jest zalecana tylko w przypadku kontrolek niestandardowych, dla których ma napisany cały kod renderowania.  
   
- W bardziej zaawansowanych podwójnego buforowania, takich scenariuszach animacji lub pamięci Zaawansowane zarządzanie można zaimplementować własne podwójnego buforowania logiki. Aby uzyskać więcej informacji, zobacz [porady: ręczne zarządzanie buforowana grafika](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
+ Dla bardziej zaawansowanych podwójnego buforowania scenariuszach, na przykład animacji lub zarządzanie zaawansowanej pamięci można zaimplementować własną podwójnego buforowania logikę. Aby uzyskać więcej informacji, zobacz [jak: Ręczne zarządzanie buforowaną grafiką](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
   
-### <a name="to-reduce-flicker"></a>Aby zmniejszyć migotania  
+### <a name="to-reduce-flicker"></a>Aby Zmniejszanie migotania  
   
--   Ustaw <xref:System.Windows.Forms.Control.DoubleBuffered%2A> właściwości `true`.  
+-   Ustaw <xref:System.Windows.Forms.Control.DoubleBuffered%2A> właściwość `true`.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#31)]  
   
- \- lub -  
+ \- lub —  
   
--   Wywołanie <xref:System.Windows.Forms.Control.SetStyle%2A> metodę, aby ustawić <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flaga `true`.  
+-   Wywołaj <xref:System.Windows.Forms.Control.SetStyle%2A> metodę, aby ustawić <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flaga `true`.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#32)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#32)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.Control.DoubleBuffered%2A>  
- <xref:System.Windows.Forms.Control.SetStyle%2A>  
- [Podwójnie buforowana grafika](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- [Grafika i rysowanie w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.Control.DoubleBuffered%2A>
+- <xref:System.Windows.Forms.Control.SetStyle%2A>
+- [Podwójnie buforowana grafika](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)
+- [Grafika i rysowanie w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

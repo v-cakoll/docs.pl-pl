@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5b0d3bfb7e4db2fec39f37c9fb794731cdf5bbc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b2cf4d9940873c04ee6f0ab2d378a3d1253be4ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729202"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt; — Element
 Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. Użyj jednej `dependentAssembly` elementu dla każdego zestawu.  
@@ -24,7 +24,7 @@ Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. U�
  \<Konfiguracja >  
 \<runtime>  
 \<assemblybinding — >  
-\<dependentAssembly >  
+\<dependentAssembly>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -80,7 +80,7 @@ Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. U�
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Zobacz także
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Przekierowywanie wersji zestawu](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

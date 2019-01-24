@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7078b2eb98c15b7229132076da8af4691032bb08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a4cc17bdcaea5099d0d2b0195ae4fa28e3d4744
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441795"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744611"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions — Wyliczenie
-Zawiera wartości flagi, które kontrolują zachowanie podczas Import zestawu spoza zakresu.  
+Zawiera wartości flagi, które kontrolują zachowanie podczas Importowanie zestawu poza bieżącym zakresem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,22 +48,22 @@ typedef enum CorImportOptions {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|Wskazuje zachowanie domyślne, które mają pominąć usuniętych rekordów.|  
-|`MDImportOptionAll`|Wskazuje, że można wyliczyć wszystkich metadanych.|  
-|`MDImportOptionAllTypeDefs`|Wskazuje, czy wszystkie definicje typów, w tym usunięto te należy wyliczyć.|  
-|`MDImportOptionAllMethodDefs`|Wskazuje, że można wyliczyć wszystkich MethodDefs, w tym tych usuniętych.|  
-|`MDImportOptionAllFieldDefs`|Wskazuje, że można wyliczyć wszystkich FieldDefs, w tym tych usuniętych.|  
-|`MDImportOptionAllProperties`|Wskazuje, że można wyliczyć wszystkich PropertyDefs, w tym tych usuniętych.|  
-|`MDImportOptionAllEvents`|Wskazuje, że można wyliczyć wszystkich EventDefs, w tym tych usuniętych.|  
-|`MDImportOptionAllCustomAttributes`|Wskazuje, że można wyliczyć wszystkich atrybutów niestandardowych, w tym usunięto te.|  
-|`MDImportOptionAllExportedTypes`|Wskazuje, czy można wyliczyć wszystkich typów wyeksportowany, w tym tych usuniętych.|  
+|`MDImportOptionDefault`|Wskazuje zachowanie domyślne, czyli aby pominąć usuniętych rekordów.|  
+|`MDImportOptionAll`|Wskazuje, że można wyliczyć wszystkie metadane.|  
+|`MDImportOptionAllTypeDefs`|Wskazuje, że można wyliczyć wszystkie definicje typów, w tym usuniętych.|  
+|`MDImportOptionAllMethodDefs`|Wskazuje, że można wyliczyć wszystkie MethodDefs, w tym usuniętych.|  
+|`MDImportOptionAllFieldDefs`|Wskazuje, że można wyliczyć wszystkie FieldDefs, w tym usuniętych.|  
+|`MDImportOptionAllProperties`|Wskazuje, że można wyliczyć wszystkie PropertyDefs, w tym usuniętych.|  
+|`MDImportOptionAllEvents`|Wskazuje, że można wyliczyć wszystkie EventDefs, w tym usuniętych.|  
+|`MDImportOptionAllCustomAttributes`|Wskazuje, że można wyliczyć wszystkich atrybutów niestandardowych, w tym usuniętych.|  
+|`MDImportOptionAllExportedTypes`|Wskazuje, że można wyliczyć wszystkich typów eksportowanych, w tym usuniętych z nich.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

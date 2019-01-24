@@ -17,12 +17,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 026912a2dc8a09fb52e0427fc7bf2dbb1d55413a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8e469e5480bbec8a04dbf280d4698acd5b328d72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678489"
 ---
 # <a name="requesting-data"></a>Żądanie danych
 Tworzenie aplikacji działających w rozproszonym środowisku operacyjnym Internet współczesnych wymaga wydajne i łatwy w użyciu metody pobierania danych z wszystkich typów zasobów. Podłączanych protokołów umożliwiają tworzenie aplikacji korzystających z jednego interfejsu do pobierania danych z wielu protokołów internetowych.  
@@ -52,7 +52,7 @@ Dim sr As StreamReader
 sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Instrukcje: żądanie strony internetowej i pobieranie wyników jako strumienia](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
- [Instrukcje: pobieranie elementu WebResponse specyficznego dla protokołu, który odpowiada elementowi WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+## <a name="see-also"></a>Zobacz także
+- [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Instrukcje: Żądanie strony internetowej i pobieranie wyników jako Stream](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Instrukcje: Pobieranie elementu WebResponse specyficznego dla protokołu, który odpowiada elementowi WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

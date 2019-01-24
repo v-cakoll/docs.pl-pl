@@ -1,43 +1,43 @@
 ---
-title: Tworzenie DataTable w wyniku zapytania (LINQ do DataSet)
+title: Tworzenie elementu DataTable w wyniku zapytania (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: f4ea8749c6e1c853f87f17e735887bbdd4d72e2a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fd2b639f98dbb381cf4bea70cc790fd99ebf185f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708353"
 ---
-# <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Tworzenie DataTable w wyniku zapytania (LINQ do DataSet)
-Powiązanie danych jest typowym zastosowaniem <xref:System.Data.DataTable> obiektu. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda pobiera wyników zapytania i kopiuje dane na <xref:System.Data.DataTable>, której następnie można użyć dla powiązania danych. Po wykonaniu operacji danych, nowa <xref:System.Data.DataTable> jest scalone źródło <xref:System.Data.DataTable>.  
+# <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Tworzenie elementu DataTable w wyniku zapytania (LINQ to DataSet)
+Wiązanie danych jest często używana <xref:System.Data.DataTable> obiektu. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda pobiera wyniki zapytania i kopiuje dane do <xref:System.Data.DataTable>, która następnie umożliwia powiązanie danych. Po wykonaniu operacji danych, nowa <xref:System.Data.DataTable> jest scalany z powrotem do źródła skrzynki <xref:System.Data.DataTable>.  
   
- <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metody przystępuje do następującej procedury, aby utworzyć <xref:System.Data.DataTable> w wyniku zapytania:  
+ <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda przystępuje do następującej procedury, aby utworzyć <xref:System.Data.DataTable> w wyniku zapytania:  
   
-1.  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Klony metody <xref:System.Data.DataTable> z tabeli źródłowej ( <xref:System.Data.DataTable> obiekt, który implementuje <xref:System.Linq.IQueryable%601> interfejs). <xref:System.Collections.IEnumerable> Źródło ma zazwyczaj pochodzą ze [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] wyrażenie lub metoda zapytania.  
+1.  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Klony metoda <xref:System.Data.DataTable> z tabeli źródłowej ( <xref:System.Data.DataTable> obiekt, który implementuje <xref:System.Linq.IQueryable%601> interfejsu). <xref:System.Collections.IEnumerable> Źródło ma zazwyczaj pochodzenia [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] wyrażenie lub metody zapytania.  
   
-2.  Schemat sklonowany <xref:System.Data.DataTable> składa się z kolumny pierwszego wyliczyć <xref:System.Data.DataRow> obiektu w tabeli źródłowej i nazwa tabeli sklonowany jest nazwą tabeli źródłowej od słowa "query" dołączone do niego.  
+2.  Schemat sklonowany <xref:System.Data.DataTable> została stworzona od kolumny pierwszy wyliczane <xref:System.Data.DataRow> obiektu w tabeli źródłowej i nazwa tabeli sklonowany jest nazwą tabeli źródłowej z wyrazem "query" dołączone do niego.  
   
-3.  Dla każdego wiersza w tabeli źródłowej zawartości wiersza jest kopiowana do nowej <xref:System.Data.DataRow> obiektu, który jest następnie wstawione do tabeli sklonowany. <xref:System.Data.DataRow.RowState%2A> i <xref:System.Data.DataRow.RowError%2A> właściwości są zachowywane w operacji kopiowania. <xref:System.ArgumentException> Jest generowany, jeśli <xref:System.Data.DataRow> obiekty w źródle są z różnych tabel.  
+3.  Dla każdego wiersza w tabeli źródłowej zawartość wiersza jest kopiowany do nowego <xref:System.Data.DataRow> obiektu, który zostanie wstawiony na sklonowanym tabeli. <xref:System.Data.DataRow.RowState%2A> i <xref:System.Data.DataRow.RowError%2A> właściwości są zachowywane w operacji kopiowania. <xref:System.ArgumentException> Jest generowany, jeśli <xref:System.Data.DataRow> obiekty w źródle pochodzą z różnych tabel.  
   
-4.  Sklonowany <xref:System.Data.DataTable> jest zwracany po wszystkich <xref:System.Data.DataRow> obiektów w tabeli wejściowej kolejność zostały skopiowane. Jeśli sekwencja źródło nie zawiera żadnych <xref:System.Data.DataRow> obiektów, metoda zwraca pustą <xref:System.Data.DataTable>.  
+4.  Sklonowany <xref:System.Data.DataTable> jest zwracany po wszystkich <xref:System.Data.DataRow> obiektów w tabeli wejściowej odpytywalny zostały skopiowane. Jeśli sekwencja źródłowa nie zawiera żadnych <xref:System.Data.DataRow> obiektów, metoda zwraca pustą <xref:System.Data.DataTable>.  
   
- Należy pamiętać, że wywołania <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metoda spowoduje powiązana z tabeli źródłowej, aby wykonać zapytanie.  
+ Należy pamiętać, że wywołanie <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metoda spowoduje, że zapytanie powiązane z tabeli źródłowej do wykonania.  
   
- Gdy <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metody napotka odwołanie o wartości null lub typ dopuszczający wartość null wartości wiersza w tabeli źródłowej, zastępuje ona wartości z <xref:System.DBNull.Value>. Dzięki temu wartości null są obsługiwane poprawnie w zwróconym <xref:System.Data.DataTable>.  
+ Gdy <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metoda napotka odwołanie o wartości null lub typ dopuszczający wartość null wartości wiersza w tabeli źródłowej, zastępuje ona wartości z <xref:System.DBNull.Value>. W ten sposób wartości null są obsługiwane poprawnie w zwróconym elemencie <xref:System.Data.DataTable>.  
   
- Uwaga: <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metoda przyjmuje jako dane wejściowe kwerendę, która może zwracać wiersze z wieloma <xref:System.Data.DataTable> lub <xref:System.Data.DataSet> obiektów. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metody spowoduje skopiowanie ze źródła danych, ale nie właściwości <xref:System.Data.DataTable> lub <xref:System.Data.DataSet> obiektów zwrócona <xref:System.Data.DataTable>. Musisz jawnie ustawić właściwości w zwróconym <xref:System.Data.DataTable>, takich jak <xref:System.Data.DataTable.Locale%2A> i <xref:System.Data.DataTable.TableName%2A>.  
+ Uwaga: <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda przyjmuje jako dane wejściowe zapytanie, które mogą zwracać wiersze z wieloma <xref:System.Data.DataTable> lub <xref:System.Data.DataSet> obiektów. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda będzie kopiować ze źródła danych, ale nie właściwości <xref:System.Data.DataTable> lub <xref:System.Data.DataSet> obiekty do zwracanego <xref:System.Data.DataTable>. Musisz jawnie ustawić właściwości zwracanego <xref:System.Data.DataTable>, takich jak <xref:System.Data.DataTable.Locale%2A> i <xref:System.Data.DataTable.TableName%2A>.  
   
- W poniższym przykładzie zapytanie tabeli SalesOrderHeader zamówień po 8 sierpnia 2001 i używa <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metodę w celu utworzenia <xref:System.Data.DataTable> z tej kwerendy. <xref:System.Data.DataTable> Następnie jest powiązany z <xref:System.Windows.Forms.BindingSource>, który działa jako serwer proxy dla <xref:System.Windows.Forms.DataGridView>.  
+ W poniższym przykładzie zapytania tabeli SalesOrderHeader zamówień po 8 sierpnia 2001 i używa <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metodę w celu utworzenia <xref:System.Data.DataTable> z tej kwerendy. <xref:System.Data.DataTable> Następnie jest powiązany z <xref:System.Windows.Forms.BindingSource>, który działa jako serwer proxy dla <xref:System.Windows.Forms.DataGridView>.  
   
  [!code-csharp[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#copytodatatable1)]
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
 ## <a name="creating-a-custom-copytodatatablet-method"></a>Tworzenie niestandardowych CopyToDataTable\<T > — Metoda  
- Istniejące <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metody wykonywać operacje tylko na <xref:System.Collections.Generic.IEnumerable%601> źródła gdzie parametr generyczny `T` jest typu <xref:System.Data.DataRow>. Chociaż jest to przydatne, nie zezwala tabele, aby utworzyć sekwencję typy skalarne, z zapytań zwracających typy anonimowe lub z zapytań, które wykonują sprzężeń tabel. Przykład implementowania niestandardowych dwóch `CopyToDataTable` metod, które ładują tabelę z sekwencji typów skalarnych lub anonimowe, zobacz [jak: Implementowanie CopyToDataTable\<T > gdzie ogólny typ T nie jest element DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s.  
+ Istniejące <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metody działać tylko w odniesieniu <xref:System.Collections.Generic.IEnumerable%601> źródła gdzie parametr ogólny `T` typu <xref:System.Data.DataRow>. Mimo że jest to przydatne, nie zezwala tabel, które ma zostać utworzony z sekwencji typami skalarnymi, zapytań, które zwracają typów anonimowych lub zapytania, które wykonują sprzężeń tabel. Przykładowy sposób implementacji niestandardowego dwóch `CopyToDataTable` metod, które ładują tabelę z sekwencji typów skalarnych lub anonimowe, zobacz [jak: Implementowanie CopyToDataTable\<T > gdzie ogólny typ T nie jest elementem DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s.  
   
  Przykłady w tej sekcji należy użyć następujących typów niestandardowych:  
   
@@ -45,36 +45,36 @@ Powiązanie danych jest typowym zastosowaniem <xref:System.Data.DataTable> obiek
  [!code-vb[DP Custom CopyToDataTable Examples#ItemClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#itemclass)]  
   
 ### <a name="example"></a>Przykład  
- W tym przykładzie wykonuje sprzężenie za pośrednictwem `SalesOrderHeader` i `SalesOrderDetail` tabele, aby uzyskać zamówień online z sierpień i tworzy tabelę na podstawie zapytania.  
+ W tym przykładzie wykonuje sprzężenie `SalesOrderHeader` i `SalesOrderDetail` tabele można pobrać zamówień online z sierpień i tworzy tabelę na podstawie zapytania.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#join)]
  [!code-vb[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#join)]  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie zapytanie kolekcji elementów ceny większe niż 9,99 $ i tworzy tabelę na podstawie wyników zapytania.  
+ Poniższy przykład zapytania kolekcji elementów cena jest większa niż 9,99 USD i tworzy tabelę na podstawie wyników zapytania.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintotable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintotable)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład wysyła zapytanie do kolekcji elementów większe niż 9,99 ceny i projektów wyniki. Sekwencja zwracane typy anonimowe została załadowana do istniejącej tabeli.  
+ Poniższy przykład wykonuje kwerendę kolekcję elementów cena jest większa niż 9,99 i projekty wyniki. Zwracanej sekwencji anonimowych typów są ładowane do istniejącej tabeli.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintoexistingtable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintoexistingtable)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład wysyła zapytanie do kolekcji elementów większe niż 9,99 $ ceny i projektów wyniki. Sekwencja zwracane typy anonimowe została załadowana do istniejącej tabeli. Schemat tabeli jest automatycznie rozwinięta, ponieważ `Book` i `Movies` pochodne typy `Item` typu.  
+ Poniższy przykład wykonuje kwerendę kolekcji elementów cena jest większa niż 9,99 USD i projekty wyniki. Zwracanej sekwencji anonimowych typów są ładowane do istniejącej tabeli. Schemat tabeli automatycznie jest rozwinięta, ponieważ `Book` i `Movies` typy są uzyskiwane z `Item` typu.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsexpandschema)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsexpandschema)]  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie zapytanie kolekcji elementów ceny większe niż 9,99 $ i zwraca sekwencji <xref:System.Double>, który jest ładowany do nowej tabeli.  
+ W poniższym przykładzie zapytania kolekcji elementów cena jest większa niż 9,99 USD i zwraca sekwencję <xref:System.Double>, który jest ładowany do nowej tabeli.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loadscalarsequence)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [Pole ogólne i metody SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
- [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a>Zobacz także
+- [Przewodnik programowania](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [Pole ogólne i metody SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
+- [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

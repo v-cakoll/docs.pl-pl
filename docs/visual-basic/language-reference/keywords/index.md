@@ -2,23 +2,17 @@
 title: Słowa kluczowe (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- reserved keywords, Visual Basic
-- keywords [Visual Basic]
-- Members [Visual Basic], Visual Basic run-time
-- Visual Basic code, keywords
-- Visual Basic, language reference
-- reserved words, Visual Basic keywords
-- Visual Basic, keywords
+  - 'reserved keywords, Visual Basic'
+  - 'keywords [Visual Basic]'
+  - 'Members [Visual Basic], Visual Basic run-time'
+  - 'Visual Basic code, keywords'
+  - 'Visual Basic, language reference'
+  - 'reserved words, Visual Basic keywords'
+  - 'Visual Basic, keywords'
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: eaa8813613a0d17b6d1e32cdcdb8361e9b2e8d84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605319"
 ---
 # <a name="keywords-visual-basic"></a>Słowa kluczowe (Visual Basic)
-W poniższych tabelach przedstawiono wszystkie słów kluczowych języka Visual Basic.  
+W poniższej tabeli wymieniono wszystkie słowa kluczowe języka Visual Basic.  
   
 ## <a name="reserved-keywords"></a>Zastrzeżone słowa kluczowe  
  Poniższe słowa kluczowe są *zastrzeżone*, co oznacza, że nie można ich używać jako nazw elementów programistycznych, takich jak zmienne lub procedury. To ograniczenie można obejść, umieszczając nazwę w nawiasach kwadratowych (`[]`) Aby uzyskać więcej informacji, zobacz sekcję „Nazwy o zmienionym znaczeniu” w artykule [Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
@@ -28,14 +22,14 @@ W poniższych tabelach przedstawiono wszystkie słów kluczowych języka Visual 
   
 |||||  
 |---|---|---|---|  
-|[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)|[Alias](../../../visual-basic/language-reference/statements/alias-clause.md)|[I](../../../visual-basic/language-reference/operators/and-operator.md)|  
+|[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)|[Alias](../../../visual-basic/language-reference/statements/alias-clause.md)|[i](../../../visual-basic/language-reference/operators/and-operator.md)|  
 |[AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md)|[As](../../../visual-basic/language-reference/statements/as-clause.md)|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)|  
 |[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)|[Call](../../../visual-basic/language-reference/statements/call-statement.md)|[Case](../../../visual-basic/language-reference/statements/select-case-statement.md)|  
 |[CATCH](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CChar](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
-|[CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[char](../../../visual-basic/language-reference/data-types/char-data-type.md)|  
+|[CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md)|  
 |[CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Class Constraint](../../../visual-basic/language-reference/statements/type-list.md)|[Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)|[CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
 |[CObj](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Const](../../../visual-basic/language-reference/statements/const-statement.md)|[Continue](../../../visual-basic/language-reference/statements/continue-statement.md)|[CSByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
-|[CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CType —](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
+|[CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CType](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
 |[CUInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CULng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CUShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Data](../../../visual-basic/language-reference/data-types/date-data-type.md)|  
 |[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|[Declare](../../../visual-basic/language-reference/statements/declare-statement.md)|[Default](../../../visual-basic/language-reference/modifiers/default.md)|[Delegat](../../../visual-basic/language-reference/statements/delegate-statement.md)|  
 |[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|[DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md)|[Czy](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|  
@@ -50,7 +44,7 @@ W poniższych tabelach przedstawiono wszystkie słów kluczowych języka Visual 
 |[Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|[Interface](../../../visual-basic/language-reference/statements/interface-statement.md)|[Is](../../../visual-basic/language-reference/operators/is-operator.md)|  
 |[IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)|[Let](../../../visual-basic/language-reference/queries/let-clause.md)|[Lib](../../../visual-basic/language-reference/statements/declare-statement.md)|[Like](../../../visual-basic/language-reference/operators/like-operator.md)|  
 |[Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|[Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../../../visual-basic/language-reference/operators/mod-operator.md)|  
-|[Module](../../../visual-basic/language-reference/modifiers/module-keyword.md)|[Module, instrukcja](../../../visual-basic/language-reference/statements/module-statement.md)|[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|  
+|[Module](../../../visual-basic/language-reference/modifiers/module-keyword.md)|[Instrukcja Module](../../../visual-basic/language-reference/statements/module-statement.md)|[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|  
 |[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
 |[New, ograniczenie](../../../visual-basic/language-reference/statements/type-list.md)|[New, operator](../../../visual-basic/language-reference/operators/new-operator.md)|[Next](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Next (w Resume)](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[Not](../../../visual-basic/language-reference/operators/not-operator.md)|[Nothing](../../../visual-basic/language-reference/nothing.md)|[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|  
@@ -77,7 +71,7 @@ W poniższych tabelach przedstawiono wszystkie słów kluczowych języka Visual 
 |[>>, operator](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>=, operator](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`, `GoSub`, `Variant`, i `Wend` są przechowywane jako zastrzeżonych słów kluczowych, chociaż są już używane w języku Visual Basic. Znaczenie słowa kluczowego `Let` zostało zmienione. Słowo kluczowe `Let` jest teraz używane w zapytaniach LINQ. Aby uzyskać więcej informacji, zobacz [Klauzula Let](../../../visual-basic/language-reference/queries/let-clause.md).  
+>  `EndIf`, `GoSub`, `Variant`, i `Wend` są zachowywane jako zarezerwowane słowa kluczowe, chociaż są już używane w języku Visual Basic. Znaczenie słowa kluczowego `Let` zostało zmienione. Słowo kluczowe `Let` jest teraz używane w zapytaniach LINQ. Aby uzyskać więcej informacji, zobacz [Klauzula Let](../../../visual-basic/language-reference/queries/let-clause.md).  
   
 ## <a name="unreserved-keywords"></a>Niezastrzeżone słowa kluczowe  
  Poniższe słowa kluczowe nie są zastrzeżone, co oznacza, że można ich używać jako nazw elementów programistycznych. Jednak nie jest to zalecane, ponieważ może to pogorszyć czytelność kodu i powodować powstawanie drobnych błędów, które mogą być trudne do znalezienia.  
@@ -102,20 +96,20 @@ W poniższych tabelach przedstawiono wszystkie słów kluczowych języka Visual 
 |[Tablice — podsumowanie](../../../visual-basic/language-reference/keywords/arrays-summary.md)|Wyświetla listę elementów języka, które są używane do tworzenia, definiowania i używania tablic.|  
 |[Obiekt stanowiący część kolekcji — podsumowanie](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|Wyświetla listę elementów języka, które są używane dla kolekcji.|  
 |[Przepływ sterowania — podsumowanie](../../../visual-basic/language-reference/keywords/control-flow-summary.md)|Wyświetla listę instrukcji, które są używane dla pętli i sterowania przepływem procedury.|  
-|[Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)|Zawiera listę funkcji, które są używane do konwersji liczb, dat, godzin i ciągów.|  
-|[Typy danych — podsumowanie](../../../visual-basic/language-reference/keywords/data-types-summary.md)|Wyświetla listę typów danych. Zawiera także listę funkcji, które są używane do konwersji między typami danych i Sprawdź typy danych.|  
+|[Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)|Wyświetla listę funkcji, które są używane do konwersji liczb, dat, godzin i ciągów.|  
+|[Typy danych — podsumowanie](../../../visual-basic/language-reference/keywords/data-types-summary.md)|Wyświetla listę typów danych. Również Wyświetla listę funkcji, które są używane do konwersji między typami danych i sprawdzania typów danych.|  
 |[Daty i godziny — podsumowanie](../../../visual-basic/language-reference/keywords/dates-and-times-summary.md)|Wyświetla listę elementów języka, które są używane do daty i godziny.|  
-|[Deklaracje i stałe — podsumowanie](../../../visual-basic/language-reference/keywords/declarations-and-constants-summary.md)|Wyświetla listę instrukcji, które są używane do deklarowania zmiennych, stałe klas, moduły i inne elementy programowania. Również elementy języka list, które są używane do uzyskiwania informacji o obiekcie obsługi zdarzeń i implementować dziedziczenia.|  
-|[Katalogi i pliki — podsumowanie](../../../visual-basic/language-reference/keywords/directories-and-files-summary.md)|Zawiera listę funkcji, które są używane do kontrolowania systemu plików i przetwarzanie plików.|  
-|[Błędy — podsumowanie](../../../visual-basic/language-reference/keywords/errors-summary.md)|Wyświetla listę elementów języka, które są używane do catch i zwrócić wartości błędów czasu wykonywania.|  
-|[Podsumowanie finansowe](../../../visual-basic/language-reference/keywords/financial-summary.md)|Zawiera listę funkcji, które są używane do obliczeń finansowych.|  
-|[Wejście i wyjście — podsumowanie](../../../visual-basic/language-reference/keywords/input-and-output-summary.md)|Funkcje list, które są używane do odczytu i zapisu do plików, zarządzanie plikami i wydruku.|  
-|[Informacja i interakcja — podsumowanie](../../../visual-basic/language-reference/keywords/information-and-interaction-summary.md)|Zawiera listę funkcji, które są używane do uruchamiania innych programów, uzyskać argumenty wiersza polecenia manipulowania obiektami COM, pobrać informacji o kolorze i używanie okien dialogowych formantu.|  
-|[Podsumowanie matematyczne](../../../visual-basic/language-reference/keywords/math-summary.md)|Zawiera listę funkcji, które są używane do wykonywania obliczenia matematyczne trygonometryczne i innych.|  
-|[Moje odwołanie](../../../visual-basic/language-reference/keywords/my-reference.md)|Wyświetla listę obiektów zawartych w `My`, funkcja, która zapewnia dostęp do często używane metod, właściwości i zdarzeń z komputera, na którym aplikacja jest uruchomiona, bieżącej aplikacji, zasoby aplikacji, aplikacji ustawienia i tak dalej.|  
-|[Operatory— podsumowanie](../../../visual-basic/language-reference/keywords/operators-summary.md)|Wyświetla listę wyrażeń przypisania i porównania i innym podmiotom.|  
-|[Rejestr — podsumowanie](../../../visual-basic/language-reference/keywords/registry-summary.md)|Zawiera listę funkcji, które są używane do odczytu, Zapisz i usuwania ustawień programu.|  
-|[Manipulowanie ciągami — podsumowanie](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Zawiera listę funkcji, które są używane do manipulowania ciągami.|  
+|[Deklaracje i stałe — podsumowanie](../../../visual-basic/language-reference/keywords/declarations-and-constants-summary.md)|Wyświetla listę instrukcji, które są używane do deklarowania zmiennych, stałych, klas, modułów i innych elementów programistycznych. Również elementy języka list, które są używane do uzyskiwania informacji o obiekcie obsługują zdarzenia i implementują dziedziczenie.|  
+|[Katalogi i pliki — podsumowanie](../../../visual-basic/language-reference/keywords/directories-and-files-summary.md)|Wyświetla listę funkcji, które są używane do kontrolowania systemu plików i przetwarzania plików.|  
+|[Błędy — podsumowanie](../../../visual-basic/language-reference/keywords/errors-summary.md)|Wyświetla listę elementów języka, które są używane do wyłapywania i zwracania wartości błędu w czasie wykonywania.|  
+|[Podsumowanie finansowe](../../../visual-basic/language-reference/keywords/financial-summary.md)|Wyświetla listę funkcji, które są używane do wykonywania obliczeń finansowych.|  
+|[Wejście i wyjście — podsumowanie](../../../visual-basic/language-reference/keywords/input-and-output-summary.md)|Wyświetla listę funkcji, które są używane do odczytu i zapisu do plików, zarządzanie plikami i wydruku danych wyjściowych.|  
+|[Informacja i interakcja — podsumowanie](../../../visual-basic/language-reference/keywords/information-and-interaction-summary.md)|Wyświetla listę funkcji, które są używane do uruchamiania innych programów, uzyskiwania argumentów wiersza polecenia, manipulowania obiektami COM, Pobierz informacje o kolorze i używanie okien dialogowych kontroli.|  
+|[Podsumowanie matematyczne](../../../visual-basic/language-reference/keywords/math-summary.md)|Wyświetla listę funkcji, które są używane do wykonywania obliczeń trygonometrycznych i innych matematycznych obliczeń.|  
+|[Moje odwołanie](../../../visual-basic/language-reference/keywords/my-reference.md)|Wyświetla listę obiektów znajdujących się w `My`, funkcja, która zapewnia dostęp do często używane metody, właściwości i zdarzeń komputera, na którym aplikacja jest uruchomiona, aktualnie używanej aplikacji, zasobów aplikacji, aplikacji ustawienia i tak dalej.|  
+|[Operatory— podsumowanie](../../../visual-basic/language-reference/keywords/operators-summary.md)|Wyświetla listę przydziałów i wyrażeń porównania i inne operatory.|  
+|[Rejestr — podsumowanie](../../../visual-basic/language-reference/keywords/registry-summary.md)|Wyświetla listę funkcji, które są używane do odczytu, zapisywania i usuwania ustawień programu.|  
+|[Manipulowanie ciągami — podsumowanie](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Wyświetla listę funkcji, które są używane do manipulowania ciągami.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>Zobacz także
+- [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

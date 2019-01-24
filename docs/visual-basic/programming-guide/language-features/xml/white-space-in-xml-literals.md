@@ -5,12 +5,12 @@ helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 60ee90c69aeda38f95107a6043801a4994972079
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 56466856bc70f4bde428f7087efdf4e71a50021f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689155"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Odstęp w literałach XML (Visual Basic)
 Kompilator Visual Basic zawiera znaki istotnych białych literał XML podczas tworzenia [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektu. Znaki nieważny biały znak nie są włączone.  
@@ -46,5 +46,5 @@ Kompilator Visual Basic zawiera znaki istotnych białych literał XML podczas tw
 </outer>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

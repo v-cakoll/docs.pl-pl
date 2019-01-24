@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1126842a30f19831cc845bcfccc0e08f4bf5f6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 306eee3c0ce4689d1d6295aba1ef7584841dcc72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731052"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext — Metoda
 Zwraca kontekst dla bieżącej ramki [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) obiektu.  
@@ -44,28 +44,28 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
  [in] Przydzielony rozmiar buforu kontekstu.  
   
  `contextSize`  
- [out] Rzeczywisty rozmiar kontekstu. Ta wartość musi być większa niż rozmiar buforu kontekstu.  
+ [out] Rzeczywisty rozmiar kontekstu. Ta wartość musi być mniejsza niż lub równy rozmiarowi buforu kontekstu.  
   
  `contextBuf`  
- [out] Bufor kontekstu.  
+ [out] Buforu kontekstu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Pomyślnie zwrócono kontekst dla bieżącej ramki.|  
+|S_OK|Kontekst dla bieżącej ramki została pomyślnie zwrócona.|  
 |E_FAIL|Nie można zwrócić kontekstu.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|Bufor kontekstu jest za mały.|  
-|CORDBG_E_PAST_END_OF_STACK|Wskaźnik ramki już znajduje się na końcu stosu; w związku z tym są dostępne nie dodatkowe ramki.|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|Buforu kontekstu jest za mały.|  
+|CORDBG_E_PAST_END_OF_STACK|Wskaźnik ramki jest już na końcu stosu; w związku z tym są dostępne nie dodatkowe ramki.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- Ponieważ rozwinięcia przywraca tylko podzestaw rejestrów, takich jak rejestrów trwałej kontekstu nie może pasować stanu rejestru w momencie wywołania.  
+ Ponieważ odwijanie przywraca tylko podzbiór rejestrów, takich jak rejestrów trwałej kontekst może nie odpowiadają dokładnie stanu rejestru w momencie wywołania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -73,6 +73,6 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

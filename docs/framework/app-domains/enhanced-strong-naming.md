@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b33bb37758236c0dcce1fced2e7e7c6cf493ab34
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a0b63e27a3eceb80d42d43eea321b0dc757ad69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688872"
 ---
 # <a name="enhanced-strong-naming"></a>Poprawa silnego nazywania
 Podpis silnej nazwy to mechanizm tożsamości w programie .NET Framework do identyfikowania zestawów. Jest podpis cyfrowy klucz publiczny, który jest zazwyczaj używany do sprawdzenia integralności danych przekazywanych od inicjatora (osoby podpisującej) do adresata (weryfikatora). Ta sygnatura jest używana jako unikatowa tożsamość dla zestawu i zapewnia, że odwołania do zestawu są jednoznaczne. Zestaw jest podpisywany jako część procesu kompilacji, a następnie weryfikowany po jego załadowaniu.  
@@ -133,5 +133,5 @@ Podpis silnej nazwy to mechanizm tożsamości w programie .NET Framework do iden
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 - [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

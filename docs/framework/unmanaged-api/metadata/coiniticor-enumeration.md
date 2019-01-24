@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 56d90257389941189ff5036ebcb145fd0df17dc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 224684bd76ec3318b2c7f8197263d66973ce27aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716495"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR — Wyliczenie
-Określa stałe używane przez [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) po jego inicjuje środowisko uruchomieniowe języka wspólnego.  
+Określa stałe używane przez [coinitializecor —](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) po inicjuje środowisko uruchomieniowe języka wspólnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,13 +42,13 @@ typedef enum tagCOINITCOR
 |`COINITCOR`|Określa domyślny tryb inicjowania.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

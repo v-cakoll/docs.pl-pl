@@ -5,18 +5,18 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: MT
+ms.openlocfilehash: 3c478083a2bfde1742b114a8254bf07dff01f869
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664671"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 
 Podstawowym celem tego słownika jest wyjaśnić znaczenie wybranych terminów i skrótów, które pojawiają się często w dokumentacji platformy .NET, bez definicji.
 
-## <a name="aot"></a>DRZEWA OBIEKTÓW APLIKACJI
+## <a name="aot"></a>AOT
 
 Kompilator Ahead of time.
 
@@ -72,7 +72,7 @@ Zobacz [wprowadzenie do architektury .NET Native i CoreRT](https://github.com/do
 
 Możliwość tworzenia i wykonywanie aplikacji, która może być używany w wielu różnych systemach operacyjnych, takich jak Linux, Windows i iOS, bez konieczności ponownego pisania specjalnie dla każdej z nich. Umożliwia to ponowne użycie kodu i spójności między aplikacjami na różnych platformach.
 
-## <a name="ecosystem"></a>ekosystem
+## <a name="ecosystem"></a>ecosystem
 
 Wszystkie środowiska uruchomieniowego oprogramowania, narzędzi deweloperskich i zasoby społecznościowe, które są używane do tworzenia i uruchamiania aplikacji dla danej technologii.
 
@@ -117,7 +117,7 @@ Implementacja interfejsu .NET obejmuje następujące funkcje:
 
 - Co najmniej jeden środowisk uruchomieniowych. Przykłady: CLR, CoreCLR, CoreRT.
 - Biblioteka klas, który implementuje wersji programu .NET Standard i może zawierać dodatkowe interfejsy API. Przykłady: Podstawowej biblioteki klas .NET Framework, biblioteki klas podstawowych platformy .NET.
-- Opcjonalnie co najmniej jeden struktury aplikacji. Przykłady: ASP.NET, Windows Forms i WPF są dostępne w programie .NET Framework.
+- Opcjonalnie co najmniej jeden struktury aplikacji. Przykłady: ASP.NET, Windows Forms i WPF znajdują się w programie .NET Framework.
 - Opcjonalnie narzędzia programistyczne. Niektóre narzędzia programistyczne są współużytkowane przez wiele implementacji.
 
 Przykłady implementacji platformy .NET:
@@ -190,7 +190,7 @@ Platformy uniwersalnej systemu Windows była pierwszym struktury aplikacji obsł
 
 Zobacz [wprowadzenie do architektury .NET Native i CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
 
-## <a name="net-standard"></a>.NET standard
+## <a name="net-standard"></a>.NET Standard
 
 Formalną specyfikację interfejsów API platformy .NET, które są dostępne w każdej implementacji .NET.
 
@@ -272,8 +272,8 @@ Implementacja programu .NET, który służy do tworzenia nowoczesnych, obsługą
 
 ## <a name="see-also"></a>Zobacz także
 
-- [.NET — przewodnik](index.md)  
-- [.NET framework — przewodnik](../framework/index.md)  
-- [.NET Core](../core/index.md)  
-- [Omówienie programu ASP.NET](/aspnet/index#pivot=aspnet)  
-- [Omówienie platformy ASP.NET Core](/aspnet/index#pivot=core)  
+- [.NET — przewodnik](index.md)
+- [.NET framework — przewodnik](../framework/index.md)
+- [.NET Core](../core/index.md)
+- [Omówienie programu ASP.NET](/aspnet/index#pivot=aspnet)
+- [Omówienie platformy ASP.NET Core](/aspnet/index#pivot=core)

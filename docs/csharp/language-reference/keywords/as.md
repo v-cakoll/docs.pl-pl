@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: 7559c24151a3c9acc79c0554112c923a23a88564
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 33f7971a95b8573168da11d2bd2abc80fa74370e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736471"
 ---
 # <a name="as-c-reference"></a>as (odwołanie w C#)
 Możesz użyć `as` operator pod kątem niektórych typów konwersje między typami zgodne odwołanie lub [typów dopuszczających wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md). Poniższy kod przedstawia przykład.  
@@ -46,10 +46,10 @@ expression is type ? (type)expression : (type)null
 
 Aby uzyskać więcej informacji, zobacz [jako operator](~/_csharplang/spec/expressions.md#the-as-operator) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
  
-## <a name="see-also"></a>Zobacz też  
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [is](../../../csharp/language-reference/keywords/is.md)  
-- [?: operator](../../../csharp/language-reference/operators/conditional-operator.md)  
+## <a name="see-also"></a>Zobacz także
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
+- [is](../../../csharp/language-reference/keywords/is.md)
+- [?: operator](../../../csharp/language-reference/operators/conditional-operator.md)
 - [Słowa kluczowe operatora](../../../csharp/language-reference/keywords/operator-keywords.md)

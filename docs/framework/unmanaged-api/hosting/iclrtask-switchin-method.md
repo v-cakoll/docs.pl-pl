@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13e4119da7af4c54387c24ee576ff9577da56ca9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d518d5149e43718ae14dcdde96febe63fed7709
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744609"
 ---
 # <a name="iclrtaskswitchin-method"></a>ICLRTask::SwitchIn — Metoda
-Powiadamia środowisko uruchomieniowe języka wspólnego (CLR) który zadania który bieżącego [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) reprezentuje wystąpienie jest teraz w stanie obsługiwane.  
+Powiadamia środowisko uruchomieniowe języka wspólnego (CLR), zadanie, bieżący [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) reprezentuje wystąpienie znajduje się teraz w stanie wykonywalny.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,37 +37,37 @@ HRESULT SwitchIn (
   
 #### <a name="parameters"></a>Parametry  
  `threadHandle`  
- [in] Dojście do wątku fizycznym, w którym zadanie reprezentowany przez bieżący `ICLRTask` wystąpienia jest wykonywany.  
+ [in] Uchwyt do wątku fizycznym, na którym zadanie jest reprezentowane przez bieżącą `ICLRTask` wystąpienia jest wykonywany.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`SwitchIn` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`SwitchIn` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_INVALIDOPERATION|`SwitchIn` został wywołany bez wcześniejszej wywołanie [SwitchOut — metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md).|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_INVALIDOPERATION|`SwitchIn` Wywołano bez wcześniejszego wywołania funkcji [switchout — metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- `threadHandle` Parametr reprezentuje dojścia do wątku systemu operacyjnego, na którym zadanie reprezentowany przez bieżący `ICLRTask` wystąpienie zostało zaplanowane. W przypadku personifikacji dla tego wątku, należy wywołać [IHostSecurityManager::RevertToSelf](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-reverttoself-method.md) przed przełączeniem w zadaniu.  
+ `threadHandle` Parametru reprezentuje uchwyt do wątku systemu operacyjnego, na którym zadanie jest reprezentowane przez bieżącą `ICLRTask` wystąpienie zostało zaplanowane. W przypadku personifikacji w tym wątku, należy wywołać [ihostsecuritymanager::RevertToSelf —](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-reverttoself-method.md) przed przełączeniem w zadaniu.  
   
 > [!NOTE]
->  Wywołanie `SwitchIn` bez wcześniejszej wywołanie `SwitchOut` kończy się niepowodzeniem i wartość HRESULT HOST_E_INVALIDOPERATION.  
+>  Wywołanie `SwitchIn` bez wcześniejszego wywołania funkcji `SwitchOut` kończy się niepowodzeniem z wartością HRESULT w HOST_E_INVALIDOPERATION.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

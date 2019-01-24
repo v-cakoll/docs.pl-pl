@@ -6,50 +6,50 @@ helpviewer_keywords:
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: f97576218df651553ed1ac5f681d1ec0b4ab5ef3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6800294f2bd3a126f9606a7877455248ec76f758
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688175"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Tryby wyświetlania danych w formancie DataGridView formularzy systemu Windows
-<xref:System.Windows.Forms.DataGridView> Formant może wyświetlać dane w trzech różnych trybach: powiązane, niezwiązanej i wirtualnych. Wybierz najbardziej odpowiedniego tryb, w zależności od wymagań.  
+<xref:System.Windows.Forms.DataGridView> Kontrolki mogą wyświetlać dane w trzech różnych trybach: powiązanej niepowiązanych i wirtualnych. Wybierz najbardziej odpowiedni tryb, w zależności od wymagań.  
   
-## <a name="unbound"></a>Anulowano powiązania  
- Tryb niepowiązany nadaje się do wyświetlania względnie niewielkich ilości danych, które można programowo zarządzać. Nie dołączaj <xref:System.Windows.Forms.DataGridView> kontroli bezpośrednio ze źródłem danych w trybie powiązane. Zamiast tego możesz musi wypełnić kontrolki samodzielnie, zwykle za pomocą <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> metody.  
+## <a name="unbound"></a>Anulowano powiązanie  
+ Tryb niepowiązany nadaje się do wyświetlania stosunkowo małe ilości danych, które można zarządzać programowo. Nie dołączaj <xref:System.Windows.Forms.DataGridView> kontroli bezpośrednio ze źródłem danych, tak jak w trybie powiązanej. Zamiast tego możesz musi wypełnić kontrolki samodzielnie, zazwyczaj przy użyciu <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> metody.  
   
- Tryb niepowiązany może być szczególnie przydatne dla danych statycznych, tylko do odczytu, lub gdy chcesz zapewnić swoim własnym kodem, który współdziała z magazynem danych zewnętrznych. Użytkownikom na interakcję z zewnętrznego źródła danych, należy jednak zwykle użyjesz trybu powiązania.  
+ Tryb niepowiązany może być szczególnie przydatne w przypadku danych statycznych, tylko do odczytu lub gdy chcesz udostępnić własny kod, który wchodzi w interakcje przy użyciu magazynu danych zewnętrznych. Jeśli chcesz, aby użytkownicy mogli wchodzić w interakcje z zewnętrznego źródła danych, jednak zwykle użyjesz powiązanej trybu.  
   
- Na przykład, który używa tylko do odczytu niepowiązane <xref:System.Windows.Forms.DataGridView>, zobacz [jak: utworzyć niezwiązanego formantu DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+ Aby uzyskać przykład, który używa tylko do odczytu niepowiązanych <xref:System.Windows.Forms.DataGridView>, zobacz [jak: Tworzenie formantu DataGridView formularzy Windows niepowiązanych](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
-## <a name="bound"></a>Powiązany  
- Tryb powiązanej nadaje się do zarządzania danych przy użyciu automatycznego interakcji z magazynem danych. Możesz dołączyć <xref:System.Windows.Forms.DataGridView> kontroli bezpośrednio do źródła danych przez ustawienie <xref:System.Windows.Forms.DataGridView.DataSource%2A> właściwości. Kontrolka jest powiązana z danymi, wiersze danych są wypychana i pobierane bez konieczności jawnego zarządzania ze strony użytkownika. Gdy <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> właściwość jest `true`, każdej kolumny w źródle danych spowoduje przerwanie odpowiadającej mu kolumny, która ma zostać utworzony w formancie. Jeśli wolisz utworzyć własne kolumny tę właściwość można ustawić `false` i użyj <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> właściwości do powiązania każdej kolumny, gdy jest skonfigurowany. Jest to przydatne, jeśli chcesz użyć kolumny typu innego niż typów, generowanych przez domyślny. Aby uzyskać więcej informacji, zobacz [typy kolumn w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md).  
+## <a name="bound"></a>powiązane  
+ Tryb powiązanej jest odpowiednie do zarządzania danymi przy użyciu automatycznego interakcji z magazynem danych. Możesz dołączyć <xref:System.Windows.Forms.DataGridView> kontroli bezpośrednio ze swoim źródłem danych, ustawiając <xref:System.Windows.Forms.DataGridView.DataSource%2A> właściwości. Gdy kontrolka jest powiązana z danymi, wiersze danych są wypychane i ściągane bez konieczności jawnego zarządzania ze strony użytkownika. Gdy <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> właściwość `true`, każdej kolumny w źródle danych spowoduje, że odpowiednia kolumna ma być utworzony w kontrolce. Jeśli wolisz utworzyć własne kolumny, możesz ustawić tę właściwość, `false` i użyj <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> właściwości powiązania każdej kolumny, gdy jest skonfigurowany. Jest to przydatne, gdy użytkownik chce użyć kolumny typu innego niż typy, które są generowane domyślnie. Aby uzyskać więcej informacji, zobacz [typy kolumn w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md).  
   
- Na przykład, który używa powiązanej <xref:System.Windows.Forms.DataGridView> sterowania, zobacz [wskazówki: Sprawdzanie poprawności danych w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
+ Na przykład, który używa granicę <xref:System.Windows.Forms.DataGridView> sterowania, zobacz [instruktażu: Sprawdzanie poprawności danych w Windows formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
   
- Możesz także dodać niepowiązanych kolumn do <xref:System.Windows.Forms.DataGridView> formant w trybie powiązania. Jest to przydatne, jeśli chcesz wyświetlić kolumnę przyciski lub linki, które użytkownicy mogą wykonywać działania na określonych wierszy. Warto również wyświetlenie kolumn z wartościami obliczana na podstawie powiązane kolumny. Można go wypełnić wartości komórek w kolumnach obliczeniowych w procedurze obsługi dla <xref:System.Windows.Forms.DataGridView.CellFormatting> zdarzeń. Jeśli używasz <xref:System.Data.DataSet> lub <xref:System.Data.DataTable> jako źródło danych, jednak warto użyć <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType> właściwość, aby zamiast tego utworzyć kolumnę obliczeniową. W takim przypadku <xref:System.Windows.Forms.DataGridView> formant będzie traktować kolumny obliczeniowej, podobnie jak inne kolumny w źródle danych.  
+ Możesz również dodać niepowiązanych kolumn do <xref:System.Windows.Forms.DataGridView> w trybie powiązanej. Jest to przydatne, gdy mają być wyświetlane w kolumnie przycisków lub łączy, które umożliwiają użytkownikom do wykonywania akcji względem wybranych wierszy. Jest to również przydatne w celu wyświetlenia kolumn z wartościami obliczonym na podstawie powiązane kolumny. Możesz wypełnić wartości komórek kolumny obliczeniowe w obsłudze dla <xref:System.Windows.Forms.DataGridView.CellFormatting> zdarzeń. Jeśli używasz <xref:System.Data.DataSet> lub <xref:System.Data.DataTable> jako źródło danych, jednak warto użyć <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType> właściwości, aby zamiast tego utworzyć kolumnę obliczeniową. W tym przypadku <xref:System.Windows.Forms.DataGridView> kontroli traktują kolumnę obliczeniową, podobnie jak dowolnej innej kolumny w źródle danych.  
   
- Sortowanie według niepowiązanych kolumn w trybie powiązania nie jest obsługiwane. Jeśli tworzysz niepowiązanych kolumn w trybie powiązania, który zawiera wartości można edytować użytkownika, musi implementować trybu wirtualnego do obsługi tych wartości, gdy formant jest sortowana według powiązane kolumny.  
+ Sortowanie według niepowiązanych kolumn w powiązanej tryb nie jest obsługiwane. Jeśli tworzysz niepowiązanych kolumn w powiązanej trybie, który zawiera wartości użytkownika można edytować, należy zaimplementować trybu wirtualnego, aby zachować te wartości, gdy kontrolka jest posortowana według kolumny powiązanej.  
   
 ## <a name="virtual"></a>Wirtualny  
- Tryb wirtualny można zaimplementować własne operacje zarządzania danych. Jest to konieczne do zachowania wartości niepowiązanych kolumn w trybie powiązane, gdy formant jest sortowana według powiązane kolumny. Podstawowym zastosowaniem trybie wirtualnym, jest jednak aby zoptymalizować wydajność podczas interakcji z dużych ilości danych.  
+ Przy użyciu trybu wirtualnego można zaimplementować własną operacji zarządzania danymi. Jest to niezbędne w celu zachowania w trybie powiązanych wartości niepowiązanych kolumn, gdy kontrolka jest posortowana według kolumny powiązanej. Podstawowym zastosowaniem trybu wirtualnego jest jednak w celu zoptymalizowania wydajności podczas korzystania z dużych ilości danych.  
   
- Możesz dołączyć <xref:System.Windows.Forms.DataGridView> kontroli do pamięci podręcznej, którą zarządzasz i formantów kodu podczas wypychana i pobierane wiersze danych. Aby zachować zużycie pamięci jest mała, pamięci podręcznej powinien być podobny rozmiar liczba aktualnie wyświetlanych wierszy. Gdy użytkownik przewija nowych wierszy w widoku, kod żądania nowych danych z pamięci podręcznej i opcjonalnie opróżnia stare dane z pamięci.  
+ Możesz dołączyć <xref:System.Windows.Forms.DataGridView> formantu do pamięci podręcznej, którą można zarządzać i kontrolkom kodu, gdy wiersze danych są wypychane i pobierane. Aby zachować zużycie pamięci jest mała, pamięci podręcznej powinien być podobny rozmiar liczby wierszy, które aktualnie wyświetlany. Gdy użytkownik przewija widok nowych wierszy w widoku, Twój kod żąda nowych danych z pamięci podręcznej i opcjonalnie opróżnia stare dane z pamięci.  
   
- Są Implementowanie trybu wirtualnego, należy sprawdzić, kiedy nowy wiersz nie jest konieczna w modelu danych, a podczas wycofywania dodanie nowego wiersza. Dokładne stosowania tej funkcji zależy od implementacji modelu danych i semantyki transakcji modelu danych; Określa, czy zakres zatwierdzania jest na poziomie komórki lub wiersza.  
+ Są Implementowanie trybu wirtualnego, należy sprawdzić, kiedy nowy wiersz nie jest konieczna w modelu danych, a podczas wycofywania dodanie nowego wiersza. Dokładna implementację tej funkcji zależy od implementacji modelu danych i semantyka transakcja modelu danych; czy zakres zatwierdzenia jest na poziomie wiersza lub komórki.  
   
- Aby uzyskać więcej informacji o trybie wirtualnym, zobacz [tryb wirtualny w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md). Aby uzyskać przykład przedstawia sposób użycia zdarzeń w trybie wirtualnym, zobacz [wskazówki: Implementowanie trybu wirtualnego w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Aby uzyskać więcej informacji na temat trybu wirtualnego zobacz [trybu wirtualnego w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md). Na przykład, który pokazuje, jak używać zdarzenia trybu wirtualnego, zobacz [instruktażu: Implementowanie trybu wirtualnego w Windows formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>  
- [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [Typy kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
- [Przewodnik: tworzenie niepowiązanej kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
- [Instrukcje: wiązanie danych z kontrolką DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
- [Tryb wirtualny w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
- [Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
+- [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Typy kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+- [Przewodnik: Tworzenie Windows niezwiązanego formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [Instrukcje: Powiązanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Tryb wirtualny w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Przewodnik: Implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)

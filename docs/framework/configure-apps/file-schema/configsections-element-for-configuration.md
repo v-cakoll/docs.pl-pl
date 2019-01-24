@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 33406a67389cdf857fa5030e20d8a4dec7662741
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f46c84a1674a3e9352d0a4ccda23d44e650a70ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629491"
 ---
-# <a name="configsections-element-for-configuration"></a>\<configSections > elementu \<configuration >
+# <a name="configsections-element-for-configuration"></a>\<configSections >, element dla \<konfiguracji >
 
-Zawiera konfigurację deklaracji sekcji i przestrzeni nazw.
+Zawiera deklaracje sekcji i przestrzeni nazw konfiguracji.
 
 [**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<configSections >**
+&nbsp;&nbsp;**\<configSections>**
 
 ## <a name="attributes"></a>Atrybuty
 
@@ -37,18 +37,18 @@ Brak
 
 |     | Opis |
 | --- | ----------- |
-| [**\<sekcja >**](~/docs/framework/configure-apps/file-schema/section-element.md) | Zawiera deklaracji sekcji konfiguracji. |
-| [**\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definiuje obszar nazw dla sekcji konfiguracyjnych. |
-| [**\<Usuń >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Usuwa wstępnie zdefiniowanych sekcji lub grupy sekcji. |
-| [**\<Wyczyść >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowanego sekcje i grupy sekcji. |
+| [**\<sekcja >**](~/docs/framework/configure-apps/file-schema/section-element.md) | Zawiera deklarację sekcji konfiguracji. |
+| [**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definiuje obszar nazw dla sekcji konfiguracji. |
+| [**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Usuwa sekcję wstępnie zdefiniowanych lub grupy sekcji. |
+| [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowanego sekcje i grupy sekcji. |
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku tego elementu w pliku konfiguracji, musi być pierwszym elementem podrzędnym  **\<konfiguracji >** elementu.
+Jeśli ten element znajduje się w pliku konfiguracji, musi to być pierwszy element podrzędny elementu  **\<konfiguracji >** elementu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak planować sekcji konfiguracji i określać ustawienia dla tej sekcji:
+Poniższy przykład pokazuje jak zdefiniować sekcję konfiguracji i zdefiniować ustawienia dla tej sekcji:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ Poniższy przykład pokazuje, jak planować sekcji konfiguracji i określać ust
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Ten element może być użyty w pliku konfiguracyjnym aplikacji plik konfiguracji maszyny (*Machine.config*), a *Web.config* pliki, które nie są na poziomie katalogu aplikacji.
+Ten element może być użyty w pliku konfiguracyjnym aplikacji, plik konfiguracji komputera (*Machine.config*), a *Web.config* pliki, które nie są na poziomie katalogu aplikacji.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

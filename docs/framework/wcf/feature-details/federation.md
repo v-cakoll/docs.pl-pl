@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 205e0052f0ea257d965b0cd088cbe3586321022f
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: f05d4a9348c12a29dc3cd7b93334ab1134eeb1a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48914182"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709393"
 ---
 # <a name="federation"></a>Federacja
 Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń. Omówiono także obsługę usług Windows Communication Foundation (WCF) wdrażanie architektury zabezpieczeń. Dla przykładowej aplikacji, która pokazuje federacyjnego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -35,7 +35,7 @@ Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń. Omówiono także 
 ### <a name="example-scenario"></a>Przykładowy scenariusz  
  Na poniższej ilustracji przedstawiono przykład federacyjnego zabezpieczenia.  
   
- ![Federacyjna](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
+ ![Federation](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
   
  Ten scenariusz obejmuje dwie organizacje: A i B. organizacji B ma zasób sieci Web (usługa sieci Web), który niektórzy użytkownicy w organizacji, A znaleźć wartościowe.  
   
@@ -60,7 +60,7 @@ Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń. Omówiono także 
   
  W przypadku architektury zabezpieczeń użytkowników z organizacji A poinformować, że jeśli chcą uzyskać dostęp do usługi sieci Web w organizacji B, który muszą prezentować tokenu zabezpieczającego prawidłowy z usługi STS w organizacji B, która je uwierzytelnia i autoryzuje dostępu do określonej usługi.  
   
- Na skontaktowanie się z B usługi STS, użytkownicy będą otrzymywać kolejny poziom pośredni z zasad skojarzonych z usługi STS. Podmioty zabezpieczeń muszą prezentować tokenu z STS A (czyli obszaru zaufania klienta) przed B Usługa STS może wystawiać je tokenu zabezpieczającego. To jest następstwem relacji zaufania między dwiema organizacjami i oznacza organizacji B nie ma zarządzania tożsamością użytkowników z organizacji A. W praktyce STS B zwykle ma wartość null `issuerAddress` i `issuerMetadataAddress`. Aby uzyskać więcej informacji, zobacz [porady: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). W takim przypadku klient konsultacje dotyczące zasad lokalnych, aby zlokalizować usługi STS A. Ta konfiguracja jest nazywana *home obszaru Federacji* i lepsze skalowanie, ponieważ nie ma usługi STS B do obsługi informacji na temat usługi STS A.  
+ Na skontaktowanie się z B usługi STS, użytkownicy będą otrzymywać kolejny poziom pośredni z zasad skojarzonych z usługi STS. Podmioty zabezpieczeń muszą prezentować tokenu z STS A (czyli obszaru zaufania klienta) przed B Usługa STS może wystawiać je tokenu zabezpieczającego. To jest następstwem relacji zaufania między dwiema organizacjami i oznacza organizacji B nie ma zarządzania tożsamością użytkowników z organizacji A. W praktyce STS B zwykle ma wartość null `issuerAddress` i `issuerMetadataAddress`. Aby uzyskać więcej informacji, zobacz [jak: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). W takim przypadku klient konsultacje dotyczące zasad lokalnych, aby zlokalizować usługi STS A. Ta konfiguracja jest nazywana *home obszaru Federacji* i lepsze skalowanie, ponieważ nie ma usługi STS B do obsługi informacji na temat usługi STS A.  
   
  Następnie skontaktuj się z usługą STS w organizacji, A użytkownicy i uzyskania tokenu zabezpieczającego z uwzględnieniem poświadczenia uwierzytelniania, które są zwykle są używane do uzyskiwania dostępu do innych zasobów organizacji A. Eliminuje to również problem użytkowników muszą obsługiwać wiele zestawów poświadczeń lub w wielu lokacjach usługi przy użyciu tego samego zestawu poświadczeń.  
   
@@ -84,7 +84,7 @@ Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń. Omówiono także 
   
 -   Przedstawia token do usługi w celu uzyskania dostępu do usługi.  
   
-### <a name="phase-2-run-time-phase"></a>Faza 2: Run-Time fazy  
+### <a name="phase-2-run-time-phase"></a>Faza 2: Fazy czasu wykonywania  
  Podczas fazy czasu wykonywania klient tworzy obiekt klasy klienta WCF i nawiązuje połączenie za pomocą klienta WCF. Podstawowej struktury usług WCF obsługuje opisanych powyżej kroków we wzorcu z federacyjnego zabezpieczenia komunikacji i umożliwia klientowi bezproblemowe korzystanie z usługi.  
   
 ## <a name="sample-implementation-using-wcf"></a>Przykład implementacji przy użyciu usługi WCF  
@@ -95,7 +95,7 @@ Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń. Omówiono także 
 ### <a name="example-myservice"></a>Przykład Moja_usługa  
  Usługa `MyService` udostępnia pojedynczego punktu końcowego za pośrednictwem `MyServiceEndpoint`. Na poniższej ilustracji przedstawiono adres, powiązania i umowy związane z punktem końcowym.  
   
- ![Federacyjna](../../../../docs/framework/wcf/feature-details/media/myservice.gif "Moja_usługa")  
+ ![Federation](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
   
  Punkt końcowy usługi `MyServiceEndpoint` używa [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) i wymaga prawidłowego tokenu zabezpieczeń potwierdzenia Markup Language (SAML) z `accessAuthorized` oświadczenia wydane przez usługi STS B. Jest to deklaratywne określony w konfiguracji usługi.  
   
@@ -157,10 +157,10 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 [!code-csharp[C_Federation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#1)]
 [!code-vb[C_Federation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#1)]  
   
-#### <a name="sts-b"></a>USŁUGA STS B  
+#### <a name="sts-b"></a>STS B  
  Na poniższej ilustracji przedstawiono B. usługi STS Jak wspomniano wcześniej, Usługa tokenu zabezpieczającego (STS) jest również usługa sieci Web i może mieć jego skojarzone punkty końcowe, zasad i tak dalej.  
   
- ![Federacyjna](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
+ ![Federation](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
   
  STS B uwidacznia pojedynczego punktu końcowego wywołanego `STSEndpoint` służy do żądania tokenów zabezpieczających, które można. W szczególności STS B wystawia tokeny SAML za pomocą `accessAuthorized` oświadczenia, które mogą być przedstawiane na `MyService` lokacji usługi do uzyskiwania dostępu do usługi. Jednak Usługa STS B wymaga od użytkowników przedstawić prawidłowy token SAML wystawione przez usługę STS A, który zawiera `userAuthenticated` oświadczenia. Jest to deklaratywne określona w konfiguracji usługi STS.  
   
@@ -284,10 +284,10 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>Klient w organizacji, A  
  Na poniższej ilustracji przedstawiono klienta w organizacji A, wraz z etapy w tworzeniu `MyService` wywołania usługi. Funkcjonalności innych składników dostępne są również aby informacje były kompletne.  
   
- ![Federacyjna](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
+ ![Federation](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
 ## <a name="summary"></a>Podsumowanie  
  Federacyjnego zabezpieczenia zapewnia czyste podział odpowiedzialności i pomaga w tworzeniu architektur bezpiecznego, skalowalnego usług. Platforma do kompilowania i wdrażania aplikacji rozproszonych WCF zapewnia macierzystą obsługę dotyczące implementowania zabezpieczeń.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)

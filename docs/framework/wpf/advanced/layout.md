@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 869780f2b6a625923ce869bcaafbbd2319f6cb23
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738829"
 ---
 # <a name="layout"></a>Układ
 W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system układu. Zrozumienie, jak i kiedy układ obliczenia są wykonywane jest niezbędne do tworzenia interfejsów użytkownika w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -146,11 +146,11 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Jaka jest przyszłość  
- Zrozumienie, jak elementy są mierzone i uporządkowane jest pierwszym krokiem w układzie opis. Aby uzyskać więcej informacji o dostępnych <xref:System.Windows.Controls.Panel> elementów, zobacz [Przegląd panele](../../../../docs/framework/wpf/controls/panels-overview.md). Aby lepiej zrozumieć różne właściwości pozycjonowania, które mogą wpływać na układ, zobacz [wyrównanie, marginesy i dopełnienie Przegląd](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Na przykład niestandardowy <xref:System.Windows.Controls.Panel> elementu, zobacz [niestandardowe promieniowego przykładowe panelu](https://go.microsoft.com/fwlink/?LinkID=159982). Gdy wszystko jest gotowe do zebranie wszystkich aplikacji lekki, zobacz [Instruktaż: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Zrozumienie, jak elementy są mierzone i uporządkowane jest pierwszym krokiem w układzie opis. Aby uzyskać więcej informacji o dostępnych <xref:System.Windows.Controls.Panel> elementów, zobacz [Przegląd panele](../../../../docs/framework/wpf/controls/panels-overview.md). Aby lepiej zrozumieć różne właściwości pozycjonowania, które mogą wpływać na układ, zobacz [wyrównanie, marginesy i dopełnienie Przegląd](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Na przykład niestandardowy <xref:System.Windows.Controls.Panel> elementu, zobacz [niestandardowe promieniowego przykładowe panelu](https://go.microsoft.com/fwlink/?LinkID=159982). Gdy wszystko jest gotowe do zebranie wszystkich aplikacji lekki, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.UIElement>  
- [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Przegląd wyrównania, marginesów i wypełnień](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.UIElement>
+- [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Przegląd wyrównania, marginesów i wypełnień](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

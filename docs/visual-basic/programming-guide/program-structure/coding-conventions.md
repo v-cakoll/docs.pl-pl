@@ -6,45 +6,45 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: b686747b46529b53b0802a7deb38b5b4949f4d5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2b1676ae959c5426af3021bbd340980115c5da6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655364"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724885"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic — Konwencje kodowania
-Microsoft rozwija przykłady i dokumentację postępuj zgodnie z wytycznymi, w tym temacie. Po wykonaniu tej samej Konwencji kodowania mogą zyskać następujące korzyści:  
+Microsoft rozwija przykłady i dokumentację, która jest zgodna z wytycznymi w tym temacie. Wykonanie tych samych konwencji kodowania możesz osiągnąć następujące korzyści:  
   
--   Kod będzie mieć spójny wygląd, tak aby czytników lepiej można skupić się na zawartości, nie układu.  
+-   Twój kod będzie miał jednolity wygląd, tak aby czytelnicy mogli lepiej skupić się na treści, a nie na układzie.  
   
--   Czytniki poznać kod więcej szybko ponieważ mogą one ułatwić założenia doświadczenia w oparciu.  
+-   Czytniki rozumieją Twój kod lepiej szybko, ponieważ mogą robić więjsze założenia na podstawie poprzednich doświadczeń.  
   
--   Można skopiować, zmienianie i łatwiej Obsługa kodu.  
+-   Można skopiować, zmieniać i utrzymywać kod, aby łatwiej.  
   
--   Pomoc, upewnij się, że kod pokazuje "najlepsze rozwiązania" w języku Visual Basic.  
+-   Uzyskujesz pewność, że Twój kod wykazuje,, "Najważniejsze wskazówki" dla języka Visual Basic.  
   
 ## <a name="naming-conventions"></a>Konwencje nazewnictwa  
   
--   Informacje o wskazówki dotyczące nazewnictwa, zobacz [nazewnictwa wytyczne](../../../standard/design-guidelines/naming-guidelines.md) tematu.  
+-   Aby uzyskać informacje o zasadach nazywania, zobacz [wytyczne dotyczące nazewnictwa](../../../standard/design-guidelines/naming-guidelines.md) tematu.  
   
--   Nie używaj "Moje" lub "Moje" jako część nazwy zmiennej. Takie rozwiązanie tworzy pomylenia z `My` obiektów.  
+-   Nie należy używać "Mój" lub "Mój" jako część nazwy zmiennej. Praktyka ta tworzy omyłkowe `My` obiektów.  
   
--   Nie trzeba zmienić nazwy obiektów w automatycznie wygenerowany kod, aby je dopasować wytyczne.  
+-   Nie trzeba zmieniać nazwy obiektów w automatycznie wygenerowany kod, aby je dopasować do wytycznych.  
   
 ## <a name="layout-conventions"></a>Konwencje układu  
   
--   Wstaw jako spacje i użyj inteligentne tworzenia wcięć za pomocą czterech miejsca wcięcia.  
+-   Wstaw tabulatory jako spacje i Użyj inteligentnego wcięcia z czterokrotnym wcięciem.  
   
--   Użyj **automatycznego formatowania kodu (ponowne formatowanie) z** do ponownego formatowania kodu w edytorze kodu. Aby uzyskać więcej informacji, zobacz [opcje, Edytor tekstów, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
+-   Użyj **formatowania kodu automatyczne formatowanie kodu** Aby sformatować kod w edytorze kodu. Aby uzyskać więcej informacji, zobacz [opcje, Edytor tekstów, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
   
--   Użyj tylko jednej instrukcji w jednym wierszu. Nie używaj znaku separatora linii Visual Basic (:).  
+-   Użyj tylko jednej instrukcji na wiersz. Nie używaj znaku separatora wierszy programu Visual Basic (:).  
   
--   Unikaj używania znak kontynuacji wiersza jawne "_" na rzecz kontynuacji wiersza niejawne wszędzie tam, gdzie pozwala języka.  
+-   Należy unikać znaku kontynuacji wiersza jawne "_" na rzecz niejawnej kontynuacji wiersza wszędzie tam, gdzie pozwala to język.  
   
--   Użyj tylko jedna deklaracja w wierszu.  
+-   Użyj tylko jednej deklaracji na wiersz.  
   
--   Jeśli **automatycznego formatowania kodu (ponowne formatowanie) z** nie Formatuj kontynuacji linie automatycznie, ręcznie wcięcie kontynuacji wierszy jednego tabulatora. Jednak zawsze lewej align elementów na liście.  
+-   Jeśli **formatowania kodu automatyczne formatowanie kodu** nie formatuje wierszy kontynuacji automatycznie, ręcznie Utwórz wcięcia kontynuacji wierszy na jeden tabulator. Jednak zawsze wyrównuj do lewej elementy na liście.  
   
     ```  
     a As Integer,  
@@ -55,19 +55,19 @@ Microsoft rozwija przykłady i dokumentację postępuj zgodnie z wytycznymi, w t
   
 ## <a name="commenting-conventions"></a>Konwencje komentowania  
   
--   Wprowadzone komentarze w osobnym wierszu zamiast na końcu wiersza kodu.  
+-   Umieść komentarze w osobnym wierszu zamiast na końcu wiersza kodu.  
   
--   Uruchom tekst komentarza od wielkiej litery i tekst komentarza zakończenia kropką.  
+-   Rozpocznij tekst komentarza wielką literą i tekst komentarza zakończenia kropką.  
   
--   Wstaw spację jednego między ogranicznik komentarza (') i tekst komentarza.  
+-   Wstaw jedną spację między ogranicznik komentarza (') i tekst komentarza.  
   
      [!code-vb[VbVbalrGuidelines#2](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_1.vb)]  
   
--   Nie należy ująć komentarze sformatowany bloki gwiazdek.  
+-   Nie otaczaj komentarzy sformatowanymi blokami ani gwiazdkami.  
   
 ## <a name="program-structure"></a>Struktura programu  
   
--   Jeśli używasz `Main` metody konstrukcji domyślne dla nowych aplikacji konsoli i wykorzystaj `My` dla argumentów wiersza polecenia.  
+-   Kiedy używasz `Main` metody, użyj domyślnego konstruktora dla nowych aplikacji konsoli, a następnie użyj `My` dla argumentów wiersza poleceń.  
   
      [!code-vb[VbVbalrGuidelines#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_2.vb)]  
   
@@ -75,71 +75,71 @@ Microsoft rozwija przykłady i dokumentację postępuj zgodnie z wytycznymi, w t
   
 ### <a name="string-data-type"></a>Typ danych ciągu  
   
--   Aby ciągów, należy użyć handlowego "i" (&).  
+-   Do łączenia ciągów, użyj handlowe "i" (&).  
   
      [!code-vb[VbVbalrGuidelines#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_3.vb)]  
   
--   Aby dołączyć ciągów w pętli, należy użyć <xref:System.Text.StringBuilder> obiektu.  
+-   Aby dołączyć ciągi w pętli, należy użyć <xref:System.Text.StringBuilder> obiektu.  
   
      [!code-vb[VbVbalrGuidelines#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_4.vb)]  
   
-### <a name="relaxed-delegates-in-event-handlers"></a>Swobodna delegatów w obsłudze zdarzeń  
- Nie jawnie kwalifikują się argumentów (obiektu i EventArgs) do obsługi zdarzeń. Jeśli nie używasz argumenty zdarzenia, które są przekazywane do zdarzeń (na przykład nadawcy jako obiekt, e jako EventArgs), używać delegatów swobodna i Opuść argumenty zdarzeń w kodzie:  
+### <a name="relaxed-delegates-in-event-handlers"></a>Obniżone Delegaty w procedurach obsługi zdarzeń  
+ Nie kwalifikuj jawnie argumentów (obiekt i EventArgs) do obsługi zdarzeń. Jeśli nie używasz argumentów zdarzeń, które są przekazywane do zdarzenia (na przykład nadawcy jako obiektu, e jako EventArg), użyj swobodnych delegatów i Opuść argumenty zdarzenia w kodzie:  
   
  [!code-vb[VbVbalrGuidelines#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_5.vb)]  
   
 ### <a name="unsigned-data-type"></a>Typ danych bez znaku  
   
--   Użyj `Integer` zamiast typy bez znaku, z wyjątkiem przypadków, gdy jest to konieczne.  
+-   Użyj `Integer` zamiast niepodpisanych typów, z wyjątkiem sytuacji, gdy jest to konieczne.  
   
 ### <a name="arrays"></a>Tablice  
   
--   Podczas inicjowania tablic w wierszu deklaracji, należy użyć składni krótki. Na przykład użyj następującej składni.  
+-   Użyj skróconej składni podczas inicjowania tablic w wierszu deklaracji. Na przykład użyj następującej składni.  
   
      [!code-vb[VbVbalrGuidelines#8](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_6.vb)]  
   
-     Nie należy użyć następującej składni.  
+     Nie należy używać następującej składni.  
   
      [!code-vb[VbVbalrGuidelines#9](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_7.vb)]  
   
--   W typie, a nie na zmiennej, umieść oznaczeniem tablicy. Na przykład użyj następującej składni:  
+-   Umieść oznaczenie tablicy na typie, a nie na zmiennej. Na przykład użyj następującej składni:  
   
      [!code-vb[VbVbalrGuidelines#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_8.vb)]  
   
-     Nie należy użyć następującej składni:  
+     Nie należy używać następującej składni:  
   
      [!code-vb[VbVbalrGuidelines#10](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_9.vb)]  
   
--   Po zadeklarowaniu i zainicjować tablice typów podstawowych danych, należy użyć składni {}. Na przykład użyj następującej składni:  
+-   Do deklarowania i inicjowania tablic typów podstawowych danych, należy użyć składni {}. Na przykład użyj następującej składni:  
   
      [!code-vb[VbVbalrGuidelines#12](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_10.vb)]  
   
-     Nie należy użyć następującej składni:  
+     Nie należy używać następującej składni:  
   
      [!code-vb[VbVbalrGuidelines#13](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_11.vb)]  
   
-### <a name="use-the-with-keyword"></a>Użyj ze słowem kluczowym  
- Po wprowadzeniu szereg wywołania do jednego obiektu, należy rozważyć użycie `With` — słowo kluczowe:  
+### <a name="use-the-with-keyword"></a>Korzystanie ze słowem kluczowym  
+ Wprowadzając szereg wywołań do jednego obiektu, należy wziąć pod uwagę przy użyciu `With` — słowo kluczowe:  
   
  [!code-vb[VbVbalrGuidelines#15](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_12.vb)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Użyj Try... CATCH i przy użyciu instrukcji, korzystając z obsługą wyjątków  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Użyj Try... CATCH i przy użyciu instrukcji, korzystając z obsługi wyjątków  
  Nie używaj `On Error Goto`.  
   
 ### <a name="use-the-isnot-keyword"></a>Użyj słowa kluczowego IsNot  
  Użyj `IsNot` słowa kluczowego zamiast `Not...Is Nothing`.  
   
-### <a name="new-keyword"></a>New, słowo kluczowe  
+### <a name="new-keyword"></a>New — słowo kluczowe  
   
--   Użyj wystąpienia krótki. Na przykład użyj następującej składni:  
+-   Użyj krótkiego tworzenia wystąpienia. Na przykład użyj następującej składni:  
   
      [!code-vb[VbVbalrGuidelines#21](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_13.vb)]  
   
-     Poprzedni wiersz jest odpowiednikiem to:  
+     Poprzedni wiersz jest równoważny następującemu wyrażeniu:  
   
      [!code-vb[VbVbalrGuidelines#22](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_14.vb)]  
   
--   Inicjatory obiektów należy użyć dla nowych obiektów zamiast konstruktora bez parametrów:  
+-   Użyj inicjatorów obiektów dla nowych obiektów, a nie konstruktora bez parametrów:  
   
      [!code-vb[VbVbalrGuidelines#23](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_15.vb)]  
   
@@ -149,61 +149,61 @@ Microsoft rozwija przykłady i dokumentację postępuj zgodnie z wytycznymi, w t
   
      [!code-vb[VbVbalrGuidelines#24](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_16.vb)]  
   
--   Użyj `AddressOf`, a nie wystąpienia delegat jawnie:  
+-   Użyj `AddressOf`i nie tworzyć wystąpienia pełnomocnika jawnie:  
   
      [!code-vb[VbVbalrGuidelines#25](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_17.vb)]  
   
--   Podczas definiowania zdarzenia należy użyć składni krótki i umożliwić kompilatora zdefiniuj delegata:  
+-   Podczas definiowania zdarzenia, użyj skróconej składni i zezwolić kompilatorowi na zdefiniowanie delegata:  
   
      [!code-vb[VbVbalrGuidelines#26](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_18.vb)]  
   
--   Sprawdza, czy zdarzenie jest `Nothing` (null), przed wywołaniem `RaiseEvent` metody. `RaiseEvent` sprawdza, czy `Nothing` przed zgłasza zdarzenie.  
+-   Nie Weryfikuj, czy zdarzenie jest `Nothing` (null) przed wywołaniem `RaiseEvent` metody. `RaiseEvent` sprawdza, czy `Nothing` przed zzdarzenia.  
   
-### <a name="using-shared-members"></a>Przy użyciu udostępniane elementy członkowskie  
- Wywołanie `Shared` elementów członkowskich za pomocą nazwy klasy, nie z zmienna wystąpienia.  
+### <a name="using-shared-members"></a>Używanie udostępnionych elementów członkowskich  
+ Wywołaj `Shared` elementów członkowskich przy użyciu nazwy klasy, nie ze zmiennej wystąpienia.  
   
-### <a name="use-xml-literals"></a>Używaj literałów XML  
- Literały XML uprościć najbardziej typowych zadań, które wystąpią podczas pracy z XML (na przykład, obciążenia, zapytań i przekształcenie). Podczas pracy z danymi XML, skorzystaj z następujących wskazówek:  
+### <a name="use-xml-literals"></a>Używanie literałów XML  
+ Literały XML upraszczają najbardziej typowe zadania, które można napotkać podczas pracy z danymi XML (na przykład obciążenie, zapytań i przekształcania). Podczas pracy z danymi XML należy przestrzegać następujących wytycznych:  
   
--   Literały XML umożliwia tworzenie dokumentów XML i fragmentów, zamiast bezpośredniego wywoływania interfejsów API XML.  
+-   Literały XML umożliwiają tworzenie dokumentów XML i fragmentów zamiast wywoływania interfejsów API XML bezpośrednio.  
   
--   Importuj przestrzeni nazw XML na poziomie pliku lub projektu, aby skorzystać z optymalizacji wydajności dla literałów XML.  
+-   Zaimportuj przestrzenie nazw XML na poziomie pliku lub projektu, aby skorzystać z optymalizacji wydajności w literałach XML.  
   
--   Właściwości osi XML umożliwia dostęp do elementów i atrybutów w dokumencie XML.  
+-   Właściwości osi XML umożliwiają dostęp do elementów i atrybutów w dokumencie XML.  
   
--   Użyj wyrażenia osadzone wartości mają zostać uwzględnione i utworzyć XML z istniejącymi wartościami zamiast przy użyciu interfejsu API, takich jak `Add` metody:  
+-   Użyj wyrażenia osadzone umożliwiają uwzględnienie wartości i tworzenie kodu XML na podstawie istniejących wartości, zamiast przy użyciu wywołań interfejsu API, takich jak `Add` metody:  
   
      [!code-vb[VbVbalrGuidelines#27](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_19.vb)]  
   
 ### <a name="linq-queries"></a>Zapytania LINQ  
   
--   Użyj łatwy do rozpoznania nazwy zmiennych zapytania:  
+-   Użyj nazw opisowych dla zmiennych kwerendy:  
   
      [!code-vb[VbVbalrGuidelines#28](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_20.vb)]  
   
--   Nazwy elementów w zapytaniu, aby upewnić się, że nazwy właściwości typu anonimowego poprawnie kapitalizacji przy użyciu Pascal wielkości liter:  
+-   Zapewnij nazwy elementów w zapytaniu, aby upewnić się, że nazwy właściwości anonimowych typów są kapitalizowane poprawnie przy użyciu obudowy Pascal wielkość liter w wyrazie:  
   
      [!code-vb[VbVbalrGuidelines#29](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_21.vb)]  
   
--   Zmień nazwę właściwości, gdy nazwy właściwości w wyniku byłoby niejednoznaczne. Na przykład, jeśli zapytanie zwraca klienta nazwa i identyfikator zamówienia, zmień ich zamiast zostawiać je jako `Name` i `ID` w wyniku:  
+-   Zmień nazwę właściwości, gdy nazwy właściwości w wyniku byłby niejednoznaczne. Na przykład, jeśli zapytanie zwraca klienta nazwa i identyfikator zamówienia, zmień je zamiast pozostawiania je jako `Name` i `ID` w wyniku:  
   
      [!code-vb[VbVbalrGuidelines#30](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_22.vb)]  
   
--   Wnioskowanie o typie należy użyć w deklaracji zmiennych zakresu i zmiennych zapytania:  
+-   Użyj wnioskowania o typie w deklaracji zmiennych kwerendy i zmiennych zakresu:  
   
      [!code-vb[VbVbalrGuidelines#31](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_23.vb)]  
   
--   Dopasuj klauzule zapytań w obszarze `From` instrukcji:  
+-   Wyrównaj klauzule zapytania pod `From` instrukcji:  
   
      [!code-vb[VbVbalrGuidelines#32](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_24.vb)]  
   
--   Użyj `Where` klauzule przed innymi kwerendy w klauzulach sposób nowsze klauzule zapytań działać na odfiltrowanego zbioru danych:  
+-   Użyj `Where` klauzule przed innymi klauzulami kwerend powoduje, że późniejsze klauzule kwerend działają na zestawie filtrowanych danych:  
   
      [!code-vb[VbVbalrGuidelines#33](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_25.vb)]  
   
--   Użyj `Join` klauzuli, aby jawnie definiować operacji tworzenia sprzężenia zamiast `Where` klauzuli niejawnie określenie operacji tworzenia sprzężenia:  
+-   Użyj `Join` klauzuli umożliwia jawne zdefiniowanie operacji join w przeciwieństwie `Where` klauzuli umożliwia niejawnie określenie operacji join:  
   
      [!code-vb[VbVbalrGuidelines#34](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_26.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące bezpiecznego programowania](../../../standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Zobacz także
+- [Wytyczne dotyczące bezpiecznego programowania](../../../standard/security/secure-coding-guidelines.md)

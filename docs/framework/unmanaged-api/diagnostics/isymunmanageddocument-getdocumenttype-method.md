@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0460086874af38cad348c965237f8c423f18e868
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adad8854052d76476076e5e1357f6d3e2dec1052
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629478"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType — Metoda
-Pobiera typ dokumentu z tego dokumentu.  
+Pobiera typ dokumentu w tym dokumencie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,10 +36,10 @@ HRESULT GetDocumentType(
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Wskaźnik do zmiennej, która odbiera typu dokumentu.  
+ [out] Wskaźnik do zmiennej, która otrzymuje typ dokumentu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ S_OK, jeśli metoda zakończy się powodzeniem.  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedDocument, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedDocument, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

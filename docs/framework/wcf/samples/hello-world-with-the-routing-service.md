@@ -2,19 +2,19 @@
 title: Program Hello World z usługą routingu
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 25d0ce0663b60410912be94780fe8e89f6bf0d39
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d560a8e871846f608cc90ec2f4f298c0db710e2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691778"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Program Hello World z usługą routingu
 Niniejszy przykład pokazuje usługi routingu Windows Communication Foundation (WCF). Usługa routingu jest składnikiem usługi WCF, który ułatwia to dołączenie routerem na podstawie zawartości do aplikacji. W tym przykładzie dostosowuje się standardowej próbki Kalkulator WCF do komunikowania się za pomocą usługi routingu. W tym przykładzie klient Kalkulator jest skonfigurowany do wysyłania wiadomości do punktu końcowego uwidocznionego przez router. Usługa routingu jest skonfigurowana do akceptowania wszystkie komunikaty wysyłane do niej i przekazują je do punktu końcowego, który odnosi się do usługi kalkulatora. Ten sposób wiadomości wysłanych z klienta są odebrany przez router i ponownie kierowane do rzeczywistej usługi kalkulatora. Komunikaty z Kalkulatora usługi są wysyłane do routera, który z kolei przekazuje je do klienta kalkulatora.
 
 ### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Za pomocą programu Visual Studio 2012, otwórz HelloRoutingService.sln.
+1.  Using Visual Studio 2012, open HelloRoutingService.sln.
 
 2.  Naciśnij klawisz F5 lub CTRL + SHIFT + B.
 
@@ -57,5 +57,5 @@ Niniejszy przykład pokazuje usługi routingu Windows Communication Foundation (
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Zobacz także
+- [Przykłady trwałości i hostingu AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

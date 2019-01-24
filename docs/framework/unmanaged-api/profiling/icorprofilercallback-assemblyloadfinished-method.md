@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7f000b6e944be7bd2e38f97e40176952cb19605
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f76a3cb232042ba6b91046d1f7b6e1d46ad6faef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450635"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634860"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished — Metoda
-Powiadamia profilera zakończenie zestawu ładowania.  
+Powiadamia program profilujący, że zespół zakończył ładowanie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,15 +40,15 @@ HRESULT AssemblyLoadFinished(
  [in] Określa zestaw, który został załadowany.  
   
  `hrStatus`  
- [in] HRESULT, która wskazuje, czy zestaw zakończone pomyślnie ładowania.  
+ [in] Wartość HRESULT, która wskazuje, czy zestaw zakończone pomyślnie ładowania.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `assemblyId` jest nieprawidłowa dla żądania informacji do `AssemblyLoadFinished` metoda jest wywoływana.  
+ Wartość `assemblyId` jest nieprawidłowa dla żądania informacje do momentu `AssemblyLoadFinished` metoda jest wywoływana.  
   
- Podczas ładowania zestawu niektóre elementy mogą nadal po `AssemblyLoadFinished` wywołania zwrotnego. Błąd HRESULT w `hrStatus` oznacza błąd. Jednak Powodzenie HRESULT w `hrStatus` tylko wskazuje, że pierwsza część podczas ładowania zestawu zakończyła się pomyślnie.  
+ Niektóre części ładowania zestawu może kontynuować po `AssemblyLoadFinished` wywołania zwrotnego. Błąd HRESULT w `hrStatus` wskazuje błąd. Jednak sukcesów wartość HRESULT w `hrStatus` tylko wskazuje, czy zakończyła się pomyślnie w pierwszej części ładowania zestawu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -56,5 +56,5 @@ HRESULT AssemblyLoadFinished(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

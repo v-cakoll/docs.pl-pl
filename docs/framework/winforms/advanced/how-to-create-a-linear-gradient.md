@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie gradientu liniowego'
+title: 'Instrukcje: Tworzenie gradientu liniowego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,73 +10,73 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9ceb10eb5990742271c8d952d9293807c21677a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696300"
 ---
-# <a name="how-to-create-a-linear-gradient"></a>Porady: tworzenie gradientu liniowego
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia pozioma, pionowych i ukośnych gradienty liniowe. Domyślnie w przypadku gradientu liniowego zmienia kolor jednakowo. Można jednak dostosować gradientu liniowego tak, aby w sposób niejednolitego zmienia kolor.  
+# <a name="how-to-create-a-linear-gradient"></a>Instrukcje: Tworzenie gradientu liniowego
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia poziomej, pionowej i ukośne gradienty liniowe. Domyślnie w przypadku gradientu liniowego zmienia kolor równomiernie. Można jednak dostosować gradientu liniowego, tak, aby zmienia kolor w sposób obsługuje technologię niejednolitego.  
   
- Poniższy przykład wypełnia linii, elipsy i prostokąt o poziomie pędzla gradientu liniowego.  
+ Poniższy przykład wypełnia linię, elipsę i prostokąt o poziomie pędzel gradientów liniowych.  
   
- <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Konstruktor odbiera cztery argumenty: dwa punkty i dwa kolory. Pierwszy punkt (0, 10) jest skojarzona z pierwszego koloru (czerwony), a drugi punkt (200, 10) jest skojarzona z drugi kolor (niebieski). Jak można oczekiwać, wiersz z (0, 10) do (200, 10) zmieni się stopniowo z kolor czerwony, niebieski.  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Konstruktor odbiera cztery argumenty: dwa punkty i dwóch kolorów. Pierwszy punkt (0, 10) jest skojarzona z pierwszy kolor (czerwony), a drugi punkt (200, 10) jest skojarzony z drugi kolor (niebieski). Jak można oczekiwać, wiersz z (0, 10) do (200, 10) stopniowo zmienia się z kolor czerwony, niebieski.  
   
- 10s w punktach (50, 10) i (200, 10) nie są ważne. Co to jest ważne jest, że dwa punkty ma tę samą współrzędną. drugi — wiersz, łącząc je jest poziomy. Elipsy i prostokąt również zmienić stopniowo kolor czerwony, niebieski, ponieważ Współrzędna pozioma przechodzi od 0 do 200.  
+ 10s w punktach (50, 10) i (200, 10) nie są ważne. Co to jest ważne jest, czy dwa punkty mają tę samą współrzędną. drugi — wiersz, łącząc je jest poziomy. Elipsy i prostokąt również zmienić stopniowo kolor czerwony, niebieski, ponieważ pozioma współrzędne przechodzi z zakresu od 0 do 200.  
   
- Na poniższej ilustracji przedstawiono wiersza, elipsy i prostokąta. Należy pamiętać, że kolor gradientu powtarza się, jak współrzędnych poziomych przekroczy 200.  
+ Na poniższej ilustracji przedstawiono wiersza, elipsy i prostokąt. Należy pamiętać, że kolor gradientu powtarza się, jak pozioma współrzędne przekroczy 200.  
   
- ![Gradient liniowy](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
+ ![Linear Gradient](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
   
-### <a name="to-use-horizontal-linear-gradients"></a>Aby użyć poziome gradienty liniowe  
+### <a name="to-use-horizontal-linear-gradients"></a>Aby użyć poziomy gradientów liniowych  
   
--   Przekaż nieprzezroczyste niebiesko czerwona i przezroczystości jako trzeci i czwarty argument odpowiednio.  
+-   Przekaż nieprzezroczyste niebieski czerwonego i nieprzezroczystości jako argument trzecia i czwarta odpowiednio.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
   
- W powyższym przykładzie kolor zmiany składników liniowo podczas przenoszenia z poziome współrzędną 0 poziome współrzędną 200. Na przykład punkt, w których pierwszy współrzędnych jest w połowie zakresu od 0 do 200 ma niebieski składnik, który jest w połowie pomiędzy 0 a 255.  
+ W powyższym przykładzie kolor zmiany składników liniowo po przeniesieniu pozioma współrzędne 0 Aby pozioma współrzędne 200. Na przykład punkt, w której Współrzędna pierwszy jest w połowie zakresu od 0 do 200 mają niebieski składnik, który jest w połowie między 0 a 255.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Pozwala dopasować sposób kolor zależą od jednej krawędzi gradientu do drugiego. Załóżmy, że chcesz utworzyć pędzla gradientu, który zmienia się z czarnym czerwony zgodnie z poniższą tabelą.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można dostosować sposób, w których kolor, który różni się od jednej krawędzi gradientu do drugiego. Załóżmy, że chcesz utworzyć pędzla gradientu, który zmienia się pomiędzy czarny na czerwony, zgodnie z poniższą tabelą.  
   
-|Współrzędna pozioma|Składniki RGB|  
+|Pozioma współrzędne|Składniki RGB|  
 |---------------------------|--------------------|  
 |0|(0, 0, 0)|  
 |40|(128, 0, 0)|  
 |200|(255, 0, 0)|  
   
- Należy pamiętać, że składnik red w połowie intensywność przy poziomie Współrzędna jest tylko 20% sposób z zakresu od 0 do 200.  
+ Należy pamiętać, że składnik czerwony w wysokości równej połowie intensywność podczas pozioma współrzędne jest tylko 20% sposób z zakresu od 0 do 200.  
   
- W poniższym przykładzie <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> właściwość <xref:System.Drawing.Drawing2D.LinearGradientBrush> obiektu trzy względne natężenia z trzech położenia. W powyższej tabeli względną intensywność 0,5 jest skojarzony z względne położenie 0,2. Kod wypełnia elipsy i prostokąt z pędzla gradientu.  
+ Poniższy przykład ustawia <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> właściwość <xref:System.Drawing.Drawing2D.LinearGradientBrush> powiązania obiektu trzy względne natężenia z trzech położenie względne. Tak jak w powyższej tabeli względną intensywność 0,5 jest skojarzony z względne położenie 0.2. Kod wprowadza elipsę i prostokąt z pędzla gradientu.  
   
- Na poniższej ilustracji przedstawiono wynikowy elipsy i prostokąta.  
+ Na poniższej ilustracji przedstawiono wynikowe elipsy i prostokąt.  
   
  ![Gradient liniowy](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")  
   
 ### <a name="to-customize-linear-gradients"></a>Aby dostosować gradienty liniowe  
   
--   Przekaż nieprzezroczyste czerwone czarne i przezroczystości jako trzeci i czwarty argument odpowiednio.  
+-   Przekaż nieprzezroczyste red czarne i nieprzezroczystości jako argument trzecia i czwarta odpowiednio.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
   
- Gradienty w powyższych przykładach zostały poziome; oznacza to, że zmienia kolor stopniowo podczas wykonywania czynności dowolnej linii poziomej. Można również zdefiniować pionowy gradientach i przekątnej gradientu.  
+ Gradienty w powyższych przykładach zostały poziomy; oznacza to zmienia kolor stopniowo po przeniesieniu wzdłuż dowolnej linii poziomej. Można również zdefiniować gradientów pionowych i gradientów ukośne.  
   
- Poniższy przykład przekazuje punktów (0, 0) i (200, 100) do <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> konstruktora. Kolor niebieski jest skojarzony z (0, 0), i jest skojarzony kolor zielony (200, 100). Wiersz (szerokość 10) i elipsy są wypełniane pędzla gradientu liniowego.  
+ Poniższy przykład przekazuje punkty (0, 0) i (200, 100), aby <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> konstruktora. Kolor niebieski jest skojarzony z (0, 0), a kolor zielony jest skojarzony z (200, 100). Wiersz (przy użyciu szerokości pióro 10) i elipsy są wypełnione pędzel gradientów liniowych.  
   
- Na poniższej ilustracji przedstawiono elipsy i wiersza. Należy zauważyć, że kolor zmian elipsy stopniowo podczas wykonywania czynności żadnego wiersza jest zbliżony do linii przechodzącej przez (0, 0) i (200, 100).  
+ Na poniższej ilustracji przedstawiono wiersza i elipsy. Należy pamiętać, kolor zmiany elipsy stopniowo po przeniesieniu wzdłuż żadnego wiersza jest zbliżony do wiersza, przechodzi przez (0, 0) i (200, 100).  
   
  ![Gradient liniowy](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")  
   
-### <a name="to-create-diagonal-linear-gradients"></a>Aby utworzyć ukośnych gradienty liniowe  
+### <a name="to-create-diagonal-linear-gradients"></a>Aby utworzyć w użyciu gradientów liniowych  
   
--   Przekazywane nieprzezroczyste zielony niebieska i przezroczystości jako trzeci i czwarty argument odpowiednio.  
+-   Przekaż nieprzezroczyste zielonego nieprzezroczyste i w kolorze niebieskim jako argument trzecia i czwarta, odpowiednio.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Używanie pędzla gradientów do wypełniania kształtów](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- [Grafika i rysowanie w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- [Używanie pędzla gradientów do wypełniania kształtów](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+- [Grafika i rysowanie w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95f61170d401161dcf217f139dbe6e4c6d3a0e0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735042"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion — Funkcja
-Umożliwia hosta określić, która wersja środowisko uruchomieniowe języka wspólnego (CLR) będzie używany w ramach procesu przed jawnie inicjowania CLR.  
+Umożliwia hostowi na określenie, która wersja środowiska uruchomieniowego języka wspólnego (CLR), będą używane w ramach procesu przed jawnym zainicjowaniem środowiska CLR.  
   
  Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -41,16 +41,16 @@ HRESULT LockClrVersion (
   
 #### <a name="parameters"></a>Parametry  
  `hostCallback`  
- [in] Funkcja wywoływana przez środowisko CLR po zainicjowaniu.  
+ [in] Funkcja, która ma zostać wywołana przez środowisko CLR po zainicjowaniu.  
   
  `pBeginHostSetup`  
- [in] Funkcja wywoływana przez hosta CLR informują tego inicjowania jest uruchamiana.  
+ [in] Funkcja wywoływana przez hosta w celu poinformowania środowiska CLR, że inicjowanie jest uruchamiana.  
   
  `pEndHostSetup`  
- [in] Funkcja wywoływana przez hosta CLR informują tego inicjowania jest ukończona.  
+ [in] Funkcja wywoływana przez hosta w celu poinformowania środowiska CLR, że Inicjowanie zostało ukończone.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowe kody błędów COM, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca standardowe kody błędu modelu COM, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
@@ -58,19 +58,19 @@ HRESULT LockClrVersion (
 |E_INVALIDARG|Co najmniej jeden z argumentów ma wartość null.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołania hosta `LockClrVersion` przed inicjowania CLR. `LockClrVersion` przyjmuje trzy parametry, które są wywołania zwrotne typu [flockclrversioncallback —](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Ten typ jest zdefiniowany w następujący sposób.  
+ Wywołania hosta `LockClrVersion` przed zainicjowaniem środowiska CLR. `LockClrVersion` przyjmuje trzy parametry, które są wywołania zwrotne typu [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Ten typ jest zdefiniowany w następujący sposób.  
   
 ```  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   
- Po zainicjowaniu środowiska uruchomieniowego są wykonywane następujące czynności:  
+ Po zainicjowaniu środowiska uruchomieniowego są wykonywane następujące kroki:  
   
-1.  Wywołania hosta [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) lub jednego z innych funkcji inicjowania środowiska uruchomieniowego. Alternatywnie hosta można zainicjować za pomocą aktywacji obiektu COM środowiska uruchomieniowego.  
+1.  Wywołania hosta [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) lub jednego z innych funkcji inicjowania środowiska uruchomieniowego. Alternatywnie hosta można zainicjować aparatu plików wykonywalnych przy użyciu aktywowanie obiektu COM.  
   
-2.  Środowisko uruchomieniowe wywołania funkcji określonej przez `hostCallback` parametru.  
+2.  Środowisko wykonawcze wywołuje funkcji określonej przez `hostCallback` parametru.  
   
-3.  Funkcji określonej przez `hostCallback` następnie sprawia, że następująca sekwencja wywołania:  
+3.  Funkcji określonej przez `hostCallback` następnie sprawia, że następująca sekwencja wywołań:  
   
     -   Funkcji określonej przez `pBeginHostSetup` parametru.  
   
@@ -78,20 +78,20 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
     -   [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    -   [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    -   [Iclrruntimehost::Start —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
     -   Funkcji określonej przez `pEndHostSetup` parametru.  
   
- Wszystkie wywołania z `pBeginHostSetup` do `pEndHostSetup` musi występować w jednym wątku lub włókna, z tym samym stosie logiczne. Ten wątek może być inny niż wątek, na którym `hostCallback` jest wywoływana.  
+ Wszystkie wywołania z `pBeginHostSetup` do `pEndHostSetup` musi przypadać na jednym wątku lub włókna, z tym samym stosie logiczne. Ten wątek może różnić się od wątku, na którym `hostCallback` jest wywoływana.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

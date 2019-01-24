@@ -1,15 +1,15 @@
 ---
-title: 'Porady: znajdowanie poprzednich elementów równorzędnych (XPath-LINQ to XML) (C#)'
+title: 'Instrukcje: Znajdowanie poprzednich elementów równorzędnych (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: d2bd34db7bd839e50ec3e77819230f5f6410b73e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: de5393f720a854b9644dc7cac7d73c3c6d380483
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707430"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Porady: znajdowanie poprzednich elementów równorzędnych (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Instrukcje: Znajdowanie poprzednich elementów równorzędnych (XPath-LINQ to XML) (C#)
 W tym temacie porównano XPath `preceding-sibling` osi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podrzędnych <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> osi.  
   
  Wyrażenie XPath jest:  
@@ -21,7 +21,7 @@ W tym temacie porównano XPath `preceding-sibling` osi [!INCLUDE[sqltecxlinq](~/
 ## <a name="example"></a>Przykład  
  Poniższy przykład umożliwia znalezienie `FullAddress` elementu, a następnie pobierze poprzednich elementów przy użyciu `preceding-sibling` osi.  
   
- W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -53,6 +53,6 @@ Results are identical
 <Phone>(503) 555-7555</Phone>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [LINQ to XML dla użytkowników metody XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

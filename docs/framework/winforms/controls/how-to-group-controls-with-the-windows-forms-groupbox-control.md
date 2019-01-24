@@ -1,37 +1,37 @@
 ---
-title: 'Porady: grupowanie formantów za pomocą formantu GroupBox formularzy systemu Windows'
+title: 'Instrukcje: Grupowanie formantów za pomocą formantu GroupBox formularzy Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 718367e9da9efda20c79fbff3bd2f14f11c96ee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44f0116511165c021f8e3dc35fb14e5cfb6f619e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686923"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Porady: grupowanie formantów za pomocą formantu GroupBox formularzy systemu Windows
-Formularze systemu Windows <xref:System.Windows.Forms.GroupBox> formanty są używane do grupowania inne formanty. Istnieją trzy powodów Grupowanie formantów:  
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Instrukcje: Grupowanie formantów za pomocą formantu GroupBox formularzy Windows
+Windows Forms <xref:System.Windows.Forms.GroupBox> formantów służą do grupowania innych kontrolek. Istnieją trzy powody do formantów grupy:  
   
--   Aby utworzyć visual grupowanie elementów pokrewnych formularza dla interfejsu zwykłego użytkownika.  
+-   Aby utworzyć wizualne grupowanie elementów powiązanych formularza dla interfejsu użytkownika wyraźne.  
   
--   Aby utworzyć programowe grupowania (of przycisków radiowych, na przykład).  
+-   Aby utworzyć programowe grupowanie (of przyciski radiowe, na przykład).  
   
--   Przenoszenie kontrolek jako jednostki w czasie projektowania.  
+-   Przenoszenia kontrolek jako jednostka, w czasie projektowania.  
   
-### <a name="to-create-a-group-of-controls"></a>Aby utworzyć grupę formantów  
+### <a name="to-create-a-group-of-controls"></a>Aby utworzyć grupę kontrolek  
   
-1.  Rysuj <xref:System.Windows.Forms.GroupBox> kontrolkę w formularzu.  
+1.  Rysowanie <xref:System.Windows.Forms.GroupBox> kontrolkę w formularzu.  
   
-2.  W polu Grupa rysowania każdego wewnątrz pola grupy, należy dodać inne formanty.  
+2.  Dodaj inne formanty do pola grupy rysowania każdego wewnątrz pola grupy.  
   
-     Jeśli masz istniejących formantów, które chcesz umieścić w polu grupy można wybierz wszystkie formanty, Wytnij je do Schowka, zaznacz <xref:System.Windows.Forms.GroupBox> kontroli, a następnie wklej je w pole grupy. Można również przeciągnij je do pole grupy.  
+     W przypadku istniejących formantów, które należy wpisać w polu grupy można zaznaczyć wszystkie kontrolki, Wytnij je do Schowka, zaznacz <xref:System.Windows.Forms.GroupBox> sterowania, a następnie wklej je w polu grupy. Ponadto można przeciągnąć w polu grupy.  
   
-3.  Ustaw <xref:System.Windows.Forms.GroupBox.Text%2A> właściwości pola grupy do odpowiednich podpis.  
+3.  Ustaw <xref:System.Windows.Forms.GroupBox.Text%2A> właściwości, pola grupy odpowiedni podpis.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.GroupBox>  
- [GroupBox, kontrolka](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.GroupBox>
+- [GroupBox, kontrolka](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)

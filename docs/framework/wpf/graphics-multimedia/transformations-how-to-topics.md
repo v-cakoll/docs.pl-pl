@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: 95e33f38fcad70b61ae565307915b60dcbfb905a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd480f7f9a4fec42aebc57fe0b9e61bd8993ee34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697039"
 ---
 # <a name="transformations-how-to-topics"></a>Przekształcenia Tematy porad
-Tematy w tej sekcji opisano sposób stosowania przekształceń różnych obiektów.  
+Tematy w tej sekcji opisano, jak stosuje się różne przekształcenia do obiektów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Stosowanie przekształcenia do elementu w przypadku wystąpienia zdarzenia](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
@@ -30,8 +30,8 @@ Tematy w tej sekcji opisano sposób stosowania przekształceń różnych obiekt�
  [Przesuwanie elementu](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
  [Tworzenie niestandardowych przekształceń przy użyciu elementu MatrixTransform](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Transform>  
- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Układ](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Transform>
+- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Układ](../../../../docs/framework/wpf/advanced/layout.md)

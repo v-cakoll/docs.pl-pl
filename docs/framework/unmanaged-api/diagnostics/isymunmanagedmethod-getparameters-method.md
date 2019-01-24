@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fbedb7b1c10dcc2b9b9940db10aae7e4101436b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0fc5fd29b8b423ddd3a659ee2fc8a339eea0105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733886"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters — Metoda
-Pobiera parametry dla tej metody. Parametry są zwracane w kolejności, w którym są definiowane w podpisie metody.  
+Pobiera parametry dla tej metody. Parametry są zwracane w kolejności, w której są zdefiniowane w podpisie metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,16 +42,16 @@ HRESULT GetParameters(
  [in] Rozmiar `params` tablicy.  
   
  `pcParams`  
- [in] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, który jest wymagany do zawierają parametry.  
+ [in] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, który jest wymagany do zawierać parametry.  
   
  `params`  
- [out] Wskaźnik do buforu, który odbiera parametrów.  
+ [out] Wskaźnik do buforu, który otrzymuje parametrów.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

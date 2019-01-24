@@ -1,23 +1,23 @@
 ---
-title: '&lt;ChannelPoolSettings&gt;'
+title: '&lt;channelPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: e55d3a989ae35d6e29062337cc79114a204608bb
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 666602bde75cd21b5b3d16bd4d5e6cf63c12d593
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554962"
 ---
-# <a name="ltchannelpoolsettingsgt"></a>&lt;ChannelPoolSettings&gt;
+# <a name="ltchannelpoolsettingsgt"></a>&lt;channelPoolSettings&gt;
 Określa ustawienia puli kanału dla niestandardowego powiązania.  
   
  \<system.serviceModel>  
 \<powiązania >  
 \<customBinding>  
 \<Powiązanie >  
-\<oneWay >  
-\<channelPoolSettings >  
+\<oneWay>  
+\<channelPoolSettings>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,7 +45,7 @@ Określa ustawienia puli kanału dla niestandardowego powiązania.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|Umożliwia routing pakietów dla niestandardowego powiązania.|  
+|[\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|Umożliwia routing pakietów dla niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
  Przydziały są używane jako mechanizm zasady zapobiegające zużycia zasobów. Mogą zapobiegać atakom typu odmowa usługi (DOS), które są złośliwe lub przypadkowe. Podczas ustawiania przydziałów kanału w niestandardowym kanale, użyj tego elementu.  
@@ -58,14 +58,14 @@ Określa ustawienia puli kanału dla niestandardowego powiązania.
   
 -   `maxOutboundChannelsPerEndpoint` Przydziału Ustawia limity pamięci podręcznej serwera i klienta i jest używana w celu zwiększenia niezawodności. Wartość domyślna jest oparta na konserwatywnie skromną alokacji zasobów, który nadaje się do środowiska deweloperskiego i scenariusze instalacji małych. Administratorzy usług należy przejrzeć wartość, czy instalacja zaczyna brakować zasobów, czy połączenia są ograniczeni pomimo dostępność dodatkowych zasobów.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>  
- <xref:System.ServiceModel.Channels.ChannelPoolSettings>  
- <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>  
- <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>
+- <xref:System.ServiceModel.Channels.ChannelPoolSettings>
+- <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>
+- <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

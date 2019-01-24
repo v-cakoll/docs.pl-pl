@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f40fb2e94eac13211cf8ccf179904071a23f59ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b25eb71d78797b5f764cfe4de7abd45f0143fde4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717639"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken — Metoda
 Pobiera podpisu binarne metadane skojarzone z określonym tokenem.  
@@ -39,23 +39,23 @@ HRESULT GetSigFromToken (
   
 #### <a name="parameters"></a>Parametry  
  `mdSig`  
- [in] Token do zwrócenia podpis binarny metadanych dla.  
+ [in] Token, który zwraca podpis binarne metadanych dla.  
   
  `ppvSig`  
- [out] Wskaźnik do sygnatury metadane zwrócony.  
+ [out] Wskaźnik do podpisu zwróconych metadanych.  
   
  `pcbSig`  
- [out] Rozmiar w bajtach podpisu metadanych binarnego.  
+ [out] Rozmiar w bajtach sygnatura binarne metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

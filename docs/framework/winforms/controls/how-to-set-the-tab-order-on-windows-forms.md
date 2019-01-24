@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ustawianie kolejności tabulacji na formularzach systemu Windows'
+title: 'Instrukcje: Ustawianie kolejności tabulacji na formularzach Windows Forms'
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 74244ae4e3692ed210b2a8f1513b035c85e98376
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675260"
 ---
-# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Porady: ustawianie kolejności tabulacji na formularzach systemu Windows
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Instrukcje: Ustawianie kolejności tabulacji na formularzach Windows Forms
 Kolejność tabulacji polega na kolejności, w którym użytkownik przenosi fokus z jednego formantu do drugiego, naciskając klawisz TAB. Każdy formularz ma swój własny kolejności tabulacji. Domyślnie kolejność dostępu jest taka sama jak kolejność, w którym utworzono kontrolki. Kolejność tabulacji numerowania rozpoczyna się od zera.  
   
 > [!NOTE]
@@ -54,8 +54,8 @@ Kolejność tabulacji polega na kolejności, w którym użytkownik przenosi foku
     > [!NOTE]
     >  Grupa przycisków radiowych ma jedną kartę Zatrzymaj w czasie wykonywania. Wybrany przycisk (oznacza to, że przycisk z jego <xref:System.Windows.Forms.RadioButton.Checked%2A> właściwością `true`) ma jego <xref:System.Windows.Forms.Control.TabStop%2A> automatycznie właściwością `true`, podczas gdy inne przyciski powinny mieć ich <xref:System.Windows.Forms.Control.TabStop%2A> właściwością `false`. Aby uzyskać więcej informacji na temat grupowania <xref:System.Windows.Forms.RadioButton> formantów, zobacz [grupowanie Windows formantów RadioButton formularzy aby działały jak zestaw](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Kontrolki formularzy Windows Forms według funkcji](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>Zobacz także
+- [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+- [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Kontrolki formularzy Windows Forms według funkcji](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

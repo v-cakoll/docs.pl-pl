@@ -2,12 +2,12 @@
 title: '&lt;windowsStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: 6cce178910767d7fd197aff0d007b7cc3f4e60f3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4218072f63cabe511ca9d30c77395f734d961eca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745184"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsStreamSecurity&gt;
 Określ ustawienia zabezpieczenia strumienia Windows niestandardowego powiązania.  
@@ -16,7 +16,7 @@ Określ ustawienia zabezpieczenia strumienia Windows niestandardowego powiązani
 \<powiązania >  
 \<customBinding>  
 \<Powiązanie >  
-\<windowsStreamSecurity >  
+\<windowsStreamSecurity>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,11 +45,11 @@ Określ ustawienia zabezpieczenia strumienia Windows niestandardowego powiązani
 ## <a name="remarks"></a>Uwagi  
  Transport, które używają protokołem zorientowane na strumień, takich jak TCP i nazwane potoki obsługują uaktualnienia na podstawie strumienia transportu. W szczególności WCF zapewnia bezpieczeństwo uaktualnień. Konfiguracja zabezpieczeń transportu jest hermetyzowany przez ten element konfiguracji, za pomocą [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md), które można konfigurować i dodane do powiązania niestandardowego  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>  
- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

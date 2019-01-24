@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: e21b75e5b7e338bda54ca00abaa733775865fdb9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 15a42b8fb23aed024fede726d0b5fb731d8272f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686364"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>Wyjątki generowane przez kompilator (Przewodnik programowania w języku C#)
 Niektóre wyjątki są zgłaszane w automatycznie przez .NET Framework środowisko uruchomieniowe języka wspólnego (CLR), gdy podstawowe operacje kończą się niepowodzeniem. W poniższej tabeli wymieniono te wyjątki i ich warunków błędów.  
@@ -28,11 +28,11 @@ Niektóre wyjątki są zgłaszane w automatycznie przez .NET Framework środowis
 |<xref:System.StackOverflowException>|Zgłaszany, gdy stos wykonywania wyczerpaniu przez zbyt wiele wywołań metod oczekujące; Wskazuje zazwyczaj bardzo szczegółowe lub nieskończoną rekursję.|  
 |<xref:System.TypeInitializationException>|Zgłaszany, gdy statyczny Konstruktor zgłasza wyjątek i zgodnego `catch` istnieje klauzuli catch go.|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)  
-- [Obsługa wyjątków](../../../csharp/programming-guide/exceptions/exception-handling.md)  
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Wyjątki i obsługa wyjątków](../../../csharp/programming-guide/exceptions/index.md)
+- [Obsługa wyjątków](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

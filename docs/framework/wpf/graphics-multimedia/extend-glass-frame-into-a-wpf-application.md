@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 93eda6d6a13d6a510f2aeb06ab1c66d0cd40927f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9df6adbf9208ee58044b0ba6ef606d693c9dca7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858333"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705826"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Rozszerz szklaną klatkę na aplikację WPF
 W tym temacie pokazano, jak rozszerzyć [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] szklaną klatkę do obszaru klienckiego aplikacji Windows Presentation Foundation (WPF).  
@@ -149,7 +149,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
   
  ![Szkła ramki rozszerzone do postaci aplikacji WPF. ](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie Menedżera okien pulpitu](/windows/desktop/dwm/dwm-overview)  
- [Omówienie Rozmycie Menedżera okien pulpitu](/windows/desktop/dwm/blur-ovw)  
- [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)
+## <a name="see-also"></a>Zobacz także
+- [Omówienie Menedżera okien pulpitu](/windows/desktop/dwm/dwm-overview)
+- [Omówienie Rozmycie Menedżera okien pulpitu](/windows/desktop/dwm/blur-ovw)
+- [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 32b89caf56c010f9e6ed7b78309ef30b56b682ea
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: ade54b2f00c540a1bf4ede311e1631b2c5d7e3ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742396"
 ---
 # <a name="get-statement"></a>Get — Instrukcja
 Deklaruje `Get` procedury właściwości używane do pobierania wartości właściwości.  
@@ -36,7 +36,7 @@ End Get
 |`attributelist`|Opcjonalna. Zobacz temat [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).|  
 |`accessmodifier`|Opcjonalnie na co najwyżej jeden z `Get` i `Set` instrukcje w tej właściwości. Może to być jeden z następujących elementów:<br /><br /> -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`statements`|Opcjonalna. Jedna lub więcej instrukcji, które są uruchamiane podczas `Get` nosi nazwę procedury właściwości.|  
-|`End Get`|Wymagane. Kończy definicję `Get` procedury właściwości.|  
+|`End Get`|Wymagana. Kończy definicję `Get` procedury właściwości.|  
   
 ## <a name="remarks"></a>Uwagi  
  Dla każdej właściwości musi mieć `Get` procedury właściwości, chyba że właściwość jest oznaczona `WriteOnly`. `Get` Procedura służy do zwracania bieżącej wartości właściwości.  
@@ -82,9 +82,9 @@ End Get
   
  [!code-vb[VbVbalrStatements#30](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_4.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Set, instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)  
- [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Exit, instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Przewodnik: definiowanie klas](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)
+## <a name="see-also"></a>Zobacz także
+- [Set, instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Exit, instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)
+- [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Przewodnik: Definiowanie klas](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)

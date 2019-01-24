@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 3c0fbe4f03edb829321971831c47f669d75f4d8c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 50e11e8547c2887ace677d2c86dcf055326ff9a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708158"
 ---
 # <a name="double-c-reference"></a>double (odwołanie w C#)
 
@@ -61,13 +61,13 @@ W poniższym przykładzie [int](../../../csharp/language-reference/keywords/int.
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md)  
-- [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabela typów zmiennoprzecinkowych](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-- [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
+- [Tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md)
+- [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Tabela typów zmiennoprzecinkowych](../../../csharp/language-reference/keywords/floating-point-types-table.md)
+- [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

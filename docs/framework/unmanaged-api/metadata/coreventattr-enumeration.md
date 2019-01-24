@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4e4b9d9c7481bdc51aaf75b26b3805940875f8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d34aa954126cc26519aaea963f99299e5557d2c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743058"
 ---
 # <a name="coreventattr-enumeration"></a>CorEventAttr — Wyliczenie
-Zawiera wartości, które opisują metadanych zdarzenia.  
+Zawiera wartości, które opisują metadane zdarzenie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,16 +43,16 @@ typedef enum CorEventAttr {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`evSpecialName`|Określa, czy zdarzenia jest specjalne i że jego nazwa zawiera opis sposobu.|  
+|`evSpecialName`|Określa, czy zdarzenie jest specjalne i że jego nazwę w tym artykule opisano sposób.|  
 |`evReservedMask`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
-|`evRTSpecialName`|Określa, że środowisko uruchomieniowe języka wspólnego powinien sprawdzać kodowanie nazwy zdarzenia.|  
+|`evRTSpecialName`|Określa, że środowisko uruchomieniowe języka wspólnego powinien sprawdzać, kodowanie Nazwa zdarzenia.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

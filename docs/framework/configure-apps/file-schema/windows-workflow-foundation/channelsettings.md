@@ -3,12 +3,12 @@ title: '&lt;channelSettings&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 94a4457f-f43f-458d-a47e-2d11103ee75e
-ms.openlocfilehash: c1e7af98e96c0ac5adc64229d1c52c2a5c74cbf2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0d48955c7e8f872504514c270ffe02867f507b47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731793"
 ---
 # <a name="ltchannelsettingsgt"></a>&lt;channelSettings&gt;
 Określa ustawienia pamięci podręcznej kanału.  
@@ -17,8 +17,8 @@ Określa ustawienia pamięci podręcznej kanału.
 \<zachowania >  
 \<serviceBehaviors>  
 \<zachowanie >  
-\<sendMessageChannelCache >  
-\<channelSettings >  
+\<sendMessageChannelCache>  
+\<channelSettings>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,7 +44,7 @@ Określa ustawienia pamięci podręcznej kanału.
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |idleTimeout|Wartość przedziału czasu, która określa maksymalny interwał czasu, dla którego obiekt może być nieaktywna w pamięci podręcznej zanim zostanie usunięty.|  
-|leaseTimeout|Wartość TimeSpan określający okres czasu, po którym obiekt zostanie usunięty z pamięci podręcznej.|  
+|leaseTimeout|Wartość przedziału czasu, który określa przedział czasu, po którym obiekt zostanie usunięty z pamięci podręcznej.|  
 |maxItemsInCache|Liczba całkowita określająca maksymalną liczbę obiektów, które mogą być w pamięci podręcznej.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -54,17 +54,17 @@ Określa ustawienia pamięci podręcznej kanału.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<sendMessageChannelCache >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md)|Zachowanie usługi umożliwiające dostosowywanie udostępnianie poziomy, ustawienia pamięci podręcznej fabryki kanału i ustawienia pamięci podręcznej kanału dla przepływów pracy, który wysyła wiadomości do punktów końcowych usługi przy użyciu działań dotyczących komunikatów wysyłania pamięci podręcznej.|  
+|[\<sendMessageChannelCache>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md)|Zachowanie usługi, który umożliwia dostosowywania pamięci podręcznej udostępnianie poziomy, ustawienia pamięci podręcznej fabryki kanału i ustawienia pamięci podręcznej kanału do wysyłania wiadomości do punktów końcowych usługi za pomocą wysyłania wiadomości działania przepływami pracy.|  
   
 ## <a name="remarks"></a>Uwagi  
  To zachowanie usługi jest przeznaczony do wysyłania wiadomości do punktów końcowych usługi przepływami pracy. Te przepływy pracy są zwykle przepływy pracy klienta, ale mogą być również usługi przepływu pracy, które znajdują się w <xref:System.ServiceModel.WorkflowServiceHost>.  
   
  Domyślnie w przepływie pracy pracujących na <xref:System.ServiceModel.WorkflowServiceHost>, pamięci podręcznej używane przez <xref:System.ServiceModel.Activities.Send> wiadomości działania jest udostępniane dla całego wszystkich wystąpień przepływu pracy w <xref:System.ServiceModel.WorkflowServiceHost> (host poziomie buforowania). Klient przepływu pracy, który nie jest obsługiwany przez <xref:System.ServiceModel.WorkflowServiceHost>, pamięci podręcznej jest dostępna tylko dla wystąpienia przepływu pracy (buforowanie poziomie wystąpienia). Buforowanie jest domyślnie wyłączony dla dowolnego działania wysyłania w zawierającej punktów końcowych zdefiniowanych w konfiguracji przepływu pracy.  
   
- Aby uzyskać więcej informacji na temat zmiany pamięci podręcznej domyślne poziomy i ustawienia pamięci podręcznej dla fabryki kanałów i pamięci podręcznej kanału do udostępniania, zobacz [Zmienianie poziomów współużytkowania pamięci podręcznej dla działań wysyłania](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
+ Aby uzyskać więcej informacji o tym, jak zmienić domyślny pamięci podręcznej udostępnianie poziomy i ustawienia pamięci podręcznej fabryki kanałów i pamięci podręcznej kanału, zobacz [Zmienianie poziomów współużytkowania pamięci podręcznej dla działań wysyłania](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
   
 ## <a name="example"></a>Przykład  
- W usłudze hostowanej przepływu pracy można określić fabrykę pamięci podręcznej i kanał ustawienia pamięci podręcznej w pliku konfiguracyjnym aplikacji. W tym celu należy dodać zachowanie usługi, które zawiera ustawienia pamięci podręcznej pamięci podręcznej fabryki i kanał i dodać to zachowanie usługi z usługą. W poniższym przykładzie pokazano zawartość pliku konfiguracji, który zawiera **MyChannelCacheBehavior** zachowania usługi przy użyciu ustawień pamięci podręcznej pamięci podręcznej i kanał fabrycznej. To zachowanie usługi zostanie dodany do usługi za pośrednictwem **behaviorConfiguarion** atrybutu.  
+ W usłudze hostowanej przepływu pracy można określić fabryki pamięci podręcznej i kanał ustawienia pamięci podręcznej w pliku konfiguracyjnym aplikacji. W tym celu należy dodać zachowanie usługi, które zawiera ustawienia pamięci podręcznej pamięci podręcznej fabryki i kanał i dodać to zachowanie usługi z usługą. W poniższym przykładzie pokazano zawartość pliku konfiguracji, który zawiera **MyChannelCacheBehavior** usługi zachowanie przy użyciu ustawień pamięci podręcznej pamięci podręcznej i kanał fabrycznej. To zachowanie usługi jest dodawany do usługi za pośrednictwem **behaviorConfiguarion** atrybutu.  
   
 ```xml  
 <configuration>    
@@ -88,9 +88,9 @@ Określa ustawienia pamięci podręcznej kanału.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Activities.SendMessageChannelCache>  
- <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>  
- <xref:System.ServiceModel.Activities.Send>  
- <xref:System.ServiceModel.Activities.ChannelCacheSettings>  
- [Zmienianie poziomów współużytkowania pamięci podręcznej dla działań wysyłania](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Activities.SendMessageChannelCache>
+- <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>
+- <xref:System.ServiceModel.Activities.Send>
+- <xref:System.ServiceModel.Activities.ChannelCacheSettings>
+- [Zmienianie poziomów współużytkowania pamięci podręcznej dla działań wysyłania](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)

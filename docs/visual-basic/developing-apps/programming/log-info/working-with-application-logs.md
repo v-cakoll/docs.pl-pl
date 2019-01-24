@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: c11e1f0c99b3189c7a353e6778c701667b0a1d12
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec54e2234d11a474f89c2890353b4eab53c3d41b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693139"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Praca z dziennikami aplikacji w Visual Basic
 `My.Applicaton.Log` i `My.Log` obiektów ułatwiają zapisu rejestrowania i śledzenia informacji w dziennikach.  
@@ -21,7 +21,7 @@ ms.locfileid: "47397689"
   
  Na poniższym diagramie przedstawiono, w jaki sposób wiadomość zapisywane `WriteEntry` przekazywane do metody `WriteLine` obiekty nasłuchujące śledzenia metody dziennika:  
   
- ![Moje wywołania dziennika](../../../../visual-basic/developing-apps/programming/log-info/media/mylogcall.png "MyLogCall")  
+ ![My Log Call](../../../../visual-basic/developing-apps/programming/log-info/media/mylogcall.png "MyLogCall")  
   
  Możesz zmienić zachowanie dziennika i śledzenia słuchaczy, zmieniając pliku konfiguracji aplikacji. Na poniższym diagramie przedstawiono związek między częściami dziennika i pliku konfiguracji.  
   
@@ -42,10 +42,10 @@ ms.locfileid: "47397689"
   
  Wartości `CompanyName`, `ProductName`, i `ProductVersion` pochodzą z informacjami o zestawie aplikacji. Nazwa pliku dziennika jest *AssemblyName*.log, gdzie *AssemblyName* jest nazwą pliku zestawu bez rozszerzenia. Jeśli potrzebna jest więcej niż jeden plik dziennika, np. gdy oryginalny plik dziennika jest niedostępny podczas aplikacja próbuje zapisać w dzienniku, formularz dla nazwy pliku dziennika jest *AssemblyName*-*iteracji* .log, gdzie `iteration` jest dodatni `Integer`.  
   
- Zachowanie domyślne można przesłonić, przez dodanie lub zmiana plik konfiguracji komputera i aplikacji. Aby uzyskać więcej informacji, zobacz [wskazówki: Zmienianie gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).  
+ Zachowanie domyślne można przesłonić, przez dodanie lub zmiana plik konfiguracji komputera i aplikacji. Aby uzyskać więcej informacji, zobacz [instruktażu: Zmienianie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).  
   
 ## <a name="configuring-log-settings"></a>Konfigurowanie ustawień dziennika  
- `Log` Obiekt ma domyślną implementację, która działa bez pliku konfiguracji aplikacji, pliku app.config. Aby zmienić ustawienia domyślne, należy dodać plik konfiguracji z nowymi ustawieniami. Aby uzyskać więcej informacji, zobacz [wskazówki: filtrowanie danych wyjściowych My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
+ `Log` Obiekt ma domyślną implementację, która działa bez pliku konfiguracji aplikacji, pliku app.config. Aby zmienić ustawienia domyślne, należy dodać plik konfiguracji z nowymi ustawieniami. Aby uzyskać więcej informacji, zobacz [instruktażu: Filtrowanie danych wyjściowych My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
   
  W sekcjach konfiguracji dziennika znajdują się w `<system.diagnostics>` węzła w głównym `<configuration>` węzła pliku app.config. Informacje w dzienniku jest zdefiniowana w kilka węzłów:  
   
@@ -100,6 +100,6 @@ ms.locfileid: "47397689"
   
 -   **Należy unikać "odmowa usługi".** Jeśli aplikacja zapisuje zbyt dużej ilości informacji w dzienniku, jest wypełnienie dziennika lub ułatwić znajdowanie trudne do ważnych informacji.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [Rejestrowanie informacji z aplikacji](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- [Rejestrowanie informacji z aplikacji](../../../../visual-basic/developing-apps/programming/log-info/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ec44d4c2757555c74fe7fc27c26cc5fc87c4517
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7595b4a69dd327e448aade1e2dcba06100e55bf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638690"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint — Metoda
-Określa metodę zdefiniowane przez użytkownika, który jest punkt wejścia dla tego modułu. Ten punkt wejścia można na przykład metoda głównego użytkownika zamiast generowane przez kompilator klas zastępczych przed funkcją main.  
+Określa metodę zdefiniowanych przez użytkownika, który jest punktem wejścia dla tego modułu. Na przykład ten punkt wejścia, może być metoda głównego użytkownika zamiast wycinków generowanych przez kompilator przed funkcją main.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,13 +36,13 @@ HRESULT SetUserEntryPoint(
   
 #### <a name="parameters"></a>Parametry  
  `entryMethod`  
- [in] Token metadanych metodę, która jest wpisu użytkownika punktu.  
+ [in] Token metadanych dla metody, która jest wpis użytkownika punktu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

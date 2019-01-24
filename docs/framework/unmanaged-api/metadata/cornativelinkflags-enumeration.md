@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98a83a64a692955d5627e891e7fb3a3ef6f53476
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf0fdb1e46bfbd17505e255d539547a00eb4764c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694558"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags — Wyliczenie
-Udostępnia wartości flag używane przez konsolidator podczas łączenia kodu natywnego.  
+Udostępnia wartości flagi używane przez konsolidator, podczas łączenia kodu natywnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,19 +42,19 @@ typedef enum
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`nlfNone`|Wskazuje żadnych flag.|  
+|`nlfNone`|Wskazuje nie flagi.|  
 |`nlfLastError`|Wskazuje `setLastError` — słowo kluczowe.|  
 |`nlfNoMangle`|Wskazuje `nomangle` — słowo kluczowe.|  
 |`nlfMaxValue`|Nie używany.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

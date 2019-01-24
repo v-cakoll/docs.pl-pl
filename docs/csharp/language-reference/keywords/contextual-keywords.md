@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 3b8f9f124943d2092b65718f5dbf17831252a4a5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bce8901b4fec4386462ebaa85436b52aedc3f3bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708444"
 ---
 # <a name="contextual-keywords-c-reference"></a>Kontekstowe słowa kluczowe (odwołanie w C#)
 Kontekstowe słowo kluczowe służy do zapewnienia określone znaczenie w kodzie, ale nie jest wyrazem zastrzeżonym w języku C#. W tej sekcji wprowadzono następujące kontekstowymi słowami kluczowymi:  
@@ -23,7 +23,7 @@ Kontekstowe słowo kluczowe służy do zapewnienia określone znaczenie w kodzie
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|Definiuje typ odwołania, który umożliwia wykonywanie operacji, w których występuje Pomiń sprawdzanie typów w czasie kompilacji.|  
 |[get](../../../csharp/language-reference/keywords/get.md)|Definiuje metody dostępu właściwości lub indeksatora.|  
 |[global](../../../csharp/language-reference/keywords/global.md)|Określa domyślną globalnej przestrzeni nazw, które w przeciwnym razie jest bez nazwy.|  
-|[Częściowe](../../../csharp/language-reference/keywords/partial-type.md)|Definiuje częściowe klasy, struktury i interfejsy w tej samej jednostce kompilacyjnej.|  
+|[partial](../../../csharp/language-reference/keywords/partial-type.md)|Definiuje częściowe klasy, struktury i interfejsy w tej samej jednostce kompilacyjnej.|  
 |[remove](../../../csharp/language-reference/keywords/remove.md)|Definiuje metody dostępu zdarzeń niestandardowych, które jest wywoływane, gdy kod klienta, który anuluje subskrypcje ze zdarzeniem.|  
 |[set](../../../csharp/language-reference/keywords/set.md)|Definiuje metody dostępu właściwości lub indeksatora.|  
 |[value](../../../csharp/language-reference/keywords/value.md)|Używane, aby ustawić metody dostępu i Dodaj lub usuń programy obsługi zdarzeń.|  
@@ -34,8 +34,8 @@ Kontekstowe słowo kluczowe służy do zapewnienia określone znaczenie w kodzie
   
  Wszystkie słowa kluczowe zapytania wprowadzone w języku C# 3.0 są również kontekstowych. Aby uzyskać więcej informacji, zobacz [słowa kluczowe zapytania (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)

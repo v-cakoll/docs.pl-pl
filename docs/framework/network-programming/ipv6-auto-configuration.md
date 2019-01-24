@@ -2,12 +2,12 @@
 title: Automatyczna konfiguracja IPv6
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 31aaebaefa0d2682ee20ae93496aff42ae1633d8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2184b02f6f4c8ba4e8a79279f212ffca2cb41959
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726354"
 ---
 # <a name="ipv6-auto-configuration"></a>Automatyczna konfiguracja IPv6
 Jeden cel ważne w przypadku protokołu IPv6 jest obsługuje węzeł typu Plug and Play. Oznacza to, że powinno być możliwe do podłączyć węzła do sieci IPv6 i jest automatycznie konfigurowany bez żadnej interwencji człowieka.  
@@ -21,9 +21,9 @@ Jeden cel ważne w przypadku protokołu IPv6 jest obsługuje węzeł typu Plug a
   
  Niezależnie od tego, jak adres jest określana węzeł musi Sprawdź, czy adresu potencjalnych jest unikatowy dla łącza lokalnego. Jest to realizowane przez wysłanie żądanie sąsiadów wiadomość na adres potencjalnych. Jeśli węzeł odbiera żadnej odpowiedzi, wie, czy adres jest już używana, a następnie należy określić inny adres.  
   
-## <a name="ipv6-mobility"></a>Mobilność IPv6  
- Powszechne stosowanie urządzeń mobilnych wprowadził nowe wymaganie: urządzenie musi być w stanie dowolnie zmienić lokalizacje w Internecie IPv6 i zachować istniejące połączenia. Do tej funkcji, przenośne węzła jest przypisany adres domowy, w którym ją będą zawsze osiągalni. W momencie przenośnych węzła w domu, łączy się link do strony głównej i używa jej adres domowy. Gdy węzeł przenośny jest witryną, agenta macierzystego, który jest zazwyczaj router, przekazuje wiadomości między węzłem mobilnych i węzłów za pomocą których komunikacji.  
+## <a name="ipv6-mobility"></a>IPv6 Mobility  
+ Powszechne stosowanie urządzeń mobilnych wprowadził nowe wymaganie: Urządzenie musi mieć możliwość dowolnie zmienić lokalizacje w Internecie IPv6 i nadal obsługiwać istniejące połączenia. Do tej funkcji, przenośne węzła jest przypisany adres domowy, w którym ją będą zawsze osiągalni. W momencie przenośnych węzła w domu, łączy się link do strony głównej i używa jej adres domowy. Gdy węzeł przenośny jest witryną, agenta macierzystego, który jest zazwyczaj router, przekazuje wiadomości między węzłem mobilnych i węzłów za pomocą których komunikacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Protokół IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Gniazda](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Zobacz także
+- [Protokół IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Gniazda](../../../docs/framework/network-programming/sockets.md)

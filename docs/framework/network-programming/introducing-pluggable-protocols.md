@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 213a714a04c31954b0091071b0625449916d154d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc238f6739f7db23d570688ea3c6e2031f9699f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729135"
 ---
 # <a name="introducing-pluggable-protocols"></a>Wprowadzenie protokołów podłączanych
 Microsoft .NET Framework oferuje warstwowe, rozszerzalne i zarządzane wdrożenia usług internetowych, które można zintegrować szybkie i łatwe w swoich aplikacjach. Dostęp do Internetu klas w <xref:System.Net> i <xref:System.Net.Sockets> przestrzeni nazw może służyć do wdrożenia aplikacji opartych na sieci Web i oparty na Internecie.  
@@ -66,8 +66,8 @@ Microsoft .NET Framework oferuje warstwowe, rozszerzalne i zarządzane wdrożeni
   
  Deweloperom zapoznać się z interfejsu Windows Sockets lub tych, którzy potrzebują kontroli, dostarczone przez programowania na poziomie gniazd zorientujesz się, że **System.Net.Sockets** klasy spełniania ich potrzeb. **System.Net.Sockets** klasy są punkt przejście z kodu zarządzanego do kodu natywnego w ramach **przestrzeni nazw System.Net** klasy. W większości przypadków **System.Net.Sockets** klasy organizowania danych do ich odpowiedników Windows 32-bitowych, jak również wszystkie kontrole zabezpieczeń wymagane do obsługi.  
   
-## <a name="see-also"></a>Zobacz też  
- [Programowanie protokołów podłączanych](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Przykłady kodu usług sieciowych dla platformy .NET w galerii kodu MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a>Zobacz także
+- [Programowanie protokołów podłączanych](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Przykłady kodu usług sieciowych dla platformy .NET w galerii kodu MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

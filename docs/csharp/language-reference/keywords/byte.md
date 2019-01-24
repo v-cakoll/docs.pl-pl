@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 9c70c5a08e1509e9c8b1a007603abfbf18f03f14
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: fe2ef272c77b1af3a5b5a7f5bf3efb4836edcf23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691531"
 ---
 # <a name="byte-c-reference"></a>byte (odwołanie w C#)
 
@@ -106,13 +106,13 @@ SampleMethod((byte)5);
 
 Aby uzyskać więcej informacji, zobacz [typów całkowitych](~/_csharplang/spec/types.md#integral-types) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Byte>  
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.Byte>
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
+- [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33900f40aab85fd67540ecd6004a46e13e8eb8c2
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c0060115360cd077fd1e390be916f2f8afbadd9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713996"
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;assemblyBinding&gt; elementu &lt;środowiska uruchomieniowego&gt;
 Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.  
@@ -40,13 +40,13 @@ Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |**xmlns**|Atrybut wymagany.<br /><br /> Określa przestrzeń nazw XML wymagane w celu tworzenia powiązań zestawów. Użyj ciągu "urn: schemas-microsoft-com:asm.v1" jako wartości.|  
-|**AppliesTo**|Określa wersję środowiska uruchomieniowego, dotyczy przekierowania zestawu .NET Framework. Ten atrybut opcjonalny używa numeru wersji .NET Framework, aby wskazać dla której wersji dotyczy. Jeśli nie **appliesTo** atrybut jest określony,  **\<assemblyBinding >** element ma zastosowanie do wszystkich wersji programu .NET Framework. **AppliesTo** atrybut wprowadzono w programie .NET Framework w wersji 1.1; jest ignorowana przez program .NET Framework w wersji 1.0. Oznacza to, że wszystkie  **\<assemblyBinding >** elementy są stosowane podczas korzystania z wersji programu .NET Framework 1.0, nawet jeśli **appliesTo** atrybut jest określony.|  
+|**appliesTo**|Określa wersję środowiska uruchomieniowego, dotyczy przekierowania zestawu .NET Framework. Ten atrybut opcjonalny używa numeru wersji .NET Framework, aby wskazać dla której wersji dotyczy. Jeśli nie **appliesTo** atrybut jest określony,  **\<assemblyBinding >** element ma zastosowanie do wszystkich wersji programu .NET Framework. **AppliesTo** atrybut wprowadzono w programie .NET Framework w wersji 1.1; jest ignorowana przez program .NET Framework w wersji 1.0. Oznacza to, że wszystkie  **\<assemblyBinding >** elementy są stosowane podczas korzystania z wersji programu .NET Framework 1.0, nawet jeśli **appliesTo** atrybut jest określony.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<dependentAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|Hermetyzuje powiązania zasad oraz lokalizację zestawu dla zestawu. Użyj jednej  **\<dependentAssembly >** tag dla każdego zestawu.|  
+|[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|Hermetyzuje powiązania zasad oraz lokalizację zestawu dla zestawu. Użyj jednej  **\<dependentAssembly >** tag dla każdego zestawu.|  
 |[\<sondowanie >](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|Określa podkatalogi podczas ładowania zestawów środowiska uruchomieniowego języka wspólnego wyszukiwania.|  
 |[\<publisherPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|Określa, czy środowisko uruchomieniowe mają zastosowanie zasady wydawcy.|  
 |[\<qualifyassembly — >](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|Określa pełną nazwę zestawu, który powinien być dynamicznie ładowany, gdy część nazwy jest używany.|  
@@ -92,7 +92,7 @@ Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Zobacz także
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Przekierowywanie wersji zestawu](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

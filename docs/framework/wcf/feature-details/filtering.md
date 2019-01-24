@@ -2,12 +2,12 @@
 title: Filtrowanie
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 49813ac0f493d628a941b3060be93ef19bb1e802
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 735fd4252bb1740c149659f6c6fe81f18285914a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626111"
 ---
 # <a name="filtering"></a>Filtrowanie
 Windows Communication Foundation (WCF) systemu filtrowania umożliwia deklaratywne filtry dopasowanie wiadomości i podejmowania decyzji operacyjne. Filtry można użyć, aby określić, co należy zrobić z komunikatem, sprawdzając część komunikatu. Proces kolejkowania, na przykład, można użyć zapytania XPath 1.0 do sprawdzenia elementu priority znanych nagłówka w celu ustalenia, czy można przenieść komunikatu z przodu kolejki.  
@@ -83,5 +83,5 @@ Windows Communication Foundation (WCF) systemu filtrowania umożliwia deklaratyw
   
 -   Pozostałe parametry punktu końcowego w `EndpointAddress` określonej <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Transfer i serializacja danych](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+## <a name="see-also"></a>Zobacz także
+- [Transfer i serializacja danych](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

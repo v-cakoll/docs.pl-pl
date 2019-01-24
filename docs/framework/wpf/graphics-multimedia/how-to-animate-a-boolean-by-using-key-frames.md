@@ -1,5 +1,5 @@
 ---
-title: Jak animować boolean z wykorzystaniem klatek kluczowych
+title: 'Instrukcje: Animuj boolean z wykorzystaniem klatek kluczowych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], Booleans with key frames
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-ms.openlocfilehash: 0142748a5c8e9a4375802d1b48beec0501d37e7c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3752378d280708ffd40eaac160589af4674467e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689107"
 ---
-# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Jak animować boolean z wykorzystaniem klatek kluczowych
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Instrukcje: Animuj boolean z wykorzystaniem klatek kluczowych
 W tym przykładzie pokazano, jak animować wartość właściwości typu Boolean <xref:System.Windows.Controls.Button> kontroli przy użyciu klatek kluczowych.  
   
 ## <a name="example"></a>Przykład  
@@ -28,9 +28,9 @@ W tym przykładzie pokazano, jak animować wartość właściwości typu Boolean
   
  Aby uzyskać pełny przykład, zobacz [przykład animacji ramki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>  
- <xref:System.Windows.UIElement.IsEnabled%2A>  
- <xref:System.Windows.Controls.Button>  
- [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Klatki kluczowe — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>
+- <xref:System.Windows.UIElement.IsEnabled%2A>
+- <xref:System.Windows.Controls.Button>
+- [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Klatki kluczowe — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

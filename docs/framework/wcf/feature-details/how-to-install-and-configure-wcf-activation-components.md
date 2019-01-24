@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 8b516bb4603f33828069b5356676d8b35dc961d2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726900"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Instrukcje: Instalowanie i konfigurowanie składników aktywacji programu WCF
 W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji procesów systemu Windows (znany także jako WAS) na [!INCLUDE[wv](../../../../includes/wv-md.md)] do hostowania usług Windows Communication Foundation (WCF) protokołów sieciowych usług, które nie komunikują się za pośrednictwem protokołu HTTP. W poniższych sekcjach opisano w krokach dla tej konfiguracji:  
@@ -18,7 +18,7 @@ W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji proces
   
 -   Skonfiguruj WAS do obsługi protokołu innego niż HTTP. Poniższa procedura umożliwia skonfigurowanie [!INCLUDE[wv](../../../../includes/wv-md.md)] aktywacji TCP.  
   
- Gdy instalowanie i konfigurowanie usługi WAS, zobaczysz [instrukcje: hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) procedury utworzyć usługę WCF, która uwidacznia punkt końcowy protokołu HTTP, który wykorzystuje WAS.  
+ Gdy instalowanie i konfigurowanie usługi WAS, zobaczysz [jak: Hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) procedury utworzyć usługę WCF, która uwidacznia punkt końcowy protokołu HTTP, który wykorzystuje WAS.  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>Aby zainstalować składniki Aktywacja bez HTTP programu WCF  
   
@@ -100,8 +100,8 @@ W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji proces
     > [!NOTE]
     >  To polecenie jest pojedynczy wiersz tekstu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Aktywacja TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [Aktywacja usługi MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)  
- [Aktywowanie elementu NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Zobacz także
+- [Aktywacja TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [Aktywacja usługi MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)
+- [Aktywowanie elementu NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
+- [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)

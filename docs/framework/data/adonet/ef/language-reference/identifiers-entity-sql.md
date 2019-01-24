@@ -2,12 +2,12 @@
 title: Identyfikatory (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 390c69dec6caed1ffe6faccb5893174d2c211a6b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 19c28eb4c883cc0d1cf18cba1751115277848208
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686806"
 ---
 # <a name="identifiers-entity-sql"></a>Identyfikatory (jednostka SQL)
 Identyfikatory są używane w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] do reprezentowania aliasy wyrażenie zapytania, odwołań do zmiennych, właściwości obiektów, funkcji i tak dalej. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zawiera dwa rodzaje identyfikatorów: proste identyfikatory oraz identyfikatory w cudzysłowach.  
@@ -26,7 +26,7 @@ Identyfikatory są używane w [!INCLUDE[esql](../../../../../../includes/esql-md
   
 -   Karty.  
   
--   BACKSPACE.  
+-   Backspace.  
   
 -   Dodatkowe nawiasy kwadratowe (oznacza to, że nawiasy kwadratowe wewnątrz nawiasów kwadratowych, które odróżnić identyfikator).  
   
@@ -64,7 +64,7 @@ Identyfikatory są używane w [!INCLUDE[esql](../../../../../../includes/esql-md
 ### <a name="valid-aliases"></a>Prawidłowe aliasy  
  Prawidłowe aliasy w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prostym identyfikatorem lub cytowanego identyfikatora.  
   
-### <a name="alias-generation"></a>Generowanie aliasu  
+### <a name="alias-generation"></a>Alias Generation  
  Jeśli brak aliasu jest określona w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wyrażeniu, zapytania [!INCLUDE[esql](../../../../../../includes/esql-md.md)] spróbuje wygenerować aliasem, na podstawie następujących reguł proste:  
   
 -   Wyrażenia zapytania (w przypadku którego aliasu jest nieokreślony) w przypadku prostego lub cytowanego identyfikatora, ten identyfikator jest używany jako alias. Na przykład, `ROW(a, [b])` staje się `ROW(a AS a, [b] AS [b])`.  
@@ -120,7 +120,7 @@ SELECT 1 AS X, 2 AS X …
   
  `AVG(t.c) becomes AVG(group..(t.c))`  
   
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Wejściowy zestaw znaków](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)
+## <a name="see-also"></a>Zobacz także
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Wejściowy zestaw znaków](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)

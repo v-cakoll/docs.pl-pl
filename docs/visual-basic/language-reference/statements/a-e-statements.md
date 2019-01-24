@@ -2,12 +2,12 @@
 title: Instrukcje A-E (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af97c2bf-dddb-48a8-8eb6-798cd219430b
-ms.openlocfilehash: 89e85198fb0a5b5739e1805eb00a1b76f1a27457
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e9fbf04260329ca7ddf1afc002f9ed7fd11a1580
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672360"
 ---
 # <a name="a-e-statements"></a>A-E — Instrukcje
 Poniższa tabela zawiera listę instrukcji języka Visual Basic.  
@@ -20,7 +20,7 @@ Poniższa tabela zawiera listę instrukcji języka Visual Basic.
 |[Enum](../../../visual-basic/language-reference/statements/enum-statement.md)|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md)|[Error](../../../visual-basic/language-reference/statements/error-statement.md)|[Event](../../../visual-basic/language-reference/statements/event-statement.md)|  
 |[Exit](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje F-P](../../../visual-basic/language-reference/statements/f-p-statements.md)  
- [Instrukcje Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)  
- [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje F-P](../../../visual-basic/language-reference/statements/f-p-statements.md)
+- [Instrukcje Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)
+- [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)

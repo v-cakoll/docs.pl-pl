@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31b550c7b3cec999b0420fbdc06582a24f420abe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf6a08b17819e3d3cdaa62b0e209fc2064de4a4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425987"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688704"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion — Metoda
-Pobiera określoną wersję określonego dokumentu. Wersja dokumentu rozpoczyna się od 1 i jest zwiększany po każdej dokumentu jest aktualizowany przy użyciu [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) metody. Jeśli `pbCurrent` parametr jest `true`, jest to najnowsza wersja dokumentu.  
+Pobiera określoną wersję określonego dokumentu. Wersja dokumentu rozpoczyna się od 1 i jest zwiększana za każdym razem, dokument jest aktualizowany za pomocą [updatesymbolstore —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) metody. Jeśli `pbCurrent` parametr jest `true`, to jest najnowsza wersja dokumentu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,16 +41,16 @@ HRESULT GetDocumentVersion (
  [in] Określony dokument.  
   
  `version`  
- [out] Wskaźnik do zmiennej, która odbiera wersji określonego dokumentu.  
+ [out] Wskaźnik do zmiennej, która odbiera wersję określonego dokumentu.  
   
  `pbCurrent`  
- [out] Wskaźnik do zmiennej, która odbiera `true` , jeśli jest to najnowsza wersja dokumentu lub `false` Jeśli nie jest najnowsza wersja.  
+ [out] Wskaźnik do zmiennej, która odbiera `true` Jeśli to jest najnowsza wersja dokumentu, lub `false` Jeśli nie jest najnowsza wersja.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

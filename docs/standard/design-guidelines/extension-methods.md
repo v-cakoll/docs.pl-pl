@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
-ms.openlocfilehash: 6fedd41e901035290995d7ece1b5aa23e76f345e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621763"
 ---
 # <a name="extension-methods"></a>Metody rozszerzeń
 Metody rozszerzenia są funkcją języka, umożliwiająca metody statyczne, które można wywoływać za pomocą składni wywołania metody wystąpienia. Te metody musi mieć co najmniej jeden parametr, który reprezentuje wystąpienie, którego metoda jest używana w ramach operacji.  
@@ -48,5 +48,5 @@ Metody rozszerzenia są funkcją języka, umożliwiająca metody statyczne, któ
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)  
+- [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)
 - [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

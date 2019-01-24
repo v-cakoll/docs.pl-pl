@@ -2,12 +2,12 @@
 title: '&lt;security&gt; w &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: ec164fa8830321f90f824f85841a379d577ab5af
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 71f0c10c336a9682971bc774141cb0c3bd37c092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696389"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;security&gt; w &lt;netMsmqBinding&gt;
 Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ. Określa, czy włączono transportu lub zabezpieczeń protokołu SOAP, a jeśli tak, jakie poziomy tryb i ochrona uwierzytelniania są używane.  
@@ -16,7 +16,7 @@ Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ. Określa, czy w
 \<powiązania >  
 \<netMsmqBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
+\<security>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,7 +45,7 @@ Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ. Określa, czy w
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-netmsmqbinding.md)|Określa ustawienia zabezpieczenia wiadomości protokołu SOAP. Ten element jest typu <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>.|  
-|[\<transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netmsmqbinding.md)|Definiuje ustawienia zabezpieczenia transportu usługi MSMQ. Ten element jest typu <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netmsmqbinding.md)|Definiuje ustawienia zabezpieczenia transportu usługi MSMQ. Ten element jest typu <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -53,14 +53,14 @@ Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ. Określa, czy w
 |-------------|-----------------|  
 |powiązanie|Element powiązania [ \<netMsmqBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>  
- <xref:System.ServiceModel.NetMsmqBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>  
- <xref:System.ServiceModel.NetMsmqSecurity>  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)  
- [Kolejki programu WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>
+- <xref:System.ServiceModel.NetMsmqBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>
+- <xref:System.ServiceModel.NetMsmqSecurity>
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [Kolejki programu WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

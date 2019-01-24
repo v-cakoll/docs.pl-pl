@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54601bc705a8684508563ecf0682d84bcac8713f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cf9b842243cd7b9ae244688b0da348f63b68f08a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492042"
 ---
 # <a name="introduction-to-plinq"></a>Wprowadzenie do PLINQ
 ## <a name="what-is-a-parallel-query"></a>Co to jest zapytanie równoległe?  
@@ -59,7 +59,7 @@ ms.locfileid: "43879757"
  <xref:System.Linq.ParallelEnumerable.AsParallel%2A> — Metoda rozszerzenia wiąże operatory kolejnych zapytań, w tym przypadku `where` i `select`, <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> implementacji.  
   
 ## <a name="execution-modes"></a>Tryby wykonywania  
- Domyślnie PLINQ jest Konserwatywny. W czasie wykonywania infrastruktura PLINQ analizuje ogólną strukturę kwerendy. Jeśli zapytanie jest prawdopodobne szybsze przez przetwarzanie równoległe, program PLINQ dzieli sekwencję źródłową na zadania, które mogą być uruchamiane równolegle. Jeśli nie jest bezpieczne równoległe przetwarzanie zapytania, program PLINQ po prostu wykonuje zapytanie sekwencyjnie. Jeśli narzędzie PLINQ ma wybór między potencjalnie kosztownym algorytmem równoległym lub niedrogim algorytmem sekwencyjnym, wybiera algorytm sekwencyjny domyślnie. Możesz użyć <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> metody i <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> wyliczeniu, aby nakazać PLINQ wybrać algorytm równoległy. Jest to przydatne, gdy wiadomo, polegająca na przetestowaniu i miary, która określone zapytanie jest równolegle wykonywane szybciej. Aby uzyskać więcej informacji, zobacz [porady: Określanie trybu wykonywania w PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
+ Domyślnie PLINQ jest Konserwatywny. W czasie wykonywania infrastruktura PLINQ analizuje ogólną strukturę kwerendy. Jeśli zapytanie jest prawdopodobne szybsze przez przetwarzanie równoległe, program PLINQ dzieli sekwencję źródłową na zadania, które mogą być uruchamiane równolegle. Jeśli nie jest bezpieczne równoległe przetwarzanie zapytania, program PLINQ po prostu wykonuje zapytanie sekwencyjnie. Jeśli narzędzie PLINQ ma wybór między potencjalnie kosztownym algorytmem równoległym lub niedrogim algorytmem sekwencyjnym, wybiera algorytm sekwencyjny domyślnie. Możesz użyć <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> metody i <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> wyliczeniu, aby nakazać PLINQ wybrać algorytm równoległy. Jest to przydatne, gdy wiadomo, polegająca na przetestowaniu i miary, która określone zapytanie jest równolegle wykonywane szybciej. Aby uzyskać więcej informacji, zobacz [jak: Określanie trybu wykonywania w PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
   
 ## <a name="degree-of-parallelism"></a>Stopień równoległości  
  Domyślnie PLINQ używa wszystkich procesorów na komputerze-hoście. Możesz nakazać PLINQ używać nie więcej niż określoną liczbę procesorów za pomocą <xref:System.Linq.ParallelEnumerable.WithDegreeOfParallelism%2A> metody. Jest to przydatne, jeśli chcesz upewnić się, że inne procesy uruchomione na komputerze otrzymują określoną ilość czasu procesora CPU. Poniższy urywek ogranicza zapytanie do wykorzystywania maksymalnie dwóch procesorów.  
@@ -80,7 +80,7 @@ ms.locfileid: "43879757"
  Aby uzyskać więcej informacji, zobacz [zamawianie zachowywania w PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).  
   
 ## <a name="parallel-vs-sequential-queries"></a>Równoległe programu vs. Zapytania sekwencyjne  
- Niektóre operacje wymagają, że dane źródłowe były dostarczane w sposób sekwencyjny. <xref:System.Linq.ParallelEnumerable> Zapytania, operatory powracają do trybu sekwencyjnego automatycznie, gdy jest to wymagane. Operatory zapytań zdefiniowanych przez użytkownika i delegatów użytkownika, które wymagają wykonywania sekwencyjnego, mechanizm PLINQ zawiera <xref:System.Linq.ParallelEnumerable.AsSequential%2A> metody. Kiedy używasz <xref:System.Linq.ParallelEnumerable.AsSequential%2A>, wszystkie kolejne operatory w zapytaniu są wykonywane sekwencyjnie aż do <xref:System.Linq.ParallelEnumerable.AsParallel%2A> wywoływana jest ponownie. Aby uzyskać więcej informacji, zobacz [porady: łączenie równoległych i sekwencyjnych zapytań LINQ](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md).  
+ Niektóre operacje wymagają, że dane źródłowe były dostarczane w sposób sekwencyjny. <xref:System.Linq.ParallelEnumerable> Zapytania, operatory powracają do trybu sekwencyjnego automatycznie, gdy jest to wymagane. Operatory zapytań zdefiniowanych przez użytkownika i delegatów użytkownika, które wymagają wykonywania sekwencyjnego, mechanizm PLINQ zawiera <xref:System.Linq.ParallelEnumerable.AsSequential%2A> metody. Kiedy używasz <xref:System.Linq.ParallelEnumerable.AsSequential%2A>, wszystkie kolejne operatory w zapytaniu są wykonywane sekwencyjnie aż do <xref:System.Linq.ParallelEnumerable.AsParallel%2A> wywoływana jest ponownie. Aby uzyskać więcej informacji, zobacz [jak: Łączenie równoległych i sekwencyjnych zapytań LINQ](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md).  
   
 ## <a name="options-for-merging-query-results"></a>Opcje scalania wyników zapytań  
  Gdy zapytanie PLINQ jest wykonywane równolegle, jego wyniki z każdego wątku roboczego musi zostać połączony ponownie do głównego wątku, do spożycia przez `foreach` pętli (`For Each` w języku Visual Basic), lub wstawiania do listy lub tablicy. W niektórych przypadkach może być korzystne, aby określić określony rodzaj operacji scalania, na przykład, w celu generowania wyników znacznie szybciej. W tym celu narzędzie PLINQ obsługuje <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> metody i <xref:System.Linq.ParallelMergeOptions> wyliczenia. Aby uzyskać więcej informacji, zobacz [opcje scalania w PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
@@ -100,14 +100,14 @@ ms.locfileid: "43879757"
   
  Istnieje możliwość, że zapytanie PLINQ może kontynuować przetwarzanie niektóre elementy po ustawieniu tokenu odwołania.  
   
- Aby uzyskać szybsze odpowiedzi może również odpowiadać na żądania anulowania w długo wykonywanych delegatach użytkownika. Aby uzyskać więcej informacji, zobacz [porady: Anulowanie zapytania PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
+ Aby uzyskać szybsze odpowiedzi może również odpowiadać na żądania anulowania w długo wykonywanych delegatach użytkownika. Aby uzyskać więcej informacji, zobacz [jak: Anulowanie zapytania PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   
 ## <a name="exceptions"></a>Wyjątki  
  Po wykonaniu zapytania PLINQ, wiele wyjątków może być wyrzucanych z różnych wątków jednocześnie. Ponadto kod do obsługi wyjątków może być w innym wątku niż kod, który wygenerował wyjątek. Program PLINQ korzysta <xref:System.AggregateException> typ do hermetyzacji wszystkich wyjątków, które zostały zgłoszone przez zapytanie i kierowania tych wyjątków z powrotem do wątku wywołującego. Na wątku wywołującym wymagane jest tylko jedna blokada try-catch. Jednakże, można wykonać iterację przez wszystkie wyjątki, które są hermetyzowane w <xref:System.AggregateException> i przechwytywać tych, które możesz można bezpiecznie dokonać przywrócenia. W rzadkich przypadkach niektóre wyjątki mogą być generowane, które nie zostały zapakowane w <xref:System.AggregateException>, i <xref:System.Threading.ThreadAbortException>s nie również zostały zapakowane.  
   
  Kiedy wyjątki mogą się pojawiać z powrotem w sąsiednim wątku, jest możliwe, że zapytanie może w dalszym ciągu przetwarzać niektóre elementy po wyjątku jest zgłaszany.  
   
- Aby uzyskać więcej informacji, zobacz [porady: obsługa wyjątków w zapytaniu PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Obsługa wyjątków w zapytaniu PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="custom-partitioners"></a>Niestandardowe Partycjonery  
  W niektórych przypadkach może poprawić wydajność zapytań przez napisanie niestandardowego partycjonera, który wykorzystuje pewne cechy danych źródłowych. W zapytaniu sam niestandardowy partycjoner jest wyliczanym obiektem, którego dotyczy kwerenda.  
@@ -118,9 +118,9 @@ ms.locfileid: "43879757"
  Program PLINQ obsługuje stałą liczbę partycji (chociaż dane mogą być dynamicznie przypisane do tych partycji w czasie wykonywania dla równoważenia obciążenia.). <xref:System.Threading.Tasks.Parallel.For%2A> i <xref:System.Threading.Tasks.Parallel.ForEach%2A> obsługują tylko dynamiczne partycjonowanie, co oznacza, że liczba partycji zmienia w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [niestandardowe Partycjonery dla PLINQ i TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
   
 ## <a name="measuring-plinq-performance"></a>Mierzenie wydajności programu PLINQ  
- W wielu przypadkach zapytanie może odbywać się równolegle, ale obciążenie konfigurowania zapytania równoległego przewyższa uzyskane korzyści wydajności. Jeśli zapytanie nie wykonuje wielu obliczeń lub jeśli źródło danych jest małe, zapytanie PLINQ może być wolniejsze niż sekwencyjne zapytanie LINQ to Objects. Analizatora wydajności równoległej w Visual Studio Team Server umożliwia porównać wydajność różnych zapytań, zlokalizować wąskie gardła przetwarzania i aby określić, czy Twoje zapytanie działa równolegle czy w sekwencji. Aby uzyskać więcej informacji, zobacz [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) i [jak: wydajności zapytań PLINQ miary](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
+ W wielu przypadkach zapytanie może odbywać się równolegle, ale obciążenie konfigurowania zapytania równoległego przewyższa uzyskane korzyści wydajności. Jeśli zapytanie nie wykonuje wielu obliczeń lub jeśli źródło danych jest małe, zapytanie PLINQ może być wolniejsze niż sekwencyjne zapytanie LINQ to Objects. Analizatora wydajności równoległej w Visual Studio Team Server umożliwia porównać wydajność różnych zapytań, zlokalizować wąskie gardła przetwarzania i aby określić, czy Twoje zapytanie działa równolegle czy w sekwencji. Aby uzyskać więcej informacji, zobacz [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) i [jak: Mierzenie wydajności zapytań PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Ogólne informacje o przyspieszeniach w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

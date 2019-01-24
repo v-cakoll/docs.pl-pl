@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdd610ade931bedc9ee387b65b18efd1909ef58b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a93052cba4693e63b3cb702a5ab8f6e15a8d8dec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684492"
 ---
 # <a name="resolving-assembly-loads"></a>Rozwiązywanie załadowań zestawów
 Program .NET Framework oferuje <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenia dla aplikacji wymagających większej kontroli nad ładowania zestawu. Obsługa tego zdarzenia, aplikacja może załadowania zestawu w kontekstu ładowania z poza normalny sondowania ścieżek, wybierz której z kilku wersji zestawu do załadowania, emitują zestawu dynamicznego i przywrócić go i tak dalej. Ten temat zawiera wskazówki dotyczące obsługi <xref:System.AppDomain.AssemblyResolve> zdarzeń.  
@@ -72,7 +72,7 @@ Program .NET Framework oferuje <xref:System.AppDomain.AssemblyResolve?displayPro
  Podstawowe reguły obsługi <xref:System.AppDomain.AssemblyResolve> zdarzenie jest, że nie powinien próbuj zwrócić zestawu nie rozpoznają. Podczas pisania programu obsługi, należy wiedzieć, zestawy, które mogą spowodować, że zdarzenia do wywołania. Twoja procedura obsługi powinna zwracać wartość null dla innych zestawów.  
   
 > [!IMPORTANT]
->  Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], <xref:System.AppDomain.AssemblyResolve> zdarzenie jest wywoływane dla zestawów satelickich. Ta zmiana ma wpływ na program obsługi zdarzeń, który został napisany dla starszej wersji programu .NET Framework, jeśli program obsługi próbuje rozpoznać wszystkie żądania ładowania zestawu. Ignoruj zestawy, które nie rozpoznają procedury obsługi zdarzeń nie ma wpływu ta zmiana: zwracają wartość null, a po nim normalne mechanizmy rezerwowego.  
+>  Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], <xref:System.AppDomain.AssemblyResolve> zdarzenie jest wywoływane dla zestawów satelickich. Ta zmiana ma wpływ na program obsługi zdarzeń, który został napisany dla starszej wersji programu .NET Framework, jeśli program obsługi próbuje rozpoznać wszystkie żądania ładowania zestawu. Ta zmiana nie dotyczy programów obsługi zdarzeń, które Ignoruj zestawy, które nie rozpoznają: Zwracają wartość null, a po nim normalne mechanizmy rezerwowego.  
   
  Podczas ładowania zestawu, program obsługi zdarzeń nie mogą używać dowolnego z <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> przeciążenia metody, które mogą powodować <xref:System.AppDomain.AssemblyResolve> zdarzenia można podniesione cyklicznie, ponieważ może to prowadzić do przepełnienia stosu. (Zobacz listę podane wcześniej w tym temacie). Dzieje się tak nawet wtedy, gdy zapewniają obsługę dla żądania załadowania wyjątków, ponieważ jest zgłaszany żaden wyjątek, dopóki nie zwrócono wszystkich procedur obsługi zdarzeń. W związku z tym, poniższy kod powoduje przepełnienie stosu Jeśli `MyAssembly` nie można odnaleźć:  
   
@@ -80,6 +80,6 @@ Program .NET Framework oferuje <xref:System.AppDomain.AssemblyResolve?displayPro
  [!code-csharp[AssemblyResolveRecursive#1](../../../samples/snippets/csharp/VS_Snippets_CLR/assemblyresolverecursive/cs/example.cs#1)]
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
-- [Najlepsze praktyki dotyczące ładowania zestawu](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>Zobacz także
+- [Najlepsze praktyki dotyczące ładowania zestawu](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)

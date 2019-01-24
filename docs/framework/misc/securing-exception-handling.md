@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe978930a9f84e0084f79f5fe585a1ecc3bf4eb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679386"
 ---
 # <a name="securing-exception-handling"></a>Zabezpieczanie obsługi wyjątków
-W programie Visual C++ i Visual Basic, wyrażenie filtru dalsze górę stosu jest uruchamiany przed każdą **koniec** instrukcji. **Catch** blok skojarzonych z tym filtru jest uruchamiany po **finally** instrukcji. Aby uzyskać więcej informacji, zobacz [wyjątki Using User-Filtered](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). W tej sekcji sprawdza, czy zabezpieczenia tego zamówienia. Należy wziąć pod uwagę w poniższym przykładzie pseudocode, która ilustruje kolejności, w których instrukcji filtrów i **koniec** instrukcje uruchamiania.  
+W programie Visual C++ i Visual Basic, wyrażenie filtru do dalszego w górę stosu jest uruchamiany przed każdą **na koniec** instrukcji. **Catch** bloku skojarzony z filtrem, który jest uruchamiany po **na koniec** instrukcji. Aby uzyskać więcej informacji, zobacz [wyjątki Using User-Filtered](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). Tej części są rozpatrywane ryzyko związane z tej kolejności. Rozważmy następujący przykład pseudokodzie, który ilustruje kolejność, w której instrukcji filtrów i **na koniec** instrukcje uruchamiania.  
   
 ```cpp  
 void Main()   
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- Filtr jest uruchamiany przed **koniec** instrukcji, więc problemy dotyczące zabezpieczeń mogą zostać wprowadzone przez wszystko, co sprawia, że stan zmienianie, gdzie wykonywanie innych kodu można wykorzystać. Na przykład:  
+ Filtr, który jest uruchamiany przed **na koniec** instrukcji, dzięki czemu problemy z zabezpieczeniami mogą zostać wprowadzone przez wszystko, co sprawia, że stan zmiany, których wykonanie innego kodu, możesz wykorzystać. Na przykład:  
   
 ```cpp  
 try   
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- Ta pseudocode umożliwia filtr górę stosu do uruchomienia dowolnego kodu. Inne przykłady działań, które będą miały ten sam efekt są tymczasowe podszywania się pod innego tożsamości, ustawienie flaga wewnętrzna omija niektóre sprawdzania zabezpieczeń lub zmiana kultura skojarzonym z wątkiem. Zalecanym rozwiązaniem jest wprowadzenie obsługi wyjątków do izolowania zmiany kodu do stanu wątku z bloków filtr wywołań. Jest ważne, czy program obsługi wyjątku prawidłowo wprowadzić lub, ten problem nie zostanie rozwiązany. Poniższy przykład zmienia kultury interfejsu użytkownika, ale podobnie narażeni każdego rodzaju zmiany stanu wątku.  
+ Ta pseudokodzie umożliwia filtr wyższego rzędu stosu do uruchamiania dowolnego kodu. Inne przykłady działań, które będą miały ten sam efekt są tymczasowe personifikacja innego tożsamości, ustawienie flagi wewnętrznej omija niektóre sprawdzanie zabezpieczeń lub zmiana kulturę skojarzonych z wątkiem. Zalecanym rozwiązaniem jest wprowadzenie obsługi wyjątków do izolowania zmian w kodzie na stan wątku z bloków filtru obiekty wywołujące. Jednak należy prawidłowo wprowadzane obsługi wyjątków lub ten problem nie zostanie rozwiązany. Poniższy przykład zmienia kultura interfejsu użytkownika, ale podobnie narażeni każdego rodzaju zmiany stanu wątku.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Poprawne w tym przypadku będzie opakowywać istniejące **spróbuj**/**koniec** blok w **spróbuj**/**catch** blok. Po prostu wprowadzenie **catch throw** klauzuli do istniejącego **spróbuj**/**koniec** bloku nie rozwiąże to problemu, jak pokazano w poniższym przykładzie.  
+ Słuszność poprawki w tym przypadku jest opakowanie, istniejące **spróbuj**/**na koniec** bloku **spróbuj**/**catch** blok. Po prostu Przedstawiamy **catch throw** klauzuli się z istniejącymi **spróbuj**/**na koniec** bloku nie rozwiąże problemu, jak pokazano w poniższym przykładzie.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- To nie rozwiąże problemu, ponieważ **koniec** instrukcji nie został wcześniej uruchomiony `FilterFunc` pobiera formant.  
+ To nie rozwiąże problemu, ponieważ **na koniec** instrukcji nie został wcześniej uruchomiony `FilterFunc` przejmie kontrolę.  
   
- Poniższy przykład problem został rozwiązany przez zapewnienie, że **koniec** klauzuli zostało wykonane przed oferty wyjątek się bloki filtru wyjątków wywołań.  
+ Poniższy przykład naprawia problem przez zapewnienie, że **na koniec** klauzuli zostało wykonane przed oferty wyjątek bloki filtru wyjątków obiekty wywołujące.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -160,5 +160,5 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Zobacz także
+- [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)

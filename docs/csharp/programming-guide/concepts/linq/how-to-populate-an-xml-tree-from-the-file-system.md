@@ -1,15 +1,15 @@
 ---
-title: 'Porady: wypełnianie drzewa XML z systemu plików (C#)'
+title: 'Instrukcje: Wypełnianie drzewa XML z systemu plików (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: 7bddab1942c5a673969e271338f17705914f81a4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 664994dad75871a5b70f2c132df67d1658808c32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705813"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Porady: wypełnianie drzewa XML z systemu plików (C#)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Instrukcje: Wypełnianie drzewa XML z systemu plików (C#)
 Typowe i przydatne stosowania drzew XML jest do przechowywania danych hierarchicznych nazwa/wartość. Możesz można wypełnianie drzewa XML z danymi hierarchicznymi i następnie wykonuje zapytania, przekształcania go i jeśli to konieczne, serializować go. W tym scenariuszu użycia nie są wiele semantyki określonych XML, takie jak przestrzenie nazw i zachowania biały znak, ważne. Zamiast tego której używasz drzewa XML jako mały w pamięci, bazie danych hierarchicznych jednego użytkownika.  
   
 ## <a name="example"></a>Przykład  
@@ -116,6 +116,6 @@ class Program
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zaawansowane techniki zapytań (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

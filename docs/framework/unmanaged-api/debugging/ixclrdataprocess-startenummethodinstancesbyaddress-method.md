@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 88ce9dd928871d71058fe28c243a9fb51b729778
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 9afbf0665b114169661a74b60c744203d160fed3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662624"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>Metoda IXCLRDataProcess::StartEnumMethodInstancesByAddress
 
@@ -57,7 +57,7 @@ Podana metoda jest częścią `IXCLRDataProcess` interfejs i odnosi się do 27 g
 **Biblioteka:** Brak  
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wyliczenie CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

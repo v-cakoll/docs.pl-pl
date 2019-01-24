@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d562aef58c1e3b5bbbe690b54eb08384052c657
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d058c1ad070e2ffacdf2129c6d9657d0fc1d01e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737286"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage — Funkcja
-Pobiera zestawu obraz to binarna reprezentacja pod adresem określonym pamięci.  
+Pobiera reprezentacja binarna obrazu zestawu pod adresem określonym pamięci.  
   
- Ta funkcja jest przestarzała. Użyj [ICLRStrongName::StrongNameGetBlobFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md) metody zamiast tego.  
+ Ta funkcja jest przestarzała. Użyj [iclrstrongname::strongnamegetblobfromimage —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md) metody zamiast tego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,33 +41,33 @@ BOOLEAN StrongNameGetBlobFromImage (
   
 #### <a name="parameters"></a>Parametry  
  `pbBase`  
- [in] Adres pamięci manifest zestawu mapowane.  
+ [in] Adres pamięci manifestu zestawu zamapowany.  
   
  `dwLength`  
- [in] Rozmiar w bajtach obrazu w `pbBase`.  
+ [in] Rozmiar w bajtach, obraz u `pbBase`.  
   
  `pbBlob`  
- [in] Bufor zawiera binarna reprezentacja obrazu.  
+ [in] Bufor do przechowywania reprezentacja binarna obrazu.  
   
  `pcbBlob`  
- [w, out] Żądane maksymalny rozmiar w bajtach `pbBlob`. Po powrocie, rzeczywisty rozmiar w bajtach z `pbBlob`.  
+ [out w] Maksymalny rozmiar w bajtach, żądane `pbBlob`. Po powrocie, rzeczywisty rozmiar w bajtach, z `pbBlob`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Po pomyślnym ukończeniu; w przeciwnym razie `false`.  
+ `true` Po pomyślnym zakończeniu; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `StrongNameGetBlobFromImage` funkcji nie powiodło się, wywołania [strongnameerrorinfo —](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funkcji, aby pobrać ostatniego wygenerowany błąd.  
+ Jeśli `StrongNameGetBlobFromImage` funkcja nie jest ukończone pomyślnie, wywołaj [strongnameerrorinfo —](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funkcję, aby pobrać ostatni błąd wygenerowany.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** StrongName.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [StrongNameGetBlobFromImage, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  
- [StrongNameGetBlob, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)  
- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [StrongNameGetBlobFromImage, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
+- [StrongNameGetBlob, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
+- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

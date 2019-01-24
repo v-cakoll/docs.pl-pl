@@ -2,12 +2,12 @@
 title: Fabryka kanałów i buforowanie
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: fa333d3ffa0063e226405eb8e715f9ee99f68432
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 055c9d1412338bb444ca33556f3c94b1ffc4c6a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151333"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745344"
 ---
 # <a name="channel-factory-and-caching"></a>Fabryka kanałów i buforowanie
 Aplikacje klienta WCF <xref:System.ServiceModel.ChannelFactory%601> klasy, aby utworzyć kanał komunikacji z usługą WCF.  Tworzenie <xref:System.ServiceModel.ChannelFactory%601> wystąpień powoduje pewne nadmiarowe obciążenie, ponieważ obejmuje ona następujące operacje:  
@@ -111,9 +111,9 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
   
  W przykładzie powyżej, wszystkie wystąpienia elementu `TestClient` użyć różnych kanałów fabryk. Jest to przydatne, gdy każdy punkt końcowy ma inne wymagania dotyczące zabezpieczeń i nie ma sensu do pamięci podręcznej.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.ClientBase%601>  
- [Kompilowanie klientów](../../../../docs/framework/wcf/building-clients.md)  
- [Klienci](../../../../docs/framework/wcf/feature-details/clients.md)  
- [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Jak: Używanie elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.ClientBase%601>
+- [Kompilowanie klientów](../../../../docs/framework/wcf/building-clients.md)
+- [Klienci](../../../../docs/framework/wcf/feature-details/clients.md)
+- [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Instrukcje: Używanie elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

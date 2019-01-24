@@ -2,12 +2,12 @@
 title: '&lt;mtomMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
-ms.openlocfilehash: a59f4f4ca5024b492a1e99b50776870032077818
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b9fe4a9eb0176c97920c0dde5cb003c8ca1ae989
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697442"
 ---
 # <a name="ltmtommessageencodinggt"></a>&lt;mtomMessageEncoding&gt;
 Określa kodowanie i wersjonowanie wiadomości używanych dla wiadomości protokołu SOAP wiadomości transmisji optymalizacji mechanizm (MTOM) na podstawie.  
@@ -16,7 +16,7 @@ Określa kodowanie i wersjonowanie wiadomości używanych dla wiadomości protok
 \<powiązania >  
 \<customBinding>  
 \<Powiązanie >  
-\<mtomMessageEncoding >  
+\<mtomMessageEncoding>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,11 +35,11 @@ Określa kodowanie i wersjonowanie wiadomości używanych dla wiadomości protok
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|wartość maxBufferSize|Liczba całkowita określająca maksymalny rozmiar buforu, który może być używany.|  
+|maxBufferSize|Liczba całkowita określająca maksymalny rozmiar buforu, który może być używany.|  
 |maxReadPoolSize|Liczba całkowita określająca ile komunikatów można jednocześnie odczytać bez przydziału nowych czytników. Większe rozmiary pul powoduje, że system bardziej odporne na skoki działania kosztem większy zestaw roboczy. Wartość domyślna to 64.|  
 |maxWritePoolSize|Liczba całkowita określająca ile komunikatów można jednocześnie wysłać bez przydziału nowych modułów zapisujących. Większe rozmiary pul powoduje, że system bardziej odporne na skoki działania kosztem większy zestaw roboczy. Wartość domyślna to 16.|  
-|Element messageVersion|Określa wersję SOAP komunikatów wysyłanych za pomocą tego powiązania. Prawidłowe wartości to:<br /><br /> -Soap11Addressing1<br />-Soap12Addressing10<br /><br /> Wartość domyślna to Soap12Addressing10. Ten atrybut jest typu <xref:System.ServiceModel.Channels.MessageVersion>.|  
-|writeEncoding|Określa kodowanie do użycia w celu emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości to:<br /><br /> -UnicodeFffeTextEncoding: Unicode BigEndian z kodowaniem<br />-Utf16TextEncoding: Kodowanie Unicode<br />-Utf8TextEncoding: 8-bitowego kodowania<br /><br /> Wartość domyślna to Utf8TextEncoding. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
+|messageVersion|Określa wersję SOAP komunikatów wysyłanych za pomocą tego powiązania. Prawidłowe wartości to:<br /><br /> -Soap11Addressing1<br />-Soap12Addressing10<br /><br /> Wartość domyślna to Soap12Addressing10. Ten atrybut jest typu <xref:System.ServiceModel.Channels.MessageVersion>.|  
+|writeEncoding|Określa kodowanie do użycia w celu emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości to:<br /><br /> -   UnicodeFffeTextEncoding: Unicode BigEndian z kodowaniem<br />-   Utf16TextEncoding: Kodowanie Unicode<br />-   Utf8TextEncoding: 8-bitowego kodowania<br /><br /> The default is Utf8TextEncoding. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -67,14 +67,14 @@ Określa kodowanie i wersjonowanie wiadomości używanych dla wiadomości protok
                      textEncoding="utf-8" />
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.MtomMessageEncodingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
- [Kodowanie komunikatu](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [Wybieranie kodera komunikatów](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.MtomMessageEncodingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
+- [Kodowanie komunikatu](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [Wybieranie kodera komunikatów](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

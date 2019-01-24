@@ -2,12 +2,12 @@
 title: Hostowanie w aplikacji usługi systemu Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 2b3935babec0c7cdc3ffca5dd11d693fdfee7a89
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 52c62ef1be7dafc97c5cf958f30444e47f900e92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621980"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hostowanie w aplikacji usługi systemu Windows
 Usługi Windows (znana wcześniej jako usługi Windows NT) zapewniają proces modelu szczególnie odpowiednie dla aplikacji, które muszą znajdować się w pliku wykonywalnym długotrwałych i nie są wyświetlane w dowolnej postaci interfejsu użytkownika. Okres istnienia procesu systemu Windows, aplikacji usługi jest zarządzany przez Menedżera sterowania usługami (SCM), dzięki czemu można uruchomić, zatrzymać i oraz ich wstrzymywania aplikacji usług Windows. Możesz skonfigurować proces usługi Windows do automatycznego uruchamiania podczas uruchamiania komputera, dzięki czemu odpowiednie środowisko hostingu dla aplikacji "zawsze włączone". Aby uzyskać więcej informacji na temat aplikacji usług Windows zobacz [aplikacji usług Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -36,10 +36,10 @@ Usługi Windows (znana wcześniej jako usługi Windows NT) zapewniają proces mo
   
      Aplikacje usług Windows, które prowadzą hosting usług WCF są wdrożone i zarządzane w taki sam sposób, zgodnie z aplikacjami usług Windows, które nie korzystanie z usługi WCF.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceProcess>  
- [Przewodnik: tworzenie aplikacji usługowej systemu Windows w Projektancie składników](https://go.microsoft.com/fwlink/?LinkId=94875)  
- [Instrukcje: hostowanie usługi WCF w usłudze zarządzanej systemu Windows](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
- [Host usług systemu Windows](../../../../docs/framework/wcf/samples/windows-service-host.md)  
- [Architektura programowania aplikacji usług](https://go.microsoft.com/fwlink/?LinkId=94876)  
- [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceProcess>
+- [Przewodnik: Tworzenie aplikacji usługi Windows w Projektancie składników](https://go.microsoft.com/fwlink/?LinkId=94875)
+- [Instrukcje: Hostowanie usługi WCF w usłudze Windows zarządzanych](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Host usług systemu Windows](../../../../docs/framework/wcf/samples/windows-service-host.md)
+- [Architektura programowania aplikacji usług](https://go.microsoft.com/fwlink/?LinkId=94876)
+- [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)

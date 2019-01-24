@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dda1176c6d547421dab9663379329043b614783e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 52800b204873604d927193e1280f2eb6ccbcce0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638369"
 ---
 # <a name="runtime-directive-elements"></a>Elementy dyrektyw środowiska uruchomieniowego
 Format pliku (rd.xml) dyrektyw środowiska uruchomieniowego obsługuje następujące elementy dyrektyw środowiska uruchomieniowego. Zobacz [dyrektywy środowiska uruchomieniowego (rd.xml) odwołanie do pliku konfiguracji](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) dla hierarchiczną reprezentację.  
@@ -20,7 +20,7 @@ Format pliku (rd.xml) dyrektyw środowiska uruchomieniowego obsługuje następuj
  [\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)  
  Dotyczy wszystkich typów w zestawie zasad wykonywania. To jest elementem podrzędnym [ \<aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) i [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) elementów.  
   
- [\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)  
+ [\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)  
  Jeśli jego zawierający [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) dyrektywa jest atrybut, elementy kodu, do których zastosowano ten atrybut ma zastosowanie zasad wykonywania.  
   
  [\<Dyrektywy >](../../../docs/framework/net-native/directives-element-net-native.md)  
@@ -29,16 +29,16 @@ Format pliku (rd.xml) dyrektyw środowiska uruchomieniowego obsługuje następuj
  [\<Zdarzenie >](../../../docs/framework/net-native/event-element-net-native.md)  
  Zastosowanie zasad wykonywania na zdarzenie. To jest elementem podrzędnym [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) i [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementów.  
   
- [\<pole >](../../../docs/framework/net-native/field-element-net-native.md)  
+ [\<Field>](../../../docs/framework/net-native/field-element-net-native.md)  
  Stosuje zasady środowiska uruchomieniowego do pola. To jest elementem podrzędnym [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) i [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementów.  
   
- [\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)  
+ [\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)  
  Stosuje zasady obsługi z typem parametru typu ogólnego lub metody.  
   
- [\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)  
+ [\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)  
  W przypadku zasad środowiska uruchomieniowego do typu, że zasady zostały zastosowane do zawierający typ lub metoda.  
   
- [\<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md)  
+ [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)  
  Dotyczy wszystkich typów w zestawie zasad wykonywania. To jest elementem podrzędnym [ \<aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) i [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) elementów.  
   
  [\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)  
@@ -50,10 +50,10 @@ Format pliku (rd.xml) dyrektyw środowiska uruchomieniowego obsługuje następuj
  [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)  
  Stosuje zasady środowiska uruchomieniowego dla wszystkich typów w przestrzeni nazw.  
   
- [\<Parametr >](../../../docs/framework/net-native/parameter-element-net-native.md)  
+ [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)  
  Stosuje zasady środowiska uruchomieniowego do typu argumentu przekazanego do metody.  
   
- [\<Właściwość >](../../../docs/framework/net-native/property-element-net-native.md)  
+ [\<Property>](../../../docs/framework/net-native/property-element-net-native.md)  
  Stosuje zasady środowiska uruchomieniowego do właściwości. To jest elementem podrzędnym [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) i [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elementów.  
   
  [\<Podtypy >](../../../docs/framework/net-native/subtypes-element-net-native.md)  
@@ -65,8 +65,8 @@ Format pliku (rd.xml) dyrektyw środowiska uruchomieniowego obsługuje następuj
  [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)  
  Skonstruowany typ rodzajowy dotyczy zasad wykonywania.  
   
- [\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
+ [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
  Zastosowanie zasad wykonywania na typ reprezentowany przez <xref:System.Type> argument przekazywany do metody.  
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja pliku konfiguracji RD.XML](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Dokumentacja pliku konfiguracji RD.XML](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

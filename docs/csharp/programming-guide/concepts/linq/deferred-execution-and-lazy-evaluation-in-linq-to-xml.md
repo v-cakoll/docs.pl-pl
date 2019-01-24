@@ -2,12 +2,12 @@
 title: Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: baf6a26b1579c17adfc60b27b485ba3af66c67d7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 83fdc73b583a2c8aba5383f4a5b3af11a1f6f9c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709692"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)
 Operacje zapytań i osi są często stosowane do użycia odroczonego wykonania. W tym temacie opisano wymagania i zalety wykonanie odroczone i kilka kwestii dotyczących wdrażania.  
@@ -33,9 +33,9 @@ Operacje zapytań i osi są często stosowane do użycia odroczonego wykonania. 
   
 -   [Przykład wykonania odroczonego (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Tworzenie łańcuchów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)  
-- [Pojęcia i terminologia (Przekształcanie funkcjonalne) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
-- [Operacje agregacji (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
+- [Samouczek: Łączenie łańcuchowe zapytań (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [Pojęcia i terminologia (Przekształcanie funkcjonalne) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
+- [Operacje agregacji (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)
 - [yield](../../../../csharp/language-reference/keywords/yield.md)

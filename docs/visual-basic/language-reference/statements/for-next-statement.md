@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 8c54189499b7d5b52cf93b4a0ae6cc47356bf57e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 703a30a558067b386c6bb5288012094418d61ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746276"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next — Instrukcja (Visual Basic)
-Powtarza określoną liczbę razy grupę instrukcji.  
+Powtarza grupę instrukcji określoną liczbę razy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,76 +49,76 @@ Next [ counter ]
   
 |Część|Opis|  
 |----------|-----------------|  
-|`counter`|Wymagane w `For` instrukcji. Zmienna numeryczna. Zmienna sterująca pętli. Aby uzyskać więcej informacji, zobacz [Argument licznika](#BKMK_Counter) dalszej części tego tematu.|  
-|`datatype`|Opcjonalna. Typ danych `counter`. Aby uzyskać więcej informacji, zobacz [Argument licznika](#BKMK_Counter) dalszej części tego tematu.|  
+|`counter`|Wymagane w `For` instrukcji. Zmienna liczbowych. Zmienna sterująca pętli. Aby uzyskać więcej informacji, zobacz [Argument licznika](#BKMK_Counter) w dalszej części tego tematu.|  
+|`datatype`|Opcjonalna. Typ danych `counter`. Aby uzyskać więcej informacji, zobacz [Argument licznika](#BKMK_Counter) w dalszej części tego tematu.|  
 |`start`|Wymagana. Wyrażenie liczbowe. Początkowa wartość `counter`.|  
 |`end`|Wymagana. Wyrażenie liczbowe. Końcowa wartość `counter`.|  
-|`step`|Opcjonalna. Wyrażenie liczbowe. Wartość, o którą `counter` jest zwiększany po każdej za pomocą pętli.|  
-|`statements`|Opcjonalna. Co najmniej jeden instrukcji między `For` i `Next` uruchomioną określoną liczbę razy.|  
+|`step`|Opcjonalna. Wyrażenie liczbowe. Wartość, o którą `counter` jest zwiększana za każdym razem, za pomocą pętli.|  
+|`statements`|Opcjonalna. Jedna lub więcej instrukcji między `For` i `Next` uruchomioną określoną liczbę razy.|  
 |`Continue For`|Opcjonalna. Transfer kontroli do następnej iteracji pętli.|  
 |`Exit For`|Opcjonalna. Przekazuje sterowanie poza `For` pętli.|  
 |`Next`|Wymagana. Kończy definicję `For` pętli.|  
   
 > [!NOTE]
->  `To` Słowo kluczowe jest używane w tej instrukcji, aby określić zakres licznika. Można również użyć słowa kluczowego w [wybierz... Case — instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md) w deklaracje tablicy. Aby uzyskać więcej informacji na temat deklaracje tablicy, zobacz [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
+>  `To` Słowo kluczowe jest używane w tej instrukcji, aby określić zakres dla licznika. Możesz również użyć słowa kluczowego w [wybierz... Case — instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md) w deklaracje tablicy. Aby uzyskać więcej informacji na temat deklaracje tablicy, zobacz [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 ## <a name="simple-examples"></a>Proste przykłady  
- Możesz użyć `For`... `Next` struktury, gdy ma zostać powtórzony zestaw instrukcji określoną liczbę razy.  
+ Możesz użyć `For`... `Next` struktury, gdy chcesz powtórzyć zbiór instrukcji określoną liczbę razy.  
   
- W poniższym przykładzie `index` zmiennej rozpoczyna się od wartości 1 i jest zwiększany przy każdej iteracji pętli kończące się po wartości `index` osiągnie 5.  
+ W poniższym przykładzie `index` zmienną rozpoczyna się od wartości 1 i jest zwiększany przy każdej iteracji pętli, kończące się po wartości `index` osiągnie 5.  
   
  [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
   
- W poniższym przykładzie `number` zmiennej rozpoczyna się od 2 i zostanie zmniejszona 0,25 w każdej iteracji pętli kończące się po wartości `number` wynosić 0. `Step` Argument `-.25` zmniejsza wartość o 0,25 w każdej iteracji pętli.  
+ W poniższym przykładzie `number` zmienną rozpoczyna się od 2 i została zmniejszona o 0,25 w każdej iteracji pętli, kończące się po wartości `number` będzie wynosić 0. `Step` Argument `-.25` zmniejsza wartość 0,25 w każdej iteracji pętli.  
   
  [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
   
 > [!TIP]
->  A [podczas... End While — instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md) lub [czy... Instrukcji pętli](../../../visual-basic/language-reference/statements/do-loop-statement.md) działa dobrze, jeśli nie wiadomo, wcześniej ile razy, aby uruchomić instrukcje w pętli. Jednak jeśli oczekujesz do uruchamiania w pętli określoną liczbę razy, `For`... `Next` pętla jest lepszym rozwiązaniem. Liczba iteracji jest określania, kiedy użytkownik wprowadzi pętli.  
+>  A [podczas... Kończy While, instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md) lub [zrobić... Instrukcja pętli](../../../visual-basic/language-reference/statements/do-loop-statement.md) działa dobrze, jeśli nie znasz wcześniej ile razy należy uruchomić instrukcje w pętli. Jednak gdy spodziewasz się uruchomić pętli określoną liczbę razy, `For`... `Next` pętla jest lepszym rozwiązaniem. Liczba iteracji, należy określić podczas wpisywania w pętli.  
   
-## <a name="nesting-loops"></a>Zagnieżdżania pętle  
- Można zagnieżdżać `For` pętle, ustawiając dla pętli w innym. W poniższym przykładzie pokazano zagnieżdżonych `For`... `Next` struktur, które mają krok różnych wartości. Zewnętrzne pętli tworzy ciąg dla każdej iteracji pętli. Wewnętrzny pętla zmniejsza zmiennej licznika pętli dla każdej iteracji pętli.  
+## <a name="nesting-loops"></a>Zagnieżdżanie pętle  
+ Można zagnieżdżać `For` pętli przez umieszczenie pętli w innym. W poniższym przykładzie pokazano zagnieżdżonych `For`... `Next` struktur, które mają kroku różne wartości. Zewnętrzna Pętla tworzy ciąg dla każdej iteracji pętli. Wewnętrzny pętli zmniejsza zmienną licznika pętli dla każdej iteracji pętli.  
   
  [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
   
- Podczas zagnieżdżania pętle, każdej pętli musi mieć unikatową `counter` zmiennej.  
+ Podczas zagnieżdżania pętli, każdej pętli musi mieć unikatową `counter` zmiennej.  
   
- Struktury sterujące różnych rodzajów wewnątrz innych można zagnieżdżać. Aby uzyskać więcej informacji, zobacz [zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ Można także zagnieżdżać różne rodzaje struktur sterujących wewnątrz innych. Aby uzyskać więcej informacji, zobacz [zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 ## <a name="exit-for-and-continue-for"></a>Zakończ dla i Kontynuuj dla  
- `Exit For` Instrukcji natychmiast kończy pracę `For`...`Next` pętli i transfer kontroli do instrukcji następującej `Next` instrukcji.  
+ `Exit For` Instrukcji natychmiast kończy działanie `For`...`Next` pętli i transfer kontroli do kolejnej instrukcji `Next` instrukcji.  
   
- `Continue For` Instrukcji sterowania natychmiast przenosi do następnej iteracji pętli. Aby uzyskać więcej informacji, zobacz [kontynuować instrukcji](../../../visual-basic/language-reference/statements/continue-statement.md).  
+ `Continue For` Instrukcji sterowania natychmiast przenosi do następnej iteracji pętli. Aby uzyskać więcej informacji, zobacz [nadal instrukcji](../../../visual-basic/language-reference/statements/continue-statement.md).  
   
- Poniższy przykład przedstawia użycie `Continue For` i `Exit For` instrukcje.  
+ Poniższy przykład ilustruje użycie `Continue For` i `Exit For` instrukcji.  
   
  [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_4.vb)]  
   
- Można wprowadzić dowolną liczbę `Exit For` instrukcje w `For`...`Next` pętli. Gdy jest używany w zagnieżdżonych `For`...`Next` pętle, `Exit For` kończy tryb pętli najbardziej i przekazuje sterowanie do następnego wyższego poziomu zagnieżdżenia.  
+ Można umieścić dowolną liczbę `Exit For` instrukcji w `For`...`Next` loop. Gdy jest używana w ramach zagnieżdżonych `For`...`Next` pętle, `Exit For` opuszcza pętlę najbardziej i przekazuje sterowanie do następnego wyższy poziom zagnieżdżenia.  
   
- `Exit For` jest często używana po przeprowadzeniu oceny spełnienia określonego warunku (na przykład w `If`... `Then`... `Else` struktury). Możesz chcieć użyć `Exit For` następujące warunki:  
+ `Exit For` jest często używana, po przeprowadzeniu oceny jakiś warunek (na przykład w `If`... `Then`... `Else` struktury). Możesz chcieć użyć `Exit For` następujące warunki:  
   
--   Kontynuowanie wykonania iteracji jest niepotrzebne lub niemożliwe. Błędna wartość lub żądanie zakończenia może utworzenia tego warunku.  
+-   Iterowanie w dalszym ciągu jest niepotrzebne lub wręcz niemożliwe. Błędna wartość lub żądania przerwania może utworzyć ten warunek.  
   
--   A `Try`... `Catch`... `Finally` wyjątek zostanie przechwycony instrukcji. Można na przykład `Exit For` na końcu `Finally` bloku.  
+-   A `Try`... `Catch`... `Finally` instrukcji przechwytuje wyjątek. Można na przykład `Exit For` na końcu `Finally` bloku.  
   
--   Masz nieskończonej pętli, czyli pętli, które można uruchomić dużych lub nawet nieskończoną liczbę razy. W przypadku wykrycia takim stanie, można użyć `Exit For` wyjścia z pętli. Aby uzyskać więcej informacji, zobacz [czy... Pętla instrukcji](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+-   Masz nieskończonej pętli, czyli pętlę, która może działać dużych lub nawet nieskończona liczba prób. Jeśli zostaną wykryte tych warunków, można użyć `Exit For` jako znak ucieczki dla pętli. Aby uzyskać więcej informacji, zobacz [zrobić... Instrukcja pętli](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="technical-implementation"></a>Realizacja techniczna  
- Gdy `For`... `Next` rozpoczyna pętli, ocenia Visual Basic `start`, `end`, i `step`. Visual Basic ocenia te wartości tylko w tym czasie, a następnie przypisuje `start` do `counter`. Przed rozpoczęciem instrukcji uruchamia blok, porównuje Visual Basic `counter` do `end`. Jeśli `counter` już jest większy niż `end` wartości (lub mniejszy, jeśli `step` jest ujemna), `For` kończy się w pętli i kontrola przechodzi do instrukcji następującej `Next` instrukcji. W przeciwnym razie uruchamia blok instrukcji.  
+ Gdy `For`... `Next` rozpoczyna pętli, Visual Basic ocenia `start`, `end`, i `step`. Visual Basic ocenia te wartości tylko w tym czasie, a następnie przypisuje `start` do `counter`. Przed instrukcją bloku jest uruchomiony, Visual Basic porównuje `counter` do `end`. Jeśli `counter` już jest większy niż `end` wartość (lub w przypadku mniejszych `step` ma wartość ujemną), `For` zakończeniu pętli i kontrola przechodzi do instrukcji następującej `Next` instrukcji. W przeciwnym razie działa blok instrukcji.  
   
- Po każdej aktualizacji Visual Basic napotka `Next` instrukcji, zwiększa `counter` przez `step` , przywracając `For` instrukcji. Ponownie porównuje `counter` do `end`, i ponownie go uruchamia blok albo kończy tryb pętli, w zależności od wyniku. Ten proces jest kontynuowany do momentu `counter` przekazuje `end` lub `Exit For` napotkano instrukcji.  
+ Każdym języka Visual Basic napotyka `Next` instrukcji, zwiększa `counter` przez `step` i zwraca do `For` instrukcji. Ponownie porównuje `counter` do `end`, i ponownie go uruchamia blok albo kończy pętli, w zależności od wyniku. Ten proces jest kontynuowany do momentu `counter` przekazuje `end` lub `Exit For` napotkania instrukcji.  
   
- Pętla nie zatrzymania do momentu `counter` minął `end`. Jeśli `counter` jest równa `end`, pętla będzie kontynuowane. Porównanie, która określa, czy do uruchomienia bloku jest `counter`  <=  `end` Jeśli `step` jest dodatnia i `counter`  >=  `end` Jeśli `step` jest ujemna.  
+ Pętla nie zatrzymuje aż `counter` został przekazany `end`. Jeśli `counter` jest równa `end`, pętla będzie kontynuowane. To porównanie, który określa, czy należy uruchomić bloku `counter`  <=  `end` Jeśli `step` jest dodatnia i `counter`  >=  `end` Jeśli `step` jest ujemna.  
   
- W przypadku zmiany wartości `counter` znajduje się wewnątrz pętli, może być trudne do odczytu i debugowania kodu. Zmiana wartości `start`, `end`, lub `step` nie ma wpływu na wartości iteracji, które zostały uznane za najpierw wprowadzenie pętli.  
+ Jeśli zmienisz wartość `counter` znajduje się wewnątrz pętli, może być trudniejsze do odczytywania i debugowania kodu. Zmiana wartości `start`, `end`, lub `step` nie ma wpływu na wartości iteracji, które zostały określone, jeśli pętla została najpierw wprowadzona.  
   
- Jeśli zagnieździć pętle, kompilator sygnalizuje błąd, jeśli wystąpi `Next` instrukcji zewnętrzne poziom zagnieżdżenia przed `Next` instrukcji wewnętrzny poziom. Jednak kompilator wykryć nakładających się błędu tylko w przypadku określenia `counter` w każdym `Next` instrukcji.  
+ Jeśli możesz zagnieździć pętli, kompilator sygnalizuje błąd, jeśli napotka `Next` instrukcji zewnętrzne poziom zagnieżdżenia, przed `Next` instrukcji wewnętrzny poziom. Jednak kompilator to wykryć nakładających się błąd, tylko wtedy, gdy należy określić `counter` w każdym `Next` instrukcji.  
   
 ### <a name="step-argument"></a>Argument kroku  
- Wartość `step` może być liczbą dodatnią lub ujemną. Ten parametr określa przetwarzanie pętli zgodnie z poniższą tabelą:  
+ Wartość `step` może być dodatnia lub ujemna. Ten parametr określa przetwarzanie pętli zgodnie z poniższą tabelą:  
   
-|**Wartość kroku**|**Wykonuje pętlę, jeśli**|  
+|**Wartość kroku**|**Pętla jest wykonywana Jeśli**|  
 |--------------------|--------------------------|  
 |Dodatnia lub równa zero|`counter` <= `end`|  
 |Ujemne|`counter` >= `end`|  
@@ -126,24 +126,24 @@ Next [ counter ]
  Wartość domyślna `step` 1.  
   
 ###  <a name="BKMK_Counter"></a> Argument licznika  
- W poniższej tabeli przedstawiono czy `counter` definiuje nowej zmiennej lokalnej, która ma zakres do całej `For…Next` pętli. To jest zależny od tego, czy `datatype` istnieje i czy `counter` jest już zdefiniowany.  
+ Poniższa tabela wskazuje, czy `counter` definiuje Nowa zmienna lokalna, które są ograniczone do całej `For…Next` pętli. Oznaczanie zależy od tego, czy `datatype` jest obecny oraz tego, czy `counter` jest już zdefiniowany.  
   
-|Jest `datatype` obecny?|Jest `counter` już zdefiniowane?|Wynik (czy `counter` definiuje nowej zmiennej lokalnej, która ma zakres do całej `For...Next` pętli)|  
+|Jest `datatype` obecne?|Jest `counter` już zdefiniowane?|Wynik (czy `counter` definiuje Nowa zmienna lokalna, które są ograniczone do całej `For...Next` pętli)|  
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
-|Nie|Tak|Nie, ponieważ `counter` jest już zdefiniowany. Jeśli zakres `counter` nie jest lokalny do procedury występuje ostrzeżenie kompilacji.|  
-|Nie|Nie|Tak. Typ danych jest wywnioskowany na podstawie `start`, `end`, i `step` wyrażenia. Aby uzyskać informacje o wnioskowanie o typie, zobacz [Option Infer — instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md) i [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
-|Tak|Tak|Tak, ale tylko wtedy, gdy istniejące `counter` zmiennej jest zdefiniowany poza procedurą. Tej zmiennej pozostaje oddzielnym. Jeśli zakres istniejących `counter` zmiennej jest lokalny dla procedury, występuje błąd kompilacji.|  
+|Nie|Tak|Nie, ponieważ `counter` jest już zdefiniowany. Jeśli zakres `counter` nie jest lokalnym do procedury występuje ostrzeżenie kompilacji.|  
+|Nie|Nie|Tak. Typ danych jest wnioskowany z `start`, `end`, i `step` wyrażenia. Aby uzyskać informacji na temat wnioskowanie o typie, zobacz [Option Infer — instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md) i [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
+|Tak|Tak|Tak, ale tylko wtedy, gdy istniejące `counter` zmienna jest zdefiniowana poza procedury. Tej zmiennej pozostaje oddzielnym. Jeśli zakres istniejącego `counter` zmienna jest lokalny dla procedury, wystąpi błąd kompilacji.|  
 |Tak|Nie|Tak.|  
   
- Typ danych miary `counter` Określa typ iteracji, który musi być jednym z następujących typów:  
+ Typ danych `counter` Określa typ iteracji, która musi być jednym z następujących typów:  
   
 -   A `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, lub `Double`.  
   
--   Wyliczenie zadeklarować przy użyciu [Enum — instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md).  
+-   Wyliczenie, które można zadeklarować przy użyciu [Enum — instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
 -   `Object`.  
   
--   Typ `T` mający następujących operatorów, gdzie `B` jest typem, który może być używana w `Boolean` wyrażenia.  
+-   Typ `T` ma następujące operatory, gdzie `B` to typ, który może być używana w `Boolean` wyrażenia.  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   
@@ -153,30 +153,30 @@ Next [ counter ]
   
      `Public Shared Operator + (op1 As T, op2 As T) As T`  
   
- Opcjonalnie można określić `counter` zmiennej w `Next` instrukcji. Ta składnia poprawia czytelność programu, zwłaszcza, jeśli można zagnieżdżać `For` pętli. Należy określić zmiennej, która jest wyświetlana w polu `For` instrukcji.  
+ Opcjonalnie możesz określić `counter` zmienną `Next` instrukcji. Ta składnia zwiększa czytelność program, zwłaszcza, jeśli można zagnieżdżać `For` pętli. Należy określić zmienną, która pojawia się w odpowiednich `For` instrukcji.  
   
- `start`, `end`, I `step` wyrażenia może służyć do oceny do dowolnego typu danych rozszerzająca do typu `counter`. Jeśli używasz typ zdefiniowany przez użytkownika `counter`, może być konieczne zdefiniowanie `CType` operatora konwersji do konwersji typów `start`, `end`, lub `step` do typu `counter`.  
+ `start`, `end`, I `step` wyrażenia może być dowolnego typu danych, która rozszerza się na typ `counter`. Jeśli używasz typu zdefiniowanego przez użytkownika, aby uzyskać `counter`, może być konieczne zdefiniowanie `CType` operatora konwersji do konwersji typów `start`, `end`, lub `step` do typu `counter`.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia usunięcie wszystkich elementów z listy ogólnej. Zamiast [For Each... Następna instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md), w przykładzie `For`... `Next` instrukcji, która wykonuje iterację w kolejności malejącej. W przykładzie użyto ta technika, ponieważ `removeAt` metoda powoduje elementów po elemencie usunięto mieć niższe wartości indeksu.  
+ Poniższy przykład usuwa wszystkie elementy z listy ogólnej. Zamiast [For Each... Następna instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md), w przykładzie pokazano `For`... `Next` instrukcja, która dokonuje iteracji w kolejności malejącej. W przykładzie użyto tej techniki, ponieważ `removeAt` metoda powoduje, że elementy po usuniętym elemencie muszą mieć niższą wartość indeksu.  
   
  [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład iteruje wyliczenie zadeklarowana przy użyciu [Enum — instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md).  
+ Poniższy przykład wykonuje iterację przez wyliczenie, które są zadeklarowane za pomocą [Enum — instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
  [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie parametrów instrukcji, użyj klasy, która ma przeciążeń operatora dla `+`, `-`, `>=`, i `<=` operatorów.  
+ W poniższym przykładzie parametrów instrukcji użycie klasy, która ma przeciążenia `+`, `-`, `>=`, i `<=` operatorów.  
   
  [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Collections.Generic.List%601>  
- [Struktury pętli](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [While...End While, instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
- [Do...Loop, instrukcja](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [Zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Exit, instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Kolekcje](../../programming-guide/concepts/collections.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Collections.Generic.List%601>
+- [Struktury pętli](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [While...End While, instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
+- [Do...Loop, instrukcja](../../../visual-basic/language-reference/statements/do-loop-statement.md)
+- [Zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Exit, instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)
+- [Kolekcje](../../programming-guide/concepts/collections.md)

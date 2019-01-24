@@ -2,12 +2,12 @@
 title: Za pomocą języka XML w zestawie danych
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: cbdc6135a819e2141426f432d163cd49a7b78ac4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 245e893d052a67e79396fb3d9fc7062eea426215
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667053"
 ---
 # <a name="using-xml-in-a-dataset"></a>Za pomocą języka XML w zestawie danych
 Za pomocą narzędzia ADO.NET można wypełnić <xref:System.Data.DataSet> ze strumienia XML lub dokumentu. Można użyć strumień XML lub dokument Dostarcz je do <xref:System.Data.DataSet> danych, informacje o schemacie lub obu. Informacje dostarczone z strumień XML lub dokumentu może być łączone z istniejące dane lub informacje o schemacie już istnieje w <xref:System.Data.DataSet>.  
@@ -46,6 +46,6 @@ Za pomocą narzędzia ADO.NET można wypełnić <xref:System.Data.DataSet> ze st
  [Omówienie ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  W tym artykule opisano ADO.NET architektura i składniki i sposób ich użycia, dostęp do istniejących źródeł danych oraz do zarządzania danymi w aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

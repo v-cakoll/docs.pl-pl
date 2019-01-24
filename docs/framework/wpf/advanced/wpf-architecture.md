@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 50a7e1b08c31b5d0fb779dabf617a08bbb4c6cf4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634587"
 ---
 # <a name="wpf-architecture"></a>Architektura WPF
 Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation (WPF). Obejmuje większość najważniejszych podsystemów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]oraz opis sposobu interakcji. Szczegóły również niektóre wybory dokonane przez architektów z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -141,14 +141,14 @@ Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation 
   
  Po rozpoczęciu tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje, powinien czuć się bardzo podobnie do funkcji. Można ustawić właściwości, użyj obiektów i powiązanie danych w taki sam sposób można utworzyć za pomocą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] lub [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]. Za pomocą głębszego zbadania do architektury [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], przekonasz się, że możliwość istnieje do tworzenia aplikacji znacznie bogatsze całkowicie traktować dane ponieważ sterownik podstawowych aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.UIElement>  
- <xref:System.Windows.Input.ICommand>  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.Threading.DispatcherObject>  
- <xref:System.Windows.Input.CommandBinding>  
- <xref:System.Windows.Controls.Control>  
- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.UIElement>
+- <xref:System.Windows.Input.ICommand>
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.Threading.DispatcherObject>
+- <xref:System.Windows.Input.CommandBinding>
+- <xref:System.Windows.Controls.Control>
+- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Układ](../../../../docs/framework/wpf/advanced/layout.md)
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

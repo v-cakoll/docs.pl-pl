@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 12/03/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7418c07a211333655501dd9f3d16e72e40564ffd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2721266c90e183616a907803ff209258956a37b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727407"
 ---
 # <a name="target-frameworks"></a>Platformy docelowe
 
@@ -45,7 +45,7 @@ Platforma docelowa jest zwykle przywoływany przez TFM. W poniższej tabeli prze
 | .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
 | Sklep Windows              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
-| .NET Framework wczesnych       | netmf |
+| .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
 | Windows Phone              | WP [wp7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
 | Platforma uniwersalna systemu Windows | uap [uap10.0]<br>uap10.0 [Windows 10] [netcore50] |
@@ -120,7 +120,7 @@ Następujące struktury docelowej są przestarzałe. Pakiety przeznaczone dla ty
 
 | Przestarzałe TFM                                                                             | Zastępczy |
 | ------------------------------------------------------------------------------------------ | ----------- |
-| aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | Element netcoreapp  |
+| aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
 | polecenia DotNet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | netstandard |
 | netcore50                                                                                  | uap10.0     |
 | Wygraj                                                                                        | netcore45   |
@@ -131,10 +131,10 @@ Następujące struktury docelowej są przestarzałe. Pakiety przeznaczone dla ty
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Pakiety, metapakiety i struktury](../core/packages.md)  
-- [Tworzenie bibliotek za pomocą narzędzi międzyplatformowych](../core/tutorials/libraries.md)  
-- [.NET Standard](net-standard.md)  
-- [Przechowywanie wersji programu .NET core](../core/versions/index.md)  
-- [repozytorium GitHub DotNet/standard](https://github.com/dotnet/standard)  
-- [Repozytorium GitHub narzędzia NuGet](https://github.com/joelverhagen/NuGetTools)  
+- [Pakiety, metapakiety i struktury](../core/packages.md)
+- [Tworzenie bibliotek za pomocą narzędzi międzyplatformowych](../core/tutorials/libraries.md)
+- [.NET Standard](net-standard.md)
+- [Przechowywanie wersji programu .NET core](../core/versions/index.md)
+- [repozytorium GitHub DotNet/standard](https://github.com/dotnet/standard)
+- [Repozytorium GitHub narzędzia NuGet](https://github.com/joelverhagen/NuGetTools)
 - [Profile Framework na platformie .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

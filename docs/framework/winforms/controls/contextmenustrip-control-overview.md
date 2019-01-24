@@ -8,32 +8,32 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenuStrip control [Windows Forms]
 - ContextMenuStrip control [Windows Forms], about ContextMenuStrip control
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
-ms.openlocfilehash: fdd23324a521ac697b7ffcd4ba134e9d3c1f8e11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f26fcf259e9c56ffe17c7d7f5a80428ffbbb27c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712460"
 ---
 # <a name="contextmenustrip-control-overview"></a>ContextMenuStrip — Informacje o formancie
 > [!NOTE]
->  <xref:System.Windows.Forms.ContextMenuStrip> Kontroli zastępuje i dodaje funkcje do <xref:System.Windows.Forms.ContextMenu> kontrolować; jednak <xref:System.Windows.Forms.ContextMenu> formant został zachowany na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości po wybraniu.  
+>  <xref:System.Windows.Forms.ContextMenuStrip> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.ContextMenu> kontrolować; jednak <xref:System.Windows.Forms.ContextMenu> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości wybranie opcji.  
   
- Menu skrótów, nazywane także menu kontekstowe pojawiają się na pozycji myszy po kliknięciu prawym przyciskiem myszy. Skrót *menu* Opcje obszaru klienckiego lub kontrolki, w położeniu kursora myszy.  
+ Menu skrótów, nazywany także menu kontekstowe pojawiają się na pozycji myszy, gdy użytkownik kliknie prawym przyciskiem myszy. Skrót *menu* udostępniają opcje dla obszaru klienta lub kontrolki w lokalizacji wskaźnika myszy.  
   
- <xref:System.Windows.Forms.ContextMenuStrip> Kontroli jest przeznaczona do pracy bezproblemowo z nowym <xref:System.Windows.Forms.ToolStrip> i pokrewnych formantów, ale można skojarzyć <xref:System.Windows.Forms.ContextMenuStrip> z innych kontrolek tak samo, jak łatwo.  
+ <xref:System.Windows.Forms.ContextMenuStrip> Kontroli zaprojektowano w celu bezproblemowej współpracy z nowym <xref:System.Windows.Forms.ToolStrip> i pokrewnych formantów, ale można skojarzyć <xref:System.Windows.Forms.ContextMenuStrip> z innymi formantami równie łatwo.  
   
- W poniższej tabeli przedstawiono ważne <xref:System.Windows.Forms.ContextMenuStrip> pomocniczy klasy.  
+ W poniższej tabeli przedstawiono ważne <xref:System.Windows.Forms.ContextMenuStrip> pomocnika klasy.  
   
 |Class|Opis|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|Reprezentuje wybór opcji, wyświetlany na <xref:System.Windows.Forms.MenuStrip> lub <xref:System.Windows.Forms.ContextMenuStrip>.|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|Reprezentuje kontrolkę umożliwiającą użytkownikowi wybranie pojedynczego elementu z listy, która jest wyświetlana, gdy użytkownik kliknie <xref:System.Windows.Forms.ToolStripDropDownButton> lub wyższego poziomu elementu menu.|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|Zapewnia podstawowe funkcje dla kontrolek pochodzące z <xref:System.Windows.Forms.ToolStripItem> wyświetlający elementów listy rozwijanej, po kliknięciu.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|Reprezentuje opcję wyboru wyświetlane na <xref:System.Windows.Forms.MenuStrip> lub <xref:System.Windows.Forms.ContextMenuStrip>.|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|Reprezentuje kontrolkę umożliwiającą użytkownikowi wybranie jednego elementu z listy, która jest wyświetlana, gdy użytkownik kliknie <xref:System.Windows.Forms.ToolStripDropDownButton> lub wyższego poziomu elementu menu.|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|Zapewnia podstawowe funkcje dla kontrolek pochodną <xref:System.Windows.Forms.ToolStripItem> , wyświetlać elementy listy rozwijanej, po kliknięciu.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ContextMenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- <xref:System.Windows.Forms.ToolStripDropDown>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ContextMenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- <xref:System.Windows.Forms.ToolStripDropDown>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bf11d71b90f11a5d9a3844ed59a8574b7b76699
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd350c843c32102291de8327f5c37b27e287fd5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706368"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged — Metoda
-Powiadamia profilera kodu zmienił nazwę wątku.  
+Powiadamia program profilujący kodu, że zmieniono nazwę wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,13 +41,13 @@ HRESULT ThreadNameChanged(
  [in] Identyfikator wątku.  
   
  `cchName`  
- [in] Długość nowej nazwy wątku.  
+ [in] Długość nazwy nowego wątku.  
   
  `name`  
- [in] Nowa nazwa wątku. Nazwa jest nie zakończonym znakiem null.  
+ [in] Nowa nazwa wątku. Nazwa jest nie zakończony znakiem null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -55,6 +55,6 @@ HRESULT ThreadNameChanged(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

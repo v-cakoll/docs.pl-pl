@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 58d786c5e16b1e667f7c7c78b0f7857cd9711239
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7e855f76a0fa8e6c06fd557a944c518641415f09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710602"
 ---
 # <a name="const-directive"></a>#Const — dyrektywa
 Definiuje stałe warunkowe kompilatora dla języka Visual Basic.  
@@ -33,10 +33,10 @@ Definiuje stałe warunkowe kompilatora dla języka Visual Basic.
   
 ## <a name="parts"></a>Części  
  `constname`  
- Wymagane. Nazwa — stała definiowanego.  
+ Wymagana. Nazwa — stała definiowanego.  
   
  `expression`  
- Wymagane. Literał, inne stałe warunkowe kompilatora lub dowolną kombinację, który zawiera dowolnych lub wszystkich operatorów arytmetycznych lub logiczne, z wyjątkiem `Is`.  
+ Wymagana. Literał, inne stałe warunkowe kompilatora lub dowolną kombinację, który zawiera dowolnych lub wszystkich operatorów arytmetycznych lub logiczne, z wyjątkiem `Is`.  
   
 ## <a name="remarks"></a>Uwagi  
  Warunkowe stałe kompilatora są zawsze prywatne dla pliku, w jakiej są wyświetlane. Nie można utworzyć stałe kompilatora publicznych, przy użyciu `#Const` dyrektywę; można je utworzyć, tylko w interfejsie użytkownika lub za pomocą `/define` — opcja kompilatora.  
@@ -48,9 +48,9 @@ Definiuje stałe warunkowe kompilatora dla języka Visual Basic.
   
  [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/const-directive_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)  
- [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- [Dyrektywa #If...Then...#Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Dyrektywa #If...Then...#Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)

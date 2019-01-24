@@ -9,37 +9,37 @@ helpviewer_keywords:
 - drawing [Windows Forms], regions
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
-ms.openlocfilehash: dc7f10571163d447802c90cd61d71b11d0e695d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae4931a464421639112c8f369bd27a45550fe7f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708275"
 ---
 # <a name="regions-in-gdi"></a>Regiony w GDI+
-Region jest częścią obszaru wyświetlania urządzenia wyjściowego. Regiony może być prosty (pojedynczy prostokąt) lub złożonych (kombinacja wielokątów i krzywych zamknięte). Na poniższej ilustracji przedstawiono dwóch regionach: jeden utworzone na podstawie prostokąt i innych utworzone na podstawie ścieżki.  
+Region jest częścią obszaru wyświetlania na urządzeniach. Regiony może być prosty (prostokąt pojedynczego) lub złożona (połączenia wielokąty i krzywych zamknięte). Na poniższej ilustracji przedstawiono dwa regiony: jeden wykonany z prostokąt i innych skonstruowany na podstawie ścieżki.  
   
  ![Regiony](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art27.gif "AboutGdip02_Art27")  
   
 ## <a name="using-regions"></a>Używanie regionów  
- Regiony są często używane na wycinka i testowanie trafień. Wycinka obejmuje ograniczanie rysunku do regionu obszaru wyświetlania zwykle fragment, który musi zostać zaktualizowany. Testowanie trafień obejmuje sprawdzanie, czy kursor jest w danym regionie ekranu po naciśnięciu przycisku myszy.  
+ Regiony są często używane do wycinka i testowania trafień. Wycinka polega na ograniczenie rysunku do region wyświetlacz, zwykle fragment, który musi zostać zaktualizowany. Testowanie trafień sprawdza się, aby ustalić, czy kursor znajduje się w danym regionie ekranu po naciśnięciu przycisku myszy.  
   
- Można utworzyć obszarem prostokąta lub ścieżki. Można też utworzyć złożonych regionów, łącząc istniejący regionów. <xref:System.Drawing.Region> Klasa udostępnia następujące metody łączenie regionów: <xref:System.Drawing.Region.Intersect%2A>, <xref:System.Drawing.Region.Union%2A>, <xref:System.Drawing.Region.Xor%2A>, <xref:System.Drawing.Region.Exclude%2A>, i <xref:System.Drawing.Region.Complement%2A>.  
+ Można skonstruować obszarem prostokąta lub ścieżki. Można również utworzyć złożone regionów, łącząc istniejących regionach. <xref:System.Drawing.Region> Klasa udostępnia następujące metody łączenia regionów: <xref:System.Drawing.Region.Intersect%2A>, <xref:System.Drawing.Region.Union%2A>, <xref:System.Drawing.Region.Xor%2A>, <xref:System.Drawing.Region.Exclude%2A>, i <xref:System.Drawing.Region.Complement%2A>.  
   
- Część wspólną dwóch regionach jest zestaw wszystkich punktów należących do obu regionów. Unia jest zestaw wszystkich punktów należących do jednej lub drugiej lub obu regionów. Uzupełnienie regionu jest zestaw wszystkich punktów, które nie znajdują się w regionie. Na poniższej ilustracji przedstawiono przecięcia i złożenie dwóch regionach, pokazane na powyższej ilustracji.  
+ Część wspólną dwóch regionach to zestaw wszystkich punktów należących do obu regionach. Unia to zestaw wszystkich punktów należących do jednej lub drugiej lub obu regionach. Uzupełnienie region to zestaw wszystkich punktów, które nie znajdują się w regionie. Na poniższej ilustracji przedstawiono część wspólną i sumę dwóch regionach pokazano na poprzedniej ilustracji.  
   
  ![Regiony](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art28.gif "AboutGdip02_Art28")  
   
- <xref:System.Drawing.Region.Xor%2A> Metody stosowane do pary regionów, tworzy region, który zawiera wszystkie punkty, które należą do jednego regionu lub innych, ale nie oba. <xref:System.Drawing.Region.Exclude%2A> Metody stosowane do pary regionów, tworzy region, który zawiera wszystkie punkty w regionie pierwszy, które nie znajdują się w drugim regionu. Na poniższej ilustracji przedstawiono regionów, w wyniku zastosowania <xref:System.Drawing.Region.Xor%2A> i <xref:System.Drawing.Region.Exclude%2A> metody do dwóch regionach pokazywane na początku tego tematu.  
+ <xref:System.Drawing.Region.Xor%2A> Metody stosowane do pary regionów, tworzy obszar, który zawiera wszystkie punkty, które należą do jednego regionu lub innych, ale nie oba. <xref:System.Drawing.Region.Exclude%2A> Metody stosowane do pary regionów, tworzy obszar, który zawiera wszystkie punkty w pierwszym regionie, które nie znajdują się w drugim regionie. Na poniższej ilustracji przedstawiono regionów, w wyniku zastosowania <xref:System.Drawing.Region.Xor%2A> i <xref:System.Drawing.Region.Exclude%2A> metod w dwóch regionach przedstawionych na początku tego tematu.  
   
  ![Regiony](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art29.gif "AboutGdip02_Art29")  
   
- Aby wypełnić region, należy <xref:System.Drawing.Graphics> obiektu, <xref:System.Drawing.Brush> obiektu, a <xref:System.Drawing.Region> obiektu. <xref:System.Drawing.Graphics> Zawiera obiekt <xref:System.Drawing.Graphics.FillRegion%2A> metody i <xref:System.Drawing.Brush> obiekt przechowuje atrybuty wypełnienia, takie jak kolor lub deseń. Poniższy przykład wypełnia region jednolitym kolorem.  
+ Aby wypełnić regionu, należy <xref:System.Drawing.Graphics> obiektu, <xref:System.Drawing.Brush> obiektu, a <xref:System.Drawing.Region> obiektu. <xref:System.Drawing.Graphics> Obiektu <xref:System.Drawing.Graphics.FillRegion%2A> metody i <xref:System.Drawing.Brush> obiekt przechowuje atrybuty wypełnienia, takich jak kolor lub deseń. Poniższy przykład wypełnia obszar jednolitym kolorem.  
   
  [!code-csharp[LinesCurvesAndShapes#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#61)]
  [!code-vb[LinesCurvesAndShapes#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#61)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Drawing.Region?displayProperty=nameWithType>  
- [Linie, krzywe i kształty](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Używanie regionów](../../../../docs/framework/winforms/advanced/using-regions.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Drawing.Region?displayProperty=nameWithType>
+- [Linie, krzywe i kształty](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Używanie regionów](../../../../docs/framework/winforms/advanced/using-regions.md)

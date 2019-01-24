@@ -2,12 +2,12 @@
 title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
-ms.openlocfilehash: 601e3fafd9aa876186b7f78dfdcb87a2336ddfcd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f7c4e30b72af36de1d3088e4ca8cd98ced734104
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692327"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
 SecurityBindingElement  
@@ -32,53 +32,53 @@ class SecurityBindingElement : BindingElement
 ## <a name="properties"></a>Właściwości  
  Klasa elementu SecurityBindingElement ma następujące właściwości:  
   
-### <a name="defaultalgorithmsuite"></a>defaultAlgorithmSuite  
+### <a name="defaultalgorithmsuite"></a>DefaultAlgorithmSuite  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Określa algorytmów do użycia dla tego wiązania.  
   
-### <a name="includetimestamp"></a>includeTimestamp  
+### <a name="includetimestamp"></a>IncludeTimestamp  
  Typ danych: wartość logiczna  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość logiczna określająca, czy każdy komunikat zawiera sygnaturę czasową.  
   
-### <a name="keyentropymode"></a>keyEntropyMode  
+### <a name="keyentropymode"></a>KeyEntropyMode  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Źródło entropia używana do tworzenia kluczy.  
   
 ### <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings  
  Typ danych: LocalServiceSecuritySettings  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Właściwości zabezpieczeń powiązania dla lokalnej usługi.  
   
-### <a name="messagesecurityversion"></a>właściwości messageSecurityVersion  
+### <a name="messagesecurityversion"></a>MessageSecurityVersion  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wersja używana do zabezpieczenia komunikatów.  
   
-### <a name="securityheaderlayout"></a>securityHeaderLayout  
+### <a name="securityheaderlayout"></a>SecurityHeaderLayout  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Kolejność elementów w nagłówku zabezpieczeń dla tego powiązania.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
+|MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>

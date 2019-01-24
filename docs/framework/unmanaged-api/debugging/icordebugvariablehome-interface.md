@@ -1,5 +1,5 @@
 ---
-title: Interfejs ICorDebugVariableHome
+title: ICorDebugVariableHome Interface
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae11cdbbdb0fa63d1b903d18aff133344fd17f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78325236ab262c474e57b0d903033990b0e85f12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722007"
 ---
-# <a name="icordebugvariablehome-interface"></a>Interfejs ICorDebugVariableHome
-Reprezentuje lokalnej zmiennej lub argumentu funkcji.  
+# <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome Interface
+Reprezentuje zmiennej lokalnej lub argumentu funkcji.  
   
 ## <a name="methods"></a>Metody  
   
@@ -34,10 +34,10 @@ Reprezentuje lokalnej zmiennej lub argumentu funkcji.
 |------------|-----------------|  
 |[GetArgumentIndex, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|Pobiera indeks argumentu funkcji.|  
 |[GetCode, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|Pobiera wystąpienie "ICorDebugCode", który zawiera ten `ICorDebugVariableHome` obiektu.|  
-|[GetLiveRange, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|Pobiera natywnego zakresu, w którym ta zmienna jest na żywo.|  
-|[GetLocationType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|Pobiera typ zmiennej natywnego lokalizacji.|  
+|[GetLiveRange, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|Pobiera natywne zakresu, w którym ta zmienna jest aktywna.|  
+|[GetLocationType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|Pobiera typ zmiennej natywnych lokalizacji.|  
 |[GetOffset, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|Pobiera przesunięcie z podstawowej rejestru dla zmiennej.|  
-|[GetRegister, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|Pobiera rejestr, który zawiera zmienną z typem lokalizacji `VLT_REGISTER`oraz podstawowej rejestru dla zmiennej z typem lokalizacji `VLT_REGISTER_RELATIVE`.|  
+|[GetRegister, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|Pobiera rejestr, który zawiera zmienną typu lokalizacji `VLT_REGISTER`oraz podstawowego rejestru dla zmiennej o typie lokalizacji `VLT_REGISTER_RELATIVE`.|  
 |[GetSlotIndex, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|Pobiera zarządzane miejsce indeks zmiennej lokalnej.|  
   
 ## <a name="example"></a>Przykład  
@@ -83,7 +83,7 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -91,6 +91,6 @@ for (int i = 0; i < celtFetched; i++)
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [ICorDebugVariableHomeEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugVariableHomeEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)

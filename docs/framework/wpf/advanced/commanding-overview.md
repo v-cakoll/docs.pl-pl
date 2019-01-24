@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: d41613ce2488fa572fa11def06350ab1e564df6c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 7358cc97f5b6b822be592c9e78aebbf9078fdd25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723540"
 ---
 # <a name="commanding-overview"></a>Przegląd Polecenia
 <a name="introduction"></a> Polecenia jest mechanizm danych wejściowych w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępniającej dane wejściowe Obsługa na poziomie semantycznego więcej niż dane wejściowe z urządzenia. Przykłady poleceń **kopiowania**, **Wytnij**, i **Wklej** odnaleźć operacji na wielu aplikacji.  
@@ -183,13 +183,13 @@ ms.locfileid: "44086222"
   
  Aby uzyskać przykład tworzenia niestandardowego <xref:System.Windows.Input.RoutedCommand>, zobacz [Tworzenie niestandardowych przykładowej routedcommand —](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Input.RoutedCommand>  
- <xref:System.Windows.Input.CommandBinding>  
- <xref:System.Windows.Input.InputBinding>  
- <xref:System.Windows.Input.CommandManager>  
- [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Implementowanie elementu ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [Porady: Dodawanie polecenia do element MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
- [Tworzenie przykładowej routedcommand — niestandardowe](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Input.RoutedCommand>
+- <xref:System.Windows.Input.CommandBinding>
+- <xref:System.Windows.Input.InputBinding>
+- <xref:System.Windows.Input.CommandManager>
+- [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Implementowanie elementu ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)
+- [Instrukcje: Dodawanie polecenia do element MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+- [Tworzenie przykładowej routedcommand — niestandardowe](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

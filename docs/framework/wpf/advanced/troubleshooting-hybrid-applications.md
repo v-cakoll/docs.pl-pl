@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: b43143fb3f27d127f93f5e8edd55b853ad604ef5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3e8b8d6f59525720def413b2d19f048d3cff329c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710121"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Rozwiązywanie problemów aplikacji hybrydowych
 <a name="introduction"></a> W tym temacie wymieniono niektóre typowe problemy, które mogą wystąpić podczas tworzenia aplikacji hybrydowych, które używają zarówno [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologii.  
@@ -61,7 +61,7 @@ ms.locfileid: "45972757"
   
  Hostowanej zawartości jest zadokowany do wypełnienia <xref:System.Windows.Forms.Integration.WindowsFormsHost> i <xref:System.Windows.Forms.Integration.ElementHost> nadrzędnej. Aby włączyć to zachowanie wypełnienia, kilka właściwości są ustawiane podczas ustawiania właściwości elementu podrzędnego. W poniższej tabeli wymieniono, których właściwości zawartości są ustawiane przez <xref:System.Windows.Forms.Integration.ElementHost> i <xref:System.Windows.Forms.Integration.WindowsFormsHost> klasy.  
   
-|Klasa hosta|Właściwości zawartości|  
+|Host Class|Właściwości zawartości|  
 |----------------|------------------------|  
 |<xref:System.Windows.Forms.Integration.ElementHost>|<xref:System.Windows.FrameworkElement.Height%2A><br /><br /> <xref:System.Windows.FrameworkElement.Width%2A><br /><br /> <xref:System.Windows.FrameworkElement.Margin%2A><br /><br /> <xref:System.Windows.FrameworkElement.VerticalAlignment%2A><br /><br /> <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>|  
 |<xref:System.Windows.Forms.Integration.WindowsFormsHost>|<xref:System.Windows.Forms.Control.Margin%2A><br /><br /> <xref:System.Windows.Forms.Control.Dock%2A><br /><br /> <xref:System.Windows.Forms.Control.AutoSize%2A><br /><br /> <xref:System.Windows.Forms.Control.Location%2A><br /><br /> <xref:System.Windows.Forms.Control.MaximumSize%2A>|  
@@ -88,7 +88,7 @@ ms.locfileid: "45972757"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Włączanie stylów wizualnych  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] style wizualizacji, na [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantu może nie być włączona. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Metoda jest wywoływana w szablonie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji. Chociaż ta metoda nie jest wywoływany przez ustawienie domyślne, jeśli używasz [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] do tworzenia projektu uzyskasz [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual style na kontrolki, jeśli jest dostępna wersja 6.0 Comctl32.dll. Należy wywołać <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metoda przed utworzeniem dojść w wątku. Aby uzyskać więcej informacji, zobacz [porady: Włączanie stylów wizualnych w aplikacji hybrydowej](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] style wizualizacji, na [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantu może nie być włączona. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Metoda jest wywoływana w szablonie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji. Chociaż ta metoda nie jest wywoływany przez ustawienie domyślne, jeśli używasz [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] do tworzenia projektu uzyskasz [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual style na kontrolki, jeśli jest dostępna wersja 6.0 Comctl32.dll. Należy wywołać <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metoda przed utworzeniem dojść w wątku. Aby uzyskać więcej informacji, zobacz [jak: Włączyć style Visual w aplikacji hybrydowej](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Licencjonowane formanty  
@@ -114,13 +114,13 @@ ms.locfileid: "45972757"
 ## <a name="elementhost-and-ime"></a>Elementhost — i edytora IME  
  Formanty WPF hostowane w <xref:System.Windows.Forms.Integration.ElementHost> aktualnie nie obsługują <xref:System.Windows.Forms.Control.ImeMode%2A> właściwości. Zmienia się na <xref:System.Windows.Forms.Control.ImeMode%2A> zostaną zignorowane przez formanty hostowanej.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Współdziałanie w Projektancie WPF](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)  
- [Architektura danych wejściowych współdziałania dla Windows Forms i WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)  
- [Instrukcje: jak włączyć style wizualne w aplikacji hybrydowej](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)  
- [Zagadnienia dotyczące układu dla elementu WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
- [Mapowanie właściwości Windows Forms i WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [Błędy czasu projektowania w narzędziu Projektant dla formularzy Windows Forms](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
- [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Współdziałanie w Projektancie WPF](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)
+- [Architektura danych wejściowych współdziałania dla Windows Forms i WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)
+- [Instrukcje: Włączyć style Visual w aplikacji hybrydowej](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [Zagadnienia dotyczące układu dla elementu WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
+- [Mapowanie właściwości Windows Forms i WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Błędy czasu projektowania w narzędziu Projektant dla formularzy Windows Forms](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

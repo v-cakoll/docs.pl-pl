@@ -2,12 +2,12 @@
 title: Kontrakty routingu
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-ms.openlocfilehash: 17bdd4556533b33b635f80b9aec3f16d0f256843
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 593c7a328aba82c35f5876e6e325844c829c08c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707716"
 ---
 # <a name="routing-contracts"></a>Kontrakty routingu
 Kontrakty routingu zdefiniować wzorców wiadomości, które może przetworzyć usługa routingu.  Każdej umowy jest formatów i umożliwia usłudze komunikat bez znajomości schematu wiadomości lub akcji. Dzięki temu usługa routingu do ogólnej kierowanie komunikatów w postaci bez dodatkowej konfiguracji, aby uzyskać szczegółowe informacje na temat podstawowych komunikaty przesyłane.  
@@ -26,6 +26,6 @@ Kontrakty routingu zdefiniować wzorców wiadomości, które może przetworzyć 
 |<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true|IReplyChannel -> IRequestChannel|  
 |<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> Ustawienie właściwości IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługa routingu](../../../../docs/framework/wcf/feature-details/routing-service.md)  
- [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługa routingu](../../../../docs/framework/wcf/feature-details/routing-service.md)
+- [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

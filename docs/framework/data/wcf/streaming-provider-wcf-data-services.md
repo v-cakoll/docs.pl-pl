@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697351"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Dostawca przesyłania strumieniowego (WCF Data Services)
 Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne może reprezentować strumieni wideo i audio, obrazy, pliki dokumentów lub inne typy nośników binarnego. Gdy jednostki w modelu danych zawiera jedną lub więcej właściwości binarnych, Usługa danych zwraca te dane binarne zakodowanymi w formacie base-64, wewnątrz wpisu w źródle danych odpowiedzi. Ponieważ ładowania i serializacja dużych danych binarnych w ten sposób może wpłynąć na wydajność, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiuje mechanizm służący do pobierania danych binarnych, które są niezależne od jednostki, do której należy. Jest to realizowane przez oddzielenie danych binarnych z jednostki w co najmniej jeden strumień danych.  
@@ -38,7 +38,7 @@ Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne m
   
 5.  Zapewnianie dostępu do zasobów binarnych na serwerze lub w źródle danych.  
   
- Przykłady w tym temacie są oparte na próbkę, przesyłanie strumieniowe zdjęć usługi, która została omówiona szczegółowo we wpisie [serii dostawca przesyłania strumieniowego usługi danych: Implementowanie dostawcy przesyłania strumieniowego (część 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Kod źródłowy dla tej usługi próbka jest dostępna w [przesyłanie strumieniowe zdjęć danych usługi przykładową stronę](https://go.microsoft.com/fwlink/?LinkID=198988) w galerii kodów MSDN.  
+ Przykłady w tym temacie są oparte na próbkę, przesyłanie strumieniowe zdjęć usługi, która została omówiona szczegółowo we wpisie [serii dostawca przesyłania strumieniowego usługi danych: Implementowanie dostawca przesyłania strumieniowego (część 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Kod źródłowy dla tej usługi próbka jest dostępna w [przesyłanie strumieniowe zdjęć danych usługi przykładową stronę](https://go.microsoft.com/fwlink/?LinkID=198988) w galerii kodów MSDN.  
   
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definiowanie wpisu łącza nośnika w modelu danych  
  Dostawca źródła danych określa sposób, że jednostka jest zdefiniowany jako wpisu łącza nośnika w modelu danych.  
@@ -50,7 +50,7 @@ Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne m
   
  Musisz również dodać przestrzeń nazw `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` do jednostki lub w katalogu głównym pliku edmx lub .csdl, który definiuje model danych.  
   
- Na przykład usługi danych, która używa [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy i udostępnia zasobu multimediów, zobacz wpis [przesyłania strumieniowego serii dostawcy danych usług: Implementowanie dostawcy przesyłania strumieniowego (część 1)](https://go.microsoft.com/fwlink/?LinkID=198989).  
+ Na przykład usługi danych, która używa [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy i udostępnia zasobu multimediów, zobacz wpis [przesyłania strumieniowego serii dostawcy danych usług: Implementowanie dostawca przesyłania strumieniowego (część 1)](https://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Dostawca odbicia**  
  Aby wskazać, że jednostka jest nośnika wpisu łącza nośnika, należy dodać <xref:System.Data.Services.Common.HasStreamAttribute> do klasy, która definiuje typ jednostki w dostawcy odbicia.  
@@ -129,7 +129,7 @@ Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne m
   
  Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [Niestandardowi dostawcy usługi danych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
- [Praca z danymi binarnymi](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [Niestandardowi dostawcy usługi danych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+- [Praca z danymi binarnymi](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

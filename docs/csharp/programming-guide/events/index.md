@@ -1,18 +1,12 @@
 ---
-title: Zdarzenia — C# przewodnik programowania
+title: 'Zdarzenia — C# przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- classes [C#], events
-- C# language, events
-- events [C#]
+  - 'classes [C#], events'
+  - 'C# language, events'
+  - 'events [C#]'
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 55fe0e8f94d9b350305b634cabb90011e173b572
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451147"
 ---
 # <a name="events-c-programming-guide"></a>Zdarzenia (Przewodnik programowania w języku C#)
 Zdarzenie pozwala [klasy](../../../csharp/language-reference/keywords/class.md) lub obiektowi powiadomić inne klasy lub obiekty, gdy wystąpi stanie się coś istotnego. Klasa, która wysyła (lub *zgłasza*) nosi nazwę zdarzenia *wydawcy* klas, które odbierają i (lub *obsługi*) zdarzenia są wywoływane *subskrybentów* .  
@@ -58,9 +52,9 @@ Aby uzyskać więcej informacji, zobacz [zdarzenia](~/_csharplang/spec/classes.m
   
  [Delegaci i zdarzenia](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) w [uczenia C# 3.0: Opanowanie podstaw C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.EventHandler>  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Delegaty](../../../csharp/programming-guide/delegates/index.md)  
-- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+- <xref:System.EventHandler>
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Delegaty](../../../csharp/programming-guide/delegates/index.md)
+- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

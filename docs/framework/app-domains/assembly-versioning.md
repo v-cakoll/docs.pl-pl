@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53b757417f1f37c1a76021a518570da85dc04ad2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 87fb99ee8379a14a4a1d272a6eabb7fa8413bf64
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724073"
 ---
 # <a name="assembly-versioning"></a>Przechowywanie wersji zestawu
 Zarządzanie wszystkimi wersjami zestawów używających środowiska uruchomieniowego języka wspólnego odbywa się na poziomie zestawów. Konkretna wersja zestawu oraz wersje zestawów zależnych są rejestrowane w manifeście zestawu. Domyślna zasada dotycząca wersji środowiska dla środowiska uruchomieniowego stanowi, że aplikacje są uruchamiane tylko w wersjach, w których zostały skompilowane i przetestowane, chyba że inaczej stanowią jawnie zasady dotyczące wersji określone w plikach konfiguracji (plik konfiguracji aplikacji, plik zasad wydawcy i plik konfiguracji administratora komputera).  
@@ -70,8 +70,8 @@ Rozpoznawanie żądania powiązania zestawu
   
  Informacje o wersji są reprezentowane za pomocą niestandardowego atrybutu <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Aby uzyskać więcej informacji na temat atrybutu wersji, zobacz [Konfigurowanie atrybutów zestawu](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
-## <a name="see-also"></a>Zobacz też  
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
-- [Konfigurowanie aplikacji](../../../docs/framework/configure-apps/index.md)  
-- [Ustawienie atrybutów zestawu](../../../docs/framework/app-domains/set-assembly-attributes.md)  
+## <a name="see-also"></a>Zobacz także
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Konfigurowanie aplikacji](../../../docs/framework/configure-apps/index.md)
+- [Ustawienie atrybutów zestawu](../../../docs/framework/app-domains/set-assembly-attributes.md)
 - [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

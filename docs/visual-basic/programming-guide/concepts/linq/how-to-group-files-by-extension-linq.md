@@ -1,19 +1,19 @@
 ---
-title: 'Porady: grupowanie plików według rozszerzenia (LINQ) (Visual Basic)'
+title: 'Instrukcje: Grupa plików według rozszerzenia (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 61b4ebee03511df8bb06b792ecfd700959d0696b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c52debf2e40c6ed6da2d7f3c7dbdb16e1f7396f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728229"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Porady: grupowanie plików według rozszerzenia (LINQ) (Visual Basic)
-Ten przykład przedstawia, jak LINQ może służyć do wykonywania zaawansowanych grupowanie i sortowanie operacje na listach plików lub folderów. Przedstawiono również sposób strony danych wyjściowych w oknie konsoli przy użyciu <xref:System.Linq.Enumerable.Skip%2A> i <xref:System.Linq.Enumerable.Take%2A> metody.  
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Instrukcje: Grupa plików według rozszerzenia (LINQ) (Visual Basic)
+Ten przykład pokazuje, jak LINQ może służyć do wykonywania zaawansowanych grupowania i sortowania operacje na listach plików lub folderów. Pokazano również, jak stronicować danych wyjściowych w oknie konsoli przy użyciu <xref:System.Linq.Enumerable.Skip%2A> i <xref:System.Linq.Enumerable.Take%2A> metody.  
   
 ## <a name="example"></a>Przykład  
- Następujące zapytanie Wyświetla sposób grupowania zawartość drzewa katalogów określonego przez rozszerzenie nazwy pliku.  
+ Następujące zapytanie pokazuje, jak, według których chcesz pogrupować zawartość drzewa katalogów określonego rozszerzenia nazwy pliku.  
   
 ```vb  
 Module GroupByExtension  
@@ -91,11 +91,11 @@ Module GroupByExtension
 End Module  
 ```  
   
- Dane wyjściowe z tego programu może trwać długo, zależnie od szczegóły lokalnego systemu plików i `startFolder` ma ustawioną wartość. Aby umożliwić wyświetlanie wszystkich wyników, w tym przykładzie przedstawiono sposób przeglądania wyników. Te same techniki może odnosić się do systemu Windows i aplikacji sieci Web. Należy zauważyć, że ponieważ kod strony elementów w grupie, zagnieżdżone `For Each` pętli jest wymagana. Istnieje również dodatkową logikę do obliczenia bieżącej pozycji na liście i aby umożliwić użytkownikowi Zatrzymaj stronicowania, a następnie zamknij program. W tym przypadku stronicowania zapytanie jest wykonywane na buforowanych wyników z oryginalnego zapytania. W innych kontekstach, takich jak LINQ do SQL takich buforowanie nie jest wymagana.  
+ Dane wyjściowe z tego programu może być długi, w zależności od szczegółów lokalnego systemu plików i `startFolder` jest równa. Aby umożliwić wyświetlanie wszystkich wyników, w tym przykładzie przedstawiono sposób przeglądania wyników. Te same techniki można zastosować do aplikacji sieci Web i Windows. Należy zauważyć, że ponieważ kod strony elementów w grupie, zagnieżdżoną `For Each` pętli jest wymagana. Istnieje również logikę dodatkowe obliczenia bieżącej pozycji na liście i umożliwić użytkownikowi zatrzymać stronicowania i zakończyć program. W tym konkretnym przypadku kwerendy stronicowania jest wykonywany dla pamięci podręcznej wyników z oryginalnego zapytania. W innych kontekstach, takich jak LINQ to SQL takie pamięci podręcznej nie jest wymagana.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji System.Linq przestrzeni nazw.  
+ Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do obiektów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

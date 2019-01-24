@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 60b9e1862c7ffd212f19cdc331930e3b5d120763
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: efd4c41731b196b55676d72342e359ccb0736f91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728373"
 ---
 # <a name="basic-linq-query-operations-c"></a>Podstawowe operacje zapytań LINQ (C#)
 Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania wyrażeń i niektóre typowe rodzaje operacji, które można wykonywać w zapytaniu. Więcej szczegółowych informacji znajduje się w następujących tematach:  
@@ -31,7 +31,7 @@ Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbtec
   
  [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
   
- [Wskazówki: Pisanie zapytań wC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Przewodnik: Pisanie zapytań wC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
 >  Jeśli już znasz język zapytań, takich jak bazy danych SQL lub wyrażenie XQuery, możesz pominąć większość części tego tematu. Przeczytaj o "`from` klauzuli" w następnej sekcji, aby dowiedzieć się więcej na temat kolejności klauzul [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniach zapytań.  
@@ -99,10 +99,10 @@ from order in Customer.Orders...
 ## <a name="selecting-projections"></a>Zaznaczenie (projekcje)  
  `select` Klauzuli produkuje wyniki zapytania i określa "kształt" lub typ każdego elementu zwróconego. Na przykład można określić, czy wyniki będą zawierać pełną `Customer` obiektów, tylko jeden element członkowski, podzestaw elementów członkowskich lub typu całkowicie różne wyniki na podstawie obliczeń lub tworzenia nowego obiektu. Gdy `select` klauzuli tworzy coś innego niż kopię elementu źródłowego, operacja jest nazywana *projekcji*. Korzystanie z projekcji do przekształcania danych jest zaawansowaną możliwością [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniach zapytań. Aby uzyskać więcej informacji, zobacz [Przekształcanie danych za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) i [klauzuli select](../../../../csharp/language-reference/keywords/select-clause.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Wyrażenia zapytań LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [Wskazówki: Pisanie zapytań wC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [Słowa kluczowe zapytania (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
+- [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Wyrażenia zapytań LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Przewodnik: Pisanie zapytań wC#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Słowa kluczowe zapytania (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
 - [Typy anonimowe](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

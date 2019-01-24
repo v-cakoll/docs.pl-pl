@@ -10,30 +10,30 @@ helpviewer_keywords:
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 426b9df449b12d2f34fa70fc721cc050fa3e4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d29d3f3638b3dae4381524fcaf55e1afeddc9f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730805"
 ---
 # <a name="invalidvariant-mda"></a>invalidVariant MDA
-`invalidVariant` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy nieprawidłową `VARIANT` struktury napotkano podczas wywoływania z kodu natywnego lub niezarządzane do zarządzanego kodu.  
+`invalidVariant` Zarządzanego Asystenta debugowania (MDA) jest uaktywniany podczas nieprawidłową `VARIANT` struktury napotkano podczas wywoływania z kodu natywnego lub niezarządzanego kodu zarządzanego.  
   
 ## <a name="symptoms"></a>Symptomy  
- Nieoczekiwane zachowanie podczas przejścia między kodu natywnego i zarządzanego, obejmujące kierowanie `VARIANT` do obiektu.  
+ Nieoczekiwane zachowanie podczas przejścia między kodu natywnego i zarządzanego obejmujące kierowania `VARIANT` do obiektu.  
   
 ## <a name="cause"></a>Przyczyna  
- Kod natywny jest przekazanie źle sformułowane `VARIANT` struktury do kodu zarządzanego.  Środowisko wykonawcze próbuje kierować to `VARIANT` do obiektu i aktywuje MDA, jeśli `VARIANT` jest nieprawidłowy. Przykłady nieprawidłowy `VARIANT`obejmują S `VARIANT` z `VARTYPE` VT_EMPTY &#124; VT_BYREF lub `VARIANT` z `VARTYPE` VT_VARIANT.  
+ Kod natywny jest przekazanie źle sformułowane `VARIANT` strukturę do kodu zarządzanego.  Środowisko uruchomieniowe próbuje kierować to `VARIANT` do obiektu i aktywuje MDA, jeśli `VARIANT` jest nieprawidłowy. Przykłady nieprawidłowy `VARIANT`obejmują S `VARIANT` z `VARTYPE` VT_EMPTY &#124; VT_BYREF lub `VARIANT` z `VARTYPE` VT_VARIANT.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Kod natywny lub niezarządzane przekazywanie `VARIANT` upewnij się, że `VARIANT` jest poprawnie sformułowany i zainicjować.  
+ Natywny lub kodowi niezarządzanemu przekazywanie `VARIANT` musi zapewnić, że `VARIANT` jest poprawnie sformułowana i zainicjowany.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- MDA nie ma wpływu na zachowanie środowiska uruchomieniowego.  
+ MDA nie ma wpływu na działanie w środowisku uruchomieniowym.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Komunikat MDA wskazujący, że środowisko wykonawcze wykryto nieprawidłową `VARIANT` przekazany do kodu zarządzanego przez moduł niezarządzane.  
+ MDA komunikat wskazujący, że środowisko wykonawcze nie wykryto nieprawidłową `VARIANT` przekazany do kodu zarządzanego przez moduł niezarządzanych.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33386722"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)

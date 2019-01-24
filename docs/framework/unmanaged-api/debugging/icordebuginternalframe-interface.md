@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45a710e6d8be4a041d9852585ea83fea85376f66
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fab8221bd160a74bb44c3ed0721ad4620e93419
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413829"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692798"
 ---
 # <a name="icordebuginternalframe-interface1"></a>ICorDebugInternalFrame Interface1
-Reprezentuje wewnętrzny czasu wykonywania ramki na stosie. Ten interfejs jest podklasą klasy interfejsu ICorDebugFrame.  
+Reprezentuje ramkę wewnętrznego środowiska uruchomieniowego na stosie. Ten interfejs jest podklasą icordebugframe — interfejs.  
   
 ## <a name="methods"></a>Metody  
   
@@ -35,10 +35,10 @@ Reprezentuje wewnętrzny czasu wykonywania ramki na stosie. Ten interfejs jest p
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -46,5 +46,5 @@ Reprezentuje wewnętrzny czasu wykonywania ramki na stosie. Ten interfejs jest p
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

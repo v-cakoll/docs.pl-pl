@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 629f478e1a5a9ad21ce77943fdad098aa21de4a6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699600"
 ---
 # <a name="routing-scenarios"></a>Scenariusze routingu
 Usługa routingu jest w dużym stopniu dostosowywane, może być wyzwaniem wymagającym projektować wydajne logikę routingu, tworząc nową konfigurację od podstaw.  Istnieje jednak kilka typowych scenariuszy, które należy wykonać w większości konfiguracji usługa routingu. Te scenariusze mogą nie dotyczą bezpośrednio do określonej konfiguracji, zrozumienie, jak można skonfigurować do obsługi tych scenariuszy, usługa routingu będzie pomocy można zrozumieć usługa routingu.  
@@ -34,12 +34,12 @@ Usługa routingu jest w dużym stopniu dostosowywane, może być wyzwaniem wymag
   
  Za pomocą usługi routingu, należy udostępnić jeden punkt końcowy, aby odbierać komunikaty z aplikacji klienckich, a następnie kierować każdy komunikat do wersji prawidłowe usługi na podstawie zawartości komunikatu. Najbardziej podstawowa implementacja polega na dodawanie niestandardowego nagłówka do komunikat, który wskazuje wersję usługi, która wiadomość ma zostać przetworzony przez. Usługa routingu umożliwia XPathMessageFilter sprawdzić każdy komunikat na obecność niestandardowy nagłówek i kierowanie komunikat do odpowiedniego miejsca docelowego punktu końcowego.  
   
- Użyty do utworzenia konfiguracji przechowywanie wersji usługi kroki opisane w artykule [instrukcje: przechowywanie wersji usługi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
+ Użyty do utworzenia konfiguracji przechowywanie wersji usługi kroki opisane w artykule [How to: Przechowywanie wersji usługi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
   
 ### <a name="service-data-partitioning"></a>Partycjonowanie danych usługi  
  Podczas projektowania środowisku rozproszonym, często jest pożądane, aby rozłożyć obciążenie związane z przetwarzaniem na wielu komputerach w celu zapewnienia wysokiej dostępności, zmniejsz obciążenie na pojedynczych komputerach lub w celu udostępnienia dedykowanych zasobów dla określonych podzestawów wiadomości. Gdy usługa routingu nie zastępuje dedykowane rozwiązania do równoważenia obciążenia, możliwość wykonywania routingu na podstawie zawartości może służyć do przesyłania wiadomości w przeciwnym razie podobne do określonych miejsc docelowych. Na przykład masz wymaganie przetwarzania komunikatów z określonego klienta, niezależnie od komunikatów odebranych z innych klientów.  
   
- Użyty do utworzenia partycji konfiguracji usługi dane kroki opisane w artykule [instrukcje: partycjonowanie danych usługi](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
+ Użyty do utworzenia partycji konfiguracji usługi dane kroki opisane w artykule [How to: Partycjonowanie danych usługi](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
   
 ### <a name="dynamic-routing"></a>Routing dynamiczny  
  Często jest pożądane modyfikowanie konfiguracji routingu w celu zaspokojenia zmieniających się potrzeb biznesowych, takich jak dodawanie trasy do nowszej wersji usługi, zmiana kryteriów routingu lub zmianę docelowego punktu końcowego szczegółowy komunikat o błędzie, który filtr przekierowuje do. Usługa routingu umożliwia tym za pośrednictwem <xref:System.ServiceModel.Routing.RoutingExtension>, który pozwala na dostarczenie nowej RoutingConfiguration w czasie wykonywania. Nowa konfiguracja zaczyna obowiązywać natychmiast, ale ma wpływ tylko na wszystkie nowe sesje przetworzone przez usługę Routing.  
@@ -63,16 +63,16 @@ Usługa routingu jest w dużym stopniu dostosowywane, może być wyzwaniem wymag
   
  Usługa routingu próbuje rozwiązać w tym scenariuszu, udostępniając błędów grubych funkcje obsługi komunikatów, które występują w sieci lub błędy związane z komunikacji. Tworząc listę możliwych docelowych punktów końcowych i kojarzenie tej listy z każdego filtr komunikatów, należy usunąć pojedynczy punkt awarii poniesione przez posiadanie tylko jednego możliwe miejsca docelowego. W przypadku awarii usługa routingu podejmie próbę dostarczenie wiadomości do następnego punktu końcowego na liście, dopóki nie został dostarczony komunikat, wystąpi błąd bez komunikacji, lub wszystkie punkty końcowe zostały wyczerpane.  
   
- Używane do konfigurowania obsługi błędów kroki opisane w artykule [How to: obsługa błędów](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
+ Używane do konfigurowania obsługi błędów kroki opisane w artykule [How to: Obsługa błędów](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: przechowywanie wersji usługi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Instrukcje: Przechowywanie wersji usługi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Instrukcje: partycjonowanie danych usługi](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Instrukcje: Partycjonowanie danych usługi](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Instrukcje: aktualizacja dynamiczna](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Instrukcje: Aktualizacja dynamiczna](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Instrukcje: obsługa błędów](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Instrukcje: Obsługa błędów](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

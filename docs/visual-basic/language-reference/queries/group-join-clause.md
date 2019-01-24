@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: f4c0d7fa9f14868404cde6201692e26b919198be
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 19eba101e2a91d1b0549e9e3eb86d0af94f2d1b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803668"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619752"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join — Klauzula (Visual Basic)
 Łączy dwie kolekcje w jedną hierarchiczną kolekcję. Operacja łączenia jest oparta na zgodności kluczy.  
@@ -33,11 +33,11 @@ Group Join element [As type] In collection _
   
 |Termin|Definicja|  
 |---|---|  
-|`element`|Wymagane. Zmienna sterująca dla kolekcji jest dołączony.|  
+|`element`|Wymagana. Zmienna sterująca dla kolekcji jest dołączony.|  
 |`type`|Opcjonalna. Typ `element`. Jeśli nie `type` jest określona, typ `element` wynika z `collection`.|  
-|`collection`|Wymagane. Kolekcja do łączenia z tą kolekcją, która znajduje się w lewej części `Group Join` operatora. A `Group Join` klauzuli może być zagnieżdżona w `Join` klauzuli lub w innym `Group Join` klauzuli.|  
-|`key1` `Equals` `key2`|Wymagane. Określa klucze dla kolekcji jest dołączony. Należy użyć `Equals` operatora do porównywania kluczy z kolekcji jest dołączony. Warunki sprzężenia można połączyć za pomocą `And` operatora, aby zidentyfikować wielu kluczy. `key1` Parametr musi być z kolekcji w lewej części `Join` operatora. `key2` Parametr musi mieć długość od kolekcji na prawej krawędzi `Join` operatora.<br /><br /> Klucze używane w warunek sprzężenia, może być wyrażeń, które zawierają więcej niż jeden element z kolekcji. Jednak każde wyrażenie kluczy może zawierać tylko elementy z jego odpowiednich kolekcji.|  
-|`expressionList`|Wymagane. Co najmniej jednego wyrażenia, które określają, jak są agregowane grup elementów z kolekcji. Aby zidentyfikować nazwę elementu członkowskiego pogrupowane wyniki, należy użyć `Group` — słowo kluczowe (`<alias> = Group`). Może również zawierać funkcje agregujące do zastosowania w grupie.|  
+|`collection`|Wymagana. Kolekcja do łączenia z tą kolekcją, która znajduje się w lewej części `Group Join` operatora. A `Group Join` klauzuli może być zagnieżdżona w `Join` klauzuli lub w innym `Group Join` klauzuli.|  
+|`key1` `Equals` `key2`|Wymagana. Określa klucze dla kolekcji jest dołączony. Należy użyć `Equals` operatora do porównywania kluczy z kolekcji jest dołączony. Warunki sprzężenia można połączyć za pomocą `And` operatora, aby zidentyfikować wielu kluczy. `key1` Parametr musi być z kolekcji w lewej części `Join` operatora. `key2` Parametr musi mieć długość od kolekcji na prawej krawędzi `Join` operatora.<br /><br /> Klucze używane w warunek sprzężenia, może być wyrażeń, które zawierają więcej niż jeden element z kolekcji. Jednak każde wyrażenie kluczy może zawierać tylko elementy z jego odpowiednich kolekcji.|  
+|`expressionList`|Wymagana. Co najmniej jednego wyrażenia, które określają, jak są agregowane grup elementów z kolekcji. Aby zidentyfikować nazwę elementu członkowskiego pogrupowane wyniki, należy użyć `Group` — słowo kluczowe (`<alias> = Group`). Może również zawierać funkcje agregujące do zastosowania w grupie.|  
   
 ## <a name="remarks"></a>Uwagi  
  `Group Join` Klauzuli łączy dwie kolekcje, w oparciu o dopasowanie wartości kluczy z kolekcji jest dołączony. Wynikowy Kolekcja może zawierać elementu członkowskiego, która odwołuje się druga kolekcja, które odpowiadają wartości klucza w pierwszej kolekcji kolekcję elementów. Można również określić funkcje agregujące do zastosowania do zgrupowanych elementów z drugiej kolekcji. Aby uzyskać informacji na temat funkcji agregujących, zobacz [Aggregate — klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
@@ -55,11 +55,11 @@ Group Join element [As type] In collection _
   
  [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Zapytania](../../../visual-basic/language-reference/queries/index.md)  
- [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Join, klauzula](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Klauzula Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Zapytania](../../../visual-basic/language-reference/queries/index.md)
+- [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Join, klauzula](../../../visual-basic/language-reference/queries/join-clause.md)
+- [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Klauzula Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)

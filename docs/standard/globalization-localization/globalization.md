@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 84e44f0112a5d1b5fd38daf488d865f6e228f82b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713944"
 ---
 # <a name="globalization"></a>Globalizacja
 Globalizacja obejmuje projektowania i opracowywania aplikacji gotowej dla całego świata, która obsługuje dane regionalne i zlokalizowane interfejsy dla użytkowników w wielu kulturach. Przed rozpoczęciem fazy projektowania, należy określić, które kultury Twoja aplikacja będzie obsługiwać. Mimo że aplikacja jest przeznaczona na jednej kulturze lub regionie jako domyślnej, można projektować i zapisać go tak, aby łatwo mogła zostać rozszerzona do użytkowników innych kultur lub regionów.  
@@ -99,7 +99,7 @@ Globalizacja obejmuje projektowania i opracowywania aplikacji gotowej dla całeg
 > [!TIP]
 >  Możesz użyć <xref:System.Globalization.StringInfo> klasy, aby pracować z elementami tekstowymi zamiast pojedynczych znaków w ciągu.  
   
- W wyszukiwaniach i porównaniach ciągów, powszechnym błędem jest traktowanie ciągu jako zbioru znaków, z których każdy jest reprezentowany przez <xref:System.Char> obiektu. W rzeczywistości pojedynczy znak może zostać utworzona przez jeden, dwa lub więcej <xref:System.Char> obiektów. Takie znaki najczęściej znajdują się w ciągach z kultur, w których alfabety składają się ze znaków spoza zakresu znaków Łaciński podstawowy Unicode (U + 0021 do U + 007E). Poniższy przykład próbuje znaleźć indeks znaku LATIN CAPITAL LETTER A WITH GRAVE (U + 00C 0) w ciągu. Jednak ten znak może być reprezentowany na dwa sposoby: jako jedna jednostka kodu (U + 00C 0) lub znak złożony (dwie jednostki kodu: U + 0021 i U + 007E). W tym przypadku znak jest reprezentowany w wystąpieniu ciągu przez dwa <xref:System.Char> obiekty, U + 0021 i U + 007E. Kod przykładowy wywołuje <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> i <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> przeciążenia, aby znaleźć położenie tego znaku w wystąpieniu ciągu, ale te zwracać różne wyniki. Pierwsze wywołanie metody ma <xref:System.Char> argument; go wykonuje porównanie porządkowe i dlatego nie może znaleźć dopasowania. Drugie wywołanie ma <xref:System.String> argument; wykonuje ono zależne od kultury porównanie i dlatego znajduje odpowiednik.  
+ W wyszukiwaniach i porównaniach ciągów, powszechnym błędem jest traktowanie ciągu jako zbioru znaków, z których każdy jest reprezentowany przez <xref:System.Char> obiektu. W rzeczywistości pojedynczy znak może zostać utworzona przez jeden, dwa lub więcej <xref:System.Char> obiektów. Takie znaki najczęściej znajdują się w ciągach z kultur, w których alfabety składają się ze znaków spoza zakresu znaków Łaciński podstawowy Unicode (U + 0021 do U + 007E). Poniższy przykład próbuje znaleźć indeks znaku LATIN CAPITAL LETTER A WITH GRAVE (U + 00C 0) w ciągu. Jednak ten znak może być reprezentowany na dwa sposoby: jako jedna jednostka kodu (U + 00C 0) lub znak złożony (dwie jednostki kodu: U+ 0021 i U + 007E). W tym przypadku znak jest reprezentowany w wystąpieniu ciągu przez dwa <xref:System.Char> obiekty, U + 0021 i U + 007E. Kod przykładowy wywołuje <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> i <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> przeciążenia, aby znaleźć położenie tego znaku w wystąpieniu ciągu, ale te zwracać różne wyniki. Pierwsze wywołanie metody ma <xref:System.Char> argument; go wykonuje porównanie porządkowe i dlatego nie może znaleźć dopasowania. Drugie wywołanie ma <xref:System.String> argument; wykonuje ono zależne od kultury porównanie i dlatego znajduje odpowiednik.  
   
  [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
  [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]  
@@ -142,8 +142,8 @@ Globalizacja obejmuje projektowania i opracowywania aplikacji gotowej dla całeg
 |.NET Framework 2.0|Wszystkie systemy operacyjne|Unicode 4.1|  
 |.NET Framework 3.0|Wszystkie systemy operacyjne|Unicode 4.1|  
 |Program .NET Framework 3,5|Wszystkie systemy operacyjne|Unicode 4.1|  
-|Program .NET Framework 4|Wszystkie systemy operacyjne|Standard Unicode 5.0|  
-|.NET Framework 4.5|[!INCLUDE[win7](../../../includes/win7-md.md)]|Standard Unicode 5.0|  
+|Program .NET Framework 4|Wszystkie systemy operacyjne|Unicode 5.0|  
+|.NET Framework 4.5|[!INCLUDE[win7](../../../includes/win7-md.md)]|Unicode 5.0|  
 |.NET Framework 4.5|[!INCLUDE[win8](../../../includes/win8-md.md)]|Zestaw znaków Unicode 6.0|  
   
  W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], porównywanie i sortowanie ciągów zależy od systemu operacyjnego. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Systemem [!INCLUDE[win7](../../../includes/win7-md.md)] pobiera dane z własnych tabel, które implementują standard Unicode 5.0. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Systemem [!INCLUDE[win8](../../../includes/win8-md.md)] pobiera dane z tabel systemu operacyjnego, które implementują standard Unicode 6.0. Jeśli serializujesz posortowane dane wrażliwe na ustawienia kulturowe, można użyć <xref:System.Globalization.SortVersion> klasę, aby określić, gdy potrzebuje serializowane dane mają być sortowane, tak aby były zgodne z .NET Framework i porządek sortowania systemu operacyjnego. Aby uzyskać przykład, zobacz <xref:System.Globalization.SortVersion> temat poświęcony klasie.  
@@ -177,14 +177,14 @@ Globalizacja obejmuje projektowania i opracowywania aplikacji gotowej dla całeg
   
 -   [Formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) funkcji, gdy jest używany z datami  
   
- Poniższy przykład wyświetla wschodzie i zachodzie słońca dane dwa razy dla daty 11 października 2012. Najpierw Ustawia bieżącą kulturę na Chorwacką (Chorwacja), a następnie na angielski (Zjednoczone Królestwo). W każdym przypadku daty i godziny są wyświetlane w formacie, który jest odpowiedni dla tej kultury.  
+ Poniższy przykład wyświetla wschodzie i zachodzie słońca dane dwa razy dla daty 11 października 2012. Najpierw Ustawia bieżącą kulturę na Chorwacką (Chorwacja), a następnie na angielski (Wielka Brytania). W każdym przypadku daty i godziny są wyświetlane w formacie, który jest odpowiedni dla tej kultury.  
   
  [!code-csharp[Conceptual.Globalization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates1.cs#2)]
  [!code-vb[Conceptual.Globalization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates1.vb#2)]  
   
 <a name="DatesAndTimes_Persist"></a>   
 ### <a name="persisting-dates-and-times"></a>Przechowywanie daty i godziny  
- Nigdy nie należy utrwalać danych daty i godziny w formacie, który może się różnić od kultury. Jest to częsty błąd programowania powodujący uszkodzenie danych lub wyjątek czasu wykonywania. Poniższy przykład szereguje dwie daty, 9 stycznia 2013 i 18 sierpnia 2013 r., jako ciągi przy użyciu konwencji formatowania kultury angielski (Stany Zjednoczone). Gdy dane są pobierane i analizowane za pomocą Konwencji kultury angielski (Stany Zjednoczone), są pomyślnie przywracane. Jednakże gdy są pobierane i analizowane za pomocą Konwencji kultury angielski (Zjednoczone Królestwo), pierwsza data jest niewłaściwie interpretowana jako 1 września, a druga nie można przeanalizować ponieważ kalendarz gregoriański nie ma osiemnastego miesiąca.  
+ Nigdy nie należy utrwalać danych daty i godziny w formacie, który może się różnić od kultury. Jest to częsty błąd programowania powodujący uszkodzenie danych lub wyjątek czasu wykonywania. Poniższy przykład szereguje dwie daty, 9 stycznia 2013 i 18 sierpnia 2013 r., jako ciągi przy użyciu konwencji formatowania kultury angielski (Stany Zjednoczone). Gdy dane są pobierane i analizowane za pomocą Konwencji kultury angielski (Stany Zjednoczone), są pomyślnie przywracane. Jednakże gdy są pobierane i analizowane za pomocą Konwencji kultury angielski (Wielka Brytania), pierwsza data jest niewłaściwie interpretowana jako 1 września, a druga nie można przeanalizować ponieważ kalendarz gregoriański nie ma osiemnastego miesiąca.  
   
  [!code-csharp[Conceptual.Globalization#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates2.cs#3)]
  [!code-vb[Conceptual.Globalization#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates2.vb#3)]  
@@ -204,7 +204,7 @@ Globalizacja obejmuje projektowania i opracowywania aplikacji gotowej dla całeg
   
 <a name="DatesAndTimes_TimeZones"></a>   
 ### <a name="serialization-and-time-zone-awareness"></a>Serializacja i świadomości strefy czasowej  
- Wartość daty i godziny może mieć wiele interpretacji, począwszy od czasu ogólnego ("sklepy otwierane są 2 stycznia 2013 r. o godzinie 9:00") określony moment w czasie ("Data urodzenia: 2 stycznia 2013 r. o 6:32:00"). Jeśli określony moment w czasie reprezentowany przez wartość czasu i przywracana z serializowanej wartości, należy upewnić się, że stanowi ten sam moment w czasie, niezależnie od lokalizacji geograficznej lub strefy czasowej użytkownika.  
+ Wartość daty i godziny może mieć wiele interpretacji, począwszy od czasu ogólnego ("sklepy otwierane są 2 stycznia 2013 r. o godzinie 9:00") określony moment w czasie ("Data urodzenia: 2 stycznia 2013 o 6:32:00 "). Jeśli określony moment w czasie reprezentowany przez wartość czasu i przywracana z serializowanej wartości, należy upewnić się, że stanowi ten sam moment w czasie, niezależnie od lokalizacji geograficznej lub strefy czasowej użytkownika.  
   
  Poniższy przykład ilustruje ten problem. Zapisuje pojedynczy lokalny wartość daty i godziny jako ciąg w trzech [standardowych formatów](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" Ogólne Data Godzina długa, "s" Sortowalna data/godzina i "o" dla przesłania danych Data/godzina) jak również w formacie binarnym.  
   
@@ -371,5 +371,5 @@ Globalizacja obejmuje projektowania i opracowywania aplikacji gotowej dla całeg
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)  
+- [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)
 - [Najlepsze rozwiązania dotyczące używania ciągów](../../../docs/standard/base-types/best-practices-strings.md)

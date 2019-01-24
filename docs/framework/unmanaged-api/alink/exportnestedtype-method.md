@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0afe4daa1c85f3e15addac55bdbe631d40e03f19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710342"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType — Metoda
-Określa typy zagnieżdżone jako eksportowalny. [ExportType — metoda](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) może również typy zagnieżdżone eksportu, ale ta metoda jest szybsza.  
+Określa typy zagnieżdżone jako eksportowalny. [Exporttype — metoda](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) może również typy zagnieżdżone eksportu, ale ta metoda jest szybsza.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ HRESULT ExportNestedType(
   
 #### <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Identyfikator zestawu eksportu.  
+ Identyfikator zestawu, aby wyeksportować z.  
   
  `FileToken`  
  Token pliku lub zestawu plików, który definiuje typ, który ma zostać wykonane można eksportować.  
@@ -52,16 +52,16 @@ HRESULT ExportNestedType(
  Typ tokenu typu ma zostać wykonane można eksportować.  
   
  `ParentType`  
- Token typu nadrzędnego.  
+ Token typie elementu nadrzędnego.  
   
  `pszTypename`  
- Pełni kwalifikowana nazwa typu do wyeksportowania.  
+ W pełni kwalifikowana nazwa typu do wyeksportowania.  
   
  `dwFlags`  
- `ComType` flagi, takich jak `tdPublic` lub `tdNested`. Ta wartość może być przekazana do [DefineExportedType — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` flagi, takich jak `tdPublic` lub `tdNested`. Ta wartość może być przekazana do [defineexportedtype — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Odbiera token dla wyeksportowanego typu.  
+ Odbiera token dla eksportowanego typu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
@@ -69,7 +69,7 @@ HRESULT ExportNestedType(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

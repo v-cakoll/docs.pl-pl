@@ -10,12 +10,12 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: 28d8cdb22974d77edf055ab9b2c6c767872e6783
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eac99ba38841f6972b5bdc8a01f816519af06288
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684674"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp; — Operator (Visual Basic)
 Tworzy połączenie ciągów dwóch wyrażeń.  
@@ -31,30 +31,30 @@ result = expression1 & expression2
  Wymagana. Wszelkie `String` lub `Object` zmiennej.  
   
  `expression1`  
- Wymagana. Dowolne wyrażenie z typem danych rozszerzająca do `String`.  
+ Wymagana. Dowolne wyrażenie z typem danych, która rozszerza się na `String`.  
   
  `expression2`  
- Wymagana. Dowolne wyrażenie z typem danych rozszerzająca do `String`.  
+ Wymagana. Dowolne wyrażenie z typem danych, która rozszerza się na `String`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli typ danych miary `expression1` lub `expression2` nie jest `String` , ale rozszerzenie do `String`, jest konwertowana na `String`. Jeśli jeden z typów danych nie są rozszerzane `String`, kompilator generuje błąd.  
+ Jeśli typ danych `expression1` lub `expression2` nie `String` , ale rozszerza się na `String`, jest konwertowany na `String`. Jeśli jeden z typów danych nie mogą zostać poszerzone do `String`, kompilator generuje błąd.  
   
- Typ danych miary `result` jest `String`. Jeśli jeden lub oba wyrażenia mają [nic](../../../visual-basic/language-reference/nothing.md) lub mieć wartość <xref:System.DBNull.Value?displayProperty=nameWithType>, są traktowane jako ciąg o wartości "".  
-  
-> [!NOTE]
->  `&` Operator może być *przeciążony*, co oznacza, że klasy lub struktury ponownie zdefiniować jego zachowanie, gdy argument operacji ma typ tej klasy lub struktury. Jeśli kod używa tego operatora dla klasy lub struktury, upewnij się, że rozumiesz ponownie zdefiniowany zachowania. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Typ danych `result` jest `String`. Jeśli jeden lub oba wyrażenia mają [nic](../../../visual-basic/language-reference/nothing.md) lub mieć wartość <xref:System.DBNull.Value?displayProperty=nameWithType>, będą one traktowane jako ciąg znaków o wartości "".  
   
 > [!NOTE]
->  Handlowe "i" (&) znaków mogą służyć do identyfikowania zmienne jako typ `Long`. Aby uzyskać więcej informacji, zobacz [znaków typu](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+>  `&` Operator może być *przeciążone*, co oznacza, że klasy lub struktury można ponownie zdefiniować jej zachowanie, gdy argument operacji ma typ tej klasy lub struktury. Jeśli kod używa tego operatora dla klasy lub struktury, upewnij się, że rozumiesz jej zachowanie zmieniony. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+  
+> [!NOTE]
+>  Handlowe "i" (&) znak może również służyć do identyfikowania zmienne jako typ `Long`. Aby uzyskać więcej informacji, zobacz [znaki typu](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `&` operatora, aby wymusić ciągów. Wynik jest wartością ciągu reprezentujący łączenia operandów dwa parametry.  
+ W tym przykładzie użyto `&` operatora, aby wymusić ciągów. Wynik jest wartością ciągu reprezentujący łączenie ciąg dwóch argumentów.  
   
  [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operator_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [&=, operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
- [Operatory łączenia](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
- [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Operatory łączenia w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+## <a name="see-also"></a>Zobacz także
+- [&=, operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
+- [Operatory łączenia](../../../visual-basic/language-reference/operators/concatenation-operators.md)
+- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Operatory łączenia w języku Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

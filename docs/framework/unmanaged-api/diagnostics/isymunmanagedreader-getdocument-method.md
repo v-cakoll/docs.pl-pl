@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45548fcd85e58086c2a43ac33e739c8ccb0e833f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecd11b57d1901c4618ee0d27442753559b85c509
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738108"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument — Metoda
 Umożliwia znalezienie dokumentu. Język dokumentu, dostawcy i typ są opcjonalne.  
@@ -43,22 +43,22 @@ HRESULT GetDocument (
  [in] Adres URL, który identyfikuje dokumentu.  
   
  `language`  
- [in] Z językiem dokumentu. Ten parametr jest opcjonalny.  
+ [in] Język dokumentu. Ten parametr jest opcjonalny.  
   
  `languageVendor`  
- [in] Tożsamość dostawcy z językiem dokumentu. Ten parametr jest opcjonalny.  
+ [in] Tożsamość dostawcy języka dokumentu. Ten parametr jest opcjonalny.  
   
  `documentType`  
  [in] Typ dokumentu. Ten parametr jest opcjonalny.  
   
  `pRetVal`  
- [out] Wskaźnik do interfejsu zwrócony.  
+ [out] Wskaźnik do interfejsu zwrócone.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

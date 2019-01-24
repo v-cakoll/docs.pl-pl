@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd1e5daada8793e94980afc5f0cf509915bd288e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e7679fd8010ebe06f20a2a894cbc8e9864b81f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705498"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted — Metoda
-Powiadamia profilera, że z procesem Zwalnianie domeny aplikacji.  
+Powiadamia program profilujący, że Trwa zwalnianie domeny aplikacji z procesu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,13 +36,13 @@ HRESULT AppDomainShutdownStarted(
   
 #### <a name="parameters"></a>Parametry  
  `appDomainId`  
- [in] Identyfikuje domenę, w której są przechowywane zestawów aplikacji.  
+ [in] Określa domenę, w której są przechowywane zestawy aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `appDomainId` jest nieprawidłowa dla żądania żadnych informacji po `AppDomainShutdownStarted` metoda zwraca — jest to profilera ostatnia możliwość uzyskania informacji na temat tej domeny aplikacji.  
+ Wartość `appDomainId` jest nieprawidłowy w przypadku każdego żądania informacji po `AppDomainShutdownStarted` metoda zwraca — jest to programu profilującego ostatniego masz szansę, aby uzyskać informacje na temat tej domeny aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -50,5 +50,5 @@ HRESULT AppDomainShutdownStarted(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

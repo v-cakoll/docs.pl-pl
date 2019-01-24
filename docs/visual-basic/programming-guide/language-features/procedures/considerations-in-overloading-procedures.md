@@ -25,65 +25,65 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: e1768d0ac03cb6730c4337d7476ae163e75adfd3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 234cd23c487f92cfa1e2761dd7a6caadf8820704
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654333"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685805"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Zagadnienia dotyczące przeciążania procedur (Visual Basic)
-Przeciążanie procedury, należy używać innej *podpisu* dla każdej wersji przeciążona. Zwykle oznacza to, że każda wersja należy określić inną listą parametrów. Aby uzyskać więcej informacji, zobacz "Inny podpis" w [przeciążanie procedury](./procedure-overloading.md).  
+Możesz przeciążanie procedury, należy użyć innego *podpisu* dla każdej wersji przeciążona. Zwykle oznacza to, że każda wersja należy określić inną listą parametrów. Aby uzyskać więcej informacji, zobacz "Inny podpis" w [przeciążanie procedury](./procedure-overloading.md).  
   
- Można przeciążać `Function` procedury z `Sub` procedury i na odwrót, pod warunkiem mają różnych podpisów. Dwa przeciążenia nie różnią się tylko jedna ma wartość zwracaną, a drugi nie.  
+ Możesz doprowadzić do przeciążenia `Function` procedury z `Sub` procedury i na odwrót, pod warunkiem mają różnych podpisów. Dwa przeciążenia nie różnią się tylko jeden z nich nie zwraca wartości, a drugi nie.  
   
- Można przeciążać właściwości tak samo przeciążanie procedury i z ograniczeniami. Jednak nie mogą przeciążać procedury z właściwością lub na odwrót.  
+ Możesz doprowadzić do przeciążenia właściwości taki sam sposób, przeciążanie procedury i z ograniczeniami. Jednak nie mogą przeciążać procedury z właściwością lub na odwrót.  
   
-## <a name="alternatives-to-overloaded-versions"></a>Alternatywy dla wersji przeciążone  
- Czasami masz alternatywy dla przeciążonej wersje, zwłaszcza w przypadku obecności argumentów jest opcjonalny, lub ich numer zmiennej.  
+## <a name="alternatives-to-overloaded-versions"></a>Alternatywy dla przeciążone wersje  
+ Czasami masz alternatyw przeciążone wersje, zwłaszcza w przypadku obecności argumentów jest opcjonalne, lub ich liczba jest zmienna.  
   
- Należy pamiętać, że argumenty opcjonalne nie są zawsze obsługiwane przez wszystkie języki, a tablice parametrów są ograniczone do języka Visual Basic. Jeśli piszesz procedury, która może być wywoływana z kodu napisanego w jednym z kilku różnych języków przeciążony oferta wersji największą elastyczność.  
+ Należy pamiętać, że opcjonalne argumenty nie są zawsze obsługiwane przez wszystkie języki i tablice parametrów są ograniczone do języka Visual Basic. Jeśli piszesz procedury, która może być wywoływana z kodu napisanego w dowolnym z kilku różnych języków, przeciążone wersje oferty największą elastyczność.  
   
-### <a name="overloads-and-optional-arguments"></a>Przeciążenia i argumentów opcjonalnych  
- Kod wywołujący może opcjonalnie podaj lub pominąć jeden lub więcej argumentów, można zdefiniować wiele wersji przeciążone lub opcjonalne parametry.  
+### <a name="overloads-and-optional-arguments"></a>Przeciążenia i argumenty opcjonalne.  
+ Gdy kod wywołujący może opcjonalnie podaj lub Pomiń jeden lub więcej argumentów, można zdefiniować wiele przeciążone wersje, lub korzystanie z parametrów opcjonalnych.  
   
-#### <a name="when-to-use-overloaded-versions"></a>Kiedy należy używać przeciążonej wersji  
- Można rozważyć możliwość definiowania serii zastąpionej wersji w następujących przypadkach:  
+#### <a name="when-to-use-overloaded-versions"></a>Kiedy należy używać przeciążone wersje  
+ Można rozważyć Definiowanie szereg przeciążone wersje w następujących przypadkach:  
   
--   Logikę w kodzie procedury znacznie różni się w zależności od tego, czy kod wywołujący dostarcza opcjonalny argument lub nie.  
+-   Logiki w kodzie procedury różni się znacznie w zależności od tego, czy kod wywołujący dostarcza opcjonalny argument, czy nie.  
   
--   Kod procedury niezawodnie nie może sprawdzić, czy kod wywołujący udostępnił opcjonalny argument. Jest to możliwe, na przykład, jeśli nie jest domyślna wartość, która nie kandydatem kod wywołujący nie należy się spodziewać umożliwiają określanie wartości.  
+-   Kod procedury niezawodne nie można sprawdzić, czy kod wywołujący udostępnił opcjonalny argument. Jest to możliwe, na przykład, jeśli ma nie kandydatem dla domyślną wartość, która kod wywołujący nie należy się spodziewać umożliwiają określanie wartości.  
   
-#### <a name="when-to-use-optional-parameters"></a>Kiedy należy używać następujące parametry opcjonalne  
+#### <a name="when-to-use-optional-parameters"></a>Kiedy należy używać parametrów opcjonalnych  
  Można wybrać co najmniej jeden parametr opcjonalny w następujących przypadkach:  
   
--   Tylko niezbędne czynności podczas kod wywołujący nie dostarcza opcjonalny argument jest ustawić parametr na wartość domyślną. W takim przypadku kod procedura może być mniej skomplikowane, w przypadku definiowania jednej wersji co najmniej jednym `Optional` parametrów.  
+-   Tylko niezbędne czynności podczas wywoływania kodu nie dostarcza opcjonalny argument jest ustawić parametr na wartość domyślną. W takiej sytuacji kod procedury może być mniej skomplikowany, jeśli zdefiniujesz z co najmniej jedną wersję `Optional` parametrów.  
   
  Aby uzyskać więcej informacji, zobacz [następujące parametry opcjonalne](./optional-parameters.md).  
   
 ### <a name="overloads-and-paramarrays"></a>Przeciążenia i ParamArrays  
- Gdy kod wywołujący może przekazać zmienna liczba argumentów, można zdefiniować wiele wersji przeciążone lub użyj tablicy parametrów.  
+ Gdy kod wywołujący może przekazać zmienną liczbę argumentów, można zdefiniować wiele przeciążone wersje, lub użyj tablicy parametrów.  
   
-#### <a name="when-to-use-overloaded-versions"></a>Kiedy należy używać przeciążonej wersji  
- Można rozważyć możliwość definiowania serii zastąpionej wersji w następujących przypadkach:  
+#### <a name="when-to-use-overloaded-versions"></a>Kiedy należy używać przeciążone wersje  
+ Można rozważyć Definiowanie szereg przeciążone wersje w następujących przypadkach:  
   
--   Wiadomo, że kod wywołujący nigdy nie przekazuje więcej niż małej liczby wartości do tablicy parametrów.  
+-   Wiesz, że kod wywołujący nigdy nie przekazuje ponad niewielka liczba wartości do tablicy parametrów.  
   
--   Logikę w kodzie procedury znacznie różni się w zależności od tego, ile wartości przekazuje kod wywołujący.  
+-   Logiki w kodzie procedura jest znacząco różne w zależności od tego, jak wiele wartości, które przekazuje kodu wywołującego.  
   
--   Kod wywołujący może przekazać wartości różnych typów danych.  
+-   Kod wywołujący można przekazać wartości różnych typów danych.  
   
 #### <a name="when-to-use-a-parameter-array"></a>Kiedy należy używać tablicy parametrów  
- Czy można lepiej obsłużone przez `ParamArray` parametru w następujących przypadkach:  
+ Sięganie po `ParamArray` parametru w następujących przypadkach:  
   
--   Nie jest możliwe do prognozowania wartości ile kod wywołujący może przekazać do tablicy parametrów i może być wiele.  
+-   Nie jesteś w stanie przewidzieć liczbę wartości, kod wywołujący można przekazać do tablicy parametrów i może być duża liczba.  
   
--   Logika procedury pozwala na przechodzenie przez wszystkie wartości przekazuje kodu wywołującego, wykonywanie zasadniczo tej samej operacji w każdej wartości.  
+-   Logika procedury pozwala na przechodzenie przez wszystkie wartości, które przekazuje kodu wywołującego, wykonywanie zasadniczo tej samej operacji na każdej wartości.  
   
- Aby uzyskać więcej informacji, zobacz [tablice parametrów](./parameter-arrays.md).  
+ Aby uzyskać więcej informacji, zobacz [Parameter — tablice](./parameter-arrays.md).  
   
-## <a name="implicit-overloads-for-optional-parameters"></a>Niejawne przeładowania dla następujące parametry opcjonalne  
- Procedury z [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) parametru jest odpowiednikiem dwie procedury przeciążenia, jeden z opcjonalnym parametrem i drugi bez niego. Nie można przeciążyć takiej procedury z listą parametrów odpowiadający jednego z tych. Następujące deklaracje ilustrację.  
+## <a name="implicit-overloads-for-optional-parameters"></a>Niejawne przeładowania dla parametrów opcjonalnych  
+ Procedury z [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) parametr jest równoważny dwóch procedur przeciążona, jeden z opcjonalnym parametrem i jedną bez niego. Nie mogą przeciążać takiej procedury z listą parametrów odpowiadający jedną z tych wersji. Następujące deklaracje pokazują to.  
   
  [!code-vb[VbVbcnProcedures#58](./codesnippet/VisualBasic/considerations-in-overloading-procedures_1.vb)]  
   
@@ -91,43 +91,43 @@ Przeciążanie procedury, należy używać innej *podpisu* dla każdej wersji pr
   
  [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/considerations-in-overloading-procedures_3.vb)]  
   
- Procedury z więcej niż jeden parametr opcjonalny jest zestaw niejawne przeładowania przez logikę, podobnie jak w poprzednim przykładzie.  
+ Procedury z więcej niż jeden parametr opcjonalny istnieje zestaw niejawne przeładowania, dotarły przez logikę, podobnie jak w poprzednim przykładzie.  
   
-## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Niejawne przeładowania dla parametru ParamArray  
- Kompilator uwzględnia procedury z [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametru nieograniczoną liczbę przeciążenia, różniące się od siebie co kod wywołujący przekazuje do tablicy parametrów w następujący sposób:  
+## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Niejawne przeładowania dla ParamArray parametru  
+ Kompilator traktuje procedury z [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametru, aby mieć nieograniczoną liczbę przeciążeń, różniące się od siebie nawzajem co kod wywołujący przekazuje do tablicy parametrów w następujący sposób:  
   
--   Przeciążeniami dla gdy kod wywołujący nie dostarcza argument `ParamArray`  
+-   Gdy kod wywołujący nie podać argument do jednego przeciążenia `ParamArray`  
   
--   Przeciążeniami dla podczas wywoływania kodu dostarcza Jednowymiarowa tablica `ParamArray` typ elementu  
+-   Gdy kod wywołujący dostarcza Jednowymiarowa tablica jednego przeciążenia `ParamArray` typ elementu  
   
--   Dla każdego dodatnią liczbą całkowitą, jeden przeciążenia dla gdy kod wywołujący dostarcza tej liczby argumentów, każdy z `ParamArray` typ elementu  
+-   Dla każdego dodatnią liczbą całkowitą jednego przeciążenia dla gdy kod wywołujący dostarcza tę liczbę argumentów, każdy z `ParamArray` typ elementu  
   
- Następujące deklaracje ilustrują te niejawne przeładowania.  
+ Następujące deklaracje pokazują te niejawne przeładowania.  
   
  [!code-vb[VbVbcnProcedures#68](./codesnippet/VisualBasic/considerations-in-overloading-procedures_4.vb)]  
   
  [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/considerations-in-overloading-procedures_5.vb)]  
   
- Nie można przeciążyć procedury z listą parametrów pobierającej tablicą jednowymiarową dla tablicy parametrów. Można jednak użyć podpisy niejawne przeładowania. Następujące deklaracje ilustrację.  
+ Nie można przeciążyć procedury z listą parametrów, który przyjmuje tablicę jednowymiarową dla tablicy parametrów. Można jednak użyć podpisy niejawne przeładowania. Następujące deklaracje pokazują to.  
   
  [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/considerations-in-overloading-procedures_6.vb)]  
   
-## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Alternatywą wobec przeładowanie programowanie Nietypowane  
- Jeśli chcesz zezwolić kod wywołujący do przekazania do parametru różne typy danych, alternatywne podejście jest nietypowane. Można ustawić typ sprawdzania przełącznik `Off` przy użyciu jednej [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md) lub [/optionstrict —](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) — opcja kompilatora. Następnie trzeba zadeklarować typ danych parametru. Jednak ta metoda ma następujące wady w porównaniu do przeciążania:  
+## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Programowanie nietypowane jako alternatywę do przeciążania  
+ Jeśli chcesz zezwolić na kod wywołujący, aby przekazać różne typy danych do parametru alternatywnym podejściem jest programowanie nietypowane. Można ustawić typ sprawdzania przełącznik `Off` z oboma [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md) lub [/optionstrict —](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) — opcja kompilatora. Następnie trzeba zadeklarować typ danych parametru. Jednak to podejście ma następujące wady w porównaniu do przeciążania:  
   
--   Programowanie nietypowane tworzy mniej wydajne wykonywania kodu.  
+-   Programowanie nietypowane generuje kod, mniej wydajne wykonywanie.  
   
--   Dla każdego typu danych oszacowano, przekazywany jest przetestowanie procedury.  
+-   Procedury należy przetestować dla każdego typu danych, które przewiduje, przekazywana.  
   
--   Kompilator nie może sygnał wystąpił błąd, jeśli kod wywołujący przekazuje procedura obsługuje tylko typ danych.  
+-   Kompilator nie zasygnalizować błąd, jeśli kod wywołujący przekazuje typ danych, który nie obsługuje procedury.  
   
-## <a name="see-also"></a>Zobacz też  
- [Procedury](./index.md)  
- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)  
- [Instrukcje: definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)  
- [Instrukcje: wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)  
- [Instrukcje: przeciążanie procedury korzystającej z parametrów opcjonalnych](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
- [Instrukcje: przeciążanie procedury korzystającej z nieokreślonej liczby parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
- [Rozpoznanie przeciążenia](./overload-resolution.md)  
- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+## <a name="see-also"></a>Zobacz także
+- [Procedury](./index.md)
+- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
+- [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)
+- [Instrukcje: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Instrukcje: Wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)
+- [Instrukcje: Przeciążanie procedury wykorzystującej parametry opcjonalne](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Instrukcje: Przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Rozpoznanie przeciążenia](./overload-resolution.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)

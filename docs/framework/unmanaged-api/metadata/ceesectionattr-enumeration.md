@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b7f70162ae368934e1383683672fed86f9ce18c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e88dd0053ec7562d6223c18479f4a4fadc68c12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701797"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr — Wyliczenie
-Zawiera wartości, które określają atrybuty sekcji na potrzeby używania przez [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfejsu.  
+Zawiera wartości, które określają atrybuty sekcji na potrzeby używania przez [iceegen —](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,18 +44,18 @@ typedef enum  {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`sdNone`|Sekcja nie ma żadnych atrybutów.|  
-|`sdReadOnly`|Sekcja zawiera zainicjowane dane, które mogą być tylko odczytywane, nie zaktualizowano.|  
-|`sdReadWrite`|Sekcja zawiera zainicjowane dane, które można odczytać lub zaktualizować.|  
-|`sdExecute`|Sekcja zawiera kod wykonywalny, który może być do odczytu i wykonywane.|  
+|`sdReadOnly`|Sekcja zawiera zainicjowane dane, które mogą być odczytane tylko, nie zaktualizowano.|  
+|`sdReadWrite`|Sekcja zawiera zainicjowane danych, który może odczytać lub zaktualizować.|  
+|`sdExecute`|Sekcja zawiera kod wykonywalny, który może odczytać i wykonywane.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e0d560b81aca1c6d859000cda682ee6c75fd7acb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 343834492776fdb09a68210fb80138ec2c588773
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741155"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule — Metoda
-Pobiera identyfikatory domeny aplikacji, w których dany moduł został załadowany.  
+Pobiera identyfikatory domen aplikacji, w których dany moduł został załadowany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +40,22 @@ HRESULT GetAppDomainsContainingModule(
   
 #### <a name="parameters"></a>Parametry  
  `moduleId`  
- [in] Identyfikator załadować modułu.  
+ [in] Identyfikator załadowanym module.  
   
  `cAppDomainIds`  
  [in] Rozmiar `appDomainIds` tablicy.  
   
  `pcAppDomainIds`  
- [out] Wskaźnik do liczba zwróconych elementów.  
+ [out] Wskaźnik do całkowitą liczbę zwróconych elementów.  
   
  `appDomainIds`  
- [out] Tablica wartości Identyfikator domeny aplikacji.  
+ [out] Tablica wartości Identyfikatora domeny aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda używa do wywołującego przydzielonych buforów.  
+ Metoda używa obiektu wywołującego przydzielone buforów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -63,8 +63,8 @@ HRESULT GetAppDomainsContainingModule(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerFunctionEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerFunctionEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

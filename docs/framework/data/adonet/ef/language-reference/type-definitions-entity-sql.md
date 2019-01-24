@@ -2,32 +2,32 @@
 title: Definicje typów (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 7abbe5dfed005a10955a385cadf12725a9450512
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ac27c3dd43cb83272bff991dbd713e8269ccbb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743533"
 ---
 # <a name="type-definitions-entity-sql"></a>Definicje typów (jednostka SQL)
-Definicja typu jest używana w instrukcji deklaracji [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wbudowanej funkcji.  
+Definicja typu jest używana w instrukcji deklaracji elementu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcja w tekście.  
   
 ## <a name="remarks"></a>Uwagi  
- Instrukcja deklaracji dla funkcji wbudowanej składa się z [funkcja](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) następuje identyfikator reprezentujący nazwę funkcji (na przykład "MyAvg"), a następnie listy definicji parametrów w nawiasy okrągłe (dla — słowo kluczowe przykład "opłat Collection(Decimal)").  
+ Instrukcji deklaracji dla wbudowanej funkcji składa się z [funkcja](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) następuje identyfikator reprezentujący nazwę funkcji (na przykład "MyAvg"), a następnie listę definicji parametrów w nawiasie (słowo kluczowe przykład "opłat Collection(Decimal)").  
   
- Lista definicji parametru składa się z definicjami parametrów zero lub więcej. Każda definicja parametru składa się z identyfikatorem (nazwa parametru funkcji, na przykład "należności") następuje definicji typu "(na przykład Collection(Decimal)").  
+ Lista definicji parametru składa się z zero lub więcej definicji parametru. Każda definicja parametru składa się z identyfikatora (nazwa parametru funkcji, na przykład "opłat") następuje definicję typu "(na przykład Collection(Decimal)").  
   
- Definicje typów mogą być:  
+ Definicje typów może być:  
   
 -   Typ identyfikatora (na przykład "Int32" lub "AdventureWorks.Order").  
   
--   Słowo kluczowe `COLLECTION` następuje innej definicji typu w nawiasach "(na przykład Collection(AdventureWorks.Order)").  
+-   Słowo kluczowe `COLLECTION` następuje inną definicję typu w nawiasach "(na przykład Collection(AdventureWorks.Order)").  
   
--   Słowo kluczowe wiersza następuje lista definicji właściwości w nawiasy okrągłe (na przykład "Row(x AdventureWorks.Order)"). Definicje właściwości mają format, takie jak "`identifier type_definition`, `identifier type_definition`,...".  
+-   Słowo kluczowe wiersza, a następnie listę definicji właściwości w nawiasie (na przykład "Row(x AdventureWorks.Order)"). Definicje właściwości mają format, takie jak "`identifier type_definition`, `identifier type_definition`,...".  
   
--   Słowo kluczowe REF oraz typ identyfikatora w nawiasy okrągłe "(na przykład Ref(AdventureWorks.Order)"). Operator definicji typu REF wymaga typu jednostki jako argument. Nie można określić typu pierwotnego jako argument.  
+-   Słowo kluczowe REF, a następnie typ identyfikatora w nawiasie "(na przykład Ref(AdventureWorks.Order)"). Operator definicji typu REF wymaga typ jednostki jako argument. Typ pierwotny nie można określić jako argument.  
   
- Można zagnieżdżać w definicji typu (na przykład "kolekcji (Row(x Ref(AdventureWorks.Order)))").  
+ Można także zagnieżdżać definicje typów (na przykład "kolekcji (Row(x Ref(AdventureWorks.Order)))").  
   
  Dostępne są opcje definicji typu:  
   
@@ -41,9 +41,9 @@ Definicja typu jest używana w instrukcji deklaracji [!INCLUDE[esql](../../../..
   
  Opcja definicji właściwości jest `IdentifierName type_definition`.  
   
- Obsługiwane typy to wszystkie typy w bieżącej przestrzeni nazw. Dotyczy to zarówno podstawowego, jak i jednostek, typy.  
+ Obsługiwane typy to żadnych typów w bieżącej przestrzeni nazw. Obejmują one typy zarówno podstawowego, jak i jednostek.  
   
- Obsługiwany obiekt, do którego będzie dotyczyć tylko typy jednostek w bieżącej przestrzeni nazw. Obejmują one typów pierwotnych.  
+ Obsługiwane typy dotyczą tylko typy jednostek w bieżącym obszarze nazw jednostki. Obejmują one typy pierwotne.  
   
 ## <a name="examples"></a>Przykłady  
  Oto przykład definicją typu prostego.  
@@ -56,7 +56,7 @@ Function MyRound(p1 EDM.Decimal) AS (
 MyRound(CAST(1.7 as EDM.Decimal))  
 ```  
   
- Oto przykład definicji typu KOLEKCJI.  
+ Oto przykład definicja typu KOLEKCJI.  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -66,7 +66,7 @@ Function MyRound(p1 Collection(EDM.Decimal)) AS (
 MyRound({CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)})  
 ```  
   
- Oto przykład definicji typu wiersz.  
+ Oto przykład definicja typu wiersza.  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -86,6 +86,6 @@ Function UnReference(p1 Ref(AdventureWorks.Order)) AS (
 select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -8,52 +8,52 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: 92d54e3135142bc02a17f3ce5ac078a356c139be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 695f356f44bfd6ea5ad3c0a977ec31ddfbea2b05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599847"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668226"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
-`Key` — Słowo kluczowe można określić zachowanie dla właściwości typu anonimowego. Tylko właściwości wyznaczone jako właściwości klucza brać udziału w testach równość wystąpień typu anonimowego lub obliczenia wartości skrótu kodu. Nie można zmienić wartości właściwości klucza.  
+`Key` — Słowo kluczowe pozwala na określenie zachowania w przypadku właściwości anonimowych typów. Tylko właściwości wyznaczone jako właściwości klucza wziąć udział w testach równości pomiędzy wystąpień typu anonimowego lub obliczania wartości Kod skrótu. Nie można zmienić wartości właściwości klucza.  
   
- Możesz określić właściwości typu anonimowego jako właściwość klucza przez umieszczenie słowo kluczowe `Key` przed jej deklaracją listy inicjowania. W poniższym przykładzie `Airline` i `FlightNo` są właściwościami klucza, ale `Gate` nie jest.  
+ Właściwości typu anonimowego wyznaczyć jako właściwość klucza poprzez umieszczenie słowa kluczowego `Key` przed jej deklaracją listy inicjowania. W poniższym przykładzie `Airline` i `FlightNo` są właściwościami klucza, ale `Gate` nie jest.  
   
  [!code-vb[VbVbalrAnonymousTypes#26](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_1.vb)]  
   
- Podczas tworzenia nowego typu anonimowego dziedziczy bezpośrednio z <xref:System.Object>. Kompilator zastępuje trzy dziedziczone elementy członkowskie: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, i <xref:System.Object.ToString%2A>. Kod zastąpienia, który jest tworzony dla <xref:System.Object.Equals%2A> i <xref:System.Object.GetHashCode%2A> na podstawie właściwości klucza. Jeśli nie ma żadnych właściwości klucza w typie, <xref:System.Object.GetHashCode%2A> i <xref:System.Object.Equals%2A> nie zostaną zastąpione.  
+ Po utworzeniu nowego typu anonimowego dziedziczy bezpośrednio z <xref:System.Object>. Kompilator zastępuje trzy dziedziczone elementy członkowskie: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, i <xref:System.Object.ToString%2A>. Kod zastąpienia, który jest generowany dla <xref:System.Object.Equals%2A> i <xref:System.Object.GetHashCode%2A> na podstawie właściwości klucza. Jeśli nie ma żadnych kluczy właściwości w typie <xref:System.Object.GetHashCode%2A> i <xref:System.Object.Equals%2A> nie są zastępowane.  
   
 ## <a name="equality"></a>Równość  
- Dwa wystąpienia typu anonimowego są takie same, jeśli są one wystąpień tego samego typu i wartości ich właściwości klucza są takie same. W poniższych przykładach `flight2` jest równa `flight1` z poprzedniego przykładu ponieważ są one takie same anonimowego wystąpienia typu i mieć zgodne wartości dla ich właściwości klucza. Jednak `flight3` nie jest równa `flight1` , ponieważ ma ona inną wartość dla właściwości klucza, `FlightNo`. Wystąpienie `flight4` nie jest taki sam typ jak `flight1` ponieważ one określić różne właściwości jako właściwości klucza.  
+ Dwa wystąpienia typu anonimowego są takie same, jeśli są one wystąpień tego samego typu i wartości ich właściwości klucza są takie same. W poniższych przykładach `flight2` jest równa `flight1` z poprzedniego przykładu, ponieważ są one wystąpień tego samego anonimowy typ i mają pasujących wartości ich właściwości klucza. Jednak `flight3` nie jest równa `flight1` ponieważ ma ona inną wartość dla klucza właściwości `FlightNo`. Wystąpienie `flight4` nie jest taki sam jak `flight1` ponieważ one wyznaczyć różnych właściwości jako właściwości klucza.  
   
  [!code-vb[VbVbalrAnonymousTypes#27](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_2.vb)]  
   
- Jeśli dwa wystąpienia został zadeklarowany z tylko niż właściwości klucza, takie same jak w nazwę, typ, kolejność i wartości, dwa wystąpienia nie są takie same. Wystąpienia bez właściwości klucza wynosi tylko do samego siebie.  
+ Jeśli dwa wystąpienia są uznane za pomocą tylko niekluczowych właściwości, identyczne nazwę, typ, kolejność i wartości, dwa wystąpienia nie są równe. Wystąpienie bez właściwości klucza jest równe tylko do samego siebie.  
   
- Aby uzyskać więcej informacji o warunkach, w których dwa wystąpienia typu anonimowego są wystąpień tego samego typu anonimowego, zobacz [typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+ Aby uzyskać więcej informacji o warunkach, w których dwa wystąpienia typu anonimowego są wystąpieniami tego samego typu anonimowego, zobacz [typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
 ## <a name="hash-code-calculation"></a>Obliczanie kodu wyznaczania wartości skrótu  
- Podobnie jak <xref:System.Object.Equals%2A>, funkcji skrótu, który jest zdefiniowany w <xref:System.Object.GetHashCode%2A> dla typu anonimowego opiera się na typ właściwości klucza. W poniższych przykładach pokazano interakcji między właściwości klucza oraz skrót wartości kodów.  
+ Podobnie jak <xref:System.Object.Equals%2A>, funkcję mieszania, która jest zdefiniowana w <xref:System.Object.GetHashCode%2A> dla typu anonimowego opiera się na kluczowych właściwości typu. W poniższych przykładach pokazano interakcji między właściwościami klucza i wyznaczania wartości skrótu wartości kodu.  
   
- Wystąpienia typu anonimowego, które mają takie same wartości dla wszystkich właściwości klucza mają taką samą wartość kodu wyznaczania wartości skrótu, nawet jeśli niż właściwości klucza nie ma dopasowania wartości. Zwraca następująca instrukcja `True`.  
+ Wystąpienia typu anonimowego, które mają takie same wartości wszystkich właściwości klucza mają taką samą wartość kodu wyznaczania wartości skrótu, nawet jeśli niekluczowych właściwości nie mają pasujących wartości. Poniższa instrukcja zwraca `True`.  
   
  [!code-vb[VbVbalrAnonymousTypes#37](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_3.vb)]  
   
- Wystąpienia typu anonimowego, które mają różne wartości dla co najmniej jednej właściwości klucza mają różne skrótu kodu wartości. Zwraca następująca instrukcja `False`.  
+ Wystąpienia typu anonimowego, które mają różne wartości dla co najmniej jedną właściwość klucza mają wartości kodu inny skrót. Poniższa instrukcja zwraca `False`.  
   
  [!code-vb[VbVbalrAnonymousTypes#38](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_4.vb)]  
   
- Wystąpień typów anonimowych, które określają różne właściwości jako właściwości klucza nie są wystąpień tego samego typu. Mają one wartości kodów różnych wyznaczania wartości skrótu, nawet wtedy, gdy nazwy i wartości wszystkich właściwości są takie same. Zwraca następująca instrukcja `False`.  
+ Wystąpienia typów anonimowych, które określają różne właściwości jako właściwości klucza nie są wystąpieniami tego samego typu. Mają one różne wartości skrótów kodu wartości, nawet wtedy, gdy nazwy i wartości wszystkich właściwości są takie same. Poniższa instrukcja zwraca `False`.  
   
  [!code-vb[VbVbalrAnonymousTypes#39](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_5.vb)]  
   
 ## <a name="read-only-values"></a>Wartości tylko do odczytu  
- Nie można zmienić wartości właściwości klucza. Na przykład w `flight1` w przykładach wcześniejszych `Airline` i `FlightNo` pola są tylko do odczytu, ale `Gate` można zmienić.  
+ Nie można zmienić wartości właściwości klucza. Na przykład w `flight1` w wcześniejszych przykładach `Airline` i `FlightNo` pola są tylko do odczytu, ale `Gate` można zmienić.  
   
  [!code-vb[VbVbalrAnonymousTypes#28](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_6.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Definicja typu anonimowego](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)  
- [Instrukcje: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
- [Typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>Zobacz także
+- [Definicja typu anonimowego](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
+- [Instrukcje: Wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

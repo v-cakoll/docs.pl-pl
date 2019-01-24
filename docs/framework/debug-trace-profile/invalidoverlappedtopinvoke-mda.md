@@ -11,37 +11,37 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7240692e35c97f3efbc33ca27a0221da1d250149
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4dc09f3e8cb926d31b21f0cc2a6442c7a6b8dec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386860"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714788"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>invalidOverlappedToPinvoke MDA
-`invalidOverlappedToPinvoke` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy nachodzący wskaźnik, który nie został utworzony na stercie kolekcji pamięci jest przekazywany do określonych funkcji Win32.  
+`invalidOverlappedToPinvoke` Zarządzanego Asystenta debugowania (MDA) jest uaktywniany podczas nakładającego się wskaźnika, który nie został utworzony na stercie wyrzucania elementów bezużytecznych jest przekazywana do określonych funkcji systemu Win32.  
   
 > [!NOTE]
->  Domyślnie to zdarzenie MDA jest aktywna, tylko jeśli wywołanie platformy połączenia jest zdefiniowana w kodzie i debuger informuje o stanie JustMyCode każdej metody. Debuger, który nie rozpoznaje JustMyCode (na przykład MDbg.exe bez rozszerzeń) nie zostanie aktywowany to zdarzenie MDA. MDA ten można włączyć dla tych debugery przy użyciu pliku konfiguracji i jawnie settting `justMyCode="false"` w. plik mda.config `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`).  
+>  Domyślnie to zdarzenie MDA jest aktywowane tylko wtedy, gdy wywołanie platformy jest zdefiniowane w kodzie i usuwania błędów raportuje stan JustMyCode każdej metody. Debuger, który nie rozpoznaje JustMyCode (np. MDbg.exe bez rozszerzeń) nie aktywuje to zdarzenie MDA. Ten MDA może być włączony dla tych debugerów przy użyciu pliku konfiguracji i wyraźnych ustawień `justMyCode="false"` w. plik mda.config `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`).  
   
 ## <a name="symptoms"></a>Symptomy  
- Awarie lub uszkodzenie stosu unexplainable.  
+ Awarie lub niewytłumaczalne uszkodzenia sterty.  
   
 ## <a name="cause"></a>Przyczyna  
- Nachodzący wskaźnik, który nie został utworzony na stercie kolekcji pamięci są przekazywane do funkcji określonego systemu operacyjnego.  
+ Niewłaściwy nachodzący wskaźnik, który nie został utworzony na stercie wyrzucania elementów bezużytecznych jest przekazywany do określonych funkcji systemu operacyjnego.  
   
- W poniższej tabeli przedstawiono funkcje, że to zdarzenie MDA śledzi.  
+ W poniższej tabeli przedstawiono funkcje, że te zdarzenia mda.  
   
 |Moduł|Funkcja|  
 |------------|--------------|  
 |HttpApi.dll|`HttpReceiveHttpRequest`|  
 |IpHlpApi.dll|`NotifyAddrChange`|  
-|Kernel32.dll|`ReadFile`|  
-|Kernel32.dll|`ReadFileEx`|  
-|Kernel32.dll|`WriteFile`|  
-|Kernel32.dll|`WriteFileEx`|  
-|Kernel32.dll|`ReadDirectoryChangesW`|  
-|Kernel32.dll|`PostQueuedCompletionStatus`|  
+|kernel32.dll|`ReadFile`|  
+|kernel32.dll|`ReadFileEx`|  
+|kernel32.dll|`WriteFile`|  
+|kernel32.dll|`WriteFileEx`|  
+|kernel32.dll|`ReadDirectoryChangesW`|  
+|kernel32.dll|`PostQueuedCompletionStatus`|  
 |MSWSock.dll|`ConnectEx`|  
 |WS2_32.dll|`WSASend`|  
 |WS2_32.dll|`WSASendTo`|  
@@ -49,16 +49,16 @@ ms.locfileid: "33386860"
 |WS2_32.dll|`WSARecvFrom`|  
 |MQRT.dll|`MQReceiveMessage`|  
   
- Jest duże ryzyko uszkodzenia sterty dla tego warunku, ponieważ <xref:System.AppDomain> wywołanie może zwolnić wprowadzania. Jeśli <xref:System.AppDomain> zwalnia, kod aplikacji albo spowoduje zwolnienie pamięci dla wskaźnika, przyczyną uszkodzenia po zakończeniu operacji lub kod będzie wyciek pamięci, co powoduje trudności później.  
+ Potencjał uszkodzenie sterty jest wysoki jak na ten stan, ponieważ <xref:System.AppDomain> podejmowanie wywołania może zwolnić. Jeśli <xref:System.AppDomain> zwalnia, kod aplikacji spowoduje zwolnienie pamięci dla nakładającego się wskaźnika, powodując uszkodzenie po zakończeniu operacji lub kod wycieku pamięci, powodując trudności później.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Użyj <xref:System.Threading.Overlapped> obiektów i wywoływania <xref:System.Threading.Overlapped.Pack%2A> metodę, aby pobrać <xref:System.Threading.NativeOverlapped> struktury, które mogą zostać przekazane do funkcji. Jeśli <xref:System.AppDomain> zwalnia, CLR czeka przed zakończeniem operacji asynchronicznych przed zwalnianie wskaźnika.  
+ Użyj <xref:System.Threading.Overlapped> obiektu, wywołanie <xref:System.Threading.Overlapped.Pack%2A> metodę, aby uzyskać <xref:System.Threading.NativeOverlapped> struktury, który może być przekazywany do funkcji. Jeśli <xref:System.AppDomain> zwalnia, CLR czeka, aż zakończeniu operacji asynchronicznej przed zwolnieniem wskaźnika.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie miała wpływu na środowisko CLR.  
+ To zdarzenie MDA nie miało wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Oto przykład danych wyjściowych z to zdarzenie MDA.  
+ Oto przykład danych wyjściowych z tego MDA.  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the Win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlapped structure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
   
@@ -72,7 +72,7 @@ ms.locfileid: "33386860"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)

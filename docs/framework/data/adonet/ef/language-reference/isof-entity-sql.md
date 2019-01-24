@@ -2,12 +2,12 @@
 title: ISOF (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: dbea0c3a0087c88bf5ffda7b921764b8a0f9f21d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 72443060584eaca5aa8c1ea19393dfc043722c90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465450"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731546"
 ---
 # <a name="isof-entity-sql"></a>ISOF (jednostka SQL)
 Określa, czy typ wyrażenia jest określonego typu lub jednego z jego podtypy.  
@@ -56,5 +56,5 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

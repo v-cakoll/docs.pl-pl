@@ -1,5 +1,5 @@
 ---
-title: 'Porady: szyfrowanie elementów XML przy użyciu kluczy asymetrycznych'
+title: 'Instrukcje: Szyfrowanie elementów XML przy użyciu kluczy asymetrycznych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61984d4778e42abf378a1369a86ba599d78980af
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 4a38c2264bac92e9c2c0627718bf53539e6bec72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121327"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518270"
 ---
-# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Porady: szyfrowanie elementów XML przy użyciu kluczy asymetrycznych
+# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Instrukcje: Szyfrowanie elementów XML przy użyciu kluczy asymetrycznych
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, aby zaszyfrować element w dokumencie XML.  Szyfrowanie XML to standardowy sposób wymiany ani nie przechowują zaszyfrowane dane XML, nie martwiąc się o łatwo odczytywanych danych.  Aby uzyskać więcej informacji na temat standardowych szyfrowanie XML, zobacz specyfikację World Wide Web Consortium (W3C) dla szyfrowanie XML znajdujący się w <https://www.w3.org/TR/xmldsig-core/>.  
   
  Szyfrowanie XML umożliwia zastąpienie dowolnego elementu XML lub dokumentów za pomocą <`EncryptedData`> element, który zawiera zaszyfrowane dane XML.  <`EncryptedData`> Element może również zawierać elementy podrzędne, które zawierają informacje o kluczach i procesem stosowanym podczas szyfrowania.  Szyfrowanie XML umożliwia dokumentu zawiera wiele elementów zaszyfrowanych i umożliwia elementu do zaszyfrowania wiele razy.  Przykład kodu w tej procedurze przedstawiono sposób tworzenia <`EncryptedData`> element wraz z kilku elementów podrzędnych, w które można użyć później, podczas odszyfrowywania.  
   
  W tym przykładzie szyfruje elementu XML za pomocą dwóch kluczy.  On generuje parę kluczy publiczny/prywatny RSA i zapisuje pary kluczy do bezpiecznego kontenera kluczy.  Ten przykład tworzy następnie klucz oddzielną sesję przy użyciu algorytmu Advanced Encryption Standard (AES), nazywany również algorytmu Rijndael.  Przykład używa klucza sesji AES do zaszyfrowania dokumentu XML, a następnie używa klucza publicznego RSA do szyfrowania klucza sesji AES.  Na koniec przykład zapisuje zaszyfrowanego klucza sesji AES i szyfrowania danych XML w dokumencie XML w ramach nowego <`EncryptedData`> element.  
   
- Aby odszyfrować XML element, pobrać prywatnego klucza RSA z kontenera kluczy, użyć go do odszyfrowywania klucza sesji i następnie użyj klucza sesji w celu odszyfrowania dokumentu.  Aby uzyskać więcej informacji na temat odszyfrować element XML, która została zaszyfrowana przy użyciu tej procedury, zobacz [porady: odszyfrowywanie elementów XML przy użyciu kluczy asymetrycznych](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
+ Aby odszyfrować XML element, pobrać prywatnego klucza RSA z kontenera kluczy, użyć go do odszyfrowywania klucza sesji i następnie użyj klucza sesji w celu odszyfrowania dokumentu.  Aby uzyskać więcej informacji na temat odszyfrować element XML, która została zaszyfrowana przy użyciu tej procedury, zobacz [jak: Odszyfrowywanie elementów XML przy użyciu kluczy asymetrycznych](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
   
  W tym przykładzie jest odpowiednie w sytuacji, gdy wiele aplikacji muszą udostępniać dane zaszyfrowane lub której aplikacja musi zapisać zaszyfrowane dane między godzinami, które działa.  
   
@@ -144,5 +144,5 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, a
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Instrukcje: odszyfrowywanie elementów XML przy użyciu kluczy asymetrycznych](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Instrukcje: Odszyfrowywanie elementów XML przy użyciu kluczy asymetrycznych](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

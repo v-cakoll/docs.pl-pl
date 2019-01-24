@@ -13,12 +13,12 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 25f9c0141a97d8e52e0883b14fd3e1f4574a05ea
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4da833256183f10eb62b43c3f665d76a6fc2ba80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711801"
 ---
 # <a name="collect-ink"></a>Zbieranie pisma odręcznego
 
@@ -26,7 +26,7 @@ ms.locfileid: "46004285"
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby użyć poniższych przykładów, należy najpierw zainstalować program Visual Studio i [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. Należy również zrozumieć sposób pisania aplikacji dla WPF. Aby uzyskać więcej informacji na temat rozpoczynania pracy przy użyciu platformy WPF, zobacz [Instruktaż: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Aby użyć poniższych przykładów, należy najpierw zainstalować program Visual Studio i [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. Należy również zrozumieć sposób pisania aplikacji dla WPF. Aby uzyskać więcej informacji na temat rozpoczynania pracy przy użyciu platformy WPF, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="use-the-inkcanvas-element"></a>Użyj elementu InkCanvas
 
@@ -88,7 +88,7 @@ Po skopiowaniu tego kodu, naciśnij klawisz **F5** w programie Visual Studio, ab
 
 Zwróć uwagę sposób, w jaki <xref:System.Windows.Controls.StackPanel> umieszcza przycisków w górnej części <xref:System.Windows.Controls.InkCanvas>. Jeśli zostanie podjęta próba pisma odręcznego w górnej części przyciski, <xref:System.Windows.Controls.InkCanvas> zbiera i renderowanie pisma odręcznego za pomocą przycisków. Jest to spowodowane przyciski są elementy równorzędne <xref:System.Windows.Controls.InkCanvas> w przeciwieństwie do elementów podrzędnych. Przyciski są także wyżej w porządku, więc pisma odręcznego jest renderowany za ich.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Ink.DrawingAttributes>
 - <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>

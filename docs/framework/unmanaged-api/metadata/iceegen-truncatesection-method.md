@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7b21179faec0b6f37b8084c9ee8a0bfd327193e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ef6583587b960d74c83350b061be3c2e36fd4f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722687"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection — Metoda
-Obcina sekcji określonego kodu przez określony czas.  
+Obcina sekcję kodu określonego przez określony czas.  
   
  Ta metoda jest przestarzała i nie powinna być używana.  
   
@@ -40,22 +40,22 @@ HRESULT TruncateSection (
   
 #### <a name="parameters"></a>Parametry  
  `section`  
- [in] Sekcja do obcięcia.  
+ [in] Sekcja obcięcia.  
   
  `len`  
  [in] Długość w bajtach, według którego ma zostać obcięta sekcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołanie `TruncateSection` tylko wtedy, gdy sekcja specjalne wymagania, które nie są obsługiwane za pomocą innych metod.  
+ Wywołaj `TruncateSection` tylko wtedy, gdy masz sekcją wymagań, które nie są obsługiwane przy użyciu innych metod.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

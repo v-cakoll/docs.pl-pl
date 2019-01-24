@@ -1,15 +1,15 @@
 ---
-title: 'Porady: modyfikowanie drzew wyrażeń (C#)'
+title: 'Instrukcje: Modyfikowanie drzew wyrażeń (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: 97a8ea0d66edf5d084c442deae32e04bdeb63c32
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1cdc6eb4017495fc7486025dd868352eb9d04892
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735613"
 ---
-# <a name="how-to-modify-expression-trees-c"></a>Porady: modyfikowanie drzew wyrażeń (C#)
+# <a name="how-to-modify-expression-trees-c"></a>Instrukcje: Modyfikowanie drzew wyrażeń (C#)
 W tym temacie przedstawiono sposób modyfikowania drzewo wyrażenia. Drzewa wyrażeń są niezmienne, co oznacza, że nie można ich modyfikować bezpośrednio. Aby zmienić drzewo wyrażenia, należy utworzyć kopię istniejącej drzewa wyrażeń i podczas tworzenia kopii, wprowadź wymagane zmiany. Możesz użyć <xref:System.Linq.Expressions.ExpressionVisitor> klasy Przenoszenie istniejących drzewa wyrażeń i skopiuj każdy węzeł, który go wizyty.  
   
 ### <a name="to-modify-an-expression-tree"></a>Aby zmodyfikować drzewa wyrażeń  
@@ -70,7 +70,7 @@ W tym temacie przedstawiono sposób modyfikowania drzewo wyrażenia. Drzewa wyra
   
 6.  Skompilować i uruchomić aplikację.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Porady: wykonywanie drzew wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+- [Instrukcje: Wykonywanie drzew wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Drzewa wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)

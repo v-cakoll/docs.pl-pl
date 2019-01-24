@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bffe293f7d29c34a22196336533202996f3fd129
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52803fc04aa55f40a131e2d53dc4ef7dba70bcde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727121"
 ---
 # <a name="icorprofilercallback3profilerdetachsucceeded-method"></a>ICorProfilerCallback3::ProfilerDetachSucceeded — Metoda
-Powiadamia profilera środowisko uruchomieniowe języka wspólnego (CLR) o zbliżającym się zwolnienia biblioteki DLL profilera.  
+Powiadamia program profilujący, że środowisko uruchomieniowe języka wspólnego (CLR) zostanie zwolnienia biblioteki DLL profilera.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,17 +34,17 @@ HRESULT ProfilerDetachSucceeded();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość zwracana z tego wywołania zwrotnego jest ignorowana.  
+ Wartość zwrócona przez to wywołanie zwrotne jest ignorowany.  
   
 ## <a name="remarks"></a>Uwagi  
- `ProfilerDetachSucceeded` Wywołania zwrotnego jest wystawianym po zamknięciu kodu profilera wszystkie wątki. Gdy ta metoda jest wywoływana, profilera, należy wykonać wszystkie zadania ostatniej minuty, które nie są odpowiednie do jego destruktor, takich jak powiadamiania jego interfejsu użytkownika lub rejestrowania składnika. Jednak profilera nie mogą wywoływać funkcje na interfejsy, które są udostępniane przez środowisko CLR Podczas tego wywołania zwrotnego (takich jak [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) lub `IMetaData*` interfejsów).  
+ `ProfilerDetachSucceeded` Wywołanie zwrotne zostało wydane po zamknięciu wszystkich wątków programu profilującego kodu. Gdy ta metoda jest wywoływana, program profilujący, należy wykonać wszelkie zadania ostatniej chwili, które nie są odpowiednie dla jego destruktor, takie jak jego interfejsu użytkownika lub składnik rejestrowania zgłaszające. Jednakże program profilujący nie mogą wywoływać funkcje dla interfejsów, które są dostarczane przez środowisko CLR Podczas tego wywołania zwrotnego (takie jak [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) lub `IMetaData*` interfejsów).  
   
- Środowisko CLR tworzy wpis w dzienniku zdarzeń aplikacji systemu Windows, aby wskazać, czy operacja odłączenia zakończy się pomyślnie.  
+ Środowisko CLR tworzy wpis w dzienniku zdarzeń aplikacji Windows, aby wskazać, czy operacja odłączenia powiodła się.  
   
- Po powrocie profilera z tego wywołania zwrotnego, CLR zwalnia obiektu profilera i zwalnia biblioteki DLL profilera. W związku z tym profilera nie musi wykonywać wszystkie akcje, które mogłoby spowodować wykonanie wystąpienia wewnątrz biblioteki DLL profilera zwraca to wywołanie zwrotne. Na przykład nie musi utworzyć wątków lub rejestrowania wywołań zwrotnych czasomierza.  
+ Po profiler zwraca z to wywołanie zwrotne, środowisko CLR zwalnia obiekt profilera i wyładowuje profiler DLL. W związku z tym program profilujący nie musi wykonywać wszystkie akcje, które mogłoby spowodować wykonanie zapytania wewnątrz biblioteki DLL profilera po zwraca od to wywołanie zwrotne. Na przykład nie musi tworzyć wątków lub rejestrowanie wywołań zwrotnych czasomierza.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -52,8 +52,8 @@ HRESULT ProfilerDetachSucceeded();
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe5e1267b619d5900ed9af55dd6079a8f38d6550
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c867945f8a75cade5c7405b2908e2819f5d261d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706975"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason — Wyliczenie
-Określa przyczyny, dlaczego wątek może stać się zablokowane na dany obiekt.  
+Określa przyczyny, dlaczego wątek może stać się zablokowany dla danego obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,15 +41,15 @@ Typedef enum CorDebugBlockingReason
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`BLOCKING_NONE`|Tylko do użytku wewnętrznego.|  
-|`BLOCKING_MONITOR_CRITICAL_SECTION`|Wątek próbuje pobrać krytyczne sekcja, która jest skojarzona z monitora blokady obiektu. Zazwyczaj dzieje się tak podczas wywoływania jednej z <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> lub <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> metody.|  
-|`BLOCKING_MONITOR_EVENT`|Wątek oczekuje na zdarzenie, które jest skojarzone z monitora blokady dla obiekt. Zazwyczaj dzieje się tak podczas wywoływania jednej z <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` metody.|  
+|`BLOCKING_NONE`|Wyłącznie do użytku wewnętrznego.|  
+|`BLOCKING_MONITOR_CRITICAL_SECTION`|Wątek próbuje pobrać sekcję krytyczną, skojarzonego z blokadą monitora na obiekcie. Zazwyczaj ten błąd występuje podczas wywołania jednej z <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> lub <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> metody.|  
+|`BLOCKING_MONITOR_EVENT`|Wątek jest oczekiwanie na zdarzenia skojarzonego z blokadą monitor dla obiektu. Zazwyczaj ten błąd występuje podczas wywołania jednej z <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` metody.|  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy `BLOCKING_MONITOR_CRITICAL_SECTION` lub `BLOCKING_MONITOR_EVENT` element członkowski jest używany w [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struktury, `pBlockingObject` członkiem punktami struktury interfejs "ICorDebugValue", który reprezentuje obiekt, który jest wprowadzane . Również gwarantowane zaimplementować [ICorDebugHeapValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) interfejsu.  
+ Gdy `BLOCKING_MONITOR_CRITICAL_SECTION` lub `BLOCKING_MONITOR_EVENT` elementu członkowskiego jest używany w [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struktury, `pBlockingObject` składowej struktury punktami interfejs "ICorDebugValue", który reprezentuje obiekt, który jest wprowadzanych . Również musi implementować [icordebugheapvalue3 —](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) interfejsu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -57,6 +57,6 @@ Typedef enum CorDebugBlockingReason
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

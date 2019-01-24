@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: mapowanie właściwości z użyciem formantu ElementHost'
+title: 'Przewodnik: Mapowanie właściwości z użyciem formantu ElementHost'
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 34119d889c8d6600fdda12cac33192c32d8e0fa6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bb418b725afd0c38a39e42e50511147d0f616059
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510014"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623225"
 ---
-# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Wskazówki: mapowanie właściwości z użyciem formantu ElementHost
+# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Przewodnik: Mapowanie właściwości z użyciem formantu ElementHost
 
 W tym instruktażu dowiesz się, jak używać <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> właściwości, aby zamapować [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] właściwości do odpowiedniej właściwości hostowany [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementu.
 
@@ -62,7 +62,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 4.  Otwórz `Form1` w programie Windows Forms Designer. Kliknij dwukrotnie formularz, aby dodać moduł obsługi zdarzenia <xref:System.Windows.Forms.Form.Load> zdarzeń.
 
-5.  Wróć do projektanta Windows Forms i Dodaj program obsługi zdarzeń w formularzu <xref:System.Windows.Forms.Control.Resize> zdarzeń. Aby uzyskać więcej informacji, zobacz [jak: utworzyć zdarzenie obsługi za pomocą projektanta](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).
+5.  Wróć do projektanta Windows Forms i Dodaj program obsługi zdarzeń w formularzu <xref:System.Windows.Forms.Control.Resize> zdarzeń. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie obsługi zdarzeń za pomocą projektanta](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).
 
 6.  Zadeklaruj <xref:System.Windows.Forms.Integration.ElementHost> pole `Form1` klasy.
 
@@ -140,11 +140,11 @@ Możesz użyć domyślnego mapowania właściwości i rozszerzać go za pomocą 
 
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Mapowanie właściwości Windows Forms i WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Przewodnik: hosting złożonej kontrolki WPF w Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

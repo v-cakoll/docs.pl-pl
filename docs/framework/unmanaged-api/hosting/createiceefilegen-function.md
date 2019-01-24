@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc98641085591feaaa5c97c7ee04885ef79d39f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e367ab3c966cea2d875b1de5b4244db5c4b813e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702226"
 ---
 # <a name="createiceefilegen-function"></a>CreateICeeFileGen — Funkcja
 Tworzy [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) obiektu.  
@@ -40,18 +40,18 @@ HRESULT CreateICeeFileGen (
   
 #### <a name="parameters"></a>Parametry  
  `ceeFileGen`  
- [out] Wskaźnik do nowego adresu `ICeeFileGen` obiektu.  
+ [out] Wskaźnik do adresów nowej `ICeeFileGen` obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca standardowe kody błędów COM.  
   
 ## <a name="remarks"></a>Uwagi  
- `ICeeFileGen` Obiekt jest używany do tworzenia wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) przenośny plik wykonywalny (PE) plików.  
+ `ICeeFileGen` Obiekt jest używany do tworzenia języka wspólnego plików przenośnych plików wykonywalnych (PE) środowiska uruchomieniowego (języka wspólnego CLR).  
   
- Wywołanie [DestroyICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md) funkcji do zniszczenia `ICeeFileGen` obiekt po zakończeniu.  
+ Wywołaj [destroyiceefilegen —](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md) funkcję, aby zniszczyć `ICeeFileGen` obiektu po zakończeniu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ICeeFileGen.h  
   
@@ -59,5 +59,5 @@ HRESULT CreateICeeFileGen (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

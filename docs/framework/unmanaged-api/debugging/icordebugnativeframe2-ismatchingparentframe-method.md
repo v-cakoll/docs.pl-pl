@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39c0ea69a0922f5e0d25c98c21ec17a872b2f421
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e8baa73594823c6b2f19b2af87e6a681ad71e3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713304"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame — Metoda
-Określa, czy określonej ramce nadrzędny bieżącej ramki.  
+Określa, czy ramki o określonym nadrzędny bieżącej ramki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,27 +37,27 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
 #### <a name="parameters"></a>Parametry  
  `pPotentialParentFrame`  
- [in] Wskaźnik do obiektu ramki, który chcesz ocenić stan nadrzędnej.  
+ [in] Wskaźnik do obiektu ramki, który chcesz ocenić, czy stan nadrzędnej.  
   
  `pIsParent`  
  [out] `true` Jeśli `pPotentialParentFrame` jest elementem nadrzędnym bieżącej ramki; w przeciwnym razie `false`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Pomyślnie zwrócono stan nadrzędnej.|  
+|S_OK|Stan nadrzędnej została pomyślnie zwrócona.|  
 |E_FAIL|Nie można zwrócić stan nadrzędnej.|  
 |E_INVALIDARG|`pPotentialParentFrame` lub `pIsParent` ma wartość null.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- `IsMatchingParentFrame` Zwraca `true` Jeśli obiekt ramki przekazać do metody jest elementem nadrzędnym obiektu ramki, wywołania tej metody. Jeśli należy wywołać metodę ramki, który nie jest elementem podrzędnym określonej ramce zwraca błąd.  
+ `IsMatchingParentFrame` Zwraca `true` Jeśli obiekt w ramce przekazać do metody jest elementem nadrzędnym wywołaniu metody obiekt w ramce. Jeśli wywołasz metodę dla ramki, który nie jest elementem podrzędnym ramki o określonym zwraca błąd.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -65,7 +65,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugNativeFrame2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugNativeFrame2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

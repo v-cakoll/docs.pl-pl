@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32ffe48e7a65ab4ca2250eee65d188c0c7270c11
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: cc507d0cf81bf2bc11edfc0b5efb08c462726b88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727875"
 ---
 # <a name="ltappdomainresourcemonitoringgt-element"></a>&lt;appdomainresourcemonitoring —&gt; — Element
 Powoduje, że środowisko uruchomieniowe w celu zbierania statystyk na wszystkie domeny aplikacji, w trakcie trwania procesu.  
   
  \<Konfiguracja >  
 \<runtime>  
-\<appdomainresourcemonitoring — >  
+\<appDomainResourceMonitoring>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -72,7 +72,7 @@ Powoduje, że środowisko uruchomieniowe w celu zbierania statystyk na wszystkie
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

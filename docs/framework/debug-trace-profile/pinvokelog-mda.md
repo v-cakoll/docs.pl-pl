@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 830a65a4490b1d084e3bb301e89293ccb9424b32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe1d783017369a78074e5abf278ac2facf6ee32b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734068"
 ---
 # <a name="pinvokelog-mda"></a>pInvokeLog MDA
-`pInvokeLog` Zarządzany Asystent debugowania (MDA) została aktywowana dla każdej platformy unikatowy wywołania podpisu używane podczas wykonywania.  
+`pInvokeLog` Zarządzanego Asystenta debugowania (MDA) jest aktywowana dla każdej z platform unikatowy wywołania podpis używany podczas wykonywania.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Komunikat informujący o platformie wywołania podpisu używane podczas wykonywania.  
+ Komunikat informujący o platformie wywołać podpis używany podczas wykonywania.  
   
 ## <a name="configuration"></a>Konfiguracja  
- Każdy filtry element dopasowania plików dll na poszczególnych platformach wywołania wywołania zostały wprowadzone.  
+ Każdy filtry elementu dopasowania plików dll na poszczególnych platformach wywołania zostały wprowadzone.  
   
 ```xml  
 <mdaConfig>  
@@ -43,6 +43,6 @@ ms.locfileid: "33387006"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Wykorzystywanie niezarządzanych funkcji DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Wykorzystywanie niezarządzanych funkcji DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)

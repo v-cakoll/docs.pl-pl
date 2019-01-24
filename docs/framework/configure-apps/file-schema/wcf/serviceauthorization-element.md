@@ -2,12 +2,12 @@
 title: '&lt;serviceAuthorization&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: 6c69d10eb2f6cdf4546dd5895d196723417f5494
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 49b89c17f9858c111791276fe15e4a418845c8e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622575"
 ---
 # <a name="ltserviceauthorizationgt-element"></a>&lt;serviceAuthorization&gt;, element
 Określa ustawienia, które zezwalają na dostęp do operacji usługi  
@@ -16,7 +16,7 @@ Określa ustawienia, które zezwalają na dostęp do operacji usługi
 \<zachowania >  
 \<serviceBehaviors>  
 \<zachowanie >  
-\<serviceAuthorization >  
+\<serviceAuthorization>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,8 +38,8 @@ Określa ustawienia, które zezwalają na dostęp do operacji usługi
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|ImpersonateCallerForAllOperations|Wartość logiczna określająca, jeśli wszystkie operacje usługi personifikują wywołującego. Wartość domyślna to `false`.<br /><br /> Kiedy określonej operacji usługi personifikuje obiekt wywołujący, kontekst wątku jest włączane do kontekstu obiekt wywołujący przed wykonaniem określonej usługi.|  
-|PrincipalPermissionMode|Ustawia zabezpieczenie używane do wykonywania operacji na serwerze. Następujące wartości:<br /><br /> -Brak<br />-UseWindowsGroups<br />-UseAspNetRoles<br />— Niestandardowa<br /><br /> Wartość domyślna to UseWindowsGroups. Wartość jest typu <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Aby uzyskać więcej informacji na temat korzystania z tego atrybutu, zobacz [jak: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
+|impersonateCallerForAllOperations|Wartość logiczna określająca, jeśli wszystkie operacje usługi personifikują wywołującego. Wartość domyślna to `false`.<br /><br /> Kiedy określonej operacji usługi personifikuje obiekt wywołujący, kontekst wątku jest włączane do kontekstu obiekt wywołujący przed wykonaniem określonej usługi.|  
+|principalPermissionMode|Ustawia zabezpieczenie używane do wykonywania operacji na serwerze. Następujące wartości:<br /><br /> -Brak<br />-UseWindowsGroups<br />-UseAspNetRoles<br />— Niestandardowa<br /><br /> Wartość domyślna to UseWindowsGroups. Wartość jest typu <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Aby uzyskać więcej informacji na temat korzystania z tego atrybutu, zobacz [jak: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
 |roleProviderName|Ciąg, który określa nazwę dostawcy ról, który dostarcza informacje o rolach dla aplikacji Windows Communication Foundation (WCF). Wartość domyślna to ciąg pusty.|  
 |ServiceAuthorizationManagerType|Ciąg zawierający typ Menedżera usług autoryzacji. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.ServiceAuthorizationManager>.|  
   
@@ -95,11 +95,11 @@ Określa ustawienia, które zezwalają na dostęp do operacji usługi
   
  Aby uzyskać szczegółowy przykład przy użyciu tego elementu konfiguracji, zobacz [Autoryzowanie dostępu do operacji usługi](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) i [zasady autoryzacji](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Autoryzowanie dostępu do operacji usługi](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [Instrukcje: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Zasady autoryzacji](../../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
+- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Autoryzowanie dostępu do operacji usługi](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
+- [Instrukcje: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Zasady autoryzacji](../../../../../docs/framework/wcf/samples/authorization-policy.md)

@@ -15,22 +15,22 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: ff53942cb90721d5411f99b261f90366d039e151
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 783e258f64633a4ddf7f3bbad858d6633256b97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590388"
 ---
 # <a name="types-of-coordinate-systems"></a>Typy systemów współrzędnych
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] używa trzech przestrzeni współrzędnych: world, strony i urządzenia. Współrzędnych świata są współrzędne użyta do modelowania określonego world grafiki i współrzędne, które są przekazywane do metody w programie .NET Framework. Układ współrzędnych używany przez powierzchni rysowania, takich jak formularz lub formant można znaleźć współrzędnych strony. Współrzędne urządzenia są współrzędne używany przez urządzenie fizyczne sformułowane, takich jak ekranu lub arkusza. Podczas wywoływania `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, punkty, które są przekazywane do <xref:System.Drawing.Graphics.DrawLine%2A> metoda —`(0, 0)` i `(160, 80)`— znajdują się w przestrzeni współrzędnych świata. Przed [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można narysować linię na ekranie, współrzędne przekazuj sekwencję transformacji. Jeden przekształcania, nazywany transformacji świata konwertuje współrzędnych świata współrzędnych strony i innym przekształcania, nazywany transformacja strony konwertuje współrzędne strony współrzędnych urządzenia.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] używa trzech przestrzeni współrzędnych: świata, strony i urządzeń. Współrzędne świata są współrzędne używane do modelowania określonego świata graficznego i współrzędne, które są przekazywane do metody w programie .NET Framework. Współrzędne strony można znaleźć w układzie współrzędnych używana przez powierzchnię rysunku, na przykład jako formularz lub formant. Współrzędne urządzenia są współrzędne używane przez urządzenie fizyczne rysowania, takie jak ekran, lub arkusz papieru. Podczas wywoływania `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, punkty, które są przekazywane do <xref:System.Drawing.Graphics.DrawLine%2A> metody —`(0, 0)` i `(160, 80)`— znajdują się w przestrzeni współrzędnych świata. Przed [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można narysować linię na ekranie, współrzędne przechodzą przez sekwencję transformacji. Jeden przekształcenia, nazywane transformacji świata konwertuje współrzędne świata na współrzędne strony, a inny przekształcenia, o nazwie przekształcenie strony konwertuje współrzędne strony współrzędnych urządzenia.  
   
-## <a name="transforms-and-coordinate-systems"></a>Transformacje i system współrzędnych  
- Załóżmy, że chcesz używać współrzędnych, który ma swoją witryną źródłową w treści obszaru klienckiego, a nie w lewym górnym rogu. Powiedz, na przykład, że chcesz punkt początkowy za 100 pikseli od lewej krawędzi obszaru klienckiego i 50 pikseli od góry obszaru klienckiego. Na poniższej ilustracji przedstawiono układ współrzędnych.  
+## <a name="transforms-and-coordinate-systems"></a>Transformacje i systemów współrzędnych  
+ Załóżmy, że chcesz pracować z współrzędnych pochodzenia w treści obszaru klienta, a nie w lewym górnym rogu. Powiedz, na przykład, ma punkt początkowy za 100 pikseli od lewej krawędzi obszaru klienta i 50 pikseli od górnej krawędzi obszaru klienta. Poniższa ilustracja przedstawia układ współrzędnych.  
   
  ![System współrzędnych](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art01.gif "AboutGdip05_art01")  
   
- Podczas wywoływania `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, pobrać wiersza pokazano na poniższej ilustracji.  
+ Podczas wywoływania `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, Pobierz wiersz pokazano na poniższej ilustracji.  
   
  ![System współrzędnych](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art02.gif "AboutGdip05_art02")  
   
@@ -38,62 +38,62 @@ ms.locfileid: "33529756"
   
 |||  
 |-|-|  
-|World|(0, 0) do (160, 80)|  
-|Strona|(100, 50) do (260, 130)|  
-|Urządzenie|(100, 50) do (260, 130)|  
+|Świata|(0, 0) do (160, 80)|  
+|Strona|(100, 50) na (260, 130)|  
+|Urządzenie|(100, 50) na (260, 130)|  
   
- Pamiętaj, że przestrzeni współrzędnych strony ma swoją witryną źródłową w lewym górnym rogu obszaru klienckiego; zawsze będzie wielkość liter. Należy również zauważyć, że jednostka miary jest piksela, współrzędnych urządzenia są takie same jak współrzędnych strony. Jeśli ustawisz jednostka miary inną niż pikseli (na przykład cala) współrzędnych urządzenia może się różnić od współrzędnych strony.  
+ Należy pamiętać, że przestrzeni współrzędnych strony ma pochodzenia w lewym górnym rogu obszaru klienckiego; zawsze będzie to wymagane. Należy również zauważyć, że ponieważ jednostka miary jest piksel, urządzenia współrzędne są takie same jak współrzędnych strony. Jeśli ustawisz jednostka miary na coś innego niż pikseli (na przykład, w calach) współrzędnych urządzenia może się różnić od współrzędne strony.  
   
- Transformacja świata, który mapuje współrzędnych świata na współrzędnych strony, jest przechowywany w <xref:System.Drawing.Graphics.Transform%2A> właściwość <xref:System.Drawing.Graphics> klasy. W powyższym przykładzie transformacja świata jest 100 jednostek tłumaczenia, w kierunku x i 50 jednostek w kierunku y. Poniższy przykład przedstawia transformacji świata z <xref:System.Drawing.Graphics> obiekt, a następnie użyty <xref:System.Drawing.Graphics> obiektu do rysowania linii na powyższej ilustracji:  
+ Transformacji świata, który mapuje współrzędne świata na współrzędne strony, są przechowywane w <xref:System.Drawing.Graphics.Transform%2A> właściwość <xref:System.Drawing.Graphics> klasy. W powyższym przykładzie transformacji świata jest 100 jednostek tłumaczenia, w kierunku x i 50 jednostek w kierunku y. W poniższym przykładzie ustawiono transformacji świata z <xref:System.Drawing.Graphics> obiektu, a następnie używa, <xref:System.Drawing.Graphics> obiektu, aby narysować linię pokazano na poprzednim rysunku:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.CoordinateSystems#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#31)]  
   
- Transformacja strony mapuje współrzędnych strony współrzędnych urządzenia. <xref:System.Drawing.Graphics> Klasa udostępnia <xref:System.Drawing.Graphics.PageUnit%2A> i <xref:System.Drawing.Graphics.PageScale%2A> właściwości do manipulowania transformacja strony. <xref:System.Drawing.Graphics> Klasa udostępnia również dwie właściwości tylko do odczytu, <xref:System.Drawing.Graphics.DpiX%2A> i <xref:System.Drawing.Graphics.DpiY%2A>, badania poziome i pionowe punktów na cal urządzenia.  
+ Przekształcenie strony mapuje współrzędne strony współrzędnych urządzenia. <xref:System.Drawing.Graphics> Klasa udostępnia <xref:System.Drawing.Graphics.PageUnit%2A> i <xref:System.Drawing.Graphics.PageScale%2A> właściwości do manipulowania przekształcenie strony. <xref:System.Drawing.Graphics> Klasa udostępnia także dwie właściwości tylko do odczytu, <xref:System.Drawing.Graphics.DpiX%2A> i <xref:System.Drawing.Graphics.DpiY%2A>, badania poziome i pionowe punktów na cal, urządzenia.  
   
- Można użyć <xref:System.Drawing.Graphics.PageUnit%2A> właściwość <xref:System.Drawing.Graphics> klasy, aby określić jednostkę miary niż piksela.  
+ Możesz użyć <xref:System.Drawing.Graphics.PageUnit%2A> właściwość <xref:System.Drawing.Graphics> klasy, aby określić jednostki miar innych niż piksela.  
   
 > [!NOTE]
 >  Nie można ustawić <xref:System.Drawing.Graphics.PageUnit%2A> właściwości <xref:System.Drawing.GraphicsUnit.World>, ponieważ to nie jest jednostką fizycznych i spowodują wyjątek.  
   
- Poniższy przykład rysuje z (0, 0) do (2, 1), gdzie punktu (2 i 1) to 2 cala w prawo i 1 cala w dół od punktu (0, 0):  
+ Poniższy przykład pobiera wiersz z (0, 0) do (2, 1), gdzie punkt, (2, 1) jest cala 2 z prawej strony oraz 1 cal w dół od punktu (0, 0):  
   
  [!code-csharp[System.Drawing.CoordinateSystems#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.CoordinateSystems#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#32)]  
   
 > [!NOTE]
->  Jeśli nie określisz szerokość pióra podczas konstruowania pióra, poprzedni przykład narysuje wiersza, który jest jeden cal szerokości. Można określić szerokość pióra w drugim argumentem <xref:System.Drawing.Pen> konstruktora:  
+>  Jeśli nie określisz szerokość pióra podczas konstruowania pióra, poprzedni przykład będzie rysowanie linii, o szerokości 1 cal. W drugim argumencie można określić szerokość pióra <xref:System.Drawing.Pen> Konstruktor:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#33](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#33)]
  [!code-vb[System.Drawing.CoordinateSystems#33](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#33)]  
   
- Jeśli przyjęto założenie, że urządzenia wyświetlającego ma 96 punktów na cal w kierunku poziomym oraz 96 punktów na cal w kierunku pionowym, punkty końcowe wiersza w powyższym przykładzie są następujące współrzędne w trzech przestrzeni współrzędnych:  
+ Przy założeniu, że urządzenia wyświetlającego ma 96 punktów na cal w kierunku poziomym i 96 punktów na cal w kierunku pionowym, punkty końcowe wiersza w poprzednim przykładzie mają następujące współrzędne w trzech przestrzeni współrzędnych:  
   
 |||  
 |-|-|  
-|World|(0, 0) do (2, 1)|  
+|Świata|(0, 0) do (2, 1)|  
 |Strona|(0, 0) do (2, 1)|  
 |Urządzenie|(0, 0, aby (192, 96)|  
   
- Należy pamiętać, że pochodzenia przestrzeni współrzędnych świata jest w lewym górnym rogu obszaru klienckiego, dlatego współrzędnych strony są takie same jak współrzędnych świata.  
+ Uwaga: ponieważ pochodzenia przestrzeni współrzędnych świata znajduje się w lewym górnym rogu obszaru klienta, współrzędne strony są takie same jak współrzędnych świata.  
   
- Przekształcenia world i strony, aby uzyskać różne efekty można łączyć. Załóżmy na przykład, ma być używany jako jednostka miary cali i chcesz pochodzenia systemu współrzędnych być 2 cala od lewej krawędzi obszaru klienckiego i 1/2 cala od góry obszaru klienckiego. Poniższy przykład przedstawia transformacji świata i strony z <xref:System.Drawing.Graphics> obiekt, a następnie rysuje z (0, 0) do (2, 1):  
+ Można połączyć przekształcenia world i strony, aby uzyskać różne efekty. Na przykład załóżmy, że chcesz użyć cala jako jednostka miary i chcesz, aby pochodzenia swoje współrzędnych za 2 cala od lewej krawędzi obszaru klienta i 1/2 cala od góry obszaru klienta. W poniższym przykładzie ustawiono Przekształcanie świata i strony <xref:System.Drawing.Graphics> obiektu, a następnie rysuje linię z (0, 0) do (2, 1):  
   
  [!code-csharp[System.Drawing.CoordinateSystems#34](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.CoordinateSystems#34](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#34)]  
   
  Na poniższej ilustracji przedstawiono wiersza i układ współrzędnych.  
   
- ![System współrzędnych](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art03.gif "AboutGdip05_art03")  
+ ![Coordinate System](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art03.gif "AboutGdip05_art03")  
   
- Jeśli przyjęto założenie, że urządzenia wyświetlającego ma 96 punktów na cal w kierunku poziomym oraz 96 punktów na cal w kierunku pionowym, punkty końcowe wiersza w powyższym przykładzie są następujące współrzędne w trzech przestrzeni współrzędnych:  
+ Przy założeniu, że urządzenia wyświetlającego ma 96 punktów na cal w kierunku poziomym i 96 punktów na cal w kierunku pionowym, punkty końcowe wiersza w poprzednim przykładzie mają następujące współrzędne w trzech przestrzeni współrzędnych:  
   
 |||  
 |-|-|  
-|World|(0, 0) do (2, 1)|  
+|Świata|(0, 0) do (2, 1)|  
 |Strona|(2, 0,5) do (4, 1.5)|  
 |Urządzenie|(192, 48) do (384, 144)|  
   
-## <a name="see-also"></a>Zobacz też  
- [Systemy i przekształcenia współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
- [Macierzowe przedstawienie przekształcenia](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)
+## <a name="see-also"></a>Zobacz także
+- [Systemy i przekształcenia współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+- [Macierzowe przedstawienie przekształcenia](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)

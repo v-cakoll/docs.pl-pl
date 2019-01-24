@@ -2,23 +2,23 @@
 title: Operatory sekwencji
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: 01807e48c06bce1d451961bb6204d1f8e49d53f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4a6e01eeb70015899cbbbfe8ecd748bd9936b2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666166"
 ---
-# <a name="sequence-operators"></a><span data-ttu-id="1bd45-102">Operatory sekwencji</span><span class="sxs-lookup"><span data-stu-id="1bd45-102">Sequence Operators</span></span>
-<span data-ttu-id="1bd45-103">Ogólnie rzecz biorąc [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje operatorów sekwencji, których występuje jeden lub więcej z następujących właściwości:</span><span class="sxs-lookup"><span data-stu-id="1bd45-103">Generally speaking, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support sequence operators that have one or more of the following qualities:</span></span>  
+# <a name="sequence-operators"></a><span data-ttu-id="06c88-102">Operatory sekwencji</span><span class="sxs-lookup"><span data-stu-id="06c88-102">Sequence Operators</span></span>
+<span data-ttu-id="06c88-103">Ogólnie rzecz biorąc [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje operatory sekwencji, które mają co najmniej jedną z następujących właściwości:</span><span class="sxs-lookup"><span data-stu-id="06c88-103">Generally speaking, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support sequence operators that have one or more of the following qualities:</span></span>  
   
--   <span data-ttu-id="1bd45-104">Zająć lambda z parametrem indeksu.</span><span class="sxs-lookup"><span data-stu-id="1bd45-104">Take a lambda with an index parameter.</span></span>  
+-   <span data-ttu-id="06c88-104">Skorzystaj z wyrażenia lambda z parametrem indeksu.</span><span class="sxs-lookup"><span data-stu-id="06c88-104">Take a lambda with an index parameter.</span></span>  
   
--   <span data-ttu-id="1bd45-105">Zależne właściwości wierszy sekwencyjnych, takich jak <xref:System.Linq.Queryable.TakeWhile%2A>.</span><span class="sxs-lookup"><span data-stu-id="1bd45-105">Rely on the properties of sequential rows, such as <xref:System.Linq.Queryable.TakeWhile%2A>.</span></span>  
+-   <span data-ttu-id="06c88-105">Zależą od właściwości kolejnych wierszy, takich jak <xref:System.Linq.Queryable.TakeWhile%2A>.</span><span class="sxs-lookup"><span data-stu-id="06c88-105">Rely on the properties of sequential rows, such as <xref:System.Linq.Queryable.TakeWhile%2A>.</span></span>  
   
--   <span data-ttu-id="1bd45-106">Zależne od dowolnego implementacji środowiska CLR, takich jak <xref:System.Collections.Generic.IComparer%601>.</span><span class="sxs-lookup"><span data-stu-id="1bd45-106">Rely on an arbitrary CLR implementation, such as <xref:System.Collections.Generic.IComparer%601>.</span></span>  
+-   <span data-ttu-id="06c88-106">Zależą od dowolnego implementacji środowiska CLR, takich jak <xref:System.Collections.Generic.IComparer%601>.</span><span class="sxs-lookup"><span data-stu-id="06c88-106">Rely on an arbitrary CLR implementation, such as <xref:System.Collections.Generic.IComparer%601>.</span></span>  
   
-|<span data-ttu-id="1bd45-107">Przykłady nieobsługiwane</span><span class="sxs-lookup"><span data-stu-id="1bd45-107">Examples of Unsupported</span></span>|  
+|<span data-ttu-id="06c88-107">Przykłady nieobsługiwany</span><span class="sxs-lookup"><span data-stu-id="06c88-107">Examples of Unsupported</span></span>|  
 |-----------------------------|  
 |<xref:System.Linq.Enumerable.Where%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Boolean%7D%29?displayProperty=nameWithType>|  
 |<xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29?displayProperty=nameWithType>|  
@@ -42,8 +42,8 @@ ms.locfileid: "33360290"
 |<xref:System.Linq.Enumerable.Aggregate%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2C%60%601%2CSystem.Func%7B%60%601%2C%60%600%2C%60%601%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%29?displayProperty=nameWithType>|  
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
-## <a name="differences-from-net"></a><span data-ttu-id="1bd45-108">Różnice z platformy .NET</span><span class="sxs-lookup"><span data-stu-id="1bd45-108">Differences from .NET</span></span>  
- <span data-ttu-id="1bd45-109">Wszystkie obsługiwane pracy operatory sekwencji zgodnie z oczekiwaniami w środowisku uruchomieniowym języka (wspólnego CLR), z wyjątkiem `Average`.</span><span class="sxs-lookup"><span data-stu-id="1bd45-109">All supported sequence operators work as expected in the common language runtime (CLR) except for `Average`.</span></span> <span data-ttu-id="1bd45-110">`Average` Zwraca wartość tego samego typu jako typu uśrednione, podczas gdy w środowisku CLR `Average` zawsze zwraca albo <xref:System.Double> lub <xref:System.Decimal>.</span><span class="sxs-lookup"><span data-stu-id="1bd45-110">`Average` returns a value of the same type as the type being averaged, whereas in the CLR `Average` always returns either a <xref:System.Double> or a <xref:System.Decimal>.</span></span> <span data-ttu-id="1bd45-111">Jeśli argument źródła jest jawnie Rzutowanie na podwójne / dziesiętną lub selektor rzutuje podwójne / decimal, SQL wynikowy będzie miał takie konwersji i wynik będzie zgodnie z oczekiwaniami.</span><span class="sxs-lookup"><span data-stu-id="1bd45-111">If the source argument is explicitly cast to double / decimal or the selector casts to double / decimal, the resulting SQL will also have such a conversion and the result will be as expected.</span></span>  
+## <a name="differences-from-net"></a><span data-ttu-id="06c88-108">Różnice z platformy .NET</span><span class="sxs-lookup"><span data-stu-id="06c88-108">Differences from .NET</span></span>  
+ <span data-ttu-id="06c88-109">Wszystkie obsługiwane pracy operatory sekwencji zgodnie z oczekiwaniami w środowisku uruchomieniowym języka (wspólnego CLR), z wyjątkiem `Average`.</span><span class="sxs-lookup"><span data-stu-id="06c88-109">All supported sequence operators work as expected in the common language runtime (CLR) except for `Average`.</span></span> <span data-ttu-id="06c88-110">`Average` Zwraca wartość taki sam typ co typ uśrednione, natomiast w CLR `Average` zawsze zwraca albo <xref:System.Double> lub <xref:System.Decimal>.</span><span class="sxs-lookup"><span data-stu-id="06c88-110">`Average` returns a value of the same type as the type being averaged, whereas in the CLR `Average` always returns either a <xref:System.Double> or a <xref:System.Decimal>.</span></span> <span data-ttu-id="06c88-111">Jeśli argument źródła jest jawnie Rzutowanie na podwójne / dziesiętną lub selektor rzutuje double / dziesiętną, wynikowa instrukcja SQL ma też taka konwersja i wynik będzie zgodnie z oczekiwaniami.</span><span class="sxs-lookup"><span data-stu-id="06c88-111">If the source argument is explicitly cast to double / decimal or the selector casts to double / decimal, the resulting SQL will also have such a conversion and the result will be as expected.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1bd45-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1bd45-112">See Also</span></span>  
- [<span data-ttu-id="1bd45-113">Typy danych i funkcje</span><span class="sxs-lookup"><span data-stu-id="1bd45-113">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a><span data-ttu-id="06c88-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="06c88-112">See also</span></span>
+- [<span data-ttu-id="06c88-113">Typy danych i funkcje</span><span class="sxs-lookup"><span data-stu-id="06c88-113">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

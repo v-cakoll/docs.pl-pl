@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 103444e0b4b17b6384473eac714fba025cee9a55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63b597c6d15310c78397b9aac7b618c52df743ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711924"
 ---
-# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a><span data-ttu-id="6c39e-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount — Metoda</span><span class="sxs-lookup"><span data-stu-id="6c39e-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount Method</span></span>
-<span data-ttu-id="6c39e-103">Pobiera liczbę informacji wyszukiwania symboli.</span><span class="sxs-lookup"><span data-stu-id="6c39e-103">Gets a count of symbol search information.</span></span>  
+# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a><span data-ttu-id="9aad1-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount — Metoda</span><span class="sxs-lookup"><span data-stu-id="9aad1-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount Method</span></span>
+<span data-ttu-id="9aad1-103">Pobiera liczbę informacji wyszukiwania symboli.</span><span class="sxs-lookup"><span data-stu-id="9aad1-103">Gets a count of symbol search information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6c39e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6c39e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9aad1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9aad1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSymbolSearchInfoCount(  
     [out] ULONG32 *pcSearchInfo);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6c39e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="6c39e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9aad1-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="9aad1-105">Parameters</span></span>  
  `pcSearchInfo`  
- <span data-ttu-id="6c39e-106">[] limit] wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać informacje dotyczące wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="6c39e-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
+ <span data-ttu-id="9aad1-106">] out] wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać informacje dotyczące wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="9aad1-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6c39e-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="6c39e-107">Return Value</span></span>  
- <span data-ttu-id="6c39e-108">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="6c39e-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9aad1-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="9aad1-107">Return Value</span></span>  
+ <span data-ttu-id="9aad1-108">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="9aad1-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6c39e-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6c39e-109">Requirements</span></span>  
- <span data-ttu-id="6c39e-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="6c39e-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9aad1-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9aad1-109">Requirements</span></span>  
+ <span data-ttu-id="9aad1-110">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9aad1-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c39e-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="6c39e-111">See Also</span></span>  
- [<span data-ttu-id="6c39e-112">ISymUnmanagedReaderSymbolSearchInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="6c39e-112">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9aad1-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9aad1-111">See also</span></span>
+- [<span data-ttu-id="9aad1-112">ISymUnmanagedReaderSymbolSearchInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="9aad1-112">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

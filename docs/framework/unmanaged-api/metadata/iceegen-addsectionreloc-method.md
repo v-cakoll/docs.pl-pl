@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c281d03c6e3774938cfa6e4b4b3a541738b38489
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8e270f45300bd5f8c2e6cd87f9b84f31ec42320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722195"
 ---
-# <a name="iceegenaddsectionreloc-method"></a><span data-ttu-id="03baa-102">ICeeGen::AddSectionReloc — Metoda</span><span class="sxs-lookup"><span data-stu-id="03baa-102">ICeeGen::AddSectionReloc Method</span></span>
-<span data-ttu-id="03baa-103">Dodaje instrukcję .reloc do ścieżki bazowej kodu.</span><span class="sxs-lookup"><span data-stu-id="03baa-103">Adds a .reloc instruction to the code base.</span></span>  
+# <a name="iceegenaddsectionreloc-method"></a><span data-ttu-id="7c1ac-102">ICeeGen::AddSectionReloc — Metoda</span><span class="sxs-lookup"><span data-stu-id="7c1ac-102">ICeeGen::AddSectionReloc Method</span></span>
+<span data-ttu-id="7c1ac-103">Dodaje instrukcję .reloc do bazy kodu.</span><span class="sxs-lookup"><span data-stu-id="7c1ac-103">Adds a .reloc instruction to the code base.</span></span>  
   
- <span data-ttu-id="03baa-104">Ta metoda jest przestarzała i nie powinna być używana.</span><span class="sxs-lookup"><span data-stu-id="03baa-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="7c1ac-104">Ta metoda jest przestarzała i nie powinna być używana.</span><span class="sxs-lookup"><span data-stu-id="7c1ac-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03baa-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="03baa-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c1ac-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="7c1ac-105">Syntax</span></span>  
   
 ```  
 HRESULT AddSectionReloc (  
@@ -40,27 +40,27 @@ HRESULT AddSectionReloc (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="03baa-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="03baa-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7c1ac-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="7c1ac-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="03baa-107">[in] Sekcji kodu w pamięci, do której ma zostać dodany instrukcji .reloc.</span><span class="sxs-lookup"><span data-stu-id="03baa-107">[in] The section of in-memory code to which to add a .reloc instruction.</span></span>  
+ <span data-ttu-id="7c1ac-107">[in] Sekcja kodu w pamięci, do której chcesz dodać instrukcję .reloc.</span><span class="sxs-lookup"><span data-stu-id="7c1ac-107">[in] The section of in-memory code to which to add a .reloc instruction.</span></span>  
   
  `offset`  
- <span data-ttu-id="03baa-108">[in] Przesunięcie sekcji.</span><span class="sxs-lookup"><span data-stu-id="03baa-108">[in] The offset of the section.</span></span>  
+ <span data-ttu-id="7c1ac-108">[in] Przesunięcie sekcji.</span><span class="sxs-lookup"><span data-stu-id="7c1ac-108">[in] The offset of the section.</span></span>  
   
  `relativeTo`  
- <span data-ttu-id="03baa-109">[in] Sekcja, do którego `offset` odwołuje się.</span><span class="sxs-lookup"><span data-stu-id="03baa-109">[in] The section to which `offset` refers.</span></span>  
+ <span data-ttu-id="7c1ac-109">[in] Sekcja, do którego `offset` odwołuje się.</span><span class="sxs-lookup"><span data-stu-id="7c1ac-109">[in] The section to which `offset` refers.</span></span>  
   
  `relocType`  
- <span data-ttu-id="03baa-110">[in] Jeden z [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) wartości i wskazujący rodzaj .reloc instrukcji, aby dodać.</span><span class="sxs-lookup"><span data-stu-id="03baa-110">[in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.</span></span>  
+ <span data-ttu-id="7c1ac-110">[in] Jedną z [ceesectionreloctype —](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) wartości, wskazujący rodzaj instrukcji .reloc do dodania.</span><span class="sxs-lookup"><span data-stu-id="7c1ac-110">[in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03baa-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="03baa-111">Requirements</span></span>  
- <span data-ttu-id="03baa-112">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03baa-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c1ac-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7c1ac-111">Requirements</span></span>  
+ <span data-ttu-id="7c1ac-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7c1ac-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03baa-113">**Nagłówek:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="03baa-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7c1ac-113">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="7c1ac-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="03baa-114">**Biblioteka:** używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="03baa-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7c1ac-114">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7c1ac-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="03baa-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03baa-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7c1ac-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c1ac-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03baa-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="03baa-116">See Also</span></span>  
- [<span data-ttu-id="03baa-117">ICeeGen, interfejs</span><span class="sxs-lookup"><span data-stu-id="03baa-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7c1ac-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7c1ac-116">See also</span></span>
+- [<span data-ttu-id="7c1ac-117">ICeeGen, interfejs</span><span class="sxs-lookup"><span data-stu-id="7c1ac-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

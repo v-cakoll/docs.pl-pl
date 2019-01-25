@@ -4,12 +4,12 @@ description: Zalecane najlepsze dla pakietu nuget biblioteki .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 6c3c7feb95f0ebe6b348f42cdd243ce1d14b9c50
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724309"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -112,11 +112,14 @@ Alternatywą dla tworzenia pakietu symboli jest osadzanie plików symboli w gł�
 </Project>
 ```
 
-**ROZWAŻ ✔️** osadzanie plików symboli w głównym pakietu NuGet.
+Wadą osadzanie plików symboli jest, mogą zwiększyć rozmiar pakietu o około 30% do bibliotek .NET skompilowanych przy użyciu zestawu SDK stylu projektów. Jeśli rozmiar pakietu jest istotna, należy zamiast tego opublikować symbole w pakietach symboli.
 
-> Osadzanie plików symboli w głównym pakietu NuGet daje deweloperom to lepszy proces debugowania domyślnie. Nie muszą znaleźć i skonfigurować serwer symboli NuGet w ich środowisku IDE, aby pobrać pliki symboli.
+**ROZWAŻ ✔️** publikowania symboli jako pakiet symboli (`*.snupkg`) na stronie NuGet.org
+
+> Pakiety symboli (`*.snupkg`) zapewnia deweloperom dobre środowisko debugowania na żądanie pozwoli uniknąć przeładowania rozmiar pakietu głównego i wpływu na przywracania wydajność dla tych, którzy nie zamierzasz debugowanie pakietu NuGet.
 >
-> Wadą plików symboli osadzony jest zwiększają rozmiar pakietu przez około 30% do bibliotek .NET skompilowanych przy użyciu zestawu SDK stylu projektów. Jeśli rozmiar pakietu jest istotna, należy zamiast tego opublikować symbole w pakietach symboli.
+> Zastrzeżenie: to ich potrzebować do znalezienia i skonfigurować serwer symboli NuGet w ich środowisku IDE (jako to jednorazowa Konfiguracja), można pobrać pliki symboli. Visual Studio 2019 r planuje dostarcza do serwera symboli NuGet.org jako jedną z opcji gotowe. 
+
 
 >[!div class="step-by-step"]
 >[Poprzednie](strong-naming.md)

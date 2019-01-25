@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 10cdf5b8cf475c95e086b447b36a569da2173fa9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa23595359bc210edfd1d55486158a71420699c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195678"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615075"
 ---
 # <a name="imaging-overview"></a>Przegląd Obrazowanie
 Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] Umożliwia deweloperom do wyświetlenia, przekształcania i formatowanie obrazów.  
@@ -133,19 +133,19 @@ Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tl
 #### <a name="stretching-images"></a>Rozciąganie obrazów  
  <xref:System.Windows.Controls.Image.Stretch%2A> Właściwość określa, jak obraz jest rozciągany tak do wypełnienia jego kontenera. <xref:System.Windows.Controls.Image.Stretch%2A> Właściwość akceptuje następujące wartości, zdefiniowane przez <xref:System.Windows.Media.Stretch> wyliczenia:  
   
--   <xref:System.Windows.Media.Stretch.None>: Obraz nie jest rozciągany tak, aby wypełnił obszar danych wyjściowych. Jeśli obraz, który jest większy niż obszar wyjściowy, do obszaru wyjściowego przycinania, co nie mieści się rysowania obrazu.  
+-   <xref:System.Windows.Media.Stretch.None>: Obraz, który nie jest rozciągany tak, aby wypełnił obszar danych wyjściowych. Jeśli obraz, który jest większy niż obszar wyjściowy, do obszaru wyjściowego przycinania, co nie mieści się rysowania obrazu.  
   
--   <xref:System.Windows.Media.Stretch.Fill>Obraz jest skalowane w celu dopasowania do obszaru wyjściowego. Ponieważ szerokość i wysokość obrazu są skalowane osobno, oryginalnym współczynnik proporcji obrazu mogą nie zostać zachowane. Oznacza to obraz, który może być zniekształcenia Aby całkowicie wypełnić kontenera danych wyjściowych.  
+-   <xref:System.Windows.Media.Stretch.Fill>: Obraz, który jest skalowany w celu dopasowania do obszaru wyjściowego. Ponieważ szerokość i wysokość obrazu są skalowane osobno, oryginalnym współczynnik proporcji obrazu mogą nie zostać zachowane. Oznacza to obraz, który może być zniekształcenia Aby całkowicie wypełnić kontenera danych wyjściowych.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>Obraz jest skalowana tak, aby całkowicie mieści się w obszarze danych wyjściowych. Współczynnik proporcji obrazu są zachowywane.  
+-   <xref:System.Windows.Media.Stretch.Uniform>: Obraz jest skalowana tak, aby całkowicie mieści się w obszarze danych wyjściowych. Współczynnik proporcji obrazu są zachowywane.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>Obraz jest skalowana tak, aby całkowicie wypełnia obszar wyjściowy przy jednoczesnym zachowaniu oryginalny współczynnik proporcji obrazu.  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>: Obraz jest skalowana tak, aby całkowicie wypełnia obszar wyjściowy przy jednoczesnym zachowaniu oryginalny współczynnik proporcji obrazu.  
   
  Następujący przykład dotyczy każdego z dostępnych <xref:System.Windows.Media.Stretch> wyliczenia do <xref:System.Windows.Controls.Image>.  
   
  Poniższa ilustracja przedstawia dane wyjściowe z przykładu i demonstruje wpływają na poszczególne <xref:System.Windows.Controls.Image.Stretch%2A> ustawienia mają podczas zastosowane do obrazu.  
   
- ![Różne ustawienia TileBrush Stretch](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
+ ![Different TileBrush Stretch settings](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
 Różne ustawienia Stretch Database  
   
  [!code-xaml[ImageElementExample_snip#ImageStretchExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageStretchExample.xaml#imagestretchexamplewholepage)]  
@@ -153,7 +153,7 @@ Różne ustawienia Stretch Database
 ### <a name="painting-with-images"></a>Malowanie przy użyciu obrazów  
  Obrazy mogą być także wyświetlane w aplikacji przez malowanie <xref:System.Windows.Media.Brush>. Pędzle umożliwia malowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] obiektów ze wszystkim z proste, pełne kolory do złożonych zestawów wzorców i obrazy. Aby rysować przy użyciu obrazów, użyj <xref:System.Windows.Media.ImageBrush>. <xref:System.Windows.Media.ImageBrush> Jest typem <xref:System.Windows.Media.TileBrush> definiujący swoją zawartość jako obraz mapy bitowej. <xref:System.Windows.Media.ImageBrush> Wyświetla pojedynczy obraz, który jest określony przez jego <xref:System.Windows.Media.ImageBrush.ImageSource%2A> właściwości. Można kontrolować, jak obraz jest rozciągany tak, wyrównany i fragmentacji, dzięki któremu można będzie zapobiegać zniekształceniom oraz wzorców i innych skutków. Na poniższej ilustracji przedstawiono niektóre efekty, które można osiągnąć za pomocą <xref:System.Windows.Media.ImageBrush>.  
   
- ![ImageBrush danych wyjściowych przykłady](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
+ ![ImageBrush output examples](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
 Pędzle obrazu można wypełnić kształtów, formantów, tekstu i więcej  
   
  W poniższym przykładzie pokazano, jak namalować tła przycisku przy użyciu obrazów przy użyciu <xref:System.Windows.Media.ImageBrush>.  
@@ -163,7 +163,7 @@ Pędzle obrazu można wypełnić kształtów, formantów, tekstu i więcej
  Aby uzyskać dodatkowe informacje na temat <xref:System.Windows.Media.ImageBrush> zobaczyć malowanie obrazami [malowanie obrazami, rysowaniem i Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
 <a name="_metadata"></a>   
-## <a name="image-metadata"></a>Metadane obrazu  
+## <a name="image-metadata"></a>Image Metadata  
  Niektóre pliki obrazów zawiera metadane opisujące zawartość i właściwości pliku. Na przykład większość cyfrowe aparaty fotograficzne tworzenia obrazów, które zawierają metadane dotyczące producenta i modelu aparatu używane do przechwytywania obrazu. Każdy format obrazu obsługuje metadanych w inny sposób, ale [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] zapewnia jednolity sposób przechowywania i pobierania metadanych dla każdego obsługiwanym formacie obrazu.  
   
  Dostęp do metadanych jest oferowana w ramach <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> właściwość <xref:System.Windows.Media.Imaging.BitmapSource> obiektu. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> Zwraca <xref:System.Windows.Media.Imaging.BitmapMetadata> obiekt, który zawiera wszystkie metadane, które są zawarte w obrazie. Te dane mogą być w jednym schemacie metadanych lub kombinacji różnych systemów. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] obsługuje następujących schematów metadanych obrazu: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], tekst (PNG dane tekstowe), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], i [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
@@ -189,10 +189,10 @@ Pędzle obrazu można wypełnić kształtów, formantów, tekstu i więcej
 > [!NOTE]
 >  Koder-dekoder musi być podpisany cyfrowo dla systemu, aby można było go rozpoznać.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Imaging.BitmapSource>  
- <xref:System.Windows.Media.Imaging.BitmapImage>  
- <xref:System.Windows.Controls.Image>  
- <xref:System.Windows.Media.Imaging.BitmapMetadata>  
- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Koder-dekoder Win32 próbki](https://go.microsoft.com/fwlink/?LinkID=160052)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Imaging.BitmapSource>
+- <xref:System.Windows.Media.Imaging.BitmapImage>
+- <xref:System.Windows.Controls.Image>
+- <xref:System.Windows.Media.Imaging.BitmapMetadata>
+- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Koder-dekoder Win32 próbki](https://go.microsoft.com/fwlink/?LinkID=160052)

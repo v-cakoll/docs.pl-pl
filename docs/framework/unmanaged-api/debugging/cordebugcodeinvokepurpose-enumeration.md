@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79730bb98a7e2d84517ed068a52614ad8650f541
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4eeecc3b1c248f4f0bf4372801f6bc71a22f260
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406224"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662234"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>Wyliczenie CorDebugCodeInvokePurpose
-Opisuje, dlaczego wyeksportowanej funkcji wywołania kodu zarządzanego.  
+W tym artykule opisano, dlaczego eksportowanych funkcji wywołuje kod zarządzany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,18 +39,18 @@ typedef enum CorDebugCodeInvokePurpose
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`CODE_INVOKE_PURPOSE_NONE`|Brak lub nieznany.|  
-|`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|Zarządzany kod uruchomi żadnych zarządzany punkt wejścia, np. odwrotna p-invoke. Wszelkie bardziej szczegółowe celem jest nieznany w czasie wykonywania.|  
-|`CODE_INVOKE_PURPOSE_CLASS_INIT`|Zarządzany kod zostanie uruchomiony Konstruktor statyczny.|  
-|`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|Zarządzany kod zostanie uruchomiony implementację niektóre metody interfejsu, która została wywołana.|  
+|`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|Kod zarządzany uruchomi żadnych zarządzany punkt wejścia, takich jak p-invoke wstecznego. Wszelkie szczegółowe celem jest nieznany w czasie wykonywania.|  
+|`CODE_INVOKE_PURPOSE_CLASS_INIT`|Zarządzany kod będzie działał Konstruktor statyczny.|  
+|`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|Zarządzany kod będzie działał implementację dla niektórych metodę interfejsu, która została wywołana.|  
   
 ## <a name="remarks"></a>Uwagi  
- To wyliczenie jest używany przez [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) metody, aby podać informacje o krokowe wykonywanie kodu zarządzanego.  
+ To wyliczenie jest używane przez [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) metodę w celu udostępnienia informacji na temat krokowe wykonywanie kodu zarządzanego.  
   
 > [!NOTE]
->  To wyliczenie jest przeznaczona do użycia w platformę .NET Native tylko w scenariuszach debugowania.  
+>  To wyliczenie jest przeznaczona do użytku w .NET Native tylko w scenariuszach debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -58,6 +58,6 @@ typedef enum CorDebugCodeInvokePurpose
   
  **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

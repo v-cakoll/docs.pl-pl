@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: f52192087eb7b73ee930eea073e0c5716ad8c636
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1573e28f2a6f9dec7825d364debcdf1085ef7ff2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635670"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (opcje kompilatora C#)
 Określa, która wersja środowiska uruchomieniowego języka w wspólnego (CLR) można uruchomić zestawu.  
@@ -75,7 +75,7 @@ Określa, która wersja środowiska uruchomieniowego języka w wspólnego (CLR) 
 csc -platform:anycpu filename.cs  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](index.md)  
+- [Opcje kompilatora C#](index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

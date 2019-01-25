@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6d4f63dacc09208176b47dbca38783f1e9bc0a1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 373d1e4e5089b23ecaeffd10fd167b701b75760c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702902"
 ---
 # <a name="xpath-namespace-navigation"></a>Wyrażenie XPath Namespace nawigacji
 Zapytania XPath za pomocą dokumentów XML, masz prawidłowego adresowania przestrzeni nazw XML i elementy zawarte w przestrzeni nazw. Przestrzenie nazw zapobiec niejasności, które mogą wystąpić podczas nazwy są używane w więcej niż jednym kontekście; na przykład nazwa `ID` mogą odwoływać się do więcej niż jeden identyfikator skojarzony z różnych elementów dokumentu XML. Składnia Namespace określa identyfikatorów, nazw i prefiksy, które odróżniania elementów dokumentu XML.  
@@ -20,7 +20,7 @@ Zapytania XPath za pomocą dokumentów XML, masz prawidłowego adresowania przes
 ## <a name="namespace-declarations"></a>Deklaracji Namespace  
  Deklaracji Namespace uzupełnić elementów dokumentu XML rozróżnialnych i mogą być adresowane podczas korzystania z wystąpienia <xref:System.Xml.XPath.XPathNavigator>. Prefiksy Namespace Podaj krótki opis składni adresowania przestrzeni nazw.  
   
- Prefiksy są definiowane przez formularz: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` w tej składni prefiks "`e`" jest formą skróconą posiadanie identyfikatora URI obszaru nazw. Można zidentyfikować `Body` element będący członkiem `Envelope` przestrzeni nazw przy użyciu składni: `e:Body`.  
+ Prefiksy są definiowane przez formularza: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` W tej składni prefiks "`e`" jest formą skróconą posiadanie identyfikatora URI obszaru nazw. Można zidentyfikować `Body` element będący członkiem `Envelope` przestrzeni nazw przy użyciu składni: `e:Body`.  
   
  Następujący dokument XML będzie odwoływać się jak `response.xml` w przykładzie nawigacji w następnej sekcji.  
   
@@ -72,5 +72,5 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Uzyskiwanie dostępu do danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+- [Uzyskiwanie dostępu do danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
 - [Wybieranie, obliczanie i dopasowywanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

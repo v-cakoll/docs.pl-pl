@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f9f8925630933e2247726f92a93cac67bdc55ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c89a7671cde9e519d0fc66751ee8f95b34fe9039
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669669"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished — Metoda
-Powiadamia profilera, czy został zwolniony z procesu domeny aplikacji.  
+Powiadamia program profilujący, że zostało zwolnione z procesu domeny aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,18 +37,18 @@ HRESULT AppDomainShutdownFinished(
   
 #### <a name="parameters"></a>Parametry  
  `appDomainId`  
- [in] Identyfikuje domenę, w której są przechowywane zestawów aplikacji.  
+ [in] Określa domenę, w której są przechowywane zestawy aplikacji.  
   
  `hrStatus`  
- [in] HRESULT, która wskazuje, czy domena aplikacji został pomyślnie usunięty z pamięci.  
+ [in] Wartość HRESULT, która wskazuje, czy domena aplikacji został pomyślnie usunięty z pamięci.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `appDomainId` jest nieprawidłowa dla żądania informacji po [ICorProfilerCallback::AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) zwraca metody.  
+ Wartość `appDomainId` jest nieprawidłowa dla żądania informacji po [icorprofilercallback::appdomainshutdownstarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) metoda zwraca.  
   
- Niektóre elementy zwolnienie domeny aplikacji mogą nadal po `AppDomainCreationFinished` wywołania zwrotnego. Błąd HRESULT w `hrStatus` oznacza błąd. Jednak Powodzenie HRESULT w `hrStatus` tylko wskazuje, że pierwsza część zwolnienie domeny aplikacji zakończyła się pomyślnie.  
+ Niektóre części rozładowywania domeny aplikacji może kontynuować po `AppDomainCreationFinished` wywołania zwrotnego. Błąd HRESULT w `hrStatus` wskazuje błąd. Jednak sukcesów wartość HRESULT w `hrStatus` wskazuje tylko, że pierwsza część rozładowywania domeny aplikacji zakończyła się pomyślnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -56,5 +56,5 @@ HRESULT AppDomainShutdownFinished(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

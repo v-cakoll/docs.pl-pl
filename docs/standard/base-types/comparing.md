@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: df526c93c195275751c393299b0e0d80337eee44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688899"
 ---
 # <a name="comparing-strings-in-net"></a>Porównywanie ciągów w programie .NET
 .NET zapewnia kilka metod, aby porównać wartości ciągów. Poniższej tabeli wymieniono i opisano metody porównania wartości.  
@@ -93,7 +93,7 @@ ms.locfileid: "45698565"
   
  Wszystkie przeciążenia <xref:System.String.CompareTo%2A?displayProperty=nameWithType> metody wykonywania uwzględniana kultura i wielkość liter, domyślnie. Nie przeciążenia tej metody są dostarczane, umożliwiają wykonywanie niezależnych od kultury porównanie. Czystości kodu zaleca się, że używasz **String.COMPARE —** metody zamiast tego określenia <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> dla operacji wrażliwych na kulturę lub <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> niezależnych od kultury operacji. Przykłady pokazujące, jak używać **String.COMPARE —** metodę w celu porównania wrażliwość na ustawienia kulturowe i niewrażliwość na ustawienia kulturowe, zobacz [wykonywanie niezależnych od kultury porównań ciągów](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
-## <a name="equals"></a>równa się  
+## <a name="equals"></a>Równa się  
  **String.Equals** metody można łatwo określić, czy dwa ciągi są takie same. Wielkość liter metoda zwraca **true** lub **false** wartość logiczną. Może służyć z istniejącej klasy, jak pokazano w następnym przykładzie. W poniższym przykładzie użyto **jest równa** metodę, aby określić, czy obiekt ciągu zawiera frazę "Hello World".  
   
  [!code-cpp[Conceptual.String.BasicOps#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#9)]
@@ -152,7 +152,7 @@ ms.locfileid: "45698565"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)
 - [Wykonywanie niezależnych od kultury operacji na ciągach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Sortowanie wagi tabel (w przypadku platformy .NET, Windows)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
 - [Tabela elementów sortowanie domyślne Unicode (dla platformy .NET Core w systemie Linux i macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

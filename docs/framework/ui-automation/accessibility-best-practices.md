@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: a7f3a13d05b8a3c4554810655bbda670efb2b3fd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0f33fb559bb4bf47beebc836a093f4b784559609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674821"
 ---
 # <a name="accessibility-best-practices"></a>Najlepsze praktyki dotyczące ułatwień dostępu
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Implementacja następujących najlepszych rozwiązań w kontrolkach lub aplikacji spowoduje zwiększenie ich dostępność dla osób, które używają [!INCLUDE[TLA#tla_at](../../../includes/tlasharptla-at-md.md)] urządzeń. Wiele z tych najlepszych rozwiązań skupić się na dobrze [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] projektu. Każdy najlepsze rozwiązanie zawiera informacje o implementacji dla [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] kontrolki lub aplikacji. W wielu przypadkach, pracy w celu spełnienia tych najlepszych rozwiązań jest już uwzględniony w [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] kontrolki.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "50191080"
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>Użyj standardowych interfejsów API danych wejściowych z wywołaniami niezależnych od urządzenia  
  Wywołania niezależnych od urządzenia zapewnienia równości funkcji klawiatury i myszy, przy jednoczesnym zapewnieniu [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] z wymaganych informacji o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Automation.Peers>  
- [Formant NumericUpDown niestandardowe z motywu i przykładowe Obsługa automatyzacji interfejsu użytkownika](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
- [Wytyczne dotyczące projektowania interfejsu użytkownika dla klawiatury](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Automation.Peers>
+- [Formant NumericUpDown niestandardowe z motywu i przykładowe Obsługa automatyzacji interfejsu użytkownika](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)
+- [Wytyczne dotyczące projektowania interfejsu użytkownika dla klawiatury](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

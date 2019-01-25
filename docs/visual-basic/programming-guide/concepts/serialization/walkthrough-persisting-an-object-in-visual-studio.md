@@ -2,12 +2,12 @@
 title: Przechowywanie obiektu w programie Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 25951327028b9b8ced8506b3ba6395e8c9e6abed
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 002c5470765b33d038ab0fd463fcc6ccfdf6f109
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690439"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Przewodnik: Przechowywanie obiektu w programie Visual Studio (Visual Basic)
 Chociaż można ustawić właściwości obiektu do wartości domyślnych w czasie projektowania, wszystkie wartości wprowadzone w czasie wykonywania zostaną utracone, kiedy niszczony jest obiekt. Można użyć serializacji do utrwalenia danych obiektu między wystąpieniami, dzięki czemu możesz przechowywać wartości, a następnie pobrać jednego z nich przy następnym uruchomieniu jest tworzone wystąpienie obiektu.  
@@ -215,6 +215,6 @@ Chociaż można ustawić właściwości obiektu do wartości domyślnych w czasi
   
  W tym momencie możesz ponownie skompiluj i uruchom aplikację. Początkowo wartości domyślne są wyświetlane w polach tekstowych. Spróbuj zmienić wartości i wprowadź nazwę w polu tekstowym czwarty. Zamknij aplikację, a następnie uruchom ją ponownie. Pamiętaj, że pojawiają się nowe wartości w polach tekstowych.  
   
-## <a name="see-also"></a>Zobacz też  
- [Serializacja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)  
- [Przewodnik programowania w języku Visual Basic](../../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Serializacja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [Przewodnik programowania w języku Visual Basic](../../../../visual-basic/programming-guide/index.md)

@@ -16,49 +16,49 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1a11c0b697a32b184a2c4a60c2f2c88a4b47aaf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea250cd413836796e8e6a3438ac7d6933035091e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714285"
 ---
 # <a name="imetadatatables-interface"></a>IMetaDataTables — Interfejs
-Udostępnia metody przechowywania i pobierania informacji o metadanych w tabelach.  
+Zawiera metody służące do przechowywania i pobierania informacji o metadanych w tabelach.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
 |[GetBlob, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|Pobiera wskaźnik do dużego obiektu binarnego (BLOB) pod indeksem określonej kolumny.|  
-|[GetBlobHeapSize, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|Pobiera rozmiar w bajtach sterty obiektu BLOB.|  
-|[GetCodedTokenInfo, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|Pobiera wskaźnik do tablicy tokenów skojarzone z indeks określonego wiersza.|  
-|[GetColumn, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|Pobiera wskaźnik do wartości zawarte w kolumnie pod indeksem określonej kolumny w tabeli w indeksie określonej tabeli.|  
+|[GetBlobHeapSize, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|Pobiera rozmiar w bajtach stosu obiektów BLOB.|  
+|[GetCodedTokenInfo, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|Pobiera wskaźnik do tablicy tokenów skojarzone z indeksem określony wiersz.|  
+|[GetColumn, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|Pobiera wskaźnik do wartości znajdujących się w kolumnie pod indeksem określonej kolumny w tabeli pod indeksem określonej tabeli.|  
 |[GetColumnInfo, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|Pobiera dane o określonej kolumny w określonej tabeli.|  
-|[GetGuid, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|Pobiera identyfikator GUID z wiersza pod określonym indeksem.|  
+|[GetGuid, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|Pobiera identyfikator GUID z wiersz pod określonym indeksem.|  
 |[GetGuidHeapSize, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|Pobiera rozmiar w bajtach sterty identyfikatora GUID.|  
 |[GetNextBlob, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|Pobiera indeks następnego obiektu blob w tabeli.|  
-|[GetNextGuid, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|Pobiera indeks następnego wartości identyfikatora GUID w bieżącej kolumny tabeli.|  
-|[GetNextString, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|Pobiera indeks następnego ciągu w bieżącej kolumny tabeli.|  
-|[GetNextUserString, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|Pobiera indeks wiersza, który zawiera dalej ustalony ciąg w bieżącej kolumny tabeli.|  
+|[GetNextGuid, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|Pobiera indeks następnego wartość identyfikatora GUID w bieżącej kolumnie tabeli.|  
+|[GetNextString, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|Pobiera indeks następnego ciągu w bieżącej kolumnie tabeli.|  
+|[GetNextUserString, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|Pobiera indeks wiersza, który zawiera następnego ciągu ustalonych w bieżącej kolumnie tabeli.|  
 |[GetNumTables, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|Pobiera liczbę tabel w zakresie bieżącego `IMetaDataTables` wystąpienia.|  
-|[GetRow, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|Pobiera wiersz w indeksie określony wiersz, w tabeli w indeksie określonej tabeli.|  
-|[GetString, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|Pobiera ciąg pod określonym indeksem z kolumną tabeli w bieżącym zakresie odwołania.|  
-|[GetStringHeapSize, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|Pobiera rozmiar w bajtach sterty ciągu.|  
-|[GetTableIndex, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|Pobiera indeks tabeli odwołuje się określony token.|  
-|[GetTableInfo, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|Pobiera nazwę, rozmiar wiersza, liczbę wierszy, liczby kolumn oraz indeks kolumny klucza tabeli w indeksie określonej tabeli.|  
-|[GetUserString, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|Pobiera ciąg ustalony pod określonym indeksem w kolumnie ciągu w bieżącym zakresie.|  
+|[GetRow, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|Pobiera wiersz indeksu określony wiersz w tabeli pod indeksem określonej tabeli.|  
+|[GetString, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|Pobiera parametry dla podanego indeksu z kolumną tabeli w bieżącym zakresie odwołania.|  
+|[GetStringHeapSize, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|Pobiera rozmiar w bajtach stercie będącej ciągiem tekstowym.|  
+|[GetTableIndex, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|Pobiera indeks dla tabeli przywoływanej przez określony token.|  
+|[GetTableInfo, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|Pobiera nazwę, rozmiar wiersza, liczba wierszy, liczba kolumn, a kolumny klucza indeksu tabeli dla indeksu określonej tabeli.|  
+|[GetUserString, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|Pobiera ciąg ustaloną dla podanego indeksu w kolumnie ciągu w bieżącym zakresie.|  
 |[GetUserStringHeapSize, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|Pobiera rozmiar w bajtach sterty ciągu użytkownika.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

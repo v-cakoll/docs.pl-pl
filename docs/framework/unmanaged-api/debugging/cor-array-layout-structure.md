@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a96542ab5113311bba79cc552afd7f29e6eafa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6fee91146e99ba1f63ecafcbbdaae9d42675848
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731143"
 ---
 # <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT — Struktury
-Zawiera informacje o układzie tablicy obiektów w pamięci.  
+Informacje dotyczące układu obiektu tablicowego w pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,21 +46,21 @@ typedef struct COR_ARRAY_LAYOUT {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`componentID`|Identyfikator typu obiektów zawartych w tablicy.|  
-|`componentType`|Wartość wyliczenia CorElementType, która wskazuje, czy składnik jest odwołanie do kolekcji odzyskiwanie, klasą wartości lub typu pierwotnego.|  
+|`componentType`|Corelementtype — wartość wyliczenia, która wskazuje, czy składnik jest odwołanie do kolekcji wyrzucania elementów, klasą wartości lub elementu podstawowego.|  
 |`firstElementOffset`|Przesunięcie do pierwszego elementu w tablicy.|  
 |`elementSize`|Rozmiar każdego elementu.|  
 |`countOffset`|Przesunięcie do liczby elementów w tablicy.|  
-|`rankSize`|Rozmiar w bajtach stopnia.|  
-|`numRanks`|Liczba rangi tablicy.|  
-|`rankOffset`|Przesunięcie, jaką start rangę.|  
+|`rankSize`|Rozmiar w bajtach rangi.|  
+|`numRanks`|Liczba rangę tablicy.|  
+|`rankOffset`|Przesunięcie, w którym start rangę.|  
   
 ## <a name="remarks"></a>Uwagi  
- `rankSize` Pole określa rozmiar pozycji w tablicy wielowymiarowej. Jest dokładne dla również tablice jednowymiarowe.  
+ `rankSize` Pola określa rozmiar rangę tablicy wielowymiarowej. Jest prawidłowe dla także tablice jednowymiarowe.  
   
- Wartość `numRanks` 1 dla tablicy jednowymiarowej i `N` dla tablicy wielowymiarowej z `N` wymiarów.  
+ Wartość `numRanks` 1 dla tablicy jednowymiarowej i `N` dla tablicy wielowymiarowej `N` wymiarów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -68,6 +68,6 @@ typedef struct COR_ARRAY_LAYOUT {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

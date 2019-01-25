@@ -2,12 +2,12 @@
 title: LINQ do DataSet
 ms.date: 03/30/2017
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
-ms.openlocfilehash: 5e1644af7e07ad3395a30e56df52b7f85cefa77c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 5e23ff825c609d5e9fea3a1870775f85a626db4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589285"
 ---
 # <a name="linq-to-dataset"></a>LINQ do DataSet
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] umożliwia łatwiejsze i szybsze zapytania przez dane buforowane w <xref:System.Data.DataSet> obiektu. W szczególności [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] upraszcza zapytań, dzięki czemu deweloperzy mogą pisać zapytania w języku programowania, a nie przy użyciu języka oddzielnego zapytania. Jest to szczególnie przydatne dla deweloperów programu Visual Studio, którzy mogą korzystać ze sprawdzania składni w czasie kompilacji, wpisując statycznych i IntelliSense pomoc techniczna jest świadczona przez program Visual Studio w zapytaniach.  
@@ -30,7 +30,7 @@ ms.locfileid: "46710634"
   
  <xref:System.Data.DataRowComparer>  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [LINQ i ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [LINQ i ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)

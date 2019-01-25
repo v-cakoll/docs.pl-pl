@@ -1,52 +1,52 @@
 ---
-title: Plan zapytania buforowania (jednostka SQL)
+title: Planu zapytania z pamięci podręcznej (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 0e00d7f9382fca2af630a8e1d50a5cde5178da05
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 75c097d66ae23d32465b5a717ae627d35cdc003f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671138"
 ---
-# <a name="query-plan-caching-entity-sql"></a>Plan zapytania buforowania (jednostka SQL)
-Zawsze, gdy podejmowana jest próba mógł wykonać zapytania, potoku zapytanie wyszukuje pamięci podręcznej planu zapytania Czy dokładne kwerendy jest już skompilowane i dostępne. Jeśli tak, używany jest buforowany plan zamiast tworzenia nowej. Jeśli dopasowanie nie zostanie znaleziony w pamięci podręcznej planu zapytania, zapytanie jest skompilowany i pamięci podręcznej. Zapytanie jest identyfikowany przez jego [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tekstu i parametru kolekcji (nazwy i typy). Wszystkie porównywania tekstu jest rozróżniana wielkość liter.  
+# <a name="query-plan-caching-entity-sql"></a>Planu zapytania z pamięci podręcznej (jednostka SQL)
+Zawsze, gdy podejmowana jest próba, aby wykonać zapytanie, potok zapytanie wyszukuje pamięci podręcznej planu zapytania Czy dokładne zapytanie jest już skompilowane i dostępne. Jeśli tak, używa buforowanego planu zamiast tworzenia nowej. Jeśli dopasowanie nie zostanie znaleziony w pamięci podręcznej planu zapytania, kwerenda jest skompilowany i pamięci podręcznej. Zapytanie jest identyfikowane za pomocą jego [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kolekcji tekstu i parametrów (nazw i typy). Wszystkie porównania tekstu jest rozróżniana wielkość liter.  
   
 ## <a name="configuration"></a>Konfiguracja  
- Buforowanie plan zapytania jest konfigurowany za pomocą <xref:System.Data.EntityClient.EntityCommand>.  
+ Buforowanie planu zapytania jest konfigurowane za pomocą <xref:System.Data.EntityClient.EntityCommand>.  
   
- Aby włączyć lub wyłączyć zapytania planu buforowanie za pośrednictwem <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType>, ustawić tę właściwość na `true` lub `false`. Wyłączenie buforowania planu dla poszczególnych zapytań dynamicznych, które prawdopodobnie nie można użyć więcej niż jeden raz — do poprawia wydajność.  
+ Aby włączyć lub wyłączyć buforowanie planu zapytania za pomocą <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType>, ustaw tę właściwość na `true` lub `false`. Wyłączanie buforowanie planu dla poszczególnych zapytań dynamicznych, które prawdopodobnie celu można użyć więcej niż jeden raz poprawia wydajność.  
   
- Można włączyć zapytania planu buforowanie za pośrednictwem <xref:System.Data.Objects.ObjectQuery.EnablePlanCaching%2A>.  
+ Aby umożliwić buforowanie planu zapytania za pomocą <xref:System.Data.Objects.ObjectQuery.EnablePlanCaching%2A>.  
   
 ## <a name="recommended-practice"></a>Zalecana praktyka  
- Zapytania dynamiczne należy unikać, ogólnie. W poniższym przykładzie zapytanie dynamicznej jest narażony na ataki, z powodu danych wejściowych użytkownika bezpośrednio, bez żadnych sprawdzania poprawności.  
+ Zapytania dynamiczne należy unikać, ogólnie rzecz biorąc. W poniższym przykładzie zapytanie dynamiczne jest narażony na ataki przez wstrzyknięcie kodu SQL, ponieważ zajmuje trochę danych wejściowych użytkownika bezpośrednio, bez żadnych sprawdzania poprawności.  
   
  `"SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;`  
   
- Jeśli używasz dynamicznie generowanym zapytania, rozważ wyłączenie buforowanie planu zapytania, aby uniknąć zużycie pamięci niepotrzebne wpisy w pamięci podręcznej, które prawdopodobnie nie zostanie ponownie.  
+ Jeśli używasz dynamicznie generowanych zapytań, należy rozważyć wyłączenie, buforowanie planu zapytania w celu uniknięcia zużycie pamięci niepotrzebne dla wpisów pamięci podręcznej, które prawdopodobnie mogą być ponownie używane.  
   
- Planu zapytania, buforowanie na zapytania statycznych i sparametryzowanych zapytań zapewniają korzyści wydajności. Poniżej przedstawiono przykład statyczne kwerendy:  
+ Plan zapytania w pamięci podręcznej zapytań statycznych i sparametryzowane zapytania może zapewnić korzyści wydajności. Oto przykład kwerendy statyczne:  
   
 ```  
 "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";  
 ```  
   
- Dla zapytania do dopasowania poprawnie przez pamięć podręczną planu zapytania one spełniać następujące wymagania:  
+ Dla zapytań, które mają być dopasowywane prawidłowo o pamięci podręcznej planu zapytania mogą spełniać następujące wymagania:  
   
--   Tekst zapytania powinien być stałe wzorzec, najlepiej ciągiem stałym lub zasobu.  
+-   Tekst zapytania należy wzór stałej, najlepiej stałym ciągiem lub zasobu.  
   
 -   <xref:System.Data.EntityClient.EntityParameter> lub <xref:System.Data.Objects.ObjectParameter> powinny być używane wszędzie tam, gdzie muszą być przekazywane wartości dostarczone przez użytkownika.  
   
- Należy unikać następujące wzorców zapytań, które niepotrzebnie zużywają miejsca w pamięci podręcznej planu zapytania:  
+ Należy unikać następujące wzorce zapytań, które zużywają niepotrzebnego miejsca w pamięci podręcznej planu zapytania:  
   
 -   Zmiany do rozróżniania wielkości liter w tekście.  
   
 -   Zmiany biały znak.  
   
--   Zmiany w wartości literału.  
+-   Zmiany wartości literału.  
   
--   Zmiany tekstu wewnątrz komentarzy.  
+-   Zmiany tekstu w komentarzach.  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

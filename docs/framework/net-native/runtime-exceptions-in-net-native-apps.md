@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efb16c1e947cd832da88b53a3522a5928e77ae06
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: da30ae3f32ebbfabbdf35dd939c27b8d88e7e755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696870"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Wyjątki czasu wykonywania w aplikacjach .NET Native
 Jest ważne przetestować kompilacji wydania aplikacji Universal Windows Platform na ich platformach docelowych, ponieważ konfiguracji debug i release całkowicie różnią się. Domyślnie korzysta z konfiguracji debugowania środowiska uruchomieniowego .NET Core do kompilowania aplikacji, ale konfiguracja wydania używa platformy .NET Native do kompilowania aplikacji do kodu macierzystego.  
   
 > [!IMPORTANT]
->  Aby uzyskać informacje w sprawach związanych z [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), i [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątki, które użytkownik może wystąpi podczas testowania wersji aplikacji, zobacz "krok 4: ręcznie rozwiązać Brak metadanych: w [wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md) tematu, a także [odbicie i architektura .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) i [ Dokumentacja pliku konfiguracji dyrektyw (rd.xml) środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+>  Aby uzyskać informacje w sprawach związanych z [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), i [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) wyjątki, które użytkownik może Podczas testowania wersji aplikacji, zobacz "krok 4: Ręcznie rozwiązać Brak metadanych: w [wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md) tematu, a także [odbicia i platforma .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) i [dyrektywy środowiska uruchomieniowego (rd.xml) odwołanie do pliku konfiguracji](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>Kompilacje debugowania i wydania  
  Jeśli kompilacja debugowania jest wykonywana względem czasu wykonywania platformy .NET Core, nie został wcześniej skompilowany na kod natywny. To sprawia, że wszystkie usługi, zazwyczaj dostarczane przez środowisko uruchomieniowe dostępna dla aplikacji.  
@@ -59,6 +59,6 @@ Additional information: Value does not fall within the expected range.
   
  Aby uzyskać pełny stos, należy zamiast tego należy uruchomić z kompilacji debugowania.  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie aplikacji Universal Windows natywnych platformy .NET](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)  
- [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie aplikacji Universal Windows natywnych platformy .NET](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)
+- [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)

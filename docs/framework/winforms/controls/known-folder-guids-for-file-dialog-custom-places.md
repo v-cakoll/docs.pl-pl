@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 69fa8837f616969e018e4ec7191f0b30a2df5b62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97d516e1c3ae99d639dea676f3f6798b6e7a849f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679400"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego plików
-Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] znany Folder, po dodaniu foldery do <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji. Znane identyfikatory GUID Folder nie jest uwzględniana wielkość liter i są zdefiniowane w pliku KnownFolders.h w [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
+Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] znany Folder, po dodaniu folderów <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji. Znane identyfikatory GUID Folder nie jest uwzględniana wielkość liter i są definiowane w pliku KnownFolders.h w [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
   
 > [!NOTE]
->  W niektórych przypadkach do znane dodany Folder <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> nie będą wyświetlane w **Ulubione łącza** obszaru. Na przykład jeśli na komputerze, na którym jest uruchomiona aplikacja nie ma w określonym folderze znane, znany Folder nie jest widoczne.  
+>  W niektórych przypadkach folderem znane dodane do <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> nie będą wyświetlane w **Ulubione łącza** obszaru. Na przykład jeśli określony Folder znane nie jest obecna na komputerze, na którym działa aplikacja, znany Folder nie jest wyświetlany.  
   
 ## <a name="list-of-guids"></a>Lista identyfikatorów GUID  
- W poniższej tabeli wymieniono [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] znanych folderów i skojarzone z nimi <xref:System.Guid>.  
+ W poniższej tabeli wymieniono [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] znanych folderów i ich skojarzone <xref:System.Guid>.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -91,7 +91,7 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
  Czcionki  
  FD228CB7-AE11-4AE3-864C-16F3910AB8FE  
   
- gry  
+ Gry  
  CAC52C1A-B53D-4EDC-92D7-6B2E8AC19434  
   
  GameTasks  
@@ -145,7 +145,7 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
  Profil  
  5E6C858F-0E22-4760-9AFE-EA3317B67173  
   
- Folder ProgramData  
+ ProgramData  
  62AB5D82-FDC1-4DC3-A9DD-070D1D495D97  
   
  ProgramFiles  
@@ -238,7 +238,7 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
  SearchHome  
  190337D1-B8CA-4121-A639-6D472D16972A  
   
- Wyślij do  
+ SendTo  
  8983036C-27C0-404B-8F08-102D10DCFD74  
   
  SidebarDefaultParts  
@@ -247,7 +247,7 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
  SidebarParts  
  A75D362E-50FC-4FB7-AC2C-A8BEAA314493  
   
- Menu  
+ StartMenu  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
  Uruchamianie  
@@ -286,6 +286,6 @@ Możesz użyć <xref:System.Guid> do określenia [!INCLUDE[wiprlhext](../../../.
  Windows  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.FileDialogCustomPlace>  
- [Instrukcje: dodawanie niestandardowego miejsca do okna dialogowego obsługi plików](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.FileDialogCustomPlace>
+- [Instrukcje: Dodawanie niestandardowego miejsca do okna dialogowego plików](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise exclusive OR operator [C#]
 ms.assetid: b09bc815-570f-4db6-a637-5b4ed99d014a
-ms.openlocfilehash: 152be2d81d1bf340b839d74f169d63d7260f7ca5
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 16419342fec9d6c9845e19e434787c5e4f5a5b12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632257"
 ---
 # <a name="-operator-c-reference"></a>^ — operator (C# odwołania)
 
@@ -35,7 +35,7 @@ Obliczenie `0xf8 ^ 0x3f` w poprzednim przykładzie powoduje wykonanie bitowej op
 
 Wynik alternatywy rozłącznej to `1100 0111`, czyli C7 w formacie szesnastkowym.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)

@@ -7,55 +7,55 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: e8fbfd54782e601595712035827ea346d1dbf500
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c82f1e6e4a01af87cc7dce49cfaa78f9be1631db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572698"
 ---
 # <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Nie można zapisać do pliku wyjściowego &#39; &lt;filename&gt;&#39;: &lt;błąd&gt;
 Wystąpił problem podczas tworzenia pliku.  
   
- Nie można otworzyć pliku wyjściowego do zapisu. Plik (lub folderu zawierającego plik) może być otwarty w trybie wyłączności przez inny proces lub może mieć jego ustawiony atrybut tylko do odczytu.  
+ Nie można otworzyć pliku wyjściowego do zapisu. Plik (lub folder zawierający plik) może być otwarty do wyłącznego użytku przez inny proces lub może być jej ustawiony atrybut tylko do odczytu.  
   
- Typowe sytuacje, gdy plik jest otwarty w trybie wyłączności są:  
+ Typowe sytuacje, gdy plik jest otwarty w trybie wyłączności są następujące:  
   
 -   Aplikacja jest już uruchomiona i korzystania z jego plików. Aby rozwiązać ten problem, upewnij się, że aplikacja nie jest uruchomiony.  
   
--   Plik został otwarty w innej aplikacji. Aby rozwiązać ten problem, upewnij się, że żadna inna aplikacja uzyskuje dostęp do plików. Nie jest zawsze oczywiste, która aplikacja uzyskuje dostęp do plików. w takim przypadku ponowne uruchomienie komputera może być Najprostszym sposobem, aby zakończyć tę aplikację.  
+-   Plik został otwarty w innej aplikacji. Aby rozwiązać ten problem, upewnij się, że żadna inna aplikacja uzyskuje dostęp do plików. Nie zawsze jest oczywiste która aplikacja uzyskuje dostęp do plików. w takim przypadku ponowne uruchomienie komputera może być Najprostszym sposobem, aby zakończyć tę aplikację.  
   
- Jeśli nawet jednego z plików wyjściowych projektu jest oznaczona jako tylko do odczytu, to zostanie wygenerowany wyjątek.  
+ Jeśli jeszcze jeden z plików wyjściowych projektu jest oznaczony jako tylko do odczytu, ten wyjątek zostanie zgłoszony.  
   
  **Identyfikator błędu:** BC31019  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Skompiluj program, aby zobaczyć, jeśli ten błąd wystąpi ponownie.  
+1.  Skompiluj program ponownie, aby zobaczyć, jeśli błąd będzie się powtarzać.  
   
-2.  Jeśli błąd będzie się powtarzał, należy zapisać pracę i ponownie uruchom program Visual Studio.  
+2.  Jeśli błąd będzie się powtarzał, Zapisz swoją pracę i uruchom ponownie program Visual Studio.  
   
-3.  Jeśli błąd będzie nadal występował, uruchom ponownie komputer.  
+3.  Jeśli błąd będzie się powtarzać, uruchom ponownie komputer.  
   
-4.  Jeśli błąd będzie się powtarzał, zainstaluj ponownie Visual Basic.  
+4.  Jeśli ten błąd wystąpi, zainstaluj ponownie Visual Basic.  
   
-5.  Jeśli błąd będzie nadal występować po ponownej instalacji, powiadamia pomocy technicznej firmy Microsoft.  
+5.  Jeśli ten błąd będzie występował po ponownej instalacji, powiadom pomoc techniczna firmy Microsoft.  
   
 ### <a name="to-check-file-attributes-in-file-explorer"></a>Aby sprawdzić atrybutów plików w Eksploratorze plików  
   
-1.  Otwórz folder, który chcesz.  
+1.  Otwórz folder, który Cię interesuje.  
   
 2.  Kliknij przycisk **widoków** ikonę i wybierz polecenie **szczegóły**.  
   
-3.  Kliknij prawym przyciskiem myszy nagłówek kolumny, a następnie wybierz pozycję **atrybuty** z listy rozwijanej.  
+3.  Kliknij prawym przyciskiem myszy nagłówek kolumny, a następnie wybierz **atrybuty** z listy rozwijanej.  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>Do zmiany atrybutów pliku lub folderu  
   
-1.  W **Eksploratora plików**, kliknij prawym przyciskiem myszy plik lub folder i wybierz **właściwości**.  
+1.  W **Eksploratora plików**, kliknij prawym przyciskiem myszy plik lub folder i wybierz polecenie **właściwości**.  
   
-2.  W **atrybuty** sekcji **ogólne** kartę, wyczyść **tylko do odczytu** pole.  
+2.  W **atrybuty** części **ogólne** kartę, usuń zaznaczenie **tylko do odczytu** pole.  
   
-3.  Press **OK**.  
+3.  Naciśnij klawisz **OK**.  
   
-## <a name="see-also"></a>Zobacz też  
- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Zobacz także
+- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

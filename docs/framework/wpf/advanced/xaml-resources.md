@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5898d3236f58cd40c5e1ccd446b756b94e3fb113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718666"
 ---
 # <a name="xaml-resources"></a>Zasoby XAML
 Zasób jest obiektem, który może być ponownie używane w różnych miejscach w aplikacji. Przykładami zasobów pędzle i stylów. W tym omówieniu opisano, jak użyć zasobów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Można również tworzyć i uzyskiwać dostęp do zasobów przy użyciu kodu lub zamiennie między kodem i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Aby uzyskać więcej informacji, zobacz [zasoby i kod](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -153,12 +153,12 @@ Zasób jest obiektem, który może być ponownie używane w różnych miejscach 
   
  <xref:System.Windows.DataTemplate> ma również niejawny klucz. Niejawny klucz do <xref:System.Windows.DataTemplate> jest <xref:System.Windows.DataTemplate.DataType%2A> wartości właściwości. <xref:System.Windows.DataTemplate.DataType%2A> można również określić nazwę typu, a nie jawnie za pomocą [{x: Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Aby uzyskać więcej informacji, zobacz [Przegląd Szablonowanie danych](../../../../docs/framework/wpf/data/data-templating-overview.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.ResourceDictionary>  
- [Zasoby aplikacji](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Zasoby i kod](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [Definiowanie zasobu i odwoływanie się do niego](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [x:Type, rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [StaticResource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [DynamicResource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.ResourceDictionary>
+- [Zasoby aplikacji](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [Zasoby i kod](../../../../docs/framework/wpf/advanced/resources-and-code.md)
+- [Definiowanie zasobu i odwoływanie się do niego](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)
+- [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)
+- [x:Type, rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [StaticResource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+- [DynamicResource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)

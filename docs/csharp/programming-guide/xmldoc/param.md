@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: fca53a3cd5490c28c8fabcf69446fe4a55d60b4e
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: fb31e1d4c39888765fe3e55674d5b6d18b9d5b65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641021"
 ---
 # <a name="ltparamgt-c-programming-guide"></a>&lt;param&gt; (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  
@@ -40,7 +40,7 @@ ms.locfileid: "53236963"
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#1](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/param_1.cs)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

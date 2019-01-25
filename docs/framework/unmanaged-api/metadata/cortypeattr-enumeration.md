@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f71e59eb13321517de61315d3ba06b96c5458f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af90055c0a51e61d4032e45d6fa4a4914ddd045f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449276"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667940"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr — Wyliczenie
-Zawiera wartości, które wskazuje typ metadanych.  
+Zawiera wartości, które wskazują metadanych typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -79,46 +79,46 @@ typedef enum CorTypeAttr {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`tdVisibilityMask`|Używać dla informacji o typie widoczności.|  
-|`tdNotPublic`|Określa, że typ nie jest w zakresie publicznego.|  
-|`tdPublic`|Określa, czy ten typ jest publiczny zakresu.|  
-|`tdNestedPublic`|Określa, że typ jest zagnieżdżony z widoczności publicznej.|  
-|`tdNestedPrivate`|Określa, że typ jest zagnieżdżony z widoczności prywatnej.|  
-|`tdNestedFamily`|Określa, że typ jest zagnieżdżony z rodziny widoczności.|  
-|`tdNestedAssembly`|Określa, że typ jest zagnieżdżony z widoczność zestawu.|  
-|`tdNestedFamANDAssem`|Określa, że typ jest zagnieżdżony z widocznością rodziny i zestawu.|  
-|`tdNestedFamORAssem`|Określa, że typ jest zagnieżdżony z widocznością rodziny lub zestawu.|  
+|`tdVisibilityMask`|Używane, aby uzyskać informacje o widoczności typu.|  
+|`tdNotPublic`|Określa, że typ nie jest w zakresie publicznych.|  
+|`tdPublic`|Określa, że typ znajduje się w zakresie publicznych.|  
+|`tdNestedPublic`|Określa, że typ jest zagnieżdżona publicznych wgląd.|  
+|`tdNestedPrivate`|Określa, że typ jest zagnieżdżona prywatnej wgląd.|  
+|`tdNestedFamily`|Określa, że typ jest zagnieżdżona o widoczności rodziny.|  
+|`tdNestedAssembly`|Określa, że typ jest zagnieżdżona z widocznością zestawu.|  
+|`tdNestedFamANDAssem`|Określa, że typ jest zagnieżdżona o widoczności Rodzina i zestaw.|  
+|`tdNestedFamORAssem`|Określa, że typ jest zagnieżdżona o widoczności Rodzina lub zestaw.|  
 |`tdLayoutMask`|Pobiera informacje o układzie dla typu.|  
-|`tdAutoLayout`|Określa, że pola tego typu są automatycznie układu.|  
-|`tdSequentialLayout`|Określa, że pola tego typu układ sekwencyjnie.|  
-|`tdExplicitLayout`|Określa, że jest dostarczana układ tego pola.|  
-|`tdClassSemanticsMask`|Pobiera informacje semantyczne o typie.|  
+|`tdAutoLayout`|Określa, że pola tego typu są ułożone w automatycznie.|  
+|`tdSequentialLayout`|Określa, że pola tego typu są ułożone w sekwencyjnie.|  
+|`tdExplicitLayout`|Określa, że układ tego pola jest jawnie podana.|  
+|`tdClassSemanticsMask`|Pobiera semantycznego informacje o typie.|  
 |`tdClass`|Określa, że typ jest klasą.|  
-|`tdInterface`|Określa, czy ten typ jest interfejsem.|  
+|`tdInterface`|Określa, że typ jest interfejsem.|  
 |`tdAbstract`|Określa, że typ jest abstrakcyjny.|  
 |`tdSealed`|Określa, że typ nie może zostać rozszerzony.|  
-|`tdSpecialName`|Określa, że nazwa klasy jest specjalne. Jego nazwa opisuje sposób.|  
-|`tdImport`|Określa, że typ jest zaimportowany.|  
-|`tdSerializable`|Określa, czy ten typ jest możliwy do serializacji.|  
+|`tdSpecialName`|Określa, że nazwa klasy jest specjalne. Nazwy w tym artykule opisano sposób.|  
+|`tdImport`|Określa, że typ jest importowany.|  
+|`tdSerializable`|Określa, czy jest możliwy do serializacji.|  
 |`tdWindowsRuntime`|Określa, że ten typ jest [!INCLUDE[wrt](../../../../includes/wrt-md.md)] typu.|  
-|`tdStringFormatMask`|Pobiera informacje o sposób kodowania i sformatowany ciągów.|  
-|`tdAnsiClass`|Określa, że ten typ interpretacji LPTSTR jako ANSI.|  
-|`tdUnicodeClass`|Określa, że ten typ interpretacji LPTSTR jako Unicode.|  
-|`tdAutoClass`|Określa, że ten typ interpretacji LPTSTR automatycznie.|  
-|`tdCustomFormatClass`|Określa, że typ ma niestandardowy kodowania, zgodnie z określonym `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Użyj tę maskę, aby pobrać niestandardowych informacji kodowania dla międzyoperacyjności z modelem natywnego. Znaczenie tej wartości te dwie usługi BITS jest nieokreślony.|  
-|`tdBeforeFieldInit`|Określa, że typ musi zostać zainicjowany przed pierwsza próba uzyskania dostępu do statycznego pola.|  
-|`tdForwarder`|Określa, że typ jest eksportowany, a usługi przesyłania dalej typu.|  
+|`tdStringFormatMask`|Pobiera informacje dotyczące sposobu kodowany i sformatowane ciągi.|  
+|`tdAnsiClass`|Określa, że ten typ interpretuje LPTSTR jako ANSI.|  
+|`tdUnicodeClass`|Określa, że ten typ interpretuje LPTSTR jako Unicode.|  
+|`tdAutoClass`|Określa, że ten typ interpretuje LPTSTR automatycznie.|  
+|`tdCustomFormatClass`|Określa, że typ ma niestandardowych kodowanie określone przez `CustomFormatMask`.|  
+|`tdCustomFormatMask`|Użyj tę maskę, aby pobrać niestandardowych informacji kodowania dla współdziałania z natywnego. Znaczenie wartości te dwa bity jest nieokreślona.|  
+|`tdBeforeFieldInit`|Określa, że typ musi zostać zainicjowany przed pierwsza próba dostępu do pola statyczne.|  
+|`tdForwarder`|Określa, że typ jest eksportowany, a typ usługi przesyłania dalej.|  
 |`tdReservedMask`|Ta flaga i flagi poniżej są używane wewnętrznie przez środowisko uruchomieniowe języka wspólnego.|  
-|`tdRTSpecialName`|Określa, że środowisko uruchomieniowe języka wspólnego ma sprawdzać kodowanie nazwy.|  
+|`tdRTSpecialName`|Określa, że środowisko uruchomieniowe języka wspólnego ma sprawdzać, nazwa, kodowanie.|  
 |`tdHasSecurity`|Określa, że typ ma zabezpieczeń skojarzonych z nim.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: b2ef4f083cd9b6f38dc91bf8bf0eac9cd21c2618
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1da5de4971928ca23a23c4dcfc5f338c4d7a3875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719576"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte — typ danych (Visual Basic)
 
@@ -64,7 +64,7 @@ Jeśli literał liczby całkowitej jest poza zakresem `SByte` (to znaczy, jeśli
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
   
--   **Zgodność ze specyfikacją CLS.** `SByte` Typem danych nie jest częścią [specyfikacja Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), dzięki czemu kod zgodny ze specyfikacją CLS nie mogą korzystać z składnik, który korzysta z niego.
+-   **CLS Compliance.** `SByte` Typem danych nie jest częścią [specyfikacja Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), dzięki czemu kod zgodny ze specyfikacją CLS nie mogą korzystać z składnik, który korzysta z niego.
 
 -   **Rozszerzanie.** `SByte` — Typ danych rozszerza się na `Short`, `Integer`, `Long`, `Decimal`, `Single`, i `Double`. Oznacza to, że możesz przekonwertować `SByte` do dowolnego z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.
   
@@ -74,11 +74,11 @@ Jeśli literał liczby całkowitej jest poza zakresem `SByte` (to znaczy, jeśli
   
 ## <a name="see-also"></a>Zobacz także
 
- <xref:System.SByte?displayProperty=nameWithType>  
- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Short, typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.SByte?displayProperty=nameWithType>
+- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Short, typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

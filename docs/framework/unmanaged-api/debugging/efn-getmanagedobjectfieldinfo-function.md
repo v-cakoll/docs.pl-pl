@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6195d9666afa8fba3f77322366e4709634e53bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfa4db00662ed3abffbfd01e6e36005cd272a271
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664593"
 ---
 # <a name="efngetmanagedobjectfieldinfo-function"></a>_EFN_GetManagedObjectFieldInfo — Funkcja
-Pobiera przesunięcie od początku obiektu, do pola i wartość do pola, używając udostępnionego obiektu wskaźnik i nazwy pola.  
+Pobiera przesunięcie od początku obiektu, do pola i wartość do pola, używając wskaźnika udostępnionego obiektu i nazwy pola.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,10 +43,10 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
  [in] Wskaźnik do klienta debugowania.  
   
  `objAddr`  
- [in] Wskaźnik do zarządzanego obiektu.  
+ [in] Wskaźnik zarządzanego obiektu.  
   
  szFieldName  
- [in] Wskaźnik do obiektu zarządzanego, nazwy pola.  
+ [in] Wskaźnik do obiektu zarządzanego, do nazwy pola.  
   
  `pValue`  
  [out] Wartość pola. Ten parametr może mieć wartości null.  
@@ -55,16 +55,16 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
  [out] Przesunięcie od `objAddr` do pola. Ten parametr może mieć wartości null.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli przesunięcie wynosi 0, przesunięcie nie są zapisywane.  
+ Przesunięcie wynosi 0, przesunięcie nie zostanie zapisane.  
   
- Jeśli istnieje żadnego kodu zarządzanego w wątku aktualnie w kontekście, funkcja zwraca HRESULT SOS_E_NOMANAGEDCODE z wartości instrumentu 0xa0 i błąd o kodzie 0x1000.  
+ Jeśli żaden kod zarządzany w wątku obecnie występuje w kontekście, funkcja zwraca HRESULT SOS_E_NOMANAGEDCODE z wartością funkcji 0xa0 i kod błędu 0x1000.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** SOS_Stacktrace.h  
   
- **.NET framework w wersji:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersja programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

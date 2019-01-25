@@ -2,12 +2,12 @@
 title: Plik jest obecnie otwarty do zapisu
 ms.date: 07/20/2015
 ms.assetid: 80b3c5e8-3a5c-4d60-b1ac-b7460f0b30b0
-ms.openlocfilehash: 83867d30243d34e3043f786a5377f767b7a30963
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b3fca28b6121d71ad7385b007323ce22f8fbc7d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970724"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725340"
 ---
 # <a name="the-file-is-currently-open-for-writing"></a>Plik jest obecnie otwarty do zapisu
 Podjęta próba uzyskania dostępu do pliku, który jest aktualnie otwarty do zapisu.  
@@ -16,8 +16,8 @@ Podjęta próba uzyskania dostępu do pliku, który jest aktualnie otwarty do za
   
 -   Zamknij plik i spróbuj ponownie wykonać operację.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Security.Permissions.FileIOPermission>  
- [Porady: uzyskiwanie informacji o pliku w Visual Basic](https://msdn.microsoft.com/library/ca0720ec-f40e-4c11-9748-0ce1685c78f0)  
- [Instrukcje: zapisywanie tekstu w plikach](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
- [Instrukcje: zapisywanie w plikach binarnych](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Security.Permissions.FileIOPermission>
+- [Instrukcje: Pobierz informacje o pliku w Visual Basic](https://msdn.microsoft.com/library/ca0720ec-f40e-4c11-9748-0ce1685c78f0)
+- [Instrukcje: Zapisywanie tekstu do plików](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)
+- [Instrukcje: Zapis w plikach binarnych](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 389cf2e77728002ce1078f63df3d741d1847c105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744976"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind — Wyliczenie
-Wskazuje typ adres pamięci.  
+Wskazuje typ adresu pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,19 +48,19 @@ typedef enum CorSymAddrKind
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Wskazuje Microsoft język pośredni (MSIL) lokalnej zmiennej lub parametru indeks.|  
-|`ADDR_NATIVE_RVA`|Wskazuje wirtualny adres względny w module.|  
+|`ADDR_IL_OFFSET`|Wskazuje Microsoft intermediate language (MSIL) lokalnej zmiennej lub parametru indeksu.|  
+|`ADDR_NATIVE_RVA`|Oznacza względny adres wirtualny do modułu.|  
 |`ADDR_NATIVE_REGISTER`|Wskazuje rejestru procesora CPU.|  
-|`ADDR_NATIVE_REGREL`|Wskazuje, że pierwszy adres jest rejestr i drugi adres jest przesunięcia.|  
+|`ADDR_NATIVE_REGREL`|Wskazuje, czy pierwszy adres jest rejestru, a drugi adres jest przesunięcie.|  
 |`ADDR_NATIVE_OFFSET`|Określa przesunięcie od adres podstawowy.|  
-|`ADDR_NATIVE_REGREG`|Wskazuje, że pierwszy adres jest niski część rejestru i drugi adres jest wysoki.|  
-|`ADDR_NATIVE_REGSTK`|Wskazuje, że pierwszy adres jest niski część rejestr, drugi ma wysoką części i trzeci jest przesunięcia.|  
-|`ADDR_NATIVE_STKREG`|Wskazuje, że rejestr jest pierwszym adresem, przesunięcie jest drugi i trzeci jest wysoka części rejestru.|  
-|`ADDR_BITFIELD`|Wskazuje, że pierwszy adres jest początek pola i drugi adres jest długość pola.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Wskazuje, że sekcja jest pierwszym adresem i drugi adres jest przesunięcia.|  
+|`ADDR_NATIVE_REGREG`|Wskazuje, że pierwszy adres jest niski część rejestr i drugi adres jest wysokiej część.|  
+|`ADDR_NATIVE_REGSTK`|Wskazuje, że pierwszy adres jest niski część rejestr, druga jest wysokiej część i trzeci to przesunięcie.|  
+|`ADDR_NATIVE_STKREG`|Wskazuje, że pierwszy adres jest rejestr, drugą jest wartość przesunięcia i trzeci jest wysoka części rejestru.|  
+|`ADDR_BITFIELD`|Wskazuje, czy pierwszy adres jest początku pola, a drugi adres jest długość pola.|  
+|`ADDR_NATIVE_ISECTOFFSET`|Wskazuje, czy pierwszy adres jest sekcji, a drugi adres jest przesunięta.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

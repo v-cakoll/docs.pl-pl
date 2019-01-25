@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf4f3f582e417c5e7b814622986427f996796ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: def1c04064cc9fc98c108dcdad5c017c0c8e465b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432533"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655533"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel — Wyliczenie
-Zawiera wartości, które wskazują wpływ awarii podczas alokacji pamięci wysłano żądanie, ale nie mogą zostać spełnione.  
+Zawiera wartości, które wskazują wpływ awarii, gdy zażądano alokacji pamięci, ale nie mogą zostać spełnione.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +40,22 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`eAppDomainCritical`|Wskazuje, że przydział ma decydujące znaczenie dla wykonywania kodu zarządzanego w domenie, do której wysłano żądanie alokacji. Jeśli nie można przydzielić pamięci, CLR nie może zagwarantować, że domena jest nadal można używać. Host decyduje o tym, jakie działania w sytuacji, gdy nie mogą być spełnione alokacji. Może spowodować, żeby CLR aby przerwać `AppDomain` automatycznie, lub zezwalanie na kontynuowanie działania przez wywołanie metody na [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).|  
-|`eProcessCritical`|Wskazuje, że przydział jest krytyczne w wykonywaniu kodu zarządzanego w procesie. Ta wartość jest używana podczas uruchamiania i podczas uruchamiania finalizatory. Jeśli nie można przydzielić pamięci, CLR nie może działać w procesie. Jeśli alokacja nie powiedzie się, CLR skutecznie jest wyłączone. Wszystkie kolejne wywołania do środowiska CLR się niepowodzeniem z HOST_E_CLRNOTAVAILABLE.|  
-|`eTaskCritical`|Wskazuje, że przydział jest krytyczne do uruchomienia zadania, który zgłosił żądanie alokacji. Jeśli nie można przydzielić pamięci, CLR nie może zagwarantować, można wykonać zadania. W przypadku awarii, zgłasza CLR <xref:System.Threading.ThreadAbortException> w wątku systemu fizycznego operacji.|  
+|`eAppDomainCritical`|Wskazuje, czy przydział jest istotne w przypadku wykonywania kodu zarządzanego w domenie, który zgłosił żądanie alokacji. Jeśli nie można przydzielić pamięci, środowisko CLR nie gwarantuje, że domena jest nadal można używać. Host decyduje, jaką akcję do wykonania w przypadku alokacja nie mogą zostać spełnione. Można nakazać, środowisko CLR, aby przerwać `AppDomain` automatycznie, lub zezwolenia na jego pozostanie uruchomione przez wywołanie metody w [iclrpolicymanager —](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).|  
+|`eProcessCritical`|Wskazuje, że przydział ma kluczowe znaczenie dla wykonywania kodu zarządzanego w procesie. Ta wartość jest używana podczas uruchamiania i podczas uruchamiania finalizatorów. Jeśli nie można przydzielić pamięci, środowisko CLR nie może działać w procesie. Jeśli alokacja nie powiedzie się, środowisko CLR skutecznie jest wyłączone. Wszystkie kolejne wywołania do środowiska CLR zakończona niepowodzeniem z HOST_E_CLRNOTAVAILABLE.|  
+|`eTaskCritical`|Wskazuje przydział mają kluczowe znaczenie dla uruchomienia zadania, który zgłosił żądanie alokacji. Jeśli nie można przydzielić pamięci, środowisko CLR nie gwarantuje zadania mogą być wykonywane. W przypadku awarii, środowisko CLR wywołuje <xref:System.Threading.ThreadAbortException> w wątku systemu fizycznego operacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Metody alokacji pamięci, które są zdefiniowane w [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md) i [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) interfejsy zająć parametr tego typu. W zależności od ważności awarii hosta można zdecydować, czy niepowodzenie żądanie alokacji natychmiast lub poczekać, aż można spełnić.  
+ Metody alokacji pamięci, które są zdefiniowane w [ihostmemorymanager —](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md) i [ihostmalloc —](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) interfejsów przyjmować parametr tego typu. W zależności od ważności awarii hosta można zdecydować, czy natychmiast zwraca Niepowodzenie żądania alokacji lub poczekaj, aż mogą zostać zrealizowane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRMemoryNotificationCallback, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRMemoryNotificationCallback, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)
+- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

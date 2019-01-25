@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 847ec4d861136b46383ce7d3801764f3d962049e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff026ddd9f9dc7c1556c55b285958dad7139e8eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699314"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>invalidFunctionPointerInDelegate MDA
-`invalidFunctionPointerInDelegate` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy nieprawidłowy wskaźnik funkcji jest przekazany w celu utworzenia delegata za pośrednictwem wskaźnika funkcji macierzystej.  
+`invalidFunctionPointerInDelegate` Zarządzanego Asystenta debugowania (MDA) jest uaktywniany podczas nieprawidłowy wskaźnik funkcji jest przekazywany do utworzenia delegata przez wskaźnik natywnej funkcji.  
   
 ## <a name="symptoms"></a>Symptomy  
- Naruszenia zasad dostępu lub uszkodzenie pamięci nieoczekiwany, używając delegata przez wskaźnik funkcji.  
+ Naruszenia zasad dostępu ani uszkodzeń pamięci nieoczekiwany, używając delegata za pośrednictwem wskaźnika funkcji.  
   
 ## <a name="cause"></a>Przyczyna  
  Określono nieprawidłowy wskaźnik funkcji.  
@@ -48,7 +48,7 @@ ms.locfileid: "33390877"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)

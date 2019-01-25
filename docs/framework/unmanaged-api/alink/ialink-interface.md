@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1eae19d592dcf5243139e11bb6662953436e45a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b93dd3b1d08a939e03ccfa52f7fb2e97c97d7e96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600092"
 ---
 # <a name="ialink-interface"></a>IALink — Interfejs
-Pomaga w tworzeniu zestawów platformy .NET Framework. Między innymi interfejs zawiera metody wspomagające zapisywania manifesty zestawów wielomodułowych, podpisywanie zestawów o silnych nazwach i tworzenie netmodules.  
+Pomaga przy tworzeniu zestawów .NET Framework. Między innymi interfejs zawiera metody, które pomagają w pisaniu manifesty dla modułu wielu zestawów i tworzenia modułów sieciowych oraz podpisywania zestawów o silnych nazwach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [AddFile, metoda1](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
@@ -63,7 +63,7 @@ Pomaga w tworzeniu zestawów platformy .NET Framework. Między innymi interfejs 
   
  [ImportTypes, metoda](../../../../docs/framework/unmanaged-api/alink/importtypes-method.md)  
   
- "Metoda Init"  
+ "Metody Init"  
   
  [LinkResource, metoda](../../../../docs/framework/unmanaged-api/alink/linkresource-method.md)  
   
@@ -75,7 +75,7 @@ Pomaga w tworzeniu zestawów platformy .NET Framework. Między innymi interfejs 
   
  [SetNonAssemblyFlags, metoda](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Al.exe (konsolidator zestawów)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Zobacz także
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Al.exe (konsolidator zestawów)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

@@ -3,12 +3,12 @@ title: Użyj Zamknij i Przerwij, aby zwolnić zasoby klienta WCF
 description: Dispose może zakończyć się niepowodzeniem i zgłaszają wyjątki, gdy sieć nie powiedzie się. Który może spowodować niepożądane zachowanie. Zamiast tego użyj Zamknij i Przerwij, aby zwolnić zasoby klienta, gdy sieć nie powiodło się.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: d37ad9d2277fea2656311a5a1f57d51343d10d89
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4996ccba955d7946bb76b8124b8b28d803b6f3e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736432"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Zamknij i przerwania zwolnienia zasobów bezpiecznie w przypadku, gdy połączenia sieciowe zostały odrzucone
 Ten przykład demonstruje użycie `Close` i `Abort` metody, aby wyczyścić zasoby, korzystając z klient z typowaniem. `using` Instrukcja powoduje wyjątki, gdy połączenie sieciowe działa niezawodnie. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora. W tym przykładzie klient to aplikacja konsoli (.exe), a usługa jest hostowana przez Internetowe usługi informacyjne (IIS).  
@@ -119,4 +119,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\UsingUsing`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

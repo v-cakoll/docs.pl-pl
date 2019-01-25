@@ -1,5 +1,5 @@
 ---
-title: 'Porady: zapisywanie stref czasowych w zasobie osadzonym'
+title: 'Instrukcje: Zapisywanie stref czasowych w zasobie osadzonym'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 921874e774d18751c29db495dac1bc53d10cc8ad
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592877"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Porady: zapisywanie stref czasowych w zasobie osadzonym
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Instrukcje: Zapisywanie stref czasowych w zasobie osadzonym
 
 Często uwzględniających strefy czasowe aplikacji wymaga obecności daną strefę czasową. Jednakże ponieważ dostępność poszczególnych <xref:System.TimeZoneInfo> obiektów zależy od informacji przechowywanych w rejestrze systemu lokalnego, nawet zwyczajowo dostępnych stref czasowych mogą być nieobecne. Ponadto informacje o niestandardowych stref czasowych są tworzone za pomocą <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metoda nie jest przechowywany wraz z innymi informacjami strefy czasowej w rejestrze. Aby upewnić się, że tych stref czasowych są dostępne, gdy są potrzebne, można je zapisać, szeregując je i je później przywrócić przez ich deserializacji.
 
@@ -37,9 +37,9 @@ Oprócz pliku zasobów, który jest kompilowany razem z aplikacją kilka innych 
 
 1. Pobieranie istniejącej strefy czasowej, lub Utwórz nową strefę czasu.
 
-   Aby pobrać istniejącej strefy czasowej, zobacz [porady: dostęp do wstępnie zdefiniowanych obiektów stref UTC i czasem lokalnym](../../../docs/standard/datetime/access-utc-and-local.md) i [jak: Tworzenie wystąpień obiektów TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+   Aby pobrać istniejącej strefy czasowej, zobacz [jak: Uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów stref UTC i czasem lokalnym](../../../docs/standard/datetime/access-utc-and-local.md) i [jak: Tworzenie wystąpień obiektów TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
 
-   Aby utworzyć nowej strefy czasowej, wywołaj jednego z przeciążeń <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metody. Aby uzyskać więcej informacji, zobacz [porady: tworzenie stref czasowych bez reguł korygowania](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) i [porady: tworzenie stref czasowych przy użyciu reguł korygowania](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+   Aby utworzyć nowej strefy czasowej, wywołaj jednego z przeciążeń <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metody. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie stref czasowych bez reguł korygowania](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) i [jak: Tworzenie stref czasowych przy użyciu reguł korygowania](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
 2. Wywołaj <xref:System.TimeZoneInfo.ToSerializedString%2A> metodę, aby utworzyć ciąg, który zawiera dane strefy czasowej.
 
@@ -85,6 +85,6 @@ Ten przykład wymaga:
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
-* [Strefy czasowe — omówienie](../../../docs/standard/datetime/time-zone-overview.md)
-* [Instrukcje: Przywracanie stref czasowych z zasobu osadzonego](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
+- [Strefy czasowe — omówienie](../../../docs/standard/datetime/time-zone-overview.md)
+- [Instrukcje: Przywracanie stref czasowych z zasobu osadzonego](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

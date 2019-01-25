@@ -2,12 +2,12 @@
 title: Typizowanych elementów DataSet
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
-ms.openlocfilehash: 68721bcdbce6bf6d3279d6018ce6bc48d65c55a3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3a61005f0064ec9ba0bbe70b759394d3691018de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680364"
 ---
 # <a name="typed-datasets"></a>Typizowanych elementów DataSet
 Wraz z dostępu do wartości za pomocą ze słabą kontrolą typów zmiennych <xref:System.Data.DataSet> zapewnia dostęp do danych za pośrednictwem metaphor silnie typizowanych. Tabele i kolumny, które są częścią **DataSet** można uzyskać dostęp za pomocą nazw przyjaznych dla użytkownika i silnie typizowane zmiennych.  
@@ -23,6 +23,6 @@ Wraz z dostępu do wartości za pomocą ze słabą kontrolą typów zmiennych <x
  [Dodawanie adnotacji do typizowanych elementów DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
  Opisuje, jak dodawać adnotacje do schematu języka (XSD) definicji schematu XML, używany do generowania silnie typizowanej **zestawu danych**, aby zapewnić **zestawu danych** przyjaznych nazw elementów bez zmiany podstawowego schematu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

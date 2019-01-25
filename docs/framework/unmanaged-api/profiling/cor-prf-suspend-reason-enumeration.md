@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2f4382c7fa85008de9e67ad21c467402bae4ac90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b40533553ccd7a3339a8a3ee0c8b47879efd38ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742464"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON — Wyliczenie
-Wskazuje przyczynę zawieszenia środowiska uruchomieniowego.  
+Wskazuje powód, że środowisko uruchomieniowe została wstrzymana.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,20 +44,20 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|Środowisko wykonawcze jest wstrzymana z nieokreślonego powodu.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Środowisko uruchomieniowe zostanie zawieszony w celu obsługi żądania kolekcji pamięci.<br /><br /> Wywołania zwrotne dotyczące kolekcji pamięci, występują między [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) i [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) wywołań zwrotnych.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Środowisko wykonawcze jest wstrzymana, aby `AppDomain` może zostać wyłączony.<br /><br /> Gdy środowisko wykonawcze jest wstrzymane, środowiska uruchomieniowego określi wątków, które znajdują się w `AppDomain` czyli Trwa zamykanie i ustaw je, aby przerwać, gdy są one. Istnieją nie `AppDomain`-określonych wywołań zwrotnych podczas tego zawieszenia.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Środowisko uruchomieniowe został wstrzymany, dzięki czemu kod pitching może wystąpić.<br /><br /> Kod pitching ensues, tylko gdy przy użyciu kompilatora just in time (JIT) jest aktywny z kodu pitching włączone. Kod pitching wywołania zwrotne występują między `ICorProfilerCallback::RuntimeSuspendFinished` i `ICorProfilerCallback::RuntimeResumeStarted` wywołań zwrotnych. **Uwaga:** CLR JIT nie osoba funkcji w programie .NET Framework w wersji 2.0, dlatego ta wartość nie jest używana w 2.0.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Środowisko uruchomieniowe zostało zawieszone, dzięki czemu można zamknąć. Musi ona zawiesić wszystkie wątki do ukończenia tej operacji.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Zawieszone środowiska uruchomieniowego w trakcie debugowania.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Środowisko uruchomieniowe został wstrzymany, aby przygotować się do wyrzucania elementów bezużytecznych.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|Środowisko wykonawcze jest wstrzymana na potrzeby ponownej kompilacji JIT.|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|Środowisko uruchomieniowe jest zawieszona z nieokreślonego powodu.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Środowisko uruchomieniowe jest zawieszona do obsłużenia żądania kolekcji wyrzucania elementów.<br /><br /> Wywołania zwrotne dotyczące kolekcji wyrzucania elementów wystąpić między [icorprofilercallback::runtimesuspendfinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) i [icorprofilercallback::runtimeresumestarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) wywołań zwrotnych.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Środowisko uruchomieniowe jest wstrzymana, aby `AppDomain` może zostać wyłączony.<br /><br /> Gdy środowisko uruchomieniowe jest wstrzymane, środowisko uruchomieniowe określi, które wątki są `AppDomain` czyli jest zamknięta i je przerwać po ich wznowić. Istnieją nie `AppDomain`-określonych wywołania zwrotne podczas tego zawieszenia.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Środowisko uruchomieniowe jest wstrzymana, tak, aby kod pitching mogą wystąpić.<br /><br /> Kod pitching ensues, tylko gdy kompilator just-in-time (JIT) jest aktywny za pomocą kodu pitching włączone. Kod pitching wywołania zwrotne wystąpić między `ICorProfilerCallback::RuntimeSuspendFinished` i `ICorProfilerCallback::RuntimeResumeStarted` wywołania zwrotne. **Uwaga:**  CLR JIT nie zawodowcom funkcje w wersji 2.0, .NET Framework, dlatego ta wartość nie jest używany w wersji 2.0.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Środowisko uruchomieniowe jest wstrzymana, dzięki czemu można zamknąć. Należy je zawiesić wszystkich wątków do wykonania danej operacji.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Środowisko uruchomieniowe jest zawieszony w procesie debugowania.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Środowisko uruchomieniowe jest zawieszony, aby przygotować się do wyrzucania elementów bezużytecznych.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|Środowisko uruchomieniowe jest zawieszona na potrzeby ponownej kompilacji JIT.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wszystkie wątki środowiska uruchomieniowego znajdujących się za pomocą kodu niezarządzanego mogą nadal działać do chwili próbują ponownie wprowadzić środowiska uruchomieniowego w takim przypadku one będą również zawieszone, dopóki nie zostanie wznowione środowiska uruchomieniowego. Dotyczy to również nowy wątków, które należy wprowadzić środowiska uruchomieniowego. Wszystkie wątki wewnątrz środowiska uruchomieniowego są zawieszone natychmiast, gdy są one w kodzie przerywania albo zadawane wstrzymania po osiągnięciu przerywania kodu.  
+ Wszystkie wątki środowiska uruchomieniowego, które są w niezarządzanym kodzie są dozwolone, aby kontynuować, dopóki użytkownik podejmie próbę ponownego wprowadzania środowiska uruchomieniowego, w tym momencie one będą również zawieszone, dopóki nie zostanie wznowione środowiska uruchomieniowego. Dotyczy to również nowe wątki, które wprowadzać środowiska uruchomieniowego. Wszystkie wątki w ramach środowiska uruchomieniowego są zawieszone natychmiast, jeśli są one w kodzie są albo monit wstrzymać, gdy osiągną oni limit przerywania kodu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -65,5 +65,5 @@ typedef enum {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

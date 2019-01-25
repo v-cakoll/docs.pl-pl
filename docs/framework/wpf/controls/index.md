@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: fcef506f6be21b0c11a1c160ef6891a7ee53a5ec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83f044f403fe6d4d9c77c5b4d2045d58b50b97a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700666"
 ---
 # <a name="controls"></a>Formanty
 <a name="introduction"></a>
@@ -98,13 +98,13 @@ ms.locfileid: "50189670"
   
  Aby uzyskać więcej informacji na temat tych klas bazowych, zobacz [Model zawartości WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Kontrolki według kategorii](../../../../docs/framework/wpf/controls/controls-by-category.md)  
- [Biblioteka kontrolek](../../../../docs/framework/wpf/controls/control-library.md)  
- [Szablonowanie danych — omówienie](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Dane wejściowe](../../../../docs/framework/wpf/advanced/input-wpf.md)  
- [Włączanie polecenia](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [Przewodnik: tworzenie niestandardowego przycisku animowanego](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)  
- [Niestandardowe dostosowywanie kontrolki](../../../../docs/framework/wpf/controls/control-customization.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Kontrolki według kategorii](../../../../docs/framework/wpf/controls/controls-by-category.md)
+- [Biblioteka kontrolek](../../../../docs/framework/wpf/controls/control-library.md)
+- [Szablonowanie danych — omówienie](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Dane wejściowe](../../../../docs/framework/wpf/advanced/input-wpf.md)
+- [Włączanie polecenia](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)
+- [Przewodnik: Tworzenie niestandardowego przycisku animowanego](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)
+- [Niestandardowe dostosowywanie kontrolki](../../../../docs/framework/wpf/controls/control-customization.md)

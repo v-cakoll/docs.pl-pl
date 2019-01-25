@@ -2,12 +2,12 @@
 title: Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: b43c7f3d8018c119dbabf8f55ec115a00e1ac077
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594814"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów
 W tym temacie opisano format danych śledzenia, jak wyświetlać i metod, które umożliwiają rozwiązywanie problemów z aplikacji przeglądarki danych śledzenia usługi.  
@@ -104,7 +104,7 @@ W tym temacie opisano format danych śledzenia, jak wyświetlać i metod, które
 </E2ETraceEvent>  
 ```  
   
-## <a name="servicemodel-e2e-tracing"></a>Śledzenie elementu ServiceModel E2E  
+## <a name="servicemodel-e2e-tracing"></a>ServiceModel E2E Tracing  
  Gdy `System.ServiceModel` źródła śledzenia została ustawiona za pomocą `switchValue` inny niż wyłączona, i `ActivityTracing`, tworzy WCF, działań i przesyłania do przetwarzania WCF.  
   
  Działanie to jednostka logiczna przetwarzania, czy grupy wszystkie ślady związane z tej jednostki. Na przykład można zdefiniować jedno działanie dla każdego żądania. Transfery Utwórz przyczynowego między działaniami w obrębie punktów końcowych. Propagowanie identyfikator działania umożliwia są ze sobą powiązane działania w obrębie punktów końcowych. Można to zrobić, ustawiając `propagateActivity` = `true` w konfiguracji w każdym punkcie końcowym. Działania, transfery i propagację umożliwiają wykonywanie korelacji błędu. W ten sposób można znaleźć przyczynę błędu szybciej.  
@@ -119,7 +119,7 @@ W tym temacie opisano format danych śledzenia, jak wyświetlać i metod, które
   
 -   Przetwarzane Dodaj akcję.  
   
--   Konfigurowanie sesji bezpiecznego (ta WYSTĄPIŁ na pierwsze żądanie) i przetworzyć trzy wiadomości odpowiedzi infrastruktura zabezpieczeń: RST, RSTR, SCT (proces komunikat 1, 2, 3).  
+-   Skonfiguruj zabezpieczenia sesji (ta WYSTĄPIŁ na pierwsze żądanie) i infrastruktura przetwarzania trzy zabezpieczeń wiadomości odpowiedzi: RST, RSTR, SCT (proces komunikat 1, 2, 3).  
   
 -   Przetworzone odejmowanie, mnożenie i dzielenie żądań.  
   
@@ -138,7 +138,7 @@ Godzina utworzenia (panelu po lewej stronie) i ich zagnieżdżonych działań i 
  Kliknij dwukrotnie działanie procesu działania Dodaj w lewym panelu, widać graficzną reprezentację działania WCF klienta, które są związane z Dodaj. Pierwsze działanie po lewej stronie jest działania głównego (0000), który jest domyślne działanie. Transfery WCF ze otoczenia działania. Jeśli to nie jest zdefiniowany, WCF przesyła poza 0000. W tym miejscu drugiego działania, przetwórz operację dodawania akcji, przesyła poza 0. Wtedy wyświetlone ustawienia zabezpieczenia sesji.  
   
  ![Używanie przeglądarki danych śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-Wykres widoku działania klienta WCF: otoczenia działania (tutaj 0), działanie procesu oraz ustawić się Secure sesję  
+Widok wykresu działania klienta WCF: Otoczenia działania (tutaj 0), działanie procesu oraz ustawić się Secure sesję  
   
  W górnym prawym panelu widać wszystkie ślady dotyczące działań Przetwórz operację dodawania akcji. W szczególności firma Microsoft ma wysłała komunikat żądania ("Wysłano wiadomość w kanale") i odebrał odpowiedź ("Odebrano wiadomość w kanale"), w ramach tego samego działania. Jest to pokazane na poniższym wykresie. W celu uściślenia Konfigurowanie aktywność sesji bezpiecznego jest zwinięte na wykresie.  
   
@@ -198,7 +198,7 @@ Rozwijanie działania śledzenia głównej przyczyny problemu
  ![Używanie przeglądarki danych śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
 Aby rozpocząć rozwiązywanie problemów, możesz również wybierz czerwony threshold lub Yellow threshold komunikat śledzenia i dwukrotnie kliknij go, aby śledzić głównej przyczyny  
   
-## <a name="see-also"></a>Zobacz też  
- [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

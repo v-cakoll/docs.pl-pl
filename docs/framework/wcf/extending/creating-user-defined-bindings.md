@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548798"
 ---
 # <a name="creating-user-defined-bindings"></a>Tworzenie powiązań zdefiniowanych przez użytkownika
 Istnieje kilka sposobów tworzenia powiązania nie został dostarczony przez system:  
@@ -23,7 +23,7 @@ Istnieje kilka sposobów tworzenia powiązania nie został dostarczony przez sys
 ## <a name="the-order-of-binding-elements"></a>Kolejność elementów wiązania  
  Każdy element powiązania reprezentuje krok przetwarzania podczas wysyłania lub odbierania komunikatów. W czasie wykonywania elementy powiązania Tworzenie kanałów i odbiorników niezbędne do utworzenia stosów kanałów przychodzących i wychodzących.  
   
- Istnieją trzy główne typy elementy powiązania: elementy powiązania protokołu, kodowania elementów powiązania i elementy powiązania transportu.  
+ Istnieją trzy główne typy elementy powiązania: Protokół powiązania elementów, kodowania elementów powiązania i elementy powiązania transportu.  
   
  Elementy powiązania protokołu — te elementy reprezentują kroki przetwarzania wyższego poziomu, które działają w wiadomości. Kanałów i odbiorników utworzone przez te elementy powiązania można dodać, usunąć lub zmodyfikować zawartości komunikatu. Podane powiązanie może mieć dowolną liczbę elementów powiązania protokołu, każdy dziedziczenie z <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) obejmuje kilka elementów powiązania protokołu, w tym <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> i <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
@@ -40,7 +40,7 @@ Istnieje kilka sposobów tworzenia powiązania nie został dostarczony przez sys
 |Zabezpieczenia|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|Nie|  
 |Złożone komunikacja dwukierunkowa|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|Nie|  
 |Kodowanie|Tekst, Binary MTOM, niestandardowe|Tak*|  
-|Transportu|TCP i nazwane potoki, HTTP, HTTPS, usługa MSMQ, niestandardowe|Tak|  
+|Transport|TCP i nazwane potoki, HTTP, HTTPS, usługa MSMQ, niestandardowe|Tak|  
   
  * Ponieważ jest wymagane kodowanie dla każdego powiązania, jeśli nie określono kodowania, WCF dodaje domyślne kodowanie dla Ciebie. Wartość domyślna to Text/XML binarnej i dla transportu HTTP i HTTPS, w przeciwnym razie.  
   
@@ -118,6 +118,6 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="deriving-from-a-standard-binding"></a>Wyprowadzanie z Powiązanie standardowe  
  Zamiast tworzenia nowej klasy powiązanie, może być możliwe zwiększenie jeden z istniejących powiązań dostarczanych przez system. Podobnie jak w poprzednim przypadku nr, konieczne jest przesłonięcie <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> metody i <xref:System.ServiceModel.Channels.Binding.Scheme%2A> właściwości.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.Binding>  
- [Powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.Binding>
+- [Powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md)

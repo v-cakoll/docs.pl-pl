@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b57233457c697dbe35ab0f68d6ce3557cee9b5c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641151"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform
 Można użyć programu .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) projektu typu, aby upewnić się, że zasoby w bibliotekach klas są dostępne na wielu platformach. Ten typ projektu jest dostępny w programie Visual Studio 2012 i jest przeznaczony dla przenośny podzestaw biblioteki klas .NET Framework. Za pomocą [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] gwarantuje, że biblioteki są dostępne z aplikacji komputerowych, aplikacji Silverlight, aplikacji Windows Phone i [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.
@@ -81,7 +81,7 @@ Można użyć programu .NET Framework [Portable Class Library](../../../docs/sta
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Przykład: zlokalizowany [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
+## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Przykład: Zlokalizowane [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  Następujące zlokalizowane [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] przykład zawiera zasoby dotyczące francuski (Francja) i angielska (Stany Zjednoczone). Kultura angielski (Stany Zjednoczone) jest domyślną kulturą aplikacji; jej zasoby są pokazane w tabeli w [poprzedniej sekcji](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Plik zasobów dla kultury Francuski (Francja) o nazwie LibResources.fr-FR.resx składa się z zasobów ciągu wymienionych w poniższej tabeli. Kod źródłowy `UILibrary` klasy jest taka sama, jak pokazano w poprzedniej sekcji.
 
 |Nazwa zasobu|Wartość zasobu|
@@ -106,6 +106,6 @@ Można użyć programu .NET Framework [Portable Class Library](../../../docs/sta
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Resources.ResourceManager>  
-- [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)  
+- <xref:System.Resources.ResourceManager>
+- [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)
 - [Opakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

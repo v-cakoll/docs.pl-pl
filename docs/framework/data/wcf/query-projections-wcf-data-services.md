@@ -10,15 +10,15 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2cd39355fec310bc33a3d02524a4d4cc060dba6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646084"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projekcje zapytania (WCF Data Services)
-Projekcja udostępnia mechanizm w [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] zmniejszenie ilości danych w źródle danych zwróconych przez zapytanie, określając, że zwracane są tylko niektóre właściwości jednostki w odpowiedzi. Aby uzyskać więcej informacji, zobacz [OData: wybierz opcję zapytania systemu ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).  
+Projekcja udostępnia mechanizm w [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] zmniejszenie ilości danych w źródle danych zwróconych przez zapytanie, określając, że zwracane są tylko niektóre właściwości jednostki w odpowiedzi. Aby uzyskać więcej informacji, zobacz [OData: Wybierz opcję zapytania systemu ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).  
   
  W tym temacie opisano, jak zdefiniować projekcji zapytań, jakie wymagania są dostępne dla jednostki i typu innego niż jednostka, dzięki czemu aktualizuje przewidywane wyniki, tworzenie typów przewidywane i wymieniono kilka kwestii projekcji.  
   
@@ -65,9 +65,9 @@ Poniżej opisano zachowania podczas przedstawiania wyników na typy jednostek i 
    [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
    [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]
 
-- Typ jednostki: obsługiwane
+- Typ jednostki: Obsługiwane
 
-- Typ jednostki inne niż: obsługiwane
+- Typ jednostki inne niż: Obsługiwane
 
 **Tworzenie nowego wystąpienia przewidywany za pomocą konstruktorów**
 
@@ -76,9 +76,9 @@ Poniżej opisano zachowania podczas przedstawiania wyników na typy jednostek i 
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithconstructor)]
 
-- Typ jednostki: A <xref:System.NotSupportedException> jest wywoływane.
+- Typ jednostki: Element <xref:System.NotSupportedException> jest wywoływane.
 
-- Typ jednostki inne niż: obsługiwane
+- Typ jednostki inne niż: Obsługiwane
 
 **Przy użyciu projekcji, aby przekształcić wartości właściwości**
 
@@ -87,9 +87,9 @@ Poniżej opisano zachowania podczas przedstawiania wyników na typy jednostek i 
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]
    
-- Typ jednostki: to przekształcenie nie jest obsługiwane dla typów jednostek, ponieważ może to prowadzić do nieporozumień i potencjalnie zastąpienie danych w źródle danych, który należy do innej jednostki. Element <xref:System.NotSupportedException> jest wywoływane.
+- Typ jednostki: Ta transformacja nie jest obsługiwana dla typów jednostek, ponieważ może to prowadzić do nieporozumień i potencjalnie zastąpienie danych w źródle danych, który należy do innej jednostki. Element <xref:System.NotSupportedException> jest wywoływane.
 
-- Typ jednostki inne niż: obsługiwane  
+- Typ jednostki inne niż: Obsługiwane  
   
 <a name="considerations"></a>   
 ## <a name="projection-considerations"></a>Zagadnienia dotyczące projekcji  
@@ -107,7 +107,7 @@ Poniżej opisano zachowania podczas przedstawiania wyników na typy jednostek i 
   
 -   Kwerend projekcji zapytań na komputerze klienckim są tłumaczone na użyj `$select` zapytania opcji w identyfikatorze URI żądania. Gdy zapytanie o projekcji jest wykonywane względem poprzedniej wersji [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , który nie obsługuje `$select` opcji zapytania zostanie zwrócony błąd. Przyczyną może też być podczas <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> z <xref:System.Data.Services.DataServiceBehavior> danych usługa jest ustawiona na wartość <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
- Aby uzyskać więcej informacji, zobacz [jak: projekt wyników zapytania](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Projekt wyników zapytania](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

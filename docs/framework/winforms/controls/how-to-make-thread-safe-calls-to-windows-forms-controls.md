@@ -1,5 +1,5 @@
 ---
-title: 'Porady: bezpieczne wątkowo wywołania formantów formularzy systemu Windows'
+title: 'Instrukcje: Bezpieczne wątkowo wywołania kontrolek formularzy Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710472"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Porady: bezpieczne wątkowo wywołania formantów formularzy systemu Windows
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Instrukcje: Bezpieczne wątkowo wywołania kontrolek formularzy Windows Forms
 
 Jeśli używasz wielowątkowości w celu poprawy wydajności aplikacji Windows Forms, należy się upewnić upewnij wywołania kontrolek w sposób wątkowo.
 
@@ -406,7 +406,7 @@ private:
  Poniższy przykład kodu jest kompletna aplikacja Windows Forms, która składa się z formularza przy użyciu trzech przycisków i jedno pole tekstowe. Pierwszy pokazuje niebezpieczny dostęp między wątkami, drugi przycisk pokazuje bezpieczny dostęp za pomocą <xref:System.Windows.Forms.Control.Invoke%2A>, a trzeci przycisk pokazuje bezpieczny dostęp przy użyciu <xref:System.ComponentModel.BackgroundWorker>.
 
 > [!NOTE]
-> Aby uzyskać instrukcje na temat sposobu uruchamiania przykładu, zobacz [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). W tym przykładzie wymaga odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.
+> Aby uzyskać instrukcje na temat sposobu uruchamiania przykładu, zobacz [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). W tym przykładzie wymaga odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.
 
 ```csharp
 using System;
@@ -1048,10 +1048,10 @@ Po uruchomieniu aplikacji i kliknij przycisk **niebezpiecznych wywołań** przyc
 > [!CAUTION]
 > Kiedy używać wielowątkowości jakiegokolwiek rodzaju, Twój kod może być narażony na błędy bardzo poważne i złożone. Aby uzyskać więcej informacji, zobacz [zarządzana wątkowość najlepsze](../../../../docs/standard/threading/managed-threading-best-practices.md) przed zaimplementowaniem dowolne rozwiązanie, który używa wielowątkowości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Instrukcje: uruchamianie operacji w tle](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Instrukcje: implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Instrukcje: Uruchamianie operacji w tle](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Instrukcje: Implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [Formularze Windows Forms i niezarządzane aplikacje](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

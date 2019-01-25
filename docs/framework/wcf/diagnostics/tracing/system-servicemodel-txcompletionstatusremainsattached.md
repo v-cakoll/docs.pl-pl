@@ -2,20 +2,20 @@
 title: System.ServiceModel.TxCompletionStatusRemainsAttached
 ms.date: 03/30/2017
 ms.assetid: 60a745f5-85f7-4006-9786-fbbcca678ac9
-ms.openlocfilehash: c9309d6da8adf148398f0749dff437bd173ce45b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ad4b449cb46228ec2935e6b20f33ed390a284c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694937"
 ---
 # <a name="systemservicemodeltxcompletionstatusremainsattached"></a>System.ServiceModel.TxCompletionStatusRemainsAttached
-Transakcja określona dla określonej operacji jest nadal dołączona do obiektu InstanceContext.  
+Określonej transakcji dla określonej operacji nadal jest dołączony do obiektu InstanceContext.  
   
 ## <a name="description"></a>Opis  
- Śledzone po zakończeniu ServiceOperation, ale transakcja nie jest ustawiony na zakończenie.  
+ Śledzone, gdy zakończy się ServiceOperation, ale transakcja nie jest ustawiony na ukończenie.  
   
-## <a name="see-also"></a>Zobacz też  
- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

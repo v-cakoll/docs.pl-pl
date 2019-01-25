@@ -1,5 +1,5 @@
 ---
-title: Jak animować kolor lub nieprzezroczystość SolidColorBrush
+title: 'Instrukcje: Animuj kolor lub nieprzezroczystość SolidColorBrush'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SolidColorBrush [WPF], animating color of
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], opacity of SolidColorBrush
 - SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
-ms.openlocfilehash: 194f01d3d5aa4c2b5a08a6c3fdb3dc195b0e9e3e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a6bd7f27f1cce6169181640bb52edad4a493c228
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738696"
 ---
-# <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>Jak animować kolor lub nieprzezroczystość SolidColorBrush
+# <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>Instrukcje: Animuj kolor lub nieprzezroczystość SolidColorBrush
 W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.SolidColorBrush.Color%2A> i <xref:System.Windows.Media.Brush.Opacity%2A> z <xref:System.Windows.Media.SolidColorBrush>.  
   
 ## <a name="example"></a>Przykład  
@@ -34,7 +34,7 @@ W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.SolidColor
   
  Aby zachować spójność z innymi przykładami animacji, użyj wersji kodu w tym przykładzie <xref:System.Windows.Media.Animation.Storyboard> obiekt, do ich animacji. Jednak podczas stosowania pojedynczej animacji w kodzie, jest łatwiejszy w obsłudze <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metody zamiast <xref:System.Windows.Media.Animation.Storyboard>. Aby uzyskać przykład, zobacz [animować właściwości bez użycia scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Przykład pędzle](https://go.microsoft.com/fwlink/?LinkID=159973)
+## <a name="see-also"></a>Zobacz także
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Przykład pędzle](https://go.microsoft.com/fwlink/?LinkID=159973)

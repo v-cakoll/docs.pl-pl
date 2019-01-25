@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f5a70a01937c52197978db776b90028e1fcb7c6
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 78f25b657e6cb103797e13e98c3dd61a80003dc2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701823"
 ---
 # <a name="converting-times-between-time-zones"></a>Konwertowanie godzin między strefami czasowymi
 
@@ -122,6 +122,6 @@ Jeśli metoda jest przekazywany ciąg "1/9/2007 5:32:07-05: 00", która reprezen
 
 ## <a name="see-also"></a>Zobacz także
 
-* <xref:System.TimeZoneInfo>
-* [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
-* [Znajdowanie stref czasowych zdefiniowanych w systemie lokalnym](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+- <xref:System.TimeZoneInfo>
+- [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
+- [Znajdowanie stref czasowych zdefiniowanych w systemie lokalnym](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)

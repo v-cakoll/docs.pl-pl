@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 875052ed26e83de50807e33e9c74dcf89f7ee679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17217146d8e5ed53feb8305ca4ac16c8f96ddeb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440648"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653865"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo — Metoda
-Pobiera odpowiadający błąd sprawdzania poprawności określony komunikat o błędzie.  
+Pobiera komunikat o błędzie odpowiadający błąd sprawdzania poprawności określonej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,28 +41,28 @@ HRESULT FormatEventInfo(
   
 #### <a name="parameters"></a>Parametry  
  `hVECode`  
- [in] Wartość HRESULT, która została przekazana do obsługi błędów sprawdzania poprawności.  
+ [in] Wartość HRESULT, który został przekazany do procedury obsługi błędów sprawdzania poprawności.  
   
  `Context`  
  [in] A `VEContext` wystąpienia, które zawiera informacje o kontekście o błędzie sprawdzania poprawności.  
   
  `msg`  
- [w, out] Ciąg, który zawiera komunikat zwrócony kod błędu.  
+ [out w] Ciąg, który zawiera komunikat zwrócony kod błędu.  
   
  `ulMaxLength`  
  [in] Maksymalna długość komunikatu o błędzie.  
   
  `psa`  
- [in] Bezpieczne tablica, która zawiera dodatkowe parametry opisujące błąd.  
+ [in] Bezpieczne tablicę, która zawiera dodatkowe parametry opisujące błąd.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** IValidator.idl, IValidator.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

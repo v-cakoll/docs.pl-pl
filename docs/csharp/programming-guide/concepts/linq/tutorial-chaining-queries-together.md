@@ -1,15 +1,15 @@
 ---
-title: 'Samouczek: Tworzenie łańcuchów zapytań razem (C#)'
+title: 'Samouczek: Łączenie łańcuchowe zapytań (C#)'
 ms.date: 07/20/2015
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
-ms.openlocfilehash: cab012a6ae618bd731c26bc1a002c144b84d2169
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3beed32aa276f218a80267748e74707941957e53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737419"
 ---
-# <a name="tutorial-chaining-queries-together-c"></a>Samouczek: Tworzenie łańcuchów zapytań razem (C#)
+# <a name="tutorial-chaining-queries-together-c"></a>Samouczek: Łączenie łańcuchowe zapytań (C#)
 W tym samouczku przedstawiono przetwarzania modelu podczas tworzenia łańcucha zapytania ze sobą. Łączenie łańcuchowe zapytań jest kluczowym elementem pisania przekształceń funkcjonalnych. Należy zrozumieć, dokładnie tak jak łańcuchowe zapytań pracy.  
   
  Zapytania, które przetwarzają dokumentów Office Open XML Użyj tej techniki w szerokim zakresie.  
@@ -24,6 +24,6 @@ W tym samouczku przedstawiono przetwarzania modelu podczas tworzenia łańcucha 
 |[Materializacja pośrednia (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)|Identyfikuje i przedstawia semantykę materializacja pośrednia.|  
 |[Łańcucha standardowych operatorów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)|W tym artykule opisano semantykę standardowych operatorów zapytań z opóźnieniem.|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Czyste Przekształcanie funkcjonalne kodu XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

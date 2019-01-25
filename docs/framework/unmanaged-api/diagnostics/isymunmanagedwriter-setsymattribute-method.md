@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd1a55d4100d74b769b2bc1b8fe33d2042f5e739
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab637b33797ebc5b6d16873cb460c465405b6849
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645655"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute — Metoda
-Definiuje atrybut niestandardowy ustalane na podstawie jego nazwy. Te atrybuty są przechowywane w magazynie symboli, w przeciwieństwie do niestandardowych atrybutów metadanych.  
+Określa atrybut niestandardowy na podstawie jego nazwy. Te atrybuty są przechowywane w magazynie symboli, w przeciwieństwie do atrybutów niestandardowych metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +39,22 @@ HRESULT SetSymAttribute(
   
 #### <a name="parameters"></a>Parametry  
  `parent`  
- [in] Token metadanych, dla których atrybut jest zdefiniowany.  
+ [in] Token metadanych, dla którego jest definiowany atrybut.  
   
  `name`  
  [in] Wskaźnik do `WCHAR` zawierający nazwę atrybutu.  
   
  `cData`  
- [in] A `ULONG32` wskazuje, że rozmiar `data` tablicy.  
+ [in] A `ULONG32` oznacza rozmiar `data` tablicy.  
   
  `data`  
  [in] Wartość atrybutu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

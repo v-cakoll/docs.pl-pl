@@ -2,12 +2,12 @@
 title: Punkty końcowe usługi i adresowanie kolejki
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 71ebf29e51118a7f555f3e79598e49ffd65e0c63
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b513dbf5bfde812c551335826813967272bfd708
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196307"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613925"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Punkty końcowe usługi i adresowanie kolejki
 W tym temacie omówiono, jak klienci adresów usług, które są odczytywane z kolejki i sposobu mapowania punktów końcowych usługi do kolejek. Przypominamy Poniższa ilustracja przedstawia klasycznego wdrożenia aplikacji w kolejce usług Windows Communication Foundation (WCF).  
@@ -40,9 +40,9 @@ W tym temacie omówiono, jak klienci adresów usług, które są odczytywane z k
   
 -   \<*Nazwa kolejki*> jest nazwą kolejki. Nazwa kolejki może również dotyczyć kolejki podrzędnej. W efekcie \< *Nazwa kolejki*> = \< *nazwy z kolejki*> [; *podrzędne queue-name*].  
   
- Przykład1: Aby rozwiązać kolejki prywatnej PurchaseOrders hostowanych na komputerze abc atadatum.com, identyfikator URI będzie net.msmq://abc.adatum.com/private/PurchaseOrders.  
+ Przykład1: Aby rozwiązać kolejki prywatnej PurchaseOrders hostowanych na komputerze abc atadatum.com, identyfikator URI będzie mieć net.msmq://abc.adatum.com/private/PurchaseOrders.  
   
- Przykład2: Aby rozwiązać kolejki publicznej AccountsPayable hostowanych na komputerze def atadatum.com, identyfikator URI będzie net.msmq://def.adatum.com/AccountsPayable.  
+ Przykład2: Aby rozwiązać kolejki publicznej AccountsPayable hostowanych na komputerze def atadatum.com, identyfikator URI będzie mieć net.msmq://def.adatum.com/AccountsPayable.  
   
  Adres kolejki jest używany jako identyfikator URI nasłuchiwania przez odbiornik do odczytywania komunikatów z. Innymi słowy adres kolejki jest odpowiednikiem nasłuchiwania gniazda portu TCP.  
   
@@ -74,12 +74,12 @@ W tym temacie omówiono, jak klienci adresów usług, które są odczytywane z k
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |Net.msmq://\<machine-name>/private/abc|FALSE (domyślnie)|Native (domyślnie)|DIRECT=OS:machine-name\private$\abc|  
 |Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT = OS:http://machine/msmq/private$/ abc|  
-|Net.msmq://\<machine-name>/private/abc|True|Natywne|PUBLICZNY = niektóre guid (identyfikator GUID kolejki)|  
+|Net.msmq://\<machine-name>/private/abc|Prawda|Natywne|PUBLICZNY = niektóre guid (identyfikator GUID kolejki)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Odczytywanie komunikatów z kolejki wiadomości utraconych lub kolejki komunikatów Poison  
  Aby odczytać wiadomości z kolejki komunikatów poison, która jest kolejki podrzędnej kolejki docelowej, należy otworzyć `ServiceHost` przy użyciu adresu kolejki podrzędnej.  
   
- Przykład: Usługa, która odczytuje z kolejki komunikatów poison kolejki prywatnej PurchaseOrders z komputera lokalnego czy adresów net.msmq://localhost/private/PurchaseOrders;poison.  
+ Przykład: To usługa, która odczytuje z kolejki komunikatów poison kolejki prywatnej PurchaseOrders z komputera lokalnego czy adresów net.msmq://localhost/private/PurchaseOrders;poison.  
   
  Odczytywanie komunikatów z kolejki utraconych wiadomości transakcyjnych systemu, identyfikator URI musi mieć postać: net.msmq://localhost/system$; DeadXact.  
   
@@ -100,9 +100,9 @@ W tym temacie omówiono, jak klienci adresów usług, które są odczytywane z k
   
  Należy pamiętać, że można używać tylko bezpośrednich nazw formatu i nazwy formatu publicznych i prywatnych (wymaga integracji usługi Active Directory) podczas odbierania komunikatów z kolejki za pomocą `MsmqIntegrationBinding`. Jednak zaleca się, że używasz bezpośrednich nazw formatu. Na przykład na [!INCLUDE[wv](../../../../includes/wv-md.md)], przy użyciu innej nazwy formatu powoduje błąd, ponieważ system próbuje otworzyć kolejki podrzędnej, które mogą być otwierane tylko w przypadku bezpośrednich nazw formatu.  
   
- Podczas adresowania za pomocą SRMP `MsmqIntegrationBinding`, nie jest wymagane do dodania /msmq/ w bezpośrednią nazwą formatu ułatwiające Internet Information Services (IIS) z wysyłką. Na przykład: podczas adresowania kolejki abc przy użyciu SRMP protokół, zamiast bezpośrednio =http://adatum.com/msmq/private$/ abc, należy użyć DIRECT =http://adatum.com/private$/ abc.  
+ Podczas adresowania za pomocą SRMP `MsmqIntegrationBinding`, nie jest wymagane do dodania /msmq/ w bezpośrednią nazwą formatu ułatwiające Internet Information Services (IIS) z wysyłką. Na przykład: Podczas adresowania kolejki abc przy użyciu SRMP protokół, zamiast bezpośrednio =http://adatum.com/msmq/private$/ abc, należy użyć DIRECT =http://adatum.com/private$/ abc.  
   
  Należy pamiętać, że nie można użyć net.msmq:// adresowanie z `MsmqIntegrationBinding`. Ponieważ `MsmqIntegrationBinding` obsługuje dowolnych MSMQ format nazw adresowania, możesz użyć usługi WCF, która używa tego powiązania, aby używać funkcji listy multiemisji i dystrybucji w usłudze MSMQ. Jedynym wyjątkiem jest określenie `CustomDeadLetterQueue` przy użyciu `MsmqIntegrationBinding`. Musi ono być net.msmq:// formularza, podobnie jak jest określony za pomocą `NetMsmqBinding`.  
   
-## <a name="see-also"></a>Zobacz też  
- [Sieć Web hostująca aplikację zakolejkowaną](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>Zobacz także
+- [Sieć Web hostująca aplikację zakolejkowaną](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

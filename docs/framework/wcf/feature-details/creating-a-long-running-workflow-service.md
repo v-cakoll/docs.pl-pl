@@ -2,12 +2,12 @@
 title: Tworzenie długo działającej usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 5f8f5a0add1ad86683f0348a386b959d81615759
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b3c5cd8a64f32a199932a40ed2d94b0a545b0dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585409"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Tworzenie długo działającej usługi przepływu pracy
 W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. Długotrwałe usług przepływu pracy może działać przez dłuższy czas. W pewnym momencie przepływu pracy może być bezczynny, oczekiwanie na kilku dodatkowych informacji. W takim przypadku przepływ pracy jest trwały do usługi SQL database i zostanie usunięty z pamięci. Po udostępnieniu dodatkowych informacji wystąpienia przepływu pracy jest ładowany do pamięci i kontynuuje wykonywanie.  W tym scenariuszu w przypadku wdrażania bardzo uproszczony system zamawiania.  Klient wysyła pierwszy komunikat do usługi przepływu pracy, aby rozpocząć kolejności. Zwraca identyfikator zamówienia dla klienta. W tym momencie Usługa przepływu pracy oczekuje na inny komunikat z klienta i przechodzi w stan bezczynności i jest umieszczone w bazie danych programu SQL Server.  Gdy klient wysyła następnej wiadomości w celu uporządkowania elementów, usługi przepływu pracy jest ładowany do pamięci i zakończeniu przetwarzania zamówienia. W przykładowym kodzie zwraca ciąg z informacją, że element został dodany do zamówienia. Przykładowy kod nie jest przeznaczona do rzeczywistej aplikacji w technologii, ale raczej prosty przykład ilustrujący długo działającej usługi przepływu pracy. W tym temacie założono, że wiesz, jak tworzyć projekty programu Visual Studio 2012 i rozwiązań.
@@ -19,7 +19,7 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
 
 2.  Visual Studio 2012
 
-3.  Firmy Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
 4.  Znają WCF i programu Visual Studio 2012 i wiedzieć, jak tworzyć projekty i rozwiązania.
 
@@ -49,7 +49,7 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
 
     2.  W obszarze **serwerów** wybierz **Użyj lokalnym serwerem sieci Web IIS**.
 
-         ![Ustawienia serwera sieci Web w lokalnych](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")
+         ![Local Web Server Settings](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")
 
         > [!WARNING]
         >  W trybie administratora, aby to ustawienie, należy uruchomić program Visual Studio 2012.
@@ -198,5 +198,5 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
     Sending add item messageService returned: Item added to orderPress any key to continue . . .
     ```
 
-## <a name="see-also"></a>Zobacz też
- [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)

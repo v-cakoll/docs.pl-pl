@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 0be35b64e9df3ec2a78c62735b1b7072e092f073
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 11ea1ed6bb96a477ec8351e7d865e6119e83eb80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672961"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Instrukcje: Przesłanianie metody ToString (C# Programming Guide)
 Każdej klasy lub struktury w języku C# dziedziczy niejawnie <xref:System.Object> klasy. W związku z tym, każdy obiekt w języku C# pobiera <xref:System.Object.ToString%2A> metody, która zwraca reprezentację ciągu tego obiektu. Na przykład, wszystkie zmienne typu `int` mają `ToString` metody, która pozwala na zwrócenie ich zawartość jako ciąg:  
@@ -43,14 +43,14 @@ Każdej klasy lub struktury w języku C# dziedziczy niejawnie <xref:System.Objec
   
      [!code-csharp[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IFormattable>  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Ciągi](../../../csharp/programming-guide/strings/index.md)  
-- [string](../../../csharp/language-reference/keywords/string.md)  
-- [new](../../../csharp/language-reference/keywords/new.md)  
-- [override](../../../csharp/language-reference/keywords/override.md)  
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+- <xref:System.IFormattable>
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Ciągi](../../../csharp/programming-guide/strings/index.md)
+- [string](../../../csharp/language-reference/keywords/string.md)
+- [new](../../../csharp/language-reference/keywords/new.md)
+- [override](../../../csharp/language-reference/keywords/override.md)
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)
 - [Formatowanie typów](../../../standard/base-types/formatting-types.md)

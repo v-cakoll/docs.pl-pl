@@ -8,15 +8,15 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: e4328e1628028be72d10ee2a59c3f53b18bd6580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b53b5666985305362d093e2e579abe83ce619fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655858"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>Programowanie warstwy Visual Tematy porad
-Tematy w tej sekcji przedstawiono sposób korzystania z warstwy visual dla kompozycji testowania trafień i niskiego poziomu.  
+Tematy w tej sekcji przedstawiają sposoby użycia warstwy visual dla składu testowania trafień i niskiego poziomu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Pobieranie przesunięcia wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
@@ -26,9 +26,9 @@ Tematy w tej sekcji przedstawiono sposób korzystania z warstwy visual dla kompo
  [Przeprowadzanie testu trafienia za pomocą kontenera hosta Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
  [Renderowanie w interwałach klatek z użyciem elementu CompositionTarget](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

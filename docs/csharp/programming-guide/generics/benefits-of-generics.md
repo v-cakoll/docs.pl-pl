@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: f97d3ce7a67638719d02c31879c00679405118bc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba4b81db0ea352f82127a838ab6b13f09d259e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245015"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650983"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Zalety typów ogólnych (Przewodnik programowania w języku C#)
 Typy ogólne zapewnia rozwiązanie do ograniczenia we wcześniejszych wersjach środowiska uruchomieniowego języka wspólnego i języki C#, w którym Generalizacja odbywa się przez rzutowanie typów do i z uniwersalnego typu bazowego <xref:System.Object>. Tworząc klasy ogólnej, można utworzyć kolekcję, która jest bezpieczna pod względem typu w czasie kompilacji.  
@@ -35,11 +35,11 @@ Typy ogólne zapewnia rozwiązanie do ograniczenia we wcześniejszych wersjach �
   
  W przypadku kodu klienta, tylko dodać składni <xref:System.Collections.Generic.List%601> w porównaniu do <xref:System.Collections.ArrayList> jest argumentem typu w deklaracji i konkretyzacji. Poinformowanie tę złożoność nieco bardziej kodowania, można utworzyć listę, która jest nie tylko bezpieczniejszy niż <xref:System.Collections.ArrayList>, ale również znacznie szybsze, szczególnie w przypadku, gdy elementy listy są typami wartości.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections.Generic>  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [Konwersja boxing i konwersja unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
-- [Kiedy należy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)  
-- [Wytyczne dotyczące kolekcji](../../../standard/design-guidelines/guidelines-for-collections.md)   
+- <xref:System.Collections.Generic>
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Konwersja boxing i konwersja unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+- [Kiedy należy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)
+- [Wytyczne dotyczące kolekcji](../../../standard/design-guidelines/guidelines-for-collections.md)

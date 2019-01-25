@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8266db66abb46ffc9503bdaeaf4ec4078177760
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 2752ecd05caec207955b2366ed19b3713f571f91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613912"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegaty ogólne do manipulowania tablicami i listami
 Ten temat zawiera omówienie delegatów ogólnych dla konwersji, predykaty wyszukiwania i akcje do wykonania w przypadku elementów tablicy lub kolekcji.  
@@ -43,9 +43,9 @@ Ten temat zawiera omówienie delegatów ogólnych dla konwersji, predykaty wyszu
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections.Generic?displayProperty=nameWithType>  
-- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
-- [Typy ogólne](../../../docs/standard/generics/index.md)  
-- [Kolekcje ogólne w oprogramowaniu .NET Framework](../../../docs/standard/generics/collections.md)  
-- [Interfejsy ogólne](../../../docs/standard/generics/interfaces.md)  
+- <xref:System.Collections.Generic?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
+- [Typy ogólne](../../../docs/standard/generics/index.md)
+- [Kolekcje ogólne w oprogramowaniu .NET Framework](../../../docs/standard/generics/collections.md)
+- [Interfejsy ogólne](../../../docs/standard/generics/interfaces.md)
 - [Kowariancja i kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md)

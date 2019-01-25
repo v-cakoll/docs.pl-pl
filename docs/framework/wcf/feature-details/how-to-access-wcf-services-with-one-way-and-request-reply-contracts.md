@@ -2,19 +2,19 @@
 title: 'Instrukcje: Uzyskiwanie dostępu do usług WCF za pomocą kontraktów jednokierunkowych i kontraktów „żądanie-odpowiedź”'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f74f874d43698955cce0ae14791a9d6b748ef919
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639186"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Instrukcje: Uzyskiwanie dostępu do usług WCF za pomocą kontraktów jednokierunkowych i kontraktów „żądanie-odpowiedź”
-W poniższych procedurach opisano, jak uzyskać dostęp do usługi Windows Communication Foundation (WCF) definiuje kontraktu jednokierunkowego i kontraktu "żądanie-odpowiedź", które nie korzystają z wzorca komunikację dupleksową.  
+W poniższych procedurach opisano, jak uzyskać dostęp do usługi Windows Communication Foundation (WCF) definiuje kontraktu jednokierunkowego i kontraktu "żądanie-odpowiedź", które nie korzystają z paradygmacie komunikacji dupleksowej.  
   
 ### <a name="to-define-the-service"></a>Aby zdefiniować usługi  
   
-1.  Deklarowanie kontraktu usługi. Operacje, które mają być jednokierunkowe musi mieć `IsOneWay` ustawioną `true` w <xref:System.ServiceModel.OperationContractAttribute>. Poniższy kod deklaruje `IOneWayCalculator` kontraktu, który ma operacji jednokierunkowych dla `Add`, `Subtract`, `Multiply`, i `Divide`. Definiuje również operacji odpowiedzi żądania o nazwie `SayHello`.  
+1.  Zadeklaruj kontraktu usługi. Operacje, które mają być jednokierunkowe musi mieć `IsOneWay` równa `true` w ramach <xref:System.ServiceModel.OperationContractAttribute>. Poniższy kod deklaruje `IOneWayCalculator` kontraktu, który zawiera operacje jednokierunkowe `Add`, `Subtract`, `Multiply`, i `Divide`. Umożliwia on również definiowanie operacji odpowiedzi żądania o nazwie `SayHello`.  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -71,7 +71,7 @@ W poniższych procedurach opisano, jak uzyskać dostęp do usługi Windows Commu
     }  
     ```  
   
-3.  Host usługi w aplikacji konsoli. Poniższy kod przedstawia sposób obsługi usługi.  
+3.  Hostowanie usług w aplikacji konsoli. Poniższy kod pokazuje, jak hostować usługę.  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -109,7 +109,7 @@ W poniższych procedurach opisano, jak uzyskać dostęp do usługi Windows Commu
   
 ### <a name="to-access-the-service"></a>Aby uzyskać dostęp do usługi  
   
-1.  Uruchom [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) przy użyciu adresu punktu końcowego metadanych programu exchange można utworzyć klasy klienta dla usługi przy użyciu następującego polecenia: `Svcutil http://localhost:8000/Service` [ServiceModel Narzędzie do obsługi metadanych (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generuje zestaw interfejsów i klasy, jak pokazano w poniższym kodzie próbki.  
+1.  Uruchom [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) przy użyciu adresu punktu końcowego metadanych programu exchange do utworzenia klasy klienta dla usługi przy użyciu następującego polecenia: `Svcutil http://localhost:8000/Service` [Narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generuje zestaw interfejsów i klas, jak pokazano w poniższym przykładowym kodzie.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -194,7 +194,7 @@ W poniższych procedurach opisano, jak uzyskać dostęp do usługi Windows Commu
     }  
     ```  
   
-     Zwróć uwagę, w `IOneWayCalculator` interfejs, który ma operacje usługi jednokierunkowej <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> ustawić atrybutu `true` i operacji usługi "żądanie-odpowiedź" ma atrybut ustawiony na wartość domyślną `false`. Ponadto `OneWayCalculatorClient` klasy. Jest to klasa, która będzie używany do wywołania tej usługi.  
+     Należy zauważyć w `IOneWayCalculator` interfejs, który ma operacje usługi jednokierunkowej <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> ustawioną wartość atrybutu `true` i operacji usługi "żądanie-odpowiedź" ma atrybut ustawiony na wartość domyślną `false`. Należy również zauważyć `OneWayCalculatorClient` klasy. Jest to klasa, która zostanie wykorzystany do wywołania usługi.  
   
 2.  Utworzenie obiektu klienta.  
   
@@ -239,7 +239,7 @@ W poniższych procedurach opisano, jak uzyskać dostęp do usługi Windows Commu
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4.  Zamknij klienta można zamknąć połączenia i czyszczenie zasobów.  
+4.  Zamknij klienta, aby zamknąć połączenia i wyczyścić zasoby.  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
@@ -400,5 +400,5 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługi jednokierunkowe](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi jednokierunkowe](../../../../docs/framework/wcf/feature-details/one-way-services.md)

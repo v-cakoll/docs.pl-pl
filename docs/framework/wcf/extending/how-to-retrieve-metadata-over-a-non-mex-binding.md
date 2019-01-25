@@ -1,20 +1,20 @@
 ---
-title: 'Instrukcje: Pobieranie metadanych przez powiązanie inne niż wymiany metadanych'
+title: 'Instrukcje: Pobieranie metadanych przez wiązanie inne niż wymiany metadanych'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689557"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Instrukcje: Pobieranie metadanych przez powiązanie inne niż wymiany metadanych
-W tym temacie opisano, jak pobrać metadanych z punktu końcowego MEX za pośrednictwem powiązania-MEX. Kod w tym przykładzie jest oparta na [punktu końcowego metadanych niestandardowy bezpieczny](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) próbki.  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Instrukcje: Pobieranie metadanych przez wiązanie inne niż wymiany metadanych
+W tym temacie opisano, jak pobrać metadanych z punktu końcowego MEX przez powiązanie inne niż wymiany Metadanych. Kod w tym przykładzie jest oparty na [niestandardowy bezpieczny punkt końcowy metadanych](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) próbki.  
   
-### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Do pobierania metadanych za pośrednictwem powiązania-MEX  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Do pobierania metadanych przez powiązanie inne niż wymiany Metadanych  
   
-1.  Określ powiązanie używane przez punkt końcowy MEX. Dla usług Windows Communication Foundation (WCF) można określić powiązanie MEX uzyskując dostęp do pliku konfiguracji usługi. W takim przypadku powiązania MEX. jest zdefiniowany w następującej konfiguracji usługi.  
+1.  Ustal, używanego przez punkt końcowy wymiany Metadanych powiązania. Dla usług Windows Communication Foundation (WCF) należy określić powiązanie MEX, uzyskując dostęp do pliku konfiguracji usługi. W tym przypadku powiązania wymiany Metadanych jest zdefiniowana w następującej konfiguracji usługi.  
   
     ```xml  
     <services>  
@@ -48,7 +48,7 @@ W tym temacie opisano, jak pobrać metadanych z punktu końcowego MEX za pośred
      </bindings>  
     ```  
   
-2.  W pliku konfiguracji klienta należy skonfigurować to samo powiązanie niestandardowe. Tutaj również definiuje klienta `clientCredentials` zachowanie w celu zapewnienia certyfikatu służącego do uwierzytelniania w usłudze, gdy żąda metadanych z punktu końcowego MEX. Za pomocą Svcutil.exe żądanie metadanych przez powiązanie niestandardowych, konfiguracji punktu końcowego MEX należy dodać do pliku konfiguracji dla Svcutil.exe (Svcutil.exe.config), a nazwa konfiguracji punktu końcowego powinien być zgodny schemat identyfikatora URI adresu końcowy MEX, jak pokazano w poniższym kodzie.  
+2.  W pliku konfiguracji klienta należy skonfigurować ten sam niestandardowego powiązania. W tym miejscu definiuje również klienta `clientCredentials` zachowanie, aby podać certyfikat na potrzeby uwierzytelniania usługi podczas żądania metadanych z punktu końcowego MEX. Żądanie metadanych za pośrednictwem powiązania niestandardowego za pomocą Svcutil.exe, konfiguracji punktu końcowego MEX należy dodać do pliku konfiguracji dla Svcutil.exe (Svcutil.exe.config) i nazwa konfiguracji punktu końcowego powinien być zgodny schemat identyfikatora URI adresu MEX punkt końcowy, jak pokazano w poniższym kodzie.  
   
     ```xml  
     <system.serviceModel>  
@@ -83,7 +83,7 @@ W tym temacie opisano, jak pobrać metadanych z punktu końcowego MEX za pośred
     </system.serviceModel>  
     ```  
   
-3.  Utwórz `MetadataExchangeClient` i Wywołaj `GetMetadata`. Istnieją dwa sposoby, w tym celu: można określić niestandardowego powiązania w konfiguracji, lub można określić niestandardowego powiązania w kodzie, jak pokazano w poniższym przykładzie.  
+3.  Tworzenie `MetadataExchangeClient` i wywołać `GetMetadata`. Istnieją dwa sposoby, aby to zrobić: można określić niestandardowego powiązania w konfiguracji lub można określić niestandardowego powiązania w kodzie, jak pokazano w poniższym przykładzie.  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -114,14 +114,14 @@ W tym temacie opisano, jak pobrać metadanych z punktu końcowego MEX za pośred
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4.  Utwórz `WsdlImporter` i Wywołaj `ImportAllEndpoints`, jak pokazano w poniższym kodzie.  
+4.  Tworzenie `WsdlImporter` i wywołać `ImportAllEndpoints`, jak pokazano w poniższym kodzie.  
   
     ```  
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  W tym momencie masz kolekcję punktów końcowych usługi. Aby uzyskać więcej informacji na temat importowania metadanych, zobacz [porady: Importowanie metadanych do punktów końcowych usług](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5.  W tym momencie masz kolekcję punktów końcowych usługi. Aby uzyskać więcej informacji na temat importowania metadanych zobacz [jak: Importowanie metadanych do punktów końcowych usługi](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Metadane](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a>Zobacz także
+- [Metadane](../../../../docs/framework/wcf/feature-details/metadata.md)

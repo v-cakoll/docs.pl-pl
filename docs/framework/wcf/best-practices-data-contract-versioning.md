@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: Przechowywanie wersji kontraktów danych'
+title: 'Najlepsze rozwiązania: Przechowywanie wersji kontraktów danych'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts
@@ -7,101 +7,101 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738355"
 ---
-# <a name="best-practices-data-contract-versioning"></a>Wskazówki: Przechowywanie wersji kontraktów danych
-Ten temat zawiera najlepsze rozwiązania w zakresie tworzenia kontraktów danych, które można łatwo rozwijać, wraz z upływem czasu. Aby uzyskać więcej informacji na temat kontraktów danych, zobacz Tematy w [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+# <a name="best-practices-data-contract-versioning"></a>Najlepsze rozwiązania: Przechowywanie wersji kontraktów danych
+Ten temat zawiera najlepsze rozwiązania dotyczące tworzenia kontraktów danych, które można łatwo ewoluować wraz z upływem czasu. Aby uzyskać więcej informacji na temat kontraktów danych, zobacz Tematy w [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
-## <a name="note-on-schema-validation"></a>Uwagi dotyczące sprawdzania poprawności schematu  
- W dyskutować przechowywanie wersji kontraktów danych, to należy pamiętać, że schematu kontraktu danych wyeksportowane przez Windows Communication Foundation (WCF) nie ma żadnych obsługi przechowywania wersji, innego niż fakt, że elementy nie została oznaczona jako opcjonalna domyślnie.  
+## <a name="note-on-schema-validation"></a>Uwaga dotycząca sprawdzania poprawności schematu  
+ W Omawiając przechowywanie wersji kontraktów danych, jest należy pamiętać, że schematu kontraktu danych, które są eksportowane przez Windows Communication Foundation (WCF) nie ma żadnych obsługą wersjonowania, poza tym, że elementy są oznaczone jako opcjonalną domyślnie.  
   
- Oznacza to, że nawet najbardziej typowych versioning scenariusz, takie jak dodawanie nowego elementu członkowskiego danych nie można zaimplementować w sposób zapewniający szybkie rozwiązanie w zakresie danego schematu. Nowsze wersje kontraktu danych (z nowego członka danych, na przykład) nie weryfikują przy użyciu starego schematu.  
+ Oznacza to, że nawet najbardziej typowe wersji scenariusza, takie jak dodanie nowy element członkowski danych nie mogą zostać zaimplementowane w sposób, który jest bezproblemowe w odniesieniu do danego schematu. Nowsze wersje kontraktu danych (za pomocą nowej składowej danych, na przykład) nie weryfikują przy użyciu starego schematu.  
   
- Istnieje jednak wiele scenariuszy, w których zgodność strict schematu nie jest wymagane. Wiele platform usług sieci Web, w tym usług WCF i XML sieci Web utworzony za pomocą programu ASP.NET, nie sprawdzania poprawności schematu domyślnie i w związku z tym tolerować dodatkowe elementy, które nie zostały opisane w schemacie. Podczas pracy z takich platform, wiele scenariuszy, w kontroli wersji są łatwiejsze do wdrożenia.  
+ Istnieją jednak wiele scenariuszy, w których zgodność ścisłego schematu nie jest wymagane. Wiele platform usług sieci Web, w tym usług WCF i sieci Web XML utworzone za pomocą programu ASP.NET, nie wykonać sprawdzanie poprawności schematu domyślnie i w związku z tym tolerować dodatkowe elementy, które nie zostały opisane w schemacie. Podczas pracy z takich platform, wiele scenariuszy, w wersji są łatwiejsze do wdrożenia.  
   
- W związku z tym są dwa zestawy danych kontraktu wytycznymi wersjonowania: jeden ustawiony w scenariuszach, w których ważność strict schematu jest ważne, a inną wartość dla scenariuszy nie jest.  
+ W związku z tym, są dwa zestawy danych kontraktu wskazówki wersji: on ustawiony dla scenariuszy, w którym ważność ścisłego schematu jest ważna, a innego zestawu dla scenariuszy, gdy nie jest.  
   
-## <a name="versioning-when-schema-validation-is-required"></a>Przechowywanie wersji, gdy jest wymagana Weryfikacja schematu  
- Jeśli schemat strict ważności jest wymagane we wszystkich kierunkach (nowe stary i starego do nowego), kontraktów danych należy traktować jako niezmienialny. Jeśli wymagane jest przechowywanie wersji, nowe kontraktu danych należy utworzyć inną nazwę lub przestrzeń nazw, i kontraktu usługi przy użyciu typu danych powinien być numerów wersji odpowiednio.  
+## <a name="versioning-when-schema-validation-is-required"></a>Przechowywanie wersji, gdy wymagana jest Weryfikacja schematu  
+ Jeśli ważność ścisłego schematu jest wymagany we wszystkich kierunkach (nowy w starym i starego do nowego), kontraktów danych należy rozważyć niezmienne. Jeśli wymagane jest przechowywanie wersji, nowe kontraktu danych należy utworzyć inną nazwę lub przestrzeń nazw, i kontrakt usługi przy użyciu typu danych powinien być poddany kontroli wersji w związku z tym.  
   
- Na przykład zamówienia zakupu przetwarzania kontraktu usługi o nazwie `PoProcessing` z `PostPurchaseOrder` operacji przyjmuje parametr, który odpowiada `PurchaseOrder` kontraktu danych. Jeśli `PurchaseOrder` kontraktu musi zmienić, należy utworzyć nowego kontraktu danych, czyli `PurchaseOrder2`, która obejmuje zmiany. Następnie musi obsługiwać versioning na poziomie kontraktu usługi. Na przykład, tworząc `PostPurchaseOrder2` operacja, która przyjmuje `PurchaseOrder2` parametr, lub przez tworzenie `PoProcessing2` kontraktu usługi gdzie `PostPurchaseOrder` Trwa operacja `PurchaseOrder2` kontraktu danych.  
+ Na przykład zamówienie zakupu przetwarzania kontraktu usługi o nazwie `PoProcessing` z `PostPurchaseOrder` operacji przyjmuje parametr, który jest zgodny z `PurchaseOrder` kontraktu danych. Jeśli `PurchaseOrder` kontraktu musi zmienić, należy utworzyć nowe kontraktu danych, oznacza to, `PurchaseOrder2`, który zawiera zmiany. Następnie musi obsługiwać wersji na poziomie kontraktu usługi. Na przykład, tworząc `PostPurchaseOrder2` operacji, która przyjmuje `PurchaseOrder2` parametru lub tworząc `PoProcessing2` kontraktu usługi gdzie `PostPurchaseOrder` Trwa operacja `PurchaseOrder2` kontraktu danych.  
   
- Należy pamiętać, że zmiany w kontraktach danych, do których odwołuje się inne kontraktów danych rozszerzać do warstwy modelu usług. Na przykład w poprzednim scenariuszu `PurchaseOrder` kontraktu danych nie trzeba zmieniać. Jednak zawiera element członkowski danych klasy `Customer` kontraktu danych, który z kolei zawiera element członkowski danych klasy `Address` kontraktu danych, które muszą zostać zmienione. W takim przypadku należy utworzyć `Address2` kontrakt danych o wymagane zmiany, `Customer2` kontraktu danych, który zawiera `Address2` element członkowski danych, a `PurchaseOrder2` kontraktu danych, który zawiera `Customer2` element członkowski danych. Tak jak w przypadku poprzednich kontrakt usługi musi również być wersjonowany.  
+ Należy pamiętać, że zmiany w kontraktach danych, które są przywoływane przez inne kontraktów danych także rozszerzyć warstwy modelu usług. Na przykład w poprzednim scenariuszu `PurchaseOrder` kontraktu danych nie trzeba zmieniać. Jednak zawiera element członkowski danych z `Customer` kontraktu danych, który z kolei zawarty składowa danych klasy `Address` kontraktu danych, które muszą zostać zmienione. W takim przypadku należy utworzyć `Address2` kontraktu danych za pomocą wymagane zmiany `Customer2` kontraktu danych, który zawiera `Address2` element członkowski danych, a `PurchaseOrder2` kontraktu danych, który zawiera `Customer2` element członkowski danych. Tak jak w przypadku poprzedniego Umowa serwisowa musi również być poddany kontroli wersji.  
   
- Mimo że w tych przykładach zmiany nazw (przez dodanie "2"), zaleca się zmienić przestrzeni nazw zamiast nazw przez dodanie nowych przestrzeni nazw datę lub numer wersji. Na przykład `http://schemas.contoso.com/2005/05/21/PurchaseOrder` zmienić kontraktu danych `http://schemas.contoso.com/2005/10/14/PurchaseOrder` kontraktu danych.  
+ Mimo że w tych przykładach zmiany nazw (na przykład przez dołączenie "2"), zaleca się zmiany obszarów nazw, zamiast nazwy, dodając nowe przestrzenie nazw za pomocą numeru wersji lub wartość typu date. Na przykład `http://schemas.contoso.com/2005/05/21/PurchaseOrder` kontraktu danych zmienią się `http://schemas.contoso.com/2005/10/14/PurchaseOrder` kontraktu danych.  
   
- Aby uzyskać więcej informacji, zobacz zalecenia: [przechowywanie wersji usługi](../../../docs/framework/wcf/service-versioning.md).  
+ Aby uzyskać więcej informacji zobacz najważniejsze wskazówki: [Przechowywanie wersji usługi](../../../docs/framework/wcf/service-versioning.md).  
   
- Czasami musi zapewniać zgodność strict schematu dla wiadomości wysyłanych przez aplikację, ale nie może polegać na wiadomości przychodzących, które należy ściśle schematu zgodne. W takim przypadku to zagrożenie, że komunikat przychodzący może zawierać nadmiarowe dane. Nadmiarowe wartości są przechowywane i zwrócony przez usługę WCF i w związku z tym wynikiem wiadomości nieprawidłowy schemat. Aby uniknąć tego problemu, funkcja dwustronną komunikację powinna być wyłączona. Istnieją dwa sposoby, w tym celu.  
+ Od czasu do czasu należy zagwarantować zgodność ścisłego schematu dla komunikatów wysyłanych przez aplikację, ale nie można polegać na komunikaty przychodzące być ściśle zgodny ze schematem. W tym przypadku istnieje zagrożenie, że wiadomości przychodzące mogą zawierać nadmiarowe dane. Nadmiarowe wartości są przechowywane i zwrócony przez architekturę WCF, czyli z wiadomości nieprawidłowy schemat. Aby uniknąć tego problemu, funkcja Pełna zgodnooć wersji powinna być wyłączona. Istnieją dwa sposoby, aby to zrobić.  
   
--   Nie należy implementować <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu na żadnym z typów.  
+-   Nie należy implementować <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu na wszystkich typów.  
   
--   Zastosuj <xref:System.ServiceModel.ServiceBehaviorAttribute> do umowy serwisowej z atrybut <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> ustawioną właściwość `true`.  
+-   Zastosuj <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutu do Twojej umowy serwisowej z <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> właściwością `true`.  
   
- Aby uzyskać więcej informacji na temat dwustronną komunikację, zobacz [kontrakty danych zgodne z nowszymi](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Aby uzyskać więcej informacji na temat Pełna zgodnooć wersji, zobacz [kontrakty danych zgodne](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
-## <a name="versioning-when-schema-validation-is-not-required"></a>Przechowywanie wersji podczas sprawdzania poprawności schematu nie jest wymagana  
- Rzadko wymagany jest schemat Strict zgodności. Wiele platform tolerować dodatkowe elementy, które nie dotyczą schematu. Tak długo, jak jest to dopuszczalne, pełny zestaw funkcji opisanych w [przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) i [kontrakty danych zgodne z nowszymi](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) mogą być używane. Zaleca się następujące wskazówki.  
+## <a name="versioning-when-schema-validation-is-not-required"></a>Przechowywanie wersji, gdy sprawdzanie poprawności schematu nie jest wymagane  
+ Rzadko wymagana jest zgodność ścisłego schematu. Wiele platform tolerować dodatkowe elementy, które nie są opisane przez schemat. Tak długo, jak to jest tolerowane, pełny zestaw funkcji opisanych w [przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) i [kontrakty danych zgodne](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) mogą być używane. Zaleca się następujące wskazówki.  
   
- Niektóre wytycznych musi występować dokładnie tak, aby wysłać nowe wersje typu, których można oczekiwać stary lub wysyłania stare hasło, których można oczekiwać nowego. Pozostałych wskazówek nie są ściśle wymagane, ale są wymienione w tym miejscu, ponieważ mogą one mieć wpływ przyszłych wersji schematu.  
+ Niektóre wytyczne musi występować dokładnie wysyłanie nowej wersji typu gdzie stary oczekuje lub wysyłania stare hasło, których oczekuje się nowego. Innych wytycznych, nie są ściśle wymagane, ale są wymienione w tym miejscu, ponieważ one mogą mieć wpływ na przyszłość schematu przechowywania wersji.  
   
-1.  Nie należy próbować wersji kontraktów danych przez typ dziedziczenia. Aby utworzyć nowsze wersje, Zmień na istniejący typ kontraktu danych lub utworzenia nowego typu niepowiązanego.  
+1.  Nie należy próbować wersji kontraktów danych poprzez dziedziczenie typu. Aby utworzyć nowsze wersje, zmień kontraktu danych na istniejący typ lub utworzenia nowego typu niepowiązanego.  
   
-2.  Dziedziczenie wraz z kontraktów danych jest dozwolone, pod warunkiem że dziedziczenia nie jest używana jako mechanizm kontroli wersji, a niektóre zasady zostaną wykonane. Jeśli typ pochodzi z określonego typu podstawowego, nie należy wprowadzać on pochodzić z innym typem bazowym w przyszłych wersjach (o ile nie ma tych samych danych kontraktu). Istnieje jeden wyjątek to: typ można wstawiać do hierarchii między typu kontraktu danych, a jego typ podstawowy, ale tylko wtedy, gdy nie zawiera elementów członkowskich danych z nazwy taki sam jak inne elementy członkowskie w wszystkie możliwe wersje inne typy w hierarchii. Ogólnie rzecz biorąc, przy użyciu elementy członkowskie danych pod tą samą nazwą na różnych poziomach o tej samej hierarchii dziedziczenia może prowadzić do problemów poważne przechowywanie wersji i należy unikać.  
+2.  Dziedziczenie wraz z kontraktów danych jest dozwolone, pod warunkiem, że dziedziczenie nie jest używana jako mechanizm obsługi wersji, a niektóre zasady zostaną wykonane prawidłowo. Jeśli typ pochodzi z określonego typu podstawowego, nie dokonuj on pochodzić z innym typem bazowym w przyszłych wersjach (chyba że ma te same dane umowy). Istnieje jeden wyjątek to: typ można wstawić do hierarchii między typu kontraktu danych i jego typ podstawowy, ale tylko wtedy, gdy nie zawiera elementów członkowskich danych za pomocą te same nazwy jak inne elementy wszystkie możliwe wersje innych typów w hierarchii. Ogólnie rzecz biorąc elementy członkowskie danych przy użyciu tych samych nazw na różnych poziomach w tej samej hierarchii dziedziczenia może prowadzić do problemów poważnych versioning i należy ich unikać.  
   
-3.  Począwszy od pierwszej wersji kontraktu danych, zawsze zaimplementować <xref:System.Runtime.Serialization.IExtensibleDataObject> umożliwiające dwustronną komunikację. Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne z nowszymi](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Bez stosowania tego interfejsu wydaniu wersji co najmniej jednego typu należy wdrożyć go w następnej wersji tego typu.  
+3.  Począwszy od pierwszej wersji kontraktu danych, zawsze wdrożenia <xref:System.Runtime.Serialization.IExtensibleDataObject> umożliwia Pełna zgodnooć wersji. Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Jeśli zostały wydane co najmniej wersji typu bez implementacji interfejsu, należy ją wykonać w następnej wersji typu.  
   
-4.  W nowszych wersjach nie należy zmieniać nazwy kontraktu danych lub przestrzeni nazw. Jeśli zmiana nazwy lub przestrzeni nazw typu podstawowego kontraktu danych, upewnij się zachować nazwie kontraktu danych i przestrzeni nazw przy użyciu odpowiednich mechanizmów, takich jak <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> właściwość <xref:System.Runtime.Serialization.DataContractAttribute>. Aby uzyskać więcej informacji o nazwach, zobacz [nazwy kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4.  W nowszych wersjach nie zmieniaj nazwy kontraktu danych lub obszaru nazw. Jeśli zmiana nazwy lub przestrzeń nazw typu kontraktu danych bazowych upewnij się zachować nazwie kontraktu danych i przestrzeni nazw przy użyciu odpowiednich mechanizmów, takich jak <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> właściwość <xref:System.Runtime.Serialization.DataContractAttribute>. Aby uzyskać więcej informacji na temat nazewnictwa, zobacz [nazwy kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
-5.  W nowszych wersjach nie należy zmieniać nazwy żadnych elementów członkowskich danych. Jeśli zmiana nazwy pola, właściwości lub zdarzenia podstawowy element członkowski danych, użyj `Name` właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> zachować nazwę istniejącego elementu członkowskiego danych.  
+5.  W nowszych wersjach nie należy zmieniać nazw żadnych składowych danych. Jeśli zmiana nazwy pola, właściwości lub zdarzenia bazowego elementu członkowskiego danych, użyj `Name` właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> zachować istniejącą nazwę elementu członkowskiego danych.  
   
-6.  W nowszych wersjach nie należy zmieniać typu pola, właściwości lub zdarzenia podstawowy element członkowski danych w taki sposób, że dane wynikowe kontraktu tego zmian elementów członkowskich danych. Należy pamiętać, że typy interfejsów są równoważne <xref:System.Object> na potrzeby określania kontraktu oczekiwane dane.  
+6.  W nowszych wersjach nie należy zmieniać typu pola, właściwości lub zdarzenia podstawowy element członkowski danych w taki sposób, że dane wynikowe kontrakt dla tej zmiany element członkowski danych. Należy pamiętać, że typy interfejsów są równoważne <xref:System.Object> na potrzeby określania kontraktu oczekiwanych danych.  
   
-7.  W nowszych wersjach, nie należy zmieniać kolejność istniejące elementy członkowskie danych przez dostosowanie wartości właściwości <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu.  
+7.  W nowszych wersjach, nie należy zmieniać kolejność istniejących elementów członkowskich danych przez dostosowanie <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu.  
   
-8.  W nowszych wersjach można dodać nowe elementy członkowskie danych. One zawsze należy wykonać następujące czynności:  
+8.  W nowszych wersjach można dodać nowe elementy członkowskie danych. Powinny one zawsze wykonać następujące czynności:  
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Właściwość zawsze należy pozostawić wartość domyślną `false`.  
   
-    2.  Jeśli wartość domyślną równą `null` lub zero dla elementu członkowskiego jest nie do przyjęcia, metody wywołania zwrotnego należy podawać przy użyciu <xref:System.Runtime.Serialization.OnDeserializingAttribute> do zapewniania domyślnego uzasadnione, w przypadku, gdy element członkowski nie jest obecny w strumienia przychodzącego. Aby uzyskać więcej informacji na temat wywołania zwrotnego, zobacz [wywołania zwrotne serializacji z tolerancją dla wersji](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2.  Jeśli wartość domyślną `null` lub zero dla elementu członkowskiego jest nieodpowiednia, można określić metodę wywołania zwrotnego za pomocą <xref:System.Runtime.Serialization.OnDeserializingAttribute> do zapewniania domyślnego uzasadnione, w przypadku, gdy element członkowski nie jest obecny w strumienia przychodzącego. Aby uzyskać więcej informacji na temat wywołania zwrotnego, zobacz [wywołania zwrotne serializacji z tolerancją dla wersji](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  `Order` Właściwość `DataMemberAttribute` powinien być używany do upewnij się, że wszystkie elementy członkowskie nowo dodanych danych zostaną wyświetlone po istniejące elementy członkowskie danych. Zalecaną metodą zrobić to wygląda następująco: żaden z elementów członkowskich danych w pierwszej wersji kontraktu danych powinien nie ma ich `Order` zestawu właściwości. Wszystkie elementy członkowskie danych dodany w wersji 2 kontraktu danych powinny mieć swoje `Order` właściwością o wartości 2. Wszystkie elementy członkowskie danych dodany w wersji 3 kontraktu danych powinny mieć ich `Order` na 3 i tak dalej. Dopuszcza się ma więcej niż jeden element członkowski danych takie same `Order` numer.  
+    3.  `Order` Właściwość `DataMemberAttribute` należy się upewnić, że wszystkie elementy członkowskie nowo dodane dane zostaną wyświetlone po istniejące elementy członkowskie danych. Zalecanym sposobem w ten sposób jest następująca: Żaden z elementów członkowskich danych w pierwszej wersji kontraktu danych powinny mieć ich `Order` zestawu właściwości. Wszystkie elementy członkowskie danych dodane w wersji 2 kontraktu danych powinny mieć ich `Order` właściwość ustawioną na 2. Wszystkie elementy członkowskie danych dodane w wersji 3 kontraktu danych powinny mieć ich `Order` ustawiony na wartość 3 i tak dalej. Dopuszcza się mieć więcej niż jeden element członkowski danych takie same `Order` numer.  
   
-9. Nie usuwaj elementy członkowskie danych w nowszych wersjach, nawet wtedy, gdy <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> właściwości pozostawało na jego domyślna właściwość `false` w poprzednich wersjach.  
+9. Nie usuwaj elementy członkowskie danych w nowszych wersjach, nawet wtedy, gdy <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> właściwość pozostawało na jego domyślna właściwość `false` w poprzednich wersjach.  
   
-10. Nie zmieniaj `IsRequired` właściwość żadnych istniejących elementów członkowskich danych z wersji do wersji.  
+10. Nie zmieniaj `IsRequired` właściwość wszelkie istniejące elementy członkowskie danych z wersji do wersji.  
   
-11. Dla wymaganych elementów członkowskich danych (jeżeli `IsRequired` jest `true`), nie należy zmieniać `EmitDefaultValue` właściwości z wersji do wersji.  
+11. Dla wymaganych elementów członkowskich danych (gdzie `IsRequired` jest `true`), nie należy zmieniać `EmitDefaultValue` właściwości z wersji do wersji.  
   
-12. Nie należy próbować tworzyć hierarchie rozgałęzione przechowywania wersji. Oznacza to, że zawsze należy ścieżką w co najmniej jeden kierunek z dowolnej wersji do innych wersji przy użyciu tylko zmiany dozwolone przez te wytyczne.  
+12. Nie należy próbować tworzyć hierarchie rozgałęziony przechowywania wersji. Oznacza to, że zawsze należy ścieżki co najmniej w jednym kierunku z dowolnej wersji do innej wersji przy użyciu tylko zmiany dozwolone stosowanie tych wytycznych.  
   
-     Na przykład, jeśli wersja 1 kontraktu danych osoby zawiera tylko nazwa członka danych, nie należy tworzyć 2a wersja kontraktu dodanie tylko wieku element członkowski i wersji 2b dodanie tylko z elementem członkowskim adresu. Będzie 2a 2b wymagałoby usunąć wieku i dodać adres; Przechodzenie w innym kierunku pociąga adres usuwania i dodawania wieku. Usunięcie elementów członkowskich nie jest dozwolone przez te wytyczne.  
+     Na przykład, jeśli wersja 1 kontraktu danych osoby zawiera tylko nazwę składowej danych, nie należy tworzyć 2a wersja kontraktu, dodawanie tylko wiek elementu członkowskiego i wersji 2b dodawanie tylko członek adresu. Zamierzasz 2b z 2a obejmowałaby usunięcie wiek, a dodanie adresu; Możesz to zrobić w innym kierunku będzie pociąga za sobą usunięcie adresu i dodawanie wieku. Usuwanie członków nie jest dozwolona stosowanie tych wytycznych.  
   
-13. Zwykle nie należy tworzyć nowych podtypów istniejące typy kontraktu danych w nowej wersji aplikacji. Ponadto nie należy tworzyć nowych kontraktów danych, które są używane zamiast dane, które elementy członkowskie zadeklarowany jako obiekt lub typów interfejsów. Tworzenie tych nowych klas jest dozwolone tylko wtedy, gdy wiesz, że można dodać nowych typów do listy znanych typów wszystkich wystąpień aplikacji stary. Na przykład w aplikacji w wersji 1, konieczne może być typu z książką kontraktu danych LibraryItem i danych gazecie kontraktu podtypów. LibraryItem będzie zmuszony listę znanych typów, która zawiera książki i gazecie. Załóżmy, że teraz dodać typ magazynu w wersji 2, która jest podtypem LibraryItem. Po wysłaniu wystąpienia magazynu w wersji 2 do wersji 1 kontraktu danych magazynu nie odnaleziono listy znanych typów i jest zgłaszany wyjątek.  
+13. Zazwyczaj nie należy tworzyć nowych podtypów istniejące typy kontraktu danych w nowej wersji aplikacji. Podobnie nie należy tworzyć nowych kontraktów danych, które są używane zamiast dane, które są zadeklarowane elementy członkowskie jako obiekt lub typów interfejsów. Tworzenie tych nowych klas jest dozwolone tylko wtedy, gdy wiesz, dodawać nowych typów do listy znanych typów wszystkich wystąpień starych aplikacji. Na przykład w wersji 1 aplikacji może mieć LibraryItem dane typu z książką kontraktu i gazet podtypy kontraktu. LibraryItem będzie miała listę znanych typów, która zawiera książki i gazet. Załóżmy, że teraz dodać typ magazynu w wersji 2, która jest podtypem LibraryItem. Jeśli wyślesz wystąpienia magazyn w wersji 2 do wersji 1 kontraktu danych magazyn nie znajduje się na liście znanych typów, i zgłaszany jest wyjątek.  
   
-14. Nie należy dodawać lub usuwać elementy członkowskie wyliczenia między wersjami. Należy również nie zmienisz elementy członkowskie wyliczenia, chyba że używana jest właściwość Name na `EnumMemberAttribute` atrybutu, aby zapewnić ich nazwy w modelu kontraktu danych, takie same.  
+14. Należy nie dodawać lub usuwać elementy członkowskie wyliczenia między wersjami. Należy również nie zmienić nazwy elementów członkowskich wyliczenia, chyba że używana jest właściwość nazwa na `EnumMemberAttribute` atrybutu, aby zapewnić ich nazwy w modelu kontraktu danych, takie same.  
   
-15. Kolekcje są wymienne w modelu kontraktu danych, zgodnie z opisem w [typy kolekcji w kontraktach danych](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Dzięki temu precyzyjną elastyczność. Jednak należy się upewnić, że nie mogą przypadkowo zmienisz typ kolekcji w innych niż wymienne sposób od poprzedniej wersji. Na przykład nie należy zmieniać z kolekcji bez dostosowania (czyli bez `CollectionDataContractAttribute` atrybut) dostosowane jedno lub dostosowany zbiór aby stworzyć plik bez dostosowania. Ponadto nie należy zmieniać właściwości na `CollectionDataContractAttribute` od wersji. Dozwolonych jedyna różnica polega na dodaniu właściwości Name i Namespace Jeśli nazwę lub przestrzeń nazw podstawowy typ kolekcji został zmieniony, należy udostępnić jego dane umowy, nazwę i przestrzeń nazw takie same jak w poprzedniej wersji.  
+15. Kolekcje są wymienne w modelu kontraktu danych, zgodnie z opisem w [typy kolekcji w kontraktach danych](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Umożliwia to doskonałe stopień elastyczności. Jednak należy się upewnić, że nie przypadkowo zmienisz typ kolekcji, w innych niż wymienne sposób od poprzedniej wersji. Na przykład nie należy zmieniać z kolekcji, które nie zostały dostosowane (to znaczy bez `CollectionDataContractAttribute` atrybutu) do dostosowanego co najmniej kolekcję dostosowane do jednego z innych dostosowanego przez producenta. Ponadto nie należy zmieniać właściwości na `CollectionDataContractAttribute` od wersji. Jedyna zmiana dozwolone jest dodawanie właściwości nazwy lub Namespace, jeśli zmieniono nazwę lub przestrzeń nazw podstawowy typ kolekcji, a następnie musisz wprowadzić swoje dane umowy, nazwę i przestrzeń nazw taki sam jak w poprzedniej wersji.  
   
- Niektóre z wymienionych w tym miejscu można bezpiecznie zignorować podczas specjalne okoliczności. Upewnij się, że w pełni zrozumieć serializacji, deserializacji i mechanizmach schematu przed odejście od wytyczne.  
+ Niektóre z wymienionych w tym miejscu można bezpiecznie zignorować kiedy szczególne okoliczności. Upewnij się, że w pełni zrozumieć serializacji, deserializacji i mechanizmy schematu przed odejście od wytycznych.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- <xref:System.ServiceModel.ServiceBehaviorAttribute>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
- <xref:System.Runtime.Serialization.ExtensionDataObject>  
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- [Używanie kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [Nazwy kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [Kontrakty danych zgodne z nowszymi wersjami](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
- [Wywołania zwrotne serializacji z tolerancją dla wersji](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- <xref:System.ServiceModel.ServiceBehaviorAttribute>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
+- <xref:System.Runtime.Serialization.ExtensionDataObject>
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>
+- [Używanie kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Nazwy kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [Kontrakty danych zgodne z nowszymi wersjami](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Wywołania zwrotne serializacji z tolerancją dla wersji](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

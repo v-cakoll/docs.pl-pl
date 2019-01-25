@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79350178300dde2896f6b22c68d6062bbb57f700
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 84da3e1e896397b4e5dacec9d7dd0eeeed96d1c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690842"
 ---
 # <a name="task-cancellation"></a>Anulowanie zadania
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> klasy obsługują anulowania przy użyciu tokenów anulowania w .NET Framework. Aby uzyskać więcej informacji, zobacz [anulowanie w zarządzanych wątkach](../../../docs/standard/threading/cancellation-in-managed-threads.md). W klasach Task anulowanie pociąga za sobą współpracę pełnomocnika użytkownika, który reprezentuje możliwości anulowania operacji i kodu, który zażądał anulowania.  Pomyślne anulowanie wiąże się żądania wywołania kodu <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> metoda i zakończeniem operacji w sposób terminowy pełnomocnika użytkownika. Można zakończyć operację przy użyciu jednej z następujących opcji:  
@@ -30,7 +30,7 @@ ms.locfileid: "43865634"
  [!code-csharp[TPL_Cancellation#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/snippet02.cs#02)]
  [!code-vb[TPL_Cancellation#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/module1.vb#02)]  
   
- Aby uzyskać pełniejszy przykład, zobacz [porady: anulowanie zadania i jego elementy podrzędne](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+ Aby uzyskać pełniejszy przykład, zobacz [jak: Anulowanie zadania i jego elementów podrzędnych](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
  Gdy wystąpienia zadania wykryje <xref:System.OperationCanceledException> zgłaszany przez kod użytkownika, porównuje token wyjątku ze skojarzonym tokenem (jeden, który został przekazany do interfejsu API, który utworzył zadanie). Jeśli są takie same, jak i token <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> właściwość zwraca wartość true, zadanie interpretuje to jako potwierdzenie anulowania i przechodzi do stanu Canceled. Jeśli nie używasz <xref:System.Threading.Tasks.Task.Wait%2A> lub <xref:System.Threading.Tasks.Task.WaitAll%2A> metoda oczekiwania dla zadania, wówczas zadanie ustawienie tylko jego stan <xref:System.Threading.Tasks.TaskStatus.Canceled>.  
   
@@ -42,5 +42,5 @@ ms.locfileid: "43865634"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Anulowanie w zarządzanych wątkach](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
-- [Instrukcje: anulowanie zadania i jego elementów podrzędnych](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+- [Anulowanie w zarządzanych wątkach](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [Instrukcje: Anulowanie zadania i jego elementów podrzędnych](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

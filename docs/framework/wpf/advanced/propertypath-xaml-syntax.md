@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648767"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath — Składnia XAML
 <xref:System.Windows.PropertyPath> Obiekt obsługuje złożone wbudowane [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] składnię ustawiania różne właściwości, które przyjmują <xref:System.Windows.PropertyPath> typ jako ich wartość. Ten temat dokumenty <xref:System.Windows.PropertyPath> składni, jakie mają zastosowanie do powiązania i animacji składni.  
@@ -196,7 +196,7 @@ or
   
  Ogólnie rzecz biorąc <xref:System.Windows.PropertyPath> jest przeznaczony do stosowania dwa różne konstruktory, jeden dla powiązań i najprostszą zastosowania animacji i jeden dla użycia złożonej animacji. Użyj <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> podpisu dla powiązania użycia, gdy obiekt jest ciąg. Użyj <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> podpis dla jednoetapowy Animacja ścieżki, w którym obiekt jest <xref:System.Windows.DependencyProperty>. Użyj <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> podpis dla złożonych animacji. Ten konstruktor ostatnie używa ciąg tokenu dla pierwszego parametru i tablicę obiektów, które wypełniają pozycji w ciąg tokenu, aby zdefiniować relację ścieżki właściwości.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.PropertyPath>  
- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.PropertyPath>
+- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe54aed47d240be37ab9dbc5381235c4e962f1f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd9bdd7ce0a5d9cfde91143cc5dcfdfc834abb18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588265"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc — Metoda
-Służy jako otoka logiczne dla odpowiedniej funkcji Win32. Implementacja Win32 `VirtualAlloc` rezerwuje lub zatwierdza region stron w wirtualnej przestrzeni adresowej procesu wywołującego.  
+Służy jako logiczne otoki dla odpowiedniej funkcji Win32. Implementacja Win32 `VirtualAlloc` rezerwuje lub zwalnia region stron w wirtualnej przestrzeni adresowej procesu wywołującego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,10 +42,10 @@ HRESULT VirtualAlloc (
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [in] Wskaźnik do regionu przydzielić adres początkowy.  
+ [in] Wskaźnik do adres początkowy regionów do przydzielenia.  
   
  `dwSize`  
- [in] Rozmiar w bajtach regionu.  
+ [in] Rozmiar w bajtach, regionu.  
   
  `flAllocationType`  
  [in] Typ alokacji pamięci.  
@@ -54,36 +54,36 @@ HRESULT VirtualAlloc (
  [in] Ochrona pamięci dla regionu stron do przydzielenia.  
   
  `dwCriticalLevel`  
- [in] [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) wartość, która wskazuje wpływ błąd alokacji.  
+ [in] [Ememorycriticallevel —](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) wartość, która wskazuje wpływ wystąpił błąd alokacji.  
   
  `ppMem`  
- [out] Wskaźnik do adres początkowy alokacji pamięci lub wartość null, jeśli nie można spełnić żądania.  
+ [out] Wskaźnik na adres początkowy ilość przydzielonej pamięci lub wartość null, jeśli żądanie nie mogło zostać spełnione.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`VirtualAlloc` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`VirtualAlloc` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Za mało pamięci był dostępny do wykonania żądania alokacji|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Za mało pamięci była dostępna do wykonania żądania alokacji|  
   
 ## <a name="remarks"></a>Uwagi  
- Zarezerwować region przestrzeni adresowej procesu, wywołując `VirtualAlloc`. `pAddress` Parametr zawiera początkowy adres ma bloku pamięci. Ten parametr jest zwykle ustawiana na wartość null. System operacyjny jest rejestrowana zakresy wolnego adresu dostępne dla procesu. A `pAddress` wartość null powoduje, że system do zarezerwowania region wszędzie tam, gdzie za stosowny. Alternatywnie możesz podać określony adres początkowy dla bloku pamięci. W obu przypadkach parametr wyjściowy `ppMem` jest zwracana jako wskaźnik do alokacji pamięci. Ta funkcja zwraca wartość HRESULT.  
+ Możesz zarezerwować region przestrzeni adresowej procesu, wywołując `VirtualAlloc`. `pAddress` Parametr zawiera adres początkowy bloku pamięci, które chcesz. Ten parametr jest zazwyczaj ustawiony na wartość null. System operacyjny jest rejestrowana wolnego adresu zakresy dostępne w danym procesie. A `pAddress` wartości null powoduje, że systemu, aby zarezerwować region wszędzie tam, gdzie za stosowny. Alternatywnie możesz podać określony adres początkowy dla bloku pamięci. W obu przypadkach, parametr wyjściowy `ppMem` jest zwracana jako wskaźnik do alokacji pamięci. Ta funkcja zwraca wartość HRESULT.  
   
- Win32 `VirtualAlloc` funkcja nie ma `ppMem` parametr, a zamiast tego zwraca wskaźnik do alokacji pamięci. Aby uzyskać więcej informacji zobacz dokumentację platformy systemu Windows.  
+ Win32 `VirtualAlloc` funkcja nie ma `ppMem` parametru, a zamiast tego zwraca wskaźnik do ilość przydzielonej pamięci. Aby uzyskać więcej informacji zobacz dokumentację platformy Windows.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IHostMemoryManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IHostMemoryManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

@@ -2,22 +2,22 @@
 title: Wprowadzenie do literałów XML w Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: bac0a4a297dcecce5465e5a1a1c02e4cbc9848a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6c4773236c3af83603033c74e2e12e9f47a86b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624031"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Wprowadzenie do literałów XML w Visual Basic
-Ta sekcja zawiera informacje o tworzeniu drzew XML w Visual Basic.  
+Ta sekcja zawiera informacje dotyczące tworzenia drzew XML w Visual Basic.  
   
- Aby dowiedzieć się, jak przy użyciu wyników zapytania LINQ jako zawartość dla drzewa XML, zobacz [funkcjonalności konstrukcji (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Aby dowiedzieć się, jak za pomocą wyników zapytania LINQ jako zawartość dla drzewa XML, zobacz [konstrukcja funkcjonalna (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- Aby uzyskać więcej informacji w literałach XML w Visual Basic, zobacz [Przegląd LINQ do XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Aby uzyskać więcej informacji na temat literałów XML w Visual Basic, zobacz [Przegląd LINQ to XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
-## <a name="creating-xml-trees"></a>Tworzenie XML drzewa  
- Poniższy przykład przedstawia sposób tworzenia <xref:System.Xml.Linq.XElement>, w tym przypadku `contacts`:  
+## <a name="creating-xml-trees"></a>Tworzenie drzew XML  
+ Poniższy przykład pokazuje, jak utworzyć <xref:System.Xml.Linq.XElement>, w tym przypadku `contacts`:  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -35,8 +35,8 @@ Dim contacts As XElement = _
     </Contacts>  
 ```  
   
-### <a name="creating-an-xelement-with-simple-content"></a>Tworzenie XElement o zawartości prostej  
- Można utworzyć <xref:System.Xml.Linq.XElement> prostej zawartości, który zawiera w następujący sposób:  
+### <a name="creating-an-xelement-with-simple-content"></a>Tworzenie XElement za pomocą prostej zawartości  
+ Możesz utworzyć <xref:System.Xml.Linq.XElement> prostej zawartości, która zawiera w następujący sposób:  
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
@@ -50,7 +50,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="creating-an-empty-element"></a>Tworzenie pustego elementu  
- Możesz utworzyć pustą <xref:System.Xml.Linq.XElement>w następujący sposób:  
+ Możesz utworzyć pustą <xref:System.Xml.Linq.XElement>, wykonując następujące czynności:  
   
 ```vb  
 Dim n As XElement = <Customer/>  
@@ -64,13 +64,13 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="using-embedded-expressions"></a>Za pomocą wyrażenia osadzone  
- Ważna cecha literałów XML to, czy umożliwiają one wyrażenia osadzone. Wyrażenia osadzone umożliwiają oszacować wyrażenia i Wstaw wyniki wyrażenia do drzewa XML. Jeśli wyrażenie ma typ <xref:System.Xml.Linq.XElement>, element znajduje się w drzewie. Jeśli wyrażenie ma typ <xref:System.Xml.Linq.XAttribute>, atrybut zostaną wstawione do drzewa. Elementy i atrybuty można wstawiać do drzewa, tylko gdy są one prawidłowe.  
+ Ważną funkcją literałów XML jest, że zezwalają na wyrażenia osadzone. Wyrażenia osadzone umożliwiają ocena wyrażenia i Wstaw wyniki wyrażenia do drzewa XML. Jeśli wyrażenie typu <xref:System.Xml.Linq.XElement>, element jest wstawiany do drzewa. Jeśli wyrażenie typu <xref:System.Xml.Linq.XAttribute>, atrybut jest wstawiany do drzewa. W drzewie, tylko gdy są one prawidłowe, można wstawić elementów i atrybutów.  
   
- Należy pamiętać, że tylko jedno wyrażenie można przejść do wyrażenia osadzonego. Nie można osadzić użycie wielu instrukcji. Jeśli wyrażenie wykracza poza jednym wierszu, należy użyć znak kontynuacji wiersza.  
+ Należy zauważyć pojedyncze wyrażenie mogą być wprowadzanie do wyrażenia osadzone. Nie można osadzić użycie wielu instrukcji. Jeśli wyrażenie wykracza poza jednym wierszu, należy użyć wstawić znak kontynuacji wiersza.  
   
- Użycie wyrażenia osadzonego, aby dodać istniejące węzły (w tym elementy) i atrybuty do nowego drzew XML i jeśli przez istniejące węzły są już element nadrzędny, węzły są klonowane. Nowo sklonowanego węzły są dołączone do nowego drzew XML. Jeśli istniejących węzłów nie jest elementem nadrzędnym, węzły są po prostu dołączone do nowego drzew XML. W ostatnim przykładzie w tym temacie pokazano to.  
+ Jeśli używasz osadzone wyrażenie Aby dodać istniejące węzły (w tym elementy) i atrybuty do nowego drzewa XML, a jeśli istniejące węzły są już elementem nadrzędnym w węzłach są klonowane. Nowo sklonowanego węzły są dołączone do nowego drzewa XML. Jeśli istniejące węzły są elementu nadrzędnego, węzły są po prostu dołączone do nowego drzewa XML. Przykład ostatniego, w tym temacie przedstawia to.  
   
- W poniższym przykładzie użyto wyrażenia osadzonego można wstawić elementu do drzewa:  
+ W poniższym przykładzie użyto wyrażenia osadzone, aby wstawić element do drzewa:  
   
 ```vb  
 xmlTree1 As XElement = _  
@@ -92,8 +92,8 @@ Console.WriteLine(xmlTree2)
 </Root>  
 ```  
   
-### <a name="using-embedded-expressions-for-content"></a>Za pomocą wyrażenia osadzone zawartości  
- Można użyć wyrażenia osadzonego do dostarczania zawartości elementu:  
+### <a name="using-embedded-expressions-for-content"></a>Za pomocą wyrażenia osadzone w zawartości  
+ Wyrażenia osadzone służy do dostarczania zawartości elementu:  
   
 ```vb  
 Dim str As String  
@@ -108,8 +108,8 @@ Console.WriteLine(root)
 <Root>Some content</Root>  
 ```  
   
-### <a name="using-a-linq-query-in-an-embedded-expression"></a>W wyrażeniu osadzonych za pomocą zapytań LINQ  
- Można użyć wyników zapytania LINQ dla zawartości elementu:  
+### <a name="using-a-linq-query-in-an-embedded-expression"></a>W wyrażeniu Embedded za pomocą zapytań LINQ  
+ Można użyć z wynikami zapytania LINQ dla zawartości elementu:  
   
 ```vb  
 Dim arr As Integer() = {1, 2, 3}  
@@ -132,8 +132,8 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="using-embedded-expressions-for-node-names"></a>Dla nazwy węzła przy użyciu wyrażenia osadzone  
- Wyrażenia osadzone umożliwia również obliczyć nazwy atrybutów, wartości atrybutu nazwy elementów i wartości elementów:  
+### <a name="using-embedded-expressions-for-node-names"></a>Za pomocą wyrażenia osadzone dla nazwy węzła  
+ Wyrażenia osadzone umożliwia również obliczyć nazwy atrybutu, wartości atrybutów, nazwy elementów i wartości elementów:  
   
 ```vb  
 Dim eleName As String = "ele"  
@@ -157,8 +157,8 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>Vs w klonowania. Dołączanie  
- Jak wspomniano wcześniej, jeśli używasz wyrażenia osadzonego dodać istniejących węzłów (w tym elementy) i atrybuty do nowego drzew XML, jeśli istniejące węzły są już element nadrzędny, węzły są klonowane i nowo sklonowanego węzły są dołączone do nowego drzew XML. Jeśli istniejących węzłów nie jest elementem nadrzędnym, po prostu są one dołączone do nowego drzew XML.  
+### <a name="cloning-vs-attaching"></a>Klonowanie a Dołączanie  
+ Jak wspomniano wcześniej, korzystając z wyrażenia osadzone dodać istniejące węzły (w tym elementy) i atrybuty do nowego drzewa XML, jeśli istniejące węzły są już nadrzędny, węzły są klonowane, a nowo sklonowanego węzły są dołączone do nowego drzewa XML. Jeśli istniejące węzły są elementu nadrzędnego, są one po prostu dołączone do nowego drzewa XML.  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -195,5 +195,5 @@ Child1 was cloned
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie drzewa XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie drzew XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-ms.openlocfilehash: ba316aeda0a0a7e80af8e37a6a62e88652b9635b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8e598dde0d85b1d7d4208bf2475a0f6f6eee34a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700991"
 ---
 # <a name="expose-your-data-as-a-service-wcf-data-services"></a>Uwidacznianie danych jako usługi (WCF Data Services)
 
 Usługi danych WCF jest zintegrowany z programem Visual Studio, aby umożliwić łatwiejsze zdefiniowanie usług, aby uwidocznić dane jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Tworzenie usługi danych, która uwidoczni źródło OData obejmuje następujące podstawowe kroki:
 
-1.  **Zdefiniowanie modelu danych.** Usługi danych WCF natywnie obsługuje modele danych, które są oparte na [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Aby uzyskać więcej informacji, zobacz [porady: Tworzenie usługi danych przy użyciu źródła danych ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).
+1.  **Zdefiniowanie modelu danych.** Usługi danych WCF natywnie obsługuje modele danych, które są oparte na [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).
 
-     Usługi danych WCF obsługuje również modeli danych, które są na podstawie wspólnego języka wspólnego (CLR) obiektów, które zwracają wystąpienie <xref:System.Linq.IQueryable%601> interfejsu. Pozwala na wdrażanie usług danych, które są oparte na listach, tablice i kolekcje w programie .NET Framework. Aby włączyć tworzenie, aktualizowanie i usuwanie operacji za pośrednictwem tych struktur danych, należy także zaimplementować <xref:System.Data.Services.IUpdatable> interfejsu. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie usługi danych przy użyciu dostawcy odbicia](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).
+     Usługi danych WCF obsługuje również modeli danych, które są na podstawie wspólnego języka wspólnego (CLR) obiektów, które zwracają wystąpienie <xref:System.Linq.IQueryable%601> interfejsu. Pozwala na wdrażanie usług danych, które są oparte na listach, tablice i kolekcje w programie .NET Framework. Aby włączyć tworzenie, aktualizowanie i usuwanie operacji za pośrednictwem tych struktur danych, należy także zaimplementować <xref:System.Data.Services.IUpdatable> interfejsu. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi danych przy użyciu dostawcy odbicia](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).
 
      Dla bardziej zaawansowanych scenariuszy usługi danych WCF zawiera zestaw dostawców, które umożliwiają zdefiniowanie modelu danych na podstawie typów danych z późnym wiązaniem. Aby uzyskać więcej informacji, zobacz [dostawcy usługi danych niestandardowych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).
 
@@ -29,7 +29,7 @@ Usługi danych WCF jest zintegrowany z programem Visual Studio, aby umożliwić 
 
 Na przykład jak utworzyć usługę danych prostą, opartą na bazie danych Northwind, zobacz [Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 - [Omówienie](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder... ctor
+title: Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor
 ms.date: 03/30/2017
 ms.topic: reference
 api_name:
@@ -9,14 +9,14 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6b44b13c-7a23-4df2-8f9f-45e2b1430002
-ms.openlocfilehash: aca5a6ad07d96e08203e9e1cad7dec632035caf0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b63f8917d7af21c165a16bd45a83e774bcec6e1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551608"
 ---
-# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderctor"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder... ctor
+# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderctor"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor
 Tworzy wystąpienie [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md) klasy.  
   
 ## <a name="syntax"></a>Składnia  
@@ -32,7 +32,7 @@ public ClientActivityBuilder(OperationDescription operationDescription, string c
   
  Opisuje operacji do wykonania działania przepływu pracy, który ma zostać wygenerowane, łącznie z nazwą operacji, zwracany typ i informacje o parametrze. Wartość tego parametru nie może być **null**. Powinien on zawierać synchroniczne operacji, który używa kontraktu komunikatu i używa argumentu z jednej wiadomości. Jeśli te warunki nie są spełnione, wynik środowiska wykonawczego przy użyciu konstruktora i inne metody tej klasy jest nieokreślona.  
   
- *ConfigurationName*  
+ *configurationName*  
   
  Określa nazwę konfiguracji punktu końcowego. Wartość tego parametru nie może być albo **null** lub jest pusty. Jeśli te warunki nie są spełnione, wynik środowiska wykonawczego przy użyciu konstruktora i inne metody tej klasy jest nieokreślona.  
   
@@ -40,5 +40,5 @@ public ClientActivityBuilder(OperationDescription operationDescription, string c
   
  Określa obszar nazw usługi dla operacji. Wartość tego parametru nie może być albo **null** lub jest pusty. Jeśli te warunki nie są spełnione, wynik środowiska wykonawczego przy użyciu konstruktora i inne metody tej klasy jest nieokreślona.  
   
-## <a name="see-also"></a>Zobacz też  
- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)
+## <a name="see-also"></a>Zobacz także
+- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)

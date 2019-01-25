@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0735e4c59ba609ed87d61aca737c4f8a4dab757a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a3d784aa9d6d71418e2a48f56c7de08d3fe3d80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694493"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a>ICorProfilerCallback::ManagedToUnmanagedTransition — Metoda
-Powiadamia profilera, że nastąpiło przejście z kodu zarządzanego do kodu niezarządzanego.  
+Powiadamia program profilujący, że nastąpiło przejście z kodu zarządzanego do kodu niezarządzanego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,13 +40,13 @@ HRESULT ManagedToUnmanagedTransition(
  [in] Identyfikator funkcji, która jest wywoływana.  
   
  `reason`  
- [in] Wartość [cor_prf_transition_reason —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) wyliczenia, która wskazuje, czy przejście wystąpiły z powodu wywołania do kodu niezarządzanego z kodu zarządzanego lub ze względu na powrót z funkcją zarządzaną wywoływane przez jeden z niezarządzanych.  
+ [in] Wartość [cor_prf_transition_reason —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) wyliczenia, która wskazuje, czy przejście wystąpiły z powodu wywołania kodu niezarządzanego z kodu zarządzanego lub ze względu na powrót z funkcji zarządzanej wywoływane przez jeden z niezarządzanego.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wartość `reason` jest COR_PRF_TRANSITION_CALL, funkcja identyfikator jest, że niezarządzanych funkcji, która będzie nigdy nie zostały skompilowane przy użyciu kompilatora just in time. Funkcje niezarządzane mają podstawowe informacje skojarzone z nimi, takie jak nazwa i niektóre metadane. Jeśli niezarządzanej funkcji została wywołana przy użyciu platformy niejawne wywołania (PInvoke), środowisko uruchomieniowe nie może określić docelowy wywołania i wartość `functionId` będzie mieć wartość null. Aby uzyskać więcej informacji na niejawna funkcja PInvoke, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).  
+ Jeśli wartość `reason` jest COR_PRF_TRANSITION_CALL, funkcja identyfikator to, że funkcji niezarządzanych, który będzie nigdy nie zostały skompilowane przy użyciu kompilatora just-in-time. Funkcje niezarządzane mają podstawowe informacje z nimi związane, takie jak nazwa i niektóre metadane. Jeśli niezarządzane funkcja została wywołana przy użyciu platformy niejawne wywołania (funkcja PInvoke), środowisko uruchomieniowe nie może określić docelową wywołania i wartości `functionId` będzie miał wartość null. Aby uzyskać więcej informacji na temat niejawna funkcja PInvoke, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -54,7 +54,7 @@ HRESULT ManagedToUnmanagedTransition(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [UnmanagedToManagedTransition, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)  
- [Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [UnmanagedToManagedTransition, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)
+- [Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)

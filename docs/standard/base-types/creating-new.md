@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 477791a0d62186b6cb88d0fae3aa9b4e38b3ef35
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659504"
 ---
 # <a name="creating-new-strings-in-net"></a>Tworzenie nowych ciągów w programie .NET
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Umożliwia ciągów, które ma zostać utworzony przy użyciu przypisanie proste, a także przeciążenia konstruktora klasy obsługuje tworzenie ciągów za pomocą kilku różnych parametrów. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Również udostępnia kilka metod w <xref:System.String?displayProperty=nameWithType> klasy, które tworzyć nowe parametry obiekty, łącząc kilka ciągów, tablic ciągów, lub obiektów.  
@@ -72,7 +72,7 @@ ms.locfileid: "43870113"
  [!code-csharp[Strings.Creating#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#4)]
  [!code-vb[Strings.Creating#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#4)]  
   
-### <a name="copyto"></a>Funkcja CopyTo  
+### <a name="copyto"></a>CopyTo  
  **String.CopyTo** metoda kopiuje części ciągu do tablicy znaków. Można określić indeksu początku ciągu i liczba znaków do skopiowania. Ta metoda przyjmuje indeks źródła, tablicę znaków, indeksu docelowego i liczba znaków do skopiowania. Wszystkie indeksy są oparte na zerze.  
   
  W poniższym przykładzie użyto **CopyTo** metodę, aby skopiować znaki wyraz "Hello" z ciągu obiektu do pierwszej pozycji indeksu tablicy znaków.  
@@ -82,5 +82,5 @@ ms.locfileid: "43870113"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)
 - [Złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md)

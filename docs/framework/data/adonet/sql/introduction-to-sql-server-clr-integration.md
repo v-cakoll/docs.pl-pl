@@ -2,12 +2,12 @@
 title: Wprowadzenie do Integracja środowiska CLR programu SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: df5ead7d640446a3832b485ecf82cd4a2a11b1fb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 215230486cb3e1ebee4cb40280b91c8bf9f6c799
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714935"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Wprowadzenie do Integracja środowiska CLR programu SQL Server
 Środowisko uruchomieniowe języka wspólnego (CLR) to serce platformy Microsoft .NET Framework i oferuje środowisko wykonywania dla całego kodu .NET Framework. Kod, który jest uruchamiany w ramach środowiska CLR jest określany jako kod zarządzany. Środowisko CLR oferuje różnych funkcji i usług wymaganych do wykonania programu, w tym just-in-time (JIT) kompilacja, przydzielanie i zarządzanie pamięcią, wymuszanie bezpieczeństwo typów, obsługa wyjątków, zarządzanie wątkami i zabezpieczeń.  
@@ -18,7 +18,7 @@ ms.locfileid: "43523008"
   
  Ta sekcja ma zapewnić tylko wystarczających informacji, aby rozpocząć programowanie z użyciem integracji środowiska CLR programu SQL Server i nie jest przeznaczona do wyczerpująca. Aby uzyskać szczegółowe informacje Zobacz wersję programu SQL Server — książki Online dla wersji programu SQL Server, którego używasz.  
   
- **SQL Server — książki Online**  
+ **SQL Server Books Online**  
   
 -   [Omówienie integracji środowiska uruchomieniowego (języka wspólnego CLR) w usłudze wspólnego języka](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
@@ -36,14 +36,14 @@ GO
   
  Aby uzyskać szczegółowe informacje Zobacz wersję programu SQL Server — książki Online dla wersji programu SQL Server, którego używasz.  
   
- **SQL Server — książki Online**  
+ **SQL Server Books Online**  
   
 -   [Włączanie integracji środowiska CLR](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>Wdrażanie zestawu CLR  
  Po metodach CLR zostały przetestowane i zweryfikowane na serwerze testowym, mogą być rozproszone na serwerach produkcyjnych przy użyciu skryptu wdrażania. Ręcznie lub za pomocą programu SQL Server Management Studio można wygenerować skryptu wdrażania. Aby uzyskać szczegółowe informacje Zobacz wersję programu SQL Server — książki Online dla wersji programu SQL Server, którego używasz.  
   
- **SQL Server — książki Online**  
+ **SQL Server Books Online**  
   
 1.  [Wdrażanie obiekty bazy danych środowiska CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
@@ -52,7 +52,7 @@ GO
   
  Aby uzyskać szczegółowe informacje Zobacz wersję programu SQL Server — książki Online dla wersji programu SQL Server, którego używasz.  
   
- **SQL Server — książki Online**  
+ **SQL Server Books Online**  
   
 -   [Zabezpieczenia integracji CLR](https://go.microsoft.com/fwlink/?LinkId=115234)  
   
@@ -61,11 +61,11 @@ GO
   
  Aby uzyskać szczegółowe informacje Zobacz wersję programu SQL Server — książki Online dla wersji programu SQL Server, którego używasz.  
   
- **SQL Server — książki Online**  
+ **SQL Server Books Online**  
   
 -   [Debugowanie obiektów bazy danych środowiska CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [Zabezpieczenia dostępu kodu i ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
+- [Zabezpieczenia dostępu kodu i ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

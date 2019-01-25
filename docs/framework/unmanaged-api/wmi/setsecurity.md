@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fd354e1103832abee7f634eace3dd6defa8b646
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b3e8ddb34849611daae4dfa1d2762a25ac5cf82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721148"
 ---
-# <a name="setsecurity-function"></a>Funkcja SetSecurity
-Pobiera token personifikacji skojarzone z bieżącego wątku.   
+# <a name="setsecurity-function"></a>SetSecurity — funkcja
+Pobiera token personifikacji skojarzone z bieżącym wątkiem.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -39,23 +39,23 @@ HRESULT SetSecurity (
 
 ## <a name="parameters"></a>Parametry
 
-`pNeedToReset` [out] Po powrocie z funkcji zawiera wskaźnik do `boolean` wskazująca, czy token powinni resetować wywołując [ResetSecurity](resetsecurity.md) funkcji.  
+`pNeedToReset` [out] Po powrocie z tej funkcji zawiera wskaźnik do `boolean` oznacza to, czy token powinien być resetowany przez wywołanie metody [ResetSecurity](resetsecurity.md) funkcji.  
 
 `token`  
-[out] Po powrocie z funkcji zawiera wskaźnik do dojścia token personifikacji skojarzone z bieżącego wątku. Wartość może być `null` Jeśli jest nie tokenu skojarzonego z bieżącego wątku. 
+[out] Po powrocie z tej funkcji zawiera wskaźnik do uchwytu token personifikacji skojarzone z bieżącym wątkiem. Wartość może być `null` czy token nie jest skojarzony z bieżącym wątkiem. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja zakończy się powodzeniem, jest zwracana wartość `S_OK` (0).
+Jeśli funkcja się powiedzie, wartość zwracana jest `S_OK` (0).
 
-Jeśli funkcja nie powiedzie się, wartość zwracana jest kodu zera błędu. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetErrorInfo](geterrorinfo.md) funkcji.
+Jeśli funkcja zawiedzie, wartość zwracana jest kod błędu różny od zera. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [geterrorinfo —](geterrorinfo.md) funkcji.
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

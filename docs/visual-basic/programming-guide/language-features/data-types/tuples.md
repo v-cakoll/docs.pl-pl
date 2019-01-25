@@ -4,12 +4,12 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: c0198cde88b66f5e115c82b5454bd8a32db7ef96
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 146e9c2360cea153d2f487769d5b983516861e8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694736"
 ---
 # <a name="tuples-visual-basic"></a>Krotki (Visual Basic)
 
@@ -173,4 +173,4 @@ Poniższy przykład tworzy spójną kolekcję, konwertuje go na .NET **krotki** 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka Visual Basic](index.md)  
+- [Dokumentacja języka Visual Basic](index.md)

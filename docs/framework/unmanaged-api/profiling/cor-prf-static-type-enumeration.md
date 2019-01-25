@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc610f4cc34b256867396a3390d5ccd0822f6454
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34a2ca5b505c504115af47402c3d92a05ec0676f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737640"
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE — Wyliczenie
-Wskazuje, czy pole jest statyczny, a jeśli tak, statyczne jakości dotyczący pola. Wartości te można łączyć, używając operacji lub wskaż, czy pole ma wiele różnych klas statycznych.  
+Wskazuje, czy pole jest statyczna, a jeśli tak, statycznej jakości, która odnosi się do pola. Te wartości można łączyć, używając operacja bitowa lub w celu wskazania, że pole ma wiele różnych klas statycznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,13 +43,13 @@ typedef enum {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_NOT_A_STATIC`|Pole nie jest statyczne.|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|To pole jest statyczna domeny aplikacji.|  
-|`COR_PRF_FIELD_THREAD_STATIC`|To pole jest statyczne dla wątku.|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|To pole jest kontekstu statycznego.|  
-|`COR_PRF_FIELD_RVA_STATIC`|W polu jest adres względny wirtualnych (RVA)-statycznych.|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|Pole nie jest statyczna domeny aplikacji.|  
+|`COR_PRF_FIELD_THREAD_STATIC`|Pole nie jest statyczna wątku.|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|Pole nie jest statyczna kontekstu.|  
+|`COR_PRF_FIELD_RVA_STATIC`|To pole jest względnych adresów wirtualnych (RVA) — statyczne.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -56,5 +57,5 @@ typedef enum {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac4a8a0c13ba6aa0d5c65ec7fa1aa3b771c964eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7f20dec86a85be85472037f58a2bd2002d9be1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620402"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags — Wyliczenie
-Określa stan wątku, na którym jest uruchamiany zarządzany Asystent debugowania (MDA).  
+Określa stan wątku, na którym jest uruchamiany zarządzanego Asystenta debugowania (MDA).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,13 +38,13 @@ typedef enum CorDebugMDAFlags {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`MDA_FLAG_SLIP`|Wątek, na którym zostało zainicjowane MDA jest przesuwane, ponieważ MDA zostało zainicjowane.|  
+|`MDA_FLAG_SLIP`|Wątku, na którym zostało wywołane MDA jest przesuwane, ponieważ zostało wywołane MDA.|  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy stos wywołań nie opisano, gdzie MDA pierwotnie został zgłoszony, wątek jest uważany za *poślizgiem*. Jest to rzadko okoliczności spowodowanych wykonanie wątku Nieprawidłowa operacja podczas zamykania programu.  
+ Gdy stos wywołań nie jest już w tym artykule opisano gdzie MDA pierwotnie został zgłoszony, wątek jest uważany za *poślizgiem*. Jest to nietypowych okoliczności spowodowanym ulepszonym wykonanie wątku Nieprawidłowa operacja podczas zamykania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -52,5 +52,5 @@ typedef enum CorDebugMDAFlags {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

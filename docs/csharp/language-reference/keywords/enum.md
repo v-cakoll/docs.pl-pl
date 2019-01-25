@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: f2439bb955f821b58acc818ede308c379d5b68a6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 768d8da320022a686f2ecfe5222880eccacee7dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727641"
 ---
 # <a name="enum-c-reference"></a>enum (odwołanie w C#)
 
@@ -98,11 +98,11 @@ Jeśli usuniesz `Flags`, w przykładzie są wyświetlane następujące wartości
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)  
-- [Typy wyliczeniowe](../../programming-guide/enumeration-types.md)  
-- [Słowa kluczowe języka C#](index.md)  
-- [Tabela typów całkowitych](integral-types-table.md)  
-- [Tabela typów wbudowanych](built-in-types-table.md)  
-- [Tabela niejawnych konwersji liczbowych](implicit-numeric-conversions-table.md)  
-- [Tabela jawnych konwersji liczbowych](explicit-numeric-conversions-table.md)  
+- [Dokumentacja języka C#](../index.md)
+- [Typy wyliczeniowe](../../programming-guide/enumeration-types.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Tabela typów całkowitych](integral-types-table.md)
+- [Tabela typów wbudowanych](built-in-types-table.md)
+- [Tabela niejawnych konwersji liczbowych](implicit-numeric-conversions-table.md)
+- [Tabela jawnych konwersji liczbowych](explicit-numeric-conversions-table.md)
 - [Konwencje nazewnictwa typu wyliczeniowego](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

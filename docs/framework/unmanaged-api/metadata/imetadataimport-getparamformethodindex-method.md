@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31096f7a5fd23bbd54f2beb9258c9d529e94f373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28d4c9098076699de250ab1c43e5f9e353dc9752
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740115"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex — Metoda
-Pobiera token, który reprezentuje określony parametr metody reprezentowany przez określony token MethodDef.  
+Pobiera token, który reprezentuje określony parametr metody reprezentowanej przez określony token MethodDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,23 +39,23 @@ HRESULT GetParamForMethodIndex (
   
 #### <a name="parameters"></a>Parametry  
  `md`  
- [in] Token, który reprezentuje metodę, aby zwrócić token parametr dla.  
+ [in] Token, który reprezentuje metodę do zwracania tokenu parametr dla.  
   
  `ulParamSeq`  
- [in] {Numer porządkowy pozycja na liście parametrów gdzie występuje żądanego parametru. Parametry są numerowane, począwszy od jednej z wartości zwracanej przez metodę w pozycji zero.  
+ [in] Numer porządkowy pozycja na liście parametrów realizowana żądanego parametru. Parametry są ponumerowane, zaczynając od jednego z wartością zwracaną metody w pozycji zero.  
   
  `ppd`  
- [out] Wskaźnik do ParamDef token, który reprezentuje żądany parametr.  
+ [out] Wskaźnik do tokenu ParamDef, który reprezentuje żądany parametr.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

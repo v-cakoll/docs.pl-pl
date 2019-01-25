@@ -5,32 +5,32 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: ed0f638975c232638de4a46db5db82bb1e85668c
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 36b1ad197b5c8e38c77a9a6a92ba1b3b659efbb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207472"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661359"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009— Funkcje językowe
-XAML 2009 jest skrócona termin nowe funkcje języka XAML, które rozszerzyć istniejącą specyfikacja języka XAML. XAML 2009 wprowadzono kilka nowych dyrektywy oraz elementów składowych. Obejmują one [x: Arguments — dyrektywa](../../../docs/framework/xaml-services/x-arguments-directive.md); [x: factorymethod — dyrektywa](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [x: Reference — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [x: typearguments — dyrektywa ](../../../docs/framework/xaml-services/x-typearguments-directive.md); i typy wbudowane dla wspólnych elementów podstawowych języka (na przykład `x:Char`).  
+XAML 2009 jest terminem skrót dla nowych funkcji języka XAML, które rozszerzają istniejących specyfikacji języka XAML. XAML 2009 wprowadza kilka nowych dyrektyw i konstrukcji. Obejmują one [x: Arguments — dyrektywa](../../../docs/framework/xaml-services/x-arguments-directive.md); [x: FactoryMethod — dyrektywa](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [x: Reference — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [x: typearguments — dyrektywa ](../../../docs/framework/xaml-services/x-typearguments-directive.md); i typy wbudowane dla wspólnych elementów podstawowych języka (na przykład `x:Char`).  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>Obsługa 2009 XAML w WPF i programu Visual Studio  
- Na platformie WPF można użyć XAML 2009 — funkcje, ale tylko dla języka XAML, która nie jest skompilowany znaczników WPF. Aktualnie kompilacji znaczników XAML i BAML formę XAML nie obsługują słów kluczowych języka XAML 2009 i funkcje.  
+ W środowisku WPF można użyć funkcji XAML 2009, ale tylko dla XAML, który nie jest kompilowana do znaczników WPF. XAML kompilowana do znaczników i formularz BAML XAML aktualnie nie obsługuje słowa kluczowe języka XAML 2009 oraz funkcje.  
   
- Należy zauważyć, że istniejące metody ładowania utracić XAML w WPF również możliwe zabezpieczeniami i dostępem ograniczeń typów CLR i system typów, które są bardziej restrykcyjne niż dla kompilacji znaczników XAML. Aby uzyskać więcej informacji, zobacz [zabezpieczeń (WPF)](../../../docs/framework/wpf/security-wpf.md) lub [strategii zabezpieczeń WPF - zabezpieczeń platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).  
+ Należy zauważyć, że istniejące technik do ładowania luźne XAML w WPF również możliwych zabezpieczeniami i dostępem ograniczenia typy CLR i system typów, które są bardziej restrykcyjne niż XAML kompilowana do znaczników. Aby uzyskać więcej informacji, zobacz [zabezpieczenia (WPF)](../../../docs/framework/wpf/security-wpf.md) lub [strategia zabezpieczeń WPF - zabezpieczenia platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).  
   
- XAML 2009 wprowadza również dodatkowe funkcje, że zmodyfikuj poprzedniej 2006 XAML konstrukcji lub że modyfikowanie formularzy podstawowe znaczników.  
+ XAML 2009 wprowadza również dodatkowe funkcje, zmodyfikuj poprzedniego 2006 XAML lub konstrukcji, które modyfikowanie formularzy znaczników podstawowych.  
   
-### <a name="xkey-as-an-object-element"></a>x: Key jako elementu obiektu  
- XAML 2009 może obsługiwać `x:Key` jako obiekt (właściwość elementu, który ma wartość elementu obiektu); jednak obsługiwane tylko XAML 2006 `x:Key` jako atrybut. Zobacz sekcję "XAML 2009" [dyrektywy x: Key](../../../docs/framework/xaml-services/x-key-directive.md).  
+### <a name="xkey-as-an-object-element"></a>x: Key, jako elementu obiektu  
+ XAML 2009 może obsługiwać `x:Key` jako obiekt (właściwość element, który ma wartość elementu obiektu); jednak obsługiwana tylko XAML 2006 `x:Key` jako atrybut. Zobacz sekcję "XAML 2009" [x: Key — dyrektywa](../../../docs/framework/xaml-services/x-key-directive.md).  
   
-### <a name="xmlns-on-property-elements"></a>xmlns dla elementów właściwości  
- XAML 2009 definicje (xmlns) przestrzeni nazw XAML mogą być obsługiwane na elementy właściwości; XAML 2006 obsługuje jednak tylko definicje xmlns dla obiekt elementów.  
+### <a name="xmlns-on-property-elements"></a>xmlns dla właściwości elementów  
+ XAML 2009 definicji przestrzeni nazw (xmlns) XAML mogą być obsługiwane na właściwości elementów; XAML 2006 obsługuje jednak tylko definicje xmlns elementów obiektu.  
   
 ### <a name="event-attributes"></a>Atrybuty zdarzeń  
- Dla atrybutów, które bazują na zdarzenia XAML 2006 przyjęto założenie, że kompilację znaczników związane i przesyła zdarzenia, które kompilację znaczników. XAML 2009 obsługuje znaczników podobny rozszerzenie znaczników, który różni się okablowania zdarzeń do wykonywania analizy i załadowanie pliku XAML. Jednak aplikacje WPF XAML scenariusze i dla interfejsu użytkownika WPF zwykle nie należy używać tej możliwości. WPF i jego wdrożenie XAML 2006 używa kombinacji okablowania programu obsługi zdarzeń dla kierowane zdarzenia zdefiniowane na <xref:System.Windows.UIElement> poziomu i jego kompilatora znaczników krok znacznie jego przetwarzanie atrybutu zdarzeń. Kompilator znaczników przetwarza również wstępnie atrybuty zdarzenia znaleziono w języku XAML, gdzie akcje kompilacji zadeklarować służy kompilatora znaczników.  
+ Atrybuty, które są oparte na obiektach zdarzeń XAML 2006 zakłada, że kompilacji znaczników jest zaangażowane i przesyła zdarzeń do kompilacji kodu znaczników. XAML 2009 obsługuje kod znaczników podobny rozszerzenie znaczników, który odracza okablowania zdarzeń aż do czasu wykonywania, analizowania i ładowanie XAML. Jednak aplikacje WPF i XAML scenariuszy dla WPF UI zazwyczaj nie należy używać tej funkcji. WPF i jego wdrożenie XAML 2006 używa kombinacji okablowania procedury obsługi zdarzeń dla zdarzenia trasowane zdefiniowany z numerem <xref:System.Windows.UIElement> poziom i jego kompilator znaczników krok znacznie jej przetwarzanie atrybutu zdarzeń. Kompilator znaczników również wstępnie przetwarza wszelkie atrybuty zdarzeń, w której akcje kompilacji zadeklarować, że używany jest kompilator znaczników XAML.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

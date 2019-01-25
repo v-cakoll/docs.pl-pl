@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45650001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584915"
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano, jak możesz włączyć śledzenie, skonfigurować źródła śledzenia emitowanie danych śledzenia i zestaw poziomów śledzenia, śledzenie aktywności zestawu oraz propagacji do obsługi śledzenia end-to-end korelacji i ustawić detektorów śledzenia do dostępu do danych śledzenia.  
@@ -60,15 +60,15 @@ W tym temacie opisano, jak możesz włączyć śledzenie, skonfigurować źród�
   
 -   System.ServiceModel: Rejestruje wszystkie etapy przetwarzania WCF, zawsze, gdy odczyt konfiguracji, komunikat jest przetwarzany transportu, zabezpieczeń, przetwarzanie, komunikat jest wysyłany w kodzie użytkownika i tak dalej.  
   
--   Używająca elementu System.ServiceModel.MessageLogging jako: Rejestruje wszystkie komunikaty, które będą działać przez system.  
+-   System.ServiceModel.MessageLogging: Rejestruje wszystkie komunikaty, które będą działać przez system.  
   
 -   System.IdentityModel.  
   
 -   System.ServiceModel.Activation.  
   
--   System.IO.Log: Rejestrowania dla interfejsu .NET Framework do wspólnego Log File System (CLFS).  
+-   System.IO.Log: Rejestrowanie interfejsu .NET Framework do wspólnego Log File System (CLFS).  
   
--   System.Runtime.Serialization: Dzienniki gdy obiekty są odczytywane lub zapisywane.  
+-   System.Runtime.Serialization: Dzienniki, gdy obiekty są odczytywane lub zapisywane.  
   
 -   CardSpace.  
   
@@ -142,7 +142,7 @@ W tym temacie opisano, jak możesz włączyć śledzenie, skonfigurować źród�
   
  Można skonfigurować odbiornik śledzenia niestandardowych do wysyłania danych śledzenia w sieci, na przykład ze zdalną bazą danych. Jako narzędzia do wdrażania aplikacji powinien wymuszać kontrolę dostępu do dzienników śledzenia w komputerze zdalnym.  
   
- Odbiornik śledzenia można również skonfigurować programowo. Aby uzyskać więcej informacji, zobacz [porady: tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](https://go.microsoft.com/fwlink/?LinkId=94648) i [tworzenia TraceListener niestandardowe](https://go.microsoft.com/fwlink/?LinkId=96239).  
+ Odbiornik śledzenia można również skonfigurować programowo. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](https://go.microsoft.com/fwlink/?LinkId=94648) i [tworzenia niestandardowych zdarzeń TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Ponieważ `System.Diagnostics.XmlWriterTraceListener` jest nie metodą o bezpiecznych wątkach, źródła śledzenia może zablokować zasobów wyłącznie w przypadku, gdy dane są wyprowadzane ślady. Gdy wiele wątków, dane wyjściowe śledzenia do źródła śledzenia skonfigurowany do używania tego odbiornika, może wystąpić, rywalizacji o zasoby, które powoduje problem istotnie poprawiającą wydajność. Aby rozwiązać ten problem, należy zaimplementować niestandardowy odbiornik, który jest bezpieczna dla wątków.  
@@ -180,8 +180,8 @@ W tym temacie opisano, jak możesz włączyć śledzenie, skonfigurować źród�
   
  Nie można użyć `propagateActivity` atrybut o źródła śledzenia zdefiniowanych przez użytkownika. W przypadku Propagacja Identyfikatora działania kodu użytkownika, upewnij się, nie należy ustawiać elementu ServiceModel `ActivityTracing`, przy zachowaniu ServiceModel `propagateActivity` ustawioną wartość atrybutu `true`.  
   
-## <a name="see-also"></a>Zobacz też  
- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Instrukcje: Tworzenie i inicjowanie obiektów nasłuchujących śledzenie](https://go.microsoft.com/fwlink/?LinkId=94648)  
- [Tworzenie niestandardowych zdarzeń TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)
+## <a name="see-also"></a>Zobacz także
+- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Instrukcje: Tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [Tworzenie niestandardowych zdarzeń TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)

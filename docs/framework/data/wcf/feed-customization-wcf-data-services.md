@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c54ea70049544e5205613ab76eb810798513fab2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680224"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Dostosowywanie kanału informacyjnego (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aby uwidocznić dane jako źródło danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje formaty Atom i JavaScript Object Notation (JSON) dla źródła danych. Gdy używasz źródła danych, Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zapewnia standardową metodę do serializowania danych, takich jak jednostek i relacji w formacie XML, które mogą być zawarte w treści komunikatu HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Definiuje mapowanie właściwości jednostki domyślne między danych, które znajduje się w jednostkach i elementów Atom. Aby uzyskać więcej informacji, zobacz [OData: Atom Format](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -31,7 +31,7 @@ ms.locfileid: "44207495"
 >  Podczas definiowania niestandardowego źródła danych musi zagwarantować, że wszystkie właściwości jednostki, które mają niestandardowe mapowania zdefiniowane są uwzględniane w projekcji. Gdy właściwość zamapowanego jednostki nie jest uwzględniony w projekcji, może dojść do utraty danych. Aby uzyskać więcej informacji, zobacz [projekcje zapytania](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Dostosowywanie źródła danych za pomocą dostawcy programu Entity Framework  
- Model danych używany z [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy jest reprezentowana jako kod XML w pliku edmx. W tym przypadku atrybutów, które definiują niestandardowego źródła danych są dodawane do `EntityType` i `Property` elementy, które reprezentują typy jednostek i właściwości w modelu danych. Te atrybuty Dostosowywanie źródła danych nie są zdefiniowane w [ \[MC CSDL\]: koncepcyjny formatu pliku definicji schematu](https://go.microsoft.com/fwlink/?LinkId=159072), czyli format, [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] używa dostawcy w celu zdefiniowania modelu danych. W związku z tym, należy zadeklarować atrybutów dostosowywania kanału informacyjnego w przestrzeni nazw określonego schematu, która jest zdefiniowana jako `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Poniższy fragment XML zawiera atrybuty kanału informacyjnego dostosowania stosowane do `Property` elementy `Products` typu jednostki, które definiują `ProductName`, `ReorderLevel`, i `UnitsInStock` właściwości.  
+ Model danych używany z [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy jest reprezentowana jako kod XML w pliku edmx. W tym przypadku atrybutów, które definiują niestandardowego źródła danych są dodawane do `EntityType` i `Property` elementy, które reprezentują typy jednostek i właściwości w modelu danych. Te atrybuty Dostosowywanie źródła danych nie są zdefiniowane w [ \[MC CSDL\]: Koncepcyjny formatu pliku definicji schematu](https://go.microsoft.com/fwlink/?LinkId=159072), który jest w formacie, [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] używa dostawcy w celu zdefiniowania modelu danych. W związku z tym, należy zadeklarować atrybutów dostosowywania kanału informacyjnego w przestrzeni nazw określonego schematu, która jest zdefiniowana jako `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Poniższy fragment XML zawiera atrybuty kanału informacyjnego dostosowania stosowane do `Property` elementy `Products` typu jednostki, które definiują `ProductName`, `ReorderLevel`, i `UnitsInStock` właściwości.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
   
@@ -39,7 +39,7 @@ ms.locfileid: "44207495"
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
- Aby uzyskać więcej informacji, zobacz [porady: Dostosowywanie źródła danych przy użyciu dostawcy programu Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie źródła danych za pomocą dostawcy programu Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
 >  Ponieważ rozszerzenia do modelu danych nie są obsługiwane przez Projektanta obiektów, należy ręcznie zmodyfikować plik XML, który zawiera model danych. Aby uzyskać więcej informacji o plik edmx, który jest generowany przez [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] narzędzia, zobacz [Omówienie pliku edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
@@ -63,7 +63,7 @@ ms.locfileid: "44207495"
  Aby dostosować źródła danych dla modelu danych, który został wdrożony przy użyciu dostawcy odbicia, należy dodać co najmniej jedno z <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> atrybutu do klas, które reprezentują typy jednostek w modelu danych. Właściwości <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> odpowiadają klasy atrybutów Dostosowywanie źródła danych, które są opisane w poprzedniej sekcji. Oto przykład deklaracja `Order` typu z niestandardowego źródła danych mapowanie zdefiniowane dla obu właściwości.  
   
 > [!NOTE]
->  Model danych w tym przykładzie jest zdefiniowana w temacie [porady: Tworzenie usługi danych przy użyciu dostawcy odbicia](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
+>  Model danych w tym przykładzie jest zdefiniowana w temacie [jak: Tworzenie usługi danych przy użyciu dostawcy odbicia](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
   
  [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria custom feeds/cs/orderitems.svc.cs#customorderfeed)]
  [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria custom feeds/vb/orderitems.svc.vb#customorderfeed)]  
@@ -72,7 +72,7 @@ ms.locfileid: "44207495"
   
  [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
- Aby uzyskać więcej informacji, zobacz [porady: Dostosowywanie źródła danych za pomocą dostawcy odbicia](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie źródła danych za pomocą dostawcy odbicia](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-a-custom-data-service-provider"></a>Dostosowywanie źródła danych za pomocą dostawcy usług dane niestandardowe  
  Dostosowywanie źródła dla modelu danych, zdefiniowane przy użyciu dostawcy usługi danych niestandardowych jest zdefiniowany dla typu zasobu, wywołując <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A> na <xref:System.Data.Services.Providers.ResourceType> który reprezentuje typ jednostki w modelu danych. Aby uzyskać więcej informacji, zobacz [dostawcy usługi danych niestandardowych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).  
@@ -92,6 +92,6 @@ ms.locfileid: "44207495"
   
  Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Dostawca odbicia](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)  
- [Dostawca programu Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Dostawca odbicia](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+- [Dostawca programu Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

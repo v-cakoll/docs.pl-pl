@@ -5,48 +5,48 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: da92b8f2d1223f582677a93a8ff6fd697512d297
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 9adbb4166d713cea0344c9fa58ce85e5afce086d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717926"
 ---
 # <a name="duplex-services"></a>Usługi dwukierunkowe
-Kontrakt usługi dwustronnej jest wymiany komunikatów w których oba punkty końcowe można wysyłać wiadomości do innych niezależnie. Usługi duplex, w związku z tym wiadomości można wysyłać do punktu końcowego klienta, zapewniając zdarzenia podobne zachowania. Komunikację dupleksową występuje, gdy klient nawiąże połączenie z usługą i zapewnia usługę, z kanałem, na którym usługa można wysłać wiadomości zwrotnie do klienta. Należy pamiętać, że zachowanie podobnych zdarzeń usługi dwukierunkowe działa tylko w ramach sesji.  
+Kontrakt usługi dwustronnej jest wymiany komunikatów, w którym obu punktów końcowych może wysyłać komunikaty do innych niezależnie. Usługi duplex, dlatego wiadomości można wysyłać do punktu końcowego klienta, zapewniając zachowanie podobne zdarzenia. Komunikację dupleksową występuje, gdy klient łączy się z usługą i udostępnia usługi za pomocą kanału, na którym usługa może wysłać wiadomości zwrotnie do klienta. Należy pamiętać, że zachowanie podobne zdarzenia usługi dwukierunkowe działa tylko w ramach sesji.  
   
- Aby utworzyć kontrakt dupleksowy, należy utworzyć dwa interfejsy. Pierwszy jest interfejsem kontraktu usługi, który zawiera opis czynności, które klient może wywołać. Ten kontrakt usługi musi określać *kontrakt wywołania zwrotnego* w <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> właściwości. Kontrakt wywołania zwrotnego to interfejs, który definiuje operacje, które usługa może wywoływać klienta w punkcie końcowym. Kontrakt dupleksowy nie wymaga sesji, mimo że dwukierunkowego powiązania dostarczane przez system, należy korzystać z nich.  
+ Aby utworzyć kontrakt dupleksowy należy utworzyć dwa interfejsy. Pierwsza to interfejsu kontraktu usługi, który opisuje operacje, które mogą być wywoływane przez klienta. Należy określić ten kontrakt usługi *kontrakt wywołania zwrotnego* w <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> właściwości. Kontrakt wywołania zwrotnego jest interfejsem, który definiuje operacje, które usługa może wywołać w punkcie końcowym klienta. Kontraktu dwukierunkowego nie wymaga sesję, mimo że dwukierunkowego powiązania dostarczane przez system, należy korzystać z nich.  
   
  Oto przykład kontraktu dwukierunkowego.  
   
  [!code-csharp[c_DuplexServices#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/service.cs#0)]
  [!code-vb[c_DuplexServices#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/service.vb#0)]  
   
- `CalculatorService` Klasa implementuje podstawową `ICalculatorDuplex` interfejsu. Używane przez usługę <xref:System.ServiceModel.InstanceContextMode.PerSession> tryb wystąpienia przechowywać wynik dla każdej sesji. Właściwość prywatna o nazwie `Callback` uzyskuje dostęp do kanału wywołania zwrotnego do klienta. Usługa używa wywołania zwrotnego do wysyłania wiadomości do klienta za pośrednictwem interfejsu wywołania zwrotnego, jak pokazano w poniższym kodzie próbki.  
+ `CalculatorService` Klasa implementuje podstawowy `ICalculatorDuplex` interfejsu. Używa usługi <xref:System.ServiceModel.InstanceContextMode.PerSession> tryb wystąpienia do obsługi wyników dla każdej sesji. Właściwość prywatna o nazwie `Callback` uzyskuje dostęp do kanału wywołania zwrotnego do klienta. Usługa używa wywołania zwrotnego do wysyłania wiadomości do klienta za pośrednictwem interfejs wywołania zwrotnego, jak pokazano w poniższym przykładowym kodzie.  
   
  [!code-csharp[c_DuplexServices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/service.cs#1)]
  [!code-vb[c_DuplexServices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/service.vb#1)]  
   
- Klient musi dostarczyć klasy, która implementuje interfejs wywołania zwrotnego kontrakt dupleksu do odbierania wiadomości z usługi. Poniższy przykładowy kod przedstawia `CallbackHandler` klasa implementująca `ICalculatorDuplexCallback` interfejsu.  
+ Klient musi podać klasę, która implementuje interfejs wywołania zwrotnego kontraktu dwukierunkowego, do odbierania wiadomości z usługi. Poniższy przykładowy kod przedstawia `CallbackHandler` klasę, która implementuje `ICalculatorDuplexCallback` interfejsu.  
   
  [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
  [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]  
   
- Klient WCF, generowany dla kontraktu dwukierunkowego wymaga <xref:System.ServiceModel.InstanceContext> klasę, aby podać po konstrukcji. To <xref:System.ServiceModel.InstanceContext> klasa jest używana jako witryna dla obiekt, który implementuje interfejs wywołania zwrotnego i obsługi wiadomości, które są wysyłane z usługi. <xref:System.ServiceModel.InstanceContext> Klasy jest tworzony przy użyciu wystąpienia `CallbackHandler` klasy. Ten obiekt obsługi komunikatów wysyłanych z usługi do klienta w interfejsie wywołania zwrotnego.  
+ Klient WCF, który jest generowany dla kontraktu dwukierunkowego wymaga <xref:System.ServiceModel.InstanceContext> klasy, należy podać podczas konstruowania. To <xref:System.ServiceModel.InstanceContext> klasa jest używana jako witryna dla obiektu, który implementuje interfejs wywołania zwrotnego i obsługuje wiadomości wysyłanych na odpowiedź od usługi. <xref:System.ServiceModel.InstanceContext> Klasy składa się z wystąpieniem `CallbackHandler` klasy. Ten obiekt obsługi komunikatów wysyłanych z usługi na kliencie, na interfejs wywołania zwrotnego.  
   
  [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
  [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]  
   
- Konfiguracji usługi musi skonfigurować ma zostać udostępnione wiązanie, która obsługuje zarówno sesji komunikacji i komunikację dupleksową. `wsDualHttpBinding` Elementu obsługuje komunikację sesji i umożliwia komunikację dupleksową zapewniając dwa połączenia HTTP, po jednej dla każdego kierunku.  
+ Konfiguracji usługi należy skonfigurować umożliwia powiązanie, które obsługuje zarówno sesji komunikacji, jak i komunikację dupleksową. `wsDualHttpBinding` Element obsługuje komunikację sesji i umożliwia komunikację dupleksową, zapewniając dwa połączenia HTTP, jedno dla każdego kierunku.  
   
- Na komputerze klienckim należy skonfigurować adres serwera można użyć do nawiązania połączenia klienta, jak pokazano w poniższych Przykładowa konfiguracja.  
+ Na komputerze klienckim należy skonfigurować adres serwera służy do połączenia z klientem, jak pokazano w poniższym Przykładowa konfiguracja.  
   
   
   
 > [!NOTE]
->  Throw non-duplex klientów, którzy nie mogą się uwierzytelnić, zwykle za pomocą bezpiecznej konwersacji <xref:System.ServiceModel.Security.MessageSecurityException>. Jednak jeśli dupleksu klienta, który używa bezpiecznej konwersacji uwierzytelnianie zakończy się niepowodzeniem, klient odbierze <xref:System.TimeoutException> zamiast tego.  
+>  Throw klientów non-duplex, którzy nie próbę uwierzytelnienia przy użyciu bezpiecznej konwersacji zazwyczaj <xref:System.ServiceModel.Security.MessageSecurityException>. Jednak jeśli dwukierunkowego klienta, który używa bezpiecznej konwersacji uwierzytelnianie zakończy się niepowodzeniem, klient odbierze <xref:System.TimeoutException> zamiast tego.  
   
- W przypadku utworzenia przy użyciu klienta/usługa `WSHttpBinding` elemencie i użytkownik nie ma punktu końcowego wywołania zwrotnego klienta, zostanie wyświetlony następujący błąd.  
+ Jeśli utworzysz klienta/usługi przy użyciu `WSHttpBinding` elementu i nie mają punkt końcowy wywołania zwrotnego klienta, zostanie wyświetlony następujący błąd.  
   
 ```  
 HTTP could not register URL  
@@ -66,7 +66,7 @@ Dim endptadr As New EndpointAddress("http://localhost:12000/DuplexTestUsingCode/
 binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/Client/")  
 ```
 
- Następujący przykładowy kod przedstawia sposób określić klienta adres punktu końcowego w konfiguracji.  
+ Poniższy przykład kodu pokazuje, jak określić klienta adres punktu końcowego w konfiguracji.  
   
 ```xml  
 <client>  
@@ -87,9 +87,9 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```  
   
 > [!WARNING]
->  Automatycznie dupleksu modelu nie wykrywa usługi lub klienta powoduje zamknięcie kanału. Dlatego jeśli klienta zakończy się nieoczekiwanie, domyślnie Usługa nie zostanie poinformowany lub jeśli klienta zakończy się nieoczekiwanie, usługa nie będzie powiadamiany. Klienci i usługi można zaimplementować własnych protokołu do siebie powiadomienia, gdy wybiera on.  
+>  Automatycznie dwukierunkowego modelu nie wykrywa usługi lub klienta powoduje zamknięcie kanału. Dlatego jeśli klient zakończy się nieoczekiwanie, domyślnie Usługa nie będzie powiadamiany lub jeśli klient zakończy się nieoczekiwanie, usługa nie będzie powiadamiany. Klienci i usługi mogą implementować własne protokół do siebie powiadomienie, jeśli dokonają takiego wyboru.  
   
-## <a name="see-also"></a>Zobacz też  
- [Dupleks](../../../../docs/framework/wcf/samples/duplex.md)  
- [Określanie zachowania klienta w czasie wykonywania](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [Instrukcje: tworzenie fabryki kanałów i używanie jej do tworzenia kanałów oraz zarządzania nimi](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+## <a name="see-also"></a>Zobacz także
+- [Dupleks](../../../../docs/framework/wcf/samples/duplex.md)
+- [Określanie zachowania klienta w czasie wykonywania](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Instrukcje: Tworzenie fabryki kanałów i używanie jej do tworzenia kanałów oraz zarządzania nimi](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

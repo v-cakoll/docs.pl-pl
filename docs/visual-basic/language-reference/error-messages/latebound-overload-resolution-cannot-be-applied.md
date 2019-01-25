@@ -1,5 +1,5 @@
 ---
-title: Ustalanie przeciążenia późnego nie można zastosować do &#39; &lt;nazwaprocedury&gt; &#39; , ponieważ wystąpienie uzyskujące dostęp jest typem interfejsu
+title: Nie można zastosować przeciążenia późnego &#39; &lt;nazwaprocedury&gt; &#39; ponieważ wystąpienie uzyskujące dostęp jest typem interfejsu
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: e41cbf30f06547ef39553e31542e4e8b6df49a3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db0ce88f63be8d58cc1c1abf91eda6a0e56456c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589883"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651521"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Ustalanie przeciążenia późnego nie można zastosować do &#39; &lt;nazwaprocedury&gt; &#39; , ponieważ wystąpienie uzyskujące dostęp jest typem interfejsu
-Kompilator próbuje rozpoznać odwołania do przeciążonej właściwość lub procedura, ale odwołanie nie powiedzie się, ponieważ argument jest typu `Object` i odwołuje się do innych obiektów o typie danych interfejsu. `Object` Argument wymusza na rozpoznania odwołania jako późnym wiązaniem.  
+# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Nie można zastosować przeciążenia późnego &#39; &lt;nazwaprocedury&gt; &#39; ponieważ wystąpienie uzyskujące dostęp jest typem interfejsu
+Kompilator próbuje rozpoznać odwołania do elementu przeciążona właściwość lub procedura, ale odwołania nie powiedzie się, ponieważ typ argumentu jest `Object` i odwołuje się do innych obiektów o typie danych interfejsu. `Object` Argument wymusza na kompilatorze rozpoznać odwołania jako z późnym wiązaniem.  
   
- W takiej sytuacji kompilator rozpoznaje przeciążenia za pośrednictwem klasy implementującej zamiast za pośrednictwem powiązanego interfejsu. Jeśli klasa zmienia nazwę jednej z zastąpionej wersji, kompilator nie należy wziąć pod uwagę tej wersji na przeciążenia, ponieważ jego nazwa różni się. To z kolei powoduje, że kompilator ignorować zmienioną nazwę wersji, gdy było poprawne wybór rozpoznać odwołania do.  
+ W tych okolicznościach kompilator rozpoznaje przeciążenia za pośrednictwem klasy implementującej zamiast za pośrednictwem powiązanego interfejsu. Jeśli klasa zmieni nazwę jednego z przeciążone wersje, kompilator nie bierze pod uwagę tej wersji na przeciążenie, ponieważ jego nazwa różni się. To z kolei powoduje, że kompilator ignoruje wersji zmieniono nazwy, gdy było odpowiedni wybór można rozpoznać odwołania.  
   
  **Identyfikator błędu:** BC30933  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Użyj `CType` można rzutować argumentu z `Object` na typ określony przez sygnaturę przeładowania ma zostać wywołana.  
+-   Użyj `CType` rzutowanie argumentów z `Object` do typu określonego przez podpis przeładowania ma zostać wywołana.  
   
-     Należy pamiętać, że nie jest pomocne można rzutować obiektu odwołujący się do powiązanego interfejsu. Należy rzutować argumentu, aby uniknąć tego błędu.  
+     Należy pamiętać, że nie jest pomocne można rzutować obiektu odwołujący się do interfejsu podstawowego. Należy rzutować argumentów, aby uniknąć tego błędu.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano wywołanie przeciążonej `Sub` procedury, która powoduje, że ten błąd w czasie kompilacji.  
@@ -53,18 +53,18 @@ Module m1
 End Module  
 ```  
   
- W poprzednim przykładzie, jeśli kompilator może wywołać `s1` podczas zapisywania, rozdzielczość nastąpi za pośrednictwem klasy `c1` zamiast interfejsu `i1`. To oznacza, że kompilator może nie należy wziąć pod uwagę `s2` jego nazwa różni się w `c1`, nawet jeśli jest to poprawny wybór zgodnie z definicją w `i1`.  
+ W poprzednim przykładzie, jeśli kompilator może wywołanie `s1` w rozdzielczości nastąpi za pośrednictwem klasy `c1` zamiast interfejsu `i1`. To oznacza, że kompilator będzie nie bierze pod uwagę `s2` , ponieważ jego nazwa różni się w `c1`, nawet jeśli jest to poprawny wybór, zgodnie z definicją `i1`.  
   
- Zmieniając wywołania do jednej z następujących wierszy kodu można poprawić błąd:  
+ Błąd można rozwiązać, zmieniając wywołania do jednej z następujących wierszy kodu:  
   
 ```  
 refer.s1(CType(o1, Integer))  
 refer.s1(CType(o1, Double))  
 ```  
   
- Każdy z powyższych wierszy kodu jawnie rzutuje `Object` zmiennej `o1` do jednego z typów parametrów zdefiniowanych dla przeciążeń.  
+ Każdy z poprzednich wierszy kodu jawnie rzutuje `Object` zmiennej `o1` do jednego z typów parametrów zdefiniowanych dla przeciążenia.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przeciążanie procedury](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Rozpoznanie przeciążenia](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)  
- [Funkcja CType](../../../visual-basic/language-reference/functions/ctype-function.md)
+## <a name="see-also"></a>Zobacz także
+- [Przeciążanie procedury](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [Rozpoznanie przeciążenia](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
+- [Funkcja CType](../../../visual-basic/language-reference/functions/ctype-function.md)

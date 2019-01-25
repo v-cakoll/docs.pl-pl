@@ -2,23 +2,23 @@
 title: WebHostHttpError
 ms.date: 03/30/2017
 ms.assetid: dff35e7e-5571-463d-abcf-7e048381f91f
-ms.openlocfilehash: 6b5a5e90f48373ce80dde110b0083006961ff113
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecdaea5a16170b7843927b06612718f3405f4065
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33471491"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715650"
 ---
 # <a name="webhosthttperror"></a>WebHostHttpError
-Identyfikator: 110  
+Id: 110  
   
- Ważność: błąd  
+ Ważność: Błąd  
   
  Kategoria: ServiceModel  
   
 ## <a name="description"></a>Opis  
- To zdarzenie oznacza, że wystąpił wyjątek HTTP hosta sieci Web. Zdarzenia wyświetlane są informacje o nadawcy, HtmlErrorMessage, wyjątek, nazwa procesu i identyfikatora procesu.  
+ To zdarzenie oznacza, że wystąpił wyjątek HTTP hostem sieci Web. Zdarzenie Wyświetla informacje o nadawcy, HtmlErrorMessage, wyjątków, nazwa procesu i identyfikatora procesu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -2,12 +2,12 @@
 title: Obsługa błędów
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452852"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695559"
 ---
 # <a name="error-handling"></a>Obsługa błędów
 ## <a name="error-handling-in-windows-communication-foundation"></a>Obsługa błędów w programie Windows Communication Foundation  
@@ -67,5 +67,5 @@ ms.locfileid: "49452852"
   
  Błąd wysyłania konwersji typów może być taki sam, jak wiele innych typów błędów wysyłania sprawdził, instalując program obsługi błędów. Punkt rozszerzeń IErrorHandler nosi nazwę do obsługi wyjątków na poziomie usługi. W efekcie odpowiedzi wysyłane z powrotem do obiektu wywołującego — jak również wykonują wszelkie niestandardowe zadania i raportowanie — może zostać wybrany.  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawy programowania przy użyciu programu WCF](../basic-wcf-programming.md)
+## <a name="see-also"></a>Zobacz także
+- [Podstawy programowania przy użyciu programu WCF](../basic-wcf-programming.md)

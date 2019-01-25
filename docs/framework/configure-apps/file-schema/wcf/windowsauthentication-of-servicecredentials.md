@@ -2,12 +2,12 @@
 title: '&lt;windowsAuthentication&gt; w &lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: acbb4f788d805d72dedcc7be711a38d1f1e82687
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3077baf49c13c91c6293823aa841525bf07ca7f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616267"
 ---
 # <a name="ltwindowsauthenticationgt-of-ltservicecredentialsgt"></a>&lt;windowsAuthentication&gt; w &lt;serviceCredentials&gt;
 Określa ustawienia poświadczenia usługi Windows.  
@@ -17,7 +17,7 @@ Określa ustawienia poświadczenia usługi Windows.
 \<serviceBehaviors>  
 \<zachowanie >  
 \<serviceCredentials>  
-\<windowsAuthentication >  
+\<windowsAuthentication>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,8 +48,8 @@ Określa ustawienia poświadczenia usługi Windows.
 ## <a name="remarks"></a>Uwagi  
  Użyj tego elementu, aby określić, czy chcesz zezwolić anonimowym użytkownikom Windows dostępu przez ustawienie `allowAnonymousLogons` atrybutu. Można również określić, czy do uwzględnienia informacji o grupie, do której należą użytkownicy w autoryzacji, ustawiając `includeWindowsGroups` atrybutu. Jeśli jest równa `true` (ustawienie domyślne), ta usługa może określić grupy Windows, do której należy dany klient.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.WindowsServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>  
- <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.WindowsServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>
+- <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>

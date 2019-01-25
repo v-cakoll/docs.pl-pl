@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ded6b4e0ac8f3e70fd0145ab6e2410c3b38e02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694fc95a1ad16b61e25a897b778b15ec41af2a01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714272"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps — Metoda
-Pobiera metadane skojarzone z parametru ogólnego reprezentowany przez określony token.  
+Pobiera metadane skojarzone z parametru ogólnego, reprezentowane przez określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,19 +44,19 @@ HRESULT GetGenericParamProps (
   
 #### <a name="parameters"></a>Parametry  
  `gp`  
- [in] Token, który reprezentuje parametr generyczny, dla którego ma zostać zwrócona metadanych.  
+ [in] Token, który reprezentuje parametr ogólny, dla której ma zostać zwrócone metadanych.  
   
  `pulParamSeq`  
- [out] {Numer porządkowy pozycja `Type` parametru w nadrzędnej konstruktora lub metody.  
+ [out] Numer porządkowy położenie `Type` parametr w Konstruktorze nadrzędnej lub metody.  
   
  `pdwParamFlags`  
- [out] Wartość [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) wyliczenie opisujące `Type` dla parametru ogólnego.  
+ [out] Wartość [corgenericparamattr —](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) wyliczenie opisujące `Type` dla parametru ogólnego.  
   
  `ptOwner`  
- [out] Token TypeDef lub MethodDef, który reprezentuje właściciela parametru.  
+ [out] Element TypeDef lub MethodDef token reprezentujący właściciela parametru.  
   
  `reserved`  
- [out] Zarezerwowane dla przyszłego rozszerzalności.  
+ [out] Zarezerwowane dla przyszłej rozszerzalności.  
   
  `wzName`  
  [out] Nazwa parametru ogólnego.  
@@ -65,17 +65,17 @@ HRESULT GetGenericParamProps (
  [in] Rozmiar `wzName` buforu.  
   
  `pchName`  
- [out] Zwrócony rozmiar nazwy, w znaki dwubajtowe.  
+ [out] Rozmiar zwróconego nazwę w znaki dwubajtowe.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

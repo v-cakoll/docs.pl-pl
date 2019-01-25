@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 532f69afd949971fbb4f56a8fdbcc6eab159446f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1c214918b4a41ac989a3804c9146c4a54c5909f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738212"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument — Metoda
-Definiuje dokumentu źródłowego. Identyfikatory GUID są dostępne dla języków znanych dostawców i typów dokumentów.  
+Definiuje dokumentu źródłowego. Identyfikatory GUID są dostarczane dla znanych języków, dostawców i typy dokumentów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,25 +40,25 @@ HRESULT DefineDocument(
   
 #### <a name="parameters"></a>Parametry  
  `url`  
- [in] Wskaźnik do `WCHAR` definiuje adres URL (adres URL) określający dokumentu.  
+ [in] Wskaźnik do `WCHAR` definiujący adres URL (adres URL) identyfikujący dokumentu.  
   
  `language`  
- [in] Wskaźnik do identyfikatora GUID, który definiuje z językiem dokumentu.  
+ [in] Wskaźnik do identyfikatora GUID, który definiuje języka dokumentu.  
   
  `languageVendor`  
- [in] Wskaźnik identyfikator GUID, który określa tożsamość dostawcy z językiem dokumentu.  
+ [in] Wskaźnik na identyfikator GUID, który definiuje tożsamość przez dostawcę dla języka dokumentu.  
   
  `documentType`  
- [in] Wskaźnik do identyfikatora GUID, który definiuje typ dokumentu.  
+ [in] Wskaźnik na identyfikator GUID, który definiuje typ dokumentu.  
   
  `pRetVal`  
- [out] Wskaźnik do zwróconego [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interfejsu.  
+ [out] Wskaźnik do zwracanego [isymunmanagedwriter —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interfejsu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

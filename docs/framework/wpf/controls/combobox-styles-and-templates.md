@@ -9,78 +9,78 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 4dbffd2dcc0b2f798f6e75d01b58df54b09229e8
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 5cca162137b603f36dffb044d5954c3947964cf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712853"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox — Style i szablony
-W tym temacie opisano, style i szablonów dla <xref:System.Windows.Controls.ComboBox> formantu. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> umożliwiają unikatowego wyglądu formantu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu formant tworząc ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+W tym temacie opisano, style i szablony <xref:System.Windows.Controls.ComboBox> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="combobox-parts"></a>Elementy pola kombi ComboBox  
- W poniższej tabeli wymieniono nazwanego części dla <xref:System.Windows.Controls.ComboBox> formantu.  
+## <a name="combobox-parts"></a>Elementy pola kombi  
+ Poniższa tabela zawiera listę nazwanych części do <xref:System.Windows.Controls.ComboBox> kontroli.  
   
 |Część|Typ|Opis|  
 |-|-|-|  
-|PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Tekst zawiera <xref:System.Windows.Controls.ComboBox>.|  
-|PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Na liście rozwijanej zawierający elementy w polu kombi.|  
+|PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Zawiera tekst <xref:System.Windows.Controls.ComboBox>.|  
+|PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Z listy rozwijanej zawierające elementy w polu kombi.|  
   
- Po utworzeniu <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.ComboBox>, szablon może zawierać <xref:System.Windows.Controls.ItemsPresenter> w <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Wyświetla każdy element <xref:System.Windows.Controls.ComboBox>; <xref:System.Windows.Controls.ScrollViewer> włącza przewijanie w kontrolce).  Jeśli <xref:System.Windows.Controls.ItemsPresenter> nie jest bezpośrednim elementem podrzędnym elementu <xref:System.Windows.Controls.ScrollViewer>, musisz podać <xref:System.Windows.Controls.ItemsPresenter> nazwę, `ItemsPresenter`.  
+ Po utworzeniu <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.ComboBox>, szablon może zawierać <xref:System.Windows.Controls.ItemsPresenter> w ramach <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Wyświetla każdy element na <xref:System.Windows.Controls.ComboBox>; <xref:System.Windows.Controls.ScrollViewer> umożliwia przewijanie w kontrolce).  Jeśli <xref:System.Windows.Controls.ItemsPresenter> nie jest bezpośrednie podrzędne <xref:System.Windows.Controls.ScrollViewer>, należy podać <xref:System.Windows.Controls.ItemsPresenter> nazwę, `ItemsPresenter`.  
   
 ## <a name="combobox-states"></a>Stany ComboBox  
- W poniższej tabeli wymieniono stanów <xref:System.Windows.Controls.ComboBox> formantu.  
+ W poniższej tabeli wymieniono stany <xref:System.Windows.Controls.ComboBox> kontroli.  
   
-|Nazwa stanu wizualnego|Nazwa VisualStateGroup|Opis|  
+|Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalny|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |Wyłączone|CommonStates|Kontrolka jest wyłączona.|  
-|Etykietka wskaźnika myszy|CommonStates|Wskaźnik myszy znajduje się nad <xref:System.Windows.Controls.ComboBox> formantu.|  
-|Fokus|FocusStates|Formant ma fokus.|  
-|Bez fokusu|FocusStates|Formant nie ma fokusa.|  
-|FocusedDropDown|FocusStates|Na liście rozwijanej dla <xref:System.Windows.Controls.ComboBox> ma fokus.|  
-|Prawidłowe|ValidationStates|Używa kontrolki <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma formant ma fokus.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma formant nie ma fokusa.|  
-|Można edytować|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> Jest właściwość `true`.|  
-|Umożliwia edycji|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> Jest właściwość `false`.|  
+|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad <xref:System.Windows.Controls.ComboBox> kontroli.|  
+|Fokus|FocusStates|Kontrolka ma fokus.|  
+|Po przeniesieniu fokusu|FocusStates|Kontrolka nie ma fokusu.|  
+|FocusedDropDown|FocusStates|Z listy rozwijanej, aby uzyskać <xref:System.Windows.Controls.ComboBox> jest ustawiony fokus.|  
+|Prawidłowe|ValidationStates|Kontrolka używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolki jest ustawiony fokus.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolka nie ma fokusu.|  
+|Można edytować|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> Właściwość `true`.|  
+|Umożliwia edycji|EditStates|<xref:System.Windows.Controls.ComboBox.IsEditable%2A> Właściwość `false`.|  
   
 ## <a name="comboboxitem-parts"></a>Części ComboBoxItem  
  <xref:System.Windows.Controls.ComboBoxItem> Formant nie ma żadnych części o nazwie.  
   
 ## <a name="comboboxitem-states"></a>Stany ComboBoxItem  
- W poniższej tabeli wymieniono stanów <xref:System.Windows.Controls.ComboBoxItem> formantu.  
+ W poniższej tabeli wymieniono stany <xref:System.Windows.Controls.ComboBoxItem> kontroli.  
   
-|Nazwa stanu wizualnego|Nazwa VisualStateGroup|Opis|  
+|Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalny|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |Wyłączone|CommonStates|Kontrolka jest wyłączona.|  
-|Etykietka wskaźnika myszy|CommonStates|Wskaźnik myszy znajduje się nad <xref:System.Windows.Controls.ComboBox> formantu.|  
-|Fokus|FocusStates|Formant ma fokus.|  
-|Bez fokusu|FocusStates|Formant nie ma fokusa.|  
-|Wybrane|SelectionStates|Element jest wybrany.|  
-|Niezaznaczony|SelectionStates|Nie wybrano elementu.|  
-|SelectedUnfocused|SelectionStates|Element jest wybrany, ale nie ma fokusa.|  
-|Prawidłowe|ValidationStates|Używa kontrolki <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma formant ma fokus.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma formant nie ma fokusa.|  
+|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad <xref:System.Windows.Controls.ComboBox> kontroli.|  
+|Fokus|FocusStates|Kontrolka ma fokus.|  
+|Po przeniesieniu fokusu|FocusStates|Kontrolka nie ma fokusu.|  
+|Wybrane|SelectionStates|Element jest aktualnie wybrany.|  
+|Niezaznaczone|SelectionStates|Nie wybrano elementu.|  
+|SelectedUnfocused|SelectionStates|Element jest wybrany, ale nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Kontrolka używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolki jest ustawiony fokus.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolka nie ma fokusu.|  
   
 ## <a name="combobox-controltemplate-example"></a>Przykład ControlTemplate ComboBox  
- Poniższy przykład przedstawia sposób definiowania <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.ComboBox> kontroli i związanych z nimi typów.  
+ Poniższy przykład pokazuje jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.ComboBox> kontroli i typy skojarzonych.  
   
  [!code-xaml[ControlTemplateExamples#ComboBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
   
- Powyższy przykład korzysta z co najmniej jeden z następujących zasobów.  
+ W poprzednim przykładzie użyto co najmniej jeden z następujących zasobów.  
   
  [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Pełny przykład, zobacz [style próbki ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Aby uzyskać pełny przykład, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Style i szablony kontrolek](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Niestandardowe dostosowywanie kontrolki](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Style i szablony kontrolek](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Niestandardowe dostosowywanie kontrolki](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

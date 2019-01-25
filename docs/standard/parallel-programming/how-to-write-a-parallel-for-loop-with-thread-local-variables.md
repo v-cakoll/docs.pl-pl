@@ -1,5 +1,5 @@
 ---
-title: 'Porady: zapisywanie równoległej pętli For ze zmiennymi lokalnymi wątku'
+title: 'Instrukcje: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18458e52c6cf38b2900036613676adea3f3b2d0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610802"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Porady: zapisywanie równoległej pętli For ze zmiennymi lokalnymi wątku
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Instrukcje: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku
 W tym przykładzie pokazano, jak używać zmiennych thread-local do przechowywania i pobierania stanu w każdym zadaniu oddzielne, który jest tworzony przez <xref:System.Threading.Tasks.Parallel.For%2A> pętli. Za pomocą danych lokalnych wątku, można uniknąć konieczności synchronizowania dużej liczby dostęp do udostępnionego stanu. Zamiast pisania do udostępnionego zasobu, w każdej iteracji, obliczeń i przechowywania wartości dopiero po zakończeniu wszystkich iteracji dla zadania. Można następnie jednokrotny wynik końcowy do udostępnionego zasobu lub przekazać go do innej metody.  
   
 ## <a name="example"></a>Przykład  
@@ -46,7 +46,7 @@ Function() new MyClass()
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Równoległość danych](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
-- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  
-- [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+- [Równoległość danych](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)
+- [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
 - [Wyrażenia Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

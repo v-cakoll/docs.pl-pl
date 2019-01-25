@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b2e1b08d1091e482c6b02fe015a58219ff80768
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694142"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put — funkcja
 Zapisuje kwalifikator o nazwie i wartości. Nowy kwalifikator zastępuje poprzednią wartość taką samą nazwę. Jeśli kwalifikatora nie istnieje, zostanie utworzony. 
@@ -60,7 +60,7 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Kwalifikator może zostać przesłonięta w pochodnej klasy lub wystąpienia. **Jest to wartość domyślna.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Kwalifikator jest propagowana do wystąpienia. |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Kwalifikator jest propagowana do klas pochodnych. |
-| "WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Nie można zastąpić kwalifikator w klasie pochodnej lub wystąpienia. |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Nie można zastąpić kwalifikator w klasie pochodnej lub wystąpienia. |
 | "WBEM_FLAVOR_AMENDED | 0x80 | Kwalifikator jest zlokalizowana. |
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -80,11 +80,11 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 Ta funkcja zawija wywołanie do [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) metody.
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Zobacz także  
-[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

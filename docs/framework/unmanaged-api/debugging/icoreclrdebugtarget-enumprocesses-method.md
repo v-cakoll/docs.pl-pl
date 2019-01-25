@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c09b70b5afb0561d32e55dd89df6cac083abc068
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98758ce2c1fb0373ce5a94ad153c0f07144616e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729915"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses — Metoda
 Wylicza procesów, które są uruchomione na komputerze zdalnym.  
@@ -43,7 +43,7 @@ HRESULT EnumProcesses (
  [out] Liczba procesów zwracane w `ppProcs`. Ta wartość może być 0 (zero).  
   
  `ppProcs`  
- [out] Tablica [coreclrdebugprocinfo —](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) struktur reprezentujących procesów uruchomionych na komputerze zdalnym.  
+ [out] Tablica [coreclrdebugprocinfo —](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) struktur, które reprezentują procesy uruchomione na komputerze zdalnym.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
@@ -52,20 +52,20 @@ HRESULT EnumProcesses (
  E_OUTOFMEMORY  
  Nie można przydzielić wystarczającej ilości pamięci do `ppProcs`.  
   
- E_FAIL (lub inne kody powrotu E_)  
+ E_FAIL (lub inne kody powrotne e_)  
  Inne błędy.  
   
 ## <a name="remarks"></a>Uwagi  
  Aby zwolnić pamięć, która została przydzielona przez tę metodę, należy wywołać [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Biblioteka:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
  **Wersje programu .NET framework:** 3.5 z dodatkiem SP1  
   
-## <a name="see-also"></a>Zobacz też  
- [ICoreClrDebugTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICoreClrDebugTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

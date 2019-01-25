@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dc983f1f0b2405f207d69c62b800ee854fcd409
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569469"
 ---
 # <a name="saving-and-restoring-time-zones"></a>Zapisywanie i przywracanie stref czasowych
 
@@ -72,8 +72,8 @@ Poprzednie przykłady ma przechowywane informacje o strefie czasowej do zmiennej
 
 Również przechowywanie ciągu Zserializowany strefę czasową w ten sposób oddziela procedurę tworzenia strefy czasowej z samej aplikacji. Na przykład procedury tworzenia strefy czasowej można wykonać i utworzyć plik danych, który zawiera informacje o strefie czasowej historyczne, które aplikacja może użyć. Plik danych może być, a następnie można zainstalować za pomocą aplikacji, można go otworzyć i co najmniej jeden z jego stref czasowych może być zdeserializowany, gdy aplikacja wymaga ich.
 
-Na przykład, korzystającą z zasobu osadzonego w celu przechowywania danych serializacji strefę czasową, zobacz [porady: zapisywanie stref czasowych w zasobie osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) i [jak: Przywracanie stref czasowych z zasobu osadzonego](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Na przykład, korzystającą z zasobu osadzonego w celu przechowywania danych serializacji strefę czasową, zobacz [jak: Zapisywanie stref czasowych w zasobie osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) i [jak: Przywracanie stref czasowych z zasobu osadzonego](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
+- [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)

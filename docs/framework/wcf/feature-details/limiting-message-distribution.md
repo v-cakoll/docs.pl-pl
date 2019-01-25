@@ -2,12 +2,12 @@
 title: Ograniczanie dystrybucji komunikatów
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: bec5a28abeff23929d2c0f1c363f4e08872a63fa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3f660294bf9acea3ac5df7e0b4250885645a0835
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686767"
 ---
 # <a name="limiting-message-distribution"></a>Ograniczanie dystrybucji komunikatów
 Kanał elementu równorzędnego jest celowe emisji siatki. Jego podstawowy model powodziom obejmuje dystrybucja każdy komunikat wysyłany przez dowolnego członka siatki dla wszystkich członków tej siatki. Jest to idealne rozwiązanie w sytuacjach, w którym każdy komunikat generowany przez element członkowski ma zastosowanie i jest przydatne do wszystkich innych elementów członkowskich (na przykład pokoju rozmów). Jednak wiele aplikacji mają sporadyczne potrzebę ograniczanie dystrybucji komunikatów. Na przykład jeśli nowy element członkowski sprzężenia siatki i chce, aby pobrać ostatnią wiadomością wysłaną za pośrednictwem sieci, to żądanie nie trzeba propagowane do każdego członka siatkę. Żądanie może być ograniczona do umieszczonej blisko sąsiadów lub odfiltrowane wiadomości wygenerowaną lokalnie. Komunikaty mogą być również wysyłane do jednego węzła na siatkę. W tym temacie omówiono użycie liczba przeskoków, filtr Propagacja komunikatów, Filtr lokalny lub bezpośrednie połączenie do kontrolowania, jak wiadomości są przekazywane w całej sieci i zapewnia ogólne wskazówki dotyczące wybierania podejście.  
@@ -46,23 +46,23 @@ Kanał elementu równorzędnego jest celowe emisji siatki. Jego podstawowy model
   
 -   **Kto**  
   
-    -   *Pojedynczych węzłów*: Filtr lokalny lub bezpośrednie połączenie.  
+    -   *Pojedynczych węzłów*:  Filtr lokalny lub bezpośrednie połączenie.  
   
-    -   *Sąsiadów w niektórych sąsiedztwa*: PeerHopCount.  
+    -   *Sąsiadów w niektórych sąsiedztwa*:  PeerHopCount.  
   
-    -   *Złożone podzbiór siatkę*: MessagePropagationFilter.  
+    -   *Złożone podzbiór siatkę*:  MessagePropagationFilter.  
   
 -   **Jak często**  
   
-    -   *Bardzo często*: bezpośrednie połączenie PeerHopCount, MessagePropagationFilter.  
+    -   *Bardzo często*:  Bezpośrednie połączenie, PeerHopCount, MessagePropagationFilter.  
   
-    -   *Sporadyczne*: Filtr lokalny.  
+    -   *Sporadyczne*:  Filtr lokalny.  
   
 -   **Wykorzystanie przepustowości**  
   
-    -   *Wysoka*: bezpośrednie połączenie mniej wskazane zastosowanie MessagePropagationFilter lub lokalnego filtru.  
+    -   *Wysoka*:  Bezpośrednie połączenie, mniej wskazane zastosowanie MessagePropagationFilter lub lokalnego filtru.  
   
-    -   *Niska*: istnieje bezpośrednie połączenie prawdopodobnie nie jest wymagane.  
+    -   *Niska*:  Istnieje bezpośrednie połączenie prawdopodobnie nie jest wymagane.  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie aplikacji kanału równorzędnego](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie aplikacji kanału równorzędnego](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

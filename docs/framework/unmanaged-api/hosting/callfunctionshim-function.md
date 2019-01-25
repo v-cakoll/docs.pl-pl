@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1060ca140db0304c8e5667f7fdf9624b3ac2b64a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39223e10b0f75eefb83f3b9a83c5f030318cd715
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738933"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim — Funkcja
-Wykonuje wywołanie funkcji, które ma określoną nazwę i parametrów w określonej bibliotece.  
+Wywołuje funkcję, która ma określoną nazwę i parametry w określonej bibliotece.  
   
  Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -52,22 +52,22 @@ HRESULT CallFunctionShim (
  [in] Pierwszy argument do przekazania do funkcji.  
   
  `lpvArgument2`  
- [in] Drugi argument można przekazać do funkcji.  
+ [in] Drugi argument do przekazania do funkcji.  
   
  `szVersion`  
  [in] Wersja biblioteki, która zawiera funkcję.  
   
  `pvReserved`  
- [in] Zarezerwowane do użytku w przyszłości. Przekaż zero w tym parametrze.  
+ [in] Zarezerwowane do użytku w przyszłości. Należy przekazać wartość zero, w tym parametrze.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

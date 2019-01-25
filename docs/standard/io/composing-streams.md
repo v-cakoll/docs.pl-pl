@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e52b827f337892c33ec61b9affa1cc646a759c5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1f2aa68822dd14b4cb81b48598faa6bdb4c71a13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544357"
 ---
 # <a name="composing-streams"></a>Tworzenie strumieni
 Magazyn zapasowy jest na nośniku, na przykład dysk lub pamięć. Każdy magazyn zapasowy różnych implementuje własne strumienia jako implementacja <xref:System.IO.Stream> klasy. Każdy typ strumienia odczytuje i zapisuje bajty od i do jego podanej zapasowego magazynu. Strumienie, łączących się z magazynami kopii są nazywane podstawowe strumienie. Podstawowe strumienie ma konstruktorów, które mają parametry, które są wymagane do nawiązania strumienia magazyn zapasowy. Na przykład <xref:System.IO.FileStream> ma konstruktorów, które określają parametr ścieżki, która określa, jak plik zostanie udostępniony przez procesy i tak dalej.  
@@ -41,10 +41,10 @@ Magazyn zapasowy jest na nośniku, na przykład dysk lub pamięć. Każdy magazy
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IO.StreamReader>  
-- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
-- <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType>  
-- <xref:System.IO.FileStream>  
-- <xref:System.IO.BinaryReader>  
-- <xref:System.IO.BinaryReader.ReadByte%2A?displayProperty=nameWithType>  
+- <xref:System.IO.StreamReader>
+- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>
+- <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType>
+- <xref:System.IO.FileStream>
+- <xref:System.IO.BinaryReader>
+- <xref:System.IO.BinaryReader.ReadByte%2A?displayProperty=nameWithType>
 - <xref:System.IO.BinaryReader.PeekChar%2A?displayProperty=nameWithType>

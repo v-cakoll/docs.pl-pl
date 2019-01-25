@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: 01ce30b9ac5997f56f29dcbbfa43a27738fa5556
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738069"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (opcje kompilatora C#)
 
@@ -41,10 +41,10 @@ Czasami nazywane "fałszywych znak" lub "OSS znak", publiczne podpisywanie zawie
 1. Otwórz **właściwości** strony dla projektu.
 1. Modyfikowanie **opóźnienie logowania tylko** właściwości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [-Delaysign — opcja kompilatora C#](delaysign-compiler-option.md)  
-- [-Keyfile — opcja kompilatora C#](keyfile-compiler-option.md)  
-- [Kompilator języka C# - keycontainer — opcja](keycontainer-compiler-option.md)  
-- [Opcje kompilatora C#](index.md)  
+- [C# Compiler -delaysign option](delaysign-compiler-option.md)
+- [-Keyfile — opcja kompilatora C#](keyfile-compiler-option.md)
+- [Kompilator języka C# - keycontainer — opcja](keycontainer-compiler-option.md)
+- [Opcje kompilatora C#](index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

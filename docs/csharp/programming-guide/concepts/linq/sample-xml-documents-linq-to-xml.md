@@ -2,12 +2,12 @@
 title: Przykładowe dokumenty XML (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 9ec89809-41a1-484c-b1e3-6c4ecdca7b8d
-ms.openlocfilehash: 2d13b1e42cd41d4ea54cdf1f585c29ddf71f6396
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 69c49718b7d257aedcf7c0140f139547be37774b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45640923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509635"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Przykładowe dokumenty XML (LINQ to XML)
 Następujące pliki przykładowe są używane w przykłady kodu i fragmenty kodu w całym [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.  
@@ -19,20 +19,20 @@ Następujące pliki przykładowe są używane w przykłady kodu i fragmenty kodu
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)|Dokument XML, który zawiera typowe zamówienie zakupu.|  
-|[Przykładowy plik XML: typowe zamówienie zakupu w przestrzeni nazw](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)|Dokument XML w przestrzeni nazw, który zawiera typowe zamówienie zakupu.|  
-|[Przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)|Dokument XML, który zawiera wiele zamówień zakupu.|  
-|[Przykładowy plik XML: wiele zamówień zakupu w przestrzeni nazw](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)|Dokument XML w przestrzeni nazw, który zawiera wiele zamówień zakupu.|  
-|[Przykładowy plik XML: konfiguracja testowa (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|Dokumentu XML, który zawiera dane konfiguracji pseudo testowe.|  
-|[Przykładowy plik XML: konfiguracja testowa w przestrzeni nazw](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md)|Dokument XML w przestrzeni nazw, która zawiera dane konfiguracji pseudo testowe.|  
-|[Przykładowy plik XML: klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)|Dokument XML, który zawiera klienci i zamówienia.|  
-|[Przykładowy plik XSD: klienci i zamówienia](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|Schemat definicji Xml (XSD) weryfikującego [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).|  
-|[Przykładowy plik XML: klienci i zamówienia w przestrzeni nazw](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|Dokument XML w przestrzeni nazw, która zawiera klientów i zamówień.|  
-|[Przykładowy plik XML: dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|Dokumentu XML, który zawiera dane, które są odpowiednie dla sumowanie i grupowania.|  
-|[Przykładowy plik XML: dane liczbowe w przestrzeni nazw](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|Dokument XML w przestrzeni nazw, która zawiera dane, które są odpowiednie dla sumowanie i grupowania.|  
-|[Przykładowy plik XML: książki (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)|Dokument XML, który zawiera katalog książek.|  
-|[Przykładowy plik XML: skonsolidowane zamówienia zakupu](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|Przedstawia informacje o dokumentu XML, który zawiera zamówienia zakupu, które znajdują się w różnych obszarach nazw.|  
+|[Przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)|Dokument XML, który zawiera typowe zamówienie zakupu.|  
+|[Przykładowy plik XML: Typowe zamówienie zakupu w Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)|Dokument XML w przestrzeni nazw, który zawiera typowe zamówienie zakupu.|  
+|[Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)|Dokument XML, który zawiera wiele zamówień zakupu.|  
+|[Przykładowy plik XML: Wiele zamówień zakupu w Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)|Dokument XML w przestrzeni nazw, który zawiera wiele zamówień zakupu.|  
+|[Przykładowy plik XML: Konfiguracja testowa (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|Dokumentu XML, który zawiera dane konfiguracji pseudo testowe.|  
+|[Przykładowy plik XML: Konfiguracja testu w Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md)|Dokument XML w przestrzeni nazw, która zawiera dane konfiguracji pseudo testowe.|  
+|[Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)|Dokument XML, który zawiera klienci i zamówienia.|  
+|[Przykładowy plik XSD: Klienci i zamówienia](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|Schemat definicji Xml (XSD) weryfikującego [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).|  
+|[Przykładowy plik XML: Klienci i zamówienia w Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|Dokument XML w przestrzeni nazw, która zawiera klientów i zamówień.|  
+|[Przykładowy plik XML: Dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|Dokumentu XML, który zawiera dane, które są odpowiednie dla sumowanie i grupowania.|  
+|[Przykładowy plik XML: Dane liczbowe w Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|Dokument XML w przestrzeni nazw, która zawiera dane, które są odpowiednie dla sumowanie i grupowania.|  
+|[Przykładowy plik XML: Książki (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)|Dokument XML, który zawiera katalog książek.|  
+|[Przykładowy plik XML: Skonsolidowane zamówienia zakupu](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|Przedstawia informacje o dokumentu XML, który zawiera zamówienia zakupu, które znajdują się w różnych obszarach nazw.|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

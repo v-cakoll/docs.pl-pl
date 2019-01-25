@@ -2,12 +2,12 @@
 title: 'Instrukcje: Adnotacje umożliwiają przekształcanie drzew LINQ to XML w stylu XSLT (C#)'
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: c93ba3209b80cf2467c0f3b49dc25e729c6a14c6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 64287abbf8a411d8c231ceaf3311c51738d7ea96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733964"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Instrukcje: Adnotacje umożliwiają przekształcanie drzew LINQ to XML w stylu XSLT (C#)
 Adnotacje może służyć do ułatwienia przekształcenia drzewa XML.  
@@ -425,6 +425,6 @@ After Transform
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zaawansowane LINQ to XML programowania (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

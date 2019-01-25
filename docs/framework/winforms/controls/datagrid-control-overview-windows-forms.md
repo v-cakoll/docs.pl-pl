@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: a4a8f33b45fa8433013cfa34fbc55f0db90737c4
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 05cc71ffb5d55c926dca50876a2329feeed8aedf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648472"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid — Informacje o formancie [Formularze systemu Windows]
 > [!NOTE]
@@ -42,7 +42,7 @@ DataGrid, powiązane z danymi z wielu tabel
   
  <xref:System.Windows.Forms.DataGrid> Może zapewnić interfejsu użytkownika dla zestawu danych, nawigację między powiązanymi tabelami i rozbudowane, formatowania i edycji możliwości.  
   
- Wyświetlanie i manipulowanie danych są odrębne funkcje: formant obsługuje interfejs użytkownika, natomiast aktualizacji danych są obsługiwane przez architekturę powiązanie danych formularzy Windows oraz przez [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych. W związku z tym wiele formantów powiązany z tego samego źródła danych zostanie zsynchronizowany.  
+ Wyświetlanie i manipulowanie danych są odrębne funkcje: Formant obsługuje interfejs użytkownika, natomiast aktualizacji danych są obsługiwane przez architekturę powiązanie danych formularzy Windows oraz przez [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych. W związku z tym wiele formantów powiązany z tego samego źródła danych zostanie zsynchronizowany.  
   
 > [!NOTE]
 >  Osoby zaznajomione z kontrolką DataGrid w Visual Basic 6.0 można zauważyć pewne istotne różnice w formularzach Windows Forms <xref:System.Windows.Forms.DataGrid> kontroli.  
@@ -54,7 +54,7 @@ DataGrid, powiązane z danymi z wielu tabel
   
  Jeśli dane w zestawie danych powiązane są aktualizowane przy użyciu dowolnego mechanizmu <xref:System.Windows.Forms.DataGrid> kontroli zmiany zostały uwzględnione. Jeśli masz siatki danych i jego style tabeli i Style kolumn `ReadOnly` właściwością `false`, można zaktualizować dane w zestawie danych za pośrednictwem <xref:System.Windows.Forms.DataGrid> kontroli.  
   
- Tylko jedna tabela może być wyświetlana w <xref:System.Windows.Forms.DataGrid> w danym momencie. Jeśli nie zdefiniowano relacji nadrzędny podrzędny między tabelami, użytkownik może poruszać się między powiązanymi tabelami o wybranie tabeli, które mają być wyświetlane w <xref:System.Windows.Forms.DataGrid> kontroli. Aby uzyskać informacje na temat tworzenia powiązań <xref:System.Windows.Forms.DataGrid> kontrolę [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] źródła danych w czasie projektowania lub wykonywania, zobacz [porady: powiązywanie formantu DataGrid formularzy Windows ze źródłem danych](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+ Tylko jedna tabela może być wyświetlana w <xref:System.Windows.Forms.DataGrid> w danym momencie. Jeśli nie zdefiniowano relacji nadrzędny podrzędny między tabelami, użytkownik może poruszać się między powiązanymi tabelami o wybranie tabeli, które mają być wyświetlane w <xref:System.Windows.Forms.DataGrid> kontroli. Aby uzyskać informacje na temat tworzenia powiązań <xref:System.Windows.Forms.DataGrid> kontrolę [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] źródła danych w czasie projektowania lub wykonywania, zobacz [jak: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
  Źródła danych prawidłowe <xref:System.Windows.Forms.DataGrid> obejmują:  
   
@@ -104,7 +104,7 @@ DataGrid, powiązane z danymi z wielu tabel
  ![Obiektów uwzględnionych w formancie DataGrid](../../../../docs/framework/winforms/controls/media/vbcolumns1.gif "vbColumns1")  
 Poniższa ilustracja przedstawia obiektów uwzględnionych w formancie DataGrid.  
   
- Style tabeli i kolumn, które są synchronizowane z <xref:System.Data.DataTable> obiektów i <xref:System.Data.DataColumn> obiektów, ustawiając ich `MappingName` właściwości do odpowiednich <xref:System.Data.DataTable.TableName%2A> i <xref:System.Data.DataColumn.ColumnName%2A> właściwości. Gdy <xref:System.Windows.Forms.DataGridTableStyle> , nie ma kolumny style zostanie dodany do <xref:System.Windows.Forms.DataGrid> formant powiązany z poprawnego źródła danych i <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwość stylu tabeli jest ustawiona na prawidłową <xref:System.Data.DataTable.TableName%2A> właściwość, zbiór <xref:System.Windows.Forms.DataGridColumnStyle> obiektów jest tworzony w tym Styl tabeli. Dla każdego <xref:System.Data.DataColumn> w <xref:System.Data.DataTable.Columns%2A> zbiór <xref:System.Data.DataTable>, odpowiedni <xref:System.Windows.Forms.DataGridColumnStyle> jest dodawany do <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection> jest dostępny za pośrednictwem <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle>. Kolumny można dodać lub usunąć z przy użyciu siatki <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> lub <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> metody <xref:System.Windows.Forms.GridColumnStylesCollection>. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie tabel i kolumn do formantu DataGrid formularzy Windows](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) i [porady: usuwanie lub ukrywanie kolumn w formancie DataGrid formularzy Windows](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
+ Style tabeli i kolumn, które są synchronizowane z <xref:System.Data.DataTable> obiektów i <xref:System.Data.DataColumn> obiektów, ustawiając ich `MappingName` właściwości do odpowiednich <xref:System.Data.DataTable.TableName%2A> i <xref:System.Data.DataColumn.ColumnName%2A> właściwości. Gdy <xref:System.Windows.Forms.DataGridTableStyle> , nie ma kolumny style zostanie dodany do <xref:System.Windows.Forms.DataGrid> formant powiązany z poprawnego źródła danych i <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwość stylu tabeli jest ustawiona na prawidłową <xref:System.Data.DataTable.TableName%2A> właściwość, zbiór <xref:System.Windows.Forms.DataGridColumnStyle> obiektów jest tworzony w tym Styl tabeli. Dla każdego <xref:System.Data.DataColumn> w <xref:System.Data.DataTable.Columns%2A> zbiór <xref:System.Data.DataTable>, odpowiedni <xref:System.Windows.Forms.DataGridColumnStyle> jest dodawany do <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection> jest dostępny za pośrednictwem <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle>. Kolumny można dodać lub usunąć z przy użyciu siatki <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> lub <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> metody <xref:System.Windows.Forms.GridColumnStylesCollection>. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie tabel i kolumn do Windows formantu DataGrid formularzy](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) i [jak: Usuwanie lub ukrywanie kolumn w Windows formantu DataGrid formularzy](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
   
  Kolekcja typów kolumn rozszerza <xref:System.Windows.Forms.DataGridColumnStyle> klasy za pomocą zaawansowanych formatowania i edycji możliwości. Wszystkie typy kolumn dziedziczyć <xref:System.Windows.Forms.DataGridColumnStyle> klasy bazowej. Klasa, która jest tworzona jest zależna od <xref:System.Data.DataColumn.DataType%2A> właściwość <xref:System.Data.DataColumn> z którego <xref:System.Web.UI.WebControls.DataGridColumn> opiera się. Na przykład <xref:System.Data.DataColumn> zawierający jego <xref:System.Data.DataColumn.DataType%2A> właściwością <xref:System.Boolean> zostaną skojarzone z <xref:System.Windows.Forms.DataGridBoolColumn>. W poniższej tabeli opisano każdy z tych typów kolumn.  
   
@@ -134,14 +134,14 @@ Poniższa ilustracja przedstawia obiektów uwzględnionych w formancie DataGrid.
 >  Czasami można dostosować tylko jedną kolumnę między wiele kolumn; na przykład zestaw danych zawiera kolumny 50 i chcesz tylko 49 z nich. W tym przypadku jest łatwiejsze zaimportować wszystkie kolumny 50 i programowo usunąć jedno zamiast programowe Dodawanie każdego 49 poszczególnych kolumn ma.  
   
 ## <a name="formatting"></a>Formatowanie  
- Formatowanie, które mogą być stosowane do <xref:System.Windows.Forms.DataGrid> kontroli zawiera style obramowania, style linii siatki, czcionki, właściwości podpisu, wyrównanie danych i alternatywnych kolory tła między wierszami. Aby uzyskać więcej informacji, zobacz [porady: formatowanie kontrolki DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md).  
+ Formatowanie, które mogą być stosowane do <xref:System.Windows.Forms.DataGrid> kontroli zawiera style obramowania, style linii siatki, czcionki, właściwości podpisu, wyrównanie danych i alternatywnych kolory tła między wierszami. Aby uzyskać więcej informacji, zobacz [jak: Formatowanie kontrolki DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md).  
   
 ## <a name="events"></a>Zdarzenia  
  Oprócz typowe kontrolować zdarzenia takie jak <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.Enter>, i <xref:System.Windows.Forms.DataGrid.Scroll>, <xref:System.Windows.Forms.DataGrid> kontrolka obsługuje zdarzenia związane z edycji i nawigacji w obrębie siatki. <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> Właściwość określa komórki, która jest zaznaczone. <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> Zdarzenie jest wywoływane, gdy użytkownik przechodzi do nowej komórki. Gdy użytkownik przechodzi do nowej tabeli za pomocą relacji nadrzędny/podrzędny <xref:System.Windows.Forms.DataGrid.Navigate> zdarzenie jest wywoływane. <xref:System.Windows.Forms.DataGrid.BackButtonClick> Zdarzenie jest wywoływane, gdy użytkownik kliknie przycisk Wstecz, gdy użytkownik przegląda tabeli podrzędnej i <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> zdarzenie jest wywoływane po kliknięciu ikonę Pokaż/Ukryj nadrzędnego wierszy.  
   
-## <a name="see-also"></a>Zobacz też  
- [DataGrid, kontrolka](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Instrukcje: powiązywanie kontrolki DataGrid formularzy Windows Forms ze źródłem danych](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- [Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- [Instrukcje: usuwanie lub ukrywanie kolumn w kontrolce DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- [Instrukcje: formatowanie kontrolki DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>Zobacz także
+- [DataGrid, kontrolka](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Instrukcje: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Instrukcje: Dodawanie tabel i kolumn do kontrolki DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Instrukcje: Usuń lub ukrywanie kolumn w kontrolce DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Instrukcje: Formatowanie kontrolki DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md)

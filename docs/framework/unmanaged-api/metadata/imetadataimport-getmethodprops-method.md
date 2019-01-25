@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4037ca42c5a66f075e949cd2035c1e7db510bb8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ca43ebc257ee4eb9d0ef17f3399e87c03b9f9c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740011"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps — Metoda
-Pobiera metadane skojarzone z metody odwołuje się określony MethodDef token.  
+Pobiera metadane skojarzone z metody odwołuje się określona MethodDef token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,10 +46,10 @@ HRESULT GetMethodProps (
   
 #### <a name="parameters"></a>Parametry  
  `mb`  
- [in] Token MethodDef, który reprezentuje metodę do zwracania metadanych.  
+ [in] Token MethodDef, który reprezentuje metodę, można zwrócić metadanych dla.  
   
  `pClass`  
- [out] Wskaźnik do token TypeDef, który reprezentuje typ, który implementuje metody.  
+ [out] Wskaźnik do TypeDef token, który reprezentuje typ, który implementuje metodę.  
   
  `szMethod`  
  [out] Wskaźnik do buforu, który ma nazwę metody.  
@@ -58,32 +58,32 @@ HRESULT GetMethodProps (
  [in] Żądany rozmiar `szMethod`.  
   
  `pchMethod`  
- [out] Wskaźnik do rozmiaru znaki dwubajtowe `szMethod`, lub w przypadku obcięcia, rzeczywista liczba znaki dwubajtowe w nazwie metody.  
+ [out] Wskaźnik do rozmiaru znaków `szMethod`, lub w przypadku obcinania, rzeczywista liczba znaków dwubajtowych w polu Nazwa metody.  
   
  `pdwAttr`  
- [out] Wskaźnik do żadnych flag skojarzonego z metodą.  
+ [out] Wskaźnik flagi, powiązany z metodą.  
   
  `ppvSigBlob`  
- [out] Wskaźnik do metadanych binarne sygnatury metody.  
+ [out] Wskaźnik do binarnych metadanych podpis metody.  
   
  `pcbSigBlob`  
- [out] Wskaźnik do wyrażony w bajtach rozmiar `ppvSigBlob`.  
+ [out] Wskaźnik do rozmiar w bajtach `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] Wskaźnik do wirtualnego adres względny metody.  
+ [out] Wskaźnik do wirtualnej adres względny metody.  
   
  `pdwImplFlags`  
- [out] Wskaźnik do dowolnego flagi implementacji metody.  
+ [out] Wskaźnik do flag implementacji metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

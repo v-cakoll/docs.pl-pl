@@ -2,12 +2,12 @@
 title: Binding2
 ms.date: 03/30/2017
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
-ms.openlocfilehash: 84e304f3dedcbd785d6238e6cb5eb142c288b995
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aaf0dd9d6918f2c248942cee3773eee8332adda9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149708"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552843"
 ---
 # <a name="binding"></a>Powiązanie
 WMI powiązania  
@@ -83,7 +83,7 @@ class Binding
   
  Schemat transportu identyfikatora URI jest używany przez fabryki kanału i odbiornika, które są tworzone przez wiązanie.  
   
-### <a name="sendtimeout"></a>Właściwości SendTimeout  
+### <a name="sendtimeout"></a>SendTimeout  
  Typ danych: Data i godzina  
   
  Typ dostępu: tylko do odczytu  
@@ -92,9 +92,9 @@ class Binding
   
 ## <a name="requirements"></a>Wymagania  
   
-|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
+|MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.Binding>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.Binding>

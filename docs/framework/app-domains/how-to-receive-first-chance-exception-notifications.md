@@ -1,5 +1,5 @@
 ---
-title: 'Porady: odbieranie powiadomień o wyjątkach pierwszej szansy'
+title: 'Instrukcje: Odbieranie powiadomień o wyjątkach pierwszej szansy'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 875cdb2837109e922233f42d6241a7e1888e0693
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ed8aaa12e91654dcf0b688b14d7d2f38bc9096ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677756"
 ---
-# <a name="how-to-receive-first-chance-exception-notifications"></a>Porady: odbieranie powiadomień o wyjątkach pierwszej szansy
+# <a name="how-to-receive-first-chance-exception-notifications"></a>Instrukcje: Odbieranie powiadomień o wyjątkach pierwszej szansy
 <xref:System.AppDomain.FirstChanceException> Zdarzenia <xref:System.AppDomain> klasa umożliwia otrzymywanie powiadomień, który jest zwracany wyjątek, przed języka wspólnego środowiska uruchomieniowego została rozpoczęta, wyszukując obsługi wyjątków.
 
  Zdarzenie jest wywoływane na poziomie domeny aplikacji. Wątek wykonywania mogą przejść przez wiele domen aplikacji, więc wyjątek, który jest nieobsługiwany w jednej domenie aplikacji może być obsługiwane w innej domenie aplikacji. Powiadomienie występuje w każdej domenie aplikacji, która została dodana procedura obsługi zdarzeń, dopóki nie obsługuje wyjątek, domeny aplikacji.
@@ -102,5 +102,5 @@ ms.locfileid: "49452277"
 
 -   W tym przykładzie jest aplikacją wiersza polecenia. Aby skompilować i uruchomić ten kod w programie Visual Studio, należy dodać kod C# `Console.ReadLine();` (w języku Visual Basic `Console.ReadLine()`) na końcu `Main()`, aby uniemożliwić zamknięcie, zanim może odczytywać dane wyjściowe z okna poleceń.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 - <xref:System.AppDomain.FirstChanceException>

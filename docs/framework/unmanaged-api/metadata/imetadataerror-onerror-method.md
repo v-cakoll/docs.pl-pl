@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1ed9e097dccd0fcb81ea9023cc9b84906589ccb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ebb7fdbcf8c17991928df2dc621ec651b9cd4f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678723"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError — Metoda
 Zapewnia powiadomienie błędów występujących podczas scalania metadanych.  
@@ -38,19 +38,19 @@ HRESULT OnError (
   
 #### <a name="parameters"></a>Parametry  
  `hrError`  
- [in] Wartość błędu HRESULT zwrócony do wywoływania metody.  
+ [in] Wartość błędu HRESULT zwracane do wywoływania metody.  
   
  `token`  
- [in] Token metadanych obiektu kodu, który został scalane, gdy wystąpił błąd.  
+ [in] Token metadanych obiektu kod, który został scalane, gdy wystąpił błąd.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataError, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataError, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

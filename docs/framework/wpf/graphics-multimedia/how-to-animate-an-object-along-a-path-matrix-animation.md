@@ -1,5 +1,5 @@
 ---
-title: Jak animować obiekt na ścieżce (animacja Matrix)
+title: 'Instrukcje: Animuj obiekt na ścieżce (animacja Matrix)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: f88133a5e927a1a1f59b1aa02826d140c107d002
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 836f61e062b921c7e51166a35d8169f903fcbab9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738303"
 ---
-# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Jak animować obiekt na ścieżce (animacja Matrix)
+# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Instrukcje: Animuj obiekt na ścieżce (animacja Matrix)
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> klasy animowanie obiektu na ścieżce, który jest definiowany przez <xref:System.Windows.Media.PathGeometry>.  
   
 ## <a name="example"></a>Przykład  
@@ -34,7 +34,7 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.M
   
  Aby uzyskać pełny przykład, zobacz [przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028). Aby uzyskać więcej informacji na temat ścieżek geometrycznych zobacz [Przegląd Geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

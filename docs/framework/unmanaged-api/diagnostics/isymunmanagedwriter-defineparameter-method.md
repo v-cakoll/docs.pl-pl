@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b552ef39c7f73aaa5cfeae4a313e329b267abf98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643393"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter — Metoda
-Określa pojedynczy parametr w bieżącej metodzie. Typ parametru jest pobierana z parametru pozycji (sekwencji) w podpisie metody.  
+Definiuje pojedynczy parametr w bieżącej metodzie. Typ parametru jest pobierana z parametru pozycji (kolejny) w podpisie metody.  
   
- Parametry są definiowane w metadanych dla danej metody, nie trzeba definiować ich ponownie za pomocą tej metody. Czytniki symbol musi sprawdzić normalne metadane parametrów przed zaewidencjonowaniem magazynu symboli.  
+ Parametry są definiowane w metadanych dla danej metody, nie trzeba je ponownie zdefiniować za pomocą tej metody. Czytelnicy symbol musi sprawdzić normalne metadane parametrów przed sprawdzeniem magazynu symboli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,28 +47,28 @@ HRESULT DefineParameter(
  [in] Nazwa parametru.  
   
  `attributes`  
- [in] Atrybuty parametrów.  
+ [in] Atrybuty parametru.  
   
  `sequence`  
- [in] Sygnatura parametru.  
+ [in] Podpis parametru.  
   
  `addrKind`  
  [in] Typ adresu.  
   
  `addr1`  
- [in] Pierwszy adres Specyfikacja parametru.  
+ [in] Pierwszy adres specyfikację parametru.  
   
  `addr2`  
- [in] Drugi adres Specyfikacja parametru.  
+ [in] Drugi adres specyfikację parametru.  
   
  `addr3`  
- [in] Trzeci adres Specyfikacja parametru.  
+ [in] Trzeci adres specyfikację parametru.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

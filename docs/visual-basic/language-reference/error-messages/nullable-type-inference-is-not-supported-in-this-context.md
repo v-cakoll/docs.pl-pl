@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: ea531c7be676e940a263b019a66cc80cf280a772
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dffc5233656257cd892f573a2f8b9f91d781c21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593194"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611894"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>Wnioskowanie typu zerowalnego nie jest obsługiwane w tym kontekście
-Typy wartości i struktury mogą być deklarowane wartości null.  
+Typy wartości i struktury można zadeklarować dopuszczającego wartość null.  
   
 ```vb  
 Dim a? As Integer  
 Dim b As Integer?  
 ```  
   
- Jednak wartości null deklaracji nie można używać w połączeniu z wnioskowanie o typie. Poniższe przykłady być przyczyną tego błędu.  
+ Jednak nie można użyć deklaracji dopuszczającego wartość null w połączeniu z wnioskowanie o typie. Poniższe przykłady przyczyny wystąpienia tego błędu.  
   
 ```vb  
 ' Not valid.  
@@ -34,8 +34,8 @@ Dim b As Integer?
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Użyj `As` klauzuli, aby zadeklarować zmiennej jako wartości null.  
+-   Użyj `As` klauzulę, aby zadeklarować zmienną jako dopuszczającego wartość null.  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy wartości dopuszczających wartości null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [Wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy wartości dopuszczających wartości null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

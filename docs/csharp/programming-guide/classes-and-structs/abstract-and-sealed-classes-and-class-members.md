@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 8c0b8e9814bf692e486624dd8a4a99d98337bca9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3257d365bb9816f4cb41d354f78c88ad4fa0f567
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523834"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Klasy abstrakcyjne i zapieczętowane oraz członkowie klas (Przewodnik programowania w języku C#)
 [Abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md) — słowo kluczowe pozwala na tworzenie klas i [klasy](../../../csharp/language-reference/keywords/class.md) elementów członkowskich, które są niekompletne i muszą być zaimplementowane w klasie pochodnej.  
@@ -48,11 +48,11 @@ ms.locfileid: "53235858"
   
  [!code-csharp[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)
 - [Instrukcje: Definiowanie właściwości abstrakcyjnych](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
-ms.openlocfilehash: 159635d6e3ce414c8fd45ff7f02a75fd7cbdfe7e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670176"
 ---
 # <a name="capitalization-conventions"></a>Konwencje dotyczące wielkości liter
 Wskazówki zawarte w tym rozdziale układ w prosty sposób za pomocą sprawa, po zastosowaniu spójnie upewnij identyfikatory dla typów, elementów członkowskich i parametrów, łatwe do odczytania.  
@@ -58,7 +58,7 @@ Wskazówki zawarte w tym rozdziale układ w prosty sposób za pomocą sprawa, po
 |Zdarzenie|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Pole|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |Wartość wyliczenia|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
-|Parametr|Mechanizm stosowania formatu|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
+|Parametr|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Wykorzystując wyrazy złożone i typowe terminy  
  Większość warunki złożone są traktowane jako pojedynczego słowa do celów wielkość liter.  
@@ -67,7 +67,7 @@ Wskazówki zawarte w tym rozdziale układ w prosty sposób za pomocą sprawa, po
   
  Te są zapisywane jako jednego wyrazu, takie jak punkt końcowy wyrazy złożone. Na potrzeby liter dla skrótowców należy traktować wyraz złożony zamknięte formularza jako pojedynczego wyrazu. Użyj bieżącym słowniku, aby określić, wyraz złożony zostanie zapisane w postaci zamknięte.  
   
-|Pascal|Mechanizm stosowania formatu|nie|  
+|Pascal|Camel|nie|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
@@ -106,5 +106,5 @@ Wskazówki zawarte w tym rozdziale układ w prosty sposób za pomocą sprawa, po
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
 - [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)

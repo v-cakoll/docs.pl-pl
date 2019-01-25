@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b18c89cee0c3f5088a9978e448a0d61de1b9848
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6244f01a78f08da839b233c3313f2fd6bff44b12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675083"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation — Wyliczenie
-W tym artykule opisano zestaw działań, dla których hosta można zastosować akcje zasady.  
+W tym artykule opisano zestaw operacji, dla których hostem akcje można zastosować zasad.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,35 +44,35 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`OPR_AppDomainRudeUnload`|Hosta można określić zasady akcje do wykonania, kiedy <xref:System.AppDomain> jest zwalnianie w sposób (niegrzeczny) nie jest bezpieczne.|  
-|`OPR_AppDomainUnload`|Hosta można określić zasady akcje do wykonania, kiedy <xref:System.AppDomain> zostanie zwolniona.|  
-|`OPR_FinalizerRun`|Hosta można określić zasady akcje do wykonania podczas uruchamiania finalizatory.|  
+|`OPR_AppDomainRudeUnload`|Hosta można określić zasady akcje do wykonania, kiedy <xref:System.AppDomain> zwalnianie w sposób łagodne (prosta).|  
+|`OPR_AppDomainUnload`|Hosta można określić zasady akcje do wykonania, kiedy <xref:System.AppDomain> jest zwalniana.|  
+|`OPR_FinalizerRun`|Hosta można określić zasady akcje do wykonania po uruchomieniu finalizatorów.|  
 |`OPR_ProcessExit`|Hosta można określić zasady akcje do wykonania, gdy kończy proces.|  
 |`OPR_ThreadAbort`|Hosta można określić zasady akcje do wykonania, gdy wątek został przerwany.|  
-|`OPR_ThreadRudeAbortInCriticalRegion`|Hosta można określić zasady akcje do wykonania, kiedy występuje przerwania niegrzeczny wątku w regionie krytyczne kodu.|  
-|`OPR_ThreadRudeAbortInNonCriticalRegion`|Hosta można określić zasady akcje podjęcie sytuacji przerwania niegrzeczny wątku w regionie niekrytyczne kodu.|  
+|`OPR_ThreadRudeAbortInCriticalRegion`|Hosta można określić zasady akcje do wykonania, gdy przerwanie wątku prosta odbywa się na krytyczny obszar kodu.|  
+|`OPR_ThreadRudeAbortInNonCriticalRegion`|Hosta można określić akcje zasad podjęcie sytuacji przerwanie wątku prosta w regionie niekrytyczne kodu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wspólna infrastruktura niezawodności środowiska uruchomieniowego (języka wspólnego CLR) języka rozróżnia przerwań i zasobów alokacji błędów występujących w regionach krytyczne kodu i tych, które występują w regionach niekrytyczne kodu. Ta różnica umożliwia hostom skonfigurowanie różnych zasad w zależności od tego, gdzie występuje błąd w kodzie.  
+ Wspólnej infrastruktury języka wspólnego (CLR) niezawodność rozróżnia przerwań i zasobów błędów alokacji, występujących w regionach krytycznego kodu, i te, które występują w niekrytyczne regiony kodu. Ta różnica jest przeznaczony do Zezwalaj na hostach w celu ustawienia zasad różne w zależności od tego, gdzie występuje błąd w kodzie.  
   
- A *krytyczne region kodu* dowolnego miejsca, gdzie CLR nie może zagwarantować, że przerywanie zadania lub nie można ukończyć żądania dla zasobów wpłynie na bieżące zadanie. Na przykład, jeśli zadanie jest blokada i otrzyma HRESULT wskazujący błąd podczas tworzenia żądania alokacji pamięci, jest za mało, aby po prostu przerwać tego zadania w celu zapewnienia stabilności <xref:System.AppDomain>, ponieważ <xref:System.AppDomain> może zawierać inne Oczekiwanie na tym samym blokady zadania. Aby odrzucić bieżący zadania może spowodować, że te inne zadania przestać odpowiadać (lub Rozłącz) przez nieograniczony czas. W takim przypadku host musi mieć możliwość zwolnienia całą <xref:System.AppDomain> zamiast niestabilność potencjalne zagrożenia.  
+ A *krytyczne obszar kodu* dowolnego miejsca, gdzie środowisko CLR nie może zagwarantować tego przerywanie zadania lub nieukończone żądania dla zasobów wpłynie na bieżące zadanie. Na przykład, jeśli zadanie jest blokada, otrzymuje wartość HRESULT, który wskazuje niepowodzenie podczas żądania alokacji pamięci jest za mała, aby przerwać to zadanie, aby upewnić się, stabilności, po prostu <xref:System.AppDomain>, ponieważ <xref:System.AppDomain> mogą zawierać inne Oczekiwanie na blokadę tego samego zadania. Aby wstrzymać bieżącą zadanie może spowodować, te inne zadania przestać odpowiadać (lub odłożyć) na czas nieokreślony. W takim przypadku host wymaga możliwości można zwolnić całej <xref:System.AppDomain> zamiast niestabilności potencjalne ryzyko.  
   
- A *niekrytyczne region kodu*, z drugiej strony, jest regionu, w którym środowiska CLR może zagwarantować, że przerwania lub awarii będzie miało wpływ na zadania, na których występuje błąd.  
+ A *niekrytyczne obszar kodu*, z drugiej strony, to region, w którym środowiska CLR może zagwarantować, że przerwania lub awarii będzie mieć wpływ na zadania, na którym występuje błąd.  
   
- Środowisko CLR rozróżnia również bezpieczne i łagodne przerwań (niegrzeczny). Ogólnie rzecz biorąc przerwania normalne lub bezpieczne sprawia, że wszelkich starań, aby uruchomić procedury obsługi wyjątków i finalizatory przed przerwaniem zadania, podczas gdy niegrzeczny przerwania sprawia, że nie gwarancje.  
+ Środowisko CLR rozróżnia również bezpiecznie i łagodne przerwań (prosta). Ogólnie rzecz biorąc przerwania normalne lub łagodne dokłada wszelkich starań, aby uruchomić procedury obsługi wyjątków i finalizatory przed przerwaniem zadania, natomiast prosta przerwania nie gwarantuje takie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [EClrFailure, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
- [EPolicyAction, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)  
- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [IHostPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [EClrFailure, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
+- [EPolicyAction, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
+- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [IHostPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

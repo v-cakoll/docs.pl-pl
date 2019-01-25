@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f489ab29726292f6c55151169ad9efc6f0fbfbcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1ee5044c2223d3ff90cf10b53cad4e1b353d87c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726519"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState — Wyliczenie
-Wskazuje stan użytkownika wątku.  
+Wskazuje stan wątku użytkownika.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,22 +47,22 @@ typedef enum CorDebugUserState {
 |Wartość|Opis|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|Zażądano zakończenia wątku.|  
-|`USER_SUSPEND_REQUESTED`|Zażądano zawieszenia wątku.|  
+|`USER_SUSPEND_REQUESTED`|Wysłano żądanie zawieszenia wątku.|  
 |`USER_BACKGROUND`|Wątek jest uruchomiony w tle.|  
-|`USER_UNSTARTED`|Wątek nie została uruchomiona, wykonywania.|  
+|`USER_UNSTARTED`|Wątek się nie rozpoczęła wykonywanie.|  
 |`USER_STOPPED`|Wątek został zakończony.|  
-|`USER_WAIT_SLEEP_JOIN`|Wątek oczekuje na inny wątek w celu wykonania zadania.|  
+|`USER_WAIT_SLEEP_JOIN`|Wątek czeka, aż inny wątek do ukończenia zadania.|  
 |`USER_SUSPENDED`|Wątek zostało zawieszone.|  
-|`USER_UNSAFE_POINT`|Wątek znajduje się w niebezpiecznego punktu. Wątek jest w momencie wykonywania gdzie może blokować wyrzucanie elementów bezużytecznych.<br /><br /> Debugowanie zdarzeń mogą być wysyłane z niebezpiecznych punkty, ale wstrzymywania wątku w niebezpiecznego punktu najprawdopodobniej spowoduje zakleszczenie dopóki nie zostanie wznowione wątku. Bezpieczne i niebezpieczny punkty są określane przez just-in-time (JIT) i odzyskiwanie kolekcji implementacji.|  
-|`USER_THREADPOOL`|Wątek znajduje się w puli wątków.|  
+|`USER_UNSAFE_POINT`|Ten wątek jest niebezpieczne w punkcie. Wątek jest w momencie wykonywania gdzie mogą blokować wyrzucania elementów bezużytecznych.<br /><br /> Debugowanie zdarzeń mogą być wysyłane z punktów niebezpieczne, ale zawieszanie wątków niebezpiecznych w punkcie najprawdopodobniej spowoduje zakleszczenia aż wątek zostanie wznowione. Bezpieczne i niebezpieczne punkty są określane przez just-in-time (JIT) i implementacji kolekcji wyrzucania elementów.|  
+|`USER_THREADPOOL`|Ten wątek jest z puli wątków.|  
   
 ## <a name="remarks"></a>Uwagi  
- Stan użytkownika wątek jest w stanie, zawierający wątku, gdy debuger bada go. Wątek może mieć kombinację stanów użytkownika.  
+ Stan użytkownika wątek jest stan, który ma wątku, gdy debuger bada go. Wątek może być kombinacją stanów użytkowników.  
   
- Użyj [ICorDebugThread::GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) metoda pobierania stanu użytkownika dla wątku.  
+ Użyj [ICorDebugThread::GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) metodę, aby pobrać stan użytkownika dla wątku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -70,5 +70,5 @@ typedef enum CorDebugUserState {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

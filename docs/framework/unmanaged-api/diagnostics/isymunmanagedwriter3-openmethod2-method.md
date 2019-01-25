@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 643666df9f93d1aa5e09579359ae0db87908f10b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b641f463eb9b664597b4806a6353278e8027d5b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709107"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 — Metoda
-Otwiera metody i zapewnia jego przesunięcie rzeczywistych sekcji w obrazie.  
+Otwiera metody i zawiera przesunięcie rzeczywistych sekcji w obrazie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,7 +38,7 @@ HRESULT OpenMethod2(
   
 #### <a name="parameters"></a>Parametry  
  `method`  
- [in] Token metadanych metody, która ma zostać otwarty.  
+ [in] Token metadanych dla metody, które ma zostać otwarty.  
   
  `isect`  
  [in] Przesunięcie sekcji w obrazie.  
@@ -47,11 +47,11 @@ HRESULT OpenMethod2(
  [in] Przesunięcie w obrazie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedWriter3, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
- [OpenMethod, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedWriter3, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [OpenMethod, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

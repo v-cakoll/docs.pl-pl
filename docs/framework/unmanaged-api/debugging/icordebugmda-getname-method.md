@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c9f76f2c3b2ecf3ac5805dea8f8243f0b74ad48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0dfe2bb234631a733248066e8475c135de288e63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417836"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737601"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName — Metoda
-Pobiera ciąg zawierający nazwę zarządzany Asystent debugowania (MDA) reprezentowany przez [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Pobiera ciąg zawierający nazwę zarządzanego Asystenta debugowania (MDA), reprezentowana przez [icordebugmda —](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,16 +43,16 @@ HRESULT GetName (
  [in] Rozmiar `szName` tablicy.  
   
  `pcchName`  
- [out] Wskaźnik do długość nazwy.  
+ [out] Wskaźnik do długości nazwy.  
   
  `szName`  
  [out] Tablica do przechowywania nazwy.  
   
 ## <a name="remarks"></a>Uwagi  
- MDA nazwy są unikatowe wartości. `GetName` Metoda jest wydajności wygodnym sposobem uzyskanie strumienia XML i wyodrębniania nazwy ze strumienia, na podstawie schematu.  
+ MDA nazwy są unikatowe wartości. `GetName` Metoda jest alternatywą wygodne wydajności do pobierania strumień XML i wyodrębniania nazwę strumienia na podstawie schematu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -60,6 +60,6 @@ HRESULT GetName (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugMDA, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)  
- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugMDA, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

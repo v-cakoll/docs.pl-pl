@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed7db321b32657087b791758096c692f25f3d7f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49521e4b4ff5f8c364827b233759e163aca43e39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542664"
 ---
 # <a name="cordebugblockingobject-structure"></a>CorDebugBlockingObject — Struktura
-Definiuje obiekt, który blokuje wątku i powód, że wątek jest zablokowany.  
+Definiuje obiekt, który blokuje wątek i powód, że wątek jest zablokowany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,14 +41,14 @@ CorDebugBlockingReason blockingReason;
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`pBlockingObject`|Obiekt, w którym wątek jest zablokowana. Ten obiekt jest prawidłowy tylko na czas trwania bieżącego stanu zsynchronizowane. Jeśli na tym samym obiekcie, w ramach tego samego stanu zsynchronizowanych blokują dwoma wątkami, może spodziewać się [ICorDebugValue::GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md) metody zwracają taką samą wartość. Jednak interfejsy może lub nie może być wskaźnika równoważne.|  
-|`dwTimeout`|Wyrażony w milisekundach czas, przed wykonaniem operacji blokowania będzie limitu czasu lub wartość INFINITE, co oznacza, że będzie on nie upłynął limit czasu. Wartość limitu czasu określa całkowity czas blokowania operacji, nie jest nadal pozostały czas.|  
-|`blockingReason`|Powód, że wątek jest zablokowany na tym obiekcie.|  
+|`pBlockingObject`|Obiekt, na którym blokuje wątek. Ten obiekt jest prawidłowy tylko na czas trwania bieżącego stanu zsynchronizowane. Jeśli dwa wątki są przeszkodą w ten sam obiekt w ramach zsynchronizowane takiego samego stanu, mogą oczekiwać [ICorDebugValue::GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md) metody zwracają taką samą wartość. Jednak interfejsy mogą lub nie może być wskaźnik równoważne.|  
+|`dwTimeout`|Liczba milisekund, przed wykonaniem operacji blokowania będzie limit czasu lub wartości NIESKOŃCZONE, co oznacza, że będą wykonywane następujące czynności nie przekraczają limit czasu. Wartość limitu czasu określa długość całkowity czas blokowania operacji, nie jest jeszcze pozostało czasu.|  
+|`blockingReason`|Powód, że wątek jest zablokowany dla tego obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl  
   
@@ -56,6 +56,6 @@ CorDebugBlockingReason blockingReason;
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

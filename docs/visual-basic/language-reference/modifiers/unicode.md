@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Unicode keyword [Visual Basic]
 - Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-ms.openlocfilehash: a61fd8e10c39569d92dd84180f678a1ff05a9310
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 491bbb24be8e6a3044b0a433c5ad262596ae00d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655286"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
-Określa, że Visual Basic powinien kierować wszystkie ciągi jako wartości Unicode, niezależnie od tego, nazwę procedury zewnętrznej, został zadeklarowany.  
+Określa, że Visual Basic powinien kierować wszystkie ciągi jako wartości Unicode, niezależnie od nazwy procedury zewnętrznego został zadeklarowany.  
   
- Po wywołaniu procedury zdefiniowany poza projektem, kompilator Visual Basic nie ma dostępu do informacji musi mieć w celu wywołania tej procedury poprawnie. Informacje te obejmują lokalizacji procedurą, jak określono, jego sekwencja wywoływania oraz zwracany typ i ciąg znaków ustaw go używa. [Instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md) tworzy odwołanie do zewnętrznej procedury i przekazywać te informacje niezbędne.  
+ Po wywołaniu procedury zdefiniowane poza projektem, kompilator Visual Basic nie ma dostępu do informacji, że musi mieć, aby prawidłowo wywołać procedurę. Informacje te obejmują, gdzie znajduje się procedura, sposób jego identyfikacji, jego sekwencja wywoływania i zwracany typ i zestaw znaków ciągu, od go używa. [Instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md) tworzy odwołanie do zewnętrznej procedury i dostarcza to informacje niezbędne.  
   
- `charsetmodifier` Części w `Declare` instrukcji dostarcza informacje zestaw znaków kierowanie ciągów podczas wywoływania procedury zewnętrznego. Wpływa to również na jak Visual Basic wyszukuje plik zewnętrznych dla nazwę procedury zewnętrznej. `Unicode` Modyfikator Określa, że Visual Basic powinien kierować wszystkie ciągi jako wartości Unicode i sprawdzić procedurę bez modyfikowania jej nazwy podczas wyszukiwania.  
+ `charsetmodifier` Wchodzi w skład w `Declare` instrukcji dostarcza informacji zestawu znaków na przeprowadzanie marshalingu ciągów podczas wywoływania procedury zewnętrznego. Ma to również wpływ jak języka Visual Basic poszukuje zewnętrznego pliku, aby uzyskać nazwę procedury zewnętrznej. `Unicode` Modyfikator Określa, że Visual Basic powinien kierować wszystkie ciągi jako wartości Unicode i sprawdzić procedurę bez modyfikowania jej nazwy podczas wyszukiwania.  
   
  Jeśli określono nie modyfikator zestawu znaków, `Ansi` jest ustawieniem domyślnym.  
   
@@ -30,10 +30,10 @@ Określa, że Visual Basic powinien kierować wszystkie ciągi jako wartości Un
   
  [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Uwagi dla deweloperów inteligentnych urządzeń  
- To słowo kluczowe nie jest obsługiwane.  
+## <a name="smart-device-developer-notes"></a>Uwagi dla deweloperów urządzeń inteligentnych  
+ This — słowo kluczowe nie jest obsługiwane.  
   
-## <a name="see-also"></a>Zobacz też  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

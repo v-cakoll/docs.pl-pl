@@ -1,5 +1,5 @@
 ---
-title: 'Porady: utrzymywanie więcej niż jednej wartości w zmiennej (Visual Basic)'
+title: 'Instrukcje: Utrzymywanie więcej niż jedną wartość w zmiennej (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 781f56c7e710f5130d821ca4796398379dfa4c6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c6cd9c61c332fc98e99334143b50e395f4eabf47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517966"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671502"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Porady: utrzymywanie więcej niż jednej wartości w zmiennej (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Instrukcje: Utrzymywanie więcej niż jedną wartość w zmiennej (Visual Basic)
 Zmienna zawiera więcej niż jedną wartość, jeśli zadeklarujesz będzie *złożonego typu danych*.  
   
  [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) zawierają klasy, tablic i struktur. Zmienną typu złożonych danych może zawierać kombinację podstawowe typy danych i innych typów złożonych. Struktury i klasy może zawierać kod, a także dane.  
@@ -41,11 +41,11 @@ Zmienna zawiera więcej niż jedną wartość, jeśli zadeklarujesz będzie *zł
   
 5.  Postępuj zgodnie z `As` — słowo kluczowe o nazwie odpowiednich złożonych typów danych.  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)  
- [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)
+- [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

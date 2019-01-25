@@ -8,20 +8,20 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: c696017c153b63ba6f2d485855c969b2b45ba0ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 82a9a3e6362538fc62b4afdb010ca784590b9db9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746341"
 ---
 # <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt; — Element (ustawienia sieci)
 Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.  
   
  \<Konfiguracja >  
 \<system.net>  
-\<defaultProxy — >  
-\<bypasslist >  
+\<defaultProxy>  
+\<bypasslist>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,7 +48,7 @@ Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzyst
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[defaultProxy —](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).|  
   
 ## <a name="remarks"></a>Uwagi  
  Lista pomijania zawiera wyrażeń regularnych, które opisują identyfikatory URI, <xref:System.Net.WebRequest> wystąpień dostęp do bezpośrednio zamiast za pośrednictwem serwera proxy.  
@@ -76,6 +76,6 @@ Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzyst
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

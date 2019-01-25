@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 6b1a61ac7566f624f44480ffed2337dba5e51ca2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3930453e2ba3594e19d8eb7c3dfbceb49c3a1e80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540536"
 ---
 # <a name="how-to-configure-network-tracing"></a>Instrukcje: Konfigurowanie śledzenia sieci
 Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określają format i zawartość danych ze śledzenia sieci. Przed rozpoczęciem procedury należy się upewnić, że śledzenie jest włączone. Aby uzyskać informacje na temat włączania śledzenia, zobacz [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -97,8 +97,8 @@ Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określaj
 |`maxdatasize`|Opcjonalnie <xref:System.Int32> atrybutu. Ustawia maksymalną liczbę bajtów danych sieciowych w każdym zapisie ze śledzenia linii. Wartość domyślna to 1024.<br /><br /> Ten atrybut musi być ustawiony na \<źródło > elementu, jak pokazano w przykładzie. Wyjątek jest generowany, jeśli ten atrybut jest ustawiony na elemencie należącym do elementu \<przełączników > element.|  
 |`Tracemode`|Opcjonalnie <xref:System.String> atrybutu. Ustaw `includehex` Aby wyświetlić ślady protokołu w formacie szesnastkowym i tekstowym. Ustaw `protocolonly` wyświetlanie tylko tekstu. Wartość domyślna to `includehex`.<br /><br /> Ten atrybut musi być ustawiony na \<przełączników > elementu, jak pokazano w przykładzie. Wyjątek jest generowany, jeśli ten atrybut jest ustawiony na elemencie należącym do elementu \<źródło > element.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Interpretowanie śledzenia sieci](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
- [Włączanie śledzenia sieci](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>Zobacz także
+- [Interpretowanie śledzenia sieci](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+- [Włączanie śledzenia sieci](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

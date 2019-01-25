@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 099e2de40458e42c9df34e74dee8d9fc7c425dea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f18bdfaee1d79ce84a5b2822d52231f4bed098c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620061"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Używanie klasy StringBuilder w programie .NET
 <xref:System.String> Obiektu jest niezmienny. Za każdym razem, gdy używasz jednej z metod w <xref:System.String?displayProperty=nameWithType> klasy, należy utworzyć nowy obiekt ciągu w pamięci, co wymaga nowego przydziału miejsca dla tego nowego obiektu. W sytuacjach, w których trzeba wykonać powtarzanych modyfikacji ciągu, obciążenie związane z utworzeniem nowej <xref:System.String> obiekt może być kosztowne. <xref:System.Text.StringBuilder?displayProperty=nameWithType> Klasa może być używana, gdy chcesz zmodyfikować ciąg bez tworzenia nowego obiektu. Na przykład za pomocą <xref:System.Text.StringBuilder> klasy może zwiększyć wydajność, gdy łączenie wielu ciągów w pętli.  
@@ -70,7 +70,7 @@ ms.locfileid: "44197317"
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Usuwa określoną liczbę znaków z bieżącego **StringBuilder**.|  
 |<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Zamienia określony znak pod określonym indeksem.|  
   
-### <a name="append"></a>Dołącz  
+### <a name="append"></a>Append  
  **Append** metoda może służyć do dodawania tekstu lub ciąg reprezentujący obiekt do końca ciągu reprezentowane przez bieżącą **StringBuilder**. Poniższy przykład inicjuje **StringBuilder** do "Hello World", a następnie dołącza jakiś tekst na końcu obiektu. Miejsce jest przydzielane automatycznie, zgodnie z potrzebami.  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]
@@ -98,7 +98,7 @@ ms.locfileid: "44197317"
  [!code-csharp[Conceptual.StringBuilder#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#7)]
  [!code-vb[Conceptual.StringBuilder#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#7)]  
   
-### <a name="replace"></a>Zastąp  
+### <a name="replace"></a>Replace  
  **Zastąp** metoda może służyć do Zastąp znaki w obrębie <xref:System.Text.StringBuilder> obiektu na inny określony znak. W poniższym przykładzie użyto **Zastąp** metodę wyszukiwania <xref:System.Text.StringBuilder> obiektu dla wszystkich wystąpień wykrzyknika (!) znak i zastąpić je znak zapytania (?).  
   
  [!code-cpp[Conceptual.StringBuilder#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#8)]
@@ -113,6 +113,6 @@ ms.locfileid: "44197317"
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
-- [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)  
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>
+- [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)
 - [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)

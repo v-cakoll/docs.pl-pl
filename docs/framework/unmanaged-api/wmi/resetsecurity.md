@@ -1,6 +1,6 @@
 ---
 title: Funkcja ResetSecurity (niezarządzany wykaz interfejsów API)
-description: Funkcja ResetSecurity przypisuje token personifikacji bieżącego wątku.
+description: Funkcja ResetSecurity przypisuje tokenu personifikacji w bieżącym wątku.
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31e42b9e39ddb43025e18888572c394d742e38cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f117b9807d57847d53cf00fbb4983e187798f09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730857"
 ---
-# <a name="resetsecurity-function"></a>Funkcja ResetSecurity
+# <a name="resetsecurity-function"></a>ResetSecurity — funkcja
 Przypisuje token personifikacji dostarczony do bieżącego wątku.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -39,20 +39,20 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>Parametry
 
 `token`  
-[in] Token personifikacji do skojarzenia z bieżącego wątku. Wartość może być `null`. 
+[in] Token personifikacji do skojarzenia z bieżącym wątkiem. Wartość może być `null`. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja zakończy się powodzeniem, jest zwracana wartość `S_OK` (0).
+Jeśli funkcja się powiedzie, wartość zwracana jest `S_OK` (0).
 
-Jeśli funkcja nie powiedzie się, wartość zwracana jest kodu zera błędu. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetErrorInfo](geterrorinfo.md) funkcji.
+Jeśli funkcja zawiedzie, wartość zwracana jest kod błędu różny od zera. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [geterrorinfo —](geterrorinfo.md) funkcji.
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Zobacz także  
-[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

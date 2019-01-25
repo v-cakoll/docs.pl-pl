@@ -2,12 +2,12 @@
 title: '&lt;connectionPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
-ms.openlocfilehash: 2d79b3e28d1a80011cba7c515d979ae0037785a5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1e3001f60ae0f18fee88678cae1e9e55d90822c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526769"
 ---
 # <a name="ltconnectionpoolsettingsgt"></a>&lt;connectionPoolSettings&gt;
 Określa ustawienia puli dodatkowego połączenia powiązania nazwanego potoku.  
@@ -16,8 +16,8 @@ Określa ustawienia puli dodatkowego połączenia powiązania nazwanego potoku.
 \<powiązania >  
 \<customBinding>  
 \<Powiązanie >  
-\<namePipeTransport >  
-\<connectionPoolSettings >  
+\<namePipeTransport>  
+\<connectionPoolSettings>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,17 +45,17 @@ Określa ustawienia puli dodatkowego połączenia powiązania nazwanego potoku.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|Definiuje transport, powodujący przesył kanałem wiadomości używając potoków nazwanych.|  
+|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|Definiuje transport, powodujący przesył kanałem wiadomości używając potoków nazwanych.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.NamedPipeConnectionPoolSettingsElement>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement.ConnectionPoolSettings%2A>  
- <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Transporty](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Wybieranie transportu](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.NamedPipeConnectionPoolSettingsElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement.ConnectionPoolSettings%2A>
+- <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Transporty](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Wybieranie transportu](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

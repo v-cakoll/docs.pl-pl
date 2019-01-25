@@ -2,15 +2,15 @@
 title: Rozproszone obiekty XName i Xnamespace (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-ms.openlocfilehash: 3ffeaac6d893b70c2c0d49d8d52d0372879cdf37
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ff5677e84d0a4401c9d3ce8c43e7743385cdd432
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557867"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>Rozproszone obiekty XName i Xnamespace (LINQ to XML) (C#)
-<xref:System.Xml.Linq.XName> i <xref:System.Xml.Linq.XNamespace> obiekty są *rozproszone obiekty*; oznacza to, jeśli zawierają one taką samą nazwę kwalifikowaną, odnoszą się do tego samego obiektu. Daje to zalety korzystania z zapytania: podczas porównywania dwóch nazw rozproszone obiekty pod kątem równości ustalić, czy dwa odwołania wskazują ten sam obiekt ma tylko podstawowych języka pośredniego. Podstawowy kod ma ciągów porównań, i może zająć dużo czasu.  
+<xref:System.Xml.Linq.XName> i <xref:System.Xml.Linq.XNamespace> obiekty są *rozproszone obiekty*; oznacza to, jeśli zawierają one taką samą nazwę kwalifikowaną, odnoszą się do tego samego obiektu. Daje to zalety korzystania z zapytania: Podczas porównywania dwóch nazw rozproszone obiekty pod kątem równości, podstawowy język pośredni ma tylko do określenia, czy dwa odwołania wskazują ten sam obiekt. Podstawowy kod ma ciągów porównań, i może zająć dużo czasu.  
   
 ## <a name="atomization-semantics"></a>Rozproszenie semantyki  
  Rozproszenie oznacza, że jeśli dwa <xref:System.Xml.Linq.XName> obiekty mają taką samą nazwę lokalnego i w tej samej przestrzeni nazw, są one współużytkują to samo wystąpienie. W ten sam sposób, jeśli dwa <xref:System.Xml.Linq.XNamespace> obiekty mają ten sam identyfikator URI przestrzeni nazw, mają tego samego wystąpienia.  
@@ -74,6 +74,6 @@ foreach (var z in query)
 <C1>1</C1>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wydajność (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

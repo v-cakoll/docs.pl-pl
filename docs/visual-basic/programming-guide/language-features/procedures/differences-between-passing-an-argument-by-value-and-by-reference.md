@@ -8,45 +8,45 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-ms.openlocfilehash: 4e846c59d3da01d4d9fe943795376c37db4fb397
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 129bb01184d051572ac757a2883aac4de8469d2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513311"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Różnice pomiędzy przekazywaniem argumentu według wartości i według odwołania (Visual Basic)
-Jeśli jeden lub więcej argumentów do procedury, każdy argument odnosi się do odpowiedniego elementu programowania kodu wywołującego. Można przekazać wartość tego elementu źródłowego lub odwołanie do niej. Jest to nazywane *przekazywanie mechanizm*.  
+Jeśli jeden lub więcej argumentów do procedury, każdy argument odnosi się do podstawowego elementu programistycznego, w wywoływanym kodzie. Można przekazać wartość tego bazowego elementu lub odwołanie do niej. Jest to nazywane *mechanizm przekazywania*.  
   
 ## <a name="passing-by-value"></a>Przekazywanie poprzez wartość  
- Przekazując argument *przez wartość* , określając [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) — słowo kluczowe dla odpowiadającego mu parametru w definicji procedury. Gdy używasz ten mechanizm przekazywania Visual Basic kopiuje wartość odpowiedniego elementu programowania do zmiennej lokalnej w procedurze. Kod procedury nie ma dostęp do odpowiedniego elementu w wywoływanym kodzie.  
+ Przekazać argument *według wartości* , określając [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) — słowo kluczowe dla odpowiedniego parametru w definicji procedury. Korzystając z tego mechanizmu przekazywania, Visual Basic kopiuje wartość elementu podstawowego programowania do zmiennej lokalnej w procedurze. Kod procedury nie ma dostępu do elementu bazowego w wywoływanym kodzie.  
   
 ## <a name="passing-by-reference"></a>Przekazywanie poprzez odwołanie  
- Przekazując argument *przez odwołanie* , określając [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe dla odpowiadającego mu parametru w definicji procedury. Gdy używasz ten mechanizm przekazywania Visual Basic zwraca procedury bezpośrednie odwołanie do odpowiedniego elementu programowania kodu wywołującego.  
+ Przekazać argument *przez odwołanie* , określając [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe dla odpowiedniego parametru w definicji procedury. Korzystając z tego mechanizmu przekazywania, Visual Basic zapewnia procedury bezpośrednie odwołanie do podstawowego elementu programistycznego kodu wywołującego.  
   
 ## <a name="passing-mechanism-and-element-type"></a>Mechanizm przekazywania i typ elementu  
- Przekazywanie mechanizm wyboru nie jest taka sama jak klasyfikacji element podstawowy typu. Przekazywanie według wartości lub według odwołania odwołuje się do języka Visual Basic dostarcza kod procedury. Typ wartości lub typ referencyjny odwołuje się do przechowywania elementu programistycznego w pamięci.  
+ Wybór mechanizm przekazywania nie jest taka sama jak Klasyfikacja typu bazowego elementu. Przekazywanie według wartości lub według odwołania odnosi się do języka Visual Basic dostarcza kod procedury. Typu wartości lub typem referencyjnym odnosi się do przechowywania elementu programowania w pamięci.  
   
- Jednak powiązane mechanizm przekazywania i typ elementu. Wartość typu referencyjnego jest wskaźnikiem do danych w pamięci. To oznacza, że jeśli przez wartość typu odwołania, kod procedury ma wskaźnik do odpowiedniego elementu danych, mimo że nie ma dostępu do elementu podstawowego. Na przykład jeśli element jest zmienną tablicową, kod procedury nie ma dostępu do samej zmiennej, ale mogą uzyskiwać dostęp do tablicy elementów członkowskich.  
+ Jednak mechanizm przekazywania i typ elementu są wzajemnie powiązane. Wartość typu referencyjnego jest wskaźnik do danych w innym miejscu w pamięci. To oznacza, że jeśli przekazujesz typu odwołania przez wartość, kod procedury ma wskaźnik do danych elementu podstawowego, nawet jeśli nie można uzyskać dostępu samego elementu bazowego. Na przykład jeśli element jest zmienną tablicową, kod procedury nie ma dostępu do samej zmiennej, ale będzie miał dostęp do tablicy elementów członkowskich.  
   
-## <a name="ability-to-modify"></a>Uprawnienia do modyfikowania  
- Jeśli element niemodyfikowalnymi jako argument, procedury nigdy nie ją zmodyfikować w kodu wywołującego, czy jest przekazywany `ByVal` lub `ByRef`.  
+## <a name="ability-to-modify"></a>Możliwość modyfikowania  
+ Jeśli przekazujesz niemodyfikowalnymi elementu jako argument procedury może nigdy nie go modyfikować w kod wywołujący, czy jest przekazywana `ByVal` lub `ByRef`.  
   
- Dla elementu można modyfikować w poniższej tabeli przedstawiono interakcje między typ elementu i mechanizmu przekazywania.  
+ Elementu można modyfikować Poniższa tabela podsumowuje interakcje między typami elementu i mechanizm przekazywania.  
   
 |Typ elementu|Przekazany `ByVal`|Przekazany `ByRef`|  
 |------------------|--------------------|--------------------|  
-|Typ wartości (zawiera tylko wartości)|Procedury nie można zmienić, zmiennej lub dowolny z jego elementów członkowskich.|Procedura może zmienić zmienną i jej elementów członkowskich.|  
-|Typ odwołania (zawiera wskaźnik do wystąpienia klasy lub struktury)|Nie można zmienić zmiennej procedura, ale można zmienić elementów członkowskich wystąpienia, na którą wskazuje.|Procedura może zmienić zmienna i jej elementów członkowskich wystąpienia, na którą wskazuje.|  
+|Typ wartości (zawiera tylko wartości)|Procedury nie można zmienić, zmienna lub dowolny z jej członków.|Procedury można zmienić, zmienna i jej elementów członkowskich.|  
+|Typ odwołania (zawiera wskaźnik do wystąpienia klasy lub struktury)|Procedura nie można zmienić zmienną, ale można zmienić elementy członkowskie wystąpienia, na którą wskazuje.|Procedury można zmienić, zmienna i jej elementów członkowskich wystąpienia, na którą wskazuje.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Procedury](./index.md)  
- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Instrukcje: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
- [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)  
- [Różnice między argumentami modyfikowalnymi i niemodyfikowalnymi](./differences-between-modifiable-and-nonmodifiable-arguments.md)  
- [Instrukcje: zmiana wartości argumentu procedury](./how-to-change-the-value-of-a-procedure-argument.md)  
- [Instrukcje: ochrona argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md)  
- [Instrukcje: wymuszanie przekazywania argumentu przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md)  
- [Przekazywanie argumentów według pozycji i według nazwy](./passing-arguments-by-position-and-by-name.md)  
- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Zobacz także
+- [Procedury](./index.md)
+- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
+- [Instrukcje: Przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)
+- [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)
+- [Różnice między argumentami modyfikowalnymi i niemodyfikowalnymi](./differences-between-modifiable-and-nonmodifiable-arguments.md)
+- [Instrukcje: Zmień wartość argumentu procedury](./how-to-change-the-value-of-a-procedure-argument.md)
+- [Instrukcje: Chronienie argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Instrukcje: Wymuszanie być przekazywany przez wartość argumentu](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Przekazywanie argumentów według pozycji i według nazwy](./passing-arguments-by-position-and-by-name.md)
+- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

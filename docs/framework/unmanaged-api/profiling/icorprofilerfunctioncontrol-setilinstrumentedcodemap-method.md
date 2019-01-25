@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3cb4bfdf90099719e2584c3767965a53186ca8ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81880f5f97d1c8f16c80f3e3cb2a1be506d44e2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571038"
 ---
 # <a name="icorprofilerfunctioncontrolsetilinstrumentedcodemap-method"></a>ICorProfilerFunctionControl::SetILInstrumentedCodeMap — Metoda
-Ustawia mapę kodu dla funkcji określonej przy użyciu określonego wpisów map wspólnego języka pośredniego (CIL).  
+Ustawia mapę kodu dla określonej funkcji przy użyciu określonego wpisy mapy wspólny język pośredni (CIL).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +37,16 @@ HRESULT SetILInstrumentedCodeMap(
   
 #### <a name="parameters"></a>Parametry  
  `cILMapEntries`  
- [in] Liczba wpisów w planie.  
+ [in] Liczba wpisów w mapie.  
   
  `rgILMapEntries`  
- [in] Tablica przydzielone przez obiekt wywołujący COR_IL_MAP wpisów. Interpretacja te wpisy są takie same jak w przypadku [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) metody.  
+ [in] Tablica przydzielana przez obiekt wywołujący cor_il_map — wpisy. Interpretacja te wpisy są takie same jak w przypadku [icorprofilerinfo::setilinstrumentedcodemap —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) metody.  
   
 ## <a name="remarks"></a>Uwagi  
- Ustawienie mapowanie przez wywołanie tej metody umożliwia debugera tak, aby pobrać mapowanie przez wywołanie metody [ICorDebugILCode2::GetInstrumentedILMap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md). Umożliwia także debugera używać mapowania wewnętrznie podczas obliczania IL przesunięciami śladów stosu i okresy istnienia zmiennej.  
+ Ustawienie mapowanie przez wywołanie tej metody umożliwia debugerowi, aby pobrać mapowanie przez wywołanie metody [ICorDebugILCode2::GetInstrumentedILMap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md). Umożliwia także debugera do użycia mapowanie wewnętrznie, podczas obliczania IL rekompensaty w przypadku ślady stosu i okresy istnienia zmiennych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -54,5 +54,5 @@ HRESULT SetILInstrumentedCodeMap(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

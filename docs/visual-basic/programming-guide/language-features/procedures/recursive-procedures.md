@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 0bb89ac855d65d7677a062346db8665698dbb805
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1802785e38b58ce2c057d6ddbe1e54e73e079761
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660726"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Procedury rekurencyjne (Visual Basic)
 A *cyklicznego* procedura jest taki, który wywołuje sam siebie. Ogólnie rzecz biorąc to nie jest najbardziej skutecznym sposobem pisania kodu języka Visual Basic.  
@@ -37,15 +37,15 @@ A *cyklicznego* procedura jest taki, który wywołuje sam siebie. Ogólnie rzecz
   
  **Testowanie**. Jeśli piszesz procedury cykliczne, należy go przetestować dokładnie aby upewnić się, że spełnia on zawsze jakiegoś warunku ograniczającego. Należy upewnić się, że nie można uruchomić za mało pamięci z powodu konieczności zbyt wiele wywołań rekurencyjnych.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.StackOverflowException>  
- [Procedury](./index.md)  
- [Sub, procedury](./sub-procedures.md)  
- [Procedury funkcji](./function-procedures.md)  
- [Procedury właściwości](./property-procedures.md)  
- [Procedury operatorów](./operator-procedures.md)  
- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Przeciążanie procedury](./procedure-overloading.md)  
- [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)  
- [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Rozwiązywanie problemów z wyjątkami: System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.StackOverflowException>
+- [Procedury](./index.md)
+- [Sub, procedury](./sub-procedures.md)
+- [Procedury funkcji](./function-procedures.md)
+- [Procedury właściwości](./property-procedures.md)
+- [Procedury operatorów](./operator-procedures.md)
+- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
+- [Przeciążanie procedury](./procedure-overloading.md)
+- [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)
+- [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Rozwiązywanie problemów z wyjątkami: System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

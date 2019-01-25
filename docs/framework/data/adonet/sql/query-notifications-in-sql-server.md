@@ -2,12 +2,12 @@
 title: Powiadomienia zapytań w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: c4e58a3eecc18fb5693e9850163533b0a1a6a574
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 87335b5c9ad626e998fdb7bf0e71cae2542386f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636693"
 ---
 # <a name="query-notifications-in-sql-server"></a>Powiadomienia zapytań w programie SQL Server
 Powiadomienia o zapytaniach utworzonych na podstawie infrastruktury programu Service Broker, Zezwalaj na aplikacje otrzymywać powiadomienia, gdy dane zostały zmienione. Ta funkcja jest szczególnie użyteczna w przypadku aplikacji, które zapewniają pamięci podręcznej informacje z bazy danych, takich jak aplikacji sieci Web i musi być zgłoszone po zmianie źródła danych.  
@@ -26,7 +26,7 @@ Powiadomienia o zapytaniach utworzonych na podstawie infrastruktury programu Ser
   
  Jeśli tworzysz aplikację, gdzie potrzebujesz niezawodnej sekundy powiadomienia po zmianie danych, zapoznaj się z sekcji **planowania strategii wydajne powiadomienia kwerendy** i **alternatywy dla zapytania Powiadomienia** w [planowanie powiadomień](https://go.microsoft.com/fwlink/?LinkId=211984) temat w dokumentacji SQL Server — książki Online. Aby uzyskać więcej informacji na temat powiadomienia o zapytaniach i SQL Server Service Broker zobacz poniższe linki do tematów, w dokumentacji SQL Server — książki Online.  
   
- **SQL Server — książki Online**  
+ **SQL Server Books Online**  
   
 -   [Przy użyciu powiadomienia o zapytaniach](https://msdn.microsoft.com/library/ms175110.aspx)  
   
@@ -34,7 +34,7 @@ Powiadomienia o zapytaniach utworzonych na podstawie infrastruktury programu Ser
   
 -   [Usługa Service Broker](https://msdn.microsoft.com/library/bb522889.aspx)  
   
--   [Centrum informacyjne do programu Service Broker dla deweloperów](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker Developer InfoCenter](https://msdn.microsoft.com/library/ms166100.aspx)  
   
 -   [Programowanie (programu Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
   
@@ -61,6 +61,6 @@ Powiadomienia o zapytaniach utworzonych na podstawie infrastruktury programu Ser
  <xref:System.Web.Caching.SqlCacheDependency>  
  W tym artykule opisano <xref:System.Web.Caching.SqlCacheDependency> klasy i wszystkich jego składowych.  
   
-## <a name="see-also"></a>Zobacz też  
- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

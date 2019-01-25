@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 69dea99cf71bd1e091116e54e244abfca291ffdb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9da2fc05824fa7e412c1c4802852fd00ba2709e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658198"
 ---
 # <a name="operator-statement"></a>Operator — Instrukcja
 Deklaruje symbol operatora, argumenty operacji i kod, który definiuje procedurę operatora w klasie lub strukturze.  
@@ -44,13 +44,13 @@ End Operator
  Opcjonalna. Zobacz temat [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `Public`  
- Wymagane. Wskazuje, że ta procedura operator ma [publicznych](../../../visual-basic/language-reference/modifiers/public.md) dostępu.  
+ Wymagana. Wskazuje, że ta procedura operator ma [publicznych](../../../visual-basic/language-reference/modifiers/public.md) dostępu.  
   
  `Overloads`  
  Opcjonalna. Zobacz [przeciążenia](../../../visual-basic/language-reference/modifiers/overloads.md).  
   
  `Shared`  
- Wymagane. Wskazuje, że ta procedura operator [Shared](../../../visual-basic/language-reference/modifiers/shared.md) procedury.  
+ Wymagana. Wskazuje, że ta procedura operator [Shared](../../../visual-basic/language-reference/modifiers/shared.md) procedury.  
   
  `Shadows`  
  Opcjonalna. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
@@ -62,10 +62,10 @@ End Operator
  Wymagane dla operatora konwersji, chyba że określisz `Widening`. Wskazuje, że ta procedura operator definiuje [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) konwersji. Zobacz "Rozszerzające i zawężające konwersje" na tej stronie pomocy.  
   
  `operatorsymbol`  
- Wymagane. Symbol lub identyfikator operator, który definiuje tę procedurę operatora.  
+ Wymagana. Symbol lub identyfikator operator, który definiuje tę procedurę operatora.  
   
  `operand1`  
- Wymagane. Nazwa i typ jeden argument operacji operatora jednoargumentowego (w tym operatora konwersji) lub lewy operand operatora binarnego.  
+ Wymagana. Nazwa i typ jeden argument operacji operatora jednoargumentowego (w tym operatora konwersji) lub lewy operand operatora binarnego.  
   
  `operand2`  
  Wymagane dla operatorów binarnych. Nazwa i typ prawy operand operatora binarnego.  
@@ -77,7 +77,7 @@ End Operator
 |Część|Opis|  
 |----------|-----------------|  
 |`ByVal`|Opcjonalne, ale mechanizm przekazywania musi być [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).|  
-|`operandname`|Wymagane. Nazwa zmiennej, reprezentujący ten argument operacji. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`operandname`|Wymagana. Nazwa zmiennej, reprezentujący ten argument operacji. Zobacz [Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`operandtype`|Opcjonalne chyba że `Option Strict` jest `On`. Typ danych ten argument operacji.|  
   
  `type`  
@@ -87,10 +87,10 @@ End Operator
  Opcjonalna. Blok instrukcji, które są wykonywane procedury operatora.  
   
  `returnvalue`  
- Wymagane. Wartość, która procedura operator zwraca do wywołującego kodu.  
+ Wymagana. Wartość, która procedura operator zwraca do wywołującego kodu.  
   
  `End``Operator`  
- Wymagane. Kończy definicję tej procedury operatora.  
+ Wymagana. Kończy definicję tej procedury operatora.  
   
 ## <a name="remarks"></a>Uwagi  
  Możesz użyć `Operator` tylko w klasie lub strukturze. Oznacza to, że *kontekst deklaracji* operator nie może być plik źródłowy, przestrzeni nazw, moduł, interfejsu, procedurę lub blok. Aby uzyskać więcej informacji, zobacz [Kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
@@ -170,14 +170,14 @@ End Operator
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IsFalse, operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
- [IsTrue, operator](../../../visual-basic/language-reference/operators/istrue-operator.md)  
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [Rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [Instrukcje: definiowanie operatora](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [Instrukcje: definiowanie operatora konwersji](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
- [Instrukcje: wywoływanie procedury operatora](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)  
- [Instrukcje: używanie klasy definiującej operatory](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
+## <a name="see-also"></a>Zobacz także
+- [IsFalse, operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [IsTrue, operator](../../../visual-basic/language-reference/operators/istrue-operator.md)
+- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [Rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [Instrukcje: Definiowanie operatora](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Instrukcje: Definiowanie operatora konwersji](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Instrukcje: Wywoływanie procedury operatora](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)
+- [Instrukcje: Używanie klasy definiującej operatory](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)

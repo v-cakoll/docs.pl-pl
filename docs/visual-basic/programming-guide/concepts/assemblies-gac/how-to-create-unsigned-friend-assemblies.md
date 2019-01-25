@@ -1,15 +1,15 @@
 ---
-title: 'Porady: tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)'
+title: 'Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 5fb2310a5d883e65df0b59b6fe316aa4d4637b7f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ed4a818921f26fd5eb70fc4ba52929522627c096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698209"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Porady: tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)
 W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, które są bez znaku.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Aby utworzyć zestaw i zestaw przyjazny  
@@ -84,9 +84,9 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, kt�
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Istnieją podobieństwa między usługami <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu i <xref:System.Security.Permissions.StrongNameIdentityPermission> klasy. Główną różnicą jest to, że <xref:System.Security.Permissions.StrongNameIdentityPermission> może wymagać uprawnienia zabezpieczeń do uruchamiania w określonej sekcji kodu, natomiast <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut kontroluje widoczność `Friend` typów i elementów członkowskich.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Przyjazne zestawy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Porady: tworzenie oznaczonych przyjaznych zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [Pojęcia związane z programowaniem przewodnik](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Przyjazne zestawy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [Pojęcia związane z programowaniem przewodnik](../../../../visual-basic/programming-guide/concepts/index.md)

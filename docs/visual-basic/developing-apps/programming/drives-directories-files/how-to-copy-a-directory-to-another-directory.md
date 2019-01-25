@@ -1,5 +1,5 @@
 ---
-title: 'Porady: kopiowanie katalogu do innego katalogu w Visual Basic'
+title: 'Instrukcje: Kopiowanie katalogu do innego katalogu w Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
@@ -7,60 +7,60 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: 9b6e095d061619cf9d2e2d87a7247cbdbc51cbe2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25919e0256b967f59bd98d20e75d159e018ac954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588587"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594749"
 ---
-# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Porady: kopiowanie katalogu do innego katalogu w Visual Basic
-Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> metodę kopiowanie katalogu do innego katalogu. Ta metoda kopiuje zawartość katalogu, a także dla samego katalogu. Katalog docelowy nie istnieje, zostanie utworzona. Jeśli katalog o tej samej nazwie istnieje w lokalizacji docelowej i `overwrite` ma ustawioną wartość `False`, zawartość dwa katalogi zostaną scalone. Podczas operacji można określić nową nazwę katalogu.  
+# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Instrukcje: Kopiowanie katalogu do innego katalogu w Visual Basic
+Użyj <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> metodę, aby kopiowanie katalogu do innego katalogu. Ta metoda kopiuje zawartość katalogu, a także sam katalog. Katalog docelowy nie istnieje, zostanie utworzony. Jeśli katalog o takiej samej nazwie istnieje w lokalizacji docelowej i `overwrite` ustawiono `False`, zawartość dwa katalogi zostaną scalone. Podczas operacji, można określić nową nazwę katalogu.  
   
- Podczas kopiowania plików w katalogu, wyjątki może zostać zgłoszony, które są spowodowane przez określonego pliku, na przykład plik istniejących podczas scalania podczas `overwrite` ma ustawioną wartość `False`. Gdy taki wyjątek są konsolidowane w jednym wyjątku, której `Data` właściwość przechowuje wpisy w których ścieżka pliku lub katalogu jest klucz i komunikat o wyjątku określonych znajduje się w odpowiadającej jej wartości.  
+ Podczas kopiowania plików w katalogu, może być zgłaszane wyjątki, które są spowodowane przez określonego pliku, np. plik istniejące podczas scalania podczas `overwrite` ustawiono `False`. Jeśli takie wyjątki są zgłaszane, są konsolidowane w jednym wyjątku, którego `Data` właściwość przechowuje wpisy, w których ścieżka pliku lub katalogu jest klucz, a komunikat określony wyjątek znajduje się w odpowiedniej wartości.  
   
-### <a name="to-copy-a-directory-to-another-directory"></a>Aby skopiować katalogu do innego katalogu  
+### <a name="to-copy-a-directory-to-another-directory"></a>Można skopiować katalogu do innego katalogu  
   
 -   Użyj `CopyDirectory` metody określania nazwy katalogu źródłowego i docelowego. Poniższy przykładowy kod kopiuje katalog o nazwie `TestDirectory1` do `TestDirectory2`, zastępując istniejące pliki.  
   
      [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-a-directory-to-another-directory_1.vb)]  
   
-     W tym przykładzie kodu jest również dostępny jako fragmentu kodu IntelliSense. Selektor wstawek kodu, znajduje się się w **systemu - przetwarzanie napędów, folderów i plików plików**. Aby uzyskać więcej informacji, zobacz [wstawki kodu](/visualstudio/ide/code-snippets).  
+     Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu, znajduje się w **system - przetwarzanie napędów, folderów i plików plików**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Nowa nazwa określona dla katalogu zawiera dwukropek (:) i ukośnika (\ lub /) (<xref:System.ArgumentException>).  
+-   Nowa nazwa określona dla katalogu zawiera dwukropek (:) lub ukośnikiem (\ lub /) (<xref:System.ArgumentException>).  
   
--   Ścieżka nie jest prawidłowy dla jednego z następujących powodów: jest to ciąg o zerowej długości, zawiera tylko biały znak, zawiera nieprawidłowe znaki lub jest ścieżką urządzenia (rozpoczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
+-   Ścieżka nie jest prawidłowa dla jednego z następujących przyczyn: jest to ciąg o zerowej długości, zawiera tylko znak odstępu, zawiera nieprawidłowe znaki lub jest ścieżką do urządzenia (rozpoczyna się od \\ \\.\\) (<xref:System.ArgumentException>).  
   
 -   Ścieżka jest nieprawidłowa, ponieważ jest on `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `destinationDirectoryName` jest `Nothing` lub ciąg pusty (<xref:System.ArgumentNullException>)  
+-   `destinationDirectoryName` jest `Nothing` ani być pustym ciągiem (<xref:System.ArgumentNullException>)  
   
 -   Katalog źródłowy nie istnieje (<xref:System.IO.DirectoryNotFoundException>).  
   
 -   Katalog źródłowy jest katalogiem głównym (<xref:System.IO.IOException>).  
   
--   Łączna ścieżkę do istniejącego pliku (<xref:System.IO.IOException>).  
+-   Połączone ścieżka wskazuje na istniejący plik (<xref:System.IO.IOException>).  
   
--   Ścieżka źródłowa i ścieżka docelowa są takie same (<xref:System.IO.IOException>).  
+-   Ścieżka źródłowa i docelowa ścieżka są takie same (<xref:System.IO.IOException>).  
   
--   `ShowUI` ustawiono `UIOption.AllDialogs` użytkownik anulował operację, i nie można skopiować jeden lub więcej plików w katalogu (<xref:System.OperationCanceledException>).  
+-   `ShowUI` ustawiono `UIOption.AllDialogs` użytkownik anuluje operację i nie można skopiować jeden lub więcej plików w katalogu (<xref:System.OperationCanceledException>).  
   
--   Operacja jest cykliczne (<xref:System.InvalidOperationException>).  
+-   Ta operacja jest cykliczna (<xref:System.InvalidOperationException>).  
   
 -   Ścieżka zawiera dwukropek (:) (<xref:System.NotSupportedException>).  
   
--   Ścieżka przekracza maksymalną długość zdefiniowana w systemie (<xref:System.IO.PathTooLongException>).  
+-   Ścieżka przekracza maksymalną długość zdefiniowaną przez system (<xref:System.IO.PathTooLongException>).  
   
--   Nazwę pliku lub folderu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
+-   Nazwa pliku lub folderu w ścieżce zawiera dwukropek (:) lub jest w nieprawidłowym formacie (<xref:System.NotSupportedException>).  
   
--   Użytkownik nie ma wystarczających uprawnień, aby wyświetlić ścieżkę (<xref:System.Security.SecurityException>).  
+-   Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
   
--   Plik docelowy istnieje, ale nie można uzyskać dostępu do (<xref:System.UnauthorizedAccessException>).  
+-   Plik docelowy istnieje, ale nie są dostępne (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>  
- [Instrukcje: znajdowanie podkatalogów z określonym wzorcem](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
- [Instrukcje: pobieranie kolekcji plików z katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
+- [Instrukcje: Znajdowanie podkatalogów z określonym wzorcem](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Instrukcje: Pobieranie kolekcji plików w katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

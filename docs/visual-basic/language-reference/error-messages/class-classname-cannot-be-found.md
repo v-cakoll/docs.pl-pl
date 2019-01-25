@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: 38f4fd0d10386476a5ca7b2ef6f1576cd5b69db9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f08fdb67611fe5fcee8b13f08162a62f6db59b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744989"
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a>Klasa &#39; &lt;classname&gt; &#39; nie można odnaleźć
-Klasy\<classname >' nie można odnaleźć. Ta sytuacja jest zazwyczaj wynikiem niedopasowania biblioteki "Microsoft.VisualBasic.dll".  
+Klasy\<nazwa_klasy > "nie można odnaleźć. Ta sytuacja jest zazwyczaj wynikiem niedopasowania biblioteki "Microsoft.VisualBasic.dll".  
   
- Nie można odnaleźć zdefiniowanego elementu członkowskiego.  
+ Nie można zlokalizować zdefiniowanego elementu członkowskiego.  
   
  **Identyfikator błędu:** BC31098  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Skompiluj program, aby zobaczyć, jeśli ten błąd wystąpi ponownie.  
+1.  Skompiluj program ponownie, aby zobaczyć, jeśli błąd będzie się powtarzać.  
   
-2.  Jeśli błąd będzie się powtarzał, należy zapisać pracę i ponownie uruchom program Visual Studio.  
+2.  Jeśli ten błąd wystąpi, Zapisz swoją pracę i uruchom ponownie program Visual Studio.  
   
 3.  Jeśli błąd będzie się powtarzał, zainstaluj ponownie Visual Basic.  
   
-4.  Jeśli błąd będzie nadal występować po ponownej instalacji, powiadamia pomocy technicznej firmy Microsoft.  
+4.  Jeśli ten błąd będzie występował po ponownej instalacji, powiadom pomoc techniczna firmy Microsoft.  
   
-## <a name="see-also"></a>Zobacz też  
- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Zobacz także
+- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

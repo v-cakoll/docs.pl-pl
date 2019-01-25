@@ -1,15 +1,15 @@
 ---
-title: 'Porady: Tworzenie niestandardowego projektanta działań'
+title: 'Instrukcje: Tworzenie niestandardowego projektanta działań'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 86cd3544e9117cca273b6c8dde8454672f14a36a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 034b8b8be828288f840dbfd902725c4f63c779ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873011"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638187"
 ---
-# <a name="how-to-create-a-custom-activity-designer"></a>Porady: Tworzenie niestandardowego projektanta działań
+# <a name="how-to-create-a-custom-activity-designer"></a>Instrukcje: Tworzenie niestandardowego projektanta działań
 
 Niestandardowi Projektanci działań są zazwyczaj implementowane tak, aby ich skojarzonych działań jest konfigurowalna z innymi działaniami, projektantów, których można było porzucić do powierzchni projektowej z nimi. Ta funkcja wymaga, że niestandardowego projektanta działań zapewniają "strefy listy" gdzie można umieścić dowolne działanie, a także sposób zarządzać wynikowy kolekcję elementów na powierzchni projektowej. W tym temacie opisano sposób tworzenia niestandardowego projektanta działań zawierający strefę listy oraz sposób tworzenia niestandardowego projektanta działań zapewniający, że edytowanie funkcji wymaganych do zarządzania kolekcję elementów projektanta.
 
@@ -27,7 +27,7 @@ Niestandardowi Projektanci działań są zazwyczaj implementowane tak, aby ich s
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>Aby utworzyć niestandardowego projektanta działań ze strefą listy przy użyciu WorkflowItemPresenter
 
-1.  Uruchom program Visual Studio 2010.
+1.  Start Visual Studio 2010.
 
 2.  Na **pliku** menu wskaż **New**, a następnie wybierz pozycję **projektu...** .
 
@@ -343,7 +343,7 @@ Niestandardowi Projektanci działań są zazwyczaj implementowane tak, aby ich s
     }
     ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Activities.Presentation.ActivityDesigner>
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>

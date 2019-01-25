@@ -1,15 +1,15 @@
 ---
-title: Zagadnienia dotyczące zabezpieczeń (Entity Framework)
+title: Security Considerations (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612830"
 ---
-# <a name="security-considerations-entity-framework"></a>Zagadnienia dotyczące zabezpieczeń (Entity Framework)
+# <a name="security-considerations-entity-framework"></a>Security Considerations (Entity Framework)
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywanie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również przestrzegać zaleceń dotyczących tworzenia bezpiecznych [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  
   
 ## <a name="general-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
@@ -46,7 +46,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
   
 -   Użyj Konstruktorzy parametrów połączeń podczas dynamicznego tworzenia połączeń.  
   
-     Jeśli musisz utworzyć parametry połączenia w czasie wykonywania, użyj <xref:System.Data.EntityClient.EntityConnectionStringBuilder> klasy. Ta klasa konstruktora ciągu zapobiega atakami polegającymi na iniekcji ciągu połączenia, sprawdzanie poprawności i anulowania zapewnianego element nieprawidłowe dane wejściowe. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie ciągu połączenia EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Również korzystanie z klasy Konstruktor odpowiedni ciąg do konstruowania parametry połączenia źródła danych, który jest częścią [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] parametry połączenia. Aby uzyskać informacji na temat Konstruktorzy parametrów połączenia dla dostawcy ADO.NET, zobacz [Konstruktorzy parametrów połączeń](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+     Jeśli musisz utworzyć parametry połączenia w czasie wykonywania, użyj <xref:System.Data.EntityClient.EntityConnectionStringBuilder> klasy. Ta klasa konstruktora ciągu zapobiega atakami polegającymi na iniekcji ciągu połączenia, sprawdzanie poprawności i anulowania zapewnianego element nieprawidłowe dane wejściowe. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie ciągu połączenia EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Również korzystanie z klasy Konstruktor odpowiedni ciąg do konstruowania parametry połączenia źródła danych, który jest częścią [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] parametry połączenia. Aby uzyskać informacji na temat Konstruktorzy parametrów połączenia dla dostawcy ADO.NET, zobacz [Konstruktorzy parametrów połączeń](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
  Aby uzyskać więcej informacji, zobacz [ochrony informacji o połączeniu](../../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
@@ -161,7 +161,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Nie akceptuj obiektów w obiekcie MetadataWorkspace ze źródeł niezaufanych.  
  Aplikacje powinny akceptuje wystąpień <xref:System.Data.Metadata.Edm.MetadataWorkspace> klasy z niezaufanego źródła. Zamiast tego należy jawnie utworzyć i wypełnienia obszaru roboczego z takich źródeł.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Zagadnienia dotyczące migracji](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Zagadnienia dotyczące migracji](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

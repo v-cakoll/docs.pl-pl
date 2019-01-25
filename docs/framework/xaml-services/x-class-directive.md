@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: a29a645a05f0d3b0e8611dd722c5018f295f3070
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2913782d8179fb882f8e916ed25feafcb5740a3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690049"
 ---
 # <a name="xclass-directive"></a>x:Class — dyrektywa
 Służy do konfigurowania kompilacji znaczników XAML do dołączenia do klas częściowych między znaczników i związane z kodem. Klasy częściowe kod jest zdefiniowany w osobnym pliku kodu w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] języka, natomiast klasy częściowej znaczników jest zwykle tworzony przy generowanie kodu podczas kompilacji XAML.  
@@ -33,7 +33,7 @@ Służy do konfigurowania kompilacji znaczników XAML do dołączenia do klas cz
 |||  
 |-|-|  
 |`namespace`|Opcjonalna. Określa [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] przestrzeń nazw zawierająca identyfikowane za pomocą klasy częściowej `classname`. Jeśli `namespace` określono pojedynczego znaku kropki (.) oddziela `namespace` i `classname`. Zobacz uwagi.|  
-|`classname`|Wymagane. Określa [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] nazwa częściową klasą, która łączy XAML załadowane i usługi związane z kodem dla tego XAML.|  
+|`classname`|Wymagana. Określa [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] nazwa częściową klasą, która łączy XAML załadowane i usługi związane z kodem dla tego XAML.|  
   
 ## <a name="dependencies"></a>Zależności  
  `x:Class` można określić tylko dla elementu głównego produkcji XAML. `x:Class` jest nieprawidłowy dla dowolnego obiektu, który ma element nadrzędny w środowisku produkcyjnym XAML. Aby uzyskać więcej informacji, zobacz [ \[MS-XAML\] sekcji 4.3.1.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
@@ -60,8 +60,8 @@ Służy do konfigurowania kompilacji znaczników XAML do dołączenia do klas cz
 ## <a name="silverlight-usage-notes"></a>Uwagi dotyczące użytkowania Silverlight  
  `x:Class` dla programu Silverlight jest opisane osobno. Aby uzyskać więcej informacji, zobacz [Namespace XAML (x:) Funkcje języka (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## <a name="see-also"></a>Zobacz też  
- [x:Subclass, dyrektywa](../../../docs/framework/xaml-services/x-subclass-directive.md)  
- [Klasy XAML i niestandardowe dla WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [x:ClassModifier, dyrektywa](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
- [Typy migrowane z WPF do System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>Zobacz także
+- [x:Subclass, dyrektywa](../../../docs/framework/xaml-services/x-subclass-directive.md)
+- [Klasy XAML i niestandardowe dla WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [x:ClassModifier, dyrektywa](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+- [Typy migrowane z WPF do System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

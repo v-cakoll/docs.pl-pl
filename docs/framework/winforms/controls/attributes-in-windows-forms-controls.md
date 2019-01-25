@@ -7,18 +7,18 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 5bb7a28e314d6c0b007c1579f371a26d0a714fce
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b95f865b673dda14976f671cd2b01e7dde38997c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636069"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Atrybuty w formantach formularzy systemu Windows
 .NET Framework oferuje różne atrybuty, które można zastosować do elementów członkowskich niestandardowych kontrolek i składników. Niektóre z tych atrybutów wpływać na zachowania w czasie wykonywania klasy i inne osoby mają wpływ na zachowanie czasu projektowania.  
   
 ## <a name="attributes-for-control-and-component-properties"></a>Atrybuty kontrolki i właściwości składnika  
- W poniższej tabeli przedstawiono atrybuty, które można zastosować do właściwości lub innych elementów członkowskich niestandardowych kontrolek i składników. Na przykład, który używa wiele z tych atrybutów, zobacz [porady: stosowanie atrybutów w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+ W poniższej tabeli przedstawiono atrybuty, które można zastosować do właściwości lub innych elementów członkowskich niestandardowych kontrolek i składników. Na przykład, który używa wiele z tych atrybutów, zobacz [jak: Stosowanie atrybutów w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
@@ -60,8 +60,8 @@ ms.locfileid: "48582323"
 |<xref:System.ComponentModel.ToolboxItemAttribute>|Reprezentuje atrybut elementu przybornika.|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|Określa ciąg filtru i typ filtru dla elementu przybornika.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Attribute>  
- [Instrukcje: stosowanie atrybutów w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
- [Rozszerzenie obsługi w czasie projektowania](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Attribute>
+- [Instrukcje: Stosowanie atrybutów w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
+- [Rozszerzenie obsługi w czasie projektowania](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

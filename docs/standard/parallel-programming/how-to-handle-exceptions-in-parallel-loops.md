@@ -1,5 +1,5 @@
 ---
-title: 'Porady: obsługa wyjątków w pętlach równoległych'
+title: 'Instrukcje: Obsługa wyjątków w pętlach równoległych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf311ad2b79e615f5c3097686035e7bbfbc49c9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ef883f37587948871b222ca03a4032bea2109bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711424"
 ---
-# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Porady: obsługa wyjątków w pętlach równoległych
+# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Instrukcje: Obsługa wyjątków w pętlach równoległych
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> przeciążenia nie mają żadnych specjalnych mechanizm obsługi wyjątków, które może zostać wygenerowany. W związku z tym przypominają zwykłe `for` i `foreach` pętli (`For` i `For Each` w języku Visual Basic); wystąpił nieobsługiwany wyjątek powoduje pętlę, można od razu zakończyć.  
   
  Po dodaniu własną logiką obsługi wyjątków, równoległe pętli, obsłużyć przypadek, w którym podobne wyjątków może być wyrzucanych na wiele wątków jednocześnie, a także przypadek, w którym wyjątek zgłoszony w jednym wątku powoduje zgłoszenie wyjątku inny od innego Wątek. Może obsługiwać obu przypadkach dzięki zawijaniu wszystkie wyjątki z pętli w <xref:System.AggregateException?displayProperty=nameWithType>. Poniższy przykład przedstawia jedno z możliwych podejść.  
@@ -33,5 +33,5 @@ ms.locfileid: "47210219"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Równoległość danych](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [Równoległość danych](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Wyrażenia Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

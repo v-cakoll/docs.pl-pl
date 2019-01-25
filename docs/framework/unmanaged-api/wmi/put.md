@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625773"
 ---
 # <a name="put-function"></a>Umieść — funkcja
 Ustawia właściwość o nazwie na nową wartość.
@@ -72,7 +72,7 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Jeden lub więcej parametrów są nieprawidłowe. |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Nie rozpoznano typu właściwości. Ta wartość jest zwracana podczas tworzenia wystąpienia klasy, jeśli klasa już istnieje. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji. |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Dla wystąpień: oznacza, że `pVal` wskazuje `VARIANT` nieprawidłowego typu właściwości. <br/> Aby uzyskać definicje klas: właściwość już istnieje w klasie nadrzędnej, a nowy typ COM jest inny niż stary typ COM. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Dla wystąpień: Oznacza to, że `pVal` wskazuje `VARIANT` nieprawidłowego typu właściwości. <br/> Aby uzyskać definicje klas: Właściwość już istnieje w klasie nadrzędnej, a nowy typ COM jest inny niż stary typ COM. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie. |
   
 ## <a name="remarks"></a>Uwagi
@@ -94,11 +94,11 @@ Użyj `vtType` parametru tylko podczas tworzenia nowych właściwości w definic
 Aby uzyskać przykład, zobacz [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) metody.
 
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Zobacz także  
-[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

@@ -2,12 +2,12 @@
 title: Wybieranie filtra
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f634363a3f8b69b38fd4d313c42de4d742d94acc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514196"
 ---
 # <a name="choosing-a-filter"></a>Wybieranie filtra
 Podczas konfigurowania usługi routingu, należy wybrać filtry komunikatów i ich konfigurowania pod kątem umożliwiają dokładne dopasowania przed komunikatami, które otrzymujesz. Jeśli filtry, które możesz wybrać są zbyt szerokie w swoich dopasowań lub są niepoprawnie skonfigurowane, komunikaty są kierowane niepoprawnie. Jeśli filtry są zbyt restrykcyjne, możesz nie mieć dostępnych tras prawidłowy dla niektórych komunikatów.  
@@ -135,6 +135,6 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  Aby uzyskać więcej informacji na temat projektowania zapytania XPath, zobacz [składni XPath](https://go.microsoft.com/fwlink/?LinkId=164592).  
   
-## <a name="see-also"></a>Zobacz też  
- [Filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [Instrukcje: używanie filtrów](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+## <a name="see-also"></a>Zobacz także
+- [Filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md)
+- [Instrukcje: Użyj filtrów](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

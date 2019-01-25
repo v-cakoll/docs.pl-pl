@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 207010f594959708322aed2e630935252c873cf8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44c1b489897a25d293644c5a3ef7d446dd8d4a3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651126"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Instrukcje: Hostowanie usługi WCF w programie IIS
 W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usługi Windows Communication Foundation (WCF), który znajduje się w Internet Information Services (IIS). W tym temacie przyjęto założenie, są zaznajomieni z usług IIS i dowiedzieć się, jak używać narzędzia do zarządzania usług IIS do tworzenia i obsługi aplikacji programu IIS. Aby uzyskać więcej informacji na temat usług IIS zobacz [Internetowe usługi informacyjne](https://go.microsoft.com/fwlink/?LinkId=132449). Usługi WCF, który jest uruchamiany w środowisku usług IIS wykorzystuje pełną funkcje usług IIS, takie jak odtwarzanie procesów, bezczynności zamykania, monitorowania kondycji procesu i aktywacja oparta na komunikatach. Ta opcja hostingu wymaga, aby poprawnie skonfigurować usługi IIS, ale nie wymaga się, że każdy kod hostingu zapisywane jako część aplikacji. Umożliwia hostowanie usług IIS tylko w przypadku transportu HTTP.  
@@ -75,9 +75,9 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usługi Wind
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)] 
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Hostowanie przez Internetowe usługi informacyjne](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Usługi hostingowe](../../../../docs/framework/wcf/hosting-services.md)  
- [Usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
- [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)  
- [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Zobacz także
+- [Hostowanie przez Internetowe usługi informacyjne](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [Usługi hostingowe](../../../../docs/framework/wcf/hosting-services.md)
+- [Usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)
+- [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -1,15 +1,15 @@
 ---
-title: 'Porady: wyświetlanie listy wszystkich węzłów w drzewie (C#)'
+title: 'Instrukcje: Wyświetlanie listy wszystkich węzłów w drzewie (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e014de90935830df3ea5454dcd4d5a840f4d04ad
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 90c92e8390f75e7b7e2c63d809d8a0aca34e2fd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744482"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Porady: wyświetlanie listy wszystkich węzłów w drzewie (C#)
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Instrukcje: Wyświetlanie listy wszystkich węzłów w drzewie (C#)
 Czasami warto wyświetlić listę wszystkich węzłów w drzewie. Może to być przydatne podczas nauki, dokładnie tak jak metoda lub właściwość ma wpływ na drzewie. Jedno z podejść do wyświetlania listy wszystkich węzłów w postaci tekstowej jest generowanie wyrażenia XPath, które dokładnie, zwłaszcza identyfikuje dowolny węzeł w drzewie.  
   
  Nie jest to szczególnie przydatne do wykonania wyrażeń XPath przy użyciu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Wyrażenia XPath ma mniejszą wydajność niż [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytań i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania są znacznie większe możliwości. Jednak jako sposób identyfikacji węzłów w drzewie XML, XPath działa poprawnie.  
@@ -348,6 +348,6 @@ class Program
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zaawansowane techniki zapytań (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

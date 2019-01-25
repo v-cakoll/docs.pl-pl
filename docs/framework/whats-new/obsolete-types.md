@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4d3bf7db928f926b802c08ee5e61edf86055b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 32b212f336e622719d9979d46ea885deb919c51c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635029"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Przestarzałe typy w programie .NET Framework
 <a name="introduction"></a> W tabelach, w tym artykule przedstawiono typy, które są przestarzałe w programie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]zorganizowanym przez zestaw. Poniższe łącza umożliwiają wyświetlenie listy przestarzałych typów i zalecanych rozwiązań alternatywnych, w każdym zestawie. Ponieważ te typy są nieaktualne, ich elementów członkowskich również są nieaktualne. Aby uzyskać listę dodatkowych przestarzali członkowie w bibliotece klas programu .NET Framework, zobacz [Przestarzali członkowie](../../../docs/framework/whats-new/obsolete-members.md).
@@ -75,7 +75,7 @@ ms.locfileid: "47196757"
  W poniższej tabeli wymieniono typy, które zostały zadeklarowane jako przestarzałe w zestawy systemowe. Te zestawy są używane dla ogólnych\-cel tworzenia aplikacji, który jest przeznaczony dla .NET Framework.
 
 <a name="mscorlib"></a>
-### <a name="assembly-mscorlibdll"></a>Zestaw: biblioteki mscorlib.dll
+### <a name="assembly-mscorlibdll"></a>Assembly: mscorlib.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -84,7 +84,7 @@ ms.locfileid: "47196757"
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|Użyj <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType> zamiast tego.|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|<xref:System.Configuration.Assemblies.AssemblyHash> Klasy jest przestarzała.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Najpierw przestarzałe w programie .NET Framework 4.5. Użyj <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> klasy w przestrzeni nazw System.Runtime.CompilerServices zamiast tego.|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Innego interfejsu API jest dostępny: emitowanie <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> zamiast tego atrybutu niestandardowego.|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Innego interfejsu API jest dostępna: Emituj <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> zamiast tego atrybutu niestandardowego.|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Zamiast nich należy używać słów kluczowych <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Zamiast nich należy używać słów kluczowych <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Zamiast nich należy używać słów kluczowych <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>.|
@@ -149,7 +149,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="data"></a>
-### <a name="assembly-systemdatadll"></a>Assembly: System.Data.dll
+### <a name="assembly-systemdatadll"></a>Zestaw: System.Data.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -161,7 +161,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="oracleclient"></a>
-### <a name="assembly-systemdataoracleclientdll"></a>Assembly: System.Data.OracleClient.dll
+### <a name="assembly-systemdataoracleclientdll"></a>Zestaw: System.Data.OracleClient.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -177,7 +177,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="design"></a>
-### <a name="assembly-systemdesigndll"></a>Assembly: System.Design.dll
+### <a name="assembly-systemdesigndll"></a>Zestaw: System.Design.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -199,7 +199,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="system"></a>
-### <a name="assembly-systemdll"></a>Zestaw: System.dll
+### <a name="assembly-systemdll"></a>Zestaw: PLik System.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -214,7 +214,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="enterpriseservices"></a>
-### <a name="assembly-systementerpriseservicesdll"></a>Assembly: System.EnterpriseServices.dll
+### <a name="assembly-systementerpriseservicesdll"></a>Zestaw: System.EnterpriseServices.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -223,7 +223,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="net"></a>
-### <a name="assembly-systemnetdll"></a>Assembly: System.Net.dll
+### <a name="assembly-systemnetdll"></a>Zestaw: System.Net.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -240,7 +240,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="servicemodel"></a>
-### <a name="assembly-systemservicemodeldll"></a>Assembly: System.ServiceModel.dll
+### <a name="assembly-systemservicemodeldll"></a>Zestaw: System.ServiceModel.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -256,7 +256,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="web"></a>
-### <a name="assembly-systemwebdll"></a>Assembly: System.Web.dll
+### <a name="assembly-systemwebdll"></a>Zestaw: System.Web.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -277,7 +277,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="mobile"></a>
-### <a name="assembly-systemwebmobiledll"></a>Assembly: System.Web.Mobile.dll
+### <a name="assembly-systemwebmobiledll"></a>Zestaw: System.Web.Mobile.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -477,7 +477,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="workflow_activities"></a>
-### <a name="assembly-systemworkflowactivitiesdll"></a>Assembly: System.Workflow.Activities.dll
+### <a name="assembly-systemworkflowactivitiesdll"></a>Zestaw: System.Workflow.Activities.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -490,7 +490,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="workflow_componentmodel"></a>
-### <a name="assembly-systemworkflowcomponentmodeldll"></a>Assembly: System.Workflow.ComponentModel.dll
+### <a name="assembly-systemworkflowcomponentmodeldll"></a>Zestaw: System.Workflow.ComponentModel.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -508,7 +508,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="workflow_runtime"></a>
-### <a name="assembly-systemworkflowruntimedll"></a>Assembly: System.Workflow.Runtime.dll
+### <a name="assembly-systemworkflowruntimedll"></a>Zestaw: System.Workflow.Runtime.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -523,7 +523,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="workflowservices"></a>
-### <a name="assembly-systemworkflowservicesdll"></a>Assembly: System.WorkflowServices.dll
+### <a name="assembly-systemworkflowservicesdll"></a>Zestaw: System.WorkflowServices.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -552,7 +552,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="xaml"></a>
-### <a name="assembly-systemxamldll"></a>Assembly: System.Xaml.dll
+### <a name="assembly-systemxamldll"></a>Zestaw: System.Xaml.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -561,7 +561,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="xml"></a>
-### <a name="assembly-systemxmldll"></a>Assembly: System.Xml.dll
+### <a name="assembly-systemxmldll"></a>Zestaw: System.Xml.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -587,13 +587,13 @@ ms.locfileid: "47196757"
  W poniższych sekcjach wymieniono przestarzałe typy w zestawach firmy Microsoft. Te zestawy są zestawy specjalnych, takich jak zestawy, przeznaczonych dla poszczególnych języków (na przykład Microsoft.JScript.dll lub Microsoft.VisualC.dll).
 
 <a name="IEHost"></a>
-### <a name="assembly-iehostdll-and-ieexecexe"></a>Zestawu: IEHost.dll i IEExec.exe
+### <a name="assembly-iehostdll-and-ieexecexe"></a>Zestaw: IEHost.dll i IEExec.exe
  Zestawy IEHost.dll i IEExec.exe zostały usunięte z programu .NET Framework. Wszystkie typy i składowe są przestarzałe i nie są obsługiwane w przypadku programu [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Zestawy te zostały użyte do hostowania kontrolek formularzy Windows Forms i uruchamiania plików wykonywalnych w programie Internet Explorer. Zalecane alternatywne metody obejmują ClickOnce, aplikacje przeglądarki XAML (XBAP) i Microsoft Silverlight.
 
  [Powrót do początku](#introduction)
 
 <a name="Engine"></a>
-### <a name="assembly-microsoftbuildenginedll"></a>Assembly: Microsoft.Build.Engine.dll
+### <a name="assembly-microsoftbuildenginedll"></a>Zestaw: Microsoft.Build.Engine.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -603,7 +603,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="jscript"></a>
-### <a name="assembly-microsoftjscriptdll"></a>Assembly: Microsoft.JScript.dll
+### <a name="assembly-microsoftjscriptdll"></a>Zestaw: Microsoft.JScript.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -629,7 +629,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="VBCompat"></a>
-### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Assembly: Microsoft.VisualBasic.Compatibility.dll
+### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Zestaw: Microsoft.VisualBasic.Compatibility.dll
   Aby uzyskać informacje na temat migracji z programu Visual Basic 6, zobacz [Centrum zasobów programu Visual Basic 6.0](https://msdn.microsoft.com/library/windows/desktop/ms788229).
 |Typ|Komunikat|
 |----------|-------------|
@@ -704,7 +704,7 @@ ms.locfileid: "47196757"
  [Powrót do początku](#introduction)
 
 <a name="VBCompatData"></a>
-### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Assembly: Microsoft.VisualBasic.Compatibility.Data.dll
+### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Zestaw: Microsoft.VisualBasic.Compatibility.Data.dll
 
 |Typ|Komunikat|
 |----------|-------------|
@@ -776,5 +776,6 @@ ms.locfileid: "47196757"
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll jest przestarzały zestawu i istnieje tylko w przypadku zapewnienia zgodności.|
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll jest przestarzały zestawu i istnieje tylko w przypadku zapewnienia zgodności.|
 
-## <a name="see-also"></a>Zobacz też
- [Co to jest przestarzała w bibliotece klas](../../../docs/framework/whats-new/whats-obsolete.md) [Przestarzali członkowie](../../../docs/framework/whats-new/obsolete-members.md)
+## <a name="see-also"></a>Zobacz także
+- [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Przestarzałe elementy członkowskie](../../../docs/framework/whats-new/obsolete-members.md)

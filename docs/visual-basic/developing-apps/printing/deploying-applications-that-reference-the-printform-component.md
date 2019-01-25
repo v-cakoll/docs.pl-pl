@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic], deploying
 ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
-ms.openlocfilehash: 6384ad6e3bf0520362267eddc8f7bbb05b37f283
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 78d332c88b45fa9b1204d9d5352a6027409254e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562430"
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>Wdrażanie aplikacji, które odwołują się do wyniku składnik PrintForm (Visual Basic)
 Jeśli chcesz wdrożyć aplikację, która odwołuje się <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> składnik składnika musi być zainstalowany na komputerze docelowym.  
@@ -30,6 +30,6 @@ Jeśli chcesz wdrożyć aplikację, która odwołuje się <xref:Microsoft.Visual
   
  Alternatywą do uruchomienia przed wdrożeniem <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> składnika za pomocą systemu dystrybucji oprogramowania elektronicznych, takich jak Microsoft Systems Management Server.  
   
-## <a name="see-also"></a>Zobacz także  
- [Instrukcje: instalowanie wstępnie wymaganych składników za pomocą aplikacji ClickOnce](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
- [Składnik PrintForm](../../../visual-basic/developing-apps/printing/printform-component.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Instalowanie wstępnie wymaganych składników za pomocą aplikacji ClickOnce](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)
+- [Składnik PrintForm](../../../visual-basic/developing-apps/printing/printform-component.md)

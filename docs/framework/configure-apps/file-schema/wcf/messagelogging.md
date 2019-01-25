@@ -2,19 +2,19 @@
 title: '&lt;messageLogging&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: cfc5f23e58c5a428ecb4541ccfc0ada5b190fb36
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a08f773da524808606c791ec5e5de6623c6714ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616605"
 ---
 # <a name="ltmessagelogginggt"></a>&lt;messageLogging&gt;
 Ten element definiuje ustawienia dla możliwości rejestrowania komunikatów Windows Communication Foundation (WCF).  
   
  \<system.ServiceModel>  
 \<diagnostyczne >  
-\<messageLogging >  
+\<messageLogging>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -121,9 +121,9 @@ Ten element definiuje ustawienia dla możliwości rejestrowania komunikatów Win
 </messageLogging>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>  
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
- [Konfigurowanie rejestrowania komunikatów](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>
+- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
+- <xref:System.ServiceModel.Configuration.MessageLoggingElement>
+- [Konfigurowanie rejestrowania komunikatów](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)

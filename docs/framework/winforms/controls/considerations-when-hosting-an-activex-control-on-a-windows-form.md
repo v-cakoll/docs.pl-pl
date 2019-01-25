@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: ebf856078d24ef44ca0e04955e0a971de68bb3ce
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a5e8e023da0eeebf5185f57eb51aa796f6f03a1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639344"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows
 Mimo że formularze Windows zostały zoptymalizowane do kontrolek Windows Forms hosta, ale nadal używać kontrolki ActiveX. Podczas planowania aplikacji korzystającej z formantów ActiveX, należy pamiętać o następujących kwestiach:  
@@ -28,9 +28,9 @@ Mimo że formularze Windows zostały zoptymalizowane do kontrolek Windows Forms 
     > [!NOTE]
     >  Jeśli nazwa składowej formantu ActiveX pasuje do nazwy zdefiniowanej w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], a następnie Importer formantów ActiveX będzie prefiks nazwy elementu członkowskiego z **Ctl** gdy tworzy <xref:System.Windows.Forms.AxHost> klasy pochodnej. Na przykład, jeśli formant ActiveX ma składową o nazwie **układ**, jej nazwa zostanie zmieniona **CtlLayout** w klasie pochodnej AxHost ponieważ **układ** zdarzeń jest zdefiniowana w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: dodawanie kontrolek ActiveX do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- [Zabezpieczenia dostępu kodu](../../../../docs/framework/misc/code-access-security.md)  
- [Formantów i programowanych obiektów w różnych językach i bibliotekach](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
- [Umieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
- [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Dodawanie kontrolek ActiveX do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [Zabezpieczenia dostępu kodu](../../../../docs/framework/misc/code-access-security.md)
+- [Formantów i programowanych obiektów w różnych językach i bibliotekach](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)
+- [Umieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+- [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)

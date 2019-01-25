@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 96153dcc9c144df0f412678ec5c0928d4e832a40
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e70bc27606e51d3685d4f92484f632c8fa2eba76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652168"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizatory (C# Programming Guide)
 Finalizatory (są one również nazywane **destruktory**) są używane do wykonywania wszelkich niezbędnych końcowego oczyszczania, gdy wystąpienie klasy są gromadzone przez moduł odśmiecania pamięci.  
@@ -89,7 +89,7 @@ Aby uzyskać więcej informacji, zobacz [destruktory](~/_csharplang/spec/classes
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IDisposable>  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- <xref:System.IDisposable>
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 - [Odzyskiwanie pamięci](../../../standard/garbage-collection/index.md)

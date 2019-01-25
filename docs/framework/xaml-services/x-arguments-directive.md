@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-ms.openlocfilehash: e0e7f380ec176e80d2422878a2e676d64985d660
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4cff4c2f95d1418371921a3ac992a3b243d1c07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490820"
 ---
 # <a name="xarguments-directive"></a>x:Arguments — dyrektywa
-Argumenty konstrukcji pakietów z systemem innym niż domyślny konstruktor obiektu deklaracji elementu w języku XAML, lub fabryki metody obiektu.  
+Pakiety argumentów deklaracji elementu innego niż domyślny konstruktor obiektu w XAML lub dla deklaracji obiektu metody fabryki.  
   
 ## <a name="xaml-element-usage-nondefault-constructor"></a>Użycie elementu XAML (inny niż domyślny konstruktor)  
   
@@ -40,29 +40,29 @@ Argumenty konstrukcji pakietów z systemem innym niż domyślny konstruktor obie
   
 |||  
 |-|-|  
-|`oneOrMoreObjectElements`|Co najmniej jeden element obiektu określających argumenty do przekazania do tworzenia kopii innych niż domyślne konstruktora lub metody fabryki.<br /><br /> Typowe jest używane do inicjowania tekstu w elementach obiektu umożliwia określenie wartości rzeczywistych argumentów. Zobacz sekcję dotyczącą przykłady.<br /><br /> Kolejność elementów jest znacząca. Typy XAML w kolejności musi pasują do typów, a następnie wpisz kolejność przeciążenie metody konstruktora lub fabryki zapasowego.|  
-|`methodName`|Nazwa metody fabryki, która ma być przetwarzana żadnego `x:Arguments` argumentów.|  
+|`oneOrMoreObjectElements`|Co najmniej jeden element obiektu, które określają argumenty, które mają być przekazane do metody konstruktora lub fabryki innych niż domyślne tworzenie kopii.<br /><br /> Typowy jest Użyj tekstu inicjowanie elementów obiektu, aby określić wartości rzeczywistych argumentów. Zobacz sekcję przykłady.<br /><br /> Kolejność elementów jest znaczący. Typy XAML w kolejności musi pasują do typów, a następnie wpisz kolejność przeciążenia metody konstruktora lub fabryki zapasowy.|  
+|`methodName`|Nazwa metody fabryka, która ma być przetwarzana dowolne `x:Arguments` argumentów.|  
   
 ## <a name="dependencies"></a>Zależności  
- `x:FactoryMethod` można zmodyfikować zakresu i zachowanie gdzie `x:Arguments` ma zastosowanie.  
+ `x:FactoryMethod` można zmodyfikować zakres i zachowanie gdzie `x:Arguments` ma zastosowanie.  
   
- Jeśli nie `x:FactoryMethod` jest określony, `x:Arguments` dotyczy alternatywny podpisów (z systemem innym niż domyślny) konstruktorów zapasowego.  
+ Jeśli nie `x:FactoryMethod` jest określony, `x:Arguments` stosuje się do alternatywnego podpisy (innych niż domyślne) konstruktorów zapasowy.  
   
- Jeśli `x:FactoryMethod` jest określony, `x:Arguments` dotyczy przeciążenia metody o nazwie.  
+ Jeśli `x:FactoryMethod` jest określony, `x:Arguments` ma zastosowanie do przeciążenia metody o nazwie.  
   
 ## <a name="remarks"></a>Uwagi  
- XAML 2006 może obsługiwać inicjowania inny niż domyślny za pomocą inicjowania tekstu. Praktyczne zastosowania technikę konstrukcji tekstu inicjowania jest jednak ograniczona. Inicjowanie tekst jest traktowany jako jeden ciąg tekstowy; w związku z tym tylko dodaje możliwość inicjowania pojedynczy parametr Jeśli konwerter typów nie jest zdefiniowany dla konstrukcji zachowanie można analizować elementy niestandardowe informacje i niestandardowych ograniczniki z ciągu. Ciąg tekstowy do obiektu logiki jest również potencjalnie konwerter typów natywnych domyślne danego analizatora XAML do obsługi podstawowych innego niż ciąg wartość true.  
+ XAML 2006 może obsługiwać inicjowania inny niż domyślny za pomocą inicjowania tekstu. Praktyczne zastosowanie technikę konstrukcji tekstu inicjowania jest jednak ograniczona. Inicjowanie tekst jest traktowany jako jeden ciąg tekstowy; w związku z tym tylko dodaje możliwość inicjowania jeden parametr, chyba że konwertera typów jest zdefiniowany dla zachowanie konstrukcji, które mogą przeanalizować elementów niestandardowych informacji oraz niestandardowego ograniczników z ciągu. Ciąg tekstowy do logiki obiektu jest również potencjalnie konwertera typów natywnych domyślną danego analizatora XAML do obsługi podstawowych innych niż ciąg wartość true.  
   
- `x:Arguments` Użycie języka XAML nie jest użycie elementu właściwości w tym sensie, typowe, ponieważ znacznika dyrektywy nie odwołuje się do typu zawierającego element object. Jest więcej podobnie dyrektyw takich jak `x:Code` gdzie element demarks zakresu, w którym kod znaczników powinny być rozumiane jako inny niż domyślny dla podrzędnej zawartości. W takim przypadku typu XAML każdego elementu obiektu komunikuje się informacje o typy argumentów, co jest używany przez analizatory składni języka XAML w celu określenia podpisów metody fabryki określonego konstruktora `x:Arguments` użycia próbuje odwołać.  
+ `x:Arguments` Użycia XAML nie jest użycie elementu właściwości w sensie typowe, ponieważ znaczników dyrektywy nie odwołuje się do typu elementu obiektu nadrzędnego. Więcej podobnie inne dyrektywy to taki jak `x:Code` gdzie element demarks zakresu, w którym znaczniki powinny być interpretowane jako inny niż domyślny dla podrzędnej zawartości. W tym przypadku typ XAML każdego elementu obiektu komunikuje się informacji na temat typów argumentu, używany przez analizatory składni XAML, aby określić, które podpis metody fabryka konstruktora określonego `x:Arguments` próbuje odwoływać się do użycia.  
   
- `x:Arguments` dla obiekt elementu budowany musi poprzedzać inne elementy właściwości, zawartość, tekst wewnętrzny ani ciągi inicjowanie obiektu elementu. Elementy obiektu wewnątrz `x:Arguments` mogą zawierać atrybuty i ciągi inicjowania dozwolonych przez tego typu XAML i jego zapasowy konstruktora lub metody fabryki. Dla obiekt lub argumentów można określić niestandardowych typów XAML lub XAML znajdujących się w przeciwnym razie poza domyślnej przestrzeni nazw XAML za pomocą odwołań do mapowania prefiksów ustalonych.  
+ `x:Arguments` elementu obiektu budowany musi poprzedzać wszystkie inne elementy właściwości, zawartości, tekst wewnętrzny lub inicjowania ciągi elementu obiektu. Elementy obiektu w ramach `x:Arguments` mogą one obejmować atrybuty i parametry inicjowania dozwolonym przez tego typu XAML oraz sposób jej zapasowy konstruktora lub fabryki. Dla obiektu lub argumenty można określić niestandardowe typy XAML lub XAML znajdujących się w przeciwnym razie poza domyślna przestrzeń nazw XAML, odwołując się do mapowania prefiksów ustalonych.  
   
- Procesory XAML, skorzystaj z poniższych wskazówek ustalenie sposobu określania argumentów w `x:Arguments` powinien zostać użyty do utworzenia obiektu. Jeśli `x:FactoryMethod` określono informacji jest porównywany do określonego `x:FactoryMethod` (należy pamiętać, że wartość `x:FactoryMethod` nazwę metody, a metodę o nazwie mogą mieć przeciążenia. Jeśli `x:FactoryMethod` nie zostanie określony, informacje są porównywane do zestawu wszystkich przeciążeń konstruktora publicznego obiektu. Logika przetwarzania XAML następnie porównuje liczbę parametrów i wybiera przeciążenia z dopasowania argumentów. Jeśli istnieje więcej niż jedno dopasowanie, procesor XAML należy porównać typów parametrów, na podstawie typów XAML elementów udostępnionego obiektu. W przypadku nadal więcej niż jedno dopasowanie XAML procesora jest niezdefiniowany. Jeśli `x:FactoryMethod` jest określony, ale nie można rozpoznać metody, procesor XAML powinien zgłosić wyjątek.  
+ Procesory XAML skorzystaj z poniższych wskazówek, aby określić, jak argumenty określone w `x:Arguments` powinien zostać użyty do utworzenia obiektu. Jeśli `x:FactoryMethod` jest określony, są porównywane do określonego `x:FactoryMethod` (należy pamiętać, że wartość `x:FactoryMethod` jest nazwa metody, a metody nazwanej, mogą mieć przeciążenia. Jeśli `x:FactoryMethod` nie zostanie określony, są porównywane do zestawu wszystkich przeciążeń konstruktora publicznego obiektu. Logika przetwarzania XAML następnie porównuje liczbę parametrów i wybiera przeciążenia za pomocą dopasowywania argumentów. Jeśli istnieje więcej niż jedno dopasowanie, procesor XAML należy porównać typy parametrów na podstawie typów XAML elementów udostępnionego obiektu. W przypadku nadal więcej niż jedno dopasowanie zachowanie procesora XAML jest niezdefiniowane. Jeśli `x:FactoryMethod` jest określony, ale metoda nie można rozwiązać, procesor XAML powinien zgłosić wyjątek.  
   
- Użycie atrybutu XAML `<x:Arguments>string</x:Arguments>` jest technicznie możliwe. Zapewnia to nie możliwości poza co można zrobić w przeciwnym razie za pośrednictwem konwertery tekst i typ inicjowania i przy użyciu tej składni nie jest zamiar projektu XAML 2009 funkcji metody fabryki.  
+ Użycie atrybutu XAML `<x:Arguments>string</x:Arguments>` jest technicznie możliwa. Zapewnia to nie możliwości poza co można zrobić w przeciwnym razie za pomocą inicjowania tekst i wpisać konwerterów i przy użyciu tej składni nie jest zamiar projektu funkcji metoda fabryki XAML 2009.  
   
 ## <a name="examples"></a>Przykłady  
- W poniższym przykładzie przedstawiono z systemem innym niż domyślny konstruktor podpisu, a następnie użycie XAML `x:Arguments` który uzyskuje dostęp do tego podpisu.  
+ W poniższym przykładzie pokazano bez domyślnego konstruktora podpisu, a następnie użycie XAML `x:Arguments` , uzyskuje dostęp ten podpis.  
   
 ```csharp  
 public class Food {  
@@ -84,7 +84,7 @@ public class Food {
 </my:Food>  
 ```  
   
- W poniższym przykładzie przedstawiono sygnatury metody fabryki docelowego, a następnie użycie XAML `x:Arguments` który uzyskuje dostęp do tego podpisu.  
+ W poniższym przykładzie pokazano podpis metody fabryki docelowego, a następnie użycie XAML `x:Arguments` , uzyskuje dostęp ten podpis.  
   
 ```csharp  
 public Food TryLookupFood(string name)  
@@ -106,6 +106,6 @@ public Food TryLookupFood(string name)
 </my:Food>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)  
- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Zobacz także
+- [Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

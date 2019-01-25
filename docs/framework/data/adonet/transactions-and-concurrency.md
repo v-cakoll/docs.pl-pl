@@ -2,12 +2,12 @@
 title: Transakcje i współbieżność
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f5efa8f25e3cd4dedec9e5a9c99db28320a4d93e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494057"
 ---
 # <a name="transactions-and-concurrency"></a>Transakcje i współbieżność
 Transakcja składa się z jednego polecenia lub grupy poleceń, które są wykonywane w pakiecie. Transakcje pozwala połączyć wiele operacji w pojedynczą jednostkę pracy. Jeśli wystąpi awaria w jednym punkcie w transakcji, wszystkie aktualizacje można wycofać do stanu wstępnego transakcji.  
@@ -34,10 +34,10 @@ Transakcja składa się z jednego polecenia lub grupy poleceń, które są wykon
  [Optymistyczna współbieżność](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  W tym artykule opisano optymistyczne i pesymistycznej współbieżności i jak można sprawdzić, naruszenia współbieżności.  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawowe informacje dotyczące transakcji](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
- [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Podstawowe informacje dotyczące transakcji](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
+- [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4fe3eec4940b57001b7734c581076388f8ba0c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bded97c23013e60bf2d3c32c4eb25285870977e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554195"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 — Metoda
-Mapuje wskaźnik instrukcji kodu zarządzanego do wersji ponownie kompilowana JIT funkcji.  
+Mapuje wskaźnik instrukcji kodu zarządzanego do wersji ponownie skompilowana JIT funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,19 +41,19 @@ HRESULT GetFunctionFromIP2(
  [in] Wskaźnik instrukcji w kodzie zarządzanym.  
   
  `pFunctionId`  
- [out] Identyfikatorem funkcji.  
+ [out] Identyfikator funkcji.  
   
  `pReJitId`  
- [out] Tożsamość wersji ponownie kompilowana JIT funkcji.  
+ [out] Tożsamość ponownie skompilowana JIT wersję funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetFunctionFromIP2` przypomina `GetFunctionFromIP`, ale pobiera identyfikator ponownie kompilowana JIT zamiast Identyfikatora funkcji funkcji, która zawiera określony adres IP.  
+ `GetFunctionFromIP2` jest podobny do `GetFunctionFromIP`, chyba że otrzymuje identyfikator ponownie skompilowana JIT, zamiast Identyfikatora funkcji, funkcji, która zawiera określony adres IP.  
   
 > [!NOTE]
->  `GetFunctionFromIP2` może wyzwolić wyrzucania elementów bezużytecznych, podczas gdy `GetFunctionFromIP` nie.  Aby uzyskać więcej informacji, zobacz [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+>  `GetFunctionFromIP2` Możesz wyzwolić wyrzucania elementów bezużytecznych, natomiast `GetFunctionFromIP` nie będzie.  Aby uzyskać więcej informacji, zobacz [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -61,5 +61,5 @@ HRESULT GetFunctionFromIP2(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

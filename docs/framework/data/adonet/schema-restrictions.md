@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 040ecd8a2ce223f89601de735b77ccc81638c7af
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7bc5f3fc1c87b8acbbfeb0bad0c7766c0a2ef1dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688301"
 ---
 # <a name="schema-restrictions"></a>Ograniczenia schematu
 Drugi parametr opcjonalny **GetSchema** metodą jest zwracane ograniczenia, które są używane do ograniczenia ilości informacji o schemacie, a zostanie on przekazany do **GetSchema** metodę jako tablica ciągów . Pozycja w tablicy określa wartości, które można przekazać, a jest równa liczbie ograniczania.  
@@ -161,7 +161,7 @@ class Program
 |Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
 |tabela|@Table|TABLE_NAME|3|  
-|Kolumny|@Column|COLUMN_NAME|4|  
+|Kolumna|@Column|COLUMN_NAME|4|  
   
 ### <a name="structuredtypemembers"></a>StructuredTypeMembers  
   
@@ -170,7 +170,7 @@ class Program
 |Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
 |tabela|@Table|TABLE_NAME|3|  
-|Kolumny|@Column|COLUMN_NAME|4|  
+|Kolumna|@Column|COLUMN_NAME|4|  
   
 ### <a name="views"></a>Widoki  
   
@@ -187,7 +187,7 @@ class Program
 |Wykaz|@Catalog|VIEW_CATALOG|1|  
 |Właściciel|@Owner|VIEW_SCHEMA|2|  
 |tabela|@Table|VIEW_NAME|3|  
-|Kolumny|@Column|COLUMN_NAME|4|  
+|Kolumna|@Column|COLUMN_NAME|4|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
@@ -215,7 +215,7 @@ class Program
 |Właściciel|@Owner|user_name()|2|  
 |tabela|@Table|o.name|3|  
 |ConstraintName|@ConstraintName|x.name|4|  
-|Kolumny|@Column|c.name|5|  
+|Kolumna|@Column|c.name|5|  
   
 ### <a name="indexes"></a>Indeksy  
   
@@ -241,7 +241,7 @@ class Program
 |tabela|@Table|TABLE_NAME|3|  
 |Nazwa|@Name|CONSTRAINT_NAME|4|  
   
-## <a name="sql-server-2008-schema-restrictions"></a>Ograniczenia schematu programu SQL Server 2008  
+## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008 Schema Restrictions  
  W poniższej tabeli wymieniono ograniczenia dotyczące kolekcje schematów programu SQL Server 2008. Te ograniczenia są prawidłowe, począwszy od wersji 3.5 z dodatkiem SP1, .NET Framework i programu SQL Server 2008. Nie są obsługiwane we wcześniejszych wersjach programu .NET Framework i programu SQL Server.  
   
 ### <a name="columnsetcolumns"></a>ColumnSetColumns  
@@ -259,7 +259,7 @@ class Program
 |Wykaz|@Catalog|TABLE_CATALOG|1|  
 |Właściciel|@Owner|TABLE_SCHEMA|2|  
 |tabela|@Table|TABLE_NAME|3|  
-|Kolumny|@Column|COLUMN_NAME|4|  
+|Kolumna|@Column|COLUMN_NAME|4|  
   
-## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

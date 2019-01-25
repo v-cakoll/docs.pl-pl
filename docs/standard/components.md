@@ -5,18 +5,18 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570726"
 ---
 # <a name="net-architectural-components"></a>Składniki architektury .NET
 
 Aplikacja .NET został opracowany dla i działa w co najmniej jeden *implementacji .NET*.  Implementacje platformy .NET zawierają .NET Framework, .NET Core i platformy Mono. Specyfikacja interfejsu API jest wspólne dla wszystkich implementacji platformy .NET, który wywołał .NET Standard. Ten artykuł zawiera krótkie wprowadzenie do każdego z tych pojęć.
 
-## <a name="net-standard"></a>.NET standard
+## <a name="net-standard"></a>.NET Standard
 
 .NET Standard to zestaw interfejsów API, które są implementowane przez Biblioteka klasy podstawowej implementacji .NET. Jest bardziej formalnie specyfikacji interfejsów API platformy .NET, wchodzące w skład jednolity zbiór umowy, które można skompilować kod. Umowy te są implementowane w każdej implementacji .NET. Dzięki temu przenośność między różne implementacje platformy .NET, co skutecznie kod wszędzie.
 
@@ -86,10 +86,10 @@ Masz dostęp do obszerny zestaw narzędzi i składników infrastruktury, współ
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych](choosing-core-framework-server.md)   
-- [.NET Standard](net-standard.md)  
-- [Przewodnik platformy .NET Core](../core/index.md)  
-- [.NET framework — przewodnik](../framework/index.md)  
-- [Przewodnik dla języka C#](../csharp/index.md)  
-- [Podręcznik języka F#](../fsharp/index.md)  
-- [VB.NET Guide](../visual-basic/index.md)  
+- [Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych](choosing-core-framework-server.md)
+- [.NET Standard](net-standard.md)
+- [Przewodnik platformy .NET Core](../core/index.md)
+- [.NET framework — przewodnik](../framework/index.md)
+- [Przewodnik dla języka C#](../csharp/index.md)
+- [Podręcznik języka F#](../fsharp/index.md)
+- [VB.NET Guide](../visual-basic/index.md)

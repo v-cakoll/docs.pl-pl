@@ -5,28 +5,28 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: ab46f192f2e9549d0568737236742a366ce7b3a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0d9e40f3f41eac5b16037a89a3cac45cbfc8c57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574449"
 ---
-# <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Wskazówki: zmienianie, gdzie My.Application.Log zapisuje informacje (Visual Basic)
-Można użyć `My.Application.Log` i `My.Log` obiektów do rejestrowania informacji o zdarzeniach występujących w aplikacji. W tym przewodniku przedstawiono sposób zastępują ustawienia domyślne i spowodować `Log` obiektu do zapisania do innych odbiorniki dzienników.  
+# <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Przewodnik: Zmienianie, gdzie My.Application.Log zapisuje informacje (Visual Basic)
+Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informacji o zdarzeniach występujących w aplikacji. W tym instruktażu przedstawiono sposób zastępują ustawienia domyślne i spowodować, że `Log` obiektu do zapisania do innych nasłuchujących dziennika.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- `Log` Obiektu można zapisać informacji do kilku odbiorniki dzienników. Musisz określić bieżącą konfigurację odbiorników dziennika przed zmianą konfiguracji. Aby uzyskać więcej informacji, zobacz [wskazówki: Ustalanie gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
+ `Log` Obiektu można zapisać informacji do kilku odbiorniki logu. Należy określić bieżącą konfigurację odbiorniki logu przed zmianą konfiguracji. Aby uzyskać więcej informacji, zobacz [instruktażu: Ustalanie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
- Warto przejrzeć [porady: zapis informacji o zdarzeniu do pliku tekstowego](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) lub [jak: zapisu do dziennika zdarzeń aplikacji](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).  
+ Warto przejrzeć [jak: Zapisywanie informacji o pliku tekstowego zdarzeniach](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) lub [jak: Zapisywanie w rejestrze zdarzeń aplikacji](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).  
   
 ### <a name="to-add-listeners"></a>Aby dodać obiekty nasłuchujące  
   
-1.  Kliknij prawym przyciskiem myszy app.config w **Eksploratora rozwiązań** i wybierz polecenie **Otwórz**.  
+1.  Kliknij prawym przyciskiem myszy pliku app.config w **Eksploratora rozwiązań** i wybierz polecenie **Otwórz**.  
   
-     \- lub -  
+     \- lub —  
   
-     Jeśli plik app.config, nie istnieje:  
+     Jeśli nie ma żadnego pliku app.config:  
   
     1.  Na **projektu** menu, wybierz **Dodaj nowy element**.  
   
@@ -34,9 +34,9 @@ Można użyć `My.Application.Log` i `My.Log` obiektów do rejestrowania informa
   
     3.  Kliknij przycisk **Dodaj**.  
   
-2.  Zlokalizuj `<listeners>` w obszarze `<source>` sekcji z `name` atrybutu "DefaultSource" w `<sources>` sekcji. `<sources>` Znajduje się w sekcji `<system.diagnostics>` części, lokacja najwyższego poziomu `<configuration>` sekcji.  
+2.  Znajdź `<listeners>` sekcji w obszarze `<source>` sekcji z `name` atrybutu "DefaultSource" w `<sources>` sekcji. `<sources>` Znajduje się w sekcji `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
   
-3.  Dodaj te elementy w tym `<listeners>` sekcji.  
+3.  Dodaj te elementy, `<listeners>` sekcji.  
   
     ```xml  
     <!-- Uncomment to connect the application file log. -->  
@@ -51,11 +51,11 @@ Można użyć `My.Application.Log` i `My.Log` obiektów do rejestrowania informa
     <!-- <add name="Console" /> -->  
     ```  
   
-4.  Usuń znaczniki komentarza odbiorniki dzienników, które chcesz otrzymywać `Log` wiadomości.  
+4.  Usuń znaczniki komentarza odbiorniki logu, które chcesz otrzymywać `Log` wiadomości.  
   
-5.  Zlokalizuj `<sharedListeners>` sekcji w `<system.diagnostics>` części, lokacja najwyższego poziomu `<configuration>` sekcji.  
+5.  Znajdź `<sharedListeners>` sekcji w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
   
-6.  Dodaj te elementy w tym `<sharedListeners>` sekcji.  
+6.  Dodaj te elementy, `<sharedListeners>` sekcji.  
   
     ```xml  
     <add name="FileLog"  
@@ -86,7 +86,7 @@ Można użyć `My.Application.Log` i `My.Log` obiektów do rejestrowania informa
          initializeData="true" />  
     ```  
   
-7.  Zawartość pliku app.config powinny być podobne do następującego kodu XML:  
+7.  Zawartość pliku app.config powinien wyglądać podobnie jak następujący kod XML:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -145,46 +145,46 @@ Można użyć `My.Application.Log` i `My.Log` obiektów do rejestrowania informa
     </configuration>  
     ```  
   
-### <a name="to-reconfigure-a-listener"></a>Aby ponownie skonfigurować odbiornik  
+### <a name="to-reconfigure-a-listener"></a>Aby zmienić konfigurację odbiornika  
   
-1.  Zlokalizuj odbiornika `<add>` element z `<sharedListeners>` sekcji.  
+1.  Znajdź odbiornika `<add>` elementu z `<sharedListeners>` sekcji.  
   
-2.  `type` Atrybut nadaje nazwę typu odbiornika. Ten typ musi dziedziczyć z <xref:System.Diagnostics.TraceListener> klasy. Aby upewnić się, że jest używany nieprawidłowy typ, użyj nazwy typu o silnej nazwie. Aby uzyskać więcej informacji zobacz "Aby odwoływać się do typu o silnej nazwie" sekcji poniżej.  
+2.  `type` Atrybut zawiera nazwę typu odbiornika. Ten typ musi dziedziczyć <xref:System.Diagnostics.TraceListener> klasy. Aby upewnić się, że właściwego typu jest używany, należy użyć nazwy o silnej nazwie typu. Aby uzyskać więcej informacji zobacz "Aby odwołać się do typu o silnej nazwie" sekcji poniżej.  
   
      Niektóre typy, które są dostępne są:  
   
-    -   A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> odbiornika, który zapisuje do pliku dziennika.  
+    -   A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> odbiornika, który zapisuje je do pliku dziennika.  
   
-    -   A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> odbiornika, który zapisuje informacje w dzienniku zdarzeń komputera określona przez `initializeData` parametru.  
+    -   A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> odbiornika, który zapisuje informacje w dzienniku zdarzeń komputera, które są określone przez `initializeData` parametru.  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> i <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> odbiorników, które zapisać do pliku określonego w `initializeData` parametru.  
+    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> i <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> odbiorników, które zapis do pliku określonego w `initializeData` parametru.  
   
-    -   A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> odbiornika, który zapisuje do wiersza polecenia konsoli.  
+    -   A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> odbiornika, który zapisuje je w wiersza polecenia konsoli.  
   
-     Aby dowiedzieć się, w którym innych typów odbiorniki logu zapisywać informacje zapoznaj się dokumentacją tego typu.  
+     Uzyskać informacji o tym, gdzie innych rodzajów odbiorniki logu wpisać informacje zapoznaj się dokumentacją tego typu.  
   
-3.  Gdy aplikacja tworzy obiekt dziennika odbiornika, przekazuje `initializeData` atrybut jako parametru konstruktora. Znaczenie `initializeData` atrybutu jest zależny od obiektu nasłuchującego śledzenia.  
+3.  Gdy aplikacja tworzy obiekt odbiornika dziennika, przekazuje on `initializeData` atrybutu jako parametr konstruktora. Znaczenie `initializeData` atrybutu jest zależna od odbiornika śledzenia.  
   
-4.  Po utworzeniu odbiornika dziennika, aplikacja ustawia właściwości odbiornika. Te właściwości są definiowane przez inne atrybuty w `<add>` elementu. Więcej informacji dotyczących właściwości dla określonego odbiornika w dokumentacji dla tego odbiornika typu.  
+4.  Po utworzeniu odbiornika dziennika, aplikacja ustawia właściwości odbiornika. Te właściwości są definiowane przez inne atrybuty `<add>` elementu. Aby uzyskać więcej informacji na właściwości określonego odbiornika zobacz dokumentację dla tego odbiornika typu.  
   
 ### <a name="to-reference-a-strongly-named-type"></a>Aby odwołać się do typu o silnej nazwie  
   
-1.  Aby upewnić się, że nieprawidłowy typ jest używany przez odbiornik sieci dziennika, upewnij się, że nazwa FQDN typu i nazwa zestawu o silnej nazwie. O silnej nazwie typu ma następującą składnię:  
+1.  Aby upewnić się, że właściwego typu jest używany do z odbiornikiem dziennika, upewnij się użyć w pełni kwalifikowana nazwa typu i nazwy zestawu o silnej nazwie. Składnia typu o silnej nazwie jest w następujący sposób:  
   
      \<*Nazwa typu*>, \< *nazwy zestawu*>, \< *numer wersji*>, \< *kultury*>, \< *silnej nazwy*>  
   
-2.  Ten przykładowy kod przedstawia sposób określić nazwę typu o silnej nazwie FQDN type—"System.Diagnostics.FileLogTraceListener" w tym przypadku.  
+2.  Ten przykład kodu pokazuje, jak można ustalić nazwy typu o silnej nazwie do w pełni kwalifikowaną type—"System.Diagnostics.FileLogTraceListener" w tym przypadku.  
   
      [!code-vb[VbVbalrMyApplicationLog#15](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-changing-where-my-application-log-writes-information_1.vb)]  
   
-     Jest to dane wyjściowe, i może służyć do unikatowego odwoływać się do typu o silnej nazwie, jak procedury "Aby dodać odbiorników" powyżej.  
+     Jest to dane wyjściowe i może służyć do unikatowego odwołać się do typu o silnej nazwie, jak procedury "Aby dodać obiekty nasłuchujące" powyżej.  
   
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- <xref:System.Diagnostics.TraceListener>  
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>  
- <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>  
- [Instrukcje: zapisywanie informacji o zdarzeniach w pliku tekstowym](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)  
- [Instrukcje: zapisywanie w dzienniku zdarzeń aplikacji](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- <xref:System.Diagnostics.TraceListener>
+- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
+- <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
+- [Instrukcje: Zapisywanie informacji zdarzeniach w pliku tekstowym](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
+- [Instrukcje: Zapisywanie w rejestrze zdarzeń aplikacji](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)

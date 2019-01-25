@@ -14,47 +14,47 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-ms.openlocfilehash: 40322dc6c5facd4167a4c9ac5c12fdf2a8831b7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6be6d0904d5b52e5188f0a5a16aaefa08265379c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674196"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>Najlepsze praktyki dotyczące formantu TableLayoutPanel
-<xref:System.Windows.Forms.TableLayoutPanel> Kontrola zapewnia układu zaawansowane funkcje, które należy rozważyć przed użyciem na formularzach systemu Windows.  
+<xref:System.Windows.Forms.TableLayoutPanel> Kontroli udostępnia funkcje zaawansowane układu, które należy rozważyć przed użyciem na formularzach Windows.  
   
 ## <a name="recommendations"></a>Zalecenia  
- Poniższe zalecenia pomogą użyj <xref:System.Windows.Forms.TableLayoutPanel> formantu, aby jego najważniejsze korzyści.  
+ Poniższe zalecenia ułatwi użycie <xref:System.Windows.Forms.TableLayoutPanel> kontrolki do jej zaletą najlepsze.  
   
-### <a name="targeted-use"></a>Użyj docelowych  
- Użyj <xref:System.Windows.Forms.TableLayoutPanel> kontrolować oszczędnie. W sytuacjach wszystkie, które wymagają układu o zmiennym rozmiarze nie należy używać go. Poniższa lista zawiera opis układy, korzystają najbardziej z użycia <xref:System.Windows.Forms.TableLayoutPanel> sterowania:  
+### <a name="targeted-use"></a>Użyj docelowego  
+ Użyj <xref:System.Windows.Forms.TableLayoutPanel> kontrolować rzadko. We wszystkich sytuacjach wymagających o zmiennym rozmiarze układu nie należy używać go. Na poniższej liście opisano układy, korzystają najbardziej z użycia zestawów <xref:System.Windows.Forms.TableLayoutPanel> sterowania:  
   
--   Układy, w których istnieje wiele części formularza, które proporcjonalnie do siebie.  
+-   Układy, w których istnieje wiele części formularza, które proporcjonalnie do siebie nawzajem.  
   
--   Układy, które zostaną zmodyfikowane lub generowane dynamicznie w czasie wykonywania, takie jak formularze wprowadzania danych, których można dostosowywać użytkownika pola dodane lub usunięte zgodnie z preferencjami.  
+-   Układy zostanie zmodyfikowany lub generowany dynamicznie w czasie wykonywania, takich jak formularze wprowadzania danych, które mają pól możliwych do dostosowania użytkownika dodawane lub odejmowane na podstawie preferencji.  
   
--   Układy, które powinny pozostać w ogólnej stałym rozmiarze. Na przykład może być okno dialogowe, które powinny pozostać mniejsza niż 800 x 600, ale należy do obsługi zlokalizowanych ciągów.  
+-   Układy, które powinny pozostać w ogólnej o stałym rozmiarze. Na przykład masz okno dialogowe, które powinny pozostać mniejsza niż 800 x 600, ale trzeba obsługiwać zlokalizowane ciągi.  
   
- Poniższa lista zawiera opis układy nie znacznie korzyści ze stosowania <xref:System.Windows.Forms.TableLayoutPanel> sterowania:  
+ Na poniższej liście opisano układy nie osiągają znaczne korzyści z używania <xref:System.Windows.Forms.TableLayoutPanel> sterowania:  
   
--   Proste formularze wprowadzania danych z jedną kolumną etykiety i pojedynczej kolumny obszarów wprowadzania tekstu.  
+-   Proste formularze wprowadzania danych z jedną kolumną etykiet i jedną kolumnę obszarów wprowadzania tekstu.  
   
--   Formularze za pomocą jednej dużych wyświetlić obszar, który powinien wypełnił dostępne miejsce podczas zmiany rozmiaru. Na przykład jest formularz, który wyświetla pojedynczy <xref:System.Windows.Forms.PropertyGrid> formantu. Zakotwiczanie, użyj w tym przypadku, ponieważ nic rozszerzyć gdy zmieniany jest rozmiar formularza.  
+-   Formularze za pomocą pojedynczego dużych wyświetlać obszar, który należy wypełnić całe dostępne miejsce po wystąpieniu zmiany rozmiaru. Na przykład jest formularz, który wyświetla jedną <xref:System.Windows.Forms.PropertyGrid> kontroli. Zakotwiczanie, użyj w tym przypadku ponieważ nic powinni rozwinąć pozycję gdy zmieniany jest rozmiar formularza.  
   
- Wybierz uważnie, które kontrolki musi być <xref:System.Windows.Forms.TableLayoutPanel> formantu. Jeśli dysponujesz miejscem na tekst zwiększa się o 30% przy użyciu Zakotwiczanie, rozważ użycie <xref:System.Windows.Forms.Control.Anchor%2A> tylko właściwości. Jeśli można oszacować miejsca wymaganego przez układ, użycie <xref:System.Windows.Forms.Control.Dock%2A> i <xref:System.Windows.Forms.Control.Anchor%2A> jest łatwiejsze niż Szacowanie szczegóły pozostałego miejsca i <xref:System.Windows.Forms.Control.AutoSize%2A> zachowanie.  
+ Wybierz uważnie, które kontrolki, które muszą być w <xref:System.Windows.Forms.TableLayoutPanel> kontroli. Jeśli dysponujesz miejscem na tekście rośnie o 30%, za pomocą Zakotwiczanie, rozważ użycie <xref:System.Windows.Forms.Control.Anchor%2A> tylko właściwości. Jeśli miejsce wymagane przez układ można oszacować, użyj <xref:System.Windows.Forms.Control.Dock%2A> i <xref:System.Windows.Forms.Control.Anchor%2A> jest łatwiejsze niż szacowania szczegóły ilość wolnego miejsca i <xref:System.Windows.Forms.Control.AutoSize%2A> zachowanie.  
   
- Na ogół podczas projektowania układu z <xref:System.Windows.Forms.TableLayoutPanel> kontrolować, projekt powinien być tak proste, jak to możliwe.  
+ Ogólnie rzecz biorąc, podczas projektowania układu z <xref:System.Windows.Forms.TableLayoutPanel> sterowania, projekt powinien być tak proste, jak to możliwe.  
   
 ### <a name="use-the-document-outline-window"></a>Okno konspektu dokumentu  
- Okno konspektu dokumentu umożliwia układu, która służy do manipulowania relacje porządek i nadrzędny podrzędny dla Twoich formantów w widoku drzewa. Z **menu Widok**, wybierz pozycję **inne okna**, a następnie wybierz pozycję **konspekt dokumentu**.  
+ Okno konspektu dokumentu zapewnia układu można używać do manipulowania relacji porządek i nadrzędny podrzędny, dla Twoich kontrolek w widoku drzewa. Z **menu Widok**, wybierz opcję **Windows inne**, a następnie wybierz **konspekt dokumentu**.  
   
-### <a name="avoid-nesting"></a>Unikaj zagnieżdżania  
- Unikaj zagnieżdżanie innych <xref:System.Windows.Forms.TableLayoutPanel> steruje w obrębie <xref:System.Windows.Forms.TableLayoutPanel> formantu. Debugowanie zagnieżdżonych układów może być trudne.  
+### <a name="avoid-nesting"></a>Uniknąć zagnieżdżania  
+ Należy unikać zagnieżdżanie innych <xref:System.Windows.Forms.TableLayoutPanel> kontrolki w ramach <xref:System.Windows.Forms.TableLayoutPanel> kontroli. Debugowanie układy zagnieżdżonych może być trudne.  
   
-### <a name="avoid-visual-inheritance"></a>Unikaj dziedziczenie Visual  
- <xref:System.Windows.Forms.TableLayoutPanel> Formant nie obsługuje dziedziczenia visual w narzędziu Projektant dla formularzy systemu Windows. A <xref:System.Windows.Forms.TableLayoutPanel> kontroli w klasie pochodnej pojawia się jako "zablokowana" w czasie projektowania.  
+### <a name="avoid-visual-inheritance"></a>Należy unikać dziedziczenie Visual  
+ <xref:System.Windows.Forms.TableLayoutPanel> Formant nie obsługuje dziedziczenie visual w programie Windows Forms Designer. A <xref:System.Windows.Forms.TableLayoutPanel> formantu w klasie pochodnej pojawia się jako "zablokowany" w czasie projektowania.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- <xref:System.Windows.Forms.FlowLayoutPanel>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- <xref:System.Windows.Forms.FlowLayoutPanel>

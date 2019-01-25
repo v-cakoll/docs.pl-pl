@@ -12,12 +12,12 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: 955a3b6a2f7dc1d0e9823ed6d500ab7f7f9fe5b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa9a1942903dff6f673d87b67ebcad047a410425
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624785"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop — Instrukcja (Visual Basic)
 Wstrzymuje wykonywanie.  
@@ -41,5 +41,5 @@ Stop
   
  [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/stop-statement_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcja End](../../../visual-basic/language-reference/statements/end-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcja End](../../../visual-basic/language-reference/statements/end-statement.md)

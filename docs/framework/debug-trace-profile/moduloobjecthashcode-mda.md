@@ -12,45 +12,45 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3c51dcb5e19f5fac5485a317d1d26884106cf51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a53f433d1b6caca98b2b0d564774820239320f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739670"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
-`moduloObjectHashcode` Zarządzany Asystent debugowania (MDA) zmiany zachowania <xref:System.Object> klasy do wykonania modulo operacja skrótu zwrócony przez <xref:System.Object.GetHashCode%2A> metody. Modulo domyślnego dla tego MDA wynosi 1, co powoduje, że <xref:System.Object.GetHashCode%2A> do zwrócenia 0 dla wszystkich obiektów.  
+`moduloObjectHashcode` Zarządzanego Asystenta debugowania (MDA) zmienia zachowanie <xref:System.Object> klasy w celu wykonania modulo operacja zwracane przez wartość skrótu <xref:System.Object.GetHashCode%2A> metody. Modulo domyślny dla to zdarzenie MDA wynosi 1, co powoduje, że <xref:System.Object.GetHashCode%2A> do zwrócenia 0 dla wszystkich obiektów.  
   
 ## <a name="symptoms"></a>Symptomy  
- Po przeniesieniu do nowej wersji środowisko uruchomieniowe języka wspólnego (CLR), program nie działa prawidłowo:  
+ Po przeniesieniu do nowej wersji środowiska uruchomieniowego języka wspólnego (CLR), program nie jest już działa prawidłowo:  
   
--   Program otrzymuje z niewłaściwym obiektem <xref:System.Collections.Hashtable>.  
+-   Program będzie niedługo niewłaściwym obiektem z <xref:System.Collections.Hashtable>.  
   
--   Kolejność wyliczenie z <xref:System.Collections.Hashtable> zawiera zmiany, która dzieli program.  
+-   Kolejność wyliczania z <xref:System.Collections.Hashtable> zmieniło przerwanie wykonywania programu.  
   
--   Dwa obiekty używane równe nie są takie same.  
+-   Dwa obiekty, które umożliwiają równe już nie są równe.  
   
--   Dwa obiekty używane różnej teraz są takie same.  
+-   Dwa obiekty, które są używane, nie są równe, teraz są równe.  
   
 ## <a name="cause"></a>Przyczyna  
- Program może występować z niewłaściwym obiektem <xref:System.Collections.Hashtable> ponieważ wykonania <xref:System.Object.Equals%2A> metody w klasie klucza do <xref:System.Collections.Hashtable> testy równości obiektów przez porównanie wyników wywołanie <xref:System.Object.GetHashCode%2A> — metoda . Skrótu nie powinien służyć do testowania równość obiektu, ponieważ dwa obiekty może mieć taki sam skrót, nawet jeśli ich odpowiednich pól mają różne wartości. Te kolizji kod skrótu, wystąpić sporadycznych w praktyce. Wpływ ma na <xref:System.Collections.Hashtable> wyszukiwanie jest równe wyświetlane są dwa klucze, które nie są takie same, czy nieprawidłowy obiekt jest zwracany z <xref:System.Collections.Hashtable>. Ze względu na wydajność, implementacja <xref:System.Object.GetHashCode%2A> można przełączać się między wersji środowiska uruchomieniowego, więc konflikty, które nie mogą wystąpić w jednej wersji może wystąpić w kolejnych wersjach. Włącz to zdarzenie MDA sprawdzić, czy używany kod ma usterki podczas kolizji skrótu. Włączenie tej opcji, to zdarzenie MDA powoduje, że <xref:System.Object.GetHashCode%2A> metoda zwraca 0, co kolizji wszystkie kody skrótów. Tylko efekt Włączanie przez to zdarzenie MDA powinny mieć programu jest wolniej uruchomieniu programu.  
+ Program może być wprowadzenie niewłaściwym obiektem z <xref:System.Collections.Hashtable> ponieważ implementacja <xref:System.Object.Equals%2A> metodę w klasie klucz do <xref:System.Collections.Hashtable> testuje pod kątem równości obiektów przez porównanie wyników wywołanie <xref:System.Object.GetHashCode%2A> — metoda . Kody skrótów nie powinien umożliwia testowanie dla równości obiektu, ponieważ dwa obiekty mogą mieć tę samą wartość skrótu, nawet jeśli ich odpowiednich pól mają różne wartości. Te konflikty kod skrótu, występować sporadycznie w praktyce. Efekt ten ma na <xref:System.Collections.Hashtable> wyszukiwania jest wyświetlane dwa klucze, które nie są takie same, równe i nieprawidłowy obiekt jest zwracany z <xref:System.Collections.Hashtable>. Ze względu na wydajność wdrożenia <xref:System.Object.GetHashCode%2A> może się zmieniać między wersjami środowiska uruchomieniowego, więc mogą wystąpić konflikty, które nie mogą wystąpić w jednej wersji, w kolejnych wersjach. Włącz to zdarzenie MDA sprawdzić, czy kod ma błędy, gdy kolizji kodów wartości skrótu. Po włączeniu to zdarzenie MDA powoduje, że <xref:System.Object.GetHashCode%2A> metody zwracają 0, co wszystkie kody skrótów kolizji. Jedynie wpływ Włączanie to zdarzenie MDA powinien już z programu jest spowolnienie działania Twojego programu.  
   
- Kolejność wyliczenie z <xref:System.Collections.Hashtable> może zmienić z jednej wersji środowiska uruchomieniowego, jeśli inny algorytm używany do obliczania skrótu dla zmian klucza. Aby sprawdzić, czy program trwało zależności rzędu wyliczenie kluczy lub wartości spoza tablicy skrótów, można włączyć to zdarzenie MDA.  
+ Kolejność wyliczania z <xref:System.Collections.Hashtable> mogą ulec zmianie z jednej wersji środowiska uruchomieniowego, jeśli inny algorytm używany do obliczania kodów skrótu dla zmian klucza. Aby sprawdzić, czy program miało zależności kolejności wyliczenie kluczy i wartości z tabeli wyznaczania wartości skrótu, aby umożliwić to zdarzenie MDA.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Nigdy nie używaj skrótu zastępuje tożsamość obiektu. Implementowanie zastąpienie z <xref:System.Object.Equals%2A?displayProperty=nameWithType> metody do porównania nie skrótu.  
+ Nigdy nie używaj kody skrótów zastępuje tożsamość obiektu. Implementowanie zastępowania metody <xref:System.Object.Equals%2A?displayProperty=nameWithType> metoda porównuje kodów wartości skrótu.  
   
- Nie należy tworzyć zależności rzędu wyliczenia kluczy lub wartości w tabelach skrótów.  
+ Nie należy tworzyć zależności w kolejności wyliczenia o kluczy ani wartości w tabelach wyznaczania wartości skrótu.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- Aplikacje działać wolniej, gdy to zdarzenie MDA jest włączona. To zdarzenie MDA po prostu przyjmuje wartość skrótu, które mogłyby być zwracane i zamiast tego zwraca resztę po podzielona przez moduł.  
+ Aplikacje działają wolniej, po włączeniu to zdarzenie MDA. To zdarzenie MDA po prostu przyjmuje skrótu, który będzie zwracany i zamiast tego zwraca resztę z dzielenia podzielone przez moduł.  
   
 ## <a name="output"></a>Dane wyjściowe  
  Nie ma żadnych danych wyjściowych dla tego MDA.  
   
 ## <a name="configuration"></a>Konfiguracja  
- `modulus` Atrybut określa modulo używane na wartość skrótu. Wartość domyślna to 1.  
+ `modulus` Atrybut określa modulo na wartość skrótu. Wartość domyślna to 1.  
   
 ```xml  
 <mdaConfig>  
@@ -60,7 +60,7 @@ ms.locfileid: "33392947"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>  
- <xref:System.Object.Equals%2A?displayProperty=nameWithType>  
- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
+- <xref:System.Object.Equals%2A?displayProperty=nameWithType>
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

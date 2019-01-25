@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: cf684d2ec7ae7282b1ab68817357773f0f96c9ae
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
+ms.openlocfilehash: a80be841bb26d6c46022892cd827dfed76a0b9e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545663"
 ---
 # <a name="arrays-c-programming-guide"></a>Tablice (Przewodnik programowania w języku C#)
 
@@ -53,7 +53,7 @@ W strukturze danych tablicy można przechowywać wiele zmiennych tego samego typ
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Kolekcje](../../../csharp/programming-guide/concepts/collections.md)

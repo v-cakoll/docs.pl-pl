@@ -5,18 +5,18 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 24defe7e01603f1b1be3023d07854091335d6c60
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 32fcd9792f674d4ded466f26641690c8ae4328b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540406"
 ---
 # <a name="ltclientgt"></a>&lt;Klient&gt;
 `client` Element definiuje listę punktów końcowych, które klient może połączyć się z.  
   
  \<system.ServiceModel>  
-\<Klient >  
+\<client>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54148646"
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<punkt końcowy >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Zawiera kolekcję elementów punktu końcowego, które określają punktów końcowych, które ten klient może połączyć się z.|  
-|[\<metadane >](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Zawiera ustawienia dla przetwarzania metadanych.|  
+|[\<metadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Zawiera ustawienia dla przetwarzania metadanych.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -72,8 +72,8 @@ ms.locfileid: "54148646"
 </client>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.ClientSection>  
- <xref:System.ServiceModel.Configuration.MetadataElement>  
- [Konfiguracja klienta programu WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [Klienci](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.ClientSection>
+- <xref:System.ServiceModel.Configuration.MetadataElement>
+- [Konfiguracja klienta programu WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [Klienci](../../../../../docs/framework/wcf/feature-details/clients.md)

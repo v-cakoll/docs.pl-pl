@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003701"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650486"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Typy danych wyników operatora (Visual Basic)
 Visual Basic Określa typ danych wyniku operacji na podstawie typów danych operandu. W niektórych przypadkach może to być typ danych z większego zakresu niż jeden z operandów.  
@@ -60,7 +60,7 @@ Visual Basic Określa typ danych wyniku operacji na podstawie typów danych oper
 ||`Decimal`|`Single`|`Double`|Dowolnego typu liczby całkowitej|  
 |`Decimal`|Wartość dziesiętna|Single|Double|Wartość dziesiętna|  
 |`Single`|Single|Single|Double|Single|  
-|`Double`|Double|Double|Double|Double|  
+|`Double`|Double|Podwójne|Podwójne|Double|  
 |Dowolnego typu liczby całkowitej|Wartość dziesiętna|Single|Double|Double|  
   
  `^` Operator jest zdefiniowany tylko w przypadku `Double` typu danych. Visual Basic rozszerza się każdy argument konieczny do `Double` przed operacji, a wynik jest zawsze typu danych `Double`.  
@@ -85,8 +85,8 @@ Visual Basic Określa typ danych wyniku operacji na podstawie typów danych oper
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|Jednoargumentowy `+`|Krótka|SByte|Byte|Krótka|UShort|Liczba całkowita|Uinteger —|długi|ULong|  
-|Jednoargumentowy `–`|Krótka|SByte|Krótka|Krótka|Liczba całkowita|Liczba całkowita|długi|długi|Wartość dziesiętna|  
+|Jednoargumentowy `+`|Krótkie|SByte|Byte|Krótkie|UShort|Liczba całkowita|Uinteger —|Długie|ULong|  
+|Jednoargumentowy `–`|Krótkie|SByte|Krótkie|Krótkie|Liczba całkowita|Liczba całkowita|Długie|Długie|Wartość dziesiętna|  
   
 ### <a name="-and--operators"></a><\< i >> operatorów  
  W poniższej tabeli przedstawiono wyniki typów danych na dwa operatory przesunięcia bitowego `<<` i `>>`. Visual Basic traktuje każdy operator przesunięcia bitowego jako operator jednoargumentowy na jego lewy operand (wzorca bitowego lekkie).  
@@ -94,7 +94,7 @@ Visual Basic Określa typ danych wyniku operacji na podstawie typów danych oper
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`<<`, `>>`|Krótka|SByte|Byte|Krótka|UShort|Liczba całkowita|Uinteger —|długi|ULong|  
+|`<<`, `>>`|Krótkie|SByte|Byte|Krótkie|UShort|Liczba całkowita|Uinteger —|Długie|ULong|  
   
  Jeśli Lewy argument operacji jest `Decimal`, `Single`, `Double`, lub `String`, Visual Basic próbuje przekonwertować go pod kątem `Long` przed operacji, a wynik jest typu danych `Long`. Prawy operand (liczba pozycji bitów, aby przenieść) musi być `Integer` lub typ, który rozszerza się na `Integer`.  
   
@@ -104,14 +104,14 @@ Visual Basic Określa typ danych wyniku operacji na podstawie typów danych oper
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Krótka|SByte|Krótka|Krótka|Liczba całkowita|Liczba całkowita|długi|długi|Wartość dziesiętna|  
-|`SByte`|SByte|SByte|Krótka|Krótka|Liczba całkowita|Liczba całkowita|długi|długi|Wartość dziesiętna|  
-|`Byte`|Krótka|Krótka|Byte|Krótka|UShort|Liczba całkowita|Uinteger —|długi|ULong|  
-|`Short`|Krótka|Krótka|Krótka|Krótka|Liczba całkowita|Liczba całkowita|długi|długi|Wartość dziesiętna|  
-|`UShort`|Liczba całkowita|Liczba całkowita|UShort|Liczba całkowita|UShort|Liczba całkowita|Uinteger —|długi|ULong|  
-|`Integer`|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|długi|długi|Wartość dziesiętna|  
-|`UInteger`|długi|długi|Uinteger —|długi|Uinteger —|długi|Uinteger —|długi|ULong|  
-|`Long`|długi|długi|długi|długi|długi|długi|długi|długi|Wartość dziesiętna|  
+|`Boolean`|Krótkie|SByte|Krótkie|Krótkie|Liczba całkowita|Liczba całkowita|Długie|Długie|Wartość dziesiętna|  
+|`SByte`|SByte|SByte|Krótkie|Krótkie|Liczba całkowita|Liczba całkowita|Długie|Długie|Wartość dziesiętna|  
+|`Byte`|Krótkie|Krótkie|Byte|Krótkie|UShort|Liczba całkowita|Uinteger —|Długie|ULong|  
+|`Short`|Krótkie|Krótkie|Krótkie|Krótkie|Liczba całkowita|Liczba całkowita|Długie|Długie|Wartość dziesiętna|  
+|`UShort`|Liczba całkowita|Liczba całkowita|UShort|Liczba całkowita|UShort|Liczba całkowita|Uinteger —|Długie|ULong|  
+|`Integer`|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Długie|Długie|Wartość dziesiętna|  
+|`UInteger`|Długie|Długie|Uinteger —|Długie|Uinteger —|Długie|Uinteger —|Długie|ULong|  
+|`Long`|Długie|Długie|Długie|Długie|Długie|Długie|Długie|Długie|Wartość dziesiętna|  
 |`ULong`|Wartość dziesiętna|Wartość dziesiętna|ULong|Wartość dziesiętna|ULong|Wartość dziesiętna|ULong|Wartość dziesiętna|ULong|  
   
 ### <a name="-operator"></a>\ — Operator  
@@ -120,15 +120,15 @@ Visual Basic Określa typ danych wyniku operacji na podstawie typów danych oper
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Krótka|SByte|Krótka|Krótka|Liczba całkowita|Liczba całkowita|długi|długi|długi|  
-|`SByte`|SByte|SByte|Krótka|Krótka|Liczba całkowita|Liczba całkowita|długi|długi|długi|  
-|`Byte`|Krótka|Krótka|Byte|Krótka|UShort|Liczba całkowita|Uinteger —|długi|ULong|  
-|`Short`|Krótka|Krótka|Krótka|Krótka|Liczba całkowita|Liczba całkowita|długi|długi|długi|  
-|`UShort`|Liczba całkowita|Liczba całkowita|UShort|Liczba całkowita|UShort|Liczba całkowita|Uinteger —|długi|ULong|  
-|`Integer`|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|długi|długi|długi|  
-|`UInteger`|długi|długi|Uinteger —|długi|Uinteger —|długi|Uinteger —|długi|ULong|  
-|`Long`|długi|długi|długi|długi|długi|długi|długi|długi|długi|  
-|`ULong`|długi|długi|ULong|długi|ULong|długi|ULong|długi|ULong|  
+|`Boolean`|Krótkie|SByte|Krótkie|Krótkie|Liczba całkowita|Liczba całkowita|Długie|Długie|Długie|  
+|`SByte`|SByte|SByte|Krótkie|Krótkie|Liczba całkowita|Liczba całkowita|Długie|Długie|Długie|  
+|`Byte`|Krótkie|Krótkie|Byte|Krótkie|UShort|Liczba całkowita|Uinteger —|Długie|ULong|  
+|`Short`|Krótkie|Krótkie|Krótkie|Krótkie|Liczba całkowita|Liczba całkowita|Długie|Długie|Długie|  
+|`UShort`|Liczba całkowita|Liczba całkowita|UShort|Liczba całkowita|UShort|Liczba całkowita|Uinteger —|Długie|ULong|  
+|`Integer`|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Długie|Długie|Długie|  
+|`UInteger`|Długie|Długie|Uinteger —|Długie|Uinteger —|Długie|Uinteger —|Długie|ULong|  
+|`Long`|Długie|Długie|Długie|Długie|Długie|Długie|Długie|Długie|Długie|  
+|`ULong`|Długie|Długie|ULong|Długie|ULong|Długie|ULong|Długie|ULong|  
   
  Jeśli oba operandy z `\` operator jest [dziesiętna](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [pojedynczego](../../../visual-basic/language-reference/data-types/single-data-type.md), lub [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), Visual Basic próbuje przekonwertować go pod kątem [długich](../../../visual-basic/language-reference/data-types/long-data-type.md)przed operacji, a wynik jest typu danych `Long`.  
   
@@ -146,7 +146,7 @@ Visual Basic Określa typ danych wyniku operacji na podstawie typów danych oper
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Not`|Boolean|SByte|Byte|Krótka|UShort|Liczba całkowita|Uinteger —|długi|ULong|  
+|`Not`|Boolean|Sbyte —|Byte|Krótkie|UShort|Liczba całkowita|Uinteger —|Długie|ULong|  
   
  Jeśli argument jest `Decimal`, `Single`, `Double`, lub `String`, Visual Basic próbuje przekonwertować go pod kątem `Long` przed operacji, a wynik jest typu danych `Long`.  
   
@@ -156,15 +156,15 @@ Visual Basic Określa typ danych wyniku operacji na podstawie typów danych oper
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Boolean|SByte|Krótka|Krótka|Liczba całkowita|Liczba całkowita|długi|długi|długi|  
-|`SByte`|SByte|SByte|Krótka|Krótka|Liczba całkowita|Liczba całkowita|długi|długi|długi|  
-|`Byte`|Krótka|Krótka|Byte|Krótka|UShort|Liczba całkowita|Uinteger —|długi|ULong|  
-|`Short`|Krótka|Krótka|Krótka|Krótka|Liczba całkowita|Liczba całkowita|długi|długi|długi|  
-|`UShort`|Liczba całkowita|Liczba całkowita|UShort|Liczba całkowita|UShort|Liczba całkowita|Uinteger —|długi|ULong|  
-|`Integer`|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|długi|długi|długi|  
-|`UInteger`|długi|długi|Uinteger —|długi|Uinteger —|długi|Uinteger —|długi|ULong|  
-|`Long`|długi|długi|długi|długi|długi|długi|długi|długi|długi|  
-|`ULong`|długi|długi|ULong|długi|ULong|długi|ULong|długi|ULong|  
+|`Boolean`|Boolean|SByte|Krótkie|Krótkie|Liczba całkowita|Liczba całkowita|Długie|Długie|Długie|  
+|`SByte`|SByte|SByte|Krótkie|Krótkie|Liczba całkowita|Liczba całkowita|Długie|Długie|Długie|  
+|`Byte`|Krótkie|Krótkie|Byte|Krótkie|UShort|Liczba całkowita|Uinteger —|Długie|ULong|  
+|`Short`|Krótkie|Krótkie|Krótkie|Krótkie|Liczba całkowita|Liczba całkowita|Długie|Długie|Długie|  
+|`UShort`|Liczba całkowita|Liczba całkowita|UShort|Liczba całkowita|UShort|Liczba całkowita|Uinteger —|Długie|ULong|  
+|`Integer`|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Liczba całkowita|Długie|Długie|Długie|  
+|`UInteger`|Długie|Długie|Uinteger —|Długie|Uinteger —|Długie|Uinteger —|Długie|ULong|  
+|`Long`|Długie|Długie|Długie|Długie|Długie|Długie|Długie|Długie|Długie|  
+|`ULong`|Długie|Długie|ULong|Długie|ULong|Długie|ULong|Długie|ULong|  
   
  Jeśli argument jest `Decimal`, `Single`, `Double`, lub `String`, Visual Basic próbuje przekonwertować go pod kątem `Long` przed operacji, a dane wynikowe typ jest taki sam, jakby miało operandu `Long`.  
   
@@ -175,14 +175,14 @@ Visual Basic Określa typ danych wyniku operacji na podstawie typów danych oper
   
  `Like` Operator jest zdefiniowany tylko w przypadku dopasowanie do wzorca `String` argumentów operacji. Visual Basic stara się przekonwertować każdy argument konieczny do `String` przed wykonaniem operacji. Typ danych wyniku jest zawsze `Boolean`.  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Operatory arytmetyczne w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Operatory porównania w języku Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Operatory](../../../visual-basic/language-reference/operators/index.md)  
- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Operatory arytmetyczne w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Operatory porównania w języku Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operatory](../../../visual-basic/language-reference/operators/index.md)
+- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)

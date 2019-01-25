@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6025b5914d4e96d10d83fc47a6baea7aa09605d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e75f46d73e068c6bdaac6ae01740ecf589c97d42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635913"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection — Metoda
-Pobiera część bazy kodu języka pośredniego odwołuje się określony uchwyt.  
+Pobiera części bazy kodu języka pośredniego przywoływane przez określone dojście.  
   
  Ta metoda jest przestarzała i nie powinna być używana.  
   
@@ -39,16 +39,16 @@ HRESULT GetIlSection (
   
 #### <a name="parameters"></a>Parametry  
  `section`  
- [in] Dojście do sekcji, aby pobrać.  
+ [in] Dojście do sekcji, aby uzyskać.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0d105679a749b8c87099af871bdb42874d440b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee8e0dec469c7389a69c70567d7b2cb98d3404e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603914"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType — Metoda
-Tworzy metadane podpis definicji typu, zwraca `mdTypeDef` token dla tego typu, a następnie określa zdefiniowanego typu elementu członkowskiego typu odwołuje się `tdEncloser` parametru.  
+Tworzy podpisu metadanych w definicji typu, zwraca `mdTypeDef` tokenu dla tego typu i określa, że typ zdefiniowany jest elementem członkowskim typu odwołuje się `tdEncloser` parametru.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,32 +42,32 @@ HRESULT DefineNestedType (
   
 #### <a name="parameters"></a>Parametry  
  `szTypeDef`  
- [in] Nazwa typu w standardzie Unicode.  
+ [in] Nazwa typu w formacie Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` atrybutów. To jest maską bitów z `CorTypeAttr` wartości.  
+ [in] `TypeDef` atrybutów. Jest to z `CorTypeAttr` wartości.  
   
  `tkExtends`  
- [in] Token klasy podstawowej. Jest to `mdTypeDef` lub `mdTypeRef` tokenu.  
+ [in] Token klasy bazowej. Jest to `mdTypeDef` lub `mdTypeRef` tokenu.  
   
  `rtkImplements`[]  
- [in] Tablica określające interfejsów, które implementuje w tej klasy lub interfejsu.  
+ [in] Tablica tokenów, które określają interfejsy, które implementuje tej klasy lub interfejsu.  
   
  `tdEncloser`  
- [in] Token typu otaczającego. Musi być ostatnim elementem tablicy `mdTokenNil`.  
+ [in] Token typ otaczający. Ostatni element tablicy muszą być `mdTokenNil`.  
   
  `ptd`  
  [out] `mdTypeDef` Token przypisany.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

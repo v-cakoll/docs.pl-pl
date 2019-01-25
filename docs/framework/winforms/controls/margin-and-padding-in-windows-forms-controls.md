@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: 7f0469a879bab7aac8e572cc666dfa9d168103ea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: be5d1ae308b9412f914f1cde91d1cc5834212df8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570554"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Margines i wypełnienie w formantach formularzy systemu Windows
 Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. <xref:System.Windows.Forms?displayProperty=nameWithType> Przestrzeń nazw zapewnia wiele funkcji układu, w tym celu. Dwie najważniejsze to <xref:System.Windows.Forms.Control.Margin%2A> i <xref:System.Windows.Forms.Control.Padding%2A> właściwości.  
@@ -25,12 +25,12 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
   
  ![Wypełnienie i margines Windows formantów formularzy](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- Brak obsługi w czasie projektowania dla tej funkcji w programie Visual Studio.  Zobacz też [wskazówki: tworzenie się Windows formantów formularzy przy użyciu dopełnienie, marginesy oraz właściwościami AutoSize](https://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\)).  
+ Brak obsługi w czasie projektowania dla tej funkcji w programie Visual Studio.  Zobacz też [instruktażu: Układania Windows Forms kontrolek z dopełnienie, marginesy oraz właściwościami AutoSize](https://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\)).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.Control.AutoSize%2A>  
- <xref:System.Windows.Forms.Control.Margin%2A>  
- <xref:System.Windows.Forms.Control.Padding%2A>  
- <xref:System.Windows.Forms.Control.LayoutEngine%2A>  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- <xref:System.Windows.Forms.FlowLayoutPanel>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.Control.AutoSize%2A>
+- <xref:System.Windows.Forms.Control.Margin%2A>
+- <xref:System.Windows.Forms.Control.Padding%2A>
+- <xref:System.Windows.Forms.Control.LayoutEngine%2A>
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- <xref:System.Windows.Forms.FlowLayoutPanel>

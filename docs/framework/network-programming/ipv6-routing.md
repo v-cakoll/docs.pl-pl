@@ -2,12 +2,12 @@
 title: IPv6 Routing
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: 19277f05d2feffd52f81cb5f0b70cb401579eb1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dabf17f85330b884918d5c6e1bc9832a7a0dbd02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694818"
 ---
 # <a name="ipv6-routing"></a>IPv6 Routing
 Elastyczny mechanizm routingu jest to korzyść protokołu IPv6. Ze względu na sposób, w których IPv4 zostały identyfikatory sieci i nie są przydzielone, duże tabele routingu muszą być przechowywane przez routery, które znajdują się na szkieletowymi Internet. Te routery musi znać wszystkie trasy, aby przekazywać pakiety, które są potencjalnie skierowany do dowolnego węzła w Internecie. Zdolność do agregacji adresów IPv6 umożliwia elastyczne adresowania i znacząco zmniejsza rozmiar tabele routingu. W tej nowej architektury adresowania routery pośrednie musi śledzić tylko lokalnej części sieci w celu przekazywania wiadomości odpowiednio.  
@@ -33,6 +33,6 @@ Elastyczny mechanizm routingu jest to korzyść protokołu IPv6. Ze względu na 
   
 -   Przekierowanie. Wysyłane przez routery, aby wskazać, lepsze adres następnego przeskoku do określonego miejsca docelowego dla wysyłania węzła.  
   
-## <a name="see-also"></a>Zobacz też  
- [Protokół IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Gniazda](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Zobacz także
+- [Protokół IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Gniazda](../../../docs/framework/network-programming/sockets.md)

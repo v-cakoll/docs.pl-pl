@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b5281b90605f14b75b4537333378903d5f67817
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 85ca55e976a010a4875d260b3da30f5bc3cf2ffb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740154"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Zdarzenia ETW w bibliotece równoległych zadań i PLINQ
 
@@ -29,7 +29,7 @@ W strukturze EVENT_HEADER identyfikator GUID identyfikator zdarzenia generowane 
 
 EVENT_DESCRIPTOR. Zadanie = 1
 
-EVENT_DESCRIPTOR. Identyfikator = 1
+EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Dane użytkownika
 
@@ -38,7 +38,7 @@ EVENT_DESCRIPTOR. Identyfikator = 1
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Identyfikator harmonogramu zadań systemu, który uruchomił pętli.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Identyfikator zadanie, które uruchomiło pętli.|
 |ForkJoinContextID|<xref:System.Int32?displayProperty=nameWithType>|Unikatowy identyfikator używany do wskazania zagnieżdżanie i pary zdarzeń z semantyką rozwidlenia/scalania.|
-|Typ operacji|<xref:System.Int32?displayProperty=nameWithType>|Wskazuje typ Pętla:<br /><br /> 1 = równoległego<br /><br /> 2 = ParallelFor<br /><br /> 3 = ParallelForEach|
+|OperationType|<xref:System.Int32?displayProperty=nameWithType>|Wskazuje typ Pętla:<br /><br /> 1 = równoległego<br /><br /> 2 = ParallelFor<br /><br /> 3 = ParallelForEach|
 |InclusiveFrom|<xref:System.Int64?displayProperty=nameWithType>|Wartością początkową licznika pętli|
 |ExclusiveTo|<xref:System.Int64?displayProperty=nameWithType>|Końcowa wartość licznika pętli|
 
@@ -57,9 +57,9 @@ EVENT_DESCRIPTOR. Identyfikator = 1
 |totalIterations|<xref:System.Int64?displayProperty=nameWithType>|Całkowita liczba iteracji|
 
 ### <a name="parallel-invoke-begin"></a>Wywoływanie równolegle Begin
- EVENT_DESCRIPTOR. Zadanie = 3
+ EVENT_DESCRIPTOR.Task = 3
 
- EVENT_DESCRIPTOR. Identyfikator = 3
+ EVENT_DESCRIPTOR.Id = 3
 
 #### <a name="user-data"></a>Dane użytkownika
 
@@ -69,13 +69,13 @@ EVENT_DESCRIPTOR. Identyfikator = 1
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Identyfikator zadanie, które uruchomiło pętli.|
 |ForkJoinContextID|<xref:System.Int32?displayProperty=nameWithType>|Unikatowy identyfikator używany do wskazania zagnieżdżanie i pary zdarzeń z semantyką rozwidlenia/scalania.|
 |totalIterations|<xref:System.Int64?displayProperty=nameWithType>|Całkowita liczba iteracji|
-|Typ operacji|<xref:System.Int32?displayProperty=nameWithType>|Wskazuje typ Pętla:<br /><br /> 1 = równoległego<br /><br /> 2 = ParallelFor<br /><br /> 3 = ParallelForEach|
+|operationType|<xref:System.Int32?displayProperty=nameWithType>|Wskazuje typ Pętla:<br /><br /> 1 = równoległego<br /><br /> 2 = ParallelFor<br /><br /> 3 = ParallelForEach|
 |ActionCount|<xref:System.Int32?displayProperty=nameWithType>|Liczba akcji, które będą wykonywane w równoległych invoke.|
 
 ### <a name="parallel-invoke-end"></a>Równoległe wywołania zakończenia
- EVENT_DESCRIPTOR. Zadanie = 4
+ EVENT_DESCRIPTOR.Task = 4
 
- EVENT_DESCRIPTOR. Identyfikator = 4
+ EVENT_DESCRIPTOR.Id = 4
 
 #### <a name="user-data"></a>Dane użytkownika
 
@@ -95,7 +95,7 @@ EVENT_DESCRIPTOR. Identyfikator = 1
 ### <a name="parallel-query-begin"></a>Początek zapytania równoległe
  EVENT_DESCRIPTOR. Zadanie = 1
 
- EVENT_DESCRIPTOR. Identyfikator = 1
+ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Dane użytkownika
 
@@ -118,7 +118,7 @@ EVENT_DESCRIPTOR. Identyfikator = 1
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Identyfikator zadanie, które uruchomiło pętli.|
 |QueryID|<xref:System.Int32?displayProperty=nameWithType>|Identyfikator unikatowy kwerendy.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zdarzenia ETW w programie .NET Framework](../../../docs/framework/performance/etw-events.md)
 - [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

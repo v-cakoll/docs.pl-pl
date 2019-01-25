@@ -1,18 +1,18 @@
 ---
-title: 'Porady: udostępnianie kanału informacyjnego w formatach Atom i RSS'
+title: 'Instrukcje: Udostępnianie kanału informacyjnego w formatach Atom i RSS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 6b26dabb9ed5c2c7bb2410dc1e844add6a69bdf3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 43ad8ae0b12b07e2d0abe3e208f6d1ccdb2ec77d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681173"
 ---
-# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Porady: udostępnianie kanału informacyjnego w formatach Atom i RSS
+# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Instrukcje: Udostępnianie kanału informacyjnego w formatach Atom i RSS
 Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udostępnia kanał. W tym temacie omówiono sposób tworzenia usługi syndykacji, który udostępnia kanał, za pomocą RSS 2.0 i Atom 1.0. Ta usługa udostępnia jeden punkt końcowy, który może zwracać albo formacie syndykacji. Dla uproszczenia usługi używane w tym przykładzie jest samodzielnie hostowana. W środowisku produkcyjnym usługi tego typu może być hostowana w ramach usług IIS i WAS. Aby uzyskać więcej informacji o różnych technologii WCF opcji hostingu, zobacz [hostingu](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Aby utworzyć usługę syndykacji podstawowe  
@@ -95,6 +95,6 @@ Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udost�
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Podczas kompilowania w poprzednim kodzie, odwołać System.ServiceModel.dll i System.ServiceModel.Web.dll.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>

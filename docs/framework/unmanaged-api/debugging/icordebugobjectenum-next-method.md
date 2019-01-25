@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59b37c30df6467439d04e367e13b0fc4ffff0ec6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a5f21855ce83f5c1fb68637e3eeb6d3c831bce2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745167"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next — Metoda
-Pobiera względną wirtualnych adresów (RVAs) określoną liczbę obiektów z wyliczenia, zaczynając od bieżącego położenia.  
+Pobiera względnych adresów wirtualnych (RVA) określoną liczbę obiektów z wyliczenia, zaczynając od bieżącej pozycji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,13 +43,13 @@ HRESULT Next (
  [in] Liczba obiektów, które mają zostać pobrane.  
   
  `objects`  
- [out] Tablicy wskaźników, z których każdy wskazuje obiekt CORDB_ADDRESS.  
+ [out] Tablica wskaźników, z których każdy wskazuje obiekt CORDB_ADDRESS.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby faktycznie zwracanych obiektów. Ta wartość może mieć wartości zerowej Jeśli `celt` jeden.  
+ [out] Wskaźnik do liczby obiektów rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -57,5 +57,5 @@ HRESULT Next (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

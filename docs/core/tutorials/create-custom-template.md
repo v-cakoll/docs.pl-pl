@@ -4,12 +4,12 @@ description: Dowiedz się, jak utworzyć niestandardowy szablon dla nowego polec
 author: guardrex
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 63f8c8a4d029285a02255637c8a79358e5ef0095
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 72cafab774187cf8c59b2a00d8adcc5028974c88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714061"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Utwórz nowy szablon niestandardowy dla platformy dotnet
 
@@ -70,11 +70,11 @@ Szablon jest ukończona. W tym momencie masz dwie opcje dystrybucji szablonu. Ab
 
    | Element            | Typ   | Opis |
    | ------------------ | ------ | ----------- |
-   | **\<Autorzy >**     | string | Rozdzielana przecinkami lista autorów pakietów, pasujące nazwy profilu w witrynie nuget.org. Autorzy są wyświetlane w galerii pakietów NuGet w witrynie nuget.org i są odwoływania się do pakietów przez ten sam autorów. |
-   | **\<Opis >** | string | Długi opis pakietu do wyświetlania w interfejsie użytkownika. |
+   | **\<authors>**     | string | Rozdzielana przecinkami lista autorów pakietów, pasujące nazwy profilu w witrynie nuget.org. Autorzy są wyświetlane w galerii pakietów NuGet w witrynie nuget.org i są odwoływania się do pakietów przez ten sam autorów. |
+   | **\<description>** | string | Długi opis pakietu do wyświetlania w interfejsie użytkownika. |
    | **\<id>**          | string | Identyfikator pakietu bez uwzględniania wielkości liter, który musi być unikatowa w witrynie nuget.org lub cokolwiek innego pakietu będą znajdować się w galerii. Identyfikatory nie może zawierać spacji ani znaków, które nie są prawidłowe dla danego adresu URL i zazwyczaj korzystają z reguły w przestrzeni nazw .NET. Zobacz [wybierając identyfikator unikatowy pakiet i ustawiania numeru wersji](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) wskazówki. |
    | **\<packageType>** | string | Umieść ten element wewnątrz  **\<packageTypes >** element między  **\<metadanych >** elementów. Ustaw `name` atrybutu  **\<packageType >** elementu `Template`. |
-   | **\<Wersja >**     | string | Wersja pakietu, następujące Wersja_główna.WERSJA_POMOCNICZA.poprawka. Numery wersji mogą zawierać sufiks wersji wstępnej, zgodnie z opisem w [wersje wstępne](/nuget/create-packages/prerelease-packages#semantic-versioning). |
+   | **\<version>**     | string | Wersja pakietu, następujące Wersja_główna.WERSJA_POMOCNICZA.poprawka. Numery wersji mogą zawierać sufiks wersji wstępnej, zgodnie z opisem w [wersje wstępne](/nuget/create-packages/prerelease-packages#semantic-versioning). |
 
    Zobacz [odwołania .nuspec](/nuget/schema/nuspec) dla pełnego *nuspec* pliku schematu.
 
@@ -209,7 +209,7 @@ dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 
 ## <a name="see-also"></a>Zobacz także
 
-* [repozytorium GitHub DotNet/szablonów witryny typu Wiki](https://github.com/dotnet/templating/wiki)  
-* [repozytorium GitHub DotNet/dotnet-— przykłady szablonów](https://github.com/dotnet/dotnet-template-samples)  
-* [Jak utworzyć nowe szablony dla platformy dotnet](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
-* [*Template.JSON* schemat w Store schematu JSON](http://json.schemastore.org/template)  
+- [repozytorium GitHub DotNet/szablonów witryny typu Wiki](https://github.com/dotnet/templating/wiki)
+- [repozytorium GitHub DotNet/dotnet-— przykłady szablonów](https://github.com/dotnet/dotnet-template-samples)
+- [Jak utworzyć nowe szablony dla platformy dotnet](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+- [*Template.JSON* schemat w Store schematu JSON](http://json.schemastore.org/template)

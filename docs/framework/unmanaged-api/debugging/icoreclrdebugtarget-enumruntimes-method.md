@@ -19,15 +19,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14b5f2227991e38ba66889d7e966ab24e714294c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac0cee9affff03a95cd7635a8b1afd42e6edc6ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684332"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes — Metoda
-Wylicza wspólnej obsługi language (CLRs) określonego procesu uruchomionego na komputerze zdalnym.  
+Wylicza środowiska uruchomieniowego języka wspólnego (CLRs) w określonym procesie, który jest uruchomiona na komputerze zdalnym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,38 +41,38 @@ HRESULT EnumRuntimes (
   
 #### <a name="parameters"></a>Parametry  
  `dwInternalProcessID`  
- [in] Wewnętrzny proces identyfikator procesu, który ma wyliczyć środowisk uruchomieniowych. Są to `m_dwInternalID` z odpowiadającego [coreclrdebugprocinfo —](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).  
+ [in] Wewnętrzny proces identyfikator procesu, dla którego chcesz wyliczyć środowisk uruchomieniowych. Będzie to `m_dwInternalID` od odpowiadających im [coreclrdebugprocinfo —](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).  
   
  `pcRuntimes`  
- [out] Liczba zwracanych w środowiskach uruchomieniowych `ppRuntimes`. Ta wartość może być 0 (zero).  
+ [out] Liczba środowisk uruchomieniowych zwracane w `ppRuntimes`. Ta wartość może być 0 (zero).  
   
  `ppRuntimes`  
- [out] Tablica [coreclrdebugruntimeinfo —](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) struktur reprezentujących środowisk uruchomieniowych załadowany w procesie docelowym zdalnego.  
+ [out] Tablica [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) struktur, które reprezentują środowiska uruchomieniowego załadowany w procesie docelowym zdalnego.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
  Powodzenie.  
   
  S_FALSE  
- `dwInternalProcessID` nie odpowiada żaden proces, który jest uruchomiony na komputerze, prawdopodobnie, ponieważ proces został zakończony. `pcRuntimes` i `ppRuntimes` będzie mieć wartość null.  
+ `dwInternalProcessID` nie pasuje żaden proces, który jest uruchomiony na komputerze, prawdopodobnie ponieważ proces został zakończony. `pcRuntimes` i `ppRuntimes` będzie miał wartość null.  
   
  E_OUTOFMEMORY  
  Nie można przydzielić wystarczającej ilości pamięci do `ppRuntimes`.  
   
- E_FAIL (lub inne kody powrotu E_)  
+ E_FAIL (lub inne kody powrotne e_)  
  Inne błędy.  
   
 ## <a name="remarks"></a>Uwagi  
  Aby zwolnić pamięć, która została przydzielona przez tę metodę, należy wywołać [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Biblioteka:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
  **Wersje programu .NET framework:** 3.5 z dodatkiem SP1  
   
-## <a name="see-also"></a>Zobacz też  
- [ICoreClrDebugTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICoreClrDebugTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a093b18f72cc99c53951b3dc588ce0cff3c7fefd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 324d8ce19f202cb6e9d0e4378ca61cf2a956d70e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648774"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer — Metoda
-Pobiera odpowiedni rozmiar buforu dla metody pod określonym adresem wirtualnego względną.  
+Pobiera odpowiedni rozmiar buforu dla metody o określonym względny adres wirtualny.  
   
  Ta metoda jest przestarzała i nie powinna być używana.  
   
@@ -40,19 +40,19 @@ HRESULT GetMethodBuffer (
   
 #### <a name="parameters"></a>Parametry  
  `RVA`  
- [in] Wirtualny adres względny metody, dla którego ma zostać zwrócona w buforze.  
+ [in] Wirtualny adres względny metody, dla której ma zostać zwrócone do buforu.  
   
  `lpBuffer`  
- [out] Wskaźnik do buforu zwrócony.  
+ [out] Wskaźnik do buforu zwrócone.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

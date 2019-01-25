@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 857462c380ce51994e13dab5cfe3c28bba0f38be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93e96e7804a3b5ecc64e9e50ce700435be83b77a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643367"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate — Metoda
-Generuje i pobiera sekcji kodu przy użyciu określonej nazwy i wartości flag.  
+Generuje i pobiera sekcję kodu przy użyciu określonej nazwy i wartości flag.  
   
  Ta metoda jest przestarzała i nie powinna być używana.  
   
@@ -41,7 +41,7 @@ HRESULT GetSectionCreate (
   
 #### <a name="parameters"></a>Parametry  
  `name`  
- [in] Wskaźnik do ciąg określający nazwę sekcji do utworzenia.  
+ [in] Wskaźnik na ciąg określający nazwę sekcji, który ma zostać utworzony.  
   
  `flags`  
  [in] Flagi, które określają opcje.  
@@ -50,16 +50,16 @@ HRESULT GetSectionCreate (
  [out] Wskaźnik do nowo utworzonego kodu sekcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołanie `GetSectionCreate` tylko wtedy, gdy sekcja specjalne wymagania, które nie są obsługiwane za pomocą innych metod.  
+ Wywołaj `GetSectionCreate` tylko wtedy, gdy masz sekcją wymagań, które nie są obsługiwane przy użyciu innych metod.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

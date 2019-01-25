@@ -2,17 +2,17 @@
 title: Wyprowadzanie relacyjnej struktury DataSet ze schematu XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 76fd0126f32eb2b22a12ee0b67e1f81794ff9445
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8d11fdbcb973eb3e4b7487eb6aacb28374c4c654
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717945"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Wyprowadzanie relacyjnej struktury DataSet ze schematu XML (XSD)
 Ta sekcja zawiera omówienie sposobów schemat relacyjnej `DataSet` została stworzona od do dokumentu schematu języka (XSD) definicji schematu XML. Ogólnie rzecz biorąc, dla każdego `complexType` element podrzędny elementu schematu, tabeli jest generowany w `DataSet`. Struktura tabeli jest określana zgodnie z definicją typu złożonego. Tabele zostały utworzone w `DataSet` najwyższego poziomu elementów w schemacie. Jednak tabeli jest tworzone tylko dla najwyższego poziomu `complexType` elementu po `complexType` element jest zagnieżdżony w innym `complexType` zamierzone, Zapisz zagnieżdżonego elementu, w którym `complexType` element jest mapowany na `DataTable` w ramach `DataSet`.  
   
- Aby uzyskać więcej informacji na temat XSD, zobacz World Wide Web Consortium (W3C) [XML schematu część 0: zalecenie Elementarz](https://www.w3.org/TR/xmlschema-0/), [XML schematu część 1: zalecenie struktur](https://www.w3.org/TR/xmlschema-1/)i [XML Schematu część 2: Typy danych zalecenie](https://www.w3.org/TR/xmlschema-2/).  
+ Aby uzyskać więcej informacji na temat XSD, zobacz World Wide Web Consortium (W3C) [XML schematu część 0: Elementarz zalecenie](https://www.w3.org/TR/xmlschema-0/), [XML schematu część 1: Zalecenie struktur](https://www.w3.org/TR/xmlschema-1/)i [XML schematu część 2: Typy danych zalecenie](https://www.w3.org/TR/xmlschema-2/).  
   
  W poniższym przykładzie pokazano schematu XML gdzie `customers` jest elementem podrzędnym `MyDataSet` elementu, który jest **DataSet** elementu.  
   
@@ -96,5 +96,5 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Opisuje sposób ładowania i zachować relacyjnej struktury i danych w `DataSet` jako danych XML.  
   
-## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

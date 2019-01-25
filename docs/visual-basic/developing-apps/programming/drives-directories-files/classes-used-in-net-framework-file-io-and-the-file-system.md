@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 4c13b482ddbb3c1c109ca8dfe36ed76a2025d61a
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9e84ac90054e4ac3d32bb436fc0756248e84fcd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39333042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705326"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)
 W poniższej tabeli wymieniono klasy często używane dla .NET Framework w pliku we/wy, podzielone na kategorie klas we/wy pliku klasy służące do tworzenia strumieni i klas używanych do odczytu i zapisu do strumieni.  
@@ -56,8 +56,8 @@ W poniższej tabeli wymieniono klasy często używane dla .NET Framework w pliku
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Odczytuje znaki z `String`. Dane wyjściowe mogą być strumień w kodowanie lub `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Zapisuje znaki `String`. Dane wyjściowe mogą być strumień w kodowanie lub `String`.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie strumieni](../../../../standard/io/composing-streams.md)  
- [We/Wy plików i strumieni](../../../../standard/io/index.md)  
- [Asynchroniczne operacje We/Wy pliku](../../../../standard/io/asynchronous-file-i-o.md)  
- [Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie strumieni](../../../../standard/io/composing-streams.md)
+- [We/Wy plików i strumieni](../../../../standard/io/index.md)
+- [Asynchroniczne operacje We/Wy pliku](../../../../standard/io/asynchronous-file-i-o.md)
+- [Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

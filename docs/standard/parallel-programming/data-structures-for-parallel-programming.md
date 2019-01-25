@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517620"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Struktury danych dla Programowania równoległego
 .NET Framework w wersji 4 wprowadza kilka nowych typów, które są przydatne do programowania równoległego, w tym zestaw klas kolekcji współbieżnych, podstawowych uproszczone synchronizacji i typów d inicjowania z opóźnieniem. Można użyć tych typów, zawierające kod aplikacji wielowątkowych, w tym w bibliotece równoległych zadań i PLINQ.  
@@ -48,9 +48,9 @@ ms.locfileid: "48836477"
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Instrukcje: używanie struktury SpinLock do synchronizacji niskiego poziomu](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+-   [Instrukcje: Używanie struktury SpinLock do synchronizacji niskiego poziomu](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [Porady: synchronizacja jednoczesnych operacji za pomocą bariery](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+-   [Instrukcje: Synchronizacja jednoczesnych operacji za pomocą bariery](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Inicjalizacja z opóźnieniem klas  
  Przy użyciu inicjowania z opóźnieniem pamięci dla obiektu nie jest przydzielony, dopóki nie jest to konieczne. Inicjalizacja z opóźnieniem może zwiększyć wydajność przez rozłożenie przydziały obiektów równomiernie na okres istnienia programu. Można włączyć inicjowania z opóźnieniem dla dowolnego typu niestandardowego przez opakowywanie typ <xref:System.Lazy%601>.  
@@ -66,10 +66,10 @@ ms.locfileid: "48836477"
  Aby uzyskać więcej informacji, zobacz [inicjowania z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="aggregate-exceptions"></a>Wyjątki agregacji  
- <xref:System.AggregateException?displayProperty=nameWithType> Typ może być używany do przechwytywania wielu wyjątków, które są zgłaszane jednocześnie w oddzielnych wątkach i przywrócić je do sąsiadującego wątku pojedynczego wyjątek. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> typów i PLINQ używać <xref:System.AggregateException> często w tym celu. Aby uzyskać więcej informacji, zobacz [wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) i [porady: obsługa wyjątków w zapytaniu PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+ <xref:System.AggregateException?displayProperty=nameWithType> Typ może być używany do przechwytywania wielu wyjątków, które są zgłaszane jednocześnie w oddzielnych wątkach i przywrócić je do sąsiadującego wątku pojedynczego wyjątek. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> typów i PLINQ używać <xref:System.AggregateException> często w tym celu. Aby uzyskać więcej informacji, zobacz [wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) i [jak: Obsługa wyjątków w zapytaniu PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
-- <xref:System.Threading?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- <xref:System.Threading?displayProperty=nameWithType>
 - [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)

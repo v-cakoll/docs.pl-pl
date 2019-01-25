@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54d239c3091b29424b26fbab4cb4eb9152ff9ad9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 416c7787e7e68ea0c6864091e92d92fed1a60bf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650122"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets — Wyliczenie
-Określa elementy aplikacji, na których jest on prawidłowy do zastosowania atrybutu.  
+Określa elementy aplikacji, na których jest on prawidłowy, aby zastosować atrybut.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -73,25 +73,25 @@ typedef enum CorAttributeTargets
 |`catMethod`|Atrybut można stosować do metody.|  
 |`catProperty`|Atrybut można stosować do właściwości.|  
 |`catField`|Atrybut można stosować do pola.|  
-|`catEvent`|Atrybut można zastosować do zdarzenia.|  
-|`catInterface`|Atrybut można stosować do interfejsu.|  
+|`catEvent`|Atrybut można stosować do zdarzenia.|  
+|`catInterface`|Do interfejsu, można zastosować atrybutu.|  
 |`catParameter`|Atrybut można stosować do parametru.|  
 |`catDelegate`|Atrybut można stosować do delegata.|  
 |`catGenericParameter`|Atrybut można stosować do parametru ogólnego.|  
 |`catAll`|Atrybut można stosować do dowolnych aplikacji.|  
-|`catClassMembers`|Atrybut można stosować do elementu członkowskiego klasy.|  
+|`catClassMembers`|Atrybut można stosować do składowej klasy.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CorAttributeTargets` Wartości wyliczenia można łączyć z operacji lub pobrać preferowanych kombinacji.  
+ `CorAttributeTargets` Wartości wyliczenia można łączyć za pomocą bitowej operacji lub można pobrać preferowanych kombinacji.  
   
  `CorAttributeTargets` Równoleżnikami zarządzanej <xref:System.AttributeTargets?displayProperty=nameWithType> wyliczenia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

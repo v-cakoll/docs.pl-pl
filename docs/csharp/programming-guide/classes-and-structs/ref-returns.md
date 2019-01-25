@@ -4,12 +4,12 @@ description: Dowiedz się, jak zdefiniować i zastosować zwracane ref i wartoś
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: 6399079e17a53ac5bf283eaa5c799964360350f4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146069"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514422"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Wartości zwracane ref i zmienne lokalne ref
 
@@ -124,5 +124,5 @@ Ta druga wersja jest bardziej wydajne, za pomocą sekwencji dłużej w scenarius
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ref keyword](../../language-reference/keywords/ref.md)  
+- [ref keyword](../../language-reference/keywords/ref.md)
 - [Pisanie kodu efektywne bezpieczne](../../write-safe-efficient-code.md)

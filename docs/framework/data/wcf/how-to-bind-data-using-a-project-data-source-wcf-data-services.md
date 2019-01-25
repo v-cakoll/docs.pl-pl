@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: wiązanie danych przy użyciu źródła danych projektu (WCF Data Services)'
+title: 'Instrukcje: Wiązanie danych przy użyciu źródła danych projektu (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 62a7e3bf7caf60c6a532dbffeb8aac8b6c59deb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216532"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540757"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Instrukcje: wiązanie danych przy użyciu źródła danych projektu (WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Instrukcje: Wiązanie danych przy użyciu źródła danych projektu (WCF Data Services)
 
 Można utworzyć źródła danych, które są oparte na obiektach wygenerowane dane w aplikacji klienta usługi danych WCF. Po dodaniu odwołania do usługi danych przy użyciu **Dodaj odwołanie do usługi** okno dialogowe, tworzone jest źródło danych projektu wraz z klas danych wygenerowanego klienta. Jedno źródło danych jest tworzony dla każdego zestawu jednostek usługi ujawnia w danych. Możesz tworzyć formularze, które wyświetlają dane z usługi, przeciągając elementy w tych źródeł danych, z **źródeł danych** okna do projektanta. Te elementy stają się formantów, które są powiązane ze źródłem danych. W czasie wykonywania tego źródła danych jest powiązany do wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> klasy, która jest zajęta przez obiekty, które są zwracane przez zapytanie do usługi danych. Aby uzyskać więcej informacji, zobacz [powiązanie danych z kontrolkami](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
 
@@ -23,7 +23,7 @@ Można utworzyć źródła danych, które są oparte na obiektach wygenerowane d
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Korzystanie ze źródła danych projektu w oknie WPF
 
-1.  W programie Visual Studio w projekcie WPF, Dodaj odwołanie do usługi danych Northwind. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie odwołania usługi danych](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1.  W programie Visual Studio w projekcie WPF, Dodaj odwołanie do usługi danych Northwind. Aby uzyskać więcej informacji, zobacz [jak: Dodaj odwołanie do usługi danych](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
 2.  W **źródeł danych** okna, rozwiń węzeł `Customers` w węźle **NorthwindEntities** źródła danych projektu.
 
@@ -117,7 +117,7 @@ Można utworzyć źródła danych, które są oparte na obiektach wygenerowane d
 
 10. Ten kod tworzy wystąpienie <xref:System.Data.Services.Client.DataServiceCollection%601> dla `Customers` typ oparty na wykonanie <xref:System.Data.Services.Client.DataServiceQuery%601> zwracającego <xref:System.Collections.Generic.IEnumerable%601> z `Customers` z Northwind danych usługi i wiąże go do `customersBindingSource`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Instrukcje: Wiązanie danych do elementów systemu Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Instrukcje: Powiąż dane z programu Windows Presentation Foundation elementów](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

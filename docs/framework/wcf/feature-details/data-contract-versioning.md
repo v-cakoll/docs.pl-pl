@@ -9,15 +9,15 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 0e91bf597e344dd09e80bee5787e92383065b654
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646922"
 ---
 # <a name="data-contract-versioning"></a>Przechowywanie wersji kontraktów danych
-W miarę ewolucji aplikacje, również może być konieczne zmiany danych umów dotyczących użycia usług. W tym temacie opisano sposób wersji kontraktów danych. W tym temacie opisano mechanizmy obsługi wersji kontraktu danych. Pełny przegląd i wskazówki wersji przetestowanego rozwiązania ze szczegółami, zobacz [najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+W miarę ewolucji aplikacje, również może być konieczne zmiany danych umów dotyczących użycia usług. W tym temacie opisano sposób wersji kontraktów danych. W tym temacie opisano mechanizmy obsługi wersji kontraktu danych. Pełny przegląd i wskazówki wersji przetestowanego rozwiązania ze szczegółami, zobacz [najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
 ## <a name="breaking-vs-nonbreaking-changes"></a>Przerywanie programu vs. Zmiany nierozdzielający  
  Zmiany kontraktu danych można przerwanie lub nierozdzielające. Po zmianie w sposób nierozdzielający kontraktu danych aplikacji przy użyciu starszej wersji kontrakt może komunikować się z aplikacją przy użyciu nowszej wersji i aplikacji przy użyciu nowszej wersji kontrakt może komunikować się z aplikacją przy użyciu starszej wersji. Z drugiej strony istotną zmianę blokuje komunikację w jednym lub w obu kierunkach.  
@@ -115,17 +115,17 @@ W miarę ewolucji aplikacje, również może być konieczne zmiany danych umów 
  Większość zmian kolekcji nieprzerywającymi działania aplikacji, ponieważ większość typów kolekcji czy zamienne ze sobą w modelu kontraktu danych. Jednak dokonywanie kolekcję noncustomized dostosowany lub odwrotnie jest zmianą przerywającą. Ponadto zmiana ustawień dostosowywania kolekcji jest zmianą przerywającą; oznacza to zmiana jego nazwy kontraktu danych i przestrzeni nazw, powtarzające się nazwy elementu, nazwa elementu klucza i wartości nazwy elementu. Aby uzyskać więcej informacji na temat dostosowywania kolekcji zobacz [typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Oczywiście zmiana kontraktu danych treści kolekcji (np. zmiana na liście liczb całkowitych na listę ciągów) jest zmianą przerywającą.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.SerializationException>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- [Wywołania zwrotne serializacji z tolerancją dla wersji](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [Najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Kontrakty danych zgodne z nowszymi wersjami](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.SerializationException>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- [Wywołania zwrotne serializacji z tolerancją dla wersji](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [Najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Kontrakty danych zgodne z nowszymi wersjami](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

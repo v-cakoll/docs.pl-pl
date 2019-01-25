@@ -2,12 +2,12 @@
 title: Operacje asynchroniczne
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: c1c99437ada9dd9e71e0e999073e8d207569c2bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b1c6646f666ca1d931ab8caa8cd0a2e0c6a6722f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538664"
 ---
 # <a name="asynchronous-operations"></a>Operacje asynchroniczne
 Niektóre operacje bazy danych, takich jak wykonania polecenia może potrwać znaczną ilość czasu, aby zakończyć. W takim przypadku aplikacje jednowątkowe należy blokuje to innych operacji i czekać na zakończenie przed kontynuowaniem pracy ich własnych operacji polecenia. Możliwość przypisywania długotrwałej operacji do wątku w tle z kolei umożliwia wątku na pierwszym planie, pozostaną aktywne podczas operacji. W aplikacji Windows na przykład delegowanie długotrwałej operacji w wątku tła umożliwia wątek interfejsu użytkownika nadal odpowiadać podczas wykonywania operacji.  
@@ -29,7 +29,7 @@ Niektóre operacje bazy danych, takich jak wykonania polecenia może potrwać zn
  [Sondowanie aplikacji konsoli](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
  Przykład ilustrujące użycie sondowania czekać na zakończenie wykonywania polecenia asynchronicznego z aplikacji konsoli. Ta technika jest również prawidłowe w bibliotece klas lub innych aplikacji bez interfejsu użytkownika.  
   
-## <a name="see-also"></a>Zobacz też  
- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Wywoływanie metod synchronicznych w sposób asynchroniczny](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Wywoływanie metod synchronicznych w sposób asynchroniczny](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

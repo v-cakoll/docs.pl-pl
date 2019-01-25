@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53ed486a885514d02bf2be9c473e102c2c5f0e15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e6314a76433276561a8b4b87a852464dae69824
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656261"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs — Metoda
-Wylicza tokeny TypeDef reprezentujący wszystkie typy w bieżącym zakresie.  
+Wylicza tokenów TypeDef reprezentujący wszystkie typy w bieżącym zakresie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,10 +40,10 @@ HRESULT EnumTypeDefs (
   
 #### <a name="parameters"></a>Parametry  
  `phEnum`  
- [out] Wskaźnik do nowego modułu wyliczającego. Musi to być wartość NULL dla pierwsze wywołanie tej metody.  
+ [out] Wskaźnik do nowego modułu wyliczającego. Musi to być wartość NULL dla pierwszego wywołania tej metody.  
   
  `rTypeDefs`  
- [in] Tablica używany do przechowywania tokenów TypeDef.  
+ [in] Tablica do przechowywania tokenów — TypeDef.  
   
  `cMax`  
  [in] Maksymalny rozmiar `rTypeDefs` tablicy.  
@@ -55,21 +55,21 @@ HRESULT EnumTypeDefs (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` zwrócona pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim przypadku `pcTypeDefs` wynosi zero.|  
+|`S_OK`|`EnumTypeDefs` pomyślnie zwrócił.|  
+|`S_FALSE`|Nie ma żadnych tokeny do wyliczenia. W takim przypadku `pcTypeDefs` wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- TypeDef token reprezentuje typ, takich jak klasy lub interfejsu, jak również żadnego typu dodane za pośrednictwem mechanizm rozszerzalności.  
+ TypeDef token reprezentuje typ, takich jak klasy lub interfejsu, a także dowolnego typu dodane za pośrednictwem mechanizmu rozszerzalności.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e28aef4916d06218953236e3b29e19c68822bd6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 351fa8d1ec144a1861ef152ba6b02d9bbfb78df0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501673"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted — Metoda
-Powiadamia profilera, czy można zwolnić funkcja została uruchomiona środowiska uruchomieniowego.  
+Powiadamia program profilujący uruchomienia wyładować funkcji środowiska uruchomieniowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,10 +39,10 @@ HRESULT FunctionUnloadStarted(
  [in] Identyfikator funkcji, która jest zwalniany.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `functionId` parametru nie jest już prawidłowe po powrocie z tej metody do obiektu wywołującego.  
+ Wartość `functionId` parametr nie jest już prawidłowa po powrocie z tej metody do obiektu wywołującego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -50,5 +50,5 @@ HRESULT FunctionUnloadStarted(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

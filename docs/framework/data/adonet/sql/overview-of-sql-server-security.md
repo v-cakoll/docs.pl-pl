@@ -2,12 +2,12 @@
 title: Omówienie zabezpieczeń programu SQL Server
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 25f9f96a550438d242ee409da0d09b7df06de33c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8000e88de70706c7bb8ec39a05beea4605208b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528660"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591719"
 ---
 # <a name="overview-of-sql-server-security"></a>Omówienie zabezpieczeń programu SQL Server
 Strategii ochronę w głębi z nakładającymi się warstw zabezpieczeń, to najlepszy sposób na zagrożenia bezpieczeństwa licznika. SQL Server udostępnia architekturę zabezpieczeń, która umożliwia administratorów baz danych i deweloperom tworzenie aplikacji w bezpiecznej bazie danych i licznik zagrożenia. Każda wersja programu SQL Server zostały udoskonalone w poprzednich wersjach programu SQL Server wraz z wprowadzeniem nowych funkcji. Zabezpieczeń nie jest dostarczany w polu. Każda aplikacja jest unikatowa w jej wymagania dotyczące zabezpieczeń. Deweloperzy muszą poznać kombinację funkcji i funkcje są najbardziej odpowiednie do licznika znanymi zagrożeniami i przewidywać zagrożenia, które mogą się pojawić w przyszłości.  
@@ -39,8 +39,8 @@ Strategii ochronę w głębi z nakładającymi się warstw zabezpieczeń, to naj
  [Zabezpieczenia integracji CLR w programie SQL Server](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
  Zawiera łącza do zasobów zabezpieczenia integracji CLR.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Zabezpieczenia serwera SQL](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Zabezpieczenia serwera SQL](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

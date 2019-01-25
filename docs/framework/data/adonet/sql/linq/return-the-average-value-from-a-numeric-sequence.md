@@ -1,48 +1,48 @@
 ---
-title: Zwraca średnią wartość z sekwencją liczb
+title: Zwracanie średniej wartości z sekwencji numerycznej
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: 3e808b836183a23fa6bd80faeb0d3cfc5921f4cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38b1b3ba2bd2116621de820855bb4e4b2cd12915
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519172"
 ---
-# <a name="return-the-average-value-from-a-numeric-sequence"></a>Zwraca średnią wartość z sekwencją liczb
+# <a name="return-the-average-value-from-a-numeric-sequence"></a>Zwracanie średniej wartości z sekwencji numerycznej
 <xref:System.Linq.Enumerable.Average%2A> Operator oblicza średnią sekwencję wartości liczbowych.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Tłumaczenie `Average` liczby całkowitej wartości jest obliczana jako liczba całkowita, nie jako wartości podwójnej precyzji.  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Tłumaczenia `Average` liczby całkowitej wartości jest obliczany jako liczba całkowita, nie jako wartość o podwójnej precyzji.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład zwraca średnią `Freight` wartości w `Orders` tabeli.  
   
- Wyniki z przykładowej bazy danych Northwind byłoby `78.2442`.  
+ Wyniki z przykładowej bazy danych Northwind będą `78.2442`.  
   
  [!code-csharp[DLinqQueryExamples#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#1)]
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zwraca średnią cenie jednostkowej wszystkich `Products` w `Products` tabeli.  
+ Poniższy przykład zwraca średnią cenę jednostkową wszystkich `Products` w `Products` tabeli.  
   
- Wyniki z przykładowej bazy danych Northwind byłoby `28.8663`.  
+ Wyniki z przykładowej bazy danych Northwind będą `28.8663`.  
   
  [!code-csharp[DLinqQueryExamples#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#2)]
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `Average` operatora, aby znaleźć te `Products` których cenie jednostkowej jest wyższy niż cenie jednostkowej średni należy do kategorii. Przykład następnie wyświetla wyniki w grupach.  
+ W poniższym przykładzie użyto `Average` operatora, aby znaleźć te `Products` których cena jednostkowa jest wyższa niż średnia cena jednostkowa kategorii, należy ona do. Przykład następnie wyświetla wyniki w grupach.  
   
- Należy pamiętać, że w tym przykładzie wymaga użycia `var` — słowo kluczowe języka C#, ponieważ zwracany typ jest anonimowy.  
+ Należy pamiętać, że w tym przykładzie wymaga użycia `var` — słowo kluczowe w C#, ponieważ zwracany typ jest anonimowy.  
   
  [!code-csharp[DLinqQueryExamples#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#3)]
  [!code-vb[DLinqQueryExamples#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#3)]  
   
- Po uruchomieniu tego zapytania względem przykładowej bazy danych Northwind wyniki powinien wyglądać z następujących czynności:  
+ Po uruchomieniu tego zapytania względem przykładowej bazy danych Northwind, wyniki powinien przypominać poniższe:  
   
  `1`  
   
@@ -114,5 +114,5 @@ ms.locfileid: "33358859"
   
  `Gravad lax`  
   
-## <a name="see-also"></a>Zobacz też  
- [Zapytania zagregowane](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+## <a name="see-also"></a>Zobacz także
+- [Zapytania zagregowane](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)

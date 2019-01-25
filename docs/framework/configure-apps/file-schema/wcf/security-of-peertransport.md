@@ -2,12 +2,12 @@
 title: '&lt;security&gt; w &lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: 901a1d0b29fa6ea7d9e520b379dc7c7ff1d1e522
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8b0b8c5f230e8e93c07e13212201896010429af0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585383"
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;security&gt; w &lt;peerTransport&gt;
 Zawiera ustawienia zabezpieczenia skojarzone z równorzędnym kanałem, takie jak typ uwierzytelniania i zabezpieczenia używany do transportu wiadomości.  
@@ -16,8 +16,8 @@ Zawiera ustawienia zabezpieczenia skojarzone z równorzędnym kanałem, takie ja
 \<powiązania >  
 \<customBinding>  
 \<Powiązanie >  
-\<peerTransport >  
-\<Zabezpieczenia >  
+\<peerTransport>  
+\<security>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,22 +49,22 @@ Zawiera ustawienia zabezpieczenia skojarzone z równorzędnym kanałem, takie ja
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Definiuje transport elementu równorzędnego dla niestandardowego powiązania. Ten element ma `clientCredentialType` atrybut, który określa poświadczenia, które mają być używane podczas interakcji z usługą. Ten atrybut jest typu <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Ten element jest typu <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Definiuje transport elementu równorzędnego dla niestandardowego powiązania. Ten element ma `clientCredentialType` atrybut, który określa poświadczenia, które mają być używane podczas interakcji z usługą. Ten atrybut jest typu <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Ten element jest typu <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<peerTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|Definiuje transport elementu równorzędnego dla niestandardowego powiązania.|  
+|[\<peerTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|Definiuje transport elementu równorzędnego dla niestandardowego powiązania.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.PeerSecurityElement>  
- <xref:System.ServiceModel.PeerSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Zabezpieczenia transportu](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Transporty](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Wybieranie transportu](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.PeerSecurityElement>
+- <xref:System.ServiceModel.PeerSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Zabezpieczenia transportu](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Transporty](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Wybieranie transportu](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: 47eb90c9c89c7114c40b8a2caeb0e99f3ceccccb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e96cb9e8c67075a229c97f11ec7127a4afb75a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567233"
 ---
 # <a name="in-clause-visual-basic"></a>In — Klauzula (Visual Basic)
-Określa grupę, którą ma przejść zmienna pętli for `For Each` pętli lub Określa kolekcję zapytania w `From`, `Join`, lub `Group Join` klauzuli.  
+Określa grupę, która ma przejść zmienna pętli `For Each` pętli lub Określa kolekcję do wykonywania zapytań w `From`, `Join`, lub `Group Join` klauzuli.  
   
 ## <a name="remarks"></a>Uwagi  
- `In` — Słowo kluczowe może być używana w następujących sytuacjach:  
+ `In` — Słowo kluczowe może służyć w następujących okolicznościach:  
   
  [For Each...Next, instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
@@ -25,7 +25,7 @@ Określa grupę, którą ma przejść zmienna pętli for `For Each` pętli lub O
   
  [Join, klauzula](../../../visual-basic/language-reference/queries/join-clause.md)  
   
- [Group Join, klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Klauzula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

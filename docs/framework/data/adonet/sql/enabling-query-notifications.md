@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: c164490464d839dacefaf570c8956bf15caeb7de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: be9cae6f702b72306875246e874b99e7c79eb113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743039"
 ---
 # <a name="enabling-query-notifications"></a>Włączanie powiadomień o zapytaniach
 Aplikacje używające powiadomienia o zapytaniach mają wspólny zbiór wymagań. Źródła danych muszą być prawidłowo skonfigurowane do obsługi powiadomień kwerendy SQL, a użytkownik musi mieć odpowiednie uprawnienia po stronie klienta i po stronie serwera.  
@@ -28,7 +28,7 @@ Aplikacje używające powiadomienia o zapytaniach mają wspólny zbiór wymagań
 ## <a name="query-notifications-requirements"></a>Wymagania dotyczące powiadomień kwerendy  
  Powiadomienia o zapytaniach są obsługiwane tylko w przypadku instrukcji SELECT, spełniających określone wymagania. Poniższa tabela zawiera linki do dokumentacji programu Service Broker i powiadomienia o zapytaniach w dokumentacji SQL Server — książki Online.  
   
- **SQL Server — książki Online**  
+ **SQL Server Books Online**  
   
 -   [Tworzenie zapytania o powiadomienie](https://msdn.microsoft.com/library/ms181122.aspx)  
   
@@ -42,9 +42,9 @@ Aplikacje używające powiadomienia o zapytaniach mają wspólny zbiór wymagań
   
 -   [Międzynarodowe uwagi dotyczące programu Service Broker](https://msdn.microsoft.com/library/ms166028.aspx)  
   
--   [Zagadnienia dotyczące projektowania rozwiązań (programu Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
+-   [Solution Design Considerations (Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
   
--   [Centrum informacyjne do programu Service Broker dla deweloperów](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker Developer InfoCenter](https://msdn.microsoft.com/library/ms166100.aspx)  
   
 -   [Przewodnik dewelopera usługi (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
   
@@ -84,6 +84,6 @@ CREATE SERVICE ContactChangeNotifications
 ### <a name="using-sqlnotificationrequest"></a>Za pomocą SqlNotificationRequest  
  Z kolei <xref:System.Data.Sql.SqlNotificationRequest> wymaga implementacji całej infrastruktury nasłuchiwania samodzielnie. Ponadto muszą być zdefiniowane wszystkie pomocnicze obiektów brokera usług takich jak kolejki, usług i typy obsługiwane przez kolejkę komunikatów. To podejście ręcznego jest przydatne, jeśli aplikacja wymaga specjalnych powiadomienia lub zachowania powiadomień, czy aplikacja jest częścią większej aplikacji brokera usług.  
   
-## <a name="see-also"></a>Zobacz też  
- [Powiadomienia zapytań w programie SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Powiadomienia zapytań w programie SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

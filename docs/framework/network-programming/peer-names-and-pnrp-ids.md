@@ -2,12 +2,12 @@
 title: Nazwy elementów równorzędnych i identyfikatory PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: d842c66de7550c94f4e287449a238ff964093fb2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3f82d472e1f8913e2f518abbefa2bb6407d6f54c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690792"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nazwy elementów równorzędnych i identyfikatory PNRP
 Nazwa elementu równorzędnego reprezentuje punkt końcowy do komunikacji, który może być komputera, użytkownika, grupy, usługi lub jakikolwiek skojarzone z węzłem równorzędnym, która może zostać rozpoznana jako adres IPv6. Rozpoznawanie protokołu PNRP (Peer Name) zajmuje statystycznie unikatowy nazwa elementu równorzędnego dla tworzenia identyfikatora PNRP, który jest używany do identyfikowania elementów członkowskich w chmurze.  
@@ -20,7 +20,7 @@ Nazwa elementu równorzędnego reprezentuje punkt końcowy do komunikacji, któr
  Nazwy elementów równorzędnych zabezpieczonej rejestrować tylko przez właściciela i są chronione za pomocą kryptografii klucza publicznego. Nazwy elementu równorzędnego bezpiecznego, jest traktowane jako należące do jednostki elementów równorzędnych o odpowiedniego klucza prywatnego. Własność można udowodnić za pośrednictwem adresu certyfikowanych elementu równorzędnego (CPA), który jest podpisany przy użyciu klucza prywatnego. Złośliwy użytkownik nie forge własności nazwy elementu równorzędnego bez odpowiedniego klucza prywatnego.  
   
 ## <a name="pnrp-ids"></a>Identyfikatory PNRP  
- ![Identyfikator PNRP](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+ ![PNRP ID](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  Identyfikatory PNRP składają się z następujących czynności:  
   
@@ -30,6 +30,6 @@ Nazwa elementu równorzędnego reprezentuje punkt końcowy do komunikacji, któr
   
  Ta kombinacja Identyfikatora P2P i lokalizacji usługi umożliwia wielu identyfikatory PNRP do zarejestrowania się z jednego komputera.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Net.PeerToPeer.PeerName>  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.PeerToPeer.PeerName>
+- <xref:System.Net.PeerToPeer>

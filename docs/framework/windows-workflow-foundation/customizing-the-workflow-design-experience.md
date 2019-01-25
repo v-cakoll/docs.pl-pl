@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: ed4ccb45e4470eb03cec856e865d4b50220816e3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 87b49b025cfb27812933511b76c5a024cde4995a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680310"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>Dostosowywanie środowiska projektowania przepływu pracy
 
@@ -33,7 +33,7 @@ Scenariusze dotyczące projektowania niestandardowych działań i rehosting [!IN
 
 <xref:System.Activities.Presentation.ActivityDesigner>
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Rozszerzanie programu Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md)
 - [Projektant](../../../docs/framework/windows-workflow-foundation/samples/designer.md)

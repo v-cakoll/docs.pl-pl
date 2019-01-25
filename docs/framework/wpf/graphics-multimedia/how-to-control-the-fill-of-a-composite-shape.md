@@ -1,5 +1,5 @@
 ---
-title: Jak kontrolować wypełnienie kształtu złożonego
+title: 'Instrukcje: Kontroluj wypełnienie kształtu złożonego'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shapes [WPF], composite [WPF], controlling fill
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-ms.openlocfilehash: a9a17434f11f432f6446e09bd853ed0d2f23fbe8
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 18261b2f7a71822684707de7c8c6a37793a8a410
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33563046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574680"
 ---
-# <a name="how-to-control-the-fill-of-a-composite-shape"></a>Jak kontrolować wypełnienie kształtu złożonego
+# <a name="how-to-control-the-fill-of-a-composite-shape"></a>Instrukcje: Kontroluj wypełnienie kształtu złożonego
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Właściwość <xref:System.Windows.Media.GeometryGroup> lub <xref:System.Windows.Media.PathGeometry>, określa "reguła", który używa kształtu złożonego, aby określić, czy dany punkt znajduje się część geometrii. Istnieją dwa możliwe wartości <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> i <xref:System.Windows.Media.FillRule.Nonzero>. Poniższych sekcjach opisano sposób używania tych dwóch reguł.  
   
- **Wartości EvenOdd:** ta zasada ustala, czy punkt znajduje się w regionie wypełnienia rysunek promień od tego momentu do nieskończoności w dowolnym kierunku i zliczenie liczby segmentów ścieżki w ramach danego kształtu przecina ten promień. Jeśli ta liczba jest nieparzysta, punkt znajduje się wewnątrz; Jeśli nawet punkt znajduje się poza.  
+ **Wartości EvenOdd:** Ta zasada ustala, czy punkt znajduje się w regionie wypełnienia rysunek promień od tego momentu do nieskończoności w dowolnym kierunku i zliczenie liczby segmentów ścieżki w ramach danego kształtu przecina ten promień. Jeśli ta liczba jest nieparzysta, punkt znajduje się wewnątrz; Jeśli nawet punkt znajduje się poza.  
   
  Na przykład, poniższe XAML tworzy kształtu złożonego składa się z szeregu koncentrycznych pierścieniami (docelowy) z <xref:System.Windows.Media.GeometryGroup.FillRule%2A> równa <xref:System.Windows.Media.FillRule.EvenOdd>.  
   
@@ -25,19 +25,19 @@ ms.locfileid: "33563046"
   
  Poniższa ilustracja przedstawia kształtem utworzona w poprzednim przykładzie.  
   
- ![Zrzut ekranu: Właściwość FillRule EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenoddfirstone.png "FillRuleEvenOddFirstOne")  
+ ![Zrzut ekranu: Właściwość FillRule o wartości EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenoddfirstone.png "FillRuleEvenOddFirstOne")  
   
  Na powyższej ilustracji Zwróć uwagę, nie wypełniono Centrum a pierścień 3. Jest to spowodowane ray, z dowolnego punktu w jednej z tych dwóch sygnałów przechodzi przez parzystą liczbę segmentów. Zobacz na poniższej ilustracji:  
   
- ![Diagram: Właściwość FillRule o wartości EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")  
+ ![Diagram: Właściwość FillRule EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")  
   
- **NonZero:** ta zasada ustala, czy punkt znajduje się w regionie wypełnienia ścieżki rysunek promień od tego momentu do nieskończoności w dowolnym kierunku i sprawdzając miejsca, w których segment kształtu przecina ten promień. Począwszy od liczby o wartości zero, dodać każdy Segment przecina ten promień od lewej do prawej i odejmowanie jednej czasu ścieżką segmentu przecina ten promień od prawej do lewej. Po zliczanie przejazdów, jeśli wynik wynosi zero, a następnie punkt znajduje się poza ścieżki. W przeciwnym razie znajduje się wewnątrz.  
+ **Wartość różną od zera:** Ta zasada ustala, czy punkt znajduje się w regionie wypełnienia ścieżki rysunek promień od tego momentu do nieskończoności w dowolnym kierunku i sprawdzając miejsca, w których segment kształtu przecina ten promień. Począwszy od liczby o wartości zero, dodać każdy Segment przecina ten promień od lewej do prawej i odejmowanie jednej czasu ścieżką segmentu przecina ten promień od prawej do lewej. Po zliczanie przejazdów, jeśli wynik wynosi zero, a następnie punkt znajduje się poza ścieżki. W przeciwnym razie znajduje się wewnątrz.  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
   
  W przykładzie powyżej wartości <xref:System.Windows.Media.FillRule.Nonzero> dla <xref:System.Windows.Media.GeometryGroup.FillRule%2A> daje w wyniku poniższej ilustracji:  
   
- ![Zrzut ekranu: Wartości FillRule NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero1.png "FillRuleNonZero1")  
+ ![Zrzut ekranu: Wartość FillRule NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero1.png "FillRuleNonZero1")  
   
  Jak widać, wszystkich pierścieni są wypełnione. Jest to, ponieważ wszystkie segmenty są uruchomione w tym samym kierunku, a więc promień rysowane w dowolnym momencie zostanie między jedną lub więcej segmentów i sumę przejazdów nie będzie równa zero. Na przykład na poniższej ilustracji Czerwone strzałki oznaczają kierunek, w których segmentów są rysowane i biały strzałek reprezentuje dowolne ray uruchamianie z punktu w najbardziej pierścień. Począwszy od wartości zero dla każdego segmentu, który przecina ten promień, wartość jednej zostanie dodany, ponieważ segmentu przecina ten promień od lewej do prawej.  
   
@@ -55,12 +55,12 @@ ms.locfileid: "33563046"
   
  ![Diagram: Właściwość FillRule NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")  
   
- **Uwaga:** na potrzeby <xref:System.Windows.Media.FillRule>, wszystkie kształty są traktowane jako zamknięte. W przypadku przerwy w segmencie, narysuj urojone wiersza, aby je zamknąć. W powyższym przykładzie są małe przerwy pierścienie. Biorąc pod uwagę to, można oczekiwać, że ray, wykonywana za pośrednictwem przerwa, aby nadać różne wyniki, a następnie promień uruchomiona w innym kierunku. Poniżej znajduje się ilustrację rozszerzonej jednej z tych luk i "odcinka urojone" (segment, który jest rysowana w celu stosowania <xref:System.Windows.Media.FillRule>), zostanie zamknięty.  
+ **Uwaga:** Na potrzeby <xref:System.Windows.Media.FillRule>, wszystkie kształty są traktowane jako zamknięte. W przypadku przerwy w segmencie, narysuj urojone wiersza, aby je zamknąć. W powyższym przykładzie są małe przerwy pierścienie. Biorąc pod uwagę to, można oczekiwać, że ray, wykonywana za pośrednictwem przerwa, aby nadać różne wyniki, a następnie promień uruchomiona w innym kierunku. Poniżej znajduje się ilustrację rozszerzonej jednej z tych luk i "odcinka urojone" (segment, który jest rysowana w celu stosowania <xref:System.Windows.Media.FillRule>), zostanie zamknięty.  
   
  ![Diagram: Dla właściwości FillRule segmenty są zawsze zamknięte](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
   
 ## <a name="example"></a>Przykład  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie kształtu złożonego](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie kształtu złożonego](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)
+- [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6447593ba81e4512afaf2b5798fcec00b755e63c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9b210ea2126058d38c2586c5bdd0d94af2abab30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529820"
 ---
 # <a name="assembly-names"></a>Nazwy zestawów
 Nazwa zestawu jest przechowywany w metadanych i ma znaczny wpływ na zakres zestawu i użycia przez aplikację. Zestawu z silną nazwą ma w pełni kwalifikowana nazwa, która zawiera nazwę zestawu, kultury, klucz publiczny i numer wersji. Jest to często określane jako wyświetlaną nazwę i dla zestawów załadowanych można uzyskać za pomocą <xref:System.Reflection.Assembly.FullName%2A> właściwości.  
@@ -57,10 +57,10 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > [!NOTE]
 >  Jeśli zestaw o silnej nazwie zostanie umieszczone w globalnej pamięci podręcznej, nazwa pliku zestawu musi być zgodna z nazwy zestawu (nie w tym rozszerzenie nazwy pliku, na przykład .exe lub .dll). Na przykład jeśli nazwa pliku zestawu jest myAssembly.dll, nazwa zestawu musi być myAssembly. Zestawy prywatne wdrożone tylko w katalogu głównym aplikacji może mieć nazwy zestawu, który różni się od nazwy pliku.  
   
-## <a name="see-also"></a>Zobacz też  
-- [Instrukcje: określanie w pełni kwalifikowanej nazwy zestawu](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
-- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)  
-- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Określić w pełni kwalifikowanej nazwy zestawu](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
+- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)
+- [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

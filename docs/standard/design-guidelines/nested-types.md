@@ -11,12 +11,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: KrzysztofCwalina
-ms.openlocfilehash: 7e5fe66106ad34e88bbf435794a08a159c045b02
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559544"
 ---
 # <a name="nested-types"></a>Zagnieżdżone typy
 Typ zagnieżdżony jest typ zdefiniowany w zakresie innego typu, która jest wywoływana typ otaczający. Zagnieżdżony typ ma dostęp do wszystkich elementów członkowskich w jego typie otaczającym. Na przykład ma dostęp do prywatnych pól zdefiniowanych w typie otaczającym i chronione pól zdefiniowanych w wszystkich nadrzędnych typu otaczającego.  
@@ -47,5 +47,5 @@ Typ zagnieżdżony jest typ zdefiniowany w zakresie innego typu, która jest wyw
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  
+- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)
 - [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

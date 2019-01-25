@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3cf8b8735fc10b741d13b041eedc3e96607bef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6576dc19ed092ca12846a9780236e041daa64956
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727134"
 ---
 # <a name="corprfexclauseinfo-structure"></a>COR_PRF_EX_CLAUSE_INFO — Struktura
-Przechowuje informacje dotyczące wystąpienia klauzuli określonego wyjątku i jego skojarzony ramki.  
+Przechowuje informacje dotyczące wystąpienia klauzuli określony wyjątek i jego skojarzone ramki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,13 +41,13 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`clauseType`|Wartość [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) wyliczenie określający typ wyjątku klauzuli właśnie wprowadzony kod lub w lewo.|  
+|`clauseType`|Wartość [cor_prf_clause_type —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) wyliczenie, które określa typ wyjątku klauzulę po prostu wprowadzony kod lub po lewej stronie.|  
 |`programCounter`|Punkt wejścia natywnej obsługi klauzuli — na przykład zawartość rejestru X86 EIP.|  
-|`framePointer`|Wskaźnik do logicznego ramki obsługi klauzuli — na przykład zawartość rejestru X86 EBP.|  
-|`shadowStackPointer`|Wskaźnik stosu cienia. Ta wartość jest zawartość rejestru podstawowego dostawcy i dotyczy tylko IA64.|  
+|`framePointer`|Wskaźnik do ramki logiczne klauzuli obsługi — na przykład zawartość rejestru X86 EBP.|  
+|`shadowStackPointer`|Wskaźnik stosu w tle. Ta wartość jest zawartość rejestru BSP i ma zastosowanie tylko do IA64.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po otrzymaniu powiadomienia wyjątek [ICorProfilerInfo2::GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) może służyć do Pobierz natywnego adresu i ramki informacje dla klauzuli wyjątek (`catch` / `finally`/filtrować) ma być uruchomiona albo został uruchomiony.  
+ Po odebraniu powiadomienia wyjątku [icorprofilerinfo2::getnotifiedexceptionclauseinfo —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) pozwala uzyskać natywnych informacje dotyczące adresów i ramki dla klauzuli wyjątek (`catch` / `finally`/filtrować) który ma być uruchomiona lub została uruchomiona.  
   
  Wykonywanie klauzuli wyjątek polega na te wywołania zwrotne z środowisko uruchomieniowe języka wspólnego (CLR):  
   
@@ -63,7 +64,7 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 -   [ICorProfilerCallback::ExceptionSearchFilterLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl  
   
@@ -71,5 +72,5 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Profiling — struktury](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Zobacz także
+- [Profiling — struktury](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

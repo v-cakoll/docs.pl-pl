@@ -2,12 +2,12 @@
 title: Elementu równorzędnego publikowanie i rozwiązywanie nazw
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682985"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Elementu równorzędnego publikowanie i rozwiązywanie nazw
 
@@ -47,5 +47,5 @@ PNRP w wersji 2 węzłów nie opublikowano identyfikatory PNRP, jeśli tylko są
   
  W ramach <xref:System.Net.PeerToPeer> przestrzeni nazw, istnieje relacja wiele do wielu między <xref:System.Net.PeerToPeer.PeerName> rekordy, które zawierają punkty końcowe i chmury PNRP lub siatki, w których komunikują. Istnieją zduplikowane lub nieaktualne wpisy lub wiele węzłów o takiej samej nazwie elementu równorzędnego, PNRP węzłów można uzyskać bieżące informacje przy użyciu <xref:System.Net.PeerToPeer.PeerNameResolver> klasy. <xref:System.Net.PeerToPeer.PeerNameResolver> Metody uprościć z perspektywy rekordy nazwy jednego elementu równorzędnego do wielu elementów równorzędnych i tego samego elementu równorzędnego jeden do wielu chmur, użyj nazwy pojedynczego elementu równorzędnego. Jest to podobne do zapytanie wykonywane przy użyciu tabeli relacyjnej sprzężenia. Po pomyślnym zakończeniu zwraca obiekt rozpoznawania <xref:System.Net.PeerToPeer.PeerNameRecordCollection> dla nazwy określonego elementu równorzędnego.  Na przykład nazwa elementu równorzędnego może mieć miejsce we wszystkich rekordach nazwa elementu równorzędnego w kolekcji, uporządkowane według chmury. Są to wystąpień nazwa elementu równorzędnego, którego dane pomocnicze może zostać wyświetlony przez aplikację na podstawie PNRP.  
   
-## <a name="see-also"></a>Zobacz także  
+## <a name="see-also"></a>Zobacz także
 - <xref:System.Net.PeerToPeer>

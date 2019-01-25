@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b36f4007f286938169cc5d583908493916b9e6f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6199a0d0444f07c57e88d0369f192684755d301c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705274"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName — Metoda
-Zawiera nazwę pliku na dysku magazynu symboli.  
+Zawiera nazwę pliku na dysku w magazynie symboli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,16 +42,16 @@ HRESULT GetSymbolStoreFileName (
  [in] Rozmiar `szName` buforu.  
   
  `pcchName`  
- [out] Wskaźnik do zmiennej, która odbiera długość nazwy zwracane w `szName`, takie jak zakończenie wartości null.  
+ [out] Wskaźnik do zmiennej, która odbiera długość nazwy zwracane w `szName`, łącznie z zakończenia o wartości null.  
   
  `szName`  
  [out] Wskaźnik do zmiennej, która otrzymuje nazwę pliku w magazynie symboli.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

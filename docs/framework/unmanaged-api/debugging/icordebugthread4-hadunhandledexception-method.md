@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8215ddfd0f59f835d0b0dcd278b8cae9c12027d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7415e7b5ee03353e8e0e45cf46aa47c4266109af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704306"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException — Metoda
-Wskazuje, czy wątek nigdy miał nieobsługiwany wyjątek.  
+Wskazuje, czy wątek nigdy nie miała nieobsługiwany wyjątek.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,21 +37,21 @@ HRESULT GetBlockingObjects (
   
 #### <a name="parameters"></a>Parametry  
  `ppBlockingObjectEnum`  
- [out] Wskaźnik do adresu w kolejności wyliczenie [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struktury.  
+ [out] Wskaźnik do adresu uporządkowane wyliczenie [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struktury.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Wątek miał nieobsługiwany wyjątek od czasu jego utworzenia.|  
+|S_OK|Wątek miała nieobsługiwany wyjątek od jego utworzenia.|  
 |S_FALSE|Wątek nigdy nie miał nieobsługiwany wyjątek.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda wskazuje, czy wątek nigdy miał nieobsługiwany wyjątek. Do czasu wywołania zwrotnego nieobsługiwany wyjątek zostanie wywołany lub natywnego dołączania JIT jest inicjowane, ta metoda jest gwarantowana zwrócić wartość S_OK. Nie ma żadnych gwarancji, że [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) metoda zwróci nieobsługiwany wyjątek; jednak zostanie Jeśli proces nie jeszcze jest kontynuowane po pierwsze wywołanie zwrotne nieobsługiwany wyjątek lub na natywny dołączania JIT. Ponadto istnieje możliwość (chociaż jest mało prawdopodobne) ma więcej niż jeden wątek z nieobsługiwany wyjątek w czasie natywnego dołączania JIT zostanie wywołany. W takim przypadku nie ma nie można określić, który wyjątków wyzwalane dołączania JIT.  
+ Ta metoda wskazuje, czy wątek nigdy nie miała nieobsługiwany wyjątek. Do czasu jest wyzwalana wywołania zwrotnego nieobsługiwany wyjątek lub natywnych dołączania JIT jest inicjowane, ta metoda gwarancję zwracania S_OK. Nie ma żadnej gwarancji, [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) metoda zwróci nieobsługiwany wyjątek; jednak będzie Jeśli proces nie jeszcze jest kontynuowane po otrzymaniu wywołania zwrotnego nieobsługiwanego wyjątku lub w natywne dołączania JIT. Ponadto istnieje możliwość (chociaż to mało prawdopodobne) mieć więcej niż jeden wątek za pomocą nieobsługiwany wyjątek w czasie natywnych dołączania JIT jest wyzwalane. W takim przypadku nie ma możliwości do określenia, który wyjątek wyzwalane dołączania JIT.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -59,7 +59,7 @@ HRESULT GetBlockingObjects (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugThread4, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugThread4, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

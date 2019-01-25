@@ -1,19 +1,19 @@
 ---
-title: 'Porady: tworzenie formantu powiązanego oraz formatowanie wyświetlanych danych'
+title: 'Instrukcje: Tworzenie formantu powiązanego oraz formatowanie wyświetlanych danych'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8f4d3c4c738e31ab83d506dc7afb4e49b142765b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2e9dabe12e3f4eda590cec26a70c6becb0e2b7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689734"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Porady: tworzenie formantu powiązanego oraz formatowanie wyświetlanych danych
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Instrukcje: Tworzenie formantu powiązanego oraz formatowanie wyświetlanych danych
 Za pomocą powiązanie danych formularzy Windows, możesz sformatować dane wyświetlane w kontrolce powiązanych z danymi za pomocą **formatowanie i zaawansowane powiązanie** okno dialogowe.  
   
 > [!NOTE]
@@ -50,11 +50,11 @@ Za pomocą powiązanie danych formularzy Windows, możesz sformatować dane wyś
     |Waluta|Określ liczbę miejsc dziesiętnych, za pomocą **miejsc dziesiętnych** formantu góra dół.|  
     |Data i godzina|Wybierz sposób wyświetlania daty i godziny, wybierając jeden z elementów w **typu** pola wyboru.|  
     |naukowe|Określ liczbę miejsc dziesiętnych, za pomocą **miejsc dziesiętnych** formantu góra dół.|  
-    |Niestandardowe|Określ ciąg formatu niestandardowego za pomocą.<br /><br /> Aby uzyskać więcej informacji, zobacz [typy formatowania](../../../docs/standard/base-types/formatting-types.md). **Uwaga:** ciągów formatu niestandardowego nie ma gwarancji pomyślnie komunikacji dwustronnej między źródłem danych i powiązanej kontrolki. Zamiast tego obsługiwać <xref:System.Windows.Forms.Binding.Parse> lub <xref:System.Windows.Forms.Binding.Format> zdarzeń dla wiązania i zastosować niestandardowe formatowanie w kodzie obsługi zdarzeń.|  
+    |Niestandardowe|Określ ciąg formatu niestandardowego za pomocą.<br /><br /> Aby uzyskać więcej informacji, zobacz [typy formatowania](../../../docs/standard/base-types/formatting-types.md). **Uwaga:**  Tworzenie niestandardowych formatów ciągów nie ma gwarancji pomyślnie komunikacji dwustronnej między źródłem danych i powiązanej kontrolki. Zamiast tego obsługiwać <xref:System.Windows.Forms.Binding.Parse> lub <xref:System.Windows.Forms.Binding.Format> zdarzeń dla wiązania i zastosować niestandardowe formatowanie w kodzie obsługi zdarzeń.|  
   
 8.  Kliknij przycisk **OK** zamknąć **formatowanie i powiązywanie zaawansowane** okno dialogowe i wrócić do okna właściwości.  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: tworzenie prostej kontrolki powiązanej na formularzu systemu Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
- [Weryfikacja danych użytkownika w formularzach Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Tworzenie prostego formantu powiązanego na formularzu Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Weryfikacja danych użytkownika w formularzach Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)
+- [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

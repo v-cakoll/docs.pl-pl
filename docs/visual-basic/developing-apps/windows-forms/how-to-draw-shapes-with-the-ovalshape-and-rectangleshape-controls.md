@@ -1,5 +1,5 @@
 ---
-title: 'Porady: rysowanie kształtów za pomocą formantów OvalShape i RectangleShape (Visual Studio)'
+title: 'Instrukcje: Rysowanie kształtów za pomocą formantów OvalShape i Rectangleshape (Visual Studio)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - shapes, drawing
 - RectangleShape control [Visual Basic]
 ms.assetid: 0275b4c6-7a13-46c8-90f3-61db308c6b5d
-ms.openlocfilehash: f87865ba3aebe5739b87d6ae6bfeaa957af726d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe937236332591f6065e618c49ca5cf2c54b987c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701225"
 ---
-# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Porady: rysowanie kształtów za pomocą formantów OvalShape i RectangleShape (Visual Studio)
-Można użyć <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> formantu, aby narysować okręgi lub elipsy w formularzu lub kontenera, zarówno w czasie projektowania, jak i w czasie wykonywania. Można użyć <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> formantu do rysowania kwadratów, prostokąty lub prostokąty z zaokrąglonymi narożnikami w formularzu lub kontenera. Ten formant umożliwia również Rysowanie kształtów zarówno w czasie projektowania, jak i w czasie wykonywania.  
+# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Instrukcje: Rysowanie kształtów za pomocą formantów OvalShape i Rectangleshape (Visual Studio)
+Możesz użyć <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> kontroli Rysowanie okręgów lub elipsy w formularzu lub kontenera, zarówno w czasie projektowania, jak i w czasie wykonywania. Możesz użyć <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> formantu, aby narysować kwadratów, prostokąty lub prostokąty z zaokrąglonymi narożnikami na formularzu lub kontenera. Można również użyć tej kontrolki do rysowania kształtów, zarówno w czasie projektowania, jak i w czasie wykonywania.  
   
- Można dostosować wygląd kształtu, zmieniając szerokości, kolorów i styl obramowania. Tło kształt jest niewidoczny domyślnie; można dostosować do wyświetlenia pełnego koloru, wzorzec, wypełnienia gradientowego (Przechodzenie z jednego koloru do innego) lub obrazu tła.  
+ Można dostosować wygląd kształtu, zmieniając szerokości, kolor i styl obramowania. Tło kształt jest niewidoczna domyślnie; można dostosować tło, aby wyświetlić pełny kolor, wzorzec, wypełniacza gradientu (przejście z jednego koloru do drugiego) lub obrazu.  
   
 ### <a name="to-draw-a-simple-shape-at-design-time"></a>Aby narysować kształt proste w czasie projektowania  
   
-1.  Przeciągnij <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> lub <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> kontrolować z **Visual Basic PowerPacks** kartę (Aby zainstalować, zobacz [formantów Powerpack Visual Basic](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)) w **przybornika** formularz lub kontenera formantu.  
+1.  Przeciągnij <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> lub <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> z kontrolować **Visual Basic PowerPacks** kartę (Aby zainstalować, zobacz [formantów Powerpack Visual Basic](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)) w **przybornika** formularz lub kontener formantu.  
   
-2.  Przeciągnij zmiany rozmiaru i Przenieś dojścia do rozmiaru i pozycji kształtu.  
+2.  Przeciągnij zmiany rozmiaru i przenoszenie obsługuje rozmiar i położenie kształtu.  
   
-     Możesz również rozmiar i położenie kształtu, zmieniając `Size` i `Position` właściwości w **właściwości** okna.  
+     Można także rozmiar i położenie kształtu, zmieniając `Size` i `Position` właściwości w **właściwości** okna.  
   
-     Aby utworzyć prostokąt z zaokrąglonymi narożnikami, wybierz `CornerRadius` właściwości w **właściwości** okna i ustaw ją na wartość, która jest większa niż 0.  
+     Aby utworzyć prostokąta z zaokrąglonymi narożnikami, wybierz `CornerRadius` właściwość **właściwości** okna i ustaw ją na wartość, która jest większa niż 0.  
   
-3.  W **właściwości** okna, opcjonalnie zestaw dodatkowe właściwości, aby zmienić wygląd kształtu.  
+3.  W **właściwości** okna, opcjonalnie ustaw dodatkowe właściwości, aby zmienić wygląd kształtu.  
   
 ### <a name="to-draw-a-simple-shape-at-run-time"></a>Aby narysować kształt proste w czasie wykonywania  
   
@@ -39,7 +39,7 @@ Można użyć <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> formantu, aby na
   
 2.  W **Dodaj odwołanie** okno dialogowe, wybierz opcję **Microsoft.VisualBasic.PowerPacks.VS**, a następnie kliknij przycisk **OK**.  
   
-3.  W **edytora kodu**, Dodaj `Imports` lub `using` instrukcji w górnej części modułu:  
+3.  W **Edytor kodu**, Dodaj `Imports` lub `using` instrukcji w górnej części modułu:  
   
 ```vb  
 Imports Microsoft.VisualBasic.PowerPacks  
@@ -55,82 +55,82 @@ using Microsoft.VisualBasic.PowerPacks;
      [!code-vb[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.vb)]  
   
 ## <a name="customizing-shapes"></a>Dostosowywanie kształtów  
- Korzystając z ustawienia domyślne <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> i <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> formanty są wyświetlane z stałe czarnym obramowaniem jeden piksel szerokości i przezroczyste tło. Przez ustawienie właściwości można zmienić szerokości, stylu i koloru obramowania. Dodatkowe właściwości umożliwiają zmianę tła kształtów jednolitym kolorem, wzorzec, wypełnieniem gradientowym lub obrazu.  
+ Korzystając z ustawień domyślnych <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> i <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> formanty są wyświetlane przy użyciu stałych czarne obramowanie o szerokości jednego piksela i przezroczyste tło. Możesz zmienić szerokości, stylu i koloru obramowania przez ustawienie właściwości. Dodatkowe właściwości umożliwiają zmianę tła kształtu do pełnego koloru, wzorzec, wypełnieniem gradientowym lub obrazu.  
   
- Przed wprowadzeniem zmian w tle kształtu, należy poznać kilka właściwości interakcje.  
+ Przed zmianą tła kształtu należy wiedzieć, jak kilka właściwości wchodzić w interakcje.  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A> Ustawienie właściwości nie obowiązuje, chyba że <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A> właściwość jest ustawiona na <xref:Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque>.  
+-   <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A> Ustawienie właściwości jest ignorowany, chyba że <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A> właściwość jest ustawiona na <xref:Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque>.  
   
 -   Jeśli <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A> właściwość jest ustawiona na <xref:Microsoft.VisualBasic.PowerPacks.FillStyle.Solid>, <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A> zastępuje <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>.  
   
--   Jeśli <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A> właściwość ma ustawioną wartość wzorca takich jak <xref:Microsoft.VisualBasic.PowerPacks.FillStyle.Horizontal> lub <xref:Microsoft.VisualBasic.PowerPacks.FillStyle.Vertical>, wzorzec zostanie wyświetlona w <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A>. Tło będą wyświetlane w <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>, pod warunkiem że <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A> właściwość jest ustawiona na <xref:Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque>.  
+-   Jeśli <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A> właściwości ustawiono wartość wzorca takiego jak <xref:Microsoft.VisualBasic.PowerPacks.FillStyle.Horizontal> lub <xref:Microsoft.VisualBasic.PowerPacks.FillStyle.Vertical>, wzorzec, które będą wyświetlane w <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A>. Tło będą wyświetlane w <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>pod warunkiem, że <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A> właściwość jest ustawiona na <xref:Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque>.  
   
--   Aby wyświetlić wypełnienia gradientowego <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A> musi mieć ustawioną właściwość <xref:Microsoft.VisualBasic.PowerPacks.FillStyle.Solid> i <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillGradientStyle%2A> właściwość musi mieć ustawioną wartość innych niż <xref:Microsoft.VisualBasic.PowerPacks.FillGradientStyle.None>.  
+-   Aby wyświetlić wypełniacza gradientu <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A> właściwość musi być równa <xref:Microsoft.VisualBasic.PowerPacks.FillStyle.Solid> i <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillGradientStyle%2A> właściwość musi być równa wartości innych niż <xref:Microsoft.VisualBasic.PowerPacks.FillGradientStyle.None>.  
   
--   Ustawienie <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackgroundImage%2A> właściwość do obrazu zastępuje wszystkie inne ustawienia tła.  
+-   Ustawienie <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackgroundImage%2A> właściwość obrazu zastępuje wszystkie inne ustawienia w tle.  
   
-#### <a name="to-draw-a-circle-that-has-a-custom-border"></a>Aby narysować okrąg, który ma obramowanie niestandardowe  
+#### <a name="to-draw-a-circle-that-has-a-custom-border"></a>Aby narysować circle, który ma obramowanie niestandardowe  
   
-1.  Przeciągnij `OvalShape` kontrolować z **Visual Basic PowerPacks** karcie **przybornika** formularza lub kontenera formantu.  
+1.  Przeciągnij `OvalShape` z kontrolować **Visual Basic PowerPacks** karcie **przybornika** formularza lub kontener formantu.  
   
-2.  W **właściwości** okna w `Size` właściwość, ustaw `Height` i `Width` równe wartości.  
+2.  W **właściwości** okna w `Size` , właściwością `Height` i `Width` równe wartości.  
   
-3.  Ustaw `BorderColor` kolor, który chcesz dla właściwości.  
+3.  Ustaw `BorderColor` właściwość kolor, który chcesz.  
   
-4.  Ustaw `BorderStyle` właściwości wartości innych niż `Solid`.  
+4.  Ustaw `BorderStyle` właściwości do dowolnej wartości innych niż `Solid`.  
   
-5.  Ustaw `BorderWidth` rozmiar w pikselach.  
+5.  Ustaw `BorderWidth` do rozmiaru który chcesz, w pikselach.  
   
-#### <a name="to-draw-a-circle-that-has-a-solid-fill"></a>Aby narysować koło z wypełnieniem  
+#### <a name="to-draw-a-circle-that-has-a-solid-fill"></a>Aby narysować circle, który ma wypełnienia kryjącego  
   
-1.  Przeciągnij `OvalShape` kontrolować z **Visual Basic PowerPacks** karcie **przybornika** formularza lub kontenera formantu.  
+1.  Przeciągnij `OvalShape` z kontrolować **Visual Basic PowerPacks** karcie **przybornika** formularza lub kontener formantu.  
   
-2.  W **właściwości** okna w `Size` właściwość, ustaw `Height` i `Width` równe wartości.  
+2.  W **właściwości** okna w `Size` , właściwością `Height` i `Width` równe wartości.  
   
-3.  Ustaw `BackColor` kolor, który chcesz dla właściwości.  
+3.  Ustaw `BackColor` właściwość kolor, który chcesz.  
   
-4.  Ustaw `BackStyle` właściwości `Opaque`.  
+4.  Ustaw `BackStyle` właściwość `Opaque`.  
   
-#### <a name="to-draw-a-circle-that-has-a-patterned-fill"></a>Aby narysować okrąg deseniem wypełnieniem  
+#### <a name="to-draw-a-circle-that-has-a-patterned-fill"></a>Aby narysować circle, który ma wypełnienia deseniem  
   
-1.  Przeciągnij `OvalShape` kontrolować z **Visual Basic PowerPacks** karcie **przybornika** formularza lub kontenera formantu.  
+1.  Przeciągnij `OvalShape` z kontrolować **Visual Basic PowerPacks** karcie **przybornika** formularza lub kontener formantu.  
   
-2.  W **właściwości** okna w `Size` właściwość, ustaw `Height` i `Width` równe wartości.  
+2.  W **właściwości** okna w `Size` , właściwością `Height` i `Width` równe wartości.  
   
-3.  Ustaw `BackColor` kolor tła dla właściwości.  
+3.  Ustaw `BackColor` właściwość kolor tła.  
   
-4.  Ustaw `BackStyle` właściwości `Opaque`.  
+4.  Ustaw `BackStyle` właściwość `Opaque`.  
   
-5.  Ustaw `FillColor` kolor, który ma wzorca dla właściwości.  
+5.  Ustaw `FillColor` właściwości na kolor, który ma zostać wzorzec.  
   
-6.  Ustaw `FillStyle` właściwości wartości innych niż `Transparent` lub `Solid`.  
+6.  Ustaw `FillStyle` właściwości do dowolnej wartości innych niż `Transparent` lub `Solid`.  
   
-#### <a name="to-draw-a-circle-that-has-a-gradient-fill"></a>Aby narysować koło z wypełnieniem gradientowym  
+#### <a name="to-draw-a-circle-that-has-a-gradient-fill"></a>Aby narysować okrąg, która ma wypełnieniem gradientowym  
   
-1.  Przeciągnij `OvalShape` kontrolować z **Visual Basic PowerPacks** karcie **przybornika** formularza lub kontenera formantu.  
+1.  Przeciągnij `OvalShape` z kontrolować **Visual Basic PowerPacks** karcie **przybornika** formularza lub kontener formantu.  
   
-2.  W **właściwości** okna w `Size` właściwość, ustaw `Height` i `Width` równe wartości.  
+2.  W **właściwości** okna w `Size` , właściwością `Height` i `Width` równe wartości.  
   
-3.  Ustaw `FillColor` kolor kolor początkowy dla właściwości.  
+3.  Ustaw `FillColor` właściwości na kolor, który ma zostać kolor początkowy.  
   
-4.  Ustaw `FillGradientColor` kolor końcowy kolor dla właściwości.  
+4.  Ustaw `FillGradientColor` właściwości na kolor, który ma zostać kolor końcowy.  
   
 5.  Ustaw `FillGradientStyle` właściwości na wartość inną niż `None`.  
   
-#### <a name="to-draw-a-circle-that-is-filled-with-an-image"></a>Rysowanie wypełnionej obrazu okręgu  
+#### <a name="to-draw-a-circle-that-is-filled-with-an-image"></a>Aby narysować okrąg wypełnionej obrazu  
   
-1.  Przeciągnij `OvalShape` kontrolować z **Visual Basic PowerPacks** karcie **przybornika** formularza lub kontenera formantu.  
+1.  Przeciągnij `OvalShape` z kontrolować **Visual Basic PowerPacks** karcie **przybornika** formularza lub kontener formantu.  
   
-2.  W **właściwości** okna w `Size` właściwość, ustaw `Height` i `Width` równe wartości.  
+2.  W **właściwości** okna w `Size` , właściwością `Height` i `Width` równe wartości.  
   
-3.  Wybierz `BackgroundImage` właściwości i kliknij przycisk **wielokropka** przycisk (...).  
+3.  Wybierz `BackgroundImage` właściwości i kliknij przycisk **wielokropka** przycisku (...).  
   
-4.  W **zasobów wybierz** okno dialogowe, wybierz obraz do wyświetlenia. Jeśli nie są wyświetlane nie zasoby obrazów, kliknij przycisk **importu** aby przejść do lokalizacji obrazu.  
+4.  W **wybierz zasób** okno dialogowe, wybierz obraz do wyświetlania. Jeśli nie są wyświetlane nie zasoby obrazów, kliknij przycisk **importu** aby przejść do lokalizacji obrazu.  
   
-5.  Kliknij przycisk **OK** do wstawiania obrazu.  
+5.  Kliknij przycisk **OK** można wstawić obrazu.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>  
- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>  
- [Linie i kształty — Wprowadzenie do kontrolek](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
- [Instrukcje: rysowanie linii za pomocą kontrolki LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>
+- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>
+- [Linie i kształty — Wprowadzenie do kontrolek](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
+- [Instrukcje: Rysowanie linii za pomocą formantu LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)

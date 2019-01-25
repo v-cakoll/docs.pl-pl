@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 1d35951aef3692d82bdfa648df48eb8c1bca88ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716261"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programowanie dla sieci w .NET Framework
 Środowisko Microsoft .NET Framework oferuje warstwowe, rozszerzalne i zarządzane wdrożenia usług internetowych, które można szybko i łatwo zintegrować ze swoimi aplikacjami. Aplikacje sieciowe mogą za pomocą podłączanych protokołów automatycznie wykorzystywać nowe protokoły internetowe albo za pośrednictwem zarządzanej implementacji interfejsu gniazd systemu Windows współpracować z siecią na poziomie gniazd.  
@@ -134,10 +134,10 @@ ms.locfileid: "50188082"
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  Umożliwia konfigurowanie uwierzytelniania przy użyciu mechanizmu rozszerzonej ochrony aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
- [Transport Layer Security (TLS) najlepsze rozwiązania z programem .NET Framework](../../../docs/framework/network-programming/tls.md)  
- [Programowanie dla sieci — tematy z instrukcjami](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
- [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Przykłady kodu usług sieciowych dla platformy .NET w galerii kodu MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
- [Przykładowe klasy HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [Transport Layer Security (TLS) najlepsze rozwiązania z programem .NET Framework](../../../docs/framework/network-programming/tls.md)
+- [Programowanie dla sieci — tematy z instrukcjami](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
+- [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Przykłady kodu usług sieciowych dla platformy .NET w galerii kodu MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+- [Przykładowe klasy HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)

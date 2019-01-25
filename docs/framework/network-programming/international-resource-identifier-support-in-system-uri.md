@@ -2,12 +2,12 @@
 title: Obsługa identyfikatorów zasobów międzynarodowych w System.Uri
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 742ea03a62426506f068a9b9e669278d0d4663ec
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 56d31b13b94b68719c355335a0598ab8b11d1ecc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651074"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Obsługa identyfikatorów zasobów międzynarodowych w System.Uri
 <xref:System.Uri?displayProperty=nameWithType> Klasa została rozszerzona z obsługą międzynarodowych nazw domen (IDN) i międzynarodowych identyfikatorów zasobów (IRI). Te rozszerzenia są dostępne w programie .NET Framework 3.5, 3.0 z dodatkiem SP1 i 2.0 z dodatkiem SP1.  
@@ -43,8 +43,8 @@ ms.locfileid: "53128089"
   
  Ustawienie konfiguracji dotyczące <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> i <xref:System.Configuration.IdnElement?displayProperty=nameWithType> klas konfiguracji zostanie odczytany raz podczas pierwszej <xref:System.Uri?displayProperty=nameWithType> klasy. Zmiany ustawień konfiguracji po tym czasie są ignorowane.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
- <xref:System.Uri?displayProperty=nameWithType>  
- <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
+- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
+- <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 694b4faaafea62799a96aabe8f023a0d495f8d50
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9257a16b1f15290a8b997e8d12d5570349d88dde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720554"
 ---
 # <a name="custom-bindings"></a>Powiązania niestandardowe
 Możesz użyć <xref:System.ServiceModel.Channels.CustomBinding> klasy, gdy jedno z powiązań dostarczanych przez system nie spełnia wymagania dotyczące usługi. Wszystkie powiązania są konstruowane na podstawie uporządkowany zestaw elementów wiązania. Powiązania niestandardowe mogą być zbudowane z zestaw elementów powiązania dostarczane przez system lub może zawierać elementów zdefiniowanych przez użytkownika niestandardowego powiązania. Elementy powiązania niestandardowego, na przykład umożliwia korzystanie z nowego transportu lub koderów na punkt końcowy usługi. Przykłady pracy, zobacz [niestandardowe powiązanie przykłady](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Aby uzyskać więcej informacji, zobacz [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -68,14 +68,14 @@ Możesz użyć <xref:System.ServiceModel.Channels.CustomBinding> klasy, gdy jedn
 |Niezawodność|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Nie|  
 |Zabezpieczenia|<xref:System.ServiceModel.Channels.SecurityBindingElement>|Nie|  
 |Kodowanie|Tekst, niestandardowe dane binarne, komunikat transmisji optymalizacji mechanizm (MTOM)|Tak|  
-|Transportu|TCP, HTTP i HTTPS, nazwanych potoków (znany także jako IPC) między równorzędnych (P2P), Usługa kolejkowania komunikatów (MSMQ), niestandardowe|Tak|  
+|Transport|TCP, HTTP i HTTPS, nazwanych potoków (znany także jako IPC) między równorzędnych (P2P), Usługa kolejkowania komunikatów (MSMQ), niestandardowe|Tak|  
   
  Ponadto można zdefiniować własne elementy powiązania i wstawione między dowolnymi poprzedniej warstwy zdefiniowanej przez użytkownika.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Instrukcje: dostosowywanie powiązania udostępnionego przez system](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)  
- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Powiązanie niestandardowe](../../../../docs/framework/wcf/samples/custom-binding.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Instrukcje: Dostosuj powiązania dostarczane przez System](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Powiązanie niestandardowe](../../../../docs/framework/wcf/samples/custom-binding.md)

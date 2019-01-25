@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f835cfb45848ca2790c3dcb541629564e9cc48a
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 1b764febc17258bc6d929c6d988a02b58f3e2351
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664554"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrowanie z klasy XslTransform
 
@@ -27,7 +27,7 @@ Architektura XSLT zostało przeprojektowane, w wersji programu Visual Studio 200
  <xref:System.Xml.Xsl.XslCompiledTransform> Klasy zawiera również inne optymalizacje, które ułatwiają znacznie szybsze niż <xref:System.Xml.Xsl.XslTransform> klasy.
 
 > [!NOTE]
->  Mimo że ogólną wydajność <xref:System.Xml.Xsl.XslCompiledTransform> klasy jest lepsze niż <xref:System.Xml.Xsl.XslTransform> klasy <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> metody <xref:System.Xml.Xsl.XslCompiledTransform> klasy może działać więcej wolniej niż <xref:System.Xml.Xsl.XslTransform.Load%2A> metody <xref:System.Xml.Xsl.XslTransform> klasy pierwszego czasu jest wywoływana w transformacji. Jest to spowodowane plik XSLT, ale muszą być skompilowane, zanim został załadowany. Aby uzyskać więcej informacji, zobacz następujący wpis w blogu: [XslCompiledTransform wolniej niż XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)
+>  Mimo że ogólną wydajność <xref:System.Xml.Xsl.XslCompiledTransform> klasy jest lepsze niż <xref:System.Xml.Xsl.XslTransform> klasy <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> metody <xref:System.Xml.Xsl.XslCompiledTransform> klasy może działać więcej wolniej niż <xref:System.Xml.Xsl.XslTransform.Load%2A> metody <xref:System.Xml.Xsl.XslTransform> klasy pierwszego czasu jest wywoływana w transformacji. Jest to spowodowane plik XSLT, ale muszą być skompilowane, zanim został załadowany. Aby uzyskać więcej informacji zobacz następujący wpis w blogu: [XslCompiledTransform wolniej niż XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)
 
 ## <a name="security"></a>Zabezpieczenia
  Domyślnie <xref:System.Xml.Xsl.XslCompiledTransform> klasy wyłącza obsługę XSLT `document()` funkcji i skryptów osadzonych. Te funkcje można włączyć poprzez utworzenie <xref:System.Xml.Xsl.XsltSettings> obiekt, który zawiera funkcje włączone i przekazanie jej do <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> metody. Poniższy przykład pokazuje, jak włączyć obsługę skryptów i wykonywanie przekształcenia XSLT.
@@ -112,13 +112,13 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
 -   msxsl:node — Ustaw: <xref:System.Xml.Xsl.XslTransform> wymagany argument [zestaw węzłów funkcji](https://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) funkcji wynikowego fragmentu drzewa. <xref:System.Xml.Xsl.XslCompiledTransform> Klasa nie ma to wymaganie.  
   
--   msxsl:Version: Ta funkcja jest obsługiwana w <xref:System.Xml.Xsl.XslCompiledTransform>.  
+-   msxsl:version: Ta funkcja jest obsługiwana w <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   Funkcji XPath rozszerzenia: [ms:string-compare — funkcja](https://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc — funkcja](https://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [MS: namespace-funkcji identyfikatora uri](https://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local — nadaj nazwę funkcji](https://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number funkcja](https://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format — Data — funkcja](https://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5), i [ms:format-czasu funkcji](https://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) funkcje są teraz obsługiwane.  
+-   Funkcje rozszerzeń XPath: [Ms:string-compare — funkcja](https://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc — funkcja](https://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [MS: namespace-funkcji identyfikatora uri](https://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-nadaj nazwę funkcji](https://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number funkcja](https://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format — Data — funkcja](https://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5), i [ms:format-czasu funkcji](https://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) funkcje są teraz obsługiwane.  
   
--   Powiązane schematu funkcji rozszerzenia XPath: te funkcje nie są obsługiwane natywnie przez <xref:System.Xml.Xsl.XslCompiledTransform>. Jednak może być implementowany jako funkcji rozszerzenia.  
+-   Powiązane schematu funkcji XPath rozszerzenia: Te funkcje nie są obsługiwane natywnie przez <xref:System.Xml.Xsl.XslCompiledTransform>. Jednak może być implementowany jako funkcji rozszerzenia.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

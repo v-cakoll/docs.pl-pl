@@ -1,5 +1,5 @@
 ---
-title: Wyrażenia lambda - C# przewodnik programowania
+title: Wyrażenia lambda - C# Programming Guide
 ms.custom: seodec18
 ms.date: 03/03/2017
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 0feff32f3a2264b8e6cbd4746fdeaaaad728b8e5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 91d972f468f80c509a90ea293937b117d54a2e7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241291"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737523"
 ---
-# <a name="lambda-expressions-c-programming-guide"></a>Wyrażenia lambda (Przewodnik programowania w języku C#)
+# <a name="lambda-expressions-c-programming-guide"></a>Wyrażenia lambda (C# Programming Guide)
 
 Wyrażenie lambda jest [funkcja anonimowa](anonymous-methods.md) używanego do utworzenia [delegatów](../delegates/using-delegates.md) lub [drzewa wyrażeń](../concepts/expression-trees/index.md) typów. Za pomocą wyrażenia lambda można pisać funkcje lokalne, które mogą być przekazywane jako argumenty lub zwracane jako wartość wywołania funkcji. Wyrażenia lambda są szczególnie przydatne w przypadku pisania wyrażeń zapytań w języku LINQ.
   
@@ -89,7 +89,8 @@ namespace ConsoleApplication1
 
  Należy zauważyć, że w poprzednim przykładzie treść wyrażenia lambda może składać się z wywołania metody. Jednak w przypadku tworzenia drzew wyrażeń, które będą obliczane poza programem .NET Framework, na przykład w programie SQL Server, nie należy używać wywołań metod w wyrażeniach lambda. Te metody nie będą zrozumiałe poza kontekstem środowiska uruchomieniowego języka wspólnego platformy .NET.  
   
-## <a name="statement-lambdas"></a>Lambdy instrukcji  
+## <a name="statement-lambdas"></a>Lambdy instrukcji
+
  Lambda instrukcji jest podobna do lambdy wyrażenia, z tym że instrukcje są ujęte w nawiasy klamrowe:  
   
 (parametry wejściowe) = > {instrukcja;}
@@ -102,7 +103,8 @@ namespace ConsoleApplication1
 
  Lambd instrukcji, podobnie jak metod anonimowych, nie można używać do tworzenia drzew wyrażeń.  
   
-## <a name="async-lambdas"></a>Lambdy asynchroniczne  
+## <a name="async-lambdas"></a>Lambdy asynchroniczne
+
  Możesz łatwo tworzyć wyrażenia lambda i instrukcje, które zawierają Przetwarzanie asynchroniczne przy użyciu [async](../../../csharp/language-reference/keywords/async.md) i [await](../../../csharp/language-reference/keywords/await.md) słów kluczowych. Na przykład, poniższy przykład Windows Forms zawiera program obsługi zdarzeń, który wywołuje i czeka na metodę asynchroniczną `ExampleMethodAsync`.  
   
 ```csharp
@@ -154,7 +156,8 @@ public partial class Form1 : Form
 
  Aby uzyskać więcej informacji na temat sposobu tworzenia i używania metod asynchronicznych, zobacz [Asynchronous Programming with async i await](../../../csharp/programming-guide/concepts/async/index.md).  
   
-## <a name="lambdas-with-the-standard-query-operators"></a>Lambdy ze standardowymi operatorami zapytań  
+## <a name="lambdas-with-the-standard-query-operators"></a>Lambdy ze standardowych operatorów zapytań
+
  Wiele operatorów standardowej kwerendy posiada parametr wejściowy, którego typ jest jednym z <xref:System.Func%602> rodziny ogólnych delegatów. Te delegaty używają parametrów typu użycia, aby zdefiniować liczbę i typy parametrów wejściowych oraz zwracany typ delegata. `Func` Obiekty delegowane są bardzo przydatne do hermetyzowania wyrażeń zdefiniowanych przez użytkownika, które są stosowane do każdego elementu w zestawie danych źródłowych. Na przykład rozważmy następujący typ delegata:  
   
 ```csharp  
@@ -191,7 +194,8 @@ var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);
 var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
 ```  
   
-## <a name="type-inference-in-lambdas"></a>Wnioskowanie typów w wyrażeniach lambda  
+## <a name="type-inference-in-lambdas"></a>Wnioskowanie o typie w wyrażeniach lambda
+
  Podczas pisania wyrażeń lambda często nie trzeba określać typu parametrów wejściowych, ponieważ kompilator może wywnioskować typ na podstawie treści wyrażenia lambda, typu delegata parametru i innych czynników, tak jak opisano w specyfikacji języka C#. Dla większości standardowych operatorów zapytań pierwszy element danych wejściowych jest typem elementów w sekwencji źródłowej. Tak, jeśli jest wykonywane zapytanie `IEnumerable<Customer>`, a następnie wywnioskowana jest zmienna wejściowa jest `Customer` obiektu, co oznacza, że masz dostęp do metod i właściwości:  
   
 ```csharp  
@@ -208,7 +212,8 @@ customers.Where(c => c.City == "London");
   
  Należy zauważyć, że wyrażenia lambda same w sobie nie mają typu, ponieważ system typów wspólnych nie obejmuje wewnętrznej koncepcji „wyrażenia lambda”. Jednak czasami wygodnie jest mówić potocznie o „typie” wyrażenia lambda. W takich przypadkach typ odnosi się do typu delegata lub <xref:System.Linq.Expressions.Expression> typ do którego jest konwertowane Wyrażenie lambda.  
   
-## <a name="variable-scope-in-lambda-expressions"></a>Zakres zmiennych w wyrażeniach lambda  
+## <a name="variable-scope-in-lambda-expressions"></a>Zakres zmiennych w wyrażeniach lambda
+
  Wyrażenia lambda mogą odwoływać się do *zmiennych zewnętrznych* (zobacz [anonimowymi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)) znajdujących się w zakresie metody definiującej funkcję lambda lub w zakresie typu, który zawiera wyrażenie lambda. Przechwytywane w ten sposób zmienne są przechowywane do użytku w wyrażeniu lambda, nawet gdyby w innym wypadku te zmienne znalazłyby się poza zakresem i zostałyby usunięte w ramach odśmiecania pamięci. Zewnętrzna zmienna musi być zdecydowanie przypisana, aby można jej było użyć w wyrażeniu lambda. W poniższym przykładzie pokazano te reguły:  
   
 ```csharp  
@@ -269,18 +274,20 @@ class Test
   
 -   Wyrażenie lambda nie może zawierać `goto` instrukcji `break` instrukcji lub `continue` instrukcję, która znajduje się wewnątrz funkcji lambda, jeśli obiekt docelowy instrukcji jump leży poza blokiem. Błędem jest również instrukcja skoku poza blok funkcji lambda, jeśli obiekt docelowy znajduje się wewnątrz bloku.  
   
-## <a name="c-language-specification"></a>Specyfikacja języka C#  
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="featured-book-chapter"></a>Polecany rozdział książki  
+## <a name="featured-book-chapter"></a>polecany rozdział książki
+
  [Delegatów, zdarzeń i wyrażenia Lambda](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) w [ C# 3.0 Cookbook, Third Edition: Ponad 250 rozwiązań dla C# ekspertów w programowaniu w wersji 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [LINQ (Language-Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)  
-- [Metody anonimowe](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [is](../../../csharp/language-reference/keywords/is.md)  
-- [Drzewa wyrażeń](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-- [Visual Studio 2008 C# Samples (zobacz pliki LINQ przykładowe zapytania i XQuery program)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [LINQ (Language-Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)
+- [Metody anonimowe](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [is](../../../csharp/language-reference/keywords/is.md)
+- [Drzewa wyrażeń](../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Visual Studio 2008 C# Samples (zobacz pliki LINQ przykładowe zapytania i XQuery program)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Powtarzalne wyrażenia lambda](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

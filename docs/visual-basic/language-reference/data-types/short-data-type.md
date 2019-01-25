@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: dce345e049a1b89b85a340b8e9078f39882a45fb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d4dab1a72d1e240bc428b2c6b83a722584e35ecc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587664"
 ---
 # <a name="short-data-type-visual-basic"></a>Short — typ danych (Visual Basic)
 Przechowuje podpisany 16-bitowych liczb całkowitych (2-bajtowych), z zakresu wartości od-32 768 za pośrednictwem 32 767 znaków.  
@@ -70,10 +70,10 @@ Dim number = &H_3264S
   
 ## <a name="see-also"></a>Zobacz także
 
- <xref:System.Int16?displayProperty=nameWithType>  
- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int16?displayProperty=nameWithType>
+- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

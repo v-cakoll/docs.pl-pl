@@ -1,5 +1,5 @@
 ---
-title: 'Porady: definiowanie typu ogólnego przy użyciu emisji odbicia'
+title: 'Instrukcje: Definiowanie typu ogólnego przy użyciu odbicia emisji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8109bfd590e5cb08e0031dcfcab5090160b2932b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645076"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Porady: definiowanie typu ogólnego przy użyciu emisji odbicia
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Instrukcje: Definiowanie typu ogólnego przy użyciu odbicia emisji
 W tym temacie pokazano, jak utworzyć prosty typ ogólny z dwoma parametrami typu, jak zastosować ograniczenia klasy, interfejsu, ograniczenia i ograniczenia specjalne do parametrów typu oraz sposobu tworzenia elementów członkowskich, które używają parametrów typu klasy jako typy parametrów i zwracanych typów.  
   
 > [!IMPORTANT]
->  Metoda nie jest ogólna tylko w przypadku, ponieważ należy do typu ogólnego i używa parametrów typu tego typu. Metoda jest ogólna tylko wtedy, gdy ma ona własną lista parametrów typu. Większość metod w typach ogólnych nie są ogólny, jak w poniższym przykładzie. Aby uzyskać przykład emitowania metody rodzajowej, zobacz [porady: definiowanie metody ogólnej przy użyciu emisji odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+>  Metoda nie jest ogólna tylko w przypadku, ponieważ należy do typu ogólnego i używa parametrów typu tego typu. Metoda jest ogólna tylko wtedy, gdy ma ona własną lista parametrów typu. Większość metod w typach ogólnych nie są ogólny, jak w poniższym przykładzie. Aby uzyskać przykład emitowania metody rodzajowej, zobacz [jak: Definiowanie metody ogólnej przy użyciu odbicia emitować](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-type"></a>Aby zdefiniować typ ogólny  
   
@@ -135,7 +135,7 @@ W tym temacie pokazano, jak utworzyć prosty typ ogólny z dwoma parametrami typ
   
 -   Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [Używanie emisji odbicia](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Scenariusze zestawów dynamicznych emisji odbicia](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
+- [Używanie emisji odbicia](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)
+- [Scenariusze zestawów dynamicznych emisji odbicia](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

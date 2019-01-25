@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: d739e4bba96873740c53c07eccf687b060d82003
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7e24bf24785538863738fe2c006834a77f47e1ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496092"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementowanie logiki biznesowej (LINQ to SQL)
 Termin "logikę biznesową" w tym temacie odnosi się do żadnych reguł niestandardowych lub testów sprawdzania poprawności, które są stosowane do danych, przed jego wstawione, zaktualizowane lub usunięte z bazy danych. Logika biznesowa jest również czasami określane jako "reguł biznesowych" lub "Logika domeny". W aplikacjach n warstwowych zazwyczaj służy jako logiczne warstwy tak, aby można było jej modyfikować niezależnie od warstwy prezentacji lub warstwy dostępu do danych. Logika biznesowa może być wywoływany przez warstwę dostępu do danych, przed lub po nim żadnych aktualizacji, wstawiania lub usuwania danych w bazie danych.  
@@ -69,7 +69,7 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- W przypadku zastosowania Insert, aktualizowanie i usuwanie metody w klasie częściowej [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] środowisko uruchomieniowe będzie wywoływać je zamiast własnej metody domyślne podczas <xref:System.Data.Linq.DataContext.SubmitChanges%2A> jest wywoływana. Dzięki temu można zastąpić domyślne zachowanie tworzenia / odczyt / aktualizowanie / usuwanie operacji. Aby uzyskać więcej informacji, zobacz [wskazówki: dostosowywanie wstawiania, aktualizowania i usuwania zachowanie klas jednostek](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
+ W przypadku zastosowania Insert, aktualizowanie i usuwanie metody w klasie częściowej [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] środowisko uruchomieniowe będzie wywoływać je zamiast własnej metody domyślne podczas <xref:System.Data.Linq.DataContext.SubmitChanges%2A> jest wywoływana. Dzięki temu można zastąpić domyślne zachowanie tworzenia / odczyt / aktualizowanie / usuwanie operacji. Aby uzyskać więcej informacji, zobacz [instruktażu: Dostosowywanie wstawiania, aktualizowania i usuwania zachowanie klas jednostek](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
   
  `OnCreated` Metoda jest wywoływana w konstruktorze klasy.  
   
@@ -177,14 +177,14 @@ partial class Customer
   
  Aby uzyskać więcej informacji o tym, jak dodać logikę biznesową do aplikacji przy użyciu metod częściowych zobacz następujące tematy:  
   
- [Instrukcje: dodawanie walidacji do klas jednostek](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
+ [Instrukcje: Dodawanie walidacji do klas jednostek](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
- [Przewodnik: dostosowywanie zachowania wstawiania, aktualizacji i usuwania dla klas jednostek](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
+ [Przewodnik: Dostosowywanie zachowania wstawiania, aktualizacji i usuwania dla klas jednostek](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [Wskazówki: Dodawanie walidacji do klas jednostek](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
+ [Przewodnik: Dodawanie walidacji do klas jednostek](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
-## <a name="see-also"></a>Zobacz też  
- [Klasy częściowe i metody](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  
- [Metody częściowe](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)  
- [Narzędzia LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+## <a name="see-also"></a>Zobacz także
+- [Klasy częściowe i metody](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
+- [Metody częściowe](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+- [Narzędzia LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
+- [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

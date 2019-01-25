@@ -5,18 +5,18 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 48deb8684e53f583e3ff4a5407fadd112d45f749
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 212ce43dc50735da71091111a0fd03eca0583315
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196832"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577688"
 ---
 # <a name="ltaddgt-element-for-ltschemaimporterextensionsgt"></a>&lt;Dodaj&gt; elementu &lt;schemaImporterExtensions&gt;
 Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do mapowania typów XSD typów programu .NET Framework. Aby uzyskać więcej informacji na temat plików konfiguracyjnych, zobacz [schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md).  
   
  \<Konfiguracja >  
-\<System.XML.serialization >  
+\<system.xml.serialization>  
 \<schemaImporterExtensions>  
 \<add>  
   
@@ -34,7 +34,7 @@ Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do 
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |**Nazwa**|Prosta nazwa jest używana do znajdowania wystąpienia.|  
-|**Typ**|Wymagane. Określa klasę rozszerzenia schematu do dodania. **Typu** wartość atrybutu musi być w jednym wierszu i zawierać w pełni kwalifikowana nazwa typu. Gdy zestawu znajduje się w globalnej pamięci podręcznej zestawów (GAC), to również obejmować wersji, kulturę i token klucza publicznego zestawu podpisem.|  
+|**type**|Wymagana. Określa klasę rozszerzenia schematu do dodania. **Typu** wartość atrybutu musi być w jednym wierszu i zawierać w pełni kwalifikowana nazwa typu. Gdy zestawu znajduje się w globalnej pamięci podręcznej zestawów (GAC), to również obejmować wersji, kulturę i token klucza publicznego zestawu podpisem.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -62,6 +62,6 @@ Dodaje typy używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> do 
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Xml.Serialization.XmlSchemaImporter>  
-- [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)  
-- [\<schemaImporterExtensions > Element](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- <xref:System.Xml.Serialization.XmlSchemaImporter>
+- [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [\<schemaImporterExtensions> Element](../../../docs/standard/serialization/schemaimporterextensions-element.md)

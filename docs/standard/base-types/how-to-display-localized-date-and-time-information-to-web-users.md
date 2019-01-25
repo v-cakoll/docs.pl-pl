@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników sieci Web'
+title: 'Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników sieci Web'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,19 +10,22 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085228"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857661"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Porady: wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników sieci Web
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników sieci Web
 Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świecie, operacje analizy i formatowanie wartości daty i godziny, nie należy polegać na format domyślny (czyli w większości przypadków format kultury lokalnego serwera sieci Web) podczas interakcji z użytkownikiem. Zamiast tego formularzy sieci Web, Obsługa daty i godziny ciągi wprowadzane przez użytkownika, które należy przeanalizować ciągi przy użyciu preferowanej kultury użytkownika. Podobnie dane daty i godziny, powinna być wyświetlana dla użytkownika w formacie, który jest zgodny z kultury użytkownika. W tym temacie pokazano, jak to zrobić.  
   
-### <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Ciągi danych wejściowych przez użytkownika, można przeanalizować daty i godziny  
+## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Ciągi danych wejściowych przez użytkownika, można przeanalizować daty i godziny  
   
 1.  Określić, czy tablica ciągów zwracane przez <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> właściwość jest wypełnione. Jeśli nie jest, przejdź do kroku 6.  
   
@@ -40,7 +43,7 @@ Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świeci
   
 6.  Jeśli konwersja nadal kończy się niepowodzeniem lub tablicę ciągów zwrócony przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwość jest pusta, przeanalizować składni ciągu przy użyciu niezmiennej kultury, która jest zwracana przez <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> właściwości.  
   
-### <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Aby przeanalizować lokalnego datę i godzinę żądanie użytkownika  
+## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Aby przeanalizować lokalnego datę i godzinę żądanie użytkownika  
   
 1.  Dodaj <xref:System.Web.UI.WebControls.HiddenField> formantu do formularza sieci Web.  
   
@@ -110,7 +113,7 @@ Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świeci
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Analizowanie ciągów daty i godziny](../../../docs/standard/base-types/parsing-datetime.md)

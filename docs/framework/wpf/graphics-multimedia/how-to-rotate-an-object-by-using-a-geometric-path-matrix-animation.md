@@ -1,5 +1,5 @@
 ---
-title: Jak obrócić obiekt z wykorzystaniem ścieżki geometrycznej (animacja Matrix)
+title: 'Instrukcje: Obróć obiekt z wykorzystaniem ścieżki geometrycznej (animacja Matrix)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - rotating objects by geometric paths [WPF]
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
-ms.openlocfilehash: 3a35f6dda05cfe65811de16d76b288c8fbd618a7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: de61e2469e22d077da4b082e18340a837fac2880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565894"
 ---
-# <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Jak obrócić obiekt z wykorzystaniem ścieżki geometrycznej (animacja Matrix)
+# <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Instrukcje: Obróć obiekt z wykorzystaniem ścieżki geometrycznej (animacja Matrix)
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> i <xref:System.Windows.Media.MatrixTransform> wymienić (Tabela przestawna) wzdłuż ścieżki geometrycznej zdefiniowane przez obiekt <xref:System.Windows.Media.PathGeometry> obiektu.  
   
 ## <a name="example"></a>Przykład  
@@ -31,7 +31,7 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.M
   
  Wersja kodu powyższego przykładu używane <xref:System.Windows.Media.Animation.Storyboard> animować <xref:System.Windows.Media.EllipseGeometry>, mimo że zastosowano tylko jednej animacji. Łatwiejszy sposób zastosowania jednej animacji do właściwości w kodzie jest użycie <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metody. Aby uzyskać przykład, zobacz [animować właściwości bez użycia scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
- [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)
+## <a name="see-also"></a>Zobacz także
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+- [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)

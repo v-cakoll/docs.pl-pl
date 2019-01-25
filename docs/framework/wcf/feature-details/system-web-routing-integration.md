@@ -2,12 +2,12 @@
 title: Integracja elementu System.Web.Routing
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 3b95b3117941ce7d019b87b00181b2cbac652f43
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 0ace776b8be64f42c05918bc234d39cd96bf8782
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688195"
 ---
 # <a name="systemwebrouting-integration"></a>Integracja elementu System.Web.Routing
 W przypadku hostowania usługi Windows Communication Foundation (WCF) w Internet Information Service (IIS) możesz umieścić plik .svc w katalogu wirtualnym. Ten plik .svc określa fabryki hostów usług do użycia oraz klasy, która implementuje usługę. W przypadku wysyłania żądań do usługi można określić plików .svc w identyfikatorze URI, na przykład: `http://contoso.com/EmployeeServce.svc`. Programistom pisanie usług REST tego rodzaju identyfikatora URI nie jest optymalne. Identyfikatory URI dla usługi REST Określ określonego zasobu i zwykle nie mają żadnych rozszerzeń. <xref:System.Web.Routing> Funkcji integracji umożliwia hostowanie usługi WCF REST reagującego na identyfikatory URI bez rozszerzenia. Aby uzyskać więcej informacji o routingu, zobacz [routingu ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660).  
@@ -69,6 +69,6 @@ W przypadku hostowania usługi Windows Communication Foundation (WCF) w Internet
     }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Routingu platformy ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660)
+## <a name="see-also"></a>Zobacz także
+- [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [ASP.NET Routing](https://go.microsoft.com/fwlink/?LinkId=184660)

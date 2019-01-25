@@ -1,5 +1,5 @@
 ---
-title: 'Porady: chronienie argumentu procedury przed zmianami wartości (Visual Basic)'
+title: 'Instrukcje: Chronienie argumentu procedury przed zmianami wartości (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 393127353a020c1db5df3011b2a97b1c53097f27
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 42015e2a024ece75a920deb414d326c88f31249e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50225337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528891"
 ---
-# <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Porady: chronienie argumentu procedury przed zmianami wartości (Visual Basic)
+# <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Instrukcje: Chronienie argumentu procedury przed zmianami wartości (Visual Basic)
 Jeśli procedura deklaruje jako parametru [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic, zawiera kod procedury bezpośrednie odwołanie do elementu programistycznego, bazowy argumentu w wywoływanym kodzie. Pozwala to na procedurę, aby zmienić wartość bazowego argumentu w wywoływanym kodzie. W niektórych przypadkach kod wywołujący może mają być chronione przed takich zmian.  
   
- Argument może zawsze chronić zmiana, deklarując z odpowiadającym mu parametrem [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) w procedurze. Jeśli chcesz można było zmienić w niektórych przypadkach, ale nie inne podany argument, trzeba je zadeklarować `ByRef` i pozwolić określić mechanizm przekazywania w każdym wywołaniu kodu wywołującego. Dzieje się tak, otaczający odnośnego argumentu w nawiasach przekazywany przez wartość lub nie otaczający w nawiasach przekazywany przez odwołanie. Aby uzyskać więcej informacji, zobacz [porady: Wymuszanie argumentu przekazywane przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ Argument może zawsze chronić zmiana, deklarując z odpowiadającym mu parametrem [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) w procedurze. Jeśli chcesz można było zmienić w niektórych przypadkach, ale nie inne podany argument, trzeba je zadeklarować `ByRef` i pozwolić określić mechanizm przekazywania w każdym wywołaniu kodu wywołującego. Dzieje się tak, otaczający odnośnego argumentu w nawiasach przekazywany przez wartość lub nie otaczający w nawiasach przekazywany przez odwołanie. Aby uzyskać więcej informacji, zobacz [jak: Wymuszanie być przekazywany przez wartość argumentu](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia dwie procedury używające zmiennej tablicy i działać na jego elementach. `increase` Procedura dodaje po prostu jednym do każdego elementu. `replace` Procedury przypisuje nową tablicę z parametrem `a()` , a następnie dodaje je do każdego elementu. Jednak ponowne przypisanie nie ma wpływu na podstawowe zmienną tablicy w wywoływanym kodzie.  
@@ -42,14 +42,14 @@ Jeśli procedura deklaruje jako parametru [ByRef](../../../../visual-basic/langu
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Domyślnie w języku Visual Basic nie jest przekazywanie argumentów według wartości. Jednak dobrą praktyką, aby uwzględnić albo programowania jest [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe z każdym zadeklarowany parametr. Dzięki temu można łatwiej odczytać kodu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Procedury](./index.md)  
- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Instrukcje: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
- [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)  
- [Różnice między argumentami modyfikowalnymi i niemodyfikowalnymi](./differences-between-modifiable-and-nonmodifiable-arguments.md)  
- [Różnice między przekazywaniem argumentu według wartości i według odwołania](./differences-between-passing-an-argument-by-value-and-by-reference.md)  
- [Instrukcje: zmiana wartości argumentu procedury](./how-to-change-the-value-of-a-procedure-argument.md)  
- [Instrukcje: wymuszanie przekazywania argumentu przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md)  
- [Przekazywanie argumentów według pozycji i według nazwy](./passing-arguments-by-position-and-by-name.md)  
- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Zobacz także
+- [Procedury](./index.md)
+- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
+- [Instrukcje: Przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)
+- [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)
+- [Różnice między argumentami modyfikowalnymi i niemodyfikowalnymi](./differences-between-modifiable-and-nonmodifiable-arguments.md)
+- [Różnice między przekazywaniem argumentu według wartości i według odwołania](./differences-between-passing-an-argument-by-value-and-by-reference.md)
+- [Instrukcje: Zmień wartość argumentu procedury](./how-to-change-the-value-of-a-procedure-argument.md)
+- [Instrukcje: Wymuszanie być przekazywany przez wartość argumentu](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Przekazywanie argumentów według pozycji i według nazwy](./passing-arguments-by-position-and-by-name.md)
+- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

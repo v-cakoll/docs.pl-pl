@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 640e8976b95b5228f1caa967c053ffd95d2553ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651607"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Połączenie z serwerem SQL buforowanie (ADO.NET)
 Nawiązywanie połączenia z serwerem bazy danych zazwyczaj składa się z kilku kroków czasochłonne. Kanał fizycznych, takich jak gniazda lub nazwany potok należy ustalić, musi nastąpić uzgadnianie początkową z serwerem, informacje o parametrach połączenia musi zostać przeanalizowany, połączenie musi zostać uwierzytelniony przez serwer, należy uruchomić testy dla rejestrowanie w Bieżąca transakcja i tak dalej.  
@@ -129,8 +129,8 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="application-role-alternatives"></a>Alternatywy ról aplikacji  
  Zaleca się, że możesz korzystać z mechanizmami zabezpieczeń, które można użyć zamiast ról aplikacji. Aby uzyskać więcej informacji, zobacz [tworzenie ról aplikacji w programie SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Pula połączeń](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [Liczniki wydajności](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Pula połączeń](../../../../docs/framework/data/adonet/connection-pooling.md)
+- [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [Liczniki wydajności](../../../../docs/framework/data/adonet/performance-counters.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0cb539d5b10c8a027a8c73c68ccc04aa490cb4df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33cffb086609432f5207310fc565bd34cccd7642
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698651"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask — Metoda
-Żądania, hosta utworzyć nowe zadanie.  
+Żądania, że host Utwórz nowe zadanie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,43 +40,43 @@ HRESULT CreateTask (
   
 #### <a name="parameters"></a>Parametry  
  `stacksize`  
- [in] Żądany rozmiar w bajtach żądanego stosu lub domyślny rozmiar 0 (zero).  
+ [in] Żądany rozmiar w bajtach stosu żądanego lub 0 (zero) domyślny rozmiar.  
   
  `pStartAddress`  
- [in] Wskaźnik do funkcji jest zadanie do wykonania.  
+ [in] Wskaźnik do funkcji zadanie jest zadaniem do wykonania.  
   
  `pParameter`  
- [in] Wskaźnik do danych użytkownika, które mają być przekazane do funkcji lub wartość null, jeśli funkcja nie przyjmuje żadnych parametrów.  
+ [in] Wskaźnik do danych użytkownika, który zostanie przekazany do funkcji, lub wartość null, jeśli funkcja nie przyjmuje żadnych parametrów.  
   
  `ppTask`  
- [out] Wskaźnik do adresu [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia utworzone przez hosta lub wartość null, jeśli nie można utworzyć zadania. Zadanie pozostanie w stanie wstrzymania po jawnie jest uruchomiony przez wywołanie do [IHostTask::Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
+ [out] Wskaźnik na adres [ihosttask —](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia utworzone przez hosta, lub wartość null, jeśli nie można utworzyć zadania. Zadanie pozostanie w stanie wstrzymania, aż jawnie jest uruchomione przez wywołanie do [ihosttask::Start —](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`CreateTask` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`CreateTask` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Za mało pamięci nie była dostępna, można utworzyć żądanego zadania.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Za mało dostępnej pamięci na utworzyć żądanego zadania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołania CLR `CreateTask` na żądanie, że host utworzyć nowe zadanie. Host zwraca wskaźnika interfejsu do `IHostTask` wystąpienia. Zadanie zwrócone musi pozostać zawieszone po jawnie jest uruchomiony przez wywołanie do `IHostTask::Start`.  
+ CLR wywołuje `CreateTask` na żądanie, że host Utwórz nowe zadanie. Host zwraca wskaźnik interfejsu do `IHostTask` wystąpienia. Zwrócone zadanie musi pozostać zawieszone, aż jawnie jest uruchomione przez wywołanie do `IHostTask::Start`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

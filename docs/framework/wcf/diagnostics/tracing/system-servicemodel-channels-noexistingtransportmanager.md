@@ -2,20 +2,20 @@
 title: System.ServiceModel.Channels.NoExistingTransportManager
 ms.date: 03/30/2017
 ms.assetid: cb4173c5-476b-40d9-aa5c-19d95e98a51d
-ms.openlocfilehash: bd9cd69738778fbbc484324d0fbca319f7e8206b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e66b2975896308e37d33cf990c489f5f895214ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33477818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701342"
 ---
 # <a name="systemservicemodelchannelsnoexistingtransportmanager"></a>System.ServiceModel.Channels.NoExistingTransportManager
 System.ServiceModel.Channels.NoExistingTransportManager  
   
 ## <a name="description"></a>Opis  
- Znaleziono Brak istniejącego menedżera transportu dla określonego identyfikatora URI.  
+ Brak istniejących menedżera transportu został znaleziony dla określonego identyfikatora URI.  
   
-## <a name="see-also"></a>Zobacz też  
- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 23f2004a34f5d6dc27c8263f6e66642dd32c6a5f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 9ab55187fef11fba9c794ff0266656860bea3d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672113"
 ---
 # <a name="attribute-list-visual-basic"></a>Lista atrybutów (Visual Basic)
 Określa atrybuty, które mają zostać zastosowane do zadeklarowanego elementu programowania. Wiele atrybutów rozdziela się przecinkami. Poniżej przedstawiono składnię z jednym atrybutem.  
@@ -25,7 +25,7 @@ Określa atrybuty, które mają zostać zastosowane do zadeklarowanego elementu 
 |||
 |---|---|
 |`attributemodifier`|Wymagane na potrzeby atrybuty zastosowane na początku pliku źródłowego. Może być [zestawu](../../../visual-basic/language-reference/modifiers/assembly.md) lub [modułu](../../../visual-basic/language-reference/modifiers/module-keyword.md).|
-|`attributename`| Wymagane. Nazwa atrybutu.|
+|`attributename`| Wymagana. Nazwa atrybutu.|
 |`attributearguments`|Opcjonalna. Lista argumentów pozycyjnych dla tego atrybutu. Wiele argumentów są oddzielone przecinkami.|
 |`attributeinitializer`|Opcjonalna. Listy inicjatorów zmiennej lub właściwości dla tego atrybutu. Wiele inicjatorów są oddzielone przecinkami.|
   
@@ -53,8 +53,8 @@ Określa atrybuty, które mają zostać zastosowane do zadeklarowanego elementu 
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> wskazuje, że procedura z atrybutami reprezentuje punkt wejścia w niezarządzanej bibliotece dołączanej dynamicznie (DLL). Atrybut zawiera nazwę biblioteki DLL jako argument pozycyjny oraz inne informacje jako inicjatory zmiennych.  
   
-## <a name="see-also"></a>Zobacz też  
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
- [Module \<słowo kluczowe>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
- [Omówienie atrybuty](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [Instrukcje: przerywanie i łączenie instrukcji w kodzie](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+## <a name="see-also"></a>Zobacz także
+- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Module \<słowo kluczowe>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Omówienie atrybuty](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Instrukcje: przerywanie i łączenie instrukcji w kodzie](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a78616ea1dccdf82c4e00d23d2ff630c98cb4e38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d3c05715ffb4f7a366e3b3c9951ab68477c5c32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561494"
 ---
 # <a name="isymunmanagedreader-interface"></a>ISymUnmanagedReader — Interfejs
-Reprezentuje czytnika symboli, która zapewnia dostęp do dokumentów, metod i zmiennych w magazynie symboli.  
+Reprezentuje czytnik symbolu, który zapewnia dostęp do dokumentów, metod i zmiennych w magazynie symboli.  
   
 ## <a name="methods"></a>Metody  
   
@@ -35,22 +35,22 @@ Reprezentuje czytnika symboli, która zapewnia dostęp do dokumentów, metod i z
 |[GetDocumentVersion, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getdocumentversion-method.md)|Pobiera określoną wersję określonego dokumentu.|  
 |[GetGlobalVariables, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getglobalvariables-method.md)|Zwraca wszystkie zmienne globalne.|  
 |[GetMethod, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethod-method.md)|Pobiera metodę czytnika symboli podany token metody.|  
-|[GetMethodByVersion, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethodbyversion-method.md)|Pobiera metodę czytnika symboli podany token metody i numer wersji edycji i kopii.|  
-|[GetMethodFromDocumentPosition, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethodfromdocumentposition-method.md)|Zwraca metodę, która zawiera punkt przerwania w danej pozycji w dokumencie.|  
-|[GetMethodsFromDocumentPosition, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethodsfromdocumentposition-method.md)|Zwraca tablicę z metod, z których każdy zawiera punkt przerwania w danej pozycji w dokumencie.|  
+|[GetMethodByVersion, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethodbyversion-method.md)|Pobiera metodę czytnika symboli podany token metody i numeru wersji edycji i kopiowania.|  
+|[GetMethodFromDocumentPosition, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethodfromdocumentposition-method.md)|Zwraca metodę, która zawiera punkt przerwania na pozycji w dokumencie.|  
+|[GetMethodsFromDocumentPosition, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethodsfromdocumentposition-method.md)|Zwraca tablicę z metod, z których każdy zawiera punkt przerwania na pozycji w dokumencie.|  
 |[GetMethodVersion, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getmethodversion-method.md)|Pobiera wersję metody.|  
 |[GetNamespaces, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getnamespaces-method.md)|Pobiera przestrzenie nazw zdefiniowane w zakresie globalnym, w tym magazynie symboli.|  
-|[GetSymAttribute, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getsymattribute-method.md)|Pobiera atrybut niestandardowy ustalane na podstawie jego nazwy.|  
-|[GetSymbolStoreFileName, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getsymbolstorefilename-method.md)|Zawiera nazwę pliku na dysku magazynu symboli.|  
-|[GetUserEntryPoint, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getuserentrypoint-method.md)|Zwraca metodę, która została określona jako punktu wejścia użytkownika dla modułu, jeśli istnieje.|  
-|[GetVariables, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getvariables-method.md)|Zwracają zmienną innego niż lokalne jego nadrzędny i nazwę.|  
-|[Initialize, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-initialize-method.md)|Inicjuje czytnika symboli z interfejsem importer metadanych, który tego czytnika zostanie skojarzona z, wraz z nazwą modułu.|  
-|[ReplaceSymbolStore, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)|Zamienia istniejący magazyn symbol magazynu symboli delta.|  
-|[UpdateSymbolStore, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)|Aktualizuje istniejący magazyn symbol magazynu symboli delta.|  
+|[GetSymAttribute, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getsymattribute-method.md)|Pobiera atrybut niestandardowy na podstawie jego nazwy.|  
+|[GetSymbolStoreFileName, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getsymbolstorefilename-method.md)|Zawiera nazwę pliku na dysku w magazynie symboli.|  
+|[GetUserEntryPoint, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getuserentrypoint-method.md)|Zwraca metodę, która została określona jako punkt wejścia użytkownika dla modułu, jeśli istnieje.|  
+|[GetVariables, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-getvariables-method.md)|Zwracają zmienną inną niż lokalna, biorąc pod uwagę jej nadrzędnej i nazwę.|  
+|[Initialize, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-initialize-method.md)|Inicjuje czytnika symboli z interfejsem importera metadanych, które ten czytnik będzie skojarzona, wraz z nazwą pliku modułu.|  
+|[ReplaceSymbolStore, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)|Zamienia istniejący magazyn symboli w magazynie symboli delta.|  
+|[UpdateSymbolStore, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)|Aktualizuje istniejący magazyn symboli w magazynie symboli delta.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- [ISymUnmanagedReader2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedReader2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

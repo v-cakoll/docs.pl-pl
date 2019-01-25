@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3fd130759ab11b54b597d5c099c33dab93070ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e231c4fa51e6e66cba6227233cf73dd1cd4ebbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733925"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly — Funkcja
-Pobiera wartość wskazującą, czy jest zarządzana w określonym zestawie.  
+Pobiera wartość wskazującą, czy określony zestaw jest zarządzany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,7 +42,7 @@ HRESULT IsFrameworkAssembly (
  [in] Nazwa zestawu do sprawdzenia.  
   
  `pbIsFrameworkAssembly`  
- [out] Wartość logiczna wskazująca, czy zestaw jest zarządzana.  
+ [out] Wartość logiczna wskazująca, czy zestaw jest zarządzany.  
   
  `pwzFrameworkAssemblyIdentity`  
  [in] Uncanonicalized ciąg, który zawiera unikatową tożsamość zestawu.  
@@ -55,10 +55,10 @@ HRESULT IsFrameworkAssembly (
   
  Jeśli ten zestaw jest częścią programu .NET Framework, `pbIsFrameworkAssembly` parametr będzie zawierać wartość logiczną `true`.  
   
- Jeśli nazwany zestaw nie jest częścią programu .NET Framework lub `pwzAssemblyReference` parametru nie nadaje nazwy zestawu `pbIsFrameworkAssembly` będzie zawierać wartość logiczną `false`.  
+ Jeśli nazwany zestaw nie jest częścią programu .NET Framework lub `pwzAssemblyReference` parametru nazwy zestawu, `pbIsFrameworkAssembly` będzie zawierać wartość logiczną `false`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

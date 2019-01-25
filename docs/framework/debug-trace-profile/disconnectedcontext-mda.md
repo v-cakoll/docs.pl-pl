@@ -11,30 +11,30 @@ helpviewer_keywords:
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5232a01d877484591df63afc68f672327d4b9d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f125d322a5a3e2841d6b1ba1f2f8d5fe9745870
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569706"
 ---
 # <a name="disconnectedcontext-mda"></a>disconnectedContext MDA
-`disconnectedContext` Zarządzany Asystent debugowania (MDA) została aktywowana, podczas próby przejścia do odłączonego apartamentu lub kontekstu podczas obsługi żądania dotyczące obiektu COM środowiska CLR.  
+`disconnectedContext` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy środowisko CLR podejmuje próbę przejścia do odłączonego apartamentu lub kontekstu podczas obsługi żądanie dotyczące obiektu COM.  
   
 ## <a name="symptoms"></a>Symptomy  
- Wywołania [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) (otoki RCW) są dostarczane do podstawowy składnik modelu COM w bieżącego apartamentu lub kontekstu zamiast takie istnieją. Może to spowodować uszkodzenie i lub utratę danych, jeśli składnik modelu COM nie jest wielowątkowe, tak jak w przypadku składników jednowątkowego apartamentu (STA). Alternatywnie, jeśli Otoka RCW jest serwer proxy, wywołanie może spowodować przerzucane o <xref:System.Runtime.InteropServices.COMException> z HRESULT RPC_E_WRONG_THREAD.  
+ Wywołania na [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) są dostarczane do podstawowego składnika modelu COM w bieżącym apartamentu lub kontekstu, zamiast jednego, w którym istnieją. Może to spowodować uszkodzenie i lub utraty danych, jeśli składnik COM nie jest wielowątkowych, tak jak w przypadku składniki apartamentem jednowątkowym (przedziale STA). Alternatywnie, jeśli RCW jest serwer proxy, wywołanie może spowodować zgłaszanie z <xref:System.Runtime.InteropServices.COMException> z HRESULT RPC_E_WRONG_THREAD.  
   
 ## <a name="cause"></a>Przyczyna  
- OLE apartamentu lub kontekstu została zamknięta podczas próby przejścia do niego środowiska CLR. Najczęściej jest to spowodowane apartamentach STA, zamykana przed wszystkie składniki COM własnością apartamencie całkowicie zostały zwolnione, to może wystąpić w wyniku jawnym wywołaniem z kodu użytkownika otoki RCW lub gdy sam CLR jest manipulowanie składnika modelu COM , na przykład podczas CLR udostępnia składnika modelu COM, gdy skojarzona Otoka RCW została wyrzucona jako element bezużyteczny.  
+ OLE apartamentu lub kontekstu została zamknięta podczas prób środowiska CLR, do którego nastąpi przejście do niej. Jest to najczęściej spowodowane apartamentach STA, który jest zamykana przed udostępnieniem wszystkich składników COM należące do typu apartment zostały całkowicie, to może wystąpić w wyniku jawnym wywołaniem z kodu użytkownika na RCW lub w przypadku, gdy środowisko CLR, sama jest manipulowanie składnika COM , na przykład po środowisko CLR udostępnia składnika COM po skojarzone RCW bezużyteczne.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Aby uniknąć tego problemu, upewnij się, że wątek, który jest właścicielem STA nie kończy się przed wszystkie obiekty, które znajdują się w apartamencie aplikacji zostało zakończone. To samo dotyczy kontekstów; Upewnij się, że kontekstach nie są zamknięte przed całkowicie zakończono z wszystkie składniki modelu COM, które na żywo w kontekście aplikacji.  
+ Aby uniknąć tego problemu, sprawdź, czy wątek, który jest właścicielem STA skończył się, zanim wszystkie obiekty, które znajdują się w apartamentu aplikacji zostało zakończone. To samo dotyczy kontekstów; Upewnij się, że kontekstach nie są zamykane, zanim aplikacja jest całkowicie zakończyło się z składników modelu COM, znajdujące się w ramach kontekstu.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowisko CLR. Zwraca tylko dane o rozłączona kontekście.  
+ To zdarzenie MDA nie ma wpływu na środowisko CLR. Informuje jedynie dane o odłączony kontekst.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Raporty cookie kontekstu odłączonego apartamentu lub kontekstu.  
+ Raporty kontekstu plik cookie odłączonego apartamentu lub kontekstu.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33386252"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)

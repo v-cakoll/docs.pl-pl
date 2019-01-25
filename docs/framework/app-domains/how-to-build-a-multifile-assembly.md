@@ -1,5 +1,5 @@
 ---
-title: 'Porady: kompilacja zestawów wieloplikowych'
+title: 'Instrukcje: Kompilacja zestawów wieloplikowych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5f7bbbb2a0c0344d1da1e26d2eb35a65a56a80d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534445"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Porady: kompilacja zestawów wieloplikowych
+# <a name="how-to-build-a-multifile-assembly"></a>Instrukcje: Kompilacja zestawów wieloplikowych
 W tym artykule wyjaśniono, jak utworzyć zestaw wieloplikowy i zawiera kod, który ilustruje każdy krok w procedurze.  
   
 > [!NOTE]
@@ -96,8 +96,8 @@ W tym artykule wyjaśniono, jak utworzyć zestaw wieloplikowy i zawiera kod, kt�
   
      Możesz użyć [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby sprawdzić zawartość zestawu lub określić, czy plik jest zestawem lub modułem.  
   
-## <a name="see-also"></a>Zobacz też  
-- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Instrukcje: wyświetlanie zawartości zestawu](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)
+- [Instrukcje: Wyświetlanie zawartości zestawu](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Zestawy wieloplikowe](../../../docs/framework/app-domains/multifile-assemblies.md)

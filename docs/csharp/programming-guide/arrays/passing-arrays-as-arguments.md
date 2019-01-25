@@ -5,12 +5,12 @@ ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: 6e11020491c36349f035abb333aa3396c246dd68
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1538988c1145a19055074b440f04cbaac4ef7aa7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741181"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Przekazywanie tablic jako argumenty (C# Programming Guide)
 
@@ -58,8 +58,8 @@ W poniższym przykładzie zostanie zainicjowana i przekazywane do tablicę dwuwy
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../index.md)  
-- [Tablice](index.md)  
-- [Tablice jednowymiarowe](single-dimensional-arrays.md)  
-- [Tablice wielowymiarowe](multidimensional-arrays.md)  
-- [Tablice nieregularne](jagged-arrays.md)  
+- [Przewodnik programowania w języku C#](../index.md)
+- [Tablice](index.md)
+- [Tablice jednowymiarowe](single-dimensional-arrays.md)
+- [Tablice wielowymiarowe](multidimensional-arrays.md)
+- [Tablice nieregularne](jagged-arrays.md)

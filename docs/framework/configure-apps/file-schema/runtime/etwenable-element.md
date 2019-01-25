@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6ea2f8a32a18dfce6be54ce52ce8fef4abf92ce
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 788eee71c718c003110ad8242505f2d7868e836c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506930"
 ---
 # <a name="ltetwenablegt-element"></a>&lt;etwenable —&gt; — Element
 Określa, czy włączyć śledzenie zdarzeń dla Windows (ETW) dla typowych zdarzeń środowiska wykonawczego języka.  
   
  \<Konfiguracja > Element  
 \<środowisko uruchomieniowe > Element  
-\<etwEnabled >  
+\<etwEnabled>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -70,7 +70,7 @@ Określa, czy włączyć śledzenie zdarzeń dla Windows (ETW) dla typowych zdar
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Zobacz także
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Kontrolowanie logowania w programie .NET Framework](../../../../../docs/framework/performance/controlling-logging.md)

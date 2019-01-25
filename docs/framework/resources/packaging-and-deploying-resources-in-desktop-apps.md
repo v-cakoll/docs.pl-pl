@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2f0ceced1749f42d57094a09f768c192b49ff4e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad74b9e23c65209c8084588d09670e3c64e44213
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493732"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Opakowanie i wdrażanie zasobów w aplikacjach .NET
 Aplikacje polegają na .NET Framework Menedżera zasobów, reprezentowane przez <xref:System.Resources.ResourceManager> klasy w celu pobrania zlokalizowanych zasobów. Menedżer zasobów przyjęto założenie, że modelu topologi gwiaździstej umożliwia tworzenie pakietów i wdrażanie zasobów. Piasta to główny zestaw, który zawiera kod wykonywalny nielokalizowanych i zasoby dla jednej kultury, o nazwie zero lub kultury domyślnej. Domyślną kulturę używaną jest rezerwowego kulturą aplikacji; jest kultury, którego zasoby są używane, jeśli nie można odnaleźć zlokalizowanych zasobów. Każdej szprysze nawiązuje połączenie z zestawem satelickim, która zawiera zasoby dla jednej kultury, ale nie zawiera żadnego kodu.  
@@ -221,8 +221,8 @@ Bon jour!
 ## <a name="suggested-packaging-alternative"></a>Sugerowane alternatywne opakowanie  
  Ograniczenia czasu i budżetu może uniemożliwić tworzenie zestaw zasobów do każdej przeszczepiania, którą obsługuje aplikacja. Zamiast tego można utworzyć zestawu satelickiego pojedynczej kultury nadrzędnej, czy wszystkie powiązane podhodowli może użyć. Można na przykład można podać jako pojedynczy angielskiej satelicki (en) pobierany przez użytkowników, którzy żądają specyficzne dla regionu angielski zasobów i zestawem pojedynczego satelickim niemiecki (de) dla użytkowników, którzy żądają niemieckiego zasoby specyficzne dla regionu. Na przykład żądania dla języka niemieckiego jak używany w Niemczech (de-DE), Austria (de-AT), a także Szwajcarii (de-CH) może spowodować powrót do zestawu satelickiego niemiecki (de). Domyślne zasoby są końcowego rezerwowe, powinien być zasoby, które będzie wymagane przez większość użytkowników aplikacji, więc wybrać dokładnie te zasoby. Ta metoda służy do wdrażania zasobów, które są mniej kulturalnie określonych, ale mogą znacznie zmniejszyć koszty lokalizacja Twojej aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)  
- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
- [Tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+## <a name="see-also"></a>Zobacz także
+- [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)
+- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
+- [Tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

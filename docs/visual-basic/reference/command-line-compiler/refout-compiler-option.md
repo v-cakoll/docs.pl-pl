@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: 8a8068c467f9066af3153434187749fa80d254ca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3d7f5f9065ba53bd037d7307f62c9acad913b8e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638709"
 ---
 # <a name="-refout-visual-basic"></a>-opcji refout (Visual Basic)
 
@@ -40,8 +40,8 @@ Zestawy referencyjne zawierają poziomie zestawu [ReferenceAssembly](xref:System
 
 `-refout` i [ `-refonly` ](refonly-compiler-option.md) opcje wykluczają się wzajemnie.
 
-## <a name="see-also"></a>Zobacz też
-[-jest opcja refonly](refonly-compiler-option.md)   
-[Kompilator wiersza polecenia programu Visual Basic](index.md)  
-[Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)  
+## <a name="see-also"></a>Zobacz także
+- [-refonly](refonly-compiler-option.md)
+- [Kompilator wiersza polecenia programu Visual Basic](index.md)
+- [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)
 

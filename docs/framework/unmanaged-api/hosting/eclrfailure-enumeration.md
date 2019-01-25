@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef4e12015adc3d6e67ad9c8ba8b152cd775b85e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3109d5ba49b01f25c72aaa1c31c74984a683dd73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746534"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure — Wyliczenie
-W tym artykule opisano zestaw awarie, dla których hosta można ustawić akcje zasady.  
+W tym artykule opisano zestaw awarie, dla których hosta można ustawić akcje dotyczące zasad.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,28 +44,28 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`FAIL_NonCriticalResource`|Wystąpił błąd podczas próby przydzielić zasobów (np. wątek, blok pamięci lub blokady) w regionie niekrytyczne kodu.|  
-|`FAIL_CriticalResource`|Wystąpił błąd podczas próby przydzielić zasobów (np. wątek, blok pamięci lub blokady) w regionie krytyczne kodu.|  
-|`FAIL_FatalRuntime`|Środowisko uruchomieniowe języka wspólnego (CLR) nie jest już mogli uruchamiać kodu zarządzanego w procesie. Odtąd wartość HRESULT HOST_E_CLRNOTAVAILABLE zwracana wywołania wszystkie funkcje hostingu.|  
-|`FAIL_OrphanedLock`|Wątek nie powiodło się zwolnić blokady na zwracanie z <xref:System.AppDomain> obiektu. Hosta nie można ustawić tego błędu powoduje wątku do przerwania.|  
-|`FAIL_StackOverflow`|Ma doszło do przepełnienia stosu.|  
+|`FAIL_NonCriticalResource`|Wystąpił błąd podczas próby przydzielenia zasobu (na przykład wątku, blok pamięci lub blokadę) w regionie niekrytyczne kodu.|  
+|`FAIL_CriticalResource`|Wystąpił błąd podczas próby przydzielenia zasobu (na przykład wątku, blok pamięci lub blokady) krytyczne obszar kodu.|  
+|`FAIL_FatalRuntime`|Środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe do uruchomienia kodu zarządzanego w procesie. Odtąd wywołania wszystkie funkcje hostingu zwraca wartość HRESULT HOST_E_CLRNOTAVAILABLE.|  
+|`FAIL_OrphanedLock`|Wątek nie udało się zwolnić blokady po powrocie z <xref:System.AppDomain> obiektu. Host nie można ustawić tego błędu, aby spowodować, że wątek przerwać.|  
+|`FAIL_StackOverflow`|Wystąpiło przepełnienie stosu.|  
 |`FAIL_AccessViolation`|Nastąpiła próba odczytu lub zapisu pamięci chronionej. Nieobsługiwane w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
-|`FAIL_CodeContract`|Wystąpił błąd kontraktu kodu. Zobacz [kodu kontrakty](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
+|`FAIL_CodeContract`|Wystąpił błąd kodu kontraktu. Zobacz [kodu umów](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- Zobacz [ICLRPolicyManager::SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) metody listę [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) wartości hosta można użyć do określenia akcje zasad warunki błędu. Aby uzyskać więcej informacji na temat regionów krytyczne i niekrytyczne kod, zobacz [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
+ Zobacz [iclrpolicymanager::setactiononfailure —](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) metody, aby uzyskać listę [epolicyaction —](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) wartości hosta można użyć do określenia akcje zasad warunki błędu. Aby uzyskać więcej informacji na temat regionów krytyczne i niekrytyczne kodu, zobacz [eclroperation —](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [SetActionOnFailure, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)  
- [IHostPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [SetActionOnFailure, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)
+- [IHostPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

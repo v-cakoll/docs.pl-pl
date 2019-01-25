@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cfac1304a3d60a418065e4fc2994705548eeac3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 760c2d927409ef9f0a1f7a72c33efd3a7618f771
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678629"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>ICorProfilerInfo2::GetGenerationBounds — Metoda
-Pobiera regiony pamięci, które są segmentów sterty, wchodzące w skład różnych generacji wyrzucania elementów w kolekcji.  
+Pobiera regiony pamięci, które są segmenty stosu, które składają się na różnych generacji wyrzucania elementów w kolekcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,25 +38,25 @@ HRESULT GetGenerationBounds(
   
 #### <a name="parameters"></a>Parametry  
  `cObjectRanges`  
- [in] Liczba elementów przydzielone przez obiekt wywołujący dla `ranges` tablicy.  
+ [in] Liczba elementów przydzielonej przez obiekt wywołujący, aby uzyskać `ranges` tablicy.  
   
  `pcObjectRanges`  
- [out] Wskaźnik do wartości całkowitej, łączna liczba zakresów, który określa niektóre lub wszystkie z nich zostaną zwrócone w `ranges` tablicy.  
+ [out] Wskaźnik do liczby całkowitej określający łączna liczba zakresów, niektóre lub wszystkie z nich zostaną zwrócone w `ranges` tablicy.  
   
  `ranges`  
- [out] Tablica [cor_prf_gc_generation_range —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) struktury, z których każdy zawiera opis zakresu (to znaczy bloku) pamięci w ramach wybranej generacji jest poddawana wyrzucanie elementów bezużytecznych.  
+ [out] Tablica [cor_prf_gc_generation_range —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) struktur, z których każdy zawiera opis zakresu (czyli bloku) pamięci w generacji, która jest w trakcie wyrzucania elementów bezużytecznych.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetGenerationBounds` Można wywołać metody zwrotne profilera, pod warunkiem, że pamięci nie jest w toku. Oznacza to, może zostać wywołana z dowolnego wywołania zwrotnego z wyjątkiem tych, które mają miejsce między [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) i [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).  
+ `GetGenerationBounds` Metodę można wywołać z dowolnego wywołania zwrotnego profilera, pod warunkiem, że wyrzucanie elementów bezużytecznych nie jest w toku. Oznacza to, mogą być wywoływane z dowolnego wywołania zwrotnego, z wyjątkiem tych, które mają miejsce między [icorprofilercallback2::garbagecollectionstarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) i [icorprofilercallback2::garbagecollectionfinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).  
   
- Większość zmieni pokoleń odbywa się podczas odzyskiwania. Generacje mogą rosnąć między kolekcji, ale zwykle nie należy przenosić. W związku z tym najbardziej interesujące miejsca do wywołania `GetGenerationBounds` w `ICorProfilerCallback2::GarbageCollectionStarted` i `ICorProfilerCallback2::GarbageCollectionFinished`.  
+ Większość przesunięcie pokoleń ma miejsce podczas wyrzucania elementów bezużytecznych. Generacje może rosnąć między operacjami, ale zwykle nie zmieniają położenie. W związku z tym, najbardziej interesujących miejsc do wywołania `GetGenerationBounds` znajdują się w `ICorProfilerCallback2::GarbageCollectionStarted` i `ICorProfilerCallback2::GarbageCollectionFinished`.  
   
- Podczas uruchamiania programu niektóre obiekty są przydzielane przez środowisko uruchomieniowe języka wspólnego (CLR), zazwyczaj w generacje 3 i 0. W związku z tym w czasie kodu zarządzanego rozpoczyna wykonywanie tych generacje już będzie zawierać obiektów. Zwykle jest pusta, z wyjątkiem fikcyjny obiektów, które są generowane przez moduł garbage collector generacji 1 i 2. (Rozmiar fikcyjny obiektów jest 12 bajtów w implementacjach 32-bitowego środowiska CLR; rozmiar jest większy w implementacjach 64-bitowe). Może być również wyświetlany zakresy generacji 2, które znajdują się wewnątrz modułów utworzonego przez Generator obrazu natywnego (NGen.exe). W takim przypadku obiekt w generacji 2 są *zablokowane obiekty*, które są przydzielane po uruchomieniu NGen.exe, a nie przez moduł garbage collector.  
+ Podczas uruchamiania programu niektóre obiekty są przydzielane przez środowisko uruchomieniowe języka wspólnego (CLR), zwykle w generacjach 3 i 0. W związku z tym według czasu, w kodzie zarządzanym rozpoczyna wykonywanie, generacje te będą już zawierać obiekty. Zwykle jest pusta, z wyjątkiem fikcyjnego obiektów, które są generowane przez moduł odśmiecania pamięci generacji 1 i 2. (Rozmiar obiektów zastępczy jest 12-bajtowy we wdrożeniach 32-bitowe środowisko CLR; rozmiar jest większy we wdrożeniach 64-bitowych). Może być również wyświetlany zakresów generacji 2, które znajdują się w modułach produkowane przez Native Image Generator (NGen.exe). W tym przypadku są obiekty w generacji 2 *mrożone obiekty*, które są przydzielane po uruchomieniu NGen.exe, a nie przez moduł odśmiecania pamięci.  
   
- Ta funkcja korzysta buforów przydzielone przez obiekt wywołujący.  
+ Ta funkcja używa bufory przypisane do obiektu wywołującego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -64,8 +64,8 @@ HRESULT GetGenerationBounds(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

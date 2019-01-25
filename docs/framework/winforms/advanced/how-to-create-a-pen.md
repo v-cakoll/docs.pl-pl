@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie pióra'
+title: 'Instrukcje: Tworzenie pióra'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pens [Windows Forms], creating
 - Pen object
 ms.assetid: 7fbea8b7-7ac1-4413-9c17-733a850381e3
-ms.openlocfilehash: aff1771af12a9f59127a9f21f4b692d6214c457d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8a61e554ef58ca216050d34269e44355f7c1aaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527448"
 ---
-# <a name="how-to-create-a-pen"></a>Porady: tworzenie pióra
+# <a name="how-to-create-a-pen"></a>Instrukcje: Tworzenie pióra
 Ten przykład tworzy <xref:System.Drawing.Pen> obiektu.  
   
 ## <a name="example"></a>Przykład  
@@ -26,9 +26,9 @@ Ten przykład tworzy <xref:System.Drawing.Pen> obiektu.
  [!code-vb[System.Drawing.ConceptualHowTos#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#3)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Po zakończeniu pracy obiekty używające zasobów systemowych, takich jak <xref:System.Drawing.Pen> obiektów, należy wywołać <xref:System.Drawing.Pen.Dispose%2A> na nich.  
+ Po zakończeniu korzystania z obiektów, których wartość użycia zasobów systemowych, takich jak <xref:System.Drawing.Pen> obiektów, należy wywołać <xref:System.Drawing.Pen.Dispose%2A> na nich.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Drawing.Pen>  
- [Wprowadzenie do programowania grafiki](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Pióra, linie i prostokąty w GDI+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Drawing.Pen>
+- [Wprowadzenie do programowania grafiki](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+- [Pióra, linie i prostokąty w GDI+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)

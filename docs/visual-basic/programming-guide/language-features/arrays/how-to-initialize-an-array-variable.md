@@ -1,5 +1,5 @@
 ---
-title: 'Porady: inicjowanie zmiennej tablicy w języku Visual Basic'
+title: 'Instrukcje: Inicjowanie zmiennej tablicy w języku Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 4ce2e061c5f523fae3020b08034875422a0062a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 67382359a97e9f60b079de1d25589de446042237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638934"
 ---
-# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Porady: inicjowanie zmiennej tablicy w języku Visual Basic
+# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Instrukcje: Inicjowanie zmiennej tablicy w języku Visual Basic
 Inicjowanie zmiennej tablicy, umieszczając dołączyć literał tablicy `New` klauzula i określić wartość początkową tablicy. Możesz określić typ lub Zezwalaj, aby był wywnioskowany z wartości w literale tablicy. Aby uzyskać więcej informacji na temat sposobu typ jest wnioskowany, zobacz "Wypełnianie tablicy początkowymi wartościami" w [tablic](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Aby zainicjalizować zmienną tablicy przy użyciu literału tablicowego  
@@ -53,6 +53,6 @@ Inicjowanie zmiennej tablicy, umieszczając dołączyć literał tablicy `New` k
   
      [!code-vb[VbVbalrArrays#32](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_6.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Rozwiązywanie problemów związanych z tablicami](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+## <a name="see-also"></a>Zobacz także
+- [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Rozwiązywanie problemów związanych z tablicami](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

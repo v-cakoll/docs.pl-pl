@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 14e70a07469d6bb2701884d8646d161c78e65dc0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a13b1a3d3e44f2c309e031e23972a5326ed3faa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653622"
 ---
 # <a name="event-statement"></a>Event — Instrukcja
 Deklaruje zdarzenie zdefiniowane przez użytkownika.  
@@ -117,15 +117,15 @@ End Event
 > [!NOTE]
 >  `My.Application.DoEvents` Metoda nie może przetwarzać zdarzenia w taki sam sposób, w formularzu jest. Aby włączyć formularz do obsługi zdarzeń bezpośrednio, można użyć wielowątkowości. Aby uzyskać więcej informacji, zobacz [zarządzana wątkowość](../../../standard/threading/index.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [RaiseEvent, instrukcja](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [Implements, instrukcja](../../../visual-basic/language-reference/statements/implements-statement.md)  
- [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [AddHandler, instrukcja](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler, instrukcja](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
- [Delegate, instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Jak: Deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
- [Jak: Deklarowanie zdarzeń niestandardowych w celu unikania blokowania](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+## <a name="see-also"></a>Zobacz także
+- [RaiseEvent, instrukcja](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [Implements, instrukcja](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [AddHandler, instrukcja](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler, instrukcja](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Delegate, instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Instrukcje: Deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Instrukcje: Deklarowanie zdarzeń niestandardowych w celu unikania blokowania](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
+- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)

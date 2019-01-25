@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a94797e6279a1f1d419b977c22d73ca41bbafc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67a133604e269b8c20dc8640b91e378c498cf038
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745585"
 ---
 # <a name="ihosttaskmanagerbeginthreadaffinity-method"></a>IHostTaskManager::BeginThreadAffinity — Metoda
-Powiadamia hosta, którego kod zarządzany jest wprowadzanie okres, w którym bieżącego zadania nie muszą zostać przeniesione do innego wątku systemu operacyjnego.  
+Powiadamia hosta, którego kod zarządzany wchodzi okres, w którym bieżące zadanie musi nie można przenieść na inny wątek systemu operacyjnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,27 +37,27 @@ HRESULT BeginThreadAffinity ();
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`BeginThreadAffinity` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`BeginThreadAffinity` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Zazwyczaj wymaga środowiska CLR `IHostTaskManager::BeginThreadAffinity` w kontekście wywołania <xref:System.Threading.Thread.BeginThreadAffinity%2A?displayProperty=nameWithType>. Bieżące zadanie musi nie można przeprowadzić, aż do dokonania odpowiedniego wywołania do [IHostTaskManager::EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md). Zadania mogą być przełączane wychodzących, ale podczas przełączania w ich muszą być przypisane do tego samego wątku systemu operacyjnego, w którym zostały przełączone limit. Zagnieżdżone wywołania `BeginThreadAffinity` nie mają wpływu, ponieważ wywołanie odwołuje się do bieżącego zadania.  
+ Środowisko CLR jest zazwyczaj wywołuje `IHostTaskManager::BeginThreadAffinity` w kontekście wywołanie <xref:System.Threading.Thread.BeginThreadAffinity%2A?displayProperty=nameWithType>. Bieżące zadanie nie musi ponownie, dopóki odpowiednie połączenie jest nawiązywane w przypadku [ihosttaskmanager::endthreadaffinity —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md). Zadania mogą być przełączane w poziomie, ale podczas przełączania w ich muszą być przypisane do tego samego wątku systemu operacyjnego, w którym zostały przełączenie. Zagnieżdżone wywołania `BeginThreadAffinity` miało żadnego efektu, ponieważ wywołanie odnosi się do bieżącego zadania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b149f21a2cb51740f0027f6b01984c628723939
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f043fa541073402bee9fc4cf84e8151e6e0192f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549213"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Asembler IL)
 
@@ -48,7 +48,7 @@ ilasm [options] filename [[options]filename...]
 |**/ARM**|Określa procesor Advanced RISC Machine (ARM) jako procesor docelowy.<br /><br /> Jeśli nie liczby bitów obrazu jest określony, wartością domyślną jest **/32bitpreferred**.|
 |**uwzględniają:** `integer`|Ustawia dla właściwości ImageBase wartość określoną przez `integer` w opcjonalnym nagłówku NT. Jeśli dyrektywa języka IL .imagebase została określona w pliku, ta opcja zastępuje ją.|
 |**/Clock**|Mierzy i raportuje następujące czasy kompilacji (w milisekundach) dla określonego pliku źródłowego il:<br /><br /> **Łączna liczba wykonywania**: Całkowity czas wykonywania wszystkich określonych operacji, które należy wykonać.<br /><br /> **Uruchamianie**: Ładowanie i otwarcie pliku.<br /><br /> **Emitowanie MD**: Emitowanie metadanych.<br /><br /> **REF zamiana**: Zamiana odwołań na definicje w pliku.<br /><br /> **Generowanie pliku CEE**: Trwa generowanie obrazu pliku w pamięci.<br /><br /> **PE pliku zapisywania**: Zapisywanie obrazu do pliku PE.|
-|**/ debug**[:**IMPL**&#124;**OPT**]|Dołącza informacje o debugowaniu (zmienne lokalne, nazwy argumentów i numery wierszy). Tworzy plik PDB.<br /><br /> **/ debug** bez dodatkowych wartości wyłącza optymalizację JIT i używa sekwencji punktów z pliku PDB.<br /><br /> **IMPL** wyłącza optymalizację JIT i używa niejawnej sekwencji punktów.<br /><br /> **Zgłoszenie zgody na uczestnictwo** włącza optymalizację JIT i używa niejawnej sekwencji punktów.|
+|**/debug**[:**IMPL**&#124;**OPT**]|Dołącza informacje o debugowaniu (zmienne lokalne, nazwy argumentów i numery wierszy). Tworzy plik PDB.<br /><br /> **/ debug** bez dodatkowych wartości wyłącza optymalizację JIT i używa sekwencji punktów z pliku PDB.<br /><br /> **IMPL** wyłącza optymalizację JIT i używa niejawnej sekwencji punktów.<br /><br /> **Zgłoszenie zgody na uczestnictwo** włącza optymalizację JIT i używa niejawnej sekwencji punktów.|
 |**/ dll**|Tworzy *.dll* pliku jako dane wyjściowe.|
 |**ENC:** `file`|Tworzy plik różnic Edytuj-i-Kontynuuj z określonego pliku źródłowego.<br /><br /> Ten argument jest tylko do użytku akademickiego i nie jest obsługiwany w użytku komercyjnym.|
 |**/exe**|Tworzy plik wykonywalny jako dane wyjściowe. Domyślnie włączone.|
@@ -58,10 +58,10 @@ ilasm [options] filename [[options]filename...]
 |**/ include:** `includePath`|Ustawia ścieżkę wyszukiwania plików dołączonych za pomocą `#include`.|
 |**/Itanium**|Określa procesor Intel Itanium jako procesor docelowy.<br /><br /> Jeśli nie liczby bitów obrazu jest określony, wartością domyślną jest **/pe64**.|
 |**następujący/key:** `keyFile`|Kompiluje `filename` za pomocą silnego podpisu, używając klucza prywatnego zawartego w `keyFile`.|
-|**następujący/key:** @`keySource`|Kompiluje `filename` za pomocą mocnej sygnatury przy użyciu klucza prywatnego utworzonego w lokalizacji `keySource`.|
+|**/key:** @`keySource`|Kompiluje `filename` za pomocą mocnej sygnatury przy użyciu klucza prywatnego utworzonego w lokalizacji `keySource`.|
 |**/ wystawienie**|Tworzy plik listy w standardowym wyjściu. Jeśli ta opcja zostanie pominięta, plik listy nie zostanie utworzony.<br /><br /> Ten parametr nie jest obsługiwany w programie .NET Framework 2.0 i nowszych.|
 |**MDV:** `versionString`|Ustawia ciąg wersji metadanych.|
-|**/mSv:** `major`.`minor`|Ustawia wersję strumienia metadanych, gdzie `major` i `minor` są liczbami całkowitymi.|
+|**/msv:** `major`.`minor`|Ustawia wersję strumienia metadanych, gdzie `major` i `minor` są liczbami całkowitymi.|
 |**/noautoinherit**|Wyłącza domyślne dziedziczenie z <xref:System.Object> gdy określono nie ma klasy podstawowej.|
 |**/nocorstub**|Powoduje pominięcie generowania procedury wejścia CORExeMain.|
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|
@@ -229,7 +229,7 @@ Poniższy przykład kodu w języku IL odpowiada poprzedniemu przykładowi kodu w
 
 ## <a name="see-also"></a>Zobacz także
 
-[Narzędzia](../../../docs/framework/tools/index.md)  
-[*Ildasm.exe* (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
-[Proces zarządzanego wykonania](../../../docs/standard/managed-execution-process.md)  
-[Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Narzędzia](../../../docs/framework/tools/index.md)
+- [*Ildasm.exe* (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Proces zarządzanego wykonania](../../../docs/standard/managed-execution-process.md)
+- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

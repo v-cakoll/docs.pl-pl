@@ -9,20 +9,20 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 4ab6d376ad8652e460e33c4f2c3285e8c80286fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81817af230298528a766aa6494899538c35da7bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707625"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Rozwiązywanie problemów związanych z tablicami (Visual Basic)
-Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas pracy z tablicami.  
+Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpić podczas pracy z tablicami.  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Błędy kompilacji deklarowanie i Inicjowanie tablicy  
- Błędy kompilacji mogą wynikać z nieporozumienia zasady deklarowanie, tworzenie i Inicjowanie tablic. Najczęstszymi przyczynami błędów są następujące:  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Błędy kompilacji deklarowania i inicjowania tablicy  
+ Błędy kompilacji mogą wynikać z nieporozumienia reguły deklarowania, tworzenia i inicjowania tablic. Najbardziej typowe przyczyny błędów są następujące:  
   
--   Dostarczanie [operatora New](../../../../visual-basic/language-reference/operators/new-operator.md) klauzuli po określeniu długości wymiaru w deklaracji zmiennej tablicy. Poniższe wiersze kodu pokazują nieprawidłowy deklaracje tego typu.  
+-   Dostarczanie [operatora New](../../../../visual-basic/language-reference/operators/new-operator.md) klauzuli po określeniu długości wymiarów w deklaracji zmiennej tablicy. Następujące wiersze kodu pokazują nieprawidłowe deklarację tego typu.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas pr
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   Określanie długości wymiaru więcej niż tablicy nieregularnej tablicy najwyższego poziomu. Następujący wiersz kodu zawiera nieprawidłową deklaracją tego typu.  
+-   Określenie długości wymiarów dla więcej niż najwyższego poziomu tablicy nieregularnej tablicy. Następujący wiersz kodu zawiera nieprawidłowy deklaracja tego typu.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   Pominięcie `New` — słowo kluczowe podczas określania wartości elementu. Następujący wiersz kodu zawiera nieprawidłową deklaracją tego typu.  
+-   Pominięcie `New` — słowo kluczowe podczas określania wartości elementu. Następujący wiersz kodu zawiera nieprawidłowy deklaracja tego typu.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   Dostarczanie `New` klauzuli bez nawiasów klamrowych (`{}`). Poniższe wiersze kodu pokazują nieprawidłowy deklaracje tego typu.  
+-   Dostarczanie `New` klauzuli bez nawiasów klamrowych (`{}`). Następujące wiersze kodu pokazują nieprawidłowe deklarację tego typu.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -49,14 +49,14 @@ Ta strona zawiera listę typowych problemów, które mogą wystąpić podczas pr
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
 ## <a name="accessing-an-array-out-of-bounds"></a>Uzyskiwanie dostępu do tablicy poza zakresem  
- Proces inicjowania tablicy przypisuje górną i dolną granicę każdego wymiaru. Nieprawidłowy indeks lub indeks, dla każdego wymiaru, należy określić co dostępu do elementu tablicy. W przypadku indeksu poniżej dolna lub powyżej górnej granicy, <xref:System.IndexOutOfRangeException> wyników wyjątku. Kompilator nie może wykryć wystąpił błąd, więc wystąpi błąd w czasie wykonywania.  
+ Proces inicjowania tablicy przypisuje górną granicę i dolną granicę każdego wymiaru. Każdy dostęp do elementu tablicy, należy określić prawidłowy indeksu lub indeksu dolnego, dla każdego wymiaru. W przypadku dowolnego indeksu poniżej dolna lub powyżej jego górnej granicy <xref:System.IndexOutOfRangeException> wynikiem będzie wyjątek. Kompilator nie może wykryć takiego komunikatu o błędzie, więc wystąpi błąd w czasie wykonywania.  
   
-### <a name="determining-bounds"></a>Określanie granic  
- Jeśli inny składnik przekazuje tablicy do kodu, na przykład jako argument procedury nie znasz rozmiaru tablicy lub długości jej wymiarów. Zawsze należy określić górną granicę każdego wymiaru tablicy można było uzyskać dostępu do żadnych elementów. Jeśli tablica został utworzony za pomocą środków innych niż języka Visual Basic `New` klauzuli, dolna granica może być inną niż 0 i jest najbezpieczniejszy określić, że dolna granica również.  
+### <a name="determining-bounds"></a>Określanie granice  
+ Jeśli inny składnik przekazuje tablicę do kodu, na przykład jako argumentu procedury nie znasz rozmiaru tablicy lub długości jej wymiarów. Przed przystąpieniem do dostępu do żadnych elementów, należy zawsze określić górną granicę dla każdego wymiaru tablicy. Jeśli tablica została utworzona przy użyciu niektórych metod innych niż w języku Visual Basic `New` klauzuli dolna granica może być coś innego niż 0 i jest najbezpieczniejszy określić również tego dolna granica.  
   
 ### <a name="specifying-the-dimension"></a>Określanie wymiaru  
- Podczas określania granice tablicy wielowymiarowej, należy zadbać określania wymiaru. `dimension` Parametry <xref:System.Array.GetLowerBound%2A> i <xref:System.Array.GetUpperBound%2A> metody są oparte na 0, podczas `Rank` parametry Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> i <xref:Microsoft.VisualBasic.Information.UBound%2A> funkcje są oparte na 1.  
+ Podczas określania granice tablicy wielowymiarowej, powinien zachować ostrożność, jak określić wymiaru. `dimension` Parametry <xref:System.Array.GetLowerBound%2A> i <xref:System.Array.GetUpperBound%2A> metody są oparte na 0, podczas `Rank` parametry języka Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> i <xref:Microsoft.VisualBasic.Information.UBound%2A> funkcje są oparte na 1.  
   
-## <a name="see-also"></a>Zobacz też  
- [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Porady: inicjowanie zmiennej tablicy w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+## <a name="see-also"></a>Zobacz także
+- [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Instrukcje: Inicjowanie zmiennej tablicy w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

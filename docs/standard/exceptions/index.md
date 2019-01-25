@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 648a4d9e2f9be2cd8a5912ebfe272331a70ee76e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707885"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Obsługa i zgłaszanie wyjątków na platformie .NET
 
@@ -60,13 +60,13 @@ W poniższej tabeli wymieniono niektóre typowe wyjątki z przykładami co mogą
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Właściwości i klasy wyjątków](exception-class-and-properties.md)  
-- [Instrukcje: Używanie bloku try/catch do przechwytywania wyjątków](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
-- [Instrukcje: Używanie określonych wyjątków w bloku catch](how-to-use-specific-exceptions-in-a-catch-block.md)  
-- [Instrukcje: Jawne zgłaszanie wyjątków](how-to-explicitly-throw-exceptions.md)  
-- [Instrukcje: Tworzenie wyjątków zdefiniowanych przez użytkownika](how-to-create-user-defined-exceptions.md)  
-- [Używanie obsługi wyjątków filtrowanych przez użytkownika](using-user-filtered-exception-handlers.md)  
-- [Instrukcje: Używanie bloków finally](how-to-use-finally-blocks.md)  
-- [Obsługa wyjątków międzyoperacyjności COM](handling-com-interop-exceptions.md)  
-- [Najlepsze rozwiązania dotyczące wyjątków](best-practices-for-exceptions.md)  
+- [Właściwości i klasy wyjątków](exception-class-and-properties.md)
+- [Instrukcje: Użyj bloku Try / Catch do przechwytywania wyjątków](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [Instrukcje: Używanie określonych wyjątków w bloku Catch](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [Instrukcje: Jawne zgłaszanie wyjątków](how-to-explicitly-throw-exceptions.md)
+- [Instrukcje: Tworzenie wyjątków zdefiniowanych przez użytkownika](how-to-create-user-defined-exceptions.md)
+- [Używanie obsługi wyjątków filtrowanych przez użytkownika](using-user-filtered-exception-handlers.md)
+- [Instrukcje: Używanie bloków Finally](how-to-use-finally-blocks.md)
+- [Obsługa wyjątków międzyoperacyjności COM](handling-com-interop-exceptions.md)
+- [Najlepsze rozwiązania dotyczące wyjątków](best-practices-for-exceptions.md)
 - [Co Dev co trzeba wiedzieć o wyjątków w środowisku uruchomieniowym](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).

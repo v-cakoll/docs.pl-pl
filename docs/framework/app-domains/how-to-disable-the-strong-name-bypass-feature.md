@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wyłączanie funkcji pomijania silnej nazwy'
+title: 'Instrukcje: Wyłączanie funkcji pomijania silnej nazwy'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 628bc1f89e5e09b47c70e39e107987753697cdb4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cd4e5ea1907ec3de4536d09b3d76ca4956c8756d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494305"
 ---
-# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Porady: wyłączanie funkcji pomijania silnej nazwy
+# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Instrukcje: Wyłączanie funkcji pomijania silnej nazwy
 Począwszy od wersji programu .NET Framework 3.5 z dodatkiem Service Pack 1 (SP1), podpisy silnej nazwy nie są weryfikowane, gdy zestaw jest ładowany do pełnego zaufania <xref:System.AppDomain> obiektu, takie jak domyślny <xref:System.AppDomain> dla `MyComputer` strefy. Jest to określane jako silnej nazwy pomijania funkcji. W pełni zaufanym środowisku, zażąda dla <xref:System.Security.Permissions.StrongNameIdentityPermission> zawsze kończą się pomyślnie dla podpisanej zestawów pełnego zaufania, niezależnie od ich podpisu. Jedynym ograniczeniem jest to, że zestaw musi być w pełni zaufany, ponieważ jej strefy jest w pełni zaufany. Ponieważ silnej nazwy nie jest czynnikiem decydującym w tych warunkach, nie ma powodu dla niego ma zostać zweryfikowana. Pomijanie sprawdzania poprawności podpisy silnej nazwy oferuje znaczne ulepszenia wydajności.  
   
  Funkcja pomijania ma zastosowanie do dowolnego złożenia pełnego zaufania, który jest nie podpisywane z opóźnieniem i który jest ładowany do dowolnego pełnego zaufania <xref:System.AppDomain> z katalogu określonego przez jego <xref:System.AppDomainSetup.ApplicationBase%2A> właściwości.  
@@ -53,7 +53,7 @@ Począwszy od wersji programu .NET Framework 3.5 z dodatkiem Service Pack 1 (SP1
 > [!NOTE]
 >  Weryfikacja silnej nazwy włączać i wyłączać dla aplikacji, można włączyć tylko wtedy, gdy funkcja pomijania jest włączona na komputerze. Jeśli funkcja pomijania zostało wyłączone dla komputera, silne nazwy są Walidowane dla wszystkich aplikacji i nie można pominąć sprawdzanie poprawności dla pojedynczej aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
-- [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
-- [\<bypasstrustedappstrongnames — > Element](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)  
+## <a name="see-also"></a>Zobacz także
+- [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [\<bypassTrustedAppStrongNames> Element](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
 - [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

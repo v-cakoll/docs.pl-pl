@@ -1,18 +1,18 @@
 ---
-title: 'Wskazówki: hosing zawartości Direct3D9 w WPF'
+title: 'Przewodnik: Hosting zawartości Direct3D9 w WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 1fa4c2347448e23bbf740093541ec2b834df6705
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c8bee03cc3a72e1938cca182d59818f9bc2eabc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626091"
 ---
-# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Wskazówki: hosing zawartości Direct3D9 w WPF
+# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Przewodnik: Hosting zawartości Direct3D9 w WPF
 Ten poradnik pokazuje jak do hostowania zawartości Direct3D9 w aplikacji Windows Presentation Foundation (WPF).  
   
  W tym przewodniku należy wykonać następujące zadania:  
@@ -32,14 +32,14 @@ Ten poradnik pokazuje jak do hostowania zawartości Direct3D9 w aplikacji Window
   
 -   DirectX SDK 9 lub nowszy.  
   
--   Biblioteka DLL, która zawiera zawartości Direct3D9 w formacie zgodnym z WPF. Aby uzyskać więcej informacji, zobacz [WPF i Direct3D9 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md) i [wskazówki: tworzenie zawartości Direct3D9 dla hostingu w WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
+-   Biblioteka DLL, która zawiera zawartości Direct3D9 w formacie zgodnym z WPF. Aby uzyskać więcej informacji, zobacz [WPF i Direct3D9 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md) i [instruktażu: Tworzenie zawartości Direct3D9 dla hostingu w WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
   
 ## <a name="creating-the-wpf-project"></a>Tworzenie projektu WPF  
  Pierwszym krokiem jest utworzenie projektu dla aplikacji WPF.  
   
 #### <a name="to-create-the-wpf-project"></a>Aby utworzyć projekt WPF  
   
--   Utwórz nowy projekt aplikacji WPF w języku Visual C# o nazwie `D3DHost`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie nowego projektu aplikacji WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+-   Utwórz nowy projekt aplikacji WPF w języku Visual C# o nazwie `D3DHost`. Aby uzyskać więcej informacji, zobacz [jak: Utwórz nowy projekt aplikacji WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
      Otworzy się w pliku MainWindow.xaml [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
@@ -71,6 +71,6 @@ Ten poradnik pokazuje jak do hostowania zawartości Direct3D9 w aplikacji Window
   
      Zawartości Direct3D9 pojawia się w obrębie aplikacji WPF.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Interop.D3DImage>  
- [Zagadnienia dotyczące współdziałania Direct3D9 i WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Interop.D3DImage>
+- [Zagadnienia dotyczące współdziałania Direct3D9 i WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)

@@ -3,12 +3,12 @@ title: Szablony niestandardowe dla nowej platformy dotnet
 description: Dowiedz się więcej na temat szablonów niestandardowych dla dowolnego typu projektu .NET lub plików.
 author: guardrex
 ms.date: 08/11/2017
-ms.openlocfilehash: 60ae9a6f0af7e75ba721a739ec51d77c59d7792e
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 23dac9f4efd64ff93b00e41b1f4195e964871a3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503929"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Szablony niestandardowe dla nowej platformy dotnet
 
@@ -38,7 +38,7 @@ Pliki źródłowe i foldery obejmują dowolnych pliki i foldery, które mają sz
 
 Plików i folderów przechowywanych w szablonie nie ma ograniczenia dla formalnych typów projektów platformy .NET, takie jak rozwiązania .NET Core lub .NET Framework. Źródło plików i folderów może zawierać żadnej zawartości, którą chcesz utworzyć, gdy szablon jest używany, nawet wtedy, gdy aparat szablonów tworzy tylko jeden plik dla danych wyjściowych, takich jak plik konfiguracji lub plik rozwiązania. Na przykład można utworzyć szablon, który zawiera *web.config* pliku źródłowego i tworzy zmodyfikowane *web.config* pliku dla projektów, w których jest używany szablon. Zmiany do plików źródłowych na podstawie logiki i ustawienia podane w *template.json* pliku konfiguracji wraz z wartościami, dostarczone przez użytkownika jest przekazywany jako opcje `dotnet new <TEMPLATE>` polecenia.
 
-### <a name="templatejson"></a>Template.JSON
+### <a name="templatejson"></a>template.json
 
 *Template.json* plik zostanie umieszczony w *. template.config* folder w katalogu głównym szablonu. Plik zawiera informacje o konfiguracji do aparatu szablonu. Minimalna konfiguracja wymaga od członków, pokazano w poniższej tabeli, która jest wystarczające, aby utworzyć szablon funkcjonalności.
 
@@ -82,11 +82,11 @@ Zawartość folderu projektu, wraz z jego *.template.config/template.json* plik�
 
 | Element            | Typ   | Opis |
 | ------------------ | ------ | ----------- |
-| **\<Autorzy >**     | string | Rozdzielana przecinkami lista autorów pakietów, pasujące nazwy profilu w witrynie nuget.org. Autorzy są wyświetlane w galerii pakietów NuGet w witrynie nuget.org i są odwoływania się do pakietów przez ten sam autorów. |
-| **\<Opis >** | string | Długi opis pakietu do wyświetlania w interfejsie użytkownika. |
+| **\<authors>**     | string | Rozdzielana przecinkami lista autorów pakietów, pasujące nazwy profilu w witrynie nuget.org. Autorzy są wyświetlane w galerii pakietów NuGet w witrynie nuget.org i są odwoływania się do pakietów przez ten sam autorów. |
+| **\<description>** | string | Długi opis pakietu do wyświetlania w interfejsie użytkownika. |
 | **\<id>**          | string | Identyfikator pakietu bez uwzględniania wielkości liter, który musi być unikatowa w witrynie nuget.org lub cokolwiek innego pakietu będą znajdować się w galerii. Identyfikatory nie może zawierać spacji ani znaków, które nie są prawidłowe dla danego adresu URL i zazwyczaj korzystają z reguły w przestrzeni nazw .NET. Zobacz [wybierając identyfikator unikatowy pakiet i ustawiania numeru wersji](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) wskazówki. |
 | **\<packageType>** | string | Umieść ten element wewnątrz  **\<packageTypes >** element między  **\<metadanych >** elementów. Ustaw `name` atrybutu  **\<packageType >** elementu `Template`. |
-| **\<Wersja >**     | string | Wersja pakietu, następujące Wersja_główna.WERSJA_POMOCNICZA.poprawka. Numery wersji mogą zawierać sufiks wersji wstępnej, zgodnie z opisem w [wersje wstępne](/nuget/create-packages/prerelease-packages#semantic-versioning) tematu. |
+| **\<version>**     | string | Wersja pakietu, następujące Wersja_główna.WERSJA_POMOCNICZA.poprawka. Numery wersji mogą zawierać sufiks wersji wstępnej, zgodnie z opisem w [wersje wstępne](/nuget/create-packages/prerelease-packages#semantic-versioning) tematu. |
 
 Zobacz [odwołania .nuspec](/nuget/schema/nuspec) dla pełnego *nuspec* pliku schematu. Przykład *nuspec* plik szablonu, który pojawia się w [Utwórz nowy szablon niestandardowy dla platformy dotnet](~/docs/core/tutorials/create-custom-template.md) samouczka.
 
@@ -152,8 +152,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Tworzenie szablonu niestandardowego dla platformy dotnet w nowych (samouczek)](../tutorials/create-custom-template.md)
-* [repozytorium GitHub DotNet/szablonów witryny typu Wiki](https://github.com/dotnet/templating/wiki)
-* [repozytorium GitHub DotNet/dotnet-— przykłady szablonów](https://github.com/dotnet/dotnet-template-samples)
-* [Jak utworzyć nowe szablony dla platformy dotnet](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
-* [*Template.JSON* schemat w Store schematu JSON](http://json.schemastore.org/template)
+- [Tworzenie szablonu niestandardowego dla platformy dotnet w nowych (samouczek)](../tutorials/create-custom-template.md)
+- [repozytorium GitHub DotNet/szablonów witryny typu Wiki](https://github.com/dotnet/templating/wiki)
+- [repozytorium GitHub DotNet/dotnet-— przykłady szablonów](https://github.com/dotnet/dotnet-template-samples)
+- [Jak utworzyć nowe szablony dla platformy dotnet](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+- [*Template.JSON* schemat w Store schematu JSON](http://json.schemastore.org/template)

@@ -3,12 +3,12 @@ title: Obsługa wartości zerowych w wyrażeniach zapytań (LINQ w C#)
 description: Dowiedz się, jak Obsługa wartości zerowych w wyrażeniach zapytań LINQ w C#.
 ms.date: 12/1/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
-ms.openlocfilehash: 2c477ef371dbb424c72fb9d34948760b7e3f5609
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
+ms.openlocfilehash: 360ec17a6e416efc9502ec1e34d6c9a51862c6da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259500"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622207"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>Obsługa wartości zerowych w wyrażeniach zapytań
 
@@ -30,6 +30,6 @@ W klauzuli join jeśli tylko jeden z kluczy porównania jest typem wartościowym
 
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Nullable%601>  
-- [Language Integrated Query (LINQ)](index.md)  
-- [Typy dopuszczające wartości zerowe](../programming-guide/nullable-types/index.md)  
+- <xref:System.Nullable%601>
+- [Language Integrated Query (LINQ)](index.md)
+- [Typy dopuszczające wartości zerowe](../programming-guide/nullable-types/index.md)

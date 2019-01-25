@@ -1,5 +1,5 @@
 ---
-title: 'Porady: zapisywanie prostej równoległej pętli For'
+title: 'Instrukcje: Zapisywanie prostej pętli Parallel.For'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b2ebf679816684e68a1c13d660ef9fc54e3a175
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f2070562ba0910b5cac951e925bd9c5f0e7f68fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574927"
 ---
-# <a name="how-to-write-a-simple-parallelfor-loop"></a>Porady: zapisywanie prostej równoległej pętli For
+# <a name="how-to-write-a-simple-parallelfor-loop"></a>Instrukcje: Zapisywanie prostej pętli Parallel.For
 
 Ten temat zawiera dwa przykłady ilustrujące <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody. Używa pierwszego <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> przeciążenia metody, a drugie <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> przeciążenia, dwa przeciążenia najprostszym <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody. Możesz użyć tych dwa przeciążenia metody <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody, gdy jest konieczne anulowanie pętli, zerwać iteracji pętli lub zarządzania stanem żadnych wątków lokalnych.
 
@@ -70,7 +70,7 @@ Synchroniczne wywołania do udostępnionych zasobów, takich jak konsoli lub sys
 
 Skopiuj i wklej ten kod do projektu programu Visual Studio.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>

@@ -1,21 +1,21 @@
 ---
-title: Statycznie skompilowane zapytania (LINQ do XML) (Visual Basic)
+title: Skompilowane statycznie zapytania (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: f6230864eb125d493d38f85adf5806c80a31c910
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64f3d59df57b59743824160d0bfe9f4b30e54ad4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733899"
 ---
-# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Statycznie skompilowane zapytania (LINQ do XML) (Visual Basic)
-Jedną z najważniejszych wydajności przynosi korzyści LINQ do XML, w przeciwieństwie do <xref:System.Xml.XmlDocument>, statycznie są kwerendy w składniku LINQ to XML kompilowania, podczas gdy kwerendy XPath muszą być interpretowane w czasie wykonywania. Ta funkcja jest wbudowana w LINQ do XML, więc nie trzeba wykonywać dodatkowe czynności, aby móc korzystać z niego, ale jest przydatne rozróżnienie, gdy Wybieranie między te dwie technologie. W tym temacie objaśniono różnicę.  
+# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Skompilowane statycznie zapytania (LINQ to XML) (Visual Basic)
+Jedną z najważniejszych wydajności korzyści programu LINQ to XML, w przeciwieństwie do <xref:System.Xml.XmlDocument>, jest statycznie są zapytania w LINQ to XML kompilowane, dlatego należy interpretować zapytania XPath w czasie wykonywania. Ta funkcja jest wbudowana w LINQ to XML, dzięki czemu nie trzeba wykonać dodatkowe kroki, aby z niej korzystać, ale warto zrozumieć różnicę, wybierając między te dwie technologie. W tym temacie opisano różnicę.  
   
-## <a name="statically-compiled-queries-vs-xpath"></a>Statycznie vs skompilowane zapytania. XPath  
- Poniższy przykład pokazuje, jak można uzyskać elementów podrzędnych o określonej nazwie i z atrybutem o określonej wartości.  
+## <a name="statically-compiled-queries-vs-xpath"></a>Statycznie zapytania skompilowane vs. XPath  
+ Poniższy przykład pokazuje, jak można pobrać elementów podrzędnych o określonej nazwie i z atrybutem z określoną wartością.  
   
- Poniżej przedstawiono równoważne wyrażenie XPath:  
+ Równoważne wyrażenie XPath jest następująca:  
   
 ```  
 //Address[@Type='Shipping']  
@@ -32,7 +32,7 @@ For Each el In list1
 Next  
 ```  
   
- Wyrażenia zapytania w tym przykładzie są ponownie zapisywane przez kompilator do składni zapytania oparte na metodzie. Poniższy przykład, który został napisany w składni zapytania oparte na metodzie, jest taki sam jak poprzedni:  
+ Wyrażenia zapytania w tym przykładzie jest ponownie zapisywany przez kompilator, aby składni zapytania oparte na metodzie. Poniższy przykład, który został napisany w składni zapytania oparte na metodzie, jest taki sam jak poprzedni:  
   
 ```vb  
 Dim po = XDocument.Load("PurchaseOrders.xml")  
@@ -44,7 +44,7 @@ For Each el In list1
 Next   
 ```  
   
- <xref:System.Linq.Enumerable.Where%2A> Metoda jest metodą rozszerzenia. Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Ponieważ <xref:System.Linq.Enumerable.Where%2A> jest metodą rozszerzenia zapytania powyżej jest kompilowana tak, jakby były zapisywane w następujący sposób:  
+ <xref:System.Linq.Enumerable.Where%2A> Metoda jest metodą rozszerzenia. Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Ponieważ <xref:System.Linq.Enumerable.Where%2A> jest metodą rozszerzenia, powyższe zapytania jest kompilowany tak, jakby zostały napisane w następujący sposób:  
   
 ```vb  
 Dim po = XDocument.Load("PurchaseOrders.xml")  
@@ -56,13 +56,13 @@ For Each el In list1
 Next  
 ```  
   
- W tym przykładzie powoduje dokładnie takie same wyniki jak poprzednich dwóch przykładach. Przedstawiono to fakt skutecznie kompilowane zapytania do wywołania metody statycznie połączone. Tym połączeniu z semantykę wykonanie odroczone Iteratory, poprawia wydajność. Aby uzyskać więcej informacji na temat semantyki wykonanie odroczone Iteratory, zobacz [termin odroczonego wykonania i obliczanie leniwe w składniku LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Ten przykład generuje dokładnie te same wyniki poprzednich dwóch przykładach. Obrazuje to fakt, że zapytania skutecznie są kompilowane do wywołania metody statycznie połączone. W połączeniu z semantyką odroczonego wykonania iteratorów, zwiększa wydajność. Aby uzyskać więcej informacji dotyczących semantyki odroczonego wykonania iteratorów, zobacz [wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
 > [!NOTE]
->  Te przykłady są reprezentatywne kodu, który może zapisać kompilatora. Rzeczywista implementacja może różnić się nieznacznie w tych przykładach, ale wydajność będą takie same lub podobne do tych przykładów.  
+>  Te przykłady są reprezentatywne kodu, który może zapisać kompilator. Rzeczywiste wdrożenie może różnić się nieco od tych przykładach, ale wydajność będą takie same lub podobne do tych przykładów.  
   
-## <a name="executing-xpath-expressions-with-xmldocument"></a>Wykonywania wyrażenia XPath z parametrem XmlDocument  
- W poniższym przykładzie użyto <xref:System.Xml.XmlDocument> na takie same wyniki jak w poprzednich przykładach:  
+## <a name="executing-xpath-expressions-with-xmldocument"></a>Wykonywanie wyrażeń XPath z parametrem XmlDocument  
+ W poniższym przykładzie użyto <xref:System.Xml.XmlDocument> wykonywać te same wyniki poprzednich przykładach:  
   
 ```vb  
 Dim reader = Xml.XmlReader.Create("PurchaseOrders.xml")  
@@ -75,19 +75,19 @@ Next
 reader.Close()  
 ```  
   
- Ta kwerenda zwraca tych samych danych wyjściowych jako przykłady, które używają LINQ do XML; Jedyna różnica polega na czy LINQ do XML wcięcia drukowanymi XML, podczas gdy <xref:System.Xml.XmlDocument> nie.  
+ Ta kwerenda zwraca ten sam wynik jako przykłady, które używają programu LINQ to XML; Jedyna różnica polega na czy LINQ to XML wcięcia XML drukowane, podczas gdy <xref:System.Xml.XmlDocument> nie.  
   
- Jednak <xref:System.Xml.XmlDocument> podejście zazwyczaj wykonuje oraz LINQ do XML, ponieważ <xref:System.Xml.XmlNode.SelectNodes%2A> metody musi wykonać następujące czynności wewnętrznie za każdym razem, gdy jest to:  
+ Jednak <xref:System.Xml.XmlDocument> podejście zazwyczaj nie wykonuje oraz LINQ to XML, ponieważ <xref:System.Xml.XmlNode.SelectNodes%2A> metody należy wykonać następujące czynności wewnętrznie za każdym razem, gdy jest to:  
   
--   Analizuje ciąg, który zawiera wyrażenie XPath, dzielenie ciąg na tokeny.  
+-   Analizuje ciąg, który zawiera wyrażenie XPath podzielenie ciągu na tokeny.  
   
--   Sprawdza poprawność tokenów, aby upewnić się, że wyrażenie XPath jest nieprawidłowa.  
+-   Sprawdza poprawność tokenów, aby upewnić się, że wyrażenie XPath jest nieprawidłowy.  
   
--   Tłumaczy go wyrażenia na drzewo wyrażenia wewnętrznego.  
+-   Tłumaczy je wyrażenia do drzewa wyrażenie wewnętrznego.  
   
--   Iteruje węzłów, odpowiednio zaznaczania węzłów w zestawie wyników na podstawie oceny wyrażenia.  
+-   Iterację węzłów, odpowiednio Wybieranie węzłów do zestawu wyników na podstawie oceny wyrażenia.  
   
- Jest to znacznie więcej niż pracy wykonanej przez odpowiednie zapytania składnika LINQ to XML. Różnice dotyczące wydajności może być różna dla różnych typów kwerend, ale w ogólne LINQ do XML zapytania mniej pracy i w związku z tym działać lepiej niż obliczenia za pomocą wyrażenia XPath <xref:System.Xml.XmlDocument>.  
+ Jest to znacznie więcej niż pracy wykonanej przez odpowiednie zapytaniu składnika LINQ to XML. Różnica dotyczącego wydajności różni się dla różnych typów kwerend, ale w ogólne LINQ to XML zapytania są mniej pracy i w związku z tym mają lepszą wydajność, niż oceny wyrażeń XPath przy użyciu <xref:System.Xml.XmlDocument>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wydajność (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Wydajność (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

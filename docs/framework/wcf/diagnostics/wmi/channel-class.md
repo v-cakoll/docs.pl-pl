@@ -2,12 +2,12 @@
 title: Klasa kanału
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: 108d5f8e3cd092863dbd48e2bb9d180798b091a4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3fbf398cca7ae9adbbecb9439bf3cbd32eb03969
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668395"
 ---
 # <a name="channel-class"></a>Klasa kanału
 Kanał  
@@ -34,43 +34,43 @@ class Channel
 ### <a name="localaddress"></a>LocalAddress  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Lokalny punkt końcowy dla kanału.  
   
 ### <a name="ref"></a>ref  
- Typ danych: punkt końcowy  
+ Typ danych: Punkt końcowy  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Łączy się z odwołaniem do punktu końcowego kanału.  
   
-### <a name="remoteaddress"></a>Obiekt RemoteAddress  
+### <a name="remoteaddress"></a>RemoteAddress  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Zdalny adres skojarzony z kanałem.  
   
 ### <a name="sessionid"></a>SessionId  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Identyfikator bieżącej sesji, jeśli istnieje.  
   
 ### <a name="type"></a>Typ  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Typ kanału.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
+|MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.ChannelBase>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.ChannelBase>

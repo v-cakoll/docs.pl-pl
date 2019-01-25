@@ -14,44 +14,44 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: 126e4baa2752ba7ccb5e8ff7b06a44839c1d0af2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2388f091278d398b5e8f3b82f147ab69937f2aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689526"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Różnice pomiędzy właściwościami i zmiennymi w Visual Basic
-Zmienne i właściwości reprezentują wartości, które są dostępne. Istnieją różnice w pamięci masowej i implementacji.  
+Zmienne i właściwości reprezentują wartości, do których masz dostęp. Jednak istnieją różnice w pamięci masowej i implementacji.  
   
 ## <a name="variables"></a>Zmienne  
- A *zmiennej* odpowiada bezpośrednio do lokalizacji w pamięci. Należy zdefiniować zmienną z instrukcją jednej deklaracji. Może być zmienną *zmiennej lokalnej*, zdefiniowane wewnątrz procedury i jest dostępny tylko w ramach tej procedury, lub można ją *zmiennej członkowskiej*, zdefiniowane w module, klasy lub struktury, ale nie znajduje się w dowolnej procedury. Zmiennej członkowskiej jest również nazywany *pola*.  
+ A *zmiennej* odnosi się bezpośrednio do lokalizacji w pamięci. Należy zdefiniować zmienną z instrukcją jednej deklaracji. Zmienna może być *zmienna lokalna*, zdefiniowane wewnątrz procedury i jest dostępna tylko w ramach tej procedury, lub może być *zmiennej składowej*, zdefiniowane w module, klasy lub struktury, ale nie wewnątrz każdego procedura. Zmienna członka jest również nazywany *pola*.  
   
 ## <a name="properties"></a>Właściwości  
- A *właściwości* jest elementem dane zdefiniowane dla modułu, klasy lub struktury. Definiuje właściwości z bloku kodu między `Property` i `End Property` instrukcje. Blok kodu zawiera `Get` procedury `Set` procedury lub oba. Te procedury są nazywane *procedury właściwości* lub *metod dostępu do właściwości*. Oprócz pobierania lub przechowywania wartość właściwości, one również wykonywać akcje niestandardowe, takie jak aktualizowanie licznika dostępu.  
+ A *właściwość* jest elementem danych zdefiniowanych dla modułu, klasy lub struktury. Zdefiniuj właściwość z blokiem kodu między `Property` i `End Property` instrukcji. Blok kodu zawiera `Get` procedury `Set` procedury lub obu. Te procedury są nazywane *procedury właściwości* lub *Akcesory właściwości*. Oprócz pobierania lub zapisywania wartości właściwości, mogą również wykonać akcje niestandardowe, takie jak aktualizowanie licznika dostępu.  
   
 ## <a name="differences"></a>Różnice  
- W poniższej tabeli przedstawiono kilka istotnych różnic między zmiennych i właściwości.  
+ Poniższej tabeli przedstawiono kilka istotnych różnic między zmienne i właściwości.  
   
-|Punktu różnicy|Zmienna|Właściwość|  
+|Punkcie różnicę|Zmienna|Właściwość|  
 |-------------------------|--------------|--------------|  
-|Deklaracja|Pojedyncza deklaracja — instrukcja|Seria instrukcje w bloku kodu|  
-|Implementacja|Pojedyncze magazynu|Kod wykonywalny (procedury właściwości)|  
-|Magazyn|Bezpośrednio związane z wartość zmiennej|Zwykle ma pamięci wewnętrznej nie jest dostępny poza klasę lub moduł zawierający właściwości<br /><br /> Wartość właściwości może lub nie istnieje jako element przechowywanych <sup>1</sup>|  
+|Deklaracja|Instrukcja jednej deklaracji|Serię instrukcji w bloku kodu|  
+|Implementacja|Pojedynczy magazyn lokalizacji|Kod wykonywalny (procedury właściwości)|  
+|Magazyn|Bezpośrednio kojarzone z wartość zmiennej|Zwykle ma wewnętrzny magazyn nie jest dostępna spoza klasę lub moduł zawierający właściwości<br /><br /> Wartość właściwości może lub nie istnieje jako element przechowywanych <sup>1</sup>|  
 |Kod wykonywalny|Brak|Musi mieć co najmniej jednej procedury|  
-|Odczyt i zapis|Odczyt i zapis czy tylko do odczytu|Odczyt/zapis, tylko do odczytu lub w trybie tylko do zapisu|  
-|Akcje niestandardowe (oprócz akceptowanie lub zwracania wartości)|Nie jest możliwe|Można wykonać w ramach ustawiania i pobierania wartości właściwości|  
+|Odczyt i zapis|Odczyt/zapis lub tylko do odczytu|Odczytu/zapisu, tylko do odczytu lub tylko do zapisu|  
+|Akcje niestandardowe (oprócz akceptować lub zwracania wartości)|Nie jest możliwe|Mogą być wykonywane w ramach ustawiania i pobierania wartości właściwości|  
   
- <sup>1</sup> w przeciwieństwie do zmiennej, wartość właściwości nie może odpowiadać bezpośrednio do pojedynczego elementu magazynu. Magazyn może zostać podzielony na fragmenty dla wygody lub zabezpieczeń, lub wartość mogą być przechowywane w postaci zaszyfrowanej. W takich przypadkach `Get` procedury czy złożyć części lub odszyfrować przechowywana wartość i `Set` procedury czy szyfrowania nowej wartości lub podziel go na składników magazynu. Wartości właściwości mogą być efemeryczne, takich jak porę dnia, w którym to przypadku `Get` procedury będzie obliczać go na bieżąco zawsze dostęp do właściwości.  
+ <sup>1</sup> w przeciwieństwie do zmiennej, wartość właściwości nie może odpowiadać bezpośrednio do jednego elementu magazynu. Magazyn może zostać podzielony na fragmenty dla wygody lub zabezpieczeń, lub wartość mogą być przechowywane w postaci zaszyfrowanej. W takich przypadkach `Get` procedury może tworzyć elementy lub odszyfrować przechowywaną wartość i `Set` procedury czy szyfrowanie nową wartość lub podzielić składników magazynu. Wartości właściwości mogą być efemeryczne, takich jak porę dnia, w którym to przypadku `Get` procedury może obliczyć go na bieżąco zawsze dostęp do właściwości.  
   
-## <a name="see-also"></a>Zobacz też  
- [Procedury właściwości](./property-procedures.md)  
- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Property, instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [Dim, instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Instrukcje: tworzenie właściwości](./how-to-create-a-property.md)  
- [Instrukcje: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Instrukcje: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)  
- [Porady: deklarowanie i wywoływanie w właściwości domyślnej w Visual Basic](./how-to-declare-and-call-a-default-property.md)  
- [Instrukcje: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)  
- [Instrukcje: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>Zobacz także
+- [Procedury właściwości](./property-procedures.md)
+- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
+- [Instrukcja Property](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Dim, instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Instrukcje: Tworzenie właściwości](./how-to-create-a-property.md)
+- [Instrukcje: Deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Instrukcje: Wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)
+- [Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Instrukcje: Umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)
+- [Instrukcje: Pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)

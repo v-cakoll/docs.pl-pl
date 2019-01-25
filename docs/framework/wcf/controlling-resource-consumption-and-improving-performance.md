@@ -2,12 +2,12 @@
 title: Kontrolowanie zużycia zasobów i zwiększanie wydajności
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 1e0512ce62f5a7b25546e8824a745fdaabb5ec72
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 11d1333ed0ae8b46f8f87fa6f4643d4b31fac3ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664164"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kontrolowanie zużycia zasobów i zwiększanie wydajności
 W tym temacie opisano różne właściwości w różnych obszarach architektury usług Windows Communication Foundation (WCF), współpracują w celu kontroli użycia zasobów, które mają wpływ na metryki wydajności.
@@ -41,12 +41,12 @@ W tym temacie opisano różne właściwości w różnych obszarach architektury 
 > [!NOTE]
 > Serializacja wstępnie wygenerowanego kodu może służyć tylko w aplikacjach klienckich, a nie w usługach.
 
- [Narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) może poprawić wydajność uruchamiania tych aplikacji, generowania kodu serializacji niezbędne z skompilowanych zestawów dla aplikacji. Aby uzyskać więcej informacji, zobacz [instrukcje: skracanie uruchamiania czasu z klienta aplikacji WCF za pomocą elementu XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
+ [Narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) może poprawić wydajność uruchamiania tych aplikacji, generowania kodu serializacji niezbędne z skompilowanych zestawów dla aplikacji. Aby uzyskać więcej informacji, zobacz [jak: Poprawę czasu uruchamiania programu WCF klienta aplikacji przy użyciu elementu XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>Problemy z wydajnością, odnośnie do hostowania usług WCF w ramach platformy ASP.NET
  Gdy usługa WCF jest hostowana w ramach usług IIS i platformy ASP.NET, ustawienia konfiguracji programu IIS i programu ASP.NET może wpływać na przepływność i pamięć śladu usługi WCF.  Aby uzyskać więcej informacji o wydajności platformy ASP.NET, zobacz [poprawę wydajności ASP.NET](https://go.microsoft.com/fwlink/?LinkId=186462).  Jeden ustawienie może mieć niezamierzone konsekwencje jest <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, co jest właściwością <xref:System.Web.Configuration.ProcessModelSection>. Jeśli aplikacja ma stałej lub małej liczby klientów, ustawienie <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 mogą dostarczać boost przepływności na komputerze wieloprocesorowych, w którym wykorzystanie procesora CPU w prawie 100%. Ten wzrost wydajności ma swoją cenę: również spowoduje zwiększenie użycia pamięci, co może zmniejszyć skalowalności.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Administracja i diagnostyka](../../../docs/framework/wcf/diagnostics/index.md)
 - [Duże ilości danych i przesyłanie strumieniowe](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)

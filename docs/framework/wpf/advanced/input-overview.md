@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 4492b92268828943d222fbf624781bc0b9ce7901
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592591"
 ---
 # <a name="input-overview"></a>Przegląd Dane wejściowe
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Podsystemu zapewnia zaawansowany [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] w celu uzyskania danych wejściowych z różnych urządzeń, m.in. myszy, klawiatury, touch i Pióro. W tym temacie opisano usługi świadczone przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i opisano architekturę systemów danych wejściowych.
@@ -145,7 +145,7 @@ ms.locfileid: "48842791"
 ### <a name="prerequisites"></a>Wymagania wstępne
  Następujące składniki do tworzenia aplikacji, która reaguje na dotyk są wymagane.
 
--   Program Visual Studio 2010.
+-   Visual Studio 2010.
 
 -   Windows 7.
 
@@ -243,7 +243,7 @@ ms.locfileid: "48842791"
 
  Po powoduje, że obiekty odpowiedzieć na manipulacje, będziesz mieć obiekt ma bezwładności. Dzięki temu może być obiektów symulacji świata fizycznego. Na przykład podczas wypychania książki w tabeli, jeśli wypchniesz twardych wystarczająco książki będzie przenoszone po jego zwolnieniu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Umożliwia symulowanie to zachowanie, tworząc do manipulowania zdarzenia po palców użytkownika zwalnia obiekt.
 
- Aby uzyskać informacje o sposobie tworzenia aplikacji, która umożliwia użytkownikowi przenoszenie, zmienianie rozmiaru i obracanie obiektu, zobacz [wskazówki: tworzenie pierwszej funkcji Touch aplikacji](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
+ Aby uzyskać informacje o sposobie tworzenia aplikacji, która umożliwia użytkownikowi przenoszenie, zmienianie rozmiaru i obracanie obiektu, zobacz [instruktażu: Tworzenie pierwszej aplikacji dotykowej](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
 
  <xref:System.Windows.UIElement> Definiuje następujące zdarzenia manipulowania.
 
@@ -390,5 +390,9 @@ ms.locfileid: "48842791"
 
  Dodatkowe zasoby są dostępne objaśniające [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementów framework i routingu zdarzeń, bardziej szczegółowo. Omówienia następujących zagadnień, aby uzyskać więcej informacji, zobacz [polecenia Przegląd](../../../../docs/framework/wpf/advanced/commanding-overview.md), [Przegląd fokus](../../../../docs/framework/wpf/advanced/focus-overview.md), [Przegląd elementy bazy](../../../../docs/framework/wpf/advanced/base-elements-overview.md), [drzewa w WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md), i [kierowane Przegląd zdarzeń](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
 
-## <a name="see-also"></a>Zobacz też
- [Przegląd fokusu](../../../../docs/framework/wpf/advanced/focus-overview.md) [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md) [kierowane Przegląd zdarzeń](../../../../docs/framework/wpf/advanced/routed-events-overview.md) [podstawowy przegląd elementy](../../../../docs/framework/wpf/advanced/base-elements-overview.md) [właściwości](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd fokusu](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Przegląd elementów podstawowych](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Właściwości](../../../../docs/framework/wpf/advanced/properties-wpf.md)

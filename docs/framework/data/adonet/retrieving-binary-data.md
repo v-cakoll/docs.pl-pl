@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: ec4ef17687e4e1bf2cc18182a64fc7361fe3b6f7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2d1b88d25c5c2e94d86c1fed53c472e2b0af493e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643653"
 ---
 # <a name="retrieving-binary-data"></a>Pobieranie danych binarnych
 Domyślnie **DataReader** ładuje przychodzących danych jako wiersz, jak tylko cały wiersz danych jest dostępna. Duże obiekty binarne (BLOB) muszą jednak różnego traktowania, ponieważ zawierają one gigabajtów danych, który nie może się znajdować w jednym wierszu. **Command.ExecuteReader** metoda ma przeciążenia, które będą miały <xref:System.Data.CommandBehavior> argumentu, aby zmodyfikować domyślne zachowanie **DataReader**. Możesz przekazać <xref:System.Data.CommandBehavior.SequentialAccess> do **ExecuteReader** metodę, aby zmodyfikować domyślne zachowanie **DataReader** tak, aby zamiast ładowania wierszy danych, będzie on ładować dane sekwencyjnie po otrzymaniu. Jest to idealne rozwiązanie w przypadku ładowania obiektów blob lub innych struktur dużych ilości danych. Należy pamiętać, że takie zachowanie może zależeć od źródła danych. Na przykład zwracając obiekt BLOB z programu Microsoft Access załaduje cały obiekt BLOB ładowany do pamięci, a nie po kolei, gdy są odbierane.  
@@ -153,7 +153,7 @@ reader.Close();
 connection.Close();  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Praca z DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [Dane binarne i dużej wartości w programie SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Praca z DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
+- [Dane binarne i dużej wartości w programie SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: 36add48ebee2d1804921eeeec0b59cdd4cbafecc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39d316aca5ec306de4b1e43e2eb2d1495f5525d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672347"
 ---
 # <a name="39ltmembernamegt39-cannot-expose-type-39lttypenamegt39-outside-the-project-through-ltcontainertypegt-39ltcontainertypenamegt39"></a>&#39;&lt;membername&gt; &#39; nie może ujawnić typu &#39; &lt;typename&gt; &#39; poza projektem za pomocą &lt;containertype&gt; &#39; &lt;containertypename&gt;&#39;
-Zmienna, parametr procedury lub funkcji, zwracany jest ujawniany poza jego kontenera, ale jest zadeklarowany jako typ, który nie może być wystawiona poza kontenera.  
+Zmiennej, parametr procedury lub funkcji, zwracany jest widoczna poza jej kontenerem, ale jest zadeklarowany jako typ, który nie muszą być widoczne na zewnątrz kontenera.  
   
- W poniższym kodzie szkielet pokazano sytuację, który generuje ten błąd.  
+ Poniższy kod szkielet przedstawia sytuację, która generuje ten błąd.  
   
 ```  
 Private Class privateClass  
@@ -27,13 +27,13 @@ Public Class mainClass
 End Class  
 ```  
   
- Typ, który jest zadeklarowana `Protected`, `Friend`, `Protected Friend`, lub `Private` ma mieć ograniczony dostęp poza kontekstem jego deklaracji. Używać go jako dane typu zmienną o mniej ograniczonym dostępie środki tego celu. W poprzednim kodzie szkielet `exposedVar` jest `Public` i wystawi `privateClass` do kodu, który nie ma do niego dostęp.  
+ Typ, który jest zadeklarowany jako `Protected`, `Friend`, `Protected Friend`, lub `Private` ma ograniczony dostęp poza kontekstem jego deklaracji. On używany jako dane typu zmiennej mniej ograniczony dostęp będzie w tym celu pokonania. W poprzednim kodzie szkielet `exposedVar` jest `Public` i wystawi `privateClass` do kodu, które nie powinny mieć do niego dostęp.  
   
  **Identyfikator błędu:** BC30909  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Zmień poziom dostępu do zmiennej, parametr procedury lub funkcji zwrócić się co najmniej stosować jak największe restrykcje poziom dostępu do jego typu danych.  
+-   Zmień poziom dostępu do zmiennej, parametr procedury lub funkcji, zwróć się do co najmniej tak restrykcyjne uprawnienia na poziomie dostępu do jego typu danych.  
   
-## <a name="see-also"></a>Zobacz też  
- [Poziomy dostępu w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+## <a name="see-also"></a>Zobacz także
+- [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

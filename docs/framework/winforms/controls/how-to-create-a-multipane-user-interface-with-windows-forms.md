@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie złożonego interfejsu użytkownika z formularzami Windows'
+title: 'Instrukcje: Tworzenie złożonego interfejsu użytkownika z formularzami Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 4e243191b83149f17f4970150d784dcd7d014b22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f7ba0ab7f0701fe39c3cefb979b9226eeeddffe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531411"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Porady: tworzenie złożonego interfejsu użytkownika z formularzami Windows
-W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do tego używanego w programie Microsoft Outlook z **folderu** listy **wiadomości** okienku i **wwersjizapoznawczej** okienka. To rozmieszczenie odbywa się głównie za pośrednictwem dokowanie formantów w formularzu.  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Instrukcje: Tworzenie złożonego interfejsu użytkownika z formularzami Windows
+W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do komentarzowi użytemu w programie Microsoft Outlook przy użyciu **folderu** listy **wiadomości** okienku i **wwersjizapoznawczej** okienka. Taki układ odbywa się głównie za pośrednictwem dokowanie kontrolek za pomocą formularza.  
   
- Dokowanie formantu, określić, które krawędzią kontenera nadrzędnego formantu jest podłączony. W związku z tym Jeśli ustawisz <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Right>, prawą krawędzią formantu zostanie zadokowane do prawej krawędzi kontrolki nadrzędnej. Ponadto zadokowanych krawędzią formantu jest zmieniany na zgodny z jego formantu kontenera. Aby uzyskać więcej informacji na temat sposobu <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości znaleźć [porady: dokowania formantów na formularzach systemu Windows](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
+ Po zadokowaniu kontrolkę, należy określić, które krawędzią kontenera nadrzędnego formantu jest podłączony. W związku z tym Jeśli ustawisz <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Right>, prawą krawędzią kontrolki będzie zadokowany na prawej krawędzi kontrolki nadrzędnej. Ponadto aby pasował do jego kontrolki kontenera zmieniany jest zadokowany krawędzią formantu. Aby uzyskać więcej informacji o tym, jak <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość znaleźć [jak: Dokowanie formantów na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
   
- Ta procedura polega na rozmieszczanie <xref:System.Windows.Forms.SplitContainer> i innych kontrolek w formularzu, a nie na dodawanie funkcji, aby aplikacja naśladować Microsoft Outlook.  
+ Ta procedura polega na rozmieszczanie <xref:System.Windows.Forms.SplitContainer> i inne kontrolki na formularzu, a nie na dodawanie funkcji do aplikacji Microsoft Outlook naśladować.  
   
- Aby utworzyć ten interfejs użytkownika, umieść wszystkie formanty w <xref:System.Windows.Forms.SplitContainer> formant, który zawiera <xref:System.Windows.Forms.TreeView> kontroli w lewym panelu. Na prawym panelu <xref:System.Windows.Forms.SplitContainer> formant zawiera drugi <xref:System.Windows.Forms.SplitContainer> sterować za pomocą <xref:System.Windows.Forms.ListView> powyższej kontrolki <xref:System.Windows.Forms.RichTextBox> formantu. Te <xref:System.Windows.Forms.SplitContainer> formanty włączyć niezależne zmiana rozmiaru formantów w formularzu. Istnieje możliwość dostosowania technik w ramach tej procedury, aby jednostki niestandardowych interfejsów użytkownika własny.  
+ Aby utworzyć ten interfejs użytkownika, umieść wszystkie kontrolki w ramach <xref:System.Windows.Forms.SplitContainer> formant, który zawiera <xref:System.Windows.Forms.TreeView> kontrolki w panelu po lewej stronie. Na panelu po prawej stronie <xref:System.Windows.Forms.SplitContainer> kontrolka zawiera sekundy <xref:System.Windows.Forms.SplitContainer> kontrolką <xref:System.Windows.Forms.ListView> kontrolki powyżej <xref:System.Windows.Forms.RichTextBox> kontroli. Te <xref:System.Windows.Forms.SplitContainer> kontrolki umożliwiają, niezależnie od rozmiaru formantów w formularzu. Możliwość dostosowania technik w tej procedurze, aby tworzenie niestandardowych interfejsów użytkownika samodzielnie.  
   
-### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Aby programowo utworzyć interfejsu użytkownika w stylu programu Outlook  
+### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Aby utworzyć programowo interfejsu użytkownika w stylu programu Outlook  
   
-1.  W formularzu należy zadeklarować każdego formantu, który składa się z interfejsu użytkownika. Na przykład użyć <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, i <xref:System.Windows.Forms.RichTextBox> formantów, aby naśladował interfejsu użytkownika programu Microsoft Outlook.  
+1.  W formularzu należy zadeklarować każdego formantu, który składa się z poziomu interfejsu użytkownika. W tym przykładzie użyj <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, i <xref:System.Windows.Forms.RichTextBox> formantów, aby mógł naśladować interfejsu użytkownika programu Microsoft Outlook.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  Tworzenie procedury, która definiuje interfejsu użytkownika. Poniższy kod ustawia właściwości, aby formularz będzie podobny interfejsu użytkownika w programie Microsoft Outlook. Jednak za pomocą innych mechanizmów kontroli lub dokowanie je inaczej, jest tak proste utworzyć inne interfejsy użytkownika, które są równie elastyczne.  
+2.  Tworzenie procedury, która definiuje interfejs użytkownika. Poniższy kod ustawia właściwości, dzięki czemu formularz będzie przypominał interfejsu użytkownika w programie Microsoft Outlook. Jednak za pomocą innych formantów lub dokowanie ich inaczej, jest równie proste do tworzenia innych interfejsów użytkownika, które są równie elastyczne.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do
     }  
     ```  
   
-3.  W języku Visual Basic, dodaj wywołanie do procedury nowo utworzoną `New()` procedury. W środowisku Visual C#, Dodaj następujący wiersz kodu do konstruktora dla klasy formularza.  
+3.  W języku Visual Basic należy dodać wywołanie procedury nowo utworzoną `New()` procedury. W elemencie wizualnym C#, Dodaj następujący wiersz kodu do konstruktora dla klasy formularza.  
   
     ```vb  
     ' Add this to the New procedure.  
@@ -176,7 +176,7 @@ W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer, kontrolka](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami Windows Forms przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer, kontrolka](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [Instrukcje: Tworzenie złożonego interfejsu użytkownika za pomocą interfejsu Windows Forms przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

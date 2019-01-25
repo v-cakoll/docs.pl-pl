@@ -1,15 +1,15 @@
 ---
-title: 'Porady: zapytanie o znaki w ciągu (LINQ) (C#)'
+title: 'Instrukcje: Zapytanie o znaki w ciągu (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: c6e5fb14e0be277f53511aaddd362f2f203531e8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0c577fc2dc2ae07574580f819a6fb51336107dfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665633"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Porady: zapytanie o znaki w ciągu (LINQ) (C#)
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Instrukcje: Zapytanie o znaki w ciągu (LINQ) (C#)
 Ponieważ <xref:System.String> klasa implementuje ogólnego <xref:System.Collections.Generic.IEnumerable%601> interfejsu, dowolny ciąg może być odpytywany za pomocą sekwencji znaków. Jednak to nie jest typowym zastosowaniem LINQ. Złożone celu dopasowania do wzorca operacji, należy użyć <xref:System.Text.RegularExpressions.Regex> klasy.  
   
 ## <a name="example"></a>Przykład  
@@ -57,7 +57,7 @@ class QueryAString
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego, za pomocą odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [Porady: łączenie zapytań LINQ z wyrażeniami regularnymi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [Instrukcje: Łączenie zapytań LINQ z wyrażeniami regularnymi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)

@@ -2,12 +2,12 @@
 title: Klient ASMX z usługą WCF
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 8b8ebebbcb2c95555605ebd1d8e164b8babb7e3e
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: d526bc01d7809aa2672dcfcf194ad9c7d2e7baa5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527516"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Klient ASMX z usługą WCF
 W tym przykładzie przedstawiono sposób tworzenia usługi przy użyciu usługi Windows Communication Foundation (WCF) i następnie uzyskać dostęp do usługi z klienta inne niż WCF, takich jak klient ASMX.  
@@ -138,7 +138,7 @@ Press <ENTER> to terminate client.
 3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji na temat przekazywanie i zwracanie złożonych danych Zobacz typy: [powiązanie danych w kliencie Windows Forms](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [powiązanie danych w kliencie systemu Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), i [danych Powiązanie w kliencie programu ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  Aby uzyskać więcej informacji na temat przekazywanie i zwracanie danych złożonych typów zobacz: [Powiązanie danych w Windows Forms klienta](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [powiązanie danych w kliencie systemu Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), i [powiązanie danych w kliencie programu ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
@@ -149,4 +149,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

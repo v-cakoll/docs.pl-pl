@@ -10,15 +10,15 @@ api_type:
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56333165d179abd79e82f1416342a2700029eb12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ac147596794f748d3160cdbd34b9f306dfdb379
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604421"
 ---
 # <a name="axlpublickeyblobtopublickeytoken-function"></a>Funkcja _AxlPublicKeyBlobToPublicKeyToken
-Oblicza silnej nazwy token klucza publicznego z formatu PUBLICKEYBLOB dostawcy usług Kryptograficznych.  
+Oblicza silnej nazwy token klucza publicznego z formatu publickeyblob — dostawcy usług Kryptograficznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,13 +31,13 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
   
 #### <a name="parameters"></a>Parametry  
  `pCspPublicKeyBlob`  
- [in] Publiczny blob klucza dostawcy usług Kryptograficznych.  
+ [in] Dostawcy usług Kryptograficznych blob klucza publicznego.  
   
  `ppwszPublicKeyHash`  
- [out] Wskaźnik do WCHAR * do odbierania zakodowane w systemie szesnastkowym wartość skrótu klucza publicznego.  
+ [out] Wskaźnik do WCHAR * do odbierania zakodowanego szesnastkowo skrótu klucza publicznego.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli funkcja zakończy się pomyślnie; w przeciwnym razie `S_FALSE`.  
+ `S_OK` Jeśli funkcja się powiedzie; w przeciwnym razie `S_FALSE`.  
   
-## <a name="see-also"></a>Zobacz też  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

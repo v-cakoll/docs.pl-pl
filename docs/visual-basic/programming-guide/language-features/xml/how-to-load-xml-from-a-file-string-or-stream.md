@@ -1,18 +1,18 @@
 ---
-title: 'Porady: ładowanie XML z pliku, ciągu lub strumienia (Visual Basic)'
+title: 'Instrukcje: Ładowanie kodu XML z pliku, ciągu lub Stream (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], loading
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
-ms.openlocfilehash: 241f6552e46d7689b42a409ba44bc747984773ca
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: b660900c1ac29e40eeed36b1e07326dfbcf69ec8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492744"
 ---
-# <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Porady: ładowanie XML z pliku, ciągu lub strumienia (Visual Basic)
+# <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Instrukcje: Ładowanie kodu XML z pliku, ciągu lub Stream (Visual Basic)
 Możesz utworzyć [literałów XML](../../../../visual-basic/language-reference/xml-literals/index.md) i wypełnić je przy użyciu zawartości ze źródła zewnętrznego pliku, ciągu lub strumienia za pomocą kilku metod. W poniższych przykładach przedstawiono te metody.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -41,12 +41,12 @@ Możesz utworzyć [literałów XML](../../../../visual-basic/language-reference/
   
  [!code-vb[VbXMLSamples#46](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_3.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType>  
- [Literały XML](../../../../visual-basic/language-reference/xml-literals/index.md)  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [Manipulowanie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType>
+- [Literały XML](../../../../visual-basic/language-reference/xml-literals/index.md)
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Manipulowanie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)

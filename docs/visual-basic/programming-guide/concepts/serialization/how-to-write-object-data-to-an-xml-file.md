@@ -1,16 +1,16 @@
 ---
-title: 'Porady: wpisywanie danych o obiektach do pliku XML (Visual Basic)'
+title: 'Instrukcje: Zapisywania obiektów danych do pliku XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: 434706383c50e5df8e419e3988da8dc7cce87c83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7784566cba7b9cf85914a410b78240856879ba8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715832"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Porady: wpisywanie danych o obiektach do pliku XML (Visual Basic)
-W tym przykładzie zapisuje obiekt z klasy w pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Instrukcje: Zapisywania obiektów danych do pliku XML (Visual Basic)
+Ten przykład Przepisuje obiekt z klasy do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
   
 ## <a name="example"></a>Przykład  
   
@@ -43,18 +43,18 @@ End Module
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Klasa poddany serializacji ma publicznego konstruktora bez parametrów.  
+-   Klasa jest serializowana, nie ma publiczny konstruktor bez parametrów.  
   
 -   Plik istnieje i jest tylko do odczytu (<xref:System.IO.IOException>).  
   
--   Ścieżka jest za długa (<xref:System.IO.PathTooLongException>).  
+-   Ścieżka jest zbyt długa (<xref:System.IO.PathTooLongException>).  
   
 -   Dysk jest pełny (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- W tym przykładzie tworzy nowy plik, jeśli plik już nie istnieje. Jeśli aplikacja musi utworzyć plik, że aplikacja musi `Create` dostępu do folderu. Jeśli plik już istnieje, aplikacja musi tylko `Write` dostępu niższego poziomu uprawnień. Jeśli to możliwe, jest bardziej bezpieczne tworzenie pliku podczas wdrażania i udzielać tylko `Read` dostęp do jednego pliku, a nie `Create` dostępu dla folderu.  
+ W tym przykładzie tworzy nowy plik, jeśli go jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, ta aplikacja musi mieć `Create` dostępu do folderu. Jeśli plik już istnieje, aplikacja potrzebuje tylko `Write` dostępu, mniejsze uprawnienia. Jeśli to możliwe, bezpieczniej jest tworzyć plik podczas wdrożenia i udzielić `Read` dostępu do pojedynczego pliku, zamiast `Create` dostępu do folderu.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IO.StreamWriter>  
- [Porady: odczytywanie danych o obiektach z pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [Serializacja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IO.StreamWriter>
+- [Instrukcje: Odczytywanie danych o obiektach z pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [Serializacja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

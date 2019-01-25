@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 46d70a0b0ccc33755666867240be8778b5638947
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13bc401647612c982eb13a3b607e41c6afa61716
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858372"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742750"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Kolejki programu Windows Communication Foundation
 W tematach w tej sekcji omówiono Windows Communication Foundation (WCF), obsługa kolejek. Usługi WCF zapewnia obsługę usługi kolejkowania wiadomości, wykorzystaniem Microsoft usługi kolejkowania komunikatów (wcześniej znane jako usługi MSMQ) jako transportu i umożliwia obsługę następujących scenariuszy:  
@@ -22,7 +22,7 @@ W tematach w tej sekcji omówiono Windows Communication Foundation (WCF), obsłu
   
 -   Operacje odłączonych. Wysyłanie, odbieranie i przetwarzanie operacji może stać się rozłączona podczas komunikowania się za pośrednictwem sieci z dużym opóźnieniem lub ograniczoną dostępność sieci, takich jak w przypadku urządzeń przenośnych. Kolejki umożliwiają te operacje kontynuować, nawet gdy punkty końcowe są odłączone. Po ponownym ustanowieniu połączenia, kolejki przekazuje komunikaty odbierający aplikacji.  
   
- Funkcja kolejek w aplikacji WCF umożliwia standardowe powiązania, lub można utworzyć niestandardowego powiązania, jeśli jedno z powiązań standard nie spełnia wymagań. Aby uzyskać więcej informacji o odpowiednich powiązań standardowych i wybierz jedną, zobacz [instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami usługi kolejkowania komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Funkcja kolejek w aplikacji WCF umożliwia standardowe powiązania, lub można utworzyć niestandardowego powiązania, jeśli jedno z powiązań standard nie spełnia wymagań. Aby uzyskać więcej informacji o odpowiednich powiązań standardowych i wybierz jedną, zobacz [jak: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami usługi kolejkowania komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
@@ -31,10 +31,10 @@ W tematach w tej sekcji omówiono Windows Communication Foundation (WCF), obsłu
  [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  Omówienie obsługi kolejki programu WCF.  
   
- [Instrukcje: wymiana komunikatów znajdujących się w kolejce z punktami końcowymi WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Instrukcje: Wymiana zakolejkowanych komunikatów z punktami końcowymi programu WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  Opis sposobu użycia <xref:System.ServiceModel.NetMsmqBinding> klasy do komunikacji między klienta WCF i usługi WCF.  
   
- [Instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Instrukcje: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  Opis sposobu użycia <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> do komunikacji między aplikacjami usług WCF i usługi kolejkowania komunikatów.  
   
  [Grupowanie komunikatów z obsługą kolejek w ramach sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
@@ -64,5 +64,5 @@ W tematach w tej sekcji omówiono Windows Communication Foundation (WCF), obsłu
  [Najlepsze rozwiązania dotyczące komunikacji z obsługą kolejek](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  Wyjaśniono, że komunikacja kolejek najlepsze rozwiązania dotyczące korzystania z usługi WCF.  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługa kolejkowania komunikatów](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+## <a name="see-also"></a>Zobacz także
+- [Usługa kolejkowania komunikatów](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

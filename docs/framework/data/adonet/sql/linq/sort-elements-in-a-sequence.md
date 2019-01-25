@@ -5,56 +5,56 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 00c7a7a62890aced4c480e2653084c0b7cfe7f45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59384900226fbbcfc879650402b1a5df80b69cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596426"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Sortowanie elementów w sekwencji
-Użyj <xref:System.Linq.Enumerable.OrderBy%2A> operatora, aby posortować sekwencji zgodnie z co najmniej jeden klucz.  
+Użyj <xref:System.Linq.Enumerable.OrderBy%2A> operatora do sortowania sekwencji zgodnie z co najmniej jeden klucz.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Służy do ustalania kolejności przez proste typy pierwotne, takie jak `string`, `int`i tak dalej. Nie obsługuje kolejności złożonych wielowartościowe klas, takich jak typy anonimowe. Go nie obsługuje również `byte` typy danych.  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest przeznaczony do obsługi kolejność przez proste typy pierwotne, takie jak `string`, `int`i tak dalej. Nie obsługuje kolejności złożonych klas wielokrotne, takich jak typy anonimowe. Ponadto nie obsługuje `byte` typy danych.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład sortuje `Employees` według daty zatrudnienia.  
+ Poniższy przykład sortuje `Employees` według: Data zatrudnienia.  
   
  [!code-csharp[DLinqQueryExamples#20](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#20)]
  [!code-vb[DLinqQueryExamples#20](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#20)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `where` sortowania `Orders` dostarczona do `London` przez transport.  
+ W poniższym przykładzie użyto `where` sortowania `Orders` wysłane do `London` przez transportu.  
   
  [!code-csharp[DLinqQueryExamples#21](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#21)]
  [!code-vb[DLinqQueryExamples#21](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#21)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład sortuje `Products` przez jednostkę ceny od najwyższego do najniższego.  
+ Poniższy przykład sortuje `Products` przez jednostkę cena od najwyższego do najniższego.  
   
  [!code-csharp[DLinqQueryExamples#22](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#22)]
  [!code-vb[DLinqQueryExamples#22](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#22)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto związek `OrderBy` sortowania `Customers` przez miasto, a następnie nazwisko osoby kontaktowej.  
+ W poniższym przykładzie użyto związek `OrderBy` sortowania `Customers` według miejscowości, a następnie nazwisko osoby kontaktowej.  
   
  [!code-csharp[DLinqQueryExamples#24](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#24)]
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład sortuje zamówień z `EmployeeID 1` przez kraj wysyłki, a następnie według kolejności malejącej transportu.  
+ Poniższy przykład sortuje zamówień z `EmployeeID 1` według kraju dostawy, a następnie według Fracht najwyższego do najniższego.  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład łączy <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Max%2A>, i <xref:System.Linq.Enumerable.GroupBy%2A> operatorów można znaleźć `Products` ma najwyższy cenie jednostkowej w każdej kategorii, a następnie sortuje grupy według identyfikatora kategorii.  
+ Poniższy przykład łączy <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Max%2A>, i <xref:System.Linq.Enumerable.GroupBy%2A> operatorów, aby znaleźć `Products` mają najwyższą cena jednostkowa w każdej kategorii, a następnie sortuje grupy według identyfikatora kategorii.  
   
  [!code-csharp[DLinqQueryExamples#26](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#26)]
  [!code-vb[DLinqQueryExamples#26](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#26)]  
   
- Jeśli poprzednie zapytanie wykonywane przykładowej bazy danych Northwind, wyniki będą wyglądać w następujący sposób:  
+ Jeśli uruchamiasz poprzednie zapytanie względem przykładowej bazy danych Northwind, wyniki będą wyglądać w następujący sposób:  
   
  `1`  
   
@@ -88,6 +88,6 @@ Użyj <xref:System.Linq.Enumerable.OrderBy%2A> operatora, aby posortować sekwen
   
  `Carnarvon Tigers`  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykłady zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>Zobacz także
+- [Przykłady zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

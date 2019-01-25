@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML literals [Visual Basic], reference
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: 6b3664a29d5a780c7ce49f51f0ea13d064d578e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c10fd5fe3d6aa5566976b08db6c26ee49521850
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491262"
 ---
 # <a name="xml-literals-visual-basic"></a>Literały XML (Visual Basic)
-Tematy w tej części dokumentu składni literałów XML w Visual Basic. Składnia literału XML można dołączyć do nich bezpośrednio w kodzie XML.  
+Tematy w tej części dokumentu składni literałów XML w Visual Basic. Składnia literał XML umożliwia dołączenie XML bezpośrednio w kodzie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
@@ -29,5 +29,5 @@ Tematy w tej części dokumentu składni literałów XML w Visual Basic. Składn
 |[Literał komentarza XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XComment> obiektów.|  
 |[Literał instrukcji przetwarzającej kod XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XProcessingInstruction> obiektów.|  
   
-## <a name="see-also"></a>Zobacz też  
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>Zobacz także
+- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

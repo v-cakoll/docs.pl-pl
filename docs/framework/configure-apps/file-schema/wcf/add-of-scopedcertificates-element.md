@@ -2,12 +2,12 @@
 title: '&lt;add&gt; w &lt;scopedCertificates&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: a173d3b137833abfe8a69aed55b972c9b6469890
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2406c93307ed9beb5738567a473406026b09b0a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508746"
 ---
 # <a name="ltaddgt-of-ltscopedcertificatesgt-element"></a>&lt;add&gt; w &lt;scopedCertificates&gt;, element
 Dodaje certyfikat X.509 do kolekcji certyfikatów będących w zakresie.  
@@ -17,8 +17,8 @@ Dodaje certyfikat X.509 do kolekcji certyfikatów będących w zakresie.
 sekcja endpointBehaviors  
 \<zachowanie >  
 \<clientCredentials>  
-\<serviceCertificate >  
-\<scopedCertificates >  
+\<serviceCertificate>  
+\<scopedCertificates>  
 \<Dodaj >, element dla \<scopedCertificates >  
   
 ## <a name="syntax"></a>Składnia  
@@ -40,7 +40,7 @@ sekcja endpointBehaviors
 |---------------|-----------------|  
 |targetUri|ciąg. Określa identyfikator URI usługi skojarzony z certyfikatem.|  
 |findValue|ciąg. Wartość do wyszukania.|  
-|X509FindType|Wyliczenie. Jedno z pól certyfikatu do wyszukiwania.|  
+|x509FindType|Wyliczenie. Jedno z pól certyfikatu do wyszukiwania.|  
 |storeLocation|Wyliczenie. Jednym z dwóch lokalizacji przechowywania do wyszukiwania.|  
 |storeName|Wyliczenie. Jednym z systemów magazynowania do wyszukiwania.|  
   
@@ -50,7 +50,7 @@ sekcja endpointBehaviors
 |-----------|-----------------|  
 |String|Wartość zależy od pola (określony przez atrybut X509FindType) wyszukiwany. Na przykład jeśli wyszukiwanie odcisku palca, wartość musi być ciągiem liczb szesnastkowych.|  
   
-## <a name="x509findtype-attribute"></a>Atrybut x509FindType  
+## <a name="x509findtype-attribute"></a>x509FindType Attribute  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -75,7 +75,7 @@ sekcja endpointBehaviors
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<scopedCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|Reprezentuje kolekcję certyfikatów X.509 dostarczonych przez określone usługi (w zakresie) do uwierzytelniania.|  
+|[\<scopedCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|Reprezentuje kolekcję certyfikatów X.509 dostarczonych przez określone usługi (w zakresie) do uwierzytelniania.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten element umożliwia klienta skonfigurować certyfikat usługi do użycia na podstawie adresu URL usługi, którym się komunikuje. Jest to szczególnie przydatne w wystawionych tokenów scenariuszach, gdzie klienta może się komunikować z wielu usług (service zakończenia także usługach tokenów zabezpieczeń pośrednie). Dla powiązań, które korzystają z zabezpieczeń komunikatów opartego na certyfikatach ten certyfikat jest używany do szyfrowania komunikatów do usługi, a powinien być używany przez usługę do podpisywania odpowiedzi do klienta.  
@@ -107,13 +107,13 @@ sekcja endpointBehaviors
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
- [Instrukcje: Tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
+- [Instrukcje: Tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -2,12 +2,12 @@
 title: '&lt;add&gt; w &lt;scopes&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: e2bf649259d6ccb0e55428ab3619fe561d051ff7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 961fb3e388e3ae756bd7511ea6c65df6dd2a1486
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705576"
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a>&lt;add&gt; w &lt;scopes&gt;
 Dodaje niestandardowy zakres Uri, który może służyć do filtrowania punktów końcowych usługi podczas zapytania.  
@@ -16,7 +16,7 @@ Dodaje niestandardowy zakres Uri, który może służyć do filtrowania punktów
 \<zachowania >  
 \<endpointBehaviors>  
 \<zachowanie >  
-\<endpointDiscovery >  
+\<endpointDiscovery>  
 \<zakresy >  
 \<add>  
   
@@ -54,5 +54,5 @@ Dodaje niestandardowy zakres Uri, który może służyć do filtrowania punktów
 |-------------|-----------------|  
 |[\<zakresy >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Zawiera kolekcję elementów konfiguracji określającą niestandardowy zakres identyfikatorów URI, który może służyć do filtrowania punktów końcowych usługi podczas zapytania.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

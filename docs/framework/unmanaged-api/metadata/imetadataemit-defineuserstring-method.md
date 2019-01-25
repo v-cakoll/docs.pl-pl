@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09f2e166072d140fe00fe8ecaee318051953939d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb08bad82400523d82e4b8589acb2e74fbbd17d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603734"
 ---
-# <a name="imetadataemitdefineuserstring-method"></a><span data-ttu-id="5c3e5-102">IMetaDataEmit::DefineUserString — Metoda</span><span class="sxs-lookup"><span data-stu-id="5c3e5-102">IMetaDataEmit::DefineUserString Method</span></span>
-<span data-ttu-id="5c3e5-103">Pobiera metadane token dla określonego ciągu literału.</span><span class="sxs-lookup"><span data-stu-id="5c3e5-103">Gets a metadata token for the specified literal string.</span></span>  
+# <a name="imetadataemitdefineuserstring-method"></a><span data-ttu-id="0a5db-102">IMetaDataEmit::DefineUserString — Metoda</span><span class="sxs-lookup"><span data-stu-id="0a5db-102">IMetaDataEmit::DefineUserString Method</span></span>
+<span data-ttu-id="0a5db-103">Pobiera metadane token dla określonego ciągu literału.</span><span class="sxs-lookup"><span data-stu-id="0a5db-103">Gets a metadata token for the specified literal string.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5c3e5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="5c3e5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a5db-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0a5db-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineUserString (   
@@ -37,25 +37,25 @@ HRESULT DefineUserString (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5c3e5-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="5c3e5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0a5db-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0a5db-105">Parameters</span></span>  
  `szString`  
- <span data-ttu-id="5c3e5-106">[in] Ciąg użytkownika do przechowywania.</span><span class="sxs-lookup"><span data-stu-id="5c3e5-106">[in] The user string to store.</span></span>  
+ <span data-ttu-id="0a5db-106">[in] Ciąg użytkowników do przechowywania.</span><span class="sxs-lookup"><span data-stu-id="0a5db-106">[in] The user string to store.</span></span>  
   
  `cchString`  
- <span data-ttu-id="5c3e5-107">[in] Liczba znaki dwubajtowe w `szString`.</span><span class="sxs-lookup"><span data-stu-id="5c3e5-107">[in] The count of wide characters in `szString`.</span></span>  
+ <span data-ttu-id="0a5db-107">[in] Liczba znaków dwubajtowych w `szString`.</span><span class="sxs-lookup"><span data-stu-id="0a5db-107">[in] The count of wide characters in `szString`.</span></span>  
   
  `pstk`  
- <span data-ttu-id="5c3e5-108">[out] Token ciągu przypisany.</span><span class="sxs-lookup"><span data-stu-id="5c3e5-108">[out] The string token assigned.</span></span>  
+ <span data-ttu-id="0a5db-108">[out] Token ciągu przypisany.</span><span class="sxs-lookup"><span data-stu-id="0a5db-108">[out] The string token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5c3e5-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5c3e5-109">Requirements</span></span>  
- <span data-ttu-id="5c3e5-110">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5c3e5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a5db-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0a5db-109">Requirements</span></span>  
+ <span data-ttu-id="0a5db-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a5db-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5c3e5-111">**Nagłówek:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5c3e5-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0a5db-111">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="0a5db-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5c3e5-112">**Biblioteka:** używany jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5c3e5-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0a5db-112">**Biblioteka:** Używany jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0a5db-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5c3e5-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c3e5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0a5db-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a5db-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5c3e5-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5c3e5-114">See Also</span></span>  
- [<span data-ttu-id="5c3e5-115">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="5c3e5-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="5c3e5-116">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="5c3e5-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0a5db-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0a5db-114">See also</span></span>
+- [<span data-ttu-id="0a5db-115">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="0a5db-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="0a5db-116">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="0a5db-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

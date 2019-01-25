@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60cb1640d374ce71d1d2fb51ba536b53ddd39b92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 483f59ee3e81861ec1b05a0fee9c5db797aab68f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491155"
 ---
-# <a name="imetadataemitdefinesecurityattributeset-method"></a><span data-ttu-id="b6ae4-102">IMetaDataEmit::DefineSecurityAttributeSet — Metoda</span><span class="sxs-lookup"><span data-stu-id="b6ae4-102">IMetaDataEmit::DefineSecurityAttributeSet Method</span></span>
-<span data-ttu-id="b6ae4-103">Tworzy zestaw uprawnień zabezpieczeń, aby dołączyć do obiektu odwołuje się określony token.</span><span class="sxs-lookup"><span data-stu-id="b6ae4-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span></span>  
+# <a name="imetadataemitdefinesecurityattributeset-method"></a><span data-ttu-id="7ef70-102">IMetaDataEmit::DefineSecurityAttributeSet — Metoda</span><span class="sxs-lookup"><span data-stu-id="7ef70-102">IMetaDataEmit::DefineSecurityAttributeSet Method</span></span>
+<span data-ttu-id="7ef70-103">Tworzy zestaw uprawnień zabezpieczeń, aby dołączyć do obiektu odwołuje się określony token.</span><span class="sxs-lookup"><span data-stu-id="7ef70-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6ae4-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b6ae4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7ef70-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7ef70-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineSecurityAttributeSet (   
@@ -37,28 +38,28 @@ HRESULT DefineSecurityAttributeSet (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b6ae4-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b6ae4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7ef70-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="7ef70-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="b6ae4-106">[in] Token, do której jest dołączona informacji o zabezpieczeniach.</span><span class="sxs-lookup"><span data-stu-id="b6ae4-106">[in] The token to which the security information is attached.</span></span>  
+ <span data-ttu-id="7ef70-106">[in] Token, do której jest dołączony informacji o zabezpieczeniach.</span><span class="sxs-lookup"><span data-stu-id="7ef70-106">[in] The token to which the security information is attached.</span></span>  
   
  `rSecAttrs`  
- <span data-ttu-id="b6ae4-107">[in] Tablica `COR_SECATTR` struktury.</span><span class="sxs-lookup"><span data-stu-id="b6ae4-107">[in] An array of `COR_SECATTR` structures.</span></span>  
+ <span data-ttu-id="7ef70-107">[in] Tablica `COR_SECATTR` struktury.</span><span class="sxs-lookup"><span data-stu-id="7ef70-107">[in] An array of `COR_SECATTR` structures.</span></span>  
   
  `cSecAttrs`  
- <span data-ttu-id="b6ae4-108">[in] Liczba elementów w `rSecAttrs`.</span><span class="sxs-lookup"><span data-stu-id="b6ae4-108">[in] The number of elements in `rSecAttrs`.</span></span>  
+ <span data-ttu-id="7ef70-108">[in] Liczba elementów w `rSecAttrs`.</span><span class="sxs-lookup"><span data-stu-id="7ef70-108">[in] The number of elements in `rSecAttrs`.</span></span>  
   
  `pulErrorAttr`  
- <span data-ttu-id="b6ae4-109">[out] Jeśli metoda nie powiedzie się, określa indeks w `rSecAttrs` elementu, który spowodował problem.</span><span class="sxs-lookup"><span data-stu-id="b6ae4-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span></span>  
+ <span data-ttu-id="7ef70-109">[out] Jeśli metoda nie powiedzie się, określa indeks w `rSecAttrs` elementu, który spowodował problem.</span><span class="sxs-lookup"><span data-stu-id="7ef70-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6ae4-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b6ae4-110">Requirements</span></span>  
- <span data-ttu-id="b6ae4-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6ae4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7ef70-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7ef70-110">Requirements</span></span>  
+ <span data-ttu-id="7ef70-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7ef70-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6ae4-112">**Nagłówek:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b6ae4-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7ef70-112">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="7ef70-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b6ae4-113">**Biblioteka:** używany jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b6ae4-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7ef70-113">**Biblioteka:** Używany jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7ef70-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b6ae4-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6ae4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7ef70-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ef70-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6ae4-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="b6ae4-115">See Also</span></span>  
- [<span data-ttu-id="b6ae4-116">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="b6ae4-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="b6ae4-117">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="b6ae4-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7ef70-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7ef70-115">See also</span></span>
+- [<span data-ttu-id="7ef70-116">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="7ef70-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="7ef70-117">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="7ef70-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

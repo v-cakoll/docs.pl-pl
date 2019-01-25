@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc5a06e6b3cc1e9338d860cdb110bf7d516080be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ae40916807a86d1c9828080a6cb9e5c1d14c2ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671229"
 ---
-# <a name="cordebugngenpolicy-enumeration"></a><span data-ttu-id="26e54-102">CorDebugNGenPolicy — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="26e54-102">CorDebugNGenPolicy Enumeration</span></span>
-<span data-ttu-id="26e54-103">Zawiera wartość, która określa, czy debuger ładuje obrazów natywnych (NGen) z pamięci podręcznej obrazów natywnych.</span><span class="sxs-lookup"><span data-stu-id="26e54-103">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  
+# <a name="cordebugngenpolicy-enumeration"></a><span data-ttu-id="db7b0-102">CorDebugNGenPolicy — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="db7b0-102">CorDebugNGenPolicy Enumeration</span></span>
+<span data-ttu-id="db7b0-103">Zawiera wartość określającą, czy debuger wczytuje obrazów macierzystych (NGen) z pamięci podręcznej obrazów natywnych.</span><span class="sxs-lookup"><span data-stu-id="db7b0-103">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26e54-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="26e54-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db7b0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="db7b0-104">Syntax</span></span>  
   
 ```cpp
 enum CorDebugNGENPolicy {  
@@ -36,23 +36,23 @@ enum CorDebugNGENPolicy {
 } CorDebugNGENPolicy;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="26e54-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="26e54-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="db7b0-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="db7b0-105">Members</span></span>  
   
-|<span data-ttu-id="26e54-106">Nazwa elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="26e54-106">Member name</span></span>|<span data-ttu-id="26e54-107">Opis</span><span class="sxs-lookup"><span data-stu-id="26e54-107">Description</span></span>|  
+|<span data-ttu-id="db7b0-106">Nazwa elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="db7b0-106">Member name</span></span>|<span data-ttu-id="db7b0-107">Opis</span><span class="sxs-lookup"><span data-stu-id="db7b0-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|<span data-ttu-id="26e54-108">W [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] aplikacji, użyj obrazów z pamięci podręcznej obrazów natywnych lokalnej jest wyłączona.</span><span class="sxs-lookup"><span data-stu-id="26e54-108">In a [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] app, the use of images from the local native image cache is disabled.</span></span> <span data-ttu-id="26e54-109">W aplikacji komputerowej to ustawienie nie ma żadnego skutku.</span><span class="sxs-lookup"><span data-stu-id="26e54-109">In a desktop app, this setting has no effect.</span></span>|  
+|`DISABLE_LOCAL_NIC`|<span data-ttu-id="db7b0-108">W [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] aplikacji, użycie obrazów z pamięci podręcznej obrazów natywnych lokalnej jest wyłączona.</span><span class="sxs-lookup"><span data-stu-id="db7b0-108">In a [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] app, the use of images from the local native image cache is disabled.</span></span> <span data-ttu-id="db7b0-109">W przypadku aplikacji klasycznej to ustawienie nie obowiązuje.</span><span class="sxs-lookup"><span data-stu-id="db7b0-109">In a desktop app, this setting has no effect.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="26e54-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="26e54-110">Remarks</span></span>  
- <span data-ttu-id="26e54-111">`CorDebugNGENPolicy` Wyliczenie jest używany przez [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="26e54-111">The `CorDebugNGENPolicy` enumeration is used by the [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) method.</span></span> <span data-ttu-id="26e54-112">Wyłączanie korzystania z obrazów z pamięci podręcznej obrazów natywnych lokalnej zapewnia spójne środowisko debugowania przez zapewnienie, że debuger ładuje możliwością debugowania kompilacji JIT obrazów zamiast zoptymalizowane obrazów macierzystych.</span><span class="sxs-lookup"><span data-stu-id="26e54-112">Disabling the use of images from the local native image cache provides for a consistent debugging experience by ensuring that the debugger loads debuggable JIT-compiled images instead of optimized native images.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="db7b0-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="db7b0-110">Remarks</span></span>  
+ <span data-ttu-id="db7b0-111">`CorDebugNGENPolicy` Wyliczenie jest używane przez [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="db7b0-111">The `CorDebugNGENPolicy` enumeration is used by the [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) method.</span></span> <span data-ttu-id="db7b0-112">Wyłączanie użycie obrazów z pamięci podręcznej obrazów natywnych lokalnej zapewnia spójne środowisko debugowania, zapewniając, że debuger ładuje debugowania obrazów kompilowanego dokładnie na czas, zamiast zoptymalizowane obrazy natywne.</span><span class="sxs-lookup"><span data-stu-id="db7b0-112">Disabling the use of images from the local native image cache provides for a consistent debugging experience by ensuring that the debugger loads debuggable JIT-compiled images instead of optimized native images.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="26e54-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="26e54-113">Requirements</span></span>  
- <span data-ttu-id="26e54-114">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="26e54-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db7b0-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="db7b0-113">Requirements</span></span>  
+ <span data-ttu-id="db7b0-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="db7b0-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="26e54-115">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="26e54-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="db7b0-115">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="db7b0-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="26e54-116">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="26e54-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="db7b0-116">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="db7b0-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="26e54-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26e54-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="db7b0-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db7b0-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="26e54-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="26e54-118">See Also</span></span>  
- [<span data-ttu-id="26e54-119">Debugowanie, wyliczenia</span><span class="sxs-lookup"><span data-stu-id="26e54-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="db7b0-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="db7b0-118">See also</span></span>
+- [<span data-ttu-id="db7b0-119">Debugowanie, wyliczenia</span><span class="sxs-lookup"><span data-stu-id="db7b0-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

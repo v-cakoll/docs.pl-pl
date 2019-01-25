@@ -11,51 +11,51 @@ helpviewer_keywords:
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 7ca375935c1dfcdb406257ece1a9dfd18851dddf
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f046e1142209b519ecf71e67a11592f9aa578f84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666712"
 ---
-# <a name="ltswitchesgt-element"></a><span data-ttu-id="49c47-102">&lt;przełączniki&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="49c47-102">&lt;switches&gt; Element</span></span>
-<span data-ttu-id="49c47-103">Zawiera przełączniki śledzenia i poziomu, gdzie są ustawione przełączniki śledzenia.</span><span class="sxs-lookup"><span data-stu-id="49c47-103">Contains trace switches and the level where the trace switches are set.</span></span>  
+# <a name="ltswitchesgt-element"></a><span data-ttu-id="a6276-102">&lt;przełączniki&gt; — Element</span><span class="sxs-lookup"><span data-stu-id="a6276-102">&lt;switches&gt; Element</span></span>
+<span data-ttu-id="a6276-103">Zawiera przełączniki śledzenia i poziomu, gdzie są ustawione przełączniki śledzenia.</span><span class="sxs-lookup"><span data-stu-id="a6276-103">Contains trace switches and the level where the trace switches are set.</span></span>  
   
- <span data-ttu-id="49c47-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="49c47-104">\<configuration></span></span>  
-<span data-ttu-id="49c47-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="49c47-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="49c47-106">\<przełączniki ></span><span class="sxs-lookup"><span data-stu-id="49c47-106">\<switches></span></span>  
+ <span data-ttu-id="a6276-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="a6276-104">\<configuration></span></span>  
+<span data-ttu-id="a6276-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="a6276-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="a6276-106">\<przełączniki ></span><span class="sxs-lookup"><span data-stu-id="a6276-106">\<switches></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49c47-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="49c47-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6276-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="a6276-107">Syntax</span></span>  
   
 ```xml  
       <switches>   
 </switches>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="49c47-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="49c47-108">Attributes and Elements</span></span>  
- <span data-ttu-id="49c47-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="49c47-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a6276-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="a6276-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="a6276-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="a6276-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="49c47-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="49c47-110">Attributes</span></span>  
- <span data-ttu-id="49c47-111">Brak.</span><span class="sxs-lookup"><span data-stu-id="49c47-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a6276-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="a6276-110">Attributes</span></span>  
+ <span data-ttu-id="a6276-111">Brak.</span><span class="sxs-lookup"><span data-stu-id="a6276-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="49c47-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="49c47-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a6276-112">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="a6276-112">Child Elements</span></span>  
   
-|<span data-ttu-id="49c47-113">Element</span><span class="sxs-lookup"><span data-stu-id="49c47-113">Element</span></span>|<span data-ttu-id="49c47-114">Opis</span><span class="sxs-lookup"><span data-stu-id="49c47-114">Description</span></span>|  
+|<span data-ttu-id="a6276-113">Element</span><span class="sxs-lookup"><span data-stu-id="a6276-113">Element</span></span>|<span data-ttu-id="a6276-114">Opis</span><span class="sxs-lookup"><span data-stu-id="a6276-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="49c47-115">\<add></span><span class="sxs-lookup"><span data-stu-id="49c47-115">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="49c47-116">Określa poziom, którego ustawiono przełącznikiem śledzenia.</span><span class="sxs-lookup"><span data-stu-id="49c47-116">Specifies the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="a6276-115">\<add></span><span class="sxs-lookup"><span data-stu-id="a6276-115">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="a6276-116">Określa poziom, którego ustawiono przełącznikiem śledzenia.</span><span class="sxs-lookup"><span data-stu-id="a6276-116">Specifies the level where a trace switch is set.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="49c47-117">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="49c47-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a6276-117">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="a6276-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="49c47-118">Element</span><span class="sxs-lookup"><span data-stu-id="49c47-118">Element</span></span>|<span data-ttu-id="49c47-119">Opis</span><span class="sxs-lookup"><span data-stu-id="49c47-119">Description</span></span>|  
+|<span data-ttu-id="a6276-118">Element</span><span class="sxs-lookup"><span data-stu-id="a6276-118">Element</span></span>|<span data-ttu-id="a6276-119">Opis</span><span class="sxs-lookup"><span data-stu-id="a6276-119">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="49c47-120">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="49c47-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`System.diagnostics`|<span data-ttu-id="49c47-121">Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.</span><span class="sxs-lookup"><span data-stu-id="49c47-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`configuration`|<span data-ttu-id="a6276-120">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a6276-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`System.diagnostics`|<span data-ttu-id="a6276-121">Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.</span><span class="sxs-lookup"><span data-stu-id="a6276-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="49c47-122">Uwagi</span><span class="sxs-lookup"><span data-stu-id="49c47-122">Remarks</span></span>  
- <span data-ttu-id="49c47-123">Aby zmienić poziom o przełącznikiem śledzenia, należy umieścić go w pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="49c47-123">You can change the level of a trace switch by putting it in a configuration file.</span></span> <span data-ttu-id="49c47-124">Jeśli przełącznik <xref:System.Diagnostics.BooleanSwitch>, możesz je włączyć lub wyłączyć.</span><span class="sxs-lookup"><span data-stu-id="49c47-124">If the switch is a <xref:System.Diagnostics.BooleanSwitch>, you can turn it on and off.</span></span> <span data-ttu-id="49c47-125">Jeśli przełącznik <xref:System.Diagnostics.TraceSwitch>można przypisać różne poziomy, aby określić typy śledzenia i debugowania komunikaty wyjściowe aplikacji.</span><span class="sxs-lookup"><span data-stu-id="49c47-125">If the switch is a <xref:System.Diagnostics.TraceSwitch>, you can assign different levels to it to specify the types of trace or debug messages the application outputs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a6276-122">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a6276-122">Remarks</span></span>  
+ <span data-ttu-id="a6276-123">Aby zmienić poziom o przełącznikiem śledzenia, należy umieścić go w pliku konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="a6276-123">You can change the level of a trace switch by putting it in a configuration file.</span></span> <span data-ttu-id="a6276-124">Jeśli przełącznik <xref:System.Diagnostics.BooleanSwitch>, możesz je włączyć lub wyłączyć.</span><span class="sxs-lookup"><span data-stu-id="a6276-124">If the switch is a <xref:System.Diagnostics.BooleanSwitch>, you can turn it on and off.</span></span> <span data-ttu-id="a6276-125">Jeśli przełącznik <xref:System.Diagnostics.TraceSwitch>można przypisać różne poziomy, aby określić typy śledzenia i debugowania komunikaty wyjściowe aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a6276-125">If the switch is a <xref:System.Diagnostics.TraceSwitch>, you can assign different levels to it to specify the types of trace or debug messages the application outputs.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="49c47-126">Przykład</span><span class="sxs-lookup"><span data-stu-id="49c47-126">Example</span></span>  
- <span data-ttu-id="49c47-127">Poniższy przykład pokazuje, jak używać  **\<przełącznika >** element, aby ustawić `General` przełącznikiem śledzenia do <xref:System.Diagnostics.TraceLevel> poziomu i włączyć `Data` przełącznikiem logiczna śledzenia.</span><span class="sxs-lookup"><span data-stu-id="49c47-127">The following example shows how to use the **\<switch>** element to set the `General` trace switch to the <xref:System.Diagnostics.TraceLevel> level, and enable the `Data` Boolean trace switch.</span></span>  
+## <a name="example"></a><span data-ttu-id="a6276-126">Przykład</span><span class="sxs-lookup"><span data-stu-id="a6276-126">Example</span></span>  
+ <span data-ttu-id="a6276-127">Poniższy przykład pokazuje, jak używać  **\<przełącznika >** element, aby ustawić `General` przełącznikiem śledzenia do <xref:System.Diagnostics.TraceLevel> poziomu i włączyć `Data` przełącznikiem logiczna śledzenia.</span><span class="sxs-lookup"><span data-stu-id="a6276-127">The following example shows how to use the **\<switch>** element to set the `General` trace switch to the <xref:System.Diagnostics.TraceLevel> level, and enable the `Data` Boolean trace switch.</span></span>  
   
 ```xml  
 <configuration>  
@@ -68,8 +68,8 @@ ms.locfileid: "48033340"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="49c47-128">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="49c47-128">See Also</span></span>  
- <xref:System.Diagnostics.Switch>  
- <xref:System.Diagnostics.TraceSwitch>  
- <xref:System.Diagnostics.BooleanSwitch>  
- [<span data-ttu-id="49c47-129">Schemat ustawień śledzenia i debugowania</span><span class="sxs-lookup"><span data-stu-id="49c47-129">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="a6276-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a6276-128">See also</span></span>
+- <xref:System.Diagnostics.Switch>
+- <xref:System.Diagnostics.TraceSwitch>
+- <xref:System.Diagnostics.BooleanSwitch>
+- [<span data-ttu-id="a6276-129">Schemat ustawień śledzenia i debugowania</span><span class="sxs-lookup"><span data-stu-id="a6276-129">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

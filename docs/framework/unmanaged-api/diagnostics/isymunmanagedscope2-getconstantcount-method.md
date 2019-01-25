@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbe41a3102a61052b2eceae7ccce3b93fd1bef6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9074d7c46e53ff46e34973cd8143abc9e621fb1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683300"
 ---
-# <a name="isymunmanagedscope2getconstantcount-method"></a><span data-ttu-id="ec224-102">ISymUnmanagedScope2::GetConstantCount — Metoda</span><span class="sxs-lookup"><span data-stu-id="ec224-102">ISymUnmanagedScope2::GetConstantCount Method</span></span>
-<span data-ttu-id="ec224-103">Pobiera liczbę stałe zdefiniowane w tym zakresie.</span><span class="sxs-lookup"><span data-stu-id="ec224-103">Gets a count of the constants defined within this scope.</span></span>  
+# <a name="isymunmanagedscope2getconstantcount-method"></a><span data-ttu-id="f0d6b-102">ISymUnmanagedScope2::GetConstantCount — Metoda</span><span class="sxs-lookup"><span data-stu-id="f0d6b-102">ISymUnmanagedScope2::GetConstantCount Method</span></span>
+<span data-ttu-id="f0d6b-103">Pobiera liczbę stałe zdefiniowane w tym zakresie.</span><span class="sxs-lookup"><span data-stu-id="f0d6b-103">Gets a count of the constants defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec224-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ec224-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f0d6b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f0d6b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetConstantCount(  
     [out, retval] ULONG32 *pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ec224-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="ec224-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f0d6b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f0d6b-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="ec224-106">[out] Wskaźnik do `ULONG32` rozmiar, który odbiera znakami muszą zawierać stałe buforu.</span><span class="sxs-lookup"><span data-stu-id="ec224-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
+ <span data-ttu-id="f0d6b-106">[out] Wskaźnik do `ULONG32` rozmiar, który odbiera w postaci, buforu, muszą zawierać stałe.</span><span class="sxs-lookup"><span data-stu-id="f0d6b-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ec224-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="ec224-107">Return Value</span></span>  
- <span data-ttu-id="ec224-108">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="ec224-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f0d6b-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="f0d6b-107">Return Value</span></span>  
+ <span data-ttu-id="f0d6b-108">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="f0d6b-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ec224-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ec224-109">Requirements</span></span>  
- <span data-ttu-id="ec224-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ec224-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f0d6b-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f0d6b-109">Requirements</span></span>  
+ <span data-ttu-id="f0d6b-110">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f0d6b-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec224-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ec224-111">See Also</span></span>  
- [<span data-ttu-id="ec224-112">ISymUnmanagedScope2, interfejs</span><span class="sxs-lookup"><span data-stu-id="ec224-112">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f0d6b-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f0d6b-111">See also</span></span>
+- [<span data-ttu-id="f0d6b-112">ISymUnmanagedScope2, interfejs</span><span class="sxs-lookup"><span data-stu-id="f0d6b-112">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

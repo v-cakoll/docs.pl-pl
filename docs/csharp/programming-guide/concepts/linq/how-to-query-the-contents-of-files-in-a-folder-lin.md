@@ -1,18 +1,18 @@
 ---
-title: 'Porady: zapytanie o zawartość plików tekstowych w folderze (LINQ) (C#)'
+title: 'Instrukcje: Zapytanie o zawartość plików tekstowych w folderze (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: dedb3b742805daa23151c61e89dd0835f730dd9c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 66e2a2d6ee2b8dd3be3e66f7277947b6d6f749a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45641589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688160"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a><span data-ttu-id="1d57e-102">Porady: zapytanie o zawartość plików tekstowych w folderze (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="1d57e-102">How to: Query the Contents of Text Files in a Folder (LINQ) (C#)</span></span>
-<span data-ttu-id="1d57e-103">Ten przykład przedstawia, jak wykonywać zapytania względem wszystkich plików w drzewie katalogu określonego, Otwórz każdy plik i sprawdź jego zawartość.</span><span class="sxs-lookup"><span data-stu-id="1d57e-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="1d57e-104">Tego rodzaju technika może służyć do tworzenia indeksów lub odwrócić indeksy zawartość drzewa katalogów.</span><span class="sxs-lookup"><span data-stu-id="1d57e-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="1d57e-105">W tym przykładzie zostanie przeprowadzone wyszukiwanie prostego ciągu.</span><span class="sxs-lookup"><span data-stu-id="1d57e-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="1d57e-106">Jednak można wykonać bardziej złożone typy dopasowywania do wzorca z wyrażeniem regularnym.</span><span class="sxs-lookup"><span data-stu-id="1d57e-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="1d57e-107">Aby uzyskać więcej informacji, zobacz [porady: łączenie kwerend LINQ z wyrażeniami regularnymi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="1d57e-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a><span data-ttu-id="b0668-102">Instrukcje: Zapytanie o zawartość plików tekstowych w folderze (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="b0668-102">How to: Query the Contents of Text Files in a Folder (LINQ) (C#)</span></span>
+<span data-ttu-id="b0668-103">Ten przykład przedstawia, jak wykonywać zapytania względem wszystkich plików w drzewie katalogu określonego, Otwórz każdy plik i sprawdź jego zawartość.</span><span class="sxs-lookup"><span data-stu-id="b0668-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="b0668-104">Tego rodzaju technika może służyć do tworzenia indeksów lub odwrócić indeksy zawartość drzewa katalogów.</span><span class="sxs-lookup"><span data-stu-id="b0668-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="b0668-105">W tym przykładzie zostanie przeprowadzone wyszukiwanie prostego ciągu.</span><span class="sxs-lookup"><span data-stu-id="b0668-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="b0668-106">Jednak można wykonać bardziej złożone typy dopasowywania do wzorca z wyrażeniem regularnym.</span><span class="sxs-lookup"><span data-stu-id="b0668-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="b0668-107">Aby uzyskać więcej informacji, zobacz [jak: Łączenie zapytań LINQ z wyrażeniami regularnymi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="b0668-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1d57e-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="1d57e-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b0668-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="b0668-108">Example</span></span>  
   
 ```csharp  
 class QueryContents  
@@ -70,10 +70,10 @@ class QueryContents
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="1d57e-109">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="1d57e-109">Compiling the Code</span></span>  
- <span data-ttu-id="1d57e-110">Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego, za pomocą odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.</span><span class="sxs-lookup"><span data-stu-id="1d57e-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="b0668-109">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="b0668-109">Compiling the Code</span></span>  
+ <span data-ttu-id="b0668-110">Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego, za pomocą odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.</span><span class="sxs-lookup"><span data-stu-id="b0668-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d57e-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1d57e-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0668-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b0668-111">See also</span></span>
 
-- [<span data-ttu-id="1d57e-112">LINQ i katalogi plików (C#)</span><span class="sxs-lookup"><span data-stu-id="1d57e-112">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
-- [<span data-ttu-id="1d57e-113">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="1d57e-113">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="b0668-112">LINQ i katalogi plików (C#)</span><span class="sxs-lookup"><span data-stu-id="b0668-112">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="b0668-113">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="b0668-113">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

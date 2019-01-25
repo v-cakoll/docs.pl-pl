@@ -1,6 +1,6 @@
 ---
-title: 'Porady: kopiowanie katalogów'
-ms.date: 03/30/2017
+title: 'Instrukcje: Kopiowanie katalogów'
+ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,27 +14,29 @@ helpviewer_keywords:
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f2c2fbd58b10af80a2a233cbd4211befe2dbd33
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 57e2b61fb8fef37234dc10885752f92e5f9b1330
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671073"
 ---
-# <a name="how-to-copy-directories"></a><span data-ttu-id="787e2-102">Porady: kopiowanie katalogów</span><span class="sxs-lookup"><span data-stu-id="787e2-102">How to: Copy Directories</span></span>
-<span data-ttu-id="787e2-103">W tym przykładzie pokazano, jak używać klas we/wy synchronicznie skopiować zawartość katalogu do innej lokalizacji.</span><span class="sxs-lookup"><span data-stu-id="787e2-103">This example demonstrates how to use I/O classes to synchronously copy the contents of a directory to another location.</span></span> <span data-ttu-id="787e2-104">W tym przykładzie użytkownik może określić, czy ma być również kopiowany podkatalogów.</span><span class="sxs-lookup"><span data-stu-id="787e2-104">In this example, the user can specify whether to also copy the subdirectories.</span></span> <span data-ttu-id="787e2-105">Podkatalogi są kopiowane, w tym rekursywnie przykład metody kopiuje je poprzez wywołanie sam w poszczególnych podkatalogach kolejne, aż nie wystąpią już do skopiowania.</span><span class="sxs-lookup"><span data-stu-id="787e2-105">If the subdirectories are copied, the method in this example recursively copies them by calling itself on each subsequent subdirectory until there are no more to copy.</span></span>  
+# <a name="how-to-copy-directories"></a><span data-ttu-id="4997a-102">Instrukcje: Kopiowanie katalogów</span><span class="sxs-lookup"><span data-stu-id="4997a-102">How to: Copy directories</span></span>
+<span data-ttu-id="4997a-103">W tym temacie pokazano, jak używać klas we/wy synchronicznie skopiować zawartość katalogu do innej lokalizacji.</span><span class="sxs-lookup"><span data-stu-id="4997a-103">This topic demonstrates how to use I/O classes to synchronously copy the contents of a directory to another location.</span></span> 
+
+<span data-ttu-id="4997a-104">Na przykład kopiowanie plików asynchronicznego Zobacz [asynchroniczne We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md).</span><span class="sxs-lookup"><span data-stu-id="4997a-104">For an example of asynchronous file copy, see [Asynchronous file I/O](../../../docs/standard/io/asynchronous-file-i-o.md).</span></span> 
+
+<span data-ttu-id="4997a-105">W tym przykładzie kopiuje podkatalogi, ustawiając `copySubDirs` z `DirectoryCopy` metody `true`.</span><span class="sxs-lookup"><span data-stu-id="4997a-105">This example copies subdirectories by setting the `copySubDirs` of the `DirectoryCopy` method to `true`.</span></span> <span data-ttu-id="4997a-106">`DirectoryCopy` Rekursywnie metoda kopiuje podkatalogi poprzez wywołanie sam w poszczególnych podkatalogach, dopóki nie będą wyświetlane nie do skopiowania.</span><span class="sxs-lookup"><span data-stu-id="4997a-106">The `DirectoryCopy` method recursively copies subdirectories by calling itself on each subdirectory until there are no more to copy.</span></span>  
   
- <span data-ttu-id="787e2-106">Na przykład skopiować pliki asynchronicznie zobacz [asynchroniczne We/Wy](../../../docs/standard/io/asynchronous-file-i-o.md).</span><span class="sxs-lookup"><span data-stu-id="787e2-106">For an example of copying files asynchronously, see [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="787e2-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="787e2-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4997a-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="4997a-107">Example</span></span>  
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="787e2-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="787e2-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4997a-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4997a-108">See also</span></span>
 
-- <xref:System.IO.FileInfo>  
-- <xref:System.IO.DirectoryInfo>  
-- <xref:System.IO.FileStream>  
-- [<span data-ttu-id="787e2-109">We/Wy plików i strumieni</span><span class="sxs-lookup"><span data-stu-id="787e2-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)  
-- [<span data-ttu-id="787e2-110">Typowe zadania We/Wy</span><span class="sxs-lookup"><span data-stu-id="787e2-110">Common I/O Tasks</span></span>](../../../docs/standard/io/common-i-o-tasks.md)  
-- [<span data-ttu-id="787e2-111">Asynchroniczne operacje We/Wy pliku</span><span class="sxs-lookup"><span data-stu-id="787e2-111">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)
+- <xref:System.IO.FileInfo>
+- <xref:System.IO.DirectoryInfo>
+- <xref:System.IO.FileStream>
+- [<span data-ttu-id="4997a-109">We/Wy plików i strumieni</span><span class="sxs-lookup"><span data-stu-id="4997a-109">File and stream I/O</span></span>](../../../docs/standard/io/index.md)
+- [<span data-ttu-id="4997a-110">Typowe zadania we/wy</span><span class="sxs-lookup"><span data-stu-id="4997a-110">Common I/O tasks</span></span>](../../../docs/standard/io/common-i-o-tasks.md)
+- [<span data-ttu-id="4997a-111">Asynchroniczne We/Wy pliku</span><span class="sxs-lookup"><span data-stu-id="4997a-111">Asynchronous file I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)

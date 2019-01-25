@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 973fc35bb99bea6b3302760763069b9df6c548e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90f5924bc03a9896442fd61a4c618d18ed999faf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638876"
 ---
-# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="34d28-102">ISymUnmanagedDispose — Interfejs</span><span class="sxs-lookup"><span data-stu-id="34d28-102">ISymUnmanagedDispose Interface</span></span>
-<span data-ttu-id="34d28-103">Usuwa zasoby niezarządzane.</span><span class="sxs-lookup"><span data-stu-id="34d28-103">Disposes of unmanaged resources.</span></span>  
+# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="4b794-102">ISymUnmanagedDispose — Interfejs</span><span class="sxs-lookup"><span data-stu-id="4b794-102">ISymUnmanagedDispose Interface</span></span>
+<span data-ttu-id="4b794-103">Usuwa zasoby niezarządzane.</span><span class="sxs-lookup"><span data-stu-id="4b794-103">Disposes of unmanaged resources.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="34d28-104">Metody</span><span class="sxs-lookup"><span data-stu-id="34d28-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="4b794-104">Metody</span><span class="sxs-lookup"><span data-stu-id="4b794-104">Methods</span></span>  
   
-|<span data-ttu-id="34d28-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="34d28-105">Method</span></span>|<span data-ttu-id="34d28-106">Opis</span><span class="sxs-lookup"><span data-stu-id="34d28-106">Description</span></span>|  
+|<span data-ttu-id="4b794-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="4b794-105">Method</span></span>|<span data-ttu-id="4b794-106">Opis</span><span class="sxs-lookup"><span data-stu-id="4b794-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="34d28-107">destroy, metoda</span><span class="sxs-lookup"><span data-stu-id="34d28-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="34d28-108">Powoduje, że obiekt zwolnić wszystkie odwołania wewnętrzne i zwraca błąd na wszystkie wywołania metody kolejne.</span><span class="sxs-lookup"><span data-stu-id="34d28-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
+|[<span data-ttu-id="4b794-107">destroy, metoda</span><span class="sxs-lookup"><span data-stu-id="4b794-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="4b794-108">Powoduje, że obiekt jest zwolnienie wszystkich odwołań wewnętrznego i zwraca błąd na dowolne wywołania metody kolejne.</span><span class="sxs-lookup"><span data-stu-id="4b794-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="34d28-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="34d28-109">Requirements</span></span>  
- <span data-ttu-id="34d28-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="34d28-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4b794-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4b794-109">Requirements</span></span>  
+ <span data-ttu-id="4b794-110">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4b794-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34d28-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="34d28-111">See Also</span></span>  
- [<span data-ttu-id="34d28-112">Interfejsy magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="34d28-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="4b794-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4b794-111">See also</span></span>
+- [<span data-ttu-id="4b794-112">Interfejsy magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="4b794-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

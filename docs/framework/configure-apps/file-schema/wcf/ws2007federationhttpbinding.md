@@ -2,12 +2,12 @@
 title: '&lt;ws2007FederationHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-ms.openlocfilehash: 1006289485ee1509c57ebaffeec2b6a366494470
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7869737f1e3d8c7a9ba569991ead6f7f759e6c58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616891"
 ---
 # <a name="ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt;
 Bezpieczne i interoperacyjne powiązanie pochodzi od klasy [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) i obsługuje federacyjnego zabezpieczenia.  
@@ -75,7 +75,7 @@ Bezpieczne i interoperacyjne powiązanie pochodzi od klasy [ \<wsFederationHttpB
 |`proxyAddress`|Identyfikator URI, który określa adres serwera proxy HTTP. Jeśli `useDefaultWebProxy` jest `true`, to ustawienie musi być `null`. Wartość domyślna to `null`.|  
 |`receiveTimeout`|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji odbierania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:10:00.|  
 |`sendTimeout`|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji wysyłania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
-|`textEncoding`|Określa kodowanie do użycia dla emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości są następujące:<br /><br /> -BigEndianUnicode: Big Endian kodowanie Unicode.<br />-Unicode: 16-bitowego kodowania.<br />-UTF8: 8-bitowego kodowania.<br /><br /> Wartość domyślna to UTF8. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
+|`textEncoding`|Określa kodowanie do użycia dla emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości są następujące:<br /><br /> -BigEndianUnicode: Big Endian kodowanie Unicode.<br />-Unicode: 16-bitowego kodowania.<br />-   UTF8: 8-bitowego kodowania.<br /><br /> Wartość domyślna to UTF8. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
 |`transactionFlow`|Wartość, która określa, czy powiązanie obsługuje płynące WS-transakcji. Wartość domyślna to `false`.|  
 |`useDefaultWebProxy`|Wartość, która wskazuje, czy jest używany serwer proxy HTTP systemu skonfigurowany automatycznie. Adres serwera proxy musi być `null` (czyli nie ustawiono) Jeśli ten atrybut jest `true`. Wartość domyślna to `true`.|  
   
@@ -129,11 +129,11 @@ Bezpieczne i interoperacyjne powiązanie pochodzi od klasy [ \<wsFederationHttpB
 </configuration>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.WS2007FederationHttpBinding>  
- <xref:System.ServiceModel.Configuration.WS2007FederationHttpBindingElement>  
- [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.WS2007FederationHttpBinding>
+- <xref:System.ServiceModel.Configuration.WS2007FederationHttpBindingElement>
+- [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

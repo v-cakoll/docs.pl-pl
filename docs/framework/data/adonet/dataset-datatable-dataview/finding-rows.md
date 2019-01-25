@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: daa8097bc5dfee203f988915b1e4a8bdcd2c50e0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e5a48c5caf9239e0e7b7f2e7a3ad8ab5df168ba1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684193"
 ---
 # <a name="finding-rows"></a>Znajdowanie wierszy
 Możesz wyszukać wierszy, zgodnie z ich wartości kluczy sortowania + przy użyciu <xref:System.Data.DataView.Find%2A> i <xref:System.Data.DataView.FindRows%2A> metody <xref:System.Data.DataView>. Rozróżnianie wielkości liter wyszukiwania wartości w **znaleźć** i **FindRows** metody jest określana przez **CaseSensitive** właściwości podstawowych <xref:System.Data.DataTable>. Wyszukiwanie wartości muszą być zgodne istniejącej wartości kluczy sortowania + w całości w celu zwrócenia wyników.  
@@ -93,8 +93,8 @@ else
       myDRV["ContactName"].ToString());  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Data.DataTable>  
- <xref:System.Data.DataView>  
- [Elementy DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Data.DataTable>
+- <xref:System.Data.DataView>
+- [Elementy DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

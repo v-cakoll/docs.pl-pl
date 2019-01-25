@@ -2,12 +2,12 @@
 title: Operacje na zestawie (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: c91ec399e7c3bccd4ef937d5f7f3f871f86f00be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8a9cf898faeccdf513daf1ae384e811cd559e72a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692184"
 ---
 # <a name="set-operations-c"></a>Operacje na zestawie (C#)
 Operacje na zestawie w składniku LINQ dotyczą operacje zapytań, które tworzą zestaw wyników, który zależy od obecności lub braku równoważne elementów w obrębie tego samego lub oddzielne kolekcje (lub zestawy).  
@@ -45,9 +45,9 @@ Operacje na zestawie w składniku LINQ dotyczą operacje zapytań, które tworz�
   
  ![Grafika przedstawiająca sumę dwóch sekwencji. ](../../../../csharp/programming-guide/concepts/linq/media/union.png "Unii")  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Linq>  
-- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
-- [Porady: znajdowanie różnicy pomiędzy dwoma listami (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- <xref:System.Linq>
+- [Omówienie operatorów standardowej kwerendy (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [Instrukcje: Wyszukiwanie zestawu różnic między dwoma listami (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

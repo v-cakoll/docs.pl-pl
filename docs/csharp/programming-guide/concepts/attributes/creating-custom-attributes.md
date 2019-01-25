@@ -2,12 +2,12 @@
 title: Tworzenie atrybutów niestandardowych (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 0a27924623cc462f6d3339149718a1b29999ac1d
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 0277a88b7e5beda511f6490261a7009adcfed4ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674638"
 ---
 # <a name="creating-custom-attributes-c"></a>Tworzenie atrybutów niestandardowych (C#)
 Można utworzyć własne niestandardowe atrybuty, definiując klasę atrybutów klasy, która pochodzi bezpośrednio lub pośrednio z <xref:System.Attribute>, co sprawia, że identyfikowanie definicji atrybutów w metadanych jest łatwe i szybkie. Załóżmy, że chcesz typy tag o nazwie programisty, który napisał typu. Można zdefiniować niestandardowy `Author` klasy atrybutu:  
@@ -63,12 +63,12 @@ class SampleClass
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Reflection>  
-- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)  
-- [Wpisywanie atrybutów niestandardowych](../../../../standard/attributes/writing-custom-attributes.md)  
-- [Odbicie (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
-- [Atrybuty (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
-- [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- <xref:System.Reflection>
+- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)
+- [Wpisywanie atrybutów niestandardowych](../../../../standard/attributes/writing-custom-attributes.md)
+- [Odbicie (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
+- [Atrybuty (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
+- [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
 - [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)

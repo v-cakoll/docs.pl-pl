@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004487"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690413"
 ---
 # <a name="trees-in-wpf"></a>Drzewa w WPF
 W wielu technologii elementów i składników są zorganizowane w strukturze drzewa, w którym deweloperzy bezpośrednio manipulowania węzły obiektów w drzewie wpływać na renderowanie lub zachowanie aplikacji. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] używa także kilku metafory strukturę drzewa do zdefiniowania relacji między elementami program. W większości deweloperów WPF można utworzyć aplikację w kodzie lub zdefiniować części aplikacji w XAML podczas zastanawiać się pod względem koncepcyjnym obiektu drzewa metaphor, ale będzie można wywołanie interfejsu API lub za pomocą oznaczenia zrobić tak, a nie niektóre ogólne manipulowanie drzewa obiektem API takich jak możesz wykorzystać w XML modelu DOM. WPF udostępnia dwie klasy pomocnika, które zapewniają widoku drzewa metaphor <xref:System.Windows.LogicalTreeHelper> i <xref:System.Windows.Media.VisualTreeHelper>. Drzewo wizualne warunki i drzewo logiczne są również używane w dokumentacji programu WPF, ponieważ te sam drzewa są przydatne dla zrozumienia, działanie niektórych kluczowych funkcji WPF. W tym temacie Określa, co reprezentuje drzewo wizualne i drzewo logiczne, w tym artykule omówiono, jak takie drzew odnoszą się do ogólnej koncepcji drzewa obiektów i wprowadza <xref:System.Windows.LogicalTreeHelper> i <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -86,9 +86,9 @@ W wielu technologii elementów i składników są zorganizowane w strukturze drz
   
  Jednak wyszukiwania zasobów także mogą wykraczać poza natychmiastowego drzewo logiczne. W przypadku zaznaczaniu aplikacji wyszukiwania zasobów można następnie nadal są słowniki zasobów na poziomie aplikacji, a następnie wartościom motywu systemu i pomocy technicznej, które są określone jako właściwości statyczne lub klucze. Motywy się również odwoływać się do wartości systemu poza drzewo logiczne motyw Jeśli odwołania do zasobów są dynamiczne. Aby uzyskać więcej informacji na temat słownikach zasobów i logiki wyszukiwania, zobacz [zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Inicjowanie elementów obiektu poza drzewem obiektu](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [Architektura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Inicjowanie elementów obiektu poza drzewem obiektu](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)
+- [Architektura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

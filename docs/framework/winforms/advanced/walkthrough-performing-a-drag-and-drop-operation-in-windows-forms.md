@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: wykonywanie operacji przeciągania i upuszczania w formularzach systemu Windows'
+title: 'Przewodnik: Wykonywanie operacji przeciągania i upuszczania w formularzach Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: 6c78a06e37de491e95d56d29c9d2f3e60b88e8ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b582043b3b576b3750b897b17a5f6e0cbdeb84f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647637"
 ---
-# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Wskazówki: wykonywanie operacji przeciągania i upuszczania w formularzach systemu Windows
-Wykonywanie operacji przeciągania i upuszczania w aplikacjach opartych na systemie Windows musi obsługiwać szereg zdarzeń, głównie <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, i <xref:System.Windows.Forms.Control.DragDrop> zdarzenia. Praca z informacji dostępnych w przypadku argumentów te zdarzenia, można łatwo ułatwienia operacji przeciągania i upuszczania.  
+# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Przewodnik: Wykonywanie operacji przeciągania i upuszczania w formularzach Windows Forms
+Wykonywanie operacji przeciągania i upuszczania w aplikacji systemu Windows musi obsługiwać szereg zdarzeń, głównie <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, i <xref:System.Windows.Forms.Control.DragDrop> zdarzenia. Praca z dostępnych informacji w zdarzeniu argumenty te zdarzenia, można łatwo ułatwić operacji przeciągania i upuszczania.  
   
 ## <a name="dragging-data"></a>Przeciąganie danych  
- Wszystkie operacje przeciągania i upuszczania zaczynać przeciągania. Funkcje umożliwiające podczas przeciągania rozpoczyna zbieranie danych jest zaimplementowana w <xref:System.Windows.Forms.Control.DoDragDrop%2A> metody.  
+ Wszystkie operacje przeciągania i upuszczania rozpoczynają się od przeciągania. Funkcje umożliwiające podczas przeciągania rozpoczyna się zbieranie danych jest zaimplementowana w <xref:System.Windows.Forms.Control.DoDragDrop%2A> metody.  
   
- W poniższym przykładzie <xref:System.Windows.Forms.Control.MouseDown> zdarzenia są używane do uruchamiania operacji przeciągania, ponieważ jest najbardziej intuicyjnego (Większość akcji przeciągania i upuszczania zaczynać się przycisk myszy jest wciśnięty). Należy jednak pamiętać, że wszystkie zdarzenia może posłużyć do zainicjowania procedury przeciągania i upuszczania.  
+ W poniższym przykładzie <xref:System.Windows.Forms.Control.MouseDown> zdarzenia są używane do uruchamiania operacji przeciągania, ponieważ jest on w najbardziej intuicyjnej (Większość akcji przeciągania i upuszczania zaczynają się od przycisk myszy jest wciśnięty). Należy jednak pamiętać, że dowolne zdarzenie, może służyć do zainicjowania procedury przeciągania i upuszczania.  
   
 > [!NOTE]
->  Niektóre formanty ma niestandardowych zdarzeń specyficznych dla przeciągania. <xref:System.Windows.Forms.ListView> i <xref:System.Windows.Forms.TreeView> kontrolki, na przykład mieć <xref:System.Windows.Forms.TreeView.ItemDrag> zdarzeń.  
+>  Niektóre formanty mają niestandardowych zdarzeń specyficznych dla przeciągania. <xref:System.Windows.Forms.ListView> i <xref:System.Windows.Forms.TreeView> kontrolki, na przykład mieć <xref:System.Windows.Forms.TreeView.ItemDrag> zdarzeń.  
   
-#### <a name="to-start-a-drag-operation"></a>Aby uruchomić operację przeciągania  
+#### <a name="to-start-a-drag-operation"></a>Aby rozpocząć operację przeciągania  
   
-1.  W <xref:System.Windows.Forms.Control.MouseDown> zdarzeń dla formantu, gdzie rozpocznie przeciąganie, użyj `DoDragDrop` ma metodę, aby ustawić dane do przeciąganych i dozwolonym efektem przeciągania. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.DragEventArgs.Data%2A> i <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
+1.  W <xref:System.Windows.Forms.Control.MouseDown> zdarzeń dla formantu, gdy rozpocznie się przeciąganie, użyj `DoDragDrop` metodę, aby ustawić dane, które mają być przeciągane i dozwolonym efektem przeciąganie będą mieć. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.DragEventArgs.Data%2A> i <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
   
-     Poniższy przykład pokazuje, jak zainicjować operacji przeciągania. Formant, gdzie zaczyna się przeciągania jest <xref:System.Windows.Forms.Button> kontroli, dane przeciągane jest ciąg reprezentujący <xref:System.Windows.Forms.Control.Text%2A> właściwość <xref:System.Windows.Forms.Button> kontroli i dozwolone efekty są kopiowania lub przenoszenia.  
+     Poniższy przykład pokazuje, jak zainicjować operacji przeciągania. Kontrolka, gdzie rozpoczyna się przeciągania jest <xref:System.Windows.Forms.Button> kontroli danych przeciąganie jest ciąg reprezentujący <xref:System.Windows.Forms.Control.Text%2A> właściwość <xref:System.Windows.Forms.Button> kontroli i dozwolone efekty są kopiowania lub przenoszenia.  
   
     ```vb  
     Private Sub Button1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button1.MouseDown  
@@ -48,18 +48,18 @@ Wykonywanie operacji przeciągania i upuszczania w aplikacjach opartych na syste
     ```  
   
     > [!NOTE]
-    >  Wszystkie dane mogą być używane jako parametru w `DoDragDrop` — metoda; w powyższym przykładzie <xref:System.Windows.Forms.Control.Text%2A> właściwość <xref:System.Windows.Forms.Button> formant został użyty (zamiast kodować wartość lub pobieranie danych z zestawu danych) ponieważ właściwość nie została powiązana z przeciąganie z lokalizacji ( <xref:System.Windows.Forms.Button> kontroli). Należy to pamiętać, jak zastosować operacji przeciągania i upuszczania w aplikacjach opartych na systemie Windows.  
+    >  Wszystkie dane mogą być używane jako parametr w `DoDragDrop` metoda; w powyższym przykładzie <xref:System.Windows.Forms.Control.Text%2A> właściwość <xref:System.Windows.Forms.Button> formant został użyty (a nie zakodowane na stałe wartości lub pobieranie danych z zestawu danych), ponieważ właściwość był powiązany z przeciąganie z lokalizacji ( <xref:System.Windows.Forms.Button> kontroli). Miej to na uwadze, jak włączenie operacji przeciągania i upuszczania do aplikacji z systemem Windows.  
   
- Podczas operacji przeciągania jest włączone, można obsługiwać <xref:System.Windows.Forms.Control.QueryContinueDrag> zdarzenie, które "prosi o uprawnienie" systemu, aby kontynuować operację przeciągania. Podczas przetwarzania tej metody, jest również odpowiedniego punktu można wywoływać metod, które będą miały wpływu na operację przeciągania, takich jak rozszerzanie <xref:System.Windows.Forms.TreeNode> w <xref:System.Windows.Forms.TreeView> kontroli, gdy kursor znajduje się nad nim.  
+ Operacja przeciągania w czasie działania, które ułatwią Ci obsługę <xref:System.Windows.Forms.Control.QueryContinueDrag> zdarzenie, które "żąda uprawnienia" systemu, aby kontynuować operację przeciągania. Podczas obsługi tej metody, jest również odpowiedni punkt wywoływać metody mające wpływ na operacji przeciągania, takich jak rozwijanie <xref:System.Windows.Forms.TreeNode> w <xref:System.Windows.Forms.TreeView> kontroli, gdy kursor znajduje się nad nią.  
   
 ## <a name="dropping-data"></a>Usuwanie danych  
- Po rozpoczęciu przeciąganie danych z lokalizacji w formularzu systemu Windows lub kontrolki, należy naturalny Porzuć go innym. Kursor ulegnie zmianie po jego przecina obszaru formularz lub formant, który jest poprawnie skonfigurowany dla usunięcie danych. Każdy obszar w formularzu systemu Windows lub formant może również akceptować dane porzuconych przez ustawienie <xref:System.Windows.Forms.Control.AllowDrop%2A> właściwości i obsługa <xref:System.Windows.Forms.Control.DragEnter> i <xref:System.Windows.Forms.Control.DragDrop> zdarzenia.  
+ Po rozpoczęciu przeciągając danych z lokalizacji Windows formularza lub formantu, naturalnie można je gdzieś umieścić. Kursor zmieni się na jej przecina obszaru formularza lub formantu, który jest poprawnie skonfigurowany dla porzucenie danych. Każdy obszar w Windows formularza lub formantu można wprowadzić na akceptowanie danych porzuconych przez ustawienie <xref:System.Windows.Forms.Control.AllowDrop%2A> właściwości i obsługa <xref:System.Windows.Forms.Control.DragEnter> i <xref:System.Windows.Forms.Control.DragDrop> zdarzenia.  
   
-#### <a name="to-perform-a-drop"></a>Aby wykonać spadek  
+#### <a name="to-perform-a-drop"></a>Aby wykonać zrzutu  
   
 1.  Ustaw <xref:System.Windows.Forms.Control.AllowDrop%2A> właściwości na wartość true.  
   
-2.  W `DragEnter` zdarzeń dla formantu, gdy nastąpi spadek Sprawdź, czy dane przeciągane jest dopuszczalne typu (w tym przypadku <xref:System.Windows.Forms.Control.Text%2A>). Kod następnie ustawia efekt, który nastąpi po wartości w polu listy <xref:System.Windows.Forms.DragDropEffects> wyliczenia. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+2.  W `DragEnter` zdarzeń dla formantu, gdy nastąpi spadek, upewnij się, że dane przeciąganie typu dopuszczalnych (w tym przypadku <xref:System.Windows.Forms.Control.Text%2A>). Kod następnie ustawia wpływ, jaki nastąpi wartości w przypadku listy <xref:System.Windows.Forms.DragDropEffects> wyliczenia. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -83,11 +83,11 @@ Wykonywanie operacji przeciągania i upuszczania w aplikacjach opartych na syste
     ```  
   
     > [!NOTE]
-    >  Można definiować własnych <xref:System.Windows.Forms.DataFormats> , określając obiektu jako <xref:System.Object> parametr <xref:System.Windows.Forms.DataObject.SetData%2A> metody. Upewnij się, gdy spowoduje to, że określony obiekt jest możliwy do serializacji. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.Serialization.ISerializable>.  
+    >  Definiowanie swoich własnych <xref:System.Windows.Forms.DataFormats> , określając obiektu jako <xref:System.Object> parametru <xref:System.Windows.Forms.DataObject.SetData%2A> metody. Upewnij się, w trakcie tego, czy określony obiekt jest możliwy do serializacji. Aby uzyskać więcej informacji, zobacz <xref:System.Runtime.Serialization.ISerializable>.  
   
-3.  W <xref:System.Windows.Forms.Control.DragDrop> zdarzeń dla formantu, gdzie nastąpi spadek użyj <xref:System.Windows.Forms.DataObject.GetData%2A> metody do pobierania danych przeciągania. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
+3.  W <xref:System.Windows.Forms.Control.DragDrop> zdarzeń dla formantu, gdzie nastąpi spadek, użyj <xref:System.Windows.Forms.DataObject.GetData%2A> metody do pobierania danych przeciągania. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
   
-     W poniższym przykładzie <xref:System.Windows.Forms.TextBox> formant jest formantem przeciąganego (listy będą mieć miejsce). Ustawia kod <xref:System.Windows.Forms.Control.Text%2A> właściwość <xref:System.Windows.Forms.TextBox> kontrolować równa dane przeciągane.  
+     W poniższym przykładzie <xref:System.Windows.Forms.TextBox> jest kontrolka przeciąganego (gdzie listy nastąpi). Zestawy kodów <xref:System.Windows.Forms.Control.Text%2A> właściwość <xref:System.Windows.Forms.TextBox> kontrolować równa danych przeciągania.  
   
     ```vb  
     Private Sub TextBox1_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragDrop  
@@ -104,9 +104,9 @@ Wykonywanie operacji przeciągania i upuszczania w aplikacjach opartych na syste
     ```  
   
     > [!NOTE]
-    >  Ponadto możesz pracować z <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> właściwości, dzięki czemu w zależności od klucze wciśnięty podczas operacji przeciągania i upuszczania niektórych występują skutki (na przykład jest standard, aby skopiować dane przeciąganego, gdy zostanie naciśnięty klawisz CTRL).  
+    >  Ponadto można pracować z <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> właściwość tak, aby w zależności od klucze obniżone podczas operacji przeciągania i upuszczania pewne efekty wystąpić (na przykład jest standard, aby skopiować dane przeciąganego, po naciśnięciu klawisza CTRL).  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: dodawanie danych do schowka](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
- [Instrukcje: pobieranie danych ze schowka](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
- [Operacje przeciągania i upuszczania oraz obsługa schowka](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Dodawanie danych do Schowka](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
+- [Instrukcje: Pobieranie danych ze Schowka](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
+- [Operacje przeciągania i upuszczania oraz obsługa schowka](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)

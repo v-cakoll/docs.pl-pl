@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6910dfba0889b4eaf601960d13dfe87a3b8c2fa
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5613128950d53946d55050ba3fd77cf1f0bb048a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513428"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potencjalne pułapki związane z równoległością danych i zadań
 W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> może zapewnić znaczne ulepszenia wydajności za pośrednictwem zwykłych sekwencyjne pętli. Jednak pracy zrównoleglić pętlę wprowadza złożoności, który może prowadzić do problemów, które sekwencyjnego kodu nie są jako wspólne lub nie zostaną napotkane w ogóle. W tym temacie wymieniono niektóre rozwiązania, aby uniknąć podczas pisania pętli równoległych.  
@@ -24,7 +24,7 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
  W niektórych przypadkach pętlę równoległą może działać wolniej niż równoważnik sekwencyjne. Podstawowa zasada mówi jest możliwość równoległego pętli, które mają kilka iteracji i delegatów użytkownika szybkie, prawdopodobnie nie będzie przyspieszenie znacznie. Ponieważ wiele czynników są zaangażowane w wydajności, firma Microsoft zaleca jednak zawsze pomiaru rzeczywiste wyniki.  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>Należy unikać pisania do lokalizacji udostępnionej pamięci  
- W kodzie sekwencyjnych nie jest niczym niezwykłym, aby odczytać lub zapisać zmienne statyczne lub pola klasy. Zawsze, gdy wiele wątków uzyskują dostęp do takich zmiennych jednocześnie, istnieje jednak duże prawdopodobieństwo jednoczesnego wyścigu. Mimo że blokad służy do synchronizowania dostępu do zmiennej, koszt synchronizacji może obniżyć wydajność. Dlatego zaleca się że uniknąć, lub co najmniej ograniczyć, dostęp do udostępnionego stanu w miarę możliwości pętli równoległej. Najlepszym sposobem, w tym celu jest użycie przeciążenia <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> używające <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> zmienną do przechowywania stanu lokalnej wątku podczas wykonywania pętli. Aby uzyskać więcej informacji, zobacz [porady: zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) i [porady: zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi partycji](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ W kodzie sekwencyjnych nie jest niczym niezwykłym, aby odczytać lub zapisać zmienne statyczne lub pola klasy. Zawsze, gdy wiele wątków uzyskują dostęp do takich zmiennych jednocześnie, istnieje jednak duże prawdopodobieństwo jednoczesnego wyścigu. Mimo że blokad służy do synchronizowania dostępu do zmiennej, koszt synchronizacji może obniżyć wydajność. Dlatego zaleca się że uniknąć, lub co najmniej ograniczyć, dostęp do udostępnionego stanu w miarę możliwości pętli równoległej. Najlepszym sposobem, w tym celu jest użycie przeciążenia <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> używające <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> zmienną do przechowywania stanu lokalnej wątku podczas wykonywania pętli. Aby uzyskać więcej informacji, zobacz [jak: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) i [jak: Zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi partycji](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="avoid-over-parallelization"></a>Unikaj nadmiernego przetwarzania równoległego  
  Za pomocą pętli równoległej wiąże się z kosztów ogólnych partycjonowania kolekcji źródłowej i synchronizacji wątków roboczych. Korzyści wynikające z przetwarzaniem równoległym dalsze są ograniczone przez liczbę procesorów w komputerze. Nie ma żadnych przyspieszenie, które można uzyskać, uruchamiając wiele wątków powiązany obliczeniowych w tylko jednym procesorze. W związku z tym należy uważać, aby nie nadmiernie zrównoleglić pętlę.  
@@ -52,7 +52,7 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
 >  Możesz sprawdzić to samodzielnie, wstawiając wywołania niektórych <xref:System.Console.WriteLine%2A> w zapytaniach. Chociaż ta metoda jest używana w przykładach dokumentacji w celach demonstracyjnych, nie należy używać go w pętlach równoległych Jeśli to konieczne.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Należy pamiętać o problemów koligacji wątku  
- Niektóre technologie, na przykład współdziałanie COM dla składników Single-Threaded apartamentu (STA), Windows Forms i Windows Presentation Foundation (WPF), nakładają ograniczenia koligacji wątku, które wymagają kod wymagany do uruchomienia w określonym wątku. Na przykład w Windows Forms i WPF formant może zostać oceniony jedynie w wątku, na którym została utworzona. Oznacza to, na przykład nie można zaktualizować formantu listy z równoległą pętlą o ile nie skonfigurowano harmonogramu wątków do zaplanowania pracy tylko w wątku interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [jak: harmonogram pracy w wątku interfejsu użytkownika (UI)](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
+ Niektóre technologie, na przykład współdziałanie COM dla składników Single-Threaded apartamentu (STA), Windows Forms i Windows Presentation Foundation (WPF), nakładają ograniczenia koligacji wątku, które wymagają kod wymagany do uruchomienia w określonym wątku. Na przykład w Windows Forms i WPF formant może zostać oceniony jedynie w wątku, na którym została utworzona. Oznacza to, na przykład nie można zaktualizować formantu listy z równoległą pętlą o ile nie skonfigurowano harmonogramu wątków do zaplanowania pracy tylko w wątku interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [jak: Harmonogramu pracy nad wątku interfejsu użytkownika](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Należy zachować ostrożność podczas oczekiwania w delegatów, które są wywoływane przez elementu Parallel.Invoke  
  W pewnych okolicznościach Biblioteka zadań równoległych będą wbudowane zadanie, co oznacza, że jest ono uruchamiane zadanie na aktualnie wykonywany wątek. (Aby uzyskać więcej informacji, zobacz [harmonogramów zadań](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).) Tego rodzaju optymalizacji wydajności może prowadzić do zakleszczenia w niektórych przypadkach. Na przykład dwa zadania może uruchomić tego samego obiektu delegowanego kodu, które sygnalizują, gdy wystąpi zdarzenie, a następnie czeka na innych zadań w celu sygnalizowania, że. Jeśli drugie zadanie jest śródwierszowa, w tym samym wątku, który jako pierwszy, a pierwszy przechodzi w stan oczekiwania, drugie zadanie nigdy nie będą mogli sygnalizują jego zdarzenia. Aby uniknąć wystąpienia zdarzenia, można określić limit czasu operacji oczekiwania, lub użyj wątku jawne konstruktory ułatwiające, upewnij się, że jedno zadanie nie można zablokować, drugi.  
@@ -82,6 +82,6 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  
-- [Potencjalne pułapki związane z PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
-- [Wzorce programowania równoległego: rozumienie i stosowanie równoległych wzorców z programu .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)
+- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)
+- [Potencjalne pułapki związane z PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)
+- [Wzorce programowania równoległego: Rozumienie i stosowanie wzorów równoległych za pomocą programu .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)

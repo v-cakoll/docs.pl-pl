@@ -3,12 +3,12 @@ title: Struktury — przewodnik języka C#
 description: Dowiedz się więcej o typ struktury i jak je utworzyć
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 26b7b075dbe159d43fd7f84e9599d2d8d6a8332c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506982"
 ---
 # <a name="structs"></a>Struktury
 A *struktury* jest typem wartości. Po utworzeniu struktury, zmienna, do którego jest przypisana struktura zawiera rzeczywiste dane struktury. Struktura jest przypisywana do nowej zmiennej, są kopiowane. Nowa zmienna i pierwotna zmienna zatem zawierają dwie oddzielne kopie tych samych danych. Zmiany wprowadzone w jednym egzemplarzu nie wpływają na drugi egzemplarz.
@@ -65,7 +65,7 @@ Drugi pokazuje *literały binarne*, które pozwalają na określenie wzorców be
 ## <a name="nullable-types"></a>Typy dopuszczające wartości null  
 Typy wartości zwykłych nie może mieć wartość [null](./language-reference/keywords/null.md). Można jednak utworzyć typy o wartości zerowalnej przez umieszczenie **?** po typie. Na przykład **int?** jest **int** typu, który może mieć również wartość [null](./language-reference/keywords/null.md). W CTS, typy null są wystąpieniami typu struktury ogólnej <xref:System.Nullable%601>. Typy dopuszczające wartości null są szczególnie przydatne podczas przekazywania danych do i z baz danych, w których wartości liczbowe mogą przyjąć wartości null. Aby uzyskać więcej informacji, zobacz [typów dopuszczających wartości zerowe (C# Programming Guide)](./programming-guide/nullable-types/index.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Klasy](classes.md)
 - [Typy podstawowe](basic-types.md)

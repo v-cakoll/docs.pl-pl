@@ -2,12 +2,12 @@
 title: 'Instrukcje: Wymiana komunikatów w ramach sesji niezawodnej'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720057"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Instrukcje: Wymiana komunikatów w ramach sesji niezawodnej
 
@@ -75,8 +75,8 @@ Domyślnie kilka powiązania dostarczane przez system obsługuje sesji uwierzyte
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 
-Na przykład sposobu tworzenia niestandardowego powiązania, które obsługuje niezawodne sesje zobacz [porady: Tworzenie niestandardowego powiązania niezawodnej sesji za pomocą protokołu HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
+Na przykład sposobu tworzenia niestandardowego powiązania, które obsługuje niezawodne sesje zobacz [jak: Tworzenie niestandardowych wiązań niezawodnej sesji za pomocą protokołu HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Niezawodne sesje](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Niezawodne sesje](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

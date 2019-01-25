@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ff378602fc7338263ef49aee6802d2138bab9d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ff4f86105fd1dfbd12360c01046492f3a6dbdcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589953"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject — Metoda
-Przydziela nowe wystąpienie obiektu i wywołuje metodę określony Konstruktor.  
+Przydziela nowe wystąpienie obiektu, a następnie wywołuje metodę określonej konstruktora.  
   
- Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0. Użyj [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) zamiast tego.  
+ Ta metoda jest przestarzała w programie .NET Framework 2.0. Użyj [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) zamiast tego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,10 +47,10 @@ HRESULT NewObject (
  [in] Rozmiar `ppArgs` tablicy.  
   
  `ppArgs`  
- [in] Tablica obiektów ICorDebugValue, z których każdy reprezentuje argument przekazywany do konstruktora.  
+ [in] Tablica obiektów ICorDebugValue, z których każdy reprezentuje argument do przekazania do konstruktora.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -58,5 +58,5 @@ HRESULT NewObject (
   
  **Wersje programu .NET framework:** 1.1, 1.0  
   
-## <a name="see-also"></a>Zobacz też  
- [NewParameterizedObject, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)
+## <a name="see-also"></a>Zobacz także
+- [NewParameterizedObject, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)

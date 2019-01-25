@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 350aecb9f9c99c9aa44ae6df6d31c7cb69ae5760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: acff919cbeb6b5d71197664139cdc9212961e314
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629517"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>ISymUnmanagedDocument::HasEmbeddedSource — Metoda
-Zwraca `true` Jeśli dokument ma źródła osadzone w symbole debugowania; w przeciwnym razie zwraca `false`.  
+Zwraca `true` Jeśli dokument ma źródło osadzone w symbole debugowania; w przeciwnym razie zwraca `false`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,10 +36,10 @@ HRESULT HasEmbeddedSource(
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Wskaźnik do zmiennej, która wskazuje, czy dokument zawiera osadzony w symbole debugowania źródła.  
+ [out] Wskaźnik do zmiennej, która wskazuje, czy dokument ma źródło osadzone w symbole debugowania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ S_OK, jeśli metoda zakończy się powodzeniem.  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedDocument, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedDocument, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

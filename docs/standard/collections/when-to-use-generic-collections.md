@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9831212cf65e3913bae2431e4746b5def03430b6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 5ae6f76ba358d07101f56de321a9453b3eee1bf2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674040"
 ---
 # <a name="when-to-use-generic-collections"></a>Kiedy należy używać kolekcji ogólnych
 Za pomocą kolekcji ogólnych ogólnie zaleca się, ponieważ uzyskanie bezpośrednią korzyść bezpieczeństwa typu bez konieczności pochodzić od typu podstawowego kolekcji i implementowanie elementów specyficznych dla typu. Typy generyczne kolekcji również zazwyczaj mają lepszą wydajność niż odpowiadające typy kolekcji nierodzajowymi (i lepiej niż typy, pochodne typy nierodzajowymi bazowej kolekcji) po elementy kolekcji są typami wartości, ponieważ za pomocą typów ogólnych nie ma potrzeby polu elementów.  
@@ -55,6 +55,6 @@ Za pomocą kolekcji ogólnych ogólnie zaleca się, ponieważ uzyskanie bezpośr
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kolekcje i struktury danych](../../../docs/standard/collections/index.md)  
-- [Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)  
+- [Kolekcje i struktury danych](../../../docs/standard/collections/index.md)
+- [Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)
 - [Typy ogólne](../../../docs/standard/generics/index.md)

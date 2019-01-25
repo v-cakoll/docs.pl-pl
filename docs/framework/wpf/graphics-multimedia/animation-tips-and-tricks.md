@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: df4aa7f3bf046ec871333f665ab77fa460c4095c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6d79d3330154fff33abe5a401a70c6b9a20aad72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660427"
 ---
 # <a name="animation-tips-and-tricks"></a>Porady i triki animacyjne
 Podczas pracy z animacjami w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]kilka porad i wskazówek, które mogą ułatwić animacji działać lepiej i pozwala zaoszczędzić Rozczarowanie.  
@@ -105,7 +105,7 @@ Podczas pracy z animacjami w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sh
   
  Istnieją różne sposoby, aby usunąć animacji. Następujące techniki może służyć do usunięcia animacji, należących do <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Aby usunąć <xref:System.Windows.Media.Animation.Storyboard> wprowadzenie wyzwalacz zdarzenia, zobacz [porady: usuwanie scenorysu](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
+-   Aby usunąć <xref:System.Windows.Media.Animation.Storyboard> wprowadzenie wyzwalacz zdarzenia, zobacz [jak: Usuń Scenorys](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
   
 -   Aby użyć kodu, aby usunąć <xref:System.Windows.Media.Animation.Storyboard>, zobacz <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> metody.  
   
@@ -128,5 +128,5 @@ Podczas pracy z animacjami w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sh
   
  Aby uzyskać więcej informacji o obiektach zegara, zobacz [Animacja i System chronometrażu w — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

@@ -2,23 +2,23 @@
 title: ComPlusTLBImportError
 ms.date: 03/30/2017
 ms.assetid: fe087e97-efbb-4006-8465-ec2ff7860c7b
-ms.openlocfilehash: 9dd49ccde1354f3f9140dfa0d2f3ea7428ba0f66
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9c75f4cdbdb7c5459ee156e63593f95d1fde7a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33471006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638096"
 ---
 # <a name="complustlbimporterror"></a>ComPlusTLBImportError
-Identyfikator: 132  
+Id: 132  
   
- Ważność: błąd  
+ Ważność: Błąd  
   
  Kategoria: ServiceModel  
   
 ## <a name="description"></a>Opis  
- To zdarzenie oznacza, że wystąpił błąd podczas importowania biblioteki typów. Zdarzenia zawiera identyfikator IID, identyfikator biblioteki typów, wyjątek, nazwa procesu i identyfikatora procesu.  
+ To zdarzenie oznacza, że wystąpił błąd podczas importowania biblioteki typów. Zdarzenie Wyświetla identyfikatora IID, identyfikator typu biblioteki, wyjątków, nazwa procesu i identyfikatora procesu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

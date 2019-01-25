@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dodawanie przycisków załaduj, zapisz i anuluj do kontrolki BindingNavigator formularzy systemu Windows'
+title: 'Instrukcje: Dodaj obciążenia, Zapisz i Anuluj przycisków Windows kontrolki BindingNavigator formularzy'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 97be77b6591e4b7fa3db8176222dcb1feb3481bc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671112"
 ---
-# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Porady: dodawanie przycisków załaduj, zapisz i anuluj do kontrolki BindingNavigator formularzy systemu Windows
+# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Instrukcje: Dodaj obciążenia, Zapisz i Anuluj przycisków Windows kontrolki BindingNavigator formularzy
 <xref:System.Windows.Forms.BindingNavigator> Formant jest specjalny <xref:System.Windows.Forms.ToolStrip> formant, który jest przeznaczony do nawigowania i manipulowanie nimi formantów w formularzu, które są powiązane z danymi.  
   
  Ponieważ jest on <xref:System.Windows.Forms.ToolStrip> kontroli <xref:System.Windows.Forms.BindingNavigator> składnika można łatwo zmodyfikowany w celu dodania dodatkowych lub alternatywnych poleceń dla użytkownika.  
@@ -109,9 +109,9 @@ ms.locfileid: "45972692"
     > [!NOTE]
     >  <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> Metody jest ograniczone do wiersza danych. Zapisz wszelkie zmiany wprowadzone podczas wyświetlania tego pojedynczego rekordu przed przejdź do następnego rekordu.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.BindingNavigator>  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.ToolStrip>  
- [BindingNavigator, kontrolka](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [BindingSource, składnik — omówienie](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.BindingNavigator>
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.ToolStrip>
+- [BindingNavigator, kontrolka](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [BindingSource, składnik — omówienie](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)

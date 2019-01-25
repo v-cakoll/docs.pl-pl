@@ -2,12 +2,12 @@
 title: 'Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)'
 ms.date: 07/20/2015
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-ms.openlocfilehash: 2d906bb2310d4dd6c0ccd865a52ede441556dfda
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2d972f53b30ccd8ba8e1ffdaecb40cf7f76e7b6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583473"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)
 W tym samouczku przedstawiono sposób stosowania funkcjonalności innowacyjne podejście i LINQ do XML do manipulowania dokumentów XML. Przykłady języka C# zapytania i manipulować informacjami w dokumentach pakietu Office Open XML WordprocessingML, które są zapisywane przez program Microsoft Word.  
@@ -29,7 +29,7 @@ W tym samouczku przedstawiono sposób stosowania funkcjonalności innowacyjne po
 |[Wyszukiwanie tekstu w dokumentach programu Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)|Korzysta z poprzednich zapytań, aby znaleźć określony ciąg tekstowy w dokumencie.|  
 |[Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Zawiera pewne szczegóły dokumentów Office Open XML WordprocessingML.|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Czyste Przekształcanie funkcjonalne kodu XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
+- [Czyste Przekształcanie funkcjonalne kodu XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
 - [Wprowadzenie do czystych przekształceń funkcjonalnych (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

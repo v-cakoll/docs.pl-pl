@@ -9,18 +9,18 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 10a6451827a16605ba738cf74b7f684b69adb5dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 814c788285d974db5a8ef2bbaec1368a860c21d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643965"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Kolejność zdarzeń w formularzach systemu Windows
-Kolejność, w której zdarzenia są generowane w aplikacjach formularzy systemu Windows ma szczególne znaczenie dla deweloperów związane z obsługi każdego z tych zdarzeń z kolei. Rozwiązania wymaga dokładnych obsługi zdarzenia, na przykład gdy są ponownego narysowania części formularza, konieczne jest świadomości dokładne kolejności, w której zdarzenia są generowane w czasie wykonywania. Ten temat zawiera pewne szczegóły rzędu zdarzenia podczas kilka ważnych etapach cykl życia aplikacji i kontrolek. Aby uzyskać szczegółowe informacje o zamówieniu myszy zdarzenia wejściowe, zobacz [zdarzenia myszy w formularzach systemu Windows](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Przegląd zdarzeń w formularzach systemu Windows, temacie [Przegląd zdarzeń](../../../docs/framework/winforms/events-overview-windows-forms.md). Aby uzyskać więcej informacji o w skład programów obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+Kolejność, w której zdarzenia są wywoływane w aplikacjach Windows Forms ma szczególne znaczenie dla deweloperów zaniepokojona obsługi, każde z tych wydarzeń z kolei. Rozwiązania wymaga dokładnych obsługi zdarzeń, takich jak kiedy są odświeżanie części formularza, niezbędne jest rozpoznawanie dokładne kolejność, w której zdarzenia są wywoływane w czasie wykonywania. Ten temat zawiera kilka szczegółów rzędu kilku zdarzeń kilku etapach ważne w okresie istnienia aplikacji i formantów. Aby uzyskać szczegółowe informacje na temat kolejności zdarzeń wejściowych myszy zobacz [zdarzeń myszy w formularzach Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Aby uzyskać przegląd zdarzeń w formularzach Windows Forms, zobacz [Przegląd zdarzeń](../../../docs/framework/winforms/events-overview-windows-forms.md). Aby uzyskać szczegółowe informacje o korzeń procedury obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
-## <a name="application-startup-and-shutdown-events"></a>Uruchamianie aplikacji i zdarzeń zamknięcia systemu  
- <xref:System.Windows.Forms.Form> i <xref:System.Windows.Forms.Control> klasy ujawnia zestaw zdarzeń związanych z aplikacji uruchamiania i wyłączania. Po uruchomieniu aplikacji formularzy systemu Windows zdarzenia uruchamiania formularza głównego pojawienia się w następującej kolejności:  
+## <a name="application-startup-and-shutdown-events"></a>Uruchamianie aplikacji i zamykania  
+ <xref:System.Windows.Forms.Form> i <xref:System.Windows.Forms.Control> klasy udostępnić zestaw zdarzeń związanych z aplikacji, uruchamiania i zamykania. Po uruchomieniu aplikacji Windows Forms zdarzenia uruchamiania formularza głównego są wywoływane w następującej kolejności:  
   
 -   <xref:System.Windows.Forms.Control.HandleCreated?displayProperty=nameWithType>  
   
@@ -34,7 +34,7 @@ Kolejność, w której zdarzenia są generowane w aplikacjach formularzy systemu
   
 -   <xref:System.Windows.Forms.Form.Shown?displayProperty=nameWithType>  
   
- Po zamknięciu aplikacji, zdarzenia zamknięcia formularza głównego pojawienia się w następującej kolejności:  
+ Po zakończeniu działania aplikacji, zdarzeń zamknięcia formularza głównego są wywoływane w następującej kolejności:  
   
 -   <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
   
@@ -46,13 +46,13 @@ Kolejność, w której zdarzenia są generowane w aplikacjach formularzy systemu
   
 -   <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
- <xref:System.Windows.Forms.Application.ApplicationExit> Zdarzenie <xref:System.Windows.Forms.Application> klasy jest wywoływane po wykonaniu zdarzeń zamknięcia formularza głównego.  
+ <xref:System.Windows.Forms.Application.ApplicationExit> Zdarzenia <xref:System.Windows.Forms.Application> klasy jest wywoływane po wykonaniu zdarzeń zamknięcia formularza głównego.  
   
 > [!NOTE]
 >  Visual Basic 2005 zawiera zdarzenia dodatkowych aplikacji, takich jak <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> i <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>.  
   
 ## <a name="focus-and-validation-events"></a>Fokus i zdarzenia walidacji  
- Po zmianie fokusu przy użyciu klawiatury (TAB, SHIFT + TAB i tak dalej), przez wywołanie metody <xref:System.Windows.Forms.Control.Select%2A> lub <xref:System.Windows.Forms.Control.SelectNextControl%2A> metody, lub przez ustawienie <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> właściwości do bieżącego formularza zdarzenia fokus <xref:System.Windows.Forms.Control> klasy występują w następującej kolejności :  
+ Po zmianie fokusu przy użyciu klawiatury (karty, SHIFT + TAB i tak dalej), przez wywołanie metody <xref:System.Windows.Forms.Control.Select%2A> lub <xref:System.Windows.Forms.Control.SelectNextControl%2A> metod, lub poprzez skonfigurowanie <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> właściwości bieżącego formularza zdarzenia fokusu <xref:System.Windows.Forms.Control> klasy zachodzą w następującej kolejności :  
   
 -   <xref:System.Windows.Forms.Control.Enter>  
   
@@ -66,7 +66,7 @@ Kolejność, w której zdarzenia są generowane w aplikacjach formularzy systemu
   
 -   <xref:System.Windows.Forms.Control.LostFocus>  
   
- Po zmianie fokusu za pomocą myszy lub poprzez wywołanie <xref:System.Windows.Forms.Control.Focus%2A> metody, zdarzenia fokus <xref:System.Windows.Forms.Control> klasy występują w następującej kolejności:  
+ Po zmianie fokusu przy użyciu myszy lub przez wywołanie <xref:System.Windows.Forms.Control.Focus%2A> metody, zdarzenia fokusu <xref:System.Windows.Forms.Control> klasy zachodzą w następującej kolejności:  
   
 -   <xref:System.Windows.Forms.Control.Enter>  
   
@@ -80,5 +80,5 @@ Kolejność, w której zdarzenia są generowane w aplikacjach formularzy systemu
   
 -   <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

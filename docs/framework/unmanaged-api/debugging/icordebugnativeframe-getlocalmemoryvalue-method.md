@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5419d2e6932e08d05c8336d473cf68bd16058a48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e8d0c16000c78fab0371b68c3a350bd2018aa1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664528"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryValue — Metoda
-Pobiera wartość argumentu lub zmiennej lokalnej, która znajduje się w lokalizacji pamięci określona dla tej ramki macierzystego.  
+Pobiera wartość argumentu lub zmiennej lokalnej, która jest przechowywana w określonej lokalizacji pamięci dla tej ramki natywne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,19 +40,19 @@ HRESULT GetLocalMemoryValue (
   
 #### <a name="parameters"></a>Parametry  
  `address`  
- [in] A `CORDB_ADDRESS` wartość, która określa lokalizację pamięci zawierającą wartość.  
+ [in] A `CORDB_ADDRESS` wartość, która określa lokalizację zawierającą wartość w pamięci.  
   
  `cbSigBlob`  
- [in] Liczba całkowita określająca rozmiar podpisu metadanych binarny, który odwołuje się do niego `pvSigBlob` parametru.  
+ [in] Liczba całkowita określająca rozmiar podpisu metadanych binarny, który odwołuje się do niej `pvSigBlob` parametru.  
   
  `pvSigBlob`  
- [in] A `PCCOR_SIGNATURE` wartość, która wskazuje podpisu metadanych binarnego typu wartości.  
+ [in] A `PCCOR_SIGNATURE` wartość, która wskazuje podpisu metadanych binarny o typie wartości.  
   
  `ppValue`  
- [out] Wskaźnik do adresu "ICorDebugValue" obiekt reprezentujący pobranej przechowywanego w lokalizacji pamięci określonej wartości.  
+ [out] Wskaźnik na adres "ICorDebugValue" obiekt reprezentujący pobrana wartość, która jest przechowywana w określonej lokalizacji pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -60,5 +60,5 @@ HRESULT GetLocalMemoryValue (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

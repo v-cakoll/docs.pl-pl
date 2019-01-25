@@ -1,5 +1,5 @@
 ---
-title: 'Porady: użycie stref czasowych w arytmetyka daty i godziny'
+title: 'Instrukcje: Używanie stref czasowych w arytmetyka daty i godziny'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c9f7b2623b4ed766fb44b46c3f54caa962c07eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682696"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Porady: użycie stref czasowych w arytmetyka daty i godziny
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Instrukcje: Używanie stref czasowych w arytmetyka daty i godziny
 
 Zazwyczaj podczas możesz wykonać daty i godziny arytmetycznych przy użyciu <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartości, wynik nie odzwierciedla żadnych reguł dopasowania stref czasowych. Ta zasada obowiązuje nawet wtedy, gdy jest wyraźnie strefy czasowej w wartości daty i godziny (na przykład, gdy <xref:System.DateTime.Kind%2A> właściwość jest ustawiona na <xref:System.DateTimeKind.Local>). W tym temacie pokazano, jak wykonywać operacje arytmetyczne na wartości daty i godziny, które należą do określonej strefy czasowej. Wyniki operacji arytmetycznych odzwierciedlają reguł korygowania strefy czasowej.
 
@@ -66,5 +66,5 @@ Ten przykład wymaga:
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
-* [Wykonywanie operacji arytmetycznych na wartościach dat i godzin](../../../docs/standard/datetime/performing-arithmetic-operations.md)
+- [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
+- [Wykonywanie operacji arytmetycznych na wartościach dat i godzin](../../../docs/standard/datetime/performing-arithmetic-operations.md)

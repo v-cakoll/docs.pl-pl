@@ -1,18 +1,18 @@
 ---
-title: 'Porady: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (C#)'
+title: 'Instrukcje: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-ms.openlocfilehash: 9c141b21a009f836fbf385c1f4179e288ec6c3b5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a7e590dcc70dcdb4ea7d5681d623c63f194e0d4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655572"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Porady: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (C#)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Instrukcje: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (C#)
 Czasami trzeba przeczytać arbitralnie dużych plików XML i zapisu aplikacji, tak aby zużycie pamięci aplikacji jest przewidywalne. Jeśli użytkownik podejmie próbę wypełnianie drzewa XML przy użyciu dużego pliku XML, wykorzystanie pamięci będzie proporcjonalny do rozmiaru pliku — oznacza to, że nadmierne. W związku z tym należy zamiast tego użyj technika przesyłania strumieniowego.  
   
- Jedną z opcji jest do zapisu w swojej aplikacji za pomocą <xref:System.Xml.XmlReader>. Jednakże, możesz chcieć użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kwerendy drzewa XML. Jeśli jest to możliwe, można napisać metodę niestandardowe osi. Aby uzyskać więcej informacji, zobacz [porady: zapis LINQ do XML metody osi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Jedną z opcji jest do zapisu w swojej aplikacji za pomocą <xref:System.Xml.XmlReader>. Jednakże, możesz chcieć użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kwerendy drzewa XML. Jeśli jest to możliwe, można napisać metodę niestandardowe osi. Aby uzyskać więcej informacji, zobacz [jak: Zapisać LINQ do XML metody osi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
  Aby napisać własne metody osi, zapisu małych metody, która używa <xref:System.Xml.XmlReader> odczytać węzły, aż do napotkania jednego z węzłów, w których interesuje Cię. Następnie wywołuje metodę <xref:System.Xml.Linq.XNode.ReadFrom%2A>, która odczytuje z <xref:System.Xml.XmlReader> i tworzy XML fragment. Następnie daje poszczególne fragmenty, za pośrednictwem `yield return` do metody, która wylicza metodę niestandardowe osi. Następnie można pisać zapytania LINQ metodę niestandardowe osi.  
   
@@ -166,6 +166,6 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zaawansowane LINQ to XML programowania (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

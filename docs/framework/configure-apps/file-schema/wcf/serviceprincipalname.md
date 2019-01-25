@@ -1,21 +1,21 @@
 ---
-title: '&lt;Element servicePrincipalName&gt;'
+title: '&lt;servicePrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: a22a905744980d0b370023e6236734a9bb0d6357
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5d65b5956491e30066ece54a48374f1d7014552e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657607"
 ---
-# <a name="ltserviceprincipalnamegt"></a>&lt;Element servicePrincipalName&gt;
+# <a name="ltserviceprincipalnamegt"></a>&lt;servicePrincipalName&gt;
 Określa tożsamość usługi przez jego głównej nazwy usługi (SPN).  
   
  Aby uzyskać więcej informacji na temat ustawiania nazwy SPN, zobacz [uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
- \<tożsamość >  
-\<Element servicePrincipalName >  
+ \<identity>  
+\<servicePrincipalName>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,10 +44,10 @@ Określa tożsamość usługi przez jego głównej nazwy usługi (SPN).
 ## <a name="remarks"></a>Uwagi  
  Bezpieczne klienta Windows Communication Foundation (WCF), który nawiązuje połączenie z punktem końcowym o tej tożsamości używa nazwy SPN podczas przeprowadzania uwierzytelniania SSPI z punktem końcowym.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- <xref:System.ServiceModel.SpnEndpointIdentity>  
- [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- <xref:System.ServiceModel.SpnEndpointIdentity>
+- [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

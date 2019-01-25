@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe3847d9ee4530a776f43c67ac17085a9cd9d7b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 681938b4893e9fe68caa142898db9b867b481bf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657301"
 ---
 # <a name="strong-named-assemblies"></a>Zestawy o silnych nazwach
 Nazewnictwo silne zestawu tworzy unikatową tożsamość dla zestawu i może zapobiec konfliktom zestawu.  
@@ -20,7 +20,7 @@ Nazewnictwo silne zestawu tworzy unikatową tożsamość dla zestawu i może zap
 ## <a name="what-makes-a-strong-named-assembly"></a>Co sprawia, że zestawu z silną nazwą?  
  Zestaw o nazwie silne jest generowany przy użyciu klucza prywatnego odpowiadającego kluczowi publicznemu rozpowszechniać za pomocą zestawu i samego montażu. Zestaw zawiera manifest zestawu, który zawiera nazwy i wartości skrótów wszystkich plików, wchodzące w skład zestawu. Zestawy, które mają taką samą nazwę silne powinny być identyczne.  
   
- Zestawy o silnych nazwach mogą się przy użyciu programu Visual Studio lub narzędzie wiersza polecenia. Aby uzyskać więcej informacji, zobacz [porady: podpisywanie zestawu za pomocą silnej nazwy](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) lub [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
+ Zestawy o silnych nazwach mogą się przy użyciu programu Visual Studio lub narzędzie wiersza polecenia. Aby uzyskać więcej informacji, zobacz [jak: Podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) lub [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
   
  Po utworzeniu zestawu z silną nazwą zawiera zwykły tekst nazwę zestawu, numer wersji, informacji o kulturze opcjonalne, podpis cyfrowy i klucz publiczny, który odnosi się do prywatnego klucza używanego do podpisywania.  
   
@@ -42,8 +42,8 @@ Nazewnictwo silne zestawu tworzy unikatową tożsamość dla zestawu i może zap
   
  Jeśli jesteś deweloperem typu open source i korzystać z zalet tożsamości zestawu z silną nazwą, należy wziąć pod uwagę ewidencjonowanie klucz prywatny skojarzone z zestawem w systemie kontroli źródła.  
   
-## <a name="see-also"></a>Zobacz też  
-- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
-- [Instrukcje: podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
-- [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+## <a name="see-also"></a>Zobacz także
+- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
+- [Instrukcje: Podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

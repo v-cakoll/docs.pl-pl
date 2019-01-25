@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4051c3f8300b02581c86642455954615d920c3ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1909b7123bde23058e42394db86af83d08e2354
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685389"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>ICorDebugManagedCallback2::FunctionRemapComplete — Metoda
-Powiadamia debugera, że wykonanie kodu została przełączona do nowej wersji funkcji edytowany.  
+Powiadamia debugera, że wykonywanie kodu zostało przełączone do nowej wersji przeprowadzono edycję funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,19 +39,19 @@ HRESULT FunctionRemapComplete (
   
 #### <a name="parameters"></a>Parametry  
  `pAppDomain`  
- [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domeny aplikacji zawierający funkcję edytowany.  
+ [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, zawierającą przeprowadzono edycję funkcji.  
   
  `pThread`  
- [in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku podczas ponownego mapowania punktu przerwania.  
+ [in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątek napotkano punkt przerwania ponowne mapowanie.  
   
  `pFunction`  
- [in] Wskaźnik do obiektu ICorDebugFunction, który reprezentuje wersji funkcji aktualnie uruchomione w wątku.  
+ [in] Wskaźnik do obiektu ICorDebugFunction, który reprezentuje wersja funkcji aktualnie uruchomiona w wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- To wywołanie zwrotne daje debuger możliwość ponownie utworzyć wszelkich steppery, które wcześniej były dostępne.  
+ To wywołanie zwrotne umożliwia debugera do odtworzenia steppery, wszelkie istniejące wcześniej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -59,6 +59,6 @@ HRESULT FunctionRemapComplete (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugManagedCallback2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugManagedCallback2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

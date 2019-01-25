@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a691f61fcd25b7aaaae90e6adcc3c2ee0c421cf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e7d4e449624f295c4011a4ccdad46226e742a8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681160"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip — Metoda
-Przesuwa kursor do przodu w wyliczeniu określoną liczbę elementów.  
+Przesuwa kursor do przodu w wyliczeniu przez określoną liczbę elementów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +40,7 @@ HRESULT Skip (
  [in] Liczba elementów, o którą należy przesunąć kursor do przodu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorPub.idl, CorPub.h  
   
@@ -48,5 +48,5 @@ HRESULT Skip (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorPublishEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorPublishEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

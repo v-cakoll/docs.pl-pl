@@ -2,12 +2,12 @@
 title: '&lt;netTcpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: da769e57a44880d5050b06a8e2a3d317daff35d6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0f5e4df5a25062ba6454dfc845ba2999ddcc6ca8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572269"
 ---
 # <a name="ltnettcpcontextbindinggt"></a>&lt;netTcpContextBinding&gt;
 Określa kontekst dla <xref:System.ServiceModel.NetTcpBinding> wymaga, aby poziom ochrony były podpisane. Wartość właściwości contextExchangeMechanism dla NetTcpContextBinding jest SOAPHeader.  
@@ -72,7 +72,7 @@ Określa kontekst dla <xref:System.ServiceModel.NetTcpBinding> wymaga, aby pozio
 |hostnameComparisonMode|Określa tryb porównywania nazwy hosta HTTP używany do analizowania identyfikatorów URI. Ten atrybut jest typu `System.ServiceModel.HostnameComparisonMode`, która wskazuje, czy nazwa hosta jest używana w celu dotarcia do usługi podczas dopasowywania identyfikatora URI. Wartość domyślna to `StrongWildcard`, który ignoruje hostname dopasowania.|  
 |listenBacklog|Dodatnia liczba całkowita, określająca maksymalną liczbę kanałów, które oczekuje na zatwierdzenie na odbiorniku. Połączenia przekraczające ten limit są umieszczane w kolejce, dopóki miejsce poniżej limitu staje się dostępna. `connectionTimeout` Atrybut ogranicza czas, klient będzie czekać połączenia zanim zostanie zgłoszony wyjątek połączenia. Wartość domyślna wynosi 10.|  
 |maxBufferPoolSize|Liczba całkowita określająca maksymalny rozmiar puli buforów dla tego powiązania. Wartość domyślna to 512 * 1024 bajty. Wiele części programu Windows Communication Foundation (WCF) za pomocą buforów. Tworzenie i niszczenie buforów za każdym razem, gdy są one używane jest kosztowne, a także jest kosztowne wyrzucania elementów bezużytecznych dla buforów. Dzięki pulom buforu zająć buforu z puli, go używać i przywrócić go do puli, gdy wszystko będzie gotowe. Ten sposób unika się obciążenie tworzeniem i likwidowaniem buforów.|  
-|wartość maxBufferSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar w bajtach buforu używany do przechowywania komunikatów w pamięci. Jeśli bufor jest pełna, nadmiar danych pozostaje w podstawowej gniazda, aż buforu, będzie miał miejsce ponownie. Ta wartość nie może być mniejsza niż `maxReceivedMessageSize` atrybutu. Wartość domyślna to 65536. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.|  
+|maxBufferSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar w bajtach buforu używany do przechowywania komunikatów w pamięci. Jeśli bufor jest pełna, nadmiar danych pozostaje w podstawowej gniazda, aż buforu, będzie miał miejsce ponownie. Ta wartość nie może być mniejsza niż `maxReceivedMessageSize` atrybutu. Wartość domyślna to 65536. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.|  
 |MaxConnections|Liczba całkowita określająca maksymalną liczbę połączeń wychodzące i przychodzące usługa tworzenia/akceptuje. Połączenia przychodzące i wychodzące są przeliczane względem oddzielne limit określony przez atrybut.<br /><br /> Połączenia przychodzące poza limitem zostaną umieszczone w kolejce, dopóki miejsce poniżej limitu staje się dostępna.<br /><br /> Połączenia wychodzące poza limitem zostaną umieszczone w kolejce, dopóki miejsce poniżej limitu staje się dostępna.<br /><br /> Wartość domyślna wynosi 10.|  
 |maxReceivedMessageSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar komunikatu, w bajtach, włącznie z nagłówkami, które może zostać odebrany w kanale skonfigurowany tym wiązaniem. Nadawca wiadomości przekroczenie tego limitu zostanie wyświetlony błąd protokołu SOAP. Należy określić odbiorcę porzuca wiadomość i tworzy wpis zdarzenia w dzienniku śledzenia. Wartość domyślna to 65536.|  
 |nazwa|Ciąg, który zawiera nazwę konfiguracji powiązania. Wartość ta powinna być unikatowy, ponieważ jest używany jako identyfikator dla wiązania. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwę. Aby uzyskać więcej informacji o domyślnej konfiguracji i powiązania pustego oraz zachowań, zobacz [uproszczona konfiguracja](../../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
@@ -81,8 +81,8 @@ Określa kontekst dla <xref:System.ServiceModel.NetTcpBinding> wymaga, aby pozio
 |receiveTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji odbierania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:10:00.|  
 |sendTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na ukończenie operacji wysyłania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
 |transactionFlow|Wartość logiczna określająca, czy powiązanie obsługuje płynące WS-transakcji. Wartość domyślna to `false`.|  
-|Element transactionProtocol|Określa protokół transakcji do użycia z tym powiązaniem. Prawidłowe wartości to:<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> Wartość domyślna to OleTransactions. Ten atrybut jest typu <xref:System.ServiceModel.TransactionProtocol>.|  
-|Tryb transferu|A <xref:System.ServiceModel.TransferMode> wartość określającą, czy komunikaty są buforowane lub przesyłane strumieniowo lub żądania lub odpowiedzi.|  
+|transactionProtocol|Określa protokół transakcji do użycia z tym powiązaniem. Prawidłowe wartości to:<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> Wartość domyślna to OleTransactions. Ten atrybut jest typu <xref:System.ServiceModel.TransactionProtocol>.|  
+|transferMode|A <xref:System.ServiceModel.TransferMode> wartość określającą, czy komunikaty są buforowane lub przesyłane strumieniowo lub żądania lub odpowiedzi.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -98,13 +98,13 @@ Określa kontekst dla <xref:System.ServiceModel.NetTcpBinding> wymaga, aby pozio
 |-------------|-----------------|  
 |[\<powiązania >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Ten element przetrzymuje kolekcję powiązań standardowych i niestandardowych.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.NetTcpContextBinding>  
- <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>  
- <xref:System.ServiceModel.Channels.ContextBindingElement>  
- [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.NetTcpContextBinding>
+- <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>
+- <xref:System.ServiceModel.Channels.ContextBindingElement>
+- [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

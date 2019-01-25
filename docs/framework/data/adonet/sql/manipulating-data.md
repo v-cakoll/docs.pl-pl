@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: 4d5de5ed3f557842fb28a3cf92b1923a709195d2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e41d2146c07655548ad36de8ffc7041ed63ee5be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45641615"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606520"
 ---
 # <a name="manipulating-data"></a>Manipulowanie danymi
 Przed wprowadzeniem z wielu aktywnych zestawów wyników (MARS) deweloperów było użyć wielu połączeń lub kursory po stronie serwera do rozwiązywania niektórych scenariuszy. W przypadku wielu połączeń były używane w sytuacji, transakcyjnego, powiązane połączenia (przy użyciu **sp_getbindtoken** i **procedury sp_bindsession**) były wymagane. W poniższych scenariuszach pokazano sposób używania połączenia z obsługą usług MARS zamiast wielu połączeń.  
@@ -402,6 +402,6 @@ private static string GetConnectionString()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Wiele aktywnych zestawów wyników (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Wiele aktywnych zestawów wyników (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

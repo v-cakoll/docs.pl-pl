@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: debugowanie niestandardowych formantów formularzy systemu Windows w czasie projektowania'
+title: 'Przewodnik: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 824c1e47cf50dc13a3a986e48a49158b15dbb935
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ceee83c9deb318f5912eb724cbd237c3d7b73152
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964848"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733340"
 ---
-# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Wskazówki: debugowanie niestandardowych formantów formularzy systemu Windows w czasie projektowania
-Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugowania zachowania w czasie projektowania. Jest to szczególnie istotne w przypadku tworzenia niestandardowego projektanta dla formantu niestandardowego. Aby uzyskać więcej informacji, zobacz [wskazówki: tworzenie Windows Forms kontroli, przyjmuje korzystać z czasu projektowania funkcje programu Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
+# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Przewodnik: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania
+Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugowania zachowania w czasie projektowania. Jest to szczególnie istotne w przypadku tworzenia niestandardowego projektanta dla formantu niestandardowego. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie Windows Forms kontroli wykorzystującego funkcje czasu projektowania w programie Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
   
  Kontrolki niestandardowe przy użyciu programu Visual Studio umożliwia debugowanie tak samo, jak debuguje się inne klasy .NET Framework. Różnica polega na to, że będziesz debugował osobnego wystąpienia programu Visual Studio, który jest uruchomiony kod kontrolki niestandardowej  
   
@@ -60,9 +60,9 @@ Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugow
   
 1.  Dodaj **Biblioteka formantów Windows** projektu do rozwiązania.  
   
-2.  Dodaj nową **UserControl** elementu do projektu DebugControlLibrary. Aby uzyskać więcej informacji, zobacz [NIB: instrukcje: dodawanie nowych elementów projektu](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Nazwij nowy plik źródłowy podstawowego elementu "DebugControl".  
+2.  Dodaj nową **UserControl** elementu do projektu DebugControlLibrary. Aby uzyskać więcej informacji, zobacz [NIB: jak: Dodaj nowe elementy projektu](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Nazwij nowy plik źródłowy podstawowego elementu "DebugControl".  
   
-3.  Za pomocą **Eksploratora rozwiązań**, usunąć projekt domyślny formant przez usunięcie pliku kodu z podstawowej nazwy "`UserControl1`". Aby uzyskać więcej informacji, zobacz [NIB: instrukcje: usuwanie, usuwania i wykluczyć elementy](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+3.  Za pomocą **Eksploratora rozwiązań**, usunąć projekt domyślny formant przez usunięcie pliku kodu z podstawowej nazwy "`UserControl1`". Aby uzyskać więcej informacji, zobacz [NIB: jak: Usuń Delete i wykluczyć elementy](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 4.  Skompiluj rozwiązanie.  
   
@@ -170,9 +170,9 @@ Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugow
   
 -   Istnieje kilka atrybutów można zastosować do właściwości formantu do manipulowania interakcji kontrolki niestandardowej za pomocą projektanta. Można znaleźć tych atrybutów w <xref:System.ComponentModel?displayProperty=nameWithType> przestrzeni nazw.  
   
--   Możesz napisać niestandardowego projektanta dla niestandardowej kontrolki. Zapewnia pełną kontrolę nad środowiskiem projektowania przy użyciu rozszerzonego infrastruktury projektanta udostępnianych przez program Visual Studio. Aby uzyskać więcej informacji, zobacz [wskazówki: tworzenie Windows Forms kontroli, przyjmuje korzystać z czasu projektowania funkcje programu Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
+-   Możesz napisać niestandardowego projektanta dla niestandardowej kontrolki. Zapewnia pełną kontrolę nad środowiskiem projektowania przy użyciu rozszerzonego infrastruktury projektanta udostępnianych przez program Visual Studio. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie Windows Forms kontroli wykorzystującego funkcje czasu projektowania w programie Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik: tworzenie kontrolki formularzy Windows Forms wykorzystującej funkcje czasu projektowania programu Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
- [Porady: uzyskiwanie dostępu do usług w czasie projektowania](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
- [Porady: dostęp do obsługi w czasie projektowania w formularzach Windows Forms](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+## <a name="see-also"></a>Zobacz także
+- [Przewodnik: Tworzenie kontrolki formularzy Windows wykorzystującego funkcje czasu projektowania w programie Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
+- [Instrukcje: Dostęp do usługi w czasie projektowania](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)
+- [Instrukcje: Dostęp do obsługi w czasie projektowania w formularzach Windows Forms](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

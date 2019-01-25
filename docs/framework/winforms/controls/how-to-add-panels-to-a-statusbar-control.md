@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dodawanie paneli do formantu StatusBar'
+title: 'Instrukcje: Dodawanie paneli do formantu StatusBar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: dd006f669ab6f0186bbcc7d1c76f9852ab6e8f60
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2648ffc9a733266c463c165f4beb77b7c098ca9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746289"
 ---
-# <a name="how-to-add-panels-to-a-statusbar-control"></a>Porady: dodawanie paneli do formantu StatusBar
+# <a name="how-to-add-panels-to-a-statusbar-control"></a>Instrukcje: Dodawanie paneli do formantu StatusBar
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.StatusStrip> i <xref:System.Windows.Forms.ToolStripStatusLabel> kontrolki Zastąp i dodawania funkcjonalności do <xref:System.Windows.Forms.StatusBar> i <xref:System.Windows.Forms.StatusBarPanel> kontroluje; jednak <xref:System.Windows.Forms.StatusBar> i <xref:System.Windows.Forms.StatusBarPanel> kontrolek zostaną zachowane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli możesz Wybierz.  
   
@@ -120,11 +120,11 @@ ms.locfileid: "47399102"
        }  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.StatusBar>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [Okno dialogowe Edytor kolekcji](https://msdn.microsoft.com/library/53fb3aad-bffa-4da5-ac89-8438e6fc803c)  
- [Instrukcje: ustawianie rozmiaru paneli paska stanu](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
- [Przewodnik: aktualizowanie informacji na pasku stanu w czasie wykonywania](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
- [Instrukcje: ustalanie, który panel został kliknięty w kontrolce StatusBar formularzy Windows Forms](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- [StatusBar, kontrolka — omówienie](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.StatusBar>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- [Okno dialogowe Edytor kolekcji](https://msdn.microsoft.com/library/53fb3aad-bffa-4da5-ac89-8438e6fc803c)
+- [Instrukcje: Ustawianie rozmiaru paneli paska stanu](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)
+- [Przewodnik: Aktualizowanie informacji na pasku stanu w czasie wykonywania](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
+- [Instrukcje: Określanie, które panelu w formancie StatusBar formularzy Windows został kliknięty](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar, kontrolka — omówienie](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

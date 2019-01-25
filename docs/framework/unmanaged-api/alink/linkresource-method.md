@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f75ebc3a40bddbaf2347b9ef559139888f83900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b0b5c6e70afffd12d3f0cdbbb92b20ac3a949e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635016"
 ---
 # <a name="linkresource-method"></a>LinkResource — Metoda
-Łącza w zasobie.  
+Linki w zasobie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,13 +46,13 @@ HRESULT LinkResource(
  Nazwa pliku.  
   
  `pszNewLocation`  
- Opcjonalne nową nazwę pliku. Jeśli inną niż NULL, `pszFileName` zostaną skopiowane do pszNewLocation.  
+ Opcjonalne nową nazwę pliku. Jeśli innych niż NULL, `pszFileName` zostaną skopiowane do pszNewLocation.  
   
  `pszResourceName`  
  Nazwa zasobu.  
   
  `dwFlags`  
- Dostępność flagi, takich jak `mrPublic` i `mrPrivate`. Ten parametr może być przekazana do [DefineManifestResource — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ Ułatwienia dostępu flagi, takich jak `mrPublic` i `mrPrivate`. Ten parametr może być przekazana do [definemanifestresource — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
@@ -60,7 +60,7 @@ HRESULT LinkResource(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h.  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

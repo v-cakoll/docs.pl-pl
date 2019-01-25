@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 769802eae048427325af9807d788b1fbc5a15665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cc480d673648562638fbfd4a03df643dd734b9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620620"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType — Wyliczenie
 Wskazuje typ tokenu metadanych.  
@@ -93,14 +93,14 @@ typedef enum CorTokenType {
 |`mdtBaseType`|Nie używany.|  
   
 ## <a name="remarks"></a>Uwagi  
- Każda wartość jest równa wartości bajtu najwyższego odpowiedniego token metadanych.  
+ Każda wartość jest równa wartości pierwszy bajt odpowiedni token metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

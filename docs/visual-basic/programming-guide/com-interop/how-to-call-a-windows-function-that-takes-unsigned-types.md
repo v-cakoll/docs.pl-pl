@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)'
+title: 'Instrukcje: Wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: d66b74f06abe6b337c24859c444f7a8c2aa52c13
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669318"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Instrukcje: Wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)
 Używanym klasy, modułu lub struktura, która ma składowych typu Liczba całkowita bez znaku, można uzyskać dostęp do tych członków, za pomocą Visual Basic.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Aby wywołać funkcję Windows, która przyjmuje typ bez znaku  
@@ -77,9 +77,9 @@ Używanym klasy, modułu lub struktura, która ma składowych typu Liczba całko
     > [!IMPORTANT]
     >  Wywołanie interfejsu API Windows wymaga uprawnienie niezarządzanego kodu, które mogą mieć wpływ na jej wykonanie w sytuacjach częściowego zaufania. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.SecurityPermission> i [uprawnienia dostępu kodu](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
- [Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [UInteger, typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
- [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Przewodnik: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+- [Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [UInteger, typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
+- [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Przewodnik: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

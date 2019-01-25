@@ -2,12 +2,12 @@
 title: Uwagi dotyczące zabezpieczeń rejestrowania komunikatów
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 5ed2529d82c3994a245d2132909cd1e88b6ed62d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732001"
 ---
 # <a name="security-concerns-for-message-logging"></a>Uwagi dotyczące zabezpieczeń rejestrowania komunikatów
 W tym temacie opisano, jak możesz chronić dane poufne przed przypadkowym w dzienników komunikatów, a także zdarzenia generowane przez rejestrowanie komunikatów.  
@@ -99,16 +99,16 @@ W tym temacie opisano, jak możesz chronić dane poufne przed przypadkowym w dzi
 ## <a name="events-triggered-by-message-logging"></a>Zdarzenia wyzwolone przez rejestrowanie komunikatów  
  Poniższa lista zawiera wszystkie zdarzenia, które są emitowane przez rejestrowanie komunikatów.  
   
--   Komunikat logowania: to zdarzenie jest emitowane, gdy rejestrowanie komunikatów jest włączona w konfiguracji lub za pomocą usługi WMI. Zawartość zdarzenia jest "włączone rejestrowanie komunikatów. Informacje poufne może zostać zarejestrowane w postaci zwykłego tekstu, nawet jeśli zostały zaszyfrowane w sieci, na przykład, treści wiadomości."  
+-   Komunikat o błędzie logowania: To zdarzenie jest emitowane, gdy rejestrowanie komunikatów jest włączona w konfiguracji lub za pomocą usługi WMI. Zawartość zdarzenia jest "włączone rejestrowanie komunikatów. Informacje poufne może zostać zarejestrowane w postaci zwykłego tekstu, nawet jeśli zostały zaszyfrowane w sieci, na przykład, treści wiadomości."  
   
--   Komunikat o wylogowanie: to zdarzenie jest emitowane, jeśli rejestrowanie komunikatów jest wyłączone za pomocą usługi WMI. Zawartość zdarzenia jest "Komunikat rejestrowanie zostało wyłączone."  
+-   Trwa wylogowywanie komunikat: To zdarzenie jest emitowane, jeśli rejestrowanie komunikatów jest wyłączone za pomocą usługi WMI. Zawartość zdarzenia jest "Komunikat rejestrowanie zostało wyłączone."  
   
--   Dziennik znane też danych osobowych na: To zdarzenie jest emitowane, gdy jest włączone rejestrowanie znane też danych osobowych. Dzieje się tak po `enableLoggingKnownPii` atrybutu w `machineSettings` element w pliku Machine.config jest ustawiony na `true`i `logKnownPii` atrybutu `source` element w pliku App.config lub Web.config jest ustawiony na `true`.  
+-   Znany też danych osobowych Zaloguj się: To zdarzenie jest emitowane, gdy jest włączone rejestrowanie znane też danych osobowych. Dzieje się tak po `enableLoggingKnownPii` atrybutu w `machineSettings` element w pliku Machine.config jest ustawiony na `true`i `logKnownPii` atrybutu `source` element w pliku App.config lub Web.config jest ustawiony na `true`.  
   
--   Zaloguj się znane dane osobowe niedozwolone: to zdarzenie jest emitowane podczas rejestrowania znane dane osobowe nie jest dozwolone. Dzieje się tak po `logKnownPii` atrybutu `source` element w pliku App.config lub Web.config jest ustawiony na `true`, ale `enableLoggingKnownPii` atrybutu w `machineSettings` element w pliku Machine.config jest ustawiony na `false`. Jest zgłaszany żaden wyjątek.  
+-   Zaloguj się znane też danych osobowych, które są niedozwolone: To zdarzenie jest emitowane podczas rejestrowania znane dane osobowe nie jest dozwolone. Dzieje się tak po `logKnownPii` atrybutu `source` element w pliku App.config lub Web.config jest ustawiony na `true`, ale `enableLoggingKnownPii` atrybutu w `machineSettings` element w pliku Machine.config jest ustawiony na `false`. Jest zgłaszany żaden wyjątek.  
   
  Zdarzenia te można wyświetlać w narzędziu Podgląd zdarzeń, które pochodzą z Windows. Aby uzyskać więcej informacji na temat tego, zobacz [rejestrowania zdarzeń](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Rejestrowanie komunikatów](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+## <a name="see-also"></a>Zobacz także
+- [Rejestrowanie komunikatów](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

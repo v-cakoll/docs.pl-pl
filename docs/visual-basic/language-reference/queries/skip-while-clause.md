@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: a3c0749560d8cea1e46d96298347ce54f0bf9185
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7da5f50a9d0fa867244a569e03685cc637bf3ce6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692522"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While — Klauzula (Visual Basic)
 Pomija elementy w kolekcji, tak długo, jak długo określony warunek przyjmuje `true` , a następnie zwraca pozostałe elementy.  
@@ -28,7 +28,7 @@ Skip While expression
   
 |Termin|Definicja|  
 |---|---|  
-|`expression`|Wymagane. Wyrażenie, które reprezentuje stan, aby przetestować elementy. Wyrażenie musi zwracać `Boolean` wartość lub równoważnej funkcjonalności, takie jak `Integer` mogło zostać ocenione jako `Boolean`.|  
+|`expression`|Wymagana. Wyrażenie, które reprezentuje stan, aby przetestować elementy. Wyrażenie musi zwracać `Boolean` wartość lub równoważnej funkcjonalności, takie jak `Integer` mogło zostać ocenione jako `Boolean`.|  
   
 ## <a name="remarks"></a>Uwagi  
  `Skip While` Klauzuli pomija elementy od początku wynik zapytania do momentu podane `expression` zwraca `false`. Po `expression` zwraca `false`, zapytanie zwraca wszystkie pozostałe elementy. `expression` Jest ignorowany dla pozostałych wyników.  
@@ -42,11 +42,11 @@ Skip While expression
   
  [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-while-clause_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Zapytania](../../../visual-basic/language-reference/queries/index.md)  
- [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Skip, klauzula](../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Take While, klauzula](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Zapytania](../../../visual-basic/language-reference/queries/index.md)
+- [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Skip, klauzula](../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Take While, klauzula](../../../visual-basic/language-reference/queries/take-while-clause.md)
+- [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)

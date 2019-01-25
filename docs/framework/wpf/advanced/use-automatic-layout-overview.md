@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: d6ed0da9be32a4a4de4111acfb2d347b7bd5096d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4cb351b0db83bd83c17aa4aca004b310dc957437
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609606"
 ---
 # <a name="use-automatic-layout-overview"></a>Przegląd Użyj automatycznego układu
 W tym temacie przedstawiono wskazówki dla deweloperów dotyczące programowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji przy użyciu możliwych do zlokalizowania [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. W przeszłości lokalizacja interfejs użytkownika był czasochłonny proces. Każdego z języków interfejsu użytkownika została dostosowana do wymagana korekta poszczególne piksele. Dzisiaj z właściwy projekt i po prawej stronie standardy, kodowania [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] można skonstruować tak, aby lokalizatorzy mają mniejsza Zmienianie rozmiaru i położenia celu. Podejścia do pisania aplikacji, które można łatwiej o zmienionym rozmiarze i zmienionym nosi nazwę automatycznego układu oraz można osiągnąć za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] projektowania aplikacji.  
@@ -107,7 +107,7 @@ Siatka
   
  **Uwaga** cały przykładowy kod, można zobaczyć [udziału właściwości ustalania rozmiaru między siatkami](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Globalizacja dla WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Używanie automatycznego układu do utworzenia przycisku](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [Używanie siatki do automatycznego układu](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+## <a name="see-also"></a>Zobacz także
+- [Globalizacja dla WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [Używanie automatycznego układu do utworzenia przycisku](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [Używanie siatki do automatycznego układu](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

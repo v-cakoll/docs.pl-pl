@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: eaaa8ad5273331941bc6915231460100e8ac24b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925047"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646243"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Rozpoczynanie pracy z usługą pisma odręcznego na platformie WPF
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) zawiera funkcję pisma odręcznego, ułatw
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Można użyć poniższych przykładów, najpierw [zainstalować program Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Pomaga również wiedzieć, jak napisać podstawowych aplikacji WPF. Aby uzyskać pomoc, wprowadzenie do WPF, zobacz [Instruktaż: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Można użyć poniższych przykładów, najpierw [zainstalować program Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Pomaga również wiedzieć, jak napisać podstawowych aplikacji WPF. Aby uzyskać pomoc, wprowadzenie do WPF, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Przewodnik Szybki Start
 
@@ -108,7 +108,7 @@ Można uzyskać dostęp do wszystkich funkcji środowiska WPF z kodu proceduraln
 
 1. Kompiluj aplikację, naciskając klawisz **F5**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Cyfrowy atrament](../../../../docs/framework/wpf/advanced/digital-ink.md)
 - [Zbieranie atramentu](../../../../docs/framework/wpf/advanced/collecting-ink.md)

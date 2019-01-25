@@ -10,56 +10,56 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: a8f267706c1ace02b091329360779711981d01e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7eb5c4719a18a288ca0ee3acb13c8c2498ab30f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676084"
 ---
 # <a name="datagrid"></a>DataGrid
-<xref:System.Windows.Controls.DataGrid> Kontroli umożliwia wyświetlanie i edytowanie danych z różnych źródeł, takich jak z bazy danych SQL, zapytania LINQ lub dowolnego innego źródła danych może być powiązana. Aby uzyskać więcej informacji, zobacz [powiązanie Przegląd źródeł](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+<xref:System.Windows.Controls.DataGrid> Control umożliwia wyświetlania i edytowania danych z wielu różnych źródeł, takich jak z bazy danych SQL, zapytanie LINQ lub dowolnego innego źródła danych może być powiązana. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie źródeł](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
- Kolumny można wyświetlić tekst, formanty, takie jak <xref:System.Windows.Controls.ComboBox>, lub dowolnej innej zawartości WPF, taką jak obrazy, przyciski lub zawartość w szablonie. Można użyć <xref:System.Windows.Controls.DataGridTemplateColumn> do wyświetlania danych zdefiniowanych w szablonie. W poniższej tabeli wymieniono typy kolumn, które znajdują się domyślnie.  
+ Kolumny można wyświetlić tekst, formanty, takie jak <xref:System.Windows.Controls.ComboBox>, lub inną zawartość WPF, takie jak obrazy, przycisków lub żadnej zawartości zawarte w szablonie. Możesz użyć <xref:System.Windows.Controls.DataGridTemplateColumn> do wyświetlania danych zdefiniowanych w szablonie. W poniższej tabeli wymieniono typy kolumn, które znajdują się domyślnie.  
   
-|Typ wygenerowanego kolumny|Typ danych|  
+|Typ kolumny wygenerowany|Typ danych|  
 |---------------------------|---------------|  
 |<xref:System.Windows.Controls.DataGridTextColumn>|<xref:System.String>|  
 |<xref:System.Windows.Controls.DataGridCheckBoxColumn>|<xref:System.Boolean>|  
 |<xref:System.Windows.Controls.DataGridComboBoxColumn>|<xref:System.Enum>|  
 |<xref:System.Windows.Controls.DataGridHyperlinkColumn>|<xref:System.Uri>|  
   
- <xref:System.Windows.Controls.DataGrid> można dostosować wygląd, na przykład komórki czcionkę, kolor i rozmiar. <xref:System.Windows.Controls.DataGrid> obsługuje wszystkie funkcje stylami i tworzenia szablonów innych formantów WPF. <xref:System.Windows.Controls.DataGrid> zawiera także domyślne i dostosowania zachowania edycji, sortowanie i sprawdzania poprawności.  
+ <xref:System.Windows.Controls.DataGrid> można dostosować wygląd, takich jak komórki czcionkę, kolor i rozmiar. <xref:System.Windows.Controls.DataGrid> obsługuje wszystkie funkcje szablonów i stylów innych kontrolek WPF. <xref:System.Windows.Controls.DataGrid> zawiera również domyślne i możliwe do dostosowania zachowania edycję, sortowanie i sprawdzania poprawności.  
   
- W poniższej tabeli przedstawiono niektóre typowe zadania <xref:System.Windows.Controls.DataGrid> i sposobu ich wykonywania. Wyświetlając pokrewne interfejsu API, można znaleźć więcej informacji oraz przykładowy kod.  
+ W poniższej tabeli wymieniono niektóre typowe zadania <xref:System.Windows.Controls.DataGrid> i sposobu ich wykonania. Wyświetlając powiązanych interfejsów API, można znaleźć więcej informacji i przykładowy kod.  
   
 |Scenariusz|Podejście|  
 |--------------|--------------|  
-|Kolory tła przemiennych|Ustaw <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A> właściwości 2 lub więcej, a następnie przypisz <xref:System.Windows.Media.Brush> do <xref:System.Windows.Controls.DataGrid.RowBackground%2A> i <xref:System.Windows.Controls.DataGrid.AlternatingRowBackground%2A> właściwości.|  
-|Zdefiniuj sposób zaznaczenia wierszy i komórek|Ustaw <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> i <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> właściwości.|  
-|Dostosowywanie wyglądu nagłówków, komórek lub wierszy|Zastosuj nowy <xref:System.Windows.Style> do <xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.CellStyle%2A>, lub <xref:System.Windows.Controls.DataGrid.RowStyle%2A> właściwości.|  
-|Ustaw opcje ustalania rozmiaru|Ustaw <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, lub <xref:System.Windows.FrameworkElement.MinWidth%2A> właściwości. Aby uzyskać więcej informacji, zobacz [opcje rozmiaru w formancie DataGrid](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md).|  
-|Wybrane dostęp do elementów|Sprawdź <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> właściwości do pobrania zaznaczonych komórek i <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> właściwości do pobrania zaznaczone wiersze. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Controls.DataGrid.SelectedCells%2A>.|  
+|Różne kolory tła|Ustaw <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A> właściwość 2 lub więcej, a następnie przypisz <xref:System.Windows.Media.Brush> do <xref:System.Windows.Controls.DataGrid.RowBackground%2A> i <xref:System.Windows.Controls.DataGrid.AlternatingRowBackground%2A> właściwości.|  
+|Zdefiniuj zachowanie podczas zaznaczania wierszy i komórek|Ustaw <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> i <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> właściwości.|  
+|Dostosowywanie wyglądu nagłówków, komórek i wierszy|Zastosuj nowy <xref:System.Windows.Style> do <xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.CellStyle%2A>, lub <xref:System.Windows.Controls.DataGrid.RowStyle%2A> właściwości.|  
+|Ustaw opcje ustalania rozmiaru|Ustaw <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, lub <xref:System.Windows.FrameworkElement.MinWidth%2A> właściwości. Aby uzyskać więcej informacji, zobacz [opcje ustalania rozmiaru w formancie DataGrid](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md).|  
+|Uzyskiwanie dostępu do wybrano elementów|Sprawdź <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> właściwości do pobrania zaznaczonych komórek i <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> właściwości do pobrania wybranych wierszy. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Controls.DataGrid.SelectedCells%2A>.|  
 |Dostosowywanie interakcje użytkownika końcowego|Ustaw <xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A>, i <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A> właściwości.|  
-|Anuluj lub zmiana automatycznie generowanej kolumn|Obsługa <xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn> zdarzeń.|  
-|Zablokuj kolumny|Ustaw <xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A> 1 i Przenieś kolumny do położenia w lewej, ustawiając dla właściwości <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> właściwości na 0.|  
-|Użycie danych XML jako źródła danych|Powiąż <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> na <xref:System.Windows.Controls.DataGrid> do zapytania XPath, który reprezentuje kolekcję elementów. Utwórz każdej kolumny w <xref:System.Windows.Controls.DataGrid>. Powiązania każdej kolumny przez ustawienie języka XPath w powiązaniu kwerendę, która pobiera właściwości elementu źródłowego. Na przykład zobacz <xref:System.Windows.Controls.DataGridTextColumn>.|  
+|Anulowanie lub zmienianie kolumn wygenerowany automatycznie|Obsługa <xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn> zdarzeń.|  
+|Zablokuj kolumnę|Ustaw <xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A> 1 i Przenieś kolumnę pozycji skrajnie po lewej, ustawiając właściwość <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> właściwości na wartość 0.|  
+|Użycie danych XML jako źródła danych|Powiąż <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> na <xref:System.Windows.Controls.DataGrid> zapytania XPath, który reprezentuje kolekcję elementów. Tworzenie każdej kolumny w <xref:System.Windows.Controls.DataGrid>. Powiąż każda kolumna przez ustawienie języka XPath dla powiązania do zapytania, które pobiera właściwość na element "source". Aby uzyskać przykład, zobacz <xref:System.Windows.Controls.DataGridTextColumn>.|  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Przewodnik: wyświetlanie danych z bazy danych programu SQL Server w kontrolce DataGrid](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Opisuje sposób skonfigurować nowy projekt WPF, Dodaj Entity Framework Element, ustaw źródła i wyświetlić dane w <xref:System.Windows.Controls.DataGrid>.|  
-|[Jak dodać szczegóły wiersza do kontrolki DataGrid](../../../../docs/framework/wpf/controls/how-to-add-row-details-to-a-datagrid-control.md)|Opisuje sposób tworzenia szczegóły wiersza <xref:System.Windows.Controls.DataGrid>.|  
-|[Instrukcje: implementowanie walidacji za pomocą kontrolki DataGrid](../../../../docs/framework/wpf/controls/how-to-implement-validation-with-the-datagrid-control.md)|Opisuje sposób sprawdzania poprawności wartości w <xref:System.Windows.Controls.DataGrid> komórek i wierszy i wyświetlania weryfikacji opinii.|  
-|[Domyślne zachowanie myszy i klawiatury w kontrolce DataGrid](../../../../docs/framework/wpf/controls/default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Opisuje sposób interakcji z <xref:System.Windows.Controls.DataGrid> formantu przy użyciu klawiatury i myszy.|  
-|[Jak grupować, sortować i filtrować dane w DataGrid kontrolce](../../../../docs/framework/wpf/controls/how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Opisuje sposób wyświetlania danych w <xref:System.Windows.Controls.DataGrid> w różny sposób grupowania, sortowania i filtrowania danych.|  
-|[Opcje ustalania rozmiaru w kontrolce DataGrid](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)|Zawiera opis sposobu kontrolowania bezwzględnych i automatycznej zmiany rozmiaru w <xref:System.Windows.Controls.DataGrid>.|  
+|[Przewodnik: Wyświetlanie danych z bazy danych programu SQL Server w formancie DataGrid](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Opisuje, jak skonfigurować nowy projekt WPF, Dodaj Entity Framework Element, ustaw źródło i wyświetlić dane w <xref:System.Windows.Controls.DataGrid>.|  
+|[Instrukcje: Dodać szczegóły wiersza do formantu DataGrid](../../../../docs/framework/wpf/controls/how-to-add-row-details-to-a-datagrid-control.md)|Opisuje sposób tworzenia szczegóły wiersza dla <xref:System.Windows.Controls.DataGrid>.|  
+|[Instrukcje: Implementuj walidację za pomocą formantu DataGrid](../../../../docs/framework/wpf/controls/how-to-implement-validation-with-the-datagrid-control.md)|W tym artykule opisano sposób sprawdzania poprawności wartości w <xref:System.Windows.Controls.DataGrid> komórek i wierszy i wyświetlania sprawdzania poprawności opinii.|  
+|[Domyślne zachowanie myszy i klawiatury w kontrolce DataGrid](../../../../docs/framework/wpf/controls/default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|W tym artykule opisano sposób interakcji z <xref:System.Windows.Controls.DataGrid> kontroli przy użyciu klawiatury i myszy.|  
+|[Instrukcje: Grupować, sortować i filtrować dane w DataGrid kontrolce](../../../../docs/framework/wpf/controls/how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Opisuje sposób wyświetlania danych w <xref:System.Windows.Controls.DataGrid> na różne sposoby grupowania, sortowania i filtrowania danych.|  
+|[Opcje ustalania rozmiaru w kontrolce DataGrid](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)|W tym artykule opisano sposób kontrolowania bezwzględne i automatycznego ustalania rozmiaru w <xref:System.Windows.Controls.DataGrid>.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Controls.DataGrid>  
- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Szablonowanie danych — omówienie](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Kontrolki](../../../../docs/framework/wpf/controls/index.md)  
- [Model zawartości WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Controls.DataGrid>
+- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Szablonowanie danych — omówienie](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [Kontrolki](../../../../docs/framework/wpf/controls/index.md)
+- [Model zawartości WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)

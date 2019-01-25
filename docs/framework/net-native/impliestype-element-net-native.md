@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97b3e63ceb4b121c3e71e33a00fdf725258039c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe590022f1354b3a41c709e4fed30f89e865fa0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548053"
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>Element &lt;ImpliesType&gt; (architektura .NET Native)
-Stosuje zasady do typu, o ile tej zasady zostały zastosowane do typu zawierającego lub metody.  
+W przypadku zasad do typu, że zasady zostały zastosowane do zawierający typ lub metoda.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,28 +38,28 @@ Stosuje zasady do typu, o ile tej zasady zostały zastosowane do typu zawierają
 |Atrybut|Typ atrybutu|Opis|  
 |---------------|--------------------|-----------------|  
 |`Name`|Ogólne|Atrybut wymagany. Określa nazwę typu.|  
-|`Activate`|Odbicie|Atrybut opcjonalny. Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, aby włączyć aktywacji wystąpień.|  
-|`Browse`|Odbicie|Atrybut opcjonalny. Formanty wykonywania zapytania dotyczącego informacji o elementach programu, ale nie umożliwia dostęp do wszystkich środowiska wykonawczego.|  
-|`Dynamic`|Odbicie|Atrybut opcjonalny. Sterowanie dostępem środowiska uruchomieniowego do wszystkie elementy członkowskie typu, łącznie z konstruktorów, metod, pola, właściwości i zdarzeń, aby umożliwić programowanie dynamiczne.|  
-|`Serialize`|Serializacja|Atrybut opcjonalny. Sterowanie dostępem środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić wystąpienia typu serializacji i deserializacji przez biblioteki, takich jak serializator Newtonsoft JSON.|  
-|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji, która używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
+|`Activate`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, aby włączyć aktywacji wystąpień.|  
+|`Browse`|Odbicie|Atrybut opcjonalny. Kontroluje, wykonanie zapytania dotyczącego informacji o elementach programu, ale nie uwzględnia żadnych dostęp do środowiska uruchomieniowego.|  
+|`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do wszystkich typów elementów członkowskich, konstruktorzy, metody, pola, właściwości i zdarzenia, w tym umożliwiające programowanie dynamiczne.|  
+|`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, pola i właściwości, aby umożliwić wystąpień typu serializacji i deserializacji, biblioteki, takie jak serializator Newtonsoft JSON.|  
+|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady do serializacji, który używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
 |`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji JSON, który używa <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> klasy.|  
 |`XmlSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji XML, który używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.|  
-|`MarshalObject`|Współdziałanie|Atrybut opcjonalny. Zasady kontroli przekazywanie typów referencyjnych do środowiska wykonawczego systemu Windows i modelu COM.|  
-|`MarshalDelegate`|Współdziałanie|Atrybut opcjonalny. Określa zasady dla przekazywanie typów delegatów jako wskaźników funkcji do kodu natywnego.|  
-|`MarshalStructure`|Współdziałanie|Atrybut opcjonalny. Określa zasady dla przekazywanie typów wartości do kodu natywnego.|  
+|`MarshalObject`|Usługa międzyoperacyjna|Atrybut opcjonalny. Zasady kontroli marshaling typów referencyjnych do środowiska uruchomieniowego Windows i modelu COM.|  
+|`MarshalDelegate`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady kierowanie typy delegatów jako wskaźniki funkcji do kodu macierzystego.|  
+|`MarshalStructure`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady dla marshaling typów wartości do kodu natywnego.|  
   
 ## <a name="name-attribute"></a>Nazwa atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*type_name*|Nazwa typu. Jeśli typ reprezentowany przez to `<ImpliesType>` element znajduje się w tej samej przestrzeni nazw jako jego zawierający `<Type>` elementu *type_name* mogą obejmować nazwę typu bez jego przestrzeni nazw. W przeciwnym razie *type_name* musi zawierać w pełni kwalifikowaną nazwę typu.|  
+|*type_name*|Nazwa typu. Jeśli typ reprezentowany przez ten `<ImpliesType>` element znajduje się w tej samej przestrzeni nazw jako jego zawierający `<Type>` elementu *type_name* można uwzględnić nazwę typu bez jego przestrzeń nazw. W przeciwnym razie *type_name* musi zawierać w pełni kwalifikowana nazwa typu.|  
   
-## <a name="all-other-attributes"></a>Inne atrybuty  
+## <a name="all-other-attributes"></a>Wszystkie inne atrybuty  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*policy_setting*|Ustawienia do zastosowania dla tego typu zasad. Możliwe wartości to `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, i `Required All`. Aby uzyskać więcej informacji, zobacz [ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Ustawienia do zastosowania do tego typu zasad. Możliwe wartości to `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, i `Required All`. Aby uzyskać więcej informacji, zobacz [ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -68,20 +68,20 @@ Stosuje zasady do typu, o ile tej zasady zostały zastosowane do typu zawierają
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje odbicia zasady do typu i jej elementów członkowskich.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i jej elementów członkowskich.|  
-|[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|Stosuje zasady odbicia do metody.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowany typ rodzajowy i jej elementów członkowskich.|  
+|[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|Zastosowanie zasad odbicia do metody.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<ImpliesType>` Element jest przeznaczony głównie do użytku przez biblioteki. Dotyczy on następujący scenariusz:  
+ `<ImpliesType>` Element jest przeznaczona głównie do użytku przez biblioteki. Dotyczy on następujący scenariusz:  
   
--   Jeśli procedura wymaga do uwzględnienia w jednym typie, niekoniecznie musi w drugim typu.  
+-   Jeśli procedura wymaga zastanowić się nad jednego typu, niekoniecznie musi na zastanowienie się nad drugiego typu.  
   
--   Metadane dla domyślnych podczas tworzenia wystąpienia typu drugi jest niedostępny, w przeciwnym razie ponieważ analizy statycznej nie oznacza, że jest to konieczne.  
+-   Metadane dla wystąpienia dorozumianych drugi typ jest niedostępna, w przeciwnym razie w przypadku, ponieważ analizy statycznej nie oznacza, że jest to konieczne.  
   
- Najczęściej są dwa typy ogólnych utworzonych wystąpieniach z argumentami typu udostępnionego.  
+ Najczęściej są dwa typy ogólnych instancji z argumentami typu udostępnionej.  
   
- `<ImpliesType>` Element został zdefiniowany przy założeniu, że potrzeba odbicia w typie określonym przez jego elementu nadrzędnego oznacza potrzebę odbicia w typie określonym przez `<ImpliesType>` elementu. Na przykład następujące dyrektywy odbicia dotyczą dwa typy `Explicit<T>` i `Implicit<T>`.  
+ `<ImpliesType>` Element został zdefiniowany przy założeniu, że na potrzeby odbicia na typ określony przez jego elementu nadrzędnego oznacza potrzebę odbicia dla typu określonego przez `<ImpliesType>` elementu. Na przykład, zastosuj następujące dyrektywy odbicia do dwóch typów `Explicit<T>` i `Implicit<T>`.  
   
 ```xml  
 <Type Name="Explicit{ET}">  
@@ -89,9 +89,9 @@ Stosuje zasady do typu, o ile tej zasady zostały zastosowane do typu zawierają
 </Type>  
 ```  
   
- Ta dyrektywa jest nieskuteczne, chyba że tworzenie wystąpienia elementu `Explicit` ma zdefiniowane `Dynamic` ustawienie zasad. Na przykład, jeśli jest to w przypadku `Explicit<Int32>`, `Implicit<Int32>` zostanie uruchomiony z jego publicznych umieszczone elementy członkowskie, a ich metadanych jest dostępne dynamiczne programowania.  
+ Ta dyrektywa nie obowiązuje, chyba że egzemplarz o `Explicit` ma zdefiniowanych `Dynamic` ustawienie zasad. Na przykład, jeśli tak jest aby uzyskać `Explicit<Int32>`, `Implicit<Int32>` jest utworzone za pomocą jego publiczny dostęp do konta root członków i ich metadanych jest dostępne dla programowania dynamicznego.  
   
- Poniżej przedstawiono przykład rzeczywistych, która ma zastosowanie do co najmniej jeden element serializujący. Dyrektywy przechwytywania wymagania, które odzwierciedlający na coś wpisane jako `IList<` *coś* `>` obejmuje również odbicia w odpowiedniej `List<` *coś* `>` typu bez konieczności żadnej adnotacji dla poszczególnych aplikacji.  
+ Oto przykład świata rzeczywistego, który ma zastosowanie do co najmniej jeden element serializujący. Dyrektywy przechwytywania wymogu, że rozważania na temat coś wpisać jako `IList<` *coś* `>` obejmuje również odzwierciedlenie w odpowiedniej `List<` *coś* `>` typu bez konieczności żadnej adnotacji poszczególnych aplikacji.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -99,7 +99,7 @@ Stosuje zasady do typu, o ile tej zasady zostały zastosowane do typu zawierają
 </Type>  
 ```  
   
- `<ImpliesType>` Element może również zostać wyświetlony w `<Method>` elementu, ponieważ w niektórych przypadkach tworzenia wystąpienia metody ogólnej oznacza odzwierciedlający na wystąpienia typu. Załóżmy na przykład metoda ogólna `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)` dostępnym dla danej biblioteki będzie dynamicznie wraz ze skojarzonym <xref:System.Collections.Generic.List%601> i <xref:System.Array> typów. Można to wyrazić jako:  
+ `<ImpliesType>` Element może znajdować się również w `<Method>` elementu, ponieważ w niektórych przypadkach tworzenia wystąpienia metody rodzajowej oznacza rozważania na temat wystąpienia typu. Na przykład Wyobraź sobie metody ogólnej `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)` który danej biblioteki będzie miał dostęp dynamicznie wraz z skojarzonego <xref:System.Collections.Generic.List%601> i <xref:System.Array> typów. Może to być wyrażona jako:  
   
 ```xml  
 <Type Name="MyType">  
@@ -110,7 +110,7 @@ Stosuje zasady do typu, o ile tej zasady zostały zastosowane do typu zawierają
 </Type>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>Zobacz także
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

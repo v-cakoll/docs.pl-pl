@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683975"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informacje o prywatności dotyczące architektury WCF (Windows Communication Foundation)
 Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końcowych. Podczas tworzenia aplikacji przy użyciu funkcji Windows Communication Foundation (WCF), wersja 3.0, aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja jawnie może zbierać informacje kontaktowe użytkownika, lub może zażądać lub wysyłanie informacji przez Internet do witryny sieci Web. Technologii firmy Microsoft w przypadku osadzenia w aplikacji, technologia ta może mieć własną zachowanie, które mogą mieć wpływ na prywatność. Usługi WCF nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy chce wysłać ją do nas.  
@@ -72,7 +72,7 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
   
  Żadne informacje osobiste nie są przechowywane na komputerze użytkownika końcowego.  
   
-## <a name="queued-channels"></a>Kanały umieszczonych w kolejce  
+## <a name="queued-channels"></a>Queued Channels  
  Kolejki przechowywanie komunikatów w aplikacji wysyłającej w imieniu aplikacji odbierającej i później przekazuje te komunikaty odbierający aplikacji. Łatwiej jest zapewnić przesyłanie wiadomości z aplikacji wysyłającej aplikacje odbierające, gdy na przykład aplikacja odbierająca jest przejściowy. Usługi WCF zapewnia obsługę usługi kolejkowania wiadomości przy użyciu Microsoft usługi kolejkowania komunikatów (MSMQ) jako transportu.  
   
  Funkcja kanały umieszczonych w kolejce nie dodaje nagłówki do wiadomości. Zamiast tego tworzy komunikatów usługi kolejkowania komunikatów za pomocą odpowiedni zestaw właściwości komunikatów usługi kolejkowania komunikatów i wywołuje metody usługi kolejkowania komunikatów, aby przełączyć komunikat do kolejki usługi kolejkowania komunikatów. Usługa kolejkowania komunikatów jest opcjonalnym składnikiem, który jest dostarczany z programem Windows.  
@@ -95,7 +95,7 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
 ### <a name="tracing"></a>Śledzenie  
  Funkcję diagnostyki, infrastruktura WCF rejestruje komunikaty, które przechodzą przez transportu i warstwy modelu usług i działania oraz zdarzeń związanych z tych komunikatów. Ta funkcja jest domyślnie wyłączona. Jest włączona, przy użyciu pliku konfiguracji aplikacji i zachowanie śledzenia może być modyfikowany, przy użyciu dostawcy WMI usługi WCF w czasie wykonywania. Po włączeniu Infrastruktura śledzenia emituje śledzenia diagnostycznego, który zawiera komunikaty, działań i przetwarzanie zdarzeń do odbiorników skonfigurowanych. Format i lokalizację danych wyjściowych są określane przez opcje konfiguracji odbiornika administratora, ale zazwyczaj jest sformatowany plik XML. Administrator jest odpowiedzialny za ustawiania listy kontroli dostępu (ACL) plików śledzenia. W szczególności gdy hostowany przez System Windows Activation (WAS), administrator powinien upewnij się, że pliki nie są obsługiwane z publicznego katalogu wirtualnego, jeśli nie jest wymagana.  
   
- Istnieją dwa typy śledzenia: rejestrowanie komunikatów i Model usługi diagnostyczne śledzenia, opisane w poniższej sekcji. Każdy typ jest skonfigurowana za pośrednictwem źródła śledzenia: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> i <xref:System.ServiceModel>. Oba te źródła śledzenia rejestrowania przechwytywania danych, które są lokalne dla aplikacji.  
+ Istnieją dwa rodzaje śledzenia: Rejestrowanie komunikatów i Model usługi diagnostyczne śledzenia, opisane w poniższej sekcji. Każdy typ jest skonfigurowana za pośrednictwem źródła śledzenia: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> i <xref:System.ServiceModel>. Oba te źródła śledzenia rejestrowania przechwytywania danych, które są lokalne dla aplikacji.  
   
 ### <a name="message-logging"></a>Rejestrowanie komunikatów  
  Rejestrowanie źródła śledzenia komunikatów (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) umożliwia administratorom komunikaty dziennika z tego przepływu za pośrednictwem systemu. Za pomocą konfiguracji użytkownik może zdecydować o dziennika całej wiadomości lub tylko nagłówki komunikatu, czy mają być rejestrowane w modelu warstwy transportu i/lub usługę i czy mają zostać dołączone źle sformułowane komunikaty. Ponadto użytkownik może skonfigurować filtrowanie, aby ograniczyć zakres komunikatów są rejestrowane.  
@@ -143,7 +143,7 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
   
  \- Aby uzyskać xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
- wsse:username  
+ wsse:Username  
   
  wsse:BinarySecurityToken  
   
@@ -157,7 +157,7 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
   
  AssertionId="[ID]"  
   
- Wystawca = "[string]"  
+ Issuer="[string]"  
   
  IssueInstant="[dateTime]"  
   
@@ -165,13 +165,13 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
   
  \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
  \<Audience>[uri]\</Audience>+  
   
  \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!--abstrakcji typu podstawowego  
   
@@ -181,7 +181,7 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
   
  \</ Warunki >?  
   
- \<Doradztwo >  
+ \<Advice>  
   
  \<AssertionIDReference > [ID]\</AssertionIDReference > *  
   
@@ -229,7 +229,7 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
   
  \<AuthenticationStatement  
   
- AuthenticationMethod = "[identyfikator uri]"  
+ AuthenticationMethod="[uri]"  
   
  AuthenticationInstant="[dateTime]"  
   
@@ -249,7 +249,7 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
   
  AuthorityKind="[QName]"  
   
- Lokalizacja = "[identyfikator uri]"  
+ Location="[uri]"  
   
  Binding="[uri]"  
   
@@ -277,7 +277,7 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
   
  \<AuthorizationDecisionStatement  
   
- Zasób = "[identyfikator uri]"  
+ Resource="[uri]"  
   
  Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
@@ -285,7 +285,7 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
   
  [Tematu]  
   
- \<Akcja, Namespace = "[identyfikator uri]" > [string]\<Action > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
  \<Dowód >  
   
@@ -401,6 +401,6 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
   
  Web Services Description Language (WSDL) zawiera definicję portu. Każdy port ma adres punktu końcowego i powiązania, który reprezentuje usług używanych przez aplikację. Udostępnianie WSDL można wyłączyć za pomocą konfiguracji. Żadne informacje nie są przechowywane na komputerze.  
   
-## <a name="see-also"></a>Zobacz też  
- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
- [Zabezpieczenia](../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Zobacz także
+- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [Zabezpieczenia](../../../docs/framework/wcf/feature-details/security.md)

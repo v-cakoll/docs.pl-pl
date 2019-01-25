@@ -2,12 +2,12 @@
 title: Funkcje matematyczne
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d8d766cb1416a9a07476175364fe568d81fd9b25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143678"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652270"
 ---
 # <a name="mathematical-functions"></a>Funkcje matematyczne
 
@@ -383,9 +383,9 @@ Oblicza tangens określonego wyrażenia.
 ## <a name="see-also"></a>Zobacz także
 
 Aby uzyskać więcej informacji na temat funkcji matematycznych, które obsługuje klient SQL zobacz dokumentację dla używanej wersji programu SQL Server określonego w manifeście dostawcy SqlClient:  
-  
-**Program SQL Server 2005:** [Funkcje matematyczne (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**Program SQL Server 2008:** [Funkcje matematyczne (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**Program SQL Server 2012 lub nowszy:** [Funkcje matematyczne (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
- [Klient SQL dla funkcji programu Entity Framework](sqlclient-for-ef-functions.md)
+**SQL Server 2005:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+**SQL Server 2008:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
+**Program SQL Server 2012 lub nowszy:** [Mathematical Functions (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+
+- [Klient SQL dla funkcji programu Entity Framework](sqlclient-for-ef-functions.md)

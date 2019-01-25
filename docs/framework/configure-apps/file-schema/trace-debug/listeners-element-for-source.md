@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 86b85779f4eff72e8ab910a5ccd32fd369270509
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 949b6c7272b39900698b618760f5e5bad11ccc3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670644"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;odbiorniki&gt; elementu &lt;źródła&gt;
 Dodaje lub usuwa słuchaczy w <xref:System.Diagnostics.TraceSource.Listeners%2A> kolekcji <xref:System.Diagnostics.TraceSource>. Odbiornik kieruje dane wyjściowe śledzenia do odpowiedniego obiektu docelowego, takie jak dziennik, okno lub pliku tekstowego.  
   
  \<Konfiguracja >  
-\<System.Diagnostics >  
+\<system.diagnostics>  
 \<źródła >  
-\<źródło >  
-\<odbiorniki > Element  
+\<source>  
+\<listeners> Element  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ Dodaje lub usuwa słuchaczy w <xref:System.Diagnostics.TraceSource.Listeners%2A>
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Dodaje odbiornik do `Listeners` kolekcji.|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Usuwa odbiornik z `Listeners` kolekcji.|  
-|[\<Wyczyść >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Czyści `Listeners` kolekcję dla źródła śledzenia.|  
+|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Czyści `Listeners` kolekcję dla źródła śledzenia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -89,7 +89,7 @@ Dodaje lub usuwa słuchaczy w <xref:System.Diagnostics.TraceSource.Listeners%2A>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Diagnostics.TraceListener>  
- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Obiekty nasłuchujące śledzenie](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Diagnostics.TraceListener>
+- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Obiekty nasłuchujące śledzenie](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

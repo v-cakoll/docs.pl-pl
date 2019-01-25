@@ -2,12 +2,12 @@
 title: Kontrakt błędu
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 37b977feffd7ce46d2f4bc7b8a4e5dc89d21b137
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 39bb9b0ebd9feb6066c1c5e83128eb3a594d6d99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653934"
 ---
 # <a name="fault-contract"></a>Kontrakt błędu
 Przykładowe kontrakt błędu pokazuje, jak komunikować informacje o błędzie z usługi do klienta. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), za pomocą dodatkowy kod dodany do usługi, aby przekonwertować wyjątek wewnętrzny błąd. Klient próbuje wykonać dzielenie przez zero, aby wymusić warunek błędu usługi.  
@@ -136,4 +136,4 @@ catch (FaultException<MathFault> e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

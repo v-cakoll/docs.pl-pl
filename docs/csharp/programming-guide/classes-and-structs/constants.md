@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: b723bb23559f88e7498c22295a6b2f70312461fc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3cfb238317e14df8d663bc96ddf46e863c7b98be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663878"
 ---
 # <a name="constants-c-programming-guide"></a>Stałe (Przewodnik programowania w języku C#)
 Stałe są niezmienne wartości, które są znane w czasie kompilacji i nie zmieniają się przez cały okres istnienia programu. Stałe są uznane za pomocą [const](../../../csharp/language-reference/keywords/const.md) modyfikator. Tylko C# wbudowanych typów (z wyłączeniem <xref:System.Object?displayProperty=nameWithType>) mogą być deklarowane jako `const`. Aby uzyskać listę wbudowanych typów, zobacz [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md). Typy zdefiniowane przez użytkownika, w tym klasy, struktury i tablic, nie może być `const`. Użyj [tylko do odczytu](../../../csharp/language-reference/keywords/readonly.md) modyfikator, aby utworzyć klasy, struktury lub tablica, która jest inicjowany jeden raz w czasie wykonywania (na przykład w konstruktorze), a następnie nie można jej zmienić.  
@@ -46,11 +46,11 @@ Stałe są niezmienne wartości, które są znane w czasie kompilacji i nie zmie
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Typy](../../../csharp/programming-guide/types/index.md)  
-- [readonly](../../../csharp/language-reference/keywords/readonly.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Typy](../../../csharp/programming-guide/types/index.md)
+- [readonly](../../../csharp/language-reference/keywords/readonly.md)
 - [Niezmienność w C# pierwszej części: Rodzaje niezmienności](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability)

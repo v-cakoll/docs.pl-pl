@@ -1,21 +1,21 @@
 ---
-title: 'Porady: wyświetlanie powiązanych danych w formancie DataRepeater (Visual Studio)'
+title: 'Instrukcje: Wyświetlanie powiązanych danych w formancie DataRepeater (Visual Studio)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DataRepeater, data-binding
 - DataRepeater, displaying bound controls
 ms.assetid: 56a15326-1334-4275-af4e-075cad79e6f7
-ms.openlocfilehash: b96fb33a0dcf80a86d1fcb6e219e5f35b1f7351c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dbcd814edb78c54ce5629a1a8761142674fe6135
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684622"
 ---
-# <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>Porady: wyświetlanie powiązanych danych w formancie DataRepeater (Visual Studio)
+# <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>Instrukcje: Wyświetlanie powiązanych danych w formancie DataRepeater (Visual Studio)
 Najbardziej powszechnym zastosowaniem programu <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> kontroli jest wyświetlanie powiązanych danych z bazy danych lub innego źródła danych.  
   
- Oprócz formanty powiązania, warto dodać inne kontrolki, takie jak etykieta statyczna lub obraz jest powtarzany w każdym elemencie w <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> kontroli. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie formantów niepowiązanych w formancie DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md).  
+ Oprócz formanty powiązania, warto dodać inne kontrolki, takie jak etykieta statyczna lub obraz jest powtarzany w każdym elemencie w <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> kontroli. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie formantów niepowiązanych w formancie DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md).  
   
  Możesz również powiązać ze źródłem danych w czasie wykonywania, ustawiając <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> właściwości `True` i źródło danych w celu przypisywania <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DataSource%2A> właściwości. W takim przypadku należy zarządzać wszystkie interakcje ze źródłem danych. Aby uzyskać więcej informacji, zobacz [tryb wirtualny w formancie DataRepeater](../../../visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md).  
   
@@ -44,10 +44,10 @@ Najbardziej powszechnym zastosowaniem programu <xref:Microsoft.VisualBasic.Power
   
      Można określić, jakie typy kontrolek będą wyświetlane dla każdego pola. Aby uzyskać więcej informacji, zobacz [Ustawianie formantu do utworzenia podczas przeciągania z okna źródeł danych](/visualstudio/data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
- [Wprowadzenie do kontrolki DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
- [Instrukcje: wyświetlanie niepowiązanych kontrolek w kontrolce DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
- [Porady: Tworzenie formularza wzorzec/szczegół za pomocą dwóch formantów DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
- [Instrukcje: zmienianie wyglądu kontrolki DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
- [Rozwiązywanie problemów z kontrolką DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>
+- [Wprowadzenie do kontrolki DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
+- [Instrukcje: Wyświetlanie formantów niepowiązanych w formancie DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)
+- [Instrukcje: Tworzenie formularza wzorzec/szczegół za pomocą dwóch formantów DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
+- [Instrukcje: Zmienianie wyglądu formantu DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
+- [Rozwiązywanie problemów z kontrolką DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

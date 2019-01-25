@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: d0fc45b5ccabedb127061090eed1f6b63fd7acba
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664203"
 ---
 # <a name="metadata-architecture-overview"></a>Przegląd architektury metadanych
 Windows Communication Foundation (WCF) zapewnia rozbudowane infrastrukturę na potrzeby eksportowania, publikowania, pobieranie i Importowanie metadanych usługi. Usługi WCF umożliwia metadane opisują sposób interakcji z punktami końcowymi usługi, tak aby narzędzi, takich jak Svcutil.exe, może automatycznie generować kod klienta do uzyskania dostępu do usługi.  
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) zapewnia rozbudowane infrastrukturę na p
 > [!CAUTION]
 > Jeśli dodasz punktu końcowego MEX w pliku konfiguracyjnym aplikacji, a następnie nastąpi próba dodania <xref:System.ServiceModel.Description.ServiceMetadataBehavior> do hosta usługi w kodzie, otrzymasz następujący wyjątek:  
 >
-> System.InvalidOperationException: Nazwa kontraktu "IMetadataExchange" nie można znaleźć na liście umów implementowane przez usługę Service1. Dodaj obiekt ServiceMetadataBehavior do pliku konfiguracji lub ServiceHost bezpośrednio po to, aby włączyć obsługę dla tego kontraktu.  
+> System.InvalidOperationException: Nie można odnaleźć nazwy kontraktu "IMetadataExchange" na liście umów implementowane przez usługę Service1. Dodaj obiekt ServiceMetadataBehavior do pliku konfiguracji lub ServiceHost bezpośrednio po to, aby włączyć obsługę dla tego kontraktu.  
 >
 > Można obejść ten problem, dodając <xref:System.ServiceModel.Description.ServiceMetadataBehavior> w pliku konfiguracji lub dodawanie zarówno punktu końcowego i <xref:System.ServiceModel.Description.ServiceMetadataBehavior> w kodzie.  
 >
@@ -87,12 +87,12 @@ Windows Communication Foundation (WCF) zapewnia rozbudowane infrastrukturę na p
 ## <a name="dynamic-bindings"></a>Dynamiczne powiązania  
  Może dynamicznie aktualizować powiązania, którego używasz do utworzenia kanału do punktu końcowego usługi, w przypadku, gdy zmieni się powiązanie dla punktu końcowego, lub jeśli chcesz utworzyć kanał powiadomień do punktu końcowego, który używa tej samej umowy, ale ma inne powiązanie. Możesz użyć <xref:System.ServiceModel.Description.MetadataResolver> klasy statycznej, pobieranie i Importowanie metadanych w czasie wykonywania dla punktów końcowych usługi, które implementują określone kontraktu. Następnie można użyć zaimportowanych <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> obiektów, aby utworzyć fabrykę klienta lub kanał do żądanego punktu końcowego.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Description>  
- [Formaty metadanych](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
- [Eksportowanie i importowanie metadanych](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [Pobieranie metadanych](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- [Używanie metadanych](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [Rozszerzanie systemu metadanych](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Description>
+- [Formaty metadanych](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
+- [Eksportowanie i importowanie metadanych](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+- [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
+- [Pobieranie metadanych](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)
+- [Używanie metadanych](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Rozszerzanie systemu metadanych](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

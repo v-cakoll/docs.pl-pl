@@ -11,12 +11,12 @@ helpviewer_keywords:
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: KrzysztofCwalina
-ms.openlocfilehash: 54f98b3c685b77ecb9fe659522c599662aa8243c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632026"
 ---
 # <a name="event-design"></a>Projekt zdarzenia
 Zdarzenia są najczęściej używane formularza wywołania zwrotne (konstrukcji, zezwalających na platformę, by mogą wywoływać kodu użytkownika). Inne mechanizmy wywołania zwrotnego dołączone elementy członkowskie, biorąc delegatów, wirtualne elementy członkowskie i oparte na interfejsie wtyczki. Dane z badań użyteczność wskazać, że większość deweloperów bardziej komfortowo, jednocześnie za pomocą zdarzeń, niż użytkownicy korzystają z innych mechanizmów wywołania zwrotnego. Zdarzenia są dobrze zintegrowane z Visual Studio i wielu języków.  
@@ -72,5 +72,5 @@ Zdarzenia są najczęściej używane formularza wywołania zwrotne (konstrukcji,
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)  
+- [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)
 - [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: cebec5fe213536fd5af1928355c6f692f0d50fd2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4d3f81039fc9d4447816901c55ad0af5e501dc2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668850"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Zabezpieczenia transportu z uwierzytelnianiem podstawowym
 Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation (WCF) i klienta. Serwer musi mieć prawidłowy certyfikat X.509, który może służyć do Secure Sockets Layer (SSL), a klienci muszą ufać certyfikatowi serwera. Ponadto usługa sieci Web już implementacją protokołu SSL, który może służyć. Aby uzyskać więcej informacji dotyczących włączania uwierzytelniania podstawowego w Internet Information Services (IIS), zobacz [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822).  
@@ -19,12 +19,12 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
   
 |Cechy|Opis|  
 |--------------------|-----------------|  
-|Tryb zabezpieczeń|Transportu|  
+|Tryb zabezpieczeń|Transport|  
 |Współdziałanie|Za pomocą istniejących klientów usługi sieci Web i usług|  
 |Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (za pomocą protokołu HTTPS)<br /><br /> Tak (za pomocą nazwy użytkownika i hasła)|  
 |Integralność|Tak|  
 |Poufność|Tak|  
-|Transportu|HTTPS|  
+|Transport|HTTPS|  
 |Powiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Usługa  
@@ -35,7 +35,7 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
 -   Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
   
 ### <a name="code"></a>Kod  
- Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, który korzysta z Windows domena nazwa użytkownika i hasło dla bezpieczeństwie transferu. Należy pamiętać, że usługa wymaga certyfikatu X.509 do uwierzytelniania klienta. Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) i [porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, który korzysta z Windows domena nazwa użytkownika i hasło dla bezpieczeństwie transferu. Należy pamiętać, że usługa wymaga certyfikatu X.509 do uwierzytelniania klienta. Aby uzyskać więcej informacji, zobacz [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) i [jak: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
@@ -110,11 +110,11 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
- [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Instrukcje: konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
+- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
+- [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Instrukcje: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

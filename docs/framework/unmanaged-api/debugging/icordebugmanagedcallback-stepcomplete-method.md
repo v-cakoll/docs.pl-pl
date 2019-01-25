@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cd6cce73a96cf522521d7cd8d0cc8024e95b93c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b50bb5312b294a3e92ab945c3f0443a4eb81d133
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634440"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>ICorDebugManagedCallback::StepComplete — Metoda
-Powiadamia debugera, czy krok zostało zakończone.  
+Powiadamia debugera, że krok została zakończona.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +40,22 @@ HRESULT StepComplete (
   
 #### <a name="parameters"></a>Parametry  
  `pAppDomain`  
- [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domeny aplikacji zawierające wątku, w którym kroku zostało zakończone.  
+ [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, zawierającą wątku, w którym kroku zostało zakończone.  
   
  `pThread`  
- [in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku, w którym kroku zostało zakończone.  
+ [in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątek, w którym kroku zostało zakończone.  
   
  `pStepper`  
- [in] Wskaźnik do obiektu ICorDebugStepper —, który reprezentuje krok na wykonanie kodu.  
+ [in] Wskaźnik do obiektu ICorDebugStepper —, który reprezentuje krok wykonaniu kodu.  
   
  `reason`  
- [in] Wartość wyliczenia CorDebugStepReason wskazująca wynik pojedynczego kroku.  
+ [in] Wartość cordebugstepreason — wyliczenie, która wskazuje wynik pojedynczego kroku.  
   
 ## <a name="remarks"></a>Uwagi  
- Stepper może służyć do kontynuować wykonywanie krok po kroku w razie potrzeby, chyba że debugowanie zostało zakończone.  
+ Stepper może służyć do kontynuować przechodzenie krok po kroku w razie potrzeby, chyba że debugowanie zostanie zakończony.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -63,5 +63,5 @@ HRESULT StepComplete (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

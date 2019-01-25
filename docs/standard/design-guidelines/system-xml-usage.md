@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
 author: KrzysztofCwalina
-ms.openlocfilehash: fb0e1d3dc851f9726905dc375d50cf211dba8400
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fc94ac62d1f2413c5f51446a8f6d0a52d9151557
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497959"
 ---
 # <a name="systemxml-usage"></a>Używanie zestawu system.XML
 Ta sekcja zawiera informacje o użycie kilku typów, znajdującymi się w <xref:System.Xml?displayProperty=nameWithType> przestrzenie nazw, który może służyć do reprezentowania danych XML.  
@@ -28,5 +28,5 @@ Ta sekcja zawiera informacje o użycie kilku typów, znajdującymi się w <xref:
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
 - [Zalecenia dotyczące użytkowania](../../../docs/standard/design-guidelines/usage-guidelines.md)

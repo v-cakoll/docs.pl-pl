@@ -2,26 +2,26 @@
 title: 'Instrukcje: Partycjonowanie danych usługi'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 47e84555e38d2a71b7741c18de5f67349a622798
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3755a9ecb61148bcc426e9d510dc2eab1c34eeb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590633"
 ---
 # <a name="how-to-service-data-partitioning"></a>Instrukcje: Partycjonowanie danych usługi
-W tym temacie przedstawiono podstawowe czynności wymagane do partycji komunikaty w wielu wystąpieniach tej samej usługi docelowej. Partycjonowanie danych usługi jest zwykle używany w przypadku konieczności zmiany skali usługi w celu zapewnienia lepszej jakości usługi lub gdy potrzebne do obsługi żądań od innych klientów w określony sposób. Na przykład wiadomości z wysokiej wartości lub klientów "Złota" może być konieczne przetworzenie na wyższy priorytet niż komunikatów standardowych klienta.  
+W tym temacie przedstawiono podstawowe kroki wymagane do partycji wiadomości na wiele wystąpień tej samej usługi docelowej. Partycjonowanie danych usługi jest zazwyczaj używany w przypadku konieczności skalowania usługi w celu zapewnienia lepszej jakości usługi, lub gdy potrzebujesz do obsługi żądań od innych klientów w określony sposób. Na przykład wiadomości od wysokiej wartości lub klientów "Złota" może być konieczne do przetworzenia na wyższy priorytet niż wiadomości od standardowego klienta.  
   
- W tym przykładzie wiadomości są kierowane do jednej z dwóch wystąpień usługi regularCalc. Oba wystąpienia usługi są identyczne; Jednak usługa reprezentowany przez calculator1 punktu końcowego przetwarzania wiadomości odebrała od wysokiej wartości klientów, punkt końcowy Kalkulator 2 procesy wiadomości z innych klientów  
+ W tym przykładzie komunikaty są kierowane do jednej z dwóch wystąpień usługi regularCalc. Oba wystąpienia usługi są identyczne; Jednak usługa reprezentowane przez wiadomości procesy punktu końcowego calculator1 odebrała od klientów o wysokiej wartości, punkt końcowy Kalkulator 2 przetwarzania wiadomości od innych klientów  
   
- Wiadomości wysłanych z klienta nie ma unikatowe dane, który może służyć do identyfikowania którego wiadomości powinny być kierowane do wystąpienia usługi. Aby umożliwić każdego klienta na przesyłanie danych do określonego miejsca docelowego usługi wprowadzimy dwa punkty końcowe usługi, które będą używane do odbierania wiadomości.  
+ Wiadomości wysłanych z klienta nie ma unikatowe dane, który może służyć do identyfikowania wystąpienia usługi, które komunikat powinien być kierowane do. Aby zezwolić na każdym kliencie do kierowania danych do określonego miejsca docelowego usługi wdrażamy dwa punkty końcowe usługi, które będą używane do odbierania komunikatów.  
   
 > [!NOTE]
->  Gdy w tym przykładzie użyto określonych punktów końcowych do danych partycji, można to również osiągnąć, korzystając z informacji zawartych w wiadomości takich jak dane w nagłówku lub w treści.  
+>  Chociaż w tym przykładzie użyto określonych punktów końcowych do partycjonowania danych, to może być również wykonywane przy użyciu informacji zawartych w wiadomości takich jak dane w nagłówku lub w treści.  
   
 ### <a name="implement-service-data-partitioning"></a>Partycjonowanie danych usługi implementacji  
   
-1.  Utwórz podstawową konfigurację usługi routingu, podając punktów końcowych usług udostępnianych przez usługę. W poniższym przykładzie zdefiniowano dwa punkty końcowe, które będą używane do odbierania wiadomości. Definiuje punkty końcowe klienta, które są używane do wysyłania komunikatów do regularCalc wystąpień usługi.  
+1.  Tworzenie podstawowej konfiguracji usługa routingu przez określenie punktów końcowych usługi udostępniane przez usługę. W poniższym przykładzie zdefiniowano dwa punkty końcowe, które będą używane w celu odbierania komunikatów. Definiuje również punkty końcowe klienta, które są używane do wysyłania komunikatów do regularCalc wystąpień usługi.  
   
     ```xml  
     <services>  
@@ -58,7 +58,7 @@ W tym temacie przedstawiono podstawowe czynności wymagane do partycji komunikat
      </client>  
     ```  
   
-2.  Zdefiniuj filtry używane do przesyłania wiadomości do punktów końcowych docelowego.  Na przykład filtr EndpointName służy do określania, które punkt końcowy usługi odebrał wiadomość. W poniższym przykładzie zdefiniowano niezbędne sekcji routingu i filtry.  
+2.  Zdefiniuj filtry używane do przesyłania wiadomości do docelowych punktów końcowych.  Na przykład filtr Nazwapunktukoncowego jest używany do określenia, które punkt końcowy usługi komunikat. W poniższym przykładzie zdefiniowano niezbędne sekcji routingu i filtry.  
   
     ```xml  
     <filters>  
@@ -71,9 +71,9 @@ W tym temacie przedstawiono podstawowe czynności wymagane do partycji komunikat
     </filters>  
     ```  
   
-3.  Zdefiniuj filtr tabeli, które kojarzy każdego filtru z punktem końcowym klienta. W tym przykładzie zostaną przesłane wiadomości na podstawie określonych w punkcie końcowym, które zostało przesłane za pośrednictwem. Ponieważ komunikat może dopasować tylko jeden z dwóch możliwych filtrów, nie istnieje potrzeba do sterowania do zlecenia w filtrach, które są oceniane przy użyciu priorytet filtru.  
+3.  Definiowanie tabeli filtru każdy filtr zostanie skojarzony z punktem końcowym klienta. W tym przykładzie będą kierowane komunikat zgodnie z określonego punktu końcowego, który został odebrany przez. Ponieważ komunikat może wyłącznie odpowiadać jednej z dwóch możliwych filtrów, nie ma potrzeby używania priorytet filtru do kontrolowania kolejności, w które filtry są oceniane.  
   
-     Następujące definiuje tabeli filtrów i dodaje filtry zdefiniowanego wcześniej.  
+     Poniżej definiuje tabelę filtru i dodaje zdefiniowane wcześniej filtry.  
   
     ```xml  
     <filterTables>  
@@ -85,7 +85,7 @@ W tym temacie przedstawiono podstawowe czynności wymagane do partycji komunikat
     </filterTables>  
     ```  
   
-4.  Aby ocenić wiadomości przychodzących filtry zawarte w tabeli, należy skojarzyć tabeli filtrów z punktów końcowych usługi za pomocą zachowania routingu. W poniższym przykładzie pokazano kojarzenia "filterTable1" z punktów końcowych usługi:  
+4.  Aby ocenić komunikaty przychodzące filtry zawarte w tabeli, należy skojarzyć tabelę filtru z punktami końcowymi usługi za pomocą zachowania routingu. W poniższym przykładzie pokazano kojarzenie "filterTable1" z punktami końcowymi usługi:  
   
     ```xml  
     <behaviors>  
@@ -173,5 +173,5 @@ W tym temacie przedstawiono podstawowe czynności wymagane do partycji komunikat
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługi routingu](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi routingu](../../../../docs/framework/wcf/samples/routing-services.md)

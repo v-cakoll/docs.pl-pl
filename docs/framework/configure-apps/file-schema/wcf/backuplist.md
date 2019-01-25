@@ -2,20 +2,20 @@
 title: '&lt;backupList&gt;'
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: 1a6a7ac42b379dd8fb2ba80cf6a3a38998c26a59
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c11fd38e7c40f740d4c1c36ab87c44744ed0daab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627995"
 ---
 # <a name="ltbackuplistgt"></a>&lt;backupList&gt;
 Reprezentuje sekcję konfiguracji dla definiowania listy kopii zapasowych, która wylicza zestaw punktów końcowych, które chcesz, aby usługa routingu do użycia w przypadku, gdy nie można nawiązać połączenia z podstawowego punktu końcowego. Jeśli pierwszy punkt końcowy na liście nie działa, usługa routingu będzie automatycznie przełączać się kolejny na liście.  Dzięki temu możesz szybko dodać niezawodność do Twojej aplikacji bez konieczności nauki aplikacji klienckiej sposobu obsługi złożonych wzorów lub wszystkich usług wdrożonym.  
   
  \<system.serviceModel>  
 \<Routing >  
-\<backupLists >  
-\<backupList >  
+\<backupLists>  
+\<backupList>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,7 +48,7 @@ Reprezentuje sekcję konfiguracji dla definiowania listy kopii zapasowych, któr
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Lista punktów końcowych kopii zapasowej.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Lista punktów końcowych kopii zapasowej.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ta sekcja zawiera uporządkowaną kolekcję punktów końcowych, które wiadomości zostaną przekazane w przypadku wyjątku komunikacji podczas wysyłania do podstawowego punktu końcowego.  
@@ -73,5 +73,5 @@ Reprezentuje sekcję konfiguracji dla definiowania listy kopii zapasowych, któr
 </backupLists>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>    
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

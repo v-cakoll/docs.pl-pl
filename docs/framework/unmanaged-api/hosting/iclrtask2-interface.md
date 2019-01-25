@@ -16,46 +16,46 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed0d2ff3b64bab026087e13d54314eca86181d8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cbd627eff9318fce38ec238e5fa686cc9d759b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627190"
 ---
 # <a name="iclrtask2-interface"></a>ICLRTask2 — Interfejs
-Zawiera wszystkie funkcje [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) interfejsu; ponadto udostępnia metody umożliwiające przerwanie wątku opóźnionych w bieżącym wątku.  
+Oferuje wszystkie funkcje [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) interfejsu; ponadto udostępnia metody, które umożliwiają wątku przerywa opóźnionych w bieżącym wątku.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[BeginPreventAsyncAbort, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-beginpreventasyncabort-method.md)|Opóźnienia nowego wątku przerwać żądania w bieżącym wątku.|  
-|[EndPreventAsyncAbort, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)|Zezwala na nowe lub oczekujące żądania przerwania wątku w wątku przerywa w bieżącym wątku.|  
+|[BeginPreventAsyncAbort, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-beginpreventasyncabort-method.md)|Nowy wątek opóźnienia przerwać żądania w bieżącym wątku.|  
+|[EndPreventAsyncAbort, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)|Zezwala na nowe lub oczekujące żądania przerwania wątku spowoduje w wątku przerywa w bieżącym wątku.|  
   
 ## <a name="remarks"></a>Uwagi  
- `ICLRTask2` Dziedziczy interfejs `ICLRTask` interfejsu i dodaje metod umożliwiających hosta opóźnienia wątku jest przerywana, aby chronić region kodu, który musi zakończyć się niepowodzeniem. Wywoływanie `BeginPreventAsyncAbort` zwiększa licznik opóźnienie wątku przerwania dla bieżącego wątku i wywoływania `EndPreventAsyncAbort` zmniejsza go. Wywołuje się `BeginPreventAsyncAbort` i `EndPreventAsyncAbort` mogą być zagnieżdżone. Tak długo, jak wartość licznika jest większa niż zero, opóźnienia przerwania wątku dla bieżącego wątku.  
+ `ICLRTask2` Interfejs dziedziczy `ICLRTask` interfejs i dodaje metody, które umożliwiają hosta opóźnienia przerwań wątku, do ochrony region kodu, które muszą zakończyć się niepowodzeniem. Wywoływanie `BeginPreventAsyncAbort` zwiększa licznik opóźnienie wątku przerwania dla bieżącego wątku i wywołania `EndPreventAsyncAbort` zmniejsza ją. Wywołania `BeginPreventAsyncAbort` i `EndPreventAsyncAbort` mogą być zagnieżdżone. Tak długo, jak długo wartość licznika jest większa od zera, opóźnienia przerwania wątku dla bieżącego wątku.  
   
- Jeśli wywołań `BeginPreventAsyncAbort` i `EndPreventAsyncAbort` są nie łączyć, istnieje możliwość przejścia w wątku, który przerwań nie może zostać dostarczona do bieżącego wątku.  
+ Jeśli wywołania `BeginPreventAsyncAbort` i `EndPreventAsyncAbort` są nie sparowano istnieje możliwość osiągnąć stan, w który wątek przerwań nie można dostarczyć do bieżącego wątku.  
   
- Opóźnienie nie jest honorowana dla wątku, który przerywa samej siebie.  
+ Opóźnienie nie jest uznawane wątku, który przerywa sam.  
   
- Funkcje, które jest udostępniane przez tę funkcję jest używana wewnętrznie przez maszynę wirtualną (VM). Nieprawidłowe użycie tych metod może spowodować nieokreślony zachowanie w maszynie Wirtualnej. Na przykład wywołanie elementu `EndPreventAsyncAbort` bez wywoływania pierwszego elementu `BeginPreventAsyncAbort` można ustawić licznik do zera, gdy maszyna wirtualna wcześniej ma zwiększany. Podobnie wewnętrzny licznik nie jest sprawdzany pod kątem przepełnienia. W razie przekroczenia limitu całkowitej, ponieważ jest zwiększany przez hosta i maszyny Wirtualnej, efekty jest nieokreślony.  
+ Funkcje, które jest uwidaczniany przez ta funkcja jest używana wewnętrznie przez maszynę wirtualną (VM). Niewłaściwe korzystanie z tych metod może spowodować nieokreślone zachowanie na maszynie wirtualnej. Na przykład, wywołanie `EndPreventAsyncAbort` bez wywoływania pierwszy `BeginPreventAsyncAbort` można ustawić licznik na zero, gdy maszyna wirtualna wcześniej jest zwiększany. Podobnie Licznik wewnętrzny nie jest sprawdzane pod kątem przepełnienia. Jeśli przekracza całkowity limit, ponieważ jest zwiększany zarówno przez host i maszyna wirtualna, wynikowe zachowanie jest nieokreślone.  
   
- Dla informacji o elementach członkowskich odziedziczone `ICLRTask` i informacji na temat innych celów tego interfejsu, zobacz [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) interfejsu.  
+ Dla informacji na temat elementów członkowskich są dziedziczone z `ICLRTask` i informacje o innych zastosowań tego interfejsu, [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) interfejsu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

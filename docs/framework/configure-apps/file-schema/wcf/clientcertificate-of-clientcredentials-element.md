@@ -2,12 +2,12 @@
 title: '&lt;clientCertificate&gt; w &lt;clientCredentials&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: f6dbc2c7d43558d86f74468adbc7026e8462812c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d908da5db4fc54b002fb4e3492b7d32da67f5524
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599130"
 ---
 # <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCertificate&gt; w &lt;clientCredentials&gt;, element
 Definiuje certyfikat X.509 używany do uwierzytelniania klienta do usługi.  
@@ -17,7 +17,7 @@ Definiuje certyfikat X.509 używany do uwierzytelniania klienta do usługi.
 \<endpointBehaviors>  
 \<zachowanie >  
 \<clientCredentials>  
-\<clientCertificate >  
+\<clientCertificate>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,15 +52,15 @@ Definiuje certyfikat X.509 używany do uwierzytelniania klienta do usługi.
 ## <a name="remarks"></a>Uwagi  
  Ten element konfiguracji określa certyfikat używany do uwierzytelniania klienta z tym elementem. Aby uzyskać więcej informacji, zobacz [jak: Określanie wartości poświadczeń klienta](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>  
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>  
- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Instrukcje: Określanie wartości poświadczeń klienta](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)  
- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>
+- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
+- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Instrukcje: Określanie wartości poświadczeń klienta](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
+- [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

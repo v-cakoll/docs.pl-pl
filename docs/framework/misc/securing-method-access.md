@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51a7969821cb4c2367ac298c8452daf1f2a8ceab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691479"
 ---
 # <a name="securing-method-access"></a>Zabezpieczanie dostępu metody
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Niektóre metody może nie być odpowiednie dla dowolnego niezaufanego kodu do wywołania. Takie metody stanowić zagrożenie kilka: metoda może być podanie pewnych informacji w ograniczonym; może być uważa, wszelkie informacje przekazywane może nie sprawdzanie błędów dla parametrów; lub z niewłaściwego parametrami, może być nieprawidłowe działanie lub czymś szkodliwe. Należy należy pamiętać o tych przypadkach i podjąć działania w celu ochrony metody.  
+ Niektóre metody może nie być odpowiednie dla dowolnego niezaufanego kodu do wywołania. Takie metody stanowić zagrożenie kilka: Metoda może być podanie pewnych informacji w ograniczonym; może być uważa, wszelkie informacje przekazywane może nie sprawdzanie błędów dla parametrów; lub z niewłaściwego parametrami, może być nieprawidłowe działanie lub czymś szkodliwe. Należy należy pamiętać o tych przypadkach i podjąć działania w celu ochrony metody.  
   
  W niektórych przypadkach może być konieczne do ograniczania metody, które nie są przeznaczone do użytku publicznego, ale nadal muszą być publiczne. Na przykład może być interfejsem, który musi być wywoływany we własnych bibliotek DLL i dlatego musi być publiczna, ale nie chcesz udostępnić je publicznie, aby pozwolić użytkownikom korzystanie z niego lub uniemożliwić wykorzystanie punkt wejścia do składnika przez złośliwy kod. Kolejnym powodem wspólne do ograniczania metody nie jest przeznaczona do użytku publicznego (ale, muszą być publiczne) jest, aby uniknąć konieczności dokumentów i obsługi, co może być bardzo wewnętrznej.  
   
@@ -240,5 +240,5 @@ class Implemented : ICanCastToMe
   
  Należy pamiętać, że nawet wtedy, gdy kompilator języka uniemożliwia te zastąpienia z powodu błędu kompilacji, jest możliwe, że kod napisany za pomocą innych kompilatorów, aby zastąpić.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Zobacz także
+- [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)

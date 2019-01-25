@@ -1,5 +1,5 @@
 ---
-title: 'Porady: definiowanie porządku osi Z zadokowanych formantów ToolStrip'
+title: 'Instrukcje: Definiowanie porządku osi z zadokowanych formantów ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], specifying z-order
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
-ms.openlocfilehash: 34d600454a7fa63c7ba59bebded6365cd5401cb4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 170aca57a30ca89d8f7a50397ebf61cb1b0b60e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747221"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629637"
 ---
-# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Porady: definiowanie porządku osi Z zadokowanych formantów ToolStrip
+# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Instrukcje: Definiowanie porządku osi z zadokowanych formantów ToolStrip
 Położenie <xref:System.Windows.Forms.ToolStrip> kontroli poprawnie za pomocą dokowania, należy umieścić formant poprawnie w kolejności z formularza.  
   
 ## <a name="example"></a>Przykład  
@@ -40,12 +40,12 @@ Położenie <xref:System.Windows.Forms.ToolStrip> kontroli poprawnie za pomocą 
   
 -   Odwołania do zestawów System.Design System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Również se [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Również se [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.Control.ControlCollection.Add%2A>  
- <xref:System.Windows.Forms.Control.Controls%2A>  
- <xref:System.Windows.Forms.Control.Dock%2A>  
- [ToolStrip, kontrolka](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.Control.ControlCollection.Add%2A>
+- <xref:System.Windows.Forms.Control.Controls%2A>
+- <xref:System.Windows.Forms.Control.Dock%2A>
+- [ToolStrip, kontrolka](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

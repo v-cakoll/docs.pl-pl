@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 141da196869d3867a9a85087a073dbec095d5118
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2115b0be2ee2e989b10d2d1834a51efb0b7e2ebb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651789"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Klasy ogólne (Przewodnik programowania w języku C#)
 Klasy ogólne hermetyzować operacje, które nie są specyficzne dla określonego typu danych. Jest najbardziej popularnym zastosowaniem klas ogólnych kolekcji, takich jak połączonej listy, tabele zbędnych danych, stosów, kolejek, drzewa i tak dalej. Operacje, takie jak dodawanie i usuwanie elementów z kolekcji są wykonywane w zasadzie taki sam sposób niezależnie od rodzaju przechowywanych danych.  
@@ -66,10 +66,10 @@ Klasy ogólne hermetyzować operacje, które nie są specyficzne dla określoneg
   
  Klasy ogólne są niezmienne. Innymi słowy Jeśli określono parametr wejściowy `List<BaseClass>`, otrzymasz błąd kompilacji, jeśli zostanie podjęta próba zapewniają `List<DerivedClass>`.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections.Generic>  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Typy ogólne](../../../csharp/programming-guide/generics/index.md)  
-- [Zapisywanie stanu modułów wyliczających](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)  
+- <xref:System.Collections.Generic>
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Typy ogólne](../../../csharp/programming-guide/generics/index.md)
+- [Zapisywanie stanu modułów wyliczających](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)
 - [Układanki dziedziczenia część pierwsza](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

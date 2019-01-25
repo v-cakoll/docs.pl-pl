@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)'
+title: 'Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: b4131504e5c5d7f2075c72c72b98153c783000d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8120f35f866c353ae1493515bed3d216776ede23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694597"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Porady: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)
-Można utworzyć pochodnej węzeł w formularzach systemu Windows <xref:System.Windows.Forms.TreeView> formant lub pochodnego elementu w <xref:System.Windows.Forms.ListView> formantu. Tworzenie wartości pochodnych umożliwia dodanie wszystkie pola, które są wymagane, a także niestandardowe metody i konstruktory ich obsługę. Jedno użycie tej funkcji jest można dołączyć obiektu klienta do każdego drzewa węzła lub elementu listy. Przykłady w tym miejscu są dla <xref:System.Windows.Forms.TreeView> sterowania, ale same podejście może służyć do <xref:System.Windows.Forms.ListView> formantu.  
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)
+Można utworzyć pochodnej węzeł w formularzach Windows <xref:System.Windows.Forms.TreeView> formantu lub pochodny element w <xref:System.Windows.Forms.ListView> kontroli. Tworzenie wartości pochodnych umożliwia Dodaj dowolne pola, które są wymagane, a także niestandardowych metod i konstruktorów do ich obsługi. Jest jedno użycie tej funkcji można dołączyć obiektu klienta do każdego elementu węzła lub listy drzewa. Podane tutaj przykłady dotyczą <xref:System.Windows.Forms.TreeView> kontroli, ale to samo podejście pozwala <xref:System.Windows.Forms.ListView> kontroli.  
   
-### <a name="to-derive-a-tree-node"></a>Do uzyskania węzeł drzewa  
+### <a name="to-derive-a-tree-node"></a>Aby uzyskać pochodny węzeł drzewa  
   
--   Utwórz nową klasę węzeł pochodzi od <xref:System.Windows.Forms.TreeNode> klasy, która ma pole niestandardowe, aby zarejestrować ścieżkę pliku.  
+-   Utwórz nową klasę węzła pochodną <xref:System.Windows.Forms.TreeNode> klasy, która zawiera pole niestandardowe do rejestrowania ścieżki do pliku.  
   
     ```vb  
     Class myTreeNode  
@@ -70,9 +70,9 @@ Można utworzyć pochodnej węzeł w formularzach systemu Windows <xref:System.W
   
 ### <a name="to-use-a-derived-tree-node"></a>Aby użyć węzła drzewa pochodne  
   
-1.  Nowy węzeł drzewa pochodnej można użyć jako parametru do wywołania funkcji.  
+1.  Nowy węzeł drzewa pochodnej służy jako parametr do wywołania funkcji.  
   
-     W poniższym przykładzie ścieżka zestawu dla lokalizacji pliku tekstowego jest folder Moje dokumenty. Można to zrobić, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu. To umożliwia użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji.  
+     W poniższym przykładzie ścieżka lokalizacji pliku tekstowego jest folder Moje dokumenty. Można to zrobić, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu. Ponadto pozwala to użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji.  
   
     ```vb  
     ' You should replace the bold text file   
@@ -100,7 +100,7 @@ Można utworzyć pochodnej węzeł w formularzach systemu Windows <xref:System.W
        "\\TextFile.txt")));  
     ```  
   
-2.  Jeśli węzeł drzewa są przekazywane i jest wpisana jako <xref:System.Windows.Forms.TreeNode> klasy, musisz wykonać rzutowanie do klasy pochodnej. Rzutowanie jest jawnej konwersji typu obiektu do innego. Aby uzyskać więcej informacji na rzutowanie, zobacz [Konwersje jawne i niejawne](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [(Operator)](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual C#), lub [Operator rzutowania: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).  
+2.  Jeśli są przekazywane węzła drzewa, a ma <xref:System.Windows.Forms.TreeNode> klasy, musisz wykonać rzutowanie do klasy pochodnej. Rzutowanie jest jawna konwersja z jednego typu obiektu do drugiego. Aby uzyskać więcej informacji na temat rzutowania, zobacz [Konwersje jawne i niejawne](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [— Operator ()](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual C#), lub [Operator rzutowania: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) .  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -130,6 +130,6 @@ Można utworzyć pochodnej węzeł w formularzach systemu Windows <xref:System.W
        }  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [TreeView, kontrolka](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [Kontrolka ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- [TreeView, kontrolka](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [Kontrolka ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

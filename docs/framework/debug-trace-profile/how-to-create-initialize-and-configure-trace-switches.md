@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: tworzenie, inicjowanie i konfigurowanie przełączników śledzenia'
+title: 'Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739618"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Instrukcje: tworzenie, inicjowanie i konfigurowanie przełączników śledzenia
-Przełączniki śledzenia umożliwiają włączać, wyłączać i Filtruj dane wyjściowe śledzenia.  
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia
+Przełączniki śledzenia umożliwiają włączać, wyłączać i filtrować dane wyjściowe śledzenia.  
   
 <a name="create"></a>   
-## <a name="creating-and-initializing-a-trace-switch"></a>Tworzenie i Inicjowanie przełącznika śledzenia  
- Aby można było używać przełączników śledzenia, najpierw musisz je utworzyć i umieść je w kodzie. Istnieją dwie klasy wstępnie zdefiniowane, z których można utworzyć obiektów przełącznika: <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> klasy i <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> klasy. Należy użyć <xref:System.Diagnostics.BooleanSwitch> Jeśli interesujących Cię tylko czy pojawi się komunikat śledzenia; użyj <xref:System.Diagnostics.TraceSwitch> Aby rozróżnić poziomy śledzenia. Jeśli używasz <xref:System.Diagnostics.TraceSwitch>, można zdefiniować debugowania wiadomości i skojarzyć je z poziomów śledzenia różne. Można używać obu typów przełączników z śledzenia i debugowania. Domyślnie <xref:System.Diagnostics.BooleanSwitch> jest wyłączona i <xref:System.Diagnostics.TraceSwitch> jest ustawiony poziom <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>. Przełączniki śledzenia można tworzyć i umieszczane w dowolnej części swój kod, który może używać ich.  
+## <a name="creating-and-initializing-a-trace-switch"></a>Tworzenie i Inicjowanie przełącznikiem śledzenia  
+ Aby można było używać przełączników śledzenia, należy najpierw utworzyć je i umieścić je w kodzie. Istnieją dwie klasy wstępnie zdefiniowanych, z których możesz tworzyć obiekty przełącznika: <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> klasy i <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> klasy. Należy użyć <xref:System.Diagnostics.BooleanSwitch> interesujące Cię tylko czy pojawi się komunikat śledzenia; należy użyć <xref:System.Diagnostics.TraceSwitch> Aby rozróżnić poziomy śledzenia. Jeśli używasz <xref:System.Diagnostics.TraceSwitch>, można zdefiniować własne komunikatów debugowania i skojarzyć je z różnymi poziomami śledzenia. Można użyć obu rodzajów przełączników przy użyciu śledzenia i debugowania. Domyślnie <xref:System.Diagnostics.BooleanSwitch> jest wyłączona i <xref:System.Diagnostics.TraceSwitch> jest ustawiona na poziomie <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>. Przełączniki śledzenia można tworzyć i umieszczane w dowolnej części swój kod, który może ich używać.  
   
- Mimo że można ustawić poziomy śledzenia i inne opcje konfiguracji w kodzie, zalecane jest użycie pliku konfiguracji do zarządzania stanem przełączników. Jest to spowodowane zarządzania konfiguracją przełączników w systemie konfiguracji zapewnia większą elastyczność — można włączać i wyłączać różnych przełączników i zmienianie poziomów bez konieczności ponownego kompilowania aplikacji.  
+ Mimo że w kodzie, można ustawić poziomu śledzenia i inne opcje konfiguracji, zaleca się użyć pliku konfiguracji do zarządzania stanem przełączników. Jest to spowodowane zarządzania konfiguracją przełączników w systemie konfiguracji zapewnia większą elastyczność — można włączać i wyłączać różnych przełączników i zmieniać poziomy bez konieczności ponownego kompilowania aplikacji.  
   
-#### <a name="to-create-and-initialize-a-trace-switch"></a>Aby utworzyć i zainicjować przełącznika śledzenia  
+#### <a name="to-create-and-initialize-a-trace-switch"></a>Aby utworzyć i zainicjować przełącznikiem śledzenia  
   
-1.  Zdefiniuj przełącznikiem jako dowolnego typu <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> lub typ <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> i ustaw nazwę i opis przełącznika.  
+1.  Przełącznik jest definiowana jako dowolnego typu <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> lub typ <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> i ustaw nazwę i opis przełącznika.  
   
-2.  Skonfiguruj przełącznik śledzenia. Aby uzyskać więcej informacji, zobacz [Konfigurowanie przełączników śledzenia](#configure).  
+2.  Skonfiguruj na przełączniku śledzenia. Aby uzyskać więcej informacji, zobacz [Konfigurowanie przełączników śledzenia](#configure).  
   
-     Poniższy kod tworzy dwa przełączniki, jeden z każdego typu.  
+     Poniższy kod tworzy dwa przełączniki, jeden dla każdego typu.  
   
     ```vb  
     Dim dataSwitch As New BooleanSwitch("Data", "DataAccess module")  
@@ -52,43 +52,43 @@ Przełączniki śledzenia umożliwiają włączać, wyłączać i Filtruj dane w
   
 <a name="configure"></a>   
 ## <a name="configuring-trace-switches"></a>Konfigurowanie przełączników śledzenia  
- Po aplikacji został rozesłany, nadal można włączyć lub wyłączyć dane wyjściowe śledzenia przez skonfigurowanie przełączników śledzenia w aplikacji. Konfigurowanie przełącznikiem oznacza, że zmiany jego wartość z zewnętrznego źródła po została zainicjowana. Można zmienić wartości obiektu przełącznika, przy użyciu pliku konfiguracji. Skonfiguruj przełącznika śledzenia, aby ją włączyć lub wyłączyć, lub jego poziom określania wielkości i typ wiadomości przekazuje do odbiorników.  
+ Po aplikacji został rozesłany, nadal można włączyć lub wyłączyć dane wyjściowe śledzenia przez skonfigurowanie przełączników śledzenia w aplikacji. Konfigurowanie przełącznika oznacza, zmieniając jego wartość z zewnętrznego źródła, po jego zainicjowaniu. Można zmienić wartości obiektów przełącznika, przy użyciu pliku konfiguracji. Skonfiguruj przełącznikiem śledzenia, aby go włączyć i wyłączyć lub ustawić jego poziom Określanie wielkość i typ wiadomości przekazywane wraz z do odbiorników.  
   
- Przełączniki są skonfigurowane przy użyciu pliku Config. Dla aplikacji sieci Web jest to plik Web.config skojarzony z projektem. W aplikacji systemu Windows, ten plik ma nazwę (nazwa aplikacji). exe.config. We wdrożonej aplikacji ten plik musi znajdować się w tym samym folderze co plik wykonywalny.  
+ Przełączniki są skonfigurowane przy użyciu pliku Config. Dla aplikacji sieci Web jest skojarzony z projektem pliku Web.config. W aplikacji Windows, ten plik ma nazwę (nazwa aplikacji). exe.config. We wdrożonej aplikacji ten plik musi znajdować się w tym samym folderze co plik wykonywalny.  
   
- Podczas aplikacji kod, który tworzy wystąpienie przełącznika po raz pierwszy, sprawdza plik konfiguracji poziom śledzenia informacji o nazwanych przełącznika. Śledzenie system sprawdza pliku konfiguracji tylko raz dla dowolnego określonego przełącznika — aplikacja tworzy przełącznika po raz pierwszy.  
+ Gdy aplikacja wykonuje kod, który tworzy wystąpienie przełącznika po raz pierwszy, sprawdza plik konfiguracyjny dla poziomu śledzenia informacji o przełącznikiem o nazwie. System śledzenia sprawdza plik konfiguracyjny tylko raz dla dowolnego określonego przełącznika — aplikacja tworzy przełącznik po raz pierwszy.  
   
- We wdrożonej aplikacji możesz włączyć kod śledzenia za ponownej konfiguracji przełącznika obiektów, kiedy aplikacja nie jest uruchomiona. Zazwyczaj wiąże się to Włączanie obiektami przełącznika i wyłączyć lub zmieniając poziomy śledzenia, a następnie ponowne uruchomienie aplikacji.  
+ Ponowne skonfigurowanie obiektami przełącznika, gdy aplikacja nie jest uruchomiona, we wdrożonej aplikacji włączyć kod śledzenia. Zazwyczaj ten proces obejmuje Włączanie obiektami przełącznika i wyłączyć lub zmieniając poziomy śledzenia, a następnie ponownie uruchomić aplikację.  
   
- Podczas tworzenia wystąpienia przełącznika można również zainicjować go przez określenie dwa argumenty: *displayName* argumentu i *opis* argumentu. *DisplayName* argument zestawów konstruktora <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> właściwość <xref:System.Diagnostics.Switch> wystąpienie klasy. *DisplayName* to nazwa, która jest używana do konfigurowania przełącznika w pliku .config i *opis* argument powinien zwrócić krótki opis przełączników i jakie komunikaty kontrolki.  
+ Podczas tworzenia wystąpienia przełącznika również jej inicjalizację, określając dwa argumenty: *displayName* argumentu i *opis* argumentu. *DisplayName* argument zestawy Konstruktor <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> właściwość <xref:System.Diagnostics.Switch> wystąpienia klasy. *DisplayName* jest nazwa, która służy do konfigurowania przełącznika w pliku config i *opis* argument powinien zwrócić krótki opis przełącznika i jakie komunikaty kontrolki.  
   
- Oprócz określenia nazwy przełącznika można skonfigurować, należy określić wartość dla tego przełącznika. Ta wartość jest liczbą całkowitą. Dla <xref:System.Diagnostics.BooleanSwitch>, wartość 0 odpowiada **poza**, i odpowiada dowolną wartość niezerową **na**. Dla <xref:System.Diagnostics.TraceSwitch>0,1,2,3 i 4 odpowiada **poza**, **błąd**, **ostrzeżenie**, **informacji**, i **pełne**odpowiednio. Wszystkie liczby większe niż 4 jest traktowany jako **pełne**oraz numer mniej niż zero jest traktowany jako **poza**.  
+ Oprócz określenia nazwy przełącznika w celu skonfigurowania, należy także określić wartość dla przełącznika. Ta wartość jest liczbą całkowitą. Dla <xref:System.Diagnostics.BooleanSwitch>, wartości 0 odpowiada **poza**, i odpowiada dowolną wartość różną od zera **na**. Dla <xref:System.Diagnostics.TraceSwitch>0,1,2,3 oraz 4 odpowiadają **poza**, **błąd**, **ostrzeżenie**, **informacje**, i **pełne**, odpowiednio. Wszystkie liczby większe niż 4 jest traktowany jako **pełne**oraz numer mniej niż zero jest traktowany jako **poza**.  
   
 > [!NOTE]
->  W programie .NET Framework w wersji 2.0 tekst można użyć do określenia wartości dla przełącznika. Na przykład `true` dla <xref:System.Diagnostics.BooleanSwitch> lub tekst reprezentujący wartości wyliczenia, takich jak `Error` dla <xref:System.Diagnostics.TraceSwitch>. Wiersz `<add name="myTraceSwitch" value="Error" />` jest odpowiednikiem `<add name="myTraceSwitch" value="1" />`.  
+>  W .NET Framework w wersji 2.0 można użyć tekstu, aby określić wartość dla przełącznika. Na przykład `true` dla <xref:System.Diagnostics.BooleanSwitch> lub tekstu, takie jak reprezentujących wartości wyliczenia `Error` dla <xref:System.Diagnostics.TraceSwitch>. Wiersz `<add name="myTraceSwitch" value="Error" />` jest odpowiednikiem `<add name="myTraceSwitch" value="1" />`.  
   
- Aby użytkownicy końcowi mogli Konfigurowanie przełączników śledzenia aplikacji musisz podać szczegółowa dokumentacja na temat parametrów w aplikacji. Należy szczegółowo, które przełączniki kontroli co oraz jak je włączyć i wyłączyć. Należy również podać użytkownikowi końcowemu z pliku .config, który ma odpowiednie pomocy w komentarzach.  
+ Aby użytkownicy końcowi mogli Konfigurowanie przełączników śledzenia aplikacji musisz podać szczegółową dokumentację na temat parametrów w aplikacji. Należy szczegółowo, które przełączniki kontrolować, co oraz sposób ich włączać i wyłączać. Należy również podać użytkownikowi końcowemu przy użyciu pliku .config zawierającej odpowiednią pomoc w komentarzach.  
   
 #### <a name="to-configure-trace-switches"></a>Aby skonfigurować przełączniki śledzenia  
   
-1.  Aby można było używać przełączników śledzenia, najpierw musisz je utworzyć i umieść je w kodzie, zgodnie z opisem w sekcji [tworzenie i Inicjowanie przełącznika śledzenia](#create).  
+1.  Aby można było używać przełączników śledzenia, najpierw należy je utworzyć i umieść je w swoim kodzie, zgodnie z opisem w sekcji [tworzenie i Inicjowanie przełącznikiem śledzenia](#create).  
   
-2.  Jeśli projekt zawiera plik konfiguracji (app.config lub Web.config), następnie z **projektu** menu, wybierz opcję **Dodaj nowy element**.  
+2.  Jeśli projekt nie zawiera pliku konfiguracji (app.config lub Web.config), następnie z **projektu** menu, wybierz opcję **Dodaj nowy element**.  
   
-    -   **Visual Basic:** w **Dodaj nowy element** oknie dialogowym wybierz **pliku konfiguracji aplikacji**.  
+    -   **Visual Basic:** W **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
   
-         Plik konfiguracji aplikacji jest utworzony i otwarty. To jest dokument XML, którego element główny jest `<configuration>.`  
+         Plik konfiguracji aplikacji zostanie utworzony i otwarty. To jest którego element główny dokumentu XML `<configuration>.`  
   
-    -   **Visual C#:** w **Dodaj nowy element** oknie dialogowym wybierz **pliku XML**. Nazwij ten plik **app.config**. W edytorze XML po deklaracji XML, Dodaj następujący kod XML:  
+    -   **Wizualne C#:** W **Dodaj nowy element** okna dialogowego wybierz **pliku XML**. Nazwij ten plik **app.config**. W edytorze XML, po deklaracji XML, Dodaj następujący kod XML:  
   
         ```xml  
         <configuration>  
         </configuration>  
         ```  
   
-         Podczas kompilowania projektu pliku app.config jest kopiowany do folderu wyjściowego projektu i zostanie zmieniona nazwa *applicationname*. exe.config.  
+         Podczas kompilowania projektu pliku app.config jest kopiowany do folderu wyjściowego projektu i została zmieniona *applicationname*. exe.config.  
   
-3.  Po `<configuration>` tagów, ale przed wysłaniem `</configuration>` tagów, Dodaj odpowiednie XML do skonfigurowania przełączników. W poniższych przykładach pokazano **BooleanSwitch** z **DisplayName** właściwość `DataMessageSwitch` i **TraceSwitch** z **Nazwa wyświetlana**  właściwość `TraceLevelSwitch`.  
+3.  Po `<configuration>` tagu, ale przed `</configuration>` tag, Dodaj odpowiedni kod XML do skonfigurowania przełączników. W poniższych przykładach pokazano **BooleanSwitch** z **DisplayName** właściwość `DataMessageSwitch` i **TraceSwitch** z **DisplayName**  właściwość `TraceLevelSwitch`.  
   
     ```xml  
     <system.diagnostics>  
@@ -99,15 +99,15 @@ Przełączniki śledzenia umożliwiają włączać, wyłączać i Filtruj dane w
     </system.diagnostics>  
     ```  
   
-     W tej konfiguracji obu przełączniki są wyłączone.  
+     W tej konfiguracji oba przełączniki są wyłączone.  
   
-4.  Jeśli konieczne jest włączenie **BooleanSwitch**, takich jak `DataMessagesSwitch` pokazano w poprzednim przykładzie, zmień **wartość** do dowolnej liczby całkowitej niż 0.  
+4.  Jeśli konieczne jest włączenie **BooleanSwitch**, takich jak `DataMessagesSwitch` pokazano w poprzednim przykładzie, zmień **wartość** do dowolnej liczby całkowitej, innym niż 0.  
   
-5.  Jeśli konieczne jest włączenie **TraceSwitch**, takich jak `TraceLevelSwitch` pokazano w poprzednim przykładzie, zmień **wartość** odpowiednich ustawień poziomu (od 1 do 4).  
+5.  Jeśli konieczne jest włączenie **TraceSwitch**, takich jak `TraceLevelSwitch` pokazano w poprzednim przykładzie, zmień **wartość** odpowiednie ustawienie poziomie (od 1 do 4).  
   
-6.  Dodawanie komentarzy do pliku .config, aby użytkownik końcowy miał przejrzysty jakie wartości, aby zmienić odpowiednio skonfigurować przełączników.  
+6.  Aby użytkownik końcowy miał świadomość, jakich wartości można zmienić na odpowiednio skonfigurować przełączniki, dodać komentarze do pliku Config.  
   
-     W poniższym przykładzie pokazano, jak może wyglądać końcowego kodu, w tym komentarzy:  
+     Poniższy przykład pokazuje, jak może wyglądać końcowego kodu, w tym komentarzy:  
   
     ```xml  
     <system.diagnostics>  
@@ -125,8 +125,8 @@ Przełączniki śledzenia umożliwiają włączać, wyłączać i Filtruj dane w
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [Przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [Schemat ustawień śledzenia i debugowania](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Schemat ustawień śledzenia i debugowania](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

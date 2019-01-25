@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: wywoływanie Windows API (Visual Basic)'
+title: 'Przewodnik: Wywoływanie Windows API (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DLLs, calling
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: bb98d842bfe65bdf637a789fc9a8319a70cb2bc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657977"
 ---
-# <a name="walkthrough-calling-windows-apis-visual-basic"></a>Wskazówki: wywoływanie Windows API (Visual Basic)
+# <a name="walkthrough-calling-windows-apis-visual-basic"></a>Przewodnik: Wywoływanie Windows API (Visual Basic)
 Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są częścią systemu operacyjnego Windows. Użyj ich do wykonywania zadań, gdy jest trudne do pisania procedur równoważne własne. Na przykład Windows zapewnia funkcję o nazwie `FlashWindowEx` gwarantowaną na pasku tytułu aplikacji alternatywne między poszczególnymi jasny i ciemny.  
   
  Zaletą korzystania z Windows API w kodzie jest, aby mogli oszczędzać czas projektowania, ponieważ zawierają one wielu przydatnych funkcji, które zostały już napisane i długiego czasu oczekiwania ma być używany. Wadą jest to, że interfejsy API Windows może być trudne do pracy z i unforgiving, gdy coś pójdzie źle.  
@@ -147,12 +147,12 @@ Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są
   
 12. Kliknij przycisk **Button2**. Jeśli można przenieść pliku, jest wyświetlany komunikat "plik przeniesiono pomyślnie".  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
- [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Tworzenie prototypów w kodzie zarządzanym](../../../framework/interop/creating-prototypes-in-managed-code.md)  
- [Marshaling delegata jako metoda wywołania zwrotnego](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
+- [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Tworzenie prototypów w kodzie zarządzanym](../../../framework/interop/creating-prototypes-in-managed-code.md)
+- [Marshaling delegata jako metoda wywołania zwrotnego](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

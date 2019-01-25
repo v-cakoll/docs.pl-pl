@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 1d81ce148e237df6997934f70c294630f6cc7b8d
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 846dc49f15f48e5f7f68171e0f937678751c796b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648667"
 ---
 # <a name="class-statement-visual-basic"></a>Class — Instrukcja (Visual Basic)
 Deklaruje nazwę klasy i wprowadza definicje zmiennych, właściwości, zdarzeń i procedur, które obejmuje ta klasa.  
@@ -107,12 +107,12 @@ End Class
   
  [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/class-statement_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Struktury i klasy](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Instrukcja Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Instrukcja Module](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Okres istnienia obiektów: w jaki sposób obiekty są tworzone i niszczone](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Instrukcje: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+## <a name="see-also"></a>Zobacz także
+- [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Struktury i klasy](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [Instrukcja Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Instrukcja Module](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Okres istnienia obiektów: Jak obiekty są tworzone i niszczone](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Instrukcje: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)

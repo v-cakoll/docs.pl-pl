@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wyznaczanie przycisku formularzy systemu Windows na przycisk Akceptuj'
+title: 'Instrukcje: Wyznaczanie przycisku Windows Forms na przycisk Akceptuj'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
-ms.openlocfilehash: a69964b83e9948a844483725616a150234a38c97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e35dbc2b66f743f5af3c405228439268590e1a5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660206"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>Porady: wyznaczanie przycisku formularzy systemu Windows na przycisk Akceptuj
-Na każdym formularzy systemu Windows, możesz wyznaczyć <xref:System.Windows.Forms.Button> formantu na przycisk Akceptuj, znanej także jako przycisk domyślny. Przy każdym naciśnięciu klawisza ENTER zostanie kliknięty przycisk domyślny, niezależnie od tego, który inny formant w formularzu ma fokus.  
+# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>Instrukcje: Wyznaczanie przycisku Windows Forms na przycisk Akceptuj
+W każdym formularzu Windows, można wyznaczyć <xref:System.Windows.Forms.Button> formantu na przycisk Akceptuj, znany także jako przycisk domyślny. Zawsze wtedy, gdy użytkownik naciśnie klawisz ENTER, jest kliknięty przycisk domyślny, niezależnie od tego, którego fokus ma inne kontrolki na formularzu.  
   
 > [!NOTE]
->  Wyjątki, aby się to, gdy formant fokus jest inny przycisk — w takim przypadku zostanie kliknięty przycisk z fokusem — lub wielowierszowego pola tekstowego lub kontrolki niestandardowej, która traps klawisz ENTER.  
+>  Wyjątki, aby się to w przypadku kontrolki z fokusem inny przycisk — w takim przypadku zostanie kliknięty przycisk z fokusem — lub wielowierszowego pola tekstowego lub formant niestandardowy, który traps klawisz ENTER.  
   
 ### <a name="to-designate-the-accept-button"></a>Aby wyznaczyć na przycisk Akceptuj  
   
-1.  Ustaw formularza <xref:System.Windows.Forms.Form.AcceptButton%2A> właściwości do odpowiedniego <xref:System.Windows.Forms.Button> formantu.  
+1.  Ustaw dla formularza <xref:System.Windows.Forms.Form.AcceptButton%2A> właściwości do odpowiednich <xref:System.Windows.Forms.Button> kontroli.  
   
     ```vb  
     Private Sub SetDefault(ByVal myDefaultBtn As Button)  
@@ -49,10 +49,10 @@ Na każdym formularzy systemu Windows, możesz wyznaczyć <xref:System.Windows.F
        }  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.Form.AcceptButton%2A>  
- [Button, kontrolka — omówienie](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [Sposoby wyboru kontrolki przycisku Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [Instrukcje: odpowiadanie na kliknięcia przycisków Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [Instrukcje: wyznaczanie przycisku Windows Forms na przycisk Anuluj](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
- [Button, kontrolka](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.Form.AcceptButton%2A>
+- [Button, kontrolka — omówienie](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
+- [Sposoby wyboru kontrolki przycisku Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
+- [Instrukcje: Odpowiadanie na kliknięcia przycisków formularzy Windows](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [Instrukcje: Wyznaczanie przycisku Windows Forms na przycisk Anuluj](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
+- [Button, kontrolka](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

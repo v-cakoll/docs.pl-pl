@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3085812f2467c1e73d94335530441d6bb12db6af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47234682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613808"
 ---
 # <a name="generic-interfaces"></a>Interfejsy ogólne
 Ten temat zawiera omówienie ogólnych interfejsów, które udostępniają funkcje wspólne dla rodziny typów ogólnych.  
@@ -44,9 +44,9 @@ Ten temat zawiera omówienie ogólnych interfejsów, które udostępniają funkc
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections.Generic?displayProperty=nameWithType>  
-- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
-- [Typy ogólne](../../../docs/standard/generics/index.md)  
-- [Kolekcje ogólne w oprogramowaniu .NET Framework](../../../docs/standard/generics/collections.md)  
-- [Delegaci ogólni do manipulowania tablicami i listami](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- <xref:System.Collections.Generic?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
+- [Typy ogólne](../../../docs/standard/generics/index.md)
+- [Kolekcje ogólne w oprogramowaniu .NET Framework](../../../docs/standard/generics/collections.md)
+- [Delegaci ogólni do manipulowania tablicami i listami](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
 - [Kowariancja i kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md)

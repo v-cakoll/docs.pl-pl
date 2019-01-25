@@ -2,12 +2,12 @@
 title: Protokół PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9f1850ff3a42526de988df032c39aaa916987d25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662664"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protokół PNRP
 W środowiskach peer-to-peer elementów równorzędnych użyć systemy rozpoznawania nazw określonych w ustalaniu siebie nawzajem lokalizacje sieciowe (adresy, protokoły i porty) na podstawie nazw lub innych typów identyfikatorów. W przeszłości rozpoznawania nazw równorzędnych ma zostały skomplikowane natury przejściowy łączność, a także innych braków w ramach systemu nazw domen (DNS).  
@@ -28,7 +28,7 @@ Peer Name Resolution Protocol pokazuje następujące właściwości:
   
 -   Rozpoznawanie nazw za pośrednictwem protokołu PNRP wykracza poza komputerów, umożliwiając również rozpoznawania nazw dla usług.  
   
-## <a name="the-systemnetpeertopeer-namespace"></a>Przestrzeń nazw System.Net.PeerToPeer  
+## <a name="the-systemnetpeertopeer-namespace"></a>The System.Net.PeerToPeer namespace  
   
 -   Funkcje PNRP jest definiowany przez <xref:System.Net.PeerToPeer> przestrzeni nazw w ramach platformy .NET Framework w wersji 3.5. Zapewnia ona zestaw typów, które może służyć do rejestrowania i rozpoznawania nazw równorzędnych za pomocą usługi dostępne PNRP.  
   
@@ -46,8 +46,8 @@ Peer Name Resolution Protocol pokazuje następujące właściwości:
   
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>: Definiuje proces rozpoznawania nazw równorzędnych do swojej sieci punkty końcowe:, w tym synchroniczne i asynchroniczne metody dla rozpoznawania.  
   
-## <a name="see-also"></a>Zobacz także  
-- <xref:System.ServiceModel.PeerResolvers>  
-- <xref:System.Net.PeerToPeer>  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.PeerResolvers>
+- <xref:System.Net.PeerToPeer>
 - [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Przykład technologii PeerToPeer](https://go.microsoft.com/fwlink/?LinkID=179571)

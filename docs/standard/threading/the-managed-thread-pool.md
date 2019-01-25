@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7721ffaebfefadee332c923d867e68204b5205f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f921f40bbc5a7b72341c3fb778dd69fcc7b918c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665269"
 ---
 # <a name="the-managed-thread-pool"></a>Zarządzana Pula wątków
 
@@ -87,12 +87,12 @@ Istnieje kilka scenariuszy, w których jest odpowiedni do tworzenia i zarządzan
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
-- [Biblioteka zadań równoległych (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
-- [Instrukcje: zwracanie wartości z zadania](../parallel-programming/how-to-return-a-value-from-a-task.md)  
-- [Wątkowość obiektów i funkcji](threading-objects-and-features.md)  
-- [Wątki i wątkowość](threads-and-threading.md)  
-- [Asynchroniczne operacje We/Wy pliku](../io/asynchronous-file-i-o.md)  
-- [Czasomierze](timers.md)  
+- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
+- [Biblioteka zadań równoległych (TPL)](../parallel-programming/task-parallel-library-tpl.md)
+- [Instrukcje: Zwracanie wartości z zadania](../parallel-programming/how-to-return-a-value-from-a-task.md)
+- [Wątkowość obiektów i funkcji](threading-objects-and-features.md)
+- [Wątki i wątkowość](threads-and-threading.md)
+- [Asynchroniczne operacje We/Wy pliku](../io/asynchronous-file-i-o.md)
+- [Czasomierze](timers.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: d15765b7673f321d4362ceea0adb73959a7e7726
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 17042f60eb27c41640ef5d8c927c7acc5bc73183
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712629"
 ---
 # <a name="myforms-object"></a>My.Forms — Obiekt
 Udostępnia właściwości do uzyskiwania dostępu do wystąpienia każdego formularza Windows zadeklarowana w bieżącym projekcie.  
@@ -66,11 +66,11 @@ Udostępnia właściwości do uzyskiwania dostępu do wystąpienia każdego form
 |Usługa systemu Windows|Nie|  
 |Witryna sieci Web|Nie|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Form.Close%2A>  
- [Obiekty](../../../visual-basic/language-reference/objects/index.md)  
- [Is, operator](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot, operator](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Uzyskiwanie dostępu do formularzy aplikacji](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Form.Close%2A>
+- [Obiekty](../../../visual-basic/language-reference/objects/index.md)
+- [Is, operator](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot, operator](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Uzyskiwanie dostępu do formularzy aplikacji](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

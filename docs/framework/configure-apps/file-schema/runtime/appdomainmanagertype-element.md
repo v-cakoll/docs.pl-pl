@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e7f37fd652ce98e24d2e2e99edcd3d59a0e597b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b5ce973abc92080ec24fe909948f03f58eb05dec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679087"
 ---
 # <a name="ltappdomainmanagertypegt-element"></a>&lt;appdomainmanagertype —&gt; — Element
 Określa typ, który służy jako Menedżer domeny aplikacji dla domyślnej domeny aplikacji.  
   
  \<Konfiguracja >  
 \<runtime>  
-\<appdomainmanagertype — >  
+\<appDomainManagerType>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -73,10 +73,10 @@ Określa typ, który służy jako Menedżer domeny aplikacji dla domyślnej dome
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>  
-- [\<appdomainmanagerassembly — > Element](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
+- [\<appdomainmanagerassembly — > Element](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [SetAppDomainManagerType, metoda](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

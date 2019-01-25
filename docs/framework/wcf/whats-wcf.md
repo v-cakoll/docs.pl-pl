@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 5744184d224fa97e57055b5a110d830e8809647f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a2d0ef1e70c88133d5f9c3d2ffe8dafa4983cfd9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185891"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552024"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Co to jest program Windows Communication Foundation
 Windows Communication Foundation (WCF) to architektura służąca do budowania aplikacji usługowych. Przy użyciu usługi WCF, możesz wysłać danych jako asynchroniczną komunikaty z punktu końcowego z jednej usługi do innego. Punkt końcowy usługi może być częścią stale dostępnych usług hostowanych przez usługi IIS lub może być usługą hostowaną w aplikacji. Punkt końcowy może być klientem usługi, która żąda danych z punktu końcowego usługi. Komunikaty można tak proste, jak pojedynczy znak lub słowo wysłana w formacie XML, lub tak złożonego jako strumień danych binarnych. Kilka przykładowe scenariusze obejmują:
@@ -72,7 +72,7 @@ Usługi WCF zawiera następujący zestaw funkcji. Aby uzyskać więcej informacj
 
 -   **Transakcje**
 
-     Usługi WCF obsługuje również transakcji przy użyciu jednej z trzech modele transakcji: WS AtomicTtransactions, interfejsów API w <xref:System.Transactions> przestrzeni nazw i Microsoft Distributed Transaction Coordinator. Aby uzyskać więcej informacji o transakcji zobacz temat pomocy technicznej w programie WCF [transakcji](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
+     Usługi WCF obsługuje również transakcji przy użyciu jednej z trzech modele transakcji: WS AtomicTtransactions, interfejsów API w <xref:System.Transactions> przestrzeni nazw, a Microsoft Distributed Transaction Coordinator. Aby uzyskać więcej informacji o transakcji zobacz temat pomocy technicznej w programie WCF [transakcji](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
 
 -   **AJAX i pomoc techniczna REST**
 
@@ -94,7 +94,7 @@ Program Microsoft Silverlight to platforma do tworzenia międzyoperacyjnych, roz
 
 [!INCLUDE[dublin](../../../includes/dublin-md.md)] Serwera aplikacji specjalnie zaprojektowano pod kątem wdrażania i zarządzania aplikacji, które używają usługi WCF do komunikacji. [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] Zawiera zaawansowane narzędzia i opcje konfiguracji zaprojektowane specjalnie dla aplikacji obsługujących usługi WCF.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel>
 - [Podstawowe pojęcia programu Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

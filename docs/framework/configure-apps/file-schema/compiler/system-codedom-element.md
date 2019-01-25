@@ -1,5 +1,5 @@
 ---
-title: '&lt;System.CodeDom&gt; — Element'
+title: '&lt;system.codedom&gt; Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom
@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: de0b026b0e4e76b7409e873813f4700c6ced9afd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 235f3c2474acb488fecf34a64515973b45409e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649430"
 ---
-# <a name="ltsystemcodedomgt-element"></a>&lt;System.CodeDom&gt; — Element
+# <a name="ltsystemcodedomgt-element"></a>&lt;system.codedom&gt; Element
 Określa ustawienia konfiguracyjne kompilatora dla dostępnych dostawców języka.  
   
  \<Konfiguracja > Element  
-\<System.CodeDom > Element  
+\<system.codedom> Element  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,7 +42,7 @@ Określa ustawienia konfiguracyjne kompilatora dla dostępnych dostawców język
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<kompilatory >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Kontener dla elementów konfiguracji, kompilator; zawiera zero lub więcej [ \<kompilatora >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elementów.|  
+|[\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Kontener dla elementów konfiguracji, kompilator; zawiera zero lub więcej [ \<kompilatora >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elementów.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -89,9 +89,9 @@ Określa ustawienia konfiguracyjne kompilatora dla dostępnych dostawców język
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.CodeDom.Compiler.CompilerInfo>  
-- <xref:System.CodeDom.Compiler.CodeDomProvider>  
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Schemat ustawień kompilatora i dostawcy języka](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
-- [\<Kompilator > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień kompilatora i dostawcy języka](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
+- [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

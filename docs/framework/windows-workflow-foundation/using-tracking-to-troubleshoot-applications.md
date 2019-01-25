@@ -2,12 +2,12 @@
 title: Używanie śledzenia do rozwiązywania problemów z aplikacjami
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: f991533b61705c8d0a1a8e71b632dd53f24dd979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1ed95a26f682fcdb609b410251fdb3f8b647016a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734425"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Używanie śledzenia do rozwiązywania problemów z aplikacjami
 Windows Workflow Foundation (WF) umożliwia śledzenie informacji związanych z przepływu pracy, o podanie szczegółów do wykonywania aplikacji Windows Workflow Foundation lub usługi. Hosty programu Windows Workflow Foundation mają możliwość przechwytywania zdarzeń przepływu pracy podczas wykonywania wystąpienia przepływu pracy. Jeśli przepływ pracy generuje błędy lub wyjątki, można użyć programu Windows Workflow Foundation, Szczegóły śledzenia do rozwiązywania problemów z jego przetwarzania.  
@@ -51,6 +51,6 @@ Windows Workflow Foundation (WF) umożliwia śledzenie informacji związanych z 
   
  Jeśli śledzenie jest włączone, za pomocą funkcji ETW śledzenia uczestnika, zdarzenia błędów są emitowane sesji funkcji ETW. Zdarzenia można przeglądać za pomocą Podglądu zdarzeń w Podglądzie zdarzeń. Ten znajduje się w węźle **Podgląd zdarzeń -> aplikacji i usług -> Microsoft -> Windows -> aplikacje serwera aplikacji** w kanału danych analitycznych.  
   
-## <a name="see-also"></a>Zobacz też  
- [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>Zobacz także
+- [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

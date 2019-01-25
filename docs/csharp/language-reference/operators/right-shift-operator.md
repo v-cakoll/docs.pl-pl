@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '>> operator [C#]'
 - right shift operator (>>) [C#]
 ms.assetid: a07f8679-d318-4ef8-b38b-65903efb8056
-ms.openlocfilehash: 80e38d8e75b9ad573b635d544d6381950f107583
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: f7cacd740966f0716e125887568a39abf0d9e454
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725431"
 ---
 # <a name="gtgt-operator-c-reference"></a>&gt;&gt; Operator (odwołanie w C#)
 
@@ -33,7 +33,7 @@ Typy zdefiniowane przez użytkownika może doprowadzić do przeciążenia `>>` o
 
 [!code-csharp[csRefOperators#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#26)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)

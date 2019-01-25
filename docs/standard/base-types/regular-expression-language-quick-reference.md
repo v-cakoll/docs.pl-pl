@@ -105,15 +105,15 @@ ms.locfileid: "55204889"
   
 <a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Konstrukty grupujące  
- Konstrukcje grupujące wyznaczają podwyrażenia wyrażeń regularnych i często przechwytywane podciągi ciągu wejściowego. Konstrukcje grupowania obejmują elementy języka wymienione w poniższej tabeli. Aby uzyskać więcej informacji, zobacz [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
+ Konstrukcje grupujące wyznaczają podwyrażenia wyrażeń regularnych i często przechwytywane podciągi ciągu wejściowego. Konstrukcje grupowania obejmują elementy języka wymienione w poniższej tabeli. Aby uzyskać więcej informacji, zobacz [Konstrukty grupujące](grouping-constructs-in-regular-expressions.md).  
   
 |Konstrukcja grupująca|Opis|Wzorzec|Dopasowania|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *Podwyrażenie* `)`|Przechwytuje dopasowane podwyrażenia i przypisuje mu liczbę porządkową (liczone od zera).|`(\w)\1`|„ee” w ciągu „deep”|  
 |`(?<` *Nazwa* `>` *Podwyrażenie* `)`|Przechwytuje dopasowane podwyrażenie do nazwanej grupy.|`(?<double>\w)\k<double>`|„ee” w ciągu „deep”|  
-|`(?<` *name1* `-` *name2* `>` *subexpression* `)`|Określa definicję grupy równoważącej. Aby uzyskać więcej informacji, zobacz sekcję "Definicja grupy równoważącej" w [Grouping Constructs](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" w "3+2^((1-3)\*(3-1))"|  
+|`(?<` *name1* `-` *name2* `>` *subexpression* `)`|Określa definicję grupy równoważącej. Aby uzyskać więcej informacji, zobacz sekcję "Definicja grupy równoważącej" w [Konstrukty grupujące](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" w "3+2^((1-3)\*(3-1))"|  
 |`(?:` *Podwyrażenie* `)`|Definiuje nieprzechwytywaną grupę.|`Write(?:Line)?`|„WriteLine” w ciągu „Console.WriteLine()”<br /><br /> „Write” w ciągu „Console.Write(value)”|  
-|`(?imnsx-imnsx:` *Podwyrażenie* `)`|Stosuje lub wyłącza określone opcje w *Podwyrażenie*. Aby uzyskać więcej informacji, zobacz [Regular Expression Options](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|„A12xl”, „A12XL” w ciągu „A12xl A12XL a12xl”|  
+|`(?imnsx-imnsx:` *Podwyrażenie* `)`|Stosuje lub wyłącza określone opcje w *Podwyrażenie*. Aby uzyskać więcej informacji, zobacz [Opcje wyrażeń regularnych](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|„A12xl”, „A12XL” w ciągu „A12xl A12XL a12xl”|  
 |`(?=` *Podwyrażenie* `)`|Pozytywna asercja wyprzedzająca o zerowej szerokości.|`\w+(?=\.)`|„is”, „ran” i „out” w ciągu „He is. The dog ran. The sun is out.”|  
 |`(?!` *Podwyrażenie* `)`|Negatywna asercja wyprzedzająca o zerowej szerokości.|`\b(?!un)\w+\b`|„sure”, „used” w ciągu „unsure sure unity used”|  
 |`(?<=` *Podwyrażenie* `)`|Pozytywna asercja wsteczna o zerowej szerokości.|`(?<=19)\d{2}\b`|„99”, „50”, „05” w ciągu „1851 1999 1950 1905 2003”|  
@@ -185,7 +185,7 @@ ms.locfileid: "55204889"
   
 <a name="options"></a>   
 ## <a name="regular-expression-options"></a>Opcje wyrażeń regularnych  
- Można określić opcje sterujące sposobem, w jaki aparat wyrażeń regularnych interpretuje wzorzec wyrażenia regularnego. Wiele z tych opcji można określić jako wbudowane (we wzorcu wyrażenia regularnego) lub jako jedną lub więcej <xref:System.Text.RegularExpressions.RegexOptions> stałe. W tym krótkim opisie wymieniono tylko opcje określane w tekście. Aby uzyskać więcej informacji dotyczących wbudowania i <xref:System.Text.RegularExpressions.RegexOptions> opcji, zapoznaj się z artykułem [Regular Expression Options](regular-expression-options.md).  
+ Można określić opcje sterujące sposobem, w jaki aparat wyrażeń regularnych interpretuje wzorzec wyrażenia regularnego. Wiele z tych opcji można określić jako wbudowane (we wzorcu wyrażenia regularnego) lub jako jedną lub więcej <xref:System.Text.RegularExpressions.RegexOptions> stałe. W tym krótkim opisie wymieniono tylko opcje określane w tekście. Aby uzyskać więcej informacji dotyczących wbudowania i <xref:System.Text.RegularExpressions.RegexOptions> opcji, zapoznaj się z artykułem [Opcje wyrażeń regularnych](regular-expression-options.md).  
   
  Opcję określaną w tekście można określić na dwa sposoby:  
   
@@ -198,9 +198,9 @@ ms.locfileid: "55204889"
 |Opcja|Opis|Wzorzec|Dopasowania|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Używa dopasowywania bez uwzględniania wielkości liter.|`\b(?i)a(?-i)a\w+\b`|„aardvark”, „aaaAuto” w ciągu „aardvark AAAuto aaaAuto Adam breakfast”|  
-|`m`|Używa trybu wielowierszowego. `^` i `$` pasuje do początku i końcu wiersza, zamiast początku i końca ciągu.|Aby uzyskać przykład, zobacz sekcję "Tryb wielowierszowy" w [Regular Expression Options](regular-expression-options.md).||  
-|`n`|Nie przechwytuje nienazwanych grup.|Aby uzyskać przykład, zobacz sekcję "Tylko jawne Przechwytywanie" w [Regular Expression Options](regular-expression-options.md).||  
-|`s`|Używa trybu jednowierszowego.|Aby uzyskać przykład, zobacz sekcję "Tryb jednowierszowy" w [Regular Expression Options](regular-expression-options.md).||  
+|`m`|Używa trybu wielowierszowego. `^` i `$` pasuje do początku i końcu wiersza, zamiast początku i końca ciągu.|Aby uzyskać przykład, zobacz sekcję "Tryb wielowierszowy" w [Opcje wyrażeń regularnych](regular-expression-options.md).||  
+|`n`|Nie przechwytuje nienazwanych grup.|Aby uzyskać przykład, zobacz sekcję "Tylko jawne Przechwytywanie" w [Opcje wyrażeń regularnych](regular-expression-options.md).||  
+|`s`|Używa trybu jednowierszowego.|Aby uzyskać przykład, zobacz sekcję "Tryb jednowierszowy" w [Opcje wyrażeń regularnych](regular-expression-options.md).||  
 |`x`|Ignoruje niepoprzedzony znakiem ucieczki znak odstępu we wzorcu wyrażenia regularnego.|`\b(?x) \d+ \s \w+`|„1 aardvark”, „2 cats” w ciągu „1 aardvark 2 cats IV centurions”|  
   
  [Powrót do początku](#top)  
@@ -211,7 +211,7 @@ ms.locfileid: "55204889"
   
 |Konstrukcja|Definicja|Przykład|  
 |---------------|----------------|-------------|  
-|`(?imnsx-imnsx)`|Ustawia lub wyłącza opcje, takie jak ignorowanie wielkości liter w środku wzorca. Aby uzyskać więcej informacji, zobacz [Regular Expression Options](regular-expression-options.md).|`\bA(?i)b\w+\b` dopasowuje ciągi "ABA", "Able" w "Stanie akt ABA"|  
+|`(?imnsx-imnsx)`|Ustawia lub wyłącza opcje, takie jak ignorowanie wielkości liter w środku wzorca. Aby uzyskać więcej informacji, zobacz [Opcje wyrażeń regularnych](regular-expression-options.md).|`\bA(?i)b\w+\b` dopasowuje ciągi "ABA", "Able" w "Stanie akt ABA"|  
 |`(?#` *Komentarz* `)`|Komentarz w tekście. Komentarz kończy się przy pierwszym nawiasie zamykającym.|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [do końca wiersza]|Komentarz trybu X. Komentarz rozpoczyna się od niekodowanego `#` i kontynuuje do końca wiersza.|`(?x)\bA\w+\b#Matches words starting with A`|  
   

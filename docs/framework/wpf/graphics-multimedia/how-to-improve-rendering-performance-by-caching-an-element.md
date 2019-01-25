@@ -1,5 +1,5 @@
 ---
-title: Jak poprawić wydajność renderowania przez zapisanie elementu w pamięci podręcznej
+title: 'Instrukcje: Poprawianie wydajności renderowania przez zapisanie elementu w pamięci podręcznej'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - rendering performance [WPF], caching an element
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - performance [WPF], caching an element
 - UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
-ms.openlocfilehash: a92909c623db0c10e3434677b4275fa82b787fa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79f427198be370d9cb48cab429906202a62bb72d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647582"
 ---
-# <a name="how-to-improve-rendering-performance-by-caching-an-element"></a><span data-ttu-id="f8f01-102">Jak poprawić wydajność renderowania przez zapisanie elementu w pamięci podręcznej</span><span class="sxs-lookup"><span data-stu-id="f8f01-102">How to: Improve Rendering Performance by Caching an Element</span></span>
-<span data-ttu-id="f8f01-103">Użyj <xref:System.Windows.Media.BitmapCache> klasę, aby poprawić wydajność renderowania złożonego <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="f8f01-103">Use the <xref:System.Windows.Media.BitmapCache> class to improve rendering performance of a complex <xref:System.Windows.UIElement>.</span></span> <span data-ttu-id="f8f01-104">W pamięci podręcznej elementu, Utwórz nowe wystąpienie klasy <xref:System.Windows.Media.BitmapCache> klasy i przypisz je do elementu <xref:System.Windows.UIElement.CacheMode%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="f8f01-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span> <span data-ttu-id="f8f01-105">Można użyć ponownie <xref:System.Windows.Media.BitmapCache> wydajnie w <xref:System.Windows.Media.BitmapCacheBrush>.</span><span class="sxs-lookup"><span data-stu-id="f8f01-105">You can reuse a <xref:System.Windows.Media.BitmapCache> efficiently in a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span>  
+# <a name="how-to-improve-rendering-performance-by-caching-an-element"></a><span data-ttu-id="ddea9-102">Instrukcje: Poprawianie wydajności renderowania przez zapisanie elementu w pamięci podręcznej</span><span class="sxs-lookup"><span data-stu-id="ddea9-102">How to: Improve Rendering Performance by Caching an Element</span></span>
+<span data-ttu-id="ddea9-103">Użyj <xref:System.Windows.Media.BitmapCache> klasy, aby zwiększyć wydajność renderowania złożony <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="ddea9-103">Use the <xref:System.Windows.Media.BitmapCache> class to improve rendering performance of a complex <xref:System.Windows.UIElement>.</span></span> <span data-ttu-id="ddea9-104">Aby element w pamięci podręcznej, należy utworzyć nowe wystąpienie klasy <xref:System.Windows.Media.BitmapCache> klasy i przypisz je do elementu <xref:System.Windows.UIElement.CacheMode%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="ddea9-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span> <span data-ttu-id="ddea9-105">Można użyć ponownie <xref:System.Windows.Media.BitmapCache> wydajnie w <xref:System.Windows.Media.BitmapCacheBrush>.</span><span class="sxs-lookup"><span data-stu-id="ddea9-105">You can reuse a <xref:System.Windows.Media.BitmapCache> efficiently in a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f8f01-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="f8f01-106">Example</span></span>  
- <span data-ttu-id="f8f01-107">Poniższy przykład kodu pokazuje, jak utworzyć złożonego elementu i pamięci podręcznej go jako mapa bitowa, co zwiększa wydajność, gdy element jest animowany.</span><span class="sxs-lookup"><span data-stu-id="f8f01-107">The following code example shows how to create a complex element and cache it as a bitmap, which improves performance when the element is animated.</span></span> <span data-ttu-id="f8f01-108">Element jest kanwy, która przechowuje mają geometrię kształt z wielu wierzchołków.</span><span class="sxs-lookup"><span data-stu-id="f8f01-108">The element is a canvas that holds shape geometries with many vertices.</span></span> <span data-ttu-id="f8f01-109">A <xref:System.Windows.Media.BitmapCache> z domyślnej wartości jest przypisany do <xref:System.Windows.UIElement.CacheMode%2A> obszaru roboczego i zawiera animacji sprawne Skalowanie pamięci podręcznej mapy bitowej.</span><span class="sxs-lookup"><span data-stu-id="f8f01-109">A <xref:System.Windows.Media.BitmapCache> with default values is assigned to the <xref:System.Windows.UIElement.CacheMode%2A> of the canvas, and an animation shows the smooth scaling of the cached bitmap.</span></span>  
+## <a name="example"></a><span data-ttu-id="ddea9-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="ddea9-106">Example</span></span>  
+ <span data-ttu-id="ddea9-107">Poniższy przykład kodu pokazuje, jak utworzyć element złożony i Buforuj go jako mapę bitową, co zwiększa wydajność, gdy element jest animowany.</span><span class="sxs-lookup"><span data-stu-id="ddea9-107">The following code example shows how to create a complex element and cache it as a bitmap, which improves performance when the element is animated.</span></span> <span data-ttu-id="ddea9-108">Element jest obszarem roboczym, który przechowuje kształt geometrii za pomocą wielu wierzchołków.</span><span class="sxs-lookup"><span data-stu-id="ddea9-108">The element is a canvas that holds shape geometries with many vertices.</span></span> <span data-ttu-id="ddea9-109">A <xref:System.Windows.Media.BitmapCache> z domyślnej wartości jest przypisane do <xref:System.Windows.UIElement.CacheMode%2A> obszaru roboczego i animacji pokazuje płynne Skalowanie pamięci podręcznej mapy bitowej.</span><span class="sxs-lookup"><span data-stu-id="ddea9-109">A <xref:System.Windows.Media.BitmapCache> with default values is assigned to the <xref:System.Windows.UIElement.CacheMode%2A> of the canvas, and an animation shows the smooth scaling of the cached bitmap.</span></span>  
   
  [!code-xaml[System.Windows.Media.BitmapCache#_BitmapCacheXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcache/cs/window1.xaml#_bitmapcachexaml)]  
   
-## <a name="see-also"></a><span data-ttu-id="f8f01-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f8f01-110">See Also</span></span>  
- <xref:System.Windows.Media.BitmapCache>  
- <xref:System.Windows.Media.BitmapCacheBrush>  
- <xref:System.Windows.UIElement.CacheMode%2A>  
- [<span data-ttu-id="f8f01-111">Instrukcje: używanie zachowanego w pamięci podręcznej elementu jako pędzla</span><span class="sxs-lookup"><span data-stu-id="f8f01-111">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)
+## <a name="see-also"></a><span data-ttu-id="ddea9-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ddea9-110">See also</span></span>
+- <xref:System.Windows.Media.BitmapCache>
+- <xref:System.Windows.Media.BitmapCacheBrush>
+- <xref:System.Windows.UIElement.CacheMode%2A>
+- [<span data-ttu-id="ddea9-111">Instrukcje: Użyj pamięci podręcznej elementu jako pędzla</span><span class="sxs-lookup"><span data-stu-id="ddea9-111">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)

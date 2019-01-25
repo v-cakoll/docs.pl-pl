@@ -17,29 +17,29 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3341159600c85915cd3c1a138265dc386edbb766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: edafb60e5b6f9b913e89f4785dc34a58bf390f2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638772"
 ---
-# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="9991b-102">ISymUnmanagedDocument::GetSourceLength — Metoda</span><span class="sxs-lookup"><span data-stu-id="9991b-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
-<span data-ttu-id="9991b-103">Pobiera długość w bajtach osadzonego źródła.</span><span class="sxs-lookup"><span data-stu-id="9991b-103">Gets the length, in bytes, of the embedded source.</span></span>  
+# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="e0d3e-102">ISymUnmanagedDocument::GetSourceLength — Metoda</span><span class="sxs-lookup"><span data-stu-id="e0d3e-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
+<span data-ttu-id="e0d3e-103">Pobiera długość w bajtach osadzonego źródła.</span><span class="sxs-lookup"><span data-stu-id="e0d3e-103">Gets the length, in bytes, of the embedded source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9991b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9991b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e0d3e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e0d3e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceLength(  
     [out, retval]  ULONG32*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9991b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="9991b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e0d3e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e0d3e-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="9991b-106">[out] Wskaźnik do zmiennej, która wskazuje długość w bajtach osadzone źródło.</span><span class="sxs-lookup"><span data-stu-id="9991b-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
+ <span data-ttu-id="e0d3e-106">[out] Wskaźnik do zmiennej, która wskazuje długość w bajtach, osadzonego źródła.</span><span class="sxs-lookup"><span data-stu-id="e0d3e-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9991b-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="9991b-107">Return Value</span></span>  
- <span data-ttu-id="9991b-108">Wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="9991b-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e0d3e-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="e0d3e-107">Return Value</span></span>  
+ <span data-ttu-id="e0d3e-108">S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="e0d3e-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9991b-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="9991b-109">See Also</span></span>  
- [<span data-ttu-id="9991b-110">ISymUnmanagedDocument, interfejs</span><span class="sxs-lookup"><span data-stu-id="9991b-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e0d3e-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e0d3e-109">See also</span></span>
+- [<span data-ttu-id="e0d3e-110">ISymUnmanagedDocument, interfejs</span><span class="sxs-lookup"><span data-stu-id="e0d3e-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed8b6bf60790c10b9869dcc41678be050b8979dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2d0628d3c8bf5912c811ddf4b2a00b9dfca4687
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639214"
 ---
-# <a name="icordebugnativeframesetip-method"></a><span data-ttu-id="8fae3-102">ICorDebugNativeFrame::SetIP — Metoda</span><span class="sxs-lookup"><span data-stu-id="8fae3-102">ICorDebugNativeFrame::SetIP Method</span></span>
-<span data-ttu-id="8fae3-103">Ustawia wskaźnik instrukcji w określonej lokalizacji przesunięcia w kodzie natywnym.</span><span class="sxs-lookup"><span data-stu-id="8fae3-103">Sets the instruction pointer to the specified offset location in native code.</span></span>  
+# <a name="icordebugnativeframesetip-method"></a><span data-ttu-id="4c4da-102">ICorDebugNativeFrame::SetIP — Metoda</span><span class="sxs-lookup"><span data-stu-id="4c4da-102">ICorDebugNativeFrame::SetIP Method</span></span>
+<span data-ttu-id="4c4da-103">Ustawia wskaźnik instrukcji do określonej lokalizacji przesunięcia w kodzie natywnym.</span><span class="sxs-lookup"><span data-stu-id="4c4da-103">Sets the instruction pointer to the specified offset location in native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8fae3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8fae3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4c4da-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="4c4da-104">Syntax</span></span>  
   
 ```  
 HRESULT SetIP (  
@@ -35,25 +35,25 @@ HRESULT SetIP (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8fae3-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="8fae3-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4c4da-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="4c4da-105">Parameters</span></span>  
  `nOffset`  
- <span data-ttu-id="8fae3-106">[in] Przesunięcie lokalizacji w kodzie natywnym.</span><span class="sxs-lookup"><span data-stu-id="8fae3-106">[in] The offset location in the native code.</span></span>  
+ <span data-ttu-id="4c4da-106">[in] Przesunięcie lokalizacji w kodzie natywnym.</span><span class="sxs-lookup"><span data-stu-id="4c4da-106">[in] The offset location in the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8fae3-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8fae3-107">Remarks</span></span>  
- <span data-ttu-id="8fae3-108">Wywołuje się `SetIP` natychmiast unieważnia wszystkie ramki i łańcuchów bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="8fae3-108">Calls to `SetIP` immediately invalidate all frames and chains for the current thread.</span></span> <span data-ttu-id="8fae3-109">Jeśli debuger musi ramki informacji po wywołaniu `SetIP`, należy wykonać nowe ślad stosu.</span><span class="sxs-lookup"><span data-stu-id="8fae3-109">If the debugger needs frame information after a call to `SetIP`, it must perform a new stack trace.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4c4da-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="4c4da-107">Remarks</span></span>  
+ <span data-ttu-id="4c4da-108">Wywołania `SetIP` natychmiast unieważnia wszystkie ramki i łańcuchów dla bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="4c4da-108">Calls to `SetIP` immediately invalidate all frames and chains for the current thread.</span></span> <span data-ttu-id="4c4da-109">Jeśli debuger potrzebuje informacji o ramce po wywołaniu `SetIP`, należy wykonać, nowe ślad stosu.</span><span class="sxs-lookup"><span data-stu-id="4c4da-109">If the debugger needs frame information after a call to `SetIP`, it must perform a new stack trace.</span></span>  
   
- <span data-ttu-id="8fae3-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) będzie próbował zachować ramki stosu w prawidłowym stanie.</span><span class="sxs-lookup"><span data-stu-id="8fae3-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) will attempt to keep the stack frame in a valid state.</span></span> <span data-ttu-id="8fae3-111">Jednak nawet jeśli ramki jest w nieprawidłowym stanie, ile dotyczy to środowisko uruchomieniowe, nadal mogą istnieć problemy, takie jak niezainicjowanych zmiennych lokalnych i tak dalej.</span><span class="sxs-lookup"><span data-stu-id="8fae3-111">However, even if the frame is in a valid state, as far as the runtime is concerned, there still may be problems, such as uninitialized local variables, and so on.</span></span> <span data-ttu-id="8fae3-112">Element wywołujący jest odpowiedzialny za spójność uruchomiony program.</span><span class="sxs-lookup"><span data-stu-id="8fae3-112">The caller is responsible for insuring coherency of the running program.</span></span>  
+ <span data-ttu-id="4c4da-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) będzie próbował zachować ramki stosu w prawidłowym stanie.</span><span class="sxs-lookup"><span data-stu-id="4c4da-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) will attempt to keep the stack frame in a valid state.</span></span> <span data-ttu-id="4c4da-111">Jednak nawet jeśli ramki jest w nieprawidłowym stanie chodzi środowiska uruchomieniowego jest, nadal może być problemy, takie jak niezainicjowanych zmiennych lokalnych i tak dalej.</span><span class="sxs-lookup"><span data-stu-id="4c4da-111">However, even if the frame is in a valid state, as far as the runtime is concerned, there still may be problems, such as uninitialized local variables, and so on.</span></span> <span data-ttu-id="4c4da-112">Obiekt wywołujący jest odpowiedzialny za spójność uruchomionego programu.</span><span class="sxs-lookup"><span data-stu-id="4c4da-112">The caller is responsible for insuring coherency of the running program.</span></span>  
   
- <span data-ttu-id="8fae3-113">Na platformach 64-bitowych wskaźnik instrukcji nie można przenieść poza `catch` lub `finally` bloku.</span><span class="sxs-lookup"><span data-stu-id="8fae3-113">On 64-bit platforms, the instruction pointer cannot be moved out of a `catch` or `finally` block.</span></span> <span data-ttu-id="8fae3-114">Jeśli `SetIP` jest nazywany aby ruch na 64-bitowej platformy, zwróci HRESULT informujący o niepowodzeniu.</span><span class="sxs-lookup"><span data-stu-id="8fae3-114">If `SetIP` is called to make such a move on a 64-bit platform, it will return an HRESULT indicating failure.</span></span>  
+ <span data-ttu-id="4c4da-113">Na platformach 64-bitowy wskaźnik instrukcji nie można przenieść poza `catch` lub `finally` bloku.</span><span class="sxs-lookup"><span data-stu-id="4c4da-113">On 64-bit platforms, the instruction pointer cannot be moved out of a `catch` or `finally` block.</span></span> <span data-ttu-id="4c4da-114">Jeśli `SetIP` nazywa się przejście na platformie 64-bitowej, zwróci wartość HRESULT wskazujący awarię.</span><span class="sxs-lookup"><span data-stu-id="4c4da-114">If `SetIP` is called to make such a move on a 64-bit platform, it will return an HRESULT indicating failure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8fae3-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8fae3-115">Requirements</span></span>  
- <span data-ttu-id="8fae3-116">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8fae3-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4c4da-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4c4da-115">Requirements</span></span>  
+ <span data-ttu-id="4c4da-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4c4da-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8fae3-117">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8fae3-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4c4da-117">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4c4da-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8fae3-118">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8fae3-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4c4da-118">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4c4da-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8fae3-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8fae3-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4c4da-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4c4da-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8fae3-120">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="8fae3-120">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="4c4da-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4c4da-120">See also</span></span>
+

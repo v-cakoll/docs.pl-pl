@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 043394541f5ed91b85a57f4cb13c61cca442bfec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70784106798748eeaabd8e6b6c3787e27b0ece74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746677"
 ---
-# <a name="iassemblynameisequal-method"></a><span data-ttu-id="f6c8d-102">IAssemblyName::IsEqual — Metoda</span><span class="sxs-lookup"><span data-stu-id="f6c8d-102">IAssemblyName::IsEqual Method</span></span>
-<span data-ttu-id="f6c8d-103">Określa, czy określonej [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiekt jest taki sam `IAssemblyName`zgodnie flagi porównania określony.</span><span class="sxs-lookup"><span data-stu-id="f6c8d-103">Determines whether a specified [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object is equal to this `IAssemblyName`, based on the specified comparison flags.</span></span>  
+# <a name="iassemblynameisequal-method"></a><span data-ttu-id="9e846-102">IAssemblyName::IsEqual — Metoda</span><span class="sxs-lookup"><span data-stu-id="9e846-102">IAssemblyName::IsEqual Method</span></span>
+<span data-ttu-id="9e846-103">Określa, czy określony [iassemblyname —](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiekt jest taki sam tym `IAssemblyName`zgodnie z flagi porównania określony.</span><span class="sxs-lookup"><span data-stu-id="9e846-103">Determines whether a specified [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object is equal to this `IAssemblyName`, based on the specified comparison flags.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f6c8d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f6c8d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e846-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9e846-104">Syntax</span></span>  
   
 ```  
 HRESULT IsEqual (  
@@ -36,20 +36,20 @@ HRESULT IsEqual (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f6c8d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f6c8d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9e846-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="9e846-105">Parameters</span></span>  
  `pName`  
- <span data-ttu-id="f6c8d-106">[in] `IAssemblyName` Obiektu, do którego należy to porównać `IAssemblyName`.</span><span class="sxs-lookup"><span data-stu-id="f6c8d-106">[in] The `IAssemblyName` object to which to compare this `IAssemblyName`.</span></span>  
+ <span data-ttu-id="9e846-106">[in] `IAssemblyName` Obiekt, do którego można to porównać `IAssemblyName`.</span><span class="sxs-lookup"><span data-stu-id="9e846-106">[in] The `IAssemblyName` object to which to compare this `IAssemblyName`.</span></span>  
   
  `dwCmpFlags`  
- <span data-ttu-id="f6c8d-107">[in] Bitowe połączenie [ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md) wartości, które wpływają porównania.</span><span class="sxs-lookup"><span data-stu-id="f6c8d-107">[in] A bitwise combination of [ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md) values that influence the comparison.</span></span>  
+ <span data-ttu-id="9e846-107">[in] Bitowa kombinacja [asm_cmp_flags —](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md) wartości, które mają wpływ na wynik porównania.</span><span class="sxs-lookup"><span data-stu-id="9e846-107">[in] A bitwise combination of [ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md) values that influence the comparison.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f6c8d-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f6c8d-108">Requirements</span></span>  
- <span data-ttu-id="f6c8d-109">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f6c8d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e846-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9e846-108">Requirements</span></span>  
+ <span data-ttu-id="9e846-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e846-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f6c8d-110">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="f6c8d-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="9e846-110">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="9e846-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="f6c8d-111">**NET Framework w wersji:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6c8d-111">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9e846-111">**NET Framework w wersji:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e846-111">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6c8d-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f6c8d-112">See Also</span></span>  
- [<span data-ttu-id="f6c8d-113">IAssemblyName, interfejs</span><span class="sxs-lookup"><span data-stu-id="f6c8d-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [<span data-ttu-id="f6c8d-114">Wyliczenia łączenia</span><span class="sxs-lookup"><span data-stu-id="f6c8d-114">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="9e846-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9e846-112">See also</span></span>
+- [<span data-ttu-id="9e846-113">IAssemblyName, interfejs</span><span class="sxs-lookup"><span data-stu-id="9e846-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="9e846-114">Wyliczenia łączenia</span><span class="sxs-lookup"><span data-stu-id="9e846-114">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

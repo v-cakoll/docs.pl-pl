@@ -8,33 +8,33 @@ helpviewer_keywords:
 - '>> operator [C#]'
 - right shift operator (>>) [C#]
 ms.assetid: a07f8679-d318-4ef8-b38b-65903efb8056
-ms.openlocfilehash: 80e38d8e75b9ad573b635d544d6381950f107583
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: f7cacd740966f0716e125887568a39abf0d9e454
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725431"
 ---
-# <a name="gtgt-operator-c-reference"></a><span data-ttu-id="ae399-102">&gt;&gt; Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="ae399-102">&gt;&gt; operator (C# Reference)</span></span>
+# <a name="gtgt-operator-c-reference"></a><span data-ttu-id="88123-102">&gt;&gt; Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="88123-102">&gt;&gt; operator (C# Reference)</span></span>
 
-<span data-ttu-id="ae399-103">Operator przesunięcia w prawo (`>>`) przenosi pierwszy argument operacji w prawo o liczbę bitów określoną przez drugim argumentem operacji.</span><span class="sxs-lookup"><span data-stu-id="ae399-103">The right-shift operator (`>>`) shifts its first operand right by the number of bits specified by its second operand.</span></span>
+<span data-ttu-id="88123-103">Operator przesunięcia w prawo (`>>`) przenosi pierwszy argument operacji w prawo o liczbę bitów określoną przez drugim argumentem operacji.</span><span class="sxs-lookup"><span data-stu-id="88123-103">The right-shift operator (`>>`) shifts its first operand right by the number of bits specified by its second operand.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="ae399-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ae399-104">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="88123-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="88123-104">Remarks</span></span>
 
-<span data-ttu-id="ae399-105">Jeśli pierwszy argument jest [int](../keywords/int.md) lub [uint](../keywords/uint.md) (32-bitowy), licznik przesunięć oblicza mniej znaczące bity pięć, drugi operand (drugi operand & 0x1f).</span><span class="sxs-lookup"><span data-stu-id="ae399-105">If the first operand is an [int](../keywords/int.md) or [uint](../keywords/uint.md) (32-bit quantity), the shift count is given by the low-order five bits of the second operand (second operand & 0x1f).</span></span>
+<span data-ttu-id="88123-105">Jeśli pierwszy argument jest [int](../keywords/int.md) lub [uint](../keywords/uint.md) (32-bitowy), licznik przesunięć oblicza mniej znaczące bity pięć, drugi operand (drugi operand & 0x1f).</span><span class="sxs-lookup"><span data-stu-id="88123-105">If the first operand is an [int](../keywords/int.md) or [uint](../keywords/uint.md) (32-bit quantity), the shift count is given by the low-order five bits of the second operand (second operand & 0x1f).</span></span>
 
-<span data-ttu-id="ae399-106">Jeśli pierwszy argument jest [długie](../keywords/long.md) lub [ulong](../keywords/ulong.md) (64-bitowy), licznik przesunięć oblicza mniej znaczące bity sześć, drugi operand (drugi operand & 0x3f).</span><span class="sxs-lookup"><span data-stu-id="ae399-106">If the first operand is a [long](../keywords/long.md) or [ulong](../keywords/ulong.md) (64-bit quantity), the shift count is given by the low-order six bits of the second operand (second operand & 0x3f).</span></span>
+<span data-ttu-id="88123-106">Jeśli pierwszy argument jest [długie](../keywords/long.md) lub [ulong](../keywords/ulong.md) (64-bitowy), licznik przesunięć oblicza mniej znaczące bity sześć, drugi operand (drugi operand & 0x3f).</span><span class="sxs-lookup"><span data-stu-id="88123-106">If the first operand is a [long](../keywords/long.md) or [ulong](../keywords/ulong.md) (64-bit quantity), the shift count is given by the low-order six bits of the second operand (second operand & 0x3f).</span></span>
 
-<span data-ttu-id="ae399-107">Jeśli pierwszy argument jest [int](../keywords/int.md) lub [długie](../keywords/long.md), prawy shift jest arytmetycznego przesunięcia (wyższego rzędu pusty bity są ustawione na bit znaku).</span><span class="sxs-lookup"><span data-stu-id="ae399-107">If the first operand is an [int](../keywords/int.md) or [long](../keywords/long.md), the right-shift is an arithmetic shift (high-order empty bits are set to the sign bit).</span></span> <span data-ttu-id="ae399-108">Jeśli pierwszy operand jest typu [uint](../keywords/uint.md) lub [ulong](../keywords/ulong.md), prawy shift to Przesunięcie logiczne (bity wyższego rzędu są wypełnione przez zera).</span><span class="sxs-lookup"><span data-stu-id="ae399-108">If the first operand is of type [uint](../keywords/uint.md) or [ulong](../keywords/ulong.md), the right-shift is a logical shift (high-order bits are zero-filled).</span></span>
+<span data-ttu-id="88123-107">Jeśli pierwszy argument jest [int](../keywords/int.md) lub [długie](../keywords/long.md), prawy shift jest arytmetycznego przesunięcia (wyższego rzędu pusty bity są ustawione na bit znaku).</span><span class="sxs-lookup"><span data-stu-id="88123-107">If the first operand is an [int](../keywords/int.md) or [long](../keywords/long.md), the right-shift is an arithmetic shift (high-order empty bits are set to the sign bit).</span></span> <span data-ttu-id="88123-108">Jeśli pierwszy operand jest typu [uint](../keywords/uint.md) lub [ulong](../keywords/ulong.md), prawy shift to Przesunięcie logiczne (bity wyższego rzędu są wypełnione przez zera).</span><span class="sxs-lookup"><span data-stu-id="88123-108">If the first operand is of type [uint](../keywords/uint.md) or [ulong](../keywords/ulong.md), the right-shift is a logical shift (high-order bits are zero-filled).</span></span>
 
-<span data-ttu-id="ae399-109">Typy zdefiniowane przez użytkownika może doprowadzić do przeciążenia `>>` operator; typ pierwszy operand musi być typu zdefiniowanego przez użytkownika, a typ drugiego argumentu operacji musi być [int](../keywords/int.md). Aby uzyskać więcej informacji, zobacz [operator](../keywords/operator.md).</span><span class="sxs-lookup"><span data-stu-id="ae399-109">User-defined types can overload the `>>` operator; the type of the first operand must be the user-defined type, and the type of the second operand must be [int](../keywords/int.md). For more information, see [operator](../keywords/operator.md).</span></span> <span data-ttu-id="ae399-110">Gdy jest przeciążony operator binarny, odpowiedniego operatora przypisania, jest również niejawnie przeciążona.</span><span class="sxs-lookup"><span data-stu-id="ae399-110">When a binary operator is overloaded, the corresponding assignment operator, if any, is also implicitly overloaded.</span></span>
+<span data-ttu-id="88123-109">Typy zdefiniowane przez użytkownika może doprowadzić do przeciążenia `>>` operator; typ pierwszy operand musi być typu zdefiniowanego przez użytkownika, a typ drugiego argumentu operacji musi być [int](../keywords/int.md). Aby uzyskać więcej informacji, zobacz [operator](../keywords/operator.md).</span><span class="sxs-lookup"><span data-stu-id="88123-109">User-defined types can overload the `>>` operator; the type of the first operand must be the user-defined type, and the type of the second operand must be [int](../keywords/int.md). For more information, see [operator](../keywords/operator.md).</span></span> <span data-ttu-id="88123-110">Gdy jest przeciążony operator binarny, odpowiedniego operatora przypisania, jest również niejawnie przeciążona.</span><span class="sxs-lookup"><span data-stu-id="88123-110">When a binary operator is overloaded, the corresponding assignment operator, if any, is also implicitly overloaded.</span></span>
 
-## <a name="example"></a><span data-ttu-id="ae399-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="ae399-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="88123-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="88123-111">Example</span></span>
 
 [!code-csharp[csRefOperators#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#26)]
 
-## <a name="see-also"></a><span data-ttu-id="ae399-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ae399-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="88123-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="88123-112">See also</span></span>
 
-- [<span data-ttu-id="ae399-113">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="ae399-113">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="ae399-114">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="ae399-114">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="ae399-115">C#Operatory</span><span class="sxs-lookup"><span data-stu-id="ae399-115">C# operators</span></span>](index.md)
+- [<span data-ttu-id="88123-113">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="88123-113">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="88123-114">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="88123-114">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="88123-115">C#Operatory</span><span class="sxs-lookup"><span data-stu-id="88123-115">C# operators</span></span>](index.md)

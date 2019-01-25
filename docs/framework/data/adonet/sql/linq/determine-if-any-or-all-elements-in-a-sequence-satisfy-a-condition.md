@@ -1,37 +1,37 @@
 ---
-title: Określić, czy niektóre lub wszystkie elementy w sekwencji spełniają warunek
+title: Określić, jeśli wybranych lub wszystkich elementów w sekwencji spełniają warunek
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 339ec145-826c-46d2-8cf2-3acd252cd072
-ms.openlocfilehash: cd910b35f82f816158cb686a283e44e3b8b6b33b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3c343d3cf5068e473efbd62de019a25cf19dc10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702577"
 ---
-# <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a><span data-ttu-id="bab01-102">Określić, czy niektóre lub wszystkie elementy w sekwencji spełniają warunek</span><span class="sxs-lookup"><span data-stu-id="bab01-102">Determine if Any or All Elements in a Sequence Satisfy a Condition</span></span>
-<span data-ttu-id="bab01-103"><xref:System.Linq.Enumerable.All%2A> Operator zwraca `true` , gdy wszystkie elementy w sekwencji spełniają warunek.</span><span class="sxs-lookup"><span data-stu-id="bab01-103">The <xref:System.Linq.Enumerable.All%2A> operator returns `true` if all elements in a sequence satisfy a condition.</span></span>  
+# <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a><span data-ttu-id="9b961-102">Określić, jeśli wybranych lub wszystkich elementów w sekwencji spełniają warunek</span><span class="sxs-lookup"><span data-stu-id="9b961-102">Determine if Any or All Elements in a Sequence Satisfy a Condition</span></span>
+<span data-ttu-id="9b961-103"><xref:System.Linq.Enumerable.All%2A> Operator zwraca `true` Jeśli wszystkie elementy w sekwencji spełniają warunek.</span><span class="sxs-lookup"><span data-stu-id="9b961-103">The <xref:System.Linq.Enumerable.All%2A> operator returns `true` if all elements in a sequence satisfy a condition.</span></span>  
   
- <span data-ttu-id="bab01-104"><xref:System.Linq.Queryable.Any%2A> Operator zwraca `true` Jeśli dowolny element w sekwencji spełnia warunek.</span><span class="sxs-lookup"><span data-stu-id="bab01-104">The <xref:System.Linq.Queryable.Any%2A> operator returns `true` if any element in a sequence satisfies a condition.</span></span>  
+ <span data-ttu-id="9b961-104"><xref:System.Linq.Queryable.Any%2A> Operator zwraca `true` Jeśli dowolnego elementu w sekwencji spełniają warunek.</span><span class="sxs-lookup"><span data-stu-id="9b961-104">The <xref:System.Linq.Queryable.Any%2A> operator returns `true` if any element in a sequence satisfies a condition.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bab01-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="bab01-105">Example</span></span>  
- <span data-ttu-id="bab01-106">Poniższy przykład zwraca sekwencję klientów, którzy mają co najmniej jednego zamówienia.</span><span class="sxs-lookup"><span data-stu-id="bab01-106">The following example returns a sequence of customers that have at least one order.</span></span> <span data-ttu-id="bab01-107">`Where` / `where` Daje w wyniku klauzuli `true` Jeśli dany `Customer` ma jakiekolwiek `Order`.</span><span class="sxs-lookup"><span data-stu-id="bab01-107">The `Where`/`where` clause evaluates to `true` if the given `Customer` has any `Order`.</span></span>  
+## <a name="example"></a><span data-ttu-id="9b961-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="9b961-105">Example</span></span>  
+ <span data-ttu-id="9b961-106">Poniższy przykład zwraca sekwencję klientów, którzy mają co najmniej jedno ustawienie kolejności.</span><span class="sxs-lookup"><span data-stu-id="9b961-106">The following example returns a sequence of customers that have at least one order.</span></span> <span data-ttu-id="9b961-107">`Where` / `where` Daje w wyniku klauzuli `true` Jeśli danego `Customer` ma jakiekolwiek `Order`.</span><span class="sxs-lookup"><span data-stu-id="9b961-107">The `Where`/`where` clause evaluates to `true` if the given `Customer` has any `Order`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#37](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#37)]
  [!code-vb[DLinqQueryExamples#37](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#37)]  
   
-## <a name="example"></a><span data-ttu-id="bab01-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="bab01-108">Example</span></span>  
- <span data-ttu-id="bab01-109">Poniższy kod Visual Basic Określa listę klientów, którzy nie dokonali zamówienia i zapewnia, że dla każdego klienta na tej liście podano nazwę kontaktu.</span><span class="sxs-lookup"><span data-stu-id="bab01-109">The following Visual Basic code determines the list of customers who have not placed orders, and ensures that for every customer in that list, a contact name is provided.</span></span>  
+## <a name="example"></a><span data-ttu-id="9b961-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="9b961-108">Example</span></span>  
+ <span data-ttu-id="9b961-109">Poniższy kod w języku Visual Basic Określa listę klientów, którzy nie dokonali zamówień i gwarantuje, że dla każdego klienta na tej liście podano nazwę kontaktu.</span><span class="sxs-lookup"><span data-stu-id="9b961-109">The following Visual Basic code determines the list of customers who have not placed orders, and ensures that for every customer in that list, a contact name is provided.</span></span>  
   
  [!code-vb[DLinqQueryExamples#37v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#37v)]  
   
-## <a name="example"></a><span data-ttu-id="bab01-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="bab01-110">Example</span></span>  
- <span data-ttu-id="bab01-111">W poniższym przykładzie C# zwraca sekwencję klientów, których zamówień `ShipCity` rozpoczynające się od "C".</span><span class="sxs-lookup"><span data-stu-id="bab01-111">The following C# example returns a sequence of customers whose orders have a `ShipCity` beginning with "C".</span></span> <span data-ttu-id="bab01-112">Również zwracany obejmuje klientów, którzy mają żadnych zleceń.</span><span class="sxs-lookup"><span data-stu-id="bab01-112">Also included in the return are customers who have no orders.</span></span> <span data-ttu-id="bab01-113">(Zgodnie z projektem <xref:System.Linq.Queryable.All%2A> operator zwraca `true` dla pustej sekwencji.) Klienci z żadnych zamówień są eliminowane w danych wyjściowych konsoli przy użyciu `Count` operatora.</span><span class="sxs-lookup"><span data-stu-id="bab01-113">(By design, the <xref:System.Linq.Queryable.All%2A> operator returns `true` for an empty sequence.) Customers with no orders are eliminated in the console output by using the `Count` operator.</span></span>  
+## <a name="example"></a><span data-ttu-id="9b961-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="9b961-110">Example</span></span>  
+ <span data-ttu-id="9b961-111">Następujące C# przykład zwraca sekwencję klientów, których zamówienia mają `ShipCity` rozpoczynające się od "C".</span><span class="sxs-lookup"><span data-stu-id="9b961-111">The following C# example returns a sequence of customers whose orders have a `ShipCity` beginning with "C".</span></span> <span data-ttu-id="9b961-112">Również powrót obejmuje klienci, którzy mają nie zamówienia.</span><span class="sxs-lookup"><span data-stu-id="9b961-112">Also included in the return are customers who have no orders.</span></span> <span data-ttu-id="9b961-113">(Zgodnie z projektem <xref:System.Linq.Queryable.All%2A> operator zwraca `true` dla pustej sekwencji.) Klienci z brak zamówień są eliminowane w danych wyjściowych konsoli przy użyciu `Count` operatora.</span><span class="sxs-lookup"><span data-stu-id="9b961-113">(By design, the <xref:System.Linq.Queryable.All%2A> operator returns `true` for an empty sequence.) Customers with no orders are eliminated in the console output by using the `Count` operator.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#38](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#38)]  
   
-## <a name="see-also"></a><span data-ttu-id="bab01-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="bab01-114">See Also</span></span>  
- [<span data-ttu-id="bab01-115">Przykłady zapytań</span><span class="sxs-lookup"><span data-stu-id="bab01-115">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a><span data-ttu-id="9b961-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9b961-114">See also</span></span>
+- [<span data-ttu-id="9b961-115">Przykłady zapytań</span><span class="sxs-lookup"><span data-stu-id="9b961-115">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

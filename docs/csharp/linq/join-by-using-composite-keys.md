@@ -1,14 +1,14 @@
 ---
 title: Sprzęganie za pomocą kluczy złożonych (LINQ w C#)
 description: Dowiedz się, jak sprzęgać za pomocą kluczy złożonych w składniku LINQ.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
-ms.openlocfilehash: 742338c01746966170551693e8c6b00b964446b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 460a52da7e0c0a47b77d4c64e76641bae9da7cd6
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668616"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857518"
 ---
 # <a name="join-by-using-composite-keys"></a>Sprzęganie za pomocą kluczy złożonych
 

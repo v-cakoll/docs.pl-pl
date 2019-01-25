@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: a80be841bb26d6c46022892cd827dfed76a0b9e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 1b1a3d2e61507a497349deeb857e4333356f66a5
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545663"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857804"
 ---
 # <a name="arrays-c-programming-guide"></a>Tablice (Przewodnik programowania w języku C#)
 
@@ -19,9 +19,9 @@ W strukturze danych tablicy można przechowywać wiele zmiennych tego samego typ
   
  `type[] arrayName;`  
   
- Poniższe przykłady tworzą tablice jednowymiarowe, wielowymiarowe i nieregularne:  
+ Poniższy przykład tworzy tablice jednowymiarowe, wielowymiarowe i nieregularne:  
   
- [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideArrays#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#1)]  
   
 ## <a name="array-overview"></a>Omówienie macierzy
 

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c8c82b3ace19d4b1d79fbfd296ce239e6da99ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5aceed6fa662f090dfe360ddca51da1381b12a2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631502"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs — Metoda
-Pobiera moduł wyliczający dla pamięci podręcznej [!INCLUDE[wrt](../../../../includes/wrt-md.md)] typów w domenie aplikacji w oparciu o ich identyfikatorów interfejsu.  
+Pobiera moduł wyliczający dla pamięci podręcznej [!INCLUDE[wrt](../../../../includes/wrt-md.md)] typów w domenie aplikacji w oparciu o ich identyfikatory interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,13 +42,13 @@ HRESULT GetCachedWinRTTypesForIIDs (
  [in] Liczba wymaganych typów.  
   
  `iidsToResolve`  
- [in] Wskaźnik do tablicy zawiera identyfikatory interfejsu odpowiadającego zarządzanych reprezentacje [!INCLUDE[wrt](../../../../includes/wrt-md.md)] typy, które mają zostać pobrane.  
+ [in] Wskaźnik do tablicy, który zawiera identyfikatory interfejsu odpowiadający reprezentacje zarządzane [!INCLUDE[wrt](../../../../includes/wrt-md.md)] typy, które mają zostać pobrane.  
   
  `ppTypesEnum`  
- [out] Wskaźnik do obiektu interfejsu "ICorDebugTypeEnum", który umożliwia wyliczenie zapisane w pamięci podręcznej adres zarządzane reprezentacje [!INCLUDE[wrt](../../../../includes/wrt-md.md)] pobrać typy oparte na identyfikatorach interfejsu w `iidsToResolve`.  
+ [out] Wskaźnik na adres obiektu interfejsu "icordebugtypeenum —", który umożliwia wyliczenie buforowane zarządzane reprezentacje [!INCLUDE[wrt](../../../../includes/wrt-md.md)] pobierane typy, oparte na identyfikatory interfejsu w `iidsToResolve`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli metoda nie można pobrać informacji o identyfikator określonego interfejsu, odpowiadający mu wpis w kolekcji "ICorDebugTypeEnum" będzie mieć typ `ELEMENT_TYPE_END` błędy z powodu problemów pobierania danych, lub `ELEMENT_TYPE_VOID` dla nieznanego interfejsu identyfikatory.  
+ Jeśli metoda nie można pobrać informacji dla identyfikatora określonego interfejsu, odpowiadający mu wpis w kolekcji "Icordebugtypeenum —" będzie mieć typ `ELEMENT_TYPE_END` błędy z powodu problemów z pobierania danych, lub `ELEMENT_TYPE_VOID` dla nieznanego interfejsu identyfikatory.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
@@ -59,5 +59,5 @@ HRESULT GetCachedWinRTTypesForIIDs (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugAppDomain3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugAppDomain3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)

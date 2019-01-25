@@ -4,12 +4,12 @@ description: Przewodnik, na które implementacji .NET należy rozważyć podczas
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fe6aa28b456d3a83b15dfcb3a65147e77b9d5f85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699509"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework dla aplikacji serwerowych
 
@@ -85,15 +85,15 @@ Tylko w przypadkach, gdy biblioteki lub pakiety NuGet użyć technologii, które
 
 Niektóre technologie .NET Framework nie są dostępne w programie .NET Core. Niektóre z nich mogą być dostępne w nowszych wersjach platformy .NET Core. Inne osoby nie mają zastosowania do nowych wzorców aplikacji docelowej platformy .NET Core i nigdy nie mogą być dostępne. Na poniższej liście przedstawiono najbardziej typowe technologie, nie można odnaleźć w programie .NET Core:
 
-* Aplikacje formularzy sieci Web ASP.NET: ASP.NET Web Forms są dostępne tylko w programie .NET Framework. Nie można używać platformy ASP.NET Core dla formularzy sieci Web ASP.NET. Nie ma żadnych planów, aby wyświetlić formularzy sieci Web ASP.NET i .NET Core.
+* Aplikacje formularzy sieci Web platformy ASP.NET: ASP.NET Web Forms są dostępne tylko w programie .NET Framework. Nie można używać platformy ASP.NET Core dla formularzy sieci Web ASP.NET. Nie ma żadnych planów, aby wyświetlić formularzy sieci Web ASP.NET i .NET Core.
 
-* Aplikacje programu ASP.NET Web Pages: strony sieci Web ASP.NET nie zostaną uwzględnione w programie ASP.NET Core. 
+* Aplikacji stron sieci Web programu ASP.NET: Strony sieci Web ASP.NET nie zostaną uwzględnione w programie ASP.NET Core. 
 
 * Implementacja usługi WCF. Nawet w przypadku [biblioteki klienta platformy WCF](https://github.com/dotnet/wcf) korzystanie z usługi WCF z platformy .NET Core, implementacja serwera WCF jest obecnie dostępny tylko w programie .NET Framework. W tym scenariuszu nie jest częścią bieżącego planu dla platformy .NET Core, ale jest rozważane w przyszłości.
 
 * Usługi związane z przepływu pracy: Windows Workflow Foundation (WF), usługi przepływu pracy (WCF + WF w jednej usłudze) i usługi danych WCF (wcześniej znane jako "Architektury ADO.NET Data Services") są dostępne tylko w programie .NET Framework.  Nie ma żadnych planów, aby wyświetlić usług danych WCF + WF/WF/WCF i .NET Core.
 
-* Obsługa języków: Visual Basic i F # są obecnie obsługiwane w .NET Core, ale nie dla wszystkich typów projektów. Aby uzyskać listę szablonów obsługiwanych projektów, zobacz [opcje szablonu dla platformy dotnet nowe](../core/tools/dotnet-new.md#arguments).
+* Obsługa języka: Visual Basic i F# są obecnie obsługiwane w programie .NET Core, ale nie dla wszystkich typów projektów. Aby uzyskać listę szablonów obsługiwanych projektów, zobacz [opcje szablonu dla platformy dotnet nowe](../core/tools/dotnet-new.md#arguments).
 
 Oprócz oficjalne plan istnieją inne struktury mogą być przenoszone do platformy .NET Core. Aby uzyskać pełną listę, zobacz problemy CoreFX oznaczone jako [portu core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Ta lista nie stanowią zobowiązania firmy Microsoft na wprowadzanie tych składników na platformy .NET Core. Są one po prostu przechwytywania wymaganą przez społeczność, aby to zrobić. Jeśli interesujące Cię któregokolwiek ze składników, oznaczone jako `port-to-core`, udział w dyskusjach w witrynie GitHub. A jeśli Twoim zdaniem czegoś brakuje, zgłoś nowy problem w [repozytorium CoreFX](https://github.com/dotnet/corefx/issues/new).
 
@@ -103,11 +103,11 @@ Niektóre firmy Microsoft lub innych platform nie obsługują platformy .NET Cor
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Wybieranie między ASP.NET i ASP.NET Core](/aspnet/core/choose-aspnet-framework)
-* [Platforma ASP.NET Core przeznaczone dla .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
-* [Platformy docelowe](frameworks.md)
-* [Przewodnik platformy .NET Core](../core/index.md)  
-* [Przenoszenie z .NET Framework i .NET Core](../core/porting/index.md)  
-* [.NET Framework na platformie Docker — przewodnik](../framework/docker/index.md)  
-* [Omówienie składników platformy .NET](components.md)  
-* [Mikrousługi .NET. Architektura konteneryzowanych aplikacji .NET](microservices-architecture/index.md)
+- [Wybieranie między ASP.NET i ASP.NET Core](/aspnet/core/choose-aspnet-framework)
+- [Platforma ASP.NET Core przeznaczone dla .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
+- [Platformy docelowe](frameworks.md)
+- [Przewodnik platformy .NET Core](../core/index.md)
+- [Przenoszenie z .NET Framework i .NET Core](../core/porting/index.md)
+- [.NET Framework na platformie Docker — przewodnik](../framework/docker/index.md)
+- [Omówienie składników platformy .NET](components.md)
+- [Mikrousługi .NET. architektura konteneryzowanych aplikacji .NET](microservices-architecture/index.md)

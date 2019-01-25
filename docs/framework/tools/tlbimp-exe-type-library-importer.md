@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f39f793d3d0a2cf815028ccdb49253c46dac2ec4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631311"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Importer biblioteki typów)
 Importer biblioteki typów konwertuje definicje typów znalezione w bibliotece typów modelu COM do równoważnych definicji w zestawie środowiska uruchomieniowego języka wspólnego. Wyjściem programu Tlbimp.exe jest plik binarny (zestaw) zawierający metadane środowiska wykonawczego dla typów zdefiniowanych w oryginalnej biblioteki typów. Można sprawdzić ten plik za pomocą narzędzi takich jak [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -125,13 +125,13 @@ bool SomeMethod();
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Narzędzia](index.md)  
- [Tlbexp.exe (eksporter biblioteki typów)](tlbexp-exe-type-library-exporter.md)  
- [Importowanie biblioteki typów jako zestawu](../interop/importing-a-type-library-as-an-assembly.md)  
- [Biblioteki typów na zestaw konwersja — podsumowanie](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Ildasm.exe (dezasembler IL)](ildasm-exe-il-disassembler.md)  
- [Sn.exe (narzędzie silnych nazw)](sn-exe-strong-name-tool.md)  
- [Zestawy o silnych nazwach](../app-domains/strong-named-assemblies.md)  
- [Atrybuty importowania bibliotek typów do zestawów międzyoperacyjnych](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))  
- [Wiersze polecenia](developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Zobacz także
+- [Narzędzia](index.md)
+- [Tlbexp.exe (eksporter biblioteki typów)](tlbexp-exe-type-library-exporter.md)
+- [Importowanie biblioteki typów jako zestawu](../interop/importing-a-type-library-as-an-assembly.md)
+- [Biblioteki typów na zestaw konwersja — podsumowanie](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Ildasm.exe (dezasembler IL)](ildasm-exe-il-disassembler.md)
+- [Sn.exe (narzędzie silnych nazw)](sn-exe-strong-name-tool.md)
+- [Zestawy o silnych nazwach](../app-domains/strong-named-assemblies.md)
+- [Atrybuty importowania bibliotek typów do zestawów międzyoperacyjnych](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))
+- [Wiersze polecenia](developer-command-prompt-for-vs.md)

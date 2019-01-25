@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 80d852dd08e935d4c06e9b6d2e52b0a075849ef5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f57385b930ce533de3ff12b0dbd363690f04082d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636017"
 ---
 # <a name="configuring-message-logging"></a>Konfigurowanie rejestrowania komunikatów
 W tym temacie opisano, jak można skonfigurować rejestrowanie komunikatów dla różnych scenariuszy.  
@@ -71,7 +71,7 @@ W tym temacie opisano, jak można skonfigurować rejestrowanie komunikatów dla 
   
  Możesz kontrolować poziom rejestrowania, ustawiając `logMessagesAtServiceLevel`, `logMalformedMessages`, i `logMessagesAtTransportLevel` atrybuty `messageLogging` elementu.  
   
-### <a name="service-level"></a>Poziom usług  
+### <a name="service-level"></a>Service Level  
  Komunikaty zarejestrowane w tej warstwie zamiar wprowadzić (na odbieranie) lub pozostaw (na wysłanie) kod użytkownika. Jeśli zostały zdefiniowane filtry, będą rejestrowane tylko komunikaty, które pasują do filtrów. W przeciwnym razie są rejestrowane wszystkie komunikaty na poziomie usługi. Komunikaty infrastruktury (transakcje, kanał elementu równorzędnego i zabezpieczeń) również są rejestrowane na tym poziomie, z wyjątkiem komunikaty niezawodnej obsługi komunikatów. W strumieniu wiadomości tylko nagłówki są rejestrowane. Ponadto zabezpieczonych wiadomości są rejestrowane odszyfrować na tym poziomie.  
   
 ### <a name="transport-level"></a>Poziom transportu  
@@ -105,14 +105,14 @@ W tym temacie opisano, jak można skonfigurować rejestrowanie komunikatów dla 
 ||Wyślij żądanie|Żądania odbioru|Wyślij odpowiedź|Odebrać odpowiedzi|  
 |-|------------------|---------------------|----------------|-------------------|  
 |Warstwy modelu usług|Usługa<br /><br /> Poziom<br /><br /> Wyślij<br /><br /> Żądanie|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Żądanie|Usługa<br /><br /> Poziom<br /><br /> Wyślij<br /><br /> Odpowiedz|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Odpowiedz|  
-|Warstwa transportu|Transportu<br /><br /> Wyślij|Transportu<br /><br /> Odbieranie|Transportu<br /><br /> Wyślij|Transportu<br /><br /> Odbieranie|  
+|Warstwa transportu|Transport<br /><br /> Wyślij|Transport<br /><br /> Odbieranie|Transport<br /><br /> Wyślij|Transport<br /><br /> Odbieranie|  
   
  Dla żądania jednokierunkowego  
   
 ||Wyślij żądanie|Żądania odbioru|  
 |-|------------------|---------------------|  
 |Warstwy modelu usług|Usługa<br /><br /> Poziom<br /><br /> Wyślij<br /><br /> Datagram|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Datagram|  
-|Warstwa transportu|Transportu<br /><br /> Wyślij|Transportu<br /><br /> Odbieranie|  
+|Warstwa transportu|Transport<br /><br /> Wyślij|Transport<br /><br /> Odbieranie|  
   
 ## <a name="message-filters"></a>Filtry komunikatów  
  Filtry komunikatów są zdefiniowane w `messageLogging` elementu konfiguracji `diagnostics` sekcji konfiguracji. Są one stosowane na poziomie usług i mechanizm transportu. Po zdefiniowaniu co najmniej jeden filtr tylko komunikatów spełniających co najmniej jeden z filtrów są rejestrowane. Jeśli nie zdefiniowano żadnego filtru, wszystkie komunikaty przechodzi przez.  
@@ -163,7 +163,7 @@ W tym temacie opisano, jak można skonfigurować rejestrowanie komunikatów dla 
   
  Należy pamiętać, że `type` atrybutu powinna być równa kwalifikowaną nazwę typu.  
   
-## <a name="see-also"></a>Zobacz też  
- [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
- [Rejestrowanie komunikatów](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [Zalecane ustawienia śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+## <a name="see-also"></a>Zobacz także
+- [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [Rejestrowanie komunikatów](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Zalecane ustawienia śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

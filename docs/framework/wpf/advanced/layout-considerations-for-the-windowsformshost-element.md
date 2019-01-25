@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 5856e710ad5a70fd740a5bb99ff241b8d9f2037a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a399cc9742ff9b19aabd6dcee558f94147c88356
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625630"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Opcje układu dla elementu WindowsFormsHost
 W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.WindowsFormsHost> element wchodzi w interakcję z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system układu.  
@@ -32,7 +32,7 @@ W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.Win
 |--------------------|-----------------|  
 |Automatyczne określanie rozmiaru|Niektóre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] zmiany rozmiaru kontrolek się do prawidłowego wyświetlenia ich zawartość. Aby uzyskać więcej informacji, zobacz [AutoSize właściwość — omówienie](../../../../docs/framework/winforms/controls/autosize-property-overview.md).|  
 |Zakotwiczanie i dokowanie|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Formanty obsługują pozycjonowanie i zmianę rozmiaru, oparte na kontenerze nadrzędnym. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> i <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
-|Automatyczne skalowanie|Kontrole kontenerów rozmiar nimi i ich elementy podrzędne na podstawie rozdzielczości urządzenia wyjściowego lub rozmiar w pikselach domyślna czcionka kontenera. Aby uzyskać więcej informacji, zobacz [automatyczne skalowanie w formularzach Windows Forms](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md).|  
+|Skalowanie automatyczne|Kontrole kontenerów rozmiar nimi i ich elementy podrzędne na podstawie rozdzielczości urządzenia wyjściowego lub rozmiar w pikselach domyślna czcionka kontenera. Aby uzyskać więcej informacji, zobacz [automatyczne skalowanie w formularzach Windows Forms](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md).|  
 |Kontenery układów|<xref:System.Windows.Forms.FlowLayoutPanel> i <xref:System.Windows.Forms.TableLayoutPanel> formanty rozmiaru się zgodnie z ich zawartość i rozmieszczanie ich formantów podrzędnych.|  
   
 ## <a name="layout-limitations"></a>Ograniczenia układu  
@@ -46,7 +46,7 @@ W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.Win
   
 -   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Formanty obsługują skalowanie automatyczne, w którym formularza będzie automatycznie zmieniać rozmiar wraz z jego formantów, w oparciu o rozmiar czcionki. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsu użytkownika, zmienianie rozmiaru czcionki nie zmienia rozmiaru całej układ, mimo że poszczególne elementy mogą dynamicznie rozmiar.  
   
-### <a name="z-order"></a>Porządek osi z  
+### <a name="z-order"></a>Z-order  
  W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsu użytkownika można zmienić porządek elementów do formantu nakładających się zachowanie. Hostowany [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] rysowania kontrolki w oddzielnych HWND, dzięki czemu jest zawsze wstawiany w górnej części [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementów.  
   
  Hostowany [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] również rysowania kontrolki na podstawie dowolnej <xref:System.Windows.Documents.Adorner> elementów.  
@@ -98,10 +98,10 @@ W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.Win
   
 -   Jeśli <xref:System.Windows.Forms.Control.Size%2A> właściwość zwraca rozmiar mniejszy niż określony ograniczenie <xref:System.Windows.Forms.Integration.WindowsFormsHost> akceptuje tej wartości rozmiaru i zwraca wartość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system układu.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Przewodnik: rozmieszczanie kontrolek formularzy Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)  
- [Windows rozmieszczanie formantów formularzy w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159971)  
- [Mapowanie właściwości Windows Forms i WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Przewodnik: Kontrolek rozmieszczanie Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Windows rozmieszczanie formantów formularzy w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Mapowanie właściwości Windows Forms i WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

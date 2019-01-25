@@ -1,5 +1,5 @@
 ---
-title: 'Porady: obustronna konwersja wartości daty i godziny'
+title: 'Instrukcje: Wartości obustronne daty i godziny'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628191"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Porady: obustronna konwersja wartości daty i godziny
+# <a name="how-to-round-trip-date-and-time-values"></a>Instrukcje: Wartości obustronne daty i godziny
 W wielu aplikacjach wartości daty i godziny jest przeznaczona do jego jednoznacznej identyfikacji pojedynczego punktu w czasie. W tym temacie pokazano, jak zapisywanie i przywracanie <xref:System.DateTime> wartość <xref:System.DateTimeOffset> wartości i wartości daty i godziny, z czasem strefy, aby wartość przywróconej identyfikuje tym samym czasie jako zapisaną wartość.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>Aby obustronnie konwertować wartość daty/czasu  
@@ -101,6 +101,6 @@ W wielu aplikacjach wartości daty i godziny jest przeznaczona do jego jednoznac
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Wybieranie pomiędzy DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Wybieranie pomiędzy DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

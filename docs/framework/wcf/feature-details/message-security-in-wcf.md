@@ -2,12 +2,12 @@
 title: Zabezpieczenia komunikatów w architekturze WCF
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 81d9acde3c8fab1860904074199066cca55c7186
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 023798f3bbc283b11dbb6c132f7573ee65d18077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731351"
 ---
 # <a name="message-security-in-wcf"></a>Zabezpieczenia komunikatów w architekturze WCF
 Windows Communication Foundation (WCF) ma dwa główne tryby zapewnianie bezpieczeństwa (`Transport` i `Message`) i trzeci trybu (`TransportWithMessageCredential`) który łączy dwie. W tym temacie omówiono zabezpieczenia komunikatów i przyczyny, które z niej korzystać.  
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) ma dwa główne tryby zapewnianie bezpiec
   
 -   Ograniczone i niewyginający zestawu poświadczeń.  
   
--   Zależne od transportu.  
+-   Transport-dependent.  
   
 ### <a name="disadvantages-of-message-level-security"></a>Wady zabezpieczeń na poziomie komunikatu  
  Zabezpieczenia komunikatów ma następujące wady:  
@@ -58,8 +58,8 @@ Windows Communication Foundation (WCF) ma dwa główne tryby zapewnianie bezpiec
   
 -   Wymaga stosowania mechanizmów zabezpieczeń poziomie XML i pomoc techniczna dla specyfikacji WS-Security. Może to mieć wpływ na współdziałanie.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Zabezpieczenia transportu](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Instrukcje: korzystanie z zabezpieczeń transportu i poświadczeń komunikatów](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
- [Microsoft Patterns and Practices, rozdział 3: Implementowanie transportu i komunikat warstwy zabezpieczeń](https://go.microsoft.com/fwlink/?LinkId=88897)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Zabezpieczenia transportu](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Instrukcje: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Microsoft Patterns and Practices, rozdział 3: Implementowanie transportu i zabezpieczenia warstwie komunikatów](https://go.microsoft.com/fwlink/?LinkId=88897)

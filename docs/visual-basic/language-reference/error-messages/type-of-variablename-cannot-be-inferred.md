@@ -1,5 +1,5 @@
 ---
-title: Typ &#39; &lt;nazwa_zmiennej&gt; &#39; nie można go wywnioskować, ponieważ granice pętli i zmienna krok nie poszerzyć na ten sam typ.
+title: Typ &#39; &lt;nazwa_zmiennej&gt; &#39; nie można wywnioskować, ponieważ granice pętli i zmienna Step nie mogą zostać poszerzone do tego samego typu
 ms.date: 07/20/2015
 f1_keywords:
 - bc30982
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: d6fdd9445b5336773d150c643c7bf1ca58a0c87a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ae14426181778a78254db8a5cd968d60bbdc8f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631271"
 ---
-# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Typ &#39; &lt;nazwa_zmiennej&gt; &#39; nie można go wywnioskować, ponieważ granice pętli i zmienna krok nie poszerzyć na ten sam typ.
-Napisano `For...Next` pętli, w którym kompilator nie można wywnioskować typu danych dla zmienna sterująca pętli, ponieważ są spełnione następujące warunki:  
+# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Typ &#39; &lt;nazwa_zmiennej&gt; &#39; nie można wywnioskować, ponieważ granice pętli i zmienna Step nie mogą zostać poszerzone do tego samego typu
+Zostały napisane `For...Next` pętli, w którym kompilator nie można wywnioskować typu danych dla zmienna sterująca pętli, ponieważ są spełnione następujące warunki:  
   
 -   Typ danych zmienna sterująca pętli nie zostanie określony z `As` klauzuli.  
   
--   Granice pętli i zmienna krok zawiera co najmniej dwóch typów.  
+-   Granice pętli i zmienna zawiera co najmniej dwa typy danych.  
   
--   Istnieje ma standardowych konwersji typów danych.  
+-   Nie standardowa występują konwersje między typami danych.  
   
- W związku z tym kompilator nie można wywnioskować typu danych zmienna sterująca pętli for.  
+ W związku z tym kompilator nie można wywnioskować typu danych zmienna sterująca pętli.  
   
- W poniższym przykładzie zmienna kroku jest znak i granice pętli są obie liczb całkowitych. Ten błąd jest zgłaszany, ponieważ nie istnieje konwersja standardowa między znakami i liczb całkowitych.  
+ W poniższym przykładzie zmienna jest znakiem i granice pętli są oba liczbami całkowitymi. Ponieważ istnieje standardowa konwersja między znakami i liczb całkowitych, ten błąd jest zgłaszany.  
   
 ```vb  
 Dim stepVar = "1"c  
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Zmień typy granice pętli i zmienna krok w razie potrzeby, tak, aby co najmniej jeden z nich jest typ innych rozszerzane. W poprzednim przykładzie, należy zmienić typ `stepVar` do `Integer`.  
+-   Zmień typy granice pętli i zmienna zgodnie z potrzebami, tak, aby co najmniej jeden z nich to typ, który inne mogą zostać poszerzone do. W poprzednim przykładzie, należy zmienić typ `stepVar` do `Integer`.  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   Użyj konwersji jawnej, aby przekonwertować granice pętli i zmienna krok do odpowiednich typów. W powyższym przykładzie `Val` funkcja `stepVar`.  
+-   Użyj funkcji konwersji jawnej konwertować granice pętli i zmienna na odpowiednie typy. W poprzednim przykładzie, należy zastosować `Val` funkcja `stepVar`.  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  
@@ -62,11 +62,11 @@ Dim n = 20
     Next  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
- [For...Next, instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Infer, instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.Conversion.Val%2A>
+- [For...Next, instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Option Infer, instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

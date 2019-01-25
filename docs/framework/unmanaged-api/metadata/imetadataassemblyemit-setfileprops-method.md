@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8017f816632cffc42676761a367e980d1cafe088
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 203c31129218be585960e771b1d7e669defd8cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743299"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps — Metoda
-Modyfikuje określony `File` struktura metadanych.  
+Modyfikuje określonego `File` struktury metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,28 +40,28 @@ HRESULT SetFileProps (
   
 #### <a name="parameters"></a>Parametry  
  `file`  
- [in] Token metadanych, który określa `File` struktura metadanych ma być zmodyfikowana.  
+ [in] Token metadanych, który określa `File` struktury metadanych do zmodyfikowania.  
   
  `pbHashValue`  
- [in] Wskaźnik do wyznaczania wartości skrótu danych skojarzonych z plikiem.  
+ [in] Wskaźnik do danych wyznaczania wartości skrótu, skojarzone z plikiem.  
   
  `cbHashValue`  
- [in] Wyrażony w bajtach rozmiar `pbHashValue`.  
+ [in] Rozmiar w bajtach `pbHashValue`.  
   
  `dwFileFlags`  
- [in] Bitowe połączenie [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) wartości, które określają różne atrybuty pliku.  
+ [in] Bitowa kombinacja [corfileflags —](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) wartości, które określają różne atrybuty pliku.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby utworzyć `File` metadanych struktury, użyj [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) metody.  
+ Aby utworzyć `File` struktury metadanych, użyj [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

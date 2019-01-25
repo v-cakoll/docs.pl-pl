@@ -16,29 +16,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd3c19bbbcb5b1a5f0e89b9df86f87beca32cd00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0dfc1535338f45ac812c089203f2ae13a500ceec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689172"
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem — Interfejs
-Reprezentuje element zainstalowany w globalnej pamięci podręcznej zestawów.  
+Reprezentuje element, który został zainstalowany w globalnej pamięci podręcznej.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetReference, metoda](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|Pobiera wskaźnik do `FUSION_INSTALL_REFERENCE` reprezentowany przez to struktura `IInstallReferenceItem`.|  
+|[GetReference, metoda](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|Pobiera wskaźnik do `FUSION_INSTALL_REFERENCE` struktury reprezentowany przez ten `IInstallReferenceItem`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Fusion.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [FUSION_INSTALL_REFERENCE, struktura](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [FUSION_INSTALL_REFERENCE, struktura](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

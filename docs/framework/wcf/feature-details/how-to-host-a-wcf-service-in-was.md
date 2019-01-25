@@ -2,17 +2,17 @@
 title: 'Instrukcje: Hostowanie usługi WCF w usłudze WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: fd48957f7f8410b4b0df39fe125c35e4fc98cb8e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651178"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Instrukcje: Hostowanie usługi WCF w usłudze WAS
 W tym temacie wymieniono podstawowe kroki wymagane do utworzenia usługi aktywacji procesów Windows (znany także jako WAS) hostowanych usług Windows Communication Foundation (WCF). ZOSTAŁA nowa usługa aktywacji procesów, która jest uogólnienie funkcji Internet Information Services (IIS), które działają z protokołami protokołu HTTP. Usługi WCF używa interfejsu karty odbiornika do komunikowania się żądania aktywacji, które są odbierane za pośrednictwem protokołów innych niż HTTP obsługiwane przez architekturę WCF, takich jak TCP, nazwanych potoków i usługi kolejkowania komunikatów.  
   
- Ta opcja hostingu wymaga składników aktywacji WAS są prawidłowo zainstalowane i skonfigurowane, ale nie wymaga hostowania kodu do zapisania jako część aplikacji. Aby uzyskać więcej informacji o instalowaniu i konfigurowaniu WAS, zobacz [porady: Instalowanie i konfigurowanie składników aktywacji programu WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Ta opcja hostingu wymaga składników aktywacji WAS są prawidłowo zainstalowane i skonfigurowane, ale nie wymaga hostowania kodu do zapisania jako część aplikacji. Aby uzyskać więcej informacji o instalowaniu i konfigurowaniu WAS, zobacz [jak: Instalowanie i konfigurowanie składników aktywacji programu WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 >  BYŁA aktywacja nie jest obsługiwana, jeśli potok przetwarzania żądania serwer sieci web jest ustawiany w trybie klasycznym. Potok przetwarzania żądania serwer sieci web musi być równa w trybie zintegrowanym, w przypadku aktywacji WAS do użycia.  
@@ -21,13 +21,13 @@ W tym temacie wymieniono podstawowe kroki wymagane do utworzenia usługi aktywac
   
 -   ConnectionBufferSize  
   
--   channelInitializationTimeout  
+-   ChannelInitializationTimeout  
   
--   maxPendingConnections  
+-   MaxPendingConnections  
   
 -   MaxOutputDelay  
   
--   maxPendingAccepts  
+-   MaxPendingAccepts  
   
 -   ConnectionPoolSettings.IdleTimeout  
   
@@ -98,6 +98,6 @@ W tym temacie wymieniono podstawowe kroki wymagane do utworzenia usługi aktywac
   
 6.  Kompilowanie i uruchamianie klienta.  
   
-## <a name="see-also"></a>Zobacz też  
- [Aktywacja TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Zobacz także
+- [Aktywacja TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 2e37a42b3767d279da0d742ba9958ceb6628aab1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5078e12ed5c68556a1d1d04d01c90440b57c1407
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736406"
 ---
 # <a name="services-and-transactions"></a>Usługi i transakcje
 Aplikacje Windows Communication Foundation (WCF) zainicjować transakcji z w ramach klienta oraz koordynowanie transakcji w ramach operacji usługi. Klienci mogą inicjować transakcji i wywoływanie kilka operacji usług i upewnij się, że operacje usług są albo przekazana lub wycofana jako pojedyncza jednostka.  
@@ -88,7 +88,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Obsługa transakcyjna w elemencie System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
- [Modele transakcji](../../../docs/framework/wcf/feature-details/transaction-models.md)  
- [Przepływ transakcji WS](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+## <a name="see-also"></a>Zobacz także
+- [Obsługa transakcyjna w elemencie System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)
+- [Modele transakcji](../../../docs/framework/wcf/feature-details/transaction-models.md)
+- [Przepływ transakcji WS](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

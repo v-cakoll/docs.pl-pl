@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6db1a3f5fd2011a13a28551a38b319995039ab38
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 08f2640613335b0ba54a4ff970b7d105d52b92c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743481"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Instalowanie programu .NET Framework w systemach Windows 10 i Windows Server 2016
 
@@ -20,7 +20,7 @@ Użytkownik może już korzystać na tej stronie po próby uruchomienia aplikacj
 
 ![Nie można uruchomić tej aplikacji](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-472"></a>.NET framework 4.7.2
+## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 .NET Framework 4.7.2 jest dołączone do:
 
@@ -78,6 +78,6 @@ Jeśli nie można pobrać poprawną wersję programu .NET Framework zainstalowan
 
 ## <a name="see-also"></a>Zobacz także
 
-[Pliki do pobrania platformy .NET](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)   
-[Rozwiązywanie problemów z zablokowanych .NET Framework i odinstalowywaniem programu](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Instalowanie programu .NET Framework dla deweloperów](guide-for-developers.md)
+- [Pliki do pobrania platformy .NET](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)
+- [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Instalowanie programu .NET Framework dla deweloperów](guide-for-developers.md)

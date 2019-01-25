@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 220cd1a41ed69325b557e6498a511865b78817ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a222f578daed0ab81e2136e00d6f9b032acd95fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744937"
 ---
 # <a name="icordebugbreakpoint-interface1"></a>ICorDebugBreakpoint Interface1
-Reprezentuje punkt przerwania w funkcji lub punkt czujki na wartość.  
+Reprezentuje punkt przerwania w funkcji lub punkt obserwacji wartości.  
   
 ## <a name="methods"></a>Metody  
   
@@ -34,15 +34,15 @@ Reprezentuje punkt przerwania w funkcji lub punkt czujki na wartość.
 |[IsActive, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Pobiera wartość wskazującą, czy to `ICorDebugBreakpoint` jest aktywny.|  
   
 ## <a name="remarks"></a>Uwagi  
- Punkty przerwania nie obsługują bezpośrednio wyrażenia warunkowego. W razie potrzeby takich funkcji debugera musi implementować on nad `ICorDebugBreakpoint`.  
+ Punkty przerwania nie obsługują bezpośrednio wyrażenia warunkowe. W razie potrzeby takie funkcje debugera musi implementować go w górnej części `ICorDebugBreakpoint`.  
   
- Interfejs ICorDebugFunctionBreakpoint rozszerza `ICorDebugBreakpoint` do obsługi punktów przerwania w funkcjach.  
+ Icordebugfunctionbreakpoint — interfejs rozszerza `ICorDebugBreakpoint` do obsługi punktów przerwania w obrębie funkcji.  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -50,5 +50,5 @@ Reprezentuje punkt przerwania w funkcji lub punkt czujki na wartość.
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

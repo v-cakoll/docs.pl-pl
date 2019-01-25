@@ -3,12 +3,12 @@ title: '&lt;nameClaimType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: bd4033b2edea7450b66c25f446669b3ded65e9af
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 502fc5dd14d7bc3d979153607e1eeeb9354031bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737432"
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 Ustawia typ oświadczenia, który określa <xref:System.Security.Principal.IIdentity.Name%2A> właściwości. Typ oświadczenia jest używany do wyszukiwania <xref:System.Security.Claims.Claim> w kolekcji <xref:System.Security.Claims.ClaimsIdentity> obiektów zwróconych przez <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> metody tego programu obsługi tokenów. Zgodne oświadczenie jest następnie wartość jako nazwa <xref:System.Security.Principal.IIdentity> wygenerowany na podstawie tego programu obsługi tokenów.  
@@ -17,8 +17,8 @@ Ustawia typ oświadczenia, który określa <xref:System.Security.Principal.IIden
 \<identityConfiguration>  
 \<securityTokenHandlers>  
 \<add>  
-\<samlSecurityTokenRequirement >  
-\<nameClaimType >  
+\<samlSecurityTokenRequirement>  
+\<nameClaimType>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,7 +44,7 @@ Ustawia typ oświadczenia, który określa <xref:System.Security.Principal.IIden
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|value|Ciąg określający URI, który reprezentuje typ oświadczenia, oświadczenia do użycia dla <xref:System.Security.Principal.IIdentity.Name%2A> właściwości. Wymagane.|  
+|value|Ciąg określający URI, który reprezentuje typ oświadczenia, oświadczenia do użycia dla <xref:System.Security.Principal.IIdentity.Name%2A> właściwości. Wymagana.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -68,5 +68,5 @@ Ustawia typ oświadczenia, który określa <xref:System.Security.Principal.IIden
 </add>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>

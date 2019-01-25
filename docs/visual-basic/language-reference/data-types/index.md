@@ -37,12 +37,12 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 14eaacda83576b6c38d4783fba7c898a8c4aaa5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746822"
 ---
 # <a name="data-type-summary-visual-basic"></a>Typ danych — Podsumowanie (Visual Basic)
 W poniższej tabeli przedstawiono typy danych Visual Basic, ich obsługi popularnych typów środowiska wykonawczego dla języka, ich nominalnych alokacji i ich zakresami wartości.  
@@ -57,7 +57,7 @@ W poniższej tabeli przedstawiono typy danych Visual Basic, ich obsługi popular
 |[Podwójne](../../../visual-basic/language-reference/data-types/double-data-type.md) (podwójnej precyzji zmiennoprzecinkowego)|<xref:System.Double>|8 bajtów|-1.79769313486231570E + 308 do - 4.94065645841246544E-324 <sup>†</sup> dla wartości ujemnych;<br /><br /> 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 <sup>†</sup> dla wartości dodatnich|  
 |[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 bajty|-2,147,483,648 do 2 147 483 647 (z podpisem)|  
 |[Długi](../../../visual-basic/language-reference/data-types/long-data-type.md) (liczba całkowita typu long)|<xref:System.Int64>|8 bajtów|-9,223,372,036,854,775,808 za pośrednictwem 9,223,372,036,854,775,807 (9.2... E + 18 <sup>†</sup>) (z podpisem)|  
-|[obiekt](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (klasa)|4 bajty na platformie 32-bitowej<br /><br /> 8 bajtów na platformie 64-bitowej|Dowolny typ mogą być przechowywane w zmiennej typu `Object`|  
+|[Obiekt](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (klasa)|4 bajty na platformie 32-bitowej<br /><br /> 8 bajtów na platformie 64-bitowej|Dowolny typ mogą być przechowywane w zmiennej typu `Object`|  
 |[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 bajt|od -128 do 127 (z podpisem)|  
 |[Krótki](../../../visual-basic/language-reference/data-types/short-data-type.md) (krótka liczba całkowita)|<xref:System.Int16>|2 bajty|-32 768 za pośrednictwem 32 767 znaków (z podpisem)|  
 |[Pojedynczy](../../../visual-basic/language-reference/data-types/single-data-type.md) (pojedynczej precyzji zmiennoprzecinkowego)|<xref:System.Single>|4 bajty|-3.4028235E + 38-do - 1, 401298E-45 <sup>†</sup> dla wartości ujemnych;<br /><br /> 1, 401298E-45 za pośrednictwem 3.4028235E + 38 <sup>†</sup> dla wartości dodatnich|  
@@ -91,10 +91,10 @@ W poniższej tabeli przedstawiono typy danych Visual Basic, ich obsługi popular
 ### <a name="object-overhead"></a>Obciążenie obiektu  
  `Object` Odwołujące się do żadnych danych podstawowych lub złożonego typu używa 4 bajtów oprócz danych znajdujących się na typ danych.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Znaki typu](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Znaki typu](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

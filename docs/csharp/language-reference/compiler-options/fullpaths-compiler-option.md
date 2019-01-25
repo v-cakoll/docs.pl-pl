@@ -10,12 +10,12 @@ helpviewer_keywords:
 - full paths [C#]
 - -fullpaths compiler option [C#]
 ms.assetid: d2a5f857-cbb2-430b-879c-d648aaf0b8c4
-ms.openlocfilehash: 8f23bb683067c55f5b5213065c3082b843dd7dce
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 160938e631d9f9e49d53bbec8806c7a134864701
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637689"
 ---
 # <a name="-fullpaths-c-compiler-options"></a>-fullpaths (opcje kompilatora C#)
 **- Fullpaths** opcja powoduje, że kompilator, aby określić pełną ścieżkę do pliku, podczas wyświetlania listy kompilacji błędy i ostrzeżenia.  
@@ -31,6 +31,6 @@ ms.locfileid: "43522946"
   
  Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można zmienić programowo.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)

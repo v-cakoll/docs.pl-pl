@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 94ebef007cf2893b63383aa4657d382728d3c759
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 3aac7e24fa9cd03350aebf5f441063bcedfaed04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644771"
 ---
 # <a name="clrdatailaddressmap-structure"></a>CLRDATA_IL_ADDRESS_MAP Structure
 
@@ -60,7 +60,7 @@ Ta struktura znajduje się wewnątrz środowiska uruchomieniowego i nie jest dos
 **Biblioteka:** Brak   
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wyliczenie CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

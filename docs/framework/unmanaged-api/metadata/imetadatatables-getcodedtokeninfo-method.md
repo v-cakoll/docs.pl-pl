@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7a36d14b67efb3934089dc16de41a3b80ea0c0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11ab93e9cb4449ab77e5e9c4da81073aaf432382
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669695"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>IMetaDataTables::GetCodedTokenInfo — Metoda
-Pobiera wskaźnik do tablicy tokenów skojarzone z indeks określonego wiersza.  
+Pobiera wskaźnik do tablicy tokenów skojarzone z indeksem określony wiersz.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,26 +40,26 @@ HRESULT GetCodedTokenInfo (
   
 #### <a name="parameters"></a>Parametry  
  `ixCdTkn`  
- [in] Rodzaj kodowanego tokenu do zwrócenia.  
+ [in] Rodzaj kodowane token do zwrócenia.  
   
  `pcTokens`  
  [out] Wskaźnik do długości `ppTokens`.  
   
  `ppTokens`  
- [out] Wskaźnik do wskaźnika do tablicy, która zawiera listę zwrócił tokenów.  
+ [out] Wskaźnik do wskaźnika do tablicy, która zawiera listę zwracane tokenów.  
   
  `ppName`  
- [out] Wskaźnik na wskaźnik do nazwy token w `ixCdTkn`.  
+ [out] Wskaźnik do wskaźnika do nazwy token na `ixCdTkn`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

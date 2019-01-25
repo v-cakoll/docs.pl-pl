@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: c1aaaca83b8631a87a8987b9676b53161e821117
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 39a3cd059c0fa9aad1ef2c1ae50fa37b95df52d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650447"
 ---
 # <a name="fromtoby-animations-overview"></a>Przegląd Cechy animacji od/do/przez
 W tym temacie opisano sposób użycia animacji od/do/przez animować właściwości zależności. Od/do/przez animację tworzy przejście między dwiema wartościami.  
@@ -103,10 +103,10 @@ W tym temacie opisano sposób użycia animacji od/do/przez animować właściwo�
  [!code-csharp[basicvalues_snip#ToAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#toanimationinline)]
  [!code-vb[basicvalues_snip#ToAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#toanimationinline)]  
   
-### <a name="by"></a>Przez  
+### <a name="by"></a>Od  
  Po ustawieniu wartości po prostu <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości animacji, animacji w miarę z podstawową wartość właściwość, która jest jest animowany lub z danych wyjściowych, tworzenie animacji do sumy tej wartości i wartości, który jest określony przez <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Właściwość.  
   
- W poniższym przykładzie ustawiono po prostu <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwość <xref:System.Windows.Media.Animation.DoubleAnimation> 300. Ponieważ przykładu nie określa wartość początkową <xref:System.Windows.Media.Animation.DoubleAnimation> używa wartości bazowej <xref:System.Windows.FrameworkElement.Width%2A> właściwość, 100, jako jego wartość początkową. Wartość końcowa jest ustalany przez dodanie <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> wartości animacji, 300, jego wartość początkową 100:400. W rezultacie <xref:System.Windows.FrameworkElement.Width%2A> z <xref:System.Windows.Shapes.Rectangle> jest animowany od 100 do 400.  
+ W poniższym przykładzie ustawiono po prostu <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwość <xref:System.Windows.Media.Animation.DoubleAnimation> 300. Ponieważ przykładu nie określa wartość początkową <xref:System.Windows.Media.Animation.DoubleAnimation> używa wartości bazowej <xref:System.Windows.FrameworkElement.Width%2A> właściwość, 100, jako jego wartość początkową. Wartość końcowa jest ustalany przez dodanie <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> wartości animacji, 300, jego wartość początkową 100: 400. W rezultacie <xref:System.Windows.FrameworkElement.Width%2A> z <xref:System.Windows.Shapes.Rectangle> jest animowany od 100 do 400.  
   
  [!code-csharp[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#byanimationinline)]
  [!code-vb[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#byanimationinline)]  
@@ -114,7 +114,7 @@ W tym temacie opisano sposób użycia animacji od/do/przez animować właściwo�
 ### <a name="fromby"></a>Od/przez  
  Po ustawieniu <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości animacji, w miarę animacji z wartości, który jest określony przez <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości na wartość, która jest określona przez sumę <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości.  
   
- Poniższy przykład ustawia <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwość <xref:System.Windows.Media.Animation.DoubleAnimation> 50 i jego <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości do 300. Wartość końcowa jest ustalany przez dodanie <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> wartości animacji, 300, jego wartość początkową 50:350. W rezultacie <xref:System.Windows.FrameworkElement.Width%2A> z <xref:System.Windows.Shapes.Rectangle> jest animowany od 50 do 350.  
+ Poniższy przykład ustawia <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwość <xref:System.Windows.Media.Animation.DoubleAnimation> 50 i jego <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości do 300. Wartość końcowa jest ustalany przez dodanie <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> wartości animacji, 300, jego wartość początkową 50: 350. W rezultacie <xref:System.Windows.FrameworkElement.Width%2A> z <xref:System.Windows.Shapes.Rectangle> jest animowany od 50 do 350.  
   
  [!code-csharp[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#frombyanimationinline)]
  [!code-vb[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#frombyanimationinline)]  
@@ -140,12 +140,12 @@ W tym temacie opisano sposób użycia animacji od/do/przez animować właściwo�
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Umożliwia również tworzenie własnych typów animacji niestandardowej. Aby uzyskać więcej informacji, zobacz [niestandardowe animacje — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Animation.Timeline>  
- <xref:System.Windows.Media.Animation.Storyboard>  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Animacje ścieżki — przegląd](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
- [Niestandardowe animacje — przegląd](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)  
- [Od, do i przez przykład wartości docelowej animacji](https://go.microsoft.com/fwlink/?LinkID=159988)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Animation.Timeline>
+- <xref:System.Windows.Media.Animation.Storyboard>
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Animacje ścieżki — przegląd](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
+- [Niestandardowe animacje — przegląd](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)
+- [Od, do i przez przykład wartości docelowej animacji](https://go.microsoft.com/fwlink/?LinkID=159988)

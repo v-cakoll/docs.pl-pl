@@ -2,12 +2,12 @@
 title: MULTISET (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
-ms.openlocfilehash: 64069e1bf2af61748a9e23a469dcdbc74fa9fac7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad54450b8f987da9a7a502d6561a58794a24b207
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655182"
 ---
 # <a name="multiset-entity-sql"></a>MULTISET (jednostka SQL)
 Tworzy wystąpienie zestawu wielokrotnego na podstawie listy wartości. Wszystkie wartości w Konstruktor MULTISET musi być zgodne z typem `T`. Pusty zestaw wielokrotny konstruktory nie są dozwolone.  
@@ -50,6 +50,6 @@ or
   
  [!code-csharp[DP EntityServices Concepts 2#MULTISET](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiset)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Konstruowanie typów](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)  
- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Konstruowanie typów](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

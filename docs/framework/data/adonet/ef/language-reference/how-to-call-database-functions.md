@@ -1,18 +1,18 @@
 ---
-title: 'Porady: wywoływanie funkcji bazy danych'
+title: 'Instrukcje: Wywoływanie funkcji bazy danych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 79038efa-15bf-464a-83e2-35fe145252ce
-ms.openlocfilehash: 4a18bbad4bf38c69f86a320d95e893a7680315fb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2b157f9ff1e87b54b965a3ed57865bf7963a7509
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742045"
 ---
-# <a name="how-to-call-database-functions"></a>Porady: wywoływanie funkcji bazy danych
+# <a name="how-to-call-database-functions"></a>Instrukcje: Wywoływanie funkcji bazy danych
 <xref:System.Data.Objects.SqlClient.SqlFunctions> Klasa zawiera metody, które udostępniają funkcje programu SQL Server do użycia w składniku LINQ do zapytań jednostki. Kiedy używasz <xref:System.Data.Objects.SqlClient.SqlFunctions> metody w składniku LINQ do kwerendy jednostek, z odpowiednimi funkcjami bazy danych są wykonywane w bazie danych.  
   
 > [!NOTE]
@@ -33,6 +33,6 @@ ms.locfileid: "43499903"
  [!code-csharp[DP L2E CanonicalAndStoreFunctions#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e canonicalandstorefunctions/cs/program.cs#4)]
  [!code-vb[DP L2E CanonicalAndStoreFunctions#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e canonicalandstorefunctions/vb/module1.vb#4)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wywoływanie funkcji w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
- [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Zobacz także
+- [Wywoływanie funkcji w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
+- [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

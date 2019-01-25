@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ca3f5a6af6ea19ec81af3f6ac0a028440f80d56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16c4e03667d4af3ab5cc8b653d77f15eaef25843
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691830"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult — Wyliczenie
-Zawiera szczegółowe informacje o sposobie uzyskano wartość wskaźnika instrukcji (IP).  
+Zawiera szczegółowe informacje, jak uzyskać była wartość wskaźnika instrukcji (IP).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,18 +43,18 @@ typedef enum CorDebugMappingResult {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`MAPPING_PROLOG`|Kod natywny znajduje się w prologu, więc wartość adresu IP wynosi 0.|  
-|`MAPPING_EPILOG`|Kod natywny jest w epilogu, dlatego wartość adres IP jest adresem ostatniej instrukcji metody.|  
-|`MAPPING_NO_INFO`|Informacje mapowania są niedostępne w przypadku metody, więc wartość adresu IP wynosi 0.|  
-|`MAPPING_UNMAPPED_ADDRESS`|Ma informacji o mapowaniu dla metody, ale bieżący adres nie można mapować do kodu języka pośredniego (MSIL) firmy Microsoft. Wartość adresu IP to 0.|  
-|`MAPPING_EXACT`|Metoda mapuje się dokładnie do kodu MSIL albo został zinterpretowany ramki, dlatego wartość adres IP jest dokładne.|  
-|`MAPPING_APPROXIMATE`|Metoda został pomyślnie zamapowany, ale wartość adresu IP może być przybliżonej.|  
+|`MAPPING_PROLOG`|Kod macierzysty znajduje się w prologu, więc wartość adresu IP wynosi 0.|  
+|`MAPPING_EPILOG`|Natywny kod znajduje się w epilogu, więc wartość adresu IP jest adresem ostatniej instrukcji metody.|  
+|`MAPPING_NO_INFO`|Nie informacji o mapowaniu jest dostępna w przypadku metody, więc wartość adresu IP wynosi 0.|  
+|`MAPPING_UNMAPPED_ADDRESS`|Mimo że istnieje informacje dotyczące mapowania dla metody, bieżący adres nie można zamapować na kod intermediate language (MSIL) firmy Microsoft. Wartość adresu IP wynosi 0.|  
+|`MAPPING_EXACT`|Metoda mapuje dokładnie kod MSIL albo ramki jest interpretowany, więc wartość adresu IP jest dokładne.|  
+|`MAPPING_APPROXIMATE`|Metoda został pomyślnie zamapowany, ale wartość adresu IP może być przybliżone.|  
   
 ## <a name="remarks"></a>Uwagi  
- Można użyć [ICorDebugILFrame::GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) metodę, aby uzyskać wartość wskaźnika instrukcji.  
+ Możesz użyć [ICorDebugILFrame::GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) metodę, aby uzyskać wartość wskaźnika instrukcji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -62,5 +62,5 @@ typedef enum CorDebugMappingResult {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

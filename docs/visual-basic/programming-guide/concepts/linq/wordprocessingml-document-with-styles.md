@@ -1,27 +1,27 @@
 ---
-title: Schemat WordprocessingML dokument z Styles2
+title: Dokument WordprocessingML ze Styles2
 ms.date: 07/20/2015
 ms.assetid: a9136e4d-c368-4661-8049-7d45c679a236
-ms.openlocfilehash: 0f6ca610d67418582e3426bb911b26eb846070da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 685e32373f864b9e8cc04b0da5250bd96efd23c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729326"
 ---
-# <a name="wordprocessingml-document-with-styles"></a>Schemat WordprocessingML dokumentu przy użyciu stylów
-Bardziej złożone dokumenty schemat WordprocessingML mają akapitów sformatowanych przy użyciu stylów.  
+# <a name="wordprocessingml-document-with-styles"></a>Dokument WordprocessingML ze stylami
+Bardziej skomplikowanych dokumentów WordprocessingML mają akapitów, które są formatowane przy użyciu stylów.  
   
- Kilka uwagi dotyczące organizację schemat WordprocessingML dokumenty są przydatne. Schemat WordprocessingML dokumenty są przechowywane w pakietach. Pakiety zawierają wiele części (części mają jawne znaczenie, gdy są używane w kontekście pakietów; zasadniczo części są pliki, które są ze sobą zip obejmuje pakietu). Jeśli dokument zawiera akapitów sformatowanych przy użyciu stylów, będzie części dokumentu zawierającego akapitów, które mają style zastosowanych do nich. Będzie również części styl zawiera style, które odwołuje się dokument.  
+ Kilka uwag dotyczących korzeń dokumentów WordprocessingML są przydatne. Dokumentów WordprocessingML są przechowywane w pakietach. Pakiety mają wiele części (elementy mają jawne znaczenie, gdy są używane w kontekście pakietów; zasadniczo części są pliki, które są ze sobą zip obejmuje pakiet). Jeśli dokument zawiera akapitów, które są formatowane przy użyciu stylów, nie będą part dokumentu, który zawiera akapitów, które mają do nich stosowane style. Będzie również part styl, który zawiera style, które odnoszą się do dokumentu.  
   
- Podczas uzyskiwania dostępu do pakietów, należy to robić przy użyciu relacji między częściami, a nie przy użyciu dowolnego ścieżki. Ten problem jest poza zakres manipulowanie zawartości w samouczku schemat WordprocessingML dokumentu, ale programy przykładzie, które znajdują się w tym samouczku pokazują właściwe podejście.  
+ Podczas uzyskiwania dostępu do pakietów, ważne jest, że możesz to zrobić za pomocą relacji między części, a nie przy użyciu dowolnego ścieżki. Ten problem nie zostanie poza zakres tematyczny manipulowanie zawartością w dokumencie WordprocessingML samouczku, ale programy przykładu, które znajdują się w tym samouczku pokazują właściwe podejście.  
   
-## <a name="a-document-that-uses-styles"></a>Dokument, który używa style  
- Przykład WordML przedstawiony w [kształtu dokumenty schemat WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) tematu jest bardzo proste. Ten dokument jest bardziej skomplikowany: ma akapitów sformatowanych przy użyciu stylów. Najprostszym sposobem wyświetlenia, XML, tworzącą dokumentu pakietu Office Open XML jest uruchomienie [przykład tego wyjść Office Open XML części dokumentu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
+## <a name="a-document-that-uses-styles"></a>Dokument, który używa stylów  
+ Przykład WordML przedstawiony w [kształt dokumentów WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) tematu jest bardzo prosty. Ten dokument jest bardziej skomplikowany: Ma ona akapitów, które są formatowane przy użyciu stylów. Najprostszym sposobem wyświetlenia, XML, który sprawia, że dokument pakietu Office Open XML jest uruchomienie [przykład, że dane wyjściowe Office Open XML części dokumentu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
   
- W następującym dokumencie ust ma styl `Heading1`. Istnieje wiele akapitów, które mają domyślny styl. Istnieje również kilka akapitów, które mają styl `Code`. Złożoność Ta względna jest bardziej interesującego dokument do analizy LINQ do XML.  
+ W następującym dokumencie pierwszym akapicie ma styl `Heading1`. Istnieje szereg akapitów, które mają domyślnego stylu. Dostępne są także szereg akapitów, które mają styl `Code`. Ze względu na tę złożoność względną jest bardziej interesujące dokument, można przeanalizować za pomocą LINQ to XML.  
   
- W tych punktach z innych niż domyślne style elementów akapitu ma element podrzędny o nazwie `w:pPr`, który z kolei ma element podrzędny `w:pStyle`. Ten element ma atrybut `w:val`, który zawiera nazwę stylu. Jeśli akapitu ma domyślny styl, oznacza to, że nie ma elementu akapitu `w:p.Pr` element podrzędny.  
+ W tych punktach przy użyciu stylów innych niż domyślne elementy akapitu ma element podrzędny o nazwie `w:pPr`, który z kolei ma element podrzędny `w:pStyle`. Ten element ma atrybut `w:val`, który zawiera nazwę stylu. Jeśli domyślnego stylu akapitu, oznacza to, że nie ma element akapitu `w:p.Pr` elementu podrzędnego.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -137,5 +137,5 @@ Bardziej złożone dokumenty schemat WordprocessingML mają akapitów sformatowa
 </w:document>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Szczegóły pakietu Office otwieranie dokumentów schemat WordprocessingML XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>Zobacz także
+- [Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

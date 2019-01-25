@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b4e835d01ac0e1249a9a4c71a3a9db25082fec1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964860"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698894"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Niestandardowe partycjonery dla PLINQ i TPL
 Równoległe przetwarzanie operacji na źródle danych, jest jedną z czynności niezbędne do *partycji* źródło w wiele sekcji, które mogą być udostępniane jednocześnie z wielu wątków. Program PLINQ i Biblioteka zadań równoległych (TPL) zapewnia domyślne moduły partycjonowania, które działają w sposób niewidoczny dla użytkownika podczas wpisywania zapytanie równoległe lub <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli. Dla bardziej zaawansowanych scenariuszy można dodać własne partycjonera.  
@@ -23,7 +23,7 @@ Równoległe przetwarzanie operacji na źródle danych, jest jedną z czynności
 ## <a name="kinds-of-partitioning"></a>Rodzaje partycjonowania  
  Istnieje wiele sposobów partycjonowania źródła danych. Wiele wątków w najbardziej efektywny sposób podejścia, współpracować, aby proces oryginalnej sekwencji źródłowej, a nie fizycznie oddzielenie źródło w wiele podciągów. Tablice i inne indeksowany źródeł takich jak <xref:System.Collections.IList> kolekcji, której długość jest znana z wyprzedzeniem, *partycjonowania zakresu* to najprostszy rodzaj partycjonowania. Każdy wątek otrzymuje unikatowy rozpoczęcia i zakończenia indeksów, tak, aby przetworzyć jego zakres źródła bez zastępowania lub zastąpieniem przez inne wątków. Tylko kłopotów związanych z partycjonowania zakresu jest początkowa pracy tworzenia zakresów; nie dodatkowe synchronizacji jest wymagany po tym. W związku z tym jego zapewniają dobrą wydajność, tak długo, jak długo obciążenie jest dzielone równomiernie jedna. Partycjonowania zakresu niedogodność polega na tym, że jeśli jeden wątek zakończy się wcześniej, nie będzie pomocna wątków, Zakończ pracę.  
   
- W przypadku połączonej listy lub innych kolekcji, której długość jest nieznany, można użyć *fragmentów jest partycjonowanie*. W przypadku użycia partycjonowania fragmentów każdego wątku lub zadania w pętli równoległej lub zapytanie zużywa pewnej liczby elementów źródła w jednym fragmencie, przetwarza je i następnie wróci do pobierania dodatkowych elementów. Partycjonera gwarantuje, że wszystkie elementy są rozpowszechniane i czy nie ma duplikatów. Fragment może być dowolnego rozmiaru. Na przykład partycjonera, która została przedstawiona w [porady: Implementowanie partycji dynamicznych](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) tworzy fragmentów, które zawierają tylko jeden element. Tak długo, jak fragmenty nie są zbyt duże, tego rodzaju Partycjonowanie jest natury równoważenia obciążenia ponieważ przypisanie elementów, które mają wątków nie jest wstępnie określić. Jednak partycjonera naliczone obciążenie synchronizacji każdorazowo, wątek musi uzyskać inny fragmentów. Ilość synchronizacji w takich przypadkach jest odwrotnie proporcjonalna do wielkości fragmentów.  
+ W przypadku połączonej listy lub innych kolekcji, której długość jest nieznany, można użyć *fragmentów jest partycjonowanie*. W przypadku użycia partycjonowania fragmentów każdego wątku lub zadania w pętli równoległej lub zapytanie zużywa pewnej liczby elementów źródła w jednym fragmencie, przetwarza je i następnie wróci do pobierania dodatkowych elementów. Partycjonera gwarantuje, że wszystkie elementy są rozpowszechniane i czy nie ma duplikatów. Fragment może być dowolnego rozmiaru. Na przykład partycjonera, która została przedstawiona w [jak: Implementowanie partycji dynamicznych](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) tworzy fragmentów, które zawierają tylko jeden element. Tak długo, jak fragmenty nie są zbyt duże, tego rodzaju Partycjonowanie jest natury równoważenia obciążenia ponieważ przypisanie elementów, które mają wątków nie jest wstępnie określić. Jednak partycjonera naliczone obciążenie synchronizacji każdorazowo, wątek musi uzyskać inny fragmentów. Ilość synchronizacji w takich przypadkach jest odwrotnie proporcjonalna do wielkości fragmentów.  
   
  Ogólnie rzecz biorąc partycjonowania zakresu tylko jest szybsze, czas wykonywania delegata jest mała, aby średni i źródło ma dużą liczbę elementów, gdy praca całkowita, każda partycja jest w przybliżeniu. Partycjonowanie fragmentów w związku z tym jest zwykle szybsze w większości przypadków. W źródłach z małą liczbą elementów lub dłuższym czasie wykonywania dla delegata następnie wydajność fragmentów i partycjonowania zakresu dotyczy równości.  
   
@@ -95,7 +95,7 @@ Równoległe przetwarzanie operacji na źródle danych, jest jedną z czynności
 ### <a name="dynamic-partitions"></a>Partycji dynamicznych  
  Jeśli zamierzasz partycjonera, który ma być używany w <xref:System.Threading.Tasks.Parallel.ForEach%2A> metody musi być może zwrócić dynamiczne liczby partycji. Oznacza to, partycjonera można podać moduł wyliczający dla nowej partycji na żądanie w dowolnym momencie podczas wykonywania pętli. Po prostu zawsze wtedy, gdy pętli dodaje nowe zadanie równoległe, żąda ona nową partycję dla tego zadania. Jeśli potrzebujesz danych prędkości, następnie dziedziczyć <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> tak, aby każdy element w poszczególnych partycjach jest przypisany unikatowy indeks.  
   
- Aby uzyskać więcej informacji i przykład zobacz [porady: Implementowanie partycji dynamicznych](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+ Aby uzyskać więcej informacji i przykład zobacz [jak: Implementowanie partycji dynamicznych](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
   
 ### <a name="contract-for-partitioners"></a>Kontrakt dla Partycjonery  
  Podczas implementowania niestandardowego partycjonera, należy przestrzegać następujących wytycznych, aby zapewnić poprawne interakcji z PLINQ i <xref:System.Threading.Tasks.Parallel.ForEach%2A> w TPL:  
@@ -112,9 +112,9 @@ Równoległe przetwarzanie operacji na źródle danych, jest jedną z czynności
   
     -   `KeysOrderedInEachPartition`: Każda partycja zwraca elementy z rosnącym kluczowych wskaźników.  
   
-    -   `KeysOrderedAcrossPartitions`: W przypadku wszystkich partycji, które są zwracane kluczy indeksów w partycji *i* są większe niż indeksy klucza partycji *i*-1.  
+    -   `KeysOrderedAcrossPartitions`: Dla wszystkich partycji, które są zwracane kluczy indeksów w partycji *i* są większe niż indeksy klucza partycji *i*-1.  
   
-    -   `KeysNormalized`: Monotonicznie coraz wszystkie indeksy klucza bez przerwy, począwszy od zera.  
+    -   `KeysNormalized`: Wszystkie indeksy klucza monotonicznie coraz więcej bez przerwy, począwszy od zera.  
   
 -   Wszystkie indeksy muszą być unikatowe. Nie mogą być zduplikowane indeksy. Jeśli ta reguła nie zostanie zastosowane, kolejność danych wyjściowych może być zaszyfrowane.  
   
@@ -122,6 +122,6 @@ Równoległe przetwarzanie operacji na źródle danych, jest jedną z czynności
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  
-- [Instrukcje: implementowanie partycji dynamicznych](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
-- [Instrukcje: implementowanie partycjonera dla partycjonowania statycznego](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)
+- [Instrukcje: Implementowanie partycji dynamicznych](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
+- [Instrukcje: Implementowanie Partycjonera dla partycjonowania statycznego](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

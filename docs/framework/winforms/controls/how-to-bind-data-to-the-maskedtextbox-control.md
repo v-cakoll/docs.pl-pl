@@ -1,5 +1,5 @@
 ---
-title: 'Porady: powiązanie danych z formantem MaskedTextBox'
+title: 'Instrukcje: Powiąż dane z formantem MaskedTextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 98d59e7443b51c17baafd05e6701c1418298b4a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1eccfb40cd256cb3ebea6f0dcf38d73d5d53e8bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735081"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Porady: powiązanie danych z formantem MaskedTextBox
-Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> sterować tak samo jak do żadnego formantu formularzy systemu Windows. Jednak jeśli format danych w bazie danych nie jest zgodny z formatu oczekiwanego przez definicję maski, należy sformatować dane. Poniższa procedura pokazuje, jak to zrobić przy użyciu <xref:System.Windows.Forms.Binding.Format> i <xref:System.Windows.Forms.Binding.Parse> zdarzenia <xref:System.Windows.Forms.Binding> klasy, aby wyświetlić numer telefonu oddzielne i telefonu rozszerzenie pola bazy danych jako pojedyncze pole można edytować.  
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Instrukcje: Powiąż dane z formantem MaskedTextBox
+Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> kontrolować, jak dowolną inną kontrolką Windows Forms. Jednak jeśli format danych w bazie danych nie jest zgodny z formatu oczekiwanego przez definicję maska sieci, należy ponownie sformatować dane. Poniższa procedura demonstruje, jak to zrobić za pomocą <xref:System.Windows.Forms.Binding.Format> i <xref:System.Windows.Forms.Binding.Parse> zdarzenia <xref:System.Windows.Forms.Binding> klasy, aby wyświetlić numer telefonu oddzielne i telefonów rozszerzenie pola bazy danych jako pojedyncze pole można edytować.  
   
- Poniższa procedura wymaga dostępu do bazy danych programu SQL Server o bazie danych Northwind zainstalowane.  
+ Poniższa procedura wymaga, że masz dostęp do bazy danych programu SQL Server za pomocą przykładowej bazy danych Northwind zainstalowane.  
   
-### <a name="to-bind-data-to-a-maskedtextbox-control"></a>Wiązanie danych z formantem MaskedTextBox  
+### <a name="to-bind-data-to-a-maskedtextbox-control"></a>Aby powiązać dane z kontrolką MaskedTextBox  
   
-1.  Utwórz nowy projekt formularzy systemu Windows.  
+1.  Utwórz nowy projekt Windows Forms.  
   
-2.  Przeciągnij dwa <xref:System.Windows.Forms.TextBox> formantów do formularza; nazwa je `FirstName` i `LastName`.  
+2.  Przeciągnij dwa <xref:System.Windows.Forms.TextBox> formanty do formularza; nazwij je `FirstName` i `LastName`.  
   
-3.  Przeciągnij <xref:System.Windows.Forms.MaskedTextBox> sterowania do formularza; nadaj mu nazwę `PhoneMask`.  
+3.  Przeciągnij <xref:System.Windows.Forms.MaskedTextBox> formant do formularza; nadaj mu nazwę `PhoneMask`.  
   
 4.  Ustaw <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> właściwość `PhoneMask` do `(000) 000-0000 x9999`.  
   
-5.  Dodaj następujące przestrzeni nazw importuje do formularza.  
+5.  Dodaj następująca przestrzeń nazw importuje do formularza.  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> sterować tak
     Imports System.Data.SqlClient  
     ```  
   
-6.  Kliknij prawym przyciskiem myszy formularz, a następnie wybierz pozycję **kod widoku**. Umieść ten kod w dowolnym miejscu w klasie formularza.  
+6.  Kliknij prawym przyciskiem myszy formularz, a następnie wybierz **Wyświetl kod**. Umieść ten kod w dowolnym miejscu w klasie formularza.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> sterować tak
     End Sub  
     ```  
   
-7.  Dodawanie obsługi zdarzeń <xref:System.Windows.Forms.Binding.Format> i <xref:System.Windows.Forms.Binding.Parse> zdarzenia o połączeniu i oddziel `PhoneNumber` i `Extension` pola powiązane z <xref:System.Data.DataSet>.  
+7.  Dodawanie obsługi zdarzeń <xref:System.Windows.Forms.Binding.Format> i <xref:System.Windows.Forms.Binding.Parse> zdarzeń w celu łączenia i oddzielić `PhoneNumber` i `Extension` pól z powiązanych z <xref:System.Data.DataSet>.  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> sterować tak
     End Sub  
     ```  
   
-8.  Dodaj dwa <xref:System.Windows.Forms.Button> formantów w formularzu. Nazwa je `previousButton` i `nextButton`. Kliknij dwukrotnie każdy przycisk, aby dodać <xref:System.Windows.Forms.Control.Click> obsługi zdarzeń, a następnie wypełnij obsługę zdarzeń, jak pokazano w poniższym przykładzie kodu.  
+8.  Dodaj dwie <xref:System.Windows.Forms.Button> formantów do formularza. Nazwij je `previousButton` i `nextButton`. Kliknij dwukrotnie każdy przycisk, aby dodać <xref:System.Windows.Forms.Control.Click> program obsługi zdarzeń, a następnie wypełnij procedury obsługi zdarzeń, jak pokazano w poniższym przykładzie kodu.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -228,10 +228,10 @@ Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> sterować tak
     End Sub  
     ```  
   
-9. Uruchom próbkę. Edytuj dane i użyj **Wstecz** i **dalej** przycisków, aby zobaczyć, czy dane jest prawidłowo utrwalony na <xref:System.Data.DataSet>.  
+9. Uruchamianie aplikacji przykładowej. Edytuj dane i użyj **Wstecz** i **dalej** przycisków, aby wyświetlić dane prawidłowo trwałość do <xref:System.Data.DataSet>.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod jest pełny kod wyświetlania wynikającą z wykonaniu poprzedniej procedury.  
+ Poniższy przykład kodu jest pełny kod ofercie wynikającym z wykonaniu poprzedniej procedury.  
   
  [!code-cpp[MaskedTextBoxData#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
  [!code-csharp[MaskedTextBoxData#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
@@ -239,15 +239,15 @@ Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> sterować tak
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Utwórz projekt Visual C# lub Visual Basic.  
+-   Tworzenie wizualizacji C# lub projekcie Visual Basic.  
   
--   Dodaj <xref:System.Windows.Forms.TextBox> i <xref:System.Windows.Forms.MaskedTextBox> formanty do formularza, zgodnie z opisem w poprzedniej procedurze.  
+-   Dodaj <xref:System.Windows.Forms.TextBox> i <xref:System.Windows.Forms.MaskedTextBox> formantów do formularza, zgodnie z opisem w poprzedniej procedurze.  
   
 -   Otwórz plik kodu źródłowego dla projektu domyślnego formularza.  
   
--   Zastąp kod przedstawiony w poprzedniej sekcji 'Code' kodu źródłowego w tym pliku.  
+-   Zastąp kod źródłowy, w tym pliku z kodem, wymienione w poprzedniej sekcji "Kod".  
   
 -   Kompilowanie aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik: praca z kontrolką MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+## <a name="see-also"></a>Zobacz także
+- [Przewodnik: Praca z formantem MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

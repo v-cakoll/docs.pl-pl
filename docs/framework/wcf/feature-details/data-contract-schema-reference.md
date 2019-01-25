@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030532"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662585"
 ---
 # <a name="data-contract-schema-reference"></a>Odwołanie do schematu kontraktu danych
 W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref:System.Runtime.Serialization.DataContractSerializer> do opisania wspólnego języka wspólnego (CLR) typy serializacji XML.  
@@ -38,7 +38,7 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
   
 -   Wszystkie adnotacje (z wyjątkiem tych opisanych w tym dokumencie) są ignorowane.  
   
-### <a name="xsschema-attributes"></a>\<xs:Schema >: atrybuty  
+### <a name="xsschema-attributes"></a>\<xs:schema>: attributes  
   
 |Atrybut|DataContract|  
 |---------------|------------------|  
@@ -55,7 +55,7 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
 |Spis treści|Schemat|  
 |--------------|------------|  
 |`include`|Obsługiwane. `DataContractSerializer` obsługuje xs: obejmują i xs:import. Jednak ogranicza Svcutil.exe następujące `xs:include/@schemaLocation` i `xs:import/@location` odwołuje się podczas ładowania metadanych z pliku lokalnego. Lista plików schematu muszą być przekazywane za pośrednictwem mechanizmu poza pasmem, a nie za pośrednictwem `include` w tym przypadku; `include`dokumentów schematu d są ignorowane.|  
-|`redefine`|Jest zabronione. Korzystanie z `xs:redefine` jest zabroniona przez `DataContractSerializer` ze względów bezpieczeństwa: `x:redefine` wymaga `schemaLocation` postępowania. W pewnych okolicznościach Svcutil.exe przy użyciu schematu DataContract ogranicza użycie `schemaLocation`.|  
+|`redefine`|Forbidden. Korzystanie z `xs:redefine` jest zabroniona przez `DataContractSerializer` ze względów bezpieczeństwa: `x:redefine` wymaga `schemaLocation` postępowania. W pewnych okolicznościach Svcutil.exe przy użyciu schematu DataContract ogranicza użycie `schemaLocation`.|  
 |`import`|Obsługiwane. `DataContractSerializer` obsługuje `xs:include` i `xs:import`. Jednak ogranicza Svcutil.exe następujące `xs:include/@schemaLocation` i `xs:import/@location` odwołuje się podczas ładowania metadanych z pliku lokalnego. Lista plików schematu muszą być przekazywane za pośrednictwem mechanizmu poza pasmem, a nie za pośrednictwem `include` w tym przypadku; `include`dokumentów schematu d są ignorowane.|  
 |`simpleType`|Obsługiwane. Zobacz `xs:simpleType` sekcji.|  
 |`complexType`|Obsługiwane, mapy i kontrakty danych. Zobacz `xs:complexType` sekcji.|  
@@ -70,30 +70,30 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
 ### <a name="general-information"></a>Informacje ogólne  
  Każdy typ złożony \<xs:complexType > mapuje kontraktu danych.  
   
-### <a name="xscomplextype-attributes"></a>\<xs:complexType >: atrybuty  
+### <a name="xscomplextype-attributes"></a>\<xs:complexType>: attributes  
   
 |Atrybut|Schemat|  
 |---------------|------------|  
 |`abstract`|Musi mieć wartość false (domyślnie).|  
-|`block`|Jest zabronione.|  
+|`block`|Forbidden.|  
 |`final`|Ignorowane.|  
 |`id`|Ignorowane.|  
 |`mixed`|Musi mieć wartość false (domyślnie).|  
 |`name`|Obsługiwane i mapowane na nazwie kontraktu danych. W przypadku kropki w nazwie, jest podejmowana próba mapowania typu do typu wewnętrznego. Na przykład typ złożony o nazwie `A.B` mapuje do kontraktu danych typu to znaczy wewnętrznego typu o nazwie kontraktu danych `A`, ale tylko wtedy, gdy typ kontraktu takich danych nie istnieje. Możliwe jest więcej niż jeden poziom zagnieżdżenia: na przykład `A.B.C` może być typu wewnętrznego, ale tylko wtedy, gdy `A` i `A.B` zarówno istnieje.|  
   
-### <a name="xscomplextype-contents"></a>\<xs:complexType >: zawartość  
+### <a name="xscomplextype-contents"></a>\<xs:complexType>: contents  
   
 |Spis treści|Schemat|  
 |--------------|------------|  
 |`simpleContent`|Rozszerzenia są zabronione.<br /><br /> Ograniczenie jest dozwolone tylko w `anySimpleType`.|  
 |`complexContent`|Obsługiwane. Zobacz "Dziedziczenie".|  
-|`group`|Jest zabronione.|  
-|`all`|Jest zabronione.|  
+|`group`|Forbidden.|  
+|`all`|Forbidden.|  
 |`choice`|Zabroniony|  
 |`sequence`|Obsługiwane mapują do elementów członkowskich danych kontraktu danych.|  
 |`attribute`|Dostęp zabroniony, nawet w przypadku użycia = "prohibited" (z jednym wyjątkiem). Obsługiwane są tylko opcjonalne atrybuty z przestrzeni nazw standardowego schematu serializacji. Nie są mapowane na elementy członkowskie danych w modelu programowania kontraktu danych. Obecnie tylko jeden taki atrybut ma znaczenie i został opisany w sekcji ISerializable. Wszystkie pozostałe są ignorowane.|  
-|`attributeGroup`|Jest zabronione. W wersji v1 usługi WCF `DataContractSerializer` ignoruje obecności `attributeGroup` wewnątrz `xs:complexType`.|  
-|`anyAttribute`|Jest zabronione.|  
+|`attributeGroup`|Forbidden. W wersji v1 usługi WCF `DataContractSerializer` ignoruje obecności `attributeGroup` wewnątrz `xs:complexType`.|  
+|`anyAttribute`|Forbidden.|  
 |(pusty)|Mapuje do kontraktu danych za pomocą żadnych składowych danych.|  
   
 ### <a name="xssequence-in-a-complex-type-attributes"></a>\<użyto w nim wartości > w typie złożonym: atrybuty  
@@ -109,10 +109,10 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
 |Spis treści|Schemat|  
 |--------------|------------|  
 |`element`|Każde wystąpienie jest mapowany na element członkowski danych.|  
-|`group`|Jest zabronione.|  
-|`choice`|Jest zabronione.|  
-|`sequence`|Jest zabronione.|  
-|`any`|Jest zabronione.|  
+|`group`|Forbidden.|  
+|`choice`|Forbidden.|  
+|`sequence`|Forbidden.|  
+|`any`|Forbidden.|  
 |(pusty)|Mapuje do kontraktu danych za pomocą żadnych składowych danych.|  
   
 ## <a name="elements--xselement"></a>Elementy — \<elementu xs: element >  
@@ -130,12 +130,12 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
   
 |Atrybut|Schemat|  
 |---------------|------------|  
-|`ref`|Jest zabronione.|  
+|`ref`|Forbidden.|  
 |`name`|Obsługiwane, mapy i nazwę elementu członkowskiego danych.|  
 |`type`|Obsługiwane, mapy, element członkowski danych jest typu. Aby uzyskać więcej informacji zobacz typ/element mapowania. Jeśli nie określono (i elementu nie zawiera typu anonimowego) `xs:anyType` zakłada, że.|  
 |`block`|Ignorowane.|  
-|`default`|Jest zabronione.|  
-|`fixed`|Jest zabronione.|  
+|`default`|Forbidden.|  
+|`fixed`|Forbidden.|  
 |`form`|Musi być kwalifikowany. Ten atrybut można określać za pośrednictwem `elementFormDefault` na `xs:schema`.|  
 |`id`|Ignorowane.|  
 |`maxOccurs`|1|  
@@ -224,9 +224,9 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
 |--------------|------------|  
 |`restriction`|Obsługiwane. Mapuje do wyliczenia kontraktów danych. Ten atrybut jest ignorowany, jeśli nie jest zgodny ze wzorcem wyliczenia. Zobacz `xs:simpleType` sekcji ograniczenia.|  
 |`list`|Obsługiwane. Mapuje flagi kontraktów danych wyliczenia. Zobacz `xs:simpleType` Wyświetla sekcji.|  
-|`union`|Jest zabronione.|  
+|`union`|Forbidden.|  
   
-### <a name="xsrestriction"></a>\<xs:restriction >  
+### <a name="xsrestriction"></a>\<xs:restriction>  
   
 -   Ograniczenia typu złożonego są obsługiwane tylko dla podstawowego = "`xs:anyType`".  
   
@@ -280,12 +280,12 @@ W tym temacie opisano podzbioru elementu schematu XML (XSD) używane przez <xref
 |`maxInclusive`|Ignorowane.|  
 |`totalDigits`|Ignorowane.|  
 |`fractionDigits`|Ignorowane.|  
-|`length`|Jest zabronione.|  
-|`minLength`|Jest zabronione.|  
-|`maxLength`|Jest zabronione.|  
+|`length`|Forbidden.|  
+|`minLength`|Forbidden.|  
+|`maxLength`|Forbidden.|  
 |`enumeration`|Obsługiwane. Wyliczenie "id" jest ignorowana, a "value" mapowany na nazwę wartości wyliczenia umowy danych.|  
-|`whiteSpace`|Jest zabronione.|  
-|`pattern`|Jest zabronione.|  
+|`whiteSpace`|Forbidden.|  
+|`pattern`|Forbidden.|  
 |(pusty)|Obsługiwane, mapy do typu puste wyliczenie.|  
   
  Poniższy kod przedstawia klasy wyliczenie C#.  
@@ -335,10 +335,10 @@ public enum MyEnum
   
 |Atrybut|Schemat|  
 |---------------|------------|  
-|`itemType`|Jest zabronione.|  
+|`itemType`|Forbidden.|  
 |`id`|Ignorowane.|  
   
-### <a name="xslist-contents"></a>\<xs:list >: zawartość  
+### <a name="xslist-contents"></a>\<xs:list>: contents  
   
 |Spis treści|Schemat|  
 |--------------|------------|  
@@ -436,14 +436,14 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
-### <a name="xscomplexcontent-attributes"></a>\<xs:complexContent >: atrybuty  
+### <a name="xscomplexcontent-attributes"></a>\<xs:complexContent>: attributes  
   
 |Atrybut|Schemat|  
 |---------------|------------|  
 |`id`|Ignorowane.|  
 |`mixed`|Musi mieć wartość false.|  
   
-### <a name="xscomplexcontent-contents"></a>\<xs:complexContent >: zawartość  
+### <a name="xscomplexcontent-contents"></a>\<xs:complexContent>: contents  
   
 |Spis treści|Schemat|  
 |--------------|------------|  
@@ -674,16 +674,16 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
       <xs:sequence minOccurs="1" maxOccurs="1">  
          <xs:element name="DateTime" type="xs:dateTime"  
          minOccurs="1" maxOccurs="1" />  
-         <xs:elementname="OffsetMinutes" type="xs:short"  
+         <xs:element name="OffsetMinutes" type="xs:short"  
          minOccurs="1" maxOccurs="1" />  
       </xs:sequence>  
    </xs:complexType>  
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

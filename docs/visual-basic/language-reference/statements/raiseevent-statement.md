@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ccefe07c847c7a356e9ff8da301257bf6a90d1ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655013"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent — Instrukcja
 Wyzwala zdarzenie zadeklarowane na poziomie modułu w obrębie klasy, formularza lub dokumentu.  
@@ -75,9 +75,9 @@ RaiseEvent eventname[( argumentlist )]
 > [!NOTE]
 >  `My.Application.DoEvents` Metody nie przetwarza zdarzeń w taki sam sposób jak formularz. Aby zezwolić na formularzu do obsługi zdarzeń bezpośrednio, możesz użyć wielowątkowości. Aby uzyskać więcej informacji, zobacz [zarządzana wątkowość](../../../standard/threading/index.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
- [AddHandler, instrukcja](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler, instrukcja](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+## <a name="see-also"></a>Zobacz także
+- [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)
+- [AddHandler, instrukcja](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler, instrukcja](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)

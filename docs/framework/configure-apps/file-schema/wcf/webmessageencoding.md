@@ -2,12 +2,12 @@
 title: '&lt;webMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: e8b45075c7c07efc49f84526382352a5b1a556b1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 90102c25c1c5b83af8f629d18b790af9297fa88c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640254"
 ---
 # <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
 Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScript (JSON) i "nieprzetworzonej" zawartości binarnej Odczyt i zapis, gdy jest używana w powiązaniu usługi Windows Communication Foundation (WCF).  
@@ -16,7 +16,7 @@ Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScrip
 \<powiązania >  
 \<customBinding>  
 \<Powiązanie >  
-\<webMessageEncoding >  
+\<webMessageEncoding>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,7 +35,7 @@ Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScrip
 |---------------|-----------------|  
 |`maxReadPoolSize`|Liczba wiadomości, które można jednocześnie odczytać bez przydziału nowych czytników. Większe rozmiary pul powoduje, że system bardziej odporne na skoki działania kosztem większy zestaw roboczy. Wartość domyślna to 64 czytelnicy dla każdego z wewnętrznego koderów (tekst JSON i "pierwotne").<br /><br /> Zwiększa to liczba zużycie pamięci zwiększa, ale przygotowuje kodera radzenia sobie z gwałtownym wzrostem wzrosty komunikaty przychodzące, ponieważ jest w stanie używać czytelnicy z puli, które zostały już utworzone, zamiast tworzyć nowe.|  
 |`maxWritePoolSize`|Liczba wiadomości, które można jednocześnie wysłać bez przydziału nowych modułów zapisujących. Większe rozmiary pul powoduje, że system bardziej odporne na skoki działania kosztem większy zestaw roboczy. Wartość domyślna to 16 autorzy dla każdego z wewnętrznego koderów (tekst JSON i "pierwotne").<br /><br /> Zwiększa to liczba zużycie pamięci zwiększa, ale przygotowuje kodera radzenia sobie z gwałtownym wzrostem wzrosty komunikaty wychodzące, ponieważ jest w stanie używać składników zapisywania z puli, które zostały już utworzone, zamiast tworzyć nowe.|  
-|`writeEncoding`|Określa kodowanie do użycia w celu emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości to:<br /><br /> -UnicodeFffeTextEncoding: Big Endian kodowanie Unicode.<br />-Utf16TextEncoding: Kodowanie Unicode.<br />-Utf8TextEncoding: 8-bitowego kodowania.<br /><br /> Wartość domyślna to Utf8TextEncoding. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
+|`writeEncoding`|Określa kodowanie do użycia w celu emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości to:<br /><br /> -   UnicodeFffeTextEncoding: Big Endian kodowanie Unicode.<br />-   Utf16TextEncoding: Kodowanie Unicode.<br />-   Utf8TextEncoding: 8-bitowego kodowania.<br /><br /> The default is Utf8TextEncoding. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -71,14 +71,14 @@ Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScrip
                     textEncoding="utf-8" />
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [Kodowanie komunikatu](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [Wybieranie kodera komunikatów](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
+- [Kodowanie komunikatu](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [Wybieranie kodera komunikatów](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

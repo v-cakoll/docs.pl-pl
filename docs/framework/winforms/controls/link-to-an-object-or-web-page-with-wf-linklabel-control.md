@@ -1,5 +1,5 @@
 ---
-title: 'Porady: łączenie z obiektem lub stroną sieci Web za pomocą formantu LinkLabel formularzy systemu Windows'
+title: 'Instrukcje: Łączenie do obiektu lub strony za pomocą formantu LinkLabel formularzy Windows w sieci Web'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 9957eae7e15c99ec259574b435402420c6bcf5f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd397f9a6462ad9da06b1cc258a51b3cccf5d21c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628451"
 ---
-# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Porady: łączenie z obiektem lub stroną sieci Web za pomocą formantu LinkLabel formularzy systemu Windows
-Formularze systemu Windows <xref:System.Windows.Forms.LinkLabel> formant służy do tworzenia łączy stylu sieci Web w formularzu. Po kliknięciu łącza, można zmienić jego kolor, aby wskazać, że odwiedzeniu łącza. Aby uzyskać więcej informacji na zmianę koloru, zobacz [porady: Zmienianie wyglądu formantu LinkLabel formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Instrukcje: Łączenie do obiektu lub strony za pomocą formantu LinkLabel formularzy Windows w sieci Web
+Formularze Windows <xref:System.Windows.Forms.LinkLabel> formantu służy do tworzenia łączy stylu sieci Web w formularzu. Po kliknięciu łącza, można zmienić jego kolor, aby wskazać, że link został odwiedzony. Aby uzyskać więcej informacji o zmienianiu kolorów, zobacz [jak: Zmienianie wyglądu formantu LinkLabel formularzy Windows](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
   
 ## <a name="linking-to-another-form"></a>Łączenie z innej formy  
   
-#### <a name="to-link-to-another-form-with-a-linklabel-control"></a>Aby utworzyć link do innego formularza za pomocą formantu LinkLabel  
+#### <a name="to-link-to-another-form-with-a-linklabel-control"></a>Aby połączyć innego formularza za pomocą kontrolki LinkLabel  
   
-1.  Ustaw <xref:System.Windows.Forms.LinkLabel.Text%2A> właściwości odpowiedni podpis.  
+1.  Ustaw <xref:System.Windows.Forms.LinkLabel.Text%2A> właściwość odpowiedni podpis.  
   
-2.  Ustaw <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> właściwości w celu określenia, która część podpis zostanie wskazany jako łącze. Jak wskazane zależy od właściwości związanych z wygląd etykiety łącza. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Wartość jest reprezentowana przez <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> obiektu zawierającego dwóch liczb, pozycję początkową znaku i liczbę znaków. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Właściwość można ustawić w oknie właściwości lub w kodzie w sposób podobny do następującego:  
+2.  Ustaw <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> właściwości w celu określenia, która część podpisu zostanie wskazany jako link. Jak jest oznaczany zależy od właściwości powiązane z wyglądem etykieta linku. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Wartość jest reprezentowana przez <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> obiekt zawierający dwie liczby, począwszy od pozycji znaku i liczbę znaków. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Właściwość można ustawić w oknie dialogowym właściwości lub w kodzie w sposób podobny do następującego:  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
@@ -54,10 +54,10 @@ Formularze systemu Windows <xref:System.Windows.Forms.LinkLabel> formant służy
     linkLabel1->LinkArea = LinkArea(0,8);  
     ```  
   
-3.  W <xref:System.Windows.Forms.LinkLabel.LinkClicked> program obsługi zdarzeń, wywołaj <xref:System.Windows.Forms.Form.Show%2A> metodę, aby otworzyć formularz innego projektu i ustawić <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> właściwości `true`.  
+3.  W <xref:System.Windows.Forms.LinkLabel.LinkClicked> procedura obsługi zdarzeń, wywołaj <xref:System.Windows.Forms.Form.Show%2A> metodę, aby otworzyć formularz innego w projekcie i ustaw <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> właściwość `true`.  
   
     > [!NOTE]
-    >  Wystąpienie <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> klasy zawiera odwołanie do <xref:System.Windows.Forms.LinkLabel> formant, który został kliknięty, a więc nie trzeba rzutowania `sender` obiektu.  
+    >  Wystąpienie <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> klasa przenosi odwołanie do <xref:System.Windows.Forms.LinkLabel> formant, który został kliknięty, więc nie ma potrzeby rzutowanie `sender` obiektu.  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked(ByVal Sender As System.Object, _  
@@ -92,19 +92,19 @@ Formularze systemu Windows <xref:System.Windows.Forms.LinkLabel> formant służy
        }  
     ```  
   
-## <a name="linking-to-a-web-page"></a>Łączenie do stron sieci Web  
- <xref:System.Windows.Forms.LinkLabel> Formantu można również wyświetlić stronę sieci Web z domyślnej przeglądarki.  
+## <a name="linking-to-a-web-page"></a>Łączenie ze stroną sieci Web  
+ <xref:System.Windows.Forms.LinkLabel> Kontrolki można również wyświetlić stronę sieci Web za pomocą domyślnej przeglądarki.  
   
-#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>Aby uruchomić program Internet Explorer i łącze do strony sieci Web za pomocą formantu LinkLabel  
+#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>Aby uruchomić program Internet Explorer i link do strony sieci Web za pomocą kontrolki LinkLabel  
   
-1.  Ustaw <xref:System.Windows.Forms.LinkLabel.Text%2A> właściwości odpowiedni podpis.  
+1.  Ustaw <xref:System.Windows.Forms.LinkLabel.Text%2A> właściwość odpowiedni podpis.  
   
-2.  Ustaw <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> właściwości w celu określenia, która część podpis zostanie wskazany jako łącze.  
+2.  Ustaw <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> właściwości w celu określenia, która część podpisu zostanie wskazany jako link.  
   
-3.  W <xref:System.Windows.Forms.LinkLabel.LinkClicked> program obsługi zdarzeń, pośrodku bloku obsługi wyjątków, wywołań drugiej procedury, która ustawia <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> właściwości `true` i używa <xref:System.Diagnostics.Process.Start%2A> metody można uruchomić domyślnej przeglądarki z adresem URL. Aby użyć <xref:System.Diagnostics.Process.Start%2A> musisz dodać odwołanie do metody <xref:System.Diagnostics?displayProperty=nameWithType> przestrzeni nazw.  
+3.  W <xref:System.Windows.Forms.LinkLabel.LinkClicked> procedura obsługi zdarzeń, która znajduje się w środku bloku obsługi wyjątków, wywołań Druga procedura, która ustawia <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> właściwości `true` i używa <xref:System.Diagnostics.Process.Start%2A> metodę, aby uruchomić domyślnej przeglądarki z adresem URL. Aby użyć <xref:System.Diagnostics.Process.Start%2A> należy dodać odwołanie do metody <xref:System.Diagnostics?displayProperty=nameWithType> przestrzeni nazw.  
   
     > [!IMPORTANT]
-    >  Jeśli poniższy kod uruchamiany w środowisku częściowego zaufania (takich jak udostępnionego dysku), przy użyciu kompilatora JIT nie powiedzie się po `VisitLink` metoda jest wywoływana. `System.Diagnostics.Process.Start` Instrukcja powoduje, że żądanie łącza, który zakończy się niepowodzeniem. Przez przechwytywanie wyjątku podczas `VisitLink` metoda jest wywoływana, poniższy kod zapewnia, że jeśli kompilator JIT nie powiedzie się, kod błędu jest obsługiwane bezpiecznie.  
+    >  Jeśli poniższy kod jest uruchamiane w środowisku częściowego zaufania (takich jak na udostępnionym dysku), kompilator JIT zakończy się niepowodzeniem kiedy `VisitLink` metoda jest wywoływana. `System.Diagnostics.Process.Start` Instrukcji powoduje, że żądanie łącza, który zakończy się niepowodzeniem. Przez przechwytywanie wyjątku podczas `VisitLink` poniższy kod pewność, że jeśli kompilator JIT nie powiedzie się, błąd odbywa się bez problemu zmieniała, metoda jest wywoływana.  
   
     ```vb  
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, _  
@@ -178,8 +178,8 @@ Formularze systemu Windows <xref:System.Windows.Forms.LinkLabel> formant służy
        }  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>  
- [LinkLabel, kontrolka — omówienie](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
- [Instrukcje: zmienianie wyglądu kontrolki LinkLabel formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
- [LinkLabel, kontrolka](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
+- [LinkLabel, kontrolka — omówienie](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)
+- [Instrukcje: Zmienianie wyglądu kontrolki LinkLabel formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [LinkLabel, kontrolka](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

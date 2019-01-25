@@ -1,5 +1,5 @@
 ---
-title: 'Ograniczenie: walidacja schematu XML'
+title: 'Środki zaradcze: Sprawdzanie poprawności schematu XML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,35 +7,35 @@ dev_langs:
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e757962f02cce104d8c5ab805d0481861cab426e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbeeecda3bd34f5eb651cb32246f8b56d5705002
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651009"
 ---
-# <a name="mitigation-xml-schema-validation"></a>Ograniczenie: walidacja schematu XML
-W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], Weryfikacja schematu XSD wykrywa naruszenie ograniczenia unique, jeśli jest używany klucz złożony i jeden klucz jest pusty.  
+# <a name="mitigation-xml-schema-validation"></a>Środki zaradcze: Sprawdzanie poprawności schematu XML
+W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], sprawdzanie poprawności schematu XSD wykryje naruszenie ograniczenia unique, jeśli jest używany klucz złożony i jeden klucz jest pusty.  
   
 ## <a name="impact"></a>Wpływ  
- Wpływ tej zmiany należy minimalnego: oparte na specyfikacji schematu, błąd sprawdzania poprawności schematu upewnij się, czy `xsd:unique` naruszenia przy użyciu klucza złożonego z pustym kluczem.  
+ Wpływ tej zmiany powinny być minimalne: oparte na specyfikacji schematu, błąd walidacji schematu oczekuje się, jeśli `xsd:unique` zostanie naruszona za pomocą klucza złożonego z pustym kluczem.  
   
 ## <a name="mitigation"></a>Ograniczenie  
- Określa, czy wykrył błąd sprawdzania poprawności schematu, jeśli klucza złożonego ma pusty klucz w jednym jest funkcją można skonfigurować:  
+ Czy wykrył błąd walidacji schematu, jeśli klucza złożonego ma jeden z pustym kluczem jest funkcją można skonfigurować:  
   
--   Począwszy od aplikacji przeznaczonych [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], wykrywania błąd sprawdzania poprawności schematu jest domyślnie włączona; jednak jest możliwe rezygnacji z, tak aby nie zostanie wykryty błąd sprawdzania poprawności schematu.  
+-   Począwszy od aplikacji, których platformą docelową [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], wykrywanie błąd walidacji schematu jest domyślnie włączona; jednak istnieje możliwość zrezygnować z niego tak, aby nie zostanie wykryty błąd walidacji schematu.  
   
--   W aplikacjach, które są uruchamiane w obszarze [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] , ale docelowy [!INCLUDE[net_v452](../../../includes/net-v452-md.md)] i starszych wersjach, domyślnie nie zostanie wykryty błąd sprawdzania poprawności schematu; jednak istnieje możliwość opcjonalnych, dzięki czemu zostanie wykryty błąd sprawdzania poprawności schematu.  
+-   W aplikacjach uruchamianych w ramach [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] , ale docelowa [!INCLUDE[net_v452](../../../includes/net-v452-md.md)] i wcześniejszych wersjach, błąd walidacji schematu nie zostanie wykryty domyślnie; jednak istnieje możliwość zoptymalizowany pod kątem do niego, dzięki czemu zostanie wykryty błąd walidacji schematu.  
   
- To zachowanie można skonfigurować przy użyciu <xref:System.AppContext> klasę, aby zdefiniować wartość `System.Xml.IgnoreEmptyKeySequences` przełącznika. Ponieważ przełącznika wartość domyślna to `false` (puste sekwencje klucza nie są ignorowane), aplikacje, które odnoszą się do [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] można zrezygnować z zachowanie, używając następującego kodu ustawioną wartość przełącznika `true`:  
+ To zachowanie można skonfigurować za pomocą <xref:System.AppContext> klasy do definiowania wartości `System.Xml.IgnoreEmptyKeySequences` przełącznika. Ponieważ przełącznik na wartość domyślna to `false` (pusty sekwencji klawiszy nie są ignorowane), aplikacje, których platformą docelową [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] można zrezygnować z zachowaniem przy użyciu następującego kodu, aby ustawić wartość przełącznika `true`:  
   
  [!code-csharp[AppCompat.IgnoreEmptyKeySequences#1](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/cs/program.cs#1)]
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#1)]  
   
- Dla aplikacji, które odnoszą się do [!INCLUDE[net_v452](../../../includes/net-v452-md.md)] i starszych wersjach, ponieważ przełącznik wartość domyślna to `true` (puste sekwencje klucza są ignorowane), istnieje możliwość upewnić się, że klucza złożonego z pustym kluczem wygenerować błąd sprawdzania poprawności schematu za pomocą następującego kodu, aby ustawić wartość przełącznika `false`.  
+ W przypadku aplikacji, których platformą docelową [!INCLUDE[net_v452](../../../includes/net-v452-md.md)] i wcześniejszymi wersjami, ponieważ przełącznik na wartość domyślna to `true` (pusty sekwencji klawiszy są ignorowane), istnieje możliwość upewnić się, że klucza złożonego z pustym kluczem wygenerować błąd walidacji schematu za pomocą następujący kod, aby ustawić wartość przełącznika `false`.  
   
  [!code-csharp[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/cs/program.cs#2)]
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Zmiany retargetingu](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>Zobacz także
+- [Zmiany retargetingu](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

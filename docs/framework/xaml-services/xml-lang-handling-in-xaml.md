@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 025e4b2865fe3938e5f1454f87e90bae7a85bcfd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 508c1151b1b196a84b7c3a576e18d10c0a706fad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692405"
 ---
 # <a name="xmllang-handling-in-xaml"></a>xml:lang — Obsługa w XAML
 `xml:lang` Atrybut jest [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]-zdefiniowany atrybut deklarujący informacje języka i kultury dla elementu w pliku XML. To takie samo znaczenie atrybut będzie nadal występował w XAML; jednak dodatkowe zagadnienia do rozważenia.  
@@ -43,5 +43,5 @@ ms.locfileid: "43747973"
 ## <a name="wpf-usage-nodes"></a>Węzły użycia WPF  
  Dla elementów, które są pochodne klasy <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement>, można użyć odpowiednik <xref:System.Windows.FrameworkElement.Language%2A> właściwość zależności zamiast `xml:lang` atrybutu. Domyślnie <xref:System.Windows.FrameworkElement.Language%2A> właściwość używa "en US", jeśli nie jest w przeciwnym razie ustawiona, za pomocą właściwości lub za pośrednictwem przetwarzania `xml:lang` atrybutu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Globalizacja dla WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>Zobacz także
+- [Globalizacja dla WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

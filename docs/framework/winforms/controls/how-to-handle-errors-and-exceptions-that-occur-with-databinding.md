@@ -1,5 +1,5 @@
 ---
-title: 'Porady: obsługa błędów i wyjątków występujących za powodu powiązania danych'
+title: 'Instrukcje: Obsługa błędów i wyjątków występujących za powodu powiązania danych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], error handling
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
-ms.openlocfilehash: d0bb41da69bf1cb87f052c11d3a7d1f1783320ad
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3fc40bac6a0b75680b677076e4cfaffd167ddc21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631051"
 ---
-# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Porady: obsługa błędów i wyjątków występujących za powodu powiązania danych
+# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Instrukcje: Obsługa błędów i wyjątków występujących za powodu powiązania danych
 Często wyjątków i błędów występujących na obiekty źródłowe firm gdy powiązanie z kontrolkami. Możesz przechwytywać te błędy i wyjątki i następnie odzyskać lub przekazać informacje o błędzie dla użytkownika, obsługując <xref:System.Windows.Forms.Binding.BindingComplete> zdarzeń dla określonego <xref:System.Windows.Forms.Binding>, <xref:System.Windows.Forms.BindingSource>, lub <xref:System.Windows.Forms.CurrencyManager> składnika.  
   
 ## <a name="example"></a>Przykład  
@@ -37,9 +37,9 @@ Często wyjątków i błędów występujących na obiekty źródłowe firm gdy p
   
 -   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.BindingSource.BindingComplete?displayProperty=nameWithType>  
- [BindingSource, składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.BindingSource.BindingComplete?displayProperty=nameWithType>
+- [BindingSource, składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)

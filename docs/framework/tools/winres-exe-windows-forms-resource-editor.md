@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c56685e2b9bef811f0fa987be976790eca83e91c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6732eef46f87d9e2e3aeada138ea28853d3f0479
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663169"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Edytor lokalizacji zasobów Windows)
 
@@ -137,7 +137,7 @@ Należy użyć wersji winres.exe wydanej z .NET Framework, którego używasz. W 
 
    Narzędzie zapisuje plik przy użyciu konwencji nazewnictwa, która w czasie wykonywania dla zlokalizowanych plików zasobów. Na przykład, jeśli jest lokalizowany `TestApp.resources` dla języka niemieckiego w Niemczech, narzędzie zapisuje plik jako `TestApp.de-DE.resources`. Jeśli jest lokalizowany `TestApp.resx` dla języka niemieckiego w Niemczech, narzędzie zapisuje plik jako `TestApp.de-DE.resx`. Aby uzyskać więcej informacji dotyczących konwencji nazywania zasobów, zobacz [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Aby uzyskać listę nazw wstępnie zdefiniowanych kultur używanych w czasie wykonywania, zobacz <xref:System.Globalization.CultureInfo> klasy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ComponentModel.LocalizableAttribute>
 - <xref:System.Globalization.CultureInfo>

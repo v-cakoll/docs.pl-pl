@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5d1546bb9c47d30806d857fa55e1d19fdc2c777
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 40bbf0cfab8044d582490ed0890501d6b123d18e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631246"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM
 <xref:System.CodeDom.Compiler> Przestrzeń nazw zawiera interfejsy do generowania kodu źródłowego z wykresu obiektu CodeDOM i zarządzania kompilacji za pomocą obsługiwane kompilatory. Dostawcy kodu może wygenerować kod źródłowy w języku programowania określonym zgodnie z wykresu CodeDOM. Klasa, która pochodzi od klasy <xref:System.CodeDom.Compiler.CodeDomProvider> zazwyczaj może zapewnić metody dla Generowanie i kompilowanie kodu dla języka dostawca obsługuje.  
@@ -91,10 +91,10 @@ ms.locfileid: "43864176"
  [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
 ## <a name="languages-with-initial-support"></a>Języków z początkową obsługą  
- Program .NET Framework oferuje kompilatory kodu i generatorów kodu dla następujących języków: językach C#, Visual Basic, C++ i JScript. Obsługa codeDOM można rozszerzyć do innych języków, implementowanie generatorów kodu specyficznego dla języka i kompilatory kodu.  
+ Program .NET Framework oferuje kompilatory kodu i generatorów kodu w następujących językach: C#, Visual Basic, C++ i JScript. Obsługa codeDOM można rozszerzyć do innych języków, implementowanie generatorów kodu specyficznego dla języka i kompilatory kodu.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.CodeDom>  
- <xref:System.CodeDom.Compiler>  
- [Dynamiczne generowanie i kompilacja kodu źródłowego](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- [CodeDOM — podręczny wykaz](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.CodeDom>
+- <xref:System.CodeDom.Compiler>
+- [Dynamiczne generowanie i kompilacja kodu źródłowego](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
+- [CodeDOM — podręczny wykaz](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)

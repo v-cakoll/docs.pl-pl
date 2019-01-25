@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-ms.openlocfilehash: edc4211818051d4be3afa02dc260f64c8f2c2d34
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 01aed1f603028bc7d269667e6d3f357465888abb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651338"
 ---
 # <a name="statement-keywords-c-reference"></a>Słowa kluczowe instrukcji (C# odwołania)
 
@@ -27,7 +27,7 @@ Instrukcje znajdują się instrukcje programu. Z wyjątkiem zgodnie z opisem w t
 [Fixed — instrukcja](fixed-statement.md)|[Stała](fixed-statement.md)|
 |[instrukcji "Lock"](lock-statement.md)|[lock](lock-statement.md)|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka C#](../index.md)
 - [Instrukcje](../../programming-guide/statements-expressions-operators/statements.md)

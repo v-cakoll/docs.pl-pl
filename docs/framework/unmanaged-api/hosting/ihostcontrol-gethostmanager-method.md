@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 355d2e259adb13da44b09e19872337c17ac20ade
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 821968fbde6d3f5434b83adf8c9661fe39d96293
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742032"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager — Metoda
-Pobiera wskaźnika interfejsu hosta implementacji interfejsu z określonym `IID`.  
+Pobiera wskaźnik interfejsu do implementacji interfejsu hosta z określonym `IID`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,26 +38,26 @@ HRESULT GetHostManager (
   
 #### <a name="parameters"></a>Parametry  
  `riid`  
- [in] `IID` Interfejsu, który jest wyszukiwanie środowisko uruchomieniowe języka wspólnego (CLR).  
+ [in] `IID` Interfejsu, który wyszukuje jest środowisko uruchomieniowe języka wspólnego (CLR).  
   
  `ppObject`  
- [out] Wskaźnik do interfejsu zaimplementowana hosta lub wartość null, jeśli host nie obsługuje tego interfejsu.  
+ [out] Wskaźnik do interfejsu implementowany przez hosta lub wartość null, jeśli host nie obsługuje tego interfejsu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`GetHostManager` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`GetHostManager` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
 |E_INVALIDARG|Żądany `IID` jest nieprawidłowy.|  
-|E_NOINTERFACE|Żądany interfejs nie jest obsługiwany.|  
+|E_NOINTERFACE|Żądany interfejs nie jest obsługiwana.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko CLR wysyła zapytanie do hosta, aby ustalić, czy obsługuje co najmniej jednego z poniższych interfejsów:  
+ Środowisko CLR wykonuje kwerendę hostowi na określenie, czy obsługuje co najmniej jeden z poniższych interfejsów:  
   
 -   [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
   
@@ -77,18 +77,18 @@ HRESULT GetHostManager (
   
 -   [IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
   
- Jeśli host obsługuje określonego interfejsu, ustawia `ppObject` jego implementację tego interfejsu. W przeciwnym razie ustawia `ppObject` na wartość null.  
+ Jeśli host obsługuje określonego interfejsu, ustawia `ppObject` do jej implementacji interfejsu. W przeciwnym wypadku ustawia `ppObject` na wartość null.  
   
- Środowisko CLR nie wywołuje `Release` menedżerów hosta, nawet wtedy, gdy została ona zamknięta.  
+ Środowisko CLR wywołuje `Release` na hoście menedżerów, nawet wtedy, gdy zostanie ona zamknięta.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IHostControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IHostControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

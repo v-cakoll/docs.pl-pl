@@ -1,5 +1,5 @@
 ---
-title: 'Porady: dodawanie i usuwanie elementów ConcurrentDictionary'
+title: 'Instrukcje: Dodawanie i usuwanie elementów concurrentdictionary'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9d8b1c63f10d1d79c3fec6cad87c9a82f03716c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543425"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Porady: dodawanie i usuwanie elementów ConcurrentDictionary
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Instrukcje: Dodawanie i usuwanie elementów concurrentdictionary
 W tym przykładzie pokazano, jak dodawanie, pobieranie, Aktualizuj i usuń elementy z <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Ta klasa kolekcji jest implementacja metodą o bezpiecznych wątkach. Zalecamy użycie go zawsze wtedy, gdy wiele wątków może próbować uzyskać dostęp do elementów jednocześnie.  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> zapewnia kilka metod jako udogodnienie, które ułatwiają niepotrzebne dla kodu najpierw sprawdzić, czy klucz istnieje przed próbuje dodać lub usunąć dane. Poniższa tabela zawiera listę tych metod jako udogodnienie i opisuje, kiedy ich używać.  
@@ -50,5 +50,5 @@ W tym przykładzie pokazano, jak dodawanie, pobieranie, Aktualizuj i usuń eleme
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Kolekcje bezpieczne wątkowo](../../../../docs/standard/collections/thread-safe/index.md)

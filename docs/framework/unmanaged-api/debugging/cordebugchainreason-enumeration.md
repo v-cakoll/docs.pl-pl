@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e19897015a00d82da30fd670efcdd97c4d06f56f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 621ae6dae32e79a26d81441841b4c6a274d86f83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497603"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason — Wyliczenie
-Wskazuje powód lub powody rozpoczęcia łańcuch wywołań.  
+Wskazuje powód lub powody do rozpoczęcia łańcuch wywołań.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,25 +50,25 @@ typedef enum CorDebugChainReason {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`CHAIN_NONE`|Żaden łańcuch wywołań została zainicjowana.|  
-|`CHAIN_CLASS_INIT`|Łańcuch został zainicjowany przez Konstruktor.|  
-|`CHAIN_EXCEPTION_FILTER`|Łańcuch zostało zainicjowane przez filtru wyjątków.|  
-|`CHAIN_SECURITY`|Łańcuch zostało zainicjowane przez kod, który wymusza zabezpieczeń.|  
-|`CHAIN_CONTEXT_POLICY`|Łańcuch została zainicjowana przy użyciu zasad kontekstu.|  
+|`CHAIN_NONE`|Łańcuch wywołań, nie został zainicjowany.|  
+|`CHAIN_CLASS_INIT`|Ciąg został zainicjowany przez Konstruktor.|  
+|`CHAIN_EXCEPTION_FILTER`|Łańcuch zostało zainicjowane przez filtra wyjątku.|  
+|`CHAIN_SECURITY`|Łańcuch zostało zainicjowane przez kod, który wymusza stosowanie zabezpieczeń.|  
+|`CHAIN_CONTEXT_POLICY`|Łańcuch zostało zainicjowane przez zasadę kontekstu.|  
 |`CHAIN_INTERCEPTION`|Nie używany.|  
 |`CHAIN_PROCESS_START`|Nie używany.|  
-|`CHAIN_THREAD_START`|Łańcuch została zainicjowana przy rozpoczęciu wykonywania wątku.|  
-|`CHAIN_ENTER_MANAGED`|Łańcuch zostało zainicjowane przez wejścia kodu zarządzanego.|  
-|`CHAIN_ENTER_UNMANAGED`|Łańcuch zostało zainicjowane przez wejścia kodu niezarządzanego.|  
+|`CHAIN_THREAD_START`|Łańcuch zostało zainicjowane przez rozpoczęciem wykonywaniem wątków.|  
+|`CHAIN_ENTER_MANAGED`|Łańcuch zostało zainicjowane przez wejścia w kodzie zarządzanym.|  
+|`CHAIN_ENTER_UNMANAGED`|Łańcuch zostało zainicjowane przez wejścia w niezarządzanym kodzie.|  
 |`CHAIN_DEBUGGER_EVAL`|Nie używany.|  
 |`CHAIN_CONTEXT_SWITCH`|Nie używany.|  
 |`CHAIN_FUNC_EVAL`|Łańcuch zostało zainicjowane przez Obliczanie funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj [ICorDebugChain::GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) metodę, aby ustalić przyczyny rozpoczęcia łańcuch wywołań.  
+ Użyj [ICorDebugChain::GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) metodę, aby ustalić przyczyny do rozpoczęcia łańcuch wywołań.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -76,5 +76,5 @@ typedef enum CorDebugChainReason {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

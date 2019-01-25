@@ -2,17 +2,17 @@
 title: Niestandardowe kodery
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
-ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
+ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "50034390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509369"
 ---
 # <a name="custom-encoders"></a>Niestandardowe kodery
 W tym temacie omówiono, jak utworzyć niestandardowe kodery.  
   
- W konsoli Windows Communication Foundation (WCF), możesz użyć *powiązania* do określenia sposobu transferu danych za pośrednictwem sieci między punktami końcowymi. Powiązanie składa się z sekwencji *elementów wiązania*. Powiązanie zawiera elementy powiązania protokołu opcjonalne takie jak zabezpieczenia wymaganą *koder komunikatów* element powiązania, a element powiązania transportu wymagane. Koder komunikatów jest reprezentowany przez element powiązania kodowania komunikatu. Trzy koderów komunikat znajdują się w programie WCF: plik binarny, komunikat transmisji optymalizacji mechanizm (MTOM) i tekst.  
+ W konsoli Windows Communication Foundation (WCF), możesz użyć *powiązania* do określenia sposobu transferu danych za pośrednictwem sieci między punktami końcowymi. Powiązanie składa się z sekwencji *elementów wiązania*. Powiązanie zawiera elementy powiązania protokołu opcjonalne takie jak zabezpieczenia wymaganą *koder komunikatów* element powiązania, a element powiązania transportu wymagane. Koder komunikatów jest reprezentowany przez element powiązania kodowania komunikatu. Trzy koderów komunikat znajdują się w programie WCF: Plik binarny mechanizmu optymalizacji transmisji wiadomości (MTOM) i tekst.  
   
  Kodowanie elementu powiązania serializuje wychodzący komunikat <xref:System.ServiceModel.Channels.Message> i przekazuje go do transportu, lub odbiera serializowane postaci wiadomość z transportu i przekazuje go do warstwy protokołu, jeśli jest obecna, lub do aplikacji, jeśli nie istnieje.  
   
@@ -34,7 +34,7 @@ W tym temacie omówiono, jak utworzyć niestandardowe kodery.
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Reprezentuje element powiązania, który określa kodowanie znaków i wiadomości versioning używany dla wiadomości XML na podstawie pliku binarnego. Jest to najbardziej efektywny sposób opcji kodowania, ale co najmniej międzyoperacyjnych, ponieważ jest ona obsługiwana tylko przez punktami końcowymi programu WCF.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Reprezentuje element powiązania, który określa kodowanie znaków oraz zarządzanie ich wersjami komunikatu używany dla wiadomości przy użyciu kodowania komunikatu transmisji optymalizacji mechanizm (MTOM). MTOM to technologia wydajne przekazywania danych binarnych w wiadomościach WCF. Koder MTOM próbuje zachować równowagę między współdziałania i wydajność. Kodowanie MTOM przesyła większość kodu XML w postaci tekstowej, ale optymalizuje dużych bloków danych binarnych, przekazywania ich jako — jest bez konwersji na tekst.  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Reprezentuje element powiązania, który określa kodowanie znaków i wersji komunikatu używany dla wiadomości przy użyciu kodowania komunikatu transmisji optymalizacji mechanizm (MTOM). MTOM to technologia wydajne przekazywania danych binarnych w wiadomościach WCF. Koder MTOM próbuje zachować równowagę między współdziałania i wydajność. Kodowanie MTOM przesyła większość kodu XML w postaci tekstowej, ale optymalizuje dużych bloków danych binarnych, przekazywania ich jako — jest bez konwersji na tekst.  
   
  Element powiązania tworzy plik binarny, MTOM lub tekst <xref:System.ServiceModel.Channels.MessageEncoderFactory>. Fabryka tworzy plik binarny, MTOM lub tekst <xref:System.ServiceModel.Channels.MessageEncoderFactory> wystąpienia. Zazwyczaj jest tylko jedno wystąpienie. Jednak sesji są używane, mogą być udostępniane do każdej sesji kodera innego. Kodera binarnego sprawia, że użycie tego do zapewnienia koordynacji słowników dynamiczne (patrz infrastruktury XML).  
   
@@ -89,12 +89,12 @@ W tym temacie omówiono, jak utworzyć niestandardowe kodery.
   
  Następnie połącz niestandardowe <xref:System.ServiceModel.Channels.MessageEncoderFactory> stosu element powiązania, używany do konfigurowania usługi lub klienta przez zastąpienie <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> metodę, aby zwrócić wystąpienia tej fabryki.  
   
- Istnieją dwa przykłady dostarczane z programem WCF, które ilustrują ten proces za pomocą przykładowego kodu: [niestandardowy koder komunikatów: niestandardowy koder tekstu](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) i [niestandardowy koder komunikatów: koder kompresji](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
+ Istnieją dwa przykłady dostarczane z programem WCF, które ilustrują ten proces za pomocą przykładowego kodu: [Niestandardowy koder komunikatów: Niestandardowy koder tekstu](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) i [niestandardowy koder komunikatów: Koder kompresji](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
- <xref:System.ServiceModel.Channels.MessageEncoder>  
- [Omówienie architektury transferu danych](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- [Wybieranie kodera komunikatów](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>
+- <xref:System.ServiceModel.Channels.MessageEncoder>
+- [Omówienie architektury transferu danych](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [Wybieranie kodera komunikatów](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

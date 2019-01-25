@@ -2,12 +2,12 @@
 title: Elementy DataAdapter i DataReaders
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f4588187aad910d0b50b0c804e6de20a477b567b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583512"
 ---
 # <a name="dataadapters-and-datareaders"></a>Elementy DataAdapter i DataReaders
 Możesz użyć ADO.NET **DataReader** można pobrać tylko do odczytu, tylko do przodu strumienia danych z bazy danych. Wyniki są zwracane jako zapytanie wykonuje i są przechowywane w buforze sieci na komputerze klienckim, dopóki ich zażądać przy użyciu **odczytu** metody **DataReader**. Za pomocą **DataReader** może zwiększyć wydajność aplikacji, zarówno przez pobranie danych, jak tylko będzie dostępny, a (domyślnie) przechowywanie tylko jeden wiersz jednocześnie w pamięci, co zmniejsza obciążenie systemu.  
@@ -44,9 +44,9 @@ Możesz użyć ADO.NET **DataReader** można pobrać tylko do odczytu, tylko do 
  [Wykonywanie operacji wsadowych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  W tym artykule opisano zwiększanie wydajności aplikacji dzięki zmniejszeniu liczby rund do programu SQL Server podczas stosowania aktualizacji z `DataSet`.  
   
-## <a name="see-also"></a>Zobacz też  
- [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Elementy DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Elementy DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

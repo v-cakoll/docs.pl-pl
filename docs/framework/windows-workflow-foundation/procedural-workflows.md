@@ -1,19 +1,19 @@
 ---
-title: Procedurach przepływów pracy
+title: Proceduralne przepływy pracy
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: 5cd97c8ccaae74e4275f809502ac0a4d3c2f042a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29fc6f5ebd6bf1984f287c3d407d2564249c65f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500541"
 ---
-# <a name="procedural-workflows"></a>Procedurach przepływów pracy
-Procedurach przepływów pracy za pomocą metod sterowanie przepływem podobne do tych w procedurach języków. Konstrukcje te obejmują `While` i `If`. Te przepływy pracy mogą być za darmo składane, takich jak przy użyciu innych działań kontroli przepływu <xref:System.Activities.Statements.Flowchart> i <xref:System.Activities.Statements.Sequence>.  
+# <a name="procedural-workflows"></a>Proceduralne przepływy pracy
+Proceduralne przepływy pracy za pomocą metod sterowanie przepływem podobne do tych w procedurach językach. Te konstrukcje obejmują `While` i `If`. Te przepływy pracy mogą być swobodnie składane, przy użyciu innych działań sterowania przepływem, takich jak <xref:System.Activities.Statements.Flowchart> i <xref:System.Activities.Statements.Sequence>.  
   
-## <a name="controlling-execution-flow"></a>Sterowanie przepływem wykonywania  
- Biblioteka działań przepływu pracy ma działania dla większości metod sterowanie przepływem używana w procedurach języków modelowania. Należą do nich następujące elementy:  
+## <a name="controlling-execution-flow"></a>Sterowanie przepływem wykonania  
+ Biblioteka działań przepływu pracy ma działania dla większości metod sterowanie przepływem używanych w procedurach językach modelowania. Należą do nich następujące elementy:  
   
 -   <xref:System.Activities.Statements.While>  
   
@@ -31,10 +31,10 @@ Procedurach przepływów pracy za pomocą metod sterowanie przepływem podobne d
   
 -   <xref:System.Activities.Statements.Pick>  
   
- Aby użyć działania przepływu sterowania, przeciągnij i upuść je z **działania** przybornika do działania złożonego wewnątrz okna projektanta.  
+ Aby użyć działania sterowania przepływem, przeciągnij i upuść je z **działania** przybornika do działania złożonego wewnątrz okna projektanta.  
   
 > [!NOTE]
->  Jeśli przy użyciu [!INCLUDE[dublin](../../../includes/dublin-md.md)] do przepływów pracy hosta na farmie sieci Web AppFabric przeniesie wystąpień między różnymi serwerami AppFabric. Wymaga to, że zasoby mogą być współużytkowane przez wszystkie węzły.  Żaden z domyślnych działań przepływu pracy NET 4 nie zawiera żadnych operacji, które uzyskują dostęp do zasobów lokalnych. Ponieważ AppFabric nie oferuje dowolny mechanizm można oznaczyć jako nieruchomości przepływu pracy, Projektant nie należy utworzyć niestandardowych działań, które się nie powieść, gdy przepływ pracy zostanie przesunięty.  
+>  Jeśli przy użyciu [!INCLUDE[dublin](../../../includes/dublin-md.md)] hosta przepływów pracy, w ramach farmy sieci Web AppFabric przeniesie wystąpień między różnymi serwerami AppFabric. Wymaga to, że zasoby mogą być współużytkowane przez wszystkie węzły.  Brak domyślnych działań przepływu pracy NET 4 zawierać dowolne operacje wymagające dostępu do zasobów lokalnych. Ponieważ AppFabric nie oferuje żadnych mechanizm zaznaczania przepływów pracy jako nieruchome, deweloper nie należy utworzyć niestandardowe działania, które się nie powieść, gdy przepływ pracy zostanie przeniesiony.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przepływy pracy schematów blokowych](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)
+## <a name="see-also"></a>Zobacz także
+- [Przepływy pracy schematów blokowych](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)

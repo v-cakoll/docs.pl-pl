@@ -1,36 +1,36 @@
 ---
-title: skojarzenie liczebność zakończenia
+title: skojarzenie i liczebność
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
-ms.openlocfilehash: 2f70fa4b163b957ea1e43506033863c3540b0418
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6d1b31c5b5ead701fbe808b91d7191fb84dc86c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502640"
 ---
-# <a name="association-end-multiplicity"></a>skojarzenie liczebność zakończenia
-*Skojarzenie liczebność zakończenia* definiuje liczbę [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) wystąpień, które mogą być na końcu jednego [skojarzenia](../../../../docs/framework/data/adonet/association-type.md).  
+# <a name="association-end-multiplicity"></a>skojarzenie i liczebność
+*Skojarzenie i liczebność* definiuje liczbę [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) wystąpień, które mogą być na jednym końcu [skojarzenie](../../../../docs/framework/data/adonet/association-type.md).  
   
- Skojarzenie liczebność zakończenia może mieć jedną z następujących wartości:  
+ Skojarzenie i liczebność może mieć jedną z następujących wartości:  
   
--   jednego (1): wskazuje danego wystąpienia typu dokładnie jednego obiektu występuje na końcu skojarzenia.  
+-   jeden (1): Wskazuje, że to wystąpienie typu dokładnie jednej jednostki znajduje się na końcu skojarzenia.  
   
--   zero lub jeden (od 0 do 1): oznacza, że na końcu skojarzenia zero lub jeden wystąpień typów jednostek.  
+-   zero lub jeden (od 0 do 1): Oznacza, że na końcu skojarzenia zera lub jednego wystąpienia typu jednostki.  
   
--   wiele (*): oznacza, że zero, jeden lub więcej wystąpień typów jednostek na końcu skojarzenia.  
+-   wiele (*): oznacza, że wartość zero, jeden lub więcej wystąpień typu jednostki na końcu skojarzenia.  
   
- Skojarzenie często jest określony przez jego liczebność punktów końcowych skojarzenia. Na przykład jeśli końce skojarzenie Liczebność punktów jednego (1), a wiele (*), skojarzenie nazywa się skojarzenia typu jeden do wielu. W poniższym przykładzie `PublishedBy` association jest skojarzeniem jeden do wielu (wydawca publikuje wiele książek i książkę są publikowane przez jednego wydawcy). `WrittenBy` Association jest skojarzeniem wiele do wielu (książkę może mieć wielu autorów i Autor może zapisywać wiele książek).  
+ Skojarzenie często jest określony przez jego liczebność punktów końcowych skojarzenia. Na przykład jeśli kończy się skojarzenia ma liczebność punktów jeden (1) i jest wielu (*), skojarzenia nosi nazwę skojarzenia typu jeden do wielu. W poniższym przykładzie `PublishedBy` skojarzenie jest skojarzenia typu jeden do wielu (wydawca publikuje wiele książek i książki opublikowana przez jedną wydawcą). `WrittenBy` Skojarzenie jest skojarzenie wiele do wielu (książki może mieć wielu autorów i Autor może zapisywać wiele książek).  
   
 ## <a name="example"></a>Przykład  
- Na poniższym diagramie przedstawiono modelu koncepcyjnego z dwóch skojarzenia: `PublishedBy` i `WrittenBy`. Punkty końcowe skojarzenia dla `PublishedBy` są skojarzenia `Book` i `Publisher` typy jednostek. Liczebność `Publisher` punkt końcowy jest jeden (1) i liczebność `Book` punkt końcowy jest wiele (*).  
+ Poniższy diagram przedstawia modelu koncepcyjnego z dwóch skojarzeń: `PublishedBy` i `WrittenBy`. Punkty końcowe dla skojarzenia `PublishedBy` to skojarzenie `Book` i `Publisher` typów jednostek. Liczebność `Publisher` end jest jeden (1), a liczebność `Book` end jest wielu (*).  
   
  ![Przykładowy Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   
- ADO.NET Entity Framework używa języka specyficznego dla domeny (DSL) w nazwie schematu koncepcyjnego definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Definiuje następujące CSDL `PublishedBy` skojarzenia pokazano na powyższym diagramie:  
+ ADO.NET Entity Framework używa języka specyficznego dla domeny (DSL), o nazwie język definicji schematu koncepcyjnego ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Definiuje następujące CSDL `PublishedBy` skojarzenia pokazano na powyższym diagramie:  
   
  [!code-xml[EDM_Example_Model#AssociationExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#associationexample)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>Zobacz także
+- [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)

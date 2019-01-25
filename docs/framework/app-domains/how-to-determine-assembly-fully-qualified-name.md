@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb5978859ba25e1595ac3da7a2d7dad8cc2cad85
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b7124271c0118800883d4beb68591f8591ac43dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520714"
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Instrukcje: Określić zestaw&#39;s w pełni kwalifikowana nazwa
 Aby dowiedzieć się, w pełni kwalifikowana nazwa zestawu w globalnej pamięci podręcznej, użyj Global Assembly Cache Tool ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Zobacz [jak: Wyświetlanie zawartości globalnej pamięci podręcznej](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
@@ -42,10 +42,10 @@ Aby dowiedzieć się, w pełni kwalifikowana nazwa zestawu w globalnej pamięci 
  [!code-csharp[Assembly.Fullname#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.FullName/CS/example2.cs#2)]
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
-## <a name="see-also"></a>Zobacz też  
-- [Nazwy zestawów](../../../docs/framework/app-domains/assembly-names.md)  
-- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
-- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
-- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>Zobacz także
+- [Nazwy zestawów](../../../docs/framework/app-domains/assembly-names.md)
+- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)
+- [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

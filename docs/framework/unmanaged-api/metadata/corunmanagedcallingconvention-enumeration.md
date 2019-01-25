@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b249d26335a66b55d0643f3e75bfd90554f731e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9a1ee9ab1649a832b6daefc96049d68850f3bc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555560"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention — Wyliczenie
-Określa konwencji wywoływania dla niezarządzanego kodu.  
+Określa konwencji wywoływania niezarządzanego kodu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,22 +50,22 @@ typedef enum CorUnmanagedCallingConvention {
 |------------|-----------------|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_C`|Konwencja wywoływania języka C.|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Standardowej konwencji wywoływania.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"This" Konwencji wywołania.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|"Fast" konwencję wywołania.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"To" Konwencji wywołania.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|Konwencja wywoływania "fast".|  
 |`IMAGE_CEE_CS_CALLCONV_C`|Nie używany.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|Nie używany.|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|Nie używany.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Nie używany.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko CLR nie obsługuje "fast" Konwencja wywoływania w programie .NET Framework w wersji 1.0.  
+ Środowisko CLR nie obsługuje "fast" Konwencja wywoływania w .NET Framework w wersji 1.0.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 8da1deec2238f74a9b594c85feab0445ec2a35b7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c231533604b4ebadfb709295b5a8b877f87bba1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493423"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. Dla kodu klienta napisanego w C#, F# i Visual Basic nie ma żadnej widocznej różnicy między wywołanie metody rozszerzenia i metod, które faktycznie są zdefiniowane w typie.  
@@ -79,13 +79,13 @@ using System.Linq;
   
  Dla zaimplementowanej biblioteki klas nie należy używać metod rozszerzenia, aby uniknąć zwiększenia numeru wersji zestawu. W przypadku dodawania znaczącej funkcjonalności do biblioteki, której kod źródłowy jest własnością użytkownika, należy przestrzegać standardowych wytycznych programu .NET Framework dotyczących wersji zestawów. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji zestawu](../../../../docs/framework/app-domains/assembly-versioning.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Równoległe przykłady programowania (zawierają wiele przykładów metod rozszerzenia)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
-- [Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Równoległe przykłady programowania (zawierają wiele przykładów metod rozszerzenia)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+- [Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Standardowe operatory zapytań — przegląd](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Reguły konwersji dla wystąpienia parametrów i ich wpływ](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
-- [Międzyoperacyjność metod rozszerzających między językami](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
-- [Metody rozszerzające i przenoszeni delegaci](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
+- [Reguły konwersji dla wystąpienia parametrów i ich wpływ](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)
+- [Międzyoperacyjność metod rozszerzających między językami](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)
+- [Metody rozszerzające i przenoszeni delegaci](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)
 - [Metoda rozszerzenia powiązań i raportowanie błędów](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)

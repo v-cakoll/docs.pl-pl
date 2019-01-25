@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 4efd6ea1ee5987efcabb038152fca7f1ed90c8f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6571ee16b54c7b22d65567c8d3347cfe4a7936fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561966"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510432"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Animacja kluczowych klatek Tematy Pomocy
-Tematy w tej sekcji przedstawiają sposób umożliwia animować więcej niż dwóch wartości właściwości i kontroli interpolacji klatek kluczowych animacji.  
+Tematy w tej sekcji pokazują, jak animować więcej niż dwie wartości właściwości i interpolacji do sterowania za pomocą klatek kluczowych animacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Animowanie obiektu przy użyciu klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
@@ -37,7 +37,7 @@ Tematy w tej sekcji przedstawiają sposób umożliwia animować więcej niż dw�
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a>Zobacz też  
- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

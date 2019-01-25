@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fa8cc15f77ff59e3d3c570341d9bba70cf1e953
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3aba84f1ae451ee943028d063e91ca7a6d63548
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504700"
 ---
 # <a name="ehostbindingpolicymodifyflags-enumeration"></a>EHostBindingPolicyModifyFlags — Wyliczenie
-Umożliwia hosta określić typ przekierowania, który środowisko uruchomieniowe języka wspólnego (CLR) należy wykonać podczas stosowania zmian zasad z zestawu źródła w zestawie docelowym.  
+Zezwalaj hostowi na określenie typu przekierowania, których środowisko uruchomieniowe języka wspólnego (CLR), należy wykonać podczas stosowania zmian zasad z zestawu źródłowego zestawu docelowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,23 +41,23 @@ typedef enum _hostBindingPolicyModifyFlags {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`HOST_BINDING_POLICY_MODIFY_CHAIN`|Określa, że środowisko CLR będzie łańcucha wartości zasad zestawu źródła na tych funkcji w zestawie docelowym.|  
-|`HOST_BINDING_POLICY_MODIFY_DEFAULT`|Określa, że środowisko CLR będzie wykonywać domyślne działanie.|  
-|`HOST_BINDING_POLICY_MODIFY_MAX`|Określa, że środowisko CLR będzie wartości zasad dla zestawu docelowego do maksymalnej wartości.|  
+|`HOST_BINDING_POLICY_MODIFY_CHAIN`|Określa, że środowiska CLR będzie łańcucha wartości zasad zestawu źródła na tych dla zestawu docelowego.|  
+|`HOST_BINDING_POLICY_MODIFY_DEFAULT`|Określa, że środowisko CLR wykona domyślne działanie.|  
+|`HOST_BINDING_POLICY_MODIFY_MAX`|Określa, czy środowiska CLR będzie równa wartości zasad dla zestawu docelowego maksymalne wartości.|  
 |`HOST_BINDING_POLICY_MODIFY_REMOVE`|Określa środowisko CLR spowoduje zastąpienie wartości zasad dla zestawu docelowego z tymi źródło zestawu.|  
   
 ## <a name="remarks"></a>Uwagi  
- [ICLRHostBindingPolicyManager::ModifyApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md) metoda przyjmuje parametr typu `EHostBindingPolicyModifyFlags`.  
+ [Iclrhostbindingpolicymanager::modifyapplicationpolicy —](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md) metoda przyjmuje parametr typu `EHostBindingPolicyModifyFlags`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRHostBindingPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)  
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRHostBindingPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

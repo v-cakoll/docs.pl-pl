@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b3623c886a48cc938be017f955fbdac1df3f10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5e2501a5ab62c6aaef2b3f754f9eed10e4e4b97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505028"
 ---
 # <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a>IDebuggerThreadControl::ReleaseAllRuntimeThreads — Metoda
-Powiadamia host czy usług debugowania zwolniona wszystkie wątki, które są zablokowane.  
+Powiadamia hosta, że usług debugowania zamiar Zwolnij wszystkie wątki, które są blokowane.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,16 +34,16 @@ HRESULT ReleaseAllRuntimeThreads ( );
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `ReleaseAllRuntimeThreads` Metoda nigdy nie zostanie wywołana w wątku czasu wykonywania. Jeśli host ma zablokowane wątku czasu wykonywania, go należy zwolnić go teraz.  
+ `ReleaseAllRuntimeThreads` Metoda nigdy nie zostanie wywołana w wątku środowiska uruchomieniowego. Jeśli host ma zablokowany wątek środowiska uruchomieniowego, jego powinien zwolnij go teraz.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IDebuggerThreadControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IDebuggerThreadControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

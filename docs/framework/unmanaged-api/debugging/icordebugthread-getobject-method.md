@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad2dd4cded6800ce016d821f8e3ffe01dcb6264b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a188963273555e8b93b68c168260fd619136c00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544539"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject — Metoda
-Pobiera wskaźnika interfejsu do wspólnego języka wątku środowiska uruchomieniowego (języka wspólnego CLR).  
+Pobiera wskaźnik interfejsu do wspólnym mianownikiem języka wspólnego (CLR).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,10 +37,10 @@ HRESULT GetObject (
   
 #### <a name="parameters"></a>Parametry  
  `ppObject`  
- [out] Wskaźnik do adresu ICorDebugValue obiektu interfejsu, który reprezentuje wątku CLR.  
+ [out] Wskaźnik na adres obiektu interfejsu ICorDebugValue, który reprezentuje wątku środowiska CLR.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -48,5 +48,5 @@ HRESULT GetObject (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Threading.Thread>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Threading.Thread>

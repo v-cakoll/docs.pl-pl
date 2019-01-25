@@ -2,12 +2,12 @@
 title: Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: a03c459355f18ad30849113f353e35e97b6141ae
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f5401129601f84a5575a544490244f81b1e759ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251787"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510601"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga analizować dane śledzenia diagnostycznego, które są generowane przez architekturę WCF. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, przeglądać i filtrować komunikaty śledzenia w dzienniku, aby zdiagnozować, naprawy i sprawdź problemów z usługą WCF.  
@@ -191,7 +191,7 @@ Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga an
 -   Pokaż pełne ślady Non komunikat, który w przypadku usunięcia zaznaczenia Ignoruj pełne poziomu ślady, z wyjątkiem komunikatów śledzenia. W większości przypadków pełne śledzenie poziomu są mniej ważne w przypadku analizy. Ta opcja jest przydatna, gdy użytkownik nie chce analizować pełne śledzenie poziomu i tylko chcesz skupić się na bardziej ważne ślady.  
   
 ###### <a name="layout-mode"></a>Tryb układu  
- Podgląd w dwóch trybach układu: **procesu** i **wątku**. To ustawienie określa Największa jednostka organizacji. Wartość domyślna jest w trybie układu **procesu**, co oznacza, że działania są pogrupowane według procesów na wykresie.  
+ Podgląd w dwóch trybach układu: **Proces** i **wątku**. To ustawienie określa Największa jednostka organizacji. Wartość domyślna jest w trybie układu **procesu**, co oznacza, że działania są pogrupowane według procesów na wykresie.  
   
 ###### <a name="execution-list"></a>Lista wykonywania  
  Możesz wybrać, który proces lub wątek do wyświetlenia na wykresie z tej listy rozwijanej. Na przykład jeśli masz pliki śledzenia dwóch klientów (A i B) i jedną usługę, otwarte, a tylko mają być wyświetlane na wykresie usługi i klienta A, możesz usunąć zaznaczenie klienta B z listy.  
@@ -227,11 +227,11 @@ Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga an
 #### <a name="using-the-filter-toolbar"></a>Używanie paska narzędzi filtru  
  Pasek narzędzi Filtr pojawia się u góry tego narzędzia. Jeśli nie jest obecny, możesz to zrobić w **widoku** menu. Pasek ma trzy składniki:  
   
--   Wyszukaj: **poszukaj** definiuje do przeszukania operacja filtru tematu. Na przykład, jeśli chcesz znaleźć wszystkie ślady, które są emitowane w kontekście procesu X, Ustaw to pole na X i **wyszukiwania w** pole "Proces Name". Wybrano tej zmiany w kontrolce selektora daty/godziny, gdy filtr na podstawie czasu.  
+-   Szukać: **Wyszukaj** definiuje do przeszukania operacja filtru tematu. Na przykład, jeśli chcesz znaleźć wszystkie ślady, które są emitowane w kontekście procesu X, Ustaw to pole na X i **wyszukiwania w** pole "Proces Name". Wybrano tej zmiany w kontrolce selektora daty/godziny, gdy filtr na podstawie czasu.  
   
--   Wyszukaj w: to pole określa typ filtr, aby zastosować.  
+-   Szukaj w: To pole określa typ filtru do zastosowania.  
   
--   Poziom: Ustawienie poziomie określa minimalny poziom śledzenia może za pomocą filtru. Na przykład jeśli poziom jest ustawiona, aby wskazywał błąd i w górę, są wyświetlane tylko dane śledzenia na poziomie błędu i krytyczne. Ten filtr łączy się z kryteriami, wyszukaj i wyszukaj w.  
+-   Poziom: Ustawienie poziomie definiuje minimalny poziom śledzenia może za pomocą filtru. Na przykład jeśli poziom jest ustawiona, aby wskazywał błąd i w górę, są wyświetlane tylko dane śledzenia na poziomie błędu i krytyczne. Ten filtr łączy się z kryteriami, wyszukaj i wyszukaj w.  
   
  **Filtr teraz** przycisk uruchamia operację filtrowania. Niektóre filtry, szczególnie w przypadku, gdy są one stosowane do dużych zestawów danych potrwać bardzo długo. Operacja filtru można anulować, naciskając klawisz **zatrzymać** znajdujący się na pasku stanu w obszarze **operacji** menu.  
   
@@ -286,7 +286,7 @@ Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga an
   
 2.  Kliknij przycisk **filtr teraz**i sprawdź, czy wynik operacji.  
   
- Jeśli filtr korzysta z wielu parametrów, wprowadź je przy użyciu ";" jako separator w **Znajdź** pola. Na przykład, następujący ciąg definiuje 3 parametry: "1; findValue tekst". Podgląd dotyczy '1' {0} parametru filtru. 'findValue' i 'text' są stosowane do {1} i {2} odpowiednio.  
+ Jeśli filtr korzysta z wielu parametrów, wprowadź je przy użyciu ";" jako separator w **Znajdź** pola. Na przykład następujący ciąg definiuje 3 parametry: "1; findValue tekst". Podgląd dotyczy '1' {0} parametru filtru. 'findValue' i 'text' są stosowane do {1} i {2} odpowiednio.  
   
 ###### <a name="sharing-custom-filters"></a>Udostępnianie filtry niestandardowe  
  Filtry niestandardowe mogą być współużytkowane w różnych sesjach i różnych użytkowników. Możesz wyeksportować filtry do pliku definicji i zaimportować ten plik w innej lokalizacji.  
@@ -335,7 +335,7 @@ Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga an
   
     -   Opcja "Rejestrowany komunikat" przeszukuje słowo kluczowe tylko w wiadomości.  
   
--   Ignoruj działania głównego: wyszukiwania ignoruje ślady w działaniu "000000000000". Zwiększa wydajność w plikach dużych śledzenia w czasie działania głównego zawiera tysiące ślady, z których większość czy opłata za transfery.  
+-   Ignoruj działanie główne: Wyszukiwanie ignoruje ślady w działaniu "000000000000". Zwiększa wydajność w plikach dużych śledzenia w czasie działania głównego zawiera tysiące ślady, z których większość czy opłata za transfery.  
   
 ### <a name="navigating-traces"></a>Nawigacja śladów  
  Ponieważ dane śledzenia są zapisywane krok po kroku podczas wykonywania aplikacji, przechodząc ślady mogą pomóc debugowania aplikacji. Przeglądarki danych śledzenia usługi udostępnia różne sposoby do nawigowania po danych śledzenia.  
@@ -343,15 +343,15 @@ Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga an
 #### <a name="step-forward-or-backward"></a>Krok do przodu lub Wstecz  
  Należy wziąć pod uwagę każdego śledzenia jako linię kodu w programie, przechodzenie do przodu jest bardzo podobny do "Przekrocz nad" w Visual Studio rozwoju środowiska IDE (Integrated). Różnica polega na tym, że można również przejść do tyłu w śladach. Przechodzenie do przodu polega na przejściu do następnej śledzenia w działaniu.  
   
--   Krok do przodu korzystanie **działania** menu lub naciśnij pozycję "F10". Można również używać klucza strzałkę "nie działa", w okienku śledzenia.  
+-   Step Forward: Użyj **działania** menu lub naciśnij pozycję "F10". Można również używać klucza strzałkę "nie działa", w okienku śledzenia.  
   
--   Krok do tyłu: Użyj **działania** menu lub naciśnij pozycję "F9". Można również używać klucza strzałkę "up", w okienku śledzenia.  
+-   Krok do tyłu Użyj **działania** menu lub naciśnij pozycję "F9". Można również używać klucza strzałkę "up", w okienku śledzenia.  
   
 > [!NOTE]
 >  Może to potrwać należy do działania wykonywane w ramach innego procesu lub nawet na innym komputerze, ponieważ komunikatów WCF może wykonywać działania identyfikatorów, które rozciągają się maszyn.  
   
 #### <a name="follow-transfer"></a>Postępuj zgodnie z przeniesienia  
- Transfer danych śledzenia są specjalne śledzenia w pliku śledzenia. Działanie może przesyłać do kolejnego działania, śledzenia transferu. Na przykład "Działanie A", mogą przesyłać do "Działanie B". W takiej sytuacji istnieje śledzenia transferu ikona "Działanie A" o nazwie "Działanie:" i transferu. Ślad transferu jest łącze między dwoma ślady. W "Działanie B" mogą również istnieć ślad transferu na koniec działania, aby przesłać "Działanie A". Jest to podobne do wywołania funkcji w programach: A wywołuje B, a następnie zwraca B.  
+ Transfer danych śledzenia są specjalne śledzenia w pliku śledzenia. Działanie może przesyłać do kolejnego działania, śledzenia transferu. Na przykład "Działanie A", mogą przesyłać do "Działanie B". W takiej sytuacji istnieje śledzenia transferu działalność"A" o nazwie "do: Działanie"i ikona transferu. Ślad transferu jest łącze między dwoma ślady. W "Działanie B" mogą również istnieć ślad transferu na koniec działania, aby przesłać "Działanie A". Jest to podobne do wywołania funkcji w programach: Wywołuje usługę B, następnie B zwraca.  
   
  "Follow transferu" przypomina "Krok po kroku" w debugerze. Następuje przeniesienie od A do B. Nie ma żadnego wpływu na pozostałe dane śledzenia.  
   
@@ -359,7 +359,7 @@ Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga an
   
 -   Przez myszy: Kliknij dwukrotnie śledzenia transferu w okienku śledzenia.  
   
--   Klawiatury: Wybierz śledzenia transferu i używać "Transfer postępuj zgodnie z" w **działania** menu lub naciśnij pozycję "F11"  
+-   Przez klawiatury: Wybierz śledzenia transferu i użyj "Transfer postępuj zgodnie z" w **działania** menu lub naciśnij pozycję "F11"  
   
 > [!NOTE]
 >  W wielu przypadkach przesyłania działanie A do B działania działanie A czeka, aż działanie B przesyła powrót do działania A. Oznacza to, że działanie A ma bez śledzenia zarejestrowane w trakcie okresu, gdy działanie B jest aktywnie śledzenia. Jednak jest również możliwe, że działanie A nie czeka i ślady dzienników w dalszym ciągu. Istnieje również możliwość, że działanie B nie są przekazywane do działania A. W związku z tym, transferów działań nadal różnią się od wywołania funkcji w tym sensie. Możesz zrozumieć działanie transferów w widoku wykresu.  
@@ -367,7 +367,7 @@ Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga an
 #### <a name="jump-to-next-or-previous-transfer"></a>Przejdź do następnej lub poprzedniej transferu  
  Podczas analizy bieżącego działania lub wybrane działania po wybraniu wielu działań, możesz szybko znaleźć działań, które przekazuje go do. "Skok do przesyłania dalej" umożliwia umieszczanie dalej śledzenia transferu w działaniu. Po odnalezieniu śledzenia transferu służy "Follow transferu" Aby wejść do następnego działania.  
   
--   Przejdź do następnego transferu: Użyj **działania** menu lub naciśnij pozycję "Ctrl + F10".  
+-   Przejdź do następnego przeniesienia: Użyj **działania** menu lub naciśnij pozycję "Ctrl + F10".  
   
 -   Przejdź do poprzedniego transferu: Użyj **działania** menu lub naciśnij pozycję "Ctrl + F9".  
   
@@ -404,41 +404,41 @@ Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga an
   
 |Ikona|Opis|  
 |----------|-----------------|  
-|![Ostrzeżenie śledzenia](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Ostrzeżenie śledzenia: śledzenia, który jest emitowane na poziomie ostrzeżenia|  
-|![Błąd śledzenia](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Błąd śledzenia: śledzenia, który jest emitowane na poziomie błędu.|  
-|![Działanie Rozpocznij śledzenie:](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Działanie Rozpocznij śledzenie: śledzenia, która oznacza początek działania. Zawiera on nazwę działania. Projektant aplikacji lub dla deweloperów należy zdefiniować jedno działanie, Rozpocznij śledzenie na identyfikator działania na proces lub wątek.<br /><br /> Jeśli identyfikator działania są propagowane przez źródła śledzenia do śledzenia korelacji, następnie widać wielu rozpoczyna się dla tego samego identyfikatora aktywności (po jednej na źródła śledzenia). Rozpocznij śledzenie jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|  
-|![Działanie Zatrzymaj śledzenie](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Działanie Zatrzymaj śledzenie: śledzenia, który oznacza koniec działania. . Zawiera on nazwę działania. Projektant aplikacji lub dla deweloperów należy zdefiniować jedno działanie Zatrzymaj śledzenie według identyfikatorów aktywności dla źródła śledzenia. Nie śladów ze źródła śledzenia danego są wyświetlane po działaniu Stop emitowane przez to źródło śledzenia, z wyjątkiem, jeśli stopień szczegółowości czasu śledzenia nie jest wystarczająco mała. Jeśli tak się stanie, być przemieszane dwóch ślady z tym samym czasie, w tym zatrzymania, podczas wyświetlania. Jeśli identyfikator działania są propagowane przez źródła śledzenia do śledzenia korelacji, zostanie wyświetlony wielu zatrzyma się na tym samym identyfikatorze aktywności (po jednej na źródła śledzenia). Zatrzymaj śledzenie jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|  
-|![Działanie Suspend śledzenia](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Działanie Suspend śledzenia: śledzenie oznaczający czasu działania jest wstrzymana. Ślady są emitowane w działanie wstrzymaną, dopóki nie wznawia działania. Działanie wstrzymaną oznacza działań wykonywanych w działania w zakresie źródła śledzenia nie przetwarzania. Wstrzymywanie/wznawianie ślady są przydatne do profilowania. Wstrzymaj śledzenia jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|  
-|![Działanie wznowienia śledzenia](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Działanie wznowienia śledzenia: śledzenie oznaczający czas działania zostanie wznowione po jego została wstrzymana. Ślady mogą ponownie wyemitowane w tym działaniu. Wstrzymywanie/wznawianie ślady są przydatne do profilowania. Wznów śledzenia jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|  
-|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transfer: Śledzenia, który jest emitowane, gdy przepływ sterowania logicznych jest przenoszona z jednego działania na inny. Działanie, które pochodzi transfer może w dalszym ciągu wykonują pracę równolegle do działania, których przeniesienie przechodzi do. Transfer śledzenia jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|  
-|![Transfer From](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Przesyłanie danych z: Śledzenie, definiujący transfer z innego działania do bieżącego działania.|  
-|![Transfer To](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Przesyłanie danych do: Śledzenie, definiujący przeniesienia przepływu sterowania logicznych z bieżącego działania do kolejnego działania.|  
+|![Ostrzeżenie śledzenia](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Ostrzeżenie śledzenia: Śledzenia, który jest emitowane na poziomie ostrzeżenia|  
+|![Błąd śledzenia](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Błąd śledzenia: Śledzenie, który jest emitowane na poziomie błędu.|  
+|![Działanie Rozpocznij śledzenie:](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Ślad rozpoczęcia działania: Śledzenie, która oznacza początek działania. Zawiera on nazwę działania. Projektant aplikacji lub dla deweloperów należy zdefiniować jedno działanie, Rozpocznij śledzenie na identyfikator działania na proces lub wątek.<br /><br /> Jeśli identyfikator działania są propagowane przez źródła śledzenia do śledzenia korelacji, następnie widać wielu rozpoczyna się dla tego samego identyfikatora aktywności (po jednej na źródła śledzenia). Rozpocznij śledzenie jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|  
+|![Działanie Zatrzymaj śledzenie](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Działanie Zatrzymaj śledzenie: Śledzenie, który oznacza koniec działania. . Zawiera on nazwę działania. Projektant aplikacji lub dla deweloperów należy zdefiniować jedno działanie Zatrzymaj śledzenie według identyfikatorów aktywności dla źródła śledzenia. Nie śladów ze źródła śledzenia danego są wyświetlane po działaniu Stop emitowane przez to źródło śledzenia, z wyjątkiem, jeśli stopień szczegółowości czasu śledzenia nie jest wystarczająco mała. Jeśli tak się stanie, być przemieszane dwóch ślady z tym samym czasie, w tym zatrzymania, podczas wyświetlania. Jeśli identyfikator działania są propagowane przez źródła śledzenia do śledzenia korelacji, zostanie wyświetlony wielu zatrzyma się na tym samym identyfikatorze aktywności (po jednej na źródła śledzenia). Zatrzymaj śledzenie jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|  
+|![Działanie Suspend śledzenia](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Działanie Suspend śledzenia: Śledzenie oznaczający razem, gdy działanie zostało wstrzymane. Ślady są emitowane w działanie wstrzymaną, dopóki nie wznawia działania. Działanie wstrzymaną oznacza działań wykonywanych w działania w zakresie źródła śledzenia nie przetwarzania. Wstrzymywanie/wznawianie ślady są przydatne do profilowania. Wstrzymaj śledzenia jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|  
+|![Działanie wznowienia śledzenia](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Ślad wznowienie działania: Śledzenie, oznaczający czas działania zostanie wznowione po jego została wstrzymana. Ślady mogą ponownie wyemitowane w tym działaniu. Wstrzymywanie/wznawianie ślady są przydatne do profilowania. Wznów śledzenia jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transfer: Śledzenie, który jest emitowane, gdy przepływ sterowania logicznych jest przenoszona z jednego działania na inny. Działanie, które pochodzi transfer może w dalszym ciągu wykonują pracę równolegle do działania, których przeniesienie przechodzi do. Transfer śledzenia jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|  
+|![Transfer From](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Przenosić: Śledzenie, definiujący transfer z innego działania do bieżącego działania.|  
+|![Transfer To](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Przenieś do: Śledzenie, definiujący przeniesienia przepływu sterowania logicznych z bieżącego działania do kolejnego działania.|  
   
 ### <a name="wcf-traces"></a>Dane śledzenia WCF  
   
 |Ikona|Opis|  
 |----------|-----------------|  
-|![Komunikat śledzenia dziennika](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Komunikat śledzenia dziennika: śledzenia, które są emitowane po wiadomości WCF jest rejestrowane za pomocą funkcji rejestrowania komunikatów podczas `System.ServiceModel.MessageLogging` źródła śledzenia jest włączona. Kliknięcie tego powoduje wyświetlenie komunikatu. Istnieją cztery punkty rejestrowania można skonfigurować wiadomości: ServiceLevelSendRequest, TransportSend, TransportReceive i ServiceLevelReceiveRequest, który może być również określony przez `messageSource` atrybutu w śledzenie dziennik komunikatów.|  
-|![Komunikat śledzenia odebrane](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Komunikat śledzenia odebrane: śledzenia, które są emitowane po odebraniu wiadomości WCF, jeśli `System.ServiceModel` źródła śledzenia jest włączona na poziomie informacji lub pełne. Ślad ma zasadnicze znaczenie dla wyświetlanie strzałek korelacji wiadomości w działaniu **wykres** widoku.|  
-|![Komunikat śledzenia wysłane](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Komunikat śledzenia wysłane: śledzenia, który jest emitowane po wysłaniu wiadomości WCF, jeśli `System.ServiceModel` źródła śledzenia jest włączona na poziomie informacji lub pełne. Ślad ma zasadnicze znaczenie dla wyświetlanie strzałek korelacji wiadomości w działaniu **wykres** widoku.|  
+|![Komunikat śledzenia dziennika](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Śledzenie dziennik komunikatów: Śledzenia, które są emitowane po wiadomości WCF jest rejestrowane za pomocą funkcji rejestrowania komunikatów podczas `System.ServiceModel.MessageLogging` źródła śledzenia jest włączona. Kliknięcie tego powoduje wyświetlenie komunikatu. Istnieją cztery punkty rejestrowania można skonfigurować wiadomości: ServiceLevelSendRequest, TransportSend, TransportReceive i ServiceLevelReceiveRequest, który może być również określony przez `messageSource` atrybutu w śledzenie dziennik komunikatów.|  
+|![Komunikat śledzenia odebrane](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Śledzenie odebranych komunikatów: Śledzenia, które są emitowane po odebraniu wiadomości WCF, jeśli `System.ServiceModel` źródła śledzenia jest włączona na poziomie informacji lub pełne. Ślad ma zasadnicze znaczenie dla wyświetlanie strzałek korelacji wiadomości w działaniu **wykres** widoku.|  
+|![Komunikat śledzenia wysłane](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Śledzenie wysłanych komunikatów: Śledzenia, który jest emitowane po wysłaniu wiadomości WCF, jeśli `System.ServiceModel` źródła śledzenia jest włączona na poziomie informacji lub pełne. Ślad ma zasadnicze znaczenie dla wyświetlanie strzałek korelacji wiadomości w działaniu **wykres** widoku.|  
   
 ### <a name="activities"></a>Kategoria Activities  
   
 |Ikona|Opis|  
 |----------|-----------------|  
-|![Działanie](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Działanie: Wskazuje bieżące działanie ogólne działanie.|  
-|![Główny działania](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Główny działanie: wskazuje działania głównego procesu.|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Działania: Wskazuje, że bieżące działanie jest ogólne działanie.|  
+|![Główny działania](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Działania głównego: Wskazuje działania głównego procesu.|  
   
 ### <a name="wcf-activities"></a>Działania usługi WCF  
   
 |Ikona|Opis|  
 |----------|-----------------|  
-|![Działanie środowiska](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Działanie środowiska: działanie, które umożliwia tworzenie, spowoduje otwarcie lub zamknięcie klienta lub hosta usługi WCF. Błędy, które wystąpiło podczas tych faz pojawi się w przypadku tego działania.|  
-|![Nasłuchiwanie działania](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Nasłuchiwanie działanie: działanie, które dzienniki śledzenia związane z odbiornika. Wewnątrz tego działania możemy wyświetlić żądania informacji i połączenie odbiornika.|  
-|![Odbieranie bajtów działania](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Odbieranie bajtów działanie: działanie, które grupy wszystkie ślady dotyczące odbierania Bajty przychodzące połączenia między dwoma punktami końcowymi. To działanie jest niezbędne do korelacji z działaniami transportu, które propagowania ich identyfikator działania, takie jak sterownik http.sys. Błędy połączeń, takie jak przerwań pojawi się w przypadku tego działania.|  
-|![Przetwarzanie komunikatu działania](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Przetwarzanie komunikatu działanie: działanie, które grupy danych śledzenia dotyczących tworzenia komunikatów WCF. Błędy z powodu nieprawidłowych koperty lub nieprawidłowo sformułowany komunikat pojawi się w działania. Wewnątrz tego działania możemy sprawdzić nagłówki wiadomości, aby zobaczyć, jeśli identyfikator działania został rozpropagowany od elementu wywołującego. Jeśli jest to wartość true, w przypadku, gdy przekazywane do procesu akcji działania (dalej), firma Microsoft można także przypisać do tego działania propagowany działania identyfikator korelacji między obiektami wywołującym i śladów funkcji.|  
-|![Komunikat śledzenia dziennika](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Przetwarzanie akcji działanie: działanie, które grupy wszystkie ślady związane z żądaniem WCF między dwoma punktami końcowymi. Jeśli `propagateActivity` ustawiono `true` zarówno punkty końcowe w konfiguracji wszystkie ślady z obu punktów końcowych są scalane w jedno działanie, aby uzyskać bezpośredni wpływ. Takie działanie będzie zawierać błędy spowodowane transportu lub zabezpieczeń, przetwarzanie, rozszerzając na granicy kod użytkownika i utworzyć kopię (jeśli istnieje odpowiedzi).|  
-|![Przetwarzanie komunikatu działania](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Wykonywanie kodu użytkownika działanie: działanie, które grupy kodu użytkownika śledzi do przetworzenia żądania.|  
+|![Działanie środowiska](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Działanie środowiska: Działanie, które umożliwia tworzenie, spowoduje otwarcie lub zamknięcie klienta lub hosta usługi WCF. Błędy, które wystąpiło podczas tych faz pojawi się w przypadku tego działania.|  
+|![Nasłuchiwanie działania](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Nasłuchiwanie działania: Działanie, które dzienniki śledzenia związane z odbiornika. Wewnątrz tego działania możemy wyświetlić żądania informacji i połączenie odbiornika.|  
+|![Odbieranie bajtów działania](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Odbieranie bajtów działania: Działanie, który grupuje wszystkie ślady dotyczące odbierania Bajty przychodzące połączenia między dwoma punktami końcowymi. To działanie jest niezbędne do korelacji z działaniami transportu, które propagowania ich identyfikator działania, takie jak sterownik http.sys. Błędy połączeń, takie jak przerwań pojawi się w przypadku tego działania.|  
+|![Przetwarzanie komunikatu działania](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Proces działania komunikatu: Działanie, które grupy danych śledzenia dotyczących tworzenia komunikatów WCF. Błędy z powodu nieprawidłowych koperty lub nieprawidłowo sformułowany komunikat pojawi się w działania. Wewnątrz tego działania możemy sprawdzić nagłówki wiadomości, aby zobaczyć, jeśli identyfikator działania został rozpropagowany od elementu wywołującego. Jeśli jest to wartość true, w przypadku, gdy przekazywane do procesu akcji działania (dalej), firma Microsoft można także przypisać do tego działania propagowany działania identyfikator korelacji między obiektami wywołującym i śladów funkcji.|  
+|![Komunikat śledzenia dziennika](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Działanie działania procesu: Działanie, który grupuje wszystkie ślady związane z żądaniem WCF między dwoma punktami końcowymi. Jeśli `propagateActivity` ustawiono `true` zarówno punkty końcowe w konfiguracji wszystkie ślady z obu punktów końcowych są scalane w jedno działanie, aby uzyskać bezpośredni wpływ. Takie działanie będzie zawierać błędy spowodowane transportu lub zabezpieczeń, przetwarzanie, rozszerzając na granicy kod użytkownika i utworzyć kopię (jeśli istnieje odpowiedzi).|  
+|![Przetwarzanie komunikatu działania](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Wykonaj działania użytkownika kodu: Działanie, który grupuje ślady kod użytkownika do przetworzenia żądania.|  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
  Jeśli nie masz uprawnień do zapisu w rejestrze, otrzymasz następujący komunikat o błędzie "Microsoft Service przeglądarka śledzenia nie został zarejestrowany w systemie" Kiedy używać "`svctraceviewer /register`" polecenie, aby zarejestrować narzędzia. W takiej sytuacji należy rejestrować przy użyciu konta które ma dostęp do zapisu do rejestru.  
@@ -449,7 +449,7 @@ Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga an
   
  Po otwarciu dziennika śledzenia utworzone za pomocą arabskim systemie operacyjnym, możesz zauważyć, że nie działa filtr czasu. Na przykład roku 2005 odnosi się do roku 1427 w języku arabskim kalendarzu. Zakres czasu, obsługiwane przez przeglądarki danych śledzenia usługi filtr narzędzie nie obsługuje jednak daty wcześniejszej niż 1752. To oznacza, że nie jest możliwe wybrać poprawną datę w filtrze. Aby rozwiązać ten problem, należy utworzyć filtr niestandardowy (**widok/niestandardowe filtry**) za pomocą wyrażenia XPath do uwzględnienia w określonym zakresie czasu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Konfigurowanie śledzenia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Śledzenie działania i propagację dla korelacji śledzenia End-To-End](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+## <a name="see-also"></a>Zobacz także
+- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Konfigurowanie śledzenia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Śledzenie działania i propagację dla korelacji śledzenia End-To-End](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

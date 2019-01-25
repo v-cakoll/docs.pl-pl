@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: ea079a0b55dde8df7b3442f3d604b2b6467ba785
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c77d688afa19caf1d54adf93b9fb6cf8b1c4701d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493901"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modyfikowanie dużej wartości (maksymalna) danych w ADO.NET
 Typy danych dużego obiektu (LOB) to te, które przekraczają maksymalny rozmiar wiersza 8 kilobajtów (KB). SQL Server udostępnia `max` specyfikatorem `varchar`, `nvarchar`, i `varbinary` typy danych, aby zezwolić na przechowywanie wartości jest większy niż 2 ^ 32 bajtów. Kolumny w tabeli i zmienne języka Transact-SQL może określić, czy `varchar(max)`, `nvarchar(max)`, lub `varbinary(max)` typów danych. W ADO.NET `max` typy danych mogą być pobierane przez `DataReader`i może zostać określony jako obie wartości parametrów wejściowych i wyjściowych, bez żadnej specjalnej obsługi. Dla dużych `varchar` typy danych, dane można je pobrać i zaktualizować przyrostowo.  
@@ -19,7 +19,7 @@ Typy danych dużego obiektu (LOB) to te, które przekraczają maksymalny rozmiar
   
  Poniższa tabela zawiera linki do dokumentacji w dokumentacji SQL Server — książki Online.  
   
- **SQL Server — książki Online**  
+ **SQL Server Books Online**  
   
 1.  [Używanie typów danych dużych wartości](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
@@ -249,8 +249,8 @@ WHERE   DocumentID=@DocumentID
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Dane binarne i dużej wartości w programie SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Operacje danych serwera SQL w ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Dane binarne i dużej wartości w programie SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [Operacje danych serwera SQL w ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

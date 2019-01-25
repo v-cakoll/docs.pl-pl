@@ -1,5 +1,5 @@
 ---
-title: 'Porady: implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta'
+title: 'Instrukcje: Implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 10b6bb3f55c8acd62101a48ea53b42e331e4210f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3acc4fd200b547fc754c4151aedc8d70fd1fa0bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502159"
 ---
-# <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Porady: implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta
+# <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Instrukcje: Implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta
 Możesz użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istniejący dynamiczny kod aplikacji sieci Web HTML (DHTML) do aplikacji klienta Windows Forms. Jest to przydatne, gdy zainwestowali czas opracowywania znaczące w tworzeniu kontrolek na podstawie DHTML i chcesz korzystać z zalet użytkownikowi możliwości interfejsu Windows Forms bez konieczności ponownego zapisania istniejącego kodu.  
   
  <xref:System.Windows.Forms.WebBrowser> Kontrola umożliwia Implementowanie dwukierunkowej komunikacji między kodu aplikacji klienckich i skryptów kodu strony sieci Web za pomocą <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> i <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwości. Ponadto można skonfigurować <xref:System.Windows.Forms.WebBrowser> kontrolki formantów sieci Web programu blend bezproblemowo z innymi formantami na formularzu aplikacji ukrywanie ich implementacji DHTML. Aby dopasować bezproblemowo formanty, formatowanie stronę wyświetlaną, aby jej kolor tła i stylu wizualnego dopasowania pozostałej części formularza i używać <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>, i <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> właściwości, aby wyłączyć funkcje standardową przeglądarką.  
@@ -105,10 +105,10 @@ Możesz użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istni
   
 -   Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.  
   
- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.WebBrowser>  
- <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>  
- [WebBrowser, kontrolka](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.WebBrowser>
+- <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>
+- [WebBrowser, kontrolka](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)

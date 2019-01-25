@@ -1,5 +1,5 @@
 ---
-title: Operacje usługi (usługi danych WCF)
+title: Operacje usługi (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: da8d482fbf506749f9805edcbbaad3c893ad56b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497121"
 ---
-# <a name="service-operations-wcf-data-services"></a>Operacje usługi (usługi danych WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia zdefiniowanie operacji usługi w usłudze danych, aby udostępniać metod na serwerze. Podobnie jak inne zasoby usługi danych operacji usługi są opisane przez identyfikator URI. Operacje usług umożliwiają udostępnianie logiki biznesowej w usłudze danych, takich jak wdrożyć logikę sprawdzania poprawności, zastosować opartej na rolach zabezpieczeń lub do udostępnienia specjalizowany możliwości zapytań. Operacje usług są dodawane do klasy usługi danych, która pochodzi z metody <xref:System.Data.Services.DataService%601>. Podobnie jak wszystkie inne usługi zasobów danych możesz podać parametry metody operacji usługi. Na przykład następujące operacja identyfikator URI usługi (na podstawie [szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Usługa danych) przekazuje wartość `London` do `city` parametru:  
+# <a name="service-operations-wcf-data-services"></a>Operacje usługi (WCF Data Services)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia zdefiniowanie operacji usługi w usłudze data ujawniać metod na serwerze. Podobnie jak inne zasoby usługi danych operacji usługi są rozwiązywane przez identyfikatory URI. Operacje usługi umożliwiają udostępnianie logikę biznesową w usłudze danych, takich jak zaimplementować logikę weryfikacji, aby zastosować zabezpieczenia oparte na rolach, lub do udostępnienia wyspecjalizowane możliwościami wysyłania zapytań. Operacje usługi są dodawane do klasie usługi danych, która pochodzi z metody <xref:System.Data.Services.DataService%601>. Podobnie jak wszystkich innych zasobów usługi danych możesz podać parametry do metody operacji usługi. Na przykład, następujące operacja identyfikator URI usługi (na podstawie [Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) usługi danych) przekazuje wartość `London` do `city` parametru:  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
 ```  
   
- Definicja dla tej operacji usługi jest następujący:  
+ Definicja dla tej operacji usługa jest w następujący sposób:  
   
  [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
  [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
- Można użyć <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> z <xref:System.Data.Services.DataService%601> bezpośredni dostęp do źródła danych, którego używa Usługa danych. Aby uzyskać więcej informacji, zobacz [porady: Definiowanie operacji usługi](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
+ Możesz użyć <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> z <xref:System.Data.Services.DataService%601> do uzyskania bezpośredniego dostępu do źródła danych, którego używa Usługa danych. Aby uzyskać więcej informacji, zobacz [jak: Definiowanie operacji usługi](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
   
- Aby uzyskać informacje dotyczące wywoływanie operacji usługi z aplikacją kliencką programu .NET Framework, zobacz [wywoływanie operacji usługi](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md).  
+ Aby uzyskać informacji na temat do wywołania operacji usługi aplikacji klienta .NET Framework, zobacz [wywoływanie operacji usługi](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md).  
   
 ## <a name="service-operation-requirements"></a>Wymagania dotyczące operacji usługi  
- Podczas definiowania operacji usługi dla usługi danych, mają zastosowanie następujące wymagania. Jeśli metoda nie spełnia te wymagania, nie będą widoczne jako operacji usługi dla usługi data.  
+ Obowiązują następujące wymagania podczas definiowania operacji usługi dla usługi danych. Jeśli metoda nie spełnia tych wymagań, nie będą widoczne jako operacje obsługi dla usługi danych.  
   
--   Operacja musi być metody wystąpienia publicznego, która jest elementem członkowskim klasy usługi danych.  
+-   Operacja musi być metodą publiczne wystąpienia, która jest elementem członkowskim klasy usługi danych.  
   
--   Metoda operacji może akceptować tylko parametry wejściowe. Usługa danych nie można uzyskać dostępu do danych przesyłanych w treści wiadomości.  
+-   Metoda operacji może akceptować tylko parametry wejściowe. Nie można uzyskać dostępu do danych przesyłanych w treści komunikatu przez usługę danych.  
   
--   Jeśli parametry są określone, typ każdego parametru musi być typu pierwotnego. Wszystkie dane typu innego niż pierwotny musi serializować i przekazany parametr typu string.  
+-   Jeśli parametry są definiowane, typ każdego parametru musi być typem pierwotnym. Wszelkie dane typu innego niż podstawowy musi serializacji i przekazywana do parametru ciągu.  
   
 -   Metoda musi zwracać jedną z następujących czynności:  
   
@@ -48,61 +48,61 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
     -   <xref:System.Linq.IQueryable%601>  
   
-    -   Typ jednostki w modelu danych, czy dane usługi ujawnia.  
+    -   Typ jednostki w modelu danych usługi ujawnia w danych.  
   
-    -   Pierwotne klasy takie jak liczba całkowita lub ciąg.  
+    -   Klasa pierwotnych, np. integer lub string.  
   
--   Aby zapewnić obsługę opcje zapytania, takie jak sortowania, stronicowania i filtrowania, metody Operacja usługi powinna zwrócić <xref:System.Linq.IQueryable%601>. Do operacji usługi, które obejmują opcje zapytania będą odrzucane dla operacji, które zwraca tylko <xref:System.Collections.Generic.IEnumerable%601>.  
+-   W celu obsługi opcji zapytania, takich jak sortowanie, stronicowanie i filtrowanie, powinna zwrócić metody operacji usługi <xref:System.Linq.IQueryable%601>. Do operacji usługi, które obejmują opcje zapytania będą odrzucane dla operacji, które zwraca tylko <xref:System.Collections.Generic.IEnumerable%601>.  
   
--   Aby zapewnić obsługę dostęp do powiązanych jednostek przy użyciu właściwości nawigacji, musi zwracać operacji usługi <xref:System.Linq.IQueryable%601>.  
+-   Aby można było obsługiwać dostęp do powiązanych jednostek przy użyciu właściwości nawigacji, operacja usługi musi zwracać <xref:System.Linq.IQueryable%601>.  
   
--   Metoda musi być adnotowany przy `[WebGet]` lub `[WebInvoke]` atrybutu.  
+-   Metoda musi być oznaczona przy użyciu `[WebGet]` lub `[WebInvoke]` atrybutu.  
   
-    -   `[WebGet]` Włącza metodę można wywołać za pomocą żądania GET.  
+    -   `[WebGet]` Włącza metodę do wywołania przez za pomocą żądania GET.  
   
     -   `[WebInvoke(Method = "POST")]` Włącza metodę można wywołać za pomocą żądania POST. Inne <xref:System.ServiceModel.Web.WebInvokeAttribute> metody nie są obsługiwane.  
   
--   Operacja usługi może być oznaczony za pomocą <xref:System.Data.Services.SingleResultAttribute> określający, czy wartość zwracaną z metody jest pojedynczy element zamiast kolekcji jednostek. Ta różnica nakazują wynikowy serializacji odpowiedzi oraz sposób, w których traversals właściwości nawigacji dodatkowe są reprezentowane w identyfikatorze URI. Na przykład używając AtomPub serializacji, wystąpienie typu pojedynczego zasobu jest reprezentowany jako element wpisu i zestaw wystąpień jako element źródła.  
+-   Operacja usługi może być oznaczona przy użyciu <xref:System.Data.Services.SingleResultAttribute> określający, że wartość zwracana z metody jest pojedynczy element, a nie w kolekcji jednostek. Wykonywania tego rozróżnienia nakazują wynikowy serializacji odpowiedzi i sposób, w których przejścia właściwość nawigacji dodatkowe są reprezentowane w identyfikatorze URI. Na przykład korzystając z AtomPub serializacji, wystąpienie typu pojedynczego zasobu jest reprezentowany jako element wejścia i zestaw wystąpień jako element kanału informacyjnego.  
   
 ## <a name="addressing-service-operations"></a>Adresowanie operacji usługi  
- Operacje usługi można rozwiązać przez umieszczenie nazwę metody w pierwszy segment ścieżki identyfikatora URI. Na przykład następujący identyfikator URI uzyskuje dostęp do `GetOrdersByState` operację, która zwraca <xref:System.Linq.IQueryable%601> Kolekcja `Orders` obiektów.  
+ Operacje usługi można rozwiązać, umieszczając nazwę metody w pierwszy segment ścieżki identyfikatora URI. Na przykład następujący identyfikator URI uzyskuje dostęp do `GetOrdersByState` operację, która zwraca <xref:System.Linq.IQueryable%601> zbiór `Orders` obiektów.  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true  
 ```  
   
- Podczas wywoływania operacji usługi, parametry są określane jako opcje zapytania. Poprzednia operacja usługi akceptuje zarówno parametr typu string `state` i parametrem logicznym `includeItems` wskazująca, czy do uwzględnienia powiązane `Order_Detail` obiektów w odpowiedzi.  
+ Podczas wywoływania operacji usługi, parametry są dostarczane jako opcji zapytania. Poprzednia operacja usługi przyjmuje jako parametr ciągu `state` i parametrem logicznym `includeItems` oznacza to, czy do uwzględnienia powiązane `Order_Detail` obiektów w odpowiedzi.  
   
- Poniżej przedstawiono prawidłowe typy zwracane dla operacji usługi:  
+ Poniżej przedstawiono prawidłowe typy zwracane dla operacji usługowej:  
   
-|Prawidłowe typy zwracane|Identyfikator URI zasad|  
+|Prawidłowe typy zwracane|Reguł identyfikatorów URI|  
 |------------------------|---------------|  
-|`void` (`Nothing` w języku Visual Basic)<br /><br /> —lub—<br /><br /> Typy jednostek<br /><br /> —lub—<br /><br /> Typy pierwotne|Identyfikator URI musi być segment pojedynczą ścieżkę, który jest nazwa operacji usługi. Opcje zapytania nie są dozwolone.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Identyfikator URI musi być segment pojedynczą ścieżkę, który jest nazwa operacji usługi. Ponieważ nie jest typem wyniku <xref:System.Linq.IQueryable%601> typu, opcje zapytania nie są dozwolone.|  
-|<xref:System.Linq.IQueryable%601>|Segmenty ścieżki zapytania oprócz ścieżkę, która jest nazwa operacji usługi są dozwolone. Dozwolone są też opcji zapytania.|  
+|`void` (`Nothing` w języku Visual Basic)<br /><br /> —lub—<br /><br /> Typy jednostek<br /><br /> —lub—<br /><br /> Typy pierwotne|Identyfikator URI musi być segmentu pojedynczą ścieżkę, która jest nazwą operacji usługi. Opcje zapytania nie są dozwolone.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Identyfikator URI musi być segmentu pojedynczą ścieżkę, która jest nazwą operacji usługi. Ponieważ nie jest typu wyniku <xref:System.Linq.IQueryable%601> typu, opcje zapytania są niedozwolone.|  
+|<xref:System.Linq.IQueryable%601>|Segmenty ścieżki zapytanie poza ścieżką, która jest nazwą operacji usługi są dozwolone. Opcje zapytania są również dozwolone.|  
   
- Segmenty ścieżki dodatkowe lub opcje zapytania można dodać do identyfikatora URI w zależności od zwracany typ operacji usługi. Na przykład następujący identyfikator URI uzyskuje dostęp do `GetOrdersByCity` operację, która zwraca <xref:System.Linq.IQueryable%601> Kolekcja `Orders` obiektów, uporządkowanych według `RequiredDate` w kolejności malejącej, wraz z odnośnych `Order_Details` obiektów:  
+ Segmenty ścieżki dodatkowe lub opcje zapytania mogą być dodawane do identyfikatora URI, w zależności od typu zwracanego operacji usługi. Na przykład, następujący identyfikator URI uzyskuje dostęp do `GetOrdersByCity` operację, która zwraca <xref:System.Linq.IQueryable%601> zbiór `Orders` obiektów, uporządkowane według `RequiredDate` w kolejności malejącej, wraz z powiązane `Order_Details` obiektów:  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc  
 ```  
   
 ## <a name="service-operations-access-control"></a>Kontrola dostępu operacji usługi  
- Widoczność obejmujących całą usługę operacji usługi jest kontrolowany przez <xref:System.Data.Services.IDataServiceConfiguration.SetServiceOperationAccessRule%2A> metody w <xref:System.Data.Services.IDataServiceConfiguration> klasy w podobny sposób że widoczność zestawu jednostek jest kontrolowany za pomocą <xref:System.Data.Services.IDataServiceConfiguration.SetEntitySetAccessRule%2A> metody. Na przykład następujący wiersz kodu w definicji usługi danych umożliwia dostęp do `CustomersByCity` operacji usługi.  
+ Widoczność obejmujących całą usługę operacji usługi jest kontrolowana przez <xref:System.Data.Services.IDataServiceConfiguration.SetServiceOperationAccessRule%2A> metody <xref:System.Data.Services.IDataServiceConfiguration> klasy w taki sam sposób czy widoczność zestaw jednostek jest kontrolowany za pomocą <xref:System.Data.Services.IDataServiceConfiguration.SetEntitySetAccessRule%2A> metody. Na przykład następujący wiersz kodu w definicji usługi danych umożliwia dostęp do `CustomersByCity` operacji usługi.  
   
  [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
  [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  
   
 > [!NOTE]
->  Jeśli operacja usługi ma zwracany typ, który został ukryty przez ograniczenie dostępu na podstawowych zestawów jednostek, operacji usługi nie będzie dostępna dla aplikacji klienckich.  
+>  Jeśli operacja usługi ma zwracany typ, który został ukryty przez ograniczenie dostępu na podstawowe zestawy jednostek, operacja usługi nie będzie dostępna dla aplikacji klienckich.  
   
- Aby uzyskać więcej informacji, zobacz [porady: Definiowanie operacji usługi](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Definiowanie operacji usługi](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
   
 ## <a name="raising-exceptions"></a>Występowanie wyjątków  
- Firma Microsoft zaleca użycie <xref:System.Data.Services.DataServiceException> klasy zawsze, gdy Zgłoś wyjątek podczas wykonywania usługi danych. Jest to spowodowane wie, czas wykonywania usługi danych sposób mapowania właściwości tego obiektu wyjątek poprawnie komunikat odpowiedzi HTTP. Gdy zostanie podniesiony <xref:System.Data.Services.DataServiceException> operacji usługi otoczona zwrócony wyjątek <xref:System.Reflection.TargetInvocationException>. Aby zwracać wartość base <xref:System.Data.Services.DataServiceException> bez otaczający <xref:System.Reflection.TargetInvocationException>, konieczne jest przesłonięcie <xref:System.Data.Services.DataService%601.HandleException%2A> metody w <xref:System.Data.Services.DataService%601>, Wyodrębnij <xref:System.Data.Services.DataServiceException> z <xref:System.Reflection.TargetInvocationException>i zwraca je jako błąd najwyższego poziomu, jak w poniższym przykładzie:  
+ Firma Microsoft zaleca użycie <xref:System.Data.Services.DataServiceException> klasy zawsze wtedy, gdy zgłosić wyjątek podczas wykonywania usługi danych. Jest to spowodowane wie, środowisko wykonawcze usług danych jak poprawnie zamapować właściwości tego obiektu wyjątku komunikatu odpowiedzi HTTP. Gdy zostanie podniesiony <xref:System.Data.Services.DataServiceException> operacji usługi otoczona zwrócony wyjątek <xref:System.Reflection.TargetInvocationException>. Do zwrócenia z base <xref:System.Data.Services.DataServiceException> bez obejmującego <xref:System.Reflection.TargetInvocationException>, konieczne jest przesłonięcie <xref:System.Data.Services.DataService%601.HandleException%2A> method in Class metoda <xref:System.Data.Services.DataService%601>, Wyodrębnij <xref:System.Data.Services.DataServiceException> z <xref:System.Reflection.TargetInvocationException>i zwracanie go jako błąd najwyższego poziomu, jak w poniższym przykładzie:  
   
  [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#handleexceptions)]
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interceptory](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Interceptory](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

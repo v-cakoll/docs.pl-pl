@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 7addb503d0a7d4c7a4388144759e7f40264d7703
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 111b129b17d0fe473b0249c43e25ddc50bfe6fd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513454"
 ---
 # <a name="pack-uris-in-wpf"></a>Pakuj URI w WPF
 W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] są używane do identyfikowania i ładowanie plików na wiele sposobów, w tym następujące:  
@@ -46,7 +46,7 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
   
  ![Diagram pakietu i części](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
   
- Aby zidentyfikować elementy, specyfikacji OPC wykorzystuje rozszerzalności RFC 2396 (identyfikatorów URI (Uniform Resource): ogólna składnia) do definiowania pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schemat.  
+ Aby zidentyfikować elementy, specyfikacji OPC wykorzystuje rozszerzalności RFC 2396 (identyfikatory URI (Uniform Resource): Ogólna składnia) do definiowania pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schematu.  
   
  Schemat, który jest określony przez [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jest definiowany przez jej prefiks; http, ftp i plik znajdują się znanych przykładów. Ten pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schemat używa "pakiet" jako jego schemat i zawiera dwa składniki: urzędu i ścieżkę. Poniżej przedstawiono formatu pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
@@ -72,7 +72,7 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
   
  Aby uzyskiwać dostęp do tych typów plików, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obsługuje dwa urzędy: aplikacja: / / / oraz siteoforigin: / / /. Aplikacja: / / / Urząd identyfikuje pliki danych aplikacji, które są znane w czasie kompilacji, w tym pliki zasobów i zawartości. Siteoforigin: / / / Urząd identyfikuje witrynę pochodzenia plików. Zakres każdego uprawnień jest wyświetlany na poniższej ilustracji.  
   
- ![Schemat identyfikatora URI pakietu](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")  
+ ![Pack URI diagram](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")  
   
 > [!NOTE]
 >  Składnik wystawcy pod pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jest osadzony [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , wskazuje pakietu i muszą być zgodne z RFC 2396. Ponadto muszą zostać zastąpione przez znak "," znakiem "/", a zastrzeżone znaki, takie jak "%" i "?" musi być poprzedzone znakiem zmiany znaczenia. Zobacz OPC, aby uzyskać szczegółowe informacje.  
@@ -141,7 +141,7 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
   
 -   **Urząd**: aplikacja: / / /.  
   
--   **Ścieżka**: Nazwa zawartości pliku, wraz ze ścieżką względną lokalizacji systemu plików w głównym zestawie pliku wykonywalnego aplikacji.  
+-   **Ścieżka**: Nazwa pliku zawartości, wraz ze ścieżką względną lokalizacji systemu plików w głównym zestawie pliku wykonywalnego aplikacji.  
   
  W poniższym przykładzie pokazano pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zawartości pliku, znajdującego się w tym samym folderze co zestawu pliku wykonywalnego.  
   
@@ -281,7 +281,7 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
   
  Tabela 1 przedstawiono różne bezwzględna pakietu [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , można określić w znacznikach.  
   
- Tabela 1: W znaczniku, identyfikatorów URI bezwzględna pakietu  
+ Tabela 1: Identyfikatory URI bezwzględna pakietu, w znacznikach  
   
 |Plik|Bezwzględna pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -297,7 +297,7 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
   
  Tabela 2 ilustruje różne pakiet względną [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , można określić w znacznikach.  
   
- Tabela 2: W znaczniku, identyfikatorów URI względne pakiet  
+ Tabela 2: Pakiet względne identyfikatory URI, w znacznikach  
   
 |Plik|Względna pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -342,7 +342,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Tabela 3 ilustruje różne pakiet względną [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , można określić w kodzie za pomocą <xref:System.Uri?displayProperty=nameWithType>.  
   
- Tabela 3: Bezwzględna pakietu z identyfikatorów URI w kodzie  
+ Tabela 3: Identyfikatory URI bezwzględna pakietu, w kodzie  
   
 |Plik|Bezwzględna pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -358,7 +358,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Tabela 4 przedstawiono różne pakiet względną [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , można określić w kodzie za pomocą <xref:System.Uri?displayProperty=nameWithType>.  
   
- Tabela 4: URI pakietu względne w kodzie  
+ Tabela 4: Pakiet względne identyfikatory URI, w kodzie  
   
 |Plik|Względna pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -423,5 +423,5 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Aby uzyskać przegląd motywów w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zobacz [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Zasoby aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>Zobacz także
+- [Zasoby aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

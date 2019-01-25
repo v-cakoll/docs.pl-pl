@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 929197d8e8f9ab031e72e7d332422b388a22ea95
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a79162c6171c764d4c4610fd10f14a5dac6ff1a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499002"
 ---
 # <a name="uinteger-data-type"></a>UInteger — Typ danych
 
@@ -68,7 +68,7 @@ Dim number = &H_0FAC_14D7ui
   
 -   **Liczby ujemne.** Ponieważ `UInteger` jest typ bez znaku, go nie może reprezentować wartość ujemną. Jeśli używasz jednoargumentowego znaku minusa (`-`) operatora na wyrażenie obliczane do typu `UInteger`, Visual Basic konwertuje wyrażenie które ma `Long` pierwszy.  
   
--   **Zgodność ze specyfikacją CLS.** `UInteger` Typem danych nie jest częścią [specyfikacja Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), dzięki czemu kod zgodny ze specyfikacją CLS nie mogą korzystać z składnik, który korzysta z niego.
+-   **CLS Compliance.** `UInteger` Typem danych nie jest częścią [specyfikacja Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), dzięki czemu kod zgodny ze specyfikacją CLS nie mogą korzystać z składnik, który korzysta z niego.
   
 -   **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, należy pamiętać, takich jak wpisywany `uint` mogą mieć różną szerokość danych (16 bitów) w innych środowiskach. Jeśli przekazujesz 16-bitowy argument do takiego składnika, Zadeklaruj go jako `UShort` zamiast `UInteger` w zarządzanym kodzie języka Visual Basic.  
   
@@ -78,10 +78,10 @@ Dim number = &H_0FAC_14D7ui
   
 -   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.UInt32?displayProperty=nameWithType> struktury.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.UInt32>  
- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Instrukcje: wywoływanie funkcji systemu Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.UInt32>
+- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Instrukcje: wywoływanie funkcji systemu Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 53773c51aef6b9530ed0b2cfaf0ef08cdb340ec2
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 922769d60d0ff8425b68a96d0272ee23c6d083ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579189"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie klienta
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Kilka różnych [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] struktur są używane w ramach [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] systemy operacyjne, w tym [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], i [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] przedstawia informacje o elementach interfejsu użytkownika na klientach. Jednak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sam nie ma świadomości różne typy kontrolek, które istnieją w tych struktur i technik, które są niezbędne do wyodrębnienia informacji z nich. Zamiast tego instalacja pozostawia to zadanie do obiektów, nazywanych dostawcami. Dostawca wyodrębnia informacje z określonego formantu i przekazuje te informacje do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], który następnie prezentuje je do klienta w sposób ciągły.  
   
@@ -51,6 +51,6 @@ ms.locfileid: "48842609"
   
  Ostatnie dwa parametry są opcjonalne. Klient może określić nazwę obrazu aplikacji docelowej, gdy chce korzystać z różnych dostawców dla różnych aplikacji. Na przykład, klient może używać jednego dostawcę dla [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] kontrolka widoku w znanych aplikacji, która obsługuje wzorzec wielu widoku, a druga podobne kontrolki w innej aplikacji znane, która nie ma listy.  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie dostawcy automatyzacji interfejsu użytkownika po stronie klienta](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [Implementacja dostawców automatyzacji interfejsu użytkownika w aplikacji klienta](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie dostawcy automatyzacji interfejsu użytkownika po stronie klienta](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+- [Implementacja dostawców automatyzacji interfejsu użytkownika w aplikacji klienta](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)

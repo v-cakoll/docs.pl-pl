@@ -10,37 +10,37 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 5f279ed0a33840bb1f2321c17a1ffba412837c07
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 40dda40f68e535380a82a241e3ccd383b0c9809f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536298"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 Modyfikator dostępu elementu członkowskiego, który określa, że co najmniej jeden zadeklarowany element programistyczny jest dostępny tylko w obrębie swojej klasy lub z klasy pochodnej.  
   
 ## <a name="remarks"></a>Uwagi  
- Czasami elementu programistycznego zadeklarowana w klasie zawierają dane poufne lub ograniczone kod, a użytkownik chce ograniczyć dostęp do elementu. Jednak jeśli oczekujesz hierarchii klas pochodnych klasy jest dziedziczona, może być konieczne dla tych klas pochodnych dostępu do danych lub kodu. W takim przypadku ma element ma być dostępny zarówno z klasy podstawowej i wszystkich klas pochodnych. Aby ograniczyć dostęp do elementu w ten sposób, mogą zadeklarować za pomocą `Protected`.  
+ Czasami elementu programistycznego, zadeklarowana w klasie zawiera dane poufne lub ograniczony kod, a użytkownik chce ograniczyć dostęp do elementu. Jednakże jeśli klasa jest dziedziczone, które hierarchii klas pochodnych, może być konieczne dla tych klas pochodnych, uzyskać dostęp do danych lub kod. W takim przypadku należy elementu, który ma być dostępne zarówno z klasy bazowej i wszystkie klasy pochodne. Aby ograniczyć dostęp do elementu w ten sposób, można zadeklarować za pomocą `Protected`.  
 
 > [!NOTE]
-> `Protected` Modyfikator dostępu można łączyć z dwóch innych modyfikatorów:
-> - [Protected Friend](protected-friend.md) modyfikator sprawia, że element członkowski klasy jest dostępny w obrębie klasy, z klasy pochodnej i z tego samego zestawu, w którym klasa jest zdefiniowana. 
-> - [Prywatne chronione](private-protected.md) modyfikator sprawia, że element członkowski klasy dostępne przez typy pochodne, ale tylko w obrębie zawierający go zestaw.
+> `Protected` Modyfikator dostępu można łączyć z innymi modyfikatorów:
+> - [Protected Friend](protected-friend.md) modyfikator sprawia, że element członkowski klasy jest dostępny w obrębie tej klasy z klas pochodnych i z tego samego zestawu, w którym klasa jest zdefiniowana. 
+> - [Private Protected](private-protected.md) modyfikator sprawia, że element członkowski klasy dostępne przez typy pochodne, ale tylko w ramach własnego zestawu zawierającego.
   
-## <a name="rules"></a>Reguły  
+## <a name="rules"></a>reguły  
   
--   **Kontekst deklaracji.** Można użyć `Protected` tylko na poziomie klasy. Oznacza to, że w kontekście deklaracji `Protected` elementu musi być klasą i nie może być plik źródłowy, przestrzeni nazw, interfejsu, modułu, struktury lub procedury.  
+-   **Kontekst deklaracji.** Możesz użyć `Protected` tylko na poziomie klasy. Oznacza to, że kontekst deklaracji `Protected` element musi być klasą i nie może być plik źródłowy, przestrzeń nazw, interfejsu, moduł, struktura lub procedury.  
 
 ## <a name="behavior"></a>Zachowanie  
   
--   **Poziom dostępu.** Cały kod w klasie mogą uzyskiwać dostęp do swoich elementów. Kod w dowolnej klasy, która pochodzi z klasy podstawowej można uzyskać dostęp do wszystkich `Protected` elementy klasy podstawowej. Jest to istotne dla wszystkich generacji pochodnym. Oznacza to, że klasa może uzyskać dostęp `Protected` elementy klasy podstawowej klasy podstawowej i tak dalej.  
+-   **Poziom dostępu.** Cały kod w klasie mogą uzyskać dostęp do jego elementów. Kod w dowolną klasę pochodzącą z klasy bazowej może uzyskać dostęp do wszystkich `Protected` elementów klasy bazowej. Ta zasada obowiązuje dla wszystkich pokoleń pochodnym. Oznacza to, że dostęp do klasy `Protected` elementy klasę bazową klasy bazowej i tak dalej.  
   
-     Chronionego dostępu nie jest nadzbiorem lub podzbiór przyjaznego dostępu.  
+     Chronionego dostępu nie jest nadzbiorem lub podzbiór dostęp zaprzyjaźniony.  
   
--   **Modyfikatory dostępu.** Słowa kluczowe, które określają poziom dostępu są nazywane *modyfikatorów dostępu*. Porównanie modyfikatorów dostępu, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+-   **Modyfikatory dostępu.** Słowa kluczowe, które określają poziom dostępu są nazywane *modyfikatorach dostępu*. Dla porównania modyfikatory dostępu, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- `Protected` Modyfikatora można używać w tych sytuacjach:  
+ `Protected` Modyfikator mogą być używane w tych kontekstach:  
   
  [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -58,21 +58,21 @@ Modyfikator dostępu elementu członkowskiego, który określa, że co najmniej 
   
  [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Instrukcja Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
  [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
  [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
- [Prywatne chronione](private-protected.md)   
- [Friend chronionych](protected-friend.md)   
- [Poziomy dostępu w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private Protected](private-protected.md)
+- [Protected Friend](protected-friend.md)
+- [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Procedury](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Struktury](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -2,31 +2,31 @@
 title: Grupowanie danych (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: e2732c91dfff65ebb86ef45296ba369c3073a8f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14b114906a0e04a4d11c323f80b070603a7286c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576973"
 ---
 # <a name="grouping-data-visual-basic"></a>Grupowanie danych (Visual Basic)
-Grupowanie odwołuje się do operacji umieszczania danych w grupach, aby elementów w każdej grupie miały wspólny atrybut.  
+Grupowanie odnosi się do operacji umieszczania danych do grup, tak aby elementów w każdej grupie udostępniać wspólny atrybut.  
   
- Na poniższej ilustracji przedstawiono wyniki grupowania sekwencji znaków. Klucz dla każdej grupy jest znak.  
+ Poniższa ilustracja przedstawia wyniki grupowania sekwencji znaków. Klucz dla każdej grupy jest znakiem.  
   
- ![Operacje grupowania LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![Operacje LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
   
- Metody operator standardowej kwerendy, które grupy elementów danych są wymienione w poniższej sekcji.  
+ Metody standardowego operatora zapytań, które grupują elementy danych są wymienione w poniższej sekcji.  
   
 ## <a name="methods"></a>Metody  
   
 |Nazwa metody|Opis|Składnia wyrażeń języka Visual Basic|Więcej informacji|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|GroupBy|Grupuje elementy, które mają wspólny atrybut. Każda grupa jest reprezentowana przez <xref:System.Linq.IGrouping%602> obiektu.|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|ToLookup|Wstawia elementy do <xref:System.Linq.Lookup%602> (Słownik jeden do wielu) oparte na funkcji selektora kluczy.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|GroupBy|Grupuje elementy, które współużytkują wspólny atrybut. Każda grupa jest reprezentowany przez <xref:System.Linq.IGrouping%602> obiektu.|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|ToLookup|Wstawia elementy do <xref:System.Linq.Lookup%602> (Słownik jeden do wielu) na podstawie selektora kluczy funkcji.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia zapytania  
- Poniższy przykład kodu wykorzystuje `Group By` klauzuli na liczby całkowite grupy na liście w zależności od tego, czy są one parzysta lub nieparzysta.  
+ Poniższy przykład kodu wykorzystuje `Group By` klauzuli grupy liczb całkowitych, na liście według tego, czy jest parzysta lub nieparzysta.  
   
 ```vb  
 Dim numbers As New System.Collections.Generic.List(Of Integer)(  
@@ -63,9 +63,9 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Linq>  
- [Operatory standardowe zapytań — omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Group By, klauzula](../../../../visual-basic/language-reference/queries/group-by-clause.md)  
- [Porady: grupowanie plików według rozszerzenia (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- [Porady: dzielenie pliku na wiele plików za pomocą grup (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Linq>
+- [Omówienie operatorów standardowej kwerendy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Klauzula Group By](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [Instrukcje: Grupa plików według rozszerzenia (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

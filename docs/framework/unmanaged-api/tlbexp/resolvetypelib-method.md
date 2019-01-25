@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be2558e760be8519e528baeff438273c8871f320
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 6558d27f10e5b93dfe2c8053bb96434d49fd3c4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924472"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537217"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib — Metoda
 Rozpoznaje prostą nazwę biblioteki typów, przywracając jego w pełni kwalifikowaną ścieżkę.  
@@ -66,7 +66,7 @@ HRESULT ResolveTypeLib(
  Niestandardowe implementacje tego interfejsu musi zwracać [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) zawierającą pełną ścieżkę do biblioteki typów o nazwie w `bstrSimpleName` parametru.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** TlbRef.idl, TlbRef.h  
   
@@ -74,6 +74,6 @@ HRESULT ResolveTypeLib(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Tlbexp, funkcje pomocy](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a>Zobacz także
+- [Tlbexp, funkcje pomocy](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

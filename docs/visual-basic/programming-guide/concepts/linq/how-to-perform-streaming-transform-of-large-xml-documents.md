@@ -1,25 +1,25 @@
 ---
-title: 'Porady: wykonywanie przekształceń strumieniowych dużych dokumentów XML (Visual Basic)'
+title: 'Instrukcje: Wykonywanie przekształceń strumieniowych dużych dokumentów XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-ms.openlocfilehash: 50534cc7692386b217dec46082acf65e244ebb48
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 29213be5c70337dfe82c54b7b818df210aa1ab24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538742"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Porady: wykonywanie przekształceń strumieniowych dużych dokumentów XML (Visual Basic)
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Instrukcje: Wykonywanie przekształceń strumieniowych dużych dokumentów XML (Visual Basic)
 Czasami trzeba Przekształcanie dużych plików XML i pisania aplikacji, więc, że zużycie pamięci aplikacji jest przewidywalne. Jeśli zostanie podjęta próba wypełnianie drzewa XML z bardzo dużego pliku XML, wykorzystanie pamięci będzie proporcjonalny do rozmiaru pliku (oznacza to, że nadmierne). W związku z tym należy zamiast tego użyj technika przesyłania strumieniowego.  
   
  Techniki przesyłania strumieniowego najlepiej są stosowane w sytuacji, gdy trzeba przetworzyć tylko jeden raz w dokumencie źródłowym i pozwala na przetwarzanie elementów w kolejności dokumentu. Niektóre standardowe zapytanie operatorów, takich jak <xref:System.Linq.Enumerable.OrderBy%2A>iteracji ich źródła, zbieraj wszystkie dane, ją posortować i na koniec uzyskanie pierwszego elementu w sekwencji. Należy pamiętać, że użycie operatora zapytania, który materializuje źródła przed reaguje na pierwszy element, możesz nie zostaną zachowane zużycie pamięci aplikacji.  
   
- Nawet w przypadku używania techniki opisanej w [jak: Stream XML fragmentów z dostępem do informacji w nagłówku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), Jeśli spróbujesz utworzyć drzewa XML zawierający przekształcone dokumentu jest zbyt duże użycie pamięci.  
+ Nawet w przypadku używania techniki opisanej w [jak: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), Jeśli spróbujesz utworzyć drzewa XML zawierający przekształcone dokumentu jest zbyt duże użycie pamięci.  
   
  Dostępne są dwie główne opcje. Jedno z podejść jest użycie właściwości przetwarzanie odroczone <xref:System.Xml.Linq.XStreamingElement>. Innym rozwiązaniem jest utworzenie <xref:System.Xml.XmlWriter>oraz korzystać z możliwości [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do zapisania elementów <xref:System.Xml.XmlWriter>. W tym temacie przedstawiono oba podejścia.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład opiera się na przykład w [jak: Stream XML fragmentów z dostępem do informacji w nagłówku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ Poniższy przykład opiera się na przykład w [jak: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
  W tym przykładzie użyto funkcji odroczonego wykonania <xref:System.Xml.Linq.XStreamingElement> do przesyłania strumieniowego danych wyjściowych. W tym przykładzie można przekształcać bardzo dużych dokumentów przy zachowaniu zużycie pamięci.  
   
@@ -246,7 +246,7 @@ End Class
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład opiera się również na przykład w [jak: Stream XML fragmentów z dostępem do informacji w nagłówku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ Poniższy przykład opiera się również na przykład w [jak: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
  W tym przykładzie użyto możliwości [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do zapisania elementów <xref:System.Xml.XmlWriter>. W tym przykładzie można przekształcać bardzo dużych dokumentów przy zachowaniu zużycie pamięci.  
   
@@ -439,5 +439,5 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zaawansowane LINQ to XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Zobacz także
+- [Zaawansowane LINQ to XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

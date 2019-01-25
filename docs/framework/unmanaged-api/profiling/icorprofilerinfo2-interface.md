@@ -16,51 +16,51 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8cec2a622a1a30881949ad5a9f2050077e195015
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4623fecd210ac716824fdc5fede99ec40145e8d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498872"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 — Interfejs
-Udostępnia metody, które używają profilery kodu do komunikacji z środowisko uruchomieniowe języka wspólnego (CLR) w celu kontrolowania, monitorowanie zdarzeń i informacje o żądaniu. `ICorProfilerInfo2` Interfejsu jest rozszerzeniem [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interfejsu. Oznacza to, że zapewnia nowych metod obsługiwanych w programie .NET Framework w wersji 2.0 i nowszych wersjach.  
+Udostępnia metody, które profilery kodu używać do komunikowania się za pomocą środowiska uruchomieniowego języka wspólnego (CLR) do kontrolowania, monitorowanie zdarzeń i informacje o żądaniu. `ICorProfilerInfo2` Interfejs jest rozszerzeniem [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interfejsu. Oznacza to, że zapewnia nowe metody obsługiwane w programie .NET Framework w wersji 2.0 i nowszych wersjach.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[DoStackSnapshot, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)|Zawiera opis stosu określonego wątku zgłosić ramki wywołanie zarządzanego profilera.|  
-|[EnumModuleFrozenObjects, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-enummodulefrozenobjects-method.md)|Pobiera moduł wyliczający, który umożliwia iteracji za pośrednictwem zablokowane obiekty w ramach określonego modułu.|  
-|[GetAppDomainStaticAddress, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getappdomainstaticaddress-method.md)|Pobiera adres pola statyczne domeny określonej aplikacji, która znajduje się w zakresie domeny określonej aplikacji.|  
-|[GetArrayObjectInfo, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getarrayobjectinfo-method.md)|Pobiera szczegółowe informacje o tablicy obiektów.|  
-|[GetBoxClassLayout, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getboxclasslayout-method.md)|Pobiera informacje o układzie klasy dla określonej wartości typu, który jest opakowany.|  
-|[GetClassFromTokenAndTypeArgs, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md)|Pobiera `ClassID` typu przy użyciu tokenu określonych metadanych i `ClassID` wartości dowolnego argumentów typu.|  
-|[GetClassIDInfo2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)|Pobiera moduł nadrzędnej określonej klasy rodzajowe token metadanych dla tej klasy, `ClassID` jego klasy nadrzędnej i `ClassID` dla każdego typu argumentu, jeśli jest obecny, klasy.|  
-|[GetClassLayout, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclasslayout-method.md)|Pobiera informacje o układzie, w pamięci, pól zdefiniowanych przez określonej klasy. Oznacza to, że ta metoda pobiera przesunięcia pól tej klasy.|  
+|[DoStackSnapshot, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)|Przedstawia stos określonego wątku do zgłaszania ramki zarządzane wywołania do programu profilującego.|  
+|[EnumModuleFrozenObjects, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-enummodulefrozenobjects-method.md)|Pobiera moduł wyliczający, który pozwala iteracji przez zamrożone obiekty w określonym module.|  
+|[GetAppDomainStaticAddress, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getappdomainstaticaddress-method.md)|Pobiera adres pola statyczne domeny określonej aplikacji, które znajduje się w zakresie domeny określonej aplikacji.|  
+|[GetArrayObjectInfo, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getarrayobjectinfo-method.md)|Pobiera szczegółowe informacje dotyczące obiektu array.|  
+|[GetBoxClassLayout, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getboxclasslayout-method.md)|Pobiera informacje o układ klasy dla typu określonej wartości, który jest spakowany.|  
+|[GetClassFromTokenAndTypeArgs, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md)|Pobiera `ClassID` typu przy użyciu tokenu określonych metadanych i `ClassID` wartości wszelkich argumentów typu.|  
+|[GetClassIDInfo2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)|Pobiera moduł nadrzędnej określonej klasy ogólnej token metadanych dla tej klasy, `ClassID` klasy nadrzędnej, a `ClassID` dla każdego typu argumentu, jeśli jest obecny, klasy.|  
+|[GetClassLayout, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclasslayout-method.md)|Pobiera informacje o układu, w pamięci, pól zdefiniowanych przez określonej klasy. Oznacza to, że ta metoda pobiera przesunięcia pól tej klasy.|  
 |[GetCodeInfo2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)|Pobiera zakres kodu natywnego skojarzonego z określonym `FunctionID`.|  
-|[GetContextStaticAddress, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcontextstaticaddress-method.md)|Pobiera adres określonego pola statyczne kontekstu, które znajduje się w zakresie określonego kontekstu.|  
-|[GetFunctionFromTokenAndTypeArgs, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)|Pobiera `FunctionID` funkcji przy użyciu tokenu określonych metadanych, klasą, i `ClassID` wartości dowolnego argumentów typu.|  
-|[GetFunctionInfo2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)|Pobiera klasy nadrzędnej, token metadanych i `ClassID` argumentu typu, jeśli jest obecny, funkcji.|  
-|[GetGenerationBounds, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md)|Pobiera regiony pamięci (segmenty sterty) tworzące generacje stosu zebranego przez pamięci.|  
-|[GetNotifiedExceptionClauseInfo, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)|Pobiera natywnego adresu i ramki informacje dla klauzuli wyjątek (`catch`/`finally`/`filter`) ma być uruchomiona albo został uruchomiony.|  
-|[GetObjectGeneration, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md)|Pobiera segment stosu, który zawiera określony obiekt.|  
-|[GetRVAStaticAddress, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getrvastaticaddress-method.md)|Pobiera adres określony wirtualny adres względny (RVA)-pola statycznego.|  
+|[GetContextStaticAddress, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcontextstaticaddress-method.md)|Pobiera adres określone pole statyczne kontekstu, który znajduje się w zakresie określonego kontekstu.|  
+|[GetFunctionFromTokenAndTypeArgs, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)|Pobiera `FunctionID` funkcji przy użyciu tokenu określonych metadanych, klasą, i `ClassID` wartości wszelkich argumentów typu.|  
+|[GetFunctionInfo2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)|Pobiera klasy nadrzędnej, token metadanych i `ClassID` każdego argumentu typu, jeśli jest obecny w funkcji.|  
+|[GetGenerationBounds, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md)|Pobiera regiony pamięci (segmenty stosu), które tworzą generacje stercie zebranych elementów bezużytecznych.|  
+|[GetNotifiedExceptionClauseInfo, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)|Pobiera natywne informacje dotyczące adresów i ramki dla klauzuli wyjątek (`catch`/`finally`/`filter`) który ma być uruchomiona lub została uruchomiona.|  
+|[GetObjectGeneration, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md)|Pobiera segment stosu, który zawiera dany obiekt.|  
+|[GetRVAStaticAddress, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getrvastaticaddress-method.md)|Pobiera adres określonej względnych adresów wirtualnych (RVA) — pole statyczne.|  
 |[GetStaticFieldInfo, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstaticfieldinfo-method.md)|Pobiera zakres, w którym określone pole jest statyczne.|  
-|[GetStringLayout, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)|Pobiera informacje o układzie z obiektem ciągu.|  
+|[GetStringLayout, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)|Pobiera informacje o układ obiektu ciągu.|  
 |[GetThreadAppDomain, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadappdomain-method.md)|Pobiera identyfikator domeny aplikacji, w którym określony wątek jest w trakcie wykonywania kodu.|  
-|[GetThreadStaticAddress, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md)|Pobiera adres określonego pola statyczne dla wątku, który znajduje się w zakresie określonego wątku.|  
-|[SetEnterLeaveFunctionHooks2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)|Określa zaimplementowana profilera funkcji do wywołania "Wprowadź", "Pozostaw" i "tailcall" punkty zaczepienia w funkcji zarządzanych.|  
+|[GetThreadStaticAddress, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md)|Pobiera adres określone pole statyczne wątku, który znajduje się w zakresie określonego wątku.|  
+|[SetEnterLeaveFunctionHooks2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)|Określa funkcje implementowane przez profiler ma być wywołane na "enter", "Opuść" i "rekurencja ogonowa" hooks zarządzanej funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Profiler wywołuje metodę `ICorProfilerInfo2` interfejs do komunikacji z CLR do kontrolowania, monitorowanie zdarzeń i żądań informacji.  
+ Program profilujący wywołuje metodę `ICorProfilerInfo2` interfejs do komunikacji przy użyciu środowiska CLR do kontrolowania, monitorowanie zdarzeń i zażądać informacji.  
   
- Metody `ICorProfilerInfo2` interfejsu są implementowane przez środowisko CLR za pomocą modelu bezwątkowy. Każda metoda zwraca wartość HRESULT do wskazania powodzenia lub niepowodzenia. Aby uzyskać listę możliwych kody powrotu zobacz plik CorError.h.  
+ Metody `ICorProfilerInfo2` interfejsu są implementowane przez środowisko CLR, przy użyciu modelu bezwątkowy. Każda metoda zwraca wartość HRESULT do wskazania powodzenia lub niepowodzenia. Aby uzyskać listę możliwych kodów powrotnych zobacz plik CorError.h.  
   
- Przekazuje CLR `ICorProfilerInfo2` interfejs do każdego profilującego podczas inicjowania przy użyciu profilera stosowania [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md). Profiler kodu można wywoływać metody `ICorProfilerInfo2` interfejsu, aby uzyskać informacje na temat kodu zarządzanego wykonywana pod kontrolą środowiska CLR.  
+ Przekazuje środowisko CLR `ICorProfilerInfo2` interfejs do każdej profilującego podczas inicjowania przy użyciu implementacji programu profilującego [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md). Program profilujący kodu może wywoływać metody `ICorProfilerInfo2` interfejsu, aby uzyskać informacje na temat kodu zarządzanego, wykonywana jest pod kontrolą środowiska CLR.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -68,6 +68,6 @@ Udostępnia metody, które używają profilery kodu do komunikacji z środowisko
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

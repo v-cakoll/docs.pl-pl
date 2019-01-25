@@ -3,12 +3,12 @@ title: '&lt;identityConfiguration&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
-ms.openlocfilehash: 11ba7df79ead1693fc6828aeabde413237680737
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7c20f3d00b71eacbf8409c3f848d550445468e5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513103"
 ---
 # <a name="ltidentityconfigurationgt"></a>&lt;identityConfiguration&gt;
 Określa ustawienia tożsamości na poziomie usługi.  
@@ -43,19 +43,19 @@ Określa ustawienia tożsamości na poziomie usługi.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<pamięci podręczne >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Rejestruje pamięci podręcznych służy do tokenów sesji i wykrywania powtarzania tokenu. Można określić na poziomie usługi lub kolekcji programu obsługi tokenów zabezpieczeń. Opcjonalna.|  
-|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Określa ustawienia, które programy obsługi tokenów służący do weryfikowania certyfikatów. Można określić na poziomie usługi lub kolekcji programu obsługi tokenów zabezpieczeń. Opcjonalna.|  
-|[\<claimsAuthenticationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|Rejestruje Menedżera uwierzytelniania oświadczeń dla oświadczeń przychodzących. Opcjonalna.|  
-|[\<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|Rejestruje Menedżera autoryzacji oświadczeń dla oświadczeń przychodzących. Opcjonalna.|  
-|[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Określa zestaw wymagane oświadczenia przychodzące tokeny zabezpieczeń. Opcjonalna.|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Rejestruje pamięci podręcznych służy do tokenów sesji i wykrywania powtarzania tokenu. Można określić na poziomie usługi lub kolekcji programu obsługi tokenów zabezpieczeń. Opcjonalna.|  
+|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Określa ustawienia, które programy obsługi tokenów służący do weryfikowania certyfikatów. Można określić na poziomie usługi lub kolekcji programu obsługi tokenów zabezpieczeń. Opcjonalna.|  
+|[\<claimsAuthenticationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|Rejestruje Menedżera uwierzytelniania oświadczeń dla oświadczeń przychodzących. Opcjonalna.|  
+|[\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|Rejestruje Menedżera autoryzacji oświadczeń dla oświadczeń przychodzących. Opcjonalna.|  
+|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Określa zestaw wymagane oświadczenia przychodzące tokeny zabezpieczeń. Opcjonalna.|  
 |[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Określa kolekcję programy obsługi tokenów zabezpieczających. Można określić zero lub więcej kolekcji programy obsługi tokenów zabezpieczających. Opcjonalna.|  
-|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Włącza wykrywanie powtórzeń tokenów i określa czas wygaśnięcia tokenów. Można określić na poziomie usługi lub kolekcji programu obsługi tokenów zabezpieczeń. Opcjonalna.|  
+|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Włącza wykrywanie powtórzeń tokenów i określa czas wygaśnięcia tokenów. Można określić na poziomie usługi lub kolekcji programu obsługi tokenów zabezpieczeń. Opcjonalna.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<system.identityModel >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|Udostępnia konfigurację dla Włączanie opcji Windows Identity Foundation (WIF) w aplikacjach.|  
+|[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|Udostępnia konfigurację dla Włączanie opcji Windows Identity Foundation (WIF) w aplikacjach.|  
   
 ## <a name="remarks"></a>Uwagi  
  Wiele tożsamości konfiguracji może być zdefiniowana, każdy z unikatową nazwą. To zachowanie jest następujący:  
@@ -79,10 +79,10 @@ Określa ustawienia tożsamości na poziomie usługi.
 > [!IMPORTANT]
 >  Określając następujące elementy jako elementy podrzędne `<identityConfiguration>` elementu jest przestarzałe, mimo że zachowanie jest nadal obsługiwana w przypadku zgodności z poprzednimi wersjami. Te elementy zamiast tego należy określić w ramach [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) elementu.  
 >   
->  -   [\<audienceUris >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
-> -   [\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
-> -   [\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
-> -   [\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
+>  -   [\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
+> -   [\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
+> -   [\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
+> -   [\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład umożliwia utworzenie konfiguracji adresu tożsamości o nazwie "alternateConfiguration". Konfiguracja tożsamości Określa domyślne ustawienia.  
@@ -93,6 +93,6 @@ Określa ustawienia tożsamości na poziomie usługi.
 </system.identityModel>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Configuration.IdentityConfiguration>  
- <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Configuration.IdentityConfiguration>
+- <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>

@@ -1,15 +1,15 @@
 ---
-title: 'Porady: znajdowanie poprzednich elementów równorzędnych (XPath-LINQ to XML) (Visual Basic)'
+title: 'Instrukcje: Znajdowanie poprzednich elementów równorzędnych (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
-ms.openlocfilehash: 1b8c73f266cc618660b59e76e46420c08b5299d3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a00845f6efcfa63021d64963b39ff568af98fa73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43878824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600538"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>Porady: znajdowanie poprzednich elementów równorzędnych (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie poprzednich elementów równorzędnych (XPath-LINQ to XML) (Visual Basic)
 W tym temacie porównano XPath `preceding-sibling` osi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podrzędnych <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> osi.  
   
  Wyrażenie XPath jest:  
@@ -21,7 +21,7 @@ W tym temacie porównano XPath `preceding-sibling` osi [!INCLUDE[sqltecxlinq](~/
 ## <a name="example"></a>Przykład  
  Poniższy przykład umożliwia znalezienie `FullAddress` elementu, a następnie pobierze poprzednich elementów przy użyciu `preceding-sibling` osi.  
   
- W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -55,5 +55,5 @@ Results are identical
 <Phone>(503) 555-7555</Phone>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ to XML dla użytkowników metody XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ to XML dla użytkowników metody XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

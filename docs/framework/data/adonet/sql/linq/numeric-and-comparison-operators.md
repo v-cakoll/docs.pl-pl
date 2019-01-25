@@ -2,12 +2,12 @@
 title: Liczbowe i operatory porównania
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-ms.openlocfilehash: 733c1e494c29f04aa06a4159c3b1dae219f01b44
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e2bdc55cd6c2203bc96d0766e5e53a57294d4d7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554715"
 ---
 # <a name="numeric-and-comparison-operators"></a>Liczbowe i operatory porównania
 Operatory arytmetyczne i porównanie działają w oczekiwany sposób w środowisko uruchomieniowe języka wspólnego (CLR) z wyjątkiem sytuacji, w następujący sposób:  
@@ -57,7 +57,7 @@ Operatory arytmetyczne i porównanie działają w oczekiwany sposób w środowis
   
     -   `>=`  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [Operatory języka C#](../../../../../../docs/csharp/language-reference/operators/index.md)  
- [Operatory](../../../../../visual-basic/language-reference/operators/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Operatory języka C#](../../../../../../docs/csharp/language-reference/operators/index.md)
+- [Operatory](../../../../../visual-basic/language-reference/operators/index.md)

@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1dc0570bedb1e7dbe02994b7df943609a42ca092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535311"
 ---
 # <a name="the-regular-expression-object-model"></a>Model obiektów wyrażeń regularnych
 <a name="introduction"></a> W tym temacie opisano model obiektów używanych w pracy z wyrażeń regularnych programu .NET. Ten temat zawiera następujące sekcje:  
@@ -284,7 +284,7 @@ ms.locfileid: "45664738"
 |`:`|Dopasowuje dwukropka.|  
 |`(?<value>\w+)`|Dopasowuje co najmniej jeden znak słowa. Nazwa tej grupy przechwytywania jest `value`.|  
   
- Właściwości <xref:System.Text.RegularExpressions.Group> klasy zawierają informacje o przechwyconej grupy: `Group.Value` właściwość zawiera podciąg przechwycony `Group.Index` właściwość wskazuje pozycję początkową przechwyconej grupy w tekście wejściowym `Group.Length` właściwość zawiera długość przechwytywany tekst i `Group.Success` właściwość wskazuje, czy podciąg dopasowany wzorzec zdefiniowany przez grupę przechwytywania.  
+ Właściwości <xref:System.Text.RegularExpressions.Group> klasy zawierają informacje o przechwyconej grupy: `Group.Value` Właściwość zawiera podciąg przechwycony `Group.Index` właściwość wskazuje pozycję początkową przechwyconej grupy w tekście wejściowym `Group.Length` właściwość zawiera długość przechwytywany tekst i `Group.Success` Właściwość wskazuje, czy podciąg dopasowany wzorzec zdefiniowany przez grupę przechwytywania.  
   
  Stosowanie Kwantyfikatory do grupy (Aby uzyskać więcej informacji, zobacz [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modyfikuje relację jednego przechwytywania na przechwytywanie grupy na dwa sposoby:  
   
@@ -301,7 +301,7 @@ ms.locfileid: "45664738"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
--   Kwantyfikatory może odnosić się wiele wystąpień wzorzec, który jest definiowany przez grupę przechwytywania. W tym przypadku `Value` i `Length` właściwości <xref:System.Text.RegularExpressions.Group> obiekt zawiera informacje tylko o ostatni podciąg przechwycony. Na przykład poniższe wyrażenie regularne dopasowuje jednym zdaniu, która kończy się kropką. Używa dwóch konstrukcje grupujące: pierwszy przechwytuje poszczególne wyrazy wraz z biały znak; drugi przechwytuje poszczególne wyrazy. Dane wyjściowe z przykładu pokazują, mimo że wyrażenie regularne zakończy się pomyślnie w przechwytywaniu całe zdanie, druga grupa przechwytywania przechwytuje tylko ostatni wyraz.  
+-   Kwantyfikatory może odnosić się wiele wystąpień wzorzec, który jest definiowany przez grupę przechwytywania. W tym przypadku `Value` i `Length` właściwości <xref:System.Text.RegularExpressions.Group> obiekt zawiera informacje tylko o ostatni podciąg przechwycony. Na przykład poniższe wyrażenie regularne dopasowuje jednym zdaniu, która kończy się kropką. Używa dwóch konstrukcje grupujące: Pierwszy przechwytuje poszczególne wyrazy wraz z biały znak; drugi przechwytuje poszczególne wyrazy. Dane wyjściowe z przykładu pokazują, mimo że wyrażenie regularne zakończy się pomyślnie w przechwytywaniu całe zdanie, druga grupa przechwytywania przechwytuje tylko ostatni wyraz.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -353,6 +353,6 @@ ms.locfileid: "45664738"
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Text.RegularExpressions>  
-- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)  
+- <xref:System.Text.RegularExpressions>
+- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)
 - [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

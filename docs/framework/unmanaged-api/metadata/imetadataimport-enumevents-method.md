@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 608b4a7d147124ede60e9d81f91600dfdaad0a65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f205615db29878bcfe936e88cab26c3d5a8e3562
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514533"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents — Metoda
-Wylicza tokeny definicji zdarzenia dla określony token TypeDef.  
+Wylicza tokenów definicji zdarzeń dla określonego tokenu TypeDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,10 +41,10 @@ HRESULT EnumEvents (
   
 #### <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, out] Wskaźnik do modułu wyliczającego.  
+ [out w] Wskaźnik do modułu wyliczającego.  
   
  `td`  
- [in] Element TypeDef token definicje zdarzeń, których mają zostać wyliczone.  
+ [in] Token TypeDef, których definicje zdarzeń są do wyliczenia.  
   
  `rEvents`  
  [out] Tablica zwrócona zdarzenia.  
@@ -59,18 +59,18 @@ HRESULT EnumEvents (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` zwrócona pomyślnie.|  
+|`S_OK`|`EnumEvents` pomyślnie zwrócił.|  
 |`S_FALSE`|Brak zdarzeń do wyliczenia. W takim przypadku `pcEvents` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

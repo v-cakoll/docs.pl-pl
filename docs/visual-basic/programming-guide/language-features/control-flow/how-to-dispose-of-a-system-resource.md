@@ -1,5 +1,5 @@
 ---
-title: 'Porady: usuwanie zasobu systemu (Visual Basic)'
+title: 'Instrukcje: Usuwanie zasobu systemu (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: cbb66934833da2bd6f0b797944dbb9c4df267cfc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 798650bbefc0c5b2ac097b87ab44a2b380117939
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523223"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Porady: usuwanie zasobu systemu (Visual Basic)
-Można użyć `Using` bloku, aby zagwarantować, że system usuwa zasobu, gdy kod jest kończona bloku. Jest to przydatne, jeśli używasz zasób systemowy, który zużywa duże ilości pamięci lub innych składników również chcesz użyć.  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Instrukcje: Usuwanie zasobu systemu (Visual Basic)
+Możesz użyć `Using` bloku, aby zagwarantować, że system Usuwa zasób po kodzie zamyka blok. Jest to przydatne, jeśli używasz zasób systemowy, który używa dużej ilości pamięci, lub też używać innych składników.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Po zakończeniu kodu z nim zlikwidować połączenia z bazą danych  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Aby usunąć połączenie z bazą danych po zakończeniu swój kod z nim  
   
-1.  Upewnij się, że możesz dołączyć odpowiednie [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) dla połączenia z bazą danych na początku pliku źródłowego (w tym przypadku <xref:System.Data.SqlClient>).  
+1.  Upewnij się, możesz dołączyć odpowiednie [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) dla połączenia z bazą danych na początku pliku źródłowego (w tym przypadku <xref:System.Data.SqlClient>).  
   
-2.  Utwórz `Using` zablokować z `Using` i `End Using` instrukcje. Wewnątrz bloku umieść kod, który zajmuje się połączenie z bazą danych.  
+2.  Tworzenie `Using` blokowania z `Using` i `End Using` instrukcji. Wewnątrz bloku umieść kod, który zajmuje się połączenie z bazą danych.  
   
-3.  Deklarowanie połączenia i Utwórz wystąpienie go jako część `Using` instrukcji.  
+3.  Deklarowanie połączenie i utworzyć jej wystąpienie w ramach `Using` instrukcji.  
   
     ```  
     ' Insert the following line at the beginning of your source file.  
@@ -38,17 +38,17 @@ Można użyć `Using` bloku, aby zagwarantować, że system usuwa zasobu, gdy ko
     End Sub  
     ```  
   
-     Usuwa systemu zasobów, niezależnie od tego, jak zakończyć blok, w tym przypadku nieobsługiwany wyjątek.  
+     Usuwa system zasobów, niezależnie od tego, jak zamknąć blok, w tym przypadku Wystąpił nieobsługiwany wyjątek.  
   
-     Należy pamiętać, że nie masz dostępu do `sqc` z poza `Using` zablokować, ponieważ jej zakres ogranicza się do bloku.  
+     Należy zauważyć, że nie masz dostępu do `sqc` z poza `Using` zablokować, ponieważ jej zakres jest ograniczony do bloku.  
   
-     Ten sam sposób można użyć w zasobach systemu, np. dojście do pliku lub otoki COM. Możesz użyć `Using` zablokować, jeśli chcesz mieć pewność opuścić zasobów dostępne dla innych składników po zostały zakończone `Using` bloku.  
+     Można użyć tej samej techniki, w zasobach systemu, takie jak dojście do pliku lub otoka COM. Możesz użyć `Using` zablokować, jeśli chcesz mieć pewność, że opuścić zasób jest dostępny dla innych składników po zostały zakończone `Using` bloku.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Data.SqlClient.SqlConnection>  
- [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Struktury decyzji](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Inne struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
- [Zagnieżdżone struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Using, instrukcja](../../../../visual-basic/language-reference/statements/using-statement.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Data.SqlClient.SqlConnection>
+- [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Struktury decyzji](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Inne struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [Zagnieżdżone struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Using, instrukcja](../../../../visual-basic/language-reference/statements/using-statement.md)

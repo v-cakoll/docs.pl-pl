@@ -2,12 +2,12 @@
 title: Programowanie funkcjonalne a Programowanie imperatywne (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 01be2758147b84af3410709aab62a0ca89b0c9cf
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 42c80146a091bfdcff2bbf3ebe1f4ed9a9510e29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696446"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518959"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Programowanie funkcjonalne a Programowanie imperatywne (C#)
 W tym temacie porównano i przeciwstawiono sobie programowania funkcjonalnego, przy użyciu bardziej tradycyjny imperatywnego (proceduralne).  
@@ -50,8 +50,8 @@ W tym temacie porównano i przeciwstawiono sobie programowania funkcjonalnego, p
   
  Na szczęście języka C# nie wymaga pełnej przestępnym do programowania funkcyjnego ponieważ obsługuje ona zarówno imperatywną lub funkcjonalności metody programowania. Deweloper można wybrać, które rozwiązanie jest najbardziej odpowiednie dla danego scenariusza. W rzeczywistości programy często połączyć oba podejścia.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do czystych przekształceń funkcjonalnych (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
-- [Przekształcenia XSLT](../../../../standard/data/xml/xslt-transformations.md)  
+- [Wprowadzenie do czystych przekształceń funkcjonalnych (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Przekształcenia XSLT](../../../../standard/data/xml/xslt-transformations.md)
 - [Refaktoryzacja do czystych funkcji (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

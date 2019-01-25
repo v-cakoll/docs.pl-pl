@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d757a0455992bc82ead922a5fbf4c71f11a9085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6a9fe86d6160ebac084625ef94013cce9a27a3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501883"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>ICorProfilerCallback::AssemblyUnloadFinished — Metoda
-Powiadamia profilera, że zestaw został usunięty z pamięci.  
+Powiadamia program profilujący, że zestaw został zwolniony.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,18 +37,18 @@ HRESULT AssemblyUnloadFinished(
   
 #### <a name="parameters"></a>Parametry  
  `assemblyId`  
- [in] Określa zestaw, który jest zwalniany.  
+ [in] Identyfikuje zestaw, który jest zwalniany.  
   
  `hrStatus`  
- [in] HRESULT, która wskazuje, czy zestaw został pomyślnie usunięty z pamięci.  
+ [in] Wartość HRESULT, która wskazuje, czy zestaw został pomyślnie usunięty z pamięci.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `assemblyId` jest nieprawidłowa dla żądania informacji po [ICorProfilerCallback::AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) zwraca metody.  
+ Wartość `assemblyId` jest nieprawidłowa dla żądania informacji po [icorprofilercallback::assemblyunloadstarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) metoda zwraca.  
   
- Niektórych części zwalnianie zestaw może kontynuować po `AssemblyUnloadFinished` wywołania zwrotnego. Błąd HRESULT w `hrStatus` oznacza błąd. Jednak Powodzenie HRESULT w `hrStatus` tylko wskazuje, że pierwsza część zwalnianie zestawu zakończyła się pomyślnie.  
+ Niektóre części zwalnianie zestaw może kontynuować po `AssemblyUnloadFinished` wywołania zwrotnego. Błąd HRESULT w `hrStatus` wskazuje błąd. Jednak sukcesów wartość HRESULT w `hrStatus` wskazuje tylko, powiodło się w pierwszej części zwalnianie zestawu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -56,5 +56,5 @@ HRESULT AssemblyUnloadFinished(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

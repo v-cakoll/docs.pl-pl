@@ -2,12 +2,12 @@
 title: Emitowanie danych śledzenia elementu User-Code
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492667"
 ---
 # <a name="emitting-user-code-traces"></a>Emitowanie danych śledzenia elementu User-Code
 Oprócz włączenia śledzenia w konfiguracji, aby zebrać dane Instrumentacji wygenerowane przez Windows Communication Foundation (WCF), można również wysyłać ślady programowo w kodzie użytkownika. W ten sposób można utworzyć z wyprzedzeniem danych instrumentacji, które można przejrzeć w dalszej części w celu diagnostyki. W tym temacie omówiono, jak to zrobić.  
@@ -140,5 +140,5 @@ Widok wykresu korelacji błąd
   
  Definiowanie działania zmiany i propagowanie identyfikator działania pozwala nam wykonywać bezpośrednie błąd korelację między punktami końcowymi. Dzięki temu będzie można znaleźć przyczynę błędu szybciej.  
   
-## <a name="see-also"></a>Zobacz też  
- [Rozszerzanie śledzenia](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+## <a name="see-also"></a>Zobacz także
+- [Rozszerzanie śledzenia](../../../../../docs/framework/wcf/samples/extending-tracing.md)

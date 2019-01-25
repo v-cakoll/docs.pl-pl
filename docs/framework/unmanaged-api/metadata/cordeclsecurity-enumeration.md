@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7512795e678f66c97185a499e602e99f51188117
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47819740207ae94b814b3009708c2fd247688661
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564011"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity — Wyliczenie
 Określa akcje zabezpieczeń, które mogą być wykonywane przy użyciu zabezpieczeń deklaratywnych.  
@@ -63,19 +63,19 @@ typedef enum CorDeclSecurity {
 |`dclActionMask`|Zastrzeżone.|  
 |`dclActionNil`|Zastrzeżone.|  
 |`dclRequest`|Zastrzeżone.|  
-|`dclDemand`|Wszystkie obiekty wywołujące wyżej w stosie wywołań są wymagane do otrzymali uprawnienia określone przez bieżący obiekt uprawnień.|  
-|`dclAssert`|Kod wywołujący ma dostęp do zasobu identyfikowana na podstawie bieżącego obiektu uprawnienia, nawet jeśli wyżej w stosie wywołań nie przyznano uprawnień dostępu do zasobu|  
-|`dclDeny`|Możliwość dostępu do zasobu określonego przez bieżący obiekt uprawnienia Odmowa dla kodu wywołującego, nawet wtedy, gdy przyznano im uprawnienia dostępu do niego.|  
-|`dclPermitOnly`|Tylko zasoby określone przez ten obiekt uprawnienia są dostępne, nawet jeśli kod ma uprawnienia dostępu do innych zasobów.|  
-|`dclLinktimeCheck`|Bezpośredniego obiektu wywołującego jest wymagany do przyznano określonego uprawnienia w danym okresie czasu.|  
-|`dclInheritanceCheck`|Klasy pochodnej dziedziczenia innej klasy lub przesłaniania metody jest wymagany do przyznano określonego uprawnienia.|  
-|`dclRequestMinimum`|Obiekt wywołujący może wysłać żądanie minimalne uprawnienia wymagane przez kod wymagany do uruchomienia. Ta akcja można używać tylko w zakresie zestawu.|  
-|`dclRequestOptional`|Obiekt wywołujący może wysłać żądanie uzyskania dodatkowych uprawnień, które są opcjonalne (nie trzeba uruchamiać). To żądanie odmawia niejawnie innych uprawnień nie pobrany na żądanie. Ta akcja można używać tylko w zakresie zestawu.|  
-|`dclRequestRefuse`|Nie otrzyma żądanie wywołującego uprawnienia, które mogą być używane. Ta akcja można używać tylko w zakresie zestawu.|  
+|`dclDemand`|Wszystkie podmioty wywołujące wyżej w stosie wywołań są wymagane do udzielono uprawnienia określone przez bieżący obiekt uprawnień.|  
+|`dclAssert`|Kod wywołujący może uzyskać dostępu do zasobu, identyfikowane przez bieżący obiekt uprawnienia, nawet wtedy, gdy wyżej w stosie wywołań nie przyznano uprawnień dostępu do zasobu|  
+|`dclDeny`|Możliwość dostępu do zasobu, określony przez bieżący obiekt uprawnień nie jest możliwy obiektów wywołujących, nawet wtedy, gdy przyznano im uprawnienia dostępu do niego.|  
+|`dclPermitOnly`|Tylko zasoby, które zostały określone przez ten obiekt uprawnień są dostępne, nawet jeśli kod ma uprawnienia dostępu do innych zasobów.|  
+|`dclLinktimeCheck`|Do bezpośredniego wywołującego jest wymagana do przyznano określone uprawnienie dla danego okresu czasu.|  
+|`dclInheritanceCheck`|Klasa pochodna dziedziczy innej klasy lub zastępowania metody jest wymagany do przyznano określone uprawnienie.|  
+|`dclRequestMinimum`|Obiekt wywołujący może żądać minimalne uprawnienia wymagane do kod wymagany do uruchomienia. Tej akcji należy używać tylko w ramach zakresu zestawu.|  
+|`dclRequestOptional`|Obiekt wywołujący może żądać uzyskać dodatkowe uprawnienia, które są opcjonalne (nie wymaga do uruchomienia). To żądanie niejawnie odmawia innych uprawnień nie jest wymagane. Tej akcji należy używać tylko w ramach zakresu zestawu.|  
+|`dclRequestRefuse`|Żądanie obiektu wywołującego uprawnienia, które mogą być używane nie zostaną przyznane. Tej akcji należy używać tylko w ramach zakresu zestawu.|  
 |`dclPrejitGrant`|Zastrzeżone.|  
 |`dclPrejitDenied`|Zastrzeżone.|  
 |`dclNonCasDemand`|Zastrzeżone.|  
-|`dclNonCasLinkDemand`|Bezpośredniego obiektu wywołującego jest wymagany do przyznano określonego uprawnienia.|  
+|`dclNonCasLinkDemand`|Bezpośredniego obiektu wywołującego jest wymagana do przyznano określone uprawnienie.|  
 |`dclNonCasInheritance`|Zastrzeżone.|  
 |`dclLinkDemandChoice`|Zastrzeżone.|  
 |`dclInheritanceDemandChoice`|Zastrzeżone.|  
@@ -83,11 +83,11 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|Zastrzeżone.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

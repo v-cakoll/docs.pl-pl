@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: e8429df6ef633f11df50ee5526496f9688f845ea
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592853"
 ---
 # <a name="members-c-programming-guide"></a>Członkowie (Przewodnik programowania w języku C#)
 Klasy i struktury mają elementów członkowskich, które reprezentują ich danych i działania. Elementy członkowskie klasy obejmują wszystkie elementy członkowskie zadeklarowana w klasie, oraz wszystkie elementy członkowskie (z wyjątkiem konstruktorów i finalizatory) zadeklarowane dla wszystkich klas w hierarchii dziedziczenia. Prywatne składowe w klasach bazowych są dziedziczone, ale nie są dostępne z klas pochodnych.  
@@ -31,17 +31,17 @@ Klasy i struktury mają elementów członkowskich, które reprezentują ich dany
 |[Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)|Finalizatory są bardzo rzadko używane w języku C#. Są one metody, które są wywoływane przez silnika wykonania środowiska uruchomieniowego, gdy obiekt zostanie usunięty z pamięci. Zwykle służą one do upewnij się, wszystkie zasoby, które muszą zostać zwolnione, są odpowiednio obsługiwany.|  
 |[Zagnieżdżone typy](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Zagnieżdżone typy są typy zadeklarowane wewnątrz innego typu. Zagnieżdżone typy są często używane do opisywania obiektów, które są używane tylko przez typy zawierające je.|  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)  
-- [Indeksatory](../../../csharp/programming-guide/indexers/index.md)  
-- [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
-- [Zagnieżdżone typy](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
-- [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [Indeksatory](../../../csharp/programming-guide/indexers/index.md)
+- [Zdarzenia](../../../csharp/programming-guide/events/index.md)
+- [Zagnieżdżone typy](../../../csharp/programming-guide/classes-and-structs/nested-types.md)
+- [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
 - [Operatory z możliwością przeciążenia](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

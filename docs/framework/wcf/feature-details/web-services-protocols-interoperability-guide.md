@@ -2,12 +2,12 @@
 title: Przewodnik dotyczący współpracy protokołów usług sieci Web
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 96fdf00b5d64f1ed588907fc2717388b30ae1d92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521390"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Przewodnik dotyczący współpracy protokołów usług sieci Web
 Windows Communication Foundation (WCF) implementuje wiele protokołów usług sieci Web. Wiele z tych protokołów zawierają wiele opcji i punkty rozszerzalności w gestii implementujący. Ten temat zawiera listę protokołów usług sieci Web, który implementuje usługi WCF. Inne tematy w tej sekcji Podaj szczegóły implementacji dla każdego protokołu, obsługiwane.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) implementuje wiele protokołów usług si
 |Specyfikacja/dokumentu|Łącze|  
 |-----------------------------|----------|  
 |XML|[Extensible Markup Language (XML) 1.0 (wydanie czwarte)](https://go.microsoft.com/fwlink/?LinkId=15139)|  
-|PROTOKOŁU SOAP 1.1|[Simple Object Access Protocol (SOAP) 1.1](https://go.microsoft.com/fwlink/?LinkId=96687)|  
+|SOAP 1.1|[Simple Object Access Protocol (SOAP) 1.1](https://go.microsoft.com/fwlink/?LinkId=96687)|  
 |SOAP 1.2 Core|[Wersja protokołu SOAP 1.2 część 1: Komunikaty Framework (wydanie drugie)](https://go.microsoft.com/fwlink/?LinkId=94664)|  
 |WS-Addressing 2004/08|[Usługi sieci Web eliminowanie (WS-Addressing)](https://go.microsoft.com/fwlink/?LinkId=81239)|  
 |Eliminowanie Core 1.0 - usług sieci Web W3C|[Eliminowanie Core 1.0 - usług sieci Web](https://go.microsoft.com/fwlink/?LinkId=96688)|  
@@ -53,15 +53,15 @@ Windows Communication Foundation (WCF) implementuje wiele protokołów usług si
   
 |Specyfikacja/dokumentu|Łącze|  
 |-----------------------------|----------|  
-|GRUPIE WSS: Zabezpieczenia komunikatów SOAP 1.0|[Zabezpieczenia usługi sieci Web: Zabezpieczenia komunikatów SOAP 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
-|GRUPIE WSS: Token nazwy użytkownika profilu 1.0|[Profil UsernameToken zabezpieczeń 1.0 usług sieci Web](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> Wymagaj Password/@Type= PasswordText (ustawienie domyślne)|  
-|GRUPIE WSS: X.509 tokenu profilu 1.0|[W sieci Web usług zabezpieczeń X.509 certyfikatu tokenu profilu](https://go.microsoft.com/fwlink/?LinkId=95335)|  
-|GRUPIE WSS: SAML 1.1 tokenu profilu 1.0|[Zabezpieczenia usługi sieci Web: Profil tokenu SAML](https://go.microsoft.com/fwlink/?LinkId=96693)|  
-|GRUPIE WSS: Zabezpieczenia komunikatów SOAP 1.1|[Zabezpieczenia usługi sieci Web: Zabezpieczenia komunikatów SOAP 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
+|WSS: SOAP Message Security 1.0|[Zabezpieczenia usługi sieci Web: SOAP Message Security 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
+|WSS: Token nazwy użytkownika profilu 1.0|[Profil UsernameToken zabezpieczeń 1.0 usług sieci Web](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> Wymagaj Password/@Type= PasswordText (ustawienie domyślne)|  
+|WSS: X.509 Token Profile 1.0|[W sieci Web usług zabezpieczeń X.509 certyfikatu tokenu profilu](https://go.microsoft.com/fwlink/?LinkId=95335)|  
+|WSS: SAML 1.1 Token Profile 1.0|[Zabezpieczenia usługi sieci Web: Profil tokenu SAML](https://go.microsoft.com/fwlink/?LinkId=96693)|  
+|WSS: Zabezpieczenia komunikatów SOAP 1.1|[Zabezpieczenia usługi sieci Web: SOAP Message Security 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
 |1.1 tokenu profilu programu WSS nazwy użytkownika|[1.1 profilu UsernameToken zabezpieczeń usług sieci Web](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> nie należy implementować wyprowadzania klucza opartego na hasłach;<br /><br /> Wymagaj Password/@Type= PasswordText (ustawienie domyślne)|  
-|GRUPIE WSS: X509 token 1.1 profilu|[W sieci Web usług zabezpieczeń X.509 tokenu profilu certyfikatu 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
-|GRUPIE WSS: 1.1 profilu tokenu protokołu Kerberos|[1.1 profilu tokenu protokołu Kerberos zabezpieczeń usług sieci Web](https://go.microsoft.com/fwlink/?LinkId=95333)|  
-|GRUPIE WSS: SAML 1.1 Token 1.1 profilu|[W sieci Web usługi zabezpieczeń tokenu profil SAML 1.1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
+|WSS: X509 Token Profile 1.1|[W sieci Web usług zabezpieczeń X.509 tokenu profilu certyfikatu 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
+|WSS: 1.1 profilu tokenu protokołu Kerberos|[1.1 profilu tokenu protokołu Kerberos zabezpieczeń usług sieci Web](https://go.microsoft.com/fwlink/?LinkId=95333)|  
+|WSS: SAML 1.1 Token 1.1 profilu|[W sieci Web usługi zabezpieczeń tokenu profil SAML 1.1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
 |Zabezpieczenia WS konwersacji|[Język bezpiecznej konwersacji usług sieci Web](https://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4|[Usługi sieci Web zaufania języka](https://go.microsoft.com/fwlink/?LinkId=169514)|  
 |WS-SecurityPolicy 2005/07|[Język bezpiecznej konwersacji usług sieci Web](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Zmienione przez errata przesłane do Komitet Techniczny usługi WS-SX OASIS.<br /><br /> [wiadomości ws-sx](https://go.microsoft.com/fwlink/?LinkId=96700)|  
@@ -76,9 +76,9 @@ Windows Communication Foundation (WCF) implementuje wiele protokołów usług si
   
  <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <xref:System.ServiceModel.Description.WsdlExporter>, <xref:System.ServiceModel.Description.WsdlImporter>, I <xref:System.ServiceModel.Description.MetadataResolver> klasy zapewniają obsługę dla następujących specyfikacji metadanych:  
   
--   [XML schematu część 1: Wydanie drugie struktury](https://go.microsoft.com/fwlink/?LinkId=3536)  
+-   [XML Schema Part 1: Wydanie drugie struktury](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML schematu część 2: Typy danych, wydanie drugie](https://go.microsoft.com/fwlink/?LinkId=40138)  
+-   [XML Schema Part 2: Typy danych, wydanie drugie](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
 -   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   
@@ -94,19 +94,19 @@ Windows Communication Foundation (WCF) implementuje wiele protokołów usług si
   
  Ponadto następujące profile współdziałanie są zaimplementowane w obszarach WCF:  
   
--   [1.1 profilu podstawowego](https://go.microsoft.com/fwlink/?LinkId=69313)  
+-   [Basic Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
   
 -   [SOAP proste powiązanie 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
   
 -   [Podstawowe zabezpieczeń profilu 1.0 pracy narzędzia Draft](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## <a name="see-also"></a>Zobacz też  
- [Protokoły usług internetowych obsługiwane przez wiązania współdziałania udostępnione przez system](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
- [Protokoły obsługi komunikatów](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
- [Odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [WSDL i zasady](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
- [Protokoły zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
- [Reliable Messaging Protocol w wersji 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [Reliable Messaging Protocol w wersji 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
- [Protokoły transakcji](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
- [Protokół wymiany kontekstu](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+## <a name="see-also"></a>Zobacz także
+- [Protokoły usług internetowych obsługiwane przez wiązania współdziałania udostępnione przez system](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
+- [Protokoły obsługi komunikatów](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)
+- [Odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [WSDL i zasady](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
+- [Protokoły zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-protocols.md)
+- [Reliable Messaging Protocol w wersji 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)
+- [Reliable Messaging Protocol w wersji 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)
+- [Protokoły transakcji](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)
+- [Protokół wymiany kontekstu](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b92592500f0babf29891710cedf1228b0ddcb0e4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3e74fc1e4ab48e73365d41594a7a84cbad6ec044
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496117"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Włączanie debugowania dołączania JIT
 Debugowania dołączania JIT jest wyrażenie używane do opisywania dołączanie debugera do procesu, gdy wystąpią błędy lub mogą być wyzwalane przez określone metody lub funkcji.  
@@ -35,7 +35,7 @@ Debugowania dołączania JIT jest wyrażenie używane do opisywania dołączanie
   
  Przed [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework podane klucze rejestru oddzielne, aby kontrolować zachowanie natywnych i zarządzanych debugerów. Począwszy od [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], kontrolki są konsolidowane w kluczu rejestru pojedynczego: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Wartości, które można ustawić dla tego klucza określają, czy debuger jest wywoływany, a jeśli tak, czy jest wywoływana z okna dialogowego wymaga interakcji użytkownika. Aby uzyskać informacji o ustawieniu tego klucza rejestru, zobacz [Konfigurowanie automatycznego debugowania](https://go.microsoft.com/fwlink/?LinkId=181767).  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, śledzenie i profilowanie](../../../docs/framework/debug-trace-profile/index.md)  
- [Ułatwianie debugowania obrazu](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
- [Włączanie profilowania](https://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, śledzenie i profilowanie](../../../docs/framework/debug-trace-profile/index.md)
+- [Ułatwianie debugowania obrazu](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)
+- [Włączanie profilowania](https://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

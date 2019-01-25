@@ -11,17 +11,17 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 9df2bc9257c3f697f30cbe8c679ffc88ec34517b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f65c34c965ddf19c7a287eeeaafe2583c97583ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506073"
 ---
 # <a name="method-implementation-in-custom-controls"></a>Implementacja metody w formantach niestandardowych
-Metoda jest zaimplementowana w formancie w taki sam sposób, które metody są realizowane w innych składników.  
+Metoda jest zaimplementowana w formancie w taki sam sposób, którego metody mogą być realizowane w jakikolwiek inny składnik.  
   
- W języku Visual Basic, jeśli metoda jest wymagane w celu zwrócenia wartości, są one zaimplementowane jako `Public Function`. Jeśli wartość nie zostanie zwrócone, jest zaimplementowany jako `Public Sub`. Metody zadeklarowane za pomocą następującej składni:  
+ W języku Visual Basic, jeśli metoda jest wymagane w celu zwrócenia wartości, są one zaimplementowane jako `Public Function`. Jeśli jest zwracana żadna wartość, jest implementowany jako `Public Sub`. Metody są deklarowane przy użyciu następującej składni:  
   
 ```vb  
 Public Function ConvertMatterToEnergy(Matter as Integer) As Integer  
@@ -29,9 +29,9 @@ Public Function ConvertMatterToEnergy(Matter as Integer) As Integer
 End Function  
 ```  
   
- Ponieważ funkcje zwracają wartość, musi określić typ zwracany, takie jak liczba całkowita, ciąg, obiekt i tak dalej. Argumenty `Function` lub `Sub` wykonać procedury, jeśli istnieje, należy także określić.  
+ Ponieważ funkcje zwracają wartość, określać typ zwracany, takie jak liczba całkowita, ciąg, obiekt i tak dalej. Argumenty `Function` lub `Sub` wykonać procedury, jeśli istnieją, należy także określić.  
   
- C# nie rozróżnia między funkcje i procedury, tak jak w języku Visual Basic. Metoda zwraca wartość lub zwraca `void`. Składnia deklaracji publiczną metodę C# jest:  
+ C#nie rozróżnia pomiędzy funkcjami i procedur, tak jak w języku Visual Basic. Metoda zwraca wartość lub zwraca `void`. Składnia do deklarowania C# jest publiczną metodę:  
   
 ```csharp  
 public int ConvertMatterToEnergy(int matter)  
@@ -40,17 +40,17 @@ public int ConvertMatterToEnergy(int matter)
 }  
 ```  
   
- W deklaracji metody, należy zadeklarować wszystkie argumenty jako typy danych jawne, jeśli to możliwe. Argumenty, które przyjmują odwołania do obiektów powinien być zadeklarowany jako klasa określonych typów — na przykład `As Widget` zamiast `As Object`. W języku Visual Basic, domyślne ustawienie `Option Strict` automatycznie wymusza tej reguły.  
+ Po użytkownik deklaruje metodę, należy zadeklarować wszystkie jej argumenty jako typy danych jawne, jeśli to możliwe. Argumenty, które przyjmują odwołania do obiektu powinien być zadeklarowany jako typu określonej klasy — na przykład `As Widget` zamiast `As Object`. W języku Visual Basic, domyślne ustawienie `Option Strict` automatycznie wymuszają tę regułę.  
   
- Argumenty typu Zezwalaj na wiele błędów developer wychwycony przez kompilator, a nie w czasie wykonywania. Kompilator zawsze połowy błędów, natomiast czasu wykonywania testów jest tylko zestaw testów.  
+ Argumenty wpisane zezwala na wiele błędów dla deweloperów, aby zostać przechwycony przez kompilator, a nie w czasie wykonywania. Kompilator zawsze połowy błędów, testowania w czasie wykonywania tylko jest dobrą zestawu testów.  
   
-## <a name="overloaded-methods"></a>Metody przeciążane  
- Jeśli chcesz umożliwić użytkownikom formantu umożliwiają określanie kombinacji parametrów do metody, zawierają wiele przeciążenia metody, przy użyciu jawnych typów. Unikaj tworzenia parametrami zadeklarowanymi jako `As Object` który może zawierać dowolny typ danych, ponieważ może to prowadzić do błędów, które nie mogą być przechwycono testowania.  
+## <a name="overloaded-methods"></a>Przeciążone metody  
+ Jeśli chcesz umożliwić użytkownikom kontroli nad Podaj różne kombinacje parametrów do metody, należy podać wiele przeciążeń metody, za pomocą jawnych typów. Unikaj tworzenia parametrami zadeklarowanymi jako `As Object` , może zawierać żadnego typu danych, ponieważ może to prowadzić do błędów, które nie może zostać przechwycony podczas testowania.  
   
 > [!NOTE]
->  Typ danych uniwersalnych w środowisku uruchomieniowym języka jest `Object` zamiast `Variant`. `Variant` została usunięta z języka.  
+>  Typ danych uniwersalne środowisko uruchomieniowe języka wspólnego jest `Object` zamiast `Variant`. `Variant` Usunięto od języka.  
   
- Na przykład `Spin` metody hipotetyczny `Widget` formant może zezwala na bezpośrednie specyfikacji pokrętła kierunek i szybkość lub specyfikacji innego `Widget` obiektu, z którym pędu jest pochłanianej:  
+ Na przykład `Spin` metoda możesz `Widget` formant może zezwala na bezpośrednie specyfikacji pokrętła kierunku i szybkość lub specyfikacji innego `Widget` obiekt, z których pęd angular jest pochłanianej:  
   
 ```vb  
 Overloads Public Sub Spin( _  
@@ -75,6 +75,6 @@ public void Spin(Widget driver)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zdarzenia](../../../../docs/standard/events/index.md)  
- [Właściwości kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+## <a name="see-also"></a>Zobacz także
+- [Zdarzenia](../../../../docs/standard/events/index.md)
+- [Właściwości kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)

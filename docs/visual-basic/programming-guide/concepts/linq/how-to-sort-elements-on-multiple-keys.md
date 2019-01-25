@@ -1,21 +1,21 @@
 ---
-title: 'Porady: sortowanie elementów na wielu kluczy (Visual Basic)'
+title: 'Instrukcje: Sortowanie elementów na wielu kluczach (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: 69509eb0bbc28045b71ad44c178d042367f3c03e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff5d3260efc5ba3630cb785bd265061c9a8e05da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506475"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Porady: sortowanie elementów na wielu kluczy (Visual Basic)
-W tym temacie przedstawiono sposób sortowania na wielu kluczy.  
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Instrukcje: Sortowanie elementów na wielu kluczach (Visual Basic)
+W tym temacie pokazano, jak ma być wykonywane sortowanie wielu kluczy.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wyniki są uporządkowane pierwszy przez kod pocztowy wysyłania, następnie według dat zamówienia.  
+ W tym przykładzie wyniki są uporządkowane pierwszy według kod pocztowy wysyłki, następnie według dat zamówienia.  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: Klienci i zamówienia (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -62,9 +62,9 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeni nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: Klienci i zamówienia w Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia w Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -116,5 +116,5 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Podstawowe zapytania (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Podstawowe zapytania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

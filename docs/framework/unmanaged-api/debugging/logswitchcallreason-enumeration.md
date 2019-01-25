@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fe5710f1be0bfa4e651668e2469c3551ad79261
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bba39446d9ca5164d98337e93e83725cfa503903
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515329"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason — Wyliczenie
-Wskazuje działanie zostało wykonane na przełączniku debugowania śledzenia.  
+Określa operację, która została wykonana w przełączniku debugowanie śledzenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,12 +40,12 @@ typedef enum LogSwitchCallReason {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`SWITCH_CREATE`|Przełącznik debugowania śledzenia został utworzony.|  
-|`SWITCH_MODIFY`|Przełącznik debugowania śledzenia został zmodyfikowany.|  
-|`SWITCH_DELETE`|Przełącznik debugowania śledzenia został usunięty.|  
+|`SWITCH_CREATE`|Przełącznik debugowanie śledzenia został utworzony.|  
+|`SWITCH_MODIFY`|Przełącznik debugowanie śledzenia został zmodyfikowany.|  
+|`SWITCH_DELETE`|Usunięto przełącznik debugowanie śledzenia.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -53,5 +53,5 @@ typedef enum LogSwitchCallReason {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

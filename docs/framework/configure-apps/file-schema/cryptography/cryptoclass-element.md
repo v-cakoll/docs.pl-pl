@@ -1,5 +1,5 @@
 ---
-title: '&lt;cryptoclass —&gt; — Element'
+title: '&lt;cryptoClass&gt; Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses/cryptoClass
@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: aec786123357337cbaa6251191a023c092af3049
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 726f13d778fc4cff9bdafed4518e9dee3eeab6b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501285"
 ---
-# <a name="ltcryptoclassgt-element"></a>&lt;cryptoclass —&gt; — Element
+# <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt; Element
 Zawiera klasy kryptografii, która ma mapowania do przyjazną nazwę w [ \<nameentry — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) elementu.  
   
  \<Konfiguracja >  
-\<mscorlib >  
-\<cryptographysettings — >  
-\<cryptonamemapping — >  
-\<cryptoclasses — >  
-\<cryptoclass — >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<cryptoNameMapping>  
+\<cryptoClasses>  
+\<cryptoClass>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -77,8 +77,8 @@ Zawiera klasy kryptografii, która ma mapowania do przyjazną nazwę w [ \<namee
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>Zobacz także
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)
 - [Konfigurowanie klas kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

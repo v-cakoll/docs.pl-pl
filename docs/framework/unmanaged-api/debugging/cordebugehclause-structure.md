@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83928696fc7fdfaf2eb944f4cdb9eebecdece0b3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: be5d580c28a15a58cad6c5a2231d3a87e25c0e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495348"
 ---
 # <a name="cordebugehclause-structure"></a>Struktura CorDebugEHClause
 [Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  
@@ -55,7 +55,7 @@ typedef struct _CorDebugEHClause {
 ## <a name="remarks"></a>Uwagi  
  Tablica `CoreDebugEHClause` wartości jest zwracana przez [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) metody.  
   
- Informacje o klauzuli EH jest definiowany przez specyfikację interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [standardowe ECMA-355: infrastruktury języka wspólnego (CLI), w wersji 6](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Informacje o klauzuli EH jest definiowany przez specyfikację interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [Standard ECMA-355: Common Language Infrastructure (CLI), wersja 6](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  `flags` Pole może zawierać następujących flag. Należy pamiętać, że nie są zdefiniowane w CorDebug.idl lub CorDebug.h.  
   
@@ -67,7 +67,7 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Klauzuli fault ( `finally` klauzula, która jest wywoływana tylko wtedy, gdy zostanie zgłoszony wyjątek).|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -75,6 +75,6 @@ typedef struct _CorDebugEHClause {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [GetEHClauses, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  
- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+## <a name="see-also"></a>Zobacz także
+- [GetEHClauses, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)
+- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

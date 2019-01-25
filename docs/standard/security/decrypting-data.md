@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3e48d5a088fc6cff3dbdaaa77e6fa561c33f400
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7f41a61fe929bb3eaf691deb75749777c0880aea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530698"
 ---
 # <a name="decrypting-data"></a>Odszyfrowywanie danych
 Odszyfrowywanie jest odwrotna operacji szyfrowania. Klucz tajny szyfrowania musisz wiedzieć, zarówno klucz, jak i IV, które były używane do szyfrowania danych. Do szyfrowania klucza publicznego należy znać klucza publicznego (jeśli zostały zaszyfrowane przy użyciu klucza prywatnego) lub klucza prywatnego (jeśli zostały zaszyfrowane przy użyciu klucza publicznego).  
@@ -174,7 +174,7 @@ class Class1
 ## <a name="asymmetric-decryption"></a>Odszyfrowanie asymetryczne  
  Zazwyczaj strona (strona: A) generuje zarówno klucz publiczny i prywatny, a przechowuje klucz w pamięci lub w kontenerze kluczy kryptograficznych.  Innych firm, następnie wysyła klucz publiczny do innej strony (strona B).  Przy użyciu klucza publicznego, strona B szyfruje dane i wysyła dane do firmy A.  Po otrzymaniu danych, A strona odszyfrowuje je przy użyciu klucza prywatnego, który odpowiada.  Odszyfrowywanie zakończą się pomyślnie, tylko wtedy, gdy strona A używa klucza prywatnego, który odnosi się do klucza publicznego, który B innych firm używane do szyfrowania danych.  
   
- Aby uzyskać informacje na temat przechowywania klucza asymetrycznego, w bezpiecznej kontenera kluczy kryptograficznych i jak można później pobrać klucza asymetrycznego, zobacz [jak: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
+ Aby uzyskać informacje na temat przechowywania klucza asymetrycznego, w bezpiecznej kontenera kluczy kryptograficznych i jak można później pobrać klucza asymetrycznego, zobacz [jak: Store kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
   
  Poniższy przykład ilustruje odszyfrowywania dwie tablice bajtów reprezentujących klucz symetryczny i IV.  Aby uzyskać informacje dotyczące można wyodrębnić klucza publicznego asymetrycznego z <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiekt w formacie, który umożliwia łatwe wysyłanie do innej, zobacz [szyfrowania danych](../../../docs/standard/security/encrypting-data.md).  
   
@@ -204,6 +204,6 @@ SymmetricIV = RSA.Decrypt( EncryptedSymmetricIV , false);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Generowanie kluczy szyfrowania i odszyfrowywania](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [Szyfrowanie danych](../../../docs/standard/security/encrypting-data.md)  
+- [Generowanie kluczy szyfrowania i odszyfrowywania](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [Szyfrowanie danych](../../../docs/standard/security/encrypting-data.md)
 - [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)

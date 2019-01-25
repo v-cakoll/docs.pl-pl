@@ -2,12 +2,12 @@
 title: Przepływ sterowania w programach Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 368422338f6452bf5dbe968d4798bc0d5e937c92
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 24a3ece8393fd739ff76fbe759a5572414ce5748
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532529"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Przepływ sterowania w programach Async (Visual Basic)
 Pozwala pisać i łatwiej utrzymać asynchroniczne programy za pomocą `Async` i `Await` słów kluczowych. Jednak wyniki mogą Cię zaskoczyć, jeśli nie rozumiesz sposobu działania programu. W tym temacie omówiono, którą przepływ sterowania za pośrednictwem prostego programu asynchronicznego aby pokazać, kiedy sterowania przechodzi od jednej metody do innej i jakie informacje są przesyłane za każdym razem.  
@@ -98,7 +98,7 @@ Length of the downloaded string: 33946.
 >  Aby uruchomić przykład, konieczne jest posiadanie programu Visual Studio 2012 lub nowszego oraz programu .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
   
 ### <a name="download-the-program"></a>Pobierz Program  
- Możesz pobrać aplikację dotyczącą tego tematu z [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Poniższe kroki, Otwórz i uruchom program.  
+ Możesz pobrać aplikację dotyczącą tego tematu z [próbka asynchroniczna: Kontrolowanie Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Poniższe kroki, Otwórz i uruchom program.  
   
 1.  Rozpakuj pobrany plik, a następnie uruchom program Visual Studio.  
   
@@ -356,10 +356,10 @@ Dim contentLength As Integer = Await getLengthTask
   
  Poniższa ilustracja przedstawia powrót sterowania z `AccessTheWebAsync` do `startButton_Click`.  
   
- ![Krok 6](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace 6")  
+ ![Step SIX](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")  
   
-## <a name="see-also"></a>Zobacz też  
- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Asynchroniczne typy zwracane (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Próbka asynchroniczna: Przepływ sterowania w programach Async (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+## <a name="see-also"></a>Zobacz także
+- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Asynchroniczne typy zwracane (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Próbka asynchroniczna: Kontrolowanie Flow in Async Programs (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

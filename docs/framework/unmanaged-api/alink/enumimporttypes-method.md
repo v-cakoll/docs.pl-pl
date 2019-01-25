@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90319886dfe149a3d2d76451c1a8526299cf5b89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e437868138d7ae31d233853ecc0f709de3ee39d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512726"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes — Metoda
-Wylicza każdego typu w każdym zakresem.  
+Wylicza każdy typ w każdym zakresem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +40,7 @@ HRESULT EnumImportTypes(
   
 #### <a name="parameters"></a>Parametry  
  `hEnum`  
- Uchwyt dla typu wyliczeniowego.  
+ Dojście dla typu wyliczeniowego.  
   
  `dwMax`  
  Maksymalna liczba typów do pobrania.  
@@ -49,7 +49,7 @@ HRESULT EnumImportTypes(
  Recieves wpisz tokenów, aby nie przekroczyć `dwMax`.  
   
  `pdwCount`  
- Odbiera rzeczywistą liczbę typu w `aTypeDefs`.  
+ Odbiera rzeczywista liczba wpisz `aTypeDefs`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
@@ -57,7 +57,7 @@ HRESULT EnumImportTypes(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

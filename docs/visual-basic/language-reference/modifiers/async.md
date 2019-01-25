@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: 244f468d9432e132c93ae8272d51098f86ad439a
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 654c397918f564bbba9ce91ebd8135b14dd7abb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561455"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
-`Async` Modyfikator wskazuje, że metoda lub [wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) czy modyfikuje jest asynchroniczne. Metody te są określane jako *metod asynchronicznych*.  
+`Async` Modyfikator wskazuje, że metoda lub [wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) że modyfikuje jest asynchroniczna. Metody te są nazywane *metod asynchronicznych*.  
   
- Metoda asynchroniczna oferują wygodny sposób w pracy potencjalnie długotrwałe bez blokowania wątków obiektu wywołującego. Element wywołujący metody asynchronicznej można wznowić pracę bez oczekiwania na metoda asynchroniczna zakończyć.  
+ Metoda asynchroniczna zapewnia wygodny sposób do potencjalnie długotrwałej pracy bez blokowania wątku obiektu wywołującego. Obiekt wywołujący metodę komunikacji asynchronicznej może wznowić swoją pracę bez oczekiwania na zakończenie metody asynchronicznej.  
   
 > [!NOTE]
->  `Async` i `Await` słowa kluczowe wprowadzono w programie Visual Studio 2012. Aby obejrzeć wprowadzenie do programowania asynchronicznego Zobacz [programowanie asynchroniczne z Async i Await](../../../visual-basic/programming-guide/concepts/async/index.md).  
+>  `Async` i `Await` słowa kluczowe zostały wprowadzone w programie Visual Studio 2012. Wprowadzenie do programowania asynchronicznego, zobacz [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
- Poniższy przykład przedstawia struktury metody asynchronicznej. Konwencja nazwy metod asynchronicznych kończyć się "Async".  
+ Poniższy przykład pokazuje strukturę metody asynchronicznej. Według Konwencji nazwy metody async kończy się "Async".  
   
 ```vb  
 Public Async Function ExampleMethodAsync() As Task(Of Integer)  
@@ -42,21 +42,21 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- Zazwyczaj metodę zmodyfikowany przez `Async` — słowo kluczowe zawiera co najmniej jeden [Await](../../../visual-basic/language-reference/modifiers/async.md) wyrażenia lub instrukcji. Metoda jest uruchamiana synchronicznie, dopóki nie osiągnie pierwszy `Await`, po czym wstrzymuje dopiero po zakończeniu zadania oczekiwano. Tymczasem zwróceniem sterowania do obiektu wywołującego metody. Jeśli metoda nie zawiera `Await` wyrażenia lub instrukcji metoda nie jest wstrzymana i wykonuje jak metoda synchroniczna. Ostrzeżenie kompilatora ostrzega o dowolnej metody asynchroniczne, które nie zawierają `Await` ponieważ taka sytuacja może wskazywać na błąd. Aby uzyskać więcej informacji, zobacz [błąd kompilatora](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
+ Zazwyczaj metoda zmodyfikowane przez `Async` — słowo kluczowe zawiera co najmniej jeden [Await](../../../visual-basic/language-reference/modifiers/async.md) wyrażenia lub instrukcji. Metoda działa synchronicznie, dopóki nie zostanie osiągnięty pierwszy `Await`, w tym momencie wstrzymuje, dopóki nie zakończy się oczekiwane zadanie. W międzyczasie zwróceniem sterowania do obiektu wywołującego metody. Jeśli metoda nie zawiera `Await` wyrażenia lub instrukcji, metoda nie jest wstrzymana i jest wykonywana jak metoda synchroniczna. Ostrzeżenia kompilatora ostrzega przed wszystkimi metodami asynchronicznymi, które nie zawierają `Await` , ponieważ taka sytuacja może wskazywać na błąd. Aby uzyskać więcej informacji, zobacz [błąd kompilatora](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
   
- `Async` — Słowo kluczowe jest bezwarunkowe — słowo kluczowe. Gdy modyfikuje metody lub wyrażenia lambda, jest słowem kluczowym. W innych kontekstach jest interpretowany jako identyfikator.  
+ `Async` — Słowo kluczowe jest niezastrzeżone słowa kluczowego. Gdy modyfikuje metodę, lub wyrażenie lambda jest słowem kluczowym. W innych kontekstach jest interpretowane jako identyfikator.  
   
 ## <a name="return-types"></a>Typy zwracane  
- Jest to metoda asynchroniczna [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedury lub [funkcja](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) procedury, która ma typ zwracany <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>. Metody nie można zadeklarować żadnego [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parametrów.  
+ Jest to metoda asynchroniczna [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedury lub [funkcja](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) procedury, która ma typ zwracany <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>. Metoda nie może deklarować [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parametrów.  
   
- Należy określić `Task(Of TResult)` dla zwracany typ metody asynchronicznej Jeśli [zwracać](../../../visual-basic/language-reference/statements/return-statement.md) instrukcji metody ma argumentu operacji typu TResult. Możesz użyć `Task` Jeśli nie istotnych wartość jest zwracana po zakończeniu metody. Oznacza to, zwraca wywołanie do metody `Task`, ale jeśli `Task` zostało zakończone, wszelkie `Await` instrukcji, która oczekuje na `Task` nie tworzy wartości wyniku.  
+ Należy określić `Task(Of TResult)` dla zwracanego typu metody asynchronicznej Jeśli [zwracają](../../../visual-basic/language-reference/statements/return-statement.md) instrukcja metody zawiera operandę typu TResult. Możesz użyć `Task` Jeśli żadna mająca znaczenie wartość jest zwracana, gdy metoda zostanie zakończona. Oznacza to, że wywołanie metody zwraca `Task`, ale gdy `Task` zostanie zakończona, wszelkie `Await` instrukcję, która oczekuje na `Task` nie generuje wartości wyniku.  
   
- Asynchronicznej podprocedury są używane głównie w celu definiowania metod obsługi zdarzeń gdzie `Sub` procedura jest wymagana. Element wywołujący asynchronicznej podprocedury nie można zdefiniować oczekiwania go i nie przechwytuje wyjątków, które metoda zgłasza.  
+ Asynchroniczne procedur są używane głównie do definiowania programów obsługi zdarzeń gdzie `Sub` procedura jest wymagana. Obiekt wywołujący podprocedury async nie może oczekiwać i nie może przechwytywać wyjątków, które metoda wygeneruje.  
   
- Aby uzyskać dodatkowe informacje i przykłady, zobacz [Async zwracać typów](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ Aby uzyskać więcej informacji i przykładów, zobacz [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższych przykładach pokazano asynchronicznej obsługi zdarzeń, asynchroniczne Wyrażenie lambda i metody asynchronicznej. Na przykład pełna, który używa tych elementów, zobacz [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Możesz pobrać kod wskazówki z [przykłady kodu dewelopera](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
+ W poniższych przykładach pokazano program obsługi zdarzeń asynchronicznych, asynchroniczne Wyrażenie lambda i metody asynchronicznej. Aby uzyskać pełny przykład, który korzysta z tych elementów, zobacz [instruktażu: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Możesz pobrać kod przejściowy z [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
   
 ```vb  
 ' An event handler must be a Sub procedure.  
@@ -103,8 +103,8 @@ Private Async Function GetURLContentsAsync(url As String) As Task(Of Byte())
 End Function  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
- [Await, operator](../../../visual-basic/language-reference/operators/await-operator.md)  
- [Programowanie asynchroniczne z Async i Await](../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Przewodnik: uzyskiwanie dostępu do sieci za pomocą Async i Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
+- [Await, operator](../../../visual-basic/language-reference/operators/await-operator.md)
+- [Programowanie asynchroniczne z Async i Await](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

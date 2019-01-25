@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc07779f03784cd32524e1b1189faae343710a05
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 376dd9df4666193f8e5a6be83f3fcaf5dc32f1a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865790"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544604"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>Konwertowanie ciągów na typy danych programu .NET Framework
 Do przekonwertowania ciągu na typ danych .NET Framework, należy użyć **obiekt XmlConvert** metodę, która spełnia wymagania aplikacji. Aby uzyskać listę wszystkich metod konwersji dostępnych w **obiekt XmlConvert** klasy, zobacz <xref:System.Xml.XmlConvert>.  
@@ -24,7 +24,7 @@ Do przekonwertowania ciągu na typ danych .NET Framework, należy użyć **obiek
   
 |Typ programu .NET Framework|Ciąg zwracany|  
 |-------------------------|---------------------|  
-|Boolean|"true", "fałsz"|  
+|Boolean|"true", "false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
@@ -78,7 +78,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 |Parametr wejściowy prawidłowy ciąg|Typ danych wyjściowych .NET framework|  
 |----------------------------------|--------------------------------|  
-|wartość "prawda"|Boolean.True|  
+|"true"|Boolean.True|  
 |"1"|Boolean.True|  
 |"false"|Boolean.False|  
 |„0”|Boolean.False|  
@@ -135,5 +135,5 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Konwersja typów danych XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+- [Konwersja typów danych XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [Konwertowanie typów programu .NET Framework na ciągi](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

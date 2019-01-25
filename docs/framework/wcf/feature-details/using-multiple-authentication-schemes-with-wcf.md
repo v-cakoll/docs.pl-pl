@@ -2,17 +2,17 @@
 title: Używanie wielu schematów uwierzytelniania z programem WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8aa593803354628354e5ed3bf02cbcea44505e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521702"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593813"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Używanie wielu schematów uwierzytelniania z programem WCF
 Usługi WCF umożliwia teraz określenie wielu schematów uwierzytelniania w jednym punkcie końcowym. Ponadto usługi sieci web hostowanych może dziedziczyć ustawień uwierzytelniania bezpośrednio za pomocą programu IIS. Samodzielnie hostowanej usługi można określić rodzaju uwierzytelniania może służyć schematów. Aby uzyskać więcej informacji na temat ustawiania ustawienia uwierzytelniania w usługach IIS, zobacz [uwierzytelnianie usług IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  
   
-## <a name="iis-hosted-services"></a>Usług hostowanych przez usługi IIS  
+## <a name="iis-hosted-services"></a>IIS-Hosted Services  
  W przypadku usług hostowanych przez usługi IIS należy ustawić schematy uwierzytelniania, które mają być używane w usługach IIS. Następnie w pliku web.config usługi w konfiguracji powiązania Określ typ clientCredential jako "InheritedFromHost" jak pokazano w poniższym fragmencie kodu XML:  
   
 ```xml  
@@ -119,11 +119,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [Punkty końcowe: adresy, powiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Możliwości zabezpieczeń powiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>Zobacz także
+- [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Punkty końcowe: Adresy, powiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Możliwości zabezpieczeń powiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md)

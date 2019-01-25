@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9bcf8919037d5b79f3819fffec02708886064b40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0561f76c70da603d50b96ce5b5162efac4eff2de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492980"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction — Metoda
-Pobiera token metadanych i wystąpienie interfejsu metadanych, który może służyć przed token określoną funkcję.  
+Pobiera token metadanych i wystąpienie interfejsu metadanych, który może zostać użyty dla tokenu dla określonej funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,19 +39,19 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
 #### <a name="parameters"></a>Parametry  
  `functionId`  
- [in] Identyfikator funkcji, dla którego można pobrać token metadanych i metadanych interfejsu.  
+ [in] Identyfikator funkcji, dla którego należy pobrać token metadanych i metadanych interfejsu.  
   
  `riid`  
  [in] Identyfikator odwołania interfejsu metadanych można pobrać wystąpienia.  
   
  `ppImport`  
- [out] Wskaźnik do adres metadanych wystąpienie interfejsu, który może służyć przed token określona funkcja.  
+ [out] Wskaźnik na adres metadanych wystąpienie interfejsu, który może zostać użyty dla tokenu dla określonej funkcji.  
   
  `pToken`  
- [out] Wskaźnik do tokenu metadane dla określonej funkcji.  
+ [out] Wskaźnik do tokenu metadanych dla określonej funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -59,5 +59,5 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

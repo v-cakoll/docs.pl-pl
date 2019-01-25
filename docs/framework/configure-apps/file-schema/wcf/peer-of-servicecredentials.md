@@ -2,24 +2,24 @@
 title: '&lt;peer&gt; w &lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: df2570a94e7d0c11228d0a72c938d871503d17ac
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 132c001de02e223375453c91832f461b96b57dfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741272"
 ---
-# <a name="ltpeergt-of-ltservicecredentialsgt"></a><span data-ttu-id="e9719-102">&lt;peer&gt; w &lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="e9719-102">&lt;peer&gt; of &lt;serviceCredentials&gt;</span></span>
-<span data-ttu-id="e9719-103">Określa bieżące poświadczenia dla węzła równorzędnego.</span><span class="sxs-lookup"><span data-stu-id="e9719-103">Specifies the current credentials for a peer node.</span></span>  
+# <a name="ltpeergt-of-ltservicecredentialsgt"></a><span data-ttu-id="1cf2f-102">&lt;peer&gt; w &lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="1cf2f-102">&lt;peer&gt; of &lt;serviceCredentials&gt;</span></span>
+<span data-ttu-id="1cf2f-103">Określa bieżące poświadczenia dla węzła równorzędnego.</span><span class="sxs-lookup"><span data-stu-id="1cf2f-103">Specifies the current credentials for a peer node.</span></span>  
   
- <span data-ttu-id="e9719-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="e9719-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="e9719-105">\<zachowania ></span><span class="sxs-lookup"><span data-stu-id="e9719-105">\<behaviors></span></span>  
-<span data-ttu-id="e9719-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="e9719-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="e9719-107">\<zachowanie ></span><span class="sxs-lookup"><span data-stu-id="e9719-107">\<behavior></span></span>  
-<span data-ttu-id="e9719-108">\<serviceCredentials></span><span class="sxs-lookup"><span data-stu-id="e9719-108">\<serviceCredentials></span></span>  
-<span data-ttu-id="e9719-109">\<elementu równorzędnego ></span><span class="sxs-lookup"><span data-stu-id="e9719-109">\<peer></span></span>  
+ <span data-ttu-id="1cf2f-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="1cf2f-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="1cf2f-105">\<zachowania ></span><span class="sxs-lookup"><span data-stu-id="1cf2f-105">\<behaviors></span></span>  
+<span data-ttu-id="1cf2f-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="1cf2f-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="1cf2f-107">\<zachowanie ></span><span class="sxs-lookup"><span data-stu-id="1cf2f-107">\<behavior></span></span>  
+<span data-ttu-id="1cf2f-108">\<serviceCredentials></span><span class="sxs-lookup"><span data-stu-id="1cf2f-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="1cf2f-109">\<peer></span><span class="sxs-lookup"><span data-stu-id="1cf2f-109">\<peer></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9719-110">Składnia</span><span class="sxs-lookup"><span data-stu-id="e9719-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1cf2f-110">Składnia</span><span class="sxs-lookup"><span data-stu-id="1cf2f-110">Syntax</span></span>  
   
 ```xml  
 <peer>
@@ -29,33 +29,33 @@ ms.locfileid: "54152050"
 </peer>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="e9719-111">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="e9719-111">Attributes and Elements</span></span>  
- <span data-ttu-id="e9719-112">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="e9719-112">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1cf2f-111">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="1cf2f-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="1cf2f-112">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="1cf2f-112">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="e9719-113">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="e9719-113">Attributes</span></span>  
- <span data-ttu-id="e9719-114">Brak.</span><span class="sxs-lookup"><span data-stu-id="e9719-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1cf2f-113">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="1cf2f-113">Attributes</span></span>  
+ <span data-ttu-id="1cf2f-114">Brak.</span><span class="sxs-lookup"><span data-stu-id="1cf2f-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="e9719-115">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="e9719-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1cf2f-115">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="1cf2f-115">Child Elements</span></span>  
   
-|<span data-ttu-id="e9719-116">Element</span><span class="sxs-lookup"><span data-stu-id="e9719-116">Element</span></span>|<span data-ttu-id="e9719-117">Opis</span><span class="sxs-lookup"><span data-stu-id="e9719-117">Description</span></span>|  
+|<span data-ttu-id="1cf2f-116">Element</span><span class="sxs-lookup"><span data-stu-id="1cf2f-116">Element</span></span>|<span data-ttu-id="1cf2f-117">Opis</span><span class="sxs-lookup"><span data-stu-id="1cf2f-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="e9719-118">\<certyfikat ></span><span class="sxs-lookup"><span data-stu-id="e9719-118">\<certificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|<span data-ttu-id="e9719-119">Określa certyfikat X.509 do podpisywania i szyfrowanie wiadomości usługi peer-to-peer.</span><span class="sxs-lookup"><span data-stu-id="e9719-119">Specifies an X.509 certificate to use for signing and encrypting messages for peer-to-peer services.</span></span> <span data-ttu-id="e9719-120">.</span><span class="sxs-lookup"><span data-stu-id="e9719-120">.</span></span>|  
-|[<span data-ttu-id="e9719-121">\<messageSenderAuthentication></span><span class="sxs-lookup"><span data-stu-id="e9719-121">\<messageSenderAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|<span data-ttu-id="e9719-122">Określa opcje uwierzytelnienia dla nadawców wiadomości.</span><span class="sxs-lookup"><span data-stu-id="e9719-122">Specifies authentication options for message senders.</span></span>|  
-|[<span data-ttu-id="e9719-123">\<peerAuthentication ></span><span class="sxs-lookup"><span data-stu-id="e9719-123">\<peerAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication.md)|<span data-ttu-id="e9719-124">Określa opcje uwierzytelniania dla elementów równorzędnych usługi.</span><span class="sxs-lookup"><span data-stu-id="e9719-124">Specifies authentication options for peer services.</span></span>|  
+|[<span data-ttu-id="1cf2f-118">\<certyfikat ></span><span class="sxs-lookup"><span data-stu-id="1cf2f-118">\<certificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|<span data-ttu-id="1cf2f-119">Określa certyfikat X.509 do podpisywania i szyfrowanie wiadomości usługi peer-to-peer.</span><span class="sxs-lookup"><span data-stu-id="1cf2f-119">Specifies an X.509 certificate to use for signing and encrypting messages for peer-to-peer services.</span></span> <span data-ttu-id="1cf2f-120">.</span><span class="sxs-lookup"><span data-stu-id="1cf2f-120">.</span></span>|  
+|[<span data-ttu-id="1cf2f-121">\<messageSenderAuthentication></span><span class="sxs-lookup"><span data-stu-id="1cf2f-121">\<messageSenderAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|<span data-ttu-id="1cf2f-122">Określa opcje uwierzytelnienia dla nadawców wiadomości.</span><span class="sxs-lookup"><span data-stu-id="1cf2f-122">Specifies authentication options for message senders.</span></span>|  
+|[<span data-ttu-id="1cf2f-123">\<peerAuthentication ></span><span class="sxs-lookup"><span data-stu-id="1cf2f-123">\<peerAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication.md)|<span data-ttu-id="1cf2f-124">Określa opcje uwierzytelniania dla elementów równorzędnych usługi.</span><span class="sxs-lookup"><span data-stu-id="1cf2f-124">Specifies authentication options for peer services.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="e9719-125">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="e9719-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1cf2f-125">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="1cf2f-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="e9719-126">Element</span><span class="sxs-lookup"><span data-stu-id="e9719-126">Element</span></span>|<span data-ttu-id="e9719-127">Opis</span><span class="sxs-lookup"><span data-stu-id="e9719-127">Description</span></span>|  
+|<span data-ttu-id="1cf2f-126">Element</span><span class="sxs-lookup"><span data-stu-id="1cf2f-126">Element</span></span>|<span data-ttu-id="1cf2f-127">Opis</span><span class="sxs-lookup"><span data-stu-id="1cf2f-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="e9719-128">\<serviceCredentials></span><span class="sxs-lookup"><span data-stu-id="e9719-128">\<serviceCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|<span data-ttu-id="e9719-129">Określa poświadczenie do użycia w uwierzytelnianiu usługi i ustawień dotyczących walidacji poświadczeń klienta.</span><span class="sxs-lookup"><span data-stu-id="e9719-129">Specifies the credential to be used in authenticating the service, and the client credential validation-related settings.</span></span>|  
+|[<span data-ttu-id="1cf2f-128">\<serviceCredentials></span><span class="sxs-lookup"><span data-stu-id="1cf2f-128">\<serviceCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|<span data-ttu-id="1cf2f-129">Określa poświadczenie do użycia w uwierzytelnianiu usługi i ustawień dotyczących walidacji poświadczeń klienta.</span><span class="sxs-lookup"><span data-stu-id="1cf2f-129">Specifies the credential to be used in authenticating the service, and the client credential validation-related settings.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="e9719-130">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e9719-130">See Also</span></span>  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>  
- <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>  
- <xref:System.ServiceModel.Security.PeerCredential>  
- [<span data-ttu-id="e9719-131">Sieci równorzędne</span><span class="sxs-lookup"><span data-stu-id="e9719-131">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [<span data-ttu-id="e9719-132">Uwierzytelnianie wiadomości z kanału równorzędnego</span><span class="sxs-lookup"><span data-stu-id="e9719-132">Peer Channel Message Authentication</span></span>](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [<span data-ttu-id="e9719-133">Kanał elementu równorzędnego uwierzytelniania niestandardowego</span><span class="sxs-lookup"><span data-stu-id="e9719-133">Peer Channel Custom Authentication</span></span>](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [<span data-ttu-id="e9719-134">Zabezpieczanie aplikacji kanałów równorzędnych</span><span class="sxs-lookup"><span data-stu-id="e9719-134">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
- [<span data-ttu-id="e9719-135">Zabezpieczanie usług i klientów</span><span class="sxs-lookup"><span data-stu-id="e9719-135">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a><span data-ttu-id="1cf2f-130">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1cf2f-130">See also</span></span>
+- <xref:System.ServiceModel.Configuration.PeerCredentialElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>
+- <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>
+- <xref:System.ServiceModel.Security.PeerCredential>
+- [<span data-ttu-id="1cf2f-131">Sieci równorzędne</span><span class="sxs-lookup"><span data-stu-id="1cf2f-131">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [<span data-ttu-id="1cf2f-132">Uwierzytelnianie wiadomości z kanału równorzędnego</span><span class="sxs-lookup"><span data-stu-id="1cf2f-132">Peer Channel Message Authentication</span></span>](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
+- [<span data-ttu-id="1cf2f-133">Kanał elementu równorzędnego uwierzytelniania niestandardowego</span><span class="sxs-lookup"><span data-stu-id="1cf2f-133">Peer Channel Custom Authentication</span></span>](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [<span data-ttu-id="1cf2f-134">Zabezpieczanie aplikacji kanałów równorzędnych</span><span class="sxs-lookup"><span data-stu-id="1cf2f-134">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [<span data-ttu-id="1cf2f-135">Zabezpieczanie usług i klientów</span><span class="sxs-lookup"><span data-stu-id="1cf2f-135">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

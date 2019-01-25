@@ -1,23 +1,23 @@
 ---
-title: 'Porady: pisać zapytania z złożone filtrowanie (Visual Basic)'
+title: 'Instrukcje: Pisanie zapytań z zaawansowanym filtrowaniem (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-ms.openlocfilehash: 500cd9cdc62252eff3addc26006c4ce815ae1b4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9636e67b32107378a46c00338cb4c2bea20fc1d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646688"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a><span data-ttu-id="7f0f7-102">Porady: pisać zapytania z złożone filtrowanie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f0f7-102">How to: Write Queries with Complex Filtering (Visual Basic)</span></span>
-<span data-ttu-id="7f0f7-103">Czasami chcesz zapisać LINQ do XML zapytania z złożonych filtrów.</span><span class="sxs-lookup"><span data-stu-id="7f0f7-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="7f0f7-104">Na przykład może być konieczne Znajdź wszystkie elementy, które ma element podrzędny o określonej nazwie i wartości.</span><span class="sxs-lookup"><span data-stu-id="7f0f7-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="7f0f7-105">W tym temacie przedstawiono przykładowy Pisanie zapytań za pomocą filtrowania złożonych.</span><span class="sxs-lookup"><span data-stu-id="7f0f7-105">This topic gives an example of writing a query with complex filtering.</span></span>  
+# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a><span data-ttu-id="b64d9-102">Instrukcje: Pisanie zapytań z zaawansowanym filtrowaniem (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b64d9-102">How to: Write Queries with Complex Filtering (Visual Basic)</span></span>
+<span data-ttu-id="b64d9-103">Czasami chcesz zapisywać LINQ do XML zapytań za pomocą złożonych filtrów.</span><span class="sxs-lookup"><span data-stu-id="b64d9-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="b64d9-104">Na przykład trzeba znaleźć wszystkie elementy, które ma element podrzędny o określonej nazwie i wartości.</span><span class="sxs-lookup"><span data-stu-id="b64d9-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="b64d9-105">Ten temat zawiera przykładowy Pisanie zapytań z zaawansowanym filtrowaniem.</span><span class="sxs-lookup"><span data-stu-id="b64d9-105">This topic gives an example of writing a query with complex filtering.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7f0f7-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="7f0f7-106">Example</span></span>  
- <span data-ttu-id="7f0f7-107">W tym przykładzie pokazano, jak znaleźć wszystkie `PurchaseOrder` elementy podrzędne `Address` element, który ma `Type` atrybutu równa "Wydanie" i element podrzędny `State` elementu równa "NY".</span><span class="sxs-lookup"><span data-stu-id="7f0f7-107">This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY".</span></span> <span data-ttu-id="7f0f7-108">Używa zapytanie zagnieżdżone w `Where` klauzuli i `Any` operator zwraca `True` Jeśli kolekcja zawiera wszystkie elementy w nim.</span><span class="sxs-lookup"><span data-stu-id="7f0f7-108">It uses a nested query in the `Where` clause, and the `Any` operator returns `True` if the collection has any elements in it.</span></span>  
+## <a name="example"></a><span data-ttu-id="b64d9-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="b64d9-106">Example</span></span>  
+ <span data-ttu-id="b64d9-107">W tym przykładzie pokazano, jak znaleźć wszystkie `PurchaseOrder` elementy podrzędne `Address` element, który ma `Type` atrybutu jest równa "Wysyłania" i elementem podrzędnym `State` element równy "NY".</span><span class="sxs-lookup"><span data-stu-id="b64d9-107">This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY".</span></span> <span data-ttu-id="b64d9-108">Używa ona zapytanie zagnieżdżone w `Where` klauzuli i `Any` operator zwraca `True` Jeśli kolekcja zawiera żadnych elementów.</span><span class="sxs-lookup"><span data-stu-id="b64d9-108">It uses a nested query in the `Where` clause, and the `Any` operator returns `True` if the collection has any elements in it.</span></span>  
   
- <span data-ttu-id="7f0f7-109">W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: wiele zakupów (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="7f0f7-109">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="b64d9-109">W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b64d9-109">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="7f0f7-110">Aby uzyskać więcej informacji na temat `Any` operatora, zobacz [Operacje kwantyfikatora (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).</span><span class="sxs-lookup"><span data-stu-id="7f0f7-110">For more information about the `Any` operator, see [Quantifier Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).</span></span>  
+ <span data-ttu-id="b64d9-110">Aby uzyskać więcej informacji na temat `Any` operatora, zobacz [Operacje kwantyfikatora (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).</span><span class="sxs-lookup"><span data-stu-id="b64d9-110">For more information about the `Any` operator, see [Quantifier Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -36,16 +36,16 @@ For Each el As XElement In purchaseOrders
 Next  
 ```  
   
- <span data-ttu-id="7f0f7-111">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="7f0f7-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="b64d9-111">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="b64d9-111">This code produces the following output:</span></span>  
   
 ```  
 99505  
 ```  
   
-## <a name="example"></a><span data-ttu-id="7f0f7-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="7f0f7-112">Example</span></span>  
- <span data-ttu-id="7f0f7-113">W poniższym przykładzie pokazano tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="7f0f7-113">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="7f0f7-114">Aby uzyskać więcej informacji, zobacz [Praca z przestrzeni nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="7f0f7-114">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="b64d9-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="b64d9-112">Example</span></span>  
+ <span data-ttu-id="b64d9-113">Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="b64d9-113">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="b64d9-114">Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="b64d9-114">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="7f0f7-115">W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: wiele zakupów w Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="7f0f7-115">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="b64d9-115">W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Wiele zamówień zakupu w Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="b64d9-115">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -70,18 +70,18 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="7f0f7-116">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="7f0f7-116">This code produces the following output:</span></span>  
+ <span data-ttu-id="b64d9-116">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="b64d9-116">This code produces the following output:</span></span>  
   
 ```  
 99505  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7f0f7-117">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7f0f7-117">See Also</span></span>  
- <xref:System.Xml.Linq.XElement.Attribute%2A>  
- <xref:System.Xml.Linq.XContainer.Elements%2A>  
- [<span data-ttu-id="7f0f7-118">Podstawowe zapytania (LINQ do XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f0f7-118">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [<span data-ttu-id="7f0f7-119">Właściwości osi elementu podrzędnego XML</span><span class="sxs-lookup"><span data-stu-id="7f0f7-119">XML Child Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
- [<span data-ttu-id="7f0f7-120">Właściwości osi atrybutu XML</span><span class="sxs-lookup"><span data-stu-id="7f0f7-120">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)  
- [<span data-ttu-id="7f0f7-121">Właściwość wartości XML</span><span class="sxs-lookup"><span data-stu-id="7f0f7-121">XML Value Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)  
- [<span data-ttu-id="7f0f7-122">Operacje rzutowania (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f0f7-122">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
- [<span data-ttu-id="7f0f7-123">Operacje kwantyfikatora (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f0f7-123">Quantifier Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+## <a name="see-also"></a><span data-ttu-id="b64d9-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b64d9-117">See also</span></span>
+- <xref:System.Xml.Linq.XElement.Attribute%2A>
+- <xref:System.Xml.Linq.XContainer.Elements%2A>
+- [<span data-ttu-id="b64d9-118">Podstawowe zapytania (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b64d9-118">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="b64d9-119">Właściwości osi elementu podrzędnego XML</span><span class="sxs-lookup"><span data-stu-id="b64d9-119">XML Child Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [<span data-ttu-id="b64d9-120">Właściwości osi atrybutu XML</span><span class="sxs-lookup"><span data-stu-id="b64d9-120">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+- [<span data-ttu-id="b64d9-121">Właściwość wartości XML</span><span class="sxs-lookup"><span data-stu-id="b64d9-121">XML Value Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+- [<span data-ttu-id="b64d9-122">Operacje rzutowania (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b64d9-122">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [<span data-ttu-id="b64d9-123">Operacje kwantyfikatora (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b64d9-123">Quantifier Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Porady: liczenie wystąpień słowa w ciągu (LINQ) (Visual Basic)'
+title: 'Instrukcje: Liczba wystąpień wyrazu w ciągu (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: a2e7b59ee1d289fe794fb83705d42ac0e48fb4a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4d8349db0a1c5b0cc7b69cbae7d19dd1d9d10b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716807"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="49f5a-102">Porady: liczenie wystąpień słowa w ciągu (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49f5a-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="49f5a-103">Ten przykład przedstawia sposób użycia zliczania wystąpień określonego słowa w ciągu zapytania LINQ.</span><span class="sxs-lookup"><span data-stu-id="49f5a-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="49f5a-104">Należy pamiętać, że przeprowadzić licznik <xref:System.String.Split%2A> — metoda jest wywoływana w celu utworzenia tablicy słów.</span><span class="sxs-lookup"><span data-stu-id="49f5a-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="49f5a-105">Brak koszt wydajności <xref:System.String.Split%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="49f5a-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="49f5a-106">Jeśli działanie tylko na ciąg Zliczanie wyrazów, należy rozważyć użycie <xref:System.Text.RegularExpressions.Regex.Matches%2A> lub <xref:System.String.IndexOf%2A> metody zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="49f5a-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="49f5a-107">Jednak jeśli wydajność nie ma problem krytyczny lub już został rozdzielony zdanie w celu wykonywania innych typów kwerend nad nim, następnie warto na potrzeby zliczania słów ani fraz również LINQ.</span><span class="sxs-lookup"><span data-stu-id="49f5a-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="ee2d3-102">Instrukcje: Liczba wystąpień wyrazu w ciągu (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee2d3-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="ee2d3-103">W tym przykładzie pokazano, jak korzystać z zapytania LINQ można zliczać wystąpienia określonego wyrazu w ciągu.</span><span class="sxs-lookup"><span data-stu-id="ee2d3-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="ee2d3-104">Należy pamiętać, że przeprowadzenie liczba <xref:System.String.Split%2A> metoda jest wywoływana, aby utworzyć tablicę słów.</span><span class="sxs-lookup"><span data-stu-id="ee2d3-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="ee2d3-105">Występuje spadek wydajności, aby <xref:System.String.Split%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="ee2d3-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="ee2d3-106">W przypadku operacji tylko na ciąg do zliczania wyrazów, należy rozważyć użycie <xref:System.Text.RegularExpressions.Regex.Matches%2A> lub <xref:System.String.IndexOf%2A> metody zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="ee2d3-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="ee2d3-107">Jednak jeśli wydajność nie jest to problem krytyczny lub ma już Podziel zdania w celu wykonywania innych typów kwerend nad nim, następnie dobrym pomysłem liczba słów lub fraz, a także przy użyciu LINQ.</span><span class="sxs-lookup"><span data-stu-id="ee2d3-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="49f5a-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="49f5a-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ee2d3-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="ee2d3-108">Example</span></span>  
   
 ```vb  
 Class CountWords  
@@ -57,8 +57,8 @@ End Class
 ' 3 occurrence(s) of the search term "data" were found.  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="49f5a-109">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="49f5a-109">Compiling the Code</span></span>  
- <span data-ttu-id="49f5a-110">Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji System.Linq przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="49f5a-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ee2d3-109">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="ee2d3-109">Compiling the Code</span></span>  
+ <span data-ttu-id="ee2d3-110">Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.</span><span class="sxs-lookup"><span data-stu-id="ee2d3-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49f5a-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="49f5a-111">See Also</span></span>  
- [<span data-ttu-id="49f5a-112">LINQ i ciągi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49f5a-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="ee2d3-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ee2d3-111">See also</span></span>
+- [<span data-ttu-id="ee2d3-112">LINQ i ciągi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee2d3-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

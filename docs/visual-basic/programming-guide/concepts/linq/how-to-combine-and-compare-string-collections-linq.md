@@ -1,19 +1,20 @@
 ---
-title: 'Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)'
+title: 'Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 0e8df8e6e324b2a575fb6232c54a223cb35a4ef2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9948cdb4aa40ca12f7dd058fe12ffcd6462cdaae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732664"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="3ad67-102">Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3ad67-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="3ad67-103">Ten przykład przedstawia sposób plików zawierających wierszy tekstu, a następnie Sortuj wyniki scalania.</span><span class="sxs-lookup"><span data-stu-id="3ad67-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="3ad67-104">W szczególności widoczny jest sposób wykonywać proste łączenia, Unii i przecięcie na dwa zestawy wierszy tekstu.</span><span class="sxs-lookup"><span data-stu-id="3ad67-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="ccaeb-102">Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ccaeb-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="ccaeb-103">W tym przykładzie pokazano, jak można scalić plików, które zawierają wiersze tekstu, a następnie Sortuj wyniki.</span><span class="sxs-lookup"><span data-stu-id="ccaeb-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="ccaeb-104">W szczególności pokazują sposób wykonywania prostych łączenia, Unii i część wspólną na dwa zestawy wierszy tekstu.</span><span class="sxs-lookup"><span data-stu-id="ccaeb-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="3ad67-105">Aby skonfigurować projekt i plików tekstowych</span><span class="sxs-lookup"><span data-stu-id="3ad67-105">To set up the project and the text files</span></span>  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="ccaeb-105">Aby skonfigurować projekt i plików tekstowych</span><span class="sxs-lookup"><span data-stu-id="ccaeb-105">To set up the project and the text files</span></span>  
   
-1.  <span data-ttu-id="3ad67-106">Skopiuj te nazwy do pliku tekstowego o nazwie names1.txt i zapisz go w folderze projektu:</span><span class="sxs-lookup"><span data-stu-id="3ad67-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1.  <span data-ttu-id="ccaeb-106">Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names1.txt i zapisz go w folderze projektu:</span><span class="sxs-lookup"><span data-stu-id="ccaeb-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/04/2018
     Garcia, Debra  
     ```  
   
-2.  <span data-ttu-id="3ad67-107">Skopiuj te nazwy do pliku tekstowego o nazwie names2.txt i zapisz go w folderze projektu.</span><span class="sxs-lookup"><span data-stu-id="3ad67-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="3ad67-108">Należy pamiętać, że dwa pliki mają wspólną niektóre nazwy.</span><span class="sxs-lookup"><span data-stu-id="3ad67-108">Note that the two files have some names in common.</span></span>  
+2.  <span data-ttu-id="ccaeb-107">Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names2.txt i zapisz go w folderze projektu.</span><span class="sxs-lookup"><span data-stu-id="ccaeb-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="ccaeb-108">Należy zauważyć, że te dwa pliki nazwy niektórych wspólnych.</span><span class="sxs-lookup"><span data-stu-id="ccaeb-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="3ad67-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="3ad67-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ccaeb-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="ccaeb-109">Example</span></span>  
   
 ```vb  
 Class ConcatenateStrings  
@@ -161,9 +162,9 @@ End Class
 ' 2 total names in list  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="3ad67-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="3ad67-110">Compiling the Code</span></span>  
- <span data-ttu-id="3ad67-111">Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji System.Linq przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="3ad67-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ccaeb-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="ccaeb-110">Compiling the Code</span></span>  
+ <span data-ttu-id="ccaeb-111">Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.</span><span class="sxs-lookup"><span data-stu-id="ccaeb-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ad67-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3ad67-112">See Also</span></span>  
- [<span data-ttu-id="3ad67-113">LINQ i ciągi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3ad67-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [<span data-ttu-id="3ad67-114">LINQ i katalogi plików (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3ad67-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="ccaeb-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ccaeb-112">See also</span></span>
+- [<span data-ttu-id="ccaeb-113">LINQ i ciągi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ccaeb-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="ccaeb-114">LINQ i katalogi plików (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ccaeb-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

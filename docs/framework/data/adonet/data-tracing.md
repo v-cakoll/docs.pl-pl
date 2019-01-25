@@ -2,12 +2,12 @@
 title: Śledzenie danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 037db6f4e5695e00401c81e1490953efe2fc9b99
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ac9e290d4c9209cbf8ccf5eb3acdeceb68f9021b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721930"
 ---
 # <a name="data-tracing-in-adonet"></a>Śledzenie danych w ADO.NET
 ADO.NET funkcji funkcja śledzenia danych wbudowane, który jest obsługiwany przez dostawcę danych .NET dla programu SQL Server, Oracle, OLE DB i ODBC, a także ADO.NET <xref:System.Data.DataSet>i protokoły sieciowe programu SQL Server.  
@@ -51,7 +51,7 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Śledzenie sieci w programie .NET Framework](../../../../docs/framework/network-programming/network-tracing.md)  
- [Śledzenie i instrumentacja aplikacji](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Śledzenie sieci w programie .NET Framework](../../../../docs/framework/network-programming/network-tracing.md)
+- [Śledzenie i instrumentacja aplikacji](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

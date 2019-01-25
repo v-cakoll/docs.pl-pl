@@ -5,12 +5,12 @@ helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 5c5f105a573cd783348a41dc3f4897f2e04ca5c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709874"
 ---
 # <a name="programming-in-visual-basic"></a>Programowanie w Visual Basic
 W tej sekcji omówiono zadań programistycznych, które chcesz więcej informacji na temat tworzenia aplikacji Visual Basic.  
@@ -37,8 +37,8 @@ W tej sekcji omówiono zadań programistycznych, które chcesz więcej informacj
  [Przetwarzanie dysków, katalogów i plików](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
  Zawiera dokumentacja dotycząca sposobu dostępu do systemu plików przy użyciu `My.Computer.FileSystem` obiektu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Funkcje języka Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)  
- [Pojęcia związane z programowaniem](../../../visual-basic/programming-guide/concepts/index.md)  
- [Kolekcje](../../../visual-basic/programming-guide/concepts/collections.md)  
- [Tworzenie aplikacji za pomocą języka Visual Basic](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Funkcje języka Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
+- [Pojęcia związane z programowaniem](../../../visual-basic/programming-guide/concepts/index.md)
+- [Kolekcje](../../../visual-basic/programming-guide/concepts/collections.md)
+- [Tworzenie aplikacji za pomocą języka Visual Basic](../../../visual-basic/developing-apps/index.md)

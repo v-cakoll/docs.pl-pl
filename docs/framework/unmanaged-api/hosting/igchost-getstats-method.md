@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e0d6f68ffa5280d4616d4fa4ac60b4cb86f6a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9a3775f453cb432ce6b92d067f93ca54c329c06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674183"
 ---
 # <a name="igchostgetstats-method"></a>IGCHost::GetStats — Metoda
 Pobiera statystyki dla bieżącego stanu systemu czyszczenia pamięci.  
@@ -37,19 +37,19 @@ HRESULT GetStats (
   
 #### <a name="parameters"></a>Parametry  
  `pStats`  
- [w, out] Wskaźnik do [cor_gc_stats —](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) struktury zawierającą statystyki dla bieżącego stanu systemu czyszczenia pamięci.  
+ [out w] Wskaźnik do [cor_gc_stats —](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) strukturę, która zawiera dane statystyczne dla bieżącego stanu systemu kolekcji wyrzucania elementów.  
   
 ## <a name="remarks"></a>Uwagi  
- Statystyki można za pomocą systemu inteligentne alokacji systemu kolekcji garbage działania pomocy. Na przykład system alokacji może ustalić, po zapoznaniu się dane statystyczne, którą chce dodać więcej pamięci lub wymusić kolekcji.  
+ Statystyki można przez system inteligentne alokacji systemu kolekcji wyrzucania elementów działania pomocy. Na przykład system alokacji może określić, po zapoznaniu się z statystyki, którą chce dodać większej ilości pamięci lub wymusić kolekcji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** GCHost.idl, GCHost.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IGCHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IGCHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

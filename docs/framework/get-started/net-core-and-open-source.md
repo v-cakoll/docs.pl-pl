@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90dd72fae71f4283e6eefeb7c878b32e9c155cff
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a3c48182ab5a864228fd1d2ccf32d714ebccf60a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494564"
 ---
 # <a name="net-core-and-open-source"></a>Oprogramowanie .NET Core i Open-Source
 Ten temat zawiera krótkie omówienie platformy .NET Core, a czego pokazuje, jak można znaleźć więcej informacji. Aby uzyskać pełną listę tematów dla platformy .NET Core, odwiedź stronę [przewodnik platformy .NET Core](../../core/index.md).
@@ -22,7 +22,7 @@ Ten temat zawiera krótkie omówienie platformy .NET Core, a czego pokazuje, jak
   
  Poniżej przedstawiono główne cechy platformy .NET Core:  
   
--   **Dla wielu platform:** platformy .NET Core udostępnia kluczowe funkcje do wdrożenia funkcji aplikacji zgodnie z potrzebami i ponowne użycie tego kodu, niezależnie od docelowej platformy. Obecnie obsługuje trzech głównych systemach operacyjnych (OS): Windows, Linux i macOS. Można napisać aplikacji i bibliotek, które uruchomienie niemodyfikowanego w obsługiwanych systemach operacyjnych. Aby wyświetlić listę obsługiwanych systemów operacyjnych, odwiedź stronę [harmonogram działania dla platformy .NET Core](https://github.com/dotnet/core/blob/master/roadmap.md).
+-   **Dla wielu platform:** platformy .NET Core udostępnia kluczowe funkcje do wdrożenia funkcji aplikacji zgodnie z potrzebami i ponowne użycie tego kodu, niezależnie od docelowej platformy. Obecnie obsługuje ona trzech głównych systemach operacyjnych (OS): Windows, Linux i macOS. Można napisać aplikacji i bibliotek, które uruchomienie niemodyfikowanego w obsługiwanych systemach operacyjnych. Aby wyświetlić listę obsługiwanych systemów operacyjnych, odwiedź stronę [harmonogram działania dla platformy .NET Core](https://github.com/dotnet/core/blob/master/roadmap.md).
   
 -   **"Open source":** platformy .NET Core jest jednym z wielu projektów w ramach kształtowanie [.NET Foundation](https://www.dotnetfoundation.org/) i jest dostępna w [GitHub](https://github.com/).  .NET Core jako projekt typu open source o promuje bardziej przejrzyste procesu opracowywania i wspiera aktywne, zaangażowanej społeczności.  
   
@@ -45,7 +45,7 @@ Ten temat zawiera krótkie omówienie platformy .NET Core, a czego pokazuje, jak
   
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
-## <a name="see-also"></a>Zobacz też  
-- [Strona główna platformy .NET core](https://www.microsoft.com/net/core)  
-- [Przewodnik platformy .NET Core](../../core/index.md)  
+## <a name="see-also"></a>Zobacz także
+- [Strona główna platformy .NET core](https://www.microsoft.com/net/core)
+- [Przewodnik platformy .NET Core](../../core/index.md)
 - [Dokumentacja programu ASP.NET Core](/aspnet/core/)

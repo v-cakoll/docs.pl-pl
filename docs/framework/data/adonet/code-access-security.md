@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: a5e5826dddbf60e92a50fd4f83322e7c1062f636
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fcba4ea556d1f5036c2bbd0beaeb5f349dec4e36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688109"
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 .NET Framework oferuje zabezpieczenia oparte na rolach, a także zabezpieczeń dostępu kodu (CAS), które są implementowane przy użyciu wspólnej infrastruktury, dostarczane przez środowisko uruchomieniowe języka wspólnego (CLR). W świecie kodu niezarządzanego większość aplikacji są wykonywane z uprawnienia użytkownika lub jednostki. W rezultacie systemów komputerowych, może być uszkodzone i prywatnych danych naruszenia zabezpieczeń w przypadku złośliwego lub wypełnione błąd oprogramowania jest uruchamiane przez użytkownika z podwyższonym poziomem uprawnień.  
@@ -194,8 +194,8 @@ Failed, as expected: Request failed.
   
  .NET Framework obsługuje także zgodności z poprzednimi wersjami istniejących składników COM, zapewniając dostęp za pośrednictwem współdziałania z modelem COM. Za pomocą narzędzia międzyoperacyjności modelu COM do importowania odpowiednich typów modelu COM, można zastosować składników modelu COM w aplikacji .NET Framework. Po zaimportowaniu typy modelu COM są gotowe do użycia. Usługa międzyoperacyjna modelu COM umożliwia również klientów modelu COM uzyskać dostęp do kodu zarządzanego, eksportowanie metadanych zestawu na bibliotekę typów i rejestrując składnik zarządzany jako składnik COM. Aby uzyskać więcej informacji, zobacz [zaawansowane współdziałanie COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [PAVE zabezpieczeń w natywnym i kodzie .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Zabezpieczenia oparte na rolach](../../../../docs/standard/security/role-based-security.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [PAVE zabezpieczeń w natywnym i kodzie .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Zabezpieczenia oparte na rolach](../../../../docs/standard/security/role-based-security.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

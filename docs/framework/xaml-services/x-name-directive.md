@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 08594d9757596eed470ffba8b5b63a01c493c358
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 164b0283864cdeb60ef7b8e19c9d457f80ee4eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696467"
 ---
 # <a name="xname-directive"></a>x:Name — dyrektywa
 Jednoznacznie identyfikuje elementy zdefiniowane XAML XAML namescope. Zakresy nazw XAML i ich modeli unikatowości mogą być stosowane do wystąpień obiektów platform zapewniają interfejsy API lub zaimplementować zachowania uzyskujących dostęp do wykresu obiektu utworzone XAML w czasie wykonywania.  
@@ -66,7 +66,7 @@ Jednoznacznie identyfikuje elementy zdefiniowane XAML XAML namescope. Zakresy na
 ## <a name="silverlight-usage-notes"></a>Uwagi dotyczące użytkowania Silverlight  
  `x:Name` dla programu Silverlight jest opisane osobno. Aby uzyskać więcej informacji, zobacz [Namespace XAML (x:) Funkcje języka (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>  
- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>  
- [Drzewa w WPF](../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>
+- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>
+- [Drzewa w WPF](../../../docs/framework/wpf/advanced/trees-in-wpf.md)

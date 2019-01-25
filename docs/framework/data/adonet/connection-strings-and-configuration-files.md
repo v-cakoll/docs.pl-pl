@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 8030c0323a2f742de19a4761e24c66294c6dd5d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 990e82aa6b4f85458979adfa25965cbd16b7893e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865829"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707482"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Parametry połączenia i pliki konfiguracji
 Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do problemów konserwacji i luk w zabezpieczeniach. Parametry połączenia nieszyfrowanego kompilowane do kodu źródłowego aplikacji można przeglądać za pomocą [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) narzędzia. Ponadto jeśli nigdy nie zmieni się parametry połączenia, aplikacji musi być ponownie kompilowana. Z tego względu zalecamy przechowywanie parametrów połączenia w pliku konfiguracji aplikacji.  
@@ -134,7 +134,7 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
   
  Możesz skonfigurować dostawców dodatkowej konfiguracji chronionych przez dodanie ich do **machine.config** pliku. Możesz również utworzyć własnego dostawcę konfiguracji chronionych przez dziedziczenie z <xref:System.Configuration.ProtectedConfigurationProvider> abstrakcyjna klasa bazowa. W poniższej tabeli opisano pliki dwóch konfiguracji dołączone do programu .NET Framework.  
   
-|Dostawcy|Opis|  
+|Dostawca|Opis|  
 |--------------|-----------------|  
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|Używa algorytmu szyfrowania RSA do szyfrowania i odszyfrowywania danych. Algorytm RSA może służyć do szyfrowanie kluczem publicznym i podpisy cyfrowe. Jest także znana jako "klucz publiczny" lub szyfrowanie asymetryczne ponieważ wykorzystuje on dwa różne klucze. Możesz użyć [narzędzie rejestracji programu ASP.NET usług IIS (Aspnet_regiis.exe)](https://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) do szyfrowania sekcji w pliku Web.config i zarządzać kluczami szyfrowania. ASP.NET odszyfrowuje plik konfiguracyjny podczas przetwarzania pliku. Tożsamość aplikacji ASP.NET musi mieć dostęp do odczytu do klucza szyfrowania, który jest używany do szyfrowania i odszyfrowywania zaszyfrowanych sekcje.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Używa interfejsu API ochrony danych Windows (DPAPI) do szyfrowania sekcji konfiguracji. Używa wbudowanych usług kryptograficznych Windows i mogą być skonfigurowane dla ochrony specyficzny dla komputera lub konta — specyficzne dla użytkownika. Ochrona specyficzny dla komputera jest przydatne w przypadku wielu aplikacji na tym samym serwerze, który muszą udostępniać informacje. Ochrona konta — specyficzne dla użytkownika może być stosowana z usługami, które działają z określona tożsamość użytkownika, takie jak udostępnione Środowisko hostingu. Każda aplikacja uruchamiana osobne tożsamości, która ogranicza dostęp do zasobów, takich jak pliki i bazy danych.|  
@@ -167,12 +167,12 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Aby uzyskać więcej informacji, zabezpieczanie aplikacji platformy ASP.NET, zobacz [NIB: zabezpieczenia programu ASP.NET](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) i [wskazówki dotyczące zabezpieczeń w wersji 2.0 programu ASP.NET w skrócie](https://go.microsoft.com/fwlink/?LinkId=59997) w Centrum deweloperów platformy ASP.NET.  
+ Aby uzyskać więcej informacji, zabezpieczanie aplikacji platformy ASP.NET, zobacz [NIB: Zabezpieczenia programu ASP.NET](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) i [platformy ASP.NET 2.0 działań w zakresie bezpieczeństwa w skrócie](https://go.microsoft.com/fwlink/?LinkId=59997) w Centrum deweloperów platformy ASP.NET.  
   
-## <a name="see-also"></a>Zobacz też  
- [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Przy użyciu klas konfiguracji](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [Konfigurowanie aplikacji](../../../../docs/framework/configure-apps/index.md)  
- [Administrowanie witryną sieci Web platformy ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Przy użyciu klas konfiguracji](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)
+- [Konfigurowanie aplikacji](../../../../docs/framework/configure-apps/index.md)
+- [Administrowanie witryną sieci Web platformy ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

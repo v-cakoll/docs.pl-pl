@@ -3,12 +3,12 @@ title: Narzędzia programu .NET core interfejsu wiersza polecenia (CLI)
 description: Przegląd funkcji i narzędzi .NET Core interfejsu wiersza polecenia (CLI).
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 698e6188d2cc73c30a7003f53199065d1eff2ec0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 5af0dfa01763aaa2ec35576ff30117d458ca7f7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565803"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET core
 
@@ -43,7 +43,7 @@ Następujące polecenia są instalowane domyślnie:
 * [czyszczenie](dotnet-clean.md)
 * [sln](dotnet-sln.md)
 * [Pomoc](dotnet-help.md)
-* [Store](dotnet-store.md)
+* [store](dotnet-store.md)
 
 **Polecenia modyfikacji projektu**
 
@@ -146,5 +146,5 @@ Jeśli używasz narzędzia do tworzenia w wersji 2 *project.json*— na podstawi
 
 ## <a name="see-also"></a>Zobacz także
 
-* [/ interfejsu wiersza polecenia DotNet repozytorium GitHub](https://github.com/dotnet/cli/)  
-* [Przewodnik instalacji platformy .NET core](https://aka.ms/dotnetcoregs)  
+- [/ interfejsu wiersza polecenia DotNet repozytorium GitHub](https://github.com/dotnet/cli/)
+- [Przewodnik instalacji platformy .NET core](https://aka.ms/dotnetcoregs)

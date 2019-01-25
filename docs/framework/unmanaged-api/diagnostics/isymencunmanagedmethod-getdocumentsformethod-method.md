@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8efcd62f39a7de397ef93231fd125a17c7e513e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd294037774721839b0c4f1f09bdc2a6e3b87841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562677"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod — Metoda
-Pobiera dokumentów, które ta metoda ma wiersze w.  
+Pobiera dokumentów, dla których ta metoda powoduje wierszy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ HRESULT GetDocumentsForMethod(
   
 #### <a name="parameters"></a>Parametry  
  `cDocs`  
- [in] Długość buforu wskazywana przez `pcDocs`.  
+ [in] Długość buforu wskazywany przez `pcDocs`.  
   
  `pcDocs`  
- [out] Wskaźnik do `ULONG32` rozmiar, który odbiera w znaki buforu, muszą zawierać dokumenty.  
+ [out] Wskaźnik do `ULONG32` rozmiar, który odbiera w postaci, buforu, muszą zawierać dokumentów.  
   
  `documents`  
- [in] Buforu, który zawiera dokumenty.  
+ [in] Bufor, który zawiera dokumenty.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie kod błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymENCUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymENCUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

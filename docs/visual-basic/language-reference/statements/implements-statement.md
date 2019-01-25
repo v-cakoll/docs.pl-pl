@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 805813506b957afb326c71ee4bbb15837726e4e5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cdcbe20157b9647040e3610d0632bd8e3fb9df65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681069"
 ---
 # <a name="implements-statement"></a>Implements — Instrukcja
 Określa jedną lub więcej interfejsów lub składowych interfejsu, które muszą zostać zaimplementowane w klasie lub definicji struktury, w której występuje.  
@@ -29,10 +29,10 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>Części  
  `interfacename`  
- Wymagane. Interfejs, którego właściwości, procedur i zdarzeń mają być wykonywane przez odpowiednie elementy członkowskie w klasie lub strukturze.  
+ Wymagana. Interfejs, którego właściwości, procedur i zdarzeń mają być wykonywane przez odpowiednie elementy członkowskie w klasie lub strukturze.  
   
  `interfacemember`  
- Wymagane. Element członkowski interfejs, który zostanie wdrożony.  
+ Wymagana. Element członkowski interfejs, który zostanie wdrożony.  
   
 ## <a name="remarks"></a>Uwagi  
  Interfejs jest kolekcją prototypów reprezentujących elementy członkowskie (właściwości, procedur i zdarzeń) hermetyzuje interfejs. Interfejsy zawierać deklaracje dla elementów członkowskich; klasy i struktury zaimplementować te składowe. Więcej informacji znajdziesz w artykule [Interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
@@ -55,7 +55,7 @@ Implements interfacename.interfacemember [, ...]
   
  [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
- [Instrukcja Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)
+- [Instrukcja Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

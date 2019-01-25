@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 0226a11b142515296d976e3d645cb2475d634420
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 2cc712e6560fc58af7526428ba40c424be388eee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746664"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>Metoda IXCLRDataModule::Request
 
@@ -60,6 +60,6 @@ Podana metoda jest częścią `IXCLRDataModule` interfejs i odnosi się do 36 gn
 **Biblioteka:** Brak  
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Interfejs IXCLRDataModule](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)

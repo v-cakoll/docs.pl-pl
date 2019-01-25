@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 151b790afaf6a251ba5d8d8932f44a503cde853a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d65d918147423396a18d2ea5c3edf7ff60c26a11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556132"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper — Funkcja
-Powiadamia profilera, że danym identyfikatorem funkcji mogą być mapowane ponownie do alternatywny identyfikator ma być używany w [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), i [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) wywołań zwrotnych dla tej funkcji. `FunctionIDMapper` Umożliwia również profilera wskazać, czy chce odbierać wywołań zwrotnych dla tej funkcji.  
+Powiadamia program profilujący, że identyfikator danej funkcji może być ponownie mapowany do alternatywnego Identyfikatora do użycia w [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), i [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) wywołań zwrotnych tej funkcji. `FunctionIDMapper` Umożliwia także profilującemu wskazanie, czy chce odbierać wywołania zwrotne do tej funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,25 +37,25 @@ UINT_PTR __stdcall FunctionIDMapper (
   
 #### <a name="parameters"></a>Parametry  
  `funcId`  
- [in] Identyfikator funkcji można zamapować go ponownie.  
+ [in] Identyfikator funkcji ma być ponownie mapowany.  
   
  `pbHookFunction`  
- [out] Wskaźnik do wartości, która ustawia profilera `true` jeśli chce otrzymywać `FunctionEnter2`, `FunctionLeave2`, i `FunctionTailcall2` wywołania zwrotne; w przeciwnym razie ustawia tę wartość na `false`.  
+ [out] Wskaźnik do wartości, która ustawia program profilujący `true` jeśli chce otrzymać `FunctionEnter2`, `FunctionLeave2`, i `FunctionTailcall2` wywołań zwrotnych; w przeciwnym wypadku ustawia tę wartość na `false`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Profiler zwraca wartość używaną przez aparat wykonywania jako identyfikator alternatywny funkcji. Wartość zwrotna nie może mieć wartości null chyba że `false` jest zwracany w `pbHookFunction`. W przeciwnym razie zwrócenie wartości null da nieoczekiwane wyniki, w tym prawdopodobnie zatrzymywanie procesu.  
+ Program profilujący zwraca wartość, której używa silnik wykonawczy jako identyfikatora alternatywnej funkcji. Zwracana wartość nie może mieć wartości null Jeśli nie `false` jest zwracany w `pbHookFunction`. W przeciwnym wypadku zwracana wartość null powoduje wygenerowanie produkuje nieoczekiwanych rezultatów, w tym ewentualnie powstrzymanie procesu.  
   
 ## <a name="remarks"></a>Uwagi  
- `FunctionIDMapper` Funkcja jest wywołaniem zwrotnym. Jest stosowana przez profiler ponownie zmapować Identyfikatora funkcji do innego identyfikatora, który jest bardziej użyteczna w przypadku profilera. `FunctionIDMapper` Zwraca alternatywny identyfikator służący do daną funkcję. Aparat wykonywania następnie honoruje żądania profiler od przekazania to alternatywny identyfikator jako uzupełnienie Identyfikatora tradycyjnych funkcja profilera w `clientData` parametr `FunctionEnter2`, `FunctionLeave2`, i `FunctionTailcall2` punkty zaczepienia, aby zidentyfikować Funkcja, dla którego jest wywoływana haka.  
+ `FunctionIDMapper` Funkcja jest wywołanie zwrotne. Jest stosowana przez profiler, aby ponownie zamapować nazwę funkcji, aby inny identyfikator, który jest bardziej użyteczna w przypadku programu profilującego. `FunctionIDMapper` Zwraca alternatywny identyfikator służący do daną funkcję. Następnie aparat wykonywania honoruje żądania programu profilującego, przekazując to alternatywny identyfikator, oprócz identyfikator funkcji tradycyjnego, wróć do programu profilującego w `clientData` parametru `FunctionEnter2`, `FunctionLeave2`, i `FunctionTailcall2` punkty zaczepienia do identyfikowania Funkcja, dla którego punkt zaczepienia jest wywoływana.  
   
- Można użyć [ICorProfilerInfo::SetFunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md) metodę, aby określić wykonania `FunctionIDMapper` funkcji. Możesz wywołać `ICorProfilerInfo::SetFunctionIDMapper` metody tylko raz i firma Microsoft zaleca, należy więc w [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) wywołania zwrotnego.  
+ Możesz użyć [icorprofilerinfo::setfunctionidmapper —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md) metodę, aby określić implementację `FunctionIDMapper` funkcji. Możesz wywołać `ICorProfilerInfo::SetFunctionIDMapper` metody tylko raz, a firma Microsoft zaleca, aby zrobić to w [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) wywołania zwrotnego.  
   
- Domyślnie zakłada się, że profiler który ustawia flagę COR_PRF_MONITOR_ENTERLEAVE przy użyciu [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md), i który ustawia punkty zaczepienia za pośrednictwem [ICorProfilerInfo::SetEnterLeaveFunctionHooks](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md) lub [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), powinien zostać wyświetlony `FunctionEnter2`, `FunctionLeave2`, i `FunctionTailcall2` wywołań zwrotnych dla każdej funkcji. Jednak może wdrożyć profilery `FunctionIDMapper` Aby selektywnie uniknąć otrzymywania tych wywołań zwrotnych dla niektórych funkcji, ustawiając `pbHookFunction` do `false`.  
+ Domyślnie, zakłada się, że program profilujący, ustawia flagę COR_PRF_MONITOR_ENTERLEAVE przy użyciu [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md), i która określa punkty zaczepienia za pośrednictwem [icorprofilerinfo::setenterleavefunctionhooks —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md) lub [icorprofilerinfo2::setenterleavefunctionhooks2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), powinien zostać wyświetlony `FunctionEnter2`, `FunctionLeave2`, i `FunctionTailcall2` wywołania zwrotne dla każdej funkcji. Jednak może wdrożyć profilery `FunctionIDMapper` zapobiegających selektywnego odbierania te wywołania zwrotne dla niektórych funkcji, ustawiając `pbHookFunction` do `false`.  
   
- Profilery powinien być odporny na błędy przypadków, gdzie wiele wątków profilowana aplikacja wywoływania tej samej metody/funkcja jednocześnie. W takich przypadkach profiler może pojawić się wiele `FunctionIDMapper` wywołań zwrotnych dla tego samego `FunctionID`. Profiler upewnij się zwrócić takie same wartości z tego wywołania zwrotnego przy wywołaniu wiele razy z tym samym `FunctionID`.  
+ Profilery powinien być odporny na błędy przypadków, gdy wiele wątków profilowana aplikacja wywołania dotyczą tej samej metody/funkcji jednocześnie. W takich przypadkach program profilujący może pojawić się wiele `FunctionIDMapper` wywołania zwrotne dla tego samego `FunctionID`. Program profilujący powinien być niektórych zwracać tej samej wartości z to wywołanie zwrotne, gdy jest wywoływana wiele razy z takimi samymi `FunctionID`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl  
   
@@ -63,10 +63,10 @@ UINT_PTR __stdcall FunctionIDMapper (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [SetFunctionIDMapper, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)  
- [FunctionIDMapper2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)  
- [FunctionEnter2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- [FunctionLeave2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- [FunctionTailcall2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [SetFunctionIDMapper, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
+- [FunctionIDMapper2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)
+- [FunctionEnter2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [FunctionLeave2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [FunctionTailcall2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

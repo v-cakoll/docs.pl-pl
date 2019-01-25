@@ -12,45 +12,45 @@ helpviewer_keywords:
 - ellipses
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
-ms.openlocfilehash: 6835127d03f984bda8a95cf5b9ca9798122de804
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93f82d35449c42772e9fbd1b7454364885b38769
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522112"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697208"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>Elipsy i łuki w GDI+
-Możesz łatwo narysować elipsy i łuki przy użyciu <xref:System.Drawing.Graphics.DrawEllipse%2A> i <xref:System.Drawing.Graphics.DrawArc%2A> metody <xref:System.Drawing.Graphics> klasy.  
+Można łatwo Rysowanie elipsy i łuki przy użyciu <xref:System.Drawing.Graphics.DrawEllipse%2A> i <xref:System.Drawing.Graphics.DrawArc%2A> metody <xref:System.Drawing.Graphics> klasy.  
   
 ## <a name="drawing-an-ellipse"></a>Rysowanie elipsy  
- Aby narysować elipsę, należy <xref:System.Drawing.Graphics> obiektu i <xref:System.Drawing.Pen> obiektu. <xref:System.Drawing.Graphics> Zawiera obiekt <xref:System.Drawing.Graphics.DrawEllipse%2A> metody i <xref:System.Drawing.Pen> obiekt przechowuje atrybuty, takie jak szerokości i koloru linii służącej do renderowania elipsy. <xref:System.Drawing.Pen> Obiekt jest przekazywany jako jeden z argumentów <xref:System.Drawing.Graphics.DrawEllipse%2A> metody. Pozostałe argumenty przekazane do <xref:System.Drawing.Graphics.DrawEllipse%2A> metody Określanie prostokąt ograniczający elipsy. Na poniższej ilustracji przedstawiono elipsy wraz z jego prostokątem.  
+ Aby narysować elipsę, musisz mieć <xref:System.Drawing.Graphics> obiektu i <xref:System.Drawing.Pen> obiektu. <xref:System.Drawing.Graphics> Obiektu <xref:System.Drawing.Graphics.DrawEllipse%2A> metody i <xref:System.Drawing.Pen> obiekt przechowuje atrybuty, takie jak szerokość i kolor linii służącej do renderowania elipsy. <xref:System.Drawing.Pen> Obiekt jest przekazywany jako jeden z argumentów <xref:System.Drawing.Graphics.DrawEllipse%2A> metody. Pozostałe argumenty przekazywane do <xref:System.Drawing.Graphics.DrawEllipse%2A> metoda Określ prostokąt otaczający elipsy. Poniższa ilustracja przedstawia elipsę wraz z jego prostokąt otaczający.  
   
  ![Elipsy i łuki](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art05.gif "Aboutgdip02_art05")  
   
- Poniższy przykład Rysuje elipsę; prostokąt ograniczający ma szerokość 80, wysokość 40 i lewym górnym rogu (100, 50):  
+ Poniższy przykładowy kod Rysuje elipsę; prostokąt otaczający ma szerokość 80, o wysokości od 40 do lewego górnego rogu (100, 50):  
   
  [!code-csharp[LinesCurvesAndShapes#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#51)]
  [!code-vb[LinesCurvesAndShapes#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#51)]  
   
- <xref:System.Drawing.Graphics.DrawEllipse%2A> jest przeciążona metoda <xref:System.Drawing.Graphics> klasy, więc może dostarczyć argumenty na kilka sposobów. Na przykład można utworzyć <xref:System.Drawing.Rectangle> i przekaż <xref:System.Drawing.Rectangle> do <xref:System.Drawing.Graphics.DrawEllipse%2A> metody jako argument:  
+ <xref:System.Drawing.Graphics.DrawEllipse%2A> jest przeciążona metoda <xref:System.Drawing.Graphics> klasy, dzięki czemu może dostarczyć argumentów na kilka sposobów. Na przykład można utworzyć <xref:System.Drawing.Rectangle> i przekazać <xref:System.Drawing.Rectangle> do <xref:System.Drawing.Graphics.DrawEllipse%2A> metodę jako argumentu:  
   
  [!code-csharp[LinesCurvesAndShapes#52](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#52)]
  [!code-vb[LinesCurvesAndShapes#52](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#52)]  
   
-## <a name="drawing-an-arc"></a>Rysowanie łuku  
- Łuk jest częścią elipsy. Aby narysować łuk, należy wywołać <xref:System.Drawing.Graphics.DrawArc%2A> metody <xref:System.Drawing.Graphics> klasy. Parametry <xref:System.Drawing.Graphics.DrawArc%2A> metody są takie same jak parametry <xref:System.Drawing.Graphics.DrawEllipse%2A> metody, z wyjątkiem <xref:System.Drawing.Graphics.DrawArc%2A> wymaga Kąt początkowy i kąta odchylenia. Poniższy przykład łuk Kąt początkowy 30 stopni i kąt odchylenia 180 stopni:  
+## <a name="drawing-an-arc"></a>Rysowanie łuk  
+ Łuk jest częścią elipsę. Aby narysować łuk, należy wywołać <xref:System.Drawing.Graphics.DrawArc%2A> metody <xref:System.Drawing.Graphics> klasy. Parametry <xref:System.Drawing.Graphics.DrawArc%2A> metody są takie same jak parametry <xref:System.Drawing.Graphics.DrawEllipse%2A> metody, chyba że <xref:System.Drawing.Graphics.DrawArc%2A> wymaga Kąt początkowy i kąta odchylenia. Poniższy przykład łuk Kąt początkowy 30 stopni i kąta odchylenia o 180 stopni:  
   
  [!code-csharp[LinesCurvesAndShapes#53](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#53)]
  [!code-vb[LinesCurvesAndShapes#53](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#53)]  
   
- Na poniższej ilustracji przedstawiono łuku elipsy i prostokątem.  
+ Na poniższej ilustracji przedstawiono łuk elipsy i prostokąt otaczający.  
   
  ![Elipsy i łuki](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art06.gif "Aboutgdip02_art06")  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
- <xref:System.Drawing.Pen?displayProperty=nameWithType>  
- [Linie, krzywe i kształty](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Instrukcje: tworzenie obiektów graficznych do rysowania](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Instrukcje: tworzenie pióra](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- [Instrukcje: rysowanie konturu kształtu](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Drawing.Graphics?displayProperty=nameWithType>
+- <xref:System.Drawing.Pen?displayProperty=nameWithType>
+- [Linie, krzywe i kształty](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Instrukcje: Tworzenie obiektów graficznych do rysowania](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Instrukcje: Tworzenie pióra](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)
+- [Instrukcje: Rysowanie konturu kształtu](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)

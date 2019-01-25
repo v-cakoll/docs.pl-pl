@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0bf581155bb32951a4614818edb50837f608939e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726445"
 ---
 # <a name="printing-how-to-topics"></a>Drukowanie Tematy porad
 Tematy w tej sekcji przedstawiają sposoby użycia poligrafii i dołączone do funkcji zarządzania drukowaniem systemu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oraz nowe [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ścieżka wydruku.  
@@ -31,7 +31,7 @@ Tematy w tej sekcji przedstawiają sposoby użycia poligrafii i dołączone do f
  [Wyliczanie podzbioru kolejek drukowania](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Instrukcje dotyczące generowania listę drukarek mające określoną wspólną charakterystykę.  
   
- [NOTINBUILD: Instrukcje: rozszerzanie schematu wydruku i tworzyć nowe klasy wydruku System](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
+ [NOTINBUILD: Instrukcje: Rozszerzenie schematu wydruku i tworzyć nowe klasy wydruku System](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  Omówienie rozszerzonej działanie kodu zarządzanego programistów schemat można rozszerzyć drukowania do urządzeń drukujących specjalizacji lub drukarki przy użyciu nowych lub rzadko funkcji.  
   
  [Pobieranie właściwości obiektu systemowego drukowania bez odbicia](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
@@ -46,10 +46,10 @@ Tematy w tej sekcji przedstawiają sposoby użycia poligrafii i dołączone do f
  [Weryfikowanie i scalanie elementów PrintTickets](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
  Instrukcje dotyczące sprawdzania, czy bilet wydruku jest prawidłowa i czy nie żąda wszystko, co nie jest obsługiwana przez drukarki.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Printing>  
- <xref:System.Printing.IndexedProperties>  
- <xref:System.Printing.Interop>  
- [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](https://www.microsoft.com/xps)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Printing>
+- <xref:System.Printing.IndexedProperties>
+- <xref:System.Printing.Interop>
+- [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [XPS](https://www.microsoft.com/xps)

@@ -1,15 +1,15 @@
 ---
-title: 'Porady: liczenie wystąpień wyrazu w ciągu (LINQ) (C#)'
+title: 'Instrukcje: Liczenie wystąpień wyrazu w ciągu (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 48eda99970744a659a803f52bb3a3c499390f5c8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c63a2f2f0ce2bde6cb24f05839073699f1bbbfda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558725"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Porady: liczenie wystąpień wyrazu w ciągu (LINQ) (C#)
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Instrukcje: Liczenie wystąpień wyrazu w ciągu (LINQ) (C#)
 W tym przykładzie pokazano, jak korzystać z zapytania LINQ można zliczać wystąpienia określonego wyrazu w ciągu. Należy pamiętać, że przeprowadzenie liczba <xref:System.String.Split%2A> metoda jest wywoływana, aby utworzyć tablicę słów. Występuje spadek wydajności, aby <xref:System.String.Split%2A> metody. W przypadku operacji tylko na ciąg do zliczania wyrazów, należy rozważyć użycie <xref:System.Text.RegularExpressions.Regex.Matches%2A> lub <xref:System.String.IndexOf%2A> metody zamiast tego. Jednak jeśli wydajność nie jest to problem krytyczny lub ma już Podziel zdania w celu wykonywania innych typów kwerend nad nim, następnie dobrym pomysłem liczba słów lub fraz, a także przy użyciu LINQ.  
   
 ## <a name="example"></a>Przykład  
@@ -57,6 +57,6 @@ class CountWords
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego, za pomocą odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

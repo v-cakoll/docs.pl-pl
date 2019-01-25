@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5c72919327c1186f5758f03680ff68037da3632
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1c2cb79948f5bd762a0cd1b9fd83fd420a5821e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537182"
 ---
 # <a name="ltparametergt-element-net-native"></a>Element &lt;Parameter&gt; (architektura .NET Native)
-Stosuje odbicia zasady do typu argumentu przekazanego do metody.  
+Zastosowanie zasad odbicia do typu argumentu przekazanego do metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,29 +37,29 @@ Stosuje odbicia zasady do typu argumentu przekazanego do metody.
   
 |Atrybut|Typ atrybutu|Opis|  
 |---------------|--------------------|-----------------|  
-|`Name`|Ogólne|Atrybut wymagany. Nazwa parametru. Na przykład w podpisie metody `String.CompareTo(Object value)`, wartość `Name` atrybutu jest "value".|  
-|`Activate`|Odbicie|Atrybut opcjonalny. Służy do sterowania dostępem środowiska uruchomieniowego konstruktorów, aby włączyć aktywacji wystąpień.|  
-|`Browse`|Odbicie|Atrybut opcjonalny. Formanty wykonywania zapytania dotyczącego informacji o elementach programu, ale nie umożliwia dostęp do wszystkich środowiska wykonawczego.|  
-|`Dynamic`|Odbicie|Atrybut opcjonalny. Sterowanie dostępem środowiska uruchomieniowego do wszystkie elementy członkowskie typu, łącznie z konstruktorów, metod, pola, właściwości i zdarzeń, aby umożliwić programowanie dynamiczne.|  
-|`Serialize`|Serializacja|Atrybut opcjonalny. Sterowanie dostępem środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić wystąpienia typu serializacji i deserializacji przez biblioteki, takich jak serializator Newtonsoft JSON.|  
-|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji, która używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
+|`Name`|Ogólne|Atrybut wymagany. Nazwa parametru. Na przykład dla sygnatury metody `String.CompareTo(Object value)`, wartość `Name` atrybut jest "value".|  
+|`Activate`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, aby włączyć aktywacji wystąpień.|  
+|`Browse`|Odbicie|Atrybut opcjonalny. Kontroluje, wykonanie zapytania dotyczącego informacji o elementach programu, ale nie uwzględnia żadnych dostęp do środowiska uruchomieniowego.|  
+|`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do wszystkich typów elementów członkowskich, konstruktorzy, metody, pola, właściwości i zdarzenia, w tym umożliwiające programowanie dynamiczne.|  
+|`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp do środowiska uruchomieniowego do konstruktorów, pola i właściwości, aby umożliwić wystąpień typu serializacji i deserializacji, biblioteki, takie jak serializator Newtonsoft JSON.|  
+|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady do serializacji, który używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
 |`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji JSON, który używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
 |`XmlSerializer`|Serializacja|Atrybut opcjonalny. Określa zasady dla serializacji XML, który używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.|  
-|`MarshalObject`|Współdziałanie|Atrybut opcjonalny. Określa zasady dla przekazywanie typów referencyjnych do środowiska WinRT i modelu COM.|  
-|`MarshalDelegate`|Współdziałanie|Atrybut opcjonalny. Określa zasady dla przekazywanie typów delegatów jako wskaźników funkcji do kodu natywnego.|  
-|`MarshalStructure`|Współdziałanie|Atrybut opcjonalny. Określa zasady dla przekazywanie typów wartości do kodu natywnego.|  
+|`MarshalObject`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady dla marshaling typów referencyjnych WinRT i modelu COM.|  
+|`MarshalDelegate`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady kierowanie typy delegatów jako wskaźniki funkcji do kodu macierzystego.|  
+|`MarshalStructure`|Usługa międzyoperacyjna|Atrybut opcjonalny. Określa zasady dla marshaling typów wartości do kodu natywnego.|  
   
 ## <a name="name-attribute"></a>Nazwa atrybutu  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*nazwa_parametru*|Nazwa parametru metody, do której są stosowane zasady. Na przykład w podpisie metody `String.CompareTo(Object value)`, wartość `Name` atrybutu jest "value".|  
+|*parameter_name*|Nazwa parametru metody, do którego zastosowano zasady. Na przykład dla sygnatury metody `String.CompareTo(Object value)`, wartość `Name` atrybut jest "value".|  
   
-## <a name="all-other-attributes"></a>Inne atrybuty  
+## <a name="all-other-attributes"></a>Wszystkie inne atrybuty  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*policy_setting*|Ustawienia do zastosowania dla tego typu zasad. Możliwe wartości to `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, i `Required All`. Aby uzyskać więcej informacji, zobacz [ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Ustawienia do zastosowania do tego typu zasad. Możliwe wartości to `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, i `Required All`. Aby uzyskać więcej informacji, zobacz [ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -68,13 +68,13 @@ Stosuje odbicia zasady do typu argumentu przekazanego do metody.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|Zastosowanie zasad wykonywania odbicia do konstruktora lub metody.|  
+|[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|Ma zastosowanie zasad odbicia środowiska uruchomieniowego do konstruktora lub metody.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<Parameter>` Element jest elementem podrzędnym [ \<metody >](../../../docs/framework/net-native/method-element-net-native.md) element i służy do stosowania zasad do konkretnej metody parametru. Według nazwy, a nie według typu, jest określony parametr dla określonej metody. Co najmniej jeden atrybut, który reprezentuje typ zasad, takich jak `Activate` lub `Dynamic`, musi być obecny.  
+ `<Parameter>` Element jest elementem podrzędnym [ \<metody >](../../../docs/framework/net-native/method-element-net-native.md) elementu i służy do stosowania zasad do parametru konkretnych metod. Parametr określonej metody jest określony przez nazwę, a nie według typu. Co najmniej jeden atrybut, który reprezentuje typ zasad, takich jak `Activate` lub `Dynamic`, musi być obecny.  
   
-## <a name="see-also"></a>Zobacz też  
- [\<Metoda > — Element](../../../docs/framework/net-native/method-element-net-native.md)  
- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Zobacz także
+- [\<Metoda > Element](../../../docs/framework/net-native/method-element-net-native.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)

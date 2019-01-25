@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcdb5883e109d7e0c73c8fb76ee61b52cf23091f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfc576e1b4f0bf1666dcd585a24dbfa398e9abde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715858"
 ---
 # <a name="corpubenumprocess-enumeration"></a>COR_PUB_ENUMPROCESS — Wyliczenie
-Określa typ procesu, które mają zostać wyliczone.  
+Identyfikuje typ procesu do wyliczenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,10 +41,10 @@ typedef enum {
 |`COR_PUB_MANAGEDONLY`|Proces zarządzanego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Bieżąca wersja niezarządzanego API debugowania wylicza tylko zarządzanych procesów.  
+ Bieżąca wersja interfejsu API debugowania niezarządzanego wylicza tylko zarządzanych procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorPub.idl, CorPub.h  
   
@@ -52,5 +52,5 @@ typedef enum {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

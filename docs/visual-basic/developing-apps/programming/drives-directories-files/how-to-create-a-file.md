@@ -1,32 +1,32 @@
 ---
-title: 'Porady: tworzenie pliku w Visual Basic'
+title: 'Instrukcje: Utwórz plik w języku Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: 6167ea0850308eec4b558a47dd881476325a8ea1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9eedb6dafdd181b254610331899b5df7ac0823f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661376"
 ---
-# <a name="how-to-create-a-file-in-visual-basic"></a>Porady: tworzenie pliku w Visual Basic
-Pusty plik tekstowy w tym przykładzie jest tworzona przy użyciu określonej ścieżki <xref:System.IO.File.Create%2A> metoda <xref:System.IO.File> klasy.  
+# <a name="how-to-create-a-file-in-visual-basic"></a>Instrukcje: Utwórz plik w języku Visual Basic
+W tym przykładzie tworzy pusty plik tekstowy w określonej ścieżki przy użyciu <xref:System.IO.File.Create%2A> method in Class metoda <xref:System.IO.File> klasy.  
   
 ## <a name="example"></a>Przykład  
  [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Użyj `file` zmienną do zapisu w pliku.  
+ Użyj `file` zmiennej można zapisać do pliku.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Jeśli plik już istnieje, zostanie zastąpiony.  
+ Jeśli plik już istnieje, zostanie zastąpiona.  
   
  Następujące warunki mogą spowodować wyjątek:  
   
--   Nazwa ścieżki jest nieprawidłowo sformułowany. Na przykład zawiera niedozwolone znaki lub jest tylko znak odstępu (<xref:System.ArgumentException>).  
+-   Nazwa ścieżki jest nieprawidłowo sformułowany. Na przykład zawiera niedozwolone znaki lub jest tylko spacją (<xref:System.ArgumentException>).  
   
 -   Ścieżka jest tylko do odczytu (<xref:System.IO.IOException>).  
   
@@ -36,17 +36,17 @@ Pusty plik tekstowy w tym przykładzie jest tworzona przy użyciu określonej ś
   
 -   Ścieżka jest nieprawidłowa (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Ścieżka jest tylko dwukropka ":" (<xref:System.NotSupportedException>).  
+-   Ścieżka jest tylko dwukropek ":" (<xref:System.NotSupportedException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- A <xref:System.Security.SecurityException> może zostać zgłoszony w częściowo zaufanym środowisku.  
+ A <xref:System.Security.SecurityException> mogą być generowane w środowisku częściowego zaufania.  
   
  Wywołanie <xref:System.IO.File.Create%2A> metoda wymaga <xref:System.Security.Permissions.FileIOPermission>.  
   
- <xref:System.UnauthorizedAccessException> Jest generowany, jeśli użytkownik nie ma uprawnień do tworzenia pliku.  
+ <xref:System.UnauthorizedAccessException> Jest generowany, jeśli użytkownik nie ma uprawnień do utworzenia pliku.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IO>  
- <xref:System.IO.File.Create%2A>  
- [Używanie bibliotek pochodzących z częściowo zaufanego kodu](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)  
- [Podstawy zabezpieczeń dostępu kodu](../../../../framework/misc/code-access-security-basics.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IO>
+- <xref:System.IO.File.Create%2A>
+- [Używanie bibliotek pochodzących z częściowo zaufanego kodu](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)
+- [Podstawy zabezpieczeń dostępu kodu](../../../../framework/misc/code-access-security-basics.md)

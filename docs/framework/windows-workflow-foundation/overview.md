@@ -2,12 +2,12 @@
 title: Omówienie programu Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: af5ccd47dd7b3ff35dd283f8fe659ebef912d441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665165"
 ---
 # <a name="windows-workflow-overview"></a>Omówienie programu Windows Workflow
 Przepływ pracy jest zbiorem elemental jednostek nazywanych *działania* , są przechowywane jako obiekty modelu, który zawiera opis procesu rzeczywistych. Przepływy pracy, zapewniają sposób opisania kolejności wykonania i zależności między elementami krótkotrwałej pracy krótkim lub długim. Ta Praca przechodzi przez model od początku do końca, a działania może być wykonywane przez osoby lub funkcji systemu.  
@@ -41,5 +41,5 @@ Składniki przepływu pracy w procesie hosta
   
 -   Niestandardowe działanie, która pochodzi od klasy <xref:System.Activities.CodeActivity> klasy abstrakcyjnej. <xref:System.Activities.CodeActivity> Mogą uzyskiwać dostęp do funkcji wykonawczej (takich jak śledzenie i właściwości) przy użyciu <xref:System.Activities.CodeActivityContext> który jest dostępny jako parametr <xref:System.Activities.CodeActivity.Execute%2A> metody. Aby uzyskać więcej informacji o tych funkcjach czasu wykonywania, zobacz [przepływu pracy i śledzenie](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) i [właściwości wykonania przepływu pracy](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [BizTalk Server 2006 lub WF? Wybór narzędzia prawo przepływu pracy dla projektu](https://go.microsoft.com/fwlink/?LinkId=154901)
+## <a name="see-also"></a>Zobacz także
+- [BizTalk Server 2006 lub WF? Wybór narzędzia prawo przepływu pracy dla projektu](https://go.microsoft.com/fwlink/?LinkId=154901)

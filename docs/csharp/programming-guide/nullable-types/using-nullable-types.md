@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: d2c6f2f78ed71558b71adcc1d4d8cc9a6f459d75
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658250"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Przy użyciu typów dopuszczających wartości zerowe (C# Programming Guide)
 
@@ -110,8 +110,8 @@ Semantyka te operatory jest zdefiniowane w poniższej tabeli:
 
 Należy pamiętać, że te dwa operatory nie są zgodne z zasadami opisanymi w [operatory](#operators) sekcji: wynik oceny — operator może być inna niż null, nawet, jeśli jeden z argumentów ma wartość null.
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Typy dopuszczające wartości zerowe](index.md)  
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
-- [Co dokładnie "podniesiony" oznacza?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  
+- [Typy dopuszczające wartości zerowe](index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Co dokładnie "podniesiony" oznacza?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

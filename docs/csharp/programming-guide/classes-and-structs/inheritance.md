@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: e69d1dba59858ff0988806dd3ed0dd22e5213313
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4ba5c28f6d4842846c55f47b3b40628ec57c9702
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607020"
 ---
 # <a name="inheritance-c-programming-guide"></a>Dziedziczenie (Przewodnik programowania w języku C#)
 
@@ -54,9 +54,9 @@ Dziedziczenie klas
 ## <a name="derived-class-hiding-of-base-class-members"></a>Klasa pochodna ukrycie elementów członkowskich klasy podstawowej  
  Klasa pochodna można ukryć składowych klasy bazowej przez zadeklarowanie elementów członkowskich z taką samą nazwę i podpis. [Nowe](../../../csharp/language-reference/keywords/new.md) modyfikator może służyć do jawnie wskazywały elementu członkowskiego nie jest przeznaczony do zastąpienia podstawowego elementu członkowskiego. Korzystanie z [nowe](../../../csharp/language-reference/keywords/new.md) nie jest wymagane, ale ostrzeżenia kompilatora zostanie wygenerowany, jeśli [nowe](../../../csharp/language-reference/keywords/new.md) nie jest używany. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) i [, wiedząc, gdy użycie zastępowania i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
 - [struct](../../../csharp/language-reference/keywords/struct.md)

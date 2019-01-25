@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47ab6e52278c77156e828869dd23575561879bff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8442b8723476984b90f740beac912688719f1791
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689838"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Zdarzenia ETW monitorowania zasobów domen aplikacji (ARM)
-<a name="top"></a> Zdarzenia te zawierają szczegółowe informacje diagnostyczne o stanie domeny aplikacji. Można użyć tych zdarzeń lub użyć zasobów domen aplikacji (ARM) funkcji monitorowania w celu uzyskania tych samych informacji.  
+<a name="top"></a> Zdarzenia te zawierają szczegółowe informacje diagnostyczne o stanie domeny aplikacji. Można użyć tych zdarzeń, lub użyć zasobów domen aplikacji (ARM) funkcji monitorowania można uzyskać te same informacje.  
   
  Ta kategoria obejmuje następujące zdarzenia:  
   
--   [ThreadCreated zdarzeń](#threadcreated_event)  
+-   [Threadcreated — zdarzenie](#threadcreated_event)  
   
 -   [Zdarzenie AppDomainMemAllocated](#appdomainmemallocated_event)  
   
@@ -30,19 +30,19 @@ ms.locfileid: "33398186"
 -   [Zdarzenie ThreadTerminated](#threadterminated_event)  
   
 <a name="threadcreated_event"></a>   
-## <a name="threadcreated-event"></a>ThreadCreated zdarzeń  
- To zdarzenie powstaje w obszarze dostawcy stert jako `ThreadDC` (w obszarze `AppDomainResourceManagementRundownKeyword` — słowo kluczowe). Jest to tylko zdarzenia, które jest wywoływane w obszarze stert dostawcy w tej kategorii.  
+## <a name="threadcreated-event"></a>Threadcreated — zdarzenie  
+ To zdarzenie jest także inicjowane w obszarze dostawcy podsumowań jako `ThreadDC` (w obszarze `AppDomainResourceManagementRundownKeyword` — słowo kluczowe). Jest to jedyne zdarzenie, które jest wywoływane w obszarze dostawcy podsumowań w tej kategorii.  
   
- W poniższej tabeli przedstawiono — słowo kluczowe i poziom. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ W poniższej tabeli przedstawiono — słowo kluczowe i poziomu. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
-|Słowo kluczowe wywołaniem zdarzenia|Poziom|  
+|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|  
 |`ThreadingKeyword` (0x10000)|Informational(4)|  
   
- W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
+ W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
 |-----------|--------------|-----------------|  
 |`ThreadCreated`|85|Wątek został utworzony dla domeny aplikacji.|  
   
@@ -50,111 +50,111 @@ ms.locfileid: "33398186"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Identyfikator wątku|Windows: UInt64|Identyfikator wątku, który został utworzony.|  
-|AppDomainID|Windows: UInt64|Identyfikator domeny aplikacji dla wątku, który jest raportowany działania.|  
-|Flagi|Windows: UInt32.|Wątek flagi tworzenia.|  
-|ManagedThreadIndex|Windows: UInt32.|Zarządzane indeks wątku, który został utworzony.|  
-|Elementu OSThreadID|Windows: UInt32.|System operacyjny identyfikator wątku, który został utworzony.|  
-|ClrInstanceID|Windows: UInt16|Unikatowy identyfikator wystąpienia CLR lub środowisko CoreCLR.|  
+|ThreadID|win:UInt64|Identyfikator wątku, który został utworzony.|  
+|AppDomainID|win:UInt64|Identyfikator wątku, który jest zgłaszany działania domeny aplikacji.|  
+|Flagi|win: UInt32.|Wątek flagi tworzenia.|  
+|ManagedThreadIndex|win: UInt32.|Zarządzane indeks wątku, który został utworzony.|  
+|Elementu OSThreadID|win: UInt32.|Identyfikator wątku, który został utworzony w system operacyjny.|  
+|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  
   
 <a name="appdomainmemallocated_event"></a>   
 ## <a name="appdomainmemallocated-event"></a>Zdarzenie AppDomainMemAllocated  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziom.  
+ W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
   
-|Słowo kluczowe wywołaniem zdarzenia|Poziom|  
+|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|  
   
- W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
+ W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
 |-----------|--------------|-----------------|  
-|`AppDomainMemAllocated`|83|Co 4 MB pamięci (około) jest przydzielane w domenie aplikacji.|  
+|`AppDomainMemAllocated`|83|Co 4 MB pamięci (w przybliżeniu) jest przydzielany w domenie aplikacji.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|AppDomainID|Windows: UInt64|Identyfikator domeny aplikacji, dla którego zasobu jest raportowany użycia.|  
-|Przydzielone|Windows: UInt64|Całkowita liczba bajtów przydzielonych w tej domenie aplikacji, ponieważ domena aplikacji została utworzona (liczba zwolnionych pamięci nie jest odejmowany).|  
-|ClrInstanceID|Windows: UInt16|Unikatowy identyfikator wystąpienia CLR lub środowisko CoreCLR.|  
+|AppDomainID|win:UInt64|Identyfikator domeny aplikacji do zasobu, który jest zgłaszany użycia.|  
+|przydzielona|win:UInt64|Całkowita liczba bajtów przydzielonych w tej domenie aplikacji, od momentu utworzenia domeny aplikacji (ilość zwolnionej pamięci nie jest odejmowany).|  
+|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  
   
 <a name="appdomainmemsurvived_event"></a>   
 ## <a name="appdomainmemsurvived-event"></a>Zdarzenie AppDomainMemSurvived  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziom.  
+ W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
   
-|Słowo kluczowe wywołaniem zdarzenia|Poziom|  
+|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|  
   
- W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
+ W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
 |-----------|--------------|-----------------|  
-|`AppDomainMemSurvived`|84|Każdy wyrzucanie elementów bezużytecznych została zakończona.|  
+|`AppDomainMemSurvived`|84|Każdy wyrzucania elementów bezużytecznych zostało zakończone.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|AppDomainID|Windows: UInt64|Identyfikator domeny, dla którego zasobu jest raportowany użycia.|  
-|Udało się przetrwać|Windows: UInt64|Liczba bajtów, który udało przetrwać od ostatniego zebrania i które są znane przez tej domeny aplikacji. Ta liczba jest dokładne i kompletne po pełnej kolekcji, ale mogą być niekompletne po pobraniu tymczasowych.|  
-|ProcessSurvived|Windows: UInt64|Całkowita liczba bajtów, które udało przetrwać od ostatniego zebrania. Po pełnej kolekcji ta liczba reprezentuje liczbę bajtów zablokowany na żywo w zarządzanych stosów. Po pobraniu tymczasowych ta liczba reprezentuje liczbę bajtów przechowywać na żywo w generacje tymczasowych.|  
-|ClrInstanceID|Windows: UInt16|Unikatowy identyfikator wystąpienia CLR lub środowisko CoreCLR.|  
+|AppDomainID|win:UInt64|Identyfikator domeny dla zasobu, który jest zgłaszany użycia.|  
+|Przetrwały|win:UInt64|Liczba bajtów, które przetrwały od ostatniego zebrania i które są znane przez tej domeny aplikacji. Ta liczba jest dokładne i kompletne po pełnej kolekcji, ale mogą być niekompletne po pobraniu tymczasowych.|  
+|ProcessSurvived|win:UInt64|Całkowita liczba bajtów, które przetrwały od ostatniego zebrania. Po pełnego ta liczba przedstawia liczbę bajtów przechowywanych na żywo w zarządzanej sterty. Po pobraniu tymczasowych ten numer reprezentuje liczbę bajtów przechowywanych na żywo w generacje efemeryczne.|  
+|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  
   
 <a name="threadappdomainenter_event"></a>   
 ## <a name="threadappdomainenter-event"></a>Zdarzenie ThreadAppDomainEnter  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziom.  
+ W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
   
-|Słowo kluczowe wywołaniem zdarzenia|Poziom|  
+|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|  
 |`ThreadingKeyword` (0x10000)|Informational(4)|  
   
- W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
+ W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
 |-----------|--------------|-----------------|  
-|`ThreadAppDomainEnter`|87|Wątek przechodzi domeny aplikacji.|  
+|`ThreadAppDomainEnter`|87|Wątek wchodzi domeny aplikacji.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Identyfikator wątku|Windows: UInt64|Identyfikator wątku.|  
-|AppDomainID|Windows: UInt64|Identyfikator domeny aplikacji.|  
-|ClrInstanceID|Windows: UInt16|Unikatowy identyfikator wystąpienia CLR lub środowisko CoreCLR.|  
+|ThreadID|win:UInt64|Identyfikator wątku.|  
+|AppDomainID|win:UInt64|Identyfikator domeny aplikacji.|  
+|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  
   
 <a name="threadterminated_event"></a>   
 ## <a name="threadterminated-event"></a>Zdarzenie ThreadTerminated  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziom.  
+ W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
   
-|Słowo kluczowe wywołaniem zdarzenia|Poziom|  
+|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|  
 |`ThreadingKeyword` (0x10000)|Informational(4)|  
   
- W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
+ W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
 |-----------|--------------|-----------------|  
-|`ThreadTerminated`|86|Zakończenie wątku.|  
+|`ThreadTerminated`|86|Wątek kończy działanie.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia:  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Identyfikator wątku|Windows: UInt64|Identyfikator wątku.|  
-|AppDomainID|Windows: UInt64|Identyfikator domeny aplikacji.|  
-|ClrInstanceID|Windows: UInt16|Unikatowy identyfikator wystąpienia CLR lub środowisko CoreCLR.|  
+|ThreadID|win:UInt64|Identyfikator wątku.|  
+|AppDomainID|win:UInt64|Identyfikator domeny aplikacji.|  
+|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Zobacz także
+- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: daad986a1e62fe3b1d28fc25d3ebf6d2960d8b1d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 38b8a0fc8c89975318b42380ca936869544af601
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694974"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ograniczenia dotyczące parametrów typu (C# Programming Guide)
 
@@ -110,10 +110,10 @@ Można użyć tego jak pokazano w następującym przykładzie do wyliczenia i tw
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Collections.Generic>
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [Klasy ogólne](../../../csharp/programming-guide/generics/generic-classes.md)  
-- [new, ograniczenie](../../../csharp/language-reference/keywords/new-constraint.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Klasy ogólne](../../../csharp/programming-guide/generics/generic-classes.md)
+- [new, ograniczenie](../../../csharp/language-reference/keywords/new-constraint.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 777fa850fcab1d1a6191c605ecb2f2a181fddcc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e44f84ed92f90a51ac1c5c7327d6de7b89887c7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536519"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind — Wyliczenie
-Zarezerwowane dla przyszłego rozszerzenia [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) struktury.  
+Zarezerwowane dla przyszłego rozszerzenia [customdumpitem —](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) struktury.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,14 +41,14 @@ typedef enum {
 |`DUMP_ITEM_None`|Zarezerwowane do użytku w przyszłości.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRErrorReportingManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRErrorReportingManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -1,16 +1,16 @@
 ---
-title: 'Porady: generowanie kodu XML z plików CSV (Visual Basic)'
+title: 'Instrukcje: Generowanie kodu XML z plików CSV (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 535704cb2cb5a702c524f306e561b1154f4b2e1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5facb31c33c777a5d7ed083dbfda5bd18a67e6a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706683"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Porady: generowanie kodu XML z plików CSV (Visual Basic)
-Ten przykład przedstawia sposób użycia [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aby wygenerować plik XML z pliku wartości rozdzielanych przecinkami (CSV).  
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Instrukcje: Generowanie kodu XML z plików CSV (Visual Basic)
+W tym przykładzie pokazano, jak używać [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do generowania pliku XML z pliku wartości rozdzielanych przecinkami (CSV).  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod wykonuje [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytanie dotyczące tablicy ciągów.  
@@ -107,5 +107,5 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Projekcje i przekształcenia (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

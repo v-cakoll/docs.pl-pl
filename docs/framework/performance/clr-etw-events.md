@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 983c38567667da911132217dcfda37c009dc833c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9d64ee6942d9397ceb45b812ef3c26179fac9b2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540302"
 ---
 # <a name="clr-etw-events"></a>Zdarzenia ETW CLR
 W tematach w tej sekcji opisano śledzenie zdarzeń systemu Windows (ETW) zdarzenia. Każde zdarzenie ma skojarzone słowo kluczowe i poziomu, które są opisane w [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) tematu. Środowisko CLR ma dwóch dostawców na potrzeby zdarzeń:  
@@ -61,10 +61,10 @@ W tematach w tej sekcji opisano śledzenie zdarzeń systemu Windows (ETW) zdarze
  [Zdarzenie stosu](../../../docs/framework/performance/stack-etw-event.md)  
  Przechwytuje informacje, które jest używany z innymi zdarzeniami można wygenerować ślady stosu, po wydarzenie jest podniesione.  
   
-## <a name="see-also"></a>Zobacz też  
- [Poprawić debugowania i dostrajania wydajności za pomocą funkcji ETW](https://go.microsoft.com/fwlink/?LinkId=179696)  
- [Blog poświęcony wydajności Windows](https://go.microsoft.com/fwlink/?LinkId=179509)  
- [Kontrolowanie logowania w programie .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
- [Dostawcy CLR ETW](../../../docs/framework/performance/clr-etw-providers.md)  
- [Słowa kluczowe i poziomy ETW CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
- [Zdarzenia ETW w środowisku CLR](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+## <a name="see-also"></a>Zobacz także
+- [Poprawić debugowania i dostrajania wydajności za pomocą funkcji ETW](https://go.microsoft.com/fwlink/?LinkId=179696)
+- [Blog poświęcony wydajności Windows](https://go.microsoft.com/fwlink/?LinkId=179509)
+- [Kontrolowanie logowania w programie .NET Framework](../../../docs/framework/performance/controlling-logging.md)
+- [Dostawcy CLR ETW](../../../docs/framework/performance/clr-etw-providers.md)
+- [Słowa kluczowe i poziomy ETW CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)
+- [Zdarzenia ETW w środowisku CLR](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

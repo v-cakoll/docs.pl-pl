@@ -2,12 +2,12 @@
 title: Integrację środowiska uruchomieniowego języka wspólnego serwera SQL
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: 5f6c1dcccaddeadb65e6fc949960b0232d00ed81
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7d291e5ab715638217c024302c36188d63b20239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493966"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integrację środowiska uruchomieniowego języka wspólnego serwera SQL
 SQL Server 2005 wprowadzono integrację składnika wspólnego języka wspólnego (CLR) programu .NET Framework dla programu Microsoft Windows. Oznacza to, że można napisać procedury składowane, wyzwalacze, typy zdefiniowane przez użytkownika, funkcje zdefiniowane przez użytkownika, agregacje zdefiniowane przez użytkownika i przesyłania strumieniowego funkcji z wartościami przechowywanymi w tabeli przy użyciu dowolnego języka .NET Framework, w tym programu Microsoft Visual Basic .NET i Microsoft Visual C#. <xref:Microsoft.SqlServer.Server> Przestrzeń nazw zawiera zestaw nowych interfejsów programowania aplikacji (API), aby kod zarządzany może wchodzić w interakcje ze środowiskiem programu Microsoft SQL Server.  
@@ -16,7 +16,7 @@ SQL Server 2005 wprowadzono integrację składnika wspólnego języka wspólnego
   
  Ta sekcja ma zapewnić tylko wystarczających informacji, aby rozpocząć programowanie z użyciem integracji środowiska CLR programu SQL Server i nie jest przeznaczona do wyczerpująca. Aby uzyskać szczegółowe informacje Zobacz wersję programu SQL Server — książki Online dla wersji programu SQL Server, którego używasz.  
   
- **SQL Server — książki Online**  
+ **SQL Server Books Online**  
   
 1.  [Koncepcje programowania integracji wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR)](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
@@ -42,7 +42,7 @@ SQL Server 2005 wprowadzono integrację składnika wspólnego języka wspólnego
  [Zachowanie w procesie specyficzne dla serwera SQL ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
  Opisuje rozszerzenia określone w procesie programu SQL Server, ADO.NET i połączenia kontekstu. Zawiera łącza do dodatkowych tematów.  
   
-## <a name="see-also"></a>Zobacz też  
- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

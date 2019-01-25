@@ -2,12 +2,12 @@
 title: Specyfikacja manifestu dostawcy
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 592d435dd0da3a66fb3bbd278a53facb6cf08cb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739276"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734055"
 ---
 # <a name="provider-manifest-specification"></a>Specyfikacja manifestu dostawcy
 W tej sekcji omówiono, jak dostawca magazynu danych może obsługiwać typy i funkcje w magazynie danych.  
@@ -54,7 +54,7 @@ W tej sekcji omówiono, jak dostawca magazynu danych może obsługiwać typy i f
   
  Możesz napisać plik XML, który ma dwie sekcje:  
   
--   Lista typów dostawców wyrażany w kategoriach EDM i zdefiniować mapowanie dla obu kierunku: EDM do dostawcy oraz dostawcy do EDM.  
+-   Lista typów dostawcy wyrażany w kategoriach EDM i zdefiniować mapowanie dla obu kierunku: EDM do dostawcy i dostawcy do EDM.  
   
 -   Lista funkcji obsługiwanych przez dostawcę, w których typy parametrów i zwrotu jest wyrażany w kategoriach EDM.  
   
@@ -261,7 +261,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Nazwa|String|Tak|n/d|Identyfikator/nazwę funkcji|  
 |ReturnType|String|Nie|Void|Zwracany typ EDM — funkcja|  
 |Agregowanie|Boolean|Nie|False|Wartość true, jeśli funkcja znajduje się funkcja agregująca|  
-|Wbudowane|Boolean|Nie|True|Wartość true, jeśli funkcja jest wbudowana w magazynie danych|  
+|BuiltIn|Boolean|Nie|Prawda|Wartość true, jeśli funkcja jest wbudowana w magazynie danych|  
 |StoreFunctionName|String|Nie|\<Nazwa >|Nazwa funkcji w magazynie danych.  Zezwala na poziomie przekierowywania nazwy funkcji.|  
 |NiladicFunction|Boolean|Nie|False|Wartość true, jeśli funkcja nie wymaga parametrów i jest wywoływana bez parametrów|  
 |Zgodność<br /><br /> Semantyka|ParameterSemantics|Nie|AllowImplicit<br /><br /> Konwersja|Wybór sposobu potoku zapytania powinien zająć się podstawienie typ parametru:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
@@ -277,7 +277,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Tryb|Parametr<br /><br /> Kierunek|Tak|n/d|Kierunek parametru:<br /><br /> -w<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Atrybut Namespace  
- Każdy dostawca magazynu danych, należy zdefiniować przestrzeni nazw lub grupy w przestrzeni nazw dla informacje zdefiniowane w manifeście. Ta przestrzeń nazw może służyć w zapytań jednostki SQL do rozpoznawania nazw funkcji i typów. Na przykład: SqlServer. Przestrzeń nazw musi się różnić od canonical przestrzeni nazw, EDM, zdefiniowane przez jednostki Services na potrzeby standardowych funkcji są obsługiwane przez zapytania SQL jednostki.  
+ Każdy dostawca magazynu danych, należy zdefiniować przestrzeni nazw lub grupy w przestrzeni nazw dla informacje zdefiniowane w manifeście. Ta przestrzeń nazw może służyć w zapytań jednostki SQL do rozpoznawania nazw funkcji i typów. Przykład: SqlServer. Przestrzeń nazw musi się różnić od canonical przestrzeni nazw, EDM, zdefiniowane przez jednostki Services na potrzeby standardowych funkcji są obsługiwane przez zapytania SQL jednostki.  
   
-## <a name="see-also"></a>Zobacz też  
- [Pisanie dostawcy danych programu Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>Zobacz także
+- [Pisanie dostawcy danych programu Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

@@ -16,49 +16,49 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ba53e4af114773a347d15b7308dc4c3567154e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d5f0bb07498203d3db57ac3948efddce4f050a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533718"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask — Interfejs
-Udostępnia metody umożliwiające hosta do wysyłania żądań środowisko uruchomieniowe języka wspólnego (CLR) lub w celu udostępnienia powiadomień do środowiska CLR o skojarzonego zadania.  
+Udostępnia metody, które umożliwiają hosta propozycji dotyczących środowiska uruchomieniowego języka wspólnego (CLR) lub w celu udostępnienia powiadomienia do CLR o skojarzone zadanie.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Abort, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|Żądania, że środowisko CLR przerwać zadanie który bieżącego `ICLRTask` reprezentuje wystąpienie.|  
-|[ExitTask, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|Powiadamia CLR, które zadania skojarzone z bieżącym `ICLRTask` wystąpienia kończy się i podejmie próbę prawidłowe zamknięcie zadania.|  
-|[GetMemStats, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)|Pobiera informacje statystyczne dotyczące wykorzystania zasobów pamięci przez zadanie reprezentowany przez bieżący `ICLRTask` wystąpienia.|  
+|[Abort, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|Żądania, że środowisko CLR przerwać zadanie, bieżący `ICLRTask` wystąpienie reprezentuje.|  
+|[ExitTask, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|Powiadamia CLR, który zadanie skojarzone z bieżącym `ICLRTask` wystąpienia kończy się i próbuje przeprowadzić zamknięcie zadania.|  
+|[GetMemStats, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)|Pobiera informacje statystyczne dotyczące użycia zasobów pamięci przez zadanie, reprezentowane przez bieżącą `ICLRTask` wystąpienia.|  
 |[LocksHeld, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-locksheld-method.md)|Pobiera liczbę blokad znajdujących się obecnie w zadania.|  
-|[NeedsPriorityScheduling, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-needspriorityscheduling-method.md)|Pobiera wartość wskazującą, czy hosta należy przypisać o wysokim priorytecie ponowne zaplanowanie zadania reprezentowane przez bieżące `ICLRTask` wystąpienia.|  
-|[Reset, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-reset-method.md)|Informuje o środowisko CLR zostało zakończone zadanie hosta i umożliwia CLR do ponownego użycia bieżącego `ICLRTask` wystąpienie do reprezentowania inne zadanie.|  
-|[RudeAbort, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-rudeabort-method.md)|Powoduje, że CLR przerwania reprezentowany przez bieżące zadanie `ICLRTask` wystąpienie bezpośrednio, bez gwarancji, że finalizatory będą wykonywane.|  
-|[SetTaskIdentifier, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)|Ustawia Unikatowy identyfikator dla zadania reprezentowany przez bieżący `ICLRTask` wystąpienie do użytku w debugowaniu.|  
-|[SwitchIn, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchin-method.md)|Powiadamia CLR, która bieżącego zadania `ICLRTask` wystąpienie jest w stanie obsługiwane.|  
-|[SwitchOut, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md)|Powiadamia CLR, która bieżącego zadania `ICLRTask` wystąpienia nie jest już w stanie obsługiwane.|  
-|[YieldTask, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-yieldtask-method.md)|Żądania wysyłane przez wartość czasu procesora upewnij CLR dostępne dla innych zadań. Środowisko CLR sprawia, że żadnej gwarancji, że zadania będą umieszczane w stanie, w którym mogą spowodować czas przetwarzania.|  
+|[NeedsPriorityScheduling, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-needspriorityscheduling-method.md)|Pobiera wartość wskazującą, czy host należy przypisać wysoki priorytet ponowne planowanie zadania, reprezentowane przez bieżącą `ICLRTask` wystąpienia.|  
+|[Reset, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-reset-method.md)|Informuje środowisko CLR hosta zostało zakończone zadania i umożliwia CLR do ponownego użycia bieżącego `ICLRTask` wystąpienia do reprezentowania inne zadanie.|  
+|[RudeAbort, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-rudeabort-method.md)|Powoduje, że środowisko CLR przerwać zadanie, reprezentowane przez bieżącą `ICLRTask` wystąpienia natychmiast, bez gwarancji, że finalizatory zostaną wykonane.|  
+|[SetTaskIdentifier, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)|Ustawia Unikatowy identyfikator dla tego zadania, reprezentowane przez bieżącą `ICLRTask` wystąpienie do użytku podczas debugowania.|  
+|[SwitchIn, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchin-method.md)|Powiadamia CLR, który zadanie jest reprezentowane przez bieżącą `ICLRTask` wystąpienie jest w stanie uruchamiane ręcznie.|  
+|[SwitchOut, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md)|Powiadamia CLR, który zadanie jest reprezentowane przez bieżącą `ICLRTask` wystąpienia nie jest już w stanie uruchamiane ręcznie.|  
+|[YieldTask, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-yieldtask-method.md)|Żądania wysyłane przez wartość czasu procesora upewnij CLR dostępne dla innych zadań. Środowisko CLR sprawia, że żadnej gwarancji, że zadania zostaną przełączeni w stan, w którym może przynieść czas przetwarzania.|  
   
 ## <a name="remarks"></a>Uwagi  
- `ICLRTask` Reprezentacja zadania dla środowiska CLR. W dowolnym momencie podczas wykonywania kodu zadania można przedstawić jako uruchomione lub oczekuje na uruchomienie. Wywołania hosta `ICLRTask::SwitchIn` metodę, aby powiadomić CLR który zadania który bieżącego `ICLRTask` reprezentuje wystąpienie jest teraz w stanie obsługiwane. Po wywołaniu `ICLRTask::SwitchIn`, hosta można zaplanować zadanie w którymkolwiek wątku systemu operacyjnego, z wyjątkiem w przypadkach, gdy środowiska uruchomieniowego wymaga koligacji wątków, określony przez wywołania [IHostTaskManager::BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) i [IHostTaskManager::EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) metody. Pewien czas później, system operacyjny zdecydować się na usunięcie zadania z wątku i umieszczenie go w stanie pracy z systemem innym niż. Na przykład to może się zdarzyć, gdy zadanie blokuje na elementy podstawowe synchronizacji lub czeka na zakończenie operacji We/Wy. Wywołania hosta [SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md) powiadomiono CLR, która bieżącego zadania `ICLRTask` wystąpienia nie jest już w stanie obsługiwane.  
+ `ICLRTask` Jest reprezentacją zadania dla środowiska CLR. W dowolnym momencie podczas wykonywania kodu zadanie może być opisany jako uruchomiona lub jest oczekiwanie na uruchomienie. Wywołania hosta `ICLRTask::SwitchIn` metodę, aby powiadomić środowiska CLR, zadania, bieżący `ICLRTask` reprezentuje wystąpienie znajduje się teraz w stanie wykonywalny. Po wywołaniu `ICLRTask::SwitchIn`, hosta można zaplanować zadania dotyczące dowolnego wątku systemu operacyjnego, z wyjątkiem w przypadkach, w których środowisko uruchomieniowe wymaga koligacji wątku, określony przez wywołania [ihosttaskmanager::beginthreadaffinity —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) i [Ihosttaskmanager::endthreadaffinity —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) metody. Pewien czas później, system operacyjny zdecydować usunąć zadanie z wątku i umieścić go w stan bez uruchamiania. Na przykład to może się zdarzyć, gdy zadanie blokuje się na podstawowych synchronizacji lub czeka na zakończenie operacji We/Wy. Wywołania hosta [switchout —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md) powiadomić środowiska CLR, który zadanie jest reprezentowane przez bieżącą `ICLRTask` wystąpienia nie jest już w stanie uruchamiane ręcznie.  
   
- Zadania zazwyczaj kończy się na końcu wykonanie kodu. W tym czasie wywołania hosta `ICLRTask::ExitTask` do zniszczenia skojarzony `ICLRTask`. Jednak zadań można również będzie wykonywane za pomocą wywołania `ICLRTask::Reset`, dzięki czemu `ICLRTask` wystąpienie do ponownego wykorzystania. Takie podejście zapobiega koszty wielokrotnie tworzenia i niszczenie wystąpień.  
+ Zadania zazwyczaj kończy się na końcu wykonywania kodu. W tym czasie wywołania hosta `ICLRTask::ExitTask` zniszczyć skojarzonego `ICLRTask`. Jednak zadania, również można odtworzyć za pomocą wywołania `ICLRTask::Reset`, co pozwala `ICLRTask` wystąpienia ma być używany ponownie. To podejście zapobiega konieczności wielokrotnie tworzenie i niszczenie wystąpień.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [ICLRTask2, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ICLRTask2, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15a86c1df3e7d6a9d8ddd102bd34aede46c08ba8
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 3bb4286ea6055d2df9111b2222b137f2668bfdfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681043"
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a>&lt;Userandomizedstringhashalgorithm —&gt; — Element
 Określa, czy środowisko uruchomieniowe języka wspólnego oblicza kody skrótów dla ciągów na podstawie domeny aplikacji.  
   
  \<Konfiguracja >  
 \<runtime>  
-\<Userandomizedstringhashalgorithm — >  
+\<UseRandomizedStringHashAlgorithm>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -95,7 +95,7 @@ String 'This is a string.' in domain 'PerDomain.exe': 5435776D
 String 'This is a string.' in domain 'NewDomain': 75CC8236  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
-- <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
+- <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>

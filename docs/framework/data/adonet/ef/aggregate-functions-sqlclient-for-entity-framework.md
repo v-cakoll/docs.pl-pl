@@ -2,12 +2,12 @@
 title: Funkcje agregujące (SqlClient programu Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 8ed9a58da9914724fe312876d6594cb526f2e0e9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 55a10b82ffc189f5cf4118cb225a96963226256e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724190"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Funkcje agregujące (SqlClient programu Entity Framework)
 .NET Framework Data Provider for SQL Server (SqlClient) zapewnia funkcje agregujące. Funkcje agregujące wykonywanie obliczeń na zestaw wartości wejściowych i zwracają wartość. Te funkcje są w przestrzeni nazw SqlServer, który jest dostępny, gdy używasz SqlClient. Właściwość przestrzeni nazw dostawcy umożliwia programu Entity Framework dowiedzieć się, który prefiks jest używany przez tego dostawcę dla określonego konstrukcji, takich jak typy i funkcje.  
@@ -224,8 +224,8 @@ A `Double`.
 ## <a name="see-also"></a>Zobacz także
 
 Aby uzyskać więcej informacji na temat funkcji agregujących, które obsługuje klient SQL zobacz dokumentację dla używanej wersji programu SQL Server określonego w manifeście dostawcy SqlClient:  
-  
-**SQL Server 2005**: [funkcje (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))  
-**Program SQL Server 2008 i nowsze wersje**: [funkcje agregujące (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)  
-[Jednostki języka SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
-[Funkcje agregujące Canonical](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+
+**SQL Server 2005**: [Aggregate Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))  
+**Program SQL Server 2008 i nowsze wersje**:  [Aggregate Functions (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)  
+- [Jednostki języka SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Funkcje agregujące Canonical](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

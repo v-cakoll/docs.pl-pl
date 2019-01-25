@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 9e93d3cd417d0d075fcebb8327ec51799884f8d6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a484ba1e5d0c7a51e7e4c3edbf341bf40345fd2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633926"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML
 Dalej w tym temacie opisano obecności i celem dwóch mapowań przestrzeni nazw XAML, jak często występuje w tagu głównego pliku XAML w WPF. On również zawiera opis sposobu tworzenia podobnych mapowania dla za pomocą elementów, które są zdefiniowane we własnym kodzie i/lub w ramach oddzielne zestawy.  
@@ -136,6 +136,6 @@ End Namespace
   
  Skompilowanych BAML (generowany za pośrednictwem PresentationBuildTask) używa wszystkich kroków, mimo że BAML także nie może zawierać nazwy niekwalifikowanej zestawów.  
   
-## <a name="see-also"></a>Zobacz też  
- [Informacje o przestrzeni nazw XML](https://go.microsoft.com/fwlink/?LinkId=98069)  
- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Zobacz także
+- [Informacje o przestrzeni nazw XML](https://go.microsoft.com/fwlink/?LinkId=98069)
+- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04b6c04868efff31253b2d723c5783060382212b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc4e8140485902e4677bca0228bc125c64b497f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671866"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps — Metoda
-Pobiera metadane skojarzone z polem odwołuje się określony FieldDef token.  
+Pobiera metadane skojarzone z polem odwołuje się określona FieldDef token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,10 +47,10 @@ HRESULT GetFieldProps (
   
 #### <a name="parameters"></a>Parametry  
  `mb`  
- [in] Token FieldDef, który reprezentuje pole, aby pobrać skojarzone metadane.  
+ [in] Token FieldDef, który reprezentuje pole, które można pobrać skojarzone metadane.  
   
  `pClass`  
- [out] Wskaźnik do tokenu — TypeDef, który reprezentuje typ pola należącego do klasy.  
+ [out] Wskaźnik do TypeDef token, który reprezentuje typ klasy, które pole należy do.  
   
  `szField`  
  [out] Nazwa pola.  
@@ -62,13 +62,13 @@ HRESULT GetFieldProps (
  [out] Rzeczywisty rozmiar buforu zwrócony.  
   
  `pdwAttr`  
- [out] Flagi skojarzone z metadanymi pola.  
+ [out] Flagi skojarzone ze pola metadanych.  
   
  `ppvSigBlob`  
  [in] Wskaźnik do wartości binarne metadanych, opisujący pola.  
   
  `pcbSigBlob`  
- [out] Wyrażony w bajtach rozmiar `ppvSigBlob`.  
+ [out] Rozmiar w bajtach `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
  [out] Flaga, która określa typ wartości pola.  
@@ -77,17 +77,17 @@ HRESULT GetFieldProps (
  [out] Stała wartość dla pola.  
   
  `pcchValue`  
- [out] Rozmiar znaków z `ppValue`, lub zero, jeśli ciąg nie istnieje.  
+ [out] Rozmiar w znaki z `ppValue`, lub zero, jeśli ciąg nie istnieje.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

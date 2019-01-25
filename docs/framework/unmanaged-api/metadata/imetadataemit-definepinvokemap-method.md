@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 480fedc8ae63ffa3222a74e39297cc64b6812e97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f1d62c55df410d284fe050b805cf465718ab112
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576160"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap — Metoda
-Ustawia funkcje metody odwołuje się określony token podpisu funkcji PInvoke.  
+Ustawia funkcji PInvoke podpis metody odwołuje się określony token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,23 +43,23 @@ HRESULT DefinePinvokeMap (
  [in] Token metody docelowej.  
   
  `dwMappingFlags`  
- [in] Flagi używane przez funkcji PInvoke w celu mapowania.  
+ [in] Flagi używane przez PInvoke do na potrzeby mapowania.  
   
  `szImportName`  
- [in] Nazwa elementu docelowego eksportu metody w bibliotece DLL niezarządzane.  
+ [in] Nazwa elementu docelowego eksportu metody w niezarządzaną biblioteką DLL.  
   
  `mrImportDLL`  
- [in] Token dla obiekt docelowy natywnej biblioteki DLL.  
+ [in] Token dla celu natywnej biblioteki DLL.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

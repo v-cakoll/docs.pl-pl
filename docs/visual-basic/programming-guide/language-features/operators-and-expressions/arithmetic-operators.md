@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: cd66d08eba973a796472fcbd40a6a84edbbb62ae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ff0532c87e03e4b502367313e33ddb9bd12ad8cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730740"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operatory arytmetyczne w Visual Basic
 Operatory arytmetyczne są używane do wykonywania wielu znanych operacje arytmetyczne, które obejmują obliczanie wartości liczbowych, reprezentowane przez literały, zmienne, innych wyrażeń, funkcji i wywołania właściwości i stałe. Również sklasyfikowane za pomocą operatorów arytmetycznych są bit-shift — operatory, które działają na poziomie pojedynczych bitów operandu- and -shift ich wzorców bitowych do lewej lub prawej strony.  
@@ -94,10 +94,10 @@ Operatory arytmetyczne są używane do wykonywania wielu znanych operacje arytme
   
  Jeśli ustawisz `Option Strict Off`, jednak języka Visual Basic umożliwia niejawne konwersje zawężające została wykonana, chociaż może spowodować nieoczekiwane utraty danych lub precyzji. Z tego powodu zaleca się, że używasz `Option Strict On` podczas pisania kodu produkcyjnego. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Operatory arytmetyczne](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Operatory Bit Shift](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
- [Operatory porównania w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Operatory łączenia w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)  
- [Operatory logiczne i bitowe w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
- [Skuteczna kombinacja operatorów](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+## <a name="see-also"></a>Zobacz także
+- [Operatory arytmetyczne](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Operatory Bit Shift](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
+- [Operatory porównania w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operatory łączenia w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Operatory logiczne i bitowe w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Skuteczna kombinacja operatorów](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

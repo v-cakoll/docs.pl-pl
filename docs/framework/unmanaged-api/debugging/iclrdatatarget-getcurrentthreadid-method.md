@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03ce49466587d3e214c32e2a5cca89cdd7a72038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb1e0aec9ce746c3082ad9cc57b572cbca0fd7e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552268"
 ---
 # <a name="iclrdatatargetgetcurrentthreadid-method"></a>ICLRDataTarget::GetCurrentThreadID — Metoda
 Pobiera identyfikator systemu operacyjnego dla bieżącego wątku.  
@@ -40,10 +40,10 @@ HRESULT GetCurrentThreadID (
  [out] Wskaźnik do systemu operacyjnego identyfikator bieżącego wątku dla procesu docelowego.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli nie bieżącego wątku dla procesu docelowego `GetCurrentThreadID` metody może zakończyć się niepowodzeniem.  
+ Jeśli nie bieżącego wątku dla procesu docelowego `GetCurrentThreadID` metoda może zakończyć się niepowodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData.idl, ClrData.h  
   
@@ -51,5 +51,5 @@ HRESULT GetCurrentThreadID (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

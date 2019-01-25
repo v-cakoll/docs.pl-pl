@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 68fa7753be76b0681c40e540e86b11c89e7a8ca1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9c5e4133a3bc1f019ada00299df929c2e3915880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726588"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Obsługa automatyzacji interfejsu użytkownika dla standardowych kontrolek
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Ten temat zawiera informacje o [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] obsługi dla standardowych kontrolek w aplikacjach przeznaczonych dla [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], i [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] struktur.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48037342"
 |Przycisk|Grupa|  
 |Przycisk|CheckBox|  
 |Przycisk|Hyperlink|  
-|Przycisk|Przycisk podziału|  
+|Przycisk|SplitButton|  
 |Przycisk|CheckBox|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
@@ -49,7 +49,7 @@ ms.locfileid: "48037342"
 |Static|Tekst|  
 |Static|Obraz|  
 |SysIPAddress32|Niestandardowe|  
-|SysHeader32|Nagłówek/HeaderItem|  
+|SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|Lista|  
 |ListBox|Lista|  
@@ -89,8 +89,8 @@ ms.locfileid: "48037342"
 |SysPager|pokrętło|  
 |SysDateTimePick32|Niestandardowe|  
 |SysMonthCal32|Kalendarz|  
-|MS_WINNOTE|Etykietki narzędzi|  
-|VBBubble|Etykietki narzędzi|  
+|MS_WINNOTE|Tooltip|  
+|VBBubble|Tooltip|  
 |Pasek przewijania (jeśli jest używana jako kontrolkę autonomiczne)|Suwak|  
 |SuperGrid|Niestandardowe|  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48037342"
 |Elementu ScrollableControl|  
 |SoundPlayer|  
 |StatusBar|  
-|TabControl — / TabPage —|  
+|TabControl/TabPage|  
 |TextBox|  
 |Czasomierz|  
 |Pasek narzędzi|  
@@ -169,5 +169,5 @@ ms.locfileid: "48037342"
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types.md)

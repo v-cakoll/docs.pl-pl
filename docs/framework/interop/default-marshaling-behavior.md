@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aedc7b1941268184b71713d31913dbfbd8b74643
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689003"
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Marshaling międzyoperacyjny działa w regułach tego dyktować, jak dane skojarzone z parametrami metody zachowuje się jak przekazuje między zarządzanymi i niezarządzanymi pamięci. Te wbudowane reguły kontrolować takie kierowania działań jako przekształcenia typu danych, / / wywoływany można zmienić danych przekazanych do niego i zwracają te zmiany do obiektu wywołującego, a w ramach której okolicznościach Organizator udostępnia optymalizację wydajności.  
@@ -381,7 +381,7 @@ interface _Graphics {
 |-----------------------|--------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|**DATA**|  
 |<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**IDENTYFIKATOR GUID**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  Poniższy kod przedstawia definicję typy niezarządzanwe **data**, **GUID**, **dziesiętna**, i **OLE_COLOR** w typie Stdole2 Biblioteka.  
@@ -440,9 +440,9 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)  
- [Kopiowanie i przypinanie](copying-and-pinning.md)  
- [Domyślny marshaling dla tablic](default-marshaling-for-arrays.md)  
- [Domyślny marshaling dla obiektów](default-marshaling-for-objects.md)  
- [Domyślny marshaling dla ciągów](default-marshaling-for-strings.md)
+## <a name="see-also"></a>Zobacz także
+- [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)
+- [Kopiowanie i przypinanie](copying-and-pinning.md)
+- [Domyślny marshaling dla tablic](default-marshaling-for-arrays.md)
+- [Domyślny marshaling dla obiektów](default-marshaling-for-objects.md)
+- [Domyślny marshaling dla ciągów](default-marshaling-for-strings.md)

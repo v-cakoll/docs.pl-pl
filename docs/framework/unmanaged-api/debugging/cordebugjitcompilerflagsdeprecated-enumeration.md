@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca206f0da69eddd3e98b599f2813fa7985daf057
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ef262fcae117b27f06d4dba3b2087028b5cfa65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743260"
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a>CorDebugJITCompilerFlagsDeprecated — Wyliczenie
-To wyliczenie jest nieaktualne. Użyj `CORDEBUG_JIT_DEFAULT` członkiem [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) wyliczenie zamiast tego.  
+To wyliczenie jest przestarzałe. Użyj `CORDEBUG_JIT_DEFAULT` członkiem [cordebugjitcompilerflags —](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) wyliczenia zamiast tego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
 |`CORDEBUG_JIT_TRACK_DEBUG_INFO`|Zamiast nich należy używać słów kluczowych `CORDEBUG_JIT_DEFAULT`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -49,5 +49,5 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
   
  **Wersje programu .NET framework:** 1.0, 1.1  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

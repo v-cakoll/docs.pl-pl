@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9721d88c8ce138b19c98f113d9eb034c5e1c55dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd48fae74665f079100b128990656f3a6d002d43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586530"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>ICorDebugManagedCallback::CreateThread — Metoda
-Powiadamia debugera, że wątek rozpoczęła wykonywanie kodu zarządzanego.  
+Powiadamia debugera, czy wątek rozpoczęła wykonywanie kodu zarządzanego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,16 +38,16 @@ HRESULT CreateThread (
   
 #### <a name="parameters"></a>Parametry  
  `pAppDomain`  
- [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domeny aplikacji, która zawiera wątku.  
+ [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, która zawiera wątku.  
   
  `thread`  
  [in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Wątek będzie znajdować się na pierwszej instrukcji kodu zarządzanego do wykonania.  
+ Wątek zostanie umieszczony w pierwszej instrukcji kodu zarządzanego do wykonania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -55,5 +55,5 @@ HRESULT CreateThread (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

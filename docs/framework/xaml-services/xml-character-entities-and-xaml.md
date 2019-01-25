@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 03ce1645b859e9c3ebe470131ae2aee578cb366f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33564776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661363"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Jednostki znaków XML i XAML
 XAML używa encje znaków zdefiniowanych w pliku XML dla znaków specjalnych. W tym temacie opisano niektóre jednostki określonych znaków i ogólne uwagi dotyczące innych pojęć XML w XAML.  
@@ -62,8 +62,8 @@ XAML używa encje znaków zdefiniowanych w pliku XML dla znaków specjalnych. W 
 ## <a name="xml-processing-instructions"></a>Instrukcje przetwarzania XML  
  XAML obsługuje instrukcji przetwarzania XML według specyfikacji XML, co oznacza, że instrukcje muszą być przekazywane za pośrednictwem. Przetwarzanie w .NET Framework XAML Services XAML nie korzysta z żadnych instrukcji przetwarzania. Inne istniejącymi strukturami, które używają XAML również należy używać instrukcji przetwarzania z XAML.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Rozszerzenia znaczników i WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [XamlName, gramatyka](../../../docs/framework/xaml-services/xamlname-grammar.md)  
- [Znak odstępu przetwarzanie w XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XamlName, gramatyka](../../../docs/framework/xaml-services/xamlname-grammar.md)
+- [Znak odstępu przetwarzanie w XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModule Interface1
+title: ICorDebugModule, interfejs1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModule
@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db4a980929a644d2862a382f147505644313da7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eca28f16f0430e793ad0b91b01db609f835f0a4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671255"
 ---
-# <a name="icordebugmodule-interface1"></a>ICorDebugModule Interface1
-Reprezentuje wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) moduł, który jest plik wykonywalny lub biblioteki dołączanej (dynamicznie DLL).  
+# <a name="icordebugmodule-interface1"></a>ICorDebugModule, interfejs1
+Reprezentuje wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) moduł, który jest plikiem wykonywalnym lub biblioteki dołączanej (dynamicznie DLL).  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CreateBreakpoint, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-createbreakpoint-method.md)|Nie jest zaimplementowana.|  
-|[EnableClassLoadCallbacks, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enableclassloadcallbacks-method.md)|Określa, czy [ICorDebugManagedCallback::LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) i [ICorDebugManagedCallback::UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) wywołań zwrotnych są nazywane dla tego modułu.|  
-|[EnableJITDebugging, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enablejitdebugging-method.md)|Określa, czy przy użyciu kompilatora just in time (JIT) zachowuje informacji debugowania dla metod w ramach tego modułu.|  
-|[GetAssembly, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)|Pobiera zestaw zawierający dla tego modułu.|  
-|[GetBaseAddress, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getbaseaddress-method.md)|Pobiera adres podstawowy modułu.|  
+|[CreateBreakpoint, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-createbreakpoint-method.md)|Nie zaimplementowano.|  
+|[EnableClassLoadCallbacks, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enableclassloadcallbacks-method.md)|Określa, czy [ICorDebugManagedCallback::LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) i [ICorDebugManagedCallback::UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) wywołania zwrotne są wywoływane dla tego modułu.|  
+|[EnableJITDebugging, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enablejitdebugging-method.md)|Określa, czy kompilator just-in-time (JIT), zachowuje informacje o debugowaniu dla metod, w tym module.|  
+|[GetAssembly, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)|Pobiera zawierające zestaw dla tego modułu.|  
+|[GetBaseAddress, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getbaseaddress-method.md)|Pobiera adres podstawowy moduł.|  
 |[GetClassFromToken, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md)|Pobiera ICorDebugClass z metadanych.|  
 |[GetEditAndContinueSnapshot, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-geteditandcontinuesnapshot-method.md)|Przestarzałe.|  
-|[GetFunctionFromRVA, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getfunctionfromrva-method.md)|Nie jest zaimplementowana.|  
+|[GetFunctionFromRVA, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getfunctionfromrva-method.md)|Nie zaimplementowano.|  
 |[GetFunctionFromToken, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getfunctionfromtoken-method.md)|Pobiera funkcję, która jest określona przez token metadanych.|  
 |[GetGlobalVariableValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getglobalvariablevalue-method.md)|Pobiera obiekt wartości dla określonej zmiennej globalnej.|  
-|[GetMetaDataInterface, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getmetadatainterface-method.md)|Pobiera metadane wskaźnika interfejsu, który może służyć do sprawdzenia metadane dla modułu.|  
+|[GetMetaDataInterface, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getmetadatainterface-method.md)|Pobiera metadane wskaźnik interfejsu, który może służyć do sprawdzenia metadane dla modułu.|  
 |[GetName, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)|Pobiera nazwę pliku modułu.|  
-|[GetProcess, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getprocess-method.md)|Pobiera zawierający procesu dla tego modułu.|  
-|[GetSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)|Pobiera moduł rozmiar w bajtach.|  
+|[GetProcess, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getprocess-method.md)|Pobiera zawierającego procesu dla tego modułu.|  
+|[GetSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)|Pobiera rozmiar modułu w bajtach.|  
 |[GetToken, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-gettoken-method.md)|Pobiera token dla wpisu tabeli dla tego modułu.|  
 |[IsDynamic, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-isdynamic-method.md)|Wskazuje, czy moduł jest dynamiczny.|  
 |[IsInMemory, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-isinmemory-method.md)|Wskazuje, czy ten moduł istnieje tylko w pamięci.|  
@@ -51,10 +51,10 @@ Reprezentuje wspólnego języka środowiska uruchomieniowego (języka wspólnego
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -62,6 +62,6 @@ Reprezentuje wspólnego języka środowiska uruchomieniowego (języka wspólnego
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

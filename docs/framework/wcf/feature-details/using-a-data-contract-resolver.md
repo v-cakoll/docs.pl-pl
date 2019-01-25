@@ -2,20 +2,20 @@
 title: Używanie mechanizmu rozpoznawania kontraktów danych
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: 467977374e9e2b4a369be7ce467ced1b0dca1195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8859a343c5dcc3b88edf4840a759fbed52bbf984
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658835"
 ---
 # <a name="using-a-data-contract-resolver"></a>Używanie mechanizmu rozpoznawania kontraktów danych
-Mechanizmu rozpoznawania kontraktów danych umożliwia konfigurowanie znane typy dynamicznie. Znane typy są wymagane w przypadku serializacji lub deserializacji typu nie jest oczekiwany przez kontraktu danych. Aby uzyskać więcej informacji na temat znanych typów, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Statycznie zwykle są określone znane typy. Oznacza to, czy trzeba znać wszystkie możliwe typy operacji może pojawić się podczas wykonania operacji. Brak scenariuszy, w których nie dotyczy ważne jest możliwość dynamicznie Określ znanych typów.  
+Mechanizmu rozpoznawania kontraktów danych umożliwia dynamicznie konfigurować znane typy. Znane typy są wymagane, gdy serializacji lub deserializacji typu nie jest oczekiwany przez kontraktu danych. Aby uzyskać więcej informacji na temat znanych typów, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Statycznie zwykle są określone znane typy. Oznacza to, czy trzeba znać możliwych typów operacji może pojawić się podczas wykonywania operacji. Istnieją scenariusze, w których nie jest to prawdą, i możliwość dynamicznie określić znanych typów jest ważne.  
   
 ## <a name="creating-a-data-contract-resolver"></a>Tworzenie mechanizmu rozpoznawania kontraktów danych  
- Tworzenie mechanizmu rozpoznawania kontraktów danych wymaga wykonania dwóch metod <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> i <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Te dwie metody wdrożenia wywołania zwrotne, które są używane podczas serializacji i deserializacji, odpowiednio. <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> Metoda jest wywoływana podczas serializacji i pobiera typu kontraktu danych i go do mapy `xsi:type` nazwę i przestrzeń nazw. <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> Metoda jest wywoływana podczas deserializacji i przyjmuje `xsi:type` nazwę i przestrzeń nazw i jest rozpoznawany jako typ kontraktu danych. Obie te metody mają `knownTypeResolver` parametr, który może służyć do korzysta z domyślnego znany typ programu rozpoznawania nazw w implementacji.  
+ Tworzenie mechanizmu rozpoznawania kontraktów danych wymaga implementacji dwóch metod <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> i <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Te dwie metody wdrożenia wywołania zwrotne, które są używane podczas serializacji i deserializacji, odpowiednio. <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> Metoda jest wywoływana podczas serializacji i przyjmuje typ kontraktu danych i mapowany do `xsi:type` nazwy i przestrzeni nazw. <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> Metoda jest wywoływana podczas deserializacji i przyjmuje `xsi:type` nazwy i przestrzeni nazw i jest rozpoznawana jako typ kontraktu danych. Obie te metody mają `knownTypeResolver` parametr, który może służyć do Użyj domyślnej znany typ programu rozpoznawania nazw w danej implementacji.  
   
- Poniższy przykład przedstawia sposób wykonania <xref:System.Runtime.Serialization.DataContractResolver> do mapowania do i z typu kontraktu danych o nazwie `Customer` pochodzi od typu kontraktu danych `Person`.  
+ Poniższy przykład pokazuje, jak zaimplementować <xref:System.Runtime.Serialization.DataContractResolver> do mapowania do i z typu kontraktu danych o nazwie `Customer` pochodzi od typu kontraktu danych `Person`.  
   
 ```csharp  
 public class MyCustomerResolver : DataContractResolver  
@@ -49,13 +49,13 @@ public class MyCustomerResolver : DataContractResolver
 }  
 ```  
   
- Po zdefiniowaniu <xref:System.Runtime.Serialization.DataContractResolver> służy przez przekazanie jej <xref:System.Runtime.Serialization.DataContractSerializer> konstruktora, jak pokazano w poniższym przykładzie.  
+ Po zdefiniowaniu <xref:System.Runtime.Serialization.DataContractResolver> służy przez przekazanie jej do <xref:System.Runtime.Serialization.DataContractSerializer> konstruktora, jak pokazano w poniższym przykładzie.  
   
 ```  
 XmlObjectSerializer serializer = new DataContractSerializer(typeof(Customer), null, Int32.MaxValue, false, false, null, new MyCustomerResolver());  
 ```  
   
- Można określić <xref:System.Runtime.Serialization.DataContractSerializer> w wywołaniu <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A> lub <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A> metod, jak pokazano w poniższym przykładzie.  
+ Można określić <xref:System.Runtime.Serialization.DataContractSerializer> w wywołaniu <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A> lub <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A> metody, jak pokazano w poniższym przykładzie.  
   
 ```  
 MemoryStream ms = new MemoryStream();  
@@ -67,7 +67,7 @@ ms.Position = 0;
 Console.WriteLine(((Customer)serializer.ReadObject(XmlDictionaryReader.CreateDictionaryReader(XmlReader.Create(ms)), false, new MyCustomerResolver()));  
 ```  
   
- Lub ustaw ją na <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> jak pokazano w poniższym przykładzie.  
+ Lub ustaw go na <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> jak pokazano w poniższym przykładzie.  
   
 ```  
 ServiceHost host = new ServiceHost(typeof(MyService));  
@@ -85,9 +85,9 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- Mechanizmu rozpoznawania kontraktów danych można określić deklaratywnie zaimplementowanie atrybut, który może odnosić się do usługi.  Aby uzyskać więcej informacji, zobacz [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) próbki. W tym przykładzie implementuje atrybutu o nazwie "KnownAssembly" dodaje program rozpoznawania nazw kontraktu danych niestandardowych do zachowania usługi.  
+ Mechanizmu rozpoznawania kontraktów danych można określić sposób deklaratywny implementując atrybut, który można zastosować do usługi.  Aby uzyskać więcej informacji, zobacz [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) próbki. W tym przykładzie implementuje atrybutu o nazwie "KnownAssembly" dodająca mechanizmu rozpoznawania kontraktów danych niestandardowych do zachowania usługi.  
   
-## <a name="see-also"></a>Zobacz też  
- [Znane typy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [Przykład elementu DataContractSerializer](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)  
- [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)
+## <a name="see-also"></a>Zobacz także
+- [Znane typy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Przykład elementu DataContractSerializer](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)
+- [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)

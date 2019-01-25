@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d315355db546c5be45d40fe0c5bcfc46d0f6ead8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7c20292a906ecfbf08311a616e05a02cd8f8a25c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731702"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modyfikatory dostępu (Przewodnik programowania w języku C#)
 Wszystkie typy i elementy członkowskie typu ma poziom ułatwień dostępu, który kontroluje, czy mogą być używane z innym kodem w swoim zestawie lub innych zestawów. Następujące modyfikatory dostępu służy do określania dostępność typu lub elementu członkowskiego, gdy trzeba je zadeklarować:  
@@ -74,17 +74,17 @@ Wszystkie typy i elementy członkowskie typu ma poziom ułatwień dostępu, któ
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Interfejsy](../../../csharp/programming-guide/interfaces/index.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
-- [public](../../../csharp/language-reference/keywords/public.md)  
-- [internal](../../../csharp/language-reference/keywords/internal.md)  
-- [protected](../../../csharp/language-reference/keywords/protected.md)  
-- [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)  
-- [private protected](../../../csharp/language-reference/keywords/private-protected.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
-- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Interfejsy](../../../csharp/programming-guide/interfaces/index.md)
+- [private](../../../csharp/language-reference/keywords/private.md)
+- [public](../../../csharp/language-reference/keywords/public.md)
+- [internal](../../../csharp/language-reference/keywords/internal.md)
+- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)
+- [private protected](../../../csharp/language-reference/keywords/private-protected.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
+- [struct](../../../csharp/language-reference/keywords/struct.md)
 - [interface](../../../csharp/language-reference/keywords/interface.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 7ca375935c1dfcdb406257ece1a9dfd18851dddf
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f046e1142209b519ecf71e67a11592f9aa578f84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666712"
 ---
 # <a name="ltswitchesgt-element"></a>&lt;przełączniki&gt; — Element
 Zawiera przełączniki śledzenia i poziomu, gdzie są ustawione przełączniki śledzenia.  
   
  \<Konfiguracja >  
-\<System.Diagnostics >  
+\<system.diagnostics>  
 \<przełączniki >  
   
 ## <a name="syntax"></a>Składnia  
@@ -68,8 +68,8 @@ Zawiera przełączniki śledzenia i poziomu, gdzie są ustawione przełączniki 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Diagnostics.Switch>  
- <xref:System.Diagnostics.TraceSwitch>  
- <xref:System.Diagnostics.BooleanSwitch>  
- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Diagnostics.Switch>
+- <xref:System.Diagnostics.TraceSwitch>
+- <xref:System.Diagnostics.BooleanSwitch>
+- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: demonstrowanie dziedziczenia Visual'
+title: 'Przewodnik: Demonstrowanie dziedziczenia wizualizacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 3e1aced8ecb4f85dd81c8a928422cbb7d0b10dcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564334"
 ---
-# <a name="walkthrough-demonstrating-visual-inheritance"></a>Wskazówki: demonstrowanie dziedziczenia Visual
+# <a name="walkthrough-demonstrating-visual-inheritance"></a>Przewodnik: Demonstrowanie dziedziczenia wizualizacji
 Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i dodać nowe kontrolki. W tym instruktażu utworzysz formularza podstawowego i skompiluj go do biblioteki klas. Będzie zaimportować tej biblioteki klas do innego projektu i utworzyć nowy formularz, który dziedziczy z formularza podstawowego. Z tego instruktażu dowiesz się jak:  
   
 -   Utwórz projekt biblioteki klas zawierający formularz podstawowy.  
@@ -161,9 +161,9 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
 12. Naciśnij klawisz F5, aby uruchomić aplikację i przyjrzeć się zachowaniu odziedziczony formularz.  
   
 ## <a name="next-steps"></a>Następne kroki  
- Dziedziczenie w przypadku kontrolek użytkownika działa w taki sam sposób. Otwórz nowy projekt biblioteki klas i Dodaj kontrolkę użytkownika. Umieść formanty składników na nim i skompiluj projekt. Otwórz inny nowy projekt biblioteki klas i Dodaj odwołanie do biblioteki klas skompilowany. Ponadto spróbuj dodać odziedziczoną kontrolkę (za pośrednictwem **Dodaj nowe elementy** okno dialogowe) do projektu i przy użyciu **selektor dziedziczenia**. Dodaj formant użytkownika, a następnie zmień `Inherits` (`:` w języku Visual C#) instrukcja. Aby uzyskać więcej informacji, zobacz [porady: dziedziczenie formularzy Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+ Dziedziczenie w przypadku kontrolek użytkownika działa w taki sam sposób. Otwórz nowy projekt biblioteki klas i Dodaj kontrolkę użytkownika. Umieść formanty składników na nim i skompiluj projekt. Otwórz inny nowy projekt biblioteki klas i Dodaj odwołanie do biblioteki klas skompilowany. Ponadto spróbuj dodać odziedziczoną kontrolkę (za pośrednictwem **Dodaj nowe elementy** okno dialogowe) do projektu i przy użyciu **selektor dziedziczenia**. Dodaj formant użytkownika, a następnie zmień `Inherits` (`:` w języku Visual C#) instrukcja. Aby uzyskać więcej informacji, zobacz [jak: Dziedziczenie formularzy Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: dziedziczenie formularzy Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Dziedziczenie formularzy Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+- [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Windows Forms](../../../../docs/framework/winforms/index.md)

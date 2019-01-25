@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690621"
 ---
 # <a name="using-threads-and-threading"></a>Używanie wątków i wątkowości
 
@@ -24,11 +24,11 @@ Aplikacje znajdujące się użycie wielowątkowość reakcji użytkownika, danyc
 > [!NOTE]
 > Aby uzyskać większą kontrolę nad zachowaniem aplikacji wątki, można zarządzać wątki samodzielnie. Jednak począwszy od programu .NET Framework 4, programowanie wielowątkowe zostało znacznie uproszczone dzięki <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> klas, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), nowej kolekcji współbieżnych klas w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeń nazw, a nowy model programowania, który opiera się na koncepcji zadania, a nie wątków. Aby uzyskać więcej informacji, zobacz [programowania równoległego](../parallel-programming/index.md) i [Biblioteka zadań równoległych (TPL)](../parallel-programming/task-parallel-library-tpl.md).
 
-## <a name="how-to-create-and-start-a-new-thread"></a>Porady: tworzenie i uruchamianie nowego wątku
+## <a name="how-to-create-and-start-a-new-thread"></a>Instrukcje: Utwórz i Rozpocznij nowy wątek
 
 Utwórz nowy wątek, tworząc nowe wystąpienie klasy <xref:System.Threading.Thread?displayProperty=nameWithType> klasy i podając nazwę metody, która ma zostać wykonany w nowym wątku do konstruktora. Aby rozpocząć utworzony wątek, wywołaj <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> metody. Aby uzyskać więcej informacji i przykładów, zobacz [Tworzenie wątków i przekazywanie danych na czas rozpoczęcia](creating-threads-and-passing-data-at-start-time.md) artykułu i <xref:System.Threading.Thread> dokumentacja interfejsu API.
 
-## <a name="how-to-stop-a-thread"></a>Porady: zatrzymywanie wątków
+## <a name="how-to-stop-a-thread"></a>Instrukcje: Zatrzymywanie wątków
 
 Aby zakończyć wykonywanie wątku, należy użyć <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> metody. Ta metoda wywołuje <xref:System.Threading.ThreadAbortException> w wątku, na którym jest wywoływana. Aby uzyskać więcej informacji, zobacz [niszczenie wątków](destroying-threads.md).
 
@@ -36,7 +36,7 @@ Począwszy od programu .NET Framework 4, można użyć <xref:System.Threading.Ca
 
 Użyj <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> metody wątek wywołujący, poczekaj na zakończenie wątku, na którym jest wywoływana metoda.
 
-## <a name="how-to-pause-or-interrupt-a-thread"></a>Porady: wstrzymanie lub przerwanie wątku
+## <a name="how-to-pause-or-interrupt-a-thread"></a>Instrukcje: Wstrzymaj lub przerwanie wątku
 
 Możesz użyć <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> metodę, aby wstrzymać bieżącego wątku na określoną ilość czasu. Można przerwać zablokowany wątek wywołując <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> metody. Aby uzyskać więcej informacji, zobacz [wstrzymywanie i przerywanie wątków](pausing-and-resuming-threads.md).
 
@@ -54,6 +54,6 @@ W poniższej tabeli przedstawiono niektóre <xref:System.Threading.Thread> wła�
 
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Threading.Thread?displayProperty=nameWithType>  
-- [Wątki i wątkowość](threads-and-threading.md)  
-- [Programowanie równoległe](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>
+- [Wątki i wątkowość](threads-and-threading.md)
+- [Programowanie równoległe](../parallel-programming/index.md)

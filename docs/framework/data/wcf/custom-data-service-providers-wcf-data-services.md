@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: 9c4b3fa3a706f8dc0ff072520dd91a74bc9d0a2c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0f2e7626cb0526ac897853374b483ad09c20d368
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712620"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Niestandardowi dostawcy usługi danych (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obejmuje zestaw dostawcy, która pozwala na zdefiniowanie modelu danych na podstawie typów danych z późnym wiązaniem.  
   
-|Dostawcy|Opis|  
+|Dostawca|Opis|  
 |--------------|-----------------|  
 |Dostawca metadanych|Jest to dostawca usługi danych niestandardowych core umożliwia zdefiniowanie niestandardowego modelu danych w czasie wykonywania przez zaimplementowanie <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interfejsu.|  
 |Dostawcy zapytań|Ten dostawca umożliwia wykonywanie zapytań względem modelu danych niestandardowych, która jest zdefiniowana za pomocą <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interfejsu. Dostawcy zapytań jest tworzony przez zaimplementowanie <xref:System.Data.Services.Providers.IDataServiceQueryProvider> interfejsu.|  
@@ -24,7 +24,7 @@ ms.locfileid: "44251761"
   
  Aby uzyskać więcej informacji, zobacz artykuł [dostawcy usługi danych niestandardowych](https://go.microsoft.com/fwlink/?LinkID=186850) i [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Toolkit dostawcy w [OData SDK](https://go.microsoft.com/fwlink/?LinkId=186069).  
   
-## <a name="see-also"></a>Zobacz też  
- [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [Dostawca programu Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
- [Dostawca odbicia](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [Dostawca programu Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+- [Dostawca odbicia](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)

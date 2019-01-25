@@ -2,12 +2,12 @@
 title: 'Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: c95736f184f3298fb7142b8f8c7b29c65b3f7227
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9788973df42b91aa2da690c5bf1b0f6b4d41b127
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514780"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)
 W tym przykładzie pokazano, jak można scalić plików, które zawierają wiersze tekstu, a następnie Sortuj wyniki. W szczególności pokazują sposób wykonywania prostych łączenia, Unii i część wspólną na dwa zestawy wierszy tekstu.  
@@ -171,7 +171,7 @@ class MergeStrings
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego, za pomocą odwołania do System.Core.dll i `using` dyrektywy dla przestrzeni nazw System.Linq i System.IO.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ i ciągi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be4935d74affa227386aa6c63dad13e7e2f7d3dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 052773c615bcc4ddb5b735ae8164d44ed70bd935
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513493"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Asynchroniczny wzorzec oparty na zdarzeniach (EAP)
 
@@ -43,7 +43,7 @@ Istnieją różne sposoby do udostępnienia asynchronicznego cech dla kodu klien
  [Instrukcje: Implementacja klienta wzorca asynchronicznego opartego na zdarzeniach](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
  W tym artykule opisano sposób tworzenia klienta, który używa składnika, który implementuje wzorzec asynchroniczny oparty na zdarzeniach.
   
- [Instrukcje: Używanie składników obsługujących wzorzec asynchroniczny oparty na zdarzeniach](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ [Instrukcje: Używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  Opisuje sposób używania składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach.  
   
 ## <a name="reference"></a>Tematy pomocy
@@ -67,6 +67,6 @@ Istnieją różne sposoby do udostępnienia asynchronicznego cech dla kodu klien
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zarządzana wątkowość — najlepsze rozwiązania](../threading/managed-threading-best-practices.md)  
-- [Zdarzenia](../events/index.md)  
+- [Zarządzana wątkowość — najlepsze rozwiązania](../threading/managed-threading-best-practices.md)
+- [Zdarzenia](../events/index.md)
 - [Wzorce projektowania programowania asynchronicznego](index.md)

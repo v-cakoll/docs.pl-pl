@@ -21,12 +21,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: 8c349104ed566e9a663afe01da3838f0167dc74e
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 2eb1afb1400b8770c4c1ddb0ec90bb44979e702f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662806"
 ---
 # <a name="integer-data-type-visual-basic"></a>Integer — typ danych (Visual Basic)
 Przechowuje 32-bitowe (4-bajtowe) liczby całkowite ze znakiem z zakresu wartości od -2 147 483,648 do 2 147 483 647.  
@@ -95,10 +95,10 @@ k = 5.5
 
 ## <a name="see-also"></a>Zobacz także
 
-<xref:System.Int32?displayProperty=nameWithType>   
- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
- [Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [Short, typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int32?displayProperty=nameWithType>
+- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+- [Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [Short, typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

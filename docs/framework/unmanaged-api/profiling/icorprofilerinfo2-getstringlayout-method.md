@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d1bd732a82028afe809f4c2141e1d61668eae1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b87444165f0504964b6489beb562ca2e8bd4697e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524289"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout — Metoda
-Pobiera informacje o układzie z obiektem ciągu. Ta metoda jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]i zostało zastąpione przez [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) metody.  
+Pobiera informacje o układ obiektu ciągu. Ta metoda jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]i są zastępowane [icorprofilerinfo3::getstringlayout2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,30 +38,30 @@ HRESULT GetStringLayout(
   
 #### <a name="parameters"></a>Parametry  
  `pBufferLengthOffset`  
- [out] Wskaźnik do przesunięcie lokalizacji względem `ObjectID` wskaźnika, która przechowuje długość ciągu. Długość jest przechowywana jako `DWORD`.  
+ [out] Wskaźnik do przesunięcia lokalizacji względem `ObjectID` wskaźnika, który przechowuje długość ciągu. Długość jest przechowywany jako `DWORD`.  
   
 > [!NOTE]
->  Ten parametr zwraca długość ciągu, nie długość buforu. Długość buforu nie jest już dostępny.  
+>  Ten parametr zwraca długość ciągu, nie długość buforu. Długość buforu nie jest już dostępna.  
   
  `PStringLengthOffset`  
- [out] Wskaźnik do przesunięcie lokalizacji względem `ObjectID` wskaźnika, przechowujący długość sam ciąg. Długość jest przechowywana jako `DWORD`.  
+ [out] Wskaźnik do przesunięcia lokalizacji względem `ObjectID` wskaźnika, która przechowuje długość ciągu, sam. Długość jest przechowywany jako `DWORD`.  
   
  `pBufferOffset`  
- [out] Wskaźnik do przesunięcie buforu względem `ObjectID` wskaźnika, zawierający ciąg znaki dwubajtowe.  
+ [out] Wskaźnik do przesunięcia buforu względem `ObjectID` wskaźnika, który przechowuje ciąg znaków dwubajtowych.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetStringLayout` Metoda pobiera przesunięcia względem `ObjectID` wskaźnik lokalizacji, w których przechowywane są następujące:  
+ `GetStringLayout` Metoda pobiera przesunięcia względem `ObjectID` wskaźnika, lokalizacji, w których przechowywane są następujące:  
   
 -   Długość buforu ciągu.  
   
--   Długość ciągu samej siebie.  
+-   Długość ciągu, sam.  
   
--   Bufor, który zawiera ciąg rzeczywiste znaki dwubajtowe.  
+-   Bufor, który zawiera rzeczywiste ciąg znaków dwubajtowych.  
   
- Ciągi może być zerem.  
+ Ciągi mogą być zakończony znakiem null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -69,6 +69,6 @@ HRESULT GetStringLayout(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

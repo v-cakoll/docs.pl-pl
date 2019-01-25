@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf56a2720ab407d05b8356280913445c15a17020
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 97bb5912ec4d384260e3809166efacded8e2b389
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679100"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt; — Element
 Określa, czy data i godzina metod analizowania użyć skorygowany zbiór reguł do analizowania ciągów daty, które zawierają dzień, miesiąc, godzinę i oznaczenie AM/PM.  
   
  \<Konfiguracja >  
  \<runtime>  
-\<EnableAmPmParseAdjustment >  
+\<EnableAmPmParseAdjustment>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -76,11 +76,11 @@ Określa, czy data i godzina metod analizowania użyć skorygowany zbiór reguł
   
  W poniższej tabeli przedstawiono różnice w <xref:System.DateTime> wartość przy <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> metoda służy do analizowania ciągu "" 4/10 6 AM"za pomocą `<EnableAmPmParseAdjustment>` elementu `enabled` właściwość ustawioną na"0"lub"1". Przyjęto założenie, że dzisiaj jest 5 stycznia 2017 r. i wyświetla datę tak, jakby jest formatowana przy użyciu ciągu formatu "G" określonej kultury.  
   
-|Nazwa kultury|włączone = "0"|włączone = "1"|  
+|Nazwa kultury|enabled="0"|enabled="1"|  
 |------------------|------------------|------------------|  
 |en-US|2017-1-5 4:00:00 AM|2017-10/4 6:00:00 AM|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
-## <a name="see-also"></a>Zobacz też  
-- [\<środowisko uruchomieniowe > Element](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
+## <a name="see-also"></a>Zobacz także
+- [\<środowisko uruchomieniowe > Element](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
 - [\<Konfiguracja > Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

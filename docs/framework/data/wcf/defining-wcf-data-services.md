@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
-ms.openlocfilehash: c0c9010a71877d2c9757a2c9cf2d5c1fec8aedf7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ac75f5fd91f68d9403dc7b42325bf8970f0c6794
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512300"
 ---
 # <a name="defining-wcf-data-services"></a>Definiowanie usług danych WCF
 
@@ -57,7 +57,7 @@ W tej sekcji opisano sposób tworzenia i konfigurowania usług danych WCF, aby u
 
  W tym artykule opisano opcjonalne funkcje protokołu OData, które nie są obecnie implementowane w usługach danych programu WCF.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Uzyskiwanie dostępu do zasobów usługi danych](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)

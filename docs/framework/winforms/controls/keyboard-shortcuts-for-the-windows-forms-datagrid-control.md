@@ -5,51 +5,51 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: c05ddd68beeffe70e048a439929fb31454812612
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf79fb5594410fc479b0e2dd6f1663715e09af86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509535"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Skróty klawiaturowe dla formantu DataGrid formularzy systemu Windows
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcje do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> formantu są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- W poniższej tabeli przedstawiono skróty klawiaturowe, które mogą być używane do nawigacji w formularzach systemu Windows <xref:System.Windows.Forms.DataGrid> formant:  
+ W poniższej tabeli przedstawiono skróty klawiaturowe, które mogą służyć do nawigacji w formularzach Windows <xref:System.Windows.Forms.DataGrid> sterowania:  
   
 |Akcja|Skrót|  
 |------------|--------------|  
-|Kończy wpis do komórki i Przenieś w dół do następnej komórki.<br /><br /> Jeśli koncentruje się na łącze tabeli podrzędnej, przejdź do tej tabeli.|ENTER|  
-|Anulowanie edytowania komórki w trybie edycji komórki.<br /><br /> Jeśli w ramki zaznaczenia anulować edycji w wierszu.|ESC|  
+|Zakończ wprowadzanie komórki i Przenieś w dół do następnej komórki.<br /><br /> Jeśli koncentruje się na łączu tabeli podrzędnej, przejdź do tej tabeli.|ENTER|  
+|Anuluj edycję w komórce w trybie edycji komórki.<br /><br /> Jeśli w ramki zaznaczenia anulować edycji w wierszu.|ESC|  
 |Usuń znak przed punkt wstawiania podczas edytowania komórki.|BACKSPACE|  
-|Usuń znak od punktu wstawiania podczas edytowania komórki.|DELETE|  
-|Przejście do pierwszej komórki w bieżącym wierszu.|STRONA GŁÓWNA|  
+|Usuń znak od punktu wstawiania, podczas edytowania komórki.|DELETE|  
+|Przenieś do pierwszej komórki w bieżącym wierszu.|STRONA GŁÓWNA|  
 |Przejście do ostatniej komórki w bieżącym wierszu.|END|  
-|Wyróżnij znaków w bieżącej komórki i umieść punkt wstawiania na końcu linii. Takie samo zachowanie jako dwukrotnie komórki.|F2|  
-|Jeśli fokus jest ustawiony w komórce, przejdź do następnej komórki w wierszu.<br /><br /> Jeśli koncentruje się na ostatniej komórki w wierszu, Przenieś pierwszy link tabeli podrzędnej wiersza i rozwiń go.<br /><br /> Jeśli koncentruje się na łączu podrzędnym, przejdź do następnego łączu podrzędnym.<br /><br /> Jeśli koncentruje się na ostatniej łączu podrzędnym, przejdź do pierwszej komórki następnego wiersza.|TAB|  
-|Jeśli fokus jest ustawiony w komórce, przejdź do poprzedniej komórki w wierszu.<br /><br /> Koncentruje się na pierwszej komórki w wierszu, przejść do ostatniego łącza tabeli podrzędnych poprzedniego wiersza, czy przejście do ostatniej komórki poprzedniego wiersza.<br /><br /> Jeśli koncentruje się na łączu podrzędnym, przejdź do poprzedniej konsolidacji podrzędnych.<br /><br /> Jeśli koncentruje się na pierwszym łączu podrzędnym, przejdź do ostatniego komórki poprzedniego wiersza.|SHIFT+TAB|  
-|Przenieś do następnego formantu w kolejności tabulacji.|CTRL+TAB|  
-|Przenieś do poprzedniego formantu w kolejności tabulacji.|CTRL+SHIFT+TAB|  
-|Przenieś w górę do tabeli nadrzędnej w tabeli podrzędnej. Samo jak kliknięcie przycisku Wstecz.|ALT + STRZAŁKA W LEWO|  
-|Rozwiń łącza tabeli podrzędnej. ALT + Strzałka w dół rozwija wszystkie łącza, a nie tylko wybranych.|ALT + Strzałka w dół lub CTRL + ZNAK PLUS|  
-|Zwiń łącza tabeli podrzędnej. ALT + Strzałka w górę Zwija wszystkie łącza, a nie tylko wybranych.|ALT + Strzałka w górę lub CTRL + ZNAK MINUS|  
-|Przenieś do najdalej niepuste w kierunku strzałki.|CTRL + STRZAŁKA|  
-|Rozszerz wybór o jeden wiersz w kierunku strzałka (z wyjątkiem łącza tabeli podrzędnej).|SHIFT + STRZAŁKA W GÓRĘ LUB W DÓŁ, STRZAŁKI|  
-|Rozszerz wybór do najdalej niepustych wierszy w kierunku strzałka (z wyjątkiem łącza tabeli podrzędnej).|CTRL + SHIFT + W GÓRĘ/STRZAŁKA W DÓŁ|  
-|Przenieś do lewej górnej komórki.|CTRL + HOME|  
-|Przenieś do prawej dolnej komórki.|CTRL+END|  
-|Rozszerz wybór do górnego wiersza.|CTRL + SHIFT + HOME|  
-|Rozszerz wybór do dołu.|CTRL + SHIFT + END|  
-|Wybierz bieżącego wiersza (z wyjątkiem łącza tabeli podrzędnej).|SHIFT+SPACEBAR|  
-|Wybierz całą siatki (z wyjątkiem łącza tabeli podrzędnej).|CTRL+A|  
+|Wyróżnij znaków w bieżącej komórki i umieść punkt wstawiania na końcu wiersza. Takie samo zachowanie jako dwukrotne kliknięcie komórki.|F2|  
+|Jeśli fokus znajduje się w komórce, przejdź do następnej komórki w wierszu.<br /><br /> Jeśli fokus znajduje się na ostatniej komórki w wierszu, Przenieś do pierwszego łącza tabeli podrzędnej wiersza i rozwiń go.<br /><br /> Jeśli skoncentrować się na łączu podrzędnym, przejdź do następnego łącza podrzędnych.<br /><br /> Jeśli fokus znajduje się w ostatniej łącze podrzędnych, przejdź do pierwszej komórki następny wiersz.|TAB|  
+|Jeśli fokus znajduje się w komórce, przejdź do poprzedniej komórki w wierszu.<br /><br /> Jeśli fokus znajduje się w pierwszej komórki w wierszu, przenieść do ostatniego linku tabeli podrzędnych poprzedniego wiersza lub przejście do ostatniej komórki poprzedniego wiersza.<br /><br /> Jeśli fokus znajduje się na łączu podrzędnym, przejdź do poprzedniej konsolidacji podrzędnych.<br /><br /> Jeśli fokus na pierwszy link podrzędnych, przejście do ostatniej komórki poprzedniego wiersza.|SHIFT+TAB|  
+|Przenieś do następnej kontrolki w kolejności tabulacji.|CTRL+TAB|  
+|Przenieś poprzedni formant w kolejności tabulacji.|CTRL+SHIFT+TAB|  
+|Przenieś w górę do tabeli nadrzędnej w tabeli podrzędnej. Takie samo zachowanie, jak kliknięcie przycisku Wstecz.|ALT + STRZAŁKA W LEWO|  
+|Rozwiń węzeł podrzędny tabeli stanowi Link. ALT + Strzałka w dół rozwija wszystkie łącza, a nie tylko tych, które zostały wybrane.|ALT + Strzałka w dół lub CTRL + ZNAK PLUS|  
+|Zwiń łącza tabeli podrzędnej. ALT + Strzałka w górę Zwija wszystkie łącza, a nie tylko tych, które zostały wybrane.|ALT + Strzałka w górę lub CTRL + znak minus|  
+|Przenieś do najdalej niepustych komórek w kierunku strzałki.|CTRL + STRZAŁKA|  
+|Rozszerzenie zaznaczenia o jeden wiersz w kierunku strzałka (z wyjątkiem podrzędny tabeli stanowi Link).|SHIFT + STRZAŁKA W GÓRĘ/STRZAŁKA|  
+|Rozszerzenie zaznaczenia do najdalej niepustych wierszy w kierunku strzałka (z wyjątkiem podrzędny tabeli stanowi Link).|CTRL + SHIFT + W GÓRĘ/STRZAŁKA W DÓŁ|  
+|Przenieś do lewej górnej komórki.|CTRL+HOME|  
+|Przenieś do dolnej prawej komórce.|CTRL+END|  
+|Rozszerzenie zaznaczenia do górny wiersz.|CTRL+SHIFT+HOME|  
+|Rozszerz zaznaczenie do dołu.|CTRL+SHIFT+END|  
+|Wybierz bieżącego wiersza (z wyjątkiem podrzędny tabeli stanowi Link).|SHIFT+SPACEBAR|  
+|Zaznacz całą siatki (z wyjątkiem podrzędny tabeli stanowi Link).|CTRL+A|  
 |Wyświetl nadrzędny wiersza w tabeli podrzędnej.|CTRL + PAGE DOWN|  
 |Ukryj wiersza nadrzędnego, gdy w tabeli podrzędnej.|CTRL + PAGE UP|  
-|Rozszerz wybór w dół jednego ekranu (z wyjątkiem łącza tabeli podrzędnej).|SHIFT + PAGE DOWN|  
-|Rozszerz wybór w górę jednego ekranu (z wyjątkiem łącza tabeli podrzędnej).|SHIFT + STRONĘ W GÓRĘ|  
-|Wywołanie <xref:System.Windows.Forms.DataGrid.EndEdit%2A> metody dla bieżącego wiersza.|CTRL+ENTER|  
-|Wprowadź <xref:System.DBNull.Value?displayProperty=nameWithType> wartości do komórki w trybie edycji.|CTRL+0|  
+|Rozszerzenie zaznaczenia w dół o jeden ekran (z wyjątkiem podrzędny tabeli stanowi Link).|SHIFT + PAGE DOWN|  
+|Rozszerzenie zaznaczenia w górę o jeden ekran (z wyjątkiem podrzędny tabeli stanowi Link).|SHIFT + PAGE UP|  
+|Wywołaj <xref:System.Windows.Forms.DataGrid.EndEdit%2A> metody dla bieżącego wiersza.|CTRL+ENTER|  
+|Wprowadź <xref:System.DBNull.Value?displayProperty=nameWithType> wartość w komórce w trybie edycji.|CTRL+0|  
   
-## <a name="see-also"></a>Zobacz też  
- [DataGrid, kontrolka — omówienie](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
- [DataGrid, kontrolka](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- [DataGrid, kontrolka — omówienie](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
+- [DataGrid, kontrolka](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

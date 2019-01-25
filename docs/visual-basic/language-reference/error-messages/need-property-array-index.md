@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID385
 ms.assetid: 69ec6d59-ffc4-48ac-8a28-fe6853389843
-ms.openlocfilehash: eeb200646be91255d85136f8ee987ac312fc8b41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84c534e04749a933ed04c112bd0fb78123d204bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731377"
 ---
 # <a name="need-property-array-index"></a>Potrzebny indeks tablicy właściwości
-Wartość tej właściwości składa się z tablicy, a nie pojedynczą wartość. Indeks tablicy właściwości, do którego próbowano uzyskać dostęp nie została podana.  
+Wartość tej właściwości składa się z tablicy, a nie wartość typu single. Nie określono indeks tablicy właściwości, do którego próbowano uzyskać dostęp.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   W dokumentacji składnika można znaleźć zakresu dla indeksów odpowiednie dla tablicy. Określ odpowiednie indeksu w instrukcji dostępu właściwości.  
+-   W dokumentacji składnika można znaleźć zakresu dla indeksów odpowiednie dla tablicy. Określ odpowiedni indeks w instrukcji dostępu do właściwości.  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)  
- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Zobacz także
+- [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

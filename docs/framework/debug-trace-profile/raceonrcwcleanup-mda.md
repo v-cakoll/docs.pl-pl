@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09e3b275bfaa5743c0271578df97f92269ac7c86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2fe4a5a2886fdbbd36ee491ea66dbce353fb034
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717249"
 ---
 # <a name="raceonrcwcleanup-mda"></a>raceOnRCWCleanup MDA
-`raceOnRCWCleanup` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy środowisko uruchomieniowe języka wspólnego (CLR) wykrywa, że [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) (otoki RCW) jest używane po wywołaniu zwolnij go przy użyciu polecenia takiego jak <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>metody.  
+`raceOnRCWCleanup` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy środowisko uruchomieniowe języka wspólnego (CLR) wykryje, że [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) jest używany, gdy wykonywane jest wywołanie, aby zwolnić go przy użyciu polecenia takiego jak <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>metody.  
   
 ## <a name="symptoms"></a>Symptomy  
- Naruszenia zasad dostępu lub uszkodzenie pamięci podczas lub po uwolnieniu przy użyciu otoki RCW <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> lub podobnej metody.  
+ Naruszenia zasad dostępu ani uszkodzeń pamięci podczas lub po uwolnieniu RCW przy użyciu <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> lub podobnej metody.  
   
 ## <a name="cause"></a>Przyczyna  
- Otoka RCW jest używana przez inny wątek lub zwalnianie stosu wątku.  Nie można zwolnić otoki RCW, która jest używana.  
+ RCW jest używana w innym wątku lub zwalnianie stosu wątku.  Nie można zwolnić RCW, który jest używany.  
   
 ## <a name="resolution"></a>Rozwiązanie  
- Nie zwolnienia otoki RCW, która może być używany w bieżącym lub w inne wątki.  
+ Nie zwolnienia RCW, która może być używany w bieżącym lub w innych wątków.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
  To zdarzenie MDA nie ma wpływu na środowisko CLR.  
@@ -46,7 +46,7 @@ ms.locfileid: "33386899"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)

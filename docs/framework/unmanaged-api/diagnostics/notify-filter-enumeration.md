@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98c3e1ed3da209cbded5d76d938d2420fce606be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcd1d7fb1fdcd8b1ad1abf159a7828e51be392a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735769"
 ---
 # <a name="notifyfilter-enumeration"></a>NOTIFY_FILTER — Wyliczenie
-Identyfikuje wywołań zwrotnych dla funkcji debugera. Aby uzyskać więcej informacji, zobacz [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) metody.  
+Identyfikuje wywołań zwrotnych debugera funkcji. Aby uzyskać więcej informacji, zobacz [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,16 +45,16 @@ enum tagNOTIFY_FILTER
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|Oznacza to, że [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) powinna być wywoływana metoda.|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|Oznacza to, że [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) powinna być wywoływana metoda.|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|Oznacza to, że [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) powinna być wywoływana metoda.|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|Oznacza to, że [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) powinna być wywoływana metoda.|  
-|`NOTIFY_FILTER_ALLSYNC`|Oznacza to, że wszystkie [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) można wywołać metody.|  
-|`NOTIFY_FILTER_ALL`|Aktywuje wszystkie istniejącymi i przyszłymi powiadomienia.|  
-|`NOTIFY_FILTER_NONE`|Wskazuje, powinna być wywoływana żadna metoda powiadomień.|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|Oznacza to, że [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) powinna ona zostać wywołana metoda.|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|Oznacza to, że [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) powinna ona zostać wywołana metoda.|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|Oznacza to, że [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) powinna ona zostać wywołana metoda.|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|Oznacza to, że [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) powinna ona zostać wywołana metoda.|  
+|`NOTIFY_FILTER_ALLSYNC`|Oznacza to, że wszystkie [inotifysink2 —](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) metody powinna ona zostać wywołana.|  
+|`NOTIFY_FILTER_ALL`|Aktywuje wszystkich istniejących i przyszłych powiadomień.|  
+|`NOTIFY_FILTER_NONE`|Wskazuje, czy można wywołać metody nie powiadamiania.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

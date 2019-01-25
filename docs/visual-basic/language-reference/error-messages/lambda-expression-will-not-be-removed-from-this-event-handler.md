@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 69228bbb5f659a8e500e85dea1ef87cb43b0356e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f8b10082bb39c76ba1393daf8327df2ed631caf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568104"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Wyrażenie lambda nie zostanie usunięte z tej obsługi zdarzeń
-Wyrażenie lambda nie zostanie usunięte z tej obsługi zdarzeń. Przypisz Wyrażenie lambda do zmiennej i użyj zmiennej do dodawania i usuwania zdarzenia.  
+Wyrażenie lambda nie zostanie usunięte z tej obsługi zdarzeń. Przypisz wyrażenia lambda do zmiennej i użycia zmiennej w celu dodawania i usuwania zdarzenia.  
   
- Podczas wyrażenia lambda są używane z obsługi zdarzeń, nie może zostać wyświetlony oczekiwane zachowanie. Kompilator generuje nową metodę dla każdej definicji wyrażenia lambda, nawet jeśli są one identyczne. W związku z tym poniższy kod przedstawia `False`.  
+ Gdy wyrażenia lambda są używane z programami obsługi zdarzeń, może być niewidoczna zachowania, których oczekujesz. Kompilator generuje nową metodę dla każdej definicji wyrażenia lambda, nawet jeśli te wartości są identyczne. W związku z tym, poniższy kod wyświetla `False`.  
   
 ```vb  
 Module Module1  
@@ -33,7 +33,7 @@ Module Module1
 End Module  
 ```  
   
- Wyrażenia lambda są używane z obsługi zdarzeń, może to spowodować nieoczekiwane wyniki. W poniższym przykładzie, wyrażenia lambda dodane przez `AddHandler` nie został usunięty przez `RemoveHandler` instrukcji.  
+ Jeśli wyrażenia lambda są używane z programami obsługi zdarzeń, może to spowodować nieoczekiwane wyniki. W poniższym przykładzie, wyrażenie lambda dodane przez `AddHandler` nie został usunięty przez `RemoveHandler` instrukcji.  
   
 ```vb  
 Module Module1  
@@ -54,13 +54,13 @@ Module Module1
 End Module  
 ```  
   
- Domyślnie ten komunikat jest ostrzeżenie. Aby uzyskać więcej informacji na temat Ukryj ostrzeżenia lub Traktuj ostrzeżenia jako błędy, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Domyślnie ta wiadomość jest ostrzeżenie. Aby uzyskać więcej informacji na temat Ukryj ostrzeżenia lub Traktuj ostrzeżenia jako błędy, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identyfikator błędu:** BC42326  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Aby uniknąć tego ostrzeżenia, a następnie usuń wyrażenia lambda, przypisz Wyrażenie lambda do zmiennej i użycia zmiennej w obu `AddHandler` i `RemoveHandler` instrukcje, jak pokazano w poniższym przykładzie.  
+-   Aby uniknąć ostrzeżenia i Usuń Wyrażenie lambda, przypisz wyrażenia lambda do zmiennej i użycia zmiennej w obu `AddHandler` i `RemoveHandler` instrukcje, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Module Module1  
@@ -84,7 +84,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)

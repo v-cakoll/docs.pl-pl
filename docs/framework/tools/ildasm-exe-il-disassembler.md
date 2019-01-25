@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee829893d251b536448ba2ee78ea13e0d22ae41
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 95a060f047094d7f1336a3e1e26b34c7d47b5a42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495517"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Dezasembler IL)
 
@@ -39,7 +39,7 @@ Poniższe opcje są dostępne dla *.exe*, *.dll*, *.obj*, *.lib*, i *winmd* plik
 | Opcja | Opis |
 | ------ | ----------- |
 |**/ out =** `filename`|Tworzy plik wyjściowy z określonym `filename`, zamiast wyświetlić wyniki w graficzny interfejs użytkownika.|
-|**/RTF**|Generuje wyjście w formacie RTF. Nieprawidłowa z **/Text** opcji.|
+|**/rtf**|Generuje wyjście w formacie RTF. Nieprawidłowa z **/Text** opcji.|
 |**/ Text**|Wyświetla wyniki w oknie konsoli, a nie w graficznym interfejsie użytkownika czy plik wyjściowy.|
 |**polecenia**|Generuje wyjście w formacie HTML. Prawidłowy **/output** opcja dotyczy tylko.|
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|
@@ -53,7 +53,7 @@ Następujące dodatkowe opcje są dostępne dla *.exe*, *.dll*, i *winmd* plikó
 |**/LineNum**|Dołącza odwołania do oryginalnych wierszy źródłowych.|
 |**/nobar**|Pomija wyskakujące okienko ze wskaźnikiem postępu dezasemblera.|
 |**/noca**|Pomija wyjście niestandardowych atrybutów.|
-|**/ Project**|Wyświetla metadane, pojawi się tak, jak dla kodu zarządzanego, a nie jej w natywnym [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Jeśli `PEfilename` nie jest metadanych Windows (*winmd*) pliku, ta opcja nie ma wpływu. Zobacz [Obsługa programu .NET Framework dla aplikacji Windows Store i środowiska wykonawczego Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Wyświetla metadane, pojawi się tak, jak dla kodu zarządzanego, a nie jej w natywnym [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Jeśli `PEfilename` nie jest metadanych Windows (*winmd*) pliku, ta opcja nie ma wpływu. Zobacz [Obsługa programu .NET Framework dla aplikacji Windows Store i środowiska wykonawczego Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Dezasembluje tylko typy publiczne i elementy członkowskie. Odpowiednikiem **/visibility:PUB**.|
 |**/quoteallnames**|Umieszcza wszystkie nazwy w pojedynczym cudzysłowie.|
 |**/raweh**|Wyświetla klauzule obsługi błędów w pierwotnej formie.|
@@ -73,7 +73,7 @@ Poniższe opcje są prawidłowe dla *.exe*, *.dll*, i *winmd* plików dla pliku 
 |**/noil**|Wyłącza wyjście kodu zestawu IL.|
 |**/ stats**|Zawiera dane statystyczne dotyczące obrazu.|
 |**/typelist**|Generuje pełną listę typów, aby zachować kolejność typów w rundzie.|
-|**/Unicode**|Używa kodowania Unicode danych wyjściowych.|
+|**/unicode**|Używa kodowania Unicode danych wyjściowych.|
 |**/UTF8**|Używa kodowania UTF-8 danych wyjściowych. Domyślne jest ANSI.|
 
 Poniższe opcje są prawidłowe dla *.exe*, *.dll*, *.obj*, *.lib*, i *winmd* pliki plik lub tylko dane wyjściowe z konsoli.
@@ -186,7 +186,7 @@ Typ zagnieżdżony musi być poprzedzony klasą zawierającą i oddzielony od ni
 
 ## <a name="see-also"></a>Zobacz także
 
-[Narzędzia](../../../docs/framework/tools/index.md)  
-[Ilasm.exe (asembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
-[Proces zarządzanego wykonania](../../../docs/standard/managed-execution-process.md)  
-[Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Narzędzia](../../../docs/framework/tools/index.md)
+- [Ilasm.exe (asembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Proces zarządzanego wykonania](../../../docs/standard/managed-execution-process.md)
+- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

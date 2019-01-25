@@ -2,12 +2,12 @@
 title: Zapytania w składniku LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: b6dc38951107b0d3833e1060c23962a43936bf4d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: aef82fffda1177d87b7f811ef75f37872c8c3799
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528660"
 ---
 # <a name="queries-in-linq-to-entities"></a>Zapytania w składniku LINQ to Entities
 Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są zwykle wyrażane w specjalistycznym języku zapytań, takich jak SQL dla relacyjnych baz danych i XQuery dla XML. W związku z tym deweloperzy musieli nauczyć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, które są zapytania. Language-Integrated Query (LINQ) oferuje prostszy i spójny model do pracy z danymi w różnych rodzajach formatów i źródeł danych. W zapytaniu LINQ zawsze pracujesz z programowania obiektów.  
@@ -24,49 +24,49 @@ Zapytanie jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania s
 ### <a name="query-expression-syntax"></a>Składnia wyrażenia zapytania  
  Wyrażenia kwerendy są deklaratywne składnię. Ta składnia umożliwia deweloperom Pisanie zapytań w języku wysokiego poziomu, który jest sformatowany podobna do instrukcji języka Transact-SQL. Za pomocą składni wyrażeń zapytania, możesz wykonać nawet złożone filtrowanie, porządkowanie i operacji grupowania na źródeł danych za pomocą minimalnej ilości kodu. Aby uzyskać więcej informacji [podstawowe operacje zapytań (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Aby uzyskać przykłady, które pokazują, jak używać składni wyrażeń zapytania zobacz następujące tematy:  
   
--   [Przykłady składni wyrażeń zapytania, projekcja](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
+-   [Przykłady składni wyrażeń zapytania: Projekcja](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
   
--   [Przykłady składni wyrażeń zapytania, filtrowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
+-   [Przykłady składni wyrażeń zapytania: Filtrowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
   
--   [Przykłady składni wyrażeń zapytania, porządkowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
+-   [Przykłady składni wyrażeń zapytania: Określanie kolejności](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
   
--   [Przykłady składni wyrażeń zapytania, operatory agregacji](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
+-   [Przykłady składni wyrażeń zapytania: Operatory agregacji](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
   
--   [Przykłady składni wyrażeń zapytania, partycjonowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
+-   [Przykłady składni wyrażeń zapytania: Partycjonowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
   
--   [Przykłady składni wyrażeń zapytania, operatory sprzężenia](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
+-   [Przykłady składni wyrażeń zapytania: Operatory sprzężenia](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
   
--   [Przykłady składni wyrażeń zapytania, operatory elementu](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
+-   [Przykłady składni wyrażeń zapytania: Operatory elementu](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
   
--   [Przykłady składni wyrażeń zapytania, grupowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
+-   [Przykłady składni wyrażeń zapytania: Grupowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
   
--   [Przykłady składni wyrażeń zapytania, nawigowanie po relacjach](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
+-   [Przykłady składni wyrażeń zapytania: Nawigowanie po relacjach](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>Składni zapytania oparte na metodzie  
  Innym sposobem tworzenia [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania jest przy użyciu zapytań oparte na metodzie. Składnia zapytania oparte na metodzie to sekwencja wywołań metody bezpośredniej do metod operatorów LINQ, przekazując wyrażenia lambda jako parametry. Aby uzyskać więcej informacji, zobacz [wyrażeń Lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Przykłady pokazujące, jak używać składni oparte na metodzie zobacz następujące tematy:  
   
--   [Przykłady składni zapytania oparte na metodzie, projekcja](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
+-   [Przykłady składni zapytania oparte na metodzie: Projekcja](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
   
--   [Przykłady składni zapytania oparte na metodzie, filtrowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
+-   [Przykłady składni zapytania oparte na metodzie: Filtrowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
   
--   [Przykłady składni zapytania oparte na metodzie, porządkowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
+-   [Przykłady składni zapytania oparte na metodzie: Określanie kolejności](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
   
--   [Przykłady składni zapytania oparte na metodzie, operatory agregacji](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [Przykłady składni zapytania oparte na metodzie: Operatory agregacji](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
   
--   [Przykłady składni zapytania oparte na metodzie, partycjonowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
+-   [Przykłady składni zapytania oparte na metodzie: Partycjonowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
   
--   [Przykłady składni zapytania oparte na metodzie, konwersja](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
+-   [Przykłady składni zapytania oparte na metodzie: Konwersja](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
   
--   [Przykłady składni zapytania oparte na metodzie, operatory sprzężenia](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
+-   [Przykłady składni zapytania oparte na metodzie: Operatory sprzężenia](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
   
--   [Przykłady składni zapytania oparte na metodzie, operatory elementu](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
+-   [Przykłady składni zapytania oparte na metodzie: Operatory elementu](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
   
--   [Przykłady składni zapytania oparte na metodzie, grupowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
+-   [Przykłady składni zapytania oparte na metodzie: Grupowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
   
--   [Przykłady składni zapytania oparte na metodzie, nawigowanie po relacjach](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
+-   [Przykłady składni zapytania oparte na metodzie: Nawigowanie po relacjach](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
- [Wprowadzenie do korzystania z LINQ w C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Wprowadzenie do LINQ w Visual Basic](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Opcje scalania w ramach jednostki i zapytania skompilowane](https://go.microsoft.com/fwlink/?LinkId=199591)
+## <a name="see-also"></a>Zobacz także
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [Wprowadzenie do korzystania z LINQ w C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Wprowadzenie do LINQ w Visual Basic](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Opcje scalania w ramach jednostki i zapytania skompilowane](https://go.microsoft.com/fwlink/?LinkId=199591)

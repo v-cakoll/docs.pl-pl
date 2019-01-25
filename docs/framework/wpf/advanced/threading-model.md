@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 9e8bcd4503ec840e46022a55cc08dc0610eaa60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c86ab6c7d5113f95b0fd93d194465c4af701f78a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513658"
 ---
 # <a name="threading-model"></a>Model wątkowości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Służy do zapisywania deweloperów trudności wątkowości. W rezultacie, większość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deweloperzy nie będą musieli napisać interfejs, który korzysta z więcej niż jeden wątek. Ponieważ złożonej i trudnej do debugowania programów wielowątkowych, należy ich unikać gdy istnieje jednowątkowe rozwiązania.  
@@ -54,7 +54,7 @@ ms.locfileid: "43512469"
  <xref:System.Windows.Threading.Dispatcher> Porządkuje elementy które w swojej kolejki według priorytetu. Istnieją dziesięć poziomy, które może być określona podczas dodawania elementu <xref:System.Windows.Threading.Dispatcher> kolejki. Priorytety są obsługiwane w <xref:System.Windows.Threading.DispatcherPriority> wyliczenia. Szczegółowe informacje na temat <xref:System.Windows.Threading.DispatcherPriority> poziomy znajdują się w [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] dokumentacji.  
   
 <a name="samples"></a>   
-## <a name="threads-in-action-the-samples"></a>Wątki w działaniu: przykłady  
+## <a name="threads-in-action-the-samples"></a>Wątki w akcji: Przykłady  
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Aplikacja jednowątkowa z obliczeniami długotrwałych  
@@ -74,7 +74,7 @@ ms.locfileid: "43512469"
   
  Najlepszym sposobem podziału czas przetwarzania między obliczeń i obsługa zdarzeń jest zarządzanie obliczeń z <xref:System.Windows.Threading.Dispatcher>. Za pomocą <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> metody, możemy zaplanować liczba pierwsza kontroli w taki sam kolejki [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zdarzenia są pobierane z. W tym przykładzie firma Microsoft zaplanować tylko sprawdzanie pojedyncza liczba prime w danym momencie. Po zakończeniu wyboru liczba pierwsza możemy zaplanować następne sprawdzenie natychmiast. Tego wyboru rozpoczynające się tylko po oczekiwaniu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zdarzenia zostały obsłużone.  
   
- ![Ilustracja przedstawiająca kolejkę dyspozytora](../../../../docs/framework/wpf/advanced/media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
+ ![Dispatcher queue illustration](../../../../docs/framework/wpf/advanced/media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
   
  [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] w ramach przy użyciu tego mechanizmu sprawdzania pisowni. Sprawdzanie pisowni jest wykonywane w tle za pomocą czas bezczynności, po z [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. Spójrzmy na kod.  
   
@@ -217,5 +217,5 @@ ms.locfileid: "43512469"
   
  Zadanie dotyczące [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest unikanie nieoczekiwanych wielobieżność bez ponownym wprowadzeniem przeciek pamięci, dlatego firma Microsoft nie blokują współużytkowania wątkowości w dowolnym miejscu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Aplikacja jednowątkowa z przykładem obliczania długotrwałych](https://go.microsoft.com/fwlink/?LinkID=160038)
+## <a name="see-also"></a>Zobacz także
+- [Aplikacja jednowątkowa z przykładem obliczania długotrwałych](https://go.microsoft.com/fwlink/?LinkID=160038)

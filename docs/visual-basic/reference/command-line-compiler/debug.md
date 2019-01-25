@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: 92ff9c5ea7352506c1949a77b4fb6291d63758d7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e32ce702847375c85a805926c56fb965a057ff03
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605505"
 ---
 # <a name="-debug-visual-basic"></a>-debug (Visual Basic)
 Powoduje, że kompilator generuje informacje o debugowaniu i umieść go w plikach wyjściowych.  
@@ -50,7 +50,7 @@ Powoduje, że kompilator generuje informacje o debugowaniu i umieść go w plika
 vbc -debug -out:app.exe test.vb  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)  
- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Zobacz także
+- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
+- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

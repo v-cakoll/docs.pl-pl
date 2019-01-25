@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692967"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kowariancja i kontrawariancja w typach ogólnych
 <a name="top"></a> Kowariancja i kontrawariancja to terminy odwołujące się do możliwość używania typu bardziej pochodnego (bardziej szczegółowe) lub mniej pochodnego typu (specyficzne dla języka less) niż oryginalnie określony. Parametry typu ogólnego obsługują kowariancję i kontrawariancję, aby umożliwić większą elastyczność przypisywania i używania typów ogólnych. W kontekście systemu typów kowariancja, kontrawariancja i inwariancja mają następujące definicje. W przykładach założono, klasa bazowa o nazwie `Base` i Klasa pochodna o nazwie `Derived`.  
@@ -173,23 +173,23 @@ ms.locfileid: "44038747"
 |Typ|Kowariantne parametry typu|Kontrawariantne parametry typu|  
 |----------|-------------------------------|-----------------------------------|  
 |<xref:System.Action%601> Aby <xref:System.Action%6016>||Tak|  
-|<xref:System.Comparison%601>||Tak|  
-|<xref:System.Converter%602>|Tak|Tak|  
+|<xref:System.Comparison%601>||Yes|  
+|<xref:System.Converter%602>|Yes|Yes|  
 |<xref:System.Func%601>|Tak||  
-|<xref:System.Func%602> Aby <xref:System.Func%6017>|Tak|Tak|  
-|<xref:System.IComparable%601>||Tak|  
-|<xref:System.Predicate%601>||Tak|  
-|<xref:System.Collections.Generic.IComparer%601>||Tak|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Tak||  
-|<xref:System.Collections.Generic.IEnumerator%601>|Tak||  
-|<xref:System.Collections.Generic.IEqualityComparer%601>||Tak|  
-|<xref:System.Linq.IGrouping%602>|Tak||  
-|<xref:System.Linq.IOrderedEnumerable%601>|Tak||  
-|<xref:System.Linq.IOrderedQueryable%601>|Tak||  
+|<xref:System.Func%602> Aby <xref:System.Func%6017>|Tak|Yes|  
+|<xref:System.IComparable%601>||Yes|  
+|<xref:System.Predicate%601>||Yes|  
+|<xref:System.Collections.Generic.IComparer%601>||Yes|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Yes||  
+|<xref:System.Collections.Generic.IEnumerator%601>|Yes||  
+|<xref:System.Collections.Generic.IEqualityComparer%601>||Yes|  
+|<xref:System.Linq.IGrouping%602>|Yes||  
+|<xref:System.Linq.IOrderedEnumerable%601>|Yes||  
+|<xref:System.Linq.IOrderedQueryable%601>|Yes||  
 |<xref:System.Linq.IQueryable%601>|Tak||  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kowariancja i Kontrawariancja (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
-- [Kowariancja i Kontrawariancja (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
+- [Kowariancja i Kontrawariancja (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
+- [Kowariancja i Kontrawariancja (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 - [Wariancje w delegatach](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

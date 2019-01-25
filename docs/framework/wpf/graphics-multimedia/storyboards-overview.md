@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: d6b33df8574d9c25380d6d9319480d3c9df28660
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa0143aac4253b6a7648da589e01ac8abf9d4341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492688"
 ---
 # <a name="storyboards-overview"></a>Przegląd Scenorysy
 W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyboard> obiekty do organizowania i stosowanie animacji. Opis interaktywnie manipulowania <xref:System.Windows.Media.Animation.Storyboard> obiektów i opisuje właściwość pośrednich, przeznaczone dla składni.  
@@ -61,9 +61,9 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
   
 |Rozpoczyna się scenorysu, za pomocą...|Na wystąpienie|Styl|Szablon kontrolki|Szablon danych|Przykład|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> i <xref:System.Windows.EventTrigger>|Tak|Tak|Tak|Tak|[Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> i właściwości <xref:System.Windows.Trigger>|Nie|Tak|Tak|Tak|[Wyzwalanie animacji w przypadku zmiany wartości właściwości](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> a <xref:System.Windows.DataTrigger>|Nie|Tak|Tak|Tak|[Porady: wyzwalanie animacji w przypadku zmiany danych](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> i <xref:System.Windows.EventTrigger>|Tak|Yes|Yes|Tak|[Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> i właściwości <xref:System.Windows.Trigger>|Nie|Yes|Yes|Tak|[Wyzwalanie animacji w przypadku zmiany wartości właściwości](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> a <xref:System.Windows.DataTrigger>|Nie|Yes|Yes|Tak|[Instrukcje: Wyzwalanie animacji w przypadku zmiany danych](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> — Metoda|Tak|Nie|Nie|Nie|[Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  W poniższym przykładzie użyto <xref:System.Windows.Media.Animation.Storyboard> animować <xref:System.Windows.FrameworkElement.Width%2A> z <xref:System.Windows.Shapes.Rectangle> elementu i <xref:System.Windows.Media.SolidColorBrush.Color%2A> z <xref:System.Windows.Media.SolidColorBrush> używany do rysowania, które <xref:System.Windows.Shapes.Rectangle>.  
@@ -225,13 +225,13 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>Kontrolowanie interaktywnie scenorysu w XAML  
  Aby rozpocząć scenorysu w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], możesz użyć <xref:System.Windows.Media.Animation.BeginStoryboard> wyzwalanie akcji. <xref:System.Windows.Media.Animation.BeginStoryboard> dystrybuuje animacji do obiektów i właściwości, animować i uruchamia scenorysu. (Aby uzyskać szczegółowe informacje o tym procesie, zobacz [Animacja i System chronometrażu w — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) Jeśli nadasz <xref:System.Windows.Media.Animation.BeginStoryboard> nazwę, określając jego <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> właściwości, możesz obejrzeć sterowane scenorysu. Możesz następnie interaktywnie kontrolować scenorys po uruchomieniu. Oto lista czynności scenorysu musi używać przy użyciu wyzwalaczy zdarzeń, aby kontrolować scenorys.  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>: Zatrzymuje scenorysu.  
+-   <xref:System.Windows.Media.Animation.PauseStoryboard>: Wstrzymuje scenorysu.  
   
 -   <xref:System.Windows.Media.Animation.ResumeStoryboard>: Wznawia działanie wstrzymanej scenorysu.  
   
 -   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Zmienia szybkość scenorysu.  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Prowadzi scenorysu do końca okresu wypełnienia, jeśli taki istnieje.  
+-   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Przesuwa scenorysu do końca okresu wypełnienia, jeśli taki istnieje.  
   
 -   <xref:System.Windows.Media.Animation.StopStoryboard>: Zatrzymuje scenorysu.  
   
@@ -261,7 +261,7 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
   
  Zaletą używania tych metod jest, że nie trzeba tworzyć <xref:System.Windows.Trigger> lub <xref:System.Windows.TriggerAction> obiektów; po prostu potrzebujesz odwołania do kontrolowania <xref:System.Windows.Media.Animation.Storyboard> należy modyfikować.  
   
- **Uwaga:** wszystkie interaktywne działania podjęte w <xref:System.Windows.Media.Animation.Clock>i w związku z tym również na <xref:System.Windows.Media.Animation.Storyboard> będzie miała miejsce przy następnym znaczników aparat czasu, który będzie miało miejsce wkrótce przed następnym renderowania. Na przykład, jeśli używasz <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> metodę, aby przejść do innego punktu w animacji, wartość właściwości nie zmienia się natychmiast, zamiast wartość zmieni się w następnym znaczników aparatu chronometrażu.  
+ **Uwaga:** Wszystkie interaktywne działania podjęte w <xref:System.Windows.Media.Animation.Clock>i w związku z tym również na <xref:System.Windows.Media.Animation.Storyboard> będzie miała miejsce przy następnym znaczników aparat czasu, który będzie miało miejsce wkrótce przed następnym renderowania. Na przykład, jeśli używasz <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> metodę, aby przejść do innego punktu w animacji, wartość właściwości nie zmienia się natychmiast, zamiast wartość zmieni się w następnym znaczników aparatu chronometrażu.  
   
  Poniższy przykład pokazuje, jak zastosować i kontrolowanie animacji przy użyciu metod interaktywnych <xref:System.Windows.Media.Animation.Storyboard> klasy.  
   
@@ -302,7 +302,7 @@ W tym temacie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyb
   
  Animacje stosowane przez właściwość <xref:System.Windows.Trigger> obiekty zachowują się w sposób bardziej skomplikowane niż <xref:System.Windows.EventTrigger> animacji lub animacje pracę, przy użyciu <xref:System.Windows.Media.Animation.Storyboard> metody.  One "przekazywanie" z animacjami zdefiniowane przez inne <xref:System.Windows.Trigger> obiektów, ale narzędzia compose z <xref:System.Windows.EventTrigger> i animacje wyzwalane przez metodę.  
   
-## <a name="see-also"></a>Zobacz też  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Techniki animacji właściwości — przegląd](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Techniki animacji właściwości — przegląd](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)

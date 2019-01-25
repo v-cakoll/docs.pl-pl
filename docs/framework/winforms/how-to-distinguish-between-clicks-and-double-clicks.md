@@ -1,5 +1,5 @@
 ---
-title: 'Porady: rozróżnianie między kliknięciami a dwukrotnymi kliknięciami'
+title: 'Instrukcje: Rozróżnianie między kliknięciami a dwukrotnymi kliknięciami'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-ms.openlocfilehash: 84d085700091c4e7b8658e8eac4cf86fbd7730d5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8717bde485c475624be6bceae6ce2ab0c6f377bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45645986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666539"
 ---
-# <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Porady: rozróżnianie między kliknięciami a dwukrotnymi kliknięciami
+# <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Instrukcje: Rozróżnianie między kliknięciami a dwukrotnymi kliknięciami
 Zazwyczaj pojedynczej *kliknij* inicjuje reakcji interfejsu użytkownika i *kliknij dwukrotnie* rozszerza akcji. Na przykład jednym kliknięciem zwykle wybiera element, a następnie dwukrotne kliknięcie Edytuje wybrany element. Jednak zdarzenia kliknięcia formularze Windows nie łatwe dodawanie scenariusza, w którym przez kliknięcie i kliknij dwukrotnie plik akcje niezgodne, ponieważ akcja powiązany <xref:System.Windows.Forms.Control.Click> lub <xref:System.Windows.Forms.Control.MouseClick> zdarzeń odbywa się przed akcją powiązane <xref:System.Windows.Forms.Control.DoubleClick>lub <xref:System.Windows.Forms.Control.MouseDoubleClick> zdarzeń. W tym temacie przedstawiono dwa rozwiązania tego problemu. Jest jedno rozwiązanie do obsługi zdarzeń kliknij dwukrotnie plik i wycofać akcje w zakresie obsługi zdarzenia click. W rzadkich sytuacjach może być konieczne symulowania kliknij pozycję i kliknij dwukrotnie działanie, obsługując <xref:System.Windows.Forms.Control.MouseDown> zdarzeń i za pomocą <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> i <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> właściwości <xref:System.Windows.Forms.SystemInformation> klasy. Pomiar czasu między kliknięciami a jeśli drugie kliknięcie występuje przed wartością <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> zostanie osiągnięty, a następnie kliknij przycisk jest w obrębie prostokąta zdefiniowanego przez <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, wykonania akcji kliknij dwukrotnie plik; w przeciwnym razie wykonania akcji kliknij pozycję.  
   
 ### <a name="to-roll-back-a-click-action"></a>Aby wycofać akcji kliknij pozycję  
@@ -40,7 +40,7 @@ Zazwyczaj pojedynczej *kliknij* inicjuje reakcji interfejsu użytkownika i *klik
   
 -   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
- Aby uzyskać informacje o tworzeniu tych przykładów z poziomu wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Możesz także tworzyć te przykłady w programie Visual Studio, wklejając kod do nowych projektów.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby uzyskać informacje o tworzeniu tych przykładów z poziomu wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Możesz także tworzyć te przykłady w programie Visual Studio, wklejając kod do nowych projektów.  Zobacz też [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

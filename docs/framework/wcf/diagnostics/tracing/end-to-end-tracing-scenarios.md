@@ -2,21 +2,21 @@
 title: Scenariusze kompleksowego śledzenia
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
-ms.openlocfilehash: ee1f3f09ccd642edbde039bafeda6bbf58247744
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 976c3ad6fae2fa31b180d7635ac897bdf6b9ef1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704241"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Scenariusze kompleksowego śledzenia
-Ta sekcja zawiera tematy, które opisano różne scenariusze korzystanie z funkcji śledzenia.  
+Ta sekcja zawiera tematy, które opisują różne scenariusze dotyczące za pomocą funkcji śledzenia.  
   
- Śledzenie działań jest zaimplementowany dla odpowiedź, OneWay i dupleks scenariuszy za pomocą następujących  
+ Śledzenie działania są implementowane w odpowiedź, OneWay i dupleks scenariuszy przy użyciu następujących  
   
 -   Synchroniczna lub asynchroniczna  
   
--   BasicHttpBinding, netNamedPipeBinding netTcpBinding, wsHttpBinding albo netMsmqBinding  
+-   BasicHttpBinding, netNamedPipeBinding, netTcpBinding, wsHttpBinding lub netMsmqBinding  
   
 -   Usługa COM  
   
@@ -38,6 +38,6 @@ Ta sekcja zawiera tematy, które opisano różne scenariusze korzystanie z funkc
   
 -   [COM+](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Kompleksowe śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+## <a name="see-also"></a>Zobacz także
+- [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Kompleksowe śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

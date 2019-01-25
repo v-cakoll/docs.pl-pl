@@ -2,12 +2,12 @@
 title: Niestandardowy element przechwytujący komunikaty
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 5a72a964c571cf68d4b215f4029ff95c52cba0e2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3b24535c67c1d16da63ec3b282d456e65ff8dd95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733275"
 ---
 # <a name="custom-message-interceptor"></a>Niestandardowy element przechwytujący komunikaty
 Niniejszy przykład pokazuje użycie kanału modelu rozszerzalności. W szczególności pokazuje sposób implementacji element niestandardowego powiązania, który pokazuje tworzenie fabryki kanałów i odbiorniki kanałów, aby przechwycić wszystkie komunikaty przychodzące i wychodzące w określonym punkcie w stosie czasu wykonywania. Przykład zawiera również klienta i serwera, które przedstawiają korzystanie z tych niestandardowych fabryk.  
@@ -68,7 +68,7 @@ public abstract class InterceptingElement : BindingElementExtensionElement { ...
 ## <a name="adding-policy"></a>Dodawanie zasad  
  Do integracji z naszego systemu zasad `InterceptingBindingElement` implementuje IPolicyExportExtension celu sygnalizowania, że firma Microsoft powinny uczestniczyć w Generowanie zasad. Aby obsługiwać zasady importowania na wygenerowanego klienta, użytkownik może zarejestrować klasy pochodnej z `InterceptingBindingElementImporter` i zastąpić `CreateMessageInterceptor`(), aby wygenerować ich włączone zasady `ChannelMessageInterceptor` klasy.  
   
-## <a name="example-droppable-message-inspector"></a>Przykład: Komunikat Droppable Inspektor  
+## <a name="example-droppable-message-inspector"></a>Przykład: Inspektor droppable wiadomości  
  Zawarte w przykładzie jest przykładem implementacji `ChannelMessageInspector` która powoduje porzucenie wiadomości.  
   
 ```  
@@ -161,4 +161,4 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 5.  Uruchom najpierw Service.exe, a następnie uruchom Client.exe się i obejrzyj oba okna konsoli danych wyjściowych.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: cbbaba8cbdaf6dfd7b7c18447d425298b4911e94
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 6323d27158855e5ded1698401835b35632bedebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603849"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Przegląd Renderowanie grafiki WPF
 Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] warstwy visual. Dotyczy on rolę <xref:System.Windows.Media.Visual> klasy renderowania pomocy technicznej w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelu.  
@@ -25,15 +25,15 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
  <xref:System.Windows.Media.Visual> Obiekt jest podstawowa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektu, którego podstawową rolą jest zapewnia obsługę renderowania. Kontrolki interfejsu użytkownika, takie jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.TextBox>, pochodzi od <xref:System.Windows.Media.Visual> klasy, a następnie użyć jej do utrwalania danych ich renderowania. <xref:System.Windows.Media.Visual> Obiektu zapewnia obsługę:  
   
--   Dane wyjściowe ekranu: renderowanie utrwalonych, serializacji zawartość rysowania visual.  
+-   Wyświetlanie danych wyjściowych: Renderowanie utrwalonych serializacji zawartość rysowania visual.  
   
 -   Przekształcenia: Wykonywanie przekształceń na wizualizacji.  
   
--   Wycinka: Wspieranie wycinka region dla wizualizacji.  
+-   Wycinek: Wspieranie wycinka region dla wizualizacji.  
   
 -   Test trafienia: Określanie, czy współrzędne lub geometrii znajduje się w granicach wizualizacji.  
   
--   Blokujących okno obliczenia: Określanie prostokąt otaczający wizualizacji.  
+-   Otaczający obliczenia pola: Określanie prostokąt otaczający wizualizacji.  
   
  Jednak <xref:System.Windows.Media.Visual> obiektu nie obejmują obsługę-rendering funkcji, takich jak:  
   
@@ -69,7 +69,7 @@ Hierarchia klas Visual
 |Grafika wektorowa|Reprezentuje wektor danymi graficznymi i wszelkie powiązane <xref:System.Windows.Media.Brush> i <xref:System.Windows.Media.Pen> informacji.|  
 |Obraz|Reprezentuje obraz w obrębie regionu definicją <xref:System.Windows.Rect>.|  
 |Symbol|Reprezentuje rysunku, który renderuje <xref:System.Windows.Media.GlyphRun>, czyli sekwencji symbole z zasobu określonej czcionki. Jest to, jak przedstawić tekstu.|  
-|Video|Reprezentuje rysunku, który renderuje wideo.|  
+|Połączenia wideo|Reprezentuje rysunku, który renderuje wideo.|  
   
  <xref:System.Windows.Media.DrawingContext> Umożliwia wypełnienie <xref:System.Windows.Media.Visual> o zawartości wizualnej. Kiedy używasz <xref:System.Windows.Media.DrawingContext> polecenia rysowania obiektu są faktycznie przechowywania zestaw danych renderowania, który będzie później używany przez system grafiki; nie jest rysowany na ekranie w czasie rzeczywistym.  
   
@@ -159,7 +159,7 @@ Diagram hierarchii drzewa wizualnego
 Diagram przedstawiający kolejność renderowania drzewo wizualne  
   
 ### <a name="root-visual"></a>Główny Visual  
- **Głównego visual** jest umieszczony najwyżej elementu w hierarchii drzewa wizualnego. W większości aplikacji klasy bazowej głównego visual jest <xref:System.Windows.Window> lub <xref:System.Windows.Navigation.NavigationWindow>. Jednak jeśli były hosting obiektów visual w aplikacji Win32, główny visual będzie visual najważniejsze, które zostały hostingu w oknie Win32. Aby uzyskać więcej informacji, zobacz [samouczek: Hosting obiektów Visual w aplikacji Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
+ **Głównego visual** jest umieszczony najwyżej elementu w hierarchii drzewa wizualnego. W większości aplikacji klasy bazowej głównego visual jest <xref:System.Windows.Window> lub <xref:System.Windows.Navigation.NavigationWindow>. Jednak jeśli były hosting obiektów visual w aplikacji Win32, główny visual będzie visual najważniejsze, które zostały hostingu w oknie Win32. Aby uzyskać więcej informacji, zobacz [samouczka: Hosting obiektów Visual w aplikacji Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
   
 ### <a name="relationship-to-the-logical-tree"></a>Relacja drzewo logiczne  
  Drzewo logiczne w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] reprezentuje elementów aplikacji w czasie wykonywania. Mimo że nie bezpośrednio modyfikować tego drzewa, ten widok aplikacji jest przydatne dla zrozumienia, dziedziczenie właściwości i zdarzenia, routing. W przeciwieństwie do drzewa wizualnego drzewa logicznego może reprezentować obiektów danych innym niż wizualny, taki jak <xref:System.Windows.Documents.ListItem>. W wielu przypadkach drzewo logiczne ściśle mapuje do definicji znaczników aplikacji. Poniższy kod przedstawia <xref:System.Windows.Controls.DockPanel> elementu zdefiniowanego w znacznikach.  
@@ -234,7 +234,7 @@ Różnice między grafiki wektorowej i rastrowe
 Grafika i tekstowych w miejscach występowania różne ustawienia DPI  
   
 <a name="visualtreehelper_class"></a>   
-## <a name="visualtreehelper-class"></a>Klasa VisualTreeHelper  
+## <a name="visualtreehelper-class"></a>VisualTreeHelper Class  
  <xref:System.Windows.Media.VisualTreeHelper> Klasy jest statyczną klasę pomocy dostarczająca funkcje niskiego poziomu dla programowania na poziomie obiekt wizualny, co jest przydatne w bardzo konkretnych scenariuszy, takich jak tworzenie niestandardowych kontrolek o wysokiej wydajności. W przypadku większości wyższego poziomu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework obiekty, takie jak <xref:System.Windows.Controls.Canvas> i <xref:System.Windows.Controls.TextBlock>, oferuje większą elastyczność i łatwość użycia.  
   
 ### <a name="hit-testing"></a>Test trafienia  
@@ -257,12 +257,12 @@ Grafika i tekstowych w miejscach występowania różne ustawienia DPI
  [!code-csharp[VisualsOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Test trafienia w warstwie wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [Użycie obiektów DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [Samouczek: hosting obiektów wizualnych w aplikacji Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Test trafienia w warstwie wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+- [Użycie obiektów DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
+- [Samouczek: Hosting obiektów Visual w aplikacji Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

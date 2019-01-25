@@ -4,12 +4,12 @@ description: Zalecenia dotyczące najlepszych rozwiązań do nawigowania między
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: e0e62cda1b7475cd5d1f8bcd3558dc2fe7f6e07c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a5cfd2dfb544b2e47a87bd0939990ae73e5eda9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564227"
 ---
 # <a name="breaking-changes"></a>Zmiany powodujące niezgodność
 
@@ -100,9 +100,9 @@ public class Document
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Wersja i zaktualizuj uwagi dla deweloperów języka C#](../../csharp/whats-new/version-update-considerations.md)
-* [Ostateczny przewodnik dotyczący interfejsu API — przełomowe zmiany w .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-* [CoreFX istotnej zmiany zasad](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+- [Wersja i zaktualizuj uwagi dla deweloperów języka C#](../../csharp/whats-new/version-update-considerations.md)
+- [Ostateczny przewodnik dotyczący interfejsu API — przełomowe zmiany w .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
+- [CoreFX istotnej zmiany zasad](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Poprzednie](versioning.md)

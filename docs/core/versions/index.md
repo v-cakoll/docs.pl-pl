@@ -4,12 +4,12 @@ description: W tym artykule dowiesz się, jak zestaw .NET Core SDK i środowisko
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 86ef49aaf29efcc5988185910520694713e35599
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516762"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Omówienie sposobu platformy .NET Core jest wersjonowany
 
@@ -106,8 +106,8 @@ Każda wersja programu .NET Core implementuje wersji programu .NET Standard. Zai
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Platformy docelowe](../../standard/frameworks.md)  
-* [Tworzenie pakietów dystrybucji platformy .NET Core](../build/distribution-packaging.md)  
-* [.NET core pomocy technicznej cyklu życia faktu arkusza](https://www.microsoft.com/net/core/support)  
-* [Wiązanie wersji programu .NET core 2 +](https://github.com/dotnet/designs/issues/3)  
-* [Obrazy platformy docker dla platformy .NET Core](https://hub.docker.com/r/microsoft/dotnet/)
+- [Platformy docelowe](../../standard/frameworks.md)
+- [Tworzenie pakietów dystrybucji platformy .NET Core](../build/distribution-packaging.md)
+- [.NET core pomocy technicznej cyklu życia faktu arkusza](https://www.microsoft.com/net/core/support)
+- [Wiązanie wersji programu .NET core 2 +](https://github.com/dotnet/designs/issues/3)
+- [Obrazy platformy docker dla platformy .NET Core](https://hub.docker.com/r/microsoft/dotnet/)

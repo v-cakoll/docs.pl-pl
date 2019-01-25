@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709432"
 ---
 # <a name="distributed-application-security"></a>Rozproszone zabezpieczenia aplikacji
 Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na trzy główne obszary funkcjonalne: transfer zabezpieczeń, kontroli dostępu i inspekcji. Bezpieczeństwie transferu zapewnia integralność, poufności i uwierzytelniania. Zabezpieczenia transferu za pomocą jednej z następujących czynności: zabezpieczenia, zabezpieczenia komunikatów transportu lub `TransportWithMessageCredential`.  
@@ -41,7 +41,7 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na tr
 |Tryb|Opis|  
 |----------|-----------------|  
 |Brak|Bez zabezpieczeń znajduje się w warstwie transportowej lub warstwie wiadomości. Brak wstępnie zdefiniowanych powiązań Użyj tego trybu domyślnie z wyjątkiem [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) element lub, w przypadku korzystania z kodu, <xref:System.ServiceModel.BasicHttpBinding> klasy.|  
-|Transportu|Używa bezpiecznym transportem, taki jak HTTPS integralności, poufności i wzajemnego uwierzytelniania.|  
+|Transport|Używa bezpiecznym transportem, taki jak HTTPS integralności, poufności i wzajemnego uwierzytelniania.|  
 |Komunikat|Używa zabezpieczeń komunikatu protokołu SOAP integralności, poufność i wzajemnego uwierzytelniania. Komunikaty protokołu SOAP są zabezpieczone zgodnie ze standardami WS-Security.|  
 |W trybie mieszanym|Zastosowań transportu zabezpieczeń uwierzytelniania integralności, poufności i serwera. Używa komunikatu zabezpieczenia (WS-Security i innych standardów) do uwierzytelniania klientów.<br /><br /> (Jest to wyliczenie, w tym trybie `TransportWithMessageCredential`.)|  
 |Oba|Wykonuje ochrony i uwierzytelnianie na obu poziomach. Ten tryb jest dostępna tylko w [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) elementu.|  
@@ -65,9 +65,9 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na tr
 |Ustawienie|Opis|  
 |-------------|-----------------|  
 |Brak|Określa, klient musi przedstawić żadnych poświadczeń. Przekłada się to anonimowym klientem.|  
-|Podstawowy|Określa uwierzytelnianie podstawowe.  Aby uzyskać więcej informacji, zobacz RFC2617, "[uwierzytelnianie HTTP: podstawowe i uwierzytelnianie szyfrowane](https://go.microsoft.com/fwlink/?LinkId=88313)."|  
-|Podsumowanie|Określa uwierzytelnianie szyfrowane.  Aby uzyskać więcej informacji, zobacz RFC2617, "[uwierzytelnianie HTTP: podstawowe i uwierzytelnianie szyfrowane](https://go.microsoft.com/fwlink/?LinkId=88313)."|  
-|Uwierzytelnianie NTLM|Określa uwierzytelnianie Windows do domeny Windows przy użyciu negocjacji interfejsu SSPI.<br /><br /> Negocjacji interfejsu SSPI powoduje przy użyciu protokołu Kerberos lub NT LanMan (NTLM).|  
+|Podstawowy|Określa uwierzytelnianie podstawowe.  Aby uzyskać więcej informacji, zobacz RFC2617, "[uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
+|Podsumowanie|Określa uwierzytelnianie szyfrowane.  Aby uzyskać więcej informacji, zobacz RFC2617, "[uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
+|Ntlm|Określa uwierzytelnianie Windows do domeny Windows przy użyciu negocjacji interfejsu SSPI.<br /><br /> Negocjacji interfejsu SSPI powoduje przy użyciu protokołu Kerberos lub NT LanMan (NTLM).|  
 |Windows|Określa uwierzytelnianie Windows do domeny Windows przy użyciu interfejsu SSPI. Interfejs SSPI wybiera z protokołu Kerberos lub NTLM jako usługi uwierzytelniania.<br /><br /> Najpierw; próbuje interfejsu SSPI protokołu Kerberos Jeśli ono zawiedzie, następnie używa protokołu NTLM.|  
 |Certyfikat|Wykonuje uwierzytelnianie klientów przy użyciu certyfikatu X.509 zwykle.|  
   
@@ -94,8 +94,8 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na tr
   
  Tryb zabezpieczeń wiadomości umożliwia wykonywanie bezpieczeństwie transferu, dzięki czemu poświadczenia usługi są wymieniane przy użyciu klienta w ramach początkowego negocjowania. Aby włączyć negocjacji, ustaw <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> właściwość `true`.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -2,12 +2,12 @@
 title: Kolekcje schematów Oracle
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 80623a1abcaeee642b9206edc106d1a4ea74d63b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694467"
 ---
 # <a name="oracle-schema-collections"></a>Kolekcje schematów Oracle
 Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje następujące kolekcje z określonego schematu, oprócz Typowe kolekcje schematów:  
@@ -50,7 +50,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
   
 ## <a name="columns"></a>Kolumny  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel tabeli, widoku lub klastra.|  
 |TABLE_NAME|String|Tabela, widok lub nazwy klastra.|  
@@ -60,11 +60,11 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
 |DŁUGOŚĆ|Wartość dziesiętna|Długość kolumny w bajtach.|  
 |PRECYZJA|Wartość dziesiętna|Precyzja dziesiętna dla liczb typu danych; binarny dokładność dla typu danych ZMIENNOPRZECINKOWYCH, wartość null w przypadku innych typów danych.|  
 |SKALA|Wartość dziesiętna|Cyfr z prawej strony punktu dziesiętnego w kilku.|  
-|DOPUSZCZA WARTOŚCI NULL|String|Określa, czy w kolumnie dozwolone wartości null. Wartość N czy istnieje ograniczenie NOT NULL w kolumnie czy kolumna jest częścią klucza podstawowego.|  
+|NULLABLE|String|Określa, czy w kolumnie dozwolone wartości null. Wartość N czy istnieje ograniczenie NOT NULL w kolumnie czy kolumna jest częścią klucza podstawowego.|  
   
 ## <a name="indexes"></a>Indeksy  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel indeksu|  
 |INDEX_NAME|String|Nazwa indeksu.|  
@@ -72,7 +72,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
 |TABLE_OWNER|String|Właściciel obiektu indeksowanego.|  
 |TABLE_NAME|String|Nazwa obiektu indeksowanego.|  
 |TABLE_TYPE|String|Typ obiektu indeksowane (na przykład tabela, KLASTRA).|  
-|UNIKATOWOŚĆ|String|Czy indeks jest klucza UNIKATOWEGO lub NONUNIQUE.|  
+|UNIQUENESS|String|Czy indeks jest klucza UNIKATOWEGO lub NONUNIQUE.|  
 |KOMPRESJA|String|Czy indeks jest włączone lub wyłączone.|  
 |PREFIX_LENGTH|Wartość dziesiętna|Liczba kolumn w prefiksie klucz kompresji.|  
 |TABLESPACE_NAME|String|Nazwa obszaru tabel zawierających indeks.|  
@@ -102,25 +102,25 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
 |STOPIEŃ|String|Liczba wątków dla każdego wystąpienia skanowania indeksu.|  
 |WYSTĄPIENIA|String|Liczba wystąpień, w którym indeksów do przeskanowania.|  
 |PODZIELONA NA PARTYCJE|String|Czy ten indeks jest podzielona na partycje (tak &#124; nie).|  
-|TYMCZASOWE|String|Czy indeks znajduje się w tabeli tymczasowej.|  
+|TEMPORARY|String|Czy indeks znajduje się w tabeli tymczasowej.|  
 |WYGENEROWANY|String|Czy nazwa indeksu jest generowane przez system (Y&#124;N).|  
 |POMOCNICZY|String|Czy indeks jest obiekt pomocniczy tworzone przez metodę ODCIIndexCreate filtra danych Oracle9i (Y&#124;N).|  
 |BUFFER_POOL|String|Nazwa puli buforów domyślna ma być używany dla bloków indeksu.|  
 |USER_STATS|String|Czy statystyki wprowadzono bezpośrednio przez użytkownika.|  
-|CZAS TRWANIA|String|Wskazuje czas trwania tabeli tymczasowej: 1) sesji$ SYS: wiersze są zachowywane w czasie trwania sesji, transakcji$ 2) SYS: wiersze zostaną usunięte po zatwierdzeniu, wartość Null (3) w przypadku trwałej tabeli.|  
+|CZAS TRWANIA|String|Wskazuje czas trwania tabeli tymczasowej: (1) SYS$ sesji: wiersze są zachowywane w czasie trwania sesji, transakcji$ 2) SYS: wiersze zostaną usunięte po zatwierdzeniu, wartość Null (3) w przypadku trwałej tabeli.|  
 |PCT_DIRECT_ACCESS|Wartość dziesiętna|Na pomocniczy indeks w indeksowanej tabeli, wartość procentowa wiersze z PRAWIDŁOWĄ odgadnięcia|  
 |ITYP_OWNER|String|Dla indeksu domeny właściciela indextype.|  
 |ITYP_NAME|String|Dla indeksu domeny nazwa indextype.|  
 |PARAMETRY|String|Dla indeksu domeny ciąg parametru.|  
 |GLOBAL_STATS|String|Dla indeksów podzielonym na partycje wskazuje, czy statystyki zostały zebrane, analizując indeksu jako całość (tak), czy zostały szacowane z statystyki dotyczące podstawowych partycji indeksu i subpartitions (nie).|  
 |DOMIDX_STATUS|String|Odzwierciedla stan indeksu domeny. Wartość NULL: określony indeks nie jest indeksem domeny. : Indeks jest PRAWIDŁOWY indeks prawidłową domenę. IDXTYP_INVLD: typ indeksu tego indeksu domeny jest nieprawidłowy.|  
-|DOMIDX_OPSTATUS|String|Odzwierciedla stan operacji, która została wykonana w indeksie domeny: NULL: określony indeks nie jest indeksem domeny. NIEPRAWIDŁOWA: wykonanie operacji bez błędów. Nie powiodło się: operacja nie powiodła się z powodu błędu.|  
-|FUNCIDX_STATUS|String|Wskazuje stan indeksu na podstawie funkcji: NULL: to nie jest to funkcja oparta na indeksowanie włączone: indeksu na podstawie funkcja jest włączona, wyłączona: indeksu na podstawie funkcji jest wyłączone.|  
+|DOMIDX_OPSTATUS|String|Odzwierciedla stan operacji, która została wykonana w indeksie domeny: Wartość NULL: określony indeks nie jest indeksem domeny. NIEPRAWIDŁOWA: wykonanie operacji bez błędów. Nie powiodło się: operacja nie powiodła się z powodu błędu.|  
+|FUNCIDX_STATUS|String|Wskazuje stan indeksu na podstawie funkcji: Wartość NULL: to nie jest to funkcja oparta na indeksowanie włączone: indeksu na podstawie funkcja jest włączona, wyłączona: indeksu na podstawie funkcji jest wyłączone.|  
 |JOIN_INDEX|String|Wskazuje, czy to indeks sprzężenia.|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |INDEX_OWNER|String|Właściciel indeksu.|  
 |INDEX_NAME|String|Nazwa indeksu.|  
@@ -134,7 +134,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
   
 ## <a name="procedures"></a>Procedury  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel obiektu.|  
 |OBJECT_NAME|String|Nazwa obiektu.|  
@@ -144,14 +144,14 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
 |LAST_DDL_TIME|DataGodzina|Sygnatura czasowa ostatniej modyfikacji obiektu wynikające z polecenia języka DDL, (w tym przyznaje i wycofanie).|  
 |ZNACZNIK CZASU:|String|Sygnatura czasowa specyfikacji obiektu (znak dane).|  
 |STAN|String|Stan obiektu (prawidłowe, nieprawidłowe lub n/d).|  
-|TYMCZASOWE|String|Czy obiekt jest tymczasowy (bieżącej sesji można wyświetlić tylko te dane, które go umieścić w ten sam obiekt).|  
+|TEMPORARY|String|Czy obiekt jest tymczasowy (bieżącej sesji można wyświetlić tylko te dane, które go umieścić w ten sam obiekt).|  
 |WYGENEROWANY|String|Była nazwa wygenerowanej przez system ten obiekt? (Y &AMP;#124; N).|  
 |POMOCNICZY|String|Czy jest to obiekt pomocniczy tworzone przez metodę ODCIIndexCreate filtra danych Oracle9i (Y &#124; N).|  
 |UTWORZONE|DataGodzina|Data utworzenia obiektu.|  
   
 ## <a name="sequences"></a>Sekwencje  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |SEQUENCE_OWNER|String|Nazwa właściciela sekwencji.|  
 |SEQUENCE_NAME|String|Nazwa sekwencji.|  
@@ -165,7 +165,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
   
 ## <a name="synonyms"></a>Synonimy  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel synonim.|  
 |SYNONYM_NAME|String|Nazwa synonim.|  
@@ -175,7 +175,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
   
 ## <a name="tables"></a>Tabele  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel tabeli.|  
 |TABLE_NAME|String|Nazwa tabeli.|  
@@ -183,7 +183,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
   
 ## <a name="users"></a>Użytkownicy  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |NAZWA|String|Nazwa użytkownika.|  
 |ID|Wartość dziesiętna|Numer identyfikacyjny użytkownika.|  
@@ -191,14 +191,14 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
   
 ## <a name="views"></a>Widoki  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel tego widoku.|  
 |VIEW_NAME|String|Nazwa widoku.|  
 |TEXT_LENGTH|Wartość dziesiętna|Długość tekstu widoku.|  
 |TEKST|String|Wyświetl tekst.|  
 |TYPE_TEXT_LENGTH|Wartość dziesiętna|Długość klauzuli typu typizowanego widoku.|  
-|TYP_TEKST|String|Typ klauzuli typizowanego widoku.|  
+|TYPE_TEXT|String|Typ klauzuli typizowanego widoku.|  
 |OID_TEXT_LENGTH|Wartość dziesiętna|Długość klauzuli za pomocą identyfikatora OID typizowanego widoku.|  
 |OID_TEXT|String|Za pomocą klauzuli identyfikatora OID typizowanego widoku.|  
 |VIEW_TYPE_OWNER|String|Właściciel od typu widoku, jeśli widok jest typizowanego widoku.|  
@@ -207,7 +207,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
   
 ## <a name="functions"></a>Funkcje  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel obiektu.|  
 |OBJECT_NAME|String|Nazwa obiektu.|  
@@ -219,13 +219,13 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
 |LAST_DDL_TIME|DataGodzina|Sygnatura czasowa ostatniej modyfikacji obiektu wynikające z polecenia języka DDL, (w tym przyznaje i wycofanie).|  
 |ZNACZNIK CZASU:|String|Sygnatura czasowa specyfikacji obiektu (znak dane)|  
 |STAN|String|Stan obiektu (prawidłowe, nieprawidłowe lub n/d).|  
-|TYMCZASOWE|String|Czy obiekt jest tymczasowy (bieżącej sesji można wyświetlić tylko te dane, które go umieścić w ten sam obiekt).|  
+|TEMPORARY|String|Czy obiekt jest tymczasowy (bieżącej sesji można wyświetlić tylko te dane, które go umieścić w ten sam obiekt).|  
 |WYGENEROWANY|String|Była nazwa wygenerowanej przez system ten obiekt? (Y &AMP;#124; N).|  
 |POMOCNICZY|String|Czy jest to obiekt pomocniczy tworzone przez metodę ODCIIndexCreate filtra danych Oracle9i (Y &#124; N).|  
   
 ## <a name="packages"></a>Pakiety  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel obiektu.|  
 |OBJECT_NAME|String|Nazwa obiektu.|  
@@ -235,14 +235,14 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
 |LAST_DDL_TIME|DataGodzina|Sygnatura czasowa ostatniej modyfikacji obiektu wynikające z polecenia języka DDL, (w tym przyznaje i wycofanie).|  
 |ZNACZNIK CZASU:|String|Sygnatura czasowa specyfikacji obiektu (znak dane).|  
 |STAN|String|Stan obiektu (prawidłowe, nieprawidłowe lub n/d).|  
-|TYMCZASOWE|String|Czy obiekt jest tymczasowy (bieżącej sesji można wyświetlić tylko te dane, które go umieścić w ten sam obiekt).|  
+|TEMPORARY|String|Czy obiekt jest tymczasowy (bieżącej sesji można wyświetlić tylko te dane, które go umieścić w ten sam obiekt).|  
 |WYGENEROWANY|String|Była nazwa wygenerowanej przez system ten obiekt? (Y &AMP;#124; N).|  
 |POMOCNICZY|String|Czy jest to obiekt pomocniczy tworzone przez metodę ODCIIndexCreate filtra danych Oracle9i (Y &#124; N).|  
 |UTWORZONE|DataGodzina|Data utworzenia obiektu.|  
   
 ## <a name="packagebodies"></a>PackageBodies  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel obiektu.|  
 |OBJECT_NAME|String|Nazwa obiektu.|  
@@ -252,14 +252,14 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
 |LAST_DDL_TIME|DataGodzina|Sygnatura czasowa ostatniej modyfikacji obiektu wynikające z polecenia języka DDL, (w tym przyznaje i wycofanie).|  
 |ZNACZNIK CZASU:|String|Sygnatura czasowa specyfikacji obiektu (znak dane).|  
 |STAN|String|Stan obiektu (prawidłowe, nieprawidłowe lub n/d).|  
-|TYMCZASOWE|String|Czy obiekt jest tymczasowy (bieżącej sesji można wyświetlić tylko te dane, które go umieścić w ten sam obiekt).|  
+|TEMPORARY|String|Czy obiekt jest tymczasowy (bieżącej sesji można wyświetlić tylko te dane, które go umieścić w ten sam obiekt).|  
 |WYGENEROWANY|String|Była nazwa wygenerowanej przez system ten obiekt? (Y &AMP;#124; N).|  
 |POMOCNICZY|String|Czy jest to obiekt pomocniczy tworzone przez metodę ODCIIndexCreate filtra danych Oracle9i (Y &#124; N).|  
 |UTWORZONE|DataGodzina|Data utworzenia obiektu.|  
   
 ## <a name="arguments"></a>Argumenty  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Nazwa właściciela obiektu.|  
 |PACKAGE_NAME|String|Nazwa pakietu.|  
@@ -277,7 +277,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
   
 ## <a name="uniquekeys"></a>UniqueKeys  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel definicji ograniczenia.|  
 |CONSTRAINT_NAME|String|Nazwa definicji ograniczenia.|  
@@ -298,7 +298,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
   
 ## <a name="primarykeys"></a>PrimaryKeys  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel definicji ograniczenia.|  
 |CONSTRAINT_NAME|String|Nazwa definicji ograniczenia.|  
@@ -319,7 +319,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
   
 ## <a name="foreignkeys"></a>ForeignKeys  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |PRIMARY_KEY_CONSTRAINT_NAME|String|Nazwa definicji ograniczenia.|  
 |PRIMARY_KEY_OWNER|String|Właściciel definicji ograniczenia.|  
@@ -341,7 +341,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
   
 ## <a name="foreignkeycolumns"></a>ForeignKeyColumns  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel definicji ograniczenia.|  
 |CONSTRAINT_NAME|String|Nazwa definicji ograniczenia.|  
@@ -351,7 +351,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
   
 ## <a name="procedureparameters"></a>ProcedureParameters  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |WŁAŚCICIEL|String|Właściciel obiektu.|  
 |OBJECT_NAME|String|Nazwa procedury lub funkcji.|  
@@ -369,7 +369,7 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
 |DATA_LENGTH|Wartość dziesiętna|Długość kolumny (w bajtach).|  
 |DATA_PRECISION|Wartość dziesiętna|Długość w cyfry dziesiętne (liczba) lub cyfr (FLOAT).|  
 |DATA_SCALE|Wartość dziesiętna|Cyfr z prawej strony punktu dziesiętnego w kilku.|  
-|PODSTAWY|Wartość dziesiętna|Podstawy argument na liczbę.|  
+|RADIX|Wartość dziesiętna|Podstawy argument na liczbę.|  
 |CHARACTER_SET_NAME|String|Nazwa argumentu zestaw znaków.|  
 |TYPE_OWNER|String|Właściciel typ argumentu.|  
 |TYPE_NAME|String|Nazwa typu argumentu. Jeśli typ to typ lokalny pakiet (oznacza to, że zostanie ona zadeklarowana w specyfikacji pakietu), a następnie w tej kolumnie jest wyświetlana nazwa pakietu.|  
@@ -379,5 +379,5 @@ Microsoft .NET Framework Data Provider na oprogramowanie Oracle, obsługuje nast
 |CHAR_LENGTH|Wartość dziesiętna|Limit znaków dla typów danych parametrów.|  
 |CHAR_USED|String|Wskazuje, czy limicie (B) lub limitu char (C) jest oficjalnym ciągu.|  
   
-## <a name="see-also"></a>Zobacz też  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

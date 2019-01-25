@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d74ce08197ac76a601202da8e35ca6f619207076
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e39e9b3cf83be03d9bb3a55e3741915588e755a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45614739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499580"
 ---
 # <a name="net-framework-cryptography-model"></a>Model kryptografii programu .NET Framework
 .NET Framework zawiera implementacje wiele standardowych algorytmów kryptograficznych. Algorytmy te są łatwe w użyciu i ma najbezpieczniejszą możliwe domyślne właściwości. Ponadto model kryptografii .NET Framework, dziedziczenie obiektu, projekt usługi stream i konfiguracji jest bardzo rozszerzalny.  
@@ -89,4 +89,4 @@ ms.locfileid: "45614739"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)  
+- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)

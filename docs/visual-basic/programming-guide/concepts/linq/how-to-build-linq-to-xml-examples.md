@@ -1,19 +1,19 @@
 ---
-title: 'Porady: Tworzenie składnika LINQ to przykłady XML (Visual Basic)'
+title: 'Instrukcje: Tworzenie przykładów LINQ to XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 565bca7a-ac8b-497f-8d8d-3323b3d7799e
-ms.openlocfilehash: be0b0dfb2fed4e920ca04054f321cfcf1b928838
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6188ecb72abac7dd9af83d420c9feed1c2fef5e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705774"
 ---
-# <a name="how-to-build-linq-to-xml-examples-visual-basic"></a>Porady: Tworzenie składnika LINQ to przykłady XML (Visual Basic)
-Różne fragmentów i przykłady w tej dokumentacji używać klas i typów z różnych przestrzeni nazw. Podczas kompilowania kodu Visual Basic, należy podać odpowiednie `Imports` instrukcje.  
+# <a name="how-to-build-linq-to-xml-examples-visual-basic"></a>Instrukcje: Tworzenie przykładów LINQ to XML (Visual Basic)
+Różne fragmenty kodu i przykłady w niniejszej dokumentacji używać klas i typów z różnych przestrzeni nazw. Podczas kompilowania kodu Visual Basic, należy podać odpowiednie `Imports` instrukcji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod zawiera `Imports` instrukcji, które wymagają przykłady Visual Basic, aby skompilować i uruchomić. Nie wszystkie `Imports` instrukcje są wymagane w każdym przykładzie.  
+ Poniższy kod zawiera `Imports` instrukcji, które wymagają przykłady kodu języka Visual Basic, aby skompilować i uruchomić. Nie wszystkie `Imports` instrukcje są wymagane dla każdego przykładu.  
   
 ```vb  
 Imports System  
@@ -34,5 +34,5 @@ Imports System.Reflection
 Imports System.IO.Packaging  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do programowania w języku XML-Przegląd (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ to XML — przegląd programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

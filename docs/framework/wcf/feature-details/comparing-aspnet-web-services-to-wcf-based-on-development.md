@@ -2,12 +2,12 @@
 title: Porównywanie usług sieci Web na platformie ASP.NET z programem WCF na podstawie procesów programistycznych
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: c4c07d24ba322c957aac5ba9fa6ed3a5f337fb9a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6bf9743410d3138efd5f3ea151b58f61e46ef683
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496796"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Porównywanie usług sieci Web na platformie ASP.NET z programem WCF na podstawie procesów programistycznych
 Windows Communication Foundation (WCF) znajduje się opcja Tryb zgodności ASP.NET umożliwiają aplikacjom WCF zaprogramowane i skonfigurowane, takich jak usługi sieci Web platformy ASP.NET i naśladować ich zachowania. W poniższych sekcjach porównano usługi sieci Web platformy ASP.NET i WCF oparte na co jest wymagane do tworzenia aplikacji przy użyciu obu technologii.  
@@ -750,5 +750,5 @@ public void Receive(Message input)
 ## <a name="globalization"></a>Globalizacja  
  Język konfiguracji platformy ASP.NET można określić kulturę dla poszczególnych usług. WCF nie obsługuje tego ustawienia konfiguracji, z wyjątkiem w trybie zgodności w programie ASP.NET. Aby zlokalizować usługi WCF, która nie korzysta z trybu zgodności programu ASP.NET, skompilować typ usługi do zestawów specyficzne dla kultury i mają oddzielne specyficzne dla kultury punktów końcowych dla każdego zestawu specyficzne dla kultury.  
   
-## <a name="see-also"></a>Zobacz też  
- [Porównanie usług internetowych platformy ASP.NET i architektury WCF na podstawie przeznaczenia oraz stosowanych standardów](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+## <a name="see-also"></a>Zobacz także
+- [Porównanie usług internetowych platformy ASP.NET i architektury WCF na podstawie przeznaczenia oraz stosowanych standardów](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

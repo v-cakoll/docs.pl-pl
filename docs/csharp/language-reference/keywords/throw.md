@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f9729a3536a6611ed593f16ba3bc09e7af20a4c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4e29c0cc85f0ec6ccd3f428d64121f53b91ae9a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713853"
 ---
 # <a name="throw-c-reference"></a>throw (odwołanie w C#)
 
@@ -70,10 +70,10 @@ Począwszy od C# 7.0, `throw` mogą być używane jako wyrażenie, a także inst
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)  
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
-- [try-catch](try-catch.md)  
-- [Try, catch i throw instrukcji w języku C++](try-catch.md)  
-- [Słowa kluczowe języka C#](index.md)  
-- [Instrukcje obsługi wyjątków](exception-handling-statements.md)  
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [try-catch](try-catch.md)
+- [Try, catch i throw instrukcji w języku C++](try-catch.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Instrukcje obsługi wyjątków](exception-handling-statements.md)
 - [Instrukcje: Jawne zgłaszanie wyjątków](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9115657c52f31d9b7b7da3c843338670343da26c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d860a6518014e0232f9372a7ccbf34604096adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747885"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly — Metoda
-Tworzy `Assembly` struktury metadane zawierające dla określonego zestawu i zwraca token skojarzone metadane.  
+Tworzy `Assembly` struktury zawierającymi metadane dla określonego zestawu i zwraca token skojarzone metadane.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,37 +43,37 @@ HRESULT DefineAssembly (
   
 #### <a name="parameters"></a>Parametry  
  `pbPublicKey`  
- [in] Klucz publiczny, który identyfikuje wydawcy zestawu, lub wartość NULL, jeśli nie ma silnej nazwy zestawu.  
+ [in] Klucz publiczny, który identyfikuje wydawcy zestawu lub wartość NULL, jeśli zestaw nie ma silnej nazwy.  
   
  `cbPublicKey`  
- [in] Wyrażony w bajtach rozmiar `pbPublicKey`.  
+ [in] Rozmiar w bajtach `pbPublicKey`.  
   
  `uHashAlgId`  
- [in] Identyfikator algorytmu wyznaczania wartości skrótu służące do szyfrowania plików w zestawu, lub wartość NULL, aby określić algorytm SHA-1.  
+ [in] Identyfikator algorytmu wyznaczania wartości skrótu służące do szyfrowania plików w zestawie lub o wartości NULL do określenia algorytmu SHA-1.  
   
  `szName`  
- [in] Tekst zrozumiałą nazwę zestawu. Ta wartość nie może przekraczać 1024 znaków.  
+ [in] Nazwa tekstowych zrozumiałych zestawu. Ta wartość nie może przekraczać 1024 znaków.  
   
  `pMetaData`  
- [in] Wskaźnik do wystąpienia assemblymetadata —, który zawiera informacje o wersji platformy i ustawień regionalnych dla zestawu.  
+ [in] Wskaźnik na wystąpienie assemblymetadata —, który zawiera informacje o wersji, platformy i ustawienia regionalne dla zestawu.  
   
  `dwAssemblyFlags`  
- [in] Kombinację [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) wartości, które opisują funkcje zestawu.  
+ [in] Kombinacji [corassemblyflags —](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) wartości, które opisano funkcje zestawu.  
   
  `pmda`  
- [out] Wskaźnik do token metadanych.  
+ [out] Wskaźnik do tokenu metadanych.  
   
 ## <a name="remarks"></a>Uwagi  
- Tylko jeden `Assembly` struktura metadanych można zdefiniować w manifeście.  
+ Tylko jeden `Assembly` struktury metadanych można zdefiniować w manifeście.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

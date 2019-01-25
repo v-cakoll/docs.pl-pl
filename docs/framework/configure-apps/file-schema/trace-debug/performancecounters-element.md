@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a7b32f9cf797729aa0ca0d176b31732d06e73907
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701927"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;liczniki wydajności&gt; — Element
 Określa rozmiar pamięci globalnej współużytkowane przez liczniki wydajności.  
   
  \<Konfiguracja >  
-\<System.Diagnostics >  
+\<system.diagnostics>  
 \<performanceCounters>  
   
 ## <a name="syntax"></a>Składnia  
@@ -56,8 +56,8 @@ Określa rozmiar pamięci globalnej współużytkowane przez liczniki wydajnośc
   
  Dla rozmiaru pamięci współużytkowanej oddzielne w rejestrze wartość DWORD FileMappingSize klucza HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nazwa kategorii >* mowa \Performance Po pierwsze a następnie wartość określona dla globalnych pamięci współużytkowanej w pliku konfiguracji. Jeśli wartość FileMappingSize nie istnieje, a następnie rozmiar oddzielne Pamięć współużytkowana jest ustawiony do jednej czwartej (1/4) ustawienie globalne w pliku konfiguracji.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Diagnostics.PerformanceCounter>  
- <xref:System.Diagnostics.PerformanceCounterCategory>  
- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>  
- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Diagnostics.PerformanceCounter>
+- <xref:System.Diagnostics.PerformanceCounterCategory>
+- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>
+- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>

@@ -7,77 +7,77 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: 96e56ab315a739fef9d5499b076a077f5294f39e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee3bcd1358536e6fd9bed5c4fec7845fdf441d86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723488"
 ---
-# <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Wskazówki: szyfrowanie i odszyfrowywanie ciągów w Visual Basic
-Ten przewodnik przedstawia sposób użycia <xref:System.Security.Cryptography.DESCryptoServiceProvider> klasy do szyfrowania i odszyfrowywania ciągów za pomocą wersji dostawcy usług kryptograficznych Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algorytmu. Pierwszym krokiem jest można utworzyć klasy otoki proste, który hermetyzuje algorytmu 3DES i przechowuje zaszyfrowane dane jako ciąg zakodowany base-64. Następnie tej otoki służy bezpiecznie przechowywać prywatnych danych użytkowników w pliku tekstowym publicznie.  
+# <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Przewodnik: Szyfrowanie i odszyfrowywanie ciągów w Visual Basic
+W tym instruktażu dowiesz się, jak używać <xref:System.Security.Cryptography.DESCryptoServiceProvider> klasy szyfrowanie i odszyfrowywanie ciągów za pomocą wersji dostawcy usług kryptograficznych Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algorytmu. Pierwszym krokiem jest utworzyć klasę otoki prostą, która hermetyzuje algorytmu 3DES i przechowuje zaszyfrowane dane jako ciąg zakodowany base-64. Następnie tej otoki służy do bezpiecznego przechowywania prywatnych danych użytkowników w pliku tekstowym dostępny publicznie.  
   
- Należy używać szyfrowania, aby chronić hasła użytkownika (na przykład hasła) i wprowadzić poświadczenia niemożliwe do odczytania przez nieautoryzowanych użytkowników. To może chronić tożsamość autoryzowanym użytkownikiem z skradzione, która chroni zasoby użytkownika oraz udostępnia wyłączność podpisu. Szyfrowanie można również ochronę danych użytkownika z uzyskiwany przez nieautoryzowanych użytkowników.  
+ Szyfrowanie można użyć do ochrony wpisu tajnego użytkownika (na przykład hasła) i poświadczeń nie można go odczytać przez nieautoryzowanych użytkowników. To jest ochrona tożsamości autoryzowanym użytkownikiem z skradzione, co chroni zasoby użytkownika i zapewnia uznawania. Szyfrowanie umożliwia również ochronę danych użytkownika przed dostępem nieautoryzowanych użytkowników.  
   
  Aby uzyskać więcej informacji, zobacz [usługi kryptograficzne](../../../../standard/security/cryptographic-services.md).  
   
 > [!IMPORTANT]
->  Algorytmy Triple Data Encryption Standard (3DES) i Rijndael (teraz nazywane Advanced Encryption Standard [AES]) zawiera większe bezpieczeństwo niż metoda DES, ponieważ są one więcej znacznym w praktyce. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Cryptography.DES> i <xref:System.Security.Cryptography.Rijndael>.  
+>  Rijndael (teraz nazywana Advanced Encryption Standard [AES]) i algorytmy Triple Data Encryption Standard (3DES) zapewniają większe bezpieczeństwo niż DES, ponieważ są one więcej wymaga dużej mocy obliczeniowej. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Cryptography.DES> i <xref:System.Security.Cryptography.Rijndael>.  
   
-### <a name="to-create-the-encryption-wrapper"></a>Aby utworzyć otoki szyfrowania  
+### <a name="to-create-the-encryption-wrapper"></a>Aby utworzyć otokę szyfrowania  
   
-1.  Utwórz `Simple3Des` klasy w celu hermetyzacji metody szyfrowania i odszyfrowywania.  
+1.  Utwórz `Simple3Des` klasy do hermetyzacji metod szyfrowania i odszyfrowywania.  
   
      [!code-vb[VbVbalrStrings#38](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_1.vb)]  
   
-2.  Dodaj importu kryptografii przestrzeni nazw na początku pliku, który zawiera `Simple3Des` klasy.  
+2.  Dodaj import obszaru nazw kryptografii na początku pliku który zawiera `Simple3Des` klasy.  
   
      [!code-vb[VbVbalrStrings#77](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_2.vb)]  
   
-3.  W `Simple3Des` klasy, Dodaj pole prywatne do przechowywania 3DES dostawcy usług kryptograficznych.  
+3.  W `Simple3Des` klasy, Dodaj pole prywatne do przechowywania dostawcy usług kryptograficznych 3DES.  
   
      [!code-vb[VbVbalrStrings#39](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_3.vb)]  
   
-4.  Dodaj metody prywatnej, która tworzy tablicę bajtów o określonej długości ze skrótu określonego klucza.  
+4.  Dodaj metody prywatnej, która tworzy tablicę bajtów o określonej długości ze skrótu z określonym kluczem.  
   
      [!code-vb[VbVbalrStrings#41](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_4.vb)]  
   
 5.  Dodaj Konstruktor do zainicjowania dostawcy usług kryptograficznych 3DES.  
   
-     `key` Sterowania parametrami `EncryptData` i `DecryptData` metody.  
+     `key` Parametr określa `EncryptData` i `DecryptData` metody.  
   
      [!code-vb[VbVbalrStrings#40](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_5.vb)]  
   
-6.  Dodaj publiczną metodę, który szyfruje ciąg.  
+6.  Dodaj metodę publiczną, która szyfruje ciągu.  
   
      [!code-vb[VbVbalrStrings#42](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_6.vb)]  
   
-7.  Dodaj publiczną metodę odszyfrowujący ciąg.  
+7.  Dodaj metodę publiczną, która odszyfrowuje ciągu.  
   
      [!code-vb[VbVbalrStrings#43](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_7.vb)]  
   
-     Klasa otoki można teraz używać do ochrony zasobów użytkownika. W tym przykładzie jest używany bezpiecznie przechowywać prywatnych danych użytkowników w pliku tekstowym publicznie.  
+     Klasa otoki może teraz służyć do ochrony zasobów użytkownika. W tym przykładzie jest używany do bezpiecznego przechowywania prywatnych danych użytkowników w pliku tekstowym dostępny publicznie.  
   
 ### <a name="to-test-the-encryption-wrapper"></a>Aby przetestować otoki szyfrowania  
   
-1.  W osobnej klasy, Dodaj metody, która używa otoki `EncryptData` metodę szyfrowania ciągu i zapisać go do użytkownika do folderu Moje dokumenty.  
+1.  W osobnej klasy, Dodaj metodę, która używa otoki `EncryptData` metodę, aby zaszyfrować ciągu i zapisz go do użytkownika w folderze Moje dokumenty.  
   
      [!code-vb[VbVbalrStrings#78](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_8.vb)]  
   
-2.  Dodaj metodę, która odczytuje zaszyfrowanego ciągu użytkownika do folderu Moje dokumenty i odszyfrowuje ciągu z otoką `DecryptData` metody.  
+2.  Dodaj metodę, która odczytuje zaszyfrowany ciąg od użytkownika w folderze Moje dokumenty i odszyfrowuje ciągu z otoką `DecryptData` metody.  
   
      [!code-vb[VbVbalrStrings#79](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_9.vb)]  
   
-3.  Dodaj kod interfejsu użytkownika do wywołania `TestEncoding` i `TestDecoding` metody.  
+3.  Dodaj kod interfejsu użytkownika, aby wywołać `TestEncoding` i `TestDecoding` metody.  
   
 4.  Uruchom aplikację.  
   
-     Podczas testowania aplikacji, zwróć uwagę, że jej nie powoduje odszyfrowania danych Jeśli podasz nieprawidłowe hasło.  
+     Podczas testowania aplikacji, zwróć uwagę, że jej nie powoduje odszyfrowania danych jeśli podano nieprawidłowe hasło.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Security.Cryptography>  
- <xref:System.Security.Cryptography.DESCryptoServiceProvider>  
- <xref:System.Security.Cryptography.DES>  
- <xref:System.Security.Cryptography.TripleDES>  
- <xref:System.Security.Cryptography.Rijndael>  
- [Usługi kryptograficzne](../../../../standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Security.Cryptography>
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.DES>
+- <xref:System.Security.Cryptography.TripleDES>
+- <xref:System.Security.Cryptography.Rijndael>
+- [Usługi kryptograficzne](../../../../standard/security/cryptographic-services.md)

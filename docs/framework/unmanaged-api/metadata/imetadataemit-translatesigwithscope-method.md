@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ddaddbbd050dc079fcf20551e90c895d2f4ef59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e03572a4eaa0251866e8bfc6ae2d01d955d7b8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516190"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope — Metoda
-Importuje zestawu do bieżącego zakresu i pobiera nowego podpisu metadanych dla zakresu scalone.  
+Importuje zestawu do bieżącego zakresu, a następnie pobiera nowa sygnatura metadanych dla zakresu scalone.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,19 +47,19 @@ HRESULT TranslateSigWithScope (
   
 #### <a name="parameters"></a>Parametry  
  `pAssemImport`  
- [in] Interfejs dla importu zestawu (w którym jest zdefiniowana podpis).  
+ [in] Interfejs dla importu zestawu (gdzie definiuje się podpis).  
   
  `pbHashValue`  
- [in] Obiektu blob generowania skrótu dla zestawu.  
+ [in] Obiekt blob wyznaczania wartości skrótu dla zestawu.  
   
  `cbHashValue`  
  [in] Liczba bajtów w `pbHashValue`.  
   
  `import`  
- [in] Interfejs zakresie importu metadanych.  
+ [in] Interfejs dla zakresu metadanych importu.  
   
  `pbSigBlob`  
- [in] Podpis do zaimportowania.  
+ [in] Podpis, który ma zostać zaimportowany.  
   
  `cbSigBlob`  
  [in] Rozmiar w bajtach z `pbSigBlob`.  
@@ -71,26 +71,26 @@ HRESULT TranslateSigWithScope (
  [in] Interfejs dla zakresu metadanych eksportu.  
   
  `pvTranslatedSig`  
- [out] Bufor do przechowywania obiektów blob przetłumaczonego podpisu.  
+ [out] Bufor do przechowywania obiektów blob przetłumaczone podpisu.  
   
  `cbTranslatedSigMax`  
- [in] Pojemność, w bajtach z `pvTranslatedSig`.  
+ [in] Pojemność, w bajtach, z `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- [out] Liczba rzeczywista liczba bajtów w przetłumaczonego podpisu.  
+ [out] Liczba rzeczywista liczba bajtów w podpisie tłumaczenia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

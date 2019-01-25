@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wymuszanie przekazywania argumentu przez wartość (Visual Basic)'
+title: 'Instrukcje: Wymuszanie argumentu być przekazywany przez wartość (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -14,52 +14,52 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: adc58c34150030eb0fc82050576bfecc453e21ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c4d6397d9a9ab1b95c4708c1e98741c01e9302e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706644"
 ---
-# <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Porady: wymuszanie przekazywania argumentu przez wartość (Visual Basic)
-Deklaracja procedury określa mechanizm przekazywania. Jeśli parametr jest zadeklarowany jako [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic oczekuje, że odpowiedni argument jest przekazywany za pomocą odwołania. Dzięki temu procedury zmienić wartość elementu programistycznego bazowy argumentu w wywoływanym kodzie. Jeśli chcesz chronić odpowiedniego elementu na takie zmiany, można zastąpić `ByRef` mechanizm przekazywania w procedurze wywołać umieszczając Nazwa argumentu w nawiasach. Te nawiasy są oprócz nawiasów otaczającej listy argumentów w wywołaniu.  
+# <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Instrukcje: Wymuszanie argumentu być przekazywany przez wartość (Visual Basic)
+Deklaracja procedury określa mechanizm przekazywania. Jeśli parametr jest zadeklarowana [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic oczekuje przekazywania odpowiadający argument odwołania. Dzięki temu procedurę, aby zmienić wartość elementu programistycznego, bazowy argumentu w wywoływanym kodzie. Jeśli chcesz chronić element podstawowy względem takie zmiany, można zastąpić `ByRef` wywołać mechanizm przekazywania w procedurze, umieszczając nazwę argumentu w nawiasach. Te nawiasy w niniejszym dokumencie stanowią nawiasów otaczający listę argumentów w wywołaniu.  
   
- Nie można zastąpić kod wywołujący [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mechanizmu.  
+ Nie można przesłonić, kod wywołujący [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mechanizm.  
   
-### <a name="to-force-an-argument-to-be-passed-by-value"></a>Aby wymusić argument przekazywany przez wartość  
+### <a name="to-force-an-argument-to-be-passed-by-value"></a>Aby wymusić argument jest przekazywany przez wartość  
   
--   Jeżeli zadeklarowano odpowiadającego mu parametru `ByVal` w procedurze, nie trzeba wykonać dodatkowe czynności. Visual Basic już oczekuje do przekazywania argumentu przez wartość.  
+-   Jeżeli zadeklarowano odpowiadającego mu parametru `ByVal` w procedurze jest konieczne wykonanie żadnych dodatkowych czynności. Visual Basic już oczekuje do przekazywania argumentu przez wartość.  
   
--   Jeżeli zadeklarowano odpowiadającego mu parametru `ByRef` w procedurze, ujmij argument w nawiasach w wywołaniu procedury.  
+-   Jeżeli zadeklarowano odpowiadającego mu parametru `ByRef` w procedurze, należy ująć argument w nawiasach w wywołaniu procedury.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zastępuje `ByRef` deklaracji parametru. W wywołaniu, która wymusza `ByVal`, należy zwrócić uwagę dwa poziomy nawiasów.  
+ Poniższy przykład zastępuje `ByRef` deklaracji parametru. W wywołaniu, która wymusza `ByVal`, należy pamiętać, dwa poziomy nawiasów.  
   
  [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
   
  [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
   
- Gdy `str` jest ujęta w dodatkowe nawiasy w liście argumentów `setNewString` procedury nie można zmienić jego wartości w wywoływanym kodzie i `MsgBox` wyświetla "nie można zamienić, jeśli przekazany ByVal". Gdy `str` nie jest ujęta w nawiasy dodatkowe procedury można zmienić, i `MsgBox` Wyświetla "Jest nową wartość dla argumentu inString".  
+ Gdy `str` jest ujęty w nawiasy dodatkowe w liście argumentów `setNewString` procedury nie można zmienić jego wartość w wywoływanym kodzie i `MsgBox` Wyświetla, "nie można zastąpić, jeśli przekazany ByVal". Gdy `str` nie jest ujęty w nawiasy dodatkowe procedury można go zmienić, i `MsgBox` Wyświetla "Jest nową wartość dla argumentu inString".  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Jeśli zmienna przez odwołanie, należy użyć `ByRef` — słowo kluczowe, aby określić, ten mechanizm.  
+ Jeśli zmienna jest przekazywane przez odwołanie, musisz użyć `ByRef` — słowo kluczowe, aby określić, ten mechanizm.  
   
- Domyślnie w języku Visual Basic nie jest przekazywanie argumentów według wartości. Jednak jest dobre rozwiązanie to dołączenie albo programowania [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe z każdym zadeklarowany parametr. Ułatwia to kodu do odczytu.  
+ Domyślnie w języku Visual Basic nie jest przekazywanie argumentów według wartości. Jednak dobrą praktyką, aby uwzględnić albo programowania jest [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe z każdym zadeklarowany parametr. Dzięki temu można łatwiej odczytać kodu.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Jeśli parametr deklaruje procedurę [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), prawidłowe wykonanie kodu może być zależna od możliwość zmiany odpowiedniego elementu kodu wywołującego. Jeśli kod wywołujący zastępuje ten mechanizm wywoływania umieszczając argument w nawiasach, lub jeśli przekazaniem niemodyfikowalnymi argument procedury nie można zmienić elementu źródłowego. Może to spowodować nieoczekiwane wyniki w wywoływanym kodzie.  
+ Jeśli procedura deklaruje parametr [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), poprawna wykonania kodu może zależeć od możliwości zmienić element podstawowy w wywoływanym kodzie. Jeśli kod wywołujący zastępuje ten mechanizm wywołania, umieszczając argument w nawiasach lub przekazuje argument niemodyfikowalnymi, procedury nie można zmienić elementu bazowego. Może to dawać nieoczekiwane wyniki w wywoływanym kodzie.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Istnieje potencjalne ryzyko z umożliwieniem procedury zmienić wartość argumentu w wywoływanym kodzie podstawowy. Upewnij się, że oczekiwane tę wartość można zmienić, i jest gotowy do Sprawdź poprawność, przed jego użyciem.  
+ Z zezwoleniem na procedury zmienić wartość argumentu w wywoływanym kodzie bazowego zawsze to potencjalne zagrożenie. Upewnij się, że oczekiwane tę wartość można zmienić i przygotowywane do sprawdzania poprawności, przed jego użyciem.  
   
-## <a name="see-also"></a>Zobacz też  
- [Procedury](./index.md)  
- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Instrukcje: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)  
- [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)  
- [Różnice między argumentami modyfikowalnymi i niemodyfikowalnymi](./differences-between-modifiable-and-nonmodifiable-arguments.md)  
- [Różnice między przekazywaniem argumentu według wartości i według odwołania](./differences-between-passing-an-argument-by-value-and-by-reference.md)  
- [Instrukcje: zmiana wartości argumentu procedury](./how-to-change-the-value-of-a-procedure-argument.md)  
- [Instrukcje: ochrona argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md)  
- [Przekazywanie argumentów według pozycji i według nazwy](./passing-arguments-by-position-and-by-name.md)  
- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Zobacz także
+- [Procedury](./index.md)
+- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
+- [Instrukcje: Przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)
+- [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)
+- [Różnice między argumentami modyfikowalnymi i niemodyfikowalnymi](./differences-between-modifiable-and-nonmodifiable-arguments.md)
+- [Różnice między przekazywaniem argumentu według wartości i według odwołania](./differences-between-passing-an-argument-by-value-and-by-reference.md)
+- [Instrukcje: Zmień wartość argumentu procedury](./how-to-change-the-value-of-a-procedure-argument.md)
+- [Instrukcje: Chronienie argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Przekazywanie argumentów według pozycji i według nazwy](./passing-arguments-by-position-and-by-name.md)
+- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

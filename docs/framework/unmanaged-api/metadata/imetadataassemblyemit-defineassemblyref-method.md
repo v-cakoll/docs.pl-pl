@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6675d50d3222a43abc8838c3c86cb825d2dad16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f82fca1d7701921a10c1feb9cce19371729ff01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493473"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef — Metoda
-Tworzy `AssemblyRef` struktury zawierającej metadanych dla zestawu, który odwołuje się ten zestaw i zwraca token skojarzone metadane.  
+Tworzy `AssemblyRef` struktury zawierający metadane dla zestawu, który odwołuje się ten zestaw i zwraca token skojarzone metadane.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,42 +44,42 @@ HRESULT DefineAssemblyRef (
   
 #### <a name="parameters"></a>Parametry  
  `pbPublicKeyOrToken`  
- [in] Klucz publiczny wydawcy przywoływanego zestawu. Funkcja Pomocnika [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) można uzyskać skrótu klucza publicznego do przekazania jako parametr.  
+ [in] Klucz publiczny wydawcy przywoływanego zestawu. Funkcja Pomocnika [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) umożliwia uzyskanie skrótu klucza publicznego do przekazania jako parametr.  
   
  `cbPublicKeyOrToken`  
- [in] Wyrażony w bajtach rozmiar `pbPublicKeyOrToken`.  
+ [in] Rozmiar w bajtach `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] Tekst zrozumiałą nazwę zestawu. Ta wartość nie może przekraczać 1024 znaków.  
+ [in] Nazwa tekstowych zrozumiałych zestawu. Ta wartość nie może przekraczać 1024 znaków.  
   
  `pMetaData`  
- [in] Wystąpienie assemblymetadata —, który zawiera informacje o wersji, platform i ustawień regionalnych przywoływanego zestawu.  
+ [in] Wystąpienie assemblymetadata —, który zawiera informacje o wersji, platformy i ustawienia regionalne przywoływanego zestawu.  
   
  `pbHashValue`  
- [in] Skrót danych skojarzonych z przywoływanego zestawu. Opcjonalna.  
+ [in] Dane wyznaczania wartości skrótu, skojarzone z przywoływanego zestawu. Opcjonalna.  
   
  `cbHashValue`  
- [in] Wyrażony w bajtach rozmiar `pbHashValue`.  
+ [in] Rozmiar w bajtach `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] Bitowe połączenie [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) wartości, które wywierania wpływu na zachowanie aparat wykonywania.  
+ [in] Bitowa kombinacja [corassemblyflags —](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) wartości, które mają wpływ na zachowanie aparatu wykonywania.  
   
  `pmdar`  
- [out] Wskaźnik do zwróconego `AssemblyRef` token metadanych.  
+ [out] Wskaźnik do zwracanego `AssemblyRef` token metadanych.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeden `AssemblyRef` struktura metadanych musi być zdefiniowana dla każdego zestawu, który odwołuje się do tego zestawu.  
+ Jeden `AssemblyRef` struktury metadanych musi być zdefiniowana dla każdego zestawu, który odwołuje się do tego zestawu.  
   
- W czasie wykonywania szczegółowe informacje o zestawie są przekazywane do rozpoznawania zestawu ze wskazaniem reprezentują one informacje "jako wbudowane". Mechanizm rozpoznawania zestawów następnie stosuje zasady.  
+ W czasie wykonywania szczegółowe informacje o zestawie odwołania są przekazywane do programu rozpoznawania nazw zestawów ze wskazaniem, czy stanowią one informacje "jak skompilowana". Mechanizm rozpoznawania zestawów następnie stosuje zasady.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

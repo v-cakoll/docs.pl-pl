@@ -2,12 +2,12 @@
 title: Odnajdywanie — znajdowanie i kryteria znajdowania
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 7c389a4f0b8fb9789db33fe3edbb01a1d6302137
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 21bfde1dae99a09e278a51ed330166551d4dca8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493316"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Odnajdywanie — znajdowanie i kryteria znajdowania
 Operacja Znajdź odnajdywania jest inicjowane przez klienta, aby dowiedzieć się, co najmniej jednej usługi i jest jednym z głównych działań podczas odnajdywania. Wykonywanie Znajdź wysyła komunikat sondowania usługi WS-Discovery za pośrednictwem sieci. Usługi, które spełniają kryteria określone odpowiedzi przy użyciu protokołu WS Discovery ProbeMatch komunikatów. Aby uzyskać więcej informacji na temat odnajdywania wiadomości zobacz [specyfikacji WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -15,7 +15,7 @@ Operacja Znajdź odnajdywania jest inicjowane przez klienta, aby dowiedzieć si�
 ## <a name="discoveryclient"></a>Klasa DiscoveryClient  
  <xref:System.ServiceModel.Discovery.DiscoveryClient> Klasa udostępnia mechanizm do wykonywania operacji wyszukiwania i sprawia, że wykonywanie operacji klienta odnajdywania jest łatwe. Zawiera <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> metody, która wykonuje synchroniczne (blokowanie) Znajdź, a <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> metody, która inicjuje nieblokującej na poziomie znajdowanie asynchroniczne. Obie metody przyjmują <xref:System.ServiceModel.Discovery.FindCriteria> parametru i podaj wyniki za pośrednictwem <xref:System.ServiceModel.Discovery.FindResponse> obiektu.  
   
-## <a name="findcriteria"></a>Kryteria znajdowania  
+## <a name="findcriteria"></a>FindCriteria  
  <xref:System.ServiceModel.Discovery.FindCriteria> ma kilka właściwości, które mogą być grupowane w kryteria wyszukiwania, które określają, jakie usługi, którego szukasz, i Znajdź kryteriów zakończenia (ile wyszukiwanie powinno trwać). Element <xref:System.ServiceModel.Discovery.FindCriteria> może zawierać wiele kryteriów wyszukiwania. Domyślnie usługa ma do dopasowywania wszystkich składników w przeciwnym razie nie uważa się zgodnych usług. Jeśli chcesz znaleźć usługi spełniające tylko niektóre kryteria, można zaimplementować logikę niestandardowego wyszukiwania w usłudze, lub można użyć wielu zapytań.  
   
  Kryteria wyszukiwania, obejmują:  
@@ -64,8 +64,8 @@ FindResponse findResponse = discoveryClient.Find(findCriteria);
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Używanie kanału klienta odnajdywania](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
- [Odnajdywanie z zakresami](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Podstawy](../../../../docs/framework/wcf/samples/basic-sample.md)
+## <a name="see-also"></a>Zobacz także
+- [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Używanie kanału klienta odnajdywania](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
+- [Odnajdywanie z zakresami](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
+- [Podstawy](../../../../docs/framework/wcf/samples/basic-sample.md)

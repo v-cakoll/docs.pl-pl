@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: a387627e95ce3bf5cfb095412c7100e1bfbe836d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600430"
 ---
 # <a name="queues-overview"></a>Omówienie kolejek
 W tej sekcji przedstawiono ogólne i podstawowe pojęcia związane oczekujących komunikacji. Kolejne sekcje przejść do szczegółów dotyczących sposobu kolejkowania pojęcia opisane w tym miejscu są dyskowe widoczne w Windows Communication Foundation (WCF).  
@@ -73,14 +73,14 @@ W tej sekcji przedstawiono ogólne i podstawowe pojęcia związane oczekujących
 ## <a name="poison-message-queue-programming"></a>Obsługa zanieczyszczonych komunikatów kolejki programowania  
  Po powoduje komunikat do kolejki docelowej, usługa wielokrotnie może zakończyć się niepowodzeniem przetworzyć komunikatu. Na przykład aplikacja czytania wiadomości z kolejki w ramach transakcji i aktualizowanie bazy danych może się okazać bazy danych, tymczasowo odłączone. W tym przypadku transakcja zostanie wycofana, utworzono nową transakcję i komunikat jest ponownie Pobierz z kolejki. Druga próba może powodzenie lub niepowodzenie. W niektórych przypadkach w zależności od przyczyny tego błędu komunikat wielokrotnie mogą nie działać dostarczania aplikacji. W takich przypadkach komunikat jest uznawany za jako "poison." Takie wiadomości są przenoszone do kolejki skażone, który może zostać odczytany przez aplikację do obsługi poison.  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Sesje i kolejki](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [Kolejki utraconych komunikatów](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
- [Komunikacja za pomocą nietrwałych kolejek](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
- [Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Instalowanie usługi kolejkowania komunikatów (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Przykłady powiązania Integracja usługi kolejkowania komunikatów](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
- [Obsługa kolejek komunikatów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [Zabezpieczenia komunikatów w ramach kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Sesje i kolejki](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
+- [Kolejki utraconych komunikatów](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
+- [Komunikacja za pomocą nietrwałych kolejek](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
+- [Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
+- [Instalowanie usługi kolejkowania komunikatów (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [Przykłady powiązania Integracja usługi kolejkowania komunikatów](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)
+- [Obsługa kolejek komunikatów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
+- [Zabezpieczenia komunikatów w ramach kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

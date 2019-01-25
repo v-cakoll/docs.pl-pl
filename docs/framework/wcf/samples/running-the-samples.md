@@ -2,12 +2,12 @@
 title: Uruchamianie przykładów programu Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 3e49a88fa5369cc2ad2251e48f3eca74fa7c4445
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3ae982b49a0d54d59d889166375938560c0d0d1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535884"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Uruchamianie przykładów programu Windows Communication Foundation
 Przykłady Windows Communication Foundation (WCF) mogą być uruchamiane w konfiguracji pojedynczego komputera lub między komputerami. Dostarczony, próbki są gotowe do uruchamiania na jednym komputerze. W konfiguracji między komputerami jest niezbędnej do modyfikacji ustawień pliku konfiguracji w próbce. Poniższe procedury dotyczą sposobu uruchamiania przykładu w tym samym komputerze, jak i między komputerami konfiguracji. Należy pamiętać, że istnieją różnice w krokach dla usług hostowanych w Internet Information Services (IIS) i samodzielnie hostowanej próbek. Większość przykładów są hostowane w usługach IIS; Zapoznaj się z informacjami readme próbki, aby określić, jak jest hostowana.  
@@ -79,7 +79,7 @@ Przykłady Windows Communication Foundation (WCF) mogą być uruchamiane w konfi
   
 -   Jeśli usługa jest hostowana w usługach IIS na potrzeby zabezpieczeń, należy usunąć z definicji katalogu wirtualnego i uprawnienia udzielone w ramach kroków konfiguracji, po zakończeniu pracy z próbek.  
   
-## <a name="see-also"></a>Zobacz też  
- [Kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [Uruchamianie przykładów programu, w grupie roboczej, a na maszynach](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
- [Wskazówki dotyczące rozwiązywania problemów](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+## <a name="see-also"></a>Zobacz także
+- [Kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)
+- [Uruchamianie przykładów programu, w grupie roboczej, a na maszynach](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)
+- [Wskazówki dotyczące rozwiązywania problemów](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

@@ -2,12 +2,12 @@
 title: '&lt;secureConversationBootstrap&gt;'
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: a923ca5d695b1b0b8f5362320b11f39f5153e9c8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dae0d6c24e50884cf044464209f3a3b9a50079aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744898"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwersacji.  
@@ -16,8 +16,8 @@ Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwers
 \<powiązania >  
 \<customBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
-\<secureConversationBootstrap >  
+\<security>  
+\<secureConversationBootstrap>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,7 +53,7 @@ Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwers
 |`includeTimestamp`|Wartość logiczna określająca czy sygnatury czasowe są umieszczane w każdej wiadomości. Wartość domyślna to `true`.|  
 |`keyEntropyMode`|Określa sposób, że są obliczane klucze dla zabezpieczenia wiadomości. Klucze mogą opierać się na klienta materiału klucza tylko usługa materiału klucza tylko lub jako kombinację obu tych. Prawidłowe wartości to:<br /><br /> -ClientEntropy: Klucz sesji bazuje klienta pod warunkiem materiału klucza.<br />-ServerEntropy: Klucz sesji jest na podstawie usług materiału klucza.<br />-CombinedEntropy: Klucz sesji na podstawie klient i Usługa udostępniona materiału klucza.<br /><br /> Wartość domyślna to CombinedEntropy.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
 |`messageProtectionOrder`|Ustawia kolejność, w jaki komunikat algorytmy poziomu zabezpieczenia są stosowane do wiadomości. Prawidłowe wartości są następujące:<br /><br /> -SignBeforeEncrypt: Zaloguj się najpierw, a następnie szyfrować.<br />-SignBeforeEncryptAndEncryptSignature: Podpisywania, szyfrowania i szyfrowanie podpisu.<br />-EncryptBeforeSign: Szyfrowanie po pierwsze, następnie logowania.<br /><br /> SignBeforeEncryptAndEncryptSignature jest wartością domyślną, używając wzajemnymi certyfikatami 1.1 WS-Security.  SignBeforeEncrypt jest wartością domyślną z WS-Security w wersji 1.0.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
-|`messageSecurityVersion`|Ustawia wersję WS-Security, która jest używana. Prawidłowe wartości są następujące:<br /><br /> -WSSecurityJan2004<br />-WSSecurityXXX2005<br /><br /> Wartość domyślna to WSSecurityXXX2005. Ten atrybut jest typu <xref:System.ServiceModel.MessageSecurityVersion>.|  
+|`messageSecurityVersion`|Ustawia wersję WS-Security, która jest używana. Prawidłowe wartości są następujące:<br /><br /> -   WSSecurityJan2004<br />-   WSSecurityXXX2005<br /><br /> Wartość domyślna to WSSecurityXXX2005. Ten atrybut jest typu <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |`requireDerivedKeys`|Wartość logiczna określająca, czy klucze mogą być uzyskane z oryginalnych kluczy dowodu. Wartość domyślna to `true`.|  
 |`requireSecurityContextCancellation`|Wartość logiczna określająca, czy kontekstu zabezpieczeń powinien być anulowany i zakończony, kiedy nie jest już wymagany. Wartość domyślna to `true`.|  
 |`requireSignatureConfirmation`|Wartość logiczna określająca, czy włączone jest potwierdzenie podpisu WS-Security. Po ustawieniu `true`, sygnatury komunikatów zostało potwierdzone przez obiekt odpowiadający. Wartość domyślna to `false`.<br /><br /> Potwierdzenie podpisu jest używany do upewnij się, usługa odpowiada w pełną świadomość żądania.|  
@@ -64,8 +64,8 @@ Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwers
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Określa bieżący wystawiony token. Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
-|[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Określa ustawienia zabezpieczenia lokalnego klienta dla tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
-|[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Określa ustawienia zabezpieczenia lokalnej usługi dla tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
+|[\<localClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Określa ustawienia zabezpieczenia lokalnego klienta dla tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
+|[\<localServiceSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Określa ustawienia zabezpieczenia lokalnej usługi dla tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -73,14 +73,14 @@ Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwers
 |-------------|-----------------|  
 |[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Określa opcje zabezpieczeń dla niestandardowego powiązania.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Zabezpieczenia powiązania niestandardowego](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Zabezpieczenia powiązania niestandardowego](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

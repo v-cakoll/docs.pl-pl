@@ -1,5 +1,5 @@
 ---
-title: 'Porady: ustawienie obrazów w czasie wykonywania (Formularze systemu Windows)'
+title: 'Instrukcje: Ustawienie obrazów w czasie wykonywania (formularze Windows)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: fedddf56966c3ab11a1dfb20c1d4cbd8a45fb1a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c7a65bcc65710324a4457c17dd728b4771550c06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694077"
 ---
-# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Porady: ustawienie obrazów w czasie wykonywania (Formularze systemu Windows)
-Można programowo Ustawianie obrazu wyświetlanego przez program Windows Forms <xref:System.Windows.Forms.PictureBox> formantu.  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Instrukcje: Ustawienie obrazów w czasie wykonywania (formularze Windows)
+Możesz programowo ustawić obrazu wyświetlanego przez formularze Windows <xref:System.Windows.Forms.PictureBox> kontroli.  
   
-### <a name="to-set-a-picture-programmatically"></a>Aby ustawić programowo obrazu  
+### <a name="to-set-a-picture-programmatically"></a>Aby programowo ustawić obrazu  
   
--   Ustaw <xref:System.Windows.Forms.PictureBox.Image%2A> za pomocą właściwości <xref:System.Drawing.Image.FromFile%2A> metody <xref:System.Drawing.Image> klasy.  
+-   Ustaw <xref:System.Windows.Forms.PictureBox.Image%2A> właściwość za pomocą <xref:System.Drawing.Image.FromFile%2A> metody <xref:System.Drawing.Image> klasy.  
   
-     W poniższym przykładzie ścieżka zestawu dla lokalizacji obrazu jest folder Moje dokumenty. Tej operacji, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu. To umożliwia użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji. W poniższym przykładzie założono formularza z <xref:System.Windows.Forms.PictureBox> kontroli już dodany.  
+     W poniższym przykładzie ścieżka lokalizacji obrazu jest folder Moje dokumenty. Jest to wykonywane, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu. Ponadto pozwala to użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji. W poniższym przykładzie przyjęto założenie, formularz z <xref:System.Windows.Forms.PictureBox> formant został już dodany.  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -67,7 +67,7 @@ Można programowo Ustawianie obrazu wyświetlanego przez program Windows Forms <
   
 ### <a name="to-clear-a-graphic"></a>Aby wyczyścić grafiki  
   
--   Po pierwsze zwalniają pamięć używana przez obraz, a następnie wyczyść grafiki. Wyrzucanie elementów bezużytecznych zwolnić pamięć później w przypadku zarządzania pamięcią problem.  
+-   Najpierw należy zwolnić pamięć używaną przez obraz, a następnie wyczyść grafiki. Wyrzucanie elementów bezużytecznych będzie zwolnić pamięć później Jeśli zarządzanie pamięcią staje się problem.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -93,14 +93,14 @@ Można programowo Ustawianie obrazu wyświetlanego przez program Windows Forms <
     ```  
   
     > [!NOTE]
-    >  Aby uzyskać więcej informacji o tym, dlaczego należy używać <xref:System.Drawing.Image.Dispose%2A> metody w ten sposób, zobacz [czyszczenie zasobów niezarządzanych](../../../../docs/standard/garbage-collection/unmanaged.md).  
+    >  Aby uzyskać więcej informacji o tym, dlaczego należy używać <xref:System.Drawing.Image.Dispose%2A> Zobacz metoda w ten sposób [Cleaning Up Unmanaged Resources](../../../../docs/standard/garbage-collection/unmanaged.md).  
   
-     Ten kod spowoduje wyczyszczenie obrazu, nawet jeśli grafiki został załadowany do formantu w czasie projektowania.  
+     Ten kod będzie Wyczyść obraz, nawet wtedy, gdy grafiki została załadowana do formantu w czasie projektowania.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.PictureBox>  
- <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>  
- [PictureBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- [Instrukcje: dodawanie zdjęcia przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- [Instrukcje: modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- [PictureBox, kontrolka](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.PictureBox>
+- <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
+- [PictureBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
+- [Instrukcje: Zdjęcia przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Instrukcje: Modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [PictureBox, kontrolka](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10475831be02bd4a958da84b7b75409cf3ad4097
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88ac588cd7eb98b4949aa993c66452de77dd100e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514738"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted — Metoda
-Powiadamia profiler jest zwalniany zestawu.  
+Powiadamia program profilujący, że zestaw jest zwalniany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,13 +36,13 @@ HRESULT AssemblyUnloadStarted(
   
 #### <a name="parameters"></a>Parametry  
  `assemblyId`  
- [in] Określa zestaw, który jest zwalniany.  
+ [in] Identyfikuje zestaw, który jest zwalniany.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość `assemblyId` jest nieprawidłowa dla żądania informacji po `AssemblyUnloadStarted` metoda zwraca — jest to profilera ostatnia możliwość uzyskania informacji na temat tego zestawu.  
+ Wartość `assemblyId` jest nieprawidłowa dla żądania informacji po `AssemblyUnloadStarted` metoda zwraca — jest to programu profilującego ostatniego masz szansę, aby uzyskać informacje na temat tego zestawu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -50,6 +50,6 @@ HRESULT AssemblyUnloadStarted(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [AssemblyUnloadFinished, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [AssemblyUnloadFinished, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)

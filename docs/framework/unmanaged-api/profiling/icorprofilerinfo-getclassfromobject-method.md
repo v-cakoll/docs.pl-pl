@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 104dfcaa4120d72f3aa758b66134050f178fef75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9031ae9b4870c182922baaa41883de4cddb469d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676682"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject — Metoda
-Pobiera `ClassID` obiektu podane jego `ObjectID`.  
+Pobiera `ClassID` obiektu, biorąc pod uwagę jej `ObjectID`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +37,16 @@ HRESULT GetClassFromObject(
   
 #### <a name="parameters"></a>Parametry  
  `objectId`  
- [in] Identyfikator obiektu, dla którego można pobrać `ClassID`.  
+ [in] Identyfikator obiektu, dla którego należy pobrać `ClassID`.  
   
  `pClassId`  
- [out] Wskaźnik do zwróconego `ClassID`.  
+ [out] Wskaźnik do zwracanego `ClassID`.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość null `pClassId` oznacza to, że `objectId` ma typ, który jest zwalnianie.  
+ Wartość null `pClassId` wskazuje, że `objectId` ma typ, który jest zwolnienie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -54,5 +54,5 @@ HRESULT GetClassFromObject(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

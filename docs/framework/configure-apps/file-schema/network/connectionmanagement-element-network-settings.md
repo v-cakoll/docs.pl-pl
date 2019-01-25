@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 7cc5f2a37c0520ee48a10afeb4b9bc83ffd61033
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 28864de79e809968f7efa6f3b052cfd599961854
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685029"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt; — Element (ustawienia sieci)
 Określa maksymalną liczbę połączeń z hostem sieci.  
   
  \<Konfiguracja >  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ Określa maksymalną liczbę połączeń z hostem sieci.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[przestrzeni nazw System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Zawiera ustawienia, które określają, jak .NET Framework łączy się z siecią.|  
+|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Zawiera ustawienia, które określają, jak .NET Framework łączy się z siecią.|  
   
 ## <a name="remarks"></a>Uwagi  
  `connectionManagement` Element definiuje maksymalną liczbę połączeń do serwera lub grupy serwerów.  
@@ -69,7 +69,7 @@ Określa maksymalną liczbę połączeń z hostem sieci.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

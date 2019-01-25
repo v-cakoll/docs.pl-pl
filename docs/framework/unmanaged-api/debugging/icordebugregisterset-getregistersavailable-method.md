@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3174be7237bcdbd5a12f38f04d6e67d9eb9a573e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f57e4a72828cdf744d5acd5483024de7d303f4a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743351"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>ICorDebugRegisterSet::GetRegistersAvailable — Metoda
-Pobiera bit maski wskazujący, który rejestruje w tym [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) są obecnie dostępne.  
+Pobiera nieco maski wskazujący, który rejestruje, w tym [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) są obecnie dostępne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,15 +37,15 @@ HRESULT GetRegistersAvailable (
   
 #### <a name="parameters"></a>Parametry  
  `pAvailable`  
- [out] Maska bitowa, która wskazuje, który rejestruje są obecnie dostępne.  
+ [out] Maska bitów, która wskazuje, który rejestruje są obecnie dostępne.  
   
 ## <a name="remarks"></a>Uwagi  
- Rejestr może być niedostępna, jeśli nie można określić wartość dla danej sytuacji.  
+ Rejestr może być niedostępna, jeśli jego wartość nie można określić dla danej sytuacji.  
   
- Zwrócony maska zawiera nieco dla poszczególnych rejestru (1 << indeks rejestru). Wartość bitowa wynosi 1, jeśli rejestr jest dostępny, lub wartość 0, jeśli nie jest dostępna.  
+ Zwrócone maska zawiera nieco dla każdego rejestru (1 << indeks rejestru). Wartość bitowa wynosi 1, jeśli rejestr jest dostępny, lub 0, jeśli nie jest dostępna.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -53,6 +53,6 @@ HRESULT GetRegistersAvailable (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugRegisterSet, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [ICorDebugRegisterSet2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugRegisterSet, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

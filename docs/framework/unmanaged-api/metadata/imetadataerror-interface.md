@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c264bfd31f8cd31bacf2d194ddbd07338569294
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe2f683ae46d1ee6205f97536976a358e86fc53d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720382"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError — Interfejs
-Udostępnia mechanizm wywołania zwrotnego dla usługi raportowania błędów podczas scalania metadanych.  
+Udostępnia mechanizm wywołania zwrotnego dla raportowania błędów podczas scalania metadanych.  
   
 > [!NOTE]
->  `IMetaDataError` Interfejs musi być implementowana przez klienta.  
+>  `IMetaDataError` Interfejsu muszą być zaimplementowane przez klienta.  
   
 ## <a name="methods"></a>Metody  
   
@@ -36,13 +36,13 @@ Udostępnia mechanizm wywołania zwrotnego dla usługi raportowania błędów po
 |[OnError, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Zapewnia powiadomienie błędów występujących podczas scalania metadanych.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

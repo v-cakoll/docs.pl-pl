@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25482ee81d5210e5ab69007767aecf01435602d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 191a6e4fcfe340ed43e85a9aa90f8a2ec0931730
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671658"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps — Metoda
 Pobiera metadane skojarzone z <xref:System.Type> odwołuje się określony token TypeRef.  
@@ -41,29 +41,29 @@ HRESULT GetTypeRefProps (
   
 #### <a name="parameters"></a>Parametry  
  `tr`  
- [in] Token TypeRef, który reprezentuje typ do zwrócenia metadanych.  
+ [in] Token TypeRef, który reprezentuje typ, można zwrócić metadanych dla.  
   
  `ptkResolutionScope`  
  [out] Wskaźnik do zakresu, w którym odniesienia. Ta wartość jest token elementu AssemblyRef lub element ModuleRef.  
   
  `szName`  
- [out] Bufor zawierający nazwy typu.  
+ [out] Bufor zawierający nazwę typu.  
   
  `cchName`  
- [in] Żądany rozmiar w znaki dwubajtowe `szName`.  
+ [in] Żądany rozmiar w znaków `szName`.  
   
  `pchName`  
- [out] Rozmiar zwróconego w znaki dwubajtowe `szName`.  
+ [out] Rozmiar zwrócony w znaków `szName`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

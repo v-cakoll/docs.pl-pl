@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28e270be8f16de9558e5d5440d621056a3114967
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636394"
 ---
-# <a name="efnstacktrace-function"></a><span data-ttu-id="36175-102">_EFN_StackTrace — Funkcja</span><span class="sxs-lookup"><span data-stu-id="36175-102">_EFN_StackTrace Function</span></span>
-<span data-ttu-id="36175-103">Udostępnia reprezentację tekst ślad stosu zarządzanych i tablicę `CONTEXT` rejestruje, jeden dla każdego przejścia między niezarządzanych i kod zarządzany.</span><span class="sxs-lookup"><span data-stu-id="36175-103">Provides a text representation of a managed stack trace and an array of `CONTEXT` records, one for each transition between unmanaged and managed code.</span></span>  
+# <a name="efnstacktrace-function"></a><span data-ttu-id="82c82-102">_EFN_StackTrace — Funkcja</span><span class="sxs-lookup"><span data-stu-id="82c82-102">_EFN_StackTrace Function</span></span>
+<span data-ttu-id="82c82-103">Zawiera tekst reprezentujący śledzenia stosu z zarządzanego i tablicę `CONTEXT` rejestruje, jeden dla każdego przejścia między niezarządzane, a kod zarządzany.</span><span class="sxs-lookup"><span data-stu-id="82c82-103">Provides a text representation of a managed stack trace and an array of `CONTEXT` records, one for each transition between unmanaged and managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="36175-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="36175-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="82c82-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="82c82-104">Syntax</span></span>  
   
 ```  
 HRESULT CALLBACK _EFN_StackTrace(  
@@ -40,42 +40,42 @@ HRESULT CALLBACK _EFN_StackTrace(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="36175-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="36175-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="82c82-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="82c82-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="36175-106">[in] Klient debugowany.</span><span class="sxs-lookup"><span data-stu-id="36175-106">[in] The client being debugged.</span></span>  
+ <span data-ttu-id="82c82-106">[in] Klient debugowane.</span><span class="sxs-lookup"><span data-stu-id="82c82-106">[in] The client being debugged.</span></span>  
   
  `wszTextOut`  
- <span data-ttu-id="36175-107">[out] Reprezentacja tekstowa typu ślad stosu.</span><span class="sxs-lookup"><span data-stu-id="36175-107">[out] The text representation of the stack trace.</span></span>  
+ <span data-ttu-id="82c82-107">[out] Tekstowa reprezentacja ślad stosu.</span><span class="sxs-lookup"><span data-stu-id="82c82-107">[out] The text representation of the stack trace.</span></span>  
   
  `puiTextLength`  
- <span data-ttu-id="36175-108">[out] Wskaźnik do liczba znaków w `wszTextOut`.</span><span class="sxs-lookup"><span data-stu-id="36175-108">[out] A pointer to the number of characters in `wszTextOut`.</span></span>  
+ <span data-ttu-id="82c82-108">[out] Wskaźnik do liczby znaków `wszTextOut`.</span><span class="sxs-lookup"><span data-stu-id="82c82-108">[out] A pointer to the number of characters in `wszTextOut`.</span></span>  
   
  `pTransitionContexts`  
- <span data-ttu-id="36175-109">[out] Tablica kontekstów przejścia.</span><span class="sxs-lookup"><span data-stu-id="36175-109">[out] The array of transition contexts.</span></span>  
+ <span data-ttu-id="82c82-109">[out] Tablica kontekstów przejścia.</span><span class="sxs-lookup"><span data-stu-id="82c82-109">[out] The array of transition contexts.</span></span>  
   
  `puiTransitionContextCount`  
- <span data-ttu-id="36175-110">[out] Wskaźnik do różnych kontekstach przejścia w tablicy.</span><span class="sxs-lookup"><span data-stu-id="36175-110">[out] A pointer to the number of transition contexts in the array.</span></span>  
+ <span data-ttu-id="82c82-110">[out] Wskaźnik do liczby kontekstów przejścia w tablicy.</span><span class="sxs-lookup"><span data-stu-id="82c82-110">[out] A pointer to the number of transition contexts in the array.</span></span>  
   
  `uiSizeOfContext`  
- <span data-ttu-id="36175-111">[in] Rozmiar struktury kontekstu.</span><span class="sxs-lookup"><span data-stu-id="36175-111">[in] The size of the context structure.</span></span>  
+ <span data-ttu-id="82c82-111">[in] Rozmiar struktury kontekstu.</span><span class="sxs-lookup"><span data-stu-id="82c82-111">[in] The size of the context structure.</span></span>  
   
  `Flags`  
- <span data-ttu-id="36175-112">[in] Wartość 0 lub SOS_STACKTRACE_SHOWADDRESSES (0x01) do wyświetlenia rejestru EBP i wprowadź wskaźnik stosu (ESP) przed każdym `module!functionname` wiersza.</span><span class="sxs-lookup"><span data-stu-id="36175-112">[in] Set to either 0 or SOS_STACKTRACE_SHOWADDRESSES (0x01) to show the EBP register and the enter stack pointer (ESP) in front of each `module!functionname` line.</span></span>  
+ <span data-ttu-id="82c82-112">[in] Ustaw na wartość 0 lub SOS_STACKTRACE_SHOWADDRESSES (0x01) aby wyświetlić rejestr EBP i wskaźnik stosu enter (ESP) przed każdym `module!functionname` wiersza.</span><span class="sxs-lookup"><span data-stu-id="82c82-112">[in] Set to either 0 or SOS_STACKTRACE_SHOWADDRESSES (0x01) to show the EBP register and the enter stack pointer (ESP) in front of each `module!functionname` line.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="36175-113">Uwagi</span><span class="sxs-lookup"><span data-stu-id="36175-113">Remarks</span></span>  
- <span data-ttu-id="36175-114">`_EFN_StackTrace` Struktury może zostać wywołana z interfejsu programowego WinDbg.</span><span class="sxs-lookup"><span data-stu-id="36175-114">The `_EFN_StackTrace` structure can be called from a WinDbg programmatic interface.</span></span> <span data-ttu-id="36175-115">Parametry są używane w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="36175-115">Parameters are used as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="82c82-113">Uwagi</span><span class="sxs-lookup"><span data-stu-id="82c82-113">Remarks</span></span>  
+ <span data-ttu-id="82c82-114">`_EFN_StackTrace` Struktury mogą być wywoływane z interfejsu programowego WinDbg.</span><span class="sxs-lookup"><span data-stu-id="82c82-114">The `_EFN_StackTrace` structure can be called from a WinDbg programmatic interface.</span></span> <span data-ttu-id="82c82-115">Parametry są używane w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="82c82-115">Parameters are used as follows:</span></span>  
   
--   <span data-ttu-id="36175-116">Jeśli `wszTextOut` ma wartość null i `puiTextLength` jest niezerowa, funkcja zwraca długość ciągu w `puiTextLength`.</span><span class="sxs-lookup"><span data-stu-id="36175-116">If `wszTextOut` is null and `puiTextLength` is not null, the function returns the string length in `puiTextLength`.</span></span>  
+-   <span data-ttu-id="82c82-116">Jeśli `wszTextOut` ma wartość null i `puiTextLength` jest inna niż null, funkcja zwraca długość ciągu w `puiTextLength`.</span><span class="sxs-lookup"><span data-stu-id="82c82-116">If `wszTextOut` is null and `puiTextLength` is not null, the function returns the string length in `puiTextLength`.</span></span>  
   
--   <span data-ttu-id="36175-117">Jeśli `wszTextOut` jest niezerowa, funkcja przechowuje tekst w `wszTextOut` do lokalizacji wskazanej przez `puiTextLength`.</span><span class="sxs-lookup"><span data-stu-id="36175-117">If `wszTextOut` is not null, the function stores text in `wszTextOut` up to the location indicated by `puiTextLength`.</span></span> <span data-ttu-id="36175-118">Zwraca go pomyślnie, jeśli było wystarczająco dużo miejsca w buforze lub zwraca E_OUTOFMEMORY Jeśli bufor nie był wystarczająco długi.</span><span class="sxs-lookup"><span data-stu-id="36175-118">It returns successfully if there was enough room in the buffer, or returns E_OUTOFMEMORY if the buffer was not long enough.</span></span>  
+-   <span data-ttu-id="82c82-117">Jeśli `wszTextOut` jest inna niż null, funkcja przechowuje tekst w `wszTextOut` do lokalizacji wskazanej przez `puiTextLength`.</span><span class="sxs-lookup"><span data-stu-id="82c82-117">If `wszTextOut` is not null, the function stores text in `wszTextOut` up to the location indicated by `puiTextLength`.</span></span> <span data-ttu-id="82c82-118">Zwraca ona pomyślnie, jeśli było wystarczająco dużo miejsca w buforze lub zwraca E_OUTOFMEMORY Jeśli bufor nie jest wystarczająco długie.</span><span class="sxs-lookup"><span data-stu-id="82c82-118">It returns successfully if there was enough room in the buffer, or returns E_OUTOFMEMORY if the buffer was not long enough.</span></span>  
   
--   <span data-ttu-id="36175-119">Przejście część funkcji jest ignorowana, jeśli `pTransitionContexts` i `puiTransitionContextCount` są obie wartości null.</span><span class="sxs-lookup"><span data-stu-id="36175-119">The transition portion of the function is ignored if `pTransitionContexts` and `puiTransitionContextCount` are both null.</span></span> <span data-ttu-id="36175-120">W takim przypadku funkcja udostępnia wywołań z tekst wyjściowy tylko nazwy funkcji.</span><span class="sxs-lookup"><span data-stu-id="36175-120">In this case, the function provides callers with text output of only the function names.</span></span>  
+-   <span data-ttu-id="82c82-119">Przejście część funkcji jest ignorowana, jeśli `pTransitionContexts` i `puiTransitionContextCount` mają obie wartość null.</span><span class="sxs-lookup"><span data-stu-id="82c82-119">The transition portion of the function is ignored if `pTransitionContexts` and `puiTransitionContextCount` are both null.</span></span> <span data-ttu-id="82c82-120">W takim przypadku funkcja zapewnia wywołań przy użyciu tekstu wyjściowego tylko nazwy funkcji.</span><span class="sxs-lookup"><span data-stu-id="82c82-120">In this case, the function provides callers with text output of only the function names.</span></span>  
   
--   <span data-ttu-id="36175-121">Jeśli `pTransitionContexts` ma wartość null i `puiTransitionContextCount` jest niezerowa, funkcja zwraca niezbędne liczbę wpisów kontekstu w `puiTransitionContextCount`.</span><span class="sxs-lookup"><span data-stu-id="36175-121">If `pTransitionContexts` is null and `puiTransitionContextCount` is not null, the function returns the necessary number of context entries in `puiTransitionContextCount`.</span></span>  
+-   <span data-ttu-id="82c82-121">Jeśli `pTransitionContexts` ma wartość null i `puiTransitionContextCount` jest inna niż null, funkcja zwraca niezbędne liczba wpisów kontekstu w `puiTransitionContextCount`.</span><span class="sxs-lookup"><span data-stu-id="82c82-121">If `pTransitionContexts` is null and `puiTransitionContextCount` is not null, the function returns the necessary number of context entries in `puiTransitionContextCount`.</span></span>  
   
--   <span data-ttu-id="36175-122">Jeśli `pTransitionContexts` jest niezerowa, funkcja traktuje ją jako tablica struktury o długości `puiTransitionContextCount`.</span><span class="sxs-lookup"><span data-stu-id="36175-122">If `pTransitionContexts` is not null, the function treats it as an array of structures of length `puiTransitionContextCount`.</span></span> <span data-ttu-id="36175-123">Rozmiar struktury jest określany przez `uiSizeOfContext`, a musi być rozmiar [simplecontext —](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) lub `CONTEXT` dla architektury.</span><span class="sxs-lookup"><span data-stu-id="36175-123">The structure size is given by `uiSizeOfContext`, and must be the size of [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) or `CONTEXT` for the architecture.</span></span>  
+-   <span data-ttu-id="82c82-122">Jeśli `pTransitionContexts` jest inna niż null, funkcja traktuje je jako tablicę struktury o długości `puiTransitionContextCount`.</span><span class="sxs-lookup"><span data-stu-id="82c82-122">If `pTransitionContexts` is not null, the function treats it as an array of structures of length `puiTransitionContextCount`.</span></span> <span data-ttu-id="82c82-123">Rozmiar struktury jest nadawana przez `uiSizeOfContext`, a musi być rozmiar [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) lub `CONTEXT` dla architektury.</span><span class="sxs-lookup"><span data-stu-id="82c82-123">The structure size is given by `uiSizeOfContext`, and must be the size of [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) or `CONTEXT` for the architecture.</span></span>  
   
--   <span data-ttu-id="36175-124">`wszTextOut` są zapisywane w następującym formacie:</span><span class="sxs-lookup"><span data-stu-id="36175-124">`wszTextOut` is written in the following format:</span></span>  
+-   <span data-ttu-id="82c82-124">`wszTextOut` są zapisywane w następującym formacie:</span><span class="sxs-lookup"><span data-stu-id="82c82-124">`wszTextOut` is written in the following format:</span></span>  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -84,22 +84,22 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   <span data-ttu-id="36175-125">Jeśli Przesunięcie szesnastkowo 0x0, przesunięcie nie są zapisywane.</span><span class="sxs-lookup"><span data-stu-id="36175-125">If the offset in hex is 0x0, no offset is written.</span></span>  
+-   <span data-ttu-id="82c82-125">Jeśli Przesunięcie szesnastkowo 0x0, przesunięcie nie są zapisywane.</span><span class="sxs-lookup"><span data-stu-id="82c82-125">If the offset in hex is 0x0, no offset is written.</span></span>  
   
--   <span data-ttu-id="36175-126">Jeśli istnieje żadnego kodu zarządzanego w wątku aktualnie w kontekście, funkcja zwraca SOS_E_NOMANAGEDCODE.</span><span class="sxs-lookup"><span data-stu-id="36175-126">If there is no managed code on the thread currently in context, the function returns SOS_E_NOMANAGEDCODE.</span></span>  
+-   <span data-ttu-id="82c82-126">Jeśli żaden kod zarządzany w wątku obecnie występuje w kontekście, funkcja zwraca SOS_E_NOMANAGEDCODE.</span><span class="sxs-lookup"><span data-stu-id="82c82-126">If there is no managed code on the thread currently in context, the function returns SOS_E_NOMANAGEDCODE.</span></span>  
   
--   <span data-ttu-id="36175-127">`Flags` Parametr ma wartość 0 lub SOS_STACKTRACE_SHOWADDRESSES, aby wyświetlić EBP i ESP przed każdym `module!functionname` wiersza.</span><span class="sxs-lookup"><span data-stu-id="36175-127">The `Flags` parameter is either 0 or SOS_STACKTRACE_SHOWADDRESSES to see EBP and ESP in front of each `module!functionname` line.</span></span> <span data-ttu-id="36175-128">Domyślnie jest 0.</span><span class="sxs-lookup"><span data-stu-id="36175-128">By default, it is 0.</span></span>  
+-   <span data-ttu-id="82c82-127">`Flags` Parametr jest równa 0 lub SOS_STACKTRACE_SHOWADDRESSES, aby zobaczyć EBP i ESP przed każdym `module!functionname` wiersza.</span><span class="sxs-lookup"><span data-stu-id="82c82-127">The `Flags` parameter is either 0 or SOS_STACKTRACE_SHOWADDRESSES to see EBP and ESP in front of each `module!functionname` line.</span></span> <span data-ttu-id="82c82-128">Domyślnie to 0.</span><span class="sxs-lookup"><span data-stu-id="82c82-128">By default, it is 0.</span></span>  
   
     ```  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
-## <a name="requirements"></a><span data-ttu-id="36175-129">Wymagania</span><span class="sxs-lookup"><span data-stu-id="36175-129">Requirements</span></span>  
- <span data-ttu-id="36175-130">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36175-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="82c82-129">Wymagania</span><span class="sxs-lookup"><span data-stu-id="82c82-129">Requirements</span></span>  
+ <span data-ttu-id="82c82-130">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="82c82-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="36175-131">**Nagłówek:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="36175-131">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="82c82-131">**Nagłówek:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="82c82-131">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="36175-132">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36175-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="82c82-132">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82c82-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36175-133">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="36175-133">See Also</span></span>  
- [<span data-ttu-id="36175-134">Debugowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="36175-134">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="82c82-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="82c82-133">See also</span></span>
+- [<span data-ttu-id="82c82-134">Debugowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="82c82-134">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

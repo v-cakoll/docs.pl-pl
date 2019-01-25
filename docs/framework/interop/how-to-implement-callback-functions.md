@@ -1,5 +1,5 @@
 ---
-title: 'Porady: implementowanie funkcji wywołania zwrotnego'
+title: 'Instrukcje: Implementowanie funkcji wywołania zwrotnego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e081347129ce367cf6b46ca29c07a016bb64ab95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf972455aa54a7fe45ffd7858ac9e5da5eee6e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718679"
 ---
-# <a name="how-to-implement-callback-functions"></a>Porady: implementowanie funkcji wywołania zwrotnego
-Poniższe procedury i przykładowe pokazują, jak wywołać przy użyciu platformy aplikacji zarządzanej, drukować wartość uchwytu dla każdego okna na komputerze lokalnym. W szczególności, użyj procedury i przykładowe **EnumWindows** funkcji kroków wykaz systemu windows oraz funkcja wywołania zwrotnego w zarządzanych (nazwane wywołania zwrotnego) do drukowania wartość uchwytu okna.  
+# <a name="how-to-implement-callback-functions"></a>Instrukcje: Implementowanie funkcji wywołania zwrotnego
+Poniższy przykład i procedury pokazują, jak wywołać przy użyciu platformy zarządzanej aplikacji, można wydrukować wartość dojścia dla każdego przedziału na komputerze lokalnym. W szczególności procedury i przykładowego użycia **EnumWindows** funkcji przechodzić przez wykaz systemu windows i funkcji wywołania zwrotnego zarządzanych (o nazwie wywołanie zwrotne) aby wyświetlić wartość uchwyt okna.  
   
-### <a name="to-implement-a-callback-function"></a>Aby wdrożyć funkcję wywołania zwrotnego  
+### <a name="to-implement-a-callback-function"></a>Aby zaimplementować funkcję wywołania zwrotnego  
   
-1.  Przyjrzyj się podpis dla **EnumWindows** funkcja przed przejściem dalej z implementacją. **EnumWindows** ma następującą sygnaturą:  
+1.  Przyjrzyj się podpis dla **EnumWindows** funkcji przed przejściem dalej z implementacją. **EnumWindows** ma następujący podpis:  
   
     ```  
     BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
     ```  
   
-     Jeden clue, że ta funkcja wymaga wywołania zwrotnego jest obecność **lpEnumFunc** argumentu. Często, aby wyświetlić **lp** prefiks (wskaźnik długi) łączony z **Func** sufiks nazwy argumentów, które przyjmują wskaźnika do funkcji wywołania zwrotnego. Dokumentacja funkcji Win32 temacie zestawu SDK platformy firmy Microsoft.  
+     Co sugeruje, że ta funkcja wymaga wywołania zwrotnego jest obecność **lpEnumFunc** argumentu. Bardzo często, aby zobaczyć **lp** prefiksu (wskaźnik długi) w połączeniu z **Func** sufiks nazwy argumentów, które przyjmują wskaźnik do funkcji wywołania zwrotnego. Dokumentację informacji na temat funkcji Win32 na ten temat można znaleźć w zestawie SDK platformy firmy Microsoft.  
   
-2.  Utwórz funkcję wywołania zwrotnego w zarządzanych. Przykład deklaruje typ delegata o nazwie `CallBack`, który przyjmuje dwa argumenty (**hwnd** i **lparam**). Pierwszy argument jest dojścia do okna; drugi argument jest zdefiniowane przez aplikację. W tej wersji oba argumenty muszą być liczbami całkowitymi.  
+2.  Tworzenie funkcji wywołania zwrotnego zarządzanych. Przykład deklaruje typu delegata, o nazwie `CallBack`, który przyjmuje dwa argumenty (**hwnd** i **lparam**). Pierwszy argument jest uchwytem do okna; drugi argument funkcji jest zdefiniowany przez aplikację. W tej wersji oba argumenty muszą być liczbami całkowitymi.  
   
-     Funkcje wywołania zwrotnego zwracają zazwyczaj niezerowe wartości oznacza powodzenie i zera do wskazania błędu. W tym przykładzie jawnie ustawia wartość zwrotną **true** kontynuowanie wyliczenia.  
+     Funkcje wywołania zwrotnego zazwyczaj zwraca wartość różną od zera wartości do wskazania sukcesu oraz zero, aby wskazać błąd. W tym przykładzie jawnie ustawia wartość zwracaną **true** kontynuować wyliczenia.  
   
-3.  Utworzenia delegata i przekaż go jako argument **EnumWindows** funkcji. Wywołanie platformy automatycznie konwertuje delegata do formatu znanych wywołania zwrotnego.  
+3.  Utwórz delegata i przekazać go jako argument do **EnumWindows** funkcji. Wywołanie platformy automatycznie konwertuje delegata do formatu znanych wywołania zwrotnego.  
   
-4.  Upewnij się, że moduł zbierający elementy bezużyteczne nie odzyskać delegat ukończenia pracy funkcji wywołania zwrotnego. Przekazywanie obiektu delegate jako parametr lub przekazywanie obiektu delegate zawarte jako pola w strukturze pozostaje niepobranych na czas trwania wywołania. Tak jak w przypadku w poniższym przykładzie wyliczenie, funkcja wywołania zwrotnego nie ukończy pracy przed wywołanie zwraca i nie wymaga dodatkowych czynności przez obiekt wywołujący zarządzanych.  
+4.  Upewnij się, że moduł odśmiecania pamięci nie spowoduje odzyskania delegata przed funkcji wywołania zwrotnego nie ukończy pracy. Przekazywanie obiektu delegate jako parametr lub przekazywanie obiektu delegate zawarte jako pole w strukturze, pozostaje niepobranych na czas trwania wywołania. Tak jak w przypadku, w poniższym przykładzie wyliczenie, funkcja wywołania zwrotnego nie ukończy pracy przed wywołanie zwraca i nie wymaga dodatkowych czynności przez zarządzany obiekt wywołujący.  
   
-     Jeśli jednak funkcja wywołania zwrotnego można wywołać po wywołaniu zwraca, wywołujący zarządzanych, należy wykonać kroki w celu zapewnienia delegat pozostaje niepobranych, dopóki nie zakończy się działanie funkcji wywołania zwrotnego. Aby uzyskać szczegółowe informacje dotyczące zapobiegania wyrzucanie elementów bezużytecznych, zobacz [organizowanie międzyoperacyjne](../../../docs/framework/interop/interop-marshaling.md) z wywołania platformy.  
+     Jeśli jednak po wywołaniu zwraca można wywołać funkcję wywołania zwrotnego, zarządzanego obiektu wywołującego, należy wykonać czynności, aby upewnić się, delegat pozostaje niepobranych, dopóki nie zakończy się działanie funkcji wywołania zwrotnego. Aby uzyskać szczegółowe informacje dotyczące zapobiegania wyrzucania elementów bezużytecznych, zobacz [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md) za pomocą wywołania platformy.  
   
 ## <a name="example"></a>Przykład  
   
@@ -129,6 +129,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wywołania zwrotnego](../../../docs/framework/interop/callback-functions.md)  
- [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>Zobacz także
+- [Funkcje wywołania zwrotnego](../../../docs/framework/interop/callback-functions.md)
+- [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)

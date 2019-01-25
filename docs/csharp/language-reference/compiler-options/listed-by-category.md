@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 891e5eac249f4bd22b6eadde7509de2d07cd1576
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7403b42a48413d28808b49542727c2f07d0ad026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546991"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opcje kompilatora C# w rozbiciu na kategorie
 
@@ -95,7 +95,7 @@ Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać al
 |[-codepage](codepage-compiler-option.md)|Określa stronę kodową do użycia dla wszystkich plikach kodu źródłowego w kompilacji.|
 |[-help](help-compiler-option.md)|Wyświetla listę opcji kompilatora stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Określa, że plik wykonywalny obsługuje randomizacji układu przestrzeni adresowej (ASLR).|
-|[-langversion](langversion-compiler-option.md)|Określ wersję języka: domyślny, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 lub najnowsze |
+|[-langversion](langversion-compiler-option.md)|Określ wersję języka: Domyślny, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 lub r |
 |[-main](main-compiler-option.md)|Określa lokalizację **Main** metody.|
 |[-noconfig](noconfig-compiler-option.md)|Instruuje kompilator, nie można skompilować przy użyciu csc.rsp.|
 |[-nologo](nologo-compiler-option.md)|Pomija informacji o transparencie kompilatora.|
@@ -103,17 +103,17 @@ Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać al
 |[-subsystemversion](subsystemversion-compiler-option.md)|Określa minimalną wersję podsystemu, którego można użyć pliku wykonywalnego.|
 |[-unsafe](unsafe-compiler-option.md)|Włącza kompilację kodu, który używa [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe.|
 |[-utf8output](utf8output-compiler-option.md)|Kompilator wyświetla dane wyjściowe przy użyciu kodowania UTF-8.|
-|-równoległe [+&#124;-]|Określa, czy używać współbieżną kompilację (+).|
-|-checksumalgorithm:\<algorytmu podpisu >|Określić algorytm obliczania sumy kontrolnej pliku źródłowego, które zostały zapisane w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (domyślna) lub SHA256.|
+|-parallel[+&#124;-]|Określa, czy używać współbieżną kompilację (+).|
+|-checksumalgorithm:\<alg>|Określić algorytm obliczania sumy kontrolnej pliku źródłowego, które zostały zapisane w pliku PDB.  Obsługiwane są następujące wartości: Algorytm SHA1 (domyślna) lub SHA256.|
 
 ## <a name="obsolete-options"></a>Opcje przestarzałe
 
 |Opcja|Cel|
 |---|---|
-|-przyrostowe|Włącza kompilację przyrostową.|
+|-incremental|Włącza kompilację przyrostową.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](index.md)  
-- [Opcje kompilatora C# w porządku alfabetycznym](listed-alphabetically.md)  
-- [Instrukcje: ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Opcje kompilatora C#](index.md)
+- [Opcje kompilatora C# w porządku alfabetycznym](listed-alphabetically.md)
+- [Instrukcje: Ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

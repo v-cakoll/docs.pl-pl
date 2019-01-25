@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e874d593a18be352e7053a15525f3168e7fcc9db
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8c75d0631b05e4db53308efde8fe4c70a0778ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540575"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Przegląd środowiska uruchomieniowego języka dynamicznego
 
@@ -91,10 +91,10 @@ DLR używa integratorów wywołania do komunikowania się nie tylko przy użyciu
 ## <a name="dlr-documentation"></a>Dokumentacja DLR
  Aby uzyskać więcej informacji o sposobie używania wersji "open source" DLR dodanie zachowania dynamiczny język lub o tym, jak umożliwia korzystanie z języka dynamicznego przy użyciu programu .NET Framework, zobacz dokumentację na [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) repozytorium w witrynie GitHub.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [Środowisko uruchomieniowe języka wspólnego](../../../docs/standard/clr.md)
 - [Drzewa wyrażeń](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
-- [Wskazówki: Tworzenie obiektów dynamicznych i posługiwanie](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Przewodnik: Tworzenie obiektów dynamicznych i posługiwanie](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 130ba2864537f017bd3037412d742d887df1ae68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 676f3fe9aa9ad7de1499bb42ff23d446b1cb73d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535492"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue — Metoda
-Pobiera wartość z lokalny magazyn wątków (TLS) z określonego wątku w procesie docelowym. Ta metoda jest wywoływana przez wspólne usługi dostępu do danych języka środowiska uruchomieniowego (języka wspólnego CLR).  
+Pobiera wartość z magazynu lokalnego wątku (TLS) lub określony wątek w procesie docelowym. Ta metoda jest wywoływana przez usługi dostępu do danych środowiska uruchomieniowego (języka wspólnego CLR) w usłudze common language.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,19 +39,19 @@ HRESULT GetTLSValue (
   
 #### <a name="parameters"></a>Parametry  
  `threadID`  
- [in] System operacyjny identyfikator wątku w procesie docelowym.  
+ [in] Identyfikator systemu operacyjnego wątek w procesie docelowym.  
   
  `index`  
- [in] Indeks lokalizacji. Ta wartość musi być prawidłowym indeksem w lokalnym magazynie określonego wątku.  
+ [in] Indeks lokalizacji. Ta wartość musi być prawidłowy indeks w lokalnym magazynie określonego wątku.  
   
  `value`  
- [out] Wskaźnik do `CLRDATA_ADDRESS` wartość określającą wartość zwracana z danej lokalizacji TLS.  
+ [out] Wskaźnik do `CLRDATA_ADDRESS` wartość określa wartość zwracana z danej lokalizacji protokołu TLS.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest implementowany przez twórcę debugowania aplikacji.  
+ Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** ClrData.idl, ClrData.h  
   
@@ -59,5 +59,5 @@ HRESULT GetTLSValue (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

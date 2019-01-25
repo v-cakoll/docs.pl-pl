@@ -6,24 +6,24 @@ helpviewer_keywords:
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f0110bb42775d8a5df9ca268b35db3abaffec84f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03f3ce51eaab9e08d5f05932d9360adc4fd2110f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560996"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Bezpieczeństwo i publiczne pola tablicy tylko do odczytu
-Nigdy nie używaj tylko do odczytu publiczne pola tablicy z bibliotek zarządzanych do definiowania zachowania granic lub zabezpieczeń aplikacji, ponieważ mogą być modyfikowane tylko do odczytu publiczne pola tablicy.  
+Nigdy nie używaj tylko do odczytu publiczne pola tablicy z zarządzanych bibliotek do definiowania zachowania granic lub bezpieczeństwem Twoich aplikacji, ponieważ tylko do odczytu publiczne pola tablicy można modyfikować.  
   
 ## <a name="remarks"></a>Uwagi  
- Niektóre klasy framework .NET zawierają tylko do odczytu pola publiczne, zawierających parametry specyficzne dla platformy granic.  Na przykład <xref:System.IO.Path.InvalidPathChars> pole jest tablicę, która opisuje znaki, które nie są dozwolone w ciągu ścieżki pliku.  Wiele podobnych pól znajdują się w programie .NET Framework.  
+ Niektóre klasy framework .NET zawierają tylko do odczytu publicznych pola, które zawierają parametry specyficzne dla platformy granic.  Na przykład <xref:System.IO.Path.InvalidPathChars> pole jest tablica, która opisuje znaki, które nie są dozwolone w ciąg ścieżki pliku.  Wiele podobnych pól znajdują się w całym programie .NET Framework.  
   
- Wartości pola publiczne tylko do odczytu, takich jak <xref:System.IO.Path.InvalidPathChars> można zmodyfikować przez kod lub kod, który udostępnia swój kod domeny aplikacji.  Nie należy używać tylko do odczytu publiczne pola tablicy takie Definiowanie zachowania granic aplikacji.  Jeśli to zrobisz, złośliwy kod może zmiany definicji granic i używać kodu w nieoczekiwany sposób.  
+ Wartości pola publiczne tylko do odczytu, takich jak <xref:System.IO.Path.InvalidPathChars> można zmodyfikować przez kod lub kod, który udostępnia swój kod domeny aplikacji.  Nie należy używać tylko do odczytu publiczne pola tablicy następująco do określania zachowania granic aplikacji.  Jeśli to zrobisz, złośliwy kod może zmiany definicji granic i użyciu kodu w nieoczekiwany sposób.  
   
- W wersji 2.0 lub nowszej programu .NET Framework należy użyć metody, które zwracają nowe tablicy zamiast publiczne pola tablicy.  Na przykład zamiast <xref:System.IO.Path.InvalidPathChars> pola, należy użyć <xref:System.IO.Path.GetInvalidPathChars%2A> metody.  
+ W wersji 2.0 i nowszej programu .NET Framework należy użyć metody, które zwracają nową tablicę zamiast publiczne pola tablicy.  Na przykład, zamiast <xref:System.IO.Path.InvalidPathChars> pola, należy użyć <xref:System.IO.Path.GetInvalidPathChars%2A> metody.  
   
- Należy pamiętać, że typy .NET Framework nie pola publiczne wewnętrznie określenie typów granic.  Zamiast tego programu .NET Framework używa oddzielnych pól prywatnych.  Zmiana wartości te pola publiczne nie zmienia zachowanie typów .NET Framework.  
+ Należy pamiętać, że typów programu .NET Framework nie należy używać pola publiczne do definiowania typów granic wewnętrznie.  Zamiast programu .NET Framework używa oddzielnych pól prywatnych.  Zmiana wartości te pola publiczne nie zmienia zachowanie typów programu .NET Framework.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Zobacz także
+- [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 4fd846502fd348222bc1da1c8746f037e9f237fe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9e28f95b58481a5cb7b2fbf92fd20545a3f0fdc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503124"
 ---
 # <a name="transforms-overview"></a>Przegląd Przekształcenia
 W tym temacie opisano sposób użycia [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> klasy, aby obrócić, skalowanie, Przenieś (tłumaczenia) i pochylanie <xref:System.Windows.FrameworkElement> obiektów.  
@@ -36,9 +36,9 @@ W tym temacie opisano sposób użycia [!INCLUDE[TLA#tla_2d](../../../../includes
   
 ||||  
 |-|-|-|  
-|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> Domyślne: 1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> Domyślne: 0.0|0.0|  
-|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Domyślne: 0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Domyślne: 1.0|0.0|  
-|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Domyślne: 0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Domyślne: 0.0|1.0|  
+|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> Wartość domyślna: 1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> Wartość domyślna: 0.0|0.0|  
+|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Wartość domyślna: 0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Wartość domyślna: 1.0|0.0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Wartość domyślna: 0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Wartość domyślna: 0.0|1.0|  
   
  Przez operacje wartości macierzy, może obrócić, skalowanie, pochylanie i przenieść (tłumaczenia) obiektu. Na przykład, jeśli zmienisz wartość w pierwszej kolumnie trzeciego wiersza ( <xref:System.Windows.Media.Matrix.OffsetX%2A> wartość) na 100, można go przenieść obiekt 100 jednostki wzdłuż osi x. Jeśli zmienisz wartość w drugiej kolumnie drugi wiersz 3 służy do rozciągania trzykrotnie jego wysokość bieżącego obiektu. Jeśli zmienisz obie wartości, Przenieś obiekt, 100 jednostek wzdłuż osi x i rozciągnij swoją wysokość ośmiokrotnego 3. Ponieważ Windows Presentation Foundation (WPF) obsługuje tylko affine — przekształcenia, wartości w prawej kolumnie to zawsze 0, 0, 1.  
   
@@ -111,7 +111,7 @@ Element prostokąt obrócony o 45 stopni, o punkt (25, 25)
  Aby uzyskać dodatkowe informacje na temat układu w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], zobacz [układ](../../../../docs/framework/wpf/advanced/layout.md) Przegląd.  
   
 <a name="exampleRotateAnElement45degSection"></a>   
-## <a name="example-rotate-a-frameworkelement-45-degrees"></a>Przykład: Obracanie FrameworkElement 45 stopni  
+## <a name="example-rotate-a-frameworkelement-45-degrees"></a>Przykład: Obróć FrameworkElement 45 stopni  
  W poniższym przykładzie użyto <xref:System.Windows.Media.RotateTransform> obracanie przycisku obrotu w prawo o 45 stopni. Przycisk znajduje się w <xref:System.Windows.Controls.StackPanel> zawierający dwa inne przyciski.  
   
  Domyślnie <xref:System.Windows.Media.RotateTransform> obraca się o punkt (0, 0). Ponieważ przykład określają wartością środkową, przycisk obraca się o punkt (0, 0), który jest jego lewego górnego rogu. <xref:System.Windows.Media.RotateTransform> Jest stosowany do <xref:System.Windows.UIElement.RenderTransform%2A> właściwości. Poniższa ilustracja przedstawia wynik przekształcenia.  
@@ -149,8 +149,8 @@ LayoutTransform umożliwiają obracanie przycisku
 ## <a name="freezable-features"></a>Funkcje freezable  
  Ponieważ dziedziczy on z <xref:System.Windows.Freezable> klasy <xref:System.Windows.Media.Transform> klasy zapewniają kilka funkcji specjalnych: <xref:System.Windows.Media.Transform> obiekty mogą być deklarowane jako [zasobów](../../../../docs/framework/wpf/advanced/xaml-resources.md), udostępnione wśród wielu obiektów, aby poprawić jest tylko do odczytu wydajność, sklonować i wprowadzone metodą o bezpiecznych wątkach. Aby uzyskać więcej informacji na temat różnych funkcji, które są dostarczane przez <xref:System.Windows.Freezable> obiekty, zobacz [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Matrix>  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
- [Przykładowe transformacje 2-D](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Matrix>
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Przykładowe transformacje 2-D](https://go.microsoft.com/fwlink/?LinkID=158252)

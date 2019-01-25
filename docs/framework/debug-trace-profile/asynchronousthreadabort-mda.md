@@ -10,40 +10,40 @@ helpviewer_keywords:
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd759a4167a667919a443bc6492c049631ad222c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed27d8b2ee99d0a9364c577e50120f3c7b4f5929
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364182"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546796"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
-`asynchronousThreadAbort` Zarządzany Asystent debugowania (MDA) jest aktywowany, gdy wątek podejmuje próbę wprowadzenia asynchronicznego przerwania do innego wątku. Przerywa synchroniczne wątek nie zostanie aktywowany `asynchronousThreadAbort` MDA.
+`asynchronousThreadAbort` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy wątek próbuje wprowadzić asynchronicznego przerwania do innego wątku. Przerwań synchroniczne wątek nie zostanie aktywowany `asynchronousThreadAbort` MDA.
 
 ## <a name="symptoms"></a>Symptomy
- Wystąpiła awaria aplikacji z nieobsługiwanym <xref:System.Threading.ThreadAbortException> po wątku głównego aplikacji zostało przerwane. Jeżeli aplikacja kontynuować jego wykonywanie, konsekwencje może być gorsza niż aplikacja awarii, co prawdopodobnie spowoduje dalsze uszkodzenia danych.
+ Wystąpiła awaria aplikacji przy użyciu nieobsługiwanego <xref:System.Threading.ThreadAbortException> po wątku głównego aplikacji zostało przerwane. Gdyby aplikacja aby kontynuować wykonywanie konsekwencje może być niższa niż aplikacja uległa awarii, przez co więcej uszkodzenie danych.
 
- Operacje przeznaczone do niepodzielnych prawdopodobnie zostać przerwane po zakończeniu częściowe, pozostawiając dane aplikacji w nieprzewidywalnym stanie. A <xref:System.Threading.ThreadAbortException> mogą być generowane z pozornie losowe punktów podczas wykonywania kodu, często w miejscach, z których wyjątek nie powinno wystąpić. Kod może nie być może obsługiwać takiego wyjątku, co w stanie uszkodzenia.
+ Należy traktować jako niepodzielne operacje prawdopodobnie zostać przerwane po zakończeniu częściowe, pozostawiając dane aplikacji w nieprzewidywalnym stanie. Element <xref:System.Threading.ThreadAbortException> może zostać wygenerowany na podstawie pozornie losowe punkty podczas wykonywania kodu, często w miejscach, z których wyjątek nie powinna wystąpić. Kod może nie być zdolne do obsługi takiego wyjątku, co w stanie uszkodzenia.
 
- Objawy różnią może z powodu problemu związanego z używaniem losowości.
+ Objawy mogą się znacznie zmieniać z powodu losowości związane z problemem.
 
 ## <a name="cause"></a>Przyczyna
- Kod w jeden wątek o nazwie <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> metody na wątek docelowy wprowadzenie przerwanie asynchronicznego wątku. Przerwij wątku jest asynchroniczne, ponieważ kod, który wykonuje wywołanie do <xref:System.Threading.Thread.Abort%2A> jest uruchomiona w innym wątku niż docelowy operacji przerwania. Przerywa wątku synchroniczne nie powinny powodować problem, ponieważ wykonywanie wątku <xref:System.Threading.Thread.Abort%2A> powinna mieć wykonana tylko na bezpiecznych punkt kontrolny, gdzie stan aplikacji jest zgodny.
+ Kod w jeden wątek nazywane <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> metodę na jeden wątek docelowy wprowadzenie przerwanie asynchronicznego wątku. Przerwanie wątku jest asynchroniczne, ponieważ kod sprawia to, że wywołanie <xref:System.Threading.Thread.Abort%2A> jest uruchomiona w innym wątku niż obiekt docelowy operacji przerywania. Przerwanie wątku synchroniczne nie powinno powodować problem, ponieważ wykonywanie wątku <xref:System.Threading.Thread.Abort%2A> powinna mieć wykonana tylko na bezpiecznego punktu kontrolnego, gdzie stan aplikacji jest zgodny.
 
- Przerwanie asynchronicznego wątku powodują problemu, ponieważ zostały one przetworzone w punktach nieprzewidywalne podczas wykonywania wątku docelowej. Aby tego uniknąć, należy obsługiwać kodu napisanego w celu uruchamiania w wątku, który może zostać przerwane w ten sposób <xref:System.Threading.ThreadAbortException> w niemal każdego wiersza kodu, zwracając szczególną uwagę na odłożyć dane aplikacji do stanu spójności. Nie jest realistyczne kodu ma zostać zapisany z tym problemem, pamiętając, lub do pisania kodu, która chroni przed wszystkich możliwych okolicznościach.
+ Przerwanie asynchronicznego wątku powodują problemu, ponieważ są przetwarzane w nieprzewidywalnych punktach wykonywania wątek docelowy. Aby tego uniknąć, kod napisany do uruchamiania w wątku, który może być przerwana w ten sposób będzie konieczna Obsługa <xref:System.Threading.ThreadAbortException> w prawie każdym wierszu kodu, zwracając szczególną uwagę na odłożyć dane aplikacji do stanu spójności. Nie jest realistyczne kodu ma zostać zapisany w rozwiązaniu tego problemu należy pamiętać, lub napisać kod, który chroni przed wszystkich możliwych okolicznościach.
 
- Wywołania do kodu niezarządzanego i `finally` bloków nie zostanie przerwana asynchronicznie, ale natychmiast po wyjściu z jednej z tych kategorii.
+ Wywołania kodu niezarządzanego i `finally` bloki nie zostanie przerwane asynchronicznie, ale od razu po wyjściu z jednej z tych kategorii.
 
- Przyczyną może być trudne do ustalenia, z powodu problemu związanego z używaniem losowości.
+ Przyczyną może być trudno określić, z powodu losowości związane z problemem.
 
 ## <a name="resolution"></a>Rozwiązanie
- Unikaj projekt kodu, który wymaga użycia przerwanie asynchronicznego wątku. Istnieje kilka rozwiązań bardziej odpowiednie dla przerwom w wykonywaniu wątku docelowego, który nie wymaga wywołania <xref:System.Threading.Thread.Abort%2A>. Najbezpieczniejsze jest wprowadzenie mechanizmu, takiego jak wspólnej właściwości, która sygnalizuje wątek docelowy żądanie przerwania. Wątek docelowy sprawdza sygnał niektórych bezpieczne punkty kontrolne. Jeśli powiadomienia go, że zażądano przerwania, może zostać zamknięty bezpiecznie zamknąć.
+ Należy unikać projekt kodu, który wymaga użycia przerwanie asynchronicznego wątku. Istnieje kilka metod są bardziej odpowiednie dla przeszkód wątek docelowy, który nie wymaga wywołania <xref:System.Threading.Thread.Abort%2A>. Najbezpieczniejsze jest wprowadzenie mechanizmu, takiego jak wspólnej właściwości, który sygnalizuje wątek docelowy żądania przerwania. Sprawdza, czy wątek docelowy sygnał niektórych bezpieczne punkty kontrolne. Jeśli powiadomienia go, czy wysłano żądanie przerwania, może zostać zamknięty zostanie wyłączone poprawnie.
 
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe
- To zdarzenie MDA nie ma wpływu na środowisko CLR. Zwraca tylko dane o przerwanie asynchronicznego wątku.
+ To zdarzenie MDA nie ma wpływu na środowisko CLR. Informuje jedynie dane o przerwanie asynchronicznego wątku.
 
 ## <a name="output"></a>Dane wyjściowe
- MDA zgłasza identyfikator wątku, przerwanie i identyfikator wątku, który jest elementem docelowym przerwanie. Nigdy nie będą takie same, ponieważ jest ograniczone do asynchronicznego przerwania.
+ MDA raportów, identyfikator wątku wykonującego przerwania i identyfikator wątku, który jest elementem docelowym przerwanie. Nigdy nie będą takie same, ponieważ jest ograniczona do asynchronicznego przerwania.
 
 ## <a name="configuration"></a>Konfiguracja
 
@@ -56,7 +56,7 @@ ms.locfileid: "33364182"
 ```
 
 ## <a name="example"></a>Przykład
- Aktywowanie `asynchronousThreadAbort` MDA wymaga tylko wywołania <xref:System.Threading.Thread.Abort%2A> na oddzielnych uruchomiony wątek. Jeśli zawartość wątku uruchomienia funkcji zostały zbiór bardziej złożonych czynności, które może zostać przerwane w dowolnym momencie dowolnego przez przerwanie, należy wziąć pod uwagę skutki.
+ Aktywowanie `asynchronousThreadAbort` MDA wymaga tylko wywołania <xref:System.Threading.Thread.Abort%2A> w oddzielnym wątku uruchomione. Należy rozważyć konsekwencje, jeśli zawartość wątku Uruchom funkcję były zbiór bardziej złożonych operacji, które może zostać przerwane w dowolnym momencie dowolnego za przerwanie.
 
 ```csharp
 using System.Threading;
@@ -70,5 +70,6 @@ void FireMda()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
- <xref:System.Threading.Thread> [Diagnozowanie błędów przy użyciu Asystenci zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Threading.Thread>
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

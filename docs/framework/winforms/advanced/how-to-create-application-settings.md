@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie ustawień aplikacji'
+title: 'Instrukcje: Tworzenie ustawień aplikacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558959"
 ---
-# <a name="how-to-create-application-settings"></a>Porady: tworzenie ustawień aplikacji
+# <a name="how-to-create-application-settings"></a>Instrukcje: Tworzenie ustawień aplikacji
 Przy użyciu kodu zarządzanego, można tworzyć nowych ustawień aplikacji i wiązania ich z właściwościami w formularzu lub kontrolki formularza tak, aby te ustawienia są ładowane i zapisywane automatycznie w czasie wykonywania.  
   
  W poniższej procedurze należy ręcznie utworzyć klasy otoki, która pochodzi od klasy <xref:System.Configuration.ApplicationSettingsBase>. Aby tej klasy należy dodać publicznie dostępnych właściwości dla każdego ustawienia aplikacji, które chcesz udostępnić.  
   
- Można również wykonać tę procedurę za pomocą minimalnej ilości kodu w Projektancie Visual Studio.  Zobacz też [porady: tworzenie aplikacji ustawienia przy użyciu narzędzia Projektant](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ Można również wykonać tę procedurę za pomocą minimalnej ilości kodu w Projektancie Visual Studio.  Zobacz też [jak: Tworzenie ustawień aplikacji za pomocą projektanta](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Aby programowo utworzyć nowe ustawienia aplikacji  
   
@@ -46,8 +46,8 @@ Przy użyciu kodu zarządzanego, można tworzyć nowych ustawień aplikacji i wi
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Domyślny dostawca ustawień <xref:System.Configuration.LocalFileSettingsProvider>, będzie nadal występował, informacje w plikach konfiguracji jako zwykły tekst. Ogranicza to zabezpieczeń w celu zabezpieczenia dostępu do plików, które są dostarczane przez system operacyjny dla bieżącego użytkownika. W związku z tym należy uważać, z informacjami przechowywanymi w plikach konfiguracji. Na przykład jeden typowym celem zastosowania ustawienia aplikacji jest przechowywanie parametrów połączenia, prowadzące do aplikacji w magazynie danych. Jednak ze względu na problemy dotyczące zabezpieczeń, takich ciągów nie może zawierać hasła. Aby uzyskać więcej informacji dotyczących parametrów połączenia, zobacz <xref:System.Configuration.SpecialSetting>.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Configuration.SpecialSettingAttribute>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- [Przegląd ustawień aplikacji](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Instrukcje: sprawdzanie poprawności ustawień aplikacji](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Configuration.SpecialSettingAttribute>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- [Przegląd ustawień aplikacji](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Instrukcje: Sprawdzanie poprawności ustawień aplikacji](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)

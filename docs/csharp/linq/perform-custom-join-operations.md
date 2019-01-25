@@ -1,14 +1,14 @@
 ---
 title: Wykonywanie niestandardowych operacji łączenia (LINQ w C#)
 description: Dowiedz się, jak wykonać niestandardowych operacji łączenia LINQ w C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: b04533cb6db8c00f68ef64c034ad57522f8fd3f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 7051007c67bd64cd11ede2f4d5352ce3d497255f
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616030"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857869"
 ---
 # <a name="perform-custom-join-operations"></a>Wykonywanie niestandardowych operacji łączenia
 

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5fca698adc4d08d805fec2ff80af377366674b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a830a4cc881912d52ec33959104957d0b858b16a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539470"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName — Metoda
-Wylicza tokenów MemberDef reprezentujący elementy członkowskie określonego typu o określonej nazwie.  
+Wylicza tokenów MemberDef reprezentujących elementy członkowskie określonego typu o określonej nazwie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,16 +42,16 @@ HRESULT EnumMembersWithName (
   
 #### <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, out] Wskaźnik do modułu wyliczającego.  
+ [out w] Wskaźnik do modułu wyliczającego.  
   
  `cl`  
- [in] Element TypeDef token reprezentujący typ z elementami członkowskimi wyliczyć.  
+ [in] TypeDef token reprezentujący typ z elementami członkowskimi do wyliczenia.  
   
  `szName`  
- [in] Nazwa elementu członkowskiego, która ogranicza zakres modułu wyliczającego.  
+ [in] Nazwa elementu członkowskiego, który ogranicza zakres modułu wyliczającego.  
   
  `rMembers`  
- [out] Tablica używany do przechowywania tokenów MemberDef.  
+ [out] Tablica do przechowywania tokenów MemberDef.  
   
  `cMax`  
  [in] Maksymalny rozmiar `rMembers` tablicy.  
@@ -60,24 +60,24 @@ HRESULT EnumMembersWithName (
  [out] Rzeczywista liczba tokenów MemberDef zwracane w `rMembers`.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda wylicza pól i metod, ale nie do właściwości lub zdarzenia. W odróżnieniu od [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` odrzuca wszystkie tokeny pola i elementu członkowskiego, które nie mają określonej nazwy.  
+ Ta metoda wylicza pola i metody, ale nie do właściwości lub zdarzenia. W odróżnieniu od [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` odrzuca wszystkie tokeny pól i elementów członkowskich, które nie mają określonej nazwy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` zwrócona pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów MemberDef do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumTypeDefs` pomyślnie zwrócił.|  
+|`S_FALSE`|Nie ma żadnych tokeny MemberDef do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

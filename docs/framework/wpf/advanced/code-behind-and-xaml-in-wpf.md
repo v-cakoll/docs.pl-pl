@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: ee08dc22588264b25d40b3fd818ef9ee1da90319
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 39f98d11099a778a7b3915f39588138d41214af4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502042"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Związane z kodem i XAML w WPF
 <a name="introduction"></a> Związane z kodem to termin używany do opisania kod, który jest sprzężony z obiektów zdefiniowanych przez kod znaczników, gdy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strona jest kompilowana do znaczników. W tym temacie opisano wymagania związane z kodem, a także mechanizm alternatywny wbudowanego kodu dla kodu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -58,8 +58,8 @@ ms.locfileid: "44085676"
 ## <a name="inline-code-limitations"></a>Ograniczenia dotyczące kodu wbudowanego  
  Należy rozważyć unikanie lub ograniczenie używania kodu wbudowanego. Pod względem architektury i kodowania filozofia utrzymywanie separacji między znaczników i związane z kodem przechowuje role projektanta i deweloperów znacznie bardziej distinct. Na poziom bardziej technicznych, kodu napisanego dla kodu wbudowanego może być niewygodna do pisania, ponieważ zawsze pisania w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wygenerowane klasy częściowe i można używać tylko domyślne mapowania przestrzeni nazw XML. Ponieważ nie można dodać `using` instrukcji, muszą w pełni kwalifikujesz się do wielu [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] wywołania, które wprowadzasz. Wartość domyślna [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mapowania zawierają najbardziej, ale nie wszystkie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] przestrzenie nazw, które znajdują się w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestawy; należy do pełnej kwalifikacji wywołania do typów i elementów członkowskich znajdujących się w innych przestrzeniach nazw środowiska CLR. Również nie można zdefiniować niczego poza częściowej klasy w kodzie wbudowane, a wszystkie jednostki kodu użytkownika, którego odwołujesz się musi istnieć jako członkowie lub zmiennej w generowanej klasie częściowej. Inne funkcje specyficzne dla języka programowania, takich jak makra lub `#ifdef` przed zmienne globalne i zmienne kompilacji, również nie są dostępne. Aby uzyskać więcej informacji, zobacz [x: Code, wewnętrzny typ XAML](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [x:Code, wewnętrzny typ XAML](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
- [Kompilowanie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Szczegóły składni XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [x:Code, wewnętrzny typ XAML](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)
+- [Kompilowanie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [Szczegóły składni XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

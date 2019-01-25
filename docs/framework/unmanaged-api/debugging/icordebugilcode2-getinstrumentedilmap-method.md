@@ -14,17 +14,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a712ed9e3534ca6bb2962989f1ab3750a25d539
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2abb24a319d8d3aff940ddb7eabd16b3e238862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611751"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>Metoda ICorDebugILCode2::GetInstrumentedILMap
 [Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  
   
- Zwraca mapę z Instrumentacji profilera języku pośrednim (IL) przesunięcia do oryginalnego przesunięcia metody IL dla tego wystąpienia.  
+ Zwraca mapę z Instrumentacji profilera języka pośredniego (IL) przesunięcia do oryginalnego przesunięcia IL metody dla tego wystąpienia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,24 +37,24 @@ HRESULT GetInstrumentedILMap(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- cMap  
- [in] Pojemność `map` tablicy. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.  
+ CMap  
+ [in] Pojemność magazynu `map` tablicy. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.  
   
  pcMap  
- [out] Liczba wartości COR_IL_MAP zapisywane do tablicy mapy.  
+ [out] Liczba wartości cor_il_map — zapisywane do tablicy mapy.  
   
  map  
- [out] Tablica wartości COR_IL_MAP, które udostępniają informacje dotyczące mapowania z Instrumentacji profilera IL do IL oryginalnej metody.  
+ [out] Tablica wartości cor_il_map —, które zawierają informacje dotyczące mapowania z Instrumentacji profilera IL do IL oryginalną metodę.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli profilera ustawia mapowanie przez wywołanie metody [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) metody debuger tę metodę można wywołać można pobrać mapowania i mapowanie wewnętrznie do obliczania IL przesunięciami stosu Śledzenie i okresy zmiennej.  
+ Jeśli profiler ustawia mapowanie przez wywołanie metody [icorprofilerinfo::setilinstrumentedcodemap —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) metody, debuger tę metodę można wywołać można pobrać mapowania i mapowanie wewnętrznie do obliczania IL rekompensaty w przypadku stosu ślady i okresy istnienia zmiennych.  
   
- Jeśli `cMap` 0 i `pcMap` ma wartość inną niż**null**, `pcMap` wynosi liczba dostępnych wartości COR_IL_MAP. Jeśli `cMap` jest różna od zera, reprezentuje pojemność `map` tablicy. Gdy metoda zwróci wartość, `map` może zawierać maksymalnie `cMap` elementów, i `pcMap` jest równa wartości COR_IL_MAP faktycznie zapisane `map` tablicy.  
+ Jeśli `cMap` wynosi 0 i `pcMap` ma wartość inną niż**null**, `pcMap` wynosi liczba dostępnych wartości cor_il_map —. Jeśli `cMap` jest różna od zera, reprezentuje pojemność magazynu `map` tablicy. Po powrocie z metody `map` może zawierać maksymalnie `cMap` elementów, a `pcMap` jest równa wartości cor_il_map — rzeczywiście zapisanych na `map` tablicy.  
   
- Jeśli nie zostały zinstrumentowane IL lub mapowanie nie zostało dostarczone przez profiler, ta metoda zwraca `S_OK` i ustawia `pcMap` na 0.  
+ Jeśli nie zostały zinstrumentowane IL lub mapowanie nie podano przez program profilujący, Metoda ta zwraca `S_OK` i ustawia `pcMap` na 0.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -62,7 +62,7 @@ HRESULT GetInstrumentedILMap(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)  
- [ICorDebugILCode2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
+- [ICorDebugILCode2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

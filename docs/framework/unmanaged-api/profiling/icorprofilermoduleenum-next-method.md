@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 974879b854f7a4c18aa4625ea88abb4953123f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc33936735c40e2f30189066d80444b9fcb075ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671892"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next — Metoda
-Pobiera określoną liczbę modułów ciągłe z sekwencyjną kolekcją modułów, zaczynając od modułu wyliczającego bieżącej pozycji w sekwencji.  
+Pobiera określoną liczbę modułów sąsiadujących z sekwencyjną kolekcją modułów, zaczynając od modułu wyliczającego bieżąca pozycja w sekwencji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,18 +44,18 @@ HRESULT Next([in]  ULONG      celt,
  [out] Tablica `ModuleID` wartości, z których każdy reprezentuje pobrane modułu.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby elementów faktycznie zwracane w `ids` tablicy.  
+ [out] Wskaźnik do liczby elementów zwracanych w rzeczywistości w `ids` tablicy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|`celt` elementy zostały zwrócone.|  
-|S_FALSE|Mniej niż `celt` elementy zostały zwrócone, co oznacza, że wyliczenia została zakończona.|  
+|S_FALSE|Mniej niż `celt` zwróconych elementów, co oznacza, że wyliczanie zostało zakończone.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -63,6 +63,6 @@ HRESULT Next([in]  ULONG      celt,
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerModuleEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerModuleEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

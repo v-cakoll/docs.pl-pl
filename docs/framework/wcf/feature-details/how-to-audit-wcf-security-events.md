@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: inspekcja zdarzeń zabezpieczeń systemu Windows Communication Foundation'
+title: 'Instrukcje: Inspekcja zdarzeń zabezpieczeń programu Windows Communication Foundation'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 90169aac0c0c2cac8860b2809467ffa3a27d0e91
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566830"
 ---
-# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Instrukcje: inspekcja zdarzeń zabezpieczeń systemu Windows Communication Foundation
+# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Instrukcje: Inspekcja zdarzeń zabezpieczeń programu Windows Communication Foundation
 Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń zabezpieczeń w dzienniku zdarzeń Windows, które można przeglądać za pomocą Podglądu zdarzeń Windows. W tym temacie wyjaśniono, jak skonfigurować aplikację tak, aby go dzienników zdarzeń zabezpieczeń. Aby uzyskać więcej informacji na temat inspekcji WCF, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Inspekcja zdarzeń zabezpieczeń w kodzie  
@@ -87,8 +87,8 @@ Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń zabezpi
   
  Jeśli <xref:System.ServiceModel.AuditLogLocation> właściwość jest ustawiona na <xref:System.ServiceModel.AuditLogLocation.Security> i **inspekcji dostępu do obiektów** nie jest ustawiona w **zasady zabezpieczeń lokalnych**, zdarzenia inspekcji nie będą zapisywane w dzienniku zabezpieczeń. Należy pamiętać, że zwracany jest bez błędów, ale wpisy inspekcji nie są zapisywane w dzienniku zabezpieczeń.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- <xref:System.ServiceModel.AuditLogLocation>  
- [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- <xref:System.ServiceModel.AuditLogLocation>
+- [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)

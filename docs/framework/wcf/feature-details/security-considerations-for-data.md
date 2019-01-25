@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5c7451e5e914c372c8631922001cfec5e84a586c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527955"
 ---
 # <a name="security-considerations-for-data"></a>Zagadnienia związane z zabezpieczeniami danych
 Podczas pracy z danymi w Windows Communication Foundation (WCF), należy wziąć pod uwagę liczbę kategorie zagrożeń. W poniższej tabeli wymieniono najważniejsze klasy zagrożeń, które odnoszą się do przetwarzania danych. Usługi WCF udostępnia narzędzia, aby ograniczyć te zagrożenia.  
@@ -48,7 +48,7 @@ Podczas pracy z danymi w Windows Communication Foundation (WCF), należy wziąć
   
 ## <a name="preventing-denial-of-service-attacks"></a>Zapobieganie atakom typu "odmowa usługi"  
   
-### <a name="quotas"></a>Limity przydziału  
+### <a name="quotas"></a>Przydziały  
  Powoduje po stronie odbierającej można przydzielić znacznej ilości pamięci jest potencjalny atak typu "odmowa usługi". Gdy ta sekcja koncentruje się na problemy z użyciem pamięci wynikające z dużych komunikatów, mogą wystąpić inne ataki. Na przykład wiadomości mogą użyć nieproporcjonalnie duża ilość czasu przetwarzania.  
   
  Ataki typu "odmowa usługi" zazwyczaj zostały skorygowane przy użyciu przydziałów. Po przekroczeniu przydziału <xref:System.ServiceModel.QuotaExceededException> jest zazwyczaj zgłaszany wyjątek. Bez limitu przydziału, niebezpiecznej wiadomości może spowodować, że całą dostępną pamięć, można uzyskać dostęp, co <xref:System.OutOfMemoryException> wyjątku lub wszystkie stosy dostępne były dostępne, dając w efekcie w <xref:System.StackOverflowException>.  
@@ -223,9 +223,9 @@ Podczas pracy z danymi w Windows Communication Foundation (WCF), należy wziąć
   
  Podczas zapisywania metodę, która zwraca listę znanych typów, lub gdy przekazywanie bezpośrednio do listy <xref:System.Runtime.Serialization.DataContractSerializer> konstruktora, upewnij się, że kod, który przygotowuje listy jest bezpieczna działa tylko z zaufanych danych.  
   
- Jeśli Określanie znanych typów w konfiguracji, upewnij się, że plik konfiguracyjny jest bezpieczne. Zawsze używaj silnych nazw w konfiguracji (przez określenie klucza publicznego zestawu podpisem, w której znajduje się typ), ale nie określono wersji typu do załadowania. Moduł ładujący typu automatycznie wybiera najnowszej wersji, jeśli jest to możliwe. Jeśli określisz określonej wersji w konfiguracji, istnieje ryzyko następujących: typ może mieć luki w zabezpieczeniach, które mogą zostać rozwiązane w przyszłej wersji, ale wersja nadal ładuje, ponieważ jest on jawnie określony w konfiguracji.  
+ Jeśli Określanie znanych typów w konfiguracji, upewnij się, że plik konfiguracyjny jest bezpieczne. Zawsze używaj silnych nazw w konfiguracji (przez określenie klucza publicznego zestawu podpisem, w której znajduje się typ), ale nie określono wersji typu do załadowania. Moduł ładujący typu automatycznie wybiera najnowszej wersji, jeśli jest to możliwe. Jeśli określisz określonej wersji w konfiguracji, możesz uruchomić następujące ryzyka: Typ może mieć luki w zabezpieczeniach, które mogą zostać rozwiązane w przyszłej wersji, ale wersja nadal ładuje, ponieważ jest on jawnie określony w konfiguracji.  
   
- Zbyt wiele znanych typów ma inną konsekwencją: <xref:System.Runtime.Serialization.DataContractSerializer> tworzy pamięć podręczną kodu serializacji/deserializacji w domenie aplikacji, za pomocą wpis dla każdego typu musi serializacji i deserializacji. Ta pamięć podręczna nigdy nie zostanie wyczyszczona tak długo, jak działa domeny aplikacji. W związku z tym osoba atakująca, która rozpoznaje, że aplikacja korzysta z wielu znanych typów może spowodować deserializacji obiektu danych tych typów, powodując pamięci podręcznej, aby zużywać nieproporcjonalnie duża ilość pamięci.  
+ Zbyt wiele znanych typów ma inną konsekwencją: <xref:System.Runtime.Serialization.DataContractSerializer> Tworzy pamięć podręczną kodu serializacji/deserializacji w domenie aplikacji, za pomocą wpis dla każdego typu musi serializacji i deserializacji. Ta pamięć podręczna nigdy nie zostanie wyczyszczona tak długo, jak działa domeny aplikacji. W związku z tym osoba atakująca, która rozpoznaje, że aplikacja korzysta z wielu znanych typów może spowodować deserializacji obiektu danych tych typów, powodując pamięci podręcznej, aby zużywać nieproporcjonalnie duża ilość pamięci.  
   
 ### <a name="preventing-types-from-being-in-an-unintended-state"></a>Uniemożliwienie typów w niezamierzonym stanie  
  Typ może mieć ograniczenia wewnętrznego sprawdzania spójności, które muszą zostać wymuszone. Należy uważać, aby uniknąć przerwanie tych ograniczeń podczas deserializacji.  
@@ -353,8 +353,8 @@ Podczas pracy z danymi w Windows Communication Foundation (WCF), należy wziąć
   
 -   Ogólnie rzecz biorąc korzystając z dowolnego składnika, który akceptuje limit przydziału, zrozumieć jego skutki dla bezpieczeństwa i ustaw ją na wartość bezpieczne.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.XmlDictionaryReader>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [Znane typy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.XmlDictionaryReader>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Znane typy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

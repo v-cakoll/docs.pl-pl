@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 660da82f1e6d6d3ea8ba084885331c895bc64542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 406fdfcfc0b6db988b317245aaaa4f4a643b2079
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561403"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum — Metoda
 Pobiera sumy kontrolnej.  
@@ -38,16 +38,16 @@ HRESULT GetCheckSum(
   
 #### <a name="parameters"></a>Parametry  
  `cData`  
- [in] Długość buforu podał `data` parametru  
+ [in] Długość buforu, dostarczone przez `data` parametru  
   
  `pcData`  
- [out] Rozmiar i długość sumy kontrolnej w bajtach.  
+ [out] Rozmiar i długość sumy kontrolnej, w bajtach.  
   
  `data`  
- [out] Buforu, który odbiera sumy kontrolnej.  
+ [out] Bufor, który odbiera sumę kontrolną.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie kod błędu.  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedDocument, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedDocument, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -2,15 +2,15 @@
 title: Dziennik został już utworzony o tej nazwie na tym komputerze
 ms.date: 07/20/2015
 ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
-ms.openlocfilehash: e433c2fa5c6d4b815819a72fb8116ca9f1a89f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d976be4d59eb9380876d49e0c39c6b6995b509b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551764"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>Dziennik został już utworzony o tej nazwie na tym komputerze
-Nastąpiła próba do utworzenia dziennika o nazwie, która jest już używana.  
+Podjęta próba tworzy plik dziennika o nazwie, która jest już używana.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
@@ -18,11 +18,11 @@ Nastąpiła próba do utworzenia dziennika o nazwie, która jest już używana.
   
 -   Użyj innej nazwy dla dziennika.  
   
-## <a name="see-also"></a>Zobacz też  
- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
- [Instrukcje: zapisywanie komunikatów dziennika](../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [Instrukcje: rejestrowanie komunikatów podczas uruchamiania lub zamykania aplikacji](../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)  
- [Instrukcje: zapisywanie w dzienniku zdarzeń aplikacji](../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)  
- [Praca z dziennikami aplikacji](../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [Przewodnik: ustalanie, gdzie My.Application.Log zapisuje informacje](../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
- [Przewodnik: zmienianie lokalizacji, w której My.Application.Log zapisuje informacje](../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+## <a name="see-also"></a>Zobacz także
+- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [Instrukcje: Zapisywanie wiadomości rejestru](../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Instrukcje: Komunikaty dziennika podczas uruchamiania aplikacji lub zamknięciu](../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)
+- [Instrukcje: Zapisywanie w rejestrze zdarzeń aplikacji](../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+- [Praca z dziennikami aplikacji](../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [Przewodnik: Ustalanie, gdzie My.Application.Log zapisuje informacje](../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [Przewodnik: Zmienianie, gdzie My.Application.Log zapisuje informacje](../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

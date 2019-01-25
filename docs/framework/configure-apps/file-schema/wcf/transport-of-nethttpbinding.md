@@ -2,21 +2,21 @@
 title: '&lt;transport&gt; w &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 3110a93d224ee2be078727df65b92e9987445c43
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0195708d24e61dfee4c396518c94d5e21b7783bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578890"
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;transport&gt; w &lt;netHttpBinding&gt;
 Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu HTTP.  
   
 \<system.serviceModel>  
 \<powiązania >  
-\<netHttpBinding >  
+\<netHttpBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
+\<security>  
 \<transport>  
   
 ## <a name="syntax"></a>Składnia  
@@ -59,7 +59,7 @@ Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu 
 |Brak|Komunikaty nie są zabezpieczane podczas przesyłania.|  
 |Podstawowy|Określa uwierzytelnianie podstawowe.|  
 |Podsumowanie|Określa uwierzytelnianie szyfrowane.|  
-|Uwierzytelnianie NTLM|Określa uwierzytelniania NTLM, jeśli jest to możliwe, a w przypadku niepowodzenia uwierzytelniania Windows.|  
+|Ntlm|Określa uwierzytelniania NTLM, jeśli jest to możliwe, a w przypadku niepowodzenia uwierzytelniania Windows.|  
 |Windows|Określa, czy zintegrowane uwierzytelnianie Windows|  
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType atrybutu  
@@ -69,7 +69,7 @@ Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu 
 |Brak|— Liczba komunikatów nie są zabezpieczane podczas przesyłania.|  
 |Podstawowy|Określa uwierzytelnianie podstawowe, zgodnie z definicją w dokumencie RFC 2617 — uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane.|  
 |Podsumowanie|Określa uwierzytelniania szyfrowanego, zgodnie z definicją w dokumencie RFC 2617 — uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane.|  
-|Uwierzytelnianie NTLM|Określa uwierzytelniania NTLM, jeśli jest to możliwe, a w przypadku niepowodzenia uwierzytelniania Windows.|  
+|Ntlm|Określa uwierzytelniania NTLM, jeśli jest to możliwe, a w przypadku niepowodzenia uwierzytelniania Windows.|  
 |Windows|Określa, czy zintegrowane uwierzytelnianie Windows|  
 |Certyfikat|Wykonuje uwierzytelnianie klienta przy użyciu certyfikatu. Ta opcja działa tylko wtedy, gdy `Mode` atrybutu elementu nadrzędnego `security` elementu jest ustawiona na Transport i nie będzie działać, jeśli jest ustawiona wartość TransportCredentialOnly.|  
   
@@ -117,11 +117,12 @@ Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu 
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.BasicHttpSecurityMode.Transport><xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>
+- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f144426996583d5058f70daed99d8a37cfb6bfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a69ca889e226168adb1b84ab64dc0f882c27606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520541"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr — Wyliczenie
-Zawiera wartości, które opisano funkcje metody.  
+Zawiera wartości, które opisano funkcje, które metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -69,36 +69,36 @@ typedef enum CorMethodAttr {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`mdMemberAccessMask`|Określa dostęp do elementu członkowskiego.|  
-|`mdPrivateScope`|Określa, że element członkowski nie może być przywoływany.|  
-|`mdPrivate`|Określa, że element członkowski jest dostępna tylko dla typu nadrzędnego.|  
-|`mdFamANDAssem`|Określa, że element członkowski jest dostępna dla podtypów tylko w tym zestawie.|  
-|`mdAssem`|Określa, że element członkowski accessibly wszystkim osobom w zestawie.|  
-|`mdFamily`|Określa, czy element członkowski jest dostępny tylko według typu i podtypów.|  
-|`mdFamORAssem`|Określa, że element członkowski jest dostępny za pomocą klasy pochodne i innych typów w zestawie jej.|  
-|`mdPublic`|Określa, że element członkowski jest dostępna dla wszystkich typów z dostępem do zakresu.|  
-|`mdStatic`|Określa, że element członkowski jest zdefiniowany w ramach tego typu, a nie jako element członkowski wystąpienia.|  
+|`mdPrivateScope`|Określa, czy element członkowski nie może być przywoływany.|  
+|`mdPrivate`|Określa, że składowa jest dostępne tylko dla typu nadrzędnego.|  
+|`mdFamANDAssem`|Określa, czy element członkowski jest dostępny przez podtypy tylko w tym zestawie.|  
+|`mdAssem`|Określa, że element członkowski accessibly przez dowolną osobę w zestawie.|  
+|`mdFamily`|Określa, czy element członkowski jest dostępny tylko według typu i podtypy.|  
+|`mdFamORAssem`|Określa, czy element członkowski jest dostępna, przez klasy pochodne, jak również inne typy w jego zestawie.|  
+|`mdPublic`|Określa, że składowa jest dostępny dla wszystkich typów z dostępem do zakresu.|  
+|`mdStatic`|Określa, że składowa jest zdefiniowana w ramach tego typu, a nie jako członek wystąpienia.|  
 |`mdFinal`|Określa, że nie można zastąpić metody.|  
 |`mdVirtual`|Określa, czy metoda może zostać zastąpiona.|  
 |`mdHideBySig`|Określa, że metoda ukrywa według nazwy i podpisu, a nie tylko według nazwy.|  
 |`mdVtableLayoutMask`|Określa układ tabeli wirtualnej.|  
-|`mdReuseSlot`|Określa, że można ponownie użyć tej metody w tabeli wirtualnej gniazda. Domyślnie włączone.|  
+|`mdReuseSlot`|Określa, miejsca, użyć tej metody w tabeli wirtualnej można użyć ponownie. Domyślnie włączone.|  
 |`mdNewSlot`|Określa, że metoda zawsze pobiera nowe gniazdo w tabeli wirtualnej.|  
-|`mdCheckAccessOnOverride`|Określa, że metoda może zostać przesłonięta przez ten sam typ, do których jest widoczna.|  
+|`mdCheckAccessOnOverride`|Określa, czy metoda może być zastąpiona przez te same typy, do których jest widoczna.|  
 |`mdAbstract`|Określa, że metoda nie jest zaimplementowana.|  
-|`mdSpecialName`|Określa, czy metoda jest szczególna i że jego nazwa zawiera opis sposobu.|  
+|`mdSpecialName`|Określa, że metoda jest specjalne i czy jego nazwę w tym artykule opisano sposób.|  
 |`mdPinvokeImpl`|Określa, że implementacja metody jest przekazywany za pomocą funkcji PInvoke.|  
-|`mdUnmanagedExport`|Określa, że metoda jest zarządzana metoda wyeksportowane do kodu niezarządzanego.|  
+|`mdUnmanagedExport`|Określa, że metoda jest metodą zarządzanych wyeksportowane do kodu niezarządzanego.|  
 |`mdReservedMask`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
-|`mdRTSpecialName`|Określa, że środowisko uruchomieniowe języka wspólnego powinien sprawdzać kodowanie nazwę metody.|  
-|`mdHasSecurity`|Określa, czy metoda ma zabezpieczeń skojarzonych z nim.|  
-|`mdRequireSecObject`|Określa, że metoda wymaga innej metody zawierająca kod zabezpieczeń.|  
+|`mdRTSpecialName`|Określa, że środowisko uruchomieniowe języka wspólnego powinien sprawdzać, kodowanie nazwy metody.|  
+|`mdHasSecurity`|Określa, że metoda ma zabezpieczeń skojarzonych z nim.|  
+|`mdRequireSecObject`|Określa, że metoda wywołuje inną metodę zawierająca kod zabezpieczeń.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

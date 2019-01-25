@@ -2,12 +2,12 @@
 title: Programowanie i zagadnienia dotyczące wdrażania
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
-ms.openlocfilehash: d516877d1fc3a064f5275e226379b7e5011fbcdf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc9501ba49594a769db64d69ac93157b734c9eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540887"
 ---
 # <a name="development-and-deployment-considerations"></a>Programowanie i zagadnienia dotyczące wdrażania
 Tematy w tej sekcji rozwiązania problemów pod uwagę podczas opracowywania lub wdrażania aplikacji, która opiera się na platformie ADO.NET Entity Framework.  
@@ -21,8 +21,8 @@ Tematy w tej sekcji rozwiązania problemów pod uwagę podczas opracowywania lub
   
  [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)  
- [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
- [Wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [Narzędzia do modelu danych jednostki ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a>Zobacz także
+- [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)
+- [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
+- [Wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [Narzędzia do modelu danych jednostki ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

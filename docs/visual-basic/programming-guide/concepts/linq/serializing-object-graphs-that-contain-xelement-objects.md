@@ -1,25 +1,25 @@
 ---
-title: Serializacja wykresów obiektów, które zawierają obiekty klasy XElement (Visual Basic)
+title: Serializowanie wykresów obiektów, które zawierają obiekty XElement (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c0cc5c92-5ca3-44b1-98dd-371601df721b
-ms.openlocfilehash: 35e05f4201920401dbbf68fc810c77b92c2850f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7eb4ae18dcb5fe53340f9c65bc7a19457a682e2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602146"
 ---
-# <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a>Serializacja wykresów obiektów, które zawierają obiekty klasy XElement (Visual Basic)
-W tym temacie przedstawiono możliwość serializowania wykresów obiektów, które zawierają odwołania do obiektów typu <xref:System.Xml.Linq.XElement>. Obiekcie tego typu serializacji, <xref:System.Xml.Linq.XElement> implementuje <xref:System.Xml.Serialization.IXmlSerializable> interfejsu.  
+# <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a>Serializowanie wykresów obiektów, które zawierają obiekty XElement (Visual Basic)
+W tym temacie przedstawiono możliwości serializowanie wykresów obiektów, które zawierają odwołania do obiektów tego typu <xref:System.Xml.Linq.XElement>. Do funkcji tego typu serializacji, <xref:System.Xml.Linq.XElement> implementuje <xref:System.Xml.Serialization.IXmlSerializable> interfejsu.  
   
- Uwaga tylko <xref:System.Xml.Linq.XElement> klasa implementuje serializacji.  
+ Pamiętaj, że tylko <xref:System.Xml.Linq.XElement> klasa implementuje serializacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Porady: serializacji przy użyciu elementu XmlSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|Pokazuje, jak do serializacji przy użyciu <xref:System.Xml.Serialization.XmlSerializer>.|  
-|[Porady: serializacji przy użyciu elementu DataContractSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Pokazuje, jak do serializacji przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|[Instrukcje: Serializowanie przy użyciu elementu XmlSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|Pokazuje, jak serializowanie przy użyciu <xref:System.Xml.Serialization.XmlSerializer>.|  
+|[Instrukcje: Serializowanie przy użyciu elementu DataContractSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Pokazuje, jak serializowanie przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Zaawansowane LINQ do XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Zobacz także
+- [Zaawansowane LINQ to XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

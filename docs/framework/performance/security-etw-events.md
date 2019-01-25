@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e02274b63ddf7df42d26621791de0286df9655b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cd5e660778b852cfee84359bb4d7253ca8f118d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608079"
 ---
 # <a name="security-etw-events"></a>Zabezpieczenia zdarzeń ETW
-<a name="top"></a> Zdarzenia zabezpieczeń są wywoływane podczas weryfikacji silnej nazwy i weryfikacji Authenticode.  
+<a name="top"></a> Zdarzenia zabezpieczeń są wywoływane podczas Weryfikacja silnej nazwy i weryfikacji Authenticode.  
   
  Ta kategoria obejmuje następujące zdarzenia:  
   
@@ -25,53 +25,53 @@ ms.locfileid: "33395515"
   
 <a name="strongnameverificationstart_v1_and_strongnameverificationstop_v1_events"></a>   
 ## <a name="strongnameverificationstartv1-and-strongnameverificationstopv1-events"></a>StrongNameVerificationStart_V1 i StrongNameVerificationStop_V1 zdarzenia  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziom. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ W poniższej tabeli przedstawiono — słowo kluczowe i poziomu. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
-|Słowo kluczowe wywołaniem zdarzenia|Poziom|  
+|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
 |`SecurityKeyword` (0x400)|Informational(4)|  
   
- W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
+ W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
 |-----------|--------------|-----------------|  
-|`StrongNameVerificationStart_V1`|181|Początek weryfikacji silnej nazwy.|  
-|`StrongNameVerificationStop_V1`|182|Koniec weryfikacji silnej nazwy.|  
+|`StrongNameVerificationStart_V1`|181|Początek Weryfikacja silnej nazwy.|  
+|`StrongNameVerificationStop_V1`|182|Koniec Weryfikacja silnej nazwy.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|VerificationFlags|Windows: UInt32.|Weryfikacja flag.|  
-|ErrorCode|Windows: UInt32.|Kod błędu HResult.|  
-|FullyQualifiedAssemblyName|Windows: UnicodeString|Nazwa FQDN zestawu.|  
-|ClrInstanceID|Windows: UInt16|Unikatowy identyfikator wystąpienia CLR lub środowisko CoreCLR.|  
+|VerificationFlags|win: UInt32.|Flagi weryfikacji.|  
+|ErrorCode|win: UInt32.|Kod błędu HResult.|  
+|FullyQualifiedAssemblyName|win:UnicodeString|W pełni kwalifikowanej nazwy zestawu.|  
+|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  
   
 <a name="authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events"></a>   
 ## <a name="authenticodeverificationstartv1-and-authenticodeverificationstopv1-events"></a>AuthenticodeVerificationStart_V1 i AuthenticodeVerificationStop_V1 zdarzenia  
- W poniższej tabeli przedstawiono — słowo kluczowe i poziom.  
+ W poniższej tabeli przedstawiono — słowo kluczowe i poziomu.  
   
-|Słowo kluczowe wywołaniem zdarzenia|Poziom|  
+|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
 |`SecurityKeyword` (0x400)|Informational(4)|  
   
- W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
+ W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
 |-----------|--------------|-----------------|  
-|`AuthenticodeVerificationStart_V1`|183|Początek weryfikacji Authenticode.|  
+|`AuthenticodeVerificationStart_V1`|183|Uruchomienie weryfikacji Authenticode.|  
 |`AuthenticodeVerificationStop_V1`|184|Koniec weryfikacji Authenticode.|  
   
  W poniższej tabeli przedstawiono dane zdarzenia.  
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|VerificationFlags|Windows: UInt32.|Weryfikacja flag.|  
-|ErrorCode|Windows: UInt32.|Kod błędu HResult.|  
-|ModulePath|Windows: UnicodeString|Ścieżka modułu.|  
-|ClrInstanceID|Windows: UInt16|Unikatowy identyfikator wystąpienia CLR lub środowisko CoreCLR.|  
+|VerificationFlags|win: UInt32.|Flagi weryfikacji.|  
+|ErrorCode|win: UInt32.|Kod błędu HResult.|  
+|ModulePath|win:UnicodeString|Ścieżka modułu.|  
+|ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Zobacz także
+- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

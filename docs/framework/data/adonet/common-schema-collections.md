@@ -2,12 +2,12 @@
 title: Typowe kolekcje schematów
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: 157330304ac656ddbdbb18408ca5144566746808
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: dfd1e28a117ca71cac6c792058c1aeb17a0c4f69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700965"
 ---
 # <a name="common-schema-collections"></a>Typowe kolekcje schematów
 Typowe kolekcje schematów są kolekcjami schematu, które są implementowane przez wszystkich dostawców zarządzanych w programie .NET Framework. Można tworzyć zapytania zarządzanego dostawcy .NET Framework, aby określić listę kolekcje schematów obsługiwanych przez wywołanie metody **GetSchema** metody bez argumentów lub nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> z listą kolekcje schematów obsługiwanych, liczba ograniczeń, które obsługują one każdego i części identyfikator, których używają. Kolekcje te opisują wszystkich wymaganych kolumn. Dostawcy są bezpłatne dodać dodatkowe kolumny, jeśli chcesz, aby ich. Na przykład `SqlClient` i `OracleClient` ParameterName można dodać do kolekcji ograniczenia.  
@@ -19,7 +19,7 @@ Typowe kolekcje schematów są kolekcjami schematu, które są implementowane pr
 ## <a name="metadatacollections"></a>MetaDataCollections  
  Ta kolekcja schematów udostępnia informacje na temat wszystkich kolekcje schematów, obsługiwane przez zarządzanego dostawcy .NET Framework, który jest obecnie używany do łączenia z bazą danych.  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |collectionName|string|Nazwa kolekcji do przekazania do **GetSchema** metodę, aby powrócić do kolekcji.|  
 |NumberOfRestrictions|int|Liczba ograniczeń, które mogą być określone dla kolekcji.|  
@@ -28,7 +28,7 @@ Typowe kolekcje schematów są kolekcjami schematu, które są implementowane pr
 ## <a name="datasourceinformation"></a>DataSourceInformation  
  Ta kolekcja schematów udostępnia informacje o źródle danych, łączyć się z zarządzanego dostawcy jest obecnie dostępna w programie .NET Framework.  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |CompositeIdentifierSeparatorPattern|string|Wyrażenie regularne, aby dopasować złożonego separatory złożone identyfikator. Na przykład "\\." (dla programu SQL Server) lub "\@&#124;\\." (w przypadku bazy danych Oracle).<br /><br /> Złożone identyfikator ma przeważnie format do czego służy nazwa obiektu bazy danych, na przykład: pubs.dbo.authors lub pubs\@dbo.authors.<br /><br /> Dla programu SQL Server, należy użyć wyrażenia regularnego "\\.". W przypadku programu OracleClient, użyj "\@&#124;\\.".<br /><br /> Do użytku ODBC Catalog_name_seperator.<br /><br /> Dla OLE DB użyj DBLITERAL_CATALOG_SEPARATOR lub DBLITERAL_SCHEMA_SEPARATOR.|  
 |DataSourceProductName|string|Nazwa produktu, używane przez dostawcę, takiego jak "Oracle" lub "SQLServer".|  
@@ -51,14 +51,14 @@ Typowe kolekcje schematów są kolekcjami schematu, które są implementowane pr
 ## <a name="datatypes"></a>Typy danych  
  Ta kolekcja ujawnia informacji o schemacie o typach danych, które są obsługiwane przez bazę danych programu .NET Framework ostawca zarządzany jest obecnie połączony.  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |TypeName|string|Nazwa typu danych specyficznego dla dostawcy.|  
 |ProviderDbType|int|Wartość typu właściwe dla dostawcy, które mają być używane podczas określania typu parametru. Na przykład SqlDbType.Money lub OracleType.Blob.|  
 |ColumnSize|long|Długość nieliczbową kolumna lub parametr odnosi się do maksymalnej lub długość dla tego typu zdefiniowano przez dostawcę.<br /><br /> Danych znakowych jest maksymalną lub zdefiniowana długości w jednostkach, zdefiniowane przez źródło danych. Oracle korzysta z koncepcji określając długość, a następnie określając rozmiar rzeczywisty magazyn dla niektórych typów danych znakowych. Definiuje tylko długości w jednostkach na oprogramowanie Oracle.<br /><br /> Dla typów danych daty i godziny to długość reprezentacji w postaci ciągu (przy założeniu precyzja maksymalna dozwolona składnika ułamków sekund).<br /><br /> Jeśli typ danych jest wartością liczbową, jest górną granicę na maksymalna dokładność typu danych.|  
 |CreateFormat|string|Ciąg formatu, który pozwala dodać tę kolumnę do instrukcji definicji danych, takie jak CREATE TABLE. Każdy element w tablicy tworzenie powinna być reprezentowana przez "parametr znacznik" w ciągu formatu.<br /><br /> Na przykład SQL typ danych dziesiętnych musi dokładności i skali. W tym przypadku wyniesie ciąg formatu "DZIESIĘTNY ({0},{1})".|  
 |CreateParameters|string|Parametry tworzenia, które należy określić podczas tworzenia tego typu danych kolumny. Każdy parametr tworzenia znajduje się w ciągu, rozdzielone przecinkami w kolejności, w której mają być dostarczone.<br /><br /> Na przykład SQL typ danych dziesiętnych musi dokładności i skali. W tym przypadku parametry tworzenia powinien zawierać ciąg "dokładność, skala".<br /><br /> Za pomocą polecenia tekstu do utworzenia DZIESIĘTNĄ kolumny z 10 dokładności i skali 2 wartości kolumny CreateFormat może być dziesiętnych ({0},{1}) "i DECIMAL(10,2) specyfikacji kompletnego typu.|  
-|Typ danych|string|Nazwa typu .NET Framework o typie danych.|  
+|DataType|string|Nazwa typu .NET Framework o typie danych.|  
 |IsAutoincrementable|bool|TRUE — wartości danych tego typu może być zwiększenie automatycznie.<br /><br /> FALSE — wartości danych tego typu może nie być zwiększenie automatycznie.<br /><br /> Należy pamiętać, że to jedynie wskazuje, czy kolumnę danych tego typu mogą być automatyczne zwiększanie nie, że wszystkie kolumny tego typu są automatycznie — zwiększanie.|  
 |IsBestMatch|bool|TRUE — typ danych jest najlepsze dopasowanie między wszystkie typy danych w magazynie danych i typ danych .NET Framework, które są wskazywane przez wartość w kolumnie Typ danych.<br /><br /> FALSE — typ danych nie jest najlepsze dopasowanie.<br /><br /> Dla każdego zestawu wierszy, w których wartość kolumny typu danych jest taka sama kolumna IsBestMatch jest ustawiona wartość true tylko w jednym wierszu.|  
 |IsCaseSensitive|bool|TRUE — typ danych to typ znaku i jest uwzględniana wielkość liter.<br /><br /> FALSE — typ danych nie jest to typ znaku lub nie jest rozróżniana wielkość liter.|  
@@ -80,7 +80,7 @@ Typowe kolekcje schematów są kolekcjami schematu, które są implementowane pr
 ## <a name="restrictions"></a>Ograniczenia  
  Ta kolekcja schematów udostępnianych informacji dotyczących ograniczeń, które są obsługiwane przez zarządzanego dostawcy .NET Framework, który jest obecnie używany do łączenia z bazą danych.  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |collectionName|string|Nazwa kolekcji, która dotyczy tych ograniczeń.|  
 |RestrictionName|string|Nazwa ograniczenia w kolekcji.|  
@@ -90,11 +90,11 @@ Typowe kolekcje schematów są kolekcjami schematu, które są implementowane pr
 ## <a name="reservedwords"></a>ReservedWords  
  Ta kolekcja schematów udostępnia informacji na temat słów, które są zarezerwowane przez bazę danych programu .NET Framework zarządzanego dostawcy, który jest obecnie połączony.  
   
-|NazwaKolumny|Typ danych|Opis|  
+|NazwaKolumny|DataType|Opis|  
 |----------------|--------------|-----------------|  
 |ReservedWord|string|Słowa zarezerwowanego właściwe dla dostawcy.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [GetSchema i kolekcje schematów](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [GetSchema i kolekcje schematów](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

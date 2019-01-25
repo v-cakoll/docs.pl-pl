@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c281d03c6e3774938cfa6e4b4b3a541738b38489
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8e270f45300bd5f8c2e6cd87f9b84f31ec42320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722195"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc — Metoda
-Dodaje instrukcję .reloc do ścieżki bazowej kodu.  
+Dodaje instrukcję .reloc do bazy kodu.  
   
  Ta metoda jest przestarzała i nie powinna być używana.  
   
@@ -42,7 +42,7 @@ HRESULT AddSectionReloc (
   
 #### <a name="parameters"></a>Parametry  
  `section`  
- [in] Sekcji kodu w pamięci, do której ma zostać dodany instrukcji .reloc.  
+ [in] Sekcja kodu w pamięci, do której chcesz dodać instrukcję .reloc.  
   
  `offset`  
  [in] Przesunięcie sekcji.  
@@ -51,16 +51,16 @@ HRESULT AddSectionReloc (
  [in] Sekcja, do którego `offset` odwołuje się.  
   
  `relocType`  
- [in] Jeden z [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) wartości i wskazujący rodzaj .reloc instrukcji, aby dodać.  
+ [in] Jedną z [ceesectionreloctype —](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) wartości, wskazujący rodzaj instrukcji .reloc do dodania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

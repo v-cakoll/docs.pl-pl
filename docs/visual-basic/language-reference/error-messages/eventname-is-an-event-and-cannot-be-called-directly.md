@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;eventName&gt; &#39; jest zdarzeniem i nie można bezpośrednio wywołać'
+title: '&#39;&lt;eventName&gt; &#39; jest zdarzeniem i nie można wywołać bezpośrednio'
 ms.date: 07/20/2015
 f1_keywords:
 - bc32022
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC32022
 ms.assetid: 4dcfcb8d-a9fa-46a7-a034-29d9ff3a59b3
-ms.openlocfilehash: 4d8a7d716d2b7c52d1d027a1e7959d981bb0857e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3efd8c18497ce288e16659db4ca4693d5a3e6acc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582005"
 ---
-# <a name="39lteventnamegt39-is-an-event-and-cannot-be-called-directly"></a>&#39;&lt;eventName&gt; &#39; jest zdarzeniem i nie można bezpośrednio wywołać
-"<`eventname`>" jest zdarzeniem i dlatego nie można wywołać bezpośrednio. Użyj `RaiseEvent` instrukcji, aby wywołać zdarzenie.  
+# <a name="39lteventnamegt39-is-an-event-and-cannot-be-called-directly"></a>&#39;&lt;eventName&gt; &#39; jest zdarzeniem i nie można wywołać bezpośrednio
+"<`eventname`>" jest zdarzeniem i dlatego nie można wywołać bezpośrednio. Użyj `RaiseEvent` instrukcję, aby wywołać zdarzenie.  
   
- Wywołanie procedury określa zdarzenie dla Nazwa procedury. Program obsługi zdarzeń jest procedurą, ale sam zdarzenia jest sygnalizowania urządzenia, które muszą być wywoływane i obsługi.  
+ Wywołanie procedury określa zdarzenie dla nazwy procedury. Program obsługi zdarzeń jest procedurą samego zdarzenia jest jednak sygnalizowanie urządzenia, które muszą być zgłaszane i obsługi.  
   
  **Identyfikator błędu:** BC32022  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Użyj `RaiseEvent` instrukcji sygnału zdarzenia i wywoływać procedury lub procedury, które ją obsługują.  
+1.  Użyj `RaiseEvent` instrukcję w celu zasygnalizowania zdarzenia i wywoływać procedury lub procedury, które go obsłużyć.  
   
-## <a name="see-also"></a>Zobacz też  
- [RaiseEvent, instrukcja](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [RaiseEvent, instrukcja](../../../visual-basic/language-reference/statements/raiseevent-statement.md)

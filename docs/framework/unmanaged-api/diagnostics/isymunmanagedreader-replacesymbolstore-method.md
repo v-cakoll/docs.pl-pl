@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03607cf96d73e96eef63fe62b86b50be02f34421
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f06c416d3443b350a172fab1a93a5d72bf40c197
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740362"
 ---
-# <a name="isymunmanagedreaderreplacesymbolstore-method"></a><span data-ttu-id="c43dd-102">ISymUnmanagedReader::ReplaceSymbolStore — Metoda</span><span class="sxs-lookup"><span data-stu-id="c43dd-102">ISymUnmanagedReader::ReplaceSymbolStore Method</span></span>
-<span data-ttu-id="c43dd-103">Zamienia istniejący magazyn symbol magazynu symboli delta.</span><span class="sxs-lookup"><span data-stu-id="c43dd-103">Replaces the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="c43dd-104">Ta metoda jest podobna do [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) metody, z wyjątkiem, że dany delta działa jako całkowite zastąpienie, a nie aktualizacji.</span><span class="sxs-lookup"><span data-stu-id="c43dd-104">This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.</span></span>  
+# <a name="isymunmanagedreaderreplacesymbolstore-method"></a><span data-ttu-id="7895c-102">ISymUnmanagedReader::ReplaceSymbolStore — Metoda</span><span class="sxs-lookup"><span data-stu-id="7895c-102">ISymUnmanagedReader::ReplaceSymbolStore Method</span></span>
+<span data-ttu-id="7895c-103">Zamienia istniejący magazyn symboli w magazynie symboli delta.</span><span class="sxs-lookup"><span data-stu-id="7895c-103">Replaces the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="7895c-104">Ta metoda jest podobna do [updatesymbolstore —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) metody, chyba że dany delta działa jako całkowitego zastąpienia, a nie aktualizacji.</span><span class="sxs-lookup"><span data-stu-id="7895c-104">This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c43dd-105">Należy określić tylko jeden z `filename` lub `pIStream` parametrów nie oba.</span><span class="sxs-lookup"><span data-stu-id="c43dd-105">You need specify only one of the `filename` or `pIStream` parameters, not both.</span></span> <span data-ttu-id="c43dd-106">Jeśli `filename` określono magazyn symbol zostanie zaktualizowany przy użyciu symboli w tym pliku.</span><span class="sxs-lookup"><span data-stu-id="c43dd-106">If `filename` is specified, the symbol store will be updated with the symbols in that file.</span></span> <span data-ttu-id="c43dd-107">Jeśli `pIStream` określono magazyn zostanie zaktualizowany przy użyciu danych z <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span><span class="sxs-lookup"><span data-stu-id="c43dd-107">If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span></span>  
+>  <span data-ttu-id="7895c-105">Należy określić tylko jeden z `filename` lub `pIStream` parametrów, nie obydwa.</span><span class="sxs-lookup"><span data-stu-id="7895c-105">You need specify only one of the `filename` or `pIStream` parameters, not both.</span></span> <span data-ttu-id="7895c-106">Jeśli `filename` określono magazynu symboli, które zostaną zaktualizowane przy użyciu symboli w tym pliku.</span><span class="sxs-lookup"><span data-stu-id="7895c-106">If `filename` is specified, the symbol store will be updated with the symbols in that file.</span></span> <span data-ttu-id="7895c-107">Jeśli `pIStream` określono magazynu zostaną zaktualizowane przy użyciu danych z <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span><span class="sxs-lookup"><span data-stu-id="7895c-107">If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c43dd-108">Składnia</span><span class="sxs-lookup"><span data-stu-id="c43dd-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7895c-108">Składnia</span><span class="sxs-lookup"><span data-stu-id="7895c-108">Syntax</span></span>  
   
 ```  
 HRESULT ReplaceSymbolStore (  
@@ -38,18 +38,18 @@ HRESULT ReplaceSymbolStore (
     [in] IStream *pIStream);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c43dd-109">Parametry</span><span class="sxs-lookup"><span data-stu-id="c43dd-109">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7895c-109">Parametry</span><span class="sxs-lookup"><span data-stu-id="7895c-109">Parameters</span></span>  
  `filename`  
- <span data-ttu-id="c43dd-110">[in] Nazwa pliku zawierającego magazynu symboli.</span><span class="sxs-lookup"><span data-stu-id="c43dd-110">[in] The name of the file containing the symbol store.</span></span>  
+ <span data-ttu-id="7895c-110">[in] Nazwa pliku zawierającego magazynu symboli.</span><span class="sxs-lookup"><span data-stu-id="7895c-110">[in] The name of the file containing the symbol store.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="c43dd-111">[in] Strumień pliku używany zamiast `filename` parametru.</span><span class="sxs-lookup"><span data-stu-id="c43dd-111">[in] The file stream, used as an alternative to the `filename` parameter.</span></span>  
+ <span data-ttu-id="7895c-111">[in] Strumień pliku używana jako alternatywa `filename` parametru.</span><span class="sxs-lookup"><span data-stu-id="7895c-111">[in] The file stream, used as an alternative to the `filename` parameter.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c43dd-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="c43dd-112">Return Value</span></span>  
- <span data-ttu-id="c43dd-113">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="c43dd-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7895c-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="7895c-112">Return Value</span></span>  
+ <span data-ttu-id="7895c-113">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="7895c-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c43dd-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c43dd-114">Requirements</span></span>  
- <span data-ttu-id="c43dd-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c43dd-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7895c-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7895c-114">Requirements</span></span>  
+ <span data-ttu-id="7895c-115">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7895c-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c43dd-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c43dd-116">See Also</span></span>  
- [<span data-ttu-id="c43dd-117">ISymUnmanagedReader, interfejs</span><span class="sxs-lookup"><span data-stu-id="c43dd-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7895c-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7895c-116">See also</span></span>
+- [<span data-ttu-id="7895c-117">ISymUnmanagedReader, interfejs</span><span class="sxs-lookup"><span data-stu-id="7895c-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

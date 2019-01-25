@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 089aaf96a164be7eaa258dec65807bd75c998eb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad95f8ee5188c38bb19882d3c7fa6bf98fcc9d2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625253"
 ---
-# <a name="ihosttaskmanagergetstackguarantee-method"></a><span data-ttu-id="841cd-102">IHostTaskManager::GetStackGuarantee — Metoda</span><span class="sxs-lookup"><span data-stu-id="841cd-102">IHostTaskManager::GetStackGuarantee Method</span></span>
-<span data-ttu-id="841cd-103">Pobiera ilość miejsca na stosie, który może być dostępne po zakończeniu operacji stosu, ale przed zamknięciem procesu.</span><span class="sxs-lookup"><span data-stu-id="841cd-103">Gets the amount of stack space that is guaranteed to be available after a stack operation completes, but before the closing of a process.</span></span>  
+# <a name="ihosttaskmanagergetstackguarantee-method"></a><span data-ttu-id="688a3-102">IHostTaskManager::GetStackGuarantee — Metoda</span><span class="sxs-lookup"><span data-stu-id="688a3-102">IHostTaskManager::GetStackGuarantee Method</span></span>
+<span data-ttu-id="688a3-103">Pobiera ilość miejsca stosu, który może być dostępna po zakończeniu operacji stosu, ale przed zamknięciem procesu.</span><span class="sxs-lookup"><span data-stu-id="688a3-103">Gets the amount of stack space that is guaranteed to be available after a stack operation completes, but before the closing of a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="841cd-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="841cd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="688a3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="688a3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackGuarantee(  
@@ -34,18 +35,18 @@ HRESULT GetStackGuarantee(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="841cd-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="841cd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="688a3-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="688a3-105">Parameters</span></span>  
  `pGuarantee`  
- <span data-ttu-id="841cd-106">[out] Wskaźnik do liczba bajtów, które są dostępne.</span><span class="sxs-lookup"><span data-stu-id="841cd-106">[out] A pointer to the number of bytes that are available.</span></span>  
+ <span data-ttu-id="688a3-106">[out] Wskaźnik do liczby bajtów, które są dostępne.</span><span class="sxs-lookup"><span data-stu-id="688a3-106">[out] A pointer to the number of bytes that are available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="841cd-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="841cd-107">Requirements</span></span>  
- <span data-ttu-id="841cd-108">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="841cd-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="688a3-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="688a3-107">Requirements</span></span>  
+ <span data-ttu-id="688a3-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="688a3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="841cd-109">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="841cd-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="688a3-109">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="688a3-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="841cd-110">**Biblioteka:** uwzględnione jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="841cd-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="688a3-110">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="688a3-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="841cd-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="841cd-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="688a3-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="688a3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="841cd-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="841cd-112">See Also</span></span>  
- [<span data-ttu-id="841cd-113">IHostTaskManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="841cd-113">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="688a3-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="688a3-112">See also</span></span>
+- [<span data-ttu-id="688a3-113">IHostTaskManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="688a3-113">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

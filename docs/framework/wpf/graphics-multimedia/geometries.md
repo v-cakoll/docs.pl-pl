@@ -9,24 +9,24 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: f595a214e807c2657ef5affd9e52fdf49aa24837
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 858adfca39d292dad4083b019e3d64e85f21017e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605802"
 ---
-# <a name="geometries"></a><span data-ttu-id="23e70-102">Geometria</span><span class="sxs-lookup"><span data-stu-id="23e70-102">Geometries</span></span>
-<span data-ttu-id="23e70-103"><xref:System.Windows.Media.Geometry> jest klasą uniwersalny, używany do renderowania [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] grafiki, test trafień obiektów i zdefiniuj wycinka regionów</span><span class="sxs-lookup"><span data-stu-id="23e70-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
+# <a name="geometries"></a><span data-ttu-id="6f62c-102">Geometria</span><span class="sxs-lookup"><span data-stu-id="6f62c-102">Geometries</span></span>
+<span data-ttu-id="6f62c-103"><xref:System.Windows.Media.Geometry> jest klasą wszechstronna używany do renderowania [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] grafiki, obiekty testowania trafienia i zdefiniuj regionów wycinka</span><span class="sxs-lookup"><span data-stu-id="6f62c-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="23e70-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="23e70-104">In This Section</span></span>  
- [<span data-ttu-id="23e70-105">Składnia znacznikowania ścieżki</span><span class="sxs-lookup"><span data-stu-id="23e70-105">Path Markup Syntax</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [<span data-ttu-id="23e70-106">Geometria — przegląd</span><span class="sxs-lookup"><span data-stu-id="23e70-106">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [<span data-ttu-id="23e70-107">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="23e70-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6f62c-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="6f62c-104">In This Section</span></span>  
+ [<span data-ttu-id="6f62c-105">Składnia znacznikowania ścieżki</span><span class="sxs-lookup"><span data-stu-id="6f62c-105">Path Markup Syntax</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
+ [<span data-ttu-id="6f62c-106">Geometria — przegląd</span><span class="sxs-lookup"><span data-stu-id="6f62c-106">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [<span data-ttu-id="6f62c-107">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="6f62c-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="23e70-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="23e70-108">See Also</span></span>  
- <xref:System.Windows.Media.Brushes>  
- <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="23e70-109">Grafika 2D i obrazowanie</span><span class="sxs-lookup"><span data-stu-id="23e70-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="23e70-110">Kształty i podstawowe rysowanie w programie WPF — przegląd</span><span class="sxs-lookup"><span data-stu-id="23e70-110">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="23e70-111">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="23e70-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="6f62c-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6f62c-108">See also</span></span>
+- <xref:System.Windows.Media.Brushes>
+- <xref:System.Windows.Shapes.Shape>
+- [<span data-ttu-id="6f62c-109">Grafika 2D i obrazowanie</span><span class="sxs-lookup"><span data-stu-id="6f62c-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="6f62c-110">Kształty i podstawowe rysowanie w programie WPF — przegląd</span><span class="sxs-lookup"><span data-stu-id="6f62c-110">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="6f62c-111">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="6f62c-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

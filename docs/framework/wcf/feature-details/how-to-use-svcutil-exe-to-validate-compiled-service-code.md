@@ -2,38 +2,38 @@
 title: 'Instrukcje: Weryfikacja skompilowanego kodu usługi za pomocą programu Svcutil.exe'
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
-ms.openlocfilehash: 9e7bdf98f578e9b5f9ef2be9c46ccbe811358467
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a06cf57fce883753af4686b294396d6d6da73a13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531931"
 ---
-# <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a><span data-ttu-id="a9379-102">Instrukcje: Weryfikacja skompilowanego kodu usługi za pomocą programu Svcutil.exe</span><span class="sxs-lookup"><span data-stu-id="a9379-102">How to: Use Svcutil.exe to Validate Compiled Service Code</span></span>
-<span data-ttu-id="a9379-103">Można użyć [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do wykrywania błędów w implementacji usługi i konfiguracji bez obsługującego usługę.</span><span class="sxs-lookup"><span data-stu-id="a9379-103">You can use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to detect errors in service implementations and configurations without hosting the service.</span></span>  
+# <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a><span data-ttu-id="ab9d0-102">Instrukcje: Weryfikacja skompilowanego kodu usługi za pomocą programu Svcutil.exe</span><span class="sxs-lookup"><span data-stu-id="ab9d0-102">How to: Use Svcutil.exe to Validate Compiled Service Code</span></span>
+<span data-ttu-id="ab9d0-103">Możesz użyć [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do wykrywania błędów w implementacji usługi i konfiguracji bez obsługującego usługę.</span><span class="sxs-lookup"><span data-stu-id="ab9d0-103">You can use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to detect errors in service implementations and configurations without hosting the service.</span></span>  
   
-### <a name="to-validate-a-service"></a><span data-ttu-id="a9379-104">Aby sprawdzić poprawność usługi</span><span class="sxs-lookup"><span data-stu-id="a9379-104">To validate a service</span></span>  
+### <a name="to-validate-a-service"></a><span data-ttu-id="ab9d0-104">Aby sprawdzić poprawność usługi</span><span class="sxs-lookup"><span data-stu-id="ab9d0-104">To validate a service</span></span>  
   
-1.  <span data-ttu-id="a9379-105">Kompilacji usługi do pliku wykonywalnego i jeden lub więcej zestawów zależnych.</span><span class="sxs-lookup"><span data-stu-id="a9379-105">Compile your service into an executable file and one or more dependent assemblies.</span></span>  
+1.  <span data-ttu-id="ab9d0-105">Kompiluj usługi do pliku wykonywalnego i jeden lub więcej zestawów zależnych.</span><span class="sxs-lookup"><span data-stu-id="ab9d0-105">Compile your service into an executable file and one or more dependent assemblies.</span></span>  
   
-2.  <span data-ttu-id="a9379-106">Otwórz wiersz polecenia z zestawu SDK</span><span class="sxs-lookup"><span data-stu-id="a9379-106">Open an SDK command prompt</span></span>  
+2.  <span data-ttu-id="ab9d0-106">Otwórz wiersz polecenia z zestawu SDK</span><span class="sxs-lookup"><span data-stu-id="ab9d0-106">Open an SDK command prompt</span></span>  
   
-3.  <span data-ttu-id="a9379-107">W wierszu polecenia Uruchom narzędzie Svcutil.exe w następującym formacie.</span><span class="sxs-lookup"><span data-stu-id="a9379-107">At the command prompt, launch the Svcutil.exe tool using the following format.</span></span> <span data-ttu-id="a9379-108">Aby uzyskać więcej informacji o różnych parametrów, zobacz Validationsection usługi z [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tematu.</span><span class="sxs-lookup"><span data-stu-id="a9379-108">For more information on the various parameters, see the Service Validationsection of the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) topic.</span></span>  
+3.  <span data-ttu-id="ab9d0-107">W wierszu polecenia Uruchom narzędzia Svcutil.exe w następującym formacie.</span><span class="sxs-lookup"><span data-stu-id="ab9d0-107">At the command prompt, launch the Svcutil.exe tool using the following format.</span></span> <span data-ttu-id="ab9d0-108">Aby uzyskać więcej informacji na temat różnych parametrów, zobacz Validationsection usługi z [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tematu.</span><span class="sxs-lookup"><span data-stu-id="ab9d0-108">For more information on the various parameters, see the Service Validationsection of the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) topic.</span></span>  
   
     ```  
     svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*  
     ```  
   
-     <span data-ttu-id="a9379-109">Należy użyć `/serviceName` możliwość wskazania nazwy konfiguracji usługi, który chcesz zweryfikować.</span><span class="sxs-lookup"><span data-stu-id="a9379-109">You must use the `/serviceName` option to indicate the configuration name of the service you want to validate.</span></span>  
+     <span data-ttu-id="ab9d0-109">Należy użyć `/serviceName` opcję, aby wskazać nazwę konfiguracji usługi, którą chcesz zweryfikować.</span><span class="sxs-lookup"><span data-stu-id="ab9d0-109">You must use the `/serviceName` option to indicate the configuration name of the service you want to validate.</span></span>  
   
-     <span data-ttu-id="a9379-110">`assemblyPath` Argument określa ścieżkę do pliku wykonywalnego dla usług i jeden lub więcej zestawów zawierających typów usług do sprawdzenia poprawności.</span><span class="sxs-lookup"><span data-stu-id="a9379-110">The `assemblyPath` argument specifies the path to the executable file for the service and one or more assemblies that contain the service types to be validated.</span></span> <span data-ttu-id="a9379-111">Wykonywalny zestaw musi mieć skojarzony plik konfiguracji zapewnienie konfiguracji usługi.</span><span class="sxs-lookup"><span data-stu-id="a9379-111">The executable assembly must have an associated configuration file to provide the service configuration.</span></span> <span data-ttu-id="a9379-112">Standardowa wiersza polecenia symboli wieloznacznych służy do nadania wiele zestawów.</span><span class="sxs-lookup"><span data-stu-id="a9379-112">You can use standard command-line wildcards to provide multiple assemblies.</span></span>  
+     <span data-ttu-id="ab9d0-110">`assemblyPath` Argument określa ścieżkę do pliku wykonywalnego dla usługi i jeden lub więcej zestawów zawierających typy usług, które ma zostać zweryfikowana.</span><span class="sxs-lookup"><span data-stu-id="ab9d0-110">The `assemblyPath` argument specifies the path to the executable file for the service and one or more assemblies that contain the service types to be validated.</span></span> <span data-ttu-id="ab9d0-111">Zestawu pliku wykonywalnego musi mieć skojarzony plik konfiguracji do zapewnienia konfiguracji usługi.</span><span class="sxs-lookup"><span data-stu-id="ab9d0-111">The executable assembly must have an associated configuration file to provide the service configuration.</span></span> <span data-ttu-id="ab9d0-112">Zapewnienie wiele zestawów, można użyć standardowych symboli wieloznacznych wiersza polecenia.</span><span class="sxs-lookup"><span data-stu-id="ab9d0-112">You can use standard command-line wildcards to provide multiple assemblies.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a9379-113">Przykład</span><span class="sxs-lookup"><span data-stu-id="a9379-113">Example</span></span>  
- <span data-ttu-id="a9379-114">Polecenie myServiceName usługi zaimplementowana w pliku wykonywalnym myServiceHost.exe.</span><span class="sxs-lookup"><span data-stu-id="a9379-114">The following command the service myServiceName implemented in the myServiceHost.exe executable file.</span></span>  <span data-ttu-id="a9379-115">Plik konfiguracji usługi (myServiceHost.exe.config) są ładowane automatycznie.</span><span class="sxs-lookup"><span data-stu-id="a9379-115">The configuration file for the service (myServiceHost.exe.config) is automatically loaded.</span></span>  
+## <a name="example"></a><span data-ttu-id="ab9d0-113">Przykład</span><span class="sxs-lookup"><span data-stu-id="ab9d0-113">Example</span></span>  
+ <span data-ttu-id="ab9d0-114">Polecenie myServiceName usługę, zaimplementowane w pliku wykonywalnym myServiceHost.exe.</span><span class="sxs-lookup"><span data-stu-id="ab9d0-114">The following command the service myServiceName implemented in the myServiceHost.exe executable file.</span></span>  <span data-ttu-id="ab9d0-115">Plik konfiguracji usługi (myServiceHost.exe.config) jest automatycznie ładowany.</span><span class="sxs-lookup"><span data-stu-id="ab9d0-115">The configuration file for the service (myServiceHost.exe.config) is automatically loaded.</span></span>  
   
 ```  
 svcutil /validate /serviceName:myServiceName myServiceHost.exe  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a9379-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a9379-116">See Also</span></span>  
- [<span data-ttu-id="a9379-117">Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="a9379-117">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a><span data-ttu-id="ab9d0-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ab9d0-116">See also</span></span>
+- [<span data-ttu-id="ab9d0-117">Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="ab9d0-117">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

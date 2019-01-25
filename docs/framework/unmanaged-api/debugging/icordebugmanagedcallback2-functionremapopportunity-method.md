@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc900ca20ac87ddecfd8f7adf0894af21ca5d2f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86736f885e40e553195cf2a5f84575a5384e6b60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564711"
 ---
-# <a name="icordebugmanagedcallback2functionremapopportunity-method"></a><span data-ttu-id="3649d-102">ICorDebugManagedCallback2::FunctionRemapOpportunity — Metoda</span><span class="sxs-lookup"><span data-stu-id="3649d-102">ICorDebugManagedCallback2::FunctionRemapOpportunity Method</span></span>
-<span data-ttu-id="3649d-103">Powiadamia debuger osiągnięcie w wykonanie kodu punktu sekwencji w starszej wersji funkcji edytowany.</span><span class="sxs-lookup"><span data-stu-id="3649d-103">Notifies the debugger that code execution has reached a sequence point in an older version of an edited function.</span></span>  
+# <a name="icordebugmanagedcallback2functionremapopportunity-method"></a><span data-ttu-id="6f891-102">ICorDebugManagedCallback2::FunctionRemapOpportunity — Metoda</span><span class="sxs-lookup"><span data-stu-id="6f891-102">ICorDebugManagedCallback2::FunctionRemapOpportunity Method</span></span>
+<span data-ttu-id="6f891-103">Powiadamia debugera, że wykonywanie kodu osiągnęła punktu sekwencji w starszej wersji przeprowadzono edycję funkcji.</span><span class="sxs-lookup"><span data-stu-id="6f891-103">Notifies the debugger that code execution has reached a sequence point in an older version of an edited function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3649d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3649d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f891-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6f891-104">Syntax</span></span>  
   
 ```  
 HRESULT FunctionRemapOpportunity (  
@@ -39,36 +39,36 @@ HRESULT FunctionRemapOpportunity (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3649d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="3649d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6f891-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="6f891-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="3649d-106">[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domeny aplikacji zawierający funkcję edytowany.</span><span class="sxs-lookup"><span data-stu-id="3649d-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the edited function.</span></span>  
+ <span data-ttu-id="6f891-106">[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, zawierającą przeprowadzono edycję funkcji.</span><span class="sxs-lookup"><span data-stu-id="6f891-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the edited function.</span></span>  
   
  `pThread`  
- <span data-ttu-id="3649d-107">[in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku podczas ponownego mapowania punktu przerwania.</span><span class="sxs-lookup"><span data-stu-id="3649d-107">[in] A pointer to an ICorDebugThread object that represents the thread on which the remap breakpoint was encountered.</span></span>  
+ <span data-ttu-id="6f891-107">[in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątek napotkano punkt przerwania ponowne mapowanie.</span><span class="sxs-lookup"><span data-stu-id="6f891-107">[in] A pointer to an ICorDebugThread object that represents the thread on which the remap breakpoint was encountered.</span></span>  
   
  `pOldFunction`  
- <span data-ttu-id="3649d-108">[in] Wskaźnik do obiektu ICorDebugFunction, który reprezentuje wersji funkcji, która jest obecnie uruchomiony w wątku.</span><span class="sxs-lookup"><span data-stu-id="3649d-108">[in] A pointer to an ICorDebugFunction object that represents the version of the function that is currently running on the thread.</span></span>  
+ <span data-ttu-id="6f891-108">[in] Wskaźnik do obiektu ICorDebugFunction, który reprezentuje wersji funkcji, która jest aktualnie uruchomiona w wątku.</span><span class="sxs-lookup"><span data-stu-id="6f891-108">[in] A pointer to an ICorDebugFunction object that represents the version of the function that is currently running on the thread.</span></span>  
   
  `pNewFunction`  
- <span data-ttu-id="3649d-109">[in] Wskaźnik do obiektu ICorDebugFunction, który reprezentuje najnowszą wersję funkcji.</span><span class="sxs-lookup"><span data-stu-id="3649d-109">[in] A pointer to an ICorDebugFunction object that represents the latest version of the function.</span></span>  
+ <span data-ttu-id="6f891-109">[in] Wskaźnik do obiektu ICorDebugFunction, który reprezentuje najnowszą wersję funkcji.</span><span class="sxs-lookup"><span data-stu-id="6f891-109">[in] A pointer to an ICorDebugFunction object that represents the latest version of the function.</span></span>  
   
  `oldILOffset`  
- <span data-ttu-id="3649d-110">[in] Język pośredni (MSIL) firmy Microsoft przesunięcie wskaźnika instrukcji w starej wersji funkcji.</span><span class="sxs-lookup"><span data-stu-id="3649d-110">[in] The Microsoft intermediate language (MSIL) offset of the instruction pointer in the old version of the function.</span></span>  
+ <span data-ttu-id="6f891-110">[in] Przesunięcie Microsoft intermediate language (MSIL) wskaźnik instrukcji w starej wersji funkcji.</span><span class="sxs-lookup"><span data-stu-id="6f891-110">[in] The Microsoft intermediate language (MSIL) offset of the instruction pointer in the old version of the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3649d-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3649d-111">Remarks</span></span>  
- <span data-ttu-id="3649d-112">To wywołanie zwrotne daje debuger możliwość ponownie zamapować wskaźnik instrukcji, aby jego właściwe miejsce w nowej wersji określona funkcja wywołując [ICorDebugILFrame2::RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="3649d-112">This callback gives the debugger an opportunity to remap the instruction pointer to its proper place in the new version of the specified function by calling the [ICorDebugILFrame2::RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) method.</span></span> <span data-ttu-id="3649d-113">Jeśli debuger nie wywołuje `RemapFunction` przed wywołaniem [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) metody środowiska uruchomieniowego będzie kontynuować jego wykonywanie poprzedni kod i uruchomią innego `FunctionRemapOpportunity` wywołanie zwrotne z następnego punktu sekwencji.</span><span class="sxs-lookup"><span data-stu-id="3649d-113">If the debugger does not call `RemapFunction` before calling the [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) method, the runtime will continue to execute the old code and will fire another `FunctionRemapOpportunity` callback at the next sequence point.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6f891-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6f891-111">Remarks</span></span>  
+ <span data-ttu-id="6f891-112">To wywołanie zwrotne zapewnia debugera można ponownie zamapować wskaźnik instrukcji do jego właściwe miejsce w nowej wersji określonej funkcji przez wywołanie metody [ICorDebugILFrame2::RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="6f891-112">This callback gives the debugger an opportunity to remap the instruction pointer to its proper place in the new version of the specified function by calling the [ICorDebugILFrame2::RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) method.</span></span> <span data-ttu-id="6f891-113">Jeśli debuger nie mogą wywoływać `RemapFunction` przed wywołaniem [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) metody, środowisko uruchomieniowe będzie w dalszym ciągu wykonują poprzedni kod i zostanie uruchomiony inny `FunctionRemapOpportunity` wywołania zwrotnego w następnym punkcie sekwencji.</span><span class="sxs-lookup"><span data-stu-id="6f891-113">If the debugger does not call `RemapFunction` before calling the [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) method, the runtime will continue to execute the old code and will fire another `FunctionRemapOpportunity` callback at the next sequence point.</span></span>  
   
- <span data-ttu-id="3649d-114">To wywołanie zwrotne zostanie wywołany dla każdej ramki, w której jest wykonywany starszą wersję danej funkcji, dopóki debuger zwraca wartość S_OK.</span><span class="sxs-lookup"><span data-stu-id="3649d-114">This callback will be invoked for every frame that is executing an older version of the given function until the debugger returns S_OK.</span></span>  
+ <span data-ttu-id="6f891-114">To wywołanie zwrotne zostanie wywołany dla każdej ramki, który jest wykonywany na starszą wersję danej funkcji, dopóki debuger nie zwróci S_OK.</span><span class="sxs-lookup"><span data-stu-id="6f891-114">This callback will be invoked for every frame that is executing an older version of the given function until the debugger returns S_OK.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3649d-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3649d-115">Requirements</span></span>  
- <span data-ttu-id="3649d-116">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3649d-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6f891-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6f891-115">Requirements</span></span>  
+ <span data-ttu-id="6f891-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6f891-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3649d-117">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3649d-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6f891-117">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6f891-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3649d-118">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3649d-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6f891-118">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6f891-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3649d-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3649d-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6f891-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f891-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3649d-120">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3649d-120">See Also</span></span>  
- [<span data-ttu-id="3649d-121">ICorDebugManagedCallback2, interfejs</span><span class="sxs-lookup"><span data-stu-id="3649d-121">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [<span data-ttu-id="3649d-122">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="3649d-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6f891-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6f891-120">See also</span></span>
+- [<span data-ttu-id="6f891-121">ICorDebugManagedCallback2, interfejs</span><span class="sxs-lookup"><span data-stu-id="6f891-121">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="6f891-122">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="6f891-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

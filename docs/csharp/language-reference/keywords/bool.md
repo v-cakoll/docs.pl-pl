@@ -8,54 +8,54 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: a274083ad2e518f8f29384e51d692bcf9a9cb61e
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 958b58b31193dbf4c03709e4ab7ba38f7f30e0ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590486"
 ---
-# <a name="bool-c-reference"></a><span data-ttu-id="f5274-102">bool (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="f5274-102">bool (C# Reference)</span></span>
+# <a name="bool-c-reference"></a><span data-ttu-id="03219-102">bool (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="03219-102">bool (C# Reference)</span></span>
 
-<span data-ttu-id="f5274-103">`bool` — Słowo kluczowe jest aliasem <xref:System.Boolean?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f5274-103">The `bool` keyword is an alias of <xref:System.Boolean?displayProperty=nameWithType>.</span></span> <span data-ttu-id="f5274-104">Służy do deklarowania zmiennych do przechowywania wartości logiczne: [true](true-literal.md) i [false](false-literal.md).</span><span class="sxs-lookup"><span data-stu-id="f5274-104">It is used to declare variables to store the Boolean values: [true](true-literal.md) and [false](false-literal.md).</span></span>
+<span data-ttu-id="03219-103">`bool` — Słowo kluczowe jest aliasem <xref:System.Boolean?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="03219-103">The `bool` keyword is an alias of <xref:System.Boolean?displayProperty=nameWithType>.</span></span> <span data-ttu-id="03219-104">Służy do deklarowania zmiennych do przechowywania wartości logiczne: [true](true-literal.md) i [false](false-literal.md).</span><span class="sxs-lookup"><span data-stu-id="03219-104">It is used to declare variables to store the Boolean values: [true](true-literal.md) and [false](false-literal.md).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f5274-105">Jeśli potrzebujesz zmiennej typu Boolean, który może mieć również wartość `null`, użyj `bool?`.</span><span class="sxs-lookup"><span data-stu-id="f5274-105">If you require a Boolean variable that can also have a value of `null`, use `bool?`.</span></span> <span data-ttu-id="f5274-106">Aby uzyskać więcej informacji, zobacz [bool? typu](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) części [przy użyciu typów dopuszczających wartości zerowe](../../programming-guide/nullable-types/using-nullable-types.md) artykułu.</span><span class="sxs-lookup"><span data-stu-id="f5274-106">For more information, see [The bool? type](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) section of the [Using nullable types](../../programming-guide/nullable-types/using-nullable-types.md) article.</span></span>
+> <span data-ttu-id="03219-105">Jeśli potrzebujesz zmiennej typu Boolean, który może mieć również wartość `null`, użyj `bool?`.</span><span class="sxs-lookup"><span data-stu-id="03219-105">If you require a Boolean variable that can also have a value of `null`, use `bool?`.</span></span> <span data-ttu-id="03219-106">Aby uzyskać więcej informacji, zobacz [bool? typu](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) części [przy użyciu typów dopuszczających wartości zerowe](../../programming-guide/nullable-types/using-nullable-types.md) artykułu.</span><span class="sxs-lookup"><span data-stu-id="03219-106">For more information, see [The bool? type](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) section of the [Using nullable types](../../programming-guide/nullable-types/using-nullable-types.md) article.</span></span>
 
-## <a name="literals"></a><span data-ttu-id="f5274-107">Literały</span><span class="sxs-lookup"><span data-stu-id="f5274-107">Literals</span></span>
+## <a name="literals"></a><span data-ttu-id="03219-107">Literały</span><span class="sxs-lookup"><span data-stu-id="03219-107">Literals</span></span>
 
-<span data-ttu-id="f5274-108">Można przypisać wartość logiczną umożliwiającą `bool` zmiennej.</span><span class="sxs-lookup"><span data-stu-id="f5274-108">You can assign a Boolean value to a `bool` variable.</span></span> <span data-ttu-id="f5274-109">Można także przypisać wyrażenie, które daje w wyniku `bool` do `bool` zmiennej.</span><span class="sxs-lookup"><span data-stu-id="f5274-109">You can also assign an expression that evaluates to `bool` to a `bool` variable.</span></span>
+<span data-ttu-id="03219-108">Można przypisać wartość logiczną umożliwiającą `bool` zmiennej.</span><span class="sxs-lookup"><span data-stu-id="03219-108">You can assign a Boolean value to a `bool` variable.</span></span> <span data-ttu-id="03219-109">Można także przypisać wyrażenie, które daje w wyniku `bool` do `bool` zmiennej.</span><span class="sxs-lookup"><span data-stu-id="03219-109">You can also assign an expression that evaluates to `bool` to a `bool` variable.</span></span>
 
 [!code-csharp[csrefKeywordsTypes#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#1)]
 
-<span data-ttu-id="f5274-110">Wartość domyślna `bool` zmienna jest `false`.</span><span class="sxs-lookup"><span data-stu-id="f5274-110">The default value of a `bool` variable is `false`.</span></span> <span data-ttu-id="f5274-111">Wartość domyślna `bool?` zmienna jest `null`.</span><span class="sxs-lookup"><span data-stu-id="f5274-111">The default value of a `bool?` variable is `null`.</span></span>
+<span data-ttu-id="03219-110">Wartość domyślna `bool` zmienna jest `false`.</span><span class="sxs-lookup"><span data-stu-id="03219-110">The default value of a `bool` variable is `false`.</span></span> <span data-ttu-id="03219-111">Wartość domyślna `bool?` zmienna jest `null`.</span><span class="sxs-lookup"><span data-stu-id="03219-111">The default value of a `bool?` variable is `null`.</span></span>
 
-## <a name="conversions"></a><span data-ttu-id="f5274-112">Konwersje</span><span class="sxs-lookup"><span data-stu-id="f5274-112">Conversions</span></span>
+## <a name="conversions"></a><span data-ttu-id="03219-112">Konwersje</span><span class="sxs-lookup"><span data-stu-id="03219-112">Conversions</span></span>
 
-<span data-ttu-id="f5274-113">W języku C++, wartości typu `bool` można przekonwertować na wartość typu `int`; innymi słowy, `false` jest odpowiednikiem zero i `true` jest odpowiednikiem wartości niezerowych.</span><span class="sxs-lookup"><span data-stu-id="f5274-113">In C++, a value of type `bool` can be converted to a value of type `int`; in other words, `false` is equivalent to zero and `true` is equivalent to nonzero values.</span></span> <span data-ttu-id="f5274-114">W języku C# jest konwersja między `bool` typu a innymi typami danych.</span><span class="sxs-lookup"><span data-stu-id="f5274-114">In C#, there is no conversion between the `bool` type and other types.</span></span> <span data-ttu-id="f5274-115">Na przykład następująca `if` instrukcja jest nieprawidłowa w języku C#:</span><span class="sxs-lookup"><span data-stu-id="f5274-115">For example, the following `if` statement is invalid in C#:</span></span>
+<span data-ttu-id="03219-113">W języku C++, wartości typu `bool` można przekonwertować na wartość typu `int`; innymi słowy, `false` jest odpowiednikiem zero i `true` jest odpowiednikiem wartości niezerowych.</span><span class="sxs-lookup"><span data-stu-id="03219-113">In C++, a value of type `bool` can be converted to a value of type `int`; in other words, `false` is equivalent to zero and `true` is equivalent to nonzero values.</span></span> <span data-ttu-id="03219-114">W języku C# jest konwersja między `bool` typu a innymi typami danych.</span><span class="sxs-lookup"><span data-stu-id="03219-114">In C#, there is no conversion between the `bool` type and other types.</span></span> <span data-ttu-id="03219-115">Na przykład następująca `if` instrukcja jest nieprawidłowa w języku C#:</span><span class="sxs-lookup"><span data-stu-id="03219-115">For example, the following `if` statement is invalid in C#:</span></span>
 
 [!code-csharp[csrefKeywordsTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#2)]
 
-<span data-ttu-id="f5274-116">Aby przetestować zmiennej typu `int`, trzeba jawnie porównania wartości, takich jak zero, w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="f5274-116">To test a variable of the type `int`, you have to explicitly compare it to a value, such as zero, as follows:</span></span>
+<span data-ttu-id="03219-116">Aby przetestować zmiennej typu `int`, trzeba jawnie porównania wartości, takich jak zero, w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="03219-116">To test a variable of the type `int`, you have to explicitly compare it to a value, such as zero, as follows:</span></span>
 
 [!code-csharp[csrefKeywordsTypes#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#3)]
 
-## <a name="example"></a><span data-ttu-id="f5274-117">Przykład</span><span class="sxs-lookup"><span data-stu-id="f5274-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="03219-117">Przykład</span><span class="sxs-lookup"><span data-stu-id="03219-117">Example</span></span>
 
-<span data-ttu-id="f5274-118">W tym przykładzie Wprowadź znak przy użyciu klawiatury i program sprawdza, czy znak danych wejściowych jest literą.</span><span class="sxs-lookup"><span data-stu-id="f5274-118">In this example, you enter a character from the keyboard and the program checks if the input character is a letter.</span></span> <span data-ttu-id="f5274-119">Jeśli jest literą, sprawdza, czy jest wielką czy małą literą.</span><span class="sxs-lookup"><span data-stu-id="f5274-119">If it is a letter, it checks if it is lowercase or uppercase.</span></span> <span data-ttu-id="f5274-120">Te testy są wykonywane przy użyciu <xref:System.Char.IsLetter%2A>, i <xref:System.Char.IsLower%2A>, zarówno które zwrotu `bool` typu:</span><span class="sxs-lookup"><span data-stu-id="f5274-120">These checks are performed with the <xref:System.Char.IsLetter%2A>, and <xref:System.Char.IsLower%2A>, both of which return the `bool` type:</span></span>
+<span data-ttu-id="03219-118">W tym przykładzie Wprowadź znak przy użyciu klawiatury i program sprawdza, czy znak danych wejściowych jest literą.</span><span class="sxs-lookup"><span data-stu-id="03219-118">In this example, you enter a character from the keyboard and the program checks if the input character is a letter.</span></span> <span data-ttu-id="03219-119">Jeśli jest literą, sprawdza, czy jest wielką czy małą literą.</span><span class="sxs-lookup"><span data-stu-id="03219-119">If it is a letter, it checks if it is lowercase or uppercase.</span></span> <span data-ttu-id="03219-120">Te testy są wykonywane przy użyciu <xref:System.Char.IsLetter%2A>, i <xref:System.Char.IsLower%2A>, zarówno które zwrotu `bool` typu:</span><span class="sxs-lookup"><span data-stu-id="03219-120">These checks are performed with the <xref:System.Char.IsLetter%2A>, and <xref:System.Char.IsLower%2A>, both of which return the `bool` type:</span></span>
 
 [!code-csharp[csrefKeywordsTypes#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#4)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="f5274-121">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="f5274-121">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="03219-121">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="03219-121">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="f5274-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f5274-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03219-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="03219-122">See also</span></span>
 
-- [<span data-ttu-id="f5274-123">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="f5274-123">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="f5274-124">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="f5274-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="f5274-125">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="f5274-125">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="f5274-126">Tabela typów całkowitych</span><span class="sxs-lookup"><span data-stu-id="f5274-126">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [<span data-ttu-id="f5274-127">Tabela typów wbudowanych</span><span class="sxs-lookup"><span data-stu-id="f5274-127">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [<span data-ttu-id="f5274-128">Tabela niejawnych konwersji liczbowych</span><span class="sxs-lookup"><span data-stu-id="f5274-128">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [<span data-ttu-id="f5274-129">Tabela jawnych konwersji liczbowych</span><span class="sxs-lookup"><span data-stu-id="f5274-129">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [<span data-ttu-id="03219-123">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="03219-123">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="03219-124">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="03219-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="03219-125">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="03219-125">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="03219-126">Tabela typów całkowitych</span><span class="sxs-lookup"><span data-stu-id="03219-126">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [<span data-ttu-id="03219-127">Tabela typów wbudowanych</span><span class="sxs-lookup"><span data-stu-id="03219-127">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [<span data-ttu-id="03219-128">Tabela niejawnych konwersji liczbowych</span><span class="sxs-lookup"><span data-stu-id="03219-128">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [<span data-ttu-id="03219-129">Tabela jawnych konwersji liczbowych</span><span class="sxs-lookup"><span data-stu-id="03219-129">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

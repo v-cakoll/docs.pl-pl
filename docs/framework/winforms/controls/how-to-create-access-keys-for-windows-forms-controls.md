@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie klawiszy dostępu dla formantów formularzy systemu Windows'
+title: 'Instrukcje: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 53ffd3632ff3e1179a72f1e2bfe4ea366e28b0f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bfbd2c6cd8aae410dfed506437bc85fbcb1d311
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597856"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a><span data-ttu-id="e8e46-102">Porady: tworzenie klawiszy dostępu dla formantów formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="e8e46-102">How to: Create Access Keys for Windows Forms Controls</span></span>
-<span data-ttu-id="e8e46-103">*Klucz dostępu* jest podkreślony znak w tekście menu, element menu lub etykiety formantu, takie jak przycisk.</span><span class="sxs-lookup"><span data-stu-id="e8e46-103">An *access key* is an underlined character in the text of a menu, menu item, or the label of a control such as a button.</span></span> <span data-ttu-id="e8e46-104">Przy użyciu klucza dostępu użytkownika może "przycisk" naciśnięcie klawisza ALT w połączeniu z kluczem dostępu wstępnie zdefiniowane.</span><span class="sxs-lookup"><span data-stu-id="e8e46-104">With an access key, the user can "click" a button by pressing the ALT key in combination with the predefined access key.</span></span> <span data-ttu-id="e8e46-105">Na przykład, gdy przycisk działa procedura Drukowanie formularza i dlatego jego `Text` właściwość jest ustawiona na "Print","Dodawanie handlowego" i "przed litery"P"powoduje, że litery"P", aby podkreślić tekst przycisku w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="e8e46-105">For example, if a button runs a procedure to print a form, and therefore its `Text` property is set to "Print," adding an ampersand before the letter "P" causes the letter "P" to be underlined in the button text at run time.</span></span> <span data-ttu-id="e8e46-106">Użytkownik może uruchomić polecenie skojarzone z przyciskiem, naciskając klawisze ALT + P.</span><span class="sxs-lookup"><span data-stu-id="e8e46-106">The user can run the command associated with the button by pressing ALT+P.</span></span> <span data-ttu-id="e8e46-107">Nie może mieć klucza dostępu dla formantu, który nie może uzyskać fokusu.</span><span class="sxs-lookup"><span data-stu-id="e8e46-107">You cannot have an access key for a control that cannot receive focus.</span></span>  
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a><span data-ttu-id="f898c-102">Instrukcje: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f898c-102">How to: Create Access Keys for Windows Forms Controls</span></span>
+<span data-ttu-id="f898c-103">*Klucz dostępu* jest podkreślony znak w tekście menu, element menu lub etykieta kontrolki, takiej jak przycisk.</span><span class="sxs-lookup"><span data-stu-id="f898c-103">An *access key* is an underlined character in the text of a menu, menu item, or the label of a control such as a button.</span></span> <span data-ttu-id="f898c-104">Przy użyciu klucza dostępu użytkownik może "przycisk", naciskając klawisz ALT w połączeniu z kluczem dostępu do wstępnie zdefiniowanych.</span><span class="sxs-lookup"><span data-stu-id="f898c-104">With an access key, the user can "click" a button by pressing the ALT key in combination with the predefined access key.</span></span> <span data-ttu-id="f898c-105">Na przykład, jeśli przycisk uruchamia procedurę do Drukowanie formularza i dlatego jego `Text` właściwość jest ustawiona na "Print","Dodawanie handlowe" i ", zanim litery"P"powoduje, że litery"P"podkreślić w tekst przycisku w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="f898c-105">For example, if a button runs a procedure to print a form, and therefore its `Text` property is set to "Print," adding an ampersand before the letter "P" causes the letter "P" to be underlined in the button text at run time.</span></span> <span data-ttu-id="f898c-106">Użytkownik może uruchamiać polecenie skojarzone z przyciskiem, naciskając klawisze ALT + P.</span><span class="sxs-lookup"><span data-stu-id="f898c-106">The user can run the command associated with the button by pressing ALT+P.</span></span> <span data-ttu-id="f898c-107">Nie może mieć klucza dostępu dla formantu, który nie może otrzymać ostrości.</span><span class="sxs-lookup"><span data-stu-id="f898c-107">You cannot have an access key for a control that cannot receive focus.</span></span>  
   
-### <a name="to-create-an-access-key-for-a-control"></a><span data-ttu-id="e8e46-108">Aby utworzyć klucz dostępu dla formantu</span><span class="sxs-lookup"><span data-stu-id="e8e46-108">To create an access key for a control</span></span>  
+### <a name="to-create-an-access-key-for-a-control"></a><span data-ttu-id="f898c-108">Aby utworzyć klucz dostępu dla formantu</span><span class="sxs-lookup"><span data-stu-id="f898c-108">To create an access key for a control</span></span>  
   
-1.  <span data-ttu-id="e8e46-109">Ustaw `Text` właściwości ciąg, który zawiera handlowego "i" (&) przed literą, która będzie skrótu.</span><span class="sxs-lookup"><span data-stu-id="e8e46-109">Set the `Text` property to a string that includes an ampersand (&) before the letter that will be the shortcut.</span></span>  
+1.  <span data-ttu-id="f898c-109">Ustaw `Text` właściwość ciąg, który zawiera handlowe "i" (&) przed literą, który ma być skrót.</span><span class="sxs-lookup"><span data-stu-id="f898c-109">Set the `Text` property to a string that includes an ampersand (&) before the letter that will be the shortcut.</span></span>  
   
     ```vb  
     ' Set the letter "P" as an access key.  
@@ -50,10 +50,10 @@ ms.locfileid: "33530952"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="e8e46-110">Aby uwzględnić znak podpis bez tworzenia klucza dostępu, obejmują dwa ampersandu (& &).</span><span class="sxs-lookup"><span data-stu-id="e8e46-110">To include an ampersand in a caption without creating an access key, include two ampersands (&&).</span></span> <span data-ttu-id="e8e46-111">Pojedynczy znak jest wyświetlana w podpisie i żadne znaki nie są podkreślone.</span><span class="sxs-lookup"><span data-stu-id="e8e46-111">A single ampersand is displayed in the caption and no characters are underlined.</span></span>  
+    >  <span data-ttu-id="f898c-110">Aby dołączyć handlowe "i" podpis bez tworzenia klucza dostępu, obejmują dwa takie znaki (& &).</span><span class="sxs-lookup"><span data-stu-id="f898c-110">To include an ampersand in a caption without creating an access key, include two ampersands (&&).</span></span> <span data-ttu-id="f898c-111">Pojedynczy znak jest wyświetlana w podpisie, a żadne znaki nie są podkreślone.</span><span class="sxs-lookup"><span data-stu-id="f898c-111">A single ampersand is displayed in the caption and no characters are underlined.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e8e46-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e8e46-112">See Also</span></span>  
- <xref:System.Windows.Forms.Button>  
- [<span data-ttu-id="e8e46-113">Instrukcje: odpowiadanie na kliknięcia przycisków Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e8e46-113">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [<span data-ttu-id="e8e46-114">Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e8e46-114">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [<span data-ttu-id="e8e46-115">Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich</span><span class="sxs-lookup"><span data-stu-id="e8e46-115">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+## <a name="see-also"></a><span data-ttu-id="f898c-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f898c-112">See also</span></span>
+- <xref:System.Windows.Forms.Button>
+- [<span data-ttu-id="f898c-113">Instrukcje: Odpowiadanie na kliknięcia przycisków formularzy Windows</span><span class="sxs-lookup"><span data-stu-id="f898c-113">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [<span data-ttu-id="f898c-114">Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolki formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f898c-114">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [<span data-ttu-id="f898c-115">Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich</span><span class="sxs-lookup"><span data-stu-id="f898c-115">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

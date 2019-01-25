@@ -1,5 +1,5 @@
 ---
-title: 'Porady: konwertowanie liczbowych danych wejściowych użytkownika na liczby w formantach sieci Web'
+title: 'Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika w kontrolkach internetowych na liczby'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722364"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Porady: konwertowanie liczbowych danych wejściowych użytkownika na liczby w formantach sieci Web
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika w kontrolkach internetowych na liczby
 Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świecie, użytkownicy można wpisać dane liczbowe do <xref:System.Web.UI.WebControls.TextBox> formantu w niemal nieograniczoną liczbę formatów. W rezultacie jest bardzo ważne określić ustawienia regionalne i kultury użytkownika strony sieci Web. Podczas analizy danych wejściowych użytkownika, można użyć konwencji formatowania, zdefiniowane przez użytkownika ustawień regionalnych i kultur.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Aby konwertowanie liczbowych danych wejściowych z formantu sieci Web w polu tekstowym na liczbę  
@@ -73,5 +73,5 @@ Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świeci
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Analizowanie ciągów liczbowych](../../../docs/standard/base-types/parsing-numeric.md)

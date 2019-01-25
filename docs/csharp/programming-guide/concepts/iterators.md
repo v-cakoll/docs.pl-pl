@@ -2,12 +2,12 @@
 title: Iterowania przez kolekcje w języku C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 2b358e8272820bf6fb5bcb45763bae980b91962f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 386f4145c38e3a573ec04d2a0b8e260bcdc63491
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720801"
 ---
 # <a name="iterators-c"></a>Iteratory (C#)
 
@@ -354,7 +354,7 @@ Iteratory pozwalają zachować prostotę `foreach` pętli, gdy trzeba użyć zł
 
 - Hermetyzuj, tworzenie listy dla iteratorów. W metodzie iteratora można tworzyć listy i następnie uzyskanie każdy wynik w pętli.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29267d032f5e38e352592edc50dbded68aaa9f61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f4e25cfabbf18a9f0733d245259d9bb8f9c7757
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715557"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset — Metoda
-Informuje o środowisko uruchomieniowe języka wspólnego (CLR) została ukończona zadania hosta i umożliwia CLR do ponownego użycia bieżącego [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) wystąpienie do reprezentowania inne zadanie.  
+Informuje środowisko uruchomieniowe języka wspólnego (CLR), hosta zostało zakończone zadania i umożliwia CLR do ponownego użycia bieżącego [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) wystąpienia do reprezentowania inne zadanie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,49 +37,49 @@ HRESULT Reset (
   
 #### <a name="parameters"></a>Parametry  
  `fFull`  
- [in] `true`, jeśli środowisko uruchomieniowe powinni resetować wszystkie wątku statyczne wartości dotyczące zabezpieczeń i ustawień regionalnych informacji powiązanych z bieżącym `ICLRTask` wystąpienia; w przeciwnym razie `false`.  
+ [in] `true`, jeśli środowisko wykonawcze zresetować wszystkie wątku statyczne wartościom oprócz zabezpieczeń i ustawień regionalnych informacji powiązanych z bieżącym `ICLRTask` wystąpienia; w przeciwnym razie `false`.  
   
- Jeśli wartość jest `true`, środowisko uruchomieniowe resetuje danych, które były przechowywane przy użyciu <xref:System.Threading.Thread.AllocateDataSlot%2A> lub <xref:System.Threading.Thread.AllocateNamedDataSlot%2A>.  
+ Jeśli wartość jest `true`, środowisko uruchomieniowe przywraca dane, które są przechowywane przy użyciu <xref:System.Threading.Thread.AllocateDataSlot%2A> lub <xref:System.Threading.Thread.AllocateNamedDataSlot%2A>.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`Reset` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub przetwarzania wywołania. pomyślnie|  
+|S_OK|`Reset` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetwarzania wywołania. pomyślnie|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko CLR można odtworzyć wcześniej utworzony `ICLRTask` instancje, aby uniknąć zadań wielokrotnie tworzenia nowych wystąpień każdej próbie jej nowego zadania. Host umożliwia tej funkcji, wywołując `ICLRTask::Reset` zamiast [ICLRTask::ExitTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) po zakończeniu zadania. Poniższa lista zawiera podsumowanie normalnego cyklu życia `ICLRTask` wystąpienie:  
+ Środowisko CLR można odzyskać utworzone wcześniej `ICLRTask` wystąpienia, aby uniknąć zadań wielokrotnie tworzenia nowych wystąpień za każdym razem, gdy potrzebuje zadanie od nowa. Host oferuje tę funkcję, wywołując `ICLRTask::Reset` zamiast [iclrtask::exittask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) po zakończeniu zadania. Poniższa lista zawiera podsumowanie cyklu życia normalne `ICLRTask` wystąpienie:  
   
-1.  Tworzy nowe środowisko uruchomieniowe `ICLRTask` wystąpienia.  
+1.  Środowisko uruchomieniowe tworzy nową `ICLRTask` wystąpienia.  
   
-2.  Wywołania środowiska uruchomieniowego [IHostTaskManager::GetCurrentTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) Aby pobrać odwołanie do bieżącego zadania hosta.  
+2.  Środowisko uruchomieniowe wywołuje [ihosttaskmanager::getcurrenttask —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) można pobrać odwołania do bieżącego zadania hosta.  
   
-3.  Wywołania środowiska uruchomieniowego [IHostTask::SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) Aby skojarzyć nowe wystąpienie z hosta zadań.  
+3.  Środowisko uruchomieniowe wywołuje [ihosttask::setclrtask —](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) Aby skojarzyć nowe wystąpienie z zadaniem hosta.  
   
-4.  Zadania wykonuje i kończy działanie.  
+4.  Zadanie wykonuje i kończy.  
   
 5.  Host niszczy zadania, wywołując `ICLRTask::ExitTask`.  
   
- `Reset` Zmienia tego scenariusza na dwa sposoby. W kroku 5 powyżej wywołania hosta `Reset` zresetować zadania do stanu czystego, a następnie oddziela `ICLRTask` wystąpienie z jego skojarzony [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia. W razie potrzeby można buforować hosta `IHostTask` wystąpienie do ponownego użycia. W kroku 1 powyżej, środowisko uruchomieniowe ściąga odtwarzania `ICLRTask` z pamięci podręcznej, zamiast tworzyć nowe wystąpienie.  
+ `Reset` Zmienia tego scenariusza na dwa sposoby. W kroku 5 powyżej wywołania hosta `Reset` zresetować zadania do stanu czystego i następnie oddziela `ICLRTask` wystąpienia związanych z nią [ihosttask —](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia. Jeśli to konieczne, można buforować hosta `IHostTask` wystąpienia do ponownego wykorzystania. W kroku 1 powyżej, środowisko uruchomieniowe ściąga odtwarzania `ICLRTask` z pamięci podręcznej, zamiast tworzenia nowego wystąpienia.  
   
- Takie podejście dobrze działa w przypadku hosta ma również pulą zadania procesu roboczego do ponownego użycia. Gdy host niszczy jednego z jego `IHostTask` wystąpień, niszczy, odpowiadającego `ICLRTask` przez wywołanie metody `ExitTask`.  
+ To podejście działa dobrze w przypadku, gdy host ma też puli zadania procesu roboczego wielokrotnego użytku. Gdy host niszczy, jeden z jego `IHostTask` wystąpień niszczy, odpowiedni `ICLRTask` przez wywołanie metody `ExitTask`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

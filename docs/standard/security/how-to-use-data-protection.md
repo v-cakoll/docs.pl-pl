@@ -1,5 +1,5 @@
 ---
-title: 'Porady: stosowanie ochrony danych'
+title: 'Instrukcje: Stosowanie ochrony danych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086625"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698400"
 ---
-# <a name="how-to-use-data-protection"></a>Porady: stosowanie ochrony danych
+# <a name="how-to-use-data-protection"></a>Instrukcje: Stosowanie ochrony danych
 .NET Framework zapewnia dostęp do ochrony danych interfejsu API (DPAPI), co pozwala na szyfrowanie danych, korzystając z informacji z bieżącego konta użytkownika lub komputera.  Korzystając z interfejsu DPAPI złagodzić się trudne problem jawnie generowania i przechowywania klucza kryptograficznego.  
   
  Użyj <xref:System.Security.Cryptography.ProtectedMemory> klasy w celu zaszyfrowania tablicę bajtów w pamięci.  Ta funkcja jest dostępna w systemie Microsoft Windows XP i nowszych systemach operacyjnych.  Można określić pamięci zaszyfrowane przez bieżący proces odszyfrować je mogą tylko przez wszystkie procesy lub z tym samym kontekście użytkownika bieżącego procesu.  Zobacz <xref:System.Security.Cryptography.MemoryProtectionScope> wyliczenie, aby uzyskać szczegółowy opis <xref:System.Security.Cryptography.ProtectedMemory> opcje.  
@@ -68,5 +68,5 @@ ms.locfileid: "49086625"
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Security.Cryptography.ProtectedMemory>  
+- <xref:System.Security.Cryptography.ProtectedMemory>
 - <xref:System.Security.Cryptography.ProtectedData>

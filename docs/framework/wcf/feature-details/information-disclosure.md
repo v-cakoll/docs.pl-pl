@@ -2,12 +2,12 @@
 title: Ujawnianie informacji
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 057984dada86019cd8e0a619523d717d0045062f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 267e0dc656e05ed6f95eef1c75e40c07108a164e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588252"
 ---
 # <a name="information-disclosure"></a>Ujawnianie informacji
 Ujawnienie informacji umożliwia osobie atakującej uzyskanie cenne informacje o systemie. W związku z tym zawsze należy wziąć pod uwagę jakie informacje są przedstawiania i czy mogą być używane przez złośliwego użytkownika. Poniżej wymieniono ataków ujawnienie informacji możliwych i zapewnia środki zaradcze dla każdego.  
@@ -56,10 +56,10 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  Jeśli określono domenę, ale nieprawidłowa główna nazwa usługi jest określony za pomocą funkcji tożsamości punktu końcowego, NTLM jest używany. Aby uzyskać więcej informacji na temat sposobu tożsamość punktu końcowego jest określona, zobacz [uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Manipulowanie](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Nieobsługiwane scenariusze](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Ataki oparte na metodzie powtórzeń](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>Zobacz także
+- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Manipulowanie](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Nieobsługiwane scenariusze](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Ataki oparte na metodzie powtórzeń](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

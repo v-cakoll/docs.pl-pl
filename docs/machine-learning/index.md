@@ -1,14 +1,14 @@
 ---
 title: Przewodnik po strukturze ML.NET zawartości
 description: Dowiedz się, jak tworzyć niestandardowych rozwiązań sztucznej Inteligencji i integrowanie aplikacji .NET za pomocą strukturze ML.NET
-ms.date: 11/06/2018
+ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550464"
 ---
 # <a name="mlnet-content-guide"></a>Przewodnik po strukturze ML.NET zawartości
 
@@ -28,6 +28,8 @@ Aby poznać podstawy, zobacz [podstawowe pojęcia do trenowania modelu w struktu
 ## <a name="tutorials"></a>Samouczki
 
 [Analizowanie opinii za pomocą model klasyfikacji binarnej](tutorials/sentiment-analysis.md) pokazuje, jak utworzyć aplikację, która określa, czy Tonacja jest dodatnia lub ujemna.
+
+[Klasyfikowanie problemów w usłudze GitHub za pomocą modelu klasyfikacji wieloklasowej](tutorials/github-issue-classification.md) pokazuje, jak utworzyć aplikację, która określa etykietę obszar problemu w usłudze GitHub.
 
 [Przewidywanie taryfy taksówek za pomocą modelu regresji](tutorials/taxi-fare.md) przedstawiono sposób tworzenia predykcyjnego aplikację, która używa wielu czynników z danych historycznych w celu ustalenia odpowiedź.
 

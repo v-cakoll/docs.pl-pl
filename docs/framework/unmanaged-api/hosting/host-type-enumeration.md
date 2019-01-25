@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fce759877ad5e3c9041344647781da07ad19a45a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a2db1aea04ae060623bc39a52ed6990f6137f82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606453"
 ---
 # <a name="hosttype-enumeration"></a>HOST_TYPE — Wyliczenie
 Zawiera wartości, które określają typ hosta, który uruchamia aplikację.  
@@ -40,18 +40,18 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|Uruchom aplikację z AppLaunch.exe.<br /><br /> Użyj tej wartości na częściowo zaufane aplikacje.|  
-|`HOST_TYPE_CORFLAG`|Bezpośrednio uruchomić aplikację. Oznacza to uruchamianie aplikacji z pliku .exe.<br /><br /> Użyj tej wartości dla w pełni zaufane aplikacje.|  
+|`HOST_TYPE_APPLAUNCH`|Uruchom aplikację z AppLaunch.exe.<br /><br /> Użyj tej wartości dla częściowo zaufanych aplikacji.|  
+|`HOST_TYPE_CORFLAG`|Uruchom aplikację bezpośrednio. Oznacza to uruchom aplikację w jej własnym pliku .exe.<br /><br /> Ta wartość służy do w pełni zaufane aplikacje.|  
 |`HOST_TYPE_DEFAULT`|Taka sama jak HOST_TYPE_APPLAUNCH.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -2,12 +2,12 @@
 title: Działania dotyczące komunikatów
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-ms.openlocfilehash: 3391f7442ef4922a847a58b6316eb177cbcfbd5e
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 839e9225db7b5d76cf05f148811634389e81502a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617632"
 ---
 # <a name="messaging-activities"></a>Działania dotyczące komunikatów
 Działań dotyczących komunikatów umożliwiają przepływy pracy służące do wysyłania i odbierania komunikatów WCF. Dodając działań dotyczących komunikatów do przepływu pracy można modelować wszystkie wzorce exchange dowolnie złożone komunikat (MEP).
@@ -103,6 +103,6 @@ Request = rcv
 ## <a name="messaging-activities-and-transactions"></a>Działań dotyczących komunikatów i transakcji
  Gdy połączenie jest nawiązywane w przypadku usługi przepływu pracy można przepływu transakcji do operacji usługi. Aby zrobić to miejsce <xref:System.ServiceModel.Activities.Receive> działanie <xref:System.ServiceModel.Activities.TransactedReceiveScope> działania. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Zawiera działanie `Receive` działanie i treść. Transakcja przekazane do otoczenia podczas wykonywania treści pozostaje usługi <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Transakcja jest zakończona, gdy treść zakończy się wykonywanie. Aby uzyskać więcej informacji na temat przepływów pracy i transakcje zobacz [transakcje przepływu pracy](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 - [Jak wysyłanie i odbieranie błędów w usługach przepływu pracy](https://go.microsoft.com/fwlink/?LinkId=189151)
 - [Tworzenie długo działającej usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)

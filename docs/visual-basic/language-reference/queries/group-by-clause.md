@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 88707ed6c0e3e5a0ecf1f0812d31634bbdca3123
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 806675c35c0463047646c70a54f80a69d57dffa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574849"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By — Klauzula (Visual Basic)
 Grupuje elementy wyników zapytań. Można również zastosowanie funkcji agregujących do każdej grupy. W operacji grupowania opiera się na co najmniej jeden klucz.  
@@ -37,7 +37,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 -   `keyExp1`  
   
-     Wymagane. Wyrażenie identyfikujące klawisz, aby użyć do określenia grupy elementów. Można określić więcej niż jeden klucz w celu określenia klucza złożonego.  
+     Wymagana. Wyrażenie identyfikujące klawisz, aby użyć do określenia grupy elementów. Można określić więcej niż jeden klucz w celu określenia klucza złożonego.  
   
 -   `keyExp2`  
   
@@ -45,7 +45,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 -   `aggregateList`  
   
-     Wymagane. Co najmniej jednego wyrażenia, które określają, jak te grupy są agregowane. Aby zidentyfikować nazwę elementu członkowskiego pogrupowane wyniki, należy użyć `Group` słowo kluczowe, które mogą znajdować się w jednej z następujących form:  
+     Wymagana. Co najmniej jednego wyrażenia, które określają, jak te grupy są agregowane. Aby zidentyfikować nazwę elementu członkowskiego pogrupowane wyniki, należy użyć `Group` słowo kluczowe, które mogą znajdować się w jednej z następujących form:  
   
     ```  
     Into Group  
@@ -69,11 +69,11 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#11](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Zapytania](../../../visual-basic/language-reference/queries/index.md)  
- [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Order By, klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Klauzula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Klauzula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Zapytania](../../../visual-basic/language-reference/queries/index.md)
+- [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Order By, klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Klauzula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Klauzula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)

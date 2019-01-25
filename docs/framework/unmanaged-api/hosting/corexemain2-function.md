@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573336b32040f44ff1b59fcbb75b59aa00976b5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70405d774d665e3add03c510f3b99a3280da4860
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430182"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625151"
 ---
 # <a name="corexemain2-function"></a>_CorExeMain2 — Funkcja
-Wykonuje punkt wejścia określony kod mapowanych na pamięć. Ta funkcja jest wywoływana przez moduł ładujący systemu operacyjnego.  
+Uruchamia punkt wejścia w określonym kodzie mapowanym w pamięci. Ta funkcja jest wywoływana przez program ładujący systemu operacyjnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,13 +40,13 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
   
 #### <a name="parameters"></a>Parametry  
  `pUnmappedPE`  
- [in] Wskaźnik do kodu mapowanych na pamięć.  
+ [in] Wskaźnik do kodzie mapowanym w pamięci.  
   
  `cUnmappedPE`  
- [in] Liczba elementów `pUnmappedPE` może przechowywać.  
+ [in] Liczba elementów, które `pUnmappedPE` może przechowywać.  
   
  `pImageNameIn`  
- [in] Wskaźnik do nazwy obrazu wykonywalnego.  
+ [in] Wskaźnik na nazwę obrazu pliku wykonywalnego.  
   
  `pLoadersFileName`  
  [in] Nazwa pliku modułu ładującego.  
@@ -55,13 +55,13 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  [in] Parametry wiersza polecenia, jeśli istnieje.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

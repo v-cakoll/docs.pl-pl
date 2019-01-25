@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78fdcb69e73bc7238972d1a6ffb37b5ba91c7953
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e73afa7ef33e12d6bc658c944c79ce1bc4f94f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572430"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback — Funkcja
-Zawiera informacje o każdej ramce zarządzanych i każdym uruchomieniu niezarządzane ramek na stosie podczas przeszukiwania stosu, który jest inicjowane przez profiler [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) metody.  
+Dostarcza informacji na temat każdej zarządzanej ramki i każde uruchomienie niezarządzanych ramek na stosie podczas przeszukiwania stosu jest inicjowane przez profiler [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,32 +41,32 @@ HRESULT __stdcall StackSnapshotCallback (
   
 #### <a name="parameters"></a>Parametry  
  `funcId`  
- [in] Jeśli ta wartość wynosi zero, to wywołanie zwrotne jest dla przebiegu niezarządzane ramek; w przeciwnym razie jest identyfikator zarządzanego funkcji i jest to wywołanie zwrotne dla ramki zarządzane.  
+ [in] Jeśli ta wartość wynosi zero, to wywołanie zwrotne jest uruchomieniu ramek niezarządzane; w przeciwnym razie jest to identyfikator funkcji zarządzanej i jest to wywołanie zwrotne ramki zarządzanej.  
   
  `ip`  
- [in] Wartość wskaźnika instrukcji kodu macierzystego w ramce.  
+ [in] Wartość wskaźnika instrukcji kodu natywnego w ramce.  
   
  `frameInfo`  
  [in] A `COR_PRF_FRAME_INFO` wartość, która odwołuje się do informacji na temat ramki stosu. Ta wartość jest prawidłowa do stosowania tylko podczas tego wywołania zwrotnego.  
   
  `contextSize`  
- [in] Rozmiar `CONTEXT` struktury, która odwołuje się do niego `context` parametru.  
+ [in] Rozmiar `CONTEXT` struktury, która odwołuje się do niej `context` parametru.  
   
  `context`  
- [in] Wskaźnik do Win32 `CONTEXT` strukturę, która reprezentuje stan procesora CPU dla tej ramki.  
+ [in] Wskaźnik do systemu Win32 `CONTEXT` strukturę, która reprezentuje stan procesora CPU dla tej ramki.  
   
- `context` Parametr jest prawidłowy tylko wtedy, gdy flaga COR_PRF_SNAPSHOT_CONTEXT została przekazana `ICorProfilerInfo2::DoStackSnapshot`.  
+ `context` Parametr jest prawidłowy tylko wtedy, gdy flaga COR_PRF_SNAPSHOT_CONTEXT przekazano `ICorProfilerInfo2::DoStackSnapshot`.  
   
  `clientData`  
- [in] Wskaźnik do danych klienta, który jest przekazywane bezpośrednio z `ICorProfilerInfo2::DoStackSnapshot`.  
+ [in] Wskaźnik do danych klienta, która jest przekazywana bezpośrednio z `ICorProfilerInfo2::DoStackSnapshot`.  
   
 ## <a name="remarks"></a>Uwagi  
- `StackSnapshotCallback` Funkcji jest implementowany przez twórcę profilera. Należy ograniczyć złożoność pracować `StackSnapshotCallback`. Na przykład w przypadku korzystania z `ICorProfilerInfo2::DoStackSnapshot` w sposób asynchroniczny wątek docelowy może być blokują. Jeśli kod w `StackSnapshotCallback` wymaga tego samego blokad, może nastąpić zakleszczenie.  
+ `StackSnapshotCallback` Funkcji jest implementowany przez twórcę profilera. Należy ograniczyć złożoność pracy wykonanej w `StackSnapshotCallback`. Na przykład w przypadku korzystania z `ICorProfilerInfo2::DoStackSnapshot` w sposób asynchroniczny, wątek docelowy może być utrzymywanie blokad. Jeśli kodu w ramach `StackSnapshotCallback` wymaga tych samych blokad, zakleszczeń może nastąpić.  
   
- `ICorProfilerInfo2::DoStackSnapshot` Wywołania metody `StackSnapshotCallback` funkcja raz na klatkę zarządzanego, lub raz na przebieg niezarządzane ramek. Jeśli `StackSnapshotCallback` nosi nazwę dla przebiegu niezarządzane ramek, profiler może używać kontekstu rejestru (odwołuje `context` parametru) do wykonania własną stosów niezarządzane. W tym przypadku Win32 `CONTEXT` struktury reprezentuje stan Procesora najbardziej ostatnio wciśnięcia ramki w ramach Uruchom niezarządzane ramki. Mimo że Win32 `CONTEXT` struktura zawiera wartości dla wszystkich rejestrów, należy polegać wyłącznie na wartości rejestru wskaźnik stosu, rejestr wskaźnika ramki, rejestr wskaźnika instrukcji i nieulotnej, (tj. zachowane) rejestruje liczbę całkowitą.  
+ `ICorProfilerInfo2::DoStackSnapshot` Wywołania metody `StackSnapshotCallback` funkcję jeden raz na klatkę zarządzanych lub raz na przebieg niezarządzanych ramek. Jeśli `StackSnapshotCallback` jest wywoływana dla przebiegu niezarządzanych ramek, profiler może użyć kontekstu rejestru (wskazywanym przez `context` parametr) aby wykonać swoje własne niezarządzane stosów. W tym przypadku Win32 `CONTEXT` struktury reprezentuje stan procesora CPU dla najbardziej niedawno wypychanie ramki w ramach wykonywania niezarządzanych ramek. Mimo że Win32 `CONTEXT` struktura zawiera wartości dla wszystkich rejestrów, należy polegać tylko na wartości rejestru wskaźnik stosu, rejestr wskaźnika ramki, rejestr wskaźnika instrukcji i nieulotnej, (które zachowane) rejestruje liczbę całkowitą.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl  
   
@@ -73,6 +74,6 @@ HRESULT __stdcall StackSnapshotCallback (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [DoStackSnapshot, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
- [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [DoStackSnapshot, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
+- [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

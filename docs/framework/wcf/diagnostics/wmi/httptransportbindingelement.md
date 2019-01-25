@@ -2,12 +2,12 @@
 title: HttpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
-ms.openlocfilehash: 34ad4b8534d082d7f5248d42d70ca5bd0647a5dc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 2376a0ec25539b97a37b1827e3e4c148eb8d5838
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610776"
 ---
 # <a name="httptransportbindingelement"></a>HttpTransportBindingElement
 HttpTransportBindingElement  
@@ -38,95 +38,95 @@ class HttpTransportBindingElement : TransportBindingElement
 ## <a name="properties"></a>Właściwości  
  Klasa HttpTransportBindingElement ma następujące właściwości:  
   
-### <a name="allowcookies"></a>allowCookies  
+### <a name="allowcookies"></a>AllowCookies  
  Typ danych: wartość logiczna  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość, która wskazuje, czy klient akceptuje pliki cookie i propaguje je do przyszłych żądań.  
   
 ### <a name="authenticationscheme"></a>AuthenticationScheme  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Schemat uwierzytelniania używany do uwierzytelniania żądań klienta przetwarzanych przez odbiornik HTTP.  
   
 ### <a name="bypassproxyonlocal"></a>BypassProxyOnLocal  
  Typ danych: wartość logiczna  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość, która wskazuje, czy serwery proxy są ignorowane dla adresów lokalnych.  
   
-### <a name="hostnamecomparisonmode"></a>parametru hostNameComparisonMode  
+### <a name="hostnamecomparisonmode"></a>HostNameComparisonMode  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość, która wskazuje, czy nazwa hosta jest używana w celu dotarcia do usługi podczas dopasowywania identyfikatora URI.  
   
-### <a name="keepaliveenabled"></a>keepAliveEnabled  
+### <a name="keepaliveenabled"></a>KeepAliveEnabled  
  Typ danych: wartość logiczna  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Po włączeniu połączeń HTTP pozostają aktywne niezależnie od tego, poziom aktywności.  
   
-### <a name="maxbuffersize"></a>wartość maxBufferSize  
+### <a name="maxbuffersize"></a>MaxBufferSize  
  Typ danych: sint32  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Maksymalny rozmiar puli bufora.  
   
-### <a name="proxyaddress"></a>proxyAddress  
+### <a name="proxyaddress"></a>ProxyAddress  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Identyfikator URI, który zawiera adres serwera proxy do obsługi żądań HTTP.  
   
-### <a name="proxyauthenticationscheme"></a>proxyAuthenticationScheme  
+### <a name="proxyauthenticationscheme"></a>ProxyAuthenticationScheme  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Schemat uwierzytelniania używany do uwierzytelniania żądań klienta przetwarzanych przez serwer proxy HTTP.  
   
 ### <a name="realm"></a>obszar  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Obszar uwierzytelniania.  
   
 ### <a name="transfermode"></a>Tryb transferu  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość, która określa, czy komunikaty są buforowane lub przesyłane strumieniowo lub żądania lub odpowiedzi.  
   
-### <a name="unsafeconnectionntlmauthentication"></a>unsafeConnectionNtlmAuthentication  
+### <a name="unsafeconnectionntlmauthentication"></a>UnsafeConnectionNtlmAuthentication  
  Typ danych: wartość logiczna  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość, która wskazuje, czy włączone jest niebezpieczne udostępnianie połączenia na serwerze.  
   
-### <a name="usedefaultwebproxy"></a>useDefaultWebProxy  
+### <a name="usedefaultwebproxy"></a>UseDefaultWebProxy  
  Typ danych: wartość logiczna  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Wartość, która wskazuje, czy ustawienia serwera proxy dla komputera są używane zamiast ustawień użytkownika.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
+|MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>

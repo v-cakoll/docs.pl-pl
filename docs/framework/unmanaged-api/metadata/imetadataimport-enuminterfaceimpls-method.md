@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 824337a8a87282e59c9fc5df18c71800339e8d7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c94960478e6b2eb4e7b8f1e9592b0831af3ec686
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603771"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls — Metoda
-Wylicza tokeny MethodDef reprezentujący implementacji interfejsu.  
+Wylicza tokenów MethodDef reprezentujący implementacje interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,36 +41,36 @@ HRESULT EnumInterfaceImpls (
   
 #### <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, out] Wskaźnik do modułu wyliczającego.  
+ [out w] Wskaźnik do modułu wyliczającego.  
   
  `td`  
- [in] Token TypeDef tokeny MethodDef, którego reprezentujący implementacji interfejsu są mają zostać wyliczone.  
+ [in] Token TypeDef, w których tokeny MethodDef reprezentujący implementacje interfejsu są do wyliczenia.  
   
  `rImpls`  
- [out] Tablica używany do przechowywania tokenów MethodDef.  
+ [out] Tablica do przechowywania tokenów MethodDef.  
   
  `cMax`  
  [in] Maksymalny rozmiar `rImpls` tablicy.  
   
  `pcImpls`  
- [out] Rzeczywista liczba tokenów zwracanych w `rImpls`.  
+ [out] Rzeczywista liczba zwracane w tokenach `rImpls`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` zwrócona pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów MethodDef do wyliczenia. W takim przypadku `pcImpls` jest ustawiony na zero.|  
+|`S_OK`|`EnumInterfaceImpls` pomyślnie zwrócił.|  
+|`S_FALSE`|Nie ma żadnych tokeny MethodDef do wyliczenia. W takim przypadku `pcImpls` jest równa zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

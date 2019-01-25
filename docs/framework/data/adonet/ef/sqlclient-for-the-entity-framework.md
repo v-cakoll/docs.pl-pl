@@ -2,22 +2,22 @@
 title: SqlClient programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: 430e0e143519f97802c8cef4eee658b482a81880
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1c38567f77d69a894376e23b6d4ff6c669edc806
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569105"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient programu Entity Framework
 W tej sekcji opisano .NET Framework Data Provider for SQL Server (SqlClient), co umożliwia Entity Framework do pracy za pośrednictwem programu Microsoft SQL Server.  
   
-## <a name="provider-schema-attribute"></a>Atrybut schematu dostawcy  
+## <a name="provider-schema-attribute"></a>Provider Schema Attribute  
  `Provider` jest to atrybut `Schema` element język definicji schematu magazynu (SSDL).  
   
  Użyj SqlClient, należy przypisać do ciągu "System.Data.SqlClient" `Provider` atrybutu `Schema` elementu.  
   
-## <a name="providermanifesttoken-schema-attribute"></a>Atrybut schematu ProviderManifestToken  
+## <a name="providermanifesttoken-schema-attribute"></a>ProviderManifestToken Schema Attribute  
  `ProviderManifestToken` Wymagany atrybut `Schema` element SSDL. Ten token służy do ładowania manifestu dostawcy dla scenariuszy w trybie offline. Aby uzyskać więcej informacji na temat `ProviderManifestToken` atrybutów, zobacz [elementu schematu (SSDL)](https://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222).  
   
  Klient SQL może służyć jako dostawca danych dla różnych wersji programu SQL Server. Te wersje mają różne możliwości. Na przykład [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] nie obsługuje `varchar(max)` i `nvarchar(max)` typy, które zostały wprowadzone w programie [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].  
@@ -47,7 +47,7 @@ W tej sekcji opisano .NET Framework Data Provider for SQL Server (SqlClient), co
   
  [Znane problemy klienta SQL dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Jednostki języka SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [Dokumentacja języka](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
- [Znane problemy w dostawcy SqlClient programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+## <a name="see-also"></a>Zobacz także
+- [Jednostki języka SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Dokumentacja języka](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
+- [Znane problemy w dostawcy SqlClient programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)

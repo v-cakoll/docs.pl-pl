@@ -11,12 +11,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
 author: KrzysztofCwalina
-ms.openlocfilehash: 1982c7c97802dedd1d49c770be5a7ac00944cbfc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6eec3bb4575b89c6476e6c3410050c705141777f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550418"
 ---
 # <a name="abstract-class-design"></a>Projekt klasy abstrakcyjnej
 **X DO NOT** zdefiniuj public lub protected wewnętrzny konstruktorów w typach abstrakcyjnych.  
@@ -39,5 +39,5 @@ ms.locfileid: "53130919"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  
+- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)
 - [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

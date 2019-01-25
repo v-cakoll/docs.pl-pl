@@ -2,12 +2,12 @@
 title: Tworzenie ról aplikacji w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 811654b73cd1cc0b8c17565b45613253de3c0e81
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4d3ee759a11417d5f4d36a295f20c7f7886d30d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522016"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638135"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Tworzenie ról aplikacji w programie SQL Server
 Role aplikacji umożliwiają przypisywanie uprawnień do aplikacji zamiast roli bazy danych lub użytkownika. Użytkowników można połączenia z bazą danych, Aktywuj rolę aplikacji i przyjęto założenie, uprawnienia nadane aplikacji. Uprawnienia przyznane roli aplikacji pozostają w mocy przez czas trwania połączenia.  
@@ -58,8 +58,8 @@ Role aplikacji umożliwiają przypisywanie uprawnień do aplikacji zamiast roli 
 |--------------|-----------------|  
 |[Role aplikacji](/sql/relational-databases/security/authentication-access/application-roles)|Opisuje sposób tworzenia i używania ról aplikacji w programie SQL Server 2008.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Przegląd zabezpieczeń serwera SQL](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Przegląd zabezpieczeń serwera SQL](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

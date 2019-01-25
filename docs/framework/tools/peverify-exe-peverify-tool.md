@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50513d62ab67afe88a147de9581ae7bbbfd0a417
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: cd1f7679a3c2ecc234724e6417c5b12a78ff7ddc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598294"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (narzędzie PEVerify)
 Narzędzie PEVerify pomaga deweloperom, którzy generują język Microsoft intermediate language (MSIL) (na przykład twórcom kompilatorów, deweloperom aparatów skryptów itd.), w ustalaniu, czy ich kod MSIL i związane z nim metadane spełniają wymogi bezpieczeństwa typu. Niektóre kompilatory generują weryfikowalny kod bezpieczny ze względu na typy tylko wtedy, gdy unika się używania pewnych konstrukcji języka. Jeśli jako programista używasz takiego kompilatora, możesz chcieć sprawdzić, czy nie występują zagrożenia bezpieczeństwa typów kodu. W tej sytuacji możesz uruchomić narzędzie PEVerify, aby sprawdzić MSIL i metadane plików.  
@@ -40,13 +40,13 @@ peverify filename [options]
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/ break =** *maxErrorCount*|Przerywa weryfikację po *maxErrorCount* błędy.<br /><br /> Ten parametr nie jest obsługiwany w .NET Framework w wersji 2.0 lub wyższej.|  
+|**/break=** *maxErrorCount*|Przerywa weryfikację po *maxErrorCount* błędy.<br /><br /> Ten parametr nie jest obsługiwany w .NET Framework w wersji 2.0 lub wyższej.|  
 |**/Clock**|Mierzy i raportuje następujące czasy weryfikacji w milisekundach:<br /><br /> **MD Val. cycle**<br /> Cykl sprawdzania poprawności metadanych<br /><br /> **MD Val. pure**<br /> Czysty czas sprawdzania poprawności metadanych<br /><br /> **IL Ver. cycle**<br /> Cykli weryfikacji języka pośredniego firmy Microsoft (MSIL)<br /><br /> **IL Ver pure**<br /> Czysty czas weryfikacji języka MSIL<br /><br /> **; MD Val. cycle** i **IL Ver. cycle** razy obejmują czas wymagany do wykonania niezbędnych procedur uruchamiania i zamykania. **MD Val. pure** i **IL Ver pure** razy odzwierciedlają czas wymagany do wykonania tylko sprawdzenia poprawności lub tylko weryfikacji.|  
 |**/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/hresult**|Wyświetla kody błędów w formacie szesnastkowym.|  
 |**/ ignore =** *gt;Hex.Code* [, *gt;Hex.Code*]|Ignoruje wymienione kody błędów.|  
 |**/ ignore = @** *responseFile*|Ignoruje kody błędów wymienione w określonym pliku odpowiedzi.|  
-|**/Il**|Przeprowadza weryfikację bezpieczeństwa typów MSIL dla metod zaimplementowanych w zestawie określonym przez *filename*. Narzędzie zwraca szczegółowe opisy dla każdego znalezionego, chyba że określisz problemu **/quiet** opcji.|  
+|**/il**|Przeprowadza weryfikację bezpieczeństwa typów MSIL dla metod zaimplementowanych w zestawie określonym przez *filename*. Narzędzie zwraca szczegółowe opisy dla każdego znalezionego, chyba że określisz problemu **/quiet** opcji.|  
 |**/md**|Wykonuje sprawdzanie poprawności metadanych w zestawie określonym przez *filename*. Oznacza to przejrzenie pełnej struktury metadanych w pliku i raportowanie wszystkich napotkanych problemów.|  
 |**/nologo**|Pomija wyświetlanie informacji o wersji i prawach autorskich produktu.|  
 |**/nosymbols**|W wersji 2.0 .NET Framework wyłącza numery wierszy w celu zapewnienia zgodności z poprzednimi wersjami.|  
@@ -120,8 +120,8 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 0xABCD1234  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Narzędzia](../../../docs/framework/tools/index.md)  
- [Sprawdzalnie bezpieczny kod](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)  
- [Zabezpieczenia i ochrona typu](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)  
- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Zobacz także
+- [Narzędzia](../../../docs/framework/tools/index.md)
+- [Sprawdzalnie bezpieczny kod](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
+- [Zabezpieczenia i ochrona typu](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
+- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

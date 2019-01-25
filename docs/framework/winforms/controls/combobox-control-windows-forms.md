@@ -10,30 +10,30 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-ms.openlocfilehash: 8a86c904150a0d0321405517ad88dffd0a6e4721
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b42b84fe88dea84faf1455f0d4d8af4f3c6358ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589951"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox — Formant (Formularze systemu Windows)
-Formularze systemu Windows `ComboBox` formant jest używana do wyświetlania danych w polu kombi listy rozwijanej. Domyślnie `ComboBox` formant jest widoczny w dwóch częściach: górnej części jest polem tekstowym, który zezwala użytkownikowi na typ elementu listy. Druga część to pole listy, które wyświetla listę elementów, z których użytkownik może wybrać jeden.  
+Formularze Windows `ComboBox` formant jest używany do wyświetlania danych w polu kombi z listy rozwijanej. Domyślnie `ComboBox` formantu pojawia się z dwóch części: górną część jest pola tekstowego, który umożliwia użytkownikowi na typ elementu listy. Druga część jest pole listy, który wyświetla listę elementów, z których użytkownik może wybrać jeden.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [ComboBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- Wyjaśniono, co to jest formant i jego najważniejszych funkcjach i właściwości.  
+ Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
   
- [Instrukcje: tworzenie tekstu o zmiennym rozmiarze w kontrolce ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
- Pokazuje Rysowanie niestandardowego tekstu w `ComboBox` formantu.  
+ [Instrukcje: Tworzenie tekstu o zmiennym rozmiarze w formancie ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ Pokazuje Rysowanie niestandardowego tekstu w `ComboBox` kontroli.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.ComboBox> Klasy  
- Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
+ <xref:System.Windows.Forms.ComboBox> Klasa  
+ Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki formularzy Windows Forms używane do obsługi opcji list](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Zawiera listę czynności, które można wykonywać z pola listy, pola kombi i pól listy zaznaczenia.  
+ Lista rzeczy, które można zrobić za pomocą pola listy, pola kombi i pól listy zaznaczone.  
   
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

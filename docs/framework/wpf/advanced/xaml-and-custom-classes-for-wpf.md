@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: acf3ba12a9a7e6ba9a8e378892098f5f265a23d9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f6709cad76ff05c3134c8430b36d5f34019b03ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606585"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Klasy XAML i niestandardowe dla WPF
 XAML zaimplementowanego w [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] struktury obsługuje możliwość definiowania niestandardowej klasy lub struktury w dowolnym [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] języka, a następnie dostęp przy użyciu znaczników XAML. Możesz użyć kombinacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]— określone typy i swoje niestandardowe w ramach tego samego pliku znaczników, zwykle przez mapowanie typów niestandardowych do prefiksu przestrzeni nazw XAML. W tym temacie omówiono wymagania które muszą spełniać klasę niestandardową, może być używany jako XAML element.  
@@ -79,7 +79,7 @@ XAML zaimplementowanego w [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptl
   
 -   Obiekt, który jest obiektem kolekcji nie musi być określona w składni obiektów. Obecności tego typu kolekcji jest niejawne, gdy właściwość zostanie określona w XAML, która przyjmuje typ kolekcji.  
   
--   Elementy podrzędne kolekcji właściwości kod znaczników, są przetwarzane stawali się członkami kolekcji. Normalnie, kodu dostępu do elementów członkowskich kolekcji odbywa się za pośrednictwem listy/słownik metody takie jak `Add`, lub za pośrednictwem indeksatora. Ale składnia XAML nie obsługuje metody lub indeksatorów (wyjątek: XAML 2009 może obsługiwać metody, ale przy użyciu XAML 2009 ogranicza możliwości użycia programu WPF, zobacz [XAML 2009 — funkcje językowe](../../../../docs/framework/xaml-services/xaml-2009-language-features.md)). Kolekcje oczywiście są bardzo typowym wymogiem dla tworzenia drzewa elementów i potrzebujesz jakiś sposób, aby wypełnić te kolekcje w programie XAML deklaratywnego. W związku z tym elementy podrzędne elementu właściwości kolekcji są przetwarzane przez dodanie ich do kolekcji, która jest wartością typu właściwości kolekcji.  
+-   Elementy podrzędne kolekcji właściwości kod znaczników, są przetwarzane stawali się członkami kolekcji. Normalnie, kodu dostępu do elementów członkowskich kolekcji odbywa się za pośrednictwem listy/słownik metody takie jak `Add`, lub za pośrednictwem indeksatora. Ale składnia XAML nie obsługuje metody lub indeksatorów (wyjątek: XAML 2009 może obsługiwać metody, ale przy użyciu XAML 2009 ogranicza możliwości użycia WPF; zobacz [XAML 2009 — funkcje językowe](../../../../docs/framework/xaml-services/xaml-2009-language-features.md)). Kolekcje oczywiście są bardzo typowym wymogiem dla tworzenia drzewa elementów i potrzebujesz jakiś sposób, aby wypełnić te kolekcje w programie XAML deklaratywnego. W związku z tym elementy podrzędne elementu właściwości kolekcji są przetwarzane przez dodanie ich do kolekcji, która jest wartością typu właściwości kolekcji.  
   
  Implementacji .NET Framework XAML Services, a tym samym procesora WPF XAML używa następującej definicji dla co stanowi właściwości kolekcji. Właściwość typu właściwości musi implementować jeden z następujących czynności:  
   
@@ -112,9 +112,9 @@ XAML zaimplementowanego w [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptl
 ## <a name="serializing-xaml"></a>Serializacja XAML  
  W przypadku niektórych scenariuszy, na przykład jeśli jesteś autorem formantu, możesz również chcieć zapewnić, że wszelkie reprezentację obiektu, który może być utworzone w XAML może również być Zserializowany do równoważne znaczników XAML. Serializacja wymagania nie zostały opisane w tym temacie. Zobacz [kontrolować Przegląd autorstwa](../../../../docs/framework/wpf/controls/control-authoring-overview.md) i [drzewo elementów i serializacja](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Tworzenie kontrolek — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [Przegląd elementów podstawowych](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Ładowanie XAML i właściwości zależności](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Tworzenie kontrolek — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Przegląd elementów podstawowych](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Ładowanie XAML i właściwości zależności](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)

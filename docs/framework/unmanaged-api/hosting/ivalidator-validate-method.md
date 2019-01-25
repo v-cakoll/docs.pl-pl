@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf2c343db459879ca95372e104aee68b22dee6b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03a8bf7e215794f4a2951fe4e2d54a791bda20e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594060"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate — Metoda
-Weryfikuje określony przenośny plik wykonywalny (PE) lub plik języka pośredniego (MSIL) firmy Microsoft.  
+Sprawdza poprawność określonego pliku wykonalnego (PE) lub pliku języka intermediate language (MSIL) firmy Microsoft.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,37 +44,37 @@ HRESULT Validate (
   
 #### <a name="parameters"></a>Parametry  
  `veh`  
- [in] Wskaźnik do `IVEHandler` wystąpienie, które obsługuje błędy sprawdzania poprawności.  
+ [in] Wskaźnik do `IVEHandler` wystąpienia, która obsługuje błędy sprawdzania poprawności.  
   
  `pAppDomain`  
- [in] Wskaźnik do ładowania pliku domeny aplikacji.  
+ [in] Wskaźnik do domeny aplikacji, w którym jest on ładowany.  
   
  `ulFlags`  
- [in] Bitowe połączenie [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) wartości i wskazujący operacji sprawdzania poprawności, które powinny zostać wykonane.  
+ [in] Bitowa kombinacja [validatorflags —](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) wartości, wskazujący operacji sprawdzania poprawności, które powinny być wykonywane.  
   
  `ulMaxError`  
- [in] Maksymalna liczba błędów umożliwia przed zakończeniem sprawdzania poprawności.  
+ [in] Maksymalna liczba błędów, aby umożliwić przed zakończeniem weryfikacji.  
   
  `token`  
  [in] Nie jest używany.  
   
  `fileName`  
- [in] Ciąg określający nazwę pliku, który ma zostać zweryfikowana.  
+ [in] Ciąg, który określa nazwę pliku, który ma zostać zweryfikowana.  
   
  `pe`  
- [in] Wskaźnik do bufora pamięci, w którym przechowywany jest plik.  
+ [in] Wskaźnik do bufora pamięci, w którym jest przechowywany plik.  
   
  `ulSize`  
- [in] Rozmiar w bajtach, pliku, który ma zostać zweryfikowana.  
+ [in] Rozmiar w bajtach, plików, który ma zostać zweryfikowana.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** IValidator.idl, IValidator.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

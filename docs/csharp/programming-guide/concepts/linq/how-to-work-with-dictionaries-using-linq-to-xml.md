@@ -1,15 +1,15 @@
 ---
-title: 'Porady: Praca ze słownikami przy użyciu LINQ to XML (C#)'
+title: 'Instrukcje: Praca ze słownikami przy użyciu LINQ to XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: afe4fafb9963b4fc429f441349f8190c9a1e5bac
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a1104d041c72b48a9aad38a489aefe3ec90a16dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582024"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Porady: Praca ze słownikami przy użyciu LINQ to XML (C#)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Instrukcje: Praca ze słownikami przy użyciu LINQ to XML (C#)
 Często jest to wygodne przekonwertować różne typy struktur danych XML i XML do innych struktur danych. W tym temacie przedstawiono określoną implementację tego podejścia ogólne, konwertując <xref:System.Collections.Generic.Dictionary%602> XML i na odwrót.  
   
 ## <a name="example"></a>Przykład  
@@ -66,6 +66,6 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Projekcje i przekształcenia (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

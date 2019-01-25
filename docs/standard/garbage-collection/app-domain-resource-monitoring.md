@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: f5ab93ca5cf616bd4a29ab5d297af1f4550623b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606533"
 ---
 # <a name="application-domain-resource-monitoring"></a>Monitorowanie zasobów domen aplikacji
 (ARM) do monitorowania zasobów domen aplikacji włącza hosty do monitorowania wykorzystania procesora CPU i pamięci przez domenę aplikacji. Jest to przydatne w przypadku hostów takich jak ASP.NET, korzystających z wielu domen aplikacji w procesie długotrwałych. Host może zwolnienie domeny aplikacji w aplikacji, która jest negatywnego wpływu na wydajność całego procesu, ale tylko wtedy, gdy go zidentyfikować problematyczne aplikacji. ARM zawiera informacje, które mogą służyć do celów w podejmowaniu decyzji.  
@@ -40,35 +40,35 @@ ms.locfileid: "48266653"
 ## <a name="using-arm"></a>Za pomocą ARM  
  ARM zapewnia całkowitego czasu procesora, używanego przez domenę aplikacji i trzy rodzaje informacji na temat użycia pamięci.  
   
--   **Łączny czas procesora dla domeny aplikacji, w ciągu kilku sekund**: to jest obliczany przez zsumowanie razy wątku zgłoszony przez system operacyjny dla wszystkich wątków, w których czas wykonywania w domenie aplikacji, jego okres istnienia. Zablokowane lub uśpionych wątków nie należy używać czasu procesora. Gdy wątek wywołuje kod natywny, czas, jaki wątek zużywa w kodzie natywnym znajduje się w liczbę elementów w domenie aplikacji, w którym wykonano wywołanie.  
+-   **Łączny czas procesora dla domeny aplikacji, w ciągu kilku sekund**: To jest obliczana przez zsumowanie razy wątku zgłoszony przez system operacyjny dla wszystkich wątków, w których czas wykonywania w domenie aplikacji, jego okres istnienia. Zablokowane lub uśpionych wątków nie należy używać czasu procesora. Gdy wątek wywołuje kod natywny, czas, jaki wątek zużywa w kodzie natywnym znajduje się w liczbę elementów w domenie aplikacji, w którym wykonano wywołanie.  
   
     -   Zarządzany interfejs API: <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> właściwości.  
   
-    -   Hostowanie interfejsu API: [iclrappdomainresourcemonitor::getcurrentcputime —](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) metody.  
+    -   Interfejs API hostingu: [Iclrappdomainresourcemonitor::getcurrentcputime —](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) metody.  
   
     -   Zdarzenia ETW: `ThreadCreated`, `ThreadAppDomainEnter`, i `ThreadTerminated` zdarzenia. Dla informacji o dostawcy i słów kluczowych, zobacz "Zdarzenia monitorowania zasobów obiektu AppDomain" w [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md).  
   
--   **Łączna liczba zarządzanych alokacji dokonanych przez domenę aplikacji, jego okres istnienia w bajtach**: całkowitą alokacji nie zawsze odzwierciedla użycia pamięci przez domenę aplikacji, ponieważ przydzielone obiekty mogą być krótkotrwałe. Jednak jeśli aplikacja przydziela i zwalnia ogromną liczbę obiektów, koszt alokacje może być istotne.  
+-   **Łączna liczba zarządzanych alokacji dokonanych przez domenę aplikacji, jego okres istnienia w bajtach**: Całkowitą alokacji nie zawsze odzwierciedla użycia pamięci przez domenę aplikacji, ponieważ przydzielone obiekty mogą być krótkotrwałe. Jednak jeśli aplikacja przydziela i zwalnia ogromną liczbę obiektów, koszt alokacje może być istotne.  
   
     -   Zarządzany interfejs API: <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> właściwości.  
   
-    -   Hostowanie interfejsu API: [iclrappdomainresourcemonitor::getcurrentallocated —](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) metody.  
+    -   Interfejs API hostingu: [Iclrappdomainresourcemonitor::getcurrentallocated —](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) metody.  
   
     -   Zdarzenia ETW: `AppDomainMemAllocated` zdarzenia `Allocated` pola.  
   
--   **Zarządzane pamięci w bajtach, która odwołuje się do domeny aplikacji i które przetrwały najnowszych pełnej, blokowanie pamięci**: Ta liczba jest dokładne dopiero po pełnej, blokowanie pamięci. (To w przeciwieństwie do kolekcji współbieżnych, które występują w tle i nie zablokują aplikacji). Na przykład <xref:System.GC.Collect?displayProperty=nameWithType> przeciążenie metody powoduje, że pełne, blokowanie pamięci.  
+-   **Zarządzane pamięci w bajtach, która odwołuje się do domeny aplikacji i które przetrwały najnowszych pełnej, blokowanie pamięci**: Ta liczba jest dokładna dopiero po pełnej, blokowanie pamięci. (To w przeciwieństwie do kolekcji współbieżnych, które występują w tle i nie zablokują aplikacji). Na przykład <xref:System.GC.Collect?displayProperty=nameWithType> przeciążenie metody powoduje, że pełne, blokowanie pamięci.  
   
     -   Zarządzany interfejs API: <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> właściwości.  
   
-    -   Hostowanie interfejsu API: [iclrappdomainresourcemonitor::getcurrentsurvived —](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) metody `pAppDomainBytesSurvived` parametru.  
+    -   Interfejs API hostingu: [Iclrappdomainresourcemonitor::getcurrentsurvived —](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) metody `pAppDomainBytesSurvived` parametru.  
   
     -   Zdarzenia ETW: `AppDomainMemSurvived` zdarzenia `Survived` pola.  
   
--   **Łączna liczba zarządzanej pamięci w bajtach, który odwołuje się do niej proces i które przetrwały najnowszych pełnej, blokowanie pamięci**: pamięci przetrwałych dla poszczególnych aplikacji domen można porównać do tej liczby.  
+-   **Łączna liczba zarządzanej pamięci w bajtach, który odwołuje się do niej proces i które przetrwały najnowszych pełnej, blokowanie pamięci**: Pamięci przetrwałych dla poszczególnych aplikacji domen można porównać do tej liczby.  
   
     -   Zarządzany interfejs API: <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> właściwości.  
   
-    -   Hostowanie interfejsu API: [iclrappdomainresourcemonitor::getcurrentsurvived —](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) metody `pTotalBytesSurvived` parametru.  
+    -   Interfejs API hostingu: [Iclrappdomainresourcemonitor::getcurrentsurvived —](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) metody `pTotalBytesSurvived` parametru.  
   
     -   Zdarzenia ETW: `AppDomainMemSurvived` zdarzenia `ProcessSurvived` pola.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48266653"
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [ICLRAppDomainResourceMonitor, interfejs](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [ICLRAppDomainResourceMonitor, interfejs](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

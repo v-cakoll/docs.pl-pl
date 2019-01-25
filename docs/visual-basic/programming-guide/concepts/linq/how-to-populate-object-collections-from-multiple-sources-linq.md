@@ -1,28 +1,28 @@
 ---
-title: 'Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ) (Visual Basic)'
+title: 'Instrukcje: Wypełnianie kolekcji Object z wielu źródeł (LINQ) (Visual Basic)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 0228d152539abe3bf0db5a8e5bf4581eaf957b31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638824"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Porady: wypełnianie kolekcji Object z wielu źródeł (LINQ) (Visual Basic)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Instrukcje: Wypełnianie kolekcji Object z wielu źródeł (LINQ) (Visual Basic)
 
 W tym przykładzie przedstawiono sposób scalania danych z różnych źródeł w sekwencji nowych typów.
 
 > [!NOTE]
-> Nie należy próbować dołączyć dane w pamięci lub dane w systemie plików z danymi, które jest nadal w bazie danych. Takie sprzężenia między domenami może spowodować niezdefiniowane wyniki ze względu na różne sposoby, w którym można zdefiniować operacji łączenia dla zapytań bazy danych i innych źródeł. Ponadto istnieje ryzyko, że takie działanie może spowodować wyjątek braku pamięci, jeżeli jest wystarczająco duże ilości danych w bazie danych. Aby dołączyć dane z bazy danych do danych w pamięci, należy najpierw wywołać `ToList` lub `ToArray` w bazie danych zapytania, a następnie wykonaj sprzężenia w zwracanej kolekcji.
+> Nie należy próbować dołączyć dane w pamięci lub dane w systemie plików z danymi, które są nadal w bazie danych. Takie sprzężeń między domenami może przynieść niezdefiniowane wyniki ze względu na różne sposoby, w którym można zdefiniować operacji łączenia zapytań bazy danych i innych typów źródeł. Ponadto istnieje ryzyko, takie działanie może spowodować wyjątek braku pamięci, gdy ilość danych w bazie danych jest wystarczająco duży. Aby dołączyć dane z bazy danych do danych w pamięci, należy najpierw wywołać `ToList` lub `ToArray` w bazie danych zapytania, a następnie wykonaj sprzężenia na zwrócona kolekcja.
 
 ## <a name="to-create-the-data-file"></a>Aby utworzyć plik danych
 
-- Skopiuj pliki names.csv i scores.csv do folderu projektu, zgodnie z opisem w [porady: Dołącz zawartości z niepodobnych plików (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Skopiuj pliki names.csv i scores.csv w folderze projektu, zgodnie z opisem w [jak: Łączenie zawartości niepodobnych plików (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia użycie typu o nazwie `Student` do przechowywania danych scalone z dwie kolekcje w pamięci ciągów symulujących danych z arkusza kalkulacyjnego w formacie CSV. Pierwsza kolekcja ciągów reprezentuje uczniów nazwy i identyfikatory, a druga kolekcja — identyfikator uczniów (w pierwszej kolumnie) i cztery egzaminu wyniki. Ten identyfikator jest używany jako klucz obcy.
+Poniższy przykład pokazuje, jak używać typu nazwanego `Student` do przechowywania scalane dane z dwóch kolekcji w pamięci ciągów, które symulują dane arkusza kalkulacyjnego w formacie CSV. Pierwsza kolekcja ciągów reprezentuje identyfikatory i nazwy studentów, a druga kolekcja reprezentuje identyfikator uczniów (w pierwszej kolumnie) i cztery wyniki egzamin. Identyfikator jest używany jako klucza obcego.
 
 ```vb
 Imports System.Collections.Generic
@@ -100,9 +100,9 @@ End Class
 ' The average score of Tucker Michael is 92
 ```
 
-W [wybierz klauzuli](../../../../visual-basic/language-reference/queries/select-clause.md) , inicjatora obiektów jest używana do każdego nowego wystąpienia `Student` obiektu przy użyciu danych z dwóch źródeł.
+W [wybierz klauzuli](../../../../visual-basic/language-reference/queries/select-clause.md) klauzuli inicjatora obiektu jest używany do utworzenia wystąpienia każdy nowość `Student` obiektu przy użyciu danych z dwóch źródeł.
 
-Jeśli nie masz do przechowywania wyników zapytania, może być wygodniejsze niż nazwanymi typami typy anonimowe. Nazwane typy są wymagane w przypadku przekazania wyników zapytania poza metodą wykonywania zapytania. W poniższym przykładzie wykonuje to samo zadanie, co w poprzednim przykładzie, ale używa typy anonimowe zamiast typów o nazwie:
+Jeśli nie masz do przechowywania wyników zapytania, typy anonimowe może być bardziej wygodne niż nazwane typy. Nazwane typy są wymagane w przypadku przekazania wyników zapytania, poza metodą wykonywania zapytania. Poniższy przykład wykonuje to samo zadanie, jak w poprzednim przykładzie, ale używa typów anonimowych zamiast nazwane typy:
 
 ```vb
 ' Merge the data by using an anonymous type.
@@ -132,10 +132,10 @@ Next
 
 Utwórz i skompiluj projekt, który jest przeznaczony dla jednego z następujących opcji:
 
-- .NET framework w wersji 3.5 z odwołania do System.Core.dll.
+- .NET framework w wersji 3.5 za pomocą odwołania do System.Core.dll.
 - .NET framework w wersji 4.0 lub nowszy.
-- Wersja platformy .NET core wersji 1.0 lub nowszej.
+- .NET core w wersji 1.0 lub nowszej.
 
 ## <a name="see-also"></a>Zobacz także
 
-[LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

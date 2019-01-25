@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-ms.openlocfilehash: b412655695c49d1e12a02e005fccfd37d2956787
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b4b09469a3f22b5e5c7faa98d5db7b3522ed236
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586478"
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a>Moduł &lt;— słowo kluczowe&gt; (Visual Basic)
-Określa, że atrybut znajdujący się na początku pliku źródłowego dotyczy bieżącego modułu zestawu.  
+Określa, że atrybut znajdujący się na początku pliku źródłowego ma zastosowanie do bieżącego zestawu modułu.  
   
 ## <a name="remarks"></a>Uwagi  
- Wiele atrybutów odnoszą się do pojedynczego elementu programistycznego, takiego jak klasa lub właściwość. Zastosuj takiego atrybutu dołączając bloku atrybutów w nawiasy (`< >`), bezpośrednio do instrukcji deklaracji.  
+ Wiele atrybutów odnoszą się do pojedynczego elementu programistycznego, takiego jak klasa lub właściwość. Stosowanie takiego atrybutu, dołączając bloku atrybutów w nawiasach kątowych (`< >`), bezpośrednio do instrukcji deklaracji.  
   
- Jeśli atrybut dotyczy nie tylko do następującego elementu, ale do bieżącego zestawu modułu, umieść bloku attribute na początku pliku źródłowego i określenie atrybutu o `Module` — słowo kluczowe. Jeśli ma to zastosowanie do całego zestawu, użyj [zestawu](../../../visual-basic/language-reference/modifiers/assembly.md) — słowo kluczowe.  
+ Jeśli atrybut dotyczy nie tylko następujący element, ale bieżącego zestawu modułu, można umieścić blok atrybut na początku pliku źródłowego i zidentyfikować atrybut o `Module` — słowo kluczowe. Jeśli ma zastosowanie do całego zestawu, należy użyć [zestawu](../../../visual-basic/language-reference/modifiers/assembly.md) — słowo kluczowe.  
   
  `Module` Modyfikator nie jest taka sama jak [Module — instrukcja](../../../visual-basic/language-reference/statements/module-statement.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
- [Module, instrukcja](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Atrybuty — omówienie](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Instrukcja Module](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Omówienie atrybuty](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 

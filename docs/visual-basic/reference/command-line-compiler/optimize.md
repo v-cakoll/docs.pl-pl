@@ -1,5 +1,5 @@
 ---
-title: -optimize
+title: -Optymalizacja
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optimize compiler option [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: 2f066835c5f864538f281d4c58772e0e60c132f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ddb12eb473ce53e60835acb8f1076655f78fafd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574381"
 ---
-# <a name="-optimize"></a>-optimize
+# <a name="-optimize"></a>-Optymalizacja
 Włącza lub wyłącza optymalizacje kompilatora.  
   
 ## <a name="syntax"></a>Składnia  
@@ -27,28 +27,28 @@ Włącza lub wyłącza optymalizacje kompilatora.
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalna. `-optimize-` Opcja wyłącza optymalizacje kompilatora. `-optimize+` Opcja włącza optymalizacje. Optymalizacje są domyślnie wyłączone.|  
+|`+` &#124; `-`|Opcjonalna. `-optimize-` Opcja wyłącza optymalizacje kompilatora. `-optimize+` Opcja włącza optymalizacje. Domyślnie są wyłączone optymalizacje.|  
   
 ## <a name="remarks"></a>Uwagi  
- Mniejszy, szybszy i bardziej wydajne, plik wyjściowy był optymalizacje kompilatora. Jednakże, ponieważ optymalizacje powoduje modyfikacji kodu w pliku wyjściowym `-optimize+` może utrudnić debugowania.  
+ Plik wyjściowy był optymalizacje kompilatora, mniejszy, szybszy i bardziej wydajne. Jednakże, ponieważ optymalizacje powoduje modyfikacji kodu w pliku wyjściowym `-optimize+` może utrudnić debugowanie.  
   
- Wszystkie moduły wygenerowane z `-target:module` dla zestawu musi używać tego samego `-optimize` ustawienia jako zestaw. Aby uzyskać więcej informacji, zobacz [-docelowego (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
+ Wszystkie moduły, wygenerowane za pomocą `-target:module` dla zestawu musi używać tego samego `-optimize` ustawienia zgodnie z zestawu. Aby uzyskać więcej informacji, zobacz [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
   
- Możesz połączyć ze sobą `-optimize` i `-debug` opcje.  
+ Można połączyć `-optimize` i `-debug` opcje.  
   
-|Aby ustawić - optymalizowania w Visual Studio zintegrowane środowisko programistyczne|  
+|Aby ustawić - optymalizacji w programie Visual Studio zintegrowanego środowiska programistycznego|  
 |---|  
 |1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.<br />     <br />2.  Kliknij przycisk **skompilować** kartę.<br />3.  Kliknij przycisk **zaawansowane** przycisku.<br />4.  Modyfikowanie **Włącz optymalizacje** pole wyboru.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `T2.vb` i włącza optymalizacje kompilatora.  
+ Poniższy kod kompiluje `T2.vb` i umożliwia optymalizacje kompilatora.  
   
 ```console
 vbc t2.vb -optimize  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)  
- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [-docelowego (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+## <a name="see-also"></a>Zobacz także
+- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
+- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

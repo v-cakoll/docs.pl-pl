@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b826e9c30fbf7007ac6b0093608ab7d926cc499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ccc36231a2a554e523dbbef67996b7ad220cf2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459156"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602471"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout — Metoda
-Pobiera informacje o układzie, w pamięci, pól zdefiniowanych przez określonej klasy. Oznacza to, że ta metoda pobiera przesunięcia pól tej klasy.  
+Pobiera informacje o układu, w pamięci, pól zdefiniowanych przez określonej klasy. Oznacza to, że ta metoda pobiera przesunięcia pól tej klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,10 +40,10 @@ HRESULT GetClassLayout(
   
 #### <a name="parameters"></a>Parametry  
  `classID`  
- [in] Identyfikator klasy, dla którego mają zostać pobrane układu.  
+ [in] Identyfikator klasy, dla którego będą pobierane układu.  
   
  `rFieldOffset`  
- [w, out] Tablica [cor_field_offset —](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) struktury, z których każdy zawiera tokeny i przesunięcia pól tej klasy.  
+ [out w] Tablica [cor_field_offset —](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) struktur, z których każdy zawiera tokeny i przesunięcia pól tej klasy.  
   
  `cFieldOffset`  
  [in] Rozmiar `rFieldOffset` tablicy.  
@@ -55,16 +55,16 @@ HRESULT GetClassLayout(
  [out] Wskaźnik do lokalizacji, która zawiera rozmiar w bajtach klasy.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetClassLayout` Metoda zwraca tylko pola zdefiniowane przez samej klasy. Jeśli klasy nadrzędnej klasy zdefiniowano także pól, należy wywołać profilera `GetClassLayout` w klasie nadrzędnej w celu uzyskania tych pól.  
+ `GetClassLayout` Metoda zwraca tylko te pola, które są definiowane przez samej klasy. Jeśli klasa nadrzędna klasy została zdefiniowana również pola, program profilujący musi wywołać `GetClassLayout` na klasy nadrzędnej w celu uzyskania tych pól.  
   
- Jeśli używasz `GetClassLayout` z klasami ciąg, metoda zakończy się niepowodzeniem z kodem błędu E_INVALIDARG. Użyj [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) można pobrać informacji o układzie ciągu. `GetClassLayout` również zakończą się po wywołaniu z klasą tablicy.  
+ Jeśli używasz `GetClassLayout` przy użyciu klas parametrów metody zakończy się niepowodzeniem z kodem błędu E_INVALIDARG. Użyj [icorprofilerinfo2::getstringlayout —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) można pobrać informacji o układzie ciągu. `GetClassLayout` zostanie również zakończyć się niepowodzeniem po wywołaniu z klasą tablicy.  
   
- Po `GetClassLayout` zwróci wartość, należy sprawdzić, czy `rFieldOffset` bufor był wystarczająco duży, aby zawierała wszystkie dostępne `COR_FIELD_OFFSET` struktury. W tym celu należy porównać wartości który `pcFieldOffset` wskazuje rozmiar `rFieldOffset` podzielonej przez rozmiar `COR_FIELD_OFFSET` struktury. Jeśli `rFieldOffset` nie jest duży, Przydziel wystarczająca, większego `rFieldOffset` buforu, zaktualizuj `cFieldOffset` z nowej, większy rozmiar i wywołanie `GetClassLayout` ponownie.  
+ Po `GetClassLayout` zwróci wartość, należy sprawdzić, czy `rFieldOffset` bufor jest wystarczająco duży, aby zawierała wszystkich dostępnych `COR_FIELD_OFFSET` struktury. Aby to zrobić, porównaj wartość która `pcFieldOffset` wskazuje z rozmiarem `rFieldOffset` podzielonej przez rozmiar `COR_FIELD_OFFSET` struktury. Jeśli `rFieldOffset` nie jest duży, Przydziel wystarczająca, większego `rFieldOffset` buforu, zaktualizuj `cFieldOffset` przy użyciu nowych, większy rozmiar i Wywołaj `GetClassLayout` ponownie.  
   
- Alternatywnie można wywołać `GetClassLayout` o zerowej długości `rFieldOffset` buforu w celu uzyskania rozmiar buforu poprawne. Rozmiar buforu można następnie ustawić wartość zwracana w `pcFieldOffset` i Wywołaj `GetClassLayout` ponownie.  
+ Alternatywnie, można wywołać `GetClassLayout` o zerowej długości `rFieldOffset` buforu w celu uzyskania rozmiar buforu poprawne. Następnie można ustawić rozmiar buforu do wartości zwracanej w `pcFieldOffset` i wywołać `GetClassLayout` ponownie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -72,8 +72,8 @@ HRESULT GetClassLayout(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

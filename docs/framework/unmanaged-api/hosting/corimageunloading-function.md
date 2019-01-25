@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebd7ef3b329eae8e35b680f3d8c74864e2a0f4d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be2edd5b217466a58aa9c478dadc10004ebda721
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556145"
 ---
 # <a name="corimageunloading-function"></a>_CorImageUnloading — Funkcja
-Powiadamia program ładujący, gdy moduł zarządzany obrazy są usuwane z pamięci.  
+Powiadamia moduł ładujący, gdy obrazy modułu zarządzanego są usuwane z pamięci.  
   
- Ta funkcja nie jest zaimplementowana. Wywołuje się, zwraca E_NOTIMPL.  
+ Ta funkcja nie jest zaimplementowana. Jeżeli jest wywoływana, zwraca E_NOTIMPL.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,16 +38,16 @@ STDAPI (VOID) _CorImageUnloading(
   
 #### <a name="parameters"></a>Parametry  
  `ImageBase`  
- [in] Wskaźnik do rozpoczęcia lokalizacji obrazu do zwolnienia.  
+ [in] Wskaźnik do wyjścia lokalizację obrazu, aby zwolnić.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

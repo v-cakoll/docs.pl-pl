@@ -3,12 +3,12 @@ title: Dokumentowanie kodu przy użyciu komentarzy XML
 description: Dowiedz się, jak dokumentowanie kodu za pomocą komentarzy dokumentacji XML do generowania pliku dokumentacji XML w czasie kompilacji.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 70da976861a9bca024d41dd329dc7be043d67c94
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 15bdd65b96159b4c9b6eb45016f8bdde58c1efe3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576203"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu przy użyciu komentarzy XML
 
@@ -125,7 +125,7 @@ Może to być dowolny typ zdefiniowany w projekcie lub przywoływanego zestawu. 
 `cref` Jest **wymagane** atrybut, który reprezentuje odwołanie do typu lub jego elementu członkowskiego, który jest dostępny w bieżącym środowisku kompilacji.
 Może to być dowolny typ zdefiniowany w projekcie lub przywoływanego zestawu.
 
-### <a name="ltseealsogt"></a>&lt;SeeAlso —&gt;
+### <a name="ltseealsogt"></a>&lt;seealso&gt;
 
 Możesz użyć `<seealso>` tagu w taki sam sposób jak `<see>` tagu. Jedyna różnica polega na tym, że jego zawartość zwykle znajduje się w sekcji "Zobacz też". W tym miejscu dodamy `seealso` tagiem na liczbę całkowitą `Add` metodę, aby odwoływać się do innych metod w klasie, które akceptują parametry liczby całkowitej:
 
@@ -222,5 +222,5 @@ Dokumentowanie kodu jest zalecane w przypadku wielu powodów. Poniżej przedstaw
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Komentarze dokumentacji XML (C# Programming Guide)](programming-guide/xmldoc/xml-documentation-comments.md)
-* [Tagi zalecane dla komentarzy do dokumentacji (C# Programming Guide)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Komentarze dokumentacji XML (C# Programming Guide)](programming-guide/xmldoc/xml-documentation-comments.md)
+- [Tagi zalecane dla komentarzy do dokumentacji (C# Programming Guide)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

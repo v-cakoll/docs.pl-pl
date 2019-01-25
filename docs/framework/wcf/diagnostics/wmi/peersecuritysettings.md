@@ -2,12 +2,12 @@
 title: PeerSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 24ae0d35-f3a3-419b-afd6-686e22aae27b
-ms.openlocfilehash: 92aca4c790607de91314aacf6414d0dfacea9a9f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 761ed0e30c6acca8c910c5dc97dfbae46c1f89bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564841"
 ---
 # <a name="peersecuritysettings"></a>PeerSecuritySettings
 PeerSecuritySettings  
@@ -31,22 +31,22 @@ class PeerSecuritySettings
 ### <a name="mode"></a>Tryb  
  Typ danych: ciąg  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Czy komunikatu i zabezpieczenia na poziomie transportu używanych przez punkty końcowe skonfigurowane dla tego wiązania.  
   
-### <a name="transport"></a>Transportu  
- Typ danych: Obiekt PeerTransportSecuritySettings  
+### <a name="transport"></a>Transport  
+ Typ danych: PeerTransportSecuritySettings  
   
- Dostęp do typu: tylko do odczytu  
+ Typ dostępu: tylko do odczytu  
   
  Ustawienia zabezpieczeń transportu.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|PLIK MOF|Zadeklarowana w Servicemodel.mof.|  
+|MOF|Zadeklarowana w Servicemodel.mof.|  
 |---------|-----------------------------------|  
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.PeerSecuritySettings>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.PeerSecuritySettings>

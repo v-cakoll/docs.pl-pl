@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: ab9eacc3fb3796139d8ed8382146a4a6c2b28a97
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 25a868afded83f28f5f56a9f19e050bbd32b24c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490833"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Właściwość indeksatora rozszerzenia (Visual Basic)
 Zapewnia dostęp do poszczególnych elementów w kolekcji.  
@@ -29,10 +29,10 @@ object(index)
   
 |Termin|Definicja|  
 |---|---|  
-|`object`|Wymagane. Kolekcja z obsługą zapytań. Oznacza to, kolekcję, która implementuje <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Linq.IQueryable%601>.|  
-|(|Wymagane. Oznacza początek właściwość indeksatora.|  
-|`index`|Wymagane. Wyrażenie liczba całkowita, określająca liczona od zera pozycja elementu kolekcji.|  
-|)|Wymagane. Oznacza koniec właściwości indeksatora.|  
+|`object`|Wymagana. Kolekcja z obsługą zapytań. Oznacza to, kolekcję, która implementuje <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Linq.IQueryable%601>.|  
+|(|Wymagana. Oznacza początek właściwość indeksatora.|  
+|`index`|Wymagana. Wyrażenie liczba całkowita, określająca liczona od zera pozycja elementu kolekcji.|  
+|)|Wymagana. Oznacza koniec właściwości indeksatora.|  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Obiekt z określonej lokalizacji w kolekcji lub `Nothing` Jeśli indeks jest poza zakresem.  
@@ -55,9 +55,9 @@ object(index)
   
  `Second phone number: 425-555-0145`  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Xml.Linq.XElement>  
- [Właściwości osi XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Tworzenie XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Właściwość wartości XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Xml.Linq.XElement>
+- [Właściwości osi XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Tworzenie XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Właściwość wartości XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

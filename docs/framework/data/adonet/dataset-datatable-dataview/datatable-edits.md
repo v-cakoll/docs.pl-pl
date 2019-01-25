@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 1d9321a1db4f68195fb914f271fb98f904d2f963
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 473ea9963ce192f42e418bebc8e38971019350e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548563"
 ---
 # <a name="datatable-edits"></a>Edycje elementu DataTable
 Podczas wprowadzania zmian do wartości kolumn <xref:System.Data.DataRow>, zmiany od razu są umieszczane w bieżącym stanie wiersza. <xref:System.Data.DataRowState> Zostanie następnie ustawiona **zmodyfikowane**, a zmiany są akceptowane lub odrzucone, za pomocą <xref:System.Data.DataRow.AcceptChanges%2A> lub <xref:System.Data.DataRow.RejectChanges%2A> metody **DataRow**. **DataRow** udostępnia trzy metody, które można użyć do zawieszenia stan wiersza podczas edytowania go. Te metody są <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A>, i <xref:System.Data.DataRow.CancelEdit%2A>.  
   
- Po zmodyfikowaniu wartości kolumn **DataRow** bezpośrednio **DataRow** zarządza wartości kolumny za pomocą **bieżącego**, **domyślne**, i **Oryginalnego** wersje wierszy. Oprócz tych wersji wierszy **BeginEdit**, **EndEdit —**, i **CancelEdit** metody za pomocą wersji czwarty wiersz: **proponowane**. Aby uzyskać więcej informacji na temat wersji wierszy, zobacz [stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Po zmodyfikowaniu wartości kolumn **DataRow** bezpośrednio **DataRow** zarządza wartości kolumny za pomocą **bieżącego**, **domyślne**, i **Oryginalnego** wersje wierszy. Oprócz tych wersji wierszy **BeginEdit**, **EndEdit —**, i **CancelEdit** metody za pomocą wersji czwarty wiersz: **Proponowane**. Aby uzyskać więcej informacji na temat wersji wierszy, zobacz [stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
  **Proponowane** istnieje wersja wierszy podczas operacji edycji, który rozpoczyna się przez wywołanie metody **BeginEdit** i który kończy się za pomocą **EndEdit —** lub **CancelEdit,**  lub przez wywołanie **AcceptChanges** lub **RejectChanges**.  
   
@@ -86,10 +86,10 @@ protected static void OnColumnChanged(
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Data.DataRow>  
- <xref:System.Data.DataTable>  
- <xref:System.Data.DataRowVersion>  
- [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [Obsługa zdarzeń elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Data.DataRow>
+- <xref:System.Data.DataTable>
+- <xref:System.Data.DataRowVersion>
+- [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Obsługa zdarzeń elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

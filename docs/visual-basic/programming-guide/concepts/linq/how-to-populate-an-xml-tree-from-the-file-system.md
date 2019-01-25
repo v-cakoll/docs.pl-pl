@@ -1,19 +1,19 @@
 ---
-title: 'Porady: wypełnianie drzewo XML z systemu plików (Visual Basic)'
+title: 'Instrukcje: Wypełnianie drzewa XML z systemu plików (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: 158a6c5c6734f0aa11e22b5cbea35c960c7a1c40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: babb8f835e8320b637f131bdc2e242c460c0548c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559791"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Porady: wypełnianie drzewo XML z systemu plików (Visual Basic)
-Typowe i przydatne aplikacji drzew XML jest jako magazynu danych hierarchiczna nazwa/wartość. Można wypełnić drzewo XML z danymi hierarchicznymi i jego zapytania, przekształcać je i w razie potrzeby go serializować. W tym scenariuszu użycia nie są wiele semantyki określonego XML, takie jak obszary nazw i zachowanie biały znak, ważne. Zamiast tego drzewa XML jest używany jako mały w pamięci, hierarchiczna baza danych jednego użytkownika.  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Instrukcje: Wypełnianie drzewa XML z systemu plików (Visual Basic)
+Typowe i przydatne stosowania drzew XML jest do przechowywania danych hierarchicznych nazwa/wartość. Możesz można wypełnianie drzewa XML z danymi hierarchicznymi i następnie wykonuje zapytania, przekształcania go i jeśli to konieczne, serializować go. W tym scenariuszu użycia nie są wiele semantyki określonych XML, takie jak przestrzenie nazw i zachowania biały znak, ważne. Zamiast tego której używasz drzewa XML jako mały w pamięci, bazie danych hierarchicznych jednego użytkownika.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład powoduje wypełnienie drzewo XML z lokalnego systemu plików za pomocą rekursji. Zapytanie drzewa obliczanie łączny rozmiar wszystkich plików w drzewie.  
+ Poniższy przykład powoduje wypełnienie drzewa XML z lokalnego systemu plików przy użyciu rekursji. Następnie wykonuje zapytanie drzewa, obliczanie łączny rozmiar wszystkich plików w drzewie.  
   
 ```vb  
 Module Module1  
@@ -44,7 +44,7 @@ Module Module1
 End Module  
 ```  
   
- W tym przykładzie generuje dane wyjściowe podobne do następujących:  
+ Ten przykład generuje dane wyjściowe podobne do następujących:  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -114,5 +114,5 @@ End Module
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zaawansowane techniki zapytania (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

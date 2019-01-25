@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a447dca98e5010163d5cc5f4f3da4333f4cdf7d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c610445d5467a49b8a50b279d8f7fe706e21f73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555664"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted — Metoda
-Powiadamia profilera kodu rozpoczęto wyrzucanie elementów bezużytecznych.  
+Powiadamia program profilujący kodu uruchomienia wyrzucania elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,23 +38,23 @@ HRESULT GarbageCollectionStarted(
   
 #### <a name="parameters"></a>Parametry  
  `cGenerations`  
- [in] Całkowita liczba wpisów w `generationCollected` tablicy.  
+ [in] Łączna liczba wpisów w `generationCollected` tablicy.  
   
  `generationCollected`  
- [in] Tablica wartości logicznych, które są `true` Jeśli generacji, który odpowiada indeks tablicy jest zebranych przez ten wyrzucanie elementów bezużytecznych; w przeciwnym razie `false`.  
+ [in] Tablica wartości logicznych, które są `true` Jeśli generacji, która odnosi się do indeksu tablicy jest zebranych przez ten wyrzucania elementów bezużytecznych; w przeciwnym razie `false`.  
   
- Tablica jest indeksowany przez wartość [cor_prf_gc_generation —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) wyliczenia, co oznacza generacji.  
+ Tablica jest indeksowana przez wartość [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) wyliczenia, co oznacza jego generacji.  
   
  `reason`  
- [in] Wartość [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) zostało wywołane przez wyliczenie wskazujący przyczynę wyrzucanie elementów bezużytecznych.  
+ [in] Wartość [cor_prf_gc_reason —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) wyliczenia, która wskazuje przyczynę wyrzucania elementów bezużytecznych zostało wywołane.  
   
 ## <a name="remarks"></a>Uwagi  
- Wszystkie wywołania zwrotne, które odnoszą się do tego wyrzucanie elementów bezużytecznych nastąpi między `GarbageCollectionStarted` wywołania zwrotnego i odpowiadający mu [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) wywołania zwrotnego. Tych wywołań zwrotnych nie muszą występować na tym samym wątku.  
+ Wszystkie wywołania zwrotne, które odnoszą się do tego wyrzucania elementów bezużytecznych nastąpi między `GarbageCollectionStarted` wywołania zwrotnego i odpowiedni [icorprofilercallback2::garbagecollectionfinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) wywołania zwrotnego. Te wywołania zwrotne nie muszą występować na tym samym wątku.  
   
- Bezpiecznie dla profiler do zbadania obiektów w ich oryginalnych lokalizacji podczas `GarbageCollectionStarted` wywołania zwrotnego. Moduł zbierający elementy bezużyteczne rozpocznie się przenoszenie obiektów po powrocie z `GarbageCollectionStarted`. Po profilera zwrócił to wywołanie zwrotne, profilera należy wziąć pod uwagę wszystkie identyfikatory obiektu jest nieprawidłowy, dopóki nie odbierze `ICorProfilerCallback2::GarbageCollectionFinished` wywołania zwrotnego.  
+ Bezpiecznie programu Profiler sprawdzić obiektów w ich oryginalnej lokalizacji podczas `GarbageCollectionStarted` wywołania zwrotnego. Moduł zbierający elementy bezużyteczne rozpocznie poruszających się obiektów po powrocie z `GarbageCollectionStarted`. Po program profilujący został zwrócony z to wywołanie zwrotne, program profilujący należy wziąć pod uwagę wszystkie identyfikatory obiektu jest nieprawidłowy, dopóki nie odbierze `ICorProfilerCallback2::GarbageCollectionFinished` wywołania zwrotnego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -62,6 +62,6 @@ HRESULT GarbageCollectionStarted(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

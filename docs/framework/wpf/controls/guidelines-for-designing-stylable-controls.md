@@ -5,56 +5,56 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545033"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Wytyczne do projektowania kontrolek w określonych stylach
-Ten dokument zawiera podsumowanie zestawu najlepszych rozwiązań, które należy rozważyć podczas projektowania formantu, który ma zostać łatwo stylable i templatable. Zdecydowaliśmy się do tego zestawu najlepszych rozwiązań za pomocą wielu prób i błędów podczas pracy nad stylów formantu motywu wbudowanych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolować zestawu. Dowiedzieliśmy się, że pomyślnie stylów jest tyle funkcją modelu obiektu dobrze zaprojektowanego się sam stylu. Docelowa grupa odbiorców dla tego dokumentu jest autorem formantu nie autora stylu.  
+W tym dokumencie przedstawiono podsumowanie zestaw najlepszych rozwiązań, aby wziąć pod uwagę podczas projektowania formantu, który ma być łatwe w określonych stylach i templatable. Zdecydowaliśmy się ten zestaw najlepszych rozwiązań za pośrednictwem wiele prób i błędów podczas pracy nad style kontrolki motyw wbudowanych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestaw formantów. Dowiedzieliśmy się, że pomyślnie stylów jest tak dużej ilości funkcją modelu obiektu dobrze zaprojektowanego się stylu samego. Odbiorców dla tego dokumentu jest autorem formantu, nie Autor stylu.  
   
   <a name="Terminology"></a>   
 ## <a name="terminology"></a>Terminologia  
- "Style i tworzenia szablonów" odwołują się do zestawu technologii, które umożliwiają kontroli autorowi odroczenie visual aspektów formant na szablon formantu i styl. Obejmuje to zestaw technologii:  
+ "Tworzenie szablonów i stylów" odnoszą się do zestawu technologii, które umożliwiają Autor kontroli, które mają być odroczone visual aspektów kontrolki stylu i szablonu kontrolki. Obejmuje to zestaw technologii:  
   
--   Style (w tym metody ustawiające właściwości, wyzwalaczy i scenorys).  
+-   Style (w tym metod ustawiających właściwości, wyzwalacze i scenorysów).  
   
 -   Zasoby.  
   
--   Szablony formantu.  
+-   Szablony kontrolek.  
   
 -   Szablony danych.  
   
- Aby obejrzeć wprowadzenie do stylów i tworzenia szablonów, zobacz [stylami i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Wprowadzenie do tworzenia szablonów i stylów, zobacz [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
-## <a name="before-you-start-understanding-your-control"></a>Przed rozpoczęciem: Opis formantu  
- Przed możesz przejść do poniższych wskazówek, ważne jest zrozumienie i zdefiniowanych typowe użycie formantu. Style przedstawia często niesfornych zestaw możliwości. Formanty, które są zapisywane do użycia (w wiele aplikacji przez wielu deweloperów) stają przed wyzwaniem czy style może służyć do dalekosiężną zmienić wygląd formantu. W rzeczywistości formantu nie wygląda nawet zamiarach autora formantu. Ponieważ elastyczność oferowane przez stylów jest zasadniczo nieograniczone, umożliwia pomysł typowe obciążenie można zakres swoje decyzje dotyczące.  
+## <a name="before-you-start-understanding-your-control"></a>Przed rozpoczęciem: Omówienie formantu  
+ Zanim przejdziesz do poniższych wskazówek jest ważne, aby zrozumieć i zdefiniowano wspólne użycie kontrolki. Style udostępnia często niesfornych zbiór możliwości. Formanty, które są zapisywane do użycia szeroko (w wielu aplikacjach przez wielu deweloperów) stają że stylów może służyć do Week zmiany wyglądu formantu. W rzeczywistości formant ze stylem, nie może nawet przypominają zamiarach Autor kontroli. Ponieważ elastyczności oferowanej przez stylów jest zasadniczo pakiet, można użyć pomysł wspólne użycie ułatwiające zakresu decyzje.  
   
- Aby określić sposób użycia wspólnych formantu, warto pomyśleć o wartości oferty formantu. Co powoduje formantu do tabeli, która kontrolka nie mogą oferować? Użycie wspólnej nie oznacza żadnych szczególnych wygląd, ale raczej zasady klas formantu i uzasadnione zbiór oczekiwania dotyczące jego użytkowania. Ten opis pozwala na zapewnienie niektóre założenia dotyczące modelu kompozycji i zachowania zdefiniowany styl formantu w typowych przypadkach. W przypadku liczby <xref:System.Windows.Controls.ComboBox>, na przykład opis użycie wspólnej nie zapewniają wszelkie szczegółowe informacje o o czy określonego <xref:System.Windows.Controls.ComboBox> ma zaokrąglonymi narożnikami, ale podaje wgląd w fakcie który <xref:System.Windows.Controls.ComboBox> prawdopodobnie będzie konieczne okno podręczne i Niektóre sposób przełączania, czy jest on otwarty.  
+ Aby poznać wspólne użycie kontroli nad, dobrze jest myśleć o korzyści formantu. Co to formant przenieść do tabeli, która może oferować żadne inne formanty? Wspólne użycie pociąga za sobą żadnych szczególnych wyglądu, ale raczej filozofia formantu i uzasadnione zestaw oczekiwania dotyczące jej użycie. Tę wiedzę pozwala wprowadzić kilka założeń dotyczących modelu kompozycji i zachowania zdefiniowane w stylu formantu w Często spotykana. W przypadku właściwości <xref:System.Windows.Controls.ComboBox>, na przykład zrozumienie wspólnej wykorzystania nie daje żadnych szczegółowe informacje o czy określonego <xref:System.Windows.Controls.ComboBox> ma zaokrąglone narożniki, ale uzyskasz wgląd w działania, <xref:System.Windows.Controls.ComboBox> prawdopodobnie musi okno podręczne i jakiś sposób przełączania, czy jest on otwarty.  
   
 <a name="General_Guidelines"></a>   
 ## <a name="general-guidelines"></a>Ogólne wskazówki  
   
--   **Nie Wymuszaj ściśle szablonu kontrakty.** Kontrakt szablonu formantu może składać się z elementów, poleceń, powiązania, wyzwalaczy i ustawień nawet właściwości, które są wymagane lub oczekiwano kontrolki do poprawnego.  
+-   **Nie Wymuszaj ściśle kontraktów szablonu.** Kontrakt szablonu kontrolki może składać się z elementów, poleceń, powiązania, wyzwalaczy i ustawień nawet właściwości, które są wymagane lub oczekiwana dla formantu, który ma działać prawidłowo.  
   
-    -   Minimalizowanie możliwie umów.  
+    -   Minimalizuj możliwie umów.  
   
-    -   Projekt wokół założenie, iż podczas projektowania czas (podczas przy użyciu narzędzia projektowe) jest typowe dla szablonu formantu być niekompletna. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie oferuje infrastrukturze stanu "Tworzenie", więc formantów ma zostać utworzony przy założeniu, że taki stan może być nieprawidłowy.  
+    -   Projekt na założeniu, że podczas projektowania czasu (to znaczy, gdy przy użyciu narzędzia do projektowania) jest typowe dla szablonu kontrolki, być niekompletna. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie oferuje "Tworzenie" infrastruktury stanu, więc kontrolki ma zostać utworzony przy założeniu, że taki stan może być nieprawidłowa.  
   
-    -   Nie zgłaszają wyjątki, gdy dowolnego aspektu kontrakt szablonu nie jest zakończony. Wzdłuż te wiersze panele nie powinien zgłosić wyjątków, jeśli ma zbyt wiele lub zbyt mało elementów podrzędnych.  
+    -   Nie zgłaszają wyjątki, gdy nie występuje każdego aspektu kontrakt szablonu. Wzdłuż tych wierszy panele nie powinna zgłaszać wyjątków, ma zbyt wiele lub zbyt mało elementów podrzędnych.  
   
--   **Współczynnik funkcji urządzeń peryferyjnych do elementów pomocnika szablonu.** Każdej kontrolki powinny być koncentruje się na jego podstawową funkcjonalność i wartości true oferty i zdefiniowanych przez użycie wspólnej formantu. W tym celu, użyj elementy kompozycja i pomocnika w ramach szablonu, aby włączyć peryferyjne zachowania i wizualizacji, oznacza to, te zachowania i wizualizacje, które nie przyczyniają się do podstawowych funkcji formantu. Elementy pomocnika dzielą się na trzy kategorie:  
+-   **Współczynnik dodatkowa funkcjonalność na elementy pomocnika szablonu.** Każdy formant powinien być koncentruje się na jej podstawowe funkcje i korzyści true i zdefiniowane przez wspólne użycie formantu. W tym celu, za pomocą elementów kompozycji i pomocnicze w ramach szablonu Aby włączyć peryferyjne zachowań i wizualizacje, oznacza to, te zachowania i wizualizacje, które nie przyczyniają się do podstawowych funkcji formantu. Pomocnik elementy można podzielić na trzy kategorie:  
   
-    -   **Autonomiczny** pomocnika typy publiczne i wielokrotnego użytku formantów lub podstawowych, które są używane "anonimowo" w szablonie, co oznacza, że element pomocnika ani formantu nie są znane innych. Z technicznego punktu widzenia dowolny element może być typu anonimowego, ale w tym kontekście termin opisano te typy, które hermetyzują funkcje specjalne na potrzeby scenariuszy z docelowej.  
+    -   **Autonomiczny** pomocnika typy są formanty wielokrotnego użytku, jak i publicznych lub podstawowych, które są używane "anonimowo" w szablonie, co oznacza, że element pomocnika ani formant ze stylem pamiętać innych. Technicznie rzecz biorąc każdy element może być typu anonimowego, ale w tym kontekście pojęcie zawiera opis tych typów, które hermetyzują wyspecjalizowane funkcje określonych scenariuszach.  
   
-    -   **Na podstawie typu** pomocnika elementy są nowe typy, które zapewniają funkcje specjalne. Elementy te są zwykle projektowane mniejszego zakresu funkcji niż typowych formantów lub w nim elementów podstawowych. W odróżnieniu od elementów pomocnika autonomiczny na podstawie typu pomocnika elementy są znane kontekst, w którym są używane i zwykle musi udostępniać dane kontroli, do których szablon należą.  
+    -   **Na podstawie typu** pomocnika elementy są nowe typy, które hermetyzują funkcje specjalne. Te elementy zazwyczaj są skonstruowane z mniejszego zakresu funkcji niż wspólnych formantów albo pierwotnych. W odróżnieniu od elementów pomocnika autonomicznych elementy na podstawie typu pomocnika świadomość kontekst, w którym są używane i zazwyczaj musi udostępniać dane za pomocą kontrolki, do którego szablon należą.  
   
-    -   **O nazwie** pomocnika elementy są typowe formanty lub podstawowych, które oczekuje formantu można znaleźć w jego szablonu na podstawie nazwy. Te elementy znajdują się dobrze znanej nazwy w szablonie, umożliwiając formantu można znaleźć elementu i korzystać z niego programowo. Może istnieć tylko jeden element o podanej nazwie w szablonie.  
+    -   **O nazwie** pomocnika elementy są wspólnych formantów lub elementów podstawowych, które kontrolki spodziewa się znaleźć w jej szablonie w według nazwy. Te elementy są podane dobrze znaną nazwą w szablonie, dzięki czemu można kontrolki można znaleźć elementu i korzystać z niego programowo. Może istnieć tylko jeden element o podanej nazwie w szablonie.  
   
-     W poniższej tabeli przedstawiono elementy pomocnika zatrudnieni przez stylów formantu dzisiaj (Ta lista nie jest wyczerpująca):  
+     W poniższej tabeli przedstawiono elementy pomocnika przez style kontrolki już dziś (Ta lista nie jest wyczerpująca):  
   
     |Element|Typ|Używane przez|  
     |-------------|----------|-------------|  
@@ -69,55 +69,55 @@ Ten dokument zawiera podsumowanie zestawu najlepszych rozwiązań, które należ
     |<xref:System.Windows.Controls.TextBox>|o nazwie|<xref:System.Windows.Controls.ComboBox>|  
     |<xref:System.Windows.Controls.Primitives.TickBar>|Na podstawie typu|<xref:System.Windows.Controls.Slider>|  
   
--   **Minimalizowanie wymaganych powiązań określone przez użytkownika lub ustawienia właściwości w elementach Pomocnika**. Jest typowe dla elementu pomocnika wymagające prawidłowego działania w szablonie kontroli niektórych powiązań lub ustawienia właściwości. Element pomocnika i kontrolki z szablonem ile to możliwe, należy ustanowić te ustawienia. Podczas ustawiania właściwości lub ustanawiania powiązań, ostrożność nie zastąpić wartościami ustawionymi przez użytkownika. Najlepsze rozwiązania w zakresie określonym są następujące:  
+-   **Minimalizuj wymaganych powiązań określone przez użytkownika lub ustawień właściwości dla elementów Pomocnika**. Bardzo często element pomocnika wymagać pewnych powiązania lub ustawień właściwości, aby działać prawidłowo w szablonie kontrolki. Element pomocnika i formant z szablonem w miarę możliwości, ustanowić te ustawienia. Podczas ustawiania właściwości lub ustanawiania powiązań, należy z rozwagą do nie zastępują wartości ustawione przez użytkownika. Najlepsze rozwiązania specyficzne są następujące:  
   
-    -   Pomocnik nazwanych elementów powinny zostać zidentyfikowane na podstawie nadrzędnego i nadrzędnego należy określić wszystkie wymagane ustawienia w elemencie pomocnika.  
+    -   Elementy o nazwie pomocnika byli definiowani przez nadrzędne i element nadrzędny, należy określić wszystkie wymagane ustawienia w elemencie pomocnika.  
   
-    -   Elementy na podstawie typu pomocnika należy określić wszystkie wymagane ustawienia bezpośrednio na siebie. W ten sposób mogą wymagać element pomocnika do zapytania informacje kontekstu, w którym jest on używany, łącznie z jej `TemplatedParent` (typu formantu szablon, w którym jest używany). Na przykład <xref:System.Windows.Controls.ContentPresenter> automatycznie wiąże `Content` właściwość jego `TemplatedParent` do jego <xref:System.Windows.Controls.ContentPresenter.Content%2A> właściwości, gdy są używane w <xref:System.Windows.Controls.ContentControl> typu pochodnego.  
+    -   Elementy na podstawie typu pomocnika należy określić wszystkie wymagane ustawienia bezpośrednio na siebie. W ten sposób mogą wymagać od element pomocnika do wykonywania zapytań w kontekście informacji, w którym jest on używany, łącznie z jego `TemplatedParent` (typu formantu szablonu, w którym jest używana). Na przykład <xref:System.Windows.Controls.ContentPresenter> automatycznie wiąże `Content` właściwość jego `TemplatedParent` do jego <xref:System.Windows.Controls.ContentPresenter.Content%2A> właściwości, gdy są używane w <xref:System.Windows.Controls.ContentControl> typu pochodnego.  
   
-    -   Nie można zoptymalizować autonomiczny pomocnika elementów w ten sposób, ponieważ, zgodnie z definicją element pomocnika ani nadrzędnego nie wie o innych.  
+    -   Nie można zoptymalizować autonomiczny pomocnika elementów w ten sposób, ponieważ, zgodnie z definicją, element pomocnika ani element nadrzędny nie wie o innych.  
   
--   **Użyj właściwości Name elementy flagi w ramach szablonu**. Należy to zrobić formant, który musi znaleźć elementu w jego styl celu programowy dostęp przy użyciu `Name` właściwości i `FindName` modelu. Formant nie powinien zgłosić wyjątek, jeśli element nie został znaleziony, lecz dyskretnie i bezpiecznie wyłączyć funkcję, która wymagane tego elementu.  
+-   **Użyj właściwości nazwy elementów flagi w szablonie**. Należy to zrobić formant, który musi znaleźć elementu w jego styl, aby programowo uzyskać dostęp za pomocą `Name` właściwości i `FindName` modelu. Kontrolki nie powinien zgłosić wyjątek, jeśli element nie zostanie znaleziony, ale dyskretnie i bez problemu zmieniała wyłączać funkcje, które wymagane tego elementu.  
   
--   **Należy stosować najlepsze rozwiązania dla wyrażania stanu kontroli i zachowanie w stylu.** Oto uporządkowaną listę najlepsze rozwiązania dotyczące wyrażanie kontroli zmian stanu i zachowanie w stylu. Należy użyć pierwszego elementu listy, która umożliwia danego scenariusza.  
+-   **Należy stosować najlepsze rozwiązania dla wyrażania stan formantu i zachowanie w stylu.** Oto najlepsze rozwiązania dotyczące wyrażające kontroli zmian stanu i zachowanie w stylu listy uporządkowanej. Należy użyć pierwszego elementu na liście, która umożliwia Twojemu scenariuszowi.  
   
     1.  Powiązania właściwości. Przykład: powiązanie między <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType> i <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>.  
   
-    2.  Zmiany właściwości wyzwalanych lub właściwości animacji. Przykład: hover stan <xref:System.Windows.Controls.Button>.  
+    2.  Wyzwalane, zmiany właściwości lub animacje tej właściwości. Przykład: Umieść stan <xref:System.Windows.Controls.Button>.  
   
-    3.  Polecenie. Przykład: <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand>  /  <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand> w <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+    3.  polecenie. Przykład: <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand>  /  <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand> w <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
     4.  Elementy pomocnika autonomicznych. Przykład: <xref:System.Windows.Controls.Primitives.TabPanel> w <xref:System.Windows.Controls.TabControl>.  
   
-    5.  Typy oparte na typie pomocnika. Przykład: <xref:System.Windows.Controls.ContentPresenter> w <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Primitives.TickBar> w <xref:System.Windows.Controls.Slider>.  
+    5.  Typy na podstawie typu pomocnika. Przykład: <xref:System.Windows.Controls.ContentPresenter> w <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Primitives.TickBar> w <xref:System.Windows.Controls.Slider>.  
   
-    6.  Nazwy elementów pomocnika. Przykład: <xref:System.Windows.Controls.TextBox> w <xref:System.Windows.Controls.ComboBox>.  
+    6.  Elementy o nazwie pomocnika. Przykład: <xref:System.Windows.Controls.TextBox> w <xref:System.Windows.Controls.ComboBox>.  
   
-    7.  Przepuszcza zdarzenia z typów o nazwie pomocnika. Nasłuchiwać przepuszcza zdarzeń z elementu style, należy wymagać, aby element generowania zdarzenia można unikatowo zidentyfikować. Przykład: <xref:System.Windows.Controls.Primitives.Thumb> w <xref:System.Windows.Controls.ToolBar>.  
+    7.  Przetwarzane zdarzenia z typów o nazwie pomocnika. Nasłuchiwania przetwarzane zdarzenia z elementu stylu należy wymagać, że element generowania zdarzenia można unikatowo zidentyfikować. Przykład: <xref:System.Windows.Controls.Primitives.Thumb> w <xref:System.Windows.Controls.ToolBar>.  
   
     8.  Niestandardowe `OnRender` zachowanie. Przykład: <xref:Microsoft.Windows.Themes.ButtonChrome> w <xref:System.Windows.Controls.Button>.  
   
--   **Oszczędnie korzystać wyzwalaczy styl (w przeciwieństwie do szablonu usługi wyzwalaczy)**. Wyzwalacze, które mają wpływ na właściwości elementów w szablonie musi zostać zadeklarowany w szablonie. Wyzwalacze, które mają wpływ na właściwości formantu (nie `TargetName`) może zadeklarowany w stylu, jeśli nie wiadomo, że zmiana szablonu należy także zniszczyć wyzwalacza.  
+-   **Oszczędnie korzystać styl Wyzwalacze (w przeciwieństwie do wyzwalaczy szablonu)**. Wyzwalacze, które mają wpływ na właściwości elementów w szablonie musi być zadeklarowany w szablonie. Wyzwalacze, które mają wpływ na właściwości kontrolki (nie `TargetName`) może być zadeklarowana w stylu, jeśli nie masz pewności, że zmiana szablonu powinny również zniszczyć wyzwalacza.  
   
--   **Być zgodne z istniejących wzorców style.** Wiele razy istnieje wiele sposobów, aby rozwiązać problem. Należy pamiętać o i, jeśli możliwe, zgodnie z istniejącym Kontrola Wzorce style. Jest to szczególnie ważne dla formantów, które pochodzą z tego samego typu podstawowego (na przykład <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>i tak dalej).  
+-   **Być zgodne z istniejących wzorców stylów.** Wiele razy, istnieje wiele sposobów, aby rozwiązać problem. Należy pamiętać o, a gdy możliwe, zgodnie z istniejącymi kontrolować wzorców stylów. Jest to szczególnie ważne dla formantów, które wynikają z tego samego typu podstawowego (na przykład <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>i tak dalej).  
   
--   **Udostępnianie właściwości, aby umożliwić typowe scenariusze dostosowywania bez retemplating**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie obsługuje części podłączany/dostosowania, więc użytkownik formantu pozostaje tylko dwóch metod dostosowywania: Ustawianie właściwości bezpośrednio lub ustawiania właściwości za pomocą stylów. Z tym pamiętać należy do ograniczonej liczby właściwości celem scenariusze dostosowywania często, o wysokim priorytecie, które w przeciwnym razie będzie wymagać retemplating powierzchni. Poniżej przedstawiono najlepsze rozwiązania dotyczące kiedy i jak włączyć Dostosowywanie scenariusze:  
+-   **Udostępnianie właściwości w celu włączenia typowych scenariuszy dostosowywania bez retemplating**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie obsługuje podłączanych/dostosowywalne części, więc użytkownik pozostanie za pomocą dwóch metod dostosowywania: Ustawianie właściwości bezpośrednio lub ustawianie właściwości przy użyciu stylów. Mając to na uwadze należy do ograniczonej liczby właściwości przeznaczona dla scenariuszy dostosowywania bardzo popularne, o wysokim priorytecie, które w przeciwnym razie wymagałoby retemplating powierzchni. Poniżej przedstawiono najlepsze rozwiązania dotyczące czasu i sposobu dostosowywania scenariuszy:  
   
-    -   Często dostosowania powinny być widoczne jako właściwości w formancie i używane przez szablon.  
+    -   Bardzo często dostosowania powinien być widoczne jako właściwości kontrolki i używane przez szablon.  
   
-    -   Dostosowywanie mniej typowe (choć nie rzadki przypadek) powinny być widoczne jako dołączone właściwości i używane przez szablon.  
+    -   Dostosowania mniej typowe (choć nie rzadkiego) powinien być widoczne jako dołączone właściwości i używane przez szablon.  
   
     -   Jest możliwa do dostosowania znane, ale rzadko wymagają retemplating.  
   
 <a name="Theme_Considerations"></a>   
 ## <a name="theme-considerations"></a>Zagadnienia dotyczące motywu  
   
--   **Style kompozycji powinien próbować ma semantyki właściwości spójna we wszystkich tematów, ale wprowadzać żadnej gwarancji**. W ramach jego dokumentacji formantu powinna mieć opisujący semantyki właściwości formantu, czyli "znaczenie" właściwości formantu. Na przykład <xref:System.Windows.Controls.ComboBox> kontroli należy zdefiniować znaczenie <xref:System.Windows.Controls.Control.Background%2A> właściwości <xref:System.Windows.Controls.ComboBox>. Domyślne style dla formantu powinien próbować wykonaj semantyki zdefiniowane w tym dokumencie we wszystkich tematów. Z drugiej strony, użytkownicy sterowania należy zwrócić uwagę, że semantyki właściwość można zmienić motyw motywu. W niektórych przypadkach dana właściwość nie może być można wyrazić w obszarze ograniczenia visual wymagane przez wybranego motywu. (Na przykład klasyczny, nie ma obramowanie jeden do którego `Thickness` można zastosować wiele formantów.)  
+-   **Style motyw powinien próbować mieć właściwość spójną semantykę we wszystkie motywy, ale także wprowadzać żadnej gwarancji**. W ramach jego dokumentacji formant powinien mieć dokument z opisem semantyki właściwości formantu, czyli "rozumieniu" właściwości kontrolki. Na przykład <xref:System.Windows.Controls.ComboBox> kontroli należy zdefiniować znaczenia <xref:System.Windows.Controls.Control.Background%2A> właściwość w ramach <xref:System.Windows.Controls.ComboBox>. Domyślne style kontrolki powinien próbować postępuj zgodnie z semantyką zdefiniowane w tym dokumencie, we wszystkich tematów. Użytkownicy sterowania z drugiej strony, warto wiedzieć, semantyka właściwość można zmienić motyw motywu. W niektórych przypadkach dana właściwość nie może być można wyrazić w obszarze visual ograniczenia wymagane przez wybranego motywu. (Na przykład na klasyczny, nie ma pojedynczego obramowania, do którego `Thickness` może odnosić się do wielu formantów.)  
   
--   **Style kompozycji nie trzeba ma semantyki wyzwalacza spójna we wszystkich tematów**. Zachowanie udostępnione przez styl formantu za pomocą wyzwalaczy lub animacje mogą się różnić motywu motywu. Użytkownicy sterowania należy zwrócić uwagę, że formant może będzie zawiera ten sam mechanizm do osiągnięcia określone zachowanie we wszystkich tematów. Jeden motywu, na przykład może używać animacji Express zachowanie hover których innego motywu używa wyzwalacza. Może to spowodować niespójności w zachowywania zachowanie dla kontrolek niestandardowych. (Zmiana właściwości tła na przykład może nie mieć wpływ na stan aktywowanego formantu Jeśli ten stan jest wyrażona za pomocą wyzwalacza. Jednak jeśli stan aktywowanego jest implementowane za pomocą animacji, zmiana na tle może nieodwracalnemu spowodować przerwanie animacji i dlatego zmiany stanu.)  
+-   **Style motyw nie trzeba mieć wyzwalacz spójną semantykę we wszystkie motywy**. Zachowanie udostępnianych przez stylu formantu, za pomocą wyzwalaczy lub animacje mogą się różnić motyw motywu. Kontroli użytkowników należy pamiętać, że formantu nie zawsze przydają się ten sam mechanizm do osiągnięcia określone zachowanie we wszystkie motywy. Jeden motywu, na przykład, może używać animacji do wyrażenia zachowania po wskazaniu wskaźnikiem gdzie innego motywu używa wyzwalacza. Może to spowodować niespójności w konserwacji zachowanie kontrolek niestandardowych. (Zmiana wartości właściwości w tle, na przykład nie wpływać na stan aktywowanego kontrolki Jeśli ten stan jest wyrażany za pomocą wyzwalacza. Jednak jeśli stan aktywowanego jest wdrażane za pomocą animacji, zmiana w tle może nieodwracalnemu spowodować przerwanie animacji i dlatego przejście stanu.)  
   
--   **Style kompozycji nie trzeba ma semantykę spójnego "układu" we wszystkich tematów**. Na przykład domyślny styl nie trzeba zagwarantować, czy formant będzie zajmować tego samego rozmiaru w wszystkich tematów lub gwarantuje, że formant tej samej zawartości marginesy / dopełnienie we wszystkich tematów.  
+-   **Style motyw musi mieć semantyki spójnego "układu" między wszystkie motywy**. Na przykład domyślny styl nie musi zagwarantować, że kontrolka będzie zajmować tego samego rozmiaru w wszystkie motywy lub gwarantuje, że kontrolka będzie miała ten sam marginesy zawartości / dopełnienie we wszystkich tematów.  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Tworzenie kontrolek — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Tworzenie kontrolek — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

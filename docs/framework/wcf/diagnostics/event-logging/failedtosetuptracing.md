@@ -2,25 +2,25 @@
 title: FailedToSetupTracing
 ms.date: 03/30/2017
 ms.assetid: dd61db93-4687-4832-8dc9-99e38fa83671
-ms.openlocfilehash: bd465e15887a4a2da8986ff5757eb147183d4bd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe223bbc3d9a20edfc1ee32032b647913c9faf0f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33471992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533393"
 ---
 # <a name="failedtosetuptracing"></a>FailedToSetupTracing
-Identyfikator: 100  
+Id: 100  
   
- Ważność: błąd  
+ Ważność: Błąd  
   
- Kategoria: śledzenie  
+ Kategoria: Śledzenie  
   
 ## <a name="description"></a>Opis  
  Próba ustawienia śledzenia nie powiodła się. Śledzenie jest wyłączone.  
   
- Zdarzenie zawiera wyjątek, nazwa procesu i identyfikatora procesu.  
+ Zdarzenie Wyświetla listę wyjątków, nazwa procesu i identyfikatora procesu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

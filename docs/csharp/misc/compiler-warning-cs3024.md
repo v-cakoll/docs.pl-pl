@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CS3024
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
-ms.openlocfilehash: 5d8781117b80dbebe6a01488b8bd66feb12d3e3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e49c131328f132ae6372167818d084df51ef6c78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511558"
 ---
 # <a name="compiler-warning-cs3024"></a>CS3024 ostrzeżenia kompilatora
 Typ ograniczenia "type" nie jest zgodny ze specyfikacją CLS.  
@@ -55,6 +55,6 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Ograniczenia dotyczące parametrów typu](../../csharp/programming-guide/generics/constraints-on-type-parameters.md)

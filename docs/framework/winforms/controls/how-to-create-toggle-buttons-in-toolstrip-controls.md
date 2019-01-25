@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie przycisków przełączania w formantach ToolStrip'
+title: 'Instrukcje: Tworzenie przycisków przełączania w formantach ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
-ms.openlocfilehash: a04d531433273328c2d8eb0c5ef614f08c33952a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 723916eb0c1e242df301c49bf0716e0262a3ba42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614981"
 ---
-# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Porady: tworzenie przycisków przełączania w formantach ToolStrip
-Gdy użytkownik kliknie przycisk przełącznika, pojawi się zapadnięta i zachowuje zapadnięta wygląd, dopóki użytkownik kliknie przycisk ponownie.  
+# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Instrukcje: Tworzenie przycisków przełączania w formantach ToolStrip
+Gdy użytkownik kliknie przycisk przełączania, pojawi się wklęsłą i zachowuje wklęsłą wygląd, dopóki użytkownik kliknie przycisk ponownie.  
   
 ### <a name="to-create-a-toggling-toolstripbutton"></a>Aby utworzyć toggling element ToolStripButton  
   
--   Użyj kodu, takie jak w poniższym przykładzie kodu. Ten kod przyjęto założenie, że formularz zawiera <xref:System.Windows.Forms.ToolStrip> kontroli, a jego <xref:System.Windows.Forms.ToolStrip.Items%2A> kolekcja zawiera <xref:System.Windows.Forms.ToolStripButton> o nazwie `toolStripButton1`. Założono również, że masz wywołuje program obsługi zdarzeń `toolStripButton1_CheckedChanged`.  
+-   Należy użyć kodu takiego jak w poniższym przykładzie kodu. Ten kod zakłada, że formularz zawiera <xref:System.Windows.Forms.ToolStrip> kontroli, a jego <xref:System.Windows.Forms.ToolStrip.Items%2A> kolekcja zawiera <xref:System.Windows.Forms.ToolStripButton> o nazwie `toolStripButton1`. Zakłada również, że masz program obsługi zdarzeń wywołuje `toolStripButton1_CheckedChanged`.  
   
     ```vb  
     toolStripButton1.CheckOnClick = True  
@@ -35,6 +35,6 @@ Gdy użytkownik kliknie przycisk przełącznika, pojawi się zapadnięta i zacho
     EventHandler(toolStripButton1_CheckedChanged);  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.ToolStripButton>  
- [ToolStrip, kontrolka — omówienie](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.ToolStripButton>
+- [ToolStrip, kontrolka — omówienie](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

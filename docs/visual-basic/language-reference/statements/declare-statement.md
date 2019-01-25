@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 343ee168809fc63ef63559eda0fd018abde684e7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 186238d8e823f028caaed2e2618d882d21e1358f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548953"
 ---
 # <a name="declare-statement"></a>Declare — Instrukcja
 Deklaruje odwołanie do procedury zaimplementowanej w zewnętrznym pliku.  
@@ -59,9 +59,9 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`charsetmodifier`|Opcjonalna. Określa zestaw znaków i plik wyszukiwania informacji. Może to być jeden z następujących elementów:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (ustawienie domyślne)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Automatycznie](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|Opcjonalne, ale albo `Sub` lub `Function` musi znajdować się. Wskazuje, że procedura zewnętrzna nie zwraca wartości.|  
 |`Function`|Opcjonalne, ale albo `Sub` lub `Function` musi znajdować się. Wskazuje, że procedura zewnętrzna, zwraca wartość.|  
-|`name`|Wymagane. Nazwa tego odwołania zewnętrznego. Aby uzyskać więcej informacji, zobacz [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Deklarowane nazwy elementów).|  
-|`Lib`|Wymagane. Wprowadza `Lib` klauzula, która identyfikuje zewnętrzny plik (DLL lub zasób kodu) zawierający zewnętrzną procedurę.|  
-|`libname`|Wymagane. Nazwa pliku, który zawiera zadeklarowanej procedury.|  
+|`name`|Wymagana. Nazwa tego odwołania zewnętrznego. Aby uzyskać więcej informacji, zobacz [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Deklarowane nazwy elementów).|  
+|`Lib`|Wymagana. Wprowadza `Lib` klauzula, która identyfikuje zewnętrzny plik (DLL lub zasób kodu) zawierający zewnętrzną procedurę.|  
+|`libname`|Wymagana. Nazwa pliku, który zawiera zadeklarowanej procedury.|  
 |`Alias`|Opcjonalna. Wskazuje, że procedura deklarowanej nie identyfikowany w jego pliku według nazwy określonej w `name`. Należy określić jego identyfikacji w `aliasname`.|  
 |`aliasname`|Wymagane w przypadku użycia `Alias` — słowo kluczowe. Ciąg, który identyfikuje procedurę opisaną w jeden z dwóch sposobów:<br /><br /> Nazwa punktu wejścia procedury w jego pliku w cudzysłowie (`""`)<br /><br /> —lub—<br /><br /> Znak numeru (`#`) następuje całkowitą określającą liczbę porządkową punktu wejścia procedury w ramach jego pliku|  
 |`parameterlist`|Wymagane, jeśli parametry przyjmowane przez procedurę. Zobacz [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
@@ -124,7 +124,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
     -   Na platformie Unicode, takich jak Windows NT, Windows 2000 lub Windows XP Pierwsze spojrzenie procedura zewnętrzna, bez żadnych modyfikacji nazwy. W przypadku niepowodzenia dołączenia "W" na końcu zewnętrzną procedurę nazwę i wyszukaj ją ponownie.  
   
--   **Mechanizm.** Visual Basic używa programu .NET Framework *wywołania platformy* (funkcja PInvoke) mechanizm rozwiązywania i dostęp do zewnętrznej procedury. `Declare` Instrukcji i <xref:System.Runtime.InteropServices.DllImportAttribute> klasy zarówno automatycznie używać tego mechanizmu, a nie potrzebujesz żadnej wiedzy PInvoke. Aby uzyskać więcej informacji, zobacz [wskazówki: wywoływanie Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+-   **Mechanizm.** Visual Basic używa programu .NET Framework *wywołania platformy* (funkcja PInvoke) mechanizm rozwiązywania i dostęp do zewnętrznej procedury. `Declare` Instrukcji i <xref:System.Runtime.InteropServices.DllImportAttribute> klasy zarówno automatycznie używać tego mechanizmu, a nie potrzebujesz żadnej wiedzy PInvoke. Aby uzyskać więcej informacji, zobacz [instruktażu: Wywoływanie Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
 >  Jeśli procedura zewnętrzna działa poza środowisko uruchomieniowe języka wspólnego (CLR), to *kod niezarządzany*. Podczas wywoływania takiej procedury, na przykład funkcji Win32 API lub metodę modelu COM może narazić aplikację na zagrożenia bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [bezpiecznego kodowania wytyczne dla niezarządzanego kodu](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
@@ -141,12 +141,12 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Lista parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Call, instrukcja](../../../visual-basic/language-reference/statements/call-statement.md)  
- [Przewodnik: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
+- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Lista parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Call, instrukcja](../../../visual-basic/language-reference/statements/call-statement.md)
+- [Przewodnik: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

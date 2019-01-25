@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Tworzenie gniazda'
+title: 'Instrukcje: Tworzenie gniazda'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 2c3bfb6435901ac8154bc801ae2a420b252d5849
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e8f90d2a9e2f2e4bef8d1ab360bfe677bd2bf695
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589704"
 ---
-# <a name="how-to-create-a-socket"></a>Porady: Tworzenie gniazda
+# <a name="how-to-create-a-socket"></a>Instrukcje: Tworzenie gniazda
 Zanim użyjesz gniazda do komunikowania się z urządzeniami zdalnymi gniazda musi zostać zainicjowany z informacjami o adresie protokołu i sieci. Konstruktor <xref:System.Net.Sockets.Socket> klasa ma parametry, które określają rodziny adresów, typ gniazda i typ protokołu, który gniazda używa do nawiązywania połączeń.  
   
 ## <a name="example"></a>Przykład  
@@ -60,6 +60,6 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
   
  Po **gniazda** jest utworzone, jego można inicjować połączenie w celu zdalnego punktu końcowego lub odbierania połączeń z urządzeniami zdalnymi.  
   
-## <a name="see-also"></a>Zobacz też  
- [Używanie gniazd klientów](../../../docs/framework/network-programming/using-client-sockets.md)  
- [Nasłuchiwanie przy użyciu gniazd](../../../docs/framework/network-programming/listening-with-sockets.md)
+## <a name="see-also"></a>Zobacz także
+- [Używanie gniazd klientów](../../../docs/framework/network-programming/using-client-sockets.md)
+- [Nasłuchiwanie przy użyciu gniazd](../../../docs/framework/network-programming/listening-with-sockets.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70d2d4ed0d2b923b1095fd0ce898330c319fa5cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637375"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType — Wyliczenie
 Określa, jak obiekt jest serializowany przez środowisko uruchomieniowe języka wspólnego.  
@@ -60,32 +60,32 @@ typedef enum CorSerializationType {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`SERIALIZATION_TYPE_UNDEFINED`|Serializacja obiektu nie jest zdefiniowana.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Serializowany jest obiekt jako typ Boolean|  
-|`SERIALIZATION_TYPE_CHAR`|Serializowany jest obiekt jako typ znaków.|  
-|`SERIALIZATION_TYPE_I1`|Serializowany jest obiekt jako całkowita 1-bajtowego.|  
-|`SERIALIZATION_TYPE_U1`|Serializowany jest obiekt jako liczba całkowita bez znaku 1-bajtowego.|  
-|`SERIALIZATION_TYPE_I2`|Serializowany jest obiekt jako całkowita 2-bajtowych.|  
-|`SERIALIZATION_TYPE_U2`|Serializowany jest obiekt jako liczba całkowita bez znaku 2-bajtowych.|  
-|`SERIALIZATION_TYPE_I4`|Serializowany jest obiekt jako 4-bajtowych liczbę całkowitą ze znakiem.|  
-|`SERIALIZATION_TYPE_U4`|Serializowany jest obiekt jako liczba całkowita bez znaku 4-bajtowych.|  
-|`SERIALIZATION_TYPE_I8`|Serializowany jest obiekt jako całkowita 8-bajtowych.|  
-|`SERIALIZATION_TYPE_U8`|Serializowany jest obiekt jako liczba całkowita bez znaku 8-bajtowych.|  
-|`SERIALIZATION_TYPE_R4`|Serializowany jest obiekt jako 4-bajtowych zmiennoprzecinkowych.|  
-|`SERIALIZATION_TYPE_R8`|Serializowany jest obiekt jako 8-bajtowych wartości zmiennoprzecinkowych.|  
-|`SERIALIZATION_TYPE_STRING`|Serializowany jest obiekt jako typu System.String.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Serializowany jest obiekt jako jednowymiarowe, zero dolna granica tablicy.|  
-|`SERIALIZATION_TYPE_TYPE`|Serializowany jest obiekt jako typu ogólnego.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Jako obiekt oznakowanych serializowany jest obiekt.|  
-|`SERIALIZATION_TYPE_FIELD`|Serializowany jest obiekt jako pole.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Jako właściwość serializowany jest obiekt.|  
-|`SERIALIZATION_TYPE_ENUM`|Jako wyliczenie serializowany jest obiekt.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|Obiekt jest serializowany jako typu Boolean|  
+|`SERIALIZATION_TYPE_CHAR`|Obiekt jest serializowany jako typ znaku.|  
+|`SERIALIZATION_TYPE_I1`|Obiekt jest serializowany jako liczba całkowita ze znakiem 1-bajtowe.|  
+|`SERIALIZATION_TYPE_U1`|Obiekt jest serializowany jako liczba całkowita bez znaku 1-bajtowe.|  
+|`SERIALIZATION_TYPE_I2`|Obiekt jest serializowany jako liczba całkowita ze znakiem 2-bajtowych.|  
+|`SERIALIZATION_TYPE_U2`|Obiekt jest serializowany jako liczba całkowita bez znaku 2-bajtowych.|  
+|`SERIALIZATION_TYPE_I4`|Obiekt jest serializowany jako liczbę całkowitą 4-bajtowych ze znakiem.|  
+|`SERIALIZATION_TYPE_U4`|Obiekt jest serializowany jako liczba całkowita bez znaku 4-bajtowe.|  
+|`SERIALIZATION_TYPE_I8`|Obiekt jest serializowany jako liczba całkowita 8-bajtowych ze znakiem.|  
+|`SERIALIZATION_TYPE_U8`|Obiekt jest serializowany jako liczba całkowita 8 bajtów bez znaku.|  
+|`SERIALIZATION_TYPE_R4`|Obiekt jest serializowany jako 4-bajtowych zmiennoprzecinkowych.|  
+|`SERIALIZATION_TYPE_R8`|Obiekt jest serializowany jako 8-bajtowych wartości zmiennoprzecinkowych.|  
+|`SERIALIZATION_TYPE_STRING`|Obiekt jest serializowany jako typ System.String.|  
+|`SERIALIZATION_TYPE_SZARRAY`|Obiekt jest serializowany jako jednowymiarowe, zerowego dolną granicę tablicy.|  
+|`SERIALIZATION_TYPE_TYPE`|Obiekt jest serializowany jako typu ogólnego.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Obiekt jest serializowany jako obiekt oznakowane.|  
+|`SERIALIZATION_TYPE_FIELD`|Obiekt jest serializowany jako pole.|  
+|`SERIALIZATION_TYPE_PROPERTY`|Obiekt jest serializowany jako właściwość.|  
+|`SERIALIZATION_TYPE_ENUM`|Obiekt jest serializowany jako wyliczenie.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

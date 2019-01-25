@@ -1,53 +1,53 @@
 ---
-title: Dostawca odbicia (usługi danych WCF)
+title: Dostawcy odbicia (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-ms.openlocfilehash: 3c6885ee7976461379513e8e579f58160146769a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12a23970b059e338df05a2f0b58ca67ad6fae6d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366011"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582568"
 ---
-# <a name="reflection-provider-wcf-data-services"></a>Dostawca odbicia (usługi danych WCF)
-Oprócz udostępnianie danych z modelu danych za pośrednictwem programu Entity Framework [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] mogą uwidaczniać ściśle nie jest zdefiniowany w modelu jednostki na podstawie danych. Dostawca odbicia udostępnia dane klas, które zwracają typów, które implementują <xref:System.Linq.IQueryable%601> interfejsu. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa odbicia do wywnioskowania modelu danych dla tych klas i może dokonywać translacji oparte na adresie zapytań względem zasobów na język kwerendy zintegrowanym (LINQ) — na podstawie zapytań dotyczących narażonych <xref:System.Linq.IQueryable%601> typów.  
+# <a name="reflection-provider-wcf-data-services"></a>Dostawcy odbicia (WCF Data Services)
+Oprócz udostępnianie danych z modelu danych przy użyciu platformy Entity Framework [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] mogą uwidocznić dane, które nie jest ściśle zdefiniowane w modelu opartego na jednostkę. Dostawca odbicia uwidacznia dane w klasach, które są zwracane typy, które implementują <xref:System.Linq.IQueryable%601> interfejsu. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa odbicia w celu model danych dla tych klas, a można przełożyć zapytania oparte na zasobach na zapytanie o języku zintegrowanym (LINQ)-na podstawie zapytań dotyczących narażonych <xref:System.Linq.IQueryable%601> typów.  
   
 > [!NOTE]
->  Można użyć <xref:System.Linq.Queryable.AsQueryable%2A> metodę, aby zwrócić <xref:System.Linq.IQueryable%601> każda klasa implementująca interfejs <xref:System.Collections.Generic.IEnumerable%601> interfejsu. Dzięki temu najbardziej ogólnym typy kolekcji do użycia jako źródło danych dla usługi danych.  
+>  Możesz użyć <xref:System.Linq.Queryable.AsQueryable%2A> metodę, aby zwrócić <xref:System.Linq.IQueryable%601> interfejsu od dowolnej klasy, która implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu. Dzięki temu najbardziej ogólnych typów kolekcji ma być używany jako źródło danych dla usługi danych.  
   
- Dostawca odbicia obsługuje hierarchie typu. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie usługi danych przy użyciu dostawcy odbicia](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
+ Dostawca odbicia obsługuje hierarchie typu. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi danych przy użyciu dostawcy odbicia](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
   
 ## <a name="inferring-the-data-model"></a>Wnioskowanie modelu danych  
- Podczas tworzenia usługi data dostawcy wnioskuje modelu danych przy użyciu odbicia. Na poniższej liście przedstawiono, jak dostawca odbicia wnioskuje modelu danych:  
+ Podczas tworzenia usługi danych, dostawcę wnioskuje modelu danych przy użyciu odbicia. Na poniższej liście przedstawiono, jak dostawcy odbicia wnioskuje modelu danych:  
   
--   Kontener jednostki — klasa, która udostępnia dane jako właściwości, które zwracają <xref:System.Linq.IQueryable%601> wystąpienia. Podczas adresowania model oparty na odbiciu danych kontenera jednostek reprezentuje katalog główny usługi. Klasa kontenera tylko jednego podmiotu jest obsługiwana dla danej przestrzeni nazw.  
+-   Kontener jednostek — klasa, która udostępnia dane jako właściwości, które zwracają <xref:System.Linq.IQueryable%601> wystąpienia. Podczas adresowania model danych oparty na odbiciu kontener jednostek reprezentuje katalog główny usługi. Tylko jedna jednostka klasy kontenera jest obsługiwana dla danego obszaru nazw.  
   
--   Ustawia jednostki — właściwości, które zwracają <xref:System.Linq.IQueryable%601> wystąpienia są traktowane jako zestawy jednostek. Zestawy jednostek są opisane bezpośrednio jako zasoby w zapytaniu. Tylko jedna właściwość w kontenerze obiektów, może zwrócić <xref:System.Linq.IQueryable%601> wystąpienia danego typu.  
+-   Zestawy jednostek - właściwości, które zwracają <xref:System.Linq.IQueryable%601> wystąpienia są traktowane jako zestawy jednostek. Zestawy jednostek są adresowane bezpośrednio jako zasoby w zapytaniu. Tylko jedna właściwość w kontenerze jednostki może zwrócić <xref:System.Linq.IQueryable%601> wystąpienia danego typu.  
   
--   Typy jednostek — typ `T` z <xref:System.Linq.IQueryable%601> czy zwraca zestaw jednostek. Klasy, które są częścią hierarchii dziedziczenia są tłumaczone przez dostawcę odbicia w hierarchii typów jednostek równoważne.  
+-   Typy jednostek — typ `T` z <xref:System.Linq.IQueryable%601> , zwraca zestaw jednostek. Klasy, które są częścią hierarchii dziedziczenia są tłumaczone przez dostawcę odbicia w hierarchii typów jednostek równoważne.  
   
--   Klucze jednostek - każdej klasy danych, który jest typem jednostki musi mieć właściwość klucza. Ta właściwość ma atrybut <xref:System.Data.Services.Common.DataServiceKeyAttribute> atrybutu (`[DataServiceKeyAttribute]`).  
+-   Klucze jednostek — każda klasa danych, który jest typem jednostki musi mieć właściwość klucza. Ta właściwość jest związana z <xref:System.Data.Services.Common.DataServiceKeyAttribute> atrybutu (`[DataServiceKeyAttribute]`).  
   
     > [!NOTE]
-    >  Stosuje tylko <xref:System.Data.Services.Common.DataServiceKeyAttribute> atrybutu do właściwości, która może służyć do unikatowego identyfikowania wystąpienia typu jednostki. Ten atrybut jest ignorowany, gdy jest stosowany do właściwości nawigacji.  
+    >  Należy zastosować tylko <xref:System.Data.Services.Common.DataServiceKeyAttribute> atrybutu z właściwością, który może służyć do unikatowego identyfikowania wystąpienia typu jednostki. Ten atrybut jest ignorowany, gdy jest stosowany do właściwości nawigacji.  
   
--   Właściwości typu jednostki - innych niż key jednostki dostawcy odbicia traktuje dostępny, — do indeksatora właściwości klasy, która jest typem jednostki w następujący sposób:  
+-   Właściwości typu jednostki — inne niż klucz jednostki dostawcy odbicia traktuje dostępny, niebędące indeksatorami właściwości klasy, która jest typem jednostki w następujący sposób:  
   
-    -   Jeśli właściwość zwraca typ pierwotny, następnie właściwość zakłada się, że właściwość typu jednostki.  
+    -   Jeśli właściwość zwraca typ pierwotny, właściwość jest przyjmowana przez właściwość typu jednostki.  
   
-    -   Jeśli właściwość zwraca typ, który jest również typem jednostki, następnie właściwość zakłada się, że właściwość nawigacji, która reprezentuje "jeden" koniec relację wiele do jednego czy jeden.  
+    -   Jeśli właściwość zwraca typ, który również jest typem jednostki, następnie właściwość jest zakłada się, że właściwość nawigacji, która reprezentuje "jeden" koniec relacji wiele do jednego czy jeden.  
   
-    -   Jeśli właściwość zwraca <xref:System.Collections.Generic.IEnumerable%601> typu jednostki, następnie właściwość zakłada się, że właściwość nawigacji, która reprezentuje stronie "wielu" relacji jeden do wielu lub wiele do wielu.  
+    -   Jeśli właściwość ta zwraca <xref:System.Collections.Generic.IEnumerable%601> typu jednostki, następnie właściwość zakłada się, że właściwość nawigacji, który reprezentuje "many" end relacji jeden do wielu lub wiele do wielu.  
   
-    -   Jeśli zwracany typ właściwości jest typem wartości, właściwość reprezentuje typ złożony.  
+    -   Jeśli zwracany typ właściwości to typ wartości, właściwość reprezentuje typ złożony.  
   
 > [!NOTE]
->  W przeciwieństwie do modelu danych jest oparty na modelu jednostki relacyjne modeli, które są oparte na dostawcy odbicia nie rozumie relacyjnej bazie danych. Należy używać programu Entity Framework do udostępnienia danych relacyjnych za pośrednictwem [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+>  W przeciwieństwie do modelu danych, który jest oparty na modelu relacyjnego jednostki modeli, które są oparte na dostawcy odbicia nie rozumieją, opartego na danych relacyjnych. Należy używać programu Entity Framework do udostępnienia danych relacyjnych za pośrednictwem [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
 ## <a name="data-type-mapping"></a>Mapowanie typu danych  
- W przypadku modelu danych jest wywnioskowany na podstawie klasy .NET Framework, typy pierwotne w modelu danych są mapowane na typy danych .NET Framework w następujący sposób:  
+ Gdy model danych jest wnioskowany z klas .NET Framework, typy pierwotne w modelu danych są mapowane na typy danych .NET Framework w następujący sposób:  
   
 |Typ danych .NET framework|Typ modelu danych|  
 |------------------------------|---------------------|  
@@ -66,33 +66,33 @@ Oprócz udostępnianie danych z modelu danych za pośrednictwem programu Entity 
 |<xref:System.String>|`Edm.String`|  
   
 > [!NOTE]
->  Typy dopuszczające wartości zerowe wartości .NET framework są mapowane na ten sam typ modelu danych jako odpowiednie typy wartości nie można przypisać wartości null.  
+>  Typy o wartości zerowalnej .NET framework są mapowane na te same typy danych w modelu, jako odpowiednie typy wartości nie można przypisać wartości null.  
   
 ## <a name="enabling-updates-in-the-data-model"></a>Włączenie aktualizacji w modelu danych  
- Aby zezwalać na aktualizacje, aby dane, które jest dostępne za pośrednictwem tego rodzaju modelu danych, dostawca odbicia definiuje <xref:System.Data.Services.IUpdatable> interfejsu. Ten interfejs powoduje, że usługa danych na temat sposobu utrwalić aktualizacje narażonych typów. Aby włączyć aktualizacje z zasobami, które są zdefiniowane przez model danych, musi implementować klasę kontenera jednostek <xref:System.Data.Services.IUpdatable> interfejsu. Na przykład implementacja <xref:System.Data.Services.IUpdatable> interfejsu, zobacz [porady: Tworzenie usługi danych przy użyciu składnika LINQ to SQL źródła danych](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
+ Aby zezwolić na aktualizacje danych, która jest dostępna za pośrednictwem tego rodzaju modelu danych, definiuje dostawcy odbicia <xref:System.Data.Services.IUpdatable> interfejsu. Ten interfejs powoduje, że usługi danych na temat sposobu utrwalić aktualizacje narażonych typów. Aby włączyć aktualizacje do zasobów, które są zdefiniowane w modelu danych, musi implementować klasy kontenera jednostki <xref:System.Data.Services.IUpdatable> interfejsu. Na przykład implementacja <xref:System.Data.Services.IUpdatable> interfejsu, zobacz [jak: Tworzenie usługi danych przy użyciu LINQ do SQL źródła danych](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
   
- <xref:System.Data.Services.IUpdatable> Interfejs wymaga się wykonanie następujących członków tak, aby aktualizacje mogą być przekazywane do źródła danych przy użyciu odbicia dostawcy:  
+ <xref:System.Data.Services.IUpdatable> Interfejsu wymaga, że następujące elementy członkowskie można zaimplementować tak, aby aktualizacje mogą być przekazywane do źródła danych przy użyciu dostawcy odbicia:  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|<xref:System.Data.Services.IUpdatable.AddReferenceToCollection%2A>|Udostępnia funkcje, które można dodać obiektu do kolekcji obiektów pokrewnych, które są dostępne z właściwości nawigacji.|  
-|<xref:System.Data.Services.IUpdatable.ClearChanges%2A>|Zawiera funkcję, która spowoduje anulowanie oczekujących zmian danych.|  
-|<xref:System.Data.Services.IUpdatable.CreateResource%2A>|Udostępnia funkcje umożliwiające tworzenie nowego zasobu w określonym kontenerze.|  
-|<xref:System.Data.Services.IUpdatable.DeleteResource%2A>|Udostępnia funkcję można usunąć zasobu.|  
-|<xref:System.Data.Services.IUpdatable.GetResource%2A>|Udostępnia funkcje, które można pobrać z zasobem, który jest identyfikowane przez nazwę zapytania i typu.|  
-|<xref:System.Data.Services.IUpdatable.GetValue%2A>|Udostępnia funkcje, które ma zostać zwrócona wartość właściwości zasobu.|  
-|<xref:System.Data.Services.IUpdatable.RemoveReferenceFromCollection%2A>|Udostępnia funkcje do usunięcia obiektu do kolekcji obiektów pokrewnych dostępne z właściwości nawigacji.|  
-|<xref:System.Data.Services.IUpdatable.ResetResource%2A>|Udostępnia funkcje, które można zaktualizować określonego zasobu.|  
-|<xref:System.Data.Services.IUpdatable.ResolveResource%2A>|Udostępnia funkcje umożliwiające zwrócił zasobu reprezentowanego przez wystąpienie określonego obiektu.|  
-|<xref:System.Data.Services.IUpdatable.SaveChanges%2A>|Udostępnia funkcję, aby zapisać wszystkie zmiany oczekujące.|  
-|<xref:System.Data.Services.IUpdatable.SetReference%2A>|Udostępnia funkcje, które można ustawić za pomocą właściwości nawigacji odwołania obiektu pokrewnego.|  
-|<xref:System.Data.Services.IUpdatable.SetValue%2A>|Udostępnia funkcje, które można ustawić wartości właściwości zasobu.|  
+|<xref:System.Data.Services.IUpdatable.AddReferenceToCollection%2A>|Oferuje funkcje, aby dodać obiekt do kolekcji powiązanych obiektów, które są dostępne z właściwością nawigacji.|  
+|<xref:System.Data.Services.IUpdatable.ClearChanges%2A>|Oferuje funkcje, który anuluje oczekujące zmiany w danych.|  
+|<xref:System.Data.Services.IUpdatable.CreateResource%2A>|Oferuje funkcje w celu utworzenia nowego zasobu w określonym kontenerze.|  
+|<xref:System.Data.Services.IUpdatable.DeleteResource%2A>|Oferuje funkcje, które można usunąć zasobu.|  
+|<xref:System.Data.Services.IUpdatable.GetResource%2A>|Oferuje funkcje, które można pobrać z zasobem, który jest identyfikowany przez nazwę zapytania i typu.|  
+|<xref:System.Data.Services.IUpdatable.GetValue%2A>|Zapewnia funkcje zwracają wartość właściwości zasobu.|  
+|<xref:System.Data.Services.IUpdatable.RemoveReferenceFromCollection%2A>|Oferuje funkcje, aby usunąć obiekt kolekcji powiązanych obiektów dostępne z właściwością nawigacji.|  
+|<xref:System.Data.Services.IUpdatable.ResetResource%2A>|Oferuje funkcje, które można zaktualizować określonego zasobu.|  
+|<xref:System.Data.Services.IUpdatable.ResolveResource%2A>|Zapewnia funkcje zwracają zasobu, który jest reprezentowany przez wystąpienie określonego obiektu.|  
+|<xref:System.Data.Services.IUpdatable.SaveChanges%2A>|Oferuje funkcje, aby zapisać wszystkie oczekujące zmiany.|  
+|<xref:System.Data.Services.IUpdatable.SetReference%2A>|Oferuje funkcje, aby ustawić odwołanie do obiektu pokrewnego przy użyciu właściwości nawigacji.|  
+|<xref:System.Data.Services.IUpdatable.SetValue%2A>|Oferuje funkcje, które można ustawić wartości właściwości zasobu.|  
   
 ## <a name="handling-concurrency"></a>Obsługa współbieżności  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje model optymistycznej współbieżności, umożliwiając zdefiniowanie tokenem współbieżności dla jednostki. Ten token współbieżności, który zawiera co najmniej jednej właściwości jednostki, jest używany przez usługę danych do określenia, czy w danych, który jest wymagany, zaktualizowanych lub usuniętych nastąpiła zmiana. Gdy wartości tokenu z elementem eTag w żądaniu różnią się od bieżących wartości podmiotu, wyjątek zgłoszony przez usługę danych. <xref:System.Data.Services.ETagAttribute> Jest stosowany do typu jednostki, aby zdefiniować tokenem współbieżności w dostawcy odbicia. Token współbieżności nie może zawierać właściwości klucza lub właściwości nawigacji. Aby uzyskać więcej informacji, zobacz [aktualizacji usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje model optymistycznej współbieżności, umożliwiając Definiowanie tokenem współbieżności dla jednostki. Ten token współbieżności, który zawiera jedną lub więcej właściwości jednostki, jest używany przez usługę danych do określenia, czy nastąpiła zmiana w danych, która jest wymagana, zaktualizowanych lub usuniętych. Gdy token wartości z elementu eTag w żądaniu różnią się od wartości bieżącej jednostki, wyjątek jest zgłaszany przez usługę danych. <xref:System.Data.Services.ETagAttribute> Jest stosowany do typu jednostki, aby zdefiniować tokenem współbieżności w dostawcy odbicia. Token współbieżności nie może zawierać właściwości klucza lub właściwości nawigacji. Aby uzyskać więcej informacji, zobacz [aktualizacja usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
-## <a name="using-linq-to-sql-with-the-reflection-provider"></a>Przy użyciu składnika LINQ to SQL z dostawcą odbicia  
- Ponieważ programu Entity Framework jest obsługiwany natywnie domyślnie, dostawcę danych zalecane jest dotyczące korzystania z danych relacyjnych z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Jednak można użyć dostawcy odbicia do użycia LINQ w klasach SQL z usługą danych. <xref:System.Data.Linq.Table%601> Zestawy, które są zwracane przez metody na wyników <xref:System.Data.Linq.DataContext> generowane przez składnik LINQ to SQL Projektant obiektów relacyjnych (Projektanta obiektów relacyjnych) wdrożenie <xref:System.Linq.IQueryable%601> interfejsu. Dzięki temu dostawcy odbicia dostępu do tych metod i zwróć jednostki danych z programu SQL Server za pomocą wygenerowanego LINQ w klasach SQL. Jednak ponieważ LINQ do SQL nie implementuje <xref:System.Data.Services.IUpdatable> interfejsu, musisz dodać częściowej klasy, która rozszerza istniejący <xref:System.Data.Linq.DataContext> częściowej klasy, aby dodać <xref:System.Data.Services.IUpdatable> implementacji. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie usługi danych przy użyciu składnika LINQ to SQL źródła danych](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
+## <a name="using-linq-to-sql-with-the-reflection-provider"></a>Za pomocą LINQ to SQL za pomocą dostawcy odbicia  
+ Ponieważ Entity Framework jest obsługiwany natywnie domyślne, dostawca danych zalecane jest dotyczące korzystania z danych relacyjnych z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Jednak można użyć dostawcy odbicia używać programu LINQ do klas SQL z usługą danych. <xref:System.Data.Linq.Table%601> Zestawy, które są zwracane przez metody na wyników <xref:System.Data.Linq.DataContext> generowane w składniku LINQ to SQL Object Relational Designer (O/R Designer) implementacja <xref:System.Linq.IQueryable%601> interfejsu. Dzięki temu dostawcy odbicia, dostęp do tych metod oraz zwracanych danych jednostki z programu SQL Server przy użyciu wygenerowanej klasy programu LINQ to SQL. Jednak ponieważ LINQ to SQL nie implementuje <xref:System.Data.Services.IUpdatable> interfejsu, należy dodać częściową klasą, która rozszerza istniejący <xref:System.Data.Linq.DataContext> klasy częściowej, aby dodać <xref:System.Data.Services.IUpdatable> implementacji. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi danych przy użyciu LINQ do SQL źródła danych](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

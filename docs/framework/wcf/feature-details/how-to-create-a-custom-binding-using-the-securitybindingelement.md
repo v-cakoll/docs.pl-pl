@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2c2aa5703e31b2529e0b98d909a763b8b4b23035
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576164"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Instrukcje: Tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement
 Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane przez system, które można skonfigurować, ale nie zapewniają pełną elastyczność podczas konfigurowania wszystkich opcji zabezpieczeń, które obsługuje usługi WCF. W tym temacie pokazano, jak utworzyć niestandardowego powiązania bezpośrednio z poziomu powiązania poszczególnych elementów i opisano niektóre ustawienia zabezpieczeń, które można określić podczas tworzenia takiego powiązania. Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -51,23 +51,23 @@ Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane pr
   
  W poniższej tabeli przedstawiono konfiguracje prawidłowego powiązania elementu stosu dla każdej kombinacji poprzedniego czynników. Należy pamiętać, że są one minimalnych wymagań. Możesz dodać dodatkowe elementy do powiązania, np. komunikat o kodowanie elementy wiązania, elementy powiązania transakcji i inne elementy wiązania.  
   
-|Tryb zabezpieczeń|Transportu|Wymiany komunikatów kontraktu|Wymiany komunikatów kontraktu|Wymiany komunikatów kontraktu|  
+|Tryb zabezpieczeń|Transport|Wymiany komunikatów kontraktu|Wymiany komunikatów kontraktu|Wymiany komunikatów kontraktu|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  
 |||`Datagram`|`Request Reply`|`Duplex`|  
-|Transportu|Protokół HTTPS||||  
+|Transport|Https||||  
 |||OneWayBindingElement|||  
 |||HttpsTransportBindingElement|HttpsTransportBindingElement||  
 ||TCP||||  
 |||OneWayBindingElement|||  
 |||Protokół SSL lub Windows StreamSecurityBindingElement|Protokół SSL lub Windows StreamSecurityBindingElement|Protokół SSL lub Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Komunikat|http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|Element SymmetricSecurityBindingElement (tryb uwierzytelniania = mechanizmu SecureConversation)|  
+|Komunikat|Http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|Element SymmetricSecurityBindingElement (tryb uwierzytelniania = mechanizmu SecureConversation)|  
 |||||CompositeDuplexBindingElement|  
 |||OneWayBindingElement||OneWayBindingElement|  
 |||HttpTransportBindingElement|HttpTransportBindingElement|HttpTransportBindingElement|  
-||TCP|SecurityBindingElement|SecurityBindingElement|Element SymmetricSecurityBindingElement (tryb uwierzytelniania = mechanizmu SecureConversation)|  
+||Tcp|SecurityBindingElement|SecurityBindingElement|Element SymmetricSecurityBindingElement (tryb uwierzytelniania = mechanizmu SecureConversation)|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Mieszany (transportu z poświadczeniami komunikatu)|Protokół HTTPS|TransportSecurityBindingElement|TransportSecurityBindingElement||  
+|Mieszany (transportu z poświadczeniami komunikatu)|Https|TransportSecurityBindingElement|TransportSecurityBindingElement||  
 |||OneWayBindingElement|||  
 |||HttpsTransportBindingElement|HttpsTransportBindingElement||  
 ||TCP|TransportSecurityBindingElement|Element SymmetricSecurityBindingElement (tryb uwierzytelniania = mechanizmu SecureConversation)|Element SymmetricSecurityBindingElement (tryb uwierzytelniania = mechanizmu SecureConversation)|  
@@ -106,10 +106,10 @@ Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane pr
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)

@@ -1,12 +1,12 @@
 ---
 title: Atrybuty (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f211e8af48bdfef0bb9bf4341c7a5911b5695101
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573351"
 ---
 # <a name="attributes-c"></a>Atrybuty (C#)
 
@@ -21,7 +21,7 @@ Atrybuty mają następujące właściwości:
 
 ## <a name="using-attributes"></a>Przy użyciu atrybutów
 
-Atrybuty można umieścić w praktycznie dowolnej deklaracji, chociaż określony atrybut może ograniczyć typy deklaracji, na których jest on prawidłowy. W C# należy określić atrybut, umieszczając nazwę atrybutu, ujęte w nawiasy kwadratowe ([]) powyżej deklaracji jednostki, której dotyczy.
+Atrybuty można umieścić w praktycznie dowolnej deklaracji, chociaż określony atrybut może ograniczyć typy deklaracji, na których jest on prawidłowy. W C#, określ atrybut, umieszczając nazwę atrybutu, ujęte w nawiasy kwadratowe ([]) powyżej deklaracji jednostki, której dotyczy.
 
 W tym przykładzie <xref:System.SerializableAttribute> atrybut jest używany do stosowania szczególne właściwości do klasy:
 
@@ -119,13 +119,13 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Tworzenie atrybutów niestandardowych (C#)](creating-custom-attributes.md)  
 - [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (C#)](accessing-attributes-by-using-reflection.md)  
-- [Porady: tworzenie złożenia C/C++ za pomocą atrybutów (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Instrukcje: Tworzenie złożenia C/C++ za pomocą atrybutów (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Atrybuty wspólne (C#)](common-attributes.md)  
 - [Informacje o wywołującym (C#)](../caller-information.md)  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../index.md)  
-- [Odbicie (C#)](../reflection.md)  
-- [Atrybuty](../../../../standard/attributes/index.md)  
-- [Przy użyciu atrybutów w języku C#](../../../tutorials/attributes.md)  
+- [Przewodnik programowania w języku C#](../../index.md)
+- [Odbicie (C#)](../reflection.md)
+- [Atrybuty](../../../../standard/attributes/index.md)
+- [Przy użyciu atrybutów w języku C#](../../../tutorials/attributes.md)

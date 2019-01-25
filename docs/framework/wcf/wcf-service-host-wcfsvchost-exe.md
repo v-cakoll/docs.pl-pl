@@ -2,12 +2,12 @@
 title: Host usługi WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6f719756688af066a42c3f73a860038dad1e5a53
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505643"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host usługi WCF (WcfSvcHost.exe)
 Host usług Windows Communication Foundation (WCF) (WcfSvcHost.exe) można uruchomić debugera programu Visual Studio (F5), aby automatycznie obsługiwać i przetestować usługę, w których zaimplementowano. Następnie można testować usługę za pomocą klienta Test WCF (WcfTestClient.exe) lub własnego klienta, aby znaleźć i naprawić wszelkie potencjalne błędy.  
@@ -21,7 +21,7 @@ Host usług Windows Communication Foundation (WCF) (WcfSvcHost.exe) można uruch
 >  Host usługi WCF nie obsługuje częściowego zaufania. Jeśli chcesz użyć usługi WCF w trybie częściowego zaufania, nie używaj szablonu projektu biblioteki usługi WCF w programie Visual Studio do tworzenia usługi. Zamiast tego należy utworzyć nowe witryny sieci Web w programie Visual Studio, wybierając szablon witryny sieci Web WCF usługi, który może hostować usługi w serwerze sieci Web, jest obsługiwane WCF częściowego zaufania.  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>Typy projektów obsługiwane przez Host usługi WCF  
- Host usługi WCF może obsługiwać następujące typy projektu biblioteki usługi WCF: biblioteki usługi WCF, sekwencyjnych Biblioteka usługi przepływu pracy, Biblioteka usługi przepływu pracy automatu stanu i Biblioteka usługi syndykacji. Host usługi WCF może również obsługiwać te usługi, które mogą być dodawane do usługi biblioteki projektu za pomocą **elementu Dodawanie** funkcji. W tym usługi WCF, WF stanu usługi, usługa Sekwencyjna WF, XAML WF stanu usługi i usługa Sekwencyjna WF XAML.  
+ Host usługi WCF, mogą obsługiwać następujące typy projektu biblioteki usługi WCF: Biblioteki usługi WCF, Biblioteka usługi sekwencyjnego przepływu pracy, Biblioteka usługi przepływu pracy automatu stanów i Biblioteka usługi syndykacji. Host usługi WCF może również obsługiwać te usługi, które mogą być dodawane do usługi biblioteki projektu za pomocą **elementu Dodawanie** funkcji. W tym usługi WCF, WF stanu usługi, usługa Sekwencyjna WF, XAML WF stanu usługi i usługa Sekwencyjna WF XAML.  
   
  Możesz należy jednak zauważyć, że narzędzie pomoże nie można skonfigurować hosta. W tym celu należy ręcznie zmodyfikować plik App.config. Narzędzie nie sprawdza również pliki konfiguracyjne zdefiniowane przez użytkownika.  
   
@@ -72,9 +72,9 @@ Host usług Windows Communication Foundation (WCF) (WcfSvcHost.exe) można uruch
   
  **Host usługi WCF** okno główne zawiera dwa menu:  
   
--   **Plik**: zawiera **Zamknij** i **zakończenia** poleceń. Po kliknięciu **Zamknij**, **Host usługi WCF** okno dialogowe zostanie zamknięte, ale usług w dalszym ciągu być obsługiwane. Po kliknięciu **zakończenia**, Host usługi WCF również zostanie zamknięta. Spowoduje to również zatrzymanie wszystkich hostowanych usług.  
+-   **Plik**: Zawiera **Zamknij** i **zakończenia** poleceń. Po kliknięciu **Zamknij**, **Host usługi WCF** okno dialogowe zostanie zamknięte, ale usług w dalszym ciągu być obsługiwane. Po kliknięciu **zakończenia**, Host usługi WCF również zostanie zamknięta. Spowoduje to również zatrzymanie wszystkich hostowanych usług.  
   
--   **Pomoc**: zawiera **o** polecenia, który zawiera informacje o wersji. Zawiera ona także **pomocy** polecenie, które można otworzyć pliku pomocy.  
+-   **Pomoc**: Zawiera **o** polecenia, który zawiera informacje o wersji. Zawiera ona także **pomocy** polecenie, które można otworzyć pliku pomocy.  
   
  Głównym **Host usługi WCF** okno zawiera dwa obszary:  
   
@@ -110,5 +110,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
  Aby uzyskać więcej informacji na temat netsh.exe, zobacz "[sposób użycia narzędzia Netsh.exe i przełączniki wiersza polecenia](https://go.microsoft.com/fwlink/?LinkId=97877)".  
   
-## <a name="see-also"></a>Zobacz też  
- [Testowy klient WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a>Zobacz także
+- [Testowy klient WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

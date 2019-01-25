@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88604058bd460d80214be6051abef7dc561c7710
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a91fd9d06e93813d440d6243ad42ea6dd70e739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523093"
 ---
 # <a name="default-marshaling-for-strings"></a>Domyślny marshaling dla ciągów
-Zarówno <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> klasy zachowują się podobnie kierowania.  
+Zarówno <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> klasy mają podobne zachowanie organizowania.  
   
- Parametry są przekazywane jako styl modelu COM `BSTR` typu lub w postaci ciągu zakończonego wartością null (znak tablica, która kończy się znakiem null). Znaki w ciągu mogą być przekazywane jako Unicode (domyślnie w systemach Windows) lub ANSI.  
+ Parametry są przekazywane jako styl modelu COM `BSTR` typu lub jako ciąg zakończony znakiem null (tablicy znaków zakończony znakiem null). Znaki ciągu może być organizowany jako Unicode (domyślnie w systemach Windows) lub ANSI.  
   
- Ten temat zawiera następujące informacje na przekazywanie typów ciąg:  
+ Ten temat zawiera następujące informacje dotyczące marshaling typów ciągów:  
   
--   [Parametry używane w interfejsach](#cpcondefaultmarshalingforstringsanchor1)  
+-   [Ciągi używane w interfejsach](#cpcondefaultmarshalingforstringsanchor1)  
   
--   [Wywołanie ciągów używanych na platformie](#cpcondefaultmarshalingforstringsanchor5)  
+-   [Wywoływanie ciągów używanych w platformy](#cpcondefaultmarshalingforstringsanchor5)  
   
 -   [Ciągi używane w strukturach](#cpcondefaultmarshalingforstringsanchor2)  
   
@@ -34,18 +34,18 @@ Zarówno <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.S
   
 <a name="cpcondefaultmarshalingforstringsanchor1"></a>
 
-## <a name="strings-used-in-interfaces"></a>Parametry używane w interfejsach  
- W poniższej tabeli przedstawiono opcje organizowania dla typu danych string podczas organizowane jako argument metody do kodu niezarządzanego. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atrybutu udostępnia wiele <xref:System.Runtime.InteropServices.UnmanagedType> kierowanie ciągów do interfejsów modelu COM wartości wyliczenia.  
+## <a name="strings-used-in-interfaces"></a>Ciągi używane w interfejsach  
+ W poniższej tabeli przedstawiono opcje kierowania dla typu danych string podczas przekazywania jako argumentu metody do kodu niezarządzanego. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atrybut udostępnia wiele <xref:System.Runtime.InteropServices.UnmanagedType> przeprowadzanie marshalingu ciągów COM interfejsy wartości wyliczenia.  
   
-|Typ wyliczenia|Opis formatu niezarządzane|  
+|Typ wyliczeniowy|Opis formatu niezarządzanych|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr` (ustawienie domyślne)|Styl modelu COM `BSTR` z prefiksem długość i znaków Unicode.|  
-|`UnmanagedType.LPStr`|Wskaźnik do tablicy znaków ANSI zerem.|  
-|`UnmanagedType.LPWStr`|Wskaźnik do tablicy znaków Unicode zakończonym znakiem null.|  
+|`UnmanagedType.BStr` (ustawienie domyślne)|Styl modelu COM `BSTR` z prefiksem długości i znaków Unicode.|  
+|`UnmanagedType.LPStr`|Wskaźnik do tablicy znaków ANSI zakończony znakiem null.|  
+|`UnmanagedType.LPWStr`|Wskaźnik do tablicy znaków Unicode zakończony wartością null.|  
   
- Ta tabela odnosi się do ciągów. Niemniej jednak w przypadku <xref:System.Text.StringBuilder>, czy można używać wyłącznie opcji `UnmanagedType.LPStr` i `UnmanagedType.LPWStr`.  
+ Ta tabela ma zastosowanie do ciągów. Jednak w przypadku <xref:System.Text.StringBuilder>, są tylko opcje dozwolone `UnmanagedType.LPStr` i `UnmanagedType.LPWStr`.  
   
- W poniższym przykładzie przedstawiono ciągi zadeklarowany w `IStringWorker` interfejsu.  
+ W poniższym przykładzie pokazano ciągów, zadeklarowanej w `IStringWorker` interfejsu.  
   
 ```cpp  
 public interface IStringWorker {  
@@ -60,7 +60,7 @@ void PassStringRef4([MarshalAs(UnmanagedType.LPWStr)]ref String s);
 );
 ```
 
-W poniższym przykładzie przedstawiono odpowiedniego interfejsu opisanego w bibliotece typów.
+Poniższy przykład pokazuje odpowiedniego interfejsu opisanych w bibliotece typów.
 
 ```
 […]  
@@ -78,24 +78,24 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
 
 <a name="cpcondefaultmarshalingforstringsanchor5"></a>
 
-## <a name="strings-used-in-platform-invoke"></a>Wywołanie ciągów używanych na platformie  
- Wywołanie platformy argumenty typu string kopie, konwersji z formatu .NET Framework (Unicode) do formatu niezarządzane platformy. Ciągi są niezmienne i nie są kopiowane z niezarządzanej pamięci do pamięci zarządzanej po powrocie z wywołania.  
+## <a name="strings-used-in-platform-invoke"></a>Wywoływanie ciągów używanych w platformy  
+ Argumenty typu string kopii, konwertowania z formatu .NET Framework (Unicode) do formatu niezarządzanych platformy wywołania platformy. Ciągów są niezmienne i nie są kopiowane z niezarządzanej pamięci zarządzanej pamięci podczas to wywołanie zwraca.  
   
- W poniższej tabeli wymieniono opcje organizowania ciągów, gdy organizowane jako argument metody platformy wywołania wywołania. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atrybutu udostępnia wiele <xref:System.Runtime.InteropServices.UnmanagedType> wyliczenia wartości do kierowanie ciągów.  
+ Poniższa tabela zawiera opcje marshaling dla ciągów, gdy organizowany jako argumentu metody platformy wywołania wywołania. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atrybut udostępnia wiele <xref:System.Runtime.InteropServices.UnmanagedType> przeprowadzanie marshalingu ciągów wartości wyliczenia.  
   
-|Typ wyliczenia|Opis formatu niezarządzane|  
+|Typ wyliczeniowy|Opis formatu niezarządzanych|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.AnsiBStr`|Styl modelu COM `BSTR` z prefiksem długość i znaków ANSI.|  
-|`UnmanagedType.BStr`|Styl modelu COM `BSTR` z prefiksem długość i znaków Unicode.|  
-|`UnmanagedType.LPStr`|Wskaźnik do tablicy znaków ANSI zerem.|  
-|`UnmanagedType.LPTStr`|Wskaźnik do tablicy znaków zależny od platformy zerem.|  
-|`UnmanagedType.LPWStr`|Wskaźnik do tablicy znaków Unicode zakończonym znakiem null.|  
-|`UnmanagedType.TBStr`|Styl modelu COM `BSTR` z prefiksem długość i znaki zależny od platformy.|  
-|`VBByRefStr`|Wartość, która umożliwia Visual Basic .NET zmienić parametry w niezarządzanych kodu, a wyniki odzwierciedla w kodzie zarządzanym. Ta wartość jest obsługiwana tylko przez wywołanie platformy. Jest to wartość domyślna w języku Visual Basic dla `ByVal` ciągów.|  
+|`UnmanagedType.AnsiBStr`|Styl modelu COM `BSTR` z prefiksem długości i znaki ANSI.|  
+|`UnmanagedType.BStr`|Styl modelu COM `BSTR` z prefiksem długości i znaków Unicode.|  
+|`UnmanagedType.LPStr`|Wskaźnik do tablicy znaków ANSI zakończony znakiem null.|  
+|`UnmanagedType.LPTStr`|Wskaźnik do tablicą zakończoną znakiem null znaków zależnych od platformy.|  
+|`UnmanagedType.LPWStr`|Wskaźnik do tablicy znaków Unicode zakończony wartością null.|  
+|`UnmanagedType.TBStr`|Styl modelu COM `BSTR` z prefiksem długości i znaków zależnych od platformy.|  
+|`VBByRefStr`|Wartość, która umożliwia Visual Basic .NET zmienić parametry w kod niezarządzany, a masz wyniki zostaną uwzględnione w kodzie zarządzanym. Ta wartość jest obsługiwana tylko w przypadku wywołania platformy. Jest to wartość domyślna w języku Visual Basic dla `ByVal` ciągów.|  
   
- Ta tabela odnosi się do ciągów. Niemniej jednak w przypadku <xref:System.Text.StringBuilder>, czy można używać wyłącznie opcji `LPStr`, `LPTStr`, i `LPWStr`.  
+ Ta tabela ma zastosowanie do ciągów. Jednak w przypadku <xref:System.Text.StringBuilder>, są tylko opcje dozwolone `LPStr`, `LPTStr`, i `LPWStr`.  
   
- Następujące definicja typu zawiera prawidłowe użycie `MarshalAsAttribute` platformy wywołania wywołania.  
+ Następująca definicja typu zawiera prawidłowe użycie `MarshalAsAttribute` platformy wywołania.  
   
 ```vb  
 Class StringLibAPI      
@@ -139,21 +139,21 @@ String s);
   
 <a name="cpcondefaultmarshalingforstringsanchor2"></a>   
 ## <a name="strings-used-in-structures"></a>Ciągi używane w strukturach  
- Parametry są prawidłowe członków struktur; jednak <xref:System.Text.StringBuilder> buforów są nieprawidłowe w strukturach. W poniższej tabeli przedstawiono opcje organizowania string — typ danych, gdy typ jest przekazywane jako pole. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atrybutu udostępnia wiele <xref:System.Runtime.InteropServices.UnmanagedType> wyliczenia wartości do kierowanie ciągów do pola.  
+ Ciągi są prawidłowe elementy członkowskie struktur; jednak <xref:System.Text.StringBuilder> buforów są nieprawidłowe w strukturach. W poniższej tabeli przedstawiono opcje kierowania string — typ danych, gdy typ jest organizowana jako pole. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atrybut udostępnia wiele <xref:System.Runtime.InteropServices.UnmanagedType> przeprowadzanie marshalingu ciągów do pola wartości wyliczenia.  
   
-|Typ wyliczenia|Opis formatu niezarządzane|  
+|Typ wyliczeniowy|Opis formatu niezarządzanych|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr`|Styl modelu COM `BSTR` z prefiksem długość i znaków Unicode.|  
-|`UnmanagedType.LPStr`|Wskaźnik do tablicy znaków ANSI zerem.|  
-|`UnmanagedType.LPTStr`|Wskaźnik do tablicy znaków zależny od platformy zerem.|  
-|`UnmanagedType.LPWStr`|Wskaźnik do tablicy znaków Unicode zakończonym znakiem null.|  
-|`UnmanagedType.ByValTStr`|O stałej długości tablicy znaków; Typ tablicy jest określana przez struktury zawierającej zestaw znaków.|  
+|`UnmanagedType.BStr`|Styl modelu COM `BSTR` z prefiksem długości i znaków Unicode.|  
+|`UnmanagedType.LPStr`|Wskaźnik do tablicy znaków ANSI zakończony znakiem null.|  
+|`UnmanagedType.LPTStr`|Wskaźnik do tablicą zakończoną znakiem null znaków zależnych od platformy.|  
+|`UnmanagedType.LPWStr`|Wskaźnik do tablicy znaków Unicode zakończony wartością null.|  
+|`UnmanagedType.ByValTStr`|Tablica o stałej długości, znaków; Typ tablicy jest ustalany przez zestaw znaków zawierającą strukturę.|  
   
- `ByValTStr` Typ jest używany dla wbudowanego, tablice o stałej długości znaków, które pojawiają się w ramach struktury. Inne typy są stosowane do odwołania ciągu zawartych wewnątrz struktur, które zawierają wskaźniki do ciągów.  
+ `ByValTStr` Typ jest używany do wbudowanych tablic znaków o stałej długości, które pojawiają się w ramach struktury. Inne typy mają zastosowanie do odwołania ciągu zawarte w obrębie struktury, które zawierają wskaźnikami do ciągów.  
   
- `CharSet` Argument <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybut, który jest stosowany do struktury zawierające Określa format znaków ciągów w strukturach. Następujące struktury przykład zawiera odwołania do ciągu i ciągi wbudowany, a także ANSI, Unicode i znaków zależny od platformy.  
+ `CharSet` Argument <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybut, który jest stosowany do struktury zawierającej Określa format znaków z ciągów w strukturach. Następujące przykładowe struktury zawierają ciąg odwołania i ciągi wbudowane, a także ANSI, Unicode i znaków zależnych od platformy.  
   
-### <a name="type-library-representation"></a>Reprezentacja typu biblioteki  
+### <a name="type-library-representation"></a>Reprezentacja biblioteki typów  
   
 ```
 struct StringInfoA {  
@@ -171,7 +171,7 @@ struct StringInfoT {
 };  
 ```  
   
- Poniższy przykładowy kod przedstawia sposób użycia <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybut do definiowania tej samej struktury w różnych formatach.  
+ Poniższy przykład kodu pokazuje sposób użycia <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybut do definiowania tę samą strukturę w różnych formatach.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential, CharSet := CharSet.Ansi)> _  
@@ -216,11 +216,11 @@ struct StringInfoT {
   
 <a name="cpcondefaultmarshalingforstringsanchor3"></a>   
 ## <a name="fixed-length-string-buffers"></a>Bufory o stałej długości ciągu  
- W niektórych sytuacjach buforu o stałej długości znaków muszą być przekazywane do kodu niezarządzanego można manipulować. Po prostu przekazywanie ciągu nie działa, w tym przypadku ponieważ wywoływany nie można zmodyfikować zawartości buforu przekazany. Nawet jeśli ciąg jest przekazywana przez odwołanie, nie istnieje sposób Inicjowanie buforu na dany rozmiar.  
+ W pewnych okolicznościach buforu znaków o stałej długości muszą być przekazywane do kodu niezarządzanego, aby być zmieniane. Po prostu przekazując ciąg nie działa w tym przypadku, ponieważ obiekt wywoływany nie można zmodyfikować zawartość przekazanego buforu. Nawet jeśli ten ciąg jest przekazywany przez odwołanie, nie ma możliwości zainicjować buforu na dany rozmiar.  
   
- Rozwiązanie jest przekazanie <xref:System.Text.StringBuilder> buforu jako argument zamiast ciągu. A `StringBuilder` wyłuskiwany i zmodyfikowane przez wywoływany, pod warunkiem nie przekracza pojemność `StringBuilder`. Ponadto może zostać zainicjowane do stałej długości. Na przykład, jeśli należy zainicjować `StringBuilder` bufor do pojemności `N`, organizator udostępnia bufor o rozmiarze (`N`+ 1) znaków. Konta + 1 dla fakt, że ciąg niezarządzane zawiera terminatorem null podczas `StringBuilder` nie.  
+ To rozwiązanie służy do przekazywania <xref:System.Text.StringBuilder> buforu jako argument zamiast ciągu. A `StringBuilder` wyłuskiwany i zmodyfikowane przez obiekt wywoływany, pod warunkiem nie przekracza pojemność `StringBuilder`. Ponadto może zostać zainicjowane do stałej długości. Na przykład, jeśli należy zainicjować `StringBuilder` buforu na pojemność `N`, organizator udostępnia bufor o rozmiarze (`N`+ 1) znaków. Konta + 1 fakt, że niezarządzanego ciągu ma terminatora null podczas `StringBuilder` nie.  
   
- Na przykład Microsoft Win32 API `GetWindowText` funkcji (zdefiniowanej w Windows.h) jest znak o stałej długości buforu, który muszą być przekazywane do kodu niezarządzanego można manipulować. `LpString` Wskazuje bufor przydzielony wywołującego rozmiaru `nMaxCount`. Obiekt wywołujący powinien alokacji buforu i ustaw `nMaxCount` argument rozmiarowi przydzielonego buforu. Poniższy kod przedstawia `GetWindowText` deklaracji funkcji, zgodnie z definicją w Windows.h.  
+ Na przykład Microsoft Win32 API `GetWindowText` — funkcja (zdefiniowanymi w Windows.h) to muszą być przekazywane do kodu niezarządzanego ustawianych bufor znaków o stałej długości. `LpString` Wskazuje przydzielonej przez obiekt wywołujący bufor o rozmiarze `nMaxCount`. Obiekt wywołujący oczekuje się, aby przydzielić bufor i ustawić `nMaxCount` argumentu rozmiaru przydzielonego buforu. Poniższy kod przedstawia `GetWindowText` deklaracji funkcji, zgodnie z definicją w Windows.h.  
   
 ```  
 int GetWindowText(  
@@ -230,7 +230,7 @@ int nMaxCount     // Maximum number of characters to copy.
 );  
 ```  
   
- A `StringBuilder` wyłuskiwany i zmodyfikowane przez wywoływany, pod warunkiem nie przekracza pojemność `StringBuilder`. Poniższy przykład kodu pokazuje sposób `StringBuilder` mogą być inicjowane do stałej długości.  
+ A `StringBuilder` wyłuskiwany i zmodyfikowane przez obiekt wywoływany, pod warunkiem nie przekracza pojemność `StringBuilder`. Poniższy przykład kodu demonstruje sposób `StringBuilder` może być inicjowany do stałej długości.  
   
 ```vb  
 Public Class Win32API  
@@ -263,8 +263,8 @@ public class Window {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)  
- [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)  
- [Atrybuty kierunkową](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [Kopiowanie i przypinanie](copying-and-pinning.md)
+## <a name="see-also"></a>Zobacz także
+- [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)
+- [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)
+- [Atrybuty kierunkowe](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Kopiowanie i przypinanie](copying-and-pinning.md)

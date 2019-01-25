@@ -1,5 +1,5 @@
 ---
-title: 'Porady: korzystanie z SystemParameters'
+title: 'Instrukcje: Użyj SystemParameters'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,33 +7,33 @@ dev_langs:
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-ms.openlocfilehash: 07b73d78a022e508f9ed8ca2e80b71bc2ab89910
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00afc5c12ea9b83759361e9a3f175e91b4cbb10d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541667"
 ---
-# <a name="how-to-use-systemparameters"></a>Porady: korzystanie z SystemParameters
-W tym przykładzie pokazano, jak uzyskać dostęp i użyj właściwości <xref:System.Windows.SystemParameters> do nadawania stylu lub dostosowywanie przycisku.  
+# <a name="how-to-use-systemparameters"></a>Instrukcje: Użyj SystemParameters
+W tym przykładzie pokazano, jak uzyskać dostęp do właściwości <xref:System.Windows.SystemParameters> do nadawania stylu lub dostosować przycisku.  
   
 ## <a name="example"></a>Przykład  
- Zasoby systemowe ujawnia niektóre ustawienia systemu zasobów, aby pomóc tworzyć elementy wizualne, które są zgodne z ustawieniami systemu. <xref:System.Windows.SystemParameters> jest klasa, która zawiera właściwości wartość parametru systemu i klucze zasobów, które powiązać wartości. Na przykład <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> jest <xref:System.Windows.SystemParameters> wartość właściwości i <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> jest odpowiedni klucz zasobów.  
+ Zasoby systemowe uwidocznić kilka ustawień systemu na podstawie zasobów, aby ułatwić tworzenie wizualizacji, które są zgodne z ustawieniami systemu. <xref:System.Windows.SystemParameters> jest klasą, który zawiera właściwości wartość parametru systemu i klucze zasobów, które wartości należy powiązać. Na przykład <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> jest <xref:System.Windows.SystemParameters> wartości właściwości i <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> jest odpowiedni klucz zasobu.  
   
- W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], można użyć elementów członkowskich <xref:System.Windows.SystemParameters> jako użycie statycznej właściwości lub odwołania do zasobów dynamicznych (o wartości właściwości statycznej jako klucz). Użyj odwołania zasobu dynamicznego, jeśli wartość system na podstawie automatycznie aktualizowane podczas aplikacji działa; w przeciwnym razie użyj odwołanie statyczne. Klucze zasobów przedrostkiem `Key` dołączonym do nazwy właściwości.  
+ W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], można użyć elementów członkowskich <xref:System.Windows.SystemParameters> jako użycia właściwość statyczna lub odwołania do zasobu dynamicznego (wartością właściwości statycznej jako klucz). Użyj odwołania zasób dynamiczny, jeśli chcesz, aby wartość systemu opartego na automatyczne aktualizowanie podczas jej uruchomieniu; w przeciwnym razie użyj odwołania statycznego. Klucze zasobu mają ten sufiks `Key` dołączana do nazwy właściwości.  
   
- Poniższy przykład przedstawia sposób dostępu i statyczne wartości można używać <xref:System.Windows.SystemParameters> stylu lub dostosowanie przycisku. W tym przykładzie znaczników rozmiar przycisku przez zastosowanie <xref:System.Windows.SystemParameters> wartości do przycisku.  
+ Poniższy przykład pokazuje, jak uzyskać dostęp do wartości statycznej <xref:System.Windows.SystemParameters> do nadawania stylu i dostosowywania przycisku. W tym przykładzie znaczników przycisku o rozmiarach, stosując <xref:System.Windows.SystemParameters> wartości do przycisku.  
   
  [!code-xaml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
   
- Aby użyć wartości <xref:System.Windows.SystemParameters> w kodzie, nie masz do użycia statycznego odwołania lub odwołania do zasobów dynamicznych. Użyj wartości <xref:System.Windows.SystemParameters> klasy. Mimo że właściwości niekluczowe pozornie są zdefiniowane jako właściwości statyczne, zachowanie środowiska uruchomieniowego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jako hostowanej przez system będzie obliczyć ponownie właściwości w czasie rzeczywistym, a zostanie prawidłowo konta użytkownika driven zmiany wartości systemu. Poniższy przykład przedstawia sposób ustawić szerokość i wysokość przycisku przy użyciu <xref:System.Windows.SystemParameters> wartości.  
+ Aby użyć wartości <xref:System.Windows.SystemParameters> w kodzie, nie trzeba używać odwołań statycznych lub dynamicznych zasobów odwołań. Zamiast tego należy użyć wartości <xref:System.Windows.SystemParameters> klasy. Mimo że właściwości klucza najwyraźniej są definiowane jako właściwości statycznej, zachowanie środowiska uruchomieniowego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jako hostowanej przez system spowoduje to ponowne ocenienie właściwości w czasie rzeczywistym i zostanie prawidłowo konto oparte na użytkownika zmiany wartości systemu. Poniższy przykład pokazuje, jak ustawić szerokość i wysokość przycisku przy użyciu <xref:System.Windows.SystemParameters> wartości.  
   
  [!code-csharp[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
  [!code-vb[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.SystemParameters>  
- [Malowanie obszaru pędzlem systemowym](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [Używanie elementu SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [Używanie kluczy parametrów systemowych](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.SystemParameters>
+- [Malowanie obszaru pędzlem systemowym](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [Używanie elementu SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)
+- [Używanie kluczy parametrów systemowych](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)

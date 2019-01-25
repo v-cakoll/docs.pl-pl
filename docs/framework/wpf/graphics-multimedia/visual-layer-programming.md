@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: 13957e60c92a90624882e126fe66aca789b6835a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3bf3e718b1253348030c0ddf3ac52ed8aa79b37d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580788"
 ---
-# <a name="visual-layer-programming"></a><span data-ttu-id="bfda2-102">Programowanie warstwy Visual</span><span class="sxs-lookup"><span data-stu-id="bfda2-102">Visual Layer Programming</span></span>
-<span data-ttu-id="bfda2-103"><xref:System.Windows.Media.Visual> Obiekt jest podstawowa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektu, którego podstawową rolą jest zapewnia obsługę renderowania.</span><span class="sxs-lookup"><span data-stu-id="bfda2-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="bfda2-104">Formanty interfejsu użytkownika, takich jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.TextBox>, pochodzi z <xref:System.Windows.Media.Visual> klasy, a następnie użyć jej do przechowywanie ich renderowania danych.</span><span class="sxs-lookup"><span data-stu-id="bfda2-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
+# <a name="visual-layer-programming"></a><span data-ttu-id="cf217-102">Programowanie warstwy Visual</span><span class="sxs-lookup"><span data-stu-id="cf217-102">Visual Layer Programming</span></span>
+<span data-ttu-id="cf217-103"><xref:System.Windows.Media.Visual> Obiekt jest podstawowa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektu, którego podstawową rolą jest zapewnia obsługę renderowania.</span><span class="sxs-lookup"><span data-stu-id="cf217-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="cf217-104">Kontrolki interfejsu użytkownika, takie jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.TextBox>, pochodzi od <xref:System.Windows.Media.Visual> klasy, a następnie użyć jej do utrwalania danych ich renderowania.</span><span class="sxs-lookup"><span data-stu-id="cf217-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bfda2-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="bfda2-105">In This Section</span></span>  
- [<span data-ttu-id="bfda2-106">Test trafienia w warstwie wizualizacji</span><span class="sxs-lookup"><span data-stu-id="bfda2-106">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [<span data-ttu-id="bfda2-107">Użycie obiektów DrawingVisual</span><span class="sxs-lookup"><span data-stu-id="bfda2-107">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [<span data-ttu-id="bfda2-108">Samouczek: hosting obiektów wizualnych w aplikacji Win32</span><span class="sxs-lookup"><span data-stu-id="bfda2-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [<span data-ttu-id="bfda2-109">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="bfda2-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cf217-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="cf217-105">In This Section</span></span>  
+ [<span data-ttu-id="cf217-106">Test trafienia w warstwie wizualizacji</span><span class="sxs-lookup"><span data-stu-id="cf217-106">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="cf217-107">Użycie obiektów DrawingVisual</span><span class="sxs-lookup"><span data-stu-id="cf217-107">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
+ [<span data-ttu-id="cf217-108">Samouczek: Hosting obiektów Visual w aplikacji Win32</span><span class="sxs-lookup"><span data-stu-id="cf217-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [<span data-ttu-id="cf217-109">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="cf217-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="bfda2-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="bfda2-110">See Also</span></span>  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [<span data-ttu-id="bfda2-111">Renderowanie grafiki WPF — przegląd</span><span class="sxs-lookup"><span data-stu-id="bfda2-111">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="bfda2-112">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="bfda2-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="cf217-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cf217-110">See also</span></span>
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [<span data-ttu-id="cf217-111">Renderowanie grafiki WPF — przegląd</span><span class="sxs-lookup"><span data-stu-id="cf217-111">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="cf217-112">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="cf217-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

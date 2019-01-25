@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46881b76685fd04f8bc5e3a67830e58f85cd774
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8897eda39a0ff5f1a11a95aeea4e2887912592ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519258"
 ---
-# <a name="icorruntimehostlocksheldbylogicalthread-method"></a><span data-ttu-id="91c18-102">ICorRuntimeHost::LocksHeldByLogicalThread — Metoda</span><span class="sxs-lookup"><span data-stu-id="91c18-102">ICorRuntimeHost::LocksHeldByLogicalThread Method</span></span>
-<span data-ttu-id="91c18-103">Pobiera liczbę blokad, które przechowuje bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="91c18-103">Retrieves the number of locks that current thread holds.</span></span>  
+# <a name="icorruntimehostlocksheldbylogicalthread-method"></a><span data-ttu-id="ea882-102">ICorRuntimeHost::LocksHeldByLogicalThread — Metoda</span><span class="sxs-lookup"><span data-stu-id="ea882-102">ICorRuntimeHost::LocksHeldByLogicalThread Method</span></span>
+<span data-ttu-id="ea882-103">Pobiera liczbę blokad, które zawiera bieżący wątek.</span><span class="sxs-lookup"><span data-stu-id="ea882-103">Retrieves the number of locks that current thread holds.</span></span>  
   
- <span data-ttu-id="91c18-104">Ta metoda obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="91c18-104">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+ <span data-ttu-id="ea882-104">Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="ea882-104">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="91c18-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="91c18-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ea882-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="ea882-105">Syntax</span></span>  
   
 ```  
 HRESULT LocksHeldByLogicalThread(  
@@ -37,18 +37,18 @@ HRESULT LocksHeldByLogicalThread(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="91c18-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="91c18-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ea882-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="ea882-106">Parameters</span></span>  
  `pCount`  
- <span data-ttu-id="91c18-107">[out] Wskaźnik do liczbę blokad, które przechowuje bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="91c18-107">[out] A pointer to the number of locks that the current thread holds.</span></span>  
+ <span data-ttu-id="ea882-107">[out] Wskaźnik z liczbą blokad, które zawiera bieżący wątek.</span><span class="sxs-lookup"><span data-stu-id="ea882-107">[out] A pointer to the number of locks that the current thread holds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="91c18-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="91c18-108">Requirements</span></span>  
- <span data-ttu-id="91c18-109">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="91c18-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ea882-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ea882-108">Requirements</span></span>  
+ <span data-ttu-id="ea882-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ea882-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="91c18-110">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="91c18-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ea882-110">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ea882-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="91c18-111">**Biblioteka:** uwzględnione jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="91c18-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ea882-111">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ea882-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="91c18-112">**Wersje programu .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="91c18-112">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="ea882-112">**Wersje programu .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="ea882-112">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="91c18-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="91c18-113">See Also</span></span>  
- [<span data-ttu-id="91c18-114">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="91c18-114">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ea882-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ea882-113">See also</span></span>
+- [<span data-ttu-id="ea882-114">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="ea882-114">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

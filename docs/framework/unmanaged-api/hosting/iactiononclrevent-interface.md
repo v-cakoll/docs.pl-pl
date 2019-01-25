@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24191e93d0d8b27d01a914cae76c9ff4e0a7182d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f547d1bafa37c2cbb285a5d55cef8e1a6e29d0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688249"
 ---
-# <a name="iactiononclrevent-interface"></a><span data-ttu-id="ca1a4-102">IActionOnCLREvent — Interfejs</span><span class="sxs-lookup"><span data-stu-id="ca1a4-102">IActionOnCLREvent Interface</span></span>
-<span data-ttu-id="ca1a4-103">Udostępnia [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) metodę, która wykonuje wywołania zwrotne na zdarzenia, które zostały zarejestrowane przy użyciu wywołania [ICLROnEventManager::RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="ca1a4-103">Provides the [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) method, which performs callbacks on events that have been registered by using a call to the [ICLROnEventManager::RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) method.</span></span>  
+# <a name="iactiononclrevent-interface"></a><span data-ttu-id="89d75-102">IActionOnCLREvent — Interfejs</span><span class="sxs-lookup"><span data-stu-id="89d75-102">IActionOnCLREvent Interface</span></span>
+<span data-ttu-id="89d75-103">Udostępnia [iactiononclrevent::ONEVENT —](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) metody, która wykonuje wywołania zwrotne dla zdarzenia, które zostały zarejestrowane przy użyciu wywołania [iclroneventmanager::registeractiononevent —](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="89d75-103">Provides the [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) method, which performs callbacks on events that have been registered by using a call to the [ICLROnEventManager::RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) method.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="ca1a4-104">Metody</span><span class="sxs-lookup"><span data-stu-id="ca1a4-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="89d75-104">Metody</span><span class="sxs-lookup"><span data-stu-id="89d75-104">Methods</span></span>  
   
-|<span data-ttu-id="ca1a4-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="ca1a4-105">Method</span></span>|<span data-ttu-id="ca1a4-106">Opis</span><span class="sxs-lookup"><span data-stu-id="ca1a4-106">Description</span></span>|  
+|<span data-ttu-id="89d75-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="89d75-105">Method</span></span>|<span data-ttu-id="89d75-106">Opis</span><span class="sxs-lookup"><span data-stu-id="89d75-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="ca1a4-107">OnEvent, metoda</span><span class="sxs-lookup"><span data-stu-id="ca1a4-107">OnEvent Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)|<span data-ttu-id="ca1a4-108">Wykonuje wywołanie zwrotne zarejestrowane zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="ca1a4-108">Performs a callback for a registered event.</span></span>|  
+|[<span data-ttu-id="89d75-107">OnEvent, metoda</span><span class="sxs-lookup"><span data-stu-id="89d75-107">OnEvent Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)|<span data-ttu-id="89d75-108">Wykonuje wywołanie zwrotne zarejestrowane zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="89d75-108">Performs a callback for a registered event.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ca1a4-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ca1a4-109">Requirements</span></span>  
- <span data-ttu-id="ca1a4-110">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca1a4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89d75-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="89d75-109">Requirements</span></span>  
+ <span data-ttu-id="89d75-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="89d75-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca1a4-111">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ca1a4-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="89d75-111">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="89d75-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ca1a4-112">**Biblioteka:** uwzględnione jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ca1a4-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="89d75-112">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="89d75-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ca1a4-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca1a4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="89d75-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89d75-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca1a4-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ca1a4-114">See Also</span></span>  
- [<span data-ttu-id="ca1a4-115">EClrEvent, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="ca1a4-115">EClrEvent Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  
- [<span data-ttu-id="ca1a4-116">ICLRControl, interfejs</span><span class="sxs-lookup"><span data-stu-id="ca1a4-116">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [<span data-ttu-id="ca1a4-117">ICLROnEventManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="ca1a4-117">ICLROnEventManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
- [<span data-ttu-id="ca1a4-118">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="ca1a4-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="89d75-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="89d75-114">See also</span></span>
+- [<span data-ttu-id="89d75-115">EClrEvent, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="89d75-115">EClrEvent Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
+- [<span data-ttu-id="89d75-116">ICLRControl, interfejs</span><span class="sxs-lookup"><span data-stu-id="89d75-116">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="89d75-117">ICLROnEventManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="89d75-117">ICLROnEventManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
+- [<span data-ttu-id="89d75-118">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="89d75-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7120e092b422b755ecbde9e48236b42e67636fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83524b24fd05969fa4f45fd742d1df955c441d44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732391"
 ---
-# <a name="icordebugmanagedcallbackbreak-method"></a><span data-ttu-id="177c7-102">ICorDebugManagedCallback::Break — Metoda</span><span class="sxs-lookup"><span data-stu-id="177c7-102">ICorDebugManagedCallback::Break Method</span></span>
-<span data-ttu-id="177c7-103">Powiadamia debuger podczas <xref:System.Reflection.Emit.OpCodes.Break> wykonaniem instrukcji w strumieniu kodu.</span><span class="sxs-lookup"><span data-stu-id="177c7-103">Notifies the debugger when a <xref:System.Reflection.Emit.OpCodes.Break> instruction in the code stream is executed.</span></span>  
+# <a name="icordebugmanagedcallbackbreak-method"></a><span data-ttu-id="aca43-102">ICorDebugManagedCallback::Break — Metoda</span><span class="sxs-lookup"><span data-stu-id="aca43-102">ICorDebugManagedCallback::Break Method</span></span>
+<span data-ttu-id="aca43-103">Powiadamia debuger po <xref:System.Reflection.Emit.OpCodes.Break> instrukcji w strumieniu kod jest wykonywany.</span><span class="sxs-lookup"><span data-stu-id="aca43-103">Notifies the debugger when a <xref:System.Reflection.Emit.OpCodes.Break> instruction in the code stream is executed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="177c7-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="177c7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aca43-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="aca43-104">Syntax</span></span>  
   
 ```  
 HRESULT Break (  
@@ -36,21 +36,21 @@ HRESULT Break (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="177c7-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="177c7-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="aca43-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="aca43-105">Parameters</span></span>  
  `pAppDOmain`  
- <span data-ttu-id="177c7-106">[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domeny aplikacji, która zawiera instrukcji break.</span><span class="sxs-lookup"><span data-stu-id="177c7-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the break instruction.</span></span>  
+ <span data-ttu-id="aca43-106">[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, która zawiera instrukcji przerwy.</span><span class="sxs-lookup"><span data-stu-id="aca43-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the break instruction.</span></span>  
   
  `thread`  
- <span data-ttu-id="177c7-107">[in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku, który zawiera instrukcji break.</span><span class="sxs-lookup"><span data-stu-id="177c7-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the break instruction.</span></span>  
+ <span data-ttu-id="aca43-107">[in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątek, który zawiera instrukcji przerwy.</span><span class="sxs-lookup"><span data-stu-id="aca43-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the break instruction.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="177c7-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="177c7-108">Requirements</span></span>  
- <span data-ttu-id="177c7-109">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="177c7-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aca43-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="aca43-108">Requirements</span></span>  
+ <span data-ttu-id="aca43-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aca43-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="177c7-110">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="177c7-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="aca43-110">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aca43-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="177c7-111">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="177c7-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="aca43-111">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aca43-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="177c7-112">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="177c7-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="aca43-112">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aca43-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="177c7-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="177c7-113">See Also</span></span>  
- [<span data-ttu-id="177c7-114">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="177c7-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="aca43-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="aca43-113">See also</span></span>
+- [<span data-ttu-id="aca43-114">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="aca43-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

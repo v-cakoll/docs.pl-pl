@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b88758c339cd77bc7e17e0c29969f8783555f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 814073b766d5d562b414a566ae3f92abd664ce35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707846"
 ---
-# <a name="icorruntimehostmapfile-method"></a><span data-ttu-id="e5fed-102">ICorRuntimeHost::MapFile — Metoda</span><span class="sxs-lookup"><span data-stu-id="e5fed-102">ICorRuntimeHost::MapFile Method</span></span>
-<span data-ttu-id="e5fed-103">Mapuje określony plik do pamięci.</span><span class="sxs-lookup"><span data-stu-id="e5fed-103">Maps the specified file into memory.</span></span> <span data-ttu-id="e5fed-104">Ta metoda jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="e5fed-104">This method is obsolete.</span></span>  
+# <a name="icorruntimehostmapfile-method"></a><span data-ttu-id="41214-102">ICorRuntimeHost::MapFile — Metoda</span><span class="sxs-lookup"><span data-stu-id="41214-102">ICorRuntimeHost::MapFile Method</span></span>
+<span data-ttu-id="41214-103">Mapuje określony plik do pamięci.</span><span class="sxs-lookup"><span data-stu-id="41214-103">Maps the specified file into memory.</span></span> <span data-ttu-id="41214-104">Ta metoda jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="41214-104">This method is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5fed-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="e5fed-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41214-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="41214-105">Syntax</span></span>  
   
 ```  
 HRESULT MapFile(  
@@ -36,21 +36,21 @@ HRESULT MapFile(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e5fed-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="e5fed-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="41214-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="41214-106">Parameters</span></span>  
  `hFile`  
- <span data-ttu-id="e5fed-107">[in] Dojście pliku można zamapować.</span><span class="sxs-lookup"><span data-stu-id="e5fed-107">[in] The handle of the file to be mapped.</span></span>  
+ <span data-ttu-id="41214-107">[in] Uchwyt pliku, które mają być mapowane.</span><span class="sxs-lookup"><span data-stu-id="41214-107">[in] The handle of the file to be mapped.</span></span>  
   
  `hMapAddress`  
- <span data-ttu-id="e5fed-108">[out] Początkowy adres pamięci od którego należy zacząć mapowania pliku.</span><span class="sxs-lookup"><span data-stu-id="e5fed-108">[out] The starting memory address at which to begin mapping the file.</span></span>  
+ <span data-ttu-id="41214-108">[out] Początkowy adres pamięci, od którego należy rozpocząć mapowanie pliku.</span><span class="sxs-lookup"><span data-stu-id="41214-108">[out] The starting memory address at which to begin mapping the file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e5fed-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e5fed-109">Requirements</span></span>  
- <span data-ttu-id="e5fed-110">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5fed-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41214-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="41214-109">Requirements</span></span>  
+ <span data-ttu-id="41214-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="41214-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e5fed-111">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e5fed-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="41214-111">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="41214-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e5fed-112">**Biblioteka:** uwzględnione jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e5fed-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="41214-112">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="41214-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e5fed-113">**Wersja platformy .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="e5fed-113">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="41214-113">**Wersja programu .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="41214-113">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e5fed-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e5fed-114">See Also</span></span>  
- [<span data-ttu-id="e5fed-115">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="e5fed-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="41214-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="41214-114">See also</span></span>
+- [<span data-ttu-id="41214-115">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="41214-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

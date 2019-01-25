@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccebe01c853677f7c78731e757ef7a5f090d6919
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2086b12cac75af1c75a13997784e04113630c4f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415194"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496169"
 ---
-# <a name="icordebugcodeisil-method"></a><span data-ttu-id="59b2b-102">ICorDebugCode::IsIL — Metoda</span><span class="sxs-lookup"><span data-stu-id="59b2b-102">ICorDebugCode::IsIL Method</span></span>
-<span data-ttu-id="59b2b-103">Pobiera wartość wskazującą, czy to "ICorDebugCode" reprezentuje kod, który został skompilowany w języku pośrednim firmy Microsoft (MSIL).</span><span class="sxs-lookup"><span data-stu-id="59b2b-103">Gets a value that indicates whether this "ICorDebugCode" represents code that was compiled in Microsoft intermediate language (MSIL).</span></span>  
+# <a name="icordebugcodeisil-method"></a><span data-ttu-id="d7448-102">ICorDebugCode::IsIL — Metoda</span><span class="sxs-lookup"><span data-stu-id="d7448-102">ICorDebugCode::IsIL Method</span></span>
+<span data-ttu-id="d7448-103">Pobiera wartość wskazującą, czy to "ICorDebugCode" reprezentuje kod, który został skompilowany w języka Microsoft intermediate language (MSIL).</span><span class="sxs-lookup"><span data-stu-id="d7448-103">Gets a value that indicates whether this "ICorDebugCode" represents code that was compiled in Microsoft intermediate language (MSIL).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59b2b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="59b2b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d7448-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d7448-104">Syntax</span></span>  
   
 ```  
 HRESULT IsIL (  
@@ -35,18 +35,18 @@ HRESULT IsIL (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="59b2b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="59b2b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d7448-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d7448-105">Parameters</span></span>  
  `pbIL`  
- <span data-ttu-id="59b2b-106">[out] `true` Jeśli `ICorDebugCode` reprezentuje kod, który został skompilowany w MSIL; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="59b2b-106">[out] `true` if this `ICorDebugCode` represents code that was compiled in MSIL; otherwise, `false`.</span></span>  
+ <span data-ttu-id="d7448-106">[out] `true` Jeśli `ICorDebugCode` reprezentuje kod, który został skompilowany w kodzie MSIL; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="d7448-106">[out] `true` if this `ICorDebugCode` represents code that was compiled in MSIL; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="59b2b-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="59b2b-107">Requirements</span></span>  
- <span data-ttu-id="59b2b-108">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="59b2b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d7448-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d7448-107">Requirements</span></span>  
+ <span data-ttu-id="d7448-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d7448-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="59b2b-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="59b2b-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d7448-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d7448-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="59b2b-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="59b2b-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d7448-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d7448-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="59b2b-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59b2b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d7448-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7448-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59b2b-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="59b2b-112">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="d7448-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d7448-112">See also</span></span>
+

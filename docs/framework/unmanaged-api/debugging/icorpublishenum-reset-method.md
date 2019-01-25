@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb0e70bffe5bf895fedbfde559674e161757ee48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae6ee287778fba00114a4a8cbdbbf475d0affa18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740436"
 ---
-# <a name="icorpublishenumreset-method"></a><span data-ttu-id="195bc-102">ICorPublishEnum::Reset — Metoda</span><span class="sxs-lookup"><span data-stu-id="195bc-102">ICorPublishEnum::Reset Method</span></span>
-<span data-ttu-id="195bc-103">Przesuwa kursor na początku wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="195bc-103">Moves the cursor of to the beginning of the enumeration.</span></span>  
+# <a name="icorpublishenumreset-method"></a><span data-ttu-id="831bc-102">ICorPublishEnum::Reset — Metoda</span><span class="sxs-lookup"><span data-stu-id="831bc-102">ICorPublishEnum::Reset Method</span></span>
+<span data-ttu-id="831bc-103">Przenosi kursora na początku tego wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="831bc-103">Moves the cursor of to the beginning of the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="195bc-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="195bc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="831bc-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="831bc-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset ();  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="195bc-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="195bc-105">Parameters</span></span>  
- <span data-ttu-id="195bc-106">`Reset` nie przyjmuje żadnych parametrów.</span><span class="sxs-lookup"><span data-stu-id="195bc-106">`Reset` takes no parameters.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="831bc-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="831bc-105">Parameters</span></span>  
+ <span data-ttu-id="831bc-106">`Reset` nie przyjmuje żadnych parametrów.</span><span class="sxs-lookup"><span data-stu-id="831bc-106">`Reset` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="195bc-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="195bc-107">Requirements</span></span>  
- <span data-ttu-id="195bc-108">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="195bc-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="831bc-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="831bc-107">Requirements</span></span>  
+ <span data-ttu-id="831bc-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="831bc-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="195bc-109">**Nagłówek:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="195bc-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="831bc-109">**Nagłówek:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="831bc-109">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="195bc-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="195bc-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="831bc-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="831bc-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="195bc-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="195bc-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="831bc-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="831bc-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="195bc-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="195bc-112">See Also</span></span>  
- [<span data-ttu-id="195bc-113">ICorPublishEnum, interfejs</span><span class="sxs-lookup"><span data-stu-id="195bc-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="831bc-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="831bc-112">See also</span></span>
+- [<span data-ttu-id="831bc-113">ICorPublishEnum, interfejs</span><span class="sxs-lookup"><span data-stu-id="831bc-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

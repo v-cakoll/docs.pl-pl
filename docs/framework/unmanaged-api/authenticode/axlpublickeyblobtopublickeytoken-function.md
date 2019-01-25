@@ -10,17 +10,17 @@ api_type:
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56333165d179abd79e82f1416342a2700029eb12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ac147596794f748d3160cdbd34b9f306dfdb379
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604421"
 ---
-# <a name="axlpublickeyblobtopublickeytoken-function"></a><span data-ttu-id="3c35a-102">Funkcja _AxlPublicKeyBlobToPublicKeyToken</span><span class="sxs-lookup"><span data-stu-id="3c35a-102">_AxlPublicKeyBlobToPublicKeyToken Function</span></span>
-<span data-ttu-id="3c35a-103">Oblicza silnej nazwy token klucza publicznego z formatu PUBLICKEYBLOB dostawcy usług Kryptograficznych.</span><span class="sxs-lookup"><span data-stu-id="3c35a-103">Computes the strong name public key token from a CSP PUBLICKEYBLOB format.</span></span>  
+# <a name="axlpublickeyblobtopublickeytoken-function"></a><span data-ttu-id="1634e-102">Funkcja _AxlPublicKeyBlobToPublicKeyToken</span><span class="sxs-lookup"><span data-stu-id="1634e-102">_AxlPublicKeyBlobToPublicKeyToken Function</span></span>
+<span data-ttu-id="1634e-103">Oblicza silnej nazwy token klucza publicznego z formatu publickeyblob — dostawcy usług Kryptograficznych.</span><span class="sxs-lookup"><span data-stu-id="1634e-103">Computes the strong name public key token from a CSP PUBLICKEYBLOB format.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c35a-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3c35a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1634e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1634e-104">Syntax</span></span>  
   
 ```  
 HRESULT _AxlPublicKeyBlobToPublicKeyToken (  
@@ -29,15 +29,15 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3c35a-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="3c35a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1634e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="1634e-105">Parameters</span></span>  
  `pCspPublicKeyBlob`  
- <span data-ttu-id="3c35a-106">[in] Publiczny blob klucza dostawcy usług Kryptograficznych.</span><span class="sxs-lookup"><span data-stu-id="3c35a-106">[in] The CSP public key blob.</span></span>  
+ <span data-ttu-id="1634e-106">[in] Dostawcy usług Kryptograficznych blob klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="1634e-106">[in] The CSP public key blob.</span></span>  
   
  `ppwszPublicKeyHash`  
- <span data-ttu-id="3c35a-107">[out] Wskaźnik do WCHAR \* do odbierania zakodowane w systemie szesnastkowym wartość skrótu klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="3c35a-107">[out] A pointer to WCHAR \* to receive the hex-encoded public key hash.</span></span>  
+ <span data-ttu-id="1634e-107">[out] Wskaźnik do WCHAR \* do odbierania zakodowanego szesnastkowo skrótu klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="1634e-107">[out] A pointer to WCHAR \* to receive the hex-encoded public key hash.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3c35a-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="3c35a-108">Return Value</span></span>  
- <span data-ttu-id="3c35a-109">`S_OK` Jeśli funkcja zakończy się pomyślnie; w przeciwnym razie `S_FALSE`.</span><span class="sxs-lookup"><span data-stu-id="3c35a-109">`S_OK` if the function succeeds; otherwise `S_FALSE`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1634e-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="1634e-108">Return Value</span></span>  
+ <span data-ttu-id="1634e-109">`S_OK` Jeśli funkcja się powiedzie; w przeciwnym razie `S_FALSE`.</span><span class="sxs-lookup"><span data-stu-id="1634e-109">`S_OK` if the function succeeds; otherwise `S_FALSE`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c35a-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3c35a-110">See Also</span></span>  
- [<span data-ttu-id="3c35a-111">Authenticode</span><span class="sxs-lookup"><span data-stu-id="3c35a-111">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a><span data-ttu-id="1634e-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1634e-110">See also</span></span>
+- [<span data-ttu-id="1634e-111">Authenticode</span><span class="sxs-lookup"><span data-stu-id="1634e-111">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 850a97240e0a6450b4dec759a8786e0df5bffac8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a88acf59043613bb216ffe84dfb1593bd6ebea00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651893"
 ---
-# <a name="imetadatatablesgetcolumn-method"></a><span data-ttu-id="fe01c-102">IMetaDataTables::GetColumn — Metoda</span><span class="sxs-lookup"><span data-stu-id="fe01c-102">IMetaDataTables::GetColumn Method</span></span>
-<span data-ttu-id="fe01c-103">Pobiera wskaźnik do wartości zawartych w komórce określonej kolumny i wiersza w danej tabeli.</span><span class="sxs-lookup"><span data-stu-id="fe01c-103">Gets a pointer to the value contained in the cell of the specified column and row in the given table.</span></span>  
+# <a name="imetadatatablesgetcolumn-method"></a><span data-ttu-id="969b0-102">IMetaDataTables::GetColumn — Metoda</span><span class="sxs-lookup"><span data-stu-id="969b0-102">IMetaDataTables::GetColumn Method</span></span>
+<span data-ttu-id="969b0-103">Pobiera wskaźnik do wartości znajdujących się w komórce określonej kolumny i wiersza w danej tabeli.</span><span class="sxs-lookup"><span data-stu-id="969b0-103">Gets a pointer to the value contained in the cell of the specified column and row in the given table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe01c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="fe01c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="969b0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="969b0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetColumn (   
@@ -38,28 +38,28 @@ HRESULT GetColumn (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fe01c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="fe01c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="969b0-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="969b0-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="fe01c-106">[in] Indeks tabeli.</span><span class="sxs-lookup"><span data-stu-id="fe01c-106">[in] The index of the table.</span></span>  
+ <span data-ttu-id="969b0-106">[in] Indeks tabeli.</span><span class="sxs-lookup"><span data-stu-id="969b0-106">[in] The index of the table.</span></span>  
   
  `ixCol`  
- <span data-ttu-id="fe01c-107">[in] Indeks kolumny w tabeli.</span><span class="sxs-lookup"><span data-stu-id="fe01c-107">[in] The index of the column in the table.</span></span>  
+ <span data-ttu-id="969b0-107">[in] Indeks kolumny w tabeli.</span><span class="sxs-lookup"><span data-stu-id="969b0-107">[in] The index of the column in the table.</span></span>  
   
  `rid`  
- <span data-ttu-id="fe01c-108">[in] Indeks wiersza w tabeli.</span><span class="sxs-lookup"><span data-stu-id="fe01c-108">[in] The index of the row in the table.</span></span>  
+ <span data-ttu-id="969b0-108">[in] Indeks wiersza w tabeli.</span><span class="sxs-lookup"><span data-stu-id="969b0-108">[in] The index of the row in the table.</span></span>  
   
  `pVal`  
- <span data-ttu-id="fe01c-109">[out] Wskaźnik do wartości w komórce.</span><span class="sxs-lookup"><span data-stu-id="fe01c-109">[out] A pointer to the value in the cell.</span></span>  
+ <span data-ttu-id="969b0-109">[out] Wskaźnik do wartości w komórce.</span><span class="sxs-lookup"><span data-stu-id="969b0-109">[out] A pointer to the value in the cell.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fe01c-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fe01c-110">Requirements</span></span>  
- <span data-ttu-id="fe01c-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fe01c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="969b0-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="969b0-110">Requirements</span></span>  
+ <span data-ttu-id="969b0-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="969b0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fe01c-112">**Nagłówek:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fe01c-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="969b0-112">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="969b0-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="fe01c-113">**Biblioteka:** używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fe01c-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="969b0-113">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="969b0-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="fe01c-114">**Wersje programu .NET framework** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe01c-114">**.NET Framework Versions** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="969b0-114">**Wersje programu .NET framework** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="969b0-114">**.NET Framework Versions** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe01c-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="fe01c-115">See Also</span></span>  
- [<span data-ttu-id="fe01c-116">IMetaDataTables, interfejs</span><span class="sxs-lookup"><span data-stu-id="fe01c-116">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="fe01c-117">IMetaDataTables2, interfejs</span><span class="sxs-lookup"><span data-stu-id="fe01c-117">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="969b0-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="969b0-115">See also</span></span>
+- [<span data-ttu-id="969b0-116">IMetaDataTables, interfejs</span><span class="sxs-lookup"><span data-stu-id="969b0-116">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="969b0-117">IMetaDataTables2, interfejs</span><span class="sxs-lookup"><span data-stu-id="969b0-117">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: 47eb90c9c89c7114c40b8a2caeb0e99f3ceccccb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e96cb9e8c67075a229c97f11ec7127a4afb75a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567233"
 ---
-# <a name="in-clause-visual-basic"></a><span data-ttu-id="36726-102">In — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36726-102">In Clause (Visual Basic)</span></span>
-<span data-ttu-id="36726-103">Określa grupę, którą ma przejść zmienna pętli for `For Each` pętli lub Określa kolekcję zapytania w `From`, `Join`, lub `Group Join` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="36726-103">Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.</span></span>  
+# <a name="in-clause-visual-basic"></a><span data-ttu-id="048fb-102">In — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="048fb-102">In Clause (Visual Basic)</span></span>
+<span data-ttu-id="048fb-103">Określa grupę, która ma przejść zmienna pętli `For Each` pętli lub Określa kolekcję do wykonywania zapytań w `From`, `Join`, lub `Group Join` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="048fb-103">Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="36726-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="36726-104">Remarks</span></span>  
- <span data-ttu-id="36726-105">`In` — Słowo kluczowe może być używana w następujących sytuacjach:</span><span class="sxs-lookup"><span data-stu-id="36726-105">The `In` keyword can be used in the following contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="048fb-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="048fb-104">Remarks</span></span>  
+ <span data-ttu-id="048fb-105">`In` — Słowo kluczowe może służyć w następujących okolicznościach:</span><span class="sxs-lookup"><span data-stu-id="048fb-105">The `In` keyword can be used in the following contexts:</span></span>  
   
- [<span data-ttu-id="36726-106">For Each...Next, instrukcja</span><span class="sxs-lookup"><span data-stu-id="36726-106">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [<span data-ttu-id="048fb-106">For Each...Next, instrukcja</span><span class="sxs-lookup"><span data-stu-id="048fb-106">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
- [<span data-ttu-id="36726-107">From, klauzula</span><span class="sxs-lookup"><span data-stu-id="36726-107">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="048fb-107">From, klauzula</span><span class="sxs-lookup"><span data-stu-id="048fb-107">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
   
- [<span data-ttu-id="36726-108">Join, klauzula</span><span class="sxs-lookup"><span data-stu-id="36726-108">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="048fb-108">Join, klauzula</span><span class="sxs-lookup"><span data-stu-id="048fb-108">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
   
- [<span data-ttu-id="36726-109">Group Join, klauzula</span><span class="sxs-lookup"><span data-stu-id="36726-109">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="048fb-109">Klauzula Group Join</span><span class="sxs-lookup"><span data-stu-id="048fb-109">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a><span data-ttu-id="36726-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="36726-110">See Also</span></span>  
- [<span data-ttu-id="36726-111">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="36726-111">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="048fb-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="048fb-110">See also</span></span>
+- [<span data-ttu-id="048fb-111">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="048fb-111">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

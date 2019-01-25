@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab2fbf6bb08a33158ea450f0f19eca50e280d8c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71d267eedf621a11f8ad21cc7148e1810955521c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412883"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713434"
 ---
-# <a name="icordebugdatatargetgetthreadcontext-method"></a><span data-ttu-id="abd6e-102">ICorDebugDataTarget::GetThreadContext — Metoda</span><span class="sxs-lookup"><span data-stu-id="abd6e-102">ICorDebugDataTarget::GetThreadContext Method</span></span>
-<span data-ttu-id="abd6e-103">Zwraca bieżący kontekst wątku określonego wątku.</span><span class="sxs-lookup"><span data-stu-id="abd6e-103">Returns the current thread context for the specified thread.</span></span>  
+# <a name="icordebugdatatargetgetthreadcontext-method"></a><span data-ttu-id="a4d5d-102">ICorDebugDataTarget::GetThreadContext — Metoda</span><span class="sxs-lookup"><span data-stu-id="a4d5d-102">ICorDebugDataTarget::GetThreadContext Method</span></span>
+<span data-ttu-id="a4d5d-103">Zwraca bieżący kontekst wątku określonego wątku.</span><span class="sxs-lookup"><span data-stu-id="a4d5d-103">Returns the current thread context for the specified thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="abd6e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="abd6e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4d5d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a4d5d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadContext(  
@@ -37,32 +37,32 @@ HRESULT GetThreadContext(
        [out, size_is(contextSize)] BYTE * pContext);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="abd6e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="abd6e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a4d5d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="a4d5d-105">Parameters</span></span>  
  `dwThreadID`  
- <span data-ttu-id="abd6e-106">[in] Identyfikator wątku, w którego kontekście ma być pobrana.</span><span class="sxs-lookup"><span data-stu-id="abd6e-106">[in] The identifier of the thread whose context is to be retrieved.</span></span> <span data-ttu-id="abd6e-107">Identyfikator jest zdefiniowany przez system operacyjny.</span><span class="sxs-lookup"><span data-stu-id="abd6e-107">The identifier is defined by the operating system.</span></span>  
+ <span data-ttu-id="a4d5d-106">[in] Identyfikator wątku, którego kontekst ma być pobrana.</span><span class="sxs-lookup"><span data-stu-id="a4d5d-106">[in] The identifier of the thread whose context is to be retrieved.</span></span> <span data-ttu-id="a4d5d-107">Identyfikator jest definiowany przez system operacyjny.</span><span class="sxs-lookup"><span data-stu-id="a4d5d-107">The identifier is defined by the operating system.</span></span>  
   
  `contextFlags`  
- <span data-ttu-id="abd6e-108">[in] Bitowe połączenie flag zależny od platformy, które wskazują części kontekście powinny być do odczytu.</span><span class="sxs-lookup"><span data-stu-id="abd6e-108">[in] A bitwise combination of platform-dependent flags that indicate which portions of the context should be read.</span></span>  
+ <span data-ttu-id="a4d5d-108">[in] Bitowa kombinacja flag zależny od platformy, które wskazują, które części kontekstu powinny być odczytywane.</span><span class="sxs-lookup"><span data-stu-id="a4d5d-108">[in] A bitwise combination of platform-dependent flags that indicate which portions of the context should be read.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="abd6e-109">[in] Rozmiar `pContext`.</span><span class="sxs-lookup"><span data-stu-id="abd6e-109">[in] The size of `pContext`.</span></span>  
+ <span data-ttu-id="a4d5d-109">[in] Rozmiar `pContext`.</span><span class="sxs-lookup"><span data-stu-id="a4d5d-109">[in] The size of `pContext`.</span></span>  
   
  `pContext`  
- <span data-ttu-id="abd6e-110">[out] Bufor przechowywania kontekst wątku.</span><span class="sxs-lookup"><span data-stu-id="abd6e-110">[out] The buffer where the thread context will be stored.</span></span>  
+ <span data-ttu-id="a4d5d-110">[out] Bufor, w którym będzie przechowywany kontekst wątku.</span><span class="sxs-lookup"><span data-stu-id="a4d5d-110">[out] The buffer where the thread context will be stored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="abd6e-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="abd6e-111">Remarks</span></span>  
- <span data-ttu-id="abd6e-112">Na platformach Windows `pContext` musi być `CONTEXT` Struktura (zdefiniowane w pliku WinNT.h), która jest odpowiednia dla typu maszyny, określony przez [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="abd6e-112">On Windows platforms, `pContext` must be a `CONTEXT` structure (defined in WinNT.h) that is appropriate for the machine type specified by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span> <span data-ttu-id="abd6e-113">`contextFlags` musi mieć takie same wartości jak `ContextFlags` pole `CONTEXT` struktury.</span><span class="sxs-lookup"><span data-stu-id="abd6e-113">`contextFlags` must have the same values as the `ContextFlags` field of the `CONTEXT` structure.</span></span> <span data-ttu-id="abd6e-114">`CONTEXT` Struktura jest specyficznych dla procesora, zobacz szczegóły w pliku pliku WinNT.h.</span><span class="sxs-lookup"><span data-stu-id="abd6e-114">The `CONTEXT` structure is processor-specific; refer to the WinNT.h file for details.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a4d5d-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a4d5d-111">Remarks</span></span>  
+ <span data-ttu-id="a4d5d-112">Na platformach Windows `pContext` musi być `CONTEXT` struktury (zdefiniowane w pliku WinNT.h), który jest odpowiedni dla typu maszyny, określonego przez [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="a4d5d-112">On Windows platforms, `pContext` must be a `CONTEXT` structure (defined in WinNT.h) that is appropriate for the machine type specified by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span> <span data-ttu-id="a4d5d-113">`contextFlags` musi mieć takie same wartości jak `ContextFlags` pole `CONTEXT` struktury.</span><span class="sxs-lookup"><span data-stu-id="a4d5d-113">`contextFlags` must have the same values as the `ContextFlags` field of the `CONTEXT` structure.</span></span> <span data-ttu-id="a4d5d-114">`CONTEXT` Struktury jest specyficznych dla procesora; odwoływać się do pliku opis pliku WinNT.h, aby uzyskać szczegółowe informacje.</span><span class="sxs-lookup"><span data-stu-id="a4d5d-114">The `CONTEXT` structure is processor-specific; refer to the WinNT.h file for details.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="abd6e-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="abd6e-115">Requirements</span></span>  
- <span data-ttu-id="abd6e-116">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="abd6e-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4d5d-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a4d5d-115">Requirements</span></span>  
+ <span data-ttu-id="a4d5d-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4d5d-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="abd6e-117">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="abd6e-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a4d5d-117">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a4d5d-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="abd6e-118">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="abd6e-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a4d5d-118">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a4d5d-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="abd6e-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abd6e-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="a4d5d-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4d5d-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abd6e-120">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="abd6e-120">See Also</span></span>  
- [<span data-ttu-id="abd6e-121">ICorDebugDataTarget, interfejs</span><span class="sxs-lookup"><span data-stu-id="abd6e-121">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [<span data-ttu-id="abd6e-122">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="abd6e-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="abd6e-123">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="abd6e-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="a4d5d-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a4d5d-120">See also</span></span>
+- [<span data-ttu-id="a4d5d-121">ICorDebugDataTarget, interfejs</span><span class="sxs-lookup"><span data-stu-id="a4d5d-121">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [<span data-ttu-id="a4d5d-122">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="a4d5d-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="a4d5d-123">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="a4d5d-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

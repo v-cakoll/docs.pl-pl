@@ -1,20 +1,20 @@
 ---
-title: ICorDebugMutableDataTarget::ContinueStatusChanged — metoda
+title: ICorDebugMutableDataTarget::ContinueStatusChanged Method
 ms.date: 03/30/2017
 ms.assetid: 5a66d3f4-dd16-4d62-9dcc-0eab7041d894
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d2560aa484c6965047b2fdaf2c539b8ab675bc8
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c9d70bb7b886556dbf87590e9f0717f1d161b0ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559739"
 ---
-# <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a><span data-ttu-id="93aa2-102">ICorDebugMutableDataTarget::ContinueStatusChanged — metoda</span><span class="sxs-lookup"><span data-stu-id="93aa2-102">ICorDebugMutableDataTarget::ContinueStatusChanged Method</span></span>
-<span data-ttu-id="93aa2-103">Zmienia stan kontynuacji dla zdarzenia debugowania oczekujących na określony wątek.</span><span class="sxs-lookup"><span data-stu-id="93aa2-103">Changes the continuation status for the outstanding debug event on the specified thread.</span></span>  
+# <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a><span data-ttu-id="35222-102">ICorDebugMutableDataTarget::ContinueStatusChanged Method</span><span class="sxs-lookup"><span data-stu-id="35222-102">ICorDebugMutableDataTarget::ContinueStatusChanged Method</span></span>
+<span data-ttu-id="35222-103">Zmienia stan kontynuacji dla zdarzenia debugowania oczekujących na określonego wątku.</span><span class="sxs-lookup"><span data-stu-id="35222-103">Changes the continuation status for the outstanding debug event on the specified thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93aa2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="93aa2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35222-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="35222-104">Syntax</span></span>  
   
 ```  
 HRESULT ContinueStatusChanged(  
@@ -22,25 +22,25 @@ HRESULT ContinueStatusChanged(
    [in] CORDB_CONTINUE_STATUS continueStatus);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="93aa2-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="93aa2-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="35222-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="35222-105">Parameters</span></span>  
  `dwThreadId`  
- <span data-ttu-id="93aa2-106">Identyfikator wątku zdefiniowane przez system operacyjny.</span><span class="sxs-lookup"><span data-stu-id="93aa2-106">The operating system-defined thread identifier.</span></span>  
+ <span data-ttu-id="35222-106">Identyfikator wątku zdefiniowaną przez system operacyjny.</span><span class="sxs-lookup"><span data-stu-id="35222-106">The operating system-defined thread identifier.</span></span>  
   
  `continueStatus`  
- <span data-ttu-id="93aa2-107">A [COREDB_CONTINUE_STATUS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) wartość, która reprezentuje nowe żądanie kontynuacji stanu.</span><span class="sxs-lookup"><span data-stu-id="93aa2-107">A [COREDB_CONTINUE_STATUS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that represents the new requested continuation status.</span></span>  
+ <span data-ttu-id="35222-107">A [COREDB_CONTINUE_STATUS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) wartość, która reprezentuje nowy żądany stan kontynuacji.</span><span class="sxs-lookup"><span data-stu-id="35222-107">A [COREDB_CONTINUE_STATUS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that represents the new requested continuation status.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="93aa2-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="93aa2-108">Remarks</span></span>  
- <span data-ttu-id="93aa2-109">Wywołań debugera `ContinueStatusChanged` metody, gdy wywołuje metodę ICorDebug wymaga bieżącego zdarzenia debugowania mają zostać obsłużone w sposób zapewniający potencjalnie różni się od sposób, w którym go zwykle może być obsługiwane.</span><span class="sxs-lookup"><span data-stu-id="93aa2-109">The debugger calls the `ContinueStatusChanged` method when it calls an ICorDebug method that requires the current debug event to be handled in a way that is potentially different from the way in which it normally would be handled.</span></span> <span data-ttu-id="93aa2-110">Na przykład, jeśli istnieje oczekujące wyjątek i debuger żądań operację, która spowoduje anulowanie wyjątek (takich jak [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) lub `FuncEval`), ten interfejs API jest używany do żądania, aby był wyjątek anulowane.</span><span class="sxs-lookup"><span data-stu-id="93aa2-110">For example, if there is an outstanding exception, and the debugger requests an operation that would cancel the exception (such as [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) or `FuncEval`), this API is used to request that the exception be cancelled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="35222-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="35222-108">Remarks</span></span>  
+ <span data-ttu-id="35222-109">Wywołuje debugera `ContinueStatusChanged` metody, gdy wywołuje metodę ICorDebug wymaga bieżącego zdarzenia debugowania, które mają być obsługiwane w sposób, który potencjalnie różni się od sposobu, w którym ją będą przechowywane i udostępniane.</span><span class="sxs-lookup"><span data-stu-id="35222-109">The debugger calls the `ContinueStatusChanged` method when it calls an ICorDebug method that requires the current debug event to be handled in a way that is potentially different from the way in which it normally would be handled.</span></span> <span data-ttu-id="35222-110">Na przykład, jeśli występuje wyjątek zaległe i debuger żądania operacji, która spowoduje anulowanie wyjątku (takie jak [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) lub `FuncEval`), ten interfejs API jest używany do żądania, aby był wyjątek anulowane.</span><span class="sxs-lookup"><span data-stu-id="35222-110">For example, if there is an outstanding exception, and the debugger requests an operation that would cancel the exception (such as [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) or `FuncEval`), this API is used to request that the exception be cancelled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="93aa2-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="93aa2-111">Requirements</span></span>  
- <span data-ttu-id="93aa2-112">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="93aa2-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35222-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="35222-111">Requirements</span></span>  
+ <span data-ttu-id="35222-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="35222-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="93aa2-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="93aa2-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="35222-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="35222-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="93aa2-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="93aa2-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="35222-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="35222-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="93aa2-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93aa2-115">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
+ <span data-ttu-id="35222-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35222-115">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93aa2-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="93aa2-116">See Also</span></span>  
- [<span data-ttu-id="93aa2-117">ICorDebugMutableDataTarget, interfejs</span><span class="sxs-lookup"><span data-stu-id="93aa2-117">ICorDebugMutableDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)  
- [<span data-ttu-id="93aa2-118">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="93aa2-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="35222-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="35222-116">See also</span></span>
+- [<span data-ttu-id="35222-117">ICorDebugMutableDataTarget, interfejs</span><span class="sxs-lookup"><span data-stu-id="35222-117">ICorDebugMutableDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
+- [<span data-ttu-id="35222-118">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="35222-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

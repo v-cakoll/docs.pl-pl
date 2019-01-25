@@ -2,19 +2,19 @@
 title: 'Instrukcje: Tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania protokołu HTTP sieci Web w programie WCF'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576398"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Instrukcje: Tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania protokołu HTTP sieci Web w programie WCF
-Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Jest to sytuacji, gdy operacji usługi musi zwrócić dane w formacie nie jest obsługiwany przez usługi WCF. W tym temacie omówiono za pomocą modelu programowania protokołu HTTP sieci WEB WCF do tworzenia takiej usługi. Ta usługa ma jedną operację, która zwraca strumienia.  
+Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Dotyczy to sytuacji, gdy operacja usługi musi zwrócić dane w formacie nie jest obsługiwane przez architekturę WCF. W tym temacie omówiono tworzenie takiej usługi przy użyciu programu WCF WEB HTTP modelu programowania. Ta usługa ma jedną operację, która zwraca strumienia.  
   
 ### <a name="to-implement-the-service-contract"></a>Aby zaimplementować kontrakt usługi  
   
-1.  Definiowanie kontraktu usługi. Kontrakt jest nazywany `IImageServer` i jedną metodę o nazwie `GetImage` zwracającą <xref:System.IO.Stream>.  
+1.  Definiowanie kontraktu usługi. Kontrakt jest nazywany `IImageServer` i jedną metodę o nazwie `GetImage` zwracającego <xref:System.IO.Stream>.  
   
     ```  
     [ServiceContract]  
@@ -25,9 +25,9 @@ Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z ope
         }  
     ```  
   
-     Ponieważ metoda zwraca <xref:System.IO.Stream>, WCF przyjęto założenie, że operacja ma pełną kontrolę nad bajtów, które zostaną zwrócone z operacji usługi i są one stosowane bez formatowania danych, która jest zwracana.  
+     Ponieważ metoda ta zwraca <xref:System.IO.Stream>, WCF przyjęto założenie, że operacja ma pełną kontrolę nad bajtów, które są zwracane z operacji usługi i są one stosowane do danych, który jest zwracany bez formatowania.  
   
-2.  Implementowanie kontraktu usługi. Kontrakt ma tylko jedną operację (`GetImage`). Ta metoda generuje mapę bitową, a następnie zapisz go na <xref:System.IO.MemoryStream> w formacie jpg. Następnie operacja zwraca strumieniu do obiektu wywołującego.  
+2.  Implementowanie kontraktu usługi. Kontrakt ma tylko jedną operację (`GetImage`). Ta metoda generuje mapę bitową, a następnie zapisać go w celu <xref:System.IO.MemoryStream> w formacie jpg. Następnie operacja zwraca strumieniu do obiektu wywołującego.  
   
     ```  
     public class Service : IImageServer  
@@ -51,13 +51,13 @@ Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z ope
        }  
     ```  
   
-     Zwróć uwagę drugiego do ostatniego wiersza kodu: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Zwróć uwagę, druga do ostatni wiersz kodu: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     To ustawienie nagłówek typu zawartości `"image/jpeg"`. Chociaż ten przykład przedstawia sposób zwrócenia pliku jpg, może być modyfikowany do zwrócenia dowolnego typu danych, który jest wymagany, w dowolnym formacie. Operacja musi pobrać lub wygenerowane dane i zapisać go do strumienia.  
+     To ustawia dla nagłówka typu zawartości `"image/jpeg"`. Mimo że w tym przykładzie przedstawiono sposób zwracania plik jpg, można modyfikować do zwracania dowolnego typu danych, który jest wymagany, w dowolnym formacie. Operacja musi pobrać lub generowanie danych i następnie zapisać go w strumieniu.  
   
 ### <a name="to-host-the-service"></a>Do obsługi usługi  
   
-1.  Utwórz aplikację konsoli do obsługi usługi.  
+1.  Utwórz aplikację konsolową, do obsługi usługi.  
   
     ```  
     class Program  
@@ -68,13 +68,13 @@ Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z ope
     }  
     ```  
   
-2.  Utwórz zmienną do przechowywania adres podstawowy usługi w ramach `Main` metody.  
+2.  Utwórz zmienną do przechowywania adres podstawowy dla usługi w ramach `Main` metody.  
   
     ```  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  Utwórz <xref:System.ServiceModel.ServiceHost> wystąpienia klasy usługi i adres podstawowy usługi.  
+3.  Utwórz <xref:System.ServiceModel.ServiceHost> wystąpienie usługi, określanie klasy usługi i adres podstawowy.  
   
     ```  
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
@@ -101,14 +101,14 @@ Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z ope
     host.Close();  
     ```  
   
-### <a name="to-call-the-raw-service-using-internet-explorer"></a>Do wywołania tej usługi pierwotnych przy użyciu programu Internet Explorer  
+### <a name="to-call-the-raw-service-using-internet-explorer"></a>Aby wywołać pierwotne usługę za pomocą programu Internet Explorer  
   
-1.  Uruchom usługę, powinny zostać wyświetlone następujące dane wyjściowe z usługi. `Service is running Press ENTER to close the host`  
+1.  Uruchom usługę, powinny być widoczne następujące dane wyjściowe z usługi. `Service is running Press ENTER to close the host`  
   
-2.  Otwórz program Internet Explorer, a następnie wpisz w `http://localhost:8000/Service/GetImage?width=50&height=40` powinna zostać wyświetlona żółta prostokąt z niebieskim linii ukośnych za pomocą Centrum.  
+2.  Otwórz program Internet Explorer i wpisz `http://localhost:8000/Service/GetImage?width=50&height=40` powinna zostać wyświetlona żółta prostokąt z niebieska linia skos, za pośrednictwem Centrum.  
   
 ## <a name="example"></a>Przykład  
- Poniżej znajduje się pełna lista kod w tym temacie.  
+ Poniżej przedstawiono pełną listę kodów w tym temacie.  
   
 ```  
 using System;  
@@ -173,7 +173,7 @@ namespace RawImageService
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   W przypadku kompilowania kodu próbki kodu odwołania System.ServiceModel.dll i System.ServiceModel.Web.dll.  
+-   Podczas kompilowania kodu przykładowej odniesienia System.ServiceModel.dll i System.ServiceModel.Web.dll.  
   
-## <a name="see-also"></a>Zobacz też  
- [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Zobacz także
+- [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

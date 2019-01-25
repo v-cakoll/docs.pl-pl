@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fa802ab9d1025bd130a6265b50050284aae0150
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4c83576c5c46d9a32f990d23fa20b116be36e4c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612001"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcconcurrent —&gt; — Element
 Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia wyrzucanie elementów bezużytecznych w oddzielnym wątku.  
   
  \<Konfiguracja >  
 \<runtime>  
-\<gcconcurrent — >  
+\<gcConcurrent>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -89,7 +89,7 @@ Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia wyrzucanie
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Zobacz także
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Podstawy dotyczące odzyskiwania pamięci](../../../../../docs/standard/garbage-collection/fundamentals.md)

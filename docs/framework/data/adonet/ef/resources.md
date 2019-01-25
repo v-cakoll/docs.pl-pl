@@ -2,12 +2,12 @@
 title: Zasoby programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
-ms.openlocfilehash: bc1a5b76ecc038d8059b04f4dc222126e796f03d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 24ee9225b8e19eac93554d2243aac0cafd5e9ef0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522456"
 ---
 # <a name="entity-framework-resources"></a>Zasoby programu Entity Framework
 Następujące zasoby zewnętrzne Podaj informacje i pomoc techniczna do tworzenia aplikacji platformy Entity Framework.  
@@ -27,8 +27,8 @@ Następujące zasoby zewnętrzne Podaj informacje i pomoc techniczna do tworzeni
  [Entity Framework — często zadawane pytania](https://social.technet.microsoft.com/wiki/contents/articles/3737.entity-framework-faq.aspx)  
  Witryny typu wiki sekcji zawierającej często zadawane pytania Entity Framework.  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
- [Wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [Terminologia programu Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)  
- [Narzędzia do modelu danych jednostki ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a>Zobacz także
+- [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
+- [Wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [Terminologia programu Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)
+- [Narzędzia do modelu danych jednostki ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

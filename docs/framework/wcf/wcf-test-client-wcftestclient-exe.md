@@ -2,12 +2,12 @@
 title: Testowy klient WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d48caebed857a3a61842b1ea1d3e8b2977d749ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611387"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Testowy klient WCF (WcfTestClient.exe)
 Windows Communication Foundation (WCF) testowanie klient (WcfTestClient.exe) jest narzędziem graficznego interfejsu użytkownika, które umożliwia użytkownikom testu parametrów wejściowych, przesyłanie, że dane wejściowe do usługi i wyświetlanie odpowiedzi, który usługa wysyła z powrotem. Zapewnia bezproblemowe usługi testowania doświadczenie w połączeniu z hosta usługi WCF.  
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) testowanie klient (WcfTestClient.exe) jes
 ## <a name="scenarios-for-using-test-client"></a>Scenariusze dotyczące korzystania z klienta testowego  
  W poniższych sekcjach omówiono najbardziej typowych scenariuszy, w których można użyć klienta testowego WCF w celu uproszczenia procesu opracowywania.  
   
-### <a name="inside-visual-studio"></a>W programie Visual Studio  
+### <a name="inside-visual-studio"></a>Inside Visual Studio  
   
 #### <a name="wcf-service-host-starts-wcf-test-client-with-a-single-service"></a>Usługa hosta uruchamia WCF klienta testowego WCF z jedną usługą  
  Po utworzeniu nowego projektu usługi WCF i naciśnij klawisz F5, aby uruchomić debuger, Host usługi WCF rozpoczyna się do obsługi usługi w projekcie. Następnie klient testowy WCF otwiera i wyświetla listę punktów końcowych usługi zdefiniowane w pliku konfiguracyjnym. Można przetestować parametrów i wywołać usługę i powtórz ten proces nieprzerwanie testować i weryfikować usługi.  
@@ -165,5 +165,5 @@ Windows Communication Foundation (WCF) testowanie klient (WcfTestClient.exe) jes
   
 -   Kliknij prawym przyciskiem myszy **Host usługi WCF** ikonę w obszarze powiadomień, a następnie kliknij **zakończenia.** To jest zamykana z klienta testowego WCF i hostów Auto usługi WCF i zatrzymuje proces debugowania programu Visual Studio.  
   
-## <a name="see-also"></a>Zobacz też  
- [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+## <a name="see-also"></a>Zobacz także
+- [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

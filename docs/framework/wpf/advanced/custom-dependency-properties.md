@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: f15490417d54121c750e2ea918820c5cb717002e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1401885db6faeec1d493e0279d8a5472e3128245
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594073"
 ---
 # <a name="custom-dependency-properties"></a>Niestandardowe właściwości zależności
 
@@ -169,7 +169,7 @@ Właściwości zależności powinien być zadeklarowany jako publiczny właściw
 
 Jest zasadniczo podczas programowania kodu zarządzanego (często wymuszane przez narzędzi analizy kodu, takich jak FxCop), który klasy konstruktorów nie powinien wywoływać metod wirtualnych. Jest to spowodowane Konstruktory mogą być wywoływane jako podstawowy inicjowania konstruktora klasy pochodnej i wprowadzając metodę wirtualną za pomocą konstruktora mogą pojawić się w stanie niekompletne inicjowania wystąpienia obiektu podczas konstruowania. Po utworzeniu klasy pochodnej z dowolną klasę pochodzącą od <xref:System.Windows.DependencyObject>, należy pamiętać, że sam system właściwość wywołuje i udostępnia metody wirtualne wewnętrznie. Te metody wirtualne są częścią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości usług systemowych. Zastępowanie metody umożliwia klas pochodnych do wzięcia udziału w określaniu wartości. Aby uniknąć potencjalnych problemów za pomocą inicjowania środowiska uruchomieniowego, nie należy ustawiać zależności wartości właściwości konstruktorów klas, chyba że zostaną wykonane wzorca bardzo szczegółowych konstruktora. Aby uzyskać więcej informacji, zobacz [bezpieczne wzorce konstruktora dependencyobjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
 - [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)

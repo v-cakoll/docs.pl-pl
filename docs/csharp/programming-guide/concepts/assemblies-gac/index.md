@@ -2,17 +2,17 @@
 title: Zestawy i Globalna pamięć podręczna zestawów (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 25ae3a25b825a0594d7cc9479c58e967375e61b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577051"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Zestawy i Globalna pamięć podręczna zestawów (C#)
 Zespoły tworzą podstawową jednostką wdrażania, kontroli wersji, ponownego użycia, określania zakresu aktywacji i uprawnień zabezpieczeń. Aplikacja oparta na sieci. Zestawy formę dołączana dynamicznie biblioteka (dll) pliku lub plik wykonywalny (.exe) i są blokami konstrukcyjnymi programu .NET Framework. Zapewniają one środowiska uruchomieniowego języka wspólnego informacje, które musi być znane implementacje typu. Można potraktować zestawu jako kolekcję typów i zasobów, które tworzą jednostkę logiczną funkcji i zostały opracowane w celu współpracują ze sobą.  
   
- Zespoły mogą zawierać przynajmniej jeden moduł. Na przykład większe projekty mogą być planowane w taki sposób, że kilka indywidualnych deweloperów działać na osobne moduły, wszystkie nadchodzące ze sobą, aby utworzyć pojedynczy zestaw. Aby uzyskać więcej informacji na temat modułów, zobacz temat [porady: kompilacja zestawów Multifile](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Zespoły mogą zawierać przynajmniej jeden moduł. Na przykład większe projekty mogą być planowane w taki sposób, że kilka indywidualnych deweloperów działać na osobne moduły, wszystkie nadchodzące ze sobą, aby utworzyć pojedynczy zestaw. Aby uzyskać więcej informacji na temat modułów, zobacz temat [jak: Kompilacja zestawów wieloplikowych](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Zestawy mają następujące właściwości:  
   
@@ -50,14 +50,14 @@ Zespoły tworzą podstawową jednostką wdrażania, kontroli wersji, ponownego u
 > [!NOTE]
 >  Tworzenie zestawu w programie Visual Studio na **kompilacji** menu wybierz opcję **kompilacji**.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)  
-- [Zestawy w środowisku uruchomieniowym CLR](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [Przyjazne zestawy (C#)](friend-assemblies.md)  
-- [Porady: dzielenie się zestawem z innymi aplikacjami (C#)](how-to-share-an-assembly-with-other-applications.md)  
-- [Porady: ładowanie i zwalnianie zestawów (C#)](how-to-load-and-unload-assemblies.md)  
-- [Porady: Określanie, jeśli plik jest zestawem (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
-- [Porady: tworzenie i używanie zestawów przy użyciu wiersza polecenia (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)
+- [Zestawy w środowisku uruchomieniowym CLR](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Przyjazne zestawy (C#)](friend-assemblies.md)
+- [Instrukcje: Dzielenie się zestawem z innymi aplikacjami (C#)](how-to-share-an-assembly-with-other-applications.md)
+- [Instrukcje: Ładowanie i zwalnianie zestawów (C#)](how-to-load-and-unload-assemblies.md)
+- [Instrukcje: Określić, czy plik jest zestawem (C#)](how-to-determine-if-a-file-is-an-assembly.md)
+- [Instrukcje: Tworzenie i używanie zestawów przy użyciu wiersza polecenia (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

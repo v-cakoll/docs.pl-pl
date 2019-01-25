@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: wdrażanie formularza korzystającego z operacji w tle'
+title: 'Przewodnik: Implementowanie formularza korzystającego z operacji w tle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 81c7f21e7e331b60d41330c8239893332dbea5a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543529"
 ---
-# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Wskazówki: wdrażanie formularza korzystającego z operacji w tle
+# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Przewodnik: Implementowanie formularza korzystającego z operacji w tle
 Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytkownika (UI) przestanie odpowiadać lub "zawiesza się," można użyć <xref:System.ComponentModel.BackgroundWorker> klasy do wykonywania operacji na inny wątek.  
   
  W tym instruktażu przedstawiono sposób użycia <xref:System.ComponentModel.BackgroundWorker> klasy do wykonywania czasochłonnych obliczeń "w"tle, podczas gdy interfejs użytkownika reaguje.  Po zakończeniu wykonywania masz aplikację, która oblicza numery Fibonacci asynchronicznie. Mimo że obliczeniowej dużą liczbą Fibonacci może potrwać zauważalne ilość czasu, przez to opóźnienie nie zostanie przerwana głównego wątku interfejsu użytkownika, a formularz będzie odpowiadać podczas obliczania.  
@@ -37,7 +37,7 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
 -   Dodawanie raportowania postępu i obsługę anulowania  
   
- Aby uzyskać pełną listę kod używany w tym przykładzie, zobacz [porady: Implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+ Aby uzyskać pełną listę kod używany w tym przykładzie, zobacz [jak: Implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -57,7 +57,7 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
 5.  Zmień nazwę pierwszego <xref:System.Windows.Forms.Button> kontroli `startAsyncButton` i ustaw <xref:System.Windows.Forms.Control.Text%2A> właściwość `Start Async`. Zmień nazwę drugiej <xref:System.Windows.Forms.Button> kontroli `cancelAsyncButton`i ustaw <xref:System.Windows.Forms.Control.Text%2A> właściwość `Cancel Async`. Ustaw jego <xref:System.Windows.Forms.Control.Enabled%2A> właściwość `false`.  
   
-6.  Utwórz procedurę obsługi zdarzeń dla obu <xref:System.Windows.Forms.Button> kontrolek <xref:System.Windows.Forms.Control.Click> zdarzenia. Aby uzyskać więcej informacji, zobacz [jak: utworzyć zdarzenie obsługi za pomocą projektanta](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+6.  Utwórz procedurę obsługi zdarzeń dla obu <xref:System.Windows.Forms.Button> kontrolek <xref:System.Windows.Forms.Control.Click> zdarzenia. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie obsługi zdarzeń za pomocą projektanta](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 7.  Przeciągnij <xref:System.Windows.Forms.Label> z kontrolować **przybornika** na formularz i zmień jego nazwę `resultLabel`.  
   
@@ -75,7 +75,7 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>Aby zaimplementować procedury obsługi zdarzeń asynchronicznych  
   
-1.  W **właściwości** oknie z <xref:System.ComponentModel.BackgroundWorker> składnika wciąż zaznaczone, kliknij przycisk **zdarzenia** przycisku. Kliknij dwukrotnie <xref:System.ComponentModel.BackgroundWorker.DoWork> i <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> zdarzeń, aby utworzyć procedury obsługi zdarzeń. Aby uzyskać więcej informacji na temat używania programów obsługi zdarzeń, zobacz [jak: utworzyć zdarzenie obsługi za pomocą projektanta](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+1.  W **właściwości** oknie z <xref:System.ComponentModel.BackgroundWorker> składnika wciąż zaznaczone, kliknij przycisk **zdarzenia** przycisku. Kliknij dwukrotnie <xref:System.ComponentModel.BackgroundWorker.DoWork> i <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> zdarzeń, aby utworzyć procedury obsługi zdarzeń. Aby uzyskać więcej informacji na temat używania programów obsługi zdarzeń, zobacz [jak: Tworzenie obsługi zdarzeń za pomocą projektanta](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 2.  Utwórz nową metodę o nazwie `ComputeFibonacci`, w formularzu. Ta metoda wykonuje faktyczną pracę, a zostanie ona uruchomiona w tle. Ten kod przedstawia implementację cyklicznego algorytmu Fibonacci, który jest szczególnie nieefektywne, biorąc wykładniczo dłużej, aby uzyskać większą liczbą. Służy w tym miejscu w celach ilustracyjnych, aby pokazać operacji, która może prowadzić do opóźnień w aplikacji.  
   
@@ -156,7 +156,7 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
 -   Używanych jest wiele <xref:System.ComponentModel.BackgroundWorker> obiektów dla kilku operacji jednoczesnych.  
   
--   Do debugowania aplikacji wielowątkowych, zobacz [porady: Korzystanie z okna wątków](/visualstudio/debugger/how-to-use-the-threads-window).  
+-   Do debugowania aplikacji wielowątkowych, zobacz [jak: Korzystanie z okna wątków](/visualstudio/debugger/how-to-use-the-threads-window).  
   
 -   Implementowanie własnego składnika, który obsługuje model programowania asynchronicznego. Aby uzyskać więcej informacji, zobacz [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
@@ -169,6 +169,6 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
 - [Zarządzana wątkowość](../../../../docs/standard/threading/index.md)
 - [Zarządzana wątkowość — najlepsze rozwiązania](../../../../docs/standard/threading/managed-threading-best-practices.md)
 - [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Instrukcje: implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)  
-- [Przewodnik: przeprowadzanie operacji w tle](walkthrough-running-an-operation-in-the-background.md)
+- [Instrukcje: Implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Przewodnik: Przeprowadzanie operacji w tle](walkthrough-running-an-operation-in-the-background.md)
 - [BackgroundWorker, składnik](backgroundworker-component.md)

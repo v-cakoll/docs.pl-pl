@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -noconfig compiler option [C#]
 - noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
-ms.openlocfilehash: b689a4bf0d8a1e57bf36f8ded7f2c9308f241670
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d28ef1334df847865721783fa98aaa9d8c576be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528579"
 ---
 # <a name="-noconfig-c-compiler-options"></a>-noconfig (opcje kompilatora C#)
 **- Noconfig** opcji informuje kompilator, nie można skompilować przy użyciu pliku csc.rsp, który jest na terenie i ładowane z tym samym katalogu co plik csc.exe.  
@@ -36,7 +36,7 @@ ms.locfileid: "43527306"
   
  Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można zmienić programowo.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

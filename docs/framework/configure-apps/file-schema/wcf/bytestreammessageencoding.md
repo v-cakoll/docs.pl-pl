@@ -2,12 +2,12 @@
 title: '&lt;byteStreamMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: 9d38f16cdeb8b769f4026ccb29f9129e93ef031c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 92ae3dc10e0ae734a3113e22f175f4d010ca55b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541862"
 ---
 # <a name="ltbytestreammessageencodinggt"></a>&lt;byteStreamMessageEncoding&gt;
 Określa kodowanie komunikatu jako strumień bajtów z opcją określenia kodowania znaków.  
@@ -31,7 +31,7 @@ Określa kodowanie komunikatu jako strumień bajtów z opcją określenia kodowa
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|Element messageVersion|Określa wersję SOAP komunikatów wysyłanych za pomocą tego powiązania. Tę właściwość można ustawić tylko wartość wersji wiadomości <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Koder komunikatów strumień bajtów nie obsługuje inne wersje komunikatów.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Channels.MessageVersion>.|  
+|messageVersion|Określa wersję SOAP komunikatów wysyłanych za pomocą tego powiązania. Tę właściwość można ustawić tylko wartość wersji wiadomości <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Koder komunikatów strumień bajtów nie obsługuje inne wersje komunikatów.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.Channels.MessageVersion>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -45,14 +45,14 @@ Określa kodowanie komunikatu jako strumień bajtów z opcją określenia kodowa
 |-------------|-----------------|  
 |[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>  
- [Kodowanie komunikatu](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [Wybieranie kodera komunikatów](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>
+- [Kodowanie komunikatu](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [Wybieranie kodera komunikatów](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

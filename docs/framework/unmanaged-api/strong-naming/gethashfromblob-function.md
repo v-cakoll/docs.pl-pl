@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 427d93a9aff527d36720c4199782fa104a66f8d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6bfa846aa66345e23e085ca148c7e3f492c529f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576346"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob — Funkcja
 Pobiera skrót zestawu pod adresem określonym pamięci, przy użyciu określonego algorytmu skrótu.  
@@ -43,32 +43,32 @@ HRESULT GetHashFromBlob (
   
 #### <a name="parameters"></a>Parametry  
  `pbBlob`  
- [in] Wskaźnik do adresu blok pamięci, aby być mieszany.  
+ [in] Wskaźnik na adres bloku pamięci, aby zostać obliczona wartość skrótu.  
   
  `cchBlob`  
- [in] Długość, w bajtach bloku pamięci.  
+ [in] Długość w bajtach, bloku pamięci.  
   
  `piHashAlg`  
- [w, out] Stała, który określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla domyślnego algorytmu.  
+ [out w] Stała, który określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla domyślny algorytm.  
   
  `pbHash`  
- [out] Bufor zwrócony wyznaczania wartości skrótu.  
+ [out] Bufor zwrócone wyznaczania wartości skrótu.  
   
  `cchHash`  
- [in] Maksymalny rozmiar żądanej z `pbHash`.  
+ [in] Żądany maksymalny rozmiar `pbHash`.  
   
  `pchHash`  
- [out] Rozmiar w bajtach, zwracana `pbHash`.  
+ [out] Rozmiar w bajtach zwracanego `pbHash`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** StrongName.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [GetHashFromBlob, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)  
- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [GetHashFromBlob, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)
+- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

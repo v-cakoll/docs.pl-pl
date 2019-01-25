@@ -19,15 +19,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0b30cc2c499644ffc97a734e1554e4e352b34af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 755ff827300dd9fef5944924f6373415f6d8fa6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568585"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM — Funkcja
-Wymusza środowisko uruchomieniowe języka wspólnego (CLR), aby zwolnić wszystkie wskaźniki interfejsu, którą przechowuje wewnątrz wywoływane otoki środowiska uruchomieniowego (otoki RCW). To ustawienie zwalnia wszystkie otoki RCW pamięci podręcznych. Ta funkcja globalna jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. W zamian użyj punkt wejścia dla określonego środowiska wykonawczego.  
+Wymusza środowisko uruchomieniowe języka wspólnego (CLR), aby zwolnić wszystkie wskaźniki interfejsu, którą przechowuje wewnątrz wywoływanych otok środowiska uruchomieniowego (RCW). To powoduje zwolnienie wszystkich RCW pamięci podręcznych. Ta funkcja globalna jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Zamiast tego należy użyć punktu wejścia dla określonego środowiska uruchomieniowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,21 +36,21 @@ void CoEEShutDownCOM ();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `CoEEShutDownCOM` Funkcji najpierw zwalnia wszystkie RCWs we wszystkich kontekstach i wszystkich usług pamięć podręczna i spowoduje usunięcie wszystkich istniejących w Instalatorze powiadomień zakończenia. Występuje, nie zwalnianie biblioteki DLL.  
+ `CoEEShutDownCOM` Funkcji najpierw zwalnia RCW we wszystkich kontekstach i wszystkich pamięci podręcznych, a następnie usuwa wszelkie powiadomienia zakończenia istniejące w Instalatorze. Nie zwalnianie biblioteki DLL występuje.  
   
 > [!CAUTION]
 >  Ta funkcja ma wpływ na wszystkie środowiska uruchomieniowe, które są ładowane do procesu.  
   
- Począwszy od [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], wywołaj punkt wejścia dla tej funkcji na określonych ma wpływ na środowisko uruchomieniowe. Aby uzyskać punktu wejścia, należy wywołać [ICLRRuntimeInfo::GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) metodę i określić "CoEEShutDownCOM".  
+ Począwszy od [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], wywołać punkt wejścia dla tej funkcji, od określonego środowiska uruchomieniowego, chcesz mieć wpływ. Aby uzyskać punkt wejścia, należy wywołać [iclrruntimeinfo::GetProcAddress —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) metodę i określić "coeeshutdowncom —".  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

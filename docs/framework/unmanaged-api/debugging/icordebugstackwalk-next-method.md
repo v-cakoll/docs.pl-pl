@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 367c43dc08722288dc3b32b5133f7770ffc3a27c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eee75bc16f46ba5ea58fc42c570e48b09ab9a2e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553233"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next — Metoda
 Przenosi [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) obiektu do następnej ramki.  
@@ -34,22 +34,22 @@ HRESULT Next();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Środowisko uruchomieniowe pomyślnie odwinięty do następnej ramki (zobacz Uwagi).|  
-|E_FAIL|`ICorDebugStackWalk` Obiektu nie może być zaawansowane.|  
-|CORDBG_S_AT_END_OF_STACK|W wyniku tego unwind został osiągnięty koniec stosu.|  
-|CORDBG_E_PAST_END_OF_STACK|Wskaźnik ramki już znajduje się na końcu stosu; w związku z tym są dostępne nie dodatkowe ramki.|  
+|E_FAIL|`ICorDebugStackWalk` Nie może kontynuować obiektu.|  
+|CORDBG_S_AT_END_OF_STACK|Koniec stosu został osiągnięty w wyniku tego unwind.|  
+|CORDBG_E_PAST_END_OF_STACK|Wskaźnik ramki jest już na końcu stosu; w związku z tym są dostępne nie dodatkowe ramki.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- `Next` Postępu metody `ICorDebugStackWalk` obiektu do wywoływania ramki tylko wtedy, gdy środowisko uruchomieniowe można unwind bieżącej ramki. W przeciwnym wypadku obiekt przechodzi do następnej ramki, która może unwind środowiska uruchomieniowego.  
+ `Next` Postępu metoda `ICorDebugStackWalk` obiekt wywołujący ramki, tylko wtedy, gdy środowisko uruchomieniowe może unwind bieżącej ramki. W przeciwnym razie obiekt przechodzi do następnej ramki środowiska uruchomieniowego jest w stanie unwind.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -57,7 +57,7 @@ HRESULT Next();
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugStackWalk, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugStackWalk, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

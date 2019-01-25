@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 0a1be35a37a9f3d0fa94d13f5bc50df213bd1775
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f663cd95c979ec9f2b81ccf173b4418321228f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570528"
 ---
 # <a name="transformations"></a>Przekształcenia
-Przekształceń są używane do obracania, skalowania, tłumaczenia lub pochylanie <xref:System.Windows.FrameworkElement> obiektów.  
+Transformacje są używane do obracania, skalowanie, tłumaczenia lub pochylić <xref:System.Windows.FrameworkElement> obiektów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przekształcenia — przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Transform>  
- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Układ](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Transform>
+- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Układ](../../../../docs/framework/wpf/advanced/layout.md)

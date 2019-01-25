@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 15ead0a99782fcb329767395a316d9287337173a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b31694e41e6e6568feb0cb32364b291657269488
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618558"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Zabezpieczanie transportu przy użyciu uwierzytelniania certyfikatów
 W tym temacie omówiono, za pomocą certyfikatów X.509 do uwierzytelniania klienta i serwera, korzystając z zabezpieczeń transportu. Aby uzyskać więcej informacji na temat X.509 certyfikatów Zobacz [klucz publiczny certyfikatu X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Certyfikaty muszą być wystawiane przez urząd certyfikacji, które są często wystawcy certyfikatów innych firm. W domenie systemu Windows Server Active Directory Certificate Services może służyć do wystawiania certyfikatów na komputerach klienckich w domenie. Aby uzyskać więcej informacji, zobacz [usług certyfikatów systemu Windows 2008 R2](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). W tym scenariuszu usługa jest hostowana w Internet Information Services (IIS), który jest skonfigurowany z Secure Sockets Layer (SSL). Usługa jest skonfigurowana za pomocą certyfikatu SSL (X.509) umożliwia klientom zweryfikować tożsamość serwera. Klient jest również skonfigurowany przy użyciu certyfikatu X.509, który umożliwia usłudze do zweryfikowania tożsamości klienta. Certyfikat serwera musi być zaufany przez klienta, a certyfikat klienta musi być zaufany przez serwer. Rzeczywiste mechanika jak usługa i klient sprawdza jego tożsamość wykracza poza zakres tego tematu. Aby uzyskać więcej informacji, zobacz [podpisu cyfrowego w witrynie Wikipedia](https://go.microsoft.com/fwlink/?LinkId=253157).  
@@ -22,12 +22,12 @@ W tym temacie omówiono, za pomocą certyfikatów X.509 do uwierzytelniania klie
   
 |Cechy|Opis|  
 |--------------------|-----------------|  
-|Tryb zabezpieczeń|Transportu|  
+|Tryb zabezpieczeń|Transport|  
 |Współdziałanie|Za pomocą istniejących klientów usługi sieci Web i usług.|  
 |Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (za pomocą certyfikatu SSL)<br /><br /> Tak (za pomocą certyfikatu X.509)|  
 |Integralność danych|Tak|  
 |Poufność danych|Tak|  
-|Transportu|HTTPS|  
+|Transport|HTTPS|  
 |Powiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Konfigurowanie usługi  
@@ -137,6 +137,6 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

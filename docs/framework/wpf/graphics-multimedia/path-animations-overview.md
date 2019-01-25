@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: 0f795ad00823e7b1c37221f7417b09d3982c4c18
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 610ef2721bef18e1cb1e87500a9dc9cf2729c867
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614257"
 ---
 # <a name="path-animations-overview"></a>Przegląd Animacja ścieżki
 <a name="introduction"></a> W tym temacie przedstawiono animacje ścieżki, które pozwalają na potrzeby generowania danych wyjściowych wartości ścieżki geometrycznej. Animacje ścieżki są przydatne w przypadku przenoszenia i obracanie obiekty wzdłuż ścieżek złożonych.  
@@ -89,9 +89,9 @@ ms.locfileid: "48266835"
   
  Aby uzyskać więcej informacji na temat składni ścieżki, który jest używany w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przykład zobacz [składni znacznikowania ścieżki](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) Przegląd.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [Składnia znacznikowania ścieżki](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Techniki animacji właściwości — przegląd](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Składnia znacznikowania ścieżki](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)
+- [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Techniki animacji właściwości — przegląd](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 465fdcf9-ba24-4d8d-a43f-d983b7cb0cc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c85d0c5c291743c6daac549e15d479fcf332235c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 864c39aa6673537d66d8402896bce5b4fa92e5ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602446"
 ---
 # <a name="manualresetevent-and-manualreseteventslim"></a>ManualResetEvent i ManualResetEventSlim
 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> Klasa reprezentuje zdarzenie dojścia oczekiwania lokalne, które można ręcznie zresetować po zostanie zasygnalizowane. Ta klasa reprezentuje przypadkiem szczególnym klasy bazowej, <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>. Zobacz [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) dokumentacji koncepcyjnego dla użycia i funkcje ręczne Resetowanie zdarzenia.  
@@ -25,9 +25,9 @@ ms.locfileid: "49452826"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
-- [AutoResetEvent](autoresetevent.md)  
-- [SpinWait](spinwait.md)  
+- [AutoResetEvent](autoresetevent.md)
+- [SpinWait](spinwait.md)
 - [Semaphore i SemaphoreSlim](semaphore-and-semaphoreslim.md)
-- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
-- [Wątkowość obiektów i funkcji](threading-objects-and-features.md)  
-- [Wątkowość](index.md)  
+- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
+- [Wątkowość obiektów i funkcji](threading-objects-and-features.md)
+- [Wątkowość](index.md)

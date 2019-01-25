@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 905e88eb2f43850124414a42bb4e729158f9555a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb70016560f453caf7a7a3eed3e1aa6b5fc9f0ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557373"
 ---
 # <a name="icordebugclass2-interface1"></a>ICorDebugClass2 Interface1
-Reprezentuje klasy ogólnej lub klasie z parametrem metody typu <xref:System.Type>. Ten interfejs stanowi rozszerzenie [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).  
+Reprezentuje klasą rodzajową lub klasy z parametrem metody typu <xref:System.Type>. Ten interfejs rozszerza [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
 |[GetParameterizedType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|Pobiera deklaracji typu dla tej klasy.|  
-|[SetJMCStatus, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|Ustawia wartość wskazującą, czy metoda jest zdefiniowane przez użytkownika kod dla każdej metody tej klasy.|  
+|[SetJMCStatus, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|Ustawia wartość wskazującą, czy metoda jest zdefiniowany przez użytkownika kod dla każdej metody tej klasy.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ten interfejs nie obsługuje wywoływany zdalnie, między komputerami lub między procesami.  
+>  Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -47,6 +47,6 @@ Reprezentuje klasy ogólnej lub klasie z parametrem metody typu <xref:System.Typ
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugClass, interfejs1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugClass, interfejs1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

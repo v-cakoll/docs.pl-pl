@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d603d9bc7a343a41224cf8d889a69823875d9db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 019a85d6d58c99adb7c16be5cc3b31b029b0312d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513155"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread — Metoda
-Pobiera obiekt, który można wykonać zapytania interfejsu ICorDebugThread. Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0.  
+Pobiera obiekt, który może być odpytywany icordebugthread — interfejs. Ta metoda jest przestarzała w programie .NET Framework 2.0.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +36,19 @@ HRESULT GetInprocInspectionIThisThread(
   
 #### <a name="parameters"></a>Parametry  
  `ppicd`  
- [limit](/cpp/atl/iunknown) obiekt, który można wykonać zapytania o `ICorDebugThread` interfejsu.  
+ [limit](/cpp/atl/iunknown) obiektu, który może być odpytywany dla `ICorDebugThread` interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko uruchomieniowe języka wspólnego (CLR) debugowanie usług obsługiwane ograniczony w trakcie debugowania w programie .NET Framework w wersji 1.0. Debugowanie w trakcie włączone profiler do używania kontroli części interfejsu API debugowania. Wyniku opinie klientów w trakcie debugowania ma został usunięty z programu .NET Framework w wersji 2.0 i zastąpione zestaw funkcji, która jest zgodna z interfejsu API profilowania.  
+ Środowisko uruchomieniowe języka wspólnego (CLR) debugowanie usług obsługiwane ograniczone w trakcie debugowania w .NET Framework w wersji 1.0. Debugowanie w trakcie włączone program profilujący do użycia inspekcji części interfejsie API debugowania. W wyniku opinie klientów debugowanie wewnątrzprocesowe został usunięty z programu .NET Framework w wersji 2.0 i zastąpione zestawem funkcji, która jest tworzone są profilowania API.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersja platformy .NET framework:** 1.0  
+ **Wersja programu .NET framework:** 1.0  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

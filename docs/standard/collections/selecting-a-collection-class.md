@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620087"
 ---
 # <a name="selecting-a-collection-class"></a>Wybieranie klasy kolekcji
 Należy wybrać uważnie klasy kolekcji. Przy użyciu nieprawidłowego typu można ograniczyć korzystanie z kolekcji. Ogólnie rzecz biorąc, unikaj używania typów w <xref:System.Collections> przestrzeni nazw, chyba że są specjalnie przeznaczone dla .NET Framework w wersji 1.1. Ogólny i równoczesne wersje kolekcje są preferowane ze względu na ich większe bezpieczeństwo typu i inne ulepszenia.  
@@ -48,13 +48,13 @@ Należy wybrać uważnie klasy kolekcji. Przy użyciu nieprawidłowego typu moż
   
 -   Każdy element zawiera jedną wartość, kombinacji klawiszy i jedną wartość, lub kombinacji klawiszy i wiele wartości?  
   
-    -   Jedna wartość: Użyj dowolnej kolekcji, w oparciu o <xref:System.Collections.IList> interfejsu lub <xref:System.Collections.Generic.IList%601> ogólny interfejs.  
+    -   Jedna wartość: Użyj dowolnej kolekcji, w oparciu o <xref:System.Collections.IList> interfejsu lub <xref:System.Collections.Generic.IList%601> interfejs generyczny.  
   
     -   Jeden klucz i jedną wartość: Użyj dowolnej kolekcji, w oparciu o <xref:System.Collections.IDictionary> interfejsu lub <xref:System.Collections.Generic.IDictionary%602> interfejs generyczny.  
   
-    -   Jedną wartość z kluczem osadzonego: Użyj <xref:System.Collections.ObjectModel.KeyedCollection%602> klasy ogólnej.  
+    -   Jedna wartość z kluczem embedded: Użyj <xref:System.Collections.ObjectModel.KeyedCollection%602> klasy ogólnej.  
   
-    -   Jeden z kluczy i wartości wielu: Użyj <xref:System.Collections.Specialized.NameValueCollection> klasy.  
+    -   Jeden klucz i wiele wartości: Użyj <xref:System.Collections.Specialized.NameValueCollection> klasy.  
   
 -   Potrzebujesz sortować elementy różni się od sposobu ich wprowadzenia?  
   
@@ -81,7 +81,7 @@ Należy wybrać uważnie klasy kolekcji. Przy użyciu nieprawidłowego typu moż
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections>  
-- <xref:System.Collections.Specialized>  
-- <xref:System.Collections.Generic>  
+- <xref:System.Collections>
+- <xref:System.Collections.Specialized>
+- <xref:System.Collections.Generic>
 - [Kolekcje bezpieczne wątkowo](../../../docs/standard/collections/thread-safe/index.md)

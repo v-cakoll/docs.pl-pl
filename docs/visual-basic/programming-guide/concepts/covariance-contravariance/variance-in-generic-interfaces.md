@@ -2,15 +2,15 @@
 title: Wariancje w interfejsach (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: c18f014897ace71e437bd733ff6fcd1d4d8810dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d39f1b125875f9a9f41ccb6b25a3a88fe577adba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618636"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Wariancje w interfejsach (Visual Basic)
-.NET framework 4 wprowadzono obsługę wariancji w kilku interfejsach istniejących. Obsługa wariancję umożliwia niejawna konwersja klas implementujących tych interfejsów. Następujące interfejsy są teraz wariant:  
+.NET framework 4 wprowadzono wariancji obsługę kilka istniejących interfejsów ogólnych. Obsługa wariancja umożliwia niejawną konwersję klas, które implementują te interfejsy. Następujące interfejsy są teraz wariant:  
   
 -   <xref:System.Collections.Generic.IEnumerable%601> (T jest kowariantny)  
   
@@ -18,7 +18,7 @@ ms.locfileid: "33643461"
   
 -   <xref:System.Linq.IQueryable%601> (T jest kowariantny)  
   
--   <xref:System.Linq.IGrouping%602> (`TKey` i `TElement` są kowariantnego)  
+-   <xref:System.Linq.IGrouping%602> (`TKey` i `TElement` są kowariantne)  
   
 -   <xref:System.Collections.Generic.IComparer%601> (T jest kontrawariantny)  
   
@@ -26,16 +26,16 @@ ms.locfileid: "33643461"
   
 -   <xref:System.IComparable%601> (T jest kontrawariantny)  
   
- Kowariancja zezwala na metodę typem zwracanym bardziej pochodny niż określone przez parametr typu ogólnego interfejsu. Aby zilustrować funkcji KOWARIANCJA, należy wziąć pod uwagę następujące interfejsy ogólne: `IEnumerable(Of Object)` i `IEnumerable(Of String)`. `IEnumerable(Of String)` Interfejsu nie dziedziczy `IEnumerable(Of Object)` interfejsu. Jednak `String` typ dziedziczy `Object` typu, a w niektórych przypadkach można przypisać obiekty te interfejsy do siebie. Przedstawiono to w poniższym przykładzie kodu.  
+ Kowariancja zezwala na metodę, aby mieć zwracanego typu bardziej pochodnego niż określone przez parametr typu ogólnego interfejsu. Aby zilustrować funkcji KOWARIANCJA, należy wziąć pod uwagę te ogólne interfejsy: `IEnumerable(Of Object)` i `IEnumerable(Of String)`. `IEnumerable(Of String)` Interfejsu nie dziedziczy `IEnumerable(Of Object)` interfejsu. Jednak `String` typ dziedziczyć `Object` typu, a w niektórych przypadkach możesz chcieć przypisać obiekty te interfejsy do siebie nawzajem. Jest to pokazane w poniższym przykładzie kodu.  
   
 ```vb  
 Dim strings As IEnumerable(Of String) = New List(Of String)  
 Dim objects As IEnumerable(Of Object) = strings  
 ```  
   
- We wcześniejszych wersjach programu .NET Framework, ten kod powoduje błąd kompilacji w języku Visual Basic z `Option Strict On`. Teraz można używać `strings` zamiast `objects`, jak pokazano w poprzednim przykładzie, ponieważ <xref:System.Collections.Generic.IEnumerable%601> interfejsu jest kowariantny.  
+ We wcześniejszych wersjach programu .NET Framework, ten kod powoduje błąd kompilacji w Visual Basic z `Option Strict On`. Teraz możesz używać, ale `strings` zamiast `objects`, jak pokazano w poprzednim przykładzie, ponieważ <xref:System.Collections.Generic.IEnumerable%601> interfejsu jest kowariantny.  
   
- Kontrawariancja zezwala na metodę typy argumentu są mniej pochodnego od określonej przez parametr ogólny interfejsu. Aby zilustrować kontrawariancji, załóżmy, że utworzono `BaseComparer` klasy do porównania wystąpienia `BaseClass` klasy. `BaseComparer` Klasa implementuje `IEqualityComparer(Of BaseClass)` interfejsu. Ponieważ <xref:System.Collections.Generic.IEqualityComparer%601> interfejs jest już kontrawariantnego, możesz użyć `BaseComparer` do porównania wystąpienia klas, które dziedziczą `BaseClass` klasy. Przedstawiono to w poniższym przykładzie kodu.  
+ Kontrawariancja umożliwia metodę, aby mieć typy argumentów, które są mniej pochodnego niż określona przez parametr ogólny interfejsu. Aby zilustrować kontrawariancja, załóżmy, że utworzono `BaseComparer` klasy do porównywania wystąpień `BaseClass` klasy. `BaseComparer` Klasy implementuje `IEqualityComparer(Of BaseClass)` interfejsu. Ponieważ <xref:System.Collections.Generic.IEqualityComparer%601> interfejs jest obecnie kontrawariantny, możesz użyć `BaseComparer` do porównywania wystąpień klas, które dziedziczą `BaseClass` klasy. Jest to pokazane w poniższym przykładzie kodu.  
   
 ```vb  
 ' Simple hierarchy of classes.  
@@ -69,9 +69,9 @@ Sub Test()
 End Sub  
 ```  
   
- Aby uzyskać więcej przykładów, zobacz [korzystanie z wariancji w interfejsach dla kolekcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).  
+ Aby uzyskać więcej przykładów, zobacz [przy użyciu wariancji w interfejsach dla kolekcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).  
   
- Wariancje w interfejsach jest obsługiwana tylko dla typów odniesienia. Typy wartości nie obsługują wariancji. Na przykład `IEnumerable(Of Integer)` nie można niejawnie przekonwertować `IEnumerable(Of Object)`, ponieważ liczb całkowitych są reprezentowane przez typ wartości.  
+ Wariancje w interfejsach jest obsługiwana tylko dla typów odwołania. Typy wartości nie obsługują wariancji. Na przykład `IEnumerable(Of Integer)` nie może być niejawnie konwertowane na `IEnumerable(Of Object)`, ponieważ liczby całkowite są reprezentowane przez typ wartości.  
   
 ```vb  
 Dim integers As IEnumerable(Of Integer) = New List(Of Integer)  
@@ -80,7 +80,7 @@ Dim integers As IEnumerable(Of Integer) = New List(Of Integer)
 ' Dim objects As IEnumerable(Of Object) = integers  
 ```  
   
- Jest również pamiętać, że klas implementujących interfejsów typu variant są nadal niezmiennej. Na przykład chociaż <xref:System.Collections.Generic.List%601> implementuje interfejs kowariantnego <xref:System.Collections.Generic.IEnumerable%601>, nie można niejawnie przekonwertować `List(Of Object)` do `List(Of String)`. Jest to zilustrowane w poniższym przykładzie kodu.  
+ Jest również pamiętać, że klasy, które implementują interfejsów typu variant, są nadal niezmienne. Na przykład mimo że <xref:System.Collections.Generic.List%601> implementuje interfejs kowariantne <xref:System.Collections.Generic.IEnumerable%601>, nie można niejawnie przekonwertować `List(Of Object)` do `List(Of String)`. Jest to zilustrowane w poniższym przykładzie kodu.  
   
 ```vb  
 ' The following statement generates a compiler error  
@@ -91,8 +91,8 @@ Dim integers As IEnumerable(Of Integer) = New List(Of Integer)
 Dim listObjects As IEnumerable(Of Object) = New List(Of String)  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z wariancji w interfejsach dla kolekcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)  
- [Tworzenie interfejsów ogólnych typu Variant (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)  
- [Interfejsy ogólne](../../../../standard/generics/interfaces.md)  
- [Wariancje w Delegatach (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+## <a name="see-also"></a>Zobacz także
+- [Korzystanie z wariancji w interfejsach dla kolekcji ogólnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
+- [Tworzenie interfejsów typu Variant (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [Interfejsy ogólne](../../../../standard/generics/interfaces.md)
+- [Wariancje w Delegatach (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

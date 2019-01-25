@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 11d8a4d1841a1d161c4aed233a025813374556d6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: eaa2bd3327cf76522c74dad07a5a9e0e268a3b55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605958"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczęcie pracy z platformą .NET Core w Windows/Linux/macOS przy użyciu wiersza polecenia
 
@@ -20,7 +20,7 @@ Jeśli jesteś zaznajomiony z zestawu narzędzi interfejsu wiersza polecenia pla
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- [.NET core SDK 2.1](https://www.microsoft.com/net/download/core).
+- [.NET Core SDK 2.1](https://www.microsoft.com/net/download/core).
 - Edytor tekstu lub ulubionego edytora kodu.
 
 ## <a name="hello-console-app"></a>Witaj, aplikacja Konsolowa!
@@ -157,4 +157,4 @@ Należy pamiętać, że polecenia i kroki opisane w tym samouczku do uruchamiani
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Organizowanie i testowanie projektów przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core](testing-with-cli.md)
+- [Organizowanie i testowanie projektów przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core](testing-with-cli.md)

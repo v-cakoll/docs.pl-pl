@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 127a059865250642c604288b0296b4152cf91f52
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: d6db5b3d56c9dd4998625098b9868b276238a978
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558647"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Narzędzie silnych nazw)
 Narzędzie silnych nazw (Sn.exe) pomaga podpisywać zestawy za pomocą [silnych nazw](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe dostarcza opcje do zarządzania kluczami, generowania podpisów i ich weryfikacji.  
@@ -44,9 +44,9 @@ sn [-quiet][option [parameter(s)]]
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**-** *identityKeyPairFile* *signaturePublicKeyFile*|Generuje <xref:System.Reflection.AssemblySignatureKeyAttribute> danych do migracji klucza tożsamości do klucza podpisu z pliku.|  
+|**-a** *identityKeyPairFile* *signaturePublicKeyFile*|Generuje <xref:System.Reflection.AssemblySignatureKeyAttribute> danych do migracji klucza tożsamości do klucza podpisu z pliku.|  
 |**-ac** *identityPublicKeyFile* *identityKeyPairContainer* *signaturePublicKeyFile*|Generuje <xref:System.Reflection.AssemblySignatureKeyAttribute> danych do migracji klucza tożsamości do klucza podpisu z kontenera kluczy.|  
-|**-c** [*dostawcy usług kryptograficznych*]|Określa domyślnego dostawcę usług kryptograficznych (CSP) do podpisywania silnymi nazwami. To ustawienie odnosi się do całego komputera. Jeśli nie określisz nazwy CSP, Sn.exe wyczyści bieżące ustawienie.|  
+|**-c** [*csp*]|Określa domyślnego dostawcę usług kryptograficznych (CSP) do podpisywania silnymi nazwami. To ustawienie odnosi się do całego komputera. Jeśli nie określisz nazwy CSP, Sn.exe wyczyści bieżące ustawienie.|  
 |**-d** *kontenera*|Usuwa określony kontener kluczy z CSP silnej nazwy.|  
 |**-D**  *assembly1 assembly2*|Weryfikuje, czy dwa zestawy różnią się tylko podpisem. Jest to często używane jako sprawdzenie po ponownym podpisaniu zestawu inną parą kluczy.|  
 |**-e**  *outfile zestawu*|Wyodrębnia klucz publiczny z *zestawu* i zapisuje go w *outfile.*|  
@@ -63,7 +63,7 @@ sn [-quiet][option [parameter(s)]]
 |**Rc —**[**a**] *kontenera zestawu*|Podpisuje ponownie wcześniej podpisane lub podpisane z opóźnieniem zestawy parą kluczy w *kontenera*.<br /><br /> Jeśli **— analiza głównej przyczyny** jest używany, skróty są obliczane ponownie dla wszystkich plików w zestawie.|  
 |**-Rh** *zestawu*|Oblicza ponownie skróty dla wszystkich plików w zestawie.|  
 |**-t**[**p**] *infile*|Wyświetla token dla klucza publicznego zapisanego w *infile*. Zawartość *infile* musi być kluczem publicznym poprzednio wygenerowanym z pliku pary kluczy przy użyciu **-p**.  Nie używaj **-t [p]** opcji do wyodrębnienia tokenu bezpośrednio z pliku pary kluczy.<br /><br /> Sn.exe oblicza token przy użyciu funkcji skrótu z klucza publicznego. Aby zaoszczędzić przestrzeń, środowisko uruchomieniowe języka wspólnego zapisuje tokeny klucza publicznego w manifeście jako część odwołania do innego zestawu, gdy rejestruje zależność do zestawu z silną nazwą. **- Tp** opcji wyświetla także klucz publiczny oprócz tokenu. Jeśli <xref:System.Reflection.AssemblySignatureKeyAttribute> zastosowano atrybut do zestawu, token jest do klucza tożsamości i wyświetlana jest nazwa algorytmu wyznaczania wartości skrótu oraz klucz tożsamości.<br /><br /> Zauważ, że ta opcja nie weryfikuje podpisu zestawu i nie powinna być używana do podejmowania decyzji dotyczących zaufania.  Ta opcja wyświetla jedynie surowe dane tokenu klucza publicznego.|  
-|**-T**[**p**] *zestawu*|Wyświetla token klucza publicznego dla *zestawu.* *Zestawu* musi być nazwą pliku zawierającego manifest zestawu.<br /><br /> Sn.exe oblicza token przy użyciu funkcji skrótu z klucza publicznego. Aby zaoszczędzić przestrzeń, środowisko uruchomieniowe przechowuje tokeny klucza publicznego w manifeście jako część odwołania do innego zestawu, gdy rejestruje zależność do zestawu z silną nazwą. **- Tp** opcji wyświetla także klucz publiczny oprócz tokenu. Jeśli <xref:System.Reflection.AssemblySignatureKeyAttribute> zastosowano atrybut do zestawu, token jest do klucza tożsamości i wyświetlana jest nazwa algorytmu wyznaczania wartości skrótu oraz klucz tożsamości.<br /><br /> Zauważ, że ta opcja nie weryfikuje podpisu zestawu i nie powinna być używana do podejmowania decyzji dotyczących zaufania.  Ta opcja wyświetla jedynie surowe dane tokenu klucza publicznego.|  
+|**-T**[**p**] *assembly*|Wyświetla token klucza publicznego dla *zestawu.* *Zestawu* musi być nazwą pliku zawierającego manifest zestawu.<br /><br /> Sn.exe oblicza token przy użyciu funkcji skrótu z klucza publicznego. Aby zaoszczędzić przestrzeń, środowisko uruchomieniowe przechowuje tokeny klucza publicznego w manifeście jako część odwołania do innego zestawu, gdy rejestruje zależność do zestawu z silną nazwą. **- Tp** opcji wyświetla także klucz publiczny oprócz tokenu. Jeśli <xref:System.Reflection.AssemblySignatureKeyAttribute> zastosowano atrybut do zestawu, token jest do klucza tożsamości i wyświetlana jest nazwa algorytmu wyznaczania wartości skrótu oraz klucz tożsamości.<br /><br /> Zauważ, że ta opcja nie weryfikuje podpisu zestawu i nie powinna być używana do podejmowania decyzji dotyczących zaufania.  Ta opcja wyświetla jedynie surowe dane tokenu klucza publicznego.|  
 |`-TS` `assembly` `infile`|Podpisuje testowo podpisany lub częściowo podpisany `assembly` parą kluczy w `infile`.|  
 |-`TSc``assembly``container`|Podpisuje testowo podpisany lub częściowo podpisany `assembly` parą kluczy w kontenerze kluczy `container`.|  
 |**-v** *zestawu*|Weryfikuje silną nazwę w *zestawu*, gdzie *zestawu* jest nazwą pliku zawierającego manifest zestawu.|  
@@ -124,8 +124,8 @@ sn -v MyAsm.dll
 sn -d MyContainer  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Narzędzia](../../../docs/framework/tools/index.md)  
- [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Zobacz także
+- [Narzędzia](../../../docs/framework/tools/index.md)
+- [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

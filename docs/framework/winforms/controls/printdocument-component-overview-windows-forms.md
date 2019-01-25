@@ -7,27 +7,27 @@ helpviewer_keywords:
 - PrintDocument component [Windows Forms], about PrintDocument component
 - printing [Windows Forms], PrintDocument component
 ms.assetid: b59b4b60-dce5-42ca-8421-3a54a2f7bab0
-ms.openlocfilehash: b02133321624d27b9c1e8faae9cac1b4fe8f76c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2facbf0a567f81aa6debe2ca60f7f8eabc794bb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532354"
 ---
 # <a name="printdocument-component-overview-windows-forms"></a>PrintDocument — Informacje o składniku (Formularze systemu Windows)
-Formularze systemu Windows [PrintDocument —](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) składnika jest używane do definiowania właściwości, które opisują wydruku i możliwość drukowania dokumentów w aplikacjach opartych na systemie Windows. Mogą być używane w połączeniu z [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) składnik, aby mieć możliwość kontrolowania wszystkich aspektów drukowanie dokumentów.  
+Formularze Windows [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) składnik jest używany do ustawiania właściwości, które opisują, jakie do drukowania i możliwość drukowania dokumentu w aplikacji systemu Windows. Mogą być używane w połączeniu z [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) składnik, aby mieć kontrolę nad wszystkimi aspektami drukowanie dokumentów.  
   
 ## <a name="working-with-the-printdocument-component"></a>Praca z PrintDocument — składnik  
- Dwa główne scenariusze, które obejmują <xref:System.Drawing.Printing.PrintDocument> składnika są:  
+ Dwa główne scenariusze, które obejmują <xref:System.Drawing.Printing.PrintDocument> składnik to:  
   
--   Proste zadania drukowania, takie jak drukowania pliku tekstowego indywidualnych. W takim przypadku należy dodać <xref:System.Drawing.Printing.PrintDocument> składnik do formularza systemu Windows, następnie dodanie logiki programowania, która wyświetla plik w <xref:System.Drawing.Printing.PrintDocument.PrintPage> obsługi zdarzeń. Logika programowania powinien kulminacyjny z <xref:System.Drawing.Printing.PrintDocument.Print%2A> metodę, aby wydrukować dokument. Ta metoda wysyła <xref:System.Drawing.Graphics> obiektów zawartych w <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> właściwość <xref:System.Drawing.Printing.PrintPageEventArgs> klasy do drukarki. Przykład pokazujący sposób drukowanie dokumentu tekstu przy użyciu <xref:System.Drawing.Printing.PrintDocument> składników, zobacz [porady: drukowanie wielu stron pliku tekstowego w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md).  
+-   Proste zadania drukowania, takich jak drukowanie plik tekstowy indywidualnych. W takim przypadku należy dodać <xref:System.Drawing.Printing.PrintDocument> składnika do formularza Windows, a następnie dodaj logikę programistyczną, które inicjuje drukowanie do pliku w <xref:System.Drawing.Printing.PrintDocument.PrintPage> programu obsługi zdarzeń. Logikę programistyczną powinien kulminacyjny z <xref:System.Drawing.Printing.PrintDocument.Print%2A> metoda spowoduje wydrukowanie dokumentu. Ta metoda wysyła <xref:System.Drawing.Graphics> zawartego w obiektu <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> właściwość <xref:System.Drawing.Printing.PrintPageEventArgs> klasy do drukarki. Na przykład, który pokazuje, jak drukowanie dokumentu tekstowego przy użyciu <xref:System.Drawing.Printing.PrintDocument> składników, zobacz [jak: Podglądu wydruku w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md).  
   
--   Bardziej złożone zadania drukowania, takie jak sytuacji, w którym można ponowne wykorzystanie logiki drukowania, które zostały zapisane. W takim przypadku może pochodzić z nowego składnika <xref:System.Drawing.Printing.PrintDocument> składnika i zastąpienie (zobacz [zastępuje](~/docs/visual-basic/language-reference/modifiers/overrides.md) w języku Visual Basic lub [zastąpienia](~/docs/csharp/language-reference/keywords/override.md) dla C#) <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń.  
+-   Bardziej złożone zadania drukowania, takich jak sytuacji, w których warto ponowne wykorzystanie logiki drukowania, które zostały napisane. W takim przypadku będzie pochodzić z nowym składnikiem <xref:System.Drawing.Printing.PrintDocument> składnika i zastąpienie (zobacz [zastępuje](~/docs/visual-basic/language-reference/modifiers/overrides.md) dla języka Visual Basic lub [zastąpienia](~/docs/csharp/language-reference/keywords/override.md) dla C#) <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń.  
   
- Gdy jest ona dodawana do formularza, <xref:System.Drawing.Printing.PrintDocument> składnika jest wyświetlana na pasku w dolnej części Projektant formularzy systemu Windows.  
+ Gdy zostanie dodany do formularza, <xref:System.Drawing.Printing.PrintDocument> składnika, który pojawia się na pasku w dolnej części projektanta Windows Forms.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Drawing.Graphics>  
- <xref:System.Drawing.Printing.PrintDocument>  
- [Obsługa drukowania w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
- [PrintDocument, składnik](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Drawing.Graphics>
+- <xref:System.Drawing.Printing.PrintDocument>
+- [Obsługa drukowania w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [PrintDocument, składnik](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)

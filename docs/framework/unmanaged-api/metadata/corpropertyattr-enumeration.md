@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 263981708af2e40bd3690a3cd344156488eed0dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 713913fa046fc1bef12b8849ac82e4399a8dc534
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577587"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr — Wyliczenie
 Zawiera wartości, które opisują metadane właściwości.  
@@ -44,18 +44,18 @@ typedef enum CorPropertyAttr {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`prSpecialName`|Określa, czy właściwość jest szczególna i że jego nazwa zawiera opis sposobu.|  
+|`prSpecialName`|Określa, czy właściwość jest specjalne i że jego nazwę w tym artykule opisano sposób.|  
 |`prReservedMask`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
-|`prRTSpecialName`|Określa, że typowe metadane środowiska wykonawczego języka wewnętrznych interfejsów API należy sprawdzać kodowanie nazwy właściwości.|  
+|`prRTSpecialName`|Określa, że typowe metadanych środowiska wykonawczego języka wewnętrznych interfejsach API należy sprawdzać kodowanie nazwy właściwości.|  
 |`prHasDefault`|Określa, że właściwość ma wartość domyślną.|  
 |`prUnused`|Nieużywane.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

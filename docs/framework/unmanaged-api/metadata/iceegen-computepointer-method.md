@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1239546072192d6ff9497013ad7b7140ea13085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 496082bbf89ceb93ba3dceef9a9222425db71784
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522417"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer — Metoda
-Określa bufor dla określonego kodu sekcji.  
+Określa bufor dla sekcji określonego kodu.  
   
  Ta metoda jest przestarzała i nie powinna być używana.  
   
@@ -41,22 +41,22 @@ HRESULT ComputePointer (
   
 #### <a name="parameters"></a>Parametry  
  `section`  
- [in] Sekcji kodu, dla którego ma zostać zwrócona w buforze.  
+ [in] Sekcję kodu, dla której ma zostać zwrócone do buforu.  
   
  `RVA`  
- [in] Wirtualny adres względny metody, do których chcesz otrzymywać wskaźnik.  
+ [in] Wirtualny adres względny metody, do których chcesz uzyskać wskaźnika.  
   
  `lpBuffer`  
- [out] Wskaźnik do buforu zwrócony.  
+ [out] Wskaźnik do buforu zwrócone.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

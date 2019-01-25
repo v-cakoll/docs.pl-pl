@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ed27602dfa9090b46b842e4e65af8af373cc207
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e03a618144ca322d51337e84486a8f5051a3d2a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568884"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize — Metoda
 Pobiera rozmiar określonego obiektu.  
@@ -40,23 +40,23 @@ HRESULT GetObjectSize(
  [in] Identyfikator obiektu.  
   
  `pcSize`  
- [out] Wskaźnik do obiektu rozmiar w bajtach.  
+ [out] Wskaźnik do obiektu, rozmiar w bajtach.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!IMPORTANT]
->  Ta metoda jest przestarzała. Zwraca COR_E_OVERFLOW dla obiektów większych niż 4GB na platformach 64-bitowych. Użyj [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) metody zamiast tego.  
+>  Ta metoda jest przestarzała. Zwraca COR_E_OVERFLOW obiektów większą niż 4GB na platformach 64-bitowych. Użyj [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) metody zamiast tego.  
   
- Różne obiekty o takich samych typach często mają ten sam rozmiar. Jednak niektóre typy, takich jak macierze czy ciągi, może mieć inny rozmiar dla każdego obiektu.  
+ Te same typy dwóch różnych obiektów często mają taki sam rozmiar. Jednak niektóre typy, takie jak tablice i ciągów, może mieć inny rozmiar dla każdego obiektu.  
   
- Rozmiar zwrócony przez `GetObjectSize` — metoda nie ma żadnych dopełnienie wyrównanie, którym może występować, gdy obiekt jest w stercie kolekcji pamięci. Jeśli używasz `GetObjectSize` wyrównanie dopełnienie ręcznie w razie potrzeby dodaj metodę z obiektu do obiektu na stercie kolekcji pamięci.  
+ Rozmiar zwrócony przez `GetObjectSize` metoda nie zawiera żadnych dopełnienie wyrównanie, które mogą być wyświetlane po obiektu na stercie wyrzucania elementów bezużytecznych. Jeśli używasz `GetObjectSize` metody, aby przejść do innego obiektu na stercie wyrzucania elementów bezużytecznych, Dodaj wyrównanie dopełnienie ręcznego zgodnie z potrzebami.  
   
--   W 32-bitowej wersji systemu Windows COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1 i COR_PRF_GC_GEN_2 wyrównanie 4-bajtowych Użyj i COR_PRF_GC_LARGE_OBJECT_HEAP używa wyrównanie 8-bajtowych.  
+-   Na Windows 32-bitowych COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1 i COR_PRF_GC_GEN_2 użyj 4-bajtowe wyrównanie i COR_PRF_GC_LARGE_OBJECT_HEAP korzysta z 8-bajtowe wyrównanie.  
   
--   W 64-bitowej wersji systemu Windows wyrównania jest zawsze 8 bajtów.  
+-   Na Windows 64-bitowych wyrównania jest zawsze 8 bajtów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -64,5 +64,5 @@ HRESULT GetObjectSize(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 32bd0912b0bae3340cffed010fc67431d0efb376
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 528e63e6b7d978b3bbdfcb78e4260b4590db6d7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520025"
 ---
 # <a name="date-data-type-visual-basic"></a>Date — Typ danych (Visual Basic)
 Przechowuje wartości (8-bajtową) IEEE 64-bitowych, które reprezentują w zakresie od 1 stycznia 0001 roku do 31 grudnia 9999 roku daty i godziny od 0:00:00: 00 (północ) za pośrednictwem 11:59:59.9999999 PM. Każdy przyrost reprezentuje 100 nanosekund czas, który upłynął od początku 1 stycznia 1 roku w kalendarzu gregoriańskim. Maksymalna wartość reprezentuje 100 nanosekund przed rozpoczęciem 1 stycznia roku 10000.  
@@ -74,11 +74,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
 Dim someDateAndTime As Date = #8/13/2002 12:14 PM#  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.DateTime?displayProperty=nameWithType>  
- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
- [Standardowe ciągi formatujące datę i godzinę](../../../standard/base-types/standard-date-and-time-format-strings.md)  
- [Niestandardowe ciągi formatujące datę i godzinę](../../../standard/base-types/custom-date-and-time-format-strings.md)  
- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.DateTime?displayProperty=nameWithType>
+- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+- [Standardowe ciągi formatujące datę i godzinę](../../../standard/base-types/standard-date-and-time-format-strings.md)
+- [Niestandardowe ciągi formatujące datę i godzinę](../../../standard/base-types/custom-date-and-time-format-strings.md)
+- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

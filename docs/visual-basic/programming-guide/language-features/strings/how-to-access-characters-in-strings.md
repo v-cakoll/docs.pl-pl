@@ -1,34 +1,34 @@
 ---
-title: 'Porady: dostęp do znaków w ciągach w Visual Basic'
+title: 'Instrukcje: Dostęp do znaków w ciągach w Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 48507cade639660e6ce36697975d09fb29206c20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9833b562fc0b4115448ebefb8631f0d73eb15f6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618925"
 ---
-# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Porady: dostęp do znaków w ciągach w Visual Basic
-W tym przykładzie przedstawiono sposób użycia <xref:System.String.Chars%2A> dostęp do znaków w określonej lokalizacji w ciągu dla właściwości.  
+# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Instrukcje: Dostęp do znaków w ciągach w Visual Basic
+W tym przykładzie przedstawiono sposób użycia <xref:System.String.Chars%2A> właściwość dostęp do znaków w określonej lokalizacji w ciągu.  
   
 ## <a name="example"></a>Przykład  
- Czasami jest przydatne do danych o znaki w ciągu i położenia tych znaków w ciągu. Można traktować jako tablicę znaków z ciągu (`Char` wystąpień); można pobrać określonego znaku odwołujące się do indeksu za pomocą znaku <xref:System.String.Chars%2A> właściwości.  
+ Czasami przydatne jest zapewnienie dane dotyczące znaków w ciągu i położenie tych znaków w ciągu. Można traktować jako tablicę znaków ciągu (`Char` wystąpień); można pobrać określonego znaku, odwołując się do indeksu za pomocą znaku <xref:System.String.Chars%2A> właściwości.  
   
  [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-access-characters-in-strings_1.vb)]  
   
- `index` Parametr <xref:System.String.Chars%2A> właściwość jest liczony od zera.  
+ `index` Parametru <xref:System.String.Chars%2A> właściwość jest liczony od zera.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- <xref:System.String.Chars%2A> Właściwość zwraca znak na określonej pozycji. Jednak niektóre znaki Unicode może być reprezentowany przez więcej niż jednego znaku. Aby uzyskać więcej informacji na temat pracy z znaków Unicode, zobacz [porady: konwertowanie ciągu do tablicy znaków](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
+ <xref:System.String.Chars%2A> Właściwość zwraca znak w określonej pozycji. Jednak niektóre znaki Unicode mogą być reprezentowane za więcej niż jeden znak. Aby uzyskać więcej informacji na temat sposobu pracy ze znakami Unicode, zobacz [jak: Konwertowanie ciągu na tablicę znaków](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
   
- <xref:System.String.Chars%2A> Zgłasza właściwości <xref:System.IndexOutOfRangeException> wyjątek Jeśli `index` parametr jest większa lub równa długości ciągu, lub jeśli jest ona mniejsza od zera  
+ <xref:System.String.Chars%2A> Zgłasza właściwości <xref:System.IndexOutOfRangeException> wyjątek Jeśli `index` parametru jest większa lub równa długości ciągu, czy go jest mniejsza niż zero  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.String.Chars%2A>  
- [Instrukcje: Konwertowanie ciągu na tablicę znaków](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)  
- [Konwertowanie pomiędzy ciągami a innymi typami danych w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
- [Ciągi](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.String.Chars%2A>
+- [Instrukcje: Konwertowanie ciągu na tablicę znaków](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
+- [Konwertowanie pomiędzy ciągami a innymi typami danych w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
+- [Ciągi](../../../../visual-basic/programming-guide/language-features/strings/index.md)

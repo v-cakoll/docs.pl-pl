@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 8a14b00fe762d325028072cd0ea3eecf9b9206e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5dd454cb323d4dc2ab9b4ebd8b233ffda3e77820
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619330"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static — Rozszerzenie znaczników
 Odwołuje się do dowolnej jednostki kodu przez wartość statyczną, która jest zdefiniowana w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— sposób zgodne. Właściwość statyczna, do którego istnieje odwołanie może służyć do zapewnienia wartości właściwości w XAML.  
@@ -82,6 +82,6 @@ W implementacji .NET Framework XAML Services obsługi dla tego rozszerzenia znac
   
  Aby uzyskać więcej informacji na temat korzystania z prefiksy i XAML w przestrzeni nazw dla WPF, zobacz [przestrzeni nazw XAML i Namespace mapowania dla WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [x:Type, rozszerzenie znaczników](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Typy migrowane z WPF do System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>Zobacz także
+- [x:Type, rozszerzenie znaczników](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Typy migrowane z WPF do System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

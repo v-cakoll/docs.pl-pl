@@ -1,18 +1,18 @@
 ---
-title: 'Porady: uzyskiwanie dostępu do właściwości specyficzne dla protokołu HTTP'
+title: 'Instrukcje: Przejdź do właściwości specyficzne dla protokołu HTTP'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: c883321d74bb4309f483604d51057390d00189e6
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: da696e40248a077e6b8e32e077509bc8a0b589b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50043019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619730"
 ---
-# <a name="how-to-access-http-specific-properties"></a>Porady: uzyskiwanie dostępu do właściwości specyficzne dla protokołu HTTP
+# <a name="how-to-access-http-specific-properties"></a>Instrukcje: Przejdź do właściwości specyficzne dla protokołu HTTP
 W tym przykładzie pokazano, jak wyłączyć HTTP **Keep-alive** zachowanie i Pobierz wersję protokołu numer z serwera sieci Web.  
   
 ## <a name="example"></a>Przykład  
@@ -49,7 +49,7 @@ HttpWResp.Close();
   
 -   Odwołuje się do **przestrzeni nazw System.Net** przestrzeni nazw.  
   
-## <a name="see-also"></a>Zobacz też  
- [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)  
- [HTTP](../../../docs/framework/network-programming/http.md)
+## <a name="see-also"></a>Zobacz także
+- [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)
+- [HTTP](../../../docs/framework/network-programming/http.md)

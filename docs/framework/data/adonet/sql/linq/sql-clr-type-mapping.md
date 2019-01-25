@@ -2,12 +2,12 @@
 title: Mapowanie typu SQL CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617346"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapowanie typu SQL CLR
 Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obiektów, które są jest wyrażone w wybranym języku programowania. Gdy aplikacja zostanie uruchomiona, LINQ to SQL tłumaczy języku zintegrowanym zapytania w modelu obiektów programu SQL i wysyła je do bazy danych do wykonania. Po powrocie z bazy danych wyników programu LINQ to SQL tłumaczy wyniki z powrotem do obiektów, które może pracować w języku użytkownika, programowania.  
@@ -38,7 +38,7 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
 ## <a name="default-type-mapping"></a>Domyślny typ mapowania  
  Można utworzyć modelu obiektów lub pliku mapowania zewnętrznych automatycznie Object Relational Designer (Projektant O/R) lub narzędzie wiersza polecenia SQLMetal. Domyślne mapowania typu tych narzędzi definiują, jakie typy CLR zostały wybrane do mapowania kolumn w bazie danych programu SQL Server. Aby uzyskać więcej informacji na temat używania tych narzędzi, zobacz [Tworzenie modelu obiektu](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
   
- Można również użyć <xref:System.Data.Linq.DataContext.CreateDatabase%2A> metodę, aby utworzyć bazę danych programu SQL Server na podstawie mapowania informacji w pliku mapowania zewnętrznych lub model obiektów. Mapowania typ domyślny dla <xref:System.Data.Linq.DataContext.CreateDatabase%2A> metodę zdefiniować typ serwera SQL, które kolumny są tworzone do mapowania środowiska CLR, typy w modelu obiektów. Aby uzyskać więcej informacji, zobacz [porady: dynamiczne tworzenie bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
+ Można również użyć <xref:System.Data.Linq.DataContext.CreateDatabase%2A> metodę, aby utworzyć bazę danych programu SQL Server na podstawie mapowania informacji w pliku mapowania zewnętrznych lub model obiektów. Mapowania typ domyślny dla <xref:System.Data.Linq.DataContext.CreateDatabase%2A> metodę zdefiniować typ serwera SQL, które kolumny są tworzone do mapowania środowiska CLR, typy w modelu obiektów. Aby uzyskać więcej informacji, zobacz [jak: Dynamiczne tworzenie bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Typ mapowania macierzy zachowania w czasie wykonywania  
@@ -256,8 +256,8 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
   
  LINQ do SQL nie obsługuje innych mapowania typów dla tych różnych typów.  Aby uzyskać więcej informacji, zobacz [Typ mapowania Uruchom czas zachowania macierzy](#BehaviorMatrix).  
   
-## <a name="see-also"></a>Zobacz też  
- [Mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [Niezgodność typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+## <a name="see-also"></a>Zobacz także
+- [Mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Niezgodność typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)

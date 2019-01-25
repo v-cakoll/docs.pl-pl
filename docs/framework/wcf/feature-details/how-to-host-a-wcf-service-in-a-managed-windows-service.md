@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613831"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Instrukcje: Hostowanie usługi WCF w usłudze zarządzanej systemu Windows
 
@@ -133,7 +133,7 @@ Poniżej przedstawiono pełną listę kod używany w tym temacie:
 
 Podobnie jak opcji "Własnym hostingu" usługi Windows Środowisko hostingu wymaga, że jakiś kod hostingu zapisywane jako część aplikacji. Ta usługa jest implementowany jako aplikację konsolową w języku i zawiera swój własny kod hostingu. W innych środowiskach hostingu, takich jak Windows Process Activation Service (WAS) hostingu w Internet Information Services (IIS), nie jest konieczne dla deweloperów napisać kod hostingu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Hosting w aplikacji zarządzanej](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ebd4bb1d674a27785ccbe5460a65fed764638ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b165501b3e090cf309f3b4053649644b87b47f22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555573"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo — Metoda
-Zdefiniuj grupę asynchronicznych operacji w bieżącej metodzie await.  
+Zdefiniuj grupę async operator await operacji w bieżącej metodzie.  
   
- Przesunięcie każdego yield odpowiada instrukcji return await, identyfikowanie potencjalnej wydajności. Każdy `breakpointMethod` / `breakpointOffset` pary informuje, nam gdzie operację asynchroniczną zostanie wznowiona, (która może być w innej metody.  
+ Przesunięcie każdego yield pasuje do zwrotu instrukcji await, identyfikowanie potencjalnej wydajności. Każdy `breakpointMethod` / `breakpointOffset` pary informuje NAS, gdy operacja asynchroniczna zostanie wznowiona, (która może być w innej metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,7 +35,7 @@ HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULON
  Zwraca `HRESULT`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedAsyncMethodPropertiesWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedAsyncMethodPropertiesWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)

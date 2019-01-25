@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
-ms.openlocfilehash: 0f6a06bfb9d1e5274df047e45a5042353515e206
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 84f0cc34e5de0634eff2edecead08aae3a143068
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554169"
 ---
 # <a name="session"></a>Sesja
 Przykładowe sesji demonstruje sposób implementacji kontraktu wymagającego sesji. Sesja tworzy kontekst do wykonywania wielu operacji. Umożliwia usłudze kojarzenie stanu z danej sesji, takie, że kolejne operacje można użyć stanu poprzednią operację. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługę kalkulatora. `ICalculator` Kontraktu została zmodyfikowana, aby zezwolić na zestaw operacji arytmetycznych do wykonania przy jednoczesnym zachowaniu wynik uruchomionych. Ta funkcja jest zdefiniowana przez `ICalculatorSession` kontraktu. Jak wiele operacji usługi są wywoływane w celu wykonywania obliczeń Usługa przechowuje informacje o stanie dla klienta. Klient może pobrać bieżący wynik, wywołując `Result()` i wyczyść wynik, który ma wartość zero, wywołując `Clear()`.  
@@ -92,4 +92,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Session`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

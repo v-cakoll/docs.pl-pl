@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: a274083ad2e518f8f29384e51d692bcf9a9cb61e
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 958b58b31193dbf4c03709e4ab7ba38f7f30e0ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590486"
 ---
 # <a name="bool-c-reference"></a>bool (odwołanie w C#)
 
@@ -52,10 +52,10 @@ W tym przykładzie Wprowadź znak przy użyciu klawiatury i program sprawdza, cz
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
+- [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

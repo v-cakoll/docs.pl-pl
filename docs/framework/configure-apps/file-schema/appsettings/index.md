@@ -9,29 +9,29 @@ helpviewer_keywords:
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 9bf2568c8c18f8f6d18c445e802cc72df18fb8c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 548d93e5447c06480629658b13b673aa3d15fc86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620373"
 ---
 # <a name="app-settings-schema"></a>Schemat ustawień aplikacji
 
 Zawiera ustawienia aplikacji niestandardowych, takich jak ścieżki do plików, adresy URL usługi sieci Web XML lub inne informacje konfiguracji niestandardowej dla aplikacji.
 
 [**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<Dodaj >**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<Wyczyść >**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<Usuń >**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
+&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
 
 | Element | Opis |
 | ------- | ----------- |
-| [**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Zawiera  **\<Dodaj >**,  **\<Wyczyść >**, i  **\<Usuń >** tagów, aby kontrolować ustawienia aplikacji. Ma opcjonalny **pliku** atrybutu. |
-| [**\<Dodaj >**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Definiuje ustawienie. Element podrzędny elementu  **\<appSettings >**. Wymaga **klucz** i **wartość** atrybutów. |
-| [**\<Wyczyść >**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Czyści wszystkie ustawienia. Element podrzędny elementu  **\<appSettings >**. nie ma żadnych atrybutów. |
-| [**\<Usuń >**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Usuwa ustawienie. Element podrzędny elementu  **\<appSettings >**. Wymaga **klucz** atrybutu. |
+| [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Zawiera  **\<Dodaj >**,  **\<Wyczyść >**, i  **\<Usuń >** tagów, aby kontrolować ustawienia aplikacji. Ma opcjonalny **pliku** atrybutu. |
+| [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Definiuje ustawienie. Element podrzędny elementu  **\<appSettings >**. Wymaga **klucz** i **wartość** atrybutów. |
+| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Czyści wszystkie ustawienia. Element podrzędny elementu  **\<appSettings >**. nie ma żadnych atrybutów. |
+| [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Usuwa ustawienie. Element podrzędny elementu  **\<appSettings >**. Wymaga **klucz** atrybutu. |
 
 ## <a name="appsettings-element"></a>\<appSettings > element
 
@@ -72,5 +72,5 @@ Poniższy przykład przedstawia plik konfiguracji aplikacji, który wykorzystuje
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-overview.md)   
+- [Przegląd ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-overview.md)
 - [Architektura ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-architecture.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: e3ce8ff7da647120e5fd9e3b4cd44cc603eb797d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547095"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate — Klauzula (Visual Basic)
 Stosuje jedną lub więcej funkcji agregujących do kolekcji.  
@@ -33,11 +33,11 @@ Aggregate element [As type] In collection _
   
 |Termin|Definicja|  
 |---|---|  
-|`element`|Wymagane. Zmienna jest używana do iteracji przez elementy kolekcji.|  
+|`element`|Wymagana. Zmienna jest używana do iteracji przez elementy kolekcji.|  
 |`type`|Opcjonalna. Typ `element`. Jeśli nie określono typu, typu `element` wynika z `collection`.|  
-|`collection`|Wymagane. Odnosi się do kolekcji do wykonywania operacji.|  
+|`collection`|Wymagana. Odnosi się do kolekcji do wykonywania operacji.|  
 |`clause`|Opcjonalna. Jeden lub więcej klauzul zapytania, takie jak `Where` klauzulę, aby udoskonalić wynik zapytania, aby zastosować aggregate — klauzula lub klauzule.|  
-|`expressionList`|Wymagane. Co najmniej jednego rozdzielonych przecinkami wyrażenia, które identyfikują funkcję agregacji, aby zastosować do kolekcji. Alias można zastosować do funkcji agregującej, aby określić nazwę elementu członkowskiego dla wyniku kwerendy. Jeśli nie dostarczono Brak aliasu, nazwa funkcji agregującej jest używana. Aby uzyskać przykłady zobacz sekcję dotyczącą funkcji agregujących w dalszej części tego tematu.|  
+|`expressionList`|Wymagana. Co najmniej jednego rozdzielonych przecinkami wyrażenia, które identyfikują funkcję agregacji, aby zastosować do kolekcji. Alias można zastosować do funkcji agregującej, aby określić nazwę elementu członkowskiego dla wyniku kwerendy. Jeśli nie dostarczono Brak aliasu, nazwa funkcji agregującej jest używana. Aby uzyskać przykłady zobacz sekcję dotyczącą funkcji agregujących w dalszej części tego tematu.|  
   
 ## <a name="remarks"></a>Uwagi  
  `Aggregate` Klauzuli może służyć do uwzględnienia funkcji agregujących w zapytaniach. Funkcje agregujące wykonują zbiór wartości kontroli i obliczeń i zwracać pojedynczą wartość. Obliczona wartość dostęp przy użyciu członka typu wyniku zapytania. Standardowe funkcje agregujące, których można użyć są `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, i `Sum` funkcji. Te funkcje są znane deweloperom, którzy są zaznajomieni z wartości zagregowanych w języku SQL. Zostały one opisane w poniższej sekcji tego tematu.  
@@ -56,7 +56,7 @@ Zwraca `true` , gdy wszystkie elementy w kolekcji spełniają określony warunek
 
 [!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]
 
-### <a name="any"></a>Wszystkie
+### <a name="any"></a>Dowolne
 
 Zwraca `true` , jeżeli dowolny element w kolekcji spełnia określony warunek; w przeciwnym razie zwraca `false`. Oto przykład:
 
@@ -68,7 +68,7 @@ Oblicza średnią wszystkich elementów w kolekcji, lub oblicza wyrażenie podan
 
 [!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]
 
-### <a name="count"></a>Liczba
+### <a name="count"></a>Licznik
 
 Zlicza liczbę elementów w kolekcji. Można podać opcjonalny `Boolean` wyrażenia do obliczania tylko liczby elementów w kolekcji, które spełniają warunek. Oto przykład:
 
@@ -82,13 +82,13 @@ Odwołuje się do wyników zapytania, które są grupowane w `Group By` lub `Gro
 
 Zlicza liczbę elementów w kolekcji. Można podać opcjonalny `Boolean` wyrażenia do obliczania tylko liczby elementów w kolekcji, które spełniają warunek. Zwraca wynik w postaci `Long`. Aby uzyskać przykład, zobacz `Count` funkcję agregacji.
 
-### <a name="max"></a>Maksymalna
+### <a name="max"></a>Maks.
 
 Oblicza maksymalną wartość z kolekcji, lub oblicza wyrażenie podane dla wszystkich elementów w kolekcji. Oto przykład:
 
 [!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_5.vb)]
 
-### <a name="min"></a>min
+### <a name="min"></a>Min.
 
 Oblicza minimalną wartość z kolekcji, lub oblicza wyrażenie podane dla wszystkich elementów w kolekcji. Oto przykład:
 
@@ -118,11 +118,11 @@ Poniższy przykład pokazuje, jak używać `Aggregate` klauzuli w celu zastosowa
   
  [!code-vb[VbSimpleQuerySamples#19](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_10.vb)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [Zapytania](../../../visual-basic/language-reference/queries/index.md)  
-- [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
-- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
-- [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)  
+- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Zapytania](../../../visual-basic/language-reference/queries/index.md)
+- [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)
 - [Klauzula Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)

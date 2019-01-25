@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 529a65285203ac831e1bcab9dc1bea69ac28a282
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 115a998f8be233c38efac1a301b4b24b7d861662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540185"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue — Metoda
 Wznawia wykonywanie wątków zarządzanych po wywołaniu [Metoda Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).  
@@ -37,19 +37,19 @@ HRESULT Continue (
   
 #### <a name="parameters"></a>Parametry  
  `fIsOutOfBand`  
- [in] Ustaw `true` Jeśli kontynuowanie ze zdarzenia poza pasmem; w przeciwnym razie wartość `false`.  
+ [in] Ustaw `true` Jeśli kontynuując zdarzenie out-of-band; w przeciwnym razie wartość `false`.  
   
 ## <a name="remarks"></a>Uwagi  
  `Continue` kontynuuje proces po wywołaniu `ICorDebugController::Stop` metody.  
   
- Podczas debugowania w trybie mieszanym, nie należy wywoływać `Continue` na Win32 zdarzeń wątku, chyba że trwają ze zdarzenia poza pasmem.  
+ Podczas ustalania, debugowanie w trybie mieszanym, nie należy wywoływać metody `Continue` na Win32 zdarzeń wątku, chyba że trwają ze zdarzenia poza pasmem.  
   
- *Zdarzeń wewnątrzpasmowe* zarządzanych zdarzeń lub normalne zdarzeń niezarządzane podczas którego debuger obsługuje interakcji z zarządzanego stan procesu. W takim przypadku odbiera debuger [ICorDebugUnmanagedCallback::DebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md) wywołania zwrotnego z jego `fOutOfBand` ustawiono parametr `false`.  
+ *Zdarzeń wewnątrzpasmowe* jest zdarzenie zarządzane lub normalne zdarzeń niezarządzanych, podczas którego debuger obsługuje interakcję z zarządzanego stan procesu. W tym przypadku odbiera jest debugera [ICorDebugUnmanagedCallback::DebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md) wywołania zwrotnego z jego `fOutOfBand` parametr `false`.  
   
- *Poza pasmem zdarzenia* jest zdarzeniem niezarządzany, podczas którego interakcji z zarządzanego stan procesu jest niemożliwe, gdy proces jest zatrzymana z powodu zdarzenia. W takim przypadku odbiera debuger `ICorDebugUnmanagedCallback::DebugEvent` wywołania zwrotnego z jego `fOutOfBand` ustawiono parametr `true`.  
+ *Zdarzeń out-of-band* to zdarzenie niezarządzany, podczas którego interakcji z zarządzanego stan procesu jest niemożliwe, gdy proces zostanie zatrzymany z powodu zdarzenia. W tym przypadku odbiera jest debugera `ICorDebugUnmanagedCallback::DebugEvent` wywołania zwrotnego z jego `fOutOfBand` parametr `true`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -57,5 +57,5 @@ HRESULT Continue (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

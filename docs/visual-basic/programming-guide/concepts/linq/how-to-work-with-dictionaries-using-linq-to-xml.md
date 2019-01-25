@@ -1,19 +1,19 @@
 ---
-title: 'Porady: Praca z słowniki za pomocą LINQ do XML (Visual Basic)'
+title: 'Instrukcje: Praca ze słownikami przy użyciu LINQ to XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: b6e41f61358563472f49b22df389df00e721503e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f08430aeb92b9c6e0b7b08481027fb3b5b77cad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572347"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Porady: Praca z słowniki za pomocą LINQ do XML (Visual Basic)
-Często jest to wygodny do przekonwertowania odmian struktur danych XML i XML inne struktury danych. W tym temacie przedstawiono konkretnej implementacji tego podejścia ogólne konwertując <xref:System.Collections.Generic.Dictionary%602> XML i na odwrót.  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Instrukcje: Praca ze słownikami przy użyciu LINQ to XML (Visual Basic)
+Często jest to wygodne przekonwertować różne typy struktur danych XML i XML do innych struktur danych. W tym temacie przedstawiono określoną implementację tego podejścia ogólne, konwertując <xref:System.Collections.Generic.Dictionary%602> XML i na odwrót.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie używane literały XML i zapytanie w wyrażenia osadzonego. Nowe projekty zapytania <xref:System.Xml.Linq.XElement> obiekty, które następnie stają się nowa zawartość `Root` <xref:System.Xml.Linq.XElement> obiektu.  
+ W tym przykładzie używa literały XML i zapytanie w wyrażeniu osadzonych. Nowe projekty zapytania <xref:System.Xml.Linq.XElement> obiekty, które następnie stają się nowej zawartości dla `Root` <xref:System.Xml.Linq.XElement> obiektu.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -70,5 +70,5 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Projekcje i przekształcenia (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

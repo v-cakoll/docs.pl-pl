@@ -2,12 +2,12 @@
 title: polecenie test DotNet
 description: Polecenia dotnet test służy do wykonywania testów jednostkowych w danym projekcie.
 ms.date: 05/29/2018
-ms.openlocfilehash: 2cfe96b24e5f46ae679c970a1df028d38ebf6037
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1b2a3917a930db0c0a49ebea41f568aaf4a58ee3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170857"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535285"
 ---
 # <a name="dotnet-test"></a>polecenia DotNet test
 
@@ -19,7 +19,7 @@ ms.locfileid: "53170857"
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
@@ -64,7 +64,7 @@ Projekty testowe określić modułu uruchamiającego testy przy użyciu zwykłej
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -276,7 +276,7 @@ Uruchom testy w projekcie w bieżącym katalogu i wygenerować plik wyników tes
 
 | Struktury testowej | Obsługiwanych właściwości                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Nazwa</li><li>className</li><li>Priorytet</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Nazwa</li><li>ClassName</li><li>Priorytet</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>Nazwa wyświetlana</li><li>Cechy</li></ul>                                   |
 
 `<operator>` Opisuje relację między właściwości i wartości:
@@ -304,5 +304,5 @@ Aby uzyskać dodatkowe informacje i przykłady dotyczące korzystania z jednostk
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Struktury i obiekty docelowe](../../standard/frameworks.md)  
-* [Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)
+- [Struktury i obiekty docelowe](../../standard/frameworks.md)
+- [Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)

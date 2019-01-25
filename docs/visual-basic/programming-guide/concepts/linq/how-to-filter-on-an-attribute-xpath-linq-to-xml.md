@@ -1,25 +1,25 @@
 ---
-title: 'Porady: filtrowanie atrybutów (XPath-LINQ do XML) (Visual Basic)'
+title: 'Instrukcje: Filtrowanie atrybutu (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: ed9869045270cdc51388b192e8d6ab38005eba8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac494b2e453d48a40c2a9be6505d5deebc4a1235
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535869"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Porady: filtrowanie atrybutów (XPath-LINQ do XML) (Visual Basic)
-W tym temacie pokazano, jak można uzyskać elementów podrzędnych o określonej nazwie i z atrybutem o określonej wartości.  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Filtrowanie atrybutu (XPath-LINQ to XML) (Visual Basic)
+W tym temacie pokazano, jak można pobrać elementów podrzędnych o określonej nazwie i z atrybutem z określoną wartością.  
   
  Wyrażenie XPath jest:  
   
  `.//Address[@Type='Shipping']`  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie znajduje wszystkie elementy podrzędne elementy o nazwie `Address`oraz `Type` atrybutu o wartości "Wysyłki".  
+ W tym przykładzie wyszukuje wszystkie obiekty zależne elementy o nazwie `Address`i `Type` atrybutu o wartości "Wysyłania".  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: wiele zakupów (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -75,5 +75,5 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do XML dla wyrażenia XPath użytkowników (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ to XML dla użytkowników metody XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wykazywanie magazynów dla izolowanego magazynu'
+title: 'Instrukcje: Wyliczanie magazynów dla wydzielonej pamięci masowej'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0fcf279a-f241-48f0-8034-2e3d331f1fcb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 484ba261f8e5c88f17b3eba3a354967e2350a621
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f14259afe4ee296d930b042d9e9ef069a81e65f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591763"
 ---
-# <a name="how-to-enumerate-stores-for-isolated-storage"></a>Porady: wykazywanie magazynów dla izolowanego magazynu
+# <a name="how-to-enumerate-stores-for-isolated-storage"></a>Instrukcje: Wyliczanie magazynów dla wydzielonej pamięci masowej
 Można wyliczyć wszystkich izolowanych magazynów dla bieżącego użytkownika za pomocą <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> metody statycznej. Ta metoda przyjmuje <xref:System.IO.IsolatedStorage.IsolatedStorageScope> wartości i zwraca <xref:System.IO.IsolatedStorage.IsolatedStorageFile> modułu wyliczającego. Aby wyliczyć magazynów, musisz mieć <xref:System.Security.Permissions.IsolatedStorageFilePermission> uprawnień, który określa <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> wartość. Jeśli wywołasz <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> metody z <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> wartości, zwraca tablicę <xref:System.IO.IsolatedStorage.IsolatedStorageFile> obiekty, które są zdefiniowane dla bieżącego użytkownika.  
   
 ## <a name="example"></a>Przykład  
@@ -33,5 +33,5 @@ Można wyliczyć wszystkich izolowanych magazynów dla bieżącego użytkownika 
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)

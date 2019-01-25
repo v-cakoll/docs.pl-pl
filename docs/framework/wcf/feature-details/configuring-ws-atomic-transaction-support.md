@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592435"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Konfigurowanie obsługi protokołu WS-Atomic Transaction
 W tym temacie opisano sposób konfigurowania obsługi WS-AtomicTransaction (WS-AT) za pomocą narzędzia konfiguracji WS-AT.  
@@ -29,7 +29,7 @@ W tym temacie opisano sposób konfigurowania obsługi WS-AtomicTransaction (WS-A
   
  Aby włączyć interfejs użytkownika narzędzia, najpierw musisz się zarejestrować plik WsatUI.dll znajduje się w następującej ścieżce  
   
- %ProgramFiles%\Microsoft SDKs\Windows\v6.0\Bin  
+ %PROGRAMFILES%\Microsoft SDKs\Windows\v6.0\Bin  
   
  Aby zarejestrować produkt, uruchom następujące polecenie z poziomu okna wiersza polecenia:  
   
@@ -54,7 +54,7 @@ W tym temacie opisano sposób konfigurowania obsługi WS-AtomicTransaction (WS-A
 ### <a name="creating-and-exporting-certificates"></a>Tworzenie i eksportowanie certyfikatów  
  Ta procedura wymaga przystawki MMC certyfikatów. Przystawka jest możliwy, otwierając menu Start/wykonywania, wpisując "programu mmc" w polu wejściowym i naciśnięcie przycisku OK. Następnie w **Console1** okna, przejdź do **pliku/Dodaj-Usuń** przystawkę, kliknij przycisk Dodaj, a następnie wybierz **certyfikaty** z **dostępne autonomiczny Konsola** listy. Na koniec wybierz pozycję **konto komputera** do zarządzania, a następnie kliknij przycisk **OK**. **Certyfikaty** węzeł jest dostępny w konsoli przystawki.  
   
- Musisz już posiadać wymaganych certyfikatów, aby ustanowić zaufanie. Aby dowiedzieć się, jak utworzyć i zainstalować nowe certyfikaty przed następujące czynności, zobacz [porady: tworzenie i instalowanie tymczasowe certyfikaty klienta WCF podczas rozwoju](https://go.microsoft.com/fwlink/?LinkId=158925).  
+ Musisz już posiadać wymaganych certyfikatów, aby ustanowić zaufanie. Aby dowiedzieć się, jak utworzyć i zainstalować nowe certyfikaty przed następujące czynności, zobacz [jak: Tworzenie i instalowanie certyfikatów tymczasowych klienta programu WCF podczas tworzenia](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
 1.  Na komputerze A przy użyciu przystawki MMC Certyfikaty importowania istniejącego certyfikatu (certA) LocalMachine\MY (węzeł osobiste) i Magazyn LocalMachine\ROOT (węzeł urząd certyfikacji zaufany główny urząd certyfikacji). Aby zaimportować certyfikat do określonego węzła, kliknij prawym przyciskiem myszy węzeł, a następnie wybierz **wszystkie zadania/Import**.  
   
@@ -118,6 +118,6 @@ W tym temacie opisano sposób konfigurowania obsługi WS-AtomicTransaction (WS-A
   
 -   31: pełne  
   
-## <a name="see-also"></a>Zobacz też  
- [Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
- [Przystawka programu MMC do konfigurowania elementu WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+## <a name="see-also"></a>Zobacz także
+- [Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Przystawka programu MMC do konfigurowania elementu WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

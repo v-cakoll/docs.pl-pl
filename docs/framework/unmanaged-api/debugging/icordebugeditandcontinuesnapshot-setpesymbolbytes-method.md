@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6d18288fcd86df5b858e51878cb63f83160f099
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a898b20a92ea3256635a64332e4f86dcd92dd69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524081"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a>ICorDebugEditAndContinueSnapshot::SetPESymbolBytes — Metoda
-`SetPESymbolBytes` jest przestarzała. Nie wywołuj tej metody.  
+`SetPESymbolBytes` jest przestarzały. Nie wywołuj tej metody.  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

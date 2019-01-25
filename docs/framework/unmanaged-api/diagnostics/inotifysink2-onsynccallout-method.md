@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a38c35f0acd47c9183c043e1c436413a309b138
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 925edf6226ed955d097821a42a79425d076c208b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621284"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut — Metoda
-Pobiera wywoływane, gdy połączenie jest limit.  
+Pobiera wywoływane, gdy wywołanie jest zewnętrzny.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,21 +40,21 @@ HRESULT OnSyncCallOut
   
 #### <a name="parameters"></a>Parametry  
  `in_CallID`  
- [in] Identyfikator połączenia, który został przekazany. Zobacz [call_id — struktura](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ [in] Identyfikator połączenia, który jest zewnętrzny. Zobacz [call_id — struktura](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `out_ppBuffer`  
  [out] Bufor wywołań.  
   
  `out_pBufferSize`  
- [out] Rozmiar buforu wywołanie, w bajtach.  
+ [out] Rozmiar buforu wywołania, w bajtach.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się powodzeniem.  
+ S_OK, jeśli metoda zakończy się powodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Zobacz też  
- [INotifySink2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [INotifySource2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifyConnection2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [INotifySink2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

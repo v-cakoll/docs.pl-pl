@@ -6,36 +6,36 @@ helpviewer_keywords:
 - performance [Windows Forms], DataGridView control
 - performance tuning [Windows Forms], data grids
 ms.assetid: 6ccbff28-a0ff-41e4-b601-61b31b61851d
-ms.openlocfilehash: 97bf6f36ce029f879c3524fa92df08a483c2cb77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 556e3f682b6b863f8ab350c1b8ca7409a04a94fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729041"
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Dostrajanie wydajności w formancie DataGridView formularzy systemu Windows
-Podczas pracy z dużą ilością danych, `DataGridView` kontroli może używać dużej ilości pamięci w obciążenie, chyba że ostrożnie korzystaj. Na komputerach klienckich z ograniczoną pamięcią można uniknąć niektórych ten narzut, unikając funkcje, które mają pamięci wysokiej kosztów. Można również zarządzać niektórych lub wszystkich danych konserwacji i pobieranie zadań samodzielnie przy użyciu trybu wirtualnego w celu dostosowania użycia pamięci dla danego scenariusza.  
+Podczas pracy z dużymi ilościami danych, `DataGridView` kontroli może zużywać dużą ilość pamięci w koszty, chyba że ostrożne korzystanie. Na komputerach klienckich z ograniczoną ilością pamięci można uniknąć niektórych to obciążenie, unikając funkcje, które mają dużą ilość pamięci, kosztów. Można również zarządzać niektórych lub wszystkich funkcji obsługi danych i pobierania zadania samodzielnie przy użyciu trybu wirtualnego w celu dostosowania użycia pamięci dla danego scenariusza.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Najlepsze praktyki dotyczące skalowania kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
- Informacje dotyczące używania `DataGridView` formantu w taki sposób, aby uniknąć kar użycia i wydajności pamięci niepotrzebnych podczas pracy z dużą ilością danych.  
+ Opisuje sposób używania `DataGridView` formantu w taki sposób, aby uniknąć kar pamięci niepotrzebne użycia i wydajności, podczas pracy z dużymi ilościami danych.  
   
  [Tryb wirtualny w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
- Informacje dotyczące używania trybu wirtualnego do uzupełnienia lub zastąpienia standardowego mechanizmu powiązania danych.  
+ W tym artykule opisano sposób użycia trybu wirtualnego w celu uzupełnienia lub zastąpienia standardowego mechanizmu wiązania danych.  
   
- [Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
- Opisuje sposób wdrożenia obsługi kilka zdarzeń w trybie wirtualnym. Również przedstawiono sposób wykonania wycofywania na poziomie wiersza i zatwierdzenie dla użytkownika.  
+ [Przewodnik: Implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+ W tym artykule opisano, jak zaimplementować obsługę dla kilku zdarzenia trybu wirtualnego. Ilustruje też sposób wdrażać wycofywania na poziomie wiersza i zatwierdzenia do edycji użytkownika.  
   
  [Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
- Opisuje sposób ładowania danych na żądanie, co jest przydatne, jeśli masz więcej danych do wyświetlenia nie mogą być przechowywane w pamięci dostępne klienta.  
+ W tym artykule opisano sposób ładowania danych na żądanie, co jest przydatne, jeśli masz więcej danych do wyświetlenia, nie mogą być przechowywane w pamięci dostępne klienta.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.DataGridView>  
- Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridView> formantu.  
+ Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridView> kontroli.  
   
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
- Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> właściwości.  
+ Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> właściwości.  
   
-## <a name="see-also"></a>Zobacz też  
- [DataGridView, kontrolka](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Tryby wyświetlania danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Zobacz także
+- [DataGridView, kontrolka](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Tryby wyświetlania danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 7b5a48003ff9bfb398c05c8d70a9076d49ad83d6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2961d9abc6c32e78b5a61e8f2bbea5cfcf6677bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547205"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>Atrybuty kontrolujące zakodowaną serializację SOAP
 
 Dokument World Wide Web Consortium (W3C) o nazwie [proste obiektu dostępu protokołu (protokołu SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) zawiera sekcję opcjonalną (sekcja 5), w tym artykule opisano, jak można zakodować parametry protokołu SOAP. Aby jest zgodny z sekcji 5 specyfikacji, należy użyć specjalnego zestawu atrybutów w <xref:System.Xml.Serialization> przestrzeni nazw. Zastosuj te atrybuty właściwe dla klas i składowych klas, a następnie użyj <xref:System.Xml.Serialization.XmlSerializer> do serializacji wystąpień klasy lub klas.
 
-W poniższej tabeli przedstawiono atrybuty, których może być stosowana, i co robią. Aby uzyskać więcej informacji o korzystaniu z tych atrybutów do kontroli serializacji XML, zobacz [jak: serializacja obiektu jako protokołu SOAP-Encoded XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) i [jak: Przesłoń zakodowany serializacji XML protokołu SOAP](how-to-override-encoded-soap-xml-serialization.md).
+W poniższej tabeli przedstawiono atrybuty, których może być stosowana, i co robią. Aby uzyskać więcej informacji o korzystaniu z tych atrybutów do kontroli serializacji XML, zobacz [jak: Serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) i [jak: Zastąpienie serializacji XML protokołu SOAP zakodowane](how-to-override-encoded-soap-xml-serialization.md).
 
 Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty](../../../docs/standard/attributes/index.md).
 
@@ -34,10 +34,10 @@ Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty](../../../
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Serializacja XML i SOAP](xml-and-soap-serialization.md)  
-- [Instrukcje: Serializacja obiektu jako kodowanego strumienia XML protokołu SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
-- [Instrukcje: Przesłanianie zakodowanej serializacji XML protokołu SOAP](how-to-override-encoded-soap-xml-serialization.md)  
-- [Atrybuty](../../../docs/standard/attributes/index.md)  
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)  
-- [Instrukcje: Deserializacja obiektu](how-to-deserialize-an-object.md)
+- [Serializacja XML i SOAP](xml-and-soap-serialization.md)
+- [Instrukcje: Serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Instrukcje: Zastąp zakodowanego protokołu SOAP serializacji XML](how-to-override-encoded-soap-xml-serialization.md)
+- [Atrybuty](../../../docs/standard/attributes/index.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)
+- [Instrukcje: Deserializacji obiektu](how-to-deserialize-an-object.md)

@@ -1,15 +1,15 @@
 ---
-title: '&lt;ServiceCredentials&gt;'
+title: '&lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 96db336c-4f7a-4193-81a5-910b8ffd804f
-ms.openlocfilehash: b9e32509a5e182301455eaf0e602a03c51fbc23a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 978439dfeb0c5275e2ec43f9c891b6927e7a7869
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610438"
 ---
-# <a name="ltservicecredentialsgt"></a>&lt;ServiceCredentials&gt;
+# <a name="ltservicecredentialsgt"></a>&lt;serviceCredentials&gt;
 Określa poświadczenie do użycia w uwierzytelnianiu usługi i ustawień dotyczących walidacji poświadczeń klienta.  
   
  \<system.ServiceModel>  
@@ -52,13 +52,13 @@ Określa poświadczenie do użycia w uwierzytelnianiu usługi i ustawień dotycz
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Określa certyfikat, który ma być używany, gdy certyfikat klienta jest dostępne poza pasmem. Ten element określa również ustawienia weryfikacji certyfikatu klienta. Ten element jest typu <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>.|  
+|[\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Określa certyfikat, który ma być używany, gdy certyfikat klienta jest dostępne poza pasmem. Ten element określa również ustawienia weryfikacji certyfikatu klienta. Ten element jest typu <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>.|  
 |[\<issuedTokenAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)|Określa bieżący token wystawiony dla tej usługi. Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>.|  
 |[\<elementu równorzędnego >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Określa bieżące poświadczenia dla węzła równorzędnego. Ten element jest typu <xref:System.ServiceModel.Configuration.PeerCredentialElement>.|  
-|[\<secureConversationAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationauthentication-of-servicecredential.md)|Określa bieżące poświadczenia dla bezpiecznej konwersacji. Ten element jest typu <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>.|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|Określa certyfikat używany przez usługę do identyfikacji. Ten element jest typu <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>.|  
-|[\<userNameAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)|Określa ustawienia dla sprawdzenie poprawności hasła nazwy użytkownika. Ten element jest typu <xref:System.ServiceModel.Configuration.UserNameServiceElement>.|  
-|[\<windowsAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsauthentication-of-servicecredentials.md)|Określa ustawienia dla sprawdzanie poprawności poświadczeń Windows. Ten element jest typu <xref:System.ServiceModel.Configuration.WindowsServiceElement>.|  
+|[\<secureConversationAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationauthentication-of-servicecredential.md)|Określa bieżące poświadczenia dla bezpiecznej konwersacji. Ten element jest typu <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>.|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|Określa certyfikat używany przez usługę do identyfikacji. Ten element jest typu <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>.|  
+|[\<userNameAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)|Określa ustawienia dla sprawdzenie poprawności hasła nazwy użytkownika. Ten element jest typu <xref:System.ServiceModel.Configuration.UserNameServiceElement>.|  
+|[\<windowsAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsauthentication-of-servicecredentials.md)|Określa ustawienia dla sprawdzanie poprawności poświadczeń Windows. Ten element jest typu <xref:System.ServiceModel.Configuration.WindowsServiceElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -66,7 +66,7 @@ Określa poświadczenie do użycia w uwierzytelnianiu usługi i ustawień dotycz
 |-------------|-----------------|  
 |[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

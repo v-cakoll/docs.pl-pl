@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 29383d0b7f125111071ac131d8a822dba811032e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603316"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Dołączone i odłączone zadania podrzędne
 A *zadanie podrzędne* (lub *zadanie zagnieżdżone*) jest <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> wystąpienia, który jest tworzony w delegowanym użytkowniku innego zadania, który jest znany jako *zadanie nadrzędne*. Zadanie podrzędne może odłączone lub dołączone. A *odłączone zadanie podrzędne* jest zadaniem wykonywanym niezależnie od jego obiektu nadrzędnego. *Dołączone zadanie podrzędne* to zagnieżdżone zadanie, które są tworzone za pomocą <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> opcji, których elementem nadrzędnym nie jawnie lub domyślnie zabronić jako załączniki. Zadanie może utworzyć dowolną liczbę podrzędnych dołączonych i odłączonych zadań podrzędnych, ograniczony tylko ilością zasobów systemowych.  
@@ -58,7 +58,7 @@ A *zadanie podrzędne* (lub *zadanie zagnieżdżone*) jest <xref:System.Threadin
  Jeśli odłączone zadanie podrzędne zgłasza wyjątek, ten wyjątek musi przestrzegać lub obsługiwany bezpośrednio w zadania nadrzędnym, podobnie jak w przypadku dowolnego zadania niezagnieżdżonego. Jeśli dołączone zadanie podrzędne zgłasza wyjątek, wyjątek jest automatycznie propagowany do zadania nadrzędnego i z powrotem do wątku, który czeka lub próbuje uzyskać dostęp zadania podrzędnego <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> właściwości. W związku z tym, za pomocą dołączonych zadań podrzędnych, może obsługiwać wszystkie wyjątki w tylko jednym punkcie w wywołaniu <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> na wątku wywołującym. Aby uzyskać więcej informacji, zobacz [wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
   
 ## <a name="cancellation-and-child-tasks"></a>Anulowanie i zadania podrzędne  
- Anulowanie zadania jest wspólne. Oznacza to aby móc być anulowanym, co dołączone lub odłączone zadanie podrzędne musi monitorować stan tokenu odwołania. Jeśli chcesz anulować nadrzędne i wszystkie jego elementy podrzędne, stosując jedno żądanie anulowania, przekaż ten sam token jako argument do wszystkich zadań i dostarczyć w każdym zadaniu logikę odpowiadania na żądanie w każdym zadaniu. Aby uzyskać więcej informacji, zobacz [anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md) i [porady: anulowanie zadania i jego elementy podrzędne](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+ Anulowanie zadania jest wspólne. Oznacza to aby móc być anulowanym, co dołączone lub odłączone zadanie podrzędne musi monitorować stan tokenu odwołania. Jeśli chcesz anulować nadrzędne i wszystkie jego elementy podrzędne, stosując jedno żądanie anulowania, przekaż ten sam token jako argument do wszystkich zadań i dostarczyć w każdym zadaniu logikę odpowiadania na żądanie w każdym zadaniu. Aby uzyskać więcej informacji, zobacz [anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md) i [jak: Anulowanie zadania i jego elementów podrzędnych](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
 ### <a name="when-the-parent-cancels"></a>Kiedy anulowany jest element nadrzędny  
  Jeśli zadanie nadrzędne anuluje się przed rozpoczęciem jego zadania podrzędne, nigdy nie rozpoczyna się elementem podrzędnym. Jeśli zadanie nadrzędne anuluje się po jego zadanie podrzędne już się rozpoczęła, element podrzędny wykonywanie aż do zakończenia, chyba że ma własną logikę anulowania. Aby uzyskać więcej informacji, zobacz [anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md).  
@@ -76,9 +76,9 @@ A *zadanie podrzędne* (lub *zadanie zagnieżdżone*) jest <xref:System.Threadin
   
  Aby zapobiec łączeniu zadania podrzędnego z zadaniem do jego zadania nadrzędnego, należy określić <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> opcji podczas tworzenia obiektu nadrzędnego <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> obiektu. Kiedy zadanie próbuje dołączyć do elementu nadrzędnego i nadrzędne Określa <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> , zadanie podrzędne nie będzie mógł dołączyć do elementu nadrzędnego i będą wykonywane tylko tak, jakby <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> nie określono opcję.  
   
- Można również zapobiec łączeniu zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym, gdy zadanie podrzędne nie zakończy się w odpowiednim czasie. Ponieważ zadanie nadrzędne nie zakończy się aż do zakończenia wszystkich zadań podrzędnych, długo uruchamiające się zadanie podrzędne może spowodować jej ogólną niską. Na przykład, który pokazuje, jak zwiększyć wydajność aplikacji, uniemożliwiając zadaniu dołączenie do jego zadania nadrzędnego, zobacz [jak: uniemożliwić dołączanie zadania podrzędnego do elementu nadrzędnego](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
+ Można również zapobiec łączeniu zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym, gdy zadanie podrzędne nie zakończy się w odpowiednim czasie. Ponieważ zadanie nadrzędne nie zakończy się aż do zakończenia wszystkich zadań podrzędnych, długo uruchamiające się zadanie podrzędne może spowodować jej ogólną niską. Na przykład, który pokazuje, jak zwiększyć wydajność aplikacji, uniemożliwiając zadaniu dołączenie do jego zadania nadrzędnego, zobacz [jak: Zapobiec łączeniu zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  
+- [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)
 - [Równoległość danych](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

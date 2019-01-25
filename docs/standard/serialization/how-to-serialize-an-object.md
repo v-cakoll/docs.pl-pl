@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: serializacja obiektu'
+title: 'Instrukcje: Serializacja obiektu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0924d8038edf70cd493b94c165edda607fc0027b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45748578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600651"
 ---
-# <a name="how-to-serialize-an-object"></a>Instrukcje: serializacja obiektu
+# <a name="how-to-serialize-an-object"></a>Instrukcje: Serializacja obiektu
 Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być serializowany i ustaw jego właściwości publiczne oraz pól. W tym celu należy określić transportu format, w którym strumień XML mają być przechowywane jako strumień lub jako PLik. Na przykład, jeśli strumień XML musi być zapisany w postaci stałe, Utwórz <xref:System.IO.FileStream> obiektu.  
   
 > [!NOTE]
@@ -52,5 +52,5 @@ Do serializacji obiektu, należy najpierw utworzyć obiekt, który ma być seria
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Instrukcje: Deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

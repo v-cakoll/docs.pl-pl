@@ -1,15 +1,15 @@
 ---
-title: 'Porady: odczytywanie danych o obiektach z pliku XML (C#)'
+title: 'Instrukcje: Odczytywanie danych o obiektach z pliku XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 7c3bad56c6a0bee51262586aea4ce97ff0491f24
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33e4395c2be421385948d256a989d06ac215c9c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583488"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Porady: odczytywanie danych o obiektach z pliku XML (C#)
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Instrukcje: Odczytywanie danych o obiektach z pliku XML (C#)
 W tym przykładzie odczytuje dane obiektów, które zostały wcześniej zapisane do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
   
 ## <a name="example"></a>Przykład  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Nazwa pliku "c:\temp\SerializationOverview.xml" należy zastąpić nazwę pliku zawierającego dane serializowane. Aby uzyskać więcej informacji na temat serializowania danych zobacz [porady: zapis danych obiektu, do pliku XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+ Nazwa pliku "c:\temp\SerializationOverview.xml" należy zastąpić nazwę pliku zawierającego dane serializowane. Aby uzyskać więcej informacji na temat serializowania danych zobacz [jak: Zapisywania obiektów danych do pliku XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
   
  Klasa musi mieć publicznego konstruktora bez parametrów.  
   
@@ -61,9 +61,9 @@ public void ReadXML()
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Zawsze sprawdzić dane wejściowe i nigdy nie deserializowanie danych z niezaufanego źródła. Ponownie utworzyć obiekt działa na komputerze lokalnym z uprawnieniami kod, który deserializacji go. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IO.StreamWriter>  
-- [Porady: zapis danych obiektu do pliku XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
-- [Serializacja (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+- <xref:System.IO.StreamWriter>
+- [Instrukcje: Zapisywania obiektów danych do pliku XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [Serializacja (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
 - [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)

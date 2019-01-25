@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: tworzenie nowej zawartości WPF na formularzach systemu Windows w czasie projektowania'
+title: 'Przewodnik: Tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: dc72b86a69d44ad282e30b000313b73211cad09c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9414eb8edc839b109aafa0c98fa3ed74a34a7d62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500502"
 ---
-# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Wskazówki: tworzenie nowej zawartości WPF na formularzach systemu Windows w czasie projektowania
+# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania
 
 W tym temacie dowiesz się, jak utworzyć formant Windows Presentation Foundation (WPF) do użytku w aplikacjach opartych na formularzach Windows.
 
@@ -61,7 +61,7 @@ Utworzenie nowej kontrolki WPF, a następnie dodanie go do projektu jest bardzo 
 
     - UserControl1.xaml plik zostanie otwarty w [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
 
-2. W widoku Projekt, upewnij się, że `UserControl1` jest zaznaczone. Aby uzyskać więcej informacji, zobacz [jak: Select i Przesuń elementy na powierzchni projektowej](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
+2. W widoku Projekt, upewnij się, że `UserControl1` jest zaznaczone. Aby uzyskać więcej informacji, zobacz [jak: Wybierz i Przesuń elementy na powierzchni projektowej](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
 
 3. W **właściwości** okna, ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> właściwości **200**.
 
@@ -102,13 +102,13 @@ Nowe kontrolki WPF jest gotowy do użycia w formularzu. Formularze Windows używ
 
 Windows Forms i WPF są różne technologie, ale są one przeznaczone do ściśle współpracować. Aby zapewnić bardziej rozbudowane wygląd i zachowanie w swoich aplikacjach, spróbuj wykonać następujące czynności:
 
-- Hostowanie kontrolki Windows Forms na stronie programu WPF. Aby uzyskać więcej informacji, zobacz [wskazówki: Hosting formantu Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+- Hostowanie kontrolki Windows Forms na stronie programu WPF. Aby uzyskać więcej informacji, zobacz [instruktażu: Kontrolki hostingu Windows formularzy na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
 
-- Stosowanie stylów wizualnych Windows Forms do zawartości WPF. Aby uzyskać więcej informacji, zobacz [porady: Włączanie stylów wizualnych w aplikacji hybrydowej](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
+- Stosowanie stylów wizualnych Windows Forms do zawartości WPF. Aby uzyskać więcej informacji, zobacz [jak: Włączyć style Visual w aplikacji hybrydowej](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
 
-- Zmiana stylu zawartości WPF. Aby uzyskać więcej informacji, zobacz [wskazówki: tworzenie stylów zawartości WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
+- Zmiana stylu zawartości WPF. Aby uzyskać więcej informacji, zobacz [instruktażu: Nadawanie stylu zawartości WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

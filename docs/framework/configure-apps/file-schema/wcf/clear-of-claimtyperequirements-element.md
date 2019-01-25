@@ -2,23 +2,23 @@
 title: '&lt;clear&gt; w &lt;claimTypeRequirements&gt;. element,'
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: 1e77e3c978c1e385aec983d5e2d4bea64697c43e
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c64e5450e01fdb011eb726f3bef1a85a5698d0d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568338"
 ---
 # <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a>&lt;clear&gt; w &lt;claimTypeRequirements&gt;. element,
 Określa, że wszystkie typy roszczeń do usunięcia w federacyjnym poświadczeniu. Daje to gwarancję, że uruchomieniu pusty kolekcji.  
   
  \<system.ServiceModel>  
 \<powiązania >  
-\<wsFederatedBinding >  
+\<wsFederatedBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
+\<security>  
 \<message>  
-\<claimTypeRequirements >  
+\<claimTypeRequirements>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,9 +43,9 @@ Określa, że wszystkie typy roszczeń do usunięcia w federacyjnym poświadczen
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Określa kolekcję wymaganych typów oświadczeń. Każdy element jest typu <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> W federacyjnym scenariuszu usługi stanu wymagania dotyczące poświadczeń przychodzących. Na przykład poświadczenia przychodzących musi mieć określone typy oświadczeń. Każdy element w tej kolekcji Określa typy wymaganych i opcjonalnych oświadczeń, oczekiwano w federacyjnym poświadczeniu.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>  
- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElement>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
+- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElement>

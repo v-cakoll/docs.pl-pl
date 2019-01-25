@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0508e9291b089ec7af6a0b41bbc231fdb0701ad6
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 15b258f0392275ffd18c52d11df3bc266a55ce3f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566297"
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
 Każdy komputer, na którym zainstalowano środowisko uruchomieniowe języka wspólnego zawiera pamięć podręczna kodu komputera o nazwie Global Assembly Cache. Global Assembly Cache przechowuje zestawy specjalnie na potrzeby być współużytkowane przez wiele aplikacji na komputerze.  
@@ -42,7 +42,7 @@ Każdy komputer, na którym zainstalowano środowisko uruchomieniowe języka wsp
   
  Zestawy wdrożony w globalnej pamięci podręcznej zestawów, musi mieć silną nazwę. Gdy zestaw zostanie dodany do globalnej pamięci podręcznej zestawów, sprawdzania integralności są wykonywane na wszystkie pliki wchodzące w skład zestawu. Pamięć podręczna wykonuje te sprawdzania integralności, aby upewnić się, że zestaw nie został zmodyfikowany, na przykład, jeśli plik został zmieniony, ale manifest nie odzwierciedla zmianę.  
   
-## <a name="see-also"></a>Zobacz też  
-- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [Praca z zestawami i globalną pamięcią podręczną zestawów](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+## <a name="see-also"></a>Zobacz także
+- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Praca z zestawami i globalną pamięcią podręczną zestawów](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)

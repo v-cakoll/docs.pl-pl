@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie klawiszy dostępu dla formantów formularzy systemu Windows'
+title: 'Instrukcje: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 53ffd3632ff3e1179a72f1e2bfe4ea366e28b0f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bfbd2c6cd8aae410dfed506437bc85fbcb1d311
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597856"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Porady: tworzenie klawiszy dostępu dla formantów formularzy systemu Windows
-*Klucz dostępu* jest podkreślony znak w tekście menu, element menu lub etykiety formantu, takie jak przycisk. Przy użyciu klucza dostępu użytkownika może "przycisk" naciśnięcie klawisza ALT w połączeniu z kluczem dostępu wstępnie zdefiniowane. Na przykład, gdy przycisk działa procedura Drukowanie formularza i dlatego jego `Text` właściwość jest ustawiona na "Print","Dodawanie handlowego" i "przed litery"P"powoduje, że litery"P", aby podkreślić tekst przycisku w czasie wykonywania. Użytkownik może uruchomić polecenie skojarzone z przyciskiem, naciskając klawisze ALT + P. Nie może mieć klucza dostępu dla formantu, który nie może uzyskać fokusu.  
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Instrukcje: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms
+*Klucz dostępu* jest podkreślony znak w tekście menu, element menu lub etykieta kontrolki, takiej jak przycisk. Przy użyciu klucza dostępu użytkownik może "przycisk", naciskając klawisz ALT w połączeniu z kluczem dostępu do wstępnie zdefiniowanych. Na przykład, jeśli przycisk uruchamia procedurę do Drukowanie formularza i dlatego jego `Text` właściwość jest ustawiona na "Print","Dodawanie handlowe" i ", zanim litery"P"powoduje, że litery"P"podkreślić w tekst przycisku w czasie wykonywania. Użytkownik może uruchamiać polecenie skojarzone z przyciskiem, naciskając klawisze ALT + P. Nie może mieć klucza dostępu dla formantu, który nie może otrzymać ostrości.  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>Aby utworzyć klucz dostępu dla formantu  
   
-1.  Ustaw `Text` właściwości ciąg, który zawiera handlowego "i" (&) przed literą, która będzie skrótu.  
+1.  Ustaw `Text` właściwość ciąg, który zawiera handlowe "i" (&) przed literą, który ma być skrót.  
   
     ```vb  
     ' Set the letter "P" as an access key.  
@@ -50,10 +50,10 @@ ms.locfileid: "33530952"
     ```  
   
     > [!NOTE]
-    >  Aby uwzględnić znak podpis bez tworzenia klucza dostępu, obejmują dwa ampersandu (& &). Pojedynczy znak jest wyświetlana w podpisie i żadne znaki nie są podkreślone.  
+    >  Aby dołączyć handlowe "i" podpis bez tworzenia klucza dostępu, obejmują dwa takie znaki (& &). Pojedynczy znak jest wyświetlana w podpisie, a żadne znaki nie są podkreślone.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.Button>  
- [Instrukcje: odpowiadanie na kliknięcia przycisków Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.Button>
+- [Instrukcje: Odpowiadanie na kliknięcia przycisków formularzy Windows](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

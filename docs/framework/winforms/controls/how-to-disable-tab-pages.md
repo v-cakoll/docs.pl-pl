@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wyłączanie kart'
+title: 'Instrukcje: Wyłączanie kart'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: 94d8522a71fcd565ae8f994d73ffe4c46fcf7ce3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1071b2ded2761d64e57484a9aea9bddb254a9a7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534270"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554416"
 ---
-# <a name="how-to-disable-tab-pages"></a>Porady: wyłączanie kart
-W niektórych przypadkach można ograniczyć dostęp do danych, która jest dostępna w aplikacji formularzy systemu Windows. Przykładem mogą być, jeśli masz dane wyświetlane na kartach z formantem karty; Administratorzy mają informacje na stronie kartę, której chcesz uniemożliwić gościa lub użytkowników niższego poziomu.  
+# <a name="how-to-disable-tab-pages"></a>Instrukcje: Wyłączanie kart
+W niektórych przypadkach można ograniczyć dostęp do danych, która jest dostępna w aplikacji Windows Forms. Przykładem mogą być, jeśli masz dane wyświetlane na kartach kontroli kartę; Administratorzy mogą mają informacje na stronie karty, który chcesz uniemożliwić gościa lub użytkowników niższego poziomu.  
   
 ### <a name="to-disable-tab-pages-programmatically"></a>Aby programowo wyłączanie kart  
   
-1.  Napisać kod obsługujący formantu karty <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> zdarzeń. To zdarzenie jest wywoływane, gdy użytkownik zmienia się z jednej karty do następnego.  
+1.  Napisz kod obsługujący kontrolki karty <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> zdarzeń. To zdarzenie, które jest wywoływane, gdy użytkownik zmienia się z jednej karty do następnego.  
   
-2.  Sprawdź poświadczenia. W zależności od informacji przedstawionych można sprawdzić nazwę użytkownika, który użytkownik zalogował się przy użyciu lub inne formy poświadczeń przed zezwoleniem na użytkownika wyświetlić na karcie.  
+2.  Sprawdź poświadczenia. Informacje znajdujące się w zależności, można sprawdzić nazwę użytkownika, który użytkownik zalogował się przy użyciu lub innej formy poświadczeń, zanim zezwoli użytkownikowi wyświetlić na karcie.  
   
-3.  Jeśli użytkownik ma odpowiednie poświadczenia, Wyświetl kartę, który został kliknięty. Jeśli użytkownik ma odpowiednie poświadczenia, wyświetlać okno komunikatu lub inny interfejs użytkownika wskazujący, że nie mają one mieć dostęp i wróć do karty początkowej.  
+3.  Jeśli użytkownik ma odpowiednie poświadczenia, Wyświetl kartę, który został kliknięty. Jeśli użytkownik nie ma odpowiednie poświadczenia, wyświetlić okno komunikatu lub innego interfejsu użytkownika wskazująca, że nie mają one mają dostęp i powrócić do początkowej karty.  
   
     > [!NOTE]
-    >  Kiedy w aplikacjach produkcyjnych należy zaimplementować tę funkcję, można przeprowadzić to sprawdzenie poświadczeń podczas formularza <xref:System.Windows.Forms.Form.Load> zdarzeń. Dzięki temu można ukryć kartę przed wyświetleniem interfejsu użytkownika, który jest znacznie czyszczący podejście do programowania. Metodologię poniżej (Sprawdzanie poświadczeń i wyłączanie karcie podczas <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> zdarzeń) jest w celach ilustracyjnych.  
+    >  Po zaimplementowaniu tej funkcji w aplikacjach produkcyjnych, przeprowadzić to sprawdzenie poświadczeń podczas formularza <xref:System.Windows.Forms.Form.Load> zdarzeń. Pozwoli to ukryć kartę, zanim zostanie wyświetlone żadnego interfejsu użytkownika, który jest znacznie bardziej przejrzyste podejście do programowania. Metodologia poniżej (Sprawdzanie poświadczeń i wyłączanie karcie podczas <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> zdarzeń) jest w celach ilustracyjnych.  
   
-4.  Opcjonalnie Jeśli masz więcej niż dwie karty, wyświetlić inny od pierwotnego strony karty.  
+4.  Opcjonalnie Jeśli masz więcej niż dwie karty, należy wyświetlić strony karty różni się od oryginału.  
   
-     W poniższym przykładzie <xref:System.Windows.Forms.CheckBox> formant jest używany zamiast sprawdzania poświadczeń, jako kryterium, dostępu do karty różnią się przez aplikację. Gdy <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> zdarzenie jest wywoływane, jeśli spełniony jest wyboru poświadczeń (to znaczy, że pole wyboru jest zaznaczone) i jest zaznaczona karta `TabPage2` (karta poufne informacje, w tym przykładzie), następnie `TabPage2` jest wyświetlany. W przeciwnym razie `TabPage3` wyświetleniem i okno komunikatu jest wyświetlany użytkownikowi, wskazującą, ma odpowiednie uprawnienia dostępu. Poniższy kod zakłada formularza z <xref:System.Windows.Forms.CheckBox> formantu (`CredentialCheck`) i <xref:System.Windows.Forms.TabControl> kontrolki z trzech kart.  
+     W poniższym przykładzie <xref:System.Windows.Forms.CheckBox> formant jest używany zamiast sprawdzania poświadczenia, jako kryterium dla dostępu do karty zależą od aplikacji. Gdy <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> zdarzenie jest wywoływane, jeśli spełniony jest wyboru poświadczeń (oznacza to, że pole wyboru jest zaznaczone) i wybranej karty `TabPage2` (karta poufne informacje, w tym przykładzie), następnie `TabPage2` jest wyświetlana. W przeciwnym razie `TabPage3` jest wyświetlany i okno komunikatu jest wyświetlany użytkownikowi, wskazującą, ma odpowiednie uprawnienia dostępu. Poniższy kod zakłada formularza z <xref:System.Windows.Forms.CheckBox> kontroli (`CredentialCheck`) i <xref:System.Windows.Forms.TabControl> formantu o trzy strony karty.  
   
     ```vb  
     Private Sub TabControl1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged  
@@ -101,8 +101,8 @@ W niektórych przypadkach można ograniczyć dostęp do danych, która jest dost
        gcnew System::EventHandler(this, &Form1::tabControl1_SelectedIndexChanged);  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [TabControl, kontrolka — omówienie](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
- [Instrukcje: dodawanie kontrolki do karty](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
- [Instrukcje: dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
- [Instrukcje: zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a>Zobacz także
+- [TabControl, kontrolka — omówienie](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
+- [Instrukcje: Dodawanie kontrolki do karty](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
+- [Instrukcje: Dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Instrukcje: Zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

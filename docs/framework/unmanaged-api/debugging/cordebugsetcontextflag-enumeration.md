@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: badd79926e8f039cf6b947dd6655e2cd679e3000
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 572087bd6f14c43b439910be32fca54af66a2e8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585539"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag — Wyliczenie
-Wskazuje, czy kontekst jest z aktywnego (lub typu liść) ramek na stosie lub został obliczony przy odwijanie od innej ramki.  
+Wskazuje, czy kontekst jest z aktywnej (lub liścia) ramek na stosie lub obliczeniu, odwijanie od innej ramki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,13 +41,13 @@ typedef enum CorDebugSetContextFlag
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|Kontekst jest aktywny kontekst wątku.|  
-|SET_CONTEXT_FLAG_UNWIND_FRAME|Kontekst został obliczony przy odwijanie od innej ramki.|  
+|SET_CONTEXT_FLAG_UNWIND_FRAME|Kontekst ma zostać obliczone przez odwijanie od innej ramki.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CorDebugSetContextFlag` udostępnia wartości, które są używane przez [ICorDebugStackWalk::SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) metody.  
+ `CorDebugSetContextFlag` zawiera wartości, które są używane przez [ICorDebugStackWalk::SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -55,6 +55,6 @@ typedef enum CorDebugSetContextFlag
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

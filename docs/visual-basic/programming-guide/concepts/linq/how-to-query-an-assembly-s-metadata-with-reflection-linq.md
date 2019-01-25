@@ -1,16 +1,16 @@
 ---
-title: 'Porady: zapytanie zestawu&#39;s metadanych z odbiciem (LINQ) (Visual Basic)'
+title: 'Instrukcje: Zapytanie zestawu&#39;s metadanych z odbiciem (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-ms.openlocfilehash: f465cccef2009bb9d8da1dc57c14eb09dc008f54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb46cef7eb9b4827cb5e4b7ca7366c0910fcef26
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609827"
 ---
-# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>Porady: zapytanie zestawu&#39;s metadanych z odbiciem (LINQ) (Visual Basic)
-W poniższym przykładzie przedstawiono sposób LINQ może służyć za pomocą odbicia do pobierania metadanych określonych o metodach, spełniających określone kryteria wyszukiwania. W takim przypadku zapytanie znajdzie nazwy wszystkie metody w zestawie, która zwraca typów wyliczenia, takich jak tablic.  
+# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>Instrukcje: Zapytanie zestawu&#39;s metadanych z odbiciem (LINQ) (Visual Basic)
+Poniższy przykład pokazuje, jak LINQ może służyć za pomocą odbicia do pobierania metadanych określone informacje o metodach, spełniających określone kryteria wyszukiwania. W tym przypadku zapytanie znajdzie nazwy wszystkie metody w zestawie, który zwraca wyliczalny typów, takich jak tablice.  
   
 ## <a name="example"></a>Przykład  
   
@@ -46,10 +46,10 @@ Module Module1
 End Module  
 ```  
   
- W przykładzie użyto <xref:System.Reflection.Assembly.GetTypes%2A> metoda zwraca tablicę typów w określonym zestawie. [Klauzuli Where](../../../../visual-basic/language-reference/queries/where-clause.md) jest stosowany filtr, tak aby zwracane są tylko typy publiczne. Dla każdego typu publicznego podzapytania jest generowany przy użyciu <xref:System.Reflection.MethodInfo> tablica, która jest zwracana z <xref:System.Type.GetMethods%2A> wywołania. Te wyniki są filtrowane do zwrócenia tylko tych metod, w których typem zwracanym jest tablicą, możesz też typu, który implementuje <xref:System.Collections.Generic.IEnumerable%601>. Ponadto te wyniki są pogrupowane według przy użyciu nazwy typu jako klucza.  
+ W przykładzie użyto <xref:System.Reflection.Assembly.GetTypes%2A> metodę, aby zwracało tablicę typów w określonym zestawie. [Klauzuli Where](../../../../visual-basic/language-reference/queries/where-clause.md) filtr jest stosowany, dzięki czemu zwracane są tylko typy publiczne. Dla każdego typu publicznego podzapytania jest generowany przy użyciu <xref:System.Reflection.MethodInfo> tablica, która jest zwracana z <xref:System.Type.GetMethods%2A> wywołania. Te wyniki są filtrowane, aby zwrócić tylko tych metod, którego typem zwracanym jest tablicą lub — w przeciwnym razie typ, który implementuje <xref:System.Collections.Generic.IEnumerable%601>. Na koniec te wyniki są grupowane, używając nazwy typu jako klucz.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji System.Linq przestrzeni nazw.  
+ Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do obiektów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

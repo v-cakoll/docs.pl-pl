@@ -11,12 +11,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: KrzysztofCwalina
-ms.openlocfilehash: a521842d8c4651984d8d6667b93b0f28a1eba894
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d0a2f11b53f50f2ec2f301f7b88df65e1cd7b811
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617385"
 ---
 # <a name="static-class-design"></a>Projekt klasy statycznej
 Klasa statyczna jest zdefiniowany jako klasę, która zawiera tylko statyczne elementy członkowskie (oczywiście oprócz składowych wystąpienia dziedziczonych po elemencie <xref:System.Object?displayProperty=nameWithType> i prawdopodobnie Konstruktor prywatny). Niektóre języki zapewniają obsługę wbudowanych klas statycznych. W języku C# w wersji 2.0 i nowszych wersjach gdy klasa jest zadeklarowany jako statyczny, jest zapieczętowany, abstract, a nie składowych wystąpienia mogą zostać zastąpione lub zadeklarowana.  
@@ -39,5 +39,5 @@ Klasa statyczna jest zdefiniowany jako klasę, która zawiera tylko statyczne el
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  
+- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)
 - [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

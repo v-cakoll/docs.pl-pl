@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 762649e260817c43291de416d2f1a92a8f03afb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38cbea25c485ff517e3448c4de5245ff36fb5b21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427372"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594554"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument — Metoda
-Pobiera co metodę, która zawiera informacje dotyczące wiersza udostępnionego dokumentu.  
+Pobiera każdej metody, która ma informacje wiersza w podany dokument.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,19 +43,19 @@ HRESULT GetMethodsInDocument(
  [in] Wskaźnik do dokumentu.  
   
  `cMethod`  
- [in] A `ULONG32` wskazuje, że rozmiar `pRetVal` tablicy.  
+ [in] A `ULONG32` oznacza rozmiar `pRetVal` tablicy.  
   
  `pcMethod`  
- [out] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać metody.  
+ [out] Wskaźnik do `ULONG32` rozmiar buforu, muszą zawierać metody, która otrzymuje.  
   
  `pRetVal`  
- [out] Wskaźnik do buforu, który odbiera metody.  
+ [out] Wskaźnik do buforu, który otrzymuje te metody.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedReader2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedReader2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

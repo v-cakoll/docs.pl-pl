@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2633bfadaabf208a2b86fda83375c3a136b93b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31c18061ad5f21e26665cd0d6883b0eb26afd1d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557480"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map — Metoda
-Mapuje relacji między zestawami przy użyciu podpisów metadanych.  
+Mapuje relacji między zestawami, przy użyciu sygnatur metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,19 +41,19 @@ HRESULT Map (
  [in] Token metadanych, który reprezentuje obiekt importowany kodu.  
   
  `tkEmit`  
- [in] Token metadanych, który reprezentuje obiekt emitowany kodu.  
+ [in] Token metadanych, który reprezentuje obiekt emitowany kod.  
   
 ## <a name="remarks"></a>Uwagi  
- Token mapowane ponownie wystąpi podczas scalania, oryginalny token ma zakres w zakresie metadanych importowanych (źródło), a nowy token, ma zakres w zakresie metadanych emitowany (docelowy).  
+ Sytuacji tokenu mapowane ponownie podczas scalania, pierwotny token jest zakresem w zakresie metadanych importowanych (źródło) i obejmuje nowy token w zakresie metadanych emitowany (docelowy).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMapToken, interfejs](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMapToken, interfejs](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

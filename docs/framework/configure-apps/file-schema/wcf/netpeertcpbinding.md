@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: 5250edc5ddfc0d381227f619752a8f3826ee2a44
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 045d5649ae7f59087eacd035d7be09d0024b6fd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725665"
 ---
 # <a name="ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt;
 Definiuje powiązanie dla równorzędnego kanału określonych dla obsługi wiadomości TCP.  
@@ -100,12 +100,12 @@ Definiuje powiązanie dla równorzędnego kanału określonych dla obsługi wiad
 </configuration>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.NetPeerTcpBinding>  
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)  
- [NET elementu równorzędnego protokołu TCP](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)  
- [Sieci równorzędne](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.NetPeerTcpBinding>
+- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [NET elementu równorzędnego protokołu TCP](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)
+- [Sieci równorzędne](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

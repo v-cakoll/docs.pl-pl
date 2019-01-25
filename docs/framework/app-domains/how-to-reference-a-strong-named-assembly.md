@@ -1,5 +1,5 @@
 ---
-title: 'Porady: odwołanie do zestawu o silnej nazwie'
+title: 'Instrukcje: Odwołanie do zestawu o silnej nazwie'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18844a9e8eff574d061b044bf88bc7857ce8033e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 520bce0dbc9f3e9ade9d9fbcb1529a5433b0d87c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596075"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>Porady: odwołanie do zestawu o silnej nazwie
+# <a name="how-to-reference-a-strong-named-assembly"></a>Instrukcje: Odwołanie do zestawu o silnej nazwie
 Proces odwołania do typów lub zasoby znajdujące się zestawu z silną nazwą jest zazwyczaj niewidoczny. Istnieje możliwość odwołania w czasie kompilacji (wczesne powiązania) lub w czasie wykonywania.  
   
  Odwołanie kompilacji występuje, gdy w kompilatorze wskazujesz, że zestaw jawnie odwoływać się do innego zestawu. Gdy używasz odwołujące się do kompilacji, kompilator automatycznie pobiera klucz publiczny zestawu o silnej nazwie docelowych i umieszcza je w zestawu kompilowanego odwołanie do zestawu.  
@@ -70,5 +70,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  **SN - tp \<**  *pliku klucza publicznego* **>**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 - [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

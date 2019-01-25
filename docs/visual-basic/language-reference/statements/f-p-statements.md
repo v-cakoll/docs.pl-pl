@@ -2,12 +2,12 @@
 title: F-P — instrukcje (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cdce7ab0-c52e-4d33-a29b-bf32cdacc79f
-ms.openlocfilehash: 52c58c06c92765344c8d6872820adb8c246a45a3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 478ee051b3f8ac668d3115b69fa579c474cce85c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579267"
 ---
 # <a name="f-p-statements"></a>F-P — Instrukcje
 Poniższa tabela zawiera listę instrukcji języka Visual Basic.  
@@ -21,7 +21,7 @@ Poniższa tabela zawiera listę instrukcji języka Visual Basic.
 |[Option \<słowo kluczowe>](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)|[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)|  
 |[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|||  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje A-E](../../../visual-basic/language-reference/statements/a-e-statements.md)  
- [Instrukcje Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)  
- [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje A-E](../../../visual-basic/language-reference/statements/a-e-statements.md)
+- [Instrukcje Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)
+- [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)

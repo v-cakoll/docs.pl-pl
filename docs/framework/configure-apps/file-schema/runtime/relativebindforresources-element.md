@@ -1,5 +1,5 @@
 ---
-title: '&lt;relativebindforresources —&gt; — Element'
+title: '&lt;relativeBindForResources&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RelativeBindForResources element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1933fad8ea87351a56fcc7dd4a4fd67e890b58f5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 3aa3ca9c9d0e64b2290b503f09b83140b4d029b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534803"
 ---
-# <a name="ltrelativebindforresourcesgt-element"></a>&lt;relativebindforresources —&gt; — Element
+# <a name="ltrelativebindforresourcesgt-element"></a>&lt;relativeBindForResources&gt; Element
 Optymalizuje sondy dla zestawów satelickich.  
   
  \<Konfiguracja > Element  
 \<środowisko uruchomieniowe > Element  
-\<relativebindforresources — > Element  
+\<relativeBindForResources> Element  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -71,7 +71,7 @@ Optymalizuje sondy dla zestawów satelickich.
   
 -   Zgłaszaj <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzeń.  
   
-## <a name="see-also"></a>Zobacz też  
-- [Opakowanie i wdrażanie zasobów](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Zobacz także
+- [Opakowanie i wdrażanie zasobów](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

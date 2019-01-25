@@ -1,20 +1,20 @@
 ---
-title: '&lt;DiscoveryEndpoint&gt;'
+title: '&lt;discoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: ab00a80904cdcd2844a44c154edb2e424633427b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b3254a1c3d7fa581b4f7573d693261f5a224515d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524172"
 ---
-# <a name="ltdiscoveryendpointgt"></a>&lt;DiscoveryEndpoint&gt;
+# <a name="ltdiscoveryendpointgt"></a>&lt;discoveryEndpoint&gt;
 
 Ten element konfiguracji definiuje standardowy punkt końcowy ze stałym kontraktem odkrywania. Po dodaniu do konfiguracji usługi, określa, gdzie nasłuchiwać komunikatów odnajdywania. Po dodaniu do konfiguracji klienta określa, gdzie wysyłać zapytania odnajdywania.  
   
 \<system.serviceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,7 +52,7 @@ Brak.
 
 | Element | Opis |  
 | ------- | ----------- |  
-| [\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowane punkty końcowe z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe. |  
+| [\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | Zbiór standardowych punktów końcowych, które są wstępnie zdefiniowane punkty końcowe z jedną lub więcej z ich właściwości (adres, powiązanie, kontrakt) stałe. |  
   
 ## <a name="example"></a>Przykład
 
@@ -85,4 +85,4 @@ Konfiguracja standardowego punktu końcowego jest zdefiniowana na usługę i nie
   
 ## <a name="see-also"></a>Zobacz także
 
-<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>

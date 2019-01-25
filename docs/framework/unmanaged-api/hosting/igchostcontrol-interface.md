@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b957642606cfcd43b6a02d64450d51174eb7768
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d23a8d494c3f3e2e94bb309ab1c2141e527f2f48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696480"
 ---
 # <a name="igchostcontrol-interface"></a>IGCHostControl — Interfejs
-Udostępnia metody, która umożliwia modułu zbierającego elementy bezużyteczne na żądanie hosta, aby zmienić limit pamięci wirtualnej.  
+Dostarcza metodę, która pozwala modułowi odśmiecania żądanie hosta, aby zmienić limity pamięci wirtualnej.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[RequestVirtualMemLimit, metoda](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-requestvirtualmemlimit-method.md)|Żąda hosta, aby zmienić limit pamięci wirtualnej.|  
+|[RequestVirtualMemLimit, metoda](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-requestvirtualmemlimit-method.md)|Żąda hosta, aby zmienić limity pamięci wirtualnej.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

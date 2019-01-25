@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: 64e566fb8d0cfadc2a46d0a335ddb2799739f9f9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bcc23097a6778bb537421ba494dd94414b37f4e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646269"
 ---
 # <a name="how-to-examine-the-security-context"></a>Instrukcje: Badanie kontekstu zabezpieczeń
 Podczas programowania usług Windows Communication Foundation (WCF), Usługa kontekstu zabezpieczeń umożliwia określenie szczegółowe informacje dotyczące poświadczeń klienta i oświadczeń używany do uwierzytelniania w usłudze. Jest to wykonywane przy użyciu właściwości <xref:System.ServiceModel.ServiceSecurityContext> klasy.  
@@ -54,6 +54,6 @@ Podczas programowania usług Windows Communication Foundation (WCF), Usługa kon
   
 -   <xref:System.IdentityModel.Claims>  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md)  
- [Uwierzytelnianie i tożsamość usług](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md)
+- [Uwierzytelnianie i tożsamość usług](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

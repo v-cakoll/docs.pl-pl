@@ -2,43 +2,43 @@
 title: Literały null i wnioskowanie o typie (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 74ff2b459488f896c5ea6af4f7d1e045da5a7983
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2499579237155ff3f7291f795bd1ce9e8a84163c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529112"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Literały null i wnioskowanie o typie (jednostka SQL)
-Literały null są zgodne z dowolnego typu w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] system typów. Niemniej jednak w przypadku typ literału null do można wywnioskować poprawnie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nakłada pewne ograniczenia, na której można użyć literału null.  
+Literały null są zgodne z żadnym typem w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] system typów. Jednak w przypadku typu literałem o wartości null, aby był wywnioskowany poprawnie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nakłada pewne ograniczenia dotyczące użycia właściwość literal o wartości null.  
   
-## <a name="typed-nulls"></a>Wartości null bez typu  
- Wartości null bez typu może być używana w dowolnym. Wnioskowanie o typie nie jest wymagana dla wartości null bez typu, ponieważ jest on znany typ. Na przykład można utworzyć wartości null typu Int16 z następującymi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] utworzyć:  
+## <a name="typed-nulls"></a>Wpisane wartości null  
+ Wpisane wartości null może służyć w dowolnym miejscu. Wnioskowanie o typie nie jest wymagana dla wpisane wartości null, ponieważ typ jest znany. Na przykład można utworzyć wartości null typu Int16 następującym kodem [!INCLUDE[esql](../../../../../../includes/esql-md.md)] konstruowania:  
   
  `(cast(null as Int16))`  
   
-## <a name="free-floating-null-literals"></a>Swobodnego literałów wartości Null  
- Swobodnego literałów wartości null, mogą być używane w następujących sytuacjach:  
+## <a name="free-floating-null-literals"></a>Swobodny literały Null  
+ Swobodny literały null może służyć w następujących okolicznościach:  
   
--   Jako argument wyrażenia RZUTOWANIA lub TRAKTUJ. Jest to zalecany sposób utworzyć wyrażenie typu o wartości null.  
+-   Jako argument do RZUTOWANIA lub TRAKTUJ wyrażenia. Jest to zalecany sposób tworzenia wpisane wyrażenie o wartości null.  
   
--   Jako argument do metody lub funkcji. Mają zastosowanie standardowe przeciążenia reguły.  
+-   Jako argument do metody lub funkcji. Przeciążenie standardowe reguły mają zastosowanie.  
   
--   Jako jeden z argumentów wyrażenia arytmetyczne, takie jak +, -, lub /. Inne argumenty nie może być literałów wartości null, w przeciwnym razie wnioskowanie typu nie jest możliwe.  
+-   Jako jeden z argumentów do wyrażenia arytmetyczne, takie jak +, -, lub /. Drugi argument nie może być literały null, w przeciwnym razie wnioskowanie typu zerowalnego nie jest możliwe.  
   
--   Jako argumenty do wyrażenie logiczne (AND, OR lub nie). Wszystkie argumenty są określane jako typu Boolean.  
+-   Jako argumenty, które mają wyrażenie logiczne (AND, OR lub nie). Wszystkie argumenty są znane jako typu Boolean.  
   
--   Jako argumentu wyrażenia IS NULL i IS NOT NULL.  
+-   Jako argument wyrażenia jest wartość NULL lub nie jest równa NULL.  
   
 -   Jako co najmniej jeden z argumentów do wyrażenia LIKE. Wszystkie argumenty powinny być ciągami.  
   
--   Jako jeden lub więcej argumentów konstruktora o nazwie typu.  
+-   Jako jeden lub więcej argumentów konstruktora typu o nazwie.  
   
--   Jako jeden lub więcej argumentów konstruktora multiset —. Co najmniej jeden argument multiset — Konstruktor musi być wyrażenie, które nie jest literałem wartości null.  
+-   Jako jeden lub więcej argumentów Konstruktor multiset. Co najmniej jeden argument Pro Konstruktor multiset — musi być wyrażeniem, które nie jest literałem o wartości null.  
   
--   Co najmniej jednego wyrażenia w wyrażeniu CASE następnie możesz też. Przynajmniej jedno z wyrażeń w wyrażeniu CASE następnie możesz też musi być wyrażeniem innym niż null literału.  
+-   Ponieważ co najmniej jedno z wyrażeń w wyrażeniu CASE następnie albo też. Co najmniej jedno z wyrażeń w wyrażeniu CASE następnie albo też musi być wyrażeniem innym niż literałem o wartości null.  
   
- Swobodnego literałów wartości null nie można używać w innych scenariuszach. Na przykład nie może być używane jako argumenty konstruktora wiersza.  
+ Swobodny literały null nie można używać w innych scenariuszach. Na przykład nie mogą być używane jako argumenty konstruktorze wierszy.  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b00d08f43874518e117739d4a9502bf9463db5c1
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555183"
 ---
 # <a name="net-class-library-overview"></a>Przegląd biblioteki klas programu .NET
 
@@ -101,7 +101,7 @@ Implementacje platformy .NET zawierają klasy, interfejsy, delegaty i typów war
 |Logiczne|<xref:System.Boolean>|Wartość logiczna (true lub false).|**Boolean**|**bool**|**bool**|**bool**|  
 |Inne|<xref:System.Char>|Znak Unicode (16-bitowe).|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Wartość dziesiętna (128-bitowe).|**Decimal**|**decimal**|**Decimal**|**decimal**|  
-||<xref:System.IntPtr>|Liczba całkowita ze znakiem której rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowe) i 64-bitowych wartości na platformie 64-bitowej.|**Pola IntPtr**<br /><br /> Brak typu wbudowanego.|**Pola IntPtr**<br /><br /> Brak typu wbudowanego.|**Pola IntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint —**|  
+||<xref:System.IntPtr>|Liczba całkowita ze znakiem której rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowe) i 64-bitowych wartości na platformie 64-bitowej.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint —**|  
 ||<xref:System.UIntPtr>|Liczbą całkowitą bez znaku, którego rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowe) i 64-bitowych wartości na platformie 64-bitowej.<br /><br /> Niezgodne ze specyfikacją CLS.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint —**|  
 ||<xref:System.Object>|Katalog główny hierarchii obiektów.|**Obiekt**|**object**|**Object ^**|**obj**|  
 ||<xref:System.String>|Niezmienny, o stałej długości ciągu znaków Unicode.|**Ciąg**|**string**|**String ^**|**string**|  
@@ -112,6 +112,6 @@ Implementacje platformy .NET zawierają klasy, interfejsy, delegaty i typów war
   
 ## <a name="see-also"></a>Zobacz także
 
-- [System typu wspólnego](../../docs/standard/base-types/common-type-system.md)  
-- [Przeglądarka interfejsu API .NET](../../api/index.md)  
+- [System typu wspólnego](../../docs/standard/base-types/common-type-system.md)
+- [Przeglądarka interfejsu API .NET](../../api/index.md)
 - [Omówienie](../../docs/framework/get-started/overview.md)

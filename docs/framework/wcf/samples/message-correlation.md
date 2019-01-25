@@ -2,15 +2,15 @@
 title: Korelacja komunikatów
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: dbe4408a3f2a5de92cad1cb286b9aedd963e8440
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f60d34ba7348b75f10be326319738fd1555d42df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583194"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520662"
 ---
 # <a name="message-correlation"></a>Korelacja komunikatów
-Niniejszy przykład pokazuje, jak aplikacja usługi kolejkowania komunikatów (MSMQ) można wysłać wiadomości usługi MSMQ do usługi Windows Communication Foundation (WCF) i jak można skorelować wiadomości między nadawcą i odbiorcą aplikacji w przypadku żądań/odpowiedzi. W tym przykładzie użyto powiązania msmqIntegrationBinding. Usługa jest w tym przypadku aplikacji konsoli Self-Hosted aby możliwe było zaobserwować, że usługa, która odbiera wiadomości w kolejce. K  
+Niniejszy przykład pokazuje, jak aplikacja usługi kolejkowania komunikatów (MSMQ) można wysłać wiadomości usługi MSMQ do usługi Windows Communication Foundation (WCF) i jak można skorelować wiadomości między nadawcą i odbiorcą aplikacji w przypadku żądań/odpowiedzi. W tym przykładzie użyto powiązania msmqIntegrationBinding. Usługa jest w tym przypadku aplikacji konsoli Self-Hosted aby możliwe było zaobserwować, że usługa, która odbiera wiadomości w kolejce. k  
   
  Usługa przetwarza wiadomości odebrane od nadawcy i wysyła odpowiedź do nadawcy. Nadawca jest odpowiedzi, Odebrano żądanie, pierwotnie wysłany. `MessageID` i `CorrelationID` właściwości wiadomości są używane do korelacji komunikatów żądań i odpowiedzi.  
   
@@ -312,6 +312,6 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Usługa kolejkowania komunikatów](https://go.microsoft.com/fwlink/?LinkId=94968)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Usługa kolejkowania komunikatów](https://go.microsoft.com/fwlink/?LinkId=94968)

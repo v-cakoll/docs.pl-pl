@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33c498e8379d68287bfe4a2e781d6797fd6b4c10
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652023"
 ---
 # <a name="managed-execution-process"></a>Proces zarządzanego wykonania
 <a name="introduction"></a> Proces zarządzanego wykonania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:  
@@ -40,7 +40,7 @@ ms.locfileid: "44192596"
   
 <a name="choosing_a_compiler"></a>   
 ## <a name="choosing-a-compiler"></a>Wybieranie kompilatora  
- Aby uzyskać korzyści dostarczane przez środowisko uruchomieniowe języka wspólnego (CLR), należy użyć co najmniej jeden Kompilatory języka obiektu docelowego środowiska uruchomieniowego, takie jak Visual Basic, C#, Visual C++, F # lub jeden z wielu innych kompilatorów takie jak kompilator Eiffel, Perl lub COBOL.  
+ Aby uzyskać korzyści dostarczane przez środowisko uruchomieniowe języka wspólnego (CLR), należy użyć co najmniej jeden Kompilatory języka przeznaczone dla środowiska uruchomieniowego, takie jak Visual Basic C#, Visual C++, F#, lub jeden z wielu innych kompilatorów Eiffel, Perl lub COBOL Kompilator.  
   
  Ponieważ środowisko wykonywania wielu języków, środowisko uruchomieniowe obsługuje wiele typów danych i funkcji języka. Kompilator języka, którego używasz, określa funkcji środowiska uruchomieniowego, które są dostępne i projektowania kodu przy użyciu tych funkcji. Kompilator nie środowiska uruchomieniowego, ustanawia składnię, z której należy użyć kodu. Jeśli składnik musi być całkowicie może być używany przez składników napisanych w innych językach, typów eksportowanych danego składnika musi ujawniać tylko funkcje języka, które są objęte [niezależność od języka i składniki niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md) (CLS). Możesz użyć <xref:System.CLSCompliantAttribute> atrybutu, aby upewnić się, że Twój kod jest zgodny ze specyfikacją CLS. Aby uzyskać więcej informacji, zobacz [niezależność od języka i składniki niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md).  
   
@@ -109,12 +109,12 @@ ms.locfileid: "44192596"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie](../../docs/framework/get-started/overview.md)  
-- [Niezależność od języka i składniki niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md)  
-- [Składniki samoopisujące się i metadane](../../docs/standard/metadata-and-self-describing-components.md)  
-- [Ilasm.exe (asembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
-- [Zabezpieczenia](../../docs/standard/security/index.md)  
-- [Współdziałanie z kodem niezarządzanym](../../docs/framework/interop/index.md)  
-- [Wdrażanie](../../docs/framework/deployment/net-framework-applications.md)  
-- [Zestawy w środowisku uruchomieniowym CLR](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Omówienie](../../docs/framework/get-started/overview.md)
+- [Niezależność od języka i składniki niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md)
+- [Składniki samoopisujące się i metadane](../../docs/standard/metadata-and-self-describing-components.md)
+- [Ilasm.exe (asembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Zabezpieczenia](../../docs/standard/security/index.md)
+- [Współdziałanie z kodem niezarządzanym](../../docs/framework/interop/index.md)
+- [Wdrażanie](../../docs/framework/deployment/net-framework-applications.md)
+- [Zestawy w środowisku uruchomieniowym CLR](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Domeny aplikacji](../../docs/framework/app-domains/application-domains.md)

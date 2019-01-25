@@ -1,21 +1,21 @@
 ---
-title: 'Porady: ładowanie XML z pliku (Visual Basic)'
+title: 'Instrukcje: Ładowanie kodu XML z pliku (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-ms.openlocfilehash: fce4ebee075f5e622de17bd5227dd6e4ae9cccd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ca19868629c89c10a8aca8f88860115a9efe7bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494668"
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a>Porady: ładowanie XML z pliku (Visual Basic)
-W tym temacie przedstawiono sposób ładowanie XML z identyfikatora URI przy użyciu <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> metody.  
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a>Instrukcje: Ładowanie kodu XML z pliku (Visual Basic)
+W tym temacie pokazano, jak załadować XML z identyfikatora URI przy użyciu <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> metody.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób ładowania dokumentu XML z pliku. W poniższym przykładzie ładuje books.xml i wyprowadza drzewa XML do konsoli.  
+ Poniższy przykład przedstawia sposób ładowania dokumentu XML z pliku. Poniższy przykład załaduje books.xml i generuje drzewa XML do konsoli.  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: książek (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Książki (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim booksFromFile As XElement = XElement.Load("books.xml")  
@@ -48,5 +48,5 @@ Console.WriteLine(booksFromFile)
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Analiza kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Analizowanie kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

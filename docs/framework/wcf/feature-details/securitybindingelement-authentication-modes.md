@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: 2b1601bd84e92b5a39c5c4c91fdfe67537720430
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b09b50d2db277d6aec325fb9305890f8e5be581c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658903"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Tryby uwierzytelniania elementu SecurityBindingElement
 Windows Communication Foundation (WCF) udostępnia kilka tryby, według których klientów i usług uwierzytelniania ze sobą. Możesz utworzyć zabezpieczeń elementy powiązania dla tych trybów uwierzytelniania przy użyciu metody statycznej na <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy lub przy użyciu konfiguracji. W tym temacie krótko opisano tryby uwierzytelniania 18.  
   
- Przykład użycia elementu jeden z trybów uwierzytelniania, zobacz [porady: Tworzenie elementu SecurityBindingElement dla trybu uwierzytelniania określone](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ Przykład użycia elementu jeden z trybów uwierzytelniania, zobacz [jak: Tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="basic-configuration-programming"></a>Konfiguracja podstawowa programowania  
  Poniższa procedura opisuje sposób ustawiania trybu uwierzytelniania w pliku konfiguracji.  
@@ -120,6 +120,6 @@ Windows Communication Foundation (WCF) udostępnia kilka tryby, według których
 ### <a name="usernameovertransport"></a>UserNameOverTransport  
  W tym trybie uwierzytelniania klient uwierzytelnia za pomocą Token nazwy użytkownika, który pojawia się w warstwie SOAP jako podpisany token pomocniczy; oznacza to, że token, który został podpisany przez podpisu wiadomości. Usługa jest uwierzytelniany przy użyciu certyfikatu X.509 w warstwie transportowej. Elementu powiązania zabezpieczeń jest `TransportSecurityBindingElement` zwrócone przez <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A> metody. Alternatywnie, ustawić `authenticationMode` atrybutu `UserNameOverTransport`.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- [Instrukcje: tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- [Instrukcje: Tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

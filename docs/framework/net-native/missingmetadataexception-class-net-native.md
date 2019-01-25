@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f68304b06c502672ae1aac9693a966ea546ee4dd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c0b882500b41080bc5998232b5afbce9d13157b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641556"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>Klasa MissingMetadataException (architektura .NET Native)
 **Platforma .NET dla aplikacji Windows dla systemu Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] tylko**  
@@ -81,9 +81,9 @@ ms.locfileid: "53148338"
   
  `MissingMetadataException` Klasy nie zawiera unikatowych elementów członkowskich; wszystkie jego elementy członkowskie są dziedziczone od swojej klasy bazowej <xref:System.TypeAccessException>.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Exception?displayProperty=nameWithType>  
- <xref:System.TypeAccessException>  
- [Klasa MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  
- [Klasa MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)  
- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Exception?displayProperty=nameWithType>
+- <xref:System.TypeAccessException>
+- [Klasa MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
+- [Klasa MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
+- [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

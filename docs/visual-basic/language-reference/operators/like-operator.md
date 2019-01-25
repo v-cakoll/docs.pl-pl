@@ -22,12 +22,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: c5b26bd1d3ebae5136718833c124e3c6e575e9b7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b1621131b3f5e4669eb637c054be1548597cf252
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703266"
 ---
 # <a name="like-operator-visual-basic"></a>Like — Operator (Visual Basic)
 Porównuje ciąg do wzorca.  
@@ -40,13 +40,13 @@ result = string Like pattern
   
 ## <a name="parts"></a>Części  
  `result`  
- Wymagane. Wszelkie `Boolean` zmiennej. Wynik jest `Boolean` wartość wskazującą czy `string` spełnia `pattern`.  
+ Wymagana. Wszelkie `Boolean` zmiennej. Wynik jest `Boolean` wartość wskazującą czy `string` spełnia `pattern`.  
   
  `string`  
- Wymagane. Wszelkie `String` wyrażenia.  
+ Wymagana. Wszelkie `String` wyrażenia.  
   
  `pattern`  
- Wymagane. Wszelkie `String` wyrażeń zgodnych z konwencjami dopasowania do wzorca opisanego w "Uwagi".  
+ Wymagana. Wszelkie `String` wyrażeń zgodnych z konwencjami dopasowania do wzorca opisanego w "Uwagi".  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli wartość w `string` spełnia wzorzec zawarte w `pattern`, `result` jest `True`. Jeśli ciąg nie spełnia wzorzec, `result` jest `False`. Jeśli oba `string` i `pattern` są puste ciągi, wynik jest `True`.  
@@ -73,14 +73,14 @@ result = string Like pattern
 ## <a name="special-characters"></a>Znaki specjalne  
  Aby dopasować lewy nawias znaków specjalnych (`[`), znaku zapytania (`?`), krzyżyk (`#`), a gwiazdka (`*`), Otaczaj ich nawiasami kwadratowymi. Prawy nawias kwadratowy (`]`) nie można użyć w obrębie grupy do dopasowania, ale mogą być używane na zewnątrz grupy jako pojedynczy znak.  
   
- Sekwencja znaków `[]` jest traktowana jako ciąg o zerowej długości (`""`). Jednak nie może być częścią listy znaków, ujęte w nawiasy kwadratowe. Jeśli chcesz sprawdzić, czy pozycja w `string` zawiera jeden grupy znaków lub żaden znak w ogóle, można użyć `Like` dwa razy. Aby uzyskać przykład, zobacz [porady: dopasowywanie ciągu do wzorca](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ Sekwencja znaków `[]` jest traktowana jako ciąg o zerowej długości (`""`). Jednak nie może być częścią listy znaków, ujęte w nawiasy kwadratowe. Jeśli chcesz sprawdzić, czy pozycja w `string` zawiera jeden grupy znaków lub żaden znak w ogóle, można użyć `Like` dwa razy. Aby uzyskać przykład, zobacz [jak: Dopasowanie ciągu do wzorca](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
 ## <a name="character-ranges"></a>Zakres znaków  
  Za pomocą łącznika (`–`) do oddzielenia dolną i górną granicą zakresu, `charlist` można określić zakres znaków. Na przykład `[A–Z]` skutkuje dopasowania, jeśli znak odpowiedniej pozycji w `string` zawierającej dowolny znak w zakresie `A`—`Z`, i `[!H–L]` skutkuje dopasowania, jeśli pozycji odpowiedniego znaku zawierającej dowolny znak spoza zakresu `H`—`L`.  
   
  Po określeniu zakresu znaków, musi znajdować się w kolejności rosnącej, oznacza to, z od najmniejszych do największych. W związku z tym `[A–Z]` jest prawidłowy wzorzec, ale `[Z–A]` nie jest.  
   
-### <a name="multiple-character-ranges"></a>Wiele zakresów znaków  
+### <a name="multiple-character-ranges"></a>Multiple Character Ranges  
  Aby określić wiele zakresów dla tej samej pozycji znaku, umieść je w ramach tej samej nawiasów bez ograniczników. Na przykład `[A–CX–Z]` skutkuje dopasowania, jeśli znak odpowiedniej pozycji w `string` zawierającej dowolny znak w zakresie albo `A`—`C` lub zakres `X`—`Z`.  
   
 ### <a name="usage-of-the-hyphen"></a>Użycie łącznika  
@@ -102,12 +102,12 @@ result = string Like pattern
   
  [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Option Compare, instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Instrukcje: dopasowywanie ciągu do wzorca](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:Microsoft.VisualBasic.Strings.InStr%2A>
+- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
+- [Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Option Compare, instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Instrukcje: Dopasowanie ciągu do wzorca](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

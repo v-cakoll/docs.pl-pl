@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: b5699535553629fb22e4e5789538fd9d598c9f88
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d834cfaf566868d7fee280b613a6ef15dc7f0b1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576918"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Przetwarzanie pliku XML (Przewodnik programowania w języku C#)
 Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. (Aby dowiedzieć się, jak oznaczyć swój kod, zobacz [tagi zalecane dla komentarzy do dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Ciąg Identyfikatora jednoznacznie identyfikuje konstrukcja. Programy, które przetwarzają pliku XML można umożliwia zidentyfikowanie odpowiadający element metadanych/odbicie .NET Framework dokumentacja dotyczy ciąg Identyfikatora.  
@@ -66,7 +66,7 @@ Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, któ
   
     -   Zwracany typ  
   
-    -   ELEMENT ELEMENT_TYPE_SENTINEL  
+    -   ELEMENT_TYPE_SENTINEL  
   
 -   Konwersja operatory tylko (op_implicit — i op_explicit —), zwracana wartość metody jest zakodowane jako "~" następuje typ zwracany jako kodowaniem powyżej.  
   
@@ -81,8 +81,8 @@ Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, któ
   
  [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [/ doc (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [/ doc (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
 - [Komentarze dokumentacji XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

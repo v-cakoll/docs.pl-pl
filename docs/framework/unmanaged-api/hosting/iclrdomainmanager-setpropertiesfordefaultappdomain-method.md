@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18db77b42af47b76bf1b3b66748d586c4c41dbd7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f107847ddd48805f4779ff94c4e436a176688030
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699028"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain — Metoda
-Ustawia właściwości, które będą używane do inicjowania domyślnej domeny aplikacji.  
+Ustawia właściwości, które będą używane do zainicjowania domyślnej domeny aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +40,31 @@ HRESULT SetPropertiesForDefaultAppDomain(
  [in] Liczba wpisów w `pwszPropertyNames` i `pwszPropertyValues`.  
   
  `pwszPropertyNames`  
- [in] Tablica nazw właściwości, lub wartość null, jeśli nie ma żadnych właściwości. Obecnie nazwę tylko właściwości, która jest rozpoznawana przez tę metodę jest "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".  
+ [in] Tablica nazw właściwości lub wartość null, jeśli nie ma żadnych właściwości. Obecnie nazwa tylko właściwości, który jest rozpoznawany przez tę metodę jest "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".  
   
  `pwszPropertyValues`  
  [in] Tablica wartości właściwości lub wartość null, jeśli nie ma żadnych właściwości.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` zawiera nazwę właściwości, która nie jest rozpoznawana przez tę metodę.|  
+|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` zawiera nazwę właściwości, który nie jest rozpoznawany przez tę metodę.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość właściwości "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" znajduje się lista zestawów, które mają warunkowe <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybut (APTCA) z <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> flagi, które mają być widoczne dla częściowo zaufanego kodu wywołującego w domyślnej aplikacji domeny.  
+ Wartość właściwości "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" znajduje się lista zestawów, które mają warunkową <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu (APTCA) z <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> flagi, które mają być widoczne dla częściowo zaufanego kodu wywołującego w domyślnej aplikacji w domenie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MetaHost.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [ICLRDomainManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRDomainManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)

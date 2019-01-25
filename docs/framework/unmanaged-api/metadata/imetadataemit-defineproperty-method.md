@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c250a577f2ccdbbfefb35225b880c0e4317db36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71cdfc6b05288fef020e1aed1870a9a155588d47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543084"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty — Metoda
-Utworzenie definicji właściwości dla określonego typu z określonym `get` i `set` akcesorów — metoda i pobiera token do tej definicji właściwości.  
+Utworzenie definicji właściwości dla określonego typu z określonego `get` i `set` metod dostępu do metody, a następnie pobiera token do tej definicji właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,7 +48,7 @@ HRESULT DefineProperty (
   
 #### <a name="parameters"></a>Parametry  
  `td`  
- [in] Token dla klasy lub interfejsu, na którym jest zdefiniowana właściwość.  
+ [in] Token dla klasy lub interfejsu, w którym właściwość jest zdefiniowana.  
   
  `szProperty`  
  [in] Nazwa właściwości.  
@@ -66,32 +66,32 @@ HRESULT DefineProperty (
  [in] Typ wartości domyślnej właściwości.  
   
  `pValue`  
- [in] Wartość domyślna właściwości.  
+ [in] Wartość domyślna dla właściwości.  
   
  `cchValue`  
- [in] Liczba (Unicode) znaków `pValue`.  
+ [in] Liczba (Unicode) znaki w `pValue`.  
   
  `mdSetter`  
  [in] Metoda, która ustawia wartości właściwości.  
   
  `mdGetter`  
- [in] Metoda, która pobiera wartości właściwości.  
+ [in] Metoda, która pobiera wartość właściwości.  
   
  `rmdOtherMethods[]`  
- [in] Tablica innych metod skojarzony z właściwością. Przerwanie tablicy o `mdTokenNil`.  
+ [in] Tablica innych metod skojarzony z właściwością. Zakończenie tablicy przy użyciu `mdTokenNil`.  
   
  `pmdProp`  
  [out] `mdProperty` Token przypisany.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

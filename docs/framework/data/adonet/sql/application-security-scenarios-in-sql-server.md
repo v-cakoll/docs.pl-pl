@@ -2,12 +2,12 @@
 title: Scenariusze zabezpieczeń aplikacji w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 42afe27c11eadff935e162128b3d5f18c1cba8a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687456"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Scenariusze zabezpieczeń aplikacji w programie SQL Server
 Nie ma żadnych pojedynczy prawidłowy sposób do tworzenia bezpiecznych aplikacji klienckiej programu SQL Server. Każda aplikacja jest unikatowa w jej wymagań, wdrożenia środowiska i populacji użytkowników. Aplikacja, która jest względnie bezpieczne, po początkowym wdrożeniu mogą stać się mniej bezpieczna opcja wraz z upływem czasu. Nie jest możliwe do przewidzenia o dowolnym dokładności, jakie zagrożenia mogą pojawić się w przyszłości.  
@@ -56,8 +56,8 @@ Nie ma żadnych pojedynczy prawidłowy sposób do tworzenia bezpiecznych aplikac
  [Włączanie dostępu między bazami danych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  Opisuje sposób włączania dostępu między bazami danych bez narażenia zabezpieczeń.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczenia serwera SQL](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Przegląd zabezpieczeń serwera SQL](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczenia serwera SQL](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Przegląd zabezpieczeń serwera SQL](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

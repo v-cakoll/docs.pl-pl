@@ -2,12 +2,12 @@
 title: LINQ to XML — Przegląd (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 5e005343226b47fb843b817747ca03c49c28dbfc
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: ec09984486710f29417615499e7b1c565b51b932
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43856624"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502211"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML — Przegląd (C#)
 XML ma powszechnie zaakceptowany jako sposób na formatowanie danych w wielu kontekstach. Na przykład możesz znaleźć XML w sieci Web, w plikach konfiguracji, pliki programu Microsoft Office Word i baz danych.  
@@ -22,13 +22,13 @@ XML ma powszechnie zaakceptowany jako sposób na formatowanie danych w wielu kon
 ## <a name="what-is-linq-to-xml"></a>Co to jest LINQ to XML?  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to włączone LINQ, wewnątrzpamięciowe XML programowania interfejs, który umożliwia pracę z danymi XML, z poziomu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] języków programowania.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest jak modelu DOM (Document Object) zapewnia dokumentu XML do pamięci. Można wykonywać zapytania i modyfikować dokument, a po jego modyfikacji można zapisać w pliku lub serializować go i wysyłać je przez Internet. Jednak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] różni się od modelu DOM: zapewnia nowy model obiektu, który jest mniejsza waga i łatwiej pracować z, i który korzysta z funkcji języka C#.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest jak modelu DOM (Document Object) zapewnia dokumentu XML do pamięci. Można wykonywać zapytania i modyfikować dokument, a po jego modyfikacji można zapisać w pliku lub serializować go i wysyłać je przez Internet. Jednak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] różni się od modelu DOM: Zapewnia nowy model obiektu, który jest mniejsza waga i łatwiej pracować z, i który korzysta z funkcji języka w C#.  
   
  Najważniejszą zaletą [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest integracji z [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Ta integracja umożliwia pisanie zapytań dotyczących dokumentu XML w pamięci, aby pobierać kolekcje elementów i atrybutów. Możliwości zapytania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] można porównywać pod względem funkcji (ale nie w składni) XPath i XQuery. Integracja [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] w języku C# zapewnia lepsze Pisownia, kompilacji sprawdzenie i ulepszona obsługa debugera.  
   
  Inną zaletą [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest możliwość używania wyników zapytania jako parametry <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XAttribute> konstruktorach obiektów umożliwia wydajne podejście do tworzenia drzew XML. Takie podejście, nazywane *konstrukcja funkcjonalna*, umożliwia deweloperom łatwe Przekształcanie drzew XML z jednego kształtu do innego.  
   
- Na przykład, Niewykluczone, że typowy XML, zamówienie zakupu, zgodnie z opisem w [przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md). Za pomocą [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], można uruchomić następujące zapytanie, aby uzyskać część wartości atrybutu numeru dla każdego elementu w porządku zakupu:  
+ Na przykład, Niewykluczone, że typowy XML, zamówienie zakupu, zgodnie z opisem w [przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md). Za pomocą [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], można uruchomić następujące zapytanie, aby uzyskać część wartości atrybutu numeru dla każdego elementu w porządku zakupu:  
   
 ```csharp
 // Load the XML file from our project directory containing the purchase orders
@@ -111,7 +111,7 @@ new XElement("Contacts",
   
  Aby uzyskać więcej informacji, zobacz [tworzenie drzew XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Xml.Linq>  
+- <xref:System.Xml.Linq>
 - [Wprowadzenie (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

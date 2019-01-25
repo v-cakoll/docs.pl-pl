@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - BC36563
 ms.assetid: 3ca8b873-e98d-419b-95f2-d75bd2a9eb6c
-ms.openlocfilehash: 8bc636655ad12b2fa384fad19cbdc28037e52afc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 761c863ea55f99a19c9a7ebbd0cb1dd17237b25e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532061"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>Metoda nie ma podpisu zgodnego z obiektem delegowanym
-Brak występuje niezgodność między sygnatury metody i delegata, którego chcesz użyć. `Delegate` Instrukcji definiuje typy parametrów i zwracanych typów klasa delegata. Procedura, którego pasujące zgodne typy parametrów i zwraca typów może zostać użyty do utworzenia wystąpienia tego typu obiektu delegowanego.  
+Występuje niezgodność między sygnatury metody i delegata, który próbujesz użyć. `Delegate` Instrukcja definiuje typy parametrów i zwracane typy klasy delegata. Każda procedura ma pasujących parametrów zgodnych typów i zwracanych typów może służyć do tworzenia wystąpienia tego typu delegata.  
   
  **Identyfikator błędu**: BC36563  
   
-## <a name="see-also"></a>Zobacz też  
- [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Delegate, instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Rozpoznanie przeciążenia](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)  
- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+## <a name="see-also"></a>Zobacz także
+- [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Delegate, instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Rozpoznanie przeciążenia](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
+- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

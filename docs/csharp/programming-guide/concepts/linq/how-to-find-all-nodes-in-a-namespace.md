@@ -1,15 +1,15 @@
 ---
-title: 'Porady: wyszukiwanie węzłów w Namespace (C#)'
+title: 'Instrukcje: Znajdź wszystkie węzły w Namespace (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3d9a2780a5241bdc535938cb182441418346755f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524653"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Porady: wyszukiwanie węzłów w Namespace (C#)
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Instrukcje: Znajdź wszystkie węzły w Namespace (C#)
 Można filtrować według przestrzeni nazw każdego elementu lub atrybutu, aby znaleźć wszystkie węzły w tej określonej przestrzeni nazw.  
   
 ## <a name="example"></a>Przykład  
@@ -46,7 +46,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Przykład  
  Plik XML, uzyskują następujące zapytanie zawiera zamówienia zakupu w dwóch różnych obszarach nazw. Zapytanie tworzy nowego drzewa za pomocą tylko elementy w jednym z przestrzeni nazw.  
   
- W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: skonsolidowane zamówienia zakupu](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Skonsolidowane zamówienia zakupu](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -95,6 +95,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Podstawowe zapytania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

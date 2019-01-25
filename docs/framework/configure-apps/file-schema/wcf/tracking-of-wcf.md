@@ -2,12 +2,12 @@
 title: '&lt;tracking&gt; w WCF'
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: 7162d66917660a8730f851811643723cd398147c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 52efc1b5284c2a64eae30ea18995e5ee761dc2e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582607"
 ---
 # <a name="lttrackinggt-of-wcf"></a>&lt;tracking&gt; w WCF
 Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usługi przepływu pracy.  
@@ -97,6 +97,6 @@ Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usłu
 ## <a name="remarks"></a>Uwagi  
  Śledzenie umożliwia należy sprawdzić, czy wykonywania przepływu pracy. Infrastruktura śledzenia przepływu pracy instruments przepływu pracy, aby emitować rekordów odzwierciedlający kluczy zdarzeń podczas wykonywania. Na przykład gdy wystąpienie przepływu pracy rozpoczyna się lub kończy są emitowane rekordów śledzenia. Śledzenie również można wyodrębnić business odpowiednie dane skojarzone z zmienne przepływu pracy. Na przykład jeśli przepływ pracy reprezentuje kolejność przetwarzania systemu identyfikator zamówienia wyodrębniania wraz z rekordem śledzenia. Ogólnie rzecz biorąc włączania WF śledzenia umożliwia wykonywanie operacji diagnostyki lub analiz biznesowych za wykonywanie przepływu pracy.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>       
- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
+- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

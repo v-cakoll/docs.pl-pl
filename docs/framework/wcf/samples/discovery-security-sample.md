@@ -2,12 +2,12 @@
 title: Zabezpieczenia odnajdywania — przykład
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 9435afa7324ad9e0f2bf994b2f3ed5e54e5e2e7e
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5a3b3ec42086eb39bffb71df2a0d6d46270a8f1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680338"
 ---
 # <a name="discovery-security-sample"></a>Zabezpieczenia odnajdywania — przykład
 Specyfikacja odnajdywania nie jest wymagane, czy punkty końcowe, które uczestniczą w procesie odnajdowania, można zabezpieczyć. Udoskonalanie komunikaty odnajdywania Dzięki zabezpieczeniom zmniejsza różne rodzaje ataków (komunikat zmiany, odmowa usługi, oparte na metodzie powtórzeń, fałszowanie adresów). W tym przykładzie implementuje niestandardowe kanały, które obliczeń i sprawdzanie podpisów komunikat w formacie compact podpisu (opisanej w sekcji 8.2 specyfikacji WS-Discovery). Przykład obsługuje zarówno [specyfikacji odnajdywania 2005](https://go.microsoft.com/fwlink/?LinkId=177912) i [wersji 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -75,4 +75,4 @@ Specyfikacja odnajdywania nie jest wymagane, czy punkty końcowe, które uczestn
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

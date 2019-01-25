@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c11de99359701bb6c3198a0b1dc18ba4318c8bc1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5e4e2a817abff7b0cf24223b7f245fc6f86c1d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544994"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize — Funkcja
-Zwraca rozmiar podpisu silnej nazwy. `StrongNameSignatureSize` Aby określić, ile miejsce zarezerwowane w pliku podczas tworzenia zestawu podpisywany z opóźnieniem zwykle jest używana przez kompilatory.  
+Zwraca rozmiar podpisu silnej nazwy. `StrongNameSignatureSize` Aby określić, ile miejsca do zarezerwowania w pliku, podczas tworzenia zestawu podpisanego z opóźnieniem zwykle jest używana przez kompilatory.  
   
- Ta funkcja jest przestarzała. Użyj [ICLRStrongName::StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) metody zamiast tego.  
+ Ta funkcja jest przestarzała. Użyj [iclrstrongname::strongnamesignaturesize —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) metody zamiast tego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,29 +40,29 @@ BOOLEAN StrongNameSignatureSize (
   
 #### <a name="parameters"></a>Parametry  
  `pbPublicKeyBlob`  
- [in] Struktura typu [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) zawiera część publiczną pary kluczy używanego do generowania podpisu silnej nazwy.  
+ [in] Struktury typu [publickeyblob —](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) zawierający publiczną część pary kluczy używanego do generowania podpisu silnej nazwy.  
   
  `cbPublicKeyBlob`  
  [in] Rozmiar w bajtach z `pbPublicKeyBlob`.  
   
  `pcbSize`  
- [in] Liczba bajtów wymaganą do przechowywania podpisu silnej nazwy.  
+ [in] Liczba bajtów potrzebnych do przechowania podpisu silnej nazwy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Po pomyślnym ukończeniu; w przeciwnym razie `false`.  
+ `true` Po pomyślnym zakończeniu; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `StrongNameSignatureSize` funkcji nie powiodło się, wywołania [strongnameerrorinfo —](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funkcji, aby pobrać ostatniego wygenerowany błąd.  
+ Jeśli `StrongNameSignatureSize` funkcja nie jest ukończone pomyślnie, wywołaj [strongnameerrorinfo —](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funkcję, aby pobrać ostatni błąd wygenerowany.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** StrongName.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [StrongNameSignatureSize, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)  
- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [StrongNameSignatureSize, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)
+- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: programowane pisanie usług'
+title: 'Instrukcje: Programowane pisanie usług'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: 904a82a3cc725221defb6795bf813b8cbc490c41
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 70a2c184e7b39af7b4f0466ac9ac627cff98f0c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672915"
 ---
-# <a name="how-to-write-services-programmatically"></a>Porady: programowane pisanie usług
+# <a name="how-to-write-services-programmatically"></a>Instrukcje: Programowane pisanie usług
 Jeśli nie chcesz użyć szablonu projektu usługi Windows, można napisać własne usługi, ustawiając dziedziczenia i inne elementy infrastruktury. Programowo utworzyć usługę, należy wykonać kilka kroków, które szablon w przeciwnym razie będzie obsługiwać dla Ciebie:  
   
 -   Należy zdefiniować klasie usługi, aby odziedziczyć po <xref:System.ServiceProcess.ServiceBase> klasy.  
@@ -59,20 +59,20 @@ Jeśli nie chcesz użyć szablonu projektu usługi Windows, można napisać wła
   
 6.  Zastąpienie wszelkich innych metod, które użytkownik chce zdefiniować niestandardowe przetwarzanie i pisanie kodu w celu ustalenia, jakie działania, które usługa należy wykonać w każdym przypadku.  
   
-7.  Dodanie niezbędnych instalatorów dla aplikacji usługi. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie instalatorów do aplikacji usługi](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+7.  Dodanie niezbędnych instalatorów dla aplikacji usługi. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 8.  Kompilowanie projektu przez wybranie **Kompiluj rozwiązanie** z **kompilacji** menu.  
   
     > [!NOTE]
     >  Nie wciskaj F5, aby uruchomić projekt — nie można uruchomić projektu usługi w ten sposób.  
   
-9. Tworzenie projektu Instalatora i akcje niestandardowe, aby zainstalować usługę. Aby uzyskać przykład, zobacz [wskazówki: tworzenie aplikacji usługi Windows w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
+9. Tworzenie projektu Instalatora i akcje niestandardowe, aby zainstalować usługę. Aby uzyskać przykład, zobacz [instruktażu: Tworzenie Windows usługi aplikacji w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   
-10. Zainstaluj usługę. Aby uzyskać więcej informacji, zobacz [porady: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+10. Zainstaluj usługę. Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Instrukcje: tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Instrukcje: dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Instrukcje: rejestrowanie informacji o usługach](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [Przewodnik: tworzenie aplikacji usługowej systemu Windows w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Instrukcje: Tworzenie usług Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Instrukcje: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Instrukcje: Dziennik informacji o usługach](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
+- [Przewodnik: Tworzenie aplikacji usługi Windows w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

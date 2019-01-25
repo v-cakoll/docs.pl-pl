@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 70e1028042807eb77fc74b30174e1962bc00f4c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c9787d52667dc026d3fe62ac7f4b3de7e838a93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519791"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte — typ danych (Visual Basic)
 Przechowuje 8-bitowa (1-bajtowe) liczb całkowitych bez znaku z zakresu wartości z zakresu od 0 do 255.
@@ -64,10 +64,10 @@ Dim number As Byte = &H_6A
 
 [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
- <xref:System.Byte?displayProperty=nameWithType>  
- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

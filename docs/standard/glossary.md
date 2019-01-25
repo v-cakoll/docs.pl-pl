@@ -3,14 +3,14 @@ title: Słownik platformy .NET
 description: Dowiedz się, znaczenie wybranych terminów używanych w dokumentacji platformy .NET.
 author: tdykstra
 ms.author: tdykstra
-ms.date: 07/08/2017
+ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 3c478083a2bfde1742b114a8254bf07dff01f869
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: b9654bf7f6cbc1019d00db986ba883cbab0abbb5
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664671"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857982"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 
@@ -21,6 +21,8 @@ Podstawowym celem tego słownika jest wyjaśnić znaczenie wybranych terminów i
 Kompilator Ahead of time.
 
 Podobnie jak [JIT](#jit), to kompilator tłumaczy także [IL](#il) do kodu maszynowego. W przeciwieństwie do kompilacji JIT kompilacja AOT odbywa się przed aplikacji jest wykonywany i zwykle odbywa się na innym komputerze. Ponieważ łańcuchy narzędzi kompilacji AOT nie kompilacji w czasie wykonywania, nie muszą oni zminimalizować czas kompilacji. Oznacza to, że mogą poświęcać więcej optymalizacji czasu. Ponieważ kontekst AOT całej aplikacji, kompilator AOT wykonuje również połączeń między modułami i analizy całego programu, co oznacza, że wszystkie odwołania zostaną wykonane prawidłowo, a pojedynczy plik wykonywalny jest generowany.
+
+Zobacz [CoreRT](#corert) i [architektura .NET Native](#net-native).
 
 ## <a name="aspnet"></a>ASP.NET 
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: 54fd823594fba4500f35ed1d69720a3309e54a36
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f1ef0f166908cce3f6c6e39819561a7ec3756a7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666775"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595750"
 ---
 # <a name="contextmenu-overview"></a>ContextMenu — Przegląd
 <xref:System.Windows.Controls.ContextMenu> Klasa reprezentuje element, który udostępnia funkcje przy użyciu określonego kontekstu <xref:System.Windows.Controls.Menu>. Zazwyczaj użytkownik udostępnia <xref:System.Windows.Controls.ContextMenu> w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] klikając prawym przyciskiem myszy przycisk myszy. W tym temacie przedstawiono <xref:System.Windows.Controls.ContextMenu> elementu oraz przykłady sposobu używania go w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i kod.  
@@ -62,11 +62,11 @@ ms.locfileid: "45666775"
 </Style>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Controls.ContextMenu>  
- <xref:System.Windows.Style>  
- <xref:System.Windows.Controls.Menu>  
- <xref:System.Windows.Controls.MenuItem>  
- [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)  
- [ContextMenu — style i szablony](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Style>
+- <xref:System.Windows.Controls.Menu>
+- <xref:System.Windows.Controls.MenuItem>
+- [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)
+- [ContextMenu — style i szablony](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)
+- [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

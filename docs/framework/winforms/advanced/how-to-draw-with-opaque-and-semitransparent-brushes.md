@@ -1,5 +1,5 @@
 ---
-title: 'Porady: rysowanie za pomocą nieprzezroczystych i półprzezroczystych pędzli'
+title: 'Instrukcje: Rysowanie za pomocą nieprzezroczystych i półprzezroczystych pędzli'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], brush
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
-ms.openlocfilehash: 91aa3e89e2ff6d20432dbc5e988f2877059b4cdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 922cf6f9fd506e6095d87c3e0ee9eff85f920eba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586972"
 ---
-# <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Porady: rysowanie za pomocą nieprzezroczystych i półprzezroczystych pędzli
-Podczas wypełnienia kształtu, należy przekazać <xref:System.Drawing.Brush> obiektu do jednej z metod wypełnienia <xref:System.Drawing.Graphics> klasy. Jeden parametr <xref:System.Drawing.SolidBrush.%23ctor%2A> Konstruktor jest <xref:System.Drawing.Color> obiektu. Aby wypełnić kształt nieprzezroczyste, należy ustawić składnika alfa koloru do 255. Aby wypełnić półprzezroczystych kształtu, należy ustawić składnika alfa na wartość od 1 do 254.  
+# <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Instrukcje: Rysowanie za pomocą nieprzezroczystych i półprzezroczystych pędzli
+Po wypełnieniu kształtu, należy przekazać <xref:System.Drawing.Brush> obiektu do jednej z metod wypełnienia <xref:System.Drawing.Graphics> klasy. Jeden parametr <xref:System.Drawing.SolidBrush.%23ctor%2A> Konstruktor jest <xref:System.Drawing.Color> obiektu. Do wypełnienia kształtu nieprzezroczysty, ustaw składnik alfa koloru do 255. Aby wypełnić półprzezroczystych kształtu, ustaw składnik alfa dowolną wartość od 1 do 254.  
   
- Po wypełnieniu półprzezroczystych kształtu kolor kształtu mieszania kolorów tła. Składnik alfa określa, jak kolory tła i kształtu mieszane; wartości alfa niemal 0 umieść ważniejsze na kolory tła i wartości alfa niemal 255 umieść ważniejsze na kolor kształtu.  
+ Po wypełnieniu półprzezroczystych kształt, kolor kształtu jest zmieszana przy użyciu kolorów tła. Składnik alfa określa, jak są zmieszane kształt i kolor tła; wartości alfa niemal 0 ważniejsze na kolory tła i wartości alfa niemal 255 umieścić więcej wagi na kolor kształtu.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie map bitowych rysuje i następnie wypełnia wielokropek trzech, które nakładają się na mapy bitowej. Pierwszy elipsy używa składnika alfa 255, tak aby zawierała nieprzezroczyste. Wielokropek drugiego i trzeciego Użyj składnika alfa 128, dzięki czemu są one półprzezroczystych; obraz tła za pośrednictwem wielokropek jest widoczny. Wywołanie, która ustawia <xref:System.Drawing.Graphics.CompositingQuality%2A> właściwość powodująca usunięcie mieszania trzeci elipsy w połączeniu z korekcja gamma.  
+ Poniższy przykład pobiera mapę bitową i następnie wypełnia trzy wielokropek, które nakładają się na mapę bitową. Pierwszy elipsy używa składnik alfa, 255, więc jest nieprzezroczysta. Wielokropek drugi i trzeci Użyj składnik alfa, 128, dzięki czemu są one półprzezroczystych; obraz tła za pośrednictwem wielokropek jest widoczny. Wywołanie, które ustawia <xref:System.Drawing.Graphics.CompositingQuality%2A> właściwości powoduje, że mieszanie trzeci ikonę wielokropka, aby to zrobić w połączeniu z korekcji gamma.  
   
- Na poniższej ilustracji przedstawiono dane wyjściowe poniższy kod.  
+ Poniższa ilustracja przedstawia dane wyjściowe następujący kod.  
   
  ![Nieprzezroczystych i półprzezroczystych](../../../../docs/framework/winforms/advanced/media/compqualellipse.png "compqualellipse")  
   
@@ -33,10 +33,10 @@ Podczas wypełnienia kształtu, należy przekazać <xref:System.Drawing.Brush> o
  [!code-vb[System.Drawing.AlphaBlending#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Powyższy przykład jest przeznaczony do użytku z formularzy systemu Windows i wymaga <xref:System.Windows.Forms.PaintEventArgs> `e`, który jest parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
+ Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Grafika i rysowanie w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Przenikanie alfa linii i wypełnień](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
- [Instrukcje: ustawienie przezroczystego tła kontrolki](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
- [Instrukcje: rysowanie nieprzezroczystych i półprzezroczystych linii](../../../../docs/framework/winforms/advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+## <a name="see-also"></a>Zobacz także
+- [Grafika i rysowanie w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Przenikanie alfa linii i wypełnień](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+- [Instrukcje: Zachować kontrolę z przezroczystym tłem](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)
+- [Instrukcje: Rysowanie nieprzezroczystych i półprzezroczystych linii](../../../../docs/framework/winforms/advanced/how-to-draw-opaque-and-semitransparent-lines.md)

@@ -2,12 +2,12 @@
 title: '&lt;serviceCertificate&gt; w &lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: dfaf02eeaf6de781af70c21321a042de5eff74a5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6718804005d21cfdb75c27e417cb106aa05d79ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556327"
 ---
 # <a name="ltservicecertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCertificate&gt; w &lt;serviceCredentials&gt;
 Określ certyfikat X.509, który będzie używany do uwierzytelniania usługi dla klientów używających trybu zabezpieczenia wiadomości.  
@@ -17,7 +17,7 @@ Określ certyfikat X.509, który będzie używany do uwierzytelniania usługi dl
 \<serviceBehaviors>  
 \<zachowanie >  
 \<serviceCredentials>  
-\<serviceCertificate >  
+\<serviceCertificate>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,10 +54,10 @@ Określ certyfikat X.509, który będzie używany do uwierzytelniania usługi dl
   
  Aby uzyskać więcej informacji na temat za pomocą elementu zobacz [jak: Określanie wartości poświadczeń klienta](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>  
- <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>  
- [Instrukcje: Określanie wartości poświadczeń klienta](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
+- <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>
+- [Instrukcje: Określanie wartości poświadczeń klienta](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

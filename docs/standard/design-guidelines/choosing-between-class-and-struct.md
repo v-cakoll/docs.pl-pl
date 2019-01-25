@@ -13,12 +13,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
-ms.openlocfilehash: 650acf0efaa88120678819b77b03fab61107c630
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565868"
 ---
 # <a name="choosing-between-class-and-struct"></a>Wybieranie między klasą i strukturą
 Jednym z decyzji projektowych podstawowe twarzy każdego Projektant framework jest czy zaprojektować typu jako klasę (typ odwołania) lub struct (typu wartości). Dobre zrozumienie różnic w zachowaniu typy odwołań i typy wartości jest sprawą kluczową podczas wprowadzania tego wyboru.  
@@ -55,5 +55,5 @@ Jednym z decyzji projektowych podstawowe twarzy każdego Projektant framework je
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  
+- [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)
 - [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

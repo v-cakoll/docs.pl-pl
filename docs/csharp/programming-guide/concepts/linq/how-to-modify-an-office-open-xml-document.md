@@ -1,15 +1,15 @@
 ---
-title: 'Porady: modyfikowanie dokumentu Office Open XML (C#)'
+title: 'Instrukcje: Modyfikowanie dokumentu Office Open XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 7a85341ee64c71a3f57b71b3db82889aee667040
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6770e661c90f9eee432933edafb28a615991775e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556028"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a>Porady: modyfikowanie dokumentu Office Open XML (C#)
+# <a name="how-to-modify-an-office-open-xml-document-c"></a>Instrukcje: Modyfikowanie dokumentu Office Open XML (C#)
 W tym temacie przedstawiono przykład, który spowoduje otwarcie dokumentu Office Open XML, modyfikuje je i zapisuje go.  
   
  Aby uzyskać więcej informacji na temat Office Open XML, zobacz [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) i [www.ericwhite.com](http://ericwhite.com/).  
@@ -147,6 +147,6 @@ class Program
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zaawansowane techniki zapytań (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

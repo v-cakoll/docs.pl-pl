@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 70e589fcff241a664ef470dfeb746412cde6b515
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570203"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Włączanie wielu aktywnych zestawów wyników
 Wiele aktywnych zestawów wyników (MARS) jest funkcją, która współdziała z programem SQL Server, aby umożliwić wykonywanie wielu instancji na pojedyncze połączenie. Po włączeniu MARS do użytku z programem SQL Server każdego obiektu polecenia używane dodaje sesji połączenia.  
@@ -92,13 +92,13 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Na przykład rozważmy następujący scenariusz. Polecenie tworzone są dwa obiekty, jeden dla przetwarzania zestawu wyników i inny wpis dla aktualizacji danych. współużytkują one typowe połączenia przez MARS. W tym scenariuszu `Transaction`.`Commit` kończy się niepowodzeniem po aktualizacji do momentu odczytania wszystkich wyników na pierwszy obiekt polecenia reaguje następujący wyjątek:  
   
- Komunikat o błędzie: Kontekst transakcji jest używany przez inną sesję.  
+ Komunikat: Kontekst transakcji jest używany przez inną sesję.  
   
- Źródło: Dostawca danych SqlClient programu .net  
+ Source: .Net SqlClient Data Provider  
   
  Oczekiwano: (null)  
   
- Received: System.Data.SqlClient.SqlException  
+ Odebrane: System.Data.SqlClient.SqlException  
   
  Dostępne są trzy opcje do obsługi tego scenariusza:  
   
@@ -111,6 +111,6 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="detecting-mars-support"></a>Wykrywanie MARS pomocy technicznej  
  Aplikację można sprawdzić MARS pomocy technicznej, czytając `SqlConnection.ServerVersion` wartość. Numer główny powinna być 9 dla programu SQL Server 2005 i 10 programu SQL Server 2008.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wiele aktywnych zestawów wyników (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Wiele aktywnych zestawów wyników (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

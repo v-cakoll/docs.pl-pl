@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: 602212e664fa3362742fb1ba0dc033610272d3af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d27ca262aa2349d34d78844e0aea0f96a1ced65c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496312"
 ---
 # <a name="sub-expression-visual-basic"></a>Sub — Wyrażenie (Visual Basic)
 Deklaruje parametry i kod, który definiuje procedurę wyrażenia lambda.  
@@ -31,20 +31,20 @@ End Sub
 |Termin|Definicja|  
 |---|---|  
 |`parameterlist`|Opcjonalna. Lista nazwy zmiennych lokalnych, które reprezentują parametry procedury. Nawiasy musi być obecny, nawet wtedy, gdy lista jest pusta. Aby uzyskać więcej informacji, zobacz [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`statement`|Wymagana. Jednej instrukcji.|  
+|`statement`|Wymagana. Pojedynczą instrukcję.|  
 |`statements`|Wymagana. Lista instrukcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- A *wyrażenia lambda* jest to procedura, która nie ma nazwy i który wykonuje jedną lub więcej instrukcji. Można używać wyrażenia lambda w dowolnym służącego typu delegata, z wyjątkiem jako argument `RemoveHandler`. Aby uzyskać więcej informacji dotyczących obiektów delegowanych i korzystanie z wyrażenia lambda z delegatów, zobacz [instrukcji delegata](../../../visual-basic/language-reference/statements/delegate-statement.md) i [swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ A *wyrażenia lambda* jest to procedura, która nie ma nazwy i który wykonuje jedną lub więcej instrukcji. Użyć wyrażenia lambda w dowolnym miejscu, typu delegata, można użyć z wyjątkiem jako argument do `RemoveHandler`. Aby uzyskać więcej informacji na temat delegatów i użycie wyrażeń lambda z obiektów delegowanych, zobacz [instrukcji delegata](../../../visual-basic/language-reference/statements/delegate-statement.md) i [swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Składnia wyrażenia lambda  
- Składnia wyrażenia lambda jest podobny do tego standardowe procedury. Różnice są następujące:  
+ Składnia wyrażenia lambda przypomina w przypadku standardowe procedury. Różnice są następujące:  
   
--   Wyrażenia lambda nie ma nazwy.  
+-   Wyrażenie lambda nie ma nazwy.  
   
--   Wyrażenia lambda nie może mieć modyfikatora, takich jak `Overloads` lub `Overrides`.  
+-   Wyrażenie lambda nie może mieć modyfikatora, takich jak `Overloads` lub `Overrides`.  
   
--   Treść wyrażenia lambda jeden wiersz musi być instrukcję nie wyrażenia. Treść może obejmować wywołaniu procedury sub, ale nie wywołanie procedury function.  
+-   Treść wyrażenia lambda w pojedynczej linii musi być instrukcja nie wyrażenia. Treść może składać się po wywołaniu procedury sub, ale nie po wywołaniu procedury function.  
   
 -   W wyrażeniu lambda albo wszystkie parametry muszą określono można wywnioskować typów danych lub wszystkich parametrów.  
   
@@ -53,13 +53,13 @@ End Sub
 -   Parametry ogólne są niedozwolone w wyrażeniach lambda.  
   
 ## <a name="example"></a>Przykład  
- Poniżej przedstawiono przykład wyrażenia lambda, który zapisuje wartość do konsoli. W przykładzie zarówno jeden wiersz i wielowierszowe składnia wyrażenia lambda dla procedury. Aby uzyskać więcej przykładów, zobacz [wyrażenia Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Oto przykład wyrażenie lambda, która zapisuje wartości do konsoli. W przykładzie pokazano oba jeden wiersz i wielowierszowe składnia wyrażenia lambda do procedurę. Aby uzyskać więcej przykładów, zobacz [wyrażeń Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)  
- [Swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+## <a name="see-also"></a>Zobacz także
+- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)
+- [Swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

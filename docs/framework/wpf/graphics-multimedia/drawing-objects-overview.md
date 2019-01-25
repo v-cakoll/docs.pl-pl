@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 92cf4e7099c7880eb9bde9af765970abac698310
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4be6f3b06a0e9ab16469ad9a7f9e78799cc2e637
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513675"
 ---
 # <a name="drawing-objects-overview"></a>Przegląd Rysowanie obiektów
 W tym temacie przedstawiono <xref:System.Windows.Media.Drawing> obiektów oraz opisano, jak za ich pomocą efektywnie Rysowanie kształtów, mapy bitowe, tekstu i media. Użyj <xref:System.Windows.Media.Drawing> obiektów podczas tworzenia obiektu clipart malować <xref:System.Windows.Media.DrawingBrush>, lub użyj <xref:System.Windows.Media.Visual> obiektów.  
@@ -180,12 +180,12 @@ Kolejność operacji DrawingGroup
   
 |Właściwość|Opis|Ilustracja|  
 |--------------|-----------------|------------------|  
-|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Zmienia nieprzezroczystość zaznaczonych części <xref:System.Windows.Media.DrawingGroup> zawartość. Na przykład, zobacz [porady: kontrolowanie nieprzezroczystość rysowania](https://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee).|![DrawingGroup za pomocą maski krycia](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
-|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Równomiernie zmienia nieprzezroczystość <xref:System.Windows.Media.DrawingGroup> zawartość. Ta właściwość służy do upewnij <xref:System.Windows.Media.Drawing> obszarów przezroczystych lub częściowo przezroczyste. Na przykład zobacz [porady: stosowanie maski krycia do rysowania](https://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f).|![Obiekty DrawingGroup z różnymi ustawieniami nieprzezroczystości](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
-|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|Stosuje <xref:System.Windows.Media.Effects.BitmapEffect> do <xref:System.Windows.Media.DrawingGroup> zawartość. Aby uzyskać przykład, zobacz [porady: zastosowanie efektu bitmapy do rysowania](https://msdn.microsoft.com/library/c5b1de83-8d09-47fb-96db-5f174471f4b5).|![DrawingGroup z obiektem BlurBitmapEffect](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
+|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Zmienia nieprzezroczystość zaznaczonych części <xref:System.Windows.Media.DrawingGroup> zawartość. Aby uzyskać przykład, zobacz [jak: Kontrolowanie nieprzezroczystość rysowania](https://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee).|![DrawingGroup za pomocą maski krycia](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
+|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Równomiernie zmienia nieprzezroczystość <xref:System.Windows.Media.DrawingGroup> zawartość. Ta właściwość służy do upewnij <xref:System.Windows.Media.Drawing> obszarów przezroczystych lub częściowo przezroczyste. Aby uzyskać przykład, zobacz [jak: Zastosuj maski krycia do rysowania](https://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f).|![Obiekty DrawingGroup z różnymi ustawieniami nieprzezroczystości](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
+|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|Stosuje <xref:System.Windows.Media.Effects.BitmapEffect> do <xref:System.Windows.Media.DrawingGroup> zawartość. Aby uzyskać przykład, zobacz [jak: Zastosowanie efektu bitmapy do rysowania](https://msdn.microsoft.com/library/c5b1de83-8d09-47fb-96db-5f174471f4b5).|![DrawingGroup z obiektem BlurBitmapEffect](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
 |<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|Klipy <xref:System.Windows.Media.DrawingGroup> zawartość do regionu opisywane przy użyciu <xref:System.Windows.Media.Geometry>. Aby uzyskać przykład, zobacz [jak: Przytnij rysowania](https://msdn.microsoft.com/library/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058) .|![DrawingGroup — z regionem zdefiniowanych klip](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
 |<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|Przyciąga pikselach niezależnych od urządzenia na urządzeniu pikseli wzdłuż określonych wytycznych. Ta właściwość jest przydatne w celu zminimalizowania gwałtownie renderowania grafiki precyzyjnie szczegółowe na ekranach o niskiej rozdzielczości DPI. Aby uzyskać przykład, zobacz [stosowanie elementu GuidelineSet do rysowania](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md).|![DrawingGroup z lub bez GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")|  
-|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|Przekształca <xref:System.Windows.Media.DrawingGroup> zawartość. Aby uzyskać przykład, zobacz [porady: stosowanie przekształcenia do rysowania](https://msdn.microsoft.com/library/0d525f2b-682d-4d67-9660-cf46929fbabd).|![A obracać DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
+|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|Przekształca <xref:System.Windows.Media.DrawingGroup> zawartość. Aby uzyskać przykład, zobacz [jak: Zastosuj przekształcenie do rysowania](https://msdn.microsoft.com/library/0d525f2b-682d-4d67-9660-cf46929fbabd).|![A obracać DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
   
 <a name="usingimagedrawing"></a>   
 ## <a name="display-a-drawing-as-an-image"></a>Rysowania są wyświetlane jako obraz  
@@ -233,13 +233,13 @@ GeometryDrawing używane z DrawingBrush
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Drawing>  
- <xref:System.Windows.Media.DrawingGroup>  
- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Drawing>
+- <xref:System.Windows.Media.DrawingGroup>
+- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)

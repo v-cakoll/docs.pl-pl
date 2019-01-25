@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 10a5be16ef27aedf86f391b661750a953262d29b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533211"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)
 
@@ -29,10 +29,10 @@ Poniższa tabela zawiera podsumowanie różnych funkcji udostępnianych przez to
 |Zadanie|Temat|
 |----------|-----------|
 |Generuje kod z uruchomionych usług lub statycznych dokumentów metadanych.|[Generowanie klienta programu WCF na podstawie metadanych usługi](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|
-|Eksportuje dokumentów metadanych ze skompilowanego kodu.|[Jak: Eksportowanie metadanych ze skompilowanego kodu usługi za pomocą Svcutil.exe](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|
-|Sprawdza poprawność skompilowanego kodu usługi.|[Jak: Weryfikacja skompilowanego kodu usługi za pomocą programu Svcutil.exe](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|
-|Pobiera dokumentów metadanych z uruchomionymi usługami.|[Jak: Używanie Svcutil.exe do pobierania dokumentów metadanych](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|
-|Generuje kod serializacji.|[Jak: Poprawę czasu uruchamiania programu WCF klienta aplikacji przy użyciu elementu XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|
+|Eksportuje dokumentów metadanych ze skompilowanego kodu.|[Instrukcje: Eksportowanie metadanych ze skompilowanego kodu usługi za pomocą Svcutil.exe](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|
+|Sprawdza poprawność skompilowanego kodu usługi.|[Instrukcje: Weryfikacja skompilowanego kodu usługi za pomocą programu Svcutil.exe](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|
+|Pobiera dokumentów metadanych z uruchomionymi usługami.|[Instrukcje: Używanie Svcutil.exe do pobierania dokumentów metadanych](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|
+|Generuje kod serializacji.|[Instrukcje: Poprawę czasu uruchamiania programu WCF klienta aplikacji przy użyciu elementu XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|
 
 > [!CAUTION]
 > Narzędzia svcutil zastępuje istniejące pliki na dysku, jeśli dostarczone jako parametry nazwy są identyczne. Może to obejmować pliki kodu, konfiguracji lub pliki metadanych. Aby tego uniknąć podczas generowania kodu i plików konfiguracji, użyj `/mergeConfig` przełącznika.
@@ -51,7 +51,7 @@ Narzędzie nie obsługuje wielowersyjności kodu. Jeśli chcesz wygenerować art
 
 Gdy używasz narzędzia Svcutil dostępu do dokumentu WSDL, który odwołuje się do usługi tokenu zabezpieczającego (STS), narzędzia Svcutil sprawia, że usługi WS-MetadataExchange wywołań do usługi STS. Jednak usługa mogą uwidocznić swoje dokumenty WSDL, za pomocą usługi WS-MetadataExchange lub HTTP GET. W związku z tym jeśli usługi STS jest dostępne tylko przy użyciu HTTP GET klienta napisanego w dokumencie WSDL [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] zakończy się niepowodzeniem. W przypadku klientów, napisany w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]Svcutil podejmują próbę użycia obu WS-MetadataExchange i HTTP GET w celu uzyskania WSDL usługi STS.
 
-## <a name="using-svcutilexe"></a>Za pomocą SvcUtil.exe
+## <a name="using-svcutilexe"></a>Using SvcUtil.exe
 
 ### <a name="common-usages"></a>Typowego użycia
 
@@ -61,7 +61,7 @@ W poniższej tabeli przedstawiono niektóre najczęściej używanych opcji dla t
 |------------|-----------------|
 |/ katalog:\<katalogu >|Katalog, w którym będą tworzone pliki.<br /><br /> Wartość domyślna: Bieżący katalog.<br /><br /> Krótka: `/d`|
 |/help|Wyświetla składnię polecenia i opcje narzędzia.<br /><br /> Krótka: `/?`|
-|/ nologo|Pomiń komunikat o prawach autorskich i baneru.|
+|/noLogo|Pomiń komunikat o prawach autorskich i baneru.|
 |/svcutilConfig:\<configFile>|Określa plik konfiguracji niestandardowej do użycia zamiast pliku App.config. To może służyć do zarejestrowania rozszerzenia system.serviceModel nie zmieniając pliku konfiguracji tego narzędzia.|
 |/ target:\<typ danych wyjściowych >|Określa dane wyjściowe zostanie wygenerowany przez narzędzie.<br /><br /> Prawidłowe wartości to kod, metadanych lub elementu xmlSerializer.<br /><br /> Krótka: `/t`|
 
@@ -87,18 +87,18 @@ Usługi za pomocą punktu końcowego obiekt BasicHttpContextbinding *Svcutil.exe
 |Opcja|Opis|
 |------------|-----------------|
 |/async|Generuje podpisy obu metod synchroniczne i asynchroniczne.<br /><br /> Wartość domyślna: generowanie tylko podpisy metod synchronicznych.<br /><br /> Krótka: `/a`|
-|/collectionType:\<typ >|Określa typ kolekcji listy dla klienta programu WCF.<br/><br /> Wartość domyślna: typ kolekcji jest System.Array. <br /><br /> Krótka: `/ct`|
-|/ config:\<configFile >|Określa nazwę pliku dla pliku wygenerowaną konfigurację.<br /><br /> Domyślne: output.config|
+|/collectionType:\<type>|Określa typ kolekcji listy dla klienta programu WCF.<br/><br /> Wartość domyślna: typ kolekcji jest System.Array. <br /><br /> Krótka: `/ct`|
+|/config:\<configFile>|Określa nazwę pliku dla pliku wygenerowaną konfigurację.<br /><br /> Domyślne: output.config|
 |/dataContractOnly|Generuje kod dla tylko typy kontraktu danych. Nie są generowane typy kontraktu usługi.<br /><br /> Należy określić tylko pliki lokalne metadanych dla tej opcji.<br /><br /> Krótka: `/dconly`|
 |/enableDataBinding|Implementuje <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu na wszystkich typach kontraktu danych umożliwiające powiązanie danych.<br /><br /> Krótka: `/edb`|
-|/excludeType:\<typ >|Określa nazwę typu w pełni kwalifikowaną lub kwalifikowaną dla zestawu, które mają być wykluczone z typów kontraktu odwołania.<br /><br /> Korzystając z tego przełącznika, wraz z `/r` z oddzielnych bibliotek DLL, mowa Pełna nazwa klasy XSD.<br /><br /> Krótka: `/et`|
+|/excludeType:\<type>|Określa nazwę typu w pełni kwalifikowaną lub kwalifikowaną dla zestawu, które mają być wykluczone z typów kontraktu odwołania.<br /><br /> Korzystając z tego przełącznika, wraz z `/r` z oddzielnych bibliotek DLL, mowa Pełna nazwa klasy XSD.<br /><br /> Krótka: `/et`|
 |/importXmlTypes|Konfiguruje serializatora kontraktu danych do importowania typów kontraktu danych jako typów IXmlSerializable.|
 |/ wewnętrzny|Generuje klasy, które są oznaczone jako wewnętrzne. Wartość domyślna: Generuj klasy publiczne tylko.<br /><br /> Krótka: `/i`|
 |/Language:\<języka >|Określa język programowania na potrzeby generowania kodu. Należy podać nazwę języka zarejestrowanych w pliku Machine.config lub w pełni kwalifikowaną nazwę klasy, która dziedziczy <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Wartości: c#, cs, csharp, vb, języka Visual Basic, c ++, cpp<br /><br /> Domyślne: csharp<br /><br /> Krótka: `/l`|
 |/mergeConfig|Scala wygenerowaną konfigurację istniejącego pliku, zamiast nadpisywać istniejący plik.|
 |/messageContract|Generuje typy kontraktu komunikatu.<br /><br /> Krótka: `/mc`|
 |/ NAMESPACE:\<string, string >|Określa mapowanie targetNamespace schematu WSDL lub XML do przestrzeni nazw CLR. Za pomocą "\*" dla elementu targetNamespace spowoduje mapowanie wszystkich elementów targetNamespace bez jawnego mapowania na przestrzeń nazw CLR.<br /><br /> Aby upewnić się, że nazwa kontraktu komunikatu nie kolidujący operacji o nazwie, należy albo kwalifikujesz się do typu odwołanie z `::`, lub upewnij się, że nazwy są unikatowe.<br /><br /> Wartość domyślna: Tworzony na podstawie docelowego obszaru nazw dokumentu schematu dla kontraktów danych. Domyślny obszar nazw jest używana dla wszystkich innych wygenerowanych typów.<br /><br /> Krótka: `/n` **Uwaga:**  Podczas generowania typów za pomocą elementu XmlSerializer, mapowanie jednej przestrzeni nazw jest obsługiwane. Wszystkich typów wygenerowanego będzie domyślny obszar nazw lub przestrzeni nazw określonej przez ' *'.|
-|/ noconfig|Nie generują pliki konfiguracji.|
+|/noConfig|Nie generują pliki konfiguracji.|
 |/noStdLib|Nie odwołuj się do standardowych bibliotek.<br /><br /> Wartość domyślna: Aby biblioteka mscorlib.dll i System.servicemodel.dll do których istnieją odwołania.|
 |/ out:\<pliku >|Określa nazwę pliku dla wygenerowanego kodu.<br /><br /> Wartość domyślna: Na podstawie nazwy definicji WSDL, WSDL nazwa usługi lub docelowa przestrzeń nazw jednego ze schematów.<br /><br /> Krótka: `/o`|
 |/ reference:\<ścieżka pliku >|Typy odwołań w określonym zestawie. Podczas generowania klientów Użyj tej opcji, aby określić zestawy, które mogą zawierać typy reprezentujące importowane metadane.<br /><br /> Nie można określić kontrakty komunikatów i <xref:System.Xml.Serialization.XmlSerializer> typów za pomocą tego przełącznika.<br /><br /> Jeśli <xref:System.DateTimeOffset> odwołania, ten typ jest używany zamiast generowania nowego typu. Jeśli aplikacja jest napisane przy użyciu [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], odwołania SvcUtil.exe <xref:System.DateTimeOffset> automatycznie.<br /><br /> Krótka: `/r`|
@@ -128,7 +128,7 @@ Svcutil.exe można wyeksportować metadane dotyczące usług, kontrakty i typów
 |/serviceName:\<serviceConfigName>|Określa nazwę konfiguracji usługi do wyeksportowania. Jeśli ta opcja jest używana, przy użyciu pliku konfiguracji skojarzonego zestawu pliku wykonywalnego musi zostać przekazany jako dane wejściowe. Svcutil.exe wyszukuje wszystkie skojarzone pliki konfiguracji do konfiguracji usługi. Jeśli pliki konfiguracji zawierają wszystkie typy rozszerzeń, musi być w pamięci GAC zestawy, które zawierają te typy, lub podane jawnie za pomocą `/reference` opcji.|
 |/ reference:\<ścieżka pliku >|Dodaje określony zestaw zbiór zestawów, używany do rozpoznawania odwołań do typu. Jeśli eksportujesz lub Sprawdzanie poprawności to usługa, która używa rozszerzeń innych firm 3 (zachowań, powiązania i elementy BindingElements) zarejestrowany w konfiguracji, użyj tej opcji do lokalizowania zestawów rozszerzenie, które nie znajdują się w pamięci podręcznej GAC.<br /><br /> Krótka: `/r`|
 |/dataContractOnly|Operuje na danych tylko dla typów kontraktu. Kontrakty usług nie są przetwarzane.<br /><br /> Należy określić tylko pliki lokalne metadanych dla tej opcji.<br /><br /> Krótka: `/dconly`|
-|/excludeType:\<typ >|Określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu, które mają być wykluczone z eksportu. Tej opcji można użyć podczas eksportowania metadanych dla usługi lub zbiór usług umów do wykluczenia typów są eksportowane. Tej opcji nie można używać razem z `/dconly` opcji.<br /><br /> Jeśli masz pojedynczy zestaw zawierający wiele usług, a każda używa osobnych klas o takiej samej nazwie XSD, należy określić nazwę usługi, zamiast nazwy klasy XSD dla tego przełącznika.<br /><br /> Typy kontraktu danych lub XSD są nieobsługiwane.<br /><br /> Krótka: `/et`|
+|/excludeType:\<type>|Określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu, które mają być wykluczone z eksportu. Tej opcji można użyć podczas eksportowania metadanych dla usługi lub zbiór usług umów do wykluczenia typów są eksportowane. Tej opcji nie można używać razem z `/dconly` opcji.<br /><br /> Jeśli masz pojedynczy zestaw zawierający wiele usług, a każda używa osobnych klas o takiej samej nazwie XSD, należy określić nazwę usługi, zamiast nazwy klasy XSD dla tego przełącznika.<br /><br /> Typy kontraktu danych lub XSD są nieobsługiwane.<br /><br /> Krótka: `/et`|
 
 ### <a name="service-validation"></a>Sprawdzanie poprawności usługi
 
@@ -146,7 +146,7 @@ Sprawdzanie poprawności może służyć do wykrywania błędów w implementacji
 |/serviceName:\<serviceConfigName>|Określa nazwę konfiguracji usługi ma zostać zweryfikowana. Svcutil.exe wyszukuje wszystkie pliki konfiguracji skojarzonych zestawów wszystkich danych wejściowych dla konfiguracji usługi. Jeśli pliki konfiguracji zawierają wszystkie typy rozszerzeń, musi być w pamięci GAC zestawy, które zawiera następujące typy, lub podane jawnie za pomocą `/reference` opcji.|
 |/ reference:\<ścieżka pliku >|Dodaje określony zestaw zbiór zestawów, używany do rozpoznawania odwołań do typu. Jeśli eksportujesz lub Sprawdzanie poprawności to usługa, która używa rozszerzeń innych firm 3 (zachowań, powiązania i elementy BindingElements) zarejestrowany w konfiguracji, użyj tej opcji do lokalizowania zestawów rozszerzenie, które nie znajdują się w pamięci podręcznej GAC.<br /><br /> Krótka: `/r`|
 |/dataContractOnly|Operuje na danych tylko dla typów kontraktu. Kontrakty usług nie są przetwarzane.<br /><br /> Należy określić tylko pliki lokalne metadanych dla tej opcji.<br /><br /> Krótka: `/dconly`|
-|/excludeType:\<typ >|Określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu, które mają być wykluczone z weryfikacji.<br /><br /> Krótka: `/et`|
+|/excludeType:\<type>|Określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu, które mają być wykluczone z weryfikacji.<br /><br /> Krótka: `/et`|
 
 ### <a name="metadata-download"></a>Pobieranie metadanych
 
@@ -190,9 +190,9 @@ Svcutil.exe może generować niezbędny kod serializacji C# z skompilowanych zes
 |Opcja|Opis|
 |------------|-----------------|
 |/ reference:\<ścieżka pliku >|Dodaje określony zestaw zbiór zestawów, używany do rozpoznawania odwołań do typu.<br /><br /> Krótka: `/r`|
-|/excludeType:\<typ >|Określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu do wykluczenia z Eksport lub sprawdzania poprawności.<br /><br /> Krótka: `/et`|
+|/excludeType:\<type>|Określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu nazwę typu do wykluczenia z Eksport lub sprawdzania poprawności.<br /><br /> Krótka: `/et`|
 |/ out:\<pliku >|Określa nazwę pliku dla wygenerowanego kodu. Ta opcja jest ignorowana, gdy wiele zestawów są przekazywane jako dane wejściowe do narzędzia.<br /><br /> Wartość domyślna: Pochodzi od nazwy zestawu.<br /><br /> Krótka: `/o`|
-|/ UseSerializerForFaults|Określa, że <xref:System.Xml.Serialization.XmlSerializer> powinny być używane do odczytywania i zapisywania błędów zamiast domyślnego <xref:System.Runtime.Serialization.DataContractSerializer>.|
+|/UseSerializerForFaults|Określa, że <xref:System.Xml.Serialization.XmlSerializer> powinny być używane do odczytywania i zapisywania błędów zamiast domyślnego <xref:System.Runtime.Serialization.DataContractSerializer>.|
 
 ## <a name="examples"></a>Przykłady
 
@@ -276,8 +276,8 @@ Ponadto aby zminimalizować ryzyko naruszenia zabezpieczeń, nie należy dodawa�
 
 Ponadto nie należy używać narzędzia w środkowej warstwie aplikacji, ponieważ może to spowodować odmowę usługi dla bieżącego procesu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Jak: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Instrukcje: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)

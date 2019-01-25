@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 7b4286abdb2e2b5bb3f91f6fa0bbffd6beda8efc
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: f1bbae37ab5f5e8d3219a3d0a41bc8ff0c7b18df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48914195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492562"
 ---
 # <a name="ui-automation-providers-overview"></a>Przegląd dostawców automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dostawcy automatyzacji interfejsu użytkownika włączyć formanty do komunikacji przy użyciu automatyzacji interfejsu użytkownika aplikacji klienckich. Ogólne, każdy formant lub inny element distinct w [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] jest reprezentowany przez dostawcę. Dostawca udostępnia informacji na temat elementu i opcjonalnie implementuje wzorców kontrolek, które umożliwiają aplikacji klienckiej wchodzić w interakcje z kontrolką.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "48914195"
 ### <a name="fragments"></a>Fragmenty  
  Określony fragment jest pełne poddrzewo elementów z określonej struktury. Element w węźle głównym poddrzewo jest nazywany elementem głównym fragmentu. Katalog główny fragment nie ma elementu nadrzędnego, ale hostowanych w ramach innych struktury [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] okna (HWND).  
   
-### <a name="hosts"></a>Hosty  
+### <a name="hosts"></a>Hosts  
  Węzeł główny każdego fragmentu musi być hostowany w elemencie, zwykle [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] okna (HWND). Wyjątek stanowi pulpitu, który nie znajduje się w innym elemencie. Host formantu niestandardowego jest HWND samego formantu, nie w oknie aplikacji lub inne okno, które mogą zawierać grup formantów najwyższego poziomu.  
   
  Host fragmentu odgrywa ważną rolę w dostarczaniu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] usług. Umożliwia nawigacji do fragmentu katalogu głównego i dostarcza niektórych właściwości domyślne tak, aby niestandardowego dostawcy nie trzeba ich wykonania.  
   
-## <a name="see-also"></a>Zobacz też  
- [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a>Zobacz także
+- [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23a38297526090f1df35f8541026accd5a5cb9bc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ed128cc2ddec3c599932cd5a82364d1cf6642cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505240"
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;Usesmallinternalthreadstacks —&gt; — Element
 Użyj żądania, że środowisko uruchomieniowe języka wspólnego (CLR), zmniejszyć pamięci, określając stosu jawnych rozmiarów, podczas tworzenia niektórych wątków, które używa wewnętrznie, zamiast korzystać z domyślnego rozmiaru stosu dla tych wątków.  
   
  \<Konfiguracja > Element  
 \<środowisko uruchomieniowe > Element  
-\<Usesmallinternalthreadstacks — > Element  
+\<UseSmallInternalThreadStacks> Element  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -72,6 +72,6 @@ Użyj żądania, że środowisko uruchomieniowe języka wspólnego (CLR), zmniej
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Zobacz także
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

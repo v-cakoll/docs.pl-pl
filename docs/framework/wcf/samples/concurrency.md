@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: f8925157714621f8b97893bc25e41685778416f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d2aed72a075fb5fd6fc52d38a05488367b5e4467
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745496"
 ---
 # <a name="concurrency"></a>Współbieżność
 Przykład współbieżności, który demonstruje sposób użycia <xref:System.ServiceModel.ServiceBehaviorAttribute> z <xref:System.ServiceModel.ConcurrencyMode> wyliczenia, które kontrolują, czy wystąpienie usługi przetwarza komunikaty kolejno lub równolegle. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. Ta przykładowa aplikacja definiuje kontrakt nowe `ICalculatorConcurrency`, który dziedziczy z `ICalculator`, zapewniając dwóch dodatkowych operacji sprawdzania stanu współbieżności usługi. Zmieniając ustawienie współbieżności, można obserwować zmiany w zachowaniu przez uruchomienie klienta.  
@@ -112,4 +112,4 @@ public class CalculatorService : ICalculatorConcurrency
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Concurrency`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d26d4dc046841a891c8a36530bd579d100b8f5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3a5dca321470b3fda8490ca5ae809045d724150
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552167"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf — Metoda
-Sprawdza, czy `this` wewnętrzny ramki jest bliżej niż określony obiekt ICorDebugFrame liścia.  
+Sprawdza, czy `this` ramka wewnętrzna jest bliżej niż określony obiekt ICorDebugFrame typu liść.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,10 +39,10 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
  [in] Wskaźnik do porównania `ICorDebugFrame` obiektu.  
   
  `pIsCloser`  
- [out] `true` Jeśli `this` wewnętrzny ramki jest bliżej liścia niż ramki określony przez `pFrameToCompare`; w przeciwnym razie `false`.  
+ [out] `true` Jeśli `this` ramka wewnętrzna jest bliżej liścia niż ramki określonego przez `pFrameToCompare`; w przeciwnym razie `false`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące określonych wyników HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
@@ -51,10 +51,10 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |E_INVALIDARG|`pFrameToCompare` lub `pIsCloser` ma wartość null.|  
   
 ## <a name="remarks"></a>Uwagi  
- `IsCloserToLeaf` może służyć do zaimplementowania zasad dla naprzemiennego wykonywania wewnętrznego ramki z innych ramek na stosie.  
+ `IsCloserToLeaf` może służyć do implementowania zasady z przeplotem ramkach wewnętrznych przy użyciu innych ramek na stosie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -62,7 +62,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugInternalFrame2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugInternalFrame2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -19,17 +19,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a375ea586bacc2d3dafe53d493a7467730fae889
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40a278945dc1a6c84a72221fd55e32f44a146662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564399"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance — Funkcja
 Tworzy wystąpienie określonego typu zarządzanego.  
   
- Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Użyj aktywacji COM. można utworzyć wystąpienia typu zarządzanego lub hosting (zobacz [CLR hostingu interfejsów dodany do programu .NET Framework 4 i 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
+ Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Użyj aktywacji COM do utworzenia wystąpienia typu zarządzanego lub hostingu (zobacz [CLR hostingu interfejsów dodany do programu .NET Framework 4 i 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,26 +43,26 @@ STDAPI ClrCreateManagedInstance (
   
 #### <a name="parameters"></a>Parametry  
  `pTypeName`  
- [in] Wskaźnik do nazwa żądanego typu wystąpienia.  
+ [in] Wskaźnik na nazwę żądanego typu wystąpienia.  
   
  `riid`  
- [in] `IID` Żądanego typu wystąpienia.  
+ [in] `IID` Żądana wystąpienia.  
   
  `ppObject`  
- [out] Wskaźnik na wskaźnik do wystąpienia typu zarządzanego, której zażądano przez obiekt wywołujący.  
+ [out] Wskaźnik do wskaźnika do wystąpienia typu zarządzanego, które zostało zażądane przez obiekt wywołujący.  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko uruchomieniowe języka wspólnego powinna już być załadowany do procesu. Na przykład mogą być ładowane przy użyciu wywołania [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) funkcji przed `ClrCreateManagedInstance` funkcja jest wywoływana. Jeśli środowisko uruchomieniowe nie został załadowany, `ClrCreateManagedInstance` po raz pierwszy próbuje załadować v1.0.3705 środowiska uruchomieniowego. W przypadku niepowodzenia próbuje załadować najnowszą wersję środowiska uruchomieniowego.  
+ Środowisko uruchomieniowe języka wspólnego już powinny być załadowane do procesu. Na przykład może być załadowany za pomocą wywołania [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) działać przed `ClrCreateManagedInstance` funkcja jest wywoływana. Jeśli środowisko wykonawcze nie został załadowany, `ClrCreateManagedInstance` po raz pierwszy próbuje załadować v1.0.3705 środowiska uruchomieniowego. W przypadku niepowodzenia próbuje załadować najnowszą wersję środowiska uruchomieniowego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

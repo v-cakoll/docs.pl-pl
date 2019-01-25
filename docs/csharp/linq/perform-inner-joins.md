@@ -1,14 +1,14 @@
 ---
 title: Wykonanie sprzężeń wewnętrznych (LINQ w C#)
 description: Dowiedz się, jak wykonanie sprzężeń wewnętrznych za pomocą LINQ w C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
-ms.openlocfilehash: 6a728a42e90b2bd35a0eed525726149caa85b34b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: a3e8e9bd97ec630797bc48a3302b27ed45d9103e
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527058"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857960"
 ---
 # <a name="perform-inner-joins"></a>Wykonanie sprzężeń wewnętrznych
 

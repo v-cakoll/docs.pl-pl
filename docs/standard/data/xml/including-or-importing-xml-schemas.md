@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b26ebfa327d849f75b1ac5295b66600aeb377e1e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 78dff5dca159b3e714a027bd2d2ebe86d2b414dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626007"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Uwzględnianie lub Importowanie schematów XML
 Schemat XML może zawierać `<xs:import />`, `<xs:include />`, i `<xs:redefine />` elementów. Te elementy schematu odnoszą się do innych schematów XML, które mogą służyć jako uzupełnienie strukturę schematu, który zawiera lub importuje je. <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> i <xref:System.Xml.Schema.XmlSchemaRedefine> klas, mapy do tych elementów w schemacie obiektu Model (model SOM) interfejsu API.  
@@ -52,8 +52,7 @@ Schemat XML może zawierać `<xs:import />`, `<xs:include />`, i `<xs:redefine /
         <xs:element name="FirstName" type="xs:string" />  
         <xs:element name="LastName" type="tns:LastNameType" />  
       </xs:sequence>  
-      <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" /  
->  
+      <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" />  
     </xs:complexType>  
   </xs:element>  
   <xs:simpleType name="LastNameType">  
@@ -102,9 +101,9 @@ Schemat XML może zawierać `<xs:import />`, `<xs:include />`, i `<xs:redefine /
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Model SOM (XML Schema Object Model) ― omówienie](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [Odczytywanie i zapisywanie schematów XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [Tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [Przechodzenie schematów XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [Edytowanie schematów XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [Model SOM (XML Schema Object Model) ― omówienie](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Odczytywanie i zapisywanie schematów XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [Tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Przechodzenie schematów XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [Edytowanie schematów XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [Klasa XmlSchemaSet na potrzeby kompilacji schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

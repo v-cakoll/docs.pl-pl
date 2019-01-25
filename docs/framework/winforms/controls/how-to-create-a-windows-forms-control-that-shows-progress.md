@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie formantu formularzy systemu Windows pokazującego postęp'
+title: 'Instrukcje: Utwórz formant programu Windows Forms pokazującej postęp'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: bff9bef08cdf7317d4dc8903412e03bfdacb7237
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c474419d1b60d8dbc937e77251b877efca2709b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594723"
 ---
-# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Porady: tworzenie formantu formularzy systemu Windows pokazującego postęp
+# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Instrukcje: Utwórz formant programu Windows Forms pokazującej postęp
 Poniższy przykład kodu pokazuje kontrolkę niestandardową o nazwie `FlashTrackBar` można pokazać użytkownikowi, poziomu lub postęp aplikacji. Aby wizualnie przedstawić postęp używa gradientu.  
   
  `FlashTrackBar` Kontroli ilustruje następujące pojęcia:  
@@ -92,6 +92,6 @@ Poniższy przykład kodu pokazuje kontrolkę niestandardową o nazwie `FlashTrac
  [!code-csharp[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Rozszerzenie obsługi w czasie projektowania](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Podstawowe informacje o opracowywaniu kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a>Zobacz także
+- [Rozszerzenie obsługi w czasie projektowania](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+- [Podstawowe informacje o opracowywaniu kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

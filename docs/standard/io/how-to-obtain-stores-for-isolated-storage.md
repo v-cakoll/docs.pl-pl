@@ -1,5 +1,5 @@
 ---
-title: 'Porady: uzyskiwanie magazynów dla izolowanego magazynu'
+title: 'Instrukcje: Uzyskiwanie magazynów dla wydzielonej pamięci masowej'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e2f87bfe1e3e7f3a1c8135c047b25a998793453
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084073"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524575"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>Porady: uzyskiwanie magazynów dla izolowanego magazynu
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>Instrukcje: Uzyskiwanie magazynów dla wydzielonej pamięci masowej
 Izolowanym magazynie udostępnia wirtualny system plików w ramach przedziału danych. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Klasa zapewnia szereg metod do interakcji z izolowanym magazynie. Tworzenie i pobieranie magazynów, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> udostępnia trzy metody statyczne:  
   
 -   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> Zwraca magazynu, który jest izolowany dla konkretnego użytkownika i zestawu.  
@@ -58,8 +58,8 @@ Izolowanym magazynie udostępnia wirtualny system plików w ramach przedziału d
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
-- [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)  
-- [Typy izolacji](../../../docs/standard/io/types-of-isolation.md)  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
+- [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)
+- [Typy izolacji](../../../docs/standard/io/types-of-isolation.md)
 - [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

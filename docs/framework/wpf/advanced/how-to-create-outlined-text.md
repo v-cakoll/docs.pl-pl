@@ -1,5 +1,5 @@
 ---
-title: Jak utworzyć schemat tekstu
+title: 'Instrukcje: Utwórz schemat tekstu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 046ce6519e55e5782db0fe8adbc2a956251e12e4
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: a06ef9adbd5740fee74be2e9d8d13a8a5bdc5b95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521481"
 ---
-# <a name="how-to-create-outlined-text"></a>Jak utworzyć schemat tekstu
+# <a name="how-to-create-outlined-text"></a>Instrukcje: Utwórz schemat tekstu
 W większości przypadków, gdy dodajesz ornamentacji do ciągów tekstowych w swojej [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji, w przypadku używania tekstu pod kątem zbiór znaków discrete lub symbole. Na przykład można utworzyć pędzel gradientów liniowych i zastosować je do <xref:System.Windows.Controls.Control.Foreground%2A> właściwość <xref:System.Windows.Controls.TextBox> obiektu. Podczas wyświetlania lub edytowania pola tekstowego, Pędzel gradientów liniowych jest automatycznie stosowany do bieżącego zestawu znaków w ciągu tekstowym.  
   
  ![Tekst wyświetlany za pomocą pędzel gradientów liniowych](../../../../docs/framework/wpf/advanced/media/outlinedtext01.jpg "OutlinedText01")  
@@ -59,5 +59,5 @@ Przykład ImageBrush stosowane do obrysu i wyróżnienia
   
   Dla źródła obiektu przykładowego użytkownika niestandardowego formantu, zobacz [OutlineTextControl.cs dla C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) i [OutlineTextControl.vb dla języka Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb). 
   
-## <a name="see-also"></a>Zobacz też  
- [Rysowanie formatowanego tekstu](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+## <a name="see-also"></a>Zobacz także
+- [Rysowanie formatowanego tekstu](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)

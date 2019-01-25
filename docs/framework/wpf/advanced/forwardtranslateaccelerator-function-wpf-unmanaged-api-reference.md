@@ -1,5 +1,5 @@
 ---
-title: Funkcja ForwardTranslateAccelerator (WPF niezarządzany wykaz interfejsów API)
+title: ForwardTranslateAccelerator, funkcja (niezarządzany wykaz interfejsów API WPF.)
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +8,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: d8a296c0590d07c4929610021714d2a257236d67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78031ed80fe83b736a351886457f9200534f470b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591516"
 ---
-# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>Funkcja ForwardTranslateAccelerator (WPF niezarządzany wykaz interfejsów API)
+# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator, funkcja (niezarządzany wykaz interfejsów API WPF.)
 Ten interfejs API obsługuje infrastrukturę programu Windows Presentation Foundation (WPF) i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
- Używane przez infrastrukturę Windows Presentation Foundation (WPF) do zarządzania systemu windows.  
+ Używane przez infrastrukturę Windows Presentation Foundation (WPF) do zarządzania systemem windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,18 +34,18 @@ HRESULT ForwardTranslateAccelerator(
  Wskaźnik do wiadomości.  
   
  appUnhandled  
- `true` gdy aplikacja została już podana możliwość obsługi komunikatu wejściowego, ale nie jest obsługiwane. w przeciwnym razie `false`.  
+ `true` gdy aplikacja został już podany Państwo, by obsłużyć komunikat wejściowy, ale nie został obsłużony w przeciwnym razie `false`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe programu .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [.NET Framework System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **BIBLIOTEKI DLL:**  
+ **DLL:**  
   
  W programie .NET Framework 3.0 i 3.5: PresentationHostDLL.dll  
   
- W wersji programu .NET Framework 4 i nowszych: PresentationHost_v0400.dll  
+ W programie .NET Framework 4 i nowszych wersji: PresentationHost_v0400.dll  
   
- **.NET framework w wersji:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Wersja programu .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Niezarządzane interfejsy API WPF — informacje](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Niezarządzane interfejsy API WPF — informacje](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

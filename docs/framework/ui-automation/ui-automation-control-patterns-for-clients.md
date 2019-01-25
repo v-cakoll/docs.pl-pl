@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 6e10b0e38e80bad1f322e32324db862691432b8e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 82415524e60a1c9cf44cdccd9a1b2660f4b517a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607738"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  W tym omówieniu przedstawiono wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika. Zawiera informacje dotyczące sposobu automatyzacji interfejsu użytkownika klient może używać wzorców kontrolek na dostęp do informacji o [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
@@ -46,12 +46,12 @@ ms.locfileid: "47236241"
   
  Implementowanie kontrolek niestandardowych typów formantów może mieć dowolny zbiór wzorców kontrolek, które są potrzebne do reprezentowania ich funkcje.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wzorce kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
- [Wzorzec tekstu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [Wywoływanie kontrolki przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [Pobieranie stanu przełączenia pola wyboru przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [Mapowanie wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [Przykładowy tekst wstawienia TextPattern](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
- [TextPattern wyszukiwania i wybór próbki](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)  
- [Klasy InvokePattern i przykładowych elementów Menu klasy ExpandCollapsePattern](https://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)
+## <a name="see-also"></a>Zobacz także
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
+- [Wzorzec tekstu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)
+- [Wywoływanie kontrolki przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
+- [Pobieranie stanu przełączenia pola wyboru przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
+- [Mapowanie wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [Przykładowy tekst wstawienia TextPattern](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)
+- [TextPattern wyszukiwania i wybór próbki](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+- [Klasy InvokePattern i przykładowych elementów Menu klasy ExpandCollapsePattern](https://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)

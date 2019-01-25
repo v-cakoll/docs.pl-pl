@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b772de720a8c3b669bd3cbe9591637d931cb8763
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 349604404487501a692b9a2472ed32878c62d879
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430622"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494811"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion — Funkcja
-Pobiera wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) informacje o wersji określonego pliku, używając określonego bufora.  
+Pobiera wspólnego języka wspólnego (CLR) informacje o wersji określonego pliku, przy użyciu określonego bufora.  
   
  Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -41,23 +41,23 @@ HRESULT GetFileVersion (
   
 #### <a name="parameters"></a>Parametry  
  `szFilename`  
- [in] Ścieżka pliku, który ma być zbadana.  
+ [in] Ścieżka pliku do badania.  
   
  `szBuffer`  
- [w, out] Bufor przydzielony informacje o wersji, która jest zwracana.  
+ [out w] Bufor przydzielony, aby uzyskać informacje o wersji, która jest zwracana.  
   
  `cchBuffer`  
- [in] Rozmiar w znaki dwubajtowe z `szBuffer`.  
+ [in] Rozmiar w szerokich znaków z `szBuffer`.  
   
  `dwLength`  
- [out] Rozmiar w bajtach, zwracana `szBuffer`.  
+ [out] Rozmiar w bajtach zwracanego `szBuffer`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

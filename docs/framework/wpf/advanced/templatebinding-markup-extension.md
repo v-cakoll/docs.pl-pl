@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 7c076172424baab4553a277baab2faca634c1e87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3ae17dc98137bd417d2468fb0415fb2078acf20f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686026"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding — Rozszerzenie znaczników
 Łączy wartość właściwości w szablonie formantu w taki sposób, że staje się ona wartością innej właściwości w formancie z szablonem.  
@@ -60,11 +60,11 @@ ms.locfileid: "43512830"
   
  `TemplateBinding` jest rozszerzeniem znacznika. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników w XAML użyj `{` i `}` znaków w składni swoich atrybutów, które jest do Konwencja, za pomocą której procesor XAML rozpoznaje, że rozszerzenie znacznika musi wykonać przetwarzanie atrybutu. Aby uzyskać więcej informacji, zobacz [rozszerzenia znacznikowania i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Style>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [RelativeSource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
- [Rozszerzenie znaczników powiązania](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Style>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [RelativeSource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)
+- [Rozszerzenie znaczników powiązania](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 39b8a44629af42e358d550e0dd7eb6a8895de0ed
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6e5ede5141d2edb24a688bf700c22870c8886906
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524887"
 ---
 # <a name="securing-services"></a>Zabezpieczanie usług
 Zabezpieczenia usługi Windows Communication Foundation (WCF) składa się z dwóch podstawowe wymagania: transfer zabezpieczeń i autoryzacja. (Wymaganie trzeci, inspekcja zdarzeń zabezpieczeń jest opisana w [inspekcji](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Krótko mówiąc bezpieczeństwie transferu zawiera uwierzytelniania (potwierdzenia tożsamości klienta i usługę), poufności (szyfrowanie wiadomości) i integralności (cyfrowego podpisywania naruszeniem). Autoryzacja jest kontrola dostępu do zasobów, na przykład, dzięki czemu tylko użytkownicy uprzywilejowani do odczytu pliku. Korzystając z funkcji usługi WCF, dwa podstawowe wymagania są łatwo zaimplementować.  
@@ -38,13 +38,13 @@ Zabezpieczenia usługi Windows Communication Foundation (WCF) składa się z dw�
  Infrastruktura WCF jest przeznaczony do stosowania tych mechanizmów zabezpieczeń Windows. W związku z tym Jeśli tworzysz usługę wdrożoną w sieci intranet, a których klienci są ograniczone do elementów członkowskich domeny Windows security łatwo jest zaimplementowana. Tylko uprawnieni użytkownicy mogą logować się do domeny. Po zalogowaniu użytkownicy kontrolera Kerberos umożliwia każdemu użytkownikowi na do ustanowienia bezpiecznego kontekstów za pomocą dowolnego komputera lub aplikacji. Na komputerze lokalnym można łatwo tworzyć grupy, a podczas ochrony konkretnych folderów, tych grup można przypisać uprawnienia dostępu na komputerze.  
   
 ## <a name="implementing-windows-security-on-intranet-services"></a>Implementowanie zabezpieczeń Windows w usługach sieci Intranet  
- Aby zabezpieczyć aplikację, która działa wyłącznie w domenie Windows, można użyć domyślnych ustawień zabezpieczeń albo <xref:System.ServiceModel.WSHttpBinding> lub <xref:System.ServiceModel.NetTcpBinding> powiązania. Domyślnie wszyscy użytkownicy tej samej domenie Windows dostęp do usług WCF. Ponieważ tych użytkowników zalogowanych do sieci, są one zaufane. Wiadomości między usługą i klienta są zaszyfrowane w celu zachowania poufności i podpisana w celu zapewnienia integralności. Aby uzyskać więcej informacji o tym, jak utworzyć usługę, która używa zabezpieczeń Windows, zobacz [instrukcje: Zabezpieczanie usługi za pomocą poświadczeń Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+ Aby zabezpieczyć aplikację, która działa wyłącznie w domenie Windows, można użyć domyślnych ustawień zabezpieczeń albo <xref:System.ServiceModel.WSHttpBinding> lub <xref:System.ServiceModel.NetTcpBinding> powiązania. Domyślnie wszyscy użytkownicy tej samej domenie Windows dostęp do usług WCF. Ponieważ tych użytkowników zalogowanych do sieci, są one zaufane. Wiadomości między usługą i klienta są zaszyfrowane w celu zachowania poufności i podpisana w celu zapewnienia integralności. Aby uzyskać więcej informacji o tym, jak utworzyć usługę, która używa zabezpieczeń Windows, zobacz [jak: Zabezpieczanie usługi za pomocą poświadczeń Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>Autoryzacja przy użyciu klasy PrincipalPermissionAttribute  
- Jeśli musisz ograniczyć dostęp do zasobów na komputerze, najprostszym sposobem jest użycie <xref:System.Security.Permissions.PrincipalPermissionAttribute> klasy. Ten atrybut pozwala ograniczyć wywoływanie operacji usługi przez wymaganie użytkownika znajdować się w określonej grupie Windows lub roli lub do określonego użytkownika. Aby uzyskać więcej informacji, zobacz [instrukcje: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
+ Jeśli musisz ograniczyć dostęp do zasobów na komputerze, najprostszym sposobem jest użycie <xref:System.Security.Permissions.PrincipalPermissionAttribute> klasy. Ten atrybut pozwala ograniczyć wywoływanie operacji usługi przez wymaganie użytkownika znajdować się w określonej grupie Windows lub roli lub do określonego użytkownika. Aby uzyskać więcej informacji, zobacz [jak: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
   
 ### <a name="impersonation"></a>Personifikacja  
- Personifikacja jest inny mechanizm, który służy do kontrolowania dostępu do zasobów. Domyślnie usługa hostowanych przez usługi IIS będzie uruchamiana z tożsamością konto ASPNET. Konto ASPNET dostęp tylko do zasobów, dla których ma uprawnienia. Jednak jest możliwe ustawienie listy ACL dla folderu, aby wykluczyć ASPNET konta usługi, ale w niektórych innych tożsamości dostępu do folderu. Pytanie, następnie staje się jak zezwalają na dostęp do folderu, jeśli konto ASPNET nie jest dozwolone w tym celu. Odpowiedź polega na użyciu personifikacji, według której usługa jest dozwolone użycie poświadczeń klienta w celu uzyskania dostępu do określonego zasobu. Innym przykładem jest podczas uzyskiwania dostępu do bazy danych SQL Server, do którego tylko niektórzy użytkownicy mają uprawnienia. Aby uzyskać więcej informacji na temat Korzystanie z personifikacji, zobacz [instrukcje: Personifikowanie klienta w usłudze](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) i [delegowanie i personifikacja](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Personifikacja jest inny mechanizm, który służy do kontrolowania dostępu do zasobów. Domyślnie usługa hostowanych przez usługi IIS będzie uruchamiana z tożsamością konto ASPNET. Konto ASPNET dostęp tylko do zasobów, dla których ma uprawnienia. Jednak jest możliwe ustawienie listy ACL dla folderu, aby wykluczyć ASPNET konta usługi, ale w niektórych innych tożsamości dostępu do folderu. Pytanie, następnie staje się jak zezwalają na dostęp do folderu, jeśli konto ASPNET nie jest dozwolone w tym celu. Odpowiedź polega na użyciu personifikacji, według której usługa jest dozwolone użycie poświadczeń klienta w celu uzyskania dostępu do określonego zasobu. Innym przykładem jest podczas uzyskiwania dostępu do bazy danych SQL Server, do którego tylko niektórzy użytkownicy mają uprawnienia. Aby uzyskać więcej informacji na temat Korzystanie z personifikacji, zobacz [jak: Personifikowanie klienta w usłudze](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) i [delegowanie i personifikacja](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="security-on-the-internet"></a>Zabezpieczenia w Internecie  
  Zabezpieczenia w Internecie składa się z takie same wymagania dotyczące bezpieczeństwa w sieci intranet. Usługa musi przedstawić swoje poświadczenia, aby udowodnić, że jego autentyczności, a klienci muszą potwierdzić swoją tożsamość w usłudze. Gdy klient tożsamość jest sprawdzana, usługi można kontrolować jak szeroki dostęp klient ma do zasobów. Ze względu na charakter heterogenicznych Internet, przedstawionych poświadczeń różnią się od tych używanych w domenie Windows. Natomiast kontrolerem Kerberos obsługuje uwierzytelnianie użytkowników w domenie z biletów dla poświadczeń w Internecie, usług i klientów opierają się na jednym z kilka różnych sposobów, aby przedstawić poświadczeń. Celem tego tematu jest jednak przedstawić typowe podejście, które pozwala na tworzenie usługi WCF, który jest dostępny w Internecie.  
@@ -65,7 +65,7 @@ Zabezpieczenia usługi Windows Communication Foundation (WCF) składa się z dw�
   
  Trzeci trybu, który łączy semantykę oba tryby główne, jest *transportu z trybem poświadczeń komunikatu*.  
   
- Tryb zabezpieczeń określa, jak są zabezpieczone wiadomości, a każdy ma zalety i wady, co zostało opisane poniżej. Aby uzyskać więcej informacji na temat ustawiania trybu zabezpieczeń, zobacz [porady: Ustawianie trybu zabezpieczeń](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+ Tryb zabezpieczeń określa, jak są zabezpieczone wiadomości, a każdy ma zalety i wady, co zostało opisane poniżej. Aby uzyskać więcej informacji na temat ustawiania trybu zabezpieczeń, zobacz [jak: Ustawianie trybu zabezpieczeń](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 #### <a name="transport-mode"></a>Tryb transportu  
  Istnieje kilka warstw między siecią i aplikacji. Jednym z nich jest *transportu* warstwy *,* której zarządza przesyłaniem komunikatów między punktami końcowymi. W celu istnieje, jest tylko wymagane, że rozumiesz, że WCF używa protokołów transportowych kilka, z których każdy można zabezpieczyć przesyłanie wiadomości. (Aby uzyskać więcej informacji na temat transportów zobacz [transportów](../../../docs/framework/wcf/feature-details/transports.md).)  
@@ -85,34 +85,34 @@ Zabezpieczenia usługi Windows Communication Foundation (WCF) składa się z dw�
   
  W przypadku tworzenia usługi wymagającej uwierzytelnienia klienta, wybór typu poświadczeń klienta zależy od transportu i tryb. Na przykład za pomocą protokołu HTTP i Wybieranie trybu transportu zapewnia kilka opcji, takich jak podstawowe, szyfrowane i inne. (Aby uzyskać więcej informacji o tych poświadczeń typów, zobacz [opis uwierzytelniania HTTP](../../../docs/framework/wcf/feature-details/understanding-http-authentication.md).)  
   
- W przypadku tworzenia usługi w domenie Windows, która będzie dostępna tylko dla innych użytkowników sieci, najprościej jest użyć jest typu poświadczeń klienta Windows. Jednak może być również konieczne świadczenia usług przy użyciu certyfikatu. Jest to pokazane w [porady: Określanie wartości poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ W przypadku tworzenia usługi w domenie Windows, która będzie dostępna tylko dla innych użytkowników sieci, najprościej jest użyć jest typu poświadczeń klienta Windows. Jednak może być również konieczne świadczenia usług przy użyciu certyfikatu. Jest to pokazane w [jak: Określanie wartości poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 #### <a name="credential-values"></a>Wartości poświadczeń  
  A *poświadczeń wartość* jest rzeczywiste poświadczenia używane przez usługę. Po określeniu typu poświadczeń, również może być konieczne skonfigurowanie usługi przy użyciu rzeczywistego poświadczeń. Jeśli wybrano Windows (i usługa zostanie uruchomiona w domenie Windows), nie można określić wartość rzeczywiste poświadczenia.  
   
 ## <a name="identity"></a>Tożsamość  
- W programie WCF termin *tożsamości* ma różne znaczenie do serwera i klienta. Krótko mówiąc, po którym jest uruchomiona usługa, tożsamość jest przypisana do kontekstu zabezpieczeń po uwierzytelnieniu. Aby wyświetlić rzeczywistej tożsamości, sprawdź <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> i <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> właściwości <xref:System.ServiceModel.ServiceSecurityContext> klasy. Aby uzyskać więcej informacji, zobacz [instrukcje: badanie kontekstu zabezpieczeń](../../../docs/framework/wcf/how-to-examine-the-security-context.md).  
+ W programie WCF termin *tożsamości* ma różne znaczenie do serwera i klienta. Krótko mówiąc, po którym jest uruchomiona usługa, tożsamość jest przypisana do kontekstu zabezpieczeń po uwierzytelnieniu. Aby wyświetlić rzeczywistej tożsamości, sprawdź <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> i <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> właściwości <xref:System.ServiceModel.ServiceSecurityContext> klasy. Aby uzyskać więcej informacji, zobacz [jak: Badanie kontekstu zabezpieczeń](../../../docs/framework/wcf/how-to-examine-the-security-context.md).  
   
  Z kolei na kliencie, tożsamość jest używana do weryfikacji usługi. W czasie projektowania można ustawić dewelopera klienta [ \<tożsamości >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elementu uzyskaną z usługi. W czasie wykonywania klient sprawdza wartość elementu względem rzeczywistej tożsamości usługi. Jeśli sprawdzenie zakończy się niepowodzeniem, klient przerywa komunikacji. Wartość może być główną nazwę użytkownika (UPN), jeśli usługa jest uruchamiana w ramach tożsamości danego użytkownika lub główną nazwę usługi (SPN), jeśli usługa jest uruchamiana w ramach konta komputera. Aby uzyskać więcej informacji, zobacz [uwierzytelnianie i tożsamość usług](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md). Poświadczenia mogą być również certyfikatu lub pola znalezione w certyfikacie, który identyfikuje certyfikatu.  
   
 ## <a name="protection-levels"></a>Poziomów ochrony  
- `ProtectionLevel` Właściwość występuje na kilka klas atrybutów (takie jak <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> klasy). Poziom ochrony jest wartość, która określa, czy wiadomości (lub części wiadomości) obsługujące usługi są podpisane, podpisane i szyfrowane lub wysyłane bez podpisy i szyfrowania. Aby uzyskać więcej informacji na temat właściwości, zobacz [zrozumieć poziom ochrony](../../../docs/framework/wcf/understanding-protection-level.md)i przykłady programowania, zobacz [porady: Ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md). Aby uzyskać więcej informacji na temat projektowania kontrakt usługi o `ProtectionLevel` w kontekście, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md).  
+ `ProtectionLevel` Właściwość występuje na kilka klas atrybutów (takie jak <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> klasy). Poziom ochrony jest wartość, która określa, czy wiadomości (lub części wiadomości) obsługujące usługi są podpisane, podpisane i szyfrowane lub wysyłane bez podpisy i szyfrowania. Aby uzyskać więcej informacji na temat właściwości, zobacz [zrozumieć poziom ochrony](../../../docs/framework/wcf/understanding-protection-level.md)i przykłady programowania, zobacz [jak: Ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md). Aby uzyskać więcej informacji na temat projektowania kontrakt usługi o `ProtectionLevel` w kontekście, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.ServiceContractAttribute>  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [Uwierzytelnianie i tożsamość usług](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Omówienie poziomów ochrony](../../../docs/framework/wcf/understanding-protection-level.md)  
- [Delegowanie i personifikacja](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md)  
- [Zabezpieczenia](../../../docs/framework/wcf/feature-details/security.md)  
- [Przegląd zabezpieczeń](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Instrukcje: ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [Instrukcje: zabezpieczanie usługi za pomocą poświadczeń systemu Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Instrukcje: ustawianie trybu zabezpieczeń](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [Instrukcje: określanie typu poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)  
- [Instrukcje: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Instrukcje: personifikowanie klienta w usłudze](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Instrukcje: badanie kontekstu zabezpieczeń](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.ServiceContractAttribute>
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [Uwierzytelnianie i tożsamość usług](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Omówienie poziomów ochrony](../../../docs/framework/wcf/understanding-protection-level.md)
+- [Delegowanie i personifikacja](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Zabezpieczenia](../../../docs/framework/wcf/feature-details/security.md)
+- [Przegląd zabezpieczeń](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Instrukcje: Ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Instrukcje: Zabezpieczanie usługi za pomocą poświadczeń Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Instrukcje: Ustawianie trybu zabezpieczeń](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Instrukcje: Określanie typu poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Instrukcje: Personifikowanie klienta w usłudze](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Instrukcje: Badanie kontekstu zabezpieczeń](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

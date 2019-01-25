@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822425b958422ba364a1f10903c7c312ba43fab9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ac36f6d0dba92742ea7a7acfadc194930ccd74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516450"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType — Wyliczenie
-Określa źródło obiektu być zbierane z pamięci.  
+Określa źródło obiektu zebranych elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,26 +55,26 @@ typedef enum {
 |`CorHandleStrong`|Dojście do silne odwołanie z tabeli uchwyt obiektu.|  
 |`CorHandleStrongPinning`|Dojście do przypiętych silne odwołanie z tabeli uchwyt obiektu.|  
 |`CorHandleWeakShort`|Dojście do słabe odwołanie z tabeli uchwyt obiektu.|  
-|`CorHandleWeakRefCount`|Dojście do obiektu zliczane Odwołanie słabe z tabeli uchwyt obiektu.|  
-|`CorHandleStrongRefCount`|Dojście do obiektu zliczane odwołanie z tabeli uchwyt obiektu.|  
-|`CorHandleStrongDependent`|Dojście do obiektu zależnego z tabeli uchwyt obiektu.|  
-|`CorHandleStrongAsyncPinned`|Asynchroniczny obiekt przypiętych z tabeli uchwyt obiektu.|  
-|`CorHandleStrongSizedByref`|Dojście silne podtrzymujące przybliżone zbiorowe zamknięcia wszystkich obiektów i katalogi główne obiektu w momencie kolekcji pamięci.|  
+|`CorHandleWeakRefCount`|Dojście do obiektu słabe zliczonych odwołań z tabeli uchwyt obiektu.|  
+|`CorHandleStrongRefCount`|Dojście do obiektu zliczonych odwołań z tabeli uchwyt obiektu.|  
+|`CorHandleStrongDependent`|Dojście do obiektu zależnego od tabelę uchwytów obiektu.|  
+|`CorHandleStrongAsyncPinned`|Asynchroniczny obiekt przypięte z tabelę uchwytów obiektu.|  
+|`CorHandleStrongSizedByref`|Silne dojście, który utrzymuje Przybliżony rozmiar zbiorowe zamknięcia wszystkich obiektów i korzenie obiektów w czasie kolekcji wyrzucania elementów.|  
 |`CorReferenceStack`|Odwołanie z zarządzanego stosu.|  
-|`CorReferenceFinalizer`|Odwołanie z kolejki finalizatora.|  
-|CorHandleStrongOnly|Zwraca tylko silne odwołania z tabeli dojścia. Ta wartość jest używana przez [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) tylko metody.|  
-|`CorHandleWeakOnly`|Zwraca tylko słabego odwołania z tabeli dojścia. Ta wartość jest używana przez [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) tylko metody.|  
-|`CorHandleAll`|Zwraca wszystkie odwołania z tabeli dojścia. Ta wartość jest używana przez [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) tylko metody.|  
+|`CorReferenceFinalizer`|Odwołanie; kolejka finalizatorów.|  
+|CorHandleStrongOnly|Zwróć tabelę uchwytów tylko silne odwołania. Ta wartość jest używana przez [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) tylko metody.|  
+|`CorHandleWeakOnly`|Zwróć tabelę uchwytów jedynie słabe odwołania. Ta wartość jest używana przez [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) tylko metody.|  
+|`CorHandleAll`|Zwraca wszystkie odwołania z tabeli dojście. Ta wartość jest używana przez [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) tylko metody.|  
   
 ## <a name="remarks"></a>Uwagi  
  `CorGCReferenceType` Wyliczenie jest używane w następujący sposób:  
   
--   Jako wartość `type` pole [cor_gc_reference —](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) struktury wskazuje źródło dojście lub odwołanie.  
+-   Jako wartość `type` pole [cor_gc_reference —](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) struktury, oznacza to źródło odniesienia lub uchwyt.  
   
--   Jako `types` argument [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) metody Określa typy dojść do uwzględnienia w wyliczeniu.  
+-   Jako `types` argument [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) metody Określa typy dojścia do uwzględnienia w wyliczeniu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -82,5 +82,5 @@ typedef enum {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

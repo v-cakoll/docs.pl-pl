@@ -1,21 +1,21 @@
 ---
-title: 'Porady: Tworzenie drzewa z element XmlReader (Visual Basic)'
+title: 'Instrukcje: Tworzenie drzewa na podstawie elementu XmlReader (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-ms.openlocfilehash: 34d8ae340f588307401a13948f5e1d6b22846806
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49769fea96f1ed09420f4646a21f75093ef35fce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502181"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>Porady: Tworzenie drzewa z element XmlReader (Visual Basic)
-W tym temacie przedstawiono sposób tworzenia drzewo XML bezpośrednio z <xref:System.Xml.XmlReader>. Aby utworzyć <xref:System.Xml.Linq.XElement> z <xref:System.Xml.XmlReader>, należy umieścić <xref:System.Xml.XmlReader> w węźle elementu. <xref:System.Xml.XmlReader> Pominie komentarze i przetwarzanie instrukcji, ale jeśli <xref:System.Xml.XmlReader> znajduje się w węźle tekstu, zostanie zgłoszony błąd. Aby uniknąć tych błędów, umieść zawsze <xref:System.Xml.XmlReader> w elemencie przed utworzeniem drzewo XML z <xref:System.Xml.XmlReader>.  
+# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>Instrukcje: Tworzenie drzewa na podstawie elementu XmlReader (Visual Basic)
+W tym temacie przedstawiono sposób tworzenia drzewa XML bezpośrednio z <xref:System.Xml.XmlReader>. Aby utworzyć <xref:System.Xml.Linq.XElement> z <xref:System.Xml.XmlReader>, należy umieścić <xref:System.Xml.XmlReader> węzeł elementu. <xref:System.Xml.XmlReader> Pozwoli na pominięcie komentarze i przetwarzania instrukcji, ale jeśli <xref:System.Xml.XmlReader> znajduje się w węźle tekst, zostanie zgłoszony błąd. Aby uniknąć takich błędów, umieść zawsze <xref:System.Xml.XmlReader> w elemencie przed przystąpieniem do tworzenia drzewa XML z <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: książek (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Książki (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
- Poniższy kod tworzy `T:System.Xml.XmlReader` obiektu, a następnie odczyty węzłów aż do znalezienia pierwszy węzeł elementu. Następnie ładuje <xref:System.Xml.Linq.XElement> obiektu.  
+ Poniższy kod tworzy `T:System.Xml.XmlReader` obiektu, a następnie odczytuje węzłów do momentu znalezienia pierwszego węzła elementu. Następnie ładuje <xref:System.Xml.Linq.XElement> obiektu.  
   
 ```vb  
 Dim r As XmlReader = XmlReader.Create("books.xml")  
@@ -52,5 +52,5 @@ Console.WriteLine(e)
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Analiza kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Analizowanie kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

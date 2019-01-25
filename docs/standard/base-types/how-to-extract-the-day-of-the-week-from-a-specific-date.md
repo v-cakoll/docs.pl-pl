@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wyodrębnianie dnia tygodnia z określonej daty'
+title: 'Instrukcje: Wyodrębnianie dnia tygodnia z określonej daty'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58676b1726496a33496b10bbd3befba82aea4434
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537975"
 ---
-# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Porady: wyodrębnianie dnia tygodnia z określonej daty
+# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Instrukcje: Wyodrębnianie dnia tygodnia z określonej daty
 .NET Framework ułatwia ustalenie porządkowe dzień tygodnia dla określonej daty i wyświetlić nazwę zlokalizowanej dzień tygodnia dla określonej daty. Wartość wyliczana, który wskazuje dzień tygodnia odpowiadający określonej daty jest dostępne z <xref:System.DateTime.DayOfWeek%2A> lub <xref:System.DateTimeOffset.DayOfWeek%2A> właściwości. Pobieranie nazwy dnia tygodnia jest operacją formatowania, które mogą być wykonywane przez wywołanie metody formatowania, takie jak wartości daty i godziny `ToString` metody lub <xref:System.String.Format%2A?displayProperty=nameWithType> metody. W tym temacie przedstawiono sposób wykonywania tych operacji formatowania.  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>Aby wyodrębnić liczbę określającą dzień tygodnia z określonej daty  
@@ -102,6 +102,6 @@ ms.locfileid: "43872348"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

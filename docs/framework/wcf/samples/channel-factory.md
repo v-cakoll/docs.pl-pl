@@ -2,12 +2,12 @@
 title: Fabryka kanałów
 ms.date: 03/30/2017
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-ms.openlocfilehash: 6bf0668c6b846671db12dc20465ee70137d70b35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6b9194e4cdfd60ea34160bf24ba571f29a83dedf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546666"
 ---
 # <a name="channel-factory"></a>Fabryka kanałów
 Niniejszy przykład pokazuje, jak utworzyć aplikację kliencką kanału o <xref:System.ServiceModel.ChannelFactory> klasy zamiast wygenerowanego klienta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora.  
@@ -81,4 +81,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ChannelFactory`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

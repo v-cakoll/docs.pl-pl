@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-ms.openlocfilehash: 6309f312ed05f48e65b19d8827322071cad1f6de
-ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
+ms.openlocfilehash: d55bd991587016aee48a522b69fdbdb5d4041512
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42751928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530830"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Odczytywanie z oraz zapisywanie do rejestru za pomocą przestrzeni nazw Microsoft.Win32 (Visual Basic)
 Mimo że `My.Computer.Registry` powinna obejmować potrzeb podstawowe, gdy Programowanie w odniesieniu do rejestru, można również użyć <xref:Microsoft.Win32.Registry> i <xref:Microsoft.Win32.RegistryKey> klas w <xref:Microsoft.Win32> przestrzeń nazw [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
@@ -39,10 +39,10 @@ Mimo że `My.Computer.Registry` powinna obejmować potrzeb podstawowe, gdy Progr
   
  [!code-vb[VbResourceTasks#21](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_2.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.SystemException>  
- <xref:System.ApplicationException>  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- [Try...Catch...Finally, instrukcja](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Odczytywanie z rejestru i zapisywanie w nim](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
- [Bezpieczeństwo i rejestr](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.SystemException>
+- <xref:System.ApplicationException>
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
+- [Try...Catch...Finally, instrukcja](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Odczytywanie z rejestru i zapisywanie w nim](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [Bezpieczeństwo i rejestr](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)

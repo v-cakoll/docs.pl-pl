@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 414bc1bbd3578d0707e35fa70fe196b504af9942
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c625aec5b4937ec232318e62a95a612b0e8a6cd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624408"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess — Metoda
 Pobiera [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) wystąpienia, który reprezentuje proces o określonym identyfikatorze.  
@@ -41,13 +41,13 @@ HRESULT GetProcess(
  [in] Identyfikator procesu.  
   
  `ppProcess`  
- [out] Wskaźnik do adresu `ICorPublishProcess` wystąpienia, który reprezentuje procesu.  
+ [out] Wskaźnik na adres `ICorPublishProcess` wystąpienia, który reprezentuje proces.  
   
 ## <a name="remarks"></a>Uwagi  
  `GetProcess` kończy się niepowodzeniem, jeśli proces nie istnieje lub nie jest zarządzany proces, który może być debugowany przez bieżącego użytkownika.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorPub.idl, CorPub.h  
   
@@ -55,5 +55,5 @@ HRESULT GetProcess(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorPublish, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorPublish, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

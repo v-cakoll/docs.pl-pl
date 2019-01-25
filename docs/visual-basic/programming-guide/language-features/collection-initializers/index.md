@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: c22599f50ac071245a1381d267f3f7cb66806174
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4183d974dd39caf0ca8a14ff98ab5652c0375906
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991626"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691414"
 ---
 # <a name="collection-initializers-visual-basic"></a>Inicjatory kolekcji (Visual Basic)
 *Inicjatory kolekcji* zapewniają skróconą składnię, która umożliwia tworzenie kolekcji i wypełnianie jej początkowy zestaw wartości. Inicjatory kolekcji są przydatne, gdy tworzysz kolekcję z zestawu znane wartości, na przykład listę opcji menu lub kategorii, początkowy zestaw wartości liczbowych, statycznej listy ciągów, takich jak dzień lub miesiąc nazwy lub lokalizacje geograficzne, takich jak Lista stanów, który służy do sprawdzania poprawności.  
@@ -54,7 +54,7 @@ ms.locfileid: "45991626"
   
  [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]  
   
- Jeśli kolekcja zawiera `Add` metodę, która ma następujące parametry, które odpowiadają Konstruktor `Customer` obiektu, można zagnieżdżać wartości parametrów `Add` metodę w ramach inicjatory kolekcji, zgodnie z opisem w następnej sekcji. Jeśli kolekcja nie ma takich `Add` metody, możesz utworzyć je jako metodę rozszerzenia. Aby uzyskać przykład sposobu tworzenia `Add` metodę jako metodę rozszerzenia dla kolekcji, zobacz [jak: tworzenie, Dodaj rozszerzenie metody używane przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Na przykład sposobu tworzenia niestandardowej kolekcji, która może służyć za pomocą inicjatora kolekcji zobacz [porady: tworzenie kolekcji wykorzystywanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
+ Jeśli kolekcja zawiera `Add` metodę, która ma następujące parametry, które odpowiadają Konstruktor `Customer` obiektu, można zagnieżdżać wartości parametrów `Add` metodę w ramach inicjatory kolekcji, zgodnie z opisem w następnej sekcji. Jeśli kolekcja nie ma takich `Add` metody, możesz utworzyć je jako metodę rozszerzenia. Aby uzyskać przykład sposobu tworzenia `Add` metodę jako metodę rozszerzenia dla kolekcji, zobacz [jak: Utwórz Dodawanie metody rozszerzania wykorzystywanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Na przykład sposobu tworzenia niestandardowej kolekcji, która może służyć za pomocą inicjatora kolekcji zobacz [jak: Tworzenie kolekcji wykorzystywanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
   
 ## <a name="nesting-collection-initializers"></a>Zagnieżdżanie inicjatory kolekcji  
  Można zagnieżdżać wartości w ramach inicjatora kolekcji, aby zidentyfikować określonego przeciążenia `Add` metody dla kolekcji, która jest tworzona. Wartość przekazywana do `Add` metody musi być rozdzielane przecinkami i ujęte w nawiasy klamrowe (`{}`), tak samo, jak w inicjatorze tablicy literału lub kolekcji.  
@@ -73,18 +73,18 @@ ms.locfileid: "45991626"
   
 |Tytuł|Opis|  
 |---|---|  
-|[Instrukcje: tworzenie i dodawanie metody rozszerzenia używanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Pokazuje, jak utworzyć metodę rozszerzenia o nazwie `Add` można wypełnić kolekcję z wartościami z inicjatora kolekcji.|  
-|[Instrukcje: tworzenie kolekcji używanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Pokazuje, jak włączyć użycie inicjatora kolekcji, w tym `Add` metody w klasie kolekcji, która implementuje `IEnumerable`.|  
+|[Instrukcje: Utwórz Dodawanie metody rozszerzania wykorzystywanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Pokazuje, jak utworzyć metodę rozszerzenia o nazwie `Add` można wypełnić kolekcję z wartościami z inicjatora kolekcji.|  
+|[Instrukcje: Tworzenie kolekcji wykorzystywanej przez inicjator kolekcji](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Pokazuje, jak włączyć użycie inicjatora kolekcji, w tym `Add` metody w klasie kolekcji, która implementuje `IEnumerable`.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kolekcje](../../../../visual-basic/programming-guide/concepts/collections.md)  
-- [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
-- [Inicjatory obiektów: typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md)  
-- [Właściwości zaimplementowane automatycznie](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
-- [Porady: inicjowanie zmiennej tablicy w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)  
-- [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [Instrukcje: tworzenie listy elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Kolekcje](../../../../visual-basic/programming-guide/concepts/collections.md)
+- [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [New, operator](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Właściwości zaimplementowane automatycznie](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [Instrukcje: Inicjowanie zmiennej tablicy w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Instrukcje: Tworzenie listy elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: dd5618bd0533f885a6aef8229b2d8cb1bc34c237
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2c33cb9ba0479df5e69b6979a789253f9fae565
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597336"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Wyrażenie jest wartością i dlatego nie może być elementem docelowym przypisania
-Instrukcja podejmuje próbę przypisania wartości dla wyrażenia. Można przypisać wartość tylko do zapisu zmienną, właściwością lub element tablicy w czasie wykonywania. Poniższy przykład przedstawia, jak ten błąd może wystąpić.  
+Instrukcja próbuje przypisać wartość wyrażenia. W czasie wykonywania, można przypisać wartości tylko do zapisu zmiennej, właściwości lub elementu tablicy. W poniższym przykładzie pokazano, jak ten błąd może wystąpić.  
   
 ```  
 Dim yesterday As Integer  
@@ -26,9 +26,9 @@ maximum = 50
 ' The preceding line is an ERROR because maximum is declared ReadOnly.  
 ```  
   
- Podobne przykłady można zastosować do właściwości i elementów tablicy.  
+ Podobne przykłady można zastosować do właściwości i elementy tablicy.  
   
- **Pośredni dostęp.** Pośredni dostęp do typu wartości można również generować tego błędu. Należy wziąć pod uwagę poniższy przykład kodu, który próbuje ustawić wartość <xref:System.Drawing.Point> uzyskując pośredni przez <xref:System.Windows.Forms.Control.Location%2A>.  
+ **Bezpośredni dostęp.** Pośredni dostęp za pośrednictwem typu wartości można również wygenerować ten błąd. Należy wziąć pod uwagę poniższy przykład kodu, który próbuje ustawić wartość <xref:System.Drawing.Point> uzyskując pośrednio za pomocą <xref:System.Windows.Forms.Control.Location%2A>.  
   
 ```  
 ' Assume this code runs inside Form1.  
@@ -38,7 +38,7 @@ exitButton.Location.X = 140
 ' The preceding line is an ERROR because of no storage for Location.  
 ```  
   
- Ostatnią instrukcją w poprzednim przykładzie nie powiedzie się, ponieważ spowoduje to utworzenie tymczasowego alokacji dla <xref:System.Drawing.Point> zwrócony przez strukturę <xref:System.Windows.Forms.Control.Location%2A> właściwości. Struktura jest typem wartości, a struktura tymczasowe nie są zachowywane po wykonaniu instrukcji. Problem został rozwiązany przez deklarowanie i użycie zmiennej <xref:System.Windows.Forms.Control.Location%2A>, co powoduje stałej alokacji dla <xref:System.Drawing.Point> struktury. Poniższy przykład przedstawia kod, który można zastąpić ostatniej instrukcji w poprzednim przykładzie.  
+ Ostatnią instrukcją poprzedni przykład nie powiedzie się, ponieważ powoduje to utworzenie tymczasowego alokacji dla <xref:System.Drawing.Point> zwracany przez strukturę <xref:System.Windows.Forms.Control.Location%2A> właściwości. Struktura jest typem wartości, a struktura tymczasowe nie są zachowywane po uruchomieniu instrukcji. Problem został rozwiązany przez deklarowanie i użycie zmiennej dla <xref:System.Windows.Forms.Control.Location%2A>, co powoduje utworzenie bardziej trwałych alokacji dla <xref:System.Drawing.Point> struktury. Poniższy przykład pokazuje kod, który można zastąpić ostatnią instrukcję w poprzednim przykładzie.  
   
 ```  
 Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)  
@@ -49,15 +49,15 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Jeśli instrukcja przypisuje wartość do wyrażenia, Zastąp wyrażenie pojedynczą zmienną zapisywalny, właściwość lub element tablicy.  
+-   Jeśli instrukcja przypisuje wartość do wyrażenia, Zamień wyrażenia pojedynczej zmiennej zapisywalny, właściwości lub elementu tablicy.  
   
--   Jeśli instrukcja dokonuje bezpośredni dostęp do typu wartość (zazwyczaj struktury), Utwórz zmienną do przechowywania wartości typu.  
+-   Jeśli instrukcja sprawia, że pośredni dostęp za pośrednictwem typu wartości (zwykle struktura), należy utworzyć zmienną typu wartości.  
   
--   Przypisz odpowiednie struktury (lub innego typu wartość) do zmiennej.  
+-   Przypisz odpowiednią strukturę (lub innego typu wartości) do zmiennej.  
   
 -   Umożliwia dostęp do właściwości, aby przypisać wartość zmiennej.  
   
-## <a name="see-also"></a>Zobacz też  
- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)  
- [Rozwiązywanie problemów z procedurami](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+## <a name="see-also"></a>Zobacz także
+- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)
+- [Rozwiązywanie problemów z procedurami](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)

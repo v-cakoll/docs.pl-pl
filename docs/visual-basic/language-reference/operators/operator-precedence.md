@@ -14,39 +14,39 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: 211a710f4dba2310ea1ae74decdb1926ce612a62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a87407fe863569ff961f4a2dc320e73719ed4d9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601769"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Kolejność wykonywania działań (Visual Basic)
-Gdy występują kilka operacji w wyrażeniu, każda część jest oceniane i rozpoznać w ustalonej kolejności o nazwie *kolejność*.  
+Po wystąpieniu kilka operacji w wyrażeniach, każda część jest obliczane i rozwiązane w określonej kolejności, o nazwie *pierwszeństwo operatorów*.  
   
 ## <a name="precedence-rules"></a>Reguły pierwszeństwa  
- Jeśli wyrażenia zawierają operatory z więcej niż jedną kategorię, są one oceniane zgodnie z następującymi zasadami:  
+ Gdy wyrażeń zawiera operatory z więcej niż jednej kategorii, ocenia się je zgodnie z następującymi zasadami:  
   
--   Operatory arytmetyczne i łączenia mają kolejność pierwszeństwa opisane w poniższej sekcji, a wszystkie mają wyższy priorytet niż porównanie logiczne i operatory bitowe.  
+-   Operatory arytmetyczne i łączenia mają kolejność pierwszeństwa, opisane w poniższej sekcji, a wszystkie mają wyższy priorytet niż porównania, logiczne i bitowe operatory.  
   
--   Wszystkie operatory porównania ma taki sam priorytet i wszystkie mają wyższy priorytet niż operatory logiczne i bitowe, ale niższy priorytet niż operatory arytmetyczne i łączenia.  
+-   Wszystkie operatory porównania mają równe pierwszeństwo, a wszystkie mają wyższy priorytet niż operatory logiczne i bitowe, ale niższy priorytet niż operatory arytmetyczne i łączenia.  
   
--   Operatory logiczne i bitowe mają kolejność pierwszeństwa opisane w poniższej sekcji, a wszystkie mieć niższego pierwszeństwa niż arytmetyczne, łączenie i operatory porównania.  
+-   Operatory logiczne i bitowe mają kolejność pierwszeństwa, opisane w poniższej sekcji, a wszystkie mają niższy priorytet niż operacje arytmetyczne, łączenie i operatory porównania.  
   
--   Operatory z równy priorytet są wykonywane od lewej do prawej w kolejności, w jakiej występują w wyrażeniu.  
+-   Operatory o równe pierwszeństwo, są obliczane od lewej do prawej w kolejności, w jakiej występują w wyrażeniu.  
   
 ## <a name="precedence-order"></a>Kolejność pierwszeństwa  
- Operatory są oceniane w następującej kolejności:  
+ Operatory są obliczane w następującej kolejności:  
   
 ### <a name="await-operator"></a>Await — Operator  
- await  
+ Operator await  
   
-### <a name="arithmetic-and-concatenation-operators"></a>Operacje arytmetyczne i operatory łączenia  
- Zapis wykładniczy (`^`)  
+### <a name="arithmetic-and-concatenation-operators"></a>Operacje arytmetyczne i Concatenation — operatory  
+ Potęgowania (`^`)  
   
  Jednoargumentowy tożsamości i negacji (`+`, `–`)  
   
- Mnożenia i dzielenia liczb zmiennoprzecinkowych (`*`, `/`)  
+ Mnożenie i dzielenie zmiennoprzecinkowe (`*`, `/`)  
   
  Dzielenie liczby całkowitej (`\`)  
   
@@ -56,7 +56,7 @@ Gdy występują kilka operacji w wyrażeniu, każda część jest oceniane i roz
   
  Łączenie ciągów (`&`)  
   
- Przesunięcia bitowego arytmetyczne (`<<`, `>>`)  
+ Przesunięcie bitu arytmetyczne (`<<`, `>>`)  
   
 ### <a name="comparison-operators"></a>Operatory porównania  
  Wszystkie operatory porównania (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)  
@@ -66,19 +66,19 @@ Gdy występują kilka operacji w wyrażeniu, każda część jest oceniane i roz
   
  Razem (`And`, `AndAlso`)  
   
- Wraz z wartościami granicznymi rozłączenia (`Or`, `OrElse`)  
+ Włączne rozłączenia (`Or`, `OrElse`)  
   
- Wyłączny rozłączenia (`Xor`)  
+ Wyłączne rozłączenia (`Xor`)  
   
 ### <a name="comments"></a>Komentarze  
  `=` Operator jest tylko operator porównania, nie operator przypisania.  
   
- Operator łączenia ciągu (`&`) nie jest operator arytmetyczny, ale w pierwszeństwo jest zgrupowana za pomocą operatorów arytmetycznych.  
+ Operator konkatenacji ciągów (`&`) nie jest operator arytmetyczny, ale w pierwszeństwo jest zgrupowany z operatorów arytmetycznych.  
   
- `Is` i `IsNot` operatory są operatory porównania odwołanie do obiektu. Porównuje wartości dwa obiekty; Sprawdź one tylko do określenia, czy dwie zmienne obiektu odwoływać się do tego samego wystąpienia obiektu.  
+ `Is` i `IsNot` operatory są operatory porównania odwołanie do obiektu. Nie porównują wartości dwóch obiektów; Sprawdź ich tylko w celu określenia, czy dwie zmienne do obiektu odnoszą się do tego samego wystąpienia obiektu.  
   
 ## <a name="associativity"></a>Łączność  
- Gdy operatory równy priorytet występować razem w wyrażeniu, na przykład mnożenia i dzielenia, kompilator oblicza każdej operacji zgodnie z jego napotka od lewej do prawej. Ilustruje to poniższy przykład.  
+ Gdy operatory równy priorytet pojawiają się razem w wyrażeniu, na przykład mnożenia i dzielenia, kompilator ocenia każdej operacji, jak je napotka od lewej do prawej. Ilustruje to poniższy przykład.  
   
 ```  
 Dim n1 As Integer = 96 / 8 / 4  
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)  
 ```  
   
- Pierwsze wyrażenie daje w wyniku dzielenia 96 / 8 (co powoduje 12), a następnie dzielenia 12 / 4, co prowadzi do trzech. Ponieważ kompilator daje w wyniku operacji `n1` od lewej do prawej, oceny jest taki sam jawnie określić kolejności `n2`. Zarówno `n1` i `n2` dawać wynik trzech. Z kolei `n3` ma wynik 48, ponieważ nawiasy wymusić kompilator, aby ocenić 8 / 4 pierwszy.  
+ Pierwsze wyrażenie daje w wyniku dzielenia 96 / 8 (co powoduje 12), a następnie dzielenia 12 / 4, co skutkuje trzy. Ponieważ kompilator ocenia operacjami dotyczącymi `n1` od lewej do prawej, ocena jest taka sama podczas tej kolejności jest wyraźnie wskazane dla `n2`. Zarówno `n1` i `n2` ma trzy wyniku. Z kolei `n3` ma wynik 48, ponieważ nawiasy wymuszają kompilator, aby ocenić 8 / 4 pierwszy.  
   
- Ze względu na to zachowanie operatory są określane jako *pozostałych asocjacyjnej* w języku Visual Basic.  
+ Ze względu na to zachowanie operatorów są określane jako *łączność do lewej strony* w języku Visual Basic.  
   
-## <a name="overriding-precedence-and-associativity"></a>Zastępowanie priorytet i łączność  
- Aby wymusić niektórych części wyrażenia ma zostać obliczone przed pozostałymi można Użyj nawiasów. To zastąpienie jednocześnie kolejność pierwszeństwa, jak i kojarzenie po lewej stronie. Visual Basic zawsze wykonuje operacje, które są ujęte w nawiasy przed elementami poza. Jednak w obrębie nawiasów przechowuje zwykłej priorytet i łączność, chyba że Użyj nawiasów w nawiasach. Ilustruje to poniższy przykład.  
+## <a name="overriding-precedence-and-associativity"></a>Zastępowanie pierwszeństwo i łączność  
+ Aby wymusić niektórych części wyrażenie ma zostać obliczone przed pozostałymi, można użyć nawiasów. To można zastąpić, zarówno w kolejność pierwszeństwa, jak i kojarzenie po lewej stronie. Visual Basic zawsze wykonuje operacje, które są ujęte w nawiasy przed osób spoza. Jednak w obrębie nawiasów utrzymuje zwykłych pierwszeństwo i łączność, chyba że używasz nawiasów w nawiasach. Ilustruje to poniższy przykład.  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  
@@ -111,12 +111,12 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [=, operator](../../../visual-basic/language-reference/operators/assignment-operator.md)  
- [Is, operator](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot, operator](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Like, operator](../../../visual-basic/language-reference/operators/like-operator.md)  
- [TypeOf, operator](../../../visual-basic/language-reference/operators/typeof-operator.md)  
- [Await, operator](../../../visual-basic/language-reference/operators/await-operator.md)  
- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>Zobacz także
+- [=, operator](../../../visual-basic/language-reference/operators/assignment-operator.md)
+- [Is, operator](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot, operator](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Like, operator](../../../visual-basic/language-reference/operators/like-operator.md)
+- [TypeOf, operator](../../../visual-basic/language-reference/operators/typeof-operator.md)
+- [Await, operator](../../../visual-basic/language-reference/operators/await-operator.md)
+- [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

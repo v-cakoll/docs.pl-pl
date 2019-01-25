@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Pozwalanie użytkownikom na rozwiązywanie niejednoznacznych wartości czasu'
+title: 'Instrukcje: Zezwala użytkownikom na rozwiązywanie niejednoznacznych wartości czasu'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91e80f44934092007f6f842f0694789d49321446
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ae6d16bda7a2cd6f2367129b737ec79d8193ebf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502718"
 ---
-# <a name="how-to-let-users-resolve-ambiguous-times"></a>Porady: Pozwalanie użytkownikom na rozwiązywanie niejednoznacznych wartości czasu
+# <a name="how-to-let-users-resolve-ambiguous-times"></a>Instrukcje: Zezwala użytkownikom na rozwiązywanie niejednoznacznych wartości czasu
 
 Niejednoznaczny czas to czas, który mapuje do więcej niż jeden uniwersalnego czasu koordynowanego (UTC). Występuje ona, gdy czas zegara jest uwzględniany w czasie, takie jak podczas przechodzenia na strefę czasową czasu jego (czas standardowy). Podczas obsługi niejednoznaczny czas, możesz wykonać jedną z następujących czynności:
 
@@ -60,5 +60,5 @@ Ten przykład wymaga:
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
-* [Instrukcje: Rozwiązywanie niejednoznacznych wartości czasu](../../../docs/standard/datetime/resolve-ambiguous-times.md)
+- [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
+- [Instrukcje: Rozwiązywanie niejednoznacznych wartości czasu](../../../docs/standard/datetime/resolve-ambiguous-times.md)

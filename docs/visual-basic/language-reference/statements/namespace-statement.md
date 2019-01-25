@@ -12,12 +12,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 28016763b2cef2e8b8954f486bbbdb6930b5364c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e7fb55cac1de747c620ea44f320ec9185bfbd3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612154"
 ---
 # <a name="namespace-statement"></a>Namespace — Instrukcja
 Deklaruje nazwę przestrzeni nazw i powoduje, że kod źródłowy znajdujący się w deklaracji jest kompilowany w obrębie tej przestrzeni nazw.  
@@ -35,7 +35,7 @@ End Namespace
  Opcjonalna. Pozwala zdefiniować przestrzeń nazw poza główną przestrzenią nazw projektu. Zobacz [Przestrzenie nazw Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
  `name`  
- Wymagane. Unikatowa nazwa, która identyfikuje przestrzeń nazw. Musi być prawidłowym identyfikatorem języka Visual Basic. Aby uzyskać więcej informacji, zobacz [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Deklarowane nazwy elementów).  
+ Wymagana. Unikatowa nazwa, która identyfikuje przestrzeń nazw. Musi być prawidłowym identyfikatorem języka Visual Basic. Aby uzyskać więcej informacji, zobacz [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Deklarowane nazwy elementów).  
   
  `componenttypes`  
  Opcjonalna. Elementy wchodzące w skład przestrzeni nazw. Obejmują one między inymi: wyliczenia, struktury, interfejsy, klasy, moduły, delegaty i inne przestrzenie nazw.  
@@ -102,7 +102,7 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Nazwy zadeklarowanych elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Przestrzenie nazw w języku Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a>Zobacz także
+- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Nazwy zadeklarowanych elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Przestrzenie nazw w języku Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)

@@ -2,23 +2,23 @@
 title: WmiGetObjectFailed
 ms.date: 03/30/2017
 ms.assetid: 676691b5-705e-4422-8dca-c6f517964116
-ms.openlocfilehash: 8b59d5e1a16322068bc59215ee706e3a931dfe9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b31e0b3a220f5efecf378d2ab1f013ec5b9ad94
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33469794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646961"
 ---
 # <a name="wmigetobjectfailed"></a>WmiGetObjectFailed
-Identyfikator: 120  
+Id: 120  
   
- Ważność: błąd  
+ Ważność: Błąd  
   
  Kategoria: ServiceModel  
   
 ## <a name="description"></a>Opis  
- To zdarzenie oznacza, że żądanie WMI GetObject nie zostało przetworzone. Listy zdarzeń obiektu WMI, wyjątków i nazwa procesu procesu identyfikatora.  
+ To zdarzenie wskazuje, czy żądanie GetObject usługi WMI nie została przetworzona. Wyświetla zdarzenia obiektu WMI, wyjątków, nazwa procesu i procesu identyfikatora.  
   
-## <a name="see-also"></a>Zobacz też  
- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Zobacz także
+- [Rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

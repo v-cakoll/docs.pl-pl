@@ -2,12 +2,12 @@
 title: Dokument WordprocessingML ze Styles3
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 8b21c9e8be957ea2b43405a96e343cea78197f68
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1dc7f30bfdef66c31b5c262fd6d1a2c3f4365634
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603927"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Dokument WordprocessingML ze stylami
 Bardziej skomplikowanych dokumentów WordprocessingML mają akapitów, które są formatowane przy użyciu stylów.  
@@ -17,7 +17,7 @@ Bardziej skomplikowanych dokumentów WordprocessingML mają akapitów, które s�
  Podczas uzyskiwania dostępu do pakietów, ważne jest, że możesz to zrobić za pomocą relacji między części, a nie przy użyciu dowolnego ścieżki. Ten problem nie zostanie poza zakres tematyczny manipulowanie zawartością w dokumencie WordprocessingML samouczku, ale programy przykładu, które znajdują się w tym samouczku pokazują właściwe podejście.  
   
 ## <a name="a-document-that-uses-styles"></a>Dokument, który używa stylów  
- Przykład WordML przedstawiony w [kształt z dokumentów WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) tematu jest bardzo prosty. Ten dokument jest bardziej skomplikowany: ma akapitów, które są formatowane przy użyciu stylów. Najprostszym sposobem wyświetlenia, XML, który sprawia, że dokument pakietu Office Open XML jest uruchomienie [przykład, że dane wyjściowe Office Open XML części dokumentu (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
+ Przykład WordML przedstawiony w [kształt z dokumentów WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) tematu jest bardzo prosty. Ten dokument jest bardziej skomplikowany: Ma ona akapitów, które są formatowane przy użyciu stylów. Najprostszym sposobem wyświetlenia, XML, który sprawia, że dokument pakietu Office Open XML jest uruchomienie [przykład, że dane wyjściowe Office Open XML części dokumentu (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
   
  W następującym dokumencie pierwszym akapicie ma styl `Heading1`. Istnieje szereg akapitów, które mają domyślnego stylu. Dostępne są także szereg akapitów, które mają styl `Code`. Ze względu na tę złożoność względną jest bardziej interesujące dokument, można przeanalizować za pomocą LINQ to XML.  
   
@@ -137,6 +137,6 @@ Bardziej skomplikowanych dokumentów WordprocessingML mają akapitów, które s�
 </w:document>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

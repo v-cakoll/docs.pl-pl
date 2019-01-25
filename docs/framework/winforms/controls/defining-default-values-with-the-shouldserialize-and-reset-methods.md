@@ -8,26 +8,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 8d7645e8de5edee711c30bbe7edde8ba7b5b1dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23b4ddb3399c12f5bf3c387991676e7ea93b8a29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529795"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497436"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset
-`ShouldSerialize` i `Reset` są opcjonalne metody, które można podać dla właściwości, jeśli właściwość nie ma wartości domyślnej proste. Jeśli właściwość ma wartość domyślną proste, należy zastosować <xref:System.ComponentModel.DefaultValueAttribute> i zamiast tego Podaj wartość domyślną do konstruktora klasy atrybutu. Jedną z tych mechanizmów zapewnia następujące funkcje w Projektancie:  
+`ShouldSerialize` i `Reset` metodami Opcjonalnie możesz podać właściwość, jeśli właściwość nie ma wartości domyślnej proste. Jeśli właściwość ma wartość domyślną proste, należy zastosować <xref:System.ComponentModel.DefaultValueAttribute> i zamiast tego Podaj wartość domyślną do konstruktora klasy atrybutu. Jedną z tych mechanizmów zapewnia następujące funkcje w Projektancie:  
   
--   Właściwość umożliwia oznaczenia wizualne w przeglądarce właściwości, jeśli został on zmodyfikowany ze swojej wartości domyślnej.  
+-   Właściwość zawiera oznaczenie wizualne w przeglądarce właściwości, jeśli został zmieniony z wartości domyślnej.  
   
--   Użytkownik może kliknąć prawym przyciskiem myszy na właściwość i wybierz **zresetować** Aby przywrócić wartość domyślną właściwości.  
+-   Użytkownik może kliknąć prawym przyciskiem myszy we właściwości i wybierz **resetowania** można przywrócić właściwości do wartości domyślnej.  
   
--   Projektant generuje kod większą wydajność.  
+-   Projektant generuje kod bardziej wydajne.  
   
     > [!NOTE]
-    >  Zastosuj albo <xref:System.ComponentModel.DefaultValueAttribute> lub podaj `Reset` *PropertyName* i `ShouldSerialize` *PropertyName* metody. Nie należy używać jednocześnie.  
+    >  Zastosuj opcję <xref:System.ComponentModel.DefaultValueAttribute> lub podaj `Reset` *PropertyName* i `ShouldSerialize` *PropertyName* metody. Nie należy używać obu.  
   
- `Reset` *PropertyName* — metoda ustawia właściwość na wartość domyślną, jak pokazano w następującego fragmentu kodu.  
+ `Reset` *PropertyName* metoda ustawia właściwość na wartość domyślną, jak pokazano na następujący fragment kodu.  
   
 ```vb  
 Public Sub ResetMyFont()  
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  Jeśli nie ma właściwości `Reset` metody, nie jest oznaczony atrybutem <xref:System.ComponentModel.DefaultValueAttribute>i nie ma wartości domyślnej podana w jego deklaracji `Reset` opcji dla tej właściwości jest wyłączona w menu skrótów **właściwości** okna Projektant formularzy systemu Windows w programie Visual Studio.  
+>  Jeśli nie ma właściwości `Reset` metody, nie jest oznaczony atrybutem <xref:System.ComponentModel.DefaultValueAttribute>i nie ma wartości domyślnej podana w jego deklaracji `Reset` opcję dla tej właściwości jest wyłączona w menu skrótów **właściwości** okna Projektanta Windows Forms w programie Visual Studio.  
   
- Użyj projektantów, takiego jak Visual Studio `ShouldSerialize` *PropertyName* metodę, aby sprawdzić, czy właściwość zmienił się z jej wartości domyślnej i napisać kod do formularza tylko wtedy, gdy właściwość zostanie zmieniona, dzięki czemu efektywniejsze kodu Generowanie. Na przykład:  
+ Użyć projektantów, takich jak Visual Studio `ShouldSerialize` *PropertyName* metodę, aby sprawdzić, czy właściwość został zmieniony z wartości domyślnej i pisanie kodu w formularzu tylko wtedy, gdy właściwość ulegnie zmianie, co pozwala na bardziej efektywne kodu Generowanie. Na przykład:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -62,7 +62,7 @@ public bool ShouldSerializeMyFont() {
 }  
 ```  
   
- Pełny przykład kodu jest zgodna.  
+ Pełny przykład kodu poniżej.  
   
 ```vb  
 Option Explicit  
@@ -141,9 +141,9 @@ public class MyControl : Control {
 }  
 ```  
   
- W tym przypadku nawet wtedy, gdy dostęp do wartości zmiennej prywatnej `MyFont` właściwość jest `null`, nie są wyświetlane w przeglądarce właściwości `null`; zamiast tego wyświetlana <xref:System.Windows.Forms.Control.Font%2A> właściwości elementu nadrzędnego, jeśli nie jest `null`, lub wartość domyślną <xref:System.Windows.Forms.Control.Font%2A> wartość zdefiniowana w <xref:System.Windows.Forms.Control>. W związku z tym domyślna wartość `MyFont` nie wystarczy można ustawić, a <xref:System.ComponentModel.DefaultValueAttribute> nie można zastosować do tej właściwości. Zamiast tego `ShouldSerialize` i `Reset` metody musi być zaimplementowana dla `MyFont` właściwości.  
+ W tym przypadku, nawet wtedy, gdy wartość zmiennej prywatnej uzyskiwał dostęp do `MyFont` właściwość `null`, nie są wyświetlane w przeglądarce właściwości `null`; zamiast tego zostanie wyświetlony <xref:System.Windows.Forms.Control.Font%2A> właściwości elementu nadrzędnego, jeśli nie jest `null`, lub wartość domyślną <xref:System.Windows.Forms.Control.Font%2A> wartość zdefiniowana w <xref:System.Windows.Forms.Control>. Ten sposób wartością domyślną dla `MyFont` nie można po prostu ustawić i <xref:System.ComponentModel.DefaultValueAttribute> nie można zastosować do tej właściwości. Zamiast tego `ShouldSerialize` i `Reset` metody muszą zostać wdrożone dla `MyFont` właściwości.  
   
-## <a name="see-also"></a>Zobacz też  
- [Właściwości kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Definiowanie właściwości](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- [Zdarzenia zmiany właściwości](../../../../docs/framework/winforms/controls/property-changed-events.md)
+## <a name="see-also"></a>Zobacz także
+- [Właściwości kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+- [Definiowanie właściwości](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)
+- [Zdarzenia zmiany właściwości](../../../../docs/framework/winforms/controls/property-changed-events.md)

@@ -2,12 +2,12 @@
 title: Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 3cbdd5ddc6f742846542e508d1dc0165cd6fde22
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6187b3a519da2930136aab8df9451f757079c2a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535622"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (Visual Basic)
 Po dołączeniu asynchronicznego kodu w aplikacji należy wziąć pod uwagę i ewentualnie zapobiec współużytkowaniu wątkowości, która odwołuje się do ponownego wprowadzania operacji asynchronicznej, zanim została ukończona. Jeśli nie zidentyfikujesz i obsłużysz możliwości współużytkowania wątkowości, może to spowodować nieoczekiwane wyniki.  
@@ -104,7 +104,7 @@ TOTAL bytes returned:  890591
 ###  <a name="BKMK_DisableTheStartButton"></a> Wyłącz przycisk Start  
  Możesz zablokować **Start** przycisk uruchomionej operacji przez wyłączenie przycisku u góry `StartButton_Click` programu obsługi zdarzeń. Następnie możesz ponownie włączyć przycisk od wewnątrz `Finally` blokować po zakończeniu operacji, dzięki czemu użytkownicy mogą uruchamiać aplikację ponownie.  
   
- Poniższy kod przedstawia te zmiany, które są oznaczone gwiazdkami. Zmiany można dodać do kodu na końcu tego tematu, można również pobrać gotową aplikację z [próbki asynchroniczne: współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa projektu to DisableStartButton.  
+ Poniższy kod przedstawia te zmiany, które są oznaczone gwiazdkami. Zmiany można dodać do kodu na końcu tego tematu, można również pobrać gotową aplikację z [próbki asynchroniczne: Współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa projektu to DisableStartButton.  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -134,7 +134,7 @@ End Sub
   
  Aby uzyskać więcej informacji dotyczących anulowania, zobacz [aplikacji asynchronicznej Fine-Tuning (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Aby skonfigurować ten scenariusz, należy wprowadzić następujące zmiany do kodu podstawowego, który znajduje się w [recenzowanie i uruchamianie aplikacji przykładowych](#BKMD_SettingUpTheExample). Możesz również pobrać gotową aplikację z [próbki asynchroniczne: współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa tego projektu to CancelAndRestart.  
+ Aby skonfigurować ten scenariusz, należy wprowadzić następujące zmiany do kodu podstawowego, który znajduje się w [recenzowanie i uruchamianie aplikacji przykładowych](#BKMD_SettingUpTheExample). Możesz również pobrać gotową aplikację z [próbki asynchroniczne: Współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa tego projektu to CancelAndRestart.  
   
 1.  Zadeklaruj <xref:System.Threading.CancellationTokenSource> zmiennej `cts`, który znajduje się w zakresie dla wszystkich metod.  
   
@@ -535,7 +535,7 @@ End Function
   
 ###  <a name="BKMK_DownloadingTheApp"></a> Pobieranie aplikacji  
   
-1.  Pobierz skompresowany plik z [próbki asynchroniczne: współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
+1.  Pobierz skompresowany plik z [próbki asynchroniczne: Współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
   
 2.  Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
   
@@ -678,5 +678,5 @@ End Function
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

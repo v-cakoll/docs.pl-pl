@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 811a75c9f0350eefc98c32181e859b7583ff74ef
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 502e118a67e157ce7756efdece866564fddc6ab7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44186295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611494"
 ---
 # <a name="scheduling-threads"></a>Harmonogram wątków
 
@@ -23,5 +23,5 @@ Każdy wątek ma przypisany priorytet wątku. Utworzone w ramach środowiska uru
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Używanie wątków i wątkowości](../../../docs/standard/threading/using-threads-and-threading.md)  
+- [Używanie wątków i wątkowości](../../../docs/standard/threading/using-threads-and-threading.md)
 - [Zarządzana i niezarządzana wątkowość w systemie Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)

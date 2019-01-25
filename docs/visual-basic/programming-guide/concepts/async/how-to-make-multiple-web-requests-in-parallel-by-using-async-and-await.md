@@ -1,15 +1,15 @@
 ---
-title: 'Porady: wiele żądań sieci Web równolegle za pomocą Async i Await (Visual Basic)'
+title: 'Instrukcje: Wiele żądań sieci Web równolegle za pomocą Async i Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 44531ef643df6402ad318957c0a2bdc058c5bcb0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 526ef4c14649c1840b8c310af45de9b5095909de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495955"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Porady: wiele żądań sieci Web równolegle za pomocą Async i Await (Visual Basic)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Instrukcje: Wiele żądań sieci Web równolegle za pomocą Async i Await (Visual Basic)
 W metodzie asynchronicznej zadania są uruchamiane po ich utworzeniu. [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator jest stosowany do zadania w tym punkcie metody, których nie można kontynuować przetwarzania przed zakończeniem zadania. Często zadanie jest oczekiwane, zaraz po jego utworzeniu, co ilustruje poniższy przykład.  
   
 ```vb  
@@ -38,13 +38,13 @@ Dim result = Await myTask
 > [!NOTE]
 >  Aby wykonać ten projekt, jest posiadanie programu Visual Studio 2012 lub nowszym i .NET Framework 4.5 lub nowszy jest zainstalowany na tym komputerze.  
   
- Inny przykład, który rozpoczyna się wiele zadań, w tym samym czasie, zobacz [porady: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Inny przykład, który rozpoczyna się wiele zadań, w tym samym czasie, zobacz [jak: Rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
  Możesz pobrać kod dla tego przykładu z [Developer Code Samples](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
 ### <a name="to-set-up-the-project"></a>Aby skonfigurować projekt  
   
-1.  Aby skonfigurować aplikację programu WPF, wykonaj następujące czynności. Można znaleźć szczegółowe instrukcje tych kroków w [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Aby skonfigurować aplikację programu WPF, wykonaj następujące czynności. Można znaleźć szczegółowe instrukcje tych kroków w [instruktażu: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Tworzenie aplikacji WPF, która zawiera pole tekstowe i przycisk. Nazwij przycisk `startButton`i pole tekstowego `resultsTextBox`.  
   
@@ -203,7 +203,7 @@ Class MainWindow
 End Class  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Porady: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+## <a name="see-also"></a>Zobacz także
+- [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Instrukcje: Rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

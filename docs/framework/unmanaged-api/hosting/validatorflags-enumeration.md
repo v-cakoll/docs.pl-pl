@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ce52108c1024ad3e07051b226aa65612580e2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e982fa7f6354f341ff4718440f345e282a1d20d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492225"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags — Wyliczenie
-Zawiera wartości, które wskazują na typ sprawdzania poprawności, która powinna być wykonywana w wywołaniu [ICLRValidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) metody.  
+Zawiera wartości, które wskazują na typ sprawdzania poprawności, która powinna być wykonywana w wywołaniu [iclrvalidator::Validate —](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,21 +42,21 @@ enum ValidatorFlags {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`VALIDATOR_CHECK_ILONLY`|Określa tylko Microsoft język pośredni (MSIL) w pliku wykonywalnym powinny być weryfikowane.|  
+|`VALIDATOR_CHECK_ILONLY`|Określa, czy mają być weryfikowane tylko języka Microsoft intermediate language (MSIL) w pliku wykonywalnym.|  
 |`VALIDATOR_CHECK_PEFORMAT_ONLY`|Określa, czy mają być weryfikowane tylko format pliku wykonywalnego.|  
-|`VALIDATOR_EXTRA_VERBOSE`|Określa, że wykonywane i dla wszystkich typów sprawdzania poprawności.|  
+|`VALIDATOR_EXTRA_VERBOSE`|Określa, że wykonywane i zgłoszone wszystkich typów weryfikacji.|  
 |`VALIDATOR_NOCHECK_PEFORMAT`|Określa, że format pliku wykonywalnego nie powinny być weryfikowane.|  
-|`VALIDATOR_SHOW_SOURCE_LINES`|Określa, że komunikaty o błędach weryfikacji powinien zawierać wiersze kodu źródłowego, które Zgłoś błędy sprawdzania poprawności. Wartość tego pola nie jest prawidłowy w programie .NET Framework w wersji 2.0.|  
+|`VALIDATOR_SHOW_SOURCE_LINES`|Określa, że komunikaty o błędach weryfikacji powinien zawierać linie kodu źródłowego, które zgłaszają błędy sprawdzania poprawności. Wartość tego pola nie jest prawidłowy w .NET Framework w wersji 2.0.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** IValidator.idl, IValidator.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRErrorReportingManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRErrorReportingManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

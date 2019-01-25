@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06c918de10f86442b10b0d85e6554bb1af0a8928
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7859beae572f05863fb24f0257aae8b0ec16bbcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640878"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName — Metoda
-Pobiera nazwę proste, niezaszyfrowanym zestawu odwołuje się ten [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiektu.  
+Pobiera nazwę proste, niezaszyfrowane zestawu odwołuje się ten [iassemblyname —](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,17 +38,17 @@ HRESULT GetName (
   
 #### <a name="parameters"></a>Parametry  
  `lpcwBuffer`  
- [w, out] Rozmiar `pwzName` znaki dwubajtowe, w tym znak ogranicznika wartości null.  
+ [out w] Rozmiar `pwzName` znaków dwubajtowych, w tym znak terminator o wartości null.  
   
  `pwzName`  
- [out] Bufor aby pomieścić nazwę przywoływanego zestawu.  
+ [out] Bufor do przechowywania nazwy przywoływanego zestawu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Fusion.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

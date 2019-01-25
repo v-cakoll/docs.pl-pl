@@ -2,12 +2,12 @@
 title: '&lt;serviceAuthenticationManager&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 3456ffa952372b014d579b5c420f7c44222fdad5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: fd04b10c0ac0bef4087daa1012a1b8bd3a5880e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493641"
 ---
 # <a name="ltserviceauthenticationmanagergt"></a>&lt;serviceAuthenticationManager&gt;
 Zawiera element konfiguracji przepływu pracy, który ustanawia na poziomie usługi ważności transmisji, wiadomości i przy jego uruchomieniu.  
@@ -16,7 +16,7 @@ Zawiera element konfiguracji przepływu pracy, który ustanawia na poziomie usł
 \<zachowania >  
 \<serviceBehaviors>  
 \<zachowanie >  
-\<serviceAuthenticationManager >  
+\<serviceAuthenticationManager>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,5 +48,5 @@ Zawiera element konfiguracji przepływu pracy, który ustanawia na poziomie usł
 |-------------|-----------------|  
 |[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.ServiceAuthenticationElement>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.ServiceAuthenticationElement>

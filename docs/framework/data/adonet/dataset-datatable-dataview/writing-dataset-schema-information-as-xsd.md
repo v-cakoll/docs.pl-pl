@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
-ms.openlocfilehash: 2a59a9fc1c3b2f52543f4cc69de22a5703fa9b8b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5f9821be4067bc849cec27f195f888af20b7f2a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545689"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>Zapisywanie informacji o schemacie elementu DataSet jako pliku XSD
 Można napisać schemat <xref:System.Data.DataSet> jako schematu języka (XSD) definicji schematu XML, dzięki czemu mogą transportować, z lub bez powiązanych danych w dokumencie XML. Schemat XML mogą być zapisywane do pliku strumienia, <xref:System.Xml.XmlWriter>, lub ciąg; jest to przydatne podczas generowania silnie typizowanej **zestawu danych**. Aby uzyskać więcej informacji na temat silnie typizowane **DataSet** obiekty, zobacz [wpisanych zestawów danych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
@@ -49,9 +49,9 @@ Dim schemaString As String = dataSet.GetXmlSchema()
 string schemaString = dataSet.GetXmlSchema();  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Zapisywanie zawartości elementu DataSet jako danych XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
- [Typizowane elementy DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Zapisywanie zawartości elementu DataSet jako danych XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [Typizowane elementy DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
+- [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

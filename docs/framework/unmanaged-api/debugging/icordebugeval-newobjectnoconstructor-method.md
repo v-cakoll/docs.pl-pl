@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e99cafe39a030a412bf33aeb9d96d5006ca02df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9db6853d3bd4bb7faae54b746a5a940c7dec8a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561794"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor — Metoda
-Przydziela nowe wystąpienie obiektu określonego typu bez próba wywołania metody konstruktora.  
+Przydziela nowe wystąpienie obiektu określonego typu bez próby wywołania metody konstruktora.  
   
- Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0. Użyj [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) zamiast tego.  
+ Ta metoda jest przestarzała w programie .NET Framework 2.0. Use [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) instead.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,10 +39,10 @@ HRESULT NewObjectNoConstructor (
   
 #### <a name="parameters"></a>Parametry  
  `pClass`  
- [in] Wskaźnik do obiektu ICorDebugClass, który reprezentuje typ obiektu można utworzyć wystąpienia.  
+ [in] Wskaźnik do obiektu ICorDebugClass, który reprezentuje typ obiektu, który ma zostać utworzona.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -50,5 +50,5 @@ HRESULT NewObjectNoConstructor (
   
  **Wersje programu .NET framework:** 1.1, 1.0  
   
-## <a name="see-also"></a>Zobacz też  
- [NewParameterizedObjectNoConstructor, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)
+## <a name="see-also"></a>Zobacz także
+- [NewParameterizedObjectNoConstructor, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 024ab8254f566e5386198fa1735af4c6b1972ca1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 997e43e6a8be1ac2859e7338751272f3074be11d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523133"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps — Metoda
-Ustawia przechowywane w metadanych dla właściwości zdefiniowane przez poprzednie wywołanie funkcji [DefineProperty — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Ustawia funkcje przechowywany w metadanych dla właściwości zdefiniowane przez wcześniejsze wywołanie [defineproperty — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,7 +44,7 @@ HRESULT SetPropertyProps (
   
 #### <a name="parameters"></a>Parametry  
  `pr`  
- [in] Token dla właściwości zostanie zmieniony  
+ [in] Token dla właściwości, które mają być zmienione  
   
  `dwPropFlags`  
  [in] Flagi właściwości.  
@@ -53,29 +53,29 @@ HRESULT SetPropertyProps (
  [in] Typ wartości domyślnej właściwości.  
   
  `pValue`  
- [in] Wartość domyślna właściwości.  
+ [in] Wartość domyślna dla właściwości.  
   
  `cchValue`  
- [in] Liczba (Unicode) znaków `pValue`.  
+ [in] Liczba (Unicode) znaki w `pValue`.  
   
  `mdSetter`  
  [in] Metoda, która ustawia wartości właściwości.  
   
  `mdGetter`  
- [in] Metoda, która pobiera wartości właściwości.  
+ [in] Metoda, która pobiera wartość właściwości.  
   
  `rmdOtherMethods[]`  
- [in] Tablica innych metod skojarzony z właściwością. Przerwanie tej tablicy z `mdTokenNil` tokenu.  
+ [in] Tablica innych metod skojarzony z właściwością. Zakończenie tej tablicy przy użyciu `mdTokenNil` tokenu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

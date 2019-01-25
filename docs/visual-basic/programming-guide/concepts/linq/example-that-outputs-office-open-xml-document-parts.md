@@ -1,19 +1,19 @@
 ---
-title: Przykład danych wyjściowych części dokumentu pakietu Office Open XML (Visual Basic)
+title: Przykład, który wyprowadza części dokumentu programu Office Open XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-ms.openlocfilehash: 2e4b03d89a5b1eabb5751d807ef78442a960389d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ad7dc9d6f68ecde88888b0f0250632f3f946f92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640270"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670254"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Przykład danych wyjściowych części dokumentu pakietu Office Open XML (Visual Basic)
-W tym temacie pokazano, jak otworzyć dokument XML otwórz pakietu Office i dostępu do części w niej.  
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Przykład, który wyprowadza części dokumentu programu Office Open XML (Visual Basic)
+W tym temacie przedstawiono sposób Otwórz dokument XML otwórz pakietu Office i przejdź do części znajdujący się w nim.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład powoduje otwarcie dokumentu pakietu Office Open XML, a następnie drukuje dokument i część stylu w konsoli.  
+ Poniższy przykład spowoduje otwarcie dokumentu Office Open XML i drukuje dokument i część stylu do konsoli.  
   
  W tym przykładzie użyto klasy z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
@@ -64,5 +64,5 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Szczegóły pakietu Office otwieranie dokumentów schemat WordprocessingML XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>Zobacz także
+- [Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

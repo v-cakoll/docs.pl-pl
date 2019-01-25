@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klasyfik
 ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: bf4e5f00371cba1e6546903a1d27e833b0e57271
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 47cf9deb9452d15aee8cf4c1ebc5e3d0f1aa10ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628012"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 
@@ -319,14 +319,13 @@ Dodaj wywołanie do nowej metody z `Main` metody, po prawej stronie w obszarze `
 
 [!code-csharp[CallPredict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#16 "Call the Predict method")]
 
-Gdy `model` jest `transformer` który operuje na wiele wierszy danych, to bardzo typowy scenariusz w środowisku produkcyjnym jest na potrzeby prognoz na poszczególne przykłady. <xref:Microsoft.ML.PredictionEngine%602> Jest otoką, który jest zwracany z `CreatePredictionEngine` metody. Możemy dodać następujący kod, aby utworzyć `PredictionFunction` jako pierwszy wiersz w `Predict` metody:
+Gdy `model` jest `transformer` który operuje na wiele wierszy danych, to bardzo typowy scenariusz w środowisku produkcyjnym jest na potrzeby prognoz na poszczególne przykłady. <xref:Microsoft.ML.PredictionEngine%602> Jest otoką, który jest zwracany z `CreatePredictionEngine` metody. Możemy dodać następujący kod, aby utworzyć `PredictionEngine` jako pierwszy wiersz w `Predict` metody:
 
 [!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
   
 Dodaj komentarz do testowania uczonego modelu prognozowania w `Predict` metody przez utworzenie wystąpienia `SentimentData`:
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for single prediction")]
-
 
  Możesz go używać, aby przewidzieć toksyczne lub inne niż toksyczne tonacji pojedyncze wystąpienie danych komentarz. Aby uzyskać prognozę, użyj <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> na danych. Należy pamiętać, że dane wejściowe to ciąg, a model zawiera cechowania. Potok jest zsynchronizowany podczas uczenia i przewidywania. Nie trzeba napisać kod przetwarzania wstępnego cechowania specjalnie dla prognoz i zajmuje się tego samego interfejsu API i usługi batch jednorazowe prognozy.
 
@@ -437,4 +436,4 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 
 Przejdź do następnego samouczka, aby dowiedzieć się więcej
 > [!div class="nextstepaction"]
-> [Taxi Fare Predictor](taxi-fare.md)
+> [Klasyfikacja problemu](github-issue-classification.md)

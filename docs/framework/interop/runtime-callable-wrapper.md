@@ -10,55 +10,55 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7366bfd6459a9387e8c57092ba85cac5f4da125b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0832489d74abc3aec78218f87d2bce72e6e68f75
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632793"
 ---
 # <a name="runtime-callable-wrapper"></a>Wywoływana otoka środowiska uruchomieniowego
-Środowisko uruchomieniowe języka wspólnego przedstawia obiekty COM za pośrednictwem serwera proxy, nazywany wywoływana otoka środowiska uruchomieniowego (otoki RCW). Mimo że otoki RCW wydaje się być obiekt zwykłej do klientów platformy .NET, jego podstawową funkcją jest do organizowania wywołań między klientem .NET obiektu COM.  
+Środowisko uruchomieniowe języka wspólnego udostępnia obiekty COM za pośrednictwem serwera proxy, wywoływana otoka wywoływana w czasie wykonywania (RCW). Mimo że RCW wydaje się być zwykły obiekt do klientów programu .NET, jego podstawową funkcją jest kierowanie wywołań między klientem platformy .NET i obiekt COM.  
   
- Środowisko uruchomieniowe tworzy dokładnie jeden otoki RCW dla każdego obiektu modelu COM, niezależnie od liczby odwołań, które istnieją w tym obiekcie. Środowisko uruchomieniowe obsługuje pojedynczy otoki RCW na proces dla każdego obiektu.  Jeśli tworzenie otoki RCW w jednej domenie aplikacji lub typu apartment, a następnie przekazać odwołanie do innej domeny aplikacji lub typu apartment, będzie używany serwer proxy, aby pierwszy obiekt.  Jak pokazano na poniższej ilustracji, dowolną liczbę zarządzanych klientów może zawierać odwołania do obiektów COM, które udostępniają INew i INewer interfejsów.  
+ Środowisko uruchomieniowe tworzy RCW dokładnie jeden dla każdego obiektu COM, bez względu na liczbę odwołań, które istnieją na tym obiekcie. Środowisko uruchomieniowe przechowuje pojedynczego RCW na proces dla każdego obiektu.  Jeśli tworzenie RCW w jednej domenie aplikacji lub typu apartment, a następnie przekazać odwołanie do innej domeny aplikacji lub typu apartment, będzie używany serwer proxy, aby pierwszy obiekt.  Jak pokazano na poniższej ilustracji, dowolną liczbę zarządzanych klientów może zawierać odwołania do obiektów COM, które uwidaczniają INew i INewer interfejsów.  
   
  ![RCW](./media/rcw.gif "rcw")  
 Uzyskiwanie dostępu do obiektów COM za pomocą wywoływana otoka środowiska uruchomieniowego  
   
- Przy użyciu metadanych pochodzące z biblioteki typów, środowisko uruchomieniowe tworzy obiekt COM, wywoływana i otoki dla tego obiektu. Każdy otoki RCW obsługuje pamięć podręczną wskaźniki interfejsu w obiekcie COM zawijany i zwalnia jego odwołania do obiektu COM otoki RCW jest już potrzebne. Środowisko uruchomieniowe przeprowadzają otoki RCW wyrzucanie elementów bezużytecznych.  
+ Przy użyciu metadanych pochodzące z biblioteki typów, środowisko uruchomieniowe tworzy wywoływanego obiektu COM i otoki dla tego obiektu. Każdy RCW obsługuje pamięć podręczną wskaźniki interfejsu na obiekt COM, otacza i zwalnia swoje odwołanie do obiektu COM, gdy RCW nie jest już potrzebny. Środowisko uruchomieniowe wykonuje wyrzucanie elementów bezużytecznych na RCW.  
   
- Wśród innych działań otoki RCW marshals danych między zarządzanymi i niezarządzanymi kodu w imieniu opakowana obiektu. W szczególności otoki RCW umożliwia organizowanie metody argumentów i wartości zwracanych metody zawsze, gdy klient i serwer mają różne reprezentacje danych przesyłanych między nimi.  
+ Wśród innych działań RCW kieruje dane między kodem zarządzanym i niezarządzanym imieniu opakowana obiektu. W szczególności RCW zapewnia marshaling dla argumentów metody i wartości zwracane metody zawsze wtedy, gdy klient i serwer mają różne reprezentacje danych przesyłanych między nimi.  
   
- Standardowa otoki wymusza wbudowane reguły kierowania. Na przykład gdy klienta .NET przekazuje typu ciąg jako część argumentu do niezarządzanego obiektu, otoka konwertuje ciąg na typ BSTR. Obiekt wywołujący obiektu COM należy przywrócić BSTR zarządzanych wywołującego, otrzymuje ciąg. Zarówno klient, jak i serwer wysyłania i odbierania danych, które są znane do nich. Inne typy wymagają brak konwersji. Na przykład standardowe otoki zawsze przekazuje 4-bajtowych liczb całkowitych między zarządzanymi i niezarządzanymi kodu bez konwersji typu.  
+ Otoki standardowe wymusza wbudowane reguły dotyczące organizowania. Na przykład podczas klienta platformy .NET przekazuje typ ciągu jako część argument do niezarządzanego obiektu, otoka konwertuje ciąg na typ BSTR. Obiekt COM powinna zwrócić BSTR zarządzanego obiektu wywołującego, obiekt wywołujący odbiera ciąg. Klient i serwer wysyłania i odbierania danych, które są znane do nich. Inne typy wymagają bez konwersji. Na przykład standardowy otoki będzie zawsze przekazuj parametr 4-bajtowa liczba całkowita między kodem zarządzanym i niezarządzanym bez konwersji typu.  
   
-## <a name="marshaling-selected-interfaces"></a>Przekazywanie wybranego interfejsów  
- Podstawowym celem [wywoływana otoka środowiska uruchomieniowego](runtime-callable-wrapper.md) (otoki RCW) jest ukrycie różnice między zarządzanymi i niezarządzanymi modele programowania. Aby utworzyć płynne przejście, otoki RCW zużywa wybrane interfejsy COM bez narażania ich do klienta .NET, jak pokazano na poniższej ilustracji.  
+## <a name="marshaling-selected-interfaces"></a>Organizowanie wybranych interfejsów  
+ Podstawowym celem [wywoływana otoka środowiska uruchomieniowego](runtime-callable-wrapper.md) (RCW) jest ukrycie różnice między zarządzanymi i niezarządzanymi modelach programowania. Aby utworzyć płynne przejście, RCW zużywa wybranych interfejsów COM bez narażania ich do klienta platformy .NET, jak pokazano na poniższej ilustracji.  
   
- ![Otoka RCW z interfejsów](./media/rcwwithinterfaces.gif "rcwwithinterfaces")  
-Interfejsy modelu COM i wywoływana otoka środowiska uruchomieniowego  
+ ![RCW przy użyciu interfejsów](./media/rcwwithinterfaces.gif "rcwwithinterfaces")  
+Wywoływana otoka środowiska uruchomieniowego i interfejsy modelu COM  
   
- Po utworzeniu jako obiekt z wczesnym wiązaniem otoki RCW jest określonego typu. Implementuje interfejsy implementuje i udostępnia metody, właściwości i zdarzeń z interfejsów obiektu obiektu COM. Na ilustracji uwidacznia interfejs INew otoki RCW, ale zużywa **IUnknown** i **IDispatch** interfejsów. Ponadto otoki RCW przedstawia wszystkie elementy członkowskie interfejsu INew do klienta programu .NET.  
+ Gdy tworzony jest obiekt z wczesnym wiązaniem, RCW jest określonego typu. Implementuje interfejsy, że obiekt COM implementuje i udostępnia metody, właściwości i zdarzeń z interfejsów obiektów. Na ilustracji, udostępnia interfejs INew RCW, ale zużywa **IUnknown** i **IDispatch** interfejsów. Ponadto RCW uwidacznia wszystkie elementy członkowskie interfejs INew do klienta platformy .NET.  
   
- Otoka RCW korzysta z interfejsów wymienionych w poniższej tabeli, które są udostępniane przez obiektu, do którego jest zawijany.  
-  
-|Interface|Opis|  
-|---------------|-----------------|  
-|**IDispatch**|Późne powiązania do obiektów COM za pomocą odbicia.|  
-|**IErrorInfo**|Dostarcza opis tekstowy błąd, źródła pliku pomocy, kontekst pomocy i identyfikator GUID interfejsu, który zdefiniowano błędu (zawsze **GUID_NULL** dla klas .NET).|  
-|**IProvideClassInfo**|Jeśli trwa obiektu COM opakowana implementuje **IProvideClassInfo**, otoki RCW wyodrębnia informacje o typie w tym interfejsie, aby zapewnić lepsze typu tożsamości.|  
-|**IUnknown**|Tożsamość obiektu, koercja typu i zarządzanie okresem istnienia:<br /><br /> — Identity obiekt<br />     Środowisko uruchomieniowe rozróżnia obiektów COM, porównując wartości **IUnknown** interfejsu dla każdego obiektu.<br />— Koercja typ<br />     Otoka RCW rozpoznaje odnajdywania typu dynamicznego wykonywane przez **QueryInterface** metody.<br />-Zarządzanie okresem istnienia<br />     Przy użyciu **QueryInterface** metoda pobiera otoki RCW i zawiera odwołanie do niezarządzanego obiektu, dopóki środowisko uruchomieniowe przeprowadzają otoki, które zwalnia niezarządzane obiekt wyrzucanie elementów bezużytecznych.|  
-  
- Otoka RCW zużywa opcjonalnie interfejsów wymienionych w poniższej tabeli, które są udostępniane przez obiektu, do którego jest zawijany.  
+ RCW zużywa interfejsów wymienionych w poniższej tabeli, które są udostępniane przez obiekt, który otacza.  
   
 |Interface|Opis|  
 |---------------|-----------------|  
-|**IConnectionPoint** i **IConnectionPointContainer**|Obiektów konwertuje otoki RCW, które udostępniają styl zdarzenie punktu połączenia na podstawie delegata zdarzenia.|  
-|**IDispatchEx**|Jeśli klasa implementuje **IDispatchEx**, implementuje otoki RCW **IExpando**. **IDispatchEx** interfejsu jest rozszerzeniem **IDispatch** interfejsu, w odróżnieniu od **IDispatch**, umożliwia wyliczania, dodawania, usuwania i z uwzględnieniem wielkości liter wywoływanie elementów członkowskich.|  
-|**Interfejsu IEnumVARIANT**|Umożliwia typów COM, które obsługują wyliczenia powinien być traktowany jako kolekcji.|  
+|**IDispatch**|Aby uzyskać późne powiązania do obiektów COM w drodze odbicia.|  
+|**IErrorInfo**|Zawiera opis tekstowy błędu, źródło, pliku pomocy, Pomoc kontekstowa i identyfikator GUID interfejs który jest zdefiniowany błędu (zawsze **GUID_NULL** dla klas platformy .NET).|  
+|**IProvideClassInfo**|Jeśli jest obiektu modelu COM opakowane implementuje **IProvideClassInfo**, RCW wyodrębnia informacje o typie, w tym interfejsie w celu zapewnienia lepszej tożsamości typu.|  
+|**IUnknown**|Tożsamość obiektu, przekształcenie typu i zarządzanie okresem istnienia:<br /><br /> — Identity obiekt<br />     Środowisko uruchomieniowe rozróżnia obiekty COM przez porównanie wartości **IUnknown** interfejsu dla każdego obiektu.<br />— Wymuszanie typ<br />     RCW rozpoznaje odnajdywania typu dynamicznego, wykonywane przez **QueryInterface** metody.<br />— Zarządzanie okresem istnienia<br />     Za pomocą **QueryInterface** metody RCW pobiera i zawiera odwołanie do obiektu niezarządzanych, dopóki środowisko uruchomieniowe wykonuje wyrzucanie elementów bezużytecznych na otoki, która uwalnia niezarządzanych obiektów.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Otoki COM](com-wrappers.md)  
- [Przekazywanie wybranego interfejsów](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
- [Wywoływana otoka COM](com-callable-wrapper.md)  
- [Biblioteki typów na zestaw konwersja — podsumowanie](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)
+ Opcjonalnie RCW korzysta z interfejsów wymienionych w poniższej tabeli, które są udostępniane przez obiekt, który otacza.  
+  
+|Interface|Opis|  
+|---------------|-----------------|  
+|**IConnectionPoint** i **interfejsy IConnectionPointContainer**|Obiekty konwertuje RCW, które uwidaczniają styl zdarzenie punktu połączenia na podstawie delegata zdarzenia.|  
+|**IDispatchEx**|Jeśli klasa implementuje **IDispatchEx**, implementuje RCW **IExpando**. **IDispatchEx** interfejs jest rozszerzeniem **IDispatch** interfejs, który, w odróżnieniu od **IDispatch**, umożliwia wyliczania, dodawania, usuwania oraz wielkość liter wywoływanie elementów członkowskich.|  
+|**Interfejs IEnumVARIANT**|Umożliwia typów modelu COM, które obsługują wyliczenia powinien być traktowany jako kolekcji.|  
+  
+## <a name="see-also"></a>Zobacz także
+- [Otoki COM](com-wrappers.md)
+- [Organizowanie wybranych interfejsów](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))
+- [Wywoływana otoka COM](com-callable-wrapper.md)
+- [Biblioteki typów na zestaw konwersja — podsumowanie](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)

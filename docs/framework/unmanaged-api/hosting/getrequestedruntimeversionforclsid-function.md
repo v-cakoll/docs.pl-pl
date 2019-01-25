@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d3a7168ce0ee3484384ae0e2d10ca00367fc9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e00bc95dd9b54d5451da65cefbfff13395e467f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511965"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID — Funkcja
-Pobiera odpowiednie wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) informacje o wersji dla klasy z określonym `CLSID`.  
+Pobiera odpowiednie wspólnego języka wspólnego (CLR) informacje o wersji dla klasy z określonym `CLSID`.  
   
  Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -45,20 +45,20 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  [in]  `CLSID` Składnika.  
   
  `pVersion`  
- [out]  Buforu, który zawiera ciąg numer wersji na pomyślne zakończenie.  
+ [out]  Bufor, który zawiera ciąg numeru wersji, po pomyślnym zakończeniu.  
   
  `cchBuffer`  
- [in]  Rozmiar w znaki dwubajtowe z `pVersion` buforu.  
+ [in]  Rozmiar w szerokich znaków z `pVersion` buforu.  
   
  `dwLength`  
- [out] Długość, w bajtach buforu zwrócony.  
+ [out] Długość, w bajtach, zwrócone buforu.  
   
  `dwResolutionFlags`  
- [in]  Jedna z wartości CLSID_RESOLUTION_FLAGS. Obsługiwane są następujące wartości:  
+ [in]  Jedna z wartości clsid_resolution_flags —. Obsługiwane są następujące wartości:  
   
--   CLSID_RESOLUTION_DEFAULT: (0x0) określa, że domyślne zachowanie międzyoperacyjnego powinien być używany.  
+-   CLSID_RESOLUTION_DEFAULT: (0x0) określa, że powinny być używane domyślne zachowanie międzyoperacyjnego.  
   
--   CLSID_RESOLUTION_REGISTERED: (0x1) określa, czy rejestr powinna być dodatkowo przeszukiwana i użyć podkładek zasad powinny być stosowane.  
+-   CLSID_RESOLUTION_REGISTERED: (0x1) określa, że powinna być dodatkowo rejestru i podkładek zasady powinny zostać zastosowane.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
@@ -66,16 +66,16 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 |-------------|-----------------|  
 |S_OK|Wartość zwrócona przez funkcję pomyślnie.|  
 |E_INVALIDARG|Jeden z parametrów ma nieprawidłowy typ lub format.|  
-|ERROR_INSUFFICIENT_BUFFER|`pVersion` Bufor nie jest wystarczająco duży, aby pomieścić ciąg całej wersji.|  
-|REGDB_E_CLASSNOTREG|Istnieje klasa nie jest zarejestrowany z określonym `CLSID`.|  
+|ERROR_INSUFFICIENT_BUFFER|`pVersion` Bufor nie jest wystarczająco duży, aby pomieścić całą wersję ciągu.|  
+|REGDB_E_CLASSNOTREG|Istnieje klasa nie zarejestrowana z określonym `CLSID`.|  
 |E_POINTER|`dwLength` ma wartość null, lub `cchBuffer` jest wystarczająco duży, aby pomieścić ciąg wersji, ale `pVersion` ma wartość null.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

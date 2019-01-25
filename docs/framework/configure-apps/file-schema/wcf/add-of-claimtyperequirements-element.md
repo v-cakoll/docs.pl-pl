@@ -2,23 +2,23 @@
 title: '&lt;add&gt; w &lt;claimTypeRequirements&gt;, element'
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: 7f86073d0ecce353c63f31fd28c4bfeffb2411ed
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: fb5e723f6cff9f6e573a45a1dabe008beb9399e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687323"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a>&lt;add&gt; w &lt;claimTypeRequirements&gt;, element
 Określa typy wymaganych i opcjonalnych oświadczeń, oczekiwano w federacyjnym poświadczeniu. Na przykład usługi stanu wymagania dotyczące poświadczeń przychodzących, które muszą posiadać określone typy oświadczeń.  
   
  \<system.ServiceModel>  
 \<powiązania >  
-\<wsFederatedBinding >  
+\<wsFederatedBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
+\<security>  
 \<message>  
-\<claimTypeRequirements >  
+\<claimTypeRequirements>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -72,9 +72,9 @@ Określa typy wymaganych i opcjonalnych oświadczeń, oczekiwano w federacyjnym 
 </bindings>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>  
- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElement>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
+- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElement>

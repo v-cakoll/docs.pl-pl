@@ -2,29 +2,29 @@
 title: Operacje łączenia (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: 44a43b6f3ead494b4ae538e95bc1dacb8662312c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06f46e55545f669214f4a14775252df1a86b2008
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501272"
 ---
 # <a name="concatenation-operations-visual-basic"></a>Operacje łączenia (Visual Basic)
-Łączenie odwołuje się do funkcjonowania dołączanie jednej sekwencji.  
+Łączenie odnosi się do operacji dołączania jednej sekwencji do innego.  
   
- Na poniższej ilustracji przedstawiono operację łączenia dwóch sekwencji znaków.  
+ Poniższa ilustracja przedstawia operację łączenia dwóch sekwencji znaków.  
   
- ![Grafika przedstawiająca połączenie dwóch sekwencji. ] (../../../../csharp/programming-guide/concepts/linq/media/concat.png "Concat")  
+ ![Grafika przedstawiająca łączenie dwóch sekwencji. ](../../../../csharp/programming-guide/concepts/linq/media/concat.png "Concat")  
   
- Metody — operator zapytań standardowe, wykonujących łączenia są wymienione w poniższej sekcji.  
+ Metody standardowego operatora zapytań, które wykonują łączenia są wymienione w poniższej sekcji.  
   
 ## <a name="methods"></a>Metody  
   
 |Nazwa metody|Opis|Składnia wyrażeń języka Visual Basic|Więcej informacji|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|concat|Łączy dwie sekwencje do utworzenia jednej sekwencji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
+|concat|Łączy dwie sekwencje w celu utworzenia jednej sekwencji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Linq>  
- [Operatory standardowe zapytań — omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Linq>
+- [Omówienie operatorów standardowej kwerendy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

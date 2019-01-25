@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588577"
 ---
 # <a name="standard-query-operator-translation"></a>Translacja standardowego operatora zapytania
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy standardowych operatorów zapytań do polecenia SQL. Procesor zapytań bazy danych określa semantyka wykonania tłumaczenia SQL.  
@@ -139,22 +139,22 @@ ORDER BY [t0].[CustomerID]
   
 |||||  
 |-|-|-|-|  
-|ToBoolean|Tosbyte —|Tobyte —|ToChar|  
-|ToCharArrayRankOne|ToDate|Todecimal —|Todouble —|  
+|ToBoolean|ToSByte|Tobyte —|ToChar|  
+|ToCharArrayRankOne|ToDate|ToDecimal|Todouble —|  
 |ToInteger|ToUInteger|ToLong|ToULong|  
 |ToShort|ToUShort|Tosingle —|ToString|  
   
 ## <a name="inheritance-support"></a>Obsługa dziedziczenia  
   
 ### <a name="inheritance-mapping-restrictions"></a>Ograniczenia dotyczące mapowania dziedziczenia  
- Aby uzyskać więcej informacji, zobacz [jak: hierarchii dziedziczenia mapy](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Mapowanie hierarchii dziedziczenia](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
   
 ### <a name="inheritance-in-queries"></a>Dziedziczenie w zapytaniach  
  C# rzutowania są obsługiwane tylko w projekcji. Wzory, które są używane w innym miejscu, nie są przekształcane i są ignorowane. Oprócz SQL nazwy funkcji, SQL tak naprawdę tylko wykonuje odpowiednik środowisko uruchomieniowe języka wspólnego (CLR) <xref:System.Convert>. Oznacza to SQL, można zmienić wartości z jednego typu na inny. Nie ma odpowiednika rzutowania, ponieważ nie istnieje koncepcji reinterpretacja tej samej usługi bits, jak te innego typu CLR. Właśnie dlatego rzutowania języka C# działa tylko lokalnie. Nie jest zdalny.  
   
  Operatory, `is` i `as`i `GetType` metody nie są ograniczone do `Select` operatora. Ich zastosowania w innych operatorów zapytania również.  
   
-## <a name="sql-server-2008-support"></a>Obsługa programu SQL Server 2008  
+## <a name="sql-server-2008-support"></a>SQL Server 2008 Support  
  Począwszy od .NET Framework 3.5 SP1, LINQ to SQL obsługuje mapowanie na nową datę i czas typy wprowadzone w programie SQL Server 2008. Istnieją jednak pewne ograniczenia dotyczące LINQ to SQL operatorów zapytań, które można użyć podczas pracy w odniesieniu do wartości mapowane na te nowe typy.  
   
 ### <a name="unsupported-query-operators"></a>Nieobsługiwane zapytanie operatorów  
@@ -172,7 +172,7 @@ ORDER BY [t0].[CustomerID]
   
  Aby uzyskać więcej informacji na temat mapowania do tych typów daty i godziny programu SQL Server, zobacz [mapowanie typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
-## <a name="sql-server-2005-support"></a>Obsługa programu SQL Server 2005  
+## <a name="sql-server-2005-support"></a>SQL Server 2005 Support  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje następujących funkcji programu SQL Server 2005:  
   
 -   Procedury składowane napisane dla środowiska CLR programu SQL.  
@@ -181,7 +181,7 @@ ORDER BY [t0].[CustomerID]
   
 -   Funkcje zapytania XML.  
   
-## <a name="sql-server-2000-support"></a>Obsługa programu SQL Server 2000  
+## <a name="sql-server-2000-support"></a>SQL Server 2000 Support  
  Następujące [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] ograniczenia (w porównaniu do [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]) wpływają na [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pomocy technicznej.  
   
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply i zewnętrznych stosowanie operatorów  
@@ -225,10 +225,10 @@ ORDER BY [t0].[CustomerID]
   
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Zwracanie lub pomijanie elementów w sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- [Łączenie dwóch sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- [Zwracanie zestawu różnic między dwoma sekwencjami](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- [Zwracanie zestawu części wspólnych dwóch sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [Zwracanie sumy zbiorów dwóch sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+## <a name="see-also"></a>Zobacz także
+- [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Zwracanie lub pomijanie elementów w sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
+- [Łączenie dwóch sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
+- [Zwracanie zestawu różnic między dwoma sekwencjami](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
+- [Zwracanie zestawu części wspólnych dwóch sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
+- [Zwracanie sumy zbiorów dwóch sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

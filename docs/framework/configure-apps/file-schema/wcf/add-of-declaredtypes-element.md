@@ -7,18 +7,18 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: 587c70a7b583c99e66eebac4055415e1e6a635b2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dd5972c2bb25367f2566bcf77e53e7a3341d89b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519466"
 ---
 # <a name="ltaddgt-of-ltdeclaredtypesgt-element"></a>&lt;add&gt; w &lt;declaredTypes&gt;, element
 Dodaje typ używany przez <xref:System.Runtime.Serialization.DataContractSerializer> podczas deserializacji. Każdy typ zadeklarowany zawiera znane typy, które zostaną zwrócone jako pole lub właściwość zadeklarowanym typem.  
   
  system.runtime.serialization  
-\<dataContractSerializer >  
+\<dataContractSerializer>  
 \<declaredTypes >  
 \<Dodaj > z \<declaredTypes >  
   
@@ -75,8 +75,8 @@ Dodaje typ używany przez <xref:System.Runtime.Serialization.DataContractSeriali
 </add>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [Znane typy kontraktów danych](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
- [\<Dodaj > z \<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [Znane typy kontraktów danych](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
+- [\<Dodaj > z \<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

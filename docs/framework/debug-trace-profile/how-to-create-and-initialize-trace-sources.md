@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie i inicjowanie źródeł śledzenia'
+title: 'Instrukcje: Tworzenie i Inicjowanie źródeł śledzenia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07c4d65e3fb6d61ae5d1b766c70cbb25d54bdc7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6b888e349159a51cc1d1d6bfac2791d413d015a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570099"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>Porady: tworzenie i inicjowanie źródeł śledzenia
-<xref:System.Diagnostics.TraceSource> Klasa jest używana przez aplikacje do tworzenia śledzenia, które mogą być skojarzone z aplikacją. <xref:System.Diagnostics.TraceSource> udostępnia metody śledzenia, które pozwalają łatwo śledzić zdarzenia, dane śledzenia i zapisy informacyjne problem. Dane wyjściowe z śledzenia <xref:System.Diagnostics.TraceSource> można tworzyć i zainicjować z lub bez użycia plików konfiguracyjnych. Ten temat zawiera instrukcje dla obu opcji. Jednak zaleca się stosowania plików konfiguracji ułatwia ponowne konfigurowanie śledzenia utworzonego przez źródła śledzenia w czasie wykonywania.  
+# <a name="how-to-create-and-initialize-trace-sources"></a>Instrukcje: Tworzenie i Inicjowanie źródeł śledzenia
+<xref:System.Diagnostics.TraceSource> Klasa jest używana przez aplikacje do tworzenia śladów, które mogą być skojarzone z aplikacją. <xref:System.Diagnostics.TraceSource> udostępnia metody śledzenia, które pozwalają na łatwe śledzenie zdarzeń, dane śledzenia i ślady informacyjne problemu. Dane wyjściowe śledzenia z <xref:System.Diagnostics.TraceSource> mogą być tworzone i inicjowane z użyciem lub bez korzystania z plików konfiguracji. Ten temat zawiera instrukcje dla obu opcji. Jednak zaleca się używać plików konfiguracyjnych ułatwiających rekonfigurację śladów produkowanych przez źródła śledzenia w czasie wykonywania.  
   
-### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Aby utworzyć i zainicjować źródła śledzenia, przy użyciu pliku konfiguracji  
+### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Aby utworzyć i zainicjować źródło śledzenia przy użyciu pliku konfiguracji  
   
-1.  Utwórz projekt aplikacji konsoli programu Visual Studio i Zastąp podany kod następującym kodem. Ten kod rejestruje błędy i ostrzeżenia i wyprowadza niektóre z nich w konsoli, a niektóre z nich do pliku myListener, który jest tworzony na podstawie pozycji w pliku konfiguracji.  
+1.  Utwórz projekt aplikacji konsoli Visual Studio i Zastąp dostarczony kod następującym kodem. Ten kod rejestruje błędy i ostrzeżenia i wysyła niektóre z nich do konsoli, a niektóre z nich do pliku myListener, który jest tworzony przez wpisy w pliku konfiguracji.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
   
-2.  Dodaj plik konfiguracji aplikacji, jeśli nie został już dołączony do projektu, aby zainicjować źródła śledzenia o nazwie `TraceSourceApp` w przykładzie kodu w kroku 1.  
+2.  Dodaj plik konfiguracji aplikacji, jeśli nie został jeszcze dołączony, do projektu, aby zainicjować źródła śledzenia o nazwie `TraceSourceApp` w przykładzie kodu w kroku 1.  
   
-3.  Zastąp zawartość pliku konfiguracji domyślnej następujących ustawień, aby zainicjować odbiornika śledzenia konsoli i odbiornik śledzenia składnika zapisywania tekstu dla źródła śledzenia, który został utworzony w kroku 1.  
+3.  Zastąp domyślną treść pliku konfiguracji z następującymi ustawieniami, aby zainicjować detektor śledzenia konsoli i odbiornik śledzenia modułu zapisującego tekst dla źródła śledzenia, który został utworzony w kroku 1.  
   
     ```xml  
     <configuration>  
@@ -65,22 +65,22 @@ ms.locfileid: "33386525"
     </configuration>  
     ```  
   
-     Oprócz konfigurowania obiektów nasłuchujących śledzenia, plik konfiguracji tworzy filtry dla obu odbiorników oraz przełącznik źródła dla źródła śledzenia. Przedstawiono dwie metody dodawania obiektów nasłuchujących śledzenia: Dodawanie odbiornika bezpośrednio w źródle śledzenia i dodawanie odbiornik do kolekcji udostępnione obiekty nasłuchujące i dodanie go przez nazwę źródła. Filtry dla dwa odbiorniki są inicjowane z poziomu innego źródła. Powoduje to niektóre komunikaty zapisywana przez tylko jeden z dwóch odbiorników.  
+     Poza skonfigurowaniem detektorów śledzenia, plik konfiguracyjny tworzy filtry dla obu detektorów oraz tworzy przełącznik źródła dla źródła śledzenia. Do dodawania detektorów śledzenia pokazano dwie techniki: dodanie detektora bezpośrednio do źródła śledzenia i dodanie detektora do kolekcji współdzielonych detektorów, a następnie dodanie go według nazwy do źródła śledzenia. Filtry określone dla obu detektorów są inicjowane z różnymi poziomami źródła. Skutkuje to pewne komunikaty są zapisywane przez tylko jeden z dwóch detektorów.  
   
-     Plik konfiguracji inicjuje ustawienia źródła śledzenia w czasie aplikacji został zainicjowany. Aplikację można dynamicznie zmieniać właściwości ustawione przy użyciu pliku konfiguracji, aby zastąpić wszystkie ustawienia określone przez użytkownika. Na przykład możesz chcieć upewnij się, że krytycznych wiadomości zawsze są wysyłane do pliku tekstowego, niezależnie od bieżących ustawień konfiguracji. Przykładowy kod przedstawia sposób zastępują ustawienia pliku konfiguracji w celu zapewnienia krytycznych wiadomości o dane wyjściowe do obiektów nasłuchujących śledzenia.  
+     Plik konfiguracyjny inicjuje ustawienia źródła śledzenia w czasie, w których aplikacja została zainicjowany. Aplikacja można dynamicznie zmieniać właściwości ustawione w pliku konfiguracyjnym, aby zastąpić wszelkie ustawienia określone przez użytkownika. Na przykład możesz chcieć upewnij się, że krytyczne wiadomości są zawsze wysyłane do pliku tekstowego, niezależnie od bieżących ustawień konfiguracji. Przykładowy kod ilustruje sposób zastąpienia ustawień pliku konfiguracji, aby upewnić się, że newralgiczne komunikaty są do odbiorników śledzenia.  
   
-     Zmiana ustawień pliku konfiguracji, gdy aplikacja jest wykonywany nie zmienia ustawienia początkowe. Aby zmienić ustawienia, należy ponownie uruchomić aplikację lub programowo odświeżania aplikacji za pomocą <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> metody.  
+     Zmiana ustawień pliku konfiguracji, podczas wykonywania aplikacji nie powoduje zmiany ustawień początkowych. Aby zmienić ustawienia, należy ponownie uruchomić aplikację lub programowo odświeżyć aplikację za pomocą <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> metody.  
   
-### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>Aby zainicjować źródła śledzenia, odbiorników i filtry bez pliku konfiguracji  
+### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>Aby zainicjować źródła śledzenia, detektory i filtry bez pliku konfiguracji  
   
--   Poniższy przykładowy kod umożliwia włączanie śledzenia przez źródło śladu bez użycia pliku konfiguracji. To nie jest zalecanym rozwiązaniem, ale może być okoliczności, w których nie chcesz zależą od pliki konfiguracji, aby upewnić się, śledzenie.  
+-   Użyj poniższy przykład kodu umożliwia śledzenie za pośrednictwem źródła śledzenia bez użycia pliku konfiguracji. Nie jest to zalecana praktyka, ale mogą zaistnieć okoliczności, w których nie chcesz zależało od plików konfiguracyjnych, aby upewnić się, śledzenia.  
   
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.ConsoleTraceListener>  
- <xref:System.Diagnostics.EventTypeFilter>  
- [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.ConsoleTraceListener>
+- <xref:System.Diagnostics.EventTypeFilter>
+- [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

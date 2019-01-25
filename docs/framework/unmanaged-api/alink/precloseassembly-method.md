@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82421fa83a6f0d24492d70f961e731b679c25728
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fab522adbdb1b50448dfabfd23d663fb223c6da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499200"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly — Metoda
-Zamyka plik zestawu. Tę metodę można wywołać po zamknięciu wszystkich innych plików, ale przed zamknięciem pliku zestawu. Nie wywołuj tej metody dla modułów niepowiązanych.  
+Zamykanie pliku zestawu. Wywołaj tę metodę po zamknięciu wszystkich innych plików, ale przed zamknięciem pliku zestawu. Nie wywołuj tej metody dla modułów niepowiązanej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,7 +44,7 @@ HRESULT PreCloseAssembly(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h.  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

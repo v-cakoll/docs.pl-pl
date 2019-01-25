@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f13fad537a6847ba6e19c939e72df86036e28ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4eddb1461ad448a1a1718db8a11173e5e2e4a17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527786"
 ---
 # <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName — Funkcja
-Pobiera nazwę typu przy użyciu wskaźnika podanego obiektu zarządzanego.  
+Pobiera nazwę typu przy użyciu wskaźnika udostępnionego obiektu zarządzanego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,23 +42,23 @@ HRESULT _EFN_GetManagedObjectName(
  [in] Wskaźnik do klienta debugowania.  
   
  `objAddr`  
- [in] Wskaźnik do zarządzanego obiektu.  
+ [in] Wskaźnik zarządzanego obiektu.  
   
  szName  
  [out] Nazwa typu.  
   
  `cbName`  
- [out] Liczba dostępnych w buforze ciąg znaków.  
+ [out] Liczba dostępnych w buforu ciągu znaków.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli istnieje żadnego kodu zarządzanego w wątku aktualnie w kontekście, funkcja zwraca HRESULT SOS_E_NOMANAGEDCODE z wartości instrumentu 0xa0 i błąd o kodzie 0x1000.  
+ Jeśli żaden kod zarządzany w wątku obecnie występuje w kontekście, funkcja zwraca HRESULT SOS_E_NOMANAGEDCODE z wartością funkcji 0xa0 i kod błędu 0x1000.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** SOS_Stacktrace.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

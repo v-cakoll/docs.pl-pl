@@ -1,5 +1,5 @@
 ---
-title: 'Porady: zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel'
+title: 'Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: ad09c30b2118a08f4249433c4f531e5bcef4acd5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4da793b8836b2bbb5cadbfbe6f2652e965d1c444
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524159"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Porady: zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel
+# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel
 <xref:System.Windows.Forms.TableLayoutPanel> Kontrolować obsługuje <xref:System.Windows.Forms.Control.Anchor%2A> i <xref:System.Windows.Forms.Control.Dock%2A> właściwości w jego formantów podrzędnych.  
   
 ### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a>Aby wyrównać kontrolki podrzędnej w komórce TableLayoutPanel  
@@ -82,8 +82,8 @@ ms.locfileid: "43749081"
   
 -   Odwołania do zestawów systemu, dane systemowe i System.Drawing oraz przestrzeń nazw System.Windows.Forms.  
   
- Aby uzyskać informacje o tworzeniu tego przykładu z wiersza polecenia dla programu visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows Forms kodu przykładzie przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby uzyskać informacje o tworzeniu tego przykładu z wiersza polecenia dla programu visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- [TableLayoutPanel, kontrolka](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- [TableLayoutPanel, kontrolka](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

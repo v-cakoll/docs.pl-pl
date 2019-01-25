@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 4ca256bf7204cdaad7d49ed19c662ab81bb01bf9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6bf8043b97d23fdb91ca5798ed46cdea783bad7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514139"
 ---
 # <a name="float-c-reference"></a>float (odwołanie w C#)
 
@@ -66,12 +66,12 @@ W poniższym przykładzie [int](int.md), [krótki](short.md), a `float` są zawa
 
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Single>  
-- [Dokumentacja języka C#](../index.md)  
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
-- [Rzutowanie i konwersje typów](../../programming-guide/types/casting-and-type-conversions.md)  
-- [Słowa kluczowe języka C#](index.md)  
-- [Tabela typów całkowitych](integral-types-table.md)  
-- [Tabela typów wbudowanych](built-in-types-table.md)  
-- [Tabela niejawnych konwersji liczbowych](implicit-numeric-conversions-table.md)  
-- [Tabela jawnych konwersji liczbowych](explicit-numeric-conversions-table.md)  
+- <xref:System.Single>
+- [Dokumentacja języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [Rzutowanie i konwersje typów](../../programming-guide/types/casting-and-type-conversions.md)
+- [Słowa kluczowe języka C#](index.md)
+- [Tabela typów całkowitych](integral-types-table.md)
+- [Tabela typów wbudowanych](built-in-types-table.md)
+- [Tabela niejawnych konwersji liczbowych](implicit-numeric-conversions-table.md)
+- [Tabela jawnych konwersji liczbowych](explicit-numeric-conversions-table.md)

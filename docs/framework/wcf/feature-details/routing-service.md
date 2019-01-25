@@ -2,12 +2,12 @@
 title: Usługa routingu
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 139607614934aedbad9f76172b8e31fb02394d80
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0d58e70d482532e3f148d3f4f92741f46221982
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495308"
 ---
 # <a name="routing-service"></a>Usługa routingu
 Usługa routingu jest ogólny pośredniczącego protokołu SOAP, działającego jako router wiadomości. Podstawowe funkcje usług routingu jest możliwość przesyłania wiadomości, na podstawie zawartości wiadomości, co pozwala wiadomości były przekazywane do endpoint klienta, na podstawie wartości w wiadomości, w nagłówku lub w treści wiadomości.  
@@ -62,7 +62,7 @@ Usługa routingu jest ogólny pośredniczącego protokołu SOAP, działającego 
  Przy użyciu routingu opartego na zawartości, należy udostępnić jeden punkt końcowy, który odbiera komunikaty z aplikacji klienckich zewnętrznych, a następnie przekierowuje każdy komunikat do odpowiedniego wewnętrznego punktu końcowego, na podstawie wartości w komunikacie. Jest to przydatne, oferują jednego określonego punktu końcowego dla wielu aplikacji zaplecza, a także prezentować jeden punkt końcowy aplikacji dla klientów podczas wyprowadzenie aplikacji do różnych usług.  
   
 ### <a name="service-versioning"></a>Przechowywanie wersji usługi  
- Podczas migracji do nowej wersji rozwiązania, może być konieczne Obsługa starej wersji równolegle do obsługi istniejących klientów. Często wymaga klientów łączących się z nowszej wersji należy użyć innego adresu podczas komunikowania się z rozwiązaniem. Usługa routingu umożliwia udostępnianie jeden punkt końcowy usługi służący obie wersje rozwiązania poprzez wiadomości routingu do odpowiedniego rozwiązania oparte na informacjach specyficznych dla wersji zawartego w wiadomości. Na przykład takich realizacji zobacz [instrukcje: przechowywanie wersji usługi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Podczas migracji do nowej wersji rozwiązania, może być konieczne Obsługa starej wersji równolegle do obsługi istniejących klientów. Często wymaga klientów łączących się z nowszej wersji należy użyć innego adresu podczas komunikowania się z rozwiązaniem. Usługa routingu umożliwia udostępnianie jeden punkt końcowy usługi służący obie wersje rozwiązania poprzez wiadomości routingu do odpowiedniego rozwiązania oparte na informacjach specyficznych dla wersji zawartego w wiadomości. Na przykład takich realizacji zobacz [How to: Przechowywanie wersji usługi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ### <a name="priority-routing"></a>Priorytet routingu  
  Podczas tworzenia usługi dla wielu klientów, może być Umowa dotycząca poziomu usług (SLA) z partnerami, niektóre wymagane przez wszystkie dane z tych partnerów, które mają być przetwarzane niezależnie od tego dla innych klientów. Za pomocą filtru, który wyszukuje informacje specyficzne dla klienta, zawarte w komunikacie, łatwo komunikaty można kierować do określonych partnerów do punktu końcowego, który został utworzony w celu spełnienie rządowych wymagań dotyczących umowy SLA.  
@@ -105,7 +105,7 @@ Usługa routingu jest ogólny pośredniczącego protokołu SOAP, działającego 
   
 -   Dynamiczna konfiguracja  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
- [Kontrakty routingu](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [Filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [Kontrakty routingu](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
+- [Filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md)

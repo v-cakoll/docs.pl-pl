@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 3707196cf833577e65dbd1879f2762ec4336abc2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 8dde6775162adc092ea58795f3c4bf7d2db570cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589847"
 ---
 # <a name="ui-automation-properties-overview"></a>Przegląd właściwości automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dostawcy automatyzacji interfejsu użytkownika udostępnianie właściwości na [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] elementów. Właściwości te umożliwiają aplikacjom klienta automatyzacji interfejsu użytkownika do odnajdywania informacji na temat rodzajów [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], szczególnie kontroluje obiekt, włącznie z danymi statyczne i dynamiczne.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47073518"
 > [!NOTE]
 >  Aby uzyskać szczegółowe informacje o każdej właściwości, kliknij link w **dostęp do właściwości** kolumny.  
   
-### <a name="display-characteristics"></a>Wyświetl właściwości  
+### <a name="display-characteristics"></a>Display Characteristics  
   
 |Identyfikator właściwości|Dostęp do właściwości|  
 |-------------------------|---------------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "47073518"
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
   
-### <a name="element-type"></a>Typ elementu  
+### <a name="element-type"></a>{1&gt;Element Type&lt;1}  
   
 |Identyfikator właściwości|Dostęp do właściwości|  
 |-------------------------|---------------------|  
@@ -161,10 +161,10 @@ ms.locfileid: "47073518"
   
  Klienci nasłuchiwać zdarzeń, subskrybując je. Subskrybowanie zdarzeń oznacza, że tworzenie metod delegatów, które może obsłużyć zdarzenia, a następnie przekazywanie metody służące do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wraz z określonych zdarzeń, które zostanie omówione w tych metodach. Dla zdarzenia zmiany właściwości w szczególności, klienci muszą implementować <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Buforowanie w klientach automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [Właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [Znajdź element automatyzacji interfejsu użytkownika na podstawie warunku właściwości](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Zwracanie właściwości od dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [Wywoływanie zdarzeń od dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+## <a name="see-also"></a>Zobacz także
+- [Buforowanie w klientach automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [Właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
+- [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Znajdź element automatyzacji interfejsu użytkownika na podstawie warunku właściwości](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Zwracanie właściwości od dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [Wywoływanie zdarzeń od dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)

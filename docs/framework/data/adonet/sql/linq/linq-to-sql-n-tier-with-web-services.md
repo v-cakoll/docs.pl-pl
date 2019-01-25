@@ -2,18 +2,18 @@
 title: LINQ to SQL N-warstwowa przy użyciu usługi sieci Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: bf13c34a058d33d240e780cb1ce0e665bd1322d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: caa7105e4f64cce78c34237279fd357fdfe92d55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623615"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL N-warstwowa przy użyciu usługi sieci Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przeznaczone dla użycia w warstwie środkowej luźno powiązane warstwie dostępu do danych (DAL) takich jak usługi sieci Web. Jeśli Warstwa prezentacji jest to strona sieci Web platformy ASP.NET, a następnie używasz <xref:System.Web.UI.WebControls.LinqDataSource> formant serwera do zarządzania przesyłaniem danych między interfejsu użytkownika sieci Web i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] w warstwie środkowej. Jeśli Warstwa prezentacji nie jest to strona programu ASP.NET, następnie warstwy środkowej i warstwy prezentacji należy wykonać wykonania dodatkowych czynności, aby zarządzać serializacji i deserializacji obiektu danych.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Konfigurowanie składnika LINQ to SQL w warstwie środkowej  
- Usługa sieci Web lub aplikacji n warstwowej warstwy środkowej zawiera kontekstu danych i klas jednostek. Te klasy można utworzyć ręcznie lub za pomocą obu SQLMetal.exe lub [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zgodnie z opisem w innym miejscu w dokumentacji. W czasie projektowania masz możliwość klas obiektów możliwych do serializacji. Aby uzyskać więcej informacji, zobacz [jak: utworzyć serializacji jednostek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Innym rozwiązaniem jest utworzenie oddzielnych zestaw klas, które obejmują dane, które mają być serializowane i projekt do tych typów możliwych do serializacji, po powrocie danych w Twojej [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zapytania.  
+ Usługa sieci Web lub aplikacji n warstwowej warstwy środkowej zawiera kontekstu danych i klas jednostek. Te klasy można utworzyć ręcznie lub za pomocą obu SQLMetal.exe lub [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zgodnie z opisem w innym miejscu w dokumentacji. W czasie projektowania masz możliwość klas obiektów możliwych do serializacji. Aby uzyskać więcej informacji, zobacz [jak: Umożliwianie serializacji jednostek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Innym rozwiązaniem jest utworzenie oddzielnych zestaw klas, które obejmują dane, które mają być serializowane i projekt do tych typów możliwych do serializacji, po powrocie danych w Twojej [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zapytania.  
   
  Następnie zdefiniuj interfejs za pomocą metod wywołujących klientów do pobrania, wstawiania i aktualizowania danych. OPAKOWYWANIE metod interfejsu użytkownika [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] zapytania. Do obsługi wywołania zdalnej metody i serializacja danych, można użyć dowolnego rodzaju mechanizm serializacji. Jedynym wymaganiem jest, czy w przypadku cykliczne lub dwukierunkowej relacji w modelu obiektu, takim między klienci i zamówienia w modelu obiektów programu standardowa Northwind to należy użyć serializatora, która go obsługuje. Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> obsługuje relacje dwukierunkowe, ale element XmlSerializer, który jest używany z usługi internetowej WCF nie jest. Jeśli wybrano opcję Użyj elementu XmlSerializer musi upewnij się, że model obiektu nie ma żadnych relacji cyklicznej.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "43862241"
   
  Aby uzyskać więcej informacji, zobacz [pobierania danych i operacje CUD w aplikacjach N-warstwowych (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [NIB: LinqDataSource Web Server kontrolka — omówienie](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)
+## <a name="see-also"></a>Zobacz także
+- [N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
+- [NIB: Omówienie kontrolki serwera sieci Web kontrolka LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)

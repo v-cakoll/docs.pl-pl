@@ -1,14 +1,14 @@
 ---
 title: Wykonanie sprzężeń grupowanych (LINQ w C#)
 description: Dowiedz się, jak wykonanie sprzężeń grupowanych za pomocą LINQ w C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: d8a2d7bbbe78d3fc1f2518e057ade5045cee43e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511832"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857557"
 ---
 # <a name="perform-grouped-joins"></a>Wykonanie sprzężeń grupowanych
 

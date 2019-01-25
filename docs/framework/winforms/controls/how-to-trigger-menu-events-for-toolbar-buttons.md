@@ -1,5 +1,5 @@
 ---
-title: 'Porady: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi'
+title: 'Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 1aa0a31b5825006cc2d6111ab151f05bf240b920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6459c61e49a49001d490d5213f23ff652d4a1939
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609593"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Porady: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcje do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> formantu są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana.  
+>  <xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
   
- Jeśli funkcje formularza systemu Windows <xref:System.Windows.Forms.ToolBar> kontrolki przycisków na pasku narzędzi, warto wiedzieć, który przycisk użytkownik klika polecenie.  
+ Jeśli formularz Windows funkcji <xref:System.Windows.Forms.ToolBar> kontrolki przycisków na pasku narzędzi, warto wiedzieć, który przycisk użytkownik klika polecenie.  
   
- Na <xref:System.Windows.Forms.ToolBar.ButtonClick> zdarzenie <xref:System.Windows.Forms.ToolBar> sterowania, można obliczyć <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> właściwość <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasy. W poniższym przykładzie jest wyświetlane okno komunikatu, wskazujący, który przycisk został kliknięty. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.MessageBox>.  
+ Na <xref:System.Windows.Forms.ToolBar.ButtonClick> zdarzenia <xref:System.Windows.Forms.ToolBar> kontrolki, możesz ocenić <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> właściwość <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasy. W poniższym przykładzie zostanie wyświetlone okno komunikatu, wskazujące, której przycisk został kliknięty. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.MessageBox>.  
   
- W poniższym przykładzie założono <xref:System.Windows.Forms.ToolBar> formant został dodany do formularza systemu Windows.  
+ W poniższym przykładzie przyjęto założenie, <xref:System.Windows.Forms.ToolBar> formant został dodany do formularza Windows.  
   
-### <a name="to-handle-the-click-event-on-a-toolbar"></a>Obsługa zdarzenia kliknij na pasku narzędzi  
+### <a name="to-handle-the-click-event-on-a-toolbar"></a>Aby obsłużyć zdarzenie kliknij na pasku narzędzi  
   
-1.  W procedurze, dodawanie przycisków paska narzędzi do <xref:System.Windows.Forms.ToolBar> formantu.  
+1.  W procedurze, Dodaj przyciski paska narzędzi na <xref:System.Windows.Forms.ToolBar> kontroli.  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,10 +70,10 @@ ms.locfileid: "33535200"
        }  
     ```  
   
-2.  Dodaj program obsługi zdarzeń dla <xref:System.Windows.Forms.ToolBar> formantu <xref:System.Windows.Forms.ToolBar.ButtonClick> zdarzeń. Użyj przypadku przełączania instrukcji i <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasę, aby określić, który został kliknięty przycisk paska narzędzi. Na podstawie tych, Pokaż okno odpowiedni komunikat.  
+2.  Dodawanie obsługi zdarzeń dla <xref:System.Windows.Forms.ToolBar> kontrolki <xref:System.Windows.Forms.ToolBar.ButtonClick> zdarzeń. Należy używać liter, przełączanie instrukcji i <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasę, aby określić przycisku paska narzędzi, który został kliknięty. Na tej podstawie Pokaż pole odpowiedni komunikat.  
   
     > [!NOTE]
-    >  Okno komunikatu jest używany wyłącznie jako element zastępczy w tym przykładzie. Możesz także dodać inny kod do wykonania po kliknięciu przycisku paska narzędzi.  
+    >  Okno komunikatu jest używana wyłącznie jako symbol zastępczy w tym przykładzie. Możesz dodać innego kodu do wykonania po kliknięciu przycisku paska narzędzi.  
   
     ```vb  
     Protected Sub ToolBar1_ButtonClick(ByVal sender As Object, _  
@@ -134,8 +134,8 @@ ms.locfileid: "33535200"
        }  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Forms.ToolBar>  
- [Instrukcje: dodawanie przycisków do kontrolki ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
- [Instrukcje: określanie ikony dla przycisku kontrolki ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [ToolBar, kontrolka](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Forms.ToolBar>
+- [Instrukcje: Dodawanie przycisków do formantu ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)
+- [Instrukcje: Określanie ikony dla przycisku kontrolki ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [ToolBar, kontrolka](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

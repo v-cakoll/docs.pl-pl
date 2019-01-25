@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44f3604e3c12cd4b9781876d2d412d942353061e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c1c05918965e40801757462ce53257bc36a5d8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587716"
 ---
 # <a name="efngetmanagedexcepstack-function"></a>_EFN_GetManagedExcepStack — Funkcja
-Podany adres obiektu zarządzanym wyjątku zwraca ciąg wersji śladu stosu znajdująca się wewnątrz.  
+Podany adres obiektu zarządzanego wyjątku zwraca wersję ślad stosu zawarte wewnątrz ciągu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,26 +39,26 @@ HRESULT _EFN_GetManagedExcepStack(
   
 #### <a name="parameters"></a>Parametry  
  `Client`  
- [in] Klient debugowany.  
+ [in] Klient debugowane.  
   
  `StackObjAddr`  
- [in] Wskaźnik do obiektu zarządzanego, pochodzących z <xref:System.Exception>.  
+ [in] Wskaźnik do obiektu zarządzanego, pochodzące z <xref:System.Exception>.  
   
  szStackString  
- [out] Zwracany ciąg.  
+ [out] Zwracanego ciągu.  
   
  `cbString`  
- [out] Liczba dostępnych w buforze ciąg znaków.  
+ [out] Liczba dostępnych w buforu ciągu znaków.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli istnieje żadnego kodu zarządzanego w wątku aktualnie w kontekście, funkcja zwraca HRESULT SOS_E_NOMANAGEDCODE z wartości instrumentu 0xa0 i błąd o kodzie 0x1000.  
+ Jeśli żaden kod zarządzany w wątku obecnie występuje w kontekście, funkcja zwraca HRESULT SOS_E_NOMANAGEDCODE z wartością funkcji 0xa0 i kod błędu 0x1000.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** SOS_Stacktrace.h  
   
- **.NET framework w wersji:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersja programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Debugowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Debugowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Jak wykazać podzbiór kolejek drukowania
+title: 'Instrukcje: Wykaż podzbiór kolejek drukowania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: bf45d6fb3fb161ca5171e94b9ab7af1e0e6f0c3d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e1cbd9e7332a5e021e1cf9fba75f6d21ae01582b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558569"
 ---
-# <a name="how-to-enumerate-a-subset-of-print-queues"></a>Jak wykazać podzbiór kolejek drukowania
+# <a name="how-to-enumerate-a-subset-of-print-queues"></a>Instrukcje: Wykaż podzbiór kolejek drukowania
 Typowe sytuacji sterowaną przez specjalistów technologii informatycznych (IT), zarządzanie zbiór drukarek w firmie polega na generowaniu listę drukarek mające określoną wspólną charakterystykę. Ta funkcjonalność jest dostarczana przez <xref:System.Printing.PrintServer.GetPrintQueues%2A> metody <xref:System.Printing.PrintServer> obiektu i <xref:System.Printing.EnumeratedPrintQueueTypes> wyliczenia.  
   
 ## <a name="example"></a>Przykład  
@@ -34,13 +34,13 @@ Typowe sytuacji sterowaną przez specjalistów technologii informatycznych (IT),
   
  W tym przykładzie można rozszerzyć przez `foreach` pętli, który przeprowadza użytkownika przez proces każdej kolejki wydruku do dalszego kontroli. Na przykład użytkownik może sprawia, drukarki, które nie obsługują drukowania dwustronnego przez wywołanie pętli każdej kolejki wydruku <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> metody i testowania zwracanej wartości na obecność dupleksu.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.LocalPrintServer>  
- <xref:System.Printing.EnumeratedPrintQueueTypes>  
- <xref:System.Printing.PrintQueue>  
- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Moduł zapisywania dokumentów XPS firmy Microsoft](https://go.microsoft.com/fwlink/?LinkId=147319)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Printing.PrintServer.GetPrintQueues%2A>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.LocalPrintServer>
+- <xref:System.Printing.EnumeratedPrintQueueTypes>
+- <xref:System.Printing.PrintQueue>
+- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
+- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)

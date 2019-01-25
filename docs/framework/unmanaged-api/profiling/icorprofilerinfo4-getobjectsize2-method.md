@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ebbc3422f48c0c2b8ff7b807228c63fbb35dd7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a3b0ddc804e8eefdf90b3b0f17f4575b4d92bf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502653"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>ICorProfilerInfo4::GetObjectSize2 — Metoda
-Zwraca rozmiar określonego obiektu. Zastępuje [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) metody raportowanie rozmiary obiektów, które są większe niż to, co może być wyrażona w `ULONG`.  
+Zwraca rozmiar określonego obiektu. Zastępuje [icorprofilerinfo::getobjectsize —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) metoda raportowanie rozmiarów obiektów, które są większe niż mogą być wyrażone w `ULONG`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,13 +40,13 @@ HRESULT GetObjectSize2(
  [in] Identyfikator obiektu.  
   
  `pcSize`  
- [out] Wskaźnik do obiektu rozmiar w bajtach.  
+ [out] Wskaźnik do obiektu, rozmiar w bajtach.  
   
 ## <a name="remarks"></a>Uwagi  
- Różne obiekty o takich samych typach często mają ten sam rozmiar. Jednak niektóre typy, takich jak macierze czy ciągi, może mieć inny rozmiar dla każdego obiektu.  
+ Te same typy dwóch różnych obiektów często mają taki sam rozmiar. Jednak niektóre typy, takie jak tablice i ciągów, może mieć inny rozmiar dla każdego obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -54,5 +54,5 @@ HRESULT GetObjectSize2(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)

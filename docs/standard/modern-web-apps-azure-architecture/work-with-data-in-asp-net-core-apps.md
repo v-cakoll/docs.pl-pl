@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a30d6708b87687ee4d5cdb13452662e264a1b54c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532685"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Praca z danymi w aplikacji platformy ASP.NET Core
 
@@ -165,7 +165,7 @@ public class Startup
 
 Po włączeniu ponownych prób w połączeniach programu EF Core każdej operacji, które możesz wykonać przy użyciu programu EF Core staje się własną wywołały operacji. Jeśli wystąpi błąd przejściowy, każde zapytanie i każde wywołanie funkcji SaveChanges zostanie ponowiona jako jednostka.
 
-Jednak jeśli Twój kod inicjuje transakcji za pomocą BeginTransaction, definiujesz własną grupę działań, które muszą być traktowane jako jednostka — wszystko wewnątrz transakcja została wycofana, ponownie, jeśli wystąpi awaria. Jeśli użytkownik podejmie próbę wykonania transakcji, gdy za pomocą strategii wykonywania EF (zasady ponawiania) i obejmują SaveChanges kilka z wielu DbContexts w nim pojawi się wyjątek, jak pokazano poniżej.
+Jednak jeśli Twój kod inicjuje transakcji za pomocą BeginTransaction, definiujesz własną grupę działań, które muszą być traktowane jako jedna całość; wszystko wewnątrz transakcji musi zostać wycofana ponownie, jeśli wystąpi awaria. Jeśli użytkownik podejmie próbę wykonania transakcji, gdy za pomocą strategii wykonywania EF (zasady ponawiania) i obejmują SaveChanges kilka z wielu DbContexts w nim pojawi się wyjątek, jak pokazano poniżej.
 
 System.InvalidOperationException: Strategia wykonywania skonfigurowany "SqlServerRetryingExecutionStrategy" nie obsługuje transakcji zainicjowanej przez użytkownika. Strategia wykonywania zwróconych przez "DbContext.Database.CreateExecutionStrategy()" umożliwia wykonywanie wszystkich operacji w transakcji jako jednostka z możliwością ponowienia próby.
 
@@ -323,7 +323,7 @@ Platforma ASP.NET Core obsługuje dwa poziomy buforowanie odpowiedzi. Pierwszy p
 
 Poprzedni przykład, wynikiem będzie następujący nagłówek, które są dodawane do odpowiedzi poinstruowanie klientom Zbuforuj wynik do 60 sekund.
 
-Cache-Control: public, maksymalny wiek = 60
+Cache-Control: public,max-age=60
 
 Aby można było dodać buforowanie w pamięci po stronie serwera aplikacji, musi odwoływać się do pakietu Microsoft.AspNetCore.ResponseCaching NuGet, a następnie dodaj oprogramowanie pośredniczące buforowania odpowiedzi. To oprogramowanie pośredniczące jest skonfigurowany zarówno w ConfigureServices i Konfiguruj przy uruchamianiu:
 

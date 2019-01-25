@@ -1,21 +1,21 @@
 ---
-title: 'Porady: ładowanie XML z pliku (C#)'
+title: 'Instrukcje: Ładowanie kodu XML z pliku (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: b8322863ad33f8116e26d98467490b9114339553
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f97e99a3d5fb2dd5628e1dc00909b6608255a967
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688135"
 ---
-# <a name="how-to-load-xml-from-a-file-c"></a>Porady: ładowanie XML z pliku (C#)
+# <a name="how-to-load-xml-from-a-file-c"></a>Instrukcje: Ładowanie kodu XML z pliku (C#)
 W tym temacie pokazano, jak załadować XML z identyfikatora URI przy użyciu <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> metody.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia sposób ładowania dokumentu XML z pliku. Poniższy przykład załaduje books.xml i generuje drzewa XML do konsoli.  
   
- W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: książki (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Książki (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XElement booksFromFile = XElement.Load(@"books.xml");  
@@ -48,6 +48,6 @@ Console.WriteLine(booksFromFile);
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Analizowanie kodu XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

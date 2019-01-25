@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 7d959c0717a3ef44dfc23c90d99ec7b83421efaa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0890068d192a137689d06eb081e1a0fc128aabcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519011"
 ---
 # <a name="select-clause-visual-basic"></a>Select — Klauzula (Visual Basic)
 Definiuje wyniku zapytania.  
@@ -29,7 +29,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  Opcjonalna. Alias, który może służyć do odwołania wyniki wyrażenia kolumny.  
   
  `fieldName1`  
- Wymagane. Nazwa pola do zwrócenia w wyniku zapytania.  
+ Wymagana. Nazwa pola do zwrócenia w wyniku zapytania.  
   
 ## <a name="remarks"></a>Uwagi  
  Możesz użyć `Select` klauzulę, aby zdefiniować wyników do zwrócenia z zapytania. Dzięki temu można zdefiniować członkowie nowy typ anonimowy, który jest tworzony przez zapytania lub docelowych elementów członkowskich typu nazwanego, który jest zwracany przez zapytanie. `Select` Klauzula nie jest wymagana dla zapytania. Jeśli nie `Select` określono klauzulę, kwerenda będzie zwracać typ zależny od wszystkich elementów członkowskich zmiennych zakresu dla bieżącego zakresu. Aby uzyskać więcej informacji, zobacz [typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Gdy zapytanie tworzy typ nazwany, zwróci wynik o typie <xref:System.Collections.Generic.IEnumerable%601> gdzie `T` jest utworzony typ.  
@@ -51,10 +51,10 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Zapytania](../../../visual-basic/language-reference/queries/index.md)  
- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Order By, klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Zapytania](../../../visual-basic/language-reference/queries/index.md)
+- [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Order By, klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

@@ -2,12 +2,12 @@
 title: Adoptowanie programu Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 5773d2687eb06cfc562dbe25fa9b94864b1b3a49
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 58a51f7ea0db2297c7151a752de3f54307e0c5fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232966"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643354"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Adoptowanie programu Windows Communication Foundation
 
@@ -21,6 +21,6 @@ Klienci WCF, mogą używać usług sieci Web platformy ASP.NET. Usługi WCF, kt�
 
 Nawet w nielicznych przypadkach, gdzie jest to konieczne Migrowanie kodu technologia jednego do drugiego rzadko jest właściwe podejście. Uzasadnienie nowej technologii jest spełniać nowe wymagania, nie można spełnić przy użyciu starszej technologii, a w takim przypadku pierwsze poprawne, należy jest nowe rozwiązanie, aby spełnić nowo rozwinięte ustalony zbiór wymogów dotyczących projektowania. Nowe korzyści projektu z korzystania z istniejącego systemu i podczas uzyskanych od zaprojektowano tak, że system. Nowy projekt umożliwia również w pełni możliwości nowych technologii, a nie odtwarzanie starego projektu na nowej platformie. Po tworzenia prototypów kluczowe elementy nowy projekt staje się łatwiejsze do ponownego użycia kodu z istniejącego systemu w ramach nowego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: pobieranie metadanych i implementowanie zgodnej usługi](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)
+- [Instrukcje: Pobieranie metadanych i implementowanie zgodnej usługi](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)

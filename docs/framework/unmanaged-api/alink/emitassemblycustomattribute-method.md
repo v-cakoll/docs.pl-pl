@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: daf2c3dcaf16e949f8770121d8324cbfe6c7d05b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b4909ae23d077ee079e062d0252dbf1ee11663c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538833"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute — Metoda
-Wywołanie ustawiania poziomu zestawu atrybutów niestandardowych.  
+Wywołać można ustawić na poziomie zestawu atrybutów niestandardowych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,22 +46,22 @@ HRESULT EmitAssemblyCustomAttribute(
  Identyfikator zestawu.  
   
  `FileToken`  
- Plik, który defiles atrybutu. Może mieć wartość NULL, jeśli `AssemblyID` nie wskazuje niezwiązanego modułu netmodule.  
+ Plik, który defiles atrybutu. Może mieć wartości NULL, jeśli `AssemblyID` nie wskazuje niepowiązanych modułu netmodule.  
   
  `tkType`  
  Typ atrybutu niestandardowego.  
   
  `pCustomValue`  
- Dane niestandardowe wartości.  
+ Niestandardowa wartość danych.  
   
  `cbCustomValue`  
- Długość danych wartości niestandardowych.  
+ Długość danych niestandardowych wartości.  
   
  `bSecurity`  
- Wartość TRUE, jeśli atrybut niestandardowy jest powiązany z podpisywanie zestawu.  
+ Wartość TRUE, jeśli atrybut niestandardowy jest powiązany do podpisywania zestawu.  
   
  `bAllowMulti`  
- Wartość TRUE, jeśli mają być emitowane wiele atrybutów.  
+ Wartość TRUE, jeśli wiele atrybutów, które mają być emitowane.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.  
@@ -69,7 +69,7 @@ HRESULT EmitAssemblyCustomAttribute(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

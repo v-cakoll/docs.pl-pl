@@ -8,19 +8,19 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 074f2f0cd2c3ac6c6287db08b22ead07afa58fc5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d143f91d31951f218631519a3182f5de6c4eca60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532126"
 ---
 # <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt; — Element (ustawienia sieci)
 Określa moduły używane do uwierzytelniania żądań w sieci.  
   
  \<Konfiguracja >  
 \<system.net>  
-\<authenticationModules >  
+\<authenticationModules>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ Określa moduły używane do uwierzytelniania żądań w sieci.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[przestrzeni nazw System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Zawiera ustawienia, które określają, jak .NET Framework łączy się z siecią.|  
+|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Zawiera ustawienia, które określają, jak .NET Framework łączy się z siecią.|  
   
 ## <a name="remarks"></a>Uwagi  
  `authenticationModule` Element określa moduły uwierzytelniania, które należy przeprowadzić proces uwierzytelniania z serwerem. Moduł uwierzytelniania musi implementować <xref:System.Net.IAuthenticationModule> interfejsu.  
@@ -69,7 +69,7 @@ Określa moduły używane do uwierzytelniania żądań w sieci.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

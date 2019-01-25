@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5d06988330b9ec83463165661ea5425d8563c60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a12e747344f4943dafced2402e0f08a08ac6e7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498241"
 ---
 # <a name="icorprofilerinfo3getfunctionenter3info-method"></a>ICorProfilerInfo3::GetFunctionEnter3Info — Metoda
-Zawiera informacje ramki i argument stosu funkcji, która jest raportowany przez profiler [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) funkcji. Tę metodę można wywołać tylko podczas `FunctionEnter3WithInfo` wywołania zwrotnego.  
+Zawiera informacje stosu ramki i argument funkcji, która jest zgłaszany do profilera za [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) funkcji. Ta metoda może być wywoływana tylko podczas `FunctionEnter3WithInfo` wywołania zwrotnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,25 +41,25 @@ HRESULT GetFunctionEnter3Info(
   
 #### <a name="parameters"></a>Parametry  
  `functionId`  
- [in] `FunctionID` Funkcji, która jest wprowadzane.  
+ [in] `FunctionID` Funkcji, która jest wprowadzanych.  
   
  `eltInfo`  
- [in] Nieprzezroczystego uchwyt reprezentujący informacji na temat ramka stosu danego. Profiler powinien zawierać takie same `eltInfo` który został udzielony przez [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) funkcji.  
+ [in] Dojście nieprzezroczyste reprezentujący informacji na temat ramkę stosu w danym. Program profilujący powinien udostępniać takie same `eltInfo` , zostało przekazane przez [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) funkcji.  
   
  `pFrameInfo`  
- [out] Nieprzezroczystego uchwyt reprezentujący informacje ogólne o ramka stosu danego. Ta dojścia jest prawidłowy tylko w trakcie `FunctionEnter3WithInfo` wywołania zwrotnego o nazwie profilera `GetFunctionEnter3Info` metody.  
+ [out] Dojście nieprzezroczyste reprezentujący typów ogólnych informacji na temat ramkę stosu w danym. Tego dojścia jest prawidłowy tylko podczas `FunctionEnter3WithInfo` wywołania zwrotnego, w którym profiler wywołał metodę `GetFunctionEnter3Info` metody.  
   
  `pcbArgumentInfo`  
- [w, out] Wskaźnik całkowity rozmiar w bajtach z [cor_prf_function_argument_info —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) struktury (oraz wszelkie dodatkowe [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) struktur zakresów argument wskazywana przez `pArgumentInfo`). Jeśli określony rozmiar jest niewystarczający, zwracany jest ERROR_INSUFFICIENT_BUFFER i oczekiwanym rozmiarem są przechowywane w `pcbArgumentInfo`. Aby wywołać `GetFunctionEnter3Info` tylko w celu oczekiwanej wartości dla pobrania `*pcbArgumentInfo`ustaw `*pcbArgumentInfo`= 0 i `pArgumentInfo`= NULL.  
+ [out w] Wskaźnik do łączny rozmiar w bajtach, z [cor_prf_function_argument_info —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) struktury (oraz wszelkie dodatkowe [cor_prf_function_argument_range —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) struktur dla zakresów argument wskazywany przez `pArgumentInfo`). Jeśli wybrany rozmiar nie jest wystarczająco dużo, zwracany jest ERROR_INSUFFICIENT_BUFFER i oczekiwany rozmiar jest przechowywany w `pcbArgumentInfo`. Aby wywołać `GetFunctionEnter3Info` tylko w celu pobrania z oczekiwaną wartością `*pcbArgumentInfo`ustaw `*pcbArgumentInfo`= 0 i `pArgumentInfo`= NULL.  
   
  `pArgumentInfo`  
- [out] Wskaźnik do [cor_prf_function_argument_info —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) struktury, która opisuje lokalizacje argumentów funkcji w pamięci w kolejności od lewej do prawej.  
+ [out] Wskaźnik do [cor_prf_function_argument_info —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) strukturę, która opisuje lokalizacje argumentów funkcji w pamięci, w kolejności od lewej do prawej.  
   
 ## <a name="remarks"></a>Uwagi  
- Profiler musi przydzielić wystarczającą ilość miejsca na `COR_PRF_FUNCTION_ARGUMENT_INFO` struktury funkcji, która jest kontrolowanym i musi wskazywać rozmiar w `pcbArgumentInfo` parametru.  
+ Program profilujący musi przydzielić wystarczającej ilości miejsca dla `COR_PRF_FUNCTION_ARGUMENT_INFO` struktury funkcja, która jest poddawana i musi wskazywać wielkość w `pcbArgumentInfo` parametru.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -67,10 +67,10 @@ HRESULT GetFunctionEnter3Info(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
+- [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
+- [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
+- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

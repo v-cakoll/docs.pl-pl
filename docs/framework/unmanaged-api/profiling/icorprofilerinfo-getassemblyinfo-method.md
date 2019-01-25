@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3579020ce268cd59a091e685fae2e97b3191c55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b8211e46b1a46d15befba17a52cd626d91f95fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616787"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>ICorProfilerInfo::GetAssemblyInfo — Metoda
-Akceptuje identyfikator zestawu i zwraca nazwę zestawu i identyfikator jej manifestu modułu.  
+Akceptuje identyfikator zestawu i zwraca nazwę zestawu i identyfikator jego manifestu modułu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,21 +51,21 @@ HRESULT GetAssemblyInfo(
  [out] Wskaźnik do znaku całkowita długość nazwy zestawu.  
   
  `szName`  
- [out] Bufor dostarczane przez obiekt wywołujący znaków dwubajtowych. Po powrocie z funkcji, będzie zawierać nazwy zestawu.  
+ [out] Bufor dostarczane przez obiekt wywołujący znaku dwubajtowego. Po powrocie z tej funkcji będzie zawierać nazwę zestawu.  
   
  `pAppDomainId`  
- [out] Wskaźnik do identyfikator domeny aplikacji, która zawiera zestaw.  
+ [out] Wskaźnik do Identyfikatora domeny aplikacji, który zawiera zestaw.  
   
  `pModuleId`  
  [out] Wskaźnik do Identyfikatora modułu manifestu zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
- Po powrocie z tej metody, należy sprawdzić, czy `szName` bufor był wystarczająco duży, aby zawierać pełnej nazwy zestawu. W tym celu należy porównać wartości który `pcchName` wskazuje wartość `cchName` parametru. Jeśli `pcchName` wskazuje wartość, która jest większa niż `cchName`, Przydziel większy `szName` buforu, zaktualizuj `cchName` z nowej, większy rozmiar i wywołanie `GetAssemblyInfo` ponownie.  
+ Po powrocie z tej metody należy sprawdzić, czy `szName` bufor jest wystarczająco duży, aby zawierać pełną nazwę zestawu. Aby to zrobić, porównaj wartość która `pcchName` wskazuje z wartością `cchName` parametru. Jeśli `pcchName` wskazuje wartość, która jest większa niż `cchName`, Przydziel większego `szName` buforu, zaktualizuj `cchName` przy użyciu nowych, większy rozmiar i Wywołaj `GetAssemblyInfo` ponownie.  
   
- Alternatywnie można wywołać `GetAssemblyInfo` o zerowej długości `szName` buforu w celu uzyskania rozmiar buforu poprawne. Następnie można dostosować rozmiar buforu, na podstawie wartości zwracane w `pcchName` i Wywołaj `GetAssemblyInfo` ponownie.  
+ Alternatywnie, można wywołać `GetAssemblyInfo` o zerowej długości `szName` buforu w celu uzyskania rozmiar buforu poprawne. Następnie można dostosować rozmiar buforu, w oparciu o wartości zwracanej w `pcchName` i wywołać `GetAssemblyInfo` ponownie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -73,7 +73,7 @@ HRESULT GetAssemblyInfo(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

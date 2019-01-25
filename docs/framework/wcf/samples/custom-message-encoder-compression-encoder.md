@@ -1,15 +1,15 @@
 ---
-title: 'Niestandardowy koder komunikatów: Koder kompresji'
+title: 'Niestandardowy koder komunikatów: koder kompresji'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: dc1241f0652c55fee0db7ca7ff19b28fea656c16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583633"
 ---
-# <a name="custom-message-encoder-compression-encoder"></a>Niestandardowy koder komunikatów: Koder kompresji
+# <a name="custom-message-encoder-compression-encoder"></a>Niestandardowy koder komunikatów: koder kompresji
 Ten przykład demonstruje sposób implementacji niestandardowego kodera, za pomocą platformy Windows Communication Foundation (WCF).  
   
 > [!IMPORTANT]
@@ -355,4 +355,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

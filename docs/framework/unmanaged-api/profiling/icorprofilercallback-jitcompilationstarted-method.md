@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fa1081afc77c8116d8858c187401555409b4dcd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88362d33c05c25e7a86e474adf37f2ccd0474ff4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530765"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted — Metoda
-Powiadamia profilera, aby skompilować funkcję została uruchomiona przy użyciu kompilatora just in time (JIT).  
+Powiadamia program profilujący, że kompilator just-in-time (JIT) została uruchomiona kompilować funkcję.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,20 +37,20 @@ HRESULT JITCompilationStarted(
   
 #### <a name="parameters"></a>Parametry  
  `functionId`  
- [in] Identyfikator funkcji, dla których trwa uruchamianie kompilacji.  
+ [in] Identyfikator funkcji, dla których jest uruchamiana kompilacja.  
   
  `fIsSafeToBlock`  
- [in] Wartość wskazującą profilera, czy blokowanie będzie miało wpływ na działanie środowiska uruchomieniowego. Wartość jest `true` Jeśli blokuje może spowodować środowiska uruchomieniowego oczekiwania na wątek wywołujący do zwrócenia z tego wywołania zwrotnego; w przeciwnym razie `false`.  
+ [in] Wartość do programu profilującego wskazującą, czy blokowanie wpłynie na funkcjonowanie środowiska uruchomieniowego. Wartość jest `true` Jeśli blokowanie może spowodować, że środowisko uruchomieniowe oczekiwania na wątek wywołujący, zostać zwrócony przez to wywołanie zwrotne; w przeciwnym razie `false`.  
   
- Chociaż wartość `true` nie będzie uszkodzić środowiska uruchomieniowego, jego pochylanie wyniki profilowania.  
+ Mimo, że wartość `true` nie uszkodzi środowiska uruchomieniowego, jego pochylanie wyniki profilowania.  
   
 ## <a name="remarks"></a>Uwagi  
- Istnieje możliwość odbierania więcej niż jedną parę `JITCompilationStarted` i [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) wywołuje dla każdej funkcji ze względu na sposób środowiska uruchomieniowego konstruktorów klas uchwytów. Na przykład środowiska uruchomieniowego rozpoczyna Metoda kompilacji JIT, ale konstruktora klasy dla klasy B musi zostać uruchomione. W związku z tym środowiska uruchomieniowego kompiluje JIT konstruktora dla klasy B i uruchamia go. Konstruktor jest uruchomiona, powoduje wywołanie do metody A, co powoduje, że metoda być ponownie kompilowane JIT. W tym scenariuszu pierwszej kompilacji JIT metody A jest zatrzymywane. Jednak zarówno próby Metoda kompilacji JIT są zgłaszane ze zdarzeń kompilacji JIT. Jeśli profilera ma zastąpić kod języka pośredniego (MSIL) firmy Microsoft dla metody A wywołując [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metody, należy wykonać czynności dla obu `JITCompilationStarted` zdarzeń, ale może używać tego samego bloku MSIL dla obu.  
+ Jest to możliwe, aby otrzymać więcej niż jedną parę `JITCompilationStarted` i [icorprofilercallback::jitcompilationfinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) wywołuje dla każdej funkcji ze względu na sposób środowisko wykonawcze obsługuje Konstruktory klasy. Na przykład środowisko uruchomieniowe rozpoczyna się skompilować wg JIT metody A, ale konstruktora klasy dla klasy B musi zostać uruchomione. W związku z tym, środowisko uruchomieniowe kompiluje JIT konstruktora dla klasy B i uruchamia go. Konstruktor jest uruchomiona, tworzy wywołanie metody A, co powoduje, że metoda ponownie być kompilowany dokładnie na czas. W tym scenariuszu pierwszy kompilację JIT metody A jest zatrzymywana. Jednak zarówno próby metoda skompilować wg JIT są zgłaszane ze zdarzeniami kompilacja JIT. Jeśli program profilujący ma zastąpić kod intermediate language (MSIL) firmy Microsoft dla metody element przez wywołanie metody [icorprofilerinfo::setilfunctionbody —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metody, należy wykonać czynności dla obu `JITCompilationStarted` zdarzenia, ale mogą używać tego samego bloku MSIL dla obu przypadków.  
   
- Profilery musi obsługiwać sekwencję wywołań zwrotnych JIT w przypadkach, gdy dwa wątków jednocześnie dokonywania wywołań zwrotnych. Na przykład wywołuje wątku A `JITCompilationStarted`. Jednak przed wywołania wątku A `JITCompilationFinished`, wywołania wątku B [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) z Identyfikatorem funkcji z wątku A `JITCompilationStarted` wywołania zwrotnego. Wydaje się, że identyfikator funkcji należy jeszcze być nieprawidłowe ponieważ wywołania `JITCompilationFinished` nie ma jeszcze odebrane profilera. Jednak w przypadku takich jak ta, identyfikator funkcji jest prawidłowy.  
+ Profilery muszą obsługiwać sekwencję wywołań zwrotnych JIT w przypadkach, w której dwa wątki jednocześnie wykorzystują wywołania zwrotne. Na przykład, wywołania wątku A `JITCompilationStarted`. Jednak przed wywołań wątku A `JITCompilationFinished`, wywołań wątku B [icorprofilercallback::exceptionsearchfunctionenter —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) identyfikatorem funkcji z wątku, A `JITCompilationStarted` wywołania zwrotnego. Wydaje się, że identyfikator funkcji nie powinny jeszcze być prawidłowy ponieważ wywołanie `JITCompilationFinished` nie ma jeszcze odebrane przez profiler. Jednak w przypadku podobny do tego identyfikator funkcji jest nieprawidłowy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -58,6 +58,6 @@ HRESULT JITCompilationStarted(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [JITCompilationFinished, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [JITCompilationFinished, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)

@@ -1,5 +1,5 @@
 ---
-title: Jak kontrolować scenorys po uruchomieniu
+title: 'Instrukcje: Kontrolować Scenorys po uruchomieniu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,41 +7,41 @@ dev_langs:
 helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-ms.openlocfilehash: 2407de5029007748de691a3020078b1241b02fd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2fd9f34cdd6aac56ee5a29d972f18979292c69e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570151"
 ---
-# <a name="how-to-control-a-storyboard-after-it-starts"></a>Jak kontrolować scenorys po uruchomieniu
-W tym przykładzie przedstawiono użycie kodu w celu sterowania <xref:System.Windows.Media.Animation.Storyboard> po jego uruchomieniu. Aby kontrolować scenorysu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], użyj <xref:System.Windows.Trigger> i <xref:System.Windows.TriggerAction> obiektów, na przykład sprawdzić, [Użyj wyzwalacze zdarzeń, aby kontrolować scenorysu po jego uruchomieniu](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+# <a name="how-to-control-a-storyboard-after-it-starts"></a>Instrukcje: Kontrolować Scenorys po uruchomieniu
+W tym przykładzie pokazano, jak używać kodu do kontroli <xref:System.Windows.Media.Animation.Storyboard> po jego uruchomieniu. Aby kontrolować scenorys w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], użyj <xref:System.Windows.Trigger> i <xref:System.Windows.TriggerAction> obiektów; Aby uzyskać przykład, zobacz [użyć wyzwalaczy zdarzeń, aby kontrolować Scenorys po uruchomieniu](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
- Aby uruchomić scenorysu, należy użyć jego <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metodę, która dystrybuuje scenorysu animacji właściwości animacji i uruchamia scenorysu.  
+ Aby rozpocząć scenorysu, należy użyć jego <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metody, która dystrybuuje animacjami scenorysu, właściwości, animowanie i uruchamia scenorysu.  
   
- Aby wprowadzić sterowane scenorysu, należy użyć <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> — metoda i określ **true** jako drugiego parametru. Następnie można metody interakcyjne scenorysu wstrzymać, wznowić, wyszukiwanie, Zatrzymaj, przyspieszyć, lub spowolnić scenorysu lub jego dojściu do okresu. Oto lista metod interakcyjne scenorysu:  
+ Aby scenorysu sterowane, użyj <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metody i określ **true** jako drugi parametr. Następnie można metod interakcyjnych scenorysu wstrzymać, wznowić, wyszukiwanie, Zatrzymaj, przyspieszyć, lub spowolnić scenorysu lub przejdź go do okresu wypełnienia. Oto lista metod interakcyjnych scenorysu:  
   
 -   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Wstrzymuje scenorysu.  
   
 -   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Wznawia działanie wstrzymanej scenorysu.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Ustawia szybkość interakcyjne scenorysu.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Ustawia szybkość interaktywne scenorysu.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Stara scenorysu określonej lokalizacji.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Szuka scenorysu określonej lokalizacji.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Stara scenorysu do określonej lokalizacji. W odróżnieniu od <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> metody, ta operacja jest przetwarzana przed następnym znaczników.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Szuka scenorysu do określonej lokalizacji. W odróżnieniu od <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> metody, ta operacja jest przetwarzana przed następnym znaczników.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Przesuwa scenorys z okresu, jeśli istnieje.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Przesuwa scenorysu do okresu wypełnienia, jeśli taki istnieje.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Przestaje scenorysu.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Zatrzymuje scenorysu.  
   
- W poniższym przykładzie kilka metod scenorysu są używane do sterowania interaktywnego scenorysu.  
+ W poniższym przykładzie kilka metod scenorysu są używane do interaktywnie kontrolować scenorys.  
   
- **Uwaga:** aby zobaczyć przykładowy kontrolowanie scenorysu przy użyciu wyzwalaczy z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], zobacz [wyzwalacze zdarzeń używana do sterowania scenorysu po jego uruchomieniu](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+ **Uwaga:** Aby zobaczyć przykład kontrolowanie scenorysu, za pomocą wyzwalaczy z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], zobacz [użyć wyzwalaczy zdarzeń, aby kontrolować Scenorys po uruchomieniu](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
  [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Sterowanie scenorysem po uruchomieniu przy użyciu wyzwalaczy zdarzeń](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)
+## <a name="see-also"></a>Zobacz także
+- [Sterowanie scenorysem po uruchomieniu przy użyciu wyzwalaczy zdarzeń](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

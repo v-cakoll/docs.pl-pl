@@ -1,15 +1,15 @@
 ---
-title: 'Porady: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych (C#)'
+title: 'Instrukcje: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych (C#)'
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: e3afbea647bb429d25f41f37fde268565bc5bf8a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: dec9d84f7fa37f859e307f2a653464608684bc88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499554"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Porady: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych (C#)
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Instrukcje: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych (C#)
 W programie LINQ, drzew wyrażeń są używane do reprezentowania strukturyzowanych zapytań, których platformą docelową źródeł danych, który implementuje <xref:System.Linq.IQueryable%601>. Na przykład implementuje dostawcę LINQ <xref:System.Linq.IQueryable%601> interfejs do wykonywania zapytań magazynów danych relacyjnych. Kompilator języka C# kompiluje zapytań przeznaczonych dla tych źródeł danych do kodu, który kompiluje do drzewa wyrażenie w czasie wykonywania. Dostawca kwerend można przechodzić przez strukturę danych drzewa wyrażeń i tłumaczenie język zapytań, odpowiednie dla źródła danych.  
   
  Drzewa wyrażeń są również używane w składniku LINQ do reprezentowania wyrażeń lambda, które są przypisane do zmiennych typu <xref:System.Linq.Expressions.Expression%601>.  
@@ -108,8 +108,8 @@ foreach (string company in results)
   
 -   Skopiuj kod z przykładu i wklej go w `Main` metody.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Drzewa wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-- [Porady: wykonywanie drzew wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
-- [Porady: dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [Drzewa wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Instrukcje: Wykonywanie drzew wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Instrukcje: Dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)

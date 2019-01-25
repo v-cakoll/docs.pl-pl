@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 25cc1a1e4c6e7e7d3f695c06eade8be546ee6c05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205259"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531970"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Najlepsze rozwiązania dotyczące zabezpieczeń programu WCF
 W poniższych sekcjach wymieniono najlepsze rozwiązania, należy wziąć pod uwagę podczas tworzenia bezpiecznych aplikacji za pomocą usługi Windows Communication Foundation (WCF). Aby uzyskać więcej informacji na temat zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), i [zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -45,7 +45,7 @@ W poniższych sekcjach wymieniono najlepsze rozwiązania, należy wziąć pod uw
  Pamiętaj, pochodzi z zaufanego źródła metadanych i upewnij się, że nikt nie ingerował metadanych. Metadane pobrany przy użyciu protokołu HTTP są wysyłane w postaci zwykłego tekstu i może zostać zmieniony. Jeśli usługa używa <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> i <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> właściwości, użyj adres URL podany przez twórcę usługi podczas pobierania danych przy użyciu protokołu HTTPS.  
   
 ## <a name="publish-metadata-using-security"></a>Publikowanie metadanych przy użyciu zabezpieczeń  
- Aby zapobiec modyfikowaniu metadanymi opublikowanej usługi, należy zabezpieczyć punkt końcowy wymiany metadanych za pomocą transportu lub zabezpieczenia na poziomie komunikatu. Aby uzyskać więcej informacji, zobacz [publikowanie punktów końcowych metadanych](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) i [porady: Publikowanie metadanych dla kodu za pomocą usługi](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Aby zapobiec modyfikowaniu metadanymi opublikowanej usługi, należy zabezpieczyć punkt końcowy wymiany metadanych za pomocą transportu lub zabezpieczenia na poziomie komunikatu. Aby uzyskać więcej informacji, zobacz [publikowanie punktów końcowych metadanych](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) i [jak: Publikowanie metadanych dla usługi przy użyciu kodu](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Upewnij się, Użyj lokalnego wystawcy  
  Wystawca adres i powiązanie są określone dla danego powiązania, wystawcy lokalnego nie jest używana dla punktów końcowych, korzystające z tego wiązania. Klienci, którzy oczekują zawsze używaj wystawcy lokalnego należy upewnić się, że nie używaj takiego powiązania lub mogą modyfikować powiązania taki sposób, że adres wystawca ma wartość null.  
@@ -56,7 +56,7 @@ W poniższych sekcjach wymieniono najlepsze rozwiązania, należy wziąć pod uw
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>Ustaw SecurityBindingElement.IncludeTimestamp wartość True na powiązań niestandardowych  
  Podczas tworzenia niestandardowego powiązania, należy ustawić <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> do `true`. W przeciwnym razie, jeśli <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> jest ustawiona na `false`, a klient używa asymetrycznego token opartego na kluczach, takich jak X509 certyfikatu, komunikat nie zostanie ona podpisana.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Zagadnienia związane z zabezpieczeniami danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
- [Zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+## <a name="see-also"></a>Zobacz także
+- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Zagadnienia związane z zabezpieczeniami danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
+- [Zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

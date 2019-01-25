@@ -1,5 +1,5 @@
 ---
-title: 'Porady: rysowanie nieprzezroczystych i półprzezroczystych linii'
+title: 'Instrukcje: Rysowanie nieprzezroczystych i półprzezroczystych linii'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing alpha blended
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
-ms.openlocfilehash: f6667b3ac5bbe5dd82198f7bf23047f01cd7350a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6076ebf6cb75aa4fdb5cf5798b642597d8f84c80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559050"
 ---
-# <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Porady: rysowanie nieprzezroczystych i półprzezroczystych linii
-W przypadku rysowania linii, należy podać <xref:System.Drawing.Pen> do obiektu <xref:System.Drawing.Graphics.DrawLine%2A> metody <xref:System.Drawing.Graphics> klasy. Jeden z parametrów <xref:System.Drawing.Pen.%23ctor%2A> Konstruktor jest <xref:System.Drawing.Color> obiektu. Rysowanie linii nieprzezroczyste, należy ustawić składnika alfa koloru do 255. Aby narysować półprzezroczystych linii, należy ustawić składnika alfa na wartość od 1 do 254.  
+# <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Instrukcje: Rysowanie nieprzezroczystych i półprzezroczystych linii
+Po narysowaniu linii, należy przekazać <xref:System.Drawing.Pen> obiekt <xref:System.Drawing.Graphics.DrawLine%2A> metody <xref:System.Drawing.Graphics> klasy. Jeden z parametrów <xref:System.Drawing.Pen.%23ctor%2A> Konstruktor jest <xref:System.Drawing.Color> obiektu. Aby narysować linię nieprzezroczysty, ustaw składnik alfa koloru do 255. Aby narysować linię półprzezroczystych, należy ustawić składnik alfa na wartość od 1 do 254.  
   
- Po narysowaniu półprzezroczystych linii w tle kolor linii mieszania kolorów tła. Składnik alfa określa, jak mieszane kolory tła i linii; wartości alfa niemal 0 umieść ważniejsze na kolory tła i wartości alfa niemal 255 umieść ważniejsze na kolor linii.  
+ Kiedy rysujesz półprzezroczystych linii w tle koloru linii jest zmieszana przy użyciu kolorów tła. Składnik alfa określa, jak kolory tła i wiersza są mieszane; wartości alfa niemal 0 ważniejsze na kolory tła i wartości alfa niemal 255 umieścić więcej wagi na kolor linii.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład map bitowych rysuje, a następnie trzy wiersze, korzystających z mapy bitowej jako tło jest rysowane. Pierwszy wiersz używa składnika alfa 255, tak aby zawierała przezroczystości. Drugi i trzeci linii używają alfa składnika 128, dzięki czemu są one półprzezroczystych; obraz tła do wierszy jest widoczny. Instrukcja, która ustawia <xref:System.Drawing.Graphics.CompositingQuality%2A> właściwość powodująca usunięcie mieszania dla trzeciego wiersza w połączeniu z korekcja gamma.  
+ Poniższy przykład pobiera mapę bitową i następnie pobiera trzy wiersze, korzystających z mapy bitowej jako tło. Pierwszy wiersz używa składnik alfa, 255, więc jest nieprzezroczysta. Wiersze drugi i trzeci Użyj składnik alfa, 128, dzięki czemu są one półprzezroczystych; Możesz zobaczyć obraz tła za pośrednictwem wierszy. Instrukcja, która ustawia <xref:System.Drawing.Graphics.CompositingQuality%2A> właściwości powoduje, że mieszanie trzeci wiersz do wykonania w połączeniu z korekcji gamma.  
   
- Na poniższej ilustracji przedstawiono dane wyjściowe poniższy kod.  
+ Poniższa ilustracja przedstawia dane wyjściowe następujący kod.  
   
  ![Nieprzezroczystych i półprzezroczystych](../../../../docs/framework/winforms/advanced/media/compqualline.png "compqualline")  
   
@@ -33,9 +33,9 @@ W przypadku rysowania linii, należy podać <xref:System.Drawing.Pen> do obiektu
  [!code-vb[System.Drawing.AlphaBlending#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzedni przykład jest przeznaczony do użytku z formularzy systemu Windows i wymaga <xref:System.Windows.Forms.PaintEventArgs> `e`, który jest parametrem <xref:System.Windows.Forms.Control.Paint> obsługi zdarzeń.  
+ Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przenikanie alfa linii i wypełnień](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
- [Instrukcje: ustawienie przezroczystego tła kontrolki](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
- [Instrukcje: rysowanie za pomocą nieprzezroczystych i półprzezroczystych pędzli](../../../../docs/framework/winforms/advanced/how-to-draw-with-opaque-and-semitransparent-brushes.md)
+## <a name="see-also"></a>Zobacz także
+- [Przenikanie alfa linii i wypełnień](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+- [Instrukcje: Zachować kontrolę z przezroczystym tłem](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)
+- [Instrukcje: Rysowanie za pomocą nieprzezroczystych i półprzezroczystych pędzli](../../../../docs/framework/winforms/advanced/how-to-draw-with-opaque-and-semitransparent-brushes.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a53b0a9cdcec33846f9d491e7d6567bcf9235b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f2a05009caed7bef6da9edee57a4a54b876b18f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580996"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication — Funkcja
-Uruchamia aplikację w ścieżce określonej sieci przy użyciu określonego manifestów i innych danych aplikacji.  
+Uruchamia aplikację w określonej ścieżce sieciowej, przy użyciu określonych manifestów i innych danych aplikacji.  
   
  Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -45,34 +45,34 @@ HRESULT CorLaunchApplication (
   
 #### <a name="parameters"></a>Parametry  
  `dwClickOnceHost`  
- [in] Wartość [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) wyliczenie określający typ hosta, który jest uruchomienie aplikacji.  
+ [in] Wartość [host_type —](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) wyliczenie, który określa typ hosta, który uruchamia aplikację.  
   
  `pwzAppFullName`  
- [in] Pełna nazwa aplikacji, w której jest on uruchomiony.  
+ [in] Pełna nazwa aplikacji, który jest on uruchamiany.  
   
  `dwManifestPaths`  
  [in] Liczba ścieżek manifestu dla aplikacji.  
   
  `ppwzManifestPaths`  
- [in] Tablica ciągów, z których każdy określa ścieżkę do manifestu dla aplikacji, która jest jest uruchamiana.  
+ [in] Tablica ciągów, z których każdy określa ścieżkę do manifestu aplikacji, który jest on uruchamiany.  
   
  `dwActivationData`  
- [in] Liczba elementów danych aktywacji dla aplikacji, która jest jest uruchamiana.  
+ [in] Liczba elementów danych aktywacji dla aplikacji, który jest on uruchamiany.  
   
  `ppwzActivationData`  
- [in] Tablica ciągów, z których każdy jest element danych aktywacji dla aplikacji, która jest jest uruchamiana.  
+ [in] Tablica ciągów, z których każdy jest element danych aktywacji dla aplikacji, który jest on uruchamiany.  
   
  `lpProcessInformation`  
  [out] Wskaźnik do informacji na temat procesu, w którym został załadowany w aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.h  
   
- **Biblioteka:** biblioteki MSCorEE.dll  
+ **Biblioteka:** MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

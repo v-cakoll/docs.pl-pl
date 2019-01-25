@@ -2,12 +2,12 @@
 title: System.TimeSpan Methods
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: ab4519f480dfeca0a35da50a80bd878b7db0960d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a3f3c82f9f8db4b72588f165ed4d897b974eb076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539912"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan Methods
 Element członkowski obsługę <xref:System.TimeSpan?displayProperty=nameWithType> zależy od wersji .NET Framework i programu Microsoft SQL Server, którego używasz.  
@@ -36,8 +36,8 @@ Element członkowski obsługę <xref:System.TimeSpan?displayProperty=nameWithTyp
 ### <a name="addition-and-subtraction"></a>Dodawanie i odejmowanie  
  Chociaż środowisko CLR <xref:System.TimeSpan?displayProperty=nameWithType> typ obsługuje dodawanie i odejmowanie, SQL `TIME` nie ma typu. W związku z tym Twoje zapytania LINQ to SQL będzie generować błędy, jeśli one próba Dodawanie i odejmowanie, gdy są mapowane do bazy danych SQL `TIME` typu. Możesz znaleźć inne zagadnienia dotyczące pracy z SQL typów daty i godziny w [mapowanie typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Tworzenie modelu obiektu](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [Mapowania typów środowiska SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
- [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Zobacz także
+- [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Tworzenie modelu obiektu](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [Mapowania typów środowiska SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
+- [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

@@ -1,14 +1,14 @@
 ---
 title: Obsługa wyjątków w wyrażeniach zapytań (LINQ w C#)
 description: Informacje o sposobie obsługi wyjątków w wyrażeniach zapytań LINQ w C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 2bf0c397-13fb-4f68-bc2b-531c6c88a167
-ms.openlocfilehash: e0fa9a20251d3d185448ee386de81d127ae7a42c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: f900669412026e69598d3939c51ff8208b51b7ec
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564071"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857505"
 ---
 # <a name="handle-exceptions-in-query-expressions"></a>Obsługa wyjątków w wyrażeniach zapytań
 

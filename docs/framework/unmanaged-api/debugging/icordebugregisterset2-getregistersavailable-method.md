@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3a9cdb49c1a44dbc68cd4b7ccf4d4781ce5c539
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 071c9c9cbdb47372903ef418a4f21450d8071f8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421895"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614068"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable — Metoda
-Pobiera tablicę bajtów zawiera mapę bitową rejestry dostępne.  
+Pobiera tablicę bajtów, która zawiera mapę bitową dostępnych rejestrach.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,21 +41,21 @@ HRESULT GetRegistersAvailable (
  [in] Rozmiar `availableRegChunks` tablicy.  
   
  `availableRegChunks`  
- [out] Tablica bajtów, każdy bit odpowiada rejestru. Jeśli rejestr jest dostępny, odpowiadający mu bit rejestru jest ustawiona.  
+ [out] Tablica bajtów, każdy bit odnosi się do rejestru. Jeśli rejestr jest dostępny, odpowiadający mu bit rejestru jest ustawiona.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartości właściwości cordebugregister — wyliczenie określają rejestry mikroprocesorami inny. Górny pięć bitów każdej wartości są indeks `availableRegChunks` tablicę bajtów. Niższe trzy usługi bits każdej wartości zidentyfikować Pozycja bitu w indeksowanych bajtów. Podane `CorDebugRegister` wartość, która określa rejestr określonej pozycji rejestru maski jest określane w następujący sposób:  
+ Wartości wyliczenia cordebugregister — Określ rejestrów mikroprocesory różne. Górny pięć bitów każdej wartości są Indeksuj do `availableRegChunks` tablicę bajtów. Niższe trzy usługi bits w każdej wartości identyfikują Pozycja bitu w indeksowanych bajtów. Biorąc pod uwagę `CorDebugRegister` wartość, która określa określonego rejestru, pozycji Zarejestruj maski jest określany w następujący sposób:  
   
-1.  Wyodrębnij indeksu musiał uzyskać dostęp prawidłowe bajty w `availableRegChunks` tablicy:  
+1.  Wyodrębnij indeksu umożliwiającymi dostęp poprawne bajtów w `availableRegChunks` tablicy:  
   
      `CorDebugRegister` wartość >> 3  
   
-2.  Wyodrębnij Pozycja bitu w indeksowanych byte, gdzie bit zero jest bitem:  
+2.  Wyodrębnij Pozycja bitu w indeksowanych bajtów, gdzie bit zero jest najmniej znaczący bit:  
   
      `CorDebugRegister` Wartość & 7  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -63,6 +63,6 @@ HRESULT GetRegistersAvailable (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugRegisterSet2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)  
- [ICorDebugRegisterSet, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugRegisterSet2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)

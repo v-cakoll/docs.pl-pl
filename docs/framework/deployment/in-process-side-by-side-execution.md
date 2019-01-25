@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc41d4d59100b9e71bd6ed3abd2ff26937e7465
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143847"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554559"
 ---
 # <a name="in-process-side-by-side-execution"></a>Wykonywanie równoczesne i wewnątrzprocesowe
 Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć w trakcie side-by-side hostingu do uruchamiania wielu wersji środowiska uruchomieniowego języka wspólnego (CLR) w ramach jednego procesu. Domyślnie zarządzane składniki COM, uruchom z .NET Framework w wersji, które zostały skompilowane, niezależnie od wersji programu .NET Framework, który jest ładowany do procesu.  
@@ -173,6 +173,6 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [\<Uruchamianie > Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
-- [\<supportedRuntime > Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+## <a name="see-also"></a>Zobacz także
+- [\<Uruchamianie > Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

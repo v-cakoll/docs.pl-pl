@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 112ddcf51a5637bb89df9479850c2a4a70d2e1d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e041efed929255d4ce3af2d051a391bc4179cda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630921"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString — Metoda
-Pobiera numer wersji środowiska uruchomieniowego, który został użyty do budowania zestawu.  
+Pobiera numer wersji środowiska uruchomieniowego, który został użyty do tworzenia zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,26 +39,26 @@ HRESULT GetVersionString (
   
 #### <a name="parameters"></a>Parametry  
  `pwzBuf`  
- [out] Tablica do przechowywania ciąg, który określa wersję.  
+ [out] Tablica do przechowywania ciąg, który określa numer wersji.  
   
  `ccBufSize`  
- [in] Rozmiar w znaki dwubajtowe z `pwzBuf` tablicy.  
+ [in] Rozmiar w szerokich znaków z `pwzBuf` tablicy.  
   
  `pccBufSize`  
- [out] Liczba znaki dwubajtowe, włącznie z terminatorem null, jest zwracany w `pwzBuf` tablicy.  
+ [out] Liczba znaków dwubajtowych, łącznie z terminatorem null, jest zwracany w `pwzBuf` tablicy.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetVersionString` Metoda pobiera wersję skompilowany dla bieżącego zakresu metadanych. Jeśli nigdy nie został zapisany zakresu, nie będzie miała skompilowany dla wersji i zostanie zwrócony pusty ciąg.  
+ `GetVersionString` Metoda pobiera wersję utworzone dla bieżącego zakresu metadanych. Jeśli nigdy nie został zapisany zakresu, nie zostaną utworzone dla wersji i zostanie zwrócony pusty ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

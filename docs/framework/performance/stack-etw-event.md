@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 073622c22b957975ed799cf5b3bc3826473114b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0cb166f2753b910465aabb8abd68c31c6f56ff8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497541"
 ---
 # <a name="stack-etw-event"></a>Zdarzenie ETW stosu
-Zdarzenie stosu stosuje się w połączeniu z innymi zdarzeniami, można wygenerować śladów stosu po wywołaniu zdarzenia. Jest on rejestrowane, gdy dostawca środowiska uruchomieniowego jest włączony. Jest to zdarzenie bardzo wysokiej częstotliwości, ponieważ jest wywoływane, gdy innego środowiska uruchomieniowego zdarzenia. Z tego powodu zaleca się, użyj tego zdarzenia z rozwagą.  
+Zdarzenie stosu powinny służyć w połączeniu z innymi zdarzeniami można wygenerować ślady stosu, po wydarzenie jest podniesione. Jest on rejestrowane, gdy jest włączony dostawca środowiska uruchomieniowego. To wydarzenie bardzo wysokiej częstotliwości, ponieważ jest zgłaszany w każdym przypadku, gdy inne zdarzenie środowiska wykonawczego jest wywoływane. Z tego powodu zaleca się używać tego wydarzenia z ostrożnością.  
   
- W poniższej tabeli przedstawiono — słowo kluczowe i poziom. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ W poniższej tabeli przedstawiono — słowo kluczowe i poziomu. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
-|Słowo kluczowe wywołaniem zdarzenia|Poziom|  
+|Słowo kluczowe dla podnoszonego zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
 |`StackKeyword` (0x40000000)|LogAlways(0)|  
   
- W poniższej tabeli przedstawiono informacje dotyczące zdarzenia.  
+ W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Zdarzenie|Identyfikator zdarzenia|Wywołane, gdy|  
 |-----------|--------------|-----------------|  
 |`CLRStackWalk`|82|W połączeniu z innymi zdarzeniami, aby wygenerować ślady stosu, następujące zdarzenie.|  
   
@@ -33,11 +33,11 @@ Zdarzenie stosu stosuje się w połączeniu z innymi zdarzeniami, można wygener
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|Windows: Uint16|Środowisko uruchomieniowe Unikatowy identyfikator.|  
-|Reserved1|Windows: UInt8|Zastrzeżone.|  
-|Zarezerwowane2|Windows: UInt8|Zastrzeżone.|  
-|Wartości FrameCount|Windows: UInt32.|Liczba ramek w ślad stosu.|  
-|Stos|Windows: wskaźnik|Kolumny wskaźników instrukcji.|  
+|ClrInstanceID|win: Uint16.|Identyfikator unikatowy środowiska uruchomieniowego.|  
+|Reserved1|win:UInt8|Zastrzeżone.|  
+|Zarezerwowane2|win:UInt8|Zastrzeżone.|  
+|FrameCount|win: UInt32.|Liczba klatek ślad stosu.|  
+|Stos|win: wskaźnik|Kolumny wskaźników instrukcji.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Zobacz także
+- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

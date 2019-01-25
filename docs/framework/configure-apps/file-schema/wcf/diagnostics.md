@@ -2,12 +2,12 @@
 title: '&lt;Diagnostyka&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3ee611d3903ba36748837d2743cd03d54670befd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: de11145620e8fdf96785908df85ab5ecdfd2e25e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524598"
 ---
 # <a name="ltdiagnosticsgt"></a>&lt;Diagnostyka&gt;
 `diagnostics` Element definiuje ustawienia używane przez administratora w czasie wykonywania inspekcji i kontroli.  
@@ -54,14 +54,14 @@ ms.locfileid: "54149348"
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<endToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Element konfiguracji, który umożliwia włączanie i wyłączanie różnych aspektów śledzenia end-to-end podczas uruchamiania aplikacji usługi.|  
-|[\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|W tym artykule opisano ustawienia rejestrowania komunikatów WCF.|  
+|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Element konfiguracji, który umożliwia włączanie i wyłączanie różnych aspektów śledzenia end-to-end podczas uruchamiania aplikacji usługi.|  
+|[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|W tym artykule opisano ustawienia rejestrowania komunikatów WCF.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|modelu serviceModel|Element główny wszystkich elementów konfiguracji programu WCF.|  
+|serviceModel|Element główny wszystkich elementów konfiguracji programu WCF.|  
   
 ## <a name="remarks"></a>Uwagi  
  `diagnostics` Sekcja definiuje ustawienia diagnostyki dla wszystkich usług znajdujących się w zestawie. Nie jest możliwe do definiowania ustawień diagnostycznych oddzielne na poziomie usługi, chyba że istnieje tylko jedna usługa w zestawie. Atrybuty są ustawione zgodnie z wymogami sekcji.  
@@ -84,6 +84,6 @@ ms.locfileid: "54149348"
 </diagnostics>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>

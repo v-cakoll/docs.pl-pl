@@ -2,12 +2,12 @@
 title: Odwołanie do słowa kluczowego
 description: Znajdź łącza do informacji na temat wszystkich F# słowa kluczowe języka.
 ms.date: 05/16/2016
-ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
+ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579846"
 ---
 # <a name="keyword-reference"></a>Odwołanie do słowa kluczowego
 
@@ -20,7 +20,7 @@ W poniższej tabeli przedstawiono wszystkie F# słów kluczowych w kolejności a
 |Słowo kluczowe|Łącze|Opis|
 |-------|----|-----------|
 |`abstract`|[Elementy członkowskie](members/index.md)<br /><br />[Klasy abstrakcyjne](abstract-classes.md)|Określa metodę, która albo nie ma implementacji w typie, w którym jest zdeklarowana lub jest wirtualny i ma domyślną implementację.|
-|`and`|[`let` Powiązania](functions/let-bindings.md)<br /><br />[Elementy członkowskie](members/index.md)<br /><br />[Ograniczenia](generics/constraints.md)|Używane w wzajemnie cyklicznego powiązań w deklaracji właściwości i za pomocą wielu ograniczeń w parametrach rodzajowych.|
+|`and`|[`let` Powiązania](functions/let-bindings.md)<br /><br />[Rekordy](records.md)<br /><br />[Elementy członkowskie](members/index.md)<br /><br />[Ograniczenia](generics/constraints.md)|Używane w wzajemnie powiązania cyklicznego i rekordy, w deklaracji właściwości i za pomocą wielu ograniczeń w parametrach rodzajowych.|
 |`as`|[Klasy](classes.md)<br /><br />[Dopasowanie do wzorca](Pattern-Matching.md)|Umożliwia nazwij bieżący obiekt klasy obiektu. Umożliwia również nadaj nazwę całego wzorca w ciągu dopasowania do wzorca.|
 |`assert`|[Asercje](assertions.md)|Używane do weryfikacji kodu podczas debugowania.|
 |`base`|[Klasy](classes.md)<br /><br />[Dziedziczenie](inheritance.md)|Używane jako nazwę obiektu klasy bazowej.|
@@ -28,10 +28,10 @@ W poniższej tabeli przedstawiono wszystkie F# słów kluczowych w kolejności a
 |`class`|[Klasy](classes.md)|W składni pełne wskazuje początek definicji klasy.|
 |`default`|[Elementy członkowskie](members/index.md)|Wskazuje implementację metody abstrakcyjnej; używany razem z deklaracji metody abstrakcyjnej, aby utworzyć metodę wirtualną.|
 |`delegate`|[Delegaty](delegates.md)|Używane do deklarowania delegata.|
-|`do`|[Powiązania „do”](functions/do-bindings.md)<br /><br />[Pętle: `for...to` Wyrażenie](loops-for-to-expression.md)<br /><br />[Pętle: `for...in` Wyrażenie](loops-for-in-expression.md)<br /><br />[Pętle: `while...do` Wyrażenie](loops-while-do-expression.md)|Używane w konstrukcji pętli lub wykonywanie kodu imperatywnego.|
+|`do`|[Powiązania „do”](functions/do-bindings.md)<br /><br />[Pętle: `for...to` Expression](loops-for-to-expression.md)<br /><br />[Pętle: `for...in` Expression](loops-for-in-expression.md)<br /><br />[Pętle: `while...do` Expression](loops-while-do-expression.md)|Używane w konstrukcji pętli lub wykonywanie kodu imperatywnego.|
 |`done`|[Pełna składnia](verbose-syntax.md)|W składni pełne wskazuje koniec bloku kodu w wyrażeniu pętli.|
 |`downcast`|[Rzutowanie i konwersje](casting-and-conversions.md)|Używana do konwersji do typu, które jest niżej w łańcuchu dziedziczenia.|
-|`downto`|[Pętle: `for...to` Wyrażenie](loops-for-to-expression.md)|W `for` wyrażenia używane w przypadku licząc w odwrotnej kolejności.|
+|`downto`|[Pętle: `for...to` Expression](loops-for-to-expression.md)|W `for` wyrażenia używane w przypadku licząc w odwrotnej kolejności.|
 |`elif`|[Wyrażenie warunkowe: `if...then...else`](conditional-expressions-if-then-else.md)|Używane w rozgałęzień warunkowych. Krótką formą `else if`.|
 |`else`|[Wyrażenie warunkowe: `if...then...else`](conditional-expressions-if-then-else.md)|Używane w rozgałęzień warunkowych.|
 |`end`|[Struktury](structures.md)<br /><br />[Sumy rozłączne](discriminated-unions.md)<br /><br />[Rekordy](records.md)<br /><br />[Rozszerzenia typu](type-extensions.md)<br /><br />[Pełna składnia](verbose-syntax.md)|W definicji typu i rozszerzeń typu wskazuje koniec sekcji definicje elementów członkowskich.<br /><br />Pełne składnię, używany do określenia koniec bloku kodu, który rozpoczyna się od `begin` — słowo kluczowe.|
@@ -40,9 +40,9 @@ W poniższej tabeli przedstawiono wszystkie F# słów kluczowych w kolejności a
 |`false`|[Typy pierwotne](primitive-types.md)|Używane jako literału wartości logicznej.|
 |`finally`|[Wyjątki: `try...finally` Wyrażenia](exception-handling/the-try-finally-expression.md)|Wraz z `try` wprowadzenie bloku kodu, który jest wykonywany niezależnie od tego, czy wystąpi wyjątek.|
 |`fixed`|[Stała](fixed.md)|Umożliwia "przypinając" wskaźnik na stosie, aby uniemożliwić jego bezużyteczne.|
-|`for`|[Pętle: `for...to` Wyrażenie](loops-for-to-expression.md)<br /><br />[Pętle: wyrażenie for...in](loops-for-in-expression.md)|Używane w konstrukcji pętli.|
-|`fun`|[Wyrażenia lambda: słowo kluczowe `fun`](functions/lambda-expressions-the-fun-keyword.md)|Używane w wyrażeniach lambda, funkcji anonimowych tzw.|
-|`function`|[Wyrażenia dopasowania](match-expressions.md)<br /><br />[Wyrażenia lambda: Fun — słowo kluczowe](functions/lambda-expressions-the-fun-keyword.md)|Używane jako krótszy alternatywa dla `fun` — słowo kluczowe i `match` wyrażenia w wyrażeniu lambda, która ma dopasowania do wzorca w pojedynczy argument.|
+|`for`|[Pętle: `for...to` Expression](loops-for-to-expression.md)<br /><br />[Pętle: wyrażenie for...in](loops-for-in-expression.md)|Używane w konstrukcji pętli.|
+|`fun`|[Lambda Expressions: słowo kluczowe `fun`](functions/lambda-expressions-the-fun-keyword.md)|Używane w wyrażeniach lambda, funkcji anonimowych tzw.|
+|`function`|[Wyrażenia dopasowania](match-expressions.md)<br /><br />[Lambda Expressions: Fun — słowo kluczowe](functions/lambda-expressions-the-fun-keyword.md)|Używane jako krótszy alternatywa dla `fun` — słowo kluczowe i `match` wyrażenia w wyrażeniu lambda, która ma dopasowania do wzorca w pojedynczy argument.|
 |`global`|[Przestrzenie nazw](namespaces.md)|Można odwoływać się do przestrzeni nazw .NET najwyższego poziomu.|
 |`if`|[Wyrażenie warunkowe: `if...then...else`](conditional-expressions-if-then-else.md)|Używane w konstrukcje warunkowe rozgałęziania.|
 |`in`|[Pętle: wyrażenie for...in](loops-for-in-expression.md)<br /><br />[Pełna składnia](verbose-syntax.md)|Używać wyrażeń sekwencji, a w Pełna składnia wyrażenia z powiązania.|
@@ -75,7 +75,7 @@ W poniższej tabeli przedstawiono wszystkie F# słów kluczowych w kolejności a
 |`static`|[Elementy członkowskie](members/index.md)|Służy do wskazania metodę lub właściwość, która może być wywołana bez wystąpienia typu lub składowej wartość, która jest udostępniona wszystkim wystąpieniom typu.|
 |`struct`|[Struktury](structures.md)<br /><br />[Ograniczenia](generics/constraints.md)|Używane do deklarowania typu struktury.<br /><br />Również używany w ograniczenia parametru ogólnego.<br /><br />Używane dla zgodności OCaml w definicji modułu.|
 |`then`|[Wyrażenie warunkowe: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Konstruktory](members/constructors.md)|Używane w wyrażeniach warunkowych.<br /><br />Umożliwia również wykonać efekty uboczne po konstrukcji obiektu.|
-|`to`|[Pętle: `for...to` Wyrażenie](loops-for-to-expression.md)|Używane w `for` pętli, aby określić zakres.|
+|`to`|[Pętle: `for...to` Expression](loops-for-to-expression.md)|Używane w `for` pętli, aby określić zakres.|
 |`true`|[Typy pierwotne](primitive-types.md)|Używane jako literału wartości logicznej.|
 |`try`|[Wyjątki: Try... with — wyrażenie](exception-handling/the-try-with-expression.md)<br /><br />[Wyjątki: Try... finally — wyrażenie](exception-handling/the-try-finally-expression.md)|Umożliwia wprowadzenie bloku kodu, który może generować wyjątek. Wraz z `with` lub `finally`.|
 |`type`|[Typy F#](fsharp-types.md)<br /><br />[Klasy](classes.md)<br /><br />[Rekordy](records.md)<br /><br />[Struktury](structures.md)<br /><br />[Wyliczenia](enumerations.md)<br /><br />[Sumy rozłączne](discriminated-unions.md)<br /><br />[Skróty typów](type-abbreviations.md)<br /><br />[Jednostki miary](units-of-measure.md)|Używane do deklarowania klas, rekord, struktury, złożenia dyskryminowanego, typ wyliczeniowy, jednostka miary lub — typ skrótu.|
@@ -85,7 +85,7 @@ W poniższej tabeli przedstawiono wszystkie F# słów kluczowych w kolejności a
 |`val`|[Pola jawne: słowo kluczowe `val`](members/explicit-fields-the-val-keyword.md)<br /><br />[Podpisy](signatures.md)<br /><br />[Elementy członkowskie](members/index.md)|Używany w podpisie, aby wskazać wartość lub w typie, aby zadeklarować elementu członkowskiego, w ograniczonych sytuacjach.|
 |`void`|[Typy pierwotne](primitive-types.md)|Wskazuje .NET `void` typu. Używany podczas współpracy z innymi językami .NET.|
 |`when`|[Ograniczenia](generics/constraints.md)|Używane dla warunków logicznych (*podczas osłony*) na dopasowania do wzorca i wprowadzać Klauzula ograniczenia dla parametru typu ogólnego.|
-|`while`|[Pętle: `while...do` Wyrażenie](loops-while-do-expression.md)|Uvozuje Konstruktor.|
+|`while`|[Pętle: `while...do` Expression](loops-while-do-expression.md)|Uvozuje Konstruktor.|
 |`with`|[Wyrażenia dopasowania](match-expressions.md)<br /><br />[Wyrażenia obiektów](object-expressions.md)<br /><br />[Kopiowanie i aktualizacja wyrażeń rekordów](copy-and-update-record-expressions.md)<br /><br />[Rozszerzenia typu](type-extensions.md)<br /><br />[Wyjątki: `try...with` Wyrażenia](exception-handling/the-try-with-expression.md)|Wraz z `match` słowa kluczowego w wyrażeniach dopasowania do wzorca. Również używane w wyrażeniach obiektu, wyrażeń kopiowania rekordów i rozszerzeń typu, wprowadzenie definicje elementów członkowskich oraz wprowadzenie obsługi wyjątków.|
 |`yield`|[Sekwencje](sequences.md)|W wyrażeniu sekwencji służy do uzyskiwania wartości sekwencji.|
 |`yield!`|[Wyrażenia obliczeń](computation-expressions.md)<br /><br />[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Używany w wyrażeniu obliczeń, można dołączyć wynik wyrażenia dane obliczenie do zbierania wyników zawierających wyrażenia obliczeń.|

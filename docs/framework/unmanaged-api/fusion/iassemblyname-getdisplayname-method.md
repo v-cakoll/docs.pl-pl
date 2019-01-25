@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00a95646323a5ee08d6758b0f6a7c493c661705d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d8cbc540377c8f2a26b8fafef35c19e94a59c51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536012"
 ---
 # <a name="iassemblynamegetdisplayname-method"></a>IAssemblyName::GetDisplayName — Metoda
-Pobiera nazwę zrozumiałą zestawu odwołuje się ten [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiektu.  
+Pobiera nazwę zrozumiałą dla użytkownika, zestawu odwołuje się ten [iassemblyname —](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,21 +39,21 @@ HRESULT GetDisplayName (
   
 #### <a name="parameters"></a>Parametry  
  `szDisplayName`  
- [out] Bufor ciąg zawierający nazwę przywoływanego zestawu.  
+ [out] Buforu ciągu, który zawiera nazwę przywoływanego zestawu.  
   
  `pccDisplayName`  
- [w, out] Rozmiar `szDisplayName` znaki dwubajtowe, w tym znaków terminatorem null.  
+ [out w] Rozmiar `szDisplayName` znaków dwubajtowych, w tym znak terminator o wartości null.  
   
  `dwDisplayFlags`  
- [in] Bitowe połączenie [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) wartości wpływających na funkcje `szDisplayName`.  
+ [in] Bitowa kombinacja [asm_display_flags —](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) wartości, które wpływają na funkcje `szDisplayName`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Fusion.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [Wyliczenia łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Wyliczenia łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

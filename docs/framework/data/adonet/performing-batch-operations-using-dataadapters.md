@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ccf730eb85024687285200db8f978291986dcc18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847883"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543464"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Wykonywanie operacji wsadowych za pomocą elementów DataAdapters
 Umożliwia obsługę usługi Batch w ADO.NET <xref:System.Data.Common.DataAdapter> do grupy operacji INSERT, UPDATE i DELETE z <xref:System.Data.DataSet> lub <xref:System.Data.DataTable> do serwera, zamiast wysyłać jedną operację naraz. Zmniejszenie liczby rund do serwera zwykle powoduje znaczący wzrost wydajności. Aktualizacje usługi Batch są obsługiwane dla dostawcy danych .NET dla programu SQL Server (<xref:System.Data.SqlClient>) i Oracle (<xref:System.Data.OracleClient>).  
@@ -141,8 +141,8 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
  Dostawca danych i serwera wewnętrznej bazy danych należy określić struktur SQL, które są obsługiwane w przypadku wykonywania wsadowego. Nieobsługiwane instrukcji jest przesyłany w celu wykonania może zgłoszony wyjątek.  
   
-## <a name="see-also"></a>Zobacz też  
- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [Obsługa zdarzeń elementu DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [Obsługa zdarzeń elementu DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

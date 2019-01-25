@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d24f379bcfdb494369b84173cad4daa800fb7a9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 634c76c3510d594584f06ea14bed84b1b0423c31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502182"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>Przetwarzanie danych XML przy użyciu LINQ to XML
 LINQ to XML jest nowy model w .NET Framework w wersji 3.5 do przetwarzania danych XML. LINQ to XML umożliwia deweloperom robić wszystko, czego mogą oczekiwać z danymi XML: wykonywanie zapytań, modyfikowanie, tworzenia, zapisywania i serializacja dokumentów XML. Istotne zalety znajdują się w funkcje zapytań i tworzenia.  
@@ -23,7 +23,7 @@ LINQ to XML jest nowy model w .NET Framework w wersji 3.5 do przetwarzania danyc
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Xml.Linq>  
-- <xref:System.Linq>  
-- [LINQ to XML a DOM](https://msdn.microsoft.com/library/19b5ed02-feb2-455a-8897-f7f0fd76aca3)  
+- <xref:System.Xml.Linq>
+- <xref:System.Linq>
+- [LINQ to XML a DOM](https://msdn.microsoft.com/library/19b5ed02-feb2-455a-8897-f7f0fd76aca3)
 - [LINQ to XML a inne technologie XML](https://msdn.microsoft.com/library/7ba1eecf-f09a-42de-bc80-22ca5b2e42d3)

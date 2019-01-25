@@ -1,19 +1,19 @@
 ---
-title: '&lt;RSA&gt;'
+title: '&lt;rsa&gt;'
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-ms.openlocfilehash: 8005fd67b92cb14d82b525e7c990f9d58aef7b58
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 74da1e2ae02f151f928afec24d6af3adf703bdcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612805"
 ---
-# <a name="ltrsagt"></a>&lt;RSA&gt;
+# <a name="ltrsagt"></a>&lt;rsa&gt;
 Bezpieczny klient WCF łączący punkt końcowy o tej tożsamości weryfikuje czy wnioski przedstawione przez serwer zawierają roszczenia, który zawiera klucz publiczny RSA użyta do skonstruowania tej tożsamości.  
   
- \<tożsamość >  
-\<RSA >  
+ \<identity>  
+\<rsa>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,10 +53,10 @@ Bezpieczny klient WCF łączący punkt końcowy o tej tożsamości weryfikuje cz
 </identity>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- <xref:System.ServiceModel.RsaEndpointIdentity>  
- [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- <xref:System.ServiceModel.RsaEndpointIdentity>
+- [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

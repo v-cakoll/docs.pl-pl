@@ -2,17 +2,17 @@
 title: 'Przykładowy plik XSD: Klienci i Orders1'
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: 3e6eaf41ad8c91f1b59f70f58a8c8f0e127ec949
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9738070ce1b8bf5c0bf8ed4ba75e8d1a248efd53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524627"
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>Przykładowy plik XSD: Klienci i zamówienia
 Następujący plik XSD jest używana w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera definicji schematu dla [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md). Używa schematu `xs:key` i `xs:keyref` funkcji XSD ustalenie, czy `CustomerID` atrybutu `Customer` element jest klucz oraz do ustanawiania relacji między `CustomerID` elementu w każdym `Order` elementu i `CustomerID` atrybutu w każdym `Customer` elementu.  
   
- Na przykład Zapisywanie zapytań LINQ, które skorzystać z tej relacji `Join` klauzuli, zobacz [jak: Dołącz do dwóch kolekcji (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
+ Na przykład Zapisywanie zapytań LINQ, które skorzystać z tej relacji `Join` klauzuli, zobacz [jak: Łączenie dwóch kolekcji (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxsd"></a>CustomersOrders.xsd  
   
@@ -93,6 +93,6 @@ Następujący plik XSD jest używana w różne przykłady w [!INCLUDE[sqltecxlin
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przykładowe dokumenty XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

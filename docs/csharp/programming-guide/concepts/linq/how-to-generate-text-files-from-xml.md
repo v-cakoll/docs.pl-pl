@@ -1,21 +1,21 @@
 ---
-title: 'Porady: generowanie plików tekstowych z pliku XML (C#)'
+title: 'Instrukcje: Generowanie plików tekstowych z pliku XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 1e0c57b1fa16bb1b92cabaf4afa7ff7bf40824bd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2890128e4dacbac5279b928d9b9bcc097cbe669a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530458"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>Porady: generowanie plików tekstowych z pliku XML (C#)
+# <a name="how-to-generate-text-files-from-xml-c"></a>Instrukcje: Generowanie plików tekstowych z pliku XML (C#)
 W tym przykładzie pokazano, jak można wygenerować pliku wartości rozdzielanych przecinkami (CSV) z pliku XML.  
   
 ## <a name="example"></a>Przykład  
  Wersja języka C#, w tym przykładzie jest używana składnia metody a `Aggregate` operatora, aby wygenerować plik CSV z dokumentu XML w jednym wyrażeniu. Aby uzyskać więcej informacji, zobacz [składnia zapytania a składnia metody w technologii LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
- W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -53,6 +53,6 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Projekcje i przekształcenia (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

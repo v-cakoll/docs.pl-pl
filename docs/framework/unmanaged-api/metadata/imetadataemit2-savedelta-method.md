@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7098bceee6bf60cd7781606ffc889b6af9c3e3cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27d9b891475d0fb45c9ec34f3363b0d76fe394c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493207"
 ---
 # <a name="imetadataemit2savedelta-method"></a>IMetaDataEmit2::SaveDelta — Metoda
-Zapisuje zmiany z bieżącej sesji edit-and-continue do określonego pliku.  
+Zapisuje zmiany z bieżącej sesji Edytuj i Kontynuuj do określonego pliku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,20 +38,20 @@ HRESULT SaveDelta (
   
 #### <a name="parameters"></a>Parametry  
  `szFile`  
- [in] Nazwa pliku, w którym chcesz zapisać zmiany.  
+ [in] Nazwa pliku, pod którym chcesz zapisać zmiany.  
   
  `dwSaveFlags`  
- [in] Zastrzeżone. Musi być równy zero.  
+ [in] Zastrzeżone. Musi mieć wartość zero.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: db41a11a3fb6c772a3e6fbb164435daa9e032ea5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516944"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub — funkcja
 Tworzy obiektu sink usługi przesyłania dalej ułatwiających klienta odbieranie wywołań asynchronicznych z zarządzania Windows.
@@ -56,11 +56,11 @@ Jeśli funkcja się powiedzie, wartość zwracana jest `S_OK` (0).
 Jeśli funkcja zawiedzie, wartość zwracana jest kod błędu różny od zera. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [geterrorinfo —](geterrorinfo.md) funkcji.
     
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Zobacz także  
-[Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

@@ -1,16 +1,16 @@
 ---
-title: 'Porady: zapytanie o zduplikowane pliki w drzewie katalogu (LINQ) (Visual Basic)'
+title: 'Instrukcje: Zapytanie o zduplikowane pliki w drzewie katalogu (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: c9243d98c73571fcde009cddb2d5435365f20760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cfa86aa3750b7a102bfe6787bf589b5662efa15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667183"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Porady: zapytanie o zduplikowane pliki w drzewie katalogu (LINQ) (Visual Basic)
-Czasami pliki, które mają taką samą nazwę może znajdować się w więcej niż jednym folderze. Na przykład w folderze instalacyjnym programu Visual Studio kilka foldery mają pliku readme.htm. Ten przykład przedstawia sposób wysyłania kwerend do takich zduplikowane nazwy plików w folderze określonym katalogu głównym. Drugi przykład przedstawia sposób wysyłania kwerend do plików, których rozmiar i czasy tworzenia również zgodna.  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Instrukcje: Zapytanie o zduplikowane pliki w drzewie katalogu (LINQ) (Visual Basic)
+Czasami pliki, które mają taką samą nazwę mogą znajdować się w więcej niż jeden folder. Na przykład kilka folderów w folderze instalacyjnym programu Visual Studio mają pliku readme.htm. W tym przykładzie pokazano, jak utworzyć zapytanie dotyczące takich zduplikowane nazwy plików w folderze określonym katalogu głównym. Drugi przykład przedstawia sposób wysyłania kwerend do plików, których rozmiar i czas tworzenia również zgodna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -98,11 +98,11 @@ Module QueryDuplicateFileNames
 End Module  
 ```  
   
- Pierwsze zapytanie używa prosty klucz ustalenie dopasowania; znajduje to pliki, które mają taką samą nazwę, ale których zawartość może się różnić. Drugi zapytanie używa klucza złożonego do dopasowywania trzy właściwości <xref:System.IO.FileInfo> obiektu. To zapytanie jest znacznie łatwiej znaleźć pliki, które mają taką samą nazwę i zawartość podobne lub identyczne.  
+ Pierwsze zapytanie używa klucza proste ustalenie dopasowania; znajduje to pliki, które mają taką samą nazwę, ale których zawartość może się różnić. Drugie zapytanie używa klucza złożonego do dopasowywania trzy właściwości <xref:System.IO.FileInfo> obiektu. To zapytanie jest znacznie bardziej prawdopodobne znaleźć pliki, które mają taką samą nazwę i zawartość podobne lub identyczne.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji System.Linq przestrzeni nazw.  
+ Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ do obiektów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

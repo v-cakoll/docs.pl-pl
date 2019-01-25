@@ -7,14 +7,14 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: be2eefdc52d38df3071d457b7a71dbac6eaa2657
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fb116d91ab7da076f2d883be3350a6d4259482ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499762"
 ---
-# <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Wskazówki: wdrażanie IEnumerable(Of T) w Visual Basic
+# <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Przewodnik: Implementowanie IEnumerable(Of T) w języku Visual Basic
 <xref:System.Collections.Generic.IEnumerable%601> Interfejs jest implementowany przez klasy, które mogą zwracać sekwencję wartości jeden element w danym momencie. Zaletą zwracający dane, jeden element w danym momencie to, że nie masz załadować kompletny zestaw danych do pamięci z nią pracować. Musisz użyć wystarczającą ilość pamięci do załadowania pojedynczy element z danych. Klasy, które implementują `IEnumerable(T)` interfejsu może być używany z `For Each` pętli lub zapytań LINQ.  
   
  Na przykład rozważmy aplikację, która musi odczytywanie pliku tekstowego duże i zwracać każdy wiersz z pliku, który pasuje do kryteriów wyszukiwania określonego. Aplikacja używa zapytania LINQ do zwrócenia wierszy z pliku, który spełniających określone kryteria. Aby zbadać zawartość pliku za pomocą zapytań LINQ, aplikacja może ładować zawartość pliku do tablicy lub kolekcji. Jednak ładowanie całego pliku do tablicy lub kolekcji będzie zużywać znacznie więcej pamięci niż jest to wymagane. Zapytania LINQ zamiast tego można zbadać zawartość pliku przy użyciu klasy wyliczalny, zwracając tylko te wartości, które spełniają kryteria wyszukiwania. Zapytania, które zwracają tylko kilka pasujących wartości będą zużywać znacznie mniej pamięci.  
@@ -93,8 +93,8 @@ ms.locfileid: "48837001"
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_10.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [For Each...Next, instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [For Each...Next, instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

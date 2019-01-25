@@ -2,12 +2,12 @@
 title: Przyjazne zestawy (C#)
 ms.date: 07/20/2015
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
-ms.openlocfilehash: e8c295fe23685e39e20a14ff23139339f24564c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e464162f12fe386c37262753331635ea82b128b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576983"
 ---
 # <a name="friend-assemblies-c"></a>Przyjazne zestawy (C#)
 A *przyjaznego zestawu* to zestaw, który mogą uzyskiwać dostęp do innego zestawu [wewnętrzny](../../../../csharp/language-reference/keywords/internal.md) typów i elementów członkowskich. Po zidentyfikowaniu zestawu jako zestaw przyjazny, masz już Oznacz typy i elementy członkowskie jako publiczny je, aby były dostępne dla innych zestawów. Jest to szczególnie wygodne w następujących scenariuszach:  
@@ -56,9 +56,9 @@ public class ClassWithFriendMethod
   
      Nazwy przyjaznego zestawu, który jest przekazywany do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut nie może być silnej nazwy zestawu *B*: nie ma zestawu wersji, kultury, architektury lub token klucza publicznego.  
   
--   Jeśli zestaw *A* nie jest silną nazwę, nazwy przyjaznego zestawu powinna składać się wyłącznie nazwy zestawu. Aby uzyskać więcej informacji, zobacz [porady: tworzenie niepodpisane przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md).  
+-   Jeśli zestaw *A* nie jest silną nazwę, nazwy przyjaznego zestawu powinna składać się wyłącznie nazwy zestawu. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie nieoznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md).  
   
--   Jeśli zestaw *B* jest silną nazwę, należy określić klucz silnej nazwy zestawu *B* przy użyciu wiersza polecenia i ustawienie projektu `/keyfile` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [porady: tworzenie podpisany przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
+-   Jeśli zestaw *B* jest silną nazwę, należy określić klucz silnej nazwy zestawu *B* przy użyciu wiersza polecenia i ustawienie projektu `/keyfile` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie oznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
   
  <xref:System.Security.Permissions.StrongNameIdentityPermission> Klasa udostępnia także możliwość udostępniania typów, z następującymi różnicami:  
   
@@ -70,11 +70,11 @@ public class ClassWithFriendMethod
   
  Aby uzyskać informacje dotyczące dostępu do zestawu `internal` typów i metod z pliku modułu (plik z rozszerzeniem .netmodule), zobacz [/moduleassemblyname (C#)](../../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
-- <xref:System.Security.Permissions.StrongNameIdentityPermission>  
-- [Porady: tworzenie nieoznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
-- [Porady: tworzenie oznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
-- [Zestawy i Globalna pamięć podręczna zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- <xref:System.Security.Permissions.StrongNameIdentityPermission>
+- [Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [Zestawy i Globalna pamięć podręczna zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
 - [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)

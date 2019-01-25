@@ -1,5 +1,5 @@
 ---
-title: Instrukcja nie jest prawidłowa wewnątrz metody wielowierszowego wyrażenia lambda
+title: Instrukcja nie jest prawidłowa wewnątrz metody / wielowierszowego wyrażenia lambda
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30024
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30024
 ms.assetid: 758e7a8f-429b-42c1-9a78-778e5b480e04
-ms.openlocfilehash: cef5beea16c8589a884b7d3533e0543454783999
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8002fc347561fd5087aea474b45ef427ee8f8ec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508087"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>Instrukcja nie jest prawidłowa wewnątrz metody/wielowierszowego wyrażenia lambda
-Instrukcja nie jest prawidłowy w ramach `Sub`, `Function`, właściwość `Get`, lub właściwości `Set` procedury. Niektóre instrukcji można umieścić na poziomie modułu lub klasy. Inne, takie jak `Option Strict`, musi znajdować się na poziomie przestrzeni nazw i poprzedzać wszystkie inne deklaracje.  
+Wykonywanie instrukcji nie jest prawidłowy w ramach `Sub`, `Function`, właściwość `Get`, lub właściwości `Set` procedury. Niektóre instrukcje mogą być umieszczone na poziomie modułu lub klasy. Inne, takie jak `Option Strict`, musi znajdować się na poziomie przestrzeni nazw i poprzedzać wszystkie inne deklaracje.  
   
  **Identyfikator błędu:** BC30024  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Usuń instrukcji z procedury.  
+-   Usuń instrukcję od procedury.  
   
-## <a name="see-also"></a>Zobacz też  
- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Get, instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Set, instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Get, instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Set, instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)

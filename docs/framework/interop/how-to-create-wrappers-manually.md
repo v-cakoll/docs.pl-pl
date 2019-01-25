@@ -1,26 +1,26 @@
 ---
-title: 'Porady: ręczne tworzenie otok'
+title: 'Instrukcje: Ręczne tworzenie otok'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d61095e4e8c7f9b3795b751a5894de99d6ce8f99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fba0de3f45afc199255dce93e69142724b68b0fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553038"
 ---
-# <a name="how-to-create-wrappers-manually"></a>Porady: ręczne tworzenie otok
+# <a name="how-to-create-wrappers-manually"></a>Instrukcje: Ręczne tworzenie otok
 Jeśli zdecydujesz się zadeklarować typy modelu COM ręcznie, w zarządzanym kodzie źródłowym, najlepszym miejscem do rozpoczęcia jest istniejący plik Języka definicji interfejsu (IDL) lub biblioteka typów. Jeśli nie posiadasz pliku IDL ani nie możesz wygenerować pliku biblioteki typów, możesz zasymulować typy modelu COM przez utworzenie deklaracji zarządzanych i wyeksportowanie zestawu wynikowego do biblioteki typów.  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>Aby zasymulować typy modelu COM ze źródła zarządzanego  
   
 1.  Zadeklaruj typy w języku, który jest zgodny z Common Language Specification (CLS) i skompiluj plik.  
   
-2.  Eksportuj zestaw zawierający typy z [Eksporter biblioteki typów (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md).  
+2.  Wyeksportuj zestaw zawierający typy za pomocą [Eksporter biblioteki typów (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md).  
   
 3.  Użyj wyeksportowanej biblioteki typów modelu COM jako podstawy do deklaracji typów zarządzanych zorientowanych na model COM.  
   
@@ -28,16 +28,16 @@ Jeśli zdecydujesz się zadeklarować typy modelu COM ręcznie, w zarządzanym k
   
 1.  Zakładając, że posiadasz plik IDL lub plik biblioteki typów, musisz zdecydować, które klasy i interfejsy mają zostać dołączone do niestandardowej RCW. Możesz wykluczyć wszelkie typy, których nie zamierzasz używać w aplikacji bezpośrednio ani pośrednio.  
   
-2.  Utwórz plik źródłowy w języku zgodnym ze specyfikacją CLS i zadeklaruj typy. Zobacz [biblioteki typów na zestaw konwersja — Podsumowanie](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100)) pełny opis procesu konwersji importu. Efektywnie, tworząc niestandardowe otoki RCW, ręcznie wykonywanego działania konwersji typu, które są udostępniane przez [Importer biblioteki typów (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md). W przykładzie znajdującym się w następnej sekcji pokazano typy w pliku IDL lub pliku biblioteki typów oraz odpowiadające typy w kodzie języka C#.  
+2.  Utwórz plik źródłowy w języku zgodnym ze specyfikacją CLS i zadeklaruj typy. Zobacz [biblioteki typów na zestaw konwersja — Podsumowanie](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100)) pełny opis procesu konwersji importowania. Skutecznie, tworząc niestandardową otokę RCW, ręcznie wykonujesz działanie konwersji typu dostarczonego przez [Importer biblioteki typów (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md). W przykładzie znajdującym się w następnej sekcji pokazano typy w pliku IDL lub pliku biblioteki typów oraz odpowiadające typy w kodzie języka C#.  
   
 3.  Gdy deklaracje będą kompletne, skompiluj plik, tak jak kompilujesz dowolny plik z zarządzanym kodem źródłowym.  
   
-4.  Podobnie jak w przypadku typów importowanych za pomocą narzędzia Tlbimp.exe, niektóre typy wymagają dodatkowych informacji, które możesz dodać bezpośrednio w kodzie. Aby uzyskać więcej informacji, zobacz [porady: edytowanie zestawy międzyoperacyjne](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100)).  
+4.  Podobnie jak w przypadku typów importowanych za pomocą narzędzia Tlbimp.exe, niektóre typy wymagają dodatkowych informacji, które możesz dodać bezpośrednio w kodzie. Aby uzyskać więcej informacji, zobacz [jak: Edytowanie zestawów międzyoperacyjnych](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100)).  
   
 ## <a name="example"></a>Przykład  
  W poniższym kodzie pokazano przykład interfejsu `ISATest` i klasy `SATest` napisane w języku IDL oraz odpowiadające typy w kodzie źródłowym języka C#.  
   
- **Plik biblioteki IDL lub typu**  
+ **IDL lub typu pliku biblioteki**  
   
 ```  
  [  
@@ -62,7 +62,7 @@ coclass SATest
  };  
 ```  
   
- **Otoka w kodzie źródłowym zarządzanych**  
+ **Otoka w zarządzanym kodzie źródłowym**  
   
 ```csharp  
 using System;  
@@ -99,10 +99,10 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Dostosowywanie wywoływane otoki środowiska uruchomieniowego](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))  
- [Typy danych modelu COM](https://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061(v=vs.100))  
- [Porady: edytowanie zestawy międzyoperacyjne](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100))  
- [Biblioteki typów na zestaw konwersja — podsumowanie](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Tlbimp.exe (importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
+## <a name="see-also"></a>Zobacz także
+- [Dostosowywanie wywoływanych otok środowiska uruchomieniowego](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))
+- [Typy danych COM](https://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061(v=vs.100))
+- [Instrukcje: Edytowanie zestawów międzyoperacyjnych](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100))
+- [Biblioteki typów na zestaw konwersja — podsumowanie](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Tlbimp.exe (importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)

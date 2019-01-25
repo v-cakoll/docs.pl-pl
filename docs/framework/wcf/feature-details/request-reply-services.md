@@ -7,17 +7,17 @@ helpviewer_keywords:
 - WCF [WCF], request-reply services
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-ms.openlocfilehash: 8fe1343a4b3590622becf71f1167f4b19dbc67af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8d9ee30df5198335b15d2d7130d853f4dd73a18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516658"
 ---
 # <a name="request-reply-services"></a>Usługi „żądanie-odpowiedź”
-Usługi "żądanie-odpowiedź" są domyślny typ kontrakt operacji w systemie Windows Communication Foundation (WCF). Klienci wykonywania wywołań do operacji usługi i oczekiwania na odpowiedź z usługi. Można wykonywać wywołania operacji usługi albo synchronicznie, w przypadku, gdy klient blokuje aż do jej odbiera odpowiedź z usługi lub razy wywołania lub asynchronicznie, gdy klient wysyła wywołania operacji usługi kontynuuje współpracę i odbiera odpowiedź z usługi w innym wątku.  
+Usługi "żądanie-odpowiedź" to typ domyślny kontrakt operacji w Windows Communication Foundation (WCF). Klienci wykonywanie wywołań do operacji usługi i oczekiwania na odpowiedź z usługi. Można wykonywać wywołania operacji usługi albo synchronicznie, w przypadku, gdy klienta blokuje aż do jego odbiera odpowiedź od usługi lub czasy wywołań lub asynchronicznie, gdy klient wysyła wywołania operacji usługi kontynuuje współpracę i odbiera odpowiedź z usługi w innym wątku.  
   
- Aby utworzyć kontrakt usługi "żądanie-odpowiedź", zdefiniuj dany kontrakt usługi i zastosować <xref:System.ServiceModel.OperationContractAttribute> klasy do każdej operacji, jak pokazano w poniższym kodzie próbki.  
+ Aby utworzyć kontrakt usługi "żądanie-odpowiedź", definiowanie kontraktu usługi, usługi i zastosować <xref:System.ServiceModel.OperationContractAttribute> klasy do każdej operacji, jak pokazano w poniższym przykładowym kodzie.  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -30,6 +30,6 @@ public interface IRequestReplyCalculator
   
  Nie trzeba ustawić <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> właściwości `false` , ponieważ jest to zachowanie domyślne.  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługi jednokierunkowe](../../../../docs/framework/wcf/feature-details/one-way-services.md)  
- [Usługi dwukierunkowe](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi jednokierunkowe](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+- [Usługi dwukierunkowe](../../../../docs/framework/wcf/feature-details/duplex-services.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494447"
 ---
 # <a name="choosing-a-transport"></a>Wybieranie transportu
 W tym temacie omówiono kryteria wyboru spośród trzech głównych transportu, zawartych w Windows Communication Foundation (WCF): HTTP, TCP i nazwane potoki. Zawiera również WCF transportu MSMQ (MSMQ), ale ten dokument nie obejmuje usługi kolejkowania komunikatów.  
@@ -45,7 +45,7 @@ W tym temacie omówiono kryteria wyboru spośród trzech głównych transportu, 
  Gdy komunikacja jest wymagany między różnymi aplikacjami usługi WCF na jednym komputerze, a chcesz uniemożliwić cała komunikacja z innego komputera, następnie używać transportu do potoków nazwanych. Dodatkowych ograniczeń jest, czy procesów uruchomionych z pulpitu zdalnego Windows może być ograniczony do tej samej sesji usług pulpitu zdalnego Windows, chyba że mają podwyższony poziom uprawnień.  
   
 > [!WARNING]
->  Korzystając z transportu nazwanego potoku przy użyciu symboli wieloznacznych słabe rezerwację adresu URL, na wiele witryn hostowanych w usługach IIS, może wystąpić następujący błąd: Wystąpił błąd w usłudze aktywacji NetPipeActivator, protokołu "net.pipe" podczas próby nasłuchiwania dla witryny "2" Dlatego protokół jest witryny tymczasowo wyłączone. Wyświetlony komunikat o wyjątku, aby uzyskać więcej informacji. Adres URL: WeakWildcard:net.pipe:/\<Nazwa maszyny > / Status: ConflictingRegistration wyjątek: Nazwa procesu: SMSvcHost identyfikator procesu: 1076\  
+>  Korzystając z transportu nazwanego potoku przy użyciu symboli wieloznacznych słabe rezerwację adresu URL, na wiele witryn hostowanych w usługach IIS, może wystąpić następujący błąd: Wystąpił błąd w usłudze aktywacji NetPipeActivator, protokołu "net.pipe" podczas próby nasłuchiwania dla witryny "2", dlatego protokół jest wyłączona dla witryny tymczasowo. Wyświetlony komunikat o wyjątku, aby uzyskać więcej informacji. ADRES URL: WeakWildcard:net.pipe:/\<nazwa komputera > / Status: ConflictingRegistration wyjątek:  Nazwa procesu: Identyfikator procesu SMSvcHost: 1076\  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>Decyzje dotyczące wybierania transportu  
  W poniższej tabeli opisano typowe punkty decyzyjne używane do wybierania transportu. Należy rozważyć wszelkie dodatkowe atrybuty i transportu, które są stosowane do aplikacji. Identyfikować atrybuty, które są istotne dla twojej aplikacji, zidentyfikować transportów, które kojarzą favorably z każdego z atrybutów, a następnie wybierz transportu, które najlepiej przy użyciu zestawu atrybutów.  
@@ -56,21 +56,21 @@ W tym temacie omówiono kryteria wyboru spośród trzech głównych transportu, 
 |Hosting|Wszystkie punkty końcowe WCF musi być hostowany w aplikacji. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] i starsze obsługują tylko hostowanie aplikacji, które używają protokołu HTTP. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], pomocy technicznej zostaną dodane do obsługi wszystkich transportów WCF, w tym TCP i nazwane potoki. Aby uzyskać więcej informacji, zobacz [hostowanie przez Internetowe usługi informacyjne](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) i [Hosting w usłudze aktywacji procesów Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
 |Inspekcja|Inspekcja jest możliwość wyodrębniania i przetwarzania informacji z komunikatów podczas transmisji. Protokół HTTP oddziela routingu i kontrola informacji na podstawie danych, ułatwiając tworzenie narzędzi, które sprawdzanie i analizowania komunikatów. Transporty, które można łatwo sprawdzić może również wymagać mniejszej mocy obliczeniowej w urządzeniach sieciowych. Poziom zabezpieczeń używane na środowisko, czy komunikaty mogą być kontrolowane.|HTTP|  
 |Czas oczekiwania|Opóźnienie jest minimalna ilość czasu wymaganego do ukończenia wymiany wiadomości. Wszystkie operacje sieci mają więcej lub mniej opóźnienia w zależności od wybranego transportu. Przy użyciu komunikacji dupleksu lub jednokierunkowe za pomocą transportu, w których wymiany natywny komunikat jest żądanie odpowiedź, takich jak HTTP, może spowodować, że dodatkowe opóźnienie z powodu wymuszonego korelacji wiadomości. W takiej sytuacji należy rozważyć użycie transportu, w których wymiany natywny komunikat jest dupleksowy, takich jak protokół TCP.|TCP, o nazwie<br /><br /> Potoku|  
-|Zasięg|Zasięg transportu odzwierciedla sposób stanie transport jest na łączenie z innymi systemami. Transportu nazwanego potoku ma bardzo mało zasięg; można połączyć tylko do usług uruchomionych na tym samym komputerze. Transportu TCP i HTTP ma doskonałą zasięgu i może przechodzić przez różne konfiguracje translatora adresów Sieciowych i zapory. Aby uzyskać więcej informacji, zobacz [Praca z translatorami adresów sieciowych i zaporami](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|PROTOKÓŁ HTTP LUB TCP|  
+|Zasięg|Zasięg transportu odzwierciedla sposób stanie transport jest na łączenie z innymi systemami. Transportu nazwanego potoku ma bardzo mało zasięg; można połączyć tylko do usług uruchomionych na tym samym komputerze. Transportu TCP i HTTP ma doskonałą zasięgu i może przechodzić przez różne konfiguracje translatora adresów Sieciowych i zapory. Aby uzyskać więcej informacji, zobacz [Praca z translatorami adresów sieciowych i zaporami](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|HTTP, TCP|  
 |Zabezpieczenia|Bezpieczeństwo jest możliwość ochrony podczas transferu wiadomości, podając poufność, integralność lub uwierzytelniania. Poufność ochronę komunikat sprawdzane, integralność chroni komunikatu przed modyfikacją i uwierzytelniania daje gwarancje dotyczące nadawcy i adresata wiadomości.<br /><br /> Usługi WCF obsługuje transfer zabezpieczeń zarówno na poziomie transportu i poziom komunikatu. Zabezpieczenia komunikatów komponuje się za pomocą transportu, czy transport obsługuje sygnał trybu buforowanego transferu. Obsługa zabezpieczeń transportu różni się zależnie od wybranej transportu. HTTP, TCP i transport nazwany potok ma uzasadnione parzystości ich obsługę zabezpieczeń transportu.|Wszystkie|  
 |Przepływność|Przepływność mierzy ilość danych, które mogą być przesyłane i przetwarzane w danym czasie. Np. czas oczekiwania wybranym transportu mogą mieć wpływ na przepływność dla operacji usługi. DSI oznacza optymalne wykorzystanie przepustowości dla transportu wymaga dodatkowe obciążenie przesyłanie zawartości, a także zminimalizować czas oczekiwania na wymianę komunikatów zakończyć. Zarówno TCP, jak i transportu nazwanego potoku Dodaj niewielkim zapasem do treści wiadomości i obsługuje natywnych kształtu dwukierunkowego, który zmniejsza czas oczekiwania, aby uzyskać odpowiedzi na wiadomości.|TCP, nazwany potok|  
 |Narzędzia|Narzędzia reprezentuje pomocy technicznej dla protokołu dla rozwoju, Diagnostyka, hostowania go i inne działania aplikacji innych firm. Tworzenia, narzędzia i oprogramowanie do pracy z protokołem HTTP oznacza, szczególnie dużych inwestycji.|HTTP|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.WSFederationHttpBinding>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Tworzenie powiązań zdefiniowanych przez użytkownika](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Tworzenie powiązań zdefiniowanych przez użytkownika](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

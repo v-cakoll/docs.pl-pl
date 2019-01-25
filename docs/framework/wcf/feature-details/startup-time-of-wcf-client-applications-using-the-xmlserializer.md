@@ -2,89 +2,89 @@
 title: 'Instrukcje: Skracanie czasu uruchamiania aplikacji klienckich programu WCF za pomocą elementu XmlSerializer'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: 6f61c57998cfc21b66f278a1a2381407ec2c39ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb98919fe6d0ec67e5fea8c483e4993f2632267f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503135"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Instrukcje: Skracanie czasu uruchamiania aplikacji klienckich programu WCF za pomocą elementu XmlSerializer
-Usługi i aplikacje klienckie, które używają typów danych, które są do serializacji przy użyciu <xref:System.Xml.Serialization.XmlSerializer> Generowanie i kompilacja kodu serializacji dla tych typów danych w czasie wykonywania, co może spowodować wolne uruchamiania wydajności.  
+Usługi i aplikacje klienckie, które używają typów danych, które są możliwe do serializacji przy użyciu <xref:System.Xml.Serialization.XmlSerializer> Generowanie i kompilowanie kodu serializacji dla tych typów danych w czasie wykonywania, co może skutkować wydajności uruchamiania powolne.  
   
 > [!NOTE]
->  Kod serializacji wstępnie wygenerowane można tylko w aplikacjach klienckich, a nie w usługach.  
+>  Serializacja wstępnie wygenerowanego kodu należy używać tylko w aplikacjach klienckich, a nie w usługach.  
   
- [Narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) może poprawić wydajność uruchamiania tych aplikacji przez generowania kodu serializacji niezbędne z skompilowane zestawy dla aplikacji. Svcutil.exe generuje kodu serializacji dla wszystkich typów danych używany w kontraktach usług w zestawie skompilowanej aplikacji, które można serializować przy użyciu <xref:System.Xml.Serialization.XmlSerializer>. Kontrakty usługi i działania, korzystających z <xref:System.Xml.Serialization.XmlSerializer> są oznaczone ikoną z <xref:System.ServiceModel.XmlSerializerFormatAttribute>.  
+ [Narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) może poprawić wydajność uruchamiania tych aplikacji, generowania kodu serializacji niezbędne z skompilowanych zestawów dla aplikacji. Svcutil.exe generuje kod serializacji dla wszystkich typów danych używane w kontraktach usług w zestawie skompilowanej aplikacji, który może być Zserializowany za pomocą <xref:System.Xml.Serialization.XmlSerializer>. Kontrakty usługi i operacji, korzystających z <xref:System.Xml.Serialization.XmlSerializer> są oznaczone <xref:System.ServiceModel.XmlSerializerFormatAttribute>.  
   
-### <a name="to-generate-xmlserializer-serialization-code"></a>Do generowania kodu serializacji XmlSerializer  
+### <a name="to-generate-xmlserializer-serialization-code"></a>Do generowania kodu serializacji elementu XmlSerializer  
   
-1.  Kompilowanie kodu usługi lub klienta do jednego lub więcej zestawów.  
+1.  Skompilować kod usługi lub klienta do jednego lub więcej zestawów.  
   
-2.  Otwórz wiersz polecenia z zestawu SDK.  
+2.  Otwórz wiersz polecenia zestawu SDK.  
   
-3.  W wierszu polecenia Uruchom narzędzie Svcutil.exe w następującym formacie.  
+3.  W wierszu polecenia Uruchom narzędzia Svcutil.exe w następującym formacie.  
   
     ```  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
-     `assemblyPath` Argument określa ścieżkę do zestawu, który zawiera typy kontraktu usługi. Svcutil.exe generuje kodu serializacji dla wszystkich typów danych używany w kontraktach usług w zestawie skompilowanej aplikacji, które można serializować przy użyciu <xref:System.Xml.Serialization.XmlSerializer>.  
+     `assemblyPath` Argument określa ścieżkę do zestawu, który zawiera typy kontraktu usługi. Svcutil.exe generuje kod serializacji dla wszystkich typów danych używane w kontraktach usług w zestawie skompilowanej aplikacji, który może być Zserializowany za pomocą <xref:System.Xml.Serialization.XmlSerializer>.  
   
-     Svcutil.exe tylko można wygenerować kodu serializacji C#. Jeden plik kod źródłowy jest generowany dla każdego zestawu wejściowego. Nie można użyć **/language** przełącznik, aby zmienić język wygenerowanego kodu.  
+     Svcutil.exe może generować jedynie C# kodu serializacji. Jeden plik kodu źródłowego jest generowany dla każdego zestawu danych wejściowych. Nie można użyć **/language** przełącznik, aby zmienić język generowanego kodu.  
   
      Aby określić ścieżkę do zestawów zależnych, użyj **/reference** opcji.  
   
-4.  Udostępnij serializacji wygenerowany kod aplikacji przy użyciu jednej z następujących opcji:  
+4.  Udostępnij kodu wygenerowanego serializacji do aplikacji przy użyciu jednej z następujących opcji:  
   
-    1.  Skompilować kodu serializacji wygenerowanego w osobny zestaw o nazwie [*oryginalnego zestawu*]. XmlSerializers.dll (na przykład MyApp.XmlSerializers.dll). Aplikacja musi być można załadować zestawu, które muszą być podpisane przy użyciu tego samego klucza oryginalnego zestawu. Skompiluj oryginalnego zestawu, musisz ponownie wygenerować zestawu serializacji.  
+    1.  Kompilowanie kodu wygenerowanego serializacji w osobnym zestawie o nazwie [*oryginalny zestaw*]. XmlSerializers.dll (na przykład MyApp.XmlSerializers.dll). Aplikacja musi umożliwiać można załadować zestawu, który musi być podpisany przy użyciu tego samego klucza jako oryginalnego zestawu. Jeśli oryginalny zestaw zostanie ponownie skompilowany, należy ponownie wygenerować zestawu serializacji.  
   
-    2.  Skompilować kodu serializacji wygenerowanego w osobny zestaw i użyj <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> umowy serwisowej, która używa <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Ustaw <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> lub <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> właściwości, aby wskazywał zestawu skompilowanego serializacji.  
+    2.  Kompilowanie kodu wygenerowanego serializacji w osobnym zestawie i użyj <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> na kontrakt usługi, która używa <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Ustaw <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> lub <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> właściwości, aby wskazywał zestawu skompilowanego serializacji.  
   
-    3.  Skompilować kodu serializacji wygenerowanego do używanego zestawu aplikacji i Dodaj <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> do umowy serwisowej, która używa <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Nie ustawiaj <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> lub <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> właściwości. Domyślny zestaw serializacji zakłada się, że bieżący zestaw.  
+    3.  Kompilowanie kodu wygenerowanego serializacji do swojego zestawu aplikacji i Dodaj <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> umową serwisową, który używa <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Nie należy ustawiać <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> lub <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> właściwości. Domyślny zestaw serializacji zakłada się, że bieżący zestaw.  
   
-### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Do generowania kodu serializacji XmlSerializer w programie Visual Studio  
+### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Do generowania kodu serializacji elementu XmlSerializer w programie Visual Studio  
   
-1.  Tworzenie usługi WCF i klienta projektów programu Visual Studio. Następnie należy dodać odwołania do usługi do projektu klienta.  
+1.  Tworzenie usługi i klienta WCF projektów w programie Visual Studio. Następnie dodaj odwołanie do usługi do projektu klienta.  
   
-2.  Dodaj <xref:System.ServiceModel.XmlSerializerFormatAttribute> w kontrakcie usługi *reference.cs* plik w projekcie aplikacji klienta, w obszarze **servicereference kierowany** -> **reference.svcmap** . Należy pamiętać, że trzeba Pokaż wszystkie pliki w **Eksploratora rozwiązań** aby te pliki.  
+2.  Dodaj <xref:System.ServiceModel.XmlSerializerFormatAttribute> w kontrakcie usługi *reference.cs* pliku w projekcie aplikacji klienckich, w obszarze **serviceReference** -> **reference.svcmap** . Należy zauważyć, że należy do wyświetlenia wszystkich plików w **Eksploratora rozwiązań** aby te pliki.  
   
-3.  Tworzenie aplikacji klienckich.  
+3.  Tworzenie aplikacji klienckiej.  
   
-4.  Użyj [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do utworzenia wstępnie wygenerowanego serializatora *.cs* pliku za pomocą polecenia:  
+4.  Użyj [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do utworzenia wstępnie wygenerowanego serializatora *.cs* pliku przy użyciu polecenia:  
   
     ```  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
-     Argument zestawu assemblyPath Określa ścieżkę do zestawu klienta WCF.  
+     Argument Ścieżkazestawu Określa ścieżkę do zestawu klienta programu WCF.  
   
-     Takie jak:  
+     Przykład:  
   
     ```  
     svcutil.exe /t:xmlSerializer wcfclient.exe  
     ```  
   
-     *WCFClient.XmlSerializers.dll.cs* zostanie utworzony plik.  
+     *WCFClient.XmlSerializers.dll.cs* zostanie wygenerowany plik.  
   
-5.  Kompilowanie zestawu wstępnie wygenerowane serializacji.  
+5.  Skompiluj zestaw wstępnie wygenerowanego serializacji.  
   
-     Oparte na przykład w poprzednim kroku, kompilacji polecenie będzie następujące:  
+     Na podstawie przykładu w poprzednim kroku, polecenie compile będzie następująca:  
   
     ```  
     csc /r:wcfclient.exe /out:WCFClient.XmlSerializers.dll /t:library WCFClient.XmlSerializers.dll.cs  
     ```  
   
-     Sprawdź wygenerowany *WCFClient.XmlSerializers.dll* znajduje się w tym samym katalogu co aplikacja klienta, który jest *WCFClient.exe* w takim przypadku.  
+     Sprawdź wygenerowany *WCFClient.XmlSerializers.dll* znajduje się w tym samym katalogu co aplikacja klienta, która jest *WCFClient.exe* w tym przypadku.  
   
-6.  Uruchom aplikację klienta w zwykły sposób. Zestaw wstępnie wygenerowane serializacji będą używane.  
+6.  Uruchom aplikację kliencką w zwykły sposób. Zestaw serializacji wstępnie wygenerowanego będą używane.  
   
 ## <a name="example"></a>Przykład  
- Polecenie generuje typy serializacji dla `XmlSerializer` typów, które usługi umów w przypadku użycia zestawu.  
+ Następujące polecenie generuje typy serializacji dla `XmlSerializer` typy, które każda usługa umów z użyciem zestawu.  
   
 ```  
 svcutil /t:xmlserializer myContractLibrary.exe  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>Zobacz także
+- [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

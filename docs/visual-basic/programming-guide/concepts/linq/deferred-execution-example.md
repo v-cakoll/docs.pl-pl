@@ -1,19 +1,19 @@
 ---
-title: Wykonanie odroczone — przykład (Visual Basic)
+title: Przykład wykonania odroczonego (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: a9827b73ebc0df589a14032d99b32d1e1bc891ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9247c89d46cc7705ef4297868739ba85d993eec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614175"
 ---
-# <a name="deferred-execution-example-visual-basic"></a>Wykonanie odroczone — przykład (Visual Basic)
-W tym temacie przedstawiono sposób odroczonego wykonania i obliczanie leniwe wpływa na wykonanie programu LINQ do XML zapytania.  
+# <a name="deferred-execution-example-visual-basic"></a>Przykład wykonania odroczonego (Visual Basic)
+W tym temacie przedstawiono sposób odroczonego wykonania i obliczanie z opóźnieniem wpływa na wykonywanie Twojego zapytaniach składnika LINQ to XML.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono kolejność wykonywania, korzystając z metody rozszerzenia, który używa odroczonego wykonania. Przykład deklaruje tablicę trzy ciągi. Go następnie iteruje po kolekcji zwróconej przez `ConvertCollectionToUpperCase`.  
+ Poniższy przykład pokazuje kolejność wykonywania, korzystając z metody rozszerzenia, która używa odroczonego wykonania. Przykład deklaruje tablicę trzy ciągi. Następnie wykonuje iterację przez zbiorze zwróconym przez `ConvertCollectionToUpperCase`.  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -55,9 +55,9 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- Zwróć uwagę, że podczas iteracji w kolekcji zwróconej przez `ConvertCollectionToUpperCase`każdego elementu jest pobierana z tablicy ciągów źródła i przekonwertowane na wielkie litery przed następnego elementu jest pobierana z tablicy ciągów źródła.  
+ Należy zauważyć, że podczas iteracji w kolekcji zwróconej przez `ConvertCollectionToUpperCase`, każdy element jest pobierana z tablicy ciągów źródłowych i przekonwertowane na wielkie litery przed następnego elementu jest pobierana z tablicy ciągów źródła.  
   
- Widać, że cała tablica ciągów nie jest przekonwertowany na wielkie litery, przed przetworzeniem każdego elementu w zwracanej kolekcji w `foreach` pętli w `Main`.  
+ Widać, że całej tablicy ciągów nie jest konwertowana na wielkie litery, przetworzenia każdego elementu w kolekcji zwrócone `foreach` pętli w `Main`.  
   
-## <a name="see-also"></a>Zobacz też  
- [Samouczek: Odroczonego wykonania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+## <a name="see-also"></a>Zobacz także
+- [Samouczek: Wykonanie odroczone (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

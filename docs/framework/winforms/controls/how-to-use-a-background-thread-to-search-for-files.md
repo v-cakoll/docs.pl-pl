@@ -1,5 +1,5 @@
 ---
-title: 'Porady: użycie wątku w tle do wyszukiwania plików'
+title: 'Instrukcje: Użycie wątku w tle do wyszukiwania plików'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 1034868939837fc43cf7595c819a6109331a2684
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536335"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Porady: użycie wątku w tle do wyszukiwania plików
-<xref:System.ComponentModel.BackgroundWorker> Składnika zastępuje i dodaje funkcje do <xref:System.Threading> przestrzeni nazw, jednak <xref:System.Threading> przestrzeni nazw są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana. Aby uzyskać więcej informacji, zobacz [BackgroundWorker — informacje o składniku](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Instrukcje: Użycie wątku w tle do wyszukiwania plików
+<xref:System.ComponentModel.BackgroundWorker> Składnika zastępuje i dodaje funkcjonalność do <xref:System.Threading> przestrzeni nazw; jednakże <xref:System.Threading> przestrzeń nazw została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [BackgroundWorker, składnik — omówienie](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
   
- Formularze systemu Windows używa modelu jednowątkowego apartamentu (STA), ponieważ formularze systemu Windows jest oparta na natywnego windows Win32, które są z założenia typu apartment. Z modelu STA. oznacza to, że można było utworzyć okno w którymkolwiek wątku, ale nie można przełączyć raz utworzone wątki, wszystkie wywołania funkcji do niego musi wystąpić w jego utworzenia wątku. Poza formularzy systemu Windows klas w programie .NET Framework używać wolnego modelu wątkowości. Aby dowiedzieć się, jak wątków w programie .NET Framework, zobacz [wątki](../../../../docs/standard/threading/index.md).  
+ Windows Forms używa modelu apartamentem jednowątkowym (przedziale STA), ponieważ Windows Forms jest oparta na natywny Win32 dla systemu windows, które są z natury typu apartment. Modelu STA. oznacza okna można tworzyć na żadnym z wątków, ale go nie ma możliwości przełączenia wątków po utworzeniu i wszystkie wywołania funkcji do niego musi wystąpić w jego tworzenia wątku. Poza formularzy Windows klas w programie .NET Framework przy użyciu wolnego modelu wątkowości. Aby dowiedzieć się, jak wątkowości w programie .NET Framework, zobacz [wątki](../../../../docs/standard/threading/index.md).  
   
- Z modelu STA. wymaga czy żadnych metod dla formantu, który musi być wywoływany z poza wątku tworzenia formantu muszą być przekazywane do (wykonane na) wątku tworzenia formantu. Klasa podstawowa <xref:System.Windows.Forms.Control> zapewnia kilka metod (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, i <xref:System.Windows.Forms.Control.EndInvoke%2A>) w tym celu. <xref:System.Windows.Forms.Control.Invoke%2A> Metoda synchroniczna wywołań; <xref:System.Windows.Forms.Control.BeginInvoke%2A> wywołań metod asynchronicznych.  
+ STA model wymaga, że wszystkie metody dla formantu, który muszą zostać wywołane z poza wątku tworzenia kontrolki musi być organizowany do (wykonywane na) wątku tworzenia kontrolki. Klasa bazowa <xref:System.Windows.Forms.Control> udostępnia kilka metod (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, i <xref:System.Windows.Forms.Control.EndInvoke%2A>) do tego celu. <xref:System.Windows.Forms.Control.Invoke%2A> Metoda synchroniczna wywołań; <xref:System.Windows.Forms.Control.BeginInvoke%2A> sprawia, że wywołania metody asynchronicznej.  
   
- Jeśli używasz wielowątkowości w kontroli zadań intensywnie interfejsu użytkownika może pozostawać reakcji, gdy wykonuje obliczenia obciąża wątku w tle.  
+ Jeśli używasz wielowątkowość pod kontrolą użytkownika zadania intensywnie obciążające, interfejs użytkownika, może nadal odpowiadać podczas obliczania dużej ilości zasobów, wykonuje na wątku w tle.  
   
- Poniższy przykład (`DirectorySearcher`) zawiera wielowątkowe kontrolki formularza systemu Windows, który używa wątku w tle do wyszukiwania rekursywnie katalog dla plików zgodnych z określonego ciągu wyszukiwania i następnie wypełnienie pola listy z wynikami wyszukiwania. Kluczowe założenia zilustrowane próbki są następujące:  
+ Poniższy przykład (`DirectorySearcher`) pokazuje wielowątkowego formant Windows Forms, który używa wątku w tle do wyszukiwania rekursywnie katalog dla plików pasujących do określonego ciągu wyszukiwania, a następnie wypełni pola listy z wynikami wyszukiwania. Kluczowe założenia przedstawionymi w przykładzie są następujące:  
   
--   `DirectorySearcher` Uruchamia nowego wątku do przeszukiwania. Wątek wykonuje `ThreadProcedure` metodę, która z kolei wywołuje Pomocnika `RecurseDirectory` metody wykonaj rzeczywiste wyszukiwania i wypełnienia pola listy. Wypełnianie pola listy wymaga jednak połączenie między wątkami, zgodnie z objaśnieniem w dwóch następnych elementów listy punktowane.  
+-   `DirectorySearcher` uruchamia nowy wątek, aby wykonać wyszukiwanie. Wątek `ThreadProcedure` metodę, która z kolei wywołuje Pomocnika `RecurseDirectory` metody w celu rzeczywistego wyszukiwania i wypełnienia pola listy. Wypełnianie pola listy wymaga jednak wywołania międzywątkowe, zgodnie z opisem w dwóch następnych wypunktowanej.  
   
--   `DirectorySearcher` definiuje `AddFiles` metody, aby dodać pliki do pola listy; jednak `RecurseDirectory` nie można bezpośrednio wywołać `AddFiles` ponieważ `AddFiles` można wykonać tylko w wątku STA, utworzony `DirectorySearcher`.  
+-   `DirectorySearcher` definiuje `AddFiles` metodę, aby dodać pliki do pola listy; jednak `RecurseDirectory` nie można bezpośrednio wywołać `AddFiles` ponieważ `AddFiles` można wykonać tylko w wątku STA., utworzony `DirectorySearcher`.  
   
--   Jedynym sposobem `RecurseDirectory` można wywołać `AddFiles` jest za pomocą wywołania innych wątków — to znaczy przez wywołanie <xref:System.Windows.Forms.Control.Invoke%2A> lub <xref:System.Windows.Forms.Control.BeginInvoke%2A> do organizowania `AddFiles` do utworzenia wątku `DirectorySearcher`. `RecurseDirectory` używa <xref:System.Windows.Forms.Control.BeginInvoke%2A> tak, aby wywołanie może się asynchronicznie.  
+-   Jedynym sposobem `RecurseDirectory` może wywołać `AddFiles` jest za pośrednictwem wywołania międzywątkowe — oznacza to, przez wywołanie <xref:System.Windows.Forms.Control.Invoke%2A> lub <xref:System.Windows.Forms.Control.BeginInvoke%2A> do organizowania `AddFiles` do tworzenia wątku `DirectorySearcher`. `RecurseDirectory` używa <xref:System.Windows.Forms.Control.BeginInvoke%2A> tak, aby wywołanie może się asynchronicznie.  
   
--   Organizowanie metody wymaga odpowiednikiem wskaźnik funkcji lub wywołania zwrotnego. Jest to realizowane przy użyciu delegatów w programie .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> pobiera delegata jako argument. `DirectorySearcher` w związku z tym definiuje delegata (`FileListDelegate`), wiąże `AddFiles` na wystąpienie `FileListDelegate` w Konstruktorze i przekazuje wystąpienie tego obiektu delegowanego do <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` definiuje również delegata zdarzenia, które jest przekazywane po ukończeniu wyszukiwania.  
+-   Marshaling metody wymaga wielokrotność wskaźnika funkcji lub wywołania zwrotnego. Jest to realizowane przy użyciu delegatów w programie .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> Delegat przyjmuje jako argument. `DirectorySearcher` w związku z tym definiuje delegata (`FileListDelegate`), wiąże `AddFiles` do wystąpienia `FileListDelegate` w Konstruktorze i przekazuje ten delegat wystąpienia do <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` definiuje również delegata zdarzenia, który jest organizowana po zakończeniu wyszukiwania.  
   
 ```vb  
 Option Strict  
@@ -569,7 +569,7 @@ namespace Microsoft.Samples.DirectorySearcher
 }  
 ```  
   
-## <a name="using-the-multithreaded-control-on-a-form"></a>Przy użyciu wielowątkowe kontrolkę w formularzu  
+## <a name="using-the-multithreaded-control-on-a-form"></a>Za pomocą wielowątkowe kontrolki na formularzu  
  W poniższym przykładzie przedstawiono sposób wielowątkowe `DirectorySearcher` formantu można używać w formularzu.  
   
 ```vb  
@@ -762,7 +762,7 @@ namespace SampleUsage
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ComponentModel.BackgroundWorker>  
- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ComponentModel.BackgroundWorker>
+- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

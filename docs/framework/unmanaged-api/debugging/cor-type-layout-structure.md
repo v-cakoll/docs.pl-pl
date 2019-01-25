@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b88a7b0672e15097c60afbe069ce5b78bd5c38d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50fd730876f43be5da45f38fa2d4694cbb2b2d1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502575"
 ---
 # <a name="cortypelayout-structure"></a>COR_TYPE_LAYOUT — Struktura
-Zawiera informacje o układzie obiektu w pamięci.  
+Informacje dotyczące układu obiektu w pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,17 +42,17 @@ typedef struct COR_TYPE_LAYOUT {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`parentID`|Identyfikator typu nadrzędnego do tego typu. Będzie to identyfikator typu NULL (token1 = 0, token2 = 0), gdy odpowiada identyfikator typu <xref:System.Object?displayProperty=nameWithType>.|  
-|`objectSize`|Wielkość podstawowa obiektu tego typu. Jest to łączny rozmiar obiektów o rozmiarze-variable.|  
-|`numFields`|Liczba pól zawarte w obiektach tego typu.|  
-|`boxOffset`|Jeśli ten typ jest opakowany, początku przesunięcia pól obiektu. W tym polu jest prawidłowa tylko dla typów wartości, takich jak podstawowych i struktury.|  
-|`type`|CorElementType, do którego należy tego typu.|  
+|`parentID`|Identyfikator typu nadrzędnego do tego typu. Jest to identyfikator typu o wartości NULL (token1 = 0, token2 = 0), gdy odpowiada identyfikator typu <xref:System.Object?displayProperty=nameWithType>.|  
+|`objectSize`|Wielkość podstawowa obiektu tego typu. Jest to łączny rozmiar obiektów wielkości niezmienny.|  
+|`numFields`|Numer pola zawarte w obiektach tego typu.|  
+|`boxOffset`|Jeśli ten typ jest opakowany, początku przesunięcia pól obiektu. To pole jest prawidłowe tylko w przypadku typów wartości, takich jak podstawowych i struktur.|  
+|`type`|Corelementtype — do której należy tego typu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `numFields` jest większa od zera, można wywołać [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) metody, aby uzyskać informacje o pola w tym typie. Jeśli `type` jest `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, lub `ELEMENT_TYPE_SZARRAY`, rozmiar obiektów tego typu jest zmienną i można przekazać [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) struktury do [ICorDebugProcess5::GetArrayLayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) metody.  
+ Jeśli `numFields` jest większa od zera, można wywołać [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) metodę, aby uzyskać informacje na temat pól, w tym typie. Jeśli `type` jest `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, lub `ELEMENT_TYPE_SZARRAY`, rozmiar obiektów tego typu jest zmienną i można przekazać [cor_typeid —](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) struktury do [ICorDebugProcess5::GetArrayLayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -60,6 +60,6 @@ typedef struct COR_TYPE_LAYOUT {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

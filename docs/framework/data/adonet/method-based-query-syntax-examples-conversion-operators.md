@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a084c16b-9b55-4690-aefd-f8e0810a92c3
-ms.openlocfilehash: 4828aafc4e19b9a9d1c74a215dc255caa2dae01d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7fb9a6c7cfd891e6a4384f081992a6b185951931
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688236"
 ---
 # <a name="method-based-query-syntax-examples-conversion-operators-linq-to-dataset"></a>Przykłady składni zapytania oparte na metodzie: Operatory konwersji (LINQ to DataSet)
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A>, i <xref:System.Linq.Enumerable.ToList%2A> metody, aby natychmiast wykonać wyrażenia zapytania.  
@@ -24,7 +24,7 @@ Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerabl
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- Aby uzyskać więcej informacji, zobacz [porady: Tworzenie składnika LINQ to DataSet projektu w programie Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
+ Aby uzyskać więcej informacji, zobacz [jak: Tworzenie projektu LINQ to DataSet w programie Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
   
 ## <a name="toarray"></a>ToArray  
   
@@ -50,7 +50,7 @@ Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerabl
  [!code-csharp[DP LINQ to DataSet Examples#ToList](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#tolist)]
  [!code-vb[DP LINQ to DataSet Examples#ToList](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#tolist)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Ładowanie danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [Standardowe operatory zapytań — przegląd](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+## <a name="see-also"></a>Zobacz także
+- [Ładowanie danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Standardowe operatory zapytań — przegląd](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

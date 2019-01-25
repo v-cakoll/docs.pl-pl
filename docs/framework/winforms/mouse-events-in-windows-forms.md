@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 6f457756d2266a84c4f241a1cea167af194d8b81
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ac44f58d5cf6edfc2010d8a878f22abcec0fe57f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507580"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Zdarzenia myszy w formularzach systemu Windows
 Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji kursora myszy wskaźnik i stan przycisku myszy. Ten temat zawiera szczegółowe informacje dotyczące sposobu uzyskania tych informacji ze zdarzeń myszy i wyjaśnia kolejność, w której kliknięcie myszą zdarzenia są wywoływane w kontrolkach formularzy Windows Forms. Aby uzyskać listę i opis wszystkich zdarzeń myszy, zobacz [sposób działania wejście myszy w formularzach Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Zobacz też [Przegląd obsługi zdarzeń (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Przegląd zdarzeń (systemu Windows Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
@@ -62,7 +62,7 @@ Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji
   
 8.  <xref:System.Windows.Forms.Control.MouseUp> zdarzenie.  
   
- Dla przykładu kodu, który demonstruje kolejność myszy zdarzenia kliknięcia, zobacz [porady: Obsługa zdarzeń danych wejściowych użytkownika w kontrolkach formularzy Windows Forms](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
+ Dla przykładu kodu, który demonstruje kolejność myszy zdarzenia kliknięcia, zobacz [jak: Dane wejściowe podane dojście do użytkownika, zdarzenia w Windows Forms kontrolki](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
 ### <a name="individual-controls"></a>Pojedynczych formantów  
  Następujące elementy sterujące nie jest zgodny z standardowej myszki kliknij zachowania zdarzenia:  
@@ -74,11 +74,11 @@ Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji
   
     -   Kliknięcie lewym przyciskiem: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   Kliknij prawym przyciskiem myszy: nie zdarzeń kliknij zgłaszanych  
+    -   Kliknij prawym przyciskiem myszy: Nie zdarzeń kliknij zgłaszanych  
   
     -   Po lewej stronie kliknij dwukrotnie plik: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   Kliknij dwukrotnie przycisk z prawej: nie zdarzeń kliknij zgłaszanych  
+    -   Kliknij dwukrotnie bezpośrednio: Nie zdarzeń kliknij zgłaszanych  
   
 -   <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox>, i <xref:System.Windows.Forms.CheckedListBox> formantów  
   
@@ -87,11 +87,11 @@ Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji
   
     -   Kliknięcie lewym przyciskiem: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   Kliknij prawym przyciskiem myszy: nie zdarzeń kliknij zgłaszanych  
+    -   Kliknij prawym przyciskiem myszy: Nie zdarzeń kliknij zgłaszanych  
   
     -   Po lewej stronie kliknij dwukrotnie plik: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
-    -   Kliknij dwukrotnie przycisk z prawej: nie zdarzeń kliknij zgłaszanych  
+    -   Kliknij dwukrotnie bezpośrednio: Nie zdarzeń kliknij zgłaszanych  
   
 -   <xref:System.Windows.Forms.ListView> Kontrolki  
   
@@ -141,5 +141,5 @@ Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji
     > [!NOTE]
     >  Gdy użytkownik przesuwa wskaźnik myszy poza formant przełączania, gdy przycisk myszy jest wciśnięty (np. przesuwanie wskaźnika myszy <xref:System.Windows.Forms.Button> kontroli, gdy naciśnięcia), kontrolki przełącznika namaluje w wypukły stanu i tylko <xref:System.Windows.Forms.Control.MouseUp> wystąpi zdarzenie. <xref:System.Windows.Forms.Control.Click> Lub <xref:System.Windows.Forms.Control.MouseClick> zdarzenia nie będzie występować w tej sytuacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

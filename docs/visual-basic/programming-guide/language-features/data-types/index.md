@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 83c3d9976f61513165e917da73dd50e846db3e83
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cf16fc1d9b5713be43a041c92dbd1228f3995d55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45971841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694454"
 ---
 # <a name="data-types-in-visual-basic"></a>Typy danych w Visual Basic
 *— Typ danych* elementu programistycznego odwołuje się do jakiego rodzaju dane można przechowywać i jak są przechowywane dane. Typy danych są stosowane do wszystkich wartości, które mogą być przechowywane w pamięci komputera i uczestniczyć w wyniku obliczenia wyrażenia. Każdej zmiennej, literał, — stała, wyliczenia, właściwości, parametr procedury, argumentu procedury i procedury zwracana wartość ma typ danych.  
@@ -34,15 +34,15 @@ ms.locfileid: "45971841"
   
  Aby uzyskać listę typów danych języka Visual Basic, zobacz [typy danych](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Krotki](tuples.md)     
- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)  
- [Skuteczne stosowanie typów danych](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Zobacz także
+- [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Krotki](tuples.md)
+- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)
+- [Skuteczne stosowanie typów danych](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

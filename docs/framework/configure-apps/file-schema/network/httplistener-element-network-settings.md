@@ -2,20 +2,20 @@
 title: '&lt;httpListener&gt; — Element (ustawienia sieci)'
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 58228eed71dd6a5f5af8e26c02db9633da6ceef6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 896b6633ef4a741b9a7460d8ce3d879253d542da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577701"
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt; — Element (ustawienia sieci)
 Dostosowuje parametrów używanych przez <xref:System.Net.HttpListener> klasy.  
   
  \<Konfiguracja >  
 \<system.net>  
-\<Ustawienia >  
-\<httpListener >  
+\<settings>  
+\<httpListener>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -137,8 +137,8 @@ Dostosowuje parametrów używanych przez <xref:System.Net.HttpListener> klasy.
 |Plik walidacji||  
 |Może być pusta||  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.Net.Configuration.HttpListenerElement>  
-- <xref:System.Net.HttpListener>  
-- <xref:System.Net.HttpListenerRequest.Url%2A>  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.Configuration.HttpListenerElement>
+- <xref:System.Net.HttpListener>
+- <xref:System.Net.HttpListenerRequest.Url%2A>
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

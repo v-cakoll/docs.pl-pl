@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: a7743f790c1080b601c7e92236723dbc721a849b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c67161ddd0698a74f073b10e79674529b198e9f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500524"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Zapewnia użytkownikowi pełną kontrolę nad stosem obsługi wiadomości.  
@@ -193,7 +193,7 @@ Zapewnia użytkownikowi pełną kontrolę nad stosem obsługi wiadomości.
 |[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|Określa ustawienie dla WS-Reliable Messaging. Gdy ten element jest dodawany do niestandardowego powiązania, dokładnie obsługuje wynikowy kanału — gdy gwarancje dostarczenia. Ten element jest typu <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|  
 |[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Określa opcje zabezpieczeń niestandardowego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.SecurityElement>.|  
 |[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Określa ustawienia zabezpieczeń dla powiązania strumienia SSL. Ten element jest typu <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|  
-|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Określa, że powiązanie obsługuje przepływu transakcji i protokół, który będzie używany przez `transactionProtocol` atrybutu. Ten element jest typu <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
+|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Określa, że powiązanie obsługuje przepływu transakcji i protokół, który będzie używany przez `transactionProtocol` atrybutu. Ten element jest typu <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
 |[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Określa opcje do przesyłania strumieniowego zabezpieczeń niestandardowego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -215,7 +215,7 @@ Zapewnia użytkownikowi pełną kontrolę nad stosem obsługi wiadomości.
   
 3.  Zabezpieczenia (opcjonalnie)  
   
-4.  Transportu  
+4.  Transport  
   
 5.  Koder (opcjonalnie)  
   
@@ -283,23 +283,23 @@ Zapewnia użytkownikowi pełną kontrolę nad stosem obsługi wiadomości.
 |Zmiana kształtu|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|Nie|  
 |Transport uaktualnień|Strumień protokołu SSL, strumienia Windows elementu równorzędnego programu rozpoznawania nazw|Nie|  
 |Kodowanie|Tekst, Binary MTOM, niestandardowe|Tak|  
-|Transportu|Odmian HTTP, HTTPS, TCP i nazwane potoki usługi MSMQ, niestandardowe|Tak|  
+|Transport|Odmian HTTP, HTTPS, TCP i nazwane potoki usługi MSMQ, niestandardowe|Tak|  
   
  Ponadto można zdefiniować własne elementy powiązania i wstawione między dowolnymi poprzedniej warstwy zdefiniowanej przez użytkownika.  
   
  Aby uzyskać informacje dotyczące sposobu używania niestandardowego powiązania, aby zmodyfikować powiązania dostarczane przez system, zobacz [jak: Dostosuj powiązania dostarczane przez System](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
     
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.Configuration.BindingsSection>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [customBinding — Element](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.Configuration.BindingsSection>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [customBinding — Element](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

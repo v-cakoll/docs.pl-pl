@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2bf8848851dc99c60b8c151ed34cd536fa9a8fed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f946179fc31adebc8e8fc67c394e0b55a876f49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443264"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641333"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType — Wyliczenie
-Zawiera wartości, które wskazują na typ połączone w kodzie natywnym.  
+Zawiera wartości wskazujące typ połączone w kodzie natywnym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,7 +44,7 @@ typedef enum
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`nltNone`|Wskazuje, że słowa kluczowe są nieokreślone.|  
+|`nltNone`|Wskazuje brak słów kluczowych określony.|  
 |`nltAnsi`|Wskazuje, że zostanie określone słowo kluczowe ANSI.|  
 |`nltUnicode`|Wskazuje, że określono Unicode — słowo kluczowe|  
 |`nltAuto`|Wskazuje, że określono auto — słowo kluczowe.|  
@@ -52,13 +52,13 @@ typedef enum
 |`nltMaxValue`|Nie używany.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 17bb0f246407804306a0ea0142f8944b5cf1ee30
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 56028bcf3b843a4f6884e2d7cc7d409621adba34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558822"
 ---
 # <a name="-define-c-compiler-options"></a>-Definiowanie (opcje kompilatora C#)
 **— Zdefiniuj** opcja definiuje `name` jako symbol w kodzie źródłowym wszystkie pliki programu.  
@@ -78,7 +78,7 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

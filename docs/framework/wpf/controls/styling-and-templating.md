@@ -15,29 +15,29 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 9c2c38020bb57a008d0948a360a5b2cbe401089d
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 8bd806d6b0d53d09cfca875f9f8fa844eb73ffdc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549720"
 ---
 # <a name="styling-and-templating"></a>Tworzenie szablonów i stylów
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Style i tworzenia szablonów odwoływać się do zestawu funkcji (style, szablony, wyzwalaczy i scenorys), które umożliwiają deweloperów i projektantów do tworzenia efektów wizualny i utworzyć spójny wygląd ich produktu. Chociaż deweloperów i projektantów lub można dostosować wygląd często na podstawie aplikacji przez aplikację, model strong style i tworzenia szablonów jest niezbędne w celu umożliwienia obsługi i udostępnianie wyglądu w ramach i między aplikacjami. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia modelu.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Tworzenie szablonów i stylów odnoszą się do zestawu funkcji (style, szablony, wyzwalaczy i scenorysów), które umożliwiają deweloperów i projektantów do tworzenia efektów wizualnie atrakcyjne i utworzyć spójny wygląd swojego produktu. Chociaż deweloperów i projektantów lub można dostosować wygląd często na podstawie aplikacji, aplikacji, silne modelu Tworzenie szablonów i stylów jest niezbędne w celu umożliwienia obsługi i udostępnianie pojawienia się wewnątrz i pomiędzy aplikacjami. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia tego modelu.  
   
- Kolejną funkcją [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] model stylów jest oddzielenie logiki i prezentacji. Oznacza to, że projektantów można zmieniać wygląd aplikacji tylko przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w tym samym czasie, który deweloperzy pracować przy użyciu logiki programowania przy użyciu języka C# lub Visual Basic.  
+ Kolejną funkcją [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stylu modelu polega na rozdzieleniu prezentacji i logiki. Oznacza to, że projektantów można zmieniać wygląd aplikacji tylko przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w tym samym czasie, który deweloperzy pracują na logice programowania przy użyciu C# lub Visual Basic.  
   
- To omówienie koncentruje się na aspektach stylami i tworzenia szablonów, aplikacji i nie omówiono w nim żadnych koncepcji powiązania danych. Aby uzyskać informacje dotyczące powiązania danych, zobacz [omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ W tym omówieniu koncentruje się na tworzenie szablonów i stylów aspektów aplikacji i nie omówiono w nim wszystkie powiązania pojęcia związane z danymi. Aby uzyskać informacji na temat wiązania danych, zobacz [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Ponadto jest zrozumieć zasoby, które są co włączyć style i szablony zostanie ponownie. Aby uzyskać więcej informacji o zasobach, zobacz [zasobów XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).
+ Ponadto ważne jest zrozumienie zasoby, które są co Włączanie stylów i szablonów, które mają być używane ponownie. Aby uzyskać więcej informacji na temat zasobów, zobacz [zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).
 
 <a name="styling_and_templating_sample"></a>   
-## <a name="styling-and-templating-sample"></a>Style i przykładowe tworzenia szablonów  
- Przykłady kodu, używany w tym omówieniu są oparte na próbkę proste fotografii pokazano na poniższej ilustracji:  
+## <a name="styling-and-templating-sample"></a>Przykładowych szablonów i stylów  
+ Przykłady kodu, używany w tym omówieniu opierają się na przykład proste zdjęcie pokazano na poniższej ilustracji:  
   
- ![Styl elementu ListView](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
+ ![Różne ListView](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
   
- W tym przykładzie prosty fotografii używa stylami i tworzenia szablonów można utworzyć wizualny środowisko użytkownika. Przykład ma dwa <xref:System.Windows.Controls.TextBlock> elementów i <xref:System.Windows.Controls.ListBox> formant, który jest powiązany z listy obrazów. Pełny przykład, zobacz [wprowadzenie do stylów i tworzenia szablonów przykładowa](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ W tym przykładzie prostego zdjęcie używa Tworzenie szablonów i stylów w celu utworzenia atrakcyjnych wizualnie środowiska użytkownika. Przykład ma dwa <xref:System.Windows.Controls.TextBlock> elementy i <xref:System.Windows.Controls.ListBox> formant, który jest powiązany z listy obrazów. Aby uzyskać pełny przykład, zobacz [wprowadzenie do przykładowych szablonów i stylów](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 <a name="styling_basics"></a>   
 ## <a name="style-basics"></a>Podstawowe informacje dotyczące stylu  
@@ -47,156 +47,156 @@ ms.locfileid: "34457761"
   
  ![Zrzut ekranu przedstawiający przykładowy stylów](../../../../docs/framework/wpf/controls/media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
   
- Można zmienić wygląd domyślny przez ustawienie właściwości, takie jak <xref:System.Windows.Controls.Control.FontSize%2A> i <xref:System.Windows.Controls.Control.FontFamily%2A>, na każdym <xref:System.Windows.Controls.TextBlock> element bezpośrednio. Jednak jeśli chcesz z <xref:System.Windows.Controls.TextBlock> elementy, aby udostępnić niektóre właściwości, można utworzyć <xref:System.Windows.Style> w `Resources` części Twojego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików, jak pokazano poniżej:  
+ Domyślny wygląd można zmienić przez ustawienie właściwości, takie jak <xref:System.Windows.Controls.Control.FontSize%2A> i <xref:System.Windows.Controls.Control.FontFamily%2A>, na każdym <xref:System.Windows.Controls.TextBlock> element bezpośrednio. Jednak jeśli chcesz, aby Twoje <xref:System.Windows.Controls.TextBlock> elementy, aby udostępnić niektóre właściwości, można utworzyć <xref:System.Windows.Style> w `Resources` części usługi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku, jak pokazano poniżej:  
   
  [!code-xaml[StylingIntroSnippet#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources)]  
 [!code-xaml[StylingIntroSnippet#tb1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#tb1)]  
 [!code-xaml[StylingIntroSnippet#Resources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources2)]  
   
- Podczas ustawiania <xref:System.Windows.Style.TargetType%2A> Twojego stylu do <xref:System.Windows.Controls.TextBlock> typu, stylu jest stosowane do wszystkich <xref:System.Windows.Controls.TextBlock> elementów w oknie.  
+ Po ustawieniu <xref:System.Windows.Style.TargetType%2A> z własnego stylu do <xref:System.Windows.Controls.TextBlock> typu, stylu jest stosowane do wszystkich <xref:System.Windows.Controls.TextBlock> elementy w oknie.  
   
- Teraz <xref:System.Windows.Controls.TextBlock> elementy wyglądają następująco:  
+ Teraz <xref:System.Windows.Controls.TextBlock> elementy pojawiają się w następujący sposób:  
   
  ![Zrzut ekranu przedstawiający przykładowy stylów](../../../../docs/framework/wpf/controls/media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
   
 ### <a name="extending-styles"></a>Rozszerzanie style  
- Określić ma dwie sieci <xref:System.Windows.Controls.TextBlock> elementy, które udostępniają niektórych wartości właściwości, takie jak <xref:System.Windows.Controls.Control.FontFamily%2A> i wyśrodkowany <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, ale ma także tekst "Moje obrazy" niektóre dodatkowe właściwości. Możesz to zrobić przez utworzenie nowego stylu opiera się na pierwszym stylu, jak pokazano poniżej:  
+ Chcecie Twojego dwu <xref:System.Windows.Controls.TextBlock> elementy, które udostępniają niektóre wartości właściwości, takie jak <xref:System.Windows.Controls.Control.FontFamily%2A> i wyśrodkowany <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, ale ma również tekst "Moje obrazy", aby niektóre dodatkowe właściwości. Możesz to zrobić, tworząc nowy styl, który opiera się na pierwszy stylu, jak pokazano poniżej:  
   
  [!code-xaml[StylingIntroSnippet#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources)]  
 [!code-xaml[StylingIntroSnippet#tb2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#tb2)]  
 [!code-xaml[StylingIntroSnippet#Resources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources2)]  
   
- Należy zauważyć, że podano wcześniejszy styl `x:Key`. Aby zastosować styl, należy ustawić <xref:System.Windows.FrameworkElement.Style%2A> właściwości na Twojej <xref:System.Windows.Controls.TextBlock> do `x:Key` wartość, jak pokazano poniżej:  
+ Należy zauważyć, że jest podany w poprzednim stylu `x:Key`. Aby zastosować styl, należy ustawić <xref:System.Windows.FrameworkElement.Style%2A> właściwość swoje <xref:System.Windows.Controls.TextBlock> do `x:Key` wartość, jak pokazano poniżej:  
   
  [!code-xaml[StylingIntroSnippet#UIText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#uitext)]  
   
- To <xref:System.Windows.Controls.TextBlock> ma teraz styl <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> wartość <xref:System.Windows.HorizontalAlignment.Center>, <xref:System.Windows.Controls.TextBlock.FontFamily%2A> wartość `Comic Sans MS`, <xref:System.Windows.Controls.TextBlock.FontSize%2A> wartość 26, a <xref:System.Windows.Controls.TextBlock.Foreground%2A> wartość <xref:System.Windows.Media.LinearGradientBrush> pokazano w przykładzie. Należy zauważyć, że zastępuje on <xref:System.Windows.Controls.Control.FontSize%2A> wartość stylu bazowego. Jeśli istnieje więcej niż jeden <xref:System.Windows.Setter> ustawienie tej właściwości <xref:System.Windows.Style>, <xref:System.Windows.Setter> czyli zadeklarowane ostatniego ma pierwszeństwo.  
+ To <xref:System.Windows.Controls.TextBlock> styl ma teraz <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> wartość <xref:System.Windows.HorizontalAlignment.Center>, <xref:System.Windows.Controls.TextBlock.FontFamily%2A> wartość `Comic Sans MS`, <xref:System.Windows.Controls.TextBlock.FontSize%2A> wartość 26, a <xref:System.Windows.Controls.TextBlock.Foreground%2A> wartość <xref:System.Windows.Media.LinearGradientBrush> pokazano w przykładzie. Należy zauważyć, że zastępuje ona <xref:System.Windows.Controls.Control.FontSize%2A> wartość stylu bazowego. Jeśli istnieje więcej niż jedna <xref:System.Windows.Setter> ustawienie tej właściwości w <xref:System.Windows.Style>, <xref:System.Windows.Setter> czyli zadeklarowane ostatni ma pierwszeństwo.  
   
- Oto co <xref:System.Windows.Controls.TextBlock> elementy wyglądać tak jak:  
+ Poniżej pokazano, co <xref:System.Windows.Controls.TextBlock> elementy teraz wyglądać podobnie jak:  
   
- ![Styl obiekty TextBlock](../../../../docs/framework/wpf/controls/media/stylingintro-textblocks.png "StylingIntro_TextBlocks")  
+ ![Styled TextBlocks](../../../../docs/framework/wpf/controls/media/stylingintro-textblocks.png "StylingIntro_TextBlocks")  
   
- To `TitleText` styl rozszerza styl, który został utworzony dla <xref:System.Windows.Controls.TextBlock> typu. Można również rozszerzyć zasięg styl, który ma `x:Key` przy użyciu `x:Key` wartość. Na przykład, zobacz przykład przewidzianych <xref:System.Windows.Style.BasedOn%2A> właściwości.  
+ To `TitleText` styl rozszerza styl, który został utworzony dla <xref:System.Windows.Controls.TextBlock> typu. Można także rozszerzyć styl, który ma `x:Key` przy użyciu `x:Key` wartość. Aby uzyskać przykład, zobacz przykładu przewidzianego dla <xref:System.Windows.Style.BasedOn%2A> właściwości.  
   
-### <a name="relationship-of-the-targettype-property-and-the-xkey-attribute"></a>Relacja właściwości TargetType i atrybut x: Key  
- Jak pokazano w pierwszym przykładzie, ustawienie <xref:System.Windows.Style.TargetType%2A> właściwości `TextBlock` bez przypisywanie styl `x:Key` powoduje, że styl, który ma zostać zastosowany do wszystkich <xref:System.Windows.Controls.TextBlock> elementów. W takim przypadku `x:Key` niejawnie ustawiono `{x:Type TextBlock}`. Oznacza to, że jeśli jawnie ustawiona `x:Key` do żadnych innych niż wartości `{x:Type TextBlock}`, <xref:System.Windows.Style> nie została zastosowana do wszystkich <xref:System.Windows.Controls.TextBlock> elementy automatycznie. Zamiast tego należy zastosować styl (przy użyciu `x:Key` wartość) do <xref:System.Windows.Controls.TextBlock> elementy jawnie. Jeśli dany styl znajduje się w sekcji zasobów i nie należy ustawiać <xref:System.Windows.Style.TargetType%2A> właściwości stylu użytkownika, możesz podać `x:Key`.  
+### <a name="relationship-of-the-targettype-property-and-the-xkey-attribute"></a>Relacja właściwości TargetType i x: Key — atrybut  
+ Jak pokazano w przykładzie pierwsze, ustawienie <xref:System.Windows.Style.TargetType%2A> właściwości `TextBlock` bez przypisywania styl `x:Key` powoduje, że style, które mają być stosowane do wszystkich <xref:System.Windows.Controls.TextBlock> elementów. W tym przypadku `x:Key` niejawnie ustawiono `{x:Type TextBlock}`. Oznacza to, że jeśli jawnie ustawić `x:Key` wartość do żadnego elementu innego niż `{x:Type TextBlock}`, <xref:System.Windows.Style> nie ma zastosowania do wszystkich <xref:System.Windows.Controls.TextBlock> elementy automatycznie. Zamiast tego należy najpierw zastosować styl (przy użyciu `x:Key` wartości) do <xref:System.Windows.Controls.TextBlock> elementów jawnie. Jeśli własnego stylu znajduje się w sekcji zasobów i nie należy ustawiać <xref:System.Windows.Style.TargetType%2A> właściwość własnego stylu, należy podać `x:Key`.  
   
- Oprócz wartości domyślnej dla `x:Key`, <xref:System.Windows.Style.TargetType%2A> właściwość określa typ, do którego odnoszą się właściwości metody ustawiającej. Jeśli nie określisz <xref:System.Windows.Style.TargetType%2A>, muszą kwalifikować się do właściwości w Twojej <xref:System.Windows.Setter> obiektów o nazwie klasy przy użyciu składni `Property="ClassName.Property"`. Na przykład zamiast ustawienie `Property="FontSize"`, należy ustawić <xref:System.Windows.Setter.Property%2A> do `"TextBlock.FontSize"` lub `"Control.FontSize"`.  
+ Oprócz zapewniania wartość domyślną dla `x:Key`, <xref:System.Windows.Style.TargetType%2A> właściwość określa typ, do którego odnoszą się właściwości metody ustawiającej. Jeśli nie określisz <xref:System.Windows.Style.TargetType%2A>, musi kwalifikować się do właściwości w swojej <xref:System.Windows.Setter> obiektów o nazwie klasy przy użyciu składni `Property="ClassName.Property"`. Na przykład, zamiast ustawiać `Property="FontSize"`, należy ustawić <xref:System.Windows.Setter.Property%2A> do `"TextBlock.FontSize"` lub `"Control.FontSize"`.  
   
- Należy również zauważyć tak wielu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formanty składają się z kombinacji innych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki. Jeśli tworzysz styl, który ma zastosowanie do wszystkich kontrolek typu, może uzyskać nieoczekiwane wyniki. Na przykład, jeśli Tworzenie stylu, którego celem <xref:System.Windows.Controls.TextBlock> wpisz <xref:System.Windows.Window>, styl jest stosowane do wszystkich <xref:System.Windows.Controls.TextBlock> formantów w oknie, nawet wtedy, gdy <xref:System.Windows.Controls.TextBlock> jest częścią innego formantu, takich jak <xref:System.Windows.Controls.ListBox>.  
+ Należy również zauważyć tę liczbę [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formantów składają się z kombinacji innych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki. Jeśli tworzysz styl, który ma zastosowanie do wszystkich kontrolek typu, możesz otrzymać nieoczekiwane wyniki. Na przykład, jeśli tworzysz styl przeznaczonego <xref:System.Windows.Controls.TextBlock> wpisać <xref:System.Windows.Window>, styl jest stosowane do wszystkich <xref:System.Windows.Controls.TextBlock> formantów w oknie nawet wtedy, gdy <xref:System.Windows.Controls.TextBlock> jest częścią innej kontrolki, takie jak <xref:System.Windows.Controls.ListBox>.  
   
 ### <a name="styles-and-resources"></a>Style i zasoby  
- Można użyć stylu w dowolnym elemencie, która jest pochodną <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement>. Typowym sposobem zadeklarować styl jest jako zasób w `Resources` sekcji [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku, jak pokazano w poprzednich przykładach. Ponieważ zasoby są style, one przestrzegać tego samego zakresu zasady mające zastosowanie do wszystkich zasobów; gdzie można zadeklarować stylu wpływa na której można zastosować styl. Na przykład, jeśli zadeklarować style w elemencie głównym definicji aplikacji [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku, styl mogą być używane w dowolnym miejscu w aplikacji. Po utworzeniu aplikacji nawigacji i deklaruje stylu w jednej z aplikacji [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki, styl mogą być używane tylko w tym [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku. Aby uzyskać więcej informacji na temat zakresu reguł dla zasobów, zobacz [zasobów XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Można używać stylu dowolnego elementu, która pochodzi od klasy <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement>. Najczęstszym sposobem zadeklarować stylu jest jako zasób w `Resources` sekcji [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku, jak pokazano w poprzednich przykładach. Ponieważ style są zasoby, przestrzegają one te same reguły określania zakresu, które są stosowane do wszystkich zasobów; gdy Deklarujesz stylu wpływa na której można zastosować styl. Na przykład, jeśli zadeklarować stylu w elemencie głównym definicji aplikacji [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku styl mogą być używane w dowolnym miejscu w aplikacji. Po utworzeniu aplikacji nawigacji i zadeklarować stylu w jednej aplikacji [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki, styl mogą być używane tylko w tym [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku. Aby uzyskać więcej informacji na temat określania zakresu reguły dla zasobów, zobacz [zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
- Ponadto można znaleźć więcej informacji na temat style i zasobów w [zasobów udostępnionych i kompozycji](#styling_themes) dalszej części tego przeglądu.  
+ Ponadto można znaleźć więcej informacji na temat — style i zasobów w [udostępnionych zasobów i motywów](#styling_themes) później w tym omówieniu.  
   
-### <a name="setting-styles-programmatically"></a>Ustawianie stylów programowo  
- Aby przypisać nazwanego stylu elementu programowo, pobiera styl z kolekcji zasobów i przypisz je do elementu <xref:System.Windows.FrameworkElement.Style%2A> właściwości. Należy pamiętać, że elementy w kolekcji zasobów są typu <xref:System.Object>. W związku z tym należy rzutować pobrane styl <xref:System.Windows.Style> przed przypisaniem go do <xref:System.Windows.FrameworkElement.Style%2A> właściwości. Na przykład, aby ustawić do zdefiniowanego `TitleText` stylów na <xref:System.Windows.Controls.TextBlock> o nazwie `textblock1`, wykonaj następujące czynności:  
+### <a name="setting-styles-programmatically"></a>Programowe Ustawianie stylów  
+ Aby przypisać stylu nazwanego elementu programowo, pobiera styl z kolekcji zasobów i przypisać je do elementu <xref:System.Windows.FrameworkElement.Style%2A> właściwości. Należy zauważyć, że elementy w kolekcji zasobów są typu <xref:System.Object>. W związku z tym, należy rzutować pobrane styl <xref:System.Windows.Style> przed przypisaniem go do <xref:System.Windows.FrameworkElement.Style%2A> właściwości. Na przykład, aby ustawić zdefiniowane `TitleText` stylu na <xref:System.Windows.Controls.TextBlock> o nazwie `textblock1`, wykonaj następujące czynności:  
   
  [!code-csharp[StylingIntroSample_snippet#Code](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml.cs#code)]
  [!code-vb[StylingIntroSample_snippet#Code](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StylingIntroSample_snippet/visualbasic/window1.xaml.vb#code)]  
   
- Należy pamiętać, że po zastosowaniu stylu jest zapieczętowany i nie można zmienić. Jeśli chcesz dynamicznie Zmień styl, które zostały już zastosowane, należy utworzyć nowego stylu, aby zastąpić istniejący. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Style.IsSealed%2A> właściwości.  
+ Należy pamiętać, że po zastosowaniu stylu jest zapieczętowany i nie można jej zmienić. Jeśli chcesz dynamicznie zmieniać style, która już została zastosowana, należy utworzyć nowy styl, aby zamienić istniejący. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Style.IsSealed%2A> właściwości.  
   
- Można utworzyć obiektu, który wybiera stylu do zastosowania na podstawie niestandardowej logiki. Na przykład, zobacz przykład przewidzianych <xref:System.Windows.Controls.StyleSelector> klasy.  
+ Można utworzyć obiekt, który wybiera styl do zastosowania na podstawie logiki niestandardowej. Aby uzyskać przykład, zobacz przykładu przewidzianego dla <xref:System.Windows.Controls.StyleSelector> klasy.  
   
 <a name="styling_binding_dynamicresource"></a>   
 ### <a name="bindings-dynamic-resources-and-event-handlers"></a>Powiązania, dynamiczne zasoby i procedury obsługi zdarzeń  
- Należy pamiętać, że można użyć `Setter.Value` właściwości w celu określenia [powiązanie — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) lub [DynamicResource — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md). Aby uzyskać więcej informacji, zobacz przykłady podane dla <xref:System.Windows.Setter.Value%2A?displayProperty=nameWithType> właściwości.  
+ Należy zauważyć, że można użyć `Setter.Value` właściwości w celu określenia [— rozszerzenie znaczników powiązania](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) lub [dynamicresource — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md). Aby uzyskać więcej informacji, zobacz przykłady związane z <xref:System.Windows.Setter.Value%2A?displayProperty=nameWithType> właściwości.  
   
- Do tej pory ten przegląd omówiono korzystanie z metody ustawiające można ustawić wartości właściwości. Można również określić procedury obsługi zdarzeń w stylu. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.EventSetter>.  
+ Do tej pory to omówienie dotyczy użycia metod ustawiających można ustawić wartości właściwości. Można również określić procedury obsługi zdarzeń w stylu. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.EventSetter>.  
   
 <a name="styling_datatemplates"></a>   
 ## <a name="data-templates"></a>Szablony danych  
- W tej przykładowej aplikacji, istnieje <xref:System.Windows.Controls.ListBox> formant, który jest powiązany z listy zdjęć:  
+ W tej przykładowej aplikacji znajduje się <xref:System.Windows.Controls.ListBox> formant, który jest powiązany z zdjęcia z listy:  
   
  [!code-xaml[StylingIntroSnippet#UIListBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#uilistbox)]  
   
  To <xref:System.Windows.Controls.ListBox> obecnie wygląda podobnie do następującego:  
   
- ![ListBox przed zastosowaniem szablonu](../../../../docs/framework/wpf/controls/media/stylingintro-listboxbefore.png "StylingIntro_ListBoxBefore")  
+ ![ListBox — przed zastosowaniem szablonu](../../../../docs/framework/wpf/controls/media/stylingintro-listboxbefore.png "StylingIntro_ListBoxBefore")  
   
- Większość formantów mieć pewien typ zawartości, a zawartość często pochodzi z danych, które są powiązanie z. W tym przykładzie dane są na liście zdjęcia. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], możesz użyć <xref:System.Windows.DataTemplate> do definiowania wizualną reprezentację danych. Zasadniczo, co należy umieścić w <xref:System.Windows.DataTemplate> określa wygląd danych w renderowanym aplikacji.  
+ Większość formantów ma jakiegoś rodzaju zawartości i zawartości często pochodzi z danych, które dokonywane jest wiązanie. W tym przykładzie dane są listy zdjęcia. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], możesz użyć <xref:System.Windows.DataTemplate> do definiowania wizualne reprezentacje danych. Zasadniczo, jakie można umieścić w <xref:System.Windows.DataTemplate> Określa, jak wygląda dane w renderowanym aplikacji.  
   
- W naszym przykładowej aplikacji każdej niestandardowej `Photo` obiekt ma `Source` właściwości typu ciąg, który określa ścieżkę pliku obrazu. Obecnie fotografii obiekty są wyświetlane jako ścieżki do pliku.  
+ W naszej przykładowej aplikacji każdego `Photo` obiekt ma `Source` właściwości typu ciąg, który określa ścieżkę pliku obrazu. Obecnie obiekty zdjęcie są wyświetlane jako ścieżki pliku.  
   
- Zdjęć, które były wyświetlane jako obrazy, można utworzyć <xref:System.Windows.DataTemplate> jako zasób:  
+ Zdjęcia są wyświetlane jako obrazy, tworzy się <xref:System.Windows.DataTemplate> jako zasób:  
   
  [!code-xaml[StylingIntroSnippet#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources)]  
 [!code-xaml[StylingIntroSnippet#DataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#datatemplate)]  
 [!code-xaml[StylingIntroSnippet#Resources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources2)]  
   
- Zwróć uwagę, że <xref:System.Windows.DataTemplate.DataType%2A> właściwości jest bardzo podobny do <xref:System.Windows.Style.TargetType%2A> właściwość <xref:System.Windows.Style>. Jeśli Twoje <xref:System.Windows.DataTemplate> znajduje się w sekcji zasobów w przypadku określenia <xref:System.Windows.DataTemplate.DataType%2A> właściwość do typu i przypisuje go `x:Key`, <xref:System.Windows.DataTemplate> jest stosowana, gdy pojawi się tego typu. Zawsze masz do niego przypisać <xref:System.Windows.DataTemplate> z `x:Key` , a następnie ustaw go jako `StaticResource` dla właściwości, które przyjmują <xref:System.Windows.DataTemplate> typy, takich jak <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> właściwości lub <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> właściwości.  
+ Należy zauważyć, że <xref:System.Windows.DataTemplate.DataType%2A> właściwość jest bardzo podobny do <xref:System.Windows.Style.TargetType%2A> właściwość <xref:System.Windows.Style>. Jeśli Twoje <xref:System.Windows.DataTemplate> znajduje się w sekcji zasobów, podczas określania <xref:System.Windows.DataTemplate.DataType%2A> właściwość do typu i przypisuje go `x:Key`, <xref:System.Windows.DataTemplate> są stosowane zawsze, gdy typ ten pojawia się. Zawsze istnieje możliwość przypisania <xref:System.Windows.DataTemplate> z `x:Key` i ustawić ją jako `StaticResource` dla właściwości, które przyjmują <xref:System.Windows.DataTemplate> typów, takich jak <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> właściwości lub <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> właściwości.  
   
- Zasadniczo <xref:System.Windows.DataTemplate> w powyższym przykładzie definiuje który zawsze, gdy istnieje `Photo` obiektu, w jakiej powinny pojawić się jako <xref:System.Windows.Controls.Image> w <xref:System.Windows.Controls.Border>. Z tym <xref:System.Windows.DataTemplate>, naszą aplikację teraz wygląda następująco:  
+ Zasadniczo <xref:System.Windows.DataTemplate> w powyższym przykładzie definiuje, zawsze, gdy występuje `Photo` obiektów i będzie widoczny jako <xref:System.Windows.Controls.Image> w ramach <xref:System.Windows.Controls.Border>. Dzięki temu <xref:System.Windows.DataTemplate>, obecnie nasza aplikacja wygląda w następujący sposób:  
   
- ![Obraz zdjęcie](../../../../docs/framework/wpf/controls/media/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")  
+ ![Obraz zdjęcia](../../../../docs/framework/wpf/controls/media/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")  
   
- Model danych tworzenia szablonów udostępnia inne funkcje. Na przykład w przypadku wyświetlania danych kolekcji, które zawiera inne kolekcje przy użyciu <xref:System.Windows.Controls.HeaderedItemsControl> wpisz na przykład <xref:System.Windows.Controls.Menu> lub <xref:System.Windows.Controls.TreeView>, Brak <xref:System.Windows.HierarchicalDataTemplate>. Inna funkcja tworzenia szablonów danych jest <xref:System.Windows.Controls.DataTemplateSelector>, umożliwia wybór <xref:System.Windows.DataTemplate> do użycia na podstawie niestandardowej logiki. Aby uzyskać więcej informacji, zobacz [omówienie tworzenia szablonów danych](../../../../docs/framework/wpf/data/data-templating-overview.md), która zapewnia bardziej szczegółowym omówieniem funkcji tworzenia szablonów innych danych.  
+ Model szablonowanie danych udostępnia inne funkcje. Na przykład w przypadku wyświetlania danych kolekcji, który zawiera inne kolekcje przy użyciu <xref:System.Windows.Controls.HeaderedItemsControl> wpisz na przykład <xref:System.Windows.Controls.Menu> lub <xref:System.Windows.Controls.TreeView>, Brak <xref:System.Windows.HierarchicalDataTemplate>. Kolejną funkcją szablonowanie danych jest <xref:System.Windows.Controls.DataTemplateSelector>, co pozwala na wybór <xref:System.Windows.DataTemplate> do użycia na podstawie logiki niestandardowej. Aby uzyskać więcej informacji, zobacz [Przegląd Szablonowanie danych](../../../../docs/framework/wpf/data/data-templating-overview.md), który zapewnia bardziej szczegółowym omówieniem funkcji szablonów innych danych.  
   
 <a name="styling_controltemplates"></a>   
-## <a name="control-templates"></a>Szablony formantu  
- W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Controls.ControlTemplate> formantu definiuje wygląd formantu. Struktura i wyglądu formantu można zmienić, definiując nowy <xref:System.Windows.Controls.ControlTemplate> dla formantu. W wielu przypadkach zapewnia elastyczność za mało, dzięki czemu nie trzeba zapisać Kontrolki niestandardowe. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu formant tworząc ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+## <a name="control-templates"></a>Szablony kontrolek  
+ W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Controls.ControlTemplate> kontrolki definiuje wygląd formantu. Możesz zmienić strukturę i wyglądu formantu, definiując nowe <xref:System.Windows.Controls.ControlTemplate> dla formantu. W wielu przypadkach daje dostateczną elastyczność, tak aby nie trzeba napisać własne niestandardowe formanty. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 <a name="styling_triggers"></a>   
 ## <a name="triggers"></a>Wyzwalacze  
- Wyzwalacz ustawia właściwości lub uruchamia akcji, takich jak animacji, gdy wartość właściwości zostanie zmieniona lub gdy zdarzenie jest wywoływane. <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, i <xref:System.Windows.DataTemplate> mieć `Triggers` właściwość, która może zawierać zestaw wyzwalaczy. Istnieją różne typy wyzwalaczy.  
+ Wyzwalacz ustawia właściwości lub uruchamia akcje, takie jak animacji, po zmianie wartości właściwości lub gdy zostanie wywołane zdarzenie. <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, i <xref:System.Windows.DataTemplate> wszystkie mają `Triggers` właściwość, która może zawierać zestaw wyzwalaczy. Istnieją różne typy wyzwalaczy.  
   
 ### <a name="property-triggers"></a>Wyzwalacze właściwości  
- A <xref:System.Windows.Trigger> czy właściwość zestawy wartości lub uruchamiania działania na podstawie wartości właściwości jest wywoływana wyzwalacza właściwości.  
+ A <xref:System.Windows.Trigger> , ustawia właściwość wartości lub uruchamia akcje na podstawie wartości właściwości nosi nazwę wyzwalacza właściwości.  
   
- Aby zademonstrować sposób użycia właściwości wyzwalaczy, możesz wprowadzić każdego <xref:System.Windows.Controls.ListBoxItem> częściowo przezroczysty, chyba że jest zaznaczone. Ustawia styl następujące <xref:System.Windows.UIElement.Opacity%2A> wartość <xref:System.Windows.Controls.ListBoxItem> do `0.5`. Gdy <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> właściwość jest `true`, jednak <xref:System.Windows.UIElement.Opacity%2A> ma ustawioną wartość `1.0`:  
+ Aby pokazują, jak użyć wyzwalaczy właściwości, należy wybrać każdy <xref:System.Windows.Controls.ListBoxItem> częściowo przezroczyste, chyba że jest zaznaczona. Następujące stylów ustawia <xref:System.Windows.UIElement.Opacity%2A> wartość <xref:System.Windows.Controls.ListBoxItem> do `0.5`. Gdy <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> właściwość `true`, jednak <xref:System.Windows.UIElement.Opacity%2A> ustawiono `1.0`:  
   
  [!code-xaml[StylingIntroSample_snippet#Triggers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#triggers)]  
 [!code-xaml[StylingIntroSample_snippet#EndTriggers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#endtriggers)]  
   
- W tym przykładzie użyto <xref:System.Windows.Trigger> można ustawić wartości właściwości, ale należy pamiętać, że <xref:System.Windows.Trigger> klasa ma również <xref:System.Windows.TriggerBase.EnterActions%2A> i <xref:System.Windows.TriggerBase.ExitActions%2A> właściwości umożliwiających wyzwalacz do wykonania akcji.  
+ W tym przykładzie użyto <xref:System.Windows.Trigger> można ustawić wartości właściwości, ale należy pamiętać, że <xref:System.Windows.Trigger> ma również klasy <xref:System.Windows.TriggerBase.EnterActions%2A> i <xref:System.Windows.TriggerBase.ExitActions%2A> właściwości, które umożliwiają wyzwalacza do wykonania akcji.  
   
- Zwróć uwagę, że <xref:System.Windows.FrameworkElement.MaxHeight%2A> właściwość <xref:System.Windows.Controls.ListBoxItem> ma ustawioną wartość `75`. Na poniższej ilustracji trzeci element jest zaznaczony element:  
+ Należy zauważyć, że <xref:System.Windows.FrameworkElement.MaxHeight%2A> właściwość <xref:System.Windows.Controls.ListBoxItem> ustawiono `75`. Na poniższej ilustracji trzeci element jest zaznaczony element:  
   
- ![Styl elementu ListView](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
+ ![Różne ListView](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
   
-### <a name="eventtriggers-and-storyboards"></a>EventTriggers i planów  
- Inny typ wyzwalacza to <xref:System.Windows.EventTrigger>, który uruchamia zestaw działań opartych na wystąpienie zdarzenia. Na przykład następująca <xref:System.Windows.EventTrigger> obiektów określić, że gdy wskaźnik myszy zostanie umieszczony <xref:System.Windows.Controls.ListBoxItem>, <xref:System.Windows.FrameworkElement.MaxHeight%2A> animuje właściwości na wartość `90` za pośrednictwem `0.2` drugi okres. Gdy wskaźnik myszy przesuwa się od elementu, właściwość zwraca wartość oryginalną w danym okresie `1` drugiego. Należy zwrócić uwagę, jak nie jest konieczne określić <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> wartość <xref:System.Windows.ContentElement.MouseLeave> animacji. Jest to spowodowane animacji jest w stanie śledzić oryginalnej wartości.  
+### <a name="eventtriggers-and-storyboards"></a>EventTriggers i scenorysów  
+ Inny typ wyzwalacza to <xref:System.Windows.EventTrigger>, co spowoduje włączenie działań w oparciu o wystąpienie zdarzenia. Na przykład następująca <xref:System.Windows.EventTrigger> obiektów określić, że po umieszczeniu wskaźnika myszy <xref:System.Windows.Controls.ListBoxItem>, <xref:System.Windows.FrameworkElement.MaxHeight%2A> właściwość animuje wartości `90` za pośrednictwem `0.2` drugi okres. Gdy wskaźnik myszy porusza się od elementu, właściwości zwracają wartość oryginalną w okresie `1` drugiego. Należy pamiętać, jak nie trzeba określać <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> wartość <xref:System.Windows.ContentElement.MouseLeave> animacji. Jest to spowodowane animacji jest w stanie śledzić oryginalną wartość.  
   
  [!code-xaml[StylingIntroSample_snippet#EventTriggers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#eventtriggers)]  
   
- Aby uzyskać więcej informacji, zobacz [omówienie Scenorys](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Aby uzyskać więcej informacji, zobacz [Przegląd Scenorysy](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
   
- Na poniższej ilustracji mysz wskazuje trzeci element:  
+ Na poniższej ilustracji wskazuje myszą trzeci element:  
   
  ![Zrzut ekranu przedstawiający przykładowy stylów](../../../../docs/framework/wpf/controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
-### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTriggers, DataTriggers i MultiDataTriggers  
- Oprócz <xref:System.Windows.Trigger> i <xref:System.Windows.EventTrigger>, występują inne typy wyzwalaczy. <xref:System.Windows.MultiTrigger> Służy do ustawiania wartości właściwości na podstawie wielu warunków. Możesz użyć <xref:System.Windows.DataTrigger> i <xref:System.Windows.MultiDataTrigger> gdy właściwość warunku jest powiązany z danymi.  
+### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTriggers DataTriggers i MultiDataTriggers  
+ Oprócz <xref:System.Windows.Trigger> i <xref:System.Windows.EventTrigger>, istnieją inne typy wyzwalaczy. <xref:System.Windows.MultiTrigger> Umożliwia ustawienie wartości właściwości, na podstawie wielu warunków. Możesz użyć <xref:System.Windows.DataTrigger> i <xref:System.Windows.MultiDataTrigger> po właściwości warunku jest powiązany z danymi.  
   
 <a name="styling_themes"></a>   
 ## <a name="shared-resources-and-themes"></a>Udostępnione zasoby i motywów  
- Typowa aplikacja Windows Presentation Foundation (WPF) może mieć wielu zasobów interfejsu użytkownika, które są stosowane w całej aplikacji. Zbiorczo ten zestaw zasobów, jest uznawana za motyw dla aplikacji. Windows Presentation Foundation (WPF) zapewnia obsługę użytkownika pakowania zasoby interfejsu użytkownika jako motyw za pomocą słownika zasobów, która jest hermetyzowany jako <xref:System.Windows.ResourceDictionary> klasy.  
+ Typowa aplikacja Windows Presentation Foundation (WPF) może mieć wiele zasobów interfejsu użytkownika, które są stosowane w całej aplikacji. Zbiorczo ten zestaw zasobów, jest uznawana za motywu dla aplikacji. Windows Presentation Foundation (WPF) zapewnia obsługę dla użytkowników pakietu zasobów interfejsu jako motyw przy użyciu słownik zasobów, które są hermetyzowane jako <xref:System.Windows.ResourceDictionary> klasy.  
   
- Motywy Windows Presentation Foundation (WPF) są zdefiniowane przy użyciu stylów i mechanizm tworzenia szablonów, który ujawnia Windows Presentation Foundation (WPF) dostosowywania wizualnych dowolnego elementu.  
+ Motywy Windows Presentation Foundation (WPF) są definiowane za pomocą Windows Presentation Foundation (WPF) udostępnia mechanizm tworzenia szablonów i stylów dostosowywania wizualizacji dowolnego elementu.  
   
- Zasoby motywu Windows Presentation Foundation (WPF) są przechowywane w słownikach zasobów osadzonych. Te słowniki zasobów musi być osadzony w zestawie podpisane i albo można osadzić w tym samym zestawie co kodu lub w zestawie side-by-side. W przypadku PresentationFramework.dll, zestawu, którego zawiera kontrolki Windows Presentation Foundation (WPF) motywu zasoby są w szeregu side-by-side zestawów.  
+ Zasoby motyw Windows Presentation Foundation (WPF) są przechowywane w słownikach zasobów osadzonych. Te słowniki zasobów muszą być osadzone w zestawie podpisane i albo można osadzić w tym samym zestawie, co sam kod lub zestawów side-by-side. W przypadku PresentationFramework.dll i zestawu, który zawiera formanty Windows Presentation Foundation (WPF), motyw zasoby znajdują się w serii zestawów side-by-side.  
   
- Staje się ostatnie miejsce do wyszukiwania przy wyszukiwaniu styl elementu. Zazwyczaj wyszukiwanie będzie rozpocząć przez krótki w górę drzewa element wyszukiwanie odpowiednich zasobów, a następnie Szukaj w kolekcji zasobów aplikacji i koniec wykonywanie zapytań względem systemu. Deweloperzy aplikacji daje możliwość ponownego zdefiniowania stylu dla dowolnego obiektu na poziomie drzewa lub aplikacji przed osiągnięciem motywu.  
+ Staje się ostatnie miejsce do wyszukiwania podczas wyszukiwania dla stylu elementu. Zazwyczaj wyszukiwania zostanie najpierw zalet w górę drzewa elementów, wyszukiwanie odpowiedni zasób, a następnie Szukaj w kolekcji zasobów aplikacji, a na koniec zapytania względem systemu. Deweloperzy aplikacji daje szansę na nowo zdefiniować stylu dla dowolnego obiektu na poziomie drzewa lub aplikacji przed osiągnięciem motywu.  
   
- Słowniki zasobów można zdefiniować jako pojedyncze pliki, które umożliwiają ponownie wykorzystać motyw dla wielu aplikacji. Można również utworzyć swappable motywów przez zdefiniowanie wielu słowniki zasobów, które zapewniają te same typy zasobów, ale o różnych wartościach. Ponowne definiowanie te style oraz innych zasobów na poziomie aplikacji jest zalecane podejście do ujęć aplikacji.  
+ Słowniki zasobów można zdefiniować jako pojedyncze pliki, które umożliwiają użytkownikowi ponowne używanie motywu dla wielu aplikacji. Można również utworzyć motywy swappable przez zdefiniowanie wielu słowniki zasobów, które udostępniają te same typy zasobów, ale z różnymi wartościami. Zmiana definicji tych stylów i innych zasobów na poziomie aplikacji jest zalecane podejście do powłoka aplikacji.  
   
- Aby udostępnić zestaw zasobów, w tym w aplikacjach, style i szablony, można utworzyć [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików i zdefiniuj <xref:System.Windows.ResourceDictionary>. Na przykład Spójrz na poniższej ilustracji, który zawiera część [style próbki ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating):
+ Aby udostępnić zestaw zasobów, w tym w aplikacjach, style i szablony, można utworzyć [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików i definiowania <xref:System.Windows.ResourceDictionary>. Na przykład Przyjrzyj się poniższej ilustracji, który zawiera część [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating):
 
-![Kontrolowanie przykłady szablonu](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
+![Kontrolowanie przykłady szablonów](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
   
- Jeśli przyjrzymy się [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki z przykładu, można zauważyć, że wszystkie pliki mają następujące:  
+ Jeśli przyjrzymy się [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki z przykładu, można zauważyć, że wszystkie pliki mają następujące czynności:  
   
  [!code-xaml[ControlTemplateExamples#MergedDictionaries](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/button.xaml#mergeddictionaries)]  
   
- Jest udostępnianie `shared.xaml`, który definiuje <xref:System.Windows.ResourceDictionary> zawierający zestaw zasobów, styl i pędzla umożliwiającą formantów w próbce będą wyglądały.  
+ Jest udostępnianie `shared.xaml`, która definiuje <xref:System.Windows.ResourceDictionary> zawierający zestaw zasobów, styl i pędzla, umożliwiająca kontrolek w przykładzie, aby miał jednolity wygląd.  
   
- Aby uzyskać więcej informacji, zobacz [scalić słowniki zasobów](../../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
+ Aby uzyskać więcej informacji, zobacz [scalone słowniki zasobów](../../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
   
- Jeśli tworzysz motyw dla Ciebie kontrolki niestandardowej, zobacz sekcję zewnętrznej biblioteki kontroli [informacje o formancie tworzenia](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ Jeśli tworzysz motywu dla Ciebie kontrolki niestandardowej, zobacz sekcję biblioteki zewnętrznej kontroli [omówienie tworzenia kontrolek](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Pakowanie URI w WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Instrukcje: znajdowanie elementów generowanych przez ControlTemplate](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
- [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)
+## <a name="see-also"></a>Zobacz także
+- [Pakowanie URI w WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [Instrukcje: Find ControlTemplate-Generated Elements](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)
+- [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)

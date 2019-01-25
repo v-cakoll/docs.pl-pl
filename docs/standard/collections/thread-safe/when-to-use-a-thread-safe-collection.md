@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ca809c28e7d55d7b899809c2fd514c073dd73054
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123569"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543176"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Kiedy należy używać kolekcji bezpiecznych wątkowo
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Wprowadza pięć nowe typy kolekcji, które są specjalnie przeznaczone do wsparcia wielowątkowych dodawania i usuwania działań. Do zapewnienia bezpieczeństwa wątkowego, te nowe typy użyć różnych rodzajów blokowanie wydajne i mechanizmy bezblokadowe synchronizacji. Synchronizacja obciążenie dodaje się do operacji. Obciążenie zależy od rodzaju synchronizacji, która jest używana, rodzaj operacji, które są wykonywane i innych czynników, takich jak liczba wątków, które próbują jednocześnie uzyskać dostęp do kolekcji.  
@@ -33,7 +33,7 @@ ms.locfileid: "49123569"
  *Skalowalność*  
  Wzrost wydajności, który jest proporcjonalny do liczby rdzeni na komputerze. Algorytm, który jest skalowany dokonuje szybciej osiem rdzeni niż na dwa rdzenie.  
   
-## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) programu vs. Queue(T)  
+## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) vs. Queue(T)  
  W scenariuszach czystego producent — konsument, gdy czas przetwarzania dla każdego elementu jest bardzo mały (kilka instrukcje), następnie <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> oferują korzyści z niewielkim wydajności za pośrednictwem <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> ma blokady zewnętrznych. W tym scenariuszu <xref:System.Collections.Concurrent.ConcurrentQueue%601> sprawdza się najlepiej, gdy umieszcza w kolejce jeden dedykowanym wątku, a jeden dedykowanym wątku cofnąć kolejkowania. Jeśli nie wymuszają tę regułę, następnie <xref:System.Collections.Generic.Queue%601> nawet mogą wykonywać nieznacznie szybsze niż <xref:System.Collections.Concurrent.ConcurrentQueue%601> na komputerach, które mają wiele rdzeni.  
   
  Gdy czas przetwarzania wynosi około 500 FLOPS (operacji zmiennoprzecinkowych) lub więcej, następnie reguła dwóch wątku nie ma zastosowania do <xref:System.Collections.Concurrent.ConcurrentQueue%601>, który następnie jest bardzo dobra skalowalności. <xref:System.Collections.Generic.Queue%601> nie działa dobrze w tym scenariuszu.  
@@ -64,6 +64,6 @@ ms.locfileid: "49123569"
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
-- [Kolekcje bezpieczne wątkowo](../../../../docs/standard/collections/thread-safe/index.md)  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- [Kolekcje bezpieczne wątkowo](../../../../docs/standard/collections/thread-safe/index.md)
 - [Programowanie równoległe](../../../../docs/standard/parallel-programming/index.md)

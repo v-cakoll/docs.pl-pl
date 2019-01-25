@@ -2,12 +2,12 @@
 title: Moduł weryfikacji certyfikatów X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 369f9a98b5d12e3fd06ccf519516184e98272d9d
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 8c87e1d8c84af500e1f415b79e7f3ec006b51860
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510133"
 ---
 # <a name="x509-certificate-validator"></a>Moduł weryfikacji certyfikatów X.509
 Niniejszy przykład pokazuje, jak zaimplementować niestandardowy moduł weryfikacji certyfikatów X.509. Jest to przydatne w przypadkach, gdy żadna z wbudowanych metod walidacji certyfikatu X.509 jest odpowiednia dla wymagań aplikacji. Niniejszy przykład pokazuje usługi, która ma niestandardowy moduł sprawdzania poprawności, który akceptuje własnym wystawionych certyfikatów. Klient używa takiego certyfikatu do uwierzytelnienia w usłudze.
@@ -356,4 +356,4 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 > [!NOTE]
 >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykładów Windows Communication Foundation (WCF), które używają certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

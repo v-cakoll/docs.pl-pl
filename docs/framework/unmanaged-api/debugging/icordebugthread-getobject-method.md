@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad2dd4cded6800ce016d821f8e3ffe01dcb6264b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a188963273555e8b93b68c168260fd619136c00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544539"
 ---
-# <a name="icordebugthreadgetobject-method"></a><span data-ttu-id="f28a0-102">ICorDebugThread::GetObject — Metoda</span><span class="sxs-lookup"><span data-stu-id="f28a0-102">ICorDebugThread::GetObject Method</span></span>
-<span data-ttu-id="f28a0-103">Pobiera wskaźnika interfejsu do wspólnego języka wątku środowiska uruchomieniowego (języka wspólnego CLR).</span><span class="sxs-lookup"><span data-stu-id="f28a0-103">Gets an interface pointer to the common language runtime (CLR) thread.</span></span>  
+# <a name="icordebugthreadgetobject-method"></a><span data-ttu-id="0eda2-102">ICorDebugThread::GetObject — Metoda</span><span class="sxs-lookup"><span data-stu-id="0eda2-102">ICorDebugThread::GetObject Method</span></span>
+<span data-ttu-id="0eda2-103">Pobiera wskaźnik interfejsu do wspólnym mianownikiem języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="0eda2-103">Gets an interface pointer to the common language runtime (CLR) thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f28a0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f28a0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0eda2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0eda2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObject (  
@@ -35,18 +35,18 @@ HRESULT GetObject (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f28a0-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f28a0-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0eda2-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0eda2-105">Parameters</span></span>  
  `ppObject`  
- <span data-ttu-id="f28a0-106">[out] Wskaźnik do adresu ICorDebugValue obiektu interfejsu, który reprezentuje wątku CLR.</span><span class="sxs-lookup"><span data-stu-id="f28a0-106">[out] A pointer to the address of an ICorDebugValue interface object that represents the CLR thread.</span></span>  
+ <span data-ttu-id="0eda2-106">[out] Wskaźnik na adres obiektu interfejsu ICorDebugValue, który reprezentuje wątku środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="0eda2-106">[out] A pointer to the address of an ICorDebugValue interface object that represents the CLR thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f28a0-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f28a0-107">Requirements</span></span>  
- <span data-ttu-id="f28a0-108">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f28a0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0eda2-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0eda2-107">Requirements</span></span>  
+ <span data-ttu-id="0eda2-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0eda2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f28a0-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f28a0-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0eda2-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0eda2-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f28a0-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f28a0-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0eda2-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0eda2-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f28a0-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f28a0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0eda2-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0eda2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f28a0-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f28a0-112">See Also</span></span>  
- <xref:System.Threading.Thread>
+## <a name="see-also"></a><span data-ttu-id="0eda2-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0eda2-112">See also</span></span>
+- <xref:System.Threading.Thread>

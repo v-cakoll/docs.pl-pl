@@ -5,35 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 352bda826c3b872d06252e168abfb1129f178bf8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bbfa101452937bcb39ee41f25f5f862179ce2503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506736"
 ---
-# <a name="initialization-expressions"></a><span data-ttu-id="c1e89-102">Wyrażenia inicjowania</span><span class="sxs-lookup"><span data-stu-id="c1e89-102">Initialization Expressions</span></span>
-<span data-ttu-id="c1e89-103">Wyrażenia inicjowania inicjuje nowy obiekt.</span><span class="sxs-lookup"><span data-stu-id="c1e89-103">An initialization expression initializes a new object.</span></span> <span data-ttu-id="c1e89-104">Większość wyrażenia inicjowania są obsługiwane, tym większości nowych 3.0 C# i Visual Basic 9.0 inicjowania wyrażeń.</span><span class="sxs-lookup"><span data-stu-id="c1e89-104">Most initialization expressions are supported, including most new C# 3.0 and Visual Basic 9.0 initialization expressions.</span></span> <span data-ttu-id="c1e89-105">Następujące typy mogą zainicjowany i zwrócony przez LINQ do jednostek kwerendy:</span><span class="sxs-lookup"><span data-stu-id="c1e89-105">The following types can be initialized and returned by a LINQ to Entities query:</span></span>  
+# <a name="initialization-expressions"></a><span data-ttu-id="4bc6e-102">Wyrażenia inicjowania</span><span class="sxs-lookup"><span data-stu-id="4bc6e-102">Initialization Expressions</span></span>
+<span data-ttu-id="4bc6e-103">Wyrażenia inicjowania inicjuje nowy obiekt.</span><span class="sxs-lookup"><span data-stu-id="4bc6e-103">An initialization expression initializes a new object.</span></span> <span data-ttu-id="4bc6e-104">Większość wyrażenia inicjowania są obsługiwane, w tym najbardziej nowe C# 3.0 i wyrażenia inicjowania 9.0 Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="4bc6e-104">Most initialization expressions are supported, including most new C# 3.0 and Visual Basic 9.0 initialization expressions.</span></span> <span data-ttu-id="4bc6e-105">Następujące typy można zainicjowany i zwrócony przez LINQ zapytanie jednostki:</span><span class="sxs-lookup"><span data-stu-id="4bc6e-105">The following types can be initialized and returned by a LINQ to Entities query:</span></span>  
   
--   <span data-ttu-id="c1e89-106">Kolekcja zero lub więcej obiektów typów jednostek lub dla projekcji typów złożonych, które są zdefiniowane w modelu koncepcyjnym.</span><span class="sxs-lookup"><span data-stu-id="c1e89-106">A collection of zero or more typed entity objects or a projection of complex types that are defined in the conceptual model.</span></span>  
+-   <span data-ttu-id="4bc6e-106">Kolekcja zero lub więcej obiektów typów jednostek lub projekcji złożonych typów, które są zdefiniowane w modelu koncepcyjnym.</span><span class="sxs-lookup"><span data-stu-id="4bc6e-106">A collection of zero or more typed entity objects or a projection of complex types that are defined in the conceptual model.</span></span>  
   
--   <span data-ttu-id="c1e89-107">Typy CLR obsługiwane przez [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c1e89-107">CLR types supported by the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span></span>  
+-   <span data-ttu-id="4bc6e-107">Typy CLR obsługiwane przez [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4bc6e-107">CLR types supported by the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span></span>  
   
--   <span data-ttu-id="c1e89-108">Kolekcje wbudowane.</span><span class="sxs-lookup"><span data-stu-id="c1e89-108">Inline collections.</span></span>  
+-   <span data-ttu-id="4bc6e-108">Kolekcje wbudowane.</span><span class="sxs-lookup"><span data-stu-id="4bc6e-108">Inline collections.</span></span>  
   
--   <span data-ttu-id="c1e89-109">Typy anonimowe.</span><span class="sxs-lookup"><span data-stu-id="c1e89-109">Anonymous types.</span></span>  
+-   <span data-ttu-id="4bc6e-109">Typy anonimowe.</span><span class="sxs-lookup"><span data-stu-id="4bc6e-109">Anonymous types.</span></span>  
   
- <span data-ttu-id="c1e89-110">Inicjowanie typu anonimowego pokazano w poniższym przykładzie w składni wyrażeń zapytania:</span><span class="sxs-lookup"><span data-stu-id="c1e89-110">Anonymous type initialization is shown in the following example in query expression syntax:</span></span>  
+ <span data-ttu-id="4bc6e-110">Inicjalizacja typu anonimowego pokazano w poniższym przykładzie w składni wyrażenia zapytania:</span><span class="sxs-lookup"><span data-stu-id="4bc6e-110">Anonymous type initialization is shown in the following example in query expression syntax:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#AnonymousTypeInitialization](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#anonymoustypeinitialization)]
  [!code-vb[DP L2E Conceptual Examples#AnonymousTypeInitialization](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#anonymoustypeinitialization)]  
   
- <span data-ttu-id="c1e89-111">W poniższym przykładzie w składni zapytania oparte na metodzie przedstawiono inicjowania typu anonimowego:</span><span class="sxs-lookup"><span data-stu-id="c1e89-111">The following example in method-based query syntax shows anonymous type initialization:</span></span>  
+ <span data-ttu-id="4bc6e-111">Poniższy przykład przy użyciu składni zapytania oparte na metodzie pokazuje inicjowania typu anonimowego:</span><span class="sxs-lookup"><span data-stu-id="4bc6e-111">The following example in method-based query syntax shows anonymous type initialization:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#AnonymousTypeInitialization_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#anonymoustypeinitialization_mq)]
  [!code-vb[DP L2E Conceptual Examples#AnonymousTypeInitialization_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#anonymoustypeinitialization_mq)]  
   
- <span data-ttu-id="c1e89-112">Obsługiwane jest również inicjowania klasy zdefiniowanej przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="c1e89-112">User-defined class initialization is also supported.</span></span> <span data-ttu-id="c1e89-113">Wzorzec inicjowania 3.0 C# i Visual Basic 9.0 jest obsługiwana i przyjęto założenie, że właściwość pobierającej i ustawiającej są symetryczne.</span><span class="sxs-lookup"><span data-stu-id="c1e89-113">The C# 3.0 and Visual Basic 9.0 initialization pattern is supported and assumes that the property getter and setter are symmetric.</span></span> <span data-ttu-id="c1e89-114">W poniższym przykładzie w składni wyrażeń zapytania przedstawiono niestandardowej klasy inicjowany w zapytaniu:</span><span class="sxs-lookup"><span data-stu-id="c1e89-114">The following example in query expression syntax shows a custom class being initialized in the query:</span></span>  
+ <span data-ttu-id="4bc6e-112">Obsługiwane jest również inicjowanie klasy zdefiniowanej przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="4bc6e-112">User-defined class initialization is also supported.</span></span> <span data-ttu-id="4bc6e-113">C# 3.0 i Visual Basic 9.0 wzorzec inicjowania jest obsługiwana i przyjęto założenie, że pobierającej i ustawiającej są symetryczne.</span><span class="sxs-lookup"><span data-stu-id="4bc6e-113">The C# 3.0 and Visual Basic 9.0 initialization pattern is supported and assumes that the property getter and setter are symmetric.</span></span> <span data-ttu-id="4bc6e-114">W składni wyrażenia zapytania poniższy kod przedstawia klasę niestandardową, która jest inicjowany w zapytaniu:</span><span class="sxs-lookup"><span data-stu-id="4bc6e-114">The following example in query expression syntax shows a custom class being initialized in the query:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#MyOrder](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myorder)]
  [!code-vb[DP L2E Conceptual Examples#MyOrder](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myorder)]  
@@ -41,10 +41,10 @@ ms.locfileid: "32762211"
  [!code-csharp[DP L2E Conceptual Examples#TypeInitialization](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#typeinitialization)]
  [!code-vb[DP L2E Conceptual Examples#TypeInitialization](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#typeinitialization)]  
   
- <span data-ttu-id="c1e89-115">W poniższym przykładzie w składni zapytania oparte na metodzie przedstawiono niestandardowej klasy inicjowany w zapytaniu:</span><span class="sxs-lookup"><span data-stu-id="c1e89-115">The following example in method-based query syntax shows a custom class being initialized in the query:</span></span>  
+ <span data-ttu-id="4bc6e-115">Poniższy przykład przy użyciu składni zapytania oparte na metodzie pokazuje klasę niestandardową, która jest inicjowany w zapytaniu:</span><span class="sxs-lookup"><span data-stu-id="4bc6e-115">The following example in method-based query syntax shows a custom class being initialized in the query:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#TypeInitialization_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#typeinitialization_mq)]
  [!code-vb[DP L2E Conceptual Examples#TypeInitialization_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#typeinitialization_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="c1e89-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c1e89-116">See Also</span></span>  
- [<span data-ttu-id="c1e89-117">Wyrażenia w zapytaniach składnika LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="c1e89-117">Expressions in LINQ to Entities Queries</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+## <a name="see-also"></a><span data-ttu-id="4bc6e-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4bc6e-116">See also</span></span>
+- [<span data-ttu-id="4bc6e-117">Wyrażenia w zapytaniach składnika LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="4bc6e-117">Expressions in LINQ to Entities Queries</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

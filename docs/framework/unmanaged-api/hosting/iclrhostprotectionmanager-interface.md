@@ -16,31 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c630fcd4667c8b19c4e21335549674d32508e439
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d4cb310215967a79e43e43319e107b6c42551e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557438"
 ---
-# <a name="iclrhostprotectionmanager-interface"></a><span data-ttu-id="89131-102">ICLRHostProtectionManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="89131-102">ICLRHostProtectionManager Interface</span></span>
-<span data-ttu-id="89131-103">Umożliwia hosta blokowanie określonych klas zarządzanych, metody, właściwości i pola w programie częściowo zaufany kod.</span><span class="sxs-lookup"><span data-stu-id="89131-103">Enables the host to block specific managed classes, methods, properties, and fields from running in partially trusted code.</span></span>  
+# <a name="iclrhostprotectionmanager-interface"></a><span data-ttu-id="b3b91-102">ICLRHostProtectionManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="b3b91-102">ICLRHostProtectionManager Interface</span></span>
+<span data-ttu-id="b3b91-103">Umożliwia hosta zablokować określonych zarządzanych klas, metod, właściwości i pola z uruchomionych w kodzie częściowo zaufanym.</span><span class="sxs-lookup"><span data-stu-id="b3b91-103">Enables the host to block specific managed classes, methods, properties, and fields from running in partially trusted code.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="89131-104">Metody</span><span class="sxs-lookup"><span data-stu-id="89131-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b3b91-104">Metody</span><span class="sxs-lookup"><span data-stu-id="b3b91-104">Methods</span></span>  
   
-|<span data-ttu-id="89131-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="89131-105">Method</span></span>|<span data-ttu-id="89131-106">Opis</span><span class="sxs-lookup"><span data-stu-id="89131-106">Description</span></span>|  
+|<span data-ttu-id="b3b91-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="b3b91-105">Method</span></span>|<span data-ttu-id="b3b91-106">Opis</span><span class="sxs-lookup"><span data-stu-id="b3b91-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="89131-107">SetEagerSerializeGrantSets</span><span class="sxs-lookup"><span data-stu-id="89131-107">SetEagerSerializeGrantSets</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-seteagerserializegrantsets-method.md)|<span data-ttu-id="89131-108">Zapewnia gwarancję, że nigdy nie przychodzą niektórych wyścigu rzadkich, które mogą spowodować krytyczny wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) błędy.</span><span class="sxs-lookup"><span data-stu-id="89131-108">Provides a guarantee that certain rare race conditions that can cause fatal common language runtime (CLR) errors will never arise.</span></span>|  
-|[<span data-ttu-id="89131-109">SetProtectedCategories, metoda</span><span class="sxs-lookup"><span data-stu-id="89131-109">SetProtectedCategories Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md)|<span data-ttu-id="89131-110">Określa kategorii typy zarządzane i elementów członkowskich, które powinny zostać zablokowane w częściowo zaufany kod.</span><span class="sxs-lookup"><span data-stu-id="89131-110">Specifies the categories of managed types and members that should be blocked from running in partially trusted code.</span></span>|  
+|[<span data-ttu-id="b3b91-107">SetEagerSerializeGrantSets</span><span class="sxs-lookup"><span data-stu-id="b3b91-107">SetEagerSerializeGrantSets</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-seteagerserializegrantsets-method.md)|<span data-ttu-id="b3b91-108">Zapewnia gwarancję, że niektóre rzadkich sytuacjach wyścigu, krytyczny języka wspólnego może spowodować błędy czasu wykonywania (CLR), które nigdy nie pojawią się.</span><span class="sxs-lookup"><span data-stu-id="b3b91-108">Provides a guarantee that certain rare race conditions that can cause fatal common language runtime (CLR) errors will never arise.</span></span>|  
+|[<span data-ttu-id="b3b91-109">SetProtectedCategories, metoda</span><span class="sxs-lookup"><span data-stu-id="b3b91-109">SetProtectedCategories Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md)|<span data-ttu-id="b3b91-110">Określa kategorie zarządzane typy i elementy członkowskie, które powinny zostać zablokowane w kodzie częściowo zaufanym.</span><span class="sxs-lookup"><span data-stu-id="b3b91-110">Specifies the categories of managed types and members that should be blocked from running in partially trusted code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="89131-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="89131-111">Requirements</span></span>  
- <span data-ttu-id="89131-112">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="89131-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3b91-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b3b91-111">Requirements</span></span>  
+ <span data-ttu-id="b3b91-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b3b91-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="89131-113">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="89131-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b3b91-113">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b3b91-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="89131-114">**Biblioteka:** uwzględnione jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="89131-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b3b91-114">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b3b91-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="89131-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89131-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b3b91-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3b91-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89131-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="89131-116">See Also</span></span>  
- [<span data-ttu-id="89131-117">EApiCategories, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="89131-117">EApiCategories Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)  
- [<span data-ttu-id="89131-118">ICLRControl, interfejs</span><span class="sxs-lookup"><span data-stu-id="89131-118">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b3b91-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b3b91-116">See also</span></span>
+- [<span data-ttu-id="b3b91-117">EApiCategories, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="b3b91-117">EApiCategories Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)
+- [<span data-ttu-id="b3b91-118">ICLRControl, interfejs</span><span class="sxs-lookup"><span data-stu-id="b3b91-118">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)

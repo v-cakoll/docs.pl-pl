@@ -1,23 +1,23 @@
 ---
-title: 'Porady: modyfikowanie dokumentu Office Open XML (C#)'
+title: 'Instrukcje: Modyfikowanie dokumentu Office Open XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 7a85341ee64c71a3f57b71b3db82889aee667040
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6770e661c90f9eee432933edafb28a615991775e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556028"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a><span data-ttu-id="a88c0-102">Porady: modyfikowanie dokumentu Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="a88c0-102">How to: Modify an Office Open XML Document (C#)</span></span>
-<span data-ttu-id="a88c0-103">W tym temacie przedstawiono przykład, który spowoduje otwarcie dokumentu Office Open XML, modyfikuje je i zapisuje go.</span><span class="sxs-lookup"><span data-stu-id="a88c0-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
+# <a name="how-to-modify-an-office-open-xml-document-c"></a><span data-ttu-id="1781d-102">Instrukcje: Modyfikowanie dokumentu Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="1781d-102">How to: Modify an Office Open XML Document (C#)</span></span>
+<span data-ttu-id="1781d-103">W tym temacie przedstawiono przykład, który spowoduje otwarcie dokumentu Office Open XML, modyfikuje je i zapisuje go.</span><span class="sxs-lookup"><span data-stu-id="1781d-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
   
- <span data-ttu-id="a88c0-104">Aby uzyskać więcej informacji na temat Office Open XML, zobacz [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) i [www.ericwhite.com](http://ericwhite.com/).</span><span class="sxs-lookup"><span data-stu-id="a88c0-104">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [www.ericwhite.com](http://ericwhite.com/).</span></span>  
+ <span data-ttu-id="1781d-104">Aby uzyskać więcej informacji na temat Office Open XML, zobacz [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) i [www.ericwhite.com](http://ericwhite.com/).</span><span class="sxs-lookup"><span data-stu-id="1781d-104">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [www.ericwhite.com](http://ericwhite.com/).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a88c0-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="a88c0-105">Example</span></span>  
- <span data-ttu-id="a88c0-106">W tym przykładzie wyszukuje pierwszy element akapitu w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="a88c0-106">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="a88c0-107">Pobiera tekst z akapitu, a następnie usuwa cały tekst jest uruchamiany w akapicie.</span><span class="sxs-lookup"><span data-stu-id="a88c0-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="a88c0-108">Tworzy nowy tekst Uruchom składający się z pierwszym tekst akapitu, który został przekonwertowany na wielkie litery.</span><span class="sxs-lookup"><span data-stu-id="a88c0-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="a88c0-109">Następnie wykonuje serializację zmienione XML do pakietów Open XML i zamyka te błędy.</span><span class="sxs-lookup"><span data-stu-id="a88c0-109">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
+## <a name="example"></a><span data-ttu-id="1781d-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="1781d-105">Example</span></span>  
+ <span data-ttu-id="1781d-106">W tym przykładzie wyszukuje pierwszy element akapitu w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="1781d-106">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="1781d-107">Pobiera tekst z akapitu, a następnie usuwa cały tekst jest uruchamiany w akapicie.</span><span class="sxs-lookup"><span data-stu-id="1781d-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="1781d-108">Tworzy nowy tekst Uruchom składający się z pierwszym tekst akapitu, który został przekonwertowany na wielkie litery.</span><span class="sxs-lookup"><span data-stu-id="1781d-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="1781d-109">Następnie wykonuje serializację zmienione XML do pakietów Open XML i zamyka te błędy.</span><span class="sxs-lookup"><span data-stu-id="1781d-109">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
   
- <span data-ttu-id="a88c0-110">W tym przykładzie użyto klasy znalezione w zestawie WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="a88c0-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="a88c0-111">Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="a88c0-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="1781d-110">W tym przykładzie użyto klasy znalezione w zestawie WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="1781d-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="1781d-111">Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="1781d-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -139,14 +139,14 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="a88c0-112">Jeśli otworzysz `SampleDoc.docx` po uruchomieniu tego programu, możesz zobaczyć, że ten program przekonwertować pierwszego akapitu w dokumencie na wielkie litery.</span><span class="sxs-lookup"><span data-stu-id="a88c0-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
+ <span data-ttu-id="1781d-112">Jeśli otworzysz `SampleDoc.docx` po uruchomieniu tego programu, możesz zobaczyć, że ten program przekonwertować pierwszego akapitu w dokumencie na wielkie litery.</span><span class="sxs-lookup"><span data-stu-id="1781d-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
   
- <span data-ttu-id="a88c0-113">Uruchamiania przy użyciu przykładowy dokument Open XML opisanego w [tworzenie źródłowego dokumentu pakietu Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="a88c0-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
+ <span data-ttu-id="1781d-113">Uruchamiania przy użyciu przykładowy dokument Open XML opisanego w [tworzenie źródłowego dokumentu pakietu Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="1781d-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a88c0-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a88c0-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1781d-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1781d-114">See also</span></span>
 
-- [<span data-ttu-id="a88c0-115">Zaawansowane techniki zapytań (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="a88c0-115">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="1781d-115">Zaawansowane techniki zapytań (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1781d-115">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi'
+title: 'Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 1aa0a31b5825006cc2d6111ab151f05bf240b920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6459c61e49a49001d490d5213f23ff652d4a1939
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609593"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="1e033-102">Porady: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi</span><span class="sxs-lookup"><span data-stu-id="1e033-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="d7250-102">Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi</span><span class="sxs-lookup"><span data-stu-id="d7250-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
 > [!NOTE]
->  <span data-ttu-id="1e033-103"><xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcje do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> formantu są przechowywane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana.</span><span class="sxs-lookup"><span data-stu-id="1e033-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="d7250-103"><xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.</span><span class="sxs-lookup"><span data-stu-id="d7250-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="1e033-104">Jeśli funkcje formularza systemu Windows <xref:System.Windows.Forms.ToolBar> kontrolki przycisków na pasku narzędzi, warto wiedzieć, który przycisk użytkownik klika polecenie.</span><span class="sxs-lookup"><span data-stu-id="1e033-104">If your Windows Form features a <xref:System.Windows.Forms.ToolBar> control with toolbar buttons, you will want to know which button the user clicks.</span></span>  
+ <span data-ttu-id="d7250-104">Jeśli formularz Windows funkcji <xref:System.Windows.Forms.ToolBar> kontrolki przycisków na pasku narzędzi, warto wiedzieć, który przycisk użytkownik klika polecenie.</span><span class="sxs-lookup"><span data-stu-id="d7250-104">If your Windows Form features a <xref:System.Windows.Forms.ToolBar> control with toolbar buttons, you will want to know which button the user clicks.</span></span>  
   
- <span data-ttu-id="1e033-105">Na <xref:System.Windows.Forms.ToolBar.ButtonClick> zdarzenie <xref:System.Windows.Forms.ToolBar> sterowania, można obliczyć <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> właściwość <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasy.</span><span class="sxs-lookup"><span data-stu-id="1e033-105">On the <xref:System.Windows.Forms.ToolBar.ButtonClick> event of the <xref:System.Windows.Forms.ToolBar> control, you can evaluate the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class.</span></span> <span data-ttu-id="1e033-106">W poniższym przykładzie jest wyświetlane okno komunikatu, wskazujący, który przycisk został kliknięty.</span><span class="sxs-lookup"><span data-stu-id="1e033-106">In the example below, a message box is shown, indicating which button was clicked.</span></span> <span data-ttu-id="1e033-107">Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.MessageBox>.</span><span class="sxs-lookup"><span data-stu-id="1e033-107">For details, see <xref:System.Windows.Forms.MessageBox>.</span></span>  
+ <span data-ttu-id="d7250-105">Na <xref:System.Windows.Forms.ToolBar.ButtonClick> zdarzenia <xref:System.Windows.Forms.ToolBar> kontrolki, możesz ocenić <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> właściwość <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasy.</span><span class="sxs-lookup"><span data-stu-id="d7250-105">On the <xref:System.Windows.Forms.ToolBar.ButtonClick> event of the <xref:System.Windows.Forms.ToolBar> control, you can evaluate the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class.</span></span> <span data-ttu-id="d7250-106">W poniższym przykładzie zostanie wyświetlone okno komunikatu, wskazujące, której przycisk został kliknięty.</span><span class="sxs-lookup"><span data-stu-id="d7250-106">In the example below, a message box is shown, indicating which button was clicked.</span></span> <span data-ttu-id="d7250-107">Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.MessageBox>.</span><span class="sxs-lookup"><span data-stu-id="d7250-107">For details, see <xref:System.Windows.Forms.MessageBox>.</span></span>  
   
- <span data-ttu-id="1e033-108">W poniższym przykładzie założono <xref:System.Windows.Forms.ToolBar> formant został dodany do formularza systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="1e033-108">The example below assumes a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form.</span></span>  
+ <span data-ttu-id="d7250-108">W poniższym przykładzie przyjęto założenie, <xref:System.Windows.Forms.ToolBar> formant został dodany do formularza Windows.</span><span class="sxs-lookup"><span data-stu-id="d7250-108">The example below assumes a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form.</span></span>  
   
-### <a name="to-handle-the-click-event-on-a-toolbar"></a><span data-ttu-id="1e033-109">Obsługa zdarzenia kliknij na pasku narzędzi</span><span class="sxs-lookup"><span data-stu-id="1e033-109">To handle the Click event on a toolbar</span></span>  
+### <a name="to-handle-the-click-event-on-a-toolbar"></a><span data-ttu-id="d7250-109">Aby obsłużyć zdarzenie kliknij na pasku narzędzi</span><span class="sxs-lookup"><span data-stu-id="d7250-109">To handle the Click event on a toolbar</span></span>  
   
-1.  <span data-ttu-id="1e033-110">W procedurze, dodawanie przycisków paska narzędzi do <xref:System.Windows.Forms.ToolBar> formantu.</span><span class="sxs-lookup"><span data-stu-id="1e033-110">In a procedure, add toolbar buttons to the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
+1.  <span data-ttu-id="d7250-110">W procedurze, Dodaj przyciski paska narzędzi na <xref:System.Windows.Forms.ToolBar> kontroli.</span><span class="sxs-lookup"><span data-stu-id="d7250-110">In a procedure, add toolbar buttons to the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,10 +70,10 @@ ms.locfileid: "33535200"
        }  
     ```  
   
-2.  <span data-ttu-id="1e033-111">Dodaj program obsługi zdarzeń dla <xref:System.Windows.Forms.ToolBar> formantu <xref:System.Windows.Forms.ToolBar.ButtonClick> zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="1e033-111">Add an event handler for the <xref:System.Windows.Forms.ToolBar> control's <xref:System.Windows.Forms.ToolBar.ButtonClick> event.</span></span> <span data-ttu-id="1e033-112">Użyj przypadku przełączania instrukcji i <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasę, aby określić, który został kliknięty przycisk paska narzędzi.</span><span class="sxs-lookup"><span data-stu-id="1e033-112">Use a case switching statement and the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine the toolbar button that was clicked.</span></span> <span data-ttu-id="1e033-113">Na podstawie tych, Pokaż okno odpowiedni komunikat.</span><span class="sxs-lookup"><span data-stu-id="1e033-113">Based on this, show an appropriate message box.</span></span>  
+2.  <span data-ttu-id="d7250-111">Dodawanie obsługi zdarzeń dla <xref:System.Windows.Forms.ToolBar> kontrolki <xref:System.Windows.Forms.ToolBar.ButtonClick> zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="d7250-111">Add an event handler for the <xref:System.Windows.Forms.ToolBar> control's <xref:System.Windows.Forms.ToolBar.ButtonClick> event.</span></span> <span data-ttu-id="d7250-112">Należy używać liter, przełączanie instrukcji i <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasę, aby określić przycisku paska narzędzi, który został kliknięty.</span><span class="sxs-lookup"><span data-stu-id="d7250-112">Use a case switching statement and the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine the toolbar button that was clicked.</span></span> <span data-ttu-id="d7250-113">Na tej podstawie Pokaż pole odpowiedni komunikat.</span><span class="sxs-lookup"><span data-stu-id="d7250-113">Based on this, show an appropriate message box.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="1e033-114">Okno komunikatu jest używany wyłącznie jako element zastępczy w tym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="1e033-114">A message box is being used solely as a placeholder in this example.</span></span> <span data-ttu-id="1e033-115">Możesz także dodać inny kod do wykonania po kliknięciu przycisku paska narzędzi.</span><span class="sxs-lookup"><span data-stu-id="1e033-115">Feel free to add other code to execute when the toolbar buttons are clicked.</span></span>  
+    >  <span data-ttu-id="d7250-114">Okno komunikatu jest używana wyłącznie jako symbol zastępczy w tym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="d7250-114">A message box is being used solely as a placeholder in this example.</span></span> <span data-ttu-id="d7250-115">Możesz dodać innego kodu do wykonania po kliknięciu przycisku paska narzędzi.</span><span class="sxs-lookup"><span data-stu-id="d7250-115">Feel free to add other code to execute when the toolbar buttons are clicked.</span></span>  
   
     ```vb  
     Protected Sub ToolBar1_ButtonClick(ByVal sender As Object, _  
@@ -134,8 +134,8 @@ ms.locfileid: "33535200"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="1e033-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1e033-116">See Also</span></span>  
- <xref:System.Windows.Forms.ToolBar>  
- [<span data-ttu-id="1e033-117">Instrukcje: dodawanie przycisków do kontrolki ToolBar</span><span class="sxs-lookup"><span data-stu-id="1e033-117">How to: Add Buttons to a ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
- [<span data-ttu-id="1e033-118">Instrukcje: określanie ikony dla przycisku kontrolki ToolBar</span><span class="sxs-lookup"><span data-stu-id="1e033-118">How to: Define an Icon for a ToolBar Button</span></span>](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [<span data-ttu-id="1e033-119">ToolBar, kontrolka</span><span class="sxs-lookup"><span data-stu-id="1e033-119">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="d7250-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d7250-116">See also</span></span>
+- <xref:System.Windows.Forms.ToolBar>
+- [<span data-ttu-id="d7250-117">Instrukcje: Dodawanie przycisków do formantu ToolBar</span><span class="sxs-lookup"><span data-stu-id="d7250-117">How to: Add Buttons to a ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)
+- [<span data-ttu-id="d7250-118">Instrukcje: Określanie ikony dla przycisku kontrolki ToolBar</span><span class="sxs-lookup"><span data-stu-id="d7250-118">How to: Define an Icon for a ToolBar Button</span></span>](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [<span data-ttu-id="d7250-119">ToolBar, kontrolka</span><span class="sxs-lookup"><span data-stu-id="d7250-119">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
